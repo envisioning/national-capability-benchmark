@@ -353,6 +353,28 @@ export const EvidenceRecord = z.object({
    * advocacy, and this layer exists to avoid exactly that.
    */
   limits: z.string(),
+  /**
+   * How it worked, and what had to be true for it to work.
+   *
+   * The rest of the record is sourced: a published number from a named
+   * publisher. This field is not. It is Envisioning's reading of the mechanism,
+   * and it is the part that travels between countries, because a number
+   * describes one country and a mechanism describes a move somebody else could
+   * make. Kept separate from the sourced fields for exactly that reason.
+   *
+   * Optional, because a documented delivery whose mechanism nobody has worked
+   * out yet is still worth recording. Validation warns when it is missing.
+   */
+  pattern: z
+    .object({
+      /** The move itself, in one or two sentences. Active voice, name the actor. */
+      mechanism: z.string(),
+      /** What had to already exist. The reason a copy fails elsewhere. */
+      preconditions: z.array(z.string()),
+      /** Where this has been tried again, and what changed in the retelling. */
+      travelled: z.string().optional(),
+    })
+    .optional(),
 })
 export type EvidenceRecord = z.infer<typeof EvidenceRecord>
 

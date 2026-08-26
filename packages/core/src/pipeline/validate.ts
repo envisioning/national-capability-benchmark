@@ -153,6 +153,14 @@ export async function validateEvidence(path = FILES.evidence): Promise<Problem[]
       })
     }
 
+    if (!record.pattern) {
+      problems.push({
+        file,
+        severity: 'warning',
+        problem: `${record.id}: no mechanism recorded, so the case cannot travel`,
+      })
+    }
+
     if (!COUNTRY_ISO3.includes(record.iso3 as never)) {
       problems.push({
         file,

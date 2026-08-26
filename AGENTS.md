@@ -96,6 +96,9 @@ port 3888.
   to `data/observations/revisions.json`. Never bypass that by writing
   `worldbank.json` directly: a restated value that is not logged is a number the
   record claims was always this. See D25.
+- An evidence record's `pattern` field is analysis, not data. Everything else in
+  the record is sourced from a named publisher; the mechanism and preconditions
+  are ours. Keep them in that field so the two are never confused. See D31.
 - Evidence records in `data/evidence` never enter a score or a confidence. A
   gap is promoted to a scored indicator only when a comparable series covers at
   least two reference countries, which is the minimum `buildFrame` accepts. See

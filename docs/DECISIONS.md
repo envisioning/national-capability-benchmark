@@ -1036,3 +1036,44 @@ a rank cannot show and a bar chart of 40 rows buries.
 the underlying distribution rather than the normalized one needs a raw axis with
 a log option, which is a further step.
 
+---
+
+## D31 — A record carries its mechanism, and patterns get their own page
+
+*Recorded 2026-08-26. Extends D20.*
+
+**Choice.** An evidence record gains an optional `pattern`: the mechanism in one
+or two sentences, the preconditions that had to already exist, and where the move
+has travelled. All 15 records now carry one, and `pnpm bench validate` warns when
+a record does not.
+
+The layer also stops being something a reader finds by opening a country. There
+is a `/patterns` page listing every record across every country, grouped by the
+dimension it bears on.
+
+**Why.** The record already said what a country did. It did not say how, and how
+is the only part that transfers. Pix as a number is 7.98 billion transactions a
+month, which tells a Brazilian nothing they can act on and tells anybody else
+nothing at all. Pix as a mechanism is a central bank that wrote the standard,
+compelled participation above a size threshold, ran settlement itself and priced
+it at zero, which is a move somebody else can consider, and whose three
+preconditions tell them whether it would work where they are.
+
+Everything else in a record is sourced from a named publisher. The mechanism is
+not: it is our reading. It sits in its own field for that reason, so the sourced
+and the interpreted are never confused.
+
+**Cost.**
+
+- The mechanism is an argument and can be wrong in a way a published number
+  cannot. It is signed by being ours, and a reader who disagrees is disagreeing
+  with an analysis rather than with a statistic.
+- Preconditions are the weakest part. They are what makes a copy fail, they are
+  the hardest thing to establish, and three lines per record is a first pass.
+- Fifteen records across four countries is a library, not a discipline. The
+  interesting version compares mechanisms across countries facing the same
+  constraint, and that needs many more records.
+
+**Overturned by.** Enough records to compare mechanisms rather than list them, at
+which point the page becomes a query rather than a list.
+

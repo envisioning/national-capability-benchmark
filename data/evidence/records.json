@@ -20,7 +20,16 @@
         "tier": "official_statistical",
         "retrievedAt": "2026-08-26"
       },
-      "limits": "Transaction volume shows adoption of one payment rail. It says nothing about cost or schedule performance on a capital project, which is what this indicator asks for. Pix was specified and enforced by a single institution with regulatory power over the participants, so it is weak evidence about delivery that needs several agencies to hold position."
+      "limits": "Transaction volume shows adoption of one payment rail. It says nothing about cost or schedule performance on a capital project, which is what this indicator asks for. Pix was specified and enforced by a single institution with regulatory power over the participants, so it is weak evidence about delivery that needs several agencies to hold position.",
+      "pattern": {
+        "mechanism": "The central bank wrote the standard, mandated participation for every institution above a size threshold, ran the settlement infrastructure itself and set the price to zero for individuals.",
+        "preconditions": [
+          "A central bank with regulatory authority over the institutions it needs to compel",
+          "Near-universal account ownership to build on",
+          "A national identity number to key accounts to"
+        ],
+        "travelled": "The instant rail is not novel and India built one first. What Brazil added was compulsory participation and a zero price, and those are the parts most copies drop."
+      }
     },
     {
       "id": "bra-govbr",
@@ -41,7 +50,14 @@
         "tier": "official_statistical",
         "retrievedAt": "2026-08-26"
       },
-      "limits": "An account count measures registration and a service count measures listing. Neither shows whether a service completes, how long it takes, or what it costs to run. Both numbers are published by the programme about itself, with no external audit attached."
+      "limits": "An account count measures registration and a service count measures listing. Neither shows whether a service completes, how long it takes, or what it costs to run. Both numbers are published by the programme about itself, with no external audit attached.",
+      "pattern": {
+        "mechanism": "One identity provider for every federal service, with assurance levels tied to records the state already held, and a rule that services migrate to it rather than build their own login.",
+        "preconditions": [
+          "Existing federal databases good enough to verify identity against",
+          "Authority to force agencies off their own systems"
+        ]
+      }
     },
     {
       "id": "est-x-road",
@@ -62,7 +78,16 @@
         "tier": "official_statistical",
         "retrievedAt": "2026-08-26"
       },
-      "limits": "Query volume measures use of a layer that grew over 25 years. That is evidence of sustained operation and not of bringing one large project in on cost and on schedule, which is what this indicator asks for. The factsheet is published by the authority that operates the system."
+      "limits": "Query volume measures use of a layer that grew over 25 years. That is evidence of sustained operation and not of bringing one large project in on cost and on schedule, which is what this indicator asks for. The factsheet is published by the authority that operates the system.",
+      "pattern": {
+        "mechanism": "A distributed exchange layer between agency systems, with a legal once-only rule: an agency may not ask a citizen for data another agency already holds.",
+        "preconditions": [
+          "A legal mandate strong enough to bind every agency",
+          "A national identity system",
+          "Small enough administration to move together"
+        ],
+        "travelled": "Finland, Iceland and others run the same software. The once-only law is the part that does the work and the part that is hardest to pass."
+      }
     },
     {
       "id": "ind-pmjdy",
@@ -83,7 +108,15 @@
         "tier": "official_statistical",
         "retrievedAt": "2026-08-26"
       },
-      "limits": "An account count measures opening. Part of the stock is dormant or holds very little, and the release carries no external audit. Reaching 590 million people through banks that already existed is a different problem from delivering a physical project on a schedule."
+      "limits": "An account count measures opening. Part of the stock is dormant or holds very little, and the release carries no external audit. Reaching 590 million people through banks that already existed is a different problem from delivering a physical project on a schedule.",
+      "pattern": {
+        "mechanism": "Existing banks were given a national target and a stripped-down account product, and the identity system removed the documentation barrier that had excluded people.",
+        "preconditions": [
+          "A bank branch and agent network with national reach",
+          "A digital identity covering the population",
+          "Political priority high enough to hold banks to a target"
+        ]
+      }
     },
     {
       "id": "ury-electricity",
@@ -104,7 +137,16 @@
         "tier": "official_statistical",
         "retrievedAt": "2026-08-26"
       },
-      "limits": "The share is computed from the published generation series by source and is not itself a published headline figure. A generation mix is an outcome, and it hides the cost and schedule record of the projects behind it. A wet or dry year moves the hydro share by several points, so one year is not the programme."
+      "limits": "The share is computed from the published generation series by source and is not itself a published headline figure. A generation mix is an outcome, and it hides the cost and schedule record of the projects behind it. A wet or dry year moves the hydro share by several points, so one year is not the programme.",
+      "pattern": {
+        "mechanism": "Long-term power purchase agreements at fixed prices, awarded by competitive auction, with the state utility as a single creditworthy buyer carrying the offtake risk.",
+        "preconditions": [
+          "A solvent state utility that private investors will contract with",
+          "A wind or solar resource worth bidding for",
+          "Cross-party agreement to hold the policy across governments"
+        ],
+        "travelled": "The auction plus single-buyer design is the most transferable piece and has been used across Latin America. The decade of political continuity behind it is not a design choice."
+      }
     },
     {
       "id": "ury-ceibal",
@@ -125,7 +167,15 @@
         "tier": "official_statistical",
         "retrievedAt": "2026-08-26"
       },
-      "limits": "Household reach peaked at 40.1 percent in 2014 and the series stops in 2018, so this number says nothing about the programme now. A device in the home measures distribution and says nothing about learning. The record is here because the delivery is documented and the measure of it is weak."
+      "limits": "Household reach peaked at 40.1 percent in 2014 and the series stops in 2018, so this number says nothing about the programme now. A device in the home measures distribution and says nothing about learning. The record is here because the delivery is documented and the measure of it is weak.",
+      "pattern": {
+        "mechanism": "A dedicated agency outside the education ministry procured devices and connectivity at national scale and used schools as the distribution channel.",
+        "preconditions": [
+          "A small enough country to reach every school",
+          "Budget held outside the ministry it serves",
+          "Electricity and connectivity to the schools"
+        ]
+      }
     },
     {
       "id": "bra-sus",
@@ -146,7 +196,15 @@
         "tier": "international_organization",
         "retrievedAt": "2026-08-26"
       },
-      "limits": "A service coverage index counts whether services reach people. It says nothing about waiting times, quality, or the difference between a capital city and the interior, and it credits private provision alongside the public system. Brazil spends less per head on public health than most countries with a comparable index, which this number cannot show."
+      "limits": "A service coverage index counts whether services reach people. It says nothing about waiting times, quality, or the difference between a capital city and the interior, and it credits private provision alongside the public system. Brazil spends less per head on public health than most countries with a comparable index, which this number cannot show.",
+      "pattern": {
+        "mechanism": "A right to health written into the constitution, funded by earmarked federal transfers and delivered by municipalities under national rules.",
+        "preconditions": [
+          "A constitutional moment able to carry the commitment",
+          "A municipal layer capable of delivering services",
+          "Earmarked funding that survives annual budget fights"
+        ]
+      }
     },
     {
       "id": "bra-plano-real",
@@ -167,7 +225,16 @@
         "tier": "international_organization",
         "retrievedAt": "2026-08-26"
       },
-      "limits": "Disinflation was held in place with an overvalued exchange rate and high interest rates, and that arrangement broke in the 1999 devaluation and again in the 2002 confidence crisis. One macroeconomic outcome is not a general measure of how fast Brazilian institutions respond to new conditions. The design and the sequencing are the capability here, and no number in this record captures them."
+      "limits": "Disinflation was held in place with an overvalued exchange rate and high interest rates, and that arrangement broke in the 1999 devaluation and again in the 2002 confidence crisis. One macroeconomic outcome is not a general measure of how fast Brazilian institutions respond to new conditions. The design and the sequencing are the capability here, and no number in this record captures them.",
+      "pattern": {
+        "mechanism": "A stable unit of account was introduced alongside the failing currency, prices were re-anchored to it while it was still only a reference, and it became legal tender only once the anchoring had happened.",
+        "preconditions": [
+          "A technical team with authority to sequence the reform",
+          "Enough reserves to defend the new currency",
+          "Public exhaustion with inflation deep enough to accept the transition"
+        ],
+        "travelled": "The staged unit-of-account move is the transferable idea and it has been studied everywhere. The exchange rate anchor that held it in place broke in 1999, which is the part not to copy."
+      }
     },
     {
       "id": "bra-pni",
@@ -188,7 +255,15 @@
         "tier": "international_organization",
         "retrievedAt": "2026-08-26"
       },
-      "limits": "This record is here because it runs both ways. A delivery capability that reached the whole country lost a third of its coverage in five years and has not fully recovered, which is evidence about durability rather than about peak performance. Coverage is administratively reported, DPT is one antigen among many, and the fall has several causes that the series cannot separate."
+      "limits": "This record is here because it runs both ways. A delivery capability that reached the whole country lost a third of its coverage in five years and has not fully recovered, which is evidence about durability rather than about peak performance. Coverage is administratively reported, DPT is one antigen among many, and the fall has several causes that the series cannot separate.",
+      "pattern": {
+        "mechanism": "Free universal vaccination delivered through the primary care network, with national campaign days that made coverage a visible public event.",
+        "preconditions": [
+          "A primary care network with national reach",
+          "A cold chain",
+          "Public trust in the health system, which is what later eroded"
+        ]
+      }
     },
     {
       "id": "bra-luz-para-todos",
@@ -209,7 +284,15 @@
         "tier": "international_organization",
         "retrievedAt": "2026-08-26"
       },
-      "limits": "Access counts a connection. It says nothing about how often the power fails, what it costs, or the isolated Amazon communities that make up most of the remaining gap. Access was already rising before 2003, so the programme accelerated a trend rather than starting one."
+      "limits": "Access counts a connection. It says nothing about how often the power fails, what it costs, or the isolated Amazon communities that make up most of the remaining gap. Access was already rising before 2003, so the programme accelerated a trend rather than starting one.",
+      "pattern": {
+        "mechanism": "The federal government paid the connection cost and delivered through the existing distribution concessionaires, with connection targets written into their contracts.",
+        "preconditions": [
+          "Concessionaires already operating in the territory",
+          "A grid close enough to extend",
+          "Subsidy large enough that the last connections are not loss-making"
+        ]
+      }
     },
     {
       "id": "bra-embrapa",
@@ -230,7 +313,16 @@
         "tier": "international_organization",
         "retrievedAt": "2026-08-26"
       },
-      "limits": "Production is an outcome and the credit is shared with land expansion, subsidised credit and private plant breeding, so this number cannot separate the research from the rest. It also cannot see the cost: much of the expansion came from converting cerrado and forest. What the record actually evidences is fifty years of continuity in a public research mandate, which is the part no dataset measures."
+      "limits": "Production is an outcome and the credit is shared with land expansion, subsidised credit and private plant breeding, so this number cannot separate the research from the rest. It also cannot see the cost: much of the expansion came from converting cerrado and forest. What the record actually evidences is fifty years of continuity in a public research mandate, which is the part no dataset measures.",
+      "pattern": {
+        "mechanism": "A public research corporation with its own budget line, staffed by researchers sent abroad to train and then brought back, mandated against one specific national constraint rather than research in general.",
+        "preconditions": [
+          "A named constraint worth fifty years of work",
+          "Budget continuity across governments",
+          "A private sector able to absorb the results"
+        ],
+        "travelled": "The model of a mission-specific public research corporation is highly transferable. The fifty years of funding continuity is the part nobody can procure."
+      }
     },
     {
       "id": "bra-bolsa-familia",
@@ -251,7 +343,16 @@
         "tier": "official_statistical",
         "retrievedAt": "2026-08-26"
       },
-      "limits": "A benefit count is administrative and says nothing about whether the transfers reduced poverty. The programme was renamed and restructured twice between 2021 and 2023, so the series covers more than one design. The capability worth copying is the registry and the targeting, and neither has a number in this record."
+      "limits": "A benefit count is administrative and says nothing about whether the transfers reduced poverty. The programme was renamed and restructured twice between 2021 and 2023, so the series covers more than one design. The capability worth copying is the registry and the targeting, and neither has a number in this record.",
+      "pattern": {
+        "mechanism": "One registry of low-income households shared across every social programme, with payments made directly to a card held by the mother, conditional on school attendance and health checks.",
+        "preconditions": [
+          "A payments network reaching poor municipalities",
+          "Civil registration good enough to identify households",
+          "Municipal staff to maintain the registry"
+        ],
+        "travelled": "The conditional transfer plus single registry has been adopted across Latin America, Africa and Asia. The registry, not the transfer, is the reusable asset."
+      }
     },
     {
       "id": "bra-urna-eletronica",
@@ -272,7 +373,15 @@
         "tier": "official_statistical",
         "retrievedAt": "2026-08-26"
       },
-      "limits": "The electorate measures the scale of the operation and not the speed or the integrity of the count. The Superior Electoral Court publishes result timing and audit results separately and neither is in this number. Electronic voting has been contested politically in Brazil despite repeated public audits, which is a fact about trust rather than about delivery."
+      "limits": "The electorate measures the scale of the operation and not the speed or the integrity of the count. The Superior Electoral Court publishes result timing and audit results separately and neither is in this number. Electronic voting has been contested politically in Brazil despite repeated public audits, which is a fact about trust rather than about delivery.",
+      "pattern": {
+        "mechanism": "One election authority owns the machines, the software and the count, with public audit ceremonies and results published the same evening.",
+        "preconditions": [
+          "A single national election authority with its own budget",
+          "Enough institutional standing to be trusted with the count",
+          "Logistics able to reach every polling place"
+        ]
+      }
     },
     {
       "id": "bra-proalcool",
@@ -293,7 +402,16 @@
         "tier": "official_statistical",
         "retrievedAt": "2026-08-26"
       },
-      "limits": "The programme was heavily subsidised in the 1980s and nearly collapsed when oil prices fell in the 1990s, so the line is not a story of steady success. Production volume says nothing about land use, cane labour conditions, or how the emissions accounting works out. What this evidences is a state changing an entire fuel system in response to an external shock, which is the construct the indicator asks for."
+      "limits": "The programme was heavily subsidised in the 1980s and nearly collapsed when oil prices fell in the 1990s, so the line is not a story of steady success. Production volume says nothing about land use, cane labour conditions, or how the emissions accounting works out. What this evidences is a state changing an entire fuel system in response to an external shock, which is the construct the indicator asks for.",
+      "pattern": {
+        "mechanism": "A blending mandate created guaranteed demand, subsidised credit built the mills against it, and flex-fuel engines two decades later moved the choice from the state to the driver.",
+        "preconditions": [
+          "A crop and land base able to supply at scale",
+          "A state able to hold a mandate for decades",
+          "Domestic vehicle manufacturing that can be made to adapt"
+        ],
+        "travelled": "The mandate-then-credit sequence is transferable and has been tried widely. The flex-fuel step is what made it durable and it required the car industry to move."
+      }
     },
     {
       "id": "bra-presal",
@@ -314,7 +432,15 @@
         "tier": "official_statistical",
         "retrievedAt": "2026-08-26"
       },
-      "limits": "Production is an outcome shared between Petrobras and foreign operators, and several individual platforms ran years late and over budget, which is exactly the cost and schedule record this indicator asks for and which this number hides. Expanding oil output also sits against Brazil's climate commitments, and a production figure cannot weigh that."
+      "limits": "Production is an outcome shared between Petrobras and foreign operators, and several individual platforms ran years late and over budget, which is exactly the cost and schedule record this indicator asks for and which this number hides. Expanding oil output also sits against Brazil's climate commitments, and a production figure cannot weigh that.",
+      "pattern": {
+        "mechanism": "A state oil company sustained deepwater research for decades, and licensing rules concentrated the learning from each field in one operator.",
+        "preconditions": [
+          "A state company with a real research budget",
+          "Reserves worth the exploration risk",
+          "Capital markets willing to fund very long payback"
+        ]
+      }
     }
   ]
 }

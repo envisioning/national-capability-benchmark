@@ -43,6 +43,7 @@ export const metadata: Metadata = {
 const NAV = [
   { href: '/', label: 'Profiles' },
   { href: '/indicators', label: 'Indicators' },
+  { href: '/patterns', label: 'Patterns' },
   { href: '/diagnostics', label: 'Diagnostics' },
   { href: '/delphi', label: 'Delphi panel' },
   { href: '/method', label: 'Method' },

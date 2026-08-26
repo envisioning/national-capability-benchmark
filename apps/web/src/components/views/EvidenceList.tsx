@@ -51,6 +51,12 @@ export function EvidenceList({ records }: { records: EvidenceRecord[] }) {
                 </a>
                 , retrieved {r.source.retrievedAt}.
               </p>
+              {r.pattern ? (
+                <p className="mt-1 max-w-3xl text-xs leading-relaxed">
+                  <span className="text-[var(--muted)]">The move: </span>
+                  {r.pattern.mechanism}
+                </p>
+              ) : null}
               <p className="mt-1 flex max-w-3xl gap-2 text-xs leading-relaxed text-[var(--muted)]">
                 <Icon name="triangle-alert" size={13} className="mt-0.5 shrink-0" />
                 <span>Limits: {r.limits}</span>
