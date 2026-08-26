@@ -23,13 +23,20 @@ pnpm dev
 `pnpm bench all` fetches live World Bank data, scores the ten countries, runs the
 diagnostics and writes `data/out/report.md`. `pnpm dev` opens the viewer.
 
-## The two layers
+## The layers
 
-**Hard indicators.** 66 indicators across the nine dimensions. 38 of them are
-pulled live from the World Bank API. The other 28 are declared gaps: the spec
-asks for them and no adequate internationally comparable dataset exists that
-passes the inspectability rule. Gaps stay in the registry, lower the confidence
+**Hard indicators.** 66 indicators across the nine dimensions. 38 are pulled
+live from the World Bank API and two are entered by hand from the GEM Adult
+Population Survey, which has no open API. The other 26 are declared gaps: the
+spec asks for them and no adequate internationally comparable dataset exists
+that passes the inspectability rule. Gaps stay in the registry, lower the confidence
 score, and form the data-collection agenda.
+
+**Evidence records.** `data/evidence/records.json` documents a delivery that a
+gap indicator cannot see, with one published number, a source, a reference
+period and a required statement of what the case does not show. Records never
+enter a score and never raise confidence. A gap becomes an indicator when a
+comparable series covers at least two reference countries. See D20.
 
 **The Delphi panel.** A panel of language models, each holding a fixed
 analytical stance, does two things the indicators cannot:
@@ -60,15 +67,20 @@ about any country.
 Run `pnpm bench report` and read `data/out/report.md`. The headline results from
 the first run:
 
-- **Coordination and Trust lose every measured indicator** once indicators
-  correlating with log GDP per capita at |r| ≥ 0.7 are removed. As currently
-  specified, those two dimensions are not separable from income per head.
+- **Coordination and Trust are carried by perception measures that track
+  income.** Remove every indicator correlating with log GDP per capita at
+  |r| ≥ 0.7 and each dimension keeps one indicator, both frozen at 2019, and the
+  scores move by 24 and 18 points. Every indicator that fails that test is a
+  perception proxy.
 - **Shared Purpose is the only dimension that does not track wealth** (r ≈ 0.20).
   It is also the one with the weakest evidence base, so that independence is
   cheap.
-- **Experimentation is the least measurable dimension**: six of its eight
-  indicators have no comparable dataset, leaving patents and trademarks to carry
-  it, which is not the same construct.
+- **Experimentation was the least measurable dimension** and is now the least
+  wealth-tracking one. Patents and trademarks used to carry it alone. With GEM
+  early-stage entrepreneurial activity and fear of failure wired, four of eight
+  indicators are observed, confidence rises from 0.18 to 0.39, and the
+  correlation with income per head falls to 0.57. Four indicators are still
+  gaps.
 - The four Worldwide Governance Indicators correlate with each other above 0.92.
   They are one measurement wearing four names.
 - Switzerland, Singapore and Estonia do come out with genuinely different

@@ -392,3 +392,128 @@ The method page and D16 say which ten they are.
 **Overturned by.** A case where the distinction changes how a number should be
 read, most likely a country clamping at 0 or 100. Flag `outOfFrame` on that
 cell rather than reinstating a badge on the country.
+
+---
+
+## D20 — Documented deliveries are recorded as evidence and never scored
+
+*Recorded 2026-08-26.*
+
+**Choice.** `data/evidence/records.json` holds evidence records: a documented
+case of a country doing the thing an indicator is meant to measure, filed
+against an indicator whose `ingest` is `gap`. Each record carries a claim, one
+published number with its reference period, a source with a tier and a retrieval
+date, and a required `limits` field saying what the case does not show.
+
+Records never enter `DimensionResult.score` and never raise confidence. They are
+schema-checked by `pnpm bench validate` and displayed on the country page under
+the dimension they belong to.
+
+A gap becomes an indicator only when a comparable series covers at least two
+reference countries, which is the minimum `buildFrame` needs to produce a scale.
+Promoting one is a separate, recorded act.
+
+**Why.** Brazil scores 11.5 on Building. Every measured indicator in that
+dimension is industrial output: manufacturing value added, high-technology
+exports, labour productivity, economic complexity. The dimension is defined as
+the capacity to build and deliver, and it currently cannot see a national
+programme that was delivered. Pix and GOV.BR are exactly that, and both sit
+inside `large_project_delivery`, which is a declared gap.
+
+The alternative was to put those cases in the page copy above the chart. That
+was rejected. Curated national successes with no schema, no source discipline
+and no limits can be assembled for any country, and a page that argues against
+its own number is unfalsifiable. Encoding the cases makes them checkable, keeps
+the score honest and turns the disagreement into a measurement task.
+
+The two constructs inside Building are now named: industrial output, which the
+six measured indicators carry, and state delivery capacity, which
+`large_project_delivery` carries and no dataset covers. The nine dimensions do
+not change. See KNOWN-ARTEFACTS A11.
+
+**Cost.**
+
+- A record is hand-written, so the layer is only as good as its author. The
+  required `limits` field and the validator reduce that risk without removing
+  it.
+- One country with two records and fifteen countries with none reads as a claim
+  about Brazil. It is a claim about what the indicators cannot see, and the same
+  cases exist elsewhere. Estonia, India and Uruguay have obvious candidates and
+  no records yet.
+- The layer can become a place to park advocacy. The promotion rule is what
+  stops that: a record is a step toward an indicator, and it is not a substitute
+  for one.
+
+**Overturned by.** A comparable delivery series covering the reference set, at
+which point `large_project_delivery` leaves `gap`, the records become source
+notes on a scored indicator, and this decision is superseded.
+
+**Update, same day.** The layer opened with two Brazilian records, which read as
+a claim about Brazil. It now holds six records across four countries: Brazil
+(Pix, GOV.BR), Estonia (X-Road), India (Jan Dhan accounts) and Uruguay (the
+renewable electricity build, Plan Ceibal). All six sit on
+`large_project_delivery`. Six records are still not a series, so the promotion
+rule above is unchanged.
+
+---
+
+## D21 — GEM is wired by hand, venture capital stays a gap
+
+*Recorded 2026-08-26.*
+
+**Choice.** Two Experimentation indicators leave `gap` and become
+`ingest: 'manual'`, entered in `data/observations/manual.json` from the GEM
+Adult Population Survey key indicators:
+
+- `early_stage_entrepreneurial_activity`, the TEA rate as published.
+- `failure_tolerance`, stored as 100 minus the published fear of failure rate.
+
+Sixteen countries, 15 of them from 2023 or later. Singapore last took part in
+2014 and is entered at that year, so the recency term marks it down to a weight
+of 0.17 rather than hiding it.
+
+`venture_capital_gdp` stays a gap. The OECD SME and Entrepreneurship Financing
+scoreboard is the only inspectable aggregate. Checked on 2026-08-26, it carries
+venture capital for 6 of these 16 countries, in national currency rather than as
+a share of GDP, with 2022 as the latest year. Brazil, India, South Africa and
+Singapore are absent. Wiring it would score the rich half of the set and lower
+coverage for the rest, which is the wealth-proxy failure of A3 rebuilt on
+purpose.
+
+**Why.** Experimentation was the worst-measured dimension in the benchmark and
+A1 said not to publish it. Two of eight indicators carried it, both counting
+formalised invention, which is close to the opposite of the many-cheap-attempts
+construct.
+
+What changed:
+
+- Experimentation confidence rises from 0.178 to 0.394 for most countries, which
+  moves it from very thin to thin.
+- Correlation with log GDP per capita falls from 0.624 to 0.568. TEA itself
+  correlates at −0.296, the first direct capability measure in the registry that
+  does not track income upward.
+- Korea's 100 disappears. It scores 75, because the patent filing artefact is now
+  diluted by two indicators where Korea is ordinary.
+- Mean distance between the panel and the indicators falls from 27.1 to 18.3
+  points across the sixteen countries.
+- No other dimension moved. Verified against the previous `scores.json`.
+
+**Cost.**
+
+- Hand-entered data goes stale silently. There is no fetcher, so somebody has to
+  re-export from GEM and update the file. The retrieval date is on every
+  observation.
+- TEA counts every new business, so necessity self-employment weighs the same as
+  a funded startup. Chile at 29.4 and Argentina at 21.4 sit above the United
+  States at 17.7 for that reason. This is a real property of the measure and it
+  is now in the indicator notes.
+- GEM publishes the fear of failure rate among adults who already see good
+  opportunities, so the denominator is not the adult population the unit label
+  suggests.
+- Four of eight Experimentation indicators are still gaps, so the dimension is
+  better measured and not well measured.
+
+**Overturned by.** An inspectable venture capital or business R&D series that
+covers the reference set, or a GEM licensing change that stops the data being
+usable this way.
+

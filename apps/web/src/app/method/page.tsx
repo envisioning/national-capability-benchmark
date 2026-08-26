@@ -1,7 +1,19 @@
-import { COUNTRIES, DIMENSIONS, DIMENSION_LABELS, DIMENSION_QUESTIONS, SOURCE_TIERS } from '@ncb/core'
+import {
+  COUNTRIES,
+  DIMENSIONS,
+  DIMENSION_LABELS,
+  DIMENSION_QUESTIONS,
+  INDICATORS,
+  REFERENCE_ISO3,
+  SOURCE_TIERS,
+} from '@ncb/core'
 import { Scroller, Section, Table, Td, Th } from '@/components/ui'
 
 export default function MethodPage() {
+  const gaps = INDICATORS.filter((i) => i.ingest === 'gap').length
+  const wired = INDICATORS.length - gaps
+  const manual = INDICATORS.filter((i) => i.ingest === 'manual').length
+
   return (
     <>
       <Section
@@ -33,7 +45,10 @@ export default function MethodPage() {
           <li>Take the most recent comparable value per indicator per country, with its source and year.</li>
           <li>Apply the declared transform: per million people, log, or none.</li>
           <li>Winsorize with Tukey fences at three interquartile ranges, so only extreme outliers move.</li>
-          <li>Normalize to 0 through 100 across the ten countries, reversing lower-is-better indicators.</li>
+          <li>
+            Normalize to 0 through 100 against the frame set by the {REFERENCE_ISO3.length}{' '}
+            reference countries, reversing lower-is-better indicators.
+          </li>
           <li>Average the available indicators inside a dimension with equal weights.</li>
           <li>
             Compute confidence separately as coverage × recency × source quality, and never fold it
@@ -44,6 +59,13 @@ export default function MethodPage() {
           A missing indicator lowers coverage and drops out of the mean. Nothing is imputed. Equal
           weighting is a deliberate v0 choice: an arbitrary expert weighting would be harder to
           challenge and no more defensible.
+        </p>
+        <p className="mt-4 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
+          Of {INDICATORS.length} indicators, {wired} carry data and {gaps} are declared gaps. The
+          spec asks for those {gaps} and no comparable dataset exists that we can inspect. They stay
+          in the registry, they lower confidence, and they are the data collection agenda.{' '}
+          {manual} are entered by hand from a published source that has no API, with the retrieval
+          date stored on every value.
         </p>
       </Section>
 
@@ -84,6 +106,36 @@ export default function MethodPage() {
       </Section>
 
       <Section
+        title="Thin evidence is drawn on the chart"
+        hint="Confidence is coverage times recency times source quality, and it never enters the score. It is banded, and the bands drive the display everywhere: a dimension in the thin or very thin band is drawn with a dashed edge, a hollow point and a marked axis label. The point still sits at the score, because confidence does not move it."
+      >
+        <ul className="max-w-3xl list-disc space-y-2 pl-5 text-lg leading-relaxed">
+          <li>Coverage is the share of a dimension's indicators that have a value.</li>
+          <li>Recency decays after two grace years, over a twelve-year window, to a floor of 0.1.</li>
+          <li>Source quality is the mean tier weight of the values that are present.</li>
+          <li>
+            The product is bounded well below 1 in practice, so the bands are set against what a
+            dimension can realistically reach.
+          </li>
+        </ul>
+      </Section>
+
+      <Section
+        title="Documented deliveries are recorded outside the score"
+        hint="Some indicators ask for something real that no dataset measures. Where a country has visibly done that thing, the case is written down as an evidence record filed against the gap it bears on."
+      >
+        <ul className="max-w-3xl list-disc space-y-2 pl-5 text-lg leading-relaxed">
+          <li>Each record carries one published number, its reference period, a source and a retrieval date.</li>
+          <li>Each record states what the case does not show. That field is required.</li>
+          <li>Records never enter a score and never raise confidence.</li>
+          <li>
+            A gap becomes a scored indicator only when a comparable series covers at least two
+            reference countries, which is the minimum the scale needs.
+          </li>
+        </ul>
+      </Section>
+
+      <Section
         title="A panel of models judges what the data cannot"
         hint="Each panelist holds a fixed analytical stance, so disagreement between them has a reason behind it. They score the same cells the indicators do, and they audit the indicator set itself."
       >
@@ -108,12 +160,16 @@ export default function MethodPage() {
         </ul>
       </Section>
 
-      <Section title="Ten countries chosen to expose different structures" hint="They are here to test whether the framework tells them apart. Ranking them against each other is not the exercise.">
+      <Section
+        title="The scale is fixed by ten countries and holds still"
+        hint={`Ten reference countries set the Tukey fences and the 0 and 100 endpoints for every indicator. Every other country is scored against that same fixed frame, so adding a country moves nobody else's number. Verified when six countries were added: 0 of 90 existing cells moved. A country outside the frame clamps to 0 or 100 and the cell is flagged, because widening the scale quietly would change what every published number means. The ${COUNTRIES.length} countries here are chosen to expose different capability structures, and ranking them against each other is not the exercise.`}
+      >
         <Scroller>
           <Table>
             <thead>
               <tr>
                 <Th>Country</Th>
+                <Th>Role in the scale</Th>
                 <Th>Why it is in the prototype</Th>
               </tr>
             </thead>
@@ -121,6 +177,7 @@ export default function MethodPage() {
               {COUNTRIES.map((c) => (
                 <tr key={c.iso3}>
                   <Td>{c.name}</Td>
+                  <Td dim>{c.frame === 'reference' ? 'sets the frame' : 'scored against the frame'}</Td>
                   <Td dim>{c.reason}</Td>
                 </tr>
               ))}
@@ -131,10 +188,19 @@ export default function MethodPage() {
 
       <Section title="These assumptions can be challenged">
         <ul className="max-w-3xl list-disc space-y-2 pl-5 text-lg leading-relaxed">
-          <li>Normalization is relative to these ten countries. An eleventh country changes every score.</li>
+          <li>
+            0 and 100 mean the weakest and strongest of the ten reference countries on that
+            indicator. Those ten were picked to expose contrasts and they are not a sample of the
+            world, so a low score means near the floor of this frame and says nothing about a
+            percentage of capability.
+          </li>
           <li>Only the latest observation is used. There is no trend line and nothing is back-filled.</li>
-          <li>Ten countries give eight degrees of freedom, so every correlation here is a hint.</li>
+          <li>
+            {COUNTRIES.length} countries give few degrees of freedom, so every correlation in the
+            diagnostics is a hint and none of them are established results.
+          </li>
           <li>Doing Business series are frozen at 2019 and are marked down by the recency term.</li>
+          <li>Coordination and Trust still lean on perception composites that track income per head.</li>
           <li>Political uniformity is never treated as a capability.</li>
         </ul>
       </Section>

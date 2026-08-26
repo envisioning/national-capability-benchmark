@@ -13,7 +13,16 @@ ninety cells against the same evidence briefs.
 
 ## A1 — Experimentation is not measured, it is inferred from patents
 
-**Severity: high. Do not publish this dimension as it stands.**
+**Severity: was high, now medium. Partly fixed on 2026-08-26.**
+
+**What changed.** GEM early-stage entrepreneurial activity and fear of failure
+are wired, so four of eight indicators are observed and the dimension no longer
+rests on patents alone. Confidence rose from 0.178 to 0.394, correlation with
+log GDP per capita fell from 0.624 to 0.568, Korea's 100 became 75, and the mean
+distance between the panel and the indicators fell from 27.1 to 18.3 points.
+Venture capital, regulatory sandboxes, university spinouts and business R&D
+share are still gaps, and the numbers below describe the state before the fix.
+See D21.
 
 Six of eight Experimentation indicators are gaps. The score is carried by
 resident patents and resident trademarks per head, which measure formalised,
@@ -44,8 +53,11 @@ The Latin American additions make the same point with new cases. Uruguay scores
 sandbox. Argentina scores 11.2, having produced more technology firms of scale
 per head than anywhere else in the region.
 
-**Fix.** Wire GEM early-stage entrepreneurial activity and a venture-capital
-series. Until then, treat Experimentation as unmeasured.
+**Fix.** GEM is wired. A venture capital series is still missing: the only
+inspectable aggregate, the OECD SME and Entrepreneurship Financing scoreboard,
+covers 6 of the 16 countries and omits Brazil, India, South Africa and
+Singapore. Business R&D share is the next best candidate, from UNESCO or OECD
+research and development statistics.
 
 ---
 
@@ -68,21 +80,54 @@ indicators, reported separately.
 
 ---
 
-## A3 — Coordination and Trust are not separable from GDP per capita
+## A3 — Coordination and Trust are mostly measured by perception of wealth
 
 **Severity: high. This is the strongest single finding of the prototype.**
 
-Every measured indicator in both dimensions correlates with log GDP per capita at
-|r| ≥ 0.7. Strip those indicators and both dimensions cannot be scored at all —
-`diagnostics.gdpStrippedTest.dimensionsEmptied` lists them.
+*Rewritten 2026-08-26 against the sixteen-country diagnostics. The original text
+said both dimensions empty out entirely under the GDP-stripped test. That was
+true of the ten-country run and it is no longer true.*
 
-Both dimensions lean on the Worldwide Governance Indicators, which are expert and
-firm perception composites that track income closely by construction.
+Both dimensions correlate with log GDP per capita at the dimension level:
+Coordination 0.90, Trust 0.88, on sixteen countries. Both lean on the Worldwide
+Governance Indicators, which are expert and firm perception composites that track
+income closely by construction.
 
-**Fix.** These dimensions need observable, behavioural indicators that are not
-WGI. Court throughput and border-compliance time are a start and are already in.
+Drop every indicator correlating with log GDP per capita at |r| ≥ 0.7 and each
+dimension keeps exactly one indicator:
+
+| Dimension | Indicator | r with log GDP | Class | Survives |
+| --- | --- | ---: | --- | --- |
+| Coordination | Regulatory quality | +0.92 | P | no |
+| Coordination | Government effectiveness | +0.91 | P | no |
+| Coordination | Logistics performance | +0.72 | P | no |
+| Coordination | Time to export | +0.68 | C | yes |
+| Trust | Control of corruption | +0.85 | P | no |
+| Trust | Rule of law | +0.83 | P | no |
+| Trust | Contract enforcement days | +0.61 | C | yes |
+
+`dimensionsEmptied` is now empty, and that is a weaker result than it looks. Each
+dimension survives on a single Doing Business indicator frozen at 2019. The
+scores move by 23.9 points in Coordination and 17.9 points in Trust when the
+perception indicators come out, which means the surviving indicator says
+something quite different from the three it replaces.
+
+The pattern to read is the class column. Every indicator that fails the test is
+class P and every indicator that survives is class C. The wealth correlation in
+these two dimensions is carried by perception measures, and the two behavioural
+measures we have are both weaker proxies for income.
+
+**Fix.** Unchanged in substance. These dimensions need observable, behavioural
+indicators that are not WGI and not frozen at 2019. Court throughput and
+border-compliance time are the start and they are carrying too much alone.
 Civil society strength (V-Dem) and cross-agency delivery records are the missing
-pieces.
+pieces. See also A9, which is the same problem seen from a small competent
+state, and D20, where documented cross-agency delivery is being collected as
+evidence.
+
+**Overturned by.** Behavioural indicators that hold their own correlation with
+income below 0.7 and cover the reference set. Until then, treat a high
+Coordination or Trust score as partly a statement about income per head.
 
 ---
 
@@ -210,3 +255,36 @@ clamps, and clamping loses information. Colombia already sits near the floor on
 Trust and Coordination. If clamping becomes common, the frame is too narrow for
 the countries being asked about, and the answer is a deliberate, versioned
 rebase rather than quietly widening the scale.
+
+---
+
+## A11 — Building measures industrial output, and reads as delivery capacity
+
+**Severity: medium. Found while building the Brazil view.**
+
+Building asks whether a country can build and deliver. Its six measured
+indicators are manufacturing value added, high-technology export share, labour
+productivity, logistics infrastructure, electricity connection speed and
+economic complexity. All six describe industrial output. Nothing in the measured
+set can see a national programme that was specified, funded and delivered.
+
+Brazil scores 11.5 with confidence 0.643, the highest confidence of its nine
+dimensions. The score is a correct statement about Brazilian industrial output
+and it is read as a statement about Brazilian delivery capacity, which is a
+different construct. In the same decade Brazil built and ran Pix, which settled
+7.98 billion transactions in July 2026, and GOV.BR, which reports 175 million
+active accounts.
+
+The two indicators that would carry the delivery construct,
+`large_project_delivery` and `firm_scale_up_rate`, are both gaps.
+
+**Fix.** Two parts, one done and one open. Documented deliveries are now
+recorded in `data/evidence/records.json` against the gap they bear on, outside
+the score, so the cases are written down with sources and limits instead of
+being argued in prose. Six records cover Brazil, Estonia, India and Uruguay. See
+D20. The open part is a comparable delivery series across the reference set,
+without which the gap cannot be promoted to an indicator.
+
+**Watch for.** The same reading error in reverse. A country with strong
+industrial output and a poor record of finishing public programmes scores well
+here, and the benchmark currently has no way to say so.

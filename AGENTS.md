@@ -14,7 +14,7 @@ pnpm bench delphi      run the LLM panel (add --mock to run offline)
 pnpm bench diagnose    correlations, redundancy, GDP-sensitivity test
 pnpm bench report      write data/out/report.md
 pnpm bench cost        measure the panel prompts and price a run before making it
-pnpm bench validate    schema-check every file in data/delphi
+pnpm bench validate    schema-check data/delphi and data/evidence
 pnpm bench all         ingest, score, diagnose, report
 pnpm build             tsc for packages/core, then next build for apps/web
 pnpm typecheck         both packages
@@ -22,7 +22,8 @@ pnpm dev               the viewer at localhost:3000
 ```
 
 The green gate is `pnpm build` plus `pnpm typecheck`. Both must pass. Run
-`pnpm bench validate` after touching anything in `data/delphi`.
+`pnpm bench validate` after touching anything in `data/delphi` or
+`data/evidence`.
 
 The viewer is registered in `~/Dev/.claude/launch.json` as `benchmark-web` on
 port 3888.
@@ -47,6 +48,8 @@ port 3888.
 - `data/observations` — raw values with source and year.
 - `data/delphi` — one file per panel run, plus `latest.json`, which is a pointer
   to the active run rather than an archive. Keep the original alongside it.
+- `data/evidence` — evidence records: documented deliveries filed against
+  indicators that have no dataset. Never scored. See D20.
 - `data/out` — scores, flat table, diagnostics, report.
 
 ## Invariants
@@ -61,6 +64,13 @@ port 3888.
   `delphiScore` and `delphiIqr`. `blendedScore` falls back to the panel only
   when no indicator evidence exists, and `blendedFrom` records which was used.
 - Confidence is never folded into the capability score. Two numbers, always.
+  The radar draws thin evidence as a dashed edge with a hollow point and marks
+  the axis label. Use `isThinEvidence` from `@ncb/core`, never a literal
+  threshold in a component.
+- Evidence records in `data/evidence` never enter a score or a confidence. A
+  gap is promoted to a scored indicator only when a comparable series covers at
+  least two reference countries, which is the minimum `buildFrame` accepts. See
+  D20.
 - Missing values are dropped from the mean and lower coverage. Nothing is imputed.
 - The normalization frame is pinned to the ten **reference** countries. Their
   values alone set every indicator's Tukey fences and its 0 and 100 endpoints.
@@ -113,6 +123,11 @@ Other traps found the hard way:
 Do not run `pnpm build` while `next dev` is running: both write `apps/web/.next`
 and the production build leaves the dev server serving pages with no CSS. Stop
 the dev server, or `rm -rf apps/web/.next` and restart it.
+
+When somebody else is using the dev server, build into another directory
+instead: `NEXT_DIST_DIR=.next-build pnpm build`. `next build` rewrites
+`apps/web/tsconfig.json` to add its own types path, so check that file
+afterwards and revert the churn.
 
 
 `apps/web` imports `@ncb/core` from `dist`, not from source. Run
