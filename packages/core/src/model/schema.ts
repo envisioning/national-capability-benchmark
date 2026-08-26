@@ -103,6 +103,46 @@ export const ObservationFile = z.object({
   observations: z.array(Observation),
 })
 
+/**
+ * One value that changed between two ingest runs.
+ *
+ * A published statistic is not fixed. Agencies restate, rebase and revise, and
+ * an ingest that overwrites its own file makes that invisible. Every run writes
+ * what moved into `data/observations/revisions.json`, so a number that changed
+ * under us is a record rather than a surprise. See D25.
+ */
+export const Revision = z.object({
+  indicatorId: z.string(),
+  iso3: z.string().length(3),
+  year: z.number().int(),
+  /** Null when the run added a year that was not there before. */
+  from: z.number().nullable(),
+  /** Null when the run dropped a year the publisher no longer carries. */
+  to: z.number().nullable(),
+})
+export type Revision = z.infer<typeof Revision>
+
+export const RevisionRun = z.object({
+  /** When the ingest ran. */
+  retrievedAt: z.string(),
+  /** Retrieval date of the file this run was compared against. */
+  previousRetrievedAt: z.string().nullable(),
+  observationsBefore: z.number().int(),
+  observationsAfter: z.number().int(),
+  changed: z.number().int(),
+  added: z.number().int(),
+  removed: z.number().int(),
+  /** Every change, or the first `cap` of them when a run rewrites everything. */
+  revisions: z.array(Revision),
+  /** Set when the list above was capped, with the number left out. */
+  omitted: z.number().int().default(0),
+})
+export type RevisionRun = z.infer<typeof RevisionRun>
+
+export const RevisionFile = z.object({
+  runs: z.array(RevisionRun),
+})
+
 /* ------------------------------- Delphi ------------------------------- */
 
 export const PanelistId = z.string()
@@ -193,13 +233,26 @@ export const IndicatorResult = z.object({
   /** The value sat outside the reference frame, so the score was clamped to 0 or 100. */
   outOfFrame: z.boolean().default(false),
   /**
-   * Every observed year for this country, normalised against the current frame.
+   * Every observed year for this country, with the value as published and the
+   * same value normalised against the current frame.
+   *
    * Observations only: nothing is carried forward and nothing is interpolated,
-   * so the gaps in the line are real gaps. Raw values stay in
-   * `data/observations`. Higher is always better here, because lower-is-better
-   * indicators are reversed by the normalisation.
+   * so a gap in the line is a real gap. Each point carries its own source tier,
+   * because a series will eventually mix an international republisher with a
+   * national statistics office and the reader has to see which is which.
+   * Normalised values reverse lower-is-better indicators, so higher is always
+   * better on that axis and never on `raw`. See D25.
    */
-  series: z.array(z.object({ year: z.number().int(), normalized: z.number() })).default([]),
+  series: z
+    .array(
+      z.object({
+        year: z.number().int(),
+        raw: z.number(),
+        normalized: z.number(),
+        tier: SourceTier,
+      }),
+    )
+    .default([]),
   status: z.enum(['observed', 'missing', 'gap', 'retired']),
 })
 export type IndicatorResult = z.infer<typeof IndicatorResult>

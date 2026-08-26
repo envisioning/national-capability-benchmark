@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation'
+import type { IndicatorResult } from '@ncb/core'
 import {
   COUNTRIES,
   DIMENSIONS,
@@ -135,9 +136,7 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
                           </Td>
                           <Td>
                             {row.series.length > 1 ? (
-                              <span
-                                title={`${row.series.length} observations, ${row.series[0]?.year} to ${row.series[row.series.length - 1]?.year}. Higher is better.`}
-                              >
+                              <span title={seriesTitle(row, def?.unit)}>
                                 <Sparkline series={seriesForSparkline(row.series)} width={90} height={22} />
                               </span>
                             ) : (
@@ -190,4 +189,19 @@ function seriesForSparkline(
   series: Array<{ year: number; normalized: number }>,
 ): Array<{ year: number; score: number }> {
   return series.map((p) => ({ year: p.year, score: p.normalized }))
+}
+
+/** Everything a reader needs to check the line: count, span, raw ends, tier. */
+function seriesTitle(row: IndicatorResult, unit: string | undefined): string {
+  const first = row.series[0]
+  const last = row.series[row.series.length - 1]
+  if (!first || !last) return ''
+  const tiers = [...new Set(row.series.map((p) => p.tier))].join(', ').replace(/_/g, ' ')
+  const gaps = last.year - first.year + 1 - row.series.length
+  return [
+    `${row.series.length} observations, ${first.year} to ${last.year}${gaps > 0 ? `, ${gaps} year(s) with no value` : ''}.`,
+    `As published: ${first.raw} in ${first.year}, ${last.raw} in ${last.year}${unit ? ` ${unit}` : ''}.`,
+    `Source tier: ${tiers}.`,
+    'The line plots the normalized value, where higher is always better.',
+  ].join(' ')
 }

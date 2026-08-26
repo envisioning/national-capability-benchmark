@@ -97,7 +97,9 @@ async function main() {
     case 'ingest': {
       const from = num(args, 'from', 1990)
       console.log(`Fetching ${INDICATORS.filter((i) => i.ingest === 'worldbank').length} World Bank indicators from ${from}...`)
-      const { report } = await ingestWorldBank(from)
+      const { report, revisions } = await ingestWorldBank(from, {
+        snapshot: Boolean(args.flags.get('snapshot')),
+      })
       for (const r of report) {
         const status = r.error
           ? `FAILED ${r.error}`
@@ -106,6 +108,14 @@ async function main() {
       }
       const failed = report.filter((r) => r.error)
       console.log(`\nWrote ${FILES.worldBank}. ${failed.length} series failed.`)
+      console.log(
+        `Against the previous file: ${revisions.changed} value(s) restated, ${revisions.added} added, ${revisions.removed} dropped. Logged in ${FILES.revisions}.`,
+      )
+      if (revisions.changed > 0) {
+        for (const r of revisions.revisions.filter((x) => x.from !== null && x.to !== null).slice(0, 10)) {
+          console.log(`  ${r.iso3} ${r.year} ${r.indicatorId.padEnd(30)} ${r.from} -> ${r.to}`)
+        }
+      }
       break
     }
 
@@ -211,7 +221,9 @@ async function main() {
     }
 
     case 'all': {
-      await ingestWorldBank(num(args, 'from', 1990))
+      await ingestWorldBank(num(args, 'from', 1990), {
+        snapshot: Boolean(args.flags.get('snapshot')),
+      })
       await score(args)
       const { countries, diag, delphi } = await diagnose(args)
       await writeOut(FILES.report, buildReport(countries, diag, delphi))
@@ -222,7 +234,7 @@ async function main() {
     default:
       console.log(`National Capability Benchmark
 
-  pnpm bench ingest    [--from 1990]      fetch World Bank series into data/observations
+  pnpm bench ingest    [--from 1990] [--snapshot]  fetch World Bank series into data/observations
   pnpm bench score                        normalize, score, write scores.json and table.csv
   pnpm bench delphi    [--mock] [--rounds 2] [--countries BRA,IND] [--models a,b]
                        [--max-coverage 0.6] [--no-judge] [--concurrency 4]

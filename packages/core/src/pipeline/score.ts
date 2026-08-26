@@ -160,7 +160,7 @@ export function buildMatrix(observations: Observation[], opts: ScoreOptions): Ma
 function indicatorRow(
   def: IndicatorDef,
   cell: Cell | undefined,
-  series: Array<{ year: number; normalized: number }>,
+  series: IndicatorResult['series'],
 ): IndicatorResult {
   const status =
     def.ingest === 'gap'

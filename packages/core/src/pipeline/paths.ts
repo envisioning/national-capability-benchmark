@@ -9,11 +9,13 @@ export const DATA_DIR = resolve(ROOT, 'data')
 export const OBSERVATIONS_DIR = resolve(DATA_DIR, 'observations')
 export const DELPHI_DIR = resolve(DATA_DIR, 'delphi')
 export const EVIDENCE_DIR = resolve(DATA_DIR, 'evidence')
+export const SNAPSHOT_DIR = resolve(OBSERVATIONS_DIR, 'snapshots')
 export const OUT_DIR = resolve(DATA_DIR, 'out')
 
 export const FILES = {
   worldBank: resolve(OBSERVATIONS_DIR, 'worldbank.json'),
   manual: resolve(OBSERVATIONS_DIR, 'manual.json'),
+  revisions: resolve(OBSERVATIONS_DIR, 'revisions.json'),
   delphiLatest: resolve(DELPHI_DIR, 'latest.json'),
   evidence: resolve(EVIDENCE_DIR, 'records.json'),
   scores: resolve(OUT_DIR, 'scores.json'),

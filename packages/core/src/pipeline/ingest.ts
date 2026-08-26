@@ -1,14 +1,15 @@
-import { mkdir, writeFile } from 'node:fs/promises'
-import { dirname } from 'node:path'
+import { mkdir, readFile, writeFile } from 'node:fs/promises'
+import { dirname, resolve } from 'node:path'
 import {
   COUNTRY_ISO3,
   GDP_PER_CAPITA_CODE,
   INDICATORS,
   worldBankSeries,
 } from '../model/index.js'
-import type { Observation } from '../model/index.js'
+import { ObservationFile, RevisionFile } from '../model/index.js'
+import type { Observation, Revision, RevisionRun } from '../model/index.js'
 import { CONTEXT_PREFIX, DENOMINATOR_PREFIX } from './diagnostics.js'
-import { FILES } from './paths.js'
+import { FILES, SNAPSHOT_DIR } from './paths.js'
 
 const API = 'https://api.worldbank.org/v2'
 const COUNTRY_PATH = COUNTRY_ISO3.join(';')
@@ -67,9 +68,97 @@ export type IngestReport = {
   error?: string
 }
 
-export async function ingestWorldBank(fromYear = 1990): Promise<{
+/** Cap on the revisions listed for one run, so a re-baselining cannot fill the log. */
+const REVISION_CAP = 500
+
+async function readJson(path: string): Promise<unknown | null> {
+  try {
+    return JSON.parse(await readFile(path, 'utf8'))
+  } catch {
+    return null
+  }
+}
+
+const cellKey = (o: { indicatorId: string; iso3: string; year: number }) =>
+  `${o.indicatorId}|${o.iso3}|${o.year}`
+
+/**
+ * What moved between the file on disk and the file about to replace it.
+ *
+ * Statistics agencies restate, rebase and revise. An ingest that overwrites its
+ * own file makes that invisible, which would leave the audit trail claiming a
+ * number was always what it is now. See D25.
+ */
+export function diffObservations(
+  before: Observation[],
+  after: Observation[],
+): { revisions: Revision[]; changed: number; added: number; removed: number } {
+  const old = new Map(before.map((o) => [cellKey(o), o.value]))
+  const next = new Map(after.map((o) => [cellKey(o), o.value]))
+
+  const revisions: Revision[] = []
+  let changed = 0
+  let added = 0
+  let removed = 0
+
+  const parse = (key: string) => {
+    const [indicatorId, iso3, year] = key.split('|')
+    return { indicatorId: indicatorId as string, iso3: iso3 as string, year: Number(year) }
+  }
+
+  for (const [key, value] of next) {
+    const previous = old.get(key)
+    if (previous === undefined) {
+      added += 1
+      revisions.push({ ...parse(key), from: null, to: value })
+    } else if (previous !== value) {
+      changed += 1
+      revisions.push({ ...parse(key), from: previous, to: value })
+    }
+  }
+  for (const [key, value] of old) {
+    if (next.has(key)) continue
+    removed += 1
+    revisions.push({ ...parse(key), from: value, to: null })
+  }
+  return { revisions, changed, added, removed }
+}
+
+async function recordRevisions(
+  before: Observation[],
+  previousRetrievedAt: string | null,
+  after: Observation[],
+  retrievedAt: string,
+): Promise<RevisionRun> {
+  const { revisions, changed, added, removed } = diffObservations(before, after)
+  const listed = revisions.slice(0, REVISION_CAP)
+  const run: RevisionRun = {
+    retrievedAt,
+    previousRetrievedAt,
+    observationsBefore: before.length,
+    observationsAfter: after.length,
+    changed,
+    added,
+    removed,
+    revisions: listed,
+    omitted: revisions.length - listed.length,
+  }
+
+  const raw = await readJson(FILES.revisions)
+  const parsed = raw ? RevisionFile.safeParse(raw) : null
+  const runs = parsed?.success ? parsed.data.runs : []
+  runs.push(run)
+  await writeFile(FILES.revisions, `${JSON.stringify({ runs }, null, 2)}\n`)
+  return run
+}
+
+export async function ingestWorldBank(
+  fromYear = 1990,
+  opts: { snapshot?: boolean } = {},
+): Promise<{
   observations: Observation[]
   report: IngestReport[]
+  revisions: RevisionRun
 }> {
   const retrievedAt = new Date().toISOString()
   const requests = worldBankSeries()
@@ -131,10 +220,22 @@ export async function ingestWorldBank(fromYear = 1990): Promise<{
     }
   }
 
+  const existing = await readJson(FILES.worldBank)
+  const parsedExisting = existing ? ObservationFile.safeParse(existing) : null
+  const before = parsedExisting?.success ? parsedExisting.data.observations : []
+  const previousRetrievedAt = parsedExisting?.success ? parsedExisting.data.generatedAt : null
+
+  const body = `${JSON.stringify({ generatedAt: retrievedAt, observations }, null, 2)}\n`
   await mkdir(dirname(FILES.worldBank), { recursive: true })
-  await writeFile(
-    FILES.worldBank,
-    `${JSON.stringify({ generatedAt: retrievedAt, observations }, null, 2)}\n`,
-  )
-  return { observations, report }
+  await writeFile(FILES.worldBank, body)
+
+  /* A full copy is 3.8 MB, so it is written only when asked for. The revision
+   * log is the durable record and stays small enough to keep forever. */
+  if (opts.snapshot) {
+    await mkdir(SNAPSHOT_DIR, { recursive: true })
+    await writeFile(resolve(SNAPSHOT_DIR, `worldbank-${retrievedAt.slice(0, 10)}.json`), body)
+  }
+
+  const revisions = await recordRevisions(before, previousRetrievedAt, observations, retrievedAt)
+  return { observations, report, revisions }
 }

@@ -1,5 +1,5 @@
 import { INDICATORS_BY_ID, indicatorsFor, isScored } from '../model/index.js'
-import type { Dimension, IndicatorDef, Momentum, Observation } from '../model/index.js'
+import type { Dimension, IndicatorDef, Momentum, Observation, SourceTier } from '../model/index.js'
 import { applyTransform, scoreAgainstFrame } from './normalize.js'
 import type { Frame } from './normalize.js'
 import { mean, round } from './stats.js'
@@ -41,22 +41,23 @@ export type MomentumOptions = {
   minShare?: number
 }
 
-type Series = Array<{ year: number; value: number }>
+type Series = Array<{ year: number; value: number; tier: SourceTier }>
 
 /** indicatorId -> iso3 -> observations, newest first. */
 type History = Map<string, Map<string, Series>>
 
-function push(history: History, indicatorId: string, iso3: string, year: number, value: number) {
+function push(history: History, o: Observation) {
+  const { indicatorId, iso3, year, value } = o
   const byCountry = history.get(indicatorId) ?? new Map<string, Series>()
   const series = byCountry.get(iso3) ?? []
-  series.push({ year, value })
+  series.push({ year, value, tier: o.sourceTier })
   byCountry.set(iso3, series)
   history.set(indicatorId, byCountry)
 }
 
 export function buildHistory(observations: Observation[]): History {
   const history: History = new Map()
-  for (const o of observations) push(history, o.indicatorId, o.iso3, o.year, o.value)
+  for (const o of observations) push(history, o)
   for (const byCountry of history.values()) {
     for (const series of byCountry.values()) series.sort((a, b) => b.year - a.year)
   }
@@ -64,7 +65,7 @@ export function buildHistory(observations: Observation[]): History {
 }
 
 /** The value in force at `year`, provided it is not older than `maxAge`. */
-function asOf(series: Series | undefined, year: number, maxAge: number): { year: number; value: number } | null {
+function asOf(series: Series | undefined, year: number, maxAge: number): Series[number] | null {
   if (!series) return null
   for (const point of series) {
     if (point.year > year) continue
@@ -182,7 +183,7 @@ export function indicatorSeries(
   frame: Frame | undefined,
   def: IndicatorDef,
   iso3: string,
-): Array<{ year: number; normalized: number }> {
+): Array<{ year: number; raw: number; normalized: number; tier: SourceTier }> {
   if (!frame) return []
   const points = history.get(def.id)?.get(iso3)
   if (!points) return []
@@ -191,7 +192,7 @@ export function indicatorSeries(
     ? history.get(`__denominator__${def.denominatorSeries}`)?.get(iso3)
     : undefined
 
-  const out: Array<{ year: number; normalized: number }> = []
+  const out: Array<{ year: number; raw: number; normalized: number; tier: SourceTier }> = []
   for (const point of [...points].sort((a, b) => a.year - b.year)) {
     let denominator: number | null = null
     if (def.denominatorSeries) {
@@ -204,7 +205,9 @@ export function indicatorSeries(
     if (transformed === null || !Number.isFinite(transformed)) continue
     out.push({
       year: point.year,
+      raw: round(point.value, 3),
       normalized: round(scoreAgainstFrame(transformed, frame, def.direction).normalized, 1),
+      tier: point.tier,
     })
   }
   return out

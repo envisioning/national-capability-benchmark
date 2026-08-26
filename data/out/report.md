@@ -1,6 +1,6 @@
 # National Capability Benchmark, prototype v0
 
-Generated 2026-08-26T18:56:29.276Z. 16 countries, nine dimensions, equal weights within each dimension, no headline ranking.
+Generated 2026-08-26T19:08:48.387Z. 16 countries, nine dimensions, equal weights within each dimension, no headline ranking.
 
 Scores run against a frame fixed by the 10 reference countries. 6 countries were added after that frame was set and are marked below. Adding them did not move any existing score.
 

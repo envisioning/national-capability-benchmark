@@ -696,3 +696,54 @@ and is flat over ten. Colombia is at −14.3, Argentina −11.5, India −10.4, 
 both ends, which would make the matched basket unnecessary and both spans
 directly comparable to the headline score.
 
+---
+
+## D25 — Every point carries its provenance, and every run records what moved
+
+*Recorded 2026-08-26.*
+
+**Choice.** Two changes, both aimed at making the history checkable before the
+country set grows.
+
+1. Each point in an indicator's series carries the value as published, the
+   normalised value and its own source tier. A chart can be inspected point by
+   point rather than trusted.
+2. Every ingest compares itself against the file it is about to replace and
+   appends what moved to `data/observations/revisions.json`: values restated,
+   years added, years dropped, with the before and after for each. A full copy
+   of the observation file is written to `data/observations/snapshots` only when
+   `--snapshot` is passed.
+
+**Why.** The audit trail claimed more than it delivered. Provenance was complete
+at the file level and absent from the rendered line: the viewer drew a series of
+normalised numbers with no raw value, no tier and no way to check any of it.
+
+The second half matters more. A published statistic is not fixed. Agencies
+restate, rebase and revise, and an ingest that overwrites its own file makes that
+invisible, so the record would always claim a number had been what it is now.
+That is the failure mode a benchmark cannot have.
+
+Per-point tiers exist for what comes next. A series will mix an international
+republisher with a national statistics office as soon as national sources are
+added, and the reader has to see which point came from where. The World Bank is
+a republisher of IBGE, MCTI and the rest, so today every point says
+`international_organization` and that is itself worth showing.
+
+**Cost.**
+
+- `scores.json` grows from 2.1 MB to 3.0 MB. The viewer reads it per request.
+  At 60 countries this file has to become per-country files or an API, and that
+  is the next structural limit rather than a future one.
+- A full snapshot is 3.8 MB, so snapshots are opt-in and gitignored, and the
+  revision log is the record that ships with the repository. The log stays small
+  because it holds only what changed. Anyone wanting bit-for-bit archives of
+  every run has to keep them outside git.
+- A run that re-baselines everything would write one very large entry, so the
+  list is capped at 500 revisions per run with the remainder counted in
+  `omitted`.
+- The log starts now. Everything ingested before today has no revision history
+  and never will.
+
+**Overturned by.** A move to per-country output files, which would change where
+the series lives but not what it has to carry.
+

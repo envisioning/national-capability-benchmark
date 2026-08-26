@@ -45,7 +45,10 @@ port 3888.
 - `packages/core` — the whole model. Registry, ingestion, normalisation, scoring,
   diagnostics, Delphi, CLI. Compiles to `dist`.
 - `apps/web` — Next.js viewer. Reads `data/out/*.json` at request time.
-- `data/observations` — raw values with source and year.
+- `data/observations` — raw values with source and year. `worldbank.json` is the
+  current file, `revisions.json` is the append-only log of what each run
+  restated, added or dropped, and `snapshots/` holds dated full copies written
+  only on `--snapshot`.
 - `data/delphi` — one file per panel run, plus `latest.json`, which is a pointer
   to the active run rather than an archive. Keep the original alongside it.
 - `data/evidence` — evidence records: documented deliveries filed against
@@ -63,7 +66,10 @@ port 3888.
 - Delphi estimates never enter `DimensionResult.score`. They live in
   `delphiScore` and `delphiIqr`. `blendedScore` falls back to the panel only
   when no indicator evidence exists, and `blendedFrom` records which was used.
-- Confidence is never folded into the capability score. Two numbers, always.
+- Confidence is never folded into the capability score. Two numbers, always. The
+  radar draws thin evidence as a dashed edge with a hollow point and marks the
+  axis label. Use `isThinEvidence` from `@ncb/core`, never a literal threshold in
+  a component.
 - `data/observations/worldbank.json` holds every year from 1990, and scoring
   reads only the latest. The history exists for the trend layer. `momentum` is a
   list, one entry per span, shortest first: use `primaryMomentum` when a surface
@@ -71,11 +77,14 @@ port 3888.
   observed at both ends, so a trend and a score sit on different baskets, and
   every surface that prints a trend prints its basket size. Each indicator also
   carries its own `series`, which has no basket problem and reaches as far back
-  as the data does. Nothing is interpolated or carried forward into it. See D22
-  and D24.
-  The radar draws thin evidence as a dashed edge with a hollow point and marks
-  the axis label. Use `isThinEvidence` from `@ncb/core`, never a literal
-  threshold in a component.
+  as the data does. Nothing is interpolated or carried forward into it. Every
+  point carries its raw value, its normalized value and its own source tier, so
+  a mixed international and national series stays readable. See D22, D24 and
+  D25.
+- Every ingest diffs itself against the file it replaces and appends what moved
+  to `data/observations/revisions.json`. Never bypass that by writing
+  `worldbank.json` directly: a restated value that is not logged is a number the
+  record claims was always this. See D25.
 - Evidence records in `data/evidence` never enter a score or a confidence. A
   gap is promoted to a scored indicator only when a comparable series covers at
   least two reference countries, which is the minimum `buildFrame` accepts. See

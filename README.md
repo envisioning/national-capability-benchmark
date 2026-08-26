@@ -37,7 +37,10 @@ and each dimension also carries its change over ten and twenty years. History is
 normalized against the frame in use today and computed on the indicators
 observed at both ends, so a trend is a change in the country instead of a change
 in the scale. Every indicator carries its own line as well, which reaches as far
-back as its data goes. Nothing is interpolated or extrapolated. See D22 and D24.
+back as its data goes, and every point on it carries the value as published, the
+normalized value and its source tier. Nothing is interpolated or extrapolated.
+Each data run also logs what it restated, added or dropped against the file it
+replaced, so a number that changes under us is a record. See D22, D24 and D25.
 
 **Evidence records.** `data/evidence/records.json` documents a delivery that a
 gap indicator cannot see, with one published number, a source, a reference

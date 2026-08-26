@@ -154,6 +154,15 @@ export default function MethodPage() {
             because nothing is carried forward or filled in.
           </li>
           <li>
+            Every point on a line carries the value as published, the normalized value and its
+            source tier, so a chart can be checked point by point instead of trusted.
+          </li>
+          <li>
+            Published statistics get restated. Each data run compares itself against the file it
+            replaces and writes what moved to a revision log, so a number that changed under us is
+            a record rather than a surprise.
+          </li>
+          <li>
             A value more than five years old does not count toward a year, and a country that sat
             outside today's frame clamps at 0 or 100 with the clamp recorded.
           </li>
