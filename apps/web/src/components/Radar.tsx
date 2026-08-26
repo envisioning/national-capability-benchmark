@@ -50,16 +50,23 @@ function thinAt(series: RadarSeries, i: number): boolean {
  */
 export type RadarLabels = 'full' | 'icons' | 'none'
 
-/** One dimension mark, drawn inside the radar's own SVG. */
-function AxisIcon({ d, x, y, size, faded }: { d: Dimension; x: number; y: number; size: number; faded: boolean }) {
+/**
+ * One dimension mark, drawn inside the radar's own SVG.
+ *
+ * Every mark is drawn at the same strength. Thin evidence is already carried by
+ * the dashed edge, the hollow vertex and the asterisk on the label, and fading
+ * the icon as well made the whole ring look washed out on a country where most
+ * dimensions are thinly evidenced.
+ */
+function AxisIcon({ d, x, y, size }: { d: Dimension; x: number; y: number; size: number }) {
   const scale = size / 24
   return (
     <g
       transform={`translate(${x - size / 2} ${y - size / 2}) scale(${scale})`}
       fill="none"
       stroke="currentColor"
-      strokeOpacity={faded ? 0.45 : 0.75}
-      strokeWidth={1.6 / scale}
+      strokeOpacity={0.9}
+      strokeWidth={1.7 / scale}
       strokeLinecap="round"
       strokeLinejoin="round"
       dangerouslySetInnerHTML={{ __html: iconMarkup(DIMENSION_ICON[d]) }}
@@ -164,7 +171,7 @@ export function Radar({
       {labels === 'icons' &&
         DIMENSIONS.map((d, i) => {
           const [x, y] = point(i, 124)
-          return <AxisIcon key={d} d={d} x={x} y={y} size={11} faded={marked[i] as boolean} />
+          return <AxisIcon key={d} d={d} x={x} y={y} size={12} />
         })}
 
       {labels === 'full' &&
@@ -174,7 +181,7 @@ export function Radar({
           const dx = anchor === 'end' ? -9 : anchor === 'start' ? 9 : 0
           return (
             <g key={d}>
-              <AxisIcon d={d} x={x + dx} y={y} size={9} faded={marked[i] as boolean} />
+              <AxisIcon d={d} x={x + dx} y={y} size={10} />
               <text
                 x={x + (anchor === 'end' ? -17 : anchor === 'start' ? 17 : 0)}
                 y={y}

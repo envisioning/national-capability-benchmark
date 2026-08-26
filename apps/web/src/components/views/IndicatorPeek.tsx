@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { INDICATORS_BY_ID, MEASUREMENT_CLASS_MEANING } from '@ncb/core'
 import type { IndicatorAcrossCountries } from '@ncb/core'
+import { Distribution } from '@/components/Distribution'
 import { Icon } from '@/components/Icon'
 import { ClassBadge } from '@/components/ui'
 
@@ -114,7 +115,20 @@ export function IndicatorPeek({
           {!view && !error ? <p className="text-lg text-[var(--muted)]">Loading…</p> : null}
 
           {view ? (
-            <ul className="space-y-1">
+            <Distribution
+              points={values.map((v) => ({
+                key: v.iso3,
+                label: v.country,
+                value: v.normalized,
+                detail: `${v.raw.toLocaleString('en-US')} ${def.unit}, ${v.year}`,
+                focal: v.iso3 === iso3,
+                clamped: v.outOfFrame,
+              }))}
+            />
+          ) : null}
+
+          {view ? (
+            <ul className="mt-4 space-y-1">
               {values.map((v) => {
                 const focal = v.iso3 === iso3
                 return (

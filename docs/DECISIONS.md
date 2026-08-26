@@ -947,6 +947,14 @@ which is the whole reason the grid exists. The written names stay on the large
 radar, in the dimension table, on the method page and in the accessible
 description, so the icons are never the only carrier.
 
+**Update, same day.** Two corrections after seeing it in use. The axis marks are
+drawn at one strength for every dimension: fading them for thin evidence made the
+whole ring look washed out on a country where most dimensions are thin, and that
+evidence is already carried by the dashed edge, the hollow vertex and the
+asterisk. The radars are also drawn larger, with the focal column widened and the
+country grid cut from four columns to three, because a nine-axis chart at card
+size was unreadable whatever it was labelled with.
+
 **Cost.** A reader who has not learned the marks has to visit a labelled radar
 first. The nine icons are a judgement: a telescope for Anticipation and a
 handshake for Trust are readable, while a shuffle for Adaptability and a hand for
@@ -993,6 +1001,18 @@ is A12 in one glance.
 - A dialog inherits text alignment from wherever it sits in the DOM. Both panels
   set their own, which is a small trap worth remembering for the next one.
 
-**Overturned by.** A charting layer that shows the distribution rather than a
-ranked list, which would be a better answer to the same question.
+**Update, same day.** Both panels now open with a distribution plot and keep the
+ranked list below it. Every country is a dot on the same 0 to 100 axis, dots that
+would overlap stack upward so a cluster reads as a column, and the box behind
+them is the middle half of the field with the median as a line. The country being
+read is filled and labelled. In the dimension panel a hollow dot means thin
+evidence, the same convention the radar uses.
+
+The shape is the point. R&D expenditure puts a dozen countries in a single column
+at the floor of the scale and spreads the rest thinly across the top half, which
+a rank cannot show and a bar chart of 40 rows buries.
+
+**Overturned by.** Nothing foreseeable for the panel itself. A reader who wants
+the underlying distribution rather than the normalized one needs a raw axis with
+a log option, which is a further step.
 

@@ -49,7 +49,7 @@ export default async function Page() {
         title={`${focus.country} is the focal case`}
         hint={`This benchmark is built for work inside one country, so ${focus.country} leads and everybody else sits behind a comparison the reader picks. Picking one moves no number, because the scale is fixed by the 10 reference countries and holds still.`}
       >
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,380px)_1fr]">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,520px)_1fr]">
           <div>
             <CompareRadar focus={toProfile(focus)} others={others.map(toProfile)} />
             <Link
@@ -67,7 +67,7 @@ export default async function Page() {
         title="Each country comes out a different shape"
         hint="Scores run 0 to 100 against a frame fixed by ten reference countries, and every country is measured the same way. We never compute a composite. Two countries with the same average can have opposite profiles, and that difference is the whole point of the exercise."
       >
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {data.countries.map((c) => (
             <Link
               key={c.iso3}

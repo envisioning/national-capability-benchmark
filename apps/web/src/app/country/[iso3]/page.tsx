@@ -46,7 +46,7 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
 
   return (
     <>
-      <div className="mb-10 grid gap-8 lg:grid-cols-[320px_1fr]">
+      <div className="mb-10 grid gap-10 lg:grid-cols-[minmax(0,460px)_1fr]">
         <div>
           <Eyebrow>In the prototype because</Eyebrow>
           <PageTitle>{country.country}</PageTitle>

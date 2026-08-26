@@ -1,8 +1,9 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { DIMENSION_LABELS, DIMENSION_QUESTIONS, confidenceBand } from '@ncb/core'
+import { DIMENSION_LABELS, DIMENSION_QUESTIONS, confidenceBand, isThinEvidence } from '@ncb/core'
 import type { Dimension } from '@ncb/core'
+import { Distribution } from '@/components/Distribution'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
 
 type Row = {
@@ -112,7 +113,20 @@ export function DimensionPeek({
           {!rows && !error ? <p className="text-lg text-[var(--muted)]">Loading…</p> : null}
 
           {rows ? (
-            <ul className="space-y-1">
+            <Distribution
+              points={rows.map((r) => ({
+                key: r.iso3,
+                label: r.country,
+                value: r.score,
+                detail: `${confidenceBand(r.confidence).label} evidence`,
+                focal: r.iso3 === iso3,
+                hollow: isThinEvidence(r.confidence),
+              }))}
+            />
+          ) : null}
+
+          {rows ? (
+            <ul className="mt-4 space-y-1">
               {rows.map((r) => {
                 const focal = r.iso3 === iso3
                 const band = confidenceBand(r.confidence)
