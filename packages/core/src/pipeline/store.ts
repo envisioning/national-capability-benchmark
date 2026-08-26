@@ -2,6 +2,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import { DelphiRunFile, EvidenceFile, ObservationFile } from '../model/schema.js'
 import type { EvidenceRecord, Observation } from '../model/schema.js'
+import type { CountryResult, Dimension } from '../model/index.js'
 import { DELPHI_DIR, FILES } from './paths.js'
 
 async function readJson(path: string): Promise<unknown | null> {
@@ -71,4 +72,22 @@ export function toCsv(rows: Array<Record<string, string | number | null>>): stri
     headers.join(','),
     ...rows.map((r) => headers.map((h) => escape(r[h] ?? null)).join(',')),
   ].join('\n')
+}
+
+/**
+ * Strip a country down to what a list needs: the nine scores, their confidence
+ * and their trend headlines. The indicator rows and the yearly series stay in
+ * the per-country file, because a grid of 40 radars does not need them and they
+ * are most of the weight. See D27.
+ */
+export function summarize(country: CountryResult): CountryResult {
+  const dimensions = {} as CountryResult['dimensions']
+  for (const [dimension, result] of Object.entries(country.dimensions)) {
+    dimensions[dimension as Dimension] = {
+      ...result,
+      indicators: [],
+      momentum: result.momentum.map((m) => ({ ...m, series: [] })),
+    }
+  }
+  return { ...country, dimensions }
 }

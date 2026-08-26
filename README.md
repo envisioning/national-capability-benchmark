@@ -4,7 +4,7 @@ A prototype for measuring what a country is **capable of doing** — anticipatin
 change, coordinating action, learning, adapting and building under uncertainty —
 rather than how rich, comfortable or competitive it is.
 
-Nine capability dimensions, sixteen countries, 0 to 100 per dimension, no
+Nine capability dimensions, forty countries, 0 to 100 per dimension, no
 headline ranking. Every raw indicator stays visible with its source and year. Evidence
 quality is reported as a separate confidence score and is never folded into the
 capability score.
@@ -20,8 +20,10 @@ pnpm dev
 
 `pnpm bench cost` prices a real panel run before you make one.
 
-`pnpm bench all` fetches live World Bank data, scores the ten countries, runs the
-diagnostics and writes `data/out/report.md`. `pnpm dev` opens the viewer.
+`pnpm bench all` fetches live World Bank data, scores every country, runs the
+diagnostics and writes `data/out/report.md`. Scoring writes a slim
+`data/out/index.json` for anything that lists countries and one file per country
+under `data/out/countries`. `pnpm dev` opens the viewer.
 
 ## The layers
 
@@ -77,6 +79,10 @@ about any country.
 Run `pnpm bench report` and read `data/out/report.md`. The headline results from
 the first run:
 
+- **The nine dimensions separate once the country set is wide enough.** At 16
+  countries, two dimension pairs correlated at 0.94 and the model looked like
+  three signals wearing nine names. At 40 countries no pair passes the
+  redundancy threshold, and Trust fell from 0.79 to 0.39 against income per head.
 - **The wealth correlation was a property of the evidence class, not of the
   dimensions.** Perception indicators averaged 0.75 against log GDP per capita.
   Direct capability measures averaged 0.55. Retiring the perception layer took
@@ -130,11 +136,12 @@ wealth-correlated indicators are removed.
 1. Most recent comparable value per indicator per country, with source and year.
 2. Declared transform: per million people, log, or none.
 3. Winsorize with Tukey fences at three interquartile ranges. Extremes only.
-4. Min-max to 0–100 across the ten countries, reversed for lower-is-better.
+4. Min-max to 0-100 against the ten reference countries, reversed for lower-is-better.
 5. Equal-weight mean of the available indicators inside each dimension.
 6. `confidence = coverage × recency × source_quality`, reported separately.
 
 Scores are relative, but the scale does not move. The 0 and 100 endpoints are
 fixed by the ten reference countries, and any country added later is measured
-against that same frame. Adding the six Latin American countries moved zero of
-the ninety existing scores. See D16 in [docs/DECISIONS.md](docs/DECISIONS.md).
+against that same frame. Verified twice: zero of 90 existing scores moved when
+six countries were added, and zero of 144 moved when 24 more arrived. See D16
+and D27 in [docs/DECISIONS.md](docs/DECISIONS.md).

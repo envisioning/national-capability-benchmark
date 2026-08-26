@@ -813,3 +813,65 @@ drift, and the drift is invisible until somebody quotes the wrong one.
 **Overturned by.** Nothing foreseeable. A second surface that needs the same
 definitions, such as a printed report or an API, reads the same file.
 
+---
+
+## D27 — Forty countries, and output split one file per country
+
+*Recorded 2026-08-26.*
+
+**Choice.** Twenty-four countries join the extended set, taking the benchmark to
+40: Germany, France, the United Kingdom, Spain, Poland, Sweden, Finland,
+Ireland, Canada, Australia, Japan, China, Indonesia, Vietnam, the Philippines,
+Malaysia, Thailand, Turkey, Israel, the United Arab Emirates, Nigeria, Kenya,
+Rwanda and Ethiopia. The reference ten are untouched.
+
+Scoring now writes `data/out/index.json`, the slim list of nine scores per
+country, and `data/out/countries/{ISO3}.json`, one country in full. The single
+`scores.json` is gone. It had reached 7.3 MB and the viewer read all of it to
+draw any page.
+
+**Why, on the countries.** Every correlation in the diagnostics was a hint on 16
+points. At 40 the picture changes and some of it reverses:
+
+| Dimension | vs log GDP at 16 | at 40 |
+| --- | ---: | ---: |
+| Anticipation | 0.91 | 0.85 |
+| Adaptability | 0.87 | 0.80 |
+| Agency | 0.89 | 0.79 |
+| Learning | 0.79 | 0.77 |
+| Coordination | 0.68 | 0.61 |
+| Building | 0.78 | 0.56 |
+| Experimentation | 0.57 | 0.40 |
+| Trust | 0.79 | 0.39 |
+| Shared Purpose | 0.18 | 0.33 |
+
+The headline is the duplicate list. At 16 countries, Anticipation and
+Coordination correlated at 0.94 and Anticipation and Agency at 0.94, which
+suggested the nine dimensions were three signals wearing nine names. **At 40
+countries, no dimension pair passes the redundancy threshold at all.** The
+dimensions separate once the country set is wide enough to separate them, and
+the earlier finding was substantially an artefact of a narrow, mostly rich
+sample.
+
+**Why, on the files.** A country page needs one country. A grid of 40 radars
+needs nine numbers each. Serving 7.3 MB for either is the scaling limit D25
+predicted, arriving exactly where it said it would.
+
+**Cost.**
+
+- **Clamping is now common, and that is a warning.** 165 of 1,303 observed cells
+  sit outside the reference frame and are clamped, 12.7 percent, concentrated in
+  Ethiopia, Nigeria, Rwanda and Kenya. A10 said watch this flag, and it is now
+  firing loudly. The ten reference countries do not span the range being asked
+  about, and a low-income country pinned at 0 on twenty cells is losing real
+  information. A versioned rebase of the frame is now a live question rather
+  than a hypothetical one.
+- The GEM values cover only the original 16 countries, so the two Experimentation
+  indicators are missing for the 24 new ones and their coverage is lower.
+- Twenty-four countries arrived with no Delphi estimates, so the panel now covers
+  16 of 40.
+- The observation file is 9.2 MB.
+
+**Overturned by.** A frame rebase, which would be a versioned event with its own
+decision, or a move to absolute anchoring per indicator.
+

@@ -216,8 +216,13 @@ the data does not exist.
 **Severity: structural.**
 
 Every correlation in `diagnostics.json` is computed on the countries currently
-loaded, which is sixteen. That is better than the original ten and still small. A correlation of
-0.9 on sixteen points is a hint rather than a result. The redundancy and wealth-proxy
+loaded, which is now forty. **Update 2026-08-26.** At 16 countries this artefact
+said every correlation was a hint. Going to 40 proved the point in the sharpest
+possible way: the two dimension pairs flagged as near-duplicates at 16 countries,
+both at 0.94, are not flagged at all at 40, and Trust fell from 0.79 to 0.39
+against income per head. The nine dimensions separate when the sample is wide
+enough to separate them. Treat everything below as describing the 16-country run.
+A correlation of 0.9 on sixteen points is a hint rather than a result. The redundancy and wealth-proxy
 findings above are strong enough to act on because they also have a mechanical
 explanation, not because the coefficient is large.
 
@@ -253,7 +258,14 @@ measure, and they are a declared gap.
 
 ## A10 — The reference frame is ten countries wide, and they are not the world
 
-**Severity: structural. Introduced deliberately by D16.**
+**Severity: structural, and now urgent. Introduced deliberately by D16.**
+
+**Update 2026-08-26.** With 40 countries loaded, 165 of 1,303 observed cells
+clamp at 0 or 100, which is 12.7 percent. They concentrate in Ethiopia (20
+cells), Nigeria (18), Rwanda (16) and Kenya (14). The condition this artefact
+told us to watch for has arrived: the reference ten do not span the range the
+benchmark is now being asked about. The answer is a deliberate, versioned rebase,
+not a quiet widening. See D27.
 
 Pinning the normalization frame to the ten reference countries is what makes the
 benchmark extensible: adding the six Latin American countries moved zero of the

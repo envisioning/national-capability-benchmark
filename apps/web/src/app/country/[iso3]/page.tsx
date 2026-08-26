@@ -26,16 +26,16 @@ import {
   Td,
   Th,
 } from '@/components/ui'
-import { loadDelphiRun, loadEvidence, loadScores } from '@/lib/data'
+import { loadCountry, loadDelphiRun, loadEvidence, loadIndex } from '@/lib/data'
 import { toProfile } from '@/lib/profile'
 
 export const dynamic = 'force-dynamic'
 
 export default async function CountryPage({ params }: { params: Promise<{ iso3: string }> }) {
   const { iso3 } = await params
-  const data = await loadScores()
-  const country = data?.countries.find((c) => c.iso3 === iso3.toUpperCase())
+  const country = await loadCountry(iso3)
   if (!country) notFound()
+  const data = await loadIndex()
 
   const run = await loadDelphiRun()
   const evidence = (await loadEvidence()).filter((e) => e.iso3 === country.iso3)

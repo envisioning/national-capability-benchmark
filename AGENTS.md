@@ -9,7 +9,7 @@ dimensions, equal weights, no headline ranking.
 ```
 pnpm install
 pnpm bench ingest      fetch World Bank series from 1990 into data/observations/worldbank.json
-pnpm bench score       normalise and score, write data/out/scores.json and table.csv
+pnpm bench score       normalise and score, write data/out/index.json, data/out/countries/*.json and table.csv
 pnpm bench delphi      run the LLM panel (add --mock to run offline)
 pnpm bench diagnose    correlations, redundancy, GDP-sensitivity test
 pnpm bench report      write data/out/report.md
@@ -53,7 +53,11 @@ port 3888.
   to the active run rather than an archive. Keep the original alongside it.
 - `data/evidence` — evidence records: documented deliveries filed against
   indicators that have no dataset. Never scored. See D20.
-- `data/out` — scores, flat table, diagnostics, report.
+- `data/out` — `index.json` is the slim list every page that shows more than one
+  country reads. `countries/{ISO3}.json` carries one country in full, including
+  every indicator row and its yearly series. Never load the country files to
+  build a list: that is the 7 MB mistake D27 exists to prevent. Plus the flat
+  table, diagnostics and report.
 
 ## Invariants
 
@@ -102,7 +106,9 @@ port 3888.
   published. Verified when six countries were added: 0 of 90 reference cells
   moved. See D16, which supersedes D2.
 - Adding a country to the **reference** set rebases the whole dataset. Do not do
-  it as a side effect of adding data. It is a versioned, announced act.
+  it as a side effect of adding data. It is a versioned, announced act. Adding
+  an **extended** country is safe and was verified twice: 0 of 90 cells moved at
+  16 countries and 0 of 144 at 40.
 - A value outside the frame clamps to 0 or 100 and sets `outOfFrame` on the
   cell. Frequent clamping means the frame is too narrow, not that the scale
   should be widened quietly.

@@ -14,13 +14,13 @@ import {
   ScoreLegend,
   Section,
 } from '@/components/ui'
-import { MISSING_DATA_HINT, loadScores } from '@/lib/data'
+import { MISSING_DATA_HINT, loadIndex } from '@/lib/data'
 import { FOCUS_ISO3, toProfile } from '@/lib/profile'
 
 export const dynamic = 'force-dynamic'
 
 export default async function Page() {
-  const data = await loadScores()
+  const data = await loadIndex()
   if (!data) return <Empty hint={MISSING_DATA_HINT} />
 
   const focus = data.countries.find((c) => c.iso3 === FOCUS_ISO3) ?? data.countries[0]

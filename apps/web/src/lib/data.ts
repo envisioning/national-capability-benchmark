@@ -1,5 +1,5 @@
 import { readFile } from 'node:fs/promises'
-import { FILES } from '@ncb/core/node'
+import { FILES, countryFile } from '@ncb/core/node'
 import type { CountryResult, DelphiRunFile, Diagnostics, EvidenceRecord } from '@ncb/core'
 
 async function readJson<T>(path: string): Promise<T | null> {
@@ -10,8 +10,17 @@ async function readJson<T>(path: string): Promise<T | null> {
   }
 }
 
-export async function loadScores(): Promise<{ generatedAt: string; countries: CountryResult[] } | null> {
-  return readJson(FILES.scores)
+/** The slim list: nine scores per country, no indicator rows and no yearly series. */
+export async function loadIndex(): Promise<{ generatedAt: string; countries: CountryResult[] } | null> {
+  return readJson(FILES.index)
+}
+
+/** One country in full, including every indicator row and its history. */
+export async function loadCountry(iso3: string): Promise<CountryResult | null> {
+  const file = await readJson<{ generatedAt: string; country: CountryResult }>(
+    countryFile(iso3),
+  )
+  return file?.country ?? null
 }
 
 export async function loadDiagnostics(): Promise<Diagnostics | null> {

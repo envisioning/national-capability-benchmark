@@ -11,6 +11,7 @@ export const DELPHI_DIR = resolve(DATA_DIR, 'delphi')
 export const EVIDENCE_DIR = resolve(DATA_DIR, 'evidence')
 export const SNAPSHOT_DIR = resolve(OBSERVATIONS_DIR, 'snapshots')
 export const OUT_DIR = resolve(DATA_DIR, 'out')
+export const COUNTRY_OUT_DIR = resolve(OUT_DIR, 'countries')
 
 export const FILES = {
   worldBank: resolve(OBSERVATIONS_DIR, 'worldbank.json'),
@@ -18,8 +19,13 @@ export const FILES = {
   revisions: resolve(OBSERVATIONS_DIR, 'revisions.json'),
   delphiLatest: resolve(DELPHI_DIR, 'latest.json'),
   evidence: resolve(EVIDENCE_DIR, 'records.json'),
-  scores: resolve(OUT_DIR, 'scores.json'),
+  index: resolve(OUT_DIR, 'index.json'),
   flatTable: resolve(OUT_DIR, 'table.csv'),
   diagnostics: resolve(OUT_DIR, 'diagnostics.json'),
   report: resolve(OUT_DIR, 'report.md'),
+}
+
+/** One file per country, so a page loads what it needs and nothing else. See D27. */
+export function countryFile(iso3: string): string {
+  return resolve(COUNTRY_OUT_DIR, `${iso3.toUpperCase()}.json`)
 }

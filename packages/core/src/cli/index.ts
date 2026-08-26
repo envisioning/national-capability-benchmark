@@ -1,11 +1,18 @@
 import { COUNTRY_ISO3, GDP_PER_CAPITA_CODE, INDICATORS } from '../model/index.js'
 import type { CountryResult } from '../model/index.js'
 import { ingestWorldBank } from '../pipeline/ingest.js'
-import { FILES } from '../pipeline/paths.js'
+import { COUNTRY_OUT_DIR, FILES, countryFile } from '../pipeline/paths.js'
 import { flatTable, scoreAll } from '../pipeline/score.js'
 import { runDiagnostics } from '../pipeline/diagnostics.js'
 import { buildReport } from '../pipeline/report.js'
-import { loadDelphi, loadObservations, saveDelphi, toCsv, writeOut } from '../pipeline/store.js'
+import {
+  loadDelphi,
+  loadObservations,
+  saveDelphi,
+  summarize,
+  toCsv,
+  writeOut,
+} from '../pipeline/store.js'
 import { buildPanel, modelsFromEnv } from '../delphi/panel.js'
 import { GatewayProvider, MockProvider } from '../delphi/provider.js'
 import { runDelphi } from '../delphi/run.js'
@@ -64,12 +71,23 @@ async function score(args: Args): Promise<CountryResult[]> {
     minPanelistConfidence: num(args, 'min-panelist-confidence', 0),
   })
 
+  const generatedAt = new Date().toISOString()
+  /* One slim index for anything that lists countries, one file per country for
+   * the detail. A single file carrying every indicator series for 40 countries
+   * is 7 MB and every page load pays for it. See D27. */
   await writeOut(
-    FILES.scores,
-    `${JSON.stringify({ generatedAt: new Date().toISOString(), countries }, null, 2)}\n`,
+    FILES.index,
+    `${JSON.stringify({ generatedAt, countries: countries.map(summarize) }, null, 2)}\n`,
   )
+  for (const country of countries) {
+    await writeOut(
+      countryFile(country.iso3),
+      `${JSON.stringify({ generatedAt, country }, null, 2)}\n`,
+    )
+  }
   await writeOut(FILES.flatTable, `${toCsv(flatTable(countries))}\n`)
-  console.log(`scores    -> ${FILES.scores}`)
+  console.log(`index     -> ${FILES.index}`)
+  console.log(`countries -> ${COUNTRY_OUT_DIR} (${countries.length} files)`)
   console.log(`flat table-> ${FILES.flatTable}`)
   return countries
 }
@@ -235,7 +253,7 @@ async function main() {
       console.log(`National Capability Benchmark
 
   pnpm bench ingest    [--from 1990] [--snapshot]  fetch World Bank series into data/observations
-  pnpm bench score                        normalize, score, write scores.json and table.csv
+  pnpm bench score                        normalize, score, write index.json, one file per country, table.csv
   pnpm bench delphi    [--mock] [--rounds 2] [--countries BRA,IND] [--models a,b]
                        [--max-coverage 0.6] [--no-judge] [--concurrency 4]
   pnpm bench diagnose                     correlations, redundancy, GDP-sensitivity test
