@@ -6,8 +6,9 @@ import {
   DIMENSION_QUESTIONS,
   INDICATORS_BY_ID,
 } from '@ncb/core'
-import { Radar } from '@/components/Radar'
+import { CompareRadar } from '@/components/views/CompareRadar'
 import { CountryDimensionTable } from '@/components/views/CountryDimensionTable'
+import { EvidenceList } from '@/components/views/EvidenceList'
 import {
   ClassBadge,
   ConfidenceBar,
@@ -20,7 +21,8 @@ import {
   Td,
   Th,
 } from '@/components/ui'
-import { loadDelphiRun, loadScores } from '@/lib/data'
+import { loadDelphiRun, loadEvidence, loadScores } from '@/lib/data'
+import { toProfile } from '@/lib/profile'
 
 export const dynamic = 'force-dynamic'
 
@@ -31,7 +33,9 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
   if (!country) notFound()
 
   const run = await loadDelphiRun()
+  const evidence = (await loadEvidence()).filter((e) => e.iso3 === country.iso3)
   const meta = COUNTRIES.find((c) => c.iso3 === country.iso3)
+  const others = (data?.countries ?? []).filter((c) => c.iso3 !== country.iso3)
 
   return (
     <>
@@ -41,15 +45,7 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
           <PageTitle>{country.country}</PageTitle>
           <p className="mt-3 text-lg leading-relaxed">{meta?.reason}</p>
           <div className="mt-4">
-            <Radar
-              series={[
-                {
-                  label: country.country,
-                  values: DIMENSIONS.map((d) => country.dimensions[d]?.score ?? null),
-                  color: 'var(--primary)',
-                },
-              ]}
-            />
+            <CompareRadar focus={toProfile(country)} others={others.map(toProfile)} />
           </div>
         </div>
 
@@ -103,7 +99,11 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
                           </Td>
                           <Td dim>{row.source}</Td>
                           <Td dim>
-                            {row.status === 'gap' ? 'no dataset exists' : row.status}
+                            {row.status === 'gap'
+                              ? gapLabel(
+                                  evidence.filter((e) => e.indicatorId === row.indicatorId).length,
+                                )
+                              : row.status}
                           </Td>
                         </tr>
                       )
@@ -111,6 +111,8 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
                   </tbody>
                 </Table>
               </Scroller>
+
+              <EvidenceList records={evidence.filter((e) => INDICATORS_BY_ID[e.indicatorId]?.dimension === d)} />
 
               {finals.length > 0 ? (
                 <div className="mt-6 rounded-lg border border-[var(--rule)] bg-[var(--surface-sunken)] p-4">
@@ -136,4 +138,10 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
       })}
     </>
   )
+}
+
+/** A gap row says what is missing, and says when somebody wrote down a case anyway. */
+function gapLabel(records: number): string {
+  if (records === 0) return 'no dataset exists'
+  return records === 1 ? 'no dataset exists, 1 record' : `no dataset exists, ${records} records`
 }
