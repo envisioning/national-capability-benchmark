@@ -11,6 +11,7 @@ import { DIMENSION_ICON, Icon, STATUS_ICON } from '@/components/Icon'
 import { CompareRadar } from '@/components/views/CompareRadar'
 import { CountryDimensionTable } from '@/components/views/CountryDimensionTable'
 import { EvidenceList } from '@/components/views/EvidenceList'
+import { IndicatorPeek } from '@/components/views/IndicatorPeek'
 import {
   ClassBadge,
   ClassLegend,
@@ -145,7 +146,13 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
                       return (
                         <tr key={row.indicatorId}>
                           <Td>
-                            <span title={def?.notes}>{row.name}</span>
+                            {row.status === 'observed' ? (
+                              <IndicatorPeek indicatorId={row.indicatorId} iso3={country.iso3}>
+                                {row.name}
+                              </IndicatorPeek>
+                            ) : (
+                              <span title={def?.notes}>{row.name}</span>
+                            )}
                           </Td>
                           <Td>
                             <ClassBadge value={row.measurementClass} />
@@ -156,7 +163,13 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
                             {row.year ?? ''}
                           </Td>
                           <Td align="right">
-                            <Score value={row.normalized} size="sm" />
+                            {row.status === 'observed' && row.normalized !== null ? (
+                              <IndicatorPeek indicatorId={row.indicatorId} iso3={country.iso3}>
+                                <Score value={row.normalized} size="sm" />
+                              </IndicatorPeek>
+                            ) : (
+                              <Score value={row.normalized} size="sm" />
+                            )}
                           </Td>
                           <Td dim>{row.source}</Td>
                           <Td dim>

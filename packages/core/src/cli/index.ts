@@ -1,11 +1,18 @@
 import { COUNTRY_ISO3, GDP_PER_CAPITA_CODE, INDICATORS } from '../model/index.js'
 import type { CountryResult } from '../model/index.js'
 import { ingestWorldBank } from '../pipeline/ingest.js'
-import { COUNTRY_OUT_DIR, FILES, countryFile } from '../pipeline/paths.js'
+import {
+  COUNTRY_OUT_DIR,
+  FILES,
+  INDICATOR_OUT_DIR,
+  countryFile,
+  indicatorFile,
+} from '../pipeline/paths.js'
 import { flatTable, scoreAll } from '../pipeline/score.js'
 import { runDiagnostics } from '../pipeline/diagnostics.js'
 import { buildReport } from '../pipeline/report.js'
 import {
+  acrossCountries,
   loadDelphi,
   loadObservations,
   saveDelphi,
@@ -85,9 +92,14 @@ async function score(args: Args): Promise<CountryResult[]> {
       `${JSON.stringify({ generatedAt, country }, null, 2)}\n`,
     )
   }
+  const views = acrossCountries(countries)
+  for (const view of views) {
+    await writeOut(indicatorFile(view.indicatorId), `${JSON.stringify(view, null, 2)}\n`)
+  }
   await writeOut(FILES.flatTable, `${toCsv(flatTable(countries))}\n`)
   console.log(`index     -> ${FILES.index}`)
   console.log(`countries -> ${COUNTRY_OUT_DIR} (${countries.length} files)`)
+  console.log(`indicators-> ${INDICATOR_OUT_DIR} (${views.length} files)`)
   console.log(`flat table-> ${FILES.flatTable}`)
   return countries
 }

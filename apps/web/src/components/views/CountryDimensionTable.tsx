@@ -5,6 +5,7 @@ import type { CountryResult } from '@ncb/core'
 import { DataTable } from '@/components/DataTable'
 import { ConfidenceBar, Delta, Score } from '@/components/ui'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
+import { DimensionPeek } from '@/components/views/DimensionPeek'
 
 export function CountryDimensionTable({ country }: { country: CountryResult }) {
   const rows = DIMENSIONS.map((d) => ({ d, dim: country.dimensions[d] })).filter(
@@ -34,7 +35,11 @@ export function CountryDimensionTable({ country }: { country: CountryResult }) {
           label: 'Score',
           align: 'right',
           sort: (r) => r.dim.score,
-          render: (r) => <Score value={r.dim.score} />,
+          render: (r) => (
+            <DimensionPeek dimension={r.d} iso3={country.iso3}>
+              <Score value={r.dim.score} />
+            </DimensionPeek>
+          ),
         },
         {
           key: 'confidence',

@@ -1,6 +1,12 @@
 import { readFile } from 'node:fs/promises'
-import { FILES, countryFile } from '@ncb/core/node'
-import type { CountryResult, DelphiRunFile, Diagnostics, EvidenceRecord } from '@ncb/core'
+import { FILES, countryFile, indicatorFile } from '@ncb/core/node'
+import type {
+  CountryResult,
+  DelphiRunFile,
+  Diagnostics,
+  EvidenceRecord,
+  IndicatorAcrossCountries,
+} from '@ncb/core'
 
 async function readJson<T>(path: string): Promise<T | null> {
   try {
@@ -29,6 +35,13 @@ export async function loadDiagnostics(): Promise<Diagnostics | null> {
 
 export async function loadDelphiRun(): Promise<DelphiRunFile | null> {
   return readJson(FILES.delphiLatest)
+}
+
+/** One indicator across every country, for the peek. */
+export async function loadIndicatorAcrossCountries(
+  id: string,
+): Promise<IndicatorAcrossCountries | null> {
+  return readJson<IndicatorAcrossCountries>(indicatorFile(id))
 }
 
 /** Evidence records for indicators with no dataset. Never scored. */

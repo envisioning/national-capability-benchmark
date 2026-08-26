@@ -12,6 +12,7 @@ export const EVIDENCE_DIR = resolve(DATA_DIR, 'evidence')
 export const SNAPSHOT_DIR = resolve(OBSERVATIONS_DIR, 'snapshots')
 export const OUT_DIR = resolve(DATA_DIR, 'out')
 export const COUNTRY_OUT_DIR = resolve(OUT_DIR, 'countries')
+export const INDICATOR_OUT_DIR = resolve(OUT_DIR, 'indicators')
 
 export const FILES = {
   worldBank: resolve(OBSERVATIONS_DIR, 'worldbank.json'),
@@ -28,4 +29,9 @@ export const FILES = {
 /** One file per country, so a page loads what it needs and nothing else. See D27. */
 export function countryFile(iso3: string): string {
   return resolve(COUNTRY_OUT_DIR, `${iso3.toUpperCase()}.json`)
+}
+
+/** One file per indicator, holding every country's value for it. See D30. */
+export function indicatorFile(id: string): string {
+  return resolve(INDICATOR_OUT_DIR, `${id}.json`)
 }

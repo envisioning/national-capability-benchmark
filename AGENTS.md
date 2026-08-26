@@ -55,7 +55,9 @@ port 3888.
   indicators that have no dataset. Never scored. See D20.
 - `data/out` — `index.json` is the slim list every page that shows more than one
   country reads. `countries/{ISO3}.json` carries one country in full, including
-  every indicator row and its yearly series. Never load the country files to
+  every indicator row and its yearly series. `indicators/{id}.json` is the same
+  data turned inside out, one file per indicator holding every country, which is
+  what the click-to-compare panels fetch. See D30. Never load the country files to
   build a list: that is the 7 MB mistake D27 exists to prevent. Plus the flat
   table, diagnostics and report.
 

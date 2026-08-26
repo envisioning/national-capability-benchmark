@@ -360,3 +360,29 @@ export const EvidenceFile = z.object({
   generatedAt: z.string(),
   records: z.array(EvidenceRecord),
 })
+
+/* -------------------------- Cross-country views -------------------------- */
+
+/**
+ * One indicator across every country, so a single number can be read against
+ * the field it sits in. A score of 17.6 means nothing alone. Beside the other
+ * 39 countries and the two values that fix the ends of the scale, it means
+ * something. See D30.
+ */
+export const IndicatorAcrossCountries = z.object({
+  indicatorId: z.string(),
+  values: z.array(
+    z.object({
+      iso3: z.string().length(3),
+      country: z.string(),
+      raw: z.number(),
+      normalized: z.number(),
+      year: z.number().int(),
+      tier: SourceTier,
+      outOfFrame: z.boolean(),
+      /** True for the ten countries whose values fix the ends of the scale. */
+      reference: z.boolean(),
+    }),
+  ),
+})
+export type IndicatorAcrossCountries = z.infer<typeof IndicatorAcrossCountries>

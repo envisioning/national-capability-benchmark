@@ -955,3 +955,44 @@ Agency are weaker. Those two are the ones to revisit if anybody misreads them.
 **Overturned by.** Evidence that the grid is unreadable without words, which
 would mean going back to labels and making the cards larger.
 
+---
+
+## D30 — Every number opens onto the field it sits in
+
+*Recorded 2026-08-26.*
+
+**Choice.** Clicking an indicator name, an indicator's normalized score or a
+dimension score opens a panel listing every country on that measure, ranked,
+with the country being read marked and the ten frame countries marked.
+
+Scoring writes a third artefact for this, `data/out/indicators/{id}.json`, which
+is the scored matrix turned inside out: one file per indicator holding every
+country's raw value, year, source tier, normalized position and whether it
+clamped. Two route handlers serve it and the dimension equivalent, and the panels
+fetch on demand rather than shipping 34 payloads with every page.
+
+**Why.** A table cell reading 17.6 is not information. The same cell next to the
+other 39 countries, the two values that fix the ends of the scale and the year
+each country's number comes from is information. This is what Our World in Data
+does well and what a static table cannot do at all.
+
+The panels also surface problems that the country page hides by construction.
+Opening R&D expenditure shows Israel at 6.35 percent of GDP and South Korea at
+4.94 both sitting at exactly 100, because Israel is outside the frame and clamped,
+which is artefact A10 made visible instead of documented. Opening Coordination
+shows the Netherlands, France and Spain tied at 100 with confidence 0.079, which
+is A12 in one glance.
+
+**Cost.**
+
+- Another 392 KB of generated output, and another artefact to keep in step with
+  the scores. It is written by the same command, so it cannot drift.
+- The panels are client components with a fetch, so the context is not available
+  without JavaScript. The raw value, year, source and normalized score all stay
+  in the table itself, so nothing is lost, only the comparison.
+- A dialog inherits text alignment from wherever it sits in the DOM. Both panels
+  set their own, which is a small trap worth remembering for the next one.
+
+**Overturned by.** A charting layer that shows the distribution rather than a
+ranked list, which would be a better answer to the same question.
+

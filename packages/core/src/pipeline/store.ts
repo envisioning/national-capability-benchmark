@@ -2,7 +2,12 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import { DelphiRunFile, EvidenceFile, ObservationFile } from '../model/schema.js'
 import type { EvidenceRecord, Observation } from '../model/schema.js'
-import type { CountryResult, Dimension } from '../model/index.js'
+import { REFERENCE_ISO3 } from '../model/index.js'
+import type {
+  CountryResult,
+  Dimension,
+  IndicatorAcrossCountries,
+} from '../model/index.js'
 import { DELPHI_DIR, FILES } from './paths.js'
 
 async function readJson(path: string): Promise<unknown | null> {
@@ -90,4 +95,41 @@ export function summarize(country: CountryResult): CountryResult {
     }
   }
   return { ...country, dimensions }
+}
+
+/**
+ * Turn the scored countries inside out: one entry per indicator, holding every
+ * country that has a value for it, ranked best first.
+ *
+ * The country files answer "what is in this country". This answers "where does
+ * this number sit", which is the question a reader actually has when they see
+ * 17.6 in a table. See D30.
+ */
+export function acrossCountries(countries: CountryResult[]): IndicatorAcrossCountries[] {
+  const byIndicator = new Map<string, IndicatorAcrossCountries['values']>()
+
+  for (const country of countries) {
+    for (const dimension of Object.values(country.dimensions)) {
+      for (const row of dimension.indicators) {
+        if (row.status !== 'observed' || row.raw === null || row.normalized === null) continue
+        const list = byIndicator.get(row.indicatorId) ?? []
+        list.push({
+          iso3: country.iso3,
+          country: country.country,
+          raw: row.raw,
+          normalized: row.normalized,
+          year: row.year ?? 0,
+          tier: row.sourceTier ?? 'international_organization',
+          outOfFrame: row.outOfFrame,
+          reference: REFERENCE_ISO3.includes(country.iso3),
+        })
+        byIndicator.set(row.indicatorId, list)
+      }
+    }
+  }
+
+  return [...byIndicator.entries()].map(([indicatorId, values]) => ({
+    indicatorId,
+    values: values.sort((a, b) => b.normalized - a.normalized),
+  }))
 }
