@@ -6,6 +6,7 @@ import {
   isEvidential,
 } from '../model/index.js'
 import { CONFIDENCE_BANDS, confidenceBand } from './confidence.js'
+import { momentumSpansIn } from './trend.js'
 import type { CountryResult, DelphiRunFile, Dimension } from '../model/index.js'
 import type { Diagnostics } from './diagnostics.js'
 import { cellConsensus, indicatorConsensus, missingEvidenceRanking } from '../delphi/consensus.js'
@@ -69,52 +70,55 @@ export function buildReport(
   out.push('')
   out.push('## Where each country is moving, on the same ruler')
   out.push('')
-  const spans = countries
-    .flatMap((c) => DIMENSIONS.map((d) => c.dimensions[d]?.momentum))
-    .filter((m): m is NonNullable<typeof m> => Boolean(m))
+  const lists = countries.flatMap((c) => DIMENSIONS.map((d) => c.dimensions[d]?.momentum ?? []))
+  const spans = momentumSpansIn(lists)
   if (spans.length === 0) {
-    out.push('No dimension has enough indicators observed at both ends of the span.')
+    out.push('No dimension has enough indicators observed at both ends of any span.')
     out.push('')
   } else {
-    const baseYear = Math.min(...spans.map((m) => m.baseYear))
-    const currentYear = Math.max(...spans.map((m) => m.currentYear))
     out.push(
-      `Change in dimension score between ${baseYear} and ${currentYear}, scored against the current frame so the scale holds still, and computed only on the indicators observed at both ends. That matched basket is smaller than the full dimension, so these numbers move on a different base from the scores above.`,
+      'Change in dimension score, scored against the current frame so the scale holds still, and computed only on the indicators observed at both ends. That matched basket is smaller than the full dimension, so these numbers move on a different base from the scores above. The number in brackets is how many indicators carry the cell.',
     )
     out.push('')
+    for (const span of spans) {
+      const at = (c: CountryResult, d: Dimension) =>
+        (c.dimensions[d]?.momentum ?? []).find((m) => m.currentYear - m.baseYear === span) ?? null
+      out.push(`### Over ${span} years`)
+      out.push('')
+      out.push(
+        table(
+          ['Country', ...DIMENSIONS.map((d) => DIMENSION_LABELS[d])],
+          countries.map((c) => [
+            c.country,
+            ...DIMENSIONS.map((d) => {
+              const m = at(c, d)
+              if (!m) return null
+              return `${m.delta > 0 ? '+' : ''}${m.delta.toFixed(1)} (${m.matchedIndicators})`
+            }),
+          ]),
+        ),
+      )
+      out.push('')
+      const medians = DIMENSIONS.map((d) => {
+        const deltas = countries
+          .map((c) => at(c, d)?.delta)
+          .filter((v): v is number => typeof v === 'number')
+        return {
+          dimension: d,
+          median: deltas.length ? round(median(deltas), 1) : null,
+          n: deltas.length,
+        }
+      }).filter((r) => r.median !== null)
+      out.push(
+        table(
+          ['Dimension', `Median change over ${span} years`, 'Countries with a trend'],
+          medians.map((r) => [DIMENSION_LABELS[r.dimension], r.median, r.n]),
+        ),
+      )
+      out.push('')
+    }
     out.push(
-      table(
-        ['Country', ...DIMENSIONS.map((d) => DIMENSION_LABELS[d])],
-        countries.map((c) => [
-          c.country,
-          ...DIMENSIONS.map((d) => {
-            const m = c.dimensions[d]?.momentum
-            if (!m) return null
-            return `${m.delta > 0 ? '+' : ''}${m.delta.toFixed(1)} (${m.matchedIndicators})`
-          }),
-        ]),
-      ),
-    )
-    out.push('')
-    out.push(
-      'The number in brackets is how many indicators carry that cell. A dimension with no number has fewer than two indicators observed in both years, or a basket covering less than half of what it measures today.',
-    )
-    out.push('')
-    const medians = DIMENSIONS.map((d) => {
-      const deltas = countries
-        .map((c) => c.dimensions[d]?.momentum?.delta)
-        .filter((v): v is number => typeof v === 'number')
-      return { dimension: d, median: deltas.length ? round(median(deltas), 1) : null, n: deltas.length }
-    }).filter((r) => r.median !== null)
-    out.push(
-      table(
-        ['Dimension', 'Median change across countries', 'Countries with a trend'],
-        medians.map((r) => [DIMENSION_LABELS[r.dimension], r.median, r.n]),
-      ),
-    )
-    out.push('')
-    out.push(
-      'Read the median first. Several indicators in Anticipation and Agency measure adoption of things that spread worldwide, so almost every country rises and a positive number is not evidence of catching up. The country is gaining ground only where its change beats the median in that column.',
+      'Read the median before the country. Several indicators measure adoption of things that spread worldwide, so almost every country rises and a positive number is not evidence of catching up. A country gains ground only where its change beats the median in that column. The short span is broad and shallow, the long span is narrow and deep, and a dimension that appears in one and not the other is telling you how far its data reaches.',
     )
     out.push('')
   }

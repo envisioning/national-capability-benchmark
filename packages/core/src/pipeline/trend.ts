@@ -167,3 +167,60 @@ export function momentumFor(
     series,
   }
 }
+
+/**
+ * One indicator's whole observed history for one country, normalised against
+ * the current frame.
+ *
+ * No matched basket is needed here, because there is nothing to match: a single
+ * indicator is comparable with itself. That makes the indicator-level line reach
+ * as far back as the data does, where a dimension-level trend is held to the
+ * shallowest series it contains.
+ */
+export function indicatorSeries(
+  history: History,
+  frame: Frame | undefined,
+  def: IndicatorDef,
+  iso3: string,
+): Array<{ year: number; normalized: number }> {
+  if (!frame) return []
+  const points = history.get(def.id)?.get(iso3)
+  if (!points) return []
+
+  const denominators = def.denominatorSeries
+    ? history.get(`__denominator__${def.denominatorSeries}`)?.get(iso3)
+    : undefined
+
+  const out: Array<{ year: number; normalized: number }> = []
+  for (const point of [...points].sort((a, b) => a.year - b.year)) {
+    let denominator: number | null = null
+    if (def.denominatorSeries) {
+      /* Pair a value with its own year's denominator, never a later one. */
+      const match = denominators?.find((d) => d.year === point.year)
+      if (!match) continue
+      denominator = match.value
+    }
+    const transformed = applyTransform(def, point.value, denominator)
+    if (transformed === null || !Number.isFinite(transformed)) continue
+    out.push({
+      year: point.year,
+      normalized: round(scoreAgainstFrame(transformed, frame, def.direction).normalized, 1),
+    })
+  }
+  return out
+}
+
+/** The trend to show first: the shortest span that produced one. */
+export function primaryMomentum(list: Momentum[]): Momentum | null {
+  return list.length > 0 ? (list[0] as Momentum) : null
+}
+
+/** The distinct spans present across a set of momentum entries, shortest first. */
+export function momentumSpansIn(lists: Momentum[][]): number[] {
+  const spans = new Set<number>()
+  for (const list of lists) {
+    for (const m of list) spans.add(m.currentYear - m.baseYear)
+  }
+  return [...spans].sort((a, b) => a - b)
+}
+

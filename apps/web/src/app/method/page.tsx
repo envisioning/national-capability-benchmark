@@ -143,6 +143,17 @@ export default function MethodPage() {
             The number of indicators is printed next to every trend.
           </li>
           <li>
+            Two spans are published. Ten years is broad and shallow, twenty years is narrow and
+            deep, and a dimension that has one but not the other is telling you how far its data
+            reaches.
+          </li>
+          <li>
+            Every indicator also carries its own line, back to 1990 where the data goes that far.
+            One indicator is comparable with itself, so nothing has to be matched and the line is
+            not held back by the shallowest series in its dimension. Gaps in a line are real gaps,
+            because nothing is carried forward or filled in.
+          </li>
+          <li>
             A value more than five years old does not count toward a year, and a country that sat
             outside today's frame clamps at 0 or 100 with the clamp recorded.
           </li>

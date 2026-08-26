@@ -95,7 +95,7 @@ async function main() {
 
   switch (command) {
     case 'ingest': {
-      const from = num(args, 'from', 2000)
+      const from = num(args, 'from', 1990)
       console.log(`Fetching ${INDICATORS.filter((i) => i.ingest === 'worldbank').length} World Bank indicators from ${from}...`)
       const { report } = await ingestWorldBank(from)
       for (const r of report) {
@@ -211,7 +211,7 @@ async function main() {
     }
 
     case 'all': {
-      await ingestWorldBank(num(args, 'from', 2000))
+      await ingestWorldBank(num(args, 'from', 1990))
       await score(args)
       const { countries, diag, delphi } = await diagnose(args)
       await writeOut(FILES.report, buildReport(countries, diag, delphi))
@@ -222,7 +222,7 @@ async function main() {
     default:
       console.log(`National Capability Benchmark
 
-  pnpm bench ingest    [--from 2000]      fetch World Bank series into data/observations
+  pnpm bench ingest    [--from 1990]      fetch World Bank series into data/observations
   pnpm bench score                        normalize, score, write scores.json and table.csv
   pnpm bench delphi    [--mock] [--rounds 2] [--countries BRA,IND] [--models a,b]
                        [--max-coverage 0.6] [--no-judge] [--concurrency 4]

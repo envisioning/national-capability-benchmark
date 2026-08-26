@@ -67,7 +67,7 @@ export type IngestReport = {
   error?: string
 }
 
-export async function ingestWorldBank(fromYear = 2000): Promise<{
+export async function ingestWorldBank(fromYear = 1990): Promise<{
   observations: Observation[]
   report: IngestReport[]
 }> {

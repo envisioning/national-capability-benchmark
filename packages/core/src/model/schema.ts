@@ -192,6 +192,14 @@ export const IndicatorResult = z.object({
   winsorized: z.boolean(),
   /** The value sat outside the reference frame, so the score was clamped to 0 or 100. */
   outOfFrame: z.boolean().default(false),
+  /**
+   * Every observed year for this country, normalised against the current frame.
+   * Observations only: nothing is carried forward and nothing is interpolated,
+   * so the gaps in the line are real gaps. Raw values stay in
+   * `data/observations`. Higher is always better here, because lower-is-better
+   * indicators are reversed by the normalisation.
+   */
+  series: z.array(z.object({ year: z.number().int(), normalized: z.number() })).default([]),
   status: z.enum(['observed', 'missing', 'gap', 'retired']),
 })
 export type IndicatorResult = z.infer<typeof IndicatorResult>
@@ -233,8 +241,12 @@ export const DimensionResult = z.object({
   /** score when present, else delphiScore. The blended view, kept explicitly separate. */
   blendedScore: z.number().nullable(),
   blendedFrom: z.enum(['indicators', 'delphi', 'none']),
-  /** Null when too few indicators are observed at both ends of the span. */
-  momentum: Momentum.nullable(),
+  /**
+   * One entry per span, shortest first. Empty when no span has enough
+   * indicators observed at both ends. The short span is broad and shallow, the
+   * long one is narrow and deep, and they answer different questions.
+   */
+  momentum: z.array(Momentum),
   indicators: z.array(IndicatorResult),
 })
 export type DimensionResult = z.infer<typeof DimensionResult>

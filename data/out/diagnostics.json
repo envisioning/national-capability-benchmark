@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T18:33:44.985Z",
+  "generatedAt": "2026-08-26T18:56:29.276Z",
   "gdpSeries": "NY.GDP.PCAP.PP.KD",
   "dimensionVsGdp": [
     {
@@ -28,8 +28,8 @@
     },
     {
       "dimension": "learning",
-      "pearson": 0.79,
-      "spearman": 0.824,
+      "pearson": 0.759,
+      "spearman": 0.776,
       "n": 16
     },
     {
@@ -133,25 +133,13 @@
     {
       "a": "anticipation",
       "b": "learning",
-      "r": 0.689,
-      "n": 16
-    },
-    {
-      "a": "agency",
-      "b": "learning",
-      "r": 0.665,
+      "r": 0.664,
       "n": 16
     },
     {
       "a": "coordination",
       "b": "trust",
       "r": 0.634,
-      "n": 16
-    },
-    {
-      "a": "coordination",
-      "b": "learning",
-      "r": 0.632,
       "n": 16
     },
     {
@@ -164,6 +152,12 @@
       "a": "agency",
       "b": "experimentation",
       "r": 0.625,
+      "n": 16
+    },
+    {
+      "a": "agency",
+      "b": "learning",
+      "r": 0.622,
       "n": 16
     },
     {
@@ -197,9 +191,21 @@
       "n": 16
     },
     {
+      "a": "coordination",
+      "b": "learning",
+      "r": 0.588,
+      "n": 16
+    },
+    {
       "a": "learning",
       "b": "experimentation",
-      "r": 0.519,
+      "r": 0.502,
+      "n": 16
+    },
+    {
+      "a": "trust",
+      "b": "learning",
+      "r": 0.477,
       "n": 16
     },
     {
@@ -210,20 +216,8 @@
     },
     {
       "a": "trust",
-      "b": "learning",
-      "r": 0.459,
-      "n": 16
-    },
-    {
-      "a": "trust",
       "b": "shared_purpose",
       "r": 0.383,
-      "n": 16
-    },
-    {
-      "a": "learning",
-      "b": "building",
-      "r": 0.367,
       "n": 16
     },
     {
@@ -233,9 +227,21 @@
       "n": 16
     },
     {
+      "a": "learning",
+      "b": "building",
+      "r": 0.342,
+      "n": 16
+    },
+    {
       "a": "anticipation",
       "b": "shared_purpose",
       "r": 0.326,
+      "n": 16
+    },
+    {
+      "a": "learning",
+      "b": "shared_purpose",
+      "r": 0.289,
       "n": 16
     },
     {
@@ -254,12 +260,6 @@
       "a": "coordination",
       "b": "shared_purpose",
       "r": 0.255,
-      "n": 16
-    },
-    {
-      "a": "learning",
-      "b": "shared_purpose",
-      "r": 0.224,
       "n": 16
     },
     {
@@ -453,14 +453,6 @@
       "flaggedAsWealthProxy": false
     },
     {
-      "indicatorId": "vocational_secondary_share",
-      "dimension": "learning",
-      "measurementClass": "I",
-      "r": 0.564,
-      "wealthProxyPrior": 0.1,
-      "flaggedAsWealthProxy": false
-    },
-    {
       "indicatorId": "resident_patents_per_million",
       "dimension": "experimentation",
       "measurementClass": "O",
@@ -498,6 +490,14 @@
       "measurementClass": "C",
       "r": 0.43,
       "wealthProxyPrior": 0.2,
+      "flaggedAsWealthProxy": false
+    },
+    {
+      "indicatorId": "vocational_secondary_share",
+      "dimension": "learning",
+      "measurementClass": "I",
+      "r": 0.404,
+      "wealthProxyPrior": 0.1,
       "flaggedAsWealthProxy": false
     },
     {
@@ -690,8 +690,8 @@
       "indicatorsObserved": 5,
       "gaps": 2,
       "retired": 0,
-      "meanCoverage": 0.696,
-      "meanConfidence": 0.51,
+      "meanCoverage": 0.714,
+      "meanConfidence": 0.512,
       "classMix": {
         "C": 3,
         "I": 3,
@@ -801,7 +801,7 @@
       },
       {
         "dimension": "learning",
-        "meanAbsShift": 3.67
+        "meanAbsShift": 3.44
       },
       {
         "dimension": "experimentation",
@@ -824,12 +824,12 @@
       {
         "iso3": "BRA",
         "country": "Brazil",
-        "meanAbsShift": 4.36
+        "meanAbsShift": 4.37
       },
       {
         "iso3": "USA",
         "country": "United States",
-        "meanAbsShift": 5.08
+        "meanAbsShift": 5
       },
       {
         "iso3": "NLD",
@@ -844,32 +844,32 @@
       {
         "iso3": "SGP",
         "country": "Singapore",
-        "meanAbsShift": 8.57
+        "meanAbsShift": 8.56
       },
       {
         "iso3": "KOR",
         "country": "South Korea",
-        "meanAbsShift": 9.12
+        "meanAbsShift": 9.11
       },
       {
         "iso3": "EST",
         "country": "Estonia",
-        "meanAbsShift": 6.58
+        "meanAbsShift": 6.57
       },
       {
         "iso3": "IND",
         "country": "India",
-        "meanAbsShift": 8.52
+        "meanAbsShift": 8.5
       },
       {
         "iso3": "CHL",
         "country": "Chile",
-        "meanAbsShift": 6.21
+        "meanAbsShift": 6.23
       },
       {
         "iso3": "ZAF",
         "country": "South Africa",
-        "meanAbsShift": 5.59
+        "meanAbsShift": 5.6
       },
       {
         "iso3": "MEX",
@@ -879,22 +879,22 @@
       {
         "iso3": "ARG",
         "country": "Argentina",
-        "meanAbsShift": 5.61
+        "meanAbsShift": 5.22
       },
       {
         "iso3": "COL",
         "country": "Colombia",
-        "meanAbsShift": 6.27
+        "meanAbsShift": 6.28
       },
       {
         "iso3": "PER",
         "country": "Peru",
-        "meanAbsShift": 6.58
+        "meanAbsShift": 6.61
       },
       {
         "iso3": "URY",
         "country": "Uruguay",
-        "meanAbsShift": 3.79
+        "meanAbsShift": 3.8
       },
       {
         "iso3": "CRI",

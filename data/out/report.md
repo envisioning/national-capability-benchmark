@@ -1,6 +1,6 @@
 # National Capability Benchmark, prototype v0
 
-Generated 2026-08-26T18:33:44.985Z. 16 countries, nine dimensions, equal weights within each dimension, no headline ranking.
+Generated 2026-08-26T18:56:29.276Z. 16 countries, nine dimensions, equal weights within each dimension, no headline ranking.
 
 Scores run against a frame fixed by the 10 reference countries. 6 countries were added after that frame was set and are marked below. Adding them did not move any existing score.
 
@@ -9,29 +9,29 @@ Scores run against a frame fixed by the 10 reference countries. 6 countries were
 
 | Country | Anticipation | Agency | Coordination | Trust | Learning | Experimentation | Adaptability | Building / Execution | Shared Purpose |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Brazil | 22.3 | 31 | 46.7 | 20.7 | 47.8 | 26 | 49.6 | 9.4 | 29 |
-| United States | 71 | 84.6 | 98.4 | 50 | 67.9 | 46.4 | 75.1 | 48.3 | 31.6 |
+| Brazil | 22.3 | 31 | 46.7 | 20.7 | 48.5 | 26 | 49.6 | 9.4 | 29 |
+| United States | 71 | 84.6 | 98.4 | 50 | 54.3 | 46.4 | 75.1 | 48.3 | 31.6 |
 | Netherlands | 68.3 | 67.5 | 100 | 62.6 | 78 | 19.1 | 91 | 31 | 98.1 |
 | Switzerland | 81.1 | 69.2 | 98.9 | 59 | 77.3 | 47.4 | 88.8 | 54.4 | 42.1 |
-| Singapore | 76.3 | 79.6 | 89.1 | 100 | 57 | 34.2 | 80.5 | 70.9 | 35 |
-| South Korea | 79.3 | 74.2 | 85.5 | 78 | 61.3 | 75 | 82.6 | 64.4 | 53.8 |
-| Estonia | 61.1 | 78.7 | 97.8 | 59.7 | 65.3 | 28.1 | 55.2 | 19 | 82.4 |
-| India | 1.1 | 18.2 | 43.3 | 21.3 | 11.6 | 3.9 | 30.3 | 29 | 50 |
-| Chile | 29.7 | 55.2 | 34.8 | 45.1 | 57.9 | 43.6 | 56 | 20.6 | 49.3 |
-| South Africa | 20.7 | 23.9 | 0 | 25.6 | 25.1 | 13.6 | 15.2 | 10 | 50 |
-| Mexico (added) | 19.7 | 27.4 | 77.8 | 44.5 | 47.1 | 30 | 53.6 | 28.1 | 40.9 |
-| Argentina (added) | 16.8 | 24.9 | 77.2 | 21.1 | 66.4 | 20.7 | 42 | 15.6 | 29.7 |
-| Colombia (added) | 11 | 26.8 | 0 | 4.4 | 48.3 | 37.7 | 49.4 | 11.2 | 21.9 |
-| Peru (added) | 11.6 | 21.2 | 47.8 | 45 | 47.2 | 17.1 | 54.2 | 15.4 | 48.2 |
-| Uruguay (added) | 16.6 | 40.4 | 0 | 29.1 | 54.5 | 30.5 | 65 | 21.2 | 53.5 |
-| Costa Rica (added) | 21.8 | 23.4 | 78.3 | 18.5 | 56.3 | 23 | 49.8 | 31.4 | 32.3 |
+| Singapore | 76.3 | 79.6 | 89.1 | 100 | 57.5 | 34.2 | 80.5 | 70.9 | 35 |
+| South Korea | 79.3 | 74.2 | 85.5 | 78 | 61.9 | 75 | 82.6 | 64.4 | 53.8 |
+| Estonia | 61.1 | 78.7 | 97.8 | 59.7 | 65.6 | 28.1 | 55.2 | 19 | 82.4 |
+| India | 1.1 | 18.2 | 43.3 | 21.3 | 12.3 | 3.9 | 30.3 | 29 | 50 |
+| Chile | 29.7 | 55.2 | 34.8 | 45.1 | 58.4 | 43.6 | 56 | 20.6 | 49.3 |
+| South Africa | 20.7 | 23.9 | 0 | 25.6 | 25.7 | 13.6 | 15.2 | 10 | 50 |
+| Mexico (added) | 19.7 | 27.4 | 77.8 | 44.5 | 47.3 | 30 | 53.6 | 28.1 | 40.9 |
+| Argentina (added) | 16.8 | 24.9 | 77.2 | 21.1 | 61.8 | 20.7 | 42 | 15.6 | 29.7 |
+| Colombia (added) | 11 | 26.8 | 0 | 4.4 | 48.9 | 37.7 | 49.4 | 11.2 | 21.9 |
+| Peru (added) | 11.6 | 21.2 | 47.8 | 45 | 47.8 | 17.1 | 54.2 | 15.4 | 48.2 |
+| Uruguay (added) | 16.6 | 40.4 | 0 | 29.1 | 54.8 | 30.5 | 65 | 21.2 | 53.5 |
+| Costa Rica (added) | 21.8 | 23.4 | 78.3 | 18.5 | 56.6 | 23 | 49.8 | 31.4 | 32.3 |
 
 Confidence is reported separately and never folded into the score above. Each cell shows the number and the band it falls in.
 
 | Country | Anticipation | Agency | Coordination | Trust | Learning | Experimentation | Adaptability | Building / Execution | Shared Purpose |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Brazil | 0.54 usable | 0.61 usable | 0.08 very thin | 0.20 very thin | 0.54 usable | 0.39 thin | 0.47 usable | 0.54 usable | 0.27 thin |
-| United States | 0.63 usable | 0.49 usable | 0.08 very thin | 0.20 very thin | 0.44 thin | 0.39 thin | 0.47 usable | 0.52 usable | 0.27 thin |
+| United States | 0.63 usable | 0.49 usable | 0.08 very thin | 0.20 very thin | 0.45 usable | 0.39 thin | 0.47 usable | 0.52 usable | 0.27 thin |
 | Netherlands | 0.64 usable | 0.59 usable | 0.08 very thin | 0.20 very thin | 0.53 usable | 0.30 thin | 0.47 usable | 0.54 usable | 0.24 very thin |
 | Switzerland | 0.64 usable | 0.51 usable | 0.08 very thin | 0.20 very thin | 0.54 usable | 0.39 thin | 0.47 usable | 0.54 usable | 0.25 very thin |
 | Singapore | 0.62 usable | 0.57 usable | 0.08 very thin | 0.20 very thin | 0.49 usable | 0.21 very thin | 0.47 usable | 0.54 usable | 0.14 very thin |
@@ -41,7 +41,7 @@ Confidence is reported separately and never folded into the score above. Each ce
 | Chile | 0.62 usable | 0.60 usable | 0.08 very thin | 0.20 very thin | 0.54 usable | 0.39 thin | 0.47 usable | 0.54 usable | 0.27 thin |
 | South Africa | 0.62 usable | 0.61 usable | 0.08 very thin | 0.19 very thin | 0.51 usable | 0.39 thin | 0.47 usable | 0.54 usable | 0.25 very thin |
 | Mexico | 0.67 good | 0.61 usable | 0.08 very thin | 0.20 very thin | 0.53 usable | 0.39 thin | 0.47 usable | 0.54 usable | 0.27 thin |
-| Argentina | 0.64 usable | 0.61 usable | 0.08 very thin | 0.20 very thin | 0.40 thin | 0.39 thin | 0.47 usable | 0.54 usable | 0.27 thin |
+| Argentina | 0.64 usable | 0.61 usable | 0.08 very thin | 0.20 very thin | 0.41 thin | 0.39 thin | 0.47 usable | 0.54 usable | 0.27 thin |
 | Colombia | 0.54 usable | 0.61 usable | 0.08 very thin | 0.20 very thin | 0.49 usable | 0.38 thin | 0.47 usable | 0.54 usable | 0.27 thin |
 | Peru | 0.52 usable | 0.61 usable | 0.08 very thin | 0.18 very thin | 0.49 usable | 0.39 thin | 0.47 usable | 0.54 usable | 0.24 very thin |
 | Uruguay | 0.66 good | 0.61 usable | 0.08 very thin | 0.20 very thin | 0.54 usable | 0.34 thin | 0.47 usable | 0.54 usable | 0.27 thin |
@@ -49,7 +49,9 @@ Confidence is reported separately and never folded into the score above. Each ce
 
 ## Where each country is moving, on the same ruler
 
-Change in dimension score between 2016 and 2026, scored against the current frame so the scale holds still, and computed only on the indicators observed at both ends. That matched basket is smaller than the full dimension, so these numbers move on a different base from the scores above.
+Change in dimension score, scored against the current frame so the scale holds still, and computed only on the indicators observed at both ends. That matched basket is smaller than the full dimension, so these numbers move on a different base from the scores above. The number in brackets is how many indicators carry the cell.
+
+### Over 10 years
 
 | Country | Anticipation | Agency | Coordination | Trust | Learning | Experimentation | Adaptability | Building / Execution | Shared Purpose |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -70,9 +72,7 @@ Change in dimension score between 2016 and 2026, scored against the current fram
 | Uruguay | +14.8 (5) | +21.1 (4) | no data | no data | +18.8 (2) | no data | +7.7 (4) | -1.2 (4) | -10.7 (2) |
 | Costa Rica | +15.8 (5) | +14.3 (4) | no data | no data | no data | +3.0 (2) | +8.4 (4) | +6.6 (4) | +5.5 (2) |
 
-The number in brackets is how many indicators carry that cell. A dimension with no number has fewer than two indicators observed in both years, or a basket covering less than half of what it measures today.
-
-| Dimension | Median change across countries | Countries with a trend |
+| Dimension | Median change over 10 years | Countries with a trend |
 | --- | --- | --- |
 | Anticipation | 17 | 16 |
 | Agency | 12.7 | 16 |
@@ -82,7 +82,38 @@ The number in brackets is how many indicators carry that cell. A dimension with 
 | Building / Execution | -0.3 | 16 |
 | Shared Purpose | 3.5 | 15 |
 
-Read the median first. Several indicators in Anticipation and Agency measure adoption of things that spread worldwide, so almost every country rises and a positive number is not evidence of catching up. The country is gaining ground only where its change beats the median in that column.
+### Over 20 years
+
+| Country | Anticipation | Agency | Coordination | Trust | Learning | Experimentation | Adaptability | Building / Execution | Shared Purpose |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Brazil | +4.8 (2) | +29.4 (3) | no data | no data | no data | +11.1 (2) | +18.8 (4) | -4.7 (2) | no data |
+| United States | +10.7 (3) | +45.2 (2) | no data | no data | no data | +7.0 (2) | +11.8 (4) | +1.6 (2) | -1.6 (2) |
+| Netherlands | +19.8 (3) | +14.1 (2) | no data | no data | +18.0 (2) | no data | +15.2 (4) | +0.2 (2) | +18.5 (2) |
+| Switzerland | +18.7 (3) | +37.4 (2) | no data | no data | +15.8 (2) | +8.2 (2) | +14.2 (4) | +4.5 (2) | +1.2 (2) |
+| Singapore | +9.4 (3) | +54.6 (2) | no data | no data | no data | no data | +16.9 (4) | -8.5 (2) | no data |
+| South Korea | +45.0 (3) | +34.8 (3) | no data | no data | -14.6 (2) | +27.1 (2) | +17.2 (4) | +11.3 (2) | -1.9 (2) |
+| Estonia | +22.0 (3) | +40.3 (3) | no data | no data | -5.8 (3) | +2.2 (2) | +2.2 (4) | -6.8 (2) | +12.4 (2) |
+| India | no data | 0.0 (3) | no data | no data | +6.4 (3) | 0.0 (2) | +11.3 (4) | -10.4 (2) | -7.2 (2) |
+| Chile | no data | +44.2 (3) | no data | no data | +34.0 (3) | no data | +21.9 (4) | -5.0 (2) | +4.6 (2) |
+| South Africa | 0.0 (3) | +3.3 (3) | no data | no data | no data | +0.5 (2) | -0.1 (4) | -8.0 (2) | +4.0 (2) |
+| Mexico | +0.3 (3) | +16.2 (3) | no data | no data | +11.7 (3) | +6.0 (2) | +19.4 (4) | +1.7 (2) | no data |
+| Argentina | +3.1 (3) | +23.5 (3) | no data | no data | +38.9 (2) | +0.2 (2) | +11.6 (4) | -11.5 (2) | +0.5 (2) |
+| Colombia | no data | +16.8 (2) | no data | no data | +16.5 (2) | +2.9 (2) | +28.0 (4) | -14.3 (2) | +10.1 (2) |
+| Peru | 0.0 (2) | +17.8 (3) | no data | no data | +20.0 (2) | no data | -0.8 (4) | -10.2 (2) | +18.5 (2) |
+| Uruguay | +6.6 (3) | +27.8 (3) | no data | no data | +35.9 (3) | no data | +38.1 (4) | -7.5 (2) | +7.8 (2) |
+| Costa Rica | +0.6 (3) | +33.0 (2) | no data | no data | +3.8 (2) | +4.3 (2) | +11.3 (4) | -1.3 (2) | +5.7 (2) |
+
+| Dimension | Median change over 20 years | Countries with a trend |
+| --- | --- | --- |
+| Anticipation | 6.6 | 13 |
+| Agency | 28.6 | 16 |
+| Learning | 16.2 | 12 |
+| Experimentation | 4.3 | 11 |
+| Adaptability | 14.7 | 16 |
+| Building / Execution | -5.9 | 16 |
+| Shared Purpose | 4.6 | 13 |
+
+Read the median before the country. Several indicators measure adoption of things that spread worldwide, so almost every country rises and a positive number is not evidence of catching up. A country gains ground only where its change beats the median in that column. The short span is broad and shallow, the long span is narrow and deep, and a dimension that appears in one and not the other is telling you how far its data reaches.
 
 The strongest evidence base anywhere in this run scores 0.67, which is good. No country and dimension pair reaches the good band.
 
@@ -100,7 +131,7 @@ Bands:
 | Anticipation | 7 | 5 | 2 | 0.705 | 0.617 | 0.286 |
 | Agency | 8 | 6 | 2 | 0.742 | 0.595 | 0.25 |
 | Building / Execution | 8 | 5 | 2 | 0.625 | 0.542 | 0.375 |
-| Learning | 7 | 5 | 2 | 0.696 | 0.51 | 0.286 |
+| Learning | 7 | 5 | 2 | 0.714 | 0.512 | 0.286 |
 | Adaptability | 8 | 4 | 4 | 0.5 | 0.472 | 0.5 |
 | Experimentation | 8 | 4 | 4 | 0.492 | 0.372 | 0.625 |
 | Shared Purpose | 7 | 2 | 4 | 0.277 | 0.251 | 0.714 |
@@ -125,8 +156,8 @@ Best measured: Anticipation, Agency, Building / Execution. Weakest evidence base
 | Agency | 0.887 | 0.885 | 16 |
 | Adaptability | 0.874 | 0.882 | 16 |
 | Trust | 0.792 | 0.747 | 16 |
-| Learning | 0.79 | 0.824 | 16 |
 | Building / Execution | 0.781 | 0.741 | 16 |
+| Learning | 0.759 | 0.776 | 16 |
 | Coordination | 0.676 | 0.749 | 16 |
 | Experimentation | 0.568 | 0.659 | 16 |
 | Shared Purpose | 0.181 | 0.163 | 16 |
@@ -159,7 +190,7 @@ Dropped 13 indicators correlating with log GDP per capita at 0.7 or above, then 
 | Agency | 12.68 | 14 |
 | Coordination | 0 | 0 |
 | Trust | 12.53 | 13 |
-| Learning | 3.67 | 12 |
+| Learning | 3.44 | 12 |
 | Experimentation | 0 | 0 |
 | Adaptability | 12.09 | 12 |
 | Building / Execution | 5.98 | 10 |
@@ -196,7 +227,7 @@ Dropped 13 indicators correlating with log GDP per capita at 0.7 or above, then 
 | Agency | 69.2 | 79.6 | 78.7 |
 | Coordination | 98.9 | 89.1 | 97.8 |
 | Trust | 59 | 100 | 59.7 |
-| Learning | 77.3 | 57 | 65.3 |
+| Learning | 77.3 | 57.5 | 65.6 |
 | Experimentation | 47.4 | 34.2 | 28.1 |
 | Adaptability | 88.8 | 80.5 | 55.2 |
 | Building / Execution | 54.4 | 70.9 | 19 |
@@ -204,7 +235,7 @@ Dropped 13 indicators correlating with log GDP per capita at 0.7 or above, then 
 
 ## Brazil is the reference case
 
-Strongest: Adaptability (49.6), Learning (47.8), Coordination (46.7).
+Strongest: Adaptability (49.6), Learning (48.5), Coordination (46.7).
 
 Weakest: Anticipation (22.3), Trust (20.7), Building / Execution (9.4).
 
@@ -304,8 +335,8 @@ No cell has an interquartile range above 25 points.
 | Switzerland | Trust | 59 | 90 | 31 |
 | Peru | Trust | 45 | 14 | -31 |
 | Peru | Shared Purpose | 48.2 | 20 | -28.2 |
-| Singapore | Learning | 57 | 85 | 28 |
 | Estonia | Coordination | 97.8 | 70 | -27.8 |
+| Singapore | Learning | 57.5 | 85 | 27.5 |
 
 ### The panel named the evidence it wanted
 

@@ -1,6 +1,6 @@
 'use client'
 
-import { DIMENSIONS, DIMENSION_LABELS } from '@ncb/core'
+import { DIMENSIONS, DIMENSION_LABELS, primaryMomentum } from '@ncb/core'
 import type { CountryResult } from '@ncb/core'
 import { DataTable } from '@/components/DataTable'
 import { ConfidenceBar, Delta, Score } from '@/components/ui'
@@ -58,9 +58,9 @@ export function CountryDimensionTable({ country }: { country: CountryResult }) {
           key: 'momentum',
           label: 'Since',
           align: 'right',
-          sort: (r) => r.dim.momentum?.delta ?? null,
+          sort: (r) => primaryMomentum(r.dim.momentum)?.delta ?? null,
           render: (r) => {
-            const m = r.dim.momentum
+            const m = primaryMomentum(r.dim.momentum)
             return (
               <Delta
                 value={m?.delta ?? null}

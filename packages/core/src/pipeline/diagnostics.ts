@@ -203,7 +203,7 @@ export function runDiagnostics(
   const stripped = scoreAll(observations, {
     ...opts,
     exclude: new Set(excluded),
-    momentumSpan: 0,
+    momentumSpans: [],
   })
 
   const perDimensionMeanAbsShift = DIMENSIONS.map((dimension) => {

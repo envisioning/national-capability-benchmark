@@ -66,18 +66,29 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
         return (
           <div key={d} id={d} className="scroll-mt-20">
             <Section title={DIMENSION_LABELS[d]} hint={DIMENSION_QUESTIONS[d]}>
-              {dim.momentum ? (
-                <div className="mb-6 flex flex-wrap items-center gap-x-4 gap-y-2">
-                  <Sparkline series={dim.momentum.series} />
+              {dim.momentum.length > 0 ? (
+                <div className="mb-6 space-y-3">
+                  {dim.momentum.map((m) => (
+                    <div key={m.baseYear} className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                      <Sparkline series={m.series} />
+                      <p className="text-xs leading-relaxed text-[var(--muted)]">
+                        <Delta value={m.delta} /> over {m.currentYear - m.baseYear} years, from{' '}
+                        {m.baseScore.toFixed(1)} in {m.baseYear} to {m.currentScore.toFixed(1)} on
+                        the {m.matchedIndicators} indicators observed in both years.
+                      </p>
+                    </div>
+                  ))}
                   <p className="text-xs leading-relaxed text-[var(--muted)]">
-                    <Delta value={dim.momentum.delta} /> since {dim.momentum.baseYear}, from{' '}
-                    {dim.momentum.baseScore.toFixed(1)} to {dim.momentum.currentScore.toFixed(1)} on
-                    the {dim.momentum.matchedIndicators} indicators observed in both years. That
-                    basket is smaller than the score above, and it is measured against the frame in
-                    use today.
+                    Each basket is smaller than the score above and is measured against the frame in
+                    use today. A longer span reaches further back and holds fewer indicators.
                   </p>
                 </div>
-              ) : null}
+              ) : (
+                <p className="mb-6 text-xs leading-relaxed text-[var(--muted)]">
+                  No trend: too few indicators here are observed at both ends of a span. The
+                  indicator lines below still show what history exists.
+                </p>
+              )}
               <Scroller>
                 <Table>
                   <thead>
@@ -90,6 +101,7 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
                       <Th align="right">Normalized</Th>
                       <Th>Source</Th>
                       <Th>Status</Th>
+                      <Th>History</Th>
                     </tr>
                   </thead>
                   <tbody>
@@ -120,6 +132,17 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
                               : row.status === 'retired'
                                 ? 'retired, see notes'
                                 : row.status}
+                          </Td>
+                          <Td>
+                            {row.series.length > 1 ? (
+                              <span
+                                title={`${row.series.length} observations, ${row.series[0]?.year} to ${row.series[row.series.length - 1]?.year}. Higher is better.`}
+                              >
+                                <Sparkline series={seriesForSparkline(row.series)} width={90} height={22} />
+                              </span>
+                            ) : (
+                              <span className="text-[var(--muted)]">-</span>
+                            )}
                           </Td>
                         </tr>
                       )
@@ -160,4 +183,11 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
 function gapLabel(records: number): string {
   if (records === 0) return 'no dataset exists'
   return records === 1 ? 'no dataset exists, 1 record' : `no dataset exists, ${records} records`
+}
+
+/** The indicator line uses the same component as the dimension line. */
+function seriesForSparkline(
+  series: Array<{ year: number; normalized: number }>,
+): Array<{ year: number; score: number }> {
+  return series.map((p) => ({ year: p.year, score: p.normalized }))
 }

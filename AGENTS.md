@@ -8,7 +8,7 @@ dimensions, equal weights, no headline ranking.
 
 ```
 pnpm install
-pnpm bench ingest      fetch World Bank series into data/observations/worldbank.json
+pnpm bench ingest      fetch World Bank series from 1990 into data/observations/worldbank.json
 pnpm bench score       normalise and score, write data/out/scores.json and table.csv
 pnpm bench delphi      run the LLM panel (add --mock to run offline)
 pnpm bench diagnose    correlations, redundancy, GDP-sensitivity test
@@ -64,11 +64,15 @@ port 3888.
   `delphiScore` and `delphiIqr`. `blendedScore` falls back to the panel only
   when no indicator evidence exists, and `blendedFrom` records which was used.
 - Confidence is never folded into the capability score. Two numbers, always.
-- `data/observations/worldbank.json` holds every year, and scoring reads only the
-  latest. The history exists for `momentum`, which is computed against the
-  current frame on the indicators observed at both ends of the span. A trend and
-  a score therefore sit on different baskets, so print the basket size wherever
-  a trend appears. See D22.
+- `data/observations/worldbank.json` holds every year from 1990, and scoring
+  reads only the latest. The history exists for the trend layer. `momentum` is a
+  list, one entry per span, shortest first: use `primaryMomentum` when a surface
+  shows one number. It is computed against the current frame on the indicators
+  observed at both ends, so a trend and a score sit on different baskets, and
+  every surface that prints a trend prints its basket size. Each indicator also
+  carries its own `series`, which has no basket problem and reaches as far back
+  as the data does. Nothing is interpolated or carried forward into it. See D22
+  and D24.
   The radar draws thin evidence as a dashed edge with a hollow point and marks
   the axis label. Use `isThinEvidence` from `@ncb/core`, never a literal
   threshold in a component.

@@ -19,7 +19,7 @@ import type {
   SourceTier,
 } from '../model/index.js'
 import { applyTransform, buildFrame, scoreAgainstFrame } from './normalize.js'
-import { buildHistory, momentumFor } from './trend.js'
+import { buildHistory, indicatorSeries, momentumFor } from './trend.js'
 import type { Frame } from './normalize.js'
 import { iqr, mean, median, round } from './stats.js'
 
@@ -50,8 +50,8 @@ export type ScoreOptions = {
   delphi?: DelphiCellEstimate[]
   /** Panel estimates below this self-confidence are ignored. */
   minPanelistConfidence?: number
-  /** Years the momentum comparison reaches back. Set to 0 to skip trends. */
-  momentumSpan?: number
+  /** Spans the momentum comparison reaches back, shortest first. Empty to skip trends. */
+  momentumSpans?: number[]
 }
 
 /** Latest observation per indicator x country. */
@@ -157,7 +157,11 @@ export function buildMatrix(observations: Observation[], opts: ScoreOptions): Ma
   return matrix
 }
 
-function indicatorRow(def: IndicatorDef, cell: Cell | undefined): IndicatorResult {
+function indicatorRow(
+  def: IndicatorDef,
+  cell: Cell | undefined,
+  series: Array<{ year: number; normalized: number }>,
+): IndicatorResult {
   const status =
     def.ingest === 'gap'
       ? 'gap'
@@ -178,6 +182,7 @@ function indicatorRow(def: IndicatorDef, cell: Cell | undefined): IndicatorResul
     sourceTier: cell ? cell.sourceTier : null,
     winsorized: cell ? cell.clipped : false,
     outOfFrame: cell ? cell.outOfFrame : false,
+    series,
     status,
   }
 }
@@ -232,9 +237,9 @@ export type ScoreOutput = {
 export function scoreAll(observations: Observation[], opts: ScoreOptions): ScoreOutput {
   const matrix = buildMatrix(observations, opts)
   const minPanelistConfidence = opts.minPanelistConfidence ?? 0
-  const span = opts.momentumSpan ?? 10
-  const frames = span > 0 ? buildFrames(observations, opts) : null
-  const history = span > 0 ? buildHistory(observations) : null
+  const spans = opts.momentumSpans ?? [10, 20]
+  const frames = spans.length > 0 ? buildFrames(observations, opts) : null
+  const history = spans.length > 0 ? buildHistory(observations) : null
 
   const countries: CountryResult[] = COUNTRIES.map((country) => {
     const dimensions = {} as Record<Dimension, DimensionResult>
@@ -249,11 +254,15 @@ export function scoreAll(observations: Observation[], opts: ScoreOptions): Score
       const delphi = delphiFor(opts.delphi, country.iso3, dimension, minPanelistConfidence)
       const momentum =
         history && frames
-          ? momentumFor(history, frames, country.iso3, dimension, {
-              currentYear: opts.currentYear,
-              span,
-            })
-          : null
+          ? spans
+              .map((span) =>
+                momentumFor(history, frames, country.iso3, dimension, {
+                  currentYear: opts.currentYear,
+                  span,
+                }),
+              )
+              .filter((m): m is NonNullable<typeof m> => Boolean(m))
+          : []
 
       const blendedScore = score ?? delphi.score
       dimensions[dimension] = {
@@ -266,7 +275,13 @@ export function scoreAll(observations: Observation[], opts: ScoreOptions): Score
         blendedScore,
         blendedFrom: score !== null ? 'indicators' : delphi.score !== null ? 'delphi' : 'none',
         momentum,
-        indicators: defs.map((d, i) => indicatorRow(d, cells[i])),
+        indicators: defs.map((d, i) =>
+          indicatorRow(
+            d,
+            cells[i],
+            history && frames ? indicatorSeries(history, frames.get(d.id), d, country.iso3) : [],
+          ),
+        ),
       }
     }
 

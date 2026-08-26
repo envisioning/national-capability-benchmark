@@ -647,3 +647,52 @@ this decision knocked down. If none land, the honest conclusion is that
 Coordination and Trust cannot be measured with public data, and they should be
 reported as unmeasured rather than scored.
 
+---
+
+## D24 — Two spans for a dimension, and a full line for every indicator
+
+*Recorded 2026-08-26. Extends D22.*
+
+**Choice.** Three changes to the trend layer.
+
+1. Ingestion defaults to 1990 rather than 2000. The observation file grows to
+   3.8 MB and no score moves.
+2. `momentum` becomes a list, one entry per span, shortest first. Ten years and
+   twenty years are published. `primaryMomentum` returns the first entry for
+   surfaces that show one number.
+3. Every indicator result carries its own normalised series, one point per
+   observed year, back to whatever the data supports.
+
+**Why.** D22's matched basket is held to the shallowest indicator in a
+dimension, so one span had to choose between breadth and reach. Measured on
+Brazil, the basket falls from four indicators at ten years to two at twenty in
+Anticipation and Building, while Adaptability holds four all the way to
+twenty-five. Publishing both spans lets each dimension say how far its own
+evidence reaches instead of being cut to the shortest common span.
+
+An indicator, unlike a dimension, is comparable with itself. Nothing has to be
+matched, so its line runs as far back as the series does: 36 points for Brazil
+on several World Bank series, against six for the Doing Business rows.
+
+The twenty-year view already says something the ten-year view cannot. Building
+falls by a median of 5.9 points across all sixteen countries over twenty years
+and is flat over ten. Colombia is at −14.3, Argentina −11.5, India −10.4, Brazil
+−4.7, and Korea is the one clear gain at +11.3.
+
+**Cost.**
+
+- `scores.json` grows to 2.1 MB because every indicator now carries its history.
+  The viewer reads it per request, which is fine locally and would need an API if
+  this were ever served at scale.
+- Two numbers per cell invite cherry-picking the flattering span. Both are
+  always printed together with their basket sizes.
+- Reaching back to 1990 covers a period when several of these countries changed
+  political and economic system, so a twenty-year line crosses a discontinuity
+  the model cannot see.
+- Nothing is interpolated or extrapolated. A gap in a line is a real gap, and a
+  series that stops, such as every Doing Business row in 2019, simply stops.
+
+**Overturned by.** Enough indicator history to compute a full-dimension basket at
+both ends, which would make the matched basket unnecessary and both spans
+directly comparable to the headline score.
+
