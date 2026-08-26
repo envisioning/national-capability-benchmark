@@ -46,6 +46,7 @@ const NAV = [
   { href: '/diagnostics', label: 'Diagnostics' },
   { href: '/delphi', label: 'Delphi panel' },
   { href: '/method', label: 'Method' },
+  { href: '/glossary', label: 'Glossary' },
 ]
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

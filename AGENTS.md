@@ -60,6 +60,11 @@ port 3888.
 - `packages/core/src/model/indicators.ts` is the single source of truth for
   indicators, and `countries.ts` for countries and their frame. Never define
   either anywhere else.
+- Every term the project invents is defined once, in
+  `packages/core/src/model/glossary.ts`, in language that assumes no prior
+  knowledge. The glossary page renders it. Never explain a term a second way in
+  a page: add or edit the entry instead. A new concept in the model needs a new
+  entry in the same change. See D26.
 - Confidence thresholds live in `packages/core/src/pipeline/confidence.ts`. The
   viewer colors by them and the report prints their labels, so both read the same
   file. Never hard-code a threshold in a page.

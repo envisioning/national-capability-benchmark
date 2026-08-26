@@ -772,3 +772,44 @@ a republisher of IBGE, MCTI and the rest, so today every point says
 **Overturned by.** A move to per-country output files, which would change where
 the series lives but not what it has to carry.
 
+---
+
+## D26 — Every term is defined once, in plain language, in the model
+
+*Recorded 2026-08-26.*
+
+**Choice.** `packages/core/src/model/glossary.ts` holds a definition of every
+term this project invents or borrows: dimension, indicator, measurement class,
+score, reference frame, normalisation, winsorizing, out of frame, confidence and
+its three parts, confidence band, source tier, gap, retired indicator, evidence
+record, momentum, matched basket, indicator line, Delphi panel, provenance,
+dissent, wealth proxy and known artefact. Each entry carries a one-line version,
+a full explanation written for somebody who has never seen the benchmark, and a
+worked example from the current data.
+
+The viewer renders it at `/glossary`. Measurement classes get their own block
+because they appear as a bare letter everywhere else. `ClassLegend` ships under
+every table that shows those letters, and country pages open with a short guide
+to reading the page.
+
+**Why.** The viewer was showing a reader the letter `C`, a dashed radar edge and
+a confidence band of 0.079 and assuming all three were self-explanatory. None of
+them are. A benchmark that wants to be argued with has to be legible first, and a
+definition sitting only in `DECISIONS.md` is not available to the person looking
+at the chart.
+
+Putting the glossary in the model rather than in the page matters for the same
+reason the confidence thresholds live in one file: two explanations of one term
+drift, and the drift is invisible until somebody quotes the wrong one.
+
+**Cost.**
+
+- Definitions age with the model. An entry naming a current number, such as
+  Coordination sitting at 0.079 confidence, is stale the moment that changes.
+  Examples are marked as examples for that reason, and a model change now has to
+  update its entry in the same commit.
+- The glossary is prose in a package that is otherwise data and arithmetic.
+
+**Overturned by.** Nothing foreseeable. A second surface that needs the same
+definitions, such as a printed report or an API, reads the same file.
+

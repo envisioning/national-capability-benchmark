@@ -12,6 +12,8 @@ import { CountryDimensionTable } from '@/components/views/CountryDimensionTable'
 import { EvidenceList } from '@/components/views/EvidenceList'
 import {
   ClassBadge,
+  ClassLegend,
+  DefineLink,
   Delta,
   ConfidenceBar,
   Eyebrow,
@@ -53,6 +55,33 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
         </div>
 
         <CountryDimensionTable country={country} />
+      </div>
+
+      <div className="mb-12 max-w-3xl rounded-lg border border-[var(--rule)] bg-[var(--surface-sunken)] p-4">
+        <p className="mb-2 text-xs uppercase tracking-[0.05em] text-[var(--muted)]">
+          How to read this page
+        </p>
+        <p className="text-lg leading-relaxed">
+          Each of the nine <DefineLink term="Dimension">dimensions</DefineLink> is scored from 0 to
+          100. That is a position against the ten{' '}
+          <DefineLink term="Reference frame">reference countries</DefineLink> and not a percentage
+          of anything, so 10 means near the floor of this comparison.{' '}
+          <DefineLink term="Confidence" /> sits beside every score and never inside it, and the
+          radar draws a dashed edge with a hollow point where the evidence is thin. Below, every
+          dimension lists the <DefineLink term="Indicator">indicators</DefineLink> behind its score,
+          with the raw value, the year and the source.
+        </p>
+        <ClassLegend />
+        <p className="text-xs leading-relaxed text-[var(--muted)]">
+          Rows marked <em>no dataset exists</em> are{' '}
+          <DefineLink term="Gap">gaps</DefineLink>, where the model asks for something nobody
+          publishes. Rows marked <em>retired</em> had a dataset that this project rejected. Both
+          lower confidence on purpose. Every term used here is defined in the{' '}
+          <a href="/glossary" className="underline underline-offset-4">
+            glossary
+          </a>
+          .
+        </p>
       </div>
 
       {DIMENSIONS.map((d) => {

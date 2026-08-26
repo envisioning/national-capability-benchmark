@@ -36,6 +36,14 @@ export default async function Page() {
         <Highlight>shape</Highlight> rather than a rank. Every score carries the raw indicators it
         came from and a separate number saying how well we know it.
       </Headline>
+      <p className="mb-10 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
+        New here? The{' '}
+        <a href="/glossary" className="underline underline-offset-4">
+          glossary
+        </a>{' '}
+        defines every term on these pages, including the four letters beside each indicator and what
+        a dashed line on a chart means. Nothing assumes you have seen this before.
+      </p>
 
       <Section
         title={`${focus.country} is the focal case`}

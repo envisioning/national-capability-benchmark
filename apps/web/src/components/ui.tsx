@@ -2,6 +2,7 @@ import type { MeasurementClass } from '@ncb/core'
 import {
   CONFIDENCE_BANDS,
   MEASUREMENT_CLASS_LABELS,
+  MEASUREMENT_CLASS_MEANING,
   SCORE_BANDS,
   confidenceBand,
   scoreBand,
@@ -202,7 +203,7 @@ export function ConfidenceLegend() {
 export function ClassBadge({ value }: { value: MeasurementClass }) {
   return (
     <span
-      title={MEASUREMENT_CLASS_LABELS[value]}
+      title={`${MEASUREMENT_CLASS_LABELS[value]}. ${MEASUREMENT_CLASS_MEANING[value].plain}`}
       className="inline-block rounded-md border border-[var(--rule)] px-1.5 py-0.5 text-xs font-medium"
     >
       {value}
@@ -354,5 +355,45 @@ export function Sparkline({
       <polyline points={points} fill="none" stroke="var(--primary)" strokeWidth={1.4} />
       <circle cx={x(last.year)} cy={y(last.score)} r={2} fill="var(--primary)" />
     </svg>
+  )
+}
+
+/**
+ * Shipped under any table showing the C, I, O and P badges.
+ *
+ * A letter in a table is not an explanation. The full definitions live on the
+ * glossary page and the one-liners live here, so a reader never has to guess
+ * and never has to leave the page to find out.
+ */
+export function ClassLegend() {
+  const classes: MeasurementClass[] = ['C', 'I', 'O', 'P']
+  return (
+    <div className="mb-4 max-w-3xl">
+      <ul className="flex flex-wrap gap-x-6 gap-y-2 text-xs">
+        {classes.map((c) => (
+          <li key={c} className="inline-flex items-baseline gap-2">
+            <ClassBadge value={c} />
+            <span>
+              <span className="font-medium">{MEASUREMENT_CLASS_LABELS[c]}</span>
+              <span className="text-[var(--muted)]"> {MEASUREMENT_CLASS_MEANING[c].plain}</span>
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+/** A link to the full definition of a term, for the first place it appears. */
+export function DefineLink({ term, children }: { term: string; children?: React.ReactNode }) {
+  const anchor = term.toLowerCase().replace(/[^a-z]+/g, '-')
+  return (
+    <a
+      href={`/glossary#${anchor}`}
+      className="underline decoration-dotted underline-offset-4"
+      title={`What "${term}" means`}
+    >
+      {children ?? term}
+    </a>
   )
 }

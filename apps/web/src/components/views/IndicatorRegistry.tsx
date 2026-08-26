@@ -3,7 +3,7 @@
 import { DIMENSIONS, DIMENSION_LABELS, INDICATORS, indicatorsFor, isScored } from '@ncb/core'
 import type { IndicatorDef } from '@ncb/core'
 import { DataTable } from '@/components/DataTable'
-import { ClassBadge, Section } from '@/components/ui'
+import { ClassBadge, ClassLegend, Section } from '@/components/ui'
 
 const muted = (v: React.ReactNode) => <span className="text-[var(--muted)]">{v}</span>
 
@@ -16,6 +16,7 @@ export function IndicatorRegistry() {
       title="Every indicator is on the record, including the missing ones"
       hint={`${INDICATORS.length} indicators. ${gaps} are declared gaps, where the model asks for something no adequate international dataset covers. ${retired} are retired: a dataset exists and this project rejected it, which so far means perception composites that measure how a country looks rather than what it does. Both kinds stay here because they lower the confidence scores and because they are the collection agenda. Click any heading to sort.`}
     >
+      <ClassLegend />
       {DIMENSIONS.map((d) => (
         <div key={d} className="mb-10">
           <h3 className="mb-3 text-xl font-medium tracking-tight">{DIMENSION_LABELS[d]}</h3>
