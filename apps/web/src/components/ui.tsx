@@ -1,4 +1,5 @@
 import type { MeasurementClass } from '@ncb/core'
+import { CLASS_ICON, Icon } from '@/components/Icon'
 import {
   CONFIDENCE_BANDS,
   MEASUREMENT_CLASS_LABELS,
@@ -44,15 +45,21 @@ export function Highlight({ children }: { children: React.ReactNode }) {
 export function Section({
   title,
   hint,
+  icon,
   children,
 }: {
   title: string
   hint?: string
+  /** Optional mark for the concept this section covers. Never the only cue. */
+  icon?: React.ReactNode
   children: React.ReactNode
 }) {
   return (
     <section className="mb-16">
-      <h2 className="text-2xl font-light leading-tight sm:text-3xl">{title}</h2>
+      <h2 className="flex items-center gap-3 text-2xl font-light leading-tight sm:text-3xl">
+        {icon ? <span className="text-[var(--muted)]">{icon}</span> : null}
+        {title}
+      </h2>
       {hint ? <p className="mt-3 max-w-3xl text-lg leading-relaxed">{hint}</p> : null}
       <div className="mt-6">{children}</div>
     </section>
@@ -200,12 +207,20 @@ export function ConfidenceLegend() {
   )
 }
 
+/**
+ * The measurement class of an indicator: an icon and a letter together.
+ *
+ * The icon is the same everywhere that class appears, so it becomes learnable.
+ * The letter stays because the icon alone would be a puzzle, and the tooltip
+ * carries the sentence for anybody who wants it now rather than on the glossary.
+ */
 export function ClassBadge({ value }: { value: MeasurementClass }) {
   return (
     <span
       title={`${MEASUREMENT_CLASS_LABELS[value]}. ${MEASUREMENT_CLASS_MEANING[value].plain}`}
-      className="inline-block rounded-md border border-[var(--rule)] px-1.5 py-0.5 text-xs font-medium"
+      className="inline-flex items-center gap-1 rounded-md border border-[var(--rule)] px-1.5 py-0.5 text-xs font-medium"
     >
+      <Icon name={CLASS_ICON[value]} size={12} />
       {value}
     </span>
   )
@@ -306,9 +321,11 @@ export function Delta({
   const flat = Math.abs(value) < 0.05
   return (
     <span className="inline-flex items-center gap-1 tabular-nums" title={title}>
-      <span aria-hidden="true" className="text-[var(--muted)]">
-        {flat ? '=' : value > 0 ? '▲' : '▼'}
-      </span>
+      <Icon
+        name={flat ? 'minus' : value > 0 ? 'trending-up' : 'trending-down'}
+        size={13}
+        className="text-[var(--muted)]"
+      />
       {flat ? '0.0' : `${value > 0 ? '+' : ''}${value.toFixed(1)}`}
     </span>
   )

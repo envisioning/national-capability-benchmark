@@ -1,7 +1,7 @@
 # Third-party content and licensing
 
 The MIT license in `LICENSE` covers the code in this repository, and only the
-code. Four other things in this
+code. Five other things in this
 repository carry their own terms.
 
 ## Indicator data
@@ -18,6 +18,14 @@ UNESCO Institute for Statistics, ILO, ITU and WIPO. The registry in
 `packages/core/src/model/indicators.ts` names the publisher for each indicator.
 
 If you redistribute the data, keep the attribution.
+
+## Icons
+
+`apps/web/src/components/Icon.tsx` contains the path data for 23 icons copied
+from Lucide, which is licensed under the ISC license and available at
+https://lucide.dev. Only the icons this app uses are copied, so the app keeps
+its three dependencies and an icon cannot change under it on a package update.
+Keep the attribution if you reuse the file.
 
 ## Typefaces
 

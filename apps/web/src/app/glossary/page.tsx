@@ -1,6 +1,7 @@
 import { GLOSSARY, GLOSSARY_GROUPS, MEASUREMENT_CLASS_MEANING } from '@ncb/core'
 import type { MeasurementClass } from '@ncb/core'
 import { ClassBadge, Eyebrow, Headline, Highlight, PageTitle, Section } from '@/components/ui'
+import { GROUP_ICON, Icon } from '@/components/Icon'
 
 const CLASSES: MeasurementClass[] = ['C', 'I', 'O', 'P']
 
@@ -42,7 +43,11 @@ export default function GlossaryPage() {
         const entries = GLOSSARY.filter((e) => e.group === group)
         if (entries.length === 0) return null
         return (
-          <Section key={group} title={group}>
+          <Section
+            key={group}
+            title={group}
+            icon={<Icon name={GROUP_ICON[group]} size={22} />}
+          >
             <dl className="max-w-3xl space-y-8">
               {entries.map((e) => (
                 <div key={e.term} id={e.term.toLowerCase().replace(/[^a-z]+/g, '-')}>

@@ -1,4 +1,5 @@
 import { INDICATORS_BY_ID } from '@ncb/core'
+import { Icon } from '@/components/Icon'
 import type { EvidenceRecord } from '@ncb/core'
 
 /**
@@ -13,7 +14,8 @@ export function EvidenceList({ records }: { records: EvidenceRecord[] }) {
 
   return (
     <div className="mt-6 rounded-lg border border-[var(--rule)] bg-[var(--surface-sunken)] p-4">
-      <p className="mb-1 text-xs uppercase tracking-[0.05em] text-[var(--muted)]">
+      <p className="mb-1 inline-flex items-center gap-2 text-xs uppercase tracking-[0.05em] text-[var(--muted)]">
+        <Icon name="file-clock" size={14} />
         Evidence for indicators with no dataset
       </p>
       <p className="mb-4 max-w-3xl text-xs leading-relaxed text-[var(--muted)]">
@@ -49,8 +51,9 @@ export function EvidenceList({ records }: { records: EvidenceRecord[] }) {
                 </a>
                 , retrieved {r.source.retrievedAt}.
               </p>
-              <p className="mt-1 max-w-3xl text-xs leading-relaxed text-[var(--muted)]">
-                Limits: {r.limits}
+              <p className="mt-1 flex max-w-3xl gap-2 text-xs leading-relaxed text-[var(--muted)]">
+                <Icon name="triangle-alert" size={13} className="mt-0.5 shrink-0" />
+                <span>Limits: {r.limits}</span>
               </p>
             </li>
           )

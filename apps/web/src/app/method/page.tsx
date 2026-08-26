@@ -9,6 +9,7 @@ import {
   SOURCE_TIERS,
 } from '@ncb/core'
 import { Scroller, Section, Table, Td, Th } from '@/components/ui'
+import { Icon, TIER_ICON } from '@/components/Icon'
 
 export default function MethodPage() {
   const gaps = INDICATORS.filter((i) => i.ingest === 'gap').length
@@ -100,7 +101,12 @@ export default function MethodPage() {
             <tbody>
               {Object.entries(SOURCE_TIERS).map(([tier, weight]) => (
                 <tr key={tier}>
-                  <Td>{tier.replace(/_/g, ' ')}</Td>
+                  <Td>
+                    <span className="inline-flex items-center gap-2">
+                      <Icon name={TIER_ICON[tier as keyof typeof TIER_ICON]} size={14} />
+                      {tier.replace(/_/g, ' ')}
+                    </span>
+                  </Td>
                   <Td align="right">{weight.toFixed(2)}</Td>
                 </tr>
               ))}

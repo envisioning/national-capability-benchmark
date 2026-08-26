@@ -875,3 +875,42 @@ predicted, arriving exactly where it said it would.
 **Overturned by.** A frame rebase, which would be a versioned event with its own
 decision, or a move to absolute anchoring per indicator.
 
+---
+
+## D28 — Icons are copied in, one per concept, never alone
+
+*Recorded 2026-08-26.*
+
+**Choice.** `apps/web/src/components/Icon.tsx` holds the path data for 23 Lucide
+icons, copied from lucide.dev rather than installed as a package, and credited
+in NOTICE.md. Concept-to-icon maps live beside them: measurement class, row
+status, source tier and glossary group.
+
+Three rules govern their use.
+
+1. One icon per concept, reused everywhere that concept appears, so the glyph
+   becomes learnable instead of decorative.
+2. An icon never appears alone. The measurement class badge still prints its
+   letter, the trend still prints its number and sign, and the status cell still
+   prints its word.
+3. Every icon is `aria-hidden`, because the text beside it is the accessible
+   name.
+
+**Why.** The viewer asked a reader to decode a bare letter, a dashed line and a
+band. D26 fixed the words. An icon carried alongside those words gives the eye
+something to recognise at a glance in a dense table, which is where most of this
+data is read.
+
+Copying the paths rather than installing `lucide-react` keeps the web app on
+three dependencies, which is a standing choice here, and it means an icon cannot
+change under us on a package update. The cost is that updating an icon is manual,
+which is the right trade for a set this small.
+
+**Cost.** A reader who does not recognise a glyph loses nothing, because rule 2
+holds, but a reader who misreads one could be briefly misled. Icons were chosen
+so that a wrong guess stays close: a target for the direct measure, a plug for an
+input, a rising line for an outcome, an eye for a perception.
+
+**Overturned by.** A need for many more icons, at which point installing the
+package beats maintaining a copied set.
+

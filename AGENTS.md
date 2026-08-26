@@ -244,6 +244,12 @@ as the reference, and see NOTICE.md before reusing the brand.
   on purpose, because a full table of lime would break that rule.
 - No emoji. No gradients except the one radial lime glow (`.hero-glow`). No
   colored shadows, no backdrop-blur.
+- Icons come from `apps/web/src/components/Icon.tsx`, which holds Lucide path
+  data copied in rather than installed. Add a new one by copying its path from
+  lucide.dev into that file. One icon per concept, reused everywhere that
+  concept appears, and always beside the words it marks. An icon is a second
+  encoding and never the only one, so it is `aria-hidden` and the text carries
+  the meaning.
 
 ### Copy rules that bite
 

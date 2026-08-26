@@ -7,6 +7,7 @@ import {
   DIMENSION_QUESTIONS,
   INDICATORS_BY_ID,
 } from '@ncb/core'
+import { Icon, STATUS_ICON } from '@/components/Icon'
 import { CompareRadar } from '@/components/views/CompareRadar'
 import { CountryDimensionTable } from '@/components/views/CountryDimensionTable'
 import { EvidenceList } from '@/components/views/EvidenceList'
@@ -155,13 +156,16 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
                           </Td>
                           <Td dim>{row.source}</Td>
                           <Td dim>
-                            {row.status === 'gap'
-                              ? gapLabel(
-                                  evidence.filter((e) => e.indicatorId === row.indicatorId).length,
-                                )
-                              : row.status === 'retired'
-                                ? 'retired, see notes'
-                                : row.status}
+                            <span className="inline-flex items-center gap-1.5">
+                              <Icon name={STATUS_ICON[row.status]} size={13} />
+                              {row.status === 'gap'
+                                ? gapLabel(
+                                    evidence.filter((e) => e.indicatorId === row.indicatorId).length,
+                                  )
+                                : row.status === 'retired'
+                                  ? 'retired, see notes'
+                                  : row.status}
+                            </span>
                           </Td>
                           <Td>
                             {row.series.length > 1 ? (
