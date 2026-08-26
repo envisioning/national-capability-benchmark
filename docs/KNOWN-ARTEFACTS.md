@@ -292,8 +292,9 @@ The two indicators that would carry the delivery construct,
 **Fix.** Two parts, one done and one open. Documented deliveries are now
 recorded in `data/evidence/records.json` against the gap they bear on, outside
 the score, so the cases are written down with sources and limits instead of
-being argued in prose. Eleven records cover Brazil, Estonia, India and Uruguay,
-and they now bear on three different gaps rather than one. See D20. The open part is a comparable delivery series across the reference set,
+being argued in prose. Fifteen records cover Brazil, Estonia, India and Uruguay,
+and they bear on three different gaps rather than one. Brazil's 11 run from
+Embrapa in 1973 to Pix in 2020. See D20. The open part is a comparable delivery series across the reference set,
 without which the gap cannot be promoted to an indicator.
 
 **Watch for.** The same reading error in reverse. A country with strong

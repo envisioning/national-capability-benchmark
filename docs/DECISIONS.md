@@ -449,23 +449,36 @@ which point `large_project_delivery` leaves `gap`, the records become source
 notes on a scored indicator, and this decision is superseded.
 
 **Update, same day.** The layer opened with two Brazilian records, which read as
-a claim about Brazil. It now holds 11 records across four countries: Brazil
-(Pix, GOV.BR, SUS, Plano Real, the immunisation programme and its erosion, Luz
-para Todos, Embrapa), Estonia (X-Road), India (Jan Dhan accounts) and Uruguay
-(the renewable electricity build, Plan Ceibal).
+a claim about Brazil. It now holds 15 records across four countries.
 
-Records also stopped being a single-indicator affair. Eight sit on
-`large_project_delivery`, one on `institutional_responsiveness` (Plano Real) and
-one on `government_foresight_capacity` (Embrapa), so the layer now documents
-three gaps in three dimensions rather than one.
+Brazil has 11, covering half a century: Embrapa from 1973, Proalcool from 1975,
+the immunisation programme from 1973, SUS from 1988, electronic voting from
+1996, Plano Real in 1994, deepwater and pre-salt oil, Bolsa Familia and its
+registry from 2003, Luz para Todos from 2003, GOV.BR from 2019 and Pix from
+2020. Estonia has X-Road, India has the Jan Dhan accounts, and Uruguay has the
+renewable electricity build and Plan Ceibal.
 
-Two of the Brazilian records exist to keep the layer from becoming advocacy. The
-immunisation record carries a capability that eroded, from 99 percent coverage in
-2003 to 68 percent in 2021, and Plan Ceibal carries a delivery whose only
-available measure is weak and stale. A library of national wins would not include
-either.
+Records also stopped being a single-indicator affair. Twelve sit on
+`large_project_delivery`, two on `institutional_responsiveness` (Plano Real,
+Proalcool) and one on `government_foresight_capacity` (Embrapa), so the layer
+documents three gaps in three dimensions.
 
-Eleven records are still not a series, so the promotion rule above is unchanged.
+Brazilian sources arrived with the second batch. Seven records now cite IPEADATA,
+which serves series from the Ministry of Social Development, the Superior
+Electoral Court and the National Petroleum Agency at
+`official_statistical` tier, against the `international_organization` tier of the
+World Bank records. That is the per-point tier from D25 earning its place.
+
+Several records exist to keep the layer from becoming advocacy. The immunisation
+record carries a capability that eroded, from 99 percent coverage in 2003 to 68
+percent in 2021. Plan Ceibal carries a delivery whose only available measure is
+weak and stale. The pre-salt record states that individual platforms ran years
+late, which is precisely the cost and schedule evidence the indicator wants and
+the production figure hides. A library of national wins would include none of
+those sentences.
+
+Fifteen records are still not a series, so the promotion rule above is
+unchanged.
 
 ---
 

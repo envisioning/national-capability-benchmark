@@ -231,6 +231,90 @@
         "retrievedAt": "2026-08-26"
       },
       "limits": "Production is an outcome and the credit is shared with land expansion, subsidised credit and private plant breeding, so this number cannot separate the research from the rest. It also cannot see the cost: much of the expansion came from converting cerrado and forest. What the record actually evidences is fifty years of continuity in a public research mandate, which is the part no dataset measures."
+    },
+    {
+      "id": "bra-bolsa-familia",
+      "indicatorId": "large_project_delivery",
+      "iso3": "BRA",
+      "title": "Bolsa Familia and the single registry behind it",
+      "claim": "Brazil built one national registry of low-income households and paid conditional transfers through it, going from 6.6 million benefits in December 2004 to a peak of 21.0 million in 2022 and 18.6 million in December 2025.",
+      "metric": {
+        "name": "Benefits paid in December",
+        "value": 18618236,
+        "unit": "benefits",
+        "asOf": "2025"
+      },
+      "started": 2003,
+      "source": {
+        "publisher": "Ministry of Social Development, via IPEADATA",
+        "url": "http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='FAM_PBF')",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-26"
+      },
+      "limits": "A benefit count is administrative and says nothing about whether the transfers reduced poverty. The programme was renamed and restructured twice between 2021 and 2023, so the series covers more than one design. The capability worth copying is the registry and the targeting, and neither has a number in this record."
+    },
+    {
+      "id": "bra-urna-eletronica",
+      "indicatorId": "large_project_delivery",
+      "iso3": "BRA",
+      "title": "Fully electronic national elections",
+      "claim": "Brazil has run every election on electronic voting machines since 2000, across an electorate that reached 155.9 million voters in 2024, with results published the same evening.",
+      "metric": {
+        "name": "Registered electorate",
+        "value": 155908437,
+        "unit": "voters",
+        "asOf": "2024"
+      },
+      "started": 1996,
+      "source": {
+        "publisher": "Superior Electoral Court, via IPEADATA",
+        "url": "http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='ELEMUN')",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-26"
+      },
+      "limits": "The electorate measures the scale of the operation and not the speed or the integrity of the count. The Superior Electoral Court publishes result timing and audit results separately and neither is in this number. Electronic voting has been contested politically in Brazil despite repeated public audits, which is a fact about trust rather than about delivery."
+    },
+    {
+      "id": "bra-proalcool",
+      "indicatorId": "institutional_responsiveness",
+      "iso3": "BRA",
+      "title": "Proalcool, the fuel substitution after the oil shock",
+      "claim": "Brazil answered the 1973 oil shock by mandating ethanol blending and building a national fuel alcohol industry, taking production from 580 thousand cubic metres in 1975 to 38,199 in 2025, and from 2003 flex-fuel engines moved the choice to the driver.",
+      "metric": {
+        "name": "Ethanol production",
+        "value": 38199.192,
+        "unit": "thousand cubic metres",
+        "asOf": "2025"
+      },
+      "started": 1975,
+      "source": {
+        "publisher": "National Petroleum Agency, via IPEADATA",
+        "url": "http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='ANP_PDALCO')",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-26"
+      },
+      "limits": "The programme was heavily subsidised in the 1980s and nearly collapsed when oil prices fell in the 1990s, so the line is not a story of steady success. Production volume says nothing about land use, cane labour conditions, or how the emissions accounting works out. What this evidences is a state changing an entire fuel system in response to an external shock, which is the construct the indicator asks for."
+    },
+    {
+      "id": "bra-presal",
+      "indicatorId": "large_project_delivery",
+      "iso3": "BRA",
+      "title": "Deepwater and pre-salt oil production",
+      "claim": "Brazil developed deepwater extraction, found the pre-salt fields in 2006 and produced them at depths of more than 5,000 metres, with national oil production rising from 71,844 thousand cubic metres in 2000 to 219,032 in 2025.",
+      "metric": {
+        "name": "Oil production",
+        "value": 219032.409,
+        "unit": "thousand cubic metres",
+        "asOf": "2025"
+      },
+      "started": 1997,
+      "source": {
+        "publisher": "National Petroleum Agency, via IPEADATA",
+        "url": "http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='ANP_PDPET')",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-26"
+      },
+      "limits": "Production is an outcome shared between Petrobras and foreign operators, and several individual platforms ran years late and over budget, which is exactly the cost and schedule record this indicator asks for and which this number hides. Expanding oil output also sits against Brazil's climate commitments, and a production figure cannot weigh that."
     }
   ]
 }
