@@ -1,0 +1,121 @@
+@import 'tailwindcss';
+
+@source "./src/**/*.{ts,tsx}";
+
+/*
+ * Envisioning brand tokens. Values follow envisioning.com/app/global.css, which
+ * is the source of truth for color. Do not sample colors from anywhere else.
+ */
+@theme {
+  --color-accent: #d6f249;
+  --color-accentDown: #aacc00;
+  --color-whiteDown: var(--whiteDown);
+  --color-gray: #d9d9de;
+  --color-grayDown: #b8bdd9;
+  --color-blackUp: #5c6180;
+  --color-black: #272a3d;
+  --color-blackDown: #202333;
+  --color-blackDownUp: #313650;
+  --color-blackDownDown: #191c2b;
+
+  --font-sans: var(--font-inter), Inter, sans-serif;
+  --font-display: var(--font-octa), var(--font-inter), sans-serif;
+
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #272a3d;
+  --whiteDown: #f2f5f9;
+  --surface: #ffffff;
+  --surface-sunken: #f2f5f9;
+  --rule: #d9d9de;
+  --rule-soft: #e4e4e7;
+  --muted: #5c6180;
+  --primary: #aacc00;
+  --ring: #1f4fff;
+  --focus-ring-offset-color: #ffffff;
+
+  /* Confidence bands, validated against this surface. See packages/core/src/pipeline/confidence.ts */
+  --band-very_thin: #b8bdd9;
+  --band-thin: #7b83a8;
+  --band-usable: #454c70;
+  --band-good: #aacc00;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #202333;
+    --foreground: #fafafa;
+    --whiteDown: #202333;
+    --surface: #313650;
+    --surface-sunken: #191c2b;
+    --rule: #525252;
+    --rule-soft: #404040;
+    --muted: #b8bdd9;
+    --primary: #d6f249;
+    --focus-ring-offset-color: #202333;
+
+    --band-very_thin: #565d80;
+    --band-thin: #8b93b5;
+    --band-usable: #c9cfe6;
+    --band-good: #d6f249;
+  }
+}
+
+html {
+  font-family: var(--font-inter), Inter, sans-serif;
+  font-optical-sizing: auto;
+  min-width: min(360px, 100vw);
+}
+
+body,
+html {
+  font-size: 18px;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-feature-settings: 'tnum' 1;
+}
+
+:where(em, i, .italic, blockquote) {
+  font-family: var(--font-inter-italic), var(--font-inter), sans-serif;
+}
+
+::selection {
+  background: #d6f249;
+  color: #272a3d;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+html {
+  -webkit-tap-highlight-color: rgba(39, 42, 61, 0.12);
+}
+
+/* The one permitted gradient: a lime glow at the top of a dark hero. */
+.hero-glow {
+  background-image: radial-gradient(
+    ellipse at top,
+    rgba(214, 242, 73, 0.14) 0%,
+    rgba(214, 242, 73, 0) 58%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

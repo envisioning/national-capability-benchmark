@@ -1,0 +1,24 @@
+{
+  "name": "national-capability-benchmark",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.26.2",
+  "scripts": {
+    "bench": "pnpm --filter @ncb/core exec tsx src/cli/index.ts",
+    "ingest": "pnpm bench ingest",
+    "delphi": "pnpm bench delphi",
+    "score": "pnpm bench score",
+    "diagnose": "pnpm bench diagnose",
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "dev": "pnpm --filter @ncb/web dev"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}

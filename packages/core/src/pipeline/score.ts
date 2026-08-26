@@ -1,0 +1,224 @@
+import {
+  COUNTRIES,
+  COUNTRY_ISO3,
+  DIMENSIONS,
+  INDICATORS,
+  SOURCE_TIERS,
+  indicatorsFor,
+} from '../model/index.js'
+import type {
+  CountryResult,
+  DelphiCellEstimate,
+  Dimension,
+  DimensionResult,
+  IndicatorDef,
+  IndicatorResult,
+  Observation,
+  SourceTier,
+} from '../model/index.js'
+import { applyTransform, normalizeToScale, winsorize } from './normalize.js'
+import { iqr, mean, median, round } from './stats.js'
+
+export type Cell = {
+  indicatorId: string
+  iso3: string
+  raw: number
+  transformed: number
+  normalized: number
+  year: number
+  sourceTier: SourceTier
+  clipped: boolean
+}
+
+/** indicatorId -> iso3 -> cell. The auditable middle layer between data and scores. */
+export type Matrix = Map<string, Map<string, Cell>>
+
+export type ScoreOptions = {
+  /** Year the recency penalty counts back from. */
+  currentYear: number
+  /** Indicators to drop, used by the GDP-sensitivity test. */
+  exclude?: ReadonlySet<string>
+  /** Tukey fence multiplier for winsorizing. */
+  winsorK?: number
+  /** Panel estimates, when a Delphi run is loaded. */
+  delphi?: DelphiCellEstimate[]
+  /** Panel estimates below this self-confidence are ignored. */
+  minPanelistConfidence?: number
+}
+
+/** Latest observation per indicator x country. */
+function latest(observations: Observation[]): Map<string, Observation> {
+  const best = new Map<string, Observation>()
+  for (const o of observations) {
+    const key = `${o.indicatorId}|${o.iso3}`
+    const cur = best.get(key)
+    if (!cur || o.year > cur.year) best.set(key, o)
+  }
+  return best
+}
+
+/**
+ * Evidence decays. Two grace years, then linear decay over a twelve-year window
+ * down to a floor of 0.1, so a Doing Business number from 2019 still counts but
+ * counts visibly less than a 2024 number.
+ */
+export function recencyWeight(year: number, currentYear: number): number {
+  const age = currentYear - year
+  if (age <= 2) return 1
+  const decayed = 1 - (age - 2) / 12
+  return Math.max(0.1, Math.min(1, decayed))
+}
+
+export function buildMatrix(observations: Observation[], opts: ScoreOptions): Matrix {
+  const byKey = latest(observations)
+  const matrix: Matrix = new Map()
+
+  for (const def of INDICATORS) {
+    if (def.ingest === 'gap') continue
+    if (opts.exclude?.has(def.id)) continue
+
+    const rows: Array<{ iso3: string; obs: Observation; transformed: number }> = []
+    for (const iso3 of COUNTRY_ISO3) {
+      const obs = byKey.get(`${def.id}|${iso3}`)
+      if (!obs) continue
+      const denom = def.denominatorSeries
+        ? byKey.get(`__denominator__${def.denominatorSeries}|${iso3}`)?.value ?? null
+        : null
+      const transformed = applyTransform(def, obs.value, denom)
+      if (transformed === null || !Number.isFinite(transformed)) continue
+      rows.push({ iso3, obs, transformed })
+    }
+    if (rows.length < 2) continue
+
+    const w = winsorize(rows.map((r) => r.transformed), opts.winsorK ?? 3)
+    const normalized = normalizeToScale(
+      w.map((x) => x.value),
+      def.direction,
+    )
+
+    const inner = new Map<string, Cell>()
+    rows.forEach((r, i) => {
+      inner.set(r.iso3, {
+        indicatorId: def.id,
+        iso3: r.iso3,
+        raw: r.obs.value,
+        transformed: (w[i] as { value: number }).value,
+        normalized: normalized[i] as number,
+        year: r.obs.year,
+        sourceTier: r.obs.sourceTier,
+        clipped: (w[i] as { clipped: boolean }).clipped,
+      })
+    })
+    matrix.set(def.id, inner)
+  }
+  return matrix
+}
+
+function indicatorRow(def: IndicatorDef, cell: Cell | undefined): IndicatorResult {
+  const status = def.ingest === 'gap' ? 'gap' : cell ? 'observed' : 'missing'
+  return {
+    indicatorId: def.id,
+    name: def.name,
+    measurementClass: def.measurementClass,
+    raw: cell ? round(cell.raw, 3) : null,
+    transformed: cell ? round(cell.transformed, 3) : null,
+    normalized: cell ? round(cell.normalized, 1) : null,
+    year: cell ? cell.year : null,
+    source: def.source.publisher + (def.source.series ? ` (${def.source.series})` : ''),
+    sourceTier: cell ? cell.sourceTier : null,
+    winsorized: cell ? cell.clipped : false,
+    status,
+  }
+}
+
+function confidenceFor(
+  defs: IndicatorDef[],
+  cells: Array<Cell | undefined>,
+  currentYear: number,
+): DimensionResult['confidenceParts'] {
+  const observed = cells.filter((c): c is Cell => Boolean(c))
+  const coverage = defs.length === 0 ? 0 : observed.length / defs.length
+  const recency =
+    observed.length === 0 ? 0 : mean(observed.map((c) => recencyWeight(c.year, currentYear)))
+  const sourceQuality =
+    observed.length === 0 ? 0 : mean(observed.map((c) => SOURCE_TIERS[c.sourceTier]))
+  return {
+    coverage: round(coverage, 3),
+    recency: round(recency, 3),
+    sourceQuality: round(sourceQuality, 3),
+  }
+}
+
+function delphiFor(
+  estimates: DelphiCellEstimate[] | undefined,
+  iso3: string,
+  dimension: Dimension,
+  minConfidence: number,
+): { score: number | null; iqr: number | null; dissent: boolean } {
+  if (!estimates || estimates.length === 0) return { score: null, iqr: null, dissent: false }
+  const rounds = estimates.filter((e) => e.iso3 === iso3 && e.dimension === dimension)
+  if (rounds.length === 0) return { score: null, iqr: null, dissent: false }
+  const finalRound = Math.max(...rounds.map((e) => e.round))
+  const useable = rounds.filter(
+    (e) => e.round === finalRound && e.selfConfidence >= minConfidence,
+  )
+  if (useable.length === 0) return { score: null, iqr: null, dissent: false }
+  const scores = useable.map((e) => e.score)
+  const spread = iqr(scores)
+  return {
+    score: round(median(scores), 1),
+    iqr: round(spread, 1),
+    /** A quarter of the scale between the middle half of the panel is unresolved disagreement. */
+    dissent: spread > 25,
+  }
+}
+
+export type ScoreOutput = {
+  countries: CountryResult[]
+  matrix: Matrix
+}
+
+export function scoreAll(observations: Observation[], opts: ScoreOptions): ScoreOutput {
+  const matrix = buildMatrix(observations, opts)
+  const minPanelistConfidence = opts.minPanelistConfidence ?? 0
+
+  const countries: CountryResult[] = COUNTRIES.map((country) => {
+    const dimensions = {} as Record<Dimension, DimensionResult>
+
+    for (const dimension of DIMENSIONS) {
+      const defs = indicatorsFor(dimension).filter((d) => !opts.exclude?.has(d.id))
+      const cells = defs.map((d) => matrix.get(d.id)?.get(country.iso3))
+      const observed = cells.filter((c): c is Cell => Boolean(c))
+
+      const score = observed.length === 0 ? null : round(mean(observed.map((c) => c.normalized)), 1)
+      const parts = confidenceFor(defs, cells, opts.currentYear)
+      const delphi = delphiFor(opts.delphi, country.iso3, dimension, minPanelistConfidence)
+
+      const blendedScore = score ?? delphi.score
+      dimensions[dimension] = {
+        score,
+        confidence: round(parts.coverage * parts.recency * parts.sourceQuality, 3),
+        confidenceParts: parts,
+        delphiScore: delphi.score,
+        delphiIqr: delphi.iqr,
+        delphiDissent: delphi.dissent,
+        blendedScore,
+        blendedFrom: score !== null ? 'indicators' : delphi.score !== null ? 'delphi' : 'none',
+        indicators: defs.map((d, i) => indicatorRow(d, cells[i])),
+      }
+    }
+
+    return { country: country.name, iso3: country.iso3, dimensions }
+  })
+
+  return { countries, matrix }
+}
+
+/** The flat table the spec asks for, ready for a radar chart. */
+export function flatTable(countries: CountryResult[]): Array<Record<string, string | number | null>> {
+  return countries.map((c) => {
+    const row: Record<string, string | number | null> = { country: c.country, iso3: c.iso3 }
+    for (const d of DIMENSIONS) row[d] = c.dimensions[d]?.score ?? null
+    return row
+  })
+}

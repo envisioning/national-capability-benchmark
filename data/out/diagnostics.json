@@ -1,0 +1,1351 @@
+{
+  "generatedAt": "2026-08-26T13:07:24.022Z",
+  "gdpSeries": "NY.GDP.PCAP.PP.KD",
+  "dimensionVsGdp": [
+    {
+      "dimension": "anticipation",
+      "pearson": 0.941,
+      "spearman": 0.903,
+      "n": 10
+    },
+    {
+      "dimension": "agency",
+      "pearson": 0.915,
+      "spearman": 0.83,
+      "n": 10
+    },
+    {
+      "dimension": "coordination",
+      "pearson": 0.932,
+      "spearman": 0.927,
+      "n": 10
+    },
+    {
+      "dimension": "trust",
+      "pearson": 0.915,
+      "spearman": 0.879,
+      "n": 10
+    },
+    {
+      "dimension": "learning",
+      "pearson": 0.842,
+      "spearman": 0.697,
+      "n": 10
+    },
+    {
+      "dimension": "experimentation",
+      "pearson": 0.554,
+      "spearman": 0.721,
+      "n": 10
+    },
+    {
+      "dimension": "adaptability",
+      "pearson": 0.907,
+      "spearman": 0.818,
+      "n": 10
+    },
+    {
+      "dimension": "building",
+      "pearson": 0.8,
+      "spearman": 0.794,
+      "n": 10
+    },
+    {
+      "dimension": "shared_purpose",
+      "pearson": 0.198,
+      "spearman": 0.115,
+      "n": 10
+    }
+  ],
+  "dimensionPairs": [
+    {
+      "a": "anticipation",
+      "b": "agency",
+      "r": 0.924,
+      "n": 10
+    },
+    {
+      "a": "coordination",
+      "b": "trust",
+      "r": 0.92,
+      "n": 10
+    },
+    {
+      "a": "anticipation",
+      "b": "coordination",
+      "r": 0.918,
+      "n": 10
+    },
+    {
+      "a": "agency",
+      "b": "trust",
+      "r": 0.911,
+      "n": 10
+    },
+    {
+      "a": "anticipation",
+      "b": "trust",
+      "r": 0.904,
+      "n": 10
+    },
+    {
+      "a": "anticipation",
+      "b": "adaptability",
+      "r": 0.886,
+      "n": 10
+    },
+    {
+      "a": "learning",
+      "b": "adaptability",
+      "r": 0.88,
+      "n": 10
+    },
+    {
+      "a": "coordination",
+      "b": "adaptability",
+      "r": 0.87,
+      "n": 10
+    },
+    {
+      "a": "agency",
+      "b": "coordination",
+      "r": 0.869,
+      "n": 10
+    },
+    {
+      "a": "anticipation",
+      "b": "learning",
+      "r": 0.852,
+      "n": 10
+    },
+    {
+      "a": "agency",
+      "b": "learning",
+      "r": 0.851,
+      "n": 10
+    },
+    {
+      "a": "trust",
+      "b": "learning",
+      "r": 0.823,
+      "n": 10
+    },
+    {
+      "a": "agency",
+      "b": "adaptability",
+      "r": 0.823,
+      "n": 10
+    },
+    {
+      "a": "coordination",
+      "b": "building",
+      "r": 0.821,
+      "n": 10
+    },
+    {
+      "a": "trust",
+      "b": "adaptability",
+      "r": 0.806,
+      "n": 10
+    },
+    {
+      "a": "anticipation",
+      "b": "building",
+      "r": 0.797,
+      "n": 10
+    },
+    {
+      "a": "coordination",
+      "b": "learning",
+      "r": 0.754,
+      "n": 10
+    },
+    {
+      "a": "adaptability",
+      "b": "building",
+      "r": 0.743,
+      "n": 10
+    },
+    {
+      "a": "experimentation",
+      "b": "building",
+      "r": 0.713,
+      "n": 10
+    },
+    {
+      "a": "anticipation",
+      "b": "experimentation",
+      "r": 0.699,
+      "n": 10
+    },
+    {
+      "a": "trust",
+      "b": "building",
+      "r": 0.676,
+      "n": 10
+    },
+    {
+      "a": "agency",
+      "b": "building",
+      "r": 0.669,
+      "n": 10
+    },
+    {
+      "a": "agency",
+      "b": "experimentation",
+      "r": 0.618,
+      "n": 10
+    },
+    {
+      "a": "experimentation",
+      "b": "adaptability",
+      "r": 0.616,
+      "n": 10
+    },
+    {
+      "a": "learning",
+      "b": "shared_purpose",
+      "r": 0.537,
+      "n": 10
+    },
+    {
+      "a": "learning",
+      "b": "experimentation",
+      "r": 0.476,
+      "n": 10
+    },
+    {
+      "a": "coordination",
+      "b": "experimentation",
+      "r": 0.475,
+      "n": 10
+    },
+    {
+      "a": "trust",
+      "b": "shared_purpose",
+      "r": 0.469,
+      "n": 10
+    },
+    {
+      "a": "trust",
+      "b": "experimentation",
+      "r": 0.467,
+      "n": 10
+    },
+    {
+      "a": "learning",
+      "b": "building",
+      "r": 0.446,
+      "n": 10
+    },
+    {
+      "a": "coordination",
+      "b": "shared_purpose",
+      "r": 0.345,
+      "n": 10
+    },
+    {
+      "a": "anticipation",
+      "b": "shared_purpose",
+      "r": 0.336,
+      "n": 10
+    },
+    {
+      "a": "agency",
+      "b": "shared_purpose",
+      "r": 0.333,
+      "n": 10
+    },
+    {
+      "a": "adaptability",
+      "b": "shared_purpose",
+      "r": 0.322,
+      "n": 10
+    },
+    {
+      "a": "building",
+      "b": "shared_purpose",
+      "r": -0.12,
+      "n": 10
+    },
+    {
+      "a": "experimentation",
+      "b": "shared_purpose",
+      "r": -0.038,
+      "n": 10
+    }
+  ],
+  "duplicateDimensionCandidates": [
+    {
+      "a": "anticipation",
+      "b": "agency",
+      "r": 0.924,
+      "n": 10
+    },
+    {
+      "a": "coordination",
+      "b": "trust",
+      "r": 0.92,
+      "n": 10
+    },
+    {
+      "a": "anticipation",
+      "b": "coordination",
+      "r": 0.918,
+      "n": 10
+    },
+    {
+      "a": "agency",
+      "b": "trust",
+      "r": 0.911,
+      "n": 10
+    },
+    {
+      "a": "anticipation",
+      "b": "trust",
+      "r": 0.904,
+      "n": 10
+    }
+  ],
+  "indicatorVsGdp": [
+    {
+      "indicatorId": "regulatory_quality",
+      "dimension": "coordination",
+      "measurementClass": "P",
+      "r": 0.942,
+      "wealthProxyPrior": 0.6,
+      "flaggedAsWealthProxy": true
+    },
+    {
+      "indicatorId": "labour_productivity",
+      "dimension": "building",
+      "measurementClass": "O",
+      "r": 0.936,
+      "wealthProxyPrior": 0.9,
+      "flaggedAsWealthProxy": true
+    },
+    {
+      "indicatorId": "human_capital_index",
+      "dimension": "learning",
+      "measurementClass": "C",
+      "r": 0.921,
+      "wealthProxyPrior": 0.5,
+      "flaggedAsWealthProxy": true
+    },
+    {
+      "indicatorId": "government_effectiveness",
+      "dimension": "coordination",
+      "measurementClass": "P",
+      "r": 0.915,
+      "wealthProxyPrior": 0.6,
+      "flaggedAsWealthProxy": true
+    },
+    {
+      "indicatorId": "sci_articles_per_million",
+      "dimension": "anticipation",
+      "measurementClass": "O",
+      "r": 0.9,
+      "wealthProxyPrior": 0.4,
+      "flaggedAsWealthProxy": true
+    },
+    {
+      "indicatorId": "control_of_corruption",
+      "dimension": "trust",
+      "measurementClass": "P",
+      "r": 0.883,
+      "wealthProxyPrior": 0.55,
+      "flaggedAsWealthProxy": true
+    },
+    {
+      "indicatorId": "internet_users",
+      "dimension": "agency",
+      "measurementClass": "I",
+      "r": 0.866,
+      "wealthProxyPrior": 0.55,
+      "flaggedAsWealthProxy": true
+    },
+    {
+      "indicatorId": "researchers_per_million",
+      "dimension": "anticipation",
+      "measurementClass": "I",
+      "r": 0.863,
+      "wealthProxyPrior": 0.5,
+      "flaggedAsWealthProxy": true
+    },
+    {
+      "indicatorId": "secure_internet_servers",
+      "dimension": "anticipation",
+      "measurementClass": "I",
+      "r": 0.853,
+      "wealthProxyPrior": 0.6,
+      "flaggedAsWealthProxy": true
+    },
+    {
+      "indicatorId": "rule_of_law",
+      "dimension": "trust",
+      "measurementClass": "P",
+      "r": 0.849,
+      "wealthProxyPrior": 0.55,
+      "flaggedAsWealthProxy": true
+    },
+    {
+      "indicatorId": "time_to_export",
+      "dimension": "coordination",
+      "measurementClass": "C",
+      "r": 0.824,
+      "wealthProxyPrior": 0.3,
+      "flaggedAsWealthProxy": true
+    },
+    {
+      "indicatorId": "account_ownership",
+      "dimension": "agency",
+      "measurementClass": "I",
+      "r": 0.813,
+      "wealthProxyPrior": 0.5,
+      "flaggedAsWealthProxy": true
+    },
+    {
+      "indicatorId": "broadband_subscriptions",
+      "dimension": "adaptability",
+      "measurementClass": "I",
+      "r": 0.805,
+      "wealthProxyPrior": 0.6,
+      "flaggedAsWealthProxy": true
+    },
+    {
+      "indicatorId": "labor_force_participation",
+      "dimension": "adaptability",
+      "measurementClass": "I",
+      "r": 0.8,
+      "wealthProxyPrior": 0.15,
+      "flaggedAsWealthProxy": true
+    },
+    {
+      "indicatorId": "contract_enforcement_days",
+      "dimension": "trust",
+      "measurementClass": "C",
+      "r": 0.799,
+      "wealthProxyPrior": 0.2,
+      "flaggedAsWealthProxy": true
+    },
+    {
+      "indicatorId": "logistics_infrastructure",
+      "dimension": "building",
+      "measurementClass": "P",
+      "r": 0.789,
+      "wealthProxyPrior": 0.5,
+      "flaggedAsWealthProxy": true
+    },
+    {
+      "indicatorId": "statistical_performance",
+      "dimension": "anticipation",
+      "measurementClass": "C",
+      "r": 0.78,
+      "wealthProxyPrior": 0.25,
+      "flaggedAsWealthProxy": true
+    },
+    {
+      "indicatorId": "business_start_procedures",
+      "dimension": "agency",
+      "measurementClass": "C",
+      "r": 0.759,
+      "wealthProxyPrior": 0.15,
+      "flaggedAsWealthProxy": true
+    },
+    {
+      "indicatorId": "high_tech_exports_share",
+      "dimension": "building",
+      "measurementClass": "O",
+      "r": 0.759,
+      "wealthProxyPrior": 0.4,
+      "flaggedAsWealthProxy": true
+    },
+    {
+      "indicatorId": "firm_training_incidence",
+      "dimension": "learning",
+      "measurementClass": "C",
+      "r": 0.745,
+      "wealthProxyPrior": 0.2,
+      "flaggedAsWealthProxy": true
+    },
+    {
+      "indicatorId": "logistics_performance",
+      "dimension": "coordination",
+      "measurementClass": "P",
+      "r": 0.727,
+      "wealthProxyPrior": 0.5,
+      "flaggedAsWealthProxy": true
+    },
+    {
+      "indicatorId": "business_start_days",
+      "dimension": "agency",
+      "measurementClass": "C",
+      "r": 0.722,
+      "wealthProxyPrior": 0.2,
+      "flaggedAsWealthProxy": true
+    },
+    {
+      "indicatorId": "tertiary_enrollment",
+      "dimension": "learning",
+      "measurementClass": "I",
+      "r": 0.684,
+      "wealthProxyPrior": 0.5,
+      "flaggedAsWealthProxy": false
+    },
+    {
+      "indicatorId": "domestic_credit_private",
+      "dimension": "agency",
+      "measurementClass": "I",
+      "r": 0.666,
+      "wealthProxyPrior": 0.55,
+      "flaggedAsWealthProxy": false
+    },
+    {
+      "indicatorId": "electricity_transmission_losses",
+      "dimension": "adaptability",
+      "measurementClass": "O",
+      "r": 0.663,
+      "wealthProxyPrior": 0.4,
+      "flaggedAsWealthProxy": false
+    },
+    {
+      "indicatorId": "vocational_secondary_share",
+      "dimension": "learning",
+      "measurementClass": "I",
+      "r": 0.631,
+      "wealthProxyPrior": 0.1,
+      "flaggedAsWealthProxy": false
+    },
+    {
+      "indicatorId": "rd_expenditure_gdp",
+      "dimension": "anticipation",
+      "measurementClass": "I",
+      "r": 0.626,
+      "wealthProxyPrior": 0.5,
+      "flaggedAsWealthProxy": false
+    },
+    {
+      "indicatorId": "resident_trademarks_per_million",
+      "dimension": "experimentation",
+      "measurementClass": "O",
+      "r": 0.622,
+      "wealthProxyPrior": 0.3,
+      "flaggedAsWealthProxy": false
+    },
+    {
+      "indicatorId": "unemployment_rate",
+      "dimension": "adaptability",
+      "measurementClass": "O",
+      "r": 0.548,
+      "wealthProxyPrior": 0.25,
+      "flaggedAsWealthProxy": false
+    },
+    {
+      "indicatorId": "resident_patents_per_million",
+      "dimension": "experimentation",
+      "measurementClass": "O",
+      "r": 0.459,
+      "wealthProxyPrior": 0.45,
+      "flaggedAsWealthProxy": false
+    },
+    {
+      "indicatorId": "voice_and_accountability",
+      "dimension": "shared_purpose",
+      "measurementClass": "P",
+      "r": 0.41,
+      "wealthProxyPrior": 0.35,
+      "flaggedAsWealthProxy": false
+    },
+    {
+      "indicatorId": "electricity_connection_speed",
+      "dimension": "building",
+      "measurementClass": "C",
+      "r": 0.387,
+      "wealthProxyPrior": 0.25,
+      "flaggedAsWealthProxy": false
+    },
+    {
+      "indicatorId": "economic_complexity",
+      "dimension": "building",
+      "measurementClass": "O",
+      "r": 0.368,
+      "wealthProxyPrior": 0.45,
+      "flaggedAsWealthProxy": false
+    },
+    {
+      "indicatorId": "education_expenditure_gdp",
+      "dimension": "learning",
+      "measurementClass": "I",
+      "r": -0.329,
+      "wealthProxyPrior": 0.3,
+      "flaggedAsWealthProxy": false
+    },
+    {
+      "indicatorId": "income_inequality",
+      "dimension": "shared_purpose",
+      "measurementClass": "O",
+      "r": 0.311,
+      "wealthProxyPrior": 0.2,
+      "flaggedAsWealthProxy": false
+    },
+    {
+      "indicatorId": "manufacturing_value_added",
+      "dimension": "building",
+      "measurementClass": "O",
+      "r": 0.303,
+      "wealthProxyPrior": 0.2,
+      "flaggedAsWealthProxy": false
+    },
+    {
+      "indicatorId": "tax_revenue_gdp",
+      "dimension": "shared_purpose",
+      "measurementClass": "O",
+      "r": -0.098,
+      "wealthProxyPrior": 0.3,
+      "flaggedAsWealthProxy": false
+    },
+    {
+      "indicatorId": "new_business_density",
+      "dimension": "agency",
+      "measurementClass": "C",
+      "r": 0.095,
+      "wealthProxyPrior": 0.35,
+      "flaggedAsWealthProxy": false
+    }
+  ],
+  "redundantIndicatorPairs": [
+    {
+      "a": "account_ownership",
+      "b": "time_to_export",
+      "r": 0.983,
+      "n": 10
+    },
+    {
+      "a": "logistics_performance",
+      "b": "logistics_infrastructure",
+      "r": 0.977,
+      "n": 10
+    },
+    {
+      "a": "regulatory_quality",
+      "b": "control_of_corruption",
+      "r": 0.975,
+      "n": 10
+    },
+    {
+      "a": "rule_of_law",
+      "b": "control_of_corruption",
+      "r": 0.97,
+      "n": 10
+    },
+    {
+      "a": "government_effectiveness",
+      "b": "regulatory_quality",
+      "r": 0.968,
+      "n": 10
+    },
+    {
+      "a": "regulatory_quality",
+      "b": "rule_of_law",
+      "r": 0.956,
+      "n": 10
+    },
+    {
+      "a": "government_effectiveness",
+      "b": "human_capital_index",
+      "r": 0.937,
+      "n": 10
+    },
+    {
+      "a": "statistical_performance",
+      "b": "internet_users",
+      "r": 0.933,
+      "n": 10
+    },
+    {
+      "a": "government_effectiveness",
+      "b": "control_of_corruption",
+      "r": 0.928,
+      "n": 10
+    },
+    {
+      "a": "government_effectiveness",
+      "b": "rule_of_law",
+      "r": 0.927,
+      "n": 10
+    },
+    {
+      "a": "regulatory_quality",
+      "b": "human_capital_index",
+      "r": 0.917,
+      "n": 10
+    },
+    {
+      "a": "sci_articles_per_million",
+      "b": "regulatory_quality",
+      "r": 0.915,
+      "n": 10
+    },
+    {
+      "a": "sci_articles_per_million",
+      "b": "rule_of_law",
+      "r": 0.912,
+      "n": 10
+    },
+    {
+      "a": "business_start_procedures",
+      "b": "contract_enforcement_days",
+      "r": 0.904,
+      "n": 10
+    },
+    {
+      "a": "researchers_per_million",
+      "b": "human_capital_index",
+      "r": 0.899,
+      "n": 10
+    },
+    {
+      "a": "internet_users",
+      "b": "broadband_subscriptions",
+      "r": 0.899,
+      "n": 10
+    },
+    {
+      "a": "sci_articles_per_million",
+      "b": "government_effectiveness",
+      "r": 0.893,
+      "n": 10
+    },
+    {
+      "a": "regulatory_quality",
+      "b": "labour_productivity",
+      "r": 0.889,
+      "n": 10
+    },
+    {
+      "a": "control_of_corruption",
+      "b": "human_capital_index",
+      "r": 0.888,
+      "n": 10
+    },
+    {
+      "a": "sci_articles_per_million",
+      "b": "control_of_corruption",
+      "r": 0.886,
+      "n": 10
+    },
+    {
+      "a": "vocational_secondary_share",
+      "b": "voice_and_accountability",
+      "r": 0.883,
+      "n": 9
+    },
+    {
+      "a": "firm_training_incidence",
+      "b": "labor_force_participation",
+      "r": 0.882,
+      "n": 10
+    },
+    {
+      "a": "account_ownership",
+      "b": "human_capital_index",
+      "r": 0.879,
+      "n": 10
+    },
+    {
+      "a": "rule_of_law",
+      "b": "human_capital_index",
+      "r": 0.878,
+      "n": 10
+    },
+    {
+      "a": "vocational_secondary_share",
+      "b": "labor_force_participation",
+      "r": 0.875,
+      "n": 9
+    },
+    {
+      "a": "control_of_corruption",
+      "b": "labor_force_participation",
+      "r": 0.873,
+      "n": 10
+    },
+    {
+      "a": "secure_internet_servers",
+      "b": "regulatory_quality",
+      "r": 0.871,
+      "n": 10
+    },
+    {
+      "a": "time_to_export",
+      "b": "human_capital_index",
+      "r": 0.871,
+      "n": 10
+    },
+    {
+      "a": "account_ownership",
+      "b": "government_effectiveness",
+      "r": 0.869,
+      "n": 10
+    },
+    {
+      "a": "sci_articles_per_million",
+      "b": "logistics_infrastructure",
+      "r": 0.868,
+      "n": 10
+    },
+    {
+      "a": "sci_articles_per_million",
+      "b": "account_ownership",
+      "r": 0.864,
+      "n": 10
+    },
+    {
+      "a": "resident_trademarks_per_million",
+      "b": "broadband_subscriptions",
+      "r": 0.86,
+      "n": 9
+    },
+    {
+      "a": "government_effectiveness",
+      "b": "labour_productivity",
+      "r": 0.859,
+      "n": 10
+    },
+    {
+      "a": "account_ownership",
+      "b": "rule_of_law",
+      "r": 0.858,
+      "n": 10
+    },
+    {
+      "a": "rd_expenditure_gdp",
+      "b": "resident_patents_per_million",
+      "r": 0.856,
+      "n": 10
+    },
+    {
+      "a": "researchers_per_million",
+      "b": "government_effectiveness",
+      "r": 0.856,
+      "n": 10
+    },
+    {
+      "a": "researchers_per_million",
+      "b": "logistics_infrastructure",
+      "r": 0.855,
+      "n": 10
+    },
+    {
+      "a": "researchers_per_million",
+      "b": "account_ownership",
+      "r": 0.851,
+      "n": 10
+    },
+    {
+      "a": "secure_internet_servers",
+      "b": "control_of_corruption",
+      "r": 0.851,
+      "n": 10
+    },
+    {
+      "a": "account_ownership",
+      "b": "regulatory_quality",
+      "r": 0.851,
+      "n": 10
+    }
+  ],
+  "measurability": [
+    {
+      "dimension": "anticipation",
+      "indicatorsDefined": 7,
+      "indicatorsObserved": 5,
+      "gaps": 2,
+      "meanCoverage": 0.714,
+      "meanConfidence": 0.62,
+      "classMix": {
+        "C": 2,
+        "I": 4,
+        "O": 1,
+        "P": 0
+      },
+      "subjectivityShare": 0.286
+    },
+    {
+      "dimension": "agency",
+      "indicatorsDefined": 8,
+      "indicatorsObserved": 6,
+      "gaps": 2,
+      "meanCoverage": 0.738,
+      "meanConfidence": 0.583,
+      "classMix": {
+        "C": 4,
+        "I": 3,
+        "O": 0,
+        "P": 1
+      },
+      "subjectivityShare": 0.25
+    },
+    {
+      "dimension": "coordination",
+      "indicatorsDefined": 7,
+      "indicatorsObserved": 4,
+      "gaps": 3,
+      "meanCoverage": 0.571,
+      "meanConfidence": 0.463,
+      "classMix": {
+        "C": 4,
+        "I": 0,
+        "O": 0,
+        "P": 3
+      },
+      "subjectivityShare": 0.857
+    },
+    {
+      "dimension": "trust",
+      "indicatorsDefined": 6,
+      "indicatorsObserved": 3,
+      "gaps": 3,
+      "meanCoverage": 0.5,
+      "meanConfidence": 0.409,
+      "classMix": {
+        "C": 1,
+        "I": 0,
+        "O": 0,
+        "P": 5
+      },
+      "subjectivityShare": 0.833
+    },
+    {
+      "dimension": "learning",
+      "indicatorsDefined": 7,
+      "indicatorsObserved": 5,
+      "gaps": 2,
+      "meanCoverage": 0.7,
+      "meanConfidence": 0.523,
+      "classMix": {
+        "C": 3,
+        "I": 3,
+        "O": 1,
+        "P": 0
+      },
+      "subjectivityShare": 0.286
+    },
+    {
+      "dimension": "experimentation",
+      "indicatorsDefined": 8,
+      "indicatorsObserved": 2,
+      "gaps": 6,
+      "meanCoverage": 0.238,
+      "meanConfidence": 0.169,
+      "classMix": {
+        "C": 4,
+        "I": 1,
+        "O": 2,
+        "P": 1
+      },
+      "subjectivityShare": 0.75
+    },
+    {
+      "dimension": "adaptability",
+      "indicatorsDefined": 8,
+      "indicatorsObserved": 4,
+      "gaps": 4,
+      "meanCoverage": 0.5,
+      "meanConfidence": 0.472,
+      "classMix": {
+        "C": 3,
+        "I": 2,
+        "O": 3,
+        "P": 0
+      },
+      "subjectivityShare": 0.5
+    },
+    {
+      "dimension": "building",
+      "indicatorsDefined": 8,
+      "indicatorsObserved": 6,
+      "gaps": 2,
+      "meanCoverage": 0.75,
+      "meanConfidence": 0.64,
+      "classMix": {
+        "C": 3,
+        "I": 0,
+        "O": 4,
+        "P": 1
+      },
+      "subjectivityShare": 0.375
+    },
+    {
+      "dimension": "shared_purpose",
+      "indicatorsDefined": 7,
+      "indicatorsObserved": 3,
+      "gaps": 4,
+      "meanCoverage": 0.415,
+      "meanConfidence": 0.377,
+      "classMix": {
+        "C": 2,
+        "I": 0,
+        "O": 2,
+        "P": 3
+      },
+      "subjectivityShare": 0.714
+    }
+  ],
+  "gdpStrippedTest": {
+    "excluded": [
+      "regulatory_quality",
+      "labour_productivity",
+      "human_capital_index",
+      "government_effectiveness",
+      "sci_articles_per_million",
+      "control_of_corruption",
+      "internet_users",
+      "researchers_per_million",
+      "secure_internet_servers",
+      "rule_of_law",
+      "time_to_export",
+      "account_ownership",
+      "broadband_subscriptions",
+      "labor_force_participation",
+      "contract_enforcement_days",
+      "logistics_infrastructure",
+      "statistical_performance",
+      "business_start_procedures",
+      "high_tech_exports_share",
+      "firm_training_incidence",
+      "logistics_performance",
+      "business_start_days"
+    ],
+    "dimensionsEmptied": [
+      "coordination",
+      "trust"
+    ],
+    "perDimensionMeanAbsShift": [
+      {
+        "dimension": "anticipation",
+        "meanAbsShift": 19.98
+      },
+      {
+        "dimension": "agency",
+        "meanAbsShift": 23.34
+      },
+      {
+        "dimension": "coordination",
+        "meanAbsShift": null
+      },
+      {
+        "dimension": "trust",
+        "meanAbsShift": null
+      },
+      {
+        "dimension": "learning",
+        "meanAbsShift": 6.43
+      },
+      {
+        "dimension": "experimentation",
+        "meanAbsShift": 0
+      },
+      {
+        "dimension": "adaptability",
+        "meanAbsShift": 12.44
+      },
+      {
+        "dimension": "building",
+        "meanAbsShift": 9.24
+      },
+      {
+        "dimension": "shared_purpose",
+        "meanAbsShift": 0
+      }
+    ],
+    "perCountryMeanAbsShift": [
+      {
+        "iso3": "BRA",
+        "country": "Brazil",
+        "meanAbsShift": 2.89
+      },
+      {
+        "iso3": "USA",
+        "country": "United States",
+        "meanAbsShift": 4.63
+      },
+      {
+        "iso3": "NLD",
+        "country": "Netherlands",
+        "meanAbsShift": 13.87
+      },
+      {
+        "iso3": "CHE",
+        "country": "Switzerland",
+        "meanAbsShift": 8.93
+      },
+      {
+        "iso3": "SGP",
+        "country": "Singapore",
+        "meanAbsShift": 19.93
+      },
+      {
+        "iso3": "KOR",
+        "country": "South Korea",
+        "meanAbsShift": 11.09
+      },
+      {
+        "iso3": "EST",
+        "country": "Estonia",
+        "meanAbsShift": 12.71
+      },
+      {
+        "iso3": "IND",
+        "country": "India",
+        "meanAbsShift": 9.76
+      },
+      {
+        "iso3": "CHL",
+        "country": "Chile",
+        "meanAbsShift": 10.51
+      },
+      {
+        "iso3": "ZAF",
+        "country": "South Africa",
+        "meanAbsShift": 7.73
+      }
+    ],
+    "rankChanges": [
+      {
+        "dimension": "anticipation",
+        "changedPositions": 9
+      },
+      {
+        "dimension": "agency",
+        "changedPositions": 6
+      },
+      {
+        "dimension": "coordination",
+        "changedPositions": 10
+      },
+      {
+        "dimension": "trust",
+        "changedPositions": 10
+      },
+      {
+        "dimension": "learning",
+        "changedPositions": 6
+      },
+      {
+        "dimension": "experimentation",
+        "changedPositions": 0
+      },
+      {
+        "dimension": "adaptability",
+        "changedPositions": 7
+      },
+      {
+        "dimension": "building",
+        "changedPositions": 7
+      },
+      {
+        "dimension": "shared_purpose",
+        "changedPositions": 0
+      }
+    ]
+  },
+  "dataGaps": [
+    {
+      "dimension": "anticipation",
+      "indicatorId": "government_foresight_capacity",
+      "name": "Government foresight capacity",
+      "publisher": "none",
+      "reason": "No comparable international dataset. OECD and UN work is descriptive, not scored. Envisioning would have to build this."
+    },
+    {
+      "dimension": "anticipation",
+      "indicatorId": "basic_research_share",
+      "name": "Long-horizon research share",
+      "publisher": "OECD MSTI",
+      "reason": "Published by OECD for members only. Missing for India, South Africa, Brazil in comparable form."
+    },
+    {
+      "dimension": "agency",
+      "indicatorId": "adult_digital_skills",
+      "name": "Adult digital skills",
+      "publisher": "ITU",
+      "reason": "ITU collects this but coverage across these ten countries is broken and the task lists differ by year."
+    },
+    {
+      "dimension": "agency",
+      "indicatorId": "perceived_control",
+      "name": "Perceived control over life",
+      "publisher": "World Values Survey",
+      "reason": "WVS wave 7 covers most of these countries but fieldwork years differ by up to six years, and Singapore is thin."
+    },
+    {
+      "dimension": "coordination",
+      "indicatorId": "university_industry_collaboration",
+      "name": "University-industry collaboration",
+      "publisher": "Global Innovation Index",
+      "reason": "GII carries it, but the underlying item is a WEF executive opinion survey whose microdata is not inspectable. Excluded on principle 4."
+    },
+    {
+      "dimension": "coordination",
+      "indicatorId": "civil_society_strength",
+      "name": "Civil society strength",
+      "publisher": "V-Dem",
+      "reason": "V-Dem core civil society index is inspectable and would fill this. Not yet wired; it needs its own ingestion adapter."
+    },
+    {
+      "dimension": "coordination",
+      "indicatorId": "public_private_collaboration",
+      "name": "Public-private collaboration",
+      "publisher": "none",
+      "reason": "No comparable dataset. PPP investment databases measure infrastructure finance, not collaboration capacity."
+    },
+    {
+      "dimension": "trust",
+      "indicatorId": "interpersonal_trust",
+      "name": "Generalised interpersonal trust",
+      "publisher": "World Values Survey",
+      "reason": "The single most important item in this dimension and the one we cannot currently pull. WVS wave 7 microdata needs a licensed download and manual harmonisation."
+    },
+    {
+      "dimension": "trust",
+      "indicatorId": "institutional_trust",
+      "name": "Trust in public institutions",
+      "publisher": "OECD Trust Survey / WVS",
+      "reason": "The OECD survey covers members only. Mixing it with WVS items for India and South Africa would break comparability."
+    },
+    {
+      "dimension": "trust",
+      "indicatorId": "willingness_to_cooperate_strangers",
+      "name": "Cooperation beyond the in-group",
+      "publisher": "World Values Survey",
+      "reason": "The distinction that makes this dimension worth measuring. Same licensing obstacle as generalised trust."
+    },
+    {
+      "dimension": "learning",
+      "indicatorId": "adult_learning_participation",
+      "name": "Adult learning participation",
+      "publisher": "Eurostat / OECD PIAAC",
+      "reason": "The best available measure of continuous learning capacity, and it exists only for European and OECD members."
+    },
+    {
+      "dimension": "learning",
+      "indicatorId": "research_citation_impact",
+      "name": "Research citation impact",
+      "publisher": "OpenAlex",
+      "reason": "Computable from OpenAlex, which is open and inspectable. This is the highest-value gap to close next."
+    },
+    {
+      "dimension": "experimentation",
+      "indicatorId": "venture_capital_gdp",
+      "name": "Venture capital investment",
+      "publisher": "OECD / national VC associations",
+      "reason": "Commercial databases cover it well but are not inspectable. OECD figures skip India and South Africa."
+    },
+    {
+      "dimension": "experimentation",
+      "indicatorId": "early_stage_entrepreneurial_activity",
+      "name": "Early-stage entrepreneurial activity",
+      "publisher": "Global Entrepreneurship Monitor",
+      "reason": "GEM covers most of these countries but not every country in every year, and the national teams change."
+    },
+    {
+      "dimension": "experimentation",
+      "indicatorId": "failure_tolerance",
+      "name": "Tolerance of entrepreneurial failure",
+      "publisher": "Global Entrepreneurship Monitor",
+      "reason": "Attitudinal. Bankruptcy law and time to discharge would be the observable substitute and are worth wiring instead."
+    },
+    {
+      "dimension": "experimentation",
+      "indicatorId": "regulatory_sandbox_activity",
+      "name": "Regulatory sandbox activity",
+      "publisher": "none",
+      "reason": "Countable from primary sources but nobody maintains a comparable register. A realistic candidate for Envisioning to build."
+    },
+    {
+      "dimension": "experimentation",
+      "indicatorId": "university_spinouts",
+      "name": "University spinouts",
+      "publisher": "national TTO associations",
+      "reason": "Reported nationally with incompatible definitions of what counts as a spinout."
+    },
+    {
+      "dimension": "experimentation",
+      "indicatorId": "business_rd_share",
+      "name": "Business share of R&D",
+      "publisher": "UNESCO UIS",
+      "reason": "UIS publishes this and it is a good candidate for the next ingestion adapter."
+    },
+    {
+      "dimension": "adaptability",
+      "indicatorId": "long_term_unemployment_share",
+      "name": "Long-term unemployment share",
+      "publisher": "ILOSTAT",
+      "reason": "Closer to reallocation speed than the headline rate: it asks whether people who lose work find new work. ILOSTAT publishes it; the World Bank API does not carry it."
+    },
+    {
+      "dimension": "adaptability",
+      "indicatorId": "export_diversification",
+      "name": "Export diversification",
+      "publisher": "UNCTAD",
+      "reason": "UNCTAD publishes the concentration index and it is computable. Another good candidate for the next adapter."
+    },
+    {
+      "dimension": "adaptability",
+      "indicatorId": "disaster_preparedness",
+      "name": "Disaster preparedness and recovery",
+      "publisher": "INFORM / UNDRR",
+      "reason": "INFORM is largely a hazard-exposure index, so using it here would measure geography rather than capability."
+    },
+    {
+      "dimension": "adaptability",
+      "indicatorId": "institutional_responsiveness",
+      "name": "Institutional responsiveness",
+      "publisher": "none",
+      "reason": "No dataset exists. Measurable in principle from legislative and regulatory timestamps, which no one has assembled comparably."
+    },
+    {
+      "dimension": "building",
+      "indicatorId": "large_project_delivery",
+      "name": "Large project delivery",
+      "publisher": "none",
+      "reason": "The single best measure of execution capability and there is no comparable international dataset. Assembling one is a defensible Envisioning project."
+    },
+    {
+      "dimension": "building",
+      "indicatorId": "firm_scale_up_rate",
+      "name": "Firm scale-up rate",
+      "publisher": "OECD DynEmp",
+      "reason": "OECD business dynamics work covers members irregularly. Nothing comparable for India, Brazil or South Africa."
+    },
+    {
+      "dimension": "shared_purpose",
+      "indicatorId": "national_belonging",
+      "name": "Sense of national belonging",
+      "publisher": "World Values Survey",
+      "reason": "Culturally loaded. High national pride is not the same as capacity for collective action and must not be read as such."
+    },
+    {
+      "dimension": "shared_purpose",
+      "indicatorId": "volunteering_rate",
+      "name": "Volunteering",
+      "publisher": "Gallup World Poll / CAF",
+      "reason": "CAF publishes country figures but the underlying Gallup microdata is proprietary, so it fails the inspectability rule."
+    },
+    {
+      "dimension": "shared_purpose",
+      "indicatorId": "political_polarization",
+      "name": "Political polarisation",
+      "publisher": "V-Dem",
+      "reason": "V-Dem political polarisation is inspectable and would fill this. Pluralism is the target, so only hostile polarisation should count against a country."
+    },
+    {
+      "dimension": "shared_purpose",
+      "indicatorId": "civic_participation",
+      "name": "Civic participation",
+      "publisher": "World Values Survey",
+      "reason": "Behavioural rather than attitudinal, so it is the item worth prioritising if only one survey measure can be harmonised."
+    }
+  ]
+}
