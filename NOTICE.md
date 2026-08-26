@@ -1,6 +1,7 @@
 # Third-party content and licensing
 
-The MIT license in `LICENSE` covers the code. Four other things in this
+The MIT license in `LICENSE` covers the code in this repository, and only the
+code. Four other things in this
 repository carry their own terms.
 
 ## Indicator data

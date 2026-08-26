@@ -74,6 +74,12 @@ the first run:
 - Switzerland, Singapore and Estonia do come out with genuinely different
   shapes, which is the main thing the prototype had to demonstrate.
 
+## License
+
+Code is MIT. The World Bank data is CC BY 4.0, both typefaces are SIL OFL 1.1,
+and the Envisioning brand is not covered by either. Read
+[NOTICE.md](NOTICE.md) before reusing any of it.
+
 ## Repository
 
 ```
