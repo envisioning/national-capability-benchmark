@@ -9,6 +9,7 @@
 export * from './model/index.js'
 export * from './pipeline/stats.js'
 export * from './pipeline/confidence.js'
+export * from './pipeline/bands.js'
 export * from './pipeline/normalize.js'
 export * from './pipeline/score.js'
 export * from './pipeline/diagnostics.js'

@@ -12,6 +12,11 @@ export type Column<T> = {
    * sort last, in both directions, so "no data" never wins a ranking.
    */
   sort?: (row: T) => number | string | null
+  /**
+   * Cell contents, not the cell. DataTable owns the `<td>`, so returning a
+   * `<td>` or a `<Td>` here nests one inside the other. React reports that as a
+   * nesting error and hydration fails, which kills sorting on the whole table.
+   */
   render: (row: T) => React.ReactNode
   /** Tooltip on the header. */
   title?: string

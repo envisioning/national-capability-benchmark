@@ -2,6 +2,7 @@
 
 import { DIMENSION_LABELS, type CellConsensus } from '@ncb/core'
 import { DataTable } from '@/components/DataTable'
+import { Score } from '@/components/ui'
 
 export function DissentTable({ rows }: { rows: CellConsensus[] }) {
   return (
@@ -17,7 +18,7 @@ export function DissentTable({ rows }: { rows: CellConsensus[] }) {
           sort: (c) => DIMENSION_LABELS[c.dimension],
           render: (c) => DIMENSION_LABELS[c.dimension],
         },
-        { key: 'median', label: 'Median', align: 'right', sort: (c) => c.median, render: (c) => c.median.toFixed(1) },
+        { key: 'median', label: 'Median', align: 'right', sort: (c) => c.median, render: (c) => <Score value={c.median} size="sm" /> },
         { key: 'iqr', label: 'IQR', align: 'right', sort: (c) => c.iqr, render: (c) => c.iqr.toFixed(1) },
         {
           key: 'range',

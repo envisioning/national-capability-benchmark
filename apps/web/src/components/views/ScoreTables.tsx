@@ -1,10 +1,10 @@
 'use client'
 
 import Link from 'next/link'
-import { COUNTRY_FRAMES, DIMENSIONS, DIMENSION_LABELS } from '@ncb/core'
+import { DIMENSIONS, DIMENSION_LABELS } from '@ncb/core'
 import type { CountryResult } from '@ncb/core'
 import { DataTable, type Column } from '@/components/DataTable'
-import { ConfidenceBar, ScoreCell } from '@/components/ui'
+import { ConfidenceBar, Score } from '@/components/ui'
 
 function countryColumn(): Column<CountryResult> {
   return {
@@ -14,11 +14,6 @@ function countryColumn(): Column<CountryResult> {
     render: (c) => (
       <Link href={`/country/${c.iso3}`} className="hover:underline">
         {c.country}
-        {COUNTRY_FRAMES[c.iso3] === 'extended' ? (
-          <span className="ml-2 text-[var(--muted)]" title="Added after the frame was fixed">
-            ext
-          </span>
-        ) : null}
       </Link>
     ),
   }
@@ -37,7 +32,7 @@ export function ScoreTable({ countries }: { countries: CountryResult[] }) {
           label: DIMENSION_LABELS[d],
           align: 'right' as const,
           sort: (c: CountryResult) => c.dimensions[d]?.score ?? null,
-          render: (c: CountryResult) => <ScoreCell value={c.dimensions[d]?.score ?? null} />,
+          render: (c: CountryResult) => <Score value={c.dimensions[d]?.score ?? null} />,
         })),
       ]}
     />

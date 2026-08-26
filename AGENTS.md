@@ -169,6 +169,14 @@ as the reference, and see NOTICE.md before reusing the brand.
   labels, tables or anything under 18px. Set it with `font-variation-settings`
   so the width axis travels, never with `font-weight` alone, and hold `wdth` at
   100 across the whole layout.
+- Every 0 to 100 score renders through `Score` in `apps/web/src/components/ui.tsx`,
+  banded by `packages/core/src/pipeline/bands.ts`. Never render a score as a bare
+  number or invent a per-table treatment. See D18.
+- Components that go inside a table render inline content only. `DataTable` owns
+  the `<td>`, so a component that emits one as well produces `<td><td>`. React
+  reports it as a nesting error, hydration fails, and the table silently stops
+  sorting while still looking correct. Check the browser console after touching
+  any cell component.
 - Tables are `DataTable` from `apps/web/src/components/DataTable.tsx`, a client
   component with sortable headers. Numeric columns open descending, text columns
   ascending, and cells with no data always sort last in both directions. Give a

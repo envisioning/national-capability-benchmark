@@ -13,6 +13,7 @@ import {
   ConfidenceBar,
   Eyebrow,
   PageTitle,
+  Score,
   Scroller,
   Section,
   Table,
@@ -97,7 +98,9 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
                           <Td align="right" dim>
                             {row.year ?? ''}
                           </Td>
-                          <Td align="right">{row.normalized?.toFixed(1) ?? ''}</Td>
+                          <Td align="right">
+                            <Score value={row.normalized} size="sm" />
+                          </Td>
                           <Td dim>{row.source}</Td>
                           <Td dim>
                             {row.status === 'gap' ? 'no dataset exists' : row.status}
@@ -117,7 +120,7 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
                   <ul className="space-y-4 text-lg leading-relaxed">
                     {finals.map((e) => (
                       <li key={e.panelist}>
-                        <span className="font-medium tabular-nums">{e.score.toFixed(1)}</span>{' '}
+                        <Score value={e.score} size="sm" />{' '}
                         <span className="text-xs text-[var(--muted)]">
                           {e.panelist}, self-confidence {e.selfConfidence.toFixed(2)}
                         </span>

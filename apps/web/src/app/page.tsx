@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { COUNTRY_FRAMES, DIMENSIONS } from '@ncb/core'
+import { DIMENSIONS } from '@ncb/core'
 import { Radar } from '@/components/Radar'
 import { ConfidenceTable, ScoreTable } from '@/components/views/ScoreTables'
 import {
@@ -10,6 +10,8 @@ import {
   Headline,
   Highlight,
   PageTitle,
+  Score,
+  ScoreLegend,
   Section,
 } from '@/components/ui'
 import { MISSING_DATA_HINT, loadScores } from '@/lib/data'
@@ -19,8 +21,6 @@ export const dynamic = 'force-dynamic'
 export default async function Page() {
   const data = await loadScores()
   if (!data) return <Empty hint={MISSING_DATA_HINT} />
-
-  const extended = data.countries.filter((c) => COUNTRY_FRAMES[c.iso3] === 'extended').length
 
   return (
     <>
@@ -34,11 +34,7 @@ export default async function Page() {
 
       <Section
         title="Each country comes out a different shape"
-        hint={`Scores run 0 to 100 against a frame fixed by the ten reference countries. We never compute a composite. Two countries with the same average can have opposite profiles, and that difference is the whole point of the exercise.${
-          extended > 0
-            ? ` ${extended} countries marked ext were added later and are scored against that same frame, so adding them moved nobody else's number.`
-            : ''
-        }`}
+        hint="Scores run 0 to 100 against a frame fixed by ten reference countries, and every country is measured the same way. We never compute a composite. Two countries with the same average can have opposite profiles, and that difference is the whole point of the exercise."
       >
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {data.countries.map((c) => (
@@ -67,8 +63,9 @@ export default async function Page() {
 
       <Section
         title="The same numbers, ready for a chart"
-        hint="Click any heading to sort. Darker cells are higher scores."
+        hint="Click any heading to sort."
       >
+        <ScoreLegend />
         <ScoreTable countries={data.countries} />
       </Section>
 

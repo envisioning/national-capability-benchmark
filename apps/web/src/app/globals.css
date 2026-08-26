@@ -40,6 +40,16 @@
   --ring: #1f4fff;
   --focus-ring-offset-color: #ffffff;
 
+  /* Score bands. See packages/core/src/pipeline/bands.ts */
+  --score-weak: #d7dbe8;
+  --score-weak-ink: #272a3d;
+  --score-below_middle: #8b93b5;
+  --score-below_middle-ink: #272a3d;
+  --score-above_middle: #454c70;
+  --score-above_middle-ink: #fafafa;
+  --score-strong: #aacc00;
+  --score-strong-ink: #272a3d;
+
   /* Confidence bands, validated against this surface. See packages/core/src/pipeline/confidence.ts */
   --band-very_thin: #b8bdd9;
   --band-thin: #7b83a8;
@@ -59,6 +69,15 @@
     --muted: #b8bdd9;
     --primary: #d6f249;
     --focus-ring-offset-color: #202333;
+
+    --score-weak: #2b3049;
+    --score-weak-ink: #fafafa;
+    --score-below_middle: #646b8f;
+    --score-below_middle-ink: #fafafa;
+    --score-above_middle: #c9cfe6;
+    --score-above_middle-ink: #272a3d;
+    --score-strong: #d6f249;
+    --score-strong-ink: #272a3d;
 
     --band-very_thin: #565d80;
     --band-thin: #8b93b5;

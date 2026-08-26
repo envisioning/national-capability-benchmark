@@ -332,3 +332,63 @@ line between thin and usable.
 
 **Overturned by.** Evidence about how readers actually act on the bands, or a
 change to the confidence formula that shifts its range.
+
+---
+
+## D18 — One display for every 0 to 100 score
+
+*Recorded 2026-08-26.*
+
+**Choice.** Every 0 to 100 number in the viewer renders through a single
+component, `Score`, as a filled chip carrying the number and coloured by one of
+four bands from `packages/core/src/pipeline/bands.ts`. Dimension scores, panel
+medians and normalized indicator values all use it. No table gets its own
+treatment.
+
+**Why.** The first version tinted the cell background by value at low opacity.
+Across a sixteen-country table you could not tell 1.1 from 98.7 at a glance,
+which is the only reading that table exists to support. Three different
+renderings of the same quantity had also accumulated: a tint, a plain number,
+and a bar.
+
+Four discrete bands rather than a continuous ramp, for the same reason
+Metacritic uses bands: a continuous tint cannot separate 20 from 40 at chip
+size. The ramp recedes into the page at the bottom and reaches brand lime at the
+top, in both themes, so low values sink and high values stand out. Not red to
+green, for the reasons in D17.
+
+Worst adjacent pair separates at dE 22.6 light and 22.0 dark under normal
+vision, and every label clears 4.5:1 against its fill.
+
+**Cost.**
+
+- The band edges at 25, 50 and 75 are arbitrary. Two countries either side of a
+  boundary look further apart than they are, which is the standard cost of
+  banding and the reason the number is always printed inside the chip.
+- The labels say "strong" and "weak", which sound absolute. They are positions
+  against the reference frame, and the tooltip and the legend say so.
+
+**Overturned by.** Evidence that readers misread band edges as real differences,
+or a move away from a frame-relative scale.
+
+---
+
+## D19 — Extended countries get no visual marking
+
+*Recorded 2026-08-26. Reverses a choice made the same day.*
+
+**Choice.** Countries added after the reference frame was fixed are displayed
+exactly like the reference ten. No badge, no marker, no dimming.
+
+**Why.** A marker was briefly shipped. It implied the numbers were less
+trustworthy, which is false: every country is measured against the same frame by
+the same method, and that is the entire point of D16. The distinction is real
+but it is about how the scale was built, not about the quality of any country's
+score, so it belongs in the method documentation rather than on every row.
+
+**Cost.** A reader cannot tell from the table which countries defined the frame.
+The method page and D16 say which ten they are.
+
+**Overturned by.** A case where the distinction changes how a number should be
+read, most likely a country clamping at 0 or 100. Flag `outOfFrame` on that
+cell rather than reinstating a badge on the country.

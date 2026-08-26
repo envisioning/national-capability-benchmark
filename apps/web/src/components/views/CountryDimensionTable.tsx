@@ -3,7 +3,7 @@
 import { DIMENSIONS, DIMENSION_LABELS } from '@ncb/core'
 import type { CountryResult } from '@ncb/core'
 import { DataTable } from '@/components/DataTable'
-import { ConfidenceBar } from '@/components/ui'
+import { ConfidenceBar, Score } from '@/components/ui'
 
 export function CountryDimensionTable({ country }: { country: CountryResult }) {
   const rows = DIMENSIONS.map((d) => ({ d, dim: country.dimensions[d] })).filter(
@@ -32,7 +32,7 @@ export function CountryDimensionTable({ country }: { country: CountryResult }) {
           label: 'Score',
           align: 'right',
           sort: (r) => r.dim.score,
-          render: (r) => r.dim.score?.toFixed(1) ?? 'no data',
+          render: (r) => <Score value={r.dim.score} />,
         },
         {
           key: 'confidence',
@@ -59,7 +59,7 @@ export function CountryDimensionTable({ country }: { country: CountryResult }) {
           label: 'Panel median',
           align: 'right',
           sort: (r) => r.dim.delphiScore,
-          render: (r) => r.dim.delphiScore?.toFixed(1) ?? 'no run',
+          render: (r) => <Score value={r.dim.delphiScore} />,
         },
         {
           key: 'gap',
