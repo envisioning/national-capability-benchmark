@@ -21,7 +21,7 @@ If you redistribute the data, keep the attribution.
 
 ## Icons
 
-`apps/web/src/components/Icon.tsx` contains the path data for 23 icons copied
+`apps/web/src/components/Icon.tsx` contains the path data for 36 icons copied
 from Lucide, which is licensed under the ISC license and available at
 https://lucide.dev. Only the icons this app uses are copied, so the app keeps
 its three dependencies and an icon cannot change under it on a package update.

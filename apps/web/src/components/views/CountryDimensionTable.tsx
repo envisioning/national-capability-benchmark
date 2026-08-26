@@ -4,6 +4,7 @@ import { DIMENSIONS, DIMENSION_LABELS, primaryMomentum } from '@ncb/core'
 import type { CountryResult } from '@ncb/core'
 import { DataTable } from '@/components/DataTable'
 import { ConfidenceBar, Delta, Score } from '@/components/ui'
+import { DIMENSION_ICON, Icon } from '@/components/Icon'
 
 export function CountryDimensionTable({ country }: { country: CountryResult }) {
   const rows = DIMENSIONS.map((d) => ({ d, dim: country.dimensions[d] })).filter(
@@ -22,7 +23,8 @@ export function CountryDimensionTable({ country }: { country: CountryResult }) {
           label: 'Dimension',
           sort: (r) => DIMENSION_LABELS[r.d],
           render: (r) => (
-            <a href={`#${r.d}`} className="hover:underline">
+            <a href={`#${r.d}`} className="inline-flex items-center gap-2 hover:underline">
+              <Icon name={DIMENSION_ICON[r.d]} size={14} className="text-[var(--muted)]" />
               {DIMENSION_LABELS[r.d]}
             </a>
           ),

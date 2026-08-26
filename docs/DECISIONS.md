@@ -914,3 +914,9 @@ input, a rising line for an outcome, an eye for a perception.
 **Overturned by.** A need for many more icons, at which point installing the
 package beats maintaining a copied set.
 
+**Update, same day.** Extended to 36 icons. The nine dimensions each have one,
+used on the country page headings, the dimension table and the method page, so
+Building is always a hammer and Trust is always a handshake. The four confidence
+bands get a signal-strength ramp beside the meter, which is a third encoding of
+the same quantity alongside the bar length and the printed number.
+

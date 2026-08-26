@@ -7,7 +7,7 @@ import {
   DIMENSION_QUESTIONS,
   INDICATORS_BY_ID,
 } from '@ncb/core'
-import { Icon, STATUS_ICON } from '@/components/Icon'
+import { DIMENSION_ICON, Icon, STATUS_ICON } from '@/components/Icon'
 import { CompareRadar } from '@/components/views/CompareRadar'
 import { CountryDimensionTable } from '@/components/views/CountryDimensionTable'
 import { EvidenceList } from '@/components/views/EvidenceList'
@@ -96,7 +96,11 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
 
         return (
           <div key={d} id={d} className="scroll-mt-20">
-            <Section title={DIMENSION_LABELS[d]} hint={DIMENSION_QUESTIONS[d]}>
+            <Section
+              title={DIMENSION_LABELS[d]}
+              hint={DIMENSION_QUESTIONS[d]}
+              icon={<Icon name={DIMENSION_ICON[d]} size={22} />}
+            >
               {dim.momentum.length > 0 ? (
                 <div className="mb-6 space-y-3">
                   {dim.momentum.map((m) => (

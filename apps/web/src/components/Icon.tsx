@@ -35,6 +35,19 @@ export type IconName =
   | 'trending-up'
   | 'triangle-alert'
   | 'users'
+  | 'book-open'
+  | 'flag'
+  | 'flask-conical'
+  | 'hammer'
+  | 'hand'
+  | 'handshake'
+  | 'network'
+  | 'shuffle'
+  | 'signal'
+  | 'signal-high'
+  | 'signal-low'
+  | 'signal-medium'
+  | 'telescope'
 
 const PATHS: Record<IconName, string> = {
   'archive': `<rect width='20' height='5' x='2' y='3' rx='1' /> <path d='M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8' /> <path d='M10 12h4' />`,
@@ -60,6 +73,19 @@ const PATHS: Record<IconName, string> = {
   'trending-up': `<path d='M16 7h6v6' /> <path d='m22 7-8.5 8.5-5-5L2 17' />`,
   'triangle-alert': `<path d='m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3' /> <path d='M12 9v4' /> <path d='M12 17h.01' />`,
   'users': `<path d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2' /> <path d='M16 3.128a4 4 0 0 1 0 7.744' /> <path d='M22 21v-2a4 4 0 0 0-3-3.87' /> <circle cx='9' cy='7' r='4' />`,
+  'book-open': `<path d='M12 5v16' /> <path d='M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z' />`,
+  'flag': `<path d='M4 22V4a1 1 0 0 1 .4-.8A6 6 0 0 1 8 2c3 0 5 2 7.333 2q2 0 3.067-.8A1 1 0 0 1 20 4v10a1 1 0 0 1-.4.8A6 6 0 0 1 16 16c-3 0-5-2-8-2a6 6 0 0 0-4 1.528' />`,
+  'flask-conical': `<path d='M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2' /> <path d='M6.453 15h11.094' /> <path d='M8.5 2h7' />`,
+  'hammer': `<path d='m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9' /> <path d='m18 15 4-4' /> <path d='m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5' />`,
+  'hand': `<path d='M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2' /> <path d='M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2' /> <path d='M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8' /> <path d='M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15' />`,
+  'handshake': `<path d='m11 17 2 2a1 1 0 1 0 3-3' /> <path d='m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4' /> <path d='m21 3 1 11h-2' /> <path d='M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3' /> <path d='M3 4h8' />`,
+  'network': `<rect x='16' y='16' width='6' height='6' rx='1' /> <rect x='2' y='16' width='6' height='6' rx='1' /> <rect x='9' y='2' width='6' height='6' rx='1' /> <path d='M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3' /> <path d='M12 12V8' />`,
+  'shuffle': `<path d='m18 14 4 4-4 4' /> <path d='m18 2 4 4-4 4' /> <path d='M2 18h1.973a4 4 0 0 0 3.3-1.7l5.454-8.6a4 4 0 0 1 3.3-1.7H22' /> <path d='M2 6h1.972a4 4 0 0 1 3.6 2.2' /> <path d='M22 18h-6.041a4 4 0 0 1-3.3-1.8l-.359-.45' />`,
+  'signal': `<path d='M2 20h.01' /> <path d='M7 20v-4' /> <path d='M12 20v-8' /> <path d='M17 20V8' /> <path d='M22 4v16' />`,
+  'signal-high': `<path d='M2 20h.01' /> <path d='M7 20v-4' /> <path d='M12 20v-8' /> <path d='M17 20V8' />`,
+  'signal-low': `<path d='M2 20h.01' /> <path d='M7 20v-4' />`,
+  'signal-medium': `<path d='M2 20h.01' /> <path d='M7 20v-4' /> <path d='M12 20v-8' />`,
+  'telescope': `<path d='m10.065 12.493-6.18 1.318a.934.934 0 0 1-1.108-.702l-.537-2.15a1.07 1.07 0 0 1 .691-1.265l13.504-4.44' /> <path d='m13.56 11.747 4.332-.924' /> <path d='m16 21-3.105-6.21' /> <path d='M16.485 5.94a2 2 0 0 1 1.455-2.425l1.09-.272a1 1 0 0 1 1.212.727l1.515 6.06a1 1 0 0 1-.727 1.213l-1.09.272a2 2 0 0 1-2.425-1.455z' /> <path d='m6.158 8.633 1.114 4.456' /> <path d='m8 21 3.105-6.21' /> <circle cx='12' cy='13' r='2' />`,
 }
 
 export function Icon({
@@ -123,5 +149,24 @@ export const GROUP_ICON = {
   'What is missing': 'search-x',
   'How things change over time': 'chart-line',
   'What sits beside the score': 'layers',
+} as const satisfies Record<string, IconName>
+
+export const DIMENSION_ICON = {
+  anticipation: 'telescope',
+  agency: 'hand',
+  coordination: 'network',
+  trust: 'handshake',
+  learning: 'book-open',
+  experimentation: 'flask-conical',
+  adaptability: 'shuffle',
+  building: 'hammer',
+  shared_purpose: 'flag',
+} as const satisfies Record<string, IconName>
+
+export const CONFIDENCE_ICON = {
+  very_thin: 'signal-low',
+  thin: 'signal-medium',
+  usable: 'signal-high',
+  good: 'signal',
 } as const satisfies Record<string, IconName>
 

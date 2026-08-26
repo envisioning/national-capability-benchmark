@@ -1,5 +1,5 @@
 import type { MeasurementClass } from '@ncb/core'
-import { CLASS_ICON, Icon } from '@/components/Icon'
+import { CLASS_ICON, CONFIDENCE_ICON, Icon } from '@/components/Icon'
 import {
   CONFIDENCE_BANDS,
   MEASUREMENT_CLASS_LABELS,
@@ -169,6 +169,7 @@ export function ConfidenceBar({ value }: { value: number }) {
       className="inline-flex items-center gap-2"
       title={`${band.label}: ${band.meaning}`}
     >
+      <Icon name={CONFIDENCE_ICON[band.id]} size={13} className="text-[var(--muted)]" />
       <span className="h-1.5 w-16 rounded-full bg-[var(--rule-soft)]">
         <span
           className="block h-1.5 rounded-full"
@@ -194,6 +195,7 @@ export function ConfidenceLegend() {
           : `${b.min.toFixed(2)} and above`
         return (
           <li key={b.id} className="inline-flex items-center gap-2" title={b.meaning}>
+            <Icon name={CONFIDENCE_ICON[b.id]} size={13} className="text-[var(--muted)]" />
             <span
               className="inline-block h-1.5 w-6 rounded-full"
               style={{ background: `var(--band-${b.id})` }}
