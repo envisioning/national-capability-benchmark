@@ -1,8 +1,8 @@
 {
-  "runId": "2026-08-26T12-37-55-621790Z-in-session",
-  "generatedAt": "2026-08-26T12:37:55.621790Z",
+  "runId": "2026-08-26T13-30-00-584125Z-in-session",
+  "generatedAt": "2026-08-26T13:30:00.584125Z",
   "provenance": "in_session",
-  "note": "Scored by Claude Opus 5 inside a working session on 2026-08-26, one panelist, one round. Every cell carries a rationale and a self-confidence. This is a single considered judgement against the evidence briefs, not a panel: the median is one opinion and the IQR is zero. It exists to expose where the indicator model misreads a country, and it should be replaced by a real multi-vendor gateway run before anything is published.",
+  "note": "Scored by Claude Opus 5 inside a working session, one panelist, one round. The ten reference countries were scored on 2026-08-26 and the six Latin American countries were added the same day, against the same fixed normalization frame, so the earlier estimates did not need re-anchoring. Every cell carries a rationale and a self-confidence. This is a single considered judgment against the evidence briefs, not a panel: the median is one opinion and the IQR is zero. It exists to expose where the indicator model misreads a country, and it should be replaced by a real multi-vendor gateway run before anything is published.",
   "panel": [
     {
       "panelist": "in_session_analyst@claude-opus-5",
@@ -1286,6 +1286,774 @@
       "score": 35,
       "selfConfidence": 0.5,
       "rationale": "Strong constitutional narrative and high volunteering, against deep material fragmentation. I mark down from 46.5.",
+      "missingEvidence": [
+        "Political polarisation (V-Dem)",
+        "Volunteering rate",
+        "Civic participation (WVS)"
+      ]
+    },
+    {
+      "iso3": "MEX",
+      "dimension": "anticipation",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 25,
+      "selfConfidence": 0.5,
+      "rationale": "A real research base in UNAM and the national institutes, sitting on R&D intensity near the bottom of any OECD member. Capacity exists in pockets and is not funded to act.",
+      "missingEvidence": [
+        "Mandate and continuity of a national foresight unit (no dataset)",
+        "Basic research share of GERD (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "MEX",
+      "dimension": "agency",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 35,
+      "selfConfidence": 0.5,
+      "rationale": "Formal registration is slow and the compliance burden is heavy, and informal enterprise is enormous. The indicator score of 27.4 counts only the half that registers.",
+      "missingEvidence": [
+        "Adult digital skills (ITU)",
+        "Perceived control over life (WVS wave 7)"
+      ]
+    },
+    {
+      "iso3": "MEX",
+      "dimension": "coordination",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 25,
+      "selfConfidence": 0.45,
+      "rationale": "Federal and state coordination is weak and security fragmentation cuts across it. Against that, Mexico reorganised an entire industrial base around USMCA and nearshoring, which is coordination at scale.",
+      "missingEvidence": [
+        "Civil society strength (V-Dem core CSO index)",
+        "Delivery record of projects run across several agencies"
+      ]
+    },
+    {
+      "iso3": "MEX",
+      "dimension": "trust",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 20,
+      "selfConfidence": 0.5,
+      "rationale": "Impunity for reported crime runs above 90% and organised crime has captured parts of the state. I mark down from 26.7.",
+      "missingEvidence": [
+        "Generalised interpersonal trust (WVS A165)",
+        "Trust in national government (OECD Trust Survey)"
+      ]
+    },
+    {
+      "iso3": "MEX",
+      "dimension": "learning",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 30,
+      "selfConfidence": 0.5,
+      "rationale": "Enrolment is high and measured outcomes are weak. The indicator score of 47.1 is the enrolment trap the spec warns about.",
+      "missingEvidence": [
+        "Adult learning participation (Eurostat / OECD PIAAC)",
+        "Field-normalised citation impact (OpenAlex)"
+      ]
+    },
+    {
+      "iso3": "MEX",
+      "dimension": "experimentation",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 25,
+      "selfConfidence": 0.45,
+      "rationale": "Patent counts miss it. Kavak, Bitso and a deep manufacturing process-innovation culture are real. The indicator score of 7.1 is a measurement failure.",
+      "missingEvidence": [
+        "Early-stage entrepreneurial activity (GEM TEA)",
+        "Venture capital as a share of GDP",
+        "Register of live regulatory sandboxes"
+      ]
+    },
+    {
+      "iso3": "MEX",
+      "dimension": "adaptability",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 50,
+      "selfConfidence": 0.5,
+      "rationale": "The nearshoring reallocation since 2020 is demonstrated adaptation at industrial scale. Informality absorbs the shock elsewhere, at a cost to the people carrying it.",
+      "missingEvidence": [
+        "Long-term unemployment share (ILOSTAT)",
+        "Export concentration index (UNCTAD)"
+      ]
+    },
+    {
+      "iso3": "MEX",
+      "dimension": "building",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 40,
+      "selfConfidence": 0.55,
+      "rationale": "Mexico builds cars, aerospace components and electronics at volume and to export quality. The indicator score of 23.4 badly understates it.",
+      "missingEvidence": [
+        "Cost and schedule overrun on major infrastructure projects",
+        "Firm scale-up rate (OECD DynEmp)"
+      ]
+    },
+    {
+      "iso3": "MEX",
+      "dimension": "shared_purpose",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 30,
+      "selfConfidence": 0.4,
+      "rationale": "Strong national identity against sharp polarisation and territorial fragmentation of authority.",
+      "missingEvidence": [
+        "Political polarisation (V-Dem)",
+        "Volunteering rate",
+        "Civic participation (WVS)"
+      ]
+    },
+    {
+      "iso3": "ARG",
+      "dimension": "anticipation",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 30,
+      "selfConfidence": 0.5,
+      "rationale": "CONICET and INVAP are genuine anticipatory institutions: Argentina designs and exports nuclear reactors and builds its own satellites. Funding is chronically unstable.",
+      "missingEvidence": [
+        "Mandate and continuity of a national foresight unit (no dataset)",
+        "Basic research share of GERD (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "ARG",
+      "dimension": "agency",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 25,
+      "selfConfidence": 0.5,
+      "rationale": "Capital controls, inflation and rule changes make the activation energy for any plan unusually high. The indicator score is about right.",
+      "missingEvidence": [
+        "Adult digital skills (ITU)",
+        "Perceived control over life (WVS wave 7)"
+      ]
+    },
+    {
+      "iso3": "ARG",
+      "dimension": "coordination",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 20,
+      "selfConfidence": 0.5,
+      "rationale": "Policy reverses with each government, so coordination that survives a transition is rare. I mark down from 24.",
+      "missingEvidence": [
+        "Civil society strength (V-Dem core CSO index)",
+        "Delivery record of projects run across several agencies"
+      ]
+    },
+    {
+      "iso3": "ARG",
+      "dimension": "trust",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 15,
+      "selfConfidence": 0.45,
+      "rationale": "Institutional trust is very low and inflation has taught two generations that contracts do not hold. Associational life is dense, which is why I do not leave it at 6.4.",
+      "missingEvidence": [
+        "Generalised interpersonal trust (WVS A165)",
+        "Trust in national government (OECD Trust Survey)"
+      ]
+    },
+    {
+      "iso3": "ARG",
+      "dimension": "learning",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 55,
+      "selfConfidence": 0.5,
+      "rationale": "A strong university tradition and near-universal literacy, against two decades of declining measured outcomes. I mark down from 66.4.",
+      "missingEvidence": [
+        "Adult learning participation (Eurostat / OECD PIAAC)",
+        "Field-normalised citation impact (OpenAlex)"
+      ]
+    },
+    {
+      "iso3": "ARG",
+      "dimension": "experimentation",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 35,
+      "selfConfidence": 0.5,
+      "rationale": "Argentina has produced more technology firms of scale per head than any country in the region: MercadoLibre, Globant, Despegar. The indicator score of 11.2 says the opposite and is wrong.",
+      "missingEvidence": [
+        "Early-stage entrepreneurial activity (GEM TEA)",
+        "Venture capital as a share of GDP",
+        "Register of live regulatory sandboxes"
+      ]
+    },
+    {
+      "iso3": "ARG",
+      "dimension": "adaptability",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 50,
+      "selfConfidence": 0.45,
+      "rationale": "Argentines reallocate constantly because the macroeconomy forces it. That is demonstrated adaptability even though nobody chose it.",
+      "missingEvidence": [
+        "Long-term unemployment share (ILOSTAT)",
+        "Export concentration index (UNCTAD)"
+      ]
+    },
+    {
+      "iso3": "ARG",
+      "dimension": "building",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 30,
+      "selfConfidence": 0.5,
+      "rationale": "INVAP builds reactors and satellites and the agro-industrial complex is world class. Public infrastructure delivery is poor.",
+      "missingEvidence": [
+        "Cost and schedule overrun on major infrastructure projects",
+        "Firm scale-up rate (OECD DynEmp)"
+      ]
+    },
+    {
+      "iso3": "ARG",
+      "dimension": "shared_purpose",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 25,
+      "selfConfidence": 0.45,
+      "rationale": "The peronist and anti-peronist divide is durable, inherited and structural. It organises politics more than any policy question.",
+      "missingEvidence": [
+        "Political polarisation (V-Dem)",
+        "Volunteering rate",
+        "Civic participation (WVS)"
+      ]
+    },
+    {
+      "iso3": "COL",
+      "dimension": "anticipation",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 18,
+      "selfConfidence": 0.45,
+      "rationale": "A modest research base concentrated in a few universities, with very low R&D intensity.",
+      "missingEvidence": [
+        "Mandate and continuity of a national foresight unit (no dataset)",
+        "Basic research share of GERD (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "COL",
+      "dimension": "agency",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 30,
+      "selfConfidence": 0.45,
+      "rationale": "High informality, and real entrepreneurial density in Bogota and Medellin. Access to finance is the binding constraint.",
+      "missingEvidence": [
+        "Adult digital skills (ITU)",
+        "Perceived control over life (WVS wave 7)"
+      ]
+    },
+    {
+      "iso3": "COL",
+      "dimension": "coordination",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 18,
+      "selfConfidence": 0.45,
+      "rationale": "The indicator score of 4.3 is too harsh. Colombia ran a peace process to signature, and its macroeconomic institutions and central bank are respected. Territorial control remains incomplete.",
+      "missingEvidence": [
+        "Civil society strength (V-Dem core CSO index)",
+        "Delivery record of projects run across several agencies"
+      ]
+    },
+    {
+      "iso3": "COL",
+      "dimension": "trust",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 15,
+      "selfConfidence": 0.45,
+      "rationale": "Low on both legs, though 1.6 understates a country with credible elections and functioning courts.",
+      "missingEvidence": [
+        "Generalised interpersonal trust (WVS A165)",
+        "Trust in national government (OECD Trust Survey)"
+      ]
+    },
+    {
+      "iso3": "COL",
+      "dimension": "learning",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 32,
+      "selfConfidence": 0.5,
+      "rationale": "Coverage expanded fast and quality did not follow. Outcomes are among the more unequal in the region.",
+      "missingEvidence": [
+        "Adult learning participation (Eurostat / OECD PIAAC)",
+        "Field-normalised citation impact (OpenAlex)"
+      ]
+    },
+    {
+      "iso3": "COL",
+      "dimension": "experimentation",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 22,
+      "selfConfidence": 0.45,
+      "rationale": "Rappi is a genuine regional scale-up and Medellin has built a real innovation district. The indicator score of 3 is not a finding.",
+      "missingEvidence": [
+        "Early-stage entrepreneurial activity (GEM TEA)",
+        "Venture capital as a share of GDP",
+        "Register of live regulatory sandboxes"
+      ]
+    },
+    {
+      "iso3": "COL",
+      "dimension": "adaptability",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 48,
+      "selfConfidence": 0.45,
+      "rationale": "Colombia absorbed close to three million Venezuelan migrants and regularised most of them. That is the clearest demonstrated adaptation in this group.",
+      "missingEvidence": [
+        "Long-term unemployment share (ILOSTAT)",
+        "Export concentration index (UNCTAD)"
+      ]
+    },
+    {
+      "iso3": "COL",
+      "dimension": "building",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 22,
+      "selfConfidence": 0.45,
+      "rationale": "The 4G road programme is real and its delivery record is compromised, most visibly by the Ruta del Sol collapse.",
+      "missingEvidence": [
+        "Cost and schedule overrun on major infrastructure projects",
+        "Firm scale-up rate (OECD DynEmp)"
+      ]
+    },
+    {
+      "iso3": "COL",
+      "dimension": "shared_purpose",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 25,
+      "selfConfidence": 0.4,
+      "rationale": "Post-conflict divisions run deep. The peace process itself showed a capacity for collective action that the polarisation since has obscured.",
+      "missingEvidence": [
+        "Political polarisation (V-Dem)",
+        "Volunteering rate",
+        "Civic participation (WVS)"
+      ]
+    },
+    {
+      "iso3": "PER",
+      "dimension": "anticipation",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 14,
+      "selfConfidence": 0.5,
+      "rationale": "Among the lowest research intensities in the set, with a thin institutional base to build on.",
+      "missingEvidence": [
+        "Mandate and continuity of a national foresight unit (no dataset)",
+        "Basic research share of GERD (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "PER",
+      "dimension": "agency",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 32,
+      "selfConfidence": 0.5,
+      "rationale": "Peru has one of the highest rates of new business activity measured anywhere, most of it necessity-driven and informal. Registration data sees little of it.",
+      "missingEvidence": [
+        "Adult digital skills (ITU)",
+        "Perceived control over life (WVS wave 7)"
+      ]
+    },
+    {
+      "iso3": "PER",
+      "dimension": "coordination",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 12,
+      "selfConfidence": 0.5,
+      "rationale": "Six presidents in five years and permanent executive and legislative deadlock. Coordination across institutions is the specific thing that is failing.",
+      "missingEvidence": [
+        "Civil society strength (V-Dem core CSO index)",
+        "Delivery record of projects run across several agencies"
+      ]
+    },
+    {
+      "iso3": "PER",
+      "dimension": "trust",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 14,
+      "selfConfidence": 0.5,
+      "rationale": "Trust in Congress and the presidency is among the lowest recorded anywhere. I mark down from 21.6.",
+      "missingEvidence": [
+        "Generalised interpersonal trust (WVS A165)",
+        "Trust in national government (OECD Trust Survey)"
+      ]
+    },
+    {
+      "iso3": "PER",
+      "dimension": "learning",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 28,
+      "selfConfidence": 0.5,
+      "rationale": "Weak outcomes from a very low base, though Peru improved its PISA results faster than almost any country in the 2010s. The level is low and the derivative was good.",
+      "missingEvidence": [
+        "Adult learning participation (Eurostat / OECD PIAAC)",
+        "Field-normalised citation impact (OpenAlex)"
+      ]
+    },
+    {
+      "iso3": "PER",
+      "dimension": "experimentation",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 18,
+      "selfConfidence": 0.4,
+      "rationale": "Informal experimentation is constant. Formal venture capital and research commercialisation are close to absent.",
+      "missingEvidence": [
+        "Early-stage entrepreneurial activity (GEM TEA)",
+        "Venture capital as a share of GDP",
+        "Register of live regulatory sandboxes"
+      ]
+    },
+    {
+      "iso3": "PER",
+      "dimension": "adaptability",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 45,
+      "selfConfidence": 0.45,
+      "rationale": "The central bank held macroeconomic stability through a decade of political chaos, which is a real institutional achievement. Against that, Peru recorded the world\\u2019s highest COVID mortality rate, which is an adaptability failure of the first order.",
+      "missingEvidence": [
+        "Long-term unemployment share (ILOSTAT)",
+        "Export concentration index (UNCTAD)"
+      ]
+    },
+    {
+      "iso3": "PER",
+      "dimension": "building",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 18,
+      "selfConfidence": 0.45,
+      "rationale": "Mining infrastructure gets delivered. Public works have been repeatedly captured, and the unfinished hospitals are the visible result.",
+      "missingEvidence": [
+        "Cost and schedule overrun on major infrastructure projects",
+        "Firm scale-up rate (OECD DynEmp)"
+      ]
+    },
+    {
+      "iso3": "PER",
+      "dimension": "shared_purpose",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 20,
+      "selfConfidence": 0.4,
+      "rationale": "No stable political settlement, and a Lima and interior divide that no recent government has bridged.",
+      "missingEvidence": [
+        "Political polarisation (V-Dem)",
+        "Volunteering rate",
+        "Civic participation (WVS)"
+      ]
+    },
+    {
+      "iso3": "URY",
+      "dimension": "anticipation",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 28,
+      "selfConfidence": 0.5,
+      "rationale": "A small research base that punches above its size, and a state that has repeatedly acted on long-horizon analysis rather than filing it.",
+      "missingEvidence": [
+        "Mandate and continuity of a national foresight unit (no dataset)",
+        "Basic research share of GERD (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "URY",
+      "dimension": "agency",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 45,
+      "selfConfidence": 0.5,
+      "rationale": "Straightforward to operate, good financial inclusion, strong connectivity. The ceiling is market size, not friction.",
+      "missingEvidence": [
+        "Adult digital skills (ITU)",
+        "Perceived control over life (WVS wave 7)"
+      ]
+    },
+    {
+      "iso3": "URY",
+      "dimension": "coordination",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 45,
+      "selfConfidence": 0.5,
+      "rationale": "The indicator score of 18.8 is the worst single error in this run. Uruguay delivered Plan Ceibal, a national digital government stack, and a regulated cannabis market, each requiring several institutions to move together and hold.",
+      "missingEvidence": [
+        "Civil society strength (V-Dem core CSO index)",
+        "Delivery record of projects run across several agencies"
+      ]
+    },
+    {
+      "iso3": "URY",
+      "dimension": "trust",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 65,
+      "selfConfidence": 0.6,
+      "rationale": "The highest institutional trust and the lowest corruption in Latin America, by a clear margin and over decades.",
+      "missingEvidence": [
+        "Generalised interpersonal trust (WVS A165)",
+        "Trust in national government (OECD Trust Survey)"
+      ]
+    },
+    {
+      "iso3": "URY",
+      "dimension": "learning",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 50,
+      "selfConfidence": 0.5,
+      "rationale": "Plan Ceibal put a connected laptop with every child and the measured outcomes are middling. A good case for the gap between input and learning.",
+      "missingEvidence": [
+        "Adult learning participation (Eurostat / OECD PIAAC)",
+        "Field-normalised citation impact (OpenAlex)"
+      ]
+    },
+    {
+      "iso3": "URY",
+      "dimension": "experimentation",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 40,
+      "selfConfidence": 0.5,
+      "rationale": "Uruguay legalised and regulated cannabis nationally before anyone else, and runs a working fintech sandbox. This is a state that runs deliberate experiments, which is exactly what the dimension asks about.",
+      "missingEvidence": [
+        "Early-stage entrepreneurial activity (GEM TEA)",
+        "Venture capital as a share of GDP",
+        "Register of live regulatory sandboxes"
+      ]
+    },
+    {
+      "iso3": "URY",
+      "dimension": "adaptability",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 55,
+      "selfConfidence": 0.5,
+      "rationale": "Small enough to change direction and narrow enough that a single export shock still hurts.",
+      "missingEvidence": [
+        "Long-term unemployment share (ILOSTAT)",
+        "Export concentration index (UNCTAD)"
+      ]
+    },
+    {
+      "iso3": "URY",
+      "dimension": "building",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 30,
+      "selfConfidence": 0.5,
+      "rationale": "Delivered the UPM mills and the digital state. The scale is small, which the manufacturing-weighted indicators punish.",
+      "missingEvidence": [
+        "Cost and schedule overrun on major infrastructure projects",
+        "Firm scale-up rate (OECD DynEmp)"
+      ]
+    },
+    {
+      "iso3": "URY",
+      "dimension": "shared_purpose",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 68,
+      "selfConfidence": 0.55,
+      "rationale": "Durable democratic consensus, high electoral participation, low polarisation. The strongest score in this group and one of the strongest in the whole set.",
+      "missingEvidence": [
+        "Political polarisation (V-Dem)",
+        "Volunteering rate",
+        "Civic participation (WVS)"
+      ]
+    },
+    {
+      "iso3": "CRI",
+      "dimension": "anticipation",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 28,
+      "selfConfidence": 0.5,
+      "rationale": "Costa Rica invented payments for ecosystem services and reversed its own deforestation. That is anticipation acted on, decades before it was fashionable.",
+      "missingEvidence": [
+        "Mandate and continuity of a national foresight unit (no dataset)",
+        "Basic research share of GERD (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "CRI",
+      "dimension": "agency",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 35,
+      "selfConfidence": 0.5,
+      "rationale": "Good education and connectivity against a heavy bureaucracy. Starting something is easy; scaling it is not.",
+      "missingEvidence": [
+        "Adult digital skills (ITU)",
+        "Perceived control over life (WVS wave 7)"
+      ]
+    },
+    {
+      "iso3": "CRI",
+      "dimension": "coordination",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 45,
+      "selfConfidence": 0.5,
+      "rationale": "Abolishing the army in 1949 and redirecting the money into health and education is the clearest case in this set of a national choice that held across generations.",
+      "missingEvidence": [
+        "Civil society strength (V-Dem core CSO index)",
+        "Delivery record of projects run across several agencies"
+      ]
+    },
+    {
+      "iso3": "CRI",
+      "dimension": "trust",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 50,
+      "selfConfidence": 0.5,
+      "rationale": "The most stable democracy in Central America and the highest institutional trust in it. I mark up from 38.7.",
+      "missingEvidence": [
+        "Generalised interpersonal trust (WVS A165)",
+        "Trust in national government (OECD Trust Survey)"
+      ]
+    },
+    {
+      "iso3": "CRI",
+      "dimension": "learning",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 48,
+      "selfConfidence": 0.5,
+      "rationale": "A strong tradition with a real recent decline, and secondary dropout is the specific problem.",
+      "missingEvidence": [
+        "Adult learning participation (Eurostat / OECD PIAAC)",
+        "Field-normalised citation impact (OpenAlex)"
+      ]
+    },
+    {
+      "iso3": "CRI",
+      "dimension": "experimentation",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 30,
+      "selfConfidence": 0.45,
+      "rationale": "Attracted Intel, then rebuilt around medical devices when Intel left. Running that twice is evidence of a state that can try things.",
+      "missingEvidence": [
+        "Early-stage entrepreneurial activity (GEM TEA)",
+        "Venture capital as a share of GDP",
+        "Register of live regulatory sandboxes"
+      ]
+    },
+    {
+      "iso3": "CRI",
+      "dimension": "adaptability",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 55,
+      "selfConfidence": 0.5,
+      "rationale": "The recovery after Intel\\u2019s 2014 departure, from assembly into medical devices and services, is a textbook national adaptation.",
+      "missingEvidence": [
+        "Long-term unemployment share (ILOSTAT)",
+        "Export concentration index (UNCTAD)"
+      ]
+    },
+    {
+      "iso3": "CRI",
+      "dimension": "building",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 35,
+      "selfConfidence": 0.5,
+      "rationale": "Medical device manufacturing here is genuinely sophisticated. Physical infrastructure is the weak leg and everybody who drives knows it.",
+      "missingEvidence": [
+        "Cost and schedule overrun on major infrastructure projects",
+        "Firm scale-up rate (OECD DynEmp)"
+      ]
+    },
+    {
+      "iso3": "CRI",
+      "dimension": "shared_purpose",
+      "round": 1,
+      "panelist": "in_session_analyst@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 55,
+      "selfConfidence": 0.45,
+      "rationale": "A long democratic consensus, now fragmenting as the party system does. Still high for the region.",
       "missingEvidence": [
         "Political polarisation (V-Dem)",
         "Volunteering rate",

@@ -1,4 +1,10 @@
-import { DIMENSIONS, DIMENSION_LABELS, INDICATORS_BY_ID, isEvidential } from '../model/index.js'
+import {
+  COUNTRY_FRAMES,
+  DIMENSIONS,
+  DIMENSION_LABELS,
+  INDICATORS_BY_ID,
+  isEvidential,
+} from '../model/index.js'
 import { CONFIDENCE_BANDS, confidenceBand } from './confidence.js'
 import type { CountryResult, DelphiRunFile, Dimension } from '../model/index.js'
 import type { Diagnostics } from './diagnostics.js'
@@ -21,7 +27,17 @@ export function buildReport(
 
   out.push('# National Capability Benchmark, prototype v0')
   out.push('')
-  out.push(`Generated ${diag.generatedAt}. Ten countries, nine dimensions, equal weights within each dimension, no headline ranking.`)
+  out.push(
+    `Generated ${diag.generatedAt}. ${countries.length} countries, nine dimensions, equal weights within each dimension, no headline ranking.`,
+  )
+  out.push('')
+  const extended = countries.filter((c) => COUNTRY_FRAMES[c.iso3] === 'extended')
+  if (extended.length > 0) {
+    out.push(
+      `Scores run against a frame fixed by the ${countries.length - extended.length} reference countries. ${extended.length} countries were added after that frame was set and are marked below. Adding them did not move any existing score.`,
+    )
+    out.push('')
+  }
   out.push('')
 
   out.push('## Each country gets nine scores and no ranking')
@@ -29,7 +45,10 @@ export function buildReport(
   out.push(
     table(
       ['Country', ...DIMENSIONS.map((d) => DIMENSION_LABELS[d])],
-      countries.map((c) => [c.country, ...DIMENSIONS.map((d) => c.dimensions[d]?.score ?? null)]),
+      countries.map((c) => [
+        c.country + (COUNTRY_FRAMES[c.iso3] === 'extended' ? ' (added)' : ''),
+        ...DIMENSIONS.map((d) => c.dimensions[d]?.score ?? null),
+      ]),
     ),
   )
   out.push('')
@@ -193,7 +212,9 @@ export function buildReport(
     )
   }
   out.push('')
-  out.push('Ten countries give eight degrees of freedom, so treat every correlation here as a hint, not a result.')
+  out.push(
+    `${countries.length} countries give ${countries.length - 2} degrees of freedom, so treat every correlation here as a hint rather than a result.`,
+  )
   out.push('')
 
   out.push('## Switzerland, Singapore and Estonia are compared directly')
@@ -361,7 +382,7 @@ export function buildReport(
 
   out.push('## These assumptions can be challenged')
   out.push('')
-  out.push('- Normalization is relative to these ten countries. Adding an eleventh country changes every score.')
+  out.push('- The 0 to 100 scale is fixed by the ten reference countries. Countries added later are scored against that frame and never move it. See docs/DECISIONS.md D16.')
   out.push('- Indicators inside a dimension carry equal weight. No expert weighting has been applied.')
   out.push('- Only the most recent observation per indicator is used. There is no trend line and nothing is smoothed.')
   out.push('- Winsorizing uses Tukey fences at three interquartile ranges, so it clips extreme outliers only.')

@@ -1,6 +1,7 @@
 import {
   COUNTRIES,
   COUNTRY_ISO3,
+  REFERENCE_ISO3,
   DIMENSIONS,
   INDICATORS,
   SOURCE_TIERS,
@@ -16,7 +17,7 @@ import type {
   Observation,
   SourceTier,
 } from '../model/index.js'
-import { applyTransform, normalizeToScale, winsorize } from './normalize.js'
+import { applyTransform, buildFrame, scoreAgainstFrame } from './normalize.js'
 import { iqr, mean, median, round } from './stats.js'
 
 export type Cell = {
@@ -28,6 +29,8 @@ export type Cell = {
   year: number
   sourceTier: SourceTier
   clipped: boolean
+  /** The raw value sat outside the reference frame and the score was clamped. */
+  outOfFrame: boolean
 }
 
 /** indicatorId -> iso3 -> cell. The auditable middle layer between data and scores. */
@@ -88,27 +91,30 @@ export function buildMatrix(observations: Observation[], opts: ScoreOptions): Ma
       if (transformed === null || !Number.isFinite(transformed)) continue
       rows.push({ iso3, obs, transformed })
     }
-    if (rows.length < 2) continue
 
-    const w = winsorize(rows.map((r) => r.transformed), opts.winsorK ?? 3)
-    const normalized = normalizeToScale(
-      w.map((x) => x.value),
-      def.direction,
+    /* The frame comes from the reference countries only, so adding an extended
+     * country never moves an existing score. */
+    const frame = buildFrame(
+      rows.filter((r) => REFERENCE_ISO3.includes(r.iso3)).map((r) => r.transformed),
+      opts.winsorK ?? 3,
     )
+    if (!frame) continue
 
     const inner = new Map<string, Cell>()
-    rows.forEach((r, i) => {
+    for (const r of rows) {
+      const scored = scoreAgainstFrame(r.transformed, frame, def.direction)
       inner.set(r.iso3, {
         indicatorId: def.id,
         iso3: r.iso3,
         raw: r.obs.value,
-        transformed: (w[i] as { value: number }).value,
-        normalized: normalized[i] as number,
+        transformed: scored.transformed,
+        normalized: scored.normalized,
         year: r.obs.year,
         sourceTier: r.obs.sourceTier,
-        clipped: (w[i] as { clipped: boolean }).clipped,
+        clipped: scored.winsorized,
+        outOfFrame: scored.outOfFrame,
       })
-    })
+    }
     matrix.set(def.id, inner)
   }
   return matrix
@@ -127,6 +133,7 @@ function indicatorRow(def: IndicatorDef, cell: Cell | undefined): IndicatorResul
     source: def.source.publisher + (def.source.series ? ` (${def.source.series})` : ''),
     sourceTier: cell ? cell.sourceTier : null,
     winsorized: cell ? cell.clipped : false,
+    outOfFrame: cell ? cell.outOfFrame : false,
     status,
   }
 }

@@ -20,8 +20,12 @@ resident patents and resident trademarks per head, which measure formalised,
 completed, defensible invention — close to the opposite of the many-cheap-
 experiments construct the dimension is supposed to capture.
 
-Four of the six largest panel-versus-indicator disagreements in the whole model
-are in this one dimension:
+Confirmed again when six Latin American countries were added: Experimentation
+was the single largest panel-versus-indicator departure for five of the six.
+Across all sixteen countries it is the worst-measured dimension by a distance.
+
+Four of the six largest disagreements in the original ten are in this one
+dimension:
 
 | Country | Indicators | Panel | Gap |
 | --- | ---: | ---: | ---: |
@@ -34,6 +38,11 @@ are in this one dimension:
 Korea's 100 is a filing artefact: Korean firms file defensively and at volume.
 The Netherlands' 9.2 is not a finding about Dutch innovation, it is the absence
 of GEM and venture-capital data.
+
+The Latin American additions make the same point with new cases. Uruguay scores
+10.3, having legalised and regulated a national cannabis market and run a fintech
+sandbox. Argentina scores 11.2, having produced more technology firms of scale
+per head than anywhere else in the region.
 
 **Fix.** Wire GEM early-stage entrepreneurial activity and a venture-capital
 series. Until then, treat Experimentation as unmeasured.
@@ -136,7 +145,9 @@ enrolment and weak outcomes score well; countries with exceptional measured
 outcomes do not get credit for them.
 
 The panel moved Brazil down 13 points and Korea, Estonia and Singapore up 20 to
-28 points each.
+28 points each. Adding Latin America made the direction unmistakable: Peru fell
+19 points and Mexico 17, both countries where enrolment rose fast and measured
+outcomes did not follow.
 
 **Fix.** A learning-outcomes series (PISA or PIAAC) would resolve most of this.
 It is a gap because coverage across these ten countries is uneven, not because
@@ -144,14 +155,58 @@ the data does not exist.
 
 ---
 
-## A8 — Ten countries give eight degrees of freedom
+## A8 — The country set is small, so every correlation is a hint
 
 **Severity: structural.**
 
-Every correlation in `diagnostics.json` is computed on n = 10. A correlation of
-0.9 on ten points is a hint, not a result. The redundancy and wealth-proxy
+Every correlation in `diagnostics.json` is computed on the countries currently
+loaded, which is sixteen. That is better than the original ten and still small. A correlation of
+0.9 on sixteen points is a hint rather than a result. The redundancy and wealth-proxy
 findings above are strong enough to act on because they also have a mechanical
 explanation, not because the coefficient is large.
 
 Do not report any of these correlations as established until the country set is
 substantially larger.
+
+---
+
+## A9 — Coordination reads far too low for small, competent states
+
+**Severity: medium. Found when Latin America was added.**
+
+Uruguay scores 18.8 on Coordination. In the same decade it delivered Plan
+Ceibal, a national digital government stack, and the first nationally regulated
+cannabis market in the world, each of which required several institutions to
+move together and hold position for years.
+
+The dimension leans on the Worldwide Governance Indicators and the Logistics
+Performance Index. Both are surveys weighted toward how a country looks to
+international business, and a small country with a small port does not look like
+much through that lens whatever its state can actually organise.
+
+Costa Rica shows the same pattern more mildly at 33.7, against a national choice
+in 1949 to abolish the army and redirect the money into health and education
+that has now held for three generations.
+
+**Fix.** The same fix as A3. Coordination needs observable evidence of
+institutions acting together, not perception surveys of business conditions.
+Delivery records for cross-agency national programmes would be the direct
+measure, and they are a declared gap.
+
+---
+
+## A10 — The reference frame is ten countries wide, and they are not the world
+
+**Severity: structural. Introduced deliberately by D16.**
+
+Pinning the normalization frame to the ten reference countries is what makes the
+benchmark extensible: adding the six Latin American countries moved zero of the
+ninety existing cells. The cost is that 0 and 100 mean "weakest and strongest of
+those particular ten", and those ten were picked to expose contrasts, not to
+sample the world.
+
+Watch the `outOfFrame` flag. A country genuinely outside the reference range
+clamps, and clamping loses information. Colombia already sits near the floor on
+Trust and Coordination. If clamping becomes common, the frame is too narrow for
+the countries being asked about, and the answer is a deliberate, versioned
+rebase rather than quietly widening the scale.

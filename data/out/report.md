@@ -1,6 +1,9 @@
 # National Capability Benchmark, prototype v0
 
-Generated 2026-08-26T13:07:24.022Z. Ten countries, nine dimensions, equal weights within each dimension, no headline ranking.
+Generated 2026-08-26T13:30:12.276Z. 16 countries, nine dimensions, equal weights within each dimension, no headline ranking.
+
+Scores run against a frame fixed by the 10 reference countries. 6 countries were added after that frame was set and are marked below. Adding them did not move any existing score.
+
 
 ## Each country gets nine scores and no ranking
 
@@ -16,6 +19,12 @@ Generated 2026-08-26T13:07:24.022Z. Ten countries, nine dimensions, equal weight
 | India | 1.1 | 18.2 | 26.9 | 7.7 | 11.6 | 0 | 30.3 | 27.8 | 33.3 |
 | Chile | 29.7 | 55.2 | 31.7 | 58.1 | 57.9 | 21.9 | 56 | 17.1 | 53.5 |
 | South Africa | 20.7 | 23.9 | 15.9 | 27.1 | 25.1 | 1.4 | 15.2 | 15.7 | 46.5 |
+| Mexico (added) | 19.7 | 27.4 | 20.5 | 26.7 | 47.1 | 7.1 | 53.6 | 23.4 | 27.3 |
+| Argentina (added) | 16.8 | 24.9 | 24 | 6.4 | 66.4 | 11.2 | 42 | 13 | 28.7 |
+| Colombia (added) | 11 | 26.8 | 4.3 | 1.6 | 48.3 | 3 | 49.4 | 10.2 | 16.8 |
+| Peru (added) | 11.6 | 21.2 | 16.1 | 21.6 | 47.2 | 5.1 | 54.2 | 12.9 | 34.5 |
+| Uruguay (added) | 16.6 | 40.4 | 18.8 | 60.2 | 54.5 | 10.3 | 65 | 17.6 | 60.8 |
+| Costa Rica (added) | 21.8 | 23.4 | 33.7 | 38.7 | 56.3 | 13 | 49.8 | 26.2 | 42.5 |
 
 Confidence is reported separately and never folded into the score above. Each cell shows the number and the band it falls in.
 
@@ -31,8 +40,14 @@ Confidence is reported separately and never folded into the score above. Each ce
 | India | 0.58 usable | 0.61 usable | 0.46 usable | 0.41 thin | 0.55 usable | 0.18 very thin | 0.47 usable | 0.64 usable | 0.36 thin |
 | Chile | 0.62 usable | 0.60 usable | 0.46 usable | 0.41 thin | 0.54 usable | 0.18 very thin | 0.47 usable | 0.64 usable | 0.41 thin |
 | South Africa | 0.62 usable | 0.61 usable | 0.46 usable | 0.41 thin | 0.51 usable | 0.18 very thin | 0.47 usable | 0.64 usable | 0.39 thin |
+| Mexico | 0.67 good | 0.61 usable | 0.46 usable | 0.41 thin | 0.53 usable | 0.18 very thin | 0.47 usable | 0.64 usable | 0.41 thin |
+| Argentina | 0.64 usable | 0.61 usable | 0.46 usable | 0.41 thin | 0.40 thin | 0.18 very thin | 0.47 usable | 0.64 usable | 0.41 thin |
+| Colombia | 0.54 usable | 0.61 usable | 0.46 usable | 0.41 thin | 0.49 usable | 0.18 very thin | 0.47 usable | 0.64 usable | 0.41 thin |
+| Peru | 0.52 usable | 0.61 usable | 0.46 usable | 0.41 thin | 0.49 usable | 0.18 very thin | 0.47 usable | 0.64 usable | 0.37 thin |
+| Uruguay | 0.66 good | 0.61 usable | 0.46 usable | 0.41 thin | 0.54 usable | 0.14 very thin | 0.47 usable | 0.64 usable | 0.41 thin |
+| Costa Rica | 0.64 usable | 0.61 usable | 0.46 usable | 0.41 thin | 0.50 usable | 0.18 very thin | 0.47 usable | 0.64 usable | 0.41 thin |
 
-The strongest evidence base anywhere in this run scores 0.64, which is usable. No country and dimension pair reaches the good band.
+The strongest evidence base anywhere in this run scores 0.67, which is good. No country and dimension pair reaches the good band.
 
 Bands:
 
@@ -45,15 +60,15 @@ Bands:
 
 | Dimension | Indicators | Observed | Gaps | Mean coverage | Mean confidence | Subjectivity share |
 | --- | --- | --- | --- | --- | --- | --- |
-| Building / Execution | 8 | 6 | 2 | 0.75 | 0.64 | 0.375 |
-| Anticipation | 7 | 5 | 2 | 0.714 | 0.62 | 0.286 |
-| Agency | 8 | 6 | 2 | 0.738 | 0.583 | 0.25 |
-| Learning | 7 | 5 | 2 | 0.7 | 0.523 | 0.286 |
+| Building / Execution | 8 | 6 | 2 | 0.75 | 0.641 | 0.375 |
+| Anticipation | 7 | 5 | 2 | 0.705 | 0.617 | 0.286 |
+| Agency | 8 | 6 | 2 | 0.742 | 0.595 | 0.25 |
+| Learning | 7 | 5 | 2 | 0.696 | 0.51 | 0.286 |
 | Adaptability | 8 | 4 | 4 | 0.5 | 0.472 | 0.5 |
 | Coordination | 7 | 4 | 3 | 0.571 | 0.463 | 0.857 |
 | Trust | 6 | 3 | 3 | 0.5 | 0.409 | 0.833 |
-| Shared Purpose | 7 | 3 | 4 | 0.415 | 0.377 | 0.714 |
-| Experimentation | 8 | 2 | 6 | 0.238 | 0.169 | 0.75 |
+| Shared Purpose | 7 | 3 | 4 | 0.42 | 0.387 | 0.714 |
+| Experimentation | 8 | 2 | 6 | 0.242 | 0.17 | 0.75 |
 
 Best measured: Building / Execution, Anticipation, Agency. Weakest evidence base: Trust, Shared Purpose, Experimentation.
 
@@ -69,102 +84,93 @@ Best measured: Building / Execution, Anticipation, Agency. Weakest evidence base
 
 | Dimension | Pearson r vs log GDP per capita | Spearman | n |
 | --- | --- | --- | --- |
-| Anticipation | 0.941 | 0.903 | 10 |
-| Coordination | 0.932 | 0.927 | 10 |
-| Agency | 0.915 | 0.83 | 10 |
-| Trust | 0.915 | 0.879 | 10 |
-| Adaptability | 0.907 | 0.818 | 10 |
-| Learning | 0.842 | 0.697 | 10 |
-| Building / Execution | 0.8 | 0.794 | 10 |
-| Experimentation | 0.554 | 0.721 | 10 |
-| Shared Purpose | 0.198 | 0.115 | 10 |
+| Anticipation | 0.911 | 0.85 | 16 |
+| Coordination | 0.903 | 0.85 | 16 |
+| Agency | 0.887 | 0.885 | 16 |
+| Trust | 0.875 | 0.874 | 16 |
+| Adaptability | 0.874 | 0.882 | 16 |
+| Building / Execution | 0.815 | 0.724 | 16 |
+| Learning | 0.79 | 0.824 | 16 |
+| Experimentation | 0.624 | 0.829 | 16 |
+| Shared Purpose | 0.344 | 0.406 | 16 |
 
 ## Every indicator is checked the same way
 
 | Indicator | Dimension | Class | r vs log GDP pc | Registry prior |
 | --- | --- | --- | --- | --- |
-| Regulatory quality | Coordination | P | 0.942 | 0.6 |
-| Output per worker | Building / Execution | O | 0.936 | 0.9 |
-| Human Capital Index | Learning | C | 0.921 | 0.5 |
-| Government effectiveness | Coordination | P | 0.915 | 0.6 |
-| Scientific articles | Anticipation | O | 0.9 | 0.4 |
-| Control of corruption | Trust | P | 0.883 | 0.55 |
-| Individuals using the internet | Agency | I | 0.866 | 0.55 |
-| Researchers in R&D | Anticipation | I | 0.863 | 0.5 |
-| Secure internet servers | Anticipation | I | 0.853 | 0.6 |
-| Rule of law | Trust | P | 0.849 | 0.55 |
-| Border compliance time to export | Coordination | C | 0.824 | 0.3 |
-| Financial account ownership | Agency | I | 0.813 | 0.5 |
-| Fixed broadband subscriptions | Adaptability | I | 0.805 | 0.6 |
-| Labour force participation | Adaptability | I | 0.8 | 0.15 |
-| Time to enforce a contract | Trust | C | 0.799 | 0.2 |
-| Logistics infrastructure quality | Building / Execution | P | 0.789 | 0.5 |
-| Statistical performance | Anticipation | C | 0.78 | 0.25 |
-| Procedures to start a business | Agency | C | 0.759 | 0.15 |
-| High-technology exports | Building / Execution | O | 0.759 | 0.4 |
-| Firms offering formal training | Learning | C | 0.745 | 0.2 |
-| Logistics performance | Coordination | P | 0.727 | 0.5 |
-| Time to start a business | Agency | C | 0.722 | 0.2 |
+| Output per worker | Building / Execution | O | 0.943 | 0.9 |
+| Regulatory quality | Coordination | P | 0.915 | 0.6 |
+| Government effectiveness | Coordination | P | 0.905 | 0.6 |
+| Human Capital Index | Learning | C | 0.905 | 0.5 |
+| Scientific articles | Anticipation | O | 0.881 | 0.4 |
+| Individuals using the internet | Agency | I | 0.873 | 0.55 |
+| Researchers in R&D | Anticipation | I | 0.857 | 0.5 |
+| Control of corruption | Trust | P | 0.848 | 0.55 |
+| Rule of law | Trust | P | 0.833 | 0.55 |
+| Secure internet servers | Anticipation | I | 0.827 | 0.6 |
+| Fixed broadband subscriptions | Adaptability | I | 0.827 | 0.6 |
+| Financial account ownership | Agency | I | 0.769 | 0.5 |
+| High-technology exports | Building / Execution | O | 0.762 | 0.4 |
+| Logistics infrastructure quality | Building / Execution | P | 0.76 | 0.5 |
+| Logistics performance | Coordination | P | 0.718 | 0.5 |
+| Labour force participation | Adaptability | I | 0.707 | 0.15 |
+| Procedures to start a business | Agency | C | 0.705 | 0.15 |
+| Credit to the private sector | Agency | I | 0.703 | 0.55 |
 
 ## The model is re-scored without its wealth-correlated indicators
 
-Dropped 22 indicators correlating with log GDP per capita at 0.7 or above, then re-scored.
-
-Coordination and Trust lose every measured indicator in this test and cannot be scored at all without wealth-correlated evidence. That is the strongest single result in the prototype: as currently specified, those dimensions are not separable from income per head.
+Dropped 18 indicators correlating with log GDP per capita at 0.7 or above, then re-scored.
 
 | Dimension | Mean absolute score shift | Countries changing rank position |
 | --- | --- | --- |
-| Anticipation | 19.98 | 9 |
-| Agency | 23.34 | 6 |
-| Coordination | no data | 10 |
-| Trust | no data | 10 |
-| Learning | 6.43 | 6 |
+| Anticipation | 12.31 | 15 |
+| Agency | 12.68 | 14 |
+| Coordination | 23.88 | 12 |
+| Trust | 17.86 | 12 |
+| Learning | 3.67 | 12 |
 | Experimentation | 0 | 0 |
-| Adaptability | 12.44 | 7 |
-| Building / Execution | 9.24 | 7 |
+| Adaptability | 12.09 | 12 |
+| Building / Execution | 9.01 | 15 |
 | Shared Purpose | 0 | 0 |
 
 ## Indicator pairs are checked for redundancy
 
 | Indicator A | Indicator B | r |
 | --- | --- | --- |
-| Financial account ownership | Border compliance time to export | 0.983 |
-| Logistics performance | Logistics infrastructure quality | 0.977 |
-| Regulatory quality | Control of corruption | 0.975 |
-| Rule of law | Control of corruption | 0.97 |
-| Government effectiveness | Regulatory quality | 0.968 |
-| Regulatory quality | Rule of law | 0.956 |
-| Government effectiveness | Human Capital Index | 0.937 |
-| Statistical performance | Individuals using the internet | 0.933 |
-| Government effectiveness | Control of corruption | 0.928 |
-| Government effectiveness | Rule of law | 0.927 |
-| Regulatory quality | Human Capital Index | 0.917 |
-| Scientific articles | Regulatory quality | 0.915 |
-| Scientific articles | Rule of law | 0.912 |
-| Procedures to start a business | Time to enforce a contract | 0.904 |
-| Researchers in R&D | Human Capital Index | 0.899 |
-| Individuals using the internet | Fixed broadband subscriptions | 0.899 |
-| Scientific articles | Government effectiveness | 0.893 |
+| Logistics performance | Logistics infrastructure quality | 0.988 |
+| Rule of law | Control of corruption | 0.973 |
+| Government effectiveness | Regulatory quality | 0.959 |
+| Regulatory quality | Control of corruption | 0.947 |
+| Regulatory quality | Rule of law | 0.945 |
+| Government effectiveness | Rule of law | 0.93 |
+| Scientific articles | Government effectiveness | 0.912 |
+| Scientific articles | Logistics infrastructure quality | 0.911 |
+| Government effectiveness | Control of corruption | 0.91 |
+| Scientific articles | Regulatory quality | 0.909 |
+| Scientific articles | Financial account ownership | 0.905 |
+| Individuals using the internet | Fixed broadband subscriptions | 0.904 |
 | Regulatory quality | Output per worker | 0.889 |
-| Control of corruption | Human Capital Index | 0.888 |
-| Scientific articles | Control of corruption | 0.886 |
-| Vocational share of secondary | Voice and accountability | 0.883 |
-| Firms offering formal training | Labour force participation | 0.882 |
-| Financial account ownership | Human Capital Index | 0.879 |
-| Rule of law | Human Capital Index | 0.878 |
-| Vocational share of secondary | Labour force participation | 0.875 |
+| Researchers in R&D | Scientific articles | 0.888 |
+| Scientific articles | Logistics performance | 0.887 |
+| Researchers in R&D | Logistics infrastructure quality | 0.885 |
+| Financial account ownership | Government effectiveness | 0.884 |
+| Researchers in R&D | Financial account ownership | 0.88 |
+| Researchers in R&D | Government effectiveness | 0.88 |
+| Government effectiveness | Output per worker | 0.88 |
+| Researchers in R&D | Human Capital Index | 0.878 |
+| Regulatory quality | Human Capital Index | 0.873 |
+| Financial account ownership | Logistics infrastructure quality | 0.87 |
+| Government effectiveness | Human Capital Index | 0.87 |
+| Scientific articles | Secure internet servers | 0.868 |
 
 ## Dimension pairs are checked for overlap
 
 | Dimension A | Dimension B | r |
 | --- | --- | --- |
-| Anticipation | Agency | 0.924 |
-| Coordination | Trust | 0.92 |
-| Anticipation | Coordination | 0.918 |
-| Agency | Trust | 0.911 |
-| Anticipation | Trust | 0.904 |
+| Anticipation | Coordination | 0.943 |
+| Anticipation | Agency | 0.939 |
 
-Ten countries give eight degrees of freedom, so treat every correlation here as a hint, not a result.
+16 countries give 14 degrees of freedom, so treat every correlation here as a hint rather than a result.
 
 ## Switzerland, Singapore and Estonia are compared directly
 
@@ -245,11 +251,11 @@ Weakest: Experimentation (12.3), Building / Execution (11.5), Trust (9.6).
 
 ## A panel of models scored the same cells
 
-Run 2026-08-26T12-37-55-621790Z-in-session, provenance `in_session`, 1 round(s), panel: In-session analyst (N=1, not a panel) (claude-opus-5 (in-session, single panelist)).
+Run 2026-08-26T13-30-00-584125Z-in-session, provenance `in_session`, 1 round(s), panel: In-session analyst (N=1, not a panel) (claude-opus-5 (in-session, single panelist)).
 
 > Only 1 panelist(s). There is no distribution: the median is one opinion and the interquartile range is zero. Read the numbers below as a single judgment.
 
-> Scored by Claude Opus 5 inside a working session on 2026-08-26, one panelist, one round. Every cell carries a rationale and a self-confidence. This is a single considered judgement against the evidence briefs, not a panel: the median is one opinion and the IQR is zero. It exists to expose where the indicator model misreads a country, and it should be replaced by a real multi-vendor gateway run before anything is published.
+> Scored by Claude Opus 5 inside a working session, one panelist, one round. The ten reference countries were scored on 2026-08-26 and the six Latin American countries were added the same day, against the same fixed normalization frame, so the earlier estimates did not need re-anchoring. Every cell carries a rationale and a self-confidence. This is a single considered judgment against the evidence briefs, not a panel: the median is one opinion and the IQR is zero. It exists to expose where the indicator model misreads a country, and it should be replaced by a real multi-vendor gateway run before anything is published.
 
 ### The panel is allowed to stay split
 
@@ -267,47 +273,47 @@ No cell has an interquartile range above 25 points.
 | Estonia | Building / Execution | 22.3 | 55 | 32.7 |
 | Netherlands | Building / Execution | 38.8 | 70 | 31.2 |
 | South Korea | Experimentation | 100 | 70 | -30 |
+| Uruguay | Experimentation | 10.3 | 40 | 29.7 |
 | Singapore | Learning | 57 | 85 | 28 |
+| Uruguay | Coordination | 18.8 | 45 | 26.2 |
 | Singapore | Experimentation | 34.6 | 60 | 25.4 |
 | South Korea | Building / Execution | 65.7 | 90 | 24.3 |
 | India | Anticipation | 1.1 | 25 | 23.9 |
+| Argentina | Experimentation | 11.2 | 35 | 23.8 |
 | South Korea | Learning | 61.3 | 85 | 23.7 |
 | South Africa | Experimentation | 1.4 | 25 | 23.6 |
 | Switzerland | Building / Execution | 60.1 | 80 | 19.9 |
 | Estonia | Learning | 65.3 | 85 | 19.7 |
 | Brazil | Coordination | 15.5 | 35 | 19.5 |
-| Switzerland | Adaptability | 88.8 | 70 | -18.8 |
-| Netherlands | Shared Purpose | 98.7 | 80 | -18.7 |
-| Brazil | Building / Execution | 11.5 | 30 | 18.5 |
 
 ### The panel named the evidence it wanted
 
 | Evidence | Mentions | Dimensions |
 | --- | --- | --- |
-| mandate and continuity of a national foresight unit (no dataset) | 10 | 1 |
-| basic research share of gerd (oecd msti) | 10 | 1 |
-| adult digital skills (itu) | 10 | 1 |
-| perceived control over life (wvs wave 7) | 10 | 1 |
-| civil society strength (v-dem core cso index) | 10 | 1 |
-| delivery record of projects run across several agencies | 10 | 1 |
-| generalised interpersonal trust (wvs a165) | 10 | 1 |
-| trust in national government (oecd trust survey) | 10 | 1 |
-| adult learning participation (eurostat / oecd piaac) | 10 | 1 |
-| field-normalised citation impact (openalex) | 10 | 1 |
-| early-stage entrepreneurial activity (gem tea) | 10 | 1 |
-| venture capital as a share of gdp | 10 | 1 |
-| register of live regulatory sandboxes | 10 | 1 |
-| long-term unemployment share (ilostat) | 10 | 1 |
-| export concentration index (unctad) | 10 | 1 |
-| cost and schedule overrun on major infrastructure projects | 10 | 1 |
-| firm scale-up rate (oecd dynemp) | 10 | 1 |
-| political polarisation (v-dem) | 10 | 1 |
-| volunteering rate | 10 | 1 |
-| civic participation (wvs) | 10 | 1 |
+| mandate and continuity of a national foresight unit (no dataset) | 16 | 1 |
+| basic research share of gerd (oecd msti) | 16 | 1 |
+| adult digital skills (itu) | 16 | 1 |
+| perceived control over life (wvs wave 7) | 16 | 1 |
+| civil society strength (v-dem core cso index) | 16 | 1 |
+| delivery record of projects run across several agencies | 16 | 1 |
+| generalised interpersonal trust (wvs a165) | 16 | 1 |
+| trust in national government (oecd trust survey) | 16 | 1 |
+| adult learning participation (eurostat / oecd piaac) | 16 | 1 |
+| field-normalised citation impact (openalex) | 16 | 1 |
+| early-stage entrepreneurial activity (gem tea) | 16 | 1 |
+| venture capital as a share of gdp | 16 | 1 |
+| register of live regulatory sandboxes | 16 | 1 |
+| long-term unemployment share (ilostat) | 16 | 1 |
+| export concentration index (unctad) | 16 | 1 |
+| cost and schedule overrun on major infrastructure projects | 16 | 1 |
+| firm scale-up rate (oecd dynemp) | 16 | 1 |
+| political polarisation (v-dem) | 16 | 1 |
+| volunteering rate | 16 | 1 |
+| civic participation (wvs) | 16 | 1 |
 
 ## These assumptions can be challenged
 
-- Normalization is relative to these ten countries. Adding an eleventh country changes every score.
+- The 0 to 100 scale is fixed by the ten reference countries. Countries added later are scored against that frame and never move it. See docs/DECISIONS.md D16.
 - Indicators inside a dimension carry equal weight. No expert weighting has been applied.
 - Only the most recent observation per indicator is used. There is no trend line and nothing is smoothed.
 - Winsorizing uses Tukey fences at three interquartile ranges, so it clips extreme outliers only.

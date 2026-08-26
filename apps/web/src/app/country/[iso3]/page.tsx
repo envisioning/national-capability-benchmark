@@ -7,6 +7,7 @@ import {
   INDICATORS_BY_ID,
 } from '@ncb/core'
 import { Radar } from '@/components/Radar'
+import { CountryDimensionTable } from '@/components/views/CountryDimensionTable'
 import {
   ClassBadge,
   ConfidenceBar,
@@ -51,60 +52,7 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
           </div>
         </div>
 
-        <Scroller>
-          <Table>
-            <thead>
-              <tr>
-                <Th>Dimension</Th>
-                <Th align="right">Score</Th>
-                <Th>Confidence</Th>
-                <Th align="right">Coverage</Th>
-                <Th align="right">Recency</Th>
-                <Th align="right">Source quality</Th>
-                <Th align="right">Panel median</Th>
-                <Th align="right">Panel IQR</Th>
-              </tr>
-            </thead>
-            <tbody>
-              {DIMENSIONS.map((d) => {
-                const dim = country.dimensions[d]
-                if (!dim) return null
-                return (
-                  <tr key={d}>
-                    <Td>
-                      <a href={`#${d}`} className="hover:underline">
-                        {DIMENSION_LABELS[d]}
-                      </a>
-                    </Td>
-                    <Td align="right">{dim.score?.toFixed(1) ?? 'no data'}</Td>
-                    <Td>
-                      <ConfidenceBar value={dim.confidence} />
-                    </Td>
-                    <Td align="right" dim>
-                      {dim.confidenceParts.coverage.toFixed(2)}
-                    </Td>
-                    <Td align="right" dim>
-                      {dim.confidenceParts.recency.toFixed(2)}
-                    </Td>
-                    <Td align="right" dim>
-                      {dim.confidenceParts.sourceQuality.toFixed(2)}
-                    </Td>
-                    <Td align="right">{dim.delphiScore?.toFixed(1) ?? 'no run'}</Td>
-                    <Td align="right" dim>
-                      {dim.delphiIqr === null ? (
-                        'no run'
-                      ) : (
-                        <span className={dim.delphiDissent ? 'text-[#ef4444]' : undefined}>
-                          {dim.delphiIqr.toFixed(1)}
-                        </span>
-                      )}
-                    </Td>
-                  </tr>
-                )
-              })}
-            </tbody>
-          </Table>
-        </Scroller>
+        <CountryDimensionTable country={country} />
       </div>
 
       {DIMENSIONS.map((d) => {

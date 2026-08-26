@@ -31,6 +31,10 @@ set, the dimensional structure is not earning its keep.
 
 ## D2 — Normalisation is relative to the country set, not to an absolute frontier
 
+> **Superseded by D16 on 2026-08-26.** The relative principle stands. What
+> changed is *which* set defines the scale: a fixed reference set rather than
+> whichever countries happen to be loaded.
+
 **Choice.** Min-max each indicator across the countries in the run, mapping the
 weakest to 0 and the strongest to 100.
 
@@ -257,3 +261,74 @@ candidates are OpenAlex citation impact, V-Dem civil society and polarisation,
 and UNCTAD export concentration.
 
 **Overturned by.** Writing the next adapter. Each one is independent work.
+
+---
+
+## D16 — The normalization frame is pinned to the ten reference countries
+
+*Supersedes D2. Recorded 2026-08-26, when the first six countries were added
+beyond the prototype set.*
+
+**Choice.** Every indicator's Tukey fences and its 0 and 100 endpoints are
+computed from the **ten reference countries only**. Every other country is
+scored against that same fixed frame. A country outside the frame clamps to 0 or
+100 and the cell is flagged `outOfFrame`.
+
+Countries carry `frame: 'reference' | 'extended'` in
+`packages/core/src/model/countries.ts`. The reference ten are the original
+prototype set.
+
+**Why.** Under D2 the scale was recomputed from whichever countries were loaded,
+so adding one country silently moved every existing score. That makes the
+benchmark unusable as an ongoing instrument: no published number survives the
+next data load, and no two runs are comparable. Since countries and indicators
+will keep being added, the scale has to hold still.
+
+Verified when the six Latin American countries were added: **0 of 90 reference
+cells moved.**
+
+**Cost.**
+
+- The reference set is now load-bearing and effectively frozen. Changing its
+  membership rebases everything, and that is a deliberate, announced act.
+- An extended country genuinely outside the reference range loses information at
+  the clamp. Colombia already sits near the floor on Trust. If clamping becomes
+  common the frame is too narrow for the countries being asked about, and that
+  is the signal to rebase rather than to widen quietly.
+- The ten reference countries are not a representative sample of the world. They
+  were chosen to expose different capability structures, so the frame is biased
+  toward the contrasts they happen to span.
+
+**Overturned by.** A sustained pattern of `outOfFrame` cells, or a decision to
+move to absolute anchoring per indicator. Either way, rebasing is a versioned
+event: bump a frame version, re-publish, and say plainly that the old numbers
+are not comparable.
+
+---
+
+## D17 — Confidence bands are fixed thresholds, and not a red-to-green scale
+
+*Recorded 2026-08-26.*
+
+**Choice.** Four bands in `packages/core/src/pipeline/confidence.ts`: very thin
+below 0.25, thin to 0.45, usable to 0.65, good above. The viewer colors by band
+on an ordinal ramp from muted navy to brand lime. The report prints the band
+label. One source of truth, so the two cannot drift.
+
+**Why.** Confidence is a product of three fractions, so its usable range is
+compressed and small differences near the bottom matter more than they look.
+Bands make that legible where a raw number does not.
+
+Red to green was rejected: it fails for the most common colour vision
+deficiencies, and it reads as pass and fail when the thing being encoded is a
+quantity. The chosen ramp was checked with the palette validator. The worst
+adjacent pair separates at dE 18.7 in light and 18.2 in dark under normal
+vision. The dark pair sits at dE 6.8 under tritanopia, which is acceptable only
+because the numeric value is printed beside every bar and the bar length carries
+the same magnitude.
+
+**Cost.** The thresholds are a judgement. Nothing in the data says 0.45 is the
+line between thin and usable.
+
+**Overturned by.** Evidence about how readers actually act on the bands, or a
+change to the confidence formula that shifts its range.

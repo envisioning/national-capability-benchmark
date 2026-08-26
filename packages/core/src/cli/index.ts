@@ -1,4 +1,4 @@
-import { GDP_PER_CAPITA_CODE, INDICATORS } from '../model/index.js'
+import { COUNTRY_ISO3, GDP_PER_CAPITA_CODE, INDICATORS } from '../model/index.js'
 import type { CountryResult } from '../model/index.js'
 import { ingestWorldBank } from '../pipeline/ingest.js'
 import { FILES } from '../pipeline/paths.js'
@@ -99,7 +99,9 @@ async function main() {
       console.log(`Fetching ${INDICATORS.filter((i) => i.ingest === 'worldbank').length} World Bank indicators from ${from}...`)
       const { report } = await ingestWorldBank(from)
       for (const r of report) {
-        const status = r.error ? `FAILED ${r.error}` : `${r.countries}/10 countries, latest ${r.latestYear}`
+        const status = r.error
+          ? `FAILED ${r.error}`
+          : `${r.countries}/${COUNTRY_ISO3.length} countries, latest ${r.latestYear}`
         console.log(`  ${r.series.padEnd(42)} ${status}`)
       }
       const failed = report.filter((r) => r.error)

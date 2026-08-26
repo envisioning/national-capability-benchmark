@@ -52,15 +52,27 @@ port 3888.
 ## Invariants
 
 - `packages/core/src/model/indicators.ts` is the single source of truth for
-  indicators. Never define an indicator anywhere else.
+  indicators, and `countries.ts` for countries and their frame. Never define
+  either anywhere else.
+- Confidence thresholds live in `packages/core/src/pipeline/confidence.ts`. The
+  viewer colors by them and the report prints their labels, so both read the same
+  file. Never hard-code a threshold in a page.
 - Delphi estimates never enter `DimensionResult.score`. They live in
   `delphiScore` and `delphiIqr`. `blendedScore` falls back to the panel only
   when no indicator evidence exists, and `blendedFrom` records which was used.
 - Confidence is never folded into the capability score. Two numbers, always.
 - Missing values are dropped from the mean and lower coverage. Nothing is imputed.
-- Normalisation is min-max across the ten test countries. Adding a country
-  changes every score in the dataset. This is intended, and it means scores from
-  two different country sets are not comparable.
+- The normalization frame is pinned to the ten **reference** countries. Their
+  values alone set every indicator's Tukey fences and its 0 and 100 endpoints.
+  Countries with `frame: 'extended'` are scored against that frame and never
+  move it, which is what lets data be added without invalidating what is already
+  published. Verified when six countries were added: 0 of 90 reference cells
+  moved. See D16, which supersedes D2.
+- Adding a country to the **reference** set rebases the whole dataset. Do not do
+  it as a side effect of adding data. It is a versioned, announced act.
+- A value outside the frame clamps to 0 or 100 and sets `outOfFrame` on the
+  cell. Frequent clamping means the frame is too narrow, not that the scale
+  should be widened quietly.
 - `ingest: 'gap'` indicators stay in the registry. They lower confidence and
   they are the data-collection agenda. Do not delete them to make numbers look
   better.
@@ -107,6 +119,17 @@ the dev server, or `rm -rf apps/web/.next` and restart it.
 `pnpm --filter @ncb/core build` before building the web app on its own.
 `pnpm build` already does this in the right order.
 
+`@ncb/core` has two entries. `@ncb/core` is browser-safe and is what client
+components import. `@ncb/core/node` adds the filesystem, network and model
+provider code and may only be imported from server components and the CLI. A
+single `node:` import reaching the browser graph fails the production build at
+bundle time, not at typecheck, so the compiler will not warn you.
+
+Table columns carry render functions, so any component defining them has to be a
+client component. Pages load data on the server and pass plain JSON to a client
+view in `apps/web/src/components/views/`. Defining columns inside a server
+component builds in dev and fails on `next build`.
+
 ## Delphi
 
 Full contract in `docs/PANEL.md`. In short: panelists are model plus stance. Stances are fixed analytical priors so
@@ -146,6 +169,10 @@ as the reference, and see NOTICE.md before reusing the brand.
   labels, tables or anything under 18px. Set it with `font-variation-settings`
   so the width axis travels, never with `font-weight` alone, and hold `wdth` at
   100 across the whole layout.
+- Tables are `DataTable` from `apps/web/src/components/DataTable.tsx`, a client
+  component with sortable headers. Numeric columns open descending, text columns
+  ascending, and cells with no data always sort last in both directions. Give a
+  column a `sort` accessor to make it sortable and omit it for prose columns.
 - Type scale: page title `text-3xl sm:text-4xl font-light`, section header
   `text-2xl sm:text-3xl font-light`, prose heading `text-xl font-medium
   tracking-tight`, body `text-lg leading-relaxed` (18px), labels and table text

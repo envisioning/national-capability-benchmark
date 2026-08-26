@@ -1,7 +1,6 @@
 import { readFile } from 'node:fs/promises'
-import { FILES } from '@ncb/core'
-import type { CountryResult, DelphiRunFile } from '@ncb/core'
-import type { Diagnostics } from '@ncb/core'
+import { FILES } from '@ncb/core/node'
+import type { CountryResult, DelphiRunFile, Diagnostics } from '@ncb/core'
 
 async function readJson<T>(path: string): Promise<T | null> {
   try {

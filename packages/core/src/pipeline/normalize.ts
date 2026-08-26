@@ -43,20 +43,73 @@ export function applyTransform(
 }
 
 /**
- * Min-max across the test countries to 0-100, reversed for lower-is-better
- * indicators. The scale is relative to this ten-country panel by design: the
- * benchmark compares these countries to each other, not to an absolute frontier.
+ * The normalization frame: the fences and the endpoints, computed once from the
+ * reference countries and then applied to everybody.
  */
-export function normalizeToScale(
-  values: number[],
+export type Frame = {
+  /** Tukey fences, for winsorizing. */
+  lo: number
+  hi: number
+  /** Endpoints of the 0 to 100 scale, after winsorizing. */
+  min: number
+  max: number
+}
+
+/**
+ * Build the frame from the reference values only.
+ *
+ * Everything downstream is measured against this. That is what lets a new
+ * country be added without moving anybody else's score, and it is why the
+ * reference set has to stay fixed. See docs/DECISIONS.md D16.
+ */
+export function buildFrame(referenceValues: number[], k = 3): Frame | null {
+  if (referenceValues.length < 2) return null
+  const sorted = [...referenceValues].sort((a, b) => a - b)
+  const q1 = quantile(sorted, 0.25)
+  const q3 = quantile(sorted, 0.75)
+  const spread = q3 - q1
+  const lo = q1 - k * spread
+  const hi = q3 + k * spread
+  const clipped = referenceValues.map((v) => Math.min(hi, Math.max(lo, v)))
+  return { lo, hi, min: Math.min(...clipped), max: Math.max(...clipped) }
+}
+
+export type Scored = {
+  /** The value after winsorizing against the frame's fences. */
+  transformed: number
+  /** 0 to 100 against the frame, clamped. */
+  normalized: number
+  winsorized: boolean
+  /** True when the raw value sat outside the reference frame and was clamped. */
+  outOfFrame: boolean
+}
+
+/**
+ * Score one value against the frame, reversing lower-is-better indicators.
+ *
+ * A country outside the frame clamps to 0 or 100 and is flagged. Clamping is
+ * preferred over extending the scale because extending it would change what 0
+ * and 100 mean, which is the thing this design exists to prevent.
+ */
+export function scoreAgainstFrame(
+  value: number,
+  frame: Frame,
   direction: 'higher_better' | 'lower_better',
-): number[] {
-  if (values.length === 0) return []
-  const min = Math.min(...values)
-  const max = Math.max(...values)
-  if (max === min) return values.map(() => 50)
-  return values.map((v) => {
-    const unit = (v - min) / (max - min)
-    return 100 * (direction === 'higher_better' ? unit : 1 - unit)
-  })
+): Scored {
+  const winsorized = value < frame.lo || value > frame.hi
+  const clipped = Math.min(frame.hi, Math.max(frame.lo, value))
+
+  if (frame.max === frame.min) {
+    return { transformed: clipped, normalized: 50, winsorized, outOfFrame: false }
+  }
+
+  const raw = (clipped - frame.min) / (frame.max - frame.min)
+  const outOfFrame = raw < 0 || raw > 1
+  const unit = Math.min(1, Math.max(0, raw))
+  return {
+    transformed: clipped,
+    normalized: 100 * (direction === 'higher_better' ? unit : 1 - unit),
+    winsorized,
+    outOfFrame,
+  }
 }

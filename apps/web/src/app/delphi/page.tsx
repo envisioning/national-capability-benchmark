@@ -6,6 +6,7 @@ import {
   indicatorConsensus,
   missingEvidenceRanking,
 } from '@ncb/core'
+import { DissentTable } from '@/components/views/DissentTable'
 import { Empty, Note, Scroller, Section, Table, Td, Th } from '@/components/ui'
 import { loadDelphiRun } from '@/lib/data'
 
@@ -77,32 +78,7 @@ export default async function DelphiPage() {
         {dissent.length === 0 ? (
           <p className="text-lg leading-relaxed text-[var(--muted)]">No cell exceeds the dissent threshold.</p>
         ) : (
-          <Scroller>
-            <Table>
-              <thead>
-                <tr>
-                  <Th>Country</Th>
-                  <Th>Dimension</Th>
-                  <Th align="right">Median</Th>
-                  <Th align="right">IQR</Th>
-                  <Th align="right">Range</Th>
-                </tr>
-              </thead>
-              <tbody>
-                {dissent.map((c) => (
-                  <tr key={`${c.iso3}|${c.dimension}`}>
-                    <Td>{c.country}</Td>
-                    <Td>{DIMENSION_LABELS[c.dimension]}</Td>
-                    <Td align="right">{c.median.toFixed(1)}</Td>
-                    <Td align="right">{c.iqr.toFixed(1)}</Td>
-                    <Td align="right" dim>
-                      {c.min.toFixed(1)} to {c.max.toFixed(1)}
-                    </Td>
-                  </tr>
-                ))}
-              </tbody>
-            </Table>
-          </Scroller>
+          <DissentTable rows={dissent} />
         )}
       </Section>
 

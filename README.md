@@ -4,8 +4,8 @@ A prototype for measuring what a country is **capable of doing** — anticipatin
 change, coordinating action, learning, adapting and building under uncertainty —
 rather than how rich, comfortable or competitive it is.
 
-Nine capability dimensions, ten test countries, 0–100 per dimension, no headline
-ranking. Every raw indicator stays visible with its source and year. Evidence
+Nine capability dimensions, sixteen countries, 0 to 100 per dimension, no
+headline ranking. Every raw indicator stays visible with its source and year. Evidence
 quality is reported as a separate confidence score and is never folded into the
 capability score.
 
@@ -112,5 +112,7 @@ wealth-correlated indicators are removed.
 5. Equal-weight mean of the available indicators inside each dimension.
 6. `confidence = coverage × recency × source_quality`, reported separately.
 
-Scores are relative to these ten countries. Adding an eleventh changes every
-number, and scores from two different country sets are not comparable.
+Scores are relative, but the scale does not move. The 0 and 100 endpoints are
+fixed by the ten reference countries, and any country added later is measured
+against that same frame. Adding the six Latin American countries moved zero of
+the ninety existing scores. See D16 in [docs/DECISIONS.md](docs/DECISIONS.md).

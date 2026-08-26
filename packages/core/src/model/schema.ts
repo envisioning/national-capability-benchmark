@@ -187,6 +187,8 @@ export const IndicatorResult = z.object({
   source: z.string(),
   sourceTier: SourceTier.nullable(),
   winsorized: z.boolean(),
+  /** The value sat outside the reference frame, so the score was clamped to 0 or 100. */
+  outOfFrame: z.boolean().default(false),
   status: z.enum(['observed', 'missing', 'gap']),
 })
 export type IndicatorResult = z.infer<typeof IndicatorResult>
