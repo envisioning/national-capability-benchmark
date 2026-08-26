@@ -129,7 +129,7 @@ export class MockProvider implements PanelProvider {
           ),
         )
         const gaps = indicatorsFor(dimension)
-          .filter((d) => d.ingest === 'gap')
+          .filter((d) => d.ingest === 'gap' || d.ingest === 'retired')
           .slice(0, 3)
           .map((d) => `${d.name} (${d.source.publisher})`)
         return {

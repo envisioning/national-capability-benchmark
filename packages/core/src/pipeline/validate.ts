@@ -1,6 +1,6 @@
 import { readdir, readFile } from 'node:fs/promises'
 import { basename, resolve } from 'node:path'
-import { COUNTRY_ISO3, DIMENSIONS, INDICATORS_BY_ID } from '../model/index.js'
+import { COUNTRY_ISO3, DIMENSIONS, INDICATORS_BY_ID, isScored } from '../model/index.js'
 import { DelphiRunFile, EvidenceFile } from '../model/schema.js'
 import { DELPHI_DIR, FILES } from './paths.js'
 
@@ -145,7 +145,7 @@ export async function validateEvidence(path = FILES.evidence): Promise<Problem[]
         severity: 'error',
         problem: `${record.id}: unknown indicator id ${record.indicatorId}`,
       })
-    } else if (def.ingest !== 'gap') {
+    } else if (isScored(def)) {
       problems.push({
         file,
         severity: 'warning',

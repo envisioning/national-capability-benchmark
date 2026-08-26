@@ -236,8 +236,8 @@ const RAW: Raw[] = [
     direction: 'higher_better',
     source: WB('GOV_WGI_GE.EST'),
     wbSourceId: 3,
-    ingest: 'worldbank',
-    notes: 'Aggregates expert and firm surveys, so it is a perception composite despite reading like a performance measure.',
+    ingest: 'retired',
+    notes: 'Retired 2026-08-26. The WGI aggregate the opinions of experts and firms, and in this set the four WGI series correlate with each other between 0.93 and 0.98 while correlating with log GDP per capita at 0.91. That is one perception of national wealth counted in three dimensions. Cross-agency delivery records are the replacement and they are a declared gap. See D23 and A4.',
     wealthProxyPrior: 0.6,
   },
   {
@@ -250,8 +250,8 @@ const RAW: Raw[] = [
     direction: 'higher_better',
     source: WB('GOV_WGI_RQ.EST'),
     wbSourceId: 3,
-    ingest: 'worldbank',
-    notes: 'Shares source surveys with government effectiveness, so the two are near-duplicates by construction.',
+    ingest: 'retired',
+    notes: 'Retired 2026-08-26. Same measurement as government effectiveness, filed under a different name, correlating with it above 0.93. See D23 and A4.',
     wealthProxyPrior: 0.6,
   },
   {
@@ -263,8 +263,8 @@ const RAW: Raw[] = [
     measurementClass: 'P',
     direction: 'higher_better',
     source: WB('LP.LPI.OVRL.XQ'),
-    ingest: 'worldbank',
-    notes: 'The closest available read on supply-chain coordination across firm and agency boundaries. Respondents are foreign operators, not residents.',
+    ingest: 'retired',
+    notes: 'Retired 2026-08-26. The LPI is a survey of international freight forwarders, so it records how a country looks to global logistics firms. A small country with a small port scores low whatever its state can organise, which is artefact A9. Container throughput and border time are observable and stay. See D23.',
     wealthProxyPrior: 0.5,
   },
   {
@@ -332,8 +332,8 @@ const RAW: Raw[] = [
     direction: 'higher_better',
     source: WB('GOV_WGI_RL.EST'),
     wbSourceId: 3,
-    ingest: 'worldbank',
-    notes: 'Institutional trust, not interpersonal trust. Kept separate from the survey measures on purpose.',
+    ingest: 'retired',
+    notes: 'Retired 2026-08-26. A WGI perception composite correlating with control of corruption above 0.95 and with log GDP per capita at 0.83. Court throughput and case clearance rates are the observable replacement and are a declared gap. See D23 and A4.',
     wealthProxyPrior: 0.55,
   },
   {
@@ -346,8 +346,8 @@ const RAW: Raw[] = [
     direction: 'higher_better',
     source: WB('GOV_WGI_CC.EST'),
     wbSourceId: 3,
-    ingest: 'worldbank',
-    notes: 'Correlates heavily with rule of law. One of the strongest redundancy candidates in the registry.',
+    ingest: 'retired',
+    notes: 'Retired 2026-08-26. A WGI perception composite. It measures reputation for corruption, which is not the same thing as corruption, and it tracks income closely. Prosecution and audit records are the observable replacement and are a declared gap. See D23 and A4.',
     wealthProxyPrior: 0.55,
   },
   {
@@ -363,6 +363,20 @@ const RAW: Raw[] = [
     ingest: 'worldbank',
     notes: 'Confidence in contracts, measured as court throughput rather than opinion. Frozen at 2019.',
     wealthProxyPrior: 0.2,
+  },
+  {
+    id: 'homicide_rate',
+    dimension: 'trust',
+    name: 'Intentional homicide rate',
+    definition: 'Intentional homicides per 100,000 people.',
+    unit: 'per 100,000 people',
+    measurementClass: 'O',
+    direction: 'lower_better',
+    transform: 'log10',
+    source: WB('VC.IHR.PSRC.P5'),
+    ingest: 'worldbank',
+    notes: 'Added 2026-08-26, when the two WGI perception composites in this dimension were retired. It is counted by police and health systems rather than reported as an opinion, and it spans two and a half orders of magnitude across this set, so it is logged before normalising. Read it as the visible failure of cooperation with strangers and not as trust itself: it is an outcome, it is driven heavily by organised crime, and a society can be physically safe while trusting very little. It correlates with log GDP per capita at 0.77 in this set, above the wealth-proxy line, so it is a replacement that is observable rather than a replacement that is income-free. Behavioural trust measures remain a gap. See D23.',
+    wealthProxyPrior: 0.35,
   },
   {
     id: 'interpersonal_trust',
@@ -775,8 +789,8 @@ const RAW: Raw[] = [
     measurementClass: 'P',
     direction: 'higher_better',
     source: WB('LP.LPI.INFR.XQ'),
-    ingest: 'worldbank',
-    notes: 'Judgement of what was actually built, by people who use it. Shares its survey with the coordination LPI score, so watch for redundancy.',
+    ingest: 'retired',
+    notes: 'Retired 2026-08-26. An LPI sub-index, so the same freight-forwarder survey as logistics performance and the same problem. Electricity connection speed stays as the observable infrastructure measure in this dimension. See D23.',
     wealthProxyPrior: 0.5,
   },
   {
@@ -845,8 +859,8 @@ const RAW: Raw[] = [
     direction: 'higher_better',
     source: WB('GOV_WGI_VA.EST'),
     wbSourceId: 3,
-    ingest: 'worldbank',
-    notes: 'Measures the channel for collective action, not the appetite for it. Singapore scores low while acting collectively very well, which is a useful stress test.',
+    ingest: 'retired',
+    notes: 'Retired 2026-08-26. Artefact A5: it measures the democratic channel while Shared Purpose asks whether people can see themselves in a common project. Singapore scored 20.9 while being one of the most effective collective actors in the set. Voter turnout, volunteering and civic participation are the observable replacements and all are declared gaps. See D23 and A5.',
     wealthProxyPrior: 0.35,
   },
   {
@@ -953,4 +967,14 @@ export function worldBankSeries(): SeriesRequest[] {
     if (i.denominatorSeries) add(i.denominatorSeries, 2)
   }
   return [...byKey.values()]
+}
+
+/**
+ * Whether an indicator contributes a number.
+ *
+ * `gap` has no dataset and `retired` has one this project rejected. Both stay
+ * in the registry, both lower coverage, and neither is fetched or scored.
+ */
+export function isScored(def: IndicatorDef): boolean {
+  return def.ingest !== 'gap' && def.ingest !== 'retired'
 }

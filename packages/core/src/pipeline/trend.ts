@@ -1,4 +1,4 @@
-import { INDICATORS_BY_ID, indicatorsFor } from '../model/index.js'
+import { INDICATORS_BY_ID, indicatorsFor, isScored } from '../model/index.js'
 import type { Dimension, IndicatorDef, Momentum, Observation } from '../model/index.js'
 import { applyTransform, scoreAgainstFrame } from './normalize.js'
 import type { Frame } from './normalize.js'
@@ -116,7 +116,7 @@ export function momentumFor(
   const baseYear = opts.currentYear - span
 
   const defs = indicatorsFor(dimension).filter(
-    (d) => d.ingest !== 'gap' && frames.has(d.id),
+    (d) => isScored(d) && frames.has(d.id),
   )
 
   const basket: string[] = []

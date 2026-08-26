@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T18:17:27.618Z",
+  "generatedAt": "2026-08-26T18:33:44.985Z",
   "gdpSeries": "NY.GDP.PCAP.PP.KD",
   "dimensionVsGdp": [
     {
@@ -16,14 +16,14 @@
     },
     {
       "dimension": "coordination",
-      "pearson": 0.903,
-      "spearman": 0.85,
+      "pearson": 0.676,
+      "spearman": 0.749,
       "n": 16
     },
     {
       "dimension": "trust",
-      "pearson": 0.875,
-      "spearman": 0.874,
+      "pearson": 0.792,
+      "spearman": 0.747,
       "n": 16
     },
     {
@@ -46,24 +46,18 @@
     },
     {
       "dimension": "building",
-      "pearson": 0.815,
-      "spearman": 0.724,
+      "pearson": 0.781,
+      "spearman": 0.741,
       "n": 16
     },
     {
       "dimension": "shared_purpose",
-      "pearson": 0.344,
-      "spearman": 0.406,
+      "pearson": 0.181,
+      "spearman": 0.163,
       "n": 16
     }
   ],
   "dimensionPairs": [
-    {
-      "a": "anticipation",
-      "b": "coordination",
-      "r": 0.943,
-      "n": 16
-    },
     {
       "a": "anticipation",
       "b": "agency",
@@ -71,39 +65,9 @@
       "n": 16
     },
     {
-      "a": "agency",
-      "b": "trust",
-      "r": 0.893,
-      "n": 16
-    },
-    {
-      "a": "agency",
-      "b": "coordination",
-      "r": 0.889,
-      "n": 16
-    },
-    {
-      "a": "coordination",
-      "b": "trust",
-      "r": 0.886,
-      "n": 16
-    },
-    {
       "a": "anticipation",
       "b": "trust",
-      "r": 0.873,
-      "n": 16
-    },
-    {
-      "a": "coordination",
-      "b": "building",
-      "r": 0.867,
-      "n": 16
-    },
-    {
-      "a": "anticipation",
-      "b": "building",
-      "r": 0.852,
+      "r": 0.835,
       "n": 16
     },
     {
@@ -113,21 +77,27 @@
       "n": 16
     },
     {
+      "a": "agency",
+      "b": "trust",
+      "r": 0.808,
+      "n": 16
+    },
+    {
       "a": "learning",
       "b": "adaptability",
       "r": 0.793,
       "n": 16
     },
     {
-      "a": "coordination",
-      "b": "adaptability",
-      "r": 0.782,
+      "a": "trust",
+      "b": "building",
+      "r": 0.79,
       "n": 16
     },
     {
-      "a": "trust",
-      "b": "adaptability",
-      "r": 0.778,
+      "a": "anticipation",
+      "b": "building",
+      "r": 0.784,
       "n": 16
     },
     {
@@ -137,21 +107,27 @@
       "n": 16
     },
     {
-      "a": "agency",
-      "b": "building",
-      "r": 0.749,
+      "a": "anticipation",
+      "b": "coordination",
+      "r": 0.72,
       "n": 16
     },
     {
       "a": "trust",
-      "b": "building",
-      "r": 0.734,
+      "b": "adaptability",
+      "r": 0.715,
       "n": 16
     },
     {
       "a": "adaptability",
       "b": "building",
-      "r": 0.725,
+      "r": 0.711,
+      "n": 16
+    },
+    {
+      "a": "agency",
+      "b": "building",
+      "r": 0.693,
       "n": 16
     },
     {
@@ -167,15 +143,15 @@
       "n": 16
     },
     {
-      "a": "trust",
-      "b": "learning",
-      "r": 0.635,
+      "a": "coordination",
+      "b": "trust",
+      "r": 0.634,
       "n": 16
     },
     {
-      "a": "trust",
-      "b": "shared_purpose",
-      "r": 0.634,
+      "a": "coordination",
+      "b": "learning",
+      "r": 0.632,
       "n": 16
     },
     {
@@ -191,9 +167,9 @@
       "n": 16
     },
     {
-      "a": "coordination",
-      "b": "learning",
-      "r": 0.62,
+      "a": "agency",
+      "b": "coordination",
+      "r": 0.622,
       "n": 16
     },
     {
@@ -203,9 +179,21 @@
       "n": 16
     },
     {
+      "a": "coordination",
+      "b": "adaptability",
+      "r": 0.617,
+      "n": 16
+    },
+    {
+      "a": "coordination",
+      "b": "building",
+      "r": 0.616,
+      "n": 16
+    },
+    {
       "a": "experimentation",
       "b": "building",
-      "r": 0.563,
+      "r": 0.597,
       "n": 16
     },
     {
@@ -215,73 +203,79 @@
       "n": 16
     },
     {
-      "a": "agency",
-      "b": "shared_purpose",
-      "r": 0.485,
-      "n": 16
-    },
-    {
-      "a": "coordination",
-      "b": "shared_purpose",
-      "r": 0.48,
-      "n": 16
-    },
-    {
-      "a": "learning",
-      "b": "shared_purpose",
-      "r": 0.475,
+      "a": "trust",
+      "b": "experimentation",
+      "r": 0.47,
       "n": 16
     },
     {
       "a": "trust",
-      "b": "experimentation",
-      "r": 0.466,
+      "b": "learning",
+      "r": 0.459,
       "n": 16
     },
     {
-      "a": "anticipation",
+      "a": "trust",
       "b": "shared_purpose",
-      "r": 0.46,
-      "n": 16
-    },
-    {
-      "a": "adaptability",
-      "b": "shared_purpose",
-      "r": 0.405,
-      "n": 16
-    },
-    {
-      "a": "coordination",
-      "b": "experimentation",
-      "r": 0.402,
+      "r": 0.383,
       "n": 16
     },
     {
       "a": "learning",
       "b": "building",
-      "r": 0.388,
+      "r": 0.367,
       "n": 16
     },
     {
-      "a": "building",
+      "a": "agency",
       "b": "shared_purpose",
-      "r": 0.127,
+      "r": 0.365,
+      "n": 16
+    },
+    {
+      "a": "anticipation",
+      "b": "shared_purpose",
+      "r": 0.326,
+      "n": 16
+    },
+    {
+      "a": "coordination",
+      "b": "experimentation",
+      "r": 0.275,
+      "n": 16
+    },
+    {
+      "a": "adaptability",
+      "b": "shared_purpose",
+      "r": 0.271,
+      "n": 16
+    },
+    {
+      "a": "coordination",
+      "b": "shared_purpose",
+      "r": 0.255,
+      "n": 16
+    },
+    {
+      "a": "learning",
+      "b": "shared_purpose",
+      "r": 0.224,
       "n": 16
     },
     {
       "a": "experimentation",
       "b": "shared_purpose",
-      "r": 0.062,
+      "r": -0.134,
+      "n": 16
+    },
+    {
+      "a": "building",
+      "b": "shared_purpose",
+      "r": -0.013,
       "n": 16
     }
   ],
   "duplicateDimensionCandidates": [
-    {
-      "a": "anticipation",
-      "b": "coordination",
-      "r": 0.943,
-      "n": 16
-    },
     {
       "a": "anticipation",
       "b": "agency",
@@ -296,22 +290,6 @@
       "measurementClass": "O",
       "r": 0.943,
       "wealthProxyPrior": 0.9,
-      "flaggedAsWealthProxy": true
-    },
-    {
-      "indicatorId": "regulatory_quality",
-      "dimension": "coordination",
-      "measurementClass": "P",
-      "r": 0.915,
-      "wealthProxyPrior": 0.6,
-      "flaggedAsWealthProxy": true
-    },
-    {
-      "indicatorId": "government_effectiveness",
-      "dimension": "coordination",
-      "measurementClass": "P",
-      "r": 0.905,
-      "wealthProxyPrior": 0.6,
       "flaggedAsWealthProxy": true
     },
     {
@@ -347,22 +325,6 @@
       "flaggedAsWealthProxy": true
     },
     {
-      "indicatorId": "control_of_corruption",
-      "dimension": "trust",
-      "measurementClass": "P",
-      "r": 0.848,
-      "wealthProxyPrior": 0.55,
-      "flaggedAsWealthProxy": true
-    },
-    {
-      "indicatorId": "rule_of_law",
-      "dimension": "trust",
-      "measurementClass": "P",
-      "r": 0.833,
-      "wealthProxyPrior": 0.55,
-      "flaggedAsWealthProxy": true
-    },
-    {
       "indicatorId": "secure_internet_servers",
       "dimension": "anticipation",
       "measurementClass": "I",
@@ -387,27 +349,19 @@
       "flaggedAsWealthProxy": true
     },
     {
+      "indicatorId": "homicide_rate",
+      "dimension": "trust",
+      "measurementClass": "O",
+      "r": 0.768,
+      "wealthProxyPrior": 0.35,
+      "flaggedAsWealthProxy": true
+    },
+    {
       "indicatorId": "high_tech_exports_share",
       "dimension": "building",
       "measurementClass": "O",
       "r": 0.762,
       "wealthProxyPrior": 0.4,
-      "flaggedAsWealthProxy": true
-    },
-    {
-      "indicatorId": "logistics_infrastructure",
-      "dimension": "building",
-      "measurementClass": "P",
-      "r": 0.76,
-      "wealthProxyPrior": 0.5,
-      "flaggedAsWealthProxy": true
-    },
-    {
-      "indicatorId": "logistics_performance",
-      "dimension": "coordination",
-      "measurementClass": "P",
-      "r": 0.718,
-      "wealthProxyPrior": 0.5,
       "flaggedAsWealthProxy": true
     },
     {
@@ -515,14 +469,6 @@
       "flaggedAsWealthProxy": false
     },
     {
-      "indicatorId": "voice_and_accountability",
-      "dimension": "shared_purpose",
-      "measurementClass": "P",
-      "r": 0.506,
-      "wealthProxyPrior": 0.35,
-      "flaggedAsWealthProxy": false
-    },
-    {
       "indicatorId": "failure_tolerance",
       "dimension": "experimentation",
       "measurementClass": "P",
@@ -613,66 +559,6 @@
   ],
   "redundantIndicatorPairs": [
     {
-      "a": "logistics_performance",
-      "b": "logistics_infrastructure",
-      "r": 0.988,
-      "n": 16
-    },
-    {
-      "a": "rule_of_law",
-      "b": "control_of_corruption",
-      "r": 0.973,
-      "n": 16
-    },
-    {
-      "a": "government_effectiveness",
-      "b": "regulatory_quality",
-      "r": 0.959,
-      "n": 16
-    },
-    {
-      "a": "regulatory_quality",
-      "b": "control_of_corruption",
-      "r": 0.947,
-      "n": 16
-    },
-    {
-      "a": "regulatory_quality",
-      "b": "rule_of_law",
-      "r": 0.945,
-      "n": 16
-    },
-    {
-      "a": "government_effectiveness",
-      "b": "rule_of_law",
-      "r": 0.93,
-      "n": 16
-    },
-    {
-      "a": "sci_articles_per_million",
-      "b": "government_effectiveness",
-      "r": 0.912,
-      "n": 16
-    },
-    {
-      "a": "sci_articles_per_million",
-      "b": "logistics_infrastructure",
-      "r": 0.911,
-      "n": 16
-    },
-    {
-      "a": "government_effectiveness",
-      "b": "control_of_corruption",
-      "r": 0.91,
-      "n": 16
-    },
-    {
-      "a": "sci_articles_per_million",
-      "b": "regulatory_quality",
-      "r": 0.909,
-      "n": 16
-    },
-    {
       "a": "sci_articles_per_million",
       "b": "account_ownership",
       "r": 0.905,
@@ -685,34 +571,16 @@
       "n": 16
     },
     {
-      "a": "regulatory_quality",
-      "b": "labour_productivity",
-      "r": 0.889,
-      "n": 16
-    },
-    {
       "a": "researchers_per_million",
       "b": "sci_articles_per_million",
       "r": 0.888,
       "n": 15
     },
     {
-      "a": "sci_articles_per_million",
-      "b": "logistics_performance",
-      "r": 0.887,
-      "n": 16
-    },
-    {
       "a": "researchers_per_million",
-      "b": "logistics_infrastructure",
-      "r": 0.885,
+      "b": "homicide_rate",
+      "r": 0.882,
       "n": 15
-    },
-    {
-      "a": "account_ownership",
-      "b": "government_effectiveness",
-      "r": 0.884,
-      "n": 16
     },
     {
       "a": "researchers_per_million",
@@ -722,39 +590,9 @@
     },
     {
       "a": "researchers_per_million",
-      "b": "government_effectiveness",
-      "r": 0.88,
-      "n": 15
-    },
-    {
-      "a": "government_effectiveness",
-      "b": "labour_productivity",
-      "r": 0.88,
-      "n": 16
-    },
-    {
-      "a": "researchers_per_million",
       "b": "human_capital_index",
       "r": 0.878,
       "n": 15
-    },
-    {
-      "a": "regulatory_quality",
-      "b": "human_capital_index",
-      "r": 0.873,
-      "n": 16
-    },
-    {
-      "a": "account_ownership",
-      "b": "logistics_infrastructure",
-      "r": 0.87,
-      "n": 16
-    },
-    {
-      "a": "government_effectiveness",
-      "b": "human_capital_index",
-      "r": 0.87,
-      "n": 16
     },
     {
       "a": "sci_articles_per_million",
@@ -775,28 +613,10 @@
       "n": 16
     },
     {
-      "a": "account_ownership",
-      "b": "logistics_performance",
-      "r": 0.865,
-      "n": 16
-    },
-    {
-      "a": "sci_articles_per_million",
-      "b": "rule_of_law",
-      "r": 0.862,
-      "n": 16
-    },
-    {
       "a": "rd_expenditure_gdp",
       "b": "researchers_per_million",
       "r": 0.859,
       "n": 15
-    },
-    {
-      "a": "secure_internet_servers",
-      "b": "regulatory_quality",
-      "r": 0.858,
-      "n": 16
     }
   ],
   "measurability": [
@@ -805,6 +625,7 @@
       "indicatorsDefined": 7,
       "indicatorsObserved": 5,
       "gaps": 2,
+      "retired": 0,
       "meanCoverage": 0.705,
       "meanConfidence": 0.617,
       "classMix": {
@@ -820,6 +641,7 @@
       "indicatorsDefined": 8,
       "indicatorsObserved": 6,
       "gaps": 2,
+      "retired": 0,
       "meanCoverage": 0.742,
       "meanConfidence": 0.595,
       "classMix": {
@@ -833,10 +655,11 @@
     {
       "dimension": "coordination",
       "indicatorsDefined": 7,
-      "indicatorsObserved": 4,
+      "indicatorsObserved": 1,
       "gaps": 3,
-      "meanCoverage": 0.571,
-      "meanConfidence": 0.463,
+      "retired": 3,
+      "meanCoverage": 0.143,
+      "meanConfidence": 0.079,
       "classMix": {
         "C": 4,
         "I": 0,
@@ -847,24 +670,26 @@
     },
     {
       "dimension": "trust",
-      "indicatorsDefined": 6,
-      "indicatorsObserved": 3,
+      "indicatorsDefined": 7,
+      "indicatorsObserved": 2,
       "gaps": 3,
-      "meanCoverage": 0.5,
-      "meanConfidence": 0.409,
+      "retired": 2,
+      "meanCoverage": 0.286,
+      "meanConfidence": 0.201,
       "classMix": {
         "C": 1,
         "I": 0,
-        "O": 0,
+        "O": 1,
         "P": 5
       },
-      "subjectivityShare": 0.833
+      "subjectivityShare": 0.714
     },
     {
       "dimension": "learning",
       "indicatorsDefined": 7,
       "indicatorsObserved": 5,
       "gaps": 2,
+      "retired": 0,
       "meanCoverage": 0.696,
       "meanConfidence": 0.51,
       "classMix": {
@@ -880,6 +705,7 @@
       "indicatorsDefined": 8,
       "indicatorsObserved": 4,
       "gaps": 4,
+      "retired": 0,
       "meanCoverage": 0.492,
       "meanConfidence": 0.372,
       "classMix": {
@@ -895,6 +721,7 @@
       "indicatorsDefined": 8,
       "indicatorsObserved": 4,
       "gaps": 4,
+      "retired": 0,
       "meanCoverage": 0.5,
       "meanConfidence": 0.472,
       "classMix": {
@@ -908,10 +735,11 @@
     {
       "dimension": "building",
       "indicatorsDefined": 8,
-      "indicatorsObserved": 6,
+      "indicatorsObserved": 5,
       "gaps": 2,
-      "meanCoverage": 0.75,
-      "meanConfidence": 0.641,
+      "retired": 1,
+      "meanCoverage": 0.625,
+      "meanConfidence": 0.542,
       "classMix": {
         "C": 3,
         "I": 0,
@@ -923,10 +751,11 @@
     {
       "dimension": "shared_purpose",
       "indicatorsDefined": 7,
-      "indicatorsObserved": 3,
+      "indicatorsObserved": 2,
       "gaps": 4,
-      "meanCoverage": 0.42,
-      "meanConfidence": 0.387,
+      "retired": 1,
+      "meanCoverage": 0.277,
+      "meanConfidence": 0.251,
       "classMix": {
         "C": 2,
         "I": 0,
@@ -939,20 +768,15 @@
   "gdpStrippedTest": {
     "excluded": [
       "labour_productivity",
-      "regulatory_quality",
-      "government_effectiveness",
       "human_capital_index",
       "sci_articles_per_million",
       "internet_users",
       "researchers_per_million",
-      "control_of_corruption",
-      "rule_of_law",
       "secure_internet_servers",
       "broadband_subscriptions",
       "account_ownership",
+      "homicide_rate",
       "high_tech_exports_share",
-      "logistics_infrastructure",
-      "logistics_performance",
       "labor_force_participation",
       "business_start_procedures",
       "domestic_credit_private"
@@ -969,11 +793,11 @@
       },
       {
         "dimension": "coordination",
-        "meanAbsShift": 23.88
+        "meanAbsShift": 0
       },
       {
         "dimension": "trust",
-        "meanAbsShift": 17.86
+        "meanAbsShift": 12.53
       },
       {
         "dimension": "learning",
@@ -989,7 +813,7 @@
       },
       {
         "dimension": "building",
-        "meanAbsShift": 9.01
+        "meanAbsShift": 5.98
       },
       {
         "dimension": "shared_purpose",
@@ -1000,82 +824,82 @@
       {
         "iso3": "BRA",
         "country": "Brazil",
-        "meanAbsShift": 9.24
+        "meanAbsShift": 4.36
       },
       {
         "iso3": "USA",
         "country": "United States",
-        "meanAbsShift": 6.52
+        "meanAbsShift": 5.08
       },
       {
         "iso3": "NLD",
         "country": "Netherlands",
-        "meanAbsShift": 9.56
+        "meanAbsShift": 4.76
       },
       {
         "iso3": "CHE",
         "country": "Switzerland",
-        "meanAbsShift": 10.04
+        "meanAbsShift": 5.42
       },
       {
         "iso3": "SGP",
         "country": "Singapore",
-        "meanAbsShift": 10.63
+        "meanAbsShift": 8.57
       },
       {
         "iso3": "KOR",
         "country": "South Korea",
-        "meanAbsShift": 11.93
+        "meanAbsShift": 9.12
       },
       {
         "iso3": "EST",
         "country": "Estonia",
-        "meanAbsShift": 10.77
+        "meanAbsShift": 6.58
       },
       {
         "iso3": "IND",
         "country": "India",
-        "meanAbsShift": 8.97
+        "meanAbsShift": 8.52
       },
       {
         "iso3": "CHL",
         "country": "Chile",
-        "meanAbsShift": 5.5
+        "meanAbsShift": 6.21
       },
       {
         "iso3": "ZAF",
         "country": "South Africa",
-        "meanAbsShift": 7.2
+        "meanAbsShift": 5.59
       },
       {
         "iso3": "MEX",
         "country": "Mexico",
-        "meanAbsShift": 20.71
+        "meanAbsShift": 11.84
       },
       {
         "iso3": "ARG",
         "country": "Argentina",
-        "meanAbsShift": 10.31
+        "meanAbsShift": 5.61
       },
       {
         "iso3": "COL",
         "country": "Colombia",
-        "meanAbsShift": 6.54
+        "meanAbsShift": 6.27
       },
       {
         "iso3": "PER",
         "country": "Peru",
-        "meanAbsShift": 12.98
+        "meanAbsShift": 6.58
       },
       {
         "iso3": "URY",
         "country": "Uruguay",
-        "meanAbsShift": 7.93
+        "meanAbsShift": 3.79
       },
       {
         "iso3": "CRI",
         "country": "Costa Rica",
-        "meanAbsShift": 13.84
+        "meanAbsShift": 7.07
       }
     ],
     "rankChanges": [
@@ -1089,11 +913,11 @@
       },
       {
         "dimension": "coordination",
-        "changedPositions": 12
+        "changedPositions": 0
       },
       {
         "dimension": "trust",
-        "changedPositions": 12
+        "changedPositions": 13
       },
       {
         "dimension": "learning",
@@ -1109,7 +933,7 @@
       },
       {
         "dimension": "building",
-        "changedPositions": 15
+        "changedPositions": 10
       },
       {
         "dimension": "shared_purpose",
@@ -1148,6 +972,27 @@
     },
     {
       "dimension": "coordination",
+      "indicatorId": "government_effectiveness",
+      "name": "Government effectiveness",
+      "publisher": "World Bank",
+      "reason": "Retired 2026-08-26. The WGI aggregate the opinions of experts and firms, and in this set the four WGI series correlate with each other between 0.93 and 0.98 while correlating with log GDP per capita at 0.91. That is one perception of national wealth counted in three dimensions. Cross-agency delivery records are the replacement and they are a declared gap. See D23 and A4."
+    },
+    {
+      "dimension": "coordination",
+      "indicatorId": "regulatory_quality",
+      "name": "Regulatory quality",
+      "publisher": "World Bank",
+      "reason": "Retired 2026-08-26. Same measurement as government effectiveness, filed under a different name, correlating with it above 0.93. See D23 and A4."
+    },
+    {
+      "dimension": "coordination",
+      "indicatorId": "logistics_performance",
+      "name": "Logistics performance",
+      "publisher": "World Bank",
+      "reason": "Retired 2026-08-26. The LPI is a survey of international freight forwarders, so it records how a country looks to global logistics firms. A small country with a small port scores low whatever its state can organise, which is artefact A9. Container throughput and border time are observable and stay. See D23."
+    },
+    {
+      "dimension": "coordination",
       "indicatorId": "university_industry_collaboration",
       "name": "University-industry collaboration",
       "publisher": "Global Innovation Index",
@@ -1166,6 +1011,20 @@
       "name": "Public-private collaboration",
       "publisher": "none",
       "reason": "No comparable dataset. PPP investment databases measure infrastructure finance, not collaboration capacity."
+    },
+    {
+      "dimension": "trust",
+      "indicatorId": "rule_of_law",
+      "name": "Rule of law",
+      "publisher": "World Bank",
+      "reason": "Retired 2026-08-26. A WGI perception composite correlating with control of corruption above 0.95 and with log GDP per capita at 0.83. Court throughput and case clearance rates are the observable replacement and are a declared gap. See D23 and A4."
+    },
+    {
+      "dimension": "trust",
+      "indicatorId": "control_of_corruption",
+      "name": "Control of corruption",
+      "publisher": "World Bank",
+      "reason": "Retired 2026-08-26. A WGI perception composite. It measures reputation for corruption, which is not the same thing as corruption, and it tracks income closely. Prosecution and audit records are the observable replacement and are a declared gap. See D23 and A4."
     },
     {
       "dimension": "trust",
@@ -1260,6 +1119,13 @@
     },
     {
       "dimension": "building",
+      "indicatorId": "logistics_infrastructure",
+      "name": "Logistics infrastructure quality",
+      "publisher": "World Bank",
+      "reason": "Retired 2026-08-26. An LPI sub-index, so the same freight-forwarder survey as logistics performance and the same problem. Electricity connection speed stays as the observable infrastructure measure in this dimension. See D23."
+    },
+    {
+      "dimension": "building",
       "indicatorId": "large_project_delivery",
       "name": "Large project delivery",
       "publisher": "none",
@@ -1271,6 +1137,13 @@
       "name": "Firm scale-up rate",
       "publisher": "OECD DynEmp",
       "reason": "OECD business dynamics work covers members irregularly. Nothing comparable for India, Brazil or South Africa."
+    },
+    {
+      "dimension": "shared_purpose",
+      "indicatorId": "voice_and_accountability",
+      "name": "Voice and accountability",
+      "publisher": "World Bank",
+      "reason": "Retired 2026-08-26. Artefact A5: it measures the democratic channel while Shared Purpose asks whether people can see themselves in a common project. Singapore scored 20.9 while being one of the most effective collective actors in the set. Voter turnout, volunteering and civic participation are the observable replacements and all are declared gaps. See D23 and A5."
     },
     {
       "dimension": "shared_purpose",

@@ -5,6 +5,7 @@ import {
   INDICATORS,
   INDICATORS_BY_ID,
   indicatorsFor,
+  isScored,
 } from '../model/index.js'
 import type { CountryResult, Dimension, MeasurementClass, Observation } from '../model/index.js'
 import { mean, pearson, round, spearman } from './stats.js'
@@ -90,6 +91,7 @@ export type Diagnostics = {
     indicatorsDefined: number
     indicatorsObserved: number
     gaps: number
+    retired: number
     meanCoverage: number
     meanConfidence: number
     classMix: Record<MeasurementClass, number>
@@ -182,12 +184,13 @@ export function runDiagnostics(
     const confidences = countries.map((c) => c.dimensions[dimension]?.confidence ?? 0)
     /** Perception proxies plus unmeasured items: what has to be judged rather than read off. */
     const subjective =
-      defs.filter((d) => d.measurementClass === 'P' || d.ingest === 'gap').length / defs.length
+      defs.filter((d) => d.measurementClass === 'P' || !isScored(d)).length / defs.length
     return {
       dimension,
       indicatorsDefined: defs.length,
       indicatorsObserved: observedIds.length,
       gaps: defs.filter((d) => d.ingest === 'gap').length,
+      retired: defs.filter((d) => d.ingest === 'retired').length,
       meanCoverage: round(mean(coverages), 3),
       meanConfidence: round(mean(confidences), 3),
       classMix,
@@ -239,7 +242,7 @@ export function runDiagnostics(
     return { dimension, changedPositions: changed }
   })
 
-  const dataGaps = INDICATORS.filter((d) => d.ingest === 'gap').map((d) => ({
+  const dataGaps = INDICATORS.filter((d) => !isScored(d)).map((d) => ({
     dimension: d.dimension,
     indicatorId: d.id,
     name: d.name,
@@ -265,7 +268,7 @@ export function runDiagnostics(
     gdpStrippedTest: {
       excluded,
       dimensionsEmptied: DIMENSIONS.filter((d) =>
-        indicatorsFor(d).every((i) => i.ingest === 'gap' || excluded.includes(i.id)),
+        indicatorsFor(d).every((i) => !isScored(i) || excluded.includes(i.id)),
       ),
       perDimensionMeanAbsShift,
       perCountryMeanAbsShift,

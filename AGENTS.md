@@ -91,6 +91,11 @@ port 3888.
 - `ingest: 'gap'` indicators stay in the registry. They lower confidence and
   they are the data-collection agenda. Do not delete them to make numbers look
   better.
+- `ingest: 'retired'` means a dataset exists and the project rejected it. Those
+  rows also stay, are not fetched, are not scored, and lower confidence exactly
+  as a gap does. Branch on `isScored(def)` from `@ncb/core`, never on
+  `ingest === 'gap'`. Retiring an indicator needs a decision entry naming the
+  evidence. See D23.
 - Delphi provenance is stored on the run file, never inferred from a model
   string. Branch on `isEvidential(run.provenance)` and `isPanel(run)`, both
   exported from `@ncb/core`. A `mock` run must never be presented as evidence,

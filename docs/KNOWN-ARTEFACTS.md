@@ -88,6 +88,12 @@ indicators, reported separately.
 said both dimensions empty out entirely under the GDP-stripped test. That was
 true of the ten-country run and it is no longer true.*
 
+**Acted on the same day. D23 retired every perception indicator named below.**
+Coordination fell from 0.90 to 0.68 against log GDP per capita and Trust from
+0.88 to 0.79. The cost is that Coordination now rests on one indicator and Trust
+on two, so both dimensions are barely measured. The table below describes the
+state before that change and is kept because it is the evidence for it.
+
 Both dimensions correlate with log GDP per capita at the dimension level:
 Coordination 0.90, Trust 0.88, on sixteen countries. Both lean on the Worldwide
 Governance Indicators, which are expert and firm perception composites that track
@@ -133,7 +139,7 @@ Coordination or Trust score as partly a statement about income per head.
 
 ## A4 — The four WGI series are one measurement wearing four names
 
-**Severity: medium.**
+**Severity: was medium. Closed 2026-08-26 by D23, which retired all four.**
 
 Government effectiveness, regulatory quality, rule of law and control of
 corruption correlate with each other between 0.93 and 0.98 across the ten
@@ -141,15 +147,16 @@ countries. They are spread across Coordination, Trust and Shared Purpose, so a
 single underlying perception measure is being counted three times in three
 different dimensions.
 
-**Fix.** Pick one WGI series per dimension at most, or collapse all four into a
-single institutional-quality indicator and let the dimensions differ on
-everything else.
+**Fixed.** None of them are scored any more. The recorded fix was to keep at most
+one, and the measurement-class analysis in D23 argued for keeping none: the four
+were the mechanism turning three dimensions into restatements of income per head.
+The rows stay in the registry as retired, with the reason on each.
 
 ---
 
 ## A5 — Voice and accountability is answering a different question in Shared Purpose
 
-**Severity: medium.**
+**Severity: was medium. Closed 2026-08-26 by D23, which retired the indicator.**
 
 `GOV_WGI_VA.EST` measures the democratic channel for participation. Shared Purpose
 asks whether people can see themselves in a common project. Singapore scores 20.9
@@ -160,8 +167,12 @@ and genuinely limited pluralism.
 The spec is explicit that political uniformity is not a capability, so the fix is
 not simply to raise Singapore.
 
-**Fix.** Shared Purpose needs behavioural indicators — civic participation,
-volunteering — not a democracy proxy. All are currently gaps.
+**Fixed by removal, not by replacement.** Voice and accountability is retired, so
+Singapore's 20.9 is gone and Shared Purpose fell from 0.34 to 0.18 against log
+GDP per capita. It now rests on two indicators, tax revenue and income
+inequality, at confidence 0.25. The behavioural measures it actually needs are
+civic participation and volunteering, both still gaps, plus voter turnout, which
+is published by International IDEA and would have to be entered by hand.
 
 ---
 
@@ -288,3 +299,31 @@ without which the gap cannot be promoted to an indicator.
 **Watch for.** The same reading error in reverse. A country with strong
 industrial output and a poor record of finishing public programmes scores well
 here, and the benchmark currently has no way to say so.
+
+---
+
+## A12 — Three dimensions are now scored on almost nothing
+
+**Severity: high. Created deliberately on 2026-08-26 by D23.**
+
+Retiring the perception layer removed the only indicators three dimensions had.
+
+| Dimension | Scored indicators | Confidence | What is left |
+| --- | ---: | ---: | --- |
+| Coordination | 1 of 7 | 0.079 | Time to export, frozen at 2019 |
+| Trust | 2 of 7 | 0.201 | Contract enforcement days at 2019, homicide rate |
+| Shared Purpose | 2 of 7 | 0.251 | Tax revenue, income inequality |
+
+The scores still print, and they move enough to mislead. Estonia scores 97.8 on
+Coordination and South Africa 0.0, both on one border-time measure from 2019.
+Brazil moved from 15.5 to 46.7 on Coordination without anything changing in
+Brazil.
+
+The viewer draws all three dashed with a marked axis, and the confidence band
+says do not quote them alone. That is the mitigation and it is not a fix.
+
+**Fix.** Land observable replacements: court throughput and case clearance,
+budget execution rates, cross-agency delivery records, voter turnout,
+volunteering, civic participation. Until at least two land per dimension, treat
+Coordination, Trust and Shared Purpose as unmeasured, and consider whether a
+dimension below a coverage floor should print a score at all.

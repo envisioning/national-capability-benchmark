@@ -117,7 +117,9 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
                               ? gapLabel(
                                   evidence.filter((e) => e.indicatorId === row.indicatorId).length,
                                 )
-                              : row.status}
+                              : row.status === 'retired'
+                                ? 'retired, see notes'
+                                : row.status}
                           </Td>
                         </tr>
                       )

@@ -575,3 +575,75 @@ which would let momentum use the whole dimension rather than a subset. A move to
 absolute anchoring would also change what a fixed ruler means and this decision
 would need restating.
 
+---
+
+## D23 — The perception layer is retired, and the cost is visible
+
+*Recorded 2026-08-26.*
+
+**Choice.** Seven indicators leave the scored set. They keep their rows, with
+`ingest: 'retired'`, which means a dataset exists and this project rejected it.
+Retired indicators are not fetched, not scored, and they lower coverage exactly
+as a gap does.
+
+| Retired | Dimension | Why |
+| --- | --- | --- |
+| Government effectiveness | Coordination | WGI perception composite |
+| Regulatory quality | Coordination | WGI, r 0.93 with the above |
+| Logistics performance | Coordination | Freight forwarder survey |
+| Rule of law | Trust | WGI perception composite |
+| Control of corruption | Trust | WGI, r 0.95 with the above |
+| Voice and accountability | Shared Purpose | WGI, and artefact A5 |
+| Logistics infrastructure | Building | The same freight forwarder survey |
+
+One indicator is added: intentional homicide rate, from the World Bank, in
+Trust. It is counted by police and health systems rather than reported as an
+opinion.
+
+**Why.** Grouping every scored indicator by its own measurement class showed
+that the wealth correlation was a property of the evidence, not of the
+dimensions. Perception indicators averaged 0.75 against log GDP per capita with
+75% above the wealth-proxy line. Direct capability measures averaged 0.55 with
+20% above it. The benchmark exists to avoid reproducing a development ranking,
+and the perception layer was the mechanism reproducing it.
+
+Effect on the wealth correlation:
+
+| Dimension | Before | After |
+| --- | ---: | ---: |
+| Coordination | 0.90 | 0.68 |
+| Trust | 0.88 | 0.79 |
+| Building | 0.82 | 0.78 |
+| Shared Purpose | 0.34 | 0.18 |
+
+Coordination drops below the wealth-proxy line. The anticipation and
+coordination pair, which correlated at 0.94 and was the strongest duplicate
+candidate in the model, is no longer flagged. One duplicate pair remains,
+anticipation and agency at 0.94. One perception indicator remains in the whole
+scored set: GEM fear of failure, which is a self-report about the respondent
+rather than a judgement about the country.
+
+**Cost. This is the important part.**
+
+- Coordination now rests on one indicator, time to export, frozen at 2019.
+  Confidence falls from 0.46 to 0.079. Trust rests on two and falls to 0.20.
+  Shared Purpose rests on two and falls to 0.25. Those three dimensions are
+  effectively unmeasured, and the scores they print should be read as such. The
+  radar draws them dashed, the tables print the band, and the numbers still
+  move enough to mislead a casual reader. That is a real risk this decision
+  accepts on purpose, because the alternative is a number that looks solid and
+  measures income.
+- Estonia scores 97.8 on Coordination and South Africa scores 0.0, both on a
+  single 2019 border-time measure. Neither is a finding.
+- The replacement is not income-free. Homicide correlates with log GDP per
+  capita at 0.77 in this set, above the threshold. The difference is that the
+  mechanism is visible and arguable rather than definitional.
+- Momentum baskets shrink where retired series carried them.
+
+**Overturned by.** Observable replacements: court throughput and case clearance,
+budget execution rates, cross-agency programme delivery, voter turnout,
+volunteering rates, civic participation. Each one that lands raises the coverage
+this decision knocked down. If none land, the honest conclusion is that
+Coordination and Trust cannot be measured with public data, and they should be
+reported as unmeasured rather than scored.
+

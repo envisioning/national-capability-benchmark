@@ -89,7 +89,7 @@ export function indicatorJudgementPrompt(panelist: Panelist, dimension: Dimensio
   unit: ${d.unit}
   currently filed as: ${d.measurementClass} (${MEASUREMENT_CLASS_LABELS[d.measurementClass]})
   direction: ${d.direction}
-  source: ${d.source.publisher}${d.source.series ? ` ${d.source.series}` : ''} (${d.ingest === 'gap' ? 'no data available' : d.ingest})
+  source: ${d.source.publisher}${d.source.series ? ` ${d.source.series}` : ''} (${d.ingest === 'gap' ? 'no data available' : d.ingest === 'retired' ? 'disqualified, not scored' : d.ingest})
   our note: ${d.notes}`,
     )
     .join('\n')

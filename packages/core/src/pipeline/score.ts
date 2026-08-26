@@ -6,6 +6,7 @@ import {
   INDICATORS,
   SOURCE_TIERS,
   indicatorsFor,
+  isScored,
 } from '../model/index.js'
 import type {
   CountryResult,
@@ -111,7 +112,7 @@ export function buildFrames(
   const byKey = latest(observations)
   const frames = new Map<string, Frame>()
   for (const def of INDICATORS) {
-    if (def.ingest === 'gap') continue
+    if (!isScored(def)) continue
     if (opts.exclude?.has(def.id)) continue
     const rows = transformedRows(def, byKey)
     const frame = buildFrame(
@@ -129,7 +130,7 @@ export function buildMatrix(observations: Observation[], opts: ScoreOptions): Ma
   const matrix: Matrix = new Map()
 
   for (const def of INDICATORS) {
-    if (def.ingest === 'gap') continue
+    if (!isScored(def)) continue
     if (opts.exclude?.has(def.id)) continue
 
     const rows = transformedRows(def, byKey)
@@ -157,7 +158,14 @@ export function buildMatrix(observations: Observation[], opts: ScoreOptions): Ma
 }
 
 function indicatorRow(def: IndicatorDef, cell: Cell | undefined): IndicatorResult {
-  const status = def.ingest === 'gap' ? 'gap' : cell ? 'observed' : 'missing'
+  const status =
+    def.ingest === 'gap'
+      ? 'gap'
+      : def.ingest === 'retired'
+        ? 'retired'
+        : cell
+          ? 'observed'
+          : 'missing'
   return {
     indicatorId: def.id,
     name: def.name,

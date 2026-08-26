@@ -66,8 +66,11 @@ export const IndicatorDef = z.object({
    * - worldbank: fetched live from the World Bank v2 API by `source.series`
    * - manual: a value a human entered into data/observations/manual.json
    * - gap: no adequate international dataset exists yet; deliberately unmeasured
+   * - retired: a dataset exists and this project disqualified it. The row stays
+   *   so the reason stays auditable. Retired indicators are not fetched and not
+   *   scored, and they lower coverage exactly as a gap does. See D23.
    */
-  ingest: z.enum(['worldbank', 'manual', 'gap']),
+  ingest: z.enum(['worldbank', 'manual', 'gap', 'retired']),
   /** Denominator series, for transform = per_million_population. */
   denominatorSeries: z.string().optional(),
   /**
@@ -189,7 +192,7 @@ export const IndicatorResult = z.object({
   winsorized: z.boolean(),
   /** The value sat outside the reference frame, so the score was clamped to 0 or 100. */
   outOfFrame: z.boolean().default(false),
-  status: z.enum(['observed', 'missing', 'gap']),
+  status: z.enum(['observed', 'missing', 'gap', 'retired']),
 })
 export type IndicatorResult = z.infer<typeof IndicatorResult>
 

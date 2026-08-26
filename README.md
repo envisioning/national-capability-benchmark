@@ -72,22 +72,22 @@ about any country.
 Run `pnpm bench report` and read `data/out/report.md`. The headline results from
 the first run:
 
-- **Coordination and Trust are carried by perception measures that track
-  income.** Remove every indicator correlating with log GDP per capita at
-  |r| ≥ 0.7 and each dimension keeps one indicator, both frozen at 2019, and the
-  scores move by 24 and 18 points. Every indicator that fails that test is a
-  perception proxy.
-- **Shared Purpose is the only dimension that does not track wealth** (r ≈ 0.20).
-  It is also the one with the weakest evidence base, so that independence is
-  cheap.
+- **The wealth correlation was a property of the evidence class, not of the
+  dimensions.** Perception indicators averaged 0.75 against log GDP per capita.
+  Direct capability measures averaged 0.55. Retiring the perception layer took
+  Coordination from 0.90 to 0.68, Trust from 0.88 to 0.79 and Shared Purpose
+  from 0.34 to 0.18, and dissolved the strongest duplicate pair in the model.
+- **The cost is three dimensions with almost no evidence left.** Coordination
+  now rests on one indicator, Trust and Shared Purpose on two. Read artefact A12
+  before quoting any of the three.
 - **Experimentation was the least measurable dimension** and is now the least
   wealth-tracking one. Patents and trademarks used to carry it alone. With GEM
   early-stage entrepreneurial activity and fear of failure wired, four of eight
   indicators are observed, confidence rises from 0.18 to 0.39, and the
   correlation with income per head falls to 0.57. Four indicators are still
   gaps.
-- The four Worldwide Governance Indicators correlate with each other above 0.92.
-  They are one measurement wearing four names.
+- The four Worldwide Governance Indicators correlated with each other above 0.92.
+  They were one measurement wearing four names, and none of them are scored now.
 - Switzerland, Singapore and Estonia do come out with genuinely different
   shapes, which is the main thing the prototype had to demonstrate.
 

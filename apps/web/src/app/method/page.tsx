@@ -5,13 +5,15 @@ import {
   DIMENSION_QUESTIONS,
   INDICATORS,
   REFERENCE_ISO3,
+  isScored,
   SOURCE_TIERS,
 } from '@ncb/core'
 import { Scroller, Section, Table, Td, Th } from '@/components/ui'
 
 export default function MethodPage() {
   const gaps = INDICATORS.filter((i) => i.ingest === 'gap').length
-  const wired = INDICATORS.length - gaps
+  const retired = INDICATORS.filter((i) => i.ingest === 'retired').length
+  const wired = INDICATORS.filter(isScored).length
   const manual = INDICATORS.filter((i) => i.ingest === 'manual').length
 
   return (
@@ -61,11 +63,13 @@ export default function MethodPage() {
           challenge and no more defensible.
         </p>
         <p className="mt-4 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-          Of {INDICATORS.length} indicators, {wired} carry data and {gaps} are declared gaps. The
-          spec asks for those {gaps} and no comparable dataset exists that we can inspect. They stay
-          in the registry, they lower confidence, and they are the data collection agenda.{' '}
-          {manual} are entered by hand from a published source that has no API, with the retrieval
-          date stored on every value.
+          Of {INDICATORS.length} indicators, {wired} carry data, {gaps} are declared gaps and{' '}
+          {retired} are retired. A gap is something the spec asks for that no comparable dataset
+          covers. A retired indicator has a dataset that this project rejected, so far always a
+          perception composite. Both stay in the registry, both lower confidence, and both are the
+          data collection agenda.{' '}
+          {manual} values are entered by hand from a published source with no API, with the
+          retrieval date stored on every value.
         </p>
       </Section>
 

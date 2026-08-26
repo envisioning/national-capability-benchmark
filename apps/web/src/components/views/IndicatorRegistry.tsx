@@ -1,6 +1,6 @@
 'use client'
 
-import { DIMENSIONS, DIMENSION_LABELS, INDICATORS, indicatorsFor } from '@ncb/core'
+import { DIMENSIONS, DIMENSION_LABELS, INDICATORS, indicatorsFor, isScored } from '@ncb/core'
 import type { IndicatorDef } from '@ncb/core'
 import { DataTable } from '@/components/DataTable'
 import { ClassBadge, Section } from '@/components/ui'
@@ -9,11 +9,12 @@ const muted = (v: React.ReactNode) => <span className="text-[var(--muted)]">{v}<
 
 export function IndicatorRegistry() {
   const gaps = INDICATORS.filter((i) => i.ingest === 'gap').length
+  const retired = INDICATORS.filter((i) => i.ingest === 'retired').length
 
   return (
     <Section
       title="Every indicator is on the record, including the missing ones"
-      hint={`${INDICATORS.length} indicators. ${gaps} of them are declared gaps, where the model asks for something no adequate international dataset covers. Gaps stay here because they lower the confidence scores and because they are the collection agenda. Click any heading to sort.`}
+      hint={`${INDICATORS.length} indicators. ${gaps} are declared gaps, where the model asks for something no adequate international dataset covers. ${retired} are retired: a dataset exists and this project rejected it, which so far means perception composites that measure how a country looks rather than what it does. Both kinds stay here because they lower the confidence scores and because they are the collection agenda. Click any heading to sort.`}
     >
       {DIMENSIONS.map((d) => (
         <div key={d} className="mb-10">
@@ -28,13 +29,13 @@ export function IndicatorRegistry() {
                 label: 'Indicator',
                 sort: (i: IndicatorDef) => i.name,
                 render: (i: IndicatorDef) => (
-                  <span className={i.ingest === 'gap' ? 'text-[var(--muted)]' : undefined}>
+                  <span className={isScored(i) ? undefined : 'text-[var(--muted)]'}>
                     {i.name}
-                    {i.ingest === 'gap' ? (
+                    {isScored(i) ? null : (
                       <span className="ml-2 rounded-md border border-[var(--rule)] px-1.5 py-0.5 text-xs">
-                        no dataset
+                        {i.ingest === 'gap' ? 'no dataset' : 'retired'}
                       </span>
-                    ) : null}
+                    )}
                   </span>
                 ),
               },
