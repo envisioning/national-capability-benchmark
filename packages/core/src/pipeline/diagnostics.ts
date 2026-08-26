@@ -19,12 +19,16 @@ export const WEALTH_CORRELATION_THRESHOLD = 0.7
 export const REDUNDANCY_THRESHOLD = 0.85
 
 function logGdpByCountry(observations: Observation[], series: string): Map<string, number> {
-  const out = new Map<string, number>()
+  /* The observation file carries every year, so pick the latest one per country
+   * rather than the first row encountered. */
+  const latest = new Map<string, { value: number; year: number }>()
   for (const o of observations) {
     if (o.indicatorId !== `${CONTEXT_PREFIX}${series}`) continue
-    const prev = out.get(o.iso3)
-    if (prev === undefined) out.set(o.iso3, Math.log10(o.value))
+    const cur = latest.get(o.iso3)
+    if (!cur || o.year > cur.year) latest.set(o.iso3, { value: o.value, year: o.year })
   }
+  const out = new Map<string, number>()
+  for (const [iso3, v] of latest) out.set(iso3, Math.log10(v.value))
   return out
 }
 
@@ -192,7 +196,12 @@ export function runDiagnostics(
   })
 
   const excluded = indicatorVsGdp.filter((i) => i.flaggedAsWealthProxy).map((i) => i.indicatorId)
-  const stripped = scoreAll(observations, { ...opts, exclude: new Set(excluded) })
+  /* The strip test compares levels, so skip the trend work it does not read. */
+  const stripped = scoreAll(observations, {
+    ...opts,
+    exclude: new Set(excluded),
+    momentumSpan: 0,
+  })
 
   const perDimensionMeanAbsShift = DIMENSIONS.map((dimension) => {
     const shifts: number[] = []

@@ -32,6 +32,11 @@ spec asks for them and no adequate internationally comparable dataset exists
 that passes the inspectability rule. Gaps stay in the registry, lower the confidence
 score, and form the data-collection agenda.
 
+**Momentum.** Ingestion keeps every year, scoring reads the latest, and each
+dimension also carries the change over ten years. History is normalized against
+the frame in use today and computed on the indicators observed at both ends, so
+a trend is a change in the country instead of a change in the scale. See D22.
+
 **Evidence records.** `data/evidence/records.json` documents a delivery that a
 gap indicator cannot see, with one published number, a source, a reference
 period and a required statement of what the case does not show. Records never

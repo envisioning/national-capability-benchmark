@@ -11,12 +11,14 @@ import { CountryDimensionTable } from '@/components/views/CountryDimensionTable'
 import { EvidenceList } from '@/components/views/EvidenceList'
 import {
   ClassBadge,
+  Delta,
   ConfidenceBar,
   Eyebrow,
   PageTitle,
   Score,
   Scroller,
   Section,
+  Sparkline,
   Table,
   Td,
   Th,
@@ -64,6 +66,18 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
         return (
           <div key={d} id={d} className="scroll-mt-20">
             <Section title={DIMENSION_LABELS[d]} hint={DIMENSION_QUESTIONS[d]}>
+              {dim.momentum ? (
+                <div className="mb-6 flex flex-wrap items-center gap-x-4 gap-y-2">
+                  <Sparkline series={dim.momentum.series} />
+                  <p className="text-xs leading-relaxed text-[var(--muted)]">
+                    <Delta value={dim.momentum.delta} /> since {dim.momentum.baseYear}, from{' '}
+                    {dim.momentum.baseScore.toFixed(1)} to {dim.momentum.currentScore.toFixed(1)} on
+                    the {dim.momentum.matchedIndicators} indicators observed in both years. That
+                    basket is smaller than the score above, and it is measured against the frame in
+                    use today.
+                  </p>
+                </div>
+              ) : null}
               <Scroller>
                 <Table>
                   <thead>

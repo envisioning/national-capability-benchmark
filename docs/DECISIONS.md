@@ -517,3 +517,61 @@ What changed:
 covers the reference set, or a GEM licensing change that stops the data being
 usable this way.
 
+---
+
+## D22 — Momentum is measured on one ruler and a matched basket
+
+*Recorded 2026-08-26.*
+
+**Choice.** Ingestion keeps every year the World Bank returns from the start year
+rather than the latest value alone. Scoring still reads only the latest value, so
+no score moves. On top of that history, every country and dimension carries a
+`momentum` object: the change in score over ten years, plus the yearly series
+behind it.
+
+Two rules make the number mean something.
+
+1. **One ruler.** Historical values are normalised against the frame built from
+   the reference countries' *current* values. The scale does not move, so a
+   change in the score is a change in the country. A value outside today's frame
+   clamps and the clamp is counted in `momentum.clamped`.
+2. **A matched basket.** Only indicators observed at both ends of the span enter,
+   and that same basket is used for every year in between. A dimension that
+   gained an indicator would otherwise show movement belonging to the dataset.
+   The basket is reported with its size, and `baseScore` and `currentScore`
+   describe the basket rather than the headline score.
+
+A trend is reported when the basket holds at least two indicators and covers at
+least half of what the country is currently scored on in that dimension. An
+observation older than five years does not count toward a year.
+
+**Why.** Capability is a rate as much as a level. Every existing index publishes
+levels, and levels on public data reproduce the development ranking, which is
+the failure this benchmark exists to avoid. Direction is where the analytical
+value is, and the data to compute it was already being fetched and thrown away.
+
+The first run says something the levels cannot. Brazil sits near the floor on
+Agency at 31 and has moved +26.2 points in ten years against a median of +12.7.
+Coordination fell in 11 of 16 countries. Estonia lost 14.2 points on
+Adaptability. India lost 19.3 on Learning.
+
+**Cost.**
+
+- The observation file grows from 203 KB to 3.6 MB. It is still plain JSON and
+  still inspectable.
+- Momentum and score sit on different baskets, so the two numbers are not
+  directly comparable. Every surface that prints a trend prints the basket size
+  next to it.
+- Several indicators track worldwide technology diffusion, so almost every
+  country rises on Anticipation and Agency. A positive number is not evidence of
+  catching up. The report prints the median change per dimension for that reason.
+- Ten years is a choice. A longer span covers fewer indicators and a shorter one
+  is mostly noise.
+- Doing Business indicators are frozen at 2019, so any basket containing them
+  measures a shorter period than it claims.
+
+**Overturned by.** Enough indicator history to score a full basket at both ends,
+which would let momentum use the whole dimension rather than a subset. A move to
+absolute anchoring would also change what a fixed ruler means and this decision
+would need restating.
+

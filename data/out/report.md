@@ -1,6 +1,6 @@
 # National Capability Benchmark, prototype v0
 
-Generated 2026-08-26T14:11:58.975Z. 16 countries, nine dimensions, equal weights within each dimension, no headline ranking.
+Generated 2026-08-26T18:17:27.618Z. 16 countries, nine dimensions, equal weights within each dimension, no headline ranking.
 
 Scores run against a frame fixed by the 10 reference countries. 6 countries were added after that frame was set and are marked below. Adding them did not move any existing score.
 
@@ -46,6 +46,45 @@ Confidence is reported separately and never folded into the score above. Each ce
 | Peru | 0.52 usable | 0.61 usable | 0.46 usable | 0.41 thin | 0.49 usable | 0.39 thin | 0.47 usable | 0.64 usable | 0.37 thin |
 | Uruguay | 0.66 good | 0.61 usable | 0.46 usable | 0.41 thin | 0.54 usable | 0.34 thin | 0.47 usable | 0.64 usable | 0.41 thin |
 | Costa Rica | 0.64 usable | 0.61 usable | 0.46 usable | 0.41 thin | 0.50 usable | 0.39 thin | 0.47 usable | 0.64 usable | 0.41 thin |
+
+## Where each country is moving, on the same ruler
+
+Change in dimension score between 2016 and 2026, scored against the current frame so the scale holds still, and computed only on the indicators observed at both ends. That matched basket is smaller than the full dimension, so these numbers move on a different base from the scores above.
+
+| Country | Anticipation | Agency | Coordination | Trust | Learning | Experimentation | Adaptability | Building / Execution | Shared Purpose |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Brazil | +20.0 (4) | +26.2 (4) | -1.4 (3) | -7.6 (2) | +4.5 (2) | +8.5 (2) | +17.7 (4) | +0.3 (5) | +3.9 (3) |
+| United States | +17.7 (5) | +20.4 (3) | -8.8 (3) | -13.1 (2) | +6.2 (2) | -3.0 (2) | +6.6 (4) | -0.7 (5) | -7.5 (3) |
+| Netherlands | +23.9 (5) | +1.6 (4) | -8.3 (3) | -1.2 (2) | 0.0 (2) | no data | +8.1 (4) | -0.8 (5) | +8.1 (3) |
+| Switzerland | +16.2 (5) | +9.1 (3) | -2.4 (3) | 0.0 (2) | +4.8 (2) | +5.0 (2) | +3.9 (4) | +5.2 (5) | -0.5 (3) |
+| Singapore | +26.6 (5) | +19.4 (3) | +4.5 (3) | -3.4 (2) | +7.6 (2) | +8.9 (2) | +6.1 (4) | +11.3 (5) | -8.0 (2) |
+| South Korea | +37.9 (5) | +13.4 (4) | +6.7 (3) | +12.3 (2) | +33.6 (2) | +20.1 (2) | +8.7 (4) | +6.4 (5) | +5.0 (3) |
+| Estonia | +26.0 (5) | +11.8 (4) | +6.3 (3) | +10.6 (2) | +2.3 (3) | +8.6 (2) | -14.2 (4) | -0.2 (5) | +5.2 (3) |
+| India | 0.0 (3) | +10.9 (4) | +2.1 (3) | +0.8 (2) | -19.3 (3) | 0.0 (2) | +9.2 (4) | +1.4 (5) | -11.0 (3) |
+| Chile | +20.8 (5) | +17.9 (4) | -13.3 (3) | -6.7 (2) | +3.8 (2) | +8.6 (2) | +0.6 (4) | -0.4 (5) | +1.8 (3) |
+| South Africa | +15.5 (5) | +3.4 (4) | -12.0 (3) | -5.8 (2) | +10.4 (2) | +0.5 (2) | +0.4 (4) | -3.0 (5) | +2.5 (3) |
+| Mexico | +12.9 (5) | +12.0 (4) | -12.5 (3) | 0.0 (2) | -7.1 (2) | +2.5 (2) | +10.7 (4) | -1.1 (5) | +8.0 (3) |
+| Argentina | +13.6 (5) | +17.7 (4) | -1.8 (3) | -2.6 (2) | +2.1 (2) | +2.3 (2) | +2.7 (4) | -2.7 (5) | -4.3 (3) |
+| Colombia | +18.4 (3) | +8.0 (4) | -3.5 (3) | -0.6 (2) | no data | +1.0 (2) | +3.9 (4) | -1.6 (5) | -1.3 (3) |
+| Peru | +11.6 (4) | +11.8 (4) | -3.7 (3) | -2.4 (2) | no data | +2.1 (2) | -2.4 (4) | -1.0 (5) | +3.6 (3) |
+| Uruguay | +14.8 (5) | +21.1 (4) | +0.1 (3) | +3.5 (2) | +18.8 (2) | no data | +7.7 (4) | -1.0 (5) | -7.4 (3) |
+| Costa Rica | +15.8 (5) | +14.3 (4) | -1.3 (3) | -0.2 (2) | no data | +3.0 (2) | +8.4 (4) | +5.2 (5) | +1.2 (3) |
+
+The number in brackets is how many indicators carry that cell. A dimension with no number has fewer than two indicators observed in both years, or a basket covering less than half of what it measures today.
+
+| Dimension | Median change across countries | Countries with a trend |
+| --- | --- | --- |
+| Anticipation | 17 | 16 |
+| Agency | 12.7 | 16 |
+| Coordination | -2.1 | 16 |
+| Trust | -0.9 | 16 |
+| Learning | 4.5 | 13 |
+| Experimentation | 2.8 | 14 |
+| Adaptability | 6.4 | 16 |
+| Building / Execution | -0.5 | 16 |
+| Shared Purpose | 1.5 | 16 |
+
+Read the median first. Several indicators in Anticipation and Agency measure adoption of things that spread worldwide, so almost every country rises and a positive number is not evidence of catching up. The country is gaining ground only where its change beats the median in that column.
 
 The strongest evidence base anywhere in this run scores 0.67, which is good. No country and dimension pair reaches the good band.
 

@@ -3,7 +3,7 @@
 import { DIMENSIONS, DIMENSION_LABELS } from '@ncb/core'
 import type { CountryResult } from '@ncb/core'
 import { DataTable } from '@/components/DataTable'
-import { ConfidenceBar, Score } from '@/components/ui'
+import { ConfidenceBar, Delta, Score } from '@/components/ui'
 
 export function CountryDimensionTable({ country }: { country: CountryResult }) {
   const rows = DIMENSIONS.map((d) => ({ d, dim: country.dimensions[d] })).filter(
@@ -53,6 +53,25 @@ export function CountryDimensionTable({ country }: { country: CountryResult }) {
           align: 'right',
           sort: (r) => r.dim.confidenceParts.recency,
           render: (r) => muted(r.dim.confidenceParts.recency.toFixed(2)),
+        },
+        {
+          key: 'momentum',
+          label: 'Since',
+          align: 'right',
+          sort: (r) => r.dim.momentum?.delta ?? null,
+          render: (r) => {
+            const m = r.dim.momentum
+            return (
+              <Delta
+                value={m?.delta ?? null}
+                title={
+                  m
+                    ? `Change since ${m.baseYear}, on the ${m.matchedIndicators} indicators observed in both years. ${m.baseScore.toFixed(1)} to ${m.currentScore.toFixed(1)} on that basket.`
+                    : 'Too few indicators observed in both years'
+                }
+              />
+            )
+          },
         },
         {
           key: 'panel',

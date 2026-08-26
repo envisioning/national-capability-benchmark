@@ -9,7 +9,7 @@ import { CONFIDENCE_BANDS, confidenceBand } from './confidence.js'
 import type { CountryResult, DelphiRunFile, Dimension } from '../model/index.js'
 import type { Diagnostics } from './diagnostics.js'
 import { cellConsensus, indicatorConsensus, missingEvidenceRanking } from '../delphi/consensus.js'
-import { round } from './stats.js'
+import { median, round } from './stats.js'
 
 function table(headers: string[], rows: Array<Array<string | number | null>>): string {
   const head = `| ${headers.join(' | ')} |`
@@ -67,6 +67,58 @@ export function buildReport(
     ),
   )
   out.push('')
+  out.push('## Where each country is moving, on the same ruler')
+  out.push('')
+  const spans = countries
+    .flatMap((c) => DIMENSIONS.map((d) => c.dimensions[d]?.momentum))
+    .filter((m): m is NonNullable<typeof m> => Boolean(m))
+  if (spans.length === 0) {
+    out.push('No dimension has enough indicators observed at both ends of the span.')
+    out.push('')
+  } else {
+    const baseYear = Math.min(...spans.map((m) => m.baseYear))
+    const currentYear = Math.max(...spans.map((m) => m.currentYear))
+    out.push(
+      `Change in dimension score between ${baseYear} and ${currentYear}, scored against the current frame so the scale holds still, and computed only on the indicators observed at both ends. That matched basket is smaller than the full dimension, so these numbers move on a different base from the scores above.`,
+    )
+    out.push('')
+    out.push(
+      table(
+        ['Country', ...DIMENSIONS.map((d) => DIMENSION_LABELS[d])],
+        countries.map((c) => [
+          c.country,
+          ...DIMENSIONS.map((d) => {
+            const m = c.dimensions[d]?.momentum
+            if (!m) return null
+            return `${m.delta > 0 ? '+' : ''}${m.delta.toFixed(1)} (${m.matchedIndicators})`
+          }),
+        ]),
+      ),
+    )
+    out.push('')
+    out.push(
+      'The number in brackets is how many indicators carry that cell. A dimension with no number has fewer than two indicators observed in both years, or a basket covering less than half of what it measures today.',
+    )
+    out.push('')
+    const medians = DIMENSIONS.map((d) => {
+      const deltas = countries
+        .map((c) => c.dimensions[d]?.momentum?.delta)
+        .filter((v): v is number => typeof v === 'number')
+      return { dimension: d, median: deltas.length ? round(median(deltas), 1) : null, n: deltas.length }
+    }).filter((r) => r.median !== null)
+    out.push(
+      table(
+        ['Dimension', 'Median change across countries', 'Countries with a trend'],
+        medians.map((r) => [DIMENSION_LABELS[r.dimension], r.median, r.n]),
+      ),
+    )
+    out.push('')
+    out.push(
+      'Read the median first. Several indicators in Anticipation and Agency measure adoption of things that spread worldwide, so almost every country rises and a positive number is not evidence of catching up. The country is gaining ground only where its change beats the median in that column.',
+    )
+    out.push('')
+  }
+
   const best = Math.max(
     ...countries.flatMap((c) => DIMENSIONS.map((d) => c.dimensions[d]?.confidence ?? 0)),
   )

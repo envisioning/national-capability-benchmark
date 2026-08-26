@@ -121,6 +121,36 @@ export default function MethodPage() {
       </Section>
 
       <Section
+        title="Momentum is measured on one ruler and a matched basket"
+        hint="A score says where a country stands. Momentum says which way it is going, over ten years, and two rules keep that number honest."
+      >
+        <ul className="max-w-3xl list-disc space-y-2 pl-5 text-lg leading-relaxed">
+          <li>
+            Historical values are scored against the frame in use today, so the scale holds still
+            and a change in the score is a change in the country.
+          </li>
+          <li>
+            Only indicators observed at both ends of the span count, and the same basket is used for
+            every year between. A dimension that gained an indicator would otherwise show movement
+            that belongs to the dataset.
+          </li>
+          <li>
+            The basket is smaller than the dimension, so its level differs from the headline score.
+            The number of indicators is printed next to every trend.
+          </li>
+          <li>
+            A value more than five years old does not count toward a year, and a country that sat
+            outside today's frame clamps at 0 or 100 with the clamp recorded.
+          </li>
+          <li>
+            Several indicators measure adoption of things that spread worldwide, so most countries
+            rise. Compare a country against the median change in that dimension before calling it
+            progress.
+          </li>
+        </ul>
+      </Section>
+
+      <Section
         title="Documented deliveries are recorded outside the score"
         hint="Some indicators ask for something real that no dataset measures. Where a country has visibly done that thing, the case is written down as an evidence record filed against the gap it bears on."
       >

@@ -193,6 +193,25 @@ export const IndicatorResult = z.object({
 })
 export type IndicatorResult = z.infer<typeof IndicatorResult>
 
+/**
+ * Change in a dimension over a fixed span, measured on the current frame and on
+ * the indicators observed at both ends. `baseScore` and `currentScore` describe
+ * that matched basket and are not the headline score. See docs/DECISIONS.md D22.
+ */
+export const Momentum = z.object({
+  baseYear: z.number().int(),
+  currentYear: z.number().int(),
+  baseScore: z.number(),
+  currentScore: z.number(),
+  delta: z.number(),
+  matchedIndicators: z.number().int(),
+  basket: z.array(z.string()),
+  /** Cells that sat outside the current frame at one end and were clamped. */
+  clamped: z.number().int(),
+  series: z.array(z.object({ year: z.number().int(), score: z.number() })),
+})
+export type Momentum = z.infer<typeof Momentum>
+
 export const DimensionResult = z.object({
   /** Indicator-derived score. Delphi never enters this number. */
   score: z.number().nullable(),
@@ -211,6 +230,8 @@ export const DimensionResult = z.object({
   /** score when present, else delphiScore. The blended view, kept explicitly separate. */
   blendedScore: z.number().nullable(),
   blendedFrom: z.enum(['indicators', 'delphi', 'none']),
+  /** Null when too few indicators are observed at both ends of the span. */
+  momentum: Momentum.nullable(),
   indicators: z.array(IndicatorResult),
 })
 export type DimensionResult = z.infer<typeof DimensionResult>

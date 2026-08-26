@@ -64,6 +64,11 @@ port 3888.
   `delphiScore` and `delphiIqr`. `blendedScore` falls back to the panel only
   when no indicator evidence exists, and `blendedFrom` records which was used.
 - Confidence is never folded into the capability score. Two numbers, always.
+- `data/observations/worldbank.json` holds every year, and scoring reads only the
+  latest. The history exists for `momentum`, which is computed against the
+  current frame on the indicators observed at both ends of the span. A trend and
+  a score therefore sit on different baskets, so print the basket size wherever
+  a trend appears. See D22.
   The radar draws thin evidence as a dashed edge with a hollow point and marks
   the axis label. Use `isThinEvidence` from `@ncb/core`, never a literal
   threshold in a component.

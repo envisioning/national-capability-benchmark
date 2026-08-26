@@ -286,3 +286,73 @@ export function FrameNote() {
     </p>
   )
 }
+
+/**
+ * Change in a dimension score over the momentum span.
+ *
+ * Sign and arrow both carry the direction, so nothing here rests on color. The
+ * number is the change in score points on the matched basket, which is a
+ * smaller set of indicators than the headline score.
+ */
+export function Delta({
+  value,
+  title,
+}: {
+  value: number | null
+  title?: string
+}) {
+  if (value === null) return <span className="text-[var(--muted)]">no trend</span>
+  const flat = Math.abs(value) < 0.05
+  return (
+    <span className="inline-flex items-center gap-1 tabular-nums" title={title}>
+      <span aria-hidden="true" className="text-[var(--muted)]">
+        {flat ? '=' : value > 0 ? '▲' : '▼'}
+      </span>
+      {flat ? '0.0' : `${value > 0 ? '+' : ''}${value.toFixed(1)}`}
+    </span>
+  )
+}
+
+/**
+ * The matched basket over time, on a fixed 0 to 100 axis so the slope of one
+ * dimension can be read against another.
+ */
+export function Sparkline({
+  series,
+  width = 120,
+  height = 28,
+}: {
+  series: Array<{ year: number; score: number }>
+  width?: number
+  height?: number
+}) {
+  if (series.length < 2) return null
+  const first = series[0] as { year: number; score: number }
+  const last = series[series.length - 1] as { year: number; score: number }
+  const span = last.year - first.year || 1
+  const x = (year: number) => ((year - first.year) / span) * (width - 4) + 2
+  const y = (score: number) => height - 2 - (score / 100) * (height - 4)
+  const points = series.map((p) => `${x(p.year).toFixed(1)},${y(p.score).toFixed(1)}`).join(' ')
+
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox={`0 0 ${width} ${height}`}
+      role="img"
+      aria-label={`Score ${first.score.toFixed(1)} in ${first.year}, ${last.score.toFixed(1)} in ${last.year}`}
+    >
+      <line
+        x1={0}
+        y1={y(0)}
+        x2={width}
+        y2={y(0)}
+        stroke="currentColor"
+        strokeOpacity={0.15}
+        strokeWidth={0.75}
+      />
+      <polyline points={points} fill="none" stroke="var(--primary)" strokeWidth={1.4} />
+      <circle cx={x(last.year)} cy={y(last.score)} r={2} fill="var(--primary)" />
+    </svg>
+  )
+}

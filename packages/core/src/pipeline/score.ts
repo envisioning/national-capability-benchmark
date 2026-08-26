@@ -18,6 +18,8 @@ import type {
   SourceTier,
 } from '../model/index.js'
 import { applyTransform, buildFrame, scoreAgainstFrame } from './normalize.js'
+import { buildHistory, momentumFor } from './trend.js'
+import type { Frame } from './normalize.js'
 import { iqr, mean, median, round } from './stats.js'
 
 export type Cell = {
@@ -47,6 +49,8 @@ export type ScoreOptions = {
   delphi?: DelphiCellEstimate[]
   /** Panel estimates below this self-confidence are ignored. */
   minPanelistConfidence?: number
+  /** Years the momentum comparison reaches back. Set to 0 to skip trends. */
+  momentumSpan?: number
 }
 
 /** Latest observation per indicator x country. */
@@ -72,32 +76,64 @@ export function recencyWeight(year: number, currentYear: number): number {
   return Math.max(0.1, Math.min(1, decayed))
 }
 
+type TransformedRow = { iso3: string; obs: Observation; transformed: number }
+
+function transformedRows(
+  def: IndicatorDef,
+  byKey: Map<string, Observation>,
+): TransformedRow[] {
+  const rows: TransformedRow[] = []
+  for (const iso3 of COUNTRY_ISO3) {
+    const obs = byKey.get(`${def.id}|${iso3}`)
+    if (!obs) continue
+    const denom = def.denominatorSeries
+      ? byKey.get(`__denominator__${def.denominatorSeries}|${iso3}`)?.value ?? null
+      : null
+    const transformed = applyTransform(def, obs.value, denom)
+    if (transformed === null || !Number.isFinite(transformed)) continue
+    rows.push({ iso3, obs, transformed })
+  }
+  return rows
+}
+
+/**
+ * The normalization frame per indicator, built from the reference countries'
+ * latest values.
+ *
+ * This is the ruler. Scores and trends are both measured against it, so a
+ * change in a country's score over time is a change in the country rather than
+ * a change in the scale. See docs/DECISIONS.md D16 and D22.
+ */
+export function buildFrames(
+  observations: Observation[],
+  opts: ScoreOptions,
+): Map<string, Frame> {
+  const byKey = latest(observations)
+  const frames = new Map<string, Frame>()
+  for (const def of INDICATORS) {
+    if (def.ingest === 'gap') continue
+    if (opts.exclude?.has(def.id)) continue
+    const rows = transformedRows(def, byKey)
+    const frame = buildFrame(
+      rows.filter((r) => REFERENCE_ISO3.includes(r.iso3)).map((r) => r.transformed),
+      opts.winsorK ?? 3,
+    )
+    if (frame) frames.set(def.id, frame)
+  }
+  return frames
+}
+
 export function buildMatrix(observations: Observation[], opts: ScoreOptions): Matrix {
   const byKey = latest(observations)
+  const frames = buildFrames(observations, opts)
   const matrix: Matrix = new Map()
 
   for (const def of INDICATORS) {
     if (def.ingest === 'gap') continue
     if (opts.exclude?.has(def.id)) continue
 
-    const rows: Array<{ iso3: string; obs: Observation; transformed: number }> = []
-    for (const iso3 of COUNTRY_ISO3) {
-      const obs = byKey.get(`${def.id}|${iso3}`)
-      if (!obs) continue
-      const denom = def.denominatorSeries
-        ? byKey.get(`__denominator__${def.denominatorSeries}|${iso3}`)?.value ?? null
-        : null
-      const transformed = applyTransform(def, obs.value, denom)
-      if (transformed === null || !Number.isFinite(transformed)) continue
-      rows.push({ iso3, obs, transformed })
-    }
-
-    /* The frame comes from the reference countries only, so adding an extended
-     * country never moves an existing score. */
-    const frame = buildFrame(
-      rows.filter((r) => REFERENCE_ISO3.includes(r.iso3)).map((r) => r.transformed),
-      opts.winsorK ?? 3,
-    )
+    const rows = transformedRows(def, byKey)
+    const frame = frames.get(def.id)
     if (!frame) continue
 
     const inner = new Map<string, Cell>()
@@ -188,6 +224,9 @@ export type ScoreOutput = {
 export function scoreAll(observations: Observation[], opts: ScoreOptions): ScoreOutput {
   const matrix = buildMatrix(observations, opts)
   const minPanelistConfidence = opts.minPanelistConfidence ?? 0
+  const span = opts.momentumSpan ?? 10
+  const frames = span > 0 ? buildFrames(observations, opts) : null
+  const history = span > 0 ? buildHistory(observations) : null
 
   const countries: CountryResult[] = COUNTRIES.map((country) => {
     const dimensions = {} as Record<Dimension, DimensionResult>
@@ -200,6 +239,13 @@ export function scoreAll(observations: Observation[], opts: ScoreOptions): Score
       const score = observed.length === 0 ? null : round(mean(observed.map((c) => c.normalized)), 1)
       const parts = confidenceFor(defs, cells, opts.currentYear)
       const delphi = delphiFor(opts.delphi, country.iso3, dimension, minPanelistConfidence)
+      const momentum =
+        history && frames
+          ? momentumFor(history, frames, country.iso3, dimension, {
+              currentYear: opts.currentYear,
+              span,
+            })
+          : null
 
       const blendedScore = score ?? delphi.score
       dimensions[dimension] = {
@@ -211,6 +257,7 @@ export function scoreAll(observations: Observation[], opts: ScoreOptions): Score
         delphiDissent: delphi.dissent,
         blendedScore,
         blendedFrom: score !== null ? 'indicators' : delphi.score !== null ? 'delphi' : 'none',
+        momentum,
         indicators: defs.map((d, i) => indicatorRow(d, cells[i])),
       }
     }
