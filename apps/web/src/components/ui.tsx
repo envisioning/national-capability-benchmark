@@ -238,3 +238,51 @@ export function Empty({ hint }: { hint: string }) {
     </div>
   )
 }
+
+/**
+ * Shipped under any radar drawn with confidences. The dash is a second
+ * encoding of the same thing the confidence meters carry, so thin evidence is
+ * visible in the shape and not only in a table further down the page.
+ */
+export function RadarEvidenceLegend() {
+  return (
+    <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-xs text-[var(--muted)]">
+      <li className="inline-flex items-center gap-2">
+        <svg width="26" height="8" aria-hidden="true">
+          <line x1="1" y1="4" x2="25" y2="4" stroke="var(--primary)" strokeWidth="1.6" />
+        </svg>
+        <span>Usable or good evidence</span>
+      </li>
+      <li className="inline-flex items-center gap-2">
+        <svg width="26" height="8" aria-hidden="true">
+          <line
+            x1="1"
+            y1="4"
+            x2="25"
+            y2="4"
+            stroke="var(--primary)"
+            strokeWidth="1.6"
+            strokeDasharray="3 2.5"
+          />
+        </svg>
+        <span>Thin evidence, marked * on the axis</span>
+      </li>
+      <li>The point still sits at the score, because confidence never moves it.</li>
+    </ul>
+  )
+}
+
+/**
+ * What 0 to 100 means. Printed wherever a score is read on its own, because the
+ * commonest misreading of this benchmark is that 10 means a tenth of a
+ * capability. See docs/DECISIONS.md D16.
+ */
+export function FrameNote() {
+  return (
+    <p className="mt-3 text-xs leading-relaxed text-[var(--muted)]">
+      0 to 100 is a position against the 10 reference countries. Zero is the weakest of those 10 on
+      a dimension and 100 is the strongest. A score of 10 puts a country near the floor of that
+      frame. It does not mean 10 percent of a capability.
+    </p>
+  )
+}

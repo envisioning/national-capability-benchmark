@@ -1,26 +1,31 @@
 import Link from 'next/link'
 import { DIMENSIONS } from '@ncb/core'
 import { Radar } from '@/components/Radar'
+import { CompareRadar } from '@/components/views/CompareRadar'
+import { CountryDimensionTable } from '@/components/views/CountryDimensionTable'
 import { ConfidenceTable, ScoreTable } from '@/components/views/ScoreTables'
 import {
-  ConfidenceBar,
   ConfidenceLegend,
   Empty,
   Eyebrow,
   Headline,
   Highlight,
   PageTitle,
-  Score,
   ScoreLegend,
   Section,
 } from '@/components/ui'
 import { MISSING_DATA_HINT, loadScores } from '@/lib/data'
+import { FOCUS_ISO3, toProfile } from '@/lib/profile'
 
 export const dynamic = 'force-dynamic'
 
 export default async function Page() {
   const data = await loadScores()
   if (!data) return <Empty hint={MISSING_DATA_HINT} />
+
+  const focus = data.countries.find((c) => c.iso3 === FOCUS_ISO3) ?? data.countries[0]
+  if (!focus) return <Empty hint={MISSING_DATA_HINT} />
+  const others = data.countries.filter((c) => c.iso3 !== focus.iso3)
 
   return (
     <>
@@ -31,6 +36,24 @@ export default async function Page() {
         <Highlight>shape</Highlight> rather than a rank. Every score carries the raw indicators it
         came from and a separate number saying how well we know it.
       </Headline>
+
+      <Section
+        title={`${focus.country} is the focal case`}
+        hint={`This benchmark is built for work inside one country, so ${focus.country} leads and everybody else sits behind a comparison the reader picks. Picking one moves no number, because the scale is fixed by the 10 reference countries and holds still.`}
+      >
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,380px)_1fr]">
+          <div>
+            <CompareRadar focus={toProfile(focus)} others={others.map(toProfile)} />
+            <Link
+              href={`/country/${focus.iso3}`}
+              className="mt-4 inline-block text-xs font-medium underline underline-offset-4"
+            >
+              Open the {focus.country} profile, indicator by indicator
+            </Link>
+          </div>
+          <CountryDimensionTable country={focus} />
+        </div>
+      </Section>
 
       <Section
         title="Each country comes out a different shape"
@@ -52,6 +75,7 @@ export default async function Page() {
                   {
                     label: c.country,
                     values: DIMENSIONS.map((d) => c.dimensions[d]?.score ?? null),
+                    confidences: DIMENSIONS.map((d) => c.dimensions[d]?.confidence ?? null),
                     color: 'var(--primary)',
                   },
                 ]}

@@ -1,10 +1,18 @@
-import { DIMENSIONS, DIMENSION_LABELS } from '@ncb/core'
+import { DIMENSIONS, DIMENSION_LABELS, isThinEvidence } from '@ncb/core'
 import type { Dimension } from '@ncb/core'
 
 export type RadarSeries = {
   label: string
   values: Array<number | null>
+  /**
+   * Confidence per axis, in dimension order. Where it is supplied, an axis with
+   * thin evidence is drawn dashed and its vertex is hollow, so the shape never
+   * looks better evidenced than it is.
+   */
+  confidences?: Array<number | null>
   color: string
+  /** Comparators draw as an outline so the focal country keeps the filled shape. */
+  outline?: boolean
 }
 
 const SIZE = 260
@@ -17,12 +25,23 @@ function point(index: number, value: number): [number, number] {
   return [CENTER + r * Math.cos(angle), CENTER + r * Math.sin(angle)]
 }
 
+function thinAt(series: RadarSeries, i: number): boolean {
+  const c = series.confidences?.[i]
+  return c === null || c === undefined ? false : isThinEvidence(c)
+}
+
 /**
  * Dependency-free radar. Nine axes, one per dimension, in the fixed dimension
  * order so two charts can be read against each other.
+ *
+ * Evidence is drawn, never implied. A dimension whose confidence falls in the
+ * thin or very thin band gets a dashed edge, a hollow vertex and a marked axis
+ * label. Confidence still never touches the score itself: the vertex sits at
+ * the same radius either way, and only the line style changes.
  */
 export function Radar({ series, showLabels = true }: { series: RadarSeries[]; showLabels?: boolean }) {
   const rings = [25, 50, 75, 100]
+  const marked = DIMENSIONS.map((_, i) => series.some((s) => thinAt(s, i)))
 
   return (
     <svg viewBox={`-26 0 ${SIZE + 52} ${SIZE}`} className="h-auto w-full" role="img">
@@ -53,15 +72,47 @@ export function Radar({ series, showLabels = true }: { series: RadarSeries[]; sh
       })}
 
       {series.map((s) => {
-        const pts = DIMENSIONS.map((_, i) => point(i, s.values[i] ?? 0).join(',')).join(' ')
+        const pts = DIMENSIONS.map((_, i) => point(i, s.values[i] ?? 0))
         return (
           <g key={s.label}>
-            <polygon points={pts} fill={s.color} fillOpacity={0.28} stroke={s.color} strokeWidth={1.6} />
-            {DIMENSIONS.map((_, i) => {
+            <polygon
+              points={pts.map((p) => p.join(',')).join(' ')}
+              fill={s.color}
+              fillOpacity={s.outline ? 0 : 0.28}
+              stroke="none"
+            />
+            {pts.map((from, i) => {
+              const to = pts[(i + 1) % pts.length] as [number, number]
+              /* An edge is only as well evidenced as its weaker end. */
+              const dashed = thinAt(s, i) || thinAt(s, (i + 1) % pts.length)
+              return (
+                <line
+                  key={i}
+                  x1={from[0]}
+                  y1={from[1]}
+                  x2={to[0]}
+                  y2={to[1]}
+                  stroke={s.color}
+                  strokeWidth={s.outline ? 1.2 : 1.6}
+                  strokeDasharray={dashed ? '3 2.5' : undefined}
+                />
+              )
+            })}
+            {pts.map((p, i) => {
               const v = s.values[i]
               if (v === null || v === undefined) return null
-              const [x, y] = point(i, v)
-              return <circle key={i} cx={x} cy={y} r={2} fill={s.color} />
+              const thin = thinAt(s, i)
+              return (
+                <circle
+                  key={i}
+                  cx={p[0]}
+                  cy={p[1]}
+                  r={thin ? 2.2 : 2}
+                  fill={thin ? 'var(--surface)' : s.color}
+                  stroke={thin ? s.color : 'none'}
+                  strokeWidth={thin ? 1.1 : 0}
+                />
+              )
             })}
           </g>
         )
@@ -82,7 +133,7 @@ export function Radar({ series, showLabels = true }: { series: RadarSeries[]; sh
               fill="currentColor"
               fillOpacity={0.65}
             >
-              {shortLabel(d)}
+              {marked[i] ? `${shortLabel(d)} *` : shortLabel(d)}
             </text>
           )
         })}

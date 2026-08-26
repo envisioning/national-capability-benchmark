@@ -73,3 +73,15 @@ export const CONFIDENCE_BAND_COLORS: Record<ConfidenceBandId, { light: string; d
   usable: { light: '#454c70', dark: '#c9cfe6' },
   good: { light: '#aacc00', dark: '#d6f249' },
 }
+
+/**
+ * Whether a cell's evidence is too thin to draw as a solid shape.
+ *
+ * The radar dashes these axes and prints a mark beside the label, so a profile
+ * never implies more evidence than the dimension actually has. The rule lives
+ * here with the bands so the chart and the tables cannot disagree.
+ */
+export function isThinEvidence(value: number): boolean {
+  const id = confidenceBand(value).id
+  return id === 'thin' || id === 'very_thin'
+}
