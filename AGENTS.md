@@ -125,9 +125,11 @@ and the production build leaves the dev server serving pages with no CSS. Stop
 the dev server, or `rm -rf apps/web/.next` and restart it.
 
 When somebody else is using the dev server, build into another directory
-instead: `NEXT_DIST_DIR=.next-build pnpm build`. `next build` rewrites
-`apps/web/tsconfig.json` to add its own types path, so check that file
-afterwards and revert the churn.
+instead: `NEXT_DIST_DIR=.next-build pnpm build`. That build rewrites two files
+to point at whichever directory it used, so check both afterwards and revert the
+churn before committing: `apps/web/tsconfig.json` gains a types path, and
+`apps/web/next-env.d.ts` repoints its route-types reference. Both must name
+`.next` on `main`, because that is where a normal build writes.
 
 
 `apps/web` imports `@ncb/core` from `dist`, not from source. Run
