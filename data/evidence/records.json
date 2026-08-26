@@ -1,0 +1,131 @@
+{
+  "generatedAt": "2026-08-26T00:00:00.000Z",
+  "records": [
+    {
+      "id": "bra-pix",
+      "indicatorId": "large_project_delivery",
+      "iso3": "BRA",
+      "title": "Pix instant payment system",
+      "claim": "Brazil's central bank specified, built and ran a mandatory instant payment rail that settled 7.98 billion transactions in July 2026, for 152 million people and 14 million firms transacting in that month.",
+      "metric": {
+        "name": "Pix transactions settled in the month",
+        "value": 7975213950,
+        "unit": "transactions",
+        "asOf": "2026-07"
+      },
+      "started": 2020,
+      "source": {
+        "publisher": "Banco Central do Brasil, Pix statistics API",
+        "url": "https://olinda.bcb.gov.br/olinda/servico/Pix/versao/v1/odata/PixTransacoes",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-26"
+      },
+      "limits": "Transaction volume shows adoption of one payment rail. It says nothing about cost or schedule performance on a capital project, which is what this indicator asks for. Pix was specified and enforced by a single institution with regulatory power over the participants, so it is weak evidence about delivery that needs several agencies to hold position."
+    },
+    {
+      "id": "bra-govbr",
+      "indicatorId": "large_project_delivery",
+      "iso3": "BRA",
+      "title": "GOV.BR federal identity and service platform",
+      "claim": "Brazil consolidated federal public services behind one identity platform, reporting 175 million active accounts and 5,179 digital services in May 2026.",
+      "metric": {
+        "name": "Active GOV.BR accounts",
+        "value": 175000000,
+        "unit": "accounts",
+        "asOf": "2026-05"
+      },
+      "started": 2019,
+      "source": {
+        "publisher": "Governo Digital, Ministry of Management and Innovation in Public Services",
+        "url": "https://www.gov.br/governodigital/pt-br",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-26"
+      },
+      "limits": "An account count measures registration and a service count measures listing. Neither shows whether a service completes, how long it takes, or what it costs to run. Both numbers are published by the programme about itself, with no external audit attached."
+    },
+    {
+      "id": "est-x-road",
+      "indicatorId": "large_project_delivery",
+      "iso3": "EST",
+      "title": "X-Road national data exchange layer",
+      "claim": "Estonia has run one data exchange layer for the whole state since 2001, and in July 2026 it carried 374.9 million queries between 1,000 connected organizations, 251 of them government bodies, across 3,785 services.",
+      "metric": {
+        "name": "X-Road queries in the month",
+        "value": 374921341,
+        "unit": "queries",
+        "asOf": "2026-07"
+      },
+      "started": 2001,
+      "source": {
+        "publisher": "Estonian Information System Authority, X-tee factsheet",
+        "url": "https://www.x-tee.ee/factsheets/EE/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-26"
+      },
+      "limits": "Query volume measures use of a layer that grew over 25 years. That is evidence of sustained operation and not of bringing one large project in on cost and on schedule, which is what this indicator asks for. The factsheet is published by the authority that operates the system."
+    },
+    {
+      "id": "ind-pmjdy",
+      "indicatorId": "large_project_delivery",
+      "iso3": "IND",
+      "title": "Pradhan Mantri Jan Dhan Yojana bank accounts",
+      "claim": "India opened 590.9 million basic bank accounts through existing banks from 2014, holding 3.17 lakh crore rupees in deposits as of 19 August 2026.",
+      "metric": {
+        "name": "Accounts opened under the scheme",
+        "value": 590900000,
+        "unit": "accounts",
+        "asOf": "2026-08-19"
+      },
+      "started": 2014,
+      "source": {
+        "publisher": "Department of Financial Services, Ministry of Finance, India",
+        "url": "https://pmjdy.gov.in/account",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-26"
+      },
+      "limits": "An account count measures opening. Part of the stock is dormant or holds very little, and the release carries no external audit. Reaching 590 million people through banks that already existed is a different problem from delivering a physical project on a schedule."
+    },
+    {
+      "id": "ury-electricity",
+      "indicatorId": "large_project_delivery",
+      "iso3": "URY",
+      "title": "Electricity supply rebuilt on renewable sources",
+      "claim": "Uruguay rebuilt its electricity supply between 2010 and 2017 through public tenders and long-term contracts, and in 2025 fossil fuels produced 293 GWh of the 15,855 GWh generated, so 98.2 percent came from hydro, wind, biomass and solar.",
+      "metric": {
+        "name": "Renewable share of electricity generation",
+        "value": 98.2,
+        "unit": "% of generation",
+        "asOf": "2025"
+      },
+      "started": 2010,
+      "source": {
+        "publisher": "Ministry of Industry, Energy and Mining, national energy balance",
+        "url": "https://catalogodatos.gub.uy/dataset/miem-generacion-de-electricidad-por-fuente",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-26"
+      },
+      "limits": "The share is computed from the published generation series by source and is not itself a published headline figure. A generation mix is an outcome, and it hides the cost and schedule record of the projects behind it. A wet or dry year moves the hydro share by several points, so one year is not the programme."
+    },
+    {
+      "id": "ury-ceibal",
+      "indicatorId": "large_project_delivery",
+      "iso3": "URY",
+      "title": "Plan Ceibal, one connected laptop per child",
+      "claim": "Uruguay gave a connected laptop to every child in public primary school from 2007, the first country to do it nationally, and the household survey found a Ceibal computer in the homes of 35.8 percent of the population in 2018.",
+      "metric": {
+        "name": "People with a Plan Ceibal computer in the household",
+        "value": 35.8,
+        "unit": "% of people",
+        "asOf": "2018"
+      },
+      "started": 2007,
+      "source": {
+        "publisher": "Ministry of Social Development, from the national household survey",
+        "url": "https://catalogodatos.gub.uy/dataset/mides-indicador-11213",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-26"
+      },
+      "limits": "Household reach peaked at 40.1 percent in 2014 and the series stops in 2018, so this number says nothing about the programme now. A device in the home measures distribution and says nothing about learning. The record is here because the delivery is documented and the measure of it is weak."
+    }
+  ]
+}

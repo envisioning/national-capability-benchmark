@@ -221,3 +221,53 @@ export const CountryResult = z.object({
   dimensions: z.record(DimensionEnum, DimensionResult),
 })
 export type CountryResult = z.infer<typeof CountryResult>
+
+/* ------------------------------ Evidence ------------------------------ */
+
+/**
+ * A documented case of a country doing the thing an indicator is meant to
+ * measure, recorded against an indicator that has no dataset behind it.
+ *
+ * Evidence records never enter `DimensionResult.score` and never raise
+ * confidence. A gap stays a gap until an indicator covers at least two
+ * reference countries and can be normalised against the frame. The records
+ * exist so a known national delivery is written down with its source, its year
+ * and its limits, instead of being argued in prose beside the chart. See
+ * docs/DECISIONS.md D20.
+ */
+export const EvidenceRecord = z.object({
+  id: z.string(),
+  /** The indicator this record bears on. Must exist in the registry. */
+  indicatorId: z.string(),
+  iso3: z.string().length(3),
+  title: z.string(),
+  /** What was delivered, and at what scale. One sentence. */
+  claim: z.string(),
+  /** The published number that carries the claim. */
+  metric: z.object({
+    name: z.string(),
+    value: z.number(),
+    unit: z.string(),
+    /** Reference period of the number, as published. */
+    asOf: z.string(),
+  }),
+  /** Year the programme started. */
+  started: z.number().int(),
+  source: z.object({
+    publisher: z.string(),
+    url: z.string().url(),
+    tier: SourceTier,
+    retrievedAt: z.string(),
+  }),
+  /**
+   * What this record does not show. Required: a case without its limits is
+   * advocacy, and this layer exists to avoid exactly that.
+   */
+  limits: z.string(),
+})
+export type EvidenceRecord = z.infer<typeof EvidenceRecord>
+
+export const EvidenceFile = z.object({
+  generatedAt: z.string(),
+  records: z.array(EvidenceRecord),
+})

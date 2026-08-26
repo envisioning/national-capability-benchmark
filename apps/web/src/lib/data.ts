@@ -1,6 +1,6 @@
 import { readFile } from 'node:fs/promises'
 import { FILES } from '@ncb/core/node'
-import type { CountryResult, DelphiRunFile, Diagnostics } from '@ncb/core'
+import type { CountryResult, DelphiRunFile, Diagnostics, EvidenceRecord } from '@ncb/core'
 
 async function readJson<T>(path: string): Promise<T | null> {
   try {
@@ -20,6 +20,12 @@ export async function loadDiagnostics(): Promise<Diagnostics | null> {
 
 export async function loadDelphiRun(): Promise<DelphiRunFile | null> {
   return readJson(FILES.delphiLatest)
+}
+
+/** Evidence records for indicators with no dataset. Never scored. */
+export async function loadEvidence(): Promise<EvidenceRecord[]> {
+  const file = await readJson<{ records: EvidenceRecord[] }>(FILES.evidence)
+  return file?.records ?? []
 }
 
 export const MISSING_DATA_HINT =

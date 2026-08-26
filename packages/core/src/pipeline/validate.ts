@@ -1,8 +1,8 @@
 import { readdir, readFile } from 'node:fs/promises'
 import { basename, resolve } from 'node:path'
 import { COUNTRY_ISO3, DIMENSIONS, INDICATORS_BY_ID } from '../model/index.js'
-import { DelphiRunFile } from '../model/schema.js'
-import { DELPHI_DIR } from './paths.js'
+import { DelphiRunFile, EvidenceFile } from '../model/schema.js'
+import { DELPHI_DIR, FILES } from './paths.js'
 
 export type Problem = { file: string; severity: 'error' | 'warning'; problem: string }
 
@@ -101,5 +101,65 @@ export async function validateDelphiRuns(dir = DELPHI_DIR): Promise<Problem[]> {
     }
   }
 
+  return problems
+}
+
+/**
+ * Schema-checks the evidence records and reports the mistakes this layer
+ * invites: a record filed against an indicator that is already measured, a
+ * duplicate id, an unknown country, a source that cannot be opened.
+ *
+ * An evidence record is hand-written by design, so it gets the same treatment
+ * as a hand-authored Delphi run.
+ */
+export async function validateEvidence(path = FILES.evidence): Promise<Problem[]> {
+  const file = basename(path)
+  let raw: unknown
+  try {
+    raw = JSON.parse(await readFile(path, 'utf8'))
+  } catch {
+    return [{ file, severity: 'warning', problem: 'no evidence file yet' }]
+  }
+
+  const parsed = EvidenceFile.safeParse(raw)
+  if (!parsed.success) {
+    return parsed.error.issues.slice(0, 5).map((issue) => ({
+      file,
+      severity: 'error' as const,
+      problem: `${issue.path.join('.') || '(root)'}: ${issue.message}`,
+    }))
+  }
+
+  const problems: Problem[] = []
+  const seen = new Set<string>()
+  for (const record of parsed.data.records) {
+    if (seen.has(record.id)) {
+      problems.push({ file, severity: 'error', problem: `duplicate record id ${record.id}` })
+    }
+    seen.add(record.id)
+
+    const def = INDICATORS_BY_ID[record.indicatorId]
+    if (!def) {
+      problems.push({
+        file,
+        severity: 'error',
+        problem: `${record.id}: unknown indicator id ${record.indicatorId}`,
+      })
+    } else if (def.ingest !== 'gap') {
+      problems.push({
+        file,
+        severity: 'warning',
+        problem: `${record.id}: ${record.indicatorId} is measured, so the record adds nothing the score does not already carry`,
+      })
+    }
+
+    if (!COUNTRY_ISO3.includes(record.iso3 as never)) {
+      problems.push({
+        file,
+        severity: 'error',
+        problem: `${record.id}: unknown country code ${record.iso3}`,
+      })
+    }
+  }
   return problems
 }

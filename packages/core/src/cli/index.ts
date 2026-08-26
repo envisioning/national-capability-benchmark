@@ -11,7 +11,7 @@ import { GatewayProvider, MockProvider } from '../delphi/provider.js'
 import { runDelphi } from '../delphi/run.js'
 import { estimateCost } from '../delphi/cost.js'
 import { CHARS_PER_TOKEN, LAST_VERIFIED, OUTPUT_TOKENS } from '../delphi/pricing.js'
-import { validateDelphiRuns } from '../pipeline/validate.js'
+import { validateDelphiRuns, validateEvidence } from '../pipeline/validate.js'
 
 type Args = { _: string[]; flags: Map<string, string | boolean> }
 
@@ -198,9 +198,9 @@ async function main() {
     }
 
     case 'validate': {
-      const problems = await validateDelphiRuns()
+      const problems = [...(await validateDelphiRuns()), ...(await validateEvidence())]
       if (problems.length === 0) {
-        console.log('All Delphi run files parse and cover the expected cells.')
+        console.log('All Delphi runs and evidence records parse and cover the expected cells.')
         break
       }
       for (const p of problems) console.log(`  ${p.file.padEnd(46)} ${p.problem}`)
@@ -229,7 +229,7 @@ async function main() {
   pnpm bench diagnose                     correlations, redundancy, GDP-sensitivity test
   pnpm bench cost      [--rounds 2] [--stances 4] [--models a,b] [--no-judge]
                                           measure the prompts and price the panel run
-  pnpm bench validate                     schema-check every file in data/delphi
+  pnpm bench validate                     schema-check data/delphi and data/evidence
   pnpm bench report                       write the findings report
   pnpm bench all                          ingest, score, diagnose, report
 `)

@@ -1,7 +1,7 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
-import { DelphiRunFile, ObservationFile } from '../model/schema.js'
-import type { Observation } from '../model/schema.js'
+import { DelphiRunFile, EvidenceFile, ObservationFile } from '../model/schema.js'
+import type { EvidenceRecord, Observation } from '../model/schema.js'
 import { DELPHI_DIR, FILES } from './paths.js'
 
 async function readJson(path: string): Promise<unknown | null> {
@@ -23,6 +23,18 @@ export async function loadObservations(): Promise<Observation[]> {
     out.push(...parsed.data.observations)
   }
   return out
+}
+
+/**
+ * Evidence records for indicators that have no dataset. Never scored, never
+ * folded into confidence. See docs/DECISIONS.md D20.
+ */
+export async function loadEvidence(path = FILES.evidence): Promise<EvidenceRecord[]> {
+  const raw = await readJson(path)
+  if (!raw) return []
+  const parsed = EvidenceFile.safeParse(raw)
+  if (!parsed.success) throw new Error(`${path}: ${parsed.error.message}`)
+  return parsed.data.records
 }
 
 export async function loadDelphi(path = FILES.delphiLatest): Promise<DelphiRunFile | null> {
