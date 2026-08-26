@@ -951,9 +951,13 @@ description, so the icons are never the only carrier.
 drawn at one strength for every dimension: fading them for thin evidence made the
 whole ring look washed out on a country where most dimensions are thin, and that
 evidence is already carried by the dashed edge, the hollow vertex and the
-asterisk. The radars are also drawn larger, with the focal column widened and the
-country grid cut from four columns to three, because a nine-axis chart at card
-size was unreadable whatever it was labelled with.
+asterisk. The radars are also drawn larger. The focal column is wider, the country
+grid went from four columns to three, and the geometry now depends on what labels
+the axes: words need a wide margin and shrink the shape to a small figure in a
+large box, marks need very little. The icon-labelled radar draws its shape across
+78 percent of its box against 54 percent before, so at a 1280 pixel viewport the
+drawn spider on a country card went from about 135 pixels across to 256, and the
+labelled one from 205 to 287.
 
 **Cost.** A reader who has not learned the marks has to visit a labelled radar
 first. The nine icons are a judgement: a telescope for Anticipation and a

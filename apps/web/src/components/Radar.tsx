@@ -18,11 +18,24 @@ export type RadarSeries = {
 
 const SIZE = 260
 const CENTER = SIZE / 2
-const RADIUS = SIZE / 2 - 46
 
-function point(index: number, value: number): [number, number] {
+/**
+ * How much room the labels need, and therefore how big the shape can be.
+ *
+ * The plotted polygon competes with whatever names its axes. Words need a wide
+ * margin and reduce the chart to a small figure in a large box. Marks need very
+ * little, so the icon-labelled radars draw their shape half again as large in
+ * the same space. The numbers below are the outcome of that trade, not defaults.
+ */
+const GEOMETRY = {
+  full: { radius: SIZE / 2 - 34, ring: 112, padX: 30, padRight: 58 },
+  icons: { radius: SIZE / 2 - 24, ring: 114, padX: 4, padRight: 8 },
+  none: { radius: SIZE / 2 - 8, ring: 100, padX: 2, padRight: 4 },
+} as const
+
+function point(index: number, value: number, radius: number): [number, number] {
   const angle = (index / DIMENSIONS.length) * Math.PI * 2 - Math.PI / 2
-  const r = (value / 100) * RADIUS
+  const r = (value / 100) * radius
   return [CENTER + r * Math.cos(angle), CENTER + r * Math.sin(angle)]
 }
 
@@ -81,6 +94,8 @@ export function Radar({
   series: RadarSeries[]
   labels?: RadarLabels
 }) {
+  const g = GEOMETRY[labels]
+  const at = (i: number, value: number) => point(i, value, g.radius)
   const rings = [25, 50, 75, 100]
   const marked = DIMENSIONS.map((_, i) => series.some((s) => thinAt(s, i)))
   const described = series
@@ -92,13 +107,17 @@ export function Radar({
     .join('. ')
 
   return (
-    <svg viewBox={`-26 0 ${SIZE + 52} ${SIZE}`} className="h-auto w-full" role="img">
+    <svg
+      viewBox={`${-g.padX} 0 ${SIZE + g.padX + g.padRight} ${SIZE}`}
+      className="h-auto w-full"
+      role="img"
+    >
       <title>{series.map((s) => s.label).join(' compared with ')}</title>
       <desc>{described}</desc>
       {rings.map((r) => (
         <polygon
           key={r}
-          points={DIMENSIONS.map((_, i) => point(i, r).join(',')).join(' ')}
+          points={DIMENSIONS.map((_, i) => at(i, r).join(',')).join(' ')}
           fill="none"
           stroke="currentColor"
           strokeOpacity={r === 100 ? 0.28 : 0.12}
@@ -106,7 +125,7 @@ export function Radar({
         />
       ))}
       {DIMENSIONS.map((_, i) => {
-        const [x, y] = point(i, 100)
+        const [x, y] = at(i, 100)
         return (
           <line
             key={i}
@@ -122,7 +141,7 @@ export function Radar({
       })}
 
       {series.map((s) => {
-        const pts = DIMENSIONS.map((_, i) => point(i, s.values[i] ?? 0))
+        const pts = DIMENSIONS.map((_, i) => at(i, s.values[i] ?? 0))
         return (
           <g key={s.label}>
             <polygon
@@ -170,13 +189,13 @@ export function Radar({
 
       {labels === 'icons' &&
         DIMENSIONS.map((d, i) => {
-          const [x, y] = point(i, 124)
-          return <AxisIcon key={d} d={d} x={x} y={y} size={12} />
+          const [x, y] = at(i, g.ring)
+          return <AxisIcon key={d} d={d} x={x} y={y} size={13} />
         })}
 
       {labels === 'full' &&
         DIMENSIONS.map((d, i) => {
-          const [x, y] = point(i, 122)
+          const [x, y] = at(i, g.ring)
           const anchor = x < CENTER - 4 ? 'end' : x > CENTER + 4 ? 'start' : 'middle'
           const dx = anchor === 'end' ? -9 : anchor === 'start' ? 9 : 0
           return (
