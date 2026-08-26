@@ -1,5 +1,6 @@
 import type { MeasurementClass } from '@ncb/core'
-import { CLASS_ICON, CONFIDENCE_ICON, Icon } from '@/components/Icon'
+import { DIMENSIONS, DIMENSION_LABELS } from '@ncb/core'
+import { CLASS_ICON, CONFIDENCE_ICON, DIMENSION_ICON, Icon } from '@/components/Icon'
 import {
   CONFIDENCE_BANDS,
   MEASUREMENT_CLASS_LABELS,
@@ -283,9 +284,10 @@ export function RadarEvidenceLegend() {
             strokeDasharray="3 2.5"
           />
         </svg>
-        <span>Thin evidence, marked * on the axis</span>
+        <span>Thin evidence</span>
       </li>
       <li>The point still sits at the score, because confidence never moves it.</li>
+      <li>Click any axis name to see every country on that dimension.</li>
     </ul>
   )
 }
@@ -414,5 +416,24 @@ export function DefineLink({ term, children }: { term: string; children?: React.
     >
       {children ?? term}
     </a>
+  )
+}
+
+/**
+ * The nine marks and what they stand for.
+ *
+ * Shipped anywhere a chart names its axes with marks alone, so the grid of
+ * country cards is readable without opening one first.
+ */
+export function DimensionLegend() {
+  return (
+    <ul className="mb-6 flex flex-wrap gap-x-5 gap-y-2 text-xs">
+      {DIMENSIONS.map((d) => (
+        <li key={d} className="inline-flex items-center gap-2">
+          <Icon name={DIMENSION_ICON[d]} size={14} className="text-[var(--muted)]" />
+          <span>{DIMENSION_LABELS[d]}</span>
+        </li>
+      ))}
+    </ul>
   )
 }

@@ -35,7 +35,7 @@ const octa = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'National Capability Benchmark',
+  title: 'NCB, the National Capability Benchmark',
   description:
     'A prototype that measures what a country can do, separately from how rich it is.',
 }
@@ -63,12 +63,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <header className="w-full border-b border-[var(--rule)]">
           <div className="m-auto flex max-w-6xl flex-wrap items-baseline gap-x-8 gap-y-3 px-6 py-6 sm:px-12">
-            <Link
-              href="/"
-              className="font-display text-[22px] leading-none"
-              style={{ fontVariationSettings: '"wght" 500, "wdth" 100' }}
-            >
-              National Capability Benchmark
+            <Link href="/" className="flex items-baseline gap-3">
+              <span
+                className="font-display text-[22px] leading-none"
+                style={{ fontVariationSettings: '"wght" 500, "wdth" 100' }}
+              >
+                NCB
+              </span>
+              <span className="text-xs text-[var(--muted)]">National Capability Benchmark</span>
             </Link>
             <nav className="flex flex-wrap gap-x-6 gap-y-2 text-xs font-medium">
               {NAV.map((n) => (

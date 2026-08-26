@@ -80,7 +80,7 @@ export function IndicatorPeek({
         onClick={(e) => {
           if (e.target === dialog.current) setOpen(false)
         }}
-        className="w-[min(46rem,92vw)] rounded-xl border border-[var(--rule)] bg-[var(--surface)] p-0 text-left text-[var(--foreground)] backdrop:bg-black/50"
+        className="m-auto w-[min(46rem,92vw)] rounded-xl border border-[var(--rule)] bg-[var(--surface)] p-0 text-left text-[var(--foreground)] backdrop:bg-black/50"
       >
         <div className="max-h-[80vh] overflow-y-auto p-6">
           <div className="mb-4 flex items-start justify-between gap-6">

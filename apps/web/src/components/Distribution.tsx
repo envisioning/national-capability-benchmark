@@ -1,5 +1,7 @@
 'use client'
 
+import { useState } from 'react'
+
 export type DistributionPoint = {
   key: string
   label: string
@@ -34,6 +36,7 @@ const MIN_GAP = 12
  * Nothing here is a new number: it is the same values the list below prints.
  */
 export function Distribution({ points }: { points: DistributionPoint[] }) {
+  const [hovered, setHovered] = useState<string | null>(null)
   if (points.length === 0) return null
 
   const x = (v: number) => PAD + (Math.min(100, Math.max(0, v)) / 100) * (WIDTH - PAD * 2)
@@ -120,13 +123,28 @@ export function Distribution({ points }: { points: DistributionPoint[] }) {
       ))}
 
       {placed.map((p) => (
-        <g key={p.key}>
+        <g
+          key={p.key}
+          onMouseEnter={() => setHovered(p.key)}
+          onMouseLeave={() => setHovered((h) => (h === p.key ? null : h))}
+          style={{ cursor: 'default' }}
+        >
+          {/* A generous invisible target, because a 3.5 unit dot is hard to hit. */}
+          <circle cx={p.x} cy={p.y} r={7} fill="transparent" />
           <circle
             cx={p.x}
             cy={p.y}
-            r={p.focal ? 4.5 : 3.5}
-            fill={p.focal ? 'var(--primary)' : p.hollow ? 'var(--surface)' : 'var(--muted)'}
-            stroke={p.focal ? 'var(--primary)' : 'var(--muted)'}
+            r={p.focal || hovered === p.key ? 4.5 : 3.5}
+            fill={
+              p.focal
+                ? 'var(--primary)'
+                : hovered === p.key
+                  ? 'var(--foreground)'
+                  : p.hollow
+                    ? 'var(--surface)'
+                    : 'var(--muted)'
+            }
+            stroke={p.focal ? 'var(--primary)' : hovered === p.key ? 'var(--foreground)' : 'var(--muted)'}
             strokeWidth={p.hollow ? 1.2 : 0}
           >
             <title>
@@ -149,7 +167,7 @@ export function Distribution({ points }: { points: DistributionPoint[] }) {
         </g>
       ))}
 
-      {focal ? (
+      {focal && hovered !== focal.key ? (
         <text
           x={Math.min(WIDTH - PAD, Math.max(PAD, focal.x))}
           y={focal.y - 9}
@@ -161,6 +179,36 @@ export function Distribution({ points }: { points: DistributionPoint[] }) {
           {focal.label}
         </text>
       ) : null}
+
+      {/* The country under the pointer, named where it sits. */}
+      {placed
+        .filter((p) => p.key === hovered)
+        .map((p) => (
+          <g key={`hover-${p.key}`}>
+            <text
+              x={Math.min(WIDTH - PAD, Math.max(PAD, p.x))}
+              y={p.y - 9}
+              textAnchor="middle"
+              fontSize={10}
+              fontWeight={500}
+              fill="currentColor"
+            >
+              {p.label} {p.value.toFixed(1)}
+            </text>
+            {p.detail ? (
+              <text
+                x={Math.min(WIDTH - PAD, Math.max(PAD, p.x))}
+                y={p.y - 20}
+                textAnchor="middle"
+                fontSize={8}
+                fill="currentColor"
+                fillOpacity={0.6}
+              >
+                {p.detail}
+              </text>
+            ) : null}
+          </g>
+        ))}
     </svg>
   )
 }

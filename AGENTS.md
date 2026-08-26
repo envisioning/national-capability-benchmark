@@ -1,4 +1,4 @@
-# National Capability Benchmark — agent notes
+# NCB, the National Capability Benchmark — agent notes
 
 Prototype benchmark of a country's capacity to anticipate change, coordinate
 action, learn, adapt and build under uncertainty. Ten countries, nine

@@ -6,6 +6,7 @@ import { CountryDimensionTable } from '@/components/views/CountryDimensionTable'
 import { ConfidenceTable, ScoreTable } from '@/components/views/ScoreTables'
 import {
   ConfidenceLegend,
+  DimensionLegend,
   Empty,
   Eyebrow,
   Headline,
@@ -67,6 +68,7 @@ export default async function Page() {
         title="Each country comes out a different shape"
         hint="Scores run 0 to 100 against a frame fixed by ten reference countries, and every country is measured the same way. We never compute a composite. Two countries with the same average can have opposite profiles, and that difference is the whole point of the exercise."
       >
+        <DimensionLegend />
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {data.countries.map((c) => (
             <Link

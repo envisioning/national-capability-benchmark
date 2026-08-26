@@ -22,6 +22,12 @@ type Row = {
  * where does 46.7 sit among the 40 countries we hold, and how well evidenced is
  * everybody else's number. See D30.
  */
+/**
+ * The trigger most surfaces use: a number you can click.
+ *
+ * The dialog itself is separate, because the radar opens the same panel from an
+ * axis label and cannot nest a button inside its SVG.
+ */
 export function DimensionPeek({
   dimension,
   iso3,
@@ -32,6 +38,37 @@ export function DimensionPeek({
   children: React.ReactNode
 }) {
   const [open, setOpen] = useState(false)
+  return (
+    <>
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        className="inline-flex items-center gap-1.5 underline decoration-dotted underline-offset-4 hover:decoration-solid"
+        title={`See every country on ${DIMENSION_LABELS[dimension]}`}
+      >
+        {children}
+      </button>
+      <DimensionDialog
+        dimension={dimension}
+        iso3={iso3}
+        open={open}
+        onClose={() => setOpen(false)}
+      />
+    </>
+  )
+}
+
+export function DimensionDialog({
+  dimension,
+  iso3,
+  open,
+  onClose,
+}: {
+  dimension: Dimension
+  iso3: string
+  open: boolean
+  onClose: () => void
+}) {
   const [rows, setRows] = useState<Row[] | null>(null)
   const [error, setError] = useState<string | null>(null)
   const dialog = useRef<HTMLDialogElement>(null)
@@ -64,22 +101,13 @@ export function DimensionPeek({
 
   return (
     <>
-      <button
-        type="button"
-        onClick={() => setOpen(true)}
-        className="inline-flex items-center gap-1.5 underline decoration-dotted underline-offset-4 hover:decoration-solid"
-        title={`See every country on ${DIMENSION_LABELS[dimension]}`}
-      >
-        {children}
-      </button>
-
       <dialog
         ref={dialog}
-        onClose={() => setOpen(false)}
+        onClose={onClose}
         onClick={(e) => {
-          if (e.target === dialog.current) setOpen(false)
+          if (e.target === dialog.current) onClose()
         }}
-        className="w-[min(44rem,92vw)] rounded-xl border border-[var(--rule)] bg-[var(--surface)] p-0 text-left text-[var(--foreground)] backdrop:bg-black/50"
+        className="m-auto w-[min(44rem,92vw)] rounded-xl border border-[var(--rule)] bg-[var(--surface)] p-0 text-left text-[var(--foreground)] backdrop:bg-black/50"
       >
         <div className="max-h-[80vh] overflow-y-auto p-6">
           <div className="mb-4 flex items-start justify-between gap-6">
@@ -94,7 +122,7 @@ export function DimensionPeek({
             </div>
             <button
               type="button"
-              onClick={() => setOpen(false)}
+              onClick={onClose}
               className="shrink-0 rounded-md border border-[var(--rule)] px-2 py-1 text-xs"
             >
               Close

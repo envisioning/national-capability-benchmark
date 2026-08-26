@@ -1077,3 +1077,51 @@ and the interpreted are never confused.
 **Overturned by.** Enough records to compare mechanisms rather than list them, at
 which point the page becomes a query rather than a list.
 
+---
+
+## D32 — Evidence is drawn as a gradient, and every chart is a control
+
+*Recorded 2026-08-26.*
+
+**Choice.** Four changes to how charts behave, and one naming change.
+
+The radar edge no longer switches between solid and dashed at a threshold. Each
+edge is cut into fourteen segments, confidence is interpolated along it, and the
+gap between dashes opens as the evidence thins. An edge running from a
+well-evidenced dimension to a poorly evidenced one comes apart gradually, which
+is what the underlying quantity actually does.
+
+The asterisk after a thin axis label is gone. The dashed edge and the hollow
+vertex already said it twice.
+
+Axis labels are controls. Clicking one opens the 40-country panel for that
+dimension, the same panel a score opens.
+
+Distribution dots respond to a pointer: the country under it is named where it
+sits, with its raw value, and the hit target is twice the size of the dot.
+
+The product is called NCB in the wordmark, with the full name beside it.
+
+**Why.** A benchmark whose whole argument is "the evidence is uneven" should draw
+the unevenness rather than annotate it. A threshold hides the gradient it stands
+on: Adaptability at 0.47 and Learning at 0.52 are nearly the same amount of
+evidence and were drawn as opposite states.
+
+Making labels controls follows from D30. If a number opens onto its field, the
+name of the thing it measures should too, and a reader hunting for context should
+not have to learn which parts of a page are live.
+
+**Cost.**
+
+- Nine axes times fourteen segments times each series is a lot of line elements
+  for one chart. It is still under a hundred and fifty and the radar has no
+  dependencies, so it stays cheap.
+- The gradient makes a single edge harder to read exactly. That is honest: the
+  precise confidence numbers are in the table beside it and always were.
+- Native dialogs centre themselves through a margin the CSS reset removes. Both
+  panels set it back explicitly, which is the second trap this element has
+  sprung after inheriting text alignment.
+
+**Overturned by.** Nothing foreseeable. If the gradient reads as noise at small
+sizes, the icon-labelled radars can fall back to the threshold.
+

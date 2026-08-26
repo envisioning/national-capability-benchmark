@@ -1,4 +1,4 @@
-# National Capability Benchmark
+# NCB, the National Capability Benchmark
 
 A prototype for measuring what a country is **capable of doing** — anticipating
 change, coordinating action, learning, adapting and building under uncertainty —

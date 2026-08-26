@@ -39,6 +39,27 @@ function point(index: number, value: number, radius: number): [number, number] {
   return [CENTER + r * Math.cos(angle), CENTER + r * Math.sin(angle)]
 }
 
+/** How many pieces each edge is cut into for the evidence gradient. */
+const SEGMENTS = 14
+const DASH = 2.2
+/** Solid at or above this confidence, fully open at or below the lower bound. */
+const SOLID_AT = 0.45
+const OPEN_AT = 0.15
+
+/**
+ * The gap between dashes for a given confidence.
+ *
+ * Zero is a solid line. It grows as the evidence thins, so an edge running from
+ * a well-evidenced dimension to a poorly evidenced one comes apart gradually
+ * instead of switching state at some threshold nobody can see.
+ */
+function dashGap(confidence: number | null): number {
+  if (confidence === null) return 0
+  if (confidence >= SOLID_AT) return 0
+  const t = Math.min(1, Math.max(0, (SOLID_AT - confidence) / (SOLID_AT - OPEN_AT)))
+  return 0.6 + t * 2.6
+}
+
 function thinAt(series: RadarSeries, i: number): boolean {
   const c = series.confidences?.[i]
   return c === null || c === undefined ? false : isThinEvidence(c)
@@ -60,6 +81,10 @@ function thinAt(series: RadarSeries, i: number): boolean {
  * the mark alone, for the small cards where the words render at seven pixels
  * and are unreadable anyway. Either way the accessible description below carries
  * every dimension name and score, so the words are never actually gone.
+ *
+ * Thin evidence is drawn and never written: a dashed edge and a hollow point.
+ * The asterisk that used to follow a label was a third telling of the same
+ * thing and it made every label look footnoted.
  */
 export type RadarLabels = 'full' | 'icons' | 'none'
 
@@ -93,9 +118,12 @@ function AxisIcon({ d, x, y, size }: { d: Dimension; x: number; y: number; size:
 export function Radar({
   series,
   labels = 'full',
+  onSelectDimension,
 }: {
   series: RadarSeries[]
   labels?: RadarLabels
+  /** When given, each axis label becomes a control that opens that dimension. */
+  onSelectDimension?: (dimension: Dimension) => void
 }) {
   const g = GEOMETRY[labels]
   const at = (i: number, value: number) => point(i, value, g.radius)
@@ -171,22 +199,38 @@ export function Radar({
               fillOpacity={s.outline ? 0 : 0.32}
               stroke="none"
             />
-            {pts.map((from, i) => {
-              const to = pts[(i + 1) % pts.length] as [number, number]
-              /* An edge is only as well evidenced as its weaker end. */
-              const dashed = thinAt(s, i) || thinAt(s, (i + 1) % pts.length)
-              return (
-                <line
-                  key={i}
-                  x1={from[0]}
-                  y1={from[1]}
-                  x2={to[0]}
-                  y2={to[1]}
-                  stroke={s.color}
-                  strokeWidth={s.outline ? 1.3 : 1.9}
-                  strokeDasharray={dashed ? '2.5 1.8' : undefined}
-                />
-              )
+            {pts.flatMap((from, i) => {
+              const j = (i + 1) % pts.length
+              const to = pts[j] as [number, number]
+              const a = s.confidences?.[i]
+              const b = s.confidences?.[j]
+              /* An edge runs between two dimensions that are evidenced
+               * differently, so its own evidence changes along its length. Each
+               * edge is cut into segments and each segment carries the gap its
+               * own position deserves: solid where the evidence is usable,
+               * opening into dots as it approaches the thin end. */
+              return Array.from({ length: SEGMENTS }, (_, k) => {
+                const t0 = k / SEGMENTS
+                const t1 = (k + 1) / SEGMENTS
+                const conf =
+                  a === null || a === undefined || b === null || b === undefined
+                    ? null
+                    : a + (b - a) * ((t0 + t1) / 2)
+                const gap = dashGap(conf)
+                return (
+                  <line
+                    key={`${i}-${k}`}
+                    x1={from[0] + (to[0] - from[0]) * t0}
+                    y1={from[1] + (to[1] - from[1]) * t0}
+                    x2={from[0] + (to[0] - from[0]) * t1}
+                    y2={from[1] + (to[1] - from[1]) * t1}
+                    stroke={s.color}
+                    strokeWidth={s.outline ? 1.3 : 1.9}
+                    strokeLinecap={gap > 0 ? 'round' : 'butt'}
+                    strokeDasharray={gap > 0 ? `${DASH} ${gap}` : undefined}
+                  />
+                )
+              })
             })}
             {pts.map((p, i) => {
               const v = s.values[i]
@@ -223,8 +267,26 @@ export function Radar({
           const stacked = anchor === 'middle'
           const side = anchor === 'end' ? -1 : 1
           const above = y < CENTER
+          const interactive = Boolean(onSelectDimension)
           return (
-            <g key={d}>
+            <g
+              key={d}
+              role={interactive ? 'button' : undefined}
+              tabIndex={interactive ? 0 : undefined}
+              aria-label={interactive ? `See every country on ${DIMENSION_LABELS[d]}` : undefined}
+              style={interactive ? { cursor: 'pointer' } : undefined}
+              onClick={interactive ? () => onSelectDimension?.(d) : undefined}
+              onKeyDown={
+                interactive
+                  ? (e) => {
+                      if (e.key === 'Enter' || e.key === ' ') onSelectDimension?.(d)
+                    }
+                  : undefined
+              }
+            >
+              {interactive ? (
+                <title>{`See every country on ${DIMENSION_LABELS[d]}`}</title>
+              ) : null}
               <AxisIcon
                 d={d}
                 x={stacked ? x : x + side * 9}
@@ -239,8 +301,9 @@ export function Radar({
                 fontSize={7.5}
                 fill="currentColor"
                 fillOpacity={0.75}
+                style={onSelectDimension ? { textDecoration: 'underline dotted', textUnderlineOffset: '2px' } : undefined}
               >
-                {marked[i] ? `${shortLabel(d)} *` : shortLabel(d)}
+                {shortLabel(d)}
               </text>
             </g>
           )

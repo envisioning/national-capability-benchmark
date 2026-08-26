@@ -1,9 +1,11 @@
 'use client'
 
 import { useState } from 'react'
+import type { Dimension } from '@ncb/core'
 import { Radar } from '@/components/Radar'
 import { FrameNote, RadarEvidenceLegend } from '@/components/ui'
 import type { RadarProfile } from '@/lib/profile'
+import { DimensionDialog } from '@/components/views/DimensionPeek'
 
 /**
  * One country's shape, with a second country available behind a selector.
@@ -21,6 +23,7 @@ export function CompareRadar({
   others: RadarProfile[]
 }) {
   const [iso3, setIso3] = useState('')
+  const [peek, setPeek] = useState<Dimension | null>(null)
   const comparator = others.find((o) => o.iso3 === iso3) ?? null
 
   /* One flat list. Countries added after the frame was fixed are displayed like
@@ -30,6 +33,7 @@ export function CompareRadar({
   return (
     <div>
       <Radar
+        onSelectDimension={setPeek}
         series={[
           {
             label: focus.country,
@@ -88,6 +92,15 @@ export function CompareRadar({
 
       <RadarEvidenceLegend />
       <FrameNote />
+
+      {peek ? (
+        <DimensionDialog
+          dimension={peek}
+          iso3={focus.iso3}
+          open
+          onClose={() => setPeek(null)}
+        />
+      ) : null}
     </div>
   )
 }
