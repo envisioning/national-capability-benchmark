@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T13:30:12.276Z",
+  "generatedAt": "2026-08-26T14:11:58.975Z",
   "gdpSeries": "NY.GDP.PCAP.PP.KD",
   "dimensionVsGdp": [
     {
@@ -34,8 +34,8 @@
     },
     {
       "dimension": "experimentation",
-      "pearson": 0.624,
-      "spearman": 0.829,
+      "pearson": 0.568,
+      "spearman": 0.659,
       "n": 16
     },
     {
@@ -137,18 +137,6 @@
       "n": 16
     },
     {
-      "a": "experimentation",
-      "b": "building",
-      "r": 0.764,
-      "n": 16
-    },
-    {
-      "a": "anticipation",
-      "b": "experimentation",
-      "r": 0.758,
-      "n": 16
-    },
-    {
       "a": "agency",
       "b": "building",
       "r": 0.749,
@@ -164,12 +152,6 @@
       "a": "adaptability",
       "b": "building",
       "r": 0.725,
-      "n": 16
-    },
-    {
-      "a": "agency",
-      "b": "experimentation",
-      "r": 0.689,
       "n": 16
     },
     {
@@ -197,9 +179,15 @@
       "n": 16
     },
     {
-      "a": "experimentation",
-      "b": "adaptability",
+      "a": "anticipation",
+      "b": "experimentation",
       "r": 0.628,
+      "n": 16
+    },
+    {
+      "a": "agency",
+      "b": "experimentation",
+      "r": 0.625,
       "n": 16
     },
     {
@@ -209,15 +197,21 @@
       "n": 16
     },
     {
-      "a": "coordination",
-      "b": "experimentation",
-      "r": 0.598,
+      "a": "experimentation",
+      "b": "adaptability",
+      "r": 0.62,
       "n": 16
     },
     {
-      "a": "trust",
+      "a": "experimentation",
+      "b": "building",
+      "r": 0.563,
+      "n": 16
+    },
+    {
+      "a": "learning",
       "b": "experimentation",
-      "r": 0.552,
+      "r": 0.519,
       "n": 16
     },
     {
@@ -239,15 +233,15 @@
       "n": 16
     },
     {
-      "a": "anticipation",
-      "b": "shared_purpose",
-      "r": 0.46,
+      "a": "trust",
+      "b": "experimentation",
+      "r": 0.466,
       "n": 16
     },
     {
-      "a": "learning",
-      "b": "experimentation",
-      "r": 0.452,
+      "a": "anticipation",
+      "b": "shared_purpose",
+      "r": 0.46,
       "n": 16
     },
     {
@@ -257,21 +251,27 @@
       "n": 16
     },
     {
+      "a": "coordination",
+      "b": "experimentation",
+      "r": 0.402,
+      "n": 16
+    },
+    {
       "a": "learning",
       "b": "building",
       "r": 0.388,
       "n": 16
     },
     {
-      "a": "experimentation",
-      "b": "shared_purpose",
-      "r": 0.144,
-      "n": 16
-    },
-    {
       "a": "building",
       "b": "shared_purpose",
       "r": 0.127,
+      "n": 16
+    },
+    {
+      "a": "experimentation",
+      "b": "shared_purpose",
+      "r": 0.062,
       "n": 16
     }
   ],
@@ -523,6 +523,14 @@
       "flaggedAsWealthProxy": false
     },
     {
+      "indicatorId": "failure_tolerance",
+      "dimension": "experimentation",
+      "measurementClass": "P",
+      "r": 0.504,
+      "wealthProxyPrior": 0.1,
+      "flaggedAsWealthProxy": false
+    },
+    {
       "indicatorId": "economic_complexity",
       "dimension": "building",
       "measurementClass": "O",
@@ -560,6 +568,14 @@
       "measurementClass": "C",
       "r": 0.368,
       "wealthProxyPrior": 0.25,
+      "flaggedAsWealthProxy": false
+    },
+    {
+      "indicatorId": "early_stage_entrepreneurial_activity",
+      "dimension": "experimentation",
+      "measurementClass": "C",
+      "r": -0.296,
+      "wealthProxyPrior": 0.15,
       "flaggedAsWealthProxy": false
     },
     {
@@ -862,17 +878,17 @@
     {
       "dimension": "experimentation",
       "indicatorsDefined": 8,
-      "indicatorsObserved": 2,
-      "gaps": 6,
-      "meanCoverage": 0.242,
-      "meanConfidence": 0.17,
+      "indicatorsObserved": 4,
+      "gaps": 4,
+      "meanCoverage": 0.492,
+      "meanConfidence": 0.372,
       "classMix": {
         "C": 4,
         "I": 1,
         "O": 2,
         "P": 1
       },
-      "subjectivityShare": 0.75
+      "subjectivityShare": 0.625
     },
     {
       "dimension": "adaptability",
@@ -1191,21 +1207,7 @@
       "indicatorId": "venture_capital_gdp",
       "name": "Venture capital investment",
       "publisher": "OECD / national VC associations",
-      "reason": "Commercial databases cover it well but are not inspectable. OECD figures skip India and South Africa."
-    },
-    {
-      "dimension": "experimentation",
-      "indicatorId": "early_stage_entrepreneurial_activity",
-      "name": "Early-stage entrepreneurial activity",
-      "publisher": "Global Entrepreneurship Monitor",
-      "reason": "GEM covers most of these countries but not every country in every year, and the national teams change."
-    },
-    {
-      "dimension": "experimentation",
-      "indicatorId": "failure_tolerance",
-      "name": "Tolerance of entrepreneurial failure",
-      "publisher": "Global Entrepreneurship Monitor",
-      "reason": "Attitudinal. Bankruptcy law and time to discharge would be the observable substitute and are worth wiring instead."
+      "reason": "Still a gap after a direct check on 2026-08-26. The OECD SME and Entrepreneurship Financing scoreboard is the only inspectable aggregate and it carries venture capital for 6 of these 16 countries, in national currency rather than as a share of GDP, latest year 2022. Brazil, India, South Africa and Singapore are all absent, so wiring it would score the rich half of the set and lower coverage for the rest. Commercial databases cover the world and are not inspectable. Read A1 before treating this dimension as measured."
     },
     {
       "dimension": "experimentation",
@@ -1261,7 +1263,7 @@
       "indicatorId": "large_project_delivery",
       "name": "Large project delivery",
       "publisher": "none",
-      "reason": "The single best measure of execution capability and there is no comparable international dataset. Assembling one is a defensible Envisioning project."
+      "reason": "The single best measure of execution capability and there is no comparable international dataset. Assembling one is a defensible Envisioning project. Building mixes industrial output with state delivery capacity, and this indicator carries the delivery side: the other six indicators cannot see a national programme that was delivered. Documented deliveries are recorded in data/evidence and never scored, see D20."
     },
     {
       "dimension": "building",
