@@ -1,13 +1,13 @@
 # National Capability Benchmark, prototype v0
 
-Generated 2026-08-26T20:33:24.615Z. 40 countries, nine dimensions, equal weights within each dimension, no headline ranking.
+Generated 2026-08-26T23:36:10.064Z. 40 countries, nine dimensions, equal weights within each dimension, no headline ranking.
 
 Scores run against a frame fixed by the 10 reference countries. 30 countries were added after that frame was set and are marked below. Adding them did not move any existing score.
 
 
 ## Each country gets nine scores and no ranking
 
-| Country | Anticipation | Agency | Coordination | Trust | Learning | Experimentation | Adaptability | Execution | Shared Purpose |
+| Country | Anticipation | Agency | Coordination | Trust | Learning | Experimentation | Adaptability | Building | Shared Purpose |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Brazil | 22.3 | 31 | 46.7 | 20.7 | 48.5 | 26 | 49.6 | 9.4 | 29 |
 | United States | 71 | 84.6 | 98.4 | 50 | 54.3 | 46.4 | 75.1 | 48.3 | 31.6 |
@@ -52,7 +52,7 @@ Scores run against a frame fixed by the 10 reference countries. 30 countries wer
 
 Confidence is reported separately and never folded into the score above. Each cell shows the number and the band it falls in.
 
-| Country | Anticipation | Agency | Coordination | Trust | Learning | Experimentation | Adaptability | Execution | Shared Purpose |
+| Country | Anticipation | Agency | Coordination | Trust | Learning | Experimentation | Adaptability | Building | Shared Purpose |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Brazil | 0.54 usable | 0.61 usable | 0.08 very thin | 0.20 very thin | 0.54 usable | 0.39 thin | 0.47 usable | 0.54 usable | 0.27 thin |
 | United States | 0.63 usable | 0.49 usable | 0.08 very thin | 0.20 very thin | 0.45 usable | 0.39 thin | 0.47 usable | 0.52 usable | 0.27 thin |
@@ -101,7 +101,7 @@ Change in dimension score, scored against the current frame so the scale holds s
 
 ### Over 10 years
 
-| Country | Anticipation | Agency | Coordination | Trust | Learning | Experimentation | Adaptability | Execution | Shared Purpose |
+| Country | Anticipation | Agency | Coordination | Trust | Learning | Experimentation | Adaptability | Building | Shared Purpose |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Brazil | +20.0 (4) | +26.2 (4) | no data | no data | +4.5 (2) | +8.5 (2) | +17.7 (4) | -0.9 (4) | +9.9 (2) |
 | United States | +17.7 (5) | +20.4 (3) | no data | no data | +6.2 (2) | -3.0 (2) | +6.6 (4) | +2.6 (4) | -1.1 (2) |
@@ -151,12 +151,12 @@ Change in dimension score, scored against the current frame so the scale holds s
 | Learning | 2.5 | 34 |
 | Experimentation | 1.2 | 34 |
 | Adaptability | 6.1 | 40 |
-| Execution | -0.5 | 40 |
+| Building | -0.5 | 40 |
 | Shared Purpose | 3.5 | 33 |
 
 ### Over 20 years
 
-| Country | Anticipation | Agency | Coordination | Trust | Learning | Experimentation | Adaptability | Execution | Shared Purpose |
+| Country | Anticipation | Agency | Coordination | Trust | Learning | Experimentation | Adaptability | Building | Shared Purpose |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Brazil | +4.8 (2) | +29.4 (3) | no data | no data | no data | +11.1 (2) | +18.8 (4) | -4.7 (2) | no data |
 | United States | +10.7 (3) | +45.2 (2) | no data | no data | no data | +7.0 (2) | +11.8 (4) | +1.6 (2) | -1.6 (2) |
@@ -206,7 +206,7 @@ Change in dimension score, scored against the current frame so the scale holds s
 | Learning | 11.4 | 28 |
 | Experimentation | 2.2 | 21 |
 | Adaptability | 14.3 | 40 |
-| Execution | -5.2 | 40 |
+| Building | -5.2 | 40 |
 | Shared Purpose | 3.8 | 28 |
 
 Read the median before the country. Several indicators measure adoption of things that spread worldwide, so almost every country rises and a positive number is not evidence of catching up. A country gains ground only where its change beats the median in that column. The short span is broad and shallow, the long span is narrow and deep, and a dimension that appears in one and not the other is telling you how far its data reaches.
@@ -226,7 +226,7 @@ Bands:
 | --- | --- | --- | --- | --- | --- | --- |
 | Anticipation | 7 | 5 | 2 | 0.707 | 0.615 | 0.286 |
 | Agency | 8 | 6 | 2 | 0.747 | 0.594 | 0.25 |
-| Execution | 8 | 5 | 2 | 0.625 | 0.542 | 0.375 |
+| Building | 8 | 5 | 2 | 0.625 | 0.542 | 0.375 |
 | Learning | 7 | 5 | 2 | 0.71 | 0.517 | 0.286 |
 | Adaptability | 8 | 4 | 4 | 0.5 | 0.471 | 0.5 |
 | Experimentation | 8 | 4 | 4 | 0.344 | 0.252 | 0.625 |
@@ -234,7 +234,7 @@ Bands:
 | Trust | 7 | 2 | 3 | 0.286 | 0.191 | 0.714 |
 | Coordination | 7 | 1 | 3 | 0.143 | 0.079 | 0.857 |
 
-Best measured: Anticipation, Agency, Execution. Weakest evidence base: Shared Purpose, Trust, Coordination.
+Best measured: Anticipation, Agency, Building. Weakest evidence base: Shared Purpose, Trust, Coordination.
 
 ## Some dimensions rest mostly on judgment
 
@@ -253,7 +253,7 @@ Best measured: Anticipation, Agency, Execution. Weakest evidence base: Shared Pu
 | Agency | 0.794 | 0.82 | 40 |
 | Learning | 0.765 | 0.759 | 40 |
 | Coordination | 0.611 | 0.637 | 40 |
-| Execution | 0.564 | 0.545 | 40 |
+| Building | 0.564 | 0.545 | 40 |
 | Experimentation | 0.398 | 0.476 | 40 |
 | Trust | 0.385 | 0.422 | 40 |
 | Shared Purpose | 0.328 | 0.325 | 40 |
@@ -264,7 +264,7 @@ Best measured: Anticipation, Agency, Execution. Weakest evidence base: Shared Pu
 | --- | --- | --- | --- | --- |
 | Human Capital Index | Learning | C | 0.895 | 0.5 |
 | Individuals using the internet | Agency | I | 0.893 | 0.55 |
-| Output per worker | Execution | O | 0.875 | 0.9 |
+| Output per worker | Building | O | 0.875 | 0.9 |
 | Fixed broadband subscriptions | Adaptability | I | 0.823 | 0.6 |
 | Secure internet servers | Anticipation | I | 0.812 | 0.6 |
 | Scientific articles | Anticipation | O | 0.783 | 0.4 |
@@ -287,7 +287,7 @@ Dropped 11 indicators correlating with log GDP per capita at 0.7 or above, then 
 | Learning | 7.04 | 37 |
 | Experimentation | 0 | 0 |
 | Adaptability | 10.53 | 32 |
-| Execution | 4.19 | 33 |
+| Building | 4.19 | 33 |
 | Shared Purpose | 0 | 0 |
 
 ## Indicator pairs are checked for redundancy
@@ -317,14 +317,14 @@ No dimension pair reaches 0.9. The nine dimensions carry distinct information at
 | Learning | 77.3 | 57.5 | 65.6 |
 | Experimentation | 47.4 | 34.2 | 28.1 |
 | Adaptability | 88.8 | 80.5 | 55.2 |
-| Execution | 54.4 | 70.9 | 19 |
+| Building | 54.4 | 70.9 | 19 |
 | Shared Purpose | 42.1 | 35 | 82.4 |
 
 ## Brazil is the reference case
 
 Strongest: Adaptability (49.6), Learning (48.5), Coordination (46.7).
 
-Weakest: Anticipation (22.3), Trust (20.7), Execution (9.4).
+Weakest: Anticipation (22.3), Trust (20.7), Building (9.4).
 
 ## Some indicators have no dataset behind them
 
@@ -374,7 +374,7 @@ Weakest: Anticipation (22.3), Trust (20.7), Execution (9.4).
 - Disaster preparedness and recovery: INFORM is largely a hazard-exposure index, so using it here would measure geography rather than capability.
 - Institutional responsiveness: No dataset exists. Measurable in principle from legislative and regulatory timestamps, which no one has assembled comparably.
 
-**Execution**
+**Building**
 
 - Logistics infrastructure quality: Retired 2026-08-26. An LPI sub-index, so the same freight-forwarder survey as logistics performance and the same problem. Electricity connection speed stays as the observable infrastructure measure in this dimension. See D23.
 - Large project delivery: The single best measure of execution capability and there is no comparable international dataset. Assembling one is a defensible Envisioning project. Building mixes industrial output with state delivery capacity, and this indicator carries the delivery side: the other six indicators cannot see a national programme that was delivered. Documented deliveries are recorded in data/evidence and never scored, see D20.
@@ -411,9 +411,9 @@ No cell has an interquartile range above 25 points.
 | Uruguay | Coordination | 0 | 45 | 45 |
 | United States | Coordination | 98.4 | 55 | -43.4 |
 | Estonia | Experimentation | 28.1 | 70 | 41.9 |
-| Netherlands | Execution | 31 | 70 | 39 |
+| Netherlands | Building | 31 | 70 | 39 |
 | India | Experimentation | 3.9 | 40 | 36.1 |
-| Estonia | Execution | 19 | 55 | 36 |
+| Estonia | Building | 19 | 55 | 36 |
 | Uruguay | Trust | 29.1 | 65 | 35.9 |
 | Peru | Coordination | 47.8 | 12 | -35.8 |
 | Costa Rica | Coordination | 78.3 | 45 | -33.3 |

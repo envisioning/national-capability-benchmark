@@ -21,7 +21,7 @@ export const DIMENSION_LABELS: Record<Dimension, string> = {
   learning: 'Learning',
   experimentation: 'Experimentation',
   adaptability: 'Adaptability',
-  building: 'Execution',
+  building: 'Building',
   shared_purpose: 'Shared Purpose',
 }
 

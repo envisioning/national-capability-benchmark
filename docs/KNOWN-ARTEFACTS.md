@@ -281,11 +281,11 @@ rebase rather than quietly widening the scale.
 
 ---
 
-## A11 — Execution measures industrial output, and reads as delivery capacity
+## A11 — Building measures industrial output, and reads as delivery capacity
 
 **Severity: medium. Found while building the Brazil view.**
 
-Execution asks whether a country can build and deliver. Its six measured
+Building asks whether a country can build and deliver. Its six measured
 indicators are manufacturing value added, high-technology export share, labour
 productivity, logistics infrastructure, electricity connection speed and
 economic complexity. All six describe industrial output. Nothing in the measured

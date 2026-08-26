@@ -927,18 +927,29 @@ the same quantity alongside the bar length and the printed number.
 
 ---
 
-## D29 — The dimension is called Execution, and the axes carry their marks
+## D29 — The eighth dimension keeps one name, and the axes carry their marks
 
 *Recorded 2026-08-26.*
 
 **Choice.** Two display changes, no change to any number.
 
-The eighth dimension is labelled `Execution`. The spec called it
+The eighth dimension is labelled `Building`. The spec called it
 "Building / Execution" and the slash was doing no work: it read as two names for
 one thing and it broke every table column it appeared in. The dimension id stays
 `building`, because it is the key in every scored file, every trend basket and
 every Delphi estimate on disk. Renaming the key would invalidate all of it to
 change a word on a screen.
+
+The label was briefly `Execution` on the same day. That word makes a promise the
+data cannot keep. Execution means finishing: cost performance, schedule
+performance, delivery. Those are `large_project_delivery` and
+`firm_scale_up_rate`, and both are gaps. What the dimension actually scores is
+four outcome measures of industrial output, manufacturing value added,
+high-technology export share, output per worker and economic fitness, plus a
+permit-speed score frozen at 2019. Calling that Execution invites a reader to
+take 9.4 as "Brazil cannot deliver" on the same page that documents Pix, SUS,
+the electoral system and Embrapa. Building is looser in a way that happens to be
+honest, and it matches Construção in the strategy this benchmark serves.
 
 The radar takes a `labels` prop. `full` prints the dimension mark and the words,
 `icons` prints the mark alone, `none` prints neither. The 40-country grid uses

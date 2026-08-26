@@ -79,7 +79,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     group: 'What is being measured',
     short: 'One of the nine capabilities, each scored on its own.',
     full: 'Nine dimensions, each with a question it has to answer, each scored from 0 to 100 on its own evidence. They are never added together into one number. Two countries with the same average can have opposite shapes, and reading that difference is what the benchmark is for.',
-    example: 'Execution asks whether a country turns plans into working systems. Trust asks how much cooperation is possible beyond people who already know each other.',
+    example: 'Building asks whether a country turns plans into working systems. Trust asks how much cooperation is possible beyond people who already know each other.',
   },
   {
     term: 'Indicator',
