@@ -281,18 +281,18 @@ rebase rather than quietly widening the scale.
 
 ---
 
-## A11 — Building measures industrial output, and reads as delivery capacity
+## A11 — Execution measures industrial output, and reads as delivery capacity
 
 **Severity: medium. Found while building the Brazil view.**
 
-Building asks whether a country can build and deliver. Its six measured
+Execution asks whether a country can build and deliver. Its six measured
 indicators are manufacturing value added, high-technology export share, labour
 productivity, logistics infrastructure, electricity connection speed and
 economic complexity. All six describe industrial output. Nothing in the measured
 set can see a national programme that was specified, funded and delivered.
 
-Brazil scores 11.5 with confidence 0.643, the highest confidence of its nine
-dimensions. The score is a correct statement about Brazilian industrial output
+Brazil scored 11.5 with confidence 0.643, the highest confidence of its nine
+dimensions, when this was written. The score is a correct statement about Brazilian industrial output
 and it is read as a statement about Brazilian delivery capacity, which is a
 different construct. In the same decade Brazil built and ran Pix, which settled
 7.98 billion transactions in July 2026, and GOV.BR, which reports 175 million

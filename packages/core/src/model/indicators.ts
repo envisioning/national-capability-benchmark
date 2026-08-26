@@ -740,7 +740,7 @@ const RAW: Raw[] = [
     wealthProxyPrior: 0.15,
   },
 
-  /* ------------------------ 8. Building / Execution ------------------------ */
+  /* ----------------------------- 8. Execution ----------------------------- */
   {
     id: 'manufacturing_value_added',
     dimension: 'building',

@@ -79,6 +79,7 @@ export default async function Page() {
                 <span className="text-xs text-[var(--muted)]">{c.iso3}</span>
               </div>
               <Radar
+                labels="icons"
                 series={[
                   {
                     label: c.country,

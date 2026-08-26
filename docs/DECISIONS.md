@@ -920,3 +920,38 @@ Building is always a hammer and Trust is always a handshake. The four confidence
 bands get a signal-strength ramp beside the meter, which is a third encoding of
 the same quantity alongside the bar length and the printed number.
 
+---
+
+## D29 — The dimension is called Execution, and the axes carry their marks
+
+*Recorded 2026-08-26.*
+
+**Choice.** Two display changes, no change to any number.
+
+The eighth dimension is labelled `Execution`. The spec called it
+"Building / Execution" and the slash was doing no work: it read as two names for
+one thing and it broke every table column it appeared in. The dimension id stays
+`building`, because it is the key in every scored file, every trend basket and
+every Delphi estimate on disk. Renaming the key would invalidate all of it to
+change a word on a screen.
+
+The radar takes a `labels` prop. `full` prints the dimension mark and the words,
+`icons` prints the mark alone, `none` prints neither. The 40-country grid uses
+`icons`, because at that card size the words rendered at seven pixels and were
+decoration. Every radar now also carries a `<title>` and a `<desc>` listing each
+dimension and its score, so a screen reader gets the full profile in words
+whatever the visual labels do.
+
+**Why.** A reader learning nine glyphs once can then read 40 cards at a glance,
+which is the whole reason the grid exists. The written names stay on the large
+radar, in the dimension table, on the method page and in the accessible
+description, so the icons are never the only carrier.
+
+**Cost.** A reader who has not learned the marks has to visit a labelled radar
+first. The nine icons are a judgement: a telescope for Anticipation and a
+handshake for Trust are readable, while a shuffle for Adaptability and a hand for
+Agency are weaker. Those two are the ones to revisit if anybody misreads them.
+
+**Overturned by.** Evidence that the grid is unreadable without words, which
+would mean going back to labels and making the cards larger.
+

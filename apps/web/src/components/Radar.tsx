@@ -1,5 +1,6 @@
 import { DIMENSIONS, DIMENSION_LABELS, isThinEvidence } from '@ncb/core'
 import type { Dimension } from '@ncb/core'
+import { DIMENSION_ICON, iconMarkup } from '@/components/Icon'
 
 export type RadarSeries = {
   label: string
@@ -39,12 +40,54 @@ function thinAt(series: RadarSeries, i: number): boolean {
  * label. Confidence still never touches the score itself: the vertex sits at
  * the same radius either way, and only the line style changes.
  */
-export function Radar({ series, showLabels = true }: { series: RadarSeries[]; showLabels?: boolean }) {
+/**
+ * How the nine axes are named.
+ *
+ * `full` prints the icon and the words, for a radar with room. `icons` prints
+ * the mark alone, for the small cards where the words render at seven pixels
+ * and are unreadable anyway. Either way the accessible description below carries
+ * every dimension name and score, so the words are never actually gone.
+ */
+export type RadarLabels = 'full' | 'icons' | 'none'
+
+/** One dimension mark, drawn inside the radar's own SVG. */
+function AxisIcon({ d, x, y, size, faded }: { d: Dimension; x: number; y: number; size: number; faded: boolean }) {
+  const scale = size / 24
+  return (
+    <g
+      transform={`translate(${x - size / 2} ${y - size / 2}) scale(${scale})`}
+      fill="none"
+      stroke="currentColor"
+      strokeOpacity={faded ? 0.45 : 0.75}
+      strokeWidth={1.6 / scale}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      dangerouslySetInnerHTML={{ __html: iconMarkup(DIMENSION_ICON[d]) }}
+    />
+  )
+}
+
+export function Radar({
+  series,
+  labels = 'full',
+}: {
+  series: RadarSeries[]
+  labels?: RadarLabels
+}) {
   const rings = [25, 50, 75, 100]
   const marked = DIMENSIONS.map((_, i) => series.some((s) => thinAt(s, i)))
+  const described = series
+    .map(
+      (s) =>
+        `${s.label}: ` +
+        DIMENSIONS.map((d, i) => `${DIMENSION_LABELS[d]} ${s.values[i] ?? 'no data'}`).join(', '),
+    )
+    .join('. ')
 
   return (
     <svg viewBox={`-26 0 ${SIZE + 52} ${SIZE}`} className="h-auto w-full" role="img">
+      <title>{series.map((s) => s.label).join(' compared with ')}</title>
+      <desc>{described}</desc>
       {rings.map((r) => (
         <polygon
           key={r}
@@ -118,23 +161,32 @@ export function Radar({ series, showLabels = true }: { series: RadarSeries[]; sh
         )
       })}
 
-      {showLabels &&
+      {labels === 'icons' &&
+        DIMENSIONS.map((d, i) => {
+          const [x, y] = point(i, 124)
+          return <AxisIcon key={d} d={d} x={x} y={y} size={11} faded={marked[i] as boolean} />
+        })}
+
+      {labels === 'full' &&
         DIMENSIONS.map((d, i) => {
           const [x, y] = point(i, 122)
           const anchor = x < CENTER - 4 ? 'end' : x > CENTER + 4 ? 'start' : 'middle'
+          const dx = anchor === 'end' ? -9 : anchor === 'start' ? 9 : 0
           return (
-            <text
-              key={d}
-              x={x}
-              y={y}
-              textAnchor={anchor}
-              dominantBaseline="middle"
-              fontSize={7}
-              fill="currentColor"
-              fillOpacity={0.65}
-            >
-              {marked[i] ? `${shortLabel(d)} *` : shortLabel(d)}
-            </text>
+            <g key={d}>
+              <AxisIcon d={d} x={x + dx} y={y} size={9} faded={marked[i] as boolean} />
+              <text
+                x={x + (anchor === 'end' ? -17 : anchor === 'start' ? 17 : 0)}
+                y={y}
+                textAnchor={anchor}
+                dominantBaseline="middle"
+                fontSize={7}
+                fill="currentColor"
+                fillOpacity={0.65}
+              >
+                {marked[i] ? `${shortLabel(d)} *` : shortLabel(d)}
+              </text>
+            </g>
           )
         })}
     </svg>
@@ -142,5 +194,5 @@ export function Radar({ series, showLabels = true }: { series: RadarSeries[]; sh
 }
 
 function shortLabel(d: Dimension): string {
-  return d === 'building' ? 'Building' : d === 'shared_purpose' ? 'Shared purpose' : DIMENSION_LABELS[d]
+  return d === 'shared_purpose' ? 'Shared purpose' : DIMENSION_LABELS[d]
 }
