@@ -102,10 +102,10 @@ export function DimensionPeek({
           </div>
 
           <p className="mb-4 max-w-2xl text-xs leading-relaxed text-[var(--muted)]">
-            Scores are a position against the ten countries that fix the scale, marked frame below.
-            The band beside each score says how well evidenced it is, and a thin band means the
-            number moves on very little. The last column is the change over ten years where there is
-            enough history to compute one.
+            Every country is scored the same way, as a position from 0 to 100 on a scale fixed by
+            ten reference countries. The band beside each score says how well evidenced it is, and a
+            thin band means the number moves on very little. The last column is the change over ten
+            years where there is enough history to compute one.
             {rank && rows ? ` This country ranks ${rank} of ${rows.length}.` : ''}
           </p>
 
@@ -139,11 +139,6 @@ export function DimensionPeek({
                   >
                     <span className="truncate">
                       {r.country}
-                      {r.reference ? (
-                        <span className="ml-2 text-[var(--muted)]" title="Sets the ends of the scale">
-                          frame
-                        </span>
-                      ) : null}
                     </span>
                     <span className="flex items-center gap-2">
                       <span className="h-2 grow rounded-full bg-[var(--rule-soft)]">

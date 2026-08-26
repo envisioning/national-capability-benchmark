@@ -107,7 +107,8 @@ export function IndicatorPeek({
             Measured in {def.unit}, where {def.direction === 'higher_better' ? 'higher' : 'lower'} is
             better. Source: {def.source.publisher}
             {def.source.series ? ` (${def.source.series})` : ''}. The bar is the normalized position
-            from 0 to 100, so higher is always better on the bar whatever the raw number does.
+            from 0 to 100 on a scale fixed by ten reference countries, so higher is always better on
+            the bar whatever the raw number does.
             {rank ? ` This country ranks ${rank} of ${values.length} on the values we hold.` : ''}
           </p>
 
@@ -140,11 +141,6 @@ export function IndicatorPeek({
                   >
                     <span className="truncate">
                       {v.country}
-                      {v.reference ? (
-                        <span className="ml-2 text-[var(--muted)]" title="Sets the ends of the scale">
-                          frame
-                        </span>
-                      ) : null}
                     </span>
                     <span className="text-right tabular-nums">{v.raw.toLocaleString('en-US')}</span>
                     <span className="text-right tabular-nums text-[var(--muted)]">{v.year}</span>
@@ -175,7 +171,7 @@ export function IndicatorPeek({
 
           {view ? (
             <p className="mt-4 text-xs leading-relaxed text-[var(--muted)]">
-              A warning mark means the value sat outside the range the ten frame countries cover, so
+              A warning mark means the value sat outside the range the reference countries cover, so
               its position was clamped to 0 or 100 and information was lost. {def.notes}
             </p>
           ) : null}

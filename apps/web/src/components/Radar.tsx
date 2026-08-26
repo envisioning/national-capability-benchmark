@@ -79,7 +79,10 @@ function AxisIcon({ d, x, y, size }: { d: Dimension; x: number; y: number; size:
       fill="none"
       stroke="currentColor"
       strokeOpacity={0.9}
-      strokeWidth={1.7 / scale}
+      /* Lucide's own stroke width. The transform scales it down with the shape,
+       * which is the point: compensating for the scale here made a 10-unit icon
+       * carry a 4-unit stroke and turned every mark into a blob. */
+      strokeWidth={2}
       strokeLinecap="round"
       strokeLinejoin="round"
       dangerouslySetInnerHTML={{ __html: iconMarkup(DIMENSION_ICON[d]) }}
@@ -124,6 +127,24 @@ export function Radar({
           strokeWidth={0.75}
         />
       ))}
+
+      {/* What the rings are worth. Without them a small shape reads as a weak
+          country rather than as a low position on a 0 to 100 scale. They run
+          downward from the centre, where nine axes leave a gap and nothing
+          collides. */}
+      {labels !== 'none' &&
+        rings.map((r) => (
+          <text
+            key={`ring-${r}`}
+            x={CENTER + 3}
+            y={CENTER + (r / 100) * g.radius + 2}
+            fontSize={6}
+            fill="currentColor"
+            fillOpacity={0.4}
+          >
+            {r}
+          </text>
+        ))}
       {DIMENSIONS.map((_, i) => {
         const [x, y] = at(i, 100)
         return (
@@ -147,7 +168,7 @@ export function Radar({
             <polygon
               points={pts.map((p) => p.join(',')).join(' ')}
               fill={s.color}
-              fillOpacity={s.outline ? 0 : 0.28}
+              fillOpacity={s.outline ? 0 : 0.32}
               stroke="none"
             />
             {pts.map((from, i) => {
@@ -162,8 +183,8 @@ export function Radar({
                   x2={to[0]}
                   y2={to[1]}
                   stroke={s.color}
-                  strokeWidth={s.outline ? 1.2 : 1.6}
-                  strokeDasharray={dashed ? '3 2.5' : undefined}
+                  strokeWidth={s.outline ? 1.3 : 1.9}
+                  strokeDasharray={dashed ? '2.5 1.8' : undefined}
                 />
               )
             })}
@@ -197,18 +218,27 @@ export function Radar({
         DIMENSIONS.map((d, i) => {
           const [x, y] = at(i, g.ring)
           const anchor = x < CENTER - 4 ? 'end' : x > CENTER + 4 ? 'start' : 'middle'
-          const dx = anchor === 'end' ? -9 : anchor === 'start' ? 9 : 0
+          /* On the axes that point straight up or down there is no side to put
+           * the mark on, so it goes above the words instead of on top of them. */
+          const stacked = anchor === 'middle'
+          const side = anchor === 'end' ? -1 : 1
+          const above = y < CENTER
           return (
             <g key={d}>
-              <AxisIcon d={d} x={x + dx} y={y} size={10} />
+              <AxisIcon
+                d={d}
+                x={stacked ? x : x + side * 9}
+                y={stacked ? y + (above ? -8 : 9) : y}
+                size={10}
+              />
               <text
-                x={x + (anchor === 'end' ? -17 : anchor === 'start' ? 17 : 0)}
-                y={y}
+                x={stacked ? x : x + side * 17}
+                y={stacked ? y + (above ? 3 : -3) : y}
                 textAnchor={anchor}
                 dominantBaseline="middle"
-                fontSize={7}
+                fontSize={7.5}
                 fill="currentColor"
-                fillOpacity={0.65}
+                fillOpacity={0.75}
               >
                 {marked[i] ? `${shortLabel(d)} *` : shortLabel(d)}
               </text>

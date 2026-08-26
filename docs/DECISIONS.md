@@ -389,6 +389,11 @@ score, so it belongs in the method documentation rather than on every row.
 **Cost.** A reader cannot tell from the table which countries defined the frame.
 The method page and D16 say which ten they are.
 
+**Broken and restored, 2026-08-26.** The comparison panels added by D30 printed
+the word frame beside every reference country in their lists, which is the same
+marking this decision removed, inverted. It is gone again. The distinction stays
+where it belongs, in the method page and in the glossary.
+
 **Overturned by.** A case where the distinction changes how a number should be
 read, most likely a country clamping at 0 or 100. Flag `outOfFrame` on that
 cell rather than reinstating a badge on the country.
