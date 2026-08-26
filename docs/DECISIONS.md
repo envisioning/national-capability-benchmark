@@ -449,11 +449,23 @@ which point `large_project_delivery` leaves `gap`, the records become source
 notes on a scored indicator, and this decision is superseded.
 
 **Update, same day.** The layer opened with two Brazilian records, which read as
-a claim about Brazil. It now holds six records across four countries: Brazil
-(Pix, GOV.BR), Estonia (X-Road), India (Jan Dhan accounts) and Uruguay (the
-renewable electricity build, Plan Ceibal). All six sit on
-`large_project_delivery`. Six records are still not a series, so the promotion
-rule above is unchanged.
+a claim about Brazil. It now holds 11 records across four countries: Brazil
+(Pix, GOV.BR, SUS, Plano Real, the immunisation programme and its erosion, Luz
+para Todos, Embrapa), Estonia (X-Road), India (Jan Dhan accounts) and Uruguay
+(the renewable electricity build, Plan Ceibal).
+
+Records also stopped being a single-indicator affair. Eight sit on
+`large_project_delivery`, one on `institutional_responsiveness` (Plano Real) and
+one on `government_foresight_capacity` (Embrapa), so the layer now documents
+three gaps in three dimensions rather than one.
+
+Two of the Brazilian records exist to keep the layer from becoming advocacy. The
+immunisation record carries a capability that eroded, from 99 percent coverage in
+2003 to 68 percent in 2021, and Plan Ceibal carries a delivery whose only
+available measure is weak and stale. A library of national wins would not include
+either.
+
+Eleven records are still not a series, so the promotion rule above is unchanged.
 
 ---
 

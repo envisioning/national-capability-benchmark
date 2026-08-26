@@ -126,6 +126,111 @@
         "retrievedAt": "2026-08-26"
       },
       "limits": "Household reach peaked at 40.1 percent in 2014 and the series stops in 2018, so this number says nothing about the programme now. A device in the home measures distribution and says nothing about learning. The record is here because the delivery is documented and the measure of it is weak."
+    },
+    {
+      "id": "bra-sus",
+      "indicatorId": "large_project_delivery",
+      "iso3": "BRA",
+      "title": "Sistema Unico de Saude, universal public health system",
+      "claim": "Brazil wrote a right to health into the 1988 constitution and built a single public system that covers everybody in the country, and the WHO service coverage index for Brazil rose from 71 in 2000 to 84 in 2023.",
+      "metric": {
+        "name": "UHC service coverage index",
+        "value": 84.0,
+        "unit": "index 0-100",
+        "asOf": "2023"
+      },
+      "started": 1988,
+      "source": {
+        "publisher": "World Health Organization, Global Health Observatory",
+        "url": "https://ghoapi.azureedge.net/api/UHC_INDEX_REPORTED",
+        "tier": "international_organization",
+        "retrievedAt": "2026-08-26"
+      },
+      "limits": "A service coverage index counts whether services reach people. It says nothing about waiting times, quality, or the difference between a capital city and the interior, and it credits private provision alongside the public system. Brazil spends less per head on public health than most countries with a comparable index, which this number cannot show."
+    },
+    {
+      "id": "bra-plano-real",
+      "indicatorId": "institutional_responsiveness",
+      "iso3": "BRA",
+      "title": "Plano Real, the 1994 currency stabilisation",
+      "claim": "Brazil ended four decades of high inflation with a staged currency reform, taking annual consumer price inflation from 2,075.9 percent in 1994 to 3.2 percent in 1998.",
+      "metric": {
+        "name": "Annual consumer price inflation",
+        "value": 3.2,
+        "unit": "% per year",
+        "asOf": "1998"
+      },
+      "started": 1993,
+      "source": {
+        "publisher": "World Bank, from IBGE",
+        "url": "https://api.worldbank.org/v2/country/BRA/indicator/FP.CPI.TOTL.ZG?format=json",
+        "tier": "international_organization",
+        "retrievedAt": "2026-08-26"
+      },
+      "limits": "Disinflation was held in place with an overvalued exchange rate and high interest rates, and that arrangement broke in the 1999 devaluation and again in the 2002 confidence crisis. One macroeconomic outcome is not a general measure of how fast Brazilian institutions respond to new conditions. The design and the sequencing are the capability here, and no number in this record captures them."
+    },
+    {
+      "id": "bra-pni",
+      "indicatorId": "large_project_delivery",
+      "iso3": "BRA",
+      "title": "Programa Nacional de Imunizacoes, and its erosion",
+      "claim": "Brazil's national immunisation programme reached 99 percent DPT coverage in 2003 and held above 95 percent for a decade, then fell to 68 percent by 2021 and had recovered to 91 percent by 2024.",
+      "metric": {
+        "name": "DPT immunisation coverage, children aged 12-23 months",
+        "value": 91.0,
+        "unit": "% of children",
+        "asOf": "2024"
+      },
+      "started": 1973,
+      "source": {
+        "publisher": "World Bank, from WHO and UNICEF estimates",
+        "url": "https://api.worldbank.org/v2/country/BRA/indicator/SH.IMM.IDPT?format=json",
+        "tier": "international_organization",
+        "retrievedAt": "2026-08-26"
+      },
+      "limits": "This record is here because it runs both ways. A delivery capability that reached the whole country lost a third of its coverage in five years and has not fully recovered, which is evidence about durability rather than about peak performance. Coverage is administratively reported, DPT is one antigen among many, and the fall has several causes that the series cannot separate."
+    },
+    {
+      "id": "bra-luz-para-todos",
+      "indicatorId": "large_project_delivery",
+      "iso3": "BRA",
+      "title": "Luz para Todos, rural electrification",
+      "claim": "Brazil connected the last rural households to electricity through a national programme run with the state and private distributors, taking access from 94.4 percent of the population in 2000 to 99.8 percent in 2024.",
+      "metric": {
+        "name": "Access to electricity",
+        "value": 99.8,
+        "unit": "% of population",
+        "asOf": "2024"
+      },
+      "started": 2003,
+      "source": {
+        "publisher": "World Bank, from national and utility sources",
+        "url": "https://api.worldbank.org/v2/country/BRA/indicator/EG.ELC.ACCS.ZS?format=json",
+        "tier": "international_organization",
+        "retrievedAt": "2026-08-26"
+      },
+      "limits": "Access counts a connection. It says nothing about how often the power fails, what it costs, or the isolated Amazon communities that make up most of the remaining gap. Access was already rising before 2003, so the programme accelerated a trend rather than starting one."
+    },
+    {
+      "id": "bra-embrapa",
+      "indicatorId": "government_foresight_capacity",
+      "iso3": "BRA",
+      "title": "Embrapa, a fifty-year bet on tropical agriculture",
+      "claim": "Brazil created a public agricultural research corporation in 1973 to make acidic tropical soils productive, kept it funded across every change of government since, and cereal production rose from 46.5 million tonnes in 2000 to 155.9 million in 2023.",
+      "metric": {
+        "name": "Cereal production",
+        "value": 155877082.0,
+        "unit": "tonnes",
+        "asOf": "2023"
+      },
+      "started": 1973,
+      "source": {
+        "publisher": "World Bank, from FAO",
+        "url": "https://api.worldbank.org/v2/country/BRA/indicator/AG.PRD.CREL.MT?format=json",
+        "tier": "international_organization",
+        "retrievedAt": "2026-08-26"
+      },
+      "limits": "Production is an outcome and the credit is shared with land expansion, subsidised credit and private plant breeding, so this number cannot separate the research from the rest. It also cannot see the cost: much of the expansion came from converting cerrado and forest. What the record actually evidences is fifty years of continuity in a public research mandate, which is the part no dataset measures."
     }
   ]
 }
