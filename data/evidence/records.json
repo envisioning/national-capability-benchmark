@@ -771,6 +771,327 @@
         ],
         "travelled": "Twenty years on, no other country runs internet voting at national scale: Switzerland trials and withdraws, Norway tried and stopped. The Estonian lesson is that the identity system came first, and copies that start with the voting app fail."
       }
+    },
+    {
+      "id": "tur-disinflation-2001",
+      "indicatorId": "institutional_responsiveness",
+      "iso3": "TUR",
+      "title": "The 2001 stabilisation, and its unwinding",
+      "claim": "Turkey answered its 2001 banking collapse with central bank independence, bank restructuring and fiscal rule, taking inflation from 54.4 percent in 2001 to 8.6 percent in 2004, and after 2018 the same framework was overridden until inflation reached 72.3 percent in 2022.",
+      "metric": {
+        "name": "Consumer price inflation after the framework was overridden",
+        "value": 72.3,
+        "unit": "% per year",
+        "asOf": "2022"
+      },
+      "secondMetric": {
+        "name": "Consumer price inflation at the stabilisation's best",
+        "value": 8.6,
+        "unit": "% per year",
+        "asOf": "2004"
+      },
+      "started": 2001,
+      "status": "eroded",
+      "source": {
+        "publisher": "World Bank, World Development Indicators, series FP.CPI.TOTL.ZG",
+        "url": "https://api.worldbank.org/v2/country/TUR/indicator/FP.CPI.TOTL.ZG?format=json&per_page=60&date=1994:2024",
+        "tier": "international_organization",
+        "retrievedAt": "2026-08-27"
+      },
+      "limits": "Inflation is an outcome with many causes: the 2001-2004 fall also rode an IMF programme and a global disinflation, and the post-2018 rise includes a currency crisis and imported energy prices, so neither number isolates the institutions. The record runs both ways by design: the same state that built a working stabilisation framework later demonstrated that the framework had no defence against its own executive. The institutions were not abolished, which is why the status is eroded rather than dismantled.",
+      "pattern": {
+        "mechanism": "A crisis government handed monetary policy to an independent central bank by law, recapitalised and closed broken banks through an autonomous agency, and held a primary surplus, which together made the anti-inflation promise credible for fifteen years.",
+        "preconditions": [
+          "A crisis deep enough to make the political cost of reform payable",
+          "External anchors, the IMF programme and EU accession prospect, that rewarded holding the framework",
+          "A technocratic team with authority to execute across ministries"
+        ],
+        "travelled": "The package was the standard post-crisis prescription and worked as designed. What the case adds is the second half: formal independence survived on paper while governors were replaced until policy followed the executive, a path other countries have since repeated."
+      }
+    },
+    {
+      "id": "zaf-eskom-loadshedding",
+      "indicatorId": "large_project_delivery",
+      "iso3": "ZAF",
+      "title": "Grid power, and load shedding",
+      "claim": "South Africa ran one of the world's cheapest reliable grids and extended it to most of the population after 1994, then under-invested and lost the surplus, reaching 335 days of load shedding in 2023 before recovering to 83 days in 2024.",
+      "metric": {
+        "name": "Days with load shedding in the worst year",
+        "value": 335,
+        "unit": "days",
+        "asOf": "2023"
+      },
+      "secondMetric": {
+        "name": "Days with load shedding after the partial recovery",
+        "value": 83,
+        "unit": "days",
+        "asOf": "2024"
+      },
+      "started": 1994,
+      "status": "eroded",
+      "source": {
+        "publisher": "CSIR, utility-scale power generation statistics in South Africa 2024",
+        "url": "https://www.csir.co.za/sites/default/files/2025-09/Utility%20Statistics%20Report_Jan%202025_Final.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-27"
+      },
+      "limits": "The day counts are read from the annual chart in the CSIR report rather than a stated table, and a day with any load shedding counts the same as a day of stage six, so the unit understates severity differences. The 2024 recovery also leans on private rooftop solar that households bought in self-defence, which the report itself notes, so the improvement is not all Eskom's. What the record shows is a delivered capability, generation adequacy, lost over roughly fifteen years of deferred maintenance and failed new build, with Medupi and Kusile late and over budget.",
+      "pattern": {
+        "mechanism": "The erosion is the mechanism recorded here: a state monopoly was told to electrify without being allowed to charge for or build ahead of demand, new-build decisions were delayed for a decade, and the two giant plants finally ordered were too large for the delivery capability that remained.",
+        "preconditions": [
+          "A single vertically integrated utility, so one balance sheet carried every deferral",
+          "Tariffs held below cost for political reasons, which financed under-maintenance",
+          "Procurement institutions too weakened to deliver a mega-project on schedule"
+        ],
+        "travelled": "The failure pattern, defer, then order two of the largest coal plants ever attempted, is a caution for any state that skips a build cycle and tries to catch up in one leap."
+      }
+    },
+    {
+      "id": "usa-measles-elimination",
+      "indicatorId": "large_project_delivery",
+      "iso3": "USA",
+      "title": "Measles elimination, and its erosion",
+      "claim": "The United States eliminated endemic measles transmission by 2000 through school-entry vaccination requirements, and falling coverage brought 2,777 confirmed cases by August 2026, the most since 1991, against 285 in all of 2024.",
+      "metric": {
+        "name": "Confirmed measles cases in 2026, to 20 August",
+        "value": 2777,
+        "unit": "cases",
+        "asOf": "2026-08"
+      },
+      "secondMetric": {
+        "name": "Confirmed measles cases in the last pre-outbreak year",
+        "value": 285,
+        "unit": "cases",
+        "asOf": "2024"
+      },
+      "started": 2000,
+      "status": "eroded",
+      "source": {
+        "publisher": "US Centers for Disease Control and Prevention, measles cases and outbreaks",
+        "url": "https://www.cdc.gov/measles/data-research/index.html",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-27"
+      },
+      "limits": "A case count is the lagging end of the erosion; the leading end is kindergarten vaccination coverage, which CDC reports separately as falling from about 95 percent before the pandemic to under 93 percent, below the outbreak-prevention threshold. The 2026 number is a year in progress and will rise. Elimination status is a WHO-defined property of transmission chains, not of case counts, and had not been formally revoked at retrieval; what the record documents is a maintained public-health achievement being lost while the infrastructure that delivered it still exists.",
+      "pattern": {
+        "mechanism": "The erosion is the mechanism recorded here: vaccination requirements are enforced at school entry by states, so a delivery that took federal purchasing and decades of practice is being undone state by state through widening exemption rules and falling trust, with no single decision anywhere.",
+        "preconditions": [
+          "Enforcement located at fifty state legislatures rather than one national rule",
+          "A generation of parents with no memory of the disease",
+          "An information environment that carries vaccine doubt faster than health agencies answer it"
+        ],
+        "travelled": "The same coverage decline is visible across several high-income countries; the American case is the cleanest because elimination was formally certified in 2000, which fixes the baseline the erosion is measured against."
+      }
+    },
+    {
+      "id": "ken-mpesa",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "KEN",
+      "title": "M-Pesa, and the regulator that let it run",
+      "claim": "Kenya's central bank let a phone company build a national payments system in 2007 and supervised it into ubiquity, and by June 2026 Kenya had 94.2 million registered mobile money accounts and 572,104 agents, in a population of about 55 million.",
+      "metric": {
+        "name": "Registered mobile money accounts",
+        "value": 94200000,
+        "unit": "accounts",
+        "asOf": "2026-06"
+      },
+      "started": 2007,
+      "status": "operating",
+      "source": {
+        "publisher": "Central Bank of Kenya, mobile payments statistics",
+        "url": "https://www.centralbank.go.ke/national-payments-system/mobile-payments/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-27"
+      },
+      "limits": "The delivery was Safaricom's, a majority-private company, so the record bears on public-private collaboration only through what the state did: permit, then supervise, then regulate interoperability. Registered accounts overstate people, since many Kenyans hold several, and account counts say nothing about fees, which are materially higher than card rails elsewhere. A single dominant operator is also a concentration the indicator's construct does not reward.",
+      "pattern": {
+        "mechanism": "The central bank issued a letter of no objection instead of demanding a banking licence, set conditions on trust accounts holding customer float, and wrote the e-money regulations after the system worked, legalising what it had learned rather than licensing what it could imagine.",
+        "preconditions": [
+          "A regulator senior enough to carry the risk of saying yes",
+          "A mobile operator with national agent reach and its own fraud controls",
+          "A banking sector too small in reach to block the entrant"
+        ],
+        "travelled": "Mobile money spread across Africa and South Asia, but mostly where regulators copied the permissive sequencing. Where banking law was applied first, including in some of Kenya's neighbours for years, adoption stalled."
+      }
+    },
+    {
+      "id": "che-dual-vet",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "CHE",
+      "title": "Dual-track vocational training",
+      "claim": "Switzerland runs most upper-secondary education through firms: of 218,259 students enrolled in vocational education and training in 2020, 90.6 percent, 197,782, were apprentices trained inside companies under federal law.",
+      "metric": {
+        "name": "Apprentices in dual-track training",
+        "value": 197782,
+        "unit": "apprentices",
+        "asOf": "2020"
+      },
+      "secondMetric": {
+        "name": "Share of VET students in the dual track",
+        "value": 90.6,
+        "unit": "% of VET students",
+        "asOf": "2020"
+      },
+      "started": 2004,
+      "status": "operating",
+      "source": {
+        "publisher": "Cedefop, European Centre for the Development of Vocational Training, dual-track VET scheme fiche",
+        "url": "https://www.cedefop.europa.eu/en/tools/apprenticeship-schemes/scheme-fiches/dual-track-vet",
+        "tier": "international_organization",
+        "retrievedAt": "2026-08-27"
+      },
+      "limits": "Enrolment counts participation in the system, not what the training is worth; the wage and employment evidence sits in separate studies. The system long predates the number: 2004 is the current federal act, not the start of apprenticeship in Switzerland, and the record cannot show how much of the outcome is the law versus a century of employer habit. Firms train because it pays them net of apprentice output, and that arithmetic, not the statute, is the load-bearing part.",
+      "pattern": {
+        "mechanism": "Federal law makes firms, cantons and professional associations joint owners of training: associations write the curricula for their own occupations, firms hire and pay apprentices to do real work, and the state examines and certifies, so the labour market signals what to teach.",
+        "preconditions": [
+          "Employer associations strong enough to write and update curricula",
+          "Apprentice wages low enough that training pays for the firm",
+          "Social standing for the vocational route, so strong students choose it"
+        ],
+        "travelled": "Germany and Austria run sibling systems; exports to countries without employer associations mostly produce school-based programmes with the dual name, which drops the part that works."
+      }
+    },
+    {
+      "id": "aus-compulsory-voting",
+      "indicatorId": "civic_participation",
+      "iso3": "AUS",
+      "title": "Compulsory voting",
+      "claim": "Australia has required citizens to vote since 1924 and turnout at the 2025 federal election was 90.7 percent of enrolled voters, a level no large voluntary-voting democracy reaches.",
+      "metric": {
+        "name": "House of Representatives turnout, 2025 federal election",
+        "value": 90.7,
+        "unit": "% of enrolled voters",
+        "asOf": "2025"
+      },
+      "started": 1924,
+      "status": "operating",
+      "source": {
+        "publisher": "Australian Electoral Commission, participation in the 2025 federal election",
+        "url": "https://www.aec.gov.au/election/fe25/participation-rates.htm",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-27"
+      },
+      "limits": "Turnout under compulsion measures compliance, not civic desire, which is exactly the objection to filing it under civic participation; the record is here because the indicator's construct is participation behaviour, and ninety percent of a country voting for a century is behaviour, whatever its cause. The denominator is enrolled voters, and enrolment itself is near-complete only because it is also compulsory. The fine is small and enforcement light, so the mechanism is closer to a maintained norm than to coercion.",
+      "pattern": {
+        "mechanism": "Parliament made voting a legal duty with a token fine, paired it with automatic-style enrolment, Saturday voting and easy postal and early options, so the state removed every excuse at the same time as it imposed the duty.",
+        "preconditions": [
+          "Cross-party agreement to keep the duty, since either side could repeal it",
+          "An electoral commission trusted to run painless voting",
+          "A fine large enough to state the norm and small enough not to embitter"
+        ],
+        "travelled": "Around twenty countries mandate voting and fewer enforce it; Belgium and Luxembourg are the closest working siblings. Where compulsion was dropped, as in Chile in 2012, turnout fell by tens of points within two elections."
+      }
+    },
+    {
+      "id": "rwa-umuganda",
+      "indicatorId": "volunteering_rate",
+      "iso3": "RWA",
+      "title": "Umuganda community work",
+      "claim": "Rwanda requires a morning of community work on the last Saturday of each month, and the government's own assessment reports average participation of 91.3 percent of adults countrywide in fiscal year 2015-2016, up from 87.8 percent two years earlier.",
+      "metric": {
+        "name": "Umuganda participation rate",
+        "value": 91.3,
+        "unit": "% of adults 18-65",
+        "asOf": "2016"
+      },
+      "secondMetric": {
+        "name": "Umuganda participation rate two years earlier",
+        "value": 87.8,
+        "unit": "% of adults 18-65",
+        "asOf": "2014"
+      },
+      "started": 2007,
+      "status": "operating",
+      "source": {
+        "publisher": "Rwanda Governance Board, impact assessment of umuganda 2007-2016, citing MINALOC annual reports",
+        "url": "https://www.rgb.rw/fileadmin/user_upload/RGB/Publications/HOME_GROWN_SOLUTIONS/Impact_Assessment_of_Umuganda_2007-2016.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-27"
+      },
+      "limits": "The number is the state assessing its own compulsory programme in a country where declining to participate carries social and administrative cost, so it cannot be read as volunteering in the survey sense the indicator intends, and no independent measurement exists. Participation is legally required, which is the opposite of the construct's voluntariness. The record is filed anyway because the indicator is a gap and the case is the strongest documented instance of state-organised mass civic labour, provided the compulsion is read alongside the number.",
+      "pattern": {
+        "mechanism": "The state fixed a single national morning each month, closed roads and shops for it, assigned works through the lowest administrative level, and had officials up to the president participate visibly, converting an old rural practice into a synchronised national institution.",
+        "preconditions": [
+          "An administrative structure that reaches every village",
+          "A governing party able to enforce a norm without visible coercion",
+          "A rebuilding narrative in which refusing communal work reads as defection"
+        ],
+        "travelled": "The practice descends from communal-labour traditions found across East Africa; Rwanda's addition is the synchronisation and the enforcement. Copies without the administrative reach, or the pressure, produce a cleanup day rather than an institution."
+      }
+    },
+    {
+      "id": "isr-yozma",
+      "indicatorId": "venture_capital_gdp",
+      "iso3": "ISR",
+      "title": "Yozma, the venture capital catalyst",
+      "claim": "Israel put 100 million dollars of public money into ten hybrid venture funds from 1993, with foreign partners and a buy-out option, and by 2002 the country had 131 venture funds with around 10 billion dollars under management.",
+      "metric": {
+        "name": "Capital under management by Israeli venture funds",
+        "value": 10000000000,
+        "unit": "US dollars",
+        "asOf": "2002"
+      },
+      "secondMetric": {
+        "name": "Government capital that started Yozma",
+        "value": 100000000,
+        "unit": "US dollars",
+        "asOf": "1993"
+      },
+      "started": 1993,
+      "status": "concluded",
+      "source": {
+        "publisher": "OECD, Venture Capital Policies in Israel, STI working paper 2003/3",
+        "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2003/01/venture-capital-policies-in-israel_g17a1564/585780028400.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-08-27"
+      },
+      "limits": "Attribution is the weak joint: the ten funds were one cause among several, alongside a million-person skilled immigration wave, military technology spillovers and a US stock market that wanted Israeli listings, and the OECD paper credits Yozma as catalyst rather than cause. The 10 billion figure is capital under management, not investment made or returns earned, and roughly 70 percent of it was foreign money. The programme was deliberately closed once private capital led, which is why the status is concluded.",
+      "pattern": {
+        "mechanism": "The state capitalised new private funds rather than picking companies, required each fund to bring a foreign venture firm as partner, and sold the government's stake cheaply to the private partners once a fund worked, so the subsidy was the upside, and it expired by design.",
+        "preconditions": [
+          "A stock of investable technology and founders already present",
+          "Foreign venture firms willing to teach the craft for cheap equity",
+          "A government able to exit a working programme instead of scaling it"
+        ],
+        "travelled": "Yozma is the most copied venture policy in the world, and most copies fail on the same two points: no credible foreign-partner requirement, and no willingness to sell the state's stake at the moment of success."
+      }
+    },
+    {
+      "id": "fin-libraries",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "FIN",
+      "title": "The public library system",
+      "claim": "Finland runs the world's most used public library system under a statutory duty dating to 1928, and in 2024 Finns borrowed 85.4 million items, 15.3 per inhabitant, and visited libraries 50.7 million times.",
+      "metric": {
+        "name": "Library loans per inhabitant",
+        "value": 15.3,
+        "unit": "loans per person",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Library visits in the year",
+        "value": 50700000,
+        "unit": "visits",
+        "asOf": "2024"
+      },
+      "started": 1928,
+      "status": "operating",
+      "source": {
+        "publisher": "Finnish Ministry of Education and Culture, public library statistics via Libraries.fi",
+        "url": "https://www.libraries.fi/statistics?language_content_entity=en",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-27"
+      },
+      "limits": "Borrowing is reading, not structured adult learning, so the record sits one step from the indicator's construct, which asks about participation in education and training; it is filed because the library statute explicitly assigns libraries a lifelong-learning duty and no better-measured Finnish delivery covers the gap. Loans per head are also falling slowly here as everywhere, and the world-leading claim depends on which countries publish comparable statistics.",
+      "pattern": {
+        "mechanism": "The state made libraries a statutory municipal duty with national subsidy, kept them free by law including reservations and inter-library loans, and municipalities compete on quality, with the flagship in Helsinki placed opposite parliament as a statement.",
+        "preconditions": [
+          "Near-universal literacy and a reading culture that predates the statute",
+          "Municipal finance strong enough to fund a non-mandatory-feeling service",
+          "A language community small enough that the state subsidises publishing too"
+        ],
+        "travelled": "The Nordic neighbours run the same model at slightly lower intensity. Elsewhere the statutory free-of-charge rule is the part that erodes first, and with it the usage."
+      }
     }
   ]
 }
