@@ -107,6 +107,11 @@ weaker model, and the IQR is the output that matters most.
 
 ## Hand-authoring a run
 
+An agent scoring inside a working session should read `docs/PANELIST-BRIEF.md`,
+which covers stance assignment, how to print the exact prompt with `pnpm bench
+prompt`, and why separate models must not be merged into one panel array from
+one context.
+
 An `in_session` or `human` run is written by hand as JSON in `data/delphi/`.
 The schema is `DelphiRunFile` in `packages/core/src/model/schema.ts`. Required:
 `runId`, `generatedAt`, `provenance`, `note`, `panel`, `rounds`,

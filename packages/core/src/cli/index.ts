@@ -1,5 +1,5 @@
-import { COUNTRY_ISO3, DATASET_VERSION, GDP_PER_CAPITA_CODE, INDICATORS } from '../model/index.js'
-import type { CountryResult } from '../model/index.js'
+import { COUNTRY_ISO3, DATASET_VERSION, DIMENSIONS, GDP_PER_CAPITA_CODE, INDICATORS } from '../model/index.js'
+import type { CountryResult, Dimension } from '../model/index.js'
 import { ingestWorldBank } from '../pipeline/ingest.js'
 import {
   COUNTRY_OUT_DIR,
@@ -29,10 +29,11 @@ import {
   toCsv,
   writeOut,
 } from '../pipeline/store.js'
-import { buildPanel, modelsFromEnv } from '../delphi/panel.js'
+import { STANCES, buildPanel, modelsFromEnv } from '../delphi/panel.js'
 import { GatewayProvider, MockProvider } from '../delphi/provider.js'
 import { runDelphi } from '../delphi/run.js'
 import { estimateCost } from '../delphi/cost.js'
+import { SYSTEM_RULES, indicatorJudgementPrompt, round1CellPrompt } from '../delphi/prompts.js'
 import { CHARS_PER_TOKEN, LAST_VERIFIED, OUTPUT_TOKENS } from '../delphi/pricing.js'
 import { checkEvidenceUrls, validateDelphiRuns, validateEvidence } from '../pipeline/validate.js'
 
@@ -263,6 +264,45 @@ async function main() {
       break
     }
 
+    case 'prompt': {
+      const stanceId = str(args, 'stance', 'institutionalist')
+      const stance = STANCES.find((s) => s.id === stanceId)
+      if (!stance) {
+        console.error(`unknown stance "${stanceId}". one of: ${STANCES.map((s) => s.id).join(', ')}`)
+        process.exitCode = 1
+        break
+      }
+      const panelist = { id: `${stance.id}@${str(args, 'model', 'in-session')}`, model: str(args, 'model', 'in-session'), stance }
+
+      if (bool(args, 'system')) {
+        console.log(SYSTEM_RULES)
+        break
+      }
+
+      const dimension = str(args, 'audit', '')
+      if (dimension) {
+        if (!(DIMENSIONS as readonly string[]).includes(dimension)) {
+          console.error(`unknown dimension "${dimension}". one of: ${DIMENSIONS.join(', ')}`)
+          process.exitCode = 1
+          break
+        }
+        console.log(indicatorJudgementPrompt(panelist, dimension as Dimension))
+        break
+      }
+
+      const observations = await loadObservations()
+      const { countries } = scoreAll(observations, { currentYear: CURRENT_YEAR })
+      const wanted = args._.slice(1).map((s) => s.toUpperCase())
+      const picked = wanted.length ? countries.filter((c) => wanted.includes(c.iso3)) : countries
+      if (!picked.length) {
+        console.error(`no country matched ${wanted.join(', ')}`)
+        process.exitCode = 1
+        break
+      }
+      console.log(picked.map((c) => round1CellPrompt(panelist, c)).join('\n\n---\n\n'))
+      break
+    }
+
     case 'cost': {
       const observations = await loadObservations()
       const { countries } = scoreAll(observations, { currentYear: CURRENT_YEAR })
@@ -337,6 +377,8 @@ async function main() {
   pnpm bench delphi    [--mock] [--rounds 2] [--countries BRA,IND] [--models a,b]
                        [--max-coverage 0.6] [--no-judge] [--concurrency 4]
   pnpm bench diagnose                     correlations, redundancy, GDP-sensitivity test
+  pnpm bench prompt    [BRA IND ...] [--stance wealth_sceptic] [--system] [--audit trust]
+                                          print the exact panel prompt, for a panelist scoring in-session
   pnpm bench cost      [--rounds 2] [--stances 4] [--models a,b] [--no-judge]
                                           measure the prompts and price the panel run
   pnpm bench validate  [--fetch]          schema-check data/delphi and data/evidence; --fetch also live-checks evidence source URLs
