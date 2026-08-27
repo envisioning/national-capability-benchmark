@@ -1361,3 +1361,47 @@ files in practice, which would mean generation is wired to the wrong place and
 validation of the emitted output should be added to `bench validate`.
 
 ---
+
+## D38 — The homepage is global, and one country is a layer on top of it
+
+*Recorded 2026-08-27. Supersedes the focal-case layout noted in D29.*
+
+**Choice.** The homepage no longer leads with one country. It opens on the grid
+of every country's shape, sorted alphabetically, followed by the score table and
+the confidence table. `FOCUS_ISO3` is deleted from
+`apps/web/src/lib/profile.ts`, and the page title asks about a country rather
+than this country. `CompareRadar` stays where it belongs: on a country page,
+where the reader has already chosen a subject.
+
+The dashed-edge legend and the frame note now ship under the grid. Both were
+previously reachable only inside `CompareRadar`, so a reader who never opened a
+country page never learnt what a dashed edge meant. `RadarEvidenceLegend` takes
+an `interactive` prop, because the grid radars pass no `onSelectDimension` and
+the legend was promising a click that is not there.
+
+The method page loses its Brazil bullet too. What that bullet actually argued
+is that a frame fitted to one country describes that country, and it makes that
+argument without naming one.
+
+A country-specific entry point is a layer above this page, not the spine of it.
+It is not built yet.
+
+**Why.** Two readers arrive here. One works inside a country and wants that
+country. The other wants to know what the benchmark measures and whether the
+method holds. Leading on Brazil served the first and asked the second to read
+past a case they did not choose. The grid answers both: it shows nine dimensions
+producing 40 different shapes, which is the claim the project actually makes,
+and every card is a door into a country. The measurement is global, so the
+front door should be too.
+
+**Cost.** The homepage loses its one large, readable radar and the compare
+control. A first-time reader now meets the nine axes at icon size and has to
+open a country to see the shape drawn with words on it. `DimensionLegend`
+carries the names on the grid, and the accessible description in every radar
+carries them in full, but that is a legend, not a labelled chart. If the icons
+turn out to need a worked example first, the fix is a single labelled radar
+above the grid, not a return to a focal country.
+
+**Overturned by.** Use showing readers cannot enter the grid without a worked
+example. A decision to make this viewer a country-specific product, which would
+put the focal case back and make the global grid the secondary surface.

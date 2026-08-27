@@ -2,15 +2,6 @@ import { DIMENSIONS } from '@ncb/core'
 import type { CountryResult } from '@ncb/core'
 
 /**
- * The country the viewer leads with.
- *
- * This is a viewer choice and it changes no number. Brazil is the primary
- * reference case in `countries.ts`, and the work this benchmark supports is
- * Brazil first. Everybody else is reached through a comparison or the grid.
- */
-export const FOCUS_ISO3 = 'BRA'
-
-/**
  * The slice of a country a radar needs.
  *
  * Pages load the full `CountryResult` on the server, which carries every

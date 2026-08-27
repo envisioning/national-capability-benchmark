@@ -1,22 +1,21 @@
 import Link from 'next/link'
-import { DIMENSIONS } from '@ncb/core'
 import { Radar } from '@/components/Radar'
-import { CompareRadar } from '@/components/views/CompareRadar'
-import { CountryDimensionTable } from '@/components/views/CountryDimensionTable'
 import { ConfidenceTable, ScoreTable } from '@/components/views/ScoreTables'
 import {
   ConfidenceLegend,
   DimensionLegend,
   Empty,
   Eyebrow,
+  FrameNote,
   Headline,
   Highlight,
   PageTitle,
+  RadarEvidenceLegend,
   ScoreLegend,
   Section,
 } from '@/components/ui'
 import { MISSING_DATA_HINT, loadIndex } from '@/lib/data'
-import { FOCUS_ISO3, toProfile } from '@/lib/profile'
+import { toProfile } from '@/lib/profile'
 
 export const dynamic = 'force-dynamic'
 
@@ -49,17 +48,17 @@ function datasetJsonLd(data: { generatedAt: string; version?: string }): string 
 
 export default async function Page() {
   const data = await loadIndex()
-  if (!data) return <Empty hint={MISSING_DATA_HINT} />
+  if (!data || data.countries.length === 0) return <Empty hint={MISSING_DATA_HINT} />
 
-  const focus = data.countries.find((c) => c.iso3 === FOCUS_ISO3) ?? data.countries[0]
-  if (!focus) return <Empty hint={MISSING_DATA_HINT} />
-  const others = data.countries.filter((c) => c.iso3 !== focus.iso3)
+  /* Alphabetical. Any other order on this page would be a ranking, and there is
+   * no headline number to rank by. */
+  const countries = [...data.countries].sort((a, b) => a.country.localeCompare(b.country))
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: datasetJsonLd(data) }} />
-      <Eyebrow>{data.countries.length} countries, nine dimensions</Eyebrow>
-      <PageTitle>What is this country capable of doing?</PageTitle>
+      <Eyebrow>{countries.length} countries, nine dimensions</Eyebrow>
+      <PageTitle>What is a country capable of doing?</PageTitle>
       <Headline>
         Nine capability dimensions, scored from public data and read as a{' '}
         <Highlight>shape</Highlight> rather than a rank. Every score carries the raw indicators it
@@ -75,53 +74,40 @@ export default async function Page() {
       </p>
 
       <Section
-        title={`${focus.country} is the focal case`}
-        hint={`This benchmark is built for work inside one country, so ${focus.country} leads and everybody else sits behind a comparison the reader picks. Picking one moves no number, because the scale is fixed by the 10 reference countries and holds still.`}
-      >
-        <div className="grid gap-10 lg:grid-cols-[minmax(0,520px)_1fr]">
-          <div>
-            <CompareRadar focus={toProfile(focus)} others={others.map(toProfile)} />
-            <Link
-              href={`/country/${focus.iso3}`}
-              className="mt-4 inline-block text-xs font-medium underline underline-offset-4"
-            >
-              Open the {focus.country} profile, indicator by indicator
-            </Link>
-          </div>
-          <CountryDimensionTable country={focus} />
-        </div>
-      </Section>
-
-      <Section
         title="Each country comes out a different shape"
-        hint="Scores run 0 to 100 against a frame fixed by ten reference countries, and every country is measured the same way. We never compute a composite. Two countries with the same average can have opposite profiles, and that difference is the whole point of the exercise."
+        hint="Scores run 0 to 100 against a frame fixed by ten reference countries, and every country is measured the same way. We never compute a composite. Two countries with the same average can have opposite profiles, and that difference is the whole point of the exercise. Open any country to read it dimension by dimension and to hold a second country against it."
       >
         <DimensionLegend />
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {data.countries.map((c) => (
-            <Link
-              key={c.iso3}
-              href={`/country/${c.iso3}`}
-              className="rounded-xl border border-[var(--rule)] p-4 transition-all duration-200 hover:border-[var(--foreground)]"
-            >
-              <div className="mb-2 flex items-baseline justify-between">
-                <span className="text-xs font-medium">{c.country}</span>
-                <span className="text-xs text-[var(--muted)]">{c.iso3}</span>
-              </div>
-              <Radar
-                labels="icons"
-                series={[
-                  {
-                    label: c.country,
-                    values: DIMENSIONS.map((d) => c.dimensions[d]?.score ?? null),
-                    confidences: DIMENSIONS.map((d) => c.dimensions[d]?.confidence ?? null),
-                    color: 'var(--primary)',
-                  },
-                ]}
-              />
-            </Link>
-          ))}
+          {countries.map((c) => {
+            const profile = toProfile(c)
+            return (
+              <Link
+                key={profile.iso3}
+                href={`/country/${profile.iso3}`}
+                className="rounded-xl border border-[var(--rule)] p-4 transition-all duration-200 hover:border-[var(--foreground)]"
+              >
+                <div className="mb-2 flex items-baseline justify-between">
+                  <span className="text-xs font-medium">{profile.country}</span>
+                  <span className="text-xs text-[var(--muted)]">{profile.iso3}</span>
+                </div>
+                <Radar
+                  labels="icons"
+                  series={[
+                    {
+                      label: profile.country,
+                      values: profile.values,
+                      confidences: profile.confidences,
+                      color: 'var(--primary)',
+                    },
+                  ]}
+                />
+              </Link>
+            )
+          })}
         </div>
+        <RadarEvidenceLegend interactive={false} />
+        <FrameNote />
       </Section>
 
       <Section
@@ -129,7 +115,7 @@ export default async function Page() {
         hint="Click any heading to sort."
       >
         <ScoreLegend />
-        <ScoreTable countries={data.countries} />
+        <ScoreTable countries={countries} />
       </Section>
 
       <Section
@@ -137,7 +123,7 @@ export default async function Page() {
         hint="Confidence is coverage times recency times source quality. It sits beside the score and never inside it. A thin evidence base stays visible, because nothing gets imputed to cover it."
       >
         <ConfidenceLegend />
-        <ConfidenceTable countries={data.countries} />
+        <ConfidenceTable countries={countries} />
       </Section>
     </>
   )

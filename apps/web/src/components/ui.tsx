@@ -263,7 +263,16 @@ export function Empty({ hint }: { hint: string }) {
  * encoding of the same thing the confidence meters carry, so thin evidence is
  * visible in the shape and not only in a table further down the page.
  */
-export function RadarEvidenceLegend() {
+export function RadarEvidenceLegend({
+  /**
+   * Whether the radar this sits under passes `onSelectDimension`. The small
+   * grid cards do not, so the click line would promise a control that is not
+   * there.
+   */
+  interactive = true,
+}: {
+  interactive?: boolean
+} = {}) {
   return (
     <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-xs text-[var(--muted)]">
       <li className="inline-flex items-center gap-2">
@@ -287,7 +296,7 @@ export function RadarEvidenceLegend() {
         <span>Thin evidence</span>
       </li>
       <li>The point still sits at the score, because confidence never moves it.</li>
-      <li>Click any axis name to see every country on that dimension.</li>
+      {interactive ? <li>Click any axis name to see every country on that dimension.</li> : null}
     </ul>
   )
 }

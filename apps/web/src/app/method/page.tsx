@@ -21,19 +21,18 @@ export default function MethodPage() {
     <>
       <Section
         title="Why this exists"
-        hint="The benchmark tests one claim: that what a country is able to do is a separate property from what it earns. If the claim holds, two countries at the same income have different capability shapes. If it fails, the nine dimensions collapse into a single factor that tracks income per head, and the diagnostics are built to say so rather than hide it."
+        hint="The benchmark tests one claim: that what a country is able to do is a separate property from what it earns. If the claim holds, two countries at the same income have different capability shapes. If it fails, the nine dimensions collapse into a single factor that tracks income per head. The diagnostics test for that collapse and publish the result either way."
       >
         <ul className="max-w-3xl list-disc space-y-3 pl-5 text-lg leading-relaxed">
           <li>
-            Brazil is the case this work is meant to serve first, and it is one of the{' '}
-            {REFERENCE_ISO3.length} countries that fix the scale. Nothing about it is treated
-            differently anywhere else. A frame that only fits one country describes that country
-            instead of measuring capability.
+            The frame has no home country. The {REFERENCE_ISO3.length} reference countries set the
+            scale together, and every country is scored against it the same way. A frame built
+            around one country only describes that country.
           </li>
           <li>
             A high score is not a model to copy. A mechanism that works in one country works because
-            of conditions that do not travel with it. The shape says where to look, not what to
-            build.
+            of conditions that do not travel with it. The shape says where to look. What to build
+            depends on conditions where you are.
           </li>
           <li>
             Capability changes below the national level, in groups small enough to act. A country
@@ -41,9 +40,9 @@ export default function MethodPage() {
             as a coarse proxy for something happening several levels underneath it.
           </li>
           <li>
-            This is a measuring instrument, not a report card. It exists so that an attempt to raise
-            a capability can be checked afterwards, which is why confidence, declared gaps and
-            revisions are published beside every score instead of being resolved into it.
+            Treat this as a measuring instrument. It exists so a reader can check an attempt to
+            raise a capability after the fact. Confidence, declared gaps and revisions are published
+            beside every score and never resolved into it.
           </li>
         </ul>
       </Section>
@@ -195,12 +194,12 @@ export default function MethodPage() {
           </li>
           <li>
             Every point on a line carries the value as published, the normalized value and its
-            source tier, so a chart can be checked point by point instead of trusted.
+            source tier, so a reader can check a chart point by point.
           </li>
           <li>
             Published statistics get restated. Each data run compares itself against the file it
-            replaces and writes what moved to a revision log, so a number that changed under us is
-            a record rather than a surprise.
+            replaces and writes what moved to a revision log, so a number that changed under us
+            leaves a record.
           </li>
           <li>
             A value more than five years old does not count toward a year, and a country that sat
