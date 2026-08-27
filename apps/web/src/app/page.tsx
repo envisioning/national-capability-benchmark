@@ -20,6 +20,33 @@ import { FOCUS_ISO3, toProfile } from '@/lib/profile'
 
 export const dynamic = 'force-dynamic'
 
+/**
+ * Schema.org Dataset markup, so the benchmark is indexable by dataset search
+ * engines. The production URL comes from Vercel's system env; locally the
+ * block still renders and is harmless. See D37.
+ */
+function datasetJsonLd(data: { generatedAt: string; version?: string }): string {
+  const domain = process.env.VERCEL_PROJECT_PRODUCTION_URL
+  const json = {
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name: 'NCB, the National Capability Benchmark',
+    description:
+      'A prototype that measures what a country can do, separately from how rich it is. Nine capability dimensions scored from public data, each with a separate confidence number.',
+    ...(domain ? { url: `https://${domain}` } : {}),
+    version: data.version,
+    dateModified: data.generatedAt,
+    license: 'https://creativecommons.org/licenses/by/4.0/',
+    isBasedOn: 'https://data.worldbank.org',
+    creator: {
+      '@type': 'Organization',
+      name: 'Envisioning',
+      url: 'https://envisioning.com',
+    },
+  }
+  return JSON.stringify(json).replace(/</g, '\\u003c')
+}
+
 export default async function Page() {
   const data = await loadIndex()
   if (!data) return <Empty hint={MISSING_DATA_HINT} />
@@ -30,6 +57,7 @@ export default async function Page() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: datasetJsonLd(data) }} />
       <Eyebrow>{data.countries.length} countries, nine dimensions</Eyebrow>
       <PageTitle>What is this country capable of doing?</PageTitle>
       <Headline>

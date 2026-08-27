@@ -1,0 +1,72 @@
+{
+  "$ref": "#/definitions/IndicatorAcrossCountries",
+  "definitions": {
+    "IndicatorAcrossCountries": {
+      "type": "object",
+      "properties": {
+        "indicatorId": {
+          "type": "string"
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "iso3": {
+                "type": "string",
+                "minLength": 3,
+                "maxLength": 3
+              },
+              "country": {
+                "type": "string"
+              },
+              "raw": {
+                "type": "number"
+              },
+              "normalized": {
+                "type": "number"
+              },
+              "year": {
+                "type": "integer"
+              },
+              "tier": {
+                "type": "string",
+                "enum": [
+                  "official_statistical",
+                  "international_organization",
+                  "academic_survey",
+                  "composite_index",
+                  "expert_panel",
+                  "llm_delphi"
+                ]
+              },
+              "outOfFrame": {
+                "type": "boolean"
+              },
+              "reference": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "iso3",
+              "country",
+              "raw",
+              "normalized",
+              "year",
+              "tier",
+              "outOfFrame",
+              "reference"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "indicatorId",
+        "values"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

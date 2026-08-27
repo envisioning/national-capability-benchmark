@@ -1,15 +1,18 @@
-import { COUNTRY_ISO3, GDP_PER_CAPITA_CODE, INDICATORS } from '../model/index.js'
+import { COUNTRY_ISO3, DATASET_VERSION, GDP_PER_CAPITA_CODE, INDICATORS } from '../model/index.js'
 import type { CountryResult } from '../model/index.js'
 import { ingestWorldBank } from '../pipeline/ingest.js'
 import {
   COUNTRY_OUT_DIR,
   FILES,
   INDICATOR_OUT_DIR,
+  SCHEMA_OUT_DIR,
   agendaDoc,
   agendaFile,
   countryFile,
   indicatorFile,
 } from '../pipeline/paths.js'
+import { resolve } from 'node:path'
+import { buildDataPackage, jsonSchemas } from '../pipeline/datapackage.js'
 import { flatTable, scoreAll } from '../pipeline/score.js'
 import { buildAgenda, renderAgenda } from '../pipeline/agenda.js'
 import { LANGS, LEXICONS } from '../i18n/index.js'
@@ -85,28 +88,39 @@ async function score(args: Args): Promise<CountryResult[]> {
   })
 
   const generatedAt = new Date().toISOString()
+  const version = DATASET_VERSION
   /* One slim index for anything that lists countries, one file per country for
    * the detail. A single file carrying every indicator series for 40 countries
    * is 7 MB and every page load pays for it. See D27. */
   await writeOut(
     FILES.index,
-    `${JSON.stringify({ generatedAt, countries: countries.map(summarize) }, null, 2)}\n`,
+    `${JSON.stringify({ generatedAt, version, countries: countries.map(summarize) }, null, 2)}\n`,
   )
   for (const country of countries) {
     await writeOut(
       countryFile(country.iso3),
-      `${JSON.stringify({ generatedAt, country }, null, 2)}\n`,
+      `${JSON.stringify({ generatedAt, version, country }, null, 2)}\n`,
     )
   }
   const views = acrossCountries(countries)
   for (const view of views) {
     await writeOut(indicatorFile(view.indicatorId), `${JSON.stringify(view, null, 2)}\n`)
   }
-  await writeOut(FILES.flatTable, `${toCsv(flatTable(countries))}\n`)
-  console.log(`index     -> ${FILES.index}`)
+  await writeOut(FILES.flatTable, toCsv(flatTable(countries)))
+  /* The self-describing layer: JSON Schema per shape, one Data Package naming
+   * every file, its schema and its license. See D37. */
+  for (const [file, body] of Object.entries(jsonSchemas())) {
+    await writeOut(resolve(SCHEMA_OUT_DIR, file), `${JSON.stringify(body, null, 2)}\n`)
+  }
+  await writeOut(
+    FILES.datapackage,
+    `${JSON.stringify(buildDataPackage(views.map((v) => v.indicatorId), generatedAt), null, 2)}\n`,
+  )
+  console.log(`index     -> ${FILES.index} (dataset ${version})`)
   console.log(`countries -> ${COUNTRY_OUT_DIR} (${countries.length} files)`)
   console.log(`indicators-> ${INDICATOR_OUT_DIR} (${views.length} files)`)
   console.log(`flat table-> ${FILES.flatTable}`)
+  console.log(`schemas   -> ${SCHEMA_OUT_DIR} (3 files) and ${FILES.datapackage}`)
   return countries
 }
 

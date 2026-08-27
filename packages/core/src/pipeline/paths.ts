@@ -14,6 +14,7 @@ export const OUT_DIR = resolve(DATA_DIR, 'out')
 export const COUNTRY_OUT_DIR = resolve(OUT_DIR, 'countries')
 export const INDICATOR_OUT_DIR = resolve(OUT_DIR, 'indicators')
 export const AGENDA_OUT_DIR = resolve(OUT_DIR, 'agenda')
+export const SCHEMA_OUT_DIR = resolve(OUT_DIR, 'schema')
 
 export const FILES = {
   worldBank: resolve(OBSERVATIONS_DIR, 'worldbank.json'),
@@ -25,6 +26,7 @@ export const FILES = {
   flatTable: resolve(OUT_DIR, 'table.csv'),
   diagnostics: resolve(OUT_DIR, 'diagnostics.json'),
   report: resolve(OUT_DIR, 'report.md'),
+  datapackage: resolve(OUT_DIR, 'datapackage.json'),
 }
 
 /** One file per country, so a page loads what it needs and nothing else. See D27. */

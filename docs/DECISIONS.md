@@ -1300,3 +1300,64 @@ dated series, not two stamps, and the slot design should be replaced rather
 than extended.
 
 ---
+
+## D37 — The output directory describes itself
+
+*Recorded 2026-08-27. Extends D27 and D30; D34 records the country identifier.*
+
+**Choice.** `data/out` becomes a self-describing dataset, built on standards a
+consumer's tooling already speaks.
+
+1. **JSON Schema.** `bench score` emits a schema for each published shape into
+   `data/out/schema/`: the index file, the country file and the indicator
+   view. They are generated from the Zod schemas in
+   `packages/core/src/model/schema.ts` by `zod-to-json-schema`, so the Zod
+   definitions stay the single source of truth and the emitted schemas cannot
+   drift from what the pipeline writes. This is the package's one new
+   dependency, taken so the schemas would not be hand-written copies.
+2. **Data Package.** `data/out/datapackage.json` is a Frictionless Data
+   Package descriptor naming every published file, its schema, its source and
+   its license. Standard data tooling can consume the directory from that one
+   file.
+3. **Semantic versioning.** The dataset carries a version, defined once in
+   `packages/core/src/model/version.ts` and stamped into the index, every
+   country file and the descriptor. Major = the frame rebased or a published
+   field removed, which is the "versioned, announced act" the frame invariant
+   already required without naming a scheme. Minor = countries, indicators or
+   fields added. Patch = a re-ingest under the same registry. The version
+   describes the contract, not the method; KNOWN-ARTEFACTS.md tracks the
+   method. First stamped version: 1.0.0.
+4. **Data license.** The derived dataset is CC BY 4.0, matching the World Bank
+   data it derives from. Stated in NOTICE.md and in the descriptor.
+5. **RFC 4180.** `table.csv` now uses CRLF line endings and quotes fields
+   containing CR, so it is a conforming file rather than a nearly conforming
+   one.
+6. **Schema.org.** The viewer's landing page embeds a JSON-LD `Dataset` block,
+   which is what dataset search engines index.
+
+**Why.** The project's boundary rule is stable IDs and standard formats,
+because the output is meant to be consumed by things this repository does not
+know about. Until now that contract lived only in TypeScript types, which a
+non-TypeScript consumer cannot read, and the version of what they were reading
+was not written anywhere. Each of the six is the smallest standard that closes
+one of those gaps. Full SDMX and RDF were considered and rejected as
+institutional-publisher machinery; keeping source series codes verbatim as
+provenance borrows the useful part.
+
+**Cost.**
+
+- One new dependency in `@ncb/core` (`zod-to-json-schema`), against a standing
+  preference for zero. The alternative was a second, hand-maintained copy of
+  every published shape, which is the drift this repository's DRY rule exists
+  to prevent.
+- The version is bumped by hand. A forgotten bump mislabels a release; the
+  bump rules sit on the constant to make that harder.
+- CRLF in `table.csv` will show as a whole-file diff against the previous LF
+  file exactly once.
+
+**Overturned by.** A consumer that standard tooling cannot serve from the Data
+Package, which would argue for a real API. Or the schemas drifting from the
+files in practice, which would mean generation is wired to the wrong place and
+validation of the emitted output should be added to `bench validate`.
+
+---

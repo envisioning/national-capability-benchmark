@@ -1,0 +1,324 @@
+{
+  "$ref": "#/definitions/CountryFile",
+  "definitions": {
+    "CountryFile": {
+      "type": "object",
+      "properties": {
+        "generatedAt": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "country": {
+          "type": "object",
+          "properties": {
+            "country": {
+              "type": "string"
+            },
+            "iso3": {
+              "type": "string"
+            },
+            "dimensions": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "object",
+                "properties": {
+                  "score": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "confidence": {
+                    "type": "number"
+                  },
+                  "confidenceParts": {
+                    "type": "object",
+                    "properties": {
+                      "coverage": {
+                        "type": "number"
+                      },
+                      "recency": {
+                        "type": "number"
+                      },
+                      "sourceQuality": {
+                        "type": "number"
+                      }
+                    },
+                    "required": [
+                      "coverage",
+                      "recency",
+                      "sourceQuality"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "delphiScore": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "delphiIqr": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "delphiDissent": {
+                    "type": "boolean"
+                  },
+                  "blendedScore": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "blendedFrom": {
+                    "type": "string",
+                    "enum": [
+                      "indicators",
+                      "delphi",
+                      "none"
+                    ]
+                  },
+                  "momentum": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "baseYear": {
+                          "type": "integer"
+                        },
+                        "currentYear": {
+                          "type": "integer"
+                        },
+                        "baseScore": {
+                          "type": "number"
+                        },
+                        "currentScore": {
+                          "type": "number"
+                        },
+                        "delta": {
+                          "type": "number"
+                        },
+                        "matchedIndicators": {
+                          "type": "integer"
+                        },
+                        "basket": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "clamped": {
+                          "type": "integer"
+                        },
+                        "series": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "year": {
+                                "type": "integer"
+                              },
+                              "score": {
+                                "type": "number"
+                              }
+                            },
+                            "required": [
+                              "year",
+                              "score"
+                            ],
+                            "additionalProperties": false
+                          }
+                        }
+                      },
+                      "required": [
+                        "baseYear",
+                        "currentYear",
+                        "baseScore",
+                        "currentScore",
+                        "delta",
+                        "matchedIndicators",
+                        "basket",
+                        "clamped",
+                        "series"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "indicators": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "indicatorId": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "measurementClass": {
+                          "type": "string",
+                          "enum": [
+                            "C",
+                            "I",
+                            "O",
+                            "P"
+                          ]
+                        },
+                        "raw": {
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        },
+                        "transformed": {
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        },
+                        "normalized": {
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        },
+                        "year": {
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        },
+                        "source": {
+                          "type": "string"
+                        },
+                        "sourceTier": {
+                          "anyOf": [
+                            {
+                              "type": "string",
+                              "enum": [
+                                "official_statistical",
+                                "international_organization",
+                                "academic_survey",
+                                "composite_index",
+                                "expert_panel",
+                                "llm_delphi"
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "winsorized": {
+                          "type": "boolean"
+                        },
+                        "outOfFrame": {
+                          "type": "boolean",
+                          "default": false
+                        },
+                        "series": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "year": {
+                                "type": "integer"
+                              },
+                              "raw": {
+                                "type": "number"
+                              },
+                              "normalized": {
+                                "type": "number"
+                              },
+                              "tier": {
+                                "$ref": "#/definitions/CountryFile/properties/country/properties/dimensions/additionalProperties/properties/indicators/items/properties/sourceTier/anyOf/0"
+                              }
+                            },
+                            "required": [
+                              "year",
+                              "raw",
+                              "normalized",
+                              "tier"
+                            ],
+                            "additionalProperties": false
+                          },
+                          "default": []
+                        },
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "observed",
+                            "missing",
+                            "gap",
+                            "retired"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "indicatorId",
+                        "name",
+                        "measurementClass",
+                        "raw",
+                        "transformed",
+                        "normalized",
+                        "year",
+                        "source",
+                        "sourceTier",
+                        "winsorized",
+                        "status"
+                      ],
+                      "additionalProperties": false
+                    }
+                  }
+                },
+                "required": [
+                  "score",
+                  "confidence",
+                  "confidenceParts",
+                  "delphiScore",
+                  "delphiIqr",
+                  "delphiDissent",
+                  "blendedScore",
+                  "blendedFrom",
+                  "momentum",
+                  "indicators"
+                ],
+                "additionalProperties": false
+              },
+              "propertyNames": {
+                "enum": [
+                  "anticipation",
+                  "agency",
+                  "coordination",
+                  "trust",
+                  "learning",
+                  "experimentation",
+                  "adaptability",
+                  "building",
+                  "shared_purpose"
+                ]
+              }
+            }
+          },
+          "required": [
+            "country",
+            "iso3",
+            "dimensions"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "generatedAt",
+        "version",
+        "country"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

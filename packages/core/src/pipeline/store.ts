@@ -65,18 +65,19 @@ export async function writeOut(path: string, body: string): Promise<void> {
   await writeFile(path, body)
 }
 
+/** RFC 4180: CRLF line endings, quotes doubled, fields with commas, quotes or line breaks quoted. */
 export function toCsv(rows: Array<Record<string, string | number | null>>): string {
   if (rows.length === 0) return ''
   const headers = Object.keys(rows[0] as Record<string, unknown>)
   const escape = (v: string | number | null) => {
     if (v === null) return ''
     const s = String(v)
-    return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s
+    return /[",\r\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s
   }
-  return [
+  return `${[
     headers.join(','),
     ...rows.map((r) => headers.map((h) => escape(r[h] ?? null)).join(',')),
-  ].join('\n')
+  ].join('\r\n')}\r\n`
 }
 
 /**

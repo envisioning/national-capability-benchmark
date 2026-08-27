@@ -1,7 +1,7 @@
 # Third-party content and licensing
 
 The MIT license in `LICENSE` covers the code in this repository, and only the
-code. Five other things in this
+code. Six other things in this
 repository carry their own terms.
 
 ## Indicator data
@@ -18,6 +18,20 @@ UNESCO Institute for Statistics, ILO, ITU and WIPO. The registry in
 `packages/core/src/model/indicators.ts` names the publisher for each indicator.
 
 If you redistribute the data, keep the attribution.
+
+## Derived dataset
+
+`data/out` holds the scored dataset this project derives from those
+observations. It is published under Creative Commons Attribution 4.0
+International (CC BY 4.0), the same license the World Bank source data carries.
+Attribute it as "Envisioning, National Capability Benchmark" with a link to
+this repository, and keep the World Bank attribution above alongside it.
+
+The directory describes itself: `data/out/datapackage.json` is a Frictionless
+Data Package naming every file, its schema and this license, and
+`data/out/schema/` holds a JSON Schema for each published shape. Both
+regenerate on `pnpm bench score`. The scores are a v0 prototype; read
+`docs/KNOWN-ARTEFACTS.md` before building on any number.
 
 ## Icons
 

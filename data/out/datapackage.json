@@ -1,0 +1,195 @@
+{
+  "profile": "data-package",
+  "name": "national-capability-benchmark",
+  "title": "NCB, the National Capability Benchmark",
+  "description": "A prototype that measures what a country can do, separately from how rich it is. Nine capability dimensions scored from public data, each with a separate confidence number.",
+  "version": "1.0.0",
+  "created": "2026-08-27T13:52:25.273Z",
+  "homepage": "https://github.com/envisioning/national-capability-benchmark",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "title": "Creative Commons Attribution 4.0 International"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank Open Data",
+      "path": "https://data.worldbank.org"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Envisioning",
+      "path": "https://envisioning.com",
+      "role": "author"
+    }
+  ],
+  "resources": [
+    {
+      "name": "index",
+      "path": "index.json",
+      "title": "All countries, nine scores each, no indicator detail",
+      "format": "json",
+      "mediatype": "application/json",
+      "schema": "schema/index.schema.json"
+    },
+    {
+      "name": "countries",
+      "path": [
+        "countries/BRA.json",
+        "countries/USA.json",
+        "countries/NLD.json",
+        "countries/CHE.json",
+        "countries/SGP.json",
+        "countries/KOR.json",
+        "countries/EST.json",
+        "countries/IND.json",
+        "countries/CHL.json",
+        "countries/ZAF.json",
+        "countries/MEX.json",
+        "countries/ARG.json",
+        "countries/COL.json",
+        "countries/PER.json",
+        "countries/URY.json",
+        "countries/CRI.json",
+        "countries/DEU.json",
+        "countries/FRA.json",
+        "countries/GBR.json",
+        "countries/ESP.json",
+        "countries/POL.json",
+        "countries/SWE.json",
+        "countries/FIN.json",
+        "countries/IRL.json",
+        "countries/CAN.json",
+        "countries/AUS.json",
+        "countries/JPN.json",
+        "countries/CHN.json",
+        "countries/IDN.json",
+        "countries/VNM.json",
+        "countries/PHL.json",
+        "countries/MYS.json",
+        "countries/THA.json",
+        "countries/TUR.json",
+        "countries/ISR.json",
+        "countries/ARE.json",
+        "countries/NGA.json",
+        "countries/KEN.json",
+        "countries/RWA.json",
+        "countries/ETH.json"
+      ],
+      "title": "One country in full, including every indicator row and its yearly series",
+      "format": "json",
+      "mediatype": "application/json",
+      "schema": "schema/country.schema.json"
+    },
+    {
+      "name": "indicators",
+      "path": [
+        "indicators/rd_expenditure_gdp.json",
+        "indicators/researchers_per_million.json",
+        "indicators/sci_articles_per_million.json",
+        "indicators/statistical_performance.json",
+        "indicators/secure_internet_servers.json",
+        "indicators/new_business_density.json",
+        "indicators/business_start_days.json",
+        "indicators/business_start_procedures.json",
+        "indicators/internet_users.json",
+        "indicators/account_ownership.json",
+        "indicators/domestic_credit_private.json",
+        "indicators/time_to_export.json",
+        "indicators/contract_enforcement_days.json",
+        "indicators/homicide_rate.json",
+        "indicators/human_capital_index.json",
+        "indicators/tertiary_enrollment.json",
+        "indicators/education_expenditure_gdp.json",
+        "indicators/vocational_secondary_share.json",
+        "indicators/firm_training_incidence.json",
+        "indicators/resident_patents_per_million.json",
+        "indicators/resident_trademarks_per_million.json",
+        "indicators/early_stage_entrepreneurial_activity.json",
+        "indicators/failure_tolerance.json",
+        "indicators/labor_force_participation.json",
+        "indicators/unemployment_rate.json",
+        "indicators/broadband_subscriptions.json",
+        "indicators/electricity_transmission_losses.json",
+        "indicators/manufacturing_value_added.json",
+        "indicators/high_tech_exports_share.json",
+        "indicators/labour_productivity.json",
+        "indicators/electricity_connection_speed.json",
+        "indicators/economic_complexity.json",
+        "indicators/tax_revenue_gdp.json",
+        "indicators/income_inequality.json"
+      ],
+      "title": "One indicator across every country, ranked best first",
+      "format": "json",
+      "mediatype": "application/json",
+      "schema": "schema/indicator.schema.json"
+    },
+    {
+      "name": "table",
+      "path": "table.csv",
+      "title": "The flat table: one row per country, one column per dimension",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "dialect": {
+        "delimiter": ",",
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "doubleQuote": true
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "country",
+            "type": "string"
+          },
+          {
+            "name": "iso3",
+            "type": "string",
+            "constraints": {
+              "pattern": "^[A-Z]{3}$"
+            }
+          },
+          {
+            "name": "anticipation",
+            "type": "number"
+          },
+          {
+            "name": "agency",
+            "type": "number"
+          },
+          {
+            "name": "coordination",
+            "type": "number"
+          },
+          {
+            "name": "trust",
+            "type": "number"
+          },
+          {
+            "name": "learning",
+            "type": "number"
+          },
+          {
+            "name": "experimentation",
+            "type": "number"
+          },
+          {
+            "name": "adaptability",
+            "type": "number"
+          },
+          {
+            "name": "building",
+            "type": "number"
+          },
+          {
+            "name": "shared_purpose",
+            "type": "number"
+          }
+        ]
+      }
+    }
+  ]
+}

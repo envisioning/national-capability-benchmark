@@ -311,6 +311,28 @@ export const CountryResult = z.object({
 })
 export type CountryResult = z.infer<typeof CountryResult>
 
+/*
+ * The published files themselves, not just the rows inside them. These are the
+ * shapes `bench score` emits as JSON Schema into `data/out/schema/`, so a
+ * consumer that is not TypeScript can validate what it reads. See D37.
+ */
+
+export const IndexFile = z.object({
+  generatedAt: z.string(),
+  /** Dataset version, semantic. Bump rules in model/version.ts. */
+  version: z.string(),
+  /** Summarized: indicator rows and momentum series are stripped. See D27. */
+  countries: z.array(CountryResult),
+})
+export type IndexFile = z.infer<typeof IndexFile>
+
+export const CountryFile = z.object({
+  generatedAt: z.string(),
+  version: z.string(),
+  country: CountryResult,
+})
+export type CountryFile = z.infer<typeof CountryFile>
+
 /* ------------------------------ Evidence ------------------------------ */
 
 /**

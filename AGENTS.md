@@ -82,7 +82,9 @@ port 3888. That entry starts Next directly and does not use the proxy.
   build a list: that is the 7 MB mistake D27 exists to prevent. Plus the flat
   table, diagnostics and report. `agenda/{ISO3}.json` is the computed capability
   agenda, language neutral, with `{ISO3}.{lang}.md` rendered beside it, one per
-  lexicon. See D35.
+  lexicon. See D35. `datapackage.json` and `schema/` make the directory
+  self-describing: a Frictionless Data Package descriptor plus one JSON Schema
+  per published shape, generated from the Zod schemas on `bench score`. See D37.
 
 ## Invariants
 
@@ -137,6 +139,11 @@ port 3888. That entry starts Next directly and does not use the proxy.
   it as a side effect of adding data. It is a versioned, announced act. Adding
   an **extended** country is safe and was verified twice: 0 of 90 cells moved at
   16 countries and 0 of 144 at 40.
+- The dataset version is semantic and lives in
+  `packages/core/src/model/version.ts`, nowhere else. Major = frame rebase or a
+  published field removed. Minor = countries, indicators or fields added. Patch
+  = re-ingest under the same registry. Bump it in the same change that earns
+  the bump. See D37.
 - A value outside the frame clamps to 0 or 100 and sets `outOfFrame` on the
   cell. Frequent clamping means the frame is too narrow, not that the scale
   should be widened quietly.

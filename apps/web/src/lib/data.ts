@@ -20,7 +20,7 @@ import type {
  * an index wins, which makes this work the same way on a laptop and on a
  * server without either of them being a special case.
  */
-const DATA_ROOT = ((): string => {
+export const DATA_ROOT = ((): string => {
   const candidates = [
     DATA_DIR,
     resolve(process.cwd(), 'data'),
@@ -48,7 +48,12 @@ async function readJson<T>(path: string): Promise<T | null> {
 }
 
 /** The slim list: nine scores per country, no indicator rows and no yearly series. */
-export async function loadIndex(): Promise<{ generatedAt: string; countries: CountryResult[] } | null> {
+export async function loadIndex(): Promise<{
+  generatedAt: string
+  /** Dataset version, semantic. Absent in output written before D37. */
+  version?: string
+  countries: CountryResult[]
+} | null> {
   return readJson(PATHS.index)
 }
 
