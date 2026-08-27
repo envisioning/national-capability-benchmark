@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { COUNTRY_FRAMES, PT_BR, REFERENCE_ISO3, countryName } from '@ncb/core'
+import { PT_BR, REFERENCE_ISO3, countryName } from '@ncb/core'
 import { Empty, Eyebrow, Highlight, PageTitle } from '@/components/ui'
 import { MISSING_DATA_HINT, loadIndex } from '@/lib/data'
 
@@ -71,10 +71,7 @@ export default async function PortugueseHomePage() {
           <li key={c.iso3}>
             <Link href={`/pt/agenda/${c.iso3}`} className="underline underline-offset-4">
               {countryName(PT_BR, c.iso3)}
-            </Link>{' '}
-            {COUNTRY_FRAMES[c.iso3] === 'reference' ? (
-              <span className="text-xs text-[var(--muted)]">referência</span>
-            ) : null}
+            </Link>
           </li>
         ))}
       </ul>

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { COUNTRY_FRAMES, COUNTRY_NAMES } from '@ncb/core'
+import { COUNTRY_NAMES } from '@ncb/core'
 import { Empty, Eyebrow, PageTitle } from '@/components/ui'
 import { MISSING_DATA_HINT, loadIndex } from '@/lib/data'
 
@@ -39,10 +39,7 @@ export default async function AgendaIndexPage() {
           <li key={c.iso3}>
             <Link href={`/agenda/${c.iso3}`} className="underline underline-offset-4">
               {COUNTRY_NAMES[c.iso3] ?? c.iso3}
-            </Link>{' '}
-            {COUNTRY_FRAMES[c.iso3] === 'reference' ? (
-              <span className="text-xs text-[var(--muted)]">reference</span>
-            ) : null}
+            </Link>
           </li>
         ))}
       </ul>
