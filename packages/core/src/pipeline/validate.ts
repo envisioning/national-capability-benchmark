@@ -193,3 +193,96 @@ export async function validateEvidence(path = FILES.evidence): Promise<Problem[]
 
   return problems
 }
+
+/**
+ * Live-checks every evidence source URL. An evidence record claims its URL
+ * opens and carries the number; agencies reorganise and pages move, so that
+ * claim decays silently — one record's publisher was renamed and re-domained
+ * within a year of publishing the number. This is the only check that needs
+ * the network, so it runs behind `validate --fetch` rather than by default.
+ *
+ * Reading the verdicts:
+ * - 404 or 410 is an error: the page is gone and the record's URL claim is false.
+ * - Any other failure (403, 5xx, timeout) is a warning: from here, a server
+ *   that blocks non-browser clients is indistinguishable from a dead one, and
+ *   several corpus sources (CDC among them) 403 exactly this kind of request.
+ *   Check those by hand before touching the record.
+ * - A redirect that lands 200 on another host is a warning: the number may
+ *   still be there, but the record should cite where the page lives now.
+ */
+export async function checkEvidenceUrls(
+  path = FILES.evidence,
+  opts: { timeoutMs?: number; concurrency?: number } = {},
+): Promise<Problem[]> {
+  const file = basename(path)
+  const timeoutMs = opts.timeoutMs ?? 15_000
+  const concurrency = opts.concurrency ?? 6
+
+  let raw: unknown
+  try {
+    raw = JSON.parse(await readFile(path, 'utf8'))
+  } catch {
+    return [{ file, severity: 'warning', problem: 'no evidence file yet' }]
+  }
+  const parsed = EvidenceFile.safeParse(raw)
+  if (!parsed.success) {
+    return [{ file, severity: 'error', problem: 'evidence file does not parse; run plain validate first' }]
+  }
+
+  // One request per unique URL; several records may share a publisher page.
+  const byUrl = new Map<string, string[]>()
+  for (const record of parsed.data.records) {
+    const ids = byUrl.get(record.source.url) ?? []
+    ids.push(record.id)
+    byUrl.set(record.source.url, ids)
+  }
+
+  const host = (u: string) => new URL(u).hostname.replace(/^www\./, '')
+
+  async function check(url: string, ids: string[]): Promise<Problem | null> {
+    const who = ids.join(', ')
+    const controller = new AbortController()
+    const timer = setTimeout(() => controller.abort(), timeoutMs)
+    try {
+      const res = await fetch(url, {
+        redirect: 'follow',
+        signal: controller.signal,
+        headers: {
+          // A bare node UA trips bot-blocking on several statistical sites.
+          'user-agent':
+            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36',
+          accept: 'text/html,application/xhtml+xml,application/pdf,application/json,*/*',
+        },
+      })
+      // Headers are the verdict; do not download the body (some sources are multi-MB PDFs).
+      await res.body?.cancel().catch(() => {})
+      if (res.status === 404 || res.status === 410) {
+        return { file, severity: 'error', problem: `${who}: source URL is gone (${res.status}) — find where the page moved, re-verify the number, update url and retrievedAt` }
+      }
+      if (!res.ok) {
+        return { file, severity: 'warning', problem: `${who}: source URL answered ${res.status} — possibly bot-blocking, check in a browser before touching the record` }
+      }
+      if (res.url && host(res.url) !== host(url)) {
+        return { file, severity: 'warning', problem: `${who}: source URL redirects to ${new URL(res.url).hostname} — the page moved hosts, update the record to cite where it lives now` }
+      }
+      return null
+    } catch {
+      return { file, severity: 'warning', problem: `${who}: source URL did not answer within ${timeoutMs / 1000}s — network failure or a hung server, retry before touching the record` }
+    } finally {
+      clearTimeout(timer)
+    }
+  }
+
+  const entries = [...byUrl.entries()]
+  const problems: Problem[] = []
+  let next = 0
+  const workers = Array.from({ length: Math.min(concurrency, entries.length) }, async () => {
+    while (next < entries.length) {
+      const [url, ids] = entries[next++] as [string, string[]]
+      const problem = await check(url, ids)
+      if (problem) problems.push(problem)
+    }
+  })
+  await Promise.all(workers)
+  return problems
+}

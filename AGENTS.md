@@ -15,7 +15,7 @@ pnpm bench diagnose    correlations, redundancy, GDP-sensitivity test
 pnpm bench report      write data/out/report.md
 pnpm bench agenda      write the capability agenda: JSON per country plus one markdown per lexicon
 pnpm bench cost        measure the panel prompts and price a run before making it
-pnpm bench validate    schema-check data/delphi and data/evidence
+pnpm bench validate    schema-check data/delphi and data/evidence; add --fetch to live-check evidence source URLs
 pnpm bench all         ingest, score, diagnose, report, agenda
 pnpm build             tsc for packages/core, then next build for apps/web
 pnpm typecheck         both packages
@@ -227,6 +227,24 @@ to point at whichever directory it used, so check both afterwards and revert the
 churn before committing: `apps/web/tsconfig.json` gains a types path, and
 `apps/web/next-env.d.ts` repoints its route-types reference. Both must name
 `.next` on `main`, because that is where a normal build writes.
+
+Two `next build` runs at once destroy each other. The trap is that this file
+tells every agent to use `.next-build`, so a second agent picks the same
+directory and writes into it, or deletes it, while the first build is still
+running. The errors that follow name real files and mean nothing: the webpack
+cache reports `ENOENT` on a pack file, and `next build` dies with `require is
+not defined in ES module scope` inside a generated `pages/_document.js`. The
+code is correct. Do not debug those errors.
+
+Check for a running build first, then give your build its own directory:
+
+```
+ps aux | grep "[n]ext build"
+NEXT_DIST_DIR=.next-$$ pnpm build
+```
+
+`.gitignore` covers `.next-*`. Delete the directory when the build finishes.
+Never `rm -rf` a directory that another build is writing.
 
 
 `apps/web` imports `@ncb/core` from `dist`, not from source. Run

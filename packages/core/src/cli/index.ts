@@ -34,7 +34,7 @@ import { GatewayProvider, MockProvider } from '../delphi/provider.js'
 import { runDelphi } from '../delphi/run.js'
 import { estimateCost } from '../delphi/cost.js'
 import { CHARS_PER_TOKEN, LAST_VERIFIED, OUTPUT_TOKENS } from '../delphi/pricing.js'
-import { validateDelphiRuns, validateEvidence } from '../pipeline/validate.js'
+import { checkEvidenceUrls, validateDelphiRuns, validateEvidence } from '../pipeline/validate.js'
 
 type Args = { _: string[]; flags: Map<string, string | boolean> }
 
@@ -302,6 +302,10 @@ async function main() {
 
     case 'validate': {
       const problems = [...(await validateDelphiRuns()), ...(await validateEvidence())]
+      if (args.flags.get('fetch')) {
+        console.log('Checking evidence source URLs against the live web...')
+        problems.push(...(await checkEvidenceUrls()))
+      }
       if (problems.length === 0) {
         console.log('All Delphi runs and evidence records parse and cover the expected cells.')
         break
@@ -335,7 +339,7 @@ async function main() {
   pnpm bench diagnose                     correlations, redundancy, GDP-sensitivity test
   pnpm bench cost      [--rounds 2] [--stances 4] [--models a,b] [--no-judge]
                                           measure the prompts and price the panel run
-  pnpm bench validate                     schema-check data/delphi and data/evidence
+  pnpm bench validate  [--fetch]          schema-check data/delphi and data/evidence; --fetch also live-checks evidence source URLs
   pnpm bench report                       write the findings report
   pnpm bench agenda    [BRA IND ...] [--lang pt-BR]
                                           write the capability agenda, JSON plus one markdown per lexicon

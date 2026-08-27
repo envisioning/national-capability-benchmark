@@ -44,7 +44,8 @@ selection discipline is deliberate: for every five records, at least one must
 document erosion or collapse. A corpus of successes is a brochure.
 
 Records live in `data/evidence/records.json`. Run `pnpm bench validate` before
-opening the pull request.
+opening the pull request, and `pnpm bench validate --fetch` to confirm every
+source URL still opens.
 
 ### Add a language
 

@@ -133,6 +133,41 @@ Records are hand-written JSON in `data/evidence/records.json`. The schema is
   changed in the retelling. The validator warns when `pattern` is missing,
   because a case that cannot travel is a trophy.
 
+## Verification protocol
+
+The schema makes a record checkable. This protocol is what makes it checked.
+Every record in the corpus was authored this way; follow it and yours will
+survive review.
+
+1. **Verify before you write.** Open the source URL on the day you author the
+   record and read the number there. Never write a number from memory, from a
+   press summary, or from a search-result snippet — those are leads, not
+   sources. If you cannot see the number at the URL, the record does not get
+   written.
+
+2. **`retrievedAt` is the day you actually looked.** It is a claim that the
+   URL opened and carried the number on that date, made by you.
+
+3. **Prefer the page a machine can check.** A statistical API beats a
+   statistics page, which beats a press release, which beats a report. When
+   the number exists only inside a PDF or is read off a chart, say so in
+   `limits` — a reviewer must know how much work checking will take.
+
+4. **When the official series does not reach the number, say so.** Sometimes
+   no official source covers the claim (Argentina's pre-1998 inflation is the
+   corpus example: the IMF and World Bank series are empty there). A
+   republication by a named institution is admissible at the honest tier, with
+   the republication disclosed in `limits`. A number that exists nowhere
+   citable does not get a record.
+
+5. **URLs rot, and the validator can check.** Agencies reorganise and pages
+   move; one corpus record's publisher was renamed and re-domained within a
+   year of the number being published. `pnpm bench validate --fetch`
+   live-checks every source URL: a 404 is an error, a bot-block or a moved
+   host is a warning to check by hand. If you find a dead source URL, fixing
+   it is a contribution: locate the moved page, verify the number still
+   appears, update `url` and `retrievedAt`.
+
 After editing, run:
 
 ```bash
