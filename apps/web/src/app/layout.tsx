@@ -62,15 +62,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </a>
 
         <header className="w-full border-b border-[var(--rule)]">
-          <div className="m-auto flex max-w-6xl flex-wrap items-baseline gap-x-8 gap-y-3 px-6 py-6 sm:px-12">
-            <Link href="/" className="flex items-baseline gap-3">
+          <div className="m-auto flex max-w-6xl flex-wrap items-end gap-x-8 gap-y-4 px-6 py-6 sm:px-12">
+            {/* The lockup: the short name carries the size, the long name sits
+                under it in three lines so the block stays narrow beside the nav. */}
+            <Link href="/" className="flex flex-col leading-none">
               <span
-                className="font-display text-[22px] leading-none"
+                className="font-display text-[40px] leading-[0.9]"
                 style={{ fontVariationSettings: '"wght" 500, "wdth" 100' }}
               >
                 NCB
               </span>
-              <span className="text-xs text-[var(--muted)]">National Capability Benchmark</span>
+              <span className="mt-1.5 text-[10px] uppercase leading-[1.25] tracking-[0.06em] text-[var(--muted)]">
+                National
+                <br />
+                Capability
+                <br />
+                Benchmark
+              </span>
             </Link>
             <nav className="flex flex-wrap gap-x-6 gap-y-2 text-xs font-medium">
               {NAV.map((n) => (
