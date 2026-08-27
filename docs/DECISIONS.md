@@ -1128,6 +1128,51 @@ sizes, the icon-labelled radars can fall back to the threshold.
 
 ---
 
+## D33 — Evidence records get an inclusion rule before they get more records
+
+*Recorded 2026-08-27. Extends D20 and D31.*
+
+**Choice.** `docs/EVIDENCE.md` states the inclusion rule for evidence records
+and how a record is written. Five tests decide whether a case gets in: it bears
+on a declared gap, a named publisher carries the number, the delivery is
+institutional, it was delivered rather than announced, and its limits can be
+written honestly. Three disciplines govern the corpus: at least one record in
+five documents a reversal, expansion goes by dimension rather than by country,
+and no country holds more than a third of the set. Records stranded by a gap
+promotion are deleted in the promoting change, with their ids named in its
+decision entry.
+
+**Why.** D20 rejected curated national successes with no schema, no source
+discipline and no limits. The schema fixed source discipline and limits. It did
+not fix selection: nothing said who picks the cases, what disqualifies one, or
+how many failures the set must carry, and a validator cannot see that a corpus
+of pure successes is a brochure. Fifteen records exist, eleven of them
+Brazilian, twelve of them on one indicator, and six of nine dimensions have
+none. Expanding that to forty countries without a written rule reproduces the
+failure D20 exists to prevent, inside a schema.
+
+The rule is written down now, before the corpus grows, because a rule adopted
+at fifteen records constrains the author and a rule adopted at a hundred and
+fifty indicts the archive.
+
+**Cost.**
+
+- The one-in-five reversal quota and the one-third country ceiling are round
+  numbers, not derived ones. They exist to force the question at authoring
+  time, not because five and three are correct.
+- Deleting stranded records on promotion loses their rendered text from the
+  site. The decision entry and git history keep it, but a reader of the
+  patterns page does not see git history.
+- The rule makes authoring slower. That is partly the point.
+
+**Overturned by.** A corpus that satisfies every test and still reads as
+advocacy — that would mean selection bias lives somewhere the rule does not
+reach, and the rule needs to move from authoring discipline to independent
+review. Or a demonstrated need to document sub-national or non-state
+deliveries, which test three currently excludes.
+
+---
+
 ## D34 — Countries are identified by ISO 3166-1 alpha-3, recorded after the fact
 
 *Recorded 2026-08-27.*

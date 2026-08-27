@@ -57,6 +57,8 @@ port 3888. That entry starts Next directly and does not use the proxy.
   are the ones that will bite you.
 - `docs/PANEL.md` — how the Delphi layer works, the provenance rules, model
   selection, cost, and how to hand-author a run.
+- `docs/EVIDENCE.md` — the inclusion rule for evidence records and how to
+  author one. Read it before adding anything to `data/evidence`. See D33.
 
 ## Layout
 
@@ -70,7 +72,8 @@ port 3888. That entry starts Next directly and does not use the proxy.
 - `data/delphi` — one file per panel run, plus `latest.json`, which is a pointer
   to the active run rather than an archive. Keep the original alongside it.
 - `data/evidence` — evidence records: documented deliveries filed against
-  indicators that have no dataset. Never scored. See D20.
+  indicators that have no dataset. Never scored. Inclusion rule and authoring
+  guide in `docs/EVIDENCE.md`. See D20.
 - `data/out` — `index.json` is the slim list every page that shows more than one
   country reads. `countries/{ISO3}.json` carries one country in full, including
   every indicator row and its yearly series. `indicators/{id}.json` is the same
