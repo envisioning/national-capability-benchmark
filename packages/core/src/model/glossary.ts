@@ -85,7 +85,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: 'Indicator',
     group: 'What is being measured',
     short: 'One published statistic used as evidence for one dimension.',
-    full: 'Each dimension is built from several indicators, each a real published number with a source and a year. A dimension score is the average of whichever of its indicators have data. Every indicator stays visible with its raw value, so a score can be argued with rather than only accepted.',
+    full: 'Each dimension is built from several indicators, each a real published number with a source and a year. A dimension score is the average of whichever of its indicators have data. Every indicator stays visible with its raw value, so a reader can check what a score is made of and argue with it.',
   },
   {
     term: 'Measurement class',
@@ -160,7 +160,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: 'Retired indicator',
     group: 'What is missing',
     short: 'A dataset that exists and that this project rejected, with the reason on the record.',
-    full: 'A retired indicator keeps its row, is never fetched or scored, and lowers coverage exactly as a gap does. So far every retirement is a perception composite that measured how a country looks rather than what it does. Keeping the row means the decision can be argued with instead of quietly disappearing.',
+    full: 'A retired indicator keeps its row, is never fetched or scored, and lowers coverage exactly as a gap does. So far every retirement is a perception composite that measured how a country looks rather than what it does. Keeping the row leaves the decision on the record where somebody can challenge it.',
   },
   {
     term: 'Evidence record',
@@ -197,7 +197,7 @@ export const GLOSSARY: GlossaryEntry[] = [
   {
     term: 'Provenance',
     group: 'What sits beside the score',
-    short: 'How a panel run was produced, stored rather than guessed.',
+    short: 'How a panel run was produced, recorded on the run file itself.',
     full: 'A run is labelled as a real multi-vendor panel, a working session, a human panel, or a mock offline run. Mock runs exercise the pipeline and are never evidence about any country. The label is written into the file, because inferring it from a model name is how a dry run ends up quoted in a report.',
   },
   {

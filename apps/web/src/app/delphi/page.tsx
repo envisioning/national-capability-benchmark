@@ -33,7 +33,7 @@ export default async function DelphiPage() {
     <>
       <Section
         title="Each panelist argues from a fixed position"
-        hint={`Run ${run.runId}, ${run.rounds} round(s). Stances are assigned so that disagreement between panelists has a reason behind it rather than being sampling noise.`}
+        hint={`Run ${run.runId}, ${run.rounds} round(s). Stances are assigned so that a disagreement between panelists traces back to a stated position.`}
       >
         {!evidential ? (
           <Note tone="stop">
