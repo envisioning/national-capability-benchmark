@@ -30,7 +30,7 @@ export function IndicatorRegistry() {
                 label: 'Indicator',
                 sort: (i: IndicatorDef) => i.name,
                 render: (i: IndicatorDef) => (
-                  <span className={isScored(i) ? undefined : 'text-[var(--muted)]'}>
+                  <span id={i.id} className={isScored(i) ? undefined : 'text-[var(--muted)]'}>
                     {i.name}
                     {isScored(i) ? null : (
                       <span className="ml-2 rounded-md border border-[var(--rule)] px-1.5 py-0.5 text-xs">

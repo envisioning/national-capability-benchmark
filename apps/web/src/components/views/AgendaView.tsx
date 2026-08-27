@@ -13,6 +13,8 @@ import {
   signed,
 } from '@ncb/core'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
+import { fillNodes, joinNodes } from '@/lib/fill'
+import { agendaHref, evidenceHref, indicatorHref } from '@/lib/links'
 import {
   ConfidenceBar,
   ConfidenceLegend,
@@ -26,6 +28,9 @@ import {
   Td,
   Th,
 } from '@/components/ui'
+
+/** Every link the agenda writes gets the same underline. */
+const LINK = 'underline underline-offset-4 decoration-[var(--rule)] hover:decoration-current'
 
 /**
  * One country's capability agenda, rendered through one lexicon. The same
@@ -56,6 +61,29 @@ export function AgendaView({
   const measure = agenda.dimensions
     .filter((d) => d.kind === 'measure')
     .sort((a, b) => a.confidence - b.confidence)
+
+  /**
+   * Every country, indicator and evidence record the agenda names is a link,
+   * built from the id the JSON carries. Nothing here is written by hand, so a
+   * new gap or a new exemplar arrives already linked. Countries stay in the
+   * language the reader is in; the registry and the evidence pages are ground
+   * layer and stay English.
+   */
+  const countryLink = (iso3: string) => (
+    <Link href={agendaHref(iso3, lex.lang)} className={LINK}>
+      {countryName(lex, iso3)}
+    </Link>
+  )
+  const indicatorLink = (id: string) => (
+    <Link href={indicatorHref(id)} className={LINK}>
+      {indicatorName(lex, id)}
+    </Link>
+  )
+  const evidenceLink = (id: string, title: string) => (
+    <Link href={evidenceHref(id)} className={LINK}>
+      {title}
+    </Link>
+  )
 
   const trendText = (d: CountryAgenda['dimensions'][number]): string =>
     d.trend
@@ -149,26 +177,35 @@ export function AgendaView({
                   </li>
                   {d.exemplars.length > 0 ? (
                     <li>
-                      {fill(s.exemplarsLine, {
-                        list: d.exemplars
-                          .map((e) => `${countryName(lex, e.iso3)} ${fmt(e.score, lex.numberLocale)}`)
-                          .join(', '),
+                      {fillNodes(s.exemplarsLine, {
+                        list: joinNodes(
+                          d.exemplars.map((e) => (
+                            <>
+                              {countryLink(e.iso3)} {fmt(e.score, lex.numberLocale)}
+                            </>
+                          )),
+                        ),
                       })}
                     </li>
                   ) : null}
                   {d.evidenceElsewhere.length > 0 ? (
                     <li>
-                      {fill(s.evidenceElsewhereLine, {
-                        list: d.evidenceElsewhere
-                          .map((e) => `${e.title} (${countryName(lex, e.iso3)})`)
-                          .join('; '),
+                      {fillNodes(s.evidenceElsewhereLine, {
+                        list: joinNodes(
+                          d.evidenceElsewhere.map((e) => (
+                            <>
+                              {evidenceLink(e.id, e.title)} ({countryLink(e.iso3)})
+                            </>
+                          )),
+                          '; ',
+                        ),
                       })}
                     </li>
                   ) : null}
                   {d.gaps.length > 0 ? (
                     <li>
-                      {fill(s.gapsLine, {
-                        list: d.gaps.map((id) => indicatorName(lex, id)).join(', '),
+                      {fillNodes(s.gapsLine, {
+                        list: joinNodes(d.gaps.map((id) => indicatorLink(id))),
                       })}
                     </li>
                   ) : null}
@@ -200,8 +237,8 @@ export function AgendaView({
                   </li>
                   {d.gaps.length > 0 ? (
                     <li>
-                      {fill(s.gapsLine, {
-                        list: d.gaps.map((id) => indicatorName(lex, id)).join(', '),
+                      {fillNodes(s.gapsLine, {
+                        list: joinNodes(d.gaps.map((id) => indicatorLink(id))),
                       })}
                     </li>
                   ) : null}
@@ -232,7 +269,7 @@ export function AgendaView({
                         {lex.dimensions[d.dimension]}
                       </span>
                     </Td>
-                    <Td>{indicatorName(lex, id)}</Td>
+                    <Td>{indicatorLink(id)}</Td>
                     <Td dim>{indicatorDefinition(lex, id)}</Td>
                   </tr>
                 )),
@@ -250,7 +287,7 @@ export function AgendaView({
           <ul className="max-w-3xl list-disc space-y-3 pl-5 text-lg leading-relaxed">
             {agenda.ownEvidence.map((r) => (
               <li key={r.id}>
-                <span className="font-medium">{r.title}</span>{' '}
+                <span className="font-medium">{evidenceLink(r.id, r.title)}</span>{' '}
                 <span className="text-xs text-[var(--muted)]">
                   ({lex.dimensions[r.dimension]})
                 </span>
@@ -263,11 +300,13 @@ export function AgendaView({
 
       <Section title={s.contributeHeading}>
         <p className="max-w-3xl text-lg leading-relaxed">
-          {s.contributeBody.split('{repo}')[0]}
-          <a href={REPO_URL} className="underline underline-offset-4">
-            {REPO_URL.replace('https://', '')}
-          </a>
-          {s.contributeBody.split('{repo}')[1]}
+          {fillNodes(s.contributeBody, {
+            repo: (
+              <a href={REPO_URL} className={LINK}>
+                {REPO_URL.replace('https://', '')}
+              </a>
+            ),
+          })}
         </p>
       </Section>
     </>

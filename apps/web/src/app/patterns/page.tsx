@@ -66,7 +66,7 @@ export default async function PatternsPage() {
 function PatternCard({ record }: { record: EvidenceRecord }) {
   const def = INDICATORS_BY_ID[record.indicatorId]
   return (
-    <article className="max-w-3xl border-t border-[var(--rule)] pt-6">
+    <article id={record.id} className="max-w-3xl border-t border-[var(--rule)] pt-6">
       <div className="mb-1 flex flex-wrap items-baseline gap-x-3 text-xs text-[var(--muted)]">
         <Link href={`/country/${record.iso3}`} className="font-medium underline underline-offset-4">
           {COUNTRY_NAMES[record.iso3] ?? record.iso3}
