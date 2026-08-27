@@ -13,9 +13,10 @@ pnpm bench score       normalise and score, write data/out/index.json, data/out/
 pnpm bench delphi      run the LLM panel (add --mock to run offline)
 pnpm bench diagnose    correlations, redundancy, GDP-sensitivity test
 pnpm bench report      write data/out/report.md
+pnpm bench agenda      write the capability agenda: JSON per country plus one markdown per lexicon
 pnpm bench cost        measure the panel prompts and price a run before making it
 pnpm bench validate    schema-check data/delphi and data/evidence
-pnpm bench all         ingest, score, diagnose, report
+pnpm bench all         ingest, score, diagnose, report, agenda
 pnpm build             tsc for packages/core, then next build for apps/web
 pnpm typecheck         both packages
 pnpm dev               the viewer at localhost:3000
@@ -59,7 +60,9 @@ port 3888.
   data turned inside out, one file per indicator holding every country, which is
   what the click-to-compare panels fetch. See D30. Never load the country files to
   build a list: that is the 7 MB mistake D27 exists to prevent. Plus the flat
-  table, diagnostics and report.
+  table, diagnostics and report. `agenda/{ISO3}.json` is the computed capability
+  agenda, language neutral, with `{ISO3}.{lang}.md` rendered beside it, one per
+  lexicon. See D35.
 
 ## Invariants
 
@@ -129,6 +132,12 @@ port 3888.
   string. Branch on `isEvidential(run.provenance)` and `isPanel(run)`, both
   exported from `@ncb/core`. A `mock` run must never be presented as evidence,
   and a run with fewer than three panelists has no distribution to read.
+- Language is an interpretation layer. The ground layer stays English end to
+  end: ids, registry definitions, JSON output. Translations live only in
+  lexicons under `packages/core/src/i18n/`, one data file per language, and
+  every lookup falls back to the registry English, so a partial lexicon renders
+  complete pages. Never translate in place, and never let a rendered document
+  compute a number the JSON does not carry. See D35.
 - A decision in `docs/DECISIONS.md` is the contract. If you are about to break
   one, supersede it there in the same change, with the evidence that overturned
   it. Silent divergence is how this falls apart.

@@ -1124,4 +1124,49 @@ not have to learn which parts of a page are live.
 
 **Overturned by.** Nothing foreseeable. If the gradient reads as noise at small
 sizes, the icon-labelled radars can fall back to the threshold.
+## D35 — The agenda is computed, and language is an interpretation layer
 
+*Recorded 2026-08-27.*
+
+**Choice.** `pnpm bench agenda` turns each country's scored output into a
+capability agenda: a language-neutral JSON in `data/out/agenda/{ISO3}.json` and
+one rendered markdown per lexicon beside it. The generator classifies each
+dimension by two published thresholds. Confidence below the usable band makes a
+dimension a measure-first item, because the score cannot carry a decision.
+Usable confidence with a score under 50 makes it a raise item. Raise items name
+the three highest-scoring countries whose own evidence is usable, and the
+evidence records other countries filed against the dimension's gaps. The
+declared gaps across all dimensions form the measurement agenda. The subject
+country's own evidence records close the document, outside the numbers, as
+always.
+
+Language lives in `packages/core/src/i18n` as lexicons: data files mapping the
+model's vocabulary and the agenda strings into one language each. The ground
+layer stays English end to end: ids, registry definitions, JSON output. A
+lexicon lookup that misses falls back to the registry English, so a partial
+lexicon renders complete pages. `pt-BR` is the first lexicon and the template
+for the next one.
+
+**Why.** A hand-written national to-do list is advocacy the moment it is
+signed, and it goes stale the first time the data moves. A computed agenda is
+neither: it regenerates with every run, every claim in it traces to a score, a
+gap or a record, and a reader who distrusts a translated page can diff it
+against the JSON it renders. Separating lexicon from renderer makes a new
+language a data contribution rather than a code change, which is the shape of
+contribution the project wants most.
+
+**Cost.** Two thresholds are now product decisions: the usable band already
+lives in `confidence.ts`, and the raise cutoff of 50 is a constant in
+`agenda.ts` with no empirical basis yet. Evidence record titles and claims
+render untranslated inside non-English documents, because records are ground
+data. Exemplar selection rewards measured countries: a country with real
+capability and thin evidence cannot appear as an exemplar, which repeats the
+benchmark's general bias toward the measurable.
+
+**Overturned by.** A reader study or field use showing the raise cutoff
+misleads at 50, which would justify deriving it from the score distribution
+instead. Records gaining translated fields, which would remove the mixed-language
+cost. A lexicon whose translation drifts from the registry meaning, which
+would justify review rules for lexicon changes rather than plain PRs.
+
+---

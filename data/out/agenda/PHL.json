@@ -1,0 +1,445 @@
+{
+  "generatedAt": "2026-08-27T13:43:15.402Z",
+  "iso3": "PHL",
+  "country": "Philippines",
+  "frame": "extended",
+  "dimensions": [
+    {
+      "dimension": "anticipation",
+      "kind": "raise",
+      "score": 11.5,
+      "confidence": 0.577,
+      "band": "usable",
+      "trend": {
+        "spanYears": 10,
+        "delta": 18.9,
+        "basket": 3
+      },
+      "scoredOn": [
+        "rd_expenditure_gdp",
+        "researchers_per_million",
+        "sci_articles_per_million",
+        "statistical_performance",
+        "secure_internet_servers"
+      ],
+      "gaps": [
+        "government_foresight_capacity",
+        "basic_research_share"
+      ],
+      "retired": [],
+      "exemplars": [
+        {
+          "iso3": "SWE",
+          "country": "Sweden",
+          "score": 83.4,
+          "confidence": 0.644
+        },
+        {
+          "iso3": "FIN",
+          "country": "Finland",
+          "score": 83,
+          "confidence": 0.644
+        },
+        {
+          "iso3": "CHE",
+          "country": "Switzerland",
+          "score": 81.1,
+          "confidence": 0.644
+        }
+      ],
+      "evidenceElsewhere": [
+        {
+          "id": "bra-embrapa",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "government_foresight_capacity",
+          "title": "Embrapa, a fifty-year bet on tropical agriculture"
+        }
+      ]
+    },
+    {
+      "dimension": "agency",
+      "kind": "raise",
+      "score": 4.1,
+      "confidence": 0.613,
+      "band": "usable",
+      "trend": {
+        "spanYears": 10,
+        "delta": 1.5,
+        "basket": 4
+      },
+      "scoredOn": [
+        "new_business_density",
+        "business_start_days",
+        "business_start_procedures",
+        "internet_users",
+        "account_ownership",
+        "domestic_credit_private"
+      ],
+      "gaps": [
+        "adult_digital_skills",
+        "perceived_control"
+      ],
+      "retired": [],
+      "exemplars": [
+        {
+          "iso3": "USA",
+          "country": "United States",
+          "score": 84.6,
+          "confidence": 0.495
+        },
+        {
+          "iso3": "AUS",
+          "country": "Australia",
+          "score": 83.1,
+          "confidence": 0.613
+        },
+        {
+          "iso3": "SGP",
+          "country": "Singapore",
+          "score": 79.6,
+          "confidence": 0.574
+        }
+      ],
+      "evidenceElsewhere": []
+    },
+    {
+      "dimension": "coordination",
+      "kind": "measure",
+      "score": 53.8,
+      "confidence": 0.079,
+      "band": "very_thin",
+      "trend": null,
+      "scoredOn": [
+        "time_to_export"
+      ],
+      "gaps": [
+        "university_industry_collaboration",
+        "civil_society_strength",
+        "public_private_collaboration"
+      ],
+      "retired": [
+        "government_effectiveness",
+        "regulatory_quality",
+        "logistics_performance"
+      ],
+      "exemplars": [],
+      "evidenceElsewhere": []
+    },
+    {
+      "dimension": "trust",
+      "kind": "measure",
+      "score": 23.2,
+      "confidence": 0.204,
+      "band": "very_thin",
+      "trend": null,
+      "scoredOn": [
+        "contract_enforcement_days",
+        "homicide_rate"
+      ],
+      "gaps": [
+        "interpersonal_trust",
+        "institutional_trust",
+        "willingness_to_cooperate_strangers"
+      ],
+      "retired": [
+        "rule_of_law",
+        "control_of_corruption"
+      ],
+      "exemplars": [],
+      "evidenceElsewhere": []
+    },
+    {
+      "dimension": "learning",
+      "kind": "raise",
+      "score": 34.1,
+      "confidence": 0.554,
+      "band": "usable",
+      "trend": {
+        "spanYears": 10,
+        "delta": 2.1,
+        "basket": 3
+      },
+      "scoredOn": [
+        "human_capital_index",
+        "tertiary_enrollment",
+        "education_expenditure_gdp",
+        "vocational_secondary_share",
+        "firm_training_incidence"
+      ],
+      "gaps": [
+        "adult_learning_participation",
+        "research_citation_impact"
+      ],
+      "retired": [],
+      "exemplars": [
+        {
+          "iso3": "FIN",
+          "country": "Finland",
+          "score": 92,
+          "confidence": 0.543
+        },
+        {
+          "iso3": "GBR",
+          "country": "United Kingdom",
+          "score": 84.8,
+          "confidence": 0.52
+        },
+        {
+          "iso3": "AUS",
+          "country": "Australia",
+          "score": 82.9,
+          "confidence": 0.543
+        }
+      ],
+      "evidenceElsewhere": []
+    },
+    {
+      "dimension": "experimentation",
+      "kind": "measure",
+      "score": 0,
+      "confidence": 0.178,
+      "band": "very_thin",
+      "trend": {
+        "spanYears": 10,
+        "delta": 0,
+        "basket": 2
+      },
+      "scoredOn": [
+        "resident_patents_per_million",
+        "resident_trademarks_per_million"
+      ],
+      "gaps": [
+        "venture_capital_gdp",
+        "regulatory_sandbox_activity",
+        "university_spinouts",
+        "business_rd_share"
+      ],
+      "retired": [],
+      "exemplars": [],
+      "evidenceElsewhere": []
+    },
+    {
+      "dimension": "adaptability",
+      "kind": "raise",
+      "score": 44.4,
+      "confidence": 0.465,
+      "band": "usable",
+      "trend": {
+        "spanYears": 10,
+        "delta": 1.6,
+        "basket": 4
+      },
+      "scoredOn": [
+        "labor_force_participation",
+        "unemployment_rate",
+        "broadband_subscriptions",
+        "electricity_transmission_losses"
+      ],
+      "gaps": [
+        "long_term_unemployment_share",
+        "export_diversification",
+        "disaster_preparedness",
+        "institutional_responsiveness"
+      ],
+      "retired": [],
+      "exemplars": [
+        {
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "score": 91,
+          "confidence": 0.475
+        },
+        {
+          "iso3": "CHE",
+          "country": "Switzerland",
+          "score": 88.8,
+          "confidence": 0.475
+        },
+        {
+          "iso3": "JPN",
+          "country": "Japan",
+          "score": 85.9,
+          "confidence": 0.465
+        }
+      ],
+      "evidenceElsewhere": [
+        {
+          "id": "bra-plano-real",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Plano Real, the 1994 currency stabilisation"
+        },
+        {
+          "id": "bra-proalcool",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Proalcool, the fuel substitution after the oil shock"
+        }
+      ]
+    },
+    {
+      "dimension": "building",
+      "kind": "raise",
+      "score": 44.1,
+      "confidence": 0.544,
+      "band": "usable",
+      "trend": {
+        "spanYears": 10,
+        "delta": -7.4,
+        "basket": 3
+      },
+      "scoredOn": [
+        "manufacturing_value_added",
+        "high_tech_exports_share",
+        "labour_productivity",
+        "electricity_connection_speed",
+        "economic_complexity"
+      ],
+      "gaps": [
+        "large_project_delivery",
+        "firm_scale_up_rate"
+      ],
+      "retired": [
+        "logistics_infrastructure"
+      ],
+      "exemplars": [
+        {
+          "iso3": "SGP",
+          "country": "Singapore",
+          "score": 70.9,
+          "confidence": 0.544
+        },
+        {
+          "iso3": "IRL",
+          "country": "Ireland",
+          "score": 69.2,
+          "confidence": 0.544
+        },
+        {
+          "iso3": "KOR",
+          "country": "South Korea",
+          "score": 64.4,
+          "confidence": 0.544
+        }
+      ],
+      "evidenceElsewhere": [
+        {
+          "id": "bra-pix",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "large_project_delivery",
+          "title": "Pix instant payment system"
+        },
+        {
+          "id": "bra-govbr",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "large_project_delivery",
+          "title": "GOV.BR federal identity and service platform"
+        },
+        {
+          "id": "est-x-road",
+          "iso3": "EST",
+          "country": "Estonia",
+          "indicatorId": "large_project_delivery",
+          "title": "X-Road national data exchange layer"
+        },
+        {
+          "id": "ind-pmjdy",
+          "iso3": "IND",
+          "country": "India",
+          "indicatorId": "large_project_delivery",
+          "title": "Pradhan Mantri Jan Dhan Yojana bank accounts"
+        },
+        {
+          "id": "ury-electricity",
+          "iso3": "URY",
+          "country": "Uruguay",
+          "indicatorId": "large_project_delivery",
+          "title": "Electricity supply rebuilt on renewable sources"
+        },
+        {
+          "id": "ury-ceibal",
+          "iso3": "URY",
+          "country": "Uruguay",
+          "indicatorId": "large_project_delivery",
+          "title": "Plan Ceibal, one connected laptop per child"
+        },
+        {
+          "id": "bra-sus",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "large_project_delivery",
+          "title": "Sistema Unico de Saude, universal public health system"
+        },
+        {
+          "id": "bra-pni",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "large_project_delivery",
+          "title": "Programa Nacional de Imunizacoes, and its erosion"
+        },
+        {
+          "id": "bra-luz-para-todos",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "large_project_delivery",
+          "title": "Luz para Todos, rural electrification"
+        },
+        {
+          "id": "bra-bolsa-familia",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "large_project_delivery",
+          "title": "Bolsa Familia and the single registry behind it"
+        },
+        {
+          "id": "bra-urna-eletronica",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "large_project_delivery",
+          "title": "Fully electronic national elections"
+        },
+        {
+          "id": "bra-presal",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "large_project_delivery",
+          "title": "Deepwater and pre-salt oil production"
+        }
+      ]
+    },
+    {
+      "dimension": "shared_purpose",
+      "kind": "measure",
+      "score": 45.5,
+      "confidence": 0.26,
+      "band": "thin",
+      "trend": {
+        "spanYears": 10,
+        "delta": 12.7,
+        "basket": 2
+      },
+      "scoredOn": [
+        "tax_revenue_gdp",
+        "income_inequality"
+      ],
+      "gaps": [
+        "national_belonging",
+        "volunteering_rate",
+        "political_polarization",
+        "civic_participation"
+      ],
+      "retired": [
+        "voice_and_accountability"
+      ],
+      "exemplars": [],
+      "evidenceElsewhere": []
+    }
+  ],
+  "ownEvidence": [],
+  "gapCount": 26
+}

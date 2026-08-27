@@ -13,6 +13,7 @@ export const SNAPSHOT_DIR = resolve(OBSERVATIONS_DIR, 'snapshots')
 export const OUT_DIR = resolve(DATA_DIR, 'out')
 export const COUNTRY_OUT_DIR = resolve(OUT_DIR, 'countries')
 export const INDICATOR_OUT_DIR = resolve(OUT_DIR, 'indicators')
+export const AGENDA_OUT_DIR = resolve(OUT_DIR, 'agenda')
 
 export const FILES = {
   worldBank: resolve(OBSERVATIONS_DIR, 'worldbank.json'),
@@ -34,4 +35,14 @@ export function countryFile(iso3: string): string {
 /** One file per indicator, holding every country's value for it. See D30. */
 export function indicatorFile(id: string): string {
   return resolve(INDICATOR_OUT_DIR, `${id}.json`)
+}
+
+/** The language-neutral agenda, one file per country. See D35. */
+export function agendaFile(iso3: string): string {
+  return resolve(AGENDA_OUT_DIR, `${iso3.toUpperCase()}.json`)
+}
+
+/** One rendered agenda per country per lexicon. See D35. */
+export function agendaDoc(iso3: string, lang: string): string {
+  return resolve(AGENDA_OUT_DIR, `${iso3.toUpperCase()}.${lang}.md`)
 }

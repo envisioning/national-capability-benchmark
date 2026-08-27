@@ -1,0 +1,290 @@
+import type { Lexicon } from './types.js'
+
+/**
+ * Brazilian Portuguese lexicon. The first interpretation layer, and the
+ * template for the next one: translate the vocabulary, keep the ids, change
+ * nothing about the numbers.
+ *
+ * Terminology follows the Envisioning national capability strategy where the
+ * two overlap, so the benchmark and the strategy speak the same Portuguese.
+ */
+export const PT_BR: Lexicon = {
+  lang: 'pt-BR',
+  numberLocale: 'pt-BR',
+  dimensions: {
+    anticipation: 'Antecipação',
+    agency: 'Agência',
+    coordination: 'Coordenação',
+    trust: 'Confiança',
+    learning: 'Aprendizagem',
+    experimentation: 'Experimentação',
+    adaptability: 'Adaptação',
+    building: 'Construção',
+    shared_purpose: 'Propósito compartilhado',
+  },
+  questions: {
+    anticipation:
+      'Quão capaz é o país de identificar mudanças emergentes e se preparar para elas?',
+    agency:
+      'Quão capazes são pessoas e organizações de transformar uma intenção em ação?',
+    coordination:
+      'Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?',
+    trust: 'Quanta cooperação é possível além das redes pessoais imediatas?',
+    learning:
+      'Com que eficácia o país adquire, distribui e atualiza conhecimento?',
+    experimentation:
+      'Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?',
+    adaptability:
+      'Com que eficácia o sistema responde quando as circunstâncias mudam?',
+    building:
+      'Quão capaz é o país de transformar planos e conhecimento em sistemas que funcionam?',
+    shared_purpose:
+      'Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?',
+  },
+  countries: {
+    BRA: 'Brasil',
+    USA: 'Estados Unidos',
+    NLD: 'Países Baixos',
+    CHE: 'Suíça',
+    SGP: 'Singapura',
+    KOR: 'Coreia do Sul',
+    EST: 'Estônia',
+    IND: 'Índia',
+    CHN: 'China',
+    DEU: 'Alemanha',
+    GBR: 'Reino Unido',
+    FRA: 'França',
+    ESP: 'Espanha',
+    POL: 'Polônia',
+    TUR: 'Turquia',
+    ARG: 'Argentina',
+    MEX: 'México',
+    CHL: 'Chile',
+    COL: 'Colômbia',
+    URY: 'Uruguai',
+    CRI: 'Costa Rica',
+    PER: 'Peru',
+    ZAF: 'África do Sul',
+    NGA: 'Nigéria',
+    KEN: 'Quênia',
+    ETH: 'Etiópia',
+    RWA: 'Ruanda',
+    IDN: 'Indonésia',
+    VNM: 'Vietnã',
+    THA: 'Tailândia',
+    MYS: 'Malásia',
+    PHL: 'Filipinas',
+    JPN: 'Japão',
+    AUS: 'Austrália',
+    CAN: 'Canadá',
+    IRL: 'Irlanda',
+    ISR: 'Israel',
+    SWE: 'Suécia',
+    FIN: 'Finlândia',
+    ARE: 'Emirados Árabes Unidos',
+  },
+  countryArticles: {
+    BRA: 'o',
+    USA: 'os',
+    NLD: 'os',
+    CHE: 'a',
+    KOR: 'a',
+    EST: 'a',
+    IND: 'a',
+    CHN: 'a',
+    DEU: 'a',
+    GBR: 'o',
+    FRA: 'a',
+    ESP: 'a',
+    POL: 'a',
+    TUR: 'a',
+    ARG: 'a',
+    MEX: 'o',
+    CHL: 'o',
+    COL: 'a',
+    URY: 'o',
+    CRI: 'a',
+    PER: 'o',
+    ZAF: 'a',
+    NGA: 'a',
+    KEN: 'o',
+    ETH: 'a',
+    IDN: 'a',
+    VNM: 'o',
+    THA: 'a',
+    MYS: 'a',
+    PHL: 'as',
+    JPN: 'o',
+    AUS: 'a',
+    CAN: 'o',
+    IRL: 'a',
+    SWE: 'a',
+    FIN: 'a',
+    ARE: 'os',
+  },
+  indicators: {
+    rd_expenditure_gdp: 'Dispêndio em P&D',
+    researchers_per_million: 'Pesquisadores em P&D',
+    sci_articles_per_million: 'Artigos científicos',
+    statistical_performance: 'Desempenho estatístico',
+    secure_internet_servers: 'Servidores seguros de internet',
+    government_foresight_capacity: 'Capacidade governamental de prospecção',
+    basic_research_share: 'Parcela de pesquisa de longo prazo',
+    new_business_density: 'Densidade de novas empresas',
+    business_start_days: 'Tempo para abrir uma empresa',
+    business_start_procedures: 'Procedimentos para abrir uma empresa',
+    internet_users: 'Pessoas que usam a internet',
+    account_ownership: 'Titularidade de conta financeira',
+    domestic_credit_private: 'Crédito ao setor privado',
+    adult_digital_skills: 'Habilidades digitais de adultos',
+    perceived_control: 'Percepção de controle sobre a própria vida',
+    government_effectiveness: 'Efetividade do governo',
+    regulatory_quality: 'Qualidade regulatória',
+    logistics_performance: 'Desempenho logístico',
+    time_to_export: 'Tempo de exportação na fronteira',
+    university_industry_collaboration: 'Colaboração universidade-empresa',
+    civil_society_strength: 'Força da sociedade civil',
+    public_private_collaboration: 'Colaboração público-privada',
+    rule_of_law: 'Estado de direito',
+    control_of_corruption: 'Controle da corrupção',
+    contract_enforcement_days: 'Tempo para executar um contrato',
+    homicide_rate: 'Taxa de homicídio intencional',
+    interpersonal_trust: 'Confiança interpessoal generalizada',
+    institutional_trust: 'Confiança nas instituições públicas',
+    willingness_to_cooperate_strangers: 'Cooperação além do próprio grupo',
+    human_capital_index: 'Índice de Capital Humano',
+    tertiary_enrollment: 'Matrícula no ensino superior',
+    education_expenditure_gdp: 'Dispêndio público em educação',
+    vocational_secondary_share: 'Parcela técnica do ensino médio',
+    firm_training_incidence: 'Empresas com treinamento formal',
+    adult_learning_participation: 'Participação de adultos em aprendizagem',
+    research_citation_impact: 'Impacto de citação da pesquisa',
+    resident_patents_per_million: 'Pedidos de patente de residentes',
+    resident_trademarks_per_million: 'Pedidos de marca de residentes',
+    venture_capital_gdp: 'Investimento de capital de risco',
+    early_stage_entrepreneurial_activity: 'Atividade empreendedora em estágio inicial',
+    failure_tolerance: 'Tolerância ao fracasso empreendedor',
+    regulatory_sandbox_activity: 'Atividade de sandbox regulatório',
+    university_spinouts: 'Empresas nascidas de universidades',
+    business_rd_share: 'Parcela empresarial do P&D',
+    labor_force_participation: 'Participação na força de trabalho',
+    unemployment_rate: 'Taxa de desemprego',
+    long_term_unemployment_share: 'Parcela de desemprego de longa duração',
+    broadband_subscriptions: 'Assinaturas de banda larga fixa',
+    electricity_transmission_losses: 'Perdas na transmissão de eletricidade',
+    export_diversification: 'Diversificação das exportações',
+    disaster_preparedness: 'Preparação e recuperação de desastres',
+    institutional_responsiveness: 'Capacidade de resposta institucional',
+    manufacturing_value_added: 'Valor adicionado da indústria',
+    high_tech_exports_share: 'Exportações de alta tecnologia',
+    labour_productivity: 'Produto por trabalhador',
+    logistics_infrastructure: 'Qualidade da infraestrutura logística',
+    electricity_connection_speed: 'Tempo de conexão à rede elétrica',
+    economic_complexity: 'Aptidão econômica',
+    large_project_delivery: 'Entrega de grandes projetos',
+    firm_scale_up_rate: 'Empresas jovens que ganham escala',
+    voice_and_accountability: 'Voz e responsabilização',
+    tax_revenue_gdp: 'Receita tributária',
+    income_inequality: 'Desigualdade de renda',
+    national_belonging: 'Sentimento de pertencimento nacional',
+    volunteering_rate: 'Voluntariado',
+    political_polarization: 'Polarização política',
+    civic_participation: 'Participação cívica',
+  },
+  indicatorDefinitions: {
+    government_foresight_capacity:
+      'Existência, mandato e continuidade de uma função nacional de prospecção estratégica.',
+    basic_research_share:
+      'Parcela do dispêndio bruto em P&D classificada como pesquisa básica.',
+    adult_digital_skills:
+      'Parcela de adultos capazes de executar tarefas digitais padrão.',
+    perceived_control:
+      'Liberdade de escolha e controle sobre o rumo da própria vida, autodeclarados.',
+    university_industry_collaboration:
+      'Intensidade da colaboração de pesquisa entre universidades e empresas.',
+    civil_society_strength:
+      'Autonomia, densidade e alcance participativo das organizações da sociedade civil.',
+    public_private_collaboration:
+      'Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais.',
+    interpersonal_trust:
+      'Parcela que concorda que se pode confiar na maioria das pessoas.',
+    institutional_trust:
+      'Confiança no governo nacional, nos tribunais e no serviço público.',
+    willingness_to_cooperate_strangers:
+      'Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade.',
+    adult_learning_participation:
+      'Parcela de adultos em educação e treinamento, formal ou não, nos últimos 12 meses.',
+    research_citation_impact:
+      'Impacto de citação da produção científica nacional, normalizado por área.',
+    venture_capital_gdp: 'Capital de risco investido como parcela do PIB.',
+    regulatory_sandbox_activity:
+      'Número e abrangência de sandboxes regulatórios e regimes de teste controlado em operação.',
+    university_spinouts:
+      'Empresas criadas para comercializar pesquisa universitária, por milhão de habitantes.',
+    business_rd_share:
+      'Parcela do dispêndio bruto em P&D executada por empresas.',
+    long_term_unemployment_share:
+      'Pessoas desempregadas há 12 meses ou mais, como parcela do desemprego total.',
+    export_diversification:
+      'Concentração inversa da pauta exportadora por produto.',
+    disaster_preparedness:
+      'Capacidade demonstrada de preparação e recuperação diante de choques graves.',
+    institutional_responsiveness:
+      'Velocidade com que regras e programas públicos mudam em resposta a novas condições.',
+    large_project_delivery:
+      'Desempenho de custo e prazo de grandes projetos públicos de infraestrutura.',
+    firm_scale_up_rate:
+      'Parcela de empresas jovens que atingem patamares relevantes de emprego ou faturamento.',
+    national_belonging:
+      'Orgulho e identificação com a comunidade nacional, autodeclarados.',
+    volunteering_rate:
+      'Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês.',
+    political_polarization:
+      'Grau em que as diferenças políticas se alinham em uma única divisão hostil.',
+    civic_participation:
+      'Participação ativa em associações, sindicatos, partidos e organizações comunitárias.',
+  },
+  bands: {
+    good: 'boa',
+    usable: 'utilizável',
+    thin: 'fraca',
+    very_thin: 'muito fraca',
+  },
+  agenda: {
+    title: 'Agenda de capacidades: {country}',
+    intro:
+      'Gerado em {date} a partir da rodada de dados atual. As notas são relativas a uma régua fixada pelos {reference} países de referência e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia docs/KNOWN-ARTEFACTS.md antes de citar qualquer número isoladamente.',
+    standingHeading: 'Onde {countryTopic} está',
+    colDimension: 'Dimensão',
+    colScore: 'Nota',
+    colConfidence: 'Confiança',
+    colTrend: 'Tendência',
+    trendCell: '{delta} em {years} anos, sobre {n} indicadores',
+    noTrend: 'sem base de tendência',
+    noScore: 'sem nota',
+    raiseItemHeading: '{dimension}: {score}, confiança {band}',
+    measureItemHeading: '{dimension}: confiança {confidence}, {band}',
+    raiseHeading: 'As dimensões que a evidência manda elevar',
+    raiseIntro:
+      'Da nota mais baixa para a mais alta. Só entram aqui dimensões com evidência utilizável. Uma nota baixa com evidência fraca é antes um problema de medição do que de política pública, e vai para a próxima seção.',
+    measureHeading: 'As dimensões que precisam ser medidas antes de serem geridas',
+    measureIntro:
+      'Aqui a confiança está abaixo da faixa utilizável, então a nota não sustenta uma decisão. A primeira intervenção é produzir evidência.',
+    scoredOn: 'Hoje a nota se apoia em {n} indicadores observados.',
+    scoredOnOne: 'Hoje a nota se apoia em um único indicador observado.',
+    gapsLine: 'Lacunas declaradas nesta dimensão: {list}.',
+    exemplarsLine: 'Maiores notas com evidência utilizável: {list}.',
+    evidenceElsewhereLine: 'Entregas documentadas em outros países: {list}.',
+    agendaHeading: 'A agenda de medição',
+    agendaIntro:
+      '{n} indicadores que a especificação pede e para os quais não existe base de dados internacional comparável adequada. Cada um reduz a confiança enquanto não for preenchido, e cada um é uma contribuição ao alcance de um órgão de estatística, um grupo de pesquisa ou um ministério. Uma lacuna vira indicador com nota quando uma série comparável cobre pelo menos dois países de referência.',
+    colIndicator: 'Indicador ausente',
+    colAsks: 'O que ele pergunta',
+    ownEvidenceHeading: 'O que os indicadores não conseguem ver sobre {countryTopic}',
+    ownEvidenceIntro:
+      'Entregas documentadas, arquivadas como registros de evidência. Elas nunca entram em uma nota e nunca elevam a confiança. Existem porque a lista de lacunas acima também descreve coisas que este país já fez em parte e ainda não consegue provar de forma comparável.',
+    contributeHeading: 'Como mover um número desta página',
+    contributeBody:
+      'Preencha uma lacuna, registre uma evidência ou conteste um indicador em {repo}. O método, cada decisão por trás dele e a evidência que derrubaria cada uma estão no diretório docs do mesmo repositório.',
+  },
+}

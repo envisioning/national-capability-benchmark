@@ -12,12 +12,14 @@ import type { Diagnostics } from './diagnostics.js'
 import { cellConsensus, indicatorConsensus, missingEvidenceRanking } from '../delphi/consensus.js'
 import { median, round } from './stats.js'
 
-function table(headers: string[], rows: Array<Array<string | number | null>>): string {
+export function mdTable(headers: string[], rows: Array<Array<string | number | null>>): string {
   const head = `| ${headers.join(' | ')} |`
   const sep = `| ${headers.map(() => '---').join(' | ')} |`
   const body = rows.map((r) => `| ${r.map((c) => (c === null ? 'no data' : String(c))).join(' | ')} |`)
   return [head, sep, ...body].join('\n')
 }
+
+const table = mdTable
 
 export function buildReport(
   countries: CountryResult[],

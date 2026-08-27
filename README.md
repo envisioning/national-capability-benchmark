@@ -26,7 +26,8 @@ pnpm dev
 `pnpm bench cost` prices a real panel run before you make one.
 
 `pnpm bench all` fetches live World Bank data, scores every country, runs the
-diagnostics and writes `data/out/report.md`. Scoring writes a slim
+diagnostics, writes `data/out/report.md` and regenerates the capability
+agendas. Scoring writes a slim
 `data/out/index.json` for anything that lists countries and one file per country
 under `data/out/countries`. `pnpm dev` opens the viewer.
 
@@ -54,6 +55,15 @@ gap indicator cannot see, with one published number, a source, a reference
 period and a required statement of what the case does not show. Records never
 enter a score and never raise confidence. A gap becomes an indicator when a
 comparable series covers at least two reference countries. See D20.
+
+**The capability agenda.** `data/out/agenda` holds one computed agenda per
+country: the scores turned into a list of things to do. Dimensions with usable
+evidence and low scores become items to raise, with the highest-scoring
+countries and the documented deliveries elsewhere named beside them. Dimensions
+with confidence below the usable band become items to measure first. The 26
+declared gaps form the measurement agenda. The JSON is language neutral; a
+markdown renders beside it per language, English and Brazilian Portuguese
+today, and a new language is one lexicon file. See CONTRIBUTING.md.
 
 **The Delphi panel.** A panel of language models, each holding a fixed
 analytical stance, does two things the indicators cannot:
@@ -122,6 +132,7 @@ data/           observations in, scores and reports out
 ```
 
 ```
+CONTRIBUTING.md          how to fill a gap, file evidence, add a language or a country
 docs/WHY.md              the claim being tested, and what this must not become
 docs/DECISIONS.md        every methodological choice and what would overturn it
 docs/KNOWN-ARTEFACTS.md  where v0 is wrong about the world, not just uncertain

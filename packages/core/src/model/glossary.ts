@@ -213,6 +213,20 @@ export const GLOSSARY: GlossaryEntry[] = [
     full: 'Each indicator is correlated against log GDP per capita. Above 0.7 it is flagged as tracking income rather than capability, and the whole model is re-scored with those indicators removed to see how much the profiles depend on them. This test is the reason the perception layer was retired.',
   },
   {
+    term: 'Capability agenda',
+    group: 'What sits beside the score',
+    short: 'The scores turned into a list of things to do, computed from the data.',
+    full: 'A per-country document generated from the scored output. Dimensions with usable evidence and low scores become items to raise. Dimensions with confidence below the usable band become items to measure first, because a score that thin cannot carry a decision. The declared gaps form the measurement agenda, with the countries and documented deliveries that already answer each question listed beside it. Nothing in it is written by hand: every figure comes from the scores, every gap from the registry, every case from the evidence records, so the agenda regenerates whenever the data changes.',
+    example: 'The Brazil agenda lists Building, at 9.4 with usable confidence, as the first dimension to raise, and Coordination, at confidence 0.08, as a dimension to measure before managing.',
+  },
+  {
+    term: 'Interpretation layer',
+    group: 'What sits beside the score',
+    short: 'One language\'s rendering of the ground data. The numbers never translate.',
+    full: 'The benchmark keeps one ground layer: English ids, registry definitions and JSON output. A lexicon translates the vocabulary and the document strings into another language, and rendered documents are produced per lexicon from the same JSON. An interpretation layer can differ in language and emphasis and it cannot change a number, which is what lets anyone check a translated page against its source. A lexicon with holes still renders complete pages, because every lookup falls back to the registry English.',
+    example: 'BRA.json is the ground record. BRA.en.md and BRA.pt-BR.md render it through two lexicons.',
+  },
+  {
     term: 'Known artefact',
     group: 'What is missing',
     short: 'A place where the model produces a number that is wrong about the world.',

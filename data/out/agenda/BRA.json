@@ -1,0 +1,446 @@
+{
+  "generatedAt": "2026-08-27T13:43:15.402Z",
+  "iso3": "BRA",
+  "country": "Brazil",
+  "frame": "reference",
+  "dimensions": [
+    {
+      "dimension": "anticipation",
+      "kind": "raise",
+      "score": 22.3,
+      "confidence": 0.543,
+      "band": "usable",
+      "trend": {
+        "spanYears": 10,
+        "delta": 20,
+        "basket": 4
+      },
+      "scoredOn": [
+        "rd_expenditure_gdp",
+        "researchers_per_million",
+        "sci_articles_per_million",
+        "statistical_performance",
+        "secure_internet_servers"
+      ],
+      "gaps": [
+        "government_foresight_capacity",
+        "basic_research_share"
+      ],
+      "retired": [],
+      "exemplars": [
+        {
+          "iso3": "SWE",
+          "country": "Sweden",
+          "score": 83.4,
+          "confidence": 0.644
+        },
+        {
+          "iso3": "FIN",
+          "country": "Finland",
+          "score": 83,
+          "confidence": 0.644
+        },
+        {
+          "iso3": "CHE",
+          "country": "Switzerland",
+          "score": 81.1,
+          "confidence": 0.644
+        }
+      ],
+      "evidenceElsewhere": []
+    },
+    {
+      "dimension": "agency",
+      "kind": "raise",
+      "score": 31,
+      "confidence": 0.613,
+      "band": "usable",
+      "trend": {
+        "spanYears": 10,
+        "delta": 26.2,
+        "basket": 4
+      },
+      "scoredOn": [
+        "new_business_density",
+        "business_start_days",
+        "business_start_procedures",
+        "internet_users",
+        "account_ownership",
+        "domestic_credit_private"
+      ],
+      "gaps": [
+        "adult_digital_skills",
+        "perceived_control"
+      ],
+      "retired": [],
+      "exemplars": [
+        {
+          "iso3": "USA",
+          "country": "United States",
+          "score": 84.6,
+          "confidence": 0.495
+        },
+        {
+          "iso3": "AUS",
+          "country": "Australia",
+          "score": 83.1,
+          "confidence": 0.613
+        },
+        {
+          "iso3": "SGP",
+          "country": "Singapore",
+          "score": 79.6,
+          "confidence": 0.574
+        }
+      ],
+      "evidenceElsewhere": []
+    },
+    {
+      "dimension": "coordination",
+      "kind": "measure",
+      "score": 46.7,
+      "confidence": 0.079,
+      "band": "very_thin",
+      "trend": null,
+      "scoredOn": [
+        "time_to_export"
+      ],
+      "gaps": [
+        "university_industry_collaboration",
+        "civil_society_strength",
+        "public_private_collaboration"
+      ],
+      "retired": [
+        "government_effectiveness",
+        "regulatory_quality",
+        "logistics_performance"
+      ],
+      "exemplars": [],
+      "evidenceElsewhere": []
+    },
+    {
+      "dimension": "trust",
+      "kind": "measure",
+      "score": 20.7,
+      "confidence": 0.204,
+      "band": "very_thin",
+      "trend": null,
+      "scoredOn": [
+        "contract_enforcement_days",
+        "homicide_rate"
+      ],
+      "gaps": [
+        "interpersonal_trust",
+        "institutional_trust",
+        "willingness_to_cooperate_strangers"
+      ],
+      "retired": [
+        "rule_of_law",
+        "control_of_corruption"
+      ],
+      "exemplars": [],
+      "evidenceElsewhere": []
+    },
+    {
+      "dimension": "learning",
+      "kind": "raise",
+      "score": 48.5,
+      "confidence": 0.543,
+      "band": "usable",
+      "trend": {
+        "spanYears": 10,
+        "delta": 4.5,
+        "basket": 2
+      },
+      "scoredOn": [
+        "human_capital_index",
+        "tertiary_enrollment",
+        "education_expenditure_gdp",
+        "vocational_secondary_share",
+        "firm_training_incidence"
+      ],
+      "gaps": [
+        "adult_learning_participation",
+        "research_citation_impact"
+      ],
+      "retired": [],
+      "exemplars": [
+        {
+          "iso3": "FIN",
+          "country": "Finland",
+          "score": 92,
+          "confidence": 0.543
+        },
+        {
+          "iso3": "GBR",
+          "country": "United Kingdom",
+          "score": 84.8,
+          "confidence": 0.52
+        },
+        {
+          "iso3": "AUS",
+          "country": "Australia",
+          "score": 82.9,
+          "confidence": 0.543
+        }
+      ],
+      "evidenceElsewhere": []
+    },
+    {
+      "dimension": "experimentation",
+      "kind": "measure",
+      "score": 26,
+      "confidence": 0.394,
+      "band": "thin",
+      "trend": {
+        "spanYears": 10,
+        "delta": 8.5,
+        "basket": 2
+      },
+      "scoredOn": [
+        "resident_patents_per_million",
+        "resident_trademarks_per_million",
+        "early_stage_entrepreneurial_activity",
+        "failure_tolerance"
+      ],
+      "gaps": [
+        "venture_capital_gdp",
+        "regulatory_sandbox_activity",
+        "university_spinouts",
+        "business_rd_share"
+      ],
+      "retired": [],
+      "exemplars": [],
+      "evidenceElsewhere": []
+    },
+    {
+      "dimension": "adaptability",
+      "kind": "raise",
+      "score": 49.6,
+      "confidence": 0.475,
+      "band": "usable",
+      "trend": {
+        "spanYears": 10,
+        "delta": 17.7,
+        "basket": 4
+      },
+      "scoredOn": [
+        "labor_force_participation",
+        "unemployment_rate",
+        "broadband_subscriptions",
+        "electricity_transmission_losses"
+      ],
+      "gaps": [
+        "long_term_unemployment_share",
+        "export_diversification",
+        "disaster_preparedness",
+        "institutional_responsiveness"
+      ],
+      "retired": [],
+      "exemplars": [
+        {
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "score": 91,
+          "confidence": 0.475
+        },
+        {
+          "iso3": "CHE",
+          "country": "Switzerland",
+          "score": 88.8,
+          "confidence": 0.475
+        },
+        {
+          "iso3": "JPN",
+          "country": "Japan",
+          "score": 85.9,
+          "confidence": 0.465
+        }
+      ],
+      "evidenceElsewhere": []
+    },
+    {
+      "dimension": "building",
+      "kind": "raise",
+      "score": 9.4,
+      "confidence": 0.544,
+      "band": "usable",
+      "trend": {
+        "spanYears": 10,
+        "delta": -0.9,
+        "basket": 4
+      },
+      "scoredOn": [
+        "manufacturing_value_added",
+        "high_tech_exports_share",
+        "labour_productivity",
+        "electricity_connection_speed",
+        "economic_complexity"
+      ],
+      "gaps": [
+        "large_project_delivery",
+        "firm_scale_up_rate"
+      ],
+      "retired": [
+        "logistics_infrastructure"
+      ],
+      "exemplars": [
+        {
+          "iso3": "SGP",
+          "country": "Singapore",
+          "score": 70.9,
+          "confidence": 0.544
+        },
+        {
+          "iso3": "IRL",
+          "country": "Ireland",
+          "score": 69.2,
+          "confidence": 0.544
+        },
+        {
+          "iso3": "KOR",
+          "country": "South Korea",
+          "score": 64.4,
+          "confidence": 0.544
+        }
+      ],
+      "evidenceElsewhere": [
+        {
+          "id": "est-x-road",
+          "iso3": "EST",
+          "country": "Estonia",
+          "indicatorId": "large_project_delivery",
+          "title": "X-Road national data exchange layer"
+        },
+        {
+          "id": "ind-pmjdy",
+          "iso3": "IND",
+          "country": "India",
+          "indicatorId": "large_project_delivery",
+          "title": "Pradhan Mantri Jan Dhan Yojana bank accounts"
+        },
+        {
+          "id": "ury-electricity",
+          "iso3": "URY",
+          "country": "Uruguay",
+          "indicatorId": "large_project_delivery",
+          "title": "Electricity supply rebuilt on renewable sources"
+        },
+        {
+          "id": "ury-ceibal",
+          "iso3": "URY",
+          "country": "Uruguay",
+          "indicatorId": "large_project_delivery",
+          "title": "Plan Ceibal, one connected laptop per child"
+        }
+      ]
+    },
+    {
+      "dimension": "shared_purpose",
+      "kind": "measure",
+      "score": 29,
+      "confidence": 0.272,
+      "band": "thin",
+      "trend": {
+        "spanYears": 10,
+        "delta": 9.9,
+        "basket": 2
+      },
+      "scoredOn": [
+        "tax_revenue_gdp",
+        "income_inequality"
+      ],
+      "gaps": [
+        "national_belonging",
+        "volunteering_rate",
+        "political_polarization",
+        "civic_participation"
+      ],
+      "retired": [
+        "voice_and_accountability"
+      ],
+      "exemplars": [],
+      "evidenceElsewhere": []
+    }
+  ],
+  "ownEvidence": [
+    {
+      "id": "bra-pix",
+      "indicatorId": "large_project_delivery",
+      "dimension": "building",
+      "title": "Pix instant payment system",
+      "claim": "Brazil's central bank specified, built and ran a mandatory instant payment rail that settled 7.98 billion transactions in July 2026, for 152 million people and 14 million firms transacting in that month."
+    },
+    {
+      "id": "bra-govbr",
+      "indicatorId": "large_project_delivery",
+      "dimension": "building",
+      "title": "GOV.BR federal identity and service platform",
+      "claim": "Brazil consolidated federal public services behind one identity platform, reporting 175 million active accounts and 5,179 digital services in May 2026."
+    },
+    {
+      "id": "bra-sus",
+      "indicatorId": "large_project_delivery",
+      "dimension": "building",
+      "title": "Sistema Unico de Saude, universal public health system",
+      "claim": "Brazil wrote a right to health into the 1988 constitution and built a single public system that covers everybody in the country, and the WHO service coverage index for Brazil rose from 71 in 2000 to 84 in 2023."
+    },
+    {
+      "id": "bra-plano-real",
+      "indicatorId": "institutional_responsiveness",
+      "dimension": "adaptability",
+      "title": "Plano Real, the 1994 currency stabilisation",
+      "claim": "Brazil ended four decades of high inflation with a staged currency reform, taking annual consumer price inflation from 2,075.9 percent in 1994 to 3.2 percent in 1998."
+    },
+    {
+      "id": "bra-pni",
+      "indicatorId": "large_project_delivery",
+      "dimension": "building",
+      "title": "Programa Nacional de Imunizacoes, and its erosion",
+      "claim": "Brazil's national immunisation programme reached 99 percent DPT coverage in 2003 and held above 95 percent for a decade, then fell to 68 percent by 2021 and had recovered to 91 percent by 2024."
+    },
+    {
+      "id": "bra-luz-para-todos",
+      "indicatorId": "large_project_delivery",
+      "dimension": "building",
+      "title": "Luz para Todos, rural electrification",
+      "claim": "Brazil connected the last rural households to electricity through a national programme run with the state and private distributors, taking access from 94.4 percent of the population in 2000 to 99.8 percent in 2024."
+    },
+    {
+      "id": "bra-embrapa",
+      "indicatorId": "government_foresight_capacity",
+      "dimension": "anticipation",
+      "title": "Embrapa, a fifty-year bet on tropical agriculture",
+      "claim": "Brazil created a public agricultural research corporation in 1973 to make acidic tropical soils productive, kept it funded across every change of government since, and cereal production rose from 46.5 million tonnes in 2000 to 155.9 million in 2023."
+    },
+    {
+      "id": "bra-bolsa-familia",
+      "indicatorId": "large_project_delivery",
+      "dimension": "building",
+      "title": "Bolsa Familia and the single registry behind it",
+      "claim": "Brazil built one national registry of low-income households and paid conditional transfers through it, going from 6.6 million benefits in December 2004 to a peak of 21.0 million in 2022 and 18.6 million in December 2025."
+    },
+    {
+      "id": "bra-urna-eletronica",
+      "indicatorId": "large_project_delivery",
+      "dimension": "building",
+      "title": "Fully electronic national elections",
+      "claim": "Brazil has run every election on electronic voting machines since 2000, across an electorate that reached 155.9 million voters in 2024, with results published the same evening."
+    },
+    {
+      "id": "bra-proalcool",
+      "indicatorId": "institutional_responsiveness",
+      "dimension": "adaptability",
+      "title": "Proalcool, the fuel substitution after the oil shock",
+      "claim": "Brazil answered the 1973 oil shock by mandating ethanol blending and building a national fuel alcohol industry, taking production from 580 thousand cubic metres in 1975 to 38,199 in 2025, and from 2003 flex-fuel engines moved the choice to the driver."
+    },
+    {
+      "id": "bra-presal",
+      "indicatorId": "large_project_delivery",
+      "dimension": "building",
+      "title": "Deepwater and pre-salt oil production",
+      "claim": "Brazil developed deepwater extraction, found the pre-salt fields in 2006 and produced them at depths of more than 5,000 metres, with national oil production rising from 71,844 thousand cubic metres in 2000 to 219,032 in 2025."
+    }
+  ],
+  "gapCount": 26
+}

@@ -5,15 +5,21 @@ import {
   COUNTRY_OUT_DIR,
   FILES,
   INDICATOR_OUT_DIR,
+  agendaDoc,
+  agendaFile,
   countryFile,
   indicatorFile,
 } from '../pipeline/paths.js'
 import { flatTable, scoreAll } from '../pipeline/score.js'
+import { buildAgenda, renderAgenda } from '../pipeline/agenda.js'
+import { LANGS, LEXICONS } from '../i18n/index.js'
+import type { Lang } from '../i18n/index.js'
 import { runDiagnostics } from '../pipeline/diagnostics.js'
 import { buildReport } from '../pipeline/report.js'
 import {
   acrossCountries,
   loadDelphi,
+  loadEvidence,
   loadObservations,
   saveDelphi,
   summarize,
@@ -119,6 +125,37 @@ async function diagnose(args: Args) {
   return { countries, diag, delphi }
 }
 
+
+/**
+ * Write the capability agenda: language-neutral JSON per country, plus one
+ * rendered markdown per lexicon. The JSON is the ground layer, the markdown is
+ * the interpretation layer, and both regenerate from the same scored output.
+ * See docs/DECISIONS.md D35.
+ */
+async function agenda(args: Args, countries: CountryResult[]): Promise<void> {
+  const evidence = await loadEvidence()
+  const requested = args._.slice(1).map((s) => s.toUpperCase())
+  const targets = requested.length > 0 ? requested : countries.map((c) => c.iso3)
+  const langFlag = str(args, 'lang', 'all')
+  const langs =
+    langFlag === 'all' ? LANGS : ([langFlag] as Lang[]).filter((l) => l in LEXICONS)
+  if (langs.length === 0) {
+    throw new Error(`Unknown lexicon "${langFlag}". Known: ${LANGS.join(', ')}`)
+  }
+  const generatedAt = new Date().toISOString()
+  for (const iso3 of targets) {
+    const built = buildAgenda(countries, evidence, iso3, generatedAt)
+    await writeOut(agendaFile(iso3), `${JSON.stringify(built, null, 2)}\n`)
+    for (const lang of langs) {
+      const lex = LEXICONS[lang]
+      await writeOut(agendaDoc(iso3, lang), renderAgenda(built, lex))
+    }
+  }
+  console.log(
+    `agenda      -> ${targets.length} countries x ${langs.length} lexicons -> data/out/agenda`,
+  )
+}
+
 async function main() {
   const args = parseArgs(process.argv.slice(2))
   const command = args._[0] ?? 'help'
@@ -156,6 +193,18 @@ async function main() {
     case 'diagnose':
       await diagnose(args)
       break
+
+    case 'agenda': {
+      const observations = await loadObservations()
+      const delphi = await loadDelphi()
+      const { countries } = scoreAll(observations, {
+        currentYear: CURRENT_YEAR,
+        delphi: delphi?.cellEstimates ?? [],
+        minPanelistConfidence: num(args, 'min-panelist-confidence', 0),
+      })
+      await agenda(args, countries)
+      break
+    }
 
     case 'report': {
       const { countries, diag, delphi } = await diagnose(args)
@@ -258,6 +307,7 @@ async function main() {
       const { countries, diag, delphi } = await diagnose(args)
       await writeOut(FILES.report, buildReport(countries, diag, delphi))
       console.log(`report      -> ${FILES.report}`)
+      await agenda(args, countries)
       break
     }
 
@@ -273,7 +323,9 @@ async function main() {
                                           measure the prompts and price the panel run
   pnpm bench validate                     schema-check data/delphi and data/evidence
   pnpm bench report                       write the findings report
-  pnpm bench all                          ingest, score, diagnose, report
+  pnpm bench agenda    [BRA IND ...] [--lang pt-BR]
+                                          write the capability agenda, JSON plus one markdown per lexicon
+  pnpm bench all                          ingest, score, diagnose, report, agenda
 `)
   }
 }
