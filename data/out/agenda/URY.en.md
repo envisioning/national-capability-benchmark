@@ -1,19 +1,21 @@
 # Capability agenda: Uruguay
 
-Generated 2026-08-27 from the current data run. Scores are relative to a frame fixed by the 10 reference countries and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read docs/KNOWN-ARTEFACTS.md before quoting any number on its own.
+*Generated 2026-08-27*
+
+Scores are relative to a frame fixed by the 10 reference countries and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
 
 ## Where Uruguay stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 16.6 | 0.66 (good) | +14.8 over 10 years, on 5 indicators |
-| Agency | 40.4 | 0.61 (usable) | +21.1 over 10 years, on 4 indicators |
+| Anticipation | 16.6 | 0.66 (good) | +14.8 over 10 years, on 5 indicators, 3 clamped at the frame edge |
+| Agency | 40.4 | 0.61 (usable) | +21.1 over 10 years, on 4 indicators, 3 clamped at the frame edge |
 | Coordination | 0 | 0.08 (very thin) | no trend basket |
 | Trust | 29.1 | 0.2 (very thin) | no trend basket |
 | Learning | 54.8 | 0.54 (usable) | +18.8 over 10 years, on 2 indicators |
 | Experimentation | 30.5 | 0.34 (thin) | no trend basket |
 | Adaptability | 65 | 0.47 (usable) | +7.7 over 10 years, on 4 indicators |
-| Building | 21.2 | 0.54 (usable) | -1.2 over 10 years, on 4 indicators |
+| Building | 21.2 | 0.54 (usable) | -1.2 over 10 years, on 4 indicators, 1 clamped at the frame edge |
 | Shared Purpose | 53.5 | 0.27 (thin) | -10.7 over 10 years, on 2 indicators |
 
 ## The dimensions the evidence says to raise
@@ -25,8 +27,8 @@ Lowest score first. Only dimensions with usable evidence appear here. A low scor
 How capable is the country of identifying and preparing for emerging change?
 
 - Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Sweden 83.4, Finland 83, Switzerland 81.1.
-- Documented deliveries elsewhere: Embrapa, a fifty-year bet on tropical agriculture (Brazil).
+- Highest scores with usable evidence: Finland 83, Switzerland 81.1, South Korea 79.3.
+- Documented deliveries elsewhere: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands).
 - Declared gaps in this dimension: Government foresight capacity, Long-horizon research share.
 
 ### Building: 21.2, confidence usable
@@ -34,9 +36,10 @@ How capable is the country of identifying and preparing for emerging change?
 How capable is the country of turning plans and knowledge into functioning systems?
 
 - Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Singapore 70.9, Ireland 69.2, South Korea 64.4.
-- Documented deliveries elsewhere: Pix instant payment system (Brazil); GOV.BR federal identity and service platform (Brazil); X-Road national data exchange layer (Estonia); Pradhan Mantri Jan Dhan Yojana bank accounts (India); Sistema Unico de Saude, universal public health system (Brazil); Programa Nacional de Imunizacoes, and its erosion (Brazil); Luz para Todos, rural electrification (Brazil); Bolsa Familia and the single registry behind it (Brazil); Fully electronic national elections (Brazil); Deepwater and pre-salt oil production (Brazil).
+- Highest scores with usable evidence: Singapore 70.9, South Korea 64.4, China 64.4.
+- Documented deliveries elsewhere: Pix instant payment system (Brazil); GOV.BR federal identity and service platform (Brazil); X-Road national data exchange layer (Estonia); Pradhan Mantri Jan Dhan Yojana bank accounts (India); Sistema Unico de Saude, universal public health system (Brazil); Programa Nacional de Imunizacoes, and its erosion (Brazil); Luz para Todos, rural electrification (Brazil); Bolsa Familia and the single registry behind it (Brazil); Fully electronic national elections (Brazil); Deepwater and pre-salt oil production (Brazil); Seguro Popular, and its abolition (Mexico); Sure Start children's centres, and their erosion (United Kingdom); Grid power, and load shedding (South Africa); Measles elimination, and its erosion (United States).
 - Declared gaps in this dimension: Large project delivery, Firm scale-up rate.
+- Datasets examined and rejected for this dimension: Logistics infrastructure quality.
 
 ### Agency: 40.4, confidence usable
 
@@ -56,6 +59,7 @@ How effectively can independent actors organize around shared objectives?
 
 - Currently scored on a single observed indicator.
 - Declared gaps in this dimension: University-industry collaboration, Civil society strength, Public-private collaboration.
+- Datasets examined and rejected for this dimension: Government effectiveness, Regulatory quality, Logistics performance.
 
 ### Trust: confidence 0.2, very thin
 
@@ -63,6 +67,7 @@ How much cooperation is possible beyond immediate personal networks?
 
 - Currently scored on 2 observed indicators.
 - Declared gaps in this dimension: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group.
+- Datasets examined and rejected for this dimension: Rule of law, Control of corruption.
 
 ### Shared Purpose: confidence 0.27, thin
 
@@ -70,6 +75,7 @@ To what extent can people imagine themselves as participants in a common project
 
 - Currently scored on 2 observed indicators.
 - Declared gaps in this dimension: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
+- Datasets examined and rejected for this dimension: Voice and accountability.
 
 ### Experimentation: confidence 0.34, thin
 
@@ -77,6 +83,13 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 
 - Currently scored on 4 observed indicators.
 - Declared gaps in this dimension: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
+
+## The dimensions the evidence says to hold
+
+Strongest first. These score at or above 50 on usable evidence, so nothing here asks to be raised or measured first. A held dimension still decays when nobody watches it.
+
+- Adaptability: 65, confidence usable
+- Learning: 54.8, confidence usable
 
 ## The measurement agenda
 

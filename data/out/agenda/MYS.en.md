@@ -1,13 +1,15 @@
 # Capability agenda: Malaysia
 
-Generated 2026-08-27 from the current data run. Scores are relative to a frame fixed by the 10 reference countries and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read docs/KNOWN-ARTEFACTS.md before quoting any number on its own.
+*Generated 2026-08-27*
+
+Scores are relative to a frame fixed by the 10 reference countries and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
 
 ## Where Malaysia stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 28.8 | 0.62 (usable) | +16.4 over 10 years, on 5 indicators |
-| Agency | 47.9 | 0.61 (usable) | +27.2 over 10 years, on 4 indicators |
+| Anticipation | 28.8 | 0.62 (usable) | +16.4 over 10 years, on 5 indicators, 2 clamped at the frame edge |
+| Agency | 47.9 | 0.61 (usable) | +27.2 over 10 years, on 4 indicators, 2 clamped at the frame edge |
 | Coordination | 69.6 | 0.08 (very thin) | no trend basket |
 | Trust | 67.1 | 0.2 (very thin) | no trend basket |
 | Learning | 31.5 | 0.56 (usable) | -6.3 over 10 years, on 3 indicators |
@@ -25,8 +27,8 @@ Lowest score first. Only dimensions with usable evidence appear here. A low scor
 How capable is the country of identifying and preparing for emerging change?
 
 - Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Sweden 83.4, Finland 83, Switzerland 81.1.
-- Documented deliveries elsewhere: Embrapa, a fifty-year bet on tropical agriculture (Brazil).
+- Highest scores with usable evidence: Finland 83, Switzerland 81.1, South Korea 79.3.
+- Documented deliveries elsewhere: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands).
 - Declared gaps in this dimension: Government foresight capacity, Long-horizon research share.
 
 ### Learning: 31.5, confidence usable
@@ -34,7 +36,8 @@ How capable is the country of identifying and preparing for emerging change?
 How effectively does the country acquire, distribute, and update knowledge?
 
 - Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Finland 92, United Kingdom 84.8, Australia 82.9.
+- Highest scores with usable evidence: United Kingdom 84.8, Netherlands 78, Switzerland 77.3.
+- Documented deliveries elsewhere: SkillsFuture Credit (Singapore); The public library system (Finland).
 - Declared gaps in this dimension: Adult learning participation, Research citation impact.
 
 ### Agency: 47.9, confidence usable
@@ -55,6 +58,7 @@ How effectively can independent actors organize around shared objectives?
 
 - Currently scored on a single observed indicator.
 - Declared gaps in this dimension: University-industry collaboration, Civil society strength, Public-private collaboration.
+- Datasets examined and rejected for this dimension: Government effectiveness, Regulatory quality, Logistics performance.
 
 ### Experimentation: confidence 0.18, very thin
 
@@ -69,6 +73,7 @@ How much cooperation is possible beyond immediate personal networks?
 
 - Currently scored on 2 observed indicators.
 - Declared gaps in this dimension: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group.
+- Datasets examined and rejected for this dimension: Rule of law, Control of corruption.
 
 ### Shared Purpose: confidence 0.24, very thin
 
@@ -76,6 +81,14 @@ To what extent can people imagine themselves as participants in a common project
 
 - Currently scored on 2 observed indicators.
 - Declared gaps in this dimension: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
+- Datasets examined and rejected for this dimension: Voice and accountability.
+
+## The dimensions the evidence says to hold
+
+Strongest first. These score at or above 50 on usable evidence, so nothing here asks to be raised or measured first. A held dimension still decays when nobody watches it.
+
+- Building: 59.3, confidence usable
+- Adaptability: 56.8, confidence usable
 
 ## The measurement agenda
 

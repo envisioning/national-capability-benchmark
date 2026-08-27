@@ -1,19 +1,21 @@
 # Capability agenda: Kenya
 
-Generated 2026-08-27 from the current data run. Scores are relative to a frame fixed by the 10 reference countries and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read docs/KNOWN-ARTEFACTS.md before quoting any number on its own.
+*Generated 2026-08-27*
+
+Scores are relative to a frame fixed by the 10 reference countries and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
 
 ## Where Kenya stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 2.1 | 0.67 (good) | 0 over 10 years, on 3 indicators |
-| Agency | 23.6 | 0.6 (usable) | +16.6 over 10 years, on 3 indicators |
+| Anticipation | 2.1 | 0.67 (good) | 0 over 10 years, on 3 indicators, 3 clamped at the frame edge |
+| Agency | 23.6 | 0.6 (usable) | +16.6 over 10 years, on 3 indicators, 3 clamped at the frame edge |
 | Coordination | 83.2 | 0.08 (very thin) | no trend basket |
 | Trust | 50.2 | 0.19 (very thin) | no trend basket |
-| Learning | 23.3 | 0.51 (usable) | -13.4 over 10 years, on 3 indicators |
+| Learning | 23.3 | 0.51 (usable) | -13.4 over 10 years, on 3 indicators, 1 clamped at the frame edge |
 | Experimentation | 0 | 0.17 (very thin) | no trend basket |
-| Adaptability | 29.2 | 0.48 (usable) | -11.9 over 10 years, on 4 indicators |
-| Building | 5.7 | 0.54 (usable) | -1.4 over 10 years, on 4 indicators |
+| Adaptability | 29.2 | 0.48 (usable) | -11.9 over 10 years, on 4 indicators, 2 clamped at the frame edge |
+| Building | 5.7 | 0.54 (usable) | -1.4 over 10 years, on 4 indicators, 4 clamped at the frame edge |
 | Shared Purpose | 46.1 | 0.24 (very thin) | +1.6 over 10 years, on 2 indicators |
 
 ## The dimensions the evidence says to raise
@@ -25,8 +27,8 @@ Lowest score first. Only dimensions with usable evidence appear here. A low scor
 How capable is the country of identifying and preparing for emerging change?
 
 - Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Sweden 83.4, Finland 83, Switzerland 81.1.
-- Documented deliveries elsewhere: Embrapa, a fifty-year bet on tropical agriculture (Brazil).
+- Highest scores with usable evidence: Finland 83, Switzerland 81.1, South Korea 79.3.
+- Documented deliveries elsewhere: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands).
 - Declared gaps in this dimension: Government foresight capacity, Long-horizon research share.
 
 ### Building: 5.7, confidence usable
@@ -34,16 +36,18 @@ How capable is the country of identifying and preparing for emerging change?
 How capable is the country of turning plans and knowledge into functioning systems?
 
 - Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Singapore 70.9, Ireland 69.2, South Korea 64.4.
-- Documented deliveries elsewhere: Pix instant payment system (Brazil); GOV.BR federal identity and service platform (Brazil); X-Road national data exchange layer (Estonia); Pradhan Mantri Jan Dhan Yojana bank accounts (India); Electricity supply rebuilt on renewable sources (Uruguay); Plan Ceibal, one connected laptop per child (Uruguay); Sistema Unico de Saude, universal public health system (Brazil); Programa Nacional de Imunizacoes, and its erosion (Brazil); Luz para Todos, rural electrification (Brazil); Bolsa Familia and the single registry behind it (Brazil); Fully electronic national elections (Brazil); Deepwater and pre-salt oil production (Brazil).
+- Highest scores with usable evidence: Singapore 70.9, South Korea 64.4, China 64.4.
+- Documented deliveries elsewhere: Pix instant payment system (Brazil); GOV.BR federal identity and service platform (Brazil); X-Road national data exchange layer (Estonia); Pradhan Mantri Jan Dhan Yojana bank accounts (India); Electricity supply rebuilt on renewable sources (Uruguay); Plan Ceibal, one connected laptop per child (Uruguay); Sistema Unico de Saude, universal public health system (Brazil); Programa Nacional de Imunizacoes, and its erosion (Brazil); Luz para Todos, rural electrification (Brazil); Bolsa Familia and the single registry behind it (Brazil); Fully electronic national elections (Brazil); Deepwater and pre-salt oil production (Brazil); Seguro Popular, and its abolition (Mexico); Sure Start children's centres, and their erosion (United Kingdom); Grid power, and load shedding (South Africa); Measles elimination, and its erosion (United States).
 - Declared gaps in this dimension: Large project delivery, Firm scale-up rate.
+- Datasets examined and rejected for this dimension: Logistics infrastructure quality.
 
 ### Learning: 23.3, confidence usable
 
 How effectively does the country acquire, distribute, and update knowledge?
 
 - Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Finland 92, United Kingdom 84.8, Australia 82.9.
+- Highest scores with usable evidence: United Kingdom 84.8, Netherlands 78, Switzerland 77.3.
+- Documented deliveries elsewhere: SkillsFuture Credit (Singapore); The public library system (Finland).
 - Declared gaps in this dimension: Adult learning participation, Research citation impact.
 
 ### Agency: 23.6, confidence usable
@@ -59,8 +63,8 @@ How able are individuals and organizations to turn an intention into action?
 How effectively can the system respond when circumstances change?
 
 - Currently scored on 4 observed indicators.
-- Highest scores with usable evidence: Netherlands 91, Switzerland 88.8, Japan 85.9.
-- Documented deliveries elsewhere: Plano Real, the 1994 currency stabilisation (Brazil); Proalcool, the fuel substitution after the oil shock (Brazil).
+- Highest scores with usable evidence: Netherlands 91, Switzerland 88.8, Germany 85.8.
+- Documented deliveries elsewhere: Plano Real, the 1994 currency stabilisation (Brazil); Proalcool, the fuel substitution after the oil shock (Brazil); The Convertibility Plan, and its collapse (Argentina); Kurzarbeit in the 2008-2009 crisis (Germany); The 2001 stabilisation, and its unwinding (Turkey).
 - Declared gaps in this dimension: Long-term unemployment share, Export diversification, Disaster preparedness and recovery, Institutional responsiveness.
 
 ## The dimensions that must be measured before they can be managed
@@ -73,6 +77,7 @@ How effectively can independent actors organize around shared objectives?
 
 - Currently scored on a single observed indicator.
 - Declared gaps in this dimension: University-industry collaboration, Civil society strength, Public-private collaboration.
+- Datasets examined and rejected for this dimension: Government effectiveness, Regulatory quality, Logistics performance.
 
 ### Experimentation: confidence 0.17, very thin
 
@@ -87,6 +92,7 @@ How much cooperation is possible beyond immediate personal networks?
 
 - Currently scored on 2 observed indicators.
 - Declared gaps in this dimension: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group.
+- Datasets examined and rejected for this dimension: Rule of law, Control of corruption.
 
 ### Shared Purpose: confidence 0.24, very thin
 
@@ -94,6 +100,7 @@ To what extent can people imagine themselves as participants in a common project
 
 - Currently scored on 2 observed indicators.
 - Declared gaps in this dimension: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
+- Datasets examined and rejected for this dimension: Voice and accountability.
 
 ## The measurement agenda
 
@@ -127,6 +134,12 @@ To what extent can people imagine themselves as participants in a common project
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
+
+## What the indicators cannot see about Kenya
+
+Documented deliveries filed as evidence records. They never enter a score and never raise confidence. They exist because the gap list above also describes things this country has partly done and cannot yet prove comparably.
+
+- **M-Pesa, and the regulator that let it run** (Coordination). Kenya's central bank let a phone company build a national payments system in 2007 and supervised it into ubiquity, and by June 2026 Kenya had 94.2 million registered mobile money accounts and 572,104 agents, in a population of about 55 million.
 
 ## How to move a number on this page
 

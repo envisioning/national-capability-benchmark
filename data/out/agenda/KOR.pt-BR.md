@@ -1,19 +1,21 @@
 # Agenda de capacidades: Coreia do Sul
 
-Gerado em 2026-08-27 a partir da rodada de dados atual. As notas são relativas a uma régua fixada pelos 10 países de referência e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia docs/KNOWN-ARTEFACTS.md antes de citar qualquer número isoladamente.
+*Gerado em 2026-08-27*
+
+As notas são relativas a uma régua fixada pelos 10 países de referência e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
 
 ## Onde a Coreia do Sul está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 79,3 | 0,64 (utilizável) | +37,9 em 10 anos, sobre 5 indicadores |
+| Antecipação | 79,3 | 0,64 (utilizável) | +37,9 em 10 anos, sobre 5 indicadores, 1 truncados na borda da régua |
 | Agência | 74,2 | 0,6 (utilizável) | +13,4 em 10 anos, sobre 4 indicadores |
 | Coordenação | 85,5 | 0,08 (muito fraca) | sem base de tendência |
 | Confiança | 78 | 0,2 (muito fraca) | sem base de tendência |
 | Aprendizagem | 61,9 | 0,54 (utilizável) | +33,6 em 10 anos, sobre 2 indicadores |
 | Experimentação | 75 | 0,39 (fraca) | +20,1 em 10 anos, sobre 2 indicadores |
 | Adaptação | 82,6 | 0,48 (utilizável) | +8,7 em 10 anos, sobre 4 indicadores |
-| Construção | 64,4 | 0,54 (utilizável) | +3,8 em 10 anos, sobre 4 indicadores |
+| Construção | 64,4 | 0,54 (utilizável) | +3,8 em 10 anos, sobre 4 indicadores, 1 truncados na borda da régua |
 | Propósito compartilhado | 53,8 | 0,24 (muito fraca) | +4 em 10 anos, sobre 2 indicadores |
 
 ## As dimensões que precisam ser medidas antes de serem geridas
@@ -26,6 +28,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 - Hoje a nota se apoia em um único indicador observado.
 - Lacunas declaradas nesta dimensão: Colaboração universidade-empresa, Força da sociedade civil, Colaboração público-privada.
+- Bases de dados examinadas e rejeitadas para esta dimensão: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
 ### Confiança: confiança 0,2, muito fraca
 
@@ -33,6 +36,7 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 
 - Hoje a nota se apoia em 2 indicadores observados.
 - Lacunas declaradas nesta dimensão: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo.
+- Bases de dados examinadas e rejeitadas para esta dimensão: Estado de direito, Controle da corrupção.
 
 ### Propósito compartilhado: confiança 0,24, muito fraca
 
@@ -40,6 +44,7 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 
 - Hoje a nota se apoia em 2 indicadores observados.
 - Lacunas declaradas nesta dimensão: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
+- Bases de dados examinadas e rejeitadas para esta dimensão: Voz e responsabilização.
 
 ### Experimentação: confiança 0,39, fraca
 
@@ -47,6 +52,16 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 
 - Hoje a nota se apoia em 4 indicadores observados.
 - Lacunas declaradas nesta dimensão: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
+
+## As dimensões que a evidência manda manter
+
+Da nota mais alta para a mais baixa. Estas dimensões pontuam 50 ou mais com evidência utilizável, então nada aqui pede elevação ou medição primeiro. Uma dimensão mantida ainda decai quando ninguém a observa.
+
+- Adaptação: 82,6, confiança utilizável
+- Antecipação: 79,3, confiança utilizável
+- Agência: 74,2, confiança utilizável
+- Construção: 64,4, confiança utilizável
+- Aprendizagem: 61,9, confiança utilizável
 
 ## A agenda de medição
 

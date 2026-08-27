@@ -1,19 +1,21 @@
 # Agenda de capacidades: Vietnã
 
-Gerado em 2026-08-27 a partir da rodada de dados atual. As notas são relativas a uma régua fixada pelos 10 países de referência e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia docs/KNOWN-ARTEFACTS.md antes de citar qualquer número isoladamente.
+*Gerado em 2026-08-27*
+
+As notas são relativas a uma régua fixada pelos 10 países de referência e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
 
 ## Onde o Vietnã está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 7,4 | 0,64 (utilizável) | +6,5 em 10 anos, sobre 5 indicadores |
-| Agência | 33,6 | 0,59 (utilizável) | +17,5 em 10 anos, sobre 4 indicadores |
+| Antecipação | 7,4 | 0,64 (utilizável) | +6,5 em 10 anos, sobre 5 indicadores, 4 truncados na borda da régua |
+| Agência | 33,6 | 0,59 (utilizável) | +17,5 em 10 anos, sobre 4 indicadores, 2 truncados na borda da régua |
 | Coordenação | 40,2 | 0,08 (muito fraca) | sem base de tendência |
 | Confiança | 62,8 | 0,09 (muito fraca) | sem base de tendência |
 | Aprendizagem | 20,1 | 0,48 (utilizável) | -7,7 em 10 anos, sobre 3 indicadores |
-| Experimentação | 4,2 | 0,18 (muito fraca) | +1,6 em 10 anos, sobre 2 indicadores |
-| Adaptação | 71,8 | 0,47 (utilizável) | +6,1 em 10 anos, sobre 4 indicadores |
-| Construção | 52,8 | 0,53 (utilizável) | +9,6 em 10 anos, sobre 4 indicadores |
+| Experimentação | 4,2 | 0,18 (muito fraca) | +1,6 em 10 anos, sobre 2 indicadores, 1 truncados na borda da régua |
+| Adaptação | 71,8 | 0,47 (utilizável) | +6,1 em 10 anos, sobre 4 indicadores, 1 truncados na borda da régua |
+| Construção | 52,8 | 0,53 (utilizável) | +9,6 em 10 anos, sobre 4 indicadores, 1 truncados na borda da régua |
 | Propósito compartilhado | 62,9 | 0,11 (muito fraca) | sem base de tendência |
 
 ## As dimensões que a evidência manda elevar
@@ -25,8 +27,8 @@ Da nota mais baixa para a mais alta. Só entram aqui dimensões com evidência u
 Quão capaz é o país de identificar mudanças emergentes e se preparar para elas?
 
 - Hoje a nota se apoia em 5 indicadores observados.
-- Maiores notas com evidência utilizável: Suécia 83,4, Finlândia 83, Suíça 81,1.
-- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil).
+- Maiores notas com evidência utilizável: Finlândia 83, Suíça 81,1, Coreia do Sul 79,3.
+- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos).
 - Lacunas declaradas nesta dimensão: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
 ### Aprendizagem: 20,1, confiança utilizável
@@ -34,7 +36,8 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Hoje a nota se apoia em 5 indicadores observados.
-- Maiores notas com evidência utilizável: Finlândia 92, Reino Unido 84,8, Austrália 82,9.
+- Maiores notas com evidência utilizável: Reino Unido 84,8, Países Baixos 78, Suíça 77,3.
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia).
 - Lacunas declaradas nesta dimensão: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ### Agência: 33,6, confiança utilizável
@@ -55,6 +58,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 - Hoje a nota se apoia em um único indicador observado.
 - Lacunas declaradas nesta dimensão: Colaboração universidade-empresa, Força da sociedade civil, Colaboração público-privada.
+- Bases de dados examinadas e rejeitadas para esta dimensão: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
 ### Confiança: confiança 0,09, muito fraca
 
@@ -62,6 +66,7 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 
 - Hoje a nota se apoia em 2 indicadores observados.
 - Lacunas declaradas nesta dimensão: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo.
+- Bases de dados examinadas e rejeitadas para esta dimensão: Estado de direito, Controle da corrupção.
 
 ### Propósito compartilhado: confiança 0,11, muito fraca
 
@@ -69,6 +74,7 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 
 - Hoje a nota se apoia em um único indicador observado.
 - Lacunas declaradas nesta dimensão: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
+- Bases de dados examinadas e rejeitadas para esta dimensão: Voz e responsabilização.
 
 ### Experimentação: confiança 0,18, muito fraca
 
@@ -76,6 +82,13 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 
 - Hoje a nota se apoia em 2 indicadores observados.
 - Lacunas declaradas nesta dimensão: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
+
+## As dimensões que a evidência manda manter
+
+Da nota mais alta para a mais baixa. Estas dimensões pontuam 50 ou mais com evidência utilizável, então nada aqui pede elevação ou medição primeiro. Uma dimensão mantida ainda decai quando ninguém a observa.
+
+- Adaptação: 71,8, confiança utilizável
+- Construção: 52,8, confiança utilizável
 
 ## A agenda de medição
 

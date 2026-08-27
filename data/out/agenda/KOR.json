@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T13:43:15.402Z",
+  "generatedAt": "2026-08-27T22:38:01.142Z",
   "iso3": "KOR",
   "country": "South Korea",
   "frame": "reference",
@@ -13,7 +13,8 @@
       "trend": {
         "spanYears": 10,
         "delta": 37.9,
-        "basket": 5
+        "basket": 5,
+        "clamped": 1
       },
       "scoredOn": [
         "rd_expenditure_gdp",
@@ -29,12 +30,6 @@
       "retired": [],
       "exemplars": [
         {
-          "iso3": "SWE",
-          "country": "Sweden",
-          "score": 83.4,
-          "confidence": 0.644
-        },
-        {
           "iso3": "FIN",
           "country": "Finland",
           "score": 83,
@@ -45,6 +40,12 @@
           "country": "Switzerland",
           "score": 81.1,
           "confidence": 0.644
+        },
+        {
+          "iso3": "SGP",
+          "country": "Singapore",
+          "score": 76.3,
+          "confidence": 0.622
         }
       ],
       "evidenceElsewhere": [
@@ -54,6 +55,13 @@
           "country": "Brazil",
           "indicatorId": "government_foresight_capacity",
           "title": "Embrapa, a fifty-year bet on tropical agriculture"
+        },
+        {
+          "id": "nld-delta-programme",
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "indicatorId": "government_foresight_capacity",
+          "title": "The Delta Programme and its fund"
         }
       ]
     },
@@ -66,7 +74,8 @@
       "trend": {
         "spanYears": 10,
         "delta": 13.4,
-        "basket": 4
+        "basket": 4,
+        "clamped": 0
       },
       "scoredOn": [
         "new_business_density",
@@ -124,7 +133,29 @@
         "logistics_performance"
       ],
       "exemplars": [],
-      "evidenceElsewhere": []
+      "evidenceElsewhere": [
+        {
+          "id": "deu-fraunhofer",
+          "iso3": "DEU",
+          "country": "Germany",
+          "indicatorId": "university_industry_collaboration",
+          "title": "The Fraunhofer contract-research model"
+        },
+        {
+          "id": "ken-mpesa",
+          "iso3": "KEN",
+          "country": "Kenya",
+          "indicatorId": "public_private_collaboration",
+          "title": "M-Pesa, and the regulator that let it run"
+        },
+        {
+          "id": "che-dual-vet",
+          "iso3": "CHE",
+          "country": "Switzerland",
+          "indicatorId": "public_private_collaboration",
+          "title": "Dual-track vocational training"
+        }
+      ]
     },
     {
       "dimension": "trust",
@@ -158,7 +189,8 @@
       "trend": {
         "spanYears": 10,
         "delta": 33.6,
-        "basket": 2
+        "basket": 2,
+        "clamped": 0
       },
       "scoredOn": [
         "human_capital_index",
@@ -174,25 +206,40 @@
       "retired": [],
       "exemplars": [
         {
-          "iso3": "FIN",
-          "country": "Finland",
-          "score": 92,
-          "confidence": 0.543
-        },
-        {
           "iso3": "GBR",
           "country": "United Kingdom",
           "score": 84.8,
           "confidence": 0.52
         },
         {
-          "iso3": "AUS",
-          "country": "Australia",
-          "score": 82.9,
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "score": 78,
+          "confidence": 0.531
+        },
+        {
+          "iso3": "CHE",
+          "country": "Switzerland",
+          "score": 77.3,
           "confidence": 0.543
         }
       ],
-      "evidenceElsewhere": []
+      "evidenceElsewhere": [
+        {
+          "id": "sgp-skillsfuture",
+          "iso3": "SGP",
+          "country": "Singapore",
+          "indicatorId": "adult_learning_participation",
+          "title": "SkillsFuture Credit"
+        },
+        {
+          "id": "fin-libraries",
+          "iso3": "FIN",
+          "country": "Finland",
+          "indicatorId": "adult_learning_participation",
+          "title": "The public library system"
+        }
+      ]
     },
     {
       "dimension": "experimentation",
@@ -203,7 +250,8 @@
       "trend": {
         "spanYears": 10,
         "delta": 20.1,
-        "basket": 2
+        "basket": 2,
+        "clamped": 0
       },
       "scoredOn": [
         "resident_patents_per_million",
@@ -219,7 +267,22 @@
       ],
       "retired": [],
       "exemplars": [],
-      "evidenceElsewhere": []
+      "evidenceElsewhere": [
+        {
+          "id": "gbr-fca-sandbox",
+          "iso3": "GBR",
+          "country": "United Kingdom",
+          "indicatorId": "regulatory_sandbox_activity",
+          "title": "The FCA regulatory sandbox"
+        },
+        {
+          "id": "isr-yozma",
+          "iso3": "ISR",
+          "country": "Israel",
+          "indicatorId": "venture_capital_gdp",
+          "title": "Yozma, the venture capital catalyst"
+        }
+      ]
     },
     {
       "dimension": "adaptability",
@@ -230,7 +293,8 @@
       "trend": {
         "spanYears": 10,
         "delta": 8.7,
-        "basket": 4
+        "basket": 4,
+        "clamped": 0
       },
       "scoredOn": [
         "labor_force_participation",
@@ -259,10 +323,10 @@
           "confidence": 0.475
         },
         {
-          "iso3": "JPN",
-          "country": "Japan",
-          "score": 85.9,
-          "confidence": 0.465
+          "iso3": "DEU",
+          "country": "Germany",
+          "score": 85.8,
+          "confidence": 0.475
         }
       ],
       "evidenceElsewhere": [
@@ -279,6 +343,27 @@
           "country": "Brazil",
           "indicatorId": "institutional_responsiveness",
           "title": "Proalcool, the fuel substitution after the oil shock"
+        },
+        {
+          "id": "arg-convertibility",
+          "iso3": "ARG",
+          "country": "Argentina",
+          "indicatorId": "institutional_responsiveness",
+          "title": "The Convertibility Plan, and its collapse"
+        },
+        {
+          "id": "deu-kurzarbeit",
+          "iso3": "DEU",
+          "country": "Germany",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Kurzarbeit in the 2008-2009 crisis"
+        },
+        {
+          "id": "tur-disinflation-2001",
+          "iso3": "TUR",
+          "country": "Turkey",
+          "indicatorId": "institutional_responsiveness",
+          "title": "The 2001 stabilisation, and its unwinding"
         }
       ]
     },
@@ -291,7 +376,8 @@
       "trend": {
         "spanYears": 10,
         "delta": 3.8,
-        "basket": 4
+        "basket": 4,
+        "clamped": 1
       },
       "scoredOn": [
         "manufacturing_value_added",
@@ -315,15 +401,15 @@
           "confidence": 0.544
         },
         {
-          "iso3": "IRL",
-          "country": "Ireland",
-          "score": 69.2,
-          "confidence": 0.544
-        },
-        {
           "iso3": "CHN",
           "country": "China",
           "score": 64.4,
+          "confidence": 0.544
+        },
+        {
+          "iso3": "DEU",
+          "country": "Germany",
+          "score": 61.7,
           "confidence": 0.544
         }
       ],
@@ -411,6 +497,34 @@
           "country": "Brazil",
           "indicatorId": "large_project_delivery",
           "title": "Deepwater and pre-salt oil production"
+        },
+        {
+          "id": "mex-seguro-popular",
+          "iso3": "MEX",
+          "country": "Mexico",
+          "indicatorId": "large_project_delivery",
+          "title": "Seguro Popular, and its abolition"
+        },
+        {
+          "id": "gbr-sure-start",
+          "iso3": "GBR",
+          "country": "United Kingdom",
+          "indicatorId": "large_project_delivery",
+          "title": "Sure Start children's centres, and their erosion"
+        },
+        {
+          "id": "zaf-eskom-loadshedding",
+          "iso3": "ZAF",
+          "country": "South Africa",
+          "indicatorId": "large_project_delivery",
+          "title": "Grid power, and load shedding"
+        },
+        {
+          "id": "usa-measles-elimination",
+          "iso3": "USA",
+          "country": "United States",
+          "indicatorId": "large_project_delivery",
+          "title": "Measles elimination, and its erosion"
         }
       ]
     },
@@ -423,7 +537,8 @@
       "trend": {
         "spanYears": 10,
         "delta": 4,
-        "basket": 2
+        "basket": 2,
+        "clamped": 0
       },
       "scoredOn": [
         "tax_revenue_gdp",
@@ -439,7 +554,29 @@
         "voice_and_accountability"
       ],
       "exemplars": [],
-      "evidenceElsewhere": []
+      "evidenceElsewhere": [
+        {
+          "id": "est-i-voting",
+          "iso3": "EST",
+          "country": "Estonia",
+          "indicatorId": "civic_participation",
+          "title": "Internet voting in national elections"
+        },
+        {
+          "id": "aus-compulsory-voting",
+          "iso3": "AUS",
+          "country": "Australia",
+          "indicatorId": "civic_participation",
+          "title": "Compulsory voting"
+        },
+        {
+          "id": "rwa-umuganda",
+          "iso3": "RWA",
+          "country": "Rwanda",
+          "indicatorId": "volunteering_rate",
+          "title": "Umuganda community work"
+        }
+      ]
     }
   ],
   "ownEvidence": [],

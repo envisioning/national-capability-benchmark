@@ -1,19 +1,21 @@
 # Agenda de capacidades: Irlanda
 
-Gerado em 2026-08-27 a partir da rodada de dados atual. As notas são relativas a uma régua fixada pelos 10 países de referência e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia docs/KNOWN-ARTEFACTS.md antes de citar qualquer número isoladamente.
+*Gerado em 2026-08-27*
+
+As notas são relativas a uma régua fixada pelos 10 países de referência e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
 
 ## Onde a Irlanda está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 63,6 | 0,64 (utilizável) | +18,1 em 10 anos, sobre 5 indicadores |
-| Agência | 63,4 | 0,61 (utilizável) | +16,7 em 10 anos, sobre 4 indicadores |
+| Agência | 63,4 | 0,61 (utilizável) | +16,7 em 10 anos, sobre 4 indicadores, 1 truncados na borda da régua |
 | Coordenação | 73,9 | 0,08 (muito fraca) | sem base de tendência |
 | Confiança | 55,4 | 0,2 (muito fraca) | sem base de tendência |
 | Aprendizagem | 62,7 | 0,51 (utilizável) | -7,3 em 10 anos, sobre 2 indicadores |
 | Experimentação | 0 | 0,09 (muito fraca) | sem base de tendência |
 | Adaptação | 70,6 | 0,48 (utilizável) | +10,6 em 10 anos, sobre 4 indicadores |
-| Construção | 69,2 | 0,54 (utilizável) | +16,6 em 10 anos, sobre 4 indicadores |
+| Construção | 69,2 | 0,54 (utilizável) | +16,6 em 10 anos, sobre 4 indicadores, 2 truncados na borda da régua |
 | Propósito compartilhado | 72,9 | 0,26 (fraca) | +4,7 em 10 anos, sobre 2 indicadores |
 
 ## As dimensões que precisam ser medidas antes de serem geridas
@@ -26,6 +28,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 - Hoje a nota se apoia em um único indicador observado.
 - Lacunas declaradas nesta dimensão: Colaboração universidade-empresa, Força da sociedade civil, Colaboração público-privada.
+- Bases de dados examinadas e rejeitadas para esta dimensão: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
 ### Experimentação: confiança 0,09, muito fraca
 
@@ -40,6 +43,7 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 
 - Hoje a nota se apoia em 2 indicadores observados.
 - Lacunas declaradas nesta dimensão: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo.
+- Bases de dados examinadas e rejeitadas para esta dimensão: Estado de direito, Controle da corrupção.
 
 ### Propósito compartilhado: confiança 0,26, fraca
 
@@ -47,6 +51,17 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 
 - Hoje a nota se apoia em 2 indicadores observados.
 - Lacunas declaradas nesta dimensão: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
+- Bases de dados examinadas e rejeitadas para esta dimensão: Voz e responsabilização.
+
+## As dimensões que a evidência manda manter
+
+Da nota mais alta para a mais baixa. Estas dimensões pontuam 50 ou mais com evidência utilizável, então nada aqui pede elevação ou medição primeiro. Uma dimensão mantida ainda decai quando ninguém a observa.
+
+- Adaptação: 70,6, confiança utilizável
+- Construção: 69,2, confiança utilizável
+- Antecipação: 63,6, confiança utilizável
+- Agência: 63,4, confiança utilizável
+- Aprendizagem: 62,7, confiança utilizável
 
 ## A agenda de medição
 

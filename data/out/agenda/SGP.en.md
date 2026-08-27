@@ -1,12 +1,14 @@
 # Capability agenda: Singapore
 
-Generated 2026-08-27 from the current data run. Scores are relative to a frame fixed by the 10 reference countries and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read docs/KNOWN-ARTEFACTS.md before quoting any number on its own.
+*Generated 2026-08-27*
+
+Scores are relative to a frame fixed by the 10 reference countries and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
 
 ## Where Singapore stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 76.3 | 0.62 (usable) | +26.6 over 10 years, on 5 indicators |
+| Anticipation | 76.3 | 0.62 (usable) | +26.6 over 10 years, on 5 indicators, 1 clamped at the frame edge |
 | Agency | 79.6 | 0.57 (usable) | +19.4 over 10 years, on 3 indicators |
 | Coordination | 89.1 | 0.08 (very thin) | no trend basket |
 | Trust | 100 | 0.2 (very thin) | no trend basket |
@@ -26,6 +28,7 @@ How effectively can independent actors organize around shared objectives?
 
 - Currently scored on a single observed indicator.
 - Declared gaps in this dimension: University-industry collaboration, Civil society strength, Public-private collaboration.
+- Datasets examined and rejected for this dimension: Government effectiveness, Regulatory quality, Logistics performance.
 
 ### Shared Purpose: confidence 0.14, very thin
 
@@ -33,6 +36,7 @@ To what extent can people imagine themselves as participants in a common project
 
 - Currently scored on a single observed indicator.
 - Declared gaps in this dimension: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
+- Datasets examined and rejected for this dimension: Voice and accountability.
 
 ### Trust: confidence 0.2, very thin
 
@@ -40,6 +44,7 @@ How much cooperation is possible beyond immediate personal networks?
 
 - Currently scored on 2 observed indicators.
 - Declared gaps in this dimension: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group.
+- Datasets examined and rejected for this dimension: Rule of law, Control of corruption.
 
 ### Experimentation: confidence 0.21, very thin
 
@@ -47,6 +52,16 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 
 - Currently scored on 4 observed indicators.
 - Declared gaps in this dimension: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
+
+## The dimensions the evidence says to hold
+
+Strongest first. These score at or above 50 on usable evidence, so nothing here asks to be raised or measured first. A held dimension still decays when nobody watches it.
+
+- Adaptability: 80.5, confidence usable
+- Agency: 79.6, confidence usable
+- Anticipation: 76.3, confidence usable
+- Building: 70.9, confidence usable
+- Learning: 57.5, confidence usable
 
 ## The measurement agenda
 
@@ -80,6 +95,12 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
+
+## What the indicators cannot see about Singapore
+
+Documented deliveries filed as evidence records. They never enter a score and never raise confidence. They exist because the gap list above also describes things this country has partly done and cannot yet prove comparably.
+
+- **SkillsFuture Credit** (Learning). Singapore gave every citizen aged 25 and over an individual training account in 2016 and keeps topping it up, and in 2024 260,000 Singaporeans spent credit on courses, up 35 percent on the year before.
 
 ## How to move a number on this page
 

@@ -1,16 +1,18 @@
 # Agenda de capacidades: Brasil
 
-Gerado em 2026-08-27 a partir da rodada de dados atual. As notas são relativas a uma régua fixada pelos 10 países de referência e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia docs/KNOWN-ARTEFACTS.md antes de citar qualquer número isoladamente.
+*Gerado em 2026-08-27*
+
+As notas são relativas a uma régua fixada pelos 10 países de referência e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
 
 ## Onde o Brasil está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 22,3 | 0,54 (utilizável) | +20 em 10 anos, sobre 4 indicadores |
-| Agência | 31 | 0,61 (utilizável) | +26,2 em 10 anos, sobre 4 indicadores |
+| Antecipação | 22,3 | 0,54 (utilizável) | +20 em 10 anos, sobre 4 indicadores, 1 truncados na borda da régua |
+| Agência | 31 | 0,61 (utilizável) | +26,2 em 10 anos, sobre 4 indicadores, 2 truncados na borda da régua |
 | Coordenação | 46,7 | 0,08 (muito fraca) | sem base de tendência |
 | Confiança | 20,7 | 0,2 (muito fraca) | sem base de tendência |
-| Aprendizagem | 48,5 | 0,54 (utilizável) | +4,5 em 10 anos, sobre 2 indicadores |
+| Aprendizagem | 48,5 | 0,54 (utilizável) | +4,5 em 10 anos, sobre 2 indicadores, 1 truncados na borda da régua |
 | Experimentação | 26 | 0,39 (fraca) | +8,5 em 10 anos, sobre 2 indicadores |
 | Adaptação | 49,6 | 0,48 (utilizável) | +17,7 em 10 anos, sobre 4 indicadores |
 | Construção | 9,4 | 0,54 (utilizável) | -0,9 em 10 anos, sobre 4 indicadores |
@@ -25,16 +27,18 @@ Da nota mais baixa para a mais alta. Só entram aqui dimensões com evidência u
 Quão capaz é o país de transformar planos e conhecimento em sistemas que funcionam?
 
 - Hoje a nota se apoia em 5 indicadores observados.
-- Maiores notas com evidência utilizável: Singapura 70,9, Irlanda 69,2, Coreia do Sul 64,4.
-- Entregas documentadas em outros países: X-Road national data exchange layer (Estônia); Pradhan Mantri Jan Dhan Yojana bank accounts (Índia); Electricity supply rebuilt on renewable sources (Uruguai); Plan Ceibal, one connected laptop per child (Uruguai).
+- Maiores notas com evidência utilizável: Singapura 70,9, Coreia do Sul 64,4, China 64,4.
+- Entregas documentadas em outros países: X-Road national data exchange layer (Estônia); Pradhan Mantri Jan Dhan Yojana bank accounts (Índia); Electricity supply rebuilt on renewable sources (Uruguai); Plan Ceibal, one connected laptop per child (Uruguai); Seguro Popular, and its abolition (México); Sure Start children's centres, and their erosion (Reino Unido); Grid power, and load shedding (África do Sul); Measles elimination, and its erosion (Estados Unidos).
 - Lacunas declaradas nesta dimensão: Entrega de grandes projetos, Empresas jovens que ganham escala.
+- Bases de dados examinadas e rejeitadas para esta dimensão: Qualidade da infraestrutura logística.
 
 ### Antecipação: 22,3, confiança utilizável
 
 Quão capaz é o país de identificar mudanças emergentes e se preparar para elas?
 
 - Hoje a nota se apoia em 5 indicadores observados.
-- Maiores notas com evidência utilizável: Suécia 83,4, Finlândia 83, Suíça 81,1.
+- Maiores notas com evidência utilizável: Finlândia 83, Suíça 81,1, Coreia do Sul 79,3.
+- Entregas documentadas em outros países: The Delta Programme and its fund (Países Baixos).
 - Lacunas declaradas nesta dimensão: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
 ### Agência: 31, confiança utilizável
@@ -50,7 +54,8 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Hoje a nota se apoia em 5 indicadores observados.
-- Maiores notas com evidência utilizável: Finlândia 92, Reino Unido 84,8, Austrália 82,9.
+- Maiores notas com evidência utilizável: Reino Unido 84,8, Países Baixos 78, Suíça 77,3.
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia).
 - Lacunas declaradas nesta dimensão: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ### Adaptação: 49,6, confiança utilizável
@@ -58,7 +63,8 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 Com que eficácia o sistema responde quando as circunstâncias mudam?
 
 - Hoje a nota se apoia em 4 indicadores observados.
-- Maiores notas com evidência utilizável: Países Baixos 91, Suíça 88,8, Japão 85,9.
+- Maiores notas com evidência utilizável: Países Baixos 91, Suíça 88,8, Alemanha 85,8.
+- Entregas documentadas em outros países: The Convertibility Plan, and its collapse (Argentina); Kurzarbeit in the 2008-2009 crisis (Alemanha); The 2001 stabilisation, and its unwinding (Turquia).
 - Lacunas declaradas nesta dimensão: Parcela de desemprego de longa duração, Diversificação das exportações, Preparação e recuperação de desastres, Capacidade de resposta institucional.
 
 ## As dimensões que precisam ser medidas antes de serem geridas
@@ -71,6 +77,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 - Hoje a nota se apoia em um único indicador observado.
 - Lacunas declaradas nesta dimensão: Colaboração universidade-empresa, Força da sociedade civil, Colaboração público-privada.
+- Bases de dados examinadas e rejeitadas para esta dimensão: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
 ### Confiança: confiança 0,2, muito fraca
 
@@ -78,6 +85,7 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 
 - Hoje a nota se apoia em 2 indicadores observados.
 - Lacunas declaradas nesta dimensão: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo.
+- Bases de dados examinadas e rejeitadas para esta dimensão: Estado de direito, Controle da corrupção.
 
 ### Propósito compartilhado: confiança 0,27, fraca
 
@@ -85,6 +93,7 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 
 - Hoje a nota se apoia em 2 indicadores observados.
 - Lacunas declaradas nesta dimensão: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
+- Bases de dados examinadas e rejeitadas para esta dimensão: Voz e responsabilização.
 
 ### Experimentação: confiança 0,39, fraca
 

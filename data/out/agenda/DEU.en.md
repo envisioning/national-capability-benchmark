@@ -1,6 +1,8 @@
 # Capability agenda: Germany
 
-Generated 2026-08-27 from the current data run. Scores are relative to a frame fixed by the 10 reference countries and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read docs/KNOWN-ARTEFACTS.md before quoting any number on its own.
+*Generated 2026-08-27*
+
+Scores are relative to a frame fixed by the 10 reference countries and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
 
 ## Where Germany stands
 
@@ -26,6 +28,7 @@ How effectively can independent actors organize around shared objectives?
 
 - Currently scored on a single observed indicator.
 - Declared gaps in this dimension: University-industry collaboration, Civil society strength, Public-private collaboration.
+- Datasets examined and rejected for this dimension: Government effectiveness, Regulatory quality, Logistics performance.
 
 ### Experimentation: confidence 0.18, very thin
 
@@ -40,6 +43,7 @@ How much cooperation is possible beyond immediate personal networks?
 
 - Currently scored on 2 observed indicators.
 - Declared gaps in this dimension: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group.
+- Datasets examined and rejected for this dimension: Rule of law, Control of corruption.
 
 ### Shared Purpose: confidence 0.25, very thin
 
@@ -47,6 +51,17 @@ To what extent can people imagine themselves as participants in a common project
 
 - Currently scored on 2 observed indicators.
 - Declared gaps in this dimension: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
+- Datasets examined and rejected for this dimension: Voice and accountability.
+
+## The dimensions the evidence says to hold
+
+Strongest first. These score at or above 50 on usable evidence, so nothing here asks to be raised or measured first. A held dimension still decays when nobody watches it.
+
+- Adaptability: 85.8, confidence usable
+- Anticipation: 71.3, confidence usable
+- Learning: 64.5, confidence usable
+- Building: 61.7, confidence usable
+- Agency: 51.2, confidence usable
 
 ## The measurement agenda
 
@@ -80,6 +95,13 @@ To what extent can people imagine themselves as participants in a common project
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
+
+## What the indicators cannot see about Germany
+
+Documented deliveries filed as evidence records. They never enter a score and never raise confidence. They exist because the gap list above also describes things this country has partly done and cannot yet prove comparably.
+
+- **The Fraunhofer contract-research model** (Coordination). Germany funds the Fraunhofer-Gesellschaft's institutes in proportion to what they earn from industry, and in 2025 the society performed 3.2 billion euros of contract research, 966 million euros of it paid by industry.
+- **Kurzarbeit in the 2008-2009 crisis** (Adaptability). Germany answered the 2008-2009 collapse in manufacturing orders by paying firms to cut hours instead of jobs, and short-time work covered 1.44 million workers at the May 2009 peak, about 5 percent of insured employment, while unemployment barely rose.
 
 ## How to move a number on this page
 

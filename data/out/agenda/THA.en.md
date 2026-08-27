@@ -1,18 +1,20 @@
 # Capability agenda: Thailand
 
-Generated 2026-08-27 from the current data run. Scores are relative to a frame fixed by the 10 reference countries and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read docs/KNOWN-ARTEFACTS.md before quoting any number on its own.
+*Generated 2026-08-27*
+
+Scores are relative to a frame fixed by the 10 reference countries and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
 
 ## Where Thailand stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 22.3 | 0.64 (usable) | +14.2 over 10 years, on 5 indicators |
-| Agency | 59.4 | 0.61 (usable) | +33.5 over 10 years, on 4 indicators |
+| Anticipation | 22.3 | 0.64 (usable) | +14.2 over 10 years, on 5 indicators, 2 clamped at the frame edge |
+| Agency | 59.4 | 0.61 (usable) | +33.5 over 10 years, on 4 indicators, 2 clamped at the frame edge |
 | Coordination | 52.2 | 0.08 (very thin) | no trend basket |
 | Trust | 52.8 | 0.09 (very thin) | no trend basket |
 | Learning | 28.5 | 0.56 (usable) | -1.1 over 10 years, on 3 indicators |
-| Experimentation | 1.5 | 0.18 (very thin) | -0.4 over 10 years, on 2 indicators |
-| Adaptability | 63.7 | 0.47 (usable) | +2.8 over 10 years, on 4 indicators |
+| Experimentation | 1.5 | 0.18 (very thin) | -0.4 over 10 years, on 2 indicators, 1 clamped at the frame edge |
+| Adaptability | 63.7 | 0.47 (usable) | +2.8 over 10 years, on 4 indicators, 1 clamped at the frame edge |
 | Building | 46.4 | 0.54 (usable) | -1.9 over 10 years, on 4 indicators |
 | Shared Purpose | 58.1 | 0.27 (thin) | +3.5 over 10 years, on 2 indicators |
 
@@ -25,8 +27,8 @@ Lowest score first. Only dimensions with usable evidence appear here. A low scor
 How capable is the country of identifying and preparing for emerging change?
 
 - Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Sweden 83.4, Finland 83, Switzerland 81.1.
-- Documented deliveries elsewhere: Embrapa, a fifty-year bet on tropical agriculture (Brazil).
+- Highest scores with usable evidence: Finland 83, Switzerland 81.1, South Korea 79.3.
+- Documented deliveries elsewhere: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands).
 - Declared gaps in this dimension: Government foresight capacity, Long-horizon research share.
 
 ### Learning: 28.5, confidence usable
@@ -34,7 +36,8 @@ How capable is the country of identifying and preparing for emerging change?
 How effectively does the country acquire, distribute, and update knowledge?
 
 - Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Finland 92, United Kingdom 84.8, Australia 82.9.
+- Highest scores with usable evidence: United Kingdom 84.8, Netherlands 78, Switzerland 77.3.
+- Documented deliveries elsewhere: SkillsFuture Credit (Singapore); The public library system (Finland).
 - Declared gaps in this dimension: Adult learning participation, Research citation impact.
 
 ### Building: 46.4, confidence usable
@@ -42,9 +45,10 @@ How effectively does the country acquire, distribute, and update knowledge?
 How capable is the country of turning plans and knowledge into functioning systems?
 
 - Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Singapore 70.9, Ireland 69.2, South Korea 64.4.
-- Documented deliveries elsewhere: Pix instant payment system (Brazil); GOV.BR federal identity and service platform (Brazil); X-Road national data exchange layer (Estonia); Pradhan Mantri Jan Dhan Yojana bank accounts (India); Electricity supply rebuilt on renewable sources (Uruguay); Plan Ceibal, one connected laptop per child (Uruguay); Sistema Unico de Saude, universal public health system (Brazil); Programa Nacional de Imunizacoes, and its erosion (Brazil); Luz para Todos, rural electrification (Brazil); Bolsa Familia and the single registry behind it (Brazil); Fully electronic national elections (Brazil); Deepwater and pre-salt oil production (Brazil).
+- Highest scores with usable evidence: Singapore 70.9, South Korea 64.4, China 64.4.
+- Documented deliveries elsewhere: Pix instant payment system (Brazil); GOV.BR federal identity and service platform (Brazil); X-Road national data exchange layer (Estonia); Pradhan Mantri Jan Dhan Yojana bank accounts (India); Electricity supply rebuilt on renewable sources (Uruguay); Plan Ceibal, one connected laptop per child (Uruguay); Sistema Unico de Saude, universal public health system (Brazil); Programa Nacional de Imunizacoes, and its erosion (Brazil); Luz para Todos, rural electrification (Brazil); Bolsa Familia and the single registry behind it (Brazil); Fully electronic national elections (Brazil); Deepwater and pre-salt oil production (Brazil); Seguro Popular, and its abolition (Mexico); Sure Start children's centres, and their erosion (United Kingdom); Grid power, and load shedding (South Africa); Measles elimination, and its erosion (United States).
 - Declared gaps in this dimension: Large project delivery, Firm scale-up rate.
+- Datasets examined and rejected for this dimension: Logistics infrastructure quality.
 
 ## The dimensions that must be measured before they can be managed
 
@@ -56,6 +60,7 @@ How effectively can independent actors organize around shared objectives?
 
 - Currently scored on a single observed indicator.
 - Declared gaps in this dimension: University-industry collaboration, Civil society strength, Public-private collaboration.
+- Datasets examined and rejected for this dimension: Government effectiveness, Regulatory quality, Logistics performance.
 
 ### Trust: confidence 0.09, very thin
 
@@ -63,6 +68,7 @@ How much cooperation is possible beyond immediate personal networks?
 
 - Currently scored on 2 observed indicators.
 - Declared gaps in this dimension: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group.
+- Datasets examined and rejected for this dimension: Rule of law, Control of corruption.
 
 ### Experimentation: confidence 0.18, very thin
 
@@ -77,6 +83,14 @@ To what extent can people imagine themselves as participants in a common project
 
 - Currently scored on 2 observed indicators.
 - Declared gaps in this dimension: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
+- Datasets examined and rejected for this dimension: Voice and accountability.
+
+## The dimensions the evidence says to hold
+
+Strongest first. These score at or above 50 on usable evidence, so nothing here asks to be raised or measured first. A held dimension still decays when nobody watches it.
+
+- Adaptability: 63.7, confidence usable
+- Agency: 59.4, confidence usable
 
 ## The measurement agenda
 

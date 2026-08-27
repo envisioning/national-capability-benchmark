@@ -1,13 +1,15 @@
 # Agenda de capacidades: Malásia
 
-Gerado em 2026-08-27 a partir da rodada de dados atual. As notas são relativas a uma régua fixada pelos 10 países de referência e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia docs/KNOWN-ARTEFACTS.md antes de citar qualquer número isoladamente.
+*Gerado em 2026-08-27*
+
+As notas são relativas a uma régua fixada pelos 10 países de referência e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
 
 ## Onde a Malásia está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 28,8 | 0,62 (utilizável) | +16,4 em 10 anos, sobre 5 indicadores |
-| Agência | 47,9 | 0,61 (utilizável) | +27,2 em 10 anos, sobre 4 indicadores |
+| Antecipação | 28,8 | 0,62 (utilizável) | +16,4 em 10 anos, sobre 5 indicadores, 2 truncados na borda da régua |
+| Agência | 47,9 | 0,61 (utilizável) | +27,2 em 10 anos, sobre 4 indicadores, 2 truncados na borda da régua |
 | Coordenação | 69,6 | 0,08 (muito fraca) | sem base de tendência |
 | Confiança | 67,1 | 0,2 (muito fraca) | sem base de tendência |
 | Aprendizagem | 31,5 | 0,56 (utilizável) | -6,3 em 10 anos, sobre 3 indicadores |
@@ -25,8 +27,8 @@ Da nota mais baixa para a mais alta. Só entram aqui dimensões com evidência u
 Quão capaz é o país de identificar mudanças emergentes e se preparar para elas?
 
 - Hoje a nota se apoia em 5 indicadores observados.
-- Maiores notas com evidência utilizável: Suécia 83,4, Finlândia 83, Suíça 81,1.
-- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil).
+- Maiores notas com evidência utilizável: Finlândia 83, Suíça 81,1, Coreia do Sul 79,3.
+- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos).
 - Lacunas declaradas nesta dimensão: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
 ### Aprendizagem: 31,5, confiança utilizável
@@ -34,7 +36,8 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Hoje a nota se apoia em 5 indicadores observados.
-- Maiores notas com evidência utilizável: Finlândia 92, Reino Unido 84,8, Austrália 82,9.
+- Maiores notas com evidência utilizável: Reino Unido 84,8, Países Baixos 78, Suíça 77,3.
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia).
 - Lacunas declaradas nesta dimensão: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ### Agência: 47,9, confiança utilizável
@@ -55,6 +58,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 - Hoje a nota se apoia em um único indicador observado.
 - Lacunas declaradas nesta dimensão: Colaboração universidade-empresa, Força da sociedade civil, Colaboração público-privada.
+- Bases de dados examinadas e rejeitadas para esta dimensão: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
 ### Experimentação: confiança 0,18, muito fraca
 
@@ -69,6 +73,7 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 
 - Hoje a nota se apoia em 2 indicadores observados.
 - Lacunas declaradas nesta dimensão: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo.
+- Bases de dados examinadas e rejeitadas para esta dimensão: Estado de direito, Controle da corrupção.
 
 ### Propósito compartilhado: confiança 0,24, muito fraca
 
@@ -76,6 +81,14 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 
 - Hoje a nota se apoia em 2 indicadores observados.
 - Lacunas declaradas nesta dimensão: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
+- Bases de dados examinadas e rejeitadas para esta dimensão: Voz e responsabilização.
+
+## As dimensões que a evidência manda manter
+
+Da nota mais alta para a mais baixa. Estas dimensões pontuam 50 ou mais com evidência utilizável, então nada aqui pede elevação ou medição primeiro. Uma dimensão mantida ainda decai quando ninguém a observa.
+
+- Construção: 59,3, confiança utilizável
+- Adaptação: 56,8, confiança utilizável
 
 ## A agenda de medição
 

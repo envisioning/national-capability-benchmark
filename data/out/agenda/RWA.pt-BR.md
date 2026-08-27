@@ -1,19 +1,21 @@
 # Agenda de capacidades: Ruanda
 
-Gerado em 2026-08-27 a partir da rodada de dados atual. As notas são relativas a uma régua fixada pelos 10 países de referência e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia docs/KNOWN-ARTEFACTS.md antes de citar qualquer número isoladamente.
+*Gerado em 2026-08-27*
+
+As notas são relativas a uma régua fixada pelos 10 países de referência e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
 
 ## Onde Ruanda está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 1,7 | 0,64 (utilizável) | +0,6 em 10 anos, sobre 5 indicadores |
-| Agência | 28 | 0,54 (utilizável) | +1,5 em 10 anos, sobre 3 indicadores |
+| Antecipação | 1,7 | 0,64 (utilizável) | +0,6 em 10 anos, sobre 5 indicadores, 4 truncados na borda da régua |
+| Agência | 28 | 0,54 (utilizável) | +1,5 em 10 anos, sobre 3 indicadores, 2 truncados na borda da régua |
 | Coordenação | 9,4 | 0,08 (muito fraca) | sem base de tendência |
 | Confiança | 65,6 | 0,17 (muito fraca) | sem base de tendência |
-| Aprendizagem | 25,6 | 0,56 (utilizável) | -2,8 em 10 anos, sobre 3 indicadores |
-| Experimentação | 0 | 0,18 (muito fraca) | 0 em 10 anos, sobre 2 indicadores |
-| Adaptação | 20,9 | 0,47 (utilizável) | +6,7 em 10 anos, sobre 4 indicadores |
-| Construção | 17,8 | 0,52 (utilizável) | -3,6 em 10 anos, sobre 4 indicadores |
+| Aprendizagem | 25,6 | 0,56 (utilizável) | -2,8 em 10 anos, sobre 3 indicadores, 1 truncados na borda da régua |
+| Experimentação | 0 | 0,18 (muito fraca) | 0 em 10 anos, sobre 2 indicadores, 2 truncados na borda da régua |
+| Adaptação | 20,9 | 0,47 (utilizável) | +6,7 em 10 anos, sobre 4 indicadores, 2 truncados na borda da régua |
+| Construção | 17,8 | 0,52 (utilizável) | -3,6 em 10 anos, sobre 4 indicadores, 4 truncados na borda da régua |
 | Propósito compartilhado | 41,9 | 0,25 (muito fraca) | +3,5 em 10 anos, sobre 2 indicadores |
 
 ## As dimensões que a evidência manda elevar
@@ -25,8 +27,8 @@ Da nota mais baixa para a mais alta. Só entram aqui dimensões com evidência u
 Quão capaz é o país de identificar mudanças emergentes e se preparar para elas?
 
 - Hoje a nota se apoia em 5 indicadores observados.
-- Maiores notas com evidência utilizável: Suécia 83,4, Finlândia 83, Suíça 81,1.
-- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil).
+- Maiores notas com evidência utilizável: Finlândia 83, Suíça 81,1, Coreia do Sul 79,3.
+- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos).
 - Lacunas declaradas nesta dimensão: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
 ### Construção: 17,8, confiança utilizável
@@ -34,17 +36,18 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 Quão capaz é o país de transformar planos e conhecimento em sistemas que funcionam?
 
 - Hoje a nota se apoia em 5 indicadores observados.
-- Maiores notas com evidência utilizável: Singapura 70,9, Irlanda 69,2, Coreia do Sul 64,4.
-- Entregas documentadas em outros países: Pix instant payment system (Brasil); GOV.BR federal identity and service platform (Brasil); X-Road national data exchange layer (Estônia); Pradhan Mantri Jan Dhan Yojana bank accounts (Índia); Electricity supply rebuilt on renewable sources (Uruguai); Plan Ceibal, one connected laptop per child (Uruguai); Sistema Unico de Saude, universal public health system (Brasil); Programa Nacional de Imunizacoes, and its erosion (Brasil); Luz para Todos, rural electrification (Brasil); Bolsa Familia and the single registry behind it (Brasil); Fully electronic national elections (Brasil); Deepwater and pre-salt oil production (Brasil).
+- Maiores notas com evidência utilizável: Singapura 70,9, Coreia do Sul 64,4, China 64,4.
+- Entregas documentadas em outros países: Pix instant payment system (Brasil); GOV.BR federal identity and service platform (Brasil); X-Road national data exchange layer (Estônia); Pradhan Mantri Jan Dhan Yojana bank accounts (Índia); Electricity supply rebuilt on renewable sources (Uruguai); Plan Ceibal, one connected laptop per child (Uruguai); Sistema Unico de Saude, universal public health system (Brasil); Programa Nacional de Imunizacoes, and its erosion (Brasil); Luz para Todos, rural electrification (Brasil); Bolsa Familia and the single registry behind it (Brasil); Fully electronic national elections (Brasil); Deepwater and pre-salt oil production (Brasil); Seguro Popular, and its abolition (México); Sure Start children's centres, and their erosion (Reino Unido); Grid power, and load shedding (África do Sul); Measles elimination, and its erosion (Estados Unidos).
 - Lacunas declaradas nesta dimensão: Entrega de grandes projetos, Empresas jovens que ganham escala.
+- Bases de dados examinadas e rejeitadas para esta dimensão: Qualidade da infraestrutura logística.
 
 ### Adaptação: 20,9, confiança utilizável
 
 Com que eficácia o sistema responde quando as circunstâncias mudam?
 
 - Hoje a nota se apoia em 4 indicadores observados.
-- Maiores notas com evidência utilizável: Países Baixos 91, Suíça 88,8, Japão 85,9.
-- Entregas documentadas em outros países: Plano Real, the 1994 currency stabilisation (Brasil); Proalcool, the fuel substitution after the oil shock (Brasil).
+- Maiores notas com evidência utilizável: Países Baixos 91, Suíça 88,8, Alemanha 85,8.
+- Entregas documentadas em outros países: Plano Real, the 1994 currency stabilisation (Brasil); Proalcool, the fuel substitution after the oil shock (Brasil); The Convertibility Plan, and its collapse (Argentina); Kurzarbeit in the 2008-2009 crisis (Alemanha); The 2001 stabilisation, and its unwinding (Turquia).
 - Lacunas declaradas nesta dimensão: Parcela de desemprego de longa duração, Diversificação das exportações, Preparação e recuperação de desastres, Capacidade de resposta institucional.
 
 ### Aprendizagem: 25,6, confiança utilizável
@@ -52,7 +55,8 @@ Com que eficácia o sistema responde quando as circunstâncias mudam?
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Hoje a nota se apoia em 5 indicadores observados.
-- Maiores notas com evidência utilizável: Finlândia 92, Reino Unido 84,8, Austrália 82,9.
+- Maiores notas com evidência utilizável: Reino Unido 84,8, Países Baixos 78, Suíça 77,3.
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia).
 - Lacunas declaradas nesta dimensão: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ### Agência: 28, confiança utilizável
@@ -73,6 +77,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 - Hoje a nota se apoia em um único indicador observado.
 - Lacunas declaradas nesta dimensão: Colaboração universidade-empresa, Força da sociedade civil, Colaboração público-privada.
+- Bases de dados examinadas e rejeitadas para esta dimensão: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
 ### Confiança: confiança 0,17, muito fraca
 
@@ -80,6 +85,7 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 
 - Hoje a nota se apoia em 2 indicadores observados.
 - Lacunas declaradas nesta dimensão: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo.
+- Bases de dados examinadas e rejeitadas para esta dimensão: Estado de direito, Controle da corrupção.
 
 ### Experimentação: confiança 0,18, muito fraca
 
@@ -94,6 +100,7 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 
 - Hoje a nota se apoia em 2 indicadores observados.
 - Lacunas declaradas nesta dimensão: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
+- Bases de dados examinadas e rejeitadas para esta dimensão: Voz e responsabilização.
 
 ## A agenda de medição
 
@@ -127,6 +134,12 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 | Propósito compartilhado | Participação cívica | Participação ativa em associações, sindicatos, partidos e organizações comunitárias. |
+
+## O que os indicadores não conseguem ver sobre Ruanda
+
+Entregas documentadas, arquivadas como registros de evidência. Elas nunca entram em uma nota e nunca elevam a confiança. Existem porque a lista de lacunas acima também descreve coisas que este país já fez em parte e ainda não consegue provar de forma comparável.
+
+- **Umuganda community work** (Propósito compartilhado). Rwanda requires a morning of community work on the last Saturday of each month, and the government's own assessment reports average participation of 91.3 percent of adults countrywide in fiscal year 2015-2016, up from 87.8 percent two years earlier.
 
 ## Como mover um número desta página
 

@@ -1,18 +1,20 @@
 # Agenda de capacidades: França
 
-Gerado em 2026-08-27 a partir da rodada de dados atual. As notas são relativas a uma régua fixada pelos 10 países de referência e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia docs/KNOWN-ARTEFACTS.md antes de citar qualquer número isoladamente.
+*Gerado em 2026-08-27*
+
+As notas são relativas a uma régua fixada pelos 10 países de referência e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
 
 ## Onde a França está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 56,7 | 0,64 (utilizável) | +12,9 em 10 anos, sobre 5 indicadores |
-| Agência | 65,2 | 0,61 (utilizável) | +15,6 em 10 anos, sobre 4 indicadores |
+| Agência | 65,2 | 0,61 (utilizável) | +15,6 em 10 anos, sobre 4 indicadores, 1 truncados na borda da régua |
 | Coordenação | 100 | 0,08 (muito fraca) | sem base de tendência |
 | Confiança | 61,2 | 0,2 (muito fraca) | sem base de tendência |
 | Aprendizagem | 70,1 | 0,54 (utilizável) | sem base de tendência |
 | Experimentação | 45,1 | 0,18 (muito fraca) | +3,4 em 10 anos, sobre 2 indicadores |
-| Adaptação | 73,7 | 0,48 (utilizável) | +9,4 em 10 anos, sobre 4 indicadores |
+| Adaptação | 73,7 | 0,48 (utilizável) | +9,4 em 10 anos, sobre 4 indicadores, 1 truncados na borda da régua |
 | Construção | 41,5 | 0,54 (utilizável) | -4,9 em 10 anos, sobre 4 indicadores |
 | Propósito compartilhado | 80,8 | 0,26 (fraca) | -0,8 em 10 anos, sobre 2 indicadores |
 
@@ -25,9 +27,10 @@ Da nota mais baixa para a mais alta. Só entram aqui dimensões com evidência u
 Quão capaz é o país de transformar planos e conhecimento em sistemas que funcionam?
 
 - Hoje a nota se apoia em 5 indicadores observados.
-- Maiores notas com evidência utilizável: Singapura 70,9, Irlanda 69,2, Coreia do Sul 64,4.
-- Entregas documentadas em outros países: Pix instant payment system (Brasil); GOV.BR federal identity and service platform (Brasil); X-Road national data exchange layer (Estônia); Pradhan Mantri Jan Dhan Yojana bank accounts (Índia); Electricity supply rebuilt on renewable sources (Uruguai); Plan Ceibal, one connected laptop per child (Uruguai); Sistema Unico de Saude, universal public health system (Brasil); Programa Nacional de Imunizacoes, and its erosion (Brasil); Luz para Todos, rural electrification (Brasil); Bolsa Familia and the single registry behind it (Brasil); Fully electronic national elections (Brasil); Deepwater and pre-salt oil production (Brasil).
+- Maiores notas com evidência utilizável: Singapura 70,9, Coreia do Sul 64,4, China 64,4.
+- Entregas documentadas em outros países: Pix instant payment system (Brasil); GOV.BR federal identity and service platform (Brasil); X-Road national data exchange layer (Estônia); Pradhan Mantri Jan Dhan Yojana bank accounts (Índia); Electricity supply rebuilt on renewable sources (Uruguai); Plan Ceibal, one connected laptop per child (Uruguai); Sistema Unico de Saude, universal public health system (Brasil); Programa Nacional de Imunizacoes, and its erosion (Brasil); Luz para Todos, rural electrification (Brasil); Bolsa Familia and the single registry behind it (Brasil); Fully electronic national elections (Brasil); Deepwater and pre-salt oil production (Brasil); Seguro Popular, and its abolition (México); Sure Start children's centres, and their erosion (Reino Unido); Grid power, and load shedding (África do Sul); Measles elimination, and its erosion (Estados Unidos).
 - Lacunas declaradas nesta dimensão: Entrega de grandes projetos, Empresas jovens que ganham escala.
+- Bases de dados examinadas e rejeitadas para esta dimensão: Qualidade da infraestrutura logística.
 
 ## As dimensões que precisam ser medidas antes de serem geridas
 
@@ -39,6 +42,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 - Hoje a nota se apoia em um único indicador observado.
 - Lacunas declaradas nesta dimensão: Colaboração universidade-empresa, Força da sociedade civil, Colaboração público-privada.
+- Bases de dados examinadas e rejeitadas para esta dimensão: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
 ### Experimentação: confiança 0,18, muito fraca
 
@@ -53,6 +57,7 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 
 - Hoje a nota se apoia em 2 indicadores observados.
 - Lacunas declaradas nesta dimensão: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo.
+- Bases de dados examinadas e rejeitadas para esta dimensão: Estado de direito, Controle da corrupção.
 
 ### Propósito compartilhado: confiança 0,26, fraca
 
@@ -60,6 +65,16 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 
 - Hoje a nota se apoia em 2 indicadores observados.
 - Lacunas declaradas nesta dimensão: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
+- Bases de dados examinadas e rejeitadas para esta dimensão: Voz e responsabilização.
+
+## As dimensões que a evidência manda manter
+
+Da nota mais alta para a mais baixa. Estas dimensões pontuam 50 ou mais com evidência utilizável, então nada aqui pede elevação ou medição primeiro. Uma dimensão mantida ainda decai quando ninguém a observa.
+
+- Adaptação: 73,7, confiança utilizável
+- Aprendizagem: 70,1, confiança utilizável
+- Agência: 65,2, confiança utilizável
+- Antecipação: 56,7, confiança utilizável
 
 ## A agenda de medição
 

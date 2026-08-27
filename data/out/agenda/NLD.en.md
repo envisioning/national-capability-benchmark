@@ -1,13 +1,15 @@
 # Capability agenda: Netherlands
 
-Generated 2026-08-27 from the current data run. Scores are relative to a frame fixed by the 10 reference countries and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read docs/KNOWN-ARTEFACTS.md before quoting any number on its own.
+*Generated 2026-08-27*
+
+Scores are relative to a frame fixed by the 10 reference countries and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
 
 ## Where Netherlands stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 68.3 | 0.64 (usable) | +23.9 over 10 years, on 5 indicators |
-| Agency | 67.5 | 0.59 (usable) | +1.6 over 10 years, on 4 indicators |
+| Agency | 67.5 | 0.59 (usable) | +1.6 over 10 years, on 4 indicators, 1 clamped at the frame edge |
 | Coordination | 100 | 0.08 (very thin) | no trend basket |
 | Trust | 62.6 | 0.2 (very thin) | no trend basket |
 | Learning | 78 | 0.53 (usable) | 0 over 10 years, on 2 indicators |
@@ -25,9 +27,10 @@ Lowest score first. Only dimensions with usable evidence appear here. A low scor
 How capable is the country of turning plans and knowledge into functioning systems?
 
 - Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Singapore 70.9, Ireland 69.2, South Korea 64.4.
-- Documented deliveries elsewhere: Pix instant payment system (Brazil); GOV.BR federal identity and service platform (Brazil); X-Road national data exchange layer (Estonia); Pradhan Mantri Jan Dhan Yojana bank accounts (India); Electricity supply rebuilt on renewable sources (Uruguay); Plan Ceibal, one connected laptop per child (Uruguay); Sistema Unico de Saude, universal public health system (Brazil); Programa Nacional de Imunizacoes, and its erosion (Brazil); Luz para Todos, rural electrification (Brazil); Bolsa Familia and the single registry behind it (Brazil); Fully electronic national elections (Brazil); Deepwater and pre-salt oil production (Brazil).
+- Highest scores with usable evidence: Singapore 70.9, South Korea 64.4, China 64.4.
+- Documented deliveries elsewhere: Pix instant payment system (Brazil); GOV.BR federal identity and service platform (Brazil); X-Road national data exchange layer (Estonia); Pradhan Mantri Jan Dhan Yojana bank accounts (India); Electricity supply rebuilt on renewable sources (Uruguay); Plan Ceibal, one connected laptop per child (Uruguay); Sistema Unico de Saude, universal public health system (Brazil); Programa Nacional de Imunizacoes, and its erosion (Brazil); Luz para Todos, rural electrification (Brazil); Bolsa Familia and the single registry behind it (Brazil); Fully electronic national elections (Brazil); Deepwater and pre-salt oil production (Brazil); Seguro Popular, and its abolition (Mexico); Sure Start children's centres, and their erosion (United Kingdom); Grid power, and load shedding (South Africa); Measles elimination, and its erosion (United States).
 - Declared gaps in this dimension: Large project delivery, Firm scale-up rate.
+- Datasets examined and rejected for this dimension: Logistics infrastructure quality.
 
 ## The dimensions that must be measured before they can be managed
 
@@ -39,6 +42,7 @@ How effectively can independent actors organize around shared objectives?
 
 - Currently scored on a single observed indicator.
 - Declared gaps in this dimension: University-industry collaboration, Civil society strength, Public-private collaboration.
+- Datasets examined and rejected for this dimension: Government effectiveness, Regulatory quality, Logistics performance.
 
 ### Trust: confidence 0.2, very thin
 
@@ -46,6 +50,7 @@ How much cooperation is possible beyond immediate personal networks?
 
 - Currently scored on 2 observed indicators.
 - Declared gaps in this dimension: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group.
+- Datasets examined and rejected for this dimension: Rule of law, Control of corruption.
 
 ### Shared Purpose: confidence 0.24, very thin
 
@@ -53,6 +58,7 @@ To what extent can people imagine themselves as participants in a common project
 
 - Currently scored on 2 observed indicators.
 - Declared gaps in this dimension: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
+- Datasets examined and rejected for this dimension: Voice and accountability.
 
 ### Experimentation: confidence 0.3, thin
 
@@ -60,6 +66,15 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 
 - Currently scored on 3 observed indicators.
 - Declared gaps in this dimension: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
+
+## The dimensions the evidence says to hold
+
+Strongest first. These score at or above 50 on usable evidence, so nothing here asks to be raised or measured first. A held dimension still decays when nobody watches it.
+
+- Adaptability: 91, confidence usable
+- Learning: 78, confidence usable
+- Anticipation: 68.3, confidence usable
+- Agency: 67.5, confidence usable
 
 ## The measurement agenda
 
@@ -93,6 +108,12 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
+
+## What the indicators cannot see about Netherlands
+
+Documented deliveries filed as evidence records. They never enter a score and never raise confidence. They exist because the gap list above also describes things this country has partly done and cannot yet prove comparably.
+
+- **The Delta Programme and its fund** (Anticipation). The Netherlands legislated a standing programme against flooding and fresh-water shortage, run by an independent Delta Commissioner and paid from a dedicated Delta Fund that expects 27.4 billion euros to be available through 2050.
 
 ## How to move a number on this page
 

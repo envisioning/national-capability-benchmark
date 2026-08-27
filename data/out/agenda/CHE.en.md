@@ -1,12 +1,14 @@
 # Capability agenda: Switzerland
 
-Generated 2026-08-27 from the current data run. Scores are relative to a frame fixed by the 10 reference countries and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read docs/KNOWN-ARTEFACTS.md before quoting any number on its own.
+*Generated 2026-08-27*
+
+Scores are relative to a frame fixed by the 10 reference countries and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
 
 ## Where Switzerland stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 81.1 | 0.64 (usable) | +16.2 over 10 years, on 5 indicators |
+| Anticipation | 81.1 | 0.64 (usable) | +16.2 over 10 years, on 5 indicators, 1 clamped at the frame edge |
 | Agency | 69.2 | 0.51 (usable) | +9.1 over 10 years, on 3 indicators |
 | Coordination | 98.9 | 0.08 (very thin) | no trend basket |
 | Trust | 59 | 0.2 (very thin) | no trend basket |
@@ -26,6 +28,7 @@ How effectively can independent actors organize around shared objectives?
 
 - Currently scored on a single observed indicator.
 - Declared gaps in this dimension: University-industry collaboration, Civil society strength, Public-private collaboration.
+- Datasets examined and rejected for this dimension: Government effectiveness, Regulatory quality, Logistics performance.
 
 ### Trust: confidence 0.2, very thin
 
@@ -33,6 +36,7 @@ How much cooperation is possible beyond immediate personal networks?
 
 - Currently scored on 2 observed indicators.
 - Declared gaps in this dimension: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group.
+- Datasets examined and rejected for this dimension: Rule of law, Control of corruption.
 
 ### Shared Purpose: confidence 0.25, very thin
 
@@ -40,6 +44,7 @@ To what extent can people imagine themselves as participants in a common project
 
 - Currently scored on 2 observed indicators.
 - Declared gaps in this dimension: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
+- Datasets examined and rejected for this dimension: Voice and accountability.
 
 ### Experimentation: confidence 0.39, thin
 
@@ -47,6 +52,16 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 
 - Currently scored on 4 observed indicators.
 - Declared gaps in this dimension: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
+
+## The dimensions the evidence says to hold
+
+Strongest first. These score at or above 50 on usable evidence, so nothing here asks to be raised or measured first. A held dimension still decays when nobody watches it.
+
+- Adaptability: 88.8, confidence usable
+- Anticipation: 81.1, confidence usable
+- Learning: 77.3, confidence usable
+- Agency: 69.2, confidence usable
+- Building: 54.4, confidence usable
 
 ## The measurement agenda
 
@@ -80,6 +95,12 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
+
+## What the indicators cannot see about Switzerland
+
+Documented deliveries filed as evidence records. They never enter a score and never raise confidence. They exist because the gap list above also describes things this country has partly done and cannot yet prove comparably.
+
+- **Dual-track vocational training** (Coordination). Switzerland runs most upper-secondary education through firms: of 218,259 students enrolled in vocational education and training in 2020, 90.6 percent, 197,782, were apprentices trained inside companies under federal law.
 
 ## How to move a number on this page
 
