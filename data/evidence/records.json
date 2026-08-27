@@ -462,6 +462,315 @@
           "Capital markets willing to fund very long payback"
         ]
       }
+    },
+    {
+      "id": "arg-convertibility",
+      "indicatorId": "institutional_responsiveness",
+      "iso3": "ARG",
+      "title": "The Convertibility Plan, and its collapse",
+      "claim": "Argentina ended hyperinflation by fixing the peso to the dollar by law in April 1991, taking annual inflation from 4,923 percent in 1989 to 3.9 percent in 1994, and the regime held until it collapsed in the 2001-2002 crisis.",
+      "metric": {
+        "name": "Consumer price inflation under convertibility",
+        "value": 3.9,
+        "unit": "% per year",
+        "asOf": "1994"
+      },
+      "secondMetric": {
+        "name": "Consumer price inflation at the hyperinflationary peak",
+        "value": 4923.3,
+        "unit": "% per year",
+        "asOf": "1989"
+      },
+      "started": 1991,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Secretaria de Programacion Economica and BCRA, republished by Reed College Department of Economics",
+        "url": "https://www.reed.edu/economics/parker/f10/201/cases/Argentina.html",
+        "tier": "academic_survey",
+        "retrievedAt": "2026-08-27"
+      },
+      "limits": "The IMF and World Bank series for Argentina do not reach these years, so the numbers come from a teaching case that republishes the official table, and the 1989 figure is a December-to-December change where other publications give 3,079 percent as the annual average. Ending inflation is what the indicator asks for, but the fixed parity that delivered the stabilisation also removed the tools that could have absorbed the shocks of 1999-2001, so the case evidences a response that consumed its own durability. The collapse later cost Argentina its statistical credibility too, which is why the official series is hard to cite today.",
+      "pattern": {
+        "mechanism": "Congress fixed the exchange rate one-to-one to the dollar by statute and barred the central bank from printing unbacked pesos, which converted a monetary promise nobody believed into a law that was costly to break.",
+        "preconditions": [
+          "Dollar reserves large enough to back the monetary base",
+          "A legislature willing to bind itself and its successors",
+          "Prices and contracts already partly dollarised, so the anchor was credible on day one"
+        ],
+        "travelled": "Currency boards were copied widely in the 1990s, from Estonia to Bulgaria, and they worked as stabilisers. Argentina is the case every copy now studies for the exit problem: the law had no honest way out."
+      }
+    },
+    {
+      "id": "mex-seguro-popular",
+      "indicatorId": "large_project_delivery",
+      "iso3": "MEX",
+      "title": "Seguro Popular, and its abolition",
+      "claim": "Mexico built public health insurance for people outside social security from 2003 and abolished it in 2020, and CONEVAL measured the share of the population without access to health services rising from 16.2 percent in 2018 to 39.1 percent in 2022.",
+      "metric": {
+        "name": "Population lacking access to health services after abolition",
+        "value": 39.1,
+        "unit": "% of population",
+        "asOf": "2022"
+      },
+      "secondMetric": {
+        "name": "Population lacking access to health services before abolition",
+        "value": 16.2,
+        "unit": "% of population",
+        "asOf": "2018"
+      },
+      "started": 2003,
+      "status": "dismantled",
+      "source": {
+        "publisher": "CONEVAL, comunicado no. 7, medicion multidimensional de la pobreza 2022",
+        "url": "https://www.coneval.org.mx/SalaPrensa/Comunicadosprensa/Documents/2023/Comunicado_07_Medicion_Pobreza_2022.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-27"
+      },
+      "limits": "The metric measures the dismantling, not the programme: CONEVAL's deprivation number is self-reported affiliation, not care received, and Seguro Popular at its peak was itself criticised for shallow coverage and uneven state-level spending. The 2018-2022 change spans the pandemic, which stressed every health system, so not all of the 23-point rise is the reform. CONEVAL itself lost autonomy in a later reorganisation, so the continuity of this series is not assured.",
+      "pattern": {
+        "mechanism": "The abolition is the mechanism recorded here: a new government replaced a funded, enrolment-based entitlement with a budget-line service that required no affiliation, and affiliation-based coverage disappeared faster than the replacement could deliver care.",
+        "preconditions": [
+          "A programme identified with the previous political coalition, which made it removable",
+          "Centralised budget authority able to redirect earmarked health funds",
+          "No statutory or constitutional floor under the entitlement"
+        ],
+        "travelled": "The replacement, INSABI, was itself dissolved in 2023 and replaced by IMSS-Bienestar, the second replacement in four years. The case travels as a warning: an entitlement without a legal floor is one election from removal."
+      }
+    },
+    {
+      "id": "gbr-sure-start",
+      "indicatorId": "large_project_delivery",
+      "iso3": "GBR",
+      "title": "Sure Start children's centres, and their erosion",
+      "claim": "England built a national network of early-childhood centres reaching 3,632 sites by August 2009, then closed or hollowed out a large part of it after funding was cut, with the official count at 3,123 by October 2017 and independent estimates near 1,000 closures.",
+      "metric": {
+        "name": "Children's centres open, official count",
+        "value": 3123,
+        "unit": "centres",
+        "asOf": "2017-10"
+      },
+      "secondMetric": {
+        "name": "Children's centres open at the peak",
+        "value": 3632,
+        "unit": "centres",
+        "asOf": "2009-08"
+      },
+      "started": 1998,
+      "status": "eroded",
+      "source": {
+        "publisher": "The Sutton Trust, Stop Start report summary",
+        "url": "https://www.suttontrust.com/news-opinion/all-news-opinion/1000-childrens-centres-closed-since-2009/",
+        "tier": "academic_survey",
+        "retrievedAt": "2026-08-27"
+      },
+      "limits": "A site count is the crudest measure of the service: many surviving centres kept the building and lost the staff, which is why the Sutton Trust's estimate of real closures is roughly double the official fall shown here. The count stops in 2017 and later parliamentary answers show further decline. The record shows the erosion of delivered infrastructure under budget cuts, not the effect on children; the IFS separately measured lasting health benefits from the programme at its peak, which is what makes the erosion a loss rather than housekeeping.",
+      "pattern": {
+        "mechanism": "Central government funded local one-stop centres for under-fives, ring-fenced the money, and targeted the most deprived areas first; when the ring-fence was removed in 2010, local authorities under cuts converted, merged or closed centres faster than any national decision was ever taken.",
+        "preconditions": [
+          "Local authorities able to deliver a nationally specified service",
+          "A ring-fenced grant, whose removal was also what let the network erode",
+          "Cross-departmental agreement that early childhood was infrastructure"
+        ],
+        "travelled": "The 2025 Best Start family hubs programme is the same state rebuilding a version of what it closed, fifteen years later, which is the strongest available evidence that the erosion was a loss."
+      }
+    },
+    {
+      "id": "gbr-fca-sandbox",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "GBR",
+      "title": "The FCA regulatory sandbox",
+      "claim": "The United Kingdom's financial regulator built the first regulatory sandbox in 2016, and by the end of 2022 had accepted 168 firms and products to test with real customers under supervision.",
+      "metric": {
+        "name": "Firms and products accepted for testing since launch",
+        "value": 168,
+        "unit": "firms",
+        "asOf": "2022"
+      },
+      "started": 2016,
+      "status": "operating",
+      "source": {
+        "publisher": "Financial Conduct Authority, Innovation Hub market insights",
+        "url": "https://www.fca.org.uk/data/innovation-market-insights",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-27"
+      },
+      "limits": "The count is the regulator reporting on its own programme, and acceptance is not success: the FCA does not publish how many tests led to authorisation, funding or a product that survived. One hundred and sixty-eight firms over seven years is small next to the sector, so the number evidences that the mechanism runs, not that it moves the industry.",
+      "pattern": {
+        "mechanism": "The regulator wrote a bounded testing regime: a firm without full authorisation can trial a product on real customers for a fixed period, with disclosure requirements and an exit plan, while the regulator watches from inside.",
+        "preconditions": [
+          "A single conduct regulator with statutory room to waive its own rules",
+          "A fintech sector dense enough to fill cohorts",
+          "Political cover for a regulator explicitly helping firms it will later police"
+        ],
+        "travelled": "The sandbox is Britain's most copied regulatory export, and several dozen jurisdictions now run one. Most copies keep the name and drop the supervisory intensity that makes it work."
+      }
+    },
+    {
+      "id": "deu-fraunhofer",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "DEU",
+      "title": "The Fraunhofer contract-research model",
+      "claim": "Germany funds the Fraunhofer-Gesellschaft's institutes in proportion to what they earn from industry, and in 2025 the society performed 3.2 billion euros of contract research, 966 million euros of it paid by industry.",
+      "metric": {
+        "name": "Industrial revenue",
+        "value": 966000000,
+        "unit": "euros",
+        "asOf": "2025"
+      },
+      "secondMetric": {
+        "name": "Contract research volume",
+        "value": 3200000000,
+        "unit": "euros",
+        "asOf": "2025"
+      },
+      "started": 1973,
+      "status": "operating",
+      "source": {
+        "publisher": "Fraunhofer-Gesellschaft, facts and figures",
+        "url": "https://www.fraunhofer.de/en/about-fraunhofer/profile-structure/facts-and-figures/finances.html",
+        "tier": "academic_survey",
+        "retrievedAt": "2026-08-27"
+      },
+      "limits": "The figures are the society's own. Revenue measures demand for applied research, not whether knowledge moves between universities and firms, which is what the indicator asks about, and Fraunhofer sits beside the university system rather than inside it, so a reader can argue the model routes around university-industry collaboration as much as it evidences it. Roughly two-thirds of the budget is still public money.",
+      "pattern": {
+        "mechanism": "The state pays each institute a base grant that grows with the industrial income it wins, so every institute director is structurally forced to sell applied research to firms while the public base keeps the science honest.",
+        "preconditions": [
+          "An industrial base, especially the Mittelstand, that buys research it cannot do in-house",
+          "A funding rule stable across decades, since the incentive works only if institutes believe it",
+          "Careers competitive enough to keep researchers who could leave for industry"
+        ],
+        "travelled": "Carnot in France and Catapult in the United Kingdom are explicit copies. Most copies struggle to replicate the base-grant-follows-industry-income rule, which is the part that does the work."
+      }
+    },
+    {
+      "id": "deu-kurzarbeit",
+      "indicatorId": "institutional_responsiveness",
+      "iso3": "DEU",
+      "title": "Kurzarbeit in the 2008-2009 crisis",
+      "claim": "Germany answered the 2008-2009 collapse in manufacturing orders by paying firms to cut hours instead of jobs, and short-time work covered 1.44 million workers at the May 2009 peak, about 5 percent of insured employment, while unemployment barely rose.",
+      "metric": {
+        "name": "Workers in cyclical short-time work at the peak",
+        "value": 1440000,
+        "unit": "workers",
+        "asOf": "2009-05"
+      },
+      "started": 2008,
+      "status": "concluded",
+      "source": {
+        "publisher": "IAB, the research institute of the Bundesagentur fuer Arbeit, IAB-Kurzbericht 17/2020, citing Statistik der BA",
+        "url": "https://doku.iab.de/kurzber/2020/kb1720.pdf",
+        "tier": "academic_survey",
+        "retrievedAt": "2026-08-27"
+      },
+      "limits": "The count says how many workers were covered, not what the scheme cost, how much of the covered work would have survived anyway, or whether it slowed reallocation to better firms, which are the standard criticisms. The instrument long predates 2008; what the episode evidences is the speed at which an existing legal instrument was expanded inside one year. The same instrument covered over six million people in 2020, so the 2009 number is not its ceiling.",
+      "pattern": {
+        "mechanism": "The employment agency reimburses firms most of the net wage for hours not worked when demand collapses, converting the existing unemployment-insurance fund into a payroll bridge, and the 2009 government lengthened the entitlement and cut the paperwork.",
+        "preconditions": [
+          "A standing legal instrument and fund, so scaling needed a regulation rather than a new law",
+          "Works councils and employers used to negotiating hours",
+          "A shock read as temporary, since the bridge only pays off if demand returns"
+        ],
+        "travelled": "Short-time work schemes spread across the OECD after 2009 and nearly everywhere in 2020. The lesson that travelled worst is fiscal: the bridge is cheap only when the crisis is short."
+      }
+    },
+    {
+      "id": "nld-delta-programme",
+      "indicatorId": "government_foresight_capacity",
+      "iso3": "NLD",
+      "title": "The Delta Programme and its fund",
+      "claim": "The Netherlands legislated a standing programme against flooding and fresh-water shortage, run by an independent Delta Commissioner and paid from a dedicated Delta Fund that expects 27.4 billion euros to be available through 2050.",
+      "metric": {
+        "name": "Delta Fund resources available to 2050",
+        "value": 27400000000,
+        "unit": "euros",
+        "asOf": "2025"
+      },
+      "started": 2010,
+      "status": "operating",
+      "source": {
+        "publisher": "Delta Programme Commissioner, Delta Fund",
+        "url": "https://english.deltaprogramma.nl/delta-programme/delta-fund",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-27"
+      },
+      "limits": "A budget is an input: the number shows money committed, not risk reduced, and the same page says 30.8 billion is needed, so the fund is currently short of its own task. Spending on water at this scale is also ordinary for the Netherlands, which has run such works for a century. What the record evidences is the institutional form, a legally required programme, commissioner and fund that outlive governments, not the size of the number.",
+      "pattern": {
+        "mechanism": "Parliament wrote the Delta Act: a permanent commissioner proposes a rolling programme each year, statutory safety standards make the work non-optional, and a ring-fenced fund keeps the money out of annual budget fights.",
+        "preconditions": [
+          "A shared national threat no party disputes",
+          "Water authorities with their own tax base, older than the state",
+          "Fiscal room to ring-fence a billion a year for decades"
+        ],
+        "travelled": "Bangladesh's Delta Plan 2100 was written with Dutch help and copies the programme form. The statutory fund and the commissioner's independence are the parts that travel least, because they require a legislature to give up annual control."
+      }
+    },
+    {
+      "id": "sgp-skillsfuture",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "SGP",
+      "title": "SkillsFuture Credit",
+      "claim": "Singapore gave every citizen aged 25 and over an individual training account in 2016 and keeps topping it up, and in 2024 260,000 Singaporeans spent credit on courses, up 35 percent on the year before.",
+      "metric": {
+        "name": "Singaporeans who used SkillsFuture Credit in the year",
+        "value": 260000,
+        "unit": "people",
+        "asOf": "2024"
+      },
+      "started": 2015,
+      "status": "operating",
+      "source": {
+        "publisher": "Skills and Workforce Development Agency, formerly SkillsFuture Singapore, year-in-review 2024",
+        "url": "https://www.swda.gov.sg/home/newsroom/skillsfuture-year-in-review-2024",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-27"
+      },
+      "limits": "Usage is the programme reporting on itself, and a usage count says nothing about whether the training raised skills or wages. About 260,000 users in a year is under a tenth of the adult citizen population, and separate reporting notes most citizens had not touched their top-up. The record evidences a durable mechanism for adult learning, not a transformation of participation.",
+      "pattern": {
+        "mechanism": "The state deposits money in a named account each citizen owns, publishes a course registry with subsidies, and lets individual demand rather than employers decide what gets learned, with top-ups aimed at mid-career workers.",
+        "preconditions": [
+          "A single national identity and payments rail to run the accounts on",
+          "A subsidised training market large enough to spend the credit in",
+          "Fiscal surpluses to fund top-ups a decade running"
+        ],
+        "travelled": "France's Compte Personnel de Formation is the closest sibling. Both show the same failure mode of low-value courses chasing the credit, which each has had to prune from its registry."
+      }
+    },
+    {
+      "id": "est-i-voting",
+      "indicatorId": "civic_participation",
+      "iso3": "EST",
+      "title": "Internet voting in national elections",
+      "claim": "Estonia has run legally binding internet voting since 2005, and at the 2023 Riigikogu election 312,182 votes, 51.1 percent of all votes cast, came in online, the first national election anywhere in which more than half the vote was digital.",
+      "metric": {
+        "name": "Share of votes cast online, 2023 Riigikogu election",
+        "value": 51.1,
+        "unit": "% of votes",
+        "asOf": "2023"
+      },
+      "secondMetric": {
+        "name": "Internet votes at first use, 2005 local elections",
+        "value": 9287,
+        "unit": "votes",
+        "asOf": "2005"
+      },
+      "started": 2005,
+      "status": "operating",
+      "source": {
+        "publisher": "State Electoral Office of Estonia, internet voting statistics",
+        "url": "https://www.valimised.ee/en/archive/statistics-about-internet-voting-estonia",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-27"
+      },
+      "limits": "Turnout by channel measures adoption, not democratic quality: an online share says nothing about coercion outside the polling station, verifiability, or trust in the count, and Estonian i-voting has standing academic critics on all three. Adoption also rides on the national identity infrastructure recorded elsewhere in this dataset, so as evidence for civic participation it shows a lowered cost of voting rather than a raised desire to participate; overall turnout moved far less than the channel share.",
+      "pattern": {
+        "mechanism": "The state let any voter cast and re-cast a ballot online during the advance period, with the last vote counting and a paper vote overriding, which turned the coercion problem into a game the voter can always exit.",
+        "preconditions": [
+          "A universal cryptographic identity already in every pocket",
+          "An electoral authority with the engineering staff to own the system rather than rent it",
+          "Small scale, which keeps the attack surface and the audit tractable"
+        ],
+        "travelled": "Twenty years on, no other country runs internet voting at national scale: Switzerland trials and withdraws, Norway tried and stopped. The Estonian lesson is that the identity system came first, and copies that start with the voting app fail."
+      }
     }
   ]
 }
