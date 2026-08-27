@@ -1124,6 +1124,38 @@ not have to learn which parts of a page are live.
 
 **Overturned by.** Nothing foreseeable. If the gradient reads as noise at small
 sizes, the icon-labelled radars can fall back to the threshold.
+
+
+---
+
+## D34 — Countries are identified by ISO 3166-1 alpha-3, recorded after the fact
+
+*Recorded 2026-08-27.*
+
+**Choice.** The country identifier everywhere in this project is the ISO 3166-1
+alpha-3 code: `iso3` in `countries.ts`, the cell key in observations, the file
+name in `data/out/countries/{ISO3}.json`, and the route in the viewer. Alpha-2
+is not used anywhere.
+
+**Why.** The World Bank v2 API returns every observation row keyed by
+`countryiso3code`, and the request path takes the same code, which the pipeline
+stores verbatim as `sourceUrl` provenance. Alpha-3 is therefore the identity
+the raw data arrives with, and using alpha-2 would add a translation table
+between the source and the store for no benefit. The convention also matches
+the rest of the cross-country data world (IMF, ILOSTAT, Penn World Table),
+which matters because ILOSTAT is a planned adapter, and the codes read better
+as file names: `CHE` reads as Switzerland where `CH` invites confusion with
+China.
+
+This entry records a constraint, not a choice that could have gone the other
+way. It exists because the question "why three letters" had no written answer.
+
+**Cost.** None beyond the three characters.
+
+**Overturned by.** A primary data source that keys on something else and
+outweighs the World Bank in the registry. That would justify an internal ID
+with per-source mappings, and this entry should be superseded when it happens.
+
 ## D35 — The agenda is computed, and language is an interpretation layer
 
 *Recorded 2026-08-27.*
