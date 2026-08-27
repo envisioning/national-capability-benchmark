@@ -24,6 +24,17 @@ import { buildHistory, indicatorSeries, momentumFor } from './trend.js'
 import type { Frame } from './normalize.js'
 import { iqr, mean, median, round } from './stats.js'
 
+/**
+ * How many of a dimension's indicators must be observed before it publishes a
+ * score.
+ *
+ * Two, matching the minimum D20 requires before a gap is promoted to a scored
+ * indicator. Below it the dimension still publishes its confidence and its
+ * indicator rows, because a reader needs to see that the evidence is missing
+ * rather than see a number standing in for it. See D45.
+ */
+export const MIN_INDICATORS_FOR_SCORE = 2
+
 export type Cell = {
   indicatorId: string
   iso3: string
@@ -254,7 +265,17 @@ export function scoreAll(observations: Observation[], opts: ScoreOptions): Score
       const cells = defs.map((d) => matrix.get(d.id)?.get(country.iso3))
       const observed = cells.filter((c): c is Cell => Boolean(c))
 
-      const score = observed.length === 0 ? null : round(mean(observed.map((c) => c.normalized)), 1)
+      /* A dimension needs at least two observed indicators before it publishes a
+       * score. One number is not a mean, and Coordination and Trust each sit on
+       * a single frozen 2019 series, which printed as a confident-looking 46.7
+       * and moved when nothing about the country had. The floor is the same
+       * "at least two" D20 uses to promote a gap. Confidence still publishes,
+       * because how little is known is the useful signal here. See D45. */
+      const belowCoverageFloor = observed.length < MIN_INDICATORS_FOR_SCORE
+      const score =
+        observed.length === 0 || belowCoverageFloor
+          ? null
+          : round(mean(observed.map((c) => c.normalized)), 1)
       const parts = confidenceFor(defs, cells, opts.currentYear)
       const delphi = delphiFor(opts.delphi, country.iso3, dimension, minPanelistConfidence)
       const momentum =
@@ -272,6 +293,8 @@ export function scoreAll(observations: Observation[], opts: ScoreOptions): Score
       const blendedScore = score ?? delphi.score
       dimensions[dimension] = {
         score,
+        observedIndicators: observed.length,
+        belowCoverageFloor,
         confidence: round(parts.coverage * parts.recency * parts.sourceQuality, 3),
         confidenceParts: parts,
         delphiScore: delphi.score,

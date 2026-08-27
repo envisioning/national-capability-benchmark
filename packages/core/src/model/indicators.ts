@@ -374,8 +374,8 @@ const RAW: Raw[] = [
     direction: 'lower_better',
     transform: 'log10',
     source: WB('VC.IHR.PSRC.P5'),
-    ingest: 'worldbank',
-    notes: 'Added 2026-08-26, when the two WGI perception composites in this dimension were retired. It is counted by police and health systems rather than reported as an opinion, and it spans two and a half orders of magnitude across this set, so it is logged before normalising. Read it as the visible failure of cooperation with strangers and not as trust itself: it is an outcome, it is driven heavily by organised crime, and a society can be physically safe while trusting very little. It correlates with log GDP per capita at 0.77 in this set, above the wealth-proxy line, so it is a replacement that is observable rather than a replacement that is income-free. Behavioural trust measures remain a gap. See D23.',
+    ingest: 'retired',
+    notes: 'Added 2026-08-26 by D23 as the observable replacement for two retired WGI perception composites, and retired 2026-08-27 by D44 when the diagnostic built in D42 measured what it was doing. It raised this dimension\'s correlation with log GDP per capita by 0.288, from 0.096 to 0.385, the largest single wealth contribution anywhere in the model. It was added to fix wealth contamination and it was the wealth contamination. The dataset is sound and the objection is to what it measures here: homicide is driven heavily by organised crime, a society can be physically safe while trusting very little, and across this country set the variation it carries is mostly income. Behavioural trust measures remain a gap.',
     wealthProxyPrior: 0.35,
   },
   {

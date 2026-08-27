@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T22:38:01.142Z",
+  "generatedAt": "2026-08-27T22:52:36.452Z",
   "iso3": "CHE",
   "country": "Switzerland",
   "frame": "reference",
@@ -115,7 +115,7 @@
     {
       "dimension": "coordination",
       "kind": "measure",
-      "score": 98.9,
+      "score": null,
       "confidence": 0.079,
       "band": "very_thin",
       "trend": null,
@@ -153,13 +153,12 @@
     {
       "dimension": "trust",
       "kind": "measure",
-      "score": 59,
-      "confidence": 0.204,
+      "score": null,
+      "confidence": 0.079,
       "band": "very_thin",
       "trend": null,
       "scoredOn": [
-        "contract_enforcement_days",
-        "homicide_rate"
+        "contract_enforcement_days"
       ],
       "gaps": [
         "interpersonal_trust",
@@ -168,7 +167,8 @@
       ],
       "retired": [
         "rule_of_law",
-        "control_of_corruption"
+        "control_of_corruption",
+        "homicide_rate"
       ],
       "exemplars": [],
       "evidenceElsewhere": []

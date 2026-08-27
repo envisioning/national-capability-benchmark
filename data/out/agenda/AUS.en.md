@@ -10,8 +10,8 @@ Scores are relative to a frame fixed by the 10 reference countries and run 0 to 
 | --- | --- | --- | --- |
 | Anticipation | 62.3 | 0.51 (usable) | +11.8 over 10 years, on 4 indicators |
 | Agency | 83.1 | 0.61 (usable) | +8.8 over 10 years, on 4 indicators |
-| Coordination | 61.4 | 0.08 (very thin) | no trend basket |
-| Trust | 67.2 | 0.2 (very thin) | no trend basket |
+| Coordination | not scored | 0.08 (very thin) | no trend basket |
+| Trust | not scored | 0.08 (very thin) | no trend basket |
 | Learning | 82.9 | 0.54 (usable) | no trend basket |
 | Experimentation | 33.5 | 0.18 (very thin) | +1.3 over 10 years, on 2 indicators |
 | Adaptability | 81.2 | 0.48 (usable) | +8.4 over 10 years, on 4 indicators |
@@ -44,20 +44,20 @@ How effectively can independent actors organize around shared objectives?
 - Declared gaps in this dimension: University-industry collaboration, Civil society strength, Public-private collaboration.
 - Datasets examined and rejected for this dimension: Government effectiveness, Regulatory quality, Logistics performance.
 
+### Trust: confidence 0.08, very thin
+
+How much cooperation is possible beyond immediate personal networks?
+
+- Currently scored on a single observed indicator.
+- Declared gaps in this dimension: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group.
+- Datasets examined and rejected for this dimension: Rule of law, Control of corruption, Intentional homicide rate.
+
 ### Experimentation: confidence 0.18, very thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
 - Currently scored on 2 observed indicators.
 - Declared gaps in this dimension: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
-
-### Trust: confidence 0.2, very thin
-
-How much cooperation is possible beyond immediate personal networks?
-
-- Currently scored on 2 observed indicators.
-- Declared gaps in this dimension: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group.
-- Datasets examined and rejected for this dimension: Rule of law, Control of corruption.
 
 ### Shared Purpose: confidence 0.2, very thin
 

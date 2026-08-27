@@ -292,8 +292,19 @@ export const Momentum = z.object({
 export type Momentum = z.infer<typeof Momentum>
 
 export const DimensionResult = z.object({
-  /** Indicator-derived score. Delphi never enters this number. */
+  /**
+   * Indicator-derived score. Delphi never enters this number.
+   *
+   * Null when fewer than `MIN_INDICATORS_FOR_SCORE` of the dimension's
+   * indicators are observed for this country. A mean of one number is not a
+   * measurement of a dimension, and printing it invites a decision the evidence
+   * cannot carry. `observedIndicators` says how many there were. See D45.
+   */
   score: z.number().nullable(),
+  /** How many of the dimension's indicators have a value for this country. */
+  observedIndicators: z.number().int(),
+  /** True when the score is withheld because too few indicators are observed. */
+  belowCoverageFloor: z.boolean(),
   /** coverage x recency x source_quality. Reported separately, never folded into score. */
   confidence: z.number(),
   confidenceParts: z.object({

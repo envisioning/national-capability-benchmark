@@ -187,6 +187,36 @@ export function Score({ value, size = 'md' }: { value: number | null; size?: 'md
   )
 }
 
+/**
+ * A dimension's score, or the reason there is not one.
+ *
+ * The model withholds a score when fewer than two of a dimension's indicators
+ * are observed, because a mean of one number is not a measurement. Rendering
+ * that as "no data" would tell the reader nothing about why, and rendering it
+ * as a number would be the claim the floor exists to prevent. Everything with
+ * an actual score still goes through `Score`. See D45.
+ */
+export function DimensionScore({
+  dim,
+  size = 'md',
+}: {
+  dim: { score: number | null; belowCoverageFloor?: boolean; observedIndicators?: number } | null
+  size?: 'md' | 'sm'
+}) {
+  if (dim?.belowCoverageFloor) {
+    const n = dim.observedIndicators ?? 0
+    return (
+      <span
+        className="text-xs text-[var(--muted)]"
+        title={`Withheld. ${n === 1 ? 'One indicator is' : `${n} indicators are`} observed here, and this model needs two before it averages them into a dimension score.`}
+      >
+        not measured
+      </span>
+    )
+  }
+  return <Score value={dim?.score ?? null} size={size} />
+}
+
 /** Shipped beside any table of scores, so the bands are never colour alone. */
 export function ScoreLegend() {
   return (

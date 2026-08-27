@@ -10,8 +10,8 @@ As notas são relativas a uma régua fixada pelos 10 países de referência e v�
 | --- | --- | --- | --- |
 | Antecipação | 22,3 | 0,64 (utilizável) | +14,2 em 10 anos, sobre 5 indicadores, 2 truncados na borda da régua |
 | Agência | 59,4 | 0,61 (utilizável) | +33,5 em 10 anos, sobre 4 indicadores, 2 truncados na borda da régua |
-| Coordenação | 52,2 | 0,08 (muito fraca) | sem base de tendência |
-| Confiança | 52,8 | 0,09 (muito fraca) | sem base de tendência |
+| Coordenação | sem nota | 0,08 (muito fraca) | sem base de tendência |
+| Confiança | sem nota | 0,08 (muito fraca) | sem base de tendência |
 | Aprendizagem | 28,5 | 0,56 (utilizável) | -1,1 em 10 anos, sobre 3 indicadores |
 | Experimentação | 1,5 | 0,18 (muito fraca) | -0,4 em 10 anos, sobre 2 indicadores, 1 truncados na borda da régua |
 | Adaptação | 63,7 | 0,47 (utilizável) | +2,8 em 10 anos, sobre 4 indicadores, 1 truncados na borda da régua |
@@ -62,13 +62,13 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas nesta dimensão: Colaboração universidade-empresa, Força da sociedade civil, Colaboração público-privada.
 - Bases de dados examinadas e rejeitadas para esta dimensão: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
-### Confiança: confiança 0,09, muito fraca
+### Confiança: confiança 0,08, muito fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
 
-- Hoje a nota se apoia em 2 indicadores observados.
+- Hoje a nota se apoia em um único indicador observado.
 - Lacunas declaradas nesta dimensão: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo.
-- Bases de dados examinadas e rejeitadas para esta dimensão: Estado de direito, Controle da corrupção.
+- Bases de dados examinadas e rejeitadas para esta dimensão: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ### Experimentação: confiança 0,18, muito fraca
 

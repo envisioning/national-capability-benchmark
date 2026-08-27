@@ -1636,3 +1636,145 @@ honest headline for that country and was previously buried nine sections deep.
 **Overturned by.** A country page that reads better with the shape first and the
 agenda second, which would move the block under the radar. Or a `hold` list long
 enough to deserve a column of its own.
+
+---
+
+## D44 — The homicide rate is retired, because it was the wealth signal it was hired to remove
+
+*Recorded 2026-08-27. Supersedes the Trust half of D23. Evidence from D42.*
+
+**Choice.** `homicide_rate` becomes `ingest: 'retired'`. The row stays, is never
+fetched or scored, and lowers confidence exactly as a gap does.
+
+**Why.** D23 added it as the observable replacement for two retired WGI
+perception composites, on the argument that it is counted by police and health
+systems rather than reported as an opinion. D42's leave-one-out diagnostic then
+measured what it actually did to the dimension. It raised Trust's correlation
+with log GDP per capita by 0.288, from 0.096 to 0.385, the largest single wealth
+contribution anywhere in the model. Removing it moves Trust to 0.097 and changes
+no other dimension.
+
+The objection is not to the dataset, which is sound, and not to the reasoning in
+D23, which was right about the difference between an outcome and an opinion. It
+is that across this country set the variation homicide carries is mostly income.
+Homicide is driven heavily by organised crime, and a society can be physically
+safe while trusting very little. The benchmark exists to show that capability is
+a separate property from wealth, and this row was quietly arguing the opposite.
+
+**Cost.** Trust now has one observed indicator of seven, `contract_enforcement
+_days`, frozen at 2019, and its confidence falls from 0.191 to 0.079. The
+dimension is now honestly unmeasured where it was previously measured wrongly.
+That is a worse-looking model and a truer one, and it forces D45.
+
+**Overturned by.** A country set wide enough that homicide stops tracking
+income, which would mean the correlation was an artefact of ten reference
+countries. Or a behavioural trust measure landing beside it, which would let the
+dimension carry homicide without homicide carrying the dimension.
+
+---
+
+## D45 — A dimension with fewer than two observed indicators publishes no score
+
+*Recorded 2026-08-27. Answers the question A12 left open. Forced by D44.*
+
+**Choice.** `MIN_INDICATORS_FOR_SCORE` is two, in
+`packages/core/src/pipeline/score.ts`. Below it `DimensionResult.score` is null,
+`belowCoverageFloor` is true, and `observedIndicators` says how many there were.
+Two is the same minimum D20 requires before a gap is promoted to a scored
+indicator, so the model uses one number for the same idea.
+
+Confidence, the indicator rows, the evidence records and the trend all still
+publish. What is withheld is only the average.
+
+Three surfaces changed with it. The radar leaves an unmeasured axis empty and
+closes the shape across the gap, where before it plotted the missing value at
+the centre and drew a country as catastrophically weak on a dimension nobody had
+measured. `DimensionScore` in the viewer prints "not measured" with the
+indicator count on hover, so the reason is available rather than implied. The
+flat table and the country tables read from it.
+
+This withholds 84 of 360 published cells: Coordination and Trust for all 40
+countries, plus Experimentation for one country and Shared Purpose for three.
+
+**Why.** Coordination printed 46.7 for Brazil off a single border-time measure
+frozen at 2019, and moved from 15.5 to 46.7 without anything changing in Brazil.
+A12 recorded that as an artefact and mitigated it with a dashed edge and a
+confidence band, then said plainly that the mitigation is not a fix. A mean of
+one number is not a measurement of a dimension. Printing it invites exactly the
+decision the evidence cannot carry, and the display treatments were asking the
+reader to discount a number the model should not have offered.
+
+**Cost.**
+
+- Two of nine dimensions now show nothing for every country. A reader meeting
+  the benchmark for the first time sees a seven-sided shape and has to learn why.
+- `blendedScore` falls back to the panel when the floor withholds a score, which
+  is a wider fallback than the invariant described. The panel guards still hold:
+  a non-evidential run is never presented as evidence.
+- The floor is a count and ignores what the indicators are. Two weak indicators
+  pass and one strong one does not.
+- Comparisons against anything published before today lose two dimensions.
+
+The dataset goes to 2.0.0. D37 reserves major for a rebased frame or a removed
+field, and neither happened here. But a consumer parsing `score` as a number now
+gets null for 84 of 360 cells, which breaks them exactly as a removed field
+would. The rule is about what breaks a reader, so the version follows the break.
+
+**Overturned by.** Replacement indicators landing in Coordination and Trust,
+which is what A12 asks for and would make the floor moot for them. Or evidence
+that readers treat an empty axis as a zero anyway, which would mean the
+withholding needs words on the chart and not only in the table.
+
+## D46 — A case study is an address, and the list of them is a filter
+
+*Recorded 2026-08-27. Extends D20 and D33.*
+
+**Choice.** Every evidence record gets its own page at `/patterns/{id}`, and the
+`/patterns` index becomes a filtered view over the corpus.
+
+`evidenceHref` in `apps/web/src/lib/links.ts` now writes `/patterns/nld-delta-programme`
+instead of `/patterns#nld-delta-programme`. The record id is the slug, so the
+address is already in the data and no second identifier exists. The record page
+carries the full record, the indicator it bears on, and two related lists: the
+other deliveries from the same country, and the same indicator in other
+countries.
+
+The index keeps its dimension grouping and gains five controls: a text search
+over the title, claim, limits, mechanism, preconditions, country and publisher;
+a country select; a dimension select; a status select that also offers
+reversals as one class; and a switch for records that carry a mechanism. The
+controls are local state, so a filtered list has no address of its own.
+
+One card renders in both places. `apps/web/src/components/PatternCard.tsx` holds
+the metadata line, the metrics line, the mechanism block and the limits line,
+and the index and the record page both read from it.
+
+**Why.** The corpus reached 33 records across 21 countries, and an anchor into
+one long page is not a citable thing. A reader who wants to send somebody the
+Delta Programme record sends a whole page and a scroll position, the browser
+lands them mid-list with no context above the fold, and a search engine indexes
+one page for 33 deliveries. D33 asks the corpus to carry its reversals, which
+only works if a reversal can be pointed at.
+
+The filters follow from the same growth. Grouping by dimension was enough at
+nine records. At 33 the reader has a question, usually about one country or one
+kind of loss, and scrolling is the wrong answer to it.
+
+**Cost.**
+
+- Any link written against the old anchor form now lands on the index without
+  scrolling. Nothing outside the viewer wrote one, and `evidenceHref` was
+  already the only place that built it.
+- The index sends the whole corpus to the browser to filter it. At 33 records
+  that is small, and it will not stay small. A server-filtered list is the next
+  move, and it needs the filter state in the URL first.
+- Filter state is local, so a reader cannot share a filtered view. The record
+  permalinks are the thing that had to be shareable, and they are.
+- Two more routes to keep in `outputFileTracingIncludes` reasoning. Both read
+  `data/evidence`, which is already listed.
+
+**Overturned by.** The corpus growing past the point where shipping it to the
+browser is reasonable, which turns the filters into query parameters and the
+index into a server-rendered list. Or evidence that readers never use the
+record pages, which would mean the anchor was enough and the cost was the two
+extra clicks to reach a mechanism.

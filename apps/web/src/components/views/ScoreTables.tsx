@@ -5,7 +5,7 @@ import { DIMENSIONS, DIMENSION_LABELS } from '@ncb/core'
 import type { CountryResult } from '@ncb/core'
 import { DataTable, type Column } from '@/components/DataTable'
 import { countryProfileHref } from '@/lib/links'
-import { ConfidenceBar, CountryLabel, Score } from '@/components/ui'
+import { ConfidenceBar, CountryLabel, DimensionScore } from '@/components/ui'
 
 function countryColumn(): Column<CountryResult> {
   return {
@@ -33,7 +33,7 @@ export function ScoreTable({ countries }: { countries: CountryResult[] }) {
           label: DIMENSION_LABELS[d],
           align: 'right' as const,
           sort: (c: CountryResult) => c.dimensions[d]?.score ?? null,
-          render: (c: CountryResult) => <Score value={c.dimensions[d]?.score ?? null} />,
+          render: (c: CountryResult) => <DimensionScore dim={c.dimensions[d] ?? null} />,
         })),
       ]}
     />

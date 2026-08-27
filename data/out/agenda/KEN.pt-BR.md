@@ -10,8 +10,8 @@ As notas são relativas a uma régua fixada pelos 10 países de referência e v�
 | --- | --- | --- | --- |
 | Antecipação | 2,1 | 0,67 (boa) | 0 em 10 anos, sobre 3 indicadores, 3 truncados na borda da régua |
 | Agência | 23,6 | 0,6 (utilizável) | +16,6 em 10 anos, sobre 3 indicadores, 3 truncados na borda da régua |
-| Coordenação | 83,2 | 0,08 (muito fraca) | sem base de tendência |
-| Confiança | 50,2 | 0,19 (muito fraca) | sem base de tendência |
+| Coordenação | sem nota | 0,08 (muito fraca) | sem base de tendência |
+| Confiança | sem nota | 0,08 (muito fraca) | sem base de tendência |
 | Aprendizagem | 23,3 | 0,51 (utilizável) | -13,4 em 10 anos, sobre 3 indicadores, 1 truncados na borda da régua |
 | Experimentação | 0 | 0,17 (muito fraca) | sem base de tendência |
 | Adaptação | 29,2 | 0,48 (utilizável) | -11,9 em 10 anos, sobre 4 indicadores, 2 truncados na borda da régua |
@@ -79,20 +79,20 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas nesta dimensão: Colaboração universidade-empresa, Força da sociedade civil, Colaboração público-privada.
 - Bases de dados examinadas e rejeitadas para esta dimensão: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
+### Confiança: confiança 0,08, muito fraca
+
+Quanta cooperação é possível além das redes pessoais imediatas?
+
+- Hoje a nota se apoia em um único indicador observado.
+- Lacunas declaradas nesta dimensão: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo.
+- Bases de dados examinadas e rejeitadas para esta dimensão: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
+
 ### Experimentação: confiança 0,17, muito fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
 - Hoje a nota se apoia em 2 indicadores observados.
 - Lacunas declaradas nesta dimensão: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
-
-### Confiança: confiança 0,19, muito fraca
-
-Quanta cooperação é possível além das redes pessoais imediatas?
-
-- Hoje a nota se apoia em 2 indicadores observados.
-- Lacunas declaradas nesta dimensão: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo.
-- Bases de dados examinadas e rejeitadas para esta dimensão: Estado de direito, Controle da corrupção.
 
 ### Propósito compartilhado: confiança 0,24, muito fraca
 

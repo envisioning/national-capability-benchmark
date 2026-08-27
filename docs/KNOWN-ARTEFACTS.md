@@ -369,6 +369,14 @@ So the fix needs the project's second source adapter. The shortlist is ILOSTAT,
 IDEA voter turnout, and OECD government-at-a-glance for budget execution and
 court clearance. `ingest: 'manual'` already exists for anything with no API.
 
+**Resolved 2026-08-27, by removal rather than by measurement.** D44 retired
+`homicide_rate` after D42's diagnostic showed it carried 0.288 of Trust's 0.385
+wealth correlation. D45 then set a coverage floor: a dimension with fewer than
+two observed indicators publishes no score. Coordination and Trust now publish
+none for any country, which is what this artefact said should happen. The
+artefact stands as the record of why, and it closes when replacement indicators
+land.
+
 The attempt also produced D42. `wealthAttribution` in the diagnostics now shows
 that `homicide_rate` alone raises Trust's wealth correlation by 0.288, from
 0.096 to 0.385, which is the largest single wealth contribution in the model.

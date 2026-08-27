@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-27T22:38:00.978Z",
-  "version": "1.1.0",
+  "generatedAt": "2026-08-27T22:52:32.642Z",
+  "version": "2.0.0",
   "countries": [
     {
       "country": "Brazil",
@@ -8,6 +8,8 @@
       "dimensions": {
         "anticipation": {
           "score": 22.3,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.543,
           "confidenceParts": {
             "coverage": 0.714,
@@ -55,6 +57,8 @@
         },
         "agency": {
           "score": 31,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.613,
           "confidenceParts": {
             "coverage": 0.75,
@@ -102,7 +106,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 46.7,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -112,29 +118,33 @@
           "delphiScore": 35,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 46.7,
-          "blendedFrom": "indicators",
+          "blendedScore": 35,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 20.7,
-          "confidence": 0.204,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.75,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": 25,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 20.7,
-          "blendedFrom": "indicators",
+          "blendedScore": 25,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 48.5,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.543,
           "confidenceParts": {
             "coverage": 0.714,
@@ -166,6 +176,8 @@
         },
         "experimentation": {
           "score": 26,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.394,
           "confidenceParts": {
             "coverage": 0.5,
@@ -211,6 +223,8 @@
         },
         "adaptability": {
           "score": 49.6,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.475,
           "confidenceParts": {
             "coverage": 0.5,
@@ -260,6 +274,8 @@
         },
         "building": {
           "score": 9.4,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -307,6 +323,8 @@
         },
         "shared_purpose": {
           "score": 29,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.272,
           "confidenceParts": {
             "coverage": 0.286,
@@ -344,6 +362,8 @@
       "dimensions": {
         "anticipation": {
           "score": 71,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.633,
           "confidenceParts": {
             "coverage": 0.714,
@@ -393,6 +413,8 @@
         },
         "agency": {
           "score": 84.6,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.495,
           "confidenceParts": {
             "coverage": 0.625,
@@ -438,7 +460,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 98.4,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -448,29 +472,33 @@
           "delphiScore": 55,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 98.4,
-          "blendedFrom": "indicators",
+          "blendedScore": 55,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 50,
-          "confidence": 0.204,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.75,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": 50,
           "delphiIqr": 0,
           "delphiDissent": false,
           "blendedScore": 50,
-          "blendedFrom": "indicators",
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 54.3,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.454,
           "confidenceParts": {
             "coverage": 0.714,
@@ -502,6 +530,8 @@
         },
         "experimentation": {
           "score": 46.4,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.394,
           "confidenceParts": {
             "coverage": 0.5,
@@ -547,6 +577,8 @@
         },
         "adaptability": {
           "score": 75.1,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.475,
           "confidenceParts": {
             "coverage": 0.5,
@@ -596,6 +628,8 @@
         },
         "building": {
           "score": 48.3,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.515,
           "confidenceParts": {
             "coverage": 0.625,
@@ -643,6 +677,8 @@
         },
         "shared_purpose": {
           "score": 31.6,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.272,
           "confidenceParts": {
             "coverage": 0.286,
@@ -694,6 +730,8 @@
       "dimensions": {
         "anticipation": {
           "score": 68.3,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.644,
           "confidenceParts": {
             "coverage": 0.714,
@@ -743,6 +781,8 @@
         },
         "agency": {
           "score": 67.5,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.594,
           "confidenceParts": {
             "coverage": 0.75,
@@ -789,7 +829,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 100,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -799,29 +841,33 @@
           "delphiScore": 80,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 100,
-          "blendedFrom": "indicators",
+          "blendedScore": 80,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 62.6,
-          "confidence": 0.204,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.75,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": 85,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 62.6,
-          "blendedFrom": "indicators",
+          "blendedScore": 85,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 78,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.531,
           "confidenceParts": {
             "coverage": 0.714,
@@ -867,6 +913,8 @@
         },
         "experimentation": {
           "score": 19.1,
+          "observedIndicators": 3,
+          "belowCoverageFloor": false,
           "confidence": 0.304,
           "confidenceParts": {
             "coverage": 0.375,
@@ -883,6 +931,8 @@
         },
         "adaptability": {
           "score": 91,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.475,
           "confidenceParts": {
             "coverage": 0.5,
@@ -932,6 +982,8 @@
         },
         "building": {
           "score": 31,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -979,6 +1031,8 @@
         },
         "shared_purpose": {
           "score": 98.1,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.238,
           "confidenceParts": {
             "coverage": 0.286,
@@ -1030,6 +1084,8 @@
       "dimensions": {
         "anticipation": {
           "score": 81.1,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.644,
           "confidenceParts": {
             "coverage": 0.714,
@@ -1079,6 +1135,8 @@
         },
         "agency": {
           "score": 69.2,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.514,
           "confidenceParts": {
             "coverage": 0.75,
@@ -1124,7 +1182,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 98.9,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -1134,29 +1194,33 @@
           "delphiScore": 80,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 98.9,
-          "blendedFrom": "indicators",
+          "blendedScore": 80,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 59,
-          "confidence": 0.204,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.75,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": 90,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 59,
-          "blendedFrom": "indicators",
+          "blendedScore": 90,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 77.3,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.543,
           "confidenceParts": {
             "coverage": 0.714,
@@ -1202,6 +1266,8 @@
         },
         "experimentation": {
           "score": 47.4,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.394,
           "confidenceParts": {
             "coverage": 0.5,
@@ -1247,6 +1313,8 @@
         },
         "adaptability": {
           "score": 88.8,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.475,
           "confidenceParts": {
             "coverage": 0.5,
@@ -1296,6 +1364,8 @@
         },
         "building": {
           "score": 54.4,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -1343,6 +1413,8 @@
         },
         "shared_purpose": {
           "score": 42.1,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.249,
           "confidenceParts": {
             "coverage": 0.286,
@@ -1394,6 +1466,8 @@
       "dimensions": {
         "anticipation": {
           "score": 76.3,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.622,
           "confidenceParts": {
             "coverage": 0.714,
@@ -1443,6 +1517,8 @@
         },
         "agency": {
           "score": 79.6,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.574,
           "confidenceParts": {
             "coverage": 0.75,
@@ -1488,7 +1564,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 89.1,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -1498,29 +1576,33 @@
           "delphiScore": 95,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 89.1,
-          "blendedFrom": "indicators",
+          "blendedScore": 95,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 100,
-          "confidence": 0.204,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.75,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": 85,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 100,
-          "blendedFrom": "indicators",
+          "blendedScore": 85,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 57.5,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.488,
           "confidenceParts": {
             "coverage": 0.714,
@@ -1552,6 +1634,8 @@
         },
         "experimentation": {
           "score": 34.2,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.206,
           "confidenceParts": {
             "coverage": 0.5,
@@ -1583,6 +1667,8 @@
         },
         "adaptability": {
           "score": 80.5,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.465,
           "confidenceParts": {
             "coverage": 0.5,
@@ -1632,6 +1718,8 @@
         },
         "building": {
           "score": 70.9,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -1678,7 +1766,9 @@
           "indicators": []
         },
         "shared_purpose": {
-          "score": 35,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.136,
           "confidenceParts": {
             "coverage": 0.143,
@@ -1688,8 +1778,8 @@
           "delphiScore": 55,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 35,
-          "blendedFrom": "indicators",
+          "blendedScore": 55,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         }
@@ -1701,6 +1791,8 @@
       "dimensions": {
         "anticipation": {
           "score": 79.3,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.644,
           "confidenceParts": {
             "coverage": 0.714,
@@ -1750,6 +1842,8 @@
         },
         "agency": {
           "score": 74.2,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.603,
           "confidenceParts": {
             "coverage": 0.75,
@@ -1797,7 +1891,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 85.5,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -1807,29 +1903,33 @@
           "delphiScore": 75,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 85.5,
-          "blendedFrom": "indicators",
+          "blendedScore": 75,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 78,
-          "confidence": 0.204,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.75,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": 55,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 78,
-          "blendedFrom": "indicators",
+          "blendedScore": 55,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 61.9,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.543,
           "confidenceParts": {
             "coverage": 0.714,
@@ -1875,6 +1975,8 @@
         },
         "experimentation": {
           "score": 75,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.394,
           "confidenceParts": {
             "coverage": 0.5,
@@ -1920,6 +2022,8 @@
         },
         "adaptability": {
           "score": 82.6,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.475,
           "confidenceParts": {
             "coverage": 0.5,
@@ -1969,6 +2073,8 @@
         },
         "building": {
           "score": 64.4,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -2016,6 +2122,8 @@
         },
         "shared_purpose": {
           "score": 53.8,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.238,
           "confidenceParts": {
             "coverage": 0.286,
@@ -2067,6 +2175,8 @@
       "dimensions": {
         "anticipation": {
           "score": 61.1,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.644,
           "confidenceParts": {
             "coverage": 0.714,
@@ -2116,6 +2226,8 @@
         },
         "agency": {
           "score": 78.7,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.613,
           "confidenceParts": {
             "coverage": 0.75,
@@ -2163,7 +2275,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 97.8,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -2173,29 +2287,33 @@
           "delphiScore": 70,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 97.8,
-          "blendedFrom": "indicators",
+          "blendedScore": 70,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 59.7,
-          "confidence": 0.204,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.75,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": 70,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 59.7,
-          "blendedFrom": "indicators",
+          "blendedScore": 70,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 65.6,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.531,
           "confidenceParts": {
             "coverage": 0.714,
@@ -2243,6 +2361,8 @@
         },
         "experimentation": {
           "score": 28.1,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.394,
           "confidenceParts": {
             "coverage": 0.5,
@@ -2288,6 +2408,8 @@
         },
         "adaptability": {
           "score": 55.2,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.475,
           "confidenceParts": {
             "coverage": 0.5,
@@ -2337,6 +2459,8 @@
         },
         "building": {
           "score": 19,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -2384,6 +2508,8 @@
         },
         "shared_purpose": {
           "score": 82.4,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.26,
           "confidenceParts": {
             "coverage": 0.286,
@@ -2435,6 +2561,8 @@
       "dimensions": {
         "anticipation": {
           "score": 1.1,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.577,
           "confidenceParts": {
             "coverage": 0.714,
@@ -2467,6 +2595,8 @@
         },
         "agency": {
           "score": 18.2,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.613,
           "confidenceParts": {
             "coverage": 0.75,
@@ -2514,7 +2644,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 43.3,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -2524,29 +2656,33 @@
           "delphiScore": 40,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 43.3,
-          "blendedFrom": "indicators",
+          "blendedScore": 40,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 21.3,
-          "confidence": 0.192,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.708,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": 20,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 21.3,
-          "blendedFrom": "indicators",
+          "blendedScore": 20,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 12.3,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.554,
           "confidenceParts": {
             "coverage": 0.714,
@@ -2594,6 +2730,8 @@
         },
         "experimentation": {
           "score": 3.9,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.394,
           "confidenceParts": {
             "coverage": 0.5,
@@ -2639,6 +2777,8 @@
         },
         "adaptability": {
           "score": 30.3,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.465,
           "confidenceParts": {
             "coverage": 0.5,
@@ -2688,6 +2828,8 @@
         },
         "building": {
           "score": 29,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -2735,6 +2877,8 @@
         },
         "shared_purpose": {
           "score": 50,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.226,
           "confidenceParts": {
             "coverage": 0.286,
@@ -2786,6 +2930,8 @@
       "dimensions": {
         "anticipation": {
           "score": 29.7,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.622,
           "confidenceParts": {
             "coverage": 0.714,
@@ -2820,6 +2966,8 @@
         },
         "agency": {
           "score": 55.2,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.603,
           "confidenceParts": {
             "coverage": 0.75,
@@ -2867,7 +3015,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 34.8,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -2877,29 +3027,33 @@
           "delphiScore": 45,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 34.8,
-          "blendedFrom": "indicators",
+          "blendedScore": 45,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 45.1,
-          "confidence": 0.204,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.75,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": 55,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 45.1,
-          "blendedFrom": "indicators",
+          "blendedScore": 55,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 58.4,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.543,
           "confidenceParts": {
             "coverage": 0.714,
@@ -2946,6 +3100,8 @@
         },
         "experimentation": {
           "score": 43.6,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.394,
           "confidenceParts": {
             "coverage": 0.5,
@@ -2977,6 +3133,8 @@
         },
         "adaptability": {
           "score": 56,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.475,
           "confidenceParts": {
             "coverage": 0.5,
@@ -3026,6 +3184,8 @@
         },
         "building": {
           "score": 20.6,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -3073,6 +3233,8 @@
         },
         "shared_purpose": {
           "score": 49.3,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.272,
           "confidenceParts": {
             "coverage": 0.286,
@@ -3124,6 +3286,8 @@
       "dimensions": {
         "anticipation": {
           "score": 20.7,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.622,
           "confidenceParts": {
             "coverage": 0.714,
@@ -3173,6 +3337,8 @@
         },
         "agency": {
           "score": 23.9,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.613,
           "confidenceParts": {
             "coverage": 0.75,
@@ -3220,7 +3386,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 0,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -3230,29 +3398,33 @@
           "delphiScore": 20,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 0,
-          "blendedFrom": "indicators",
+          "blendedScore": 20,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 25.6,
-          "confidence": 0.192,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.708,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": 35,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 25.6,
-          "blendedFrom": "indicators",
+          "blendedScore": 35,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 25.7,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.509,
           "confidenceParts": {
             "coverage": 0.714,
@@ -3284,6 +3456,8 @@
         },
         "experimentation": {
           "score": 13.6,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.394,
           "confidenceParts": {
             "coverage": 0.5,
@@ -3329,6 +3503,8 @@
         },
         "adaptability": {
           "score": 15.2,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.465,
           "confidenceParts": {
             "coverage": 0.5,
@@ -3378,6 +3554,8 @@
         },
         "building": {
           "score": 10,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -3425,6 +3603,8 @@
         },
         "shared_purpose": {
           "score": 50,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.249,
           "confidenceParts": {
             "coverage": 0.286,
@@ -3476,6 +3656,8 @@
       "dimensions": {
         "anticipation": {
           "score": 19.7,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.667,
           "confidenceParts": {
             "coverage": 0.714,
@@ -3525,6 +3707,8 @@
         },
         "agency": {
           "score": 27.4,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.613,
           "confidenceParts": {
             "coverage": 0.75,
@@ -3572,7 +3756,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 77.8,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -3582,29 +3768,33 @@
           "delphiScore": 25,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 77.8,
-          "blendedFrom": "indicators",
+          "blendedScore": 25,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 44.5,
-          "confidence": 0.204,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.75,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": 20,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 44.5,
-          "blendedFrom": "indicators",
+          "blendedScore": 20,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 47.3,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.531,
           "confidenceParts": {
             "coverage": 0.714,
@@ -3651,6 +3841,8 @@
         },
         "experimentation": {
           "score": 30,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.394,
           "confidenceParts": {
             "coverage": 0.5,
@@ -3696,6 +3888,8 @@
         },
         "adaptability": {
           "score": 53.6,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.475,
           "confidenceParts": {
             "coverage": 0.5,
@@ -3745,6 +3939,8 @@
         },
         "building": {
           "score": 28.1,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -3792,6 +3988,8 @@
         },
         "shared_purpose": {
           "score": 40.9,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.272,
           "confidenceParts": {
             "coverage": 0.286,
@@ -3829,6 +4027,8 @@
       "dimensions": {
         "anticipation": {
           "score": 16.8,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.644,
           "confidenceParts": {
             "coverage": 0.714,
@@ -3878,6 +4078,8 @@
         },
         "agency": {
           "score": 24.9,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.613,
           "confidenceParts": {
             "coverage": 0.75,
@@ -3925,7 +4127,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 77.2,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -3935,29 +4139,33 @@
           "delphiScore": 20,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 77.2,
-          "blendedFrom": "indicators",
+          "blendedScore": 20,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 21.1,
-          "confidence": 0.204,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.75,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": 15,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 21.1,
-          "blendedFrom": "indicators",
+          "blendedScore": 15,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 61.8,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.409,
           "confidenceParts": {
             "coverage": 0.714,
@@ -4003,6 +4211,8 @@
         },
         "experimentation": {
           "score": 20.7,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.394,
           "confidenceParts": {
             "coverage": 0.5,
@@ -4048,6 +4258,8 @@
         },
         "adaptability": {
           "score": 42,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.475,
           "confidenceParts": {
             "coverage": 0.5,
@@ -4097,6 +4309,8 @@
         },
         "building": {
           "score": 15.6,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -4144,6 +4358,8 @@
         },
         "shared_purpose": {
           "score": 29.7,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.272,
           "confidenceParts": {
             "coverage": 0.286,
@@ -4195,6 +4411,8 @@
       "dimensions": {
         "anticipation": {
           "score": 11,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.543,
           "confidenceParts": {
             "coverage": 0.714,
@@ -4227,6 +4445,8 @@
         },
         "agency": {
           "score": 26.8,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.613,
           "confidenceParts": {
             "coverage": 0.75,
@@ -4273,7 +4493,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 0,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -4283,29 +4505,33 @@
           "delphiScore": 18,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 0,
-          "blendedFrom": "indicators",
+          "blendedScore": 18,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 4.4,
-          "confidence": 0.204,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.75,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": 15,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 4.4,
-          "blendedFrom": "indicators",
+          "blendedScore": 15,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 48.9,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.486,
           "confidenceParts": {
             "coverage": 0.714,
@@ -4337,6 +4563,8 @@
         },
         "experimentation": {
           "score": 37.7,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.375,
           "confidenceParts": {
             "coverage": 0.5,
@@ -4382,6 +4610,8 @@
         },
         "adaptability": {
           "score": 49.4,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.475,
           "confidenceParts": {
             "coverage": 0.5,
@@ -4431,6 +4661,8 @@
         },
         "building": {
           "score": 11.2,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -4478,6 +4710,8 @@
         },
         "shared_purpose": {
           "score": 21.9,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.272,
           "confidenceParts": {
             "coverage": 0.286,
@@ -4529,6 +4763,8 @@
       "dimensions": {
         "anticipation": {
           "score": 11.6,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.52,
           "confidenceParts": {
             "coverage": 0.571,
@@ -4576,6 +4812,8 @@
         },
         "agency": {
           "score": 21.2,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.613,
           "confidenceParts": {
             "coverage": 0.75,
@@ -4623,7 +4861,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 47.8,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -4633,29 +4873,33 @@
           "delphiScore": 12,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 47.8,
-          "blendedFrom": "indicators",
+          "blendedScore": 12,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 45,
-          "confidence": 0.181,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.667,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": 14,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 45,
-          "blendedFrom": "indicators",
+          "blendedScore": 14,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 47.8,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.486,
           "confidenceParts": {
             "coverage": 0.714,
@@ -4687,6 +4931,8 @@
         },
         "experimentation": {
           "score": 17.1,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.394,
           "confidenceParts": {
             "coverage": 0.5,
@@ -4718,6 +4964,8 @@
         },
         "adaptability": {
           "score": 54.2,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.465,
           "confidenceParts": {
             "coverage": 0.5,
@@ -4767,6 +5015,8 @@
         },
         "building": {
           "score": 15.4,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -4814,6 +5064,8 @@
         },
         "shared_purpose": {
           "score": 48.2,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.238,
           "confidenceParts": {
             "coverage": 0.286,
@@ -4865,6 +5117,8 @@
       "dimensions": {
         "anticipation": {
           "score": 16.6,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.656,
           "confidenceParts": {
             "coverage": 0.714,
@@ -4914,6 +5168,8 @@
         },
         "agency": {
           "score": 40.4,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.613,
           "confidenceParts": {
             "coverage": 0.75,
@@ -4961,7 +5217,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 0,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -4971,29 +5229,33 @@
           "delphiScore": 45,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 0,
-          "blendedFrom": "indicators",
+          "blendedScore": 45,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 29.1,
-          "confidence": 0.204,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.75,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": 65,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 29.1,
-          "blendedFrom": "indicators",
+          "blendedScore": 65,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 54.8,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.543,
           "confidenceParts": {
             "coverage": 0.714,
@@ -5040,6 +5302,8 @@
         },
         "experimentation": {
           "score": 30.5,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.338,
           "confidenceParts": {
             "coverage": 0.5,
@@ -5056,6 +5320,8 @@
         },
         "adaptability": {
           "score": 65,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.465,
           "confidenceParts": {
             "coverage": 0.5,
@@ -5105,6 +5371,8 @@
         },
         "building": {
           "score": 21.2,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -5152,6 +5420,8 @@
         },
         "shared_purpose": {
           "score": 53.5,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.272,
           "confidenceParts": {
             "coverage": 0.286,
@@ -5203,6 +5473,8 @@
       "dimensions": {
         "anticipation": {
           "score": 21.8,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.644,
           "confidenceParts": {
             "coverage": 0.714,
@@ -5252,6 +5524,8 @@
         },
         "agency": {
           "score": 23.4,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.613,
           "confidenceParts": {
             "coverage": 0.75,
@@ -5298,7 +5572,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 78.3,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -5308,29 +5584,33 @@
           "delphiScore": 45,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 78.3,
-          "blendedFrom": "indicators",
+          "blendedScore": 45,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 18.5,
-          "confidence": 0.204,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.75,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": 50,
           "delphiIqr": 0,
           "delphiDissent": false,
-          "blendedScore": 18.5,
-          "blendedFrom": "indicators",
+          "blendedScore": 50,
+          "blendedFrom": "delphi",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 56.6,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.497,
           "confidenceParts": {
             "coverage": 0.714,
@@ -5362,6 +5642,8 @@
         },
         "experimentation": {
           "score": 23,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.394,
           "confidenceParts": {
             "coverage": 0.5,
@@ -5407,6 +5689,8 @@
         },
         "adaptability": {
           "score": 49.8,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.475,
           "confidenceParts": {
             "coverage": 0.5,
@@ -5456,6 +5740,8 @@
         },
         "building": {
           "score": 31.4,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -5503,6 +5789,8 @@
         },
         "shared_purpose": {
           "score": 32.3,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.272,
           "confidenceParts": {
             "coverage": 0.286,
@@ -5554,6 +5842,8 @@
       "dimensions": {
         "anticipation": {
           "score": 71.3,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.644,
           "confidenceParts": {
             "coverage": 0.714,
@@ -5603,6 +5893,8 @@
         },
         "agency": {
           "score": 51.2,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.603,
           "confidenceParts": {
             "coverage": 0.75,
@@ -5650,7 +5942,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 60.9,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -5660,29 +5954,33 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 60.9,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 61.3,
-          "confidence": 0.204,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.75,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 61.3,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 64.5,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.543,
           "confidenceParts": {
             "coverage": 0.714,
@@ -5714,6 +6012,8 @@
         },
         "experimentation": {
           "score": 45.9,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.178,
           "confidenceParts": {
             "coverage": 0.25,
@@ -5759,6 +6059,8 @@
         },
         "adaptability": {
           "score": 85.8,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.475,
           "confidenceParts": {
             "coverage": 0.5,
@@ -5808,6 +6110,8 @@
         },
         "building": {
           "score": 61.7,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -5855,6 +6159,8 @@
         },
         "shared_purpose": {
           "score": 46.1,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.249,
           "confidenceParts": {
             "coverage": 0.286,
@@ -5906,6 +6212,8 @@
       "dimensions": {
         "anticipation": {
           "score": 56.7,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.644,
           "confidenceParts": {
             "coverage": 0.714,
@@ -5955,6 +6263,8 @@
         },
         "agency": {
           "score": 65.2,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.613,
           "confidenceParts": {
             "coverage": 0.75,
@@ -6002,7 +6312,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 100,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -6012,29 +6324,33 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 100,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 61.2,
-          "confidence": 0.204,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.75,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 61.2,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 70.1,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.543,
           "confidenceParts": {
             "coverage": 0.714,
@@ -6051,6 +6367,8 @@
         },
         "experimentation": {
           "score": 45.1,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.178,
           "confidenceParts": {
             "coverage": 0.25,
@@ -6082,6 +6400,8 @@
         },
         "adaptability": {
           "score": 73.7,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.475,
           "confidenceParts": {
             "coverage": 0.5,
@@ -6131,6 +6451,8 @@
         },
         "building": {
           "score": 41.5,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -6178,6 +6500,8 @@
         },
         "shared_purpose": {
           "score": 80.8,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.26,
           "confidenceParts": {
             "coverage": 0.286,
@@ -6229,6 +6553,8 @@
       "dimensions": {
         "anticipation": {
           "score": 61.9,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.577,
           "confidenceParts": {
             "coverage": 0.714,
@@ -6276,6 +6602,8 @@
         },
         "agency": {
           "score": 79.2,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.613,
           "confidenceParts": {
             "coverage": 0.75,
@@ -6323,7 +6651,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 73.9,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -6333,29 +6663,33 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 73.9,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 63.1,
-          "confidence": 0.181,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.667,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 63.1,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 84.8,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.52,
           "confidenceParts": {
             "coverage": 0.714,
@@ -6401,6 +6735,8 @@
         },
         "experimentation": {
           "score": 33.6,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.178,
           "confidenceParts": {
             "coverage": 0.25,
@@ -6446,6 +6782,8 @@
         },
         "adaptability": {
           "score": 73.3,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.475,
           "confidenceParts": {
             "coverage": 0.5,
@@ -6495,6 +6833,8 @@
         },
         "building": {
           "score": 37.6,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -6542,6 +6882,8 @@
         },
         "shared_purpose": {
           "score": 87.9,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.238,
           "confidenceParts": {
             "coverage": 0.286,
@@ -6593,6 +6935,8 @@
       "dimensions": {
         "anticipation": {
           "score": 53.7,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.644,
           "confidenceParts": {
             "coverage": 0.714,
@@ -6642,6 +6986,8 @@
         },
         "agency": {
           "score": 55.6,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.613,
           "confidenceParts": {
             "coverage": 0.75,
@@ -6689,7 +7035,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 100,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -6699,29 +7047,33 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 100,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 62.8,
-          "confidence": 0.204,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.75,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 62.8,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 68.9,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.543,
           "confidenceParts": {
             "coverage": 0.714,
@@ -6768,6 +7120,8 @@
         },
         "experimentation": {
           "score": 11.1,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.178,
           "confidenceParts": {
             "coverage": 0.25,
@@ -6813,6 +7167,8 @@
         },
         "adaptability": {
           "score": 63.5,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.475,
           "confidenceParts": {
             "coverage": 0.5,
@@ -6862,6 +7218,8 @@
         },
         "building": {
           "score": 22.5,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -6909,6 +7267,8 @@
         },
         "shared_purpose": {
           "score": 57.3,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.26,
           "confidenceParts": {
             "coverage": 0.286,
@@ -6960,6 +7320,8 @@
       "dimensions": {
         "anticipation": {
           "score": 51.6,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.644,
           "confidenceParts": {
             "coverage": 0.714,
@@ -7009,6 +7371,8 @@
         },
         "agency": {
           "score": 29.3,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.613,
           "confidenceParts": {
             "coverage": 0.75,
@@ -7056,7 +7420,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 100,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -7066,29 +7432,33 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 100,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 51.8,
-          "confidence": 0.204,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.75,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 51.8,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 56.3,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.543,
           "confidenceParts": {
             "coverage": 0.714,
@@ -7136,6 +7506,8 @@
         },
         "experimentation": {
           "score": 9.8,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.178,
           "confidenceParts": {
             "coverage": 0.25,
@@ -7181,6 +7553,8 @@
         },
         "adaptability": {
           "score": 68.8,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.475,
           "confidenceParts": {
             "coverage": 0.5,
@@ -7230,6 +7604,8 @@
         },
         "building": {
           "score": 23,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -7277,6 +7653,8 @@
         },
         "shared_purpose": {
           "score": 74,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.249,
           "confidenceParts": {
             "coverage": 0.286,
@@ -7328,6 +7706,8 @@
       "dimensions": {
         "anticipation": {
           "score": 83.4,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.644,
           "confidenceParts": {
             "coverage": 0.714,
@@ -7377,6 +7757,8 @@
         },
         "agency": {
           "score": 71.3,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.613,
           "confidenceParts": {
             "coverage": 0.75,
@@ -7424,7 +7806,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 98,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -7434,29 +7818,33 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 98,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 60.4,
-          "confidence": 0.204,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.75,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 60.4,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 78.1,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.543,
           "confidenceParts": {
             "coverage": 0.714,
@@ -7503,6 +7891,8 @@
         },
         "experimentation": {
           "score": 17.4,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.178,
           "confidenceParts": {
             "coverage": 0.25,
@@ -7534,6 +7924,8 @@
         },
         "adaptability": {
           "score": 78.6,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.475,
           "confidenceParts": {
             "coverage": 0.5,
@@ -7583,6 +7975,8 @@
         },
         "building": {
           "score": 33.8,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -7630,6 +8024,8 @@
         },
         "shared_purpose": {
           "score": 93.4,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.26,
           "confidenceParts": {
             "coverage": 0.286,
@@ -7681,6 +8077,8 @@
       "dimensions": {
         "anticipation": {
           "score": 83,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.644,
           "confidenceParts": {
             "coverage": 0.714,
@@ -7730,6 +8128,8 @@
         },
         "agency": {
           "score": 66,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.613,
           "confidenceParts": {
             "coverage": 0.75,
@@ -7777,7 +8177,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 60.9,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -7787,29 +8189,33 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 60.9,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 61.5,
-          "confidence": 0.204,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.75,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 61.5,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 92,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.543,
           "confidenceParts": {
             "coverage": 0.714,
@@ -7855,6 +8261,8 @@
         },
         "experimentation": {
           "score": 18.8,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.178,
           "confidenceParts": {
             "coverage": 0.25,
@@ -7900,6 +8308,8 @@
         },
         "adaptability": {
           "score": 73.2,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.475,
           "confidenceParts": {
             "coverage": 0.5,
@@ -7949,6 +8359,8 @@
         },
         "building": {
           "score": 32.8,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -7996,6 +8408,8 @@
         },
         "shared_purpose": {
           "score": 95.2,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.26,
           "confidenceParts": {
             "coverage": 0.286,
@@ -8047,6 +8461,8 @@
       "dimensions": {
         "anticipation": {
           "score": 63.6,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.644,
           "confidenceParts": {
             "coverage": 0.714,
@@ -8096,6 +8512,8 @@
         },
         "agency": {
           "score": 63.4,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.613,
           "confidenceParts": {
             "coverage": 0.75,
@@ -8143,7 +8561,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 73.9,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -8153,29 +8573,33 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 73.9,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 55.4,
-          "confidence": 0.204,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.75,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 55.4,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 62.7,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.509,
           "confidenceParts": {
             "coverage": 0.714,
@@ -8221,7 +8645,9 @@
           "indicators": []
         },
         "experimentation": {
-          "score": 0,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.089,
           "confidenceParts": {
             "coverage": 0.125,
@@ -8231,13 +8657,15 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 0,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "adaptability": {
           "score": 70.6,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.475,
           "confidenceParts": {
             "coverage": 0.5,
@@ -8287,6 +8715,8 @@
         },
         "building": {
           "score": 69.2,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -8334,6 +8764,8 @@
         },
         "shared_purpose": {
           "score": 72.9,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.26,
           "confidenceParts": {
             "coverage": 0.286,
@@ -8385,6 +8817,8 @@
       "dimensions": {
         "anticipation": {
           "score": 63,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.644,
           "confidenceParts": {
             "coverage": 0.714,
@@ -8434,6 +8868,8 @@
         },
         "agency": {
           "score": 75.5,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.487,
           "confidenceParts": {
             "coverage": 0.75,
@@ -8464,7 +8900,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 97.8,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -8474,29 +8912,33 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 97.8,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 32.3,
-          "confidence": 0.204,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.75,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 32.3,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 61.7,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.531,
           "confidenceParts": {
             "coverage": 0.714,
@@ -8542,6 +8984,8 @@
         },
         "experimentation": {
           "score": 16.3,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.178,
           "confidenceParts": {
             "coverage": 0.25,
@@ -8573,6 +9017,8 @@
         },
         "adaptability": {
           "score": 80.4,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.475,
           "confidenceParts": {
             "coverage": 0.5,
@@ -8622,6 +9068,8 @@
         },
         "building": {
           "score": 17.5,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.524,
           "confidenceParts": {
             "coverage": 0.625,
@@ -8669,6 +9117,8 @@
         },
         "shared_purpose": {
           "score": 57.4,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.249,
           "confidenceParts": {
             "coverage": 0.286,
@@ -8720,6 +9170,8 @@
       "dimensions": {
         "anticipation": {
           "score": 62.3,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.511,
           "confidenceParts": {
             "coverage": 0.714,
@@ -8767,6 +9219,8 @@
         },
         "agency": {
           "score": 83.1,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.613,
           "confidenceParts": {
             "coverage": 0.75,
@@ -8814,7 +9268,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 61.4,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -8824,29 +9280,33 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 61.4,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 67.2,
-          "confidence": 0.204,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.75,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 67.2,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 82.9,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.543,
           "confidenceParts": {
             "coverage": 0.714,
@@ -8863,6 +9323,8 @@
         },
         "experimentation": {
           "score": 33.5,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.178,
           "confidenceParts": {
             "coverage": 0.25,
@@ -8908,6 +9370,8 @@
         },
         "adaptability": {
           "score": 81.2,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.475,
           "confidenceParts": {
             "coverage": 0.5,
@@ -8957,6 +9421,8 @@
         },
         "building": {
           "score": 27.1,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -9004,6 +9470,8 @@
         },
         "shared_purpose": {
           "score": 79.4,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.204,
           "confidenceParts": {
             "coverage": 0.286,
@@ -9026,6 +9494,8 @@
       "dimensions": {
         "anticipation": {
           "score": 62.5,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.644,
           "confidenceParts": {
             "coverage": 0.714,
@@ -9075,6 +9545,8 @@
         },
         "agency": {
           "score": 58.3,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.613,
           "confidenceParts": {
             "coverage": 0.75,
@@ -9122,7 +9594,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 71,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -9132,29 +9606,33 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 71,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 79.7,
-          "confidence": 0.204,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.75,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 79.7,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 43.9,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.52,
           "confidenceParts": {
             "coverage": 0.714,
@@ -9186,6 +9664,8 @@
         },
         "experimentation": {
           "score": 67.2,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.178,
           "confidenceParts": {
             "coverage": 0.25,
@@ -9217,6 +9697,8 @@
         },
         "adaptability": {
           "score": 85.9,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.465,
           "confidenceParts": {
             "coverage": 0.5,
@@ -9266,6 +9748,8 @@
         },
         "building": {
           "score": 40.3,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -9313,6 +9797,8 @@
         },
         "shared_purpose": {
           "score": 49.2,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.104,
           "confidenceParts": {
             "coverage": 0.286,
@@ -9335,6 +9821,8 @@
       "dimensions": {
         "anticipation": {
           "score": 18.5,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.644,
           "confidenceParts": {
             "coverage": 0.714,
@@ -9384,6 +9872,8 @@
         },
         "agency": {
           "score": 71.5,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.613,
           "confidenceParts": {
             "coverage": 0.75,
@@ -9430,7 +9920,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 77.5,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -9440,29 +9932,33 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 77.5,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 66,
-          "confidence": 0.17,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.625,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 66,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 56.4,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.565,
           "confidenceParts": {
             "coverage": 0.714,
@@ -9494,6 +9990,8 @@
         },
         "experimentation": {
           "score": 97.2,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.178,
           "confidenceParts": {
             "coverage": 0.25,
@@ -9539,6 +10037,8 @@
         },
         "adaptability": {
           "score": 81.8,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.465,
           "confidenceParts": {
             "coverage": 0.5,
@@ -9588,6 +10088,8 @@
         },
         "building": {
           "score": 64.4,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -9635,6 +10137,8 @@
         },
         "shared_purpose": {
           "score": 31.9,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.249,
           "confidenceParts": {
             "coverage": 0.286,
@@ -9686,6 +10190,8 @@
       "dimensions": {
         "anticipation": {
           "score": 13.4,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.577,
           "confidenceParts": {
             "coverage": 0.714,
@@ -9718,6 +10224,8 @@
         },
         "agency": {
           "score": 14,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.613,
           "confidenceParts": {
             "coverage": 0.75,
@@ -9764,7 +10272,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 38.8,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -9774,29 +10284,33 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 38.8,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 75.1,
-          "confidence": 0.192,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.708,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 75.1,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 22.5,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.531,
           "confidenceParts": {
             "coverage": 0.714,
@@ -9843,6 +10357,8 @@
         },
         "experimentation": {
           "score": 0.2,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.178,
           "confidenceParts": {
             "coverage": 0.25,
@@ -9874,6 +10390,8 @@
         },
         "adaptability": {
           "score": 52.8,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.465,
           "confidenceParts": {
             "coverage": 0.5,
@@ -9923,6 +10441,8 @@
         },
         "building": {
           "score": 33.2,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -9970,6 +10490,8 @@
         },
         "shared_purpose": {
           "score": 45.3,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.149,
           "confidenceParts": {
             "coverage": 0.286,
@@ -9992,6 +10514,8 @@
       "dimensions": {
         "anticipation": {
           "score": 7.4,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.644,
           "confidenceParts": {
             "coverage": 0.714,
@@ -10041,6 +10565,8 @@
         },
         "agency": {
           "score": 33.6,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.594,
           "confidenceParts": {
             "coverage": 0.75,
@@ -10087,7 +10613,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 40.2,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -10097,29 +10625,33 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 40.2,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 62.8,
-          "confidence": 0.093,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.342,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 62.8,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 20.1,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.477,
           "confidenceParts": {
             "coverage": 0.714,
@@ -10152,6 +10684,8 @@
         },
         "experimentation": {
           "score": 4.2,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.178,
           "confidenceParts": {
             "coverage": 0.25,
@@ -10183,6 +10717,8 @@
         },
         "adaptability": {
           "score": 71.8,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.465,
           "confidenceParts": {
             "coverage": 0.5,
@@ -10232,6 +10768,8 @@
         },
         "building": {
           "score": 52.8,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.534,
           "confidenceParts": {
             "coverage": 0.625,
@@ -10278,7 +10816,9 @@
           "indicators": []
         },
         "shared_purpose": {
-          "score": 62.9,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.113,
           "confidenceParts": {
             "coverage": 0.143,
@@ -10288,8 +10828,8 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 62.9,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         }
@@ -10301,6 +10841,8 @@
       "dimensions": {
         "anticipation": {
           "score": 11.5,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.577,
           "confidenceParts": {
             "coverage": 0.714,
@@ -10333,6 +10875,8 @@
         },
         "agency": {
           "score": 4.1,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.613,
           "confidenceParts": {
             "coverage": 0.75,
@@ -10380,7 +10924,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 53.8,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -10390,29 +10936,33 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 53.8,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 23.2,
-          "confidence": 0.204,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.75,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 23.2,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 34.1,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.554,
           "confidenceParts": {
             "coverage": 0.714,
@@ -10459,6 +11009,8 @@
         },
         "experimentation": {
           "score": 0,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.178,
           "confidenceParts": {
             "coverage": 0.25,
@@ -10490,6 +11042,8 @@
         },
         "adaptability": {
           "score": 44.4,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.465,
           "confidenceParts": {
             "coverage": 0.5,
@@ -10539,6 +11093,8 @@
         },
         "building": {
           "score": 44.1,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -10585,6 +11141,8 @@
         },
         "shared_purpose": {
           "score": 45.5,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.26,
           "confidenceParts": {
             "coverage": 0.286,
@@ -10636,6 +11194,8 @@
       "dimensions": {
         "anticipation": {
           "score": 28.8,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.622,
           "confidenceParts": {
             "coverage": 0.714,
@@ -10685,6 +11245,8 @@
         },
         "agency": {
           "score": 47.9,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.613,
           "confidenceParts": {
             "coverage": 0.75,
@@ -10732,7 +11294,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 69.6,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -10742,29 +11306,33 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 69.6,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 67.1,
-          "confidence": 0.204,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.75,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 67.1,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 31.5,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.565,
           "confidenceParts": {
             "coverage": 0.714,
@@ -10811,6 +11379,8 @@
         },
         "experimentation": {
           "score": 2.7,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.178,
           "confidenceParts": {
             "coverage": 0.25,
@@ -10856,6 +11426,8 @@
         },
         "adaptability": {
           "score": 56.8,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.465,
           "confidenceParts": {
             "coverage": 0.5,
@@ -10905,6 +11477,8 @@
         },
         "building": {
           "score": 59.3,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -10952,6 +11526,8 @@
         },
         "shared_purpose": {
           "score": 37.9,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.238,
           "confidenceParts": {
             "coverage": 0.286,
@@ -11003,6 +11579,8 @@
       "dimensions": {
         "anticipation": {
           "score": 22.3,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.644,
           "confidenceParts": {
             "coverage": 0.714,
@@ -11052,6 +11630,8 @@
         },
         "agency": {
           "score": 59.4,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.613,
           "confidenceParts": {
             "coverage": 0.75,
@@ -11098,7 +11678,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 52.2,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -11108,29 +11690,33 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 52.2,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 52.8,
-          "confidence": 0.093,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.342,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 52.8,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 28.5,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.565,
           "confidenceParts": {
             "coverage": 0.714,
@@ -11178,6 +11764,8 @@
         },
         "experimentation": {
           "score": 1.5,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.178,
           "confidenceParts": {
             "coverage": 0.25,
@@ -11223,6 +11811,8 @@
         },
         "adaptability": {
           "score": 63.7,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.465,
           "confidenceParts": {
             "coverage": 0.5,
@@ -11272,6 +11862,8 @@
         },
         "building": {
           "score": 46.4,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -11319,6 +11911,8 @@
         },
         "shared_purpose": {
           "score": 58.1,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.272,
           "confidenceParts": {
             "coverage": 0.286,
@@ -11370,6 +11964,8 @@
       "dimensions": {
         "anticipation": {
           "score": 28.3,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.644,
           "confidenceParts": {
             "coverage": 0.714,
@@ -11419,6 +12015,8 @@
         },
         "agency": {
           "score": 34.8,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.613,
           "confidenceParts": {
             "coverage": 0.75,
@@ -11465,7 +12063,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 89.4,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -11475,29 +12075,33 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 89.4,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 44.5,
-          "confidence": 0.204,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.75,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 44.5,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 45.2,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.531,
           "confidenceParts": {
             "coverage": 0.714,
@@ -11544,6 +12148,8 @@
         },
         "experimentation": {
           "score": 42.8,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.178,
           "confidenceParts": {
             "coverage": 0.25,
@@ -11575,6 +12181,8 @@
         },
         "adaptability": {
           "score": 44,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.475,
           "confidenceParts": {
             "coverage": 0.5,
@@ -11624,6 +12232,8 @@
         },
         "building": {
           "score": 35.8,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -11671,6 +12281,8 @@
         },
         "shared_purpose": {
           "score": 46.4,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.26,
           "confidenceParts": {
             "coverage": 0.286,
@@ -11708,6 +12320,8 @@
       "dimensions": {
         "anticipation": {
           "score": 72.3,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.52,
           "confidenceParts": {
             "coverage": 0.571,
@@ -11755,6 +12369,8 @@
         },
         "agency": {
           "score": 50.4,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.613,
           "confidenceParts": {
             "coverage": 0.75,
@@ -11802,7 +12418,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 60.9,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -11812,29 +12430,33 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 60.9,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 30.1,
-          "confidence": 0.192,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.708,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 30.1,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 52.1,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.543,
           "confidenceParts": {
             "coverage": 0.714,
@@ -11881,6 +12503,8 @@
         },
         "experimentation": {
           "score": 8.5,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.178,
           "confidenceParts": {
             "coverage": 0.25,
@@ -11926,6 +12550,8 @@
         },
         "adaptability": {
           "score": 73.2,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.475,
           "confidenceParts": {
             "coverage": 0.5,
@@ -11975,6 +12601,8 @@
         },
         "building": {
           "score": 27.3,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -12022,6 +12650,8 @@
         },
         "shared_purpose": {
           "score": 70.7,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.249,
           "confidenceParts": {
             "coverage": 0.286,
@@ -12073,6 +12703,8 @@
       "dimensions": {
         "anticipation": {
           "score": 24.7,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.599,
           "confidenceParts": {
             "coverage": 0.714,
@@ -12107,6 +12739,8 @@
         },
         "agency": {
           "score": 57.1,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.524,
           "confidenceParts": {
             "coverage": 0.75,
@@ -12138,7 +12772,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 70.7,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -12148,29 +12784,33 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 70.7,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 66.4,
-          "confidence": 0.192,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.708,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 66.4,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 31.9,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.384,
           "confidenceParts": {
             "coverage": 0.571,
@@ -12187,6 +12827,8 @@
         },
         "experimentation": {
           "score": 3.8,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.178,
           "confidenceParts": {
             "coverage": 0.25,
@@ -12218,6 +12860,8 @@
         },
         "adaptability": {
           "score": 85.4,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.465,
           "confidenceParts": {
             "coverage": 0.5,
@@ -12267,6 +12911,8 @@
         },
         "building": {
           "score": 30.8,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.534,
           "confidenceParts": {
             "coverage": 0.625,
@@ -12314,6 +12960,8 @@
         },
         "shared_purpose": {
           "score": 48.4,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.204,
           "confidenceParts": {
             "coverage": 0.286,
@@ -12336,6 +12984,8 @@
       "dimensions": {
         "anticipation": {
           "score": 0,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.554,
           "confidenceParts": {
             "coverage": 0.714,
@@ -12368,6 +13018,8 @@
         },
         "agency": {
           "score": 21.8,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.574,
           "confidenceParts": {
             "coverage": 0.75,
@@ -12415,7 +13067,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 0,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -12425,29 +13079,33 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 0,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 44.8,
-          "confidence": 0.204,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.75,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 44.8,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 15.9,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.378,
           "confidenceParts": {
             "coverage": 0.714,
@@ -12479,6 +13137,8 @@
         },
         "experimentation": {
           "score": 0,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.148,
           "confidenceParts": {
             "coverage": 0.25,
@@ -12495,6 +13155,8 @@
         },
         "adaptability": {
           "score": 54.9,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.465,
           "confidenceParts": {
             "coverage": 0.5,
@@ -12544,6 +13206,8 @@
         },
         "building": {
           "score": 3.4,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -12590,7 +13254,9 @@
           "indicators": []
         },
         "shared_purpose": {
-          "score": 70.6,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.113,
           "confidenceParts": {
             "coverage": 0.143,
@@ -12600,8 +13266,8 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 70.6,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         }
@@ -12613,6 +13279,8 @@
       "dimensions": {
         "anticipation": {
           "score": 2.1,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.667,
           "confidenceParts": {
             "coverage": 0.714,
@@ -12645,6 +13313,8 @@
         },
         "agency": {
           "score": 23.6,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.603,
           "confidenceParts": {
             "coverage": 0.75,
@@ -12690,7 +13360,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 83.2,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -12700,29 +13372,33 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 83.2,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 50.2,
-          "confidence": 0.192,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.708,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 50.2,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 23.3,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.511,
           "confidenceParts": {
             "coverage": 0.714,
@@ -12769,6 +13445,8 @@
         },
         "experimentation": {
           "score": 0,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.168,
           "confidenceParts": {
             "coverage": 0.25,
@@ -12785,6 +13463,8 @@
         },
         "adaptability": {
           "score": 29.2,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.475,
           "confidenceParts": {
             "coverage": 0.5,
@@ -12834,6 +13514,8 @@
         },
         "building": {
           "score": 5.7,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.625,
@@ -12881,6 +13563,8 @@
         },
         "shared_purpose": {
           "score": 46.1,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.238,
           "confidenceParts": {
             "coverage": 0.286,
@@ -12918,6 +13602,8 @@
       "dimensions": {
         "anticipation": {
           "score": 1.7,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.644,
           "confidenceParts": {
             "coverage": 0.714,
@@ -12952,6 +13638,8 @@
         },
         "agency": {
           "score": 28,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.544,
           "confidenceParts": {
             "coverage": 0.75,
@@ -12998,7 +13686,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 9.4,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -13008,29 +13698,33 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 9.4,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 65.6,
-          "confidence": 0.17,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.625,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 65.6,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 25.6,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.565,
           "confidenceParts": {
             "coverage": 0.714,
@@ -13078,6 +13772,8 @@
         },
         "experimentation": {
           "score": 0,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.178,
           "confidenceParts": {
             "coverage": 0.25,
@@ -13109,6 +13805,8 @@
         },
         "adaptability": {
           "score": 20.9,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.465,
           "confidenceParts": {
             "coverage": 0.5,
@@ -13158,6 +13856,8 @@
         },
         "building": {
           "score": 17.8,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.524,
           "confidenceParts": {
             "coverage": 0.625,
@@ -13205,6 +13905,8 @@
         },
         "shared_purpose": {
           "score": 41.9,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.249,
           "confidenceParts": {
             "coverage": 0.286,
@@ -13242,6 +13944,8 @@
       "dimensions": {
         "anticipation": {
           "score": 0,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.509,
           "confidenceParts": {
             "coverage": 0.714,
@@ -13274,6 +13978,8 @@
         },
         "agency": {
           "score": 3.7,
+          "observedIndicators": 6,
+          "belowCoverageFloor": false,
           "confidence": 0.507,
           "confidenceParts": {
             "coverage": 0.75,
@@ -13305,7 +14011,9 @@
           "indicators": []
         },
         "coordination": {
-          "score": 44.7,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
           "confidence": 0.079,
           "confidenceParts": {
             "coverage": 0.143,
@@ -13315,29 +14023,33 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 44.7,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "trust": {
-          "score": 42.2,
-          "confidence": 0.093,
+          "score": null,
+          "observedIndicators": 1,
+          "belowCoverageFloor": true,
+          "confidence": 0.079,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.342,
+            "coverage": 0.143,
+            "recency": 0.583,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 42.2,
-          "blendedFrom": "indicators",
+          "blendedScore": null,
+          "blendedFrom": "none",
           "momentum": [],
           "indicators": []
         },
         "learning": {
           "score": 5.9,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.419,
           "confidenceParts": {
             "coverage": 0.714,
@@ -13383,6 +14095,8 @@
         },
         "experimentation": {
           "score": 0,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.168,
           "confidenceParts": {
             "coverage": 0.25,
@@ -13399,6 +14113,8 @@
         },
         "adaptability": {
           "score": 34.2,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
           "confidence": 0.465,
           "confidenceParts": {
             "coverage": 0.5,
@@ -13448,6 +14164,8 @@
         },
         "building": {
           "score": 6.1,
+          "observedIndicators": 5,
+          "belowCoverageFloor": false,
           "confidence": 0.534,
           "confidenceParts": {
             "coverage": 0.625,
@@ -13495,6 +14213,8 @@
         },
         "shared_purpose": {
           "score": 40.2,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
           "confidence": 0.238,
           "confidenceParts": {
             "coverage": 0.286,

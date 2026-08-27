@@ -10,8 +10,8 @@ Scores are relative to a frame fixed by the 10 reference countries and run 0 to 
 | --- | --- | --- | --- |
 | Anticipation | 22.3 | 0.54 (usable) | +20 over 10 years, on 4 indicators, 1 clamped at the frame edge |
 | Agency | 31 | 0.61 (usable) | +26.2 over 10 years, on 4 indicators, 2 clamped at the frame edge |
-| Coordination | 46.7 | 0.08 (very thin) | no trend basket |
-| Trust | 20.7 | 0.2 (very thin) | no trend basket |
+| Coordination | not scored | 0.08 (very thin) | no trend basket |
+| Trust | not scored | 0.08 (very thin) | no trend basket |
 | Learning | 48.5 | 0.54 (usable) | +4.5 over 10 years, on 2 indicators, 1 clamped at the frame edge |
 | Experimentation | 26 | 0.39 (thin) | +8.5 over 10 years, on 2 indicators |
 | Adaptability | 49.6 | 0.48 (usable) | +17.7 over 10 years, on 4 indicators |
@@ -79,13 +79,13 @@ How effectively can independent actors organize around shared objectives?
 - Declared gaps in this dimension: University-industry collaboration, Civil society strength, Public-private collaboration.
 - Datasets examined and rejected for this dimension: Government effectiveness, Regulatory quality, Logistics performance.
 
-### Trust: confidence 0.2, very thin
+### Trust: confidence 0.08, very thin
 
 How much cooperation is possible beyond immediate personal networks?
 
-- Currently scored on 2 observed indicators.
+- Currently scored on a single observed indicator.
 - Declared gaps in this dimension: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group.
-- Datasets examined and rejected for this dimension: Rule of law, Control of corruption.
+- Datasets examined and rejected for this dimension: Rule of law, Control of corruption, Intentional homicide rate.
 
 ### Shared Purpose: confidence 0.27, thin
 

@@ -129,6 +129,11 @@ port 3888. That entry starts Next directly and does not use the proxy.
   gap is promoted to a scored indicator only when a comparable series covers at
   least two reference countries, which is the minimum `buildFrame` accepts. See
   D20.
+- A dimension with fewer than `MIN_INDICATORS_FOR_SCORE` observed indicators
+  publishes no score. `score` is null, `belowCoverageFloor` is true and
+  `observedIndicators` carries the count. Render it with `DimensionScore`, never
+  with a bare `Score`, and never plot a null at zero: the radar leaves that axis
+  empty. Confidence, the indicator rows and the trend still publish. See D45.
 - Missing values are dropped from the mean and lower coverage. Nothing is imputed.
 - The normalization frame is pinned to the ten **reference** countries. Their
   values alone set every indicator's Tukey fences and its 0 and 100 endpoints.

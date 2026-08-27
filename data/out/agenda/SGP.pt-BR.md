@@ -10,13 +10,13 @@ As notas são relativas a uma régua fixada pelos 10 países de referência e v�
 | --- | --- | --- | --- |
 | Antecipação | 76,3 | 0,62 (utilizável) | +26,6 em 10 anos, sobre 5 indicadores, 1 truncados na borda da régua |
 | Agência | 79,6 | 0,57 (utilizável) | +19,4 em 10 anos, sobre 3 indicadores |
-| Coordenação | 89,1 | 0,08 (muito fraca) | sem base de tendência |
-| Confiança | 100 | 0,2 (muito fraca) | sem base de tendência |
+| Coordenação | sem nota | 0,08 (muito fraca) | sem base de tendência |
+| Confiança | sem nota | 0,08 (muito fraca) | sem base de tendência |
 | Aprendizagem | 57,5 | 0,49 (utilizável) | +7,6 em 10 anos, sobre 2 indicadores |
 | Experimentação | 34,2 | 0,21 (muito fraca) | +8,9 em 10 anos, sobre 2 indicadores |
 | Adaptação | 80,5 | 0,47 (utilizável) | +6,1 em 10 anos, sobre 4 indicadores |
 | Construção | 70,9 | 0,54 (utilizável) | +8,7 em 10 anos, sobre 4 indicadores |
-| Propósito compartilhado | 35 | 0,14 (muito fraca) | sem base de tendência |
+| Propósito compartilhado | sem nota | 0,14 (muito fraca) | sem base de tendência |
 
 ## As dimensões que precisam ser medidas antes de serem geridas
 
@@ -30,6 +30,14 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas nesta dimensão: Colaboração universidade-empresa, Força da sociedade civil, Colaboração público-privada.
 - Bases de dados examinadas e rejeitadas para esta dimensão: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
+### Confiança: confiança 0,08, muito fraca
+
+Quanta cooperação é possível além das redes pessoais imediatas?
+
+- Hoje a nota se apoia em um único indicador observado.
+- Lacunas declaradas nesta dimensão: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo.
+- Bases de dados examinadas e rejeitadas para esta dimensão: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
+
 ### Propósito compartilhado: confiança 0,14, muito fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
@@ -37,14 +45,6 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Hoje a nota se apoia em um único indicador observado.
 - Lacunas declaradas nesta dimensão: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
 - Bases de dados examinadas e rejeitadas para esta dimensão: Voz e responsabilização.
-
-### Confiança: confiança 0,2, muito fraca
-
-Quanta cooperação é possível além das redes pessoais imediatas?
-
-- Hoje a nota se apoia em 2 indicadores observados.
-- Lacunas declaradas nesta dimensão: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo.
-- Bases de dados examinadas e rejeitadas para esta dimensão: Estado de direito, Controle da corrupção.
 
 ### Experimentação: confiança 0,21, muito fraca
 

@@ -10,8 +10,8 @@ Scores are relative to a frame fixed by the 10 reference countries and run 0 to 
 | --- | --- | --- | --- |
 | Anticipation | 83.4 | 0.64 (usable) | +16.9 over 10 years, on 5 indicators, 1 clamped at the frame edge |
 | Agency | 71.3 | 0.61 (usable) | +3.2 over 10 years, on 4 indicators, 1 clamped at the frame edge |
-| Coordination | 98 | 0.08 (very thin) | no trend basket |
-| Trust | 60.4 | 0.2 (very thin) | no trend basket |
+| Coordination | not scored | 0.08 (very thin) | no trend basket |
+| Trust | not scored | 0.08 (very thin) | no trend basket |
 | Learning | 78.1 | 0.54 (usable) | +0.7 over 10 years, on 3 indicators, 2 clamped at the frame edge |
 | Experimentation | 17.4 | 0.18 (very thin) | -3.9 over 10 years, on 2 indicators |
 | Adaptability | 78.6 | 0.48 (usable) | +1.1 over 10 years, on 4 indicators |
@@ -44,20 +44,20 @@ How effectively can independent actors organize around shared objectives?
 - Declared gaps in this dimension: University-industry collaboration, Civil society strength, Public-private collaboration.
 - Datasets examined and rejected for this dimension: Government effectiveness, Regulatory quality, Logistics performance.
 
+### Trust: confidence 0.08, very thin
+
+How much cooperation is possible beyond immediate personal networks?
+
+- Currently scored on a single observed indicator.
+- Declared gaps in this dimension: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group.
+- Datasets examined and rejected for this dimension: Rule of law, Control of corruption, Intentional homicide rate.
+
 ### Experimentation: confidence 0.18, very thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
 - Currently scored on 2 observed indicators.
 - Declared gaps in this dimension: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
-
-### Trust: confidence 0.2, very thin
-
-How much cooperation is possible beyond immediate personal networks?
-
-- Currently scored on 2 observed indicators.
-- Declared gaps in this dimension: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group.
-- Datasets examined and rejected for this dimension: Rule of law, Control of corruption.
 
 ### Shared Purpose: confidence 0.26, thin
 

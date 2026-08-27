@@ -1,12 +1,14 @@
 {
-  "generatedAt": "2026-08-27T22:38:00.978Z",
-  "version": "1.1.0",
+  "generatedAt": "2026-08-27T22:52:32.642Z",
+  "version": "2.0.0",
   "country": {
     "country": "Vietnam",
     "iso3": "VNM",
     "dimensions": {
       "anticipation": {
         "score": 7.4,
+        "observedIndicators": 5,
+        "belowCoverageFloor": false,
         "confidence": 0.644,
         "confidenceParts": {
           "coverage": 0.714,
@@ -679,6 +681,8 @@
       },
       "agency": {
         "score": 33.6,
+        "observedIndicators": 6,
+        "belowCoverageFloor": false,
         "confidence": 0.594,
         "confidenceParts": {
           "coverage": 0.75,
@@ -1660,7 +1664,9 @@
         ]
       },
       "coordination": {
-        "score": 40.2,
+        "score": null,
+        "observedIndicators": 1,
+        "belowCoverageFloor": true,
         "confidence": 0.079,
         "confidenceParts": {
           "coverage": 0.143,
@@ -1670,8 +1676,8 @@
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 40.2,
-        "blendedFrom": "indicators",
+        "blendedScore": null,
+        "blendedFrom": "none",
         "momentum": [],
         "indicators": [
           {
@@ -1819,18 +1825,20 @@
         ]
       },
       "trust": {
-        "score": 62.8,
-        "confidence": 0.093,
+        "score": null,
+        "observedIndicators": 1,
+        "belowCoverageFloor": true,
+        "confidence": 0.079,
         "confidenceParts": {
-          "coverage": 0.286,
-          "recency": 0.342,
+          "coverage": 0.143,
+          "recency": 0.583,
           "sourceQuality": 0.95
         },
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 62.8,
-        "blendedFrom": "indicators",
+        "blendedScore": null,
+        "blendedFrom": "none",
         "momentum": [],
         "indicators": [
           {
@@ -1985,83 +1993,16 @@
             "indicatorId": "homicide_rate",
             "name": "Intentional homicide rate",
             "measurementClass": "O",
-            "raw": 1.535,
-            "transformed": 0.186,
-            "normalized": 51.9,
-            "year": 2011,
+            "raw": null,
+            "transformed": null,
+            "normalized": null,
+            "year": null,
             "source": "World Bank (VC.IHR.PSRC.P5)",
-            "sourceTier": "international_organization",
+            "sourceTier": null,
             "winsorized": false,
             "outOfFrame": false,
-            "series": [
-              {
-                "year": 2001,
-                "raw": 1.288,
-                "normalized": 54.6,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2002,
-                "raw": 1.355,
-                "normalized": 53.9,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2003,
-                "raw": 1.331,
-                "normalized": 54.1,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2004,
-                "raw": 1.323,
-                "normalized": 54.2,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2005,
-                "raw": 1.299,
-                "normalized": 54.5,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2006,
-                "raw": 1.275,
-                "normalized": 54.8,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2007,
-                "raw": 1.397,
-                "normalized": 53.4,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2008,
-                "raw": 1.282,
-                "normalized": 54.7,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2009,
-                "raw": 1.426,
-                "normalized": 53.1,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2010,
-                "raw": 1.528,
-                "normalized": 52,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2011,
-                "raw": 1.535,
-                "normalized": 51.9,
-                "tier": "international_organization"
-              }
-            ],
-            "status": "observed"
+            "series": [],
+            "status": "retired"
           },
           {
             "indicatorId": "interpersonal_trust",
@@ -2112,6 +2053,8 @@
       },
       "learning": {
         "score": 20.1,
+        "observedIndicators": 5,
+        "belowCoverageFloor": false,
         "confidence": 0.477,
         "confidenceParts": {
           "coverage": 0.714,
@@ -2622,6 +2565,8 @@
       },
       "experimentation": {
         "score": 4.2,
+        "observedIndicators": 2,
+        "belowCoverageFloor": false,
         "confidence": 0.178,
         "confidenceParts": {
           "coverage": 0.25,
@@ -3085,6 +3030,8 @@
       },
       "adaptability": {
         "score": 71.8,
+        "observedIndicators": 4,
+        "belowCoverageFloor": false,
         "confidence": 0.465,
         "confidenceParts": {
           "coverage": 0.5,
@@ -4157,6 +4104,8 @@
       },
       "building": {
         "score": 52.8,
+        "observedIndicators": 5,
+        "belowCoverageFloor": false,
         "confidence": 0.534,
         "confidenceParts": {
           "coverage": 0.625,
@@ -5065,7 +5014,9 @@
         ]
       },
       "shared_purpose": {
-        "score": 62.9,
+        "score": null,
+        "observedIndicators": 1,
+        "belowCoverageFloor": true,
         "confidence": 0.113,
         "confidenceParts": {
           "coverage": 0.143,
@@ -5075,8 +5026,8 @@
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 62.9,
-        "blendedFrom": "indicators",
+        "blendedScore": null,
+        "blendedFrom": "none",
         "momentum": [],
         "indicators": [
           {

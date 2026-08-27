@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import type { CountryAgenda, Lexicon } from '@ncb/core'
+import type { CountryAgenda, Dimension, Lexicon } from '@ncb/core'
 import {
   RAISE_BELOW,
   REFERENCE_ISO3,
@@ -165,109 +165,105 @@ export function AgendaView({
 
       {raise.length > 0 ? (
         <Section title={s.raiseHeading} hint={s.raiseIntro}>
-          <div className="space-y-10">
-            {raise.map((d) => (
-              <div key={d.dimension}>
-                <h3 className="flex items-center gap-2 text-xl font-medium tracking-tight">
-                  <Icon name={DIMENSION_ICON[d.dimension]} size={18} className="text-[var(--muted)]" />
-                  {lex.dimensions[d.dimension]}
-                  <Score value={d.score} size="sm" />
-                  <ConfidenceBar value={d.confidence} />
-                </h3>
-                <p className="mt-2 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-                  {lex.questions[d.dimension]}
-                </p>
-                <ul className="mt-3 max-w-3xl list-disc space-y-2 pl-5 text-lg leading-relaxed">
-                  <li>
-                    {d.scoredOn.length === 1
-                      ? s.scoredOnOne
-                      : fill(s.scoredOn, { n: d.scoredOn.length })}{' '}
-                    <span className="text-[var(--muted)]">{trendText(d)}.</span>
-                  </li>
-                  {d.exemplars.length > 0 ? (
-                    <li>
-                      {fillNodes(s.exemplarsLine, {
-                        list: joinNodes(
-                          d.exemplars.map((e) => (
-                            <>
-                              {countryLink(e.iso3)} {fmt(e.score, lex.numberLocale)}
-                            </>
-                          )),
-                        ),
-                      })}
-                    </li>
-                  ) : null}
-                  {d.evidenceElsewhere.length > 0 ? (
-                    <li>
-                      {fillNodes(s.evidenceElsewhereLine, {
-                        list: joinNodes(
-                          d.evidenceElsewhere.map((e) => (
-                            <>
-                              {evidenceLink(e.id, e.title)} ({countryLink(e.iso3)})
-                            </>
-                          )),
-                          '; ',
-                        ),
-                      })}
-                    </li>
-                  ) : null}
-                  {d.gaps.length > 0 ? (
-                    <li>
-                      {fillNodes(s.gapsLine, {
-                        list: joinNodes(d.gaps.map((id) => indicatorLink(id))),
-                      })}
-                    </li>
-                  ) : null}
-                  {d.retired.length > 0 ? (
-                    <li>
-                      {fillNodes(s.retiredLine, {
-                        list: joinNodes(d.retired.map((id) => indicatorLink(id))),
-                      })}
-                    </li>
-                  ) : null}
-                </ul>
-              </div>
-            ))}
+          <div className="grid gap-5">
+            {raise.map((d) => {
+              const rows: React.ReactNode[] = [
+                <>
+                  {d.scoredOn.length === 1
+                    ? s.scoredOnOne
+                    : fill(s.scoredOn, { n: d.scoredOn.length })}{' '}
+                  <span className="text-[var(--muted)]">{trendText(d)}.</span>
+                </>,
+              ]
+              if (d.exemplars.length > 0) {
+                rows.push(
+                  fillNodes(s.exemplarsLine, {
+                    list: joinNodes(
+                      d.exemplars.map((e) => (
+                        <>
+                          {countryLink(e.iso3)} {fmt(e.score, lex.numberLocale)}
+                        </>
+                      )),
+                    ),
+                  }),
+                )
+              }
+              if (d.evidenceElsewhere.length > 0) {
+                rows.push(
+                  fillNodes(s.evidenceElsewhereLine, {
+                    list: joinNodes(
+                      d.evidenceElsewhere.map((e) => (
+                        <>
+                          {evidenceLink(e.id, e.title)} ({countryLink(e.iso3)})
+                        </>
+                      )),
+                      '; ',
+                    ),
+                  }),
+                )
+              }
+              if (d.gaps.length > 0) {
+                rows.push(
+                  fillNodes(s.gapsLine, { list: joinNodes(d.gaps.map((id) => indicatorLink(id))) }),
+                )
+              }
+              if (d.retired.length > 0) {
+                rows.push(
+                  fillNodes(s.retiredLine, {
+                    list: joinNodes(d.retired.map((id) => indicatorLink(id))),
+                  }),
+                )
+              }
+              return (
+                <AgendaCard
+                  key={d.dimension}
+                  dimension={d.dimension}
+                  name={lex.dimensions[d.dimension]}
+                  question={lex.questions[d.dimension]}
+                  score={<Score value={d.score} size="sm" />}
+                  confidence={d.confidence}
+                  rows={rows}
+                />
+              )
+            })}
           </div>
         </Section>
       ) : null}
 
       {measure.length > 0 ? (
         <Section title={s.measureHeading} hint={s.measureIntro}>
-          <div className="space-y-10">
-            {measure.map((d) => (
-              <div key={d.dimension}>
-                <h3 className="flex items-center gap-2 text-xl font-medium tracking-tight">
-                  <Icon name={DIMENSION_ICON[d.dimension]} size={18} className="text-[var(--muted)]" />
-                  {lex.dimensions[d.dimension]}
-                  <ConfidenceBar value={d.confidence} />
-                </h3>
-                <p className="mt-2 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-                  {lex.questions[d.dimension]}
-                </p>
-                <ul className="mt-3 max-w-3xl list-disc space-y-2 pl-5 text-lg leading-relaxed">
-                  <li>
-                    {d.scoredOn.length === 1
-                      ? s.scoredOnOne
-                      : fill(s.scoredOn, { n: d.scoredOn.length })}
-                  </li>
-                  {d.gaps.length > 0 ? (
-                    <li>
-                      {fillNodes(s.gapsLine, {
-                        list: joinNodes(d.gaps.map((id) => indicatorLink(id))),
-                      })}
-                    </li>
-                  ) : null}
-                  {d.retired.length > 0 ? (
-                    <li>
-                      {fillNodes(s.retiredLine, {
-                        list: joinNodes(d.retired.map((id) => indicatorLink(id))),
-                      })}
-                    </li>
-                  ) : null}
-                </ul>
-              </div>
-            ))}
+          <div className="grid gap-5 lg:grid-cols-2">
+            {measure.map((d) => {
+              const rows: React.ReactNode[] = [
+                <>
+                  {d.scoredOn.length === 1
+                    ? s.scoredOnOne
+                    : fill(s.scoredOn, { n: d.scoredOn.length })}
+                </>,
+              ]
+              if (d.gaps.length > 0) {
+                rows.push(
+                  fillNodes(s.gapsLine, { list: joinNodes(d.gaps.map((id) => indicatorLink(id))) }),
+                )
+              }
+              if (d.retired.length > 0) {
+                rows.push(
+                  fillNodes(s.retiredLine, {
+                    list: joinNodes(d.retired.map((id) => indicatorLink(id))),
+                  }),
+                )
+              }
+              return (
+                <AgendaCard
+                  key={d.dimension}
+                  dimension={d.dimension}
+                  name={lex.dimensions[d.dimension]}
+                  question={lex.questions[d.dimension]}
+                  confidence={d.confidence}
+                  rows={rows}
+                />
+              )
+            })}
           </div>
         </Section>
       ) : null}
@@ -348,5 +344,50 @@ export function AgendaView({
         </p>
       </Section>
     </>
+  )
+}
+
+/**
+ * One agenda item, as a card.
+ *
+ * The claims were a bulleted list under a heading, which read as prose and hid
+ * that each line answers a different question: what the score rests on, who
+ * scores higher, who has filed evidence, what is not measured. Rows separated
+ * by a rule make that structure visible without changing a single string, so
+ * the Portuguese page and the markdown documents still render the same
+ * sentences from the same JSON. See D35.
+ */
+function AgendaCard({
+  dimension,
+  name,
+  question,
+  score,
+  confidence,
+  rows,
+}: {
+  dimension: Dimension
+  name: string
+  question: string
+  score?: React.ReactNode
+  confidence: number
+  rows: React.ReactNode[]
+}) {
+  return (
+    <article className="rounded-xl border border-[var(--rule)] p-5">
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+        <Icon name={DIMENSION_ICON[dimension]} size={18} className="text-[var(--muted)]" />
+        <h3 className="text-xl font-medium tracking-tight">{name}</h3>
+        {score}
+        <ConfidenceBar value={confidence} />
+      </div>
+      <p className="mt-2 text-lg leading-relaxed text-[var(--muted)]">{question}</p>
+      <div className="mt-4 divide-y divide-[var(--rule-soft)] border-t border-[var(--rule-soft)]">
+        {rows.map((row, i) => (
+          <p key={i} className="py-3 text-lg leading-relaxed">
+            {row}
+          </p>
+        ))}
+      </div>
+    </article>
   )
 }

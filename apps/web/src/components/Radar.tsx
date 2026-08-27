@@ -195,7 +195,17 @@ export function Radar({
       })}
 
       {series.map((s) => {
-        const pts = DIMENSIONS.map((_, i) => at(i, s.values[i] ?? 0))
+        /* An axis with no score is left empty rather than plotted at zero.
+         * Collapsing it to the centre drew a country as catastrophically weak
+         * on a dimension nobody had measured, which is the exact claim the
+         * coverage floor exists to stop the model making. The shape closes
+         * across the gap, the spoke stays bare, and the accessible description
+         * says "no data" for that axis. See D45. */
+        const measured = DIMENSIONS.map((_, i) => i).filter(
+          (i) => s.values[i] !== null && s.values[i] !== undefined,
+        )
+        const pts = measured.map((i) => at(i, s.values[i] as number))
+        if (pts.length < 2) return null
         return (
           <g key={s.label}>
             <polygon
@@ -204,9 +214,11 @@ export function Radar({
               fillOpacity={s.outline ? 0 : 0.32}
               stroke="none"
             />
-            {pts.flatMap((from, i) => {
-              const j = (i + 1) % pts.length
-              const to = pts[j] as [number, number]
+            {pts.flatMap((from, k) => {
+              const kNext = (k + 1) % pts.length
+              const i = measured[k] as number
+              const j = measured[kNext] as number
+              const to = pts[kNext] as [number, number]
               const a = s.confidences?.[i]
               const b = s.confidences?.[j]
               /* An edge runs between two dimensions that are evidenced
@@ -214,9 +226,9 @@ export function Radar({
                * edge is cut into segments and each segment carries the gap its
                * own position deserves: solid where the evidence is usable,
                * opening into dots as it approaches the thin end. */
-              return Array.from({ length: SEGMENTS }, (_, k) => {
-                const t0 = k / SEGMENTS
-                const t1 = (k + 1) / SEGMENTS
+              return Array.from({ length: SEGMENTS }, (_, seg) => {
+                const t0 = seg / SEGMENTS
+                const t1 = (seg + 1) / SEGMENTS
                 const conf =
                   a === null || a === undefined || b === null || b === undefined
                     ? null
@@ -224,7 +236,7 @@ export function Radar({
                 const gap = dashGap(conf)
                 return (
                   <line
-                    key={`${i}-${k}`}
+                    key={`${i}-${seg}`}
                     x1={from[0] + (to[0] - from[0]) * t0}
                     y1={from[1] + (to[1] - from[1]) * t0}
                     x2={from[0] + (to[0] - from[0]) * t1}
@@ -237,9 +249,8 @@ export function Radar({
                 )
               })
             })}
-            {pts.map((p, i) => {
-              const v = s.values[i]
-              if (v === null || v === undefined) return null
+            {pts.map((p, k) => {
+              const i = measured[k] as number
               const thin = thinAt(s, i)
               return (
                 <circle

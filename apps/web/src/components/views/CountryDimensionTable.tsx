@@ -3,7 +3,7 @@
 import { DIMENSIONS, DIMENSION_LABELS, DISSENT_IQR, primaryMomentum } from '@ncb/core'
 import type { CountryResult } from '@ncb/core'
 import { DataTable } from '@/components/DataTable'
-import { ConfidenceBar, Delta, Score } from '@/components/ui'
+import { ConfidenceBar, Delta, DimensionScore, Score } from '@/components/ui'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { DimensionPeek } from '@/components/views/DimensionPeek'
 
@@ -45,7 +45,7 @@ export function CountryDimensionTable({
       sort: (r: (typeof rows)[number]) => r.dim.score,
       render: (r: (typeof rows)[number]) => (
         <DimensionPeek dimension={r.d} iso3={country.iso3}>
-          <Score value={r.dim.score} />
+          <DimensionScore dim={r.dim} />
         </DimensionPeek>
       ),
     },

@@ -1,12 +1,14 @@
 {
-  "generatedAt": "2026-08-27T22:38:00.978Z",
-  "version": "1.1.0",
+  "generatedAt": "2026-08-27T22:52:32.642Z",
+  "version": "2.0.0",
   "country": {
     "country": "Switzerland",
     "iso3": "CHE",
     "dimensions": {
       "anticipation": {
         "score": 81.1,
+        "observedIndicators": 5,
+        "belowCoverageFloor": false,
         "confidence": 0.644,
         "confidenceParts": {
           "coverage": 0.714,
@@ -729,6 +731,8 @@
       },
       "agency": {
         "score": 69.2,
+        "observedIndicators": 6,
+        "belowCoverageFloor": false,
         "confidence": 0.514,
         "confidenceParts": {
           "coverage": 0.75,
@@ -1739,7 +1743,9 @@
         ]
       },
       "coordination": {
-        "score": 98.9,
+        "score": null,
+        "observedIndicators": 1,
+        "belowCoverageFloor": true,
         "confidence": 0.079,
         "confidenceParts": {
           "coverage": 0.143,
@@ -1749,8 +1755,8 @@
         "delphiScore": 80,
         "delphiIqr": 0,
         "delphiDissent": false,
-        "blendedScore": 98.9,
-        "blendedFrom": "indicators",
+        "blendedScore": 80,
+        "blendedFrom": "delphi",
         "momentum": [],
         "indicators": [
           {
@@ -1898,18 +1904,20 @@
         ]
       },
       "trust": {
-        "score": 59,
-        "confidence": 0.204,
+        "score": null,
+        "observedIndicators": 1,
+        "belowCoverageFloor": true,
+        "confidence": 0.079,
         "confidenceParts": {
-          "coverage": 0.286,
-          "recency": 0.75,
+          "coverage": 0.143,
+          "recency": 0.583,
           "sourceQuality": 0.95
         },
         "delphiScore": 90,
         "delphiIqr": 0,
         "delphiDissent": false,
-        "blendedScore": 59,
-        "blendedFrom": "indicators",
+        "blendedScore": 90,
+        "blendedFrom": "delphi",
         "momentum": [],
         "indicators": [
           {
@@ -2064,185 +2072,16 @@
             "indicatorId": "homicide_rate",
             "name": "Intentional homicide rate",
             "measurementClass": "O",
-            "raw": 0.597,
-            "transformed": -0.224,
-            "normalized": 66.6,
-            "year": 2023,
+            "raw": null,
+            "transformed": null,
+            "normalized": null,
+            "year": null,
             "source": "World Bank (VC.IHR.PSRC.P5)",
-            "sourceTier": "international_organization",
+            "sourceTier": null,
             "winsorized": false,
             "outOfFrame": false,
-            "series": [
-              {
-                "year": 1990,
-                "raw": 1.639,
-                "normalized": 50.9,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1991,
-                "raw": 1.442,
-                "normalized": 52.9,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1992,
-                "raw": 1.353,
-                "normalized": 53.9,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1993,
-                "raw": 1.513,
-                "normalized": 52.1,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1994,
-                "raw": 1.144,
-                "normalized": 56.5,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1995,
-                "raw": 1.165,
-                "normalized": 56.2,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1996,
-                "raw": 1.174,
-                "normalized": 56.1,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1997,
-                "raw": 1.227,
-                "normalized": 55.4,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1998,
-                "raw": 1.069,
-                "normalized": 57.5,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1999,
-                "raw": 1.246,
-                "normalized": 55.2,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2000,
-                "raw": 0.96,
-                "normalized": 59.2,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2001,
-                "raw": 1.19,
-                "normalized": 55.9,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2002,
-                "raw": 1.182,
-                "normalized": 56,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2009,
-                "raw": 0.659,
-                "normalized": 65,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2010,
-                "raw": 0.664,
-                "normalized": 64.9,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2011,
-                "raw": 0.581,
-                "normalized": 67,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2012,
-                "raw": 0.563,
-                "normalized": 67.5,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2013,
-                "raw": 0.704,
-                "normalized": 64,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2014,
-                "raw": 0.501,
-                "normalized": 69.3,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2015,
-                "raw": 0.688,
-                "normalized": 64.4,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2016,
-                "raw": 0.537,
-                "normalized": 68.2,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2017,
-                "raw": 0.532,
-                "normalized": 68.3,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2018,
-                "raw": 0.587,
-                "normalized": 66.8,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2019,
-                "raw": 0.536,
-                "normalized": 68.2,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2020,
-                "raw": 0.544,
-                "normalized": 68,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2021,
-                "raw": 0.482,
-                "normalized": 69.9,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2022,
-                "raw": 0.478,
-                "normalized": 70,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2023,
-                "raw": 0.597,
-                "normalized": 66.6,
-                "tier": "international_organization"
-              }
-            ],
-            "status": "observed"
+            "series": [],
+            "status": "retired"
           },
           {
             "indicatorId": "interpersonal_trust",
@@ -2293,6 +2132,8 @@
       },
       "learning": {
         "score": 77.3,
+        "observedIndicators": 5,
+        "belowCoverageFloor": false,
         "confidence": 0.543,
         "confidenceParts": {
           "coverage": 0.714,
@@ -3107,6 +2948,8 @@
       },
       "experimentation": {
         "score": 47.4,
+        "observedIndicators": 4,
+        "belowCoverageFloor": false,
         "confidence": 0.394,
         "confidenceParts": {
           "coverage": 0.5,
@@ -3719,6 +3562,8 @@
       },
       "adaptability": {
         "score": 88.8,
+        "observedIndicators": 4,
+        "belowCoverageFloor": false,
         "confidence": 0.475,
         "confidenceParts": {
           "coverage": 0.5,
@@ -4809,6 +4654,8 @@
       },
       "building": {
         "score": 54.4,
+        "observedIndicators": 5,
+        "belowCoverageFloor": false,
         "confidence": 0.544,
         "confidenceParts": {
           "coverage": 0.625,
@@ -5820,6 +5667,8 @@
       },
       "shared_purpose": {
         "score": 42.1,
+        "observedIndicators": 2,
+        "belowCoverageFloor": false,
         "confidence": 0.249,
         "confidenceParts": {
           "coverage": 0.286,

@@ -10,13 +10,13 @@ As notas são relativas a uma régua fixada pelos 10 países de referência e v�
 | --- | --- | --- | --- |
 | Antecipação | 7,4 | 0,64 (utilizável) | +6,5 em 10 anos, sobre 5 indicadores, 4 truncados na borda da régua |
 | Agência | 33,6 | 0,59 (utilizável) | +17,5 em 10 anos, sobre 4 indicadores, 2 truncados na borda da régua |
-| Coordenação | 40,2 | 0,08 (muito fraca) | sem base de tendência |
-| Confiança | 62,8 | 0,09 (muito fraca) | sem base de tendência |
+| Coordenação | sem nota | 0,08 (muito fraca) | sem base de tendência |
+| Confiança | sem nota | 0,08 (muito fraca) | sem base de tendência |
 | Aprendizagem | 20,1 | 0,48 (utilizável) | -7,7 em 10 anos, sobre 3 indicadores |
 | Experimentação | 4,2 | 0,18 (muito fraca) | +1,6 em 10 anos, sobre 2 indicadores, 1 truncados na borda da régua |
 | Adaptação | 71,8 | 0,47 (utilizável) | +6,1 em 10 anos, sobre 4 indicadores, 1 truncados na borda da régua |
 | Construção | 52,8 | 0,53 (utilizável) | +9,6 em 10 anos, sobre 4 indicadores, 1 truncados na borda da régua |
-| Propósito compartilhado | 62,9 | 0,11 (muito fraca) | sem base de tendência |
+| Propósito compartilhado | sem nota | 0,11 (muito fraca) | sem base de tendência |
 
 ## As dimensões que a evidência manda elevar
 
@@ -60,13 +60,13 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas nesta dimensão: Colaboração universidade-empresa, Força da sociedade civil, Colaboração público-privada.
 - Bases de dados examinadas e rejeitadas para esta dimensão: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
-### Confiança: confiança 0,09, muito fraca
+### Confiança: confiança 0,08, muito fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
 
-- Hoje a nota se apoia em 2 indicadores observados.
+- Hoje a nota se apoia em um único indicador observado.
 - Lacunas declaradas nesta dimensão: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo.
-- Bases de dados examinadas e rejeitadas para esta dimensão: Estado de direito, Controle da corrupção.
+- Bases de dados examinadas e rejeitadas para esta dimensão: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ### Propósito compartilhado: confiança 0,11, muito fraca
 

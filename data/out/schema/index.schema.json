@@ -32,6 +32,12 @@
                         "null"
                       ]
                     },
+                    "observedIndicators": {
+                      "type": "integer"
+                    },
+                    "belowCoverageFloor": {
+                      "type": "boolean"
+                    },
                     "confidence": {
                       "type": "number"
                     },
@@ -279,6 +285,8 @@
                   },
                   "required": [
                     "score",
+                    "observedIndicators",
+                    "belowCoverageFloor",
                     "confidence",
                     "confidenceParts",
                     "delphiScore",
