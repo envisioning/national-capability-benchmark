@@ -203,20 +203,27 @@ export async function validateEvidence(path = FILES.evidence): Promise<Problem[]
  *
  * Reading the verdicts:
  * - 404 or 410 is an error: the page is gone and the record's URL claim is false.
- * - Any other failure (403, 5xx, timeout) is a warning: from here, a server
- *   that blocks non-browser clients is indistinguishable from a dead one, and
- *   several corpus sources (CDC among them) 403 exactly this kind of request.
- *   Check those by hand before touching the record.
+ * - Any other failure (403, 5xx, timeout, DNS) is a warning: from here, a
+ *   server that blocks non-browser clients is indistinguishable from a dead
+ *   one, and several corpus sources 403 exactly this kind of request. Check
+ *   those by hand before touching the record.
  * - A redirect that lands 200 on another host is a warning: the number may
  *   still be there, but the record should cite where the page lives now.
+ *
+ * The corpus holds slow publishers: ipeadata.gov.br has taken 14s and
+ * pmjdy.gov.in 10s in a measured run. The ceiling is therefore 30s, four
+ * requests run at a time, and a request that fails the network rather than
+ * answering is tried once more. Without that, a warning list changed on every
+ * run and named a different half of the corpus each time.
  */
 export async function checkEvidenceUrls(
   path = FILES.evidence,
-  opts: { timeoutMs?: number; concurrency?: number } = {},
+  opts: { timeoutMs?: number; concurrency?: number; retries?: number } = {},
 ): Promise<Problem[]> {
   const file = basename(path)
-  const timeoutMs = opts.timeoutMs ?? 15_000
-  const concurrency = opts.concurrency ?? 6
+  const timeoutMs = opts.timeoutMs ?? 30_000
+  const concurrency = opts.concurrency ?? 4
+  const retries = opts.retries ?? 1
 
   let raw: unknown
   try {
@@ -239,8 +246,12 @@ export async function checkEvidenceUrls(
 
   const host = (u: string) => new URL(u).hostname.replace(/^www\./, '')
 
-  async function check(url: string, ids: string[]): Promise<Problem | null> {
-    const who = ids.join(', ')
+  /**
+   * One request. Returns a verdict, or a network failure for the caller to
+   * retry. An abort and a refused connection are different facts, so they are
+   * reported as different things.
+   */
+  async function attempt(url: string, who: string): Promise<Problem | null | { failure: string }> {
     const controller = new AbortController()
     const timer = setTimeout(() => controller.abort(), timeoutMs)
     try {
@@ -266,10 +277,36 @@ export async function checkEvidenceUrls(
         return { file, severity: 'warning', problem: `${who}: source URL redirects to ${new URL(res.url).hostname} — the page moved hosts, update the record to cite where it lives now` }
       }
       return null
-    } catch {
-      return { file, severity: 'warning', problem: `${who}: source URL did not answer within ${timeoutMs / 1000}s — network failure or a hung server, retry before touching the record` }
+    } catch (err) {
+      /* Name what actually happened. `fetch` reports a timeout as an abort and
+       * everything else as a TypeError carrying the real code, so a message
+       * that says "timed out" for all of them describes the wrong problem. */
+      const aborted = controller.signal.aborted
+      const cause = (err as { cause?: { code?: string } }).cause?.code
+      return {
+        failure: aborted
+          ? `did not answer within ${timeoutMs / 1000}s`
+          : `did not answer (${cause ?? (err as Error).name})`,
+      }
     } finally {
       clearTimeout(timer)
+    }
+  }
+
+  async function check(url: string, ids: string[]): Promise<Problem | null> {
+    const who = ids.join(', ')
+    let failure = ''
+    for (let tries = 0; tries <= retries; tries++) {
+      if (tries > 0) await new Promise((r) => setTimeout(r, 1_000))
+      const result = await attempt(url, who)
+      if (result === null || 'severity' in result) return result
+      failure = result.failure
+    }
+    const attempts = retries + 1
+    return {
+      file,
+      severity: 'warning',
+      problem: `${who}: source URL ${failure}${attempts > 1 ? `, ${attempts} times` : ''} — network failure or a hung server, check in a browser before touching the record`,
     }
   }
 
