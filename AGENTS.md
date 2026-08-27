@@ -157,6 +157,28 @@ Other traps found the hard way:
 - Verify a new series against all ten countries before adding it to the
   registry. A code that resolves for Brazil can be empty for Singapore.
 
+## Deployment
+
+The viewer deploys to Vercel under the `ev-io` scope, project
+`national-capability-benchmark`, with **Root Directory set to `apps/web`**. The
+build command is `pnpm --filter @ncb/core build && next build`, because the app
+imports the core package from `dist`.
+
+Two traps, both of which cost a failed deploy once:
+
+- With Root Directory at the repository root, Vercel reports "No Next.js version
+  detected". The Next builder needs the directory holding the app's
+  `package.json`, and `apps/web/vercel.json` is the config it reads.
+- The viewer loads its data from `data/out` at request time, through paths no
+  bundler can see. `outputFileTracingIncludes` in `apps/web/next.config.ts` lists
+  them, and `apps/web/src/lib/data.ts` resolves the data root by trying
+  candidates and taking the first with an index. A tracing miss is silent: every
+  page renders its empty state and nothing errors.
+
+Data is committed, so a deploy ships whatever `data/out` held at the last commit.
+Refreshing the site means running `pnpm bench all`, committing the output and
+deploying again.
+
 ## Build order
 
 Do not run `pnpm build` while `next dev` is running: both write `apps/web/.next`
