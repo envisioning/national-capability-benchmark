@@ -14,13 +14,22 @@ const config: NextConfig = {
   // JSON and every page 500s. Observations are deliberately absent: 9 MB the
   // viewer never opens.
   outputFileTracingIncludes: {
+    /* Both spellings on purpose. Whether these globs resolve against the app or
+     * against the tracing root has changed between versions, and a miss is
+     * silent: the pages render their empty state and nothing errors. */
     '/**': [
       '../../data/out/index.json',
-      '../../data/out/countries/**',
-      '../../data/out/indicators/**',
       '../../data/out/diagnostics.json',
-      '../../data/evidence/**',
+      '../../data/out/countries/*.json',
+      '../../data/out/indicators/*.json',
+      '../../data/evidence/*.json',
       '../../data/delphi/latest.json',
+      'data/out/index.json',
+      'data/out/diagnostics.json',
+      'data/out/countries/*.json',
+      'data/out/indicators/*.json',
+      'data/evidence/*.json',
+      'data/delphi/latest.json',
     ],
   },
 }
