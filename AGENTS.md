@@ -221,30 +221,30 @@ Do not run `pnpm build` while `next dev` is running: both write `apps/web/.next`
 and the production build leaves the dev server serving pages with no CSS. Stop
 the dev server, or `rm -rf apps/web/.next` and restart it.
 
-When somebody else is using the dev server, build into another directory
-instead: `NEXT_DIST_DIR=.next-build pnpm build`. That build rewrites two files
-to point at whichever directory it used, so check both afterwards and revert the
-churn before committing: `apps/web/tsconfig.json` gains a types path, and
+When somebody else is using the dev server, build into your own directory
+instead: `NEXT_DIST_DIR=.next-$$ pnpm build`. The `$$` is the shell PID, so two
+agents never pick the same name. That build rewrites two files to point at
+whichever directory it used, so check both afterwards and revert the churn
+before committing: `apps/web/tsconfig.json` gains a types path, and
 `apps/web/next-env.d.ts` repoints its route-types reference. Both must name
 `.next` on `main`, because that is where a normal build writes.
 
-Two `next build` runs at once destroy each other. The trap is that this file
-tells every agent to use `.next-build`, so a second agent picks the same
-directory and writes into it, or deletes it, while the first build is still
-running. The errors that follow name real files and mean nothing: the webpack
-cache reports `ENOENT` on a pack file, and `next build` dies with `require is
-not defined in ES module scope` inside a generated `pages/_document.js`. The
-code is correct. Do not debug those errors.
+Two `next build` runs at once destroy each other, which is why that directory
+name carries a PID. A fixed name collides: the second agent writes into the
+first agent's directory, or deletes it, while the first build still runs. The
+errors that follow name real files and mean nothing. The webpack cache reports
+`ENOENT` on a pack file, and `next build` dies with `require is not defined in
+ES module scope` inside a generated `pages/_document.js`. The code is correct.
+Do not debug those errors.
 
-Check for a running build first, then give your build its own directory:
+Check for a running build before you start one:
 
 ```
 ps aux | grep "[n]ext build"
-NEXT_DIST_DIR=.next-$$ pnpm build
 ```
 
-`.gitignore` covers `.next-*`. Delete the directory when the build finishes.
-Never `rm -rf` a directory that another build is writing.
+`.gitignore` covers `.next-*`. Delete your directory when the build finishes.
+Never `rm -rf` a directory that another build writes.
 
 
 `apps/web` imports `@ncb/core` from `dist`, not from source. Run
