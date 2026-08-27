@@ -62,7 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </a>
 
         <header className="w-full border-b border-[var(--rule)]">
-          <div className="m-auto flex max-w-6xl flex-wrap items-end gap-x-8 gap-y-4 px-6 py-6 sm:px-12">
+          <div className="m-auto flex max-w-6xl flex-wrap items-center gap-x-8 gap-y-4 px-6 py-6 sm:px-12">
             {/* The lockup: the short name carries the size, the long name sits
                 under it in three lines so the block stays narrow beside the nav. */}
             <Link href="/" className="flex flex-col leading-none">
