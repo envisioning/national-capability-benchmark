@@ -5,9 +5,14 @@ change, coordinating action, learning, adapting and building under uncertainty â
 rather than how rich, comfortable or competitive it is.
 
 Nine capability dimensions, forty countries, 0 to 100 per dimension, no
-headline ranking. Every raw indicator stays visible with its source and year. Evidence
-quality is reported as a separate confidence score and is never folded into the
-capability score.
+headline ranking. Every raw indicator stays visible with its source and year.
+Evidence quality is reported as a separate confidence score and is never folded
+into the capability score.
+
+Brazil is the case this work is meant to serve first. The frame applies to every
+country in the set on the same terms, because a capability frame that only fits
+one country describes that country instead of measuring capability.
+[docs/WHY.md](docs/WHY.md) states the claim being tested and what would sink it.
 
 ## Quick start
 
@@ -117,6 +122,7 @@ data/           observations in, scores and reports out
 ```
 
 ```
+docs/WHY.md              the claim being tested, and what this must not become
 docs/DECISIONS.md        every methodological choice and what would overturn it
 docs/KNOWN-ARTEFACTS.md  where v0 is wrong about the world, not just uncertain
 docs/PANEL.md            the Delphi contract: provenance, models, cost

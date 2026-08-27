@@ -20,6 +20,35 @@ export default function MethodPage() {
   return (
     <>
       <Section
+        title="Why this exists"
+        hint="The benchmark tests one claim: that what a country is able to do is a separate property from what it earns. If the claim holds, two countries at the same income have different capability shapes. If it fails, the nine dimensions collapse into a single factor that tracks income per head, and the diagnostics are built to say so rather than hide it."
+      >
+        <ul className="max-w-3xl list-disc space-y-3 pl-5 text-lg leading-relaxed">
+          <li>
+            Brazil is the case this work is meant to serve first, and it is one of the{' '}
+            {REFERENCE_ISO3.length} countries that fix the scale. Nothing about it is treated
+            differently anywhere else. A frame that only fits one country describes that country
+            instead of measuring capability.
+          </li>
+          <li>
+            A high score is not a model to copy. A mechanism that works in one country works because
+            of conditions that do not travel with it. The shape says where to look, not what to
+            build.
+          </li>
+          <li>
+            Capability changes below the national level, in groups small enough to act. A country
+            score can only describe the conditions those groups work in, so treat every number here
+            as a coarse proxy for something happening several levels underneath it.
+          </li>
+          <li>
+            This is a measuring instrument, not a report card. It exists so that an attempt to raise
+            a capability can be checked afterwards, which is why confidence, declared gaps and
+            revisions are published beside every score instead of being resolved into it.
+          </li>
+        </ul>
+      </Section>
+
+      <Section
         title="This measures capability, not wealth"
         hint="Capacity to anticipate change, coordinate action, learn, adapt and build under uncertainty. It is not a measure of wealth, quality of life, competitiveness or government popularity."
       >
