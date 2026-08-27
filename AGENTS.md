@@ -19,15 +19,32 @@ pnpm bench validate    schema-check data/delphi and data/evidence
 pnpm bench all         ingest, score, diagnose, report, agenda
 pnpm build             tsc for packages/core, then next build for apps/web
 pnpm typecheck         both packages
-pnpm dev               the viewer at localhost:3000
+pnpm dev               the viewer at https://ncb.localhost (port 3888 behind it)
 ```
 
 The green gate is `pnpm build` plus `pnpm typecheck`. Both must pass. Run
 `pnpm bench validate` after touching anything in `data/delphi` or
 `data/evidence`.
 
+`pnpm dev` runs the viewer through portless. The `dev` script in
+`apps/web/package.json` is `portless`, and the `portless` key in the same file
+names the app `ncb`, pins the child port to 3888, and points portless at the
+real command in `dev:app`. Never set that key's `script` to `dev`: portless then
+calls itself and the run fails with a duplicate route.
+
+Keep the config in `apps/web/package.json`. A `portless.json` at the repo root
+does not apply here. Portless read the package name instead of the root config
+and recursed.
+
+Port 3000 is the default for every other Next.js app on this machine, so this
+repo fixes 3888 in `dev:app` and in `appPort`. Both must hold the same number.
+
+To run without the proxy, use `PORTLESS=0 pnpm dev` or `pnpm --filter @ncb/web
+dev:app`. Both serve http://localhost:3888. Portless needs a global install
+(`pnpm add -g portless`); the repo does not depend on it.
+
 The viewer is registered in `~/Dev/.claude/launch.json` as `benchmark-web` on
-port 3888.
+port 3888. That entry starts Next directly and does not use the proxy.
 
 ## Read these before changing the model
 
