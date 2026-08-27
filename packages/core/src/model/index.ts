@@ -1,5 +1,6 @@
 export * from './dimensions.js'
 export * from './version.js'
+export * from './project.js'
 export * from './countries.js'
 export * from './schema.js'
 export * from './indicators.js'

@@ -3,6 +3,7 @@ import {
   COUNTRY_ISO3,
   DATASET_VERSION,
   DIMENSIONS,
+  REPO_URL,
   CountryFile,
   IndexFile,
   IndicatorAcrossCountries,
@@ -39,7 +40,7 @@ export function buildDataPackage(indicatorIds: string[], generatedAt: string): o
       'A prototype that measures what a country can do, separately from how rich it is. Nine capability dimensions scored from public data, each with a separate confidence number.',
     version: DATASET_VERSION,
     created: generatedAt,
-    homepage: 'https://github.com/envisioning/national-capability-benchmark',
+    homepage: REPO_URL,
     licenses: [
       {
         name: 'CC-BY-4.0',

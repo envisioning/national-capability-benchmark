@@ -1405,3 +1405,52 @@ above the grid, not a return to a focal country.
 **Overturned by.** Use showing readers cannot enter the grid without a worked
 example. A decision to make this viewer a country-specific product, which would
 put the focal case back and make the global grid the secondary surface.
+
+---
+
+## D40 — A date is metadata, and a document a reader is told to open is a link
+
+*Recorded 2026-08-27. Extends D35.*
+
+**Choice.** Two presentation rules, both applied everywhere a document is
+rendered.
+
+A generation date is metadata about the document, so it sits under the title on
+its own line and never inside a sentence. The agenda lexicons carry it as
+`agenda.generated`, separate from `agenda.intro`, and the renderer prints it as
+a dateline: `*Gerado em 2026-08-27 a partir da rodada de dados atual*`. The
+viewer prints the same string in the muted metadata size under the page title.
+`report.md` splits its dateline off the same way. The intro that follows now
+opens on what a score means, which is the first thing a reader needs.
+
+A repository file a rendered document tells a reader to open is a link. The URL
+is built by `docHref` in `packages/core/src/model/project.ts`, which also holds
+`REPO_URL`, `LIMITS_DOC` and `DECISIONS_DOC`. The agenda intro links
+`docs/KNOWN-ARTEFACTS.md`, the report links `docs/DECISIONS.md`, and
+`datapackage.json` reads its homepage from the same constant instead of
+repeating the URL.
+
+**Why.** "Gerado em 2026-08-27 a partir da rodada de dados atual." read as the
+first claim the agenda makes, ahead of the claim about what the numbers are.
+Nobody reads a document for its build date.
+
+The linking rule fixes a worse problem. The agenda tells every reader to read
+the limits before quoting a number, and it named a path only somebody with a
+checkout could open. The instruction was correct and the reader could not follow
+it. A published document reaches people who will never clone the repository.
+
+**Cost.**
+
+- `docHref` pins the `main` branch, so a link from an old rendered document
+  points at the current file rather than the file that was current when the
+  document was written. The alternative, a commit SHA, would make the output
+  churn on every run.
+- The lexicons carry one more key, and a partial lexicon that omits `generated`
+  falls back to English while the rest of the page is translated.
+- Markdown emphasis is the whole dateline treatment. A renderer that ignores
+  emphasis prints the date as an ordinary line.
+
+**Overturned by.** A viewer page that renders the limits document itself, which
+would give the viewer a local target for `{limits}` while the markdown keeps the
+repository link. Or a versioned documentation site, which would replace the
+branch in `docHref` with a release.
