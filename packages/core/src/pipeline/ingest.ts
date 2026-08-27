@@ -225,6 +225,21 @@ export async function ingestWorldBank(
   const before = parsedExisting?.success ? parsedExisting.data.observations : []
   const previousRetrievedAt = parsedExisting?.success ? parsedExisting.data.generatedAt : null
 
+  /* A series that failed this run is carried forward from the previous file
+   * rather than dropped. Dropping it would score the run on less data and, per
+   * D25, write the loss into the revision log as the publisher removing decades
+   * of observations, when the truth is one failed request. */
+  const failedTargets = new Set<string>()
+  for (const r of report) {
+    if (!r.error) continue
+    for (const id of seriesToIndicators.get(r.series) ?? []) failedTargets.add(id)
+    if (denominators.has(r.series)) failedTargets.add(`${DENOMINATOR_PREFIX}${r.series}`)
+    if (r.series === GDP_PER_CAPITA_CODE) failedTargets.add(`${CONTEXT_PREFIX}${r.series}`)
+  }
+  if (failedTargets.size > 0) {
+    observations.push(...before.filter((o) => failedTargets.has(o.indicatorId)))
+  }
+
   const body = `${JSON.stringify({ generatedAt: retrievedAt, observations }, null, 2)}\n`
   await mkdir(dirname(FILES.worldBank), { recursive: true })
   await writeFile(FILES.worldBank, body)
