@@ -18,6 +18,8 @@ export const DENOMINATOR_PREFIX = '__denominator__'
 export const WEALTH_CORRELATION_THRESHOLD = 0.7
 /** Correlation above this marks two indicators as carrying the same information. */
 export const REDUNDANCY_THRESHOLD = 0.85
+/** Correlation above this marks two dimensions as candidates for having collapsed into one. */
+export const DIMENSION_OVERLAP_THRESHOLD = 0.9
 
 function logGdpByCountry(observations: Observation[], series: string): Map<string, number> {
   /* The observation file carries every year, so pick the latest one per country
@@ -112,7 +114,21 @@ export type Diagnostics = {
     name: string
     publisher: string
     reason: string
+    /** A gap has no dataset. A retired row has one this project rejected. */
+    status: 'gap' | 'retired'
   }>
+  /**
+   * How often observed values sit outside the reference frame and clamp to 0 or
+   * 100. Frequent clamping means the frame is too narrow for the countries being
+   * scored, and this is where that shows up as one number instead of a silent
+   * per-cell flag.
+   */
+  outOfFrame: {
+    observedCells: number
+    clampedCells: number
+    share: number
+    perCountry: Array<{ iso3: string; country: string; clampedCells: number }>
+  }
 }
 
 function rankOrder(values: Map<string, number>): string[] {
@@ -248,7 +264,26 @@ export function runDiagnostics(
     name: d.name,
     publisher: d.source.publisher,
     reason: d.notes,
+    status: (d.ingest === 'retired' ? 'retired' : 'gap') as 'gap' | 'retired',
   }))
+
+  let observedCells = 0
+  const clampedByCountry = new Map<string, number>()
+  for (const inner of matrix.values()) {
+    for (const [iso3, cell] of inner) {
+      observedCells += 1
+      if (cell.outOfFrame) clampedByCountry.set(iso3, (clampedByCountry.get(iso3) ?? 0) + 1)
+    }
+  }
+  const clampedCells = [...clampedByCountry.values()].reduce((a, b) => a + b, 0)
+  const outOfFrame = {
+    observedCells,
+    clampedCells,
+    share: observedCells === 0 ? 0 : round(clampedCells / observedCells, 3),
+    perCountry: [...clampedByCountry.entries()]
+      .map(([iso3, n]) => ({ iso3, country: COUNTRY_NAMES[iso3] ?? iso3, clampedCells: n }))
+      .sort((a, b) => b.clampedCells - a.clampedCells),
+  }
 
   return {
     generatedAt: new Date().toISOString(),
@@ -260,7 +295,7 @@ export function runDiagnostics(
     })),
     dimensionPairs: dimensionPairs.map((p) => ({ ...p, r: p.r === null ? null : round(p.r, 3) })),
     duplicateDimensionCandidates: dimensionPairs
-      .filter((p) => (p.r ?? 0) >= 0.9)
+      .filter((p) => (p.r ?? 0) >= DIMENSION_OVERLAP_THRESHOLD)
       .map((p) => ({ ...p, r: p.r === null ? null : round(p.r, 3) })),
     indicatorVsGdp,
     redundantIndicatorPairs,
@@ -275,5 +310,6 @@ export function runDiagnostics(
       rankChanges,
     },
     dataGaps,
+    outOfFrame,
   }
 }

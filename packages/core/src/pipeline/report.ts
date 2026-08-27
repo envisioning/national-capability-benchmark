@@ -1,14 +1,23 @@
 import {
   COUNTRY_FRAMES,
+  DECISIONS_DOC,
   DIMENSIONS,
   DIMENSION_LABELS,
+  DISSENT_IQR,
   INDICATORS_BY_ID,
+  docHref,
   isEvidential,
+  isPanel,
 } from '../model/index.js'
 import { CONFIDENCE_BANDS, confidenceBand } from './confidence.js'
 import { momentumSpansIn } from './trend.js'
 import type { CountryResult, DelphiRunFile, Dimension } from '../model/index.js'
-import type { Diagnostics } from './diagnostics.js'
+import {
+  DIMENSION_OVERLAP_THRESHOLD,
+  REDUNDANCY_THRESHOLD,
+  WEALTH_CORRELATION_THRESHOLD,
+  type Diagnostics,
+} from './diagnostics.js'
 import { cellConsensus, indicatorConsensus, missingEvidenceRanking } from '../delphi/consensus.js'
 import { median, round } from './stats.js'
 
@@ -30,8 +39,12 @@ export function buildReport(
 
   out.push('# National Capability Benchmark, prototype v0')
   out.push('')
+  /* The dateline is metadata about the run, so it sits under the title on its
+   * own line and stays out of the sentence that states the shape of the model. */
+  out.push(`*Generated ${diag.generatedAt}*`)
+  out.push('')
   out.push(
-    `Generated ${diag.generatedAt}. ${countries.length} countries, nine dimensions, equal weights within each dimension, no headline ranking.`,
+    `${countries.length} countries, nine dimensions, equal weights within each dimension, no headline ranking.`,
   )
   out.push('')
   const extended = countries.filter((c) => COUNTRY_FRAMES[c.iso3] === 'extended')
@@ -79,7 +92,7 @@ export function buildReport(
     out.push('')
   } else {
     out.push(
-      'Change in dimension score, scored against the current frame so the scale holds still, and computed only on the indicators observed at both ends. That matched basket is smaller than the full dimension, so these numbers move on a different base from the scores above. The number in brackets is how many indicators carry the cell.',
+      'Change in dimension score, scored against the current frame so the scale holds still, and computed only on the indicators observed at both ends. That matched basket is smaller than the full dimension, so these numbers move on a different base from the scores above. The number in brackets is how many indicators carry the cell. Where part of the basket sits outside the reference frame at either end, the cell is marked "clamped": part of that change is the distance to the clamp boundary rather than movement in the country.',
     )
     out.push('')
     for (const span of spans) {
@@ -95,7 +108,8 @@ export function buildReport(
             ...DIMENSIONS.map((d) => {
               const m = at(c, d)
               if (!m) return null
-              return `${m.delta > 0 ? '+' : ''}${m.delta.toFixed(1)} (${m.matchedIndicators})`
+              const clamp = m.clamped > 0 ? `, ${m.clamped} clamped` : ''
+              return `${m.delta > 0 ? '+' : ''}${m.delta.toFixed(1)} (${m.matchedIndicators}${clamp})`
             }),
           ]),
         ),
@@ -125,12 +139,17 @@ export function buildReport(
     out.push('')
   }
 
-  const best = Math.max(
-    ...countries.flatMap((c) => DIMENSIONS.map((d) => c.dimensions[d]?.confidence ?? 0)),
+  const confidences = countries.flatMap((c) =>
+    DIMENSIONS.map((d) => c.dimensions[d]?.confidence ?? 0),
   )
+  const best = Math.max(...confidences)
   const topBand = confidenceBand(best)
+  const goodCells = confidences.filter((v) => confidenceBand(v).id === 'good').length
   out.push(
-    `The strongest evidence base anywhere in this run scores ${best.toFixed(2)}, which is ${topBand.label}. No country and dimension pair reaches the good band.`,
+    `The strongest evidence base anywhere in this run scores ${best.toFixed(2)}, which is ${topBand.label}. ` +
+      (goodCells === 0
+        ? 'No country and dimension pair reaches the good band.'
+        : `${goodCells} of ${confidences.length} country and dimension pairs reach the good band.`),
   )
   out.push('')
   out.push('Bands:')
@@ -213,7 +232,7 @@ export function buildReport(
 
   out.push('## The model is re-scored without its wealth-correlated indicators')
   out.push('')
-  out.push(`Dropped ${diag.gdpStrippedTest.excluded.length} indicators correlating with log GDP per capita at 0.7 or above, then re-scored.`)
+  out.push(`Dropped ${diag.gdpStrippedTest.excluded.length} indicators correlating with log GDP per capita at ${WEALTH_CORRELATION_THRESHOLD} or above, then re-scored.`)
   out.push('')
   if (diag.gdpStrippedTest.dimensionsEmptied.length > 0) {
     out.push(
@@ -233,10 +252,26 @@ export function buildReport(
   )
   out.push('')
 
+  out.push('## Values outside the frame clamp, and the clamps are counted')
+  out.push('')
+  out.push(
+    `${diag.outOfFrame.clampedCells} of ${diag.outOfFrame.observedCells} observed cells (${Math.round(diag.outOfFrame.share * 100)}%) sit outside the reference frame and clamp to 0 or 100. Frequent clamping means the frame is too narrow for the countries being scored, not that the scale should be widened quietly.`,
+  )
+  out.push('')
+  if (diag.outOfFrame.perCountry.length > 0) {
+    out.push(
+      table(
+        ['Country', 'Clamped cells'],
+        diag.outOfFrame.perCountry.slice(0, 10).map((c) => [c.country, c.clampedCells]),
+      ),
+    )
+    out.push('')
+  }
+
   out.push('## Indicator pairs are checked for redundancy')
   out.push('')
   if (diag.redundantIndicatorPairs.length === 0) {
-    out.push('No indicator pair reaches 0.85 across the ten countries.')
+    out.push(`No indicator pair reaches ${REDUNDANCY_THRESHOLD} across the ${countries.length} countries.`)
   } else {
     out.push(
       table(
@@ -256,7 +291,7 @@ export function buildReport(
   out.push('## Dimension pairs are checked for overlap')
   out.push('')
   if (diag.duplicateDimensionCandidates.length === 0) {
-    out.push('No dimension pair reaches 0.9. The nine dimensions carry distinct information at this sample size.')
+    out.push(`No dimension pair reaches ${DIMENSION_OVERLAP_THRESHOLD}. The nine dimensions carry distinct information at this sample size.`)
   } else {
     out.push(
       table(
@@ -306,21 +341,34 @@ export function buildReport(
   }
   out.push('')
 
+  const gapRows = (rows: typeof diag.dataGaps) => {
+    const byDimension = new Map<Dimension, typeof diag.dataGaps>()
+    for (const g of rows) {
+      const list = byDimension.get(g.dimension) ?? []
+      list.push(g)
+      byDimension.set(g.dimension, list)
+    }
+    for (const d of DIMENSIONS) {
+      const list = byDimension.get(d)
+      if (!list?.length) continue
+      out.push(`**${DIMENSION_LABELS[d]}**`)
+      out.push('')
+      for (const g of list) out.push(`- ${g.name}: ${g.reason}`)
+      out.push('')
+    }
+  }
   out.push('## Some indicators have no dataset behind them')
   out.push('')
-  const byDimension = new Map<Dimension, typeof diag.dataGaps>()
-  for (const g of diag.dataGaps) {
-    const list = byDimension.get(g.dimension) ?? []
-    list.push(g)
-    byDimension.set(g.dimension, list)
-  }
-  for (const d of DIMENSIONS) {
-    const list = byDimension.get(d)
-    if (!list?.length) continue
-    out.push(`**${DIMENSION_LABELS[d]}**`)
+  gapRows(diag.dataGaps.filter((g) => g.status === 'gap'))
+  const retiredRows = diag.dataGaps.filter((g) => g.status === 'retired')
+  if (retiredRows.length > 0) {
+    out.push('## Some datasets exist and this project rejected them')
     out.push('')
-    for (const g of list) out.push(`- ${g.name}: ${g.reason}`)
+    out.push(
+      'These rows stay in the registry and lower confidence exactly as gaps do. The difference is that a dataset exists: it was examined and turned down, with the reason on the record.',
+    )
     out.push('')
+    gapRows(retiredRows)
   }
 
   if (delphi) {
@@ -335,7 +383,7 @@ export function buildReport(
         '> This run came from the deterministic offline stand-in. It exercises the pipeline and is not evidence about any country.',
       )
       out.push('')
-    } else if (delphi.panel.length < 3) {
+    } else if (!isPanel(delphi)) {
       out.push(
         `> Only ${delphi.panel.length} panelist(s). There is no distribution: the median is one opinion and the interquartile range is zero. Read the numbers below as a single judgment.`,
       )
@@ -361,7 +409,11 @@ export function buildReport(
     out.push('### The panel is allowed to stay split')
     out.push('')
     if (dissent.length === 0) {
-      out.push('No cell has an interquartile range above 25 points.')
+      out.push(
+        isPanel(delphi)
+          ? `No cell has an interquartile range above ${DISSENT_IQR} points.`
+          : `No cell has an interquartile range above ${DISSENT_IQR} points, which with ${delphi.panel.length === 1 ? 'one panelist' : `${delphi.panel.length} panelists`} is a property of the panel size rather than a finding about agreement.`,
+      )
     } else {
       out.push(
         table(
@@ -440,9 +492,11 @@ export function buildReport(
 
   out.push('## These assumptions can be challenged')
   out.push('')
-  out.push('- The 0 to 100 scale is fixed by the ten reference countries. Countries added later are scored against that frame and never move it. See docs/DECISIONS.md D16.')
+  out.push(
+    `- The 0 to 100 scale is fixed by the ten reference countries. Countries added later are scored against that frame and never move it. See [${DECISIONS_DOC}](${docHref(DECISIONS_DOC)}) D16.`,
+  )
   out.push('- Indicators inside a dimension carry equal weight. No expert weighting has been applied.')
-  out.push('- Only the most recent observation per indicator is used. There is no trend line and nothing is smoothed.')
+  out.push('- A score uses only the most recent observation per indicator. Trends are computed separately, on a matched basket against the current frame, and nothing is interpolated or imputed.')
   out.push('- Winsorizing uses Tukey fences at three interquartile ranges, so it clips extreme outliers only.')
   out.push('- A missing indicator lowers confidence and is dropped from the mean. It is never imputed.')
   out.push('- Confidence is coverage x recency x source quality and is reported beside the score, never inside it.')
