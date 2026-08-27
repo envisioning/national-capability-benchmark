@@ -1,7 +1,7 @@
 import { readdir, readFile } from 'node:fs/promises'
 import { basename, resolve } from 'node:path'
 import { COUNTRY_ISO3, DIMENSIONS, INDICATORS_BY_ID, isScored } from '../model/index.js'
-import { DelphiRunFile, EvidenceFile } from '../model/schema.js'
+import { DelphiRunFile, EvidenceFile, isReversal } from '../model/schema.js'
 import { DELPHI_DIR, FILES } from './paths.js'
 
 export type Problem = { file: string; severity: 'error' | 'warning'; problem: string }
@@ -161,6 +161,14 @@ export async function validateEvidence(path = FILES.evidence): Promise<Problem[]
       })
     }
 
+    if (record.status === 'eroded' && !record.secondMetric) {
+      problems.push({
+        file,
+        severity: 'warning',
+        problem: `${record.id}: eroded with no second metric, so the loss has no peak to be measured against`,
+      })
+    }
+
     if (!COUNTRY_ISO3.includes(record.iso3 as never)) {
       problems.push({
         file,
@@ -169,5 +177,19 @@ export async function validateEvidence(path = FILES.evidence): Promise<Problem[]
       })
     }
   }
+
+  // D33: for every five records, at least one documents a reversal. A corpus
+  // of pure successes is a brochure, and this is the only place that can count.
+  const records = parsed.data.records
+  const reversals = records.filter((r) => isReversal(r.status)).length
+  const required = Math.floor(records.length / 5)
+  if (reversals < required) {
+    problems.push({
+      file,
+      severity: 'warning',
+      problem: `${reversals} reversal(s) in ${records.length} records; D33 asks for one in five, so the next records must document erosion or dismantling`,
+    })
+  }
+
   return problems
 }

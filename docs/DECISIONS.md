@@ -1247,3 +1247,56 @@ cost. A lexicon whose translation drifts from the registry meaning, which
 would justify review rules for lexicon changes rather than plain PRs.
 
 ---
+
+## D36 — A record states where the delivery stands, and a claim can carry two numbers
+
+*Recorded 2026-08-27. Extends D20, D31 and D33.*
+
+**Choice.** Two additions to `EvidenceRecord`.
+
+`status`, required: where the delivery stands as of the record's retrieval
+date. One of `operating`, `concluded`, `eroded`, `dismantled`. A reversal is a
+record whose status is `eroded` or `dismantled`, tested by `isReversal` from
+`@ncb/core`, and `pnpm bench validate` warns when reversals fall below the
+one-in-five quota D33 set.
+
+`secondMetric`, optional: a second published number in the same shape as
+`metric`, for the claims one number cannot hold. An `eroded` record pairs its
+current value with the peak it fell from, and the validator warns when it does
+not. A delivery record can pair scale with a cost or schedule figure.
+
+All fifteen records now carry a status: twelve `operating`, two `concluded`
+(Plano Real, Luz para Todos), one `eroded` (the immunisation programme, whose
+peak of 99 percent in 2003 is now its second metric). Both surfaces that render
+records print the status and the second number.
+
+**Why.** D33 requires the corpus to carry its reversals and gave the quota to
+the author's discipline, because free text is not countable. That made the
+rule's own enforcement section admit the validator was blind to the thing the
+rule most cares about. The immunisation record proved the point: its erosion,
+the reason it is in the set, lived entirely in `limits` prose and rendered as
+"running since 1973" — indistinguishable from Pix.
+
+The second slot exists because the flagship indicator asks for cost and
+schedule performance and every record filed against it admits in `limits` that
+one scale number cannot show that. One optional slot is the smallest change
+that lets a record hold a claim with two sides.
+
+**Cost.**
+
+- Status is a judgement stamped at retrieval time and it goes stale silently.
+  A programme dismantled after the record was written still reads `operating`
+  until someone edits the file. `retrievedAt` bounds the staleness; nothing
+  detects it.
+- Four states force real cases into coarse bins. Proálcool nearly collapsed in
+  the 1990s and is `operating`; the near-collapse stays in `limits`, and the
+  bin says nothing about the path.
+- Two metric slots invite cramming. The rule stays one delivery, one record;
+  the second slot is for the other side of the same claim, not a second claim.
+
+**Overturned by.** Records that repeatedly need a third number, or statuses
+that keep landing in the wrong bin — either means the lifecycle deserves a
+dated series, not two stamps, and the slot design should be replaced rather
+than extended.
+
+---

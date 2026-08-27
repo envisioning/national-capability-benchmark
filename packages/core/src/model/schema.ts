@@ -324,6 +324,43 @@ export type CountryResult = z.infer<typeof CountryResult>
  * and its limits, instead of being argued in prose beside the chart. See
  * docs/DECISIONS.md D20.
  */
+/** One published number with its reference period, as published. */
+export const EvidenceMetric = z.object({
+  name: z.string(),
+  value: z.number(),
+  unit: z.string(),
+  /** Reference period of the number, as published. */
+  asOf: z.string(),
+})
+export type EvidenceMetric = z.infer<typeof EvidenceMetric>
+
+/**
+ * Where the delivery stands as of the record's retrieval date.
+ *
+ * The field exists so a reversal is a value, not a nuance buried in prose.
+ * D33 requires the corpus to carry its reversals, and a quota over free text
+ * cannot be checked. `pnpm bench validate` counts these.
+ *
+ * - operating   running now, at or near the scale the claim describes
+ * - concluded   the delivery finished and the result stands
+ * - eroded      still running, but a documented part of its peak is gone
+ * - dismantled  ended by decision or collapse
+ */
+export const EvidenceStatus = z.enum(['operating', 'concluded', 'eroded', 'dismantled'])
+export type EvidenceStatus = z.infer<typeof EvidenceStatus>
+
+export const EVIDENCE_STATUS_LABELS: Record<EvidenceStatus, string> = {
+  operating: 'still operating',
+  concluded: 'delivered and closed',
+  eroded: 'operating below its peak',
+  dismantled: 'dismantled',
+}
+
+/** A reversal is evidence about durability, not about peak performance. */
+export function isReversal(status: EvidenceStatus): boolean {
+  return status === 'eroded' || status === 'dismantled'
+}
+
 export const EvidenceRecord = z.object({
   id: z.string(),
   /** The indicator this record bears on. Must exist in the registry. */
@@ -333,15 +370,18 @@ export const EvidenceRecord = z.object({
   /** What was delivered, and at what scale. One sentence. */
   claim: z.string(),
   /** The published number that carries the claim. */
-  metric: z.object({
-    name: z.string(),
-    value: z.number(),
-    unit: z.string(),
-    /** Reference period of the number, as published. */
-    asOf: z.string(),
-  }),
+  metric: EvidenceMetric,
+  /**
+   * A second published number, for the claims one number cannot hold. A record
+   * of erosion pairs the current value with the peak it fell from. A delivery
+   * record can pair scale with a cost or schedule figure. The `name` on each
+   * metric says which is which. Validation warns when an `eroded` record has
+   * no second metric, because a loss with no peak recorded cannot be seen.
+   */
+  secondMetric: EvidenceMetric.optional(),
   /** Year the programme started. */
   started: z.number().int(),
+  status: EvidenceStatus,
   source: z.object({
     publisher: z.string(),
     url: z.string().url(),

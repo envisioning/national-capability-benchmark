@@ -3,6 +3,7 @@ import {
   COUNTRY_NAMES,
   DIMENSIONS,
   DIMENSION_LABELS,
+  EVIDENCE_STATUS_LABELS,
   INDICATORS_BY_ID,
 } from '@ncb/core'
 import type { Dimension, EvidenceRecord } from '@ncb/core'
@@ -71,6 +72,7 @@ function PatternCard({ record }: { record: EvidenceRecord }) {
           {COUNTRY_NAMES[record.iso3] ?? record.iso3}
         </Link>
         <span>since {record.started}</span>
+        <span>{EVIDENCE_STATUS_LABELS[record.status]}</span>
         <span>bears on {def?.name ?? record.indicatorId}</span>
       </div>
       <h3 className="text-xl font-medium tracking-tight">{record.title}</h3>
@@ -81,6 +83,15 @@ function PatternCard({ record }: { record: EvidenceRecord }) {
           {record.metric.value.toLocaleString('en-US')}
         </span>{' '}
         {record.metric.unit}, {record.metric.name.toLowerCase()}, {record.metric.asOf}.{' '}
+        {record.secondMetric ? (
+          <>
+            <span className="tabular-nums text-[var(--foreground)]">
+              {record.secondMetric.value.toLocaleString('en-US')}
+            </span>{' '}
+            {record.secondMetric.unit}, {record.secondMetric.name.toLowerCase()},{' '}
+            {record.secondMetric.asOf}.{' '}
+          </>
+        ) : null}
         <a href={record.source.url} className="underline underline-offset-2" rel="noreferrer" target="_blank">
           {record.source.publisher}
         </a>

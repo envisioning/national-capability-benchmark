@@ -1,4 +1,4 @@
-import { INDICATORS_BY_ID } from '@ncb/core'
+import { EVIDENCE_STATUS_LABELS, INDICATORS_BY_ID } from '@ncb/core'
 import { Icon } from '@/components/Icon'
 import type { EvidenceRecord } from '@ncb/core'
 
@@ -32,7 +32,8 @@ export function EvidenceList({ records }: { records: EvidenceRecord[] }) {
               <p className="text-xs font-medium tracking-tight">
                 {r.title}
                 <span className="ml-2 font-normal text-[var(--muted)]">
-                  bears on {def?.name ?? r.indicatorId}, running since {r.started}
+                  bears on {def?.name ?? r.indicatorId}, since {r.started},{' '}
+                  {EVIDENCE_STATUS_LABELS[r.status]}
                 </span>
               </p>
               <p className="mt-1 text-lg leading-relaxed">{r.claim}</p>
@@ -41,6 +42,15 @@ export function EvidenceList({ records }: { records: EvidenceRecord[] }) {
                   {r.metric.value.toLocaleString('en-US')}
                 </span>{' '}
                 {r.metric.unit}, {r.metric.name.toLowerCase()}, {r.metric.asOf}.{' '}
+                {r.secondMetric ? (
+                  <>
+                    <span className="tabular-nums text-[var(--foreground)]">
+                      {r.secondMetric.value.toLocaleString('en-US')}
+                    </span>{' '}
+                    {r.secondMetric.unit}, {r.secondMetric.name.toLowerCase()},{' '}
+                    {r.secondMetric.asOf}.{' '}
+                  </>
+                ) : null}
                 <a
                   href={r.source.url}
                   className="underline underline-offset-2"

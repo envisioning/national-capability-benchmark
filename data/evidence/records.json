@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T00:00:00.000Z",
+  "generatedAt": "2026-08-27T00:00:00.000Z",
   "records": [
     {
       "id": "bra-pix",
@@ -14,6 +14,7 @@
         "asOf": "2026-07"
       },
       "started": 2020,
+      "status": "operating",
       "source": {
         "publisher": "Banco Central do Brasil, Pix statistics API",
         "url": "https://olinda.bcb.gov.br/olinda/servico/Pix/versao/v1/odata/PixTransacoes",
@@ -44,6 +45,7 @@
         "asOf": "2026-05"
       },
       "started": 2019,
+      "status": "operating",
       "source": {
         "publisher": "Governo Digital, Ministry of Management and Innovation in Public Services",
         "url": "https://www.gov.br/governodigital/pt-br",
@@ -72,6 +74,7 @@
         "asOf": "2026-07"
       },
       "started": 2001,
+      "status": "operating",
       "source": {
         "publisher": "Estonian Information System Authority, X-tee factsheet",
         "url": "https://www.x-tee.ee/factsheets/EE/",
@@ -102,6 +105,7 @@
         "asOf": "2026-08-19"
       },
       "started": 2014,
+      "status": "operating",
       "source": {
         "publisher": "Department of Financial Services, Ministry of Finance, India",
         "url": "https://pmjdy.gov.in/account",
@@ -131,6 +135,7 @@
         "asOf": "2025"
       },
       "started": 2010,
+      "status": "operating",
       "source": {
         "publisher": "Ministry of Industry, Energy and Mining, national energy balance",
         "url": "https://catalogodatos.gub.uy/dataset/miem-generacion-de-electricidad-por-fuente",
@@ -161,6 +166,7 @@
         "asOf": "2018"
       },
       "started": 2007,
+      "status": "operating",
       "source": {
         "publisher": "Ministry of Social Development, from the national household survey",
         "url": "https://catalogodatos.gub.uy/dataset/mides-indicador-11213",
@@ -185,11 +191,12 @@
       "claim": "Brazil wrote a right to health into the 1988 constitution and built a single public system that covers everybody in the country, and the WHO service coverage index for Brazil rose from 71 in 2000 to 84 in 2023.",
       "metric": {
         "name": "UHC service coverage index",
-        "value": 84.0,
+        "value": 84,
         "unit": "index 0-100",
         "asOf": "2023"
       },
       "started": 1988,
+      "status": "operating",
       "source": {
         "publisher": "World Health Organization, Global Health Observatory",
         "url": "https://ghoapi.azureedge.net/api/UHC_INDEX_REPORTED",
@@ -219,6 +226,7 @@
         "asOf": "1998"
       },
       "started": 1993,
+      "status": "concluded",
       "source": {
         "publisher": "World Bank, from IBGE",
         "url": "https://api.worldbank.org/v2/country/BRA/indicator/FP.CPI.TOTL.ZG?format=json",
@@ -244,11 +252,18 @@
       "claim": "Brazil's national immunisation programme reached 99 percent DPT coverage in 2003 and held above 95 percent for a decade, then fell to 68 percent by 2021 and had recovered to 91 percent by 2024.",
       "metric": {
         "name": "DPT immunisation coverage, children aged 12-23 months",
-        "value": 91.0,
+        "value": 91,
         "unit": "% of children",
         "asOf": "2024"
       },
+      "secondMetric": {
+        "name": "DPT immunisation coverage at its 2003 peak",
+        "value": 99,
+        "unit": "% of children",
+        "asOf": "2003"
+      },
       "started": 1973,
+      "status": "eroded",
       "source": {
         "publisher": "World Bank, from WHO and UNICEF estimates",
         "url": "https://api.worldbank.org/v2/country/BRA/indicator/SH.IMM.IDPT?format=json",
@@ -278,6 +293,7 @@
         "asOf": "2024"
       },
       "started": 2003,
+      "status": "concluded",
       "source": {
         "publisher": "World Bank, from national and utility sources",
         "url": "https://api.worldbank.org/v2/country/BRA/indicator/EG.ELC.ACCS.ZS?format=json",
@@ -302,11 +318,12 @@
       "claim": "Brazil created a public agricultural research corporation in 1973 to make acidic tropical soils productive, kept it funded across every change of government since, and cereal production rose from 46.5 million tonnes in 2000 to 155.9 million in 2023.",
       "metric": {
         "name": "Cereal production",
-        "value": 155877082.0,
+        "value": 155877082,
         "unit": "tonnes",
         "asOf": "2023"
       },
       "started": 1973,
+      "status": "operating",
       "source": {
         "publisher": "World Bank, from FAO",
         "url": "https://api.worldbank.org/v2/country/BRA/indicator/AG.PRD.CREL.MT?format=json",
@@ -337,6 +354,7 @@
         "asOf": "2025"
       },
       "started": 2003,
+      "status": "operating",
       "source": {
         "publisher": "Ministry of Social Development, via IPEADATA",
         "url": "http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='FAM_PBF')",
@@ -367,6 +385,7 @@
         "asOf": "2024"
       },
       "started": 1996,
+      "status": "operating",
       "source": {
         "publisher": "Superior Electoral Court, via IPEADATA",
         "url": "http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='ELEMUN')",
@@ -396,6 +415,7 @@
         "asOf": "2025"
       },
       "started": 1975,
+      "status": "operating",
       "source": {
         "publisher": "National Petroleum Agency, via IPEADATA",
         "url": "http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='ANP_PDALCO')",
@@ -426,6 +446,7 @@
         "asOf": "2025"
       },
       "started": 1997,
+      "status": "operating",
       "source": {
         "publisher": "National Petroleum Agency, via IPEADATA",
         "url": "http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='ANP_PDPET')",

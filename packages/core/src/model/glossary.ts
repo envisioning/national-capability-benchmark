@@ -166,8 +166,8 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: 'Evidence record',
     group: 'What sits beside the score',
     short: 'A documented national delivery, filed against a gap, never scored.',
-    full: 'Where a country visibly did the thing an indicator is supposed to measure, the case is written down: one published number, its reference period, a source, and a required statement of what the case does not show. Records never enter a score and never raise confidence. A gap becomes a real indicator only when a comparable series covers at least two reference countries.',
-    example: 'Brazil has eleven records running from Embrapa in 1973 to Pix in 2020, including the immunisation programme, which lost a third of its coverage after 2016.',
+    full: 'Where a country visibly did the thing an indicator is supposed to measure, the case is written down: one published number, its reference period, a source, and a required statement of what the case does not show. Each record states where the delivery stands today: still operating, delivered and closed, operating below its peak, or dismantled. A record of erosion carries a second number, the peak the loss is measured against. Records never enter a score and never raise confidence. A gap becomes a real indicator only when a comparable series covers at least two reference countries.',
+    example: 'Brazil’s records run from Embrapa in 1973 to Pix in 2020. The immunisation programme is recorded as operating below its peak: 99 percent coverage in 2003, 91 percent in 2024.',
   },
   {
     term: 'Momentum',
