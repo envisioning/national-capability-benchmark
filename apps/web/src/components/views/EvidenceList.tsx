@@ -1,5 +1,7 @@
+import Link from 'next/link'
 import { EVIDENCE_STATUS_LABELS, INDICATORS_BY_ID } from '@ncb/core'
 import { Icon } from '@/components/Icon'
+import { evidenceHref } from '@/lib/links'
 import type { EvidenceRecord } from '@ncb/core'
 
 /**
@@ -30,7 +32,9 @@ export function EvidenceList({ records }: { records: EvidenceRecord[] }) {
           return (
             <li key={r.id}>
               <p className="text-xs font-medium tracking-tight">
-                {r.title}
+                <Link href={evidenceHref(r.id)} className="underline underline-offset-4">
+                  {r.title}
+                </Link>
                 <span className="ml-2 font-normal text-[var(--muted)]">
                   bears on {def?.name ?? r.indicatorId}, since {r.started},{' '}
                   {EVIDENCE_STATUS_LABELS[r.status]}

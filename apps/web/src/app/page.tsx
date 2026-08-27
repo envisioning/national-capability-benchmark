@@ -16,6 +16,7 @@ import {
   Section,
 } from '@/components/ui'
 import { MISSING_DATA_HINT, loadIndex } from '@/lib/data'
+import { countryProfileHref } from '@/lib/links'
 import { toProfile } from '@/lib/profile'
 
 export const dynamic = 'force-dynamic'
@@ -67,11 +68,19 @@ export default async function Page() {
       </Headline>
       <p className="mb-10 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
         New here? The{' '}
-        <a href="/glossary" className="underline underline-offset-4">
+        <Link href="/method" className="underline underline-offset-4">
+          method page
+        </Link>{' '}
+        explains how a published statistic becomes a score, the{' '}
+        <Link href="/glossary" className="underline underline-offset-4">
           glossary
-        </a>{' '}
-        defines every term on these pages, including the four letters beside each indicator and what
-        a dashed line on a chart means. Nothing assumes you have seen this before.
+        </Link>{' '}
+        defines every term on these pages, and the{' '}
+        <Link href="/limits" className="underline underline-offset-4">
+          limits page
+        </Link>{' '}
+        records where a number is known to be wrong about the world. Nothing assumes you have seen
+        this before.
       </p>
 
       <Section
@@ -85,7 +94,7 @@ export default async function Page() {
             return (
               <Link
                 key={profile.iso3}
-                href={`/country/${profile.iso3}`}
+                href={countryProfileHref(profile.iso3)}
                 className="rounded-xl border border-[var(--rule)] p-4 transition-all duration-200 hover:border-[var(--foreground)]"
               >
                 <div className="mb-2 flex items-baseline justify-between">

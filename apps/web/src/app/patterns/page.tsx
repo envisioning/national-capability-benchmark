@@ -18,8 +18,15 @@ import {
   Section,
 } from '@/components/ui'
 import { loadEvidence } from '@/lib/data'
+import { countryProfileHref } from '@/lib/links'
 
 export const dynamic = 'force-dynamic'
+
+export const metadata = {
+  title: 'Patterns, NCB',
+  description:
+    'Documented national deliveries, filed against the indicators that should have measured them: the number, the mechanism, and its limits.',
+}
 
 export default async function PatternsPage() {
   const records = await loadEvidence()
@@ -74,9 +81,12 @@ export default async function PatternsPage() {
 function PatternCard({ record }: { record: EvidenceRecord }) {
   const def = INDICATORS_BY_ID[record.indicatorId]
   return (
-    <article id={record.id} className="max-w-3xl border-t border-[var(--rule)] pt-6">
+    <article id={record.id} className="max-w-3xl scroll-mt-24 border-t border-[var(--rule)] pt-6">
       <div className="mb-1 flex flex-wrap items-baseline gap-x-3 text-xs text-[var(--muted)]">
-        <Link href={`/country/${record.iso3}`} className="font-medium underline underline-offset-4">
+        <Link
+          href={countryProfileHref(record.iso3)}
+          className="font-medium underline underline-offset-4"
+        >
           <CountryLabel iso3={record.iso3} name={COUNTRY_NAMES[record.iso3] ?? record.iso3} />
         </Link>
         <span>since {record.started}</span>

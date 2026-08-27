@@ -521,8 +521,8 @@ export function PanelProvenanceNote({
   return (
     <Note tone="stop">
       These estimates come from {panelists === 1 ? 'a single analyst' : `${panelists} analysts`}{' '}
-      working in session, not from a panel. There is no distribution behind the median: read every
-      number here as one judgment. <Link href="/delphi" className="underline underline-offset-4">How the panel layer works</Link>.
+      working in session. There is no distribution behind the median: read every number here as
+      one judgment. <Link href="/delphi" className="underline underline-offset-4">How the panel layer works</Link>.
     </Note>
   )
 }

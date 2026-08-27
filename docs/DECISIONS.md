@@ -137,6 +137,11 @@ lowering k.
 
 ## D8 — Only the most recent observation, no trends
 
+> **Superseded by D22 and D24 on 2026-08-26.** The scoring rule stands: a score
+> still uses only the latest observation and nothing is imputed. The "no
+> trends" half fell when momentum shipped as a separate layer, on a matched
+> basket against the current frame.
+
 **Choice.** One value per indicator per country: the latest non-null year.
 
 **Why.** v0 is a structural test, not a time series. Trends multiply the
@@ -1454,3 +1459,180 @@ it. A published document reaches people who will never clone the repository.
 would give the viewer a local target for `{limits}` while the markdown keeps the
 repository link. Or a versioned documentation site, which would replace the
 branch in `docHref` with a release.
+
+---
+
+## D41 — The pipeline stops discarding its own warnings, and the viewer carries them
+
+*Recorded 2026-08-27. Extends D40 and takes up its overturn clause; extends D12,
+D23, D25, D35. Prompted by a full coherence review of the model and the viewer.*
+
+**Choice.** A set of repairs with one principle: a warning the pipeline computes
+is published and rendered, and a claim a surface makes is derived from the data
+it sits above, never hard-coded beside it.
+
+- `Momentum.clamped` was computed and read by nothing. It now travels:
+  `AgendaTrend` carries it, the report marks clamped cells, the agenda documents
+  and the viewer print it beside every trend, and the glossary example for
+  momentum names it. Brazil's headline "+26.2 on Agency over ten years" carries
+  "2 of 4 clamped" everywhere it appears, because part of that delta is boundary
+  distance rather than movement.
+- Clamping is aggregated. `Diagnostics.outOfFrame` counts clamped cells overall
+  and per country, the report prints it, and the diagnostics page renders it.
+  12.7% of observed cells clamp in the current run, concentrated in the
+  lowest-income extended countries, which is A10 stated as one number.
+- Exemplars exclude clamped countries. An agenda offers its exemplars as
+  somebody to learn from, and a clamped 100 is partly an artefact of the frame.
+- `evidenceElsewhere` matches its contract: records filed against the
+  dimension's declared gaps only, not any indicator in the dimension.
+- `dataGaps` carries a `status`, so retired indicators stop being reported as
+  "no dataset exists". A rejected dataset and a missing one are different
+  claims, per D23.
+- The report derives its confidence headline instead of asserting "no pair
+  reaches the good band" (0.67 crossed the threshold and the sentence shipped
+  false). Diagnostics page headings are computed from the tables under them for
+  the same reason: two of them had gone stale enough to be wrong.
+- The dissent threshold has one home, `DISSENT_IQR` in the model layer.
+  `isPanel` is now actually called; the viewer gates every Delphi surface on
+  `isEvidential` and presents a non-panel run as "session estimate", never as
+  "panel median". A mock run renders nowhere as evidence.
+- A failed World Bank fetch carries the previous file's observations forward for
+  that series instead of dropping them, so a transient error can no longer be
+  written into the revision log as the publisher removing decades of data.
+- The viewer renders `docs/KNOWN-ARTEFACTS.md` at `/limits`, in the nav, with
+  one anchor per artefact. The agenda's `{limits}` points there in the viewer
+  and stays on the repository link in the rendered markdown, which is the split
+  D40's overturn clause anticipated and MZ asked for.
+- Language switching left the nav. It is one control in the layout header,
+  driven by `languageCounterpart` in `apps/web/src/lib/links.ts`, shown only
+  where a counterpart page exists. Every URL shape lives in that file again.
+
+Dataset version goes to 1.1.0: fields were added, nothing published moved.
+
+**Why.** The review found the same failure four ways: comments promising what no
+code enforced, warnings computed and thrown away, findings hard-coded above the
+data that had moved past them, and caveats that stopped at the repository
+boundary while the numbers crossed it. Each repair is small; the pattern was
+the risk.
+
+**Cost.**
+
+- Computed headings can read awkwardly ("None of nine dimensions..."), and a
+  heading that is always true is less quotable than a sharp claim.
+- Excluding clamped countries from exemplars can leave a dimension with fewer
+  than three exemplars even when well-scored countries exist.
+- The carried-forward observations of a failed series age silently until the
+  next successful fetch; only the ingest report on stdout says it happened.
+- `/limits` renders an internal document written in British English with em
+  dashes, against the viewer's copy rules. The renderer converts the heading
+  dashes and leaves the body verbatim, because mangling the record would be
+  worse than the style breach.
+
+**Overturned by.** A run where the exemplar exclusion empties most dimensions,
+which would argue for annotating clamped exemplars instead of excluding them. A
+persistent ingest failure record, which would replace the silent carry-forward.
+
+---
+
+## D42 — A candidate is judged on what it does to its dimension, not on its own correlation
+
+*Recorded 2026-08-27. Extends D23; answers A12.*
+
+**Choice.** `bench diagnose` now emits `wealthAttribution`: for every indicator,
+its dimension's correlation with log GDP per capita as published, the same
+correlation with that indicator dropped from the mean, and the difference. The
+diagnostics page prints it, sorted by the indicator that raises its dimension's
+wealth correlation most. A candidate indicator is accepted or rejected on that
+delta, and no longer on its own correlation alone.
+
+The counterfactual is computed from the matrix rather than read from the
+published score, so dropping a row means recomputing the dimension mean exactly
+the way `score.ts` does, with missing values dropped and nothing imputed.
+
+**Why.** The existing test asks whether one series tracks income and flags it
+above 0.70. That is not the question the benchmark's central claim rests on. A
+dimension can hold indicators that each sit under the line and still track
+income as a group, and an indicator under the line can still make its dimension
+worse.
+
+This was found by making the mistake. A probe of 25 candidate World Bank series,
+run to answer A12, produced one usable observable trust measure:
+`IC.FRM.CORR.ZS`, the share of firms expected to give gifts to public officials.
+It resolves for all ten reference countries, it is behavioural, and it
+correlates with log GDP at 0.667, under the line. It was wired, ingested and
+scored. It raised Trust confidence for 34 of 40 countries from very thin to
+thin, and it moved Trust's own correlation with GDP per capita from 0.385 to
+0.619. It was reverted the same session, and 0 of 360 published cells now differ
+from before the attempt.
+
+The first run of the new diagnostic then found something the project did not
+know. `homicide_rate` raises Trust's wealth correlation by 0.288, from 0.096 to
+0.385. It is the largest single wealth contribution in the model, and it is the
+indicator D23 added as the observable replacement for the retired perception
+composites. `contract_enforcement_days` runs the other way at -0.189: without
+it Trust would correlate at 0.573. The dimension the project treats as its most
+income-contaminated is contaminated by one row, and that row was added to fix
+contamination.
+
+**Cost.**
+
+- The delta is computed against the current country set and moves when countries
+  are added. It is a diagnostic and not a threshold, and no rule fires on it.
+- It cannot separate an indicator that imports wealth from an indicator that
+  correctly measures a capability wealthy countries genuinely have. Homicide may
+  be either. The number says where to argue, and it does not settle the argument.
+- Nine dimensions times 34 indicators means the dimension mean is recomputed 34
+  times per run. It is not measurable next to ingestion.
+
+**Overturned by.** Evidence that a high delta is routinely the right answer,
+which would make the diagnostic noise. Or a dimension-level wealth test derived
+from a partial correlation rather than a leave-one-out, which would be the
+stronger statistic if the country set ever grows enough to support it.
+
+---
+
+## D43 — The country page opens on the agenda, and the split has one home
+
+*Recorded 2026-08-27. Completes D38; extends D35. Originally written as D39, which a
+concurrent session overwrote; D39 is deliberately left unused.*
+
+**Choice.** `/country/{ISO3}` opens with a lede computed from
+`data/out/agenda/{ISO3}.json`: the strongest dimension where the evidence is
+usable, the first dimension the evidence says to raise, the first that cannot be
+judged at all, then two lists, raise items lowest score first and measure items
+thinnest evidence first. Every entry links to that dimension's section further
+down the same page, and the block links out to the full agenda.
+
+The lede selects and never calculates. Every score and confidence it prints
+comes straight out of the agenda JSON. The sorting comes from `splitAgenda` in
+`packages/core/src/pipeline/agenda.ts`, which `AgendaView` calls as well, so one
+function decides which dimension leads and the country page and the agenda
+document cannot disagree.
+
+The eyebrow names the country's role in the frame, and the registry `reason`
+moves to a quiet line under the agenda. `RAISE_BELOW` is exported, because the
+page states the threshold when a country has no dimension above it.
+
+This is the layer D38 said was not built. It is not specific to one country: any
+country with an agenda file gets it, and Brazil is only the country somebody
+asked about first.
+
+**Why.** A reader landing on a country met a radar and nine tables, and had to
+read all nine to learn where to look. The agenda already computed that answer
+for the markdown documents and the viewer was not using it. Putting it at the
+top costs no new computation and opens the page on a finding. Brazil reads
+"Nothing here scores above 50 on evidence strong enough to act on", which is the
+honest headline for that country and was previously buried nine sections deep.
+
+**Cost.**
+
+- The lede repeats what the sections below say. A reader who scrolls meets each
+  named dimension twice.
+- `hold` is a real agenda kind with no list of its own here. Only the top one
+  appears, in the first sentence, so a country with eight holds shows one.
+- The threshold sentence prints `RAISE_BELOW` as a bare number, so a reader can
+  meet 50 before meeting the frame note that says what 0 to 100 means.
+
+**Overturned by.** A country page that reads better with the shape first and the
+agenda second, which would move the block under the radar. Or a `hold` list long
+enough to deserve a column of its own.

@@ -1,16 +1,43 @@
+import type { Metadata } from 'next'
 import {
   DIMENSION_LABELS,
+  DISSENT_IQR,
   INDICATORS_BY_ID,
+  PROVENANCE_LABELS,
   isEvidential,
+  isPanel,
   cellConsensus,
   indicatorConsensus,
   missingEvidenceRanking,
 } from '@ncb/core'
 import { DissentTable } from '@/components/views/DissentTable'
-import { CountryLabel, Empty, Note, Score, Scroller, Section, Table, Td, Th } from '@/components/ui'
+import {
+  CountryLabel,
+  DefineLink,
+  Empty,
+  Eyebrow,
+  Headline,
+  Meta,
+  Note,
+  PageTitle,
+  Score,
+  Scroller,
+  Section,
+  Table,
+  Td,
+  Th,
+} from '@/components/ui'
+import Link from 'next/link'
 import { loadDelphiRun } from '@/lib/data'
+import { countryProfileHref } from '@/lib/links'
 
 export const dynamic = 'force-dynamic'
+
+export const metadata: Metadata = {
+  title: 'Delphi panel, NCB',
+  description:
+    'The judgment layer beside the indicators: how the panel is built, where it disagrees, and what it said it needed.',
+}
 
 export default async function DelphiPage() {
   const run = await loadDelphiRun()
@@ -24,25 +51,46 @@ export default async function DelphiPage() {
   const finalRound = Math.max(...cells.map((c) => c.round), 0)
   const finals = cells.filter((c) => c.round === finalRound)
   const dissent = [...finals].filter((c) => c.dissent).sort((a, b) => b.iqr - a.iqr)
+  const shifts = finals.filter((c) => c.medianShift !== null)
   const judged = indicatorConsensus(run)
   const missing = missingEvidenceRanking(run)
   const evidential = isEvidential(run.provenance)
-  const singlePanelist = run.panel.length < 3
+  const panel = isPanel(run)
 
   return (
     <>
+      <Eyebrow>The judgment layer</Eyebrow>
+      <PageTitle>Judgment is kept beside the evidence, never inside it</PageTitle>
+      <Headline>
+        A <DefineLink term="Delphi panel">panel</DefineLink> estimates the same dimensions the
+        indicators score and audits the indicator set itself. Its estimates never enter a score;
+        the distance between the two is a finding about the measurement.
+      </Headline>
+      <p className="mb-10 flex flex-wrap gap-2">
+        <Meta icon="file-clock">run {run.runId}</Meta>
+        <Meta>
+          {run.rounds} round{run.rounds === 1 ? '' : 's'}
+        </Meta>
+        <Meta icon="users">
+          {run.panel.length} panelist{run.panel.length === 1 ? '' : 's'}
+        </Meta>
+        <Meta icon="bot">
+          <DefineLink term="Provenance">{PROVENANCE_LABELS[run.provenance]}</DefineLink>
+        </Meta>
+      </p>
+
       <Section
         title="Each panelist argues from a fixed position"
-        hint={`Run ${run.runId}, ${run.rounds} round(s). Stances are assigned so that a disagreement between panelists traces back to a stated position.`}
+        hint="Stances are assigned so that a disagreement between panelists traces back to a stated position."
       >
         {!evidential ? (
           <Note tone="stop">
-            Provenance <code>{run.provenance}</code>. This run came from the deterministic offline
-            stand-in. It exercises the pipeline and it is not evidence about any country.
+            This run came from the deterministic offline stand-in. It exercises the pipeline and it
+            is not evidence about any country.
           </Note>
-        ) : singlePanelist ? (
+        ) : !panel ? (
           <Note tone="stop">
-            Provenance <code>{run.provenance}</code> with {run.panel.length} panelist
+            This run is a {PROVENANCE_LABELS[run.provenance]} with {run.panel.length} panelist
             {run.panel.length === 1 ? '' : 's'}. There is no distribution to read here: the median
             is one opinion and the interquartile range is zero. Treat every number on this page as
             a single judgment rather than a panel result.
@@ -73,20 +121,34 @@ export default async function DelphiPage() {
 
       <Section
         title="The panel is allowed to stay split"
-        hint="Cells where the middle half of the panel spans more than 25 points. A disagreement a panelist can defend is a finding about the dimension."
+        hint={`Cells where the middle half of the panel spans more than ${DISSENT_IQR} points. A disagreement a panelist can defend is a finding about the dimension.`}
       >
         {dissent.length === 0 ? (
-          <p className="text-lg leading-relaxed text-[var(--muted)]">No cell exceeds the dissent threshold.</p>
+          <p className="max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
+            {panel
+              ? `No cell has an interquartile range above ${DISSENT_IQR} points.`
+              : `Nothing to read here: with ${run.panel.length} panelist${run.panel.length === 1 ? '' : 's'} the interquartile range is zero by construction. An empty table is a property of the panel size, never evidence of agreement.`}
+          </p>
         ) : (
           <DissentTable rows={dissent} />
         )}
       </Section>
 
-      <Section
-        title="Rounds two onward show whether the panel moved"
-        hint="Movement of the panel median and the interquartile range between rounds. Negative IQR shift means the panel narrowed."
-      >
-        <Scroller>
+      {shifts.length === 0 ? (
+        <Section
+          title="Convergence needs a second round"
+          hint="Movement of the panel median between rounds is how a Delphi shows convergence. This run has a single round, so there is no movement to show yet."
+        >
+          <p className="max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
+            Nothing to read here until a run with two or more rounds replaces this one.
+          </p>
+        </Section>
+      ) : (
+        <Section
+          title="Rounds two onward show whether the panel moved"
+          hint="Movement of the panel median and the interquartile range between rounds. Negative IQR shift means the panel narrowed."
+        >
+          <Scroller>
           <Table>
             <thead>
               <tr>
@@ -99,14 +161,15 @@ export default async function DelphiPage() {
               </tr>
             </thead>
             <tbody>
-              {finals
-                .filter((c) => c.medianShift !== null)
+              {[...shifts]
                 .sort((a, b) => Math.abs(b.medianShift ?? 0) - Math.abs(a.medianShift ?? 0))
                 .slice(0, 25)
                 .map((c) => (
                   <tr key={`${c.iso3}|${c.dimension}`}>
                     <Td>
-                      <CountryLabel iso3={c.iso3} name={c.country} />
+                      <Link href={countryProfileHref(c.iso3)} className="hover:underline">
+                        <CountryLabel iso3={c.iso3} name={c.country} />
+                      </Link>
                     </Td>
                     <Td>{DIMENSION_LABELS[c.dimension]}</Td>
                     <Td align="right"><Score value={c.median} size="sm" /></Td>
@@ -121,10 +184,20 @@ export default async function DelphiPage() {
                 ))}
             </tbody>
           </Table>
-        </Scroller>
-      </Section>
+          </Scroller>
+        </Section>
+      )}
 
-      {judged.length > 0 ? (
+      {judged.length === 0 ? (
+        <Section
+          title="The indicator audit has not run yet"
+          hint="A full panel run re-classifies every indicator as C, I, O or P and rates how well it measures its dimension. This run skipped that step, so the method page's promise of an indicator audit is waiting on the next run."
+        >
+          <p className="max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
+            Nothing to show until a run with indicator judgments replaces this one.
+          </p>
+        </Section>
+      ) : (
         <Section
           title="The panel also grades the indicators"
           hint="Each indicator is re-classified as C, I, O or P and rated on how well it measures its dimension. Weakest construct validity first."
@@ -170,7 +243,7 @@ export default async function DelphiPage() {
             </Table>
           </Scroller>
         </Section>
-      ) : null}
+      )}
 
       {missing.length > 0 ? (
         <Section

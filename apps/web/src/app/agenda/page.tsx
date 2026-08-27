@@ -3,6 +3,7 @@ import { COUNTRY_NAMES } from '@ncb/core'
 import { CountryLabel } from '@/components/ui'
 import { Empty, Eyebrow, PageTitle } from '@/components/ui'
 import { MISSING_DATA_HINT, loadIndex } from '@/lib/data'
+import { agendaHref } from '@/lib/links'
 
 export const dynamic = 'force-dynamic'
 
@@ -18,7 +19,7 @@ export const metadata = {
  */
 export default async function AgendaIndexPage() {
   const data = await loadIndex()
-  if (!data) return <Empty hint={MISSING_DATA_HINT} />
+  if (!data || data.countries.length === 0) return <Empty hint={MISSING_DATA_HINT} />
   const countries = [...data.countries].sort((a, b) =>
     (COUNTRY_NAMES[a.iso3] ?? a.iso3).localeCompare(COUNTRY_NAMES[b.iso3] ?? b.iso3),
   )
@@ -30,15 +31,12 @@ export default async function AgendaIndexPage() {
       <p className="mt-3 max-w-3xl text-lg leading-relaxed">
         Each agenda turns one country&apos;s scores into a list of things to do: dimensions to
         raise, dimensions to measure before managing, and the declared gaps that form the
-        measurement agenda. Nothing in it is written by hand.{' '}
-        <Link href="/pt" className="underline underline-offset-4">
-          Também disponível em português.
-        </Link>
+        measurement agenda. Nothing in it is written by hand.
       </p>
       <ul className="mt-10 grid gap-x-8 gap-y-2 text-lg sm:grid-cols-2 lg:grid-cols-3">
         {countries.map((c) => (
           <li key={c.iso3}>
-            <Link href={`/agenda/${c.iso3}`} className="underline underline-offset-4">
+            <Link href={agendaHref(c.iso3)} className="underline underline-offset-4">
               <CountryLabel iso3={c.iso3} name={COUNTRY_NAMES[c.iso3] ?? c.iso3} />
             </Link>
           </li>

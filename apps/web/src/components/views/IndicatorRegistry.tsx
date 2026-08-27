@@ -30,7 +30,12 @@ export function IndicatorRegistry() {
                 label: 'Indicator',
                 sort: (i: IndicatorDef) => i.name,
                 render: (i: IndicatorDef) => (
-                  <span id={i.id} className={isScored(i) ? undefined : 'text-[var(--muted)]'}>
+                  /* scroll-mt clears the header when an agenda gap link lands
+                   * here; target: lights the row the reader came for. */
+                  <span
+                    id={i.id}
+                    className={`scroll-mt-24 target:bg-accent target:text-black target:px-1 ${isScored(i) ? '' : 'text-[var(--muted)]'}`}
+                  >
                     {i.name}
                     {isScored(i) ? null : (
                       <span className="ml-2 rounded-md border border-[var(--rule)] px-1.5 py-0.5 text-xs">

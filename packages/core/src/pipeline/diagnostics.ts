@@ -60,6 +60,37 @@ function dimensionSeries(countries: CountryResult[], dimension: Dimension): Map<
   return out
 }
 
+/**
+ * A dimension's score series recomputed from the matrix, optionally with one
+ * indicator dropped.
+ *
+ * It mirrors `score.ts` exactly: the plain mean of whichever normalised cells
+ * exist, with missing values dropped rather than imputed. Recomputing rather
+ * than reading the published score is what lets the same function answer the
+ * counterfactual.
+ */
+function dimensionSeriesFrom(
+  matrix: Matrix,
+  dimension: Dimension,
+  exclude?: string,
+): Map<string, number> {
+  const ids = indicatorsFor(dimension)
+    .map((d) => d.id)
+    .filter((id) => id !== exclude)
+  const acc = new Map<string, { total: number; n: number }>()
+  for (const id of ids) {
+    for (const [iso3, cell] of matrix.get(id) ?? []) {
+      const cur = acc.get(iso3) ?? { total: 0, n: 0 }
+      cur.total += cell.normalized
+      cur.n += 1
+      acc.set(iso3, cur)
+    }
+  }
+  const out = new Map<string, number>()
+  for (const [iso3, { total, n }] of acc) if (n > 0) out.set(iso3, total / n)
+  return out
+}
+
 function indicatorSeries(matrix: Matrix, indicatorId: string): Map<string, number> {
   const out = new Map<string, number>()
   for (const [iso3, cell] of matrix.get(indicatorId) ?? []) out.set(iso3, cell.normalized)
@@ -88,6 +119,26 @@ export type Diagnostics = {
     flaggedAsWealthProxy: boolean
   }>
   redundantIndicatorPairs: Correlation[]
+  /**
+   * What each indicator does to its own dimension's wealth correlation.
+   *
+   * `indicatorVsGdp` asks whether one series tracks income. That is not the
+   * question the benchmark's claim rests on. Indicators that each sit under the
+   * threshold can still track income as a group, and an indicator under the
+   * threshold can still raise its dimension's correlation when it is added.
+   * This reports the dimension correlation as published and with the indicator
+   * dropped, so the effect is attributable to a row. See D42.
+   */
+  wealthAttribution: Array<{
+    indicatorId: string
+    dimension: Dimension
+    /** The dimension's absolute correlation with log GDP per capita, as published. */
+    dimensionR: number | null
+    /** The same with this indicator dropped from the dimension mean. */
+    dimensionRWithout: number | null
+    /** Positive means the indicator raises its dimension's wealth correlation. */
+    delta: number | null
+  }>
   measurability: Array<{
     dimension: Dimension
     indicatorsDefined: number
@@ -175,6 +226,26 @@ export function runDiagnostics(
     }
   })
   indicatorVsGdp.sort((a, b) => Math.abs(b.r ?? 0) - Math.abs(a.r ?? 0))
+
+  const wealthAttribution = [...matrix.keys()]
+    .map((indicatorId) => {
+      const dimension = INDICATORS_BY_ID[indicatorId]?.dimension as Dimension
+      const withIt = alignedPair(dimensionSeriesFrom(matrix, dimension), gdp)
+      const without = alignedPair(dimensionSeriesFrom(matrix, dimension, indicatorId), gdp)
+      const a = pearson(withIt.xs, withIt.ys)
+      const b = pearson(without.xs, without.ys)
+      const abs = (v: number | null) => (v === null ? null : Math.abs(v))
+      const ra = abs(a)
+      const rb = abs(b)
+      return {
+        indicatorId,
+        dimension,
+        dimensionR: ra === null ? null : round(ra, 3),
+        dimensionRWithout: rb === null ? null : round(rb, 3),
+        delta: ra === null || rb === null ? null : round(ra - rb, 3),
+      }
+    })
+    .sort((x, y) => (y.delta ?? 0) - (x.delta ?? 0))
 
   const ids = [...matrix.keys()]
   const redundantIndicatorPairs: Correlation[] = []
@@ -298,6 +369,7 @@ export function runDiagnostics(
       .filter((p) => (p.r ?? 0) >= DIMENSION_OVERLAP_THRESHOLD)
       .map((p) => ({ ...p, r: p.r === null ? null : round(p.r, 3) })),
     indicatorVsGdp,
+    wealthAttribution,
     redundantIndicatorPairs,
     measurability,
     gdpStrippedTest: {

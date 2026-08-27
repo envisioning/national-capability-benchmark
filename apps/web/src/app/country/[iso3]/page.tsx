@@ -1,26 +1,32 @@
+import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import type { IndicatorResult } from '@ncb/core'
 import {
   COUNTRIES,
+  COUNTRY_NAMES,
   DIMENSIONS,
   DIMENSION_LABELS,
   DIMENSION_QUESTIONS,
   INDICATORS_BY_ID,
+  isEvidential,
+  isPanel,
 } from '@ncb/core'
 import { DIMENSION_ICON, Icon, STATUS_ICON } from '@/components/Icon'
+import { CountryLede } from '@/components/CountryLede'
 import { CompareRadar } from '@/components/views/CompareRadar'
 import { CountryDimensionTable } from '@/components/views/CountryDimensionTable'
 import { EvidenceList } from '@/components/views/EvidenceList'
 import { IndicatorPeek } from '@/components/views/IndicatorPeek'
+import Link from 'next/link'
 import {
   ClassBadge,
   ClassLegend,
   DefineLink,
   Delta,
-  ConfidenceBar,
   CountryLabel,
   Eyebrow,
   PageTitle,
+  PanelProvenanceNote,
   Score,
   Scroller,
   Section,
@@ -29,10 +35,25 @@ import {
   Td,
   Th,
 } from '@/components/ui'
+import { loadAgenda } from '@/lib/agenda'
 import { loadCountry, loadDelphiRun, loadEvidence, loadIndex } from '@/lib/data'
 import { toProfile } from '@/lib/profile'
 
 export const dynamic = 'force-dynamic'
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ iso3: string }>
+}): Promise<Metadata> {
+  const { iso3 } = await params
+  const name = COUNTRY_NAMES[iso3.toUpperCase()]
+  if (!name) return {}
+  return {
+    title: `${name}, NCB`,
+    description: `${name} across nine capability dimensions: every score, its confidence, and every indicator behind it.`,
+  }
+}
 
 export default async function CountryPage({ params }: { params: Promise<{ iso3: string }> }) {
   const { iso3 } = await params
@@ -40,26 +61,37 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
   if (!country) notFound()
   const data = await loadIndex()
 
-  const run = await loadDelphiRun()
+  const agenda = await loadAgenda(country.iso3)
+  const loadedRun = await loadDelphiRun()
+  /* A mock run exercises the pipeline and is never presented as evidence, so
+   * the page treats it as no run at all. See the provenance invariant. */
+  const run = loadedRun && isEvidential(loadedRun.provenance) ? loadedRun : null
   const evidence = (await loadEvidence()).filter((e) => e.iso3 === country.iso3)
   const meta = COUNTRIES.find((c) => c.iso3 === country.iso3)
   const others = (data?.countries ?? []).filter((c) => c.iso3 !== country.iso3)
+  const countryHasEstimates = (run?.cellEstimates ?? []).some((e) => e.iso3 === country.iso3)
 
   return (
     <>
-      <div className="mb-10 grid gap-10 lg:grid-cols-[minmax(0,460px)_1fr]">
-        <div>
-          <Eyebrow>In the prototype because</Eyebrow>
-          <PageTitle>
-            <CountryLabel iso3={country.iso3} name={country.country} />
-          </PageTitle>
-          <p className="mt-3 text-lg leading-relaxed">{meta?.reason}</p>
-          <div className="mt-4">
-            <CompareRadar focus={toProfile(country)} others={others.map(toProfile)} />
-          </div>
-        </div>
+      <Eyebrow>{meta?.frame === 'reference' ? 'Sets the frame' : 'Scored against the frame'}</Eyebrow>
+      <PageTitle>
+        <CountryLabel iso3={country.iso3} name={country.country} />
+      </PageTitle>
 
-        <CountryDimensionTable country={country} />
+      {agenda ? (
+        <div className="mt-6">
+          <CountryLede agenda={agenda} reason={meta?.reason} />
+        </div>
+      ) : (
+        <p className="mb-10 mt-3 text-lg leading-relaxed">{meta?.reason}</p>
+      )}
+
+      <div className="mb-10 grid gap-10 lg:grid-cols-[minmax(0,460px)_1fr]">
+        <CompareRadar focus={toProfile(country)} others={others.map(toProfile)} />
+        <CountryDimensionTable
+          country={country}
+          panel={run && countryHasEstimates ? { isPanel: isPanel(run) } : null}
+        />
       </div>
 
       <div className="mb-12 max-w-3xl rounded-lg border border-[var(--rule)] bg-[var(--surface-sunken)] p-4">
@@ -82,12 +114,20 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
           <DefineLink term="Gap">gaps</DefineLink>, where the model asks for something nobody
           publishes. Rows marked <em>retired</em> had a dataset that this project rejected. Both
           lower confidence on purpose. Every term used here is defined in the{' '}
-          <a href="/glossary" className="underline underline-offset-4">
+          <Link href="/glossary" className="underline underline-offset-4">
             glossary
-          </a>
+          </Link>
+          , and the places where these numbers are known to be wrong about the world are on the{' '}
+          <Link href="/limits" className="underline underline-offset-4">
+            limits page
+          </Link>
           .
         </p>
       </div>
+
+      {run && countryHasEstimates ? (
+        <PanelProvenanceNote provenance={run.provenance} panelists={run.panel.length} />
+      ) : null}
 
       {DIMENSIONS.map((d) => {
         const dim = country.dimensions[d]
@@ -113,7 +153,11 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
                       <p className="text-xs leading-relaxed text-[var(--muted)]">
                         <Delta value={m.delta} /> over {m.currentYear - m.baseYear} years, from{' '}
                         {m.baseScore.toFixed(1)} in {m.baseYear} to {m.currentScore.toFixed(1)} on
-                        the {m.matchedIndicators} indicators observed in both years.
+                        the {m.matchedIndicators} indicators observed in both years
+                        {m.clamped > 0
+                          ? `, ${m.clamped} of them clamped at the frame edge, so part of this change is the distance to the clamp boundary`
+                          : ''}
+                        .
                       </p>
                     </div>
                   ))}
@@ -173,6 +217,15 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
                             ) : (
                               <Score value={row.normalized} size="sm" />
                             )}
+                            {row.outOfFrame ? (
+                              <span
+                                className="ml-1.5 inline-flex items-center gap-1 text-[10px] text-[var(--muted)]"
+                                title="The raw value sits outside the reference frame, so this position is clamped to the edge of the scale."
+                              >
+                                <Icon name="triangle-alert" size={11} />
+                                clamped
+                              </span>
+                            ) : null}
                           </Td>
                           <Td dim>{row.source}</Td>
                           <Td dim>
@@ -205,10 +258,14 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
 
               <EvidenceList records={evidence.filter((e) => INDICATORS_BY_ID[e.indicatorId]?.dimension === d)} />
 
-              {finals.length > 0 ? (
+              {finals.length > 0 && run ? (
                 <div className="mt-6 rounded-lg border border-[var(--rule)] bg-[var(--surface-sunken)] p-4">
                   <p className="mb-3 text-xs uppercase tracking-[0.05em] text-[var(--muted)]">
-                    Panel judgment, round {finalRound}
+                    {isPanel(run) ? 'Panel judgment' : 'Session estimate, not a panel'}, round{' '}
+                    {finalRound},{' '}
+                    <Link href="/delphi" className="underline underline-offset-4">
+                      how this layer works
+                    </Link>
                   </p>
                   <ul className="space-y-4 text-lg leading-relaxed">
                     {finals.map((e) => (

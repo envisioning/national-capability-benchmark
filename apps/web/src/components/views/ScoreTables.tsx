@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { DIMENSIONS, DIMENSION_LABELS } from '@ncb/core'
 import type { CountryResult } from '@ncb/core'
 import { DataTable, type Column } from '@/components/DataTable'
+import { countryProfileHref } from '@/lib/links'
 import { ConfidenceBar, CountryLabel, Score } from '@/components/ui'
 
 function countryColumn(): Column<CountryResult> {
@@ -12,7 +13,7 @@ function countryColumn(): Column<CountryResult> {
     label: 'Country',
     sort: (c) => c.country,
     render: (c) => (
-      <Link href={`/country/${c.iso3}`} className="hover:underline">
+      <Link href={countryProfileHref(c.iso3)} className="hover:underline">
         <CountryLabel iso3={c.iso3} name={c.country} />
       </Link>
     ),
@@ -52,7 +53,9 @@ export function ConfidenceTable({ countries }: { countries: CountryResult[] }) {
           label: DIMENSION_LABELS[d],
           align: 'right' as const,
           sort: (c: CountryResult) => c.dimensions[d]?.confidence ?? null,
-          render: (c: CountryResult) => <ConfidenceBar value={c.dimensions[d]?.confidence ?? 0} />,
+          render: (c: CountryResult) => (
+            <ConfidenceBar value={c.dimensions[d]?.confidence ?? null} />
+          ),
         })),
       ]}
     />

@@ -28,6 +28,11 @@ export type AgendaStrings = {
    * docs/KNOWN-ARTEFACTS.md in the repository.
    */
   intro: string
+  /**
+   * The phrase {limits} renders as in the viewer, where the link target is the
+   * local limits page rather than the repository file. See D41.
+   */
+  limitsLabel: string
   /** {countryTopic}: the country name with its article, for prose position. */
   standingHeading: string
   colDimension: string

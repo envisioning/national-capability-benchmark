@@ -255,6 +255,7 @@ export const PT_BR: Lexicon = {
     generated: 'Gerado em {date}',
     intro:
       'As notas são relativas a uma régua fixada pelos {reference} países de referência e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia {limits} antes de citar qualquer número isoladamente.',
+    limitsLabel: 'os limites conhecidos dos dados',
     standingHeading: 'Onde {countryTopic} está',
     colDimension: 'Dimensão',
     colScore: 'Nota',

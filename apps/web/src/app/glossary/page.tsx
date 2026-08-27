@@ -1,5 +1,11 @@
+import type { Metadata } from 'next'
 import { GLOSSARY, GLOSSARY_GROUPS, MEASUREMENT_CLASS_MEANING } from '@ncb/core'
 import type { MeasurementClass } from '@ncb/core'
+
+export const metadata: Metadata = {
+  title: 'Glossary, NCB',
+  description: 'Every term the benchmark uses, defined in plain words for a first-time reader.',
+}
 import { ClassBadge, Eyebrow, Headline, Highlight, PageTitle, Section } from '@/components/ui'
 import { GROUP_ICON, Icon } from '@/components/Icon'
 

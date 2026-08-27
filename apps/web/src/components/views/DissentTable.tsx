@@ -1,7 +1,9 @@
 'use client'
 
+import Link from 'next/link'
 import { DIMENSION_LABELS, type CellConsensus } from '@ncb/core'
 import { DataTable } from '@/components/DataTable'
+import { countryProfileHref } from '@/lib/links'
 import { CountryLabel, Score } from '@/components/ui'
 
 export function DissentTable({ rows }: { rows: CellConsensus[] }) {
@@ -15,7 +17,11 @@ export function DissentTable({ rows }: { rows: CellConsensus[] }) {
           key: 'country',
           label: 'Country',
           sort: (c) => c.country,
-          render: (c) => <CountryLabel iso3={c.iso3} name={c.country} />,
+          render: (c) => (
+            <Link href={countryProfileHref(c.iso3)} className="hover:underline">
+              <CountryLabel iso3={c.iso3} name={c.country} />
+            </Link>
+          ),
         },
         {
           key: 'dimension',

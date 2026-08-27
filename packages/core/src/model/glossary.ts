@@ -101,10 +101,22 @@ export const GLOSSARY: GlossaryEntry[] = [
     full: 'A dimension score runs from 0 to 100, where 0 is the weakest and 100 the strongest of the ten reference countries on that measure. It is a position in a frame, so a score of 10 means near the floor of this particular comparison. It does not mean ten percent of a capability, and it is not a percentage of anything.',
   },
   {
+    term: 'Score band',
+    group: 'How a number is made',
+    short: 'Four named ranges a score falls in: weak, below middle, above middle, strong.',
+    full: 'Every score chip is colored by one of four bands. The labels are frame-relative on purpose: strong means near the top of the ten reference countries on that dimension, not strong in any absolute sense, and weak means near the floor of that same comparison. A weak score deserves a look at its confidence before anything is read into it.',
+  },
+  {
     term: 'Reference frame',
     group: 'How a number is made',
     short: 'The ten countries whose values fix the ends of every scale.',
-    full: 'The endpoints of every indicator scale come from ten reference countries and nothing else. Every other country is measured against that same fixed frame, which is what lets a new country be added without moving anybody else\'s published number. It was checked when six countries were added: zero of ninety existing cells moved. The cost is that those ten were chosen to expose contrasts and are not a sample of the world.',
+    full: 'The endpoints of every indicator scale come from ten reference countries and nothing else. Every other country is measured against that same fixed frame, which is what lets a new country be added without moving anybody else\'s published number. It was checked twice as countries were added: zero of 90 existing cells moved at 16 countries, and zero of 144 at 40. The cost is that those ten were chosen to expose contrasts and are not a sample of the world.',
+  },
+  {
+    term: 'Extended country',
+    group: 'How a number is made',
+    short: 'A country scored against the frame without being part of it.',
+    full: 'The ten reference countries set the frame. Every country added after that is extended: it is measured against the fixed frame and its values never move an endpoint, which is what makes adding it safe for everything already published. The cost falls on the extended country itself: a value beyond what the frame covers clamps to 0 or 100 and is flagged as out of frame.',
   },
   {
     term: 'Normalization',
@@ -141,7 +153,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: 'Confidence band',
     group: 'How good the evidence is',
     short: 'Four named ranges: very thin, thin, usable, good.',
-    full: 'Raw confidence numbers are hard to read, so they are grouped into four bands with plain instructions attached. Very thin means the score rests on one or two indicators and should not be quoted alone. Good means most indicators are present, recent and from official sources. The radar draws thin evidence as a dashed line with a hollow point and marks the axis, so a weak dimension looks weak.',
+    full: 'Raw confidence numbers are hard to read, so they are grouped into four bands with plain instructions attached. Very thin means the score rests on one or two indicators and should not be quoted alone. Good means most indicators are present, recent and from official sources. The radar draws thin evidence as a dashed edge with a hollow point, and the dashes open further as confidence falls, so a weakly evidenced dimension looks exactly as uncertain as it is.',
   },
   {
     term: 'Source tier',
@@ -173,8 +185,8 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: 'Momentum',
     group: 'How things change over time',
     short: 'How much a dimension moved over ten or twenty years, on the same ruler.',
-    full: 'History is scored against the frame in use today, so a change in the score is a change in the country and not a change in the scale. Two spans are published, ten years and twenty, because they answer different questions.',
-    example: 'Brazil gained 26.2 points on Agency over ten years against a median of 12.7 across all sixteen countries.',
+    full: 'History is scored against the frame in use today, so a change in the score is a change in the country and not a change in the scale. Two spans are published, ten years and twenty, because they answer different questions. Two honesty rules travel with every trend. First, an observation up to five years older than a span end still counts for it, so a basket holding a frozen dataset measures a somewhat shorter period than the span names. Second, a basket member clamped at the frame edge at either end is counted and reported, because part of that movement is the distance to the clamp rather than movement in the country.',
+    example: 'Brazil gained 26.2 points on Agency over ten years, against a median of 11.4 across all 40 countries, with two of the four basket indicators clamped at the frame edge.',
   },
   {
     term: 'Matched basket',
@@ -216,7 +228,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: 'Capability agenda',
     group: 'What sits beside the score',
     short: 'The scores turned into a list of things to do, computed from the data.',
-    full: 'A per-country document generated from the scored output. Dimensions with usable evidence and low scores become items to raise. Dimensions with confidence below the usable band become items to measure first, because a score that thin cannot carry a decision. The declared gaps form the measurement agenda, with the countries and documented deliveries that already answer each question listed beside it. Nothing in it is written by hand: every figure comes from the scores, every gap from the registry, every case from the evidence records, so the agenda regenerates whenever the data changes.',
+    full: 'A per-country document generated from the scored output. Every dimension lands in one of three kinds. Dimensions with usable evidence and low scores become items to raise. Dimensions with confidence below the usable band become items to measure first, because a score that thin cannot carry a decision. Everything else is a hold: usable evidence and a score at or above the raise threshold, so nothing asks for intervention first. The declared gaps form the measurement agenda, with the countries and documented deliveries that already answer each question listed beside it. Nothing in it is written by hand: every figure comes from the scores, every gap from the registry, every case from the evidence records, so the agenda regenerates whenever the data changes.',
     example: 'The Brazil agenda lists Building, at 9.4 with usable confidence, as the first dimension to raise, and Coordination, at confidence 0.08, as a dimension to measure before managing.',
   },
   {
@@ -230,8 +242,21 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: 'Known artefact',
     group: 'What is missing',
     short: 'A place where the model produces a number that is wrong about the world.',
-    full: 'Artefacts are recorded in their own document with severity, evidence and a fix. They are not bugs: the pipeline is doing what it was told. They are failures of measurement, and anyone quoting a score should read them first.',
+    full: 'Artefacts are recorded in their own document with severity, evidence and a fix, and the viewer publishes that document on its limits page. They are not bugs: the pipeline is doing what it was told. They are failures of measurement, and anyone quoting a score should read them first.',
     example: 'Coordination, Trust and Shared Purpose currently rest on one or two indicators each, so their scores move enough to mislead.',
+  },
+  {
+    term: 'Blended score',
+    group: 'What sits beside the score',
+    short: 'The published fallback: the indicator score, or the panel estimate when no indicator evidence exists.',
+    full: 'Every dimension carries a blendedScore field with a blendedFrom label saying where it came from: indicators, delphi, or none. It is a fallback and never a mix: when any indicator evidence exists the blended score is exactly the indicator score, and only a dimension with no indicator evidence at all falls back to the panel estimate. The label is stored so a reader of the JSON can always tell which one they are holding.',
+    example: 'Every published cell currently reads blendedFrom: indicators, so the delphi fallback has never been exercised in shipped data.',
+  },
+  {
+    term: 'Revision log',
+    group: 'What sits beside the score',
+    short: 'The append-only record of what each ingest restated, added or dropped.',
+    full: 'Statistics agencies restate their own history. Every ingest diffs itself against the file it replaces and appends what moved to the revision log, so a value that changed under the benchmark leaves a record. Without it, the data would silently claim every number was always what it is now.',
   },
 ]
 

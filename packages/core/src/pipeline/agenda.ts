@@ -173,7 +173,7 @@ export function buildAgenda(
     /* An exemplar is offered as somebody to learn from, so a country whose
      * score in this dimension includes a cell clamped at the frame edge is
      * excluded: a clamped 100 is partly an artefact of the frame, not a level
-     * anyone reached. See D40. */
+     * anyone reached. See D41. */
     const exemplars: AgendaExemplar[] = countries
       .filter((c) => c.iso3 !== iso3)
       .map((c) => ({ iso3: c.iso3, result: c.dimensions[dimension] }))

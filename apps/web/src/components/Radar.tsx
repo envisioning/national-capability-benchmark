@@ -1,4 +1,4 @@
-import { DIMENSIONS, DIMENSION_LABELS, isThinEvidence } from '@ncb/core'
+import { CONFIDENCE_BANDS, DIMENSIONS, DIMENSION_LABELS, isThinEvidence } from '@ncb/core'
 import type { Dimension } from '@ncb/core'
 import { DIMENSION_ICON, iconMarkup } from '@/components/Icon'
 
@@ -42,8 +42,13 @@ function point(index: number, value: number, radius: number): [number, number] {
 /** How many pieces each edge is cut into for the evidence gradient. */
 const SEGMENTS = 14
 const DASH = 2.2
-/** Solid at or above this confidence, fully open at or below the lower bound. */
-const SOLID_AT = 0.45
+/**
+ * Solid at or above the usable band's floor, read from the bands so the chart
+ * cannot drift from the thresholds the tables use. Fully open at OPEN_AT, a
+ * display tuning deliberately below the thin band's floor, so the most broken
+ * dashing is reached only deep inside very thin evidence. See D32.
+ */
+const SOLID_AT = CONFIDENCE_BANDS.find((b) => b.id === 'usable')?.min ?? 0.45
 const OPEN_AT = 0.15
 
 /**
@@ -70,9 +75,10 @@ function thinAt(series: RadarSeries, i: number): boolean {
  * order so two charts can be read against each other.
  *
  * Evidence is drawn, never implied. A dimension whose confidence falls in the
- * thin or very thin band gets a dashed edge, a hollow vertex and a marked axis
- * label. Confidence still never touches the score itself: the vertex sits at
- * the same radius either way, and only the line style changes.
+ * thin or very thin band gets a dashed edge and a hollow vertex, and the dash
+ * gap widens as confidence falls. Confidence still never touches the score
+ * itself: the vertex sits at the same radius either way, and only the line
+ * style changes.
  */
 /**
  * How the nine axes are named.
@@ -92,9 +98,9 @@ export type RadarLabels = 'full' | 'icons' | 'none'
  * One dimension mark, drawn inside the radar's own SVG.
  *
  * Every mark is drawn at the same strength. Thin evidence is already carried by
- * the dashed edge, the hollow vertex and the asterisk on the label, and fading
- * the icon as well made the whole ring look washed out on a country where most
- * dimensions are thinly evidenced.
+ * the dashed edge and the hollow vertex, and fading the icon as well made the
+ * whole ring look washed out on a country where most dimensions are thinly
+ * evidenced.
  */
 function AxisIcon({ d, x, y, size }: { d: Dimension; x: number; y: number; size: number }) {
   const scale = size / 24
@@ -128,7 +134,6 @@ export function Radar({
   const g = GEOMETRY[labels]
   const at = (i: number, value: number) => point(i, value, g.radius)
   const rings = [25, 50, 75, 100]
-  const marked = DIMENSIONS.map((_, i) => series.some((s) => thinAt(s, i)))
   const described = series
     .map(
       (s) =>

@@ -24,12 +24,16 @@ export async function GET(
     .map((c) => {
       const dim = c.dimensions[dimension as Dimension]
       if (!dim || dim.score === null) return null
+      const m = primaryMomentum(dim.momentum)
       return {
         iso3: c.iso3,
         country: c.country,
         score: dim.score,
         confidence: dim.confidence,
-        delta: primaryMomentum(dim.momentum)?.delta ?? null,
+        delta: m?.delta ?? null,
+        /* A trend never travels without its basket size and span. */
+        basket: m?.matchedIndicators ?? null,
+        spanYears: m ? m.currentYear - m.baseYear : null,
         reference: COUNTRY_FRAMES[c.iso3] === 'reference',
       }
     })

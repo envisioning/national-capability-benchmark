@@ -26,6 +26,7 @@ export const EN: Lexicon = {
     generated: 'Generated {date}',
     intro:
       'Scores are relative to a frame fixed by the {reference} reference countries and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read {limits} before quoting any number on its own.',
+    limitsLabel: 'the known limits of the data',
     standingHeading: 'Where {countryTopic} stands',
     colDimension: 'Dimension',
     colScore: 'Score',

@@ -1,22 +1,59 @@
 'use client'
 
-import { DIMENSION_LABELS, INDICATORS_BY_ID } from '@ncb/core'
+import {
+  DIMENSION_LABELS,
+  DIMENSION_OVERLAP_THRESHOLD,
+  INDICATORS_BY_ID,
+  REDUNDANCY_THRESHOLD,
+  WEALTH_CORRELATION_THRESHOLD,
+} from '@ncb/core'
 import type { Dimension } from '@ncb/core'
 import { DataTable } from '@/components/DataTable'
-import { Section } from '@/components/ui'
+import { Eyebrow, Headline, Meta, PageTitle, Section } from '@/components/ui'
 import type { Diagnostics } from '@ncb/core'
 
 const name = (id: string) => INDICATORS_BY_ID[id]?.name ?? id
 const muted = (v: React.ReactNode) => <span className="text-[var(--muted)]">{v}</span>
 
+/** Counts up to nine are spelled out in prose, per the copy rules. */
+const COUNT_WORDS = ['none', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+const countWord = (n: number): string => COUNT_WORDS[n] ?? String(n)
+
+/**
+ * Every section heading below is computed from the diagnostics it sits above.
+ * A hard-coded finding goes stale the first time the data moves, and a page
+ * whose headings can contradict its own tables costs more credibility than the
+ * findings earn.
+ */
 export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
   const n = diag.dimensionVsGdp[0]?.n ?? 0
+  const wealthTracking = diag.dimensionVsGdp.filter(
+    (d) => d.pearson !== null && Math.abs(d.pearson) >= WEALTH_CORRELATION_THRESHOLD,
+  ).length
+  const emptied = diag.gdpStrippedTest.dimensionsEmptied
+  const byConfidence = [...diag.measurability].sort((a, b) => b.meanConfidence - a.meanConfidence)
+  const best = byConfidence[0]
+  const worst = byConfidence[byConfidence.length - 1]
+  const gaps = diag.dataGaps.filter((g) => g.status === 'gap')
+  const retired = diag.dataGaps.filter((g) => g.status === 'retired')
 
   return (
     <>
+      <Eyebrow>Diagnostics</Eyebrow>
+      <PageTitle>The model is tested against its own failure modes</PageTitle>
+      <Headline>
+        Every number here asks whether the benchmark is measuring capability or something easier:
+        income per head, one dataset wearing two names, or nothing at all. Failed tests are
+        published, because a failure the reader can see is worth more than a clean page.
+      </Headline>
+      <p className="mb-12 flex flex-wrap gap-2">
+        <Meta icon="calendar">computed {diag.generatedAt.slice(0, 10)}</Meta>
+        <Meta icon="globe">{n} countries</Meta>
+      </p>
+
       <Section
-        title="Most dimensions still track income per head"
-        hint={`A dimension that only reproduces GDP per capita is not measuring capability. These correlations run over ${n} countries, so read every coefficient as a hint.`}
+        title={`${countWord(wealthTracking)[0]?.toUpperCase()}${countWord(wealthTracking).slice(1)} of nine dimensions track income per head`}
+        hint={`Correlation with log GDP per capita at ${WEALTH_CORRELATION_THRESHOLD} or above counts as tracking income. A dimension that only reproduces GDP per capita is not measuring capability. These correlations run over ${n} countries, so read every coefficient as a hint.`}
       >
         <DataTable
           rows={diag.dimensionVsGdp}
@@ -49,13 +86,17 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
       </Section>
 
       <Section
-        title="Two dimensions do not survive without wealth-correlated data"
-        hint={`${diag.gdpStrippedTest.excluded.length} indicators correlate with log GDP per capita at 0.7 or above. This is the profile shift when they are removed.${
-          diag.gdpStrippedTest.dimensionsEmptied.length
-            ? ` ${diag.gdpStrippedTest.dimensionsEmptied
+        title={
+          emptied.length === 0
+            ? 'Every dimension survives without wealth-correlated data'
+            : `${emptied.map((d: Dimension) => DIMENSION_LABELS[d]).join(' and ')} ${emptied.length === 1 ? 'does' : 'do'} not survive without wealth-correlated data`
+        }
+        hint={`${diag.gdpStrippedTest.excluded.length} indicators correlate with log GDP per capita at ${WEALTH_CORRELATION_THRESHOLD} or above. This is the profile shift when they are removed.${
+          emptied.length
+            ? ` ${emptied
                 .map((d: Dimension) => DIMENSION_LABELS[d])
                 .join(' and ')} lose every measured indicator and cannot be scored at all without them.`
-            : ''
+            : ' Every dimension keeps at least one measured indicator.'
         }`}
       >
         <DataTable
@@ -143,8 +184,66 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
       </Section>
 
       <Section
-        title="Some indicators are carrying the same information"
-        hint="Pairs correlating at 0.85 or above. A pair here is a candidate for removal. It is not proof that either one has to go."
+        title="One row can carry a whole dimension's wealth signal"
+        hint="The table above tests each indicator on its own. This one tests what the indicator does to the dimension it sits in, by recomputing that dimension with the row dropped. A positive delta means the dimension tracks income more because this indicator is in it. That is the number the benchmark's central claim actually rests on, and an indicator can sit under the 0.70 line above and still appear at the top here."
+      >
+        <DataTable
+          rows={diag.wealthAttribution}
+          initialSort={{ key: 'delta', dir: 'desc' }}
+          caption="What each indicator does to its dimension's correlation with GDP per capita"
+          columns={[
+            {
+              key: 'indicator',
+              label: 'Indicator',
+              sort: (i) => name(i.indicatorId),
+              render: (i) => name(i.indicatorId),
+            },
+            {
+              key: 'dimension',
+              label: 'Dimension',
+              sort: (i) => DIMENSION_LABELS[i.dimension],
+              render: (i) => muted(DIMENSION_LABELS[i.dimension]),
+            },
+            {
+              key: 'with',
+              label: 'Dimension r',
+              align: 'right',
+              sort: (i) => i.dimensionR,
+              render: (i) => i.dimensionR?.toFixed(3) ?? 'no data',
+            },
+            {
+              key: 'without',
+              label: 'Without this row',
+              align: 'right',
+              sort: (i) => i.dimensionRWithout,
+              render: (i) => muted(i.dimensionRWithout?.toFixed(3) ?? 'no data'),
+            },
+            {
+              key: 'delta',
+              label: 'Delta',
+              align: 'right',
+              sort: (i) => i.delta,
+              render: (i) =>
+                i.delta === null ? (
+                  muted('no data')
+                ) : (
+                  <span className={i.delta > 0 ? undefined : 'text-[var(--muted)]'}>
+                    {i.delta > 0 ? '+' : ''}
+                    {i.delta.toFixed(3)}
+                  </span>
+                ),
+            },
+          ]}
+        />
+      </Section>
+
+      <Section
+        title={
+          diag.redundantIndicatorPairs.length === 0
+            ? 'No indicator pair is carrying the same information'
+            : 'Some indicators are carrying the same information'
+        }
+        hint={`Pairs correlating at ${REDUNDANCY_THRESHOLD} or above. A pair here is a candidate for removal. It is not proof that either one has to go.`}
       >
         <DataTable
           rows={diag.redundantIndicatorPairs}
@@ -165,8 +264,12 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
       </Section>
 
       <Section
-        title="No two dimensions have collapsed into one"
-        hint="Dimension pairs sorted by correlation. Anything at 0.9 or above is a candidate for merging."
+        title={
+          diag.duplicateDimensionCandidates.length === 0
+            ? 'No two dimensions have collapsed into one'
+            : `${countWord(diag.duplicateDimensionCandidates.length)[0]?.toUpperCase()}${countWord(diag.duplicateDimensionCandidates.length).slice(1)} dimension pair${diag.duplicateDimensionCandidates.length === 1 ? ' has' : 's have'} collapsed into one`
+        }
+        hint={`Dimension pairs sorted by correlation. Anything at ${DIMENSION_OVERLAP_THRESHOLD} or above is a candidate for merging.`}
       >
         <DataTable
           rows={diag.dimensionPairs}
@@ -197,8 +300,16 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
       </Section>
 
       <Section
-        title="Four dimensions are much better measured than the rest"
-        hint="Subjectivity share counts perception proxies plus indicators with no dataset at all. Experimentation is the weakest: six of its eight indicators cannot be measured."
+        title={
+          best && worst
+            ? `Measurement quality runs from ${DIMENSION_LABELS[best.dimension]} down to ${DIMENSION_LABELS[worst.dimension]}`
+            : 'Measurement quality varies across the nine dimensions'
+        }
+        hint={`Subjectivity share counts perception proxies plus indicators with no dataset at all.${
+          worst
+            ? ` ${DIMENSION_LABELS[worst.dimension]} is the weakest: ${countWord(worst.indicatorsObserved)} of its ${countWord(worst.indicatorsDefined)} indicators ${worst.indicatorsObserved === 1 ? 'is' : 'are'} observed and its mean confidence is ${worst.meanConfidence.toFixed(2)}.`
+            : ''
+        }`}
       >
         <DataTable
           rows={diag.measurability}
@@ -258,11 +369,37 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
       </Section>
 
       <Section
+        title={`${Math.round(diag.outOfFrame.share * 100)}% of observed values clamp at the frame edge`}
+        hint={`${diag.outOfFrame.clampedCells} of ${diag.outOfFrame.observedCells} observed cells sit outside the range the ten reference countries cover, so their positions clamp to 0 or 100 and information is lost. Frequent clamping means the frame is too narrow for the countries being scored. The counts below name where it concentrates.`}
+      >
+        <DataTable
+          rows={diag.outOfFrame.perCountry.slice(0, 15)}
+          initialSort={{ key: 'cells', dir: 'desc' }}
+          caption="Clamped cells by country"
+          columns={[
+            {
+              key: 'country',
+              label: 'Country',
+              sort: (c) => c.country,
+              render: (c) => c.country,
+            },
+            {
+              key: 'cells',
+              label: 'Clamped cells',
+              align: 'right',
+              sort: (c) => c.clampedCells,
+              render: (c) => c.clampedCells,
+            },
+          ]}
+        />
+      </Section>
+
+      <Section
         title="This is the list Envisioning would have to collect itself"
         hint="Each of these is specified in the model, unmeasured, and already lowering the confidence scores. They stay in the registry so the gap is visible."
       >
         <DataTable
-          rows={diag.dataGaps}
+          rows={gaps}
           initialSort={{ key: 'dimension' }}
           caption="Indicators with no adequate dataset"
           columns={[
@@ -283,6 +420,35 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
           ]}
         />
       </Section>
+
+      {retired.length > 0 ? (
+        <Section
+          title="These datasets exist and the project rejected them"
+          hint="A retired indicator keeps its row and lowers confidence exactly as a gap does. The difference is that a dataset exists: it was examined and turned down, with the reason on the record."
+        >
+          <DataTable
+            rows={retired}
+            initialSort={{ key: 'dimension' }}
+            caption="Datasets examined and rejected"
+            columns={[
+              {
+                key: 'dimension',
+                label: 'Dimension',
+                sort: (g) => DIMENSION_LABELS[g.dimension],
+                render: (g) => muted(DIMENSION_LABELS[g.dimension]),
+              },
+              { key: 'name', label: 'Indicator', sort: (g) => g.name, render: (g) => g.name },
+              {
+                key: 'publisher',
+                label: 'Publisher',
+                sort: (g) => g.publisher,
+                render: (g) => muted(g.publisher),
+              },
+              { key: 'reason', label: 'Why it was rejected', render: (g) => muted(g.reason) },
+            ]}
+          />
+        </Section>
+      ) : null}
     </>
   )
 }

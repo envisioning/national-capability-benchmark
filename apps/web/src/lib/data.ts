@@ -86,5 +86,18 @@ export async function loadEvidence(): Promise<EvidenceRecord[]> {
   return file?.records ?? []
 }
 
+/**
+ * A file from the repository's docs directory, for pages that render an
+ * internal document (the limits page). Resolved beside DATA_ROOT, so the same
+ * candidates logic covers laptop and server layouts.
+ */
+export async function loadDoc(name: string): Promise<string | null> {
+  try {
+    return await readFile(resolve(DATA_ROOT, '../docs', name), 'utf8')
+  } catch {
+    return null
+  }
+}
+
 export const MISSING_DATA_HINT =
   'No scored output yet. Run `pnpm bench all` in the repo root, then reload.'

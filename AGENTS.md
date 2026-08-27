@@ -103,9 +103,10 @@ port 3888. That entry starts Next directly and does not use the proxy.
   `delphiScore` and `delphiIqr`. `blendedScore` falls back to the panel only
   when no indicator evidence exists, and `blendedFrom` records which was used.
 - Confidence is never folded into the capability score. Two numbers, always. The
-  radar draws thin evidence as a dashed edge with a hollow point and marks the
-  axis label. Use `isThinEvidence` from `@ncb/core`, never a literal threshold in
-  a component.
+  radar draws thin evidence as a dashed edge with a hollow point, and the dash
+  gap widens as confidence falls (see D32). Use `isThinEvidence` from
+  `@ncb/core`, never a literal threshold in a component. The dash gradient's
+  solid boundary reads the usable band from `CONFIDENCE_BANDS`.
 - `data/observations/worldbank.json` holds every year from 1990, and scoring
   reads only the latest. The history exists for the trend layer. `momentum` is a
   list, one entry per span, shortest first: use `primaryMomentum` when a surface
@@ -159,12 +160,42 @@ port 3888. That entry starts Next directly and does not use the proxy.
   string. Branch on `isEvidential(run.provenance)` and `isPanel(run)`, both
   exported from `@ncb/core`. A `mock` run must never be presented as evidence,
   and a run with fewer than three panelists has no distribution to read.
+- `splitAgenda` in `packages/core/src/pipeline/agenda.ts` is the only place that
+  sorts an agenda into raise, measure and hold. The country lede and the agenda
+  document both call it, so both name the same leading dimension. Never re-sort
+  an agenda inside a component. See D39.
+- A generation date is metadata, never prose. It renders as a dateline under
+  the title, from `agenda.generated` in the lexicon, and the intro that follows
+  states what a score means. Never put a date back inside a sentence. See D40.
+- A repository file named in a rendered document or a page is a link, built by
+  `docHref` in `packages/core/src/model/project.ts`, which also holds `REPO_URL`
+  and the document constants. Never write a bare `docs/*.md` path or a GitHub
+  URL by hand: a published document reaches readers with no checkout. See D40.
 - Language is an interpretation layer. The ground layer stays English end to
   end: ids, registry definitions, JSON output. Translations live only in
   lexicons under `packages/core/src/i18n/`, one data file per language, and
   every lookup falls back to the registry English, so a partial lexicon renders
   complete pages. Never translate in place, and never let a rendered document
-  compute a number the JSON does not carry. See D35.
+  compute a number the JSON does not carry. See D35. In the viewer, language
+  switching is one control in the layout header, driven by `languageCounterpart`
+  in `apps/web/src/lib/links.ts`. Never add a language link to the nav or to a
+  page body.
+- Every URL shape the viewer writes lives in `apps/web/src/lib/links.ts`, one
+  helper per kind of thing. Never build `/country/...`, `/agenda/...`,
+  `/indicators#...`, `/patterns#...` or `/limits` inline in a component.
+- Every Delphi surface in the viewer gates on `isEvidential` before rendering
+  anything from a run, and on `isPanel` before calling anything a panel. A
+  non-panel run renders as "session estimate". The shared caveat is
+  `PanelProvenanceNote` in `apps/web/src/components/ui.tsx`.
+- `docs/KNOWN-ARTEFACTS.md` renders at `/limits` through the markdown-subset
+  renderer in `apps/web/src/lib/markdown.tsx`, and the file is listed in
+  `outputFileTracingIncludes`. A new doc rendered by a page needs the same
+  tracing entry, or the deployed page silently shows its empty state.
+- Two sessions appending to `docs/DECISIONS.md` collide. Read the highest number
+  in the file immediately before you write, and re-check it after: a concurrent
+  session can take your number, or rewrite the file from a stale copy and drop
+  your entry entirely. D39 is an unused number for that reason. The same hazard
+  applies to any append-only file in `docs/`.
 - A decision in `docs/DECISIONS.md` is the contract. If you are about to break
   one, supersede it there in the same change, with the evidence that overturned
   it. Silent divergence is how this falls apart.

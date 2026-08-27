@@ -340,3 +340,36 @@ budget execution rates, cross-agency delivery records, voter turnout,
 volunteering, civic participation. Until at least two land per dimension, treat
 Coordination, Trust and Shared Purpose as unmeasured, and consider whether a
 dimension below a coverage floor should print a score at all.
+
+**Update 2026-08-27. The World Bank API cannot supply that fix.** Twenty-five
+candidate series were probed against all ten reference countries. The result,
+per dimension:
+
+- **Coordination: nothing.** `IQ.SPI.PIL2/PIL4`, `IC.IMP.CSBC`,
+  `IC.EXP.CSBC.CD` and `GF.XPD.BUDG.ZS` return no data. `IQ.CPA.PUBS.XQ` covers
+  1 of 10, IDA borrowers only. `SL.TLF.CACT.ZS` covers 10 of 10 and correlates
+  with log GDP at 0.88, so it is a wealth proxy. `IQ.SPI.OVRL` is already wired
+  to Anticipation.
+- **Trust: one candidate, and it was rejected.** `IC.FRM.CORR.ZS` covers 10 of
+  10 across 2020 to 2025, is behavioural and correlates with log GDP at 0.667,
+  under the line. It was wired and scored. It lifted Trust confidence for 34 of
+  40 countries from very thin to thin, and it moved Trust's own GDP correlation
+  from 0.385 to 0.619. Reverted, with 0 of 360 published cells changed. Its
+  siblings are not independent evidence either: `IC.FRM.BRIB.ZS` correlates with
+  it at 0.87 across the reference set, and `IC.TAX.GIFT.ZS` is degenerate, with
+  three zeroes and the United States scoring worse than Chile.
+- **Shared Purpose: one untaken candidate.** `SG.GEN.PARL.ZS`, women in the
+  national parliament, covers 10 of 10 at 2025, spreads 13.8 to 44.9 and
+  correlates at 0.33. Its statistics are the best on the board and whether
+  representational breadth belongs in this dimension is unsettled.
+  `SL.EMP.VULN.ZS` is rejected: every value is an ILO modelled estimate, which
+  is imputation entering a model whose invariant forbids it.
+
+So the fix needs the project's second source adapter. The shortlist is ILOSTAT,
+IDEA voter turnout, and OECD government-at-a-glance for budget execution and
+court clearance. `ingest: 'manual'` already exists for anything with no API.
+
+The attempt also produced D42. `wealthAttribution` in the diagnostics now shows
+that `homicide_rate` alone raises Trust's wealth correlation by 0.288, from
+0.096 to 0.385, which is the largest single wealth contribution in the model.
+The indicator D23 added to fix contamination is the contamination.

@@ -1,27 +1,47 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   COUNTRIES,
   DIMENSIONS,
   DIMENSION_LABELS,
   DIMENSION_QUESTIONS,
+  DISSENT_IQR,
   INDICATORS,
+  MEASUREMENT_CLASS_MEANING,
   REFERENCE_ISO3,
   isScored,
   SOURCE_TIERS,
 } from '@ncb/core'
-import { CountryLabel, Scroller, Section, Table, Td, Th } from '@/components/ui'
+import type { MeasurementClass } from '@ncb/core'
+import { CountryLabel, Eyebrow, Headline, PageTitle, Scroller, Section, Table, Td, Th } from '@/components/ui'
 import { DIMENSION_ICON, Icon, TIER_ICON } from '@/components/Icon'
+
+export const metadata: Metadata = {
+  title: 'Method, NCB',
+  description:
+    'How a published statistic becomes a capability score: the frame, the confidence model, the trends, the panel, and the assumptions open to challenge.',
+}
 
 export default function MethodPage() {
   const gaps = INDICATORS.filter((i) => i.ingest === 'gap').length
   const retired = INDICATORS.filter((i) => i.ingest === 'retired').length
   const wired = INDICATORS.filter(isScored).length
   const manual = INDICATORS.filter((i) => i.ingest === 'manual').length
+  const classes: MeasurementClass[] = ['C', 'I', 'O', 'P']
 
   return (
     <>
+      <Eyebrow>Method</Eyebrow>
+      <PageTitle>Capability is measured apart from wealth</PageTitle>
+      <Headline>
+        The benchmark tests one claim: what a country is able to do is a separate property from
+        what it earns. Every choice below exists to keep those two apart far enough to see the
+        difference, and every choice can be challenged.
+      </Headline>
+
       <Section
         title="Why this exists"
-        hint="The benchmark tests one claim: that what a country is able to do is a separate property from what it earns. If the claim holds, two countries at the same income have different capability shapes. If it fails, the nine dimensions collapse into a single factor that tracks income per head. The diagnostics test for that collapse and publish the result either way."
+        hint="If the claim holds, two countries at the same income have different capability shapes. If it fails, the nine dimensions collapse into a single factor that tracks income per head."
       >
         <ul className="max-w-3xl list-disc space-y-3 pl-5 text-lg leading-relaxed">
           <li>
@@ -43,6 +63,17 @@ export default function MethodPage() {
             Treat this as a measuring instrument. It exists so a reader can check an attempt to
             raise a capability after the fact. Confidence, declared gaps and revisions are published
             beside every score and never resolved into it.
+          </li>
+          <li>
+            The{' '}
+            <Link href="/diagnostics" className="underline underline-offset-4">
+              diagnostics page
+            </Link>{' '}
+            tests for the collapse into income and publishes the result either way, and the{' '}
+            <Link href="/limits" className="underline underline-offset-4">
+              limits page
+            </Link>{' '}
+            records where a published number is known to be wrong about the world.
           </li>
         </ul>
       </Section>
@@ -111,11 +142,16 @@ export default function MethodPage() {
         title="Every indicator says what it actually measures"
         hint="We prefer C, then I, and use O and P only where nothing better exists. The classification is stored in the dataset so it can be argued with."
       >
-        <ul className="max-w-3xl space-y-2 text-lg leading-relaxed">
-          <li><strong>C</strong> is a direct capability measure.</li>
-          <li><strong>I</strong> is an input to the capability.</li>
-          <li><strong>O</strong> is a downstream outcome correlated with it.</li>
-          <li><strong>P</strong> is a perception proxy.</li>
+        {/* Rendered from the glossary's single source, never retyped: the exact
+            drift D26 forbids is a second copy of these four sentences. */}
+        <ul className="max-w-3xl space-y-3 text-lg leading-relaxed">
+          {classes.map((c) => (
+            <li key={c}>
+              <strong>{c}</strong>, {MEASUREMENT_CLASS_MEANING[c].label}.{' '}
+              {MEASUREMENT_CLASS_MEANING[c].plain}{' '}
+              <span className="text-[var(--muted)]">{MEASUREMENT_CLASS_MEANING[c].example}</span>
+            </li>
+          ))}
         </ul>
       </Section>
 
@@ -150,7 +186,7 @@ export default function MethodPage() {
 
       <Section
         title="Thin evidence is drawn on the chart"
-        hint="Confidence is coverage times recency times source quality, and it never enters the score. It is banded, and the bands drive the display everywhere: a dimension in the thin or very thin band is drawn with a dashed edge, a hollow point and a marked axis label. The point still sits at the score, because confidence does not move it."
+        hint="Confidence is coverage times recency times source quality, and it never enters the score. It is banded, and the bands drive the display everywhere: a dimension in the thin or very thin band is drawn with a dashed edge and a hollow point, and the dashes open further as confidence falls. The point still sits at the score, because confidence does not move it."
       >
         <ul className="max-w-3xl list-disc space-y-2 pl-5 text-lg leading-relaxed">
           <li>Coverage is the share of a dimension's indicators that have a value.</li>
@@ -239,8 +275,8 @@ export default function MethodPage() {
             revises or defends. Panelists are told not to converge for the sake of converging.
           </li>
           <li>
-            We keep the median and the interquartile range. A range above 25 points gets recorded
-            as unresolved disagreement, and we do not average it away.
+            We keep the median and the interquartile range. A range above {DISSENT_IQR} points gets
+            recorded as unresolved disagreement, and we do not average it away.
           </li>
           <li>
             Panel estimates are stored in their own file and never enter the indicator-derived
@@ -250,12 +286,20 @@ export default function MethodPage() {
             The panel also re-classifies every indicator as C, I, O or P, rates construct validity
             and wealth-proxy risk, and names redundant pairs.
           </li>
+          <li>
+            The{' '}
+            <Link href="/delphi" className="underline underline-offset-4">
+              Delphi page
+            </Link>{' '}
+            shows the current run, its provenance and its limits. The active run is a working
+            session and does not yet qualify as a panel.
+          </li>
         </ul>
       </Section>
 
       <Section
         title="The scale is fixed by ten countries and holds still"
-        hint={`Ten reference countries set the Tukey fences and the 0 and 100 endpoints for every indicator. Every other country is scored against that same fixed frame, so adding a country moves nobody else's number. Verified when six countries were added: 0 of 90 existing cells moved. A country outside the frame clamps to 0 or 100 and the cell is flagged, because widening the scale quietly would change what every published number means. The ${COUNTRIES.length} countries here are chosen to expose different capability structures, and ranking them against each other is not the exercise.`}
+        hint={`Ten reference countries set the Tukey fences and the 0 and 100 endpoints for every indicator. Every other country is scored against that same fixed frame, so adding a country moves nobody else's number. Verified twice as countries were added: 0 of 90 existing cells moved at 16 countries, 0 of 144 at 40. A country outside the frame clamps to 0 or 100 and the cell is flagged, because widening the scale quietly would change what every published number means. The ${COUNTRIES.length} countries here are chosen to expose different capability structures, and ranking them against each other is not the exercise.`}
       >
         <Scroller>
           <Table>
@@ -289,13 +333,23 @@ export default function MethodPage() {
             world, so a low score means near the floor of this frame and says nothing about a
             percentage of capability.
           </li>
-          <li>Only the latest observation is used. There is no trend line and nothing is back-filled.</li>
+          <li>
+            A score uses only the latest observation per indicator, and nothing is back-filled or
+            imputed. Trends are computed separately, on a matched basket against the current frame.
+          </li>
           <li>
             {COUNTRIES.length} countries give few degrees of freedom, so every correlation in the
             diagnostics is a hint and none of them are established results.
           </li>
           <li>Doing Business series are frozen at 2019 and are marked down by the recency term.</li>
-          <li>Coordination and Trust still lean on perception composites that track income per head.</li>
+          <li>
+            The perception composites are retired, and the cost of retiring them is that
+            Coordination, Trust and Shared Purpose now rest on one or two indicators each. The{' '}
+            <Link href="/limits" className="underline underline-offset-4">
+              limits page
+            </Link>{' '}
+            carries the detail.
+          </li>
           <li>Political uniformity is never treated as a capability.</li>
         </ul>
       </Section>

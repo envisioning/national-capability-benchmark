@@ -5,7 +5,7 @@ import { DIMENSION_LABELS, DIMENSION_QUESTIONS, confidenceBand, isThinEvidence }
 import type { Dimension } from '@ncb/core'
 import { Distribution } from '@/components/Distribution'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
-import { CountryLabel } from '@/components/ui'
+import { CountryLabel, Score } from '@/components/ui'
 
 type Row = {
   iso3: string
@@ -13,6 +13,8 @@ type Row = {
   score: number
   confidence: number
   delta: number | null
+  basket: number | null
+  spanYears: number | null
   reference: boolean
 }
 
@@ -132,9 +134,11 @@ export function DimensionDialog({
 
           <p className="mb-4 max-w-2xl text-xs leading-relaxed text-[var(--muted)]">
             Every country is scored the same way, as a position from 0 to 100 on a scale fixed by
-            ten reference countries. The band beside each score says how well evidenced it is, and a
-            thin band means the number moves on very little. The last column is the change over ten
-            years where there is enough history to compute one.
+            ten reference countries. In the strip below, each dot is a country, the box spans the
+            middle half of the field, and the line inside it is the median. A hollow dot is thin
+            evidence. The band beside each score says how well evidenced it is, and the last column
+            is the change over the trend span, with the number of indicators it rests on in
+            brackets.
             {rank && rows ? ` This country ranks ${rank} of ${rows.length}.` : ''}
           </p>
 
@@ -179,13 +183,22 @@ export function DimensionDialog({
                           }}
                         />
                       </span>
-                      <span className="w-9 text-right tabular-nums">{r.score.toFixed(1)}</span>
+                      <Score value={r.score} size="sm" />
                     </span>
                     <span className="text-right text-[var(--muted)]" title={band.meaning}>
                       {band.label}
                     </span>
-                    <span className="text-right tabular-nums text-[var(--muted)]">
-                      {r.delta === null ? '' : `${r.delta > 0 ? '+' : ''}${r.delta.toFixed(1)}`}
+                    <span
+                      className="text-right tabular-nums text-[var(--muted)]"
+                      title={
+                        r.delta === null
+                          ? undefined
+                          : `Change over ${r.spanYears} years on ${r.basket} matched indicators.`
+                      }
+                    >
+                      {r.delta === null
+                        ? ''
+                        : `${r.delta > 0 ? '+' : ''}${r.delta.toFixed(1)} (${r.basket})`}
                     </span>
                   </li>
                 )

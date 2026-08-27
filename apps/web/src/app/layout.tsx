@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import Link from 'next/link'
+import { LanguageSwitch, NavLinks } from '@/components/NavLinks'
 import './globals.css'
 
 /*
@@ -40,18 +41,6 @@ export const metadata: Metadata = {
     'A prototype that measures what a country can do, separately from how rich it is.',
 }
 
-const NAV = [
-  { href: '/', label: 'Profiles' },
-  { href: '/agenda', label: 'Agendas' },
-  { href: '/indicators', label: 'Indicators' },
-  { href: '/patterns', label: 'Patterns' },
-  { href: '/diagnostics', label: 'Diagnostics' },
-  { href: '/delphi', label: 'Delphi panel' },
-  { href: '/method', label: 'Method' },
-  { href: '/glossary', label: 'Glossary' },
-  { href: '/pt', label: 'Português' },
-]
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${interItalic.variable} ${octa.variable}`}>
@@ -82,20 +71,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 Benchmark
               </span>
             </Link>
-            <nav className="flex flex-wrap gap-x-6 gap-y-2 text-xs font-medium">
-              {NAV.map((n) => (
-                <Link
-                  key={n.href}
-                  href={n.href}
-                  className="text-[var(--muted)] transition-all duration-200 hover:text-[var(--foreground)]"
-                >
-                  {n.label}
-                </Link>
-              ))}
-            </nav>
-            <span className="ml-auto text-xs uppercase tracking-[0.05em] text-[var(--muted)]">
-              Prototype v0
-            </span>
+            <NavLinks />
+            {/* Language is an interpretation layer, not a section, so the switch
+                sits apart from the nav and appears only where a counterpart
+                page exists. See D35. */}
+            <LanguageSwitch />
           </div>
         </header>
 

@@ -5,7 +5,8 @@ import { INDICATORS_BY_ID, MEASUREMENT_CLASS_MEANING } from '@ncb/core'
 import type { IndicatorAcrossCountries } from '@ncb/core'
 import { Distribution } from '@/components/Distribution'
 import { Icon } from '@/components/Icon'
-import { ClassBadge, CountryLabel } from '@/components/ui'
+import { indicatorHref } from '@/lib/links'
+import { ClassBadge, CountryLabel, Score } from '@/components/ui'
 
 /**
  * A number in a table is not information until you know what else it could have
@@ -105,8 +106,29 @@ export function IndicatorPeek({
 
           <p className="mb-4 max-w-2xl text-xs leading-relaxed text-[var(--muted)]">
             Measured in {def.unit}, where {def.direction === 'higher_better' ? 'higher' : 'lower'} is
-            better. Source: {def.source.publisher}
-            {def.source.series ? ` (${def.source.series})` : ''}. The bar is the normalized position
+            better. Source:{' '}
+            {def.source.url ? (
+              <a
+                href={def.source.url}
+                className="underline underline-offset-4"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {def.source.publisher}
+                {def.source.series ? ` (${def.source.series})` : ''}
+              </a>
+            ) : (
+              <>
+                {def.source.publisher}
+                {def.source.series ? ` (${def.source.series})` : ''}
+              </>
+            )}
+            , also in the{' '}
+            <a href={indicatorHref(def.id)} className="underline underline-offset-4">
+              indicator registry
+            </a>
+            . In the strip below, each dot is a country, the box spans the middle half of the field,
+            and the line inside it is the median. The bar in the list is the normalized position
             from 0 to 100 on a scale fixed by ten reference countries, so higher is always better on
             the bar whatever the raw number does.
             {rank ? ` This country ranks ${rank} of ${values.length} on the values we hold.` : ''}
@@ -154,7 +176,7 @@ export function IndicatorPeek({
                           }}
                         />
                       </span>
-                      <span className="w-9 text-right tabular-nums">{v.normalized.toFixed(1)}</span>
+                      <Score value={v.normalized} size="sm" />
                       {v.outOfFrame ? (
                         <Icon
                           name="triangle-alert"

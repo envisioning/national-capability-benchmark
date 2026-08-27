@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import { PT_BR, REFERENCE_ISO3, countryName } from '@ncb/core'
 import { CountryLabel, Empty, Eyebrow, Highlight, PageTitle } from '@/components/ui'
-import { MISSING_DATA_HINT, loadIndex } from '@/lib/data'
+import { loadIndex } from '@/lib/data'
+import { agendaHref } from '@/lib/links'
 
 export const dynamic = 'force-dynamic'
 
@@ -19,7 +20,13 @@ export const metadata = {
  */
 export default async function PortugueseHomePage() {
   const data = await loadIndex()
-  if (!data) return <Empty hint={MISSING_DATA_HINT} />
+  if (!data || data.countries.length === 0) {
+    return (
+      <div lang="pt-BR">
+        <Empty hint="Ainda não há dados gerados. Rode pnpm bench all na raiz do repositório e recarregue." />
+      </div>
+    )
+  }
 
   const countries = [...data.countries].sort((a, b) =>
     countryName(PT_BR, a.iso3).localeCompare(countryName(PT_BR, b.iso3), 'pt-BR'),
@@ -69,7 +76,7 @@ export default async function PortugueseHomePage() {
       <ul className="mt-6 grid gap-x-8 gap-y-2 text-lg sm:grid-cols-2 lg:grid-cols-3">
         {countries.map((c) => (
           <li key={c.iso3}>
-            <Link href={`/pt/agenda/${c.iso3}`} className="underline underline-offset-4">
+            <Link href={agendaHref(c.iso3, 'pt-BR')} className="underline underline-offset-4">
               <CountryLabel iso3={c.iso3} name={countryName(PT_BR, c.iso3)} />
             </Link>
           </li>

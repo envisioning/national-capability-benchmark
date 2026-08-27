@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import type { CountryAgenda, Lexicon } from '@ncb/core'
 import {
-  LIMITS_DOC,
   RAISE_BELOW,
   REFERENCE_ISO3,
   REPO_URL,
@@ -11,14 +10,13 @@ import {
   fmt,
   fmtConf,
   indicatorDefinition,
-  docHref,
   indicatorName,
   signed,
   splitAgenda,
 } from '@ncb/core'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { fillNodes, joinNodes } from '@/lib/fill'
-import { countryProfileHref, evidenceHref, indicatorHref } from '@/lib/links'
+import { countryProfileHref, evidenceHref, indicatorHref, limitsHref } from '@/lib/links'
 import {
   ConfidenceBar,
   ConfidenceLegend,
@@ -113,10 +111,13 @@ export function AgendaView({
       <p className="mb-4 max-w-3xl text-lg leading-relaxed">
         {fillNodes(s.intro, {
           reference: REFERENCE_ISO3.length,
+          /* The viewer has its own limits page, so {limits} lands there. The
+           * rendered markdown keeps the repository link, because a document
+           * reaches readers who have neither the site nor a checkout. See D41. */
           limits: (
-            <a href={docHref(LIMITS_DOC)} className={LINK}>
-              {LIMITS_DOC}
-            </a>
+            <Link href={limitsHref} className={LINK}>
+              {s.limitsLabel}
+            </Link>
           ),
         })}
       </p>
