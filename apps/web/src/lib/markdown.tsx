@@ -116,27 +116,60 @@ export function Markdown({ source }: { source: string }) {
     if (/^\|/.test(line)) {
       flush()
       const rows: string[][] = []
+      /* The separator row carries the author's alignment and used to be thrown
+       * away. Keeping it is what lets a header sit over its own column. */
+      let declared: Array<'left' | 'right' | null> = []
       while (i < lines.length && /^\|/.test(lines[i] as string)) {
         const cells = (lines[i] as string)
           .replace(/^\||\|$/g, '')
           .split('|')
           .map((c) => c.trim())
-        if (!cells.every((c) => /^:?-{3,}:?$/.test(c))) rows.push(cells)
+        if (cells.every((c) => /^:?-{3,}:?$/.test(c))) {
+          /* `---:` is right. `:---` and `:---:` both fall to left, because the
+           * table has no centred variant to render them into. */
+          declared = cells.map((c) =>
+            c.endsWith(':') && !c.startsWith(':') ? 'right' : c.startsWith(':') ? 'left' : null,
+          )
+        } else {
+          rows.push(cells)
+        }
         i += 1
       }
       const [head, ...body] = rows
+
+      /**
+       * One alignment per column, applied to the header and to every cell in it.
+       *
+       * Each cell used to decide for itself, so a numeric column sat right while
+       * its header sat left and the two did not line up. The author's `---:`
+       * wins; without one, a column whose every value reads as a number is
+       * right-aligned and everything else is left.
+       */
+      const isNumeric = (c: string) => /^[\d+−.,%–-]+$/.test(c)
+      const alignOf = (j: number): 'left' | 'right' => {
+        const d = declared[j]
+        if (d) return d
+        const col = body.map((r) => r[j] ?? '').filter((c) => c !== '')
+        return col.length > 0 && col.every(isNumeric) ? 'right' : 'left'
+      }
       blocks.push(
         <div key={`t${k++}`} className="my-6">
           <Scroller>
             <Table>
               <thead>
-                <tr>{(head ?? []).map((c, j) => <Th key={j}>{inline(c)}</Th>)}</tr>
+                <tr>
+                  {(head ?? []).map((c, j) => (
+                    <Th key={j} align={alignOf(j)}>
+                      {inline(c)}
+                    </Th>
+                  ))}
+                </tr>
               </thead>
               <tbody>
                 {body.map((r, ri) => (
                   <tr key={ri}>
                     {r.map((c, j) => (
-                      <Td key={j} align={/^[\d+−.,%–-]+$/.test(c) ? 'right' : 'left'}>
+                      <Td key={j} align={alignOf(j)}>
                         {inline(c)}
                       </Td>
                     ))}
