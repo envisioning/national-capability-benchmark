@@ -286,5 +286,7 @@ export const PT_BR: Lexicon = {
     contributeHeading: 'Como mover um número desta página',
     contributeBody:
       'Preencha uma lacuna, registre uma evidência ou conteste um indicador em {repo}. O método, cada decisão por trás dele e a evidência que derrubaria cada uma estão no diretório docs do mesmo repositório.',
+    profileLink: 'Abra o perfil completo, em inglês: cada indicador com valor bruto, ano e fonte',
+    switchLanguage: 'Read in English',
   },
 }

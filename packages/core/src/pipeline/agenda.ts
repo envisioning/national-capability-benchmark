@@ -207,29 +207,29 @@ export function buildAgenda(
 
 /* ------------------------------ Rendering ------------------------------ */
 
-const fmt = (n: number, locale: string): string =>
+export const fmt = (n: number, locale: string): string =>
   round(n, 1).toLocaleString(locale, { maximumFractionDigits: 1 })
 
 /** Confidence keeps two decimals: 0.54 and 0.48 must not both print as 0.5. */
-const fmtConf = (n: number, locale: string): string =>
+export const fmtConf = (n: number, locale: string): string =>
   round(n, 2).toLocaleString(locale, { maximumFractionDigits: 2 })
 
-const countryName = (lex: Lexicon, iso3: string): string =>
+export const countryName = (lex: Lexicon, iso3: string): string =>
   lex.countries[iso3] ?? COUNTRY_NAMES[iso3] ?? iso3
 
 /** The name as it sits in prose: with its article in languages that use one. */
-const countryTopic = (lex: Lexicon, iso3: string): string => {
+export const countryTopic = (lex: Lexicon, iso3: string): string => {
   const article = lex.countryArticles[iso3]
   return article ? `${article} ${countryName(lex, iso3)}` : countryName(lex, iso3)
 }
 
-const signed = (n: number, locale: string): string =>
+export const signed = (n: number, locale: string): string =>
   (n > 0 ? '+' : '') + fmt(n, locale)
 
-const indicatorName = (lex: Lexicon, id: string): string =>
+export const indicatorName = (lex: Lexicon, id: string): string =>
   lex.indicators[id] ?? INDICATORS_BY_ID[id]?.name ?? id
 
-const indicatorDefinition = (lex: Lexicon, id: string): string =>
+export const indicatorDefinition = (lex: Lexicon, id: string): string =>
   lex.indicatorDefinitions[id] ?? INDICATORS_BY_ID[id]?.definition ?? ''
 
 function trendCell(lex: Lexicon, trend: AgendaTrend | null): string {

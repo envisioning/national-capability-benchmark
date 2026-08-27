@@ -42,12 +42,14 @@ export const metadata: Metadata = {
 
 const NAV = [
   { href: '/', label: 'Profiles' },
+  { href: '/agenda', label: 'Agendas' },
   { href: '/indicators', label: 'Indicators' },
   { href: '/patterns', label: 'Patterns' },
   { href: '/diagnostics', label: 'Diagnostics' },
   { href: '/delphi', label: 'Delphi panel' },
   { href: '/method', label: 'Method' },
   { href: '/glossary', label: 'Glossary' },
+  { href: '/pt', label: 'Português' },
 ]
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

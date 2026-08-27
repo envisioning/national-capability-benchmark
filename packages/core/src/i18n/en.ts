@@ -57,5 +57,7 @@ export const EN: Lexicon = {
     contributeHeading: 'How to move a number on this page',
     contributeBody:
       'Fill a gap, file an evidence record, or contest an indicator at {repo}. The method, every decision behind it and the evidence that would overturn each one are in the docs directory of the same repository.',
+    profileLink: 'Open the full profile: every indicator, its raw value, its year and its source',
+    switchLanguage: 'Ler em português',
   },
 }

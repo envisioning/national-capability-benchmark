@@ -59,6 +59,10 @@ export type AgendaStrings = {
   contributeHeading: string
   /** {repo} */
   contributeBody: string
+  /** Link from an agenda to the full country profile in the ground layer. */
+  profileLink: string
+  /** Label on the link to this document in the other language. */
+  switchLanguage: string
 }
 
 export type Lexicon = {
