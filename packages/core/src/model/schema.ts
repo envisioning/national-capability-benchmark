@@ -199,10 +199,25 @@ export function isEvidential(provenance: Provenance): boolean {
   return provenance !== 'mock'
 }
 
+/** The provenance kinds in plain language, for any surface that names one. */
+export const PROVENANCE_LABELS: Record<Provenance, string> = {
+  gateway: 'multi-vendor model panel',
+  in_session: 'working session',
+  human: 'human expert panel',
+  mock: 'offline stand-in, not evidence',
+}
+
 /** Whether a run of this provenance carries a real distribution across panelists. */
 export function isPanel(run: { provenance: Provenance; panel: unknown[] }): boolean {
   return isEvidential(run.provenance) && run.panel.length >= 3
 }
+
+/**
+ * Panel IQR above this many points is unresolved disagreement rather than
+ * noise: a quarter of the scale between the middle half of the panel. Every
+ * surface that computes or explains dissent reads this constant. See D12.
+ */
+export const DISSENT_IQR = 25
 
 export const DelphiRunFile = z.object({
   runId: z.string(),

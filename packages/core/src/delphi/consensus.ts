@@ -1,4 +1,4 @@
-import { COUNTRY_NAMES, DIMENSIONS, INDICATORS_BY_ID } from '../model/index.js'
+import { COUNTRY_NAMES, DIMENSIONS, DISSENT_IQR, INDICATORS_BY_ID } from '../model/index.js'
 import type {
   DelphiRunFile,
   Dimension,
@@ -45,7 +45,7 @@ export function cellConsensus(run: DelphiRunFile): CellConsensus[] {
       iqr: round(iqr(scores), 1),
       min: round(Math.min(...scores), 1),
       max: round(Math.max(...scores), 1),
-      dissent: iqr(scores) > 25,
+      dissent: iqr(scores) > DISSENT_IQR,
       medianShift: null,
       iqrShift: null,
       panelists: list.map((e) => ({

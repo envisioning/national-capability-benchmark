@@ -215,7 +215,11 @@ export function indicatorSeries(
 
 /** The trend to show first: the shortest span that produced one. */
 export function primaryMomentum(list: Momentum[]): Momentum | null {
-  return list.length > 0 ? (list[0] as Momentum) : null
+  if (list.length === 0) return null
+  const bySpan = [...list].sort(
+    (a, b) => a.currentYear - a.baseYear - (b.currentYear - b.baseYear),
+  )
+  return bySpan[0] as Momentum
 }
 
 /** The distinct spans present across a set of momentum entries, shortest first. */

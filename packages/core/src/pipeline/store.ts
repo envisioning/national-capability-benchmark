@@ -112,15 +112,18 @@ export function acrossCountries(countries: CountryResult[]): IndicatorAcrossCoun
   for (const country of countries) {
     for (const dimension of Object.values(country.dimensions)) {
       for (const row of dimension.indicators) {
+        /* An observed row always carries a year and a tier; a row missing either
+         * is malformed and is skipped rather than given an invented value. */
         if (row.status !== 'observed' || row.raw === null || row.normalized === null) continue
+        if (row.year === null || row.sourceTier === null) continue
         const list = byIndicator.get(row.indicatorId) ?? []
         list.push({
           iso3: country.iso3,
           country: country.country,
           raw: row.raw,
           normalized: row.normalized,
-          year: row.year ?? 0,
-          tier: row.sourceTier ?? 'international_organization',
+          year: row.year,
+          tier: row.sourceTier,
           outOfFrame: row.outOfFrame,
           reference: REFERENCE_ISO3.includes(country.iso3),
         })

@@ -81,7 +81,7 @@ async function score(args: Args): Promise<CountryResult[]> {
     throw new Error('No observations. Run `pnpm bench ingest` first.')
   }
   const delphi = await loadDelphi()
-  const { countries, matrix } = scoreAll(observations, {
+  const { countries } = scoreAll(observations, {
     currentYear: CURRENT_YEAR,
     delphi: delphi?.cellEstimates ?? [],
     minPanelistConfidence: num(args, 'min-panelist-confidence', 0),

@@ -1,7 +1,7 @@
 import { readdir, readFile } from 'node:fs/promises'
 import { basename, resolve } from 'node:path'
 import { COUNTRY_ISO3, DIMENSIONS, INDICATORS_BY_ID, isScored } from '../model/index.js'
-import { DelphiRunFile, EvidenceFile, isReversal } from '../model/schema.js'
+import { DelphiRunFile, EvidenceFile, isEvidential, isPanel, isReversal } from '../model/schema.js'
 import { DELPHI_DIR, FILES } from './paths.js'
 
 export type Problem = { file: string; severity: 'error' | 'warning'; problem: string }
@@ -85,7 +85,7 @@ export async function validateDelphiRuns(dir = DELPHI_DIR): Promise<Problem[]> {
       }
     }
 
-    if (run.provenance !== 'mock' && run.panel.length < 3) {
+    if (isEvidential(run.provenance) && !isPanel(run)) {
       problems.push({
         file,
         severity: 'warning',

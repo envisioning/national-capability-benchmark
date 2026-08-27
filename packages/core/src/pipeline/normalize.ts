@@ -1,26 +1,18 @@
 import { quantile } from './stats.js'
 import type { IndicatorDef } from '../model/schema.js'
 
-export type Winsorized = { value: number; clipped: boolean }
-
 /**
  * Tukey fences at k interquartile ranges. k = 3 clips only extreme outliers,
  * which is what the spec asks for: winsorize if necessary, not by default.
  * With ten countries a percentile rule would always clip the top and bottom
  * country, which would destroy exactly the variation the benchmark is testing.
  */
-export function winsorize(values: number[], k = 3): Winsorized[] {
+export function tukeyFences(values: number[], k: number): { lo: number; hi: number } {
   const sorted = [...values].sort((a, b) => a - b)
   const q1 = quantile(sorted, 0.25)
   const q3 = quantile(sorted, 0.75)
   const spread = q3 - q1
-  const lo = q1 - k * spread
-  const hi = q3 + k * spread
-  return values.map((v) => {
-    if (v < lo) return { value: lo, clipped: true }
-    if (v > hi) return { value: hi, clipped: true }
-    return { value: v, clipped: false }
-  })
+  return { lo: q1 - k * spread, hi: q3 + k * spread }
 }
 
 /** Apply the indicator's declared transform to a raw value. */
@@ -64,12 +56,7 @@ export type Frame = {
  */
 export function buildFrame(referenceValues: number[], k = 3): Frame | null {
   if (referenceValues.length < 2) return null
-  const sorted = [...referenceValues].sort((a, b) => a - b)
-  const q1 = quantile(sorted, 0.25)
-  const q3 = quantile(sorted, 0.75)
-  const spread = q3 - q1
-  const lo = q1 - k * spread
-  const hi = q3 + k * spread
+  const { lo, hi } = tukeyFences(referenceValues, k)
   const clipped = referenceValues.map((v) => Math.min(hi, Math.max(lo, v)))
   return { lo, hi, min: Math.min(...clipped), max: Math.max(...clipped) }
 }

@@ -1,6 +1,7 @@
 import {
   COUNTRIES,
   COUNTRY_ISO3,
+  DISSENT_IQR,
   REFERENCE_ISO3,
   DIMENSIONS,
   INDICATORS,
@@ -124,9 +125,13 @@ export function buildFrames(
   return frames
 }
 
-export function buildMatrix(observations: Observation[], opts: ScoreOptions): Matrix {
+export function buildMatrix(
+  observations: Observation[],
+  opts: ScoreOptions,
+  prebuiltFrames?: Map<string, Frame>,
+): Matrix {
   const byKey = latest(observations)
-  const frames = buildFrames(observations, opts)
+  const frames = prebuiltFrames ?? buildFrames(observations, opts)
   const matrix: Matrix = new Map()
 
   for (const def of INDICATORS) {
@@ -224,8 +229,7 @@ function delphiFor(
   return {
     score: round(median(scores), 1),
     iqr: round(spread, 1),
-    /** A quarter of the scale between the middle half of the panel is unresolved disagreement. */
-    dissent: spread > 25,
+    dissent: spread > DISSENT_IQR,
   }
 }
 
@@ -235,10 +239,11 @@ export type ScoreOutput = {
 }
 
 export function scoreAll(observations: Observation[], opts: ScoreOptions): ScoreOutput {
-  const matrix = buildMatrix(observations, opts)
+  const allFrames = buildFrames(observations, opts)
+  const matrix = buildMatrix(observations, opts, allFrames)
   const minPanelistConfidence = opts.minPanelistConfidence ?? 0
   const spans = opts.momentumSpans ?? [10, 20]
-  const frames = spans.length > 0 ? buildFrames(observations, opts) : null
+  const frames = spans.length > 0 ? allFrames : null
   const history = spans.length > 0 ? buildHistory(observations) : null
 
   const countries: CountryResult[] = COUNTRIES.map((country) => {
