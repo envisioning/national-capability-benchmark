@@ -9,6 +9,20 @@ const config: NextConfig = {
   // Set NEXT_DIST_DIR to build into a different directory and leave the dev
   // server alone.
   distDir: process.env.NEXT_DIST_DIR ?? '.next',
+  // The viewer reads its data from data/out at request time, through paths the
+  // bundler cannot see. Without this the deployed functions ship without the
+  // JSON and every page 500s. Observations are deliberately absent: 9 MB the
+  // viewer never opens.
+  outputFileTracingIncludes: {
+    '/**': [
+      '../../data/out/index.json',
+      '../../data/out/countries/**',
+      '../../data/out/indicators/**',
+      '../../data/out/diagnostics.json',
+      '../../data/evidence/**',
+      '../../data/delphi/latest.json',
+    ],
+  },
 }
 
 export default config
