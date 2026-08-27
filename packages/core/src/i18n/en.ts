@@ -23,14 +23,16 @@ export const EN: Lexicon = {
   },
   agenda: {
     title: 'Capability agenda: {country}',
+    generated: 'Generated {date}',
     intro:
-      'Generated {date} from the current data run. Scores are relative to a frame fixed by the {reference} reference countries and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read docs/KNOWN-ARTEFACTS.md before quoting any number on its own.',
+      'Scores are relative to a frame fixed by the {reference} reference countries and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read {limits} before quoting any number on its own.',
     standingHeading: 'Where {countryTopic} stands',
     colDimension: 'Dimension',
     colScore: 'Score',
     colConfidence: 'Confidence',
     colTrend: 'Trend',
     trendCell: '{delta} over {years} years, on {n} indicators',
+    trendCellClamped: '{delta} over {years} years, on {n} indicators, {c} clamped at the frame edge',
     noTrend: 'no trend basket',
     noScore: 'not scored',
     raiseItemHeading: '{dimension}: {score}, confidence {band}',
@@ -41,9 +43,14 @@ export const EN: Lexicon = {
     measureHeading: 'The dimensions that must be measured before they can be managed',
     measureIntro:
       'Confidence here is below the usable band, so the score cannot carry a decision. The first intervention is evidence.',
+    holdHeading: 'The dimensions the evidence says to hold',
+    holdIntro:
+      'Strongest first. These score at or above {threshold} on usable evidence, so nothing here asks to be raised or measured first. A held dimension still decays when nobody watches it.',
+    holdItemLine: '{dimension}: {score}, confidence {band}',
     scoredOn: 'Currently scored on {n} observed indicators.',
     scoredOnOne: 'Currently scored on a single observed indicator.',
     gapsLine: 'Declared gaps in this dimension: {list}.',
+    retiredLine: 'Datasets examined and rejected for this dimension: {list}.',
     exemplarsLine: 'Highest scores with usable evidence: {list}.',
     evidenceElsewhereLine: 'Documented deliveries elsewhere: {list}.',
     agendaHeading: 'The measurement agenda',
@@ -58,6 +65,5 @@ export const EN: Lexicon = {
     contributeBody:
       'Fill a gap, file an evidence record, or contest an indicator at {repo}. The method, every decision behind it and the evidence that would overturn each one are in the docs directory of the same repository.',
     profileLink: 'Open the full profile: every indicator, its raw value, its year and its source',
-    switchLanguage: 'Ler em português',
   },
 }

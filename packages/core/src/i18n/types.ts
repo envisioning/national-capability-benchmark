@@ -17,9 +17,15 @@ export type AgendaStrings = {
   /** {country} */
   title: string
   /**
-   * {date} {countries} {reference}. The standing disclaimer under the title.
-   * Keep the three claims: relative scores, confidence reported separately,
-   * read the artefacts before quoting.
+   * {date}. Metadata, not prose: the renderer sets it beside the title as a
+   * dateline and never inside a sentence.
+   */
+  generated: string
+  /**
+   * {reference} {limits}. The standing disclaimer under the title. Keep the
+   * three claims: relative scores, confidence reported separately, read the
+   * limits before quoting. {limits} is filled by the renderer, which links
+   * docs/KNOWN-ARTEFACTS.md in the repository.
    */
   intro: string
   /** {countryTopic}: the country name with its article, for prose position. */
@@ -30,12 +36,19 @@ export type AgendaStrings = {
   colTrend: string
   /** {delta} {years} {n} */
   trendCell: string
+  /** {delta} {years} {n} {c}: the variant for a basket partly clamped at the frame edge. */
+  trendCellClamped: string
   noTrend: string
   noScore: string
   raiseHeading: string
   raiseIntro: string
   measureHeading: string
   measureIntro: string
+  holdHeading: string
+  /** {threshold} */
+  holdIntro: string
+  /** {dimension} {score} {band} */
+  holdItemLine: string
   /** {dimension} {score} {band} */
   raiseItemHeading: string
   /** {dimension} {confidence} {band} */
@@ -45,6 +58,8 @@ export type AgendaStrings = {
   scoredOnOne: string
   /** {list} */
   gapsLine: string
+  /** {list}: datasets that exist and were rejected, kept on the record. */
+  retiredLine: string
   exemplarsLine: string
   evidenceElsewhereLine: string
   agendaHeading: string
@@ -61,8 +76,6 @@ export type AgendaStrings = {
   contributeBody: string
   /** Link from an agenda to the full country profile in the ground layer. */
   profileLink: string
-  /** Label on the link to this document in the other language. */
-  switchLanguage: string
 }
 
 export type Lexicon = {

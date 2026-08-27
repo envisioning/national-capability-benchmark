@@ -1,6 +1,7 @@
-import type { MeasurementClass } from '@ncb/core'
-import { DIMENSIONS, DIMENSION_LABELS, countryFlag } from '@ncb/core'
-import { CLASS_ICON, CONFIDENCE_ICON, DIMENSION_ICON, Icon } from '@/components/Icon'
+import Link from 'next/link'
+import type { MeasurementClass, Provenance } from '@ncb/core'
+import { DIMENSIONS, DIMENSION_LABELS, countryFlag, isEvidential } from '@ncb/core'
+import { CLASS_ICON, CONFIDENCE_ICON, DIMENSION_ICON, Icon, type IconName } from '@/components/Icon'
 import {
   CONFIDENCE_BANDS,
   MEASUREMENT_CLASS_LABELS,
@@ -65,6 +66,20 @@ export function CountryLabel({ iso3, name }: { iso3: string; name: string }) {
     <span className="inline-flex items-baseline gap-2">
       <Flag iso3={iso3} />
       <span>{name}</span>
+    </span>
+  )
+}
+
+/**
+ * Metadata rendered as metadata: a generated date, a dataset version, a run id.
+ * A pill, not a sentence, so a reader can tell provenance apart from prose at a
+ * glance. Group several in one flex row.
+ */
+export function Meta({ icon, children }: { icon?: IconName; children: React.ReactNode }) {
+  return (
+    <span className="inline-flex items-center gap-1.5 rounded-full border border-[var(--rule)] px-3 py-1 text-xs font-medium text-[var(--muted)]">
+      {icon ? <Icon name={icon} size={12} /> : null}
+      {children}
     </span>
   )
 }
@@ -194,7 +209,12 @@ export function ScoreLegend() {
   )
 }
 
-export function ConfidenceBar({ value }: { value: number }) {
+export function ConfidenceBar({ value }: { value: number | null }) {
+  /* A missing confidence must never draw as a very short bar: 0.00 and "we do
+   * not know" are different claims. Score makes the same distinction. */
+  if (value === null || Number.isNaN(value)) {
+    return <span className="text-[var(--muted)]">no data</span>
+  }
   const band = confidenceBand(value)
   return (
     <span
@@ -216,28 +236,43 @@ export function ConfidenceBar({ value }: { value: number }) {
   )
 }
 
-/** Always shipped beside a table of confidence meters. */
+/**
+ * Always shipped beside a table of confidence meters.
+ *
+ * The band meanings are printed, not tucked into tooltips: "do not quote it on
+ * its own" is the strongest caveat in the system and has to survive touch
+ * screens and skim reading.
+ */
 export function ConfidenceLegend() {
   return (
-    <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-xs">
-      {[...CONFIDENCE_BANDS].reverse().map((b, i, all) => {
-        const next = all[i + 1]
-        const range = next
-          ? `${b.min.toFixed(2)} to ${next.min.toFixed(2)}`
-          : `${b.min.toFixed(2)} and above`
-        return (
-          <li key={b.id} className="inline-flex items-center gap-2" title={b.meaning}>
-            <Icon name={CONFIDENCE_ICON[b.id]} size={13} className="text-[var(--muted)]" />
-            <span
-              className="inline-block h-1.5 w-6 rounded-full"
-              style={{ background: `var(--band-${b.id})` }}
-            />
-            <span className="font-medium">{b.label}</span>
-            <span className="tabular-nums text-[var(--muted)]">{range}</span>
+    <div className="mt-4">
+      <ul className="flex flex-wrap gap-x-6 gap-y-2 text-xs">
+        {[...CONFIDENCE_BANDS].reverse().map((b, i, all) => {
+          const next = all[i + 1]
+          const range = next
+            ? `${b.min.toFixed(2)} to ${next.min.toFixed(2)}`
+            : `${b.min.toFixed(2)} and above`
+          return (
+            <li key={b.id} className="inline-flex items-center gap-2">
+              <Icon name={CONFIDENCE_ICON[b.id]} size={13} className="text-[var(--muted)]" />
+              <span
+                className="inline-block h-1.5 w-6 rounded-full"
+                style={{ background: `var(--band-${b.id})` }}
+              />
+              <span className="font-medium">{b.label}</span>
+              <span className="tabular-nums text-[var(--muted)]">{range}</span>
+            </li>
+          )
+        })}
+      </ul>
+      <ul className="mt-2 max-w-3xl space-y-0.5 text-xs leading-relaxed text-[var(--muted)]">
+        {[...CONFIDENCE_BANDS].reverse().map((b) => (
+          <li key={b.id}>
+            <span className="font-medium">{b.label}</span>: {b.meaning}
           </li>
-        )
-      })}
-    </ul>
+        ))}
+      </ul>
+    </div>
   )
 }
 
@@ -324,7 +359,7 @@ export function RadarEvidenceLegend({
             strokeDasharray="3 2.5"
           />
         </svg>
-        <span>Thin evidence</span>
+        <span>Thin evidence, hollow point. The dashes open further as confidence falls.</span>
       </li>
       <li>The point still sits at the score, because confidence never moves it.</li>
       {interactive ? <li>Click any axis name to see every country on that dimension.</li> : null}
@@ -449,13 +484,46 @@ export function ClassLegend() {
 export function DefineLink({ term, children }: { term: string; children?: React.ReactNode }) {
   const anchor = term.toLowerCase().replace(/[^a-z]+/g, '-')
   return (
-    <a
+    <Link
       href={`/glossary#${anchor}`}
       className="underline decoration-dotted underline-offset-4"
       title={`What "${term}" means`}
     >
       {children ?? term}
-    </a>
+    </Link>
+  )
+}
+
+/**
+ * The provenance caveat for anything rendered from a Delphi run.
+ *
+ * The run file carries how it was produced, and this note travels with the
+ * numbers wherever they appear, so a single working-session judgment can never
+ * silently dress up as a panel. A mock run should not reach this component:
+ * gate on `isEvidential` and render nothing from it at all.
+ */
+export function PanelProvenanceNote({
+  provenance,
+  panelists,
+}: {
+  provenance: Provenance
+  panelists: number
+}) {
+  if (!isEvidential(provenance)) {
+    return (
+      <Note tone="stop">
+        This run came from the deterministic offline stand-in. It exercises the pipeline and is
+        not evidence about any country.
+      </Note>
+    )
+  }
+  if (panelists >= 3) return null
+  return (
+    <Note tone="stop">
+      These estimates come from {panelists === 1 ? 'a single analyst' : `${panelists} analysts`}{' '}
+      working in session, not from a panel. There is no distribution behind the median: read every
+      number here as one judgment. <Link href="/delphi" className="underline underline-offset-4">How the panel layer works</Link>.
+    </Note>
   )
 }
 

@@ -252,14 +252,17 @@ export const PT_BR: Lexicon = {
   },
   agenda: {
     title: 'Agenda de capacidades: {country}',
+    generated: 'Gerado em {date}',
     intro:
-      'Gerado em {date} a partir da rodada de dados atual. As notas são relativas a uma régua fixada pelos {reference} países de referência e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia docs/KNOWN-ARTEFACTS.md antes de citar qualquer número isoladamente.',
+      'As notas são relativas a uma régua fixada pelos {reference} países de referência e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia {limits} antes de citar qualquer número isoladamente.',
     standingHeading: 'Onde {countryTopic} está',
     colDimension: 'Dimensão',
     colScore: 'Nota',
     colConfidence: 'Confiança',
     colTrend: 'Tendência',
     trendCell: '{delta} em {years} anos, sobre {n} indicadores',
+    trendCellClamped:
+      '{delta} em {years} anos, sobre {n} indicadores, {c} truncados na borda da régua',
     noTrend: 'sem base de tendência',
     noScore: 'sem nota',
     raiseItemHeading: '{dimension}: {score}, confiança {band}',
@@ -270,9 +273,14 @@ export const PT_BR: Lexicon = {
     measureHeading: 'As dimensões que precisam ser medidas antes de serem geridas',
     measureIntro:
       'Aqui a confiança está abaixo da faixa utilizável, então a nota não sustenta uma decisão. A primeira intervenção é produzir evidência.',
+    holdHeading: 'As dimensões que a evidência manda manter',
+    holdIntro:
+      'Da nota mais alta para a mais baixa. Estas dimensões pontuam {threshold} ou mais com evidência utilizável, então nada aqui pede elevação ou medição primeiro. Uma dimensão mantida ainda decai quando ninguém a observa.',
+    holdItemLine: '{dimension}: {score}, confiança {band}',
     scoredOn: 'Hoje a nota se apoia em {n} indicadores observados.',
     scoredOnOne: 'Hoje a nota se apoia em um único indicador observado.',
     gapsLine: 'Lacunas declaradas nesta dimensão: {list}.',
+    retiredLine: 'Bases de dados examinadas e rejeitadas para esta dimensão: {list}.',
     exemplarsLine: 'Maiores notas com evidência utilizável: {list}.',
     evidenceElsewhereLine: 'Entregas documentadas em outros países: {list}.',
     agendaHeading: 'A agenda de medição',
@@ -287,6 +295,5 @@ export const PT_BR: Lexicon = {
     contributeBody:
       'Preencha uma lacuna, registre uma evidência ou conteste um indicador em {repo}. O método, cada decisão por trás dele e a evidência que derrubaria cada uma estão no diretório docs do mesmo repositório.',
     profileLink: 'Abra o perfil completo, em inglês: cada indicador com valor bruto, ano e fonte',
-    switchLanguage: 'Read in English',
   },
 }

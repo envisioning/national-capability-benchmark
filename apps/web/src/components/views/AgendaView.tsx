@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import type { CountryAgenda, Lexicon } from '@ncb/core'
 import {
+  LIMITS_DOC,
+  RAISE_BELOW,
   REFERENCE_ISO3,
   REPO_URL,
   countryName,
@@ -9,17 +11,20 @@ import {
   fmt,
   fmtConf,
   indicatorDefinition,
+  docHref,
   indicatorName,
   signed,
+  splitAgenda,
 } from '@ncb/core'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { fillNodes, joinNodes } from '@/lib/fill'
-import { agendaHref, evidenceHref, indicatorHref } from '@/lib/links'
+import { countryProfileHref, evidenceHref, indicatorHref } from '@/lib/links'
 import {
   ConfidenceBar,
   ConfidenceLegend,
   CountryLabel,
   Eyebrow,
+  Meta,
   PageTitle,
   Score,
   ScoreLegend,
@@ -30,8 +35,11 @@ import {
   Th,
 } from '@/components/ui'
 
-/** Every link the agenda writes gets the same underline. */
-const LINK = 'underline underline-offset-4 decoration-[var(--rule)] hover:decoration-current'
+/**
+ * Every link the agenda writes gets the same underline. Full-strength
+ * decoration on purpose: the rule-colored variant read as plain text.
+ */
+const LINK = 'underline underline-offset-4 hover:decoration-2'
 
 /**
  * One country's capability agenda, rendered through one lexicon. The same
@@ -42,36 +50,28 @@ export function AgendaView({
   agenda,
   lex,
   profileHref,
-  switchHref,
 }: {
   agenda: CountryAgenda
   lex: Lexicon
   /** The full country profile in the ground layer. */
   profileHref: string
-  /** The same agenda in the other language. */
-  switchHref: string
 }) {
   const s = lex.agenda
   const name = countryName(lex, agenda.iso3)
   const topic = countryTopic(lex, agenda.iso3)
   const date = agenda.generatedAt.slice(0, 10)
 
-  const raise = agenda.dimensions
-    .filter((d) => d.kind === 'raise')
-    .sort((a, b) => (a.score ?? 0) - (b.score ?? 0))
-  const measure = agenda.dimensions
-    .filter((d) => d.kind === 'measure')
-    .sort((a, b) => a.confidence - b.confidence)
+  const { raise, measure, hold } = splitAgenda(agenda)
 
   /**
    * Every country, indicator and evidence record the agenda names is a link,
    * built from the id the JSON carries. Nothing here is written by hand, so a
-   * new gap or a new exemplar arrives already linked. Countries stay in the
-   * language the reader is in; the registry and the evidence pages are ground
-   * layer and stay English.
+   * new gap or a new exemplar arrives already linked. A country name reaches
+   * that country's data, which is the ground layer and stays English, as the
+   * registry and the evidence pages do.
    */
   const countryLink = (iso3: string) => (
-    <Link href={agendaHref(iso3, lex.lang)} className={LINK}>
+    <Link href={countryProfileHref(iso3)} className={LINK}>
       <CountryLabel iso3={iso3} name={countryName(lex, iso3)} />
     </Link>
   )
@@ -88,32 +88,37 @@ export function AgendaView({
 
   const trendText = (d: CountryAgenda['dimensions'][number]): string =>
     d.trend
-      ? fill(s.trendCell, {
+      ? fill(d.trend.clamped > 0 ? s.trendCellClamped : s.trendCell, {
           delta: signed(d.trend.delta, lex.numberLocale),
           years: d.trend.spanYears,
           n: d.trend.basket,
+          c: d.trend.clamped,
         })
       : s.noTrend
 
   return (
     <>
-      <div className="mb-10 flex flex-wrap items-start justify-between gap-4">
-        <div>
-          <Eyebrow>{fill(s.title, { country: '' }).replace(/[:：]\s*$/, '')}</Eyebrow>
-          <PageTitle>
-            <CountryLabel iso3={agenda.iso3} name={name} />
-          </PageTitle>
-        </div>
-        <Link
-          href={switchHref}
-          className="text-xs font-medium text-[var(--muted)] underline underline-offset-4 hover:text-[var(--foreground)]"
-        >
-          {s.switchLanguage}
-        </Link>
+      <div className="mb-10">
+        <Eyebrow>{fill(s.title, { country: '' }).replace(/[:：]\s*$/, '')}</Eyebrow>
+        <PageTitle>
+          <CountryLabel iso3={agenda.iso3} name={name} />
+        </PageTitle>
+        {/* Metadata as metadata: the dateline is a pill, never a sentence.
+            Language switching lives in the layout header, not here. */}
+        <p className="mt-3">
+          <Meta icon="calendar">{fill(s.generated, { date })}</Meta>
+        </p>
       </div>
 
       <p className="mb-4 max-w-3xl text-lg leading-relaxed">
-        {fill(s.intro, { date, reference: REFERENCE_ISO3.length })}
+        {fillNodes(s.intro, {
+          reference: REFERENCE_ISO3.length,
+          limits: (
+            <a href={docHref(LIMITS_DOC)} className={LINK}>
+              {LIMITS_DOC}
+            </a>
+          ),
+        })}
       </p>
       <p className="mb-10 text-lg">
         <Link href={profileHref} className="underline underline-offset-4">
@@ -212,6 +217,13 @@ export function AgendaView({
                       })}
                     </li>
                   ) : null}
+                  {d.retired.length > 0 ? (
+                    <li>
+                      {fillNodes(s.retiredLine, {
+                        list: joinNodes(d.retired.map((id) => indicatorLink(id))),
+                      })}
+                    </li>
+                  ) : null}
                 </ul>
               </div>
             ))}
@@ -245,10 +257,32 @@ export function AgendaView({
                       })}
                     </li>
                   ) : null}
+                  {d.retired.length > 0 ? (
+                    <li>
+                      {fillNodes(s.retiredLine, {
+                        list: joinNodes(d.retired.map((id) => indicatorLink(id))),
+                      })}
+                    </li>
+                  ) : null}
                 </ul>
               </div>
             ))}
           </div>
+        </Section>
+      ) : null}
+
+      {hold.length > 0 ? (
+        <Section title={s.holdHeading} hint={fill(s.holdIntro, { threshold: RAISE_BELOW })}>
+          <ul className="max-w-3xl space-y-2 text-lg leading-relaxed">
+            {hold.map((d) => (
+              <li key={d.dimension} className="flex flex-wrap items-center gap-2">
+                <Icon name={DIMENSION_ICON[d.dimension]} size={15} className="text-[var(--muted)]" />
+                {lex.dimensions[d.dimension]}
+                <Score value={d.score} size="sm" />
+                <ConfidenceBar value={d.confidence} />
+              </li>
+            ))}
+          </ul>
         </Section>
       ) : null}
 

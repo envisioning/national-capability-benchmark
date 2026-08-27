@@ -3,7 +3,10 @@ import {
   COUNTRY_NAMES,
   DIMENSIONS,
   INDICATORS_BY_ID,
+  LIMITS_DOC,
   REFERENCE_ISO3,
+  REPO_URL,
+  docHref,
   indicatorsFor,
 } from '../model/index.js'
 import type {
@@ -29,12 +32,10 @@ import { round } from './stats.js'
  * gap from the registry, every case from the evidence records. See D35.
  */
 
-export const REPO_URL = 'https://github.com/envisioning/national-capability-benchmark'
-
 /** How many exemplar countries an agenda item names. */
 const EXEMPLAR_COUNT = 3
 /** Dimensions scoring below this, with usable evidence, become raise items. */
-const RAISE_BELOW = 50
+export const RAISE_BELOW = 50
 
 export type AgendaKind = 'raise' | 'measure' | 'hold'
 
@@ -57,6 +58,8 @@ export type AgendaTrend = {
   spanYears: number
   delta: number
   basket: number
+  /** Basket members clamped at the frame edge at either end of the span. Part of the delta is then boundary distance rather than movement. */
+  clamped: number
 }
 
 export type AgendaDimension = {
@@ -95,6 +98,32 @@ export type CountryAgenda = {
   }>
   /** Total declared gaps across the registry, the size of the measurement agenda. */
   gapCount: number
+}
+
+/**
+ * An agenda split into its three kinds, each in reading order: raise items
+ * lowest score first, measure items thinnest evidence first, hold items
+ * strongest first.
+ *
+ * Every surface that summarises an agenda sorts it the same way, so the country
+ * page and the agenda document can never disagree about which dimension leads.
+ */
+export function splitAgenda(agenda: CountryAgenda): {
+  raise: AgendaDimension[]
+  measure: AgendaDimension[]
+  hold: AgendaDimension[]
+} {
+  return {
+    raise: agenda.dimensions
+      .filter((d) => d.kind === 'raise')
+      .sort((a, b) => (a.score ?? 0) - (b.score ?? 0)),
+    measure: agenda.dimensions
+      .filter((d) => d.kind === 'measure')
+      .sort((a, b) => a.confidence - b.confidence),
+    hold: agenda.dimensions
+      .filter((d) => d.kind === 'hold')
+      .sort((a, b) => (b.score ?? 0) - (a.score ?? 0)),
+  }
 }
 
 const usableMin = (): number => {
@@ -137,9 +166,14 @@ export function buildAgenda(
           spanYears: momentum.currentYear - momentum.baseYear,
           delta: momentum.delta,
           basket: momentum.matchedIndicators,
+          clamped: momentum.clamped,
         }
       : null
 
+    /* An exemplar is offered as somebody to learn from, so a country whose
+     * score in this dimension includes a cell clamped at the frame edge is
+     * excluded: a clamped 100 is partly an artefact of the frame, not a level
+     * anyone reached. See D40. */
     const exemplars: AgendaExemplar[] = countries
       .filter((c) => c.iso3 !== iso3)
       .map((c) => ({ iso3: c.iso3, result: c.dimensions[dimension] }))
@@ -147,7 +181,8 @@ export function buildAgenda(
         (c): c is { iso3: string; result: NonNullable<typeof c.result> } =>
           c.result !== undefined &&
           c.result.score !== null &&
-          c.result.confidence >= usable,
+          c.result.confidence >= usable &&
+          c.result.indicators.every((i) => !(i.status === 'observed' && i.outOfFrame)),
       )
       .sort((a, b) => (b.result.score ?? 0) - (a.result.score ?? 0))
       .slice(0, EXEMPLAR_COUNT)
@@ -158,9 +193,13 @@ export function buildAgenda(
         confidence: c.result.confidence,
       }))
 
-    const dimensionIndicatorIds = new Set(defs.map((d) => d.id))
+    /* Only records filed against this dimension's declared gaps, matching the
+     * field's contract: deliveries that answer a question no dataset covers.
+     * A record filed against a scored indicator is a validation warning, not
+     * an answer to a gap. */
+    const gapIds = new Set(gaps)
     const evidenceElsewhere: AgendaEvidenceRef[] = evidence
-      .filter((r) => r.iso3 !== iso3 && dimensionIndicatorIds.has(r.indicatorId))
+      .filter((r) => r.iso3 !== iso3 && gapIds.has(r.indicatorId))
       .map((r) => ({
         id: r.id,
         iso3: r.iso3,
@@ -234,10 +273,11 @@ export const indicatorDefinition = (lex: Lexicon, id: string): string =>
 
 function trendCell(lex: Lexicon, trend: AgendaTrend | null): string {
   if (!trend) return lex.agenda.noTrend
-  return fill(lex.agenda.trendCell, {
+  return fill(trend.clamped > 0 ? lex.agenda.trendCellClamped : lex.agenda.trendCell, {
     delta: signed(trend.delta, lex.numberLocale),
     years: trend.spanYears,
     n: trend.basket,
+    c: trend.clamped,
   })
 }
 
@@ -252,7 +292,16 @@ export function renderAgenda(agenda: CountryAgenda, lex: Lexicon): string {
 
   out.push(`# ${fill(s.title, { country: name })}`)
   out.push('')
-  out.push(fill(s.intro, { date, reference: REFERENCE_ISO3.length }))
+  /* The dateline is metadata about the document, so it sits beside the title
+   * as its own line and stays out of the sentence that states the method. */
+  out.push(`*${fill(s.generated, { date })}*`)
+  out.push('')
+  out.push(
+    fill(s.intro, {
+      reference: REFERENCE_ISO3.length,
+      limits: `[${LIMITS_DOC}](${docHref(LIMITS_DOC)})`,
+    }),
+  )
   out.push('')
 
   out.push(`## ${fill(s.standingHeading, { countryTopic: topic })}`)
@@ -270,9 +319,9 @@ export function renderAgenda(agenda: CountryAgenda, lex: Lexicon): string {
   )
   out.push('')
 
-  const raise = agenda.dimensions
-    .filter((d) => d.kind === 'raise')
-    .sort((a, b) => (a.score ?? 0) - (b.score ?? 0))
+  /* The same split and the same order the viewer uses, so the document and the
+   * country page cannot disagree about which dimension leads. See D39. */
+  const { raise, measure, hold } = splitAgenda(agenda)
   if (raise.length > 0) {
     out.push(`## ${s.raiseHeading}`)
     out.push('')
@@ -318,14 +367,18 @@ export function renderAgenda(agenda: CountryAgenda, lex: Lexicon): string {
           }),
         )
       }
+      if (d.retired.length > 0) {
+        lines.push(
+          fill(s.retiredLine, {
+            list: d.retired.map((id) => indicatorName(lex, id)).join(', '),
+          }),
+        )
+      }
       out.push(lines.map((l) => `- ${l}`).join('\n'))
       out.push('')
     }
   }
 
-  const measure = agenda.dimensions
-    .filter((d) => d.kind === 'measure')
-    .sort((a, b) => a.confidence - b.confidence)
   if (measure.length > 0) {
     out.push(`## ${s.measureHeading}`)
     out.push('')
@@ -353,9 +406,36 @@ export function renderAgenda(agenda: CountryAgenda, lex: Lexicon): string {
           }),
         )
       }
+      if (d.retired.length > 0) {
+        lines.push(
+          fill(s.retiredLine, {
+            list: d.retired.map((id) => indicatorName(lex, id)).join(', '),
+          }),
+        )
+      }
       out.push(lines.map((l) => `- ${l}`).join('\n'))
       out.push('')
     }
+  }
+
+  if (hold.length > 0) {
+    out.push(`## ${s.holdHeading}`)
+    out.push('')
+    out.push(fill(s.holdIntro, { threshold: RAISE_BELOW }))
+    out.push('')
+    out.push(
+      hold
+        .map(
+          (d) =>
+            `- ${fill(s.holdItemLine, {
+              dimension: lex.dimensions[d.dimension],
+              score: d.score === null ? s.noScore : fmt(d.score, lex.numberLocale),
+              band: lex.bands[d.band],
+            })}`,
+        )
+        .join('\n'),
+    )
+    out.push('')
   }
 
   out.push(`## ${s.agendaHeading}`)
