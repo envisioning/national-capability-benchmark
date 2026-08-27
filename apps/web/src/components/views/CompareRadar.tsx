@@ -1,9 +1,10 @@
 'use client'
 
 import { useState } from 'react'
+import { countryFlag } from '@ncb/core'
 import type { Dimension } from '@ncb/core'
 import { Radar } from '@/components/Radar'
-import { FrameNote, RadarEvidenceLegend } from '@/components/ui'
+import { CountryLabel, FrameNote, RadarEvidenceLegend } from '@/components/ui'
 import type { RadarProfile } from '@/lib/profile'
 import { DimensionDialog } from '@/components/views/DimensionPeek'
 
@@ -61,7 +62,9 @@ export function CompareRadar({
             className="inline-block h-3 w-3 rounded-sm"
             style={{ background: 'var(--primary)' }}
           />
-          <span className="font-medium">{focus.country}</span>
+          <span className="font-medium">
+            <CountryLabel iso3={focus.iso3} name={focus.country} />
+          </span>
         </span>
         {comparator ? (
           <span className="inline-flex items-center gap-2">
@@ -69,7 +72,9 @@ export function CompareRadar({
               className="inline-block h-3 w-3 rounded-sm border"
               style={{ borderColor: 'var(--muted)' }}
             />
-            <span className="font-medium">{comparator.country}</span>
+            <span className="font-medium">
+              <CountryLabel iso3={comparator.iso3} name={comparator.country} />
+            </span>
           </span>
         ) : null}
 
@@ -83,7 +88,7 @@ export function CompareRadar({
             <option value="">nobody</option>
             {options.map((o) => (
               <option key={o.iso3} value={o.iso3}>
-                {o.country}
+                {countryFlag(o.iso3)} {o.country}
               </option>
             ))}
           </select>

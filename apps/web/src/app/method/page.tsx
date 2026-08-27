@@ -8,7 +8,7 @@ import {
   isScored,
   SOURCE_TIERS,
 } from '@ncb/core'
-import { Scroller, Section, Table, Td, Th } from '@/components/ui'
+import { CountryLabel, Scroller, Section, Table, Td, Th } from '@/components/ui'
 import { DIMENSION_ICON, Icon, TIER_ICON } from '@/components/Icon'
 
 export default function MethodPage() {
@@ -269,7 +269,9 @@ export default function MethodPage() {
             <tbody>
               {COUNTRIES.map((c) => (
                 <tr key={c.iso3}>
-                  <Td>{c.name}</Td>
+                  <Td>
+                    <CountryLabel iso3={c.iso3} name={c.name} />
+                  </Td>
                   <Td dim>{c.frame === 'reference' ? 'sets the frame' : 'scored against the frame'}</Td>
                   <Td dim>{c.reason}</Td>
                 </tr>

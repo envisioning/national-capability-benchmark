@@ -323,8 +323,12 @@ as the reference, and see NOTICE.md before reusing the brand.
 - Lime is used confidently but rarely. It appears on the radar fill and on the
   `Highlight` marker, at most one per page. Score cells use a neutral ink ramp
   on purpose, because a full table of lime would break that rule.
-- No emoji. No gradients except the one radial lime glow (`.hero-glow`). No
-  colored shadows, no backdrop-blur.
+- No emoji, with one exception: the country flag. It renders through `Flag` and
+  `CountryLabel` in `apps/web/src/components/ui.tsx`, which derive it from the
+  `iso2` code in the country registry. Never write a flag character into a page
+  or a data file. Every other emoji stays out.
+- No gradients except the one radial lime glow (`.hero-glow`). No colored
+  shadows, no backdrop-blur.
 - Icons come from `apps/web/src/components/Icon.tsx`, which holds Lucide path
   data copied in rather than installed. Add a new one by copying its path from
   lucide.dev into that file. One icon per concept, reused everywhere that

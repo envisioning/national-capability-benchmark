@@ -1,5 +1,5 @@
 import type { MeasurementClass } from '@ncb/core'
-import { DIMENSIONS, DIMENSION_LABELS } from '@ncb/core'
+import { DIMENSIONS, DIMENSION_LABELS, countryFlag } from '@ncb/core'
 import { CLASS_ICON, CONFIDENCE_ICON, DIMENSION_ICON, Icon } from '@/components/Icon'
 import {
   CONFIDENCE_BANDS,
@@ -35,6 +35,37 @@ export function Headline({ children }: { children: React.ReactNode }) {
 export function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
     <p className="text-xs uppercase tracking-[0.05em] text-[var(--muted)]">{children}</p>
+  )
+}
+
+/**
+ * The flag emoji beside a country name.
+ *
+ * Same rule as an icon: a second encoding, never the only one. The name always
+ * sits next to it, so the flag is `aria-hidden` and a reader who sees a blank
+ * box loses nothing. The fixed width keeps a column of names aligned when a
+ * flag fails to render.
+ */
+export function Flag({ iso3 }: { iso3: string }) {
+  const flag = countryFlag(iso3)
+  if (!flag) return null
+  return (
+    <span
+      aria-hidden
+      className="inline-block w-[1.35em] shrink-0 select-none text-center leading-none"
+    >
+      {flag}
+    </span>
+  )
+}
+
+/** A country name with its flag. Use this anywhere a country is named. */
+export function CountryLabel({ iso3, name }: { iso3: string; name: string }) {
+  return (
+    <span className="inline-flex items-baseline gap-2">
+      <Flag iso3={iso3} />
+      <span>{name}</span>
+    </span>
   )
 }
 

@@ -2,7 +2,7 @@
 
 import { DIMENSION_LABELS, type CellConsensus } from '@ncb/core'
 import { DataTable } from '@/components/DataTable'
-import { Score } from '@/components/ui'
+import { CountryLabel, Score } from '@/components/ui'
 
 export function DissentTable({ rows }: { rows: CellConsensus[] }) {
   return (
@@ -11,7 +11,12 @@ export function DissentTable({ rows }: { rows: CellConsensus[] }) {
       initialSort={{ key: 'iqr', dir: 'desc' }}
       caption="Cells where the panel does not agree"
       columns={[
-        { key: 'country', label: 'Country', sort: (c) => c.country, render: (c) => c.country },
+        {
+          key: 'country',
+          label: 'Country',
+          sort: (c) => c.country,
+          render: (c) => <CountryLabel iso3={c.iso3} name={c.country} />,
+        },
         {
           key: 'dimension',
           label: 'Dimension',

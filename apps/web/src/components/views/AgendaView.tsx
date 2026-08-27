@@ -18,6 +18,7 @@ import { agendaHref, evidenceHref, indicatorHref } from '@/lib/links'
 import {
   ConfidenceBar,
   ConfidenceLegend,
+  CountryLabel,
   Eyebrow,
   PageTitle,
   Score,
@@ -71,7 +72,7 @@ export function AgendaView({
    */
   const countryLink = (iso3: string) => (
     <Link href={agendaHref(iso3, lex.lang)} className={LINK}>
-      {countryName(lex, iso3)}
+      <CountryLabel iso3={iso3} name={countryName(lex, iso3)} />
     </Link>
   )
   const indicatorLink = (id: string) => (
@@ -99,7 +100,9 @@ export function AgendaView({
       <div className="mb-10 flex flex-wrap items-start justify-between gap-4">
         <div>
           <Eyebrow>{fill(s.title, { country: '' }).replace(/[:：]\s*$/, '')}</Eyebrow>
-          <PageTitle>{name}</PageTitle>
+          <PageTitle>
+            <CountryLabel iso3={agenda.iso3} name={name} />
+          </PageTitle>
         </div>
         <Link
           href={switchHref}

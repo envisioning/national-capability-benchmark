@@ -5,6 +5,7 @@ import { DIMENSION_LABELS, DIMENSION_QUESTIONS, confidenceBand, isThinEvidence }
 import type { Dimension } from '@ncb/core'
 import { Distribution } from '@/components/Distribution'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
+import { CountryLabel } from '@/components/ui'
 
 type Row = {
   iso3: string
@@ -166,7 +167,7 @@ export function DimensionDialog({
                     }`}
                   >
                     <span className="truncate">
-                      {r.country}
+                      <CountryLabel iso3={r.iso3} name={r.country} />
                     </span>
                     <span className="flex items-center gap-2">
                       <span className="h-2 grow rounded-full bg-[var(--rule-soft)]">

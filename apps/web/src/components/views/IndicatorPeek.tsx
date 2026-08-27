@@ -5,7 +5,7 @@ import { INDICATORS_BY_ID, MEASUREMENT_CLASS_MEANING } from '@ncb/core'
 import type { IndicatorAcrossCountries } from '@ncb/core'
 import { Distribution } from '@/components/Distribution'
 import { Icon } from '@/components/Icon'
-import { ClassBadge } from '@/components/ui'
+import { ClassBadge, CountryLabel } from '@/components/ui'
 
 /**
  * A number in a table is not information until you know what else it could have
@@ -140,7 +140,7 @@ export function IndicatorPeek({
                     }`}
                   >
                     <span className="truncate">
-                      {v.country}
+                      <CountryLabel iso3={v.iso3} name={v.country} />
                     </span>
                     <span className="text-right tabular-nums">{v.raw.toLocaleString('en-US')}</span>
                     <span className="text-right tabular-nums text-[var(--muted)]">{v.year}</span>

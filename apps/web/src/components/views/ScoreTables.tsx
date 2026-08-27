@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { DIMENSIONS, DIMENSION_LABELS } from '@ncb/core'
 import type { CountryResult } from '@ncb/core'
 import { DataTable, type Column } from '@/components/DataTable'
-import { ConfidenceBar, Score } from '@/components/ui'
+import { ConfidenceBar, CountryLabel, Score } from '@/components/ui'
 
 function countryColumn(): Column<CountryResult> {
   return {
@@ -13,7 +13,7 @@ function countryColumn(): Column<CountryResult> {
     sort: (c) => c.country,
     render: (c) => (
       <Link href={`/country/${c.iso3}`} className="hover:underline">
-        {c.country}
+        <CountryLabel iso3={c.iso3} name={c.country} />
       </Link>
     ),
   }

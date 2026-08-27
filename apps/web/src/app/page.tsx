@@ -3,6 +3,7 @@ import { Radar } from '@/components/Radar'
 import { ConfidenceTable, ScoreTable } from '@/components/views/ScoreTables'
 import {
   ConfidenceLegend,
+  CountryLabel,
   DimensionLegend,
   Empty,
   Eyebrow,
@@ -88,7 +89,9 @@ export default async function Page() {
                 className="rounded-xl border border-[var(--rule)] p-4 transition-all duration-200 hover:border-[var(--foreground)]"
               >
                 <div className="mb-2 flex items-baseline justify-between">
-                  <span className="text-xs font-medium">{profile.country}</span>
+                  <span className="text-xs font-medium">
+                    <CountryLabel iso3={profile.iso3} name={profile.country} />
+                  </span>
                   <span className="text-xs text-[var(--muted)]">{profile.iso3}</span>
                 </div>
                 <Radar

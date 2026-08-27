@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { PT_BR, REFERENCE_ISO3, countryName } from '@ncb/core'
-import { Empty, Eyebrow, Highlight, PageTitle } from '@/components/ui'
+import { CountryLabel, Empty, Eyebrow, Highlight, PageTitle } from '@/components/ui'
 import { MISSING_DATA_HINT, loadIndex } from '@/lib/data'
 
 export const dynamic = 'force-dynamic'
@@ -70,7 +70,7 @@ export default async function PortugueseHomePage() {
         {countries.map((c) => (
           <li key={c.iso3}>
             <Link href={`/pt/agenda/${c.iso3}`} className="underline underline-offset-4">
-              {countryName(PT_BR, c.iso3)}
+              <CountryLabel iso3={c.iso3} name={countryName(PT_BR, c.iso3)} />
             </Link>
           </li>
         ))}

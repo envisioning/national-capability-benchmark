@@ -18,6 +18,7 @@ import {
   DefineLink,
   Delta,
   ConfidenceBar,
+  CountryLabel,
   Eyebrow,
   PageTitle,
   Score,
@@ -49,7 +50,9 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
       <div className="mb-10 grid gap-10 lg:grid-cols-[minmax(0,460px)_1fr]">
         <div>
           <Eyebrow>In the prototype because</Eyebrow>
-          <PageTitle>{country.country}</PageTitle>
+          <PageTitle>
+            <CountryLabel iso3={country.iso3} name={country.country} />
+          </PageTitle>
           <p className="mt-3 text-lg leading-relaxed">{meta?.reason}</p>
           <div className="mt-4">
             <CompareRadar focus={toProfile(country)} others={others.map(toProfile)} />

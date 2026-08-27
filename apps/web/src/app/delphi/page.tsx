@@ -7,7 +7,7 @@ import {
   missingEvidenceRanking,
 } from '@ncb/core'
 import { DissentTable } from '@/components/views/DissentTable'
-import { Empty, Note, Score, Scroller, Section, Table, Td, Th } from '@/components/ui'
+import { CountryLabel, Empty, Note, Score, Scroller, Section, Table, Td, Th } from '@/components/ui'
 import { loadDelphiRun } from '@/lib/data'
 
 export const dynamic = 'force-dynamic'
@@ -105,7 +105,9 @@ export default async function DelphiPage() {
                 .slice(0, 25)
                 .map((c) => (
                   <tr key={`${c.iso3}|${c.dimension}`}>
-                    <Td>{c.country}</Td>
+                    <Td>
+                      <CountryLabel iso3={c.iso3} name={c.country} />
+                    </Td>
                     <Td>{DIMENSION_LABELS[c.dimension]}</Td>
                     <Td align="right"><Score value={c.median} size="sm" /></Td>
                     <Td align="right" dim>
