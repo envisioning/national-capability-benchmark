@@ -187,7 +187,7 @@ port 3888. That entry starts Next directly and does not use the proxy.
   page body.
 - Every URL shape the viewer writes lives in `apps/web/src/lib/links.ts`, one
   helper per kind of thing. Never build `/country/...`, `/agenda/...`,
-  `/indicators#...`, `/patterns#...` or `/limits` inline in a component.
+  `/indicators#...`, `/patterns/...` or `/limits` inline in a component.
 - Every Delphi surface in the viewer gates on `isEvidential` before rendering
   anything from a run, and on `isPanel` before calling anything a panel. A
   non-panel run renders as "session estimate". The shared caveat is

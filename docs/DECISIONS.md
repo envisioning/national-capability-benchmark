@@ -1749,7 +1749,7 @@ One card renders in both places. `apps/web/src/components/PatternCard.tsx` holds
 the metadata line, the metrics line, the mechanism block and the limits line,
 and the index and the record page both read from it.
 
-**Why.** The corpus reached 33 records across 21 countries, and an anchor into
+**Why.** The corpus reached 33 records across 19 countries, and an anchor into
 one long page is not a citable thing. A reader who wants to send somebody the
 Delta Programme record sends a whole page and a scroll position, the browser
 lands them mid-list with no context above the fold, and a search engine indexes

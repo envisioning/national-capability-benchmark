@@ -16,8 +16,16 @@ export const agendaHref = (iso3: string, lang: Lang = 'en'): string =>
 /** The registry row for one indicator, declared gaps included. */
 export const indicatorHref = (id: string): string => `/indicators#${id}`
 
-/** One evidence record, on the patterns page. */
-export const evidenceHref = (recordId: string): string => `/patterns#${recordId}`
+/** The list of documented deliveries, filterable. */
+export const patternsHref = '/patterns'
+
+/**
+ * One evidence record, on its own page.
+ *
+ * A case study is a citable thing, so it gets an address rather than an anchor
+ * inside a long list. The record id is the slug. See D46.
+ */
+export const evidenceHref = (recordId: string): string => `/patterns/${recordId}`
 
 /** The known limits of the data, rendered from docs/KNOWN-ARTEFACTS.md. */
 export const limitsHref = '/limits'
