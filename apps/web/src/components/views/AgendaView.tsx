@@ -15,6 +15,7 @@ import {
   splitAgenda,
 } from '@ncb/core'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
+import { CapabilityLink } from '@/components/CapabilityLink'
 import { fillNodes, joinNodes } from '@/lib/fill'
 import { countryProfileHref, evidenceHref, indicatorHref, limitsHref } from '@/lib/links'
 import {
@@ -142,10 +143,13 @@ export function AgendaView({
               {agenda.dimensions.map((d) => (
                 <tr key={d.dimension}>
                   <Td>
-                    <span className="inline-flex items-center gap-2">
+                    <CapabilityLink
+                      dimension={d.dimension}
+                      className="inline-flex items-center gap-2"
+                    >
                       <Icon name={DIMENSION_ICON[d.dimension]} size={15} />
                       {lex.dimensions[d.dimension]}
-                    </span>
+                    </CapabilityLink>
                   </Td>
                   <Td align="right">
                     <Score value={d.score} size="sm" nullLabel={s.noScore} />
@@ -298,10 +302,13 @@ export function AgendaView({
                 d.gaps.map((id) => (
                   <tr key={id}>
                     <Td dim>
-                      <span className="inline-flex items-center gap-2">
+                      <CapabilityLink
+                        dimension={d.dimension}
+                        className="inline-flex items-center gap-2"
+                      >
                         <Icon name={DIMENSION_ICON[d.dimension]} size={13} />
                         {lex.dimensions[d.dimension]}
-                      </span>
+                      </CapabilityLink>
                     </Td>
                     <Td>{indicatorLink(id)}</Td>
                     <Td dim>{indicatorDefinition(lex, id)}</Td>
@@ -376,7 +383,9 @@ function AgendaCard({
     <article className="rounded-xl border border-[var(--rule)] p-5">
       <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
         <Icon name={DIMENSION_ICON[dimension]} size={18} className="text-[var(--muted)]" />
-        <h3 className="text-xl font-medium tracking-tight">{name}</h3>
+        <h3 className="text-xl font-medium tracking-tight">
+          <CapabilityLink dimension={dimension}>{name}</CapabilityLink>
+        </h3>
         {score}
         <ConfidenceBar value={confidence} />
       </div>

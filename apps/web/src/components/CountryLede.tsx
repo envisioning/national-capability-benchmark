@@ -2,19 +2,16 @@ import Link from 'next/link'
 import type { AgendaDimension, CountryAgenda } from '@ncb/core'
 import { DIMENSION_LABELS, RAISE_BELOW, splitAgenda } from '@ncb/core'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
+import { CapabilityLink } from '@/components/CapabilityLink'
 import { agendaHref } from '@/lib/links'
 import { ConfidenceBar, DefineLink, Score } from '@/components/ui'
 
 /**
- * What this country's shape says, before the tables say it.
+ * The computed agenda at the top of a country page.
  *
- * A reader landing here used to meet a radar and nine tables and had to read
- * all of them to learn where to look. This block answers that first, from the
- * computed agenda, so the page opens on a finding.
- *
- * It selects and never calculates. Every score and confidence printed here is
- * read straight out of `data/out/agenda/{ISO3}.json`, and the three groups come
- * from `splitAgenda`, which the agenda document also uses. See D35 and D38.
+ * It selects from the agenda and never calculates. Scores and confidence come
+ * from `data/out/agenda/{ISO3}.json`; the groups come from `splitAgenda`, which
+ * the agenda document also uses. See D35 and D38.
  */
 export function CountryLede({
   agenda,
@@ -34,24 +31,24 @@ export function CountryLede({
       <p className="text-lg leading-relaxed">
         {strongest ? (
           <>
-            Strongest where the evidence is usable: <DimensionLink d={strongest} />, at{' '}
+            Strongest usable evidence: <DimensionLink d={strongest} />, at{' '}
             <Score value={strongest.score} size="sm" />.{' '}
           </>
         ) : (
           <>
-            Nothing here scores {RAISE_BELOW} or higher on evidence strong enough to act on.{' '}
+            No dimension reaches {RAISE_BELOW} on usable evidence.{' '}
           </>
         )}
         {lowest ? (
           <>
-            The evidence says to raise <DimensionLink d={lowest} /> first, at{' '}
+            Raise <DimensionLink d={lowest} /> first, at{' '}
             <Score value={lowest.score} size="sm" />.{' '}
           </>
         ) : null}
         {thinnest ? (
           <>
-            <DimensionLink d={thinnest} /> cannot be judged yet: its confidence,{' '}
-            <ConfidenceBar value={thinnest.confidence} />, is too thin to carry a decision.
+            <DimensionLink d={thinnest} /> needs more evidence: confidence is{' '}
+            <ConfidenceBar value={thinnest.confidence} />.
           </>
         ) : null}
       </p>
@@ -60,24 +57,23 @@ export function CountryLede({
         <Group
           label="Raise, lowest first"
           items={raise}
-          empty="Nothing here has usable evidence and a low score."
+          empty="No low-scoring dimension has usable evidence."
         />
         <Group
-          label="Measure before managing, thinnest first"
+          label="Measure before managing"
           items={measure}
           empty="Every dimension here has usable evidence."
         />
       </div>
 
       <p className="mt-5 text-xs leading-relaxed text-[var(--muted)]">
-        These two lists are the country's{' '}
+        These lists are the country's{' '}
         <DefineLink term="Capability agenda">capability agenda</DefineLink>, computed from the
-        scores below.{' '}
+        scores.{' '}
         <Link href={agendaHref(agenda.iso3)} className="font-medium underline underline-offset-4">
           Read the full agenda
-        </Link>
-        , which names the countries whose own evidence already answers each question and works
-        through the {agenda.gapCount} gaps the registry declares across every dimension.
+        </Link>{' '}
+        It names comparable evidence from other countries and the {agenda.gapCount} gaps in the registry.
       </p>
       {reason ? (
         <p className="mt-2 text-xs leading-relaxed text-[var(--muted)]">
@@ -88,13 +84,9 @@ export function CountryLede({
   )
 }
 
-/** A dimension name that jumps to its section further down the same page. */
+/** A dimension name that opens the capability's canonical landing page. */
 function DimensionLink({ d }: { d: AgendaDimension }) {
-  return (
-    <a href={`#${d.dimension}`} className="underline underline-offset-4">
-      {DIMENSION_LABELS[d.dimension]}
-    </a>
-  )
+  return <CapabilityLink dimension={d.dimension} className="underline underline-offset-4" />
 }
 
 function Group({
@@ -118,8 +110,8 @@ function Group({
               key={d.dimension}
               className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1"
             >
-              <a
-                href={`#${d.dimension}`}
+              <CapabilityLink
+                dimension={d.dimension}
                 className="inline-flex items-center gap-2 text-xs font-medium underline underline-offset-4"
               >
                 <Icon
@@ -128,7 +120,7 @@ function Group({
                   className="text-[var(--muted)]"
                 />
                 {DIMENSION_LABELS[d.dimension]}
-              </a>
+              </CapabilityLink>
               <span className="inline-flex items-center gap-3">
                 <ConfidenceBar value={d.confidence} />
                 <Score value={d.score} size="sm" />
@@ -140,4 +132,3 @@ function Group({
     </div>
   )
 }
-

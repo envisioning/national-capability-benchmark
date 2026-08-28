@@ -1,5 +1,6 @@
 'use client'
 
+import { CapabilityLink } from '@/components/CapabilityLink'
 import { DIMENSIONS, DIMENSION_LABELS, DISSENT_IQR, primaryMomentum } from '@ncb/core'
 import type { CountryResult } from '@ncb/core'
 import { DataTable } from '@/components/DataTable'
@@ -32,10 +33,10 @@ export function CountryDimensionTable({
       label: 'Dimension',
       sort: (r: (typeof rows)[number]) => DIMENSION_LABELS[r.d],
       render: (r: (typeof rows)[number]) => (
-        <a href={`#${r.d}`} className="inline-flex items-center gap-2 hover:underline">
+        <CapabilityLink dimension={r.d} className="inline-flex items-center gap-2">
           <Icon name={DIMENSION_ICON[r.d]} size={14} className="text-[var(--muted)]" />
           {DIMENSION_LABELS[r.d]}
-        </a>
+        </CapabilityLink>
       ),
     },
     {

@@ -1,5 +1,5 @@
 import { DIMENSIONS, EVIDENCE_STATUS_LABELS } from '@ncb/core'
-import type { EvidenceStatus, Lang } from '@ncb/core'
+import type { Dimension, EvidenceStatus, Lang } from '@ncb/core'
 
 /**
  * Where a named thing lives in the viewer. One rule per kind of thing, so a
@@ -9,6 +9,13 @@ import type { EvidenceStatus, Lang } from '@ncb/core'
 
 /** The full country profile. Ground layer, English. */
 export const countryProfileHref = (iso3: string): string => `/country/${iso3}`
+
+/** The directory of the nine capability pages. */
+export const capabilitiesHref = '/capabilities'
+
+/** The canonical landing page for one capability. */
+export const capabilityHref = (dimension: Dimension): string =>
+  `${capabilitiesHref}/${dimension}`
 
 /** One country's capability agenda, in the language the reader is already in. */
 export const agendaHref = (iso3: string, lang: Lang = 'en'): string =>
@@ -102,8 +109,104 @@ export const evidenceHref = (recordId: string): string => `/patterns/${recordId}
 /** What would overturn the model, and how to file an objection. */
 export const challengeHref = '/challenge'
 
+/** Methodology pages that share the secondary nav under the header. */
+export const METHOD_SECTION_HREFS = [
+  '/method',
+  '/indicators',
+  '/sources',
+  '/diagnostics',
+  '/delphi',
+  '/patterns',
+  '/limits',
+  '/decisions',
+  '/glossary',
+] as const
+
+export type MethodSectionHref = (typeof METHOD_SECTION_HREFS)[number]
+
+/** Ordered walk through how the benchmark is built and audited. */
+export const METHOD_SUBNAV: { href: MethodSectionHref; label: string }[] = [
+  { href: '/method', label: 'Overview' },
+  { href: '/indicators', label: 'Indicators' },
+  { href: '/sources', label: 'Sources' },
+  { href: '/diagnostics', label: 'Diagnostics' },
+  { href: '/delphi', label: 'Delphi panel' },
+  { href: '/patterns', label: 'Patterns' },
+  { href: '/limits', label: 'Limits' },
+  { href: '/decisions', label: 'Decisions' },
+  { href: '/glossary', label: 'Glossary' },
+]
+
+/** Whether the current path belongs to the method section. */
+export function isMethodSection(pathname: string): boolean {
+  return METHOD_SECTION_HREFS.some(
+    (href) => pathname === href || (href !== '/method' && pathname.startsWith(`${href}/`)),
+  )
+}
+
+/** Which method subnav entry owns the current path. */
+export function methodSubnavOwns(href: MethodSectionHref, pathname: string): boolean {
+  if (href === '/method') return pathname === '/method'
+  return pathname === href || pathname.startsWith(`${href}/`)
+}
+
+/** Primary nav: reader lenses plus the method hub and challenge entry. */
+export const PRIMARY_NAV = [
+  { href: '/', label: 'Countries' },
+  { href: capabilitiesHref, label: 'Capabilities' },
+  { href: '/agenda', label: 'Agendas' },
+  { href: '/method', label: 'Method' },
+  { href: challengeHref, label: 'Challenge' },
+] as const
+
+export type PrimaryNavHref = (typeof PRIMARY_NAV)[number]['href']
+
+/** Whether a primary nav entry owns the current path. */
+export function primaryNavOwns(href: PrimaryNavHref, pathname: string): boolean {
+  if (href === '/') {
+    return pathname === '/' || pathname.startsWith('/country')
+  }
+  if (href === capabilitiesHref) {
+    return pathname === capabilitiesHref || pathname.startsWith(`${capabilitiesHref}/`)
+  }
+  if (href === '/agenda') {
+    return (
+      pathname === '/agenda' ||
+      pathname.startsWith('/agenda/') ||
+      pathname === '/pt/agenda' ||
+      pathname.startsWith('/pt/agenda/')
+    )
+  }
+  if (href === '/method') {
+    return isMethodSection(pathname)
+  }
+  if (href === challengeHref) {
+    return pathname === challengeHref
+  }
+  return pathname === href
+}
+
+/** Footer columns: same destinations as the header, grouped for a vertical layout. */
+export const FOOTER_NAV_GROUPS = [
+  {
+    label: 'Explore',
+    items: PRIMARY_NAV.filter((entry) => entry.href !== '/method' && entry.href !== challengeHref),
+  },
+  { label: 'Method', items: METHOD_SUBNAV },
+  {
+    label: 'Participate',
+    items: [{ href: challengeHref, label: 'Challenge' }],
+  },
+] as const
+
 /** Who publishes the data and how each series is fetched. */
 export const sourcesHref = '/sources'
+
+/** A country's explanatory map of institutions and their typed relationships. */
+export const institutionNetworkHref = (iso3: string, lang: Lang = 'en'): string =>
+  lang === 'pt-BR' && iso3.toUpperCase() === 'BRA'
+    ? '/pt/instituicoes'
+    : `/institutions/${iso3.toUpperCase()}`
 
 /**
  * The id a publisher's row carries on the sources page, so a link can reach one

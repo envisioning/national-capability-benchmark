@@ -35,6 +35,7 @@ import {
   Td,
   Th,
 } from '@/components/ui'
+import { capabilityHref } from '@/lib/links'
 import { loadAgenda } from '@/lib/agenda'
 import { loadCountry, loadDelphiRun, loadEvidence, loadIndex } from '@/lib/data'
 import { toProfile } from '@/lib/profile'
@@ -142,7 +143,11 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
         return (
           <div key={d} id={d} className="scroll-mt-20">
             <Section
-              title={DIMENSION_LABELS[d]}
+              title={
+                <Link href={capabilityHref(d)} className="hover:underline">
+                  {DIMENSION_LABELS[d]}
+                </Link>
+              }
               hint={DIMENSION_QUESTIONS[d]}
               icon={<Icon name={DIMENSION_ICON[d]} size={22} />}
             >

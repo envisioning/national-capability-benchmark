@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { DIMENSION_LABELS, type CellConsensus } from '@ncb/core'
+import { CapabilityLink } from '@/components/CapabilityLink'
 import { DataTable } from '@/components/DataTable'
 import { countryProfileHref } from '@/lib/links'
 import { CountryLabel, Score } from '@/components/ui'
@@ -27,7 +28,7 @@ export function DissentTable({ rows }: { rows: CellConsensus[] }) {
           key: 'dimension',
           label: 'Dimension',
           sort: (c) => DIMENSION_LABELS[c.dimension],
-          render: (c) => DIMENSION_LABELS[c.dimension],
+          render: (c) => <CapabilityLink dimension={c.dimension} />,
         },
         { key: 'median', label: 'Median', align: 'right', sort: (c) => c.median, render: (c) => <Score value={c.median} size="sm" /> },
         { key: 'iqr', label: 'IQR', align: 'right', sort: (c) => c.iqr, render: (c) => c.iqr.toFixed(1) },

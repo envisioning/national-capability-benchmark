@@ -1,25 +1,44 @@
 'use client'
 
 import { DIMENSIONS, DIMENSION_LABELS, INDICATORS, indicatorsFor, isScored } from '@ncb/core'
-import type { IndicatorDef } from '@ncb/core'
+import type { Dimension, IndicatorDef } from '@ncb/core'
 import { DataTable } from '@/components/DataTable'
 import { ClassBadge, ClassLegend, Section } from '@/components/ui'
+import Link from 'next/link'
+import { capabilityHref } from '@/lib/links'
 
 const muted = (v: React.ReactNode) => <span className="text-[var(--muted)]">{v}</span>
 
-export function IndicatorRegistry() {
+export function IndicatorRegistry({ dimension }: { dimension?: Dimension } = {}) {
   const gaps = INDICATORS.filter((i) => i.ingest === 'gap').length
   const retired = INDICATORS.filter((i) => i.ingest === 'retired').length
+  const dimensions: readonly Dimension[] = dimension ? [dimension] : DIMENSIONS
 
   return (
     <Section
-      title="Every indicator is on the record, including the missing ones"
-      hint={`${INDICATORS.length} indicators. ${gaps} are declared gaps, where the model asks for something no adequate international dataset covers. ${retired} are retired: a dataset exists and this project rejected it, which so far means perception composites that measure how a country looks rather than what it does. Both kinds stay here because they lower the confidence scores and because they are the collection agenda. Click any heading to sort.`}
+      title={
+        dimension ? (
+          <Link href={capabilityHref(dimension)} className="hover:underline">
+            {DIMENSION_LABELS[dimension]} indicators
+          </Link>
+        ) : (
+          'Every indicator is on the record, including the missing ones'
+        )
+      }
+      hint={
+        dimension
+          ? `${indicatorsFor(dimension).length} indicators define what this capability can see. Declared gaps and retired rows stay visible because they lower confidence and form the collection agenda. Click any heading to sort.`
+          : `${INDICATORS.length} indicators. ${gaps} are gaps with no adequate international dataset. ${retired} are retired rows with a dataset this project rejected. Both remain because they lower confidence and set the collection agenda. Click a heading to sort.`
+      }
     >
       <ClassLegend />
-      {DIMENSIONS.map((d) => (
+      {dimensions.map((d) => (
         <div key={d} className="mb-10">
-          <h3 className="mb-3 text-xl font-medium tracking-tight">{DIMENSION_LABELS[d]}</h3>
+          <h3 className="mb-3 text-xl font-medium tracking-tight">
+            <Link href={capabilityHref(d)} className="hover:underline">
+              {DIMENSION_LABELS[d]}
+            </Link>
+          </h3>
           <DataTable
             rows={indicatorsFor(d)}
             initialSort={{ key: 'name' }}

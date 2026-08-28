@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { DIMENSION_LABELS, DIMENSION_QUESTIONS, confidenceBand, isThinEvidence } from '@ncb/core'
 import type { Dimension } from '@ncb/core'
 import { Distribution } from '@/components/Distribution'
+import { CapabilityLink } from '@/components/CapabilityLink'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { CountryLabel, Score } from '@/components/ui'
 
@@ -116,7 +117,7 @@ export function DimensionDialog({
             <div>
               <h2 className="flex items-center gap-3 text-2xl font-light leading-tight">
                 <Icon name={DIMENSION_ICON[dimension]} size={22} className="text-[var(--muted)]" />
-                {DIMENSION_LABELS[dimension]}
+                <CapabilityLink dimension={dimension}>{DIMENSION_LABELS[dimension]}</CapabilityLink>
               </h2>
               <p className="mt-2 max-w-2xl text-lg leading-relaxed">
                 {DIMENSION_QUESTIONS[dimension]}

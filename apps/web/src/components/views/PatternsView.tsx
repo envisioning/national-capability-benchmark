@@ -12,6 +12,7 @@ import {
 } from '@ncb/core'
 import type { Dimension, EvidenceRecord } from '@ncb/core'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
+import { CapabilityLink } from '@/components/CapabilityLink'
 import { PatternCard } from '@/components/PatternCard'
 import { Empty, Section } from '@/components/ui'
 import {
@@ -221,7 +222,7 @@ export function PatternsView({
         groups.map(({ dimension: d, records: group }) => (
           <Section
             key={d}
-            title={DIMENSION_LABELS[d]}
+            title={<CapabilityLink dimension={d}>{DIMENSION_LABELS[d]}</CapabilityLink>}
             icon={<Icon name={DIMENSION_ICON[d]} size={22} />}
             hint={`${group.length} documented ${group.length === 1 ? 'delivery' : 'deliveries'}, filed against ${[...new Set(group.map((r) => INDICATORS_BY_ID[r.indicatorId]?.name))].join(', ')}.`}
           >
