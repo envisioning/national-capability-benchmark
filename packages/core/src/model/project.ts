@@ -14,8 +14,34 @@ const REPO_BRANCH = 'main'
 /** A repository file as a link a reader outside the checkout can follow. */
 export const docHref = (path: string): string => `${REPO_URL}/blob/${REPO_BRANCH}/${path}`
 
+/**
+ * A repository file as a raw-content link. A chat model asked to act as a
+ * panelist fetches the file itself, and the blob URL returns a rendered HTML
+ * page rather than the text. See docs/PANELIST-BRIEF.md.
+ */
+export const rawHref = (path: string): string =>
+  `https://raw.githubusercontent.com/envisioning/national-capability-benchmark/${REPO_BRANCH}/${path}`
+
+/** Where a challenge to the model is filed. The one channel the site names. */
+export const ISSUES_URL = `${REPO_URL}/issues`
+
 /** The limits every agenda tells the reader to open before quoting a number. */
 export const LIMITS_DOC = 'docs/KNOWN-ARTEFACTS.md'
 
 /** The decision log. Named wherever a rendered document defends a choice. */
 export const DECISIONS_DOC = 'docs/DECISIONS.md'
+
+/** How to contribute a gap, an evidence record, a lexicon or an objection. */
+export const CONTRIBUTING_DOC = 'CONTRIBUTING.md'
+
+/** The inclusion rule for evidence records, and how to author one. */
+export const EVIDENCE_DOC = 'docs/EVIDENCE.md'
+
+/** The claim under test, and what would sink it. */
+export const WHY_DOC = 'docs/WHY.md'
+
+/** Third-party terms: what in here is not MIT. */
+export const NOTICE_DOC = 'NOTICE.md'
+
+/** The code license. The data carries its own terms, named in the notice. */
+export const LICENSE_DOC = 'LICENSE'

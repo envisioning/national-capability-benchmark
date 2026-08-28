@@ -5,9 +5,12 @@ import {
   GDP_PER_CAPITA_CODE,
   INDICATORS,
   INGEST_FROM_YEAR,
+  rawHref,
 } from '../model/index.js'
 import type { CountryResult, Dimension } from '../model/index.js'
 import { ingestWorldBank } from '../pipeline/ingest.js'
+import { probeSeries, registrySeries, searchCatalogue } from '../pipeline/probe.js'
+import type { ProbeRequest } from '../pipeline/probe.js'
 import {
   COUNTRY_OUT_DIR,
   DELPHI_DIR,
@@ -362,7 +365,70 @@ The nine dimension ids, exactly: ${DIMENSIONS.join(', ')}.
         await writeFile(file, body, 'utf8')
         written.push(`${file}  (${codes})`)
       }
+      /**
+       * The kickoff message. A chat model cannot run this CLI, so it is told to
+       * fetch the bundles it needs by raw URL. Regenerated with the bundles so
+       * the file list can never drift from what is on disk.
+       */
+      const rel = (f: string) => `data/delphi/${str(args, 'out', 'paste')}/${f}`
+      /**
+       * A model with a checkout reads the files. A model in a browser fetches
+       * them. Same bundles either way, so only the address changes.
+       */
+      const local = bool(args, 'local')
+      const at = (path: string) => (local ? path : rawHref(path))
+      const list = batches
+        .map((group, i) => {
+          const n = String(i + 1).padStart(2, '0')
+          return `${i + 1}. ${at(rel(`${stance.id}-${n}.txt`))}  (${group
+            .map((c) => c.iso3)
+            .join(', ')})`
+        })
+        .join('\n')
+      const start = `# You are a panelist on the National Capability Benchmark
+
+Your stance is **${stance.label}**. Hold it for every country. Do not drift toward a
+neutral view, and do not soften a score because you imagine other panelists disagree.
+
+> ${stance.prompt}
+
+## What to do
+
+Work through these ${batches.length} files in order. ${
+        local ? 'Read each one from the repository' : 'Fetch each one'
+      }, and answer it before you open the next. Each file is self-contained: it carries the rules, your
+stance, the evidence briefs, and the exact JSON shape to reply with.
+
+${list}
+
+## Rules that decide whether your run is usable
+
+- Reply with JSON only. No commentary, no markdown fence. One object per country
+  per dimension.
+- Answer **one file per message**. Do not batch several files into one reply, and
+  do not summarise. If a reply would be cut off, say so and split it yourself.
+- The indicator-derived score in each brief is an input, not the answer. You are
+  being asked because the indicators mismeasure some countries. Depart from them
+  when you can say why in one or two sentences.
+- Low confidence is a real answer. \`selfConfidence\` of 0.3 with an honest
+  rationale is worth more than a confident guess.
+- Do not invent statistics. Reason from the brief plus what you reliably know.
+- Coordination and Trust carry no indicator score for any country, because the
+  perception composites were retired. Your estimate is the only signal there, so
+  slow down on those two and set confidence honestly.
+
+## Background, only if you want it
+
+- Method and provenance rules: ${at('docs/PANELIST-BRIEF.md')}
+- Known artefacts, where the model is wrong about the world: ${at('docs/KNOWN-ARTEFACTS.md')}
+
+Start with file 1.
+`
+      const startFile = resolve(outDir, `00-START-${stance.id}.md`)
+      await writeFile(startFile, start, 'utf8')
+
       console.log(`${written.length} paste bundle(s) for stance "${stance.id}", ${batch} country/countries each\n`)
+      console.log(`  ${startFile}  <- give this to the chat model first`)
       for (const w of written) console.log(`  ${w}`)
       console.log(`\nPaste one file per message. Save each reply, then merge with bench merge.`)
       break
@@ -475,6 +541,74 @@ The nine dimension ids, exactly: ${DIMENSIONS.join(', ')}.
       break
     }
 
+    case 'probe': {
+      const search = str(args, 'search', '')
+      if (search) {
+        const wired = registrySeries()
+        const hits = await searchCatalogue(new RegExp(search, 'i'))
+        console.log(`${hits.length} series whose name matches /${search}/i\n`)
+        for (const h of hits.slice(0, num(args, 'limit', 40))) {
+          const mark = wired.has(h.series) ? ' (wired)' : ''
+          console.log(
+            `  ${h.series.padEnd(28)} db${String(h.sourceId).padEnd(4)} ${h.name.slice(0, 70)}${mark}`,
+          )
+        }
+        if (hits.length > num(args, 'limit', 40)) {
+          console.log(`  ... ${hits.length - num(args, 'limit', 40)} more. Narrow the pattern or raise --limit.`)
+        }
+        console.log('\nA listed series may still answer nothing. Probe it with --series before believing it.')
+        break
+      }
+      const raw = str(args, 'series', '')
+      if (!raw) {
+        console.log('Give the series to test: pnpm bench probe --series IC.FRM.CORR.ZS,IQ.CPA.FINQ.XQ')
+        console.log('Add @<id> to a code to name its database: IC.LGL.CRED.XQ@1')
+        break
+      }
+      const wired = registrySeries()
+      const requests = raw
+        .split(',')
+        .map((s) => s.trim())
+        .filter(Boolean)
+        .map((token) => {
+          const [series, id] = token.split('@')
+          const request: ProbeRequest = { series: series as string }
+          if (id) request.sourceId = Number(id)
+          return request
+        })
+      const already = requests.filter((r) => wired.has(r.series)).map((r) => r.series)
+      if (already.length > 0) {
+        console.log(`Already in the registry, probing anyway: ${already.join(', ')}`)
+      }
+      const from = num(args, 'from', 2010)
+      console.log(
+        `Probing ${requests.length} series against ${COUNTRY_ISO3.length} countries, ${from} onward...`,
+      )
+      const results = await probeSeries(requests, from)
+      if (args.flags.get('json')) {
+        console.log(JSON.stringify({ from, countrySet: COUNTRY_ISO3.length, results }, null, 2))
+        break
+      }
+      console.log(
+        `\n${'series'.padEnd(30)} ${'db'.padEnd(3)} ${'cov'.padEnd(7)} ${'latest'.padEnd(6)} ${'r(GDP)'.padEnd(7)} verdict`,
+      )
+      for (const r of results) {
+        const cov = `${r.countries}/${r.countrySet}`
+        const verdict = r.usable ? 'usable' : r.failures.join('; ')
+        console.log(
+          `${r.series.padEnd(30)} ${String(r.sourceId).padEnd(3)} ${cov.padEnd(7)} ${String(r.latestYear ?? '').padEnd(6)} ${String(r.gdpPearson ?? '').padEnd(7)} ${verdict}`,
+        )
+      }
+      const usable = results.filter((r) => r.usable).length
+      console.log(
+        `\n${usable} of ${results.length} pass coverage, recency, spread and the wealth test.`,
+      )
+      console.log(
+        'A pass is a candidate, not a decision: read what it measures before writing a registry row.',
+      )
+      break
+    }
+
     case 'validate': {
       const problems = [...(await validateDelphiRuns()), ...(await validateEvidence())]
       if (args.flags.get('fetch')) {
@@ -513,12 +647,14 @@ The nine dimension ids, exactly: ${DIMENSIONS.join(', ')}.
                        [--max-coverage 0.6] [--no-judge] [--concurrency 4]
   pnpm bench diagnose                     correlations, redundancy, GDP-sensitivity test
   pnpm bench prompt    [BRA IND ...] [--stance wealth_sceptic] [--system] [--audit trust]
-                       [--paste] [--batch 4] [--out paste]
+                       [--paste] [--batch 4] [--out paste] [--local]
                                           print the exact panel prompt; --paste writes chat-ready bundles
   pnpm bench merge     --stance X --model "gpt-5 (chat)" [--in replies] [--out file.json]
                                           merge pasted chat replies into one run file
   pnpm bench cost      [--rounds 2] [--stances 4] [--models a,b] [--no-judge]
                                           measure the prompts and price the panel run
+  pnpm bench probe     --search <regex> [--limit 40]             find World Bank series by name, with the database each needs
+  pnpm bench probe     --series a,b[@db] [--from 2010] [--json]  test candidate World Bank series before wiring them
   pnpm bench validate  [--fetch]          schema-check data/delphi and data/evidence; --fetch also live-checks evidence source URLs
   pnpm bench report                       write the findings report
   pnpm bench agenda    [BRA IND ...] [--lang pt-BR]

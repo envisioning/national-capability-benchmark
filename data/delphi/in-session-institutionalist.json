@@ -1,8 +1,8 @@
 {
-  "runId": "2026-08-27T00-00-00-000000Z-in-session-institutionalist",
-  "generatedAt": "2026-08-27T00:00:00.000000Z",
+  "runId": "2026-08-28T00-00-00-000000Z-in-session-institutionalist",
+  "generatedAt": "2026-08-28T00:00:00.000000Z",
   "provenance": "in_session",
-  "note": "Scored by Claude Opus 5 inside a working session on 2026-08-27, taking the institutionalist stance from packages/core/src/delphi/panel.ts. One panelist, one round, all 40 countries and all nine dimensions, 360 cells. This is not a panel: the median is one opinion and the IQR is zero. It is one stance argued consistently, which is what makes it useful and also what makes it partial. The institutionalist prior weights formal institutions and durable organisations, and it is deliberately sceptical of capability that rests on individuals compensating for institutional failure, so it will read low on countries with large informal capability and high on countries with durable state capacity. Scored against the D47 frame, which is built from all 40 benchmark countries; there is no reference set. Coordination and Trust carry no indicator score for any country after D23 and D44 retired the WGI composites and the homicide rate, so for those 80 cells this estimate becomes the published blendedScore with no indicator evidence behind it. Treat those two dimensions as one analyst's judgement until a second and third panelist from different vendors have scored them. Replace with a multi-vendor gateway run before publishing. One caveat on range: for Coordination and Trust, where no indicator score exists for any country, the estimates run roughly 16 to 88 rather than using the full 0-100 span, so the bottom of those two distributions is compressed relative to a dimension the indicators actually anchor.",
+  "note": "Scored by Claude Opus 5 inside a working session, taking the institutionalist stance from packages/core/src/delphi/panel.ts. One panelist, one round, all 52 countries and all nine dimensions, 468 cells. Anchored to dataset version 4.0.0. This is not a panel: the median is one opinion and the IQR is zero. It is one stance argued consistently, which is what makes it useful and also what makes it partial. The institutionalist prior weights formal institutions and durable organisations, and it is deliberately sceptical of capability that rests on individuals compensating for institutional failure, so it reads low on countries with large informal capability and high on countries with durable state capacity. Forty countries were first scored against the 40-country 3.0.0 frame and re-anchored here: each cell's deliberate departure from the indicator-derived score was carried onto the 4.0.0 derived value, then the extremes of every dimension were reviewed by hand, and 58 rationales that quoted a superseded derived number were refreshed. The twelve countries added at 4.0.0 were scored directly against the current frame. Coordination and Trust carry no indicator score for any country after D23 and D44 retired the WGI composites and the homicide rate, so for those 104 cells this estimate is the published blendedScore with no indicator evidence behind it. Treat those two dimensions as one analyst's judgement until panelists from other vendors have scored them. Replace with a multi-vendor gateway run before publishing.",
   "panel": [
     {
       "panelist": "institutionalist@claude-opus-5",
@@ -18,7 +18,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 48,
+      "score": 52,
       "selfConfidence": 0.5,
       "rationale": "The Ministry of Cabinet Affairs and the Future and the Centennial 2071 programme are a real, funded foresight function that outlasts individual ministers, which the indicator basket cannot see. I raise above the derived score on the institutional fact, not on the research output.",
       "missingEvidence": [
@@ -32,7 +32,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 45,
+      "score": 47,
       "selfConfidence": 0.55,
       "rationale": "The registration and connectivity indicators are excellent, but roughly nine in ten residents hold sponsorship-linked status that ties legal presence to an employer. Formal agency for the resident population is far narrower than the business-formation measures imply.",
       "missingEvidence": [
@@ -76,7 +76,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 42,
+      "score": 40,
       "selfConfidence": 0.5,
       "rationale": "The system imports skills rather than building them, and a vocational share of 3.2 out of 100 across the benchmark is consistent with that. Tertiary enrolment and spending are adequate but the learning institutions are thin relative to income.",
       "missingEvidence": [
@@ -92,7 +92,7 @@
       "model": "claude-opus-5 (in-session, single panelist)",
       "score": 22,
       "selfConfidence": 0.45,
-      "rationale": "Patent and trademark intensity is near the floor of the set. DIFC and ADGM run real regulatory sandboxes, which is why I do not hold at the derived 5.9, but the indigenous experimentation base is small.",
+      "rationale": "Patent and trademark intensity is near the floor of the set. DIFC and ADGM run real regulatory sandboxes, which is why I do not hold at the derived 6.1, but the indigenous experimentation base is small.",
       "missingEvidence": [
         "Venture capital investment as a share of GDP",
         "Regulatory sandbox activity: count, sectors and graduation rate",
@@ -105,9 +105,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 52,
+      "score": 53,
       "selfConfidence": 0.5,
-      "rationale": "The derived 84.5 rests on unemployment and participation figures produced by a migrant labour system that exports adjustment by not renewing visas. That is shifting the shock abroad, not absorbing it, so I mark down substantially.",
+      "rationale": "The derived 85.8 rests on unemployment and participation figures produced by a migrant labour system that exports adjustment by not renewing visas. That is shifting the shock abroad, not absorbing it, so I mark down substantially.",
       "missingEvidence": [
         "Long-term unemployment share (ILOSTAT, needs an adapter)",
         "Export diversification (UNCTAD concentration index)",
@@ -120,7 +120,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 62,
+      "score": 65,
       "selfConfidence": 0.55,
       "rationale": "Ports, metro, airports, Masdar and the Barakah nuclear plant are delivered infrastructure at scale, and delivery capacity now sits in standing organisations rather than one-off programmes. The manufacturing and complexity indicators miss all of it.",
       "missingEvidence": [
@@ -149,7 +149,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 30,
+      "score": 34,
       "selfConfidence": 0.55,
       "rationale": "CONICET and a competent statistical apparatus give a real base, and statistical performance at 64.7 is the strongest part of it. Foresight capacity does not survive changes of administration, so I hold close to the derived score.",
       "missingEvidence": [
@@ -163,7 +163,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 35,
+      "score": 46,
       "selfConfidence": 0.55,
       "rationale": "Credit to the private sector normalises at 4.2 and business density at 1.6, and those are not measurement artefacts. Capital controls and chronic macro instability constrain formal action regardless of individual capability.",
       "missingEvidence": [
@@ -207,7 +207,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 55,
+      "score": 51,
       "selfConfidence": 0.5,
       "rationale": "Free universal tertiary access is a durable institution and enrolment at 96.2 reflects it. Human capital at 46.6 shows the weaker basic-education foundation underneath, so I sit slightly below the derived score.",
       "missingEvidence": [
@@ -223,7 +223,7 @@
       "model": "claude-opus-5 (in-session, single panelist)",
       "score": 30,
       "selfConfidence": 0.5,
-      "rationale": "Argentina produced Mercado Libre and Globant, which is real evidence against the derived 21.3. Tolerance of entrepreneurial failure normalises at 0 and there is no institutional support layer, so the capability rests on individuals.",
+      "rationale": "Argentina produced Mercado Libre and Globant, which is real evidence against the derived 21.5. Tolerance of entrepreneurial failure normalises at 0 and there is no institutional support layer, so the capability rests on individuals.",
       "missingEvidence": [
         "Venture capital investment as a share of GDP",
         "Regulatory sandbox activity: count, sectors and graduation rate",
@@ -236,7 +236,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 42,
+      "score": 48,
       "selfConfidence": 0.5,
       "rationale": "The country adapts constantly because it must, but the adaptation is absorbed by households and firms rather than by institutions that learn from it. Repeating the same crisis is not adaptive capacity.",
       "missingEvidence": [
@@ -251,7 +251,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 22,
+      "score": 29,
       "selfConfidence": 0.55,
       "rationale": "High-technology exports normalise at 2 and output per worker at 21.3 against a country that once had a substantial industrial base. The derived score is measuring a real decline.",
       "missingEvidence": [
@@ -280,7 +280,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 64,
+      "score": 66,
       "selfConfidence": 0.55,
       "rationale": "CSIRO is a durable statutory research institution and statistical performance at 89.4 is strong. There is no standing central foresight function, which is why I do not go higher.",
       "missingEvidence": [
@@ -294,7 +294,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 84,
+      "score": 86,
       "selfConfidence": 0.6,
       "rationale": "Business formation, registration speed and financial access are all near the top of the frame and the underlying institutions are stable. This is one of the clearest cases where the indicators and the institutional picture agree.",
       "missingEvidence": [
@@ -338,7 +338,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 74,
+      "score": 69,
       "selfConfidence": 0.55,
       "rationale": "The VET sector is a real institution rather than a residual, and a vocational share of 60.5 across the benchmark supports that. Universities are strong and the derived score is close to right.",
       "missingEvidence": [
@@ -352,7 +352,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 38,
+      "score": 41,
       "selfConfidence": 0.45,
       "rationale": "Patent and trademark intensity is mid-frame and the venture ecosystem is thin for the size of the economy. There is no institutional layer converting a strong research base into new firms.",
       "missingEvidence": [
@@ -367,7 +367,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 76,
+      "score": 77,
       "selfConfidence": 0.5,
       "rationale": "Labour market flexibility is real and the disaster institutions built after the 2019 bushfires and repeated floods are standing organisations, not ad hoc responses. I hold near the derived score.",
       "missingEvidence": [
@@ -382,7 +382,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 38,
+      "score": 45,
       "selfConfidence": 0.5,
       "rationale": "Manufacturing value added at 3.8 and economic fitness at 8.9 correctly identify a low-complexity resource economy. Major project delivery is competent but slow and expensive, so I raise only modestly.",
       "missingEvidence": [
@@ -406,12 +406,143 @@
       ]
     },
     {
+      "iso3": "BOL",
+      "dimension": "anticipation",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 20,
+      "selfConfidence": 0.5,
+      "rationale": "Research and statistical capacity sit near the floor of the frame. Planning exists on paper and does not survive changes of government.",
+      "missingEvidence": [
+        "Mandate, budget and continuity of a national foresight unit (no dataset)",
+        "Basic research share of GERD (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "BOL",
+      "dimension": "agency",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 30,
+      "selfConfidence": 0.5,
+      "rationale": "Informality covers roughly four in five workers, which is the defining fact and not a measurement artefact. Formal registration reform has not reached most economic activity.",
+      "missingEvidence": [
+        "Adult digital skills on a comparable task list (ITU)",
+        "Perceived control over life (WVS wave 7, aligned fieldwork years)"
+      ]
+    },
+    {
+      "iso3": "BOL",
+      "dimension": "coordination",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 26,
+      "selfConfidence": 0.4,
+      "rationale": "State capacity is thin outside the main cities and regional and ethnic fragmentation is structural. Redistribution during the gas boom was delivered, which shows the capacity exists when financed.",
+      "missingEvidence": [
+        "Civil society strength (V-Dem core civil society index)",
+        "University-industry collaboration (no comparable dataset)",
+        "A non-perception measure of government effectiveness (WGI retired by D44)"
+      ]
+    },
+    {
+      "iso3": "BOL",
+      "dimension": "trust",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 22,
+      "selfConfidence": 0.4,
+      "rationale": "Judicial appointments are openly politicised and institutional trust is very low. Cooperation is strong within communities and weak beyond them.",
+      "missingEvidence": [
+        "Generalised interpersonal trust, behavioural rather than survey (WVS/ESS)",
+        "Trust in public institutions (OECD Trust Survey, coverage limited)",
+        "A non-perception measure of rule of law (WGI retired by D44)"
+      ]
+    },
+    {
+      "iso3": "BOL",
+      "dimension": "learning",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 34,
+      "selfConfidence": 0.5,
+      "rationale": "The derived 79.5 is a spending and enrolment artefact and should not be read as learning capability. Bolivia does not sit in comparable assessments, and the outcome evidence that exists is among the weakest in the region, so I depart sharply downward.",
+      "missingEvidence": [
+        "Adult learning participation (OECD/Eurostat AES, non-members missing)",
+        "Field-normalised research citation impact (Scopus or WoS)"
+      ]
+    },
+    {
+      "iso3": "BOL",
+      "dimension": "experimentation",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 12,
+      "selfConfidence": 0.45,
+      "rationale": "Patent and trademark intensity is near the floor and there is no institutional layer supporting experimentation.",
+      "missingEvidence": [
+        "Venture capital investment as a share of GDP",
+        "Regulatory sandbox activity: count, sectors and graduation rate",
+        "Business share of R&D (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "BOL",
+      "dimension": "adaptability",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 40,
+      "selfConfidence": 0.45,
+      "rationale": "The derived 67.3 rests on labour indicators that measure informal subsistence rather than reallocation. Gas revenue decline has not produced institutional adjustment.",
+      "missingEvidence": [
+        "Long-term unemployment share (ILOSTAT, needs an adapter)",
+        "Export diversification (UNCTAD concentration index)",
+        "Disaster preparedness and recovery (INFORM or Sendai reporting)"
+      ]
+    },
+    {
+      "iso3": "BOL",
+      "dimension": "building",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 26,
+      "selfConfidence": 0.5,
+      "rationale": "Gas dependence with weak delivery, and the state industrialisation projects of the last decade have largely underperformed. The base is thin.",
+      "missingEvidence": [
+        "Large project delivery against time and budget (no dataset)",
+        "Firm scale-up rate (OECD DynEmp or Eurostat)"
+      ]
+    },
+    {
+      "iso3": "BOL",
+      "dimension": "shared_purpose",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 40,
+      "selfConfidence": 0.45,
+      "rationale": "Indigenous political incorporation after 2005 was a genuine widening of who counts as part of the national project. The 2019 crisis and continuing polarisation cut the other way.",
+      "missingEvidence": [
+        "Political polarisation (V-Dem polarisation index)",
+        "Non-electoral civic participation on a comparable basis",
+        "Volunteering rate on a comparable basis"
+      ]
+    },
+    {
       "iso3": "BRA",
       "dimension": "anticipation",
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 28,
+      "score": 32,
       "selfConfidence": 0.6,
       "rationale": "A real research base with Fiocruz and Embrapa as durable institutions, and a working statistical system at 48.1. Foresight sits in universities and state enterprises rather than in a continuous government function, so I hold close to the derived score.",
       "missingEvidence": [
@@ -425,7 +556,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 42,
+      "score": 53,
       "selfConfidence": 0.55,
       "rationale": "Procedures to start a business normalise at 0 across the benchmark and that is not noise. A very large informal sector shows people acting anyway, but the dimension asks whether institutions let intention become action, and largely they do not.",
       "missingEvidence": [
@@ -469,9 +600,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 42,
+      "score": 40,
       "selfConfidence": 0.55,
-      "rationale": "Postgraduate research and CAPES evaluation are real institutions, and basic education outcomes remain weak. The derived 45.7 slightly overstates the system's learning capacity.",
+      "rationale": "Postgraduate research and CAPES evaluation are real institutions, and basic education outcomes remain weak. The derived 43.2 slightly overstates the system's learning capacity.",
       "missingEvidence": [
         "Adult learning participation (OECD/Eurostat AES, non-members missing)",
         "Field-normalised research citation impact (Scopus or WoS)"
@@ -498,7 +629,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 50,
+      "score": 54,
       "selfConfidence": 0.5,
       "rationale": "Pix went from mandate to universal adoption fast, which is genuine institutional adaptability rather than improvisation. Fiscal rigidity and indexation limit reallocation elsewhere.",
       "missingEvidence": [
@@ -513,7 +644,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 20,
+      "score": 30,
       "selfConfidence": 0.55,
       "rationale": "Manufacturing value added at 15.1 across the benchmark records a real long decline, not a measurement problem. Large project delivery is slow and frequently abandoned between administrations.",
       "missingEvidence": [
@@ -542,7 +673,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 66,
+      "score": 67,
       "selfConfidence": 0.55,
       "rationale": "Statistical performance at 99.1 is the strongest in the set and Statistics Canada is a genuinely durable institution. Policy Horizons Canada exists but carries little weight in decisions.",
       "missingEvidence": [
@@ -556,7 +687,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 78,
+      "score": 79,
       "selfConfidence": 0.55,
       "rationale": "Registration takes days, financial inclusion is near universal, and the formal environment is stable. Business density at 23.5 is the one weak signal and it reflects concentration rather than barriers.",
       "missingEvidence": [
@@ -600,7 +731,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 66,
+      "score": 64,
       "selfConfidence": 0.5,
       "rationale": "Human capital at 84.3 is near the top of the set and immigrant credential recognition is the visible institutional failure. Vocational provision at 9.7 is genuinely weak.",
       "missingEvidence": [
@@ -614,9 +745,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 30,
+      "score": 34,
       "selfConfidence": 0.5,
-      "rationale": "Canada has a long-documented gap between a strong public research base and firm formation, and the derived 21.3 is measuring it correctly. I raise only slightly for the AI research institutes, which are real standing organisations.",
+      "rationale": "Canada has a long-documented gap between a strong public research base and firm formation, and the derived 24.8 is measuring it correctly. I raise only slightly for the AI research institutes, which are real standing organisations.",
       "missingEvidence": [
         "Venture capital investment as a share of GDP",
         "Regulatory sandbox activity: count, sectors and graduation rate",
@@ -629,7 +760,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 74,
+      "score": 75,
       "selfConfidence": 0.5,
       "rationale": "Labour markets and immigration policy both reallocate quickly, and immigration levels are adjusted as an instrument rather than debated indefinitely. I hold near the derived score.",
       "missingEvidence": [
@@ -644,7 +775,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 28,
+      "score": 39,
       "selfConfidence": 0.5,
       "rationale": "Electricity connection speed normalises at 0 and housing supply has failed against a decade of stated intent. The building constraint here is institutional rather than financial.",
       "missingEvidence": [
@@ -673,7 +804,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 80,
+      "score": 81,
       "selfConfidence": 0.6,
       "rationale": "ETH and EPFL are durable research institutions and the federal statistical system is excellent. Foresight is distributed across cantons and federal offices rather than centralised, which works here.",
       "missingEvidence": [
@@ -687,7 +818,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 74,
+      "score": 78,
       "selfConfidence": 0.55,
       "rationale": "Strong formal environment with stable rules, though registration procedures are less streamlined than the top of the frame. Financial access and connectivity are near universal.",
       "missingEvidence": [
@@ -731,9 +862,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 80,
+      "score": 74,
       "selfConfidence": 0.55,
-      "rationale": "The dual vocational system is the reference example of a durable learning institution and around two thirds of young people go through it. The derived 70.8 understates it because vocational share is only one crude proxy.",
+      "rationale": "The dual vocational system is the reference example of a durable learning institution and around two thirds of young people go through it. The derived 65.1 understates it because vocational share is only one crude proxy.",
       "missingEvidence": [
         "Adult learning participation (OECD/Eurostat AES, non-members missing)",
         "Field-normalised research citation impact (Scopus or WoS)"
@@ -745,7 +876,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 55,
+      "score": 57,
       "selfConfidence": 0.5,
       "rationale": "High patent intensity backed by real corporate research in pharmaceuticals and precision engineering. New firm formation is modest, so I sit above the derived score without going high.",
       "missingEvidence": [
@@ -760,7 +891,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 82,
+      "score": 83,
       "selfConfidence": 0.5,
       "rationale": "Consistently strong reallocation with low unemployment through repeated shocks including a currency appreciation that would have broken most manufacturing bases. Institutions absorb rather than defer.",
       "missingEvidence": [
@@ -775,7 +906,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 68,
+      "score": 73,
       "selfConfidence": 0.55,
       "rationale": "Alpine rail base tunnels delivered close to plan over decades is about as strong a demonstration of building capability as this set contains. Manufacturing value added at 53.5 understates precision engineering.",
       "missingEvidence": [
@@ -804,7 +935,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 38,
+      "score": 40,
       "selfConfidence": 0.55,
       "rationale": "A competent statistical system and a small but real research base. There is no durable foresight function and the research base is concentrated in a few institutions.",
       "missingEvidence": [
@@ -818,7 +949,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 62,
+      "score": 67,
       "selfConfidence": 0.55,
       "rationale": "Registration and financial access are strong for the region and the formal environment is stable. Credit access for smaller firms is narrower than the aggregate suggests.",
       "missingEvidence": [
@@ -862,7 +993,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 54,
+      "score": 51,
       "selfConfidence": 0.5,
       "rationale": "Tertiary coverage is broad and outcomes are stratified by income to an unusual degree. The derived score is close to right.",
       "missingEvidence": [
@@ -891,7 +1022,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 55,
+      "score": 57,
       "selfConfidence": 0.5,
       "rationale": "Macro institutions including the fiscal rule and the central bank absorb commodity cycles well, which is genuine institutional adaptability. Labour market reallocation is slower.",
       "missingEvidence": [
@@ -906,7 +1037,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 30,
+      "score": 34,
       "selfConfidence": 0.5,
       "rationale": "Economic fitness at 26 and a copper-dependent export base. Infrastructure delivery is competent, which is why I raise slightly.",
       "missingEvidence": [
@@ -935,9 +1066,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 58,
+      "score": 67,
       "selfConfidence": 0.45,
-      "rationale": "Statistical performance normalises at 0 because data access is restricted, and that is a genuine capability problem rather than only a measurement one. Against it sits a very large and durable state planning apparatus with real long-horizon technology programmes, so I depart substantially upward from the derived 26.3.",
+      "rationale": "Statistical performance normalises at 0 because data access is restricted, and that is a genuine capability problem rather than only a measurement one. Against it sits a very large and durable state planning apparatus with real long-horizon technology programmes, so I depart substantially upward from the derived 35.1.",
       "missingEvidence": [
         "Mandate, budget and continuity of a national foresight unit (no dataset)",
         "Basic research share of GERD (OECD MSTI)"
@@ -949,7 +1080,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 45,
+      "score": 50,
       "selfConfidence": 0.5,
       "rationale": "Credit at 96.4 and business density at 72.6 describe volume, not autonomy, and the credit is largely state-directed. Individuals and firms can act quickly within state priorities and have little recourse when they diverge from them.",
       "missingEvidence": [
@@ -993,7 +1124,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 62,
+      "score": 59,
       "selfConfidence": 0.5,
       "rationale": "Firms offering formal training normalises at 100 and the tertiary expansion is genuine and institutionalised. Basic education quality is strong in the coastal provinces and much weaker inland.",
       "missingEvidence": [
@@ -1022,7 +1153,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 72,
+      "score": 73,
       "selfConfidence": 0.45,
       "rationale": "Industrial reallocation is fast and directed, and the shift of whole supply chains within a decade is the evidence. The abrupt end of the zero-covid policy showed the same capacity used without preparation.",
       "missingEvidence": [
@@ -1037,7 +1168,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 85,
+      "score": 87,
       "selfConfidence": 0.55,
       "rationale": "High-speed rail, ports, grid and housing at a scale no other country in the set approaches, delivered by standing organisations. This is the clearest case in the dataset of building capability the derived score understates.",
       "missingEvidence": [
@@ -1066,7 +1197,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 26,
+      "score": 30,
       "selfConfidence": 0.5,
       "rationale": "A thin research base with R&D and researcher intensity near the floor of the set. DNP does real long-horizon planning work, which keeps this from going lower.",
       "missingEvidence": [
@@ -1080,7 +1211,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 34,
+      "score": 45,
       "selfConfidence": 0.5,
       "rationale": "Informality covers a majority of employment and credit access at the formal margin is narrow. Registration reform has been genuine but reaches only the formal sector.",
       "missingEvidence": [
@@ -1124,7 +1255,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 44,
+      "score": 41,
       "selfConfidence": 0.5,
       "rationale": "Tertiary expansion is real and basic outcomes remain weak and highly stratified. The derived score slightly overstates the system.",
       "missingEvidence": [
@@ -1153,7 +1284,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 48,
+      "score": 50,
       "selfConfidence": 0.45,
       "rationale": "The economy absorbs shocks including large Venezuelan migration, and the migration response was a genuine institutional decision rather than improvisation. Structural reallocation is slow.",
       "missingEvidence": [
@@ -1168,7 +1299,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 20,
+      "score": 27,
       "selfConfidence": 0.5,
       "rationale": "Manufacturing value added at 17.2 and weak infrastructure delivery outside the main corridors. The 4G road programme delivered partially and stalled on financing scandals.",
       "missingEvidence": [
@@ -1197,7 +1328,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 34,
+      "score": 36,
       "selfConfidence": 0.5,
       "rationale": "A small research base with a genuine conservation and biodiversity institutional tradition. Statistical capacity is adequate and there is no standing foresight function.",
       "missingEvidence": [
@@ -1211,7 +1342,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 42,
+      "score": 55,
       "selfConfidence": 0.5,
       "rationale": "Formal environment is reasonable for the region and informality is lower than most neighbours. Credit access and business density remain modest.",
       "missingEvidence": [
@@ -1255,7 +1386,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 56,
+      "score": 51,
       "selfConfidence": 0.5,
       "rationale": "A long-standing commitment to education spending that survived multiple governments, which is the institutional signal that matters here. Outcomes have plateaued.",
       "missingEvidence": [
@@ -1284,7 +1415,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 52,
+      "score": 55,
       "selfConfidence": 0.45,
       "rationale": "The economy shifted from agriculture to services and devices over three decades, which is genuine structural reallocation. Fiscal rigidity now constrains further adjustment.",
       "missingEvidence": [
@@ -1299,7 +1430,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 34,
+      "score": 38,
       "selfConfidence": 0.5,
       "rationale": "Medical device manufacturing is real and the electricity system is almost entirely renewable, which took decades of institutional continuity. The base is small.",
       "missingEvidence": [
@@ -1323,12 +1454,143 @@
       ]
     },
     {
+      "iso3": "CUB",
+      "dimension": "anticipation",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 34,
+      "selfConfidence": 0.45,
+      "rationale": "The derived 16.4 misses a durable biotechnology and medical research establishment that has operated for four decades and produced original products. That is exactly the kind of organisation this dimension should reward, so I depart upward.",
+      "missingEvidence": [
+        "Mandate, budget and continuity of a national foresight unit (no dataset)",
+        "Basic research share of GERD (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "CUB",
+      "dimension": "agency",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 14,
+      "selfConfidence": 0.45,
+      "rationale": "No derived score. Private enterprise was illegal for decades and remains narrowly bounded and reversible, so the ability to turn intention into action through formal channels is very low.",
+      "missingEvidence": [
+        "Adult digital skills on a comparable task list (ITU)",
+        "Perceived control over life (WVS wave 7, aligned fieldwork years)"
+      ]
+    },
+    {
+      "iso3": "CUB",
+      "dimension": "coordination",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 48,
+      "selfConfidence": 0.4,
+      "rationale": "Mass vaccination campaigns and hurricane evacuation are executed reliably at national scale, and the evacuation record is genuinely among the best anywhere. Coordination is entirely state-directed with no independent civil society.",
+      "missingEvidence": [
+        "Civil society strength (V-Dem core civil society index)",
+        "University-industry collaboration (no comparable dataset)",
+        "A non-perception measure of government effectiveness (WGI retired by D44)"
+      ]
+    },
+    {
+      "iso3": "CUB",
+      "dimension": "trust",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 28,
+      "selfConfidence": 0.4,
+      "rationale": "Legal institutions are subordinate to the party and there is no independent recourse. Everyday social order and low violent crime are real and rest on control rather than on institutional trust.",
+      "missingEvidence": [
+        "Generalised interpersonal trust, behavioural rather than survey (WVS/ESS)",
+        "Trust in public institutions (OECD Trust Survey, coverage limited)",
+        "A non-perception measure of rule of law (WGI retired by D44)"
+      ]
+    },
+    {
+      "iso3": "CUB",
+      "dimension": "learning",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 62,
+      "selfConfidence": 0.5,
+      "rationale": "Near universal literacy and strong basic education sustained across sixty years and through the economic collapse of the 1990s. This is a durable institution and the derived 59.3 is close to right.",
+      "missingEvidence": [
+        "Adult learning participation (OECD/Eurostat AES, non-members missing)",
+        "Field-normalised research citation impact (Scopus or WoS)"
+      ]
+    },
+    {
+      "iso3": "CUB",
+      "dimension": "experimentation",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 24,
+      "selfConfidence": 0.45,
+      "rationale": "The derived 1.4 records almost no patent activity. Developing and manufacturing original COVID vaccines under embargo is real experimentation capability held in state institutes, so I raise well above it.",
+      "missingEvidence": [
+        "Venture capital investment as a share of GDP",
+        "Regulatory sandbox activity: count, sectors and graduation rate",
+        "Business share of R&D (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "CUB",
+      "dimension": "adaptability",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 30,
+      "selfConfidence": 0.45,
+      "rationale": "The special period showed forced adaptation with enormous welfare cost. The current crisis shows the same institutions unable to adjust, with sustained blackouts and record emigration.",
+      "missingEvidence": [
+        "Long-term unemployment share (ILOSTAT, needs an adapter)",
+        "Export diversification (UNCTAD concentration index)",
+        "Disaster preparedness and recovery (INFORM or Sendai reporting)"
+      ]
+    },
+    {
+      "iso3": "CUB",
+      "dimension": "building",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 24,
+      "selfConfidence": 0.45,
+      "rationale": "Housing and infrastructure have degraded visibly over decades and the electricity system is failing. Biopharmaceutical manufacturing is the one real exception.",
+      "missingEvidence": [
+        "Large project delivery against time and budget (no dataset)",
+        "Firm scale-up rate (OECD DynEmp or Eurostat)"
+      ]
+    },
+    {
+      "iso3": "CUB",
+      "dimension": "shared_purpose",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 24,
+      "selfConfidence": 0.4,
+      "rationale": "No derived score. Mobilisation capacity is high and it is directed rather than chosen, and this dimension explicitly measures productive pluralism rather than unity.",
+      "missingEvidence": [
+        "Political polarisation (V-Dem polarisation index)",
+        "Non-electoral civic participation on a comparable basis",
+        "Volunteering rate on a comparable basis"
+      ]
+    },
+    {
       "iso3": "DEU",
       "dimension": "anticipation",
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 72,
+      "score": 73,
       "selfConfidence": 0.55,
       "rationale": "Max Planck, Fraunhofer, Helmholtz and Leibniz are exactly the kind of durable research organisations this dimension should reward, and they outlast governments by design. Statistical capacity is strong.",
       "missingEvidence": [
@@ -1342,9 +1604,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 58,
+      "score": 64,
       "selfConfidence": 0.55,
-      "rationale": "Registration and administrative procedure are genuinely slow and paper-based, and the derived 57.7 is not an artefact. Financial access and legal certainty are strong.",
+      "rationale": "Registration and administrative procedure are genuinely slow and paper-based, and the derived 64 is not an artefact. Financial access and legal certainty are strong.",
       "missingEvidence": [
         "Adult digital skills on a comparable task list (ITU)",
         "Perceived control over life (WVS wave 7, aligned fieldwork years)"
@@ -1386,7 +1648,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 74,
+      "score": 70,
       "selfConfidence": 0.5,
       "rationale": "The dual apprenticeship system is a durable institution carrying a majority of young people into skilled work, and vocational share at 37.8 badly understates its depth. I depart upward on the institutional fact.",
       "missingEvidence": [
@@ -1400,7 +1662,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 55,
+      "score": 66,
       "selfConfidence": 0.5,
       "rationale": "Patent intensity at 61.3 reflects real corporate research, concentrated in incumbents. New firm formation and venture funding are weak for the size of the economy.",
       "missingEvidence": [
@@ -1415,9 +1677,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 62,
+      "score": 63,
       "selfConfidence": 0.5,
-      "rationale": "The derived 84.5 rests on labour indicators and misses a decade of slow adjustment in energy and automotive. The 2022 gas substitution was faster than expected, which is why I do not mark down further.",
+      "rationale": "The derived 85.9 rests on labour indicators and misses a decade of slow adjustment in energy and automotive. The 2022 gas substitution was faster than expected, which is why I do not mark down further.",
       "missingEvidence": [
         "Long-term unemployment share (ILOSTAT, needs an adapter)",
         "Export diversification (UNCTAD concentration index)",
@@ -1430,7 +1692,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 72,
+      "score": 74,
       "selfConfidence": 0.55,
       "rationale": "A deep engineering and manufacturing base in standing firms with real delivery capacity. Berlin airport and Stuttgart 21 are genuine cautionary evidence against the top of the frame.",
       "missingEvidence": [
@@ -1454,12 +1716,274 @@
       ]
     },
     {
+      "iso3": "DOM",
+      "dimension": "anticipation",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 24,
+      "selfConfidence": 0.5,
+      "rationale": "A thin research base and limited statistical capacity. No standing foresight function.",
+      "missingEvidence": [
+        "Mandate, budget and continuity of a national foresight unit (no dataset)",
+        "Basic research share of GERD (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "DOM",
+      "dimension": "agency",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 46,
+      "selfConfidence": 0.5,
+      "rationale": "A reasonable formal environment by regional standards with a functioning free zone and tourism economy. Informality remains high outside those sectors.",
+      "missingEvidence": [
+        "Adult digital skills on a comparable task list (ITU)",
+        "Perceived control over life (WVS wave 7, aligned fieldwork years)"
+      ]
+    },
+    {
+      "iso3": "DOM",
+      "dimension": "coordination",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 34,
+      "selfConfidence": 0.4,
+      "rationale": "Moderate administrative capacity with persistent clientelism in appointments. Electricity sector coordination has failed for decades.",
+      "missingEvidence": [
+        "Civil society strength (V-Dem core civil society index)",
+        "University-industry collaboration (no comparable dataset)",
+        "A non-perception measure of government effectiveness (WGI retired by D44)"
+      ]
+    },
+    {
+      "iso3": "DOM",
+      "dimension": "trust",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 32,
+      "selfConfidence": 0.4,
+      "rationale": "Corruption has been persistent and recent prosecutions of senior figures are genuine evidence that institutions can act. Institutional trust remains low.",
+      "missingEvidence": [
+        "Generalised interpersonal trust, behavioural rather than survey (WVS/ESS)",
+        "Trust in public institutions (OECD Trust Survey, coverage limited)",
+        "A non-perception measure of rule of law (WGI retired by D44)"
+      ]
+    },
+    {
+      "iso3": "DOM",
+      "dimension": "learning",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 34,
+      "selfConfidence": 0.5,
+      "rationale": "A constitutional mandate to spend four percent of output on education was met and outcomes did not follow, which is a clear case of an input without an institution behind it.",
+      "missingEvidence": [
+        "Adult learning participation (OECD/Eurostat AES, non-members missing)",
+        "Field-normalised research citation impact (Scopus or WoS)"
+      ]
+    },
+    {
+      "iso3": "DOM",
+      "dimension": "experimentation",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 18,
+      "selfConfidence": 0.45,
+      "rationale": "Very low patent and trademark intensity and no supporting institutions.",
+      "missingEvidence": [
+        "Venture capital investment as a share of GDP",
+        "Regulatory sandbox activity: count, sectors and graduation rate",
+        "Business share of R&D (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "DOM",
+      "dimension": "adaptability",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 48,
+      "selfConfidence": 0.45,
+      "rationale": "The tourism economy recovered from the pandemic faster than most of the region, which reflects real sectoral flexibility. Structural reallocation beyond tourism is limited.",
+      "missingEvidence": [
+        "Long-term unemployment share (ILOSTAT, needs an adapter)",
+        "Export diversification (UNCTAD concentration index)",
+        "Disaster preparedness and recovery (INFORM or Sendai reporting)"
+      ]
+    },
+    {
+      "iso3": "DOM",
+      "dimension": "building",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 32,
+      "selfConfidence": 0.5,
+      "rationale": "Free zone manufacturing including medical devices is genuine and long established. Public infrastructure delivery is weak, with the power system as the standing example.",
+      "missingEvidence": [
+        "Large project delivery against time and budget (no dataset)",
+        "Firm scale-up rate (OECD DynEmp or Eurostat)"
+      ]
+    },
+    {
+      "iso3": "DOM",
+      "dimension": "shared_purpose",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 50,
+      "selfConfidence": 0.45,
+      "rationale": "Stable democratic institutions with repeated peaceful alternation of power. Inequality and clientelism limit how far collective purpose reaches.",
+      "missingEvidence": [
+        "Political polarisation (V-Dem polarisation index)",
+        "Non-electoral civic participation on a comparable basis",
+        "Volunteering rate on a comparable basis"
+      ]
+    },
+    {
+      "iso3": "ECU",
+      "dimension": "anticipation",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 26,
+      "selfConfidence": 0.5,
+      "rationale": "A weak research base and limited planning continuity across administrations. Statistical capacity is adequate.",
+      "missingEvidence": [
+        "Mandate, budget and continuity of a national foresight unit (no dataset)",
+        "Basic research share of GERD (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "ECU",
+      "dimension": "agency",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 34,
+      "selfConfidence": 0.5,
+      "rationale": "Dollarisation removed monetary chaos and gives real predictability, which is an institutional asset. Informality remains very high and credit access is narrow.",
+      "missingEvidence": [
+        "Adult digital skills on a comparable task list (ITU)",
+        "Perceived control over life (WVS wave 7, aligned fieldwork years)"
+      ]
+    },
+    {
+      "iso3": "ECU",
+      "dimension": "coordination",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 24,
+      "selfConfidence": 0.4,
+      "rationale": "The security collapse since 2022 is direct evidence of the state losing coordinated control of territory and of its own prisons. Administrative capacity elsewhere is thin.",
+      "missingEvidence": [
+        "Civil society strength (V-Dem core civil society index)",
+        "University-industry collaboration (no comparable dataset)",
+        "A non-perception measure of government effectiveness (WGI retired by D44)"
+      ]
+    },
+    {
+      "iso3": "ECU",
+      "dimension": "trust",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 20,
+      "selfConfidence": 0.4,
+      "rationale": "Criminal penetration of police, prisons and parts of the judiciary, and the assassination of a presidential candidate during a campaign. Institutional trust is very low.",
+      "missingEvidence": [
+        "Generalised interpersonal trust, behavioural rather than survey (WVS/ESS)",
+        "Trust in public institutions (OECD Trust Survey, coverage limited)",
+        "A non-perception measure of rule of law (WGI retired by D44)"
+      ]
+    },
+    {
+      "iso3": "ECU",
+      "dimension": "learning",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 40,
+      "selfConfidence": 0.5,
+      "rationale": "Enrolment expanded and outcomes remain weak. The derived 47 slightly overstates the system.",
+      "missingEvidence": [
+        "Adult learning participation (OECD/Eurostat AES, non-members missing)",
+        "Field-normalised research citation impact (Scopus or WoS)"
+      ]
+    },
+    {
+      "iso3": "ECU",
+      "dimension": "experimentation",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 16,
+      "selfConfidence": 0.45,
+      "rationale": "Near the floor on patents and trademarks with no institutional support layer.",
+      "missingEvidence": [
+        "Venture capital investment as a share of GDP",
+        "Regulatory sandbox activity: count, sectors and graduation rate",
+        "Business share of R&D (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "ECU",
+      "dimension": "adaptability",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 40,
+      "selfConfidence": 0.45,
+      "rationale": "Dollarisation removes the monetary instrument, so adjustment falls entirely on fiscal policy and the labour market. Oil dependence narrows it further.",
+      "missingEvidence": [
+        "Long-term unemployment share (ILOSTAT, needs an adapter)",
+        "Export diversification (UNCTAD concentration index)",
+        "Disaster preparedness and recovery (INFORM or Sendai reporting)"
+      ]
+    },
+    {
+      "iso3": "ECU",
+      "dimension": "building",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 24,
+      "selfConfidence": 0.5,
+      "rationale": "Weak delivery outside the oil sector, and the refinery programme is a long-running failure. Infrastructure built during the boom has not been maintained.",
+      "missingEvidence": [
+        "Large project delivery against time and budget (no dataset)",
+        "Firm scale-up rate (OECD DynEmp or Eurostat)"
+      ]
+    },
+    {
+      "iso3": "ECU",
+      "dimension": "shared_purpose",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 30,
+      "selfConfidence": 0.45,
+      "rationale": "Severe polarisation and a security emergency that has displaced normal politics. Electoral institutions continue to function.",
+      "missingEvidence": [
+        "Political polarisation (V-Dem polarisation index)",
+        "Non-electoral civic participation on a comparable basis",
+        "Volunteering rate on a comparable basis"
+      ]
+    },
+    {
       "iso3": "ESP",
       "dimension": "anticipation",
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 54,
+      "score": 55,
       "selfConfidence": 0.5,
       "rationale": "A reasonable research base and competent statistical institutions. No durable central foresight function and research funding is cyclical.",
       "missingEvidence": [
@@ -1473,7 +1997,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 56,
+      "score": 62,
       "selfConfidence": 0.5,
       "rationale": "Formal environment is adequate and labour market duality restricts real agency for younger workers. Financial access is strong.",
       "missingEvidence": [
@@ -1517,7 +2041,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 62,
+      "score": 58,
       "selfConfidence": 0.5,
       "rationale": "Tertiary attainment is high and youth unemployment indicates the system connects poorly to work. Vocational training reform is recent and not yet embedded.",
       "missingEvidence": [
@@ -1531,7 +2055,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 26,
+      "score": 27,
       "selfConfidence": 0.45,
       "rationale": "Patent and trademark intensity at 13.3 is genuinely weak and reflects a small corporate research base. I raise slightly for a growing Barcelona and Madrid ecosystem.",
       "missingEvidence": [
@@ -1546,7 +2070,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 56,
+      "score": 58,
       "selfConfidence": 0.5,
       "rationale": "The economy absorbed a severe financial crisis and restructured its banking system, which was real institutional work. Labour market duality still concentrates adjustment on temporary contracts.",
       "missingEvidence": [
@@ -1561,9 +2085,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 46,
+      "score": 55,
       "selfConfidence": 0.5,
-      "rationale": "Spain built the largest high-speed rail network in Europe and has major international construction firms, which the derived 27.1 cannot see. Industrial complexity is genuinely mid-range.",
+      "rationale": "Spain built the largest high-speed rail network in Europe and has major international construction firms, which the derived 36 cannot see. Industrial complexity is genuinely mid-range.",
       "missingEvidence": [
         "Large project delivery against time and budget (no dataset)",
         "Firm scale-up rate (OECD DynEmp or Eurostat)"
@@ -1590,7 +2114,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 64,
+      "score": 65,
       "selfConfidence": 0.55,
       "rationale": "Small, well-instrumented state with good statistical capacity and genuine long-horizon digital planning. The research base is small in absolute terms.",
       "missingEvidence": [
@@ -1604,7 +2128,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 82,
+      "score": 84,
       "selfConfidence": 0.55,
       "rationale": "Digital identity and e-residency make company formation and legal action genuinely fast, and they are standing institutions rather than programmes. This is the clearest institutional case in the set.",
       "missingEvidence": [
@@ -1648,9 +2172,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 74,
+      "score": 70,
       "selfConfidence": 0.5,
-      "rationale": "Among the strongest PISA results in Europe achieved on modest spending, which points at the institution rather than the budget. The derived 61.1 understates it.",
+      "rationale": "Among the strongest PISA results in Europe achieved on modest spending, which points at the institution rather than the budget. The derived 56.8 understates it.",
       "missingEvidence": [
         "Adult learning participation (OECD/Eurostat AES, non-members missing)",
         "Field-normalised research citation impact (Scopus or WoS)"
@@ -1677,7 +2201,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 70,
+      "score": 74,
       "selfConfidence": 0.5,
       "rationale": "Fast policy reallocation, and the 2007 cyberattack response became a permanent institutional capability rather than a one-off. Small size makes reversal cheap.",
       "missingEvidence": [
@@ -1692,7 +2216,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 34,
+      "score": 41,
       "selfConfidence": 0.5,
       "rationale": "A small industrial base with limited heavy manufacturing. The state itself was rebuilt as digital infrastructure, which is a real building achievement the indicators cannot represent.",
       "missingEvidence": [
@@ -1721,7 +2245,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 8,
+      "score": 17,
       "selfConfidence": 0.5,
       "rationale": "Research and statistical capacity are near the floor of the frame on every observed indicator. There is state planning capacity, which is why this is not at zero.",
       "missingEvidence": [
@@ -1735,7 +2259,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 12,
+      "score": 28,
       "selfConfidence": 0.5,
       "rationale": "Formal business environment, financial access and connectivity are all near the floor. State dominance of banking and telecoms restricts action further.",
       "missingEvidence": [
@@ -1749,7 +2273,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 20,
+      "score": 18,
       "selfConfidence": 0.4,
       "rationale": "The developmental state built real implementation capacity in the 2000s and the Tigray war destroyed much of it. What remains is contested between federal and regional authorities.",
       "missingEvidence": [
@@ -1764,7 +2288,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 14,
+      "score": 12,
       "selfConfidence": 0.4,
       "rationale": "Ethnic federalism has become a fracture line and recent conflict makes cooperation beyond the group very difficult. Formal legal institutions are weak.",
       "missingEvidence": [
@@ -1779,7 +2303,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 16,
+      "score": 14,
       "selfConfidence": 0.45,
       "rationale": "Rapid university expansion from a very low base with serious quality problems. The institutional intent is real and the outcomes are not yet.",
       "missingEvidence": [
@@ -1808,9 +2332,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 22,
+      "score": 28,
       "selfConfidence": 0.45,
-      "rationale": "The derived 37.2 rests on labour indicators that mean little in a largely agricultural informal economy. Conflict and drought have overwhelmed adaptive capacity.",
+      "rationale": "The derived 43.1 rests on labour indicators that mean little in a largely agricultural informal economy. Conflict and drought have overwhelmed adaptive capacity.",
       "missingEvidence": [
         "Long-term unemployment share (ILOSTAT, needs an adapter)",
         "Export diversification (UNCTAD concentration index)",
@@ -1823,9 +2347,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 22,
+      "score": 30,
       "selfConfidence": 0.45,
-      "rationale": "The Grand Ethiopian Renaissance Dam, the Addis light rail and the industrial parks are real delivered projects financed and organised by the state. That is genuine building capability the derived 7.5 misses entirely.",
+      "rationale": "The Grand Ethiopian Renaissance Dam, the Addis light rail and the industrial parks are real delivered projects financed and organised by the state. That is genuine building capability the derived 15.5 misses entirely.",
       "missingEvidence": [
         "Large project delivery against time and budget (no dataset)",
         "Firm scale-up rate (OECD DynEmp or Eurostat)"
@@ -1852,9 +2376,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 88,
+      "score": 89,
       "selfConfidence": 0.6,
-      "rationale": "Sitra reports to parliament and the Committee for the Future is a standing parliamentary body, which makes foresight a constitutional function rather than a programme. This is the strongest anticipation institution in the dataset and the derived 81.1 still understates it.",
+      "rationale": "Sitra reports to parliament and the Committee for the Future is a standing parliamentary body, which makes foresight a constitutional function rather than a programme. This is the strongest anticipation institution in the dataset and the derived 82 still understates it.",
       "missingEvidence": [
         "Mandate, budget and continuity of a national foresight unit (no dataset)",
         "Basic research share of GERD (OECD MSTI)"
@@ -1866,7 +2390,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 74,
+      "score": 78,
       "selfConfidence": 0.5,
       "rationale": "Strong formal environment with high financial inclusion and connectivity. Business formation is moderate rather than exceptional.",
       "missingEvidence": [
@@ -1910,9 +2434,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 88,
+      "score": 81,
       "selfConfidence": 0.55,
-      "rationale": "A durable comprehensive school institution with high teacher professional standing, sustained across governments. The derived 85.3 is close to right.",
+      "rationale": "A durable comprehensive school institution with high teacher professional standing, sustained across governments. The derived 77.9 is close to right.",
       "missingEvidence": [
         "Adult learning participation (OECD/Eurostat AES, non-members missing)",
         "Field-normalised research citation impact (Scopus or WoS)"
@@ -1924,7 +2448,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 42,
+      "score": 50,
       "selfConfidence": 0.45,
       "rationale": "The post-Nokia ecosystem produced real firms and Slush became a durable institution. Patent intensity at 30.1 reflects a small base rather than weak capability.",
       "missingEvidence": [
@@ -1939,7 +2463,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 80,
+      "score": 81,
       "selfConfidence": 0.5,
       "rationale": "The National Emergency Supply Agency maintains stockpiles and continuity planning as permanent statutory work, which proved itself in 2022. Labour reallocation after the Nokia collapse was fast.",
       "missingEvidence": [
@@ -1954,7 +2478,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 52,
+      "score": 56,
       "selfConfidence": 0.5,
       "rationale": "Real industrial capability in forestry machinery, icebreakers and power plants. The Olkiluoto 3 reactor ran over a decade late, which is direct evidence against a higher score.",
       "missingEvidence": [
@@ -1983,9 +2507,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 68,
+      "score": 70,
       "selfConfidence": 0.55,
-      "rationale": "CNRS, CEA and France Strategie are durable state research and foresight organisations with real standing. The derived 59.5 understates the institutional depth.",
+      "rationale": "CNRS, CEA and France Strategie are durable state research and foresight organisations with real standing. The derived 61.3 understates the institutional depth.",
       "missingEvidence": [
         "Mandate, budget and continuity of a national foresight unit (no dataset)",
         "Basic research share of GERD (OECD MSTI)"
@@ -1997,7 +2521,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 64,
+      "score": 68,
       "selfConfidence": 0.5,
       "rationale": "Strong legal and financial infrastructure with genuine administrative friction. Business formation reform has been real over the last decade.",
       "missingEvidence": [
@@ -2041,7 +2565,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 64,
+      "score": 60,
       "selfConfidence": 0.5,
       "rationale": "The grandes ecoles produce a strong administrative and technical elite and mass outcomes are stratified. Adult training reform is recent.",
       "missingEvidence": [
@@ -2055,7 +2579,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 50,
+      "score": 56,
       "selfConfidence": 0.5,
       "rationale": "French Tech is a state-created institution that measurably increased firm formation, which is the institutionalist case for the raise. Patent intensity at 49 is mid-frame.",
       "missingEvidence": [
@@ -2070,9 +2594,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 58,
+      "score": 60,
       "selfConfidence": 0.5,
-      "rationale": "The derived 74.2 overstates it. Reform capacity is repeatedly blocked by street mobilisation and pension changes took three attempts across two decades.",
+      "rationale": "The derived 76.1 overstates it. Reform capacity is repeatedly blocked by street mobilisation and pension changes took three attempts across two decades.",
       "missingEvidence": [
         "Long-term unemployment share (ILOSTAT, needs an adapter)",
         "Export diversification (UNCTAD concentration index)",
@@ -2085,7 +2609,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 70,
+      "score": 78,
       "selfConfidence": 0.55,
       "rationale": "The nuclear fleet, the TGV network and Airbus are delivered at scale by durable organisations. Flamanville ran badly over, which limits how high this goes.",
       "missingEvidence": [
@@ -2114,7 +2638,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 70,
+      "score": 72,
       "selfConfidence": 0.55,
       "rationale": "A strong research base and the Government Office for Science with a standing chief scientific adviser network is real foresight infrastructure. Research funding stability has been poor.",
       "missingEvidence": [
@@ -2128,7 +2652,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 82,
+      "score": 85,
       "selfConfidence": 0.55,
       "rationale": "Company formation is fast and cheap, financial access is near universal and legal certainty is high. The indicators and the institutions agree here.",
       "missingEvidence": [
@@ -2172,9 +2696,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 72,
+      "score": 66,
       "selfConfidence": 0.5,
-      "rationale": "Strong universities and a weak technical education tier that repeated reforms have not fixed. The derived 73.9 is close to right.",
+      "rationale": "Strong universities and a weak technical education tier that repeated reforms have not fixed. The derived 68.4 is close to right.",
       "missingEvidence": [
         "Adult learning participation (OECD/Eurostat AES, non-members missing)",
         "Field-normalised research citation impact (Scopus or WoS)"
@@ -2186,7 +2710,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 56,
+      "score": 61,
       "selfConfidence": 0.5,
       "rationale": "The Financial Conduct Authority sandbox was the first of its kind and has been copied worldwide, which is institutional experimentation capability rather than firm-level output. Venture funding is the deepest in Europe.",
       "missingEvidence": [
@@ -2201,7 +2725,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 72,
+      "score": 75,
       "selfConfidence": 0.5,
       "rationale": "Flexible labour markets and the vaccine taskforce showed real capacity to build a temporary institution fast and use it. Energy price adjustment was slower.",
       "missingEvidence": [
@@ -2216,7 +2740,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 38,
+      "score": 44,
       "selfConfidence": 0.5,
       "rationale": "HS2 was cut back after enormous cost growth, housing supply has failed for two decades and Hinkley Point C is late and over. Delivery is the clear institutional weakness.",
       "missingEvidence": [
@@ -2240,12 +2764,405 @@
       ]
     },
     {
+      "iso3": "GTM",
+      "dimension": "anticipation",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 18,
+      "selfConfidence": 0.5,
+      "rationale": "Research and statistical capacity are near the floor. No durable planning function.",
+      "missingEvidence": [
+        "Mandate, budget and continuity of a national foresight unit (no dataset)",
+        "Basic research share of GERD (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "GTM",
+      "dimension": "agency",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 30,
+      "selfConfidence": 0.5,
+      "rationale": "Informality is very high and the formal economy reaches a minority of workers. Registration reform has not changed that.",
+      "missingEvidence": [
+        "Adult digital skills on a comparable task list (ITU)",
+        "Perceived control over life (WVS wave 7, aligned fieldwork years)"
+      ]
+    },
+    {
+      "iso3": "GTM",
+      "dimension": "coordination",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 20,
+      "selfConfidence": 0.4,
+      "rationale": "Tax revenue is among the lowest in the hemisphere, which means the state cannot fund coordinated action regardless of intent. Territorial presence is incomplete.",
+      "missingEvidence": [
+        "Civil society strength (V-Dem core civil society index)",
+        "University-industry collaboration (no comparable dataset)",
+        "A non-perception measure of government effectiveness (WGI retired by D44)"
+      ]
+    },
+    {
+      "iso3": "GTM",
+      "dimension": "trust",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 18,
+      "selfConfidence": 0.4,
+      "rationale": "The international anti-corruption commission was expelled precisely because it was working, and prosecutors and judges who cooperated with it have been driven into exile. That is direct evidence about what happens to institutions here.",
+      "missingEvidence": [
+        "Generalised interpersonal trust, behavioural rather than survey (WVS/ESS)",
+        "Trust in public institutions (OECD Trust Survey, coverage limited)",
+        "A non-perception measure of rule of law (WGI retired by D44)"
+      ]
+    },
+    {
+      "iso3": "GTM",
+      "dimension": "learning",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 28,
+      "selfConfidence": 0.5,
+      "rationale": "Weak outcomes with severe exclusion of indigenous and rural populations. The derived 42 overstates the system.",
+      "missingEvidence": [
+        "Adult learning participation (OECD/Eurostat AES, non-members missing)",
+        "Field-normalised research citation impact (Scopus or WoS)"
+      ]
+    },
+    {
+      "iso3": "GTM",
+      "dimension": "experimentation",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 12,
+      "selfConfidence": 0.45,
+      "rationale": "Near the floor with no institutional support.",
+      "missingEvidence": [
+        "Venture capital investment as a share of GDP",
+        "Regulatory sandbox activity: count, sectors and graduation rate",
+        "Business share of R&D (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "GTM",
+      "dimension": "adaptability",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 32,
+      "selfConfidence": 0.45,
+      "rationale": "Remittances absorb shocks at household level rather than institutions absorbing them. Little structural reallocation.",
+      "missingEvidence": [
+        "Long-term unemployment share (ILOSTAT, needs an adapter)",
+        "Export diversification (UNCTAD concentration index)",
+        "Disaster preparedness and recovery (INFORM or Sendai reporting)"
+      ]
+    },
+    {
+      "iso3": "GTM",
+      "dimension": "building",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 24,
+      "selfConfidence": 0.5,
+      "rationale": "Weak infrastructure delivery and a small manufacturing base.",
+      "missingEvidence": [
+        "Large project delivery against time and budget (no dataset)",
+        "Firm scale-up rate (OECD DynEmp or Eurostat)"
+      ]
+    },
+    {
+      "iso3": "GTM",
+      "dimension": "shared_purpose",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 34,
+      "selfConfidence": 0.45,
+      "rationale": "Deep ethnic exclusion is the structural fact. The 2023 defence of an election result against attempts to annul it, including sustained indigenous-led protest, was real collective action and is why this is not lower.",
+      "missingEvidence": [
+        "Political polarisation (V-Dem polarisation index)",
+        "Non-electoral civic participation on a comparable basis",
+        "Volunteering rate on a comparable basis"
+      ]
+    },
+    {
+      "iso3": "HND",
+      "dimension": "anticipation",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 14,
+      "selfConfidence": 0.5,
+      "rationale": "Research and statistical capacity are near the floor of the frame.",
+      "missingEvidence": [
+        "Mandate, budget and continuity of a national foresight unit (no dataset)",
+        "Basic research share of GERD (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "HND",
+      "dimension": "agency",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 26,
+      "selfConfidence": 0.5,
+      "rationale": "Very high informality and weak formal institutions. Credit and registration reach a small minority.",
+      "missingEvidence": [
+        "Adult digital skills on a comparable task list (ITU)",
+        "Perceived control over life (WVS wave 7, aligned fieldwork years)"
+      ]
+    },
+    {
+      "iso3": "HND",
+      "dimension": "coordination",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 16,
+      "selfConfidence": 0.4,
+      "rationale": "A former president was convicted of drug trafficking in a foreign court, which is about as direct as evidence of captured state coordination gets. Administrative capacity is very thin.",
+      "missingEvidence": [
+        "Civil society strength (V-Dem core civil society index)",
+        "University-industry collaboration (no comparable dataset)",
+        "A non-perception measure of government effectiveness (WGI retired by D44)"
+      ]
+    },
+    {
+      "iso3": "HND",
+      "dimension": "trust",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 15,
+      "selfConfidence": 0.4,
+      "rationale": "Very low institutional trust with weak courts and high impunity. Cooperation beyond the immediate network is difficult.",
+      "missingEvidence": [
+        "Generalised interpersonal trust, behavioural rather than survey (WVS/ESS)",
+        "Trust in public institutions (OECD Trust Survey, coverage limited)",
+        "A non-perception measure of rule of law (WGI retired by D44)"
+      ]
+    },
+    {
+      "iso3": "HND",
+      "dimension": "learning",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 26,
+      "selfConfidence": 0.5,
+      "rationale": "Weak outcomes and low completion. The derived 40.8 overstates the system.",
+      "missingEvidence": [
+        "Adult learning participation (OECD/Eurostat AES, non-members missing)",
+        "Field-normalised research citation impact (Scopus or WoS)"
+      ]
+    },
+    {
+      "iso3": "HND",
+      "dimension": "experimentation",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 10,
+      "selfConfidence": 0.45,
+      "rationale": "Near the floor with no supporting institutions.",
+      "missingEvidence": [
+        "Venture capital investment as a share of GDP",
+        "Regulatory sandbox activity: count, sectors and graduation rate",
+        "Business share of R&D (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "HND",
+      "dimension": "adaptability",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 26,
+      "selfConfidence": 0.45,
+      "rationale": "Remittance dependence and repeated hurricane damage without institutional recovery capacity.",
+      "missingEvidence": [
+        "Long-term unemployment share (ILOSTAT, needs an adapter)",
+        "Export diversification (UNCTAD concentration index)",
+        "Disaster preparedness and recovery (INFORM or Sendai reporting)"
+      ]
+    },
+    {
+      "iso3": "HND",
+      "dimension": "building",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 24,
+      "selfConfidence": 0.5,
+      "rationale": "Maquila assembly is real and shallow. Infrastructure delivery is weak.",
+      "missingEvidence": [
+        "Large project delivery against time and budget (no dataset)",
+        "Firm scale-up rate (OECD DynEmp or Eurostat)"
+      ]
+    },
+    {
+      "iso3": "HND",
+      "dimension": "shared_purpose",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 28,
+      "selfConfidence": 0.45,
+      "rationale": "Politics remains structured by the 2009 coup and institutions are weak and contested. The 2021 alternation was peaceful.",
+      "missingEvidence": [
+        "Political polarisation (V-Dem polarisation index)",
+        "Non-electoral civic participation on a comparable basis",
+        "Volunteering rate on a comparable basis"
+      ]
+    },
+    {
+      "iso3": "HTI",
+      "dimension": "anticipation",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 3,
+      "selfConfidence": 0.5,
+      "rationale": "The derived score is at the floor of the frame and that is correct. There is no functioning research or statistical capacity.",
+      "missingEvidence": [
+        "Mandate, budget and continuity of a national foresight unit (no dataset)",
+        "Basic research share of GERD (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "HTI",
+      "dimension": "agency",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 10,
+      "selfConfidence": 0.5,
+      "rationale": "Formal institutions barely function and most economic activity is survival level. Turning intention into action through any formal channel is close to impossible.",
+      "missingEvidence": [
+        "Adult digital skills on a comparable task list (ITU)",
+        "Perceived control over life (WVS wave 7, aligned fieldwork years)"
+      ]
+    },
+    {
+      "iso3": "HTI",
+      "dimension": "coordination",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 3,
+      "selfConfidence": 0.45,
+      "rationale": "The state has effectively lost control of the capital to armed groups and there are no elected officials remaining in office. This is the floor of the frame and it should be.",
+      "missingEvidence": [
+        "Civil society strength (V-Dem core civil society index)",
+        "University-industry collaboration (no comparable dataset)",
+        "A non-perception measure of government effectiveness (WGI retired by D44)"
+      ]
+    },
+    {
+      "iso3": "HTI",
+      "dimension": "trust",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 5,
+      "selfConfidence": 0.45,
+      "rationale": "There is no functioning justice system and no institutional recourse. Cooperation beyond the immediate network is dangerous rather than merely difficult.",
+      "missingEvidence": [
+        "Generalised interpersonal trust, behavioural rather than survey (WVS/ESS)",
+        "Trust in public institutions (OECD Trust Survey, coverage limited)",
+        "A non-perception measure of rule of law (WGI retired by D44)"
+      ]
+    },
+    {
+      "iso3": "HTI",
+      "dimension": "learning",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 10,
+      "selfConfidence": 0.5,
+      "rationale": "Schooling is largely private, unaffordable for most, and repeatedly suspended by insecurity.",
+      "missingEvidence": [
+        "Adult learning participation (OECD/Eurostat AES, non-members missing)",
+        "Field-normalised research citation impact (Scopus or WoS)"
+      ]
+    },
+    {
+      "iso3": "HTI",
+      "dimension": "experimentation",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 3,
+      "selfConfidence": 0.45,
+      "rationale": "No measurable formal activity and no institutions that could support any.",
+      "missingEvidence": [
+        "Venture capital investment as a share of GDP",
+        "Regulatory sandbox activity: count, sectors and graduation rate",
+        "Business share of R&D (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "HTI",
+      "dimension": "adaptability",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 12,
+      "selfConfidence": 0.45,
+      "rationale": "The derived 27.8 overstates it substantially. Household survival under collapse is not institutional adaptive capacity.",
+      "missingEvidence": [
+        "Long-term unemployment share (ILOSTAT, needs an adapter)",
+        "Export diversification (UNCTAD concentration index)",
+        "Disaster preparedness and recovery (INFORM or Sendai reporting)"
+      ]
+    },
+    {
+      "iso3": "HTI",
+      "dimension": "building",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 8,
+      "selfConfidence": 0.5,
+      "rationale": "The derived 34.4 is an artefact of a small denominator on a thin manufacturing measure and should not be read as delivery capability. Reconstruction after 2010 largely did not happen.",
+      "missingEvidence": [
+        "Large project delivery against time and budget (no dataset)",
+        "Firm scale-up rate (OECD DynEmp or Eurostat)"
+      ]
+    },
+    {
+      "iso3": "HTI",
+      "dimension": "shared_purpose",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 6,
+      "selfConfidence": 0.4,
+      "rationale": "No derived score. There is no functioning national political institution through which a shared purpose could be formed.",
+      "missingEvidence": [
+        "Political polarisation (V-Dem polarisation index)",
+        "Non-electoral civic participation on a comparable basis",
+        "Volunteering rate on a comparable basis"
+      ]
+    },
+    {
       "iso3": "IDN",
       "dimension": "anticipation",
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 26,
+      "score": 30,
       "selfConfidence": 0.5,
       "rationale": "Research and statistical capacity are weak for the size of the economy. Bappenas does real long-horizon planning, which keeps this at the derived level rather than below.",
       "missingEvidence": [
@@ -2259,7 +3176,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 30,
+      "score": 45,
       "selfConfidence": 0.5,
       "rationale": "Informality is high and the formal business environment remains difficult despite the omnibus reform. Financial inclusion has improved quickly.",
       "missingEvidence": [
@@ -2303,7 +3220,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 28,
+      "score": 26,
       "selfConfidence": 0.5,
       "rationale": "Enrolment has expanded and learning outcomes remain weak on international assessment. The derived score is close to right.",
       "missingEvidence": [
@@ -2319,7 +3236,7 @@
       "model": "claude-opus-5 (in-session, single panelist)",
       "score": 22,
       "selfConfidence": 0.45,
-      "rationale": "Patent and trademark intensity is near the floor and the derived 2.8 reflects that. GoTo, Bukalapak and a real digital sector argue against taking it literally.",
+      "rationale": "Patent and trademark intensity is near the floor and the derived 2.9 reflects that. GoTo, Bukalapak and a real digital sector argue against taking it literally.",
       "missingEvidence": [
         "Venture capital investment as a share of GDP",
         "Regulatory sandbox activity: count, sectors and graduation rate",
@@ -2332,7 +3249,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 48,
+      "score": 50,
       "selfConfidence": 0.45,
       "rationale": "The economy has absorbed commodity cycles and the pandemic reasonably well with competent macro management. Structural reallocation is slow.",
       "missingEvidence": [
@@ -2347,7 +3264,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 42,
+      "score": 46,
       "selfConfidence": 0.5,
       "rationale": "Toll roads, the Jakarta MRT and the nickel processing build-out are delivered infrastructure at scale. The new capital project is evidence in the other direction.",
       "missingEvidence": [
@@ -2376,7 +3293,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 24,
+      "score": 30,
       "selfConfidence": 0.5,
       "rationale": "Research and researcher intensity per head are near the floor of the set. ISRO and the statistical system are real institutions and recent statistical capacity has been questioned.",
       "missingEvidence": [
@@ -2390,7 +3307,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 34,
+      "score": 46,
       "selfConfidence": 0.5,
       "rationale": "Formal barriers remain high and informality dominates employment. Aadhaar and UPI genuinely widened the ability to transact, which is why this sits above the floor.",
       "missingEvidence": [
@@ -2434,7 +3351,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 24,
+      "score": 22,
       "selfConfidence": 0.5,
       "rationale": "Basic learning outcomes are weak and the ASER record has been consistent about it for years. Elite technical institutions do not change the aggregate.",
       "missingEvidence": [
@@ -2463,7 +3380,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 38,
+      "score": 43,
       "selfConfidence": 0.45,
       "rationale": "Fast adoption of digital public infrastructure shows real capacity to change practice at scale. Labour and land market rigidity constrain reallocation.",
       "missingEvidence": [
@@ -2478,9 +3395,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 44,
+      "score": 50,
       "selfConfidence": 0.5,
-      "rationale": "Highways, UPI, the space programme and rapid renewable capacity build-out are delivered at national scale. The derived 33 understates delivery capability.",
+      "rationale": "Highways, UPI, the space programme and rapid renewable capacity build-out are delivered at national scale. The derived 39 understates delivery capability.",
       "missingEvidence": [
         "Large project delivery against time and budget (no dataset)",
         "Firm scale-up rate (OECD DynEmp or Eurostat)"
@@ -2507,7 +3424,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 62,
+      "score": 64,
       "selfConfidence": 0.5,
       "rationale": "A good research base for the size of the country with real university strength. There is no durable central foresight function and research funding has been cyclical.",
       "missingEvidence": [
@@ -2521,7 +3438,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 70,
+      "score": 73,
       "selfConfidence": 0.5,
       "rationale": "Company formation is fast, financial access is high and the legal environment is stable and predictable. This is a genuine institutional strength.",
       "missingEvidence": [
@@ -2565,7 +3482,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 70,
+      "score": 66,
       "selfConfidence": 0.5,
       "rationale": "Strong tertiary attainment and a skilled workforce that sustained the foreign investment model. Apprenticeship provision is thin.",
       "missingEvidence": [
@@ -2594,7 +3511,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 72,
+      "score": 74,
       "selfConfidence": 0.45,
       "rationale": "A small open economy that has repeatedly repositioned itself, and the corporate tax reform was absorbed without the predicted collapse. Reallocation is fast.",
       "missingEvidence": [
@@ -2609,9 +3526,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 34,
+      "score": 39,
       "selfConfidence": 0.5,
-      "rationale": "The derived 70 is a transfer-pricing artefact: manufacturing value added and complexity reflect multinational accounting rather than domestic production. Actual domestic building capability is poor, with a decade-long housing supply failure as the evidence.",
+      "rationale": "The derived 75.3 is a transfer-pricing artefact: manufacturing value added and complexity reflect multinational accounting rather than domestic production. Actual domestic building capability is poor, with a decade-long housing supply failure as the evidence.",
       "missingEvidence": [
         "Large project delivery against time and budget (no dataset)",
         "Firm scale-up rate (OECD DynEmp or Eurostat)"
@@ -2638,9 +3555,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 76,
+      "score": 78,
       "selfConfidence": 0.55,
-      "rationale": "Among the highest research intensity in the world with durable institutions in the universities and the defence research establishment. The derived 79 is close to right.",
+      "rationale": "Among the highest research intensity in the world with durable institutions in the universities and the defence research establishment. The derived 80.6 is close to right.",
       "missingEvidence": [
         "Mandate, budget and continuity of a national foresight unit (no dataset)",
         "Basic research share of GERD (OECD MSTI)"
@@ -2652,7 +3569,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 68,
+      "score": 73,
       "selfConfidence": 0.5,
       "rationale": "Strong entrepreneurial infrastructure and financial access. Administrative friction is real and bureaucratic quality is uneven.",
       "missingEvidence": [
@@ -2696,9 +3613,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 52,
+      "score": 48,
       "selfConfidence": 0.5,
-      "rationale": "Strong tertiary and research institutions alongside a bifurcated school system where the Haredi and Arab sectors are underserved. The derived 49.1 reflects that split correctly.",
+      "rationale": "Strong tertiary and research institutions alongside a bifurcated school system where the Haredi and Arab sectors are underserved. The derived 44.7 reflects that split correctly.",
       "missingEvidence": [
         "Adult learning participation (OECD/Eurostat AES, non-members missing)",
         "Field-normalised research citation impact (Scopus or WoS)"
@@ -2710,9 +3627,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 62,
+      "score": 67,
       "selfConfidence": 0.5,
-      "rationale": "The derived 16.5 badly understates it. Venture capital per head is among the highest in the world and the Yozma programme was a deliberate and successful institutional intervention that created the market.",
+      "rationale": "The derived 21.4 badly understates it. Venture capital per head is among the highest in the world and the Yozma programme was a deliberate and successful institutional intervention that created the market.",
       "missingEvidence": [
         "Venture capital investment as a share of GDP",
         "Regulatory sandbox activity: count, sectors and graduation rate",
@@ -2725,7 +3642,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 70,
+      "score": 72,
       "selfConfidence": 0.5,
       "rationale": "Repeated rapid mobilisation and economic adjustment under shock, with reserve institutions designed for it. Sustained conflict is now testing the limits.",
       "missingEvidence": [
@@ -2740,7 +3657,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 44,
+      "score": 52,
       "selfConfidence": 0.5,
       "rationale": "Strong defence and technology building capability in standing organisations. Civil infrastructure and housing delivery are weak.",
       "missingEvidence": [
@@ -2769,7 +3686,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 74,
+      "score": 75,
       "selfConfidence": 0.55,
       "rationale": "NISTEP has run a national technology foresight survey since 1971, which is the longest continuous foresight institution in the dataset. That is exactly the durable organisational capability this dimension should reward.",
       "missingEvidence": [
@@ -2783,7 +3700,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 58,
+      "score": 65,
       "selfConfidence": 0.5,
       "rationale": "Legal certainty and financial access are strong and business formation is genuinely low. Institutional and social barriers to starting again after failure are real.",
       "missingEvidence": [
@@ -2827,9 +3744,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 62,
+      "score": 60,
       "selfConfidence": 0.5,
-      "rationale": "Strong and equitable basic education as a durable institution. Adult reskilling and mid-career mobility are weak, which the derived 49.6 partly captures.",
+      "rationale": "Strong and equitable basic education as a durable institution. Adult reskilling and mid-career mobility are weak, which the derived 47.2 partly captures.",
       "missingEvidence": [
         "Adult learning participation (OECD/Eurostat AES, non-members missing)",
         "Field-normalised research citation impact (Scopus or WoS)"
@@ -2856,9 +3773,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 62,
+      "score": 63,
       "selfConfidence": 0.5,
-      "rationale": "Disaster adaptation is world-leading and institutionalised in building codes and drills. Demographic and digital adaptation has been slow for three decades, so the derived 84.9 overstates the general case.",
+      "rationale": "Disaster adaptation is world-leading and institutionalised in building codes and drills. Demographic and digital adaptation has been slow for three decades, so the derived 86.1 overstates the general case.",
       "missingEvidence": [
         "Long-term unemployment share (ILOSTAT, needs an adapter)",
         "Export diversification (UNCTAD concentration index)",
@@ -2871,9 +3788,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 76,
+      "score": 85,
       "selfConfidence": 0.55,
-      "rationale": "Rail, construction and precision manufacturing delivered reliably by organisations that have held capability for generations. The derived 41.5 understates it substantially.",
+      "rationale": "Rail, construction and precision manufacturing delivered reliably by organisations that have held capability for generations. The derived 50.2 understates it substantially.",
       "missingEvidence": [
         "Large project delivery against time and budget (no dataset)",
         "Firm scale-up rate (OECD DynEmp or Eurostat)"
@@ -2900,7 +3817,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 18,
+      "score": 24,
       "selfConfidence": 0.45,
       "rationale": "Research and statistical capacity are near the floor of the frame. Vision 2030 is a real planning document with weak institutional continuity behind it.",
       "missingEvidence": [
@@ -2914,7 +3831,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 30,
+      "score": 41,
       "selfConfidence": 0.45,
       "rationale": "M-Pesa genuinely widened the ability to transact and that is a real capability gain. Informality dominates employment and formal business barriers remain high.",
       "missingEvidence": [
@@ -2958,7 +3875,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 28,
+      "score": 26,
       "selfConfidence": 0.45,
       "rationale": "Enrolment has expanded substantially and quality and completion remain weak. The derived score is close to right.",
       "missingEvidence": [
@@ -2974,7 +3891,7 @@
       "model": "claude-opus-5 (in-session, single panelist)",
       "score": 22,
       "selfConfidence": 0.45,
-      "rationale": "The derived 0.8 understates it. The central bank's decision to let M-Pesa operate before writing rules for it was a genuine act of regulatory experimentation with worldwide consequences.",
+      "rationale": "The derived 0.9 understates it. The central bank's decision to let M-Pesa operate before writing rules for it was a genuine act of regulatory experimentation with worldwide consequences.",
       "missingEvidence": [
         "Venture capital investment as a share of GDP",
         "Regulatory sandbox activity: count, sectors and graduation rate",
@@ -2987,7 +3904,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 34,
+      "score": 41,
       "selfConfidence": 0.45,
       "rationale": "Real capacity to adopt new practice quickly, with mobile money as the demonstration. Institutional absorption of change is weak and drought response depends on external support.",
       "missingEvidence": [
@@ -3002,7 +3919,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 20,
+      "score": 28,
       "selfConfidence": 0.45,
       "rationale": "The standard gauge railway and geothermal generation are delivered projects with real state involvement. Manufacturing value added at 9.6 shows how thin the base is.",
       "missingEvidence": [
@@ -3031,9 +3948,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 78,
+      "score": 79,
       "selfConfidence": 0.55,
-      "rationale": "Among the highest research intensity in the world backed by durable public research institutes and corporate laboratories. The derived 79.5 is close to right.",
+      "rationale": "Among the highest research intensity in the world backed by durable public research institutes and corporate laboratories. The derived 80.6 is close to right.",
       "missingEvidence": [
         "Mandate, budget and continuity of a national foresight unit (no dataset)",
         "Basic research share of GERD (OECD MSTI)"
@@ -3045,7 +3962,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 72,
+      "score": 74,
       "selfConfidence": 0.55,
       "rationale": "Strong formal environment, high connectivity and good financial access. Chaebol dominance narrows the space for independent action more than the indicators show.",
       "missingEvidence": [
@@ -3089,9 +4006,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 70,
+      "score": 67,
       "selfConfidence": 0.5,
-      "rationale": "Very strong formal education institutions with high attainment. Adult learning and mid-career reskilling are weak, and the derived 58.8 captures part of that.",
+      "rationale": "Very strong formal education institutions with high attainment. Adult learning and mid-career reskilling are weak, and the derived 55.9 captures part of that.",
       "missingEvidence": [
         "Adult learning participation (OECD/Eurostat AES, non-members missing)",
         "Field-normalised research citation impact (Scopus or WoS)"
@@ -3118,7 +4035,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 78,
+      "score": 80,
       "selfConfidence": 0.5,
       "rationale": "Fast industrial repositioning repeatedly demonstrated across four decades, from shipbuilding to semiconductors to batteries. Institutions absorb and direct the change.",
       "missingEvidence": [
@@ -3133,9 +4050,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 82,
+      "score": 84,
       "selfConfidence": 0.55,
-      "rationale": "Semiconductors, shipbuilding, and construction delivered at world scale by durable firms. The derived 60.6 understates it.",
+      "rationale": "Semiconductors, shipbuilding, and construction delivered at world scale by durable firms. The derived 63.1 understates it.",
       "missingEvidence": [
         "Large project delivery against time and budget (no dataset)",
         "Firm scale-up rate (OECD DynEmp or Eurostat)"
@@ -3162,7 +4079,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 28,
+      "score": 31,
       "selfConfidence": 0.5,
       "rationale": "A thin research base relative to the size of the economy and weak continuity in science funding. Statistical institutions were competent and have been weakened.",
       "missingEvidence": [
@@ -3176,7 +4093,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 34,
+      "score": 46,
       "selfConfidence": 0.5,
       "rationale": "Informality covers a majority of employment and credit access is narrow. Formal registration has improved.",
       "missingEvidence": [
@@ -3220,7 +4137,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 42,
+      "score": 38,
       "selfConfidence": 0.5,
       "rationale": "Enrolment is reasonable and learning outcomes are weak. Recent reforms have disrupted teacher evaluation institutions.",
       "missingEvidence": [
@@ -3249,7 +4166,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 52,
+      "score": 56,
       "selfConfidence": 0.45,
       "rationale": "Manufacturing has repositioned repeatedly with trade agreements and is doing so again with nearshoring. Firms adapt faster than institutions.",
       "missingEvidence": [
@@ -3264,7 +4181,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 38,
+      "score": 46,
       "selfConfidence": 0.5,
       "rationale": "A real and deep manufacturing base in automotive and aerospace. Recent state megaprojects have been delivered over budget and with weak appraisal, which is evidence against the institution rather than the industry.",
       "missingEvidence": [
@@ -3293,7 +4210,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 38,
+      "score": 41,
       "selfConfidence": 0.5,
       "rationale": "A moderate research base with real public research institutes. Foresight capacity is programme-based rather than continuous.",
       "missingEvidence": [
@@ -3307,7 +4224,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 54,
+      "score": 62,
       "selfConfidence": 0.5,
       "rationale": "Reasonable formal environment and good financial access. Ethnic preference policies shape who can act on what, which the indicators cannot show.",
       "missingEvidence": [
@@ -3351,7 +4268,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 42,
+      "score": 40,
       "selfConfidence": 0.5,
       "rationale": "Enrolment is reasonable and outcomes have stagnated. Brain drain is persistent and well documented.",
       "missingEvidence": [
@@ -3365,7 +4282,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 24,
+      "score": 25,
       "selfConfidence": 0.45,
       "rationale": "Patent and trademark intensity at 6.2 is genuinely weak. Some real activity in electronics around Penang, which is why I raise slightly.",
       "missingEvidence": [
@@ -3380,7 +4297,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 54,
+      "score": 57,
       "selfConfidence": 0.45,
       "rationale": "The economy has repositioned within electronics supply chains repeatedly. Political instability has slowed institutional adjustment.",
       "missingEvidence": [
@@ -3395,9 +4312,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 58,
+      "score": 60,
       "selfConfidence": 0.5,
-      "rationale": "The Penang semiconductor assembly and test cluster is a real, deep manufacturing capability built over four decades. The derived 57.6 is close to right.",
+      "rationale": "The Penang semiconductor assembly and test cluster is a real, deep manufacturing capability built over four decades. The derived 59.6 is close to right.",
       "missingEvidence": [
         "Large project delivery against time and budget (no dataset)",
         "Firm scale-up rate (OECD DynEmp or Eurostat)"
@@ -3424,7 +4341,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 10,
+      "score": 18,
       "selfConfidence": 0.45,
       "rationale": "Research, researcher and statistical capacity are all near the floor of the frame. There is no durable foresight function.",
       "missingEvidence": [
@@ -3438,7 +4355,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 24,
+      "score": 37,
       "selfConfidence": 0.45,
       "rationale": "Enormous informal economic energy against very weak formal institutions. My stance is explicitly sceptical of individual effort compensating for institutional failure, and this is the clearest case of it in the set.",
       "missingEvidence": [
@@ -3452,7 +4369,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 16,
+      "score": 15,
       "selfConfidence": 0.4,
       "rationale": "State capacity is weak at federal and state level and security provision is contested across large areas. Coordination failures are the recurring explanation for policy outcomes.",
       "missingEvidence": [
@@ -3467,7 +4384,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 16,
+      "score": 15,
       "selfConfidence": 0.4,
       "rationale": "Very low institutional trust with weak contract enforcement and slow courts. Ethnic and religious fragmentation limits cooperation beyond the group.",
       "missingEvidence": [
@@ -3482,7 +4399,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 14,
+      "score": 13,
       "selfConfidence": 0.45,
       "rationale": "Very weak outcomes with a large out-of-school population. Some strong private tertiary provision that does not change the aggregate.",
       "missingEvidence": [
@@ -3498,7 +4415,7 @@
       "model": "claude-opus-5 (in-session, single panelist)",
       "score": 18,
       "selfConfidence": 0.45,
-      "rationale": "The derived 0.4 understates it. Flutterwave, Paystack and Nollywood are real, and they grew without institutional support rather than because of it, which is the point.",
+      "rationale": "The derived 0.5 understates it. Flutterwave, Paystack and Nollywood are real, and they grew without institutional support rather than because of it, which is the point.",
       "missingEvidence": [
         "Venture capital investment as a share of GDP",
         "Regulatory sandbox activity: count, sectors and graduation rate",
@@ -3511,9 +4428,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 26,
+      "score": 29,
       "selfConfidence": 0.45,
-      "rationale": "The derived 56.3 rests on labour indicators that do not measure a largely informal economy. Fuel subsidy removal showed the state can act and had little institutional preparation behind it.",
+      "rationale": "The derived 59.6 rests on labour indicators that do not measure a largely informal economy. Fuel subsidy removal showed the state can act and had little institutional preparation behind it.",
       "missingEvidence": [
         "Long-term unemployment share (ILOSTAT, needs an adapter)",
         "Export diversification (UNCTAD concentration index)",
@@ -3526,7 +4443,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 14,
+      "score": 23,
       "selfConfidence": 0.45,
       "rationale": "State refineries have absorbed decades of investment without producing, which is direct evidence on delivery capability. The Dangote refinery is a private achievement and does not change the institutional reading.",
       "missingEvidence": [
@@ -3550,12 +4467,143 @@
       ]
     },
     {
+      "iso3": "NIC",
+      "dimension": "anticipation",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 12,
+      "selfConfidence": 0.5,
+      "rationale": "Research and statistical capacity are near the floor and official statistics are no longer independently credible.",
+      "missingEvidence": [
+        "Mandate, budget and continuity of a national foresight unit (no dataset)",
+        "Basic research share of GERD (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "NIC",
+      "dimension": "agency",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 24,
+      "selfConfidence": 0.45,
+      "rationale": "The derived 43.4 overstates it. Independent business associations and more than three thousand civil society organisations have been closed by the state, which removes the formal channels this dimension measures.",
+      "missingEvidence": [
+        "Adult digital skills on a comparable task list (ITU)",
+        "Perceived control over life (WVS wave 7, aligned fieldwork years)"
+      ]
+    },
+    {
+      "iso3": "NIC",
+      "dimension": "coordination",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 24,
+      "selfConfidence": 0.4,
+      "rationale": "Authoritarian consolidation gives the executive real ability to direct action. It was achieved by dismantling the institutions that would make coordination durable beyond the current rulers.",
+      "missingEvidence": [
+        "Civil society strength (V-Dem core civil society index)",
+        "University-industry collaboration (no comparable dataset)",
+        "A non-perception measure of government effectiveness (WGI retired by D44)"
+      ]
+    },
+    {
+      "iso3": "NIC",
+      "dimension": "trust",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 14,
+      "selfConfidence": 0.4,
+      "rationale": "The judiciary and electoral authority are fully controlled, opposition candidates were imprisoned before an election, and citizenship has been stripped from critics. Institutional trust is near the floor.",
+      "missingEvidence": [
+        "Generalised interpersonal trust, behavioural rather than survey (WVS/ESS)",
+        "Trust in public institutions (OECD Trust Survey, coverage limited)",
+        "A non-perception measure of rule of law (WGI retired by D44)"
+      ]
+    },
+    {
+      "iso3": "NIC",
+      "dimension": "learning",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 24,
+      "selfConfidence": 0.5,
+      "rationale": "Weak outcomes and universities have been confiscated and closed. The derived 31.3 overstates what remains.",
+      "missingEvidence": [
+        "Adult learning participation (OECD/Eurostat AES, non-members missing)",
+        "Field-normalised research citation impact (Scopus or WoS)"
+      ]
+    },
+    {
+      "iso3": "NIC",
+      "dimension": "experimentation",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 8,
+      "selfConfidence": 0.45,
+      "rationale": "Near the floor with no supporting institutions and an actively hostile environment for independent organisations.",
+      "missingEvidence": [
+        "Venture capital investment as a share of GDP",
+        "Regulatory sandbox activity: count, sectors and graduation rate",
+        "Business share of R&D (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "NIC",
+      "dimension": "adaptability",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 28,
+      "selfConfidence": 0.45,
+      "rationale": "Little institutional capacity to absorb change, and emigration is the main adjustment mechanism.",
+      "missingEvidence": [
+        "Long-term unemployment share (ILOSTAT, needs an adapter)",
+        "Export diversification (UNCTAD concentration index)",
+        "Disaster preparedness and recovery (INFORM or Sendai reporting)"
+      ]
+    },
+    {
+      "iso3": "NIC",
+      "dimension": "building",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 22,
+      "selfConfidence": 0.5,
+      "rationale": "Weak delivery and a thin base. The interoceanic canal project was announced and never began.",
+      "missingEvidence": [
+        "Large project delivery against time and budget (no dataset)",
+        "Firm scale-up rate (OECD DynEmp or Eurostat)"
+      ]
+    },
+    {
+      "iso3": "NIC",
+      "dimension": "shared_purpose",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 10,
+      "selfConfidence": 0.45,
+      "rationale": "The derived 50.8 is badly wrong for this dimension. Opposition is imprisoned or exiled, and what remains is enforced uniformity rather than the productive pluralism being measured.",
+      "missingEvidence": [
+        "Political polarisation (V-Dem polarisation index)",
+        "Non-electoral civic participation on a comparable basis",
+        "Volunteering rate on a comparable basis"
+      ]
+    },
+    {
       "iso3": "NLD",
       "dimension": "anticipation",
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 78,
+      "score": 80,
       "selfConfidence": 0.55,
       "rationale": "The WRR and the Netherlands Environmental Assessment Agency are statutory advisory bodies with standing obligations to government, which is durable foresight rather than a programme. Research capacity is strong.",
       "missingEvidence": [
@@ -3569,7 +4617,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 76,
+      "score": 78,
       "selfConfidence": 0.55,
       "rationale": "Strong formal environment, near universal financial access and high connectivity. Registration is efficient.",
       "missingEvidence": [
@@ -3613,9 +4661,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 74,
+      "score": 68,
       "selfConfidence": 0.5,
-      "rationale": "Strong education institutions with good vocational provision. The derived 71.2 is close to right.",
+      "rationale": "Strong education institutions with good vocational provision. The derived 65.3 is close to right.",
       "missingEvidence": [
         "Adult learning participation (OECD/Eurostat AES, non-members missing)",
         "Field-normalised research citation impact (Scopus or WoS)"
@@ -3627,9 +4675,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 52,
+      "score": 54,
       "selfConfidence": 0.5,
-      "rationale": "The derived 25.7 understates it. The ASML supply ecosystem and strong university spinout activity around Eindhoven and Delft are real experimentation infrastructure.",
+      "rationale": "The derived 28 understates it. The ASML supply ecosystem and strong university spinout activity around Eindhoven and Delft are real experimentation infrastructure.",
       "missingEvidence": [
         "Venture capital investment as a share of GDP",
         "Regulatory sandbox activity: count, sectors and graduation rate",
@@ -3642,7 +4690,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 82,
+      "score": 83,
       "selfConfidence": 0.5,
       "rationale": "Consistently high labour participation and fast reallocation, with flexible working arrangements institutionalised rather than improvised. Strong performance through repeated shocks.",
       "missingEvidence": [
@@ -3657,9 +4705,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 66,
+      "score": 76,
       "selfConfidence": 0.55,
-      "rationale": "The Delta Works and the Rotterdam port complex are among the most demanding infrastructure programmes ever delivered, and ASML is the most capable manufacturing organisation in its field. The derived 35.2 is badly wrong here.",
+      "rationale": "The Delta Works and the Rotterdam port complex are among the most demanding infrastructure programmes ever delivered, and ASML is the most capable manufacturing organisation in its field. The derived 45.2 is badly wrong here.",
       "missingEvidence": [
         "Large project delivery against time and budget (no dataset)",
         "Firm scale-up rate (OECD DynEmp or Eurostat)"
@@ -3681,12 +4729,143 @@
       ]
     },
     {
-      "iso3": "PER",
+      "iso3": "PAN",
       "dimension": "anticipation",
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
       "score": 26,
+      "selfConfidence": 0.5,
+      "rationale": "A thin research base with limited planning capacity outside the canal authority.",
+      "missingEvidence": [
+        "Mandate, budget and continuity of a national foresight unit (no dataset)",
+        "Basic research share of GERD (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "PAN",
+      "dimension": "agency",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 56,
+      "selfConfidence": 0.5,
+      "rationale": "A strong formal financial and logistics environment with real legal predictability for business. Informality outside those sectors is high.",
+      "missingEvidence": [
+        "Adult digital skills on a comparable task list (ITU)",
+        "Perceived control over life (WVS wave 7, aligned fieldwork years)"
+      ]
+    },
+    {
+      "iso3": "PAN",
+      "dimension": "coordination",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 44,
+      "selfConfidence": 0.45,
+      "rationale": "The Panama Canal Authority is an autonomous, constitutionally protected, high-performing institution that has run the waterway better than its predecessor, which is a strong result for my stance. The rest of the state does not approach it.",
+      "missingEvidence": [
+        "Civil society strength (V-Dem core civil society index)",
+        "University-industry collaboration (no comparable dataset)",
+        "A non-perception measure of government effectiveness (WGI retired by D44)"
+      ]
+    },
+    {
+      "iso3": "PAN",
+      "dimension": "trust",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 36,
+      "selfConfidence": 0.4,
+      "rationale": "Canal governance is genuinely trusted and insulated. The wider record on financial opacity and elite impunity is weak.",
+      "missingEvidence": [
+        "Generalised interpersonal trust, behavioural rather than survey (WVS/ESS)",
+        "Trust in public institutions (OECD Trust Survey, coverage limited)",
+        "A non-perception measure of rule of law (WGI retired by D44)"
+      ]
+    },
+    {
+      "iso3": "PAN",
+      "dimension": "learning",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 28,
+      "selfConfidence": 0.5,
+      "rationale": "Weak outcomes despite middle-income status, and the derived 28.2 is close to right.",
+      "missingEvidence": [
+        "Adult learning participation (OECD/Eurostat AES, non-members missing)",
+        "Field-normalised research citation impact (Scopus or WoS)"
+      ]
+    },
+    {
+      "iso3": "PAN",
+      "dimension": "experimentation",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 18,
+      "selfConfidence": 0.45,
+      "rationale": "Low patent and trademark intensity. The economy is intermediation rather than invention.",
+      "missingEvidence": [
+        "Venture capital investment as a share of GDP",
+        "Regulatory sandbox activity: count, sectors and graduation rate",
+        "Business share of R&D (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "PAN",
+      "dimension": "adaptability",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 50,
+      "selfConfidence": 0.45,
+      "rationale": "The logistics economy adjusts quickly to trade shifts. The 2023 drought cut canal transits and exposed how narrow the adaptive base is.",
+      "missingEvidence": [
+        "Long-term unemployment share (ILOSTAT, needs an adapter)",
+        "Export diversification (UNCTAD concentration index)",
+        "Disaster preparedness and recovery (INFORM or Sendai reporting)"
+      ]
+    },
+    {
+      "iso3": "PAN",
+      "dimension": "building",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 46,
+      "selfConfidence": 0.5,
+      "rationale": "The canal expansion was a genuinely complex megaproject delivered and now operating, which the derived 27.5 cannot see. I depart upward on that delivery record.",
+      "missingEvidence": [
+        "Large project delivery against time and budget (no dataset)",
+        "Firm scale-up rate (OECD DynEmp or Eurostat)"
+      ]
+    },
+    {
+      "iso3": "PAN",
+      "dimension": "shared_purpose",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 34,
+      "selfConfidence": 0.45,
+      "rationale": "Very high inequality and weak civic institutions. The 2023 mining contract protests forced a reversal through the courts and the street, which was real collective action.",
+      "missingEvidence": [
+        "Political polarisation (V-Dem polarisation index)",
+        "Non-electoral civic participation on a comparable basis",
+        "Volunteering rate on a comparable basis"
+      ]
+    },
+    {
+      "iso3": "PER",
+      "dimension": "anticipation",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 31,
       "selfConfidence": 0.5,
       "rationale": "A very thin research base and limited statistical continuity. CEPLAN exists as a planning body with little influence.",
       "missingEvidence": [
@@ -3700,7 +4879,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 32,
+      "score": 46,
       "selfConfidence": 0.5,
       "rationale": "Informality covers roughly seven in ten workers, which is the defining fact. Formal registration reform has not changed it.",
       "missingEvidence": [
@@ -3744,7 +4923,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 42,
+      "score": 40,
       "selfConfidence": 0.5,
       "rationale": "PISA improvement from a very low base was real and sustained for a decade. The base remains low and the reform coalition has weakened.",
       "missingEvidence": [
@@ -3773,9 +4952,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 44,
+      "score": 47,
       "selfConfidence": 0.45,
-      "rationale": "Macroeconomic institutions have been a genuine island of stability and absorbed shocks well. Political instability prevents adaptation anywhere else, so the derived 56.5 overstates it.",
+      "rationale": "Macroeconomic institutions have been a genuine island of stability and absorbed shocks well. Political instability prevents adaptation anywhere else, so the derived 59.4 overstates it.",
       "missingEvidence": [
         "Long-term unemployment share (ILOSTAT, needs an adapter)",
         "Export diversification (UNCTAD concentration index)",
@@ -3788,7 +4967,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 22,
+      "score": 28,
       "selfConfidence": 0.5,
       "rationale": "Mining-dependent with weak delivery elsewhere, and public investment execution is persistently under budget. Agro-export infrastructure is the exception.",
       "missingEvidence": [
@@ -3817,7 +4996,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 20,
+      "score": 24,
       "selfConfidence": 0.5,
       "rationale": "A weak research base and limited foresight capacity. Statistical institutions are reasonable for the income level.",
       "missingEvidence": [
@@ -3831,9 +5010,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 26,
+      "score": 46,
       "selfConfidence": 0.45,
-      "rationale": "Formal barriers are high with the derived 14.2 reflecting genuinely slow registration. Remittance-supported households have real economic agency the indicators do not capture.",
+      "rationale": "Formal barriers are high with the derived 34.5 reflecting genuinely slow registration. Remittance-supported households have real economic agency the indicators do not capture.",
       "missingEvidence": [
         "Adult digital skills on a comparable task list (ITU)",
         "Perceived control over life (WVS wave 7, aligned fieldwork years)"
@@ -3875,9 +5054,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 30,
+      "score": 28,
       "selfConfidence": 0.5,
-      "rationale": "Among the weakest measured learning outcomes in international assessment despite high enrolment. The derived 38.6 overstates the system.",
+      "rationale": "Among the weakest measured learning outcomes in international assessment despite high enrolment. The derived 36.2 overstates the system.",
       "missingEvidence": [
         "Adult learning participation (OECD/Eurostat AES, non-members missing)",
         "Field-normalised research citation impact (Scopus or WoS)"
@@ -3904,7 +5083,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 46,
+      "score": 50,
       "selfConfidence": 0.45,
       "rationale": "Genuine and repeatedly tested disaster adaptation capacity built into local practice. Economic reallocation depends heavily on labour export.",
       "missingEvidence": [
@@ -3919,9 +5098,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 30,
+      "score": 33,
       "selfConfidence": 0.5,
-      "rationale": "The derived 46.5 overstates it: the manufacturing signal largely reflects electronics assembly rather than domestic building capability. Infrastructure delivery improved under Build Build Build and remains slow.",
+      "rationale": "The derived 49.6 overstates it: the manufacturing signal largely reflects electronics assembly rather than domestic building capability. Infrastructure delivery improved under Build Build Build and remains slow.",
       "missingEvidence": [
         "Large project delivery against time and budget (no dataset)",
         "Firm scale-up rate (OECD DynEmp or Eurostat)"
@@ -3948,7 +5127,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 54,
+      "score": 55,
       "selfConfidence": 0.5,
       "rationale": "A reasonable and improving research base with real university capacity. No durable central foresight function.",
       "missingEvidence": [
@@ -3962,9 +5141,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 56,
+      "score": 66,
       "selfConfidence": 0.5,
-      "rationale": "The derived 42.6 understates it. Private business formation has been the engine of three decades of convergence and the formal environment is far better than the registration indicators suggest.",
+      "rationale": "The derived 53.1 understates it. Private business formation has been the engine of three decades of convergence and the formal environment is far better than the registration indicators suggest.",
       "missingEvidence": [
         "Adult digital skills on a comparable task list (ITU)",
         "Perceived control over life (WVS wave 7, aligned fieldwork years)"
@@ -4006,9 +5185,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 64,
+      "score": 60,
       "selfConfidence": 0.5,
-      "rationale": "Strong PISA performance sustained since the 1999 reform, which is a durable institutional achievement. The derived 56.9 understates it.",
+      "rationale": "Strong PISA performance sustained since the 1999 reform, which is a durable institutional achievement. The derived 52.4 understates it.",
       "missingEvidence": [
         "Adult learning participation (OECD/Eurostat AES, non-members missing)",
         "Field-normalised research citation impact (Scopus or WoS)"
@@ -4020,9 +5199,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 34,
+      "score": 37,
       "selfConfidence": 0.45,
-      "rationale": "The derived 15 understates it. A real software and gaming sector has emerged with genuine international products, though the institutional support layer is thin.",
+      "rationale": "The derived 17.8 understates it. A real software and gaming sector has emerged with genuine international products, though the institutional support layer is thin.",
       "missingEvidence": [
         "Venture capital investment as a share of GDP",
         "Regulatory sandbox activity: count, sectors and graduation rate",
@@ -4035,7 +5214,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 74,
+      "score": 76,
       "selfConfidence": 0.5,
       "rationale": "Absorbing over a million Ukrainian refugees within months while sustaining growth is the strongest adaptability evidence in the set outside the Nordics. Institutions carried it rather than improvising.",
       "missingEvidence": [
@@ -4050,9 +5229,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 48,
+      "score": 57,
       "selfConfidence": 0.5,
-      "rationale": "A substantial manufacturing base and large infrastructure delivered with European funding over two decades. The derived 26.2 understates the delivery record.",
+      "rationale": "A substantial manufacturing base and large infrastructure delivered with European funding over two decades. The derived 35.4 understates the delivery record.",
       "missingEvidence": [
         "Large project delivery against time and budget (no dataset)",
         "Firm scale-up rate (OECD DynEmp or Eurostat)"
@@ -4074,14 +5253,145 @@
       ]
     },
     {
+      "iso3": "PRY",
+      "dimension": "anticipation",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 22,
+      "selfConfidence": 0.5,
+      "rationale": "A very thin research base and limited statistical capacity.",
+      "missingEvidence": [
+        "Mandate, budget and continuity of a national foresight unit (no dataset)",
+        "Basic research share of GERD (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "PRY",
+      "dimension": "agency",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 38,
+      "selfConfidence": 0.5,
+      "rationale": "Macroeconomic stability is real and unusual for the region, which is an institutional asset. Informality remains very high and credit is narrow.",
+      "missingEvidence": [
+        "Adult digital skills on a comparable task list (ITU)",
+        "Perceived control over life (WVS wave 7, aligned fieldwork years)"
+      ]
+    },
+    {
+      "iso3": "PRY",
+      "dimension": "coordination",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 30,
+      "selfConfidence": 0.4,
+      "rationale": "Low tax revenue and entrenched clientelism limit what the state can coordinate. Macroeconomic management is a genuine exception.",
+      "missingEvidence": [
+        "Civil society strength (V-Dem core civil society index)",
+        "University-industry collaboration (no comparable dataset)",
+        "A non-perception measure of government effectiveness (WGI retired by D44)"
+      ]
+    },
+    {
+      "iso3": "PRY",
+      "dimension": "trust",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 24,
+      "selfConfidence": 0.4,
+      "rationale": "Persistent corruption reaching senior levels, including sanctions on serving officials by foreign governments. Institutional trust is low.",
+      "missingEvidence": [
+        "Generalised interpersonal trust, behavioural rather than survey (WVS/ESS)",
+        "Trust in public institutions (OECD Trust Survey, coverage limited)",
+        "A non-perception measure of rule of law (WGI retired by D44)"
+      ]
+    },
+    {
+      "iso3": "PRY",
+      "dimension": "learning",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 28,
+      "selfConfidence": 0.5,
+      "rationale": "Weak outcomes and low completion. The derived 34.2 slightly overstates the system.",
+      "missingEvidence": [
+        "Adult learning participation (OECD/Eurostat AES, non-members missing)",
+        "Field-normalised research citation impact (Scopus or WoS)"
+      ]
+    },
+    {
+      "iso3": "PRY",
+      "dimension": "experimentation",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 20,
+      "selfConfidence": 0.45,
+      "rationale": "Low but not at the floor. There is little institutional support for experimentation.",
+      "missingEvidence": [
+        "Venture capital investment as a share of GDP",
+        "Regulatory sandbox activity: count, sectors and graduation rate",
+        "Business share of R&D (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "PRY",
+      "dimension": "adaptability",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 44,
+      "selfConfidence": 0.45,
+      "rationale": "Agricultural commodity dependence concentrates risk and abundant hydroelectricity gives a real buffer. Institutional adjustment capacity is limited.",
+      "missingEvidence": [
+        "Long-term unemployment share (ILOSTAT, needs an adapter)",
+        "Export diversification (UNCTAD concentration index)",
+        "Disaster preparedness and recovery (INFORM or Sendai reporting)"
+      ]
+    },
+    {
+      "iso3": "PRY",
+      "dimension": "building",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 32,
+      "selfConfidence": 0.5,
+      "rationale": "Itaipu is a delivered megaproject of genuine scale, and it is binational and four decades old, so it says little about current capability. Recent delivery is modest.",
+      "missingEvidence": [
+        "Large project delivery against time and budget (no dataset)",
+        "Firm scale-up rate (OECD DynEmp or Eurostat)"
+      ]
+    },
+    {
+      "iso3": "PRY",
+      "dimension": "shared_purpose",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 34,
+      "selfConfidence": 0.45,
+      "rationale": "One party has held power for almost all of the democratic period, which narrows the pluralism this dimension measures. Transfers of power have been peaceful.",
+      "missingEvidence": [
+        "Political polarisation (V-Dem polarisation index)",
+        "Non-electoral civic participation on a comparable basis",
+        "Volunteering rate on a comparable basis"
+      ]
+    },
+    {
       "iso3": "RWA",
       "dimension": "anticipation",
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 24,
+      "score": 30,
       "selfConfidence": 0.45,
-      "rationale": "The research base is near the floor and Vision 2050 is a real planning institution with continuity behind it, which is rare at this income. I raise above the derived 14.9 on that continuity.",
+      "rationale": "The research base is near the floor and Vision 2050 is a real planning institution with continuity behind it, which is rare at this income. I raise above the derived 21.4 on that continuity.",
       "missingEvidence": [
         "Mandate, budget and continuity of a national foresight unit (no dataset)",
         "Basic research share of GERD (OECD MSTI)"
@@ -4093,7 +5403,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 32,
+      "score": 42,
       "selfConfidence": 0.45,
       "rationale": "Business registration is genuinely fast and well administered for the income level. Political and civic agency is tightly constrained, and that is part of what this dimension asks.",
       "missingEvidence": [
@@ -4137,7 +5447,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 26,
+      "score": 23,
       "selfConfidence": 0.45,
       "rationale": "Rapid enrolment expansion from a very low base with weak outcomes so far. The institutional commitment is sustained.",
       "missingEvidence": [
@@ -4166,9 +5476,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 40,
+      "score": 45,
       "selfConfidence": 0.45,
-      "rationale": "Policy reallocation is fast and centrally directed, and the derived 25.8 misses it. Dependence on external financing limits how far adaptation can go.",
+      "rationale": "Policy reallocation is fast and centrally directed, and the derived 30.8 misses it. Dependence on external financing limits how far adaptation can go.",
       "missingEvidence": [
         "Long-term unemployment share (ILOSTAT, needs an adapter)",
         "Export diversification (UNCTAD concentration index)",
@@ -4181,7 +5491,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 28,
+      "score": 32,
       "selfConfidence": 0.45,
       "rationale": "Kigali infrastructure, the convention economy and rural electrification are delivered relative to the resource base. Manufacturing remains very thin.",
       "missingEvidence": [
@@ -4210,9 +5520,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 88,
+      "score": 89,
       "selfConfidence": 0.6,
-      "rationale": "The Centre for Strategic Futures and the Risk Assessment and Horizon Scanning system make foresight a standing function inside the centre of government, with dedicated staff and a defined role in planning. This is the reference example for the dimension and the derived 76.8 understates it.",
+      "rationale": "The Centre for Strategic Futures and the Risk Assessment and Horizon Scanning system make foresight a standing function inside the centre of government, with dedicated staff and a defined role in planning. This is the reference example for the dimension and the derived 78.1 understates it.",
       "missingEvidence": [
         "Mandate, budget and continuity of a national foresight unit (no dataset)",
         "Basic research share of GERD (OECD MSTI)"
@@ -4224,7 +5534,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 78,
+      "score": 79,
       "selfConfidence": 0.55,
       "rationale": "Registration, financial access and connectivity are all at or near the top of the frame with excellent administration. Political and civic agency is constrained, which caps this below the indicator level.",
       "missingEvidence": [
@@ -4268,9 +5578,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 82,
+      "score": 80,
       "selfConfidence": 0.5,
-      "rationale": "Top international assessment results plus SkillsFuture, which is a funded standing adult learning entitlement rather than a programme. The derived 57.9 badly understates it.",
+      "rationale": "Top international assessment results plus SkillsFuture, which is a funded standing adult learning entitlement rather than a programme. The derived 56 badly understates it.",
       "missingEvidence": [
         "Adult learning participation (OECD/Eurostat AES, non-members missing)",
         "Field-normalised research citation impact (Scopus or WoS)"
@@ -4282,7 +5592,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 54,
+      "score": 59,
       "selfConfidence": 0.5,
       "rationale": "The Monetary Authority sandbox and the biomedical cluster are deliberate institutional experiments that worked. Indigenous startup formation is modest for the income level.",
       "missingEvidence": [
@@ -4312,7 +5622,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 82,
+      "score": 85,
       "selfConfidence": 0.55,
       "rationale": "The port, the water system including NEWater, and public housing at near universal coverage are delivered by durable statutory boards. This is building capability held in organisations.",
       "missingEvidence": [
@@ -4336,12 +5646,143 @@
       ]
     },
     {
+      "iso3": "SLV",
+      "dimension": "anticipation",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 18,
+      "selfConfidence": 0.5,
+      "rationale": "A weak research base and no durable foresight function.",
+      "missingEvidence": [
+        "Mandate, budget and continuity of a national foresight unit (no dataset)",
+        "Basic research share of GERD (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "SLV",
+      "dimension": "agency",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 36,
+      "selfConfidence": 0.5,
+      "rationale": "Dollarisation gives predictability and the formal environment has improved. Informality remains high and the space for independent organisations has narrowed.",
+      "missingEvidence": [
+        "Adult digital skills on a comparable task list (ITU)",
+        "Perceived control over life (WVS wave 7, aligned fieldwork years)"
+      ]
+    },
+    {
+      "iso3": "SLV",
+      "dimension": "coordination",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 38,
+      "selfConfidence": 0.4,
+      "rationale": "The state demonstrably reasserted territorial control that it had lost, which is real coordination capacity and should be credited. It was done by suspending due process rather than by building institutions that will outlast this government.",
+      "missingEvidence": [
+        "Civil society strength (V-Dem core civil society index)",
+        "University-industry collaboration (no comparable dataset)",
+        "A non-perception measure of government effectiveness (WGI retired by D44)"
+      ]
+    },
+    {
+      "iso3": "SLV",
+      "dimension": "trust",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 24,
+      "selfConfidence": 0.4,
+      "rationale": "Everyday security improved enormously and that is a real gain in the ability to cooperate beyond the immediate network. Against it, the constitutional chamber was replaced by the ruling party and then permitted a re-election the constitution barred, which is the institutional fact my stance has to weight most heavily.",
+      "missingEvidence": [
+        "Generalised interpersonal trust, behavioural rather than survey (WVS/ESS)",
+        "Trust in public institutions (OECD Trust Survey, coverage limited)",
+        "A non-perception measure of rule of law (WGI retired by D44)"
+      ]
+    },
+    {
+      "iso3": "SLV",
+      "dimension": "learning",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 28,
+      "selfConfidence": 0.5,
+      "rationale": "Weak outcomes and low completion. The derived 33.5 slightly overstates the system.",
+      "missingEvidence": [
+        "Adult learning participation (OECD/Eurostat AES, non-members missing)",
+        "Field-normalised research citation impact (Scopus or WoS)"
+      ]
+    },
+    {
+      "iso3": "SLV",
+      "dimension": "experimentation",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 16,
+      "selfConfidence": 0.45,
+      "rationale": "The bitcoin legal tender programme was a genuine institutional experiment, and it was adopted with almost no uptake and has been largely wound back. Recording the attempt is why this is not at the floor.",
+      "missingEvidence": [
+        "Venture capital investment as a share of GDP",
+        "Regulatory sandbox activity: count, sectors and graduation rate",
+        "Business share of R&D (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "SLV",
+      "dimension": "adaptability",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 42,
+      "selfConfidence": 0.45,
+      "rationale": "Remittance dependence dominates and the derived 54.1 overstates institutional adjustment capacity.",
+      "missingEvidence": [
+        "Long-term unemployment share (ILOSTAT, needs an adapter)",
+        "Export diversification (UNCTAD concentration index)",
+        "Disaster preparedness and recovery (INFORM or Sendai reporting)"
+      ]
+    },
+    {
+      "iso3": "SLV",
+      "dimension": "building",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 24,
+      "selfConfidence": 0.5,
+      "rationale": "A thin manufacturing base and weak infrastructure delivery.",
+      "missingEvidence": [
+        "Large project delivery against time and budget (no dataset)",
+        "Firm scale-up rate (OECD DynEmp or Eurostat)"
+      ]
+    },
+    {
+      "iso3": "SLV",
+      "dimension": "shared_purpose",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 26,
+      "selfConfidence": 0.45,
+      "rationale": "The derived 65 is exactly the trap this dimension warns about: very high approval for one leader is not productive pluralism. Opposition is marginal and the institutional checks have been removed.",
+      "missingEvidence": [
+        "Political polarisation (V-Dem polarisation index)",
+        "Non-electoral civic participation on a comparable basis",
+        "Volunteering rate on a comparable basis"
+      ]
+    },
+    {
       "iso3": "SWE",
       "dimension": "anticipation",
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 82,
+      "score": 83,
       "selfConfidence": 0.55,
       "rationale": "A strong research base with durable institutions and excellent statistical capacity. Foresight is distributed across agencies rather than centralised.",
       "missingEvidence": [
@@ -4355,7 +5796,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 76,
+      "score": 79,
       "selfConfidence": 0.5,
       "rationale": "Strong formal environment, high financial inclusion and connectivity. Registration is efficient.",
       "missingEvidence": [
@@ -4399,7 +5840,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 76,
+      "score": 71,
       "selfConfidence": 0.5,
       "rationale": "Strong education institutions with good adult learning provision. School choice reform has increased stratification, which caps this.",
       "missingEvidence": [
@@ -4413,9 +5854,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 58,
+      "score": 63,
       "selfConfidence": 0.5,
-      "rationale": "The derived 24.5 badly understates it. Venture funding per head is among the highest in Europe and Spotify, Klarna and Northvolt came out of a real ecosystem with public co-investment institutions behind it.",
+      "rationale": "The derived 29.6 badly understates it. Venture funding per head is among the highest in Europe and Spotify, Klarna and Northvolt came out of a real ecosystem with public co-investment institutions behind it.",
       "missingEvidence": [
         "Venture capital investment as a share of GDP",
         "Regulatory sandbox activity: count, sectors and graduation rate",
@@ -4428,7 +5869,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 78,
+      "score": 79,
       "selfConfidence": 0.5,
       "rationale": "Active labour market policy and job security councils institutionalise reallocation rather than resisting it, which is exactly the mechanism this dimension asks about. Strong record through repeated shocks.",
       "missingEvidence": [
@@ -4443,7 +5884,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 58,
+      "score": 63,
       "selfConfidence": 0.5,
       "rationale": "A deep industrial base in vehicles, telecommunications and industrial equipment held in durable firms. The Northvolt failure is genuine evidence against the top of the frame.",
       "missingEvidence": [
@@ -4472,7 +5913,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 32,
+      "score": 35,
       "selfConfidence": 0.5,
       "rationale": "A modest research base with limited continuity. Planning institutions exist and are subordinated to political cycles.",
       "missingEvidence": [
@@ -4486,9 +5927,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 48,
+      "score": 52,
       "selfConfidence": 0.5,
-      "rationale": "The derived 67.6 overstates it. Registration is efficient and repeated coups and lese-majeste enforcement constrain what people and organisations can actually undertake.",
+      "rationale": "The derived 72.1 overstates it. Registration is efficient and repeated coups and lese-majeste enforcement constrain what people and organisations can actually undertake.",
       "missingEvidence": [
         "Adult digital skills on a comparable task list (ITU)",
         "Perceived control over life (WVS wave 7, aligned fieldwork years)"
@@ -4530,7 +5971,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 34,
+      "score": 32,
       "selfConfidence": 0.5,
       "rationale": "Enrolment is reasonable and learning outcomes are weak and stagnant. The derived score is close to right.",
       "missingEvidence": [
@@ -4559,9 +6000,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 52,
+      "score": 54,
       "selfConfidence": 0.45,
-      "rationale": "The economy repositioned into automotive and electronics and absorbed the 1997 crisis. Political instability has slowed adjustment since, so the derived 66.5 overstates it.",
+      "rationale": "The economy repositioned into automotive and electronics and absorbed the 1997 crisis. Political instability has slowed adjustment since, so the derived 68.9 overstates it.",
       "missingEvidence": [
         "Long-term unemployment share (ILOSTAT, needs an adapter)",
         "Export diversification (UNCTAD concentration index)",
@@ -4574,7 +6015,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 52,
+      "score": 55,
       "selfConfidence": 0.5,
       "rationale": "A real automotive and electronics manufacturing base built over decades with consistent industrial policy. Infrastructure delivery is competent.",
       "missingEvidence": [
@@ -4603,7 +6044,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 38,
+      "score": 42,
       "selfConfidence": 0.5,
       "rationale": "A growing research base with real university expansion. Institutional continuity in research funding and statistics has weakened, and statistical credibility is contested.",
       "missingEvidence": [
@@ -4617,7 +6058,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 46,
+      "score": 53,
       "selfConfidence": 0.5,
       "rationale": "Registration and financial access are reasonable. Unpredictable macro policy and pressure on business owners narrow real agency more than the indicators show.",
       "missingEvidence": [
@@ -4661,7 +6102,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 46,
+      "score": 42,
       "selfConfidence": 0.5,
       "rationale": "Large tertiary expansion with uneven quality, and academic dismissals damaged university institutions. Basic outcomes are improving slowly.",
       "missingEvidence": [
@@ -4675,7 +6116,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 42,
+      "score": 45,
       "selfConfidence": 0.45,
       "rationale": "Baykar and the defence sector show real product development capability built with sustained state support. The wider experimentation base is thinner than that suggests.",
       "missingEvidence": [
@@ -4690,7 +6131,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 46,
+      "score": 49,
       "selfConfidence": 0.45,
       "rationale": "Firms adapt fast to extreme macro volatility, which is survival rather than institutional adaptability. The state has repeatedly reversed its own policy direction.",
       "missingEvidence": [
@@ -4705,9 +6146,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 56,
+      "score": 60,
       "selfConfidence": 0.5,
-      "rationale": "Airports, bridges, hospitals and a substantial defence industry delivered, plus large international contracting firms. The derived 37.2 understates the delivery record.",
+      "rationale": "Airports, bridges, hospitals and a substantial defence industry delivered, plus large international contracting firms. The derived 41.3 understates the delivery record.",
       "missingEvidence": [
         "Large project delivery against time and budget (no dataset)",
         "Firm scale-up rate (OECD DynEmp or Eurostat)"
@@ -4734,7 +6175,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 34,
+      "score": 38,
       "selfConfidence": 0.5,
       "rationale": "A small research base with competent statistical institutions. No standing foresight function, though policy continuity is unusually good.",
       "missingEvidence": [
@@ -4748,7 +6189,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 52,
+      "score": 59,
       "selfConfidence": 0.5,
       "rationale": "Reasonable formal environment with low informality by regional standards. The domestic market is small, which limits what agency can reach.",
       "missingEvidence": [
@@ -4792,7 +6233,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 56,
+      "score": 52,
       "selfConfidence": 0.5,
       "rationale": "Plan Ceibal put a device and connectivity with every school child and sustained it for over a decade, which is a durable institution rather than a programme. Secondary completion remains a weakness.",
       "missingEvidence": [
@@ -4821,7 +6262,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 56,
+      "score": 58,
       "selfConfidence": 0.45,
       "rationale": "The electricity system moved to overwhelmingly renewable generation in about a decade through a policy sustained across parties, which is institutional adaptability. The economy is otherwise slow to reallocate.",
       "missingEvidence": [
@@ -4836,7 +6277,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 38,
+      "score": 42,
       "selfConfidence": 0.5,
       "rationale": "The UPM pulp mills and the energy transition were delivered against a very small industrial base. Manufacturing complexity remains low.",
       "missingEvidence": [
@@ -4865,7 +6306,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 72,
+      "score": 73,
       "selfConfidence": 0.55,
       "rationale": "The deepest research base in the world held in durable universities, national laboratories and DARPA. Federal foresight is discontinuous and Congress abolished its own technology assessment office, which caps this.",
       "missingEvidence": [
@@ -4879,7 +6320,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 88,
+      "score": 92,
       "selfConfidence": 0.55,
       "rationale": "The strongest formal environment in the frame for turning intention into enterprise, with deep capital markets and fast formation. The indicators and institutions agree.",
       "missingEvidence": [
@@ -4923,9 +6364,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 56,
+      "score": 54,
       "selfConfidence": 0.5,
-      "rationale": "World-leading universities against weak and highly unequal mass outcomes. The derived 51.5 captures the split reasonably.",
+      "rationale": "World-leading universities against weak and highly unequal mass outcomes. The derived 49.5 captures the split reasonably.",
       "missingEvidence": [
         "Adult learning participation (OECD/Eurostat AES, non-members missing)",
         "Field-normalised research citation impact (Scopus or WoS)"
@@ -4952,7 +6393,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 78,
+      "score": 80,
       "selfConfidence": 0.5,
       "rationale": "Labour and capital reallocate faster than anywhere else in the frame and firm entry and exit is high. Social absorption of that adjustment is weak, which is a different dimension.",
       "missingEvidence": [
@@ -4967,7 +6408,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 56,
+      "score": 63,
       "selfConfidence": 0.5,
       "rationale": "Exceptional at building technology and defence systems in durable organisations. Civil infrastructure delivery is slow and expensive, with transit construction costs among the highest in the world.",
       "missingEvidence": [
@@ -4991,14 +6432,145 @@
       ]
     },
     {
+      "iso3": "VEN",
+      "dimension": "anticipation",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 8,
+      "selfConfidence": 0.5,
+      "rationale": "Research capacity has collapsed with sustained emigration of academics and official statistics have not been published reliably for years.",
+      "missingEvidence": [
+        "Mandate, budget and continuity of a national foresight unit (no dataset)",
+        "Basic research share of GERD (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "VEN",
+      "dimension": "agency",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 16,
+      "selfConfidence": 0.45,
+      "rationale": "The derived 33.2 overstates it. Hyperinflation destroyed the ability to plan, contract or save, and formal economic action is barely possible.",
+      "missingEvidence": [
+        "Adult digital skills on a comparable task list (ITU)",
+        "Perceived control over life (WVS wave 7, aligned fieldwork years)"
+      ]
+    },
+    {
+      "iso3": "VEN",
+      "dimension": "coordination",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 12,
+      "selfConfidence": 0.4,
+      "rationale": "State capacity has collapsed measurably, with oil output down by roughly two thirds and utilities failing. This is near the floor of the frame.",
+      "missingEvidence": [
+        "Civil society strength (V-Dem core civil society index)",
+        "University-industry collaboration (no comparable dataset)",
+        "A non-perception measure of government effectiveness (WGI retired by D44)"
+      ]
+    },
+    {
+      "iso3": "VEN",
+      "dimension": "trust",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 8,
+      "selfConfidence": 0.4,
+      "rationale": "There is no independent judiciary and no institutional recourse against the state. Institutional trust is at the bottom of the frame.",
+      "missingEvidence": [
+        "Generalised interpersonal trust, behavioural rather than survey (WVS/ESS)",
+        "Trust in public institutions (OECD Trust Survey, coverage limited)",
+        "A non-perception measure of rule of law (WGI retired by D44)"
+      ]
+    },
+    {
+      "iso3": "VEN",
+      "dimension": "learning",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 24,
+      "selfConfidence": 0.45,
+      "rationale": "The derived 56.8 rests on legacy enrolment and spending data that no longer describe the system. Mass teacher emigration and school closures mean the institution has largely stopped functioning, so I depart sharply downward.",
+      "missingEvidence": [
+        "Adult learning participation (OECD/Eurostat AES, non-members missing)",
+        "Field-normalised research citation impact (Scopus or WoS)"
+      ]
+    },
+    {
+      "iso3": "VEN",
+      "dimension": "experimentation",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 8,
+      "selfConfidence": 0.45,
+      "rationale": "Near the floor with no functioning supporting institutions.",
+      "missingEvidence": [
+        "Venture capital investment as a share of GDP",
+        "Regulatory sandbox activity: count, sectors and graduation rate",
+        "Business share of R&D (OECD MSTI)"
+      ]
+    },
+    {
+      "iso3": "VEN",
+      "dimension": "adaptability",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 16,
+      "selfConfidence": 0.45,
+      "rationale": "Around seven million people have left, which is exit rather than adaptation. The derived 34.7 overstates institutional capacity substantially.",
+      "missingEvidence": [
+        "Long-term unemployment share (ILOSTAT, needs an adapter)",
+        "Export diversification (UNCTAD concentration index)",
+        "Disaster preparedness and recovery (INFORM or Sendai reporting)"
+      ]
+    },
+    {
+      "iso3": "VEN",
+      "dimension": "building",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 4,
+      "selfConfidence": 0.5,
+      "rationale": "The derived score is at the floor and it is right. Oil, electricity and water infrastructure have degraded catastrophically over two decades.",
+      "missingEvidence": [
+        "Large project delivery against time and budget (no dataset)",
+        "Firm scale-up rate (OECD DynEmp or Eurostat)"
+      ]
+    },
+    {
+      "iso3": "VEN",
+      "dimension": "shared_purpose",
+      "round": 1,
+      "panelist": "institutionalist@claude-opus-5",
+      "model": "claude-opus-5 (in-session, single panelist)",
+      "score": 12,
+      "selfConfidence": 0.4,
+      "rationale": "No derived score. Elections are contested and results have been asserted without publishing tallies, and opposition candidates are barred or exiled.",
+      "missingEvidence": [
+        "Political polarisation (V-Dem polarisation index)",
+        "Non-electoral civic participation on a comparable basis",
+        "Volunteering rate on a comparable basis"
+      ]
+    },
+    {
       "iso3": "VNM",
       "dimension": "anticipation",
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 28,
+      "score": 35,
       "selfConfidence": 0.45,
-      "rationale": "A weak research base with real state planning capacity and long-horizon industrial targets that are actually pursued. I raise modestly above the derived 20.5 for that continuity.",
+      "rationale": "A weak research base with real state planning capacity and long-horizon industrial targets that are actually pursued. I raise modestly above the derived 27.4 for that continuity.",
       "missingEvidence": [
         "Mandate, budget and continuity of a national foresight unit (no dataset)",
         "Basic research share of GERD (OECD MSTI)"
@@ -5010,7 +6582,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 42,
+      "score": 53,
       "selfConfidence": 0.45,
       "rationale": "Small business formation is genuinely strong and the formal environment has improved steadily. Political and civic agency is closed, which this dimension has to reflect.",
       "missingEvidence": [
@@ -5054,9 +6626,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 44,
+      "score": 42,
       "selfConfidence": 0.45,
-      "rationale": "The derived 30 understates it. Vietnam's international assessment results are far above what its income predicts, and that is a sustained institutional achievement in basic education.",
+      "rationale": "The derived 28.3 understates it. Vietnam's international assessment results are far above what its income predicts, and that is a sustained institutional achievement in basic education.",
       "missingEvidence": [
         "Adult learning participation (OECD/Eurostat AES, non-members missing)",
         "Field-normalised research citation impact (Scopus or WoS)"
@@ -5083,7 +6655,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 66,
+      "score": 68,
       "selfConfidence": 0.45,
       "rationale": "The fastest supply chain repositioning in the set over the last decade, executed deliberately through trade agreements and industrial zones. Institutions directed it.",
       "missingEvidence": [
@@ -5098,7 +6670,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 58,
+      "score": 61,
       "selfConfidence": 0.5,
       "rationale": "A large manufacturing base built in about twenty years with real infrastructure delivery behind it. Power system constraints are the visible limit.",
       "missingEvidence": [
@@ -5127,7 +6699,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 32,
+      "score": 36,
       "selfConfidence": 0.5,
       "rationale": "The strongest research base in sub-Saharan Africa with real universities and the Square Kilometre Array involvement. Statistical capacity is good and under funding pressure.",
       "missingEvidence": [
@@ -5141,7 +6713,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 38,
+      "score": 52,
       "selfConfidence": 0.5,
       "rationale": "Formal institutions and financial markets are sophisticated, and mass exclusion means most people cannot reach them. The gap between the two is the defining fact.",
       "missingEvidence": [
@@ -5185,9 +6757,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 26,
+      "score": 23,
       "selfConfidence": 0.5,
-      "rationale": "Very weak basic learning outcomes with strong universities on top of them. The derived 26.4 is right.",
+      "rationale": "Very weak basic learning outcomes with strong universities on top of them. The derived 23.4 is right.",
       "missingEvidence": [
         "Adult learning participation (OECD/Eurostat AES, non-members missing)",
         "Field-normalised research citation impact (Scopus or WoS)"
@@ -5214,7 +6786,7 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 24,
+      "score": 28,
       "selfConfidence": 0.5,
       "rationale": "Structural unemployment above thirty percent for decades is the clearest evidence of an economy that cannot reallocate. Load-shedding has been managed rather than solved.",
       "missingEvidence": [
@@ -5229,9 +6801,9 @@
       "round": 1,
       "panelist": "institutionalist@claude-opus-5",
       "model": "claude-opus-5 (in-session, single panelist)",
-      "score": 18,
+      "score": 26,
       "selfConfidence": 0.5,
-      "rationale": "Maintenance and delivery failure in energy and rail is well documented and ongoing. The derived 15.3 is close to right.",
+      "rationale": "Maintenance and delivery failure in energy and rail is well documented and ongoing. The derived 23.7 is close to right.",
       "missingEvidence": [
         "Large project delivery against time and budget (no dataset)",
         "Firm scale-up rate (OECD DynEmp or Eurostat)"
