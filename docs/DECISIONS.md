@@ -2221,3 +2221,149 @@ run exercises the pipeline and is not evidence.
 execution fidelity has little relationship to the ability of independent actors
 to complete shared objectives, or a better comparable indicator that measures
 joint delivery directly and survives the same wealth-attribution test.
+
+---
+
+## D56 — The institution map reads as a directory and a relation ledger, never as a drawn network
+
+*Recorded 2026-08-28. Supersedes the interface D54 described. Extends D26, D35
+and D53.*
+
+**Choice.** The institution page publishes no node-link diagram. It publishes
+three surfaces, each answering one question.
+
+The directory comes first. Filters by name, level and system, then cards
+grouped by system, each card carrying the institution's level and its number of
+recorded relations. The reader arrives with a name in mind, so the name is the
+entry point.
+
+The profile follows, and its relations render as a ledger rather than a
+picture. Every relation belongs to exactly one of four families declared in
+`INSTITUTION_RELATION_FAMILY` in `packages/core/src/model/institutions.ts`:
+authority, control, funding and joint work. The families render in a fixed
+order, and a family with no relation prints that it has none, because an
+absent relation is a fact about the map. Within a family, incoming relations
+sit left of a vertical spine and outgoing relations sit right of it, so every
+line reads left to right in the direction of its own relation and the verb
+always takes its active form. The geometry supplies the subject.
+
+Nothing on the page is laid out by hand. Every surface derives from counts, so
+a country with 12 institutions and a country with 400 render through the same
+code. Institution names live in wrapping DOM text and never inside a
+fixed-width SVG rectangle.
+
+Language reaches the view as one `lex` prop, as D53 already requires of the
+radar. The institution vocabulary moved out of `institutions-pt-br.ts` and into
+`Lexicon.institutions`, so both lexicons carry it and a second country in a
+second language changes data rather than components. Only the per-institution
+summaries and the scope sentence stay in the country file, because they
+describe one country rather than the shared model.
+
+**Why.** D54 already recorded that a complete diagram of 47 nodes and 64
+relationships is a hairball. The published overview grid was that diagram with
+a grid substituted for a force layout, and it inherited the same failure. Its
+plane encoded only system membership, which each box label already stated. Its
+64 lines rendered 13 different relation verbs identically, so the picture
+asserted only that the institutions are connected, which curation guarantees.
+Two nodes held 33 of the 128 relation endpoints, so the layout spent its whole
+canvas drawing the spokes of a star. Node labels ran at 9px and truncated at 16
+characters, below anything in the type scale, and the mobile branch rendered no
+diagram at all.
+
+The families are the move that makes the ledger carry information a list of
+lines could not. They match the three questions the page headline already
+asks, and they let an empty band speak: BNDES exercises one relation and
+receives three, and the ledger shows that shape at a glance.
+
+The same day this was recorded, the Brazilian file grew from 47 institutions
+toward a curated entry for every state. A layout with hard-coded columns and
+fixed box heights would have broken on that growth. A count-derived layout did
+not.
+
+**Cost.** The page no longer offers any single picture of a whole country's
+wiring. A reader who wants to see the shape of the state as one object has to
+assemble it from profiles. The system-by-system relation matrix is the intended
+answer and is not built: in the current Brazilian file 30 of its 100 cells are
+filled, which is dense enough to read and sparse enough to be legible, but it
+is a separate change.
+
+The `level` enum still carries Brazilian assumptions in what its four values
+mean. Germany, the United Kingdom and a European Union member state each divide
+government differently, and `external` describes a different relationship in
+each. The enum survives the first international map only because the labels are
+now a lexicon lookup.
+
+**Overturned by.** A country map whose relation set does not sort cleanly into
+the four families, which would mean the families encode Brazil rather than the
+model. Or evidence from readers that the whole-network shape is the question
+they arrive with, which would make the matrix the page's first surface rather
+than its missing one.
+
+---
+
+## D58 — The country's wiring is a system matrix, and its ramp is fixed rather than fitted
+
+*Recorded 2026-08-28. Completes D56, which named this surface and did not build
+it.*
+
+**Choice.** The institution page publishes one picture of a whole country: a
+matrix counting the relations that run from every system to every system, ten
+by ten, including the diagonal. `buildInstitutionMatrix` in
+`packages/core/src/pipeline/institutions.ts` computes it, and
+`INSTITUTION_SYSTEMS` in the model fixes the axis order so two lexicons cannot
+present the same matrix with its rows in different places. Nothing here reaches
+a score, a confidence or `data/out`.
+
+A family filter narrows the count to authority, control, funding or joint work,
+which is where the matrix earns its place: the four families run through
+visibly different cells, and the whole-map view hides that.
+
+The matrix owns its readout, the way the radar does. It always reads one cell,
+it opens on the busiest cell rather than on nothing, and the readout names both
+institutions in every relation as links into their profiles, so the matrix is a
+way into the map and not only a summary of it.
+
+The ramp is three fixed breaks on the count: one, two to four, five or more.
+Colour never encodes the number, which is printed in the cell; it encodes
+whether a channel is busy. The ramp is the score ramp with its lime top
+removed, because a hundred lime cells would spend the single accent this page
+has.
+
+**Why.** Terciles were tried first and are wrong for this quantity. Relation
+counts are one spike at 1 with a thin long tail: in the current Brazilian map 13
+of 33 filled cells hold exactly one relation and the busiest holds 52. Cutting
+at terciles left the bottom band empty, put 2 and 52 in the same band, and gave
+the joint work view a single band covering 1 to 26. A fitted ramp also moved
+whenever the family filter changed, so the same colour meant a different
+quantity one click later.
+
+Fixed breaks are available here in a way they are not for a score. A count is
+absolute. One relation is one relation in every country, while a score is a
+position inside a frame that a new country rebases. So the ramp holds still
+across families and across countries, and two national matrices can be read
+side by side. Against the current file every family view fills all three bands.
+
+The matrix renders as a `<table>` with row and column headers rather than
+through `DataTable`. `DataTable` owns its `<td>` and sorts columns; a matrix
+sorts nothing and its cells are buttons. The table element is what carries the
+row and column relationship to a screen reader, and that is the reason to use
+it.
+
+Selecting an institution now scrolls the profile into view. The Brazilian
+directory passed two hundred cards while this was being built, far enough that
+a click near the bottom changed a heading the reader could not see.
+
+**Cost.** A cell counts relations of very different weight, which is the limit
+D54 already recorded in the schema: `funds` can describe a standing channel
+without saying how much moves through it. A busy cell therefore means well
+documented as much as it means important, and the matrix inherits every
+curation bias in the map beneath it.
+
+Aggregating to ten systems also hides which institution inside a system holds a
+channel. Two hundred institutions collapse into a hundred cells, and the
+readout is the only way back out.
+
+**Overturned by.** A country whose map fills so few cells that the matrix reads
+as empty rather than sparse, which would mean the surface needs a coverage
+threshold before it renders. Or relation weights in the schema, which would make
+a count the wrong quantity to put in a cell.

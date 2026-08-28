@@ -1,85 +1,14 @@
 import type {
-  InstitutionLegalNature,
-  InstitutionLevel,
   InstitutionNetworkFile,
-  InstitutionRelation,
-  InstitutionRole,
-  InstitutionSystem,
   LocalizedInstitutionNetwork,
 } from '../model/institutions.js'
 
-export const INSTITUTION_LEVEL_LABELS_PT_BR: Record<InstitutionLevel, string> = {
-  federal: 'Federal',
-  state: 'Estadual',
-  municipal: 'Municipal',
-  external: 'Fora do Estado',
-}
-
-export const INSTITUTION_SYSTEM_LABELS_PT_BR: Record<InstitutionSystem, string> = {
-  democratic_authority: 'Autoridade democrática',
-  justice_rights: 'Justiça e direitos',
-  oversight_integrity: 'Controle e integridade',
-  strategy_management: 'Estratégia e gestão',
-  finance_investment: 'Financiamento e investimento',
-  science_technology: 'Ciência e tecnologia',
-  learning_workforce: 'Formação e trabalho',
-  data_digital: 'Dados e infraestrutura digital',
-  regulation: 'Regulação',
-  territorial_delivery: 'Entrega territorial',
-}
-
-export const INSTITUTION_NATURE_LABELS_PT_BR: Record<InstitutionLegalNature, string> = {
-  constitutional_body: 'Órgão constitucional',
-  direct_administration: 'Administração direta',
-  autarchy: 'Autarquia',
-  public_foundation: 'Fundação pública',
-  public_company: 'Empresa pública',
-  mixed_capital_company: 'Sociedade de economia mista',
-  public_university: 'Universidade pública',
-  private_education: 'Instituição privada de ensino',
-}
-
-export const INSTITUTION_ROLE_LABELS_PT_BR: Record<InstitutionRole, string> = {
-  governs: 'governa',
-  legislates: 'legisla',
-  adjudicates: 'julga conflitos',
-  checks_constitutionality: 'controla a constitucionalidade',
-  prosecutes: 'promove a ação pública',
-  represents_state: 'representa juridicamente o Estado',
-  checks: 'controla atos públicos',
-  audits: 'audita',
-  coordinates: 'coordena',
-  plans: 'planeja',
-  finances: 'financia',
-  regulates: 'regula',
-  produces_evidence: 'produz evidência',
-  researches: 'faz pesquisa',
-  trains: 'forma pessoas',
-  operates_infrastructure: 'opera infraestrutura',
-  delivers_services: 'entrega serviços',
-}
-
-export const INSTITUTION_RELATION_LABELS_PT_BR: Record<
-  InstitutionRelation,
-  { outgoing: string; incoming: string }
-> = {
-  appoints: { outgoing: 'nomeia integrantes de', incoming: 'tem integrantes nomeados por' },
-  approves_appointment: {
-    outgoing: 'aprova nomeações para',
-    incoming: 'tem nomeações aprovadas por',
-  },
-  legislates_with: { outgoing: 'legisla junto com', incoming: 'legisla junto com' },
-  linked_to: { outgoing: 'é vinculada a', incoming: 'tem vínculo administrativo com' },
-  audits: { outgoing: 'audita', incoming: 'é auditada por' },
-  checks: { outgoing: 'controla atos de', incoming: 'tem atos controlados por' },
-  regulates: { outgoing: 'regula', incoming: 'é regulada por' },
-  funds: { outgoing: 'financia', incoming: 'recebe financiamento de' },
-  coordinates: { outgoing: 'coordena', incoming: 'é coordenada por' },
-  trains: { outgoing: 'forma pessoas de', incoming: 'tem pessoas formadas por' },
-  provides_evidence_to: { outgoing: 'produz evidência para', incoming: 'usa evidência produzida por' },
-  operates_for: { outgoing: 'opera infraestrutura para', incoming: 'usa infraestrutura operada por' },
-  delivers_with: { outgoing: 'entrega junto com', incoming: 'entrega junto com' },
-}
+/**
+ * The Brazilian institution map's own prose. The enum vocabulary lives in the
+ * lexicons beside every other translation; only the per-institution summaries
+ * and the scope sentence are here, because they describe one country's file
+ * rather than the shared model. See D56.
+ */
 
 const SUMMARIES: Record<string, string> = {
   'bra.federal.presidency': 'Dirige o Poder Executivo federal, coordena o governo e transforma prioridades políticas em decisões administrativas.',
@@ -131,6 +60,59 @@ const SUMMARIES: Record<string, string> = {
   'bra.sp.fiap': 'Centro universitário privado de São Paulo voltado à formação em tecnologia, gestão e áreas relacionadas.',
 }
 
+const STATE_LABELS_PT_BR: Record<string, string> = {
+  'BR-AC': 'Acre',
+  'BR-AL': 'Alagoas',
+  'BR-AP': 'Amapá',
+  'BR-AM': 'Amazonas',
+  'BR-BA': 'Bahia',
+  'BR-CE': 'Ceará',
+  'BR-DF': 'Distrito Federal',
+  'BR-ES': 'Espírito Santo',
+  'BR-GO': 'Goiás',
+  'BR-MA': 'Maranhão',
+  'BR-MT': 'Mato Grosso',
+  'BR-MS': 'Mato Grosso do Sul',
+  'BR-MG': 'Minas Gerais',
+  'BR-PA': 'Pará',
+  'BR-PB': 'Paraíba',
+  'BR-PR': 'Paraná',
+  'BR-PE': 'Pernambuco',
+  'BR-PI': 'Piauí',
+  'BR-RJ': 'Rio de Janeiro',
+  'BR-RN': 'Rio Grande do Norte',
+  'BR-RS': 'Rio Grande do Sul',
+  'BR-RO': 'Rondônia',
+  'BR-RR': 'Roraima',
+  'BR-SC': 'Santa Catarina',
+  'BR-SE': 'Sergipe',
+  'BR-TO': 'Tocantins',
+}
+
+function stateSummary(node: InstitutionNetworkFile['nodes'][number]): string | undefined {
+  const state = STATE_LABELS_PT_BR[node.jurisdictionCode]
+  if (!state) return undefined
+  if (node.id.endsWith('.government')) {
+    return `Dirige o Poder Executivo e coordena políticas públicas e serviços em ${state}.`
+  }
+  if (node.id.endsWith('.legislature')) {
+    return `Representa a população de ${state}, legisla e fiscaliza o Executivo estadual.`
+  }
+  if (node.id.endsWith('.court')) {
+    return `Julga conflitos e protege direitos na jurisdição de ${state}.`
+  }
+  if (node.id.endsWith('.tce')) {
+    return `Audita contas públicas e gastos dentro da jurisdição de ${state}.`
+  }
+  if (node.id.endsWith('.prosecution')) {
+    return `Defende a ordem jurídica e os interesses sociais em ${state}.`
+  }
+  if (node.id.endsWith('.cge')) {
+    return `Coordena controle interno, integridade e auditoria no Executivo de ${state}.`
+  }
+  return undefined
+}
+
 export function localizeInstitutionNetworkPtBr(
   network: InstitutionNetworkFile,
 ): LocalizedInstitutionNetwork {
@@ -140,7 +122,7 @@ export function localizeInstitutionNetworkPtBr(
       'Primeiro recorte da infraestrutura institucional brasileira: âncoras constitucionais, órgãos de controle e organizações que concentram financiamento, dados, formação, ciência, tecnologia e capacidade de entrega. São Paulo é o piloto subnacional.',
     nodes: network.nodes.map((node) => ({
       ...node,
-      summary: SUMMARIES[node.id] ?? node.summary,
+      summary: SUMMARIES[node.id] ?? stateSummary(node) ?? node.summary,
     })),
   }
 }

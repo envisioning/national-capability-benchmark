@@ -14,6 +14,7 @@
 export type IconName =
   | 'archive'
   | 'arrow-left'
+  | 'arrow-right'
   | 'bot'
   | 'building-2'
   | 'chart-line'
@@ -56,6 +57,7 @@ export type IconName =
 const PATHS: Record<IconName, string> = {
   'archive': `<rect width='20' height='5' x='2' y='3' rx='1' /> <path d='M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8' /> <path d='M10 12h4' />`,
   'arrow-left': `<path d='m12 19-7-7 7-7' /> <path d='M19 12H5' />`,
+  'arrow-right': `<path d='M5 12h14' /> <path d='m12 5 7 7-7 7' />`,
   'bot': `<path d='M12 8V4H8' /> <rect width='16' height='12' x='4' y='8' rx='2' /> <path d='M2 14h2' /> <path d='M20 14h2' /> <path d='M15 13v2' /> <path d='M9 13v2' />`,
   'building-2': `<path d='M10 12h4' /> <path d='M10 8h4' /> <path d='M14 21v-3a2 2 0 0 0-4 0v3' /> <path d='M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2' /> <path d='M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16' />`,
   'chart-line': `<path d='M3 3v16a2 2 0 0 0 2 2h16' /> <path d='m19 9-5 5-4-4-3 3' />`,

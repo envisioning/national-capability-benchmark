@@ -24,6 +24,12 @@ export const InstitutionSystem = z.enum([
 ])
 export type InstitutionSystem = z.infer<typeof InstitutionSystem>
 
+/**
+ * Reading order for the systems. The ground layer owns the order, so two
+ * lexicons cannot present the same matrix with its rows in different places.
+ */
+export const INSTITUTION_SYSTEMS: InstitutionSystem[] = InstitutionSystem.options
+
 export const InstitutionLegalNature = z.enum([
   'constitutional_body',
   'direct_administration',
@@ -74,6 +80,53 @@ export const InstitutionRelation = z.enum([
 ])
 export type InstitutionRelation = z.infer<typeof InstitutionRelation>
 
+/**
+ * The four questions a reader asks of an institution: who constitutes it, who
+ * limits it, who pays for it and who it works beside. Every relation belongs to
+ * exactly one family, and the order declared here is the order a profile reads
+ * them in. The family is ground layer vocabulary, so a lexicon translates the
+ * label and never the membership. See D56.
+ */
+export const InstitutionRelationFamily = z.enum([
+  'constitutes',
+  'limits',
+  'funds',
+  'works_with',
+])
+export type InstitutionRelationFamily = z.infer<typeof InstitutionRelationFamily>
+
+/** Reading order for the relation families. */
+export const INSTITUTION_RELATION_FAMILIES: InstitutionRelationFamily[] = [
+  'constitutes',
+  'limits',
+  'funds',
+  'works_with',
+]
+
+/**
+ * The single place a relation verb is sorted into a family. Any surface that
+ * groups relations reads this map, so two surfaces cannot group them
+ * differently.
+ */
+export const INSTITUTION_RELATION_FAMILY: Record<
+  InstitutionRelation,
+  InstitutionRelationFamily
+> = {
+  appoints: 'constitutes',
+  approves_appointment: 'constitutes',
+  legislates_with: 'constitutes',
+  linked_to: 'constitutes',
+  audits: 'limits',
+  checks: 'limits',
+  regulates: 'limits',
+  funds: 'funds',
+  coordinates: 'works_with',
+  trains: 'works_with',
+  provides_evidence_to: 'works_with',
+  operates_for: 'works_with',
+  delivers_with: 'works_with',
+}
+
 export const InstitutionSource = z.object({
   title: z.string(),
   url: z.string().url(),
@@ -120,7 +173,7 @@ export const InstitutionCoverage = z.object({
   jurisdictionCode: z.string(),
   label: z.string(),
   level: z.enum(['federal', 'state', 'municipal']),
-  status: z.enum(['baseline', 'pilot', 'planned']),
+  status: z.enum(['baseline', 'pilot', 'scaffold', 'planned']),
   note: z.string(),
 })
 export type InstitutionCoverage = z.infer<typeof InstitutionCoverage>

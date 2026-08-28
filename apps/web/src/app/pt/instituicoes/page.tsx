@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { localizeInstitutionNetworkPtBr } from '@ncb/core'
+import { PT_BR, localizeInstitutionNetworkPtBr } from '@ncb/core'
 import { InstitutionsView } from '@/components/views/InstitutionsView'
 import { Empty, Eyebrow, Headline, Highlight, PageTitle } from '@/components/ui'
 import { loadInstitutionNetwork } from '@/lib/data'
@@ -31,10 +31,11 @@ export default async function BrazilianInstitutionsPage() {
       </Headline>
       <p className="mb-12 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
         {network.scope} O mapa explica funções e vínculos. Ele não mede desempenho e não altera as
-        notas do NCB.
+        notas do NCB. São {network.nodes.length} instituições e {network.edges.length} relações, e
+        cada uma delas tem uma fonte.
       </p>
 
-      <InstitutionsView network={network} />
+      <InstitutionsView network={network} lex={PT_BR} />
     </>
   )
 }

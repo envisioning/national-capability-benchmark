@@ -1,37 +1,73 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useCallback, useMemo, useRef, useState } from 'react'
 import {
-  INSTITUTION_LEVEL_LABELS_PT_BR,
-  INSTITUTION_NATURE_LABELS_PT_BR,
-  INSTITUTION_RELATION_LABELS_PT_BR,
-  INSTITUTION_ROLE_LABELS_PT_BR,
-  INSTITUTION_SYSTEM_LABELS_PT_BR,
-  PT_BR,
+  INSTITUTION_RELATION_FAMILIES,
+  INSTITUTION_RELATION_FAMILY,
+  INSTITUTION_SYSTEMS,
+  MATRIX_BANDS,
+  buildInstitutionMatrix,
+  fill,
+  matrixBand,
 } from '@ncb/core'
 import type {
   InstitutionCoverage,
   InstitutionEdge,
   InstitutionLevel,
+  InstitutionRelationFamily,
   InstitutionSystem,
+  Lexicon,
   LocalizedInstitutionNode,
   LocalizedInstitutionNetwork,
+  MatrixBandId,
+  MatrixCell,
+  MatrixFamily,
 } from '@ncb/core'
 import { Icon } from '@/components/Icon'
+
+/**
+ * One country's institution map.
+ *
+ * The reader arrives with a name in mind, so the directory comes first. The
+ * profile below it answers the page's own three questions in the order the
+ * headline asks them: what this institution does, who limits it, what its
+ * action depends on. Relations are grouped by family and read left to right in
+ * their own direction, incoming on one side of the spine and outgoing on the
+ * other.
+ *
+ * Nothing here is laid out by hand. Every surface is derived from counts, so a
+ * country with 12 institutions and a country with 400 render through the same
+ * code, and a long official name wraps instead of being cut. Language reaches
+ * the component as one `lex` prop. See D56.
+ */
 
 const CONTROL =
   'rounded-md border border-[var(--rule)] bg-[var(--surface)] px-3 py-2 text-xs text-[var(--foreground)]'
 
 const INITIAL_ID = 'bra.federal.bndes'
-const MAX_GRAPH_NEIGHBORS = 12
-const OVERVIEW_SYSTEMS = Object.keys(INSTITUTION_SYSTEM_LABELS_PT_BR) as InstitutionSystem[]
 
-type GraphMode = 'overview' | 'focus'
+/**
+ * The matrix ramp: the score ramp with its lime top removed. A relation count
+ * is not a 0 to 100 position, so it never renders through `Score`, and a table
+ * of 100 lime cells would spend the one accent this page has. The breaks
+ * themselves live in `MATRIX_BANDS` in the core package. See D58.
+ */
+const MATRIX_FILL: Record<MatrixBandId, string> = {
+  low: 'weak',
+  middle: 'below_middle',
+  high: 'above_middle',
+}
 
 type Connection = {
   edge: InstitutionEdge
   neighbor: LocalizedInstitutionNode
   direction: 'outgoing' | 'incoming'
+}
+
+type FamilyBand = {
+  family: InstitutionRelationFamily
+  incoming: Connection[]
+  outgoing: Connection[]
 }
 
 function connectionFor(
@@ -50,368 +86,22 @@ function connectionFor(
   return null
 }
 
-function graphPositions(count: number): { x: number; y: number }[] {
-  const centerX = 380
-  const centerY = 250
-  const radiusX = count > 8 ? 285 : 250
-  const radiusY = 188
-  return Array.from({ length: count }, (_, index) => {
-    const angle = -Math.PI / 2 + (index * Math.PI * 2) / count
+/**
+ * Sort one institution's relations into the model's families. Every family is
+ * returned, including the empty ones: a family with no relation is a fact about
+ * the map and stays on screen.
+ */
+function bandsFor(connections: Connection[]): FamilyBand[] {
+  return INSTITUTION_RELATION_FAMILIES.map((family) => {
+    const members = connections.filter(
+      (connection) => INSTITUTION_RELATION_FAMILY[connection.edge.relation] === family,
+    )
     return {
-      x: centerX + Math.cos(angle) * radiusX,
-      y: centerY + Math.sin(angle) * radiusY,
+      family,
+      incoming: members.filter((connection) => connection.direction === 'incoming'),
+      outgoing: members.filter((connection) => connection.direction === 'outgoing'),
     }
   })
-}
-
-function NetworkDiagram({
-  selected,
-  connections,
-  onSelect,
-}: {
-  selected: LocalizedInstitutionNode
-  connections: Connection[]
-  onSelect: (id: string) => void
-}) {
-  const shown = connections.slice(0, MAX_GRAPH_NEIGHBORS)
-  const positions = graphPositions(shown.length)
-  const center = { x: 380, y: 250 }
-
-  return (
-    <div>
-      <svg
-        viewBox="0 0 760 500"
-        className="hidden w-full sm:block"
-        role="img"
-        aria-label={`${selected.shortName} e ${connections.length} instituições conectadas`}
-      >
-        <defs>
-          <marker
-            id="institution-arrow"
-            viewBox="0 0 10 10"
-            refX="8"
-            refY="5"
-            markerWidth="5"
-            markerHeight="5"
-            orient="auto-start-reverse"
-          >
-            <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--muted)" />
-          </marker>
-        </defs>
-
-        {shown.map((connection, index) => {
-          const position = positions[index] as { x: number; y: number }
-          const outgoing = connection.direction === 'outgoing'
-          return (
-            <line
-              key={connection.edge.id}
-              x1={outgoing ? center.x : position.x}
-              y1={outgoing ? center.y : position.y}
-              x2={outgoing ? position.x : center.x}
-              y2={outgoing ? position.y : center.y}
-              stroke="var(--rule)"
-              strokeWidth="1.5"
-              markerEnd="url(#institution-arrow)"
-            />
-          )
-        })}
-
-        {shown.map((connection, index) => {
-          const position = positions[index] as { x: number; y: number }
-          return (
-            <g
-              key={connection.neighbor.id}
-              role="button"
-              tabIndex={0}
-              aria-label={`Abrir ${connection.neighbor.officialName}`}
-              onClick={() => onSelect(connection.neighbor.id)}
-              onKeyDown={(event) => {
-                if (event.key === 'Enter' || event.key === ' ') {
-                  event.preventDefault()
-                  onSelect(connection.neighbor.id)
-                }
-              }}
-              className="cursor-pointer"
-            >
-              <rect
-                x={position.x - 72}
-                y={position.y - 25}
-                width="144"
-                height="50"
-                rx="6"
-                fill="var(--surface)"
-                stroke="var(--rule)"
-              />
-              <text
-                x={position.x}
-                y={position.y - 2}
-                textAnchor="middle"
-                fill="var(--foreground)"
-                fontSize="12"
-                fontWeight="500"
-              >
-                {connection.neighbor.shortName}
-              </text>
-              <text
-                x={position.x}
-                y={position.y + 14}
-                textAnchor="middle"
-                fill="var(--muted)"
-                fontSize="10"
-              >
-                {INSTITUTION_LEVEL_LABELS_PT_BR[connection.neighbor.level]}
-              </text>
-            </g>
-          )
-        })}
-
-        <g>
-          <rect
-            x={center.x - 86}
-            y={center.y - 31}
-            width="172"
-            height="62"
-            rx="8"
-            fill="var(--primary)"
-          />
-          <text
-            x={center.x}
-            y={center.y - 3}
-            textAnchor="middle"
-            fill="var(--score-strong-ink)"
-            fontSize="13"
-            fontWeight="500"
-          >
-            {selected.shortName}
-          </text>
-          <text
-            x={center.x}
-            y={center.y + 15}
-            textAnchor="middle"
-            fill="var(--score-strong-ink)"
-            fontSize="10"
-          >
-            {INSTITUTION_SYSTEM_LABELS_PT_BR[selected.system]}
-          </text>
-        </g>
-      </svg>
-
-      <p className="sm:hidden text-xs text-[var(--muted)]">
-        Em telas menores, as relações aparecem na lista abaixo do perfil da instituição.
-      </p>
-      {connections.length > MAX_GRAPH_NEIGHBORS ? (
-        <p className="mt-2 text-xs text-[var(--muted)]">
-          O diagrama mostra {MAX_GRAPH_NEIGHBORS} de {connections.length} relações. A lista ao lado
-          mostra todas.
-        </p>
-      ) : null}
-    </div>
-  )
-}
-
-type OverviewPoint = { x: number; y: number }
-type OverviewBox = {
-  system: InstitutionSystem
-  label: string
-  count: number
-  x: number
-  y: number
-  width: number
-  height: number
-}
-
-function overviewLayout(nodes: LocalizedInstitutionNode[]) {
-  const columnCount = 5
-  const boxWidth = 228
-  const boxHeight = 196
-  const gapX = 12
-  const gapY = 18
-  const margin = 16
-  const points = new Map<string, OverviewPoint>()
-  const boxes: OverviewBox[] = []
-
-  OVERVIEW_SYSTEMS.forEach((system, index) => {
-    const members = nodes
-      .filter((node) => node.system === system)
-      .sort((a, b) => a.shortName.localeCompare(b.shortName, 'pt-BR'))
-    const column = index % columnCount
-    const row = Math.floor(index / columnCount)
-    const x = margin + column * (boxWidth + gapX)
-    const y = margin + row * (boxHeight + gapY)
-    boxes.push({
-      system,
-      label: INSTITUTION_SYSTEM_LABELS_PT_BR[system],
-      count: members.length,
-      x,
-      y,
-      width: boxWidth,
-      height: boxHeight,
-    })
-
-    members.forEach((node, memberIndex) => {
-      const memberColumn = memberIndex % 2
-      const memberRow = Math.floor(memberIndex / 2)
-      points.set(node.id, {
-        x: x + 59 + memberColumn * 110,
-        y: y + 64 + memberRow * 28,
-      })
-    })
-  })
-
-  return {
-    points,
-    boxes,
-    width: margin * 2 + columnCount * boxWidth + (columnCount - 1) * gapX,
-    height: margin * 2 + 2 * boxHeight + gapY,
-  }
-}
-
-function OverviewDiagram({
-  network,
-  selectedId,
-  onSelect,
-}: {
-  network: LocalizedInstitutionNetwork
-  selectedId: string
-  onSelect: (id: string) => void
-}) {
-  const layout = useMemo(() => overviewLayout(network.nodes), [network.nodes])
-
-  return (
-    <div className="overflow-x-auto pb-2">
-      <svg
-        viewBox={`0 0 ${layout.width} ${layout.height}`}
-        className="min-w-[760px] w-full"
-        role="img"
-        aria-label={`Rede geral com ${network.nodes.length} instituições e ${network.edges.length} relações, agrupada por sistema`}
-      >
-        <defs>
-          <marker
-            id="institution-overview-arrow"
-            viewBox="0 0 10 10"
-            refX="8"
-            refY="5"
-            markerWidth="4"
-            markerHeight="4"
-            orient="auto-start-reverse"
-          >
-            <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--muted)" />
-          </marker>
-          <marker
-            id="institution-overview-arrow-active"
-            viewBox="0 0 10 10"
-            refX="8"
-            refY="5"
-            markerWidth="4"
-            markerHeight="4"
-            orient="auto-start-reverse"
-          >
-            <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--primary)" />
-          </marker>
-        </defs>
-
-        {layout.boxes.map((box) => (
-          <rect
-            key={`${box.system}-background`}
-            x={box.x}
-            y={box.y}
-            width={box.width}
-            height={box.height}
-            rx="8"
-            fill="var(--surface-sunken)"
-          />
-        ))}
-
-        {network.edges.map((edge) => {
-          const source = layout.points.get(edge.sourceId)
-          const target = layout.points.get(edge.targetId)
-          if (!source || !target) return null
-          const active = edge.sourceId === selectedId || edge.targetId === selectedId
-          return (
-            <line
-              key={edge.id}
-              x1={source.x}
-              y1={source.y}
-              x2={target.x}
-              y2={target.y}
-              stroke={active ? 'var(--primary)' : 'var(--rule)'}
-              strokeWidth={active ? 1.8 : 1}
-              opacity={active ? 0.95 : 0.55}
-              markerEnd={`url(#institution-overview-arrow${active ? '-active' : ''})`}
-            />
-          )
-        })}
-
-        {layout.boxes.map((box) => (
-          <g key={box.system}>
-            <rect
-              x={box.x}
-              y={box.y}
-              width={box.width}
-              height={box.height}
-              rx="8"
-              fill="none"
-              stroke="var(--rule)"
-            />
-            <text
-              x={box.x + 12}
-              y={box.y + 23}
-              fill="var(--foreground)"
-              fontSize="11"
-              fontWeight="500"
-            >
-              {box.label}
-            </text>
-            <text x={box.x + box.width - 12} y={box.y + 23} textAnchor="end" fill="var(--muted)" fontSize="10">
-              {box.count}
-            </text>
-          </g>
-        ))}
-
-        {network.nodes.map((node) => {
-          const point = layout.points.get(node.id)
-          if (!point) return null
-          const selected = node.id === selectedId
-          return (
-            <g
-              key={node.id}
-              role="button"
-              tabIndex={0}
-              aria-label={`Selecionar ${node.officialName}`}
-              onClick={() => onSelect(node.id)}
-              onKeyDown={(event) => {
-                if (event.key === 'Enter' || event.key === ' ') {
-                  event.preventDefault()
-                  onSelect(node.id)
-                }
-              }}
-              className="cursor-pointer"
-            >
-              <rect
-                x={point.x - 50}
-                y={point.y - 10}
-                width="100"
-                height="20"
-                rx="4"
-                fill={selected ? 'var(--primary)' : 'var(--surface)'}
-                stroke={selected ? 'var(--primary)' : 'var(--rule)'}
-              />
-              <text
-                x={point.x}
-                y={point.y + 3.5}
-                textAnchor="middle"
-                fill={selected ? 'var(--score-strong-ink)' : 'var(--foreground)'}
-                fontSize="9"
-                fontWeight={selected ? '600' : '400'}
-              >
-                {node.shortName.length > 17 ? `${node.shortName.slice(0, 16)}…` : node.shortName}
-              </text>
-            </g>
-          )
-        })}
-      </svg>
-    </div>
-  )
 }
 
 function institutionMatches(
@@ -419,248 +109,688 @@ function institutionMatches(
   query: string,
   level: InstitutionLevel | '',
   system: InstitutionSystem | '',
+  locale: string,
 ): boolean {
   if (level && node.level !== level) return false
   if (system && node.system !== system) return false
-  const needle = query.trim().toLocaleLowerCase('pt-BR')
+  const needle = query.trim().toLocaleLowerCase(locale)
   if (!needle) return true
   return [node.officialName, node.shortName, node.summary]
     .join(' ')
-    .toLocaleLowerCase('pt-BR')
+    .toLocaleLowerCase(locale)
     .includes(needle)
 }
 
 function coverageSummary(coverage: InstitutionCoverage[]) {
   const states = coverage.filter((area) => area.level === 'state')
   return {
-    covered: states.filter((area) => area.status !== 'planned'),
+    pilot: states.filter((area) => area.status === 'pilot'),
+    scaffold: states.filter((area) => area.status === 'scaffold'),
     planned: states.filter((area) => area.status === 'planned'),
   }
 }
 
-export function InstitutionsView({ network }: { network: LocalizedInstitutionNetwork }) {
+/**
+ * One relation, as a sentence. The subject sits to the left of the verb in
+ * both directions, so the verb always takes its active form and the geometry
+ * supplies the subject: an incoming row reads "CGU audits" toward the spine,
+ * an outgoing row reads "is attached to MDIC" away from it.
+ */
+function RelationRow({
+  connection,
+  lex,
+  onSelect,
+}: {
+  connection: Connection
+  lex: Lexicon
+  onSelect: (id: string) => void
+}) {
+  const { edge, neighbor, direction } = connection
+  const incoming = direction === 'incoming'
+  const verb = (
+    <span className="text-[var(--muted)]">{lex.institutions.relations[edge.relation].outgoing}</span>
+  )
+  const arrow = <Icon name="arrow-right" size={12} className="shrink-0 text-[var(--muted)]" />
+  const name = (
+    <button
+      type="button"
+      onClick={() => onSelect(neighbor.id)}
+      className="font-medium underline decoration-[var(--rule)] underline-offset-4 hover:decoration-[var(--primary)]"
+    >
+      {neighbor.shortName}
+    </button>
+  )
+
+  return (
+    <p
+      className={`flex flex-wrap items-baseline gap-x-1.5 gap-y-0.5 text-xs leading-relaxed ${
+        incoming ? 'sm:justify-end sm:text-right' : ''
+      }`}
+    >
+      {incoming ? (
+        <>
+          {name}
+          {verb}
+          {arrow}
+        </>
+      ) : (
+        <>
+          {arrow}
+          {verb}
+          {name}
+        </>
+      )}
+    </p>
+  )
+}
+
+/**
+ * The relation ledger. Four bands in the model's order, each split by
+ * direction around a vertical spine that stands for the selected institution.
+ * A row on the left feeds the spine, a row on the right is fed by it, so every
+ * line reads left to right in the direction of its own relation. The spine
+ * disappears below the `sm` breakpoint and the bands stack.
+ */
+function RelationLedger({
+  bands,
+  lex,
+  onSelect,
+}: {
+  bands: FamilyBand[]
+  lex: Lexicon
+  onSelect: (id: string) => void
+}) {
+  const s = lex.institutions
+
+  return (
+    <div>
+      <div className="mb-4 hidden grid-cols-2 gap-6 sm:grid">
+        <p className="text-xs uppercase tracking-[0.05em] text-[var(--muted)] sm:text-right">
+          {s.incomingHeading}
+        </p>
+        <p className="text-xs uppercase tracking-[0.05em] text-[var(--muted)]">
+          {s.outgoingHeading}
+        </p>
+      </div>
+
+      <div className="relative">
+        <div
+          aria-hidden
+          className="absolute inset-y-0 left-1/2 hidden w-px bg-[var(--rule)] sm:block"
+        />
+        <div className="space-y-6">
+          {bands.map((band) => {
+            const empty = band.incoming.length === 0 && band.outgoing.length === 0
+            return (
+              <section key={band.family}>
+                <h3 className="mb-2 text-xs font-medium">{s.families[band.family].label}</h3>
+                {empty ? (
+                  <p className="text-xs text-[var(--muted)]">{s.families[band.family].empty}</p>
+                ) : (
+                  <div className="grid gap-x-6 gap-y-2 sm:grid-cols-2">
+                    <div className="space-y-2">
+                      {band.incoming.map((connection) => (
+                        <RelationRow
+                          key={connection.edge.id}
+                          connection={connection}
+                          lex={lex}
+                          onSelect={onSelect}
+                        />
+                      ))}
+                    </div>
+                    <div className="space-y-2">
+                      {band.outgoing.map((connection) => (
+                        <RelationRow
+                          key={connection.edge.id}
+                          connection={connection}
+                          lex={lex}
+                          onSelect={onSelect}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </section>
+            )
+          })}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+
+/**
+ * The system by system relation matrix: the one picture of a whole country's
+ * wiring that this page publishes.
+ *
+ * A count, not a position, so it never uses the score ramp and never reaches
+ * lime. The three neutral steps are the score ramp with its lime top removed,
+ * which is the standing rule against a table full of brand colour.
+ *
+ * The matrix owns its readout, the way the radar does. It always reads one
+ * cell, it opens on the busiest one rather than on nothing, and the readout
+ * names both institutions in every relation so the matrix is a way into a
+ * profile and not only a summary. See D58.
+ */
+function RelationMatrix({
+  network,
+  lex,
+  onSelect,
+}: {
+  network: LocalizedInstitutionNetwork
+  lex: Lexicon
+  onSelect: (id: string) => void
+}) {
+  const s = lex.institutions
+  const [family, setFamily] = useState<MatrixFamily>('all')
+  const [picked, setPicked] = useState<{ from: InstitutionSystem; to: InstitutionSystem } | null>(
+    null,
+  )
+
+  const matrix = useMemo(
+    () => buildInstitutionMatrix(network.nodes, network.edges, family),
+    [network.nodes, network.edges, family],
+  )
+  const byId = useMemo(() => new Map(network.nodes.map((node) => [node.id, node])), [network.nodes])
+
+  /* Opens on the busiest cell, so the readout never starts empty. */
+  const busiest = useMemo(
+    () =>
+      matrix.cells.reduce<MatrixCell | null>(
+        (best, cell) => (cell.count > (best?.count ?? 0) ? cell : best),
+        null,
+      ),
+    [matrix.cells],
+  )
+  const active = picked ?? (busiest ? { from: busiest.from, to: busiest.to } : null)
+
+  const listed = useMemo(() => {
+    if (!active) return []
+    return network.edges
+      .filter((edge) => {
+        if (family !== 'all' && INSTITUTION_RELATION_FAMILY[edge.relation] !== family) return false
+        const from = byId.get(edge.sourceId)
+        const to = byId.get(edge.targetId)
+        return from?.system === active.from && to?.system === active.to
+      })
+      .map((edge) => ({
+        edge,
+        from: byId.get(edge.sourceId) as LocalizedInstitutionNode,
+        to: byId.get(edge.targetId) as LocalizedInstitutionNode,
+      }))
+      .sort((a, b) => a.from.shortName.localeCompare(b.from.shortName, lex.numberLocale))
+  }, [network.edges, byId, active, family, lex.numberLocale])
+
+  const countAt = (from: InstitutionSystem, to: InstitutionSystem) =>
+    matrix.cells.find((cell) => cell.from === from && cell.to === to)?.count ?? 0
+
+  const cellName = (count: number, from: InstitutionSystem, to: InstitutionSystem) => {
+    const values = { n: count, from: s.systems[from], to: s.systems[to] }
+    if (count === 0) return fill(s.matrixCellNone, values)
+    return fill(count === 1 ? s.matrixCellOne : s.matrixCell, values)
+  }
+
+  const families: MatrixFamily[] = ['all', ...INSTITUTION_RELATION_FAMILIES]
+
+  return (
+    <>
+      <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
+        <div className="flex flex-wrap gap-2" role="group" aria-label={s.matrixLegendLabel}>
+          {families.map((id) => (
+            <button
+              key={id}
+              type="button"
+              aria-pressed={family === id}
+              onClick={() => {
+                setFamily(id)
+                setPicked(null)
+              }}
+              className={`${CONTROL} ${family === id ? 'border-[var(--primary)]' : ''}`}
+            >
+              {id === 'all' ? s.matrixAllFamilies : s.families[id].label}
+            </button>
+          ))}
+        </div>
+        <p className="text-xs tabular-nums text-[var(--muted)]">
+          {fill(s.matrixSummary, {
+            total: matrix.total,
+            filled: matrix.filled,
+            cells: matrix.cells.length,
+          })}
+        </p>
+      </div>
+
+      <div className="overflow-x-auto pb-2">
+        <table className="border-separate border-spacing-0.5 text-xs">
+          <thead>
+            <tr>
+              <th
+                rowSpan={2}
+                className="pr-3 text-left align-bottom text-xs font-medium text-[var(--muted)]"
+              >
+                {s.matrixFrom}
+              </th>
+              <th
+                colSpan={INSTITUTION_SYSTEMS.length}
+                className="pb-1 text-left text-xs font-medium text-[var(--muted)]"
+              >
+                {s.matrixTo}
+              </th>
+            </tr>
+            <tr>
+              {INSTITUTION_SYSTEMS.map((system) => (
+                <th
+                  key={system}
+                  scope="col"
+                  className="h-40 w-8 align-bottom text-xs font-normal"
+                >
+                  <span className="block whitespace-nowrap [writing-mode:vertical-rl] rotate-180">
+                    {s.systems[system]}
+                  </span>
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {INSTITUTION_SYSTEMS.map((from) => (
+              <tr key={from}>
+                <th
+                  scope="row"
+                  className="whitespace-nowrap py-0.5 pr-3 text-right text-xs font-normal"
+                >
+                  {s.systems[from]}
+                </th>
+                {INSTITUTION_SYSTEMS.map((to) => {
+                  const count = countAt(from, to)
+                  const band = matrixBand(count)
+                  const on = active?.from === from && active?.to === to
+                  return (
+                    <td key={to} className="p-0">
+                      <button
+                        type="button"
+                        aria-pressed={on}
+                        aria-label={cellName(count, from, to)}
+                        onClick={() => setPicked({ from, to })}
+                        style={
+                          band
+                            ? {
+                                background: `var(--score-${MATRIX_FILL[band]})`,
+                                color: `var(--score-${MATRIX_FILL[band]}-ink)`,
+                              }
+                            : undefined
+                        }
+                        className={`flex h-8 w-8 items-center justify-center rounded-xs tabular-nums ${
+                          band ? '' : 'border border-[var(--rule-soft)] text-[var(--muted)]'
+                        } ${on ? 'outline outline-2 outline-[var(--primary)] -outline-offset-2' : ''}`}
+                      >
+                        {count > 0 ? count : ''}
+                      </button>
+                    </td>
+                  )
+                })}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs">
+        <span className="font-medium text-[var(--muted)]">{s.matrixLegendLabel}</span>
+        {[...MATRIX_BANDS].reverse().map((band, index, all) => {
+          const next = all[index + 1]
+          return (
+            <span key={band.id} className="inline-flex items-center gap-2">
+              <span
+                className="inline-block h-4 w-7 rounded-md"
+                style={{ background: `var(--score-${MATRIX_FILL[band.id]})` }}
+              />
+              <span className="tabular-nums text-[var(--muted)]">
+                {next
+                  ? next.min - 1 === band.min
+                    ? band.min
+                    : fill(lex.legendRange, { a: band.min, b: next.min - 1 })
+                  : fill(lex.legendRangeTop, { a: band.min })}
+              </span>
+            </span>
+          )
+        })}
+      </div>
+
+      {active ? (
+        <div className="mt-8 min-h-32 border-t border-[var(--rule-soft)] pt-5">
+          <p className="text-xs font-medium">
+            {cellName(countAt(active.from, active.to), active.from, active.to)}
+          </p>
+          <ul className="mt-3 space-y-2">
+            {listed.map(({ edge, from, to }) => (
+              <li
+                key={edge.id}
+                className="flex flex-wrap items-baseline gap-x-1.5 text-xs leading-relaxed"
+              >
+                <button
+                  type="button"
+                  onClick={() => onSelect(from.id)}
+                  className="font-medium underline decoration-[var(--rule)] underline-offset-4 hover:decoration-[var(--primary)]"
+                >
+                  {from.shortName}
+                </button>
+                <span className="text-[var(--muted)]">{s.relations[edge.relation].outgoing}</span>
+                <button
+                  type="button"
+                  onClick={() => onSelect(to.id)}
+                  className="font-medium underline decoration-[var(--rule)] underline-offset-4 hover:decoration-[var(--primary)]"
+                >
+                  {to.shortName}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
+    </>
+  )
+}
+
+export function InstitutionsView({
+  network,
+  lex,
+}: {
+  network: LocalizedInstitutionNetwork
+  lex: Lexicon
+}) {
+  const s = lex.institutions
+  const locale = lex.numberLocale
   const [selectedId, setSelectedId] = useState(
     network.nodes.some((node) => node.id === INITIAL_ID) ? INITIAL_ID : network.nodes[0]?.id ?? '',
   )
   const [query, setQuery] = useState('')
   const [level, setLevel] = useState<InstitutionLevel | ''>('')
   const [system, setSystem] = useState<InstitutionSystem | ''>('')
-  const [graphMode, setGraphMode] = useState<GraphMode>('overview')
+  const [jurisdiction, setJurisdiction] = useState('BR')
 
   const byId = useMemo(() => new Map(network.nodes.map((node) => [node.id, node])), [network.nodes])
-  const selected = byId.get(selectedId) ?? network.nodes[0]
+  const stateOptions = useMemo(
+    () => network.coverage.filter((area) => area.level === 'state'),
+    [network.coverage],
+  )
+  const scopedNodes = useMemo(
+    () =>
+      network.nodes.filter((node) => {
+        if (jurisdiction === 'BR') return node.level === 'federal'
+        return (
+          node.level === 'federal' ||
+          node.jurisdictionCode === jurisdiction ||
+          node.jurisdictionCode.startsWith(`${jurisdiction}-`)
+        )
+      }),
+    [network.nodes, jurisdiction],
+  )
+  const scopedIds = useMemo(() => new Set(scopedNodes.map((node) => node.id)), [scopedNodes])
+  const scopedEdges = useMemo(
+    () => network.edges.filter((edge) => scopedIds.has(edge.sourceId) && scopedIds.has(edge.targetId)),
+    [network.edges, scopedIds],
+  )
+  const scopedNetwork = useMemo<LocalizedInstitutionNetwork>(
+    () => ({ ...network, nodes: scopedNodes, edges: scopedEdges }),
+    [network, scopedNodes, scopedEdges],
+  )
+  const selectedCandidate = byId.get(selectedId)
+  const selected = selectedCandidate && scopedIds.has(selectedCandidate.id) ? selectedCandidate : scopedNodes[0]
   const connections = useMemo(
     () =>
-      network.edges
+      scopedEdges
         .map((edge) => connectionFor(edge, selected?.id ?? '', byId))
         .filter((connection): connection is Connection => connection !== null)
-        .sort((a, b) => a.neighbor.shortName.localeCompare(b.neighbor.shortName, 'pt-BR')),
-    [network.edges, selected?.id, byId],
+        .sort((a, b) => a.neighbor.shortName.localeCompare(b.neighbor.shortName, locale)),
+    [scopedEdges, selected?.id, byId, locale],
   )
+  const bands = useMemo(() => bandsFor(connections), [connections])
   const filtered = useMemo(
     () =>
-      network.nodes
-        .filter((node) => institutionMatches(node, query, level, system))
-        .sort((a, b) => a.shortName.localeCompare(b.shortName, 'pt-BR')),
-    [network.nodes, query, level, system],
+      scopedNodes
+        .filter((node) => institutionMatches(node, query, level, system, locale))
+        .sort((a, b) => a.shortName.localeCompare(b.shortName, locale)),
+    [scopedNodes, query, level, system, locale],
   )
+  const groups = useMemo(
+    () =>
+      INSTITUTION_SYSTEMS.map((id) => ({
+        system: id,
+        members: filtered.filter((node) => node.system === id),
+      })).filter((group) => group.members.length > 0),
+    [filtered],
+  )
+  const degree = useMemo(() => {
+    const counts = new Map<string, number>()
+    for (const edge of scopedEdges) {
+      counts.set(edge.sourceId, (counts.get(edge.sourceId) ?? 0) + 1)
+      counts.set(edge.targetId, (counts.get(edge.targetId) ?? 0) + 1)
+    }
+    return counts
+  }, [scopedEdges])
   const coverage = coverageSummary(network.coverage)
+
+  /* Selecting brings the profile into view. The directory now runs to a few
+   * hundred cards, so a click far down it would otherwise change a heading the
+   * reader cannot see. */
+  const profile = useRef<HTMLElement>(null)
+  const select = useCallback((id: string) => {
+    setSelectedId(id)
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    profile.current?.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' })
+  }, [])
 
   if (!selected) return null
 
   return (
     <>
-      <div className="mb-10 rounded-lg border border-[var(--rule)] bg-[var(--surface-sunken)] p-4">
-        <p className="mb-3 inline-flex items-center gap-2 text-xs uppercase tracking-[0.05em] text-[var(--muted)]">
-          <Icon name="list-filter" size={14} />
-          Encontrar uma instituição
-        </p>
-        <div className="flex flex-wrap gap-3">
-          <label className="flex min-w-56 flex-1 flex-col gap-1 text-xs text-[var(--muted)]">
-            Nome ou função
-            <input
-              type="search"
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-              placeholder="BNDES, justiça, pesquisa..."
-              className={CONTROL}
-            />
-          </label>
-          <label className="flex flex-col gap-1 text-xs text-[var(--muted)]">
-            Esfera
-            <select
-              value={level}
-              onChange={(event) => setLevel(event.target.value as InstitutionLevel | '')}
-              className={CONTROL}
-            >
-              <option value="">Todas</option>
-              {Object.entries(INSTITUTION_LEVEL_LABELS_PT_BR).map(([value, label]) => (
-                <option key={value} value={value}>
-                  {label}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label className="flex min-w-56 flex-col gap-1 text-xs text-[var(--muted)]">
-            Sistema
-            <select
-              value={system}
-              onChange={(event) => setSystem(event.target.value as InstitutionSystem | '')}
-              className={CONTROL}
-            >
-              <option value="">Todos</option>
-              {Object.entries(INSTITUTION_SYSTEM_LABELS_PT_BR).map(([value, label]) => (
-                <option key={value} value={value}>
-                  {label}
-                </option>
-              ))}
-            </select>
-          </label>
-        </div>
-      </div>
-
-      <div className="grid gap-8 lg:grid-cols-[minmax(0,1.6fr)_minmax(18rem,0.8fr)]">
-        <div className="min-w-0">
-          <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-            <p className="text-xs uppercase tracking-[0.05em] text-[var(--muted)]">Como ler a rede</p>
-            <div className="flex gap-2" role="group" aria-label="Modo de leitura da rede">
-              <button
-                type="button"
-                aria-pressed={graphMode === 'overview'}
-                onClick={() => setGraphMode('overview')}
-                className={`${CONTROL} ${graphMode === 'overview' ? 'border-[var(--primary)]' : ''}`}
-              >
-                Visão geral
-              </button>
-              <button
-                type="button"
-                aria-pressed={graphMode === 'focus'}
-                onClick={() => setGraphMode('focus')}
-                className={`${CONTROL} ${graphMode === 'focus' ? 'border-[var(--primary)]' : ''}`}
-              >
-                Explorar instituição
-              </button>
-            </div>
-          </div>
-          {graphMode === 'overview' ? (
-            <>
-              <OverviewDiagram network={network} selectedId={selected.id} onSelect={setSelectedId} />
-              <p className="mt-2 text-xs text-[var(--muted)]">
-                Cada ponto é uma instituição. Os blocos agrupam os sistemas; as linhas mostram relações
-                documentadas. Clique em um ponto para abrir o perfil.
-              </p>
-            </>
-          ) : (
-            <NetworkDiagram selected={selected} connections={connections} onSelect={setSelectedId} />
-          )}
-        </div>
-
-        <aside
-          aria-live="polite"
-          className="rounded-lg border border-[var(--rule)] bg-[var(--surface)] p-5"
-        >
-          <p className="text-xs uppercase tracking-[0.05em] text-[var(--muted)]">
-            {INSTITUTION_LEVEL_LABELS_PT_BR[selected.level]} ·{' '}
-            {INSTITUTION_NATURE_LABELS_PT_BR[selected.legalNature]}
+      <section>
+        <div className="rounded-lg border border-[var(--rule)] bg-[var(--surface-sunken)] p-4">
+          <p className="mb-3 inline-flex items-center gap-2 text-xs uppercase tracking-[0.05em] text-[var(--muted)]">
+            <Icon name="list-filter" size={14} />
+            {s.findHeading}
           </p>
-          <h2 className="mt-2 text-xl font-medium tracking-tight">{selected.officialName}</h2>
-          <p className="mt-3 leading-relaxed">{selected.summary}</p>
-
-          <div className="mt-5">
-            <p className="text-xs font-medium text-[var(--muted)]">O que faz</p>
-            <p className="mt-1 text-xs">
-              {selected.roles.map((role) => INSTITUTION_ROLE_LABELS_PT_BR[role]).join(', ')}.
-            </p>
+          <div className="flex flex-wrap gap-3">
+            <label className="flex min-w-56 flex-1 flex-col gap-1 text-xs text-[var(--muted)]">
+              {s.findName}
+              <input
+                type="search"
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                placeholder={s.findNamePlaceholder}
+                className={CONTROL}
+              />
+            </label>
+            <label className="flex min-w-48 flex-col gap-1 text-xs text-[var(--muted)]">
+              {s.findJurisdiction}
+              <select
+                value={jurisdiction}
+                onChange={(event) => {
+                  const nextJurisdiction = event.target.value
+                  setJurisdiction(nextJurisdiction)
+                  const nextId =
+                    nextJurisdiction === 'BR'
+                      ? INITIAL_ID
+                      : network.nodes.find(
+                          (node) =>
+                            node.jurisdictionCode === nextJurisdiction &&
+                            node.id.endsWith('.government'),
+                        )?.id
+                  if (nextId) setSelectedId(nextId)
+                }}
+                className={CONTROL}
+              >
+                <option value="BR">{s.nationalJurisdiction}</option>
+                {stateOptions.map((area) => (
+                  <option key={area.jurisdictionCode} value={area.jurisdictionCode}>
+                    {area.label}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label className="flex flex-col gap-1 text-xs text-[var(--muted)]">
+              {s.findLevel}
+              <select
+                value={level}
+                onChange={(event) => setLevel(event.target.value as InstitutionLevel | '')}
+                className={CONTROL}
+              >
+                <option value="">{s.anyLevel}</option>
+                {Object.entries(s.levels).map(([value, label]) => (
+                  <option key={value} value={value}>
+                    {label}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label className="flex min-w-56 flex-col gap-1 text-xs text-[var(--muted)]">
+              {s.findSystem}
+              <select
+                value={system}
+                onChange={(event) => setSystem(event.target.value as InstitutionSystem | '')}
+                className={CONTROL}
+              >
+                <option value="">{s.anySystem}</option>
+                {Object.entries(s.systems).map(([value, label]) => (
+                  <option key={value} value={value}>
+                    {label}
+                  </option>
+                ))}
+              </select>
+            </label>
           </div>
-
-          <div className="mt-4">
-            <p className="text-xs font-medium text-[var(--muted)]">Capacidades relacionadas</p>
-            <p className="mt-1 text-xs">
-              {selected.dimensions.map((dimension) => PT_BR.dimensions[dimension]).join(', ') ||
-                'Nenhuma relação registrada'}
-            </p>
-          </div>
-
-          <div className="mt-5 border-t border-[var(--rule-soft)] pt-5">
-            <p className="text-xs font-medium text-[var(--muted)]">
-              {connections.length} {connections.length === 1 ? 'relação registrada' : 'relações registradas'}
-            </p>
-            <ul className="mt-2 space-y-3 text-xs">
-              {connections.map(({ edge, neighbor, direction }) => (
-                <li key={edge.id} className="leading-relaxed">
-                  <span className="text-[var(--muted)]">
-                    {INSTITUTION_RELATION_LABELS_PT_BR[edge.relation][direction]}{' '}
-                  </span>
-                  <button
-                    type="button"
-                    onClick={() => setSelectedId(neighbor.id)}
-                    className="font-medium underline decoration-[var(--rule)] underline-offset-4 hover:decoration-[var(--primary)]"
-                  >
-                    {neighbor.shortName}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <a
-            href={selected.source.url}
-            className="mt-5 inline-flex items-center gap-1.5 text-xs font-medium underline underline-offset-4"
-          >
-            Fonte institucional
-          </a>
-        </aside>
-      </div>
-
-      <section className="mt-16 border-t border-[var(--rule)] pt-10">
-        <div className="flex flex-wrap items-end justify-between gap-3">
-          <div>
-            <h2 className="text-2xl font-light sm:text-3xl">O primeiro recorte já pode ser auditado</h2>
-            <p className="mt-2 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-              {network.nodes.length} instituições e {network.edges.length} relações. Cada instituição
-              tem uma fonte, e cada linha da rede também.
-            </p>
-          </div>
-          <p className="text-xs tabular-nums text-[var(--muted)]">{filtered.length} exibidas</p>
         </div>
 
-        {filtered.length ? (
-          <div className="mt-6 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-            {filtered.map((node) => (
-              <button
-                key={node.id}
-                type="button"
-                aria-pressed={node.id === selected.id}
-                onClick={() => setSelectedId(node.id)}
-                className={`rounded-md border p-3 text-left transition-colors ${
-                  node.id === selected.id
-                    ? 'border-[var(--primary)] bg-[var(--surface-sunken)]'
-                    : 'border-[var(--rule)] hover:border-[var(--muted)]'
-                }`}
-              >
-                <span className="block text-xs font-medium">{node.shortName}</span>
-                <span className="mt-1 block text-xs text-[var(--muted)]">
-                  {INSTITUTION_SYSTEM_LABELS_PT_BR[node.system]}
-                </span>
-              </button>
+        <p className="mt-3 text-right text-xs tabular-nums text-[var(--muted)]">
+          {fill(s.shown, { n: filtered.length })}
+        </p>
+
+        {groups.length ? (
+          <div className="mt-4 space-y-6">
+            {groups.map((group) => (
+              <div key={group.system}>
+                <p className="mb-2 flex items-baseline justify-between gap-3 border-b border-[var(--rule-soft)] pb-1 text-xs font-medium">
+                  {s.systems[group.system]}
+                  <span className="tabular-nums text-[var(--muted)]">{group.members.length}</span>
+                </p>
+                <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+                  {group.members.map((node) => (
+                    <button
+                      key={node.id}
+                      type="button"
+                      aria-pressed={node.id === selected.id}
+                      onClick={() => select(node.id)}
+                      className={`rounded-md border p-3 text-left transition-colors ${
+                        node.id === selected.id
+                          ? 'border-[var(--primary)] bg-[var(--surface-sunken)]'
+                          : 'border-[var(--rule)] hover:border-[var(--muted)]'
+                      }`}
+                    >
+                      <span className="block text-xs font-medium">{node.shortName}</span>
+                      <span className="mt-1 flex flex-wrap items-baseline gap-x-2 text-xs text-[var(--muted)]">
+                        <span>{s.levels[node.level]}</span>
+                        <span className="tabular-nums">
+                          {fill(
+                            (degree.get(node.id) ?? 0) === 1 ? s.relationCountOne : s.relationCount,
+                            { n: degree.get(node.id) ?? 0 },
+                          )}
+                        </span>
+                      </span>
+                    </button>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         ) : (
-          <p className="mt-6 text-lg">Nenhuma instituição corresponde a esses filtros.</p>
+          <p className="mt-6 text-lg">{s.noMatch}</p>
         )}
       </section>
 
+      <section
+        ref={profile}
+        aria-live="polite"
+        className="mt-16 scroll-mt-8 border-t border-[var(--rule)] pt-10"
+      >
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="text-xs uppercase tracking-[0.05em] text-[var(--muted)]">
+            {s.levels[selected.level]} · {s.natures[selected.legalNature]}
+          </p>
+          <h2 className="mt-2 text-2xl font-light sm:text-3xl">{selected.officialName}</h2>
+          <p className="mt-3 text-lg leading-relaxed">{selected.summary}</p>
+        </div>
+
+        <div className="mx-auto mt-8 grid max-w-3xl gap-6 border-y border-[var(--rule-soft)] py-5 sm:grid-cols-3">
+          <div>
+            <p className="text-xs font-medium text-[var(--muted)]">{s.rolesHeading}</p>
+            <p className="mt-1 text-xs">
+              {selected.roles.map((role) => s.roles[role]).join(', ')}.
+            </p>
+          </div>
+          <div>
+            <p className="text-xs font-medium text-[var(--muted)]">{s.dimensionsHeading}</p>
+            <p className="mt-1 text-xs">
+              {selected.dimensions.map((dimension) => lex.dimensions[dimension]).join(', ') ||
+                s.noDimensions}
+            </p>
+          </div>
+          <div>
+            <p className="text-xs font-medium text-[var(--muted)]">
+              {fill(connections.length === 1 ? s.relationCountOne : s.relationCount, {
+                n: connections.length,
+              })}
+            </p>
+            <a
+              href={selected.source.url}
+              className="mt-1 inline-block text-xs font-medium underline underline-offset-4"
+            >
+              {s.sourceLink}
+            </a>
+          </div>
+        </div>
+
+        <div className="mt-10">
+          {connections.length ? (
+            <RelationLedger bands={bands} lex={lex} onSelect={select} />
+          ) : (
+            <p className="text-lg">{s.noRelations}</p>
+          )}
+        </div>
+
+        <p className="mt-8 text-xs text-[var(--muted)]">{s.ledgerHint}</p>
+      </section>
+
       <section className="mt-16 border-t border-[var(--rule)] pt-10">
-        <h2 className="text-2xl font-light sm:text-3xl">Os 26 estados e o Distrito Federal estão no plano</h2>
+        <h2 className="text-2xl font-light sm:text-3xl">{s.matrixHeading}</h2>
         <p className="mt-3 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-          São Paulo testa o método. Os próximos estados entram com a mesma régua: poderes estaduais,
-          controle, financiamento, dados, formação, ciência, regulação e entrega municipal.
+          {s.matrixIntro}
+        </p>
+        <div className="mt-6">
+          <RelationMatrix network={scopedNetwork} lex={lex} onSelect={select} />
+        </div>
+      </section>
+
+      <section className="mt-16 border-t border-[var(--rule)] pt-10">
+        <h2 className="text-2xl font-light sm:text-3xl">
+          A cobertura estadual cresce em camadas
+        </h2>
+        <p className="mt-3 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
+          São Paulo testa o método. As outras 26 UFs já têm um núcleo institucional inicial e entram
+          com a mesma régua para poderes estaduais, controle, financiamento, dados, formação, ciência,
+          regulação e entrega municipal.
         </p>
         <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {coverage.covered.map((area) => (
+          {coverage.pilot.map((area) => (
             <div key={area.jurisdictionCode} className="border-l-2 border-[var(--primary)] pl-3">
               <p className="text-xs font-medium">{area.label}</p>
               <p className="mt-1 text-xs text-[var(--muted)]">Piloto em curadoria</p>
+            </div>
+          ))}
+          {coverage.scaffold.map((area) => (
+            <div key={area.jurisdictionCode} className="border-l border-[var(--muted)] pl-3">
+              <p className="text-xs font-medium">{area.label}</p>
+              <p className="mt-1 text-xs text-[var(--muted)]">Núcleo inicial curado</p>
             </div>
           ))}
           {coverage.planned.map((area) => (

@@ -179,6 +179,20 @@ port 3888. That entry starts Next directly and does not use the proxy.
   sorts an agenda into raise, measure and hold. The country lede and the agenda
   document both call it, so both name the same leading dimension. Never re-sort
   an agenda inside a component. See D39.
+- The institution map publishes no node-link diagram. `INSTITUTION_RELATION_FAMILY`
+  in `packages/core/src/model/institutions.ts` is the only place a relation verb
+  is sorted into a family, and `InstitutionsView` renders every family in the
+  declared order, including the empty ones. Language reaches the view as one
+  `lex` prop and the vocabulary lives in `Lexicon.institutions`, never as
+  `*_PT_BR` imports in a component. Never lay an institution out by hand: every
+  surface derives from counts, because a country file grows. See D56, which
+  supersedes the interface D54 described.
+- The one whole-country picture is the system matrix, computed by
+  `buildInstitutionMatrix` in `packages/core/src/pipeline/institutions.ts` and
+  nowhere else. Its ramp is the three fixed breaks in `MATRIX_BANDS`, on the
+  count and never fitted to the data: a count is absolute, so the ramp holds
+  still across family filters and across countries. It stops below lime, because
+  the page spends its one accent elsewhere. See D58.
 - A generation date is metadata, never prose. It renders as a dateline under
   the title, from `agenda.generated` in the lexicon, and the intro that follows
   states what a score means. Never put a date back inside a sentence. See D40.

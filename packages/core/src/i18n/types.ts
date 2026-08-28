@@ -1,4 +1,12 @@
 import type { Dimension } from '../model/dimensions.js'
+import type {
+  InstitutionLegalNature,
+  InstitutionLevel,
+  InstitutionRelation,
+  InstitutionRelationFamily,
+  InstitutionRole,
+  InstitutionSystem,
+} from '../model/institutions.js'
 import type { ScoreBandId } from '../pipeline/bands.js'
 import type { ConfidenceBandId } from '../pipeline/confidence.js'
 
@@ -112,6 +120,7 @@ export type Lexicon = {
   legendRangeTop: string
   radar: RadarStrings
   agenda: AgendaStrings
+  institutions: InstitutionStrings
 }
 
 /**
@@ -129,4 +138,65 @@ export function fill(template: string, values: Record<string, string | number>):
   return template.replace(/\{(\w+)\}/g, (m, key: string) =>
     key in values ? String(values[key]) : m,
   )
+}
+
+/**
+ * The words the institution map needs. The vocabulary maps translate the model
+ * enums; the rest are the page's own labels. A missing language never reaches
+ * this file: the view reads one lexicon and nothing else, so adding a country
+ * or a language changes data and not components. See D56.
+ */
+export type InstitutionStrings = {
+  levels: Record<InstitutionLevel, string>
+  systems: Record<InstitutionSystem, string>
+  natures: Record<InstitutionLegalNature, string>
+  roles: Record<InstitutionRole, string>
+  /** The verb, read from each end of the relation. */
+  relations: Record<InstitutionRelation, { outgoing: string; incoming: string }>
+  /**
+   * One band per relation family. `empty` states that the map records no
+   * relation of that kind, which is a fact about the map and stays on screen.
+   */
+  families: Record<InstitutionRelationFamily, { label: string; empty: string }>
+  findHeading: string
+  findName: string
+  findNamePlaceholder: string
+  findLevel: string
+  findSystem: string
+  findJurisdiction: string
+  nationalJurisdiction: string
+  anyLevel: string
+  anySystem: string
+  /** {n} */
+  shown: string
+  noMatch: string
+  rolesHeading: string
+  dimensionsHeading: string
+  noDimensions: string
+  /** Column heading over the relations that reach the institution. */
+  incomingHeading: string
+  /** Column heading over the relations the institution exercises. */
+  outgoingHeading: string
+  ledgerHint: string
+  /** {n} */
+  relationCount: string
+  relationCountOne: string
+  noRelations: string
+  sourceLink: string
+  matrixHeading: string
+  matrixIntro: string
+  /** Axis caption over the row headers. */
+  matrixFrom: string
+  /** Axis caption over the column headers. */
+  matrixTo: string
+  matrixAllFamilies: string
+  matrixLegendLabel: string
+  /** {n} {from} {to}: the accessible name of a cell. */
+  matrixCell: string
+  /** {from} {to} */
+  matrixCellOne: string
+  /** {from} {to} */
+  matrixCellNone: string
+  /** {total} {filled} {cells} */
+  matrixSummary: string
 }
