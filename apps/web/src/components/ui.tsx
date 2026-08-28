@@ -95,7 +95,7 @@ export function Section({
   icon,
   children,
 }: {
-  title: string
+  title: React.ReactNode
   hint?: string
   /** Optional mark for the concept this section covers. Never the only cue. */
   icon?: React.ReactNode
@@ -417,7 +417,7 @@ export function RadarEvidenceLegend({
         <span>Thin evidence, hollow point. The dashes open further as confidence falls.</span>
       </li>
       <li>The point still sits at the score, because confidence never moves it.</li>
-      {interactive ? <li>Click any axis name to see every country on that dimension.</li> : null}
+      {interactive ? <li>Click any axis to see every country on that dimension.</li> : null}
     </ul>
   )
 }

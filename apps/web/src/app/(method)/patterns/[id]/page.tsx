@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import { COUNTRY_NAMES, DIMENSION_LABELS, INDICATORS_BY_ID } from '@ncb/core'
 import type { Dimension, EvidenceRecord } from '@ncb/core'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
+import { CapabilityLink } from '@/components/CapabilityLink'
 import {
   PatternLimits,
   PatternMechanism,
@@ -63,7 +64,14 @@ export default async function PatternPage({ params }: { params: Promise<{ id: st
 
       <Eyebrow>
         {country}
-        {dimension ? `, ${DIMENSION_LABELS[dimension].toLowerCase()}` : ''}
+        {dimension ? (
+          <>
+            {', '}
+            <CapabilityLink dimension={dimension}>
+              {DIMENSION_LABELS[dimension].toLowerCase()}
+            </CapabilityLink>
+          </>
+        ) : null}
       </Eyebrow>
       <PageTitle>{record.title}</PageTitle>
       <Headline>{record.claim}</Headline>
@@ -76,12 +84,11 @@ export default async function PatternPage({ params }: { params: Promise<{ id: st
       </div>
 
       <p className="mb-12 max-w-3xl text-xs leading-relaxed text-[var(--muted)]">
-        This record documents what {country} delivered. It bears on{' '}
+        This record documents what {country} delivered. It covers{' '}
         <Link href={indicatorHref(record.indicatorId)} className="underline underline-offset-4">
           {def?.name ?? record.indicatorId}
         </Link>
-        , an indicator with no comparable dataset, so the record stays outside every score and every
-        confidence. One country with a case study is still one country.
+        , an indicator with no comparable dataset. It stays outside the score and confidence.
       </p>
 
       {sameCountry.length > 0 ? (

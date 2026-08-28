@@ -24,7 +24,7 @@ import { capitalize, countWord } from '@/lib/words'
 export const metadata: Metadata = {
   title: 'Sources, NCB',
   description:
-    'Who publishes every number in the benchmark, which World Bank database each series comes from, and the exact request the ingester makes.',
+    'Benchmark publishers, World Bank databases, and the requests used to fetch the data.',
 }
 
 /** The series the request example is built from. Any fetched row would do. */
@@ -91,22 +91,21 @@ export default async function SourcesPage() {
       <Eyebrow>Sources</Eyebrow>
       <PageTitle>Every number here names its publisher</PageTitle>
       <Headline>
-        Of {INDICATORS.length} indicators, {fetched.length + manual.length} carry a value today:{' '}
-        {fetched.length} fetched from the World Bank API and {manual.length} read by hand off a
-        published table. The remaining {gaps.length + retired.length} rows name a source and hold no
-        number. Deleting them would raise confidence without adding evidence, so they stay.
+        {INDICATORS.length} indicators are listed here. {fetched.length + manual.length} have data:
+        {' '}{fetched.length} come from the World Bank API and {manual.length} from published tables.
+        The other {gaps.length + retired.length} have no value and remain visible.
       </Headline>
 
       <Section
-        title="Most of the data arrives through one API call per series"
-        hint={`The ingester asks the World Bank v2 API for one series at a time, all ${COUNTRY_ISO3.length} countries in a single request, every year from ${INGEST_FROM_YEAR}. Scoring reads the latest value per country and the rest becomes the trend layer.`}
+        title="The data comes from one API call per series"
+        hint={`The ingester requests one series for all ${COUNTRY_ISO3.length} countries, from ${INGEST_FROM_YEAR} onward. Scoring uses the latest value; older values feed trends.`}
         icon={<Icon name="globe" size={22} />}
       >
         {example ? (
           <>
             <p className="max-w-3xl text-lg leading-relaxed">
-              This is the request behind {example.name}, exactly as the ingester sends it.
-              Paste it into a browser and the response is the data this benchmark scored.
+              This is the request for {example.name}. Paste it into a browser to see the response
+              used by the benchmark.
             </p>
             <code className="mt-4 block overflow-x-auto whitespace-pre rounded bg-[var(--surface-sunken)] px-3 py-3 text-xs">
               {worldBankSeriesUrl({
@@ -121,11 +120,9 @@ export default async function SourcesPage() {
         ) : null}
 
         <p className="mt-6 max-w-3xl text-lg leading-relaxed">
-          The database id decides whether the call works at all. World Development Indicators is
-          the default and needs no source parameter. Every other database refuses its own series
-          codes without one, and answers that the indicator does not exist. Each registry row
-          stores the id its series needs, and the {countWord(databases.length)} databases below are
-          every one this project reaches into.
+          The database id is part of each registry row. World Development Indicators is the default;
+          other databases need a source parameter. These {countWord(databases.length)} databases are
+          the ones the project uses.
         </p>
 
         <Scroller>
@@ -155,8 +152,8 @@ export default async function SourcesPage() {
       </Section>
 
       <Section
-        title="Every publisher the registry names, and what it supplies today"
-        hint={`A publisher with no fetched rows is a plan rather than a feed: the registry names where the number would come from if somebody harmonized it. Values counts country cells, so one series across ${COUNTRY_ISO3.length} countries counts ${COUNTRY_ISO3.length} times.`}
+        title="Publishers and their data"
+        hint={`A publisher with no fetched rows is a planned source. Values count country cells: one series across ${COUNTRY_ISO3.length} countries counts ${COUNTRY_ISO3.length} times.`}
       >
         <Scroller>
           <Table>
@@ -201,9 +198,7 @@ export default async function SourcesPage() {
           </Table>
         </Scroller>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-          The {countWord(unnamed)} rows with no publisher named are the hardest part of the
-          collection agenda: the model asks for something and nobody has proposed a dataset that
-          would answer it. The{' '}
+          The {countWord(unnamed)} rows without a publisher are open collection questions. The{' '}
           <Link href="/indicators" className="underline underline-offset-4">
             registry
           </Link>{' '}
@@ -213,10 +208,8 @@ export default async function SourcesPage() {
 
       {manual.length > 0 ? (
         <Section
-          title={`${capitalize(countWord(manual.length))} ${
-            manual.length === 1 ? 'number is' : 'numbers are'
-          } typed in, and each one says where from`}
-          hint="Some publishers put their results in a report and offer no API. A value entered by hand carries the page it was read from and the date somebody read it, so the claim can be checked against the same table."
+          title={`${capitalize(countWord(manual.length))} ${manual.length === 1 ? 'value is' : 'values are'} entered by hand`}
+          hint="These publishers provide reports, not APIs. Each value keeps its source page and retrieval date."
         >
           <Scroller>
             <Table>
@@ -254,8 +247,8 @@ export default async function SourcesPage() {
       ) : null}
 
       <Section
-        title={`${capitalize(countWord(retired.length))} series stay in the registry and are never fetched`}
-        hint="A retired row has a working dataset behind it. This project rejected what the dataset measures and kept the row, so the decision stays challengeable and the coverage it used to fill still counts against confidence."
+        title={`${capitalize(countWord(retired.length))} retired series ${retired.length === 1 ? 'is' : 'are'} excluded`}
+        hint="A retired row has a dataset, but this project rejected its measure. It stays visible so the decision can be challenged and its missing coverage lowers confidence."
         icon={<Icon name="archive" size={22} />}
       >
         <Scroller>
@@ -289,9 +282,9 @@ export default async function SourcesPage() {
           </Table>
         </Scroller>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-          {capitalize(countWord(perception))} of them are perception composites, which record what
-          experts and firms say about a country. The exception is the homicide rate, retired once a
-          diagnostic showed it was carrying income into a trust score. The{' '}
+          {capitalize(countWord(perception))} are perception composites. The exception is the
+          homicide rate, retired after diagnostics showed it was carrying income into a trust score.
+          The{' '}
           <Link href={limitsHref} className="underline underline-offset-4">
             limits page
           </Link>{' '}
@@ -299,41 +292,36 @@ export default async function SourcesPage() {
         </p>
       </Section>
 
-      <Section title="The published files say all of this to a machine as well">
+      <Section title="Published files are machine-readable">
         <ul className="max-w-3xl list-disc space-y-3 pl-5 text-lg leading-relaxed">
           <li>
             <a href={docHref('data/out/datapackage.json')} className="underline underline-offset-4">
               datapackage.json
             </a>{' '}
-            is a Frictionless Data Package descriptor: every published file, its schema, the license
-            and the source list.
+            is a Frictionless Data Package descriptor listing the files, schemas, license and sources.
           </li>
           <li>
             <a href={docHref('data/observations/worldbank.json')} className="underline underline-offset-4">
               worldbank.json
             </a>{' '}
-            holds every fetched value with its year, its tier and the date it was retrieved, from{' '}
-            {INGEST_FROM_YEAR} on.
+            holds fetched values with their year, tier and retrieval date, from {INGEST_FROM_YEAR} on.
           </li>
           <li>
             <a href={docHref('data/observations/revisions.json')} className="underline underline-offset-4">
               revisions.json
             </a>{' '}
-            records what each fetch restated, added or dropped, so a publisher rewriting its own
-            history leaves a mark here.
+            records what each fetch restated, added or dropped.
           </li>
           <li>
             <a href={docHref('packages/core/src/model/indicators.ts')} className="underline underline-offset-4">
               indicators.ts
             </a>{' '}
-            is the registry itself. Publisher, series code, database id and route are declared there
-            and nowhere else, which is why this page can be generated instead of maintained.
+            is the registry. It declares each publisher, series code, database id and ingest route.
           </li>
         </ul>
         <Note>
-          Data is committed to the repository, so the site shows whatever the last data run
-          produced. Re-running the fetch reproduces the numbers, and any that moved appear in the
-          revision log.
+          Data is committed to the repository. The site shows the last data run, and changed values
+          appear in the revision log.
         </Note>
       </Section>
     </>

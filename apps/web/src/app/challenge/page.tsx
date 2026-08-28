@@ -25,7 +25,7 @@ export const dynamic = 'force-dynamic'
 export const metadata: Metadata = {
   title: 'Challenge this, NCB',
   description:
-    'What would overturn each decision, what is known to be wrong today, how to file an objection, and how to cite the dataset.',
+    'Known failures, decisions under review, ways to object, and citation details.',
 }
 
 export default async function ChallengePage() {
@@ -45,16 +45,15 @@ export default async function ChallengePage() {
       <Eyebrow>Challenge this</Eyebrow>
       <PageTitle>The benchmark is built to be argued with</PageTitle>
       <Headline>
-        A measuring instrument earns its authority by surviving attempts to break it. Every decision
-        here states the evidence that would overturn it, every known failure is published beside the
-        scores it affects, and the data and code are open. Bring a series, a case or an objection.
+        Every decision names the evidence that would overturn it. Known failures sit beside the
+        scores they affect. Bring a series, a case or an objection.
       </Headline>
 
       <Section
         title="Start with what we already think is wrong"
-        hint={`${capitalize(countWord(artefacts.length))} artefacts are open: places where the model produces a number that misdescribes the world rather than measuring it.${
+        hint={`${capitalize(countWord(artefacts.length))} artefacts are open: places where the model produces a number that misdescribes the world.${
           worst > 0
-            ? ` ${capitalize(countWord(worst))} ${worst === 1 ? 'is' : 'are'} marked high, and they name the same problem: the dimensions this project most wants to measure are the ones public data covers worst.`
+            ? ` ${capitalize(countWord(worst))} ${worst === 1 ? 'is' : 'are'} marked high. Public data covers the dimensions this project most wants to measure worst.`
             : ''
         }`}
       >
@@ -91,13 +90,13 @@ export default async function ChallengePage() {
           <Link href={limitsHref} className="underline underline-offset-4">
             limits page
           </Link>{' '}
-          carries each one in full, with the diagnostic behind it and what a fix would take.
+          carries the full entry, its diagnostic and a possible fix.
         </p>
       </Section>
 
       <Section
         title="Every decision names the evidence that would overturn it"
-        hint="This is the same clause from every entry in the decision log, newest first, in one list. A decision is never edited once recorded: bring the evidence and it gets superseded by a later entry, so the reasoning stays readable end to end."
+        hint="The decision log lists each challenge clause, newest first. Decisions stay fixed; new evidence adds a superseding entry."
       >
         {challenges.length > 0 ? (
           <Scroller>
@@ -134,36 +133,32 @@ export default async function ChallengePage() {
           <Link href={decisionsHref} className="underline underline-offset-4">
             decision log
           </Link>{' '}
-          holds all {challenges.length} entries with the choice, the reason and the cost.
+          holds {challenges.length} entries with each choice, reason and cost.
         </p>
       </Section>
 
       <Section
-        title="Four ways to put an objection on the record"
-        hint="All four run through the repository, in the open, where the argument stays readable after it is settled."
+        title="Ways to object"
+        hint="Use the repository so the argument stays visible after it is settled."
       >
         <ul className="max-w-3xl space-y-4 text-lg leading-relaxed">
           <li>
-            <strong className="font-medium">Dispute a decision.</strong> Open an issue naming the
-            decision id and the evidence. A decision that falls is superseded by a new entry, never
-            rewritten, so the reasoning behind the old one stays visible.
+            <strong className="font-medium">Dispute a decision.</strong> Name the decision id and
+            evidence in an issue. A new entry supersedes a decision; the old one stays visible.
           </li>
           <li>
-            <strong className="font-medium">Fill a gap.</strong> Point at a published series that
-            covers at least two countries on comparable definitions, opens without authentication,
-            and names its publisher, reference period and method. National statistical sources are
-            wanted: several gaps are measurable inside one country today and internationally never.
+            <strong className="font-medium">Fill a gap.</strong> Point to a published series covering
+            at least two countries with comparable definitions, an open URL, publisher, reference
+            period and method. National statistical sources are welcome.
           </li>
           <li>
-            <strong className="font-medium">File an evidence record.</strong> A documented national
-            delivery, with one published number and a required statement of what the case does not
-            show. Records never enter a score, and one in five has to document erosion or collapse,
-            because a corpus of successes is a brochure.
+            <strong className="font-medium">File an evidence record.</strong> Document a national
+            delivery with one published number and a statement of what it does not show. Records
+            never enter a score, and one in five must document erosion or collapse.
           </li>
           <li>
-            <strong className="font-medium">Add a language.</strong> A lexicon is one data file. The
-            ground layer stays English, so a translated page can always be checked against the file
-            that generated it.
+            <strong className="font-medium">Add a language.</strong> Add a lexicon data file. The
+            English ground layer lets readers check the translation against its source.
           </li>
         </ul>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed">
@@ -178,7 +173,7 @@ export default async function ChallengePage() {
           <a href={docHref(WHY_DOC)} className="underline underline-offset-4">
             {WHY_DOC}
           </a>{' '}
-          states the claim under test and what would sink it. Objections go to{' '}
+          states the claim under test. Objections go to{' '}
           <a href={ISSUES_URL} className="underline underline-offset-4">
             the issue tracker
           </a>
@@ -188,7 +183,7 @@ export default async function ChallengePage() {
 
       <Section
         title="How to cite it"
-        hint="A score is a position inside one dataset version. Quote the version with the number, because adding a country rebases the frame and restates every score."
+        hint="Quote the dataset version with every score. Adding a country rebases the frame and restates all scores."
       >
         <code className="block overflow-x-auto rounded bg-[var(--surface-sunken)] px-3 py-3 text-xs">
           Envisioning ({year}). NCB, the National Capability Benchmark, dataset {version}. {REPO_URL}
@@ -198,16 +193,15 @@ export default async function ChallengePage() {
           <a href={docHref(LICENSE_DOC)} className="underline underline-offset-4">
             {LICENSE_DOC}
           </a>
-          . The data carries the terms of the bodies that published it, which{' '}
+          . Data keeps the terms of its publishers, listed in{' '}
           <a href={docHref(NOTICE_DOC)} className="underline underline-offset-4">
             {NOTICE_DOC}
           </a>{' '}
-          sets out source by source. Keep the attribution when you redistribute a number.
+          . Keep the attribution when redistributing a number.
         </p>
         <Note>
-          This is a prototype and it says so in its own numbers. Read the limits before quoting a
-          score, and read the confidence beside it: a dimension in the thin band rests on one or two
-          indicators and cannot carry an argument alone.
+          This is a prototype. Read the limits and the confidence beside a score; a thin dimension
+          rests on one or two indicators and cannot carry an argument alone.
         </Note>
       </Section>
     </>

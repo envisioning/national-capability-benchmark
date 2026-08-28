@@ -9,6 +9,7 @@ import {
 } from '@ncb/core'
 import type { Dimension } from '@ncb/core'
 import { DataTable } from '@/components/DataTable'
+import { CapabilityLink } from '@/components/CapabilityLink'
 import { Eyebrow, Headline, Meta, PageTitle, PanelProvenanceNote, Section } from '@/components/ui'
 import type { Diagnostics } from '@ncb/core'
 import { capitalize, countWord } from '@/lib/words'
@@ -42,9 +43,8 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
       <Eyebrow>Diagnostics</Eyebrow>
       <PageTitle>The model is tested against its own failure modes</PageTitle>
       <Headline>
-        Every number here asks whether the benchmark is measuring capability or something easier:
-        income per head, one dataset wearing two names, or nothing at all. Failed tests are
-        published, because a failure the reader can see is worth more than a clean page.
+        These checks ask whether the benchmark measures capability, income per head, duplicate data
+        or nothing at all. Failed tests stay visible.
       </Headline>
       <p className="mb-12 flex flex-wrap gap-2">
         <Meta icon="calendar">computed {diag.generatedAt.slice(0, 10)}</Meta>
@@ -53,7 +53,7 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
 
       <Section
         title={`${countWord(wealthTracking)[0]?.toUpperCase()}${countWord(wealthTracking).slice(1)} of nine dimensions track income per head`}
-        hint={`Correlation with log GDP per capita at ${WEALTH_CORRELATION_THRESHOLD} or above counts as tracking income. A dimension that only reproduces GDP per capita is not measuring capability. These correlations run over ${n} countries, so read every coefficient as a hint.`}
+        hint={`A correlation with log GDP per capita of ${WEALTH_CORRELATION_THRESHOLD} or more counts as tracking income. These results use ${n} countries, so treat each coefficient as a hint.`}
       >
         <DataTable
           rows={diag.dimensionVsGdp}
@@ -64,7 +64,7 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
               key: 'dimension',
               label: 'Dimension',
               sort: (d) => DIMENSION_LABELS[d.dimension],
-              render: (d) => DIMENSION_LABELS[d.dimension],
+              render: (d) => <CapabilityLink dimension={d.dimension} />,
             },
             {
               key: 'pearson',
@@ -89,13 +89,11 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
         title={
           emptied.length === 0
             ? 'Every dimension survives without wealth-correlated data'
-            : `${emptied.map((d: Dimension) => DIMENSION_LABELS[d]).join(' and ')} ${emptied.length === 1 ? 'does' : 'do'} not survive without wealth-correlated data`
+            : `${emptied.map((d: Dimension) => DIMENSION_LABELS[d]).join(' and ')} ${emptied.length === 1 ? 'fails' : 'fail'} without wealth-correlated data`
         }
-        hint={`${diag.gdpStrippedTest.excluded.length} indicators correlate with log GDP per capita at ${WEALTH_CORRELATION_THRESHOLD} or above. This is the profile shift when they are removed.${
+        hint={`${diag.gdpStrippedTest.excluded.length} indicators meet the ${WEALTH_CORRELATION_THRESHOLD} correlation threshold. This table shows the shift after removing them.${
           emptied.length
-            ? ` ${emptied
-                .map((d: Dimension) => DIMENSION_LABELS[d])
-                .join(' and ')} lose every measured indicator and cannot be scored at all without them.`
+            ? ` ${emptied.map((d: Dimension) => DIMENSION_LABELS[d]).join(' and ')} lose every measured indicator.`
             : ' Every dimension keeps at least one measured indicator.'
         }`}
       >
@@ -108,7 +106,7 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
               key: 'dimension',
               label: 'Dimension',
               sort: (r) => DIMENSION_LABELS[r.dimension],
-              render: (r) => DIMENSION_LABELS[r.dimension],
+              render: (r) => <CapabilityLink dimension={r.dimension} />,
             },
             {
               key: 'shift',
@@ -136,7 +134,7 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
 
       <Section
         title="Some indicators are measuring money"
-        hint="Correlation with log GDP per capita, next to the suspicion we wrote into the registry before looking. Where the two disagree, the registry was wrong."
+        hint="Correlation with log GDP per capita beside the registry's prior. Differences show where that prior was wrong."
       >
         <DataTable
           rows={diag.indicatorVsGdp}
@@ -157,7 +155,7 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
               key: 'dimension',
               label: 'Dimension',
               sort: (i) => DIMENSION_LABELS[i.dimension],
-              render: (i) => muted(DIMENSION_LABELS[i.dimension]),
+              render: (i) => muted(<CapabilityLink dimension={i.dimension} />),
             },
             {
               key: 'class',
@@ -184,8 +182,8 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
       </Section>
 
       <Section
-        title="One row can carry a whole dimension's wealth signal"
-        hint="The table above tests each indicator on its own. This one tests what the indicator does to the dimension it sits in, by recomputing that dimension with the row dropped. A positive delta means the dimension tracks income more because this indicator is in it. That is the number the benchmark's central claim actually rests on, and an indicator can sit under the 0.70 line above and still appear at the top here."
+        title="A row can carry the dimension's wealth signal"
+        hint="This table recomputes each dimension without one indicator. A positive delta means that row makes the dimension track income more, even if its own correlation is below the threshold."
       >
         <DataTable
           rows={diag.wealthAttribution}
@@ -202,7 +200,7 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
               key: 'dimension',
               label: 'Dimension',
               sort: (i) => DIMENSION_LABELS[i.dimension],
-              render: (i) => muted(DIMENSION_LABELS[i.dimension]),
+              render: (i) => muted(<CapabilityLink dimension={i.dimension} />),
             },
             {
               key: 'with',
@@ -244,9 +242,9 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
               ? 'The panel estimates do not track income per head'
               : `${capitalize(countWord(panelTracking.length))} of nine panel estimates track income per head`
           }
-          hint={`A panel of models is not independent evidence. It reads the same published record the indicators come from, so a dimension the data cannot measure can return as a panel number that restates income per head. The panel column takes the same test as the indicators, with the indicator score for the same countries beside it.${
+          hint={`A model panel reads the same published record as the indicators, so it is not independent evidence. The panel gets the same GDP test, with indicator results for the same countries beside it.${
             panelBackfill.length > 0
-              ? ` ${panelBackfill.map((d) => DIMENSION_LABELS[d.dimension]).join(' and ')} publish no indicator score, so the panel is the only candidate for filling them.`
+              ? ` ${panelBackfill.map((d) => DIMENSION_LABELS[d.dimension]).join(' and ')} have no indicator score, so the panel is the only candidate.`
               : ''
           }`}
         >
@@ -260,7 +258,7 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
                 key: 'dimension',
                 label: 'Dimension',
                 sort: (d) => DIMENSION_LABELS[d.dimension],
-                render: (d) => DIMENSION_LABELS[d.dimension],
+                render: (d) => <CapabilityLink dimension={d.dimension} />,
               },
               {
                 key: 'panelR',
@@ -312,7 +310,7 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
             ? 'No indicator pair is carrying the same information'
             : 'Some indicators are carrying the same information'
         }
-        hint={`Pairs correlating at ${REDUNDANCY_THRESHOLD} or above. A pair here is a candidate for removal. It is not proof that either one has to go.`}
+        hint={`Pairs at ${REDUNDANCY_THRESHOLD} correlation or above. They are candidates for review, not automatic removals.`}
       >
         <DataTable
           rows={diag.redundantIndicatorPairs}
@@ -338,7 +336,7 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
             ? 'No two dimensions have collapsed into one'
             : `${countWord(diag.duplicateDimensionCandidates.length)[0]?.toUpperCase()}${countWord(diag.duplicateDimensionCandidates.length).slice(1)} dimension pair${diag.duplicateDimensionCandidates.length === 1 ? ' has' : 's have'} collapsed into one`
         }
-        hint={`Dimension pairs sorted by correlation. Anything at ${DIMENSION_OVERLAP_THRESHOLD} or above is a candidate for merging.`}
+        hint={`Dimension pairs sorted by correlation. Pairs at ${DIMENSION_OVERLAP_THRESHOLD} or above are candidates for review.`}
       >
         <DataTable
           rows={diag.dimensionPairs}
@@ -349,13 +347,13 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
               key: 'a',
               label: 'Dimension A',
               sort: (p) => DIMENSION_LABELS[p.a as Dimension],
-              render: (p) => DIMENSION_LABELS[p.a as Dimension],
+              render: (p) => <CapabilityLink dimension={p.a as Dimension} />,
             },
             {
               key: 'b',
               label: 'Dimension B',
               sort: (p) => DIMENSION_LABELS[p.b as Dimension],
-              render: (p) => DIMENSION_LABELS[p.b as Dimension],
+              render: (p) => <CapabilityLink dimension={p.b as Dimension} />,
             },
             {
               key: 'r',
@@ -371,10 +369,10 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
       <Section
         title={
           best && worst
-            ? `Measurement quality runs from ${DIMENSION_LABELS[best.dimension]} down to ${DIMENSION_LABELS[worst.dimension]}`
-            : 'Measurement quality varies across the nine dimensions'
+            ? `Evidence is strongest for ${DIMENSION_LABELS[best.dimension]} and weakest for ${DIMENSION_LABELS[worst.dimension]}`
+            : 'Evidence quality varies across the nine dimensions'
         }
-        hint={`Subjectivity share counts perception proxies plus indicators with no dataset at all.${
+        hint={`Subjectivity share counts perception proxies and indicators with no dataset.${
           worst
             ? ` ${DIMENSION_LABELS[worst.dimension]} is the weakest: ${countWord(worst.indicatorsObserved)} of its ${countWord(worst.indicatorsDefined)} indicators ${worst.indicatorsObserved === 1 ? 'is' : 'are'} observed and its mean confidence is ${worst.meanConfidence.toFixed(2)}.`
             : ''
@@ -389,7 +387,7 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
               key: 'dimension',
               label: 'Dimension',
               sort: (m) => DIMENSION_LABELS[m.dimension],
-              render: (m) => DIMENSION_LABELS[m.dimension],
+              render: (m) => <CapabilityLink dimension={m.dimension} />,
             },
             {
               key: 'defined',
@@ -439,7 +437,7 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
 
       <Section
         title={`${Math.round(diag.outOfFrame.share * 100)}% of observed values clamp at the frame edge`}
-        hint={`${diag.outOfFrame.clampedCells} of ${diag.outOfFrame.observedCells} observed cells sit outside the range the frame covers, so their positions clamp to 0 or 100 and information is lost. A current value cannot fall outside a frame its own country helped build, so a clamp here comes from a value the published frame did not see. The counts below name where it concentrates.`}
+        hint={`${diag.outOfFrame.clampedCells} of ${diag.outOfFrame.observedCells} observed cells fall outside the frame and clamp to 0 or 100. Current values cannot do this; these are historical or late-arriving values.`}
       >
         <DataTable
           rows={diag.outOfFrame.perCountry.slice(0, 15)}
@@ -464,8 +462,8 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
       </Section>
 
       <Section
-        title="This is the list Envisioning would have to collect itself"
-        hint="Each of these is specified in the model, unmeasured, and already lowering the confidence scores. They stay in the registry so the gap is visible."
+        title="These indicators still need data"
+        hint="The model specifies them, but no adequate dataset covers them. They stay in the registry and lower confidence."
       >
         <DataTable
           rows={gaps}
@@ -476,7 +474,7 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
               key: 'dimension',
               label: 'Dimension',
               sort: (g) => DIMENSION_LABELS[g.dimension],
-              render: (g) => muted(DIMENSION_LABELS[g.dimension]),
+              render: (g) => muted(<CapabilityLink dimension={g.dimension} />),
             },
             { key: 'name', label: 'Indicator', sort: (g) => g.name, render: (g) => g.name },
             {
@@ -485,15 +483,15 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
               sort: (g) => g.publisher,
               render: (g) => muted(g.publisher),
             },
-            { key: 'reason', label: 'Why it is not in yet', render: (g) => muted(g.reason) },
+              { key: 'reason', label: 'Why it is missing', render: (g) => muted(g.reason) },
           ]}
         />
       </Section>
 
       {retired.length > 0 ? (
         <Section
-          title="These datasets exist and the project rejected them"
-          hint="A retired indicator keeps its row and lowers confidence exactly as a gap does. The difference is that a dataset exists: it was examined and turned down, with the reason on the record."
+          title="These datasets were rejected"
+          hint="Retired rows stay in the registry and lower confidence like gaps. The reason for each rejection is recorded."
         >
           <DataTable
             rows={retired}
@@ -504,7 +502,7 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
                 key: 'dimension',
                 label: 'Dimension',
                 sort: (g) => DIMENSION_LABELS[g.dimension],
-                render: (g) => muted(DIMENSION_LABELS[g.dimension]),
+                render: (g) => muted(<CapabilityLink dimension={g.dimension} />),
               },
               { key: 'name', label: 'Indicator', sort: (g) => g.name, render: (g) => g.name },
               {

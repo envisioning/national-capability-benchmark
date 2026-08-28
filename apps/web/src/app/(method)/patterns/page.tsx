@@ -8,7 +8,7 @@ export const dynamic = 'force-dynamic'
 export const metadata = {
   title: 'Patterns, NCB',
   description:
-    'Documented national deliveries, filed against the indicators that should have measured them: the number, the mechanism, and its limits.',
+    'Documented national deliveries, with their numbers, mechanisms and limits.',
 }
 
 export default async function PatternsPage({
@@ -34,16 +34,15 @@ export default async function PatternsPage({
       </Eyebrow>
       <PageTitle>What countries actually did</PageTitle>
       <Headline>
-        Every record here is a thing a country built, filed against the indicator that should have
-        measured it and could not. The number is sourced. The{' '}
-        <Highlight>mechanism</Highlight> is our reading, and it is the part that can travel.
+        Each record describes something a country built, filed against an indicator that could not
+        measure it. The number is sourced. The{' '}
+        <Highlight>mechanism</Highlight> is our reading and the part that may travel.
       </Headline>
       <p className="mb-12 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-        A score says how a country is doing. This says what it did, how the move worked and what had
-        to be true first. Copying a form rarely works. Understanding a mechanism and rebuilding it
-        under different conditions sometimes does, and the preconditions are where most attempts
-        fail. {withPattern.length} of {records.length} records carry a mechanism so far. Each record
-        has its own page, and none of this enters any score.
+        A score says how a country is doing. These records say what it did, how the move worked and
+        what it needed first. Copying a form rarely works. Rebuilding the mechanism under different
+        conditions sometimes does. {withPattern.length} of {records.length} records include one, and
+        none of this enters a score.
       </p>
 
       <PatternsView records={records} initial={filters} />

@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import Link from 'next/link'
 import { DATASET_VERSION, LICENSE_DOC, REPO_URL, docHref } from '@ncb/core'
-import { LanguageSwitch, NavLinks } from '@/components/NavLinks'
-import { challengeHref } from '@/lib/links'
+import { LanguageSwitch } from '@/components/NavLinks'
+import { FooterNav, HeaderNav } from '@/components/SiteNav'
 import './globals.css'
 
 /*
@@ -55,7 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </a>
 
         <header className="w-full border-b border-[var(--rule)]">
-          <div className="m-auto flex max-w-6xl flex-wrap items-center gap-x-8 gap-y-4 px-6 py-6 sm:px-12">
+          <div className="m-auto flex max-w-6xl flex-wrap items-start gap-x-8 gap-y-4 px-6 py-6 sm:px-12">
             {/* The lockup: the short name carries the size, the long name sits
                 under it in three lines so the block stays narrow beside the nav. */}
             <Link href="/" className="flex flex-col leading-none">
@@ -73,7 +73,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 Benchmark
               </span>
             </Link>
-            <NavLinks />
+            <HeaderNav />
             {/* Language is an interpretation layer, not a section, so the switch
                 sits apart from the nav and appears only where a counterpart
                 page exists. See D35. */}
@@ -88,21 +88,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <footer className="w-full border-t border-[var(--rule)] bg-[var(--surface-sunken)]">
           <div className="m-auto max-w-6xl px-6 py-12 sm:px-12">
             <p className="max-w-3xl text-lg leading-relaxed">
-              Envisioning is an emerging technology research institute and advisory, operating
-              since 2010.
+              Envisioning is a technology research institute and advisory.
             </p>
             <p className="mt-4 max-w-3xl text-xs text-[var(--muted)]">
-              Scores are a position from 0 to 100 against a frame built from all the countries
-              measured. Adding a country rebases that frame, so the country set only changes with a
-              versioned release. Confidence is reported beside every score and never inside it.
+              Scores run from 0 to 100 against a frame built from all measured countries. Adding a
+              country rebases the frame and requires a new version. Confidence sits beside each score.
             </p>
-            {/* The one place every page names the dataset it is showing, where the
-                code lives and how to argue with it. See D50. */}
-            <p className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-xs text-[var(--muted)]">
+            <FooterNav />
+            {/* The one place every page names the dataset it is showing and where the code lives. */}
+            <p className="mt-10 flex flex-wrap gap-x-6 gap-y-2 border-t border-[var(--rule)] pt-6 text-xs text-[var(--muted)]">
               <span>Dataset {DATASET_VERSION}</span>
-              <Link href={challengeHref} className="hover:text-[var(--foreground)]">
-                Challenge this
-              </Link>
               <a href={REPO_URL} className="hover:text-[var(--foreground)]">
                 Source and data on GitHub
               </a>
