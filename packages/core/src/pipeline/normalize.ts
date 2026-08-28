@@ -29,6 +29,8 @@ export function applyTransform(
     case 'per_million_population':
       if (denominator === null || denominator <= 0) return null
       return (raw / denominator) * 1_000_000
+    case 'distance_from_100':
+      return Math.abs(raw - 100)
     default:
       return raw
   }

@@ -163,6 +163,7 @@ export const PT_BR: Lexicon = {
     regulatory_quality: 'Qualidade regulatória',
     logistics_performance: 'Desempenho logístico',
     time_to_export: 'Tempo de exportação na fronteira',
+    budget_execution_fidelity: 'Fidelidade à execução orçamentária',
     university_industry_collaboration: 'Colaboração universidade-empresa',
     civil_society_strength: 'Força da sociedade civil',
     public_private_collaboration: 'Colaboração público-privada',

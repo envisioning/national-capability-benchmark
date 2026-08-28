@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-28T16:53:27.227Z",
-  "version": "4.0.0",
+  "generatedAt": "2026-08-28T18:10:07.592Z",
+  "version": "4.1.0",
   "country": {
     "country": "Panama",
     "iso3": "PAN",
@@ -1710,20 +1710,20 @@
         ]
       },
       "coordination": {
-        "score": null,
-        "observedIndicators": 1,
-        "belowCoverageFloor": true,
-        "confidence": 0.079,
+        "score": 77.6,
+        "observedIndicators": 2,
+        "belowCoverageFloor": false,
+        "confidence": 0.158,
         "confidenceParts": {
-          "coverage": 0.143,
-          "recency": 0.583,
+          "coverage": 0.25,
+          "recency": 0.667,
           "sourceQuality": 0.95
         },
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": null,
-        "blendedFrom": "none",
+        "blendedScore": 77.6,
+        "blendedFrom": "indicators",
         "momentum": [],
         "indicators": [
           {
@@ -1818,6 +1818,112 @@
                 "year": 2019,
                 "raw": 24,
                 "normalized": 85.6,
+                "tier": "international_organization"
+              }
+            ],
+            "status": "observed"
+          },
+          {
+            "indicatorId": "budget_execution_fidelity",
+            "name": "Budget execution fidelity",
+            "measurementClass": "C",
+            "raw": 87.873,
+            "transformed": 12.127,
+            "normalized": 69.6,
+            "year": 2021,
+            "source": "World Bank (GF.XPD.BUDG.ZS)",
+            "sourceTier": "international_organization",
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [
+              {
+                "year": 2007,
+                "raw": 102.865,
+                "normalized": 93,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2008,
+                "raw": 108.189,
+                "normalized": 79.5,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2009,
+                "raw": 101.461,
+                "normalized": 96.6,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2010,
+                "raw": 105.146,
+                "normalized": 87.3,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2011,
+                "raw": 100.079,
+                "normalized": 100,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2012,
+                "raw": 106.182,
+                "normalized": 84.6,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2013,
+                "raw": 101.558,
+                "normalized": 96.3,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2014,
+                "raw": 97.572,
+                "normalized": 94.1,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2015,
+                "raw": 96.062,
+                "normalized": 90.3,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2016,
+                "raw": 99.279,
+                "normalized": 98.5,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2017,
+                "raw": 95.828,
+                "normalized": 89.7,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2018,
+                "raw": 92.337,
+                "normalized": 80.9,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2019,
+                "raw": 102.718,
+                "normalized": 93.4,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2020,
+                "raw": 83.998,
+                "normalized": 59.8,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2021,
+                "raw": 87.873,
+                "normalized": 69.6,
                 "tier": "international_organization"
               }
             ],

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-28T16:53:27.227Z",
-  "version": "4.0.0",
+  "generatedAt": "2026-08-28T18:10:07.592Z",
+  "version": "4.1.0",
   "country": {
     "country": "South Korea",
     "iso3": "KOR",
@@ -2015,20 +2015,20 @@
         ]
       },
       "coordination": {
-        "score": null,
-        "observedIndicators": 1,
-        "belowCoverageFloor": true,
-        "confidence": 0.079,
+        "score": 90.6,
+        "observedIndicators": 2,
+        "belowCoverageFloor": false,
+        "confidence": 0.178,
         "confidenceParts": {
-          "coverage": 0.143,
-          "recency": 0.583,
+          "coverage": 0.25,
+          "recency": 0.75,
           "sourceQuality": 0.95
         },
         "delphiScore": 75,
         "delphiIqr": 0,
         "delphiDissent": false,
-        "blendedScore": 75,
-        "blendedFrom": "delphi",
+        "blendedScore": 90.6,
+        "blendedFrom": "indicators",
         "momentum": [],
         "indicators": [
           {
@@ -2123,6 +2123,28 @@
                 "year": 2019,
                 "raw": 13.375,
                 "normalized": 92,
+                "tier": "international_organization"
+              }
+            ],
+            "status": "observed"
+          },
+          {
+            "indicatorId": "budget_execution_fidelity",
+            "name": "Budget execution fidelity",
+            "measurementClass": "C",
+            "raw": 95.616,
+            "transformed": 4.384,
+            "normalized": 89.2,
+            "year": 2023,
+            "source": "World Bank (GF.XPD.BUDG.ZS)",
+            "sourceTier": "international_organization",
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [
+              {
+                "year": 2023,
+                "raw": 95.616,
+                "normalized": 89.2,
                 "tier": "international_organization"
               }
             ],

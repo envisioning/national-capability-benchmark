@@ -34,7 +34,12 @@ export const Direction = z.enum(['higher_better', 'lower_better'])
 export type Direction = z.infer<typeof Direction>
 
 /** How a raw fetched series becomes the analysed value. */
-export const Transform = z.enum(['none', 'per_million_population', 'log10'])
+export const Transform = z.enum([
+  'none',
+  'per_million_population',
+  'log10',
+  'distance_from_100',
+])
 export type Transform = z.infer<typeof Transform>
 
 export const DimensionEnum = z.enum(DIMENSIONS)

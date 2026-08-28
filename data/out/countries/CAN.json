@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-28T16:53:27.227Z",
-  "version": "4.0.0",
+  "generatedAt": "2026-08-28T18:10:07.592Z",
+  "version": "4.1.0",
   "country": {
     "country": "Canada",
     "iso3": "CAN",
@@ -1748,9 +1748,9 @@
         "score": null,
         "observedIndicators": 1,
         "belowCoverageFloor": true,
-        "confidence": 0.079,
+        "confidence": 0.069,
         "confidenceParts": {
-          "coverage": 0.143,
+          "coverage": 0.125,
           "recency": 0.583,
           "sourceQuality": 0.95
         },
@@ -1857,6 +1857,21 @@
               }
             ],
             "status": "observed"
+          },
+          {
+            "indicatorId": "budget_execution_fidelity",
+            "name": "Budget execution fidelity",
+            "measurementClass": "C",
+            "raw": null,
+            "transformed": null,
+            "normalized": null,
+            "year": null,
+            "source": "World Bank (GF.XPD.BUDG.ZS)",
+            "sourceTier": null,
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [],
+            "status": "missing"
           },
           {
             "indicatorId": "university_industry_collaboration",
