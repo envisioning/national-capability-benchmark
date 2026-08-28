@@ -148,7 +148,7 @@ export function AgendaView({
                     </span>
                   </Td>
                   <Td align="right">
-                    <Score value={d.score} size="sm" />
+                    <Score value={d.score} size="sm" nullLabel={s.noScore} />
                   </Td>
                   <Td>
                     <ConfidenceBar value={d.confidence} />
@@ -159,8 +159,8 @@ export function AgendaView({
             </tbody>
           </Table>
         </Scroller>
-        <ScoreLegend />
-        <ConfidenceLegend />
+        <ScoreLegend lex={lex} />
+        <ConfidenceLegend lex={lex} />
       </Section>
 
       {raise.length > 0 ? (
@@ -220,7 +220,7 @@ export function AgendaView({
                   dimension={d.dimension}
                   name={lex.dimensions[d.dimension]}
                   question={lex.questions[d.dimension]}
-                  score={<Score value={d.score} size="sm" />}
+                  score={<Score value={d.score} size="sm" nullLabel={s.noScore} />}
                   confidence={d.confidence}
                   rows={rows}
                 />
@@ -275,7 +275,7 @@ export function AgendaView({
               <li key={d.dimension} className="flex flex-wrap items-center gap-2">
                 <Icon name={DIMENSION_ICON[d.dimension]} size={15} className="text-[var(--muted)]" />
                 {lex.dimensions[d.dimension]}
-                <Score value={d.score} size="sm" />
+                <Score value={d.score} size="sm" nullLabel={s.noScore} />
                 <ConfidenceBar value={d.confidence} />
               </li>
             ))}

@@ -4,14 +4,17 @@ import {
   COUNTRY_ISO3,
   GDP_PER_CAPITA_CODE,
   INDICATORS,
+  INGEST_FROM_YEAR,
+  WB_API_BASE,
+  WB_DEFAULT_DATABASE,
   worldBankSeries,
+  worldBankSeriesUrl,
 } from '../model/index.js'
 import { ObservationFile, RevisionFile } from '../model/index.js'
 import type { Observation, Revision, RevisionRun } from '../model/index.js'
 import { CONTEXT_PREFIX, DENOMINATOR_PREFIX } from './diagnostics.js'
 import { FILES, SNAPSHOT_DIR } from './paths.js'
 
-const API = 'https://api.worldbank.org/v2'
 const COUNTRY_PATH = COUNTRY_ISO3.join(';')
 
 type WbRow = {
@@ -25,10 +28,13 @@ async function fetchSeries(
   sourceId: number,
   fromYear: number,
 ): Promise<WbRow[]> {
-  const url =
-    `${API}/country/${COUNTRY_PATH}/indicator/${series}` +
-    `?format=json&per_page=3000&date=${fromYear}:${new Date().getFullYear()}` +
-    (sourceId === 2 ? '' : `&source=${sourceId}`)
+  const url = worldBankSeriesUrl({
+    series,
+    sourceId,
+    countries: COUNTRY_ISO3,
+    fromYear,
+    toYear: new Date().getFullYear(),
+  })
 
   const res = await fetch(url)
   if (!res.ok) throw new Error(`${series}: HTTP ${res.status}`)
@@ -153,7 +159,7 @@ async function recordRevisions(
 }
 
 export async function ingestWorldBank(
-  fromYear = 1990,
+  fromYear = INGEST_FROM_YEAR,
   opts: { snapshot?: boolean } = {},
 ): Promise<{
   observations: Observation[]
@@ -162,7 +168,7 @@ export async function ingestWorldBank(
 }> {
   const retrievedAt = new Date().toISOString()
   const requests = worldBankSeries()
-  requests.push({ series: GDP_PER_CAPITA_CODE, sourceId: 2 })
+  requests.push({ series: GDP_PER_CAPITA_CODE, sourceId: WB_DEFAULT_DATABASE })
 
   const seriesToIndicators = new Map<string, string[]>()
   for (const def of INDICATORS) {
@@ -197,7 +203,7 @@ export async function ingestWorldBank(
               value: v.value,
               year: v.year,
               sourceTier: 'international_organization',
-              sourceUrl: `${API}/country/${iso3}/indicator/${req.series}?format=json`,
+              sourceUrl: `${WB_API_BASE}/country/${iso3}/indicator/${req.series}?format=json`,
               retrievedAt,
             })
           }

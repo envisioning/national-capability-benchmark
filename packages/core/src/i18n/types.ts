@@ -1,4 +1,5 @@
 import type { Dimension } from '../model/dimensions.js'
+import type { ScoreBandId } from '../pipeline/bands.js'
 import type { ConfidenceBandId } from '../pipeline/confidence.js'
 
 /**
@@ -101,6 +102,14 @@ export type Lexicon = {
   /** Indicator definitions by id. Missing ids fall back to the registry definition. */
   indicatorDefinitions: Record<string, string>
   bands: Record<ConfidenceBandId, string>
+  /** What each confidence band means, printed under the legend beside its label. */
+  bandMeanings: Record<ConfidenceBandId, string>
+  /** Score band labels and meanings, for the legend beside any table of scores. */
+  scoreBands: Record<ScoreBandId, { label: string; meaning: string }>
+  /** {a} {b}: how a legend prints an inclusive range. */
+  legendRange: string
+  /** {a}: how a legend prints the open top range. */
+  legendRangeTop: string
   agenda: AgendaStrings
 }
 

@@ -250,6 +250,23 @@ export const PT_BR: Lexicon = {
     thin: 'fraca',
     very_thin: 'muito fraca',
   },
+  bandMeanings: {
+    good: 'Maioria dos indicadores observada, recente, de fontes oficiais ou intergovernamentais.',
+    usable: 'Evidência suficiente para comparar países, com buracos conhecidos.',
+    thin: 'Minoria dos indicadores, ou evidência antiga o bastante para ter mudado. Leia com cuidado.',
+    very_thin: 'A nota se apoia em um ou dois indicadores. Não a cite isoladamente.',
+  },
+  scoreBands: {
+    strong: { label: 'forte', meaning: 'Perto do topo da régua nesta dimensão.' },
+    above_middle: { label: 'acima do meio', meaning: 'Na metade superior da régua.' },
+    below_middle: { label: 'abaixo do meio', meaning: 'Na metade inferior da régua.' },
+    weak: {
+      label: 'fraca',
+      meaning: 'Perto do piso da régua. Confira a confiança antes de tirar qualquer conclusão.',
+    },
+  },
+  legendRange: '{a} a {b}',
+  legendRangeTop: '{a} ou mais',
   agenda: {
     title: 'Agenda de capacidades: {country}',
     generated: 'Gerado em {date}',

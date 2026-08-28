@@ -124,21 +124,32 @@ function AxisIcon({ d, x, y, size }: { d: Dimension; x: number; y: number; size:
 export function Radar({
   series,
   labels = 'full',
+  names,
+  noDataLabel = 'no data',
   onSelectDimension,
 }: {
   series: RadarSeries[]
   labels?: RadarLabels
+  /**
+   * Axis names for the accessible description and the full labels. A language
+   * page passes its lexicon's dimension names; the registry English is the
+   * fallback. See D35.
+   */
+  names?: Partial<Record<Dimension, string>>
+  /** What an unscored axis reads as in the accessible description. */
+  noDataLabel?: string
   /** When given, each axis label becomes a control that opens that dimension. */
   onSelectDimension?: (dimension: Dimension) => void
 }) {
   const g = GEOMETRY[labels]
   const at = (i: number, value: number) => point(i, value, g.radius)
+  const nameOf = (d: Dimension) => names?.[d] ?? DIMENSION_LABELS[d]
   const rings = [25, 50, 75, 100]
   const described = series
     .map(
       (s) =>
         `${s.label}: ` +
-        DIMENSIONS.map((d, i) => `${DIMENSION_LABELS[d]} ${s.values[i] ?? 'no data'}`).join(', '),
+        DIMENSIONS.map((d, i) => `${nameOf(d)} ${s.values[i] ?? noDataLabel}`).join(', '),
     )
     .join('. ')
 
@@ -319,7 +330,7 @@ export function Radar({
                 fillOpacity={0.75}
                 style={onSelectDimension ? { textDecoration: 'underline dotted', textUnderlineOffset: '2px' } : undefined}
               >
-                {shortLabel(d)}
+                {names?.[d] ?? shortLabel(d)}
               </text>
             </g>
           )

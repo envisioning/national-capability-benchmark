@@ -1,4 +1,8 @@
 import { DIMENSION_LABELS, DIMENSION_QUESTIONS } from '../model/dimensions.js'
+import { SCORE_BANDS } from '../pipeline/bands.js'
+import type { ScoreBandId } from '../pipeline/bands.js'
+import { CONFIDENCE_BANDS } from '../pipeline/confidence.js'
+import type { ConfidenceBandId } from '../pipeline/confidence.js'
 import type { Lexicon } from './types.js'
 
 /**
@@ -21,6 +25,16 @@ export const EN: Lexicon = {
     thin: 'thin',
     very_thin: 'very thin',
   },
+  /* Read from the band registries rather than restated, so the ground layer
+   * cannot drift from itself. */
+  bandMeanings: Object.fromEntries(
+    CONFIDENCE_BANDS.map((b) => [b.id, b.meaning]),
+  ) as Record<ConfidenceBandId, string>,
+  scoreBands: Object.fromEntries(
+    SCORE_BANDS.map((b) => [b.id, { label: b.label, meaning: b.meaning }]),
+  ) as Record<ScoreBandId, { label: string; meaning: string }>,
+  legendRange: '{a} to {b}',
+  legendRangeTop: '{a} and above',
   agenda: {
     title: 'Capability agenda: {country}',
     generated: 'Generated {date}',

@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import type { MeasurementClass, Provenance } from '@ncb/core'
-import { DIMENSIONS, DIMENSION_LABELS, countryFlag, isEvidential } from '@ncb/core'
+import type { Lexicon, MeasurementClass, Provenance } from '@ncb/core'
+import { DIMENSIONS, DIMENSION_LABELS, EN, countryFlag, fill, isEvidential } from '@ncb/core'
 import { CLASS_ICON, CONFIDENCE_ICON, DIMENSION_ICON, Icon, type IconName } from '@/components/Icon'
 import {
   CONFIDENCE_BANDS,
@@ -166,9 +166,18 @@ export function Td({
  * `DataTable` owns the `<td>`, and a component that emits one as well produces
  * `<td><td>`, which fails hydration and silently kills sorting on the table.
  */
-export function Score({ value, size = 'md' }: { value: number | null; size?: 'md' | 'sm' }) {
+export function Score({
+  value,
+  size = 'md',
+  nullLabel = 'no data',
+}: {
+  value: number | null
+  size?: 'md' | 'sm'
+  /** What a missing value reads as. A language page passes its lexicon's word. */
+  nullLabel?: string
+}) {
   if (value === null || Number.isNaN(value)) {
-    return <span className="text-[var(--muted)]">no data</span>
+    return <span className="text-[var(--muted)]">{nullLabel}</span>
   }
   const band = scoreBand(value)
   return (
@@ -217,20 +226,27 @@ export function DimensionScore({
   return <Score value={dim?.score ?? null} size={size} />
 }
 
-/** Shipped beside any table of scores, so the bands are never colour alone. */
-export function ScoreLegend() {
+/**
+ * Shipped beside any table of scores, so the bands are never colour alone. A
+ * language page passes its lexicon; the thresholds come from the band registry
+ * either way.
+ */
+export function ScoreLegend({ lex = EN }: { lex?: Lexicon } = {}) {
   return (
     <ul className="mb-4 flex flex-wrap gap-x-5 gap-y-2 text-xs">
       {[...SCORE_BANDS].reverse().map((b, i, all) => {
         const next = all[i + 1]
-        const range = next ? `${b.min} to ${next.min}` : `${b.min} and above`
+        const range = next
+          ? fill(lex.legendRange, { a: b.min, b: next.min })
+          : fill(lex.legendRangeTop, { a: b.min })
+        const band = lex.scoreBands[b.id]
         return (
-          <li key={b.id} className="inline-flex items-center gap-2" title={b.meaning}>
+          <li key={b.id} className="inline-flex items-center gap-2" title={band.meaning}>
             <span
               className="inline-block h-4 w-7 rounded-md"
               style={{ background: `var(--score-${b.id})` }}
             />
-            <span className="font-medium">{b.label}</span>
+            <span className="font-medium">{band.label}</span>
             <span className="tabular-nums text-[var(--muted)]">{range}</span>
           </li>
         )
@@ -273,15 +289,15 @@ export function ConfidenceBar({ value }: { value: number | null }) {
  * its own" is the strongest caveat in the system and has to survive touch
  * screens and skim reading.
  */
-export function ConfidenceLegend() {
+export function ConfidenceLegend({ lex = EN }: { lex?: Lexicon } = {}) {
   return (
     <div className="mt-4">
       <ul className="flex flex-wrap gap-x-6 gap-y-2 text-xs">
         {[...CONFIDENCE_BANDS].reverse().map((b, i, all) => {
           const next = all[i + 1]
           const range = next
-            ? `${b.min.toFixed(2)} to ${next.min.toFixed(2)}`
-            : `${b.min.toFixed(2)} and above`
+            ? fill(lex.legendRange, { a: b.min.toFixed(2), b: next.min.toFixed(2) })
+            : fill(lex.legendRangeTop, { a: b.min.toFixed(2) })
           return (
             <li key={b.id} className="inline-flex items-center gap-2">
               <Icon name={CONFIDENCE_ICON[b.id]} size={13} className="text-[var(--muted)]" />
@@ -289,7 +305,7 @@ export function ConfidenceLegend() {
                 className="inline-block h-1.5 w-6 rounded-full"
                 style={{ background: `var(--band-${b.id})` }}
               />
-              <span className="font-medium">{b.label}</span>
+              <span className="font-medium">{lex.bands[b.id]}</span>
               <span className="tabular-nums text-[var(--muted)]">{range}</span>
             </li>
           )
@@ -298,7 +314,7 @@ export function ConfidenceLegend() {
       <ul className="mt-2 max-w-3xl space-y-0.5 text-xs leading-relaxed text-[var(--muted)]">
         {[...CONFIDENCE_BANDS].reverse().map((b) => (
           <li key={b.id}>
-            <span className="font-medium">{b.label}</span>: {b.meaning}
+            <span className="font-medium">{lex.bands[b.id]}</span>: {lex.bandMeanings[b.id]}
           </li>
         ))}
       </ul>

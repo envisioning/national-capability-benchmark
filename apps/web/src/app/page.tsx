@@ -21,6 +21,11 @@ import { toProfile } from '@/lib/profile'
 
 export const dynamic = 'force-dynamic'
 
+/** The Portuguese edition is the same page read in the other language. See D35. */
+export const metadata = {
+  alternates: { languages: { 'pt-BR': '/pt' } },
+}
+
 /**
  * Schema.org Dataset markup, so the benchmark is indexable by dataset search
  * engines. The production URL comes from Vercel's system env; locally the

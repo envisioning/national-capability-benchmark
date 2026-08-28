@@ -4,6 +4,7 @@ import {
   DIMENSIONS,
   GDP_PER_CAPITA_CODE,
   INDICATORS,
+  INGEST_FROM_YEAR,
 } from '../model/index.js'
 import type { CountryResult, Dimension } from '../model/index.js'
 import { ingestWorldBank } from '../pipeline/ingest.js'
@@ -190,7 +191,7 @@ async function main() {
 
   switch (command) {
     case 'ingest': {
-      const from = num(args, 'from', 1990)
+      const from = num(args, 'from', INGEST_FROM_YEAR)
       console.log(`Fetching ${INDICATORS.filter((i) => i.ingest === 'worldbank').length} World Bank indicators from ${from}...`)
       const { report, revisions } = await ingestWorldBank(from, {
         snapshot: Boolean(args.flags.get('snapshot')),
@@ -492,7 +493,7 @@ The nine dimension ids, exactly: ${DIMENSIONS.join(', ')}.
     }
 
     case 'all': {
-      await ingestWorldBank(num(args, 'from', 1990), {
+      await ingestWorldBank(num(args, 'from', INGEST_FROM_YEAR), {
         snapshot: Boolean(args.flags.get('snapshot')),
       })
       await score(args)

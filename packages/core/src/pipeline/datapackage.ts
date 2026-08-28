@@ -4,6 +4,7 @@ import {
   DATASET_VERSION,
   DIMENSIONS,
   REPO_URL,
+  publisherSummaries,
   CountryFile,
   IndexFile,
   IndicatorAcrossCountries,
@@ -48,12 +49,11 @@ export function buildDataPackage(indicatorIds: string[], generatedAt: string): o
         title: 'Creative Commons Attribution 4.0 International',
       },
     ],
-    sources: [
-      {
-        title: 'World Bank Open Data',
-        path: 'https://data.worldbank.org',
-      },
-    ],
+    /* Read from the registry, so a publisher that starts supplying values appears
+     * here without anybody remembering to add it. See D49. */
+    sources: publisherSummaries()
+      .filter((p) => p.live > 0)
+      .map((p) => ({ title: p.publisher, ...(p.url ? { path: p.url } : {}) })),
     contributors: [{ title: 'Envisioning', path: 'https://envisioning.com', role: 'author' }],
     resources: [
       {
