@@ -224,7 +224,7 @@ export function PatternsView({
             key={d}
             title={<CapabilityLink dimension={d}>{DIMENSION_LABELS[d]}</CapabilityLink>}
             icon={<Icon name={DIMENSION_ICON[d]} size={22} />}
-            hint={`${group.length} documented ${group.length === 1 ? 'delivery' : 'deliveries'}, filed against ${[...new Set(group.map((r) => INDICATORS_BY_ID[r.indicatorId]?.name))].join(', ')}.`}
+            hint={`${group.length} ${group.length === 1 ? 'delivery' : 'deliveries'} linked to ${[...new Set(group.map((r) => INDICATORS_BY_ID[r.indicatorId]?.name))].join(', ')}.`}
           >
             <div className="space-y-10">
               {group.map((r) => (

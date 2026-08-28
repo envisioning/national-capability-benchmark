@@ -9,7 +9,7 @@ export const dynamic = 'force-dynamic'
 
 export const metadata = {
   title: 'Capability agendas',
-  description: 'Each country’s scores turned into a list of things to do, computed from the data.',
+  description: 'Country agendas computed from the benchmark data.',
 }
 
 /**
@@ -26,12 +26,11 @@ export default async function AgendaIndexPage() {
 
   return (
     <>
-      <Eyebrow>Computed from the data, regenerated with every run</Eyebrow>
+      <Eyebrow>One agenda per country</Eyebrow>
       <PageTitle>Capability agendas</PageTitle>
       <p className="mt-3 max-w-3xl text-lg leading-relaxed">
-        Each agenda turns one country&apos;s scores into a list of things to do: dimensions to
-        raise, dimensions to measure before managing, and the declared gaps that form the
-        measurement agenda. Nothing in it is written by hand.
+        Each agenda turns a country&apos;s scores into actions: what to raise, what to measure first
+        and what to keep watching. It also lists the missing data. The lists come from the data.
       </p>
       <ul className="mt-10 grid gap-x-8 gap-y-2 text-lg sm:grid-cols-2 lg:grid-cols-3">
         {countries.map((c) => (

@@ -98,22 +98,19 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
           How to read this page
         </p>
         <p className="text-lg leading-relaxed">
-          Each of the nine <DefineLink term="Dimension">dimensions</DefineLink> is scored from 0 to
-          100. That is a position inside the{' '}
-          <DefineLink term="Comparison frame">comparison frame</DefineLink> that all
-          {' '}{COUNTRIES.length} countries build together, so 10 means near the floor of this
-          comparison and never 10 percent of anything.{' '}
-          <DefineLink term="Confidence" /> sits beside every score and never inside it, and the
-          radar draws a dashed edge with a hollow point where the evidence is thin. Below, every
-          dimension lists the <DefineLink term="Indicator">indicators</DefineLink> behind its score,
-          with the raw value, the year and the source.
+          Each <DefineLink term="Dimension">dimension</DefineLink> has a score from 0 to 100. It
+          shows where this country sits among all {COUNTRIES.length} countries in the{' '}
+          <DefineLink term="Comparison frame">comparison frame</DefineLink>, not a percentage.{' '}
+          <DefineLink term="Confidence" /> sits beside the score. A dashed radar edge and hollow
+          point mean the evidence is thin. The tables below show each{' '}
+          <DefineLink term="Indicator">indicator</DefineLink>, its raw value, year and source.
         </p>
         <ClassLegend />
         <p className="text-xs leading-relaxed text-[var(--muted)]">
-          Rows marked <em>no dataset exists</em> are{' '}
-          <DefineLink term="Gap">gaps</DefineLink>, where the model asks for something nobody
-          publishes. Rows marked <em>retired</em> had a dataset that this project rejected. Both
-          lower confidence on purpose. Every term used here is defined in the{' '}
+          A row marked <em>no dataset exists</em> is a{' '}
+          <DefineLink term="Gap">gap</DefineLink>: the benchmark wants data that nobody publishes.
+          A <em>retired</em> row has a source this project chose not to use. Both reduce confidence.
+          The{' '}
           <Link href="/glossary" className="underline underline-offset-4">
             glossary
           </Link>
@@ -155,25 +152,25 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
                     <div key={m.baseYear} className="flex flex-wrap items-center gap-x-4 gap-y-2">
                       <Sparkline series={m.series} />
                       <p className="text-xs leading-relaxed text-[var(--muted)]">
-                        <Delta value={m.delta} /> over {m.currentYear - m.baseYear} years, from{' '}
-                        {m.baseScore.toFixed(1)} in {m.baseYear} to {m.currentScore.toFixed(1)} on
-                        the {m.matchedIndicators} indicators observed in both years
+                    <Delta value={m.delta} /> over {m.currentYear - m.baseYear} years, from{' '}
+                    {m.baseScore.toFixed(1)} in {m.baseYear} to {m.currentScore.toFixed(1)} on
+                    {` ${m.matchedIndicators}`} indicators seen in both years
                         {m.clamped > 0
-                          ? `, ${m.clamped} of them clamped at the frame edge, so part of this change is the distance to the clamp boundary`
+                          ? `, with ${m.clamped} at the frame edge`
                           : ''}
                         .
                       </p>
                     </div>
                   ))}
                   <p className="text-xs leading-relaxed text-[var(--muted)]">
-                    Each basket is smaller than the score above and is measured against the frame in
-                    use today. A longer span reaches further back and holds fewer indicators.
+                    Trends use fewer indicators than the current score and use today&apos;s frame. A
+                    longer span reaches further back.
                   </p>
                 </div>
               ) : (
                 <p className="mb-6 text-xs leading-relaxed text-[var(--muted)]">
-                  No trend: too few indicators here are observed at both ends of a span. The
-                  indicator lines below still show what history exists.
+                  No trend is shown because too few indicators have values at both ends. The rows
+                  below still show the available history.
                 </p>
               )}
               <Scroller>
@@ -265,7 +262,7 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
               {finals.length > 0 && run ? (
                 <div className="mt-6 rounded-lg border border-[var(--rule)] bg-[var(--surface-sunken)] p-4">
                   <p className="mb-3 text-xs uppercase tracking-[0.05em] text-[var(--muted)]">
-                    {isPanel(run) ? 'Panel judgment' : 'Session estimate, not a panel'}, round{' '}
+                    {isPanel(run) ? 'Panel estimate' : 'Session estimate'}, round{' '}
                     {finalRound},{' '}
                     <Link href="/delphi" className="underline underline-offset-4">
                       how this layer works

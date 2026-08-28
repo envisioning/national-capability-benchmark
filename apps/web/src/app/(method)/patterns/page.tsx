@@ -7,8 +7,7 @@ export const dynamic = 'force-dynamic'
 
 export const metadata = {
   title: 'Patterns, NCB',
-  description:
-    'Documented national deliveries, with their numbers, mechanisms and limits.',
+  description: 'Documented examples of what countries built, with sources and limits.',
 }
 
 export default async function PatternsPage({
@@ -32,17 +31,15 @@ export default async function PatternsPage({
       <Eyebrow>
         {records.length} deliveries, {countries.size} countries
       </Eyebrow>
-      <PageTitle>What countries actually did</PageTitle>
+      <PageTitle>What countries built</PageTitle>
       <Headline>
-        Each record describes something a country built, filed against an indicator that could not
-        measure it. The number is sourced. The{' '}
-        <Highlight>mechanism</Highlight> is our reading and the part that may travel.
+        Each record describes something a country built that the indicators miss. The source
+        provides the number; the <Highlight>mechanism</Highlight> is our interpretation.
       </Headline>
       <p className="mb-12 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-        A score says how a country is doing. These records say what it did, how the move worked and
-        what it needed first. Copying a form rarely works. Rebuilding the mechanism under different
-        conditions sometimes does. {withPattern.length} of {records.length} records include one, and
-        none of this enters a score.
+        Scores describe outcomes. These records describe how a country acted, what it needed and
+        what happened. {withPattern.length} of {records.length} records include a mechanism. They
+        do not affect scores.
       </p>
 
       <PatternsView records={records} initial={filters} />

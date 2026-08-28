@@ -91,7 +91,7 @@ export default async function Page() {
       </p>
 
       <Section
-        title="Each country comes out a different shape"
+        title="Countries have different profiles"
         hint="Scores run 0 to 100 using all countries as the frame. There is no composite, so countries with the same average can have different profiles."
       >
         <DimensionLegend />
@@ -131,7 +131,7 @@ export default async function Page() {
       </Section>
 
       <Section
-        title="The same numbers, ready for a chart"
+        title="The scores in a table"
         hint="Click any heading to sort."
       >
         <ScoreLegend />
@@ -139,7 +139,7 @@ export default async function Page() {
       </Section>
 
       <Section
-        title="A score and its confidence are two different claims"
+        title="Score and confidence are separate"
         hint="Confidence is coverage times recency times source quality. It sits beside the score; missing data lowers coverage and is never imputed."
       >
         <ConfidenceLegend />

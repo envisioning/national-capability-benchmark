@@ -17,7 +17,7 @@ export async function generateMetadata({
   if (!name) return {}
   return {
     title: `Capability agenda: ${name}, NCB`,
-    description: `What the evidence says ${name} should raise, measure or hold, computed from the scored data.`,
+    description: `The capability agenda for ${name}, computed from the benchmark data.`,
   }
 }
 

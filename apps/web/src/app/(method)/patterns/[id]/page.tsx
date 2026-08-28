@@ -58,7 +58,7 @@ export default async function PatternPage({ params }: { params: Promise<{ id: st
           className="inline-flex items-center gap-2 text-xs text-[var(--muted)] underline underline-offset-4"
         >
           <Icon name="arrow-left" size={13} />
-          All documented deliveries
+          All deliveries
         </Link>
       </p>
 
@@ -84,18 +84,19 @@ export default async function PatternPage({ params }: { params: Promise<{ id: st
       </div>
 
       <p className="mb-12 max-w-3xl text-xs leading-relaxed text-[var(--muted)]">
-        This record documents what {country} delivered. It covers{' '}
+        This record describes what {country} delivered. It is linked to{' '}
         <Link href={indicatorHref(record.indicatorId)} className="underline underline-offset-4">
           {def?.name ?? record.indicatorId}
         </Link>
-        , an indicator with no comparable dataset. It stays outside the score and confidence.
+        {' '}because no comparable dataset measures that capability. It does not affect the score or
+        confidence.
       </p>
 
       {sameCountry.length > 0 ? (
         <Section
           title={`More from ${country}`}
           icon={<Icon name="flag" size={22} />}
-          hint={`${sameCountry.length} other documented ${sameCountry.length === 1 ? 'delivery' : 'deliveries'}.`}
+          hint={`${sameCountry.length} other ${sameCountry.length === 1 ? 'delivery' : 'deliveries'} from this country.`}
         >
           <RelatedList records={sameCountry} />
           <p className="mt-4 text-xs">
@@ -111,9 +112,9 @@ export default async function PatternPage({ params }: { params: Promise<{ id: st
 
       {sameIndicator.length > 0 ? (
         <Section
-          title="The same indicator elsewhere"
+          title="The same gap elsewhere"
           icon={<Icon name={dimension ? DIMENSION_ICON[dimension] : 'layers'} size={22} />}
-          hint={`${sameIndicator.length} documented ${sameIndicator.length === 1 ? 'delivery' : 'deliveries'} filed against ${def?.name ?? record.indicatorId} in other countries.`}
+          hint={`${sameIndicator.length} ${sameIndicator.length === 1 ? 'delivery' : 'deliveries'} linked to ${def?.name ?? record.indicatorId} in other countries.`}
         >
           <RelatedList records={sameIndicator} />
           {dimension ? (

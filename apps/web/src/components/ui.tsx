@@ -226,7 +226,7 @@ export function DimensionScore({
     return (
       <span
         className="text-xs text-[var(--muted)]"
-        title={`Withheld. ${n === 1 ? 'One indicator is' : `${n} indicators are`} observed here, and this model needs two before it averages them into a dimension score.`}
+        title={`No score. ${n === 1 ? 'One indicator is' : `${n} indicators are`} observed here; this model needs two before it can average a dimension score.`}
       >
         not measured
       </span>

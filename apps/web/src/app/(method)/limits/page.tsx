@@ -8,8 +8,7 @@ export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'Known limits, NCB',
-  description:
-    'Where the benchmark produces a number that is wrong about the world, recorded with severity, evidence and a fix.',
+  description: 'Known measurement failures, with evidence and possible fixes.',
 }
 
 /**
@@ -24,10 +23,10 @@ export default async function LimitsPage() {
   return (
     <>
       <Eyebrow>Read before quoting</Eyebrow>
-      <PageTitle>Some numbers here are wrong about the world</PageTitle>
+      <PageTitle>Some numbers here are wrong</PageTitle>
       <Headline>
-        These are the places we know about, recorded with severity, evidence and a fix. They are
-        not bugs: the pipeline is doing what it was told. They are failures of measurement.
+        These are known measurement failures, with the evidence and possible fix. The pipeline is
+        working as designed; the design is sometimes wrong.
       </Headline>
       {doc ? (
         <Markdown source={doc} />
@@ -37,11 +36,11 @@ export default async function LimitsPage() {
         />
       )}
       <p className="mt-12 max-w-3xl text-xs leading-relaxed text-[var(--muted)]">
-        This page renders{' '}
+        This page reads{' '}
         <a href={docHref(LIMITS_DOC)} className="underline underline-offset-4">
           {LIMITS_DOC}
         </a>{' '}
-        from the repository, unchanged. If the two ever disagree, the repository wins.
+        from the repository. If it differs from the site, the repository is the source of record.
       </p>
     </>
   )

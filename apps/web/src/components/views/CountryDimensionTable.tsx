@@ -77,18 +77,18 @@ export function CountryDimensionTable({
       sort: (r: (typeof rows)[number]) => primaryMomentum(r.dim.momentum)?.delta ?? null,
       render: (r: (typeof rows)[number]) => {
         const m = primaryMomentum(r.dim.momentum)
-        if (!m) return <Delta value={null} title="Too few indicators observed in both years" />
+        if (!m) return <Delta value={null} title="Not enough indicators have values at both ends" />
         return (
           <span className="inline-flex items-center gap-1">
             <Delta
               value={m.delta}
-              title={`Change since ${m.baseYear}, on the ${m.matchedIndicators} indicators observed in both years. ${m.baseScore.toFixed(1)} to ${m.currentScore.toFixed(1)} on that basket.`}
+              title={`Change since ${m.baseYear} using ${m.matchedIndicators} indicators: ${m.baseScore.toFixed(1)} to ${m.currentScore.toFixed(1)}.`}
             />
             {/* The basket size is printed, never tooltip only: a trend and a
                 score sit on different baskets and the reader must see the size. */}
             <span className="text-[10px] text-[var(--muted)]">({m.matchedIndicators})</span>
             {m.clamped > 0 ? (
-              <span title={`${m.clamped} of the basket clamped at the frame edge: part of this change is the distance to the clamp boundary.`}>
+              <span title={`${m.clamped} indicators reached the edge of the frame.`}>
                 <Icon name="triangle-alert" size={11} className="text-[var(--muted)]" />
               </span>
             ) : null}
@@ -125,7 +125,7 @@ export function CountryDimensionTable({
             return (
               <span
                 className={wide ? 'font-medium' : 'text-[var(--muted)]'}
-                title={`Difference between the ${panel.isPanel ? 'panel median' : 'session estimate'} and the indicator score. ${wide ? `At or above ${DISSENT_IQR} points, a quarter of the scale.` : ''}`}
+                title={`Difference between the ${panel.isPanel ? 'panel median' : 'session estimate'} and the indicator score.${wide ? ` ${DISSENT_IQR} points is a quarter of the scale.` : ''}`}
               >
                 {g > 0 ? '+' : ''}
                 {g.toFixed(1)}

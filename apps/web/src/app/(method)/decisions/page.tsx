@@ -8,8 +8,7 @@ export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'Decisions, NCB',
-  description:
-    'Every methodological choice in the benchmark, why it was made, what it costs, and what evidence would overturn it.',
+  description: 'The choices behind the benchmark, their trade-offs, and what could overturn them.',
 }
 
 /**
@@ -25,12 +24,11 @@ export default async function DecisionsPage() {
 
   return (
     <>
-      <Eyebrow>The record behind every number</Eyebrow>
-      <PageTitle>Every choice here was made on purpose</PageTitle>
+      <Eyebrow>The decision log</Eyebrow>
+      <PageTitle>Why the benchmark works this way</PageTitle>
       <Headline>
-        Each entry states the choice, why it was made, what it costs, and the evidence that would
-        overturn it. Nothing is edited once recorded. A choice that no longer holds is superseded by
-        a later entry, so the reasoning stays readable end to end.
+        Each entry records a choice, its trade-offs and what could overturn it. The log is
+        append-only, so later entries supersede earlier ones.
       </Headline>
       {doc ? (
         <Markdown source={doc} />
@@ -40,11 +38,11 @@ export default async function DecisionsPage() {
         />
       )}
       <p className="mt-12 max-w-3xl text-xs leading-relaxed text-[var(--muted)]">
-        This page renders{' '}
+        This page reads{' '}
         <a href={docHref(DECISIONS_DOC)} className="underline underline-offset-4">
           {DECISIONS_DOC}
         </a>{' '}
-        from the repository, unchanged. If the two ever disagree, the repository wins.
+        from the repository. If it differs from the site, the repository is the source of record.
       </p>
     </>
   )

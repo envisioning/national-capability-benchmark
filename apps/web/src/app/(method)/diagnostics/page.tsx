@@ -8,7 +8,7 @@ export const dynamic = 'force-dynamic'
 export const metadata: Metadata = {
   title: 'Diagnostics, NCB',
   description:
-    'The model tested against its own failure modes: wealth correlation, redundancy, dimension collapse, clamping, and measurement quality.',
+    'Tests for income bias, redundant indicators, weak evidence and unstable scores.',
 }
 
 export default async function DiagnosticsPage() {

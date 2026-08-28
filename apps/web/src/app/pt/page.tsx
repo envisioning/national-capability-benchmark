@@ -119,8 +119,8 @@ export default async function PortugueseHomePage() {
       </div>
 
       <Section
-        title="O Brasil é o primeiro caso de campo"
-        hint={`O Brasil é o primeiro campo de teste. Os ${total} países usam as mesmas dimensões, indicadores e régua.`}
+        title="O Brasil é o primeiro caso"
+        hint={`Este é o primeiro teste. Os ${total} países usam as mesmas dimensões, indicadores e régua.`}
       >
         <div className="grid gap-10 lg:grid-cols-2">
           {brazil ? (
@@ -196,7 +196,7 @@ export default async function PortugueseHomePage() {
 
       {agenda ? (
         <Section
-          title="As nove dimensões, uma a uma"
+        title="As nove dimensões"
           hint="Cada cartão mostra nota, confiança, tendência e estado da medição. Cheio = observado; vazio = lacuna; cortado = base rejeitada. Passe o cursor para ver o indicador."
         >
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -321,7 +321,7 @@ export default async function PortugueseHomePage() {
       </Section>
 
       <Section
-        title="Nota e confiança são separadas"
+        title="Nota e confiança ficam separadas"
         hint="A nota mostra a posição na régua. A confiança mostra a evidência: cobertura, atualidade e qualidade da fonte. Os números ficam lado a lado e dados ausentes não são imputados."
       >
         <div className="max-w-3xl space-y-4 text-lg leading-relaxed">
@@ -371,7 +371,7 @@ export default async function PortugueseHomePage() {
       </Section>
 
       <Section
-        title="O benchmark se prova em uso"
+        title="O próximo teste é o uso"
         hint="Escolas de governo, institutos de pesquisa, bancos, agências de fomento e órgãos de estatística já podem usar o instrumento."
       >
         <ul className="max-w-3xl list-disc space-y-4 pl-5 text-lg leading-relaxed">
@@ -404,7 +404,7 @@ export default async function PortugueseHomePage() {
       </Section>
 
       <Section
-        title="O próximo trabalho é claro"
+        title="O próximo trabalho está definido"
         hint={`O protótipo está publicado${data.version ? ` na versão ${data.version}` : ''}, com ${total} países. Agora precisa ficar seguro para citação.`}
       >
         <div className="grid gap-5 lg:grid-cols-3">

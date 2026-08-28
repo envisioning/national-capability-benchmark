@@ -41,7 +41,7 @@ export default function AboutPage() {
       </Headline>
 
       <Section
-        title="Wealth and capability are different claims"
+        title="Wealth does not tell the whole story"
         hint="Most indices track income or governance. This tests whether a country’s ability to act under uncertainty can be measured separately."
       >
         <p className="max-w-3xl text-lg leading-relaxed">
@@ -62,14 +62,13 @@ export default function AboutPage() {
           The full argument is in{' '}
           <a href={docHref(WHY_DOC)} className="underline underline-offset-4">
             {WHY_DOC}
-          </a>
-          , including what would disprove it.
+          </a>, including what would disprove it.
         </p>
       </Section>
 
       <Section
-        title="Nine dimensions carry the answer"
-        hint="Each dimension asks a different question. The shape across all nine is the result; there is no composite score."
+        title="The benchmark uses nine dimensions"
+        hint="Each dimension asks its own question. Together they make up the profile. There is no composite score."
       >
         <ul className="max-w-3xl list-disc space-y-2 pl-5 text-lg leading-relaxed">
           {DIMENSIONS.map((d) => (
@@ -88,8 +87,8 @@ export default function AboutPage() {
       </Section>
 
       <Section
-        title="Brazil is the first field case"
-        hint="The same frame covers every country. A model that fits one country measures that country."
+        title="Brazil is the first case"
+        hint="The same frame covers every country. Fitting one country is not enough."
       >
         <p className="max-w-3xl text-lg leading-relaxed">
           The benchmark grew out of Envisioning&apos;s work on national capability. Brazil is the
@@ -107,7 +106,7 @@ export default function AboutPage() {
       </Section>
 
       <Section
-        title="The method and limits are public"
+        title="The method and limits are open"
         hint="Confidence stays separate from the score, and known failures sit beside the numbers they affect."
       >
         <ul className="max-w-3xl list-disc space-y-3 pl-5 text-lg leading-relaxed">
@@ -150,7 +149,7 @@ export default function AboutPage() {
       </Section>
 
       <Section
-        title="Envisioning built this prototype"
+        title="Envisioning built NCB"
         hint="Envisioning researches how societies anticipate and act on change. This benchmark is one tool."
       >
         <p className="max-w-3xl text-lg leading-relaxed">

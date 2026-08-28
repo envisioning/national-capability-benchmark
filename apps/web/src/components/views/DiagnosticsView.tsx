@@ -41,10 +41,10 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
   return (
     <>
       <Eyebrow>Diagnostics</Eyebrow>
-      <PageTitle>The model is tested against its own failure modes</PageTitle>
+      <PageTitle>The diagnostics test the model</PageTitle>
       <Headline>
-        These checks ask whether the benchmark measures capability, income per head, duplicate data
-        or nothing at all. Failed tests stay visible.
+        They check for income bias, duplicate indicators, weak evidence and scores that change
+        sharply when inputs change.
       </Headline>
       <p className="mb-12 flex flex-wrap gap-2">
         <Meta icon="calendar">computed {diag.generatedAt.slice(0, 10)}</Meta>
@@ -88,7 +88,7 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
       <Section
         title={
           emptied.length === 0
-            ? 'Every dimension survives without wealth-correlated data'
+            ? 'Every dimension survives without income-linked data'
             : `${emptied.map((d: Dimension) => DIMENSION_LABELS[d]).join(' and ')} ${emptied.length === 1 ? 'fails' : 'fail'} without wealth-correlated data`
         }
         hint={`${diag.gdpStrippedTest.excluded.length} indicators meet the ${WEALTH_CORRELATION_THRESHOLD} correlation threshold. This table shows the shift after removing them.${
@@ -133,8 +133,8 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
       </Section>
 
       <Section
-        title="Some indicators are measuring money"
-        hint="Correlation with log GDP per capita beside the registry's prior. Differences show where that prior was wrong."
+        title="Some indicators track income"
+        hint="This compares each indicator with log GDP per capita and with the registry's prior."
       >
         <DataTable
           rows={diag.indicatorVsGdp}
@@ -182,7 +182,7 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
       </Section>
 
       <Section
-        title="A row can carry the dimension's wealth signal"
+        title="One indicator can drive the income signal"
         hint="Each row removes one indicator. A positive delta means the dimension tracks income more without it."
       >
         <DataTable
@@ -307,8 +307,8 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
       <Section
         title={
           diag.redundantIndicatorPairs.length === 0
-            ? 'No indicator pair is carrying the same information'
-            : 'Some indicators are carrying the same information'
+            ? 'No indicator pairs are redundant'
+            : 'Some indicator pairs overlap'
         }
         hint={`Pairs at ${REDUNDANCY_THRESHOLD} correlation or above. They are candidates for review, not automatic removals.`}
       >

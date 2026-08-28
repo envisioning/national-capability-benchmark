@@ -14,10 +14,10 @@ export default function IndicatorsPage() {
   return (
     <>
       <Eyebrow>The registry</Eyebrow>
-      <PageTitle>Every indicator stays on the record</PageTitle>
+      <PageTitle>The registry keeps every indicator</PageTitle>
       <Headline>
-        {INDICATORS.length} indicators are listed here. {wired} have data; gaps and retired rows
-        stay visible because they lower confidence and set the collection agenda.
+        {INDICATORS.length} indicators are listed here. {wired} have data. Gaps and retired rows
+        remain visible because they affect confidence and the collection agenda.
       </Headline>
       <IndicatorRegistry />
     </>

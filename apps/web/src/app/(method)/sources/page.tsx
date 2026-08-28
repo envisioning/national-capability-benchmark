@@ -23,8 +23,7 @@ import { capitalize, countWord } from '@/lib/words'
 
 export const metadata: Metadata = {
   title: 'Sources, NCB',
-  description:
-    'Benchmark publishers, World Bank databases, and the requests used to fetch the data.',
+  description: 'The publishers, databases and requests behind the benchmark data.',
 }
 
 /** The series the request example is built from. Any fetched row would do. */
@@ -89,15 +88,15 @@ export default async function SourcesPage() {
   return (
     <>
       <Eyebrow>Sources</Eyebrow>
-      <PageTitle>Every number here names its publisher</PageTitle>
+      <PageTitle>The registry names every source</PageTitle>
       <Headline>
         {INDICATORS.length} indicators are listed here. {fetched.length + manual.length} have data:
         {' '}{fetched.length} come from the World Bank API and {manual.length} from published tables.
-        The other {gaps.length + retired.length} have no value and remain visible.
+        The remaining {gaps.length + retired.length} have no value yet and remain listed.
       </Headline>
 
       <Section
-        title="The data comes from one API call per series"
+        title="The API request is reproducible"
         hint={`Requests cover all ${COUNTRY_ISO3.length} countries from ${INGEST_FROM_YEAR} onward. Scoring uses the latest value; older values feed trends.`}
         icon={<Icon name="globe" size={22} />}
       >
@@ -152,8 +151,8 @@ export default async function SourcesPage() {
       </Section>
 
       <Section
-        title="Publishers and their data"
-        hint={`No fetched rows means a planned source. Values count country cells, so one series across ${COUNTRY_ISO3.length} countries counts ${COUNTRY_ISO3.length} times.`}
+        title="Each publisher and its data"
+          hint={`A publisher with no fetched rows is a planned source. Values count country cells, so one series across ${COUNTRY_ISO3.length} countries counts ${COUNTRY_ISO3.length} times.`}
       >
         <Scroller>
           <Table>
@@ -198,7 +197,7 @@ export default async function SourcesPage() {
           </Table>
         </Scroller>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-          The {countWord(unnamed)} rows without a publisher are open collection questions. The{' '}
+          Rows without a publisher are open collection questions. The{' '}
           <Link href="/indicators" className="underline underline-offset-4">
             registry
           </Link>{' '}
@@ -208,7 +207,7 @@ export default async function SourcesPage() {
 
       {manual.length > 0 ? (
         <Section
-          title={`${capitalize(countWord(manual.length))} ${manual.length === 1 ? 'value is' : 'values are'} entered by hand`}
+          title={`${capitalize(countWord(manual.length))} ${manual.length === 1 ? 'value comes' : 'values come'} from a published table`}
           hint="These publishers provide reports, not APIs. Each value keeps its source page and retrieval date."
         >
           <Scroller>
@@ -247,8 +246,8 @@ export default async function SourcesPage() {
       ) : null}
 
       <Section
-        title={`${capitalize(countWord(retired.length))} retired series ${retired.length === 1 ? 'is' : 'are'} excluded`}
-        hint="A retired row has a rejected dataset. It stays visible so the decision can be challenged and lowers confidence."
+        title={`${capitalize(countWord(retired.length))} retired series remain listed`}
+        hint="A retired row has a rejected dataset. It remains visible so the decision can be challenged, and it lowers confidence."
         icon={<Icon name="archive" size={22} />}
       >
         <Scroller>
@@ -291,7 +290,7 @@ export default async function SourcesPage() {
         </p>
       </Section>
 
-      <Section title="Published files are machine-readable">
+      <Section title="Tools can read the published files">
         <ul className="max-w-3xl list-disc space-y-3 pl-5 text-lg leading-relaxed">
           <li>
             <a href={docHref('data/out/datapackage.json')} className="underline underline-offset-4">

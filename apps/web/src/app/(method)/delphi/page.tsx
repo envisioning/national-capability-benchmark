@@ -61,11 +61,10 @@ export default async function DelphiPage() {
   return (
     <>
       <Eyebrow>The judgment layer</Eyebrow>
-      <PageTitle>Judgment is kept beside the evidence, never inside it</PageTitle>
+      <PageTitle>Panel estimates stay beside the scores</PageTitle>
       <Headline>
         A <DefineLink term="Delphi panel">panel</DefineLink> scores the same dimensions as the
-        indicators and audits the registry. Its estimates stay separate; differences reveal where
-        the measurement needs work.
+        indicators and reviews the registry. Its estimates do not change the indicator score.
       </Headline>
       <p className="mb-10 flex flex-wrap gap-2">
         <Meta icon="file-clock">run {run.runId}</Meta>
@@ -81,8 +80,8 @@ export default async function DelphiPage() {
       </p>
 
       <Section
-        title="Each panelist argues from a fixed position"
-        hint="Each stance gives disagreement a stated reason."
+        title="Panelists use fixed stances"
+        hint="Each stance gives disagreement a reason."
       >
         {!evidential ? (
           <Note tone="stop">
@@ -91,8 +90,8 @@ export default async function DelphiPage() {
         ) : !panel ? (
           <Note tone="stop">
             This {PROVENANCE_LABELS[run.provenance]} run has {run.panel.length} panelist
-            {run.panel.length === 1 ? '' : 's'}. There is no distribution here. Treat every number
-            as a single judgment.
+            {run.panel.length === 1 ? '' : 's'}. It has no distribution, so each number is a single
+            judgment.
           </Note>
         ) : null}
         {run.note ? <Note>{run.note}</Note> : null}
@@ -119,14 +118,14 @@ export default async function DelphiPage() {
       </Section>
 
       <Section
-        title="Disagreement stays visible"
+        title="The panel's disagreement stays visible"
         hint={`A cell is marked when the middle half of the panel spans more than ${DISSENT_IQR} points.`}
       >
         {dissent.length === 0 ? (
           <p className="max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
             {panel
               ? `No cell has an interquartile range above ${DISSENT_IQR} points.`
-              : `With ${run.panel.length} panelist${run.panel.length === 1 ? '' : 's'}, the interquartile range is zero by construction. The empty table says nothing about agreement.`}
+              : `With ${run.panel.length} panelist${run.panel.length === 1 ? '' : 's'}, the interquartile range is zero. The empty table says nothing about agreement.`}
           </p>
         ) : (
           <DissentTable rows={dissent} />
@@ -135,17 +134,17 @@ export default async function DelphiPage() {
 
       {shifts.length === 0 ? (
         <Section
-          title="A second round shows movement"
+          title="A second round can change the estimates"
           hint="This run has one round, so there is no median or IQR shift yet."
         >
           <p className="max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-            Nothing to read here until a run with two or more rounds replaces this one.
+            There is nothing to compare until a run with at least two rounds replaces this one.
           </p>
         </Section>
       ) : (
         <Section
-          title="Later rounds show movement"
-          hint="Negative IQR shift means the panel narrowed."
+          title="Later rounds show what changed"
+          hint="A negative IQR shift means the panel narrowed."
         >
           <Scroller>
           <Table>
@@ -189,17 +188,17 @@ export default async function DelphiPage() {
 
       {judged.length === 0 ? (
         <Section
-          title="The indicator audit has not run"
-          hint="A full run classifies each indicator as C, I, O or P and rates its fit. This run skipped that step."
+          title="The indicator audit did not run"
+          hint="The audit classifies each indicator as C, I, O or P and rates its fit. This run skipped it."
         >
           <p className="max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-            Nothing to show until a run with indicator judgments replaces this one.
+            There is nothing to show until a run with indicator judgments replaces this one.
           </p>
         </Section>
       ) : (
         <Section
-          title="The panel also rates the indicators"
-          hint="Each indicator gets a class, a validity rating and a wealth-proxy risk rating. Weakest validity first."
+          title="The panel also rates each indicator"
+          hint="Each indicator gets a class, a validity rating and a wealth-proxy risk rating. The weakest validity comes first."
         >
           <Scroller>
             <Table>
@@ -247,7 +246,7 @@ export default async function DelphiPage() {
       {missing.length > 0 ? (
         <Section
           title="Evidence the panel requested"
-          hint="Evidence named by panelists, ranked by frequency. It feeds the collection agenda."
+          hint="Panelists name evidence they want to see. The list feeds the collection agenda."
         >
           <Scroller>
             <Table>

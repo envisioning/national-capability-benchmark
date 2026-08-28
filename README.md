@@ -32,11 +32,11 @@ viewer.
 
 ## The layers
 
-**Hard indicators.** 66 indicators across nine dimensions. 38 come from the
-World Bank API and two are entered by hand from the GEM Adult Population Survey,
-which has no open API. The other 26 are declared gaps because no adequate,
-inspectable international dataset exists. Gaps stay in the registry, lower
-confidence and form the data-collection agenda.
+**Hard indicators.** The registry has 66 indicators across nine dimensions. 38
+come from the World Bank API and two come from the GEM Adult Population Survey,
+which has no open API. The remaining 26 are gaps because no adequate,
+inspectable international dataset exists. Gaps remain listed, lower confidence
+and define the data-collection agenda.
 
 **Momentum.** Ingestion keeps every year from 1990; scoring uses the latest.
 Trends compare the same frame over ten and twenty years, using only indicators
@@ -44,11 +44,11 @@ observed at both ends. Each indicator also keeps its own series with the raw,
 normalized and source-tier values. Nothing is interpolated or extrapolated.
 Each run logs what it restated, added or dropped. See D22, D24 and D25.
 
-**Evidence records.** `data/evidence/records.json` documents a delivery that a
-gap indicator cannot see, with a published number, source, reference period and
-a statement of what the case does not show. Records never affect scores or
-confidence. A gap becomes an indicator when a comparable series covers at least
-two countries. See D20.
+**Evidence records.** `data/evidence/records.json` describes a country delivery
+that the current indicators cannot measure. Each record has a published number,
+source, reference period and a statement of what the case does not show. Records
+do not affect scores or confidence. A gap can become an indicator when a
+comparable series covers at least two countries. See D20.
 
 **The capability agenda.** `data/out/agenda` holds one computed agenda per
 country. Low-scoring dimensions with usable evidence become items to raise;
@@ -56,17 +56,17 @@ dimensions below the usable confidence band become items to measure first. The
 26 gaps form the measurement agenda. JSON is language neutral, with English and
 Brazilian Portuguese markdown beside it. See CONTRIBUTING.md.
 
-**The Delphi panel.** A panel of language models, each with a fixed analytical
-stance, covers two gaps in the indicators:
+**The Delphi panel.** A panel of language models with fixed analytical stances
+covers two gaps in the indicators:
 
 1. It estimates dimensions where evidence is thin or stale and states what would
    resolve the uncertainty.
 2. It audits the indicator set by reclassifying each indicator as C/I/O/P,
    rating construct validity and wealth-proxy risk, and naming redundant pairs.
 
-There are two rounds. Round 2 shows each panelist the anonymised round-1 scores
-and rationales. Panelists are told not to converge for its own sake. Stable
-disagreement is recorded as a finding.
+There are two rounds. In round 2, each panelist sees the anonymised round-1
+scores and rationales. They are told not to converge for its own sake. Stable
+disagreement is recorded.
 
 Panel estimates never enter the indicator-derived score. They sit beside it.
 

@@ -18,13 +18,12 @@ export function EvidenceList({ records }: { records: EvidenceRecord[] }) {
     <div className="mt-6 rounded-lg border border-[var(--rule)] bg-[var(--surface-sunken)] p-4">
       <p className="mb-1 inline-flex items-center gap-2 text-xs uppercase tracking-[0.05em] text-[var(--muted)]">
         <Icon name="file-clock" size={14} />
-        Evidence for indicators with no dataset
+        Evidence for missing indicators
       </p>
       <p className="mb-4 max-w-3xl text-xs leading-relaxed text-[var(--muted)]">
-        Each record documents something the indicators above cannot see. Records stay outside the
-        score and outside the confidence, because one country with a case study is still one
-        country. They become a score when a comparable series covers at least two
-        countries.
+        Each record describes a case the indicators above cannot see. It does not affect the score
+        or confidence because one case is not comparable across countries. A gap can become an
+        indicator when a comparable series covers at least two countries.
       </p>
       <ul className="space-y-5">
         {records.map((r) => {
@@ -36,7 +35,7 @@ export function EvidenceList({ records }: { records: EvidenceRecord[] }) {
                   {r.title}
                 </Link>
                 <span className="ml-2 font-normal text-[var(--muted)]">
-                  bears on {def?.name ?? r.indicatorId}, since {r.started},{' '}
+                  linked to {def?.name ?? r.indicatorId}, started {r.started},{' '}
                   {EVIDENCE_STATUS_LABELS[r.status]}
                 </span>
               </p>
@@ -67,7 +66,7 @@ export function EvidenceList({ records }: { records: EvidenceRecord[] }) {
               </p>
               {r.pattern ? (
                 <p className="mt-1 max-w-3xl text-xs leading-relaxed">
-                  <span className="text-[var(--muted)]">The move: </span>
+                  <span className="text-[var(--muted)]">How it worked: </span>
                   {r.pattern.mechanism}
                 </p>
               ) : null}

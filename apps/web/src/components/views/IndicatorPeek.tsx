@@ -105,7 +105,7 @@ export function IndicatorPeek({
           </div>
 
           <p className="mb-4 max-w-2xl text-xs leading-relaxed text-[var(--muted)]">
-            Measured in {def.unit}, where {def.direction === 'higher_better' ? 'higher' : 'lower'} is
+            Measured in {def.unit}; {def.direction === 'higher_better' ? 'higher' : 'lower'} is
             better. Source:{' '}
             {def.source.url ? (
               <a
@@ -127,10 +127,9 @@ export function IndicatorPeek({
             <a href={indicatorHref(def.id)} className="underline underline-offset-4">
               indicator registry
             </a>
-            . In the strip below, each dot is a country, the box spans the middle half of the field,
-            and the line inside it is the median. The bar in the list is the normalized position
-            from 0 to 100 on a scale built from every country measured, so higher is always better on
-            the bar whatever the raw number does.
+            . Each dot is a country. The box covers the middle half of the field, and the line is
+            the median. The bar shows the normalized position from 0 to 100, with higher always
+            meaning better.
             {rank ? ` This country ranks ${rank} of ${values.length} on the values we hold.` : ''}
           </p>
 
@@ -193,8 +192,8 @@ export function IndicatorPeek({
 
           {view ? (
             <p className="mt-4 text-xs leading-relaxed text-[var(--muted)]">
-              A warning mark means the value sat outside the range the frame covers, so
-              its position was clamped to 0 or 100 and information was lost. {def.notes}
+              A warning mark means the value fell outside the frame and was clamped to 0 or 100.
+              Some information was lost. {def.notes}
             </p>
           ) : null}
         </div>

@@ -6,18 +6,15 @@ import { capabilityHref } from '@/lib/links'
 
 export const metadata = {
   title: 'Capabilities, NCB',
-  description:
-    'The nine capability dimensions in the National Capability Benchmark, with a page for each one.',
+  description: 'The nine capability dimensions and the indicators behind them.',
 }
 
 export default function CapabilitiesPage() {
   return (
     <>
-      <Eyebrow>The benchmark, one capability at a time</Eyebrow>
-      <PageTitle>Each capability asks a different question</PageTitle>
-      <Headline>
-        See each question, its indicators and how countries compare in the same frame.
-      </Headline>
+      <Eyebrow>Capabilities</Eyebrow>
+      <PageTitle>Compare countries by capability</PageTitle>
+      <Headline>Each capability has its own question, indicators and country comparison.</Headline>
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {DIMENSIONS.map((dimension) => (
@@ -36,7 +33,7 @@ export default function CapabilitiesPage() {
               {DIMENSION_QUESTIONS[dimension]}
             </p>
             <span className="mt-6 inline-block text-xs font-medium underline underline-offset-4">
-              Open capability page
+              Open page
             </span>
           </Link>
         ))}

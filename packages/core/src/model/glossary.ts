@@ -88,10 +88,17 @@ export const GLOSSARY: GlossaryEntry[] = [
     full: 'Each dimension uses published indicators with a source and year. The score averages indicators with data; raw values stay visible for checking.',
   },
   {
+    term: 'Indicator family',
+    group: 'What is being measured',
+    short: 'A group of indicators inside one dimension that answer the same question.',
+    full: 'Some dimensions ask two questions under one name. Trust asks whether people rely on strangers and whether they rely on institutions, and an indicator belongs to one of those two families. The family changes nothing about the score, which stays the equal-weight average of whatever is observed. It exists so the diagnostics can report which family the evidence came from, because several readings of one question are not several independent signals.',
+    example: 'Trust holds a social family and an institutional family. Only the institutional family has any data, so the evidence answers one of the two questions.',
+  },
+  {
     term: 'Measurement class',
     group: 'What is being measured',
     short: 'Whether an indicator measures the capability, an input, a result, or an opinion.',
-    full: 'Every indicator is labeled C, I, O or P. C measures capability; I an input; O an outcome; P a perception. The benchmark prefers C, then I. P was retired after tracking income closely.',
+    full: 'The registry labels every indicator C, I, O or P. C measures the capability itself; I measures an input; O measures a result; P records a perception. The benchmark prefers C and I. P was retired after it tracked income too closely.',
     example: 'Time to register a company is C. Research spending is I. Patents are O. An expert survey about government quality is P.',
   },
   {
@@ -115,8 +122,8 @@ export const GLOSSARY: GlossaryEntry[] = [
   {
     term: 'Frame rebase',
     group: 'How a number is made',
-    short: 'Recomputing every scale after the country set changes, and saying so.',
-    full: 'Adding a country can move the endpoints and restate published numbers. The dataset gets a major version bump, the benchmark is rescored, and old and new numbers cannot be compared. A rebase is announced.',
+    short: 'A new scale after the country set changes.',
+    full: 'Adding a country can move the endpoints and restate published numbers. The dataset gets a major version bump, the benchmark is rescored, and old and new numbers cannot be compared. The change is announced.',
   },
   {
     term: 'Normalization',
@@ -171,28 +178,28 @@ export const GLOSSARY: GlossaryEntry[] = [
   {
     term: 'Ingest route',
     group: 'How a number is made',
-    short: 'How a value reaches the dataset: fetched from an API, entered by hand, or not collected at all.',
-    full: 'Every indicator declares one of four routes. Fetched values come from an API. Hand-entered values come from a published table and keep the retrieval date. A gap has no comparable dataset. A retired row has a rejected dataset. Both lower confidence.',
+    short: 'How a value gets into the dataset: from an API, a published table, or nowhere yet.',
+    full: 'Every indicator declares one of four routes. Fetched values come from an API. Values from published tables keep the retrieval date. A gap has no comparable dataset. A retired row has a rejected dataset. Both lower confidence.',
     example: 'Two indicators are entered by hand from the Global Entrepreneurship Monitor, which publishes its adult population survey as a table.',
   },
   {
     term: 'Gap',
     group: 'What is missing',
     short: 'An indicator the model asks for that no comparable dataset covers.',
-    full: 'A gap stays in the registry, lowers confidence and appears in the collection agenda. Removing it would improve the numbers without adding evidence.',
+    full: 'A gap stays in the registry, lowers confidence and appears in the collection agenda. Removing it would make the numbers look better without adding evidence.',
     example: 'Cost and schedule performance of major public projects is a gap. It is probably the single best measure of execution and no comparable international dataset exists.',
   },
   {
     term: 'Retired indicator',
     group: 'What is missing',
-    short: 'A dataset that exists and that this project rejected, with the reason on the record.',
-    full: 'A retired indicator keeps its row, is never fetched or scored, and lowers coverage like a gap. The row stays so the decision can be challenged.',
+    short: 'A dataset this project rejected, with the reason recorded.',
+    full: 'A retired indicator stays in the registry, is not fetched or scored, and lowers coverage like a gap. The reason remains available for challenge.',
   },
   {
     term: 'Evidence record',
     group: 'What sits beside the score',
-    short: 'A documented national delivery, filed against a gap, never scored.',
-    full: 'An evidence record documents a country doing what a gap indicator should measure. It carries a published number, reference period, source, limits and delivery status. Records never affect scores or confidence. A gap becomes an indicator when a comparable series covers at least two countries.',
+    short: 'A documented case for something the indicators cannot measure. It does not change the score.',
+    full: 'An evidence record describes a country doing something the current indicators miss. It includes a published number, the period it covers, its source, limits and delivery status. It does not affect scores or confidence. If a comparable series later covers at least two countries, the gap can become an indicator.',
     example: 'Brazil’s records run from Embrapa in 1973 to Pix in 2020. The immunisation programme is recorded as operating below its peak: 99 percent coverage in 2003, 91 percent in 2024.',
   },
   {
@@ -236,7 +243,7 @@ export const GLOSSARY: GlossaryEntry[] = [
   {
     term: 'Dissent',
     group: 'What sits beside the score',
-    short: 'Panel disagreement wide enough to be reported rather than averaged away.',
+    short: 'Panel disagreement above the reporting threshold.',
     full: 'The panel keeps a median and interquartile range. A cell is unresolved when its middle half spans more than a quarter of the scale. Stable disagreement is a result.',
   },
   {

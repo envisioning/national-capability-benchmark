@@ -4,9 +4,9 @@ import type { MeasurementClass } from '@ncb/core'
 
 export const metadata: Metadata = {
   title: 'Glossary, NCB',
-  description: 'Every term the benchmark uses, defined in plain words for a first-time reader.',
+  description: 'Terms used by the benchmark, explained in plain language.',
 }
-import { ClassBadge, Eyebrow, Headline, Highlight, PageTitle, Section } from '@/components/ui'
+import { ClassBadge, Eyebrow, Headline, PageTitle, Section } from '@/components/ui'
 import { GROUP_ICON, Icon } from '@/components/Icon'
 
 const CLASSES: MeasurementClass[] = ['C', 'I', 'O', 'P']
@@ -14,17 +14,16 @@ const CLASSES: MeasurementClass[] = ['C', 'I', 'O', 'P']
 export default function GlossaryPage() {
   return (
     <>
-      <Eyebrow>Every term, in plain words</Eyebrow>
-      <PageTitle>Nothing here needs prior knowledge</PageTitle>
+      <Eyebrow>Glossary</Eyebrow>
+      <PageTitle>The glossary explains the terms</PageTitle>
       <Headline>
-        This page defines every term the benchmark uses, including the ones it invented. If a page
-        shows you a letter, a band or a dashed line and you have to guess what it means, that is a{' '}
-        <Highlight>failure</Highlight> of this page.
+        This page explains the terms used by the benchmark. If a letter, band or dashed line is
+        unclear, start here.
       </Headline>
 
       <Section
         title="The four letters beside every indicator"
-        hint="Each indicator is labeled with what it actually measures. This label is stored in the data, so it can be argued with. The benchmark prefers C, then I, and uses O and P only where nothing better exists."
+        hint="Each indicator has a class: C, I, O or P. The registry keeps the label so it can be checked."
       >
         <dl className="max-w-3xl space-y-6">
           {CLASSES.map((c) => {

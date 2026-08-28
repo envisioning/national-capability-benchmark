@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import Link from 'next/link'
-import { DATASET_VERSION, LICENSE_DOC, REPO_URL, docHref } from '@ncb/core'
+import { COUNTRIES, DATASET_VERSION, LICENSE_DOC, REPO_URL, docHref } from '@ncb/core'
 import { LanguageSwitch } from '@/components/NavLinks'
 import { FooterNav, HeaderNav } from '@/components/SiteNav'
 import './globals.css'
@@ -88,11 +88,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <footer className="w-full border-t border-[var(--rule)] bg-[var(--surface-sunken)]">
           <div className="m-auto max-w-6xl px-6 py-12 sm:px-12">
             <p className="max-w-3xl text-lg leading-relaxed">
-              Envisioning is a technology research institute and advisory.
+              NCB is a prototype benchmark from Envisioning, a technology research institute and
+              advisory.
             </p>
             <p className="mt-4 max-w-3xl text-xs text-[var(--muted)]">
-              Scores run from 0 to 100 against a frame built from all measured countries. Adding a
-              country rebases the frame and requires a new version. Confidence sits beside each score.
+              It scores {COUNTRIES.length} countries on nine dimensions using public data. Every
+              score runs from 0 to 100 and carries its own confidence value. There is no overall
+              ranking.
             </p>
             <FooterNav />
             {/* The one place every page names the dataset it is showing and where the code lives. */}

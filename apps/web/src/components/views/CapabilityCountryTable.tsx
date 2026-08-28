@@ -105,7 +105,7 @@ export function CapabilityCountryTable({
               <span className="inline-flex items-center gap-1">
                 <Delta
                   value={row.delta}
-                  title={`Change from ${row.baseYear} to ${row.currentYear} on ${row.matchedIndicators} matched indicators.`}
+                  title={`Change from ${row.baseYear} to ${row.currentYear} using ${row.matchedIndicators} indicators.`}
                 />
                 <span className="text-[10px] text-[var(--muted)]">
                   ({row.matchedIndicators})

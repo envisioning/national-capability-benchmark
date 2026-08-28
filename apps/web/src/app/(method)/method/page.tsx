@@ -34,13 +34,13 @@ export default function MethodPage() {
       <Eyebrow>Method</Eyebrow>
       <PageTitle>Capability is measured apart from wealth</PageTitle>
       <Headline>
-        The benchmark tests whether what a country can do is distinct from what it earns. Every
-        choice below is open to challenge.
+        The benchmark asks whether a country&apos;s capacity to act is distinct from its income.
+        Every choice is open to challenge.
       </Headline>
 
       <Section
         title="Why this exists"
-        hint="If the claim holds, countries with similar incomes have different capability shapes. If it fails, the dimensions track income instead."
+        hint="If the claim is right, countries with similar incomes will have different capability profiles. If not, the dimensions mostly track income."
       >
         <ul className="max-w-3xl list-disc space-y-3 pl-5 text-lg leading-relaxed">
           <li>
@@ -48,8 +48,8 @@ export default function MethodPage() {
             only describe that country.
           </li>
           <li>
-            A high score is not a model to copy. Mechanisms depend on local conditions. The shape
-            says where to look; context says what to build.
+            A high score is not a recipe. Mechanisms depend on local conditions. The shape says
+            where to look; context says what to build.
           </li>
           <li>
             Capability changes below the national level, in groups small enough to act. A country
@@ -62,13 +62,13 @@ export default function MethodPage() {
           <li>
             The{' '}
             <Link href="/diagnostics" className="underline underline-offset-4">
-            diagnostics
+              diagnostics
             </Link>{' '}
             tests whether dimensions collapse into income. The{' '}
             <Link href="/limits" className="underline underline-offset-4">
-            limits
+              limits
             </Link>{' '}
-            records known failures.
+            page records known failures.
           </li>
         </ul>
       </Section>
@@ -104,9 +104,9 @@ export default function MethodPage() {
         </Scroller>
       </Section>
 
-      <Section title="Six steps turn an indicator into a score">
+      <Section title="How an indicator becomes a score">
         <ol className="max-w-3xl list-decimal space-y-3 pl-5 text-lg leading-relaxed">
-            <li>Take the latest comparable value for each country and indicator, with source and year.</li>
+            <li>Take the latest comparable value for each country and indicator, with its source and year.</li>
           <li>Apply the declared transform: per million people, log, or distance from a target.</li>
           <li>Winsorize extreme outliers with Tukey fences at three interquartile ranges.</li>
           <li>
@@ -123,10 +123,10 @@ export default function MethodPage() {
           weighting keeps v0 easy to challenge.
         </p>
         <p className="mt-4 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-          Of {INDICATORS.length} indicators, {wired} have data, {gaps} are gaps and {retired} are
-          retired. Gaps lack a comparable dataset; retired rows have a rejected one. Both lower
-          confidence and define the collection agenda. {manual} values were entered by hand, with
-          retrieval dates stored.
+          The registry has {INDICATORS.length} indicators: {wired} with data, {gaps} gaps and{' '}
+          {retired} retired rows. Gaps have no comparable dataset; retired rows have a rejected
+          one. Both lower confidence and define the collection agenda. {manual} values come from
+          published tables, with retrieval dates stored.
         </p>
       </Section>
 
@@ -148,8 +148,8 @@ export default function MethodPage() {
       </Section>
 
       <Section
-        title="Source quality feeds confidence only"
-        hint="Each tier affects source quality and confidence. Delphi estimates carry the least weight."
+        title="Source quality affects confidence only"
+        hint="Each tier affects confidence. Delphi estimates have the least weight."
       >
         <Scroller>
           <Table>
@@ -184,39 +184,38 @@ export default function MethodPage() {
       </Section>
 
       <Section
-        title="Thin evidence is drawn on the chart"
-        hint="Confidence never enters the score. Thin evidence gets a dashed edge and hollow point; the gap widens as confidence falls."
+        title="Thin evidence appears on the chart"
+        hint="Confidence never enters the score. Thin evidence gets a dashed edge and hollow point. The gap widens as confidence falls."
       >
         <ul className="max-w-3xl list-disc space-y-2 pl-5 text-lg leading-relaxed">
           <li>Coverage is the share of a dimension's indicators that have a value.</li>
           <li>Recency decays after two grace years, over a twelve-year window, to a floor of 0.1.</li>
           <li>Source quality is the mean tier weight of the values that are present.</li>
-          <li>
-            The product stays below 1 in practice, so the bands reflect realistic values.
-          </li>
+          <li>The product stays below 1 in practice, so the bands reflect real values.</li>
         </ul>
       </Section>
 
       <Section
-        title="Momentum uses a matched basket"
+        title="Momentum uses only matching indicators"
         hint="Momentum shows score change over time on the current frame. Only indicators observed at both ends count."
       >
         <ul className="max-w-3xl list-disc space-y-2 pl-5 text-lg leading-relaxed">
           <li>
-            Historical values use today&apos;s frame, so score change reflects the country.
+            Historical values use today&apos;s frame, so the change reflects the country.
           </li>
           <li>
-            The same basket is used for every year. A new indicator cannot create movement.
+            The same indicators are used at both ends. A new indicator cannot create movement.
           </li>
           <li>
-            The basket may be smaller than the dimension, so trend level can differ from the score.
-            Its size is printed beside the trend.
+            The basket may be smaller than the dimension, so the trend level can differ from the
+            score. Its size is printed beside the trend.
           </li>
           <li>
-            Ten-year and twenty-year spans are published. A missing span shows the data&apos;s reach.
+            Ten-year and twenty-year spans are published. A missing span shows how far the data
+            reaches.
           </li>
           <li>
-            Each indicator carries its own line back to 1990 where available. Nothing is carried
+            Each indicator has its own line back to 1990 where data exists. Nothing is carried
             forward or filled in.
           </li>
           <li>
@@ -238,8 +237,8 @@ export default function MethodPage() {
       </Section>
 
       <Section
-        title="Documented deliveries are recorded outside the score"
-        hint="Evidence records document work that a gap indicator cannot measure. They stay outside scores."
+        title="Documented deliveries sit outside the score"
+        hint="Evidence records describe work that a gap indicator cannot measure. They do not change scores."
       >
         <ul className="max-w-3xl list-disc space-y-2 pl-5 text-lg leading-relaxed">
           <li>Each record carries a published number, reference period, source and retrieval date.</li>
@@ -252,8 +251,8 @@ export default function MethodPage() {
       </Section>
 
       <Section
-        title="A panel of models judges what the data cannot"
-        hint="Each panelist has a fixed stance. The panel scores the same cells and audits the indicators."
+        title="A panel fills gaps in the data"
+        hint="Each panelist has a fixed stance. The panel scores the same cells and reviews the indicators."
       >
         <ul className="max-w-3xl list-disc space-y-3 pl-5 text-lg leading-relaxed">
           <li>Round 1: each panelist scores every dimension from the evidence brief and its knowledge.</li>
@@ -284,8 +283,8 @@ export default function MethodPage() {
       </Section>
 
       <Section
-        title="All countries set the scale"
-        hint={`All ${COUNTRIES.length} countries set each indicator's fences and endpoints. The frame stays fixed within a version; adding a country rebases it and requires a major version bump.`}
+        title="The country set defines the scale"
+        hint={`All ${COUNTRIES.length} countries set each indicator's fences and endpoints. The frame stays fixed within a version. Adding a country rebases it and requires a major version bump.`}
       >
         <Scroller>
           <Table>
@@ -310,7 +309,7 @@ export default function MethodPage() {
       </Section>
 
       <Section
-        title="These assumptions can be challenged"
+        title="The assumptions are public"
         hint="The decision log records each choice and what evidence would overturn it."
       >
         <ul className="max-w-3xl list-disc space-y-2 pl-5 text-lg leading-relaxed">

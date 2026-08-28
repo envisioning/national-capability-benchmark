@@ -1,6 +1,6 @@
 # The Delphi layer
 
-The indicator model measures what international datasets cover. The panel judges
+The indicator model measures what international datasets cover. The panel reviews
 thin cells and audits the indicator set.
 
 ## What a panelist is
@@ -43,7 +43,7 @@ list and returns, per indicator: the measurement class it should be filed under,
 a construct-validity rating, a wealth-proxy risk rating, and any indicators it
 duplicates. This runs once, batched by dimension.
 
-## Provenance comes before any panel number
+## Every run records its provenance
 
 Every run file declares `provenance`. It is **stored, never inferred** (D14).
 
@@ -62,7 +62,7 @@ panelists.
 **A run with one panelist is not a panel.** The median is one opinion and the
 IQR is zero. `data/delphi/in-session-round1.json` is exactly this: ninety cells
 scored by Claude Opus 5 in a working session on 2026-08-26, with a rationale and
-a self-confidence per cell. It is useful and produced most of
+self-confidence for each cell. It is useful and produced most of
 `KNOWN-ARTEFACTS.md`, but a real gateway run must replace it before publication.
 
 ## Running it

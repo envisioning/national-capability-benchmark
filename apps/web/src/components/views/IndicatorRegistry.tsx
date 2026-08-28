@@ -22,13 +22,13 @@ export function IndicatorRegistry({ dimension }: { dimension?: Dimension } = {})
             {DIMENSION_LABELS[dimension]} indicators
           </Link>
         ) : (
-          'Every indicator is on the record, including the missing ones'
+          'Every indicator is listed, including the missing ones'
         )
       }
       hint={
         dimension
-          ? `${indicatorsFor(dimension).length} indicators define this capability. Gaps and retired rows stay visible because they lower confidence. Click a heading to sort.`
-          : `${INDICATORS.length} indicators: ${gaps} gaps and ${retired} retired. Both lower confidence and set the collection agenda. Click a heading to sort.`
+          ? `${indicatorsFor(dimension).length} indicators define this capability. Gaps and retired rows remain because they lower confidence. Click a heading to sort.`
+          : `${INDICATORS.length} indicators: ${gaps} gaps and ${retired} retired. Both lower confidence and shape the collection agenda. Click a heading to sort.`
       }
     >
       <ClassLegend />

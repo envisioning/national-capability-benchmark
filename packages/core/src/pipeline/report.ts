@@ -49,16 +49,16 @@ export function buildReport(
   out.push(`*Generated ${diag.generatedAt}*`)
   out.push('')
   out.push(
-    `${countries.length} countries, nine dimensions, equal weights within each dimension, no headline ranking.`,
+    `This run covers ${countries.length} countries and nine dimensions. Indicators carry equal weight within each dimension, and the benchmark has no headline ranking.`,
   )
   out.push('')
   out.push(
-    `Scores run against a frame built from all ${countries.length} countries together. Every country sets the scale and is measured against it. Adding a country rebases the frame and restates every score, which is a major version bump.`,
+    `All ${countries.length} countries set the comparison frame and are measured against it. Adding a country changes the frame, restates every score and requires a major version bump.`,
   )
   out.push('')
   out.push('')
 
-  out.push('## Each country gets nine scores and no ranking')
+  out.push('## Scores by country')
   out.push('')
   out.push(
     table(
@@ -67,7 +67,7 @@ export function buildReport(
     ),
   )
   out.push('')
-  out.push('Confidence is reported separately and never folded into the score above. Each cell shows the number and the band it falls in.')
+  out.push('Confidence is reported beside the score. Each cell shows the value and its band.')
   out.push('')
   out.push(
     table(
@@ -82,7 +82,7 @@ export function buildReport(
     ),
   )
   out.push('')
-  out.push('## Where each country is moving, on the same ruler')
+  out.push('## Trends use the same frame')
   out.push('')
   const lists = countries.flatMap((c) => DIMENSIONS.map((d) => c.dimensions[d]?.momentum ?? []))
   const spans = momentumSpansIn(lists)
@@ -91,7 +91,7 @@ export function buildReport(
     out.push('')
   } else {
     out.push(
-      'Trends use the current frame and only indicators observed at both ends. The matched basket may be smaller than the dimension. The number in brackets is the indicator count. "Clamped" means part of the change reached the frame edge.',
+      'Trends use the current frame and only indicators observed at both ends. The basket may be smaller than the dimension. The number in brackets is the indicator count. "Clamped" means the change reached the frame edge.',
     )
     out.push('')
     for (const span of spans) {
@@ -133,7 +133,7 @@ export function buildReport(
       out.push('')
     }
     out.push(
-      'Read the median first. Global adoption can lift every country, so a positive change does not mean catching up. A country gains ground when it beats the median. Short and long spans use different baskets; presence in one only shows how far the data reaches.',
+      'Read the median first. Global adoption can lift every country, so a positive change does not necessarily mean catching up. A country gains ground when it beats the median. Short and long spans use different baskets, which shows how far the data reaches.',
     )
     out.push('')
   }
@@ -145,13 +145,13 @@ export function buildReport(
   const topBand = confidenceBand(best)
   const goodCells = confidences.filter((v) => confidenceBand(v).id === 'good').length
   out.push(
-    `The strongest evidence base anywhere in this run scores ${best.toFixed(2)}, which is ${topBand.label}. ` +
+    `The strongest evidence base in this run is ${best.toFixed(2)}, in the ${topBand.label} band. ` +
       (goodCells === 0
         ? 'No country and dimension pair reaches the good band.'
         : `${goodCells} of ${confidences.length} country and dimension pairs reach the good band.`),
   )
   out.push('')
-  out.push('Bands:')
+  out.push('Confidence bands:')
   out.push('')
   for (let i = 0; i < CONFIDENCE_BANDS.length; i++) {
     const b = CONFIDENCE_BANDS[i] as (typeof CONFIDENCE_BANDS)[number]
@@ -161,7 +161,7 @@ export function buildReport(
   }
   out.push('')
 
-  out.push('## Some dimensions are far better measured than others')
+  out.push('## Measurement quality varies by dimension')
   out.push('')
   const measurability = [...diag.measurability].sort((a, b) => b.meanConfidence - a.meanConfidence)
   out.push(
@@ -181,10 +181,10 @@ export function buildReport(
   out.push('')
   const easiest = measurability.slice(0, 3).map((m) => DIMENSION_LABELS[m.dimension])
   const hardest = measurability.slice(-3).map((m) => DIMENSION_LABELS[m.dimension])
-  out.push(`Best measured: ${easiest.join(', ')}. Weakest evidence base: ${hardest.join(', ')}.`)
+  out.push(`Strongest evidence: ${easiest.join(', ')}. Weakest evidence: ${hardest.join(', ')}.`)
   out.push('')
 
-  out.push('## Some dimensions rest mostly on judgment')
+  out.push('## Some dimensions have little direct evidence')
   out.push('')
   const subjective = [...diag.measurability]
     .filter((m) => m.subjectivityShare >= 0.5)
@@ -200,7 +200,7 @@ export function buildReport(
   }
   out.push('')
 
-  out.push('## Every dimension is checked against GDP per capita')
+  out.push('## Every dimension is checked against income')
   out.push('')
   out.push(
     table(
@@ -212,7 +212,7 @@ export function buildReport(
   )
   out.push('')
 
-  out.push('## Every indicator is checked the same way')
+  out.push('## Indicators are checked for income bias')
   out.push('')
   const wealthy = diag.indicatorVsGdp.filter((i) => i.flaggedAsWealthProxy)
   out.push(
@@ -229,13 +229,13 @@ export function buildReport(
   )
   out.push('')
 
-  out.push('## The model is re-scored without its wealth-correlated indicators')
+  out.push('## What changes when income-linked indicators are removed')
   out.push('')
-  out.push(`Dropped ${diag.gdpStrippedTest.excluded.length} indicators correlating with log GDP per capita at ${WEALTH_CORRELATION_THRESHOLD} or above, then re-scored.`)
+  out.push(`The test removes ${diag.gdpStrippedTest.excluded.length} indicators correlated with log GDP per capita at ${WEALTH_CORRELATION_THRESHOLD} or above, then scores the remaining data.`)
   out.push('')
   if (diag.gdpStrippedTest.dimensionsEmptied.length > 0) {
     out.push(
-      `${diag.gdpStrippedTest.dimensionsEmptied.map((d) => DIMENSION_LABELS[d]).join(' and ')} lose every measured indicator in this test and cannot be scored at all without wealth-correlated evidence. That is the strongest single result in the prototype: as currently specified, those dimensions are not separable from income per head.`,
+      `${diag.gdpStrippedTest.dimensionsEmptied.map((d) => DIMENSION_LABELS[d]).join(' and ')} lose every measured indicator in this test and cannot be scored without income-linked evidence. As currently specified, those dimensions are not separable from income per head.`,
     )
     out.push('')
   }
@@ -251,7 +251,7 @@ export function buildReport(
   )
   out.push('')
 
-  out.push('## Values outside the frame clamp, and the clamps are counted')
+  out.push('## Some historical values fall outside the frame')
   out.push('')
   out.push(
     `${diag.outOfFrame.clampedCells} of ${diag.outOfFrame.observedCells} observed cells (${Math.round(diag.outOfFrame.share * 100)}%) sit outside the frame and clamp to 0 or 100. A current value cannot fall outside a frame its own country helped build, so a clamp here comes from a value the published frame did not see.`,
@@ -267,7 +267,7 @@ export function buildReport(
     out.push('')
   }
 
-  out.push('## Indicator pairs are checked for redundancy')
+  out.push('## Indicator pairs are checked for overlap')
   out.push('')
   if (diag.redundantIndicatorPairs.length === 0) {
     out.push(`No indicator pair reaches ${REDUNDANCY_THRESHOLD} across the ${countries.length} countries.`)
@@ -290,7 +290,7 @@ export function buildReport(
   out.push('## Dimension pairs are checked for overlap')
   out.push('')
   if (diag.duplicateDimensionCandidates.length === 0) {
-    out.push(`No dimension pair reaches ${DIMENSION_OVERLAP_THRESHOLD}. The nine dimensions carry distinct information at this sample size.`)
+    out.push(`No dimension pair reaches ${DIMENSION_OVERLAP_THRESHOLD}. At this sample size, the nine dimensions carry distinct information.`)
   } else {
     out.push(
       table(
@@ -309,7 +309,7 @@ export function buildReport(
   )
   out.push('')
 
-  out.push('## Switzerland, Singapore and Estonia are compared directly')
+  out.push('## Three countries are compared directly')
   out.push('')
   const focus = ['CHE', 'SGP', 'EST']
   out.push(
@@ -323,7 +323,7 @@ export function buildReport(
   )
   out.push('')
 
-  out.push('## Brazil is the reference case')
+  out.push('## Brazil is the first case')
   out.push('')
   const brazil = countries.find((c) => c.iso3 === 'BRA')
   if (brazil) {
@@ -356,22 +356,22 @@ export function buildReport(
       out.push('')
     }
   }
-  out.push('## Some indicators have no dataset behind them')
+  out.push('## Some indicators have no dataset')
   out.push('')
   gapRows(diag.dataGaps.filter((g) => g.status === 'gap'))
   const retiredRows = diag.dataGaps.filter((g) => g.status === 'retired')
   if (retiredRows.length > 0) {
-    out.push('## Some datasets exist and this project rejected them')
+    out.push('## Some datasets were rejected')
     out.push('')
     out.push(
-      'These rows stay in the registry and lower confidence like gaps. A dataset exists, but the project rejected it and recorded why.',
+      'These rows remain in the registry and lower confidence like gaps. The project recorded why each dataset was rejected.',
     )
     out.push('')
     gapRows(retiredRows)
   }
 
   if (delphi) {
-    out.push('## A panel of models scored the same cells')
+    out.push('## A panel scored the same cells')
     out.push('')
     out.push(
       `Run ${delphi.runId}, provenance \`${delphi.provenance}\`, ${delphi.rounds} round(s), panel: ${delphi.panel.map((p) => `${p.stance} (${p.model})`).join(', ')}.`,
@@ -405,7 +405,7 @@ export function buildReport(
     }
 
     const dissent = finals.filter((c) => c.dissent).sort((a, b) => b.iqr - a.iqr)
-    out.push('### The panel is allowed to stay split')
+    out.push('### Panel disagreement remains visible')
     out.push('')
     if (dissent.length === 0) {
       out.push(
@@ -425,7 +425,7 @@ export function buildReport(
     }
     out.push('')
 
-    out.push('### The panel and the indicators disagree most here')
+    out.push('### Where the panel and indicators differ most')
     out.push('')
     out.push(
       table(
@@ -458,7 +458,7 @@ export function buildReport(
       const tracking = panelWealth.perDimension.filter((d) => d.flaggedAsWealthProxy)
       const clear = panelWealth.perDimension.filter((d) => !d.flaggedAsWealthProxy)
       const backfill = panelWealth.perDimension.filter((d) => d.backfillCandidate)
-      out.push('### The panel takes the same wealth test the indicators take')
+      out.push('### The panel takes the same income test')
       out.push('')
       const named = (rows: typeof panelWealth.perDimension) =>
         listOf(rows.map((d) => DIMENSION_LABELS[d.dimension]))
@@ -524,7 +524,7 @@ export function buildReport(
 
     const judged = indicatorConsensus(delphi)
     if (judged.length > 0) {
-      out.push('### The panel rates these indicators weakest')
+      out.push('### Indicators the panel rates weakest')
       out.push('')
       out.push(
         table(
@@ -546,7 +546,7 @@ export function buildReport(
 
     const missing = missingEvidenceRanking(delphi)
     if (missing.length > 0) {
-      out.push('### The panel named the evidence it wanted')
+      out.push('### Evidence the panel requested')
       out.push('')
       out.push(
         table(
@@ -558,7 +558,7 @@ export function buildReport(
     }
   }
 
-  out.push('## These assumptions can be challenged')
+  out.push('## Assumptions to challenge')
   out.push('')
   out.push(
     `- The 0 to 100 scale uses every country in the benchmark. Adding a country rebases the frame and restates every score, which is a major version bump. See [${DECISIONS_DOC}](${docHref(DECISIONS_DOC)}) D47.`,

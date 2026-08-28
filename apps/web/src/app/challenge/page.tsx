@@ -24,8 +24,7 @@ export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'Challenge this, NCB',
-  description:
-    'Known failures, decisions under review, ways to object, and citation details.',
+  description: 'Known failures, decisions under review, and ways to object.',
 }
 
 export default async function ChallengePage() {
@@ -50,10 +49,10 @@ export default async function ChallengePage() {
       </Headline>
 
       <Section
-        title="Start with what we already think is wrong"
+        title="Start with the known failures"
         hint={`${capitalize(countWord(artefacts.length))} artefacts are open: places where the model produces a number that misdescribes the world.${
           worst > 0
-            ? ` ${capitalize(countWord(worst))} ${worst === 1 ? 'is' : 'are'} marked high. Public data covers the dimensions this project most wants to measure worst.`
+            ? ` ${capitalize(countWord(worst))} ${worst === 1 ? 'has' : 'have'} high severity.`
             : ''
         }`}
       >
@@ -90,13 +89,13 @@ export default async function ChallengePage() {
           <Link href={limitsHref} className="underline underline-offset-4">
             limits page
           </Link>{' '}
-          carries the full entry, its diagnostic and a possible fix.
+          carries the full entry, the test behind it and a possible fix.
         </p>
       </Section>
 
       <Section
-        title="Every decision names the evidence that would overturn it"
-        hint="The decision log lists each challenge clause, newest first. Decisions stay fixed; new evidence adds a superseding entry."
+        title="Each decision says what could overturn it"
+        hint="The decision log lists each challenge clause, newest first. New evidence adds a superseding entry."
       >
         {challenges.length > 0 ? (
           <Scroller>
@@ -139,7 +138,7 @@ export default async function ChallengePage() {
 
       <Section
         title="Ways to object"
-        hint="Use the repository so the argument stays visible after it is settled."
+        hint="Use the repository so the argument remains visible after it is settled."
       >
         <ul className="max-w-3xl space-y-4 text-lg leading-relaxed">
           <li>
@@ -183,7 +182,7 @@ export default async function ChallengePage() {
 
       <Section
         title="How to cite it"
-        hint="Quote the dataset version with every score. Adding a country rebases the frame and restates all scores."
+        hint="Quote the dataset version with every score. Adding a country changes the frame and restates all scores."
       >
         <code className="block overflow-x-auto rounded bg-[var(--surface-sunken)] px-3 py-3 text-xs">
           Envisioning ({year}). NCB, the National Capability Benchmark, dataset {version}. {REPO_URL}
