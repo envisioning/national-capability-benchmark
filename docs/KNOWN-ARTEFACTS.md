@@ -87,7 +87,8 @@ and firm perception composites that track income closely by construction. On the
 GDP per capita at 0.90 and Trust at 0.88.
 
 Drop every indicator correlating with log GDP per capita at |r| ≥ 0.7 and each
-dimension kept exactly one indicator:
+dimension kept exactly one indicator. The table is from that same run, and the
+indicators in it are retired, so it cannot be recomputed on the current frame:
 
 | Dimension | Indicator | r with log GDP | Class | Survives |
 | --- | --- | ---: | --- | --- |
@@ -122,10 +123,10 @@ Coordination or Trust score as partly a statement about income per head.
 **Severity: closed. None of the four are scored. See D23.**
 
 Government effectiveness, regulatory quality, rule of law and control of
-corruption correlate with each other between 0.93 and 0.98 across the ten
-countries. They are spread across Coordination, Trust and Shared Purpose, so a
-single underlying perception measure is being counted three times in three
-different dimensions.
+corruption correlate with each other between 0.93 and 0.98 on the ten-country
+run that last scored them. They are spread across Coordination, Trust and
+Shared Purpose, so a single underlying perception measure is being counted
+three times in three different dimensions.
 
 None of the four are scored. The measurement-class analysis in D23 argued for
 keeping none of them: they were the mechanism turning three dimensions into
@@ -180,9 +181,9 @@ the Human Capital Index, whose last full round is 2020. Countries with high
 enrolment and weak outcomes score well. Countries with exceptional measured
 outcomes do not get credit for them.
 
-Against the panel, Singapore is 27.1 points low, Korea 26.2 and Estonia 23.9.
+Against the panel, Korea is 29.1 points low, Singapore 29.0 and Estonia 28.2.
 The error runs the other way where enrolment rose fast and measured outcomes did
-not follow: Peru is 21.5 points high, Mexico 19.1, Colombia 15.0 and Brazil 10.7.
+not follow: Peru is 19.7 points high, Mexico 14.8, Colombia 12.3 and Brazil 8.2.
 
 **Fix.** A learning-outcomes series (PISA or PIAAC) would resolve most of this.
 It is a gap because coverage across the country set is uneven, not because the
@@ -218,11 +219,12 @@ Coordination publishes no score, so the artefact is currently latent. It is kept
 because the measurement error that produced it is a property of the indicator
 type, not of the run.
 
-On the perception layer D23 retired, Uruguay scored 18.8 on Coordination. In the
-same decade it delivered Plan Ceibal, a national digital government stack, and
-the first nationally regulated cannabis market in the world, each of which
-required several institutions to move together and hold position for years. Costa
-Rica showed the same pattern more mildly at 33.7, against a national choice in
+On the perception layer D23 retired, and on the frame in use then, Uruguay
+scored 18.8 on Coordination. In the same decade it delivered Plan Ceibal, a
+national digital government stack, and the first nationally regulated cannabis
+market in the world, each of which required several institutions to move
+together and hold position for years. Costa Rica showed the same pattern more
+mildly at 33.7, against a national choice in
 1949 to abolish the army and redirect the money into health and education that
 has now held for three generations.
 
@@ -251,13 +253,13 @@ Two consequences follow.
 
 **Scores are only comparable inside one dataset version.** Adding a country moves
 the endpoints it touches and restates every number. That is done as an announced
-rebase with a major version bump, and 2.0.0 numbers do not compare with 3.0.0
+rebase with a major version bump, and 3.0.0 numbers do not compare with 4.0.0
 ones. Anything quoting a score has to quote the version with it.
 
-**Clamping has moved to history.** No observed cell clamps: 0 of 1,263, because a
+**Clamping has moved to history.** No observed cell clamps: 0 of 1,604, because a
 current value cannot fall outside a frame its own country helped build. The
 `outOfFrame` flag now fires only where a historical value sits outside the
-current frame, which is 53 of 485 momentum baskets. A trend carrying a clamped
+current frame, which is 64 of 603 momentum baskets. A trend carrying a clamped
 basket member is part distance-to-the-clamp rather than movement in the country,
 and every surface that prints a trend prints that count.
 
@@ -267,11 +269,11 @@ and every surface that prints a trend prints that count.
 
 **Severity: medium.**
 
-Building asks whether a country can build and deliver. Its six measured
+Building asks whether a country can build and deliver. Its five measured
 indicators are manufacturing value added, high-technology export share, labour
-productivity, logistics infrastructure, electricity connection speed and
-economic complexity. All six describe industrial output. Nothing in the measured
-set can see a national programme that was specified, funded and delivered.
+productivity, electricity connection speed and economic complexity. All five
+describe industrial output. Nothing in the measured set can see a national
+programme that was specified, funded and delivered.
 
 Brazil scores 25.3 at confidence 0.544, one of the better evidenced of its nine
 dimensions. The score is a correct statement about Brazilian industrial output
@@ -286,11 +288,10 @@ The two indicators that would carry the delivery construct,
 **Fix.** Two parts, one done and one open. Documented deliveries are now
 recorded in `data/evidence/records.json` against the gap they bear on, outside
 the score, so the cases are written down with sources and limits instead of
-being argued in prose. Fifteen records cover Brazil, Estonia, India and Uruguay,
-and they bear on three different gaps rather than one. Brazil's 11 run from
-Embrapa in 1973 to Pix in 2020. See D20. The open part is a comparable delivery
-series across the country set, without which the gap cannot be promoted to an
-indicator.
+being argued in prose. Thirty-three records cover 19 countries and bear on 10
+different gaps. Brazil's 11 run from Embrapa in 1973 to Pix in 2020. See D20.
+The open part is a comparable delivery series across the country set, without
+which the gap cannot be promoted to an indicator.
 
 **Watch for.** The same reading error in reverse. A country with strong
 industrial output and a poor record of finishing public programmes scores well
