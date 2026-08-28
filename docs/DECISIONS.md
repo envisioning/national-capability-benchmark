@@ -2055,3 +2055,60 @@ how a gap gets recorded as unfillable rather than untried.
 **Overturned by.** A second ingester. The probe speaks World Bank, and the
 series that would fill Coordination and Trust are the ones the World Bank does
 not publish, so its long-term job is to be generalised or retired.
+
+## D53 — The radar answers a pointer, and it has no resting number
+
+**Decision.** The radar carries its own interaction layer and its own readout.
+Each of the nine axes owns a sector of the chart as a hit target. Pointing at a
+sector raises that axis and steps the other eight back, and the number, its
+confidence and the dimension's question print under the chart.
+
+The readout always shows an axis and never nothing. It opens on the first axis
+in the fixed dimension order, hover previews another, and leaving the chart
+returns it to the last axis the reader chose. Every row is always drawn at a
+fixed height, so the block is the same size before, during and after a hover.
+Hover and click land on the same axis: a click moves the readout and opens the
+comparison panel for the dimension the readout is showing.
+
+A finger reads on the first tap and opens the panel on the second. A keyboard
+reaches the axes as one tab stop and moves between them with the arrow keys.
+The chart's accessible name is an `aria-label`, not an SVG `<title>`, because a
+`<title>` renders as a native tooltip over the shape it names.
+
+**Why.** The chart showed nine numbers and printed none of them. A reader who
+wanted one had to find the country table further down the page, match a row by
+name and lose the shape while doing it. Every number was already on the page
+and none of them was reachable from the picture that plotted it.
+
+The hit target is a sector rather than a vertex because a vertex is two pixels
+wide. Under a finger it is smaller than the contact patch, and a chart that
+cannot be read by touch is not readable on the device most Brazilian readers
+will open it on.
+
+The opening axis is a position in the fixed dimension order and never a summary.
+The obvious thing to put under a radar at rest is the mean of its axes, and that
+is the headline score this benchmark refuses to publish. Nine dimensions at
+equal weights average to a number that ranks countries, which is the claim D16
+and D47 exist to withhold. So the readout starts on one dimension out of nine
+and says which one it is.
+
+Confidence stays a separate statement inside the readout. The score prints
+through `Score`, the confidence prints through `ConfidenceBar` beside it with
+its band named, and neither is folded into the other.
+
+**Cost.** `Radar` is now a client component, so every page that draws one ships
+it. The grid pages draw 52 of them and pass `interactive={false}`, which keeps
+them as pictures inside their links: a hover readout there would compete with
+the navigation the card exists for, and 52 readouts would add 52 reserved
+blocks to a page that is meant to be scanned.
+
+The readout is a fixed block under every interactive radar whether or not
+anybody points at it, and its question line is sized for two lines in both
+lexicons. A readout that grew and shrank would drag the page under the pointer
+and make the next axis harder to hit than the last one, so a row that is
+sometimes half empty is the cheaper of the two failures.
+
+**Overturned by.** Evidence that readers want the numbers printed on the chart
+itself. Nine labels on a 260 unit square collide at the sizes this chart is
+drawn at, which is why they are not there, but a larger chart on the country
+page could carry them and would make the readout redundant.
