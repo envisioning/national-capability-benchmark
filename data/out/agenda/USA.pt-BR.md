@@ -1,22 +1,35 @@
 # Agenda de capacidades: Estados Unidos
 
-*Gerado em 2026-08-27*
+*Gerado em 2026-08-28*
 
-As notas são relativas a uma régua construída a partir dos 40 países em conjunto e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
+As notas são relativas a uma régua construída a partir dos 52 países em conjunto e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
 
 ## Onde os Estados Unidos está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 69,3 | 0,63 (utilizável) | +11,1 em 10 anos, sobre 5 indicadores |
-| Agência | 88,3 | 0,5 (utilizável) | +10,4 em 10 anos, sobre 3 indicadores |
+| Antecipação | 70,2 | 0,63 (utilizável) | +9,9 em 10 anos, sobre 5 indicadores |
+| Agência | 92,6 | 0,5 (utilizável) | +7,9 em 10 anos, sobre 3 indicadores |
 | Coordenação | sem nota | 0,08 (muito fraca) | sem base de tendência |
 | Confiança | sem nota | 0,08 (muito fraca) | sem base de tendência |
-| Aprendizagem | 51,5 | 0,45 (utilizável) | +0,1 em 10 anos, sobre 2 indicadores |
+| Aprendizagem | 49,5 | 0,45 (utilizável) | -0,5 em 10 anos, sobre 2 indicadores |
 | Experimentação | 55,8 | 0,39 (fraca) | +3,2 em 10 anos, sobre 2 indicadores |
-| Adaptação | 74,3 | 0,48 (utilizável) | +6,1 em 10 anos, sobre 4 indicadores |
-| Construção | 51,5 | 0,52 (utilizável) | +2,4 em 10 anos, sobre 4 indicadores |
+| Adaptação | 76,2 | 0,48 (utilizável) | +6 em 10 anos, sobre 4 indicadores |
+| Construção | 58,4 | 0,52 (utilizável) | +2,4 em 10 anos, sobre 4 indicadores |
 | Propósito compartilhado | 40,8 | 0,27 (fraca) | -1,1 em 10 anos, sobre 2 indicadores |
+
+## As dimensões que a evidência manda elevar
+
+Da nota mais baixa para a mais alta. Só entram aqui dimensões com evidência utilizável. Uma nota baixa com evidência fraca é antes um problema de medição do que de política pública, e vai para a próxima seção.
+
+### Aprendizagem: 49,5, confiança utilizável
+
+Com que eficácia o país adquire, distribui e atualiza conhecimento?
+
+- Hoje a nota se apoia em 5 indicadores observados.
+- Maiores notas com evidência utilizável: Finlândia 77,9, Austrália 70,3, Reino Unido 68,4.
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia).
+- Lacunas declaradas nesta dimensão: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ## As dimensões que precisam ser medidas antes de serem geridas
 
@@ -57,11 +70,10 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 
 Da nota mais alta para a mais baixa. Estas dimensões pontuam 50 ou mais com evidência utilizável, então nada aqui pede elevação ou medição primeiro. Uma dimensão mantida ainda decai quando ninguém a observa.
 
-- Agência: 88,3, confiança utilizável
-- Adaptação: 74,3, confiança utilizável
-- Antecipação: 69,3, confiança utilizável
-- Aprendizagem: 51,5, confiança utilizável
-- Construção: 51,5, confiança utilizável
+- Agência: 92,6, confiança utilizável
+- Adaptação: 76,2, confiança utilizável
+- Antecipação: 70,2, confiança utilizável
+- Construção: 58,4, confiança utilizável
 
 ## A agenda de medição
 

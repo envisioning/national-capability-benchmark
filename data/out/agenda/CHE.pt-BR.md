@@ -1,21 +1,21 @@
 # Agenda de capacidades: Suíça
 
-*Gerado em 2026-08-27*
+*Gerado em 2026-08-28*
 
-As notas são relativas a uma régua construída a partir dos 40 países em conjunto e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
+As notas são relativas a uma régua construída a partir dos 52 países em conjunto e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
 
 ## Onde a Suíça está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 80 | 0,64 (utilizável) | +9,8 em 10 anos, sobre 5 indicadores, 1 truncados na borda da régua |
-| Agência | 71,7 | 0,51 (utilizável) | +3,3 em 10 anos, sobre 3 indicadores |
+| Antecipação | 81,1 | 0,64 (utilizável) | +8,3 em 10 anos, sobre 5 indicadores, 1 truncados na borda da régua |
+| Agência | 76,1 | 0,51 (utilizável) | +1,8 em 10 anos, sobre 3 indicadores |
 | Coordenação | sem nota | 0,08 (muito fraca) | sem base de tendência |
 | Confiança | sem nota | 0,08 (muito fraca) | sem base de tendência |
-| Aprendizagem | 70,8 | 0,54 (utilizável) | +5 em 10 anos, sobre 2 indicadores |
-| Experimentação | 48,5 | 0,39 (fraca) | +2,8 em 10 anos, sobre 2 indicadores |
-| Adaptação | 87,7 | 0,48 (utilizável) | +3,2 em 10 anos, sobre 4 indicadores |
-| Construção | 53,5 | 0,54 (utilizável) | +2,9 em 10 anos, sobre 4 indicadores |
+| Aprendizagem | 65,1 | 0,54 (utilizável) | +5,1 em 10 anos, sobre 2 indicadores |
+| Experimentação | 50,7 | 0,39 (fraca) | +1,8 em 10 anos, sobre 2 indicadores |
+| Adaptação | 88,6 | 0,48 (utilizável) | +2,7 em 10 anos, sobre 4 indicadores |
+| Construção | 58,1 | 0,54 (utilizável) | +2,6 em 10 anos, sobre 4 indicadores |
 | Propósito compartilhado | 52,2 | 0,25 (muito fraca) | -1 em 10 anos, sobre 2 indicadores |
 
 ## As dimensões que precisam ser medidas antes de serem geridas
@@ -57,11 +57,11 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 
 Da nota mais alta para a mais baixa. Estas dimensões pontuam 50 ou mais com evidência utilizável, então nada aqui pede elevação ou medição primeiro. Uma dimensão mantida ainda decai quando ninguém a observa.
 
-- Adaptação: 87,7, confiança utilizável
-- Antecipação: 80, confiança utilizável
-- Agência: 71,7, confiança utilizável
-- Aprendizagem: 70,8, confiança utilizável
-- Construção: 53,5, confiança utilizável
+- Adaptação: 88,6, confiança utilizável
+- Antecipação: 81,1, confiança utilizável
+- Agência: 76,1, confiança utilizável
+- Aprendizagem: 65,1, confiança utilizável
+- Construção: 58,1, confiança utilizável
 
 ## A agenda de medição
 

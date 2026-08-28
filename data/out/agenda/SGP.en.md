@@ -1,21 +1,21 @@
 # Capability agenda: Singapore
 
-*Generated 2026-08-27*
+*Generated 2026-08-28*
 
-Scores are relative to a frame built from all 40 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
+Scores are relative to a frame built from all 52 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
 
 ## Where Singapore stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 76.8 | 0.62 (usable) | +19.8 over 10 years, on 5 indicators |
-| Agency | 83.7 | 0.57 (usable) | +12.7 over 10 years, on 3 indicators |
+| Anticipation | 78.1 | 0.62 (usable) | +14.5 over 10 years, on 5 indicators |
+| Agency | 84.9 | 0.57 (usable) | +10.7 over 10 years, on 3 indicators |
 | Coordination | not scored | 0.08 (very thin) | no trend basket |
 | Trust | not scored | 0.08 (very thin) | no trend basket |
-| Learning | 57.9 | 0.49 (usable) | +0.9 over 10 years, on 2 indicators |
-| Experimentation | 41.4 | 0.21 (very thin) | +9.3 over 10 years, on 2 indicators |
-| Adaptability | 78.5 | 0.47 (usable) | +5.3 over 10 years, on 4 indicators |
-| Building | 68.4 | 0.54 (usable) | +7.6 over 10 years, on 4 indicators |
+| Learning | 56 | 0.49 (usable) | +1.6 over 10 years, on 2 indicators |
+| Experimentation | 46.5 | 0.21 (very thin) | +10.7 over 10 years, on 2 indicators |
+| Adaptability | 79 | 0.47 (usable) | +4.8 over 10 years, on 4 indicators |
+| Building | 71.2 | 0.54 (usable) | +7.7 over 10 years, on 4 indicators |
 | Shared Purpose | not scored | 0.14 (very thin) | no trend basket |
 
 ## The dimensions that must be measured before they can be managed
@@ -57,11 +57,11 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 
 Strongest first. These score at or above 50 on usable evidence, so nothing here asks to be raised or measured first. A held dimension still decays when nobody watches it.
 
-- Agency: 83.7, confidence usable
-- Adaptability: 78.5, confidence usable
-- Anticipation: 76.8, confidence usable
-- Building: 68.4, confidence usable
-- Learning: 57.9, confidence usable
+- Agency: 84.9, confidence usable
+- Adaptability: 79, confidence usable
+- Anticipation: 78.1, confidence usable
+- Building: 71.2, confidence usable
+- Learning: 56, confidence usable
 
 ## The measurement agenda
 

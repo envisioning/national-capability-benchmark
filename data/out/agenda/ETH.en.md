@@ -1,60 +1,60 @@
 # Capability agenda: Ethiopia
 
-*Generated 2026-08-27*
+*Generated 2026-08-28*
 
-Scores are relative to a frame built from all 40 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
+Scores are relative to a frame built from all 52 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
 
 ## Where Ethiopia stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 2.8 | 0.51 (usable) | +3.9 over 10 years, on 3 indicators, 3 clamped at the frame edge |
-| Agency | 7.5 | 0.51 (usable) | +0.7 over 10 years, on 3 indicators, 2 clamped at the frame edge |
+| Anticipation | 12.1 | 0.51 (usable) | +10.6 over 10 years, on 3 indicators, 1 clamped at the frame edge |
+| Agency | 23.8 | 0.51 (usable) | +11.8 over 10 years, on 3 indicators, 2 clamped at the frame edge |
 | Coordination | not scored | 0.08 (very thin) | no trend basket |
 | Trust | not scored | 0.08 (very thin) | no trend basket |
-| Learning | 11 | 0.42 (thin) | -27.6 over 10 years, on 2 indicators |
+| Learning | 9.5 | 0.42 (thin) | -24.8 over 10 years, on 2 indicators |
 | Experimentation | 0 | 0.17 (very thin) | no trend basket |
-| Adaptability | 37.2 | 0.47 (usable) | -8.4 over 10 years, on 4 indicators |
-| Building | 7.5 | 0.53 (usable) | -2.6 over 10 years, on 4 indicators, 1 clamped at the frame edge |
+| Adaptability | 43.1 | 0.47 (usable) | -7.8 over 10 years, on 4 indicators |
+| Building | 15.5 | 0.53 (usable) | -2.3 over 10 years, on 4 indicators, 1 clamped at the frame edge |
 | Shared Purpose | 45.5 | 0.24 (very thin) | -2.1 over 10 years, on 2 indicators |
 
 ## The dimensions the evidence says to raise
 
 Lowest score first. Only dimensions with usable evidence appear here. A low score with thin evidence is a measurement problem before it is a policy problem, and it moves to the next section.
 
-### Anticipation: 2.8, confidence usable
+### Anticipation: 12.1, confidence usable
 
 How capable is the country of identifying and preparing for emerging change?
 
 - Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Sweden 82.9, Finland 81.1, Switzerland 80.
+- Highest scores with usable evidence: Sweden 83.5, Finland 82, Switzerland 81.1.
 - Documented deliveries elsewhere: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands).
 - Declared gaps in this dimension: Government foresight capacity, Long-horizon research share.
 
-### Agency: 7.5, confidence usable
-
-How able are individuals and organizations to turn an intention into action?
-
-- Currently scored on 6 observed indicators.
-- Highest scores with usable evidence: United States 88.3, Australia 88, United Kingdom 84.7.
-- Declared gaps in this dimension: Adult digital skills, Perceived control over life.
-
-### Building: 7.5, confidence usable
+### Building: 15.5, confidence usable
 
 How capable is the country of turning plans and knowledge into functioning systems?
 
 - Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Ireland 70, Singapore 68.4, China 62.8.
+- Highest scores with usable evidence: Ireland 75.3, Singapore 71.2, China 64.9.
 - Documented deliveries elsewhere: Pix instant payment system (Brazil); GOV.BR federal identity and service platform (Brazil); X-Road national data exchange layer (Estonia); Pradhan Mantri Jan Dhan Yojana bank accounts (India); Electricity supply rebuilt on renewable sources (Uruguay); Plan Ceibal, one connected laptop per child (Uruguay); Sistema Unico de Saude, universal public health system (Brazil); Programa Nacional de Imunizacoes, and its erosion (Brazil); Luz para Todos, rural electrification (Brazil); Bolsa Familia and the single registry behind it (Brazil); Fully electronic national elections (Brazil); Deepwater and pre-salt oil production (Brazil); Seguro Popular, and its abolition (Mexico); Sure Start children's centres, and their erosion (United Kingdom); Grid power, and load shedding (South Africa); Measles elimination, and its erosion (United States).
 - Declared gaps in this dimension: Large project delivery, Firm scale-up rate.
 - Datasets examined and rejected for this dimension: Logistics infrastructure quality.
 
-### Adaptability: 37.2, confidence usable
+### Agency: 23.8, confidence usable
+
+How able are individuals and organizations to turn an intention into action?
+
+- Currently scored on 6 observed indicators.
+- Highest scores with usable evidence: United States 92.6, Australia 89.8, United Kingdom 87.5.
+- Declared gaps in this dimension: Adult digital skills, Perceived control over life.
+
+### Adaptability: 43.1, confidence usable
 
 How effectively can the system respond when circumstances change?
 
 - Currently scored on 4 observed indicators.
-- Highest scores with usable evidence: Netherlands 89.5, Switzerland 87.7, Japan 84.9.
+- Highest scores with usable evidence: Netherlands 90.1, Switzerland 88.6, Japan 86.1.
 - Documented deliveries elsewhere: Plano Real, the 1994 currency stabilisation (Brazil); Proalcool, the fuel substitution after the oil shock (Brazil); The Convertibility Plan, and its collapse (Argentina); Kurzarbeit in the 2008-2009 crisis (Germany); The 2001 stabilisation, and its unwinding (Turkey).
 - Declared gaps in this dimension: Long-term unemployment share, Export diversification, Disaster preparedness and recovery, Institutional responsiveness.
 

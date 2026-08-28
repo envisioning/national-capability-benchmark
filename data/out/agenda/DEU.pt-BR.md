@@ -1,21 +1,21 @@
 # Agenda de capacidades: Alemanha
 
-*Gerado em 2026-08-27*
+*Gerado em 2026-08-28*
 
-As notas são relativas a uma régua construída a partir dos 40 países em conjunto e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
+As notas são relativas a uma régua construída a partir dos 52 países em conjunto e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
 
 ## Onde a Alemanha está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 70,2 | 0,64 (utilizável) | +11,6 em 10 anos, sobre 5 indicadores |
-| Agência | 57,7 | 0,6 (utilizável) | +4,3 em 10 anos, sobre 4 indicadores |
+| Antecipação | 71,2 | 0,64 (utilizável) | +9,9 em 10 anos, sobre 5 indicadores |
+| Agência | 64 | 0,6 (utilizável) | +3,1 em 10 anos, sobre 4 indicadores |
 | Coordenação | sem nota | 0,08 (muito fraca) | sem base de tendência |
 | Confiança | sem nota | 0,08 (muito fraca) | sem base de tendência |
-| Aprendizagem | 60,2 | 0,54 (utilizável) | +7,6 em 10 anos, sobre 2 indicadores |
-| Experimentação | 61,3 | 0,18 (muito fraca) | -4,2 em 10 anos, sobre 2 indicadores |
-| Adaptação | 84,5 | 0,48 (utilizável) | +5,1 em 10 anos, sobre 4 indicadores |
-| Construção | 61,9 | 0,54 (utilizável) | -1,9 em 10 anos, sobre 4 indicadores |
+| Aprendizagem | 56,2 | 0,54 (utilizável) | +7,1 em 10 anos, sobre 2 indicadores |
+| Experimentação | 72,5 | 0,18 (muito fraca) | +4,9 em 10 anos, sobre 2 indicadores |
+| Adaptação | 85,9 | 0,48 (utilizável) | +5,2 em 10 anos, sobre 4 indicadores |
+| Construção | 64,4 | 0,54 (utilizável) | -1,6 em 10 anos, sobre 4 indicadores |
 | Propósito compartilhado | 55,1 | 0,25 (muito fraca) | -5,9 em 10 anos, sobre 2 indicadores |
 
 ## As dimensões que precisam ser medidas antes de serem geridas
@@ -57,11 +57,11 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 
 Da nota mais alta para a mais baixa. Estas dimensões pontuam 50 ou mais com evidência utilizável, então nada aqui pede elevação ou medição primeiro. Uma dimensão mantida ainda decai quando ninguém a observa.
 
-- Adaptação: 84,5, confiança utilizável
-- Antecipação: 70,2, confiança utilizável
-- Construção: 61,9, confiança utilizável
-- Aprendizagem: 60,2, confiança utilizável
-- Agência: 57,7, confiança utilizável
+- Adaptação: 85,9, confiança utilizável
+- Antecipação: 71,2, confiança utilizável
+- Construção: 64,4, confiança utilizável
+- Agência: 64, confiança utilizável
+- Aprendizagem: 56,2, confiança utilizável
 
 ## A agenda de medição
 

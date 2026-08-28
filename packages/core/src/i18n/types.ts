@@ -110,7 +110,20 @@ export type Lexicon = {
   legendRange: string
   /** {a}: how a legend prints the open top range. */
   legendRangeTop: string
+  radar: RadarStrings
   agenda: AgendaStrings
+}
+
+/**
+ * The words the radar readout needs. The numbers it prints come from the same
+ * score and confidence the tables use, and the dimension names come from
+ * `dimensions`, so this holds only what nothing else already says.
+ */
+export type RadarStrings = {
+  /** The standing prompt in the readout, before the reader points at an axis. */
+  hint: string
+  /** What clicking an axis does. Printed only where the radar opens a panel. */
+  compare: string
 }
 
 /** Fill {name} placeholders from a map. Unknown placeholders are left visible. */

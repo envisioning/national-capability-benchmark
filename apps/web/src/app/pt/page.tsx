@@ -1,14 +1,29 @@
 import Link from 'next/link'
-import { PT_BR, countryName, splitAgenda } from '@ncb/core'
+import type { CountryAgenda } from '@ncb/core'
+import {
+  DIMENSIONS,
+  INDICATORS,
+  LATAM_ISO3,
+  PT_BR,
+  countryName,
+  fill,
+  isScored,
+  signed,
+  splitAgenda,
+} from '@ncb/core'
+import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { Radar } from '@/components/Radar'
 import {
+  ConfidenceBar,
   CountryLabel,
   DimensionLegend,
   Empty,
   Eyebrow,
   Headline,
   Highlight,
+  Meta,
   PageTitle,
+  Score,
   Section,
 } from '@/components/ui'
 import { loadAgenda } from '@/lib/agenda'
@@ -27,11 +42,12 @@ export const metadata = {
 
 /**
  * The Portuguese entry point: an interpretation layer over the English ground
- * layer, and the page the project shows a Brazilian institution first. It
- * presents the claim, reads Brazil's agenda, states the measurement gap and
- * the road ahead, and routes into the agendas. The deep data pages stay in the
- * ground layer on purpose, so a translated claim can always be checked against
- * its source. See D35.
+ * layer, and the page the project shows a Brazilian institution first. One
+ * scroll: the claim, Brazil's shape and agenda, the nine dimensions in full,
+ * the peers, the uses and the road ahead. Every number is read from the JSON
+ * at request time, and the deep data pages stay in the ground layer on
+ * purpose, so a translated claim can always be checked against its source.
+ * See D35.
  */
 export default async function PortugueseHomePage() {
   const data = await loadIndex()
@@ -53,11 +69,23 @@ export default async function PortugueseHomePage() {
   const split = agenda ? splitAgenda(agenda) : null
   const evidence = await loadEvidence()
   const brazilEvidence = agenda?.ownEvidence.length ?? 0
+  const scoredCount = INDICATORS.filter(isScored).length
 
-  const listNames = (items: Array<{ dimension: keyof typeof PT_BR.dimensions }>) =>
-    new Intl.ListFormat('pt-BR', { style: 'long', type: 'conjunction' }).format(
-      items.map((d) => PT_BR.dimensions[d.dimension]),
-    )
+  const s = PT_BR.agenda
+  const indicatorName = (id: string): string =>
+    PT_BR.indicators[id] ?? INDICATORS.find((def) => def.id === id)?.name ?? id
+
+  const trendLine = (d: CountryAgenda['dimensions'][number]): string =>
+    d.trend
+      ? fill(d.trend.clamped > 0 ? s.trendCellClamped : s.trendCell, {
+          delta: signed(d.trend.delta, PT_BR.numberLocale),
+          years: d.trend.spanYears,
+          n: d.trend.basket,
+          c: d.trend.clamped,
+        })
+      : s.noTrend
+
+  const kindLabel = { raise: 'Elevar', measure: 'Medir antes de gerir', hold: 'Manter' } as const
 
   return (
     <div lang="pt-BR">
@@ -74,11 +102,28 @@ export default async function PortugueseHomePage() {
         formas de capacidade opostas, e é a forma que diz onde uma intervenção teria efeito.
       </p>
 
+      {/* The instrument at a glance. Counts, never scores: a score in a tile
+          would be a headline number, and there is none on purpose. */}
+      <div className="mb-16 grid grid-cols-2 gap-3 sm:grid-cols-5">
+        {[
+          { n: total, label: 'países na mesma régua' },
+          { n: DIMENSIONS.length, label: 'dimensões de capacidade' },
+          { n: scoredCount, label: 'indicadores com nota' },
+          ...(agenda ? [{ n: agenda.gapCount, label: 'lacunas declaradas' }] : []),
+          { n: evidence.length, label: 'registros de evidência' },
+        ].map((t) => (
+          <div key={t.label} className="rounded-xl border border-[var(--rule)] p-4">
+            <div className="text-3xl font-light tabular-nums">{t.n}</div>
+            <div className="mt-1 text-xs text-[var(--muted)]">{t.label}</div>
+          </div>
+        ))}
+      </div>
+
       <Section
         title="O Brasil é o primeiro caso de campo"
         hint={`O projeto nasceu de uma estratégia sobre capacidade nacional que aponta o Brasil como o lugar onde os resultados devem ser úteis primeiro. O modelo não trata o Brasil como caso especial: as mesmas nove dimensões, os mesmos indicadores e a mesma régua valem para os ${total} países medidos.`}
       >
-        <div className="grid gap-8 lg:grid-cols-2">
+        <div className="grid gap-10 lg:grid-cols-2">
           {brazil ? (
             <div>
               <DimensionLegend names={PT_BR.dimensions} />
@@ -86,7 +131,7 @@ export default async function PortugueseHomePage() {
                 <Radar
                   labels="icons"
                   names={PT_BR.dimensions}
-                  noDataLabel={PT_BR.agenda.noScore}
+                  noDataLabel={s.noScore}
                   series={[
                     {
                       label: countryName(PT_BR, 'BRA'),
@@ -106,32 +151,34 @@ export default async function PortugueseHomePage() {
                 <li>
                   0 a 100 é uma posição dentro da régua que os {total} países constroem juntos. Uma
                   nota 10 põe o país perto do piso da régua, sem significar 10 por cento de uma
-                  capacidade.
+                  capacidade. Um eixo sem nota fica vazio.
                 </li>
               </ul>
             </div>
           ) : null}
 
           {split && agenda ? (
-            <div className="max-w-xl space-y-4 text-lg leading-relaxed">
-              <p>A agenda do Brasil, calculada dos dados e recalculada a cada rodada:</p>
-              <ul className="list-disc space-y-2 pl-5">
-                {split.raise.length > 0 ? (
-                  <li>
-                    Elevar, da nota mais baixa para a mais alta: {listNames(split.raise)}.
-                  </li>
-                ) : null}
-                {split.measure.length > 0 ? (
-                  <li>
-                    Medir antes de gerir, porque a evidência ainda não sustenta uma decisão:{' '}
-                    {listNames(split.measure)}.
-                  </li>
-                ) : null}
-                {split.hold.length > 0 ? (
-                  <li>Manter: {listNames(split.hold)}.</li>
-                ) : null}
-              </ul>
-              <p>
+            <div className="max-w-xl space-y-6">
+              <p className="text-lg leading-relaxed">
+                A agenda do Brasil, calculada dos dados e recalculada a cada rodada:
+              </p>
+              {(['raise', 'measure', 'hold'] as const).map((kind) =>
+                split[kind].length > 0 ? (
+                  <div key={kind}>
+                    <div className="mb-2 text-xs uppercase tracking-[0.05em] text-[var(--muted)]">
+                      {kindLabel[kind]}
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {split[kind].map((d) => (
+                        <Meta key={d.dimension} icon={DIMENSION_ICON[d.dimension]}>
+                          {PT_BR.dimensions[d.dimension]}
+                        </Meta>
+                      ))}
+                    </div>
+                  </div>
+                ) : null,
+              )}
+              <p className="text-lg leading-relaxed">
                 A agenda completa explica cada linha, com as fontes de cada número, as lacunas de
                 medição e entregas documentadas em outros países.
               </p>
@@ -143,15 +190,138 @@ export default async function PortugueseHomePage() {
                 </Highlight>
               </p>
               <p className="text-lg">
-                <Link
-                  href={countryProfileHref('BRA')}
-                  className="underline underline-offset-4"
-                >
-                  {PT_BR.agenda.profileLink}
+                <Link href={countryProfileHref('BRA')} className="underline underline-offset-4">
+                  {s.profileLink}
                 </Link>
               </p>
             </div>
           ) : null}
+        </div>
+      </Section>
+
+      {agenda ? (
+        <Section
+          title="As nove dimensões, uma a uma"
+          hint="Cada cartão traz a nota do Brasil, a confiança na evidência, a tendência sobre a cesta observada nas duas pontas e o estado da medição. Um quadrado cheio é um indicador observado; um vazio é uma lacuna declarada; um cortado é uma base examinada e rejeitada. Passe o cursor sobre um quadrado para ver o indicador."
+        >
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {agenda.dimensions.map((d) => (
+              <article key={d.dimension} className="rounded-xl border border-[var(--rule)] p-5">
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+                  <Icon
+                    name={DIMENSION_ICON[d.dimension]}
+                    size={16}
+                    className="text-[var(--muted)]"
+                  />
+                  <h3 className="text-xl font-medium tracking-tight">
+                    {PT_BR.dimensions[d.dimension]}
+                  </h3>
+                  <Score value={d.score} size="sm" nullLabel={s.noScore} />
+                </div>
+                <p className="mt-2 text-xs leading-relaxed text-[var(--muted)]">
+                  {PT_BR.questions[d.dimension]}
+                </p>
+                <div className="mt-4 flex flex-col gap-2">
+                  <ConfidenceBar value={d.confidence} />
+                  <span className="inline-flex items-center gap-1.5 text-xs text-[var(--muted)]">
+                    <Icon
+                      name={
+                        d.trend
+                          ? Math.abs(d.trend.delta) < 0.05
+                            ? 'minus'
+                            : d.trend.delta > 0
+                              ? 'trending-up'
+                              : 'trending-down'
+                          : 'minus'
+                      }
+                      size={13}
+                    />
+                    {trendLine(d)}
+                  </span>
+                  <div className="mt-1 flex flex-wrap items-center gap-1" aria-hidden="true">
+                    {d.scoredOn.map((id) => (
+                      <span
+                        key={id}
+                        title={indicatorName(id)}
+                        className="inline-block h-2.5 w-2.5 rounded-[3px] bg-[var(--foreground)] opacity-70"
+                      />
+                    ))}
+                    {d.gaps.map((id) => (
+                      <span
+                        key={id}
+                        title={indicatorName(id)}
+                        className="inline-block h-2.5 w-2.5 rounded-[3px] border border-[var(--foreground)] opacity-50"
+                      />
+                    ))}
+                    {d.retired.map((id) => (
+                      <span
+                        key={id}
+                        title={indicatorName(id)}
+                        className="relative inline-block h-2.5 w-2.5 rounded-[3px] border border-[var(--foreground)] opacity-30"
+                      >
+                        <span className="absolute inset-0 m-auto h-px w-3 -rotate-45 bg-[var(--foreground)]" />
+                      </span>
+                    ))}
+                  </div>
+                  <span className="text-xs text-[var(--muted)]">
+                    {d.scoredOn.length}{' '}
+                    {d.scoredOn.length === 1 ? 'indicador observado' : 'indicadores observados'}
+                    {d.gaps.length > 0
+                      ? ` · ${d.gaps.length} ${d.gaps.length === 1 ? 'lacuna' : 'lacunas'}`
+                      : ''}
+                    {d.retired.length > 0
+                      ? ` · ${d.retired.length} ${d.retired.length === 1 ? 'base rejeitada' : 'bases rejeitadas'}`
+                      : ''}
+                  </span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </Section>
+      ) : null}
+
+      <Section
+        title="A América Latina inteira, na mesma régua"
+        hint={`Os ${LATAM_ISO3.length} países da região, medidos pelos mesmos indicadores contra a régua que os ${total} países do benchmark constroem juntos. As formas divergem onde a renda sozinha diria que os países se parecem. Onde a estatística internacional não alcança um país, o eixo fica vazio e o traçado abre: o mapa mostra também o que ainda não se sabe. Cada forma abre a agenda daquele país.`}
+      >
+        <DimensionLegend names={PT_BR.dimensions} />
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {[...LATAM_ISO3]
+            .sort((a, b) =>
+              countryName(PT_BR, a).localeCompare(countryName(PT_BR, b), 'pt-BR'),
+            )
+            .map((iso3) => {
+              const c = data.countries.find((x) => x.iso3 === iso3)
+              if (!c) return null
+              const profile = toProfile(c)
+              return (
+                <Link
+                  key={iso3}
+                  href={agendaHref(iso3, 'pt-BR')}
+                  className="rounded-xl border border-[var(--rule)] p-4 transition-all duration-200 hover:border-[var(--foreground)]"
+                >
+                  <div className="mb-2 flex items-baseline justify-between">
+                    <span className="text-xs font-medium">
+                      <CountryLabel iso3={iso3} name={countryName(PT_BR, iso3)} />
+                    </span>
+                    <span className="text-xs text-[var(--muted)]">{iso3}</span>
+                  </div>
+                  <Radar
+                    labels="icons"
+                    names={PT_BR.dimensions}
+                    noDataLabel={s.noScore}
+                    series={[
+                      {
+                        label: countryName(PT_BR, iso3),
+                        values: profile.values,
+                        confidences: profile.confidences,
+                        color: 'var(--primary)',
+                      },
+                    ]}
+                  />
+                </Link>
+              )
+            })}
         </div>
       </Section>
 
@@ -240,11 +410,7 @@ export default async function PortugueseHomePage() {
         <p className="mt-6 max-w-3xl text-lg leading-relaxed">
           A Envisioning mantém o projeto e procura parceiros institucionais para a próxima etapa. A
           conversa começa em{' '}
-          <a
-            href="https://envisioning.com"
-            className="underline underline-offset-4"
-            rel="noopener"
-          >
+          <a href="https://envisioning.com" className="underline underline-offset-4" rel="noopener">
             envisioning.com
           </a>
           .
@@ -255,23 +421,18 @@ export default async function PortugueseHomePage() {
         title="O que vem a seguir tem três etapas"
         hint={`O protótipo está publicado${data.version ? `, versão ${data.version}` : ''}, com ${total} países. O caminho até um instrumento que uma instituição possa citar com segurança tem ordem.`}
       >
-        <ol className="max-w-3xl list-decimal space-y-4 pl-5 text-lg leading-relaxed">
-          <li>
-            Endurecer o método. Submeter o modelo a revisores independentes, fortalecer a medição
-            de Coordenação e Confiança e substituir a estimativa de sessão atual por um painel de
-            modelos com proveniência registrada.
-          </li>
-          <li>
-            Preencher as lacunas com dados nacionais comparáveis. Parcerias com produtores de
-            dados transformam a agenda de medição em séries publicadas, e cada série nova sobe a
-            confiança de uma dimensão inteira.
-          </li>
-          <li>
-            Medir intervenções. O instrumento fecha um ciclo: diagnóstico, intervenção, nova
-            medição, evidência sobre o que de fato move uma capacidade. Uma publicação anual sobre
-            o estado da capacidade brasileira é o horizonte desta etapa.
-          </li>
-        </ol>
+        <div className="grid gap-5 lg:grid-cols-3">
+          {[
+            'Endurecer o método. Submeter o modelo a revisores independentes, fortalecer a medição de Coordenação e Confiança e substituir a estimativa de sessão atual por um painel de modelos com proveniência registrada.',
+            'Preencher as lacunas com dados nacionais comparáveis. Parcerias com produtores de dados transformam a agenda de medição em séries publicadas, e cada série nova sobe a confiança de uma dimensão inteira.',
+            'Medir intervenções. O instrumento fecha um ciclo: diagnóstico, intervenção, nova medição, evidência sobre o que de fato move uma capacidade. Uma publicação anual sobre o estado da capacidade brasileira é o horizonte desta etapa.',
+          ].map((text, i) => (
+            <div key={i} className="rounded-xl border border-[var(--rule)] p-5">
+              <div className="text-3xl font-light text-[var(--muted)]">{i + 1}</div>
+              <p className="mt-3 text-lg leading-relaxed">{text}</p>
+            </div>
+          ))}
+        </div>
       </Section>
 
       <Section

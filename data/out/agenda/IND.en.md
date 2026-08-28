@@ -1,70 +1,70 @@
 # Capability agenda: India
 
-*Generated 2026-08-27*
+*Generated 2026-08-28*
 
-Scores are relative to a frame built from all 40 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
+Scores are relative to a frame built from all 52 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
 
 ## Where India stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 20.8 | 0.58 (usable) | +21.5 over 10 years, on 3 indicators |
-| Agency | 38 | 0.61 (usable) | +29.8 over 10 years, on 4 indicators, 1 clamped at the frame edge |
+| Anticipation | 26.7 | 0.58 (usable) | +17.4 over 10 years, on 3 indicators |
+| Agency | 49.6 | 0.61 (usable) | +27.9 over 10 years, on 4 indicators, 1 clamped at the frame edge |
 | Coordination | not scored | 0.08 (very thin) | no trend basket |
 | Trust | not scored | 0.08 (very thin) | no trend basket |
-| Learning | 21.9 | 0.55 (usable) | -12.9 over 10 years, on 3 indicators |
-| Experimentation | 9.5 | 0.39 (thin) | +1.5 over 10 years, on 2 indicators |
-| Adaptability | 33.6 | 0.47 (usable) | +8.4 over 10 years, on 4 indicators, 1 clamped at the frame edge |
-| Building | 33 | 0.54 (usable) | +4.7 over 10 years, on 4 indicators |
+| Learning | 20.2 | 0.55 (usable) | -12.8 over 10 years, on 3 indicators |
+| Experimentation | 9.8 | 0.39 (thin) | +1.7 over 10 years, on 2 indicators |
+| Adaptability | 38.7 | 0.47 (usable) | +10 over 10 years, on 4 indicators, 1 clamped at the frame edge |
+| Building | 39 | 0.54 (usable) | +4.9 over 10 years, on 4 indicators |
 | Shared Purpose | 61.8 | 0.23 (very thin) | -2.2 over 10 years, on 2 indicators |
 
 ## The dimensions the evidence says to raise
 
 Lowest score first. Only dimensions with usable evidence appear here. A low score with thin evidence is a measurement problem before it is a policy problem, and it moves to the next section.
 
-### Anticipation: 20.8, confidence usable
-
-How capable is the country of identifying and preparing for emerging change?
-
-- Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Sweden 82.9, Finland 81.1, Switzerland 80.
-- Documented deliveries elsewhere: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands).
-- Declared gaps in this dimension: Government foresight capacity, Long-horizon research share.
-
-### Learning: 21.9, confidence usable
+### Learning: 20.2, confidence usable
 
 How effectively does the country acquire, distribute, and update knowledge?
 
 - Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Finland 85.3, Australia 75.2, United Kingdom 73.9.
+- Highest scores with usable evidence: Finland 77.9, Australia 70.3, United Kingdom 68.4.
 - Documented deliveries elsewhere: SkillsFuture Credit (Singapore); The public library system (Finland).
 - Declared gaps in this dimension: Adult learning participation, Research citation impact.
 
-### Building: 33, confidence usable
+### Anticipation: 26.7, confidence usable
 
-How capable is the country of turning plans and knowledge into functioning systems?
+How capable is the country of identifying and preparing for emerging change?
 
 - Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Ireland 70, Singapore 68.4, China 62.8.
-- Documented deliveries elsewhere: Pix instant payment system (Brazil); GOV.BR federal identity and service platform (Brazil); X-Road national data exchange layer (Estonia); Electricity supply rebuilt on renewable sources (Uruguay); Plan Ceibal, one connected laptop per child (Uruguay); Sistema Unico de Saude, universal public health system (Brazil); Programa Nacional de Imunizacoes, and its erosion (Brazil); Luz para Todos, rural electrification (Brazil); Bolsa Familia and the single registry behind it (Brazil); Fully electronic national elections (Brazil); Deepwater and pre-salt oil production (Brazil); Seguro Popular, and its abolition (Mexico); Sure Start children's centres, and their erosion (United Kingdom); Grid power, and load shedding (South Africa); Measles elimination, and its erosion (United States).
-- Declared gaps in this dimension: Large project delivery, Firm scale-up rate.
-- Datasets examined and rejected for this dimension: Logistics infrastructure quality.
+- Highest scores with usable evidence: Sweden 83.5, Finland 82, Switzerland 81.1.
+- Documented deliveries elsewhere: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands).
+- Declared gaps in this dimension: Government foresight capacity, Long-horizon research share.
 
-### Adaptability: 33.6, confidence usable
+### Adaptability: 38.7, confidence usable
 
 How effectively can the system respond when circumstances change?
 
 - Currently scored on 4 observed indicators.
-- Highest scores with usable evidence: Netherlands 89.5, Switzerland 87.7, Japan 84.9.
+- Highest scores with usable evidence: Netherlands 90.1, Switzerland 88.6, Japan 86.1.
 - Documented deliveries elsewhere: Plano Real, the 1994 currency stabilisation (Brazil); Proalcool, the fuel substitution after the oil shock (Brazil); The Convertibility Plan, and its collapse (Argentina); Kurzarbeit in the 2008-2009 crisis (Germany); The 2001 stabilisation, and its unwinding (Turkey).
 - Declared gaps in this dimension: Long-term unemployment share, Export diversification, Disaster preparedness and recovery, Institutional responsiveness.
 
-### Agency: 38, confidence usable
+### Building: 39, confidence usable
+
+How capable is the country of turning plans and knowledge into functioning systems?
+
+- Currently scored on 5 observed indicators.
+- Highest scores with usable evidence: Ireland 75.3, Singapore 71.2, China 64.9.
+- Documented deliveries elsewhere: Pix instant payment system (Brazil); GOV.BR federal identity and service platform (Brazil); X-Road national data exchange layer (Estonia); Electricity supply rebuilt on renewable sources (Uruguay); Plan Ceibal, one connected laptop per child (Uruguay); Sistema Unico de Saude, universal public health system (Brazil); Programa Nacional de Imunizacoes, and its erosion (Brazil); Luz para Todos, rural electrification (Brazil); Bolsa Familia and the single registry behind it (Brazil); Fully electronic national elections (Brazil); Deepwater and pre-salt oil production (Brazil); Seguro Popular, and its abolition (Mexico); Sure Start children's centres, and their erosion (United Kingdom); Grid power, and load shedding (South Africa); Measles elimination, and its erosion (United States).
+- Declared gaps in this dimension: Large project delivery, Firm scale-up rate.
+- Datasets examined and rejected for this dimension: Logistics infrastructure quality.
+
+### Agency: 49.6, confidence usable
 
 How able are individuals and organizations to turn an intention into action?
 
 - Currently scored on 6 observed indicators.
-- Highest scores with usable evidence: United States 88.3, Australia 88, United Kingdom 84.7.
+- Highest scores with usable evidence: United States 92.6, Australia 89.8, United Kingdom 87.5.
 - Declared gaps in this dimension: Adult digital skills, Perceived control over life.
 
 ## The dimensions that must be measured before they can be managed

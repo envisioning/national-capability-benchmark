@@ -4,7 +4,7 @@ A prototype for measuring what a country is **capable of doing** — anticipatin
 change, coordinating action, learning, adapting and building under uncertainty —
 rather than how rich, comfortable or competitive it is.
 
-Nine capability dimensions, forty countries, 0 to 100 per dimension, no
+Nine capability dimensions, 52 countries, 0 to 100 per dimension, no
 headline ranking. Every raw indicator stays visible with its source and year.
 Evidence quality is reported as a separate confidence score and is never folded
 into the capability score.
@@ -96,8 +96,9 @@ the first run:
 
 - **The nine dimensions separate once the country set is wide enough.** At 16
   countries, two dimension pairs correlated at 0.94 and the model looked like
-  three signals wearing nine names. At 40 countries no pair passes the
-  redundancy threshold, and Trust fell from 0.79 to 0.39 against income per head.
+  three signals wearing nine names. At 52 countries no pair passes the
+  redundancy threshold, and Trust fell from 0.79 to 0.39 against income per head
+  before its perception layer was retired outright.
 - **The wealth correlation was a property of the evidence class, not of the
   dimensions.** Perception indicators averaged 0.75 against log GDP per capita.
   Direct capability measures averaged 0.55. Retiring the perception layer took

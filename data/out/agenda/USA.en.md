@@ -1,22 +1,35 @@
 # Capability agenda: United States
 
-*Generated 2026-08-27*
+*Generated 2026-08-28*
 
-Scores are relative to a frame built from all 40 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
+Scores are relative to a frame built from all 52 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
 
 ## Where United States stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 69.3 | 0.63 (usable) | +11.1 over 10 years, on 5 indicators |
-| Agency | 88.3 | 0.5 (usable) | +10.4 over 10 years, on 3 indicators |
+| Anticipation | 70.2 | 0.63 (usable) | +9.9 over 10 years, on 5 indicators |
+| Agency | 92.6 | 0.5 (usable) | +7.9 over 10 years, on 3 indicators |
 | Coordination | not scored | 0.08 (very thin) | no trend basket |
 | Trust | not scored | 0.08 (very thin) | no trend basket |
-| Learning | 51.5 | 0.45 (usable) | +0.1 over 10 years, on 2 indicators |
+| Learning | 49.5 | 0.45 (usable) | -0.5 over 10 years, on 2 indicators |
 | Experimentation | 55.8 | 0.39 (thin) | +3.2 over 10 years, on 2 indicators |
-| Adaptability | 74.3 | 0.48 (usable) | +6.1 over 10 years, on 4 indicators |
-| Building | 51.5 | 0.52 (usable) | +2.4 over 10 years, on 4 indicators |
+| Adaptability | 76.2 | 0.48 (usable) | +6 over 10 years, on 4 indicators |
+| Building | 58.4 | 0.52 (usable) | +2.4 over 10 years, on 4 indicators |
 | Shared Purpose | 40.8 | 0.27 (thin) | -1.1 over 10 years, on 2 indicators |
+
+## The dimensions the evidence says to raise
+
+Lowest score first. Only dimensions with usable evidence appear here. A low score with thin evidence is a measurement problem before it is a policy problem, and it moves to the next section.
+
+### Learning: 49.5, confidence usable
+
+How effectively does the country acquire, distribute, and update knowledge?
+
+- Currently scored on 5 observed indicators.
+- Highest scores with usable evidence: Finland 77.9, Australia 70.3, United Kingdom 68.4.
+- Documented deliveries elsewhere: SkillsFuture Credit (Singapore); The public library system (Finland).
+- Declared gaps in this dimension: Adult learning participation, Research citation impact.
 
 ## The dimensions that must be measured before they can be managed
 
@@ -57,11 +70,10 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 
 Strongest first. These score at or above 50 on usable evidence, so nothing here asks to be raised or measured first. A held dimension still decays when nobody watches it.
 
-- Agency: 88.3, confidence usable
-- Adaptability: 74.3, confidence usable
-- Anticipation: 69.3, confidence usable
-- Learning: 51.5, confidence usable
-- Building: 51.5, confidence usable
+- Agency: 92.6, confidence usable
+- Adaptability: 76.2, confidence usable
+- Anticipation: 70.2, confidence usable
+- Building: 58.4, confidence usable
 
 ## The measurement agenda
 

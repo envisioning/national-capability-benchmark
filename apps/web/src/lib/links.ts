@@ -99,6 +99,9 @@ export const patternsHref = (filters: PatternFilters = NO_PATTERN_FILTERS): stri
  */
 export const evidenceHref = (recordId: string): string => `/patterns/${recordId}`
 
+/** What would overturn the model, and how to file an objection. */
+export const challengeHref = '/challenge'
+
 /** Who publishes the data and how each series is fetched. */
 export const sourcesHref = '/sources'
 

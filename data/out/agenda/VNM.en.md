@@ -1,52 +1,44 @@
 # Capability agenda: Vietnam
 
-*Generated 2026-08-27*
+*Generated 2026-08-28*
 
-Scores are relative to a frame built from all 40 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
+Scores are relative to a frame built from all 52 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
 
 ## Where Vietnam stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 20.5 | 0.64 (usable) | +13.1 over 10 years, on 5 indicators, 1 clamped at the frame edge |
-| Agency | 48.4 | 0.59 (usable) | +29 over 10 years, on 4 indicators, 1 clamped at the frame edge |
+| Anticipation | 27.4 | 0.64 (usable) | +12.1 over 10 years, on 5 indicators |
+| Agency | 59.2 | 0.59 (usable) | +27 over 10 years, on 4 indicators |
 | Coordination | not scored | 0.08 (very thin) | no trend basket |
 | Trust | not scored | 0.08 (very thin) | no trend basket |
-| Learning | 30 | 0.48 (usable) | -6 over 10 years, on 3 indicators |
-| Experimentation | 6.6 | 0.18 (very thin) | +1.7 over 10 years, on 2 indicators |
-| Adaptability | 73.1 | 0.47 (usable) | +5.6 over 10 years, on 4 indicators |
-| Building | 51.3 | 0.53 (usable) | +8.4 over 10 years, on 4 indicators |
+| Learning | 28.3 | 0.48 (usable) | -5.7 over 10 years, on 3 indicators |
+| Experimentation | 6.9 | 0.18 (very thin) | +1.8 over 10 years, on 2 indicators |
+| Adaptability | 75.2 | 0.47 (usable) | +5.7 over 10 years, on 4 indicators |
+| Building | 54.2 | 0.53 (usable) | +8.6 over 10 years, on 4 indicators |
 | Shared Purpose | not scored | 0.11 (very thin) | no trend basket |
 
 ## The dimensions the evidence says to raise
 
 Lowest score first. Only dimensions with usable evidence appear here. A low score with thin evidence is a measurement problem before it is a policy problem, and it moves to the next section.
 
-### Anticipation: 20.5, confidence usable
+### Anticipation: 27.4, confidence usable
 
 How capable is the country of identifying and preparing for emerging change?
 
 - Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Sweden 82.9, Finland 81.1, Switzerland 80.
+- Highest scores with usable evidence: Sweden 83.5, Finland 82, Switzerland 81.1.
 - Documented deliveries elsewhere: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands).
 - Declared gaps in this dimension: Government foresight capacity, Long-horizon research share.
 
-### Learning: 30, confidence usable
+### Learning: 28.3, confidence usable
 
 How effectively does the country acquire, distribute, and update knowledge?
 
 - Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Finland 85.3, Australia 75.2, United Kingdom 73.9.
+- Highest scores with usable evidence: Finland 77.9, Australia 70.3, United Kingdom 68.4.
 - Documented deliveries elsewhere: SkillsFuture Credit (Singapore); The public library system (Finland).
 - Declared gaps in this dimension: Adult learning participation, Research citation impact.
-
-### Agency: 48.4, confidence usable
-
-How able are individuals and organizations to turn an intention into action?
-
-- Currently scored on 6 observed indicators.
-- Highest scores with usable evidence: United States 88.3, Australia 88, United Kingdom 84.7.
-- Declared gaps in this dimension: Adult digital skills, Perceived control over life.
 
 ## The dimensions that must be measured before they can be managed
 
@@ -87,8 +79,9 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 
 Strongest first. These score at or above 50 on usable evidence, so nothing here asks to be raised or measured first. A held dimension still decays when nobody watches it.
 
-- Adaptability: 73.1, confidence usable
-- Building: 51.3, confidence usable
+- Adaptability: 75.2, confidence usable
+- Agency: 59.2, confidence usable
+- Building: 54.2, confidence usable
 
 ## The measurement agenda
 

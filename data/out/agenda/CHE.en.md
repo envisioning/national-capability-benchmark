@@ -1,21 +1,21 @@
 # Capability agenda: Switzerland
 
-*Generated 2026-08-27*
+*Generated 2026-08-28*
 
-Scores are relative to a frame built from all 40 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
+Scores are relative to a frame built from all 52 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
 
 ## Where Switzerland stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 80 | 0.64 (usable) | +9.8 over 10 years, on 5 indicators, 1 clamped at the frame edge |
-| Agency | 71.7 | 0.51 (usable) | +3.3 over 10 years, on 3 indicators |
+| Anticipation | 81.1 | 0.64 (usable) | +8.3 over 10 years, on 5 indicators, 1 clamped at the frame edge |
+| Agency | 76.1 | 0.51 (usable) | +1.8 over 10 years, on 3 indicators |
 | Coordination | not scored | 0.08 (very thin) | no trend basket |
 | Trust | not scored | 0.08 (very thin) | no trend basket |
-| Learning | 70.8 | 0.54 (usable) | +5 over 10 years, on 2 indicators |
-| Experimentation | 48.5 | 0.39 (thin) | +2.8 over 10 years, on 2 indicators |
-| Adaptability | 87.7 | 0.48 (usable) | +3.2 over 10 years, on 4 indicators |
-| Building | 53.5 | 0.54 (usable) | +2.9 over 10 years, on 4 indicators |
+| Learning | 65.1 | 0.54 (usable) | +5.1 over 10 years, on 2 indicators |
+| Experimentation | 50.7 | 0.39 (thin) | +1.8 over 10 years, on 2 indicators |
+| Adaptability | 88.6 | 0.48 (usable) | +2.7 over 10 years, on 4 indicators |
+| Building | 58.1 | 0.54 (usable) | +2.6 over 10 years, on 4 indicators |
 | Shared Purpose | 52.2 | 0.25 (very thin) | -1 over 10 years, on 2 indicators |
 
 ## The dimensions that must be measured before they can be managed
@@ -57,11 +57,11 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 
 Strongest first. These score at or above 50 on usable evidence, so nothing here asks to be raised or measured first. A held dimension still decays when nobody watches it.
 
-- Adaptability: 87.7, confidence usable
-- Anticipation: 80, confidence usable
-- Agency: 71.7, confidence usable
-- Learning: 70.8, confidence usable
-- Building: 53.5, confidence usable
+- Adaptability: 88.6, confidence usable
+- Anticipation: 81.1, confidence usable
+- Agency: 76.1, confidence usable
+- Learning: 65.1, confidence usable
+- Building: 58.1, confidence usable
 
 ## The measurement agenda
 

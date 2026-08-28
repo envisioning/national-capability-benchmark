@@ -1,43 +1,43 @@
 # Agenda de capacidades: Israel
 
-*Gerado em 2026-08-27*
+*Gerado em 2026-08-28*
 
-As notas são relativas a uma régua construída a partir dos 40 países em conjunto e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
+As notas são relativas a uma régua construída a partir dos 52 países em conjunto e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
 
 ## Onde Israel está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 79 | 0,52 (utilizável) | +20,5 em 10 anos, sobre 4 indicadores |
-| Agência | 61,6 | 0,61 (utilizável) | +3,9 em 10 anos, sobre 4 indicadores |
+| Antecipação | 80,6 | 0,52 (utilizável) | +16,5 em 10 anos, sobre 4 indicadores |
+| Agência | 66,4 | 0,61 (utilizável) | +2,8 em 10 anos, sobre 4 indicadores |
 | Coordenação | sem nota | 0,08 (muito fraca) | sem base de tendência |
 | Confiança | sem nota | 0,08 (muito fraca) | sem base de tendência |
-| Aprendizagem | 49,1 | 0,54 (utilizável) | -6,6 em 10 anos, sobre 3 indicadores |
-| Experimentação | 16,5 | 0,18 (muito fraca) | +1,1 em 10 anos, sobre 2 indicadores |
-| Adaptação | 72,3 | 0,48 (utilizável) | +2,9 em 10 anos, sobre 4 indicadores |
-| Construção | 31,1 | 0,54 (utilizável) | +6,9 em 10 anos, sobre 4 indicadores |
+| Aprendizagem | 44,7 | 0,54 (utilizável) | -6,7 em 10 anos, sobre 3 indicadores |
+| Experimentação | 21,4 | 0,18 (muito fraca) | +1,4 em 10 anos, sobre 2 indicadores |
+| Adaptação | 73,8 | 0,48 (utilizável) | +2,9 em 10 anos, sobre 4 indicadores |
+| Construção | 38,8 | 0,54 (utilizável) | +6,8 em 10 anos, sobre 4 indicadores |
 | Propósito compartilhado | 70,4 | 0,25 (muito fraca) | +1,5 em 10 anos, sobre 2 indicadores |
 
 ## As dimensões que a evidência manda elevar
 
 Da nota mais baixa para a mais alta. Só entram aqui dimensões com evidência utilizável. Uma nota baixa com evidência fraca é antes um problema de medição do que de política pública, e vai para a próxima seção.
 
-### Construção: 31,1, confiança utilizável
+### Construção: 38,8, confiança utilizável
 
 Quão capaz é o país de transformar planos e conhecimento em sistemas que funcionam?
 
 - Hoje a nota se apoia em 5 indicadores observados.
-- Maiores notas com evidência utilizável: Irlanda 70, Singapura 68,4, China 62,8.
+- Maiores notas com evidência utilizável: Irlanda 75,3, Singapura 71,2, China 64,9.
 - Entregas documentadas em outros países: Pix instant payment system (Brasil); GOV.BR federal identity and service platform (Brasil); X-Road national data exchange layer (Estônia); Pradhan Mantri Jan Dhan Yojana bank accounts (Índia); Electricity supply rebuilt on renewable sources (Uruguai); Plan Ceibal, one connected laptop per child (Uruguai); Sistema Unico de Saude, universal public health system (Brasil); Programa Nacional de Imunizacoes, and its erosion (Brasil); Luz para Todos, rural electrification (Brasil); Bolsa Familia and the single registry behind it (Brasil); Fully electronic national elections (Brasil); Deepwater and pre-salt oil production (Brasil); Seguro Popular, and its abolition (México); Sure Start children's centres, and their erosion (Reino Unido); Grid power, and load shedding (África do Sul); Measles elimination, and its erosion (Estados Unidos).
 - Lacunas declaradas nesta dimensão: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases de dados examinadas e rejeitadas para esta dimensão: Qualidade da infraestrutura logística.
 
-### Aprendizagem: 49,1, confiança utilizável
+### Aprendizagem: 44,7, confiança utilizável
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Hoje a nota se apoia em 5 indicadores observados.
-- Maiores notas com evidência utilizável: Finlândia 85,3, Austrália 75,2, Reino Unido 73,9.
+- Maiores notas com evidência utilizável: Finlândia 77,9, Austrália 70,3, Reino Unido 68,4.
 - Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia).
 - Lacunas declaradas nesta dimensão: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
@@ -80,9 +80,9 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 
 Da nota mais alta para a mais baixa. Estas dimensões pontuam 50 ou mais com evidência utilizável, então nada aqui pede elevação ou medição primeiro. Uma dimensão mantida ainda decai quando ninguém a observa.
 
-- Antecipação: 79, confiança utilizável
-- Adaptação: 72,3, confiança utilizável
-- Agência: 61,6, confiança utilizável
+- Antecipação: 80,6, confiança utilizável
+- Adaptação: 73,8, confiança utilizável
+- Agência: 66,4, confiança utilizável
 
 ## A agenda de medição
 

@@ -1,21 +1,21 @@
 # Capability agenda: South Korea
 
-*Generated 2026-08-27*
+*Generated 2026-08-28*
 
-Scores are relative to a frame built from all 40 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
+Scores are relative to a frame built from all 52 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
 
 ## Where South Korea stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 79.5 | 0.64 (usable) | +25.4 over 10 years, on 5 indicators |
-| Agency | 76.5 | 0.6 (usable) | +7.9 over 10 years, on 4 indicators |
+| Anticipation | 80.6 | 0.64 (usable) | +21.4 over 10 years, on 5 indicators |
+| Agency | 78.9 | 0.6 (usable) | +6.8 over 10 years, on 4 indicators |
 | Coordination | not scored | 0.08 (very thin) | no trend basket |
 | Trust | not scored | 0.08 (very thin) | no trend basket |
-| Learning | 58.8 | 0.54 (usable) | +17.9 over 10 years, on 2 indicators |
+| Learning | 55.9 | 0.54 (usable) | +16.5 over 10 years, on 2 indicators |
 | Experimentation | 72.2 | 0.39 (thin) | +16.9 over 10 years, on 2 indicators |
-| Adaptability | 80.4 | 0.48 (usable) | +8 over 10 years, on 4 indicators |
-| Building | 60.6 | 0.54 (usable) | +3.3 over 10 years, on 4 indicators |
+| Adaptability | 82.1 | 0.48 (usable) | +7.8 over 10 years, on 4 indicators |
+| Building | 63.1 | 0.54 (usable) | +3.1 over 10 years, on 4 indicators |
 | Shared Purpose | 61 | 0.24 (very thin) | +4 over 10 years, on 2 indicators |
 
 ## The dimensions that must be measured before they can be managed
@@ -57,11 +57,11 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 
 Strongest first. These score at or above 50 on usable evidence, so nothing here asks to be raised or measured first. A held dimension still decays when nobody watches it.
 
-- Adaptability: 80.4, confidence usable
-- Anticipation: 79.5, confidence usable
-- Agency: 76.5, confidence usable
-- Building: 60.6, confidence usable
-- Learning: 58.8, confidence usable
+- Adaptability: 82.1, confidence usable
+- Anticipation: 80.6, confidence usable
+- Agency: 78.9, confidence usable
+- Building: 63.1, confidence usable
+- Learning: 55.9, confidence usable
 
 ## The measurement agenda
 

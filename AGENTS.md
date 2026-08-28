@@ -15,6 +15,7 @@ pnpm bench diagnose    correlations, redundancy, GDP-sensitivity test
 pnpm bench report      write data/out/report.md
 pnpm bench agenda      write the capability agenda: JSON per country plus one markdown per lexicon
 pnpm bench cost        measure the panel prompts and price a run before making it
+pnpm bench probe       test candidate World Bank series before wiring them: --series a,b[@db]
 pnpm bench validate    schema-check data/delphi and data/evidence; add --fetch to live-check evidence source URLs
 pnpm bench all         ingest, score, diagnose, report, agenda
 pnpm build             tsc for packages/core, then next build for apps/web
@@ -214,6 +215,9 @@ port 3888. That entry starts Next directly and does not use the proxy.
   `apps/web/src/lib/markdown.tsx`, and both files are listed in
   `outputFileTracingIncludes`. A new doc rendered by a page needs the same
   tracing entry, or the deployed page silently shows its empty state.
+- A decision's falsification clause is labelled `**Overturned by.**`. The
+  `/challenge` page lifts that clause out of every entry, so a differently
+  named label drops the decision off the page and nothing errors. See D50.
 - Two sessions appending to `docs/DECISIONS.md` collide. Read the highest number
   in the file immediately before you write, and re-check it after: a concurrent
   session can take your number, or rewrite the file from a stale copy and drop
@@ -239,14 +243,30 @@ table adds the traps that are not in the code.
 | Human Capital Index | 63 | last full round 2020 |
 | Economic Fitness 2 | 70 | `EF.EFM.UNIV.XD` |
 
+Find a series by name instead of guessing a code: `pnpm bench probe --search
+"long.term unemploy"` reads the World Bank's own catalogue of about 30,000
+series and prints the database each one needs. A name that is absent there is
+absent from the API at every id, which is how a gap gets closed as unfillable
+rather than untried.
+
+The API answers an unknown or archived code with HTTP 200 and a message block,
+not an error status. `pnpm bench probe` reads that block and says the code is
+unknown, so a stalled request and a dead code never read the same.
+
+`IC.BRE.*`, B-READY, is the Doing Business successor and it is in World
+Development Indicators. It covered 12 of the 52 countries in the 2024 round, so
+it is not wireable yet, and it is what replaces the 2019-frozen Doing Business
+rows when its coverage arrives.
+
 Other traps found the hard way:
 
 - Doing Business publishes "starting a business: time" only split by sex
   (`IC.REG.DURS.MA.DY`), and "getting electricity: time" only as a rescaled
   score (`IC.ELC.TIME.DFRN`), never as raw days.
 - Trademarks are `IP.TMK.RSCT`, not `IP.TMK.RESD`.
-- Long-term unemployment is not in the World Bank API at all. It needs an
-  ILOSTAT adapter and is filed as a gap until someone writes one.
+- Long-term unemployment (`SL.UEM.LTRM.ZS`) is listed in the catalogue under
+  "WDI Database Archives", source 57, and the API refuses the code from that
+  source. It is not fetchable. The gap still needs an ILOSTAT adapter.
 - Verify a new series against every country before adding it to the
   registry. A code that resolves for Brazil can be empty for Singapore.
 

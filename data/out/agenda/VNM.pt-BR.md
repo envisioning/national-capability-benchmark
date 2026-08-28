@@ -1,52 +1,44 @@
 # Agenda de capacidades: Vietnã
 
-*Gerado em 2026-08-27*
+*Gerado em 2026-08-28*
 
-As notas são relativas a uma régua construída a partir dos 40 países em conjunto e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
+As notas são relativas a uma régua construída a partir dos 52 países em conjunto e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
 
 ## Onde o Vietnã está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 20,5 | 0,64 (utilizável) | +13,1 em 10 anos, sobre 5 indicadores, 1 truncados na borda da régua |
-| Agência | 48,4 | 0,59 (utilizável) | +29 em 10 anos, sobre 4 indicadores, 1 truncados na borda da régua |
+| Antecipação | 27,4 | 0,64 (utilizável) | +12,1 em 10 anos, sobre 5 indicadores |
+| Agência | 59,2 | 0,59 (utilizável) | +27 em 10 anos, sobre 4 indicadores |
 | Coordenação | sem nota | 0,08 (muito fraca) | sem base de tendência |
 | Confiança | sem nota | 0,08 (muito fraca) | sem base de tendência |
-| Aprendizagem | 30 | 0,48 (utilizável) | -6 em 10 anos, sobre 3 indicadores |
-| Experimentação | 6,6 | 0,18 (muito fraca) | +1,7 em 10 anos, sobre 2 indicadores |
-| Adaptação | 73,1 | 0,47 (utilizável) | +5,6 em 10 anos, sobre 4 indicadores |
-| Construção | 51,3 | 0,53 (utilizável) | +8,4 em 10 anos, sobre 4 indicadores |
+| Aprendizagem | 28,3 | 0,48 (utilizável) | -5,7 em 10 anos, sobre 3 indicadores |
+| Experimentação | 6,9 | 0,18 (muito fraca) | +1,8 em 10 anos, sobre 2 indicadores |
+| Adaptação | 75,2 | 0,47 (utilizável) | +5,7 em 10 anos, sobre 4 indicadores |
+| Construção | 54,2 | 0,53 (utilizável) | +8,6 em 10 anos, sobre 4 indicadores |
 | Propósito compartilhado | sem nota | 0,11 (muito fraca) | sem base de tendência |
 
 ## As dimensões que a evidência manda elevar
 
 Da nota mais baixa para a mais alta. Só entram aqui dimensões com evidência utilizável. Uma nota baixa com evidência fraca é antes um problema de medição do que de política pública, e vai para a próxima seção.
 
-### Antecipação: 20,5, confiança utilizável
+### Antecipação: 27,4, confiança utilizável
 
 Quão capaz é o país de identificar mudanças emergentes e se preparar para elas?
 
 - Hoje a nota se apoia em 5 indicadores observados.
-- Maiores notas com evidência utilizável: Suécia 82,9, Finlândia 81,1, Suíça 80.
+- Maiores notas com evidência utilizável: Suécia 83,5, Finlândia 82, Suíça 81,1.
 - Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos).
 - Lacunas declaradas nesta dimensão: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
-### Aprendizagem: 30, confiança utilizável
+### Aprendizagem: 28,3, confiança utilizável
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Hoje a nota se apoia em 5 indicadores observados.
-- Maiores notas com evidência utilizável: Finlândia 85,3, Austrália 75,2, Reino Unido 73,9.
+- Maiores notas com evidência utilizável: Finlândia 77,9, Austrália 70,3, Reino Unido 68,4.
 - Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia).
 - Lacunas declaradas nesta dimensão: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
-
-### Agência: 48,4, confiança utilizável
-
-Quão capazes são pessoas e organizações de transformar uma intenção em ação?
-
-- Hoje a nota se apoia em 6 indicadores observados.
-- Maiores notas com evidência utilizável: Estados Unidos 88,3, Austrália 88, Reino Unido 84,7.
-- Lacunas declaradas nesta dimensão: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
 
 ## As dimensões que precisam ser medidas antes de serem geridas
 
@@ -87,8 +79,9 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 
 Da nota mais alta para a mais baixa. Estas dimensões pontuam 50 ou mais com evidência utilizável, então nada aqui pede elevação ou medição primeiro. Uma dimensão mantida ainda decai quando ninguém a observa.
 
-- Adaptação: 73,1, confiança utilizável
-- Construção: 51,3, confiança utilizável
+- Adaptação: 75,2, confiança utilizável
+- Agência: 59,2, confiança utilizável
+- Construção: 54,2, confiança utilizável
 
 ## A agenda de medição
 

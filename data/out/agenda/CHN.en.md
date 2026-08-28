@@ -1,33 +1,33 @@
 # Capability agenda: China
 
-*Generated 2026-08-27*
+*Generated 2026-08-28*
 
-Scores are relative to a frame built from all 40 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
+Scores are relative to a frame built from all 52 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
 
 ## Where China stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 26.3 | 0.64 (usable) | +13.9 over 10 years, on 5 indicators, 1 clamped at the frame edge |
-| Agency | 82 | 0.61 (usable) | +28.8 over 10 years, on 4 indicators |
+| Anticipation | 35.1 | 0.64 (usable) | +14.5 over 10 years, on 5 indicators |
+| Agency | 86.8 | 0.61 (usable) | +21.9 over 10 years, on 4 indicators |
 | Coordination | not scored | 0.08 (very thin) | no trend basket |
 | Trust | not scored | 0.08 (very thin) | no trend basket |
-| Learning | 62.5 | 0.56 (usable) | +13 over 10 years, on 2 indicators, 1 clamped at the frame edge |
+| Learning | 59.1 | 0.56 (usable) | +13 over 10 years, on 2 indicators, 1 clamped at the frame edge |
 | Experimentation | 100 | 0.18 (very thin) | +30.6 over 10 years, on 2 indicators |
-| Adaptability | 80.2 | 0.47 (usable) | +12 over 10 years, on 4 indicators |
-| Building | 62.8 | 0.54 (usable) | -2.2 over 10 years, on 4 indicators |
+| Adaptability | 81.6 | 0.47 (usable) | +11.8 over 10 years, on 4 indicators |
+| Building | 64.9 | 0.54 (usable) | -1.9 over 10 years, on 4 indicators |
 | Shared Purpose | 43.8 | 0.25 (very thin) | +0.7 over 10 years, on 2 indicators |
 
 ## The dimensions the evidence says to raise
 
 Lowest score first. Only dimensions with usable evidence appear here. A low score with thin evidence is a measurement problem before it is a policy problem, and it moves to the next section.
 
-### Anticipation: 26.3, confidence usable
+### Anticipation: 35.1, confidence usable
 
 How capable is the country of identifying and preparing for emerging change?
 
 - Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Sweden 82.9, Finland 81.1, Switzerland 80.
+- Highest scores with usable evidence: Sweden 83.5, Finland 82, Switzerland 81.1.
 - Documented deliveries elsewhere: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands).
 - Declared gaps in this dimension: Government foresight capacity, Long-horizon research share.
 
@@ -70,10 +70,10 @@ To what extent can people imagine themselves as participants in a common project
 
 Strongest first. These score at or above 50 on usable evidence, so nothing here asks to be raised or measured first. A held dimension still decays when nobody watches it.
 
-- Agency: 82, confidence usable
-- Adaptability: 80.2, confidence usable
-- Building: 62.8, confidence usable
-- Learning: 62.5, confidence usable
+- Agency: 86.8, confidence usable
+- Adaptability: 81.6, confidence usable
+- Building: 64.9, confidence usable
+- Learning: 59.1, confidence usable
 
 ## The measurement agenda
 

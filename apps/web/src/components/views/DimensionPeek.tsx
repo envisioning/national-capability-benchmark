@@ -21,7 +21,7 @@ type Row = {
  * The same peek as the indicator one, for a dimension score.
  *
  * A country page shows one country. This answers the question that page cannot:
- * where does 46.7 sit among the 40 countries we hold, and how well evidenced is
+ * where does 46.7 sit among the countries we hold, and how well evidenced is
  * everybody else's number. See D30.
  */
 /**

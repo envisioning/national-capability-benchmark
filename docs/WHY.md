@@ -30,16 +30,16 @@ Learning, Experimentation, Adaptability, Building and Shared Purpose are the
 dimensions that argument asks you to observe.
 
 The strategy names Brazil as the field case. The benchmark inherits that: Brazil
-is one of the ten reference countries that fix the normalization frame, and it
-is the country the work is meant to be useful to first.
+is the country the work is meant to be useful to first, and since D51 the whole
+of Latin America is measured beside it.
 
 That is a statement about where the attention goes, not about what the model
 measures. A capability frame that only works for one country is not a capability
 frame, it is a description of that country. The same nine dimensions, the same
-indicators, the same transforms and the same frame apply to all forty countries
-in the set, and any country added later is measured against the frame that is
-already there. Nothing about Brazil is special-cased anywhere in the code, and
-nothing should be.
+indicators, the same transforms and the same frame apply to all 52 countries in
+the set, and adding a country rebases that frame for everyone as a versioned,
+announced act (D47). Nothing about Brazil is special-cased anywhere in the code,
+and nothing should be.
 
 ## Why there is no ranking
 

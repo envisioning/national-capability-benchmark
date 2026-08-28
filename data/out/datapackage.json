@@ -3,8 +3,8 @@
   "name": "national-capability-benchmark",
   "title": "NCB, the National Capability Benchmark",
   "description": "A prototype that measures what a country can do, separately from how rich it is. Nine capability dimensions scored from public data, each with a separate confidence number.",
-  "version": "3.0.0",
-  "created": "2026-08-27T23:22:25.629Z",
+  "version": "4.0.0",
+  "created": "2026-08-28T16:53:27.227Z",
   "homepage": "https://github.com/envisioning/national-capability-benchmark",
   "licenses": [
     {
@@ -15,8 +15,12 @@
   ],
   "sources": [
     {
-      "title": "World Bank Open Data",
+      "title": "World Bank",
       "path": "https://data.worldbank.org"
+    },
+    {
+      "title": "Global Entrepreneurship Monitor",
+      "path": "https://www.gemconsortium.org"
     }
   ],
   "contributors": [
@@ -77,7 +81,19 @@
         "countries/NGA.json",
         "countries/KEN.json",
         "countries/RWA.json",
-        "countries/ETH.json"
+        "countries/ETH.json",
+        "countries/BOL.json",
+        "countries/PRY.json",
+        "countries/ECU.json",
+        "countries/VEN.json",
+        "countries/PAN.json",
+        "countries/GTM.json",
+        "countries/HND.json",
+        "countries/SLV.json",
+        "countries/NIC.json",
+        "countries/DOM.json",
+        "countries/CUB.json",
+        "countries/HTI.json"
       ],
       "title": "One country in full, including every indicator row and its yearly series",
       "format": "json",

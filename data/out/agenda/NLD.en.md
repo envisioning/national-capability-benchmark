@@ -1,33 +1,33 @@
 # Capability agenda: Netherlands
 
-*Generated 2026-08-27*
+*Generated 2026-08-28*
 
-Scores are relative to a frame built from all 40 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
+Scores are relative to a frame built from all 52 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
 
 ## Where Netherlands stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 70.3 | 0.64 (usable) | +14.2 over 10 years, on 5 indicators |
-| Agency | 70.5 | 0.59 (usable) | -0.4 over 10 years, on 4 indicators |
+| Anticipation | 72.3 | 0.64 (usable) | +11.4 over 10 years, on 5 indicators |
+| Agency | 72.8 | 0.59 (usable) | -1.1 over 10 years, on 4 indicators |
 | Coordination | not scored | 0.08 (very thin) | no trend basket |
 | Trust | not scored | 0.08 (very thin) | no trend basket |
-| Learning | 71.2 | 0.53 (usable) | +1.7 over 10 years, on 2 indicators |
-| Experimentation | 25.7 | 0.3 (thin) | no trend basket |
-| Adaptability | 89.5 | 0.48 (usable) | +7.3 over 10 years, on 4 indicators |
-| Building | 35.2 | 0.54 (usable) | +0.2 over 10 years, on 4 indicators |
+| Learning | 65.3 | 0.53 (usable) | +1.9 over 10 years, on 2 indicators |
+| Experimentation | 28 | 0.3 (thin) | no trend basket |
+| Adaptability | 90.1 | 0.48 (usable) | +7 over 10 years, on 4 indicators |
+| Building | 45.2 | 0.54 (usable) | +0.3 over 10 years, on 4 indicators |
 | Shared Purpose | 96 | 0.24 (very thin) | +9.9 over 10 years, on 2 indicators |
 
 ## The dimensions the evidence says to raise
 
 Lowest score first. Only dimensions with usable evidence appear here. A low score with thin evidence is a measurement problem before it is a policy problem, and it moves to the next section.
 
-### Building: 35.2, confidence usable
+### Building: 45.2, confidence usable
 
 How capable is the country of turning plans and knowledge into functioning systems?
 
 - Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Ireland 70, Singapore 68.4, China 62.8.
+- Highest scores with usable evidence: Ireland 75.3, Singapore 71.2, China 64.9.
 - Documented deliveries elsewhere: Pix instant payment system (Brazil); GOV.BR federal identity and service platform (Brazil); X-Road national data exchange layer (Estonia); Pradhan Mantri Jan Dhan Yojana bank accounts (India); Electricity supply rebuilt on renewable sources (Uruguay); Plan Ceibal, one connected laptop per child (Uruguay); Sistema Unico de Saude, universal public health system (Brazil); Programa Nacional de Imunizacoes, and its erosion (Brazil); Luz para Todos, rural electrification (Brazil); Bolsa Familia and the single registry behind it (Brazil); Fully electronic national elections (Brazil); Deepwater and pre-salt oil production (Brazil); Seguro Popular, and its abolition (Mexico); Sure Start children's centres, and their erosion (United Kingdom); Grid power, and load shedding (South Africa); Measles elimination, and its erosion (United States).
 - Declared gaps in this dimension: Large project delivery, Firm scale-up rate.
 - Datasets examined and rejected for this dimension: Logistics infrastructure quality.
@@ -71,10 +71,10 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 
 Strongest first. These score at or above 50 on usable evidence, so nothing here asks to be raised or measured first. A held dimension still decays when nobody watches it.
 
-- Adaptability: 89.5, confidence usable
-- Learning: 71.2, confidence usable
-- Agency: 70.5, confidence usable
-- Anticipation: 70.3, confidence usable
+- Adaptability: 90.1, confidence usable
+- Agency: 72.8, confidence usable
+- Anticipation: 72.3, confidence usable
+- Learning: 65.3, confidence usable
 
 ## The measurement agenda
 

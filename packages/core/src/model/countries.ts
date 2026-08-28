@@ -53,11 +53,37 @@ export const COUNTRIES = [
   { iso3: 'KEN', iso2: 'KE', name: 'Kenya', reason: 'East African digital finance leader, where a private rail reached population scale' },
   { iso3: 'RWA', iso2: 'RW', name: 'Rwanda', reason: 'Small state with a strong delivery reputation and a narrow political base' },
   { iso3: 'ETH', iso2: 'ET', name: 'Ethiopia', reason: 'Large low-income state attempting state-led industrialization under conflict' },
+  /* The Latin American completion, added together in the 4.0.0 rebase so the
+   * region the project serves first is covered whole rather than sampled. See
+   * D51. Sparse data on some of these is expected and is published as thin
+   * confidence rather than hidden. */
+  { iso3: 'BOL', iso2: 'BO', name: 'Bolivia', reason: 'Resource-dependent landlocked state with strong social movements and weak formal institutions' },
+  { iso3: 'PRY', iso2: 'PY', name: 'Paraguay', reason: 'Landlocked agro-exporter with a small state and fast recent growth' },
+  { iso3: 'ECU', iso2: 'EC', name: 'Ecuador', reason: 'Dollarized oil exporter cycling through repeated institutional redesigns' },
+  { iso3: 'VEN', iso2: 'VE', name: 'Venezuela', reason: 'State collapse case; the sparse recent data is itself the finding' },
+  { iso3: 'PAN', iso2: 'PA', name: 'Panama', reason: 'Services and logistics hub built around a single asset it operates well' },
+  { iso3: 'GTM', iso2: 'GT', name: 'Guatemala', reason: 'Largest Central American economy with a chronically underfunded state' },
+  { iso3: 'HND', iso2: 'HN', name: 'Honduras', reason: 'Low-capacity state where remittances stand in for absent institutions' },
+  { iso3: 'SLV', iso2: 'SV', name: 'El Salvador', reason: 'Small state undergoing a centralized security-led institutional rebuild' },
+  { iso3: 'NIC', iso2: 'NI', name: 'Nicaragua', reason: 'Authoritarian consolidation case with thinning independent statistics' },
+  { iso3: 'DOM', iso2: 'DO', name: 'Dominican Republic', reason: 'Fast-growing tourism and services economy with weak public delivery' },
+  { iso3: 'CUB', iso2: 'CU', name: 'Cuba', reason: 'State-run system outside most international statistical programs, so coverage is thin by design' },
+  { iso3: 'HTI', iso2: 'HT', name: 'Haiti', reason: 'State breakdown case; shows what the frame floor looks like' },
 ] as const
 
 export type CountryIso3 = (typeof COUNTRIES)[number]['iso3']
 
 export const COUNTRY_ISO3: string[] = COUNTRIES.map((c) => c.iso3)
+
+/**
+ * Latin America, complete: every sovereign country from Mexico south, in
+ * alphabetical iso3 order. One definition, so every regional surface counts
+ * the same set. See D51.
+ */
+export const LATAM_ISO3: string[] = [
+  'ARG', 'BOL', 'BRA', 'CHL', 'COL', 'CRI', 'CUB', 'DOM', 'ECU', 'GTM',
+  'HND', 'HTI', 'MEX', 'NIC', 'PAN', 'PER', 'PRY', 'SLV', 'URY', 'VEN',
+]
 
 export const COUNTRY_NAMES: Record<string, string> = Object.fromEntries(
   COUNTRIES.map((c) => [c.iso3, c.name]),

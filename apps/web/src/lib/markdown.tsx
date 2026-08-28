@@ -80,6 +80,16 @@ function inline(text: string, key = 0, refs = true): ReactNode[] {
   return out
 }
 
+/**
+ * One line of the same subset, for a page that lifts a sentence out of a doc.
+ *
+ * The sentence keeps its bold, its code spans and its bare decision ids, which
+ * is most of why it is readable at all. See D50.
+ */
+export function MarkdownLine({ text }: { text: string }) {
+  return <>{inline(text)}</>
+}
+
 /** An anchor id for a heading: its leading token where one exists (A1, D16), else a slug. */
 function headingId(text: string): string {
   const token = text.match(/^([A-Z]\d+)\b/)

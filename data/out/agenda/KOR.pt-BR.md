@@ -1,21 +1,21 @@
 # Agenda de capacidades: Coreia do Sul
 
-*Gerado em 2026-08-27*
+*Gerado em 2026-08-28*
 
-As notas são relativas a uma régua construída a partir dos 40 países em conjunto e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
+As notas são relativas a uma régua construída a partir dos 52 países em conjunto e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
 
 ## Onde a Coreia do Sul está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 79,5 | 0,64 (utilizável) | +25,4 em 10 anos, sobre 5 indicadores |
-| Agência | 76,5 | 0,6 (utilizável) | +7,9 em 10 anos, sobre 4 indicadores |
+| Antecipação | 80,6 | 0,64 (utilizável) | +21,4 em 10 anos, sobre 5 indicadores |
+| Agência | 78,9 | 0,6 (utilizável) | +6,8 em 10 anos, sobre 4 indicadores |
 | Coordenação | sem nota | 0,08 (muito fraca) | sem base de tendência |
 | Confiança | sem nota | 0,08 (muito fraca) | sem base de tendência |
-| Aprendizagem | 58,8 | 0,54 (utilizável) | +17,9 em 10 anos, sobre 2 indicadores |
+| Aprendizagem | 55,9 | 0,54 (utilizável) | +16,5 em 10 anos, sobre 2 indicadores |
 | Experimentação | 72,2 | 0,39 (fraca) | +16,9 em 10 anos, sobre 2 indicadores |
-| Adaptação | 80,4 | 0,48 (utilizável) | +8 em 10 anos, sobre 4 indicadores |
-| Construção | 60,6 | 0,54 (utilizável) | +3,3 em 10 anos, sobre 4 indicadores |
+| Adaptação | 82,1 | 0,48 (utilizável) | +7,8 em 10 anos, sobre 4 indicadores |
+| Construção | 63,1 | 0,54 (utilizável) | +3,1 em 10 anos, sobre 4 indicadores |
 | Propósito compartilhado | 61 | 0,24 (muito fraca) | +4 em 10 anos, sobre 2 indicadores |
 
 ## As dimensões que precisam ser medidas antes de serem geridas
@@ -57,11 +57,11 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 
 Da nota mais alta para a mais baixa. Estas dimensões pontuam 50 ou mais com evidência utilizável, então nada aqui pede elevação ou medição primeiro. Uma dimensão mantida ainda decai quando ninguém a observa.
 
-- Adaptação: 80,4, confiança utilizável
-- Antecipação: 79,5, confiança utilizável
-- Agência: 76,5, confiança utilizável
-- Construção: 60,6, confiança utilizável
-- Aprendizagem: 58,8, confiança utilizável
+- Adaptação: 82,1, confiança utilizável
+- Antecipação: 80,6, confiança utilizável
+- Agência: 78,9, confiança utilizável
+- Construção: 63,1, confiança utilizável
+- Aprendizagem: 55,9, confiança utilizável
 
 ## A agenda de medição
 

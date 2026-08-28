@@ -6,10 +6,10 @@ what it was told. They are failures of measurement, and anyone building on this
 needs to know them before quoting a score.
 
 Evidence for each is either a diagnostic in `data/out/diagnostics.json` or the
-in-session panel run in `data/delphi/in-session-round1.json`, which scored 144 of
-the 360 country-dimension cells against the same evidence briefs.
+in-session panel run in `data/delphi/in-session-round1.json`, which scored 144
+of the 468 country-dimension cells against the same evidence briefs.
 
-Numbers here are from dataset 3.0.0 unless a figure names the run it comes from.
+Numbers here are from dataset 4.0.0 unless a figure names the run it comes from.
 Where a figure predates the current frame it says so, because the scale it was
 measured on is not the scale in use.
 
@@ -21,9 +21,9 @@ measured on is not the scale in use.
 Four of eight indicators are observed. GEM early-stage entrepreneurial activity
 and fear of failure carry half the dimension, so it no longer rests on patents
 alone. Venture capital, regulatory sandboxes, university spinouts and business
-R&D share are still gaps. Mean confidence is 0.252, the second lowest of the nine
-dimensions, and the GEM series covers only the first 16 countries, so 24 of 40
-are scored on patents and trademarks alone. See D21.
+R&D share are still gaps. Mean confidence is 0.226, above only Coordination,
+Trust and Shared Purpose, and the GEM series covers 16 of the 52 countries, so
+36 are scored on patents and trademarks alone. See D21.
 
 Resident patents and resident trademarks per head measure formalised, completed,
 defensible invention, which is close to the opposite of the many-cheap-
@@ -34,14 +34,14 @@ The four largest departures across the 16 countries the panel covers:
 
 | Country | Indicators | Panel | Gap |
 | --- | ---: | ---: | ---: |
-| Estonia | 29.9 | 70 | +40.1 |
-| Netherlands | 25.7 | 65 | +39.3 |
+| Estonia | 30.2 | 70 | +39.8 |
 | United States | 55.8 | 95 | +39.2 |
-| India | 9.5 | 40 | +30.5 |
+| Netherlands | 28.0 | 65 | +37.0 |
+| India | 9.8 | 40 | +30.2 |
 
-The Netherlands' 25.7 is not a finding about Dutch innovation. It is the absence
-of venture-capital data. Uruguay scores 34.2, having legalised and regulated a
-national cannabis market and run a fintech sandbox. Argentina scores 21.3, having
+The Netherlands' 28.0 is not a finding about Dutch innovation. It is the absence
+of venture-capital data. Uruguay scores 34.3, having legalised and regulated a
+national cannabis market and run a fintech sandbox. Argentina scores 21.5, having
 produced more technology firms of scale per head than anywhere else in the
 region.
 
@@ -49,7 +49,7 @@ region.
 aggregate, the OECD SME and Entrepreneurship Financing scoreboard, covers 6 of
 the 16 original countries and omits Brazil, India, South Africa and Singapore.
 Business R&D share is the next best candidate, from UNESCO or OECD research and
-development statistics. Extending GEM coverage to the other 24 countries is the
+development statistics. Extending GEM coverage to the other 36 countries is the
 cheaper half.
 
 ---
@@ -58,12 +58,12 @@ cheaper half.
 
 **Severity: medium.**
 
-India scores 9.5 on Experimentation and 20.8 on Anticipation. Both come from
+India scores 9.8 on Experimentation and 26.7 on Anticipation. Both come from
 dividing absolute counts by 1.4 billion people. The arithmetic is correct and the
 result is not informative on Experimentation: it says India files few patents per
 head, which was never the question. The panel put India at 40 there, a gap of
-30.5 points, and at 25 on Anticipation, which the indicators now match within
-4.2.
+30.2 points, and at 25 on Anticipation, which the indicators now match within
+1.7.
 
 **Fix.** Per-capita is right for most indicators and wrong where capability is
 concentrated in institutions rather than spread across a population. Consider a
@@ -148,8 +148,8 @@ not simply to raise Singapore.
 
 Voice and accountability is retired, so Singapore's 20.9 is gone. Shared Purpose
 now rests on two indicators, tax revenue and income inequality, at mean
-confidence 0.236, and it publishes a score for 37 of 40 countries. Its
-correlation with log GDP per capita is 0.46, the lowest of the seven dimensions
+confidence 0.223, and it publishes a score for 46 of 52 countries. Its
+correlation with log GDP per capita is 0.45, the lowest of the seven dimensions
 that publish. The behavioural measures it needs are civic participation and
 volunteering, both still gaps, plus voter turnout, which is published by
 International IDEA and would have to be entered by hand.
@@ -165,8 +165,10 @@ time, electricity connection speed. All are stuck at 2019 and the World Bank has
 archived the codes.
 
 The recency term already marks them down, so this is visible rather than hidden.
-It is listed because the replacement (B-READY) is not in the API yet and someone
-will eventually need to migrate these five.
+It is listed because these five have to migrate to B-READY, which is in the API
+as `IC.BRE.*` inside World Development Indicators and covers 12 of the 52
+countries in its 2024 round. The migration waits on coverage and not on the
+publisher. See A12.
 
 ---
 ## A7 — Learning overstates Brazil and understates Korea, Estonia and Singapore
@@ -192,12 +194,12 @@ data does not exist.
 
 **Severity: structural.**
 
-Every correlation in `diagnostics.json` is computed on the 40 countries loaded.
-Forty points is enough to reverse a finding and not enough to establish one. Two
-dimension pairs sat at 0.94 on the 16-country run and read as near-duplicates.
-At 40 no dimension pair passes the redundancy threshold at all, and the highest
-is Anticipation with Learning at 0.79. The nine dimensions separate when the
-sample is wide enough to separate them.
+Every correlation in `diagnostics.json` is computed on the 52 countries loaded.
+Fifty-two points is enough to reverse a finding and not enough to establish one.
+Two dimension pairs sat at 0.94 on the 16-country run and read as
+near-duplicates. At 52 no dimension pair passes the redundancy threshold at all,
+and the highest is Anticipation with Agency at 0.83. The nine dimensions
+separate when the sample is wide enough to separate them.
 
 The redundancy and wealth-proxy findings are strong enough to act on because
 they also have a mechanical explanation, not because the coefficient is large.
@@ -235,14 +237,15 @@ Delivery records for cross-agency national programmes would be the direct
 measure, and they are a declared gap.
 
 ---
-## A10 — The frame is 40 countries wide, and they are not the world
+## A10 — The frame is 52 countries wide, and they are not the world
 
 **Severity: structural.**
 
 Every country in the benchmark sets the endpoints of every indicator scale and is
 measured against the result. See D47. So 0 and 100 mean "weakest and strongest of
-these 40", and the 40 were picked to expose contrasts, not to sample the world. A
-score is a position in this set and carries no claim about a country outside it.
+these 52", and the 52 were picked to expose contrasts and to cover Latin America
+whole (D51), not to sample the world. A score is a position in this set and
+carries no claim about a country outside it.
 
 Two consequences follow.
 
@@ -270,7 +273,7 @@ productivity, logistics infrastructure, electricity connection speed and
 economic complexity. All six describe industrial output. Nothing in the measured
 set can see a national programme that was specified, funded and delivered.
 
-Brazil scores 15.1 at confidence 0.544, one of the better evidenced of its nine
+Brazil scores 25.3 at confidence 0.544, one of the better evidenced of its nine
 dimensions. The score is a correct statement about Brazilian industrial output
 and it is read as a statement about Brazilian delivery capacity, which is a
 different construct. In the same decade Brazil built and ran Pix, which settled
@@ -299,12 +302,13 @@ here, and the benchmark currently has no way to say so.
 **Severity: high. Created deliberately by D23.**
 
 Retiring the perception layer removed the only indicators three dimensions had.
+The figures in this entry are from dataset 4.0.0.
 
 | Dimension | Observed indicators | Confidence | What is left | Publishes a score |
 | --- | ---: | ---: | --- | --- |
-| Coordination | 1 of 7 | 0.079 | Time to export, frozen at 2019 | no |
-| Trust | 1 of 7 | 0.079 | Contract enforcement days, frozen at 2019 | no |
-| Shared Purpose | 2 of 7 | 0.236 | Tax revenue, income inequality | 37 of 40 |
+| Coordination | 1 of 7 | 0.077 | Time to export, frozen at 2019 | no |
+| Trust | 1 of 7 | 0.077 | Contract enforcement days, frozen at 2019 | no |
+| Shared Purpose | 2 of 7 | 0.223 | Tax revenue, income inequality | 46 of 52 |
 
 Coordination and Trust print nothing under D45's coverage floor. Their indicator
 rows, confidence and trend still publish, so the evidence is visible and the
@@ -318,38 +322,58 @@ volunteering, civic participation. Until at least two land per dimension, treat
 Coordination, Trust and Shared Purpose as unmeasured, and consider whether a
 dimension below a coverage floor should print a score at all.
 
-**The World Bank API cannot supply that fix.** Twenty-five candidate series were
-probed against the ten countries of the original prototype set. The result, per
-dimension:
+**What the World Bank can and cannot supply.** Thirty candidate series have been
+probed against the 52 countries with `pnpm bench probe`, and the publisher's
+catalogue of 29,544 series has been searched by name. The result, per dimension:
 
-- **Coordination: nothing.** `IQ.SPI.PIL2/PIL4`, `IC.IMP.CSBC`,
-  `IC.EXP.CSBC.CD` and `GF.XPD.BUDG.ZS` return no data. `IQ.CPA.PUBS.XQ` covers
-  1 of 10, IDA borrowers only. `SL.TLF.CACT.ZS` covers 10 of 10 and correlates
-  with log GDP at 0.88, so it is a wealth proxy. `IQ.SPI.OVRL` is already wired
-  to Anticipation.
-- **Trust: one candidate, and it was rejected.** `IC.FRM.CORR.ZS` covers 10 of
-  10 across 2020 to 2025, is behavioural and correlates with log GDP at 0.667,
-  under the line. It was wired and scored. It lifted Trust confidence for 34 of
-  40 countries from very thin to thin, and it moved Trust's own GDP correlation
-  from 0.385 to 0.619. Reverted, with 0 of 360 published cells changed. Its
-  siblings are not independent evidence either: `IC.FRM.BRIB.ZS` correlates with
-  it at 0.87 across those ten, and `IC.TAX.GIFT.ZS` is degenerate, with
-  three zeroes and the United States scoring worse than Chile.
+- **Coordination: one candidate, and it needs a transform the model does not
+  have.** `GF.XPD.BUDG.ZS`, primary government expenditure as a proportion of
+  the original approved budget, covers 44 of 52 at 2024 and correlates with log
+  GDP per capita at 0.285. That is the budget execution measure this artefact
+  asks for. It is also two-sided: values run from 37.7 to 134.6, and capability
+  is closeness to 100 rather than a high number or a low one. `direction` cannot
+  say that and no transform computes a distance from a target, so wiring it is a
+  decision with code behind it. The CPIA cluster (`IQ.CPA.FINQ.XQ`,
+  `IQ.CPA.PUBS.XQ`, `IQ.CPA.TRAN.XQ`) covers 10 of 52, IDA borrowers only, and
+  is close to income-independent at -0.011 to 0.241, so the coverage is the
+  whole loss. `IQ.SPI.PIL2/PIL4` and `IC.IMP.CSBC` are codes the API rejects,
+  `IC.EXP.CSBC.CD` is archived, and `SL.TLF.CACT.ZS` is a modelled ILO estimate,
+  which is imputation entering a model whose invariant forbids it.
+- **Trust: one candidate at coverage, and it is a perception measure.**
+  `IC.FRM.CORR.ZS` covers 48 of 52 on a 2024 median vintage and correlates with
+  log GDP at -0.587, under the line, and at -0.708 on ranks, on it. Its
+  definition is the objection: it asks establishments whether firms similar to
+  theirs make informal payments, so it records a belief about peers and not an
+  experience. That is measurement class P, the layer D23 retired. Its siblings
+  are not independent evidence either: `IC.FRM.BRIB.ZS` correlates with it at
+  0.838 and `IC.TAX.GIFT.ZS` at 0.761 across the 48 countries both cover, and
+  the gift series carries ten zeroes and places the United States below Chile.
 - **Shared Purpose: one untaken candidate.** `SG.GEN.PARL.ZS`, women in the
-  national parliament, covers 10 of 10 at 2025, spreads 13.8 to 44.9 and
-  correlates at 0.33. Its statistics are the best on the board and whether
-  representational breadth belongs in this dimension is unsettled.
-  `SL.EMP.VULN.ZS` is rejected: every value is an ILO modelled estimate, which
-  is imputation entering a model whose invariant forbids it.
+  national parliament, covers 52 of 52 at 2025, spreads 2.5 to 63.8 and
+  correlates with log GDP at 0.075. Its statistics are the best on the board by
+  a distance, and whether representational breadth belongs in this dimension is
+  unsettled. `SL.EMP.VULN.ZS` is rejected on the same ground as labour force
+  participation: every value is a modelled estimate.
 
-So the fix needs the project's second source adapter. The shortlist is ILOSTAT,
-IDEA voter turnout, and OECD government-at-a-glance for budget execution and
-court clearance. `ingest: 'manual'` already exists for anything with no API.
+**B-READY is what the frozen rows become.** `IC.BRE.*` replaces Doing Business
+inside World Development Indicators, and its dispute resolution score is the
+most income-independent series in the sweep at -0.034. The 2024 round covers 12
+of the 52 countries, so nothing is wireable from it yet. It is what Coordination's
+time to export and Trust's contract enforcement days turn into when its coverage
+arrives, which is the closing condition for A6 as well.
+
+Civil society strength, voter turnout, volunteering and civic participation are
+absent from the catalogue under any database id, and the interpersonal and
+institutional trust items were never World Bank series. So Trust needs the
+project's second source adapter, and Coordination needs one for anything past
+budget execution. The shortlist is ILOSTAT, IDEA voter turnout, and OECD
+government at a glance for court clearance. `ingest: 'manual'` already exists
+for anything with no API.
 
 The one indicator added to fix the contamination was the contamination.
-`wealthAttribution` in the diagnostics shows `homicide_rate` alone raising
+`wealthAttribution` in the D42 diagnostic showed `homicide_rate` alone raising
 Trust's wealth correlation by 0.288, from 0.096 to 0.385, the largest single
-wealth contribution in the model. D42 records the diagnostic and D44 the
+wealth contribution in the model at the time. D42 records the diagnostic and D44 the
 retirement.
 
 This artefact closes when two observable indicators land per dimension, and not

@@ -1,33 +1,33 @@
 # Agenda de capacidades: China
 
-*Gerado em 2026-08-27*
+*Gerado em 2026-08-28*
 
-As notas são relativas a uma régua construída a partir dos 40 países em conjunto e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
+As notas são relativas a uma régua construída a partir dos 52 países em conjunto e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
 
 ## Onde a China está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 26,3 | 0,64 (utilizável) | +13,9 em 10 anos, sobre 5 indicadores, 1 truncados na borda da régua |
-| Agência | 82 | 0,61 (utilizável) | +28,8 em 10 anos, sobre 4 indicadores |
+| Antecipação | 35,1 | 0,64 (utilizável) | +14,5 em 10 anos, sobre 5 indicadores |
+| Agência | 86,8 | 0,61 (utilizável) | +21,9 em 10 anos, sobre 4 indicadores |
 | Coordenação | sem nota | 0,08 (muito fraca) | sem base de tendência |
 | Confiança | sem nota | 0,08 (muito fraca) | sem base de tendência |
-| Aprendizagem | 62,5 | 0,56 (utilizável) | +13 em 10 anos, sobre 2 indicadores, 1 truncados na borda da régua |
+| Aprendizagem | 59,1 | 0,56 (utilizável) | +13 em 10 anos, sobre 2 indicadores, 1 truncados na borda da régua |
 | Experimentação | 100 | 0,18 (muito fraca) | +30,6 em 10 anos, sobre 2 indicadores |
-| Adaptação | 80,2 | 0,47 (utilizável) | +12 em 10 anos, sobre 4 indicadores |
-| Construção | 62,8 | 0,54 (utilizável) | -2,2 em 10 anos, sobre 4 indicadores |
+| Adaptação | 81,6 | 0,47 (utilizável) | +11,8 em 10 anos, sobre 4 indicadores |
+| Construção | 64,9 | 0,54 (utilizável) | -1,9 em 10 anos, sobre 4 indicadores |
 | Propósito compartilhado | 43,8 | 0,25 (muito fraca) | +0,7 em 10 anos, sobre 2 indicadores |
 
 ## As dimensões que a evidência manda elevar
 
 Da nota mais baixa para a mais alta. Só entram aqui dimensões com evidência utilizável. Uma nota baixa com evidência fraca é antes um problema de medição do que de política pública, e vai para a próxima seção.
 
-### Antecipação: 26,3, confiança utilizável
+### Antecipação: 35,1, confiança utilizável
 
 Quão capaz é o país de identificar mudanças emergentes e se preparar para elas?
 
 - Hoje a nota se apoia em 5 indicadores observados.
-- Maiores notas com evidência utilizável: Suécia 82,9, Finlândia 81,1, Suíça 80.
+- Maiores notas com evidência utilizável: Suécia 83,5, Finlândia 82, Suíça 81,1.
 - Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos).
 - Lacunas declaradas nesta dimensão: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
@@ -70,10 +70,10 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 
 Da nota mais alta para a mais baixa. Estas dimensões pontuam 50 ou mais com evidência utilizável, então nada aqui pede elevação ou medição primeiro. Uma dimensão mantida ainda decai quando ninguém a observa.
 
-- Agência: 82, confiança utilizável
-- Adaptação: 80,2, confiança utilizável
-- Construção: 62,8, confiança utilizável
-- Aprendizagem: 62,5, confiança utilizável
+- Agência: 86,8, confiança utilizável
+- Adaptação: 81,6, confiança utilizável
+- Construção: 64,9, confiança utilizável
+- Aprendizagem: 59,1, confiança utilizável
 
 ## A agenda de medição
 

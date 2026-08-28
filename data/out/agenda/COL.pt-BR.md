@@ -1,60 +1,52 @@
 # Agenda de capacidades: Colômbia
 
-*Gerado em 2026-08-27*
+*Gerado em 2026-08-28*
 
-As notas são relativas a uma régua construída a partir dos 40 países em conjunto e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
+As notas são relativas a uma régua construída a partir dos 52 países em conjunto e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
 
 ## Onde a Colômbia está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 24,8 | 0,54 (utilizável) | +16,6 em 10 anos, sobre 3 indicadores |
-| Agência | 39,4 | 0,61 (utilizável) | +12,8 em 10 anos, sobre 4 indicadores, 1 truncados na borda da régua |
+| Antecipação | 28,8 | 0,54 (utilizável) | +11,9 em 10 anos, sobre 3 indicadores |
+| Agência | 50,8 | 0,61 (utilizável) | +12 em 10 anos, sobre 4 indicadores |
 | Coordenação | sem nota | 0,08 (muito fraca) | sem base de tendência |
 | Confiança | sem nota | 0,08 (muito fraca) | sem base de tendência |
-| Aprendizagem | 47 | 0,49 (utilizável) | +13,5 em 20 anos, sobre 2 indicadores |
-| Experimentação | 39,9 | 0,38 (fraca) | +0,6 em 10 anos, sobre 2 indicadores |
-| Adaptação | 51,3 | 0,48 (utilizável) | +3,1 em 10 anos, sobre 4 indicadores |
-| Construção | 17,2 | 0,54 (utilizável) | -2,2 em 10 anos, sobre 4 indicadores |
+| Aprendizagem | 44,3 | 0,49 (utilizável) | +13,5 em 20 anos, sobre 2 indicadores |
+| Experimentação | 40,1 | 0,38 (fraca) | +0,5 em 10 anos, sobre 2 indicadores |
+| Adaptação | 53,8 | 0,48 (utilizável) | +2,9 em 10 anos, sobre 4 indicadores |
+| Construção | 24,4 | 0,54 (utilizável) | -1,9 em 10 anos, sobre 4 indicadores |
 | Propósito compartilhado | 27,4 | 0,27 (fraca) | -3,1 em 10 anos, sobre 2 indicadores |
 
 ## As dimensões que a evidência manda elevar
 
 Da nota mais baixa para a mais alta. Só entram aqui dimensões com evidência utilizável. Uma nota baixa com evidência fraca é antes um problema de medição do que de política pública, e vai para a próxima seção.
 
-### Construção: 17,2, confiança utilizável
+### Construção: 24,4, confiança utilizável
 
 Quão capaz é o país de transformar planos e conhecimento em sistemas que funcionam?
 
 - Hoje a nota se apoia em 5 indicadores observados.
-- Maiores notas com evidência utilizável: Irlanda 70, Singapura 68,4, China 62,8.
+- Maiores notas com evidência utilizável: Irlanda 75,3, Singapura 71,2, China 64,9.
 - Entregas documentadas em outros países: Pix instant payment system (Brasil); GOV.BR federal identity and service platform (Brasil); X-Road national data exchange layer (Estônia); Pradhan Mantri Jan Dhan Yojana bank accounts (Índia); Electricity supply rebuilt on renewable sources (Uruguai); Plan Ceibal, one connected laptop per child (Uruguai); Sistema Unico de Saude, universal public health system (Brasil); Programa Nacional de Imunizacoes, and its erosion (Brasil); Luz para Todos, rural electrification (Brasil); Bolsa Familia and the single registry behind it (Brasil); Fully electronic national elections (Brasil); Deepwater and pre-salt oil production (Brasil); Seguro Popular, and its abolition (México); Sure Start children's centres, and their erosion (Reino Unido); Grid power, and load shedding (África do Sul); Measles elimination, and its erosion (Estados Unidos).
 - Lacunas declaradas nesta dimensão: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases de dados examinadas e rejeitadas para esta dimensão: Qualidade da infraestrutura logística.
 
-### Antecipação: 24,8, confiança utilizável
+### Antecipação: 28,8, confiança utilizável
 
 Quão capaz é o país de identificar mudanças emergentes e se preparar para elas?
 
 - Hoje a nota se apoia em 5 indicadores observados.
-- Maiores notas com evidência utilizável: Suécia 82,9, Finlândia 81,1, Suíça 80.
+- Maiores notas com evidência utilizável: Suécia 83,5, Finlândia 82, Suíça 81,1.
 - Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos).
 - Lacunas declaradas nesta dimensão: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
-### Agência: 39,4, confiança utilizável
-
-Quão capazes são pessoas e organizações de transformar uma intenção em ação?
-
-- Hoje a nota se apoia em 6 indicadores observados.
-- Maiores notas com evidência utilizável: Estados Unidos 88,3, Austrália 88, Reino Unido 84,7.
-- Lacunas declaradas nesta dimensão: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
-
-### Aprendizagem: 47, confiança utilizável
+### Aprendizagem: 44,3, confiança utilizável
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Hoje a nota se apoia em 5 indicadores observados.
-- Maiores notas com evidência utilizável: Finlândia 85,3, Austrália 75,2, Reino Unido 73,9.
+- Maiores notas com evidência utilizável: Finlândia 77,9, Austrália 70,3, Reino Unido 68,4.
 - Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia).
 - Lacunas declaradas nesta dimensão: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
@@ -97,7 +89,8 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 
 Da nota mais alta para a mais baixa. Estas dimensões pontuam 50 ou mais com evidência utilizável, então nada aqui pede elevação ou medição primeiro. Uma dimensão mantida ainda decai quando ninguém a observa.
 
-- Adaptação: 51,3, confiança utilizável
+- Adaptação: 53,8, confiança utilizável
+- Agência: 50,8, confiança utilizável
 
 ## A agenda de medição
 

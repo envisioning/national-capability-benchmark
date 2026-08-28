@@ -35,6 +35,10 @@ export const EN: Lexicon = {
   ) as Record<ScoreBandId, { label: string; meaning: string }>,
   legendRange: '{a} to {b}',
   legendRangeTop: '{a} and above',
+  radar: {
+    hint: 'Hover or tap an axis to read its number.',
+    compare: 'See every country on this dimension',
+  },
   agenda: {
     title: 'Capability agenda: {country}',
     generated: 'Generated {date}',

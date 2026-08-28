@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import Link from 'next/link'
+import { DATASET_VERSION, LICENSE_DOC, REPO_URL, docHref } from '@ncb/core'
 import { LanguageSwitch, NavLinks } from '@/components/NavLinks'
+import { challengeHref } from '@/lib/links'
 import './globals.css'
 
 /*
@@ -93,6 +95,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               Scores are a position from 0 to 100 against a frame built from all the countries
               measured. Adding a country rebases that frame, so the country set only changes with a
               versioned release. Confidence is reported beside every score and never inside it.
+            </p>
+            {/* The one place every page names the dataset it is showing, where the
+                code lives and how to argue with it. See D50. */}
+            <p className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-xs text-[var(--muted)]">
+              <span>Dataset {DATASET_VERSION}</span>
+              <Link href={challengeHref} className="hover:text-[var(--foreground)]">
+                Challenge this
+              </Link>
+              <a href={REPO_URL} className="hover:text-[var(--foreground)]">
+                Source and data on GitHub
+              </a>
+              <a href={docHref(LICENSE_DOC)} className="hover:text-[var(--foreground)]">
+                MIT code, published data under its own terms
+              </a>
             </p>
           </div>
         </footer>

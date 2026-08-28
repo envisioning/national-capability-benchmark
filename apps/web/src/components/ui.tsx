@@ -172,7 +172,12 @@ export function Score({
   nullLabel = 'no data',
 }: {
   value: number | null
-  size?: 'md' | 'sm'
+  /**
+   * `lg` is the readout size: one number a surface is built around, such as the
+   * axis the reader is pointing at on a radar. It is the same chip and the same
+   * band ramp, set in the light weight the type scale gives large numerals.
+   */
+  size?: 'lg' | 'md' | 'sm'
   /** What a missing value reads as. A language page passes its lexicon's word. */
   nullLabel?: string
 }) {
@@ -180,12 +185,16 @@ export function Score({
     return <span className="text-[var(--muted)]">{nullLabel}</span>
   }
   const band = scoreBand(value)
+  const sizing =
+    size === 'lg'
+      ? 'min-w-24 px-3 py-1 text-3xl font-light'
+      : size === 'sm'
+        ? 'min-w-9 px-1.5 py-0.5 font-medium'
+        : 'min-w-11 px-2 py-1 font-medium'
   return (
     <span
       title={`${band.label}: ${band.meaning}`}
-      className={`inline-block rounded-md text-center font-medium tabular-nums ${
-        size === 'sm' ? 'min-w-9 px-1.5 py-0.5' : 'min-w-11 px-2 py-1'
-      }`}
+      className={`inline-block rounded-md text-center tabular-nums ${sizing}`}
       style={{
         background: `var(--score-${band.id})`,
         color: `var(--score-${band.id}-ink)`,

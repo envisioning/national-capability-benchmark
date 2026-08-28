@@ -1,21 +1,21 @@
 # Agenda de capacidades: Irlanda
 
-*Gerado em 2026-08-27*
+*Gerado em 2026-08-28*
 
-As notas são relativas a uma régua construída a partir dos 40 países em conjunto e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
+As notas são relativas a uma régua construída a partir dos 52 países em conjunto e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
 
 ## Onde a Irlanda está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 65,6 | 0,64 (utilizável) | +11,2 em 10 anos, sobre 5 indicadores |
-| Agência | 66 | 0,61 (utilizável) | +4,8 em 10 anos, sobre 4 indicadores |
+| Antecipação | 67,1 | 0,64 (utilizável) | +9,7 em 10 anos, sobre 5 indicadores |
+| Agência | 69,2 | 0,61 (utilizável) | +2,5 em 10 anos, sobre 4 indicadores |
 | Coordenação | sem nota | 0,08 (muito fraca) | sem base de tendência |
 | Confiança | sem nota | 0,08 (muito fraca) | sem base de tendência |
-| Aprendizagem | 64,3 | 0,51 (utilizável) | -5,4 em 10 anos, sobre 2 indicadores |
+| Aprendizagem | 60,5 | 0,51 (utilizável) | -4,7 em 10 anos, sobre 2 indicadores |
 | Experimentação | sem nota | 0,09 (muito fraca) | sem base de tendência |
-| Adaptação | 70,9 | 0,48 (utilizável) | +9,7 em 10 anos, sobre 4 indicadores |
-| Construção | 70 | 0,54 (utilizável) | +18,4 em 10 anos, sobre 4 indicadores |
+| Adaptação | 73,2 | 0,48 (utilizável) | +10 em 10 anos, sobre 4 indicadores |
+| Construção | 75,3 | 0,54 (utilizável) | +18,1 em 10 anos, sobre 4 indicadores |
 | Propósito compartilhado | 76,5 | 0,26 (fraca) | +5,3 em 10 anos, sobre 2 indicadores |
 
 ## As dimensões que precisam ser medidas antes de serem geridas
@@ -57,11 +57,11 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 
 Da nota mais alta para a mais baixa. Estas dimensões pontuam 50 ou mais com evidência utilizável, então nada aqui pede elevação ou medição primeiro. Uma dimensão mantida ainda decai quando ninguém a observa.
 
-- Adaptação: 70,9, confiança utilizável
-- Construção: 70, confiança utilizável
-- Agência: 66, confiança utilizável
-- Antecipação: 65,6, confiança utilizável
-- Aprendizagem: 64,3, confiança utilizável
+- Construção: 75,3, confiança utilizável
+- Adaptação: 73,2, confiança utilizável
+- Agência: 69,2, confiança utilizável
+- Antecipação: 67,1, confiança utilizável
+- Aprendizagem: 60,5, confiança utilizável
 
 ## A agenda de medição
 

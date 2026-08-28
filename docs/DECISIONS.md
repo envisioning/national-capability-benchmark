@@ -1940,3 +1940,118 @@ have to be kept in step by hand.
 `sources.ts` only as far as one publisher needs, and an ILOSTAT or OECD adapter
 would want a per-publisher description rather than a World Bank one with other
 publishers listed beside it.
+
+## D50 — The falsification conditions are an index, not a second document
+
+*Recorded 2026-08-28. Extends D40 and D49.*
+
+**Choice.** The site gets a `/challenge` page, and everything on it is derived.
+The open artefacts come from the severity line of each entry in
+`docs/KNOWN-ARTEFACTS.md`. The falsification conditions come from the
+**Overturned by** clause of each entry in `docs/DECISIONS.md`, newest first.
+`apps/web/src/lib/docs.ts` does the reading. Neither document gains a summary
+of itself, and the page holds no claim that is not already in one of them.
+
+The footer carries the same idea in one line on every page: the dataset
+version, a link to the challenge page, the repository and the license split.
+
+**Why.** Phase one of this project asks researchers to try to falsify the
+framework. Until now the site invited that in prose and offered no way to do
+it: no repository link outside a document body, no issue route, no citation
+string, and no version stamp a reader could quote with a number. The material
+for all of it already existed. Every decision has stated what would overturn it
+since D1, and `CONTRIBUTING.md` has stated the four contribution routes and the
+two-country rule for a gap. None of it was reachable from the viewer.
+
+Hand-writing the list was the obvious alternative and the wrong one. A
+hand-written index of 48 falsification conditions is stale on the next appended
+decision, and the failure is silent. Deriving it means a new decision reaches
+the challenge page in the same commit that records it.
+
+**Cost.** A markdown parser for a subset of a subset: the entry heading and two
+labelled paragraphs. It reads `**Overturned by.**` and `**Severity:`, so an
+entry that renames either label drops off the page without erroring. The
+`docs/` writing convention is now load bearing in the viewer, which it was not
+before, and the two labels are checked nowhere.
+
+**Overturned by.** A decision entry that needs more than one falsification
+condition, or an artefact whose severity is a judgment rather than a word. Both
+would mean the structure belongs in data rather than in prose, and the entries
+would move to a file the documents render from instead of the other way round.
+
+## D51 — Latin America is covered whole, not sampled
+
+*Recorded 2026-08-28. Applies the D47 bump rules: dataset 4.0.0.*
+
+**Choice.** Every sovereign Latin American country is in the benchmark:
+Bolivia, Paraguay, Ecuador, Venezuela, Panama, Guatemala, Honduras,
+El Salvador, Nicaragua, the Dominican Republic, Cuba and Haiti join the eight
+already present, for 20 of 52 countries. `LATAM_ISO3` in
+`packages/core/src/model/countries.ts` is the one definition of the region,
+and the Portuguese edition renders the whole set.
+
+**Why.** The project's first field case is Brazil and its first institutional
+audience is Brazilian and regional (see docs/WHY.md). A regional comparison
+sampled at eight countries invited the question "why these eight" from exactly
+the audience the work is for. Covering the region whole removes the selection
+question, makes the benchmark legible to regional institutions, and puts the
+frame's floor where the region's hard cases are: Venezuela, Cuba, Haiti and
+Nicaragua enter with thin statistics, and publishing them as thin evidence is
+the honest version of the claim.
+
+**What the rebase did.** At 52 countries, 232 of 276 comparable dimension
+cells moved against 3.0.0. The mean move is 3.5 points and the largest is 20.3
+(Philippines, Agency, 14.2 to 34.5). Brazil moves on six of its seven scored
+dimensions, Agency most (48.8 to 59.6): the frame now contains the region's
+weaker states, so middle positions rise. The 3.0.0 numbers are not comparable
+to these. Every country still scores at least five of nine dimensions, and 0
+of 1,604 observed cells clamp.
+
+**Cost.** Twelve countries with weaker statistical systems thin coverage at
+the low end: GEM still covers 16 of 52, and the mean move above rests only on
+the cells scored in both versions. The ingest itself was clean, 7,411 values
+added with 0 failures and 0 restatements. Sparse-data countries render mostly
+dashed radars, which is the design working, and A10's warning stands: 52
+countries are still not the world.
+
+**What would overturn it.** Evidence that thin-coverage countries distort an
+indicator's Tukey fences enough to change well-evidenced countries' readings,
+or a regional dataset that covers the twelve better than the World Bank does.
+
+## D52 — A candidate series is tested before it becomes a registry row
+
+*Recorded 2026-08-28. Extends D23 and D49.*
+
+**Choice.** `pnpm bench probe --series a,b[@db]` fetches candidate World Bank
+series against the live country set and reports four things per candidate:
+coverage, latest year, spread, and correlation with log GDP per capita. A
+candidate passes when it covers at least half the country set, carries a value
+no older than eight years, holds at least three distinct values, and correlates
+with income below the same 0.70 the diagnostics use. The probe writes nothing.
+It fetches, prints and exits, so it can run while other work is in flight.
+
+**Why.** The test already existed and lived in people's heads. A12 records a
+25-series probe done by hand against the ten countries of the original
+prototype, and D44 retired the homicide rate after wiring it, scoring it and
+reading the diagnostic afterwards. Wiring first and testing later costs a
+rebase every time it goes wrong, and the country set has since grown from ten
+to 52, which invalidates the coverage half of every earlier hand probe.
+
+A pass is not a decision. Coverage, recency, spread and the wealth test are
+necessary and nowhere near sufficient: what the series measures is the argument,
+and that stays a judgment recorded here. The probe exists to stop that argument
+being had about a series that has 6 countries or is income wearing a hat.
+
+**Cost.** One more pipeline module and a command. The thresholds are constants
+in `pipeline/probe.ts` and they are arbitrary in the same way every threshold
+in this project is: defensible, not derived. A candidate that fails coverage
+today can pass after the publisher's next round, so a failed probe dates.
+
+`--search` reads the publisher's own catalogue of about 30,000 series by name,
+so a candidate list starts from what exists rather than from memory. A name
+absent from the catalogue is absent from the API at every database id, which is
+how a gap gets recorded as unfillable rather than untried.
+
+**Overturned by.** A second ingester. The probe speaks World Bank, and the
+series that would fill Coordination and Trust are the ones the World Bank does
+not publish, so its long-term job is to be generalised or retired.

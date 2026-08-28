@@ -13,7 +13,7 @@ import {
 } from '@ncb/core'
 import type { MeasurementClass } from '@ncb/core'
 import { CountryLabel, Eyebrow, Headline, PageTitle, Scroller, Section, Table, Td, Th } from '@/components/ui'
-import { sourcesHref } from '@/lib/links'
+import { challengeHref, sourcesHref } from '@/lib/links'
 import { DIMENSION_ICON, Icon, TIER_ICON } from '@/components/Icon'
 
 export const metadata: Metadata = {
@@ -331,7 +331,10 @@ export default function MethodPage() {
         </Scroller>
       </Section>
 
-      <Section title="These assumptions can be challenged">
+      <Section
+        title="These assumptions can be challenged"
+        hint="Each one is a choice this project made and defends in the decision log. The challenge page lists what evidence would overturn each of them."
+      >
         <ul className="max-w-3xl list-disc space-y-2 pl-5 text-lg leading-relaxed">
           <li>
             0 and 100 mean the weakest and strongest of the {COUNTRIES.length} countries on that
@@ -358,6 +361,12 @@ export default function MethodPage() {
           </li>
           <li>Political uniformity is never treated as a capability.</li>
         </ul>
+        <p className="mt-6 max-w-3xl text-lg leading-relaxed">
+          <Link href={challengeHref} className="underline underline-offset-4">
+            How to argue with any of this
+          </Link>
+          , including what would have to be true for each decision to fall.
+        </p>
       </Section>
     </>
   )

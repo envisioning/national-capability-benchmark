@@ -1,43 +1,43 @@
 # Capability agenda: Israel
 
-*Generated 2026-08-27*
+*Generated 2026-08-28*
 
-Scores are relative to a frame built from all 40 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
+Scores are relative to a frame built from all 52 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
 
 ## Where Israel stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 79 | 0.52 (usable) | +20.5 over 10 years, on 4 indicators |
-| Agency | 61.6 | 0.61 (usable) | +3.9 over 10 years, on 4 indicators |
+| Anticipation | 80.6 | 0.52 (usable) | +16.5 over 10 years, on 4 indicators |
+| Agency | 66.4 | 0.61 (usable) | +2.8 over 10 years, on 4 indicators |
 | Coordination | not scored | 0.08 (very thin) | no trend basket |
 | Trust | not scored | 0.08 (very thin) | no trend basket |
-| Learning | 49.1 | 0.54 (usable) | -6.6 over 10 years, on 3 indicators |
-| Experimentation | 16.5 | 0.18 (very thin) | +1.1 over 10 years, on 2 indicators |
-| Adaptability | 72.3 | 0.48 (usable) | +2.9 over 10 years, on 4 indicators |
-| Building | 31.1 | 0.54 (usable) | +6.9 over 10 years, on 4 indicators |
+| Learning | 44.7 | 0.54 (usable) | -6.7 over 10 years, on 3 indicators |
+| Experimentation | 21.4 | 0.18 (very thin) | +1.4 over 10 years, on 2 indicators |
+| Adaptability | 73.8 | 0.48 (usable) | +2.9 over 10 years, on 4 indicators |
+| Building | 38.8 | 0.54 (usable) | +6.8 over 10 years, on 4 indicators |
 | Shared Purpose | 70.4 | 0.25 (very thin) | +1.5 over 10 years, on 2 indicators |
 
 ## The dimensions the evidence says to raise
 
 Lowest score first. Only dimensions with usable evidence appear here. A low score with thin evidence is a measurement problem before it is a policy problem, and it moves to the next section.
 
-### Building: 31.1, confidence usable
+### Building: 38.8, confidence usable
 
 How capable is the country of turning plans and knowledge into functioning systems?
 
 - Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Ireland 70, Singapore 68.4, China 62.8.
+- Highest scores with usable evidence: Ireland 75.3, Singapore 71.2, China 64.9.
 - Documented deliveries elsewhere: Pix instant payment system (Brazil); GOV.BR federal identity and service platform (Brazil); X-Road national data exchange layer (Estonia); Pradhan Mantri Jan Dhan Yojana bank accounts (India); Electricity supply rebuilt on renewable sources (Uruguay); Plan Ceibal, one connected laptop per child (Uruguay); Sistema Unico de Saude, universal public health system (Brazil); Programa Nacional de Imunizacoes, and its erosion (Brazil); Luz para Todos, rural electrification (Brazil); Bolsa Familia and the single registry behind it (Brazil); Fully electronic national elections (Brazil); Deepwater and pre-salt oil production (Brazil); Seguro Popular, and its abolition (Mexico); Sure Start children's centres, and their erosion (United Kingdom); Grid power, and load shedding (South Africa); Measles elimination, and its erosion (United States).
 - Declared gaps in this dimension: Large project delivery, Firm scale-up rate.
 - Datasets examined and rejected for this dimension: Logistics infrastructure quality.
 
-### Learning: 49.1, confidence usable
+### Learning: 44.7, confidence usable
 
 How effectively does the country acquire, distribute, and update knowledge?
 
 - Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Finland 85.3, Australia 75.2, United Kingdom 73.9.
+- Highest scores with usable evidence: Finland 77.9, Australia 70.3, United Kingdom 68.4.
 - Documented deliveries elsewhere: SkillsFuture Credit (Singapore); The public library system (Finland).
 - Declared gaps in this dimension: Adult learning participation, Research citation impact.
 
@@ -80,9 +80,9 @@ To what extent can people imagine themselves as participants in a common project
 
 Strongest first. These score at or above 50 on usable evidence, so nothing here asks to be raised or measured first. A held dimension still decays when nobody watches it.
 
-- Anticipation: 79, confidence usable
-- Adaptability: 72.3, confidence usable
-- Agency: 61.6, confidence usable
+- Anticipation: 80.6, confidence usable
+- Adaptability: 73.8, confidence usable
+- Agency: 66.4, confidence usable
 
 ## The measurement agenda
 
