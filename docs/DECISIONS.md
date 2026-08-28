@@ -2112,3 +2112,67 @@ sometimes half empty is the cheaper of the two failures.
 itself. Nine labels on a 260 unit square collide at the sizes this chart is
 drawn at, which is why they are not there, but a larger chart on the country
 page could carry them and would make the readout redundant.
+
+## D54 — An institution map explains capability and never scores it
+
+*Recorded 2026-08-28. Extends D20, D31, D35 and D46.*
+
+**Choice.** Each country may publish one institutional capability network at
+`data/institutions/{ISO3}.json`. The schema is shared across countries and
+separates organisations, typed relationships and territorial coverage. A node
+records the organisation's legal nature, roles, level of government, source
+and the NCB dimensions it helps a reader investigate. An edge always has a
+direction, a named relation and its own source. There is no generic
+`connected_to` relation.
+
+Official registers provide the structural skeleton where they exist. Brazil
+uses SIORG for the federal executive and the São Paulo government directory
+for the state executive. A curated overlay adds the institutions those
+registers omit and the relationships an organisation chart cannot express:
+Congress, courts, prosecutors, audit, funding, regulation, data, training and
+cross-level delivery.
+
+The layer has its own experimental version. It does not change
+`DATASET_VERSION`, any `DimensionResult`, a score or confidence. A direct link
+from an institution to an NCB dimension is navigation, not a point or a weight.
+The evidential path stays the one D20 established: an institution participates
+in a documented delivery, the delivery bears on a declared indicator gap, and
+that indicator belongs to a dimension.
+
+Brazil begins with a federal baseline, São Paulo as the first state pilot and
+the municipality of São Paulo as the first municipal connection. Every state
+and the Federal District is present in the coverage plan from the first file,
+so the pilot cannot quietly become the scope. Display text is Portuguese for
+the Brazilian page, while ids, enums and English ground-layer descriptions
+stay language neutral and translations stay in `packages/core/src/i18n/`.
+
+**Why.** The evidence records name actors only inside prose. That is enough to
+document one delivery and not enough to answer which institutions hold the
+same capability, which constraints reach them, or what another country would
+need to reproduce the arrangement. Turning every organisation into an
+indicator would make the score reward documentation density. Leaving them in
+paragraphs makes the institutional mechanism impossible to traverse.
+
+A complete force-directed diagram was the obvious first interface and is not
+the one published. At 47 nodes and 64 relationships it is already a hairball.
+The viewer opens on one institution, draws its immediate network and lists all
+of its relationships in words. The directory keeps the whole set reachable,
+and the data keeps the whole graph available for later views.
+
+**Cost.** The capability overlay is curated and therefore contestable. SIORG
+can tell the project that an entity is linked to a ministry; it cannot decide
+that an audit relation matters to Trust or that a training organisation bears
+on Learning. Those mappings need sources, review and dates, and the first file
+is deliberately incomplete outside the federal backbone and São Paulo.
+
+The schema can record that a relation exists but does not yet record its legal
+scope, intensity or historical intervals. `funds` can therefore describe a
+standing funding channel without saying how much moves through it, and two
+lines with the same verb can carry very different practical weight.
+
+**Overturned by.** A cross-government official register that publishes the
+same organisations and capability relationships with stable identifiers, or a
+cross-country construction whose network measures survive differences in
+documentation coverage. The first would replace the curated skeleton. The
+second would justify considering a network measure as evidence, but it would
+still need a separate decision before entering any score.

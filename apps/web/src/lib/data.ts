@@ -1,7 +1,7 @@
 import { existsSync } from 'node:fs'
 import { readFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
-import { INDICATORS, isScored } from '@ncb/core'
+import { INDICATORS, InstitutionNetworkFile, isScored } from '@ncb/core'
 import { DATA_DIR } from '@ncb/core/node'
 import type {
   CountryResult,
@@ -38,6 +38,8 @@ const PATHS = {
   evidence: resolve(DATA_ROOT, 'evidence/records.json'),
   country: (iso3: string) => resolve(DATA_ROOT, 'out/countries', `${iso3.toUpperCase()}.json`),
   indicator: (id: string) => resolve(DATA_ROOT, 'out/indicators', `${id}.json`),
+  institutions: (iso3: string) =>
+    resolve(DATA_ROOT, 'institutions', `${iso3.toUpperCase()}.json`),
 }
 
 async function readJson<T>(path: string): Promise<T | null> {
@@ -108,6 +110,18 @@ export async function loadIndicatorCoverage(): Promise<
 export async function loadEvidence(): Promise<EvidenceRecord[]> {
   const file = await readJson<{ records: EvidenceRecord[] }>(PATHS.evidence)
   return file?.records ?? []
+}
+
+/**
+ * One country's explanatory institution network. This layer is versioned on
+ * its own and never enters scores or confidence.
+ */
+export async function loadInstitutionNetwork(
+  iso3: string,
+): Promise<InstitutionNetworkFile | null> {
+  const raw = await readJson<unknown>(PATHS.institutions(iso3))
+  const parsed = InstitutionNetworkFile.safeParse(raw)
+  return parsed.success ? parsed.data : null
 }
 
 /**

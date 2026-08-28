@@ -3,6 +3,7 @@ import { PT_BR } from './pt-br.js'
 import type { Lang, Lexicon } from './types.js'
 
 export * from './types.js'
+export * from './institutions-pt-br.js'
 export { EN } from './en.js'
 export { PT_BR } from './pt-br.js'
 

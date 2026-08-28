@@ -52,7 +52,12 @@ import {
   round1CellPrompt,
 } from '../delphi/prompts.js'
 import { CHARS_PER_TOKEN, LAST_VERIFIED, OUTPUT_TOKENS } from '../delphi/pricing.js'
-import { checkEvidenceUrls, validateDelphiRuns, validateEvidence } from '../pipeline/validate.js'
+import {
+  checkEvidenceUrls,
+  validateDelphiRuns,
+  validateEvidence,
+  validateInstitutionNetwork,
+} from '../pipeline/validate.js'
 
 type Args = { _: string[]; flags: Map<string, string | boolean> }
 
@@ -610,13 +615,17 @@ Start with file 1.
     }
 
     case 'validate': {
-      const problems = [...(await validateDelphiRuns()), ...(await validateEvidence())]
+      const problems = [
+        ...(await validateDelphiRuns()),
+        ...(await validateEvidence()),
+        ...(await validateInstitutionNetwork()),
+      ]
       if (args.flags.get('fetch')) {
         console.log('Checking evidence source URLs against the live web...')
         problems.push(...(await checkEvidenceUrls()))
       }
       if (problems.length === 0) {
-        console.log('All Delphi runs and evidence records parse and cover the expected cells.')
+        console.log('All Delphi runs, evidence records and institutional networks pass validation.')
         break
       }
       for (const p of problems) console.log(`  ${p.file.padEnd(46)} ${p.problem}`)
@@ -655,7 +664,7 @@ Start with file 1.
                                           measure the prompts and price the panel run
   pnpm bench probe     --search <regex> [--limit 40]             find World Bank series by name, with the database each needs
   pnpm bench probe     --series a,b[@db] [--from 2010] [--json]  test candidate World Bank series before wiring them
-  pnpm bench validate  [--fetch]          schema-check data/delphi and data/evidence; --fetch also live-checks evidence source URLs
+  pnpm bench validate  [--fetch]          schema-check Delphi, evidence and institution data; --fetch live-checks evidence URLs
   pnpm bench report                       write the findings report
   pnpm bench agenda    [BRA IND ...] [--lang pt-BR]
                                           write the capability agenda, JSON plus one markdown per lexicon

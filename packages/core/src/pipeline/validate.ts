@@ -1,6 +1,7 @@
 import { readdir, readFile } from 'node:fs/promises'
 import { basename, resolve } from 'node:path'
 import { COUNTRY_ISO3, DIMENSIONS, INDICATORS_BY_ID, isScored } from '../model/index.js'
+import { InstitutionNetworkFile } from '../model/institutions.js'
 import { DelphiRunFile, EvidenceFile, isEvidential, isPanel, isReversal } from '../model/schema.js'
 import { DELPHI_DIR, FILES } from './paths.js'
 
@@ -189,6 +190,97 @@ export async function validateEvidence(path = FILES.evidence): Promise<Problem[]
       severity: 'warning',
       problem: `${reversals} reversal(s) in ${records.length} records; D33 asks for one in five, so the next records must document erosion or dismantling`,
     })
+  }
+
+  return problems
+}
+
+/**
+ * Checks the curated capability network. Official registries can provide an
+ * organisational skeleton, but the explanatory edges are hand-authored, so
+ * broken references and orphaned nodes need the same explicit gate as evidence
+ * records and Delphi runs.
+ */
+export async function validateInstitutionNetwork(
+  path = FILES.institutionsBrazil,
+): Promise<Problem[]> {
+  const file = basename(path)
+  let raw: unknown
+  try {
+    raw = JSON.parse(await readFile(path, 'utf8'))
+  } catch {
+    return [{ file, severity: 'warning', problem: 'no institutional network file yet' }]
+  }
+
+  const parsed = InstitutionNetworkFile.safeParse(raw)
+  if (!parsed.success) {
+    return parsed.error.issues.slice(0, 8).map((issue) => ({
+      file,
+      severity: 'error' as const,
+      problem: `${issue.path.join('.') || '(root)'}: ${issue.message}`,
+    }))
+  }
+
+  const problems: Problem[] = []
+  const network = parsed.data
+  const nodeIds = new Set<string>()
+  for (const node of network.nodes) {
+    if (nodeIds.has(node.id)) {
+      problems.push({ file, severity: 'error', problem: `duplicate institution id ${node.id}` })
+    }
+    nodeIds.add(node.id)
+    if (node.iso3 !== network.iso3) {
+      problems.push({
+        file,
+        severity: 'error',
+        problem: `${node.id}: country ${node.iso3} does not match network ${network.iso3}`,
+      })
+    }
+  }
+
+  const edgeIds = new Set<string>()
+  const degree = new Map(network.nodes.map((node) => [node.id, 0]))
+  for (const edge of network.edges) {
+    if (edgeIds.has(edge.id)) {
+      problems.push({ file, severity: 'error', problem: `duplicate relation id ${edge.id}` })
+    }
+    edgeIds.add(edge.id)
+    for (const id of [edge.sourceId, edge.targetId]) {
+      if (!nodeIds.has(id)) {
+        problems.push({
+          file,
+          severity: 'error',
+          problem: `${edge.id}: unknown institution id ${id}`,
+        })
+      } else {
+        degree.set(id, (degree.get(id) ?? 0) + 1)
+      }
+    }
+    if (edge.sourceId === edge.targetId) {
+      problems.push({ file, severity: 'error', problem: `${edge.id}: relation points to itself` })
+    }
+  }
+
+  for (const [id, count] of degree) {
+    if (count === 0) {
+      problems.push({
+        file,
+        severity: 'warning',
+        problem: `${id}: no relation recorded, so the node explains no network`,
+      })
+    }
+  }
+
+  const coverageCodes = new Set<string>()
+  for (const area of network.coverage) {
+    if (coverageCodes.has(area.jurisdictionCode)) {
+      problems.push({
+        file,
+        severity: 'error',
+        problem: `duplicate coverage area ${area.jurisdictionCode}`,
+      })
+    }
+    coverageCodes.add(area.jurisdictionCode)
   }
 
   return problems
