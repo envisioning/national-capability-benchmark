@@ -214,6 +214,8 @@ export const PT_BR: Lexicon = {
     civic_participation: 'Participação cívica',
   },
   indicatorDefinitions: {
+    budget_execution_fidelity:
+      'Distância entre a despesa primária do governo e o orçamento original aprovado.',
     government_foresight_capacity:
       'Existência, mandato e continuidade de uma função nacional de prospecção estratégica.',
     basic_research_share:
@@ -290,7 +292,6 @@ export const PT_BR: Lexicon = {
   legendRange: '{a} a {b}',
   legendRangeTop: '{a} ou mais',
   radar: {
-    hint: 'Passe o cursor ou toque em um eixo para ler o número.',
     compare: 'Ver todos os países nesta dimensão',
   },
   agenda: {

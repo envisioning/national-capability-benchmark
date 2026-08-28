@@ -115,14 +115,12 @@ export type Lexicon = {
 }
 
 /**
- * The words the radar readout needs. The numbers it prints come from the same
- * score and confidence the tables use, and the dimension names come from
- * `dimensions`, so this holds only what nothing else already says.
+ * The words the radar needs beyond the model's own vocabulary. Everything the
+ * readout prints comes from `dimensions`, `questions` and the same score and
+ * confidence the tables use, so only the click affordance is left.
  */
 export type RadarStrings = {
-  /** The standing prompt in the readout, before the reader points at an axis. */
-  hint: string
-  /** What clicking an axis does. Printed only where the radar opens a panel. */
+  /** What clicking an axis does. It is the accessible name of an axis target. */
   compare: string
 }
 

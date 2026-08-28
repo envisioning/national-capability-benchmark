@@ -103,6 +103,16 @@ port 3888. That entry starts Next directly and does not use the proxy.
 - Delphi estimates never enter `DimensionResult.score`. They live in
   `delphiScore` and `delphiIqr`. `blendedScore` falls back to the panel only
   when no indicator evidence exists, and `blendedFrom` records which was used.
+- The radar owns its own readout. `Radar` in `apps/web/src/components/Radar.tsx`
+  is a client component: each axis holds a sector as a hit target, pointing at
+  one raises it, and the score, the confidence and the dimension question print
+  under the chart. It always reads one axis and never none, at a fixed height
+  that a hover cannot change, and it opens on the first dimension rather than on
+  a summary: the mean of nine axes is the headline score this project withholds.
+  The chart's accessible name is an `aria-label`, never an SVG `<title>`, which
+  the browser renders as a tooltip. Grid cards inside a link pass
+  `interactive={false}` and stay pictures. Language reaches it as one `lex`
+  prop, never as loose strings. See D53.
 - Confidence is never folded into the capability score. Two numbers, always. The
   radar draws thin evidence as a dashed edge with a hollow point, and the dash
   gap widens as confidence falls (see D32). Use `isThinEvidence` from

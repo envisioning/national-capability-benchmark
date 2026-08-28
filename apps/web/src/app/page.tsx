@@ -16,7 +16,7 @@ import {
   Section,
 } from '@/components/ui'
 import { MISSING_DATA_HINT, loadIndex } from '@/lib/data'
-import { countryProfileHref } from '@/lib/links'
+import { capabilitiesHref, countryProfileHref } from '@/lib/links'
 import { toProfile } from '@/lib/profile'
 
 export const dynamic = 'force-dynamic'
@@ -67,9 +67,8 @@ export default async function Page() {
       <Eyebrow>{countries.length} countries, nine dimensions</Eyebrow>
       <PageTitle>What is a country capable of doing?</PageTitle>
       <Headline>
-        Nine capability dimensions, scored from public data and read as a{' '}
-        <Highlight>shape</Highlight> rather than a rank. Every score carries the raw indicators it
-        came from and a separate number saying how well we know it.
+        Nine capability dimensions, scored from public data and shown as a <Highlight>shape</Highlight>.
+        Each score links to its raw indicators and a separate confidence number.
       </Headline>
       <p className="mb-10 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
         New here? The{' '}
@@ -84,13 +83,16 @@ export default async function Page() {
         <Link href="/limits" className="underline underline-offset-4">
           limits page
         </Link>{' '}
-        records where a number is known to be wrong about the world. Nothing assumes you have seen
-        this before.
+        records where a number is known to be wrong about the world. The{' '}
+        <Link href={capabilitiesHref} className="underline underline-offset-4">
+          capabilities directory
+        </Link>{' '}
+        opens each dimension with its country overview. Nothing assumes you have seen this before.
       </p>
 
       <Section
         title="Each country comes out a different shape"
-        hint="Scores run 0 to 100 against a frame built from every country in the benchmark, and every country is measured the same way. We never compute a composite. Two countries with the same average can have opposite profiles, and that difference is the whole point of the exercise. Open any country to read it dimension by dimension and to hold a second country against it."
+        hint="Scores run 0 to 100 against a frame built from every country. There is no composite. Countries with the same average can have different profiles. Open a country to read each dimension or compare it with another."
       >
         <DimensionLegend />
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -110,6 +112,7 @@ export default async function Page() {
                 </div>
                 <Radar
                   labels="icons"
+                  interactive={false}
                   series={[
                     {
                       label: profile.country,
@@ -137,7 +140,7 @@ export default async function Page() {
 
       <Section
         title="A score and its confidence are two different claims"
-        hint="Confidence is coverage times recency times source quality. It sits beside the score and never inside it. A thin evidence base stays visible, because nothing gets imputed to cover it."
+        hint="Confidence is coverage times recency times source quality. It sits beside the score. Missing data lowers coverage; nothing is imputed."
       >
         <ConfidenceLegend />
         <ConfidenceTable countries={countries} />

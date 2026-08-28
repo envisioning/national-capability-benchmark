@@ -130,8 +130,7 @@ export default async function PortugueseHomePage() {
               <div className="max-w-md rounded-xl border border-[var(--rule)] p-4">
                 <Radar
                   labels="icons"
-                  names={PT_BR.dimensions}
-                  noDataLabel={s.noScore}
+                  lex={PT_BR}
                   series={[
                     {
                       label: countryName(PT_BR, 'BRA'),
@@ -308,8 +307,8 @@ export default async function PortugueseHomePage() {
                   </div>
                   <Radar
                     labels="icons"
-                    names={PT_BR.dimensions}
-                    noDataLabel={s.noScore}
+                    interactive={false}
+                    lex={PT_BR}
                     series={[
                       {
                         label: countryName(PT_BR, iso3),
