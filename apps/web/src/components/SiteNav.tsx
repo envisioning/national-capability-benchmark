@@ -14,12 +14,17 @@ import {
   type PrimaryNavHref,
 } from '@/lib/links'
 
-const NAV_LINK =
+const PRIMARY_LINK =
+  'text-sm font-medium transition-all duration-200 text-[var(--muted)] hover:text-[var(--foreground)]'
+const PRIMARY_CURRENT =
+  'text-sm font-medium text-[var(--foreground)] underline decoration-[var(--primary)] decoration-2 underline-offset-8'
+const PRIMARY_OPEN =
+  'text-sm font-medium text-[var(--foreground)] underline decoration-[var(--primary)] decoration-2 underline-offset-8'
+
+const SUB_LINK =
   'text-xs font-medium transition-all duration-200 text-[var(--muted)] hover:text-[var(--foreground)]'
-const NAV_CURRENT =
-  'text-xs font-medium text-[var(--foreground)] underline decoration-[var(--primary)] decoration-2 underline-offset-8'
-const NAV_SECTION =
-  'text-xs font-medium text-[var(--foreground)] transition-all duration-200'
+const SUB_CURRENT =
+  'text-xs font-medium text-[var(--foreground)] underline decoration-[var(--primary)] decoration-2 underline-offset-4'
 
 function footerOwns(href: string, pathname: string): boolean {
   if (href === challengeHref) return pathname === challengeHref
@@ -44,7 +49,12 @@ export function HeaderNav() {
         {PRIMARY_NAV.map((entry) => {
           if (entry.href === '/method' && inMethod) {
             return (
-              <Link key={entry.href} href={entry.href} className={NAV_SECTION}>
+              <Link
+                key={entry.href}
+                href={entry.href}
+                aria-current="true"
+                className={PRIMARY_OPEN}
+              >
                 {entry.label}
               </Link>
             )
@@ -55,7 +65,7 @@ export function HeaderNav() {
               key={entry.href}
               href={entry.href}
               aria-current={current ? 'page' : undefined}
-              className={current ? NAV_CURRENT : NAV_LINK}
+              className={current ? PRIMARY_CURRENT : PRIMARY_LINK}
             >
               {entry.label}
             </Link>
@@ -64,20 +74,25 @@ export function HeaderNav() {
       </nav>
 
       {inMethod ? (
-        <nav aria-label="Method" className="flex flex-wrap gap-x-6 gap-y-2">
-          {METHOD_SUBNAV.map((entry) => {
-            const current = methodSubnavOwns(entry.href, pathname)
-            return (
-              <Link
-                key={entry.href}
-                href={entry.href}
-                aria-current={current ? 'page' : undefined}
-                className={current ? NAV_CURRENT : NAV_LINK}
-              >
-                {entry.label}
-              </Link>
-            )
-          })}
+        <nav
+          aria-label="Method"
+          className="border-l-2 border-[var(--primary)] pl-3"
+        >
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            {METHOD_SUBNAV.map((entry) => {
+              const current = methodSubnavOwns(entry.href, pathname)
+              return (
+                <Link
+                  key={entry.href}
+                  href={entry.href}
+                  aria-current={current ? 'page' : undefined}
+                  className={current ? SUB_CURRENT : SUB_LINK}
+                >
+                  {entry.label}
+                </Link>
+              )
+            })}
+          </div>
         </nav>
       ) : null}
     </div>
@@ -116,7 +131,7 @@ export function FooterNav() {
                       className={
                         current
                           ? 'text-xs font-medium text-[var(--foreground)]'
-                          : NAV_LINK
+                          : 'text-xs font-medium text-[var(--muted)] transition-all duration-200 hover:text-[var(--foreground)]'
                       }
                     >
                       {entry.label}

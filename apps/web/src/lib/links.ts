@@ -24,6 +24,9 @@ export const agendaHref = (iso3: string, lang: Lang = 'en'): string =>
 /** The registry row for one indicator, declared gaps included. */
 export const indicatorHref = (id: string): string => `/indicators#${id}`
 
+/** Every term this project defines, in one place. */
+export const glossaryHref = '/glossary'
+
 /**
  * How the patterns list is narrowed.
  *
@@ -109,6 +112,9 @@ export const evidenceHref = (recordId: string): string => `/patterns/${recordId}
 /** What would overturn the model, and how to file an objection. */
 export const challengeHref = '/challenge'
 
+/** What the benchmark is, who built it, and where to start reading. */
+export const aboutHref = '/about'
+
 /** Methodology pages that share the secondary nav under the header. */
 export const METHOD_SECTION_HREFS = [
   '/method',
@@ -157,6 +163,7 @@ export const PRIMARY_NAV = [
   { href: '/agenda', label: 'Agendas' },
   { href: '/method', label: 'Method' },
   { href: challengeHref, label: 'Challenge' },
+  { href: aboutHref, label: 'About' },
 ] as const
 
 export type PrimaryNavHref = (typeof PRIMARY_NAV)[number]['href']
@@ -179,6 +186,9 @@ export function primaryNavOwns(href: PrimaryNavHref, pathname: string): boolean 
   }
   if (href === '/method') {
     return isMethodSection(pathname)
+  }
+  if (href === aboutHref) {
+    return pathname === aboutHref
   }
   if (href === challengeHref) {
     return pathname === challengeHref

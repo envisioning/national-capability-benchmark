@@ -24,7 +24,6 @@ import {
   DefineLink,
   Delta,
   CountryLabel,
-  Eyebrow,
   PageTitle,
   PanelProvenanceNote,
   Score,
@@ -74,7 +73,6 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
 
   return (
     <>
-      <Eyebrow>One of {COUNTRIES.length} countries that set the frame</Eyebrow>
       <PageTitle>
         <CountryLabel iso3={country.iso3} name={country.country} />
       </PageTitle>
