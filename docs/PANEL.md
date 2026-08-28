@@ -1,14 +1,13 @@
 # The Delphi layer
 
-The indicator model measures what international datasets cover. The panel exists
-to do the two things it cannot: judge the cells where the evidence is thin, and
-audit the indicator set itself.
+The indicator model measures what international datasets cover. The panel judges
+thin cells and audits the indicator set.
 
 ## What a panelist is
 
 A panelist is a **model paired with a fixed analytical stance**. The stance is a
-standing prior the panelist must argue from, so disagreement between panelists
-has a reason behind it rather than being sampling noise.
+standing prior the panelist must argue from. That gives disagreement a reason,
+not just sampling noise.
 
 The four stances are defined in `packages/core/src/delphi/panel.ts`:
 
@@ -20,8 +19,8 @@ The four stances are defined in `packages/core/src/delphi/panel.ts`:
 | Execution realist | What has this country actually built or changed? |
 
 Models come from `NCB_PANEL` and are dealt to stances round-robin. With four
-stances and three models, one vendor gets two stances — supply four models, or
-run `--stances 3`.
+stances and three models, one vendor gets two stances. Supply four models or run
+`--stances 3`.
 
 ## Rounds
 
@@ -44,7 +43,7 @@ list and returns, per indicator: the measurement class it should be filed under,
 a construct-validity rating, a wealth-proxy risk rating, and any indicators it
 duplicates. This runs once, batched by dimension.
 
-## Provenance — read this before quoting any panel number
+## Provenance comes before any panel number
 
 Every run file declares `provenance`. It is **stored, never inferred** (D14).
 
@@ -63,14 +62,13 @@ panelists.
 **A run with one panelist is not a panel.** The median is one opinion and the
 IQR is zero. `data/delphi/in-session-round1.json` is exactly this: ninety cells
 scored by Claude Opus 5 in a working session on 2026-08-26, with a rationale and
-a self-confidence per cell. It is genuinely useful — it produced most of
-`KNOWN-ARTEFACTS.md` — and it must be replaced by a real gateway run before
-anything is published.
+a self-confidence per cell. It is useful and produced most of
+`KNOWN-ARTEFACTS.md`, but a real gateway run must replace it before publication.
 
 ## Running it
 
 ```bash
-pnpm bench cost                       # price the run before you make it
+pnpm bench cost                       # price the run before you start it
 export AI_GATEWAY_API_KEY=...
 export NCB_PANEL=anthropic/claude-opus-5,openai/gpt-5,google/gemini-2.5-pro,...
 pnpm bench delphi --rounds 2
@@ -88,8 +86,8 @@ indicator audit, `--stances N`, `--concurrency N`.
 
 `pnpm bench cost` builds the prompts this repo would actually send, measures
 them, and prices them. It is a command rather than a documented figure because
-the evidence brief grows with the indicator registry and round 2 carries round 1
-back, so both scale as the registry grows.
+the evidence brief grows with the indicator registry, and round 2 carries round
+1 back. Both grow with the registry.
 
 As of 2026-08-26, a four-panelist, two-round, ten-country run with the indicator
 audit is 116 calls, roughly 446k input and 329k output tokens, and about **$7**
@@ -100,10 +98,9 @@ the output figure includes a 3× multiplier for reasoning tokens, list prices ar
 in `packages/core/src/delphi/pricing.ts` with a `LAST_VERIFIED` date, non-
 Anthropic prices are marked unverified, and the gateway may add margin.
 
-**Cost is not a constraint at this scale and must not be treated as one** (D13).
-Even a forty-country run is under thirty dollars. Do not put a cheap model on the
-panel to save money — it adds variance that reads as disagreement but is just a
-weaker model, and the IQR is the output that matters most.
+**Cost is not a constraint at this scale** (D13). Even a forty-country run is
+under thirty dollars. A cheaper model adds variance that can look like
+disagreement. The IQR matters most.
 
 ## Hand-authoring a run
 

@@ -1,8 +1,8 @@
 # NCB, the National Capability Benchmark
 
-A prototype for measuring what a country is **capable of doing** — anticipating
-change, coordinating action, learning, adapting and building under uncertainty —
-rather than how rich, comfortable or competitive it is.
+A prototype for measuring what a country is **capable of doing**: anticipating
+change, coordinating action, learning, adapting and building under uncertainty.
+It asks whether those abilities differ from wealth, comfort and competitiveness.
 
 Nine capability dimensions, 52 countries, 0 to 100 per dimension, no
 headline ranking. Every raw indicator stays visible with its source and year.
@@ -23,59 +23,50 @@ pnpm bench delphi --mock
 pnpm dev
 ```
 
-`pnpm bench cost` prices a real panel run before you make one.
+`pnpm bench cost` prices a real panel run before you start one.
 
-`pnpm bench all` fetches live World Bank data, scores every country, runs the
-diagnostics, writes `data/out/report.md` and regenerates the capability
-agendas. Scoring writes a slim
-`data/out/index.json` for anything that lists countries and one file per country
-under `data/out/countries`. `pnpm dev` opens the viewer.
+`pnpm bench all` fetches World Bank data, scores every country, runs diagnostics,
+writes `data/out/report.md` and regenerates the capability agendas. Scoring also
+writes the country index and one full file per country. `pnpm dev` opens the
+viewer.
 
 ## The layers
 
-**Hard indicators.** 66 indicators across the nine dimensions. 38 are pulled
-live from the World Bank API and two are entered by hand from the GEM Adult
-Population Survey, which has no open API. The other 26 are declared gaps: the
-spec asks for them and no adequate internationally comparable dataset exists
-that passes the inspectability rule. Gaps stay in the registry, lower the confidence
-score, and form the data-collection agenda.
+**Hard indicators.** 66 indicators across nine dimensions. 38 come from the
+World Bank API and two are entered by hand from the GEM Adult Population Survey,
+which has no open API. The other 26 are declared gaps because no adequate,
+inspectable international dataset exists. Gaps stay in the registry, lower
+confidence and form the data-collection agenda.
 
-**Momentum.** Ingestion keeps every year from 1990, scoring reads the latest,
-and each dimension also carries its change over ten and twenty years. History is
-normalized against the frame in use today and computed on the indicators
-observed at both ends, so a trend is a change in the country instead of a change
-in the scale. Every indicator carries its own line as well, which reaches as far
-back as its data goes, and every point on it carries the value as published, the
-normalized value and its source tier. Nothing is interpolated or extrapolated.
-Each data run also logs what it restated, added or dropped against the file it
-replaced, so a number that changes under us is a record. See D22, D24 and D25.
+**Momentum.** Ingestion keeps every year from 1990; scoring uses the latest.
+Trends compare the same frame over ten and twenty years, using only indicators
+observed at both ends. Each indicator also keeps its own series with the raw,
+normalized and source-tier values. Nothing is interpolated or extrapolated.
+Each run logs what it restated, added or dropped. See D22, D24 and D25.
 
 **Evidence records.** `data/evidence/records.json` documents a delivery that a
-gap indicator cannot see, with one published number, a source, a reference
-period and a required statement of what the case does not show. Records never
-enter a score and never raise confidence. A gap becomes an indicator when a
-comparable series covers at least two reference countries. See D20.
+gap indicator cannot see, with a published number, source, reference period and
+a statement of what the case does not show. Records never affect scores or
+confidence. A gap becomes an indicator when a comparable series covers at least
+two countries. See D20.
 
 **The capability agenda.** `data/out/agenda` holds one computed agenda per
-country: the scores turned into a list of things to do. Dimensions with usable
-evidence and low scores become items to raise, with the highest-scoring
-countries and the documented deliveries elsewhere named beside them. Dimensions
-with confidence below the usable band become items to measure first. The 26
-declared gaps form the measurement agenda. The JSON is language neutral; a
-markdown renders beside it per language, English and Brazilian Portuguese
-today, and a new language is one lexicon file. See CONTRIBUTING.md.
+country. Low-scoring dimensions with usable evidence become items to raise;
+dimensions below the usable confidence band become items to measure first. The
+26 gaps form the measurement agenda. JSON is language neutral, with English and
+Brazilian Portuguese markdown beside it. See CONTRIBUTING.md.
 
-**The Delphi panel.** A panel of language models, each holding a fixed
-analytical stance, does two things the indicators cannot:
+**The Delphi panel.** A panel of language models, each with a fixed analytical
+stance, covers two gaps in the indicators:
 
-1. Estimates dimension scores for cells where the evidence is thin or stale, and
-   says what it would need in order to be sure.
-2. Audits the indicator set itself — re-classifying each indicator as C/I/O/P,
+1. It estimates dimensions where evidence is thin or stale and states what would
+   resolve the uncertainty.
+2. It audits the indicator set by reclassifying each indicator as C/I/O/P,
    rating construct validity and wealth-proxy risk, and naming redundant pairs.
 
-Two rounds. Round 2 shows each panelist the anonymised round-1 scores and
-rationales. Panelists are told not to converge for the sake of converging, and a
-stable disagreement is recorded as a finding rather than averaged away.
+There are two rounds. Round 2 shows each panelist the anonymised round-1 scores
+and rationales. Panelists are told not to converge for its own sake. Stable
+disagreement is recorded as a finding.
 
 Panel estimates never enter the indicator-derived score. They sit beside it.
 

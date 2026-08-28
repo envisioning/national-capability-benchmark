@@ -2,7 +2,7 @@
 
 *Gerado em 2026-08-28*
 
-As notas são relativas a uma régua construída a partir dos 52 países em conjunto e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
+Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
 ## Onde a Venezuela está
 
@@ -10,7 +10,7 @@ As notas são relativas a uma régua construída a partir dos 52 países em conj
 | --- | --- | --- | --- |
 | Antecipação | 8,6 | 0,54 (utilizável) | -1,7 em 10 anos, sobre 4 indicadores |
 | Agência | 33,2 | 0,39 (fraca) | +30,6 em 10 anos, sobre 2 indicadores |
-| Coordenação | sem nota | 0,07 (muito fraca) | sem base de tendência |
+| Coordenação | sem nota | 0,06 (muito fraca) | sem base de tendência |
 | Confiança | sem nota | 0,08 (muito fraca) | sem base de tendência |
 | Aprendizagem | 56,8 | 0,1 (muito fraca) | sem base de tendência |
 | Experimentação | 5,2 | 0,1 (muito fraca) | sem base de tendência |
@@ -18,88 +18,88 @@ As notas são relativas a uma régua construída a partir dos 52 países em conj
 | Construção | 0 | 0,2 (muito fraca) | sem base de tendência |
 | Propósito compartilhado | sem nota | 0,01 (muito fraca) | sem base de tendência |
 
-## As dimensões que a evidência manda elevar
+## Dimensões para elevar
 
-Da nota mais baixa para a mais alta. Só entram aqui dimensões com evidência utilizável. Uma nota baixa com evidência fraca é antes um problema de medição do que de política pública, e vai para a próxima seção.
+Da nota mais baixa para a mais alta. Só entram dimensões com evidência utilizável. Evidência fraca vai para a próxima seção.
 
 ### Antecipação: 8,6, confiança utilizável
 
 Quão capaz é o país de identificar mudanças emergentes e se preparar para elas?
 
-- Hoje a nota se apoia em 5 indicadores observados.
-- Maiores notas com evidência utilizável: Suécia 83,5, Finlândia 82, Suíça 81,1.
+- Baseada em 5 indicadores observados.
+- Maiores notas utilizáveis: Suécia 83,5, Finlândia 82, Suíça 81,1.
 - Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos).
-- Lacunas declaradas nesta dimensão: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
+- Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
 ### Adaptação: 34,7, confiança utilizável
 
 Com que eficácia o sistema responde quando as circunstâncias mudam?
 
-- Hoje a nota se apoia em 4 indicadores observados.
-- Maiores notas com evidência utilizável: Países Baixos 90,1, Suíça 88,6, Japão 86,1.
+- Baseada em 4 indicadores observados.
+- Maiores notas utilizáveis: Países Baixos 90,1, Suíça 88,6, Japão 86,1.
 - Entregas documentadas em outros países: Plano Real, the 1994 currency stabilisation (Brasil); Proalcool, the fuel substitution after the oil shock (Brasil); The Convertibility Plan, and its collapse (Argentina); Kurzarbeit in the 2008-2009 crisis (Alemanha); The 2001 stabilisation, and its unwinding (Turquia).
-- Lacunas declaradas nesta dimensão: Parcela de desemprego de longa duração, Diversificação das exportações, Preparação e recuperação de desastres, Capacidade de resposta institucional.
+- Lacunas declaradas: Parcela de desemprego de longa duração, Diversificação das exportações, Preparação e recuperação de desastres, Capacidade de resposta institucional.
 
-## As dimensões que precisam ser medidas antes de serem geridas
+## Dimensões para medir primeiro
 
-Aqui a confiança está abaixo da faixa utilizável, então a nota não sustenta uma decisão. A primeira intervenção é produzir evidência.
+A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
 ### Propósito compartilhado: confiança 0,01, muito fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
-- Hoje a nota se apoia em um único indicador observado.
-- Lacunas declaradas nesta dimensão: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
-- Bases de dados examinadas e rejeitadas para esta dimensão: Voz e responsabilização.
+- Baseada em um indicador observado.
+- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
+- Bases rejeitadas: Voz e responsabilização.
 
-### Coordenação: confiança 0,07, muito fraca
+### Coordenação: confiança 0,06, muito fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
 
-- Hoje a nota se apoia em um único indicador observado.
-- Lacunas declaradas nesta dimensão: Colaboração universidade-empresa, Força da sociedade civil, Colaboração público-privada.
-- Bases de dados examinadas e rejeitadas para esta dimensão: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
+- Baseada em um indicador observado.
+- Lacunas declaradas: Colaboração universidade-empresa, Força da sociedade civil, Colaboração público-privada.
+- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
 ### Confiança: confiança 0,08, muito fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
 
-- Hoje a nota se apoia em um único indicador observado.
-- Lacunas declaradas nesta dimensão: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo.
-- Bases de dados examinadas e rejeitadas para esta dimensão: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
+- Baseada em um indicador observado.
+- Lacunas declaradas: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ### Aprendizagem: confiança 0,1, muito fraca
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
-- Hoje a nota se apoia em 4 indicadores observados.
-- Lacunas declaradas nesta dimensão: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
+- Baseada em 4 indicadores observados.
+- Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ### Experimentação: confiança 0,1, muito fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
-- Hoje a nota se apoia em 2 indicadores observados.
-- Lacunas declaradas nesta dimensão: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
+- Baseada em 2 indicadores observados.
+- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
 ### Construção: confiança 0,2, muito fraca
 
 Quão capaz é o país de transformar planos e conhecimento em sistemas que funcionam?
 
-- Hoje a nota se apoia em 3 indicadores observados.
-- Lacunas declaradas nesta dimensão: Entrega de grandes projetos, Empresas jovens que ganham escala.
-- Bases de dados examinadas e rejeitadas para esta dimensão: Qualidade da infraestrutura logística.
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
+- Bases rejeitadas: Qualidade da infraestrutura logística.
 
 ### Agência: confiança 0,39, fraca
 
 Quão capazes são pessoas e organizações de transformar uma intenção em ação?
 
-- Hoje a nota se apoia em 5 indicadores observados.
-- Lacunas declaradas nesta dimensão: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
+- Baseada em 5 indicadores observados.
+- Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
 
-## A agenda de medição
+## Agenda de medição
 
-26 indicadores que a especificação pede e para os quais não existe base de dados internacional comparável adequada. Cada um reduz a confiança enquanto não for preenchido, e cada um é uma contribuição ao alcance de um órgão de estatística, um grupo de pesquisa ou um ministério. Uma lacuna vira indicador com nota quando uma série comparável cobre pelo menos dois países.
+26 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -130,6 +130,6 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 | Propósito compartilhado | Participação cívica | Participação ativa em associações, sindicatos, partidos e organizações comunitárias. |
 
-## Como mover um número desta página
+## Contribua
 
-Preencha uma lacuna, registre uma evidência ou conteste um indicador em https://github.com/envisioning/national-capability-benchmark. O método, cada decisão por trás dele e a evidência que derrubaria cada uma estão no diretório docs do mesmo repositório.
+Preencha uma lacuna, registre uma evidência ou conteste um indicador em https://github.com/envisioning/national-capability-benchmark. Os documentos explicam o método e suas decisões.

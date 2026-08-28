@@ -92,14 +92,13 @@ export default async function PortugueseHomePage() {
       <Eyebrow>Edição em português</Eyebrow>
       <PageTitle>O que o Brasil é capaz de fazer?</PageTitle>
       <Headline>
-        Nove dimensões de capacidade, medidas a partir de dados públicos e lidas como uma{' '}
-        <Highlight>forma</Highlight>, e não como uma posição em um ranking. Cada nota carrega os
-        indicadores que a produziram e um segundo número que diz quanto sabemos sobre ela.
+        Nove dimensões de capacidade, medidas com dados públicos. A <Highlight>forma</Highlight>{' '}
+        mostra o perfil do país; não há ranking. Cada nota vem com seus indicadores e sua
+        confiança.
       </Headline>
       <p className="mb-10 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-        A aposta em teste é simples: riqueza e capacidade são propriedades diferentes de um país, e
-        a segunda pode ser observada por conta própria. Dois países com a mesma renda podem ter
-        formas de capacidade opostas, e é a forma que diz onde uma intervenção teria efeito.
+        Riqueza e capacidade são propriedades diferentes. Países com a mesma renda podem ter perfis
+        opostos. A forma mostra onde uma intervenção pode ajudar.
       </p>
 
       {/* The instrument at a glance. Counts, never scores: a score in a tile
@@ -121,7 +120,7 @@ export default async function PortugueseHomePage() {
 
       <Section
         title="O Brasil é o primeiro caso de campo"
-        hint={`O projeto nasceu de uma estratégia sobre capacidade nacional que aponta o Brasil como o lugar onde os resultados devem ser úteis primeiro. O modelo não trata o Brasil como caso especial: as mesmas nove dimensões, os mesmos indicadores e a mesma régua valem para os ${total} países medidos.`}
+        hint={`O Brasil é o primeiro campo de teste. Os ${total} países usam as mesmas dimensões, indicadores e régua.`}
       >
         <div className="grid gap-10 lg:grid-cols-2">
           {brazil ? (
@@ -143,14 +142,12 @@ export default async function PortugueseHomePage() {
               </div>
               <ul className="mt-3 max-w-md space-y-1 text-xs leading-relaxed text-[var(--muted)]">
                 <li>
-                  Aresta tracejada e vértice vazado marcam evidência fraca, e o tracejado abre
-                  conforme a confiança cai. O vértice continua na nota, porque a confiança nunca a
-                  move.
+                  Aresta tracejada e vértice vazado marcam evidência fraca. O tracejado abre quando
+                  a confiança cai; a nota não muda.
                 </li>
                 <li>
-                  0 a 100 é uma posição dentro da régua que os {total} países constroem juntos. Uma
-                  nota 10 põe o país perto do piso da régua, sem significar 10 por cento de uma
-                  capacidade. Um eixo sem nota fica vazio.
+                  A régua vai de 0 a 100. Uma nota 10 fica perto do piso; não é 10% da capacidade.
+                  Eixos sem nota ficam vazios.
                 </li>
               </ul>
             </div>
@@ -159,7 +156,7 @@ export default async function PortugueseHomePage() {
           {split && agenda ? (
             <div className="max-w-xl space-y-6">
               <p className="text-lg leading-relaxed">
-                A agenda do Brasil, calculada dos dados e recalculada a cada rodada:
+                A agenda do Brasil, recalculada a cada rodada:
               </p>
               {(['raise', 'measure', 'hold'] as const).map((kind) =>
                 split[kind].length > 0 ? (
@@ -178,8 +175,7 @@ export default async function PortugueseHomePage() {
                 ) : null,
               )}
               <p className="text-lg leading-relaxed">
-                A agenda completa explica cada linha, com as fontes de cada número, as lacunas de
-                medição e entregas documentadas em outros países.
+                A agenda explica cada linha, com fontes, lacunas e entregas documentadas.
               </p>
               <p>
                 <Highlight>
@@ -201,7 +197,7 @@ export default async function PortugueseHomePage() {
       {agenda ? (
         <Section
           title="As nove dimensões, uma a uma"
-          hint="Cada cartão traz a nota do Brasil, a confiança na evidência, a tendência sobre a cesta observada nas duas pontas e o estado da medição. Um quadrado cheio é um indicador observado; um vazio é uma lacuna declarada; um cortado é uma base examinada e rejeitada. Passe o cursor sobre um quadrado para ver o indicador."
+          hint="Cada cartão mostra nota, confiança, tendência e estado da medição. Cheio = observado; vazio = lacuna; cortado = base rejeitada. Passe o cursor para ver o indicador."
         >
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {agenda.dimensions.map((d) => (
@@ -280,8 +276,8 @@ export default async function PortugueseHomePage() {
       ) : null}
 
       <Section
-        title="A América Latina inteira, na mesma régua"
-        hint={`Os ${LATAM_ISO3.length} países da região, medidos pelos mesmos indicadores contra a régua que os ${total} países do benchmark constroem juntos. As formas divergem onde a renda sozinha diria que os países se parecem. Onde a estatística internacional não alcança um país, o eixo fica vazio e o traçado abre: o mapa mostra também o que ainda não se sabe. Cada forma abre a agenda daquele país.`}
+        title="A América Latina usa a mesma régua"
+        hint={`Os ${LATAM_ISO3.length} países usam os mesmos indicadores e a mesma régua. Perfis diferentes mostram o que a renda não explica. Eixos vazios mostram dados ausentes. Abra uma forma para ver a agenda.`}
       >
         <DimensionLegend names={PT_BR.dimensions} />
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -325,15 +321,14 @@ export default async function PortugueseHomePage() {
       </Section>
 
       <Section
-        title="A nota e a confiança são afirmações separadas"
-        hint="A nota diz onde o país está dentro da régua. A confiança diz quanta evidência sustenta essa posição: cobertura, atualidade e qualidade da fonte. Os dois números aparecem sempre lado a lado e nunca se misturam, e nada é imputado para cobrir um dado ausente."
+        title="Nota e confiança são separadas"
+        hint="A nota mostra a posição na régua. A confiança mostra a evidência: cobertura, atualidade e qualidade da fonte. Os números ficam lado a lado e dados ausentes não são imputados."
       >
         <div className="max-w-3xl space-y-4 text-lg leading-relaxed">
           <p>
-            Essa separação pesa mais no Brasil do que em quase qualquer outra página deste site. As
-            duas dimensões mais centrais da tese, Coordenação e Confiança, são hoje as mais
-            difíceis de medir com dados internacionais comparáveis, e parte do que existe se
-            correlaciona com renda. O benchmark registra essa fraqueza por escrito, na{' '}
+            Coordenação e Confiança, centrais à tese, são hoje as dimensões mais difíceis de medir
+            com dados internacionais comparáveis. Parte do que existe se correlaciona com renda. O
+            benchmark registra essa fraqueza na{' '}
             <Link href={limitsHref} className="underline underline-offset-4">
               página de limites conhecidos
             </Link>
@@ -341,11 +336,8 @@ export default async function PortugueseHomePage() {
           </p>
           {agenda ? (
             <p>
-              Dos indicadores que a especificação pede, {agenda.gapCount} ainda não têm base de
-              dados internacional comparável. Cada lacuna reduz a confiança enquanto não for
-              preenchida. Essa lista é a agenda de coleta de dados do projeto, e preencher uma
-              linha dela está ao alcance de um órgão de estatística, um grupo de pesquisa ou um
-              ministério.
+              {agenda.gapCount} indicadores pedidos ainda não têm base internacional comparável.
+              Cada lacuna reduz a confiança e entra na agenda de coleta.
             </p>
           ) : null}
         </div>
@@ -353,57 +345,52 @@ export default async function PortugueseHomePage() {
 
       <Section
         title="Nenhum número muda na tradução"
-        hint="A base do benchmark permanece em inglês de ponta a ponta: identificadores, registro de indicadores, JSON publicado, método e log de decisões. Esta edição em português é uma camada de interpretação sobre essa base, e cada afirmação daqui pode ser conferida contra o arquivo que a gera."
+        hint="Ids, registro de indicadores, JSON, método e decisões permanecem em inglês. Esta edição traduz a camada de leitura, e cada afirmação pode ser conferida no arquivo de origem."
       >
         <div className="max-w-3xl space-y-4 text-lg leading-relaxed">
           <p>
             O{' '}
             <Link href="/method" className="underline underline-offset-4">
-              método
+            método
             </Link>{' '}
-            explica como uma estatística publicada vira nota. O{' '}
+            explica como uma estatística vira nota. O{' '}
             <Link href="/glossary" className="underline underline-offset-4">
               glossário
             </Link>{' '}
-            define cada termo destas páginas. O{' '}
+            define os termos destas páginas. O{' '}
             <Link href={decisionsHref} className="underline underline-offset-4">
               log de decisões
             </Link>{' '}
-            registra cada escolha metodológica e a evidência que a derrubaria. Os{' '}
+            registra as escolhas metodológicas e o que as derrubaria. Os{' '}
             <Link href={limitsHref} className="underline underline-offset-4">
               limites conhecidos
             </Link>{' '}
-            dizem onde um número está errado sobre o mundo. Tudo em inglês, aberto e datado.
+            mostram onde o benchmark falha. Tudo em inglês, aberto e datado.
           </p>
         </div>
       </Section>
 
       <Section
         title="O benchmark se prova em uso"
-        hint="Um instrumento de medição só vale alguma coisa quando alguém decide com ele. Para escolas de governo, institutos de pesquisa, bancos e agências de fomento e órgãos de estatística, existem usos imediatos, sem depender de nenhuma etapa futura."
+        hint="Escolas de governo, institutos de pesquisa, bancos, agências de fomento e órgãos de estatística já podem usar o instrumento."
       >
         <ul className="max-w-3xl list-disc space-y-4 pl-5 text-lg leading-relaxed">
           <li>
-            Ler o diagnóstico. A agenda de cada país diz o que a evidência manda elevar, o que
-            precisa ser medido antes de ser gerido e o que manter, com as fontes de cada número à
-            vista.
+            Ler o diagnóstico. A agenda mostra o que elevar, medir primeiro e manter, com as fontes
+            à vista.
           </li>
           <li>
-            Tentar derrubar o método. Cada escolha está registrada no log de decisões junto com a
-            evidência que a derrubaria, e os diagnósticos testam a sensibilidade das dimensões à
-            renda. A revisão independente, por pesquisadores de administração pública, economia e
-            estatística, é o convite em aberto.
+            Testar o método. O log registra cada escolha e o que a derrubaria; os diagnósticos
+            testam a sensibilidade à renda. A revisão independente está aberta.
           </li>
           <li>
-            Preencher uma lacuna. Uma série comparável que cubra pelo menos dois países já
-            transforma uma lacuna em indicador com nota, e as lacunas declaradas estão listadas
-            dimensão por dimensão em cada agenda.
+            Preencher uma lacuna. Uma série comparável para pelo menos dois países pode virar um
+            indicador com nota.
           </li>
           <li>
-            Registrar evidência. Entregas documentadas que os indicadores não alcançam entram como
-            registros de evidência com editor nomeado: hoje são {evidence.length} registros,{' '}
-            {brazilEvidence} deles sobre o Brasil. Eles nunca entram em uma nota; existem para
-            manter visível o que o país já fez.
+            Registrar evidência. Entregas que os indicadores não alcançam entram como registros
+            nomeados. Hoje são {evidence.length}, {brazilEvidence} sobre o Brasil. Elas mantêm
+            visível o que o país já fez.
           </li>
         </ul>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed">
@@ -417,14 +404,14 @@ export default async function PortugueseHomePage() {
       </Section>
 
       <Section
-        title="O que vem a seguir tem três etapas"
-        hint={`O protótipo está publicado${data.version ? `, versão ${data.version}` : ''}, com ${total} países. O caminho até um instrumento que uma instituição possa citar com segurança tem ordem.`}
+        title="O próximo trabalho é claro"
+        hint={`O protótipo está publicado${data.version ? ` na versão ${data.version}` : ''}, com ${total} países. Agora precisa ficar seguro para citação.`}
       >
         <div className="grid gap-5 lg:grid-cols-3">
           {[
-            'Endurecer o método. Submeter o modelo a revisores independentes, fortalecer a medição de Coordenação e Confiança e substituir a estimativa de sessão atual por um painel de modelos com proveniência registrada.',
-            'Preencher as lacunas com dados nacionais comparáveis. Parcerias com produtores de dados transformam a agenda de medição em séries publicadas, e cada série nova sobe a confiança de uma dimensão inteira.',
-            'Medir intervenções. O instrumento fecha um ciclo: diagnóstico, intervenção, nova medição, evidência sobre o que de fato move uma capacidade. Uma publicação anual sobre o estado da capacidade brasileira é o horizonte desta etapa.',
+            'Fortalecer o método. Revisão independente, melhor medição de Coordenação e Confiança e um painel de modelos com proveniência registrada.',
+            'Preencher lacunas. Parcerias com produtores de dados podem transformar a agenda em séries publicadas e elevar a confiança.',
+            'Medir intervenções. Repetir diagnóstico e medição para descobrir o que move uma capacidade.',
           ].map((text, i) => (
             <div key={i} className="rounded-xl border border-[var(--rule)] p-5">
               <div className="text-3xl font-light text-[var(--muted)]">{i + 1}</div>

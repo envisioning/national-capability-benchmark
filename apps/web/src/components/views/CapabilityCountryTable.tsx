@@ -1,9 +1,10 @@
 'use client'
 
 import Link from 'next/link'
-import { DIMENSION_LABELS } from '@ncb/core'
+import { DIMENSION_LABELS, confidenceBand, isThinEvidence } from '@ncb/core'
 import type { Dimension } from '@ncb/core'
 import { DataTable } from '@/components/DataTable'
+import { Distribution } from '@/components/Distribution'
 import { ConfidenceBar, CountryLabel, Delta, DimensionScore } from '@/components/ui'
 import { countryProfileHref } from '@/lib/links'
 
@@ -36,8 +37,24 @@ export function CapabilityCountryTable({
   rows: CapabilityCountryRow[]
   indicatorCount: number
 }) {
+  const scored = rows.filter((row): row is CapabilityCountryRow & { score: number } => row.score !== null)
+
   return (
-    <DataTable
+    <>
+      {scored.length > 0 ? (
+        <div className="mb-8">
+          <Distribution
+            points={scored.map((row) => ({
+              key: row.iso3,
+              label: row.country,
+              value: row.score,
+              detail: `${confidenceBand(row.confidence).label} evidence`,
+              hollow: isThinEvidence(row.confidence),
+            }))}
+          />
+        </div>
+      ) : null}
+      <DataTable
       rows={rows}
       initialSort={{ key: 'country' }}
       caption={`${DIMENSION_LABELS[dimension]} scores by country`}
@@ -99,5 +116,6 @@ export function CapabilityCountryTable({
         },
       ]}
     />
+    </>
   )
 }

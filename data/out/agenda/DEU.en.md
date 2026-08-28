@@ -2,7 +2,7 @@
 
 *Generated 2026-08-28*
 
-Scores are relative to a frame built from all 52 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
+52 countries set the frame. Scores run 0 to 100 per dimension, with no headline ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
 ## Where Germany stands
 
@@ -10,7 +10,7 @@ Scores are relative to a frame built from all 52 countries together and run 0 to
 | --- | --- | --- | --- |
 | Anticipation | 71.2 | 0.64 (usable) | +9.9 over 10 years, on 5 indicators |
 | Agency | 64 | 0.6 (usable) | +3.1 over 10 years, on 4 indicators |
-| Coordination | not scored | 0.08 (very thin) | no trend basket |
+| Coordination | 84.5 | 0.17 (very thin) | no trend basket |
 | Trust | not scored | 0.08 (very thin) | no trend basket |
 | Learning | 56.2 | 0.54 (usable) | +7.1 over 10 years, on 2 indicators |
 | Experimentation | 72.5 | 0.18 (very thin) | +4.9 over 10 years, on 2 indicators |
@@ -18,44 +18,44 @@ Scores are relative to a frame built from all 52 countries together and run 0 to
 | Building | 64.4 | 0.54 (usable) | -1.6 over 10 years, on 4 indicators |
 | Shared Purpose | 55.1 | 0.25 (very thin) | -5.9 over 10 years, on 2 indicators |
 
-## The dimensions that must be measured before they can be managed
+## Dimensions to measure first
 
-Confidence here is below the usable band, so the score cannot carry a decision. The first intervention is evidence.
-
-### Coordination: confidence 0.08, very thin
-
-How effectively can independent actors organize around shared objectives?
-
-- Currently scored on a single observed indicator.
-- Declared gaps in this dimension: University-industry collaboration, Civil society strength, Public-private collaboration.
-- Datasets examined and rejected for this dimension: Government effectiveness, Regulatory quality, Logistics performance.
+Confidence is below the usable band, so evidence comes before action.
 
 ### Trust: confidence 0.08, very thin
 
 How much cooperation is possible beyond immediate personal networks?
 
-- Currently scored on a single observed indicator.
-- Declared gaps in this dimension: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group.
-- Datasets examined and rejected for this dimension: Rule of law, Control of corruption, Intentional homicide rate.
+- Based on one observed indicator.
+- Declared gaps: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group.
+- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
+
+### Coordination: confidence 0.17, very thin
+
+How effectively can independent actors organize around shared objectives?
+
+- Based on 2 observed indicators.
+- Declared gaps: University-industry collaboration, Civil society strength, Public-private collaboration.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
 ### Experimentation: confidence 0.18, very thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
-- Currently scored on 2 observed indicators.
-- Declared gaps in this dimension: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
+- Based on 2 observed indicators.
+- Declared gaps: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
 ### Shared Purpose: confidence 0.25, very thin
 
 To what extent can people imagine themselves as participants in a common project?
 
-- Currently scored on 2 observed indicators.
-- Declared gaps in this dimension: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
-- Datasets examined and rejected for this dimension: Voice and accountability.
+- Based on 2 observed indicators.
+- Declared gaps: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
+- Rejected datasets: Voice and accountability.
 
-## The dimensions the evidence says to hold
+## Dimensions to hold
 
-Strongest first. These score at or above 50 on usable evidence, so nothing here asks to be raised or measured first. A held dimension still decays when nobody watches it.
+Strongest first. These score at least 50 with usable evidence. They still need watching.
 
 - Adaptability: 85.9, confidence usable
 - Anticipation: 71.2, confidence usable
@@ -63,9 +63,9 @@ Strongest first. These score at or above 50 on usable evidence, so nothing here 
 - Agency: 64, confidence usable
 - Learning: 56.2, confidence usable
 
-## The measurement agenda
+## Measurement agenda
 
-26 indicators the specification asks for with no adequate internationally comparable dataset behind them. Each one lowers confidence until it is filled, and each one is a contribution a statistical agency, a research group or a ministry can make. A gap becomes a scored indicator when a comparable series covers at least two countries.
+26 requested indicators have no adequate comparable dataset. Each lowers confidence. A gap becomes scorable when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -96,13 +96,13 @@ Strongest first. These score at or above 50 on usable evidence, so nothing here 
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
 
-## What the indicators cannot see about Germany
+## What indicators cannot see about Germany
 
-Documented deliveries filed as evidence records. They never enter a score and never raise confidence. They exist because the gap list above also describes things this country has partly done and cannot yet prove comparably.
+Documented deliveries filed as evidence. They never affect scores or confidence.
 
 - **The Fraunhofer contract-research model** (Coordination). Germany funds the Fraunhofer-Gesellschaft's institutes in proportion to what they earn from industry, and in 2025 the society performed 3.2 billion euros of contract research, 966 million euros of it paid by industry.
 - **Kurzarbeit in the 2008-2009 crisis** (Adaptability). Germany answered the 2008-2009 collapse in manufacturing orders by paying firms to cut hours instead of jobs, and short-time work covered 1.44 million workers at the May 2009 peak, about 5 percent of insured employment, while unemployment barely rose.
 
-## How to move a number on this page
+## Contribute
 
-Fill a gap, file an evidence record, or contest an indicator at https://github.com/envisioning/national-capability-benchmark. The method, every decision behind it and the evidence that would overturn each one are in the docs directory of the same repository.
+Fill a gap, file evidence, or contest an indicator at https://github.com/envisioning/national-capability-benchmark. The docs explain the method and its decisions.

@@ -2,7 +2,7 @@
 
 *Generated 2026-08-28*
 
-Scores are relative to a frame built from all 52 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
+52 countries set the frame. Scores run 0 to 100 per dimension, with no headline ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
 ## Where Cuba stands
 
@@ -18,88 +18,88 @@ Scores are relative to a frame built from all 52 countries together and run 0 to
 | Building | 21.8 | 0.22 (very thin) | -27.1 over 10 years, on 2 indicators |
 | Shared Purpose | not scored | 0 (very thin) | no trend basket |
 
-## The dimensions the evidence says to raise
+## Dimensions to raise
 
-Lowest score first. Only dimensions with usable evidence appear here. A low score with thin evidence is a measurement problem before it is a policy problem, and it moves to the next section.
+Lowest score first. Only dimensions with usable evidence appear here. Thin evidence goes to the next section.
 
 ### Anticipation: 16.4, confidence usable
 
 How capable is the country of identifying and preparing for emerging change?
 
-- Currently scored on 4 observed indicators.
-- Highest scores with usable evidence: Sweden 83.5, Finland 82, Switzerland 81.1.
+- Based on 4 observed indicators.
+- Highest usable scores: Sweden 83.5, Finland 82, Switzerland 81.1.
 - Documented deliveries elsewhere: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands).
-- Declared gaps in this dimension: Government foresight capacity, Long-horizon research share.
+- Declared gaps: Government foresight capacity, Long-horizon research share.
 
 ### Adaptability: 42.7, confidence usable
 
 How effectively can the system respond when circumstances change?
 
-- Currently scored on 4 observed indicators.
-- Highest scores with usable evidence: Netherlands 90.1, Switzerland 88.6, Japan 86.1.
+- Based on 4 observed indicators.
+- Highest usable scores: Netherlands 90.1, Switzerland 88.6, Japan 86.1.
 - Documented deliveries elsewhere: Plano Real, the 1994 currency stabilisation (Brazil); Proalcool, the fuel substitution after the oil shock (Brazil); The Convertibility Plan, and its collapse (Argentina); Kurzarbeit in the 2008-2009 crisis (Germany); The 2001 stabilisation, and its unwinding (Turkey).
-- Declared gaps in this dimension: Long-term unemployment share, Export diversification, Disaster preparedness and recovery, Institutional responsiveness.
+- Declared gaps: Long-term unemployment share, Export diversification, Disaster preparedness and recovery, Institutional responsiveness.
 
-## The dimensions that must be measured before they can be managed
+## Dimensions to measure first
 
-Confidence here is below the usable band, so the score cannot carry a decision. The first intervention is evidence.
+Confidence is below the usable band, so evidence comes before action.
 
 ### Coordination: confidence 0, very thin
 
 How effectively can independent actors organize around shared objectives?
 
-- Currently scored on 0 observed indicators.
-- Declared gaps in this dimension: University-industry collaboration, Civil society strength, Public-private collaboration.
-- Datasets examined and rejected for this dimension: Government effectiveness, Regulatory quality, Logistics performance.
+- Based on 0 observed indicators.
+- Declared gaps: University-industry collaboration, Civil society strength, Public-private collaboration.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
 ### Trust: confidence 0, very thin
 
 How much cooperation is possible beyond immediate personal networks?
 
-- Currently scored on 0 observed indicators.
-- Declared gaps in this dimension: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group.
-- Datasets examined and rejected for this dimension: Rule of law, Control of corruption, Intentional homicide rate.
+- Based on 0 observed indicators.
+- Declared gaps: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group.
+- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
 ### Shared Purpose: confidence 0, very thin
 
 To what extent can people imagine themselves as participants in a common project?
 
-- Currently scored on 0 observed indicators.
-- Declared gaps in this dimension: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
-- Datasets examined and rejected for this dimension: Voice and accountability.
+- Based on 0 observed indicators.
+- Declared gaps: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
+- Rejected datasets: Voice and accountability.
 
 ### Agency: confidence 0.12, very thin
 
 How able are individuals and organizations to turn an intention into action?
 
-- Currently scored on a single observed indicator.
-- Declared gaps in this dimension: Adult digital skills, Perceived control over life.
+- Based on one observed indicator.
+- Declared gaps: Adult digital skills, Perceived control over life.
 
 ### Experimentation: confidence 0.18, very thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
-- Currently scored on 2 observed indicators.
-- Declared gaps in this dimension: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
+- Based on 2 observed indicators.
+- Declared gaps: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
 ### Building: confidence 0.22, very thin
 
 How capable is the country of turning plans and knowledge into functioning systems?
 
-- Currently scored on 2 observed indicators.
-- Declared gaps in this dimension: Large project delivery, Firm scale-up rate.
-- Datasets examined and rejected for this dimension: Logistics infrastructure quality.
+- Based on 2 observed indicators.
+- Declared gaps: Large project delivery, Firm scale-up rate.
+- Rejected datasets: Logistics infrastructure quality.
 
 ### Learning: confidence 0.33, thin
 
 How effectively does the country acquire, distribute, and update knowledge?
 
-- Currently scored on 3 observed indicators.
-- Declared gaps in this dimension: Adult learning participation, Research citation impact.
+- Based on 3 observed indicators.
+- Declared gaps: Adult learning participation, Research citation impact.
 
-## The measurement agenda
+## Measurement agenda
 
-26 indicators the specification asks for with no adequate internationally comparable dataset behind them. Each one lowers confidence until it is filled, and each one is a contribution a statistical agency, a research group or a ministry can make. A gap becomes a scored indicator when a comparable series covers at least two countries.
+26 requested indicators have no adequate comparable dataset. Each lowers confidence. A gap becomes scorable when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -130,6 +130,6 @@ How effectively does the country acquire, distribute, and update knowledge?
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
 
-## How to move a number on this page
+## Contribute
 
-Fill a gap, file an evidence record, or contest an indicator at https://github.com/envisioning/national-capability-benchmark. The method, every decision behind it and the evidence that would overturn each one are in the docs directory of the same repository.
+Fill a gap, file evidence, or contest an indicator at https://github.com/envisioning/national-capability-benchmark. The docs explain the method and its decisions.

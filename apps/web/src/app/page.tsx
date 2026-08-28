@@ -38,7 +38,7 @@ function datasetJsonLd(data: { generatedAt: string; version?: string }): string 
     '@type': 'Dataset',
     name: 'NCB, the National Capability Benchmark',
     description:
-      'A prototype that measures what a country can do, separately from how rich it is. Nine capability dimensions scored from public data, each with a separate confidence number.',
+      'A prototype that measures what a country can do. Nine capability dimensions from public data, each with separate confidence.',
     ...(domain ? { url: `https://${domain}` } : {}),
     version: data.version,
     dateModified: data.generatedAt,
@@ -71,28 +71,28 @@ export default async function Page() {
         Each score links to its raw indicators and a separate confidence number.
       </Headline>
       <p className="mb-10 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-        New here? The{' '}
+        New here?{' '}
         <Link href="/method" className="underline underline-offset-4">
           method page
         </Link>{' '}
-        explains how a published statistic becomes a score, the{' '}
+        explains the scoring, the{' '}
         <Link href="/glossary" className="underline underline-offset-4">
           glossary
         </Link>{' '}
-        defines every term on these pages, and the{' '}
+        defines the terms, and the{' '}
         <Link href="/limits" className="underline underline-offset-4">
           limits page
         </Link>{' '}
-        records where a number is known to be wrong about the world. The{' '}
+        records known failures. The{' '}
         <Link href={capabilitiesHref} className="underline underline-offset-4">
           capabilities directory
         </Link>{' '}
-        opens each dimension with its country overview. Nothing assumes you have seen this before.
+        compares countries by dimension.
       </p>
 
       <Section
         title="Each country comes out a different shape"
-        hint="Scores run 0 to 100 against a frame built from every country. There is no composite. Countries with the same average can have different profiles. Open a country to read each dimension or compare it with another."
+        hint="Scores run 0 to 100 using all countries as the frame. There is no composite, so countries with the same average can have different profiles."
       >
         <DimensionLegend />
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -140,7 +140,7 @@ export default async function Page() {
 
       <Section
         title="A score and its confidence are two different claims"
-        hint="Confidence is coverage times recency times source quality. It sits beside the score. Missing data lowers coverage; nothing is imputed."
+        hint="Confidence is coverage times recency times source quality. It sits beside the score; missing data lowers coverage and is never imputed."
       >
         <ConfidenceLegend />
         <ConfidenceTable countries={countries} />

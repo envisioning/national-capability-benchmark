@@ -86,15 +86,13 @@ export default async function DelphiPage() {
       >
         {!evidential ? (
           <Note tone="stop">
-            This is a deterministic offline run. It exercises the pipeline, not evidence about a
-            country.
+            This deterministic offline run tests the pipeline. It is not country evidence.
           </Note>
         ) : !panel ? (
           <Note tone="stop">
             This {PROVENANCE_LABELS[run.provenance]} run has {run.panel.length} panelist
-            {run.panel.length === 1 ? '' : 's'}. There is no distribution to read here: the median
-            is one opinion and the interquartile range is zero. Treat every number here as a single
-            judgment.
+            {run.panel.length === 1 ? '' : 's'}. There is no distribution here. Treat every number
+            as a single judgment.
           </Note>
         ) : null}
         {run.note ? <Note>{run.note}</Note> : null}

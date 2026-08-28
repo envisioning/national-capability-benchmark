@@ -53,7 +53,7 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
 
       <Section
         title={`${countWord(wealthTracking)[0]?.toUpperCase()}${countWord(wealthTracking).slice(1)} of nine dimensions track income per head`}
-        hint={`A correlation with log GDP per capita of ${WEALTH_CORRELATION_THRESHOLD} or more counts as tracking income. These results use ${n} countries, so treat each coefficient as a hint.`}
+        hint={`At ${WEALTH_CORRELATION_THRESHOLD} or more, a correlation with log GDP per capita counts as tracking income. These results use ${n} countries; treat coefficients as hints.`}
       >
         <DataTable
           rows={diag.dimensionVsGdp}
@@ -183,7 +183,7 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
 
       <Section
         title="A row can carry the dimension's wealth signal"
-        hint="This table recomputes each dimension without one indicator. A positive delta means that row makes the dimension track income more, even if its own correlation is below the threshold."
+        hint="Each row removes one indicator. A positive delta means the dimension tracks income more without it."
       >
         <DataTable
           rows={diag.wealthAttribution}
@@ -242,7 +242,7 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
               ? 'The panel estimates do not track income per head'
               : `${capitalize(countWord(panelTracking.length))} of nine panel estimates track income per head`
           }
-          hint={`A model panel reads the same published record as the indicators, so it is not independent evidence. The panel gets the same GDP test, with indicator results for the same countries beside it.${
+          hint={`The panel reads the same published record as the indicators, so it is not independent evidence. It gets the same GDP test, with same-country indicator results beside it.${
             panelBackfill.length > 0
               ? ` ${panelBackfill.map((d) => DIMENSION_LABELS[d.dimension]).join(' and ')} have no indicator score, so the panel is the only candidate.`
               : ''
@@ -437,7 +437,7 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
 
       <Section
         title={`${Math.round(diag.outOfFrame.share * 100)}% of observed values clamp at the frame edge`}
-        hint={`${diag.outOfFrame.clampedCells} of ${diag.outOfFrame.observedCells} observed cells fall outside the frame and clamp to 0 or 100. Current values cannot do this; these are historical or late-arriving values.`}
+        hint={`${diag.outOfFrame.clampedCells} of ${diag.outOfFrame.observedCells} observed cells fall outside the frame and clamp to 0 or 100. These are historical or late-arriving values.`}
       >
         <DataTable
           rows={diag.outOfFrame.perCountry.slice(0, 15)}

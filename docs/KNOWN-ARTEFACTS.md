@@ -76,10 +76,11 @@ indicators, reported separately.
 
 **Severity: high. This is the strongest single finding of the prototype.**
 
-Neither dimension publishes a score for any country. D23 retired every perception
-indicator named below, D44 retired the homicide rate, and D45's coverage floor
-then stopped both dimensions printing a number on what was left. The finding
-below is why.
+Trust publishes no indicator score. Coordination publishes a score for 44 of 52
+countries, but the result rests on two indicators and confidence remains thin.
+D23 retired every perception indicator named below, D44 retired the homicide
+rate, and D45's coverage floor stopped Trust printing a number on what was left.
+The finding below is why.
 
 Both dimensions leaned on the Worldwide Governance Indicators, which are expert
 and firm perception composites that track income closely by construction. On the
@@ -102,19 +103,23 @@ indicators in it are retired, so it cannot be recomputed on the current frame:
 
 The pattern to read is the class column. Every indicator that fails the test is
 class P and every indicator that survives is class C. The wealth correlation in
-these two dimensions is carried by perception measures, and the two behavioural
-measures available are both weaker proxies for income, each frozen at 2019.
+these two dimensions was carried by perception measures. Coordination now has a
+2024 World Bank budget-execution series beside the older border-time measure,
+but that series is still a proxy for coordination and has uneven country
+coverage. Trust still has only the 2019 contract measure.
 
 **Fix.** These dimensions need observable, behavioural indicators that are not
-WGI and not frozen at 2019. Court throughput and border-compliance time are the
-start. Civil society strength (V-Dem) and cross-agency delivery records are the
-missing pieces. See also A9, which is the same problem seen from a small
-competent state, and D20, where documented cross-agency delivery is being
-collected as evidence.
+WGI and not frozen at 2019. Budget execution is a useful first API-backed
+addition for Coordination, but it does not show whether agencies delivered the
+same objective. Court throughput, case clearance, civil society strength
+(V-Dem), and cross-agency delivery records remain the missing pieces. See also
+A9, which is the same problem seen from a small competent state, and D20, where
+documented cross-agency delivery is being collected as evidence.
 
-**Overturned by.** Behavioural indicators that hold their own correlation with
-income below 0.7 and cover the country set. Until then, treat any future
-Coordination or Trust score as partly a statement about income per head.
+**Overturned by.** Behavioural indicators that cover the country set and show
+that each dimension remains distinct from income after its indicators are
+combined. Until then, treat Coordination as a thin operational proxy and Trust
+as unmeasured.
 
 ---
 
@@ -215,9 +220,9 @@ substantially larger, and never quote one without its n.
 **Severity: medium. No score carries it today, and it will return with the first
 replacement indicator.**
 
-Coordination publishes no score, so the artefact is currently latent. It is kept
-because the measurement error that produced it is a property of the indicator
-type, not of the run.
+Coordination now publishes a thin score for most countries, but the artefact is
+still active because the measurement error is a property of the indicator type,
+not of one run.
 
 On the perception layer D23 retired, and on the frame in use then, Uruguay
 scored 18.8 on Coordination. In the same decade it delivered Plan Ceibal, a
@@ -298,63 +303,42 @@ industrial output and a poor record of finishing public programmes scores well
 here, and the benchmark currently has no way to say so.
 
 ---
-## A12 — Three dimensions are now scored on almost nothing
+## A12 — Coordination and Trust are scored on almost nothing
 
-**Severity: high. Created deliberately by D23.**
+**Severity: high. Created deliberately by D23 and partly relieved by D55.**
 
-Retiring the perception layer removed the only indicators three dimensions had.
-The figures in this entry are from dataset 4.0.0.
+The figures in this entry are from dataset 4.1.0.
 
 | Dimension | Observed indicators | Confidence | What is left | Publishes a score |
 | --- | ---: | ---: | --- | --- |
-| Coordination | 1 of 7 | 0.077 | Time to export, frozen at 2019 | no |
-| Trust | 1 of 7 | 0.077 | Contract enforcement days, frozen at 2019 | no |
+| Coordination | 2 of 8 for 44 countries | 0.000 to 0.188, mean 0.152 | Border time from 2019 and budget execution, latest 2024 | 44 of 52 |
+| Trust | 1 of 7 for 51 countries | 0.000 to 0.079, mean 0.077 | Contract enforcement days from 2019 | no |
 | Shared Purpose | 2 of 7 | 0.223 | Tax revenue, income inequality | 46 of 52 |
 
-Coordination and Trust print nothing under D45's coverage floor. Their indicator
-rows, confidence and trend still publish, so the evidence is visible and the
-number that would misread it is not. Shared Purpose sits one indicator above the
-floor and prints, drawn dashed with a marked axis and a confidence band that says
-do not quote it alone. That is a mitigation and not a fix.
+Coordination's new score is visible with its confidence and its two indicator
+rows. It remains a narrow operational proxy: budget alignment and border
+processing do not show whether several institutions delivered a shared national
+objective. Trust still prints no score under D45. Its indicator rows, confidence
+and trend publish, so the evidence is visible and the number that would misread
+it is not. Shared Purpose sits one indicator above the floor and prints, drawn
+dashed with a marked axis and a confidence band that says do not quote it alone.
+That is a mitigation and not a fix.
 
-**Fix.** Land observable replacements: court throughput and case clearance,
-budget execution rates, cross-agency delivery records, voter turnout,
-volunteering, civic participation. Until at least two land per dimension, treat
-Coordination, Trust and Shared Purpose as unmeasured, and consider whether a
-dimension below a coverage floor should print a score at all.
+**Fix.** Land court throughput and case clearance, civil society strength,
+cross-agency delivery records, generalized interpersonal trust, institutional
+trust, and behavioural measures of corruption experience. The generative panel
+can estimate the dimensions while those data are missing, but its values stay
+beside the indicator score and never become observations.
 
-**What the World Bank can and cannot supply.** Thirty candidate series have been
-probed against the 52 countries with `pnpm bench probe`, and the publisher's
-catalogue of 29,544 series has been searched by name. The result, per dimension:
-
-- **Coordination: one candidate, and it needs a transform the model does not
-  have.** `GF.XPD.BUDG.ZS`, primary government expenditure as a proportion of
-  the original approved budget, covers 44 of 52 at 2024 and correlates with log
-  GDP per capita at 0.285. That is the budget execution measure this artefact
-  asks for. It is also two-sided: values run from 37.7 to 134.6, and capability
-  is closeness to 100 rather than a high number or a low one. `direction` cannot
-  say that and no transform computes a distance from a target, so wiring it is a
-  decision with code behind it. The CPIA cluster (`IQ.CPA.FINQ.XQ`,
-  `IQ.CPA.PUBS.XQ`, `IQ.CPA.TRAN.XQ`) covers 10 of 52, IDA borrowers only, and
-  is close to income-independent at -0.011 to 0.241, so the coverage is the
-  whole loss. `IQ.SPI.PIL2/PIL4` and `IC.IMP.CSBC` are codes the API rejects,
-  `IC.EXP.CSBC.CD` is archived, and `SL.TLF.CACT.ZS` is a modelled ILO estimate,
-  which is imputation entering a model whose invariant forbids it.
-- **Trust: one candidate at coverage, and it is a perception measure.**
-  `IC.FRM.CORR.ZS` covers 48 of 52 on a 2024 median vintage and correlates with
-  log GDP at -0.587, under the line, and at -0.708 on ranks, on it. Its
-  definition is the objection: it asks establishments whether firms similar to
-  theirs make informal payments, so it records a belief about peers and not an
-  experience. That is measurement class P, the layer D23 retired. Its siblings
-  are not independent evidence either: `IC.FRM.BRIB.ZS` correlates with it at
-  0.838 and `IC.TAX.GIFT.ZS` at 0.761 across the 48 countries both cover, and
-  the gift series carries ten zeroes and places the United States below Chile.
-- **Shared Purpose: one untaken candidate.** `SG.GEN.PARL.ZS`, women in the
-  national parliament, covers 52 of 52 at 2025, spreads 2.5 to 63.8 and
-  correlates with log GDP at 0.075. Its statistics are the best on the board by
-  a distance, and whether representational breadth belongs in this dimension is
-  unsettled. `SL.EMP.VULN.ZS` is rejected on the same ground as labour force
-  participation: every value is a modelled estimate.
+**What the World Bank can and cannot supply.** `GF.XPD.BUDG.ZS`, primary
+government expenditure as a proportion of the original approved budget, covers
+44 of 52 at 2024 and correlates with log GDP per capita at 0.285. The value is
+two-sided: both underspending and overspending can indicate weak execution, so
+the registry converts it to absolute distance from 100 before scoring. The CPIA
+cluster covers only 10 of 52, while the Enterprise Survey corruption series is a
+perception of what other firms do and remains ineligible. Trust therefore needs
+a second source adapter for survey and court data. The current shortlist is
+V-Dem, WVS, OECD Government at a Glance, and a harmonized court or audit source.
 
 **B-READY is what the frozen rows become.** `IC.BRE.*` replaces Doing Business
 inside World Development Indicators, and its dispute resolution score is the
@@ -371,11 +355,11 @@ budget execution. The shortlist is ILOSTAT, IDEA voter turnout, and OECD
 government at a glance for court clearance. `ingest: 'manual'` already exists
 for anything with no API.
 
-The one indicator added to fix the contamination was the contamination.
-`wealthAttribution` in the D42 diagnostic showed `homicide_rate` alone raising
-Trust's wealth correlation by 0.288, from 0.096 to 0.385, the largest single
-wealth contribution in the model at the time. D42 records the diagnostic and D44 the
-retirement.
+The one indicator added to fix contamination was the contamination: D42 showed
+that `homicide_rate` raised Trust's wealth correlation by 0.288, so D44 retired
+it. Generative estimates are therefore a useful research layer, but they cannot
+repair a missing observation series.
 
-This artefact closes when two observable indicators land per dimension, and not
-before. Removal silenced the misleading number. It did not measure anything.
+This artefact closes when at least two observable indicators land per dimension
+and the resulting Coordination score survives the wealth-attribution test. The
+budget series opens the door; it does not close the measurement problem.

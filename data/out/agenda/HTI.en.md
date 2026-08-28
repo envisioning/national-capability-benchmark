@@ -2,7 +2,7 @@
 
 *Generated 2026-08-28*
 
-Scores are relative to a frame built from all 52 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
+52 countries set the frame. Scores run 0 to 100 per dimension, with no headline ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
 ## Where Haiti stands
 
@@ -10,7 +10,7 @@ Scores are relative to a frame built from all 52 countries together and run 0 to
 | --- | --- | --- | --- |
 | Anticipation | 0 | 0.4 (thin) | 0 over 10 years, on 3 indicators, 3 clamped at the frame edge |
 | Agency | 14.9 | 0.44 (thin) | +14.2 over 10 years, on 2 indicators |
-| Coordination | not scored | 0.08 (very thin) | no trend basket |
+| Coordination | 65.2 | 0.17 (very thin) | no trend basket |
 | Trust | not scored | 0.08 (very thin) | no trend basket |
 | Learning | 12.3 | 0.22 (very thin) | no trend basket |
 | Experimentation | 0.2 | 0.04 (very thin) | no trend basket |
@@ -18,80 +18,80 @@ Scores are relative to a frame built from all 52 countries together and run 0 to
 | Building | 34.4 | 0.43 (thin) | +3.6 over 10 years, on 3 indicators, 1 clamped at the frame edge |
 | Shared Purpose | not scored | 0.01 (very thin) | no trend basket |
 
-## The dimensions that must be measured before they can be managed
+## Dimensions to measure first
 
-Confidence here is below the usable band, so the score cannot carry a decision. The first intervention is evidence.
+Confidence is below the usable band, so evidence comes before action.
 
 ### Shared Purpose: confidence 0.01, very thin
 
 To what extent can people imagine themselves as participants in a common project?
 
-- Currently scored on a single observed indicator.
-- Declared gaps in this dimension: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
-- Datasets examined and rejected for this dimension: Voice and accountability.
+- Based on one observed indicator.
+- Declared gaps: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
+- Rejected datasets: Voice and accountability.
 
 ### Experimentation: confidence 0.04, very thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
-- Currently scored on 2 observed indicators.
-- Declared gaps in this dimension: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
-
-### Coordination: confidence 0.08, very thin
-
-How effectively can independent actors organize around shared objectives?
-
-- Currently scored on a single observed indicator.
-- Declared gaps in this dimension: University-industry collaboration, Civil society strength, Public-private collaboration.
-- Datasets examined and rejected for this dimension: Government effectiveness, Regulatory quality, Logistics performance.
+- Based on 2 observed indicators.
+- Declared gaps: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
 ### Trust: confidence 0.08, very thin
 
 How much cooperation is possible beyond immediate personal networks?
 
-- Currently scored on a single observed indicator.
-- Declared gaps in this dimension: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group.
-- Datasets examined and rejected for this dimension: Rule of law, Control of corruption, Intentional homicide rate.
+- Based on one observed indicator.
+- Declared gaps: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group.
+- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
+
+### Coordination: confidence 0.17, very thin
+
+How effectively can independent actors organize around shared objectives?
+
+- Based on 2 observed indicators.
+- Declared gaps: University-industry collaboration, Civil society strength, Public-private collaboration.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
 ### Learning: confidence 0.22, very thin
 
 How effectively does the country acquire, distribute, and update knowledge?
 
-- Currently scored on 2 observed indicators.
-- Declared gaps in this dimension: Adult learning participation, Research citation impact.
+- Based on 2 observed indicators.
+- Declared gaps: Adult learning participation, Research citation impact.
 
 ### Anticipation: confidence 0.4, thin
 
 How capable is the country of identifying and preparing for emerging change?
 
-- Currently scored on 3 observed indicators.
-- Declared gaps in this dimension: Government foresight capacity, Long-horizon research share.
+- Based on 3 observed indicators.
+- Declared gaps: Government foresight capacity, Long-horizon research share.
 
 ### Building: confidence 0.43, thin
 
 How capable is the country of turning plans and knowledge into functioning systems?
 
-- Currently scored on 4 observed indicators.
-- Declared gaps in this dimension: Large project delivery, Firm scale-up rate.
-- Datasets examined and rejected for this dimension: Logistics infrastructure quality.
+- Based on 4 observed indicators.
+- Declared gaps: Large project delivery, Firm scale-up rate.
+- Rejected datasets: Logistics infrastructure quality.
 
 ### Adaptability: confidence 0.44, thin
 
 How effectively can the system respond when circumstances change?
 
-- Currently scored on 4 observed indicators.
-- Declared gaps in this dimension: Long-term unemployment share, Export diversification, Disaster preparedness and recovery, Institutional responsiveness.
+- Based on 4 observed indicators.
+- Declared gaps: Long-term unemployment share, Export diversification, Disaster preparedness and recovery, Institutional responsiveness.
 
 ### Agency: confidence 0.44, thin
 
 How able are individuals and organizations to turn an intention into action?
 
-- Currently scored on 6 observed indicators.
-- Declared gaps in this dimension: Adult digital skills, Perceived control over life.
+- Based on 6 observed indicators.
+- Declared gaps: Adult digital skills, Perceived control over life.
 
-## The measurement agenda
+## Measurement agenda
 
-26 indicators the specification asks for with no adequate internationally comparable dataset behind them. Each one lowers confidence until it is filled, and each one is a contribution a statistical agency, a research group or a ministry can make. A gap becomes a scored indicator when a comparable series covers at least two countries.
+26 requested indicators have no adequate comparable dataset. Each lowers confidence. A gap becomes scorable when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -122,6 +122,6 @@ How able are individuals and organizations to turn an intention into action?
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
 
-## How to move a number on this page
+## Contribute
 
-Fill a gap, file an evidence record, or contest an indicator at https://github.com/envisioning/national-capability-benchmark. The method, every decision behind it and the evidence that would overturn each one are in the docs directory of the same repository.
+Fill a gap, file evidence, or contest an indicator at https://github.com/envisioning/national-capability-benchmark. The docs explain the method and its decisions.

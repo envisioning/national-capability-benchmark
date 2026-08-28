@@ -21,7 +21,42 @@ const WIDTH = 720
 const PAD = 26
 const AXIS_Y = 96
 const ROW = 11
-const MIN_GAP = 12
+/** How close two dots can sit on the axis before they share one column. */
+const COL_STEP = 14
+const CARD_W = 168
+const CARD_GAP = 10
+/** Room for the tallest tooltip above or below a dot. */
+const MAX_CARD_H = 14 + 4 * 14
+
+type PlacedPoint = DistributionPoint & { x: number; y: number }
+
+function tooltipLines(p: DistributionPoint) {
+  const label = p.label.length > 22 ? `${p.label.slice(0, 21)}…` : p.label
+  const lines: Array<{ text: string; muted?: boolean; bold?: boolean }> = [
+    { text: label, bold: true },
+    { text: `Score ${p.value.toFixed(1)}` },
+  ]
+  if (p.detail) {
+    const detail = p.detail.length > 26 ? `${p.detail.slice(0, 25)}…` : p.detail
+    lines.push({ text: detail, muted: true })
+  }
+  if (p.clamped) lines.push({ text: 'Clamped at the frame edge', muted: true })
+  return lines
+}
+
+function tooltipLayout(p: PlacedPoint, viewTop: number) {
+  const lines = tooltipLines(p)
+  const cardH = 14 + lines.length * 14
+  const cx = Math.min(WIDTH - PAD - 4, Math.max(PAD + 4, p.x))
+  let cardX = Math.min(WIDTH - PAD - CARD_W, Math.max(PAD, cx - CARD_W / 2))
+  let cardY = p.y - CARD_GAP - cardH
+  let below = false
+  if (cardY < viewTop + 4) {
+    cardY = p.y + CARD_GAP + 4
+    below = true
+  }
+  return { cardX, cardY, cardH, cx, below }
+}
 
 /**
  * Where every country sits on one 0 to 100 axis.
@@ -29,8 +64,9 @@ const MIN_GAP = 12
  * A ranked list answers "who is above me". This answers "what does the field
  * look like", which is a different question: three countries tied at the top
  * and a long tail below reads completely differently from an even spread, and a
- * rank cannot show either. Dots that would overlap stack upward, so a cluster
- * becomes a column and the shape of the distribution is the shape of the chart.
+ * rank cannot show either. Nearby scores snap to the same column and stack
+ * upward, so a cluster reads as a column and the shape of the distribution is
+ * the shape of the chart. Hover still prints each country's exact score.
  *
  * The box is the middle half of the field and the line inside it is the median.
  * Nothing here is a new number: it is the same values the list below prints.
@@ -51,25 +87,43 @@ export function Distribution({ points }: { points: DistributionPoint[] }) {
   const median = at(0.5)
   const q3 = at(0.75)
 
-  /* Stack anything that would collide, so a cluster reads as a column. */
-  const rowEnds: number[] = []
-  const placed = sorted.map((p) => {
-    const px = x(p.value)
-    let row = rowEnds.findIndex((end) => px - end >= MIN_GAP)
-    if (row === -1) row = rowEnds.length
-    rowEnds[row] = px
-    return { ...p, x: px, y: AXIS_Y - 10 - row * ROW }
-  })
+  /* Snap nearby scores to one x, then stack. Exact values stay in hover text. */
+  const columnX = (v: number) => {
+    const px = x(v)
+    return Math.round((px - PAD) / COL_STEP) * COL_STEP + PAD
+  }
+  const columns = new Map<number, DistributionPoint[]>()
+  for (const p of sorted) {
+    const bx = columnX(p.value)
+    const group = columns.get(bx) ?? []
+    group.push(p)
+    columns.set(bx, group)
+  }
+  const placed = [...columns.entries()]
+    .sort(([a], [b]) => a - b)
+    .flatMap(([bx, group]) =>
+      group.map((p, i) => ({
+        ...p,
+        x: bx,
+        y: AXIS_Y - 10 - i * ROW,
+      })),
+    )
 
-  const height = Math.max(AXIS_Y + 26, AXIS_Y + 26 - Math.min(...placed.map((p) => p.y)) + 20)
+  const dotMinY = Math.min(...placed.map((p) => p.y))
+  const dotMaxY = Math.max(...placed.map((p) => p.y))
+  const viewTop = dotMinY - MAX_CARD_H - CARD_GAP - 12
+  const viewBottom = Math.max(AXIS_Y + 26, dotMaxY + MAX_CARD_H + CARD_GAP + 12)
+  const height = viewBottom - viewTop
   const focal = placed.find((p) => p.focal)
+  const active = placed.find((p) => p.key === hovered) ?? null
 
   return (
     <svg
-      viewBox={`0 ${AXIS_Y + 26 - height} ${WIDTH} ${height}`}
-      className="h-auto w-full"
+      viewBox={`0 ${viewTop} ${WIDTH} ${height}`}
+      className="h-auto w-full overflow-visible"
       role="img"
       aria-label={`Distribution of ${points.length} countries on a 0 to 100 scale. Median ${median.toFixed(1)}.`}
+      onMouseLeave={() => setHovered(null)}
     >
       <rect
         x={x(q1)}
@@ -122,93 +176,132 @@ export function Distribution({ points }: { points: DistributionPoint[] }) {
         </g>
       ))}
 
-      {placed.map((p) => (
-        <g
-          key={p.key}
-          onMouseEnter={() => setHovered(p.key)}
-          onMouseLeave={() => setHovered((h) => (h === p.key ? null : h))}
-          style={{ cursor: 'default' }}
-        >
-          {/* A generous invisible target, because a 3.5 unit dot is hard to hit. */}
-          <circle cx={p.x} cy={p.y} r={7} fill="transparent" />
-          <circle
-            cx={p.x}
-            cy={p.y}
-            r={p.focal || hovered === p.key ? 4.5 : 3.5}
-            fill={
-              p.focal
-                ? 'var(--primary)'
-                : hovered === p.key
-                  ? 'var(--foreground)'
-                  : p.hollow
-                    ? 'var(--surface)'
-                    : 'var(--muted)'
-            }
-            stroke={p.focal ? 'var(--primary)' : hovered === p.key ? 'var(--foreground)' : 'var(--muted)'}
-            strokeWidth={p.hollow ? 1.2 : 0}
+      {placed.map((p) => {
+        const isActive = hovered === p.key
+        const dimmed = hovered !== null && !isActive
+        return (
+          <g
+            key={p.key}
+            onMouseEnter={() => setHovered(p.key)}
+            style={{ cursor: 'pointer' }}
+            opacity={dimmed ? 0.35 : 1}
           >
-            <title>
-              {`${p.label}: ${p.value.toFixed(1)}${p.detail ? `, ${p.detail}` : ''}${
-                p.clamped ? ', clamped at the edge of the frame' : ''
-              }`}
-            </title>
-          </circle>
-          {p.clamped ? (
-            <line
-              x1={p.x}
-              y1={p.y - 6.5}
-              x2={p.x}
-              y2={p.y - 9.5}
-              stroke="currentColor"
-              strokeOpacity={0.5}
-              strokeWidth={1}
-            />
-          ) : null}
-        </g>
-      ))}
-
-      {focal && hovered !== focal.key ? (
-        <text
-          x={Math.min(WIDTH - PAD, Math.max(PAD, focal.x))}
-          y={focal.y - 9}
-          textAnchor="middle"
-          fontSize={10}
-          fontWeight={500}
-          fill="currentColor"
-        >
-          {focal.label}
-        </text>
-      ) : null}
-
-      {/* The country under the pointer, named where it sits. */}
-      {placed
-        .filter((p) => p.key === hovered)
-        .map((p) => (
-          <g key={`hover-${p.key}`}>
-            <text
-              x={Math.min(WIDTH - PAD, Math.max(PAD, p.x))}
-              y={p.y - 9}
-              textAnchor="middle"
-              fontSize={10}
-              fontWeight={500}
-              fill="currentColor"
+            {/* A generous invisible target, because a 3.5 unit dot is hard to hit. */}
+            <circle cx={p.x} cy={p.y} r={7} fill="transparent" />
+            {isActive ? (
+              <circle
+                cx={p.x}
+                cy={p.y}
+                r={8}
+                fill="none"
+                stroke="var(--foreground)"
+                strokeOpacity={0.2}
+                strokeWidth={1.5}
+              />
+            ) : null}
+            <circle
+              cx={p.x}
+              cy={p.y}
+              r={p.focal || isActive ? 4.5 : 3.5}
+              fill={
+                p.focal
+                  ? 'var(--primary)'
+                  : isActive
+                    ? 'var(--foreground)'
+                    : p.hollow
+                      ? 'var(--surface)'
+                      : 'var(--muted)'
+              }
+              stroke={p.focal ? 'var(--primary)' : isActive ? 'var(--foreground)' : 'var(--muted)'}
+              strokeWidth={p.hollow ? 1.2 : 0}
             >
-              {p.label} {p.value.toFixed(1)}
-            </text>
-            {p.detail ? (
-              <text
-                x={Math.min(WIDTH - PAD, Math.max(PAD, p.x))}
-                y={p.y - 20}
-                textAnchor="middle"
-                fontSize={8}
-                fill="currentColor"
-                fillOpacity={0.6}
-              >
-                {p.detail}
-              </text>
+              <title>
+                {`${p.label}: ${p.value.toFixed(1)}${p.detail ? `, ${p.detail}` : ''}${
+                  p.clamped ? ', clamped at the edge of the frame' : ''
+                }`}
+              </title>
+            </circle>
+            {p.clamped ? (
+              <line
+                x1={p.x}
+                y1={p.y - 6.5}
+                x2={p.x}
+                y2={p.y - 9.5}
+                stroke="currentColor"
+                strokeOpacity={0.5}
+                strokeWidth={1}
+              />
             ) : null}
           </g>
-        ))}
+        )
+      })}
+
+      {focal && hovered !== focal.key ? (
+        <g>
+          <rect
+            x={Math.min(WIDTH - PAD - 72, Math.max(PAD, focal.x - 36))}
+            y={focal.y - 22}
+            width={144}
+            height={18}
+            rx={4}
+            fill="var(--surface)"
+            stroke="var(--rule)"
+            strokeWidth={0.75}
+          />
+          <text
+            x={Math.min(WIDTH - PAD - 4, Math.max(PAD + 4, focal.x))}
+            y={focal.y - 10}
+            textAnchor="middle"
+            fontSize={10}
+            fontWeight={500}
+            fill="currentColor"
+          >
+            {focal.label}
+          </text>
+        </g>
+      ) : null}
+
+      {active ? (() => {
+        const tip = tooltipLayout(active, viewTop)
+        const lines = tooltipLines(active)
+        const stemY1 = tip.below ? tip.cardY : tip.cardY + tip.cardH
+        const stemY2 = tip.below ? active.y + 5 : active.y - 5
+        return (
+          <g key={`hover-${active.key}`} pointerEvents="none">
+            <line
+              x1={tip.cx}
+              y1={stemY1}
+              x2={active.x}
+              y2={stemY2}
+              stroke="var(--rule)"
+              strokeWidth={0.75}
+            />
+            <rect
+              x={tip.cardX}
+              y={tip.cardY}
+              width={CARD_W}
+              height={tip.cardH}
+              rx={6}
+              fill="var(--surface)"
+              stroke="var(--rule)"
+              strokeWidth={0.75}
+            />
+            {lines.map((line, i) => (
+              <text
+                key={i}
+                x={tip.cardX + 10}
+                y={tip.cardY + 14 + (i + 1) * 14}
+                fontSize={line.bold ? 11 : line.muted ? 9 : 10}
+                fontWeight={line.bold ? 500 : 400}
+                fill={line.muted ? 'var(--muted)' : 'currentColor'}
+                style={line.bold ? undefined : { fontVariantNumeric: 'tabular-nums' }}
+              >
+                {line.text}
+              </text>
+            ))}
+          </g>
+        )
+      })() : null}
     </svg>
   )
 }

@@ -69,6 +69,13 @@ country even though their legal forms and powers differ. A source and a plain
 description carry that local difference rather than a Brazil-specific field in
 the schema.
 
+The viewer has two readings of the same graph. The overview renders every node
+and edge in system clusters so the whole institutional field is visible at
+once. The focus reading centers one selected institution and shows its direct
+neighbors with the relationship verbs. Clicking a node in either reading keeps
+the selected profile in sync. This is a presentation choice only; it does not
+change the network file or add a second interpretation of an edge.
+
 ## Coverage is a claim
 
 Each file declares its territorial coverage. `baseline` means the national

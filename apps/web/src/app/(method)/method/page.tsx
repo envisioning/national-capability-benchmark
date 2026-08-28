@@ -44,38 +44,38 @@ export default function MethodPage() {
       >
         <ul className="max-w-3xl list-disc space-y-3 pl-5 text-lg leading-relaxed">
           <li>
-            All {COUNTRIES.length} countries set the scale together. A frame built around one
-            country would only describe that country.
+            All {COUNTRIES.length} countries set the scale. A frame built around one country would
+            only describe that country.
           </li>
           <li>
-            A high score is not a model to copy. A mechanism works because of local conditions. The
-            shape says where to look; what to build depends on the conditions where you are.
+            A high score is not a model to copy. Mechanisms depend on local conditions. The shape
+            says where to look; context says what to build.
           </li>
           <li>
             Capability changes below the national level, in groups small enough to act. A country
-            score is only a coarse proxy for the conditions those groups work in.
+            score is a coarse proxy for their conditions.
           </li>
           <li>
-            Treat this as a measuring instrument. It lets a reader check whether an attempt to raise
-            a capability worked. Confidence, gaps and revisions sit beside each score.
+            Treat this as a measuring instrument. It tests whether an attempt to raise a capability
+            worked. Confidence, gaps and revisions sit beside each score.
           </li>
           <li>
             The{' '}
             <Link href="/diagnostics" className="underline underline-offset-4">
-            diagnostics page
+            diagnostics
             </Link>{' '}
-            tests whether the dimensions collapse into income. The{' '}
+            tests whether dimensions collapse into income. The{' '}
             <Link href="/limits" className="underline underline-offset-4">
-            limits page
+            limits
             </Link>{' '}
-            records where a number is known to be wrong about the world.
+            records known failures.
           </li>
         </ul>
       </Section>
 
       <Section
         title="This measures capability, not wealth"
-        hint="The benchmark measures capacity to anticipate, coordinate, learn, adapt and build under uncertainty. It does not measure wealth, quality of life, competitiveness or popularity."
+        hint="The benchmark measures capacity to anticipate, coordinate, learn, adapt and build under uncertainty. Wealth, quality of life and popularity are outside its scope."
       >
         <Scroller>
           <Table>
@@ -106,8 +106,8 @@ export default function MethodPage() {
 
       <Section title="Six steps turn an indicator into a score">
         <ol className="max-w-3xl list-decimal space-y-3 pl-5 text-lg leading-relaxed">
-          <li>Take the latest comparable value for each country and indicator, with source and year.</li>
-          <li>Apply the declared transform, such as per million people, log, or distance from a target.</li>
+            <li>Take the latest comparable value for each country and indicator, with source and year.</li>
+          <li>Apply the declared transform: per million people, log, or distance from a target.</li>
           <li>Winsorize extreme outliers with Tukey fences at three interquartile ranges.</li>
           <li>
             Normalize to 0 through 100 against the frame set by all {COUNTRIES.length} countries.
@@ -120,13 +120,13 @@ export default function MethodPage() {
         </ol>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
           Missing indicators lower coverage and drop out of the mean. Nothing is imputed. Equal
-          weighting keeps the v0 model easy to challenge.
+          weighting keeps v0 easy to challenge.
         </p>
         <p className="mt-4 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
           Of {INDICATORS.length} indicators, {wired} have data, {gaps} are gaps and {retired} are
-          retired. Gaps have no comparable dataset; retired rows have a dataset this project
-          rejected. Both lower confidence and define the collection agenda. {manual} values were
-          entered by hand from published sources, with retrieval dates stored on each one.
+          retired. Gaps lack a comparable dataset; retired rows have a rejected one. Both lower
+          confidence and define the collection agenda. {manual} values were entered by hand, with
+          retrieval dates stored.
         </p>
       </Section>
 
@@ -149,7 +149,7 @@ export default function MethodPage() {
 
       <Section
         title="Source quality feeds confidence only"
-        hint="Each tier contributes to source quality, which affects confidence. Delphi estimates carry the least weight."
+        hint="Each tier affects source quality and confidence. Delphi estimates carry the least weight."
       >
         <Scroller>
           <Table>
@@ -175,7 +175,7 @@ export default function MethodPage() {
           </Table>
         </Scroller>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-          A tier says what kind of body published a number. The{' '}
+          A tier says who published a number. The{' '}
           <Link href={sourcesHref} className="underline underline-offset-4">
           sources page
           </Link>{' '}
@@ -192,7 +192,7 @@ export default function MethodPage() {
           <li>Recency decays after two grace years, over a twelve-year window, to a floor of 0.1.</li>
           <li>Source quality is the mean tier weight of the values that are present.</li>
           <li>
-            The product stays well below 1 in practice, so the bands reflect realistic values.
+            The product stays below 1 in practice, so the bands reflect realistic values.
           </li>
         </ul>
       </Section>
@@ -203,19 +203,17 @@ export default function MethodPage() {
       >
         <ul className="max-w-3xl list-disc space-y-2 pl-5 text-lg leading-relaxed">
           <li>
-            Historical values use today's frame, so a score change reflects the country, not a
-            changing scale.
+            Historical values use today&apos;s frame, so score change reflects the country.
           </li>
           <li>
-            The same basket is used for every year. A new indicator cannot create artificial movement.
+            The same basket is used for every year. A new indicator cannot create movement.
           </li>
           <li>
-            The basket is smaller than the full dimension, so the trend level can differ from the
-            headline score. Its size is printed beside the trend.
+            The basket may be smaller than the dimension, so trend level can differ from the score.
+            Its size is printed beside the trend.
           </li>
           <li>
-            Ten-year and twenty-year spans are published. A missing span shows how far the data
-            reaches.
+            Ten-year and twenty-year spans are published. A missing span shows the data&apos;s reach.
           </li>
           <li>
             Each indicator carries its own line back to 1990 where available. Nothing is carried
@@ -233,29 +231,29 @@ export default function MethodPage() {
             frame clamp to 0 or 100, and the clamp is recorded.
           </li>
           <li>
-            Adoption indicators often rise for every country. Compare each change with the
-            dimension median before calling it progress.
+            Adoption indicators often rise for every country. Compare each change with the median
+            before calling it progress.
           </li>
         </ul>
       </Section>
 
       <Section
         title="Documented deliveries are recorded outside the score"
-        hint="Evidence records document work that a gap indicator cannot measure. They stay outside the score."
+        hint="Evidence records document work that a gap indicator cannot measure. They stay outside scores."
       >
         <ul className="max-w-3xl list-disc space-y-2 pl-5 text-lg leading-relaxed">
-          <li>Each record carries one published number, reference period, source and retrieval date.</li>
+          <li>Each record carries a published number, reference period, source and retrieval date.</li>
           <li>Each record states what the case does not show.</li>
-          <li>Records never enter a score and never raise confidence.</li>
+          <li>Records never affect scores or confidence.</li>
           <li>
-            A gap becomes a scored indicator when a comparable series covers at least two countries.
+            A gap becomes scorable when a comparable series covers at least two countries.
           </li>
         </ul>
       </Section>
 
       <Section
         title="A panel of models judges what the data cannot"
-        hint="Each panelist holds a fixed analytical stance. The panel scores the same cells and audits the indicator set."
+        hint="Each panelist has a fixed stance. The panel scores the same cells and audits the indicators."
       >
         <ul className="max-w-3xl list-disc space-y-3 pl-5 text-lg leading-relaxed">
           <li>Round 1: each panelist scores every dimension from the evidence brief and its knowledge.</li>
@@ -269,10 +267,10 @@ export default function MethodPage() {
           </li>
           <li>
             Panel estimates stay in their own file and never enter the indicator score. They fill a
-            cell only when no indicator evidence exists.
+            cell only when indicator evidence is absent.
           </li>
           <li>
-            The panel also rates each indicator's class, validity, wealth-proxy risk and redundancy.
+            The panel also rates each indicator&apos;s class, validity, wealth-proxy risk and redundancy.
           </li>
           <li>
             The{' '}
@@ -287,7 +285,7 @@ export default function MethodPage() {
 
       <Section
         title="All countries set the scale"
-        hint={`All ${COUNTRIES.length} countries set each indicator's fences and endpoints, then are scored against the result. The frame stays fixed within a version. Adding a country rebases the benchmark and requires a major version bump.`}
+        hint={`All ${COUNTRIES.length} countries set each indicator's fences and endpoints. The frame stays fixed within a version; adding a country rebases it and requires a major version bump.`}
       >
         <Scroller>
           <Table>

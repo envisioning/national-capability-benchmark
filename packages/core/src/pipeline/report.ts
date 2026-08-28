@@ -91,7 +91,7 @@ export function buildReport(
     out.push('')
   } else {
     out.push(
-      'Change in dimension score, scored against the current frame so the scale holds still, and computed only on the indicators observed at both ends. That matched basket is smaller than the full dimension, so these numbers move on a different base from the scores above. The number in brackets is how many indicators carry the cell. Where part of the basket sits outside the frame at either end, the cell is marked "clamped": part of that change is the distance to the clamp boundary rather than movement in the country.',
+      'Trends use the current frame and only indicators observed at both ends. The matched basket may be smaller than the dimension. The number in brackets is the indicator count. "Clamped" means part of the change reached the frame edge.',
     )
     out.push('')
     for (const span of spans) {
@@ -133,7 +133,7 @@ export function buildReport(
       out.push('')
     }
     out.push(
-      'Read the median before the country. Several indicators measure adoption of things that spread worldwide, so almost every country rises and a positive number is not evidence of catching up. A country gains ground only where its change beats the median in that column. The short span is broad and shallow, the long span is narrow and deep, and a dimension that appears in one and not the other is telling you how far its data reaches.',
+      'Read the median first. Global adoption can lift every country, so a positive change does not mean catching up. A country gains ground when it beats the median. Short and long spans use different baskets; presence in one only shows how far the data reaches.',
     )
     out.push('')
   }
@@ -305,7 +305,7 @@ export function buildReport(
   }
   out.push('')
   out.push(
-    `${countries.length} countries give ${countries.length - 2} degrees of freedom, so treat every correlation here as a hint rather than a result.`,
+    `${countries.length} countries give ${countries.length - 2} degrees of freedom. Treat every correlation here as a hint.`,
   )
   out.push('')
 
@@ -364,7 +364,7 @@ export function buildReport(
     out.push('## Some datasets exist and this project rejected them')
     out.push('')
     out.push(
-      'These rows stay in the registry and lower confidence exactly as gaps do. The difference is that a dataset exists: it was examined and turned down, with the reason on the record.',
+      'These rows stay in the registry and lower confidence like gaps. A dataset exists, but the project rejected it and recorded why.',
     )
     out.push('')
     gapRows(retiredRows)
@@ -384,7 +384,7 @@ export function buildReport(
       out.push('')
     } else if (!isPanel(delphi)) {
       out.push(
-        `> Only ${delphi.panel.length} panelist(s). There is no distribution: the median is one opinion and the interquartile range is zero. Read the numbers below as a single judgment.`,
+        `> This run has ${delphi.panel.length} panelist(s), so it has no distribution. Read the numbers as a single judgment.`,
       )
       out.push('')
     }
@@ -411,7 +411,7 @@ export function buildReport(
       out.push(
         isPanel(delphi)
           ? `No cell has an interquartile range above ${DISSENT_IQR} points.`
-          : `No cell has an interquartile range above ${DISSENT_IQR} points, which with ${delphi.panel.length === 1 ? 'one panelist' : `${delphi.panel.length} panelists`} is a property of the panel size rather than a finding about agreement.`,
+          : `No cell has an interquartile range above ${DISSENT_IQR} points. With ${delphi.panel.length === 1 ? 'one panelist' : `${delphi.panel.length} panelists`}, this reflects panel size, not agreement.`,
       )
     } else {
       out.push(
@@ -471,7 +471,7 @@ export function buildReport(
               ? `Every dimension of the panel column except ${named(clear)} reaches ${WEALTH_CORRELATION_THRESHOLD} or above.`
               : `${named(tracking)} reach ${WEALTH_CORRELATION_THRESHOLD} or above on the panel column.`
       out.push(
-        `A panel of models is not independent evidence. It reads the same published record the indicators come from, so a dimension the indicators cannot measure can come back as a panel number that restates income per head. The panel column is correlated with log GDP per capita here, with the indicator score for the same countries beside it, so the difference is not a difference in coverage. ${verdict}`,
+        `A panel is not independent evidence: it reads the same published record as the indicators. An unmeasured dimension can return a panel number that restates income per head. Here the panel column is correlated with log GDP per capita, with the same-country indicator score beside it. ${verdict}`,
       )
       out.push('')
       out.push(
@@ -504,19 +504,19 @@ export function buildReport(
         const flagged = backfill.filter((d) => d.flaggedAsWealthProxy)
         const unscored = backfill.filter((d) => d.panelR === null)
         out.push(
-          `${backfilled} publish no indicator score at all, so the panel is the only candidate for filling them. ${
+          `${backfilled} have no indicator score, so the panel is the only possible backfill. ${
             unscored.length === backfill.length
-              ? 'This run scores too few countries there to test the panel column.'
+              ? 'This run has too few countries to test the panel.'
               : flagged.length === 0
-                ? 'The panel column stays under the wealth threshold there, which is the first evidence that a panel estimate carries something the retired perception layer did not.'
+                ? 'The panel stays below the wealth threshold there, so it may add something the retired perception layer did not.'
                 : `The panel column reaches the wealth threshold on ${
                     flagged.length === backfill.length
                       ? flagged.length === 1
                         ? 'it'
                         : 'both'
                       : listOf(flagged.map((d) => DIMENSION_LABELS[d.dimension]))
-                  }, so filling the gap that way would restore the measurement the perception layer was retired for.`
-          } Read it against n: this is a small sample and a hint rather than a result.`,
+                  }, so using it as a backfill would restore the problem that led to retiring the perception layer.`
+          } Read it against the sample size: it is a hint, not a result.`,
         )
         out.push('')
       }
@@ -561,10 +561,10 @@ export function buildReport(
   out.push('## These assumptions can be challenged')
   out.push('')
   out.push(
-    `- The 0 to 100 scale is built from every country in the benchmark, and every one of them is measured against it. Adding a country rebases the frame and restates every score, which is a major version bump. See [${DECISIONS_DOC}](${docHref(DECISIONS_DOC)}) D47.`,
+    `- The 0 to 100 scale uses every country in the benchmark. Adding a country rebases the frame and restates every score, which is a major version bump. See [${DECISIONS_DOC}](${docHref(DECISIONS_DOC)}) D47.`,
   )
   out.push('- Indicators inside a dimension carry equal weight. No expert weighting has been applied.')
-  out.push('- A score uses only the most recent observation per indicator. Trends are computed separately, on a matched basket against the current frame, and nothing is interpolated or imputed.')
+  out.push('- Scores use the latest observation per indicator. Trends use a matched basket against the current frame. Nothing is interpolated or imputed.')
   out.push('- Winsorizing uses Tukey fences at three interquartile ranges, so it clips extreme outliers only.')
   out.push('- A missing indicator lowers confidence and is dropped from the mean. It is never imputed.')
   out.push('- Confidence is coverage x recency x source quality and is reported beside the score, never inside it.')

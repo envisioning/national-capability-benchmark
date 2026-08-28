@@ -2,7 +2,7 @@
 
 *Generated 2026-08-28*
 
-Scores are relative to a frame built from all 52 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
+52 countries set the frame. Scores run 0 to 100 per dimension, with no headline ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
 ## Where India stands
 
@@ -10,7 +10,7 @@ Scores are relative to a frame built from all 52 countries together and run 0 to
 | --- | --- | --- | --- |
 | Anticipation | 26.7 | 0.58 (usable) | +17.4 over 10 years, on 3 indicators |
 | Agency | 49.6 | 0.61 (usable) | +27.9 over 10 years, on 4 indicators, 1 clamped at the frame edge |
-| Coordination | not scored | 0.08 (very thin) | no trend basket |
+| Coordination | 82.9 | 0.19 (very thin) | no trend basket |
 | Trust | not scored | 0.08 (very thin) | no trend basket |
 | Learning | 20.2 | 0.55 (usable) | -12.8 over 10 years, on 3 indicators |
 | Experimentation | 9.8 | 0.39 (thin) | +1.7 over 10 years, on 2 indicators |
@@ -18,93 +18,93 @@ Scores are relative to a frame built from all 52 countries together and run 0 to
 | Building | 39 | 0.54 (usable) | +4.9 over 10 years, on 4 indicators |
 | Shared Purpose | 61.8 | 0.23 (very thin) | -2.2 over 10 years, on 2 indicators |
 
-## The dimensions the evidence says to raise
+## Dimensions to raise
 
-Lowest score first. Only dimensions with usable evidence appear here. A low score with thin evidence is a measurement problem before it is a policy problem, and it moves to the next section.
+Lowest score first. Only dimensions with usable evidence appear here. Thin evidence goes to the next section.
 
 ### Learning: 20.2, confidence usable
 
 How effectively does the country acquire, distribute, and update knowledge?
 
-- Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Finland 77.9, Australia 70.3, United Kingdom 68.4.
+- Based on 5 observed indicators.
+- Highest usable scores: Finland 77.9, Australia 70.3, United Kingdom 68.4.
 - Documented deliveries elsewhere: SkillsFuture Credit (Singapore); The public library system (Finland).
-- Declared gaps in this dimension: Adult learning participation, Research citation impact.
+- Declared gaps: Adult learning participation, Research citation impact.
 
 ### Anticipation: 26.7, confidence usable
 
 How capable is the country of identifying and preparing for emerging change?
 
-- Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Sweden 83.5, Finland 82, Switzerland 81.1.
+- Based on 5 observed indicators.
+- Highest usable scores: Sweden 83.5, Finland 82, Switzerland 81.1.
 - Documented deliveries elsewhere: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands).
-- Declared gaps in this dimension: Government foresight capacity, Long-horizon research share.
+- Declared gaps: Government foresight capacity, Long-horizon research share.
 
 ### Adaptability: 38.7, confidence usable
 
 How effectively can the system respond when circumstances change?
 
-- Currently scored on 4 observed indicators.
-- Highest scores with usable evidence: Netherlands 90.1, Switzerland 88.6, Japan 86.1.
+- Based on 4 observed indicators.
+- Highest usable scores: Netherlands 90.1, Switzerland 88.6, Japan 86.1.
 - Documented deliveries elsewhere: Plano Real, the 1994 currency stabilisation (Brazil); Proalcool, the fuel substitution after the oil shock (Brazil); The Convertibility Plan, and its collapse (Argentina); Kurzarbeit in the 2008-2009 crisis (Germany); The 2001 stabilisation, and its unwinding (Turkey).
-- Declared gaps in this dimension: Long-term unemployment share, Export diversification, Disaster preparedness and recovery, Institutional responsiveness.
+- Declared gaps: Long-term unemployment share, Export diversification, Disaster preparedness and recovery, Institutional responsiveness.
 
 ### Building: 39, confidence usable
 
 How capable is the country of turning plans and knowledge into functioning systems?
 
-- Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Ireland 75.3, Singapore 71.2, China 64.9.
+- Based on 5 observed indicators.
+- Highest usable scores: Ireland 75.3, Singapore 71.2, China 64.9.
 - Documented deliveries elsewhere: Pix instant payment system (Brazil); GOV.BR federal identity and service platform (Brazil); X-Road national data exchange layer (Estonia); Electricity supply rebuilt on renewable sources (Uruguay); Plan Ceibal, one connected laptop per child (Uruguay); Sistema Unico de Saude, universal public health system (Brazil); Programa Nacional de Imunizacoes, and its erosion (Brazil); Luz para Todos, rural electrification (Brazil); Bolsa Familia and the single registry behind it (Brazil); Fully electronic national elections (Brazil); Deepwater and pre-salt oil production (Brazil); Seguro Popular, and its abolition (Mexico); Sure Start children's centres, and their erosion (United Kingdom); Grid power, and load shedding (South Africa); Measles elimination, and its erosion (United States).
-- Declared gaps in this dimension: Large project delivery, Firm scale-up rate.
-- Datasets examined and rejected for this dimension: Logistics infrastructure quality.
+- Declared gaps: Large project delivery, Firm scale-up rate.
+- Rejected datasets: Logistics infrastructure quality.
 
 ### Agency: 49.6, confidence usable
 
 How able are individuals and organizations to turn an intention into action?
 
-- Currently scored on 6 observed indicators.
-- Highest scores with usable evidence: United States 92.6, Australia 89.8, United Kingdom 87.5.
-- Declared gaps in this dimension: Adult digital skills, Perceived control over life.
+- Based on 6 observed indicators.
+- Highest usable scores: United States 92.6, Australia 89.8, United Kingdom 87.5.
+- Declared gaps: Adult digital skills, Perceived control over life.
 
-## The dimensions that must be measured before they can be managed
+## Dimensions to measure first
 
-Confidence here is below the usable band, so the score cannot carry a decision. The first intervention is evidence.
-
-### Coordination: confidence 0.08, very thin
-
-How effectively can independent actors organize around shared objectives?
-
-- Currently scored on a single observed indicator.
-- Declared gaps in this dimension: University-industry collaboration, Civil society strength, Public-private collaboration.
-- Datasets examined and rejected for this dimension: Government effectiveness, Regulatory quality, Logistics performance.
+Confidence is below the usable band, so evidence comes before action.
 
 ### Trust: confidence 0.08, very thin
 
 How much cooperation is possible beyond immediate personal networks?
 
-- Currently scored on a single observed indicator.
-- Declared gaps in this dimension: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group.
-- Datasets examined and rejected for this dimension: Rule of law, Control of corruption, Intentional homicide rate.
+- Based on one observed indicator.
+- Declared gaps: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group.
+- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
+
+### Coordination: confidence 0.19, very thin
+
+How effectively can independent actors organize around shared objectives?
+
+- Based on 2 observed indicators.
+- Declared gaps: University-industry collaboration, Civil society strength, Public-private collaboration.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
 ### Shared Purpose: confidence 0.23, very thin
 
 To what extent can people imagine themselves as participants in a common project?
 
-- Currently scored on 2 observed indicators.
-- Declared gaps in this dimension: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
-- Datasets examined and rejected for this dimension: Voice and accountability.
+- Based on 2 observed indicators.
+- Declared gaps: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
+- Rejected datasets: Voice and accountability.
 
 ### Experimentation: confidence 0.39, thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
-- Currently scored on 4 observed indicators.
-- Declared gaps in this dimension: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
+- Based on 4 observed indicators.
+- Declared gaps: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
-## The measurement agenda
+## Measurement agenda
 
-26 indicators the specification asks for with no adequate internationally comparable dataset behind them. Each one lowers confidence until it is filled, and each one is a contribution a statistical agency, a research group or a ministry can make. A gap becomes a scored indicator when a comparable series covers at least two countries.
+26 requested indicators have no adequate comparable dataset. Each lowers confidence. A gap becomes scorable when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -135,12 +135,12 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
 
-## What the indicators cannot see about India
+## What indicators cannot see about India
 
-Documented deliveries filed as evidence records. They never enter a score and never raise confidence. They exist because the gap list above also describes things this country has partly done and cannot yet prove comparably.
+Documented deliveries filed as evidence. They never affect scores or confidence.
 
 - **Pradhan Mantri Jan Dhan Yojana bank accounts** (Building). India opened 590.9 million basic bank accounts through existing banks from 2014, holding 3.17 lakh crore rupees in deposits as of 19 August 2026.
 
-## How to move a number on this page
+## Contribute
 
-Fill a gap, file an evidence record, or contest an indicator at https://github.com/envisioning/national-capability-benchmark. The method, every decision behind it and the evidence that would overturn each one are in the docs directory of the same repository.
+Fill a gap, file evidence, or contest an indicator at https://github.com/envisioning/national-capability-benchmark. The docs explain the method and its decisions.

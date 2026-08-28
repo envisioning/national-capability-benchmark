@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T16:53:28.645Z",
+  "generatedAt": "2026-08-28T22:36:03.198Z",
   "gdpSeries": "NY.GDP.PCAP.PP.KD",
   "dimensionVsGdp": [
     {
@@ -16,9 +16,9 @@
     },
     {
       "dimension": "coordination",
-      "pearson": null,
-      "spearman": null,
-      "n": 0
+      "pearson": 0.467,
+      "spearman": 0.583,
+      "n": 44
     },
     {
       "dimension": "trust",
@@ -143,6 +143,12 @@
       "n": 52
     },
     {
+      "a": "anticipation",
+      "b": "coordination",
+      "r": 0.546,
+      "n": 44
+    },
+    {
       "a": "learning",
       "b": "shared_purpose",
       "r": 0.528,
@@ -155,16 +161,52 @@
       "n": 51
     },
     {
+      "a": "coordination",
+      "b": "building",
+      "r": 0.504,
+      "n": 44
+    },
+    {
+      "a": "agency",
+      "b": "coordination",
+      "r": 0.498,
+      "n": 44
+    },
+    {
       "a": "adaptability",
       "b": "shared_purpose",
       "r": 0.483,
       "n": 46
     },
     {
+      "a": "coordination",
+      "b": "shared_purpose",
+      "r": 0.48,
+      "n": 40
+    },
+    {
       "a": "agency",
       "b": "shared_purpose",
       "r": 0.475,
       "n": 46
+    },
+    {
+      "a": "coordination",
+      "b": "adaptability",
+      "r": 0.401,
+      "n": 44
+    },
+    {
+      "a": "coordination",
+      "b": "learning",
+      "r": 0.388,
+      "n": 44
+    },
+    {
+      "a": "coordination",
+      "b": "experimentation",
+      "r": 0.362,
+      "n": 43
     },
     {
       "a": "learning",
@@ -186,24 +228,12 @@
     },
     {
       "a": "anticipation",
-      "b": "coordination",
-      "r": null,
-      "n": 0
-    },
-    {
-      "a": "anticipation",
       "b": "trust",
       "r": null,
       "n": 0
     },
     {
       "a": "agency",
-      "b": "coordination",
-      "r": null,
-      "n": 0
-    },
-    {
-      "a": "agency",
       "b": "trust",
       "r": null,
       "n": 0
@@ -211,36 +241,6 @@
     {
       "a": "coordination",
       "b": "trust",
-      "r": null,
-      "n": 0
-    },
-    {
-      "a": "coordination",
-      "b": "learning",
-      "r": null,
-      "n": 0
-    },
-    {
-      "a": "coordination",
-      "b": "experimentation",
-      "r": null,
-      "n": 0
-    },
-    {
-      "a": "coordination",
-      "b": "adaptability",
-      "r": null,
-      "n": 0
-    },
-    {
-      "a": "coordination",
-      "b": "building",
-      "r": null,
-      "n": 0
-    },
-    {
-      "a": "coordination",
-      "b": "shared_purpose",
       "r": null,
       "n": 0
     },
@@ -494,6 +494,14 @@
       "flaggedAsWealthProxy": false
     },
     {
+      "indicatorId": "budget_execution_fidelity",
+      "dimension": "coordination",
+      "measurementClass": "C",
+      "r": 0.218,
+      "wealthProxyPrior": 0.15,
+      "flaggedAsWealthProxy": false
+    },
+    {
       "indicatorId": "vocational_secondary_share",
       "dimension": "learning",
       "measurementClass": "I",
@@ -543,6 +551,13 @@
     }
   ],
   "wealthAttribution": [
+    {
+      "indicatorId": "time_to_export",
+      "dimension": "coordination",
+      "dimensionR": 0.515,
+      "dimensionRWithout": 0.218,
+      "delta": 0.297
+    },
     {
       "indicatorId": "labour_productivity",
       "dimension": "building",
@@ -677,13 +692,6 @@
       "delta": 0
     },
     {
-      "indicatorId": "time_to_export",
-      "dimension": "coordination",
-      "dimensionR": 0.547,
-      "dimensionRWithout": null,
-      "delta": null
-    },
-    {
       "indicatorId": "contract_enforcement_days",
       "dimension": "trust",
       "dimensionR": 0.173,
@@ -745,6 +753,13 @@
       "dimensionR": 0.818,
       "dimensionRWithout": 0.845,
       "delta": -0.027
+    },
+    {
+      "indicatorId": "budget_execution_fidelity",
+      "dimension": "coordination",
+      "dimensionR": 0.515,
+      "dimensionRWithout": 0.547,
+      "delta": -0.032
     },
     {
       "indicatorId": "new_business_density",
@@ -809,11 +824,11 @@
         "panelR": 0.862,
         "panelSpearman": 0.888,
         "panelN": 16,
-        "indicatorR": null,
-        "indicatorN": 0,
-        "delta": null,
+        "indicatorR": 0.564,
+        "indicatorN": 15,
+        "delta": 0.298,
         "flaggedAsWealthProxy": true,
-        "backfillCandidate": true
+        "backfillCandidate": false
       },
       {
         "dimension": "trust",
@@ -956,19 +971,19 @@
     },
     {
       "dimension": "coordination",
-      "indicatorsDefined": 7,
-      "indicatorsObserved": 1,
+      "indicatorsDefined": 8,
+      "indicatorsObserved": 2,
       "gaps": 3,
       "retired": 3,
-      "meanCoverage": 0.14,
-      "meanConfidence": 0.077,
+      "meanCoverage": 0.228,
+      "meanConfidence": 0.152,
       "classMix": {
-        "C": 4,
+        "C": 5,
         "I": 0,
         "O": 0,
         "P": 3
       },
-      "subjectivityShare": 0.857
+      "subjectivityShare": 0.75
     },
     {
       "dimension": "trust",
@@ -1092,7 +1107,7 @@
       },
       {
         "dimension": "coordination",
-        "meanAbsShift": null
+        "meanAbsShift": 0
       },
       {
         "dimension": "trust",
@@ -1123,7 +1138,7 @@
       {
         "iso3": "BRA",
         "country": "Brazil",
-        "meanAbsShift": 3.3
+        "meanAbsShift": 2.83
       },
       {
         "iso3": "USA",
@@ -1133,82 +1148,82 @@
       {
         "iso3": "NLD",
         "country": "Netherlands",
-        "meanAbsShift": 3.93
+        "meanAbsShift": 3.37
       },
       {
         "iso3": "CHE",
         "country": "Switzerland",
-        "meanAbsShift": 2.85
+        "meanAbsShift": 2.44
       },
       {
         "iso3": "SGP",
         "country": "Singapore",
-        "meanAbsShift": 8.4
+        "meanAbsShift": 7
       },
       {
         "iso3": "KOR",
         "country": "South Korea",
-        "meanAbsShift": 7.52
+        "meanAbsShift": 6.44
       },
       {
         "iso3": "EST",
         "country": "Estonia",
-        "meanAbsShift": 2.6
+        "meanAbsShift": 2.23
       },
       {
         "iso3": "IND",
         "country": "India",
-        "meanAbsShift": 5.8
+        "meanAbsShift": 4.97
       },
       {
         "iso3": "CHL",
         "country": "Chile",
-        "meanAbsShift": 4.7
+        "meanAbsShift": 4.03
       },
       {
         "iso3": "ZAF",
         "country": "South Africa",
-        "meanAbsShift": 3.25
+        "meanAbsShift": 2.79
       },
       {
         "iso3": "MEX",
         "country": "Mexico",
-        "meanAbsShift": 2.53
+        "meanAbsShift": 2.17
       },
       {
         "iso3": "ARG",
         "country": "Argentina",
-        "meanAbsShift": 4.77
+        "meanAbsShift": 4.09
       },
       {
         "iso3": "COL",
         "country": "Colombia",
-        "meanAbsShift": 2.65
+        "meanAbsShift": 2.27
       },
       {
         "iso3": "PER",
         "country": "Peru",
-        "meanAbsShift": 4.52
+        "meanAbsShift": 3.87
       },
       {
         "iso3": "URY",
         "country": "Uruguay",
-        "meanAbsShift": 2.83
+        "meanAbsShift": 2.43
       },
       {
         "iso3": "CRI",
         "country": "Costa Rica",
-        "meanAbsShift": 2.72
+        "meanAbsShift": 2.33
       },
       {
         "iso3": "DEU",
         "country": "Germany",
-        "meanAbsShift": 5.35
+        "meanAbsShift": 4.59
       },
       {
         "iso3": "FRA",
         "country": "France",
-        "meanAbsShift": 3.97
+        "meanAbsShift": 3.4
       },
       {
         "iso3": "GBR",
@@ -1218,12 +1233,12 @@
       {
         "iso3": "ESP",
         "country": "Spain",
-        "meanAbsShift": 4.63
+        "meanAbsShift": 3.97
       },
       {
         "iso3": "POL",
         "country": "Poland",
-        "meanAbsShift": 5.93
+        "meanAbsShift": 5.09
       },
       {
         "iso3": "SWE",
@@ -1233,12 +1248,12 @@
       {
         "iso3": "FIN",
         "country": "Finland",
-        "meanAbsShift": 3.63
+        "meanAbsShift": 3.11
       },
       {
         "iso3": "IRL",
         "country": "Ireland",
-        "meanAbsShift": 6.52
+        "meanAbsShift": 5.43
       },
       {
         "iso3": "CAN",
@@ -1248,47 +1263,47 @@
       {
         "iso3": "AUS",
         "country": "Australia",
-        "meanAbsShift": 3.18
+        "meanAbsShift": 2.73
       },
       {
         "iso3": "JPN",
         "country": "Japan",
-        "meanAbsShift": 5.3
+        "meanAbsShift": 4.54
       },
       {
         "iso3": "CHN",
         "country": "China",
-        "meanAbsShift": 3.2
+        "meanAbsShift": 2.74
       },
       {
         "iso3": "IDN",
         "country": "Indonesia",
-        "meanAbsShift": 6
+        "meanAbsShift": 5.14
       },
       {
         "iso3": "VNM",
         "country": "Vietnam",
-        "meanAbsShift": 7.66
+        "meanAbsShift": 6.38
       },
       {
         "iso3": "PHL",
         "country": "Philippines",
-        "meanAbsShift": 4.93
+        "meanAbsShift": 4.23
       },
       {
         "iso3": "MYS",
         "country": "Malaysia",
-        "meanAbsShift": 5.8
+        "meanAbsShift": 4.97
       },
       {
         "iso3": "THA",
         "country": "Thailand",
-        "meanAbsShift": 6.32
+        "meanAbsShift": 5.41
       },
       {
         "iso3": "TUR",
         "country": "Turkey",
-        "meanAbsShift": 5.3
+        "meanAbsShift": 4.54
       },
       {
         "iso3": "ISR",
@@ -1303,37 +1318,37 @@
       {
         "iso3": "NGA",
         "country": "Nigeria",
-        "meanAbsShift": 6.24
+        "meanAbsShift": 5.2
       },
       {
         "iso3": "KEN",
         "country": "Kenya",
-        "meanAbsShift": 3.6
+        "meanAbsShift": 3.09
       },
       {
         "iso3": "RWA",
         "country": "Rwanda",
-        "meanAbsShift": 6.23
+        "meanAbsShift": 5.34
       },
       {
         "iso3": "ETH",
         "country": "Ethiopia",
-        "meanAbsShift": 4.38
+        "meanAbsShift": 3.76
       },
       {
         "iso3": "BOL",
         "country": "Bolivia",
-        "meanAbsShift": 5.15
+        "meanAbsShift": 4.41
       },
       {
         "iso3": "PRY",
         "country": "Paraguay",
-        "meanAbsShift": 4.3
+        "meanAbsShift": 3.69
       },
       {
         "iso3": "ECU",
         "country": "Ecuador",
-        "meanAbsShift": 4.18
+        "meanAbsShift": 3.59
       },
       {
         "iso3": "VEN",
@@ -1343,32 +1358,32 @@
       {
         "iso3": "PAN",
         "country": "Panama",
-        "meanAbsShift": 2.25
+        "meanAbsShift": 1.93
       },
       {
         "iso3": "GTM",
         "country": "Guatemala",
-        "meanAbsShift": 5.73
+        "meanAbsShift": 4.91
       },
       {
         "iso3": "HND",
         "country": "Honduras",
-        "meanAbsShift": 4.42
+        "meanAbsShift": 3.79
       },
       {
         "iso3": "SLV",
         "country": "El Salvador",
-        "meanAbsShift": 2.77
+        "meanAbsShift": 2.37
       },
       {
         "iso3": "NIC",
         "country": "Nicaragua",
-        "meanAbsShift": 5.17
+        "meanAbsShift": 4.43
       },
       {
         "iso3": "DOM",
         "country": "Dominican Republic",
-        "meanAbsShift": 3.77
+        "meanAbsShift": 3.23
       },
       {
         "iso3": "CUB",
@@ -1378,7 +1393,7 @@
       {
         "iso3": "HTI",
         "country": "Haiti",
-        "meanAbsShift": 6.07
+        "meanAbsShift": 4.86
       }
     ],
     "rankChanges": [
@@ -1695,7 +1710,7 @@
     }
   ],
   "outOfFrame": {
-    "observedCells": 1604,
+    "observedCells": 1648,
     "clampedCells": 0,
     "share": 0,
     "perCountry": []

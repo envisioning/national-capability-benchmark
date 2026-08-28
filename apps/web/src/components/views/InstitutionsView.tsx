@@ -24,6 +24,9 @@ const CONTROL =
 
 const INITIAL_ID = 'bra.federal.bndes'
 const MAX_GRAPH_NEIGHBORS = 12
+const OVERVIEW_SYSTEMS = Object.keys(INSTITUTION_SYSTEM_LABELS_PT_BR) as InstitutionSystem[]
+
+type GraphMode = 'overview' | 'focus'
 
 type Connection = {
   edge: InstitutionEdge
@@ -206,6 +209,211 @@ function NetworkDiagram({
   )
 }
 
+type OverviewPoint = { x: number; y: number }
+type OverviewBox = {
+  system: InstitutionSystem
+  label: string
+  count: number
+  x: number
+  y: number
+  width: number
+  height: number
+}
+
+function overviewLayout(nodes: LocalizedInstitutionNode[]) {
+  const columnCount = 5
+  const boxWidth = 228
+  const boxHeight = 196
+  const gapX = 12
+  const gapY = 18
+  const margin = 16
+  const points = new Map<string, OverviewPoint>()
+  const boxes: OverviewBox[] = []
+
+  OVERVIEW_SYSTEMS.forEach((system, index) => {
+    const members = nodes
+      .filter((node) => node.system === system)
+      .sort((a, b) => a.shortName.localeCompare(b.shortName, 'pt-BR'))
+    const column = index % columnCount
+    const row = Math.floor(index / columnCount)
+    const x = margin + column * (boxWidth + gapX)
+    const y = margin + row * (boxHeight + gapY)
+    boxes.push({
+      system,
+      label: INSTITUTION_SYSTEM_LABELS_PT_BR[system],
+      count: members.length,
+      x,
+      y,
+      width: boxWidth,
+      height: boxHeight,
+    })
+
+    members.forEach((node, memberIndex) => {
+      const memberColumn = memberIndex % 2
+      const memberRow = Math.floor(memberIndex / 2)
+      points.set(node.id, {
+        x: x + 59 + memberColumn * 110,
+        y: y + 64 + memberRow * 28,
+      })
+    })
+  })
+
+  return {
+    points,
+    boxes,
+    width: margin * 2 + columnCount * boxWidth + (columnCount - 1) * gapX,
+    height: margin * 2 + 2 * boxHeight + gapY,
+  }
+}
+
+function OverviewDiagram({
+  network,
+  selectedId,
+  onSelect,
+}: {
+  network: LocalizedInstitutionNetwork
+  selectedId: string
+  onSelect: (id: string) => void
+}) {
+  const layout = useMemo(() => overviewLayout(network.nodes), [network.nodes])
+
+  return (
+    <div className="overflow-x-auto pb-2">
+      <svg
+        viewBox={`0 0 ${layout.width} ${layout.height}`}
+        className="min-w-[760px] w-full"
+        role="img"
+        aria-label={`Rede geral com ${network.nodes.length} instituições e ${network.edges.length} relações, agrupada por sistema`}
+      >
+        <defs>
+          <marker
+            id="institution-overview-arrow"
+            viewBox="0 0 10 10"
+            refX="8"
+            refY="5"
+            markerWidth="4"
+            markerHeight="4"
+            orient="auto-start-reverse"
+          >
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--muted)" />
+          </marker>
+          <marker
+            id="institution-overview-arrow-active"
+            viewBox="0 0 10 10"
+            refX="8"
+            refY="5"
+            markerWidth="4"
+            markerHeight="4"
+            orient="auto-start-reverse"
+          >
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--primary)" />
+          </marker>
+        </defs>
+
+        {layout.boxes.map((box) => (
+          <rect
+            key={`${box.system}-background`}
+            x={box.x}
+            y={box.y}
+            width={box.width}
+            height={box.height}
+            rx="8"
+            fill="var(--surface-sunken)"
+          />
+        ))}
+
+        {network.edges.map((edge) => {
+          const source = layout.points.get(edge.sourceId)
+          const target = layout.points.get(edge.targetId)
+          if (!source || !target) return null
+          const active = edge.sourceId === selectedId || edge.targetId === selectedId
+          return (
+            <line
+              key={edge.id}
+              x1={source.x}
+              y1={source.y}
+              x2={target.x}
+              y2={target.y}
+              stroke={active ? 'var(--primary)' : 'var(--rule)'}
+              strokeWidth={active ? 1.8 : 1}
+              opacity={active ? 0.95 : 0.55}
+              markerEnd={`url(#institution-overview-arrow${active ? '-active' : ''})`}
+            />
+          )
+        })}
+
+        {layout.boxes.map((box) => (
+          <g key={box.system}>
+            <rect
+              x={box.x}
+              y={box.y}
+              width={box.width}
+              height={box.height}
+              rx="8"
+              fill="none"
+              stroke="var(--rule)"
+            />
+            <text
+              x={box.x + 12}
+              y={box.y + 23}
+              fill="var(--foreground)"
+              fontSize="11"
+              fontWeight="500"
+            >
+              {box.label}
+            </text>
+            <text x={box.x + box.width - 12} y={box.y + 23} textAnchor="end" fill="var(--muted)" fontSize="10">
+              {box.count}
+            </text>
+          </g>
+        ))}
+
+        {network.nodes.map((node) => {
+          const point = layout.points.get(node.id)
+          if (!point) return null
+          const selected = node.id === selectedId
+          return (
+            <g
+              key={node.id}
+              role="button"
+              tabIndex={0}
+              aria-label={`Selecionar ${node.officialName}`}
+              onClick={() => onSelect(node.id)}
+              onKeyDown={(event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                  event.preventDefault()
+                  onSelect(node.id)
+                }
+              }}
+              className="cursor-pointer"
+            >
+              <rect
+                x={point.x - 50}
+                y={point.y - 10}
+                width="100"
+                height="20"
+                rx="4"
+                fill={selected ? 'var(--primary)' : 'var(--surface)'}
+                stroke={selected ? 'var(--primary)' : 'var(--rule)'}
+              />
+              <text
+                x={point.x}
+                y={point.y + 3.5}
+                textAnchor="middle"
+                fill={selected ? 'var(--score-strong-ink)' : 'var(--foreground)'}
+                fontSize="9"
+                fontWeight={selected ? '600' : '400'}
+              >
+                {node.shortName.length > 17 ? `${node.shortName.slice(0, 16)}…` : node.shortName}
+              </text>
+            </g>
+          )
+        })}
+      </svg>
+    </div>
+  )
+}
+
 function institutionMatches(
   node: LocalizedInstitutionNode,
   query: string,
@@ -237,6 +445,7 @@ export function InstitutionsView({ network }: { network: LocalizedInstitutionNet
   const [query, setQuery] = useState('')
   const [level, setLevel] = useState<InstitutionLevel | ''>('')
   const [system, setSystem] = useState<InstitutionSystem | ''>('')
+  const [graphMode, setGraphMode] = useState<GraphMode>('overview')
 
   const byId = useMemo(() => new Map(network.nodes.map((node) => [node.id, node])), [network.nodes])
   const selected = byId.get(selectedId) ?? network.nodes[0]
@@ -312,7 +521,38 @@ export function InstitutionsView({ network }: { network: LocalizedInstitutionNet
 
       <div className="grid gap-8 lg:grid-cols-[minmax(0,1.6fr)_minmax(18rem,0.8fr)]">
         <div className="min-w-0">
-          <NetworkDiagram selected={selected} connections={connections} onSelect={setSelectedId} />
+          <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+            <p className="text-xs uppercase tracking-[0.05em] text-[var(--muted)]">Como ler a rede</p>
+            <div className="flex gap-2" role="group" aria-label="Modo de leitura da rede">
+              <button
+                type="button"
+                aria-pressed={graphMode === 'overview'}
+                onClick={() => setGraphMode('overview')}
+                className={`${CONTROL} ${graphMode === 'overview' ? 'border-[var(--primary)]' : ''}`}
+              >
+                Visão geral
+              </button>
+              <button
+                type="button"
+                aria-pressed={graphMode === 'focus'}
+                onClick={() => setGraphMode('focus')}
+                className={`${CONTROL} ${graphMode === 'focus' ? 'border-[var(--primary)]' : ''}`}
+              >
+                Explorar instituição
+              </button>
+            </div>
+          </div>
+          {graphMode === 'overview' ? (
+            <>
+              <OverviewDiagram network={network} selectedId={selected.id} onSelect={setSelectedId} />
+              <p className="mt-2 text-xs text-[var(--muted)]">
+                Cada ponto é uma instituição. Os blocos agrupam os sistemas; as linhas mostram relações
+                documentadas. Clique em um ponto para abrir o perfil.
+              </p>
+            </>
+          ) : (
+            <NetworkDiagram selected={selected} connections={connections} onSelect={setSelectedId} />
+          )}
         </div>
 
         <aside

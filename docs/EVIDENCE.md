@@ -102,7 +102,7 @@ Records are hand-written JSON in `data/evidence/records.json`. The schema is
   number cannot hold. An `eroded` record pairs the current value with the peak
   it fell from (`bra-pni`: 91 percent in 2024 against 99 in 2003). A delivery
   record can pair scale with a cost or schedule figure, which is what
-  `large_project_delivery` actually asks for. The `name` on each metric says
+  `large_project_delivery` asks for. The `name` on each metric says
   which is which. The validator warns on an `eroded` record without one.
 
 - **`started`** — the year delivery began.
@@ -140,13 +140,12 @@ Every record in the corpus was authored this way; follow it and yours will
 survive review.
 
 1. **Verify before you write.** Open the source URL on the day you author the
-   record and read the number there. Never write a number from memory, from a
-   press summary, or from a search-result snippet — those are leads, not
-   sources. If you cannot see the number at the URL, the record does not get
-   written.
+   record and read the number there. Never write a number from memory, a press
+   summary or a search-result snippet. Those are leads, not sources. If you
+   cannot see the number at the URL, do not write the record.
 
-2. **`retrievedAt` is the day you actually looked.** It is a claim that the
-   URL opened and carried the number on that date, made by you.
+2. **`retrievedAt` is the day you checked.** It says the URL opened and carried
+   the number on that date.
 
 3. **Prefer the page a machine can check.** A statistical API beats a
    statistics page, which beats a press release, which beats a report. When
@@ -184,5 +183,5 @@ two reference countries (D20). Promotion strands the records filed against it,
 and the validator starts warning that they add nothing the score does not
 carry. Handle them in the same change that promotes the gap: delete each
 stranded record, and name the deleted ids in the decision entry that records
-the promotion. The case is not lost — the decision entry is the record that it
-once stood in for the score, and git keeps the text.
+the promotion. The case remains in git. The decision entry records what it once
+stood in for.

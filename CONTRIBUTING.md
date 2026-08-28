@@ -1,14 +1,11 @@
 # Contributing
 
-This benchmark is built to be contributed to. The measurement problem it works
-on is bigger than any one organisation: most of what makes a country capable is
-not yet measured anywhere, and the registry says so out loud. The gap list is
-the invitation.
+This benchmark is open to contributions. Most of what makes a country capable is
+not measured anywhere yet. The gap list shows where help is needed.
 
-Every contribution lands against the same discipline. Scores are computed,
-never edited. Decisions are appended to `docs/DECISIONS.md`, never rewritten.
-Evidence carries its source, its year and its limits. If a change cannot
-survive those rules, it does not belong here, however good the intention.
+Every contribution follows the same discipline. Scores are computed, never
+edited. Decisions are appended to `docs/DECISIONS.md`. Evidence carries its
+source, year and limits. Changes that cannot meet these rules do not belong here.
 
 ## What you can contribute
 

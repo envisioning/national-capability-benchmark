@@ -104,9 +104,14 @@ export default async function CapabilityPage({
 
       <Section
         title="Countries share one comparison frame"
-        hint="The table opens alphabetically. Sort by score, confidence, coverage or trend. A score needs at least two observed indicators. Trends use only indicators observed at both ends of the span."
+        hint="The table opens alphabetically. Sort by score, confidence, coverage or trend. Scores need two observed indicators; trends use indicators observed at both ends."
         icon={<Icon name={DIMENSION_ICON[dimension]} size={22} />}
       >
+        <p className="mb-4 max-w-2xl text-xs leading-relaxed text-[var(--muted)]">
+          Every country is scored the same way, as a position from 0 to 100 on a scale built from all
+          of them together. In the strip below, each dot is a country, the box spans the middle half
+          of the field, and the line inside it is the median. A hollow dot is thin evidence.
+        </p>
         <CapabilityCountryTable
           dimension={dimension}
           rows={rows}

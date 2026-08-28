@@ -2,7 +2,7 @@
 
 *Gerado em 2026-08-28*
 
-As notas são relativas a uma régua construída a partir dos 52 países em conjunto e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
+Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
 ## Onde o Brasil está
 
@@ -10,7 +10,7 @@ As notas são relativas a uma régua construída a partir dos 52 países em conj
 | --- | --- | --- | --- |
 | Antecipação | 37,3 | 0,54 (utilizável) | +10,8 em 10 anos, sobre 4 indicadores |
 | Agência | 59,6 | 0,61 (utilizável) | +20 em 10 anos, sobre 4 indicadores |
-| Coordenação | sem nota | 0,08 (muito fraca) | sem base de tendência |
+| Coordenação | 84,4 | 0,16 (muito fraca) | sem base de tendência |
 | Confiança | sem nota | 0,08 (muito fraca) | sem base de tendência |
 | Aprendizagem | 43,2 | 0,54 (utilizável) | +5,5 em 10 anos, sobre 2 indicadores |
 | Experimentação | 30 | 0,39 (fraca) | +6,9 em 10 anos, sobre 2 indicadores |
@@ -18,83 +18,83 @@ As notas são relativas a uma régua construída a partir dos 52 países em conj
 | Construção | 25,3 | 0,54 (utilizável) | -1,3 em 10 anos, sobre 4 indicadores |
 | Propósito compartilhado | 34,9 | 0,27 (fraca) | +8,6 em 10 anos, sobre 2 indicadores |
 
-## As dimensões que a evidência manda elevar
+## Dimensões para elevar
 
-Da nota mais baixa para a mais alta. Só entram aqui dimensões com evidência utilizável. Uma nota baixa com evidência fraca é antes um problema de medição do que de política pública, e vai para a próxima seção.
+Da nota mais baixa para a mais alta. Só entram dimensões com evidência utilizável. Evidência fraca vai para a próxima seção.
 
 ### Construção: 25,3, confiança utilizável
 
 Quão capaz é o país de transformar planos e conhecimento em sistemas que funcionam?
 
-- Hoje a nota se apoia em 5 indicadores observados.
-- Maiores notas com evidência utilizável: Irlanda 75,3, Singapura 71,2, China 64,9.
+- Baseada em 5 indicadores observados.
+- Maiores notas utilizáveis: Irlanda 75,3, Singapura 71,2, China 64,9.
 - Entregas documentadas em outros países: X-Road national data exchange layer (Estônia); Pradhan Mantri Jan Dhan Yojana bank accounts (Índia); Electricity supply rebuilt on renewable sources (Uruguai); Plan Ceibal, one connected laptop per child (Uruguai); Seguro Popular, and its abolition (México); Sure Start children's centres, and their erosion (Reino Unido); Grid power, and load shedding (África do Sul); Measles elimination, and its erosion (Estados Unidos).
-- Lacunas declaradas nesta dimensão: Entrega de grandes projetos, Empresas jovens que ganham escala.
-- Bases de dados examinadas e rejeitadas para esta dimensão: Qualidade da infraestrutura logística.
+- Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
+- Bases rejeitadas: Qualidade da infraestrutura logística.
 
 ### Antecipação: 37,3, confiança utilizável
 
 Quão capaz é o país de identificar mudanças emergentes e se preparar para elas?
 
-- Hoje a nota se apoia em 5 indicadores observados.
-- Maiores notas com evidência utilizável: Suécia 83,5, Finlândia 82, Suíça 81,1.
+- Baseada em 5 indicadores observados.
+- Maiores notas utilizáveis: Suécia 83,5, Finlândia 82, Suíça 81,1.
 - Entregas documentadas em outros países: The Delta Programme and its fund (Países Baixos).
-- Lacunas declaradas nesta dimensão: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
+- Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
 ### Aprendizagem: 43,2, confiança utilizável
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
-- Hoje a nota se apoia em 5 indicadores observados.
-- Maiores notas com evidência utilizável: Finlândia 77,9, Austrália 70,3, Reino Unido 68,4.
+- Baseada em 5 indicadores observados.
+- Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,4.
 - Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia).
-- Lacunas declaradas nesta dimensão: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
+- Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
-## As dimensões que precisam ser medidas antes de serem geridas
+## Dimensões para medir primeiro
 
-Aqui a confiança está abaixo da faixa utilizável, então a nota não sustenta uma decisão. A primeira intervenção é produzir evidência.
-
-### Coordenação: confiança 0,08, muito fraca
-
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
-
-- Hoje a nota se apoia em um único indicador observado.
-- Lacunas declaradas nesta dimensão: Colaboração universidade-empresa, Força da sociedade civil, Colaboração público-privada.
-- Bases de dados examinadas e rejeitadas para esta dimensão: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
+A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
 ### Confiança: confiança 0,08, muito fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
 
-- Hoje a nota se apoia em um único indicador observado.
-- Lacunas declaradas nesta dimensão: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo.
-- Bases de dados examinadas e rejeitadas para esta dimensão: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
+- Baseada em um indicador observado.
+- Lacunas declaradas: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
+
+### Coordenação: confiança 0,16, muito fraca
+
+Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+
+- Baseada em 2 indicadores observados.
+- Lacunas declaradas: Colaboração universidade-empresa, Força da sociedade civil, Colaboração público-privada.
+- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
 ### Propósito compartilhado: confiança 0,27, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
-- Hoje a nota se apoia em 2 indicadores observados.
-- Lacunas declaradas nesta dimensão: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
-- Bases de dados examinadas e rejeitadas para esta dimensão: Voz e responsabilização.
+- Baseada em 2 indicadores observados.
+- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
+- Bases rejeitadas: Voz e responsabilização.
 
 ### Experimentação: confiança 0,39, fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
-- Hoje a nota se apoia em 4 indicadores observados.
-- Lacunas declaradas nesta dimensão: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
+- Baseada em 4 indicadores observados.
+- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
-## As dimensões que a evidência manda manter
+## Dimensões para manter
 
-Da nota mais alta para a mais baixa. Estas dimensões pontuam 50 ou mais com evidência utilizável, então nada aqui pede elevação ou medição primeiro. Uma dimensão mantida ainda decai quando ninguém a observa.
+Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência utilizável. Ainda precisam ser acompanhadas.
 
 - Agência: 59,6, confiança utilizável
 - Adaptação: 56,8, confiança utilizável
 
-## A agenda de medição
+## Agenda de medição
 
-26 indicadores que a especificação pede e para os quais não existe base de dados internacional comparável adequada. Cada um reduz a confiança enquanto não for preenchido, e cada um é uma contribuição ao alcance de um órgão de estatística, um grupo de pesquisa ou um ministério. Uma lacuna vira indicador com nota quando uma série comparável cobre pelo menos dois países.
+26 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -125,9 +125,9 @@ Da nota mais alta para a mais baixa. Estas dimensões pontuam 50 ou mais com evi
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 | Propósito compartilhado | Participação cívica | Participação ativa em associações, sindicatos, partidos e organizações comunitárias. |
 
-## O que os indicadores não conseguem ver sobre o Brasil
+## O que os indicadores não veem sobre o Brasil
 
-Entregas documentadas, arquivadas como registros de evidência. Elas nunca entram em uma nota e nunca elevam a confiança. Existem porque a lista de lacunas acima também descreve coisas que este país já fez em parte e ainda não consegue provar de forma comparável.
+Entregas documentadas como evidência. Elas nunca afetam as notas ou a confiança.
 
 - **Pix instant payment system** (Construção). Brazil's central bank specified, built and ran a mandatory instant payment rail that settled 7.98 billion transactions in July 2026, for 152 million people and 14 million firms transacting in that month.
 - **GOV.BR federal identity and service platform** (Construção). Brazil consolidated federal public services behind one identity platform, reporting 175 million active accounts and 5,179 digital services in May 2026.
@@ -141,6 +141,6 @@ Entregas documentadas, arquivadas como registros de evidência. Elas nunca entra
 - **Proalcool, the fuel substitution after the oil shock** (Adaptação). Brazil answered the 1973 oil shock by mandating ethanol blending and building a national fuel alcohol industry, taking production from 580 thousand cubic metres in 1975 to 38,199 in 2025, and from 2003 flex-fuel engines moved the choice to the driver.
 - **Deepwater and pre-salt oil production** (Construção). Brazil developed deepwater extraction, found the pre-salt fields in 2006 and produced them at depths of more than 5,000 metres, with national oil production rising from 71,844 thousand cubic metres in 2000 to 219,032 in 2025.
 
-## Como mover um número desta página
+## Contribua
 
-Preencha uma lacuna, registre uma evidência ou conteste um indicador em https://github.com/envisioning/national-capability-benchmark. O método, cada decisão por trás dele e a evidência que derrubaria cada uma estão no diretório docs do mesmo repositório.
+Preencha uma lacuna, registre uma evidência ou conteste um indicador em https://github.com/envisioning/national-capability-benchmark. Os documentos explicam o método e suas decisões.

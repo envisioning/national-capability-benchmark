@@ -98,7 +98,7 @@ export default async function SourcesPage() {
 
       <Section
         title="The data comes from one API call per series"
-        hint={`The ingester requests one series for all ${COUNTRY_ISO3.length} countries, from ${INGEST_FROM_YEAR} onward. Scoring uses the latest value; older values feed trends.`}
+        hint={`Requests cover all ${COUNTRY_ISO3.length} countries from ${INGEST_FROM_YEAR} onward. Scoring uses the latest value; older values feed trends.`}
         icon={<Icon name="globe" size={22} />}
       >
         {example ? (
@@ -120,9 +120,9 @@ export default async function SourcesPage() {
         ) : null}
 
         <p className="mt-6 max-w-3xl text-lg leading-relaxed">
-          The database id is part of each registry row. World Development Indicators is the default;
-          other databases need a source parameter. These {countWord(databases.length)} databases are
-          the ones the project uses.
+          Each registry row carries a database id. World Development Indicators is the default;
+          other databases need a source parameter. The project uses {countWord(databases.length)}
+          databases.
         </p>
 
         <Scroller>
@@ -153,7 +153,7 @@ export default async function SourcesPage() {
 
       <Section
         title="Publishers and their data"
-        hint={`A publisher with no fetched rows is a planned source. Values count country cells: one series across ${COUNTRY_ISO3.length} countries counts ${COUNTRY_ISO3.length} times.`}
+        hint={`No fetched rows means a planned source. Values count country cells, so one series across ${COUNTRY_ISO3.length} countries counts ${COUNTRY_ISO3.length} times.`}
       >
         <Scroller>
           <Table>
@@ -248,7 +248,7 @@ export default async function SourcesPage() {
 
       <Section
         title={`${capitalize(countWord(retired.length))} retired series ${retired.length === 1 ? 'is' : 'are'} excluded`}
-        hint="A retired row has a dataset, but this project rejected its measure. It stays visible so the decision can be challenged and its missing coverage lowers confidence."
+        hint="A retired row has a rejected dataset. It stays visible so the decision can be challenged and lowers confidence."
         icon={<Icon name="archive" size={22} />}
       >
         <Scroller>
@@ -283,8 +283,7 @@ export default async function SourcesPage() {
         </Scroller>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
           {capitalize(countWord(perception))} are perception composites. The exception is the
-          homicide rate, retired after diagnostics showed it was carrying income into a trust score.
-          The{' '}
+          homicide rate, retired after diagnostics showed it carried income into a trust score. The{' '}
           <Link href={limitsHref} className="underline underline-offset-4">
             limits page
           </Link>{' '}
@@ -298,13 +297,13 @@ export default async function SourcesPage() {
             <a href={docHref('data/out/datapackage.json')} className="underline underline-offset-4">
               datapackage.json
             </a>{' '}
-            is a Frictionless Data Package descriptor listing the files, schemas, license and sources.
+            lists the files, schemas, license and sources.
           </li>
           <li>
             <a href={docHref('data/observations/worldbank.json')} className="underline underline-offset-4">
               worldbank.json
             </a>{' '}
-            holds fetched values with their year, tier and retrieval date, from {INGEST_FROM_YEAR} on.
+            holds fetched values with year, tier and retrieval date, from {INGEST_FROM_YEAR} on.
           </li>
           <li>
             <a href={docHref('data/observations/revisions.json')} className="underline underline-offset-4">
@@ -316,12 +315,12 @@ export default async function SourcesPage() {
             <a href={docHref('packages/core/src/model/indicators.ts')} className="underline underline-offset-4">
               indicators.ts
             </a>{' '}
-            is the registry. It declares each publisher, series code, database id and ingest route.
+            is the registry of publishers, series codes, database ids and ingest routes.
           </li>
         </ul>
         <Note>
-          Data is committed to the repository. The site shows the last data run, and changed values
-          appear in the revision log.
+          Data is committed to the repository. The site shows the last run; changed values appear
+          in the revision log.
         </Note>
       </Section>
     </>

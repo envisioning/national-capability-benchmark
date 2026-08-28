@@ -27,8 +27,8 @@ export function IndicatorRegistry({ dimension }: { dimension?: Dimension } = {})
       }
       hint={
         dimension
-          ? `${indicatorsFor(dimension).length} indicators define what this capability can see. Declared gaps and retired rows stay visible because they lower confidence and form the collection agenda. Click any heading to sort.`
-          : `${INDICATORS.length} indicators. ${gaps} are gaps with no adequate international dataset. ${retired} are retired rows with a dataset this project rejected. Both remain because they lower confidence and set the collection agenda. Click a heading to sort.`
+          ? `${indicatorsFor(dimension).length} indicators define this capability. Gaps and retired rows stay visible because they lower confidence. Click a heading to sort.`
+          : `${INDICATORS.length} indicators: ${gaps} gaps and ${retired} retired. Both lower confidence and set the collection agenda. Click a heading to sort.`
       }
     >
       <ClassLegend />

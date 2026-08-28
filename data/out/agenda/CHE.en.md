@@ -2,7 +2,7 @@
 
 *Generated 2026-08-28*
 
-Scores are relative to a frame built from all 52 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
+52 countries set the frame. Scores run 0 to 100 per dimension, with no headline ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
 ## Where Switzerland stands
 
@@ -10,7 +10,7 @@ Scores are relative to a frame built from all 52 countries together and run 0 to
 | --- | --- | --- | --- |
 | Anticipation | 81.1 | 0.64 (usable) | +8.3 over 10 years, on 5 indicators, 1 clamped at the frame edge |
 | Agency | 76.1 | 0.51 (usable) | +1.8 over 10 years, on 3 indicators |
-| Coordination | not scored | 0.08 (very thin) | no trend basket |
+| Coordination | 98.3 | 0.14 (very thin) | no trend basket |
 | Trust | not scored | 0.08 (very thin) | no trend basket |
 | Learning | 65.1 | 0.54 (usable) | +5.1 over 10 years, on 2 indicators |
 | Experimentation | 50.7 | 0.39 (thin) | +1.8 over 10 years, on 2 indicators |
@@ -18,44 +18,44 @@ Scores are relative to a frame built from all 52 countries together and run 0 to
 | Building | 58.1 | 0.54 (usable) | +2.6 over 10 years, on 4 indicators |
 | Shared Purpose | 52.2 | 0.25 (very thin) | -1 over 10 years, on 2 indicators |
 
-## The dimensions that must be measured before they can be managed
+## Dimensions to measure first
 
-Confidence here is below the usable band, so the score cannot carry a decision. The first intervention is evidence.
-
-### Coordination: confidence 0.08, very thin
-
-How effectively can independent actors organize around shared objectives?
-
-- Currently scored on a single observed indicator.
-- Declared gaps in this dimension: University-industry collaboration, Civil society strength, Public-private collaboration.
-- Datasets examined and rejected for this dimension: Government effectiveness, Regulatory quality, Logistics performance.
+Confidence is below the usable band, so evidence comes before action.
 
 ### Trust: confidence 0.08, very thin
 
 How much cooperation is possible beyond immediate personal networks?
 
-- Currently scored on a single observed indicator.
-- Declared gaps in this dimension: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group.
-- Datasets examined and rejected for this dimension: Rule of law, Control of corruption, Intentional homicide rate.
+- Based on one observed indicator.
+- Declared gaps: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group.
+- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
+
+### Coordination: confidence 0.14, very thin
+
+How effectively can independent actors organize around shared objectives?
+
+- Based on 2 observed indicators.
+- Declared gaps: University-industry collaboration, Civil society strength, Public-private collaboration.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
 ### Shared Purpose: confidence 0.25, very thin
 
 To what extent can people imagine themselves as participants in a common project?
 
-- Currently scored on 2 observed indicators.
-- Declared gaps in this dimension: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
-- Datasets examined and rejected for this dimension: Voice and accountability.
+- Based on 2 observed indicators.
+- Declared gaps: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
+- Rejected datasets: Voice and accountability.
 
 ### Experimentation: confidence 0.39, thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
-- Currently scored on 4 observed indicators.
-- Declared gaps in this dimension: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
+- Based on 4 observed indicators.
+- Declared gaps: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
-## The dimensions the evidence says to hold
+## Dimensions to hold
 
-Strongest first. These score at or above 50 on usable evidence, so nothing here asks to be raised or measured first. A held dimension still decays when nobody watches it.
+Strongest first. These score at least 50 with usable evidence. They still need watching.
 
 - Adaptability: 88.6, confidence usable
 - Anticipation: 81.1, confidence usable
@@ -63,9 +63,9 @@ Strongest first. These score at or above 50 on usable evidence, so nothing here 
 - Learning: 65.1, confidence usable
 - Building: 58.1, confidence usable
 
-## The measurement agenda
+## Measurement agenda
 
-26 indicators the specification asks for with no adequate internationally comparable dataset behind them. Each one lowers confidence until it is filled, and each one is a contribution a statistical agency, a research group or a ministry can make. A gap becomes a scored indicator when a comparable series covers at least two countries.
+26 requested indicators have no adequate comparable dataset. Each lowers confidence. A gap becomes scorable when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -96,12 +96,12 @@ Strongest first. These score at or above 50 on usable evidence, so nothing here 
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
 
-## What the indicators cannot see about Switzerland
+## What indicators cannot see about Switzerland
 
-Documented deliveries filed as evidence records. They never enter a score and never raise confidence. They exist because the gap list above also describes things this country has partly done and cannot yet prove comparably.
+Documented deliveries filed as evidence. They never affect scores or confidence.
 
 - **Dual-track vocational training** (Coordination). Switzerland runs most upper-secondary education through firms: of 218,259 students enrolled in vocational education and training in 2020, 90.6 percent, 197,782, were apprentices trained inside companies under federal law.
 
-## How to move a number on this page
+## Contribute
 
-Fill a gap, file an evidence record, or contest an indicator at https://github.com/envisioning/national-capability-benchmark. The method, every decision behind it and the evidence that would overturn each one are in the docs directory of the same repository.
+Fill a gap, file evidence, or contest an indicator at https://github.com/envisioning/national-capability-benchmark. The docs explain the method and its decisions.

@@ -2176,3 +2176,48 @@ cross-country construction whose network measures survive differences in
 documentation coverage. The first would replace the curated skeleton. The
 second would justify considering a network measure as evidence, but it would
 still need a separate decision before entering any score.
+
+---
+
+## D55 — Budget execution is the first API-backed Coordination replacement
+
+*Recorded 2026-08-28. Extends D45 and D52. Evidence from the World Bank probe
+and the 4.1.0 ingest.*
+
+**Choice.** Add `budget_execution_fidelity` to Coordination using World Bank
+series `GF.XPD.BUDG.ZS`. The series measures primary government expenditure as a
+proportion of the original approved budget. The registry applies a new
+`distance_from_100` transform and scores the absolute distance from 100 with
+`lower_better`, so both underspending and overspending count as deviation.
+
+The series covers 44 of the 52 countries, reaches 2024, and correlates with log
+GDP per capita at 0.285 in the pre-wiring probe. After ingest, it gives 44
+countries a second observed Coordination indicator beside border compliance
+time. Those countries now receive a Coordination score under D45. The dataset
+version moves from 4.0.0 to 4.1.0 because an indicator was added without adding
+a country.
+
+**Why.** A country has to carry approved plans into actual spending before it
+can coordinate public action. This is an observable administrative result, and
+the API is reproducible. It also improves coverage without restoring the WGI
+perception composites that made Coordination track income.
+
+**Cost.** Budget execution is still a proxy. A close match between planned and
+actual spending does not show that agencies agreed on an objective, delivered
+it, or produced a useful result. The series has uneven country coverage, its
+latest value varies by country, and the score remains thin because Coordination
+still has six other gap or retired rows. The absolute-distance transform is a
+modelled choice: a small deviation may be healthy under a shock, while a value
+near 100 may hide poor delivery against a badly designed budget.
+
+Generative estimates remain a separate layer. A gateway or in-session Delphi
+run may estimate Coordination and Trust where indicator evidence is missing,
+but generated values stay in `delphiScore` and `blendedScore`; they never enter
+`DimensionResult.score`, the observation file, or confidence. A real gateway
+run requires `AI_GATEWAY_API_KEY` and multi-vendor panel configuration. A mock
+run exercises the pipeline and is not evidence.
+
+**Overturned by.** Cross-country delivery evidence showing that budget
+execution fidelity has little relationship to the ability of independent actors
+to complete shared objectives, or a better comparable indicator that measures
+joint delivery directly and survives the same wealth-attribution test.

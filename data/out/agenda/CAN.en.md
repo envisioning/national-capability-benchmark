@@ -2,7 +2,7 @@
 
 *Generated 2026-08-28*
 
-Scores are relative to a frame built from all 52 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
+52 countries set the frame. Scores run 0 to 100 per dimension, with no headline ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
 ## Where Canada stands
 
@@ -10,7 +10,7 @@ Scores are relative to a frame built from all 52 countries together and run 0 to
 | --- | --- | --- | --- |
 | Anticipation | 66.3 | 0.64 (usable) | +6.5 over 10 years, on 5 indicators |
 | Agency | 79.4 | 0.49 (usable) | +1.5 over 10 years, on 2 indicators |
-| Coordination | not scored | 0.08 (very thin) | no trend basket |
+| Coordination | not scored | 0.07 (very thin) | no trend basket |
 | Trust | not scored | 0.08 (very thin) | no trend basket |
 | Learning | 56.6 | 0.53 (usable) | +3.5 over 10 years, on 2 indicators |
 | Experimentation | 24.8 | 0.18 (very thin) | -5.1 over 10 years, on 2 indicators |
@@ -18,67 +18,67 @@ Scores are relative to a frame built from all 52 countries together and run 0 to
 | Building | 32.8 | 0.52 (usable) | -0.4 over 10 years, on 4 indicators |
 | Shared Purpose | 64.2 | 0.25 (very thin) | +4.4 over 10 years, on 2 indicators |
 
-## The dimensions the evidence says to raise
+## Dimensions to raise
 
-Lowest score first. Only dimensions with usable evidence appear here. A low score with thin evidence is a measurement problem before it is a policy problem, and it moves to the next section.
+Lowest score first. Only dimensions with usable evidence appear here. Thin evidence goes to the next section.
 
 ### Building: 32.8, confidence usable
 
 How capable is the country of turning plans and knowledge into functioning systems?
 
-- Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Ireland 75.3, Singapore 71.2, China 64.9.
+- Based on 5 observed indicators.
+- Highest usable scores: Ireland 75.3, Singapore 71.2, China 64.9.
 - Documented deliveries elsewhere: Pix instant payment system (Brazil); GOV.BR federal identity and service platform (Brazil); X-Road national data exchange layer (Estonia); Pradhan Mantri Jan Dhan Yojana bank accounts (India); Electricity supply rebuilt on renewable sources (Uruguay); Plan Ceibal, one connected laptop per child (Uruguay); Sistema Unico de Saude, universal public health system (Brazil); Programa Nacional de Imunizacoes, and its erosion (Brazil); Luz para Todos, rural electrification (Brazil); Bolsa Familia and the single registry behind it (Brazil); Fully electronic national elections (Brazil); Deepwater and pre-salt oil production (Brazil); Seguro Popular, and its abolition (Mexico); Sure Start children's centres, and their erosion (United Kingdom); Grid power, and load shedding (South Africa); Measles elimination, and its erosion (United States).
-- Declared gaps in this dimension: Large project delivery, Firm scale-up rate.
-- Datasets examined and rejected for this dimension: Logistics infrastructure quality.
+- Declared gaps: Large project delivery, Firm scale-up rate.
+- Rejected datasets: Logistics infrastructure quality.
 
-## The dimensions that must be measured before they can be managed
+## Dimensions to measure first
 
-Confidence here is below the usable band, so the score cannot carry a decision. The first intervention is evidence.
+Confidence is below the usable band, so evidence comes before action.
 
-### Coordination: confidence 0.08, very thin
+### Coordination: confidence 0.07, very thin
 
 How effectively can independent actors organize around shared objectives?
 
-- Currently scored on a single observed indicator.
-- Declared gaps in this dimension: University-industry collaboration, Civil society strength, Public-private collaboration.
-- Datasets examined and rejected for this dimension: Government effectiveness, Regulatory quality, Logistics performance.
+- Based on one observed indicator.
+- Declared gaps: University-industry collaboration, Civil society strength, Public-private collaboration.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
 ### Trust: confidence 0.08, very thin
 
 How much cooperation is possible beyond immediate personal networks?
 
-- Currently scored on a single observed indicator.
-- Declared gaps in this dimension: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group.
-- Datasets examined and rejected for this dimension: Rule of law, Control of corruption, Intentional homicide rate.
+- Based on one observed indicator.
+- Declared gaps: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group.
+- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
 ### Experimentation: confidence 0.18, very thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
-- Currently scored on 2 observed indicators.
-- Declared gaps in this dimension: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
+- Based on 2 observed indicators.
+- Declared gaps: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
 ### Shared Purpose: confidence 0.25, very thin
 
 To what extent can people imagine themselves as participants in a common project?
 
-- Currently scored on 2 observed indicators.
-- Declared gaps in this dimension: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
-- Datasets examined and rejected for this dimension: Voice and accountability.
+- Based on 2 observed indicators.
+- Declared gaps: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
+- Rejected datasets: Voice and accountability.
 
-## The dimensions the evidence says to hold
+## Dimensions to hold
 
-Strongest first. These score at or above 50 on usable evidence, so nothing here asks to be raised or measured first. A held dimension still decays when nobody watches it.
+Strongest first. These score at least 50 with usable evidence. They still need watching.
 
 - Adaptability: 80.7, confidence usable
 - Agency: 79.4, confidence usable
 - Anticipation: 66.3, confidence usable
 - Learning: 56.6, confidence usable
 
-## The measurement agenda
+## Measurement agenda
 
-26 indicators the specification asks for with no adequate internationally comparable dataset behind them. Each one lowers confidence until it is filled, and each one is a contribution a statistical agency, a research group or a ministry can make. A gap becomes a scored indicator when a comparable series covers at least two countries.
+26 requested indicators have no adequate comparable dataset. Each lowers confidence. A gap becomes scorable when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -109,6 +109,6 @@ Strongest first. These score at or above 50 on usable evidence, so nothing here 
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
 
-## How to move a number on this page
+## Contribute
 
-Fill a gap, file an evidence record, or contest an indicator at https://github.com/envisioning/national-capability-benchmark. The method, every decision behind it and the evidence that would overturn each one are in the docs directory of the same repository.
+Fill a gap, file evidence, or contest an indicator at https://github.com/envisioning/national-capability-benchmark. The docs explain the method and its decisions.

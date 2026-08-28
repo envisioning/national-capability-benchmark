@@ -36,27 +36,27 @@ export const WB_DATABASES: Record<number, WbDatabase> = {
   2: {
     id: 2,
     name: 'World Development Indicators',
-    note: 'The default database, and the only one the API needs no source parameter for.',
+    note: 'Default database; no source parameter needed.',
   },
   1: {
     id: 1,
     name: 'Doing Business',
-    note: 'Discontinued and frozen at 2019, so the recency term marks every value from it down.',
+    note: 'Discontinued and frozen at 2019. Recency marks its values down.',
   },
   3: {
     id: 3,
     name: 'Worldwide Governance Indicators',
-    note: 'Perception composites, and every indicator this project took from it is now retired. Series codes carry a GOV_WGI_ prefix that the same codes do not have elsewhere.',
+    note: 'Perception composites; all rows from it are retired. Codes use the GOV_WGI_ prefix.',
   },
   63: {
     id: 63,
     name: 'Human Capital Index',
-    note: 'Last full round 2020.',
+    note: 'Last full round: 2020.',
   },
   70: {
     id: 70,
     name: 'Economic Fitness 2',
-    note: 'A research database rather than a headline series.',
+    note: 'Research database.',
   },
 }
 
