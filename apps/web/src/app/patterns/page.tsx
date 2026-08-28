@@ -1,6 +1,7 @@
 import { PatternsView } from '@/components/views/PatternsView'
 import { Empty, Eyebrow, Headline, Highlight, PageTitle } from '@/components/ui'
 import { loadEvidence } from '@/lib/data'
+import { readPatternFilters } from '@/lib/links'
 
 export const dynamic = 'force-dynamic'
 
@@ -10,7 +11,14 @@ export const metadata = {
     'Documented national deliveries, filed against the indicators that should have measured them: the number, the mechanism, and its limits.',
 }
 
-export default async function PatternsPage() {
+export default async function PatternsPage({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>
+}) {
+  /* The filters arrive in the URL, so the first render is already narrowed and
+   * a shared link shows what the sender saw. See D46. */
+  const filters = readPatternFilters(await searchParams)
   const records = await loadEvidence()
   if (records.length === 0) {
     return <Empty hint="No evidence records yet. Add them to data/evidence/records.json." />
@@ -38,7 +46,7 @@ export default async function PatternsPage() {
         has its own page, and none of this enters any score.
       </p>
 
-      <PatternsView records={records} />
+      <PatternsView records={records} initial={filters} />
     </>
   )
 }

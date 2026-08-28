@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { CountryAgenda, Dimension, Lexicon } from '@ncb/core'
 import {
   RAISE_BELOW,
-  REFERENCE_ISO3,
+  COUNTRY_ISO3,
   REPO_URL,
   countryName,
   countryTopic,
@@ -110,7 +110,7 @@ export function AgendaView({
 
       <p className="mb-4 max-w-3xl text-lg leading-relaxed">
         {fillNodes(s.intro, {
-          reference: REFERENCE_ISO3.length,
+          countries: COUNTRY_ISO3.length,
           /* The viewer has its own limits page, so {limits} lands there. The
            * rendered markdown keeps the repository link, because a document
            * reaches readers who have neither the site nor a checkout. See D41. */

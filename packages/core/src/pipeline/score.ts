@@ -2,7 +2,6 @@ import {
   COUNTRIES,
   COUNTRY_ISO3,
   DISSENT_IQR,
-  REFERENCE_ISO3,
   DIMENSIONS,
   INDICATORS,
   SOURCE_TIERS,
@@ -44,7 +43,7 @@ export type Cell = {
   year: number
   sourceTier: SourceTier
   clipped: boolean
-  /** The raw value sat outside the reference frame and the score was clamped. */
+  /** The raw value sat outside the frame and the score was clamped. */
   outOfFrame: boolean
 }
 
@@ -110,12 +109,13 @@ function transformedRows(
 }
 
 /**
- * The normalization frame per indicator, built from the reference countries'
- * latest values.
+ * The normalization frame per indicator, built from every country's latest
+ * value.
  *
  * This is the ruler. Scores and trends are both measured against it, so a
  * change in a country's score over time is a change in the country rather than
- * a change in the scale. See docs/DECISIONS.md D16 and D22.
+ * a change in the scale. The frame holds still within a dataset version and is
+ * rebased when the country set changes. See docs/DECISIONS.md D47 and D22.
  */
 export function buildFrames(
   observations: Observation[],
@@ -128,7 +128,7 @@ export function buildFrames(
     if (opts.exclude?.has(def.id)) continue
     const rows = transformedRows(def, byKey)
     const frame = buildFrame(
-      rows.filter((r) => REFERENCE_ISO3.includes(r.iso3)).map((r) => r.transformed),
+      rows.map((r) => r.transformed),
       opts.winsorK ?? 3,
     )
     if (frame) frames.set(def.id, frame)

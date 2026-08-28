@@ -35,8 +35,8 @@ export function applyTransform(
 }
 
 /**
- * The normalization frame: the fences and the endpoints, computed once from the
- * reference countries and then applied to everybody.
+ * The normalization frame: the fences and the endpoints, computed once from
+ * every country's values and then applied to all of them.
  */
 export type Frame = {
   /** Tukey fences, for winsorizing. */
@@ -48,16 +48,17 @@ export type Frame = {
 }
 
 /**
- * Build the frame from the reference values only.
+ * Build the frame from every country's values.
  *
- * Everything downstream is measured against this. That is what lets a new
- * country be added without moving anybody else's score, and it is why the
- * reference set has to stay fixed. See docs/DECISIONS.md D16.
+ * Everything downstream is measured against this, and every country that is
+ * measured against it also helped set it. Adding a country therefore moves the
+ * frame, which is a rebase and a major version bump rather than a routine data
+ * load. See docs/DECISIONS.md D47, which supersedes D16.
  */
-export function buildFrame(referenceValues: number[], k = 3): Frame | null {
-  if (referenceValues.length < 2) return null
-  const { lo, hi } = tukeyFences(referenceValues, k)
-  const clipped = referenceValues.map((v) => Math.min(hi, Math.max(lo, v)))
+export function buildFrame(values: number[], k = 3): Frame | null {
+  if (values.length < 2) return null
+  const { lo, hi } = tukeyFences(values, k)
+  const clipped = values.map((v) => Math.min(hi, Math.max(lo, v)))
   return { lo, hi, min: Math.min(...clipped), max: Math.max(...clipped) }
 }
 
@@ -67,16 +68,18 @@ export type Scored = {
   /** 0 to 100 against the frame, clamped. */
   normalized: number
   winsorized: boolean
-  /** True when the raw value sat outside the reference frame and was clamped. */
+  /** True when the raw value sat outside the frame and was clamped. */
   outOfFrame: boolean
 }
 
 /**
  * Score one value against the frame, reversing lower-is-better indicators.
  *
- * A country outside the frame clamps to 0 or 100 and is flagged. Clamping is
- * preferred over extending the scale because extending it would change what 0
- * and 100 mean, which is the thing this design exists to prevent.
+ * A current value cannot fall outside a frame its own country helped build. A
+ * historical value can, and so can a value that arrives after the frame was
+ * fixed for a published version. Either one clamps to 0 or 100 and is flagged.
+ * Clamping is preferred over moving an endpoint between runs, because moving it
+ * would change what every published number means.
  */
 export function scoreAgainstFrame(
   value: number,

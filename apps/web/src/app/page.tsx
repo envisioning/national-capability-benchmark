@@ -85,7 +85,7 @@ export default async function Page() {
 
       <Section
         title="Each country comes out a different shape"
-        hint="Scores run 0 to 100 against a frame fixed by ten reference countries, and every country is measured the same way. We never compute a composite. Two countries with the same average can have opposite profiles, and that difference is the whole point of the exercise. Open any country to read it dimension by dimension and to hold a second country against it."
+        hint="Scores run 0 to 100 against a frame built from every country in the benchmark, and every country is measured the same way. We never compute a composite. Two countries with the same average can have opposite profiles, and that difference is the whole point of the exercise. Open any country to read it dimension by dimension and to hold a second country against it."
       >
         <DimensionLegend />
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">

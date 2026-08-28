@@ -2,32 +2,32 @@
 
 *Generated 2026-08-27*
 
-Scores are relative to a frame fixed by the 10 reference countries and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
+Scores are relative to a frame built from all 40 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
 
 ## Where China stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 18.5 | 0.64 (usable) | +7.8 over 10 years, on 5 indicators, 2 clamped at the frame edge |
-| Agency | 71.5 | 0.61 (usable) | +38.1 over 10 years, on 4 indicators, 2 clamped at the frame edge |
+| Anticipation | 26.3 | 0.64 (usable) | +13.9 over 10 years, on 5 indicators, 1 clamped at the frame edge |
+| Agency | 82 | 0.61 (usable) | +28.8 over 10 years, on 4 indicators |
 | Coordination | not scored | 0.08 (very thin) | no trend basket |
 | Trust | not scored | 0.08 (very thin) | no trend basket |
-| Learning | 56.4 | 0.56 (usable) | +15.6 over 10 years, on 2 indicators, 1 clamped at the frame edge |
-| Experimentation | 97.2 | 0.18 (very thin) | +36.5 over 10 years, on 2 indicators, 1 clamped at the frame edge |
-| Adaptability | 81.8 | 0.47 (usable) | +13.5 over 10 years, on 4 indicators |
-| Building | 64.4 | 0.54 (usable) | -3.3 over 10 years, on 4 indicators, 1 clamped at the frame edge |
-| Shared Purpose | 31.9 | 0.25 (very thin) | -0.7 over 10 years, on 2 indicators |
+| Learning | 62.5 | 0.56 (usable) | +13 over 10 years, on 2 indicators, 1 clamped at the frame edge |
+| Experimentation | 100 | 0.18 (very thin) | +30.6 over 10 years, on 2 indicators |
+| Adaptability | 80.2 | 0.47 (usable) | +12 over 10 years, on 4 indicators |
+| Building | 62.8 | 0.54 (usable) | -2.2 over 10 years, on 4 indicators |
+| Shared Purpose | 43.8 | 0.25 (very thin) | +0.7 over 10 years, on 2 indicators |
 
 ## The dimensions the evidence says to raise
 
 Lowest score first. Only dimensions with usable evidence appear here. A low score with thin evidence is a measurement problem before it is a policy problem, and it moves to the next section.
 
-### Anticipation: 18.5, confidence usable
+### Anticipation: 26.3, confidence usable
 
 How capable is the country of identifying and preparing for emerging change?
 
 - Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Finland 83, Switzerland 81.1, South Korea 79.3.
+- Highest scores with usable evidence: Sweden 82.9, Finland 81.1, Switzerland 80.
 - Documented deliveries elsewhere: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands).
 - Declared gaps in this dimension: Government foresight capacity, Long-horizon research share.
 
@@ -70,14 +70,14 @@ To what extent can people imagine themselves as participants in a common project
 
 Strongest first. These score at or above 50 on usable evidence, so nothing here asks to be raised or measured first. A held dimension still decays when nobody watches it.
 
-- Adaptability: 81.8, confidence usable
-- Agency: 71.5, confidence usable
-- Building: 64.4, confidence usable
-- Learning: 56.4, confidence usable
+- Agency: 82, confidence usable
+- Adaptability: 80.2, confidence usable
+- Building: 62.8, confidence usable
+- Learning: 62.5, confidence usable
 
 ## The measurement agenda
 
-26 indicators the specification asks for with no adequate internationally comparable dataset behind them. Each one lowers confidence until it is filled, and each one is a contribution a statistical agency, a research group or a ministry can make. A gap becomes a scored indicator when a comparable series covers at least two reference countries.
+26 indicators the specification asks for with no adequate internationally comparable dataset behind them. Each one lowers confidence until it is filled, and each one is a contribution a statistical agency, a research group or a ministry can make. A gap becomes a scored indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |

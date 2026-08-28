@@ -23,7 +23,7 @@ export function EvidenceList({ records }: { records: EvidenceRecord[] }) {
       <p className="mb-4 max-w-3xl text-xs leading-relaxed text-[var(--muted)]">
         Each record documents something the indicators above cannot see. Records stay outside the
         score and outside the confidence, because one country with a case study is still one
-        country. They become a score when a comparable series covers at least two reference
+        country. They become a score when a comparable series covers at least two
         countries.
       </p>
       <ul className="space-y-5">

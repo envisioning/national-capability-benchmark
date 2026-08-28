@@ -11,7 +11,7 @@ import { mean, round } from './stats.js'
  * Two rules make the number mean something. Both are decisions, not details.
  *
  * 1. **One ruler.** Historical values are scored against the frame built from
- *    the reference countries' current values. The scale does not move, so a
+ *    every country's current values. The scale does not move, so a
  *    change in the score is a change in the country. A country that was far
  *    outside today's frame clamps at 0 or 100 and the clamp is counted.
  *

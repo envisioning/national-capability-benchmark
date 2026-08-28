@@ -98,31 +98,31 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: 'Score',
     group: 'How a number is made',
     short: 'A position from 0 to 100 inside a fixed comparison frame.',
-    full: 'A dimension score runs from 0 to 100, where 0 is the weakest and 100 the strongest of the ten reference countries on that measure. It is a position in a frame, so a score of 10 means near the floor of this particular comparison. It does not mean ten percent of a capability, and it is not a percentage of anything.',
+    full: 'A dimension score runs from 0 to 100, where 0 is the weakest and 100 the strongest country in the benchmark on that measure. It is a position in a frame, so a score of 10 means near the floor of this particular comparison. It does not mean ten percent of a capability, and it is not a percentage of anything.',
   },
   {
     term: 'Score band',
     group: 'How a number is made',
     short: 'Four named ranges a score falls in: weak, below middle, above middle, strong.',
-    full: 'Every score chip is colored by one of four bands. The labels are frame-relative on purpose: strong means near the top of the ten reference countries on that dimension, not strong in any absolute sense, and weak means near the floor of that same comparison. A weak score deserves a look at its confidence before anything is read into it.',
+    full: 'Every score chip is colored by one of four bands. The labels are frame-relative on purpose: strong means near the top of the countries in the benchmark on that dimension, not strong in any absolute sense, and weak means near the floor of that same comparison. A weak score deserves a look at its confidence before anything is read into it.',
   },
   {
-    term: 'Reference frame',
+    term: 'Comparison frame',
     group: 'How a number is made',
-    short: 'The ten countries whose values fix the ends of every scale.',
-    full: 'The endpoints of every indicator scale come from ten reference countries and nothing else. Every other country is measured against that same fixed frame, which is what lets a new country be added without moving anybody else\'s published number. It was checked twice as countries were added: zero of 90 existing cells moved at 16 countries, and zero of 144 at 40. The cost is that those ten were chosen to expose contrasts and are not a sample of the world.',
+    short: 'The countries whose values fix the ends of every scale.',
+    full: 'The endpoints of every indicator scale come from every country in the benchmark. There is no privileged subset that sets the ruler for the others, because a country measured against a frame it is not part of can only be told how far it is from somewhere else. The frame holds still inside a published version, so a score that moves between two runs of the same version is the country moving. Adding a country changes the frame and restates every score, which is published as a frame rebase.',
   },
   {
-    term: 'Extended country',
+    term: 'Frame rebase',
     group: 'How a number is made',
-    short: 'A country scored against the frame without being part of it.',
-    full: 'The ten reference countries set the frame. Every country added after that is extended: it is measured against the fixed frame and its values never move an endpoint, which is what makes adding it safe for everything already published. The cost falls on the extended country itself: a value beyond what the frame covers clamps to 0 or 100 and is flagged as out of frame.',
+    short: 'Recomputing every scale after the country set changes, and saying so.',
+    full: 'Because every country sets the frame, adding one moves the endpoints of the scales it touches and restates numbers already published. That is done as one announced act: the dataset version takes a major bump, the whole benchmark is scored again, and the old numbers are not comparable with the new ones. It is never done quietly as a side effect of loading data.',
   },
   {
     term: 'Normalization',
     group: 'How a number is made',
     short: 'Turning a raw value into a 0 to 100 position, reversing where lower is better.',
-    full: 'Raw values arrive in different units: days, percentages, counts per million. Normalization places each value inside the reference frame for that indicator and returns a 0 to 100 position. Indicators where a lower number is better, such as days to enforce a contract, are reversed, so higher is always better after normalization.',
+    full: 'Raw values arrive in different units: days, percentages, counts per million. Normalization places each value inside the comparison frame for that indicator and returns a 0 to 100 position. Indicators where a lower number is better, such as days to enforce a contract, are reversed, so higher is always better after normalization.',
   },
   {
     term: 'Winsorizing',
@@ -133,8 +133,8 @@ export const GLOSSARY: GlossaryEntry[] = [
   {
     term: 'Out of frame',
     group: 'How a number is made',
-    short: 'A value beyond the reference range, so its score is clamped and flagged.',
-    full: 'A country outside the range the reference frame covers has its score clamped to 0 or 100 and the cell is flagged. Clamping loses information, and it is preferred over widening the scale, because widening would silently change what every already-published number means.',
+    short: 'A value beyond the ends of the scale, so its score is clamped and flagged.',
+    full: 'The frame is built from the latest value of every country, so a current value sits inside it by construction. A historical value can sit outside it, and so can a value that arrives after the frame was fixed for the published version. Either one is clamped to 0 or 100 and the cell is flagged, because moving an endpoint between runs would silently change what every already-published number means. Clamping loses information, and the flag is how you see where.',
   },
   {
     term: 'Confidence',
@@ -162,6 +162,13 @@ export const GLOSSARY: GlossaryEntry[] = [
     full: 'Every value carries the kind of source it came from: official statistical agency, international organization, academic survey, composite index, expert panel or model panel. The tier feeds the source quality part of confidence and never touches the score. It matters most when sources are mixed: a Brazilian ministry series and a World Bank series can sit in the same line, and the reader should be able to see which is which.',
   },
   {
+    term: 'Ingest route',
+    group: 'How a number is made',
+    short: 'How a value reaches the dataset: fetched from an API, entered by hand, or not collected at all.',
+    full: 'Every indicator declares one of four routes. Fetched means a public API call gets it, and re-running the fetch reproduces the number. Entered by hand means a person read it off a published table because the publisher offers no API, and the value carries the date it was read. Declared gap means nobody collects it comparably yet. Retired means a dataset exists and this project rejected it. The last two routes carry no value and lower the confidence of their dimension.',
+    example: 'Two of the 67 indicators are entered by hand, both from the Global Entrepreneurship Monitor, which publishes its adult population survey as a table and not as a feed.',
+  },
+  {
     term: 'Gap',
     group: 'What is missing',
     short: 'An indicator the model asks for that no comparable dataset covers.',
@@ -178,7 +185,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: 'Evidence record',
     group: 'What sits beside the score',
     short: 'A documented national delivery, filed against a gap, never scored.',
-    full: 'Where a country visibly did the thing an indicator is supposed to measure, the case is written down: one published number, its reference period, a source, and a required statement of what the case does not show. Each record states where the delivery stands today: still operating, delivered and closed, operating below its peak, or dismantled. A record of erosion carries a second number, the peak the loss is measured against. Records never enter a score and never raise confidence. A gap becomes a real indicator only when a comparable series covers at least two reference countries.',
+    full: 'Where a country visibly did the thing an indicator is supposed to measure, the case is written down: one published number, its reference period, a source, and a required statement of what the case does not show. Each record states where the delivery stands today: still operating, delivered and closed, operating below its peak, or dismantled. A record of erosion carries a second number, the peak the loss is measured against. Records never enter a score and never raise confidence. A gap becomes a real indicator only when a comparable series covers at least two countries.',
     example: 'Brazil’s records run from Embrapa in 1973 to Pix in 2020. The immunisation programme is recorded as operating below its peak: 99 percent coverage in 2003, 91 percent in 2024.',
   },
   {
@@ -222,7 +229,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: 'Wealth proxy',
     group: 'How good the evidence is',
     short: 'An indicator that mostly restates income per head.',
-    full: 'Each indicator is correlated against log GDP per capita. Above 0.7 it is flagged as tracking income rather than capability, and the whole model is re-scored with those indicators removed to see how much the profiles depend on them. This test is the reason the perception layer was retired.',
+    full: 'Each indicator is correlated against log GDP per capita. Above 0.7 it is flagged as tracking income rather than capability, and the whole model is re-scored with those indicators removed to see how much the profiles depend on them. This test is the reason the perception layer was retired. The panel estimates take the same test, because a panel of models reads the same published record the indicators come from and can restate income per head under a new name.',
   },
   {
     term: 'Capability agenda',

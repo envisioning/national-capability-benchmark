@@ -1742,8 +1742,16 @@ countries.
 The index keeps its dimension grouping and gains five controls: a text search
 over the title, claim, limits, mechanism, preconditions, country and publisher;
 a country select; a dimension select; a status select that also offers
-reversals as one class; and a switch for records that carry a mechanism. The
-controls are local state, so a filtered list has no address of its own.
+reversals as one class; and a switch for records that carry a mechanism.
+
+The filters are the query string, `?q=`, `?country=`, `?dimension=`, `?status=`
+and `?mechanism=1`. `readPatternFilters` and `patternsHref` in
+`apps/web/src/lib/links.ts` parse and build that shape, and both the server page
+and the client view use them, so the address is read where it is written. The
+page reads `searchParams` and renders the narrowed list, which means a shared
+link shows what the sender saw with no client round trip. Each control change
+rewrites the address with `history.replaceState`, so a keystroke never reaches
+the server. Unrecognised values are dropped and the full list renders.
 
 One card renders in both places. `apps/web/src/components/PatternCard.tsx` holds
 the metadata line, the metrics line, the mechanism block and the limits line,
@@ -1766,15 +1774,169 @@ kind of loss, and scrolling is the wrong answer to it.
   scrolling. Nothing outside the viewer wrote one, and `evidenceHref` was
   already the only place that built it.
 - The index sends the whole corpus to the browser to filter it. At 33 records
-  that is small, and it will not stay small. A server-filtered list is the next
-  move, and it needs the filter state in the URL first.
-- Filter state is local, so a reader cannot share a filtered view. The record
-  permalinks are the thing that had to be shareable, and they are.
+  that is small, and it will not stay small. The filter state is in the URL
+  already, so moving the filtering to the server is the next move and needs no
+  new contract.
+- `replaceState` keeps 30 filter changes out of the history stack, and the cost
+  is that the back button does not step through them. It leaves the page.
+- The query string is a published surface now. Renaming a dimension id or a
+  status value breaks a link somebody saved.
 - Two more routes to keep in `outputFileTracingIncludes` reasoning. Both read
   `data/evidence`, which is already listed.
 
 **Overturned by.** The corpus growing past the point where shipping it to the
-browser is reasonable, which turns the filters into query parameters and the
-index into a server-rendered list. Or evidence that readers never use the
+browser is reasonable, which makes the index a server-rendered list reading the
+same query parameters. Or evidence that readers never use the
 record pages, which would mean the anchor was enough and the cost was the two
 extra clicks to reach a mechanism.
+
+---
+
+## D47 — Every country sets the frame it is scored against
+
+*Supersedes D16. Recorded 2026-08-27.*
+
+**Choice.** An indicator's Tukey fences and its 0 and 100 endpoints are computed
+over **every country in the benchmark**. There is no reference set and no
+extended set. The `frame` field is gone from `packages/core/src/model/countries.ts`,
+and `REFERENCE_ISO3`, `EXTENDED_ISO3` and `COUNTRY_FRAMES` are gone with it.
+`buildFrame` takes all transformed values.
+
+Stability moves from a privileged subset to the version number. The frame holds
+still inside a published dataset version. Adding a country rebases the frame,
+restates every score, and takes a **major** bump. That amends the D37 bump
+rules: a country addition is no longer minor.
+
+**Why.** D16 bought comparability across runs by scoring 30 countries against a
+ruler built from the other ten. That is a measurement claim the data cannot
+support. A country measured against a frame it is absent from is not being
+placed among its peers; it is being told its distance from ten countries chosen
+in the prototype to expose contrasts. When the value falls outside their range
+the number stops being a measurement at all and becomes the sentence "beyond
+these ten", written as 0 or 100.
+
+D27 already recorded the cost arriving: 165 of 1,303 observed cells clamped,
+12.7 percent, concentrated in Ethiopia, Nigeria, Rwanda and Kenya. A10 said
+watch the flag. The flag was firing on one seventh of the low-income evidence.
+The stability D16 protected was real, but it was the stability of a scale that
+had stopped describing a third of the countries on it.
+
+**What the rebase did.** At 40 countries, 356 of 360 dimension cells moved. The
+mean move is 3.8 points and the largest is 21.7 (South Africa, Agency). Clamped
+current cells go from 165 to **0**, which is now structural: a value cannot fall
+outside a frame its own country helped build.
+
+**Cost.**
+
+- **Every published number from 2.0.0 is restated.** The dataset is 3.0.0 and
+  the two are not comparable. Anything quoting a 2.0.0 score is stale.
+- **Every future country addition is a rebase.** This is the guarantee D16
+  bought, given up on purpose. Adding a country is now announced, versioned and
+  followed by a full rescore, and it can no longer be a side effect of loading
+  data.
+- **Correlation with income rose.** Anticipation 0.85 to 0.87, Agency 0.79 to
+  0.81, Building 0.56 to 0.59, Experimentation 0.40 to 0.52, Shared Purpose 0.33
+  to 0.46. Unclamping the low-income countries restored their spread, and that
+  spread is largely income-ordered. The clamp had been hiding the strength of
+  A3, not weakening it. No dimension pair passes the redundancy threshold, so
+  D27's finding survives the rebase.
+- **`outOfFrame` now means something narrower.** A current cell cannot set it.
+  It fires on history scored against the current frame, where it still carries
+  the trend caveat: 53 of 485 momentum baskets hold a clamped member.
+- The frame is now sensitive to which countries happen to be loaded, which is
+  what D2 was criticised for. The difference is that the sensitivity is
+  declared, versioned and rescored rather than silent.
+
+**Overturned by.** Absolute anchoring per indicator, which would remove the
+country set from the scale entirely and make a score comparable across
+versions. It needs a defensible floor and ceiling for each of the 33 scored
+indicators, hand-set and defended one at a time, and it trades a frame that
+describes this set for one that describes a claim about the world.
+
+---
+
+## D48 — The panel column takes the same wealth test as the indicators
+
+**Choice.** `diagnostics.json` gains `panelVsGdp`. It correlates the published
+`delphiScore` column with log GDP per capita, dimension by dimension, and prints
+the indicator score for the countries the panel covered beside it. The
+`WEALTH_CORRELATION_THRESHOLD` of D42 flags a dimension the same way it flags an
+indicator. `backfillCandidate` marks the dimensions that publish no indicator
+score at all, because those are the only places a panel estimate could become
+the published number. A run that is not evidential reports its provenance and no
+rows: correlating mock estimates would produce a figure that reads as a finding.
+
+**Why.** The panel was described as evidence the indicators cannot reach. It is
+not independent evidence. A language model reads the same published record the
+indicators are drawn from, plus press coverage, so the perception layer D23
+retired can return through the panel wearing a new name. D42 tests that
+mechanism on indicators and nothing tested it on the panel. Every Delphi surface
+gated on provenance and panel size, which are questions about who produced the
+number, and none asked what the number tracks.
+
+**What it found, on the run active today.** The `in_session` run, one panelist,
+16 countries. Eight of nine dimensions of the panel column correlate with log
+GDP per capita at or above 0.70: Adaptability 0.93, Learning 0.92, Anticipation
+0.91, Coordination 0.86, Building 0.84, Trust 0.83, Agency 0.80, Experimentation
+0.77. Shared Purpose is the exception at 0.55. On Learning the panel is 0.15
+above the indicators for the same countries, on Experimentation 0.14, on Shared
+Purpose 0.20.
+
+Coordination and Trust are the finding. Neither publishes an indicator score
+under D45, so the panel is the only candidate for filling them, and the panel
+column on both sits above the line that retired the Worldwide Governance
+Indicators. Filling those two dimensions from this panel would restore the
+measurement D23 removed.
+
+**Cost.** One correlation per dimension, and a section in the report and the
+diagnostics page that says the panel layer fails its own test. n is 16 and the
+panel is one analyst, so this is a hint under A8 and not a result. It is enough
+to stop the backfill and not enough to condemn a gateway panel that has never
+been run.
+
+**Overturned by.** A gateway run whose panel column holds under 0.70 on the
+dimensions the indicators cannot measure. That is the evidence that would let a
+panel estimate carry a dimension, and this diagnostic is how it gets checked.
+
+## D49 — The fetch describes itself once, and the viewer prints that description
+
+*Recorded 2026-08-28. Extends D37 and D40.*
+
+**Choice.** How a value reaches the dataset is declared in
+`packages/core/src/model/sources.ts` and nowhere else. The file holds the API
+base, the World Bank database ids with what a reader must know about each, the
+first year every series is asked for, the reader-facing label for each ingest
+route, and the request builder. `pipeline/ingest.ts` builds its calls from it.
+The new `/sources` page prints the same call and groups the registry by
+publisher from the same file.
+
+**Why.** Provenance was published per indicator and nowhere in aggregate. The
+registry row carried a publisher and a link, the method page ranked source
+tiers by weight, and neither told a reader that 31 of 67 indicators come from
+one API, that eight World Bank series sit in the registry unscored, or which
+database a series needs. That last one is not decoration: the v2 API answers
+"indicator not found" for a code outside World Development Indicators when the
+request carries no `source` parameter, and until now that fact lived only in
+`AGENTS.md`, where no reader of the site can reach it.
+
+The alternative was a hand-written sources page. A page that describes a fetch
+in prose drifts from the fetch on the first registry change, and the drift is
+silent because nothing compiles the prose. Declaring the shape once and
+generating the page keeps the two in step by construction, which is the same
+argument D40 makes for building document links from `project.ts`.
+
+The data package descriptor also stops hand-listing its sources. It now names
+every publisher that supplies a value, from the same function, so a publisher
+that starts supplying one appears in the machine-readable descriptor without
+anybody remembering to add it.
+
+**Cost.** One more file in the model layer, and a page that reads
+`data/out/indicators/*.json` to count what each publisher currently supplies.
+That is 39 small reads on one page, against the country files D27 forbids.
+`WB_DATABASES` and the trap table in `AGENTS.md` now say overlapping things and
+have to be kept in step by hand.
+
+**Overturned by.** A second ingester. The World Bank shape is generalised in
+`sources.ts` only as far as one publisher needs, and an ILOSTAT or OECD adapter
+would want a per-publisher description rather than a World Bank one with other
+publishers listed beside it.

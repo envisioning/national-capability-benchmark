@@ -84,11 +84,10 @@ coverage holes and a missing note. A run that does not validate does not exist.
 
 ## Rules that are easy to get wrong
 
-- **Score against the ten reference countries, not against the world.** 0 is the
-  weakest of Brazil, United States, Netherlands, Switzerland, Singapore, South
-  Korea, Estonia, India, Chile and South Africa on that dimension. 100 is the
-  strongest. A country outside that range sits at an endpoint. Do not reach for
-  a global frontier.
+- **Score against the benchmark countries, not against the world.** Under D47
+  the frame is built from all 40 countries together: 0 is the weakest of them on
+  that dimension and 100 the strongest. There is no reference set. Do not reach
+  for a global frontier.
 - **The indicator-derived score is an input.** You are in the loop because the
   indicators mismeasure some countries. Depart from them when you can say why.
 - **Low confidence is a real answer.** `selfConfidence` near 0.3 with an honest

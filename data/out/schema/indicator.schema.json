@@ -42,9 +42,6 @@
               },
               "outOfFrame": {
                 "type": "boolean"
-              },
-              "reference": {
-                "type": "boolean"
               }
             },
             "required": [
@@ -54,8 +51,7 @@
               "normalized",
               "year",
               "tier",
-              "outOfFrame",
-              "reference"
+              "outOfFrame"
             ],
             "additionalProperties": false
           }

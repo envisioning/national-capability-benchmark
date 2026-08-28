@@ -1,5 +1,4 @@
 import {
-  COUNTRY_FRAMES,
   DECISIONS_DOC,
   DIMENSIONS,
   DIMENSION_LABELS,
@@ -30,6 +29,12 @@ export function mdTable(headers: string[], rows: Array<Array<string | number | n
 
 const table = mdTable
 
+/** A list in prose: "a", "a and b", "a, b and c". */
+function listOf(items: string[]): string {
+  if (items.length <= 1) return items[0] ?? ''
+  return `${items.slice(0, -1).join(', ')} and ${items[items.length - 1]}`
+}
+
 export function buildReport(
   countries: CountryResult[],
   diag: Diagnostics,
@@ -47,13 +52,10 @@ export function buildReport(
     `${countries.length} countries, nine dimensions, equal weights within each dimension, no headline ranking.`,
   )
   out.push('')
-  const extended = countries.filter((c) => COUNTRY_FRAMES[c.iso3] === 'extended')
-  if (extended.length > 0) {
-    out.push(
-      `Scores run against a frame fixed by the ${countries.length - extended.length} reference countries. ${extended.length} countries were added after that frame was set and are marked below. Adding them did not move any existing score.`,
-    )
-    out.push('')
-  }
+  out.push(
+    `Scores run against a frame built from all ${countries.length} countries together. Every country sets the scale and is measured against it. Adding a country rebases the frame and restates every score, which is a major version bump.`,
+  )
+  out.push('')
   out.push('')
 
   out.push('## Each country gets nine scores and no ranking')
@@ -61,10 +63,7 @@ export function buildReport(
   out.push(
     table(
       ['Country', ...DIMENSIONS.map((d) => DIMENSION_LABELS[d])],
-      countries.map((c) => [
-        c.country + (COUNTRY_FRAMES[c.iso3] === 'extended' ? ' (added)' : ''),
-        ...DIMENSIONS.map((d) => c.dimensions[d]?.score ?? null),
-      ]),
+      countries.map((c) => [c.country, ...DIMENSIONS.map((d) => c.dimensions[d]?.score ?? null)]),
     ),
   )
   out.push('')
@@ -92,7 +91,7 @@ export function buildReport(
     out.push('')
   } else {
     out.push(
-      'Change in dimension score, scored against the current frame so the scale holds still, and computed only on the indicators observed at both ends. That matched basket is smaller than the full dimension, so these numbers move on a different base from the scores above. The number in brackets is how many indicators carry the cell. Where part of the basket sits outside the reference frame at either end, the cell is marked "clamped": part of that change is the distance to the clamp boundary rather than movement in the country.',
+      'Change in dimension score, scored against the current frame so the scale holds still, and computed only on the indicators observed at both ends. That matched basket is smaller than the full dimension, so these numbers move on a different base from the scores above. The number in brackets is how many indicators carry the cell. Where part of the basket sits outside the frame at either end, the cell is marked "clamped": part of that change is the distance to the clamp boundary rather than movement in the country.',
     )
     out.push('')
     for (const span of spans) {
@@ -255,7 +254,7 @@ export function buildReport(
   out.push('## Values outside the frame clamp, and the clamps are counted')
   out.push('')
   out.push(
-    `${diag.outOfFrame.clampedCells} of ${diag.outOfFrame.observedCells} observed cells (${Math.round(diag.outOfFrame.share * 100)}%) sit outside the reference frame and clamp to 0 or 100. Frequent clamping means the frame is too narrow for the countries being scored, not that the scale should be widened quietly.`,
+    `${diag.outOfFrame.clampedCells} of ${diag.outOfFrame.observedCells} observed cells (${Math.round(diag.outOfFrame.share * 100)}%) sit outside the frame and clamp to 0 or 100. A current value cannot fall outside a frame its own country helped build, so a clamp here comes from a value the published frame did not see.`,
   )
   out.push('')
   if (diag.outOfFrame.perCountry.length > 0) {
@@ -454,6 +453,75 @@ export function buildReport(
     )
     out.push('')
 
+    const panelWealth = diag.panelVsGdp
+    if (panelWealth && panelWealth.perDimension.length > 0) {
+      const tracking = panelWealth.perDimension.filter((d) => d.flaggedAsWealthProxy)
+      const clear = panelWealth.perDimension.filter((d) => !d.flaggedAsWealthProxy)
+      const backfill = panelWealth.perDimension.filter((d) => d.backfillCandidate)
+      out.push('### The panel takes the same wealth test the indicators take')
+      out.push('')
+      const named = (rows: typeof panelWealth.perDimension) =>
+        listOf(rows.map((d) => DIMENSION_LABELS[d.dimension]))
+      const verdict =
+        clear.length === 0
+          ? `Every dimension of the panel column reaches ${WEALTH_CORRELATION_THRESHOLD} or above.`
+          : tracking.length === 0
+            ? `No dimension of the panel column reaches ${WEALTH_CORRELATION_THRESHOLD}.`
+            : clear.length <= tracking.length
+              ? `Every dimension of the panel column except ${named(clear)} reaches ${WEALTH_CORRELATION_THRESHOLD} or above.`
+              : `${named(tracking)} reach ${WEALTH_CORRELATION_THRESHOLD} or above on the panel column.`
+      out.push(
+        `A panel of models is not independent evidence. It reads the same published record the indicators come from, so a dimension the indicators cannot measure can come back as a panel number that restates income per head. The panel column is correlated with log GDP per capita here, with the indicator score for the same countries beside it, so the difference is not a difference in coverage. ${verdict}`,
+      )
+      out.push('')
+      out.push(
+        table(
+          [
+            'Dimension',
+            'Panel r vs log GDP pc',
+            'Spearman',
+            'Indicator r, same countries',
+            'Difference',
+            'Panel n',
+            'Indicator n',
+          ],
+          [...panelWealth.perDimension]
+            .sort((a, b) => Math.abs(b.panelR ?? 0) - Math.abs(a.panelR ?? 0))
+            .map((d) => [
+              DIMENSION_LABELS[d.dimension],
+              d.panelR,
+              d.panelSpearman,
+              d.indicatorR,
+              d.delta,
+              d.panelN,
+              d.indicatorN,
+            ]),
+        ),
+      )
+      out.push('')
+      if (backfill.length > 0) {
+        const backfilled = listOf(backfill.map((d) => DIMENSION_LABELS[d.dimension]))
+        const flagged = backfill.filter((d) => d.flaggedAsWealthProxy)
+        const unscored = backfill.filter((d) => d.panelR === null)
+        out.push(
+          `${backfilled} publish no indicator score at all, so the panel is the only candidate for filling them. ${
+            unscored.length === backfill.length
+              ? 'This run scores too few countries there to test the panel column.'
+              : flagged.length === 0
+                ? 'The panel column stays under the wealth threshold there, which is the first evidence that a panel estimate carries something the retired perception layer did not.'
+                : `The panel column reaches the wealth threshold on ${
+                    flagged.length === backfill.length
+                      ? flagged.length === 1
+                        ? 'it'
+                        : 'both'
+                      : listOf(flagged.map((d) => DIMENSION_LABELS[d.dimension]))
+                  }, so filling the gap that way would restore the measurement the perception layer was retired for.`
+          } Read it against n: this is a small sample and a hint rather than a result.`,
+        )
+        out.push('')
+      }
+    }
+
     const judged = indicatorConsensus(delphi)
     if (judged.length > 0) {
       out.push('### The panel rates these indicators weakest')
@@ -493,7 +561,7 @@ export function buildReport(
   out.push('## These assumptions can be challenged')
   out.push('')
   out.push(
-    `- The 0 to 100 scale is fixed by the ten reference countries. Countries added later are scored against that frame and never move it. See [${DECISIONS_DOC}](${docHref(DECISIONS_DOC)}) D16.`,
+    `- The 0 to 100 scale is built from every country in the benchmark, and every one of them is measured against it. Adding a country rebases the frame and restates every score, which is a major version bump. See [${DECISIONS_DOC}](${docHref(DECISIONS_DOC)}) D47.`,
   )
   out.push('- Indicators inside a dimension carry equal weight. No expert weighting has been applied.')
   out.push('- A score uses only the most recent observation per indicator. Trends are computed separately, on a matched basket against the current frame, and nothing is interpolated or imputed.')

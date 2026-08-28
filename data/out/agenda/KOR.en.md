@@ -2,21 +2,21 @@
 
 *Generated 2026-08-27*
 
-Scores are relative to a frame fixed by the 10 reference countries and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
+Scores are relative to a frame built from all 40 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
 
 ## Where South Korea stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 79.3 | 0.64 (usable) | +37.9 over 10 years, on 5 indicators, 1 clamped at the frame edge |
-| Agency | 74.2 | 0.6 (usable) | +13.4 over 10 years, on 4 indicators |
+| Anticipation | 79.5 | 0.64 (usable) | +25.4 over 10 years, on 5 indicators |
+| Agency | 76.5 | 0.6 (usable) | +7.9 over 10 years, on 4 indicators |
 | Coordination | not scored | 0.08 (very thin) | no trend basket |
 | Trust | not scored | 0.08 (very thin) | no trend basket |
-| Learning | 61.9 | 0.54 (usable) | +33.6 over 10 years, on 2 indicators |
-| Experimentation | 75 | 0.39 (thin) | +20.1 over 10 years, on 2 indicators |
-| Adaptability | 82.6 | 0.48 (usable) | +8.7 over 10 years, on 4 indicators |
-| Building | 64.4 | 0.54 (usable) | +3.8 over 10 years, on 4 indicators, 1 clamped at the frame edge |
-| Shared Purpose | 53.8 | 0.24 (very thin) | +4 over 10 years, on 2 indicators |
+| Learning | 58.8 | 0.54 (usable) | +17.9 over 10 years, on 2 indicators |
+| Experimentation | 72.2 | 0.39 (thin) | +16.9 over 10 years, on 2 indicators |
+| Adaptability | 80.4 | 0.48 (usable) | +8 over 10 years, on 4 indicators |
+| Building | 60.6 | 0.54 (usable) | +3.3 over 10 years, on 4 indicators |
+| Shared Purpose | 61 | 0.24 (very thin) | +4 over 10 years, on 2 indicators |
 
 ## The dimensions that must be measured before they can be managed
 
@@ -57,15 +57,15 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 
 Strongest first. These score at or above 50 on usable evidence, so nothing here asks to be raised or measured first. A held dimension still decays when nobody watches it.
 
-- Adaptability: 82.6, confidence usable
-- Anticipation: 79.3, confidence usable
-- Agency: 74.2, confidence usable
-- Building: 64.4, confidence usable
-- Learning: 61.9, confidence usable
+- Adaptability: 80.4, confidence usable
+- Anticipation: 79.5, confidence usable
+- Agency: 76.5, confidence usable
+- Building: 60.6, confidence usable
+- Learning: 58.8, confidence usable
 
 ## The measurement agenda
 
-26 indicators the specification asks for with no adequate internationally comparable dataset behind them. Each one lowers confidence until it is filled, and each one is a contribution a statistical agency, a research group or a ministry can make. A gap becomes a scored indicator when a comparable series covers at least two reference countries.
+26 indicators the specification asks for with no adequate internationally comparable dataset behind them. Each one lowers confidence until it is filled, and each one is a contribution a statistical agency, a research group or a ministry can make. A gap becomes a scored indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |

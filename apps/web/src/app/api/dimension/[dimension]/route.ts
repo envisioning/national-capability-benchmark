@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { COUNTRY_FRAMES, DIMENSIONS, primaryMomentum } from '@ncb/core'
+import { DIMENSIONS, primaryMomentum } from '@ncb/core'
 import type { Dimension } from '@ncb/core'
 import { loadIndex } from '@/lib/data'
 
@@ -34,7 +34,6 @@ export async function GET(
         /* A trend never travels without its basket size and span. */
         basket: m?.matchedIndicators ?? null,
         spanYears: m ? m.currentYear - m.baseYear : null,
-        reference: COUNTRY_FRAMES[c.iso3] === 'reference',
       }
     })
     .filter((v): v is NonNullable<typeof v> => Boolean(v))

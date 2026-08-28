@@ -2,44 +2,44 @@
 
 *Gerado em 2026-08-27*
 
-As notas são relativas a uma régua fixada pelos 10 países de referência e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
+As notas são relativas a uma régua construída a partir dos 40 países em conjunto e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
 
 ## Onde os Emirados Árabes Unidos está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 24,7 | 0,6 (utilizável) | +16,4 em 10 anos, sobre 5 indicadores, 2 truncados na borda da régua |
-| Agência | 57,1 | 0,52 (utilizável) | +8,9 em 10 anos, sobre 3 indicadores, 1 truncados na borda da régua |
+| Antecipação | 38,1 | 0,6 (utilizável) | +20,1 em 10 anos, sobre 5 indicadores, 1 truncados na borda da régua |
+| Agência | 67,9 | 0,52 (utilizável) | +4,1 em 10 anos, sobre 3 indicadores |
 | Coordenação | sem nota | 0,08 (muito fraca) | sem base de tendência |
 | Confiança | sem nota | 0,08 (muito fraca) | sem base de tendência |
-| Aprendizagem | 31,9 | 0,38 (fraca) | sem base de tendência |
-| Experimentação | 3,8 | 0,18 (muito fraca) | +1,2 em 10 anos, sobre 2 indicadores, 1 truncados na borda da régua |
-| Adaptação | 85,4 | 0,47 (utilizável) | +17,1 em 10 anos, sobre 4 indicadores, 1 truncados na borda da régua |
-| Construção | 30,8 | 0,53 (utilizável) | +1,5 em 10 anos, sobre 4 indicadores, 1 truncados na borda da régua |
+| Aprendizagem | 42,3 | 0,38 (fraca) | sem base de tendência |
+| Experimentação | 5,9 | 0,18 (muito fraca) | +1 em 10 anos, sobre 2 indicadores |
+| Adaptação | 84,5 | 0,47 (utilizável) | +14,7 em 10 anos, sobre 4 indicadores |
+| Construção | 35 | 0,53 (utilizável) | +2,7 em 10 anos, sobre 4 indicadores, 1 truncados na borda da régua |
 | Propósito compartilhado | 48,4 | 0,2 (muito fraca) | sem base de tendência |
 
 ## As dimensões que a evidência manda elevar
 
 Da nota mais baixa para a mais alta. Só entram aqui dimensões com evidência utilizável. Uma nota baixa com evidência fraca é antes um problema de medição do que de política pública, e vai para a próxima seção.
 
-### Antecipação: 24,7, confiança utilizável
-
-Quão capaz é o país de identificar mudanças emergentes e se preparar para elas?
-
-- Hoje a nota se apoia em 5 indicadores observados.
-- Maiores notas com evidência utilizável: Finlândia 83, Suíça 81,1, Coreia do Sul 79,3.
-- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos).
-- Lacunas declaradas nesta dimensão: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
-
-### Construção: 30,8, confiança utilizável
+### Construção: 35, confiança utilizável
 
 Quão capaz é o país de transformar planos e conhecimento em sistemas que funcionam?
 
 - Hoje a nota se apoia em 5 indicadores observados.
-- Maiores notas com evidência utilizável: Singapura 70,9, Coreia do Sul 64,4, China 64,4.
+- Maiores notas com evidência utilizável: Irlanda 70, Singapura 68,4, China 62,8.
 - Entregas documentadas em outros países: Pix instant payment system (Brasil); GOV.BR federal identity and service platform (Brasil); X-Road national data exchange layer (Estônia); Pradhan Mantri Jan Dhan Yojana bank accounts (Índia); Electricity supply rebuilt on renewable sources (Uruguai); Plan Ceibal, one connected laptop per child (Uruguai); Sistema Unico de Saude, universal public health system (Brasil); Programa Nacional de Imunizacoes, and its erosion (Brasil); Luz para Todos, rural electrification (Brasil); Bolsa Familia and the single registry behind it (Brasil); Fully electronic national elections (Brasil); Deepwater and pre-salt oil production (Brasil); Seguro Popular, and its abolition (México); Sure Start children's centres, and their erosion (Reino Unido); Grid power, and load shedding (África do Sul); Measles elimination, and its erosion (Estados Unidos).
 - Lacunas declaradas nesta dimensão: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases de dados examinadas e rejeitadas para esta dimensão: Qualidade da infraestrutura logística.
+
+### Antecipação: 38,1, confiança utilizável
+
+Quão capaz é o país de identificar mudanças emergentes e se preparar para elas?
+
+- Hoje a nota se apoia em 5 indicadores observados.
+- Maiores notas com evidência utilizável: Suécia 82,9, Finlândia 81,1, Suíça 80.
+- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos).
+- Lacunas declaradas nesta dimensão: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
 ## As dimensões que precisam ser medidas antes de serem geridas
 
@@ -87,12 +87,12 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 Da nota mais alta para a mais baixa. Estas dimensões pontuam 50 ou mais com evidência utilizável, então nada aqui pede elevação ou medição primeiro. Uma dimensão mantida ainda decai quando ninguém a observa.
 
-- Adaptação: 85,4, confiança utilizável
-- Agência: 57,1, confiança utilizável
+- Adaptação: 84,5, confiança utilizável
+- Agência: 67,9, confiança utilizável
 
 ## A agenda de medição
 
-26 indicadores que a especificação pede e para os quais não existe base de dados internacional comparável adequada. Cada um reduz a confiança enquanto não for preenchido, e cada um é uma contribuição ao alcance de um órgão de estatística, um grupo de pesquisa ou um ministério. Uma lacuna vira indicador com nota quando uma série comparável cobre pelo menos dois países de referência.
+26 indicadores que a especificação pede e para os quais não existe base de dados internacional comparável adequada. Cada um reduz a confiança enquanto não for preenchido, e cada um é uma contribuição ao alcance de um órgão de estatística, um grupo de pesquisa ou um ministério. Uma lacuna vira indicador com nota quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |

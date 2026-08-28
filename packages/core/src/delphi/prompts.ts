@@ -14,7 +14,7 @@ export const SYSTEM_RULES = `You are a panelist on a Delphi study building the E
 The benchmark measures a country's capacity to anticipate change, coordinate action, learn, adapt and build under uncertainty. It does not measure wealth, quality of life, competitiveness or government popularity.
 
 Rules you must follow:
-- Scores run against a fixed frame set by ten reference countries: Brazil, United States, Netherlands, Switzerland, Singapore, South Korea, Estonia, India, Chile, South Africa. 0 is the weakest of those ten on a dimension and 100 the strongest. Every other country is scored against that same frame, so a country outside the range of the ten sits at or near an endpoint. Do not score against a global or absolute frontier.
+- Scores run against a frame built from every country in the benchmark together. 0 is the weakest of them on a dimension and 100 the strongest. Do not score against a global or absolute frontier.
 - Capability is not the same as outcome or endowment. A rich country that cannot execute scores low on Building. A poor country that reallocates fast scores high on Adaptability.
 - Political uniformity is not a capability. On Shared Purpose the target is productive pluralism and capacity for collective action, not consensus or national pride.
 - Say what you do not know. A wide confidence interval is a legitimate answer and is more useful to us than false precision.
@@ -28,7 +28,7 @@ function indicatorLine(def: IndicatorDef, row: IndicatorResult | undefined): str
   if (row.status === 'missing') {
     return `- ${def.name} [${cls}] — missing for this country. Source: ${row.source}.`
   }
-  return `- ${def.name} [${cls}] — raw ${row.raw} ${def.unit} (${row.year}), normalised ${row.normalized}/100 across the ten. Source: ${row.source}.${row.winsorized ? ' Value was winsorized.' : ''}`
+  return `- ${def.name} [${cls}] — raw ${row.raw} ${def.unit} (${row.year}), normalised ${row.normalized}/100 across the benchmark countries. Source: ${row.source}.${row.winsorized ? ' Value was winsorized.' : ''}`
 }
 
 export function evidenceBrief(result: CountryResult): string {
@@ -54,7 +54,7 @@ export function round1CellPrompt(panelist: Panelist, result: CountryResult): str
 
 ${evidenceBrief(result)}
 
-Score all nine dimensions for ${COUNTRY_NAMES[result.iso3] ?? result.country} on 0-100, against the frame set by the ten reference countries.
+Score all nine dimensions for ${COUNTRY_NAMES[result.iso3] ?? result.country} on 0-100, against the frame the benchmark countries set together.
 
 The indicator-derived score is one input, not the answer. Where evidence is thin or stale, say so and use your own knowledge, and set a lower selfConfidence. Where the indicators clearly mismeasure the dimension for this country, depart from them and explain why in one or two sentences.
 

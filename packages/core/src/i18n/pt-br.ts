@@ -254,7 +254,7 @@ export const PT_BR: Lexicon = {
     title: 'Agenda de capacidades: {country}',
     generated: 'Gerado em {date}',
     intro:
-      'As notas são relativas a uma régua fixada pelos {reference} países de referência e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia {limits} antes de citar qualquer número isoladamente.',
+      'As notas são relativas a uma régua construída a partir dos {countries} países em conjunto e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia {limits} antes de citar qualquer número isoladamente.',
     limitsLabel: 'os limites conhecidos dos dados',
     standingHeading: 'Onde {countryTopic} está',
     colDimension: 'Dimensão',
@@ -286,7 +286,7 @@ export const PT_BR: Lexicon = {
     evidenceElsewhereLine: 'Entregas documentadas em outros países: {list}.',
     agendaHeading: 'A agenda de medição',
     agendaIntro:
-      '{n} indicadores que a especificação pede e para os quais não existe base de dados internacional comparável adequada. Cada um reduz a confiança enquanto não for preenchido, e cada um é uma contribuição ao alcance de um órgão de estatística, um grupo de pesquisa ou um ministério. Uma lacuna vira indicador com nota quando uma série comparável cobre pelo menos dois países de referência.',
+      '{n} indicadores que a especificação pede e para os quais não existe base de dados internacional comparável adequada. Cada um reduz a confiança enquanto não for preenchido, e cada um é uma contribuição ao alcance de um órgão de estatística, um grupo de pesquisa ou um ministério. Uma lacuna vira indicador com nota quando uma série comparável cobre pelo menos dois países.',
     colIndicator: 'Indicador ausente',
     colAsks: 'O que ele pergunta',
     ownEvidenceHeading: 'O que os indicadores não conseguem ver sobre {countryTopic}',

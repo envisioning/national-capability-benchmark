@@ -1,6 +1,7 @@
 import { existsSync } from 'node:fs'
 import { readFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
+import { INDICATORS, isScored } from '@ncb/core'
 import { DATA_DIR } from '@ncb/core/node'
 import type {
   CountryResult,
@@ -78,6 +79,29 @@ export async function loadIndicatorAcrossCountries(
   id: string,
 ): Promise<IndicatorAcrossCountries | null> {
   return readJson<IndicatorAcrossCountries>(PATHS.indicator(id))
+}
+
+/**
+ * How much data each fetched indicator actually holds, for the sources page.
+ *
+ * Read from the per-indicator files rather than the country files: the same
+ * numbers turned inside out, and 39 small reads instead of the whole dataset.
+ * See D27 and D30.
+ */
+export async function loadIndicatorCoverage(): Promise<
+  Map<string, { countries: number; latestYear: number }>
+> {
+  const scored = INDICATORS.filter(isScored)
+  const files = await Promise.all(scored.map((def) => loadIndicatorAcrossCountries(def.id)))
+  const out = new Map<string, { countries: number; latestYear: number }>()
+  for (const file of files) {
+    if (!file || file.values.length === 0) continue
+    out.set(file.indicatorId, {
+      countries: file.values.length,
+      latestYear: Math.max(...file.values.map((v) => v.year)),
+    })
+  }
+  return out
 }
 
 /** Evidence records for indicators with no dataset. Never scored. */

@@ -10,7 +10,7 @@
  * at chip size, which is exactly the reading this table exists for.
  *
  * The labels are deliberately frame-relative. A score is a position against the
- * ten reference countries, not an absolute verdict, so "strong" here means
+ * countries in the benchmark, not an absolute verdict, so "strong" here means
  * strong within that frame. See docs/DECISIONS.md D16.
  */
 export type ScoreBandId = 'weak' | 'below_middle' | 'above_middle' | 'strong'
@@ -28,25 +28,25 @@ export const SCORE_BANDS: ScoreBand[] = [
     id: 'strong',
     min: 75,
     label: 'strong',
-    meaning: 'Near the top of the reference frame on this dimension.',
+    meaning: 'Near the top of the frame on this dimension.',
   },
   {
     id: 'above_middle',
     min: 50,
     label: 'above middle',
-    meaning: 'In the upper half of the reference frame.',
+    meaning: 'In the upper half of the frame.',
   },
   {
     id: 'below_middle',
     min: 25,
     label: 'below middle',
-    meaning: 'In the lower half of the reference frame.',
+    meaning: 'In the lower half of the frame.',
   },
   {
     id: 'weak',
     min: 0,
     label: 'weak',
-    meaning: 'Near the floor of the reference frame. Check the confidence before reading anything into it.',
+    meaning: 'Near the floor of the frame. Check the confidence before reading anything into it.',
   },
 ]
 

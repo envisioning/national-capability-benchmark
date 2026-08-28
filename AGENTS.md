@@ -89,8 +89,8 @@ port 3888. That entry starts Next directly and does not use the proxy.
 ## Invariants
 
 - `packages/core/src/model/indicators.ts` is the single source of truth for
-  indicators, and `countries.ts` for countries and their frame. Never define
-  either anywhere else.
+  indicators, and `countries.ts` for countries. Never define either anywhere
+  else.
 - Every term the project invents is defined once, in
   `packages/core/src/model/glossary.ts`, in language that assumes no prior
   knowledge. The glossary page renders it. Never explain a term a second way in
@@ -127,32 +127,31 @@ port 3888. That entry starts Next directly and does not use the proxy.
   are ours. Keep them in that field so the two are never confused. See D31.
 - Evidence records in `data/evidence` never enter a score or a confidence. A
   gap is promoted to a scored indicator only when a comparable series covers at
-  least two reference countries, which is the minimum `buildFrame` accepts. See
-  D20.
+  least two countries, which is the minimum `buildFrame` accepts. See D20.
 - A dimension with fewer than `MIN_INDICATORS_FOR_SCORE` observed indicators
   publishes no score. `score` is null, `belowCoverageFloor` is true and
   `observedIndicators` carries the count. Render it with `DimensionScore`, never
   with a bare `Score`, and never plot a null at zero: the radar leaves that axis
   empty. Confidence, the indicator rows and the trend still publish. See D45.
 - Missing values are dropped from the mean and lower coverage. Nothing is imputed.
-- The normalization frame is pinned to the ten **reference** countries. Their
-  values alone set every indicator's Tukey fences and its 0 and 100 endpoints.
-  Countries with `frame: 'extended'` are scored against that frame and never
-  move it, which is what lets data be added without invalidating what is already
-  published. Verified when six countries were added: 0 of 90 reference cells
-  moved. See D16, which supersedes D2.
-- Adding a country to the **reference** set rebases the whole dataset. Do not do
-  it as a side effect of adding data. It is a versioned, announced act. Adding
-  an **extended** country is safe and was verified twice: 0 of 90 cells moved at
-  16 countries and 0 of 144 at 40.
+- Every country sets the normalization frame and every country is scored
+  against it. All of them together set each indicator's Tukey fences and its 0
+  and 100 endpoints. There is no reference set and no extended set: a country
+  is never measured against a ruler it is absent from. See D47, which supersedes
+  D16.
+- **Adding a country rebases the whole dataset.** It moves the endpoints, it
+  restates every published score, and it is a versioned, announced act. Do not
+  do it as a side effect of adding data. Rescore, bump the major version, and
+  say plainly that the old numbers are not comparable.
 - The dataset version is semantic and lives in
-  `packages/core/src/model/version.ts`, nowhere else. Major = frame rebase or a
-  published field removed. Minor = countries, indicators or fields added. Patch
-  = re-ingest under the same registry. Bump it in the same change that earns
-  the bump. See D37.
+  `packages/core/src/model/version.ts`, nowhere else. Major = frame rebase,
+  which includes any country added, or a published field removed. Minor =
+  indicators or fields added with no country added. Patch = re-ingest under the
+  same registry and country set. Bump it in the same change that earns the bump.
+  See D37 and D47.
 - A value outside the frame clamps to 0 or 100 and sets `outOfFrame` on the
-  cell. Frequent clamping means the frame is too narrow, not that the scale
-  should be widened quietly.
+  cell. A current value cannot do this, because its own country helped build the
+  frame. A historical value can, which is what the trend clamp counts report.
 - `ingest: 'gap'` indicators stay in the registry. They lower confidence and
   they are the data-collection agenda. Do not delete them to make numbers look
   better.
@@ -185,15 +184,34 @@ port 3888. That entry starts Next directly and does not use the proxy.
   switching is one control in the layout header, driven by `languageCounterpart`
   in `apps/web/src/lib/links.ts`. Never add a language link to the nav or to a
   page body.
+- The World Bank fetch is described once, in
+  `packages/core/src/model/sources.ts`: the API base, the database ids, the
+  first year, the route labels and the request builder. `pipeline/ingest.ts`
+  builds its calls from it and the `/sources` page prints the same call back.
+  Never write the API shape a second time, and keep `WB_DATABASES` and the trap
+  table below in step. See D49.
 - Every URL shape the viewer writes lives in `apps/web/src/lib/links.ts`, one
   helper per kind of thing. Never build `/country/...`, `/agenda/...`,
-  `/indicators#...`, `/patterns/...` or `/limits` inline in a component.
+  `/indicators#...`, `/patterns/...`, `/limits` or `/decisions` inline in a
+  component. The patterns filters are part of that contract:
+  `readPatternFilters` parses the query string and `patternsHref` builds it, and
+  the server page and the client view both use them, so the address is read
+  where it is written. See D46.
+- A decision id or an artefact id written in a document is a link. The markdown
+  renderer turns a bare `D47` or `A10` into a link to `/decisions#D47` or
+  `/limits#A10`, so write the bare id and never hand a URL to it.
+- `docs/KNOWN-ARTEFACTS.md` states what is wrong now, not what we used to think.
+  Never write edit history into it: no "was high, now medium", no "rewritten on
+  this date", no account of a realization. Refresh the numbers against the
+  current dataset and name the run a figure comes from where it is not the
+  current one. The history belongs in `docs/DECISIONS.md` and in git.
 - Every Delphi surface in the viewer gates on `isEvidential` before rendering
   anything from a run, and on `isPanel` before calling anything a panel. A
   non-panel run renders as "session estimate". The shared caveat is
   `PanelProvenanceNote` in `apps/web/src/components/ui.tsx`.
-- `docs/KNOWN-ARTEFACTS.md` renders at `/limits` through the markdown-subset
-  renderer in `apps/web/src/lib/markdown.tsx`, and the file is listed in
+- `docs/KNOWN-ARTEFACTS.md` renders at `/limits` and `docs/DECISIONS.md` at
+  `/decisions`, both through the markdown-subset renderer in
+  `apps/web/src/lib/markdown.tsx`, and both files are listed in
   `outputFileTracingIncludes`. A new doc rendered by a page needs the same
   tracing entry, or the deployed page silently shows its empty state.
 - Two sessions appending to `docs/DECISIONS.md` collide. Read the highest number
@@ -208,7 +226,10 @@ port 3888. That entry starts Next directly and does not use the proxy.
 ## World Bank API traps
 
 The v2 API needs `&source=<id>` for anything outside World Development
-Indicators, and silently answers "indicator not found" without it.
+Indicators, and silently answers "indicator not found" without it. The ids the
+registry uses are declared in `WB_DATABASES` in
+`packages/core/src/model/sources.ts`, which the `/sources` page renders. This
+table adds the traps that are not in the code.
 
 | Family | Source id | Note |
 | --- | --- | --- |
@@ -226,7 +247,7 @@ Other traps found the hard way:
 - Trademarks are `IP.TMK.RSCT`, not `IP.TMK.RESD`.
 - Long-term unemployment is not in the World Bank API at all. It needs an
   ILOSTAT adapter and is filed as a gap until someone writes one.
-- Verify a new series against all ten countries before adding it to the
+- Verify a new series against every country before adding it to the
   registry. A code that resolves for Brazil can be empty for Singapore.
 
 ## Deployment

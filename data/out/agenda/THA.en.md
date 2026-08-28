@@ -2,50 +2,50 @@
 
 *Generated 2026-08-27*
 
-Scores are relative to a frame fixed by the 10 reference countries and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
+Scores are relative to a frame built from all 40 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
 
 ## Where Thailand stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 22.3 | 0.64 (usable) | +14.2 over 10 years, on 5 indicators, 2 clamped at the frame edge |
-| Agency | 59.4 | 0.61 (usable) | +33.5 over 10 years, on 4 indicators, 2 clamped at the frame edge |
+| Anticipation | 33.8 | 0.64 (usable) | +13.3 over 10 years, on 5 indicators |
+| Agency | 67.6 | 0.61 (usable) | +26.5 over 10 years, on 4 indicators |
 | Coordination | not scored | 0.08 (very thin) | no trend basket |
 | Trust | not scored | 0.08 (very thin) | no trend basket |
-| Learning | 28.5 | 0.56 (usable) | -1.1 over 10 years, on 3 indicators |
-| Experimentation | 1.5 | 0.18 (very thin) | -0.4 over 10 years, on 2 indicators, 1 clamped at the frame edge |
-| Adaptability | 63.7 | 0.47 (usable) | +2.8 over 10 years, on 4 indicators, 1 clamped at the frame edge |
-| Building | 46.4 | 0.54 (usable) | -1.9 over 10 years, on 4 indicators |
-| Shared Purpose | 58.1 | 0.27 (thin) | +3.5 over 10 years, on 2 indicators |
+| Learning | 34.9 | 0.56 (usable) | -2.3 over 10 years, on 3 indicators |
+| Experimentation | 4.5 | 0.18 (very thin) | -0.5 over 10 years, on 2 indicators |
+| Adaptability | 66.5 | 0.47 (usable) | +2.7 over 10 years, on 4 indicators, 1 clamped at the frame edge |
+| Building | 45.4 | 0.54 (usable) | -0.4 over 10 years, on 4 indicators |
+| Shared Purpose | 63.8 | 0.27 (thin) | +4.1 over 10 years, on 2 indicators |
 
 ## The dimensions the evidence says to raise
 
 Lowest score first. Only dimensions with usable evidence appear here. A low score with thin evidence is a measurement problem before it is a policy problem, and it moves to the next section.
 
-### Anticipation: 22.3, confidence usable
+### Anticipation: 33.8, confidence usable
 
 How capable is the country of identifying and preparing for emerging change?
 
 - Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Finland 83, Switzerland 81.1, South Korea 79.3.
+- Highest scores with usable evidence: Sweden 82.9, Finland 81.1, Switzerland 80.
 - Documented deliveries elsewhere: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands).
 - Declared gaps in this dimension: Government foresight capacity, Long-horizon research share.
 
-### Learning: 28.5, confidence usable
+### Learning: 34.9, confidence usable
 
 How effectively does the country acquire, distribute, and update knowledge?
 
 - Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: United Kingdom 84.8, Netherlands 78, Switzerland 77.3.
+- Highest scores with usable evidence: Finland 85.3, Australia 75.2, United Kingdom 73.9.
 - Documented deliveries elsewhere: SkillsFuture Credit (Singapore); The public library system (Finland).
 - Declared gaps in this dimension: Adult learning participation, Research citation impact.
 
-### Building: 46.4, confidence usable
+### Building: 45.4, confidence usable
 
 How capable is the country of turning plans and knowledge into functioning systems?
 
 - Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Singapore 70.9, South Korea 64.4, China 64.4.
+- Highest scores with usable evidence: Ireland 70, Singapore 68.4, China 62.8.
 - Documented deliveries elsewhere: Pix instant payment system (Brazil); GOV.BR federal identity and service platform (Brazil); X-Road national data exchange layer (Estonia); Pradhan Mantri Jan Dhan Yojana bank accounts (India); Electricity supply rebuilt on renewable sources (Uruguay); Plan Ceibal, one connected laptop per child (Uruguay); Sistema Unico de Saude, universal public health system (Brazil); Programa Nacional de Imunizacoes, and its erosion (Brazil); Luz para Todos, rural electrification (Brazil); Bolsa Familia and the single registry behind it (Brazil); Fully electronic national elections (Brazil); Deepwater and pre-salt oil production (Brazil); Seguro Popular, and its abolition (Mexico); Sure Start children's centres, and their erosion (United Kingdom); Grid power, and load shedding (South Africa); Measles elimination, and its erosion (United States).
 - Declared gaps in this dimension: Large project delivery, Firm scale-up rate.
 - Datasets examined and rejected for this dimension: Logistics infrastructure quality.
@@ -89,12 +89,12 @@ To what extent can people imagine themselves as participants in a common project
 
 Strongest first. These score at or above 50 on usable evidence, so nothing here asks to be raised or measured first. A held dimension still decays when nobody watches it.
 
-- Adaptability: 63.7, confidence usable
-- Agency: 59.4, confidence usable
+- Agency: 67.6, confidence usable
+- Adaptability: 66.5, confidence usable
 
 ## The measurement agenda
 
-26 indicators the specification asks for with no adequate internationally comparable dataset behind them. Each one lowers confidence until it is filled, and each one is a contribution a statistical agency, a research group or a ministry can make. A gap becomes a scored indicator when a comparable series covers at least two reference countries.
+26 indicators the specification asks for with no adequate internationally comparable dataset behind them. Each one lowers confidence until it is filled, and each one is a contribution a statistical agency, a research group or a ministry can make. A gap becomes a scored indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |

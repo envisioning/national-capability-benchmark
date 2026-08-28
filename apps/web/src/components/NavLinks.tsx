@@ -13,7 +13,9 @@ const NAV = [
   { href: '/diagnostics', label: 'Diagnostics' },
   { href: '/delphi', label: 'Delphi panel' },
   { href: '/method', label: 'Method' },
+  { href: '/sources', label: 'Sources' },
   { href: '/limits', label: 'Limits' },
+  { href: '/decisions', label: 'Decisions' },
   { href: '/glossary', label: 'Glossary' },
 ]
 

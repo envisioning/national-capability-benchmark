@@ -15,7 +15,6 @@ type Row = {
   delta: number | null
   basket: number | null
   spanYears: number | null
-  reference: boolean
 }
 
 /**
@@ -133,8 +132,8 @@ export function DimensionDialog({
           </div>
 
           <p className="mb-4 max-w-2xl text-xs leading-relaxed text-[var(--muted)]">
-            Every country is scored the same way, as a position from 0 to 100 on a scale fixed by
-            ten reference countries. In the strip below, each dot is a country, the box spans the
+            Every country is scored the same way, as a position from 0 to 100 on a scale built from
+            all of them together. In the strip below, each dot is a country, the box spans the
             middle half of the field, and the line inside it is the median. A hollow dot is thin
             evidence. The band beside each score says how well evidenced it is, and the last column
             is the change over the trend span, with the number of indicators it rests on in

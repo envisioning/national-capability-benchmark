@@ -2,51 +2,43 @@
 
 *Generated 2026-08-27*
 
-Scores are relative to a frame fixed by the 10 reference countries and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
+Scores are relative to a frame built from all 40 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
 
 ## Where Malaysia stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 28.8 | 0.62 (usable) | +16.4 over 10 years, on 5 indicators, 2 clamped at the frame edge |
-| Agency | 47.9 | 0.61 (usable) | +27.2 over 10 years, on 4 indicators, 2 clamped at the frame edge |
+| Anticipation | 38.6 | 0.62 (usable) | +15.4 over 10 years, on 5 indicators |
+| Agency | 57.8 | 0.61 (usable) | +12.4 over 10 years, on 4 indicators |
 | Coordination | not scored | 0.08 (very thin) | no trend basket |
 | Trust | not scored | 0.08 (very thin) | no trend basket |
-| Learning | 31.5 | 0.56 (usable) | -6.3 over 10 years, on 3 indicators |
-| Experimentation | 2.7 | 0.18 (very thin) | -0.7 over 10 years, on 2 indicators |
-| Adaptability | 56.8 | 0.47 (usable) | +4.5 over 10 years, on 4 indicators |
-| Building | 59.3 | 0.54 (usable) | +6.2 over 10 years, on 4 indicators |
-| Shared Purpose | 37.9 | 0.24 (very thin) | -2.3 over 10 years, on 2 indicators |
+| Learning | 38.2 | 0.56 (usable) | 0 over 10 years, on 3 indicators |
+| Experimentation | 6.2 | 0.18 (very thin) | -1 over 10 years, on 2 indicators |
+| Adaptability | 57.5 | 0.47 (usable) | +4.3 over 10 years, on 4 indicators |
+| Building | 57.6 | 0.54 (usable) | +5.5 over 10 years, on 4 indicators |
+| Shared Purpose | 45.9 | 0.24 (very thin) | -1.4 over 10 years, on 2 indicators |
 
 ## The dimensions the evidence says to raise
 
 Lowest score first. Only dimensions with usable evidence appear here. A low score with thin evidence is a measurement problem before it is a policy problem, and it moves to the next section.
 
-### Anticipation: 28.8, confidence usable
-
-How capable is the country of identifying and preparing for emerging change?
-
-- Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: Finland 83, Switzerland 81.1, South Korea 79.3.
-- Documented deliveries elsewhere: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands).
-- Declared gaps in this dimension: Government foresight capacity, Long-horizon research share.
-
-### Learning: 31.5, confidence usable
+### Learning: 38.2, confidence usable
 
 How effectively does the country acquire, distribute, and update knowledge?
 
 - Currently scored on 5 observed indicators.
-- Highest scores with usable evidence: United Kingdom 84.8, Netherlands 78, Switzerland 77.3.
+- Highest scores with usable evidence: Finland 85.3, Australia 75.2, United Kingdom 73.9.
 - Documented deliveries elsewhere: SkillsFuture Credit (Singapore); The public library system (Finland).
 - Declared gaps in this dimension: Adult learning participation, Research citation impact.
 
-### Agency: 47.9, confidence usable
+### Anticipation: 38.6, confidence usable
 
-How able are individuals and organizations to turn an intention into action?
+How capable is the country of identifying and preparing for emerging change?
 
-- Currently scored on 6 observed indicators.
-- Highest scores with usable evidence: United States 84.6, Australia 83.1, Singapore 79.6.
-- Declared gaps in this dimension: Adult digital skills, Perceived control over life.
+- Currently scored on 5 observed indicators.
+- Highest scores with usable evidence: Sweden 82.9, Finland 81.1, Switzerland 80.
+- Documented deliveries elsewhere: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands).
+- Declared gaps in this dimension: Government foresight capacity, Long-horizon research share.
 
 ## The dimensions that must be measured before they can be managed
 
@@ -87,12 +79,13 @@ To what extent can people imagine themselves as participants in a common project
 
 Strongest first. These score at or above 50 on usable evidence, so nothing here asks to be raised or measured first. A held dimension still decays when nobody watches it.
 
-- Building: 59.3, confidence usable
-- Adaptability: 56.8, confidence usable
+- Agency: 57.8, confidence usable
+- Building: 57.6, confidence usable
+- Adaptability: 57.5, confidence usable
 
 ## The measurement agenda
 
-26 indicators the specification asks for with no adequate internationally comparable dataset behind them. Each one lowers confidence until it is filled, and each one is a contribution a statistical agency, a research group or a ministry can make. A gap becomes a scored indicator when a comparable series covers at least two reference countries.
+26 indicators the specification asks for with no adequate internationally comparable dataset behind them. Each one lowers confidence until it is filled, and each one is a contribution a statistical agency, a research group or a ministry can make. A gap becomes a scored indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |

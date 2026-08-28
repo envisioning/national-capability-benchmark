@@ -1,10 +1,9 @@
 import {
-  COUNTRY_FRAMES,
+  COUNTRY_ISO3,
   COUNTRY_NAMES,
   DIMENSIONS,
   INDICATORS_BY_ID,
   LIMITS_DOC,
-  REFERENCE_ISO3,
   REPO_URL,
   docHref,
   indicatorsFor,
@@ -85,7 +84,6 @@ export type CountryAgenda = {
   generatedAt: string
   iso3: string
   country: string
-  frame: 'reference' | 'extended'
   /** All nine dimensions, in canonical order. Priority is derived from `kind`. */
   dimensions: AgendaDimension[]
   /** The subject country's own evidence records, across all dimensions. */
@@ -237,7 +235,6 @@ export function buildAgenda(
     generatedAt,
     iso3,
     country: subject.country,
-    frame: COUNTRY_FRAMES[iso3] ?? 'extended',
     dimensions,
     ownEvidence,
     gapCount: dimensions.reduce((n, d) => n + d.gaps.length, 0),
@@ -298,7 +295,7 @@ export function renderAgenda(agenda: CountryAgenda, lex: Lexicon): string {
   out.push('')
   out.push(
     fill(s.intro, {
-      reference: REFERENCE_ISO3.length,
+      countries: COUNTRY_ISO3.length,
       limits: `[${LIMITS_DOC}](${docHref(LIMITS_DOC)})`,
     }),
   )

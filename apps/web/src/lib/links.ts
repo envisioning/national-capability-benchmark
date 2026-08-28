@@ -1,4 +1,5 @@
-import type { Lang } from '@ncb/core'
+import { DIMENSIONS, EVIDENCE_STATUS_LABELS } from '@ncb/core'
+import type { EvidenceStatus, Lang } from '@ncb/core'
 
 /**
  * Where a named thing lives in the viewer. One rule per kind of thing, so a
@@ -16,8 +17,79 @@ export const agendaHref = (iso3: string, lang: Lang = 'en'): string =>
 /** The registry row for one indicator, declared gaps included. */
 export const indicatorHref = (id: string): string => `/indicators#${id}`
 
-/** The list of documented deliveries, filterable. */
-export const patternsHref = '/patterns'
+/**
+ * How the patterns list is narrowed.
+ *
+ * The filters live in the query string, so a reader who has narrowed the list
+ * to one country or to the reversals can send that view to somebody else. The
+ * server reads the same shape it writes, which is why the parse and the build
+ * sit together here. See D46.
+ */
+export type PatternFilters = {
+  /** Free text over the record, its mechanism and its publisher. */
+  query: string
+  /** One country, by ISO3. Empty means every country. */
+  iso3: string
+  /** One dimension id. Empty means every dimension. */
+  dimension: string
+  /** A status, `reversal` for the two ways a delivery is lost, or `all`. */
+  status: 'all' | 'reversal' | EvidenceStatus
+  /** Only records that carry a mechanism. */
+  mechanismOnly: boolean
+}
+
+export const NO_PATTERN_FILTERS: PatternFilters = {
+  query: '',
+  iso3: '',
+  dimension: '',
+  status: 'all',
+  mechanismOnly: false,
+}
+
+/** Longest search a link may carry. Anything past this is somebody else's bug. */
+const MAX_QUERY = 120
+
+type RawParams = Record<string, string | string[] | undefined>
+
+function one(params: RawParams, key: string): string {
+  const value = params[key]
+  return (Array.isArray(value) ? value[0] : value) ?? ''
+}
+
+/**
+ * Read filters out of a query string. Anything unrecognised is dropped, so a
+ * hand-edited or stale link renders the full list rather than an error.
+ */
+export function readPatternFilters(params: RawParams): PatternFilters {
+  const iso3 = one(params, 'country').toUpperCase()
+  const dimension = one(params, 'dimension')
+  const status = one(params, 'status')
+  const known =
+    status === 'reversal' || status in EVIDENCE_STATUS_LABELS ? (status as PatternFilters['status']) : 'all'
+  return {
+    query: one(params, 'q').slice(0, MAX_QUERY),
+    iso3: /^[A-Z]{3}$/.test(iso3) ? iso3 : '',
+    dimension: (DIMENSIONS as readonly string[]).includes(dimension) ? dimension : '',
+    status: known,
+    mechanismOnly: one(params, 'mechanism') === '1',
+  }
+}
+
+/** The query string for a set of filters. Defaults are omitted, so a clean list has a clean URL. */
+export function patternFiltersQuery(filters: PatternFilters): string {
+  const params = new URLSearchParams()
+  if (filters.query.trim()) params.set('q', filters.query.trim().slice(0, MAX_QUERY))
+  if (filters.iso3) params.set('country', filters.iso3)
+  if (filters.dimension) params.set('dimension', filters.dimension)
+  if (filters.status !== 'all') params.set('status', filters.status)
+  if (filters.mechanismOnly) params.set('mechanism', '1')
+  const query = params.toString()
+  return query ? `?${query}` : ''
+}
+
+/** The list of documented deliveries, narrowed or whole. */
+export const patternsHref = (filters: PatternFilters = NO_PATTERN_FILTERS): string =>
+  `/patterns${patternFiltersQuery(filters)}`
 
 /**
  * One evidence record, on its own page.
@@ -27,8 +99,32 @@ export const patternsHref = '/patterns'
  */
 export const evidenceHref = (recordId: string): string => `/patterns/${recordId}`
 
+/** Who publishes the data and how each series is fetched. */
+export const sourcesHref = '/sources'
+
+/**
+ * The id a publisher's row carries on the sources page, so a link can reach one
+ * publisher rather than the whole table.
+ */
+export const publisherSlug = (publisher: string): string =>
+  publisher.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+
 /** The known limits of the data, rendered from docs/KNOWN-ARTEFACTS.md. */
 export const limitsHref = '/limits'
+
+/** One artefact inside that document, by its id: A1, A12. */
+export const artefactHref = (id: string): string => `${limitsHref}#${id}`
+
+/** The decision log, rendered from docs/DECISIONS.md. */
+export const decisionsHref = '/decisions'
+
+/**
+ * One decision inside that log, by its id: D16, D47.
+ *
+ * The documents cite each other by id all the way through. A bare id is only
+ * useful to somebody holding the file, so it renders as a link to the entry.
+ */
+export const decisionHref = (id: string): string => `${decisionsHref}#${id}`
 
 /**
  * The same page in the other language, where one exists.

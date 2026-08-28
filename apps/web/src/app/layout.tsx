@@ -90,9 +90,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               since 2010.
             </p>
             <p className="mt-4 max-w-3xl text-xs text-[var(--muted)]">
-              Scores are a position from 0 to 100 against ten fixed reference countries. The scale
-              holds still, so adding a country moves nobody else. Confidence is reported beside
-              every score and never inside it.
+              Scores are a position from 0 to 100 against a frame built from all the countries
+              measured. Adding a country rebases that frame, so the country set only changes with a
+              versioned release. Confidence is reported beside every score and never inside it.
             </p>
           </div>
         </footer>

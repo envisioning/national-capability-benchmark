@@ -4,8 +4,11 @@ import type { Dimension } from './dimensions.js'
 
 type Raw = z.input<typeof IndicatorDef>
 
+/** The publisher string every World Bank row carries. Written once, matched against. */
+export const WB_PUBLISHER = 'World Bank'
+
 const WB = (series: string) => ({
-  publisher: 'World Bank',
+  publisher: WB_PUBLISHER,
   series,
   url: `https://data.worldbank.org/indicator/${series}`,
   tier: 'international_organization' as const,

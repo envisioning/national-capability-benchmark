@@ -2,7 +2,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import { DelphiRunFile, EvidenceFile, ObservationFile } from '../model/schema.js'
 import type { EvidenceRecord, Observation } from '../model/schema.js'
-import { REFERENCE_ISO3 } from '../model/index.js'
+
 import type {
   CountryResult,
   Dimension,
@@ -125,7 +125,6 @@ export function acrossCountries(countries: CountryResult[]): IndicatorAcrossCoun
           year: row.year,
           tier: row.sourceTier,
           outOfFrame: row.outOfFrame,
-          reference: REFERENCE_ISO3.includes(country.iso3),
         })
         byIndicator.set(row.indicatorId, list)
       }

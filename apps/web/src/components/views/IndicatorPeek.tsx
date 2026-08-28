@@ -129,7 +129,7 @@ export function IndicatorPeek({
             </a>
             . In the strip below, each dot is a country, the box spans the middle half of the field,
             and the line inside it is the median. The bar in the list is the normalized position
-            from 0 to 100 on a scale fixed by ten reference countries, so higher is always better on
+            from 0 to 100 on a scale built from every country measured, so higher is always better on
             the bar whatever the raw number does.
             {rank ? ` This country ranks ${rank} of ${values.length} on the values we hold.` : ''}
           </p>
@@ -193,7 +193,7 @@ export function IndicatorPeek({
 
           {view ? (
             <p className="mt-4 text-xs leading-relaxed text-[var(--muted)]">
-              A warning mark means the value sat outside the range the reference countries cover, so
+              A warning mark means the value sat outside the range the frame covers, so
               its position was clamped to 0 or 100 and information was lost. {def.notes}
             </p>
           ) : null}

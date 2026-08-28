@@ -1,19 +1,33 @@
 import type { ReactNode } from 'react'
 import { Scroller, Table, Td, Th } from '@/components/ui'
+import { artefactHref, decisionHref } from '@/lib/links'
 
 /**
  * A renderer for the small markdown subset the internal docs use: h1 to h3,
- * paragraphs, bold, inline code, links, unordered lists, tables and rules.
+ * paragraphs, bold, italic, inline code, links, unordered lists, blockquotes,
+ * tables and rules.
  *
  * Deliberately not a dependency. The docs are written in this repository, so
  * the subset is known, and a parser for the open web would be surface area for
  * content this project never produces.
  */
 
-function inline(text: string, key = 0): ReactNode[] {
+/**
+ * Bold, italic, code, links, and bare references to a decision or an artefact.
+ *
+ * The docs cite each other by id: "See D21", "the same problem as A9". A reader
+ * outside the repository cannot follow a code, so every one becomes a link to
+ * the entry it names. The author writes the id and nothing else, so the two
+ * documents stay readable as text and nobody maintains a URL by hand. See D40.
+ *
+ * `refs` is off inside a heading, where the id is already the anchor and a link
+ * would point at itself.
+ */
+function inline(text: string, key = 0, refs = true): ReactNode[] {
   const out: ReactNode[] = []
-  /* Bold, code and links, in one pass so they cannot nest wrongly. */
-  const re = /\*\*(.+?)\*\*|`([^`]+)`|\[([^\]]+)\]\(([^)]+)\)/g
+  /* One pass, so a construct cannot nest wrongly inside another. */
+  const re =
+    /\*\*(.+?)\*\*|\*([^*\n]+)\*|`([^`]+)`|\[([^\]]+)\]\(([^)]+)\)|\b(D\d{1,3}|A\d{1,3})\b/g
   let last = 0
   let m: RegExpExecArray | null
   let i = key
@@ -22,21 +36,42 @@ function inline(text: string, key = 0): ReactNode[] {
     if (m[1] !== undefined) {
       out.push(
         <strong key={`b${i}`} className="font-medium">
-          {m[1]}
+          {inline(m[1], i * 100, refs)}
         </strong>,
       )
     } else if (m[2] !== undefined) {
       out.push(
+        <em key={`i${i}`} className="italic text-[var(--muted)]">
+          {inline(m[2], i * 100 + 50, refs)}
+        </em>,
+      )
+    } else if (m[3] !== undefined) {
+      out.push(
         <code key={`c${i}`} className="rounded bg-[var(--surface-sunken)] px-1 py-0.5 text-[0.85em]">
-          {m[2]}
+          {m[3]}
         </code>,
       )
-    } else {
+    } else if (m[4] !== undefined) {
       out.push(
-        <a key={`l${i}`} href={m[4]} className="underline underline-offset-4">
-          {m[3]}
+        <a key={`l${i}`} href={m[5]} className="underline underline-offset-4">
+          {m[4]}
         </a>,
       )
+    } else {
+      const id = m[6] as string
+      if (!refs) {
+        out.push(id)
+      } else {
+        out.push(
+          <a
+            key={`r${i}`}
+            href={id.startsWith('D') ? decisionHref(id) : artefactHref(id)}
+            className="underline underline-offset-4 decoration-dotted"
+          >
+            {id}
+          </a>,
+        )
+      }
     }
     last = m.index + m[0].length
     i += 1
@@ -101,15 +136,33 @@ export function Markdown({ source }: { source: string }) {
             id={id}
             className="mt-12 scroll-mt-20 text-2xl font-light leading-tight sm:text-3xl"
           >
-            {inline(text)}
+            {inline(text, 0, false)}
           </h2>
         ) : (
           <h3 key={`h${k++}`} id={id} className="mt-8 scroll-mt-20 text-xl font-medium tracking-tight">
-            {inline(text)}
+            {inline(text, 0, false)}
           </h3>
         ),
       )
       i += 1
+      continue
+    }
+
+    if (/^>\s?/.test(line)) {
+      flush()
+      const quoted: string[] = []
+      while (i < lines.length && /^>\s?/.test(lines[i] as string)) {
+        quoted.push((lines[i] as string).replace(/^>\s?/, ''))
+        i += 1
+      }
+      blocks.push(
+        <blockquote
+          key={`q${k++}`}
+          className="my-6 max-w-3xl border-l-2 border-[var(--rule)] pl-4 text-lg leading-relaxed text-[var(--muted)]"
+        >
+          {inline(quoted.join(' '))}
+        </blockquote>,
+      )
       continue
     }
 

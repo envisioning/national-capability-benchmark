@@ -22,7 +22,7 @@ export type AgendaStrings = {
    */
   generated: string
   /**
-   * {reference} {limits}. The standing disclaimer under the title. Keep the
+   * {countries} {limits}. The standing disclaimer under the title. Keep the
    * three claims: relative scores, confidence reported separately, read the
    * limits before quoting. {limits} is filled by the renderer, which links
    * docs/KNOWN-ARTEFACTS.md in the repository.

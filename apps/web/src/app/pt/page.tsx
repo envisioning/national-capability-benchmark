@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { PT_BR, REFERENCE_ISO3, countryName } from '@ncb/core'
+import { COUNTRY_ISO3, PT_BR, countryName } from '@ncb/core'
 import { CountryLabel, Empty, Eyebrow, Highlight, PageTitle } from '@/components/ui'
 import { loadIndex } from '@/lib/data'
 import { agendaHref } from '@/lib/links'
@@ -44,8 +44,8 @@ export default async function PortugueseHomePage() {
           mede riqueza, conforto nem competitividade, e não produz ranking.
         </p>
         <p>
-          Cada país recebe nove notas de 0 a 100, medidas contra uma régua fixada por{' '}
-          {REFERENCE_ISO3.length} países de referência. A confiança na evidência é publicada ao
+          Cada país recebe nove notas de 0 a 100, medidas contra uma régua construída a partir
+          dos {COUNTRY_ISO3.length} países em conjunto. A confiança na evidência é publicada ao
           lado de cada nota e nunca entra no seu cálculo. Onde a evidência é fraca, a página diz
           isso antes de dizer qualquer outra coisa.
         </p>

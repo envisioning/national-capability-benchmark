@@ -1,18 +1,17 @@
 {
-  "generatedAt": "2026-08-27T22:52:36.452Z",
+  "generatedAt": "2026-08-27T23:22:29.129Z",
   "iso3": "NLD",
   "country": "Netherlands",
-  "frame": "reference",
   "dimensions": [
     {
       "dimension": "anticipation",
       "kind": "hold",
-      "score": 68.3,
+      "score": 70.3,
       "confidence": 0.644,
       "band": "usable",
       "trend": {
         "spanYears": 10,
-        "delta": 23.9,
+        "delta": 14.2,
         "basket": 5,
         "clamped": 0
       },
@@ -30,21 +29,21 @@
       "retired": [],
       "exemplars": [
         {
+          "iso3": "SWE",
+          "country": "Sweden",
+          "score": 82.9,
+          "confidence": 0.644
+        },
+        {
           "iso3": "FIN",
           "country": "Finland",
-          "score": 83,
+          "score": 81.1,
           "confidence": 0.644
         },
         {
           "iso3": "CHE",
           "country": "Switzerland",
-          "score": 81.1,
-          "confidence": 0.644
-        },
-        {
-          "iso3": "KOR",
-          "country": "South Korea",
-          "score": 79.3,
+          "score": 80,
           "confidence": 0.644
         }
       ],
@@ -61,14 +60,14 @@
     {
       "dimension": "agency",
       "kind": "hold",
-      "score": 67.5,
+      "score": 70.5,
       "confidence": 0.594,
       "band": "usable",
       "trend": {
         "spanYears": 10,
-        "delta": 1.6,
+        "delta": -0.4,
         "basket": 4,
-        "clamped": 1
+        "clamped": 0
       },
       "scoredOn": [
         "new_business_density",
@@ -87,20 +86,20 @@
         {
           "iso3": "USA",
           "country": "United States",
-          "score": 84.6,
+          "score": 88.3,
           "confidence": 0.495
         },
         {
           "iso3": "AUS",
           "country": "Australia",
-          "score": 83.1,
+          "score": 88,
           "confidence": 0.613
         },
         {
-          "iso3": "SGP",
-          "country": "Singapore",
-          "score": 79.6,
-          "confidence": 0.574
+          "iso3": "GBR",
+          "country": "United Kingdom",
+          "score": 84.7,
+          "confidence": 0.613
         }
       ],
       "evidenceElsewhere": []
@@ -176,12 +175,12 @@
     {
       "dimension": "learning",
       "kind": "hold",
-      "score": 78,
+      "score": 71.2,
       "confidence": 0.531,
       "band": "usable",
       "trend": {
         "spanYears": 10,
-        "delta": 0,
+        "delta": 1.7,
         "basket": 2,
         "clamped": 0
       },
@@ -199,22 +198,22 @@
       "retired": [],
       "exemplars": [
         {
-          "iso3": "GBR",
-          "country": "United Kingdom",
-          "score": 84.8,
-          "confidence": 0.52
-        },
-        {
-          "iso3": "CHE",
-          "country": "Switzerland",
-          "score": 77.3,
+          "iso3": "FIN",
+          "country": "Finland",
+          "score": 85.3,
           "confidence": 0.543
         },
         {
-          "iso3": "EST",
-          "country": "Estonia",
-          "score": 65.6,
-          "confidence": 0.531
+          "iso3": "AUS",
+          "country": "Australia",
+          "score": 75.2,
+          "confidence": 0.543
+        },
+        {
+          "iso3": "GBR",
+          "country": "United Kingdom",
+          "score": 73.9,
+          "confidence": 0.52
         }
       ],
       "evidenceElsewhere": [
@@ -237,7 +236,7 @@
     {
       "dimension": "experimentation",
       "kind": "measure",
-      "score": 19.1,
+      "score": 25.7,
       "confidence": 0.304,
       "band": "thin",
       "trend": null,
@@ -274,12 +273,12 @@
     {
       "dimension": "adaptability",
       "kind": "hold",
-      "score": 91,
+      "score": 89.5,
       "confidence": 0.475,
       "band": "usable",
       "trend": {
         "spanYears": 10,
-        "delta": 8.1,
+        "delta": 7.3,
         "basket": 4,
         "clamped": 0
       },
@@ -300,19 +299,19 @@
         {
           "iso3": "CHE",
           "country": "Switzerland",
-          "score": 88.8,
+          "score": 87.7,
           "confidence": 0.475
+        },
+        {
+          "iso3": "JPN",
+          "country": "Japan",
+          "score": 84.9,
+          "confidence": 0.465
         },
         {
           "iso3": "DEU",
           "country": "Germany",
-          "score": 85.8,
-          "confidence": 0.475
-        },
-        {
-          "iso3": "KOR",
-          "country": "South Korea",
-          "score": 82.6,
+          "score": 84.5,
           "confidence": 0.475
         }
       ],
@@ -357,7 +356,7 @@
     {
       "dimension": "building",
       "kind": "raise",
-      "score": 31,
+      "score": 35.2,
       "confidence": 0.544,
       "band": "usable",
       "trend": {
@@ -382,21 +381,21 @@
       ],
       "exemplars": [
         {
-          "iso3": "SGP",
-          "country": "Singapore",
-          "score": 70.9,
+          "iso3": "IRL",
+          "country": "Ireland",
+          "score": 70,
           "confidence": 0.544
         },
         {
-          "iso3": "KOR",
-          "country": "South Korea",
-          "score": 64.4,
+          "iso3": "SGP",
+          "country": "Singapore",
+          "score": 68.4,
           "confidence": 0.544
         },
         {
           "iso3": "CHN",
           "country": "China",
-          "score": 64.4,
+          "score": 62.8,
           "confidence": 0.544
         }
       ],
@@ -518,12 +517,12 @@
     {
       "dimension": "shared_purpose",
       "kind": "measure",
-      "score": 98.1,
+      "score": 96,
       "confidence": 0.238,
       "band": "very_thin",
       "trend": {
         "spanYears": 10,
-        "delta": 12.1,
+        "delta": 9.9,
         "basket": 2,
         "clamped": 0
       },

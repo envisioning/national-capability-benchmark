@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import {
   COUNTRY_NAMES,
   DIMENSIONS,
@@ -10,10 +10,15 @@ import {
   countryFlag,
   isReversal,
 } from '@ncb/core'
-import type { Dimension, EvidenceRecord, EvidenceStatus } from '@ncb/core'
+import type { Dimension, EvidenceRecord } from '@ncb/core'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { PatternCard } from '@/components/PatternCard'
 import { Empty, Section } from '@/components/ui'
+import {
+  NO_PATTERN_FILTERS,
+  patternFiltersQuery,
+  type PatternFilters,
+} from '@/lib/links'
 
 /**
  * Every documented delivery, narrowed by the reader.
@@ -21,14 +26,19 @@ import { Empty, Section } from '@/components/ui'
  * The corpus is large enough that a single scroll hides most of it, so the
  * reader picks a country, a dimension, a status or a phrase and the list
  * answers. Grouping stays by dimension, because a delivery is filed against
- * the indicator that should have measured it. See docs/DECISIONS.md D46.
+ * the indicator that should have measured it.
+ *
+ * The filters are the query string. The server reads them and renders the
+ * narrowed list, and every change here rewrites the address without a round
+ * trip, so a reader can copy what they are looking at. See docs/DECISIONS.md
+ * D46.
  */
 
 const CONTROL =
   'rounded-md border border-[var(--rule)] bg-[var(--surface)] px-2 py-1 text-xs text-[var(--foreground)]'
 
 /** A status filter value. `reversal` covers the two ways a delivery is lost. */
-type StatusFilter = 'all' | 'reversal' | EvidenceStatus
+type StatusFilter = PatternFilters['status']
 
 const STATUS_OPTIONS: { value: StatusFilter; label: string }[] = [
   { value: 'all', label: 'any status' },
@@ -59,12 +69,27 @@ function haystack(record: EvidenceRecord): string {
     .toLowerCase()
 }
 
-export function PatternsView({ records }: { records: EvidenceRecord[] }) {
-  const [query, setQuery] = useState('')
-  const [iso3, setIso3] = useState('')
-  const [dimension, setDimension] = useState('')
-  const [status, setStatus] = useState<StatusFilter>('all')
-  const [mechanismOnly, setMechanismOnly] = useState(false)
+export function PatternsView({
+  records,
+  initial = NO_PATTERN_FILTERS,
+}: {
+  records: EvidenceRecord[]
+  initial?: PatternFilters
+}) {
+  const [query, setQuery] = useState(initial.query)
+  const [iso3, setIso3] = useState(initial.iso3)
+  const [dimension, setDimension] = useState(initial.dimension)
+  const [status, setStatus] = useState<StatusFilter>(initial.status)
+  const [mechanismOnly, setMechanismOnly] = useState(initial.mechanismOnly)
+
+  /* The address follows the controls. `replaceState` keeps the server out of a
+   * keystroke and keeps 30 filter changes out of the back button, at the cost
+   * of the back button not stepping through them. */
+  useEffect(() => {
+    const search = patternFiltersQuery({ query, iso3, dimension, status, mechanismOnly })
+    if (search === window.location.search) return
+    window.history.replaceState(null, '', `${window.location.pathname}${search}`)
+  }, [query, iso3, dimension, status, mechanismOnly])
 
   const countries = useMemo(
     () =>

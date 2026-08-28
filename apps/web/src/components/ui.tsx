@@ -400,12 +400,12 @@ export function RadarEvidenceLegend({
 /**
  * What 0 to 100 means. Printed wherever a score is read on its own, because the
  * commonest misreading of this benchmark is that 10 means a tenth of a
- * capability. See docs/DECISIONS.md D16.
+ * capability. See docs/DECISIONS.md D47.
  */
 export function FrameNote() {
   return (
     <p className="mt-3 text-xs leading-relaxed text-[var(--muted)]">
-      0 to 100 is a position against the 10 reference countries. Zero is the weakest of those 10 on
+      0 to 100 is a position inside the frame every country builds together. Zero is the weakest on
       a dimension and 100 is the strongest. A score of 10 puts a country near the floor of that
       frame. It does not mean 10 percent of a capability.
     </p>
@@ -561,15 +561,21 @@ export function PanelProvenanceNote({
  * The nine marks and what they stand for.
  *
  * Shipped anywhere a chart names its axes with marks alone, so the grid of
- * country cards is readable without opening one first.
+ * country cards is readable without opening one first. A language page passes
+ * its lexicon's dimension names; the registry English is the fallback, as
+ * everywhere else in the interpretation layer. See D35.
  */
-export function DimensionLegend() {
+export function DimensionLegend({
+  names,
+}: {
+  names?: Partial<Record<(typeof DIMENSIONS)[number], string>>
+} = {}) {
   return (
     <ul className="mb-6 flex flex-wrap gap-x-5 gap-y-2 text-xs">
       {DIMENSIONS.map((d) => (
         <li key={d} className="inline-flex items-center gap-2">
           <Icon name={DIMENSION_ICON[d]} size={14} className="text-[var(--muted)]" />
-          <span>{DIMENSION_LABELS[d]}</span>
+          <span>{names?.[d] ?? DIMENSION_LABELS[d]}</span>
         </li>
       ))}
     </ul>

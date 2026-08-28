@@ -26,6 +26,7 @@ const config: NextConfig = {
       '../../data/evidence/*.json',
       '../../data/delphi/latest.json',
       '../../docs/KNOWN-ARTEFACTS.md',
+      '../../docs/DECISIONS.md',
       'data/out/index.json',
       'data/out/diagnostics.json',
       'data/out/countries/*.json',
@@ -34,6 +35,7 @@ const config: NextConfig = {
       'data/evidence/*.json',
       'data/delphi/latest.json',
       'docs/KNOWN-ARTEFACTS.md',
+      'docs/DECISIONS.md',
     ],
   },
 }

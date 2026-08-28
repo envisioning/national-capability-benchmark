@@ -74,9 +74,9 @@ export const IndicatorDef = z.object({
   /** Denominator series, for transform = per_million_population. */
   denominatorSeries: z.string().optional(),
   /**
-   * World Bank API database id. Omit for World Development Indicators (2).
-   * 1 = Doing Business, 3 = Worldwide Governance Indicators, 63 = Human Capital
-   * Index, 70 = Economic Fitness 2. The v2 API refuses these codes without it.
+   * World Bank API database id, named in `WB_DATABASES` in sources.ts. Omit for
+   * World Development Indicators. The v2 API refuses a code from any other
+   * database when the request carries no source parameter.
    */
   wbSourceId: z.number().int().optional(),
   /** Why this indicator is here, and what it is known to get wrong. */
@@ -245,7 +245,7 @@ export const IndicatorResult = z.object({
   source: z.string(),
   sourceTier: SourceTier.nullable(),
   winsorized: z.boolean(),
-  /** The value sat outside the reference frame, so the score was clamped to 0 or 100. */
+  /** The value sat outside the frame, so the score was clamped to 0 or 100. */
   outOfFrame: z.boolean().default(false),
   /**
    * Every observed year for this country, with the value as published and the
@@ -367,7 +367,7 @@ export type CountryFile = z.infer<typeof CountryFile>
  *
  * Evidence records never enter `DimensionResult.score` and never raise
  * confidence. A gap stays a gap until an indicator covers at least two
- * reference countries and can be normalised against the frame. The records
+ * countries and can be normalised against the frame. The records
  * exist so a known national delivery is written down with its source, its year
  * and its limits, instead of being argued in prose beside the chart. See
  * docs/DECISIONS.md D20.
@@ -491,7 +491,6 @@ export const IndicatorAcrossCountries = z.object({
       tier: SourceTier,
       outOfFrame: z.boolean(),
       /** True for the ten countries whose values fix the ends of the scale. */
-      reference: z.boolean(),
     }),
   ),
 })

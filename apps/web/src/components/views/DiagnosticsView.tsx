@@ -9,15 +9,12 @@ import {
 } from '@ncb/core'
 import type { Dimension } from '@ncb/core'
 import { DataTable } from '@/components/DataTable'
-import { Eyebrow, Headline, Meta, PageTitle, Section } from '@/components/ui'
+import { Eyebrow, Headline, Meta, PageTitle, PanelProvenanceNote, Section } from '@/components/ui'
 import type { Diagnostics } from '@ncb/core'
+import { capitalize, countWord } from '@/lib/words'
 
 const name = (id: string) => INDICATORS_BY_ID[id]?.name ?? id
 const muted = (v: React.ReactNode) => <span className="text-[var(--muted)]">{v}</span>
-
-/** Counts up to nine are spelled out in prose, per the copy rules. */
-const COUNT_WORDS = ['none', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
-const countWord = (n: number): string => COUNT_WORDS[n] ?? String(n)
 
 /**
  * Every section heading below is computed from the diagnostics it sits above.
@@ -34,6 +31,9 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
   const byConfidence = [...diag.measurability].sort((a, b) => b.meanConfidence - a.meanConfidence)
   const best = byConfidence[0]
   const worst = byConfidence[byConfidence.length - 1]
+  const panel = diag.panelVsGdp
+  const panelTracking = panel?.perDimension.filter((d) => d.flaggedAsWealthProxy) ?? []
+  const panelBackfill = panel?.perDimension.filter((d) => d.backfillCandidate) ?? []
   const gaps = diag.dataGaps.filter((g) => g.status === 'gap')
   const retired = diag.dataGaps.filter((g) => g.status === 'retired')
 
@@ -237,6 +237,75 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
         />
       </Section>
 
+      {panel && panel.perDimension.length > 0 && (
+        <Section
+          title={
+            panelTracking.length === 0
+              ? 'The panel estimates do not track income per head'
+              : `${capitalize(countWord(panelTracking.length))} of nine panel estimates track income per head`
+          }
+          hint={`A panel of models is not independent evidence. It reads the same published record the indicators come from, so a dimension the data cannot measure can return as a panel number that restates income per head. The panel column takes the same test as the indicators, with the indicator score for the same countries beside it.${
+            panelBackfill.length > 0
+              ? ` ${panelBackfill.map((d) => DIMENSION_LABELS[d.dimension]).join(' and ')} publish no indicator score, so the panel is the only candidate for filling them.`
+              : ''
+          }`}
+        >
+          <PanelProvenanceNote provenance={panel.provenance} panelists={panel.panelists} />
+          <DataTable
+            rows={panel.perDimension}
+            initialSort={{ key: 'panelR', dir: 'desc' }}
+            caption="Panel estimates correlated with GDP per capita, against the indicators for the same countries"
+            columns={[
+              {
+                key: 'dimension',
+                label: 'Dimension',
+                sort: (d) => DIMENSION_LABELS[d.dimension],
+                render: (d) => DIMENSION_LABELS[d.dimension],
+              },
+              {
+                key: 'panelR',
+                label: 'Panel r',
+                align: 'right',
+                sort: (d) => d.panelR,
+                render: (d) => d.panelR?.toFixed(3) ?? 'no estimate',
+              },
+              {
+                key: 'indicatorR',
+                label: 'Indicator r',
+                align: 'right',
+                sort: (d) => d.indicatorR,
+                render: (d) =>
+                  d.indicatorR === null
+                    ? muted('no score published')
+                    : muted(d.indicatorR.toFixed(3)),
+              },
+              {
+                key: 'delta',
+                label: 'Delta',
+                align: 'right',
+                sort: (d) => d.delta,
+                render: (d) =>
+                  d.delta === null ? (
+                    muted('no data')
+                  ) : (
+                    <span className={d.delta > 0 ? undefined : 'text-[var(--muted)]'}>
+                      {d.delta > 0 ? '+' : ''}
+                      {d.delta.toFixed(3)}
+                    </span>
+                  ),
+              },
+              {
+                key: 'panelN',
+                label: 'n',
+                align: 'right',
+                sort: (d) => d.panelN,
+                render: (d) => muted(d.panelN),
+              },
+            ]}
+          />
+        </Section>
+      )}
+
       <Section
         title={
           diag.redundantIndicatorPairs.length === 0
@@ -370,7 +439,7 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
 
       <Section
         title={`${Math.round(diag.outOfFrame.share * 100)}% of observed values clamp at the frame edge`}
-        hint={`${diag.outOfFrame.clampedCells} of ${diag.outOfFrame.observedCells} observed cells sit outside the range the ten reference countries cover, so their positions clamp to 0 or 100 and information is lost. Frequent clamping means the frame is too narrow for the countries being scored. The counts below name where it concentrates.`}
+        hint={`${diag.outOfFrame.clampedCells} of ${diag.outOfFrame.observedCells} observed cells sit outside the range the frame covers, so their positions clamp to 0 or 100 and information is lost. A current value cannot fall outside a frame its own country helped build, so a clamp here comes from a value the published frame did not see. The counts below name where it concentrates.`}
       >
         <DataTable
           rows={diag.outOfFrame.perCountry.slice(0, 15)}

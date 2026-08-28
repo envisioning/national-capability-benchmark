@@ -2,20 +2,20 @@
 
 *Generated 2026-08-27*
 
-Scores are relative to a frame fixed by the 10 reference countries and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
+Scores are relative to a frame built from all 40 countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting any number on its own.
 
 ## Where Singapore stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 76.3 | 0.62 (usable) | +26.6 over 10 years, on 5 indicators, 1 clamped at the frame edge |
-| Agency | 79.6 | 0.57 (usable) | +19.4 over 10 years, on 3 indicators |
+| Anticipation | 76.8 | 0.62 (usable) | +19.8 over 10 years, on 5 indicators |
+| Agency | 83.7 | 0.57 (usable) | +12.7 over 10 years, on 3 indicators |
 | Coordination | not scored | 0.08 (very thin) | no trend basket |
 | Trust | not scored | 0.08 (very thin) | no trend basket |
-| Learning | 57.5 | 0.49 (usable) | +7.6 over 10 years, on 2 indicators |
-| Experimentation | 34.2 | 0.21 (very thin) | +8.9 over 10 years, on 2 indicators |
-| Adaptability | 80.5 | 0.47 (usable) | +6.1 over 10 years, on 4 indicators |
-| Building | 70.9 | 0.54 (usable) | +8.7 over 10 years, on 4 indicators |
+| Learning | 57.9 | 0.49 (usable) | +0.9 over 10 years, on 2 indicators |
+| Experimentation | 41.4 | 0.21 (very thin) | +9.3 over 10 years, on 2 indicators |
+| Adaptability | 78.5 | 0.47 (usable) | +5.3 over 10 years, on 4 indicators |
+| Building | 68.4 | 0.54 (usable) | +7.6 over 10 years, on 4 indicators |
 | Shared Purpose | not scored | 0.14 (very thin) | no trend basket |
 
 ## The dimensions that must be measured before they can be managed
@@ -57,15 +57,15 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 
 Strongest first. These score at or above 50 on usable evidence, so nothing here asks to be raised or measured first. A held dimension still decays when nobody watches it.
 
-- Adaptability: 80.5, confidence usable
-- Agency: 79.6, confidence usable
-- Anticipation: 76.3, confidence usable
-- Building: 70.9, confidence usable
-- Learning: 57.5, confidence usable
+- Agency: 83.7, confidence usable
+- Adaptability: 78.5, confidence usable
+- Anticipation: 76.8, confidence usable
+- Building: 68.4, confidence usable
+- Learning: 57.9, confidence usable
 
 ## The measurement agenda
 
-26 indicators the specification asks for with no adequate internationally comparable dataset behind them. Each one lowers confidence until it is filled, and each one is a contribution a statistical agency, a research group or a ministry can make. A gap becomes a scored indicator when a comparable series covers at least two reference countries.
+26 indicators the specification asks for with no adequate internationally comparable dataset behind them. Each one lowers confidence until it is filled, and each one is a contribution a statistical agency, a research group or a ministry can make. A gap becomes a scored indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |

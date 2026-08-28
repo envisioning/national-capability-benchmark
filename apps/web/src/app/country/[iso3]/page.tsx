@@ -73,7 +73,7 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
 
   return (
     <>
-      <Eyebrow>{meta?.frame === 'reference' ? 'Sets the frame' : 'Scored against the frame'}</Eyebrow>
+      <Eyebrow>One of {COUNTRIES.length} countries that set the frame</Eyebrow>
       <PageTitle>
         <CountryLabel iso3={country.iso3} name={country.country} />
       </PageTitle>
@@ -100,9 +100,10 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
         </p>
         <p className="text-lg leading-relaxed">
           Each of the nine <DefineLink term="Dimension">dimensions</DefineLink> is scored from 0 to
-          100. That is a position against the ten{' '}
-          <DefineLink term="Reference frame">reference countries</DefineLink> and not a percentage
-          of anything, so 10 means near the floor of this comparison.{' '}
+          100. That is a position inside the{' '}
+          <DefineLink term="Comparison frame">comparison frame</DefineLink> that all
+          {' '}{COUNTRIES.length} countries build together, so 10 means near the floor of this
+          comparison and never 10 percent of anything.{' '}
           <DefineLink term="Confidence" /> sits beside every score and never inside it, and the
           radar draws a dashed edge with a hollow point where the evidence is thin. Below, every
           dimension lists the <DefineLink term="Indicator">indicators</DefineLink> behind its score,
@@ -220,7 +221,7 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
                             {row.outOfFrame ? (
                               <span
                                 className="ml-1.5 inline-flex items-center gap-1 text-[10px] text-[var(--muted)]"
-                                title="The raw value sits outside the reference frame, so this position is clamped to the edge of the scale."
+                                title="The raw value sits outside the frame, so this position is clamped to the edge of the scale."
                               >
                                 <Icon name="triangle-alert" size={11} />
                                 clamped

@@ -12,7 +12,7 @@ import {
 } from '@/components/PatternCard'
 import { Eyebrow, Headline, PageTitle, Section } from '@/components/ui'
 import { loadEvidence } from '@/lib/data'
-import { evidenceHref, indicatorHref, patternsHref } from '@/lib/links'
+import { NO_PATTERN_FILTERS, evidenceHref, indicatorHref, patternsHref } from '@/lib/links'
 
 export const dynamic = 'force-dynamic'
 
@@ -53,7 +53,7 @@ export default async function PatternPage({ params }: { params: Promise<{ id: st
     <>
       <p className="mb-6">
         <Link
-          href={patternsHref}
+          href={patternsHref()}
           className="inline-flex items-center gap-2 text-xs text-[var(--muted)] underline underline-offset-4"
         >
           <Icon name="arrow-left" size={13} />
@@ -91,6 +91,14 @@ export default async function PatternPage({ params }: { params: Promise<{ id: st
           hint={`${sameCountry.length} other documented ${sameCountry.length === 1 ? 'delivery' : 'deliveries'}.`}
         >
           <RelatedList records={sameCountry} />
+          <p className="mt-4 text-xs">
+            <Link
+              href={patternsHref({ ...NO_PATTERN_FILTERS, iso3: record.iso3 })}
+              className="underline underline-offset-4"
+            >
+              Every delivery from {country}
+            </Link>
+          </p>
         </Section>
       ) : null}
 
@@ -101,6 +109,16 @@ export default async function PatternPage({ params }: { params: Promise<{ id: st
           hint={`${sameIndicator.length} documented ${sameIndicator.length === 1 ? 'delivery' : 'deliveries'} filed against ${def?.name ?? record.indicatorId} in other countries.`}
         >
           <RelatedList records={sameIndicator} />
+          {dimension ? (
+            <p className="mt-4 text-xs">
+              <Link
+                href={patternsHref({ ...NO_PATTERN_FILTERS, dimension })}
+                className="underline underline-offset-4"
+              >
+                Every delivery under {DIMENSION_LABELS[dimension].toLowerCase()}
+              </Link>
+            </p>
+          ) : null}
         </Section>
       ) : null}
     </>

@@ -5,9 +5,18 @@ import {
   INDICATORS,
   INDICATORS_BY_ID,
   indicatorsFor,
+  isEvidential,
+  isPanel,
   isScored,
 } from '../model/index.js'
-import type { CountryResult, Dimension, MeasurementClass, Observation } from '../model/index.js'
+import type {
+  CountryResult,
+  DelphiRunFile,
+  Dimension,
+  MeasurementClass,
+  Observation,
+  Provenance,
+} from '../model/index.js'
 import { mean, pearson, round, spearman } from './stats.js'
 import { scoreAll, type Matrix, type ScoreOptions } from './score.js'
 
@@ -57,6 +66,23 @@ function dimensionSeries(countries: CountryResult[], dimension: Dimension): Map<
     const s = c.dimensions[dimension]?.score
     if (s !== null && s !== undefined) out.set(c.iso3, s)
   }
+  return out
+}
+
+/** The panel's median estimate per country, the column the viewer publishes. */
+function panelSeries(countries: CountryResult[], dimension: Dimension): Map<string, number> {
+  const out = new Map<string, number>()
+  for (const c of countries) {
+    const s = c.dimensions[dimension]?.delphiScore
+    if (s !== null && s !== undefined) out.set(c.iso3, s)
+  }
+  return out
+}
+
+function restrictTo(values: Map<string, number>, keys: Iterable<string>): Map<string, number> {
+  const allow = new Set(keys)
+  const out = new Map<string, number>()
+  for (const [iso3, v] of values) if (allow.has(iso3)) out.set(iso3, v)
   return out
 }
 
@@ -139,6 +165,47 @@ export type Diagnostics = {
     /** Positive means the indicator raises its dimension's wealth correlation. */
     delta: number | null
   }>
+  /**
+   * The panel column put through the same wealth test as the indicators.
+   *
+   * A panel of language models is not an independent measurement. It is a
+   * compression of the same published corpus the indicators come from, so the
+   * perception layer D23 retired can return through the panel wearing a new
+   * name. This runs the D42 test on `delphiScore`: correlate it with log GDP
+   * per capita, and put the indicator score for the same countries beside it so
+   * the difference is not a difference in sample. Null when no run is loaded.
+   * A non-evidential run reports its provenance and no rows: correlating mock
+   * estimates would produce a number that reads as a finding. See D48.
+   */
+  panelVsGdp: {
+    runId: string
+    provenance: Provenance
+    panelists: number
+    /** False for a mock run. No rows are computed for one. */
+    evidential: boolean
+    /** False when the run has too few panelists to hold a distribution. */
+    hasDistribution: boolean
+    perDimension: Array<{
+      dimension: Dimension
+      /** Signed, to match `dimensionVsGdp`. The flag reads the absolute value. */
+      panelR: number | null
+      panelSpearman: number | null
+      panelN: number
+      /** The indicator score over the same countries the panel covers. */
+      indicatorR: number | null
+      indicatorN: number
+      /**
+       * Absolute panel correlation minus absolute indicator correlation.
+       * The two columns can cover slightly different countries, because a
+       * country can carry a panel estimate where its dimension publishes no
+       * score. Both counts are printed for that reason.
+       */
+      delta: number | null
+      flaggedAsWealthProxy: boolean
+      /** No country publishes an indicator score here, so only the panel could fill it. */
+      backfillCandidate: boolean
+    }>
+  } | null
   measurability: Array<{
     dimension: Dimension
     indicatorsDefined: number
@@ -169,7 +236,7 @@ export type Diagnostics = {
     status: 'gap' | 'retired'
   }>
   /**
-   * How often observed values sit outside the reference frame and clamp to 0 or
+   * How often observed values sit outside the frame and clamp to 0 or
    * 100. Frequent clamping means the frame is too narrow for the countries being
    * scored, and this is where that shows up as one number instead of a silent
    * per-cell flag.
@@ -179,6 +246,54 @@ export type Diagnostics = {
     clampedCells: number
     share: number
     perCountry: Array<{ iso3: string; country: string; clampedCells: number }>
+  }
+}
+
+/**
+ * Correlate the panel's own column with income, dimension by dimension.
+ *
+ * The comparison column is the indicator score over exactly the countries the
+ * panel scored, so a difference between the two is a difference in what they
+ * measure and not in who they cover.
+ */
+function panelVsGdpFor(
+  run: DelphiRunFile,
+  countries: CountryResult[],
+  gdp: Map<string, number>,
+): NonNullable<Diagnostics['panelVsGdp']> {
+  const evidential = isEvidential(run.provenance)
+  const abs = (v: number | null) => (v === null ? null : Math.abs(v))
+  const perDimension = !evidential
+    ? []
+    : DIMENSIONS.map((dimension) => {
+        const panel = panelSeries(countries, dimension)
+        const p = alignedPair(panel, gdp)
+        const panelR = pearson(p.xs, p.ys)
+        const matched = restrictTo(dimensionSeries(countries, dimension), panel.keys())
+        const i = alignedPair(matched, gdp)
+        const indicatorR = pearson(i.xs, i.ys)
+        const pa = abs(panelR)
+        const ia = abs(indicatorR)
+        const s = spearman(p.xs, p.ys)
+        return {
+          dimension,
+          panelR: panelR === null ? null : round(panelR, 3),
+          panelSpearman: s === null ? null : round(s, 3),
+          panelN: p.xs.length,
+          indicatorR: indicatorR === null ? null : round(indicatorR, 3),
+          indicatorN: i.xs.length,
+          delta: pa === null || ia === null ? null : round(pa - ia, 3),
+          flaggedAsWealthProxy: pa !== null && pa >= WEALTH_CORRELATION_THRESHOLD,
+          backfillCandidate: countries.every((c) => c.dimensions[dimension]?.score === null),
+        }
+      })
+  return {
+    runId: run.runId,
+    provenance: run.provenance,
+    panelists: run.panel.length,
+    evidential,
+    hasDistribution: isPanel(run),
+    perDimension,
   }
 }
 
@@ -192,6 +307,7 @@ export function runDiagnostics(
   matrix: Matrix,
   opts: ScoreOptions,
   gdpSeries: string,
+  delphi: DelphiRunFile | null = null,
 ): Diagnostics {
   const gdp = logGdpByCountry(observations, gdpSeries)
 
@@ -370,6 +486,7 @@ export function runDiagnostics(
       .map((p) => ({ ...p, r: p.r === null ? null : round(p.r, 3) })),
     indicatorVsGdp,
     wealthAttribution,
+    panelVsGdp: delphi ? panelVsGdpFor(delphi, countries, gdp) : null,
     redundantIndicatorPairs,
     measurability,
     gdpStrippedTest: {

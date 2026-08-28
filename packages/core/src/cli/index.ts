@@ -1,8 +1,15 @@
-import { COUNTRY_ISO3, DATASET_VERSION, DIMENSIONS, GDP_PER_CAPITA_CODE, INDICATORS } from '../model/index.js'
+import {
+  COUNTRY_ISO3,
+  DATASET_VERSION,
+  DIMENSIONS,
+  GDP_PER_CAPITA_CODE,
+  INDICATORS,
+} from '../model/index.js'
 import type { CountryResult, Dimension } from '../model/index.js'
 import { ingestWorldBank } from '../pipeline/ingest.js'
 import {
   COUNTRY_OUT_DIR,
+  DELPHI_DIR,
   FILES,
   INDICATOR_OUT_DIR,
   SCHEMA_OUT_DIR,
@@ -12,6 +19,7 @@ import {
   indicatorFile,
 } from '../pipeline/paths.js'
 import { resolve } from 'node:path'
+import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises'
 import { buildDataPackage, jsonSchemas } from '../pipeline/datapackage.js'
 import { flatTable, scoreAll } from '../pipeline/score.js'
 import { buildAgenda, renderAgenda } from '../pipeline/agenda.js'
@@ -33,7 +41,12 @@ import { STANCES, buildPanel, modelsFromEnv } from '../delphi/panel.js'
 import { GatewayProvider, MockProvider } from '../delphi/provider.js'
 import { runDelphi } from '../delphi/run.js'
 import { estimateCost } from '../delphi/cost.js'
-import { SYSTEM_RULES, indicatorJudgementPrompt, round1CellPrompt } from '../delphi/prompts.js'
+import {
+  SYSTEM_RULES,
+  evidenceBrief,
+  indicatorJudgementPrompt,
+  round1CellPrompt,
+} from '../delphi/prompts.js'
 import { CHARS_PER_TOKEN, LAST_VERIFIED, OUTPUT_TOKENS } from '../delphi/pricing.js'
 import { checkEvidenceUrls, validateDelphiRuns, validateEvidence } from '../pipeline/validate.js'
 
@@ -134,7 +147,7 @@ async function diagnose(args: Args) {
     minPanelistConfidence: num(args, 'min-panelist-confidence', 0),
   }
   const { countries, matrix } = scoreAll(observations, opts)
-  const diag = runDiagnostics(observations, countries, matrix, opts, GDP_PER_CAPITA_CODE)
+  const diag = runDiagnostics(observations, countries, matrix, opts, GDP_PER_CAPITA_CODE, delphi)
   await writeOut(FILES.diagnostics, `${JSON.stringify(diag, null, 2)}\n`)
   console.log(`diagnostics -> ${FILES.diagnostics}`)
   return { countries, diag, delphi }
@@ -299,7 +312,128 @@ async function main() {
         process.exitCode = 1
         break
       }
-      console.log(picked.map((c) => round1CellPrompt(panelist, c)).join('\n\n---\n\n'))
+      if (!bool(args, 'paste')) {
+        console.log(picked.map((c) => round1CellPrompt(panelist, c)).join('\n\n---\n\n'))
+        break
+      }
+
+      /**
+       * Paste mode. One self-contained block per batch, for a panelist working in
+       * a chat window with no API access. The stance and the system rules appear
+       * once instead of once per country, and the JSON contract is spelled out,
+       * because a chat answer has to be pasted back into a file by hand.
+       */
+      const batch = Math.max(1, num(args, 'batch', 4))
+      const outDir = resolve(DELPHI_DIR, str(args, 'out', 'paste'))
+      await mkdir(outDir, { recursive: true })
+      const batches: CountryResult[][] = []
+      for (let i = 0; i < picked.length; i += batch) batches.push(picked.slice(i, i + batch))
+
+      const written: string[] = []
+      for (const [i, group] of batches.entries()) {
+        const n = String(i + 1).padStart(2, '0')
+        const codes = group.map((c) => c.iso3).join(', ')
+        const body = `${SYSTEM_RULES}
+
+---
+
+${stance.prompt}
+
+---
+
+${group.map((c) => evidenceBrief(c)).join('\n\n---\n\n')}
+
+---
+
+Score all nine dimensions for each of ${codes} on 0-100, against the frame set by the ten reference countries.
+
+The indicator-derived score is one input, not the answer. Where evidence is thin or stale, say so and use your own knowledge, and set a lower selfConfidence. Where the indicators clearly mismeasure the dimension for this country, depart from them and explain why in one or two sentences.
+
+For each dimension also list the specific evidence you would need in order to raise your confidence. Be concrete: name a dataset, a statistic or an observable event, not "more data".
+
+Reply with JSON only. No commentary before or after it, no markdown fence. One object per country per dimension, ${group.length * DIMENSIONS.length} objects in total, in this exact shape:
+
+{"cellEstimates":[{"iso3":"${group[0]?.iso3 ?? 'BRA'}","dimension":"anticipation","round":1,"panelist":"${panelist.id}","model":"${panelist.model}","score":28,"selfConfidence":0.6,"rationale":"One or two sentences.","missingEvidence":["A named dataset or observable event","Another one"]}]}
+
+The nine dimension ids, exactly: ${DIMENSIONS.join(', ')}.
+`
+        const file = resolve(outDir, `${stance.id}-${n}.txt`)
+        await writeFile(file, body, 'utf8')
+        written.push(`${file}  (${codes})`)
+      }
+      console.log(`${written.length} paste bundle(s) for stance "${stance.id}", ${batch} country/countries each\n`)
+      for (const w of written) console.log(`  ${w}`)
+      console.log(`\nPaste one file per message. Save each reply, then merge with bench merge.`)
+      break
+    }
+
+    case 'merge': {
+      /**
+       * Merges the JSON replies a panelist pasted back from a chat window into one
+       * run file. Accepts either a bare array of cells or an object carrying
+       * `cellEstimates`, because chat models return both. Later files win on a
+       * repeated country-dimension pair, so re-pasting a corrected reply fixes it.
+       */
+      const stanceId = str(args, 'stance', '')
+      const stance = STANCES.find((st) => st.id === stanceId)
+      if (!stance) {
+        console.error(`--stance is required. one of: ${STANCES.map((st) => st.id).join(', ')}`)
+        process.exitCode = 1
+        break
+      }
+      const model = str(args, 'model', '')
+      if (!model) {
+        console.error('--model is required, for example --model "gpt-5 (chat, in-session)"')
+        process.exitCode = 1
+        break
+      }
+      const inDir = resolve(DELPHI_DIR, str(args, 'in', 'replies'))
+      const files = (await readdir(inDir)).filter((f) => f.endsWith('.json')).sort()
+      if (!files.length) {
+        console.error(`no .json files in ${inDir}`)
+        process.exitCode = 1
+        break
+      }
+
+      const panelistId = `${stance.id}@${model}`
+      const byKey = new Map<string, Record<string, unknown>>()
+      let read = 0
+      for (const f of files) {
+        const raw = JSON.parse(await readFile(resolve(inDir, f), 'utf8')) as unknown
+        const list = Array.isArray(raw)
+          ? raw
+          : ((raw as { cellEstimates?: unknown[] }).cellEstimates ?? [])
+        for (const cell of list as Array<Record<string, unknown>>) {
+          read++
+          byKey.set(`${String(cell['iso3'])}:${String(cell['dimension'])}`, {
+            ...cell,
+            round: cell['round'] ?? 1,
+            panelist: panelistId,
+            model,
+          })
+        }
+      }
+
+      const run = {
+        runId: `${str(args, 'run-id', `chat-${stance.id}`)}`,
+        generatedAt: str(args, 'generated-at', new Date().toISOString()),
+        provenance: 'in_session',
+        note: str(
+          args,
+          'note',
+          `Pasted into ${model} through its chat interface, taking the ${stance.label} stance. One panelist, one round. Not a panel: the median is one opinion and the IQR is zero.`,
+        ),
+        panel: [{ panelist: panelistId, model, stance: `${stance.label} (N=1, not a panel)` }],
+        rounds: 1,
+        cellEstimates: [...byKey.values()],
+        indicatorJudgements: [],
+      }
+
+      const outFile = resolve(DELPHI_DIR, str(args, 'out', `chat-${stance.id}.json`))
+      await writeFile(outFile, `${JSON.stringify(run, null, 2)}\n`, 'utf8')
+      console.log(`read ${read} cell(s) from ${files.length} file(s), ${byKey.size} unique after dedupe`)
+      console.log(`merge       -> ${outFile}`)
+      console.log(`\nNow run: pnpm bench validate`)
       break
     }
 
@@ -378,7 +512,10 @@ async function main() {
                        [--max-coverage 0.6] [--no-judge] [--concurrency 4]
   pnpm bench diagnose                     correlations, redundancy, GDP-sensitivity test
   pnpm bench prompt    [BRA IND ...] [--stance wealth_sceptic] [--system] [--audit trust]
-                                          print the exact panel prompt, for a panelist scoring in-session
+                       [--paste] [--batch 4] [--out paste]
+                                          print the exact panel prompt; --paste writes chat-ready bundles
+  pnpm bench merge     --stance X --model "gpt-5 (chat)" [--in replies] [--out file.json]
+                                          merge pasted chat replies into one run file
   pnpm bench cost      [--rounds 2] [--stances 4] [--models a,b] [--no-judge]
                                           measure the prompts and price the panel run
   pnpm bench validate  [--fetch]          schema-check data/delphi and data/evidence; --fetch also live-checks evidence source URLs

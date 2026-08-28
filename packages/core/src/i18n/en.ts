@@ -25,7 +25,7 @@ export const EN: Lexicon = {
     title: 'Capability agenda: {country}',
     generated: 'Generated {date}',
     intro:
-      'Scores are relative to a frame fixed by the {reference} reference countries and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read {limits} before quoting any number on its own.',
+      'Scores are relative to a frame built from all {countries} countries together and run 0 to 100 per dimension, with no headline ranking. Confidence is reported beside every score and never folded into it. Read {limits} before quoting any number on its own.',
     limitsLabel: 'the known limits of the data',
     standingHeading: 'Where {countryTopic} stands',
     colDimension: 'Dimension',
@@ -56,7 +56,7 @@ export const EN: Lexicon = {
     evidenceElsewhereLine: 'Documented deliveries elsewhere: {list}.',
     agendaHeading: 'The measurement agenda',
     agendaIntro:
-      '{n} indicators the specification asks for with no adequate internationally comparable dataset behind them. Each one lowers confidence until it is filled, and each one is a contribution a statistical agency, a research group or a ministry can make. A gap becomes a scored indicator when a comparable series covers at least two reference countries.',
+      '{n} indicators the specification asks for with no adequate internationally comparable dataset behind them. Each one lowers confidence until it is filled, and each one is a contribution a statistical agency, a research group or a ministry can make. A gap becomes a scored indicator when a comparable series covers at least two countries.',
     colIndicator: 'Missing indicator',
     colAsks: 'What it asks',
     ownEvidenceHeading: 'What the indicators cannot see about {countryTopic}',

@@ -8,12 +8,12 @@ import {
   DISSENT_IQR,
   INDICATORS,
   MEASUREMENT_CLASS_MEANING,
-  REFERENCE_ISO3,
   isScored,
   SOURCE_TIERS,
 } from '@ncb/core'
 import type { MeasurementClass } from '@ncb/core'
 import { CountryLabel, Eyebrow, Headline, PageTitle, Scroller, Section, Table, Td, Th } from '@/components/ui'
+import { sourcesHref } from '@/lib/links'
 import { DIMENSION_ICON, Icon, TIER_ICON } from '@/components/Icon'
 
 export const metadata: Metadata = {
@@ -45,9 +45,9 @@ export default function MethodPage() {
       >
         <ul className="max-w-3xl list-disc space-y-3 pl-5 text-lg leading-relaxed">
           <li>
-            The frame has no home country. The {REFERENCE_ISO3.length} reference countries set the
-            scale together, and every country is scored against it the same way. A frame built
-            around one country only describes that country.
+            The frame has no home country. All {COUNTRIES.length} countries set the scale
+            together, and every one of them is measured against it. A frame built around one
+            country only describes that country.
           </li>
           <li>
             A high score is not a model to copy. A mechanism that works in one country works because
@@ -113,8 +113,8 @@ export default function MethodPage() {
           <li>Apply the declared transform: per million people, log, or none.</li>
           <li>Winsorize with Tukey fences at three interquartile ranges, so only extreme outliers move.</li>
           <li>
-            Normalize to 0 through 100 against the frame set by the {REFERENCE_ISO3.length}{' '}
-            reference countries, reversing lower-is-better indicators.
+            Normalize to 0 through 100 against the frame the {COUNTRIES.length} countries set
+            together, reversing lower-is-better indicators.
           </li>
           <li>Average the available indicators inside a dimension with equal weights.</li>
           <li>
@@ -182,6 +182,14 @@ export default function MethodPage() {
             </tbody>
           </Table>
         </Scroller>
+        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
+          A tier says what kind of body published a number. Which body actually did, which World
+          Bank database each series comes from and the exact request that fetched it are on the{' '}
+          <Link href={sourcesHref} className="underline underline-offset-4">
+            sources page
+          </Link>
+          .
+        </p>
       </Section>
 
       <Section
@@ -259,7 +267,7 @@ export default function MethodPage() {
           <li>Records never enter a score and never raise confidence.</li>
           <li>
             A gap becomes a scored indicator only when a comparable series covers at least two
-            reference countries, which is the minimum the scale needs.
+            countries, which is the minimum the scale needs.
           </li>
         </ul>
       </Section>
@@ -298,15 +306,14 @@ export default function MethodPage() {
       </Section>
 
       <Section
-        title="The scale is fixed by ten countries and holds still"
-        hint={`Ten reference countries set the Tukey fences and the 0 and 100 endpoints for every indicator. Every other country is scored against that same fixed frame, so adding a country moves nobody else's number. Verified twice as countries were added: 0 of 90 existing cells moved at 16 countries, 0 of 144 at 40. A country outside the frame clamps to 0 or 100 and the cell is flagged, because widening the scale quietly would change what every published number means. The ${COUNTRIES.length} countries here are chosen to expose different capability structures, and ranking them against each other is not the exercise.`}
+        title="Every country sets the scale, and the scale holds still until it is rebased"
+        hint={`All ${COUNTRIES.length} countries set the Tukey fences and the 0 and 100 endpoints for every indicator, and every one of them is measured against the result. No country is scored against a ruler it is absent from. The frame holds still inside a published version, so a score that moves between two runs of the same version is the country moving. Adding a country changes the endpoints, so the whole benchmark is scored again and the dataset version takes a major bump. The countries here are chosen to expose different capability structures, and ranking them against each other is not the exercise.`}
       >
         <Scroller>
           <Table>
             <thead>
               <tr>
                 <Th>Country</Th>
-                <Th>Role in the scale</Th>
                 <Th>Why it is in the prototype</Th>
               </tr>
             </thead>
@@ -316,7 +323,6 @@ export default function MethodPage() {
                   <Td>
                     <CountryLabel iso3={c.iso3} name={c.name} />
                   </Td>
-                  <Td dim>{c.frame === 'reference' ? 'sets the frame' : 'scored against the frame'}</Td>
                   <Td dim>{c.reason}</Td>
                 </tr>
               ))}
@@ -328,9 +334,9 @@ export default function MethodPage() {
       <Section title="These assumptions can be challenged">
         <ul className="max-w-3xl list-disc space-y-2 pl-5 text-lg leading-relaxed">
           <li>
-            0 and 100 mean the weakest and strongest of the ten reference countries on that
-            indicator. Those ten were picked to expose contrasts and they are not a sample of the
-            world, so a low score means near the floor of this frame and says nothing about a
+            0 and 100 mean the weakest and strongest of the {COUNTRIES.length} countries on that
+            indicator. Those countries were picked to expose contrasts and they are not a sample of
+            the world, so a low score means near the floor of this frame and says nothing about a
             percentage of capability.
           </li>
           <li>

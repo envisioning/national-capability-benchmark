@@ -2,20 +2,20 @@
 
 *Gerado em 2026-08-27*
 
-As notas são relativas a uma régua fixada pelos 10 países de referência e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
+As notas são relativas a uma régua construída a partir dos 40 países em conjunto e vão de 0 a 100 por dimensão, sem ranking geral. A confiança é publicada ao lado de cada nota e nunca entra no seu cálculo. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar qualquer número isoladamente.
 
 ## Onde Singapura está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 76,3 | 0,62 (utilizável) | +26,6 em 10 anos, sobre 5 indicadores, 1 truncados na borda da régua |
-| Agência | 79,6 | 0,57 (utilizável) | +19,4 em 10 anos, sobre 3 indicadores |
+| Antecipação | 76,8 | 0,62 (utilizável) | +19,8 em 10 anos, sobre 5 indicadores |
+| Agência | 83,7 | 0,57 (utilizável) | +12,7 em 10 anos, sobre 3 indicadores |
 | Coordenação | sem nota | 0,08 (muito fraca) | sem base de tendência |
 | Confiança | sem nota | 0,08 (muito fraca) | sem base de tendência |
-| Aprendizagem | 57,5 | 0,49 (utilizável) | +7,6 em 10 anos, sobre 2 indicadores |
-| Experimentação | 34,2 | 0,21 (muito fraca) | +8,9 em 10 anos, sobre 2 indicadores |
-| Adaptação | 80,5 | 0,47 (utilizável) | +6,1 em 10 anos, sobre 4 indicadores |
-| Construção | 70,9 | 0,54 (utilizável) | +8,7 em 10 anos, sobre 4 indicadores |
+| Aprendizagem | 57,9 | 0,49 (utilizável) | +0,9 em 10 anos, sobre 2 indicadores |
+| Experimentação | 41,4 | 0,21 (muito fraca) | +9,3 em 10 anos, sobre 2 indicadores |
+| Adaptação | 78,5 | 0,47 (utilizável) | +5,3 em 10 anos, sobre 4 indicadores |
+| Construção | 68,4 | 0,54 (utilizável) | +7,6 em 10 anos, sobre 4 indicadores |
 | Propósito compartilhado | sem nota | 0,14 (muito fraca) | sem base de tendência |
 
 ## As dimensões que precisam ser medidas antes de serem geridas
@@ -57,15 +57,15 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 
 Da nota mais alta para a mais baixa. Estas dimensões pontuam 50 ou mais com evidência utilizável, então nada aqui pede elevação ou medição primeiro. Uma dimensão mantida ainda decai quando ninguém a observa.
 
-- Adaptação: 80,5, confiança utilizável
-- Agência: 79,6, confiança utilizável
-- Antecipação: 76,3, confiança utilizável
-- Construção: 70,9, confiança utilizável
-- Aprendizagem: 57,5, confiança utilizável
+- Agência: 83,7, confiança utilizável
+- Adaptação: 78,5, confiança utilizável
+- Antecipação: 76,8, confiança utilizável
+- Construção: 68,4, confiança utilizável
+- Aprendizagem: 57,9, confiança utilizável
 
 ## A agenda de medição
 
-26 indicadores que a especificação pede e para os quais não existe base de dados internacional comparável adequada. Cada um reduz a confiança enquanto não for preenchido, e cada um é uma contribuição ao alcance de um órgão de estatística, um grupo de pesquisa ou um ministério. Uma lacuna vira indicador com nota quando uma série comparável cobre pelo menos dois países de referência.
+26 indicadores que a especificação pede e para os quais não existe base de dados internacional comparável adequada. Cada um reduz a confiança enquanto não for preenchido, e cada um é uma contribuição ao alcance de um órgão de estatística, um grupo de pesquisa ou um ministério. Uma lacuna vira indicador com nota quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
