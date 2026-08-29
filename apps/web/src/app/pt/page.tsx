@@ -5,6 +5,7 @@ import {
   INDICATORS,
   LATAM_ISO3,
   PT_BR,
+  REPO_URL,
   countryName,
   fill,
   isScored,
@@ -99,6 +100,18 @@ export default async function PortugueseHomePage() {
       <p className="mb-10 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
         Riqueza e capacidade são propriedades diferentes. Países com a mesma renda podem ter perfis
         opostos. A forma mostra onde uma intervenção pode ajudar.
+      </p>
+      <p className="-mt-6 mb-10 max-w-3xl text-lg leading-relaxed">
+        O código e os dados são abertos.{' '}
+        <a
+          href={REPO_URL}
+          target="_blank"
+          rel="noreferrer"
+          className="underline underline-offset-4"
+        >
+          Abra o repositório no GitHub
+        </a>
+        .
       </p>
 
       {/* The instrument at a glance. Counts, never scores: a score in a tile

@@ -103,8 +103,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {/* The one place every page names the dataset it is showing and where the code lives. */}
             <p className="mt-10 flex flex-wrap gap-x-6 gap-y-2 border-t border-[var(--rule)] pt-6 text-xs text-[var(--muted)]">
               <span>Dataset {DATASET_VERSION}</span>
-              <a href={REPO_URL} className="hover:text-[var(--foreground)]">
-                Source and data on GitHub
+              <a
+                href={REPO_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="underline underline-offset-4 hover:text-[var(--foreground)]"
+              >
+                Open-source repository on GitHub
               </a>
               <a href={docHref(LICENSE_DOC)} className="hover:text-[var(--foreground)]">
                 MIT code, published data under its own terms

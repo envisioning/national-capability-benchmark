@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { REPO_URL } from '@ncb/core'
 import { Radar } from '@/components/Radar'
 import { ConfidenceTable, ScoreTable } from '@/components/views/ScoreTables'
 import {
@@ -88,6 +89,18 @@ export default async function Page() {
           capabilities directory
         </Link>{' '}
         compares countries by dimension.
+      </p>
+      <p className="-mt-6 mb-10 max-w-3xl text-lg leading-relaxed">
+        The code and data are open.{' '}
+        <a
+          href={REPO_URL}
+          target="_blank"
+          rel="noreferrer"
+          className="underline underline-offset-4"
+        >
+          Open the repository on GitHub
+        </a>
+        .
       </p>
 
       <Section

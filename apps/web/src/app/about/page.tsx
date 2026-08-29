@@ -141,8 +141,13 @@ export default function AboutPage() {
         </ul>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed">
           Code, data and docs live in the{' '}
-          <a href={REPO_URL} className="underline underline-offset-4">
-            public repository
+          <a
+            href={REPO_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="underline underline-offset-4"
+          >
+            open-source repository on GitHub
           </a>
           . Check any number against its source.
         </p>
