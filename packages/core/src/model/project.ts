@@ -40,6 +40,12 @@ export const EVIDENCE_DOC = 'docs/EVIDENCE.md'
 /** The claim under test, and what would sink it. */
 export const WHY_DOC = 'docs/WHY.md'
 
+/**
+ * The quoting contract for a program, a model or an agent that reads the
+ * published data. `/llms.txt` in the viewer points at it. See D59.
+ */
+export const FOR_AGENTS_DOC = 'docs/FOR-AGENTS.md'
+
 /** Third-party terms: what in here is not MIT. */
 export const NOTICE_DOC = 'NOTICE.md'
 
