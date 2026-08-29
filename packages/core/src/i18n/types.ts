@@ -85,6 +85,10 @@ export type AgendaStrings = {
   ownEvidenceHeading: string
   /** {country} */
   ownEvidenceIntro: string
+  /** The Brazil-only institutional-history heading. */
+  brazilEvidenceHeading: string
+  /** The Brazil-only institutional-history framing. */
+  brazilEvidenceIntro: string
   contributeHeading: string
   /** {repo} */
   contributeBody: string

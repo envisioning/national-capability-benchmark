@@ -1,6 +1,6 @@
 # Capability agenda: Brazil
 
-*Generated 2026-08-28*
+*Generated 2026-08-29*
 
 The frame includes 52 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
@@ -126,9 +126,9 @@ These scores are at least 50 with usable evidence. They still need watching.
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
 
-## What the indicators miss about Brazil
+## Brazilian institutional change: deliveries that don't move scores but move countries.
 
-Documented deliveries linked to missing indicators. They do not affect scores or confidence.
+These are documented Brazilian institutional changes the framework files as evidence. They are not scored. They are the historical record that the capability measurement sits next to.
 
 - **Pix instant payment system** (Building). Brazil's central bank specified, built and ran a mandatory instant payment rail that settled 7.98 billion transactions in July 2026, for 152 million people and 14 million firms transacting in that month.
 - **GOV.BR federal identity and service platform** (Building). Brazil consolidated federal public services behind one identity platform, reporting 175 million active accounts and 5,179 digital services in May 2026.
@@ -141,6 +141,9 @@ Documented deliveries linked to missing indicators. They do not affect scores or
 - **Fully electronic national elections** (Building). Brazil has run every election on electronic voting machines since 2000, across an electorate that reached 155.9 million voters in 2024, with results published the same evening.
 - **Proalcool, the fuel substitution after the oil shock** (Adaptability). Brazil answered the 1973 oil shock by mandating ethanol blending and building a national fuel alcohol industry, taking production from 580 thousand cubic metres in 1975 to 38,199 in 2025, and from 2003 flex-fuel engines moved the choice to the driver.
 - **Deepwater and pre-salt oil production** (Building). Brazil developed deepwater extraction, found the pre-salt fields in 2006 and produced them at depths of more than 5,000 metres, with national oil production rising from 71,844 thousand cubic metres in 2000 to 219,032 in 2025.
+- **BNDES, the national development bank** (Building). Founded in 1952, Brazil's federal development bank provides long-term financing and investment across the national economy, and it disbursed R$169.7 billion in 2025.
+- **CAPES, federal postgraduate funding** (Learning). Founded in 1951, CAPES built a national postgraduate funding and evaluation system, and by 1995 Brazil's system had more than 60,000 students across over 1,000 master's and 600 doctoral courses.
+- **Lei de Informática, a sectoral industrial policy** (Anticipation). Law 8.248/1991 tied information-technology incentives to annual research, development and innovation investment of at least 5 percent of eligible domestic gross revenue, creating a predictable regime for sectoral capability.
 
 ## Contribute
 

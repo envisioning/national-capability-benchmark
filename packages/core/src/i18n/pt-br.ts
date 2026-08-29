@@ -336,6 +336,10 @@ export const PT_BR: Lexicon = {
     ownEvidenceHeading: 'O que os indicadores não veem sobre {countryTopic}',
     ownEvidenceIntro:
       'Entregas documentadas como evidência. Elas nunca afetam as notas ou a confiança.',
+    brazilEvidenceHeading:
+      'Mudança institucional brasileira: entregas que não mudam as notas, mas mudam países.',
+    brazilEvidenceIntro:
+      'Estas são mudanças institucionais brasileiras documentadas que o framework registra como evidência. Elas não são pontuadas. São o registro histórico ao lado da medição de capacidades.',
     contributeHeading: 'Contribua',
     contributeBody:
       'Preencha uma lacuna, registre uma evidência ou conteste um indicador em {repo}. Os documentos explicam o método e suas decisões.',

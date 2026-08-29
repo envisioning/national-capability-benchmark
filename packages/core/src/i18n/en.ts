@@ -79,6 +79,10 @@ export const EN: Lexicon = {
     ownEvidenceHeading: 'What the indicators miss about {countryTopic}',
     ownEvidenceIntro:
       'Documented deliveries linked to missing indicators. They do not affect scores or confidence.',
+    brazilEvidenceHeading:
+      "Brazilian institutional change: deliveries that don't move scores but move countries.",
+    brazilEvidenceIntro:
+      'These are documented Brazilian institutional changes the framework files as evidence. They are not scored. They are the historical record that the capability measurement sits next to.',
     contributeHeading: 'Contribute',
     contributeBody:
       'Fill a gap, file evidence or challenge an indicator at {repo}. The docs explain the method and decisions.',

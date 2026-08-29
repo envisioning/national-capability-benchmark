@@ -1092,6 +1092,97 @@
         ],
         "travelled": "The Nordic neighbours run the same model at slightly lower intensity. Elsewhere the statutory free-of-charge rule is the part that erodes first, and with it the usage."
       }
+    },
+    {
+      "id": "bra-bndes",
+      "indicatorId": "large_project_delivery",
+      "iso3": "BRA",
+      "title": "BNDES, the national development bank",
+      "claim": "Founded in 1952, Brazil's federal development bank provides long-term financing and investment across the national economy, and it disbursed R$169.7 billion in 2025.",
+      "metric": {
+        "name": "BNDES disbursements",
+        "value": 169.7,
+        "unit": "R$ billions",
+        "asOf": "2025"
+      },
+      "started": 1952,
+      "status": "operating",
+      "source": {
+        "publisher": "BNDES, Agência de Notícias",
+        "url": "https://agenciadenoticias.bndes.gov.br/bndes/BNDES-tem-lucro-recorrente-de-R%24-152-bi-em-2025-o-maior-da-historia/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-29"
+      },
+      "limits": "Disbursement volume measures the bank's activity, not whether the projects it finances arrive on time, within budget or with durable public value. The source is the institution reporting on itself, and the number mixes market-rate lending with policy-directed finance.",
+      "pattern": {
+        "mechanism": "The federal development bank converts public capital and long-term finance into patient support for firms and infrastructure projects that commercial lenders may not carry through their formation period.",
+        "preconditions": [
+          "A public balance sheet able to lend beyond ordinary commercial horizons",
+          "A pipeline of firms and projects able to turn finance into productive capacity",
+          "A mandate that can survive changes of government"
+        ],
+        "travelled": "Development banks exist across emerging economies, but the Brazilian case shows the value and the risk of keeping one institution large enough to shape an industrial system: patient capital can build capability, while political allocation can weaken it."
+      }
+    },
+    {
+      "id": "bra-capes",
+      "indicatorId": "research_citation_impact",
+      "iso3": "BRA",
+      "title": "CAPES, federal postgraduate funding",
+      "claim": "Founded in 1951, CAPES built a national postgraduate funding and evaluation system, and by 1995 Brazil's system had more than 60,000 students across over 1,000 master's and 600 doctoral courses.",
+      "metric": {
+        "name": "Postgraduate students in the national system",
+        "value": 60000,
+        "unit": "students",
+        "asOf": "1995"
+      },
+      "started": 1951,
+      "status": "operating",
+      "source": {
+        "publisher": "CAPES, História e missão",
+        "url": "https://www.gov.br/capes/pt-br/acesso-a-informacao/institucional/historia-e-missao",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-29"
+      },
+      "limits": "Student and course counts show the scale of the postgraduate system, not the quality or international impact of its research. CAPES reports the institutional history and its own programmes, while citation impact requires a separate bibliometric source.",
+      "pattern": {
+        "mechanism": "A federal agency combines funding with peer evaluation and a national standard, so postgraduate programmes coordinate around a common definition of quality instead of growing as isolated local institutions.",
+        "preconditions": [
+          "A stable public agency with authority over funding and evaluation",
+          "A research community willing to participate in a shared assessment system",
+          "Long-term public support for postgraduate training"
+        ]
+      }
+    },
+    {
+      "id": "bra-lei-informatica",
+      "indicatorId": "basic_research_share",
+      "iso3": "BRA",
+      "title": "Lei de Informática, a sectoral industrial policy",
+      "claim": "Law 8.248/1991 tied information-technology incentives to annual research, development and innovation investment of at least 5 percent of eligible domestic gross revenue, creating a predictable regime for sectoral capability.",
+      "metric": {
+        "name": "Minimum annual R&D and innovation investment",
+        "value": 5,
+        "unit": "% of eligible domestic gross revenue",
+        "asOf": "1991"
+      },
+      "started": 1991,
+      "status": "operating",
+      "source": {
+        "publisher": "Presidência da República, Lei 8.248/1991",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/l8248.htm",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-29"
+      },
+      "limits": "The legal investment requirement is an input, not evidence of research quality, exports or firm growth. The regime is narrow, has been amended repeatedly and creates a renewal pressure that makes continuity part of the case rather than a settled result.",
+      "pattern": {
+        "mechanism": "The state exchanges a sector-specific incentive for commitments to domestic research, development, training and innovation, giving firms a reason to make longer-horizon plans within a stable policy frame.",
+        "preconditions": [
+          "A government able to target fiscal incentives at a defined industrial sector",
+          "Firms with enough domestic revenue to sustain the investment requirement",
+          "Administrative capacity to review projects and monitor the obligation"
+        ]
+      }
     }
   ]
 }

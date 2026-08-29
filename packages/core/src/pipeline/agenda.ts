@@ -454,9 +454,12 @@ export function renderAgenda(agenda: CountryAgenda, lex: Lexicon): string {
   out.push('')
 
   if (agenda.ownEvidence.length > 0) {
-    out.push(`## ${fill(s.ownEvidenceHeading, { countryTopic: topic })}`)
+    const evidenceHeading =
+      agenda.iso3 === 'BRA' ? s.brazilEvidenceHeading : fill(s.ownEvidenceHeading, { countryTopic: topic })
+    const evidenceIntro = agenda.iso3 === 'BRA' ? s.brazilEvidenceIntro : s.ownEvidenceIntro
+    out.push(`## ${evidenceHeading}`)
     out.push('')
-    out.push(s.ownEvidenceIntro)
+    out.push(evidenceIntro)
     out.push('')
     out.push(
       agenda.ownEvidence
