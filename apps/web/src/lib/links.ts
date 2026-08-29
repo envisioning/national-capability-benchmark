@@ -10,6 +10,14 @@ import type { Dimension, EvidenceStatus, Lang } from '@ncb/core'
 /** The full country profile. Ground layer, English. */
 export const countryProfileHref = (iso3: string): string => `/country/${iso3}`
 
+/** Stable fragment for one dimension's score on a country profile. */
+export const scoreAnchorHref = (iso3: string, dimension: Dimension): string =>
+  `${countryProfileHref(iso3)}#score-${dimension}`
+
+/** Full DOM id for a score cell, useful when several country cells are present. */
+export const scoreAnchorId = (iso3: string, dimension: Dimension): string =>
+  `score-${dimension}-${iso3.toUpperCase()}`
+
 /** A spreadsheet export containing one country's score row. */
 export const countryCsvHref = (iso3: string): string => `/country/${iso3}.csv`
 
@@ -298,10 +306,10 @@ export const decisionHref = (id: string): string => `${decisionsHref}#${id}`
 /**
  * The same page in the other language, where one exists.
  *
- * Language switching is not navigation: the Portuguese edition mirrors only the
- * pages that are interpretation layers (the home reading and the agendas), so
- * the switch is contextual and appears only where a counterpart page exists.
- * One rule here, one control in the layout, no per-page switch links. See D35.
+ * Language switching is not navigation: the Portuguese edition mirrors the
+ * interpretation-layer pages that have been translated, so the switch is
+ * contextual and appears only where a counterpart page exists. One rule here,
+ * one control in the layout, no per-page switch links. See D35.
  */
 export function languageCounterpart(
   pathname: string,
@@ -315,5 +323,9 @@ export function languageCounterpart(
   const ptAgenda = pathname.match(/^\/pt\/agenda\/([A-Z]{3})$/)
   if (ptAgenda) return { href: `/agenda/${ptAgenda[1]}`, label: 'English', lang: 'en' }
   if (pathname === '/pt/agenda') return { href: '/agenda', label: 'English', lang: 'en' }
+  const credibility = pathname.match(/^\/(method|decisions|limits|glossary)$/)
+  if (credibility) return { href: `/pt/${credibility[1]}`, label: 'Português', lang: 'pt-BR' }
+  const ptCredibility = pathname.match(/^\/pt\/(method|decisions|limits|glossary)$/)
+  if (ptCredibility) return { href: `/${ptCredibility[1]}`, label: 'English', lang: 'en' }
   return null
 }

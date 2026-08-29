@@ -8,6 +8,8 @@ import { ConfidenceBar, Delta, DimensionScore, Score } from '@/components/ui'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { DimensionPeek } from '@/components/views/DimensionPeek'
 import { ChallengeLink, ContestedBadge } from '@/components/ChallengeLink'
+import { CopyCellLink } from '@/components/CopyCellLink'
+import { scoreAnchorHref, scoreAnchorId } from '@/lib/links'
 
 export function CountryDimensionTable({
   country,
@@ -48,10 +50,12 @@ export function CountryDimensionTable({
       align: 'right' as const,
       sort: (r: (typeof rows)[number]) => r.dim.score,
       render: (r: (typeof rows)[number]) => (
-        <span className="inline-flex items-center gap-2">
+        <span id={scoreAnchorId(country.iso3, r.d)} className="inline-flex scroll-mt-20 items-center gap-2">
+          <span id={`score-${r.d}`} aria-hidden="true" className="scroll-mt-20" />
           <DimensionPeek dimension={r.d} iso3={country.iso3}>
             <DimensionScore dim={r.dim} />
           </DimensionPeek>
+          <CopyCellLink href={scoreAnchorHref(country.iso3, r.d)} />
           <ContestedBadge count={contestedCounts[`${country.iso3}|${r.d}`] ?? 0} />
           <ChallengeLink
             iso3={country.iso3}

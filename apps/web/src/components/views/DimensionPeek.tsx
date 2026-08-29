@@ -45,6 +45,8 @@ export function DimensionPeek({
     <>
       <button
         type="button"
+        tabIndex={0}
+        role="button"
         onClick={() => setOpen(true)}
         className="inline-flex items-center gap-1.5 underline decoration-dotted underline-offset-4 hover:decoration-solid"
         title={`See every country on ${DIMENSION_LABELS[dimension]}`}
