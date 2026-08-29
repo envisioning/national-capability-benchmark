@@ -91,6 +91,20 @@ export const PUBLISHER_HOME: Record<string, string> = {
   [JOINT_EVS_WVS_PUBLISHER]: 'https://www.worldvaluessurvey.org/WVSEVSjoint2017.jsp',
 }
 
+/** The official IBGE table used for the Brazil subnational corroboration fixture. */
+export const BR_SUBNATIONAL_SOURCE = {
+  publisher: 'IBGE, PNAD Contínua',
+  table: '7435',
+  variable: '10681',
+  url: 'https://sidra.ibge.gov.br/tabela/7435',
+  apiBase: 'https://apisidra.ibge.gov.br/values',
+} as const
+
+/** The exact source call for one Brazil state-level Gini release. */
+export function brSubnationalSeriesUrl(year: number): string {
+  return `${BR_SUBNATIONAL_SOURCE.apiBase}/t/${BR_SUBNATIONAL_SOURCE.table}/n3/all/v/${BR_SUBNATIONAL_SOURCE.variable}/p/${year}`
+}
+
 export type IngestRoute = IndicatorDef['ingest']
 
 /** How a value reaches the dataset, in the reader's words. Defined in the glossary. */

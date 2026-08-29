@@ -22,6 +22,7 @@ import {
   SCHEMA_OUT_DIR,
   agendaDoc,
   agendaFile,
+  brSubnationalFile,
   countryFile,
   indicatorFile,
 } from '../pipeline/paths.js'
@@ -36,6 +37,7 @@ import { runDiagnostics } from '../pipeline/diagnostics.js'
 import { buildReport } from '../pipeline/report.js'
 import { writeVelocity } from '../pipeline/velocity.js'
 import { writeLeverage } from '../pipeline/leverage.js'
+import { writeBrazilSubnational } from '../pipeline/br-subnational.js'
 import {
   acrossCountries,
   loadDelphi,
@@ -292,6 +294,14 @@ async function main() {
       const output = await writeLeverage()
       console.log(
         `leverage   -> ${FILES.leverage} (${Object.keys(output.countries).length} countries, 11 dimensions)`,
+      )
+      break
+    }
+
+    case 'br-subnational': {
+      const output = await writeBrazilSubnational(num(args, 'year', 2024))
+      console.log(
+        `Brazil subnational -> ${brSubnationalFile(output.indicatorId)} (${output.states.length} states, ${output.national.year} national value)`,
       )
       break
     }
@@ -756,6 +766,7 @@ Start with file 1.
   pnpm bench diagnose                     correlations, redundancy, GDP-sensitivity test
   pnpm bench velocity                     write the provisional five-year velocity fixture
   pnpm bench leverage                     write the provisional leverage fixture
+  pnpm bench br-subnational [--year 2024] fetch the Brazil state-level Gini fixture
   pnpm bench trust    fetch                fetch and parse Joint EVS/WVS A165 trust results
   pnpm bench prompt    [BRA IND ...] [--stance wealth_sceptic] [--system] [--audit trust]
                        [--paste] [--batch 4] [--out paste] [--local]
