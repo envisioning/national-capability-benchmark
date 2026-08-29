@@ -2790,3 +2790,40 @@ that independent reviewers cannot distinguish either layer from a capability
 score would require revising the promotion gate before publication. Evidence
 that a layer is not learning after three consecutive reviews would trigger
 retirement rather than a weaker promotion standard.
+
+## D66: Subnational observations corroborate the national comparison layer
+
+*Recorded 2026-08-29. Extends D12, D25 and D49. Implements issue 9.*
+
+**Choice.** The benchmark keeps one comparison layer: observations with
+`geometry: "national"` are the only observations read by frames, scores, trends
+and confidence. The observation schema also admits `state`, `province`,
+`region` and `municipality` rows, each carrying a `reconciliation` rule of
+`aggregate`, `independent` or `context_only`. Existing files default to the
+national geometry and the context-only rule when they do not yet carry the new
+fields.
+
+Subnational rows live beside the comparison layer and are consumed by a
+destination page through a separately validated corroboration fixture. The
+fixture carries the publisher's national value, constituent values, source,
+date and rule together. It does not produce a per-state capability score or
+silently reweight the national result.
+
+**Why.** A federal aggregate answers the cross-country question but can hide
+variation between the units that actually deliver policy. Adding a geometry
+field makes that missing layer explicit without allowing a state observation to
+enter a national frame. Requiring a reconciliation rule prevents a reader from
+assuming that every state range can be averaged into a national statistic.
+
+**Costs.** The data model has two spatial layers to maintain, and every
+subnational fixture needs its own source, date and editorial review. A fixture
+can show that a national number is consistent with its parts, but it cannot
+make unlike administrative units comparable or turn a context measure into a
+score. The initial reader and fixture are intentionally limited to Brazil.
+
+**Overturned by.** A documented method that establishes a comparable
+subnational capability frame without changing the national comparison, or
+evidence that the declared reconciliation rules systematically mislead readers,
+would justify revising this boundary. A source that publishes only incompatible
+geometries would justify withholding its fixture rather than relaxing the
+schema.

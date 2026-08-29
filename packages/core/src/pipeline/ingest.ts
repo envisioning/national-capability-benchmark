@@ -88,8 +88,8 @@ async function readJson(path: string): Promise<unknown | null> {
   }
 }
 
-const cellKey = (o: { indicatorId: string; iso3: string; year: number }) =>
-  `${o.indicatorId}|${o.iso3}|${o.year}`
+const cellKey = (o: { indicatorId: string; iso3: string; geometry: string; year: number }) =>
+  `${o.indicatorId}|${o.iso3}|${o.geometry}|${o.year}`
 
 /**
  * What moved between the file on disk and the file about to replace it.
@@ -111,8 +111,13 @@ export function diffObservations(
   let removed = 0
 
   const parse = (key: string) => {
-    const [indicatorId, iso3, year] = key.split('|')
-    return { indicatorId: indicatorId as string, iso3: iso3 as string, year: Number(year) }
+    const [indicatorId, iso3, geometry, year] = key.split('|')
+    return {
+      indicatorId: indicatorId as string,
+      iso3: iso3 as string,
+      geometry: geometry as Revision['geometry'],
+      year: Number(year),
+    }
   }
 
   for (const [key, value] of next) {
@@ -218,6 +223,8 @@ export async function ingestWorldBank(
             observations.push({
               indicatorId,
               iso3,
+              geometry: 'national',
+              reconciliation: 'context_only',
               value: v.value,
               year: v.year,
               sourceTier: 'international_organization',

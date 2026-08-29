@@ -78,6 +78,7 @@ export type ScoreOptions = {
 function latest(observations: Observation[]): Map<string, Observation> {
   const best = new Map<string, Observation>()
   for (const o of observations) {
+    if (o.geometry !== 'national') continue
     const key = `${o.indicatorId}|${o.iso3}`
     const cur = best.get(key)
     if (!cur || o.year > cur.year) best.set(key, o)
@@ -268,6 +269,7 @@ function checkValues(observations: Observation[]): Map<string, Map<string, Check
   const known = new Set(CHECKS.map((c) => c.id))
   const out = new Map<string, Map<string, CheckValue>>()
   for (const o of observations) {
+    if (o.geometry !== 'national') continue
     if (!o.indicatorId.startsWith(CHECK_PREFIX)) continue
     const id = o.indicatorId.slice(CHECK_PREFIX.length)
     if (!known.has(id)) continue

@@ -88,6 +88,18 @@ export const GLOSSARY: GlossaryEntry[] = [
     full: 'Each dimension uses published indicators with a source and year. The score averages indicators with data; raw values stay visible for checking.',
   },
   {
+    term: 'Geometry',
+    group: 'What sits beside the score',
+    short: 'The spatial level an observation describes, such as a country or state.',
+    full: 'National geometry is the comparison layer. State, province, region and municipality geometries describe constituent units and can appear on a destination page without entering the national score.',
+  },
+  {
+    term: 'Reconciliation rule',
+    group: 'What sits beside the score',
+    short: 'The declared relationship between a national value and its constituent values.',
+    full: 'An aggregate can be read as a national quantity assembled from its parts. An independent value should be compared alongside the national value. A context-only value adds detail without claiming that the two layers can be combined.',
+  },
+  {
     term: 'Indicator family',
     group: 'What is being measured',
     short: 'A group of indicators inside one dimension that answer the same question.',

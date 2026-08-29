@@ -132,6 +132,26 @@ export default function MethodPage() {
       </Section>
 
       <Section
+        title="National scores have a second reading"
+        hint="The benchmark compares countries at the national level, while selected destination pages show constituent data as corroboration or context."
+      >
+        <div className="max-w-3xl space-y-4 text-lg leading-relaxed">
+          <p>
+            The comparison layer reads observations with <code>geometry=national</code>. That
+            keeps every country on the same unit of comparison and means a state or province
+            cannot silently move a national score.
+          </p>
+          <p>
+            A destination page may also show published values for constituent units. Each fixture
+            declares whether those values aggregate to the national figure, stand independently,
+            or provide context only. The rule stays beside the values, and the source remains
+            visible. These rows corroborate, question or explain a national result; they do not
+            create per-state capability scores.
+          </p>
+        </div>
+      </Section>
+
+      <Section
         title="Every indicator states what it measures"
         hint="The dataset labels each indicator as C, I, O or P so the classification can be checked."
       >

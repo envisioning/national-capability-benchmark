@@ -4,6 +4,7 @@ import { readdir } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import {
   ChallengeRecord,
+  CorroborationFile as CorroborationFileSchema,
   DelphiRunFile as DelphiRunFileSchema,
   INDICATORS,
   InstitutionNetworkFile,
@@ -15,6 +16,7 @@ import { DATA_DIR } from '@ncb/core/node'
 import type {
   CountryResult,
   ChallengeRecord as ChallengeRecordType,
+  CorroborationFile,
   DelphiRunFile,
   Diagnostics,
   EvidenceRecord,
@@ -54,6 +56,8 @@ const PATHS = {
   indicator: (id: string) => resolve(DATA_ROOT, 'out/indicators', `${id}.json`),
   institutions: (iso3: string) =>
     resolve(DATA_ROOT, 'institutions', `${iso3.toUpperCase()}.json`),
+  corroboration: (indicatorId: string) =>
+    resolve(DATA_ROOT, 'out/br-subnational', `${indicatorId}.json`),
   velocity: resolve(DATA_ROOT, 'out/velocity.json'),
   leverage: resolve(DATA_ROOT, 'out/leverage.json'),
 }
@@ -196,6 +200,31 @@ export async function loadInstitutionNetwork(
   const raw = await readJson<unknown>(PATHS.institutions(iso3))
   const parsed = InstitutionNetworkFile.safeParse(raw)
   return parsed.success ? parsed.data : null
+}
+
+/**
+ * One subnational corroboration fixture, kept outside the national score
+ * files. The file is keyed by indicator because v1 has one Brazil fixture, and
+ * the parsed country check prevents a future indicator from being shown on the
+ * wrong destination page.
+ */
+export async function loadCorroboration(
+  iso3: string,
+  indicatorId: string,
+): Promise<CorroborationFile | null> {
+  const raw = await readJson<unknown>(PATHS.corroboration(indicatorId))
+  const parsed = CorroborationFileSchema.safeParse(raw)
+  if (!parsed.success || parsed.data.iso3 !== iso3.toUpperCase()) return null
+  return parsed.data
+}
+
+/** The constituent-unit rows from a corroboration fixture. */
+export async function loadSubnationalIndicator(
+  iso3: string,
+  indicatorId: string,
+): Promise<CorroborationFile['states']> {
+  const file = await loadCorroboration(iso3, indicatorId)
+  return file?.states ?? []
 }
 
 /**

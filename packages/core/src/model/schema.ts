@@ -46,6 +46,14 @@ export type Transform = z.infer<typeof Transform>
 export const DimensionEnum = z.enum(DIMENSIONS)
 export const LeverageDimensionEnum = z.enum(LEVERAGE_DIMENSIONS)
 
+/** The spatial level an observation describes. National is the comparison layer. */
+export const Geometry = z.enum(['national', 'state', 'province', 'region', 'municipality'])
+export type Geometry = z.infer<typeof Geometry>
+
+/** How a subnational observation relates to the national value it sits beside. */
+export const Reconciliation = z.enum(['aggregate', 'independent', 'context_only'])
+export type Reconciliation = z.infer<typeof Reconciliation>
+
 export const IndicatorSource = z.object({
   /** Publisher, e.g. "World Bank", "OECD", "World Values Survey". */
   publisher: z.string(),
@@ -92,6 +100,8 @@ export const IndicatorDef = z.object({
    * the equal-weight mean of whatever is observed. See D57.
    */
   family: z.string().optional(),
+  /** How finer-geometry observations may be read beside this indicator. */
+  reconciliation: Reconciliation.default('context_only'),
   /** Denominator series, for transform = per_million_population. */
   denominatorSeries: z.string().optional(),
   /**
@@ -137,6 +147,9 @@ export type CheckDef = z.infer<typeof CheckDef>
 export const Observation = z.object({
   indicatorId: z.string(),
   iso3: z.string().length(3),
+  /** Defaults preserve the national comparison layer in pre-two-layer files. */
+  geometry: Geometry.default('national'),
+  reconciliation: Reconciliation.default('context_only'),
   value: z.number(),
   year: z.number().int(),
   sourceTier: SourceTier,
@@ -145,6 +158,29 @@ export const Observation = z.object({
   note: z.string().optional(),
 })
 export type Observation = z.infer<typeof Observation>
+
+/** A published value for one constituent unit, kept outside the score matrix. */
+export const SubnationalValue = z.object({
+  iso: z.string().min(2),
+  name: z.string().min(1),
+  value: z.number(),
+  year: z.number().int(),
+})
+export type SubnationalValue = z.infer<typeof SubnationalValue>
+
+/** v1 corroboration file consumed by the Brazil destination page. */
+export const CorroborationFile = z.object({
+  indicatorId: z.string().min(1),
+  iso3: z.string().length(3),
+  geometry: Geometry.exclude(['national']),
+  reconciliation: Reconciliation,
+  asOf: z.string().date(),
+  source: z.string().min(1),
+  sourceUrl: z.string().url(),
+  national: z.object({ value: z.number(), year: z.number().int() }),
+  states: z.array(SubnationalValue),
+})
+export type CorroborationFile = z.infer<typeof CorroborationFile>
 
 export const ObservationFile = z.object({
   generatedAt: z.string(),
@@ -162,6 +198,7 @@ export const ObservationFile = z.object({
 export const Revision = z.object({
   indicatorId: z.string(),
   iso3: z.string().length(3),
+  geometry: Geometry.default('national'),
   year: z.number().int(),
   /** Null when the run added a year that was not there before. */
   from: z.number().nullable(),

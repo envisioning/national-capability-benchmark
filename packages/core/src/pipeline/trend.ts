@@ -57,7 +57,9 @@ function push(history: History, o: Observation) {
 
 export function buildHistory(observations: Observation[]): History {
   const history: History = new Map()
-  for (const o of observations) push(history, o)
+  for (const o of observations) {
+    if (o.geometry === 'national') push(history, o)
+  }
   for (const byCountry of history.values()) {
     for (const series of byCountry.values()) series.sort((a, b) => b.year - a.year)
   }
@@ -230,4 +232,3 @@ export function momentumSpansIn(lists: Momentum[][]): number[] {
   }
   return [...spans].sort((a, b) => a - b)
 }
-

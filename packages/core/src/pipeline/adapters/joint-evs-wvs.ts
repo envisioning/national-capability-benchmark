@@ -98,6 +98,8 @@ export function parseJointEvsWvsA165(
     return {
       indicatorId: 'interpersonal_trust',
       iso3,
+      geometry: 'national',
+      reconciliation: 'context_only',
       value: row.trustedPercent,
       year: JOINT_EVS_WVS_RELEASE_YEAR,
       sourceTier: 'academic_survey',
