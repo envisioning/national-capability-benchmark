@@ -11,7 +11,7 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | Antecipação | 39,3 | 0,62 (utilizável) | +9,2 em 10 anos, sobre 5 indicadores |
 | Agência | 73,7 | 0,6 (utilizável) | +13,7 em 10 anos, sobre 4 indicadores |
 | Coordenação | 81,4 | 0,17 (muito fraca) | sem base de tendência |
-| Confiança | sem nota | 0,08 (muito fraca) | sem base de tendência |
+| Confiança | sem nota | 0,07 (muito fraca) | sem base de tendência |
 | Aprendizagem | 53,5 | 0,54 (utilizável) | +7,3 em 10 anos, sobre 2 indicadores |
 | Experimentação | 46,7 | 0,39 (fraca) | +7,2 em 10 anos, sobre 2 indicadores |
 | Adaptação | 59,2 | 0,48 (utilizável) | +1,6 em 10 anos, sobre 4 indicadores |
@@ -45,12 +45,12 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Confiança: confiança 0,08, muito fraca
+### Confiança: confiança 0,07, muito fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
 
 - Baseada em um indicador observado.
-- Lacunas declaradas: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo.
+- Lacunas declaradas: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ### Coordenação: confiança 0,17, muito fraca
@@ -86,7 +86,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## Agenda de medição
 
-26 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+27 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -100,6 +100,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 | Confiança | Confiança interpessoal generalizada | Parcela que concorda que se pode confiar na maioria das pessoas. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
 | Confiança | Cooperação além do próprio grupo | Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade. |
+| Confiança | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Aprendizagem | Participação de adultos em aprendizagem | Parcela de adultos em educação e treinamento, formal ou não, nos últimos 12 meses. |
 | Aprendizagem | Impacto de citação da pesquisa | Impacto de citação da produção científica nacional, normalizado por área. |
 | Experimentação | Investimento de capital de risco | Capital de risco investido como parcela do PIB. |

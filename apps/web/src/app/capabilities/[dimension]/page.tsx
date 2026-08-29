@@ -6,6 +6,7 @@ import {
   DIMENSION_LABELS,
   DIMENSION_QUESTIONS,
   INDICATORS_BY_ID,
+  checksFor,
   indicatorsFor,
   isScored,
   primaryMomentum,
@@ -74,6 +75,21 @@ export default async function CapabilityPage({
     }
   })
   const scoredCountries = rows.filter((row) => row.score !== null).length
+  /* Checks are published on every country and belong to no score, so the
+   * capability page reports what they cover rather than ranking them. See D60. */
+  const checks = checksFor(dimension).map((check) => {
+    const values = data.countries
+      .map((country) =>
+        country.dimensions[dimension]?.checks.find((row) => row.checkId === check.id),
+      )
+      .filter((row) => row?.value !== null && row !== undefined)
+    const years = values.map((row) => row?.year).filter((y): y is number => typeof y === 'number')
+    return {
+      check,
+      countries: values.length,
+      latestYear: years.length > 0 ? Math.max(...years) : null,
+    }
+  })
 
   return (
     <>
@@ -120,6 +136,34 @@ export default async function CapabilityPage({
       </Section>
 
       <IndicatorRegistry dimension={dimension} />
+
+      {checks.length > 0 ? (
+        <Section
+          title="One series is published beside the score and stays out of it"
+          hint="A behavioral check measures something real about this capability and fails the test for scoring it. The country pages carry its value."
+          icon={<Icon name="eye" size={22} />}
+        >
+          <ul className="space-y-5">
+            {checks.map(({ check, countries, latestYear }) => (
+              <li key={check.id}>
+                <p className="text-xs font-medium tracking-tight">
+                  {check.name}
+                  <span className="ml-2 font-normal text-[var(--muted)]">
+                    {check.source.publisher}
+                    {check.source.series ? ` (${check.source.series})` : ''}, {countries} of{' '}
+                    {data.countries.length} countries
+                    {latestYear === null ? '' : `, latest ${latestYear}`}
+                  </span>
+                </p>
+                <p className="mt-1 max-w-3xl text-lg leading-relaxed">{check.definition}</p>
+                <p className="mt-1 max-w-3xl text-xs leading-relaxed text-[var(--muted)]">
+                  {check.notes}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </Section>
+      ) : null}
 
       {dimensionEvidence.length > 0 ? (
         <Section

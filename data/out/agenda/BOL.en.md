@@ -2,104 +2,104 @@
 
 *Generated 2026-08-28*
 
-52 countries set the frame. Scores run 0 to 100 per dimension, with no headline ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
+The frame includes 52 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
 ## Where Bolivia stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 19.6 | 0.6 (usable) | +15 over 10 years, on 3 indicators |
-| Agency | 37.7 | 0.6 (usable) | +22.7 over 10 years, on 3 indicators |
-| Coordination | 63.8 | 0.17 (very thin) | no trend basket |
-| Trust | not scored | 0.08 (very thin) | no trend basket |
-| Learning | 79.5 | 0.34 (thin) | -1.9 over 20 years, on 2 indicators |
-| Experimentation | 2.9 | 0.18 (very thin) | +0.8 over 10 years, on 2 indicators |
-| Adaptability | 67.3 | 0.47 (usable) | +15.2 over 10 years, on 4 indicators |
-| Building | 29.7 | 0.54 (usable) | +2.8 over 10 years, on 4 indicators |
-| Shared Purpose | 54.1 | 0.15 (very thin) | no trend basket |
+| Anticipation | 19.6 | 0.6 (usable) | +15 over 10 years using 3 indicators |
+| Agency | 37.7 | 0.6 (usable) | +22.7 over 10 years using 3 indicators |
+| Coordination | 63.8 | 0.17 (very thin) | no trend |
+| Trust | not scored | 0.07 (very thin) | no trend |
+| Learning | 79.5 | 0.34 (thin) | -1.9 over 20 years using 2 indicators |
+| Experimentation | 2.9 | 0.18 (very thin) | +0.8 over 10 years using 2 indicators |
+| Adaptability | 67.3 | 0.47 (usable) | +15.2 over 10 years using 4 indicators |
+| Building | 29.7 | 0.54 (usable) | +2.8 over 10 years using 4 indicators |
+| Shared Purpose | 54.1 | 0.15 (very thin) | no trend |
 
-## Dimensions to raise
+## What to raise
 
-Lowest score first. Only dimensions with usable evidence appear here. Thin evidence goes to the next section.
+These are the lowest scores with usable evidence. Thin evidence appears below.
 
 ### Anticipation: 19.6, confidence usable
 
 How capable is the country of identifying and preparing for emerging change?
 
-- Based on 5 observed indicators.
+- Uses 5 observed indicators.
 - Highest usable scores: Sweden 83.5, Finland 82, Switzerland 81.1.
-- Documented deliveries elsewhere: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands).
-- Declared gaps: Government foresight capacity, Long-horizon research share.
+- Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands).
+- Missing indicators: Government foresight capacity, Long-horizon research share.
 
 ### Building: 29.7, confidence usable
 
 How capable is the country of turning plans and knowledge into functioning systems?
 
-- Based on 5 observed indicators.
+- Uses 5 observed indicators.
 - Highest usable scores: Ireland 75.3, Singapore 71.2, China 64.9.
-- Documented deliveries elsewhere: Pix instant payment system (Brazil); GOV.BR federal identity and service platform (Brazil); X-Road national data exchange layer (Estonia); Pradhan Mantri Jan Dhan Yojana bank accounts (India); Electricity supply rebuilt on renewable sources (Uruguay); Plan Ceibal, one connected laptop per child (Uruguay); Sistema Unico de Saude, universal public health system (Brazil); Programa Nacional de Imunizacoes, and its erosion (Brazil); Luz para Todos, rural electrification (Brazil); Bolsa Familia and the single registry behind it (Brazil); Fully electronic national elections (Brazil); Deepwater and pre-salt oil production (Brazil); Seguro Popular, and its abolition (Mexico); Sure Start children's centres, and their erosion (United Kingdom); Grid power, and load shedding (South Africa); Measles elimination, and its erosion (United States).
-- Declared gaps: Large project delivery, Firm scale-up rate.
+- Related deliveries in other countries: Pix instant payment system (Brazil); GOV.BR federal identity and service platform (Brazil); X-Road national data exchange layer (Estonia); Pradhan Mantri Jan Dhan Yojana bank accounts (India); Electricity supply rebuilt on renewable sources (Uruguay); Plan Ceibal, one connected laptop per child (Uruguay); Sistema Unico de Saude, universal public health system (Brazil); Programa Nacional de Imunizacoes, and its erosion (Brazil); Luz para Todos, rural electrification (Brazil); Bolsa Familia and the single registry behind it (Brazil); Fully electronic national elections (Brazil); Deepwater and pre-salt oil production (Brazil); Seguro Popular, and its abolition (Mexico); Sure Start children's centres, and their erosion (United Kingdom); Grid power, and load shedding (South Africa); Measles elimination, and its erosion (United States).
+- Missing indicators: Large project delivery, Firm scale-up rate.
 - Rejected datasets: Logistics infrastructure quality.
 
 ### Agency: 37.7, confidence usable
 
 How able are individuals and organizations to turn an intention into action?
 
-- Based on 6 observed indicators.
+- Uses 6 observed indicators.
 - Highest usable scores: United States 92.6, Australia 89.8, United Kingdom 87.5.
-- Declared gaps: Adult digital skills, Perceived control over life.
+- Missing indicators: Adult digital skills, Perceived control over life.
 
-## Dimensions to measure first
+## What to measure first
 
-Confidence is below the usable band, so evidence comes before action.
+The evidence is too thin to manage these dimensions confidently.
 
-### Trust: confidence 0.08, very thin
+### Trust: confidence 0.07, very thin
 
 How much cooperation is possible beyond immediate personal networks?
 
-- Based on one observed indicator.
-- Declared gaps: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group.
+- Uses one observed indicator.
+- Missing indicators: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
 ### Shared Purpose: confidence 0.15, very thin
 
 To what extent can people imagine themselves as participants in a common project?
 
-- Based on 2 observed indicators.
-- Declared gaps: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
+- Uses 2 observed indicators.
+- Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
 - Rejected datasets: Voice and accountability.
 
 ### Coordination: confidence 0.17, very thin
 
 How effectively can independent actors organize around shared objectives?
 
-- Based on 2 observed indicators.
-- Declared gaps: University-industry collaboration, Civil society strength, Public-private collaboration.
+- Uses 2 observed indicators.
+- Missing indicators: University-industry collaboration, Civil society strength, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
 ### Experimentation: confidence 0.18, very thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
-- Based on 2 observed indicators.
-- Declared gaps: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
+- Uses 2 observed indicators.
+- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
 ### Learning: confidence 0.34, thin
 
 How effectively does the country acquire, distribute, and update knowledge?
 
-- Based on 3 observed indicators.
-- Declared gaps: Adult learning participation, Research citation impact.
+- Uses 3 observed indicators.
+- Missing indicators: Adult learning participation, Research citation impact.
 
-## Dimensions to hold
+## What to keep watching
 
-Strongest first. These score at least 50 with usable evidence. They still need watching.
+These scores are at least 50 with usable evidence. They still need watching.
 
 - Adaptability: 67.3, confidence usable
 
-## Measurement agenda
+## Missing data
 
-26 requested indicators have no adequate comparable dataset. Each lowers confidence. A gap becomes scorable when a comparable series covers at least two countries.
+27 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -113,6 +113,7 @@ Strongest first. These score at least 50 with usable evidence. They still need w
 | Trust | Generalised interpersonal trust | Share agreeing that most people can be trusted. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
 | Trust | Cooperation beyond the in-group | Reported trust in people met for the first time and in people of another nationality. |
+| Trust | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Learning | Adult learning participation | Share of adults in formal or non-formal education and training in the last 12 months. |
 | Learning | Research citation impact | Field-normalised citation impact of national research output. |
 | Experimentation | Venture capital investment | Venture capital deployed as a share of GDP. |
@@ -132,4 +133,4 @@ Strongest first. These score at least 50 with usable evidence. They still need w
 
 ## Contribute
 
-Fill a gap, file evidence, or contest an indicator at https://github.com/envisioning/national-capability-benchmark. The docs explain the method and its decisions.
+Fill a gap, file evidence or challenge an indicator at https://github.com/envisioning/national-capability-benchmark. The docs explain the method and decisions.

@@ -35,6 +35,13 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
   const panel = diag.panelVsGdp
   const panelTracking = panel?.perDimension.filter((d) => d.flaggedAsWealthProxy) ?? []
   const panelBackfill = panel?.perDimension.filter((d) => d.backfillCandidate) ?? []
+  const familyRows = diag.familyBalance.flatMap((fb) =>
+    fb.families.map((f) => ({ ...f, dimension: fb.dimension })),
+  )
+  const emptyFamilies = familyRows.filter((f) => f.indicatorsObserved === 0)
+  const singleFamily = diag.familyBalance.filter(
+    (fb) => fb.countriesScored > 0 && fb.countriesOnOneFamily === fb.countriesScored,
+  )
   const gaps = diag.dataGaps.filter((g) => g.status === 'gap')
   const retired = diag.dataGaps.filter((g) => g.status === 'retired')
 
@@ -333,8 +340,8 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
       <Section
         title={
           diag.duplicateDimensionCandidates.length === 0
-            ? 'No two dimensions have collapsed into one'
-            : `${countWord(diag.duplicateDimensionCandidates.length)[0]?.toUpperCase()}${countWord(diag.duplicateDimensionCandidates.length).slice(1)} dimension pair${diag.duplicateDimensionCandidates.length === 1 ? ' has' : 's have'} collapsed into one`
+            ? 'The dimensions remain distinct'
+            : `${countWord(diag.duplicateDimensionCandidates.length)[0]?.toUpperCase()}${countWord(diag.duplicateDimensionCandidates.length).slice(1)} dimension pair${diag.duplicateDimensionCandidates.length === 1 ? ' overlaps' : 's overlap'}`
         }
         hint={`Dimension pairs sorted by correlation. Pairs at ${DIMENSION_OVERLAP_THRESHOLD} or above are candidates for review.`}
       >
@@ -435,6 +442,62 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
         />
       </Section>
 
+      {familyRows.length > 0 && (
+        <Section
+          title={
+            emptyFamilies.length > 0
+              ? `${capitalize(countWord(emptyFamilies.length))} indicator ${emptyFamilies.length === 1 ? 'family has' : 'families have'} no data at all`
+              : 'Every indicator family has data behind it'
+          }
+          hint="A dimension can ask two questions under one name, and several readings of one question are not several independent signals. Scoring counts every observed indicator equally either way. This table says which family the evidence came from."
+        >
+          <DataTable
+            rows={familyRows}
+            initialSort={{ key: 'observed', dir: 'asc' }}
+            caption="Indicator families inside a dimension"
+            columns={[
+              {
+                key: 'dimension',
+                label: 'Dimension',
+                sort: (f) => DIMENSION_LABELS[f.dimension],
+                render: (f) => <CapabilityLink dimension={f.dimension} />,
+              },
+              {
+                key: 'family',
+                label: 'Family',
+                sort: (f) => f.family,
+                render: (f) => capitalize(f.family),
+              },
+              {
+                key: 'defined',
+                label: 'Indicators',
+                align: 'right',
+                sort: (f) => f.indicatorsDefined,
+                render: (f) => muted(f.indicatorsDefined),
+              },
+              {
+                key: 'observed',
+                label: 'Observed',
+                align: 'right',
+                sort: (f) => f.indicatorsObserved,
+                render: (f) =>
+                  f.indicatorsObserved === 0 ? muted('none') : f.indicatorsObserved,
+              },
+            ]}
+          />
+          {singleFamily.length > 0 && (
+            <p className="mt-4 text-lg leading-relaxed text-[var(--muted)]">
+              {singleFamily
+                .map(
+                  (fb) =>
+                    `Every scored country rests on one family in ${DIMENSION_LABELS[fb.dimension]}.`,
+                )
+                .join(' ')}
+            </p>
+          )}
+        </Section>
+      )}
+
       <Section
         title={`${Math.round(diag.outOfFrame.share * 100)}% of observed values clamp at the frame edge`}
         hint={`${diag.outOfFrame.clampedCells} of ${diag.outOfFrame.observedCells} observed cells fall outside the frame and clamp to 0 or 100. These are historical or late-arriving values.`}
@@ -462,7 +525,7 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
       </Section>
 
       <Section
-        title="These indicators still need data"
+        title="These indicators have no data"
         hint="The model specifies them, but no adequate dataset covers them. They stay in the registry and lower confidence."
       >
         <DataTable

@@ -1,4 +1,5 @@
 import {
+  CHECKS,
   COUNTRY_ISO3,
   COUNTRY_NAMES,
   DIMENSIONS,
@@ -29,6 +30,8 @@ export const WEALTH_CORRELATION_THRESHOLD = 0.7
 export const REDUNDANCY_THRESHOLD = 0.85
 /** Correlation above this marks two dimensions as candidates for having collapsed into one. */
 export const DIMENSION_OVERLAP_THRESHOLD = 0.9
+/** The family an indicator falls into when its registry row declares none. */
+export const UNASSIGNED_FAMILY = 'unassigned'
 
 function logGdpByCountry(observations: Observation[], series: string): Map<string, number> {
   /* The observation file carries every year, so pick the latest one per country
@@ -218,6 +221,51 @@ export type Diagnostics = {
     /** Share of the dimension carried by perception proxies and expert judgement. */
     subjectivityShare: number
   }>
+  /**
+   * What a score rests on when one dimension asks two questions.
+   *
+   * Trust asks whether people rely on strangers and whether they rely on
+   * institutions. Three survey items about the first are three readings of one
+   * question, not three independent signals, and an equal-weight mean cannot
+   * tell the difference. Every indicator that declares a `family` is counted
+   * here unless it is retired, so a dimension carried entirely by one family is
+   * visible as a count rather than as an assumption. This reports. It changes no score: weighting
+   * stays equal. Only dimensions whose registry rows declare a family appear.
+   * See D57.
+   */
+  familyBalance: Array<{
+    dimension: Dimension
+    families: Array<{
+      family: string
+      indicatorsDefined: number
+      /** Families with no observed indicator are the collection agenda for the dimension. */
+      indicatorsObserved: number
+    }>
+    /** Countries whose published score for this dimension draws on one family only. */
+    countriesOnOneFamily: number
+    countriesScored: number
+  }>
+  /**
+   * Every behavioural check put through the wealth test that kept it out of the
+   * score.
+   *
+   * A check is published beside a dimension and never inside it, so this is the
+   * standing evidence for that decision rather than a one-off note. The
+   * correlation is computed on the value as published, not on a
+   * direction-corrected one, so the sign reads the way the unit does. See D60.
+   */
+  behaviouralChecks: Array<{
+    checkId: string
+    dimension: Dimension
+    name: string
+    countries: number
+    latestYear: number | null
+    /** Pearson r of the published value against log GDP per capita. */
+    r: number | null
+    /** The same against the dimension's own score. Null where it publishes none. */
+    dimensionR: number | null
+    dimensionN: number
+  }>
   gdpStrippedTest: {
     excluded: string[]
     /** Dimensions that lose every indicator once the wealth-correlated ones go. */
@@ -401,6 +449,59 @@ export function runDiagnostics(
     }
   })
 
+  const familyBalance = DIMENSIONS.flatMap((dimension) => {
+    /* A retired row can never reach a score, so counting it here would report a
+     * family the dimension cannot draw on. Gaps stay: an unfilled family is the
+     * collection agenda. */
+    const defs = indicatorsFor(dimension).filter((d) => d.ingest !== 'retired')
+    if (!defs.some((d) => d.family)) return []
+    const familyOf = (d: (typeof defs)[number]) => d.family ?? UNASSIGNED_FAMILY
+    const names = [...new Set(defs.map(familyOf))].sort()
+    const families = names.map((family) => {
+      const inFamily = defs.filter((d) => familyOf(d) === family)
+      return {
+        family,
+        indicatorsDefined: inFamily.length,
+        indicatorsObserved: inFamily.filter((d) => matrix.has(d.id)).length,
+      }
+    })
+    let countriesScored = 0
+    let countriesOnOneFamily = 0
+    for (const c of countries) {
+      if (c.dimensions[dimension]?.score == null) continue
+      countriesScored += 1
+      const present = new Set<string>()
+      for (const d of defs) if (matrix.get(d.id)?.has(c.iso3)) present.add(familyOf(d))
+      if (present.size <= 1) countriesOnOneFamily += 1
+    }
+    return [{ dimension, families, countriesOnOneFamily, countriesScored }]
+  })
+
+  const behaviouralChecks = CHECKS.map((c) => {
+    const values = new Map<string, number>()
+    const years: number[] = []
+    for (const country of countries) {
+      const row = country.dimensions[c.dimension]?.checks.find((x) => x.checkId === c.id)
+      if (!row || row.value === null) continue
+      values.set(country.iso3, row.value)
+      if (row.year !== null) years.push(row.year)
+    }
+    const g = alignedPair(values, gdp)
+    const r = pearson(g.xs, g.ys)
+    const d = alignedPair(values, dimensionSeries(countries, c.dimension))
+    const dimensionR = pearson(d.xs, d.ys)
+    return {
+      checkId: c.id,
+      dimension: c.dimension,
+      name: c.name,
+      countries: values.size,
+      latestYear: years.length ? Math.max(...years) : null,
+      r: r === null ? null : round(r, 3),
+      dimensionR: dimensionR === null ? null : round(dimensionR, 3),
+      dimensionN: d.xs.length,
+    }
+  })
+
   const excluded = indicatorVsGdp.filter((i) => i.flaggedAsWealthProxy).map((i) => i.indicatorId)
   /* The strip test compares levels, so skip the trend work it does not read. */
   const stripped = scoreAll(observations, {
@@ -489,6 +590,8 @@ export function runDiagnostics(
     panelVsGdp: delphi ? panelVsGdpFor(delphi, countries, gdp) : null,
     redundantIndicatorPairs,
     measurability,
+    familyBalance,
+    behaviouralChecks,
     gdpStrippedTest: {
       excluded,
       dimensionsEmptied: DIMENSIONS.filter((d) =>

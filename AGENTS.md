@@ -136,6 +136,13 @@ port 3888. That entry starts Next directly and does not use the proxy.
 - An evidence record's `pattern` field is analysis, not data. Everything else in
   the record is sourced from a named publisher; the mechanism and preconditions
   are ours. Keep them in that field so the two are never confused. See D31.
+- A behavioural check is fetched, published and never scored. Checks live in
+  `packages/core/src/model/checks.ts`, are observed under the `__check__` prefix
+  and reach the output as `checks` on each `DimensionResult`. Nothing that
+  builds the frame, the mean, the coverage floor or the confidence reads them.
+  A check carries the reason it is not scored in its `notes`, which renders to
+  the reader, and adding one needs a decision entry naming the test it failed.
+  A series that passes the tests is an indicator, not a check. See D60.
 - Evidence records in `data/evidence` never enter a score or a confidence. A
   gap is promoted to a scored indicator only when a comparable series covers at
   least two countries, which is the minimum `buildFrame` accepts. See D20.
@@ -200,6 +207,12 @@ port 3888. That entry starts Next directly and does not use the proxy.
   `docHref` in `packages/core/src/model/project.ts`, which also holds `REPO_URL`
   and the document constants. Never write a bare `docs/*.md` path or a GitHub
   URL by hand: a published document reaches readers with no checkout. See D40.
+- The quoting contract for an automated reader is `docs/FOR-AGENTS.md`: a score
+  never travels alone, and the document names the fields that must accompany it.
+  `/llms.txt` is the map that points at it, generated in
+  `apps/web/src/app/llms.txt/route.ts` from the registry and the current index
+  and never hand-written, so a re-ingest cannot leave it stating a stale count.
+  Rules go in the document, not in the route. See D59.
 - Language is an interpretation layer. The ground layer stays English end to
   end: ids, registry definitions, JSON output. Translations live only in
   lexicons under `packages/core/src/i18n/`, one data file per language, and

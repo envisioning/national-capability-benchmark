@@ -307,13 +307,13 @@ here, and the benchmark currently has no way to say so.
 
 **Severity: high. Created deliberately by D23 and partly relieved by D55.**
 
-The figures in this entry are from dataset 4.1.0.
+The figures in this entry are from dataset 4.3.0.
 
 | Dimension | Observed indicators | Confidence | What is left | Publishes a score |
 | --- | ---: | ---: | --- | --- |
 | Coordination | 2 of 8 for 44 countries | 0.000 to 0.188, mean 0.152 | Border time from 2019 and budget execution, latest 2024 | 44 of 52 |
-| Trust | 1 of 7 for 51 countries | 0.000 to 0.079, mean 0.077 | Contract enforcement days from 2019 | no |
-| Shared Purpose | 2 of 7 | 0.223 | Tax revenue, income inequality | 46 of 52 |
+| Trust | 1 of 8 for 51 countries | 0.000 to 0.069, mean 0.068 | Contract enforcement days from 2019 | no |
+| Shared Purpose | 2 of 7 | 0.000 to 0.272, mean 0.223 | Tax revenue, income inequality | 46 of 52 |
 
 Coordination's new score is visible with its confidence and its two indicator
 rows. It remains a narrow operational proxy: budget alignment and border
@@ -323,6 +323,15 @@ and trend publish, so the evidence is visible and the number that would misread
 it is not. Shared Purpose sits one indicator above the floor and prints, drawn
 dashed with a marked axis and a confidence band that says do not quote it alone.
 That is a mitigation and not a fix.
+
+**Trust is missing a whole family, not an indicator.** D57 splits the dimension
+into a social family, which asks whether people rely on strangers, and an
+institutional family, which asks whether they rely on courts, government and the
+civil service. The social family holds two indicators and none of them is
+observed in any country. The institutional family holds three and one is
+observed. The single scored row is therefore not a thin version of Trust. It is
+one half of Trust with the other half absent, and `familyBalance` in the
+diagnostics publishes that count.
 
 **Fix.** Land court throughput and case clearance, civil society strength,
 cross-agency delivery records, generalized interpersonal trust, institutional
@@ -335,9 +344,19 @@ government expenditure as a proportion of the original approved budget, covers
 44 of 52 at 2024 and correlates with log GDP per capita at 0.285. The value is
 two-sided: both underspending and overspending can indicate weak execution, so
 the registry converts it to absolute distance from 100 before scoring. The CPIA
-cluster covers only 10 of 52, while the Enterprise Survey corruption series is a
-perception of what other firms do and remains ineligible. Trust therefore needs
-a second source adapter for survey and court data. The current shortlist is
+cluster covers only 10 of 52. Of the two Enterprise Survey corruption series,
+`IC.FRM.CORR.ZS` asks a firm what it believes firms similar to itself pay, so it
+records belief and is ineligible, while `IC.FRM.BRIB.ZS` asks whether the
+responding firm was itself asked for a bribe across six public transactions. The
+second covers 49 of 52, 44 of them at 2023 or later, and D60 wires it as a
+behavioural check: fetched, published beside Trust and excluded from the frame,
+the mean, the coverage floor and the confidence. It is not admissible as the
+score, because it puts the two-indicator dimension at about 0.53 against log GDP
+per capita where contract enforcement days alone sits at about 0.14, a larger
+wealth contribution than the one D44 retired an indicator over. So Trust now
+publishes a current 49-country behavioural reading beside an empty axis, and it
+still needs a second source adapter for survey and court data before it scores
+anything. The current shortlist is
 V-Dem, WVS, OECD Government at a Glance, and a harmonized court or audit source.
 
 **B-READY is what the frozen rows become.** `IC.BRE.*` replaces Doing Business
@@ -361,5 +380,8 @@ it. Generative estimates are therefore a useful research layer, but they cannot
 repair a missing observation series.
 
 This artefact closes when at least two observable indicators land per dimension
-and the resulting Coordination score survives the wealth-attribution test. The
+and the resulting Coordination score survives the wealth-attribution test. For
+Trust, D57 sets the stricter condition: one harmonised social measure and one
+comparable institutional-performance measure, because two indicators from the
+same family would clear the floor without answering the dimension. The
 budget series opens the door; it does not close the measurement problem.

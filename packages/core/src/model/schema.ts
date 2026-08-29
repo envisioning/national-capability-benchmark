@@ -76,6 +76,17 @@ export const IndicatorDef = z.object({
    *   scored, and they lower coverage exactly as a gap does. See D23.
    */
   ingest: z.enum(['worldbank', 'manual', 'gap', 'retired']),
+  /**
+   * Which family inside the dimension the indicator belongs to.
+   *
+   * A dimension can ask two different questions that both belong under one
+   * name. Trust asks whether people rely on strangers and whether they rely on
+   * institutions, and three survey items about the first are not three
+   * independent signals. The family is recorded so the diagnostics can report
+   * what a score actually rests on. It does not weight anything: scoring stays
+   * the equal-weight mean of whatever is observed. See D57.
+   */
+  family: z.string().optional(),
   /** Denominator series, for transform = per_million_population. */
   denominatorSeries: z.string().optional(),
   /**
@@ -90,6 +101,33 @@ export const IndicatorDef = z.object({
   wealthProxyPrior: z.number().min(0).max(1),
 })
 export type IndicatorDef = z.infer<typeof IndicatorDef>
+
+/**
+ * A published series that sits beside a dimension and never inside it.
+ *
+ * A check is fetched like an indicator and published like one, and it is
+ * excluded from the frame, the mean, the coverage floor and the confidence. It
+ * exists for a series that measures something real about the dimension and
+ * fails the project's own test for scoring it, usually because it tracks income
+ * too closely. Publishing it beside the score is how the reader sees the
+ * evidence without the model claiming the number. See D60.
+ */
+export const CheckDef = z.object({
+  id: z.string(),
+  dimension: DimensionEnum,
+  /** The family it speaks to, where the dimension declares families. See D57. */
+  family: z.string().optional(),
+  name: z.string(),
+  definition: z.string(),
+  unit: z.string(),
+  direction: Direction,
+  source: IndicatorSource,
+  /** World Bank API database id. Omit for World Development Indicators. */
+  wbSourceId: z.number().int().optional(),
+  /** Why it is beside the score rather than in it. Rendered to the reader. */
+  notes: z.string(),
+})
+export type CheckDef = z.infer<typeof CheckDef>
 
 export const Observation = z.object({
   indicatorId: z.string(),
@@ -296,6 +334,24 @@ export const Momentum = z.object({
 })
 export type Momentum = z.infer<typeof Momentum>
 
+/** One check's latest observed value for one country. Never scored. See D60. */
+export const CheckResult = z.object({
+  checkId: z.string(),
+  name: z.string(),
+  definition: z.string(),
+  unit: z.string(),
+  direction: Direction,
+  family: z.string().optional(),
+  /** Null where the publisher covers no year for this country. */
+  value: z.number().nullable(),
+  year: z.number().int().nullable(),
+  source: z.string(),
+  sourceTier: SourceTier.nullable(),
+  /** Why the number is beside the score. Carried into the file so a consumer reading only JSON still gets it. */
+  note: z.string(),
+})
+export type CheckResult = z.infer<typeof CheckResult>
+
 export const DimensionResult = z.object({
   /**
    * Indicator-derived score. Delphi never enters this number.
@@ -332,6 +388,11 @@ export const DimensionResult = z.object({
    */
   momentum: z.array(Momentum),
   indicators: z.array(IndicatorResult),
+  /**
+   * Series published beside this dimension and excluded from every number above.
+   * Empty for a dimension that declares no check. See D60.
+   */
+  checks: z.array(CheckResult),
 })
 export type DimensionResult = z.infer<typeof DimensionResult>
 

@@ -1,4 +1,5 @@
 import {
+  CHECKS_BY_ID,
   DECISIONS_DOC,
   DIMENSIONS,
   DIMENSION_LABELS,
@@ -199,6 +200,64 @@ export function buildReport(
     }
   }
   out.push('')
+
+  if (diag.familyBalance.length > 0) {
+    out.push('## Some dimensions ask more than one question')
+    out.push('')
+    out.push(
+      'A dimension can hold two families of indicator that measure different things under one name. The score is the equal-weight mean either way. This table says which family the evidence actually comes from.',
+    )
+    out.push('')
+    for (const fb of diag.familyBalance) {
+      out.push(`### ${DIMENSION_LABELS[fb.dimension]}`)
+      out.push('')
+      out.push(
+        table(
+          ['Family', 'Indicators', 'Observed'],
+          fb.families.map((f) => [f.family, f.indicatorsDefined, f.indicatorsObserved]),
+        ),
+      )
+      out.push('')
+      out.push(
+        fb.countriesScored === 0
+          ? 'No country publishes a score for this dimension.'
+          : `${fb.countriesOnOneFamily} of ${fb.countriesScored} scored countries rest on a single family.`,
+      )
+      const empty = fb.families.filter((f) => f.indicatorsObserved === 0).map((f) => f.family)
+      if (empty.length > 0) out.push(`No data at all for: ${empty.join(', ')}.`)
+      out.push('')
+    }
+  }
+
+  if (diag.behaviouralChecks.length > 0) {
+    out.push('## Some series are published beside a score and never inside it')
+    out.push('')
+    out.push(
+      'A behavioural check measures something real about a dimension and fails this project\'s own test for scoring it. It is fetched, published and excluded from the frame, the mean, the coverage floor and the confidence. The reason travels with the number.',
+    )
+    out.push('')
+    out.push(
+      table(
+        ['Check', 'Dimension', 'Countries', 'Latest', 'r vs log GDP per capita'],
+        diag.behaviouralChecks.map((c) => [
+          c.name,
+          DIMENSION_LABELS[c.dimension],
+          c.countries,
+          c.latestYear ?? 'no data',
+          c.r === null ? 'no data' : c.r.toFixed(3),
+        ]),
+      ),
+    )
+    out.push('')
+    out.push('The correlation is computed on the value as published, so its sign reads the way the unit does.')
+    out.push('')
+    for (const c of diag.behaviouralChecks) {
+      const def = CHECKS_BY_ID[c.checkId]
+      if (!def) continue
+      out.push(`- **${c.name}** (${DIMENSION_LABELS[c.dimension]}, ${def.unit}): ${def.notes}`)
+    }
+    out.push('')
+  }
 
   out.push('## Every dimension is checked against income')
   out.push('')

@@ -57,7 +57,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 Quanta cooperação é possível além das redes pessoais imediatas?
 
 - Baseada em 0 indicadores observados.
-- Lacunas declaradas: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo.
+- Lacunas declaradas: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ### Propósito compartilhado: confiança 0, muito fraca
@@ -99,7 +99,7 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 ## Agenda de medição
 
-26 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+27 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -113,6 +113,7 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 | Confiança | Confiança interpessoal generalizada | Parcela que concorda que se pode confiar na maioria das pessoas. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
 | Confiança | Cooperação além do próprio grupo | Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade. |
+| Confiança | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Aprendizagem | Participação de adultos em aprendizagem | Parcela de adultos em educação e treinamento, formal ou não, nos últimos 12 meses. |
 | Aprendizagem | Impacto de citação da pesquisa | Impacto de citação da produção científica nacional, normalizado por área. |
 | Experimentação | Investimento de capital de risco | Capital de risco investido como parcela do PIB. |

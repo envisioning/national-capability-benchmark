@@ -11,7 +11,7 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | Antecipação | 24,2 | 0,67 (boa) | +20,8 em 10 anos, sobre 3 indicadores |
 | Agência | 43,9 | 0,6 (utilizável) | +11,7 em 10 anos, sobre 3 indicadores, 1 truncados na borda da régua |
 | Coordenação | 78,1 | 0,19 (muito fraca) | sem base de tendência |
-| Confiança | sem nota | 0,08 (muito fraca) | sem base de tendência |
+| Confiança | sem nota | 0,07 (muito fraca) | sem base de tendência |
 | Aprendizagem | 26 | 0,51 (utilizável) | -6 em 10 anos, sobre 3 indicadores |
 | Experimentação | 0,9 | 0,17 (muito fraca) | sem base de tendência |
 | Adaptação | 36,1 | 0,48 (utilizável) | -12,9 em 10 anos, sobre 4 indicadores |
@@ -71,12 +71,12 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Confiança: confiança 0,08, muito fraca
+### Confiança: confiança 0,07, muito fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
 
 - Baseada em um indicador observado.
-- Lacunas declaradas: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo.
+- Lacunas declaradas: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ### Experimentação: confiança 0,17, muito fraca
@@ -104,7 +104,7 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 
 ## Agenda de medição
 
-26 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+27 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -118,6 +118,7 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 | Confiança | Confiança interpessoal generalizada | Parcela que concorda que se pode confiar na maioria das pessoas. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
 | Confiança | Cooperação além do próprio grupo | Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade. |
+| Confiança | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Aprendizagem | Participação de adultos em aprendizagem | Parcela de adultos em educação e treinamento, formal ou não, nos últimos 12 meses. |
 | Aprendizagem | Impacto de citação da pesquisa | Impacto de citação da produção científica nacional, normalizado por área. |
 | Experimentação | Investimento de capital de risco | Capital de risco investido como parcela do PIB. |

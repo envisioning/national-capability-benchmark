@@ -95,6 +95,13 @@ export const GLOSSARY: GlossaryEntry[] = [
     example: 'Trust holds a social family and an institutional family. Only the institutional family has any data, so the evidence answers one of the two questions.',
   },
   {
+    term: 'Behavioral check',
+    group: 'What sits beside the score',
+    short: 'A published series shown next to a dimension and left out of it.',
+    full: 'Some series measure something real about a capability and still fail the tests this benchmark applies before a number is scored, usually because they mostly track national income. A check is fetched and published like an indicator and then excluded from the scale, the average, the indicator count and the confidence. The reason it is not scored travels with the number, so a reader can weigh the evidence without the benchmark asserting it.',
+    example: 'Bribery incidence asks whether a firm was itself asked for a bribe. It reads on trust and it also tracks income, so Trust publishes it beside the score and never inside it.',
+  },
+  {
     term: 'Measurement class',
     group: 'What is being measured',
     short: 'Whether an indicator measures the capability, an input, a result, or an opinion.',

@@ -342,6 +342,7 @@ const RAW: Raw[] = [
   {
     id: 'rule_of_law',
     dimension: 'trust',
+    family: 'institutional',
     name: 'Rule of law',
     definition: 'WGI estimate of confidence in and abidance by the rules of society.',
     unit: 'z-score -2.5 to 2.5',
@@ -356,6 +357,7 @@ const RAW: Raw[] = [
   {
     id: 'control_of_corruption',
     dimension: 'trust',
+    family: 'institutional',
     name: 'Control of corruption',
     definition: 'WGI estimate of the extent to which public power is used for private gain.',
     unit: 'z-score -2.5 to 2.5',
@@ -370,6 +372,7 @@ const RAW: Raw[] = [
   {
     id: 'contract_enforcement_days',
     dimension: 'trust',
+    family: 'institutional',
     name: 'Time to enforce a contract',
     definition: 'Calendar days from filing a commercial claim to payment.',
     unit: 'days',
@@ -398,6 +401,7 @@ const RAW: Raw[] = [
   {
     id: 'interpersonal_trust',
     dimension: 'trust',
+    family: 'social',
     name: 'Generalised interpersonal trust',
     definition: 'Share agreeing that most people can be trusted.',
     unit: '% agreeing',
@@ -411,6 +415,7 @@ const RAW: Raw[] = [
   {
     id: 'institutional_trust',
     dimension: 'trust',
+    family: 'institutional',
     name: 'Trust in public institutions',
     definition: 'Confidence in national government, courts and civil service.',
     unit: '% expressing confidence',
@@ -424,6 +429,7 @@ const RAW: Raw[] = [
   {
     id: 'willingness_to_cooperate_strangers',
     dimension: 'trust',
+    family: 'social',
     name: 'Cooperation beyond the in-group',
     definition: 'Reported trust in people met for the first time and in people of another nationality.',
     unit: '% expressing trust',
@@ -433,6 +439,24 @@ const RAW: Raw[] = [
     ingest: 'gap',
     notes: 'The distinction that makes this dimension worth measuring. Same licensing obstacle as generalised trust.',
     wealthProxyPrior: 0.15,
+  },
+  {
+    id: 'court_case_clearance',
+    dimension: 'trust',
+    family: 'institutional',
+    name: 'Court case clearance rate',
+    definition: 'Civil and commercial cases resolved in a year as a share of cases filed in the same year.',
+    unit: '% of incoming cases',
+    measurementClass: 'O',
+    direction: 'higher_better',
+    source: {
+      publisher: 'CEPEJ / OECD / national court statistics',
+      tier: 'official_statistical',
+      inspectable: true,
+    },
+    ingest: 'gap',
+    notes: 'Whether a court finishes what it starts, counted from case records rather than asked in a survey. D23 named it as the observable replacement for the two retired WGI composites and it has stayed unfilled since. CEPEJ publishes it for Council of Europe members and OECD for its own members, so no single publisher reaches this country set, and a harmonised series needs the project second source adapter. See D57.',
+    wealthProxyPrior: 0.2,
   },
 
   /* ----------------------------- 5. Learning ----------------------------- */

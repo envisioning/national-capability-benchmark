@@ -1,12 +1,15 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import {
+  CHECKS,
+  CHECK_PREFIX,
   COUNTRY_ISO3,
   GDP_PER_CAPITA_CODE,
   INDICATORS,
   INGEST_FROM_YEAR,
   WB_API_BASE,
   WB_DEFAULT_DATABASE,
+  worldBankCheckSeries,
   worldBankSeries,
   worldBankSeriesUrl,
 } from '../model/index.js'
@@ -169,6 +172,13 @@ export async function ingestWorldBank(
   const retrievedAt = new Date().toISOString()
   const requests = worldBankSeries()
   requests.push({ series: GDP_PER_CAPITA_CODE, sourceId: WB_DEFAULT_DATABASE })
+  /* Checks are fetched on the same pass and stored under their own prefix. They
+   * never reach the frame or the mean. See D60. */
+  for (const req of worldBankCheckSeries()) {
+    if (!requests.some((r) => r.series === req.series && r.sourceId === req.sourceId)) {
+      requests.push(req)
+    }
+  }
 
   const seriesToIndicators = new Map<string, string[]>()
   for (const def of INDICATORS) {
@@ -180,6 +190,13 @@ export async function ingestWorldBank(
   const denominators = new Set(
     INDICATORS.map((d) => d.denominatorSeries).filter((s): s is string => Boolean(s)),
   )
+  const seriesToChecks = new Map<string, string[]>()
+  for (const c of CHECKS) {
+    if (!c.source.series) continue
+    const list = seriesToChecks.get(c.source.series) ?? []
+    list.push(`${CHECK_PREFIX}${c.id}`)
+    seriesToChecks.set(c.source.series, list)
+  }
 
   const observations: Observation[] = []
   const report: IngestReport[] = []
@@ -193,6 +210,7 @@ export async function ingestWorldBank(
       const targets: string[] = [...(seriesToIndicators.get(req.series) ?? [])]
       if (denominators.has(req.series)) targets.push(`${DENOMINATOR_PREFIX}${req.series}`)
       if (req.series === GDP_PER_CAPITA_CODE) targets.push(`${CONTEXT_PREFIX}${req.series}`)
+      targets.push(...(seriesToChecks.get(req.series) ?? []))
 
       for (const [iso3, list] of series) {
         for (const v of list) {
@@ -241,6 +259,7 @@ export async function ingestWorldBank(
     for (const id of seriesToIndicators.get(r.series) ?? []) failedTargets.add(id)
     if (denominators.has(r.series)) failedTargets.add(`${DENOMINATOR_PREFIX}${r.series}`)
     if (r.series === GDP_PER_CAPITA_CODE) failedTargets.add(`${CONTEXT_PREFIX}${r.series}`)
+    for (const id of seriesToChecks.get(r.series) ?? []) failedTargets.add(id)
   }
   if (failedTargets.size > 0) {
     observations.push(...before.filter((o) => failedTargets.has(o.indicatorId)))

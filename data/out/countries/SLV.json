@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-28T18:10:07.592Z",
-  "version": "4.1.0",
+  "generatedAt": "2026-08-28T23:34:37.744Z",
+  "version": "4.3.0",
   "country": {
     "country": "El Salvador",
     "iso3": "SLV",
@@ -669,7 +669,8 @@
             "series": [],
             "status": "gap"
           }
-        ]
+        ],
+        "checks": []
       },
       "agency": {
         "score": 42.6,
@@ -1654,7 +1655,8 @@
             "series": [],
             "status": "gap"
           }
-        ]
+        ],
+        "checks": []
       },
       "coordination": {
         "score": 86.7,
@@ -1933,15 +1935,16 @@
             "series": [],
             "status": "gap"
           }
-        ]
+        ],
+        "checks": []
       },
       "trust": {
         "score": null,
         "observedIndicators": 1,
         "belowCoverageFloor": true,
-        "confidence": 0.079,
+        "confidence": 0.069,
         "confidenceParts": {
-          "coverage": 0.143,
+          "coverage": 0.125,
           "recency": 0.583,
           "sourceQuality": 0.95
         },
@@ -2159,6 +2162,36 @@
             "outOfFrame": false,
             "series": [],
             "status": "gap"
+          },
+          {
+            "indicatorId": "court_case_clearance",
+            "name": "Court case clearance rate",
+            "measurementClass": "O",
+            "raw": null,
+            "transformed": null,
+            "normalized": null,
+            "year": null,
+            "source": "CEPEJ / OECD / national court statistics",
+            "sourceTier": null,
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [],
+            "status": "gap"
+          }
+        ],
+        "checks": [
+          {
+            "checkId": "bribery_incidence",
+            "name": "Bribery incidence",
+            "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
+            "unit": "% of firms",
+            "direction": "lower_better",
+            "family": "institutional",
+            "value": 3.123,
+            "year": 2023,
+            "source": "World Bank (IC.FRM.BRIB.ZS)",
+            "sourceTier": "international_organization",
+            "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 49 of 52 countries and 44 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
           }
         ]
       },
@@ -2970,7 +3003,8 @@
             "series": [],
             "status": "gap"
           }
-        ]
+        ],
+        "checks": []
       },
       "experimentation": {
         "score": 5.8,
@@ -3291,7 +3325,8 @@
             "series": [],
             "status": "gap"
           }
-        ]
+        ],
+        "checks": []
       },
       "adaptability": {
         "score": 54.1,
@@ -4359,7 +4394,8 @@
             "series": [],
             "status": "gap"
           }
-        ]
+        ],
+        "checks": []
       },
       "building": {
         "score": 25.8,
@@ -5372,7 +5408,8 @@
             "series": [],
             "status": "gap"
           }
-        ]
+        ],
+        "checks": []
       },
       "shared_purpose": {
         "score": 65,
@@ -5987,7 +6024,8 @@
             "series": [],
             "status": "gap"
           }
-        ]
+        ],
+        "checks": []
       }
     }
   }

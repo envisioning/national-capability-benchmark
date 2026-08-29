@@ -2301,6 +2301,85 @@ than its missing one.
 
 ---
 
+## D57 — Trust is two families, and it publishes nothing until both are answered
+
+*Recorded 2026-08-28. Extends D20, D23, D44 and D45. Adds the indicator family
+to the registry.*
+
+**Choice.** Trust means the expectation that people and institutions behave
+reliably outside close personal networks. That is two questions, not one, and
+the registry now says so. Every Trust row carries a `family`: `social` for
+generalised interpersonal trust and trust in strangers, `institutional` for
+confidence in government, courts and the civil service, contract enforcement
+time and court case clearance. `court_case_clearance` is added as a gap in the
+institutional family, because D23 named court throughput as the observable
+replacement for the two retired WGI composites and nothing has filled it since.
+`homicide_rate` stays retired and stays untagged: D44 retired it because it
+belongs to neither family.
+
+The family weights nothing. Scoring stays the equal-weight mean of whatever is
+observed, and the coverage floor from D45 still decides whether a dimension
+publishes. The family is a diagnostic. `familyBalance` in
+`packages/core/src/pipeline/diagnostics.ts` reports, per dimension that declares
+families, how many indicators each family holds, how many are observed, and how
+many scored countries rest on a single family. The report and the diagnostics
+page render it.
+
+A first credible Trust score is one harmonised social measure plus one
+comparable institutional-performance measure. Until both exist across enough
+countries, Trust publishes no score.
+
+**What this rules out.** The WGI rule of law and control of corruption
+composites stay retired: they correlate with each other above 0.95 and with log
+GDP per capita at 0.83, and they are one measurement wearing two names. Homicide
+stays retired: physical safety is not trust, and D42 measured it adding 0.288 to
+this dimension's wealth correlation. `IC.FRM.CORR.ZS` is ineligible on its
+definition, which asks a firm what it believes firms *similar to itself* pay,
+so it records belief rather than experience. No synthetic or model-generated
+value ever becomes an observation.
+
+`IC.FRM.BRIB.ZS` is the one Enterprise Survey series this decision does not
+reject on its definition. It asks whether the responding firm was itself asked
+for a bribe across six public transactions, so it records experience. It covers
+49 of 52 countries, 44 of them at 2023 or later. It is admissible as a secondary
+behavioural check and it is not admissible as the Trust score, because a
+rank-normalised estimate puts it at about 0.66 against log GDP per capita on its
+own and puts the two-indicator dimension at about 0.53, against 0.14 for
+contract enforcement days alone. That is a larger wealth contribution than the
+one D44 retired an indicator over. Scoring Trust with it would clear the
+coverage floor by re-creating A3 and A4.
+
+**Why.** Trust was the one dimension where the fastest route to a published
+number was also the route that would make the number wrong, and the pressure to
+take it came from the empty axis rather than from any evidence. Writing the two
+families into the registry makes the empty axis legible: it is not that Trust
+has one indicator, it is that Trust has one family answered and one family with
+no data at all. It also states the acceptance test in advance, so a future
+series is judged against a written contract instead of against the wish for a
+complete radar.
+
+The families exist as a diagnostic rather than as a weight because weighting
+them now would be a second unevidenced choice on top of a thin dimension. Three
+correlated survey items counted as three independent signals is a real problem,
+and it is a problem that starts when the data arrives. The count is published
+first so the weighting decision, when it comes, can cite it.
+
+**Costs.** One more gap row lowers Trust's confidence again, which is correct
+and reads as a regression to anybody who has not read this entry. The family is
+a free-text field on the registry, so a typo makes a new family silently.
+Nothing validates the vocabulary, because a fixed enum would have to guess the
+families of eight other dimensions that have not needed them yet.
+
+**Overturned by.** A harmonised social-trust series and a comparable
+institutional-performance series that together clear the floor, whose combined
+dimension survives the D42 wealth-attribution test. That closes the decision by
+satisfying it. The decision is wrong instead if the two families turn out to
+correlate above the redundancy threshold once both are measured, which would
+mean Trust asks one question after all and the split encodes a distinction the
+world does not make.
+
+---
+
 ## D58 — The country's wiring is a system matrix, and its ramp is fixed rather than fitted
 
 *Recorded 2026-08-28. Completes D56, which named this surface and did not build
@@ -2367,3 +2446,123 @@ readout is the only way back out.
 as empty rather than sparse, which would mean the surface needs a coverage
 threshold before it renders. Or relation weights in the schema, which would make
 a count the wrong quantity to put in a cell.
+
+---
+
+## D59 — The data publishes a quoting contract for automated readers, and no MCP server
+
+**Choice.** Publish two agent-facing surfaces and stop there. `docs/FOR-AGENTS.md`
+states the contract: a score never travels alone, which fields must accompany
+it, and the six things not to do with it. `/llms.txt` in the viewer is the map
+that points at it, generated from the registry and the current index rather than
+hand-written. Do not build an MCP server for this dataset yet.
+
+**Why.** The risk this project runs with an automated reader is not that the
+data is hard to reach. It is that the data is easy to reach and the caveats are
+not attached to it. `index.json` hands a model 52 countries and nine scores in
+one request. Nothing in that file stops the model averaging the nine, ranking
+the countries by the mean, quoting a `very thin` dimension on its own, or
+reading a null as a zero. Every one of those is a claim the project explicitly
+refuses to make, and every one of them is one fetch away.
+
+So the gap is a contract, not a transport. A written contract closes it at the
+cost of one file, and the same file serves a human reading the repository.
+
+`/llms.txt` is generated because the alternative is a hand-kept file stating a
+country count and a dataset version that the next re-ingest moves. A stale map
+of a dataset that versions itself is worse than no map.
+
+An MCP server was the other candidate and it is the wrong tool here now. The
+whole scored output is a few megabytes and `index.json` is about half a
+megabyte, so there is no corpus too large to hand over and no query problem to
+solve. The directory is already self-describing through `datapackage.json` and
+the generated schemas, so a client that can fetch a URL can already read it and
+validate what it read. Nothing is behind auth. Against that, a server is a
+second place the published shape is written, which is exactly what D30 and the
+single-source-of-truth invariants exist to prevent, and it is a deployment that
+can drift from the dataset version it wraps.
+
+**Cost.** A contract in a file is advisory. A server could refuse to answer
+without the confidence attached; a markdown document can only ask. We are
+choosing the surface that cannot enforce, on the argument that a reader who will
+ignore `docs/FOR-AGENTS.md` will also strip the fields an MCP tool returns.
+
+`/llms.txt` is also a convention rather than a standard, and it is read by some
+clients and ignored by most. The file is cheap enough that this is acceptable,
+but it should not be treated as coverage.
+
+Generating the file makes it a dynamic route rather than a static asset, so it
+costs a function invocation and it fails if `data/out` is missing, the same way
+every other page here does.
+
+**Overturned by.** Evidence that agents are a real consumer rather than an
+assumed one: referrer or user-agent data showing automated fetches of
+`data/out`, or a citation of an NCB number in a generated document that drops
+the confidence. Either would justify the enforcing surface. The other trigger is
+the Delphi layer becoming interactive, so a caller wants to run a scored what-if
+against the frame instead of reading a fixed file. That is a tool call, not a
+document, and it is the point where MCP earns its keep. It belongs as a route
+handler in `apps/web` reading `@ncb/core` and `data/out` the way the pages do,
+so that no third copy of the model exists.
+
+---
+
+## D60 — A series that cannot be scored is published beside the score, with the reason attached
+
+*Recorded 2026-08-28. Extends D23, D42, D44 and D57. Adds the behavioural check
+to the model.*
+
+**Choice.** The model gains a third kind of row. An indicator is scored. A gap
+is declared and unfilled. A **check** is fetched, published and excluded from
+every number: the frame, the mean, the coverage floor, the indicator count and
+the confidence. Checks live in `packages/core/src/model/checks.ts`, they are
+observed under the `__check__` prefix in the observation file, and each one
+carries the reason it is not scored as a field that renders to the reader.
+
+The first check is `bribery_incidence`, World Bank `IC.FRM.BRIB.ZS`, filed
+against Trust in the institutional family. It covers 49 of 52 countries and 44
+of them at 2023 or later. It asks whether the responding firm was itself asked
+for a bribe across six public transactions, so it records experience rather than
+reputation, which is what separates it from the perception composites D23
+retired and from `IC.FRM.CORR.ZS`, whose own definition asks a firm what it
+believes firms similar to itself pay.
+
+It is not scored. On a rank-normalised estimate it correlates with log GDP per
+capita at about 0.66 by itself and takes the two-indicator Trust dimension to
+about 0.53, where contract enforcement days alone sits at 0.14. That is a larger
+wealth contribution than the 0.288 D44 retired an indicator over, so scoring it
+would clear the D45 coverage floor by re-creating A3 and A4. D57 already fixed
+what Trust needs before it publishes, and this series is not it.
+
+`behaviouralChecks` in the diagnostics recomputes the wealth test on every run,
+so the exclusion is standing evidence rather than a claim in a document. A check
+is published as the publisher wrote it and is never normalised, because putting
+it on the 0 to 100 scale would invite exactly the reading this decision refuses.
+
+**Why.** Retiring a series and publishing a series were the only two options the
+model had, and neither fits a number that is real, current, wide in coverage and
+disqualified. Retiring it hides evidence a reader should see. Scoring it makes
+the benchmark assert something its own diagnostics reject. The check is the
+third option: show the number, show the reason, keep it out of the arithmetic.
+
+It also changes what an empty dimension looks like. Trust publishes no score and
+now publishes a current, behavioural, 49-country reading beside the empty axis.
+That is a more honest surface than either a blank or a number the model does not
+believe.
+
+**Costs.** A published number that is not in the score will be quoted as though
+it were, and no design prevents that. The mitigation is that the reason travels
+in the same object: `note` on every published `CheckResult`, rendered on the
+country page and the capability page and printed in the report. A second cost is
+that the check is a new concept with a small surface, which makes it a place to
+put anything inconvenient. The rule against that is in `checks.ts`: a series
+that passes the tests belongs in `indicators.ts`, and a check needs a decision
+entry naming the test it failed. Third, the `/sources` page is built from the
+indicator registry and does not yet list check series, so the fetch it prints
+back is now incomplete by one call.
+
+**Overturned by.** Evidence that readers treat a check as a score, which would
+mean publishing it beside the dimension does the harm the exclusion was meant to
+avoid, and the row should be retired instead. Or a change in the series that
+breaks its correlation with income, which would make it an indicator and move it
+to the other registry.

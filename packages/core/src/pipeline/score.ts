@@ -1,14 +1,18 @@
 import {
+  CHECKS,
+  CHECK_PREFIX,
   COUNTRIES,
   COUNTRY_ISO3,
   DISSENT_IQR,
   DIMENSIONS,
   INDICATORS,
   SOURCE_TIERS,
+  checksFor,
   indicatorsFor,
   isScored,
 } from '../model/index.js'
 import type {
+  CheckResult,
   CountryResult,
   DelphiCellEstimate,
   Dimension,
@@ -244,6 +248,57 @@ function delphiFor(
   }
 }
 
+type CheckValue = { value: number; year: number; sourceTier: SourceTier }
+
+/**
+ * The latest observed value of every check, per country.
+ *
+ * Checks live in the same observation file as the indicators under their own
+ * prefix, and they never touch `buildFrame` or `buildMatrix`. The value is
+ * published as the publisher wrote it: a check is not normalised, because
+ * normalising it would place it on the score's own scale and invite exactly the
+ * reading it refuses. See D60.
+ */
+function checkValues(observations: Observation[]): Map<string, Map<string, CheckValue>> {
+  const known = new Set(CHECKS.map((c) => c.id))
+  const out = new Map<string, Map<string, CheckValue>>()
+  for (const o of observations) {
+    if (!o.indicatorId.startsWith(CHECK_PREFIX)) continue
+    const id = o.indicatorId.slice(CHECK_PREFIX.length)
+    if (!known.has(id)) continue
+    const byCountry = out.get(id) ?? new Map<string, CheckValue>()
+    const cur = byCountry.get(o.iso3)
+    if (!cur || o.year > cur.year) {
+      byCountry.set(o.iso3, { value: o.value, year: o.year, sourceTier: o.sourceTier })
+    }
+    out.set(id, byCountry)
+  }
+  return out
+}
+
+function checkRows(
+  values: Map<string, Map<string, CheckValue>>,
+  dimension: Dimension,
+  iso3: string,
+): CheckResult[] {
+  return checksFor(dimension).map((c) => {
+    const v = values.get(c.id)?.get(iso3)
+    return {
+      checkId: c.id,
+      name: c.name,
+      definition: c.definition,
+      unit: c.unit,
+      direction: c.direction,
+      family: c.family,
+      value: v ? round(v.value, 3) : null,
+      year: v ? v.year : null,
+      source: c.source.publisher + (c.source.series ? ` (${c.source.series})` : ''),
+      sourceTier: v ? v.sourceTier : null,
+      note: c.notes,
+    }
+  })
+}
+
 export type ScoreOutput = {
   countries: CountryResult[]
   matrix: Matrix
@@ -256,6 +311,7 @@ export function scoreAll(observations: Observation[], opts: ScoreOptions): Score
   const spans = opts.momentumSpans ?? [10, 20]
   const frames = spans.length > 0 ? allFrames : null
   const history = spans.length > 0 ? buildHistory(observations) : null
+  const checks = checkValues(observations)
 
   const countries: CountryResult[] = COUNTRIES.map((country) => {
     const dimensions = {} as Record<Dimension, DimensionResult>
@@ -310,6 +366,7 @@ export function scoreAll(observations: Observation[], opts: ScoreOptions): Score
             history && frames ? indicatorSeries(history, frames.get(d.id), d, country.iso3) : [],
           ),
         ),
+        checks: checkRows(checks, dimension, country.iso3),
       }
     }
 

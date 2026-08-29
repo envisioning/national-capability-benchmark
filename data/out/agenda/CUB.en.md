@@ -2,104 +2,104 @@
 
 *Generated 2026-08-28*
 
-52 countries set the frame. Scores run 0 to 100 per dimension, with no headline ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
+The frame includes 52 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
 ## Where Cuba stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 16.4 | 0.53 (usable) | +11.1 over 10 years, on 3 indicators, 1 clamped at the frame edge |
-| Agency | not scored | 0.12 (very thin) | no trend basket |
-| Coordination | not scored | 0 (very thin) | no trend basket |
-| Trust | not scored | 0 (very thin) | no trend basket |
-| Learning | 59.3 | 0.33 (thin) | +3.8 over 10 years, on 2 indicators, 1 clamped at the frame edge |
-| Experimentation | 1.4 | 0.18 (very thin) | -0.4 over 10 years, on 2 indicators |
-| Adaptability | 42.7 | 0.47 (usable) | -2.6 over 10 years, on 4 indicators |
-| Building | 21.8 | 0.22 (very thin) | -27.1 over 10 years, on 2 indicators |
-| Shared Purpose | not scored | 0 (very thin) | no trend basket |
+| Anticipation | 16.4 | 0.53 (usable) | +11.1 over 10 years using 3 indicators, with 1 at the frame edge |
+| Agency | not scored | 0.12 (very thin) | no trend |
+| Coordination | not scored | 0 (very thin) | no trend |
+| Trust | not scored | 0 (very thin) | no trend |
+| Learning | 59.3 | 0.33 (thin) | +3.8 over 10 years using 2 indicators, with 1 at the frame edge |
+| Experimentation | 1.4 | 0.18 (very thin) | -0.4 over 10 years using 2 indicators |
+| Adaptability | 42.7 | 0.47 (usable) | -2.6 over 10 years using 4 indicators |
+| Building | 21.8 | 0.22 (very thin) | -27.1 over 10 years using 2 indicators |
+| Shared Purpose | not scored | 0 (very thin) | no trend |
 
-## Dimensions to raise
+## What to raise
 
-Lowest score first. Only dimensions with usable evidence appear here. Thin evidence goes to the next section.
+These are the lowest scores with usable evidence. Thin evidence appears below.
 
 ### Anticipation: 16.4, confidence usable
 
 How capable is the country of identifying and preparing for emerging change?
 
-- Based on 4 observed indicators.
+- Uses 4 observed indicators.
 - Highest usable scores: Sweden 83.5, Finland 82, Switzerland 81.1.
-- Documented deliveries elsewhere: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands).
-- Declared gaps: Government foresight capacity, Long-horizon research share.
+- Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands).
+- Missing indicators: Government foresight capacity, Long-horizon research share.
 
 ### Adaptability: 42.7, confidence usable
 
 How effectively can the system respond when circumstances change?
 
-- Based on 4 observed indicators.
+- Uses 4 observed indicators.
 - Highest usable scores: Netherlands 90.1, Switzerland 88.6, Japan 86.1.
-- Documented deliveries elsewhere: Plano Real, the 1994 currency stabilisation (Brazil); Proalcool, the fuel substitution after the oil shock (Brazil); The Convertibility Plan, and its collapse (Argentina); Kurzarbeit in the 2008-2009 crisis (Germany); The 2001 stabilisation, and its unwinding (Turkey).
-- Declared gaps: Long-term unemployment share, Export diversification, Disaster preparedness and recovery, Institutional responsiveness.
+- Related deliveries in other countries: Plano Real, the 1994 currency stabilisation (Brazil); Proalcool, the fuel substitution after the oil shock (Brazil); The Convertibility Plan, and its collapse (Argentina); Kurzarbeit in the 2008-2009 crisis (Germany); The 2001 stabilisation, and its unwinding (Turkey).
+- Missing indicators: Long-term unemployment share, Export diversification, Disaster preparedness and recovery, Institutional responsiveness.
 
-## Dimensions to measure first
+## What to measure first
 
-Confidence is below the usable band, so evidence comes before action.
+The evidence is too thin to manage these dimensions confidently.
 
 ### Coordination: confidence 0, very thin
 
 How effectively can independent actors organize around shared objectives?
 
-- Based on 0 observed indicators.
-- Declared gaps: University-industry collaboration, Civil society strength, Public-private collaboration.
+- Uses 0 observed indicators.
+- Missing indicators: University-industry collaboration, Civil society strength, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
 ### Trust: confidence 0, very thin
 
 How much cooperation is possible beyond immediate personal networks?
 
-- Based on 0 observed indicators.
-- Declared gaps: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group.
+- Uses 0 observed indicators.
+- Missing indicators: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
 ### Shared Purpose: confidence 0, very thin
 
 To what extent can people imagine themselves as participants in a common project?
 
-- Based on 0 observed indicators.
-- Declared gaps: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
+- Uses 0 observed indicators.
+- Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
 - Rejected datasets: Voice and accountability.
 
 ### Agency: confidence 0.12, very thin
 
 How able are individuals and organizations to turn an intention into action?
 
-- Based on one observed indicator.
-- Declared gaps: Adult digital skills, Perceived control over life.
+- Uses one observed indicator.
+- Missing indicators: Adult digital skills, Perceived control over life.
 
 ### Experimentation: confidence 0.18, very thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
-- Based on 2 observed indicators.
-- Declared gaps: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
+- Uses 2 observed indicators.
+- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
 ### Building: confidence 0.22, very thin
 
 How capable is the country of turning plans and knowledge into functioning systems?
 
-- Based on 2 observed indicators.
-- Declared gaps: Large project delivery, Firm scale-up rate.
+- Uses 2 observed indicators.
+- Missing indicators: Large project delivery, Firm scale-up rate.
 - Rejected datasets: Logistics infrastructure quality.
 
 ### Learning: confidence 0.33, thin
 
 How effectively does the country acquire, distribute, and update knowledge?
 
-- Based on 3 observed indicators.
-- Declared gaps: Adult learning participation, Research citation impact.
+- Uses 3 observed indicators.
+- Missing indicators: Adult learning participation, Research citation impact.
 
-## Measurement agenda
+## Missing data
 
-26 requested indicators have no adequate comparable dataset. Each lowers confidence. A gap becomes scorable when a comparable series covers at least two countries.
+27 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -113,6 +113,7 @@ How effectively does the country acquire, distribute, and update knowledge?
 | Trust | Generalised interpersonal trust | Share agreeing that most people can be trusted. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
 | Trust | Cooperation beyond the in-group | Reported trust in people met for the first time and in people of another nationality. |
+| Trust | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Learning | Adult learning participation | Share of adults in formal or non-formal education and training in the last 12 months. |
 | Learning | Research citation impact | Field-normalised citation impact of national research output. |
 | Experimentation | Venture capital investment | Venture capital deployed as a share of GDP. |
@@ -132,4 +133,4 @@ How effectively does the country acquire, distribute, and update knowledge?
 
 ## Contribute
 
-Fill a gap, file evidence, or contest an indicator at https://github.com/envisioning/national-capability-benchmark. The docs explain the method and its decisions.
+Fill a gap, file evidence or challenge an indicator at https://github.com/envisioning/national-capability-benchmark. The docs explain the method and decisions.

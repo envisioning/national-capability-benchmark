@@ -281,6 +281,81 @@
                         ],
                         "additionalProperties": false
                       }
+                    },
+                    "checks": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "checkId": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "definition": {
+                            "type": "string"
+                          },
+                          "unit": {
+                            "type": "string"
+                          },
+                          "direction": {
+                            "type": "string",
+                            "enum": [
+                              "higher_better",
+                              "lower_better"
+                            ]
+                          },
+                          "family": {
+                            "type": "string"
+                          },
+                          "value": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "year": {
+                            "anyOf": [
+                              {
+                                "type": "integer"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "source": {
+                            "type": "string"
+                          },
+                          "sourceTier": {
+                            "anyOf": [
+                              {
+                                "$ref": "#/definitions/IndexFile/properties/countries/items/properties/dimensions/additionalProperties/properties/indicators/items/properties/sourceTier/anyOf/0"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "note": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "checkId",
+                          "name",
+                          "definition",
+                          "unit",
+                          "direction",
+                          "value",
+                          "year",
+                          "source",
+                          "sourceTier",
+                          "note"
+                        ],
+                        "additionalProperties": false
+                      }
                     }
                   },
                   "required": [
@@ -295,7 +370,8 @@
                     "blendedScore",
                     "blendedFrom",
                     "momentum",
-                    "indicators"
+                    "indicators",
+                    "checks"
                   ],
                   "additionalProperties": false
                 },

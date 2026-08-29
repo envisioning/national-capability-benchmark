@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T22:36:03.198Z",
+  "generatedAt": "2026-08-28T23:34:39.155Z",
   "gdpSeries": "NY.GDP.PCAP.PP.KD",
   "dimensionVsGdp": [
     {
@@ -987,19 +987,19 @@
     },
     {
       "dimension": "trust",
-      "indicatorsDefined": 7,
+      "indicatorsDefined": 8,
       "indicatorsObserved": 1,
-      "gaps": 3,
+      "gaps": 4,
       "retired": 3,
-      "meanCoverage": 0.14,
-      "meanConfidence": 0.077,
+      "meanCoverage": 0.123,
+      "meanConfidence": 0.068,
       "classMix": {
         "C": 1,
         "I": 0,
-        "O": 1,
+        "O": 2,
         "P": 5
       },
-      "subjectivityShare": 0.857
+      "subjectivityShare": 0.875
     },
     {
       "dimension": "learning",
@@ -1080,6 +1080,37 @@
         "P": 3
       },
       "subjectivityShare": 0.714
+    }
+  ],
+  "familyBalance": [
+    {
+      "dimension": "trust",
+      "families": [
+        {
+          "family": "institutional",
+          "indicatorsDefined": 3,
+          "indicatorsObserved": 1
+        },
+        {
+          "family": "social",
+          "indicatorsDefined": 2,
+          "indicatorsObserved": 0
+        }
+      ],
+      "countriesOnOneFamily": 0,
+      "countriesScored": 0
+    }
+  ],
+  "behaviouralChecks": [
+    {
+      "checkId": "bribery_incidence",
+      "dimension": "trust",
+      "name": "Bribery incidence",
+      "countries": 49,
+      "latestYear": 2025,
+      "r": -0.553,
+      "dimensionR": null,
+      "dimensionN": 0
     }
   ],
   "gdpStrippedTest": {
@@ -1562,6 +1593,14 @@
       "name": "Cooperation beyond the in-group",
       "publisher": "World Values Survey",
       "reason": "The distinction that makes this dimension worth measuring. Same licensing obstacle as generalised trust.",
+      "status": "gap"
+    },
+    {
+      "dimension": "trust",
+      "indicatorId": "court_case_clearance",
+      "name": "Court case clearance rate",
+      "publisher": "CEPEJ / OECD / national court statistics",
+      "reason": "Whether a court finishes what it starts, counted from case records rather than asked in a survey. D23 named it as the observable replacement for the two retired WGI composites and it has stayed unfilled since. CEPEJ publishes it for Council of Europe members and OECD for its own members, so no single publisher reaches this country set, and a harmonised series needs the project second source adapter. See D57.",
       "status": "gap"
     },
     {
