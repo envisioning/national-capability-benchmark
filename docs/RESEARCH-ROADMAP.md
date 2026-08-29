@@ -53,9 +53,11 @@ into a synthetic indicator.
 ### C. Delphi interpretation
 
 This track reviews thin or questionable source-backed evidence and records
-judgment, disagreement and missing evidence. It does not create observations.
-Run it after a source-backed change, not as a shortcut around one. A Delphi
-estimate can help choose the next source task, but it cannot close that task.
+judgment, disagreement and missing evidence. Its outputs are research leads:
+disagreement can identify likely mismeasurement, and repeated `missingEvidence`
+items can become source-research tickets. It does not create observations. Run
+it after a source-backed change, not as a shortcut around one. A Delphi estimate
+can help choose the next source task, but it cannot close that task.
 
 ## The source-to-indicator workflow
 
@@ -327,10 +329,14 @@ full multi-model gateway Delphi against the new dataset version. Activate only
 after review:
 
 ```bash
-pnpm bench cost --max-coverage 0.5
-pnpm bench delphi --rounds 2 --max-coverage 0.5 --activate
+pnpm bench cost --max-coverage 1
+pnpm bench delphi --rounds 2 --max-coverage 1 --activate
 pnpm bench validate
 ```
+
+Use `--max-coverage 0.5` for a cheaper focused preflight on thin dimensions.
+Use `--max-coverage 1` for the full nine-dimension panel against the current
+dataset version and country set.
 
 The panel may disagree with the new Trust score. That disagreement is a
 research result. It does not alter the observations, score or confidence.

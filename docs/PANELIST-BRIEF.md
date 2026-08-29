@@ -44,7 +44,8 @@ pnpm bench prompt BRA IND --stance wealth_sceptic
 pnpm bench prompt --audit trust --stance bottom_up
 ```
 
-With no country codes, `pnpm bench prompt` prints all 40. Each country block is
+With no country codes, `pnpm bench prompt` prints all 52 countries in the
+current dataset. Each country block is
 separated by `---`. The `--system` output is the rule set that governs every
 answer, and it binds you even though the per-country prompt does not repeat it.
 
@@ -85,9 +86,9 @@ coverage holes and a missing note. A run that does not validate does not exist.
 ## Rules that are easy to get wrong
 
 - **Score against the benchmark countries, not against the world.** Under D47
-  the frame is built from all 40 countries together: 0 is the weakest of them on
-  that dimension and 100 the strongest. There is no reference set. Do not reach
-  for a global frontier.
+  the frame is built from the current country set together: 0 is the weakest of
+  them on that dimension and 100 the strongest. There is no reference set. Do
+  not reach for a global frontier.
 - **The indicator-derived score is an input.** You are in the loop because the
   indicators mismeasure some countries. Depart from them when you can say why.
 - **Low confidence is a real answer.** `selfConfidence` near 0.3 with an honest
@@ -116,7 +117,15 @@ when the files were produced in separate sessions by different models.
 
 ## Current state
 
-The active run is `data/delphi/in-session-round1.json`, one panelist, Claude
-Opus 5, one round, 144 cells. The dataset now holds 40 countries, which is 360
-cells, so the run covers 16 of 40 countries and nothing since. Round 2 has never
-been run, and `indicatorJudgements` is empty.
+The current dataset is version 4.4.0 with 52 countries and 468
+country-dimension cells. The repository contains three in-session,
+one-panelist artifacts. `data/delphi/latest.json` points to an old Claude
+round-1 artifact from 2026-08-26 with 144 cell estimates and no
+`datasetVersion` or country-set metadata. The two later stance files are
+anchored to dataset 4.0.0. None is a current panel for 4.4.0, and none should
+be presented as publishable multi-model evidence.
+
+Round 2 and indicator judgements still need to be run for the current dataset.
+Generate prompts from the live pipeline after scoring 4.4.0. A reviewed gateway
+run should use at least three independent panelists and cover the intended
+country set before it replaces `latest.json`.

@@ -233,7 +233,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     group: 'How things change over time',
     short: 'How much a dimension moved over ten or twenty years, on the same ruler.',
     full: 'History uses today\'s frame, so score change reflects the country. Ten-year and twenty-year spans answer different questions. Values up to five years old can count at a span end, and clamped values are reported.',
-    example: 'Brazil gained 26.2 points on Agency over ten years, against a median of 11.4 across all 40 countries, with two of the four basket indicators clamped at the frame edge.',
+    example: 'Brazil gained 26.2 points on Agency over ten years, against a median of 11.4 across the current country set, with two of the four basket indicators clamped at the frame edge.',
   },
   {
     term: 'Matched basket',

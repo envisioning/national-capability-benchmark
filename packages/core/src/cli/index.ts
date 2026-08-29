@@ -121,8 +121,8 @@ async function score(args: Args): Promise<CountryResult[]> {
   const generatedAt = new Date().toISOString()
   const version = DATASET_VERSION
   /* One slim index for anything that lists countries, one file per country for
-   * the detail. A single file carrying every indicator series for 40 countries
-   * is 7 MB and every page load pays for it. See D27. */
+   * the detail. A single file carrying every indicator series for the current
+   * country set is 7 MB and every page load pays for it. See D27. */
   await writeOut(
     FILES.index,
     `${JSON.stringify({ generatedAt, version, countries: countries.map(summarize) }, null, 2)}\n`,
@@ -514,9 +514,12 @@ ${list}
 - Low confidence is a real answer. \`selfConfidence\` of 0.3 with an honest
   rationale is worth more than a confident guess.
 - Do not invent statistics. Reason from the brief plus what you reliably know.
-- Coordination and Trust carry no indicator score for any country, because the
-  perception composites were retired. Your estimate is the only signal there, so
-  slow down on those two and set confidence honestly.
+- Coordination and Trust have thin source evidence. Trust has one social-trust
+  measure and one 2019 contract-enforcement measure where both are observed, but
+  court performance and several institutional and social rows remain gaps. Treat
+  the source-backed score as the measured baseline. Your Delphi estimate is an
+  interpretation layer, not a replacement. Keep model self-confidence separate
+  from source confidence.
 
 ## Background, only if you want it
 
@@ -763,6 +766,7 @@ Start with file 1.
   pnpm bench score                        normalize, score, write index.json, one file per country, table.csv
   pnpm bench delphi    [--mock] [--rounds 2] [--countries BRA,IND] [--models a,b]
                        [--max-coverage 0.5] [--no-judge] [--concurrency 4] [--activate]
+                       0.5 reviews thin dimensions; use 1 for all nine dimensions
   pnpm bench diagnose                     correlations, redundancy, GDP-sensitivity test
   pnpm bench velocity                     write the provisional five-year velocity fixture
   pnpm bench leverage                     write the provisional leverage fixture
@@ -775,6 +779,7 @@ Start with file 1.
                                           merge pasted chat replies into one run file
   pnpm bench cost      [--rounds 2] [--stances 4] [--models a,b] [--countries BRA,IND]
                        [--max-coverage 0.5] [--no-judge]
+                       0.5 reviews thin dimensions; use 1 for all nine dimensions
                                           measure the prompts and price the panel run
   pnpm bench probe     --search <regex> [--limit 40]             find World Bank series by name, with the database each needs
   pnpm bench probe     --series a,b[@db] [--from 2010] [--json]  test candidate World Bank series before wiring them

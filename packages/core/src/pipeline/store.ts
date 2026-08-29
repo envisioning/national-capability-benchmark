@@ -86,7 +86,7 @@ export function toCsv(rows: Array<Record<string, string | number | null>>): stri
 /**
  * Strip a country down to what a list needs: the nine scores, their confidence
  * and their trend headlines. The indicator rows and the yearly series stay in
- * the per-country file, because a grid of 40 radars does not need them and they
+ * the per-country file, because a grid of the current country set does not need them and they
  * are most of the weight. See D27.
  */
 export function summarize(country: CountryResult): CountryResult {

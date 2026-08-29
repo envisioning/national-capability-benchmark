@@ -394,9 +394,10 @@ the report and the viewer both refuse to present them as evidence.
 Do not add a cheap model to widen the panel. `pnpm bench cost` puts a full run in
 single-digit dollars, so cost is not the constraint — see D13.
 
-The active run is currently `in_session`, one panelist, produced by Claude Opus 5
-in a working session. It is useful and it is not a panel. Replace it with a
-gateway run before publishing anything.
+The repository contains old in-session one-panelist artifacts, including the
+run pointed to by `data/delphi/latest.json`. They are useful research notes, but
+they are not a current panel for dataset 4.4.0. Replace them with a reviewed
+gateway run covering the current country set before publishing anything.
 
 ## Brand
 

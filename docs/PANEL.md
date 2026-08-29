@@ -82,7 +82,7 @@ in-session estimate equivalent to a multi-vendor panel.
 export AI_GATEWAY_API_KEY=...
 export NCB_PANEL=anthropic/claude-opus-5,openai/gpt-5,google/gemini-2.5-pro,...
 pnpm bench cost --max-coverage 0.5
-pnpm bench delphi --rounds 2 --max-coverage 0.5 --activate
+pnpm bench delphi --rounds 2 --max-coverage 1 --activate
 pnpm bench validate                   # schema-check what came out
 pnpm bench score && pnpm bench report
 ```
@@ -91,8 +91,9 @@ Without a key the CLI falls back to the mock provider and says so.
 
 Useful flags: `--countries BRA,IND` to make a preflight for a subset,
 `--max-coverage 0.5` to include only dimensions with thin source coverage,
-`--activate` to make a reviewed run active, `--no-judge` to skip the indicator
-audit, `--stances N`, and `--concurrency N`. Subset and coverage-restricted runs
+`--max-coverage 1` to review all nine dimensions, `--activate` to make a
+reviewed run active, `--no-judge` to skip the indicator audit, `--stances N`,
+and `--concurrency N`. A subset or 0.5 coverage run is a preflight. Such runs
 are archived without changing `latest.json` unless `--activate` is explicit.
 Adding a country changes the normalization frame, so the published run for the
 new dataset version should cover the full rebased country set.
@@ -108,15 +109,18 @@ carries round 1 back. Both grow with the registry.
 As of 2026-08-26, a four-panelist, two-round, 10-country run that includes every
 dimension and the indicator audit is 116 calls, roughly 446k input and 329k
 output tokens, and about **$7** with two Anthropic panelists and two others.
+Run `pnpm bench cost --max-coverage 1` for the current 52-country estimate
+before starting the full panel.
 
 Caveats the command prints for itself: characters-per-token is an approximation,
 the output figure includes a 3× multiplier for reasoning tokens, list prices are
 in `packages/core/src/delphi/pricing.ts` with a `LAST_VERIFIED` date, non-
 Anthropic prices are marked unverified, and the gateway may add margin.
 
-**Cost is not a constraint at this scale** (D13). Even a forty-country run is
-under thirty dollars. A cheaper model adds variance that can look like
-disagreement. The IQR matters most.
+**Cost is not the primary constraint at this scale** (D13). Price the current
+scope before running it, then choose models for independent, useful judgments.
+A cheaper model adds variance that can look like disagreement. The IQR matters
+most.
 
 ## Hand-authoring a run
 

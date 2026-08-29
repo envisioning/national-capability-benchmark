@@ -172,15 +172,16 @@ Real runs use the Vercel AI Gateway:
 export AI_GATEWAY_API_KEY=...
 export NCB_PANEL=anthropic/claude-opus-5,openai/gpt-5,google/gemini-2.5-pro
 pnpm bench cost --max-coverage 0.5
-pnpm bench delphi --rounds 2 --max-coverage 0.5 --activate
+pnpm bench delphi --rounds 2 --max-coverage 1 --activate
 ~~~
 
 A country-restricted or coverage-restricted run is saved as an archive and does
 not replace `data/delphi/latest.json` unless `--activate` is passed. Use a
-restricted run as a preflight. A published run after a country-set change must
-cover the rebased set. A run with provenance "mock" is an offline stand-in and
-is not evidence. A run with fewer than three panelists is a session estimate,
-not a panel. Read
+restricted run, including `--max-coverage 0.5`, as a preflight. Use
+`--max-coverage 1` for the full nine-dimension panel. A published run after a
+country-set change must cover the rebased set. A run with provenance "mock" is
+an offline stand-in and is not evidence. A run with fewer than three panelists
+is a session estimate, not a panel. Read
 [docs/PANEL.md](docs/PANEL.md) for the full contract.
 
 **Institutional data.** Country-specific institutional networks are explanatory
