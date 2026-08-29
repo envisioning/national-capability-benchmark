@@ -1,156 +1,249 @@
 # NCB, the National Capability Benchmark
 
-A prototype for measuring what a country is **capable of doing**: anticipating
-change, coordinating action, learning, adapting and building under uncertainty.
-It asks whether those abilities differ from wealth, comfort and competitiveness.
+NCB is a prototype benchmark of a country's capacity to anticipate change,
+coordinate action, learn, adapt and build under uncertainty.
 
-Nine capability dimensions, 52 countries, 0 to 100 per dimension, no
-headline ranking. Every raw indicator stays visible with its source and year.
-Evidence quality is reported as a separate confidence score and is never folded
-into the capability score.
+The benchmark covers ten countries and nine dimensions. Each dimension is scored
+from 0 to 100 with equal weights. There is no composite score or headline
+ranking. Every raw indicator remains visible with its source and year. Confidence
+is published beside the score and is never folded into it.
 
-Brazil is the case this work is meant to serve first. The frame applies to every
-country in the set on the same terms, because a capability frame that only fits
-one country describes that country instead of measuring capability.
-[docs/WHY.md](docs/WHY.md) states the claim being tested and what would sink it.
+Brazil is the primary case. The same dimensions, indicators, transforms and
+normalization frame apply to every country in the set. Read
+[docs/WHY.md](docs/WHY.md) for the claim under test and what would disprove it.
 
 ## Quick start
 
-```bash
+~~~bash
 pnpm install
 pnpm bench all
-pnpm bench delphi --mock
 pnpm dev
-```
+~~~
 
-`pnpm bench cost` prices a real panel run before you start one.
+pnpm bench all fetches World Bank observations from 1990, scores the countries,
+runs diagnostics, writes the report, and regenerates the capability agendas.
 
-`pnpm bench all` fetches World Bank data, scores every country, runs diagnostics,
-writes `data/out/report.md` and regenerates the capability agendas. Scoring also
-writes the country index and one full file per country. `pnpm dev` opens the
-viewer.
+The viewer runs at https://ncb.localhost through portless on port 3888. To run
+without the proxy, use either:
 
-## The layers
+~~~bash
+PORTLESS=0 pnpm dev
+pnpm --filter @ncb/web dev:app
+~~~
 
-**Hard indicators.** The registry has 66 indicators across nine dimensions. 38
-come from the World Bank API and two come from the GEM Adult Population Survey,
-which has no open API. The remaining 26 are gaps because no adequate,
-inspectable international dataset exists. Gaps remain listed, lower confidence
-and define the data-collection agenda.
+Both commands serve http://localhost:3888.
 
-**Momentum.** Ingestion keeps every year from 1990; scoring uses the latest.
-Trends compare the same frame over ten and twenty years, using only indicators
-observed at both ends. Each indicator also keeps its own series with the raw,
-normalized and source-tier values. Nothing is interpolated or extrapolated.
-Each run logs what it restated, added or dropped. See D22, D24 and D25.
+Run the offline Delphi pipeline with:
 
-**Evidence records.** `data/evidence/records.json` describes a country delivery
-that the current indicators cannot measure. Each record has a published number,
-source, reference period and a statement of what the case does not show. Records
-do not affect scores or confidence. A gap can become an indicator when a
-comparable series covers at least two countries. See D20.
+~~~bash
+pnpm bench delphi --mock
+pnpm bench score
+pnpm bench report
+~~~
 
-**The capability agenda.** `data/out/agenda` holds one computed agenda per
-country. Low-scoring dimensions with usable evidence become items to raise;
-dimensions below the usable confidence band become items to measure first. The
-26 gaps form the measurement agenda. JSON is language neutral, with English and
-Brazilian Portuguese markdown beside it. See CONTRIBUTING.md.
+Mock output is deterministic and is not evidence about a country.
 
-**The Delphi panel.** A panel of language models with fixed analytical stances
-covers two gaps in the indicators:
+The green gate is:
 
-1. It estimates dimensions where evidence is thin or stale and states what would
-   resolve the uncertainty.
-2. It audits the indicator set by reclassifying each indicator as C/I/O/P,
-   rating construct validity and wealth-proxy risk, and naming redundant pairs.
+~~~bash
+pnpm build
+pnpm typecheck
+~~~
 
-There are two rounds. In round 2, each panelist sees the anonymised round-1
-scores and rationales. They are told not to converge for its own sake. Stable
-disagreement is recorded.
+Run pnpm bench validate after changing data/delphi or data/evidence.
 
-Panel estimates never enter the indicator-derived score. They sit beside it.
+## Commands
 
-```bash
+The CLI lives in packages/core and is available through pnpm bench.
+
+| Command | Purpose |
+| --- | --- |
+| pnpm bench ingest [--from 1990] [--snapshot] | Fetch World Bank history into data/observations and record restatements in revisions.json. |
+| pnpm bench score | Normalize and score the current observations, writing the published output. |
+| pnpm bench diagnose | Run correlations, redundancy checks and the GDP-sensitivity test. |
+| pnpm bench report | Write data/out/report.md. |
+| pnpm bench agenda [BRA ...] [--lang pt-BR] | Write one capability agenda per requested country and language. |
+| pnpm bench delphi [--mock] | Run the model panel or the deterministic offline stand-in. |
+| pnpm bench cost | Measure panel prompts and estimate the cost before a real run. |
+| pnpm bench prompt ... | Print exact panel prompts or write chat-ready bundles. |
+| pnpm bench merge ... | Merge pasted chat replies into a Delphi run file. |
+| pnpm bench probe --search <regex> | Find candidate World Bank series by name and database. |
+| pnpm bench probe --series a,b[@db] | Test candidate series across the country set before wiring them. |
+| pnpm bench validate [--fetch] | Schema-check Delphi, evidence and institutional data. --fetch checks evidence URLs too. |
+| pnpm bench all | Run ingest, score, diagnose, report and agenda in order. |
+
+## The nine dimensions
+
+The benchmark measures:
+
+1. Anticipation
+2. Agency
+3. Coordination
+4. Trust
+5. Learning
+6. Experimentation
+7. Adaptability
+8. Building
+9. Shared Purpose
+
+The indicator registry in
+packages/core/src/model/indicators.ts is the single source of truth. It
+contains scored indicators, declared gaps and retired indicators. Gaps remain
+visible, lower confidence and form the data-collection agenda. Retired
+indicators stay visible with the reason they were rejected.
+
+Missing values are dropped from the mean. Nothing is imputed. A dimension with
+fewer than two observed indicators publishes no score: score is null and
+belowCoverageFloor is true.
+
+## How scoring works
+
+For each scored indicator, the pipeline:
+
+1. takes the most recent comparable value for each country, with source and year;
+2. applies its declared transform, such as per-million, logarithmic or none;
+3. winsorizes extreme values with Tukey fences at three interquartile ranges;
+4. normalizes to 0 through 100 against the ten-country frame, reversing
+   lower-is-better indicators;
+5. averages the available indicators inside each dimension with equal weights;
+6. computes confidence = coverage × recency × source_quality separately.
+
+All ten countries set the normalization frame. The frame stays fixed within a
+dataset version. Adding a country changes the frame, restates published scores
+and requires a major version bump. The semantic version is defined in
+packages/core/src/model/version.ts.
+
+Ingestion keeps the full World Bank history from 1990 while scoring uses the
+latest value. Every ingest compares itself with the previous observation file
+and appends changes to data/observations/revisions.json. Snapshots are written
+only when --snapshot is passed.
+
+## Trends and agendas
+
+The default momentum spans are ten and twenty years. A trend uses only
+indicators observed at both ends of the span, so its basket can be smaller than
+the current dimension score. Momentum entries carry the span, change, basket
+size and any historical clamp count. Indicator series retain raw, normalized and
+source-tier values without interpolation or carry-forward.
+
+The agenda pipeline turns each country into three lists:
+
+- **raise** for low scores with usable evidence;
+- **measure** for dimensions whose confidence is below the usable band;
+- **hold** for the remaining dimensions.
+
+The language-neutral agenda JSON and rendered English or Brazilian Portuguese
+documents are written to data/out/agenda. The agenda is computed from the
+score and registry; it does not invent a new number.
+
+## Evidence, Delphi and institutional data
+
+**Evidence records.** data/evidence documents delivered country programmes that
+the indicators cannot measure. Each record carries a published metric, source,
+reference period, limits, mechanism and preconditions. Evidence records never
+affect scores or confidence. A gap can become a scored indicator when a
+comparable series covers at least two countries. Read
+[docs/EVIDENCE.md](docs/EVIDENCE.md) before adding one.
+
+**Delphi panel.** The panel pairs language models with fixed analytical
+stances. It uses two rounds: in round two, each panelist sees anonymized
+round-one scores and rationales. The run stores medians, interquartile ranges
+and provenance. Panel estimates remain separate from indicator scores.
+
+Real runs use the Vercel AI Gateway:
+
+~~~bash
 export AI_GATEWAY_API_KEY=...
 export NCB_PANEL=anthropic/claude-opus-5,openai/gpt-5,google/gemini-2.5-pro
 pnpm bench delphi --rounds 2
-```
+~~~
 
-Without a key, `pnpm bench delphi --mock` runs a deterministic offline panel so
-the whole pipeline works. Mock runs are labelled everywhere and are not evidence
-about any country.
+A run with provenance: "mock" is an offline stand-in and is not evidence. A run
+with fewer than three panelists is a session estimate, not a panel. Read
+[docs/PANEL.md](docs/PANEL.md) for the full contract.
 
-## What the prototype found
+**Institutional data.** Country-specific institutional networks are explanatory
+data. They show where capability is held and how it moves. They never enter a
+score or confidence. The current data and authoring rules are in
+[docs/INSTITUTIONS.md](docs/INSTITUTIONS.md).
 
-Run `pnpm bench report` and read `data/out/report.md`. The headline results from
-the first run:
+## Published output
 
-- **The nine dimensions separate once the country set is wide enough.** At 16
-  countries, two dimension pairs correlated at 0.94 and the model looked like
-  three signals wearing nine names. At 52 countries no pair passes the
-  redundancy threshold, and Trust fell from 0.79 to 0.39 against income per head
-  before its perception layer was retired outright.
-- **The wealth correlation was a property of the evidence class, not of the
-  dimensions.** Perception indicators averaged 0.75 against log GDP per capita.
-  Direct capability measures averaged 0.55. Retiring the perception layer took
-  Coordination from 0.90 to 0.68, Trust from 0.88 to 0.79 and Shared Purpose
-  from 0.34 to 0.18, and dissolved the strongest duplicate pair in the model.
-- **The cost is three dimensions with almost no evidence left.** Coordination
-  now rests on one indicator, Trust and Shared Purpose on two. Read artefact A12
-  before quoting any of the three.
-- **Experimentation was the least measurable dimension** and is now the least
-  wealth-tracking one. Patents and trademarks used to carry it alone. With GEM
-  early-stage entrepreneurial activity and fear of failure wired, four of eight
-  indicators are observed, confidence rises from 0.18 to 0.39, and the
-  correlation with income per head falls to 0.57. Four indicators are still
-  gaps.
-- The four Worldwide Governance Indicators correlated with each other above 0.92.
-  They were one measurement wearing four names, and none of them are scored now.
-- Switzerland, Singapore and Estonia do come out with genuinely different
-  shapes, which is the main thing the prototype had to demonstrate.
+data/out is generated output. pnpm bench score also writes the Frictionless Data
+Package descriptor and JSON Schemas.
+
+| File | Contents |
+| --- | --- |
+| data/out/index.json | Slim list of every country with nine dimension results. |
+| data/out/countries/{ISO3}.json | One country in full, including indicator rows and yearly series. |
+| data/out/indicators/{id}.json | One indicator across the country set. |
+| data/out/table.csv | Flat country by dimension table. |
+| data/out/diagnostics.json | Correlations, redundancy and GDP-sensitivity diagnostics. |
+| data/out/report.md | Human-readable findings report. |
+| data/out/agenda/{ISO3}.json | Language-neutral computed agenda. |
+| data/out/agenda/{ISO3}.{lang}.md | Rendered agenda for a language lexicon. |
+| data/out/datapackage.json | Dataset metadata, sources, license, resources and schemas. |
+| data/out/schema/*.json | JSON Schemas for the published data shapes. |
+
+Use index.json for cross-country lists. Use a country file for one detailed
+profile and an indicator file for one measure across countries. Do not load all
+country files to build a list.
+
+## Viewer and deployment
+
+The Next.js viewer is in apps/web. It provides country profiles, capability
+comparisons, agendas, indicators, sources, diagnostics, the Delphi panel,
+patterns, limits, decisions, the glossary and a challenge page. The Portuguese
+interpretation layer starts at /pt.
+
+Vercel deploys the project national-capability-benchmark under the ev-io scope
+with apps/web as the Root Directory. The build command is:
+
+~~~bash
+pnpm --filter @ncb/core build && next build
+~~~
+
+Data is read from data/out at request time, so refreshed output must be
+committed before deploying.
+
+## Before quoting a number
+
+Read [docs/KNOWN-ARTEFACTS.md](docs/KNOWN-ARTEFACTS.md) before using a score.
+The main risks are:
+
+- Experimentation is still partly inferred from formal invention data.
+- Coordination and Trust remain difficult to separate from wealth-correlated
+  evidence.
+- A country score is a coarse national proxy for capability below the national
+  level.
+- The ten-country frame is a comparison set, not the world.
+
+Keep the score beside its confidence, observed-indicator count and
+coverage-floor status. When quoting a trend, include its span and matched
+basket size. When quoting a Delphi estimate, include its provenance. Record the
+dataset version and generation date too.
+
+## Repository map
+
+~~~text
+packages/core   registry, ingestion, normalization, scoring, diagnostics, Delphi and CLI
+apps/web        Next.js viewer
+data/           observations, Delphi runs, evidence, institution maps and generated output
+docs/           rationale, decisions, limits, panel and authoring guides
+~~~
+
+Start with:
+
+- [CONTRIBUTING.md](CONTRIBUTING.md) for gap fills, evidence, languages and
+  country changes;
+- [docs/WHY.md](docs/WHY.md) for the claim and scope;
+- [docs/DECISIONS.md](docs/DECISIONS.md) for methodological choices;
+- [docs/KNOWN-ARTEFACTS.md](docs/KNOWN-ARTEFACTS.md) for known measurement
+  failures;
+- [AGENTS.md](AGENTS.md) for repository invariants and World Bank API traps.
 
 ## License
 
-Code is MIT. The World Bank data is CC BY 4.0, both typefaces are SIL OFL 1.1,
-and the Envisioning brand is not covered by either. Read
-[NOTICE.md](NOTICE.md) before reusing any of it.
-
-## Repository
-
-```
-packages/core   registry, ingestion, scoring, diagnostics, Delphi, CLI
-apps/web        Next.js viewer: profiles, indicator audit trail, diagnostics, panel
-data/           observations in, scores and reports out
-```
-
-```
-CONTRIBUTING.md          how to fill a gap, file evidence, add a language or a country
-docs/WHY.md              the claim being tested, and what this must not become
-docs/DECISIONS.md        every methodological choice and what would overturn it
-docs/KNOWN-ARTEFACTS.md  where v0 is wrong about the world, not just uncertain
-docs/PANEL.md            the Delphi contract: provenance, models, cost
-```
-
-See [AGENTS.md](AGENTS.md) for commands, invariants and the World Bank API traps.
-
-## Before you quote a number
-
-Read [docs/KNOWN-ARTEFACTS.md](docs/KNOWN-ARTEFACTS.md). Two things will bite
-you: Experimentation is inferred from patent counts with six of eight indicators
-missing, and Coordination and Trust cannot be scored at all once
-wealth-correlated indicators are removed.
-
-## Method in one page
-
-1. Most recent comparable value per indicator per country, with source and year.
-2. Declared transform: per million people, log, or none.
-3. Winsorize with Tukey fences at three interquartile ranges. Extremes only.
-4. Min-max to 0-100 against the ten reference countries, reversed for lower-is-better.
-5. Equal-weight mean of the available indicators inside each dimension.
-6. `confidence = coverage × recency × source_quality`, reported separately.
-
-Scores are relative, but the scale does not move. The 0 and 100 endpoints are
-fixed by the ten reference countries, and any country added later is measured
-against that same frame. Verified twice: zero of 90 existing scores moved when
-six countries were added, and zero of 144 moved when 24 more arrived. See D16
-and D27 in [docs/DECISIONS.md](docs/DECISIONS.md).
+The code is MIT. World Bank data is published under CC BY 4.0. The typefaces
+use the SIL Open Font License 1.1. The Envisioning brand is not covered by the
+code license. See [NOTICE.md](NOTICE.md) before reusing the repository.
