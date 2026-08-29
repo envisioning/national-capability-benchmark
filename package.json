@@ -9,6 +9,7 @@
     "delphi": "pnpm bench delphi",
     "score": "pnpm bench score",
     "diagnose": "pnpm bench diagnose",
+    "reviews:check": "node scripts/check-provisional-reviews.mjs",
     "build": "pnpm -r build",
     "typecheck": "pnpm -r typecheck",
     "dev": "pnpm --filter @ncb/web dev"
