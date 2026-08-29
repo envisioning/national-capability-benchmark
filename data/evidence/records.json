@@ -1183,6 +1183,246 @@
           "Administrative capacity to review projects and monitor the obligation"
         ]
       }
+    },
+    {
+      "id": "bra-casa-da-moeda",
+      "indicatorId": "large_project_delivery",
+      "iso3": "BRA",
+      "title": "Casa da Moeda do Brasil, the national mint",
+      "claim": "Founded in 1694, Brazil's national mint has remained a public institution through colonial, imperial and republican regimes and now produces currency, identity documents and passports after more than 330 years of operation.",
+      "metric": {
+        "name": "Reported institutional history",
+        "value": 330,
+        "unit": "years",
+        "asOf": "2026"
+      },
+      "started": 1694,
+      "status": "operating",
+      "source": {
+        "publisher": "Casa da Moeda do Brasil, history of the CMB",
+        "url": "https://www.casadamoeda.gov.br/portal/socioambiental/cultural/historia-da-cmb.html",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-29"
+      },
+      "limits": "Institutional survival and the ability to produce state credentials show continuity, not the cost, quality or strategic value of every product made by the mint. The institution also changed its technologies and functions over time, so continuity does not mean an unchanged organisation.",
+      "pattern": {
+        "mechanism": "A permanent public production institution carries the state's credential infrastructure across political and monetary transitions, preserving practical capability while its outputs change with the regime around it.",
+        "preconditions": [
+          "A public mandate for products whose authenticity the state must guarantee",
+          "Security and production capabilities that can be renewed across technology shifts",
+          "Administrative continuity strong enough to outlast constitutional change"
+        ]
+      }
+    },
+    {
+      "id": "bra-itaipu",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "BRA",
+      "title": "Itaipu Binacional, the treaty-built power system",
+      "claim": "Brazil and Paraguay built and operate Itaipu through a treaty-based binational entity, which reached 14,000 megawatts of installed capacity and has supplied both countries since the first unit entered operation in 1984.",
+      "metric": {
+        "name": "Installed generating capacity",
+        "value": 14000,
+        "unit": "MW",
+        "asOf": "2007"
+      },
+      "started": 1974,
+      "status": "operating",
+      "source": {
+        "publisher": "Itaipu Binacional, institutional information",
+        "url": "https://www.itaipu.gov.br/institucional/acesso-informacao",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-29"
+      },
+      "limits": "Installed capacity shows the scale of the physical system, not the quality of the bilateral relationship, the project's cost or the distribution of its benefits. A treaty structure can hold a joint asset together while leaving wider coordination between the countries unresolved.",
+      "pattern": {
+        "mechanism": "Brazil and Paraguay converted a contested shared river into a jointly governed operating institution with its own legal personality, fixed allocation rules and a long-lived technical system.",
+        "preconditions": [
+          "A legal agreement that specifies rights, obligations and decision authority",
+          "A physical project large enough to create mutual dependence",
+          "Technical and financial institutions able to keep the partnership operating for decades"
+        ]
+      }
+    },
+    {
+      "id": "bra-cadunico",
+      "indicatorId": "institutional_trust",
+      "iso3": "BRA",
+      "title": "Cadastro Único, the unified social registry",
+      "claim": "Since 2001, Cadastro Único has identified and characterized low-income families across Brazil and has become the entry point for more than 40 federal, state and municipal social programmes.",
+      "metric": {
+        "name": "Social programmes using the registry",
+        "value": 40,
+        "unit": "programmes",
+        "asOf": "2026"
+      },
+      "started": 2001,
+      "status": "operating",
+      "source": {
+        "publisher": "Ministry of Development and Social Assistance, Cadastro Único",
+        "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/cadastro-unico",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-29"
+      },
+      "limits": "A registry and its programme count show administrative reach, not whether citizens trust the state or whether benefits arrive accurately and on time. The source is the ministry responsible for the registry, and coverage depends on families keeping their records current.",
+      "pattern": {
+        "mechanism": "One shared identity and needs record lets multiple programmes see the same household, reducing the need for each programme to build its own eligibility system and making the state more legible to people it serves.",
+        "preconditions": [
+          "A national identity key that can link people across programmes",
+          "Municipal service points able to collect and update household information",
+          "Rules that let several programmes use the same record while preserving eligibility distinctions"
+        ]
+      }
+    },
+    {
+      "id": "bra-portal-transparencia",
+      "indicatorId": "institutional_trust",
+      "iso3": "BRA",
+      "title": "Portal da Transparência, the federal open-books system",
+      "claim": "Launched in 2004, Portal da Transparência has spent 20 years publishing federal revenue, expenditure, personnel and transfer information so citizens can inspect how public money is used.",
+      "metric": {
+        "name": "Years since launch",
+        "value": 20,
+        "unit": "years",
+        "asOf": "2024"
+      },
+      "started": 2004,
+      "status": "operating",
+      "source": {
+        "publisher": "Controladoria-Geral da União, Portal da Transparência",
+        "url": "https://portaldatransparencia.gov.br/20anos/portal-da-transparencia-celebra-20-anos",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-29"
+      },
+      "limits": "Publication creates the possibility of scrutiny, not evidence that people use the data or trust the institutions being scrutinized. The portal mainly covers federal government execution and excludes some state-owned and non-federal activity.",
+      "pattern": {
+        "mechanism": "The government turns its own administrative records into a public interface, so oversight can begin with the same transaction detail that the bureaucracy uses to execute and audit spending.",
+        "preconditions": [
+          "Administrative records detailed enough to publish at transaction level",
+          "A legal duty to disclose public spending",
+          "An oversight body able to maintain the interface and respond to findings"
+        ]
+      }
+    },
+    {
+      "id": "bra-inep",
+      "indicatorId": "research_citation_impact",
+      "iso3": "BRA",
+      "title": "INEP, the standing education statistics institution",
+      "claim": "Created in 1937, INEP built a standing education statistics and census system that lets federal, state and municipal actors see schools, students and policy results across Brazil, while its historical archive now spans 218.68 linear metres.",
+      "metric": {
+        "name": "Historical archive",
+        "value": 218.68,
+        "unit": "linear metres",
+        "asOf": "2022"
+      },
+      "started": 1937,
+      "status": "operating",
+      "source": {
+        "publisher": "INEP, institutional history and historical archive",
+        "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/gestao-do-conhecimento-e-estudos-educacionais/cgdi/arquivo-historico",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-29"
+      },
+      "limits": "An archive and a census show that a state can record itself, not that the resulting policy improves learning or research quality. The data system also depends on reporting by schools and education secretariats, and its history includes institutional redesign.",
+      "pattern": {
+        "mechanism": "A permanent statistical institution gives education policy a memory and a common set of objects, so schools, students and results can be compared across territories and governments.",
+        "preconditions": [
+          "A mandate to collect comparable information across levels of government",
+          "Schools and secretariats able to report through a shared system",
+          "Analytical staff and archival practice that preserve series across reforms"
+        ]
+      }
+    },
+    {
+      "id": "bra-cgee",
+      "indicatorId": "government_foresight_capacity",
+      "iso3": "BRA",
+      "title": "CGEE, the strategic studies center",
+      "claim": "Created in 2001, the Centro de Gestão e Estudos Estratégicos was designed to produce prospective studies and long-term recommendations for Brazilian science, technology and innovation policy, with 273 researchers and specialists signing its creation record.",
+      "metric": {
+        "name": "Participants signing the creation record",
+        "value": 273,
+        "unit": "researchers and specialists",
+        "asOf": "2001"
+      },
+      "started": 2001,
+      "status": "operating",
+      "source": {
+        "publisher": "Ministry of Science, Technology and Innovation, CGEE report",
+        "url": "https://repositorio.mcti.gov.br/bitstream/mctic/5222/1/2002_CGEE_relatorio_2002.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-29"
+      },
+      "limits": "The creation record and a mandate for prospective studies show institutional intent, not whether foresight changes decisions or survives political pressure. CGEE operates within the science and technology policy system, so its reach does not cover every part of government.",
+      "pattern": {
+        "mechanism": "Government creates a distinct organization to turn evidence and expert networks into long-horizon options, giving policymakers a place to ask what future conditions require before a crisis sets the agenda.",
+        "preconditions": [
+          "A ministry willing to give a foresight body room to examine its own assumptions",
+          "A network of researchers and institutions that can contribute expertise",
+          "A route from prospective studies into planning and policy decisions"
+        ]
+      }
+    },
+    {
+      "id": "bra-telebras",
+      "indicatorId": "institutional_responsiveness",
+      "iso3": "BRA",
+      "title": "Telebras, the telecom system that was dismantled",
+      "claim": "Created in 1972, Telebras coordinated Brazil's state telecom system until its 1998 privatisation, when 54 concessionaires were split out and the state moved from operating the network to regulating and universalising service.",
+      "metric": {
+        "name": "Concessionaires controlled before the split",
+        "value": 54,
+        "unit": "companies",
+        "asOf": "1998"
+      },
+      "started": 1972,
+      "status": "concluded",
+      "source": {
+        "publisher": "Telebras, historical financial report",
+        "url": "https://www.telebras.com.br/wp-content/uploads/2019/10/1.html",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-29"
+      },
+      "limits": "The number of controlled companies shows the structure of the old system, not whether privatisation delivered affordable, reliable service everywhere. The transition also left a continuing Telebras with a different role, so the record concerns a model that ended rather than a company that disappeared.",
+      "pattern": {
+        "mechanism": "The state first assembled a fragmented telecom sector into one planning and investment system, then dismantled that holding structure when a new regulatory and private operating model was judged more suitable for expansion.",
+        "preconditions": [
+          "Authority to consolidate regional operators under one national plan",
+          "A public investment and research base large enough to build the network",
+          "A legal and regulatory framework able to transfer operating assets without abandoning the public objective"
+        ]
+      }
+    },
+    {
+      "id": "bra-embrapii",
+      "indicatorId": "business_rd_share",
+      "iso3": "BRA",
+      "title": "EMBRAPII, industry-led applied research",
+      "claim": "Created in 2013, EMBRAPII connects companies to public and private research units through shared-risk funding, and it contracted a record 811 new industrial research projects in 2025.",
+      "metric": {
+        "name": "New projects contracted in the year",
+        "value": 811,
+        "unit": "projects",
+        "asOf": "2025"
+      },
+      "started": 2013,
+      "status": "operating",
+      "source": {
+        "publisher": "EMBRAPII, 2025 results",
+        "url": "https://embrapii.org.br/embrapii-em-2025/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-29"
+      },
+      "limits": "Project counts show the throughput of a funding network, not the commercial value, technical success or additionality of the research. EMBRAPII's own results report the programme's activity, and projects vary widely in scale and maturity.",
+      "pattern": {
+        "mechanism": "Public funding follows an industry's defined technical problem into a research unit, sharing early risk while leaving the company and researchers responsible for solving a concrete challenge.",
+        "preconditions": [
+          "Research units with equipment and technical depth ready to work with firms",
+          "Companies able to define a problem and contribute a financial counterpart",
+          "A funding body with enough flexibility to contract applied work faster than ordinary grants"
+        ]
+      }
     }
   ]
 }
