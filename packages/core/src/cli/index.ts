@@ -34,6 +34,7 @@ import { LANGS, LEXICONS } from '../i18n/index.js'
 import type { Lang } from '../i18n/index.js'
 import { runDiagnostics } from '../pipeline/diagnostics.js'
 import { buildReport } from '../pipeline/report.js'
+import { writeVelocity } from '../pipeline/velocity.js'
 import {
   acrossCountries,
   loadDelphi,
@@ -277,6 +278,14 @@ async function main() {
     case 'diagnose':
       await diagnose(args)
       break
+
+    case 'velocity': {
+      const output = await writeVelocity()
+      console.log(
+        `velocity   -> ${FILES.velocity} (${Object.keys(output.countries).length} countries, ${output.exclusions.length} excluded from country-level reads)`,
+      )
+      break
+    }
 
     case 'trust':
       await trust(args)
@@ -736,6 +745,7 @@ Start with file 1.
   pnpm bench delphi    [--mock] [--rounds 2] [--countries BRA,IND] [--models a,b]
                        [--max-coverage 0.5] [--no-judge] [--concurrency 4] [--activate]
   pnpm bench diagnose                     correlations, redundancy, GDP-sensitivity test
+  pnpm bench velocity                     write the provisional five-year velocity fixture
   pnpm bench trust    fetch                fetch and parse Joint EVS/WVS A165 trust results
   pnpm bench prompt    [BRA IND ...] [--stance wealth_sceptic] [--system] [--audit trust]
                        [--paste] [--batch 4] [--out paste] [--local]

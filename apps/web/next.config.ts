@@ -53,6 +53,7 @@ const config: NextConfig = {
     '/**': [
       '../../data/out/index.json',
       '../../data/out/diagnostics.json',
+      '../../data/out/velocity.json',
       '../../data/out/countries/*.json',
       '../../data/out/agenda/*.json',
       '../../data/out/indicators/*.json',
@@ -63,6 +64,7 @@ const config: NextConfig = {
       '../../docs/DECISIONS.md',
       'data/out/index.json',
       'data/out/diagnostics.json',
+      'data/out/velocity.json',
       'data/out/countries/*.json',
       'data/out/agenda/*.json',
       'data/out/indicators/*.json',

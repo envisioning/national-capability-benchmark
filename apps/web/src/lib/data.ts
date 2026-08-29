@@ -8,6 +8,7 @@ import {
   INDICATORS,
   InstitutionNetworkFile,
   isScored,
+  VelocityFile as VelocityFileSchema,
 } from '@ncb/core'
 import { DATA_DIR } from '@ncb/core/node'
 import type {
@@ -18,6 +19,7 @@ import type {
   EvidenceRecord,
   IndicatorAcrossCountries,
   DisputeRecord,
+  VelocityFile,
 } from '@ncb/core'
 
 /**
@@ -50,6 +52,7 @@ const PATHS = {
   indicator: (id: string) => resolve(DATA_ROOT, 'out/indicators', `${id}.json`),
   institutions: (iso3: string) =>
     resolve(DATA_ROOT, 'institutions', `${iso3.toUpperCase()}.json`),
+  velocity: resolve(DATA_ROOT, 'out/velocity.json'),
 }
 
 async function readJson<T>(path: string): Promise<T | null> {
@@ -80,6 +83,13 @@ export async function loadCountry(iso3: string): Promise<CountryResult | null> {
 
 export async function loadDiagnostics(): Promise<Diagnostics | null> {
   return readJson(PATHS.diagnostics)
+}
+
+/** The provisional velocity fixture, validated before the sandbox reads it. */
+export async function loadVelocity(): Promise<VelocityFile | null> {
+  const raw = await readJson<unknown>(PATHS.velocity)
+  const parsed = VelocityFileSchema.safeParse(raw)
+  return parsed.success ? parsed.data : null
 }
 
 export async function loadDelphiRun(): Promise<DelphiRunFile | null> {

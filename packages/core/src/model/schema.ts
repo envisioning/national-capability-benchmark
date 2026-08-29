@@ -355,6 +355,38 @@ export const Momentum = z.object({
 })
 export type Momentum = z.infer<typeof Momentum>
 
+/** One annual or five-year rate in the provisional velocity fixture. */
+export const VelocityPoint = z.object({
+  year: z.number().int(),
+  value: z.number(),
+})
+export type VelocityPoint = z.infer<typeof VelocityPoint>
+
+/** A dimension's exploratory velocity values, kept outside the scored output. */
+export const VelocityCell = z.object({
+  /** The latest year represented by the annual value, used to name `v<year>`. */
+  latestYear: z.number().int(),
+  /** Five-year velocity formatted for the fixture's compact display. */
+  v5y: z.string().regex(/^[+-]\d+\.\d+$/).nullable(),
+  /** Numeric rates by year, retained for sorting and later method review. */
+  series: z.array(VelocityPoint),
+}).catchall(z.string().regex(/^[+-]\d+\.\d+$/))
+export type VelocityCell = z.infer<typeof VelocityCell>
+
+/** The complete provisional velocity fixture written by `bench velocity`. */
+export const VelocityFile = z.object({
+  generatedAt: z.string(),
+  methodVersion: z.literal('velocity/0.1-exploratory'),
+  countries: z.record(z.string().length(3), z.record(DimensionEnum, VelocityCell.nullable())),
+  exclusions: z.array(
+    z.object({
+      iso3: z.string().length(3),
+      reason: z.string(),
+    }),
+  ),
+})
+export type VelocityFile = z.infer<typeof VelocityFile>
+
 /** One check's latest observed value for one country. Never scored. See D60. */
 export const CheckResult = z.object({
   checkId: z.string(),

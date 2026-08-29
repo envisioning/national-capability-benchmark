@@ -29,6 +29,7 @@ export const FILES = {
   flatTable: resolve(OUT_DIR, 'table.csv'),
   diagnostics: resolve(OUT_DIR, 'diagnostics.json'),
   report: resolve(OUT_DIR, 'report.md'),
+  velocity: resolve(OUT_DIR, 'velocity.json'),
   datapackage: resolve(OUT_DIR, 'datapackage.json'),
 }
 
