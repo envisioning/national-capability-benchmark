@@ -80,12 +80,17 @@ change the network file or add a second interpretation of an edge.
 
 Each file declares its territorial coverage. `baseline` means the national
 cross-system backbone is present. `pilot` means a subnational area is being
-used to test the method. `planned` means the area is explicitly in scope and
-not yet curated.
+used to test the method. `scaffold` means the area has an initial,
+source-backed institutional backbone but still needs the sectoral and
+municipal depth required for a pilot. `planned` means the area is explicitly
+in scope and not yet curated.
 
 Brazil starts with the federal backbone, São Paulo as the first state pilot and
-the municipality of São Paulo as the first municipal connection. All 26 states
-and the Federal District are listed in the coverage plan from the beginning.
+the municipality of São Paulo as the first municipal connection. The other 25
+states and the Federal District begin as scaffolds, so every federative unit is
+discoverable from the first release while the pilot method is still tested in
+one state. The viewer's jurisdiction filter keeps the federal spine visible and
+adds the selected state's institutions and any nested municipal nodes.
 The next state is selected by missing institutional function and regional
 contrast, not by convenience alone.
 
