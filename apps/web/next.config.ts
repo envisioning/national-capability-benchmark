@@ -9,6 +9,18 @@ const config: NextConfig = {
   // Set NEXT_DIST_DIR to build into a different directory and leave the dev
   // server alone.
   distDir: process.env.NEXT_DIST_DIR ?? '.next',
+  async redirects() {
+    return [
+      { source: '/agenda/:iso3', destination: '/country/:iso3/agenda', statusCode: 301 },
+      {
+        source: '/pt/agenda/:iso3',
+        destination: '/country/:iso3/agenda?lang=pt-BR',
+        statusCode: 301,
+      },
+      { source: '/pt/instituicoes', destination: '/country/BRA/institutions', statusCode: 301 },
+      { source: '/pt', destination: '/', statusCode: 301 },
+    ]
+  },
   async rewrites() {
     return [
       { source: '/country/:iso3.csv', destination: '/country/:iso3/csv' },

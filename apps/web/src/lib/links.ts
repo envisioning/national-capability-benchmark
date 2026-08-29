@@ -39,7 +39,9 @@ export const ogAgendaHref = (iso3: string): string => `/og/agenda/${iso3}`
 
 /** One country's capability agenda, in the language the reader is already in. */
 export const agendaHref = (iso3: string, lang: Lang = 'en'): string =>
-  lang === 'pt-BR' ? `/pt/agenda/${iso3}` : `/agenda/${iso3}`
+  lang === 'pt-BR'
+    ? `/country/${iso3.toUpperCase()}/agenda?lang=pt-BR`
+    : `/country/${iso3.toUpperCase()}/agenda`
 
 /** Embeddable radar for one country profile. */
 export const embedCountryHref = (iso3: string): string =>
@@ -275,9 +277,7 @@ export const sourcesHref = '/sources'
 
 /** A country's explanatory map of institutions and their typed relationships. */
 export const institutionNetworkHref = (iso3: string, lang: Lang = 'en'): string =>
-  lang === 'pt-BR' && iso3.toUpperCase() === 'BRA'
-    ? '/pt/instituicoes'
-    : `/institutions/${iso3.toUpperCase()}`
+  `/country/${iso3.toUpperCase()}/institutions`
 
 /**
  * The id a publisher's row carries on the sources page, so a link can reach one
@@ -313,9 +313,15 @@ export const decisionHref = (id: string): string => `${decisionsHref}#${id}`
  */
 export function languageCounterpart(
   pathname: string,
+  search = '',
 ): { href: string; label: string; lang: Lang } | null {
-  if (pathname === '/' || pathname === '') return { href: '/pt', label: 'Português', lang: 'pt-BR' }
-  if (pathname === '/pt') return { href: '/', label: 'English', lang: 'en' }
+  if (pathname === '/' || pathname === '') {
+    const portuguese = new URLSearchParams(search).get('lang')?.toLowerCase() === 'pt-br'
+    return portuguese
+      ? { href: '/?lang=en', label: 'English', lang: 'en' }
+      : { href: '/pt', label: 'Português', lang: 'pt-BR' }
+  }
+  if (pathname === '/pt') return { href: '/?lang=en', label: 'English', lang: 'en' }
   /* The Portuguese edition's reading of the agendas starts at /pt. */
   if (pathname === '/agenda') return { href: '/pt', label: 'Português', lang: 'pt-BR' }
   const agenda = pathname.match(/^\/agenda\/([A-Z]{3})$/)
@@ -323,6 +329,13 @@ export function languageCounterpart(
   const ptAgenda = pathname.match(/^\/pt\/agenda\/([A-Z]{3})$/)
   if (ptAgenda) return { href: `/agenda/${ptAgenda[1]}`, label: 'English', lang: 'en' }
   if (pathname === '/pt/agenda') return { href: '/agenda', label: 'English', lang: 'en' }
+  const countryAgenda = pathname.match(/^\/country\/([A-Z]{3})\/agenda$/)
+  if (countryAgenda) {
+    const portuguese = new URLSearchParams(search).get('lang')?.toLowerCase() === 'pt-br'
+    return portuguese
+      ? { href: `/country/${countryAgenda[1]}/agenda`, label: 'English', lang: 'en' }
+      : { href: `/country/${countryAgenda[1]}/agenda?lang=pt-BR`, label: 'Português', lang: 'pt-BR' }
+  }
   const credibility = pathname.match(/^\/(method|decisions|limits|glossary)$/)
   if (credibility) return { href: `/pt/${credibility[1]}`, label: 'Português', lang: 'pt-BR' }
   const ptCredibility = pathname.match(/^\/pt\/(method|decisions|limits|glossary)$/)

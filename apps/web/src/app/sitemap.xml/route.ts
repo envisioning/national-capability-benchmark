@@ -35,7 +35,7 @@ export async function GET(): Promise<Response> {
   add('/agenda')
   add('/pt')
   add('/pt/agenda')
-  add('/pt/instituicoes')
+  add('/country/BRA/institutions')
   add(aboutHref)
   add(challengeHref)
   for (const entry of METHOD_SUBNAV) add(entry.href)

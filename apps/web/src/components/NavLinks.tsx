@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useEffect, useState } from 'react'
 import { Icon } from '@/components/Icon'
 import { languageCounterpart } from '@/lib/links'
 
@@ -12,7 +13,16 @@ import { languageCounterpart } from '@/lib/links'
  */
 export function LanguageSwitch() {
   const pathname = usePathname()
-  const counterpart = languageCounterpart(pathname)
+  const [search, setSearch] = useState('')
+  useEffect(() => {
+    const current = new URLSearchParams(window.location.search)
+    if (!current.has('lang') && pathname === '/' && navigator.language.toLowerCase().startsWith('pt')) {
+      setSearch('lang=pt-BR')
+      return
+    }
+    setSearch(window.location.search)
+  }, [pathname])
+  const counterpart = languageCounterpart(pathname, search)
   if (!counterpart) return null
   return (
     <Link

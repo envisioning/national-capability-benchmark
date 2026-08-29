@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { headers } from 'next/headers'
 import { REPO_URL } from '@ncb/core'
 import { Radar } from '@/components/Radar'
 import { ConfidenceTable, ScoreTable } from '@/components/views/ScoreTables'
@@ -20,6 +21,7 @@ import {
 import { MISSING_DATA_HINT, loadDisputes, loadIndex } from '@/lib/data'
 import { capabilitiesHref, countryProfileHref } from '@/lib/links'
 import { toProfile } from '@/lib/profile'
+import PortugueseHomePage from './pt/page'
 
 export const dynamic = 'force-dynamic'
 
@@ -55,7 +57,17 @@ function datasetJsonLd(data: { generatedAt: string; version?: string }): string 
   return JSON.stringify(json).replace(/</g, '\\u003c')
 }
 
-export default async function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>
+}) {
+  const [requestHeaders, query] = await Promise.all([headers(), searchParams])
+  const requested = Array.isArray(query.lang) ? query.lang[0] : query.lang
+  const portuguese =
+    requested?.toLowerCase() === 'pt-br' ||
+    (requested?.toLowerCase() !== 'en' && requestHeaders.get('accept-language')?.toLowerCase().includes('pt-br'))
+  if (portuguese) return <PortugueseHomePage />
   const [data, disputes] = await Promise.all([loadIndex(), loadDisputes()])
   if (!data || data.countries.length === 0) return <Empty hint={MISSING_DATA_HINT} />
 
