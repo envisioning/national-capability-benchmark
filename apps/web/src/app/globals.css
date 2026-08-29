@@ -103,6 +103,153 @@ body {
   font-feature-settings: 'tnum' 1;
 }
 
+/* Embed pages keep the site's chart components but drop the surrounding site
+ * chrome. The wrapper is inside the root layout's main element, so these
+ * selectors also set the document surface and make theme query parameters
+ * stable even when the host browser prefers a different color scheme. */
+body:has(.embed-shell) > a[href='#main'],
+body:has(.embed-shell) > header,
+body:has(.embed-shell) > footer {
+  display: none;
+}
+
+body:has(.embed-shell) > main {
+  margin: 0;
+  max-width: none;
+  padding: 0;
+}
+
+body:has(.embed-shell) > main > .embed-shell {
+  min-height: 100vh;
+  padding: 1.5rem;
+}
+
+html:has(.embed-theme-light),
+body:has(.embed-theme-light),
+.embed-theme-light {
+  color-scheme: light;
+  --background: #ffffff;
+  --foreground: #272a3d;
+  --surface: #ffffff;
+  --surface-sunken: #f2f5f9;
+  --rule: #d9d9de;
+  --rule-soft: #e4e4e7;
+  --muted: #5c6180;
+  --primary: #aacc00;
+  --focus-ring-offset-color: #ffffff;
+  --score-weak: #d7dbe8;
+  --score-weak-ink: #272a3d;
+  --score-below_middle: #8b93b5;
+  --score-below_middle-ink: #272a3d;
+  --score-above_middle: #454c70;
+  --score-above_middle-ink: #fafafa;
+  --score-strong: #aacc00;
+  --score-strong-ink: #272a3d;
+  --band-very_thin: #b8bdd9;
+  --band-thin: #7b83a8;
+  --band-usable: #454c70;
+  --band-good: #aacc00;
+}
+
+html:has(.embed-theme-dark),
+body:has(.embed-theme-dark),
+.embed-theme-dark {
+  color-scheme: dark;
+  --background: #202333;
+  --foreground: #fafafa;
+  --surface: #313650;
+  --surface-sunken: #191c2b;
+  --rule: #525252;
+  --rule-soft: #404040;
+  --muted: #b8bdd9;
+  --primary: #d6f249;
+  --focus-ring-offset-color: #202333;
+  --score-weak: #2b3049;
+  --score-weak-ink: #fafafa;
+  --score-below_middle: #646b8f;
+  --score-below_middle-ink: #fafafa;
+  --score-above_middle: #c9cfe6;
+  --score-above_middle-ink: #272a3d;
+  --score-strong: #d6f249;
+  --score-strong-ink: #272a3d;
+  --band-very_thin: #565d80;
+  --band-thin: #8b93b5;
+  --band-usable: #c9cfe6;
+  --band-good: #d6f249;
+}
+
+html:has(.embed-theme-print),
+body:has(.embed-theme-print),
+.embed-theme-print {
+  color-scheme: light;
+  --background: #ffffff;
+  --foreground: #111111;
+  --surface: #ffffff;
+  --surface-sunken: #f5f5f5;
+  --rule: #b8b8b8;
+  --rule-soft: #dedede;
+  --muted: #4b4b4b;
+  --primary: #111111;
+  --focus-ring-offset-color: #ffffff;
+}
+
+.embed-shell {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.embed-card {
+  margin: 0 auto;
+  max-width: 720px;
+}
+
+.embed-kicker {
+  margin-bottom: 0.5rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.embed-lede {
+  margin: 0.75rem 0 1.5rem;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.embed-source {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.embed-source a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.embed-agenda {
+  margin-top: 1.5rem;
+}
+
+.embed-agenda ul {
+  margin: 0;
+  max-width: none;
+  padding-left: 1.25rem;
+}
+
+.embed-agenda li {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.embed-theme-print,
+.embed-theme-print .font-display {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
 :where(em, i, .italic, blockquote) {
   font-family: var(--font-inter-italic), var(--font-inter), sans-serif;
 }

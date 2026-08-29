@@ -17,6 +17,19 @@ const config: NextConfig = {
       { source: '/og/agenda/:iso3', destination: '/og/agenda/:iso3/opengraph-image' },
     ]
   },
+  async headers() {
+    return [
+      {
+        source: '/embed/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, s-maxage=1800, stale-while-revalidate=60',
+          },
+        ],
+      },
+    ]
+  },
   // The viewer reads its data from data/out at request time, through paths the
   // bundler cannot see. Without this the deployed functions ship without the
   // JSON and every page 500s. Observations are deliberately absent: 9 MB the

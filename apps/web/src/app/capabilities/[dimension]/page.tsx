@@ -17,9 +17,15 @@ import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { CapabilityCountryTable, type CapabilityCountryRow } from '@/components/views/CapabilityCountryTable'
 import { EvidenceList } from '@/components/views/EvidenceList'
 import { IndicatorRegistry } from '@/components/views/IndicatorRegistry'
+import { EmbedCode } from '@/components/EmbedCode'
 import { Empty, Eyebrow, FrameNote, Headline, Meta, PageTitle, Section } from '@/components/ui'
 import { MISSING_DATA_HINT, loadDisputes, loadEvidence, loadIndex } from '@/lib/data'
-import { capabilitiesHref, ogDimensionHref } from '@/lib/links'
+import {
+  absoluteHref,
+  capabilitiesHref,
+  embedCompareHref,
+  ogDimensionHref,
+} from '@/lib/links'
 
 export const dynamic = 'force-dynamic'
 
@@ -86,6 +92,8 @@ export default async function CapabilityPage({
     }
   })
   const scoredCountries = rows.filter((row) => row.score !== null).length
+  const embedCountry = data.countries.find((country) => country.iso3 === 'BRA') ?? data.countries[0]
+  if (!embedCountry) return <Empty hint={MISSING_DATA_HINT} />
   /* Checks are published on every country and belong to no score, so the
    * capability page reports what they cover rather than ranking them. See D60. */
   const checks = checksFor(dimension).map((check) => {
@@ -128,6 +136,15 @@ export default async function CapabilityPage({
         <Meta icon="circle-check">{scoredIndicators} indicators with data</Meta>
         <Meta icon="target">{scoredCountries} countries with a score</Meta>
       </p>
+
+      <div className="mb-10">
+        <EmbedCode
+          src={absoluteHref(embedCompareHref(embedCountry.iso3, dimension))}
+          title={`${DIMENSION_LABELS[dimension]} country comparison`}
+          height={300}
+          label={`Embed ${embedCountry.country}'s comparison`}
+        />
+      </div>
 
       <Section
         title="All countries use the same frame"
