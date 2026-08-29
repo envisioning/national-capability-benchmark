@@ -37,7 +37,7 @@ import {
   Td,
   Th,
 } from '@/components/ui'
-import { capabilityHref, ogCountryHref } from '@/lib/links'
+import { capabilityHref, countryCsvHref, ogCountryHref } from '@/lib/links'
 import { loadAgenda } from '@/lib/agenda'
 import { loadCountry, loadDelphiRun, loadDisputes, loadEvidence, loadIndex } from '@/lib/data'
 import { toProfile } from '@/lib/profile'
@@ -101,6 +101,12 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
       ) : (
         <p className="mb-10 mt-3 text-lg leading-relaxed">{meta?.reason}</p>
       )}
+
+      <p className="mb-10 -mt-6 text-xs text-[var(--muted)]">
+        <a href={countryCsvHref(country.iso3)} className="underline underline-offset-4">
+          Download this country as CSV
+        </a>
+      </p>
 
       <div className="mb-10 grid gap-10 lg:grid-cols-[minmax(0,460px)_1fr]">
         <CompareRadar

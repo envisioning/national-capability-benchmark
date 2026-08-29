@@ -10,6 +10,9 @@ import type { Dimension, EvidenceStatus, Lang } from '@ncb/core'
 /** The full country profile. Ground layer, English. */
 export const countryProfileHref = (iso3: string): string => `/country/${iso3}`
 
+/** A spreadsheet export containing one country's score row. */
+export const countryCsvHref = (iso3: string): string => `/country/${iso3}.csv`
+
 /** The directory of the nine capability pages. */
 export const capabilitiesHref = '/capabilities'
 
@@ -120,6 +123,27 @@ export const evidenceHref = (recordId: string): string => `/patterns/${recordId}
 
 /** What would overturn the model, and how to file an objection. */
 export const challengeHref = '/challenge'
+
+/** The public machine-readable distribution feed. */
+export const feedHref = '/feed.xml'
+
+/** The crawl map for the public viewer. */
+export const sitemapHref = '/sitemap.xml'
+
+/** The crawler policy for the public viewer. */
+export const robotsHref = '/robots.txt'
+
+/** One dated country-of-the-week digest. */
+export const digestHref = (date: string): string => `/digest/${date}.html`
+
+const DEFAULT_SITE_ORIGIN = 'https://ncb-envisioning.vercel.app'
+
+/** The canonical origin used in machine-readable links. */
+export const siteOrigin = (): string =>
+  (process.env.NEXT_PUBLIC_SITE_URL ?? DEFAULT_SITE_ORIGIN).replace(/\/+$/, '')
+
+/** Turn a viewer path into a link that works outside the site. */
+export const absoluteHref = (path: string): string => `${siteOrigin()}${path}`
 
 /** One public dispute record. */
 export const challengeDetailHref = (id: string): string =>

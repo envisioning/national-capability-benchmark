@@ -11,6 +11,7 @@ const config: NextConfig = {
   distDir: process.env.NEXT_DIST_DIR ?? '.next',
   async rewrites() {
     return [
+      { source: '/country/:iso3.csv', destination: '/country/:iso3/csv' },
       { source: '/og/country/:iso3', destination: '/og/country/:iso3/opengraph-image' },
       { source: '/og/dimension/:dimension', destination: '/og/dimension/:dimension/opengraph-image' },
       { source: '/og/agenda/:iso3', destination: '/og/agenda/:iso3/opengraph-image' },
