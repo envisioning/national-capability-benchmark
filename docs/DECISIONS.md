@@ -2740,3 +2740,53 @@ series that changes the institutional leg, would justify a follow-up decision.
 Evidence that A165 is not comparable across the benchmark countries or that
 the two-family Trust result fails the wealth and redundancy review would require
 retiring or reclassifying the row.
+
+## D65: Provisional layers need evidence before public promotion
+
+*Recorded 2026-08-29. Implements issue 14 and sets the promotion gate for
+issues 11, 12 and 13.*
+
+**Choice.** Velocity and Exponential Leverage remain provisional and offline
+until each layer meets its own promotion criteria. The criteria are:
+
+1. **Velocity has a settled method.** The base and current years, the treatment
+   of negative deltas, low-confidence dimensions and confidence changes are
+   documented, tested against the fixture, and stable across a six-month record
+   of three quarterly reviews under the process in issue 13. At least one
+   external reviewer must confirm that the result is interpretable as a rate of
+   movement rather than a second capability score.
+2. **Exponential Leverage has a settled method and complete shape.** All eleven
+   dimensions are either sourced or explicitly labeled metric-under-
+   development, and the weights, offsets, source changes and foundation
+   coherence rule are documented and tested. The layer must also have a
+   six-month record of three quarterly reviews and at least one public review
+   from outside the maintainer team.
+3. **Promotion is a recorded decision.** Passing the technical checks does not
+   publish either layer. A later decision must link the review record, the
+   external or public review signal, the final fixture and the user-facing
+   caveat before the sandbox becomes a public surface.
+
+These criteria are the contract between the provisional fixtures in issues 11
+and 12 and the quarterly review process in issue 13. Until the criteria are
+met, a missing value is a missing value, and neither layer is used in the
+headline score, confidence, agenda, or ranking.
+
+**Why.** Both layers are useful experiments but can look more authoritative
+than their inputs deserve. A fixed review period makes learning visible, while
+the separate requirements force the two layers to resolve their different
+methodological risks. External review is necessary because internal iteration
+can show that code runs without showing that the measure means what readers
+think it means.
+
+**Costs.** The layers may remain provisional for longer than a release cycle,
+and a useful sandbox result may never qualify for publication. The review
+record also creates maintenance work every quarter. Those costs are preferable
+to turning an exploratory rate or composite into an unqualified benchmark
+claim.
+
+**Overturned by.** Evidence that the criteria do not detect methodological
+failure, that three quarterly reviews are too short to reveal instability, or
+that independent reviewers cannot distinguish either layer from a capability
+score would require revising the promotion gate before publication. Evidence
+that a layer is not learning after three consecutive reviews would trigger
+retirement rather than a weaker promotion standard.
