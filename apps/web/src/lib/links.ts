@@ -121,6 +121,14 @@ export const evidenceHref = (recordId: string): string => `/patterns/${recordId}
 /** What would overturn the model, and how to file an objection. */
 export const challengeHref = '/challenge'
 
+/** One public dispute record. */
+export const challengeDetailHref = (id: string): string =>
+  `${challengeHref}/${encodeURIComponent(id)}`
+
+/** The endpoint used by the score challenge form. */
+export const challengeApiHref = (iso3: string, dimension: Dimension): string =>
+  `/api/challenge/${encodeURIComponent(iso3)}/${encodeURIComponent(dimension)}`
+
 /** What the benchmark is, who built it, and where to start reading. */
 export const aboutHref = '/about'
 

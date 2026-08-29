@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  CHALLENGE_STATUS_LABELS,
+  COUNTRY_NAMES,
   CONTRIBUTING_DOC,
   DATASET_VERSION,
   DECISIONS_DOC,
@@ -13,11 +15,29 @@ import {
   WHY_DOC,
   docHref,
 } from '@ncb/core'
-import { Empty, Eyebrow, Headline, Note, PageTitle, Scroller, Section, Table, Td, Th } from '@/components/ui'
+import {
+  CountryLabel,
+  Empty,
+  Eyebrow,
+  Headline,
+  Note,
+  PageTitle,
+  Scroller,
+  Section,
+  Table,
+  Td,
+  Th,
+} from '@/components/ui'
 import { MarkdownLine } from '@/lib/markdown'
 import { decisionChallenges, openArtefacts } from '@/lib/docs'
-import { loadDoc, loadIndex } from '@/lib/data'
-import { artefactHref, decisionHref, decisionsHref, limitsHref } from '@/lib/links'
+import { loadDisputes, loadDoc, loadIndex } from '@/lib/data'
+import {
+  artefactHref,
+  challengeDetailHref,
+  decisionHref,
+  decisionsHref,
+  limitsHref,
+} from '@/lib/links'
 import { capitalize, countWord } from '@/lib/words'
 
 export const dynamic = 'force-dynamic'
@@ -28,11 +48,15 @@ export const metadata: Metadata = {
 }
 
 export default async function ChallengePage() {
-  const [decisionsDoc, limitsDoc, index] = await Promise.all([
+  const [decisionsDoc, limitsDoc, index, records] = await Promise.all([
     loadDoc('DECISIONS.md'),
     loadDoc('KNOWN-ARTEFACTS.md'),
     loadIndex(),
+    loadDisputes(),
   ])
+  const disputes = records
+    .filter((record) => record.kind === 'dispute')
+    .sort((a, b) => b.submittedAt.localeCompare(a.submittedAt))
   const challenges = decisionsDoc ? decisionChallenges(decisionsDoc) : []
   const artefacts = limitsDoc ? openArtefacts(limitsDoc) : []
   const worst = artefacts.filter((a) => a.severity === 'high').length
@@ -47,6 +71,53 @@ export default async function ChallengePage() {
         Every decision names the evidence that would overturn it. Known failures sit beside the
         scores they affect. Bring a series, a case or an objection.
       </Headline>
+
+      <Section
+        title="Public disputes stay attached to the number"
+        hint={`${disputes.length} dispute${disputes.length === 1 ? '' : 's'} in the ledger. New submissions await maintainer review.`}
+      >
+        {disputes.length > 0 ? (
+          <Scroller>
+            <Table>
+              <thead>
+                <tr>
+                  <Th>Record</Th>
+                  <Th>Country</Th>
+                  <Th>Dimension</Th>
+                  <Th>Status</Th>
+                  <Th>Argument</Th>
+                </tr>
+              </thead>
+              <tbody>
+                {disputes.map((dispute) => (
+                  <tr key={dispute.id}>
+                    <Td>
+                      <Link href={challengeDetailHref(dispute.id)} className="hover:underline">
+                        {dispute.id}
+                      </Link>
+                    </Td>
+                    <Td>
+                      <CountryLabel
+                        iso3={dispute.target.iso3}
+                        name={COUNTRY_NAMES[dispute.target.iso3] ?? dispute.target.iso3}
+                      />
+                    </Td>
+                    <Td>{dispute.target.dimension}</Td>
+                    <Td dim>{CHALLENGE_STATUS_LABELS[dispute.status]}</Td>
+                    <Td dim>
+                      <span className="block max-w-xl whitespace-pre-wrap">{dispute.argument}</span>
+                    </Td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+          </Scroller>
+        ) : (
+          <p className="max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
+            No disputes have been submitted yet. Use Challenge beside a score to file the first one.
+          </p>
+        )}
+      </Section>
 
       <Section
         title="Start with the known failures"

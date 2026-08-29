@@ -6,6 +6,7 @@ import type { CountryResult } from '@ncb/core'
 import { DataTable, type Column } from '@/components/DataTable'
 import { countryProfileHref } from '@/lib/links'
 import { ConfidenceBar, CountryLabel, DimensionScore } from '@/components/ui'
+import { ChallengeLink, ContestedBadge } from '@/components/ChallengeLink'
 
 function countryColumn(): Column<CountryResult> {
   return {
@@ -20,7 +21,13 @@ function countryColumn(): Column<CountryResult> {
   }
 }
 
-export function ScoreTable({ countries }: { countries: CountryResult[] }) {
+export function ScoreTable({
+  countries,
+  contestedCounts = {},
+}: {
+  countries: CountryResult[]
+  contestedCounts?: Record<string, number>
+}) {
   return (
     <DataTable
       rows={countries}
@@ -33,7 +40,22 @@ export function ScoreTable({ countries }: { countries: CountryResult[] }) {
           label: DIMENSION_LABELS[d],
           align: 'right' as const,
           sort: (c: CountryResult) => c.dimensions[d]?.score ?? null,
-          render: (c: CountryResult) => <DimensionScore dim={c.dimensions[d] ?? null} />,
+          render: (c: CountryResult) => {
+            const dim = c.dimensions[d] ?? null
+            return (
+              <span className="inline-flex items-center gap-2">
+                <DimensionScore dim={dim} />
+                <ContestedBadge count={contestedCounts[`${c.iso3}|${d}`] ?? 0} />
+                <ChallengeLink
+                  iso3={c.iso3}
+                  country={c.country}
+                  dimension={d}
+                  value={dim?.score ?? null}
+                  confidence={dim?.confidence ?? null}
+                />
+              </span>
+            )
+          },
         })),
       ]}
     />

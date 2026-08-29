@@ -7,6 +7,7 @@ import {
   DIMENSION_QUESTIONS,
   INDICATORS_BY_ID,
   checksFor,
+  contestedDisputeCounts,
   indicatorsFor,
   isScored,
   primaryMomentum,
@@ -17,7 +18,7 @@ import { CapabilityCountryTable, type CapabilityCountryRow } from '@/components/
 import { EvidenceList } from '@/components/views/EvidenceList'
 import { IndicatorRegistry } from '@/components/views/IndicatorRegistry'
 import { Empty, Eyebrow, FrameNote, Headline, Meta, PageTitle, Section } from '@/components/ui'
-import { MISSING_DATA_HINT, loadEvidence, loadIndex } from '@/lib/data'
+import { MISSING_DATA_HINT, loadDisputes, loadEvidence, loadIndex } from '@/lib/data'
 import { capabilitiesHref, ogDimensionHref } from '@/lib/links'
 
 export const dynamic = 'force-dynamic'
@@ -54,7 +55,11 @@ export default async function CapabilityPage({
   const dimension = asDimension(raw)
   if (!dimension) notFound()
 
-  const [data, evidence] = await Promise.all([loadIndex(), loadEvidence()])
+  const [data, evidence, disputes] = await Promise.all([
+    loadIndex(),
+    loadEvidence(),
+    loadDisputes(),
+  ])
   if (!data || data.countries.length === 0) return <Empty hint={MISSING_DATA_HINT} />
 
   const definitions = indicatorsFor(dimension)
@@ -62,6 +67,7 @@ export default async function CapabilityPage({
   const dimensionEvidence = evidence.filter(
     (record) => INDICATORS_BY_ID[record.indicatorId]?.dimension === dimension,
   )
+  const contestedCounts = contestedDisputeCounts(disputes)
   const rows: CapabilityCountryRow[] = data.countries.map((country) => {
     const result = country.dimensions[dimension]
     const momentum = result ? primaryMomentum(result.momentum) : null
@@ -76,6 +82,7 @@ export default async function CapabilityPage({
       baseYear: momentum?.baseYear ?? null,
       currentYear: momentum?.currentYear ?? null,
       matchedIndicators: momentum?.matchedIndicators ?? null,
+      contestedCount: contestedCounts[`${country.iso3}|${dimension}`] ?? 0,
     }
   })
   const scoredCountries = rows.filter((row) => row.score !== null).length

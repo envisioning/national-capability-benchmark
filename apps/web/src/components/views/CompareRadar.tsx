@@ -19,9 +19,11 @@ import { DimensionDialog } from '@/components/views/DimensionPeek'
 export function CompareRadar({
   focus,
   others,
+  contestedCounts = {},
 }: {
   focus: RadarProfile
   others: RadarProfile[]
+  contestedCounts?: Record<string, number>
 }) {
   const [iso3, setIso3] = useState('')
   const [peek, setPeek] = useState<Dimension | null>(null)
@@ -38,6 +40,7 @@ export function CompareRadar({
         series={[
           {
             label: focus.country,
+            iso3: focus.iso3,
             values: focus.values,
             confidences: focus.confidences,
             color: 'var(--primary)',
@@ -46,6 +49,7 @@ export function CompareRadar({
             ? [
                 {
                   label: comparator.country,
+                  iso3: comparator.iso3,
                   values: comparator.values,
                   confidences: comparator.confidences,
                   color: 'var(--muted)',
@@ -54,6 +58,7 @@ export function CompareRadar({
               ]
             : []),
         ]}
+        contestedCounts={contestedCounts}
       />
 
       <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs">

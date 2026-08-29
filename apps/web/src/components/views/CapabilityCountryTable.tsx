@@ -7,6 +7,7 @@ import { DataTable } from '@/components/DataTable'
 import { Distribution } from '@/components/Distribution'
 import { ConfidenceBar, CountryLabel, Delta, DimensionScore } from '@/components/ui'
 import { countryProfileHref } from '@/lib/links'
+import { ChallengeLink, ContestedBadge } from '@/components/ChallengeLink'
 
 export type CapabilityCountryRow = {
   iso3: string
@@ -19,6 +20,7 @@ export type CapabilityCountryRow = {
   baseYear: number | null
   currentYear: number | null
   matchedIndicators: number | null
+  contestedCount: number
 }
 
 /**
@@ -74,7 +76,19 @@ export function CapabilityCountryTable({
           label: 'Score',
           align: 'right',
           sort: (row) => row.score,
-          render: (row) => <DimensionScore dim={row} />,
+          render: (row) => (
+            <span className="inline-flex items-center gap-2">
+              <DimensionScore dim={row} />
+              <ContestedBadge count={row.contestedCount} />
+              <ChallengeLink
+                iso3={row.iso3}
+                country={row.country}
+                dimension={dimension}
+                value={row.score}
+                confidence={row.confidence}
+              />
+            </span>
+          ),
         },
         {
           key: 'confidence',

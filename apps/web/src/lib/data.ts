@@ -1,14 +1,17 @@
 import { existsSync } from 'node:fs'
 import { readFile } from 'node:fs/promises'
+import { readdir } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
-import { INDICATORS, InstitutionNetworkFile, isScored } from '@ncb/core'
+import { ChallengeRecord, INDICATORS, InstitutionNetworkFile, isScored } from '@ncb/core'
 import { DATA_DIR } from '@ncb/core/node'
 import type {
   CountryResult,
+  ChallengeRecord as ChallengeRecordType,
   DelphiRunFile,
   Diagnostics,
   EvidenceRecord,
   IndicatorAcrossCountries,
+  DisputeRecord,
 } from '@ncb/core'
 
 /**
@@ -36,6 +39,7 @@ const PATHS = {
   diagnostics: resolve(DATA_ROOT, 'out/diagnostics.json'),
   delphiLatest: resolve(DATA_ROOT, 'delphi/latest.json'),
   evidence: resolve(DATA_ROOT, 'evidence/records.json'),
+  disputes: resolve(DATA_ROOT, 'disputes'),
   country: (iso3: string) => resolve(DATA_ROOT, 'out/countries', `${iso3.toUpperCase()}.json`),
   indicator: (id: string) => resolve(DATA_ROOT, 'out/indicators', `${id}.json`),
   institutions: (iso3: string) =>
@@ -110,6 +114,48 @@ export async function loadIndicatorCoverage(): Promise<
 export async function loadEvidence(): Promise<EvidenceRecord[]> {
   const file = await readJson<{ records: EvidenceRecord[] }>(PATHS.evidence)
   return file?.records ?? []
+}
+
+/** Read the append-only public challenge ledger, ignoring malformed lines. */
+export async function loadDisputes(): Promise<ChallengeRecordType[]> {
+  let names: string[]
+  try {
+    names = (await readdir(PATHS.disputes)).filter((name) => /^\d{4}-\d{2}-\d{2}\.jsonl$/.test(name))
+  } catch {
+    return []
+  }
+
+  const files = await Promise.all(
+    names.sort().map(async (name) => {
+      try {
+        return await readFile(resolve(PATHS.disputes, name), 'utf8')
+      } catch {
+        return ''
+      }
+    }),
+  )
+
+  return files.flatMap((contents) =>
+    contents
+      .split('\n')
+      .filter(Boolean)
+      .flatMap((line) => {
+        try {
+          const parsed = ChallengeRecord.safeParse(JSON.parse(line))
+          return parsed.success ? [parsed.data] : []
+        } catch {
+          return []
+        }
+      }),
+  )
+}
+
+export async function loadDispute(id: string): Promise<DisputeRecord | null> {
+  const record = (await loadDisputes()).find(
+    (candidate): candidate is DisputeRecord =>
+      candidate.kind === 'dispute' && candidate.id === id,
+  )
+  return record ?? null
 }
 
 /**

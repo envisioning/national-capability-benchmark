@@ -13,9 +13,11 @@ import type { Dimension, Lexicon } from '@ncb/core'
 import { DIMENSION_ICON, Icon, iconMarkup } from '@/components/Icon'
 import { ConfidenceBar, Score } from '@/components/ui'
 import { radarAngle, radarPoint } from '@/components/radarGeometry'
+import { ChallengeLink, ContestedBadge } from '@/components/ChallengeLink'
 
 export type RadarSeries = {
   label: string
+  iso3?: string
   values: Array<number | null>
   /**
    * Confidence per axis, in dimension order. Where it is supplied, an axis with
@@ -174,6 +176,7 @@ export function Radar({
   lex = EN,
   interactive = true,
   onSelectDimension,
+  contestedCounts = {},
 }: {
   series: RadarSeries[]
   labels?: RadarLabels
@@ -191,6 +194,8 @@ export function Radar({
   interactive?: boolean
   /** When given, clicking an axis opens that dimension. */
   onSelectDimension?: (dimension: Dimension) => void
+  /** Contested counts are computed on the server and passed as a small map. */
+  contestedCounts?: Record<string, number>
 }) {
   const g = GEOMETRY[labels]
   const at = (i: number, value: number) => radarPoint(i, value, { size: SIZE, radius: g.radius })
@@ -553,6 +558,7 @@ export function Radar({
           lex={lex}
           nameOf={nameOf}
           noDataLabel={noDataLabel}
+          contestedCounts={contestedCounts}
         />
       ) : null}
     </div>
@@ -577,16 +583,22 @@ function RadarReadout({
   lex,
   nameOf,
   noDataLabel,
+  contestedCounts,
 }: {
   series: RadarSeries[]
   index: number
   lex: Lexicon
   nameOf: (d: Dimension) => string
   noDataLabel: string
+  contestedCounts?: Record<string, number>
 }) {
   const d = DIMENSIONS[index] as Dimension
   const focal = series[0] as RadarSeries
   const confidence = focal.confidences?.[index] ?? null
+  const value = valueAt(focal, index)
+  const contestedCount = focal.iso3
+    ? contestedCounts?.[`${focal.iso3}|${d}`] ?? 0
+    : 0
 
   return (
     <div className="mt-3 flex flex-col items-center gap-2 text-center">
@@ -606,6 +618,20 @@ function RadarReadout({
               size={si === 0 ? 'lg' : 'md'}
               nullLabel={noDataLabel}
             />
+            {si === 0 && value !== null ? (
+              <>
+                <ContestedBadge count={contestedCount} />
+                {focal.iso3 ? (
+                  <ChallengeLink
+                    iso3={focal.iso3}
+                    country={focal.label}
+                    dimension={d}
+                    value={value}
+                    confidence={confidence}
+                  />
+                ) : null}
+              </>
+            ) : null}
           </span>
         ))}
       </span>

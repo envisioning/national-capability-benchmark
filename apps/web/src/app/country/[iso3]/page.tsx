@@ -8,6 +8,7 @@ import {
   DIMENSION_LABELS,
   DIMENSION_QUESTIONS,
   INDICATORS_BY_ID,
+  contestedDisputeCounts,
   isEvidential,
   isPanel,
 } from '@ncb/core'
@@ -37,7 +38,7 @@ import {
 } from '@/components/ui'
 import { capabilityHref, ogCountryHref } from '@/lib/links'
 import { loadAgenda } from '@/lib/agenda'
-import { loadCountry, loadDelphiRun, loadEvidence, loadIndex } from '@/lib/data'
+import { loadCountry, loadDelphiRun, loadDisputes, loadEvidence, loadIndex } from '@/lib/data'
 import { toProfile } from '@/lib/profile'
 
 export const dynamic = 'force-dynamic'
@@ -64,14 +65,18 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
   const { iso3 } = await params
   const country = await loadCountry(iso3)
   if (!country) notFound()
-  const data = await loadIndex()
-
-  const agenda = await loadAgenda(country.iso3)
-  const loadedRun = await loadDelphiRun()
+  const [data, agenda, loadedRun, allEvidence, disputes] = await Promise.all([
+    loadIndex(),
+    loadAgenda(country.iso3),
+    loadDelphiRun(),
+    loadEvidence(),
+    loadDisputes(),
+  ])
   /* A mock run exercises the pipeline and is never presented as evidence, so
    * the page treats it as no run at all. See the provenance invariant. */
   const run = loadedRun && isEvidential(loadedRun.provenance) ? loadedRun : null
-  const evidence = (await loadEvidence()).filter((e) => e.iso3 === country.iso3)
+  const evidence = allEvidence.filter((e) => e.iso3 === country.iso3)
+  const contestedCounts = contestedDisputeCounts(disputes)
   const meta = COUNTRIES.find((c) => c.iso3 === country.iso3)
   const others = (data?.countries ?? []).filter((c) => c.iso3 !== country.iso3)
   const countryHasEstimates = (run?.cellEstimates ?? []).some((e) => e.iso3 === country.iso3)
@@ -91,10 +96,15 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
       )}
 
       <div className="mb-10 grid gap-10 lg:grid-cols-[minmax(0,460px)_1fr]">
-        <CompareRadar focus={toProfile(country)} others={others.map(toProfile)} />
+        <CompareRadar
+          focus={toProfile(country)}
+          others={others.map(toProfile)}
+          contestedCounts={contestedCounts}
+        />
         <CountryDimensionTable
           country={country}
           panel={run && countryHasEstimates ? { isPanel: isPanel(run) } : null}
+          contestedCounts={contestedCounts}
         />
       </div>
 

@@ -2615,3 +2615,43 @@ that shared cards are stale after a data release, would justify an on demand
 route or a different cache strategy. Evidence that readers need exact national
 flag artwork would justify adding a small vendored asset set rather than
 reintroducing a remote emoji dependency.
+
+## D62: Disputes preserve the target snapshot and count distinct target countries
+
+*Recorded 2026-08-29. Implements issue 2.*
+
+**Choice.** A score can open a small challenge form with its country, dimension,
+score and confidence already attached. The POST endpoint validates the argument,
+checks the country and dimension against the registry, then reads the current
+country file to store the canonical target values. The record is appended to
+`data/disputes/<YYYY-MM-DD>.jsonl` with `status: submitted`. The schema also
+holds a maintainer response and signature, and requires a signature before an
+accepted record can parse. A rejected record remains in the public ledger but
+does not count toward a contested badge.
+
+The badge threshold is three non-rejected disputes from three distinct target
+countries in one dimension. It appears only on the target cells named by those
+disputes, and carries the distinct-country count. The threshold is a constant in
+`packages/core/src/model/challenges.ts` rather than a display decision hidden in
+a component.
+
+**Why.** A reader should be able to challenge the number while looking at it,
+and the challenge should keep the exact score and confidence that prompted the
+argument. Counting distinct countries prevents repeated submissions from one
+place from looking like independent corroboration. Keeping rejected records
+visible preserves the review trail without letting a decision that was declined
+change the page's warning state.
+
+**Costs.** The current ledger is an append-only filesystem store. It works in a
+checkout and on a self-hosted Node process, but a Vercel deployment needs a
+durable write target before this endpoint can accept public submissions at
+scale. Acceptance remains a maintainer action: changing status, adding a
+signature and writing the resolving decision are intentionally separate from a
+reader's POST. The form also accepts an optional URL, so an argument can still
+be weak even when it looks complete.
+
+**Overturned by.** Evidence that the filesystem ledger loses accepted records
+or receives enough submissions to need concurrency control would justify a
+durable store and an authenticated review tool. Evidence that three distinct
+countries does not separate useful disputes from repetition would justify a new
+threshold decision with observed submission data.

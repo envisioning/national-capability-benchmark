@@ -7,6 +7,7 @@ import { DataTable } from '@/components/DataTable'
 import { ConfidenceBar, Delta, DimensionScore, Score } from '@/components/ui'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { DimensionPeek } from '@/components/views/DimensionPeek'
+import { ChallengeLink, ContestedBadge } from '@/components/ChallengeLink'
 
 export function CountryDimensionTable({
   country,
@@ -18,9 +19,11 @@ export function CountryDimensionTable({
    * "estimate" and never "panel". See the provenance invariant.
    */
   panel,
+  contestedCounts = {},
 }: {
   country: CountryResult
   panel: { isPanel: boolean } | null
+  contestedCounts?: Record<string, number>
 }) {
   const rows = DIMENSIONS.map((d) => ({ d, dim: country.dimensions[d] })).filter(
     (r): r is { d: (typeof DIMENSIONS)[number]; dim: NonNullable<typeof r.dim> } => Boolean(r.dim),
@@ -45,9 +48,19 @@ export function CountryDimensionTable({
       align: 'right' as const,
       sort: (r: (typeof rows)[number]) => r.dim.score,
       render: (r: (typeof rows)[number]) => (
-        <DimensionPeek dimension={r.d} iso3={country.iso3}>
-          <DimensionScore dim={r.dim} />
-        </DimensionPeek>
+        <span className="inline-flex items-center gap-2">
+          <DimensionPeek dimension={r.d} iso3={country.iso3}>
+            <DimensionScore dim={r.dim} />
+          </DimensionPeek>
+          <ContestedBadge count={contestedCounts[`${country.iso3}|${r.d}`] ?? 0} />
+          <ChallengeLink
+            iso3={country.iso3}
+            country={country.country}
+            dimension={r.d}
+            value={r.dim.score}
+            confidence={r.dim.confidence}
+          />
+        </span>
       ),
     },
     {

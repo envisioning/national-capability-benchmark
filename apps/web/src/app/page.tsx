@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { REPO_URL } from '@ncb/core'
 import { Radar } from '@/components/Radar'
 import { ConfidenceTable, ScoreTable } from '@/components/views/ScoreTables'
+import { contestedDisputeCounts } from '@ncb/core'
 import {
   ConfidenceLegend,
   CountryLabel,
@@ -16,7 +17,7 @@ import {
   ScoreLegend,
   Section,
 } from '@/components/ui'
-import { MISSING_DATA_HINT, loadIndex } from '@/lib/data'
+import { MISSING_DATA_HINT, loadDisputes, loadIndex } from '@/lib/data'
 import { capabilitiesHref, countryProfileHref } from '@/lib/links'
 import { toProfile } from '@/lib/profile'
 
@@ -55,12 +56,13 @@ function datasetJsonLd(data: { generatedAt: string; version?: string }): string 
 }
 
 export default async function Page() {
-  const data = await loadIndex()
+  const [data, disputes] = await Promise.all([loadIndex(), loadDisputes()])
   if (!data || data.countries.length === 0) return <Empty hint={MISSING_DATA_HINT} />
 
   /* Alphabetical. Any other order on this page would be a ranking, and there is
    * no headline number to rank by. */
   const countries = [...data.countries].sort((a, b) => a.country.localeCompare(b.country))
+  const contestedCounts = contestedDisputeCounts(disputes)
 
   return (
     <>
@@ -148,7 +150,7 @@ export default async function Page() {
         hint="Click any heading to sort."
       >
         <ScoreLegend />
-        <ScoreTable countries={countries} />
+        <ScoreTable countries={countries} contestedCounts={contestedCounts} />
       </Section>
 
       <Section
