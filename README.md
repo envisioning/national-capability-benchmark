@@ -3,10 +3,10 @@
 NCB is a prototype benchmark of a country's capacity to anticipate change,
 coordinate action, learn, adapt and build under uncertainty.
 
-The benchmark covers ten countries and nine dimensions. Each dimension is scored
-from 0 to 100 with equal weights. There is no composite score or headline
-ranking. Every raw indicator remains visible with its source and year. Confidence
-is published beside the score and is never folded into it.
+The benchmark covers the countries in the registry and nine dimensions. Each
+dimension is scored from 0 to 100 with equal weights. There is no composite
+score or headline ranking. Every raw indicator remains visible with its source
+and year. Confidence is published beside the score and is never folded into it.
 
 Brazil is the primary case. The same dimensions, indicators, transforms and
 normalization frame apply to every country in the set. Read
@@ -103,14 +103,14 @@ For each scored indicator, the pipeline:
 1. takes the most recent comparable value for each country, with source and year;
 2. applies its declared transform, such as per-million, logarithmic or none;
 3. winsorizes extreme values with Tukey fences at three interquartile ranges;
-4. normalizes to 0 through 100 against the ten-country frame, reversing
+4. normalizes to 0 through 100 against the current country set, reversing
    lower-is-better indicators;
 5. averages the available indicators inside each dimension with equal weights;
 6. computes confidence = coverage × recency × source_quality separately.
 
-All ten countries set the normalization frame. The frame stays fixed within a
-dataset version. Adding a country changes the frame, restates published scores
-and requires a major version bump. The semantic version is defined in
+Every country in the registry sets the normalization frame. The frame stays
+fixed within a dataset version. Adding a country changes the frame, restates
+published scores and requires a major version bump. The semantic version is defined in
 packages/core/src/model/version.ts.
 
 Ingestion keeps the full World Bank history from 1990 while scoring uses the
@@ -136,30 +136,44 @@ The language-neutral agenda JSON and rendered English or Brazilian Portuguese
 documents are written to data/out/agenda. The agenda is computed from the
 score and registry; it does not invent a new number.
 
-## Evidence, Delphi and institutional data
+## Two assessment tracks
 
-**Evidence records.** data/evidence documents delivered country programmes that
-the indicators cannot measure. Each record carries a published metric, source,
-reference period, limits, mechanism and preconditions. Evidence records never
-affect scores or confidence. A gap can become a scored indicator when a
-comparable series covers at least two countries. Read
+The benchmark keeps measurement and interpretation in separate tracks.
+
+**Source-backed measurement.** The registry defines each indicator and its
+source, units, transform and direction. World Bank is the only automated
+ingestion source in v0. A small set of manually authored observations is kept
+separately. Other named sources remain explicit gaps until their adapters and
+coverage are ready. The pipeline turns observations into the canonical
+`score`, `confidence` and indicator rows. Documented deliveries in
+`data/evidence` explain gaps but never change a score or its confidence. Read
 [docs/EVIDENCE.md](docs/EVIDENCE.md) before adding one.
 
 **Delphi panel.** The panel pairs language models with fixed analytical
-stances. It uses two rounds: in round two, each panelist sees anonymized
-round-one scores and rationales. The run stores medians, interquartile ranges
-and provenance. Panel estimates remain separate from indicator scores.
+stances. It reviews thin or questionable dimensions using the source-backed
+evidence brief. It does not create observations or silently replace measured
+values. It uses two rounds: in round two, each panelist sees anonymized
+round-one scores and rationales. The run stores medians, interquartile ranges,
+model identity, country scope, dataset version, prompt version and provenance.
+Panel estimates remain in `delphiScore` and `delphiIqr`. The explicit
+`blendedScore` falls back to Delphi only when no indicator is observed, and
+`blendedFrom` says which track supplied it.
 
 Real runs use the Vercel AI Gateway:
 
 ~~~bash
 export AI_GATEWAY_API_KEY=...
 export NCB_PANEL=anthropic/claude-opus-5,openai/gpt-5,google/gemini-2.5-pro
-pnpm bench delphi --rounds 2
+pnpm bench cost --max-coverage 0.5
+pnpm bench delphi --rounds 2 --max-coverage 0.5 --activate
 ~~~
 
-A run with provenance: "mock" is an offline stand-in and is not evidence. A run
-with fewer than three panelists is a session estimate, not a panel. Read
+A country-restricted or coverage-restricted run is saved as an archive and does
+not replace `data/delphi/latest.json` unless `--activate` is passed. Use a
+restricted run as a preflight. A published run after a country-set change must
+cover the rebased set. A run with provenance "mock" is an offline stand-in and
+is not evidence. A run with fewer than three panelists is a session estimate,
+not a panel. Read
 [docs/PANEL.md](docs/PANEL.md) for the full contract.
 
 **Institutional data.** Country-specific institutional networks are explanatory
@@ -180,6 +194,8 @@ Package descriptor and JSON Schemas.
 | data/out/table.csv | Flat country by dimension table. |
 | data/out/diagnostics.json | Correlations, redundancy and GDP-sensitivity diagnostics. |
 | data/out/report.md | Human-readable findings report. |
+| data/delphi/{runId}.json | Immutable record of one Delphi run and its provenance. |
+| data/delphi/latest.json | Active Delphi run copied from one archived run. |
 | data/out/agenda/{ISO3}.json | Language-neutral computed agenda. |
 | data/out/agenda/{ISO3}.{lang}.md | Rendered agenda for a language lexicon. |
 | data/out/datapackage.json | Dataset metadata, sources, license, resources and schemas. |
@@ -216,12 +232,12 @@ The main risks are:
   evidence.
 - A country score is a coarse national proxy for capability below the national
   level.
-- The ten-country frame is a comparison set, not the world.
+- The current country frame is a comparison set, not the world.
 
 Keep the score beside its confidence, observed-indicator count and
 coverage-floor status. When quoting a trend, include its span and matched
-basket size. When quoting a Delphi estimate, include its provenance. Record the
-dataset version and generation date too.
+basket size. When quoting a Delphi estimate, include its run ID, provenance,
+panel size and dataset version. Record the generation date too.
 
 ## Repository map
 

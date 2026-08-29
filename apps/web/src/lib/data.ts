@@ -2,7 +2,13 @@ import { existsSync } from 'node:fs'
 import { readFile } from 'node:fs/promises'
 import { readdir } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
-import { ChallengeRecord, INDICATORS, InstitutionNetworkFile, isScored } from '@ncb/core'
+import {
+  ChallengeRecord,
+  DelphiRunFile as DelphiRunFileSchema,
+  INDICATORS,
+  InstitutionNetworkFile,
+  isScored,
+} from '@ncb/core'
 import { DATA_DIR } from '@ncb/core/node'
 import type {
   CountryResult,
@@ -77,7 +83,9 @@ export async function loadDiagnostics(): Promise<Diagnostics | null> {
 }
 
 export async function loadDelphiRun(): Promise<DelphiRunFile | null> {
-  return readJson(PATHS.delphiLatest)
+  const raw = await readJson<unknown>(PATHS.delphiLatest)
+  const parsed = DelphiRunFileSchema.safeParse(raw)
+  return parsed.success ? parsed.data : null
 }
 
 /** One indicator across every country, for the peek. */

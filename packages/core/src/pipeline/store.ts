@@ -51,12 +51,15 @@ export async function loadDelphi(path = FILES.delphiLatest): Promise<DelphiRunFi
   return parsed.data
 }
 
-export async function saveDelphi(run: DelphiRunFile): Promise<string> {
+export async function saveDelphi(
+  run: DelphiRunFile,
+  options: { activate?: boolean } = {},
+): Promise<string> {
   const path = resolve(DELPHI_DIR, `${run.runId}.json`)
   await mkdir(DELPHI_DIR, { recursive: true })
   const body = `${JSON.stringify(run, null, 2)}\n`
   await writeFile(path, body)
-  await writeFile(FILES.delphiLatest, body)
+  if (options.activate ?? true) await writeFile(FILES.delphiLatest, body)
   return path
 }
 

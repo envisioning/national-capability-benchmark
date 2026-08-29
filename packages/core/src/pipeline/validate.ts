@@ -59,6 +59,14 @@ export async function validateDelphiRuns(dir = DELPHI_DIR): Promise<Problem[]> {
       problems.push({ file, severity: 'error', problem: `unknown country code ${iso3}` })
     }
 
+    const declaredCountries = run.countrySet && run.countrySet.length > 0 ? run.countrySet : COUNTRY_ISO3
+    const badDeclaredIso = declaredCountries.filter(
+      (iso3) => !COUNTRY_ISO3.includes(iso3 as never),
+    )
+    for (const iso3 of badDeclaredIso) {
+      problems.push({ file, severity: 'error', problem: `unknown declared country code ${iso3}` })
+    }
+
     const badIndicator = [
       ...new Set(run.indicatorJudgements.map((j) => j.indicatorId)),
     ].filter((id) => !INDICATORS_BY_ID[id])
@@ -67,12 +75,15 @@ export async function validateDelphiRuns(dir = DELPHI_DIR): Promise<Problem[]> {
     }
 
     const covered = new Set(run.cellEstimates.map((e) => `${e.iso3}|${e.dimension}`))
-    const expected = COUNTRY_ISO3.length * DIMENSIONS.length
+    const expected = declaredCountries.length * DIMENSIONS.length
     if (covered.size < expected) {
       problems.push({
         file,
         severity: 'warning',
-        problem: `covers ${covered.size} of ${expected} country-dimension cells`,
+        problem:
+          (run.maxCoverage ?? 1) < 1
+            ? `partial run covers ${covered.size} of ${expected} selected country-dimension cells at coverage ceiling ${run.maxCoverage}`
+            : `covers ${covered.size} of ${expected} country-dimension cells`,
       })
     }
 

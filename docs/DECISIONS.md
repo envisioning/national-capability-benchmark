@@ -2655,3 +2655,45 @@ or receives enough submissions to need concurrency control would justify a
 durable store and an authenticated review tool. Evidence that three distinct
 countries does not separate useful disputes from repetition would justify a new
 threshold decision with observed submission data.
+
+## D63: Source-backed scores and Delphi estimates remain separate tracks
+
+*Recorded 2026-08-29. Clarifies D11 and supersedes the wider fallback described
+as a cost in D45.*
+
+**Choice.** The source-backed track is the measurement layer. It uses the
+registry, named publishers and observed values to produce `score`, `confidence`
+and indicator rows. World Bank is the only automated ingestion source in v0;
+manually authored observations remain a separate input. The Delphi track is an
+interpretation layer. It reads the source-backed evidence
+brief to review thin or questionable dimensions, then stores `delphiScore`,
+`delphiIqr`, rationales, self-confidence and missing evidence. It never creates
+an observation, changes confidence or enters `DimensionResult.score`.
+
+`blendedScore` uses the indicator score when the dimension clears its coverage
+floor. It falls back to Delphi only when no indicator is observed, and
+`blendedFrom` records the source. A dimension with one observed indicator stays
+unmeasured rather than receiving a generated replacement.
+
+Runs record the dataset version, country set, scope, coverage ceiling and prompt
+version alongside model identity and provenance. A country-restricted or
+coverage-restricted run is an archive by default. It becomes active only when
+the operator passes `--activate`. A published run after a country-set change
+must cover the full rebased set.
+
+**Why.** The benchmark needs a number that can be traced to a source and a
+separate judgment about what that number misses. Joining them would hide the
+difference between measurement and interpretation, and would make a model
+estimate look like a new observation. Explicit run scope also keeps a
+10-country preflight from replacing the active run for the whole benchmark.
+
+**Costs.** Some dimensions remain without a blended value when one indicator is
+present but the coverage floor is not met. A full panel rerun is required after
+a country addition if its estimates are interpreted against the rebased frame.
+The panel remains an audit and fallback, not a substitute for closing source
+gaps.
+
+**Overturned by.** A defensible method that combines source and panel values
+without hiding either provenance, or a source-backed series that measures the
+currently unmeasured dimensions with comparable country coverage, would justify
+a new decision.

@@ -27,6 +27,20 @@ that position rests on.
 Repeating the score without the confidence is not a shortened quote. It is a
 different claim, and the project has no way to defend it.
 
+### Assessment tracks
+
+The source-backed track is the measurement layer. It uses registry-defined
+indicators and named publishers, then computes `score`, `confidence` and the
+indicator rows. World Bank is the only automated ingestion source in v0. A
+small set of manually authored observations is stored separately. Other
+publishers remain declared gaps until an adapter and comparable coverage exist.
+
+The Delphi track is an interpretation layer. It reads the source-backed
+evidence brief to review thin or questionable dimensions. It can record a
+separate estimate, rationale, disagreement and missing evidence. It never
+creates an observation, changes confidence or turns an evidence record into a
+measurement.
+
 ---
 
 ## 2. What to fetch
@@ -71,6 +85,7 @@ On every dimension object:
 | `confidenceParts` | The three factors separately, when you need to say which one is weak. |
 | `observedIndicators` | How many indicators the score actually rests on. |
 | `belowCoverageFloor` | True when fewer than two indicators were observed. The score is then `null` and the dimension publishes no position. |
+| `delphiScore`, `delphiIqr` | The final panel estimate and its disagreement range. These are separate from the source-backed score. |
 | `blendedScore`, `blendedFrom` | The blend falls back to the Delphi panel only where no indicator evidence exists. `blendedFrom` records which source was used. Read it before you quote `blendedScore`. |
 | `momentum` | The trend. A list, one entry per span, shortest first. |
 
@@ -83,6 +98,11 @@ the band's own text says not to quote it on its own. Take that literally.
 Score bands are in `packages/core/src/pipeline/bands.ts` and are deliberately
 frame-relative. `strong` means strong inside this set of countries, not strong
 in the world.
+
+When `delphiScore` or `blendedFrom: "delphi"` is present, read
+`data/delphi/latest.json` as well. The run records its provenance, model and
+stance, dataset version, country set, prompt version and scope. A panel estimate
+without that context is incomplete.
 
 ---
 

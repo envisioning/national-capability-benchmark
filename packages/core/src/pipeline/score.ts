@@ -8,6 +8,8 @@ import {
   INDICATORS,
   SOURCE_TIERS,
   checksFor,
+  isDelphiRunForDataset,
+  isEvidential,
   indicatorsFor,
   isScored,
 } from '../model/index.js'
@@ -15,6 +17,7 @@ import type {
   CheckResult,
   CountryResult,
   DelphiCellEstimate,
+  DelphiRunFile,
   Dimension,
   DimensionResult,
   IndicatorDef,
@@ -61,8 +64,10 @@ export type ScoreOptions = {
   exclude?: ReadonlySet<string>
   /** Tukey fence multiplier for winsorizing. */
   winsorK?: number
-  /** Panel estimates, when a Delphi run is loaded. */
-  delphi?: DelphiCellEstimate[]
+  /** A persisted, provenance-checked Delphi run, kept separate from source scores. */
+  delphiRun?: DelphiRunFile | undefined
+  /** The output version that the Delphi run must match before it is used. */
+  datasetVersion?: string | undefined
   /** Panel estimates below this self-confidence are ignored. */
   minPanelistConfidence?: number
   /** Spans the momentum comparison reaches back, shortest first. Empty to skip trends. */
@@ -308,6 +313,12 @@ export function scoreAll(observations: Observation[], opts: ScoreOptions): Score
   const allFrames = buildFrames(observations, opts)
   const matrix = buildMatrix(observations, opts, allFrames)
   const minPanelistConfidence = opts.minPanelistConfidence ?? 0
+  const usableDelphiRun =
+    opts.delphiRun &&
+    isEvidential(opts.delphiRun.provenance) &&
+    (!opts.datasetVersion || isDelphiRunForDataset(opts.delphiRun, opts.datasetVersion))
+      ? opts.delphiRun
+      : undefined
   const spans = opts.momentumSpans ?? [10, 20]
   const frames = spans.length > 0 ? allFrames : null
   const history = spans.length > 0 ? buildHistory(observations) : null
@@ -333,7 +344,12 @@ export function scoreAll(observations: Observation[], opts: ScoreOptions): Score
           ? null
           : round(mean(observed.map((c) => c.normalized)), 1)
       const parts = confidenceFor(defs, cells, opts.currentYear)
-      const delphi = delphiFor(opts.delphi, country.iso3, dimension, minPanelistConfidence)
+      const delphi = delphiFor(
+        usableDelphiRun?.cellEstimates,
+        country.iso3,
+        dimension,
+        minPanelistConfidence,
+      )
       const momentum =
         history && frames
           ? spans
@@ -346,7 +362,7 @@ export function scoreAll(observations: Observation[], opts: ScoreOptions): Score
               .filter((m): m is NonNullable<typeof m> => Boolean(m))
           : []
 
-      const blendedScore = score ?? delphi.score
+      const blendedScore = observed.length === 0 ? delphi.score : score
       dimensions[dimension] = {
         score,
         observedIndicators: observed.length,
@@ -357,7 +373,8 @@ export function scoreAll(observations: Observation[], opts: ScoreOptions): Score
         delphiIqr: delphi.iqr,
         delphiDissent: delphi.dissent,
         blendedScore,
-        blendedFrom: score !== null ? 'indicators' : delphi.score !== null ? 'delphi' : 'none',
+        blendedFrom:
+          score !== null ? 'indicators' : observed.length === 0 && delphi.score !== null ? 'delphi' : 'none',
         momentum,
         indicators: defs.map((d, i) =>
           indicatorRow(

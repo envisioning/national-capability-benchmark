@@ -251,11 +251,14 @@ export default function MethodPage() {
       </Section>
 
       <Section
-        title="A panel fills gaps in the data"
-        hint="Each panelist has a fixed stance. The panel scores the same cells and reviews the indicators."
+        title="A panel reviews what the data misses"
+        hint="Each panelist has a fixed stance. The panel interprets the source-backed evidence and reviews the indicators."
       >
         <ul className="max-w-3xl list-disc space-y-3 pl-5 text-lg leading-relaxed">
-          <li>Round 1: each panelist scores every dimension from the evidence brief and its knowledge.</li>
+          <li>
+            Round 1: each panelist scores dimensions with thin source coverage from the evidence
+            brief and its knowledge.
+          </li>
           <li>
             Round 2: each panelist sees the anonymized round-1 scores and rationales, then revises
             or defends its scores.
@@ -265,8 +268,8 @@ export default function MethodPage() {
             unresolved disagreement.
           </li>
           <li>
-            Panel estimates stay in their own file and never enter the indicator score. They fill a
-            cell only when indicator evidence is absent.
+            Panel estimates stay in their own file and never enter the indicator score or
+            confidence. The blended view uses one only when no indicator is observed.
           </li>
           <li>
             The panel also rates each indicator&apos;s class, validity, wealth-proxy risk and redundancy.

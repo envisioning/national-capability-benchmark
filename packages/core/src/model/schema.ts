@@ -242,6 +242,14 @@ export function isEvidential(provenance: Provenance): boolean {
   return provenance !== 'mock'
 }
 
+/** A panel estimate is usable for published output only on its source frame. */
+export function isDelphiRunForDataset(
+  run: { datasetVersion?: string | undefined },
+  datasetVersion: string,
+): boolean {
+  return run.datasetVersion === datasetVersion
+}
+
 /** The provenance kinds in plain language, for any surface that names one. */
 export const PROVENANCE_LABELS: Record<Provenance, string> = {
   gateway: 'multi-vendor model panel',
@@ -268,6 +276,16 @@ export const DelphiRunFile = z.object({
   provenance: Provenance,
   /** One line on how this run was produced and what it may be used for. */
   note: z.string().default(''),
+  /** Dataset frame the evidence brief and panel scores were built from. */
+  datasetVersion: z.string().optional(),
+  /** Countries included in the run. Empty means a legacy run with unknown scope. */
+  countrySet: z.array(z.string().length(3)).optional(),
+  /** A subset run is a preflight and must not replace the active full run by accident. */
+  scope: z.enum(['full', 'subset']).optional(),
+  /** Highest dimension coverage included in the panel prompt. */
+  maxCoverage: z.number().min(0).max(1).optional(),
+  /** Version of the prompt contract used to produce the estimates. */
+  promptVersion: z.string().optional(),
   panel: z.array(z.object({ panelist: z.string(), model: z.string(), stance: z.string() })),
   rounds: z.number().int(),
   cellEstimates: z.array(DelphiCellEstimate),
@@ -378,7 +396,7 @@ export const DimensionResult = z.object({
   /** Interquartile range of panel estimates. Wide range = unresolved disagreement. */
   delphiIqr: z.number().nullable(),
   delphiDissent: z.boolean(),
-  /** score when present, else delphiScore. The blended view, kept explicitly separate. */
+  /** score when present, else delphiScore only when no indicator is observed. */
   blendedScore: z.number().nullable(),
   blendedFrom: z.enum(['indicators', 'delphi', 'none']),
   /**

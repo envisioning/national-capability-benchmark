@@ -5,6 +5,7 @@ import {
   GDP_PER_CAPITA_CODE,
   INDICATORS,
   INGEST_FROM_YEAR,
+  isDelphiRunForDataset,
   rawHref,
 } from '../model/index.js'
 import type { CountryResult, Dimension } from '../model/index.js'
@@ -106,7 +107,8 @@ async function score(args: Args): Promise<CountryResult[]> {
   const delphi = await loadDelphi()
   const { countries } = scoreAll(observations, {
     currentYear: CURRENT_YEAR,
-    delphi: delphi?.cellEstimates ?? [],
+    datasetVersion: DATASET_VERSION,
+    delphiRun: delphi ?? undefined,
     minPanelistConfidence: num(args, 'min-panelist-confidence', 0),
   })
 
@@ -149,10 +151,15 @@ async function score(args: Args): Promise<CountryResult[]> {
 
 async function diagnose(args: Args) {
   const observations = await loadObservations()
-  const delphi = await loadDelphi()
+  const loadedDelphi = await loadDelphi()
+  const delphi =
+    loadedDelphi && isDelphiRunForDataset(loadedDelphi, DATASET_VERSION)
+      ? loadedDelphi
+      : null
   const opts = {
     currentYear: CURRENT_YEAR,
-    delphi: delphi?.cellEstimates ?? [],
+    datasetVersion: DATASET_VERSION,
+    delphiRun: delphi ?? undefined,
     minPanelistConfidence: num(args, 'min-panelist-confidence', 0),
   }
   const { countries, matrix } = scoreAll(observations, opts)
@@ -233,10 +240,15 @@ async function main() {
 
     case 'agenda': {
       const observations = await loadObservations()
-      const delphi = await loadDelphi()
+      const loadedDelphi = await loadDelphi()
+      const delphi =
+        loadedDelphi && isDelphiRunForDataset(loadedDelphi, DATASET_VERSION)
+          ? loadedDelphi
+          : null
       const { countries } = scoreAll(observations, {
         currentYear: CURRENT_YEAR,
-        delphi: delphi?.cellEstimates ?? [],
+        datasetVersion: DATASET_VERSION,
+        delphiRun: delphi ?? undefined,
         minPanelistConfidence: num(args, 'min-panelist-confidence', 0),
       })
       await agenda(args, countries)
@@ -268,21 +280,33 @@ async function main() {
       console.log(`Panel (${provider.name}):`)
       for (const p of panel) console.log(`  ${p.stance.label.padEnd(20)} ${useMock ? 'mock' : p.model}`)
 
+      const requestedCountries = str(args, 'countries', '')
+        .split(',')
+        .map((s) => s.trim())
+        .filter(Boolean)
+      const maxCoverage = num(args, 'max-coverage', 0.5)
       const run = await runDelphi(countries, {
         panel,
         provider,
         rounds: num(args, 'rounds', 2),
-        countries: str(args, 'countries', '').split(',').map((s) => s.trim()).filter(Boolean),
+        countries: requestedCountries,
+        datasetVersion: DATASET_VERSION,
         judgeIndicators: !bool(args, 'no-judge'),
-        maxCoverage: num(args, 'max-coverage', 1),
+        maxCoverage,
         concurrency: num(args, 'concurrency', 4),
         onProgress: (m) => console.log(`  ${m}`),
       })
 
-      const path = await saveDelphi(run)
+      const partial = run.scope === 'subset' || maxCoverage < 1
+      const activate = bool(args, 'activate') || !partial
+      const path = await saveDelphi(run, { activate })
       console.log(`\n${run.cellEstimates.length} cell estimates, ${run.indicatorJudgements.length} indicator judgements`)
       console.log(`delphi      -> ${path}`)
-      console.log(`latest      -> ${FILES.delphiLatest}`)
+      console.log(
+        activate
+          ? `latest      -> ${FILES.delphiLatest}`
+          : 'active run   unchanged (use --activate after reviewing this subset or thin-cell run)',
+      )
       break
     }
 
@@ -354,7 +378,7 @@ ${group.map((c) => evidenceBrief(c)).join('\n\n---\n\n')}
 
 ---
 
-Score all nine dimensions for each of ${codes} on 0-100, against the frame set by the ten reference countries.
+Score all nine dimensions for each of ${codes} on 0-100, against the frame set by the current benchmark country set.
 
 The indicator-derived score is one input, not the answer. Where evidence is thin or stale, say so and use your own knowledge, and set a lower selfConfidence. Where the indicators clearly mismeasure the dimension for this country, depart from them and explain why in one or two sentences.
 
@@ -490,6 +514,11 @@ Start with file 1.
         runId: `${str(args, 'run-id', `chat-${stance.id}`)}`,
         generatedAt: str(args, 'generated-at', new Date().toISOString()),
         provenance: 'in_session',
+        datasetVersion: str(args, 'dataset-version', 'unknown'),
+        countrySet: [...new Set([...byKey.values()].map((cell) => String(cell['iso3'])))].sort(),
+        scope: 'subset',
+        maxCoverage: 1,
+        promptVersion: 'chat',
         note: str(
           args,
           'note',
@@ -513,12 +542,20 @@ Start with file 1.
       const observations = await loadObservations()
       const { countries } = scoreAll(observations, { currentYear: CURRENT_YEAR })
       const models = str(args, 'models', '').split(',').map((s) => s.trim()).filter(Boolean)
+      const requestedCountries = str(args, 'countries', '')
+        .split(',')
+        .map((s) => s.trim())
+        .filter(Boolean)
+      const pickedCountries = requestedCountries.length
+        ? countries.filter((country) => requestedCountries.includes(country.iso3))
+        : countries
       const est = estimateCost({
-        countries,
+        countries: pickedCountries,
         models: models.length ? models : modelsFromEnv(),
         stances: num(args, 'stances', 4),
         rounds: num(args, 'rounds', 2),
         judgeIndicators: !bool(args, 'no-judge'),
+        maxCoverage: num(args, 'max-coverage', 0.5),
       })
 
       console.log(
@@ -653,14 +690,15 @@ Start with file 1.
   pnpm bench ingest    [--from 1990] [--snapshot]  fetch World Bank series into data/observations
   pnpm bench score                        normalize, score, write index.json, one file per country, table.csv
   pnpm bench delphi    [--mock] [--rounds 2] [--countries BRA,IND] [--models a,b]
-                       [--max-coverage 0.6] [--no-judge] [--concurrency 4]
+                       [--max-coverage 0.5] [--no-judge] [--concurrency 4] [--activate]
   pnpm bench diagnose                     correlations, redundancy, GDP-sensitivity test
   pnpm bench prompt    [BRA IND ...] [--stance wealth_sceptic] [--system] [--audit trust]
                        [--paste] [--batch 4] [--out paste] [--local]
                                           print the exact panel prompt; --paste writes chat-ready bundles
   pnpm bench merge     --stance X --model "gpt-5 (chat)" [--in replies] [--out file.json]
                                           merge pasted chat replies into one run file
-  pnpm bench cost      [--rounds 2] [--stances 4] [--models a,b] [--no-judge]
+  pnpm bench cost      [--rounds 2] [--stances 4] [--models a,b] [--countries BRA,IND]
+                       [--max-coverage 0.5] [--no-judge]
                                           measure the prompts and price the panel run
   pnpm bench probe     --search <regex> [--limit 40]             find World Bank series by name, with the database each needs
   pnpm bench probe     --series a,b[@db] [--from 2010] [--json]  test candidate World Bank series before wiring them

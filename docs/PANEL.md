@@ -1,7 +1,17 @@
 # The Delphi layer
 
-The indicator model measures what international datasets cover. The panel reviews
-thin cells and audits the indicator set.
+The benchmark has two assessment tracks. The source-backed track measures the
+country with named indicators and produces the canonical `score` and
+`confidence`. World Bank is the only automated ingestion source in v0. A small
+set of manually authored observations is stored separately. The Delphi track
+interprets the evidence brief where coverage is thin or an indicator may
+misread the construct. It never creates an observation, changes confidence or
+silently replaces the source-backed score.
+
+The two tracks meet only in the explicitly named output fields. `delphiScore`
+and `delphiIqr` hold the panel result. `blendedScore` uses the source-backed
+score whenever the dimension clears its coverage floor. It uses Delphi only
+when no indicator is observed, and `blendedFrom` records that choice.
 
 ## What a panelist is
 
@@ -26,9 +36,10 @@ stances and three models, one vendor gets two stances. Supply four models or run
 
 **Round 1.** Each panelist sees the evidence brief for one country: every
 indicator with its raw value, year, normalised score, measurement class and
-source, plus the declared gaps and the coverage figure. It scores all nine
-dimensions, gives a self-confidence, writes a rationale, and names the specific
-evidence it would need to be more certain.
+source, plus the declared gaps and the coverage figure. By default it scores
+only dimensions at or below 50% source coverage. It gives a self-confidence,
+writes a rationale, and names the specific evidence it would need to be more
+certain. Use `--max-coverage 1` when a full nine-dimension review is needed.
 
 **Round 2.** Each panelist sees the anonymised round-1 scores and rationales for
 that country, then revises or defends. The prompt says explicitly not to converge
@@ -60,38 +71,42 @@ present a `mock` run as evidence, and both warn when a run has fewer than three
 panelists.
 
 **A run with one panelist is not a panel.** The median is one opinion and the
-IQR is zero. `data/delphi/in-session-round1.json` is exactly this: ninety cells
-scored by Claude Opus 5 in a working session on 2026-08-26, with a rationale and
-self-confidence for each cell. It is useful and produced most of
-`KNOWN-ARTEFACTS.md`, but a real gateway run must replace it before publication.
+IQR is zero. An in-session run can be useful for finding artefacts, but a real
+gateway run must replace it before publication. The model name does not make an
+in-session estimate equivalent to a multi-vendor panel.
 
 ## Running it
 
 ```bash
-pnpm bench cost                       # price the run before you start it
 export AI_GATEWAY_API_KEY=...
 export NCB_PANEL=anthropic/claude-opus-5,openai/gpt-5,google/gemini-2.5-pro,...
-pnpm bench delphi --rounds 2
+pnpm bench cost --max-coverage 0.5
+pnpm bench delphi --rounds 2 --max-coverage 0.5 --activate
 pnpm bench validate                   # schema-check what came out
 pnpm bench score && pnpm bench report
 ```
 
 Without a key the CLI falls back to the mock provider and says so.
 
-Useful flags: `--countries BRA,IND` to restrict the run, `--max-coverage 0.5` to
-score only cells where the indicator evidence is thin, `--no-judge` to skip the
-indicator audit, `--stances N`, `--concurrency N`.
+Useful flags: `--countries BRA,IND` to make a preflight for a subset,
+`--max-coverage 0.5` to include only dimensions with thin source coverage,
+`--activate` to make a reviewed run active, `--no-judge` to skip the indicator
+audit, `--stances N`, and `--concurrency N`. Subset and coverage-restricted runs
+are archived without changing `latest.json` unless `--activate` is explicit.
+Adding a country changes the normalization frame, so the published run for the
+new dataset version should cover the full rebased country set.
 
 ## Cost
 
 `pnpm bench cost` builds the prompts this repo would actually send, measures
-them, and prices them. It is a command rather than a documented figure because
-the evidence brief grows with the indicator registry, and round 2 carries round
-1 back. Both grow with the registry.
+them, and prices them. It accepts the same `--countries` and `--max-coverage`
+scope as the run command. It is a command rather than a documented figure
+because the evidence brief grows with the indicator registry, and round 2
+carries round 1 back. Both grow with the registry.
 
-As of 2026-08-26, a four-panelist, two-round, ten-country run with the indicator
-audit is 116 calls, roughly 446k input and 329k output tokens, and about **$7**
-with two Anthropic panelists and two others.
+As of 2026-08-26, a four-panelist, two-round, 10-country run that includes every
+dimension and the indicator audit is 116 calls, roughly 446k input and 329k
+output tokens, and about **$7** with two Anthropic panelists and two others.
 
 Caveats the command prints for itself: characters-per-token is an approximation,
 the output figure includes a 3× multiplier for reasoning tokens, list prices are
@@ -110,13 +125,17 @@ prompt`, and why separate models must not be merged into one panel array from
 one context.
 
 An `in_session` or `human` run is written by hand as JSON in `data/delphi/`.
-The schema is `DelphiRunFile` in `packages/core/src/model/schema.ts`. Required:
-`runId`, `generatedAt`, `provenance`, `note`, `panel`, `rounds`,
-`cellEstimates`, `indicatorJudgements`.
+The schema is `DelphiRunFile` in `packages/core/src/model/schema.ts`. A new run
+should include `runId`, `generatedAt`, `provenance`, `note`, `datasetVersion`,
+`countrySet`, `scope`, `maxCoverage`, `promptVersion`, `panel`, `rounds`,
+`cellEstimates` and `indicatorJudgements`.
 
-Set `note` to say who produced it, when, and what it may be used for. Then run
-`pnpm bench validate`, which checks the schema and catches mistyped country
-codes, unknown indicator ids, missing rounds, coverage holes, and a missing note.
+Set `note` to say who produced it, when, and what it may be used for. Keep the
+dataset version and country set tied to the evidence brief. Then run `pnpm bench
+validate`, which checks the schema and catches mistyped country codes, unknown
+indicator ids, missing rounds, coverage holes, and a missing note.
 
-To make a run active, copy it to `data/delphi/latest.json`. Keep the original
-file: `latest.json` is a pointer, not the archive.
+The CLI writes every run to an immutable file named by `runId`. Pass
+`--activate` only after reviewing the run to copy it to
+`data/delphi/latest.json`. The active file is a copy of the selected archive,
+not the archive itself.

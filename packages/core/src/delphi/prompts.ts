@@ -9,6 +9,9 @@ import {
 import type { CountryResult, Dimension, IndicatorDef, IndicatorResult } from '../model/index.js'
 import type { Panelist } from './panel.js'
 
+/** Bump when the evidence or scoring instructions sent to a panel change. */
+export const DELPHI_PROMPT_VERSION = '2'
+
 export const SYSTEM_RULES = `You are a panelist on a Delphi study building the Envisioning National Capability Benchmark.
 
 The benchmark measures a country's capacity to anticipate change, coordinate action, learn, adapt and build under uncertainty. It does not measure wealth, quality of life, competitiveness or government popularity.
@@ -31,8 +34,11 @@ function indicatorLine(def: IndicatorDef, row: IndicatorResult | undefined): str
   return `- ${def.name} [${cls}] — raw ${row.raw} ${def.unit} (${row.year}), normalised ${row.normalized}/100 across the benchmark countries. Source: ${row.source}.${row.winsorized ? ' Value was winsorized.' : ''}`
 }
 
-export function evidenceBrief(result: CountryResult): string {
-  const blocks = DIMENSIONS.map((dimension) => {
+export function evidenceBrief(
+  result: CountryResult,
+  selectedDimensions: readonly Dimension[] = DIMENSIONS,
+): string {
+  const blocks = selectedDimensions.map((dimension) => {
     const dim = result.dimensions[dimension]
     if (!dim) return ''
     const defs = indicatorsFor(dimension)
@@ -49,31 +55,36 @@ ${lines}`
   return `# Evidence brief: ${COUNTRY_NAMES[result.iso3] ?? result.country} (${result.iso3})\n\n${blocks.join('\n\n')}`
 }
 
-export function round1CellPrompt(panelist: Panelist, result: CountryResult): string {
+export function round1CellPrompt(
+  panelist: Panelist,
+  result: CountryResult,
+  selectedDimensions: readonly Dimension[] = DIMENSIONS,
+): string {
   return `${panelist.stance.prompt}
 
-${evidenceBrief(result)}
+${evidenceBrief(result, selectedDimensions)}
 
-Score all nine dimensions for ${COUNTRY_NAMES[result.iso3] ?? result.country} on 0-100, against the frame the benchmark countries set together.
+Score the following dimensions for ${COUNTRY_NAMES[result.iso3] ?? result.country} on 0-100, against the frame the benchmark countries set together: ${selectedDimensions.join(', ')}.
 
 The indicator-derived score is one input, not the answer. Where evidence is thin or stale, say so and use your own knowledge, and set a lower selfConfidence. Where the indicators clearly mismeasure the dimension for this country, depart from them and explain why in one or two sentences.
 
-For each dimension also list the specific evidence you would need in order to raise your confidence. Be concrete: name a dataset, a statistic or an observable event, not "more data".`
+For each selected dimension also list the specific evidence you would need in order to raise your confidence. Be concrete: name a dataset, a statistic or an observable event, not "more data".`
 }
 
 export function round2CellPrompt(
   panelist: Panelist,
   result: CountryResult,
   summary: string,
+  selectedDimensions: readonly Dimension[] = DIMENSIONS,
 ): string {
   return `${panelist.stance.prompt}
 
-${evidenceBrief(result)}
+${evidenceBrief(result, selectedDimensions)}
 
 # Round 1 panel results (anonymised)
 ${summary}
 
-This is round 2. Read what the rest of the panel argued. Revise any score where another panelist has made a point you cannot answer. Hold any score you still believe, and say what the others got wrong.
+This is round 2. Read what the rest of the panel argued. Revise any score where another panelist has made a point you cannot answer. Hold any score you still believe, and say what the others got wrong. Return estimates only for the selected dimensions: ${selectedDimensions.join(', ')}.
 
 Do not converge for the sake of converging. A stable disagreement that you can defend is a finding, and we record it.`
 }

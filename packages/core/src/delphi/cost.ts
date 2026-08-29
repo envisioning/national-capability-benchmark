@@ -10,6 +10,7 @@ import {
   SYSTEM_RULES,
 } from './prompts.js'
 import { CHARS_PER_TOKEN, OUTPUT_TOKENS, priceFor } from './pricing.js'
+import { delphiDimensions } from './run.js'
 
 export type CostOptions = {
   countries: CountryResult[]
@@ -17,6 +18,7 @@ export type CostOptions = {
   stances: number
   rounds: number
   judgeIndicators: boolean
+  maxCoverage: number
 }
 
 export type CostEstimate = {
@@ -47,11 +49,17 @@ export function estimateCost(opts: CostOptions): CostEstimate {
   const sample = panel[0] as Panelist
   const systemTokens = tokens(SYSTEM_RULES.length)
 
-  const round1 = opts.countries.map((c) => tokens(round1CellPrompt(sample, c).length))
+  const scoped = opts.countries
+    .map((country) => ({ country, dimensions: delphiDimensions(country, opts.maxCoverage) }))
+    .filter((entry) => entry.dimensions.length > 0)
+
+  const round1 = scoped.map(({ country, dimensions }) =>
+    tokens(round1CellPrompt(sample, country, dimensions).length),
+  )
 
   /** A worked round-1 answer set, so the round-2 prompt is sized with real content. */
-  const priorFor = (c: CountryResult) =>
-    DIMENSIONS.flatMap((dimension) =>
+  const priorFor = (dimensions: ReturnType<typeof delphiDimensions>) =>
+    dimensions.flatMap((dimension) =>
       panel.map((p) => ({
         dimension,
         score: 55,
@@ -60,19 +68,28 @@ export function estimateCost(opts: CostOptions): CostEstimate {
           'The indicator base is thin here and the two observable measures point in opposite directions, so I am anchoring below the derived score.',
       })),
     )
-  const round2 = opts.countries.map((c) =>
-    tokens(round2CellPrompt(sample, c, anonymiseRound(priorFor(c), sample.id)).length),
+  const round2 = scoped.map(({ country, dimensions }) =>
+    tokens(
+      round2CellPrompt(
+        sample,
+        country,
+        anonymiseRound(priorFor(dimensions), sample.id),
+        dimensions,
+      ).length,
+    ),
   )
-  const audit = DIMENSIONS.map((d) => tokens(indicatorJudgementPrompt(sample, d).length))
+  const audit = opts.judgeIndicators
+    ? DIMENSIONS.map((dimension) => tokens(indicatorJudgementPrompt(sample, dimension).length))
+    : []
 
-  const cellCallsPerPanelist = opts.countries.length * opts.rounds
-  const auditCallsPerPanelist = opts.judgeIndicators ? DIMENSIONS.length : 0
+  const cellCallsPerPanelist = scoped.length * opts.rounds
+  const auditCallsPerPanelist = audit.length
   const callsPerPanelist = cellCallsPerPanelist + auditCallsPerPanelist
 
   const sum = (a: number[]) => a.reduce((x, y) => x + y, 0)
   const cellInput =
     sum(round1) + (opts.rounds > 1 ? sum(round2) * (opts.rounds - 1) : 0)
-  const auditInput = opts.judgeIndicators ? sum(audit) : 0
+  const auditInput = sum(audit)
   const inputPerPanelist = cellInput + auditInput + systemTokens * callsPerPanelist
 
   const outputPerPanelist =

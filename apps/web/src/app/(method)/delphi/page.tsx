@@ -4,6 +4,7 @@ import {
   DISSENT_IQR,
   INDICATORS_BY_ID,
   PROVENANCE_LABELS,
+  isDelphiRunForDataset,
   isEvidential,
   isPanel,
   cellConsensus,
@@ -29,7 +30,7 @@ import {
   Th,
 } from '@/components/ui'
 import Link from 'next/link'
-import { loadDelphiRun } from '@/lib/data'
+import { loadDelphiRun, loadIndex } from '@/lib/data'
 import { countryProfileHref } from '@/lib/links'
 
 export const dynamic = 'force-dynamic'
@@ -41,10 +42,16 @@ export const metadata: Metadata = {
 }
 
 export default async function DelphiPage() {
-  const run = await loadDelphiRun()
+  const [loadedRun, index] = await Promise.all([loadDelphiRun(), loadIndex()])
+  const run =
+    loadedRun &&
+    index?.version &&
+    isDelphiRunForDataset(loadedRun, index.version)
+      ? loadedRun
+      : null
   if (!run) {
     return (
-      <Empty hint="No Delphi run yet. Run pnpm bench delphi --mock for an offline dry run, or set AI_GATEWAY_API_KEY and run pnpm bench delphi." />
+      <Empty hint="No Delphi run matches the current dataset version. Run pnpm bench delphi after scoring the current dataset." />
     )
   }
 
@@ -63,8 +70,9 @@ export default async function DelphiPage() {
       <Eyebrow>The judgment layer</Eyebrow>
       <PageTitle>Panel estimates stay beside the scores</PageTitle>
       <Headline>
-        A <DefineLink term="Delphi panel">panel</DefineLink> scores the same dimensions as the
-        indicators and reviews the registry. Its estimates do not change the indicator score.
+        A <DefineLink term="Delphi panel">panel</DefineLink> reviews selected dimensions from the
+        source-backed evidence and audits the registry. Its estimates do not change the indicator
+        score or confidence.
       </Headline>
       <p className="mb-10 flex flex-wrap gap-2">
         <Meta icon="file-clock">run {run.runId}</Meta>
@@ -77,6 +85,9 @@ export default async function DelphiPage() {
         <Meta icon="bot">
           <DefineLink term="Provenance">{PROVENANCE_LABELS[run.provenance]}</DefineLink>
         </Meta>
+        {run.datasetVersion ? <Meta>dataset {run.datasetVersion}</Meta> : null}
+        {run.scope ? <Meta>{run.scope} run</Meta> : null}
+        {run.maxCoverage !== undefined ? <Meta>coverage ≤ {run.maxCoverage}</Meta> : null}
       </p>
 
       <Section

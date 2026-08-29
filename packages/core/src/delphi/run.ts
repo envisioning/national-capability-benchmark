@@ -10,6 +10,7 @@ import type { Panelist } from './panel.js'
 import type { PanelProvider } from './provider.js'
 import {
   anonymiseRound,
+  DELPHI_PROMPT_VERSION,
   indicatorJudgementPrompt,
   round1CellPrompt,
   round2CellPrompt,
@@ -19,14 +20,32 @@ export type DelphiOptions = {
   panel: Panelist[]
   provider: PanelProvider
   rounds: number
-  /** ISO3 subset. Empty means all ten. */
+  /** ISO3 subset. Empty means every scored country. */
   countries: string[]
+  /** Dataset frame used to build the evidence briefs. */
+  datasetVersion?: string
   /** Run the indicator audit as well as the country scoring. */
   judgeIndicators: boolean
-  /** Only score cells whose indicator coverage is below this, to save calls. */
+  /** Include dimensions whose source coverage is at or below this ceiling. */
   maxCoverage: number
   concurrency: number
   onProgress?: (message: string) => void
+}
+
+/** Dimensions the panel should see for one country in this run. */
+export function delphiDimensions(
+  result: CountryResult,
+  maxCoverage: number,
+): Dimension[] {
+  return DIMENSIONS.filter(
+    (dimension) => (result.dimensions[dimension]?.confidenceParts.coverage ?? 0) <= maxCoverage,
+  )
+}
+
+type CellJob = {
+  result: CountryResult
+  panelist: Panelist
+  dimensions: Dimension[]
 }
 
 /** Bounded-concurrency map. Keeps the panel from opening 40 sockets at once. */
@@ -64,21 +83,36 @@ export async function runDelphi(
   const log = opts.onProgress ?? (() => {})
 
   const cellEstimates: DelphiCellEstimate[] = []
-  const jobs = targets.flatMap((result) => opts.panel.map((panelist) => ({ result, panelist })))
+  const jobs: CellJob[] = targets.flatMap((result) => {
+    const dimensions = delphiDimensions(result, opts.maxCoverage)
+    return dimensions.length > 0
+      ? opts.panel.map((panelist) => ({ result, panelist, dimensions }))
+      : []
+  })
 
   for (let round = 1; round <= opts.rounds; round++) {
     log(`round ${round}: ${jobs.length} panelist-country calls`)
-    const prompts = jobs.map(({ result, panelist }) => {
-      if (round === 1) return round1CellPrompt(panelist, result)
+    const prompts = jobs.map(({ result, panelist, dimensions }) => {
+      if (round === 1) return round1CellPrompt(panelist, result, dimensions)
       const prior = cellEstimates
-        .filter((e) => e.iso3 === result.iso3 && e.round === round - 1)
+        .filter(
+          (e) =>
+            e.iso3 === result.iso3 &&
+            e.round === round - 1 &&
+            dimensions.includes(e.dimension),
+        )
         .map((e) => ({
           dimension: e.dimension,
           score: e.score,
           rationale: e.rationale,
           panelist: e.panelist,
         }))
-      return round2CellPrompt(panelist, result, anonymiseRound(prior, panelist.id))
+      return round2CellPrompt(
+        panelist,
+        result,
+        anonymiseRound(prior, panelist.id),
+        dimensions,
+      )
     })
 
     const answers = await pool(jobs, opts.concurrency, async (job, i) =>
@@ -87,13 +121,13 @@ export async function runDelphi(
 
     answers.forEach((answer, i) => {
       if (!answer) return
-      const job = jobs[i] as { result: CountryResult; panelist: Panelist }
+      const job = jobs[i] as CellJob
       for (const row of answer.dimensions) {
-        const dim = job.result.dimensions[row.dimension as Dimension]
-        if (dim && dim.confidenceParts.coverage > opts.maxCoverage) continue
+        const dimension = row.dimension as Dimension
+        if (!job.dimensions.includes(dimension)) continue
         cellEstimates.push({
           iso3: job.result.iso3,
-          dimension: row.dimension as Dimension,
+          dimension,
           round,
           panelist: job.panelist.id,
           model: job.panelist.model,
@@ -148,6 +182,11 @@ export async function runDelphi(
       provenance === 'mock'
         ? 'Deterministic offline stand-in. Exercises the pipeline. Not evidence about any country.'
         : `Panel of ${opts.panel.length} over ${opts.rounds} round(s).`,
+    datasetVersion: opts.datasetVersion ?? 'unknown',
+    countrySet: targets.map((result) => result.iso3).sort(),
+    scope: targets.length === results.length ? 'full' : 'subset',
+    maxCoverage: opts.maxCoverage,
+    promptVersion: DELPHI_PROMPT_VERSION,
     panel: opts.panel.map((p) => ({
       panelist: p.id,
       model: modelFor(p.model),

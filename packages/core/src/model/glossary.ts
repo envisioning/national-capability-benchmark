@@ -238,8 +238,8 @@ export const GLOSSARY: GlossaryEntry[] = [
   {
     term: 'Delphi panel',
     group: 'What sits beside the score',
-    short: 'Language models with fixed analytical stances, judging what the data cannot.',
-    full: 'A panel of models with different analytical stances scores the dimensions and audits the indicators. In round two, panelists see anonymized reasoning from round one. Panel estimates stay separate from indicator scores.',
+    short: 'Language models with fixed analytical stances, interpreting what the data misses.',
+    full: 'A panel of models with different analytical stances reviews thin or questionable dimensions from the source-backed evidence brief and audits the indicators. In round two, panelists see anonymized reasoning from round one. Panel estimates stay separate from indicator scores, observations and confidence.',
   },
   {
     term: 'Provenance',
@@ -284,8 +284,8 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: 'Blended score',
     group: 'What sits beside the score',
     short: 'The published fallback: the indicator score, or the panel estimate when no indicator evidence exists.',
-    full: 'Every dimension carries a blendedScore and blendedFrom label. The value is the indicator score when evidence exists, the panel estimate only when it does not, or none. It is never a mix.',
-    example: 'Every published cell currently reads blendedFrom: indicators, so the delphi fallback has never been exercised in shipped data.',
+    full: 'Every dimension carries a blendedScore and blendedFrom label. The value is the indicator score when the dimension clears its coverage floor, the panel estimate only when no indicator is observed, or none. It is never a mix.',
+    example: 'A dimension with one observed indicator remains unmeasured and does not fall back to Delphi. The fallback is reserved for a dimension with no observed indicators.',
   },
   {
     term: 'Revision log',

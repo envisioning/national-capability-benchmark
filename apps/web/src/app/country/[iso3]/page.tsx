@@ -9,6 +9,7 @@ import {
   DIMENSION_QUESTIONS,
   INDICATORS_BY_ID,
   contestedDisputeCounts,
+  isDelphiRunForDataset,
   isEvidential,
   isPanel,
 } from '@ncb/core'
@@ -74,7 +75,13 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
   ])
   /* A mock run exercises the pipeline and is never presented as evidence, so
    * the page treats it as no run at all. See the provenance invariant. */
-  const run = loadedRun && isEvidential(loadedRun.provenance) ? loadedRun : null
+  const run =
+    loadedRun &&
+    data?.version &&
+    isDelphiRunForDataset(loadedRun, data.version) &&
+    isEvidential(loadedRun.provenance)
+      ? loadedRun
+      : null
   const evidence = allEvidence.filter((e) => e.iso3 === country.iso3)
   const contestedCounts = contestedDisputeCounts(disputes)
   const meta = COUNTRIES.find((c) => c.iso3 === country.iso3)
@@ -119,6 +126,11 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
           <DefineLink term="Confidence" /> sits beside the score. A dashed radar edge and hollow
           point mean the evidence is thin. The tables below show each{' '}
           <DefineLink term="Indicator">indicator</DefineLink>, its raw value, year and source.
+        </p>
+        <p className="mt-3 text-lg leading-relaxed">
+          A panel estimate, when present, is a separate judgment about what the indicators miss.
+          It does not change the score or confidence. The panel&apos;s provenance is shown beside
+          the estimate.
         </p>
         <ClassLegend />
         <p className="text-xs leading-relaxed text-[var(--muted)]">
