@@ -252,6 +252,8 @@ Start with:
 
 - [CONTRIBUTING.md](CONTRIBUTING.md) for gap fills, evidence, languages and
   country changes;
+- [docs/RESEARCH-ROADMAP.md](docs/RESEARCH-ROADMAP.md) for the agent-ready
+  research queue, Trust work package and source promotion gates;
 - [docs/WHY.md](docs/WHY.md) for the claim and scope;
 - [docs/DECISIONS.md](docs/DECISIONS.md) for methodological choices;
 - [docs/KNOWN-ARTEFACTS.md](docs/KNOWN-ARTEFACTS.md) for known measurement

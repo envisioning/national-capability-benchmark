@@ -41,6 +41,11 @@ separate estimate, rationale, disagreement and missing evidence. It never
 creates an observation, changes confidence or turns an evidence record into a
 measurement.
 
+If you are extending the research rather than quoting the published data, read
+`docs/RESEARCH-ROADMAP.md`. It defines the source memo, coverage test, adapter
+contract, diagnostic review and handoff that every new indicator must carry.
+Trust is the current priority and has its own staged work package there.
+
 ---
 
 ## 2. What to fetch

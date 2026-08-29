@@ -1,8 +1,8 @@
 # NCB, the National Capability Benchmark — agent notes
 
 Prototype benchmark of a country's capacity to anticipate change, coordinate
-action, learn, adapt and build under uncertainty. Ten countries, nine
-dimensions, equal weights, no headline ranking.
+action, learn, adapt and build under uncertainty. The current registry has 52
+countries, nine dimensions, equal weights and no headline ranking.
 
 ## Commands
 
@@ -60,6 +60,9 @@ port 3888. That entry starts Next directly and does not use the proxy.
   selection, cost, and how to hand-author a run.
 - `docs/EVIDENCE.md` — the inclusion rule for evidence records and how to
   author one. Read it before adding anything to `data/evidence`. See D33.
+- `docs/RESEARCH-ROADMAP.md` — the executable research queue, source promotion
+  gates and the Trust work package. Read it before extending the registry or
+  adding a source adapter.
 
 ## Layout
 
