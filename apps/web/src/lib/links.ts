@@ -10,6 +10,13 @@ import type { Dimension, EvidenceStatus, Lang } from '@ncb/core'
 /** The full country profile. Ground layer, English. */
 export const countryProfileHref = (iso3: string): string => `/country/${iso3}`
 
+/** The local destination view for countries that have one. */
+export const countryLocalHref = (iso3: string): string =>
+  `${countryProfileHref(iso3.toUpperCase())}/local`
+
+/** The methodology overview. */
+export const methodHref = '/method'
+
 /** Stable fragment for one dimension's score on a country profile. */
 export const scoreAnchorHref = (iso3: string, dimension: Dimension): string =>
   `${countryProfileHref(iso3)}#score-${dimension}`
