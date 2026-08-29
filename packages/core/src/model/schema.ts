@@ -49,6 +49,8 @@ export const IndicatorSource = z.object({
   publisher: z.string(),
   /** Series or dataset identifier at the publisher, e.g. a World Bank series code. */
   series: z.string().optional(),
+  /** Stable id of a reproducible non-World-Bank adapter, where one exists. */
+  adapter: z.string().optional(),
   url: z.string().url().optional(),
   tier: SourceTier,
   /** False for proprietary rankings whose underlying data cannot be inspected. */
@@ -69,13 +71,14 @@ export const IndicatorDef = z.object({
   /**
    * How the value is obtained.
    * - worldbank: fetched live from the World Bank v2 API by `source.series`
+   * - adapter: fetched or parsed by the reproducible adapter named in `source.adapter`
    * - manual: a value a human entered into data/observations/manual.json
    * - gap: no adequate international dataset exists yet; deliberately unmeasured
    * - retired: a dataset exists and this project disqualified it. The row stays
    *   so the reason stays auditable. Retired indicators are not fetched and not
    *   scored, and they lower coverage exactly as a gap does. See D23.
    */
-  ingest: z.enum(['worldbank', 'manual', 'gap', 'retired']),
+  ingest: z.enum(['worldbank', 'adapter', 'manual', 'gap', 'retired']),
   /**
    * Which family inside the dimension the indicator belongs to.
    *

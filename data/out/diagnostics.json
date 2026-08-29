@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T23:34:39.155Z",
+  "generatedAt": "2026-08-29T18:22:17.579Z",
   "gdpSeries": "NY.GDP.PCAP.PP.KD",
   "dimensionVsGdp": [
     {
@@ -22,9 +22,9 @@
     },
     {
       "dimension": "trust",
-      "pearson": null,
-      "spearman": null,
-      "n": 0
+      "pearson": 0.627,
+      "spearman": 0.711,
+      "n": 35
     },
     {
       "dimension": "learning",
@@ -71,10 +71,28 @@
       "n": 52
     },
     {
+      "a": "trust",
+      "b": "adaptability",
+      "r": 0.772,
+      "n": 36
+    },
+    {
       "a": "agency",
       "b": "adaptability",
       "r": 0.766,
       "n": 51
+    },
+    {
+      "a": "agency",
+      "b": "trust",
+      "r": 0.733,
+      "n": 36
+    },
+    {
+      "a": "anticipation",
+      "b": "trust",
+      "r": 0.732,
+      "n": 36
     },
     {
       "a": "agency",
@@ -143,10 +161,22 @@
       "n": 52
     },
     {
+      "a": "trust",
+      "b": "shared_purpose",
+      "r": 0.595,
+      "n": 32
+    },
+    {
       "a": "anticipation",
       "b": "coordination",
       "r": 0.546,
       "n": 44
+    },
+    {
+      "a": "trust",
+      "b": "building",
+      "r": 0.536,
+      "n": 36
     },
     {
       "a": "learning",
@@ -159,6 +189,12 @@
       "b": "experimentation",
       "r": 0.524,
       "n": 51
+    },
+    {
+      "a": "trust",
+      "b": "experimentation",
+      "r": 0.518,
+      "n": 36
     },
     {
       "a": "coordination",
@@ -185,10 +221,22 @@
       "n": 40
     },
     {
+      "a": "trust",
+      "b": "learning",
+      "r": 0.476,
+      "n": 36
+    },
+    {
       "a": "agency",
       "b": "shared_purpose",
       "r": 0.475,
       "n": 46
+    },
+    {
+      "a": "coordination",
+      "b": "trust",
+      "r": 0.419,
+      "n": 32
     },
     {
       "a": "coordination",
@@ -225,54 +273,6 @@
       "b": "shared_purpose",
       "r": 0.165,
       "n": 45
-    },
-    {
-      "a": "anticipation",
-      "b": "trust",
-      "r": null,
-      "n": 0
-    },
-    {
-      "a": "agency",
-      "b": "trust",
-      "r": null,
-      "n": 0
-    },
-    {
-      "a": "coordination",
-      "b": "trust",
-      "r": null,
-      "n": 0
-    },
-    {
-      "a": "trust",
-      "b": "learning",
-      "r": null,
-      "n": 0
-    },
-    {
-      "a": "trust",
-      "b": "experimentation",
-      "r": null,
-      "n": 0
-    },
-    {
-      "a": "trust",
-      "b": "adaptability",
-      "r": null,
-      "n": 0
-    },
-    {
-      "a": "trust",
-      "b": "building",
-      "r": null,
-      "n": 0
-    },
-    {
-      "a": "trust",
-      "b": "shared_purpose",
-      "r": null,
-      "n": 0
     }
   ],
   "duplicateDimensionCandidates": [],
@@ -363,6 +363,14 @@
       "measurementClass": "O",
       "r": 0.691,
       "wealthProxyPrior": 0.4,
+      "flaggedAsWealthProxy": false
+    },
+    {
+      "indicatorId": "interpersonal_trust",
+      "dimension": "trust",
+      "measurementClass": "P",
+      "r": 0.669,
+      "wealthProxyPrior": 0.25,
       "flaggedAsWealthProxy": false
     },
     {
@@ -566,6 +574,13 @@
       "delta": 0.199
     },
     {
+      "indicatorId": "interpersonal_trust",
+      "dimension": "trust",
+      "dimensionR": 0.367,
+      "dimensionRWithout": 0.173,
+      "delta": 0.194
+    },
+    {
       "indicatorId": "income_inequality",
       "dimension": "shared_purpose",
       "dimensionR": 0.379,
@@ -692,13 +707,6 @@
       "delta": 0
     },
     {
-      "indicatorId": "contract_enforcement_days",
-      "dimension": "trust",
-      "dimensionR": 0.173,
-      "dimensionRWithout": null,
-      "delta": null
-    },
-    {
       "indicatorId": "domestic_credit_private",
       "dimension": "agency",
       "dimensionR": 0.85,
@@ -788,116 +796,16 @@
       "dimensionR": 0.641,
       "dimensionRWithout": 0.705,
       "delta": -0.064
+    },
+    {
+      "indicatorId": "contract_enforcement_days",
+      "dimension": "trust",
+      "dimensionR": 0.367,
+      "dimensionRWithout": 0.669,
+      "delta": -0.302
     }
   ],
-  "panelVsGdp": {
-    "runId": "2026-08-26T13-30-00-584125Z-in-session",
-    "provenance": "in_session",
-    "panelists": 1,
-    "evidential": true,
-    "hasDistribution": false,
-    "perDimension": [
-      {
-        "dimension": "anticipation",
-        "panelR": 0.906,
-        "panelSpearman": 0.865,
-        "panelN": 16,
-        "indicatorR": 0.896,
-        "indicatorN": 16,
-        "delta": 0.01,
-        "flaggedAsWealthProxy": true,
-        "backfillCandidate": false
-      },
-      {
-        "dimension": "agency",
-        "panelR": 0.802,
-        "panelSpearman": 0.818,
-        "panelN": 16,
-        "indicatorR": 0.821,
-        "indicatorN": 16,
-        "delta": -0.019,
-        "flaggedAsWealthProxy": true,
-        "backfillCandidate": false
-      },
-      {
-        "dimension": "coordination",
-        "panelR": 0.862,
-        "panelSpearman": 0.888,
-        "panelN": 16,
-        "indicatorR": 0.564,
-        "indicatorN": 15,
-        "delta": 0.298,
-        "flaggedAsWealthProxy": true,
-        "backfillCandidate": false
-      },
-      {
-        "dimension": "trust",
-        "panelR": 0.831,
-        "panelSpearman": 0.83,
-        "panelN": 16,
-        "indicatorR": null,
-        "indicatorN": 0,
-        "delta": null,
-        "flaggedAsWealthProxy": true,
-        "backfillCandidate": true
-      },
-      {
-        "dimension": "learning",
-        "panelR": 0.922,
-        "panelSpearman": 0.926,
-        "panelN": 16,
-        "indicatorR": 0.789,
-        "indicatorN": 16,
-        "delta": 0.132,
-        "flaggedAsWealthProxy": true,
-        "backfillCandidate": false
-      },
-      {
-        "dimension": "experimentation",
-        "panelR": 0.772,
-        "panelSpearman": 0.774,
-        "panelN": 16,
-        "indicatorR": 0.681,
-        "indicatorN": 16,
-        "delta": 0.091,
-        "flaggedAsWealthProxy": true,
-        "backfillCandidate": false
-      },
-      {
-        "dimension": "adaptability",
-        "panelR": 0.925,
-        "panelSpearman": 0.955,
-        "panelN": 16,
-        "indicatorR": 0.864,
-        "indicatorN": 16,
-        "delta": 0.061,
-        "flaggedAsWealthProxy": true,
-        "backfillCandidate": false
-      },
-      {
-        "dimension": "building",
-        "panelR": 0.841,
-        "panelSpearman": 0.783,
-        "panelN": 16,
-        "indicatorR": 0.81,
-        "indicatorN": 16,
-        "delta": 0.031,
-        "flaggedAsWealthProxy": true,
-        "backfillCandidate": false
-      },
-      {
-        "dimension": "shared_purpose",
-        "panelR": 0.551,
-        "panelSpearman": 0.619,
-        "panelN": 16,
-        "indicatorR": 0.35,
-        "indicatorN": 15,
-        "delta": 0.201,
-        "flaggedAsWealthProxy": false,
-        "backfillCandidate": false
-      }
-    ]
-  },
+  "panelVsGdp": null,
   "redundantIndicatorPairs": [
     {
       "a": "researchers_per_million",
@@ -988,11 +896,11 @@
     {
       "dimension": "trust",
       "indicatorsDefined": 8,
-      "indicatorsObserved": 1,
-      "gaps": 4,
+      "indicatorsObserved": 2,
+      "gaps": 3,
       "retired": 3,
-      "meanCoverage": 0.123,
-      "meanConfidence": 0.068,
+      "meanCoverage": 0.209,
+      "meanConfidence": 0.13,
       "classMix": {
         "C": 1,
         "I": 0,
@@ -1094,11 +1002,11 @@
         {
           "family": "social",
           "indicatorsDefined": 2,
-          "indicatorsObserved": 0
+          "indicatorsObserved": 1
         }
       ],
       "countriesOnOneFamily": 0,
-      "countriesScored": 0
+      "countriesScored": 36
     }
   ],
   "behaviouralChecks": [
@@ -1109,8 +1017,8 @@
       "countries": 49,
       "latestYear": 2025,
       "r": -0.553,
-      "dimensionR": null,
-      "dimensionN": 0
+      "dimensionR": -0.295,
+      "dimensionN": 36
     }
   ],
   "gdpStrippedTest": {
@@ -1142,7 +1050,7 @@
       },
       {
         "dimension": "trust",
-        "meanAbsShift": null
+        "meanAbsShift": 0
       },
       {
         "dimension": "learning",
@@ -1169,12 +1077,12 @@
       {
         "iso3": "BRA",
         "country": "Brazil",
-        "meanAbsShift": 2.83
+        "meanAbsShift": 2.48
       },
       {
         "iso3": "USA",
         "country": "United States",
-        "meanAbsShift": 2.45
+        "meanAbsShift": 2.1
       },
       {
         "iso3": "NLD",
@@ -1184,32 +1092,32 @@
       {
         "iso3": "CHE",
         "country": "Switzerland",
-        "meanAbsShift": 2.44
+        "meanAbsShift": 2.14
       },
       {
         "iso3": "SGP",
         "country": "Singapore",
-        "meanAbsShift": 7
+        "meanAbsShift": 6
       },
       {
         "iso3": "KOR",
         "country": "South Korea",
-        "meanAbsShift": 6.44
+        "meanAbsShift": 5.64
       },
       {
         "iso3": "EST",
         "country": "Estonia",
-        "meanAbsShift": 2.23
+        "meanAbsShift": 1.95
       },
       {
         "iso3": "IND",
         "country": "India",
-        "meanAbsShift": 4.97
+        "meanAbsShift": 4.35
       },
       {
         "iso3": "CHL",
         "country": "Chile",
-        "meanAbsShift": 4.03
+        "meanAbsShift": 3.52
       },
       {
         "iso3": "ZAF",
@@ -1219,27 +1127,27 @@
       {
         "iso3": "MEX",
         "country": "Mexico",
-        "meanAbsShift": 2.17
+        "meanAbsShift": 1.9
       },
       {
         "iso3": "ARG",
         "country": "Argentina",
-        "meanAbsShift": 4.09
+        "meanAbsShift": 3.58
       },
       {
         "iso3": "COL",
         "country": "Colombia",
-        "meanAbsShift": 2.27
+        "meanAbsShift": 1.99
       },
       {
         "iso3": "PER",
         "country": "Peru",
-        "meanAbsShift": 3.87
+        "meanAbsShift": 3.39
       },
       {
         "iso3": "URY",
         "country": "Uruguay",
-        "meanAbsShift": 2.43
+        "meanAbsShift": 2.13
       },
       {
         "iso3": "CRI",
@@ -1254,7 +1162,7 @@
       {
         "iso3": "FRA",
         "country": "France",
-        "meanAbsShift": 3.4
+        "meanAbsShift": 2.97
       },
       {
         "iso3": "GBR",
@@ -1264,22 +1172,22 @@
       {
         "iso3": "ESP",
         "country": "Spain",
-        "meanAbsShift": 3.97
+        "meanAbsShift": 3.47
       },
       {
         "iso3": "POL",
         "country": "Poland",
-        "meanAbsShift": 5.09
+        "meanAbsShift": 4.45
       },
       {
         "iso3": "SWE",
         "country": "Sweden",
-        "meanAbsShift": 3.25
+        "meanAbsShift": 2.79
       },
       {
         "iso3": "FIN",
         "country": "Finland",
-        "meanAbsShift": 3.11
+        "meanAbsShift": 2.72
       },
       {
         "iso3": "IRL",
@@ -1289,52 +1197,52 @@
       {
         "iso3": "CAN",
         "country": "Canada",
-        "meanAbsShift": 4.12
+        "meanAbsShift": 3.53
       },
       {
         "iso3": "AUS",
         "country": "Australia",
-        "meanAbsShift": 2.73
+        "meanAbsShift": 2.39
       },
       {
         "iso3": "JPN",
         "country": "Japan",
-        "meanAbsShift": 4.54
+        "meanAbsShift": 3.98
       },
       {
         "iso3": "CHN",
         "country": "China",
-        "meanAbsShift": 2.74
+        "meanAbsShift": 2.4
       },
       {
         "iso3": "IDN",
         "country": "Indonesia",
-        "meanAbsShift": 5.14
+        "meanAbsShift": 4.5
       },
       {
         "iso3": "VNM",
         "country": "Vietnam",
-        "meanAbsShift": 6.38
+        "meanAbsShift": 5.47
       },
       {
         "iso3": "PHL",
         "country": "Philippines",
-        "meanAbsShift": 4.23
+        "meanAbsShift": 3.7
       },
       {
         "iso3": "MYS",
         "country": "Malaysia",
-        "meanAbsShift": 4.97
+        "meanAbsShift": 4.35
       },
       {
         "iso3": "THA",
         "country": "Thailand",
-        "meanAbsShift": 5.41
+        "meanAbsShift": 4.74
       },
       {
         "iso3": "TUR",
         "country": "Turkey",
-        "meanAbsShift": 4.54
+        "meanAbsShift": 3.98
       },
       {
         "iso3": "ISR",
@@ -1349,12 +1257,12 @@
       {
         "iso3": "NGA",
         "country": "Nigeria",
-        "meanAbsShift": 5.2
+        "meanAbsShift": 4.46
       },
       {
         "iso3": "KEN",
         "country": "Kenya",
-        "meanAbsShift": 3.09
+        "meanAbsShift": 2.7
       },
       {
         "iso3": "RWA",
@@ -1364,12 +1272,12 @@
       {
         "iso3": "ETH",
         "country": "Ethiopia",
-        "meanAbsShift": 3.76
+        "meanAbsShift": 3.29
       },
       {
         "iso3": "BOL",
         "country": "Bolivia",
-        "meanAbsShift": 4.41
+        "meanAbsShift": 3.86
       },
       {
         "iso3": "PRY",
@@ -1379,12 +1287,12 @@
       {
         "iso3": "ECU",
         "country": "Ecuador",
-        "meanAbsShift": 3.59
+        "meanAbsShift": 3.14
       },
       {
         "iso3": "VEN",
         "country": "Venezuela",
-        "meanAbsShift": 7.16
+        "meanAbsShift": 5.97
       },
       {
         "iso3": "PAN",
@@ -1394,7 +1302,7 @@
       {
         "iso3": "GTM",
         "country": "Guatemala",
-        "meanAbsShift": 4.91
+        "meanAbsShift": 4.3
       },
       {
         "iso3": "HND",
@@ -1409,7 +1317,7 @@
       {
         "iso3": "NIC",
         "country": "Nicaragua",
-        "meanAbsShift": 4.43
+        "meanAbsShift": 3.87
       },
       {
         "iso3": "DOM",
@@ -1570,14 +1478,6 @@
       "publisher": "World Bank",
       "reason": "Added 2026-08-26 by D23 as the observable replacement for two retired WGI perception composites, and retired 2026-08-27 by D44 when the diagnostic built in D42 measured what it was doing. It raised this dimension's correlation with log GDP per capita by 0.288, from 0.096 to 0.385, the largest single wealth contribution anywhere in the model. It was added to fix wealth contamination and it was the wealth contamination. The dataset is sound and the objection is to what it measures here: homicide is driven heavily by organised crime, a society can be physically safe while trusting very little, and across this country set the variation it carries is mostly income. Behavioural trust measures remain a gap.",
       "status": "retired"
-    },
-    {
-      "dimension": "trust",
-      "indicatorId": "interpersonal_trust",
-      "name": "Generalised interpersonal trust",
-      "publisher": "World Values Survey",
-      "reason": "The single most important item in this dimension and the one we cannot currently pull. WVS wave 7 microdata needs a licensed download and manual harmonisation.",
-      "status": "gap"
     },
     {
       "dimension": "trust",
@@ -1749,7 +1649,7 @@
     }
   ],
   "outOfFrame": {
-    "observedCells": 1648,
+    "observedCells": 1684,
     "clampedCells": 0,
     "share": 0,
     "perCountry": []

@@ -1,5 +1,6 @@
 import { INDICATORS, WB_PUBLISHER } from './indicators.js'
 import type { IndicatorDef, SourceTier } from './schema.js'
+import { JOINT_EVS_WVS_PUBLISHER } from './source-catalog.js'
 
 /**
  * Where the data comes from, described once for both the fetcher and the reader.
@@ -87,6 +88,7 @@ export function worldBankSeriesUrl(opts: {
 export const PUBLISHER_HOME: Record<string, string> = {
   [WB_PUBLISHER]: 'https://data.worldbank.org',
   'Global Entrepreneurship Monitor': 'https://www.gemconsortium.org',
+  [JOINT_EVS_WVS_PUBLISHER]: 'https://www.worldvaluessurvey.org/WVSEVSjoint2017.jsp',
 }
 
 export type IngestRoute = IndicatorDef['ingest']
@@ -94,12 +96,13 @@ export type IngestRoute = IndicatorDef['ingest']
 /** How a value reaches the dataset, in the reader's words. Defined in the glossary. */
 export const INGEST_ROUTE_LABELS: Record<IngestRoute, string> = {
   worldbank: 'fetched from the API',
+  adapter: 'fetched by a source adapter',
   manual: 'entered by hand',
   gap: 'declared gap',
   retired: 'retired',
 }
 
-export const INGEST_ROUTES: IngestRoute[] = ['worldbank', 'manual', 'gap', 'retired']
+export const INGEST_ROUTES: IngestRoute[] = ['worldbank', 'adapter', 'manual', 'gap', 'retired']
 
 /** The publisher named on an indicator whose dataset does not exist yet. */
 export const NO_PUBLISHER = 'none'
@@ -137,7 +140,13 @@ export function publisherSummaries(): PublisherSummary[] {
   }
 
   const summaries = [...byPublisher].map(([publisher, indicators]): PublisherSummary => {
-    const routes: Record<IngestRoute, number> = { worldbank: 0, manual: 0, gap: 0, retired: 0 }
+    const routes: Record<IngestRoute, number> = {
+      worldbank: 0,
+      adapter: 0,
+      manual: 0,
+      gap: 0,
+      retired: 0,
+    }
     for (const def of indicators) routes[def.ingest] += 1
     const databases = [
       ...new Set(
@@ -155,7 +164,7 @@ export function publisherSummaries(): PublisherSummary[] {
         indicators.find((def) => def.source.url)?.source.url ??
         null,
       routes,
-      live: routes.worldbank + routes.manual,
+      live: routes.worldbank + routes.adapter + routes.manual,
       total: indicators.length,
       indicators,
       databases,

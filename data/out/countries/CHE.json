@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-28T23:34:37.744Z",
-  "version": "4.3.0",
+  "generatedAt": "2026-08-29T18:22:04.547Z",
+  "version": "4.4.0",
   "country": {
     "country": "Switzerland",
     "iso3": "CHE",
@@ -15,8 +15,8 @@
           "recency": 0.95,
           "sourceQuality": 0.95
         },
-        "delphiScore": 85,
-        "delphiIqr": 0,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
         "blendedScore": 81.1,
         "blendedFrom": "indicators",
@@ -740,8 +740,8 @@
           "recency": 0.722,
           "sourceQuality": 0.95
         },
-        "delphiScore": 65,
-        "delphiIqr": 0,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
         "blendedScore": 76.1,
         "blendedFrom": "indicators",
@@ -1754,8 +1754,8 @@
           "recency": 0.583,
           "sourceQuality": 0.95
         },
-        "delphiScore": 80,
-        "delphiIqr": 0,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
         "blendedScore": 98.3,
         "blendedFrom": "indicators",
@@ -2001,20 +2001,20 @@
         "checks": []
       },
       "trust": {
-        "score": null,
-        "observedIndicators": 1,
-        "belowCoverageFloor": true,
-        "confidence": 0.069,
+        "score": 75.3,
+        "observedIndicators": 2,
+        "belowCoverageFloor": false,
+        "confidence": 0.159,
         "confidenceParts": {
-          "coverage": 0.125,
-          "recency": 0.583,
-          "sourceQuality": 0.95
+          "coverage": 0.25,
+          "recency": 0.708,
+          "sourceQuality": 0.9
         },
-        "delphiScore": 90,
-        "delphiIqr": 0,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 90,
-        "blendedFrom": "delphi",
+        "blendedScore": 75.3,
+        "blendedFrom": "indicators",
         "momentum": [],
         "indicators": [
           {
@@ -2184,16 +2184,23 @@
             "indicatorId": "interpersonal_trust",
             "name": "Generalised interpersonal trust",
             "measurementClass": "P",
-            "raw": null,
-            "transformed": null,
-            "normalized": null,
-            "year": null,
-            "source": "World Values Survey",
-            "sourceTier": null,
+            "raw": 58.5,
+            "transformed": 58.5,
+            "normalized": 84.6,
+            "year": 2022,
+            "source": "Joint EVS/WVS (A165)",
+            "sourceTier": "academic_survey",
             "winsorized": false,
             "outOfFrame": false,
-            "series": [],
-            "status": "gap"
+            "series": [
+              {
+                "year": 2022,
+                "raw": 58.5,
+                "normalized": 84.6,
+                "tier": "academic_survey"
+              }
+            ],
+            "status": "observed"
           },
           {
             "indicatorId": "institutional_trust",
@@ -2267,8 +2274,8 @@
           "recency": 0.8,
           "sourceQuality": 0.95
         },
-        "delphiScore": 85,
-        "delphiIqr": 0,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
         "blendedScore": 65.1,
         "blendedFrom": "indicators",
@@ -3084,8 +3091,8 @@
           "recency": 0.875,
           "sourceQuality": 0.9
         },
-        "delphiScore": 60,
-        "delphiIqr": 0,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
         "blendedScore": 50.7,
         "blendedFrom": "indicators",
@@ -3699,8 +3706,8 @@
           "recency": 1,
           "sourceQuality": 0.95
         },
-        "delphiScore": 70,
-        "delphiIqr": 0,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
         "blendedScore": 88.6,
         "blendedFrom": "indicators",
@@ -4792,8 +4799,8 @@
           "recency": 0.917,
           "sourceQuality": 0.95
         },
-        "delphiScore": 80,
-        "delphiIqr": 0,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
         "blendedScore": 58.1,
         "blendedFrom": "indicators",
@@ -5806,8 +5813,8 @@
           "recency": 0.917,
           "sourceQuality": 0.95
         },
-        "delphiScore": 75,
-        "delphiIqr": 0,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
         "blendedScore": 52.2,
         "blendedFrom": "indicators",

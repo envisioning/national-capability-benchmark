@@ -37,10 +37,11 @@ indicator rows. A series needs a registry definition, a named inspectable
 publisher, a source URL, a year, a clear unit, a direction and a documented
 transform. It must pass the coverage and quality gates below.
 
-World Bank is the only live automated adapter in v0. `manual.json` is for
-human-entered values from a source that has no usable API. A repeated manual
-process is a signal to build an adapter, not a reason to grow a larger hand-
-maintained file.
+World Bank ingestion and reproducible source adapters are live in v0.
+`manual.json` is for human-entered values from a source that has no usable API.
+A repeated manual process is a signal to build an adapter, not a reason to
+grow a larger hand-maintained file. The first adapter is the pinned official
+Joint EVS/WVS results table for generalized interpersonal trust.
 
 ### B. Evidence records
 
@@ -121,11 +122,14 @@ may fetch, parse and normalize publisher data, but it must emit the existing
 observation shape: indicator id, ISO3, value, year, source tier, source URL and
 retrieval date.
 
-The current ingestion path is World Bank-specific in
-`packages/core/src/pipeline/ingest.ts`. The next non-World-Bank source should
-add a shared adapter contract rather than another one-off importer. The adapter
-must be deterministic for a pinned source release, preserve the publisher's
-raw value, make missingness explicit, and report coverage before scoring.
+The World Bank ingestion path remains in
+`packages/core/src/pipeline/ingest.ts`. Non-World-Bank sources use the shared
+adapter result contract in `packages/core/src/pipeline/adapters/types.ts`.
+An adapter must be deterministic for a pinned source release, preserve the
+publisher's raw value, make missingness explicit, and report coverage before
+scoring. Its observations are loaded with World Bank and manual observations,
+so the normal scoring and diagnostic code does not care which source produced
+them.
 
 Never commit licensed microdata or credentials. Commit a permitted derived
 series, the extraction or transformation code, its source metadata and enough
@@ -178,16 +182,20 @@ preflight, not the published panel.
 
 ## P0: finish Trust
 
-Trust currently has eight registry rows, one observed indicator, three retired
-rows and four gaps. It publishes no score. D57 defines the acceptance test:
-Trust needs one harmonised social measure and one comparable
-institutional-performance measure, and the combined result must survive the
-D42 wealth-attribution test. D60's bribery-incidence series is a useful
-behavioural check, but it is deliberately excluded from the score.
+Trust currently has eight registry rows, two observed indicators, three retired
+rows and three gaps. The first source-backed release publishes a provisional
+Trust score for 36 of 52 countries from one generalized social-trust measure
+and the existing institutional-performance contract-enforcement measure. D57's
+two-family acceptance test is structurally met for those cells, but the result
+remains thin: confidence is 0.159 where both rows are observed, the social
+measure is a perception proxy, contract enforcement is frozen at 2019, and
+court performance is still missing. D60's bribery-incidence series remains a
+useful behavioural check and is deliberately excluded from the score.
 
-Do not make Trust publish by adding another perception composite, homicide,
-bribery incidence or a model estimate. The empty axis is the correct output
-until the acceptance test is met.
+Do not treat the first score as the finished Trust construct. The next work is
+to pool the held Joint EVS/WVS rows reproducibly and to land court-case
+clearance or another comparable institutional-performance measure. Delphi can
+interpret the thin release, but it cannot fill either gap.
 
 ### TRUST-0: freeze the baseline
 
@@ -200,8 +208,9 @@ until the acceptance test is met.
 current dataset version, observed coverage, family coverage, retired rows,
 known artefacts and the two-series acceptance test.
 
-**Done when:** another agent can reproduce the baseline and knows which existing
-series must remain excluded. This task changes no score and no registry row.
+**Status:** complete for dataset 4.4.0. Another agent can reproduce the
+baseline and knows which existing series must remain excluded. The source
+promotion and generated output are documented below.
 
 ### TRUST-1: harmonise the social measure
 
@@ -209,11 +218,20 @@ series must remain excluded. This task changes no score and no registry row.
 `willingness_to_cooperate_strangers` only if the same source and harmonisation
 process support it without weakening comparability.
 
-**Primary candidate:** [World Values Survey wave 7](https://www.worldvaluessurvey.org/WVSDocumentationWV7.jsp), as named in the registry.
-The research memo must resolve access, licensing, country coverage, fieldwork
+**Current source:** the official [Joint EVS/WVS 2017-2022 results release](https://www.gesis.org/en/european-values-study/data-and-documentation/joint-evs/wvs-2017-2022-dataset),
+release 5.0.0, published by GESIS. The `A165` table asks whether most people
+can be trusted. Its published country results are weighted by `gwght`; `1`
+means trusted, `2` means careful, and negative codes are missing in the source
+codebook. The adapter uses the publisher's weighted percentage for `1`, stores
+the release year 2022, and does not copy respondent-level microdata. It
+currently recognizes 39 benchmark countries and emits 36 unique country rows.
+Germany, Great Britain and the Netherlands have separate EVS and WVS rows and
+are held until pooled microdata weights can be harmonised reproducibly.
+
+The research memo must keep access, licensing, country coverage, fieldwork
 years, variable identifiers, response coding, weights, missing-value codes and
-question wording. WVS data must not be copied into the repository if the license
-does not permit it.
+question wording explicit. WVS or EVS microdata must not be copied into the
+repository if the license does not permit it.
 
 **Fallback:** identify one inspectable survey source with equivalent wording
 and a documented harmonisation rule. Do not splice unrelated survey questions
@@ -225,8 +243,13 @@ coverage reported against all 52 countries, and no unexplained country-specific
 recoding. Use the half-frame screen as the first coverage test. If it fails,
 keep the row as a gap and explain why.
 
-**Deliverable:** a reproducible extraction note, a permitted derived
-observation file or adapter output, and a registry update only after review.
+**Deliverable:** the adapter, its permitted derived observation file, source
+metadata and a coverage report. The current implementation is
+`pnpm bench trust fetch`; it writes
+`data/observations/joint-evs-wvs.json`, records additions in
+`data/observations/revisions.json`, and then uses the ordinary `score`,
+`diagnose` and `report` commands. The extraction note is
+`docs/research/trust/JOINT-EVS-WVS.md`.
 
 ### TRUST-2: land the institutional-performance measure
 
@@ -263,9 +286,14 @@ reusable adapter or a clearly bounded manual import while the adapter is built.
 
 **Goal:** make the social and institutional imports repeatable.
 
-**Deliverable:** a shared source-adapter contract plus the first Trust adapter,
-with fixture data, a coverage report and a deterministic output matching the
-observation schema. Keep the World Bank adapter behavior unchanged.
+**Status:** first path complete for the Joint EVS/WVS social measure. The shared
+contract is in `packages/core/src/pipeline/adapters/types.ts`; the adapter is
+in `packages/core/src/pipeline/adapters/joint-evs-wvs.ts`.
+
+**Deliverable for the remaining work:** add adapters for court or other
+institutional-performance sources with fixture data, a coverage report and a
+deterministic output matching the observation schema. Keep the World Bank
+ingestion behavior unchanged.
 
 **Done when:** an agent can rerun the import from a pinned source release
 without editing values by hand, and a failed fetch cannot silently erase the
@@ -273,7 +301,8 @@ previous published observations.
 
 ### TRUST-4: promote only after the diagnostics review
 
-Promotion is a single reviewed change. It must include the registry row or
+The first social-plus-contract release is promoted in dataset 4.4.0. Future
+promotion is a single reviewed change. It must include the registry row or
 rows, adapter or permitted manual data, source metadata, version bump, decision
 entry and generated output.
 
@@ -286,8 +315,10 @@ The review must show:
 - redundancy checks across the two families;
 - confidence and coverage beside every published Trust score.
 
-If one family is still absent, stop. Keep Trust unscored and return the work to
-TRUST-1 or TRUST-2. Do not use Delphi to fill the missing family.
+The current release passes the structural family test where it publishes, but
+it does not close the research package: court performance, broader coverage,
+and the wealth and redundancy review remain open. Do not use Delphi to fill
+those missing measurements.
 
 ### TRUST-5: rerun interpretation after release
 

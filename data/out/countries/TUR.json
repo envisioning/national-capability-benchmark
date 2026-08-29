@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-28T23:34:37.744Z",
-  "version": "4.3.0",
+  "generatedAt": "2026-08-29T18:22:04.547Z",
+  "version": "4.4.0",
   "country": {
     "country": "Turkey",
     "iso3": "TUR",
@@ -2188,20 +2188,20 @@
         "checks": []
       },
       "trust": {
-        "score": null,
-        "observedIndicators": 1,
-        "belowCoverageFloor": true,
-        "confidence": 0.069,
+        "score": 39.7,
+        "observedIndicators": 2,
+        "belowCoverageFloor": false,
+        "confidence": 0.159,
         "confidenceParts": {
-          "coverage": 0.125,
-          "recency": 0.583,
-          "sourceQuality": 0.95
+          "coverage": 0.25,
+          "recency": 0.708,
+          "sourceQuality": 0.9
         },
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": null,
-        "blendedFrom": "none",
+        "blendedScore": 39.7,
+        "blendedFrom": "indicators",
         "momentum": [],
         "indicators": [
           {
@@ -2371,16 +2371,23 @@
             "indicatorId": "interpersonal_trust",
             "name": "Generalised interpersonal trust",
             "measurementClass": "P",
-            "raw": null,
-            "transformed": null,
-            "normalized": null,
-            "year": null,
-            "source": "World Values Survey",
-            "sourceTier": null,
+            "raw": 14,
+            "transformed": 14,
+            "normalized": 15.3,
+            "year": 2022,
+            "source": "Joint EVS/WVS (A165)",
+            "sourceTier": "academic_survey",
             "winsorized": false,
             "outOfFrame": false,
-            "series": [],
-            "status": "gap"
+            "series": [
+              {
+                "year": 2022,
+                "raw": 14,
+                "normalized": 15.3,
+                "tier": "academic_survey"
+              }
+            ],
+            "status": "observed"
           },
           {
             "indicatorId": "institutional_trust",

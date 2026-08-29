@@ -26,6 +26,7 @@ export default function MethodPage() {
   const gaps = INDICATORS.filter((i) => i.ingest === 'gap').length
   const retired = INDICATORS.filter((i) => i.ingest === 'retired').length
   const wired = INDICATORS.filter(isScored).length
+  const adapters = INDICATORS.filter((i) => i.ingest === 'adapter').length
   const manual = INDICATORS.filter((i) => i.ingest === 'manual').length
   const classes: MeasurementClass[] = ['C', 'I', 'O', 'P']
 
@@ -125,8 +126,8 @@ export default function MethodPage() {
         <p className="mt-4 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
           The registry has {INDICATORS.length} indicators: {wired} with data, {gaps} gaps and{' '}
           {retired} retired rows. Gaps have no comparable dataset; retired rows have a rejected
-          one. Both lower confidence and define the collection agenda. {manual} values come from
-          published tables, with retrieval dates stored.
+          one. Both lower confidence and define the collection agenda. {adapters} values come from
+          reproducible source adapters and {manual} from published tables, with retrieval dates stored.
         </p>
       </Section>
 

@@ -92,7 +92,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     group: 'What is being measured',
     short: 'A group of indicators inside one dimension that answer the same question.',
     full: 'Some dimensions ask two questions under one name. Trust asks whether people rely on strangers and whether they rely on institutions, and an indicator belongs to one of those two families. The family changes nothing about the score, which stays the equal-weight average of whatever is observed. It exists so the diagnostics can report which family the evidence came from, because several readings of one question are not several independent signals.',
-    example: 'Trust holds a social family and an institutional family. Only the institutional family has any data, so the evidence answers one of the two questions.',
+    example: 'Trust holds a social family and an institutional family. The current release observes one row in each family where it scores, while court performance remains a gap.',
   },
   {
     term: 'Behavioral check',
@@ -186,8 +186,8 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: 'Ingest route',
     group: 'How a number is made',
     short: 'How a value gets into the dataset: from an API, a published table, or nowhere yet.',
-    full: 'Every indicator declares one of four routes. Fetched values come from an API. Values from published tables keep the retrieval date. A gap has no comparable dataset. A retired row has a rejected dataset. Both lower confidence.',
-    example: 'Two indicators are entered by hand from the Global Entrepreneurship Monitor, which publishes its adult population survey as a table.',
+    full: 'Every indicator declares one of five routes. World Bank values come from its API. Values from a reproducible source adapter are fetched or parsed by code tied to a named release. Values from published tables keep the retrieval date. A gap has no comparable dataset. A retired row has a rejected dataset. Both lower confidence.',
+    example: 'Generalised interpersonal trust is parsed by the Joint EVS/WVS adapter from the publisher-weighted A165 results table. GEM indicators remain entered by hand from published tables.',
   },
   {
     term: 'Gap',

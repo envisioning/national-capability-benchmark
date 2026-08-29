@@ -133,7 +133,7 @@ export function diffObservations(
   return { revisions, changed, added, removed }
 }
 
-async function recordRevisions(
+export async function recordRevisions(
   before: Observation[],
   previousRetrievedAt: string | null,
   after: Observation[],

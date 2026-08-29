@@ -72,15 +72,17 @@ indicators, reported separately.
 
 ---
 
-## A3 — Coordination and Trust are mostly measured by perception of wealth
+## A3 — Coordination and Trust remain weakly separable from wealth
 
-**Severity: high. This is the strongest single finding of the prototype.**
+**Severity: high. The first source-backed Trust release is still thin.**
 
-Trust publishes no indicator score. Coordination publishes a score for 44 of 52
-countries, but the result rests on two indicators and confidence remains thin.
-D23 retired every perception indicator named below, D44 retired the homicide
-rate, and D45's coverage floor stopped Trust printing a number on what was left.
-The finding below is why.
+The current figures are from dataset 4.4.0. Coordination publishes a score for
+44 of 52 countries, based on two operational indicators. Trust publishes a
+score for 36 of 52 countries, based on the Joint EVS/WVS A165 social-trust
+measure and the 2019-frozen contract-enforcement measure. Trust's dimension
+correlation with log GDP per capita is 0.627 (Spearman 0.711, n=35), so the
+release is usable as a research baseline but not a clean claim of wealth-free
+trust. D23 retired the WGI perception composites and D44 retired homicide.
 
 Both dimensions leaned on the Worldwide Governance Indicators, which are expert
 and firm perception composites that track income closely by construction. On the
@@ -101,25 +103,27 @@ indicators in it are retired, so it cannot be recomputed on the current frame:
 | Trust | Rule of law | +0.83 | P | no |
 | Trust | Contract enforcement days | +0.61 | C | yes |
 
-The pattern to read is the class column. Every indicator that fails the test is
-class P and every indicator that survives is class C. The wealth correlation in
-these two dimensions was carried by perception measures. Coordination now has a
-2024 World Bank budget-execution series beside the older border-time measure,
-but that series is still a proxy for coordination and has uneven country
-coverage. Trust still has only the 2019 contract measure.
+The pattern to read is the class column. Every indicator that failed the old
+test was class P and every indicator that survived was class C. The current
+Trust release adds a class P social measure from a named academic survey to the
+class C contract measure. The social measure alone correlates with log GDP per
+capita at 0.669 in the current alignment, so it is a watch item rather than a
+verdict. Coordination has a 2024 World Bank budget-execution series beside the
+older border-time measure, but that combination remains an operational proxy
+with uneven country coverage.
 
 **Fix.** These dimensions need observable, behavioural indicators that are not
-WGI and not frozen at 2019. Budget execution is a useful first API-backed
-addition for Coordination, but it does not show whether agencies delivered the
-same objective. Court throughput, case clearance, civil society strength
-(V-Dem), and cross-agency delivery records remain the missing pieces. See also
-A9, which is the same problem seen from a small competent state, and D20, where
+WGI and not frozen at 2019. Budget execution is a useful API-backed addition for
+Coordination, but it does not show whether agencies delivered the same
+objective. Trust needs pooled EVS/WVS rows, a recent court-throughput or case
+clearance series, and broader institutional-performance evidence. See also A9,
+which is the same problem seen from a small competent state, and D20, where
 documented cross-agency delivery is being collected as evidence.
 
 **Overturned by.** Behavioural indicators that cover the country set and show
 that each dimension remains distinct from income after its indicators are
-combined. Until then, treat Coordination as a thin operational proxy and Trust
-as unmeasured.
+combined. Until then, treat both as thin operational proxies and treat the
+Trust score as provisional.
 
 ---
 
@@ -303,40 +307,42 @@ industrial output and a poor record of finishing public programmes scores well
 here, and the benchmark currently has no way to say so.
 
 ---
-## A12 — Coordination and Trust are scored on almost nothing
+## A12 — Coordination and Trust are scored on thin evidence
 
-**Severity: high. Created deliberately by D23 and partly relieved by D55.**
+**Severity: high. Trust is partly measured and Coordination remains narrow.**
 
-The figures in this entry are from dataset 4.3.0.
+The figures in this entry are from dataset 4.4.0.
 
 | Dimension | Observed indicators | Confidence | What is left | Publishes a score |
 | --- | ---: | ---: | --- | --- |
 | Coordination | 2 of 8 for 44 countries | 0.000 to 0.188, mean 0.152 | Border time from 2019 and budget execution, latest 2024 | 44 of 52 |
-| Trust | 1 of 8 for 51 countries | 0.000 to 0.069, mean 0.068 | Contract enforcement days from 2019 | no |
+| Trust | 2 of 8 for 36 countries | 0.000 to 0.159, mean 0.130 | Joint EVS/WVS A165 plus contract enforcement days from 2019; court clearance remains a gap | 36 of 52 |
 | Shared Purpose | 2 of 7 | 0.000 to 0.272, mean 0.223 | Tax revenue, income inequality | 46 of 52 |
 
 Coordination's new score is visible with its confidence and its two indicator
 rows. It remains a narrow operational proxy: budget alignment and border
 processing do not show whether several institutions delivered a shared national
-objective. Trust still prints no score under D45. Its indicator rows, confidence
-and trend publish, so the evidence is visible and the number that would misread
-it is not. Shared Purpose sits one indicator above the floor and prints, drawn
-dashed with a marked axis and a confidence band that says do not quote it alone.
-That is a mitigation and not a fix.
+objective. Trust now prints a provisional score where both rows are observed,
+but every published score rests on exactly two indicators at confidence 0.159.
+Sixteen countries remain below the coverage floor. Shared Purpose sits one
+indicator above the floor and prints, drawn dashed with a marked axis and a
+confidence band that says do not quote it alone. That is a mitigation and not a
+fix.
 
-**Trust is missing a whole family, not an indicator.** D57 splits the dimension
-into a social family, which asks whether people rely on strangers, and an
-institutional family, which asks whether they rely on courts, government and the
-civil service. The social family holds two indicators and none of them is
-observed in any country. The institutional family holds three and one is
-observed. The single scored row is therefore not a thin version of Trust. It is
-one half of Trust with the other half absent, and `familyBalance` in the
-diagnostics publishes that count.
+**Trust still has a narrow family balance.** D57 splits the dimension into a
+social family, which asks whether people rely on strangers, and an institutional
+family, which asks whether they rely on courts, government and the civil
+service. The current social family has one observed row in 36 countries. The
+institutional family has one observed row in 51, while court performance and
+institutional trust remain gaps. `familyBalance` publishes this coverage, so a
+reader can see that the structural test is met only by the social plus stale
+contract pair.
 
-**Fix.** Land court throughput and case clearance, civil society strength,
-cross-agency delivery records, generalized interpersonal trust, institutional
-trust, and behavioural measures of corruption experience. The generative panel
-can estimate the dimensions while those data are missing, but its values stay
+**Fix.** Pool the held EVS/WVS country rows with respondent-level weights when
+the license permits, then land court throughput and case clearance, civil
+society strength, cross-agency delivery records, institutional trust, and
+behavioural measures of corruption experience. The generative panel can
+interpret the dimensions while those data are missing, but its values stay
 beside the indicator score and never become observations.
 
 **What the World Bank can and cannot supply.** `GF.XPD.BUDG.ZS`, primary
@@ -353,11 +359,10 @@ behavioural check: fetched, published beside Trust and excluded from the frame,
 the mean, the coverage floor and the confidence. It is not admissible as the
 score, because it puts the two-indicator dimension at about 0.53 against log GDP
 per capita where contract enforcement days alone sits at about 0.14, a larger
-wealth contribution than the one D44 retired an indicator over. So Trust now
-publishes a current 49-country behavioural reading beside an empty axis, and it
-still needs a second source adapter for survey and court data before it scores
-anything. The current shortlist is
-V-Dem, WVS, OECD Government at a Glance, and a harmonized court or audit source.
+wealth contribution than the one D44 retired an indicator over. Trust now has a
+source-backed score from the Joint EVS/WVS adapter, but still needs court data
+and a broader social and institutional comparison. The current shortlist is
+V-Dem, OECD Government at a Glance, and a harmonized court or audit source.
 
 **B-READY is what the frozen rows become.** `IC.BRE.*` replaces Doing Business
 inside World Development Indicators, and its dispute resolution score is the
@@ -368,20 +373,23 @@ arrives, which is the closing condition for A6 as well.
 
 Civil society strength, voter turnout, volunteering and civic participation are
 absent from the catalogue under any database id, and the interpersonal and
-institutional trust items were never World Bank series. So Trust needs the
-project's second source adapter, and Coordination needs one for anything past
-budget execution. The shortlist is ILOSTAT, IDEA voter turnout, and OECD
-government at a glance for court clearance. `ingest: 'manual'` already exists
-for anything with no API.
+institutional trust items were never World Bank series. The Joint EVS/WVS
+adapter now supplies the first social row; Trust still needs an adapter for
+court clearance and Coordination needs one for anything past budget execution.
+The shortlist is ILOSTAT, IDEA voter turnout, and OECD government at a glance
+for court clearance. `ingest: 'manual'` remains available for sources with no
+usable API.
 
 The one indicator added to fix contamination was the contamination: D42 showed
 that `homicide_rate` raised Trust's wealth correlation by 0.288, so D44 retired
 it. Generative estimates are therefore a useful research layer, but they cannot
 repair a missing observation series.
 
-This artefact closes when at least two observable indicators land per dimension
-and the resulting Coordination score survives the wealth-attribution test. For
+This artefact remains open while the dimensions rely on narrow proxies. For
 Trust, D57 sets the stricter condition: one harmonised social measure and one
 comparable institutional-performance measure, because two indicators from the
-same family would clear the floor without answering the dimension. The
-budget series opens the door; it does not close the measurement problem.
+same family would clear the floor without answering the dimension. The current
+release meets that structure with A165 and contract enforcement, but court
+performance, broader coverage and the wealth and redundancy review remain open.
+The budget series opens the Coordination door; it does not close its measurement
+problem.

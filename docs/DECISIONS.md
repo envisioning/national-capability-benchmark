@@ -2697,3 +2697,46 @@ gaps.
 without hiding either provenance, or a source-backed series that measures the
 currently unmeasured dimensions with comparable country coverage, would justify
 a new decision.
+
+## D64: The first Trust social measure is a pinned Joint EVS/WVS adapter
+
+*Recorded 2026-08-29. Extends D57 and D63.*
+
+**Choice.** The first source-backed social measure for Trust is `A165`, “Most
+people can be trusted”, from the official Joint EVS/WVS 2017-2022 results
+release 5.0.0. The adapter reads the publisher's aggregate table, which is
+weighted by `gwght`, preserves the published percentage answering `1` (trusted),
+stores the release year 2022 and emits the existing observation shape. It does
+not copy respondent-level microdata or ask a model to generate a value.
+
+The adapter returns the shared coverage report defined in
+`pipeline/adapters/types.ts`, writes `data/observations/joint-evs-wvs.json` and
+records additions or changes in `data/observations/revisions.json`. The store
+loads it alongside World Bank and manual observations, so scoring, confidence,
+diagnostics and reports use the same metric path for every source. Countries
+with separate EVS and WVS rows, currently Germany, Great Britain and the
+Netherlands, are held until pooled microdata weights can be harmonised
+reproducibly. The existing contract-enforcement row is the institutional-
+performance leg for this provisional release; court clearance remains a gap.
+
+**Why.** The official aggregate release is inspectable, has a stable source
+endpoint and covers the benchmark sufficiently for the first social-family
+release. Using the publisher's weighted result avoids silently choosing a
+pooling rule for two survey programmes and avoids storing restricted
+respondent-level data. A source adapter makes the extraction repeatable and
+lets future EVS/WVS releases replace the file through the same revision log.
+
+**Costs.** Only 36 of 52 benchmark countries emit a unique row, although 39
+are recognized before duplicate-country rows are held. The item is a perception
+proxy, its reference year represents a multi-year fieldwork release, and the
+2019 contract-enforcement series is stale. Trust therefore publishes a thin
+two-indicator score for 36 countries at confidence 0.159. Its current GDP
+correlation is 0.627, and the A165 row alone is 0.669, so the release remains a
+watch item for wealth sensitivity, survey comparability and redundancy.
+
+**Overturned by.** A reproducible pooled-microdata treatment that improves
+coverage without weakening comparability, or a comparable court-performance
+series that changes the institutional leg, would justify a follow-up decision.
+Evidence that A165 is not comparable across the benchmark countries or that
+the two-family Trust result fails the wealth and redundancy review would require
+retiring or reclassifying the row.

@@ -24,6 +24,7 @@ export default function PortugueseMethodPage() {
   const gaps = INDICATORS.filter((i) => i.ingest === 'gap').length
   const retired = INDICATORS.filter((i) => i.ingest === 'retired').length
   const wired = INDICATORS.filter(isScored).length
+  const adapters = INDICATORS.filter((i) => i.ingest === 'adapter').length
   const manual = INDICATORS.filter((i) => i.ingest === 'manual').length
   const classes: MeasurementClass[] = ['C', 'I', 'O', 'P']
 
@@ -86,7 +87,7 @@ export default function PortugueseMethodPage() {
           <li>Calcule a confiança separadamente como cobertura × atualidade × qualidade da fonte.</li>
         </ol>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">Indicadores ausentes reduzem a cobertura e saem da média. Nada é imputado. Pesos iguais mantêm a v0 fácil de contestar.</p>
-        <p className="mt-4 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">O registro tem {INDICATORS.length} indicadores: {wired} com dados, {gaps} lacunas e {retired} linhas aposentadas. Lacunas não têm dataset comparável; linhas aposentadas têm um dataset rejeitado. As duas reduzem a confiança e definem a agenda de coleta. {manual} valores vêm de tabelas publicadas, com datas de consulta armazenadas.</p>
+        <p className="mt-4 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">O registro tem {INDICATORS.length} indicadores: {wired} com dados, {gaps} lacunas e {retired} linhas aposentadas. Lacunas não têm dataset comparável; linhas aposentadas têm um dataset rejeitado. As duas reduzem a confiança e definem a agenda de coleta. {adapters} valores vêm de adaptadores de fonte reproduzíveis e {manual} de tabelas publicadas, com datas de consulta armazenadas.</p>
       </Section>
 
       <Section title="Todo indicador declara o que mede" hint="O dataset classifica cada indicador como C, I, O ou P para que a classificação possa ser verificada.">

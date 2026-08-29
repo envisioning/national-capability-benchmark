@@ -31,9 +31,11 @@ different claim, and the project has no way to defend it.
 
 The source-backed track is the measurement layer. It uses registry-defined
 indicators and named publishers, then computes `score`, `confidence` and the
-indicator rows. World Bank is the only automated ingestion source in v0. A
-small set of manually authored observations is stored separately. Other
-publishers remain declared gaps until an adapter and comparable coverage exist.
+indicator rows. World Bank ingestion and reproducible source adapters emit the
+same observation shape, and manually authored observations remain a separate
+input. The current adapter imports the official Joint EVS/WVS A165 trust table.
+Other publishers remain declared gaps until an adapter and comparable coverage
+exist.
 
 The Delphi track is an interpretation layer. It reads the source-backed
 evidence brief to review thin or questionable dimensions. It can record a
@@ -172,12 +174,12 @@ think.
 The ones that will bite an automated reader first:
 
 - **A1** — Experimentation is not measured. It is inferred from patents.
-- **A3** — Coordination and Trust are mostly measured by perception of wealth,
-  and are not separable from GDP in the current data.
+- **A3** — Coordination and Trust remain weakly separable from wealth, and the
+  first source-backed Trust release is still thin.
 - **A9** — Coordination reads far too low for small, competent states.
 - **A10** — The frame is wide and it is not the world.
 - **A11** — Building measures industrial output and reads as delivery capacity.
-- **A12** — Coordination and Trust are scored on almost nothing.
+- **A12** — Coordination and Trust are scored on thin evidence.
 
 If your output quotes a dimension named above, quote the artefact with it.
 

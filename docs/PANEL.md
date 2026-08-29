@@ -2,8 +2,9 @@
 
 The benchmark has two assessment tracks. The source-backed track measures the
 country with named indicators and produces the canonical `score` and
-`confidence`. World Bank is the only automated ingestion source in v0. A small
-set of manually authored observations is stored separately. The Delphi track
+`confidence`. World Bank ingestion and reproducible source adapters produce
+the same observation shape, while a small set of manually authored observations
+is stored separately. The Delphi track
 interprets the evidence brief where coverage is thin or an indicator may
 misread the construct. It never creates an observation, changes confidence or
 silently replaces the source-backed score.

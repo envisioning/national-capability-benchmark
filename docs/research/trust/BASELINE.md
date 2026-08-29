@@ -1,13 +1,14 @@
 # Trust research baseline
 
-Status: baseline complete
+Status: source-backed first release, court-performance follow-up open
 
 Recorded: 2026-08-29
 
-Dataset: 4.3.0, generated 2026-08-28
+Dataset: 4.4.0, generated 2026-08-29
 
 This baseline is the starting point for TRUST-1 through TRUST-5 in
-`docs/RESEARCH-ROADMAP.md`. It is a research note, not a new score.
+`docs/RESEARCH-ROADMAP.md`.
+The detailed extraction note is [`JOINT-EVS-WVS.md`](JOINT-EVS-WVS.md).
 
 ## Current state
 
@@ -19,20 +20,23 @@ Trust has eight registry rows:
 | Institutional | `control_of_corruption` | retired | 0 of 52 | WGI perception composite, retired under D23. |
 | Institutional | `contract_enforcement_days` | observed | 51 of 52 | Doing Business series frozen at 2019. |
 | None | `homicide_rate` | retired | 0 of 52 | Physical safety is not trust and the row raises GDP sensitivity. |
-| Social | `interpersonal_trust` | gap | 0 of 52 | WVS extraction and harmonisation are not yet in the repository. |
+| Social | `interpersonal_trust` | observed by adapter | 36 of 52 | Joint EVS/WVS A165 has 39 recognized benchmark countries; Germany, Great Britain and the Netherlands have separate EVS and WVS rows held for pooled microdata. |
 | Institutional | `institutional_trust` | gap | 0 of 52 | OECD coverage is limited and WVS access and harmonisation remain unresolved. |
 | Social | `willingness_to_cooperate_strangers` | gap | 0 of 52 | WVS extraction and harmonisation are not yet in the repository. |
 | Institutional | `court_case_clearance` | gap | 0 of 52 | Court data needs a cross-publisher harmonisation path. |
 
-The current output publishes no Trust score. The observed row is one stale
-institutional measure, so the coverage floor correctly leaves `score` null.
-The current output does publish the `bribery_incidence` behavioural check for
-all 52 countries. It is evidence beside Trust, not a Trust indicator. D60
-excludes it because adding it would increase the dimension's GDP sensitivity.
+The current output publishes a Trust score for 36 countries where both the
+Joint EVS/WVS social row and the contract-enforcement row are observed. The
+score is provisional: both cells rest on exactly two indicators and confidence
+is 0.159, while 16 countries remain below the coverage floor. The
+`bribery_incidence` behavioural check still publishes for all 52 countries. It
+is evidence beside Trust, not a Trust indicator. D60 excludes it because adding
+it would increase the dimension's GDP sensitivity.
 
 ## Acceptance test
 
-Trust is ready for a source-backed score only when all of these are true:
+The first provisional source-backed Trust score requires the first and second
+conditions below. A finished Trust release must satisfy all six:
 
 1. At least one social series and one institutional-performance series are in
    the frame.
@@ -56,11 +60,13 @@ lower this screen silently.
 
 ### Social first: generalised interpersonal trust
 
-Use the official [WVS wave 7 documentation](https://www.worldvaluessurvey.org/WVSDocumentationWV7.jsp)
-and its questionnaire and codebook. The extraction note must identify the
-variable, response coding, survey year, sample weight and missing-value codes.
-It must also show which of the 52 countries participated and whether fieldwork
-years can be treated as one reference period.
+Use the official [Joint EVS/WVS 2017-2022 documentation](https://www.gesis.org/en/european-values-study/data-and-documentation/joint-evs/wvs-2017-2022-dataset),
+the [A165 codebook](https://access.gesis.org/dbk/69548?download_purpose=-99)
+and the [weighted results table](https://access.gesis.org/dbk/69549). The
+adapter's extraction note identifies A165, response coding, `gwght`, missing
+values, the 2022 release year and the 39 recognized benchmark countries. Its
+three held duplicate-country rows are a known coverage limit, not an
+interpolation.
 
 Do not commit the source microdata unless the license permits it. A permitted
 derived country-year file and a reproducible extraction script are preferable
@@ -99,8 +105,8 @@ only permitted derived data, fixtures, extraction code and source metadata.
 
 ## Commands after data work
 
-Use the new adapter command when one exists. For a manual import, validate the
-observation file before scoring. Then run:
+For the current social adapter, run `pnpm bench trust fetch`. For a manual
+import, validate the observation file before scoring. Then run:
 
 ```bash
 pnpm bench score
@@ -111,17 +117,22 @@ pnpm build
 pnpm typecheck
 ```
 
-Do not promote either Trust family from a memo alone. The promotion change must
-include the registry, source code or permitted manual data, the version bump,
-the decision entry and generated output. Only after that release should an
-agent run the full Delphi review described in TRUST-5.
+The social family is promoted in dataset 4.4.0. Do not promote the remaining
+Trust gaps from a memo alone. Each promotion change must include the registry,
+source code or permitted manual data, the version bump, the decision entry and
+generated output. Run the full Delphi review described in TRUST-5 only after
+reviewing the source-backed release.
 
 ## Baseline evidence
 
-- `data/out/index.json` reports dataset version 4.3.0.
-- `data/out/countries/*.json` contains one observed Trust indicator in 51
-  countries and no published Trust score.
-- `data/out/diagnostics.json` reports Trust as 1 of 8 observed indicators,
-  0.123 mean coverage and 0.068 mean confidence.
+- `data/out/index.json` reports dataset version 4.4.0, with Trust scores in 36
+  of 52 countries.
+- `data/out/countries/*.json` contains the Joint EVS/WVS social row in 36
+  countries and the contract-enforcement row in 51.
+- `data/out/diagnostics.json` reports Trust as 2 of 8 observed indicators,
+  0.209 mean coverage and 0.130 mean confidence. Trust's dimension GDP
+  correlation is 0.627; the Joint EVS/WVS row alone is 0.669 in the current
+  alignment and is a watch item rather than a reason to hide the source.
 - `docs/DECISIONS.md` D57 defines the two-family acceptance test.
 - `docs/DECISIONS.md` D60 defines the excluded bribery-incidence check.
+- `docs/DECISIONS.md` D64 records the source-adapter promotion and its limits.

@@ -90,7 +90,9 @@ the artefacts is how those ways get found.
 - The dimensions hold up statistically, but country-level scores are too coarse
   to connect to action.
 - The evidence for softer dimensions never becomes inspectable, leaving
-  Coordination, Trust and Shared Purpose unmeasurable in principle. See A12.
+  Coordination and Shared Purpose thin and Trust only partly measured. The
+  first Joint EVS/WVS Trust release is inspectable but still needs court
+  performance and broader coverage. See A12.
 
 Each of these is a live risk today, and the first and third are visible in the
 current output.

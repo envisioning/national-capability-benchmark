@@ -9,6 +9,7 @@ countries, nine dimensions, equal weights and no headline ranking.
 ```
 pnpm install
 pnpm bench ingest      fetch World Bank series from 1990 into data/observations/worldbank.json
+pnpm bench trust fetch import the pinned Joint EVS/WVS A165 trust table into data/observations/joint-evs-wvs.json
 pnpm bench score       normalise and score, write data/out/index.json, data/out/countries/*.json and table.csv
 pnpm bench delphi      run the LLM panel (add --mock to run offline)
 pnpm bench diagnose    correlations, redundancy, GDP-sensitivity test
@@ -69,10 +70,11 @@ port 3888. That entry starts Next directly and does not use the proxy.
 - `packages/core` — the whole model. Registry, ingestion, normalisation, scoring,
   diagnostics, Delphi, CLI. Compiles to `dist`.
 - `apps/web` — Next.js viewer. Reads `data/out/*.json` at request time.
-- `data/observations` — raw values with source and year. `worldbank.json` is the
-  current file, `revisions.json` is the append-only log of what each run
-  restated, added or dropped, and `snapshots/` holds dated full copies written
-  only on `--snapshot`.
+- `data/observations` — raw values with source and year. `worldbank.json` holds
+  the World Bank series and `joint-evs-wvs.json` holds the pinned Trust adapter
+  output. `revisions.json` is the append-only log of what each run restated,
+  added or dropped, and `snapshots/` holds dated full copies written only on
+  `--snapshot`.
 - `data/delphi` — one file per panel run, plus `latest.json`, which is a pointer
   to the active run rather than an archive. Keep the original alongside it.
 - `data/evidence` — evidence records: documented deliveries filed against

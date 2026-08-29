@@ -5,11 +5,13 @@ import {
   GDP_PER_CAPITA_CODE,
   INDICATORS,
   INGEST_FROM_YEAR,
+  ObservationFile,
   isDelphiRunForDataset,
   rawHref,
 } from '../model/index.js'
 import type { CountryResult, Dimension } from '../model/index.js'
-import { ingestWorldBank } from '../pipeline/ingest.js'
+import { ingestWorldBank, recordRevisions } from '../pipeline/ingest.js'
+import { fetchJointEvsWvsTrust } from '../pipeline/adapters/joint-evs-wvs.js'
 import { probeSeries, registrySeries, searchCatalogue } from '../pipeline/probe.js'
 import type { ProbeRequest } from '../pipeline/probe.js'
 import {
@@ -169,6 +171,44 @@ async function diagnose(args: Args) {
   return { countries, diag, delphi }
 }
 
+async function trust(args: Args): Promise<void> {
+  const action = args._[1] ?? 'fetch'
+  if (action !== 'fetch') {
+    throw new Error(`Unknown trust action "${action}". Use pnpm bench trust fetch.`)
+  }
+  const retrievedAt = new Date().toISOString()
+  const result = await fetchJointEvsWvsTrust({ retrievedAt })
+  let existing: unknown | null = null
+  try {
+    existing = JSON.parse(await readFile(FILES.jointEvsWvs, 'utf8'))
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code !== 'ENOENT') {
+      throw new Error(`Cannot read existing Joint EVS/WVS observations: ${String(error)}`)
+    }
+  }
+  const parsedExisting = existing ? ObservationFile.safeParse(existing) : null
+  if (existing && !parsedExisting?.success) {
+    throw new Error(`Existing Joint EVS/WVS observations failed schema validation: ${FILES.jointEvsWvs}`)
+  }
+  const before = parsedExisting?.success ? parsedExisting.data.observations : []
+  const previousRetrievedAt = parsedExisting?.success ? parsedExisting.data.generatedAt : null
+  const body = `${JSON.stringify({ generatedAt: retrievedAt, observations: result.observations }, null, 2)}\n`
+  await writeOut(FILES.jointEvsWvs, body)
+  const revisions = await recordRevisions(before, previousRetrievedAt, result.observations, retrievedAt)
+
+  console.log(`Joint EVS/WVS ${result.release}: ${result.observations.length}/${COUNTRY_ISO3.length} benchmark countries emitted`)
+  console.log(`  source coverage: ${result.availableCountries.length}/${COUNTRY_ISO3.length}`)
+  if (result.heldCountries.length > 0) {
+    console.log(`  held for pooled microdata: ${result.heldCountries.join(', ')}`)
+  }
+  if (result.unmappedLabels.length > 0) {
+    console.log(`  source labels outside this country registry: ${result.unmappedLabels.length}`)
+  }
+  console.log(`trust data  -> ${FILES.jointEvsWvs}`)
+  console.log(
+    `revisions   -> ${revisions.changed} changed, ${revisions.added} added, ${revisions.removed} removed in ${FILES.revisions}`,
+  )
+}
 
 /**
  * Write the capability agenda: language-neutral JSON per country, plus one
@@ -236,6 +276,10 @@ async function main() {
 
     case 'diagnose':
       await diagnose(args)
+      break
+
+    case 'trust':
+      await trust(args)
       break
 
     case 'agenda': {
@@ -692,6 +736,7 @@ Start with file 1.
   pnpm bench delphi    [--mock] [--rounds 2] [--countries BRA,IND] [--models a,b]
                        [--max-coverage 0.5] [--no-judge] [--concurrency 4] [--activate]
   pnpm bench diagnose                     correlations, redundancy, GDP-sensitivity test
+  pnpm bench trust    fetch                fetch and parse Joint EVS/WVS A165 trust results
   pnpm bench prompt    [BRA IND ...] [--stance wealth_sceptic] [--system] [--audit trust]
                        [--paste] [--batch 4] [--out paste] [--local]
                                           print the exact panel prompt; --paste writes chat-ready bundles

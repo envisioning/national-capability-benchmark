@@ -3,8 +3,8 @@
   "name": "national-capability-benchmark",
   "title": "NCB, the National Capability Benchmark",
   "description": "A prototype that measures what a country can do, separately from how rich it is. Nine capability dimensions scored from public data, each with a separate confidence number.",
-  "version": "4.3.0",
-  "created": "2026-08-28T23:34:37.744Z",
+  "version": "4.4.0",
+  "created": "2026-08-29T18:22:04.547Z",
   "homepage": "https://github.com/envisioning/national-capability-benchmark",
   "licenses": [
     {
@@ -21,6 +21,10 @@
     {
       "title": "Global Entrepreneurship Monitor",
       "path": "https://www.gemconsortium.org"
+    },
+    {
+      "title": "Joint EVS/WVS",
+      "path": "https://www.worldvaluessurvey.org/WVSEVSjoint2017.jsp"
     }
   ],
   "contributors": [
@@ -117,6 +121,7 @@
         "indicators/time_to_export.json",
         "indicators/budget_execution_fidelity.json",
         "indicators/contract_enforcement_days.json",
+        "indicators/interpersonal_trust.json",
         "indicators/human_capital_index.json",
         "indicators/tertiary_enrollment.json",
         "indicators/education_expenditure_gdp.json",

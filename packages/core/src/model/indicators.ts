@@ -1,6 +1,10 @@
 import { z } from 'zod'
 import { IndicatorDef } from './schema.js'
 import type { Dimension } from './dimensions.js'
+import {
+  JOINT_EVS_WVS_PUBLISHER,
+  JOINT_EVS_WVS_RESULTS_URL,
+} from './source-catalog.js'
 
 type Raw = z.input<typeof IndicatorDef>
 
@@ -407,9 +411,16 @@ const RAW: Raw[] = [
     unit: '% agreeing',
     measurementClass: 'P',
     direction: 'higher_better',
-    source: { publisher: 'World Values Survey', tier: 'academic_survey', inspectable: true },
-    ingest: 'gap',
-    notes: 'The single most important item in this dimension and the one we cannot currently pull. WVS wave 7 microdata needs a licensed download and manual harmonisation.',
+    source: {
+      publisher: JOINT_EVS_WVS_PUBLISHER,
+      series: 'A165',
+      adapter: 'joint-evs-wvs-results-pdf',
+      url: JOINT_EVS_WVS_RESULTS_URL,
+      tier: 'academic_survey',
+      inspectable: true,
+    },
+    ingest: 'adapter',
+    notes: 'Share answering that most people can be trusted in the official Joint EVS/WVS 2017-2022 results table, release 5.0.0. The adapter uses the publisher-weighted country results, emits only countries with one survey row, and holds countries with separate EVS and WVS samples until the respondent-level weights can be pooled reproducibly. See D57 and D64.',
     wealthProxyPrior: 0.25,
   },
   {

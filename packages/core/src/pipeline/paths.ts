@@ -19,6 +19,7 @@ export const SCHEMA_OUT_DIR = resolve(OUT_DIR, 'schema')
 
 export const FILES = {
   worldBank: resolve(OBSERVATIONS_DIR, 'worldbank.json'),
+  jointEvsWvs: resolve(OBSERVATIONS_DIR, 'joint-evs-wvs.json'),
   manual: resolve(OBSERVATIONS_DIR, 'manual.json'),
   revisions: resolve(OBSERVATIONS_DIR, 'revisions.json'),
   delphiLatest: resolve(DELPHI_DIR, 'latest.json'),

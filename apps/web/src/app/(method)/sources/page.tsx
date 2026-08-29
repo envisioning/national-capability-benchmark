@@ -56,6 +56,7 @@ export default async function SourcesPage() {
   const coverage = await loadIndicatorCoverage()
 
   const fetched = INDICATORS.filter((i) => i.ingest === 'worldbank')
+  const adapters = INDICATORS.filter((i) => i.ingest === 'adapter')
   const manual = INDICATORS.filter((i) => i.ingest === 'manual')
   const retired = INDICATORS.filter((i) => i.ingest === 'retired')
   const gaps = INDICATORS.filter((i) => i.ingest === 'gap')
@@ -90,8 +91,8 @@ export default async function SourcesPage() {
       <Eyebrow>Sources</Eyebrow>
       <PageTitle>The registry names every source</PageTitle>
       <Headline>
-        {INDICATORS.length} indicators are listed here. {fetched.length + manual.length} have data:
-        {' '}{fetched.length} come from the World Bank API and {manual.length} from published tables.
+        {INDICATORS.length} indicators are listed here. {fetched.length + adapters.length + manual.length} have data:
+        {' '}{fetched.length} come from the World Bank API, {adapters.length} from source adapters and {manual.length} from published tables.
         The remaining {gaps.length + retired.length} have no value yet and remain listed.
       </Headline>
 
@@ -245,6 +246,48 @@ export default async function SourcesPage() {
         </Section>
       ) : null}
 
+      {adapters.length > 0 ? (
+        <Section
+          title={`${capitalize(countWord(adapters.length))} ${adapters.length === 1 ? 'indicator comes' : 'indicators come'} from a source adapter`}
+          hint="Adapters turn a named source release into the same observation shape as the World Bank data. The source release and extraction rule stay on the registry row."
+        >
+          <Scroller>
+            <Table>
+              <thead>
+                <tr>
+                  <Th>Indicator</Th>
+                  <Th>Publisher</Th>
+                  <Th>Adapter</Th>
+                  <Th>Source release</Th>
+                </tr>
+              </thead>
+              <tbody>
+                {adapters.map((def) => (
+                  <tr key={def.id}>
+                    <Td>
+                      <Link href={indicatorHref(def.id)} className="hover:underline">
+                        {def.name}
+                      </Link>
+                    </Td>
+                    <Td dim>{def.source.publisher}</Td>
+                    <Td dim>{def.source.adapter ?? 'unnamed'}</Td>
+                    <Td dim>
+                      {def.source.url ? (
+                        <a className="hover:underline" href={def.source.url}>
+                          {def.source.url.replace(/^https?:\/\//, '')}
+                        </a>
+                      ) : (
+                        'no link on the row'
+                      )}
+                    </Td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+          </Scroller>
+        </Section>
+      ) : null}
+
       <Section
         title={`${capitalize(countWord(retired.length))} retired series remain listed`}
         hint="A retired row has a rejected dataset. It remains visible so the decision can be challenged, and it lowers confidence."
@@ -303,6 +346,12 @@ export default async function SourcesPage() {
               worldbank.json
             </a>{' '}
             holds fetched values with year, tier and retrieval date, from {INGEST_FROM_YEAR} on.
+          </li>
+          <li>
+            <a href={docHref('data/observations/joint-evs-wvs.json')} className="underline underline-offset-4">
+              joint-evs-wvs.json
+            </a>{' '}
+            holds the permitted derived trust observations from the Joint EVS/WVS adapter.
           </li>
           <li>
             <a href={docHref('data/observations/revisions.json')} className="underline underline-offset-4">
