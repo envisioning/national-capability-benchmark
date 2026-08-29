@@ -171,7 +171,7 @@ Real runs use the Vercel AI Gateway:
 ~~~bash
 export AI_GATEWAY_API_KEY=...
 export NCB_PANEL=anthropic/claude-opus-5,openai/gpt-5,google/gemini-2.5-pro
-pnpm bench cost --max-coverage 0.5
+pnpm bench cost --max-coverage 1
 pnpm bench delphi --rounds 2 --max-coverage 1 --activate
 ~~~
 
