@@ -1,0 +1,5918 @@
+{
+  "generatedAt": "2026-08-29T19:00:44.304Z",
+  "methodVersion": "leverage/0.1-exploratory",
+  "countries": {
+    "BRA": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 62.5,
+        "rawValue": 0.808,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 64.1,
+        "rawValue": 0.801,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 47.1,
+        "rawValue": 0.561,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2024
+        }
+      },
+      "capital_availability": {
+        "value": 33.8,
+        "rawValue": 0.363,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2025
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 19,
+        "rawValue": 0.187,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 34.3,
+        "rawValue": 0.347,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "USA": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 71.9,
+        "rawValue": 0.952,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 73.2,
+        "rawValue": 0.932,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 68.7,
+        "rawValue": 0.849,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2024
+        }
+      },
+      "capital_availability": {
+        "value": 72,
+        "rawValue": 1,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2025
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 47.4,
+        "rawValue": 0.543,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 31.7,
+        "rawValue": 0.31,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2021
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "NLD": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 65.9,
+        "rawValue": 0.86,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 75.3,
+        "rawValue": 0.962,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 72,
+        "rawValue": 0.894,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2024
+        }
+      },
+      "capital_availability": {
+        "value": 35.9,
+        "rawValue": 0.399,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2024
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 32.6,
+        "rawValue": 0.357,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 30.8,
+        "rawValue": 0.297,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "CHE": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 70.3,
+        "rawValue": 0.927,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 75.6,
+        "rawValue": 0.966,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2025
+        }
+      },
+      "energy": {
+        "value": 69.3,
+        "rawValue": 0.858,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2024
+        }
+      },
+      "capital_availability": {
+        "value": 61.9,
+        "rawValue": 0.831,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2016
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 44.6,
+        "rawValue": 0.507,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 49.1,
+        "rawValue": 0.558,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "SGP": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 69.7,
+        "rawValue": 0.919,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 73,
+        "rawValue": 0.928,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 80,
+        "rawValue": 1,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2023
+        }
+      },
+      "capital_availability": {
+        "value": 49.9,
+        "rawValue": 0.632,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2020
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 26.7,
+        "rawValue": 0.284,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2022
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 46,
+        "rawValue": 0.514,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "KOR": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 73.7,
+        "rawValue": 0.98,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 76.1,
+        "rawValue": 0.973,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 73.2,
+        "rawValue": 0.909,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2024
+        }
+      },
+      "capital_availability": {
+        "value": 59.6,
+        "rawValue": 0.793,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2024
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 66.3,
+        "rawValue": 0.779,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 66.6,
+        "rawValue": 0.808,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "EST": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 70.3,
+        "rawValue": 0.928,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 71.1,
+        "rawValue": 0.901,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 35.2,
+        "rawValue": 0.402,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2024
+        }
+      },
+      "capital_availability": {
+        "value": 29.3,
+        "rawValue": 0.289,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2024
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 27.1,
+        "rawValue": 0.289,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 32.3,
+        "rawValue": 0.318,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "IND": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 52.2,
+        "rawValue": 0.649,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 51.1,
+        "rawValue": 0.616,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2025
+        }
+      },
+      "energy": {
+        "value": 48.9,
+        "rawValue": 0.585,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2023
+        }
+      },
+      "capital_availability": {
+        "value": 24.4,
+        "rawValue": 0.206,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2025
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 12.1,
+        "rawValue": 0.101,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2020
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 37.8,
+        "rawValue": 0.397,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "CHL": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 71,
+        "rawValue": 0.939,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 74.1,
+        "rawValue": 0.944,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 67.3,
+        "rawValue": 0.831,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2024
+        }
+      },
+      "capital_availability": {
+        "value": 41.9,
+        "rawValue": 0.499,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2025
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 8.9,
+        "rawValue": 0.061,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2022
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 28.5,
+        "rawValue": 0.264,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "ZAF": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 61.3,
+        "rawValue": 0.789,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 58.6,
+        "rawValue": 0.723,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 57.6,
+        "rawValue": 0.702,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2023
+        }
+      },
+      "capital_availability": {
+        "value": 38.1,
+        "rawValue": 0.435,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2024
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 11.7,
+        "rawValue": 0.096,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2022
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 35.3,
+        "rawValue": 0.361,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "MEX": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 72.9,
+        "rawValue": 0.968,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 62.9,
+        "rawValue": 0.784,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 55.7,
+        "rawValue": 0.676,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2024
+        }
+      },
+      "capital_availability": {
+        "value": 21.8,
+        "rawValue": 0.163,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2025
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 7.1,
+        "rawValue": 0.039,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2024
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 51.2,
+        "rawValue": 0.589,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "ARG": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 60.2,
+        "rawValue": 0.772,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 68.8,
+        "rawValue": 0.868,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 31.8,
+        "rawValue": 0.357,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2024
+        }
+      },
+      "capital_availability": {
+        "value": 16.4,
+        "rawValue": 0.073,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2025
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 11.5,
+        "rawValue": 0.094,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 38,
+        "rawValue": 0.4,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "COL": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 63.9,
+        "rawValue": 0.829,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 59.4,
+        "rawValue": 0.735,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 63.1,
+        "rawValue": 0.775,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2024
+        }
+      },
+      "capital_availability": {
+        "value": 23.1,
+        "rawValue": 0.185,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2025
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 7.6,
+        "rawValue": 0.045,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2020
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 30.4,
+        "rawValue": 0.292,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "PER": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 62.1,
+        "rawValue": 0.802,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 61.8,
+        "rawValue": 0.769,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 55.2,
+        "rawValue": 0.669,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2023
+        }
+      },
+      "capital_availability": {
+        "value": 23,
+        "rawValue": 0.184,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2024
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 6.2,
+        "rawValue": 0.027,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 35.3,
+        "rawValue": 0.361,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2024
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "URY": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 59.9,
+        "rawValue": 0.768,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 70.8,
+        "rawValue": 0.897,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 58.8,
+        "rawValue": 0.718,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2023
+        }
+      },
+      "capital_availability": {
+        "value": 20.3,
+        "rawValue": 0.139,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2025
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 12.8,
+        "rawValue": 0.11,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 30.6,
+        "rawValue": 0.294,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "CRI": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 73,
+        "rawValue": 0.969,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 66.5,
+        "rawValue": 0.836,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 60.3,
+        "rawValue": 0.737,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2024
+        }
+      },
+      "capital_availability": {
+        "value": 26.5,
+        "rawValue": 0.241,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2025
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 8.2,
+        "rawValue": 0.052,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 38,
+        "rawValue": 0.4,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "DEU": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 71.9,
+        "rawValue": 0.952,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 72.2,
+        "rawValue": 0.917,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 69.1,
+        "rawValue": 0.855,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2024
+        }
+      },
+      "capital_availability": {
+        "value": 34.4,
+        "rawValue": 0.374,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 43.8,
+        "rawValue": 0.497,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 46.3,
+        "rawValue": 0.519,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "FRA": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 69.8,
+        "rawValue": 0.92,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 67.8,
+        "rawValue": 0.855,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 65.8,
+        "rawValue": 0.81,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2024
+        }
+      },
+      "capital_availability": {
+        "value": 43.6,
+        "rawValue": 0.527,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2024
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 31.4,
+        "rawValue": 0.343,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 29.6,
+        "rawValue": 0.28,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "GBR": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 69.9,
+        "rawValue": 0.921,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 73.9,
+        "rawValue": 0.942,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 58.5,
+        "rawValue": 0.714,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2024
+        }
+      },
+      "capital_availability": {
+        "value": 45.1,
+        "rawValue": 0.551,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2024
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 37.7,
+        "rawValue": 0.421,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 25.8,
+        "rawValue": 0.226,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "ESP": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 74,
+        "rawValue": 0.984,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 74.2,
+        "rawValue": 0.946,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 62,
+        "rawValue": 0.76,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2024
+        }
+      },
+      "capital_availability": {
+        "value": 33.5,
+        "rawValue": 0.359,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2024
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 22.8,
+        "rawValue": 0.235,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 31.8,
+        "rawValue": 0.312,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "POL": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 73.1,
+        "rawValue": 0.971,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 67.8,
+        "rawValue": 0.854,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 65.3,
+        "rawValue": 0.804,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2024
+        }
+      },
+      "capital_availability": {
+        "value": 21.2,
+        "rawValue": 0.153,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2024
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 23.5,
+        "rawValue": 0.244,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 41,
+        "rawValue": 0.443,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "SWE": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 75,
+        "rawValue": 1,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 74.2,
+        "rawValue": 0.946,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2025
+        }
+      },
+      "energy": {
+        "value": 68.3,
+        "rawValue": 0.844,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2024
+        }
+      },
+      "capital_availability": {
+        "value": 49,
+        "rawValue": 0.616,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2024
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 49.4,
+        "rawValue": 0.567,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 35.7,
+        "rawValue": 0.367,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "FIN": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 72.3,
+        "rawValue": 0.958,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 72.4,
+        "rawValue": 0.92,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 72.4,
+        "rawValue": 0.898,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2024
+        }
+      },
+      "capital_availability": {
+        "value": 38.9,
+        "rawValue": 0.448,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2024
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 43,
+        "rawValue": 0.487,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 39.4,
+        "rawValue": 0.42,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "IRL": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 69.7,
+        "rawValue": 0.919,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 75.5,
+        "rawValue": 0.964,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 62.3,
+        "rawValue": 0.764,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2024
+        }
+      },
+      "capital_availability": {
+        "value": 18.2,
+        "rawValue": 0.104,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2024
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 24,
+        "rawValue": 0.25,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 80,
+        "rawValue": 1,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "CAN": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 74.6,
+        "rawValue": 0.994,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 73,
+        "rawValue": 0.928,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 71.2,
+        "rawValue": 0.883,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2024
+        }
+      },
+      "capital_availability": {
+        "value": 48.6,
+        "rawValue": 0.61,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2008
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 26.6,
+        "rawValue": 0.282,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2024
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 29.3,
+        "rawValue": 0.275,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2022
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "AUS": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 70.6,
+        "rawValue": 0.932,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 74.5,
+        "rawValue": 0.95,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 70,
+        "rawValue": 0.867,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2024
+        }
+      },
+      "capital_availability": {
+        "value": 51.5,
+        "rawValue": 0.659,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2025
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 27.4,
+        "rawValue": 0.292,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2021
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 21,
+        "rawValue": 0.157,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "JPN": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 73,
+        "rawValue": 0.969,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 65,
+        "rawValue": 0.815,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 69.5,
+        "rawValue": 0.86,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2024
+        }
+      },
+      "capital_availability": {
+        "value": 67.8,
+        "rawValue": 0.93,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2025
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 47.4,
+        "rawValue": 0.542,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 48.9,
+        "rawValue": 0.555,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2024
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "CHN": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 33.1,
+        "rawValue": 0.356,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 70.4,
+        "rawValue": 0.892,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2025
+        }
+      },
+      "energy": {
+        "value": 72.9,
+        "rawValue": 0.905,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2023
+        }
+      },
+      "capital_availability": {
+        "value": 69.9,
+        "rawValue": 0.965,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2024
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 36.5,
+        "rawValue": 0.406,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 61,
+        "rawValue": 0.729,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "IDN": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 62.6,
+        "rawValue": 0.809,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 53.6,
+        "rawValue": 0.651,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 66.1,
+        "rawValue": 0.815,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2023
+        }
+      },
+      "capital_availability": {
+        "value": 22,
+        "rawValue": 0.167,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2025
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 7.4,
+        "rawValue": 0.043,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2020
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 49.3,
+        "rawValue": 0.562,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "VNM": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 44.3,
+        "rawValue": 0.528,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 63.8,
+        "rawValue": 0.797,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 65.8,
+        "rawValue": 0.811,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2023
+        }
+      },
+      "capital_availability": {
+        "value": 48.9,
+        "rawValue": 0.615,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2022
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 9.1,
+        "rawValue": 0.064,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 60.6,
+        "rawValue": 0.723,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "PHL": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 64.3,
+        "rawValue": 0.836,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 48.7,
+        "rawValue": 0.581,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 58.3,
+        "rawValue": 0.71,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2023
+        }
+      },
+      "capital_availability": {
+        "value": 26.8,
+        "rawValue": 0.247,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2025
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 7.4,
+        "rawValue": 0.043,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2020
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 41.6,
+        "rawValue": 0.452,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "MYS": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 65.8,
+        "rawValue": 0.858,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 76.3,
+        "rawValue": 0.975,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 65.2,
+        "rawValue": 0.802,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2023
+        }
+      },
+      "capital_availability": {
+        "value": 46.7,
+        "rawValue": 0.579,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2025
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 16.7,
+        "rawValue": 0.159,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2022
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 55.6,
+        "rawValue": 0.651,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "THA": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 65.8,
+        "rawValue": 0.859,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 69.8,
+        "rawValue": 0.883,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 64.6,
+        "rawValue": 0.794,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2023
+        }
+      },
+      "capital_availability": {
+        "value": 54.4,
+        "rawValue": 0.706,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2025
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 15.8,
+        "rawValue": 0.147,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 59,
+        "rawValue": 0.7,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "TUR": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 58.9,
+        "rawValue": 0.753,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 68.8,
+        "rawValue": 0.869,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2025
+        }
+      },
+      "energy": {
+        "value": 62.1,
+        "rawValue": 0.761,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2024
+        }
+      },
+      "capital_availability": {
+        "value": 24.9,
+        "rawValue": 0.215,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2025
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 21.8,
+        "rawValue": 0.223,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 44.7,
+        "rawValue": 0.496,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2024
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "ISR": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 72.1,
+        "rawValue": 0.956,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 67.4,
+        "rawValue": 0.849,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 71.8,
+        "rawValue": 0.89,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2024
+        }
+      },
+      "capital_availability": {
+        "value": 33,
+        "rawValue": 0.35,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2025
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 84,
+        "rawValue": 1,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 33.2,
+        "rawValue": 0.331,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2024
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "ARE": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 58.7,
+        "rawValue": 0.749,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 78,
+        "rawValue": 1,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 70.9,
+        "rawValue": 0.879,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2023
+        }
+      },
+      "capital_availability": {
+        "value": 30.8,
+        "rawValue": 0.314,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2022
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 22.8,
+        "rawValue": 0.235,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2021
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 29.3,
+        "rawValue": 0.276,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2024
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "NGA": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 46.6,
+        "rawValue": 0.563,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 25.3,
+        "rawValue": 0.247,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 48.9,
+        "rawValue": 0.586,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2023
+        }
+      },
+      "capital_availability": {
+        "value": 13.9,
+        "rawValue": 0.032,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2022
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 7.5,
+        "rawValue": 0.044,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2019
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 27,
+        "rawValue": 0.243,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "KEN": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 51.7,
+        "rawValue": 0.642,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 19.7,
+        "rawValue": 0.167,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 23,
+        "rawValue": 0.24,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2024
+        }
+      },
+      "capital_availability": {
+        "value": 20.6,
+        "rawValue": 0.144,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 14.2,
+        "rawValue": 0.127,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2024
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 24.7,
+        "rawValue": 0.21,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "RWA": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 50.8,
+        "rawValue": 0.628,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 16.8,
+        "rawValue": 0.125,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 39.7,
+        "rawValue": 0.463,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2023
+        }
+      },
+      "capital_availability": {
+        "value": 17.7,
+        "rawValue": 0.095,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2025
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 13.8,
+        "rawValue": 0.122,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 27.1,
+        "rawValue": 0.245,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "ETH": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 37.8,
+        "rawValue": 0.427,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 8,
+        "rawValue": 0,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 34.3,
+        "rawValue": 0.39,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2023
+        }
+      },
+      "capital_availability": {
+        "value": 16.4,
+        "rawValue": 0.073,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2008
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 7.4,
+        "rawValue": 0.042,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2017
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 18.7,
+        "rawValue": 0.124,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "BOL": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 48,
+        "rawValue": 0.584,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 59.8,
+        "rawValue": 0.74,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 60.6,
+        "rawValue": 0.741,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2023
+        }
+      },
+      "capital_availability": {
+        "value": 26.7,
+        "rawValue": 0.245,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2025
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 4.7,
+        "rawValue": 0.009,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2021
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 37,
+        "rawValue": 0.385,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2024
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "PRY": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 52.8,
+        "rawValue": 0.658,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 61.5,
+        "rawValue": 0.764,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 54,
+        "rawValue": 0.653,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2023
+        }
+      },
+      "capital_availability": {
+        "value": 27.9,
+        "rawValue": 0.265,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2025
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 5.7,
+        "rawValue": 0.021,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 50.1,
+        "rawValue": 0.573,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "ECU": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 59.6,
+        "rawValue": 0.763,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 57.6,
+        "rawValue": 0.708,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 42.6,
+        "rawValue": 0.501,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2023
+        }
+      },
+      "capital_availability": {
+        "value": 28.9,
+        "rawValue": 0.281,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2025
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 9.4,
+        "rawValue": 0.068,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2014
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 37.3,
+        "rawValue": 0.39,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "VEN": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 10.8,
+        "rawValue": 0.013,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 57.1,
+        "rawValue": 0.701,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 32.7,
+        "rawValue": 0.369,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2023
+        }
+      },
+      "capital_availability": {
+        "value": 19.4,
+        "rawValue": 0.123,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2013
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 8.2,
+        "rawValue": 0.052,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2014
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 10,
+        "rawValue": 0,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2011
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "PAN": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 57,
+        "rawValue": 0.723,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 53.6,
+        "rawValue": 0.651,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 65.8,
+        "rawValue": 0.811,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2023
+        }
+      },
+      "capital_availability": {
+        "value": 41.3,
+        "rawValue": 0.489,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2020
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 6.4,
+        "rawValue": 0.03,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2024
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 19.9,
+        "rawValue": 0.141,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "GTM": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 58.9,
+        "rawValue": 0.753,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 42.3,
+        "rawValue": 0.49,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 52.8,
+        "rawValue": 0.637,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2023
+        }
+      },
+      "capital_availability": {
+        "value": 22.3,
+        "rawValue": 0.172,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2025
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 4,
+        "rawValue": 0,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 37.2,
+        "rawValue": 0.389,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "HND": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 42.5,
+        "rawValue": 0.5,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 40.9,
+        "rawValue": 0.47,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 5,
+        "rawValue": 0,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2023
+        }
+      },
+      "capital_availability": {
+        "value": 34.8,
+        "rawValue": 0.38,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2024
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 4.6,
+        "rawValue": 0.008,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2019
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 40.9,
+        "rawValue": 0.441,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "SLV": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 52.2,
+        "rawValue": 0.649,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 48,
+        "rawValue": 0.571,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 58.7,
+        "rawValue": 0.716,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2023
+        }
+      },
+      "capital_availability": {
+        "value": 30.5,
+        "rawValue": 0.309,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2025
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 5.2,
+        "rawValue": 0.015,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2023
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 36.2,
+        "rawValue": 0.374,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "NIC": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 30.5,
+        "rawValue": 0.316,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 43.4,
+        "rawValue": 0.505,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 32.6,
+        "rawValue": 0.368,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2023
+        }
+      },
+      "capital_availability": {
+        "value": 20.8,
+        "rawValue": 0.147,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2024
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 5.3,
+        "rawValue": 0.016,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2015
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 36,
+        "rawValue": 0.371,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "DOM": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 53.9,
+        "rawValue": 0.676,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 70,
+        "rawValue": 0.885,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 52,
+        "rawValue": 0.626,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2023
+        }
+      },
+      "capital_availability": {
+        "value": 21,
+        "rawValue": 0.15,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2025
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": null,
+        "rawValue": null,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "source series has no current value; future work.",
+        "source": null
+      },
+      "advanced_manufacturing": {
+        "value": 35.3,
+        "rawValue": 0.362,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "CUB": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "source series has no current value; future work.",
+        "source": null
+      },
+      "connectivity": {
+        "value": 51.5,
+        "rawValue": 0.622,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 38.7,
+        "rawValue": 0.449,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2023
+        }
+      },
+      "capital_availability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "source series has no current value; future work.",
+        "source": null
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": 9.4,
+        "rawValue": 0.068,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "Placeholder input from World Bank (GB.XPD.RSDV.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "rd_expenditure_gdp",
+          "publisher": "World Bank (GB.XPD.RSDV.GD.ZS)",
+          "year": 2024
+        }
+      },
+      "advanced_manufacturing": {
+        "value": 32,
+        "rawValue": 0.315,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2024
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    },
+    "HTI": {
+      "ai_access": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 23,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "compute": {
+        "value": null,
+        "rawValue": null,
+        "weight": 40,
+        "baseOffset": 13,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "data_availability": {
+        "value": 10,
+        "rawValue": 0,
+        "weight": 65,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (IQ.SPI.OVRL); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "statistical_performance",
+          "publisher": "World Bank (IQ.SPI.OVRL)",
+          "year": 2024
+        }
+      },
+      "connectivity": {
+        "value": 31.2,
+        "rawValue": 0.332,
+        "weight": 70,
+        "baseOffset": 8,
+        "note": "Placeholder input from World Bank (IT.NET.USER.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "internet_users",
+          "publisher": "World Bank (IT.NET.USER.ZS)",
+          "year": 2024
+        }
+      },
+      "energy": {
+        "value": 47.7,
+        "rawValue": 0.57,
+        "weight": 75,
+        "baseOffset": 5,
+        "note": "Placeholder input from World Bank (EG.ELC.LOSS.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "electricity_transmission_losses",
+          "publisher": "World Bank (EG.ELC.LOSS.ZS)",
+          "year": 2022
+        }
+      },
+      "capital_availability": {
+        "value": 12,
+        "rawValue": 0,
+        "weight": 60,
+        "baseOffset": 12,
+        "note": "Placeholder input from World Bank (FS.AST.PRVT.GD.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "domestic_credit_private",
+          "publisher": "World Bank (FS.AST.PRVT.GD.ZS)",
+          "year": 2025
+        }
+      },
+      "robotics": {
+        "value": null,
+        "rawValue": null,
+        "weight": 55,
+        "baseOffset": 18,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "scientific_capacity": {
+        "value": null,
+        "rawValue": null,
+        "weight": 80,
+        "baseOffset": 4,
+        "note": "source series has no current value; future work.",
+        "source": null
+      },
+      "advanced_manufacturing": {
+        "value": 51.7,
+        "rawValue": 0.596,
+        "weight": 70,
+        "baseOffset": 10,
+        "note": "Placeholder input from World Bank (NV.IND.MANF.ZS); rawValue is the current normalized foundation value divided by 100.",
+        "source": {
+          "indicatorId": "manufacturing_value_added",
+          "publisher": "World Bank (NV.IND.MANF.ZS)",
+          "year": 2025
+        }
+      },
+      "technical_talent": {
+        "value": null,
+        "rawValue": null,
+        "weight": 65,
+        "baseOffset": 12,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      },
+      "institutional_deployability": {
+        "value": null,
+        "rawValue": null,
+        "weight": 50,
+        "baseOffset": 20,
+        "note": "source not yet integrated; future work.",
+        "source": null
+      }
+    }
+  }
+}

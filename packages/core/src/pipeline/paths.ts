@@ -30,6 +30,7 @@ export const FILES = {
   diagnostics: resolve(OUT_DIR, 'diagnostics.json'),
   report: resolve(OUT_DIR, 'report.md'),
   velocity: resolve(OUT_DIR, 'velocity.json'),
+  leverage: resolve(OUT_DIR, 'leverage.json'),
   datapackage: resolve(OUT_DIR, 'datapackage.json'),
 }
 

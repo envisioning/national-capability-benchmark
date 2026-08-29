@@ -1,5 +1,6 @@
 import { z } from 'zod'
 import { DIMENSIONS } from './dimensions.js'
+import { LEVERAGE_DIMENSIONS } from './leverage.js'
 
 /**
  * The methodological test every indicator must pass, recorded in the dataset:
@@ -43,6 +44,7 @@ export const Transform = z.enum([
 export type Transform = z.infer<typeof Transform>
 
 export const DimensionEnum = z.enum(DIMENSIONS)
+export const LeverageDimensionEnum = z.enum(LEVERAGE_DIMENSIONS)
 
 export const IndicatorSource = z.object({
   /** Publisher, e.g. "World Bank", "OECD", "World Values Survey". */
@@ -386,6 +388,31 @@ export const VelocityFile = z.object({
   ),
 })
 export type VelocityFile = z.infer<typeof VelocityFile>
+
+/** One provisional leverage input and its placeholder weighted-sum result. */
+export const LeverageCell = z.object({
+  value: z.number().min(0).max(100).nullable(),
+  rawValue: z.number().min(0).max(1).nullable(),
+  weight: z.number().nonnegative(),
+  baseOffset: z.number().nonnegative(),
+  note: z.string(),
+  source: z
+    .object({
+      indicatorId: z.string(),
+      publisher: z.string(),
+      year: z.number().int(),
+    })
+    .nullable(),
+})
+export type LeverageCell = z.infer<typeof LeverageCell>
+
+/** The complete provisional leverage fixture written by `bench leverage`. */
+export const LeverageFile = z.object({
+  generatedAt: z.string(),
+  methodVersion: z.literal('leverage/0.1-exploratory'),
+  countries: z.record(z.string().length(3), z.record(LeverageDimensionEnum, LeverageCell)),
+})
+export type LeverageFile = z.infer<typeof LeverageFile>
 
 /** One check's latest observed value for one country. Never scored. See D60. */
 export const CheckResult = z.object({

@@ -8,6 +8,7 @@ import {
   INDICATORS,
   InstitutionNetworkFile,
   isScored,
+  LeverageFile as LeverageFileSchema,
   VelocityFile as VelocityFileSchema,
 } from '@ncb/core'
 import { DATA_DIR } from '@ncb/core/node'
@@ -19,6 +20,7 @@ import type {
   EvidenceRecord,
   IndicatorAcrossCountries,
   DisputeRecord,
+  LeverageFile,
   VelocityFile,
 } from '@ncb/core'
 
@@ -53,6 +55,7 @@ const PATHS = {
   institutions: (iso3: string) =>
     resolve(DATA_ROOT, 'institutions', `${iso3.toUpperCase()}.json`),
   velocity: resolve(DATA_ROOT, 'out/velocity.json'),
+  leverage: resolve(DATA_ROOT, 'out/leverage.json'),
 }
 
 async function readJson<T>(path: string): Promise<T | null> {
@@ -89,6 +92,13 @@ export async function loadDiagnostics(): Promise<Diagnostics | null> {
 export async function loadVelocity(): Promise<VelocityFile | null> {
   const raw = await readJson<unknown>(PATHS.velocity)
   const parsed = VelocityFileSchema.safeParse(raw)
+  return parsed.success ? parsed.data : null
+}
+
+/** The provisional leverage fixture, validated before the sandbox reads it. */
+export async function loadLeverage(): Promise<LeverageFile | null> {
+  const raw = await readJson<unknown>(PATHS.leverage)
+  const parsed = LeverageFileSchema.safeParse(raw)
   return parsed.success ? parsed.data : null
 }
 

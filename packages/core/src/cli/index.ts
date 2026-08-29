@@ -35,6 +35,7 @@ import type { Lang } from '../i18n/index.js'
 import { runDiagnostics } from '../pipeline/diagnostics.js'
 import { buildReport } from '../pipeline/report.js'
 import { writeVelocity } from '../pipeline/velocity.js'
+import { writeLeverage } from '../pipeline/leverage.js'
 import {
   acrossCountries,
   loadDelphi,
@@ -283,6 +284,14 @@ async function main() {
       const output = await writeVelocity()
       console.log(
         `velocity   -> ${FILES.velocity} (${Object.keys(output.countries).length} countries, ${output.exclusions.length} excluded from country-level reads)`,
+      )
+      break
+    }
+
+    case 'leverage': {
+      const output = await writeLeverage()
+      console.log(
+        `leverage   -> ${FILES.leverage} (${Object.keys(output.countries).length} countries, 11 dimensions)`,
       )
       break
     }
@@ -746,6 +755,7 @@ Start with file 1.
                        [--max-coverage 0.5] [--no-judge] [--concurrency 4] [--activate]
   pnpm bench diagnose                     correlations, redundancy, GDP-sensitivity test
   pnpm bench velocity                     write the provisional five-year velocity fixture
+  pnpm bench leverage                     write the provisional leverage fixture
   pnpm bench trust    fetch                fetch and parse Joint EVS/WVS A165 trust results
   pnpm bench prompt    [BRA IND ...] [--stance wealth_sceptic] [--system] [--audit trust]
                        [--paste] [--batch 4] [--out paste] [--local]
