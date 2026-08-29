@@ -17,6 +17,15 @@ export const capabilitiesHref = '/capabilities'
 export const capabilityHref = (dimension: Dimension): string =>
   `${capabilitiesHref}/${dimension}`
 
+/** Static social card for a country profile. */
+export const ogCountryHref = (iso3: string): string => `/og/country/${iso3}`
+
+/** Static social card for a capability distribution. */
+export const ogDimensionHref = (dimension: Dimension): string => `/og/dimension/${dimension}`
+
+/** Static social card for one country's capability agenda. */
+export const ogAgendaHref = (iso3: string): string => `/og/agenda/${iso3}`
+
 /** One country's capability agenda, in the language the reader is already in. */
 export const agendaHref = (iso3: string, lang: Lang = 'en'): string =>
   lang === 'pt-BR' ? `/pt/agenda/${iso3}` : `/agenda/${iso3}`

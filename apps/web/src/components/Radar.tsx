@@ -12,6 +12,7 @@ import {
 import type { Dimension, Lexicon } from '@ncb/core'
 import { DIMENSION_ICON, Icon, iconMarkup } from '@/components/Icon'
 import { ConfidenceBar, Score } from '@/components/ui'
+import { radarAngle, radarPoint } from '@/components/radarGeometry'
 
 export type RadarSeries = {
   label: string
@@ -44,16 +45,6 @@ const GEOMETRY = {
   none: { radius: SIZE / 2 - 8, ring: 100, padX: 2, padRight: 4 },
 } as const
 
-function angleOf(index: number): number {
-  return (index / DIMENSIONS.length) * Math.PI * 2 - Math.PI / 2
-}
-
-function point(index: number, value: number, radius: number): [number, number] {
-  const angle = angleOf(index)
-  const r = (value / 100) * radius
-  return [CENTER + r * Math.cos(angle), CENTER + r * Math.sin(angle)]
-}
-
 /**
  * The pie slice belonging to one axis.
  *
@@ -64,8 +55,8 @@ function point(index: number, value: number, radius: number): [number, number] {
  */
 function wedgePath(index: number, radius: number): string {
   const half = Math.PI / DIMENSIONS.length
-  const a0 = angleOf(index) - half
-  const a1 = angleOf(index) + half
+  const a0 = radarAngle(index) - half
+  const a1 = radarAngle(index) + half
   const x0 = CENTER + radius * Math.cos(a0)
   const y0 = CENTER + radius * Math.sin(a0)
   const x1 = CENTER + radius * Math.cos(a1)
@@ -202,7 +193,7 @@ export function Radar({
   onSelectDimension?: (dimension: Dimension) => void
 }) {
   const g = GEOMETRY[labels]
-  const at = (i: number, value: number) => point(i, value, g.radius)
+  const at = (i: number, value: number) => radarPoint(i, value, { size: SIZE, radius: g.radius })
   const nameOf = (d: Dimension) => shortLabel(lex.dimensions[d] ?? DIMENSION_LABELS[d])
   const noDataLabel = lex.agenda.noScore
   const rings = [25, 50, 75, 100]

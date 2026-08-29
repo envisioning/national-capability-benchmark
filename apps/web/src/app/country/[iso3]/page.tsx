@@ -35,7 +35,7 @@ import {
   Td,
   Th,
 } from '@/components/ui'
-import { capabilityHref } from '@/lib/links'
+import { capabilityHref, ogCountryHref } from '@/lib/links'
 import { loadAgenda } from '@/lib/agenda'
 import { loadCountry, loadDelphiRun, loadEvidence, loadIndex } from '@/lib/data'
 import { toProfile } from '@/lib/profile'
@@ -53,6 +53,10 @@ export async function generateMetadata({
   return {
     title: `${name}, NCB`,
     description: `${name} across nine capability dimensions: every score, its confidence, and every indicator behind it.`,
+    openGraph: {
+      images: [{ url: ogCountryHref(iso3.toUpperCase()), width: 1200, height: 630, alt: `${name} country profile` }],
+    },
+    twitter: { card: 'summary_large_image', images: [ogCountryHref(iso3.toUpperCase())] },
   }
 }
 

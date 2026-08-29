@@ -18,7 +18,7 @@ import { EvidenceList } from '@/components/views/EvidenceList'
 import { IndicatorRegistry } from '@/components/views/IndicatorRegistry'
 import { Empty, Eyebrow, FrameNote, Headline, Meta, PageTitle, Section } from '@/components/ui'
 import { MISSING_DATA_HINT, loadEvidence, loadIndex } from '@/lib/data'
-import { capabilitiesHref } from '@/lib/links'
+import { capabilitiesHref, ogDimensionHref } from '@/lib/links'
 
 export const dynamic = 'force-dynamic'
 
@@ -38,6 +38,10 @@ export async function generateMetadata({
   return {
     title: `${label}, NCB`,
     description: `${label} across every country in the National Capability Benchmark: the question, indicators, scores, confidence and trend.`,
+    openGraph: {
+      images: [{ url: ogDimensionHref(dimension), width: 1200, height: 630, alt: `${label} capability distribution` }],
+    },
+    twitter: { card: 'summary_large_image', images: [ogDimensionHref(dimension)] },
   }
 }
 

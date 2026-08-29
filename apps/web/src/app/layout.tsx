@@ -38,6 +38,9 @@ const octa = localFont({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? 'https://national-capability-benchmark.vercel.app',
+  ),
   title: 'NCB, the National Capability Benchmark',
   description:
     'A prototype that measures what a country can do, separately from how rich it is.',

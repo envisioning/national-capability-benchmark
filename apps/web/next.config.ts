@@ -9,6 +9,13 @@ const config: NextConfig = {
   // Set NEXT_DIST_DIR to build into a different directory and leave the dev
   // server alone.
   distDir: process.env.NEXT_DIST_DIR ?? '.next',
+  async rewrites() {
+    return [
+      { source: '/og/country/:iso3', destination: '/og/country/:iso3/opengraph-image' },
+      { source: '/og/dimension/:dimension', destination: '/og/dimension/:dimension/opengraph-image' },
+      { source: '/og/agenda/:iso3', destination: '/og/agenda/:iso3/opengraph-image' },
+    ]
+  },
   // The viewer reads its data from data/out at request time, through paths the
   // bundler cannot see. Without this the deployed functions ship without the
   // JSON and every page 500s. Observations are deliberately absent: 9 MB the

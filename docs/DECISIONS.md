@@ -2566,3 +2566,52 @@ mean publishing it beside the dimension does the harm the exclusion was meant to
 avoid, and the row should be retired instead. Or a change in the series that
 breaks its correlation with income, which would make it an indicator and move it
 to the other registry.
+
+---
+
+## D61: Social cards are static metadata images with stable public paths
+
+*Recorded 2026-08-29. Implements issue 1.*
+
+**Choice.** Generate the country, capability and agenda social cards through
+Next's `opengraph-image` metadata convention and expose them at the stable
+paths `/og/country/<ISO3>`, `/og/dimension/<dimension>` and
+`/og/agenda/<ISO3>` with rewrites. Each image uses `ImageResponse`, reads the
+same scored output as the viewer, and declares `generateStaticParams`, so the
+cards are emitted during the production build and served as immutable assets.
+
+Radar coordinates live in a browser safe module shared by `Radar` and the
+server-only `radarToSvgPath` entry point in `Og.tsx`. Confidence is passed to
+the helper for profile parity but does not change a score's position. The
+dimension card pins Brazil as the reference country because that route has no
+country parameter of its own.
+
+The current dataset emits 52 country cards, 52 agenda cards and nine dimension
+cards, 113 images in total. The issue description's arithmetic of 52 cards
+times three routes would imply 156 images, but the dimension route has nine
+valid parameters, one per capability dimension.
+
+**Why.** Social crawlers need a stable image URL and the benchmark's radar is
+the clearest compact representation of a country profile. Build time generation
+keeps the card independent of request latency, gives the CDN an immutable
+asset, and makes a missing country or dimension fail during the build rather
+than when a reader shares a link.
+
+The image renderer cannot parse the page's WOFF2 fonts, and its default emoji
+renderer fetches flag artwork from a remote CDN. The cards therefore register
+Next's bundled TTF and use the registry's ISO2 code in a lime country mark.
+This keeps builds offline and reproducible. Vendored flag artwork can replace
+the mark later if exact national flag rendering becomes material.
+
+**Costs.** The image route is a second presentation of the data, so its visual
+layout can drift from the viewer even though its radar coordinates are shared.
+The card also has less room for confidence and provenance than the page, which
+is why it carries the site level caveat and never introduces a headline score.
+Static output must be rebuilt after a dataset refresh, just like the committed
+JSON and agenda documents.
+
+**Overturned by.** Evidence that crawlers cannot follow the stable rewrites, or
+that shared cards are stale after a data release, would justify an on demand
+route or a different cache strategy. Evidence that readers need exact national
+flag artwork would justify adding a small vendored asset set rather than
+reintroducing a remote emoji dependency.
