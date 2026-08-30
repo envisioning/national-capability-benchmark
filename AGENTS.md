@@ -547,10 +547,15 @@ as the reference, and see NOTICE.md before reusing the brand.
   reads as a card. `html, body { overflow-x: clip }` absorbs the scrollbar
   overshoot `100vw` causes, and `clip` is required over `hidden` because
   `hidden` would make the element a scroll container and break any future
-  sticky chrome. Never put a second dark band on a page. **The viewer draws no
-  gradient at all**, including the lime hero glow envisioning.com permits: the
-  accent already lands on the highlight marker inside the band, and a wash
-  behind it spends the accent twice. See D81.
+  sticky chrome. Never put a second dark band on a page. See D81.
+- The dot motif is `DotField` in `apps/web/src/components/DotField.tsx`, drawn
+  as a still SVG pattern rather than the parent's canvas animation. The
+  geometry is envisioning.com's `lib/design/dot-motif.ts` and the wave grid
+  that reads it: 36px spacing, a 1.5px opaque centre, a 2.5px to 10px bubble,
+  ambient alpha 0.15. It is atmosphere and never data. Every distribution on
+  this site is a `FlagField`, where a bubble means confidence and a position
+  means a score, so never put a `DotField` where a reader could take it for
+  one. See D81.
 - Navigation hangs from one edge. The sections sit right from `md` up, so the
   crumb trail and the tab strip are `md:justify-end` as well and the reader
   tracks one column down. Below `md` the sections fold into the sheet, there is
@@ -581,8 +586,7 @@ as the reference, and see NOTICE.md before reusing the brand.
   `CountryLabel` in `apps/web/src/components/ui.tsx`, which derive it from the
   `iso2` code in the country registry. Never write a flag character into a page
   or a data file. Every other emoji stays out.
-- No gradients except the one radial lime glow (`.hero-glow`). No colored
-  shadows, no backdrop-blur.
+- No gradients, no colored shadows, no backdrop-blur.
 - The favicon set is generated, never hand-drawn. `scripts/generate-favicons.mjs`
   reads `apps/web/public/brand/envisioning-mark.svg`, composes it on a rounded
   near-black tile in lime, and writes `icon.png`, `apple-icon.png` and

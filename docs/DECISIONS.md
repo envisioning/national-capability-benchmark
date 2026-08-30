@@ -3677,14 +3677,16 @@ That is how envisioning.com draws every section, and it is why `html` and `body`
 now clip their horizontal overflow, which absorbs the scrollbar width `100vw`
 overshoots by.
 
-**The viewer draws no gradient.** envisioning.com permits exactly one, a lime
-radial glow at the top of a dark hero, and `hero-glow` had sat unused in
-`globals.css` since it was written. Drawing it put a lime wash directly behind a
-sentence that already carries the lime highlight marker, so the accent landed
-twice in one band and neither instance read as deliberate. The rule the brand
-states about lime, confidently but rarely, decides it: the marker is the better
-of the two places to spend it. The class is deleted rather than left unused, so
-the next session does not rediscover it as an opportunity.
+The viewer draws no gradient anywhere. The band's one decoration is the dot
+motif, which envisioning.com keeps in `lib/design/dot-motif.ts`: a small opaque
+centre inside a larger translucent bubble, at an ambient alpha of 0.15. NCB
+draws one still frame of it as an SVG pattern instead of the parent's canvas
+animation, because a research surface does not need a background that moves and
+a still pattern costs no JavaScript. `DotField` is atmosphere and carries no
+meaning: the same motif carrying meaning is `FlagBubble` inside `FlagField`,
+where the centre is a country and the ring is how well evidenced its score is.
+Those two must never be confused on one page, which is why the field is
+`aria-hidden` and lives only in the band.
 
 Navigation hangs from one edge for the same reason. The sections sit right from
 `md` up, so the crumb trail and the tab strip do too.
@@ -3721,6 +3723,4 @@ would take navigation back to 14px and record it as the scale's one exception.
 Evidence that panels do not separate from the page on a real screen, rather than
 in a design review, would bring back the shadow scale. A second dark band
 proving useful on a page other than the front page would turn `hero-band` from
-a one-off into a section treatment. A dark band that carries no highlight marker
-would free the glow to be the accent in it, which is the case the brand wrote it
-for.
+a one-off into a section treatment.

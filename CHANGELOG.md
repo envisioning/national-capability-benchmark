@@ -15,7 +15,8 @@ and may skip versions that were never committed.
   near-black tile in the browser tab, on a home screen and in a bookmark list,
   generated at every size the platforms ask for.
 - **The front page opens on a dark band.** It spans the window, on the same
-  surface the footer uses.
+  surface the footer uses, patterned with the dot motif the rest of Envisioning
+  draws behind a hero.
 - **The navigation hangs from one edge.** The sections, the trail into a page
   and the tabs under the header now line up on the right on a wide screen.
 - **Buttons, fields and filters share one shape.** Every control on the site now

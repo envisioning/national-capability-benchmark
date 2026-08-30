@@ -289,18 +289,16 @@ html {
 /* The one dark band above the fold, spanning the window and sharing the
  * footer's surface, so the page opens and closes on the same colour. The custom
  * properties keep anything placed inside it legible without touching the
- * page-wide tokens, exactly as .footer-band does.
- *
- * The band is flat. envisioning.com permits one gradient, a lime glow at the
- * top of a dark hero, and this site does not draw it: the lime already carries
- * the highlight marker in the sentence under the title, and a wash behind it
- * spends the accent twice. See D81. */
+ * page-wide tokens, exactly as .footer-band does. The band is flat: its only
+ * decoration is the dot motif, which DotField draws behind the content. */
 .hero-band {
   --hero-bg: #1a1d2b;
   --background: var(--hero-bg);
   --foreground: #ffffff;
   --muted: #b5bddf;
   --rule: rgba(255, 255, 255, 0.12);
+  position: relative;
+  isolation: isolate;
   background: var(--hero-bg);
   color: #ffffff;
 }
