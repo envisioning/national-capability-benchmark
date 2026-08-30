@@ -2,6 +2,7 @@ import Link from 'next/link'
 import type { CountryAgenda, Dimension, Lexicon } from '@ncb/core'
 import {
   RAISE_BELOW,
+  AGENDA_HISTORY_MIN_ENTRIES,
   COUNTRY_ISO3,
   REPO_URL,
   countryName,
@@ -11,6 +12,7 @@ import {
   fmtConf,
   indicatorDefinition,
   indicatorName,
+  isAgendaHistoryCountry,
   signed,
   splitAgenda,
 } from '@ncb/core'
@@ -61,6 +63,8 @@ export function AgendaView({
   const date = agenda.generatedAt.slice(0, 10)
 
   const { raise, measure, hold } = splitAgenda(agenda)
+  const hasInstitutionalHistory =
+    isAgendaHistoryCountry(agenda.iso3) && agenda.ownEvidence.length >= AGENDA_HISTORY_MIN_ENTRIES
 
   /**
    * Every country, indicator and evidence record the agenda names is a link,
@@ -322,8 +326,21 @@ export function AgendaView({
 
       {agenda.ownEvidence.length > 0 ? (
         <Section
-          title={fill(s.ownEvidenceHeading, { countryTopic: topic })}
-          hint={s.ownEvidenceIntro}
+          title={fill(
+            hasInstitutionalHistory
+              ? s.institutionalHistoryHeading
+              : agenda.iso3 === 'BRA'
+                ? s.brazilEvidenceHeading
+                : s.ownEvidenceHeading,
+            { countryTopic: topic },
+          )}
+          hint={
+            hasInstitutionalHistory
+              ? fill(s.institutionalHistoryIntro, { country: name })
+              : agenda.iso3 === 'BRA'
+                ? s.brazilEvidenceIntro
+                : s.ownEvidenceIntro
+          }
         >
           <ul className="max-w-3xl list-disc space-y-3 pl-5 text-lg leading-relaxed">
             {agenda.ownEvidence.map((r) => (

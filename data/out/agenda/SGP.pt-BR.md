@@ -1,6 +1,6 @@
 # Agenda de capacidades: Singapura
 
-*Gerado em 2026-08-28*
+*Gerado em 2026-08-30*
 
 Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
@@ -11,7 +11,7 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | Antecipação | 78,1 | 0,62 (utilizável) | +14,5 em 10 anos, sobre 5 indicadores |
 | Agência | 84,9 | 0,57 (utilizável) | +10,7 em 10 anos, sobre 3 indicadores |
 | Coordenação | 90,4 | 0,18 (muito fraca) | sem base de tendência |
-| Confiança | sem nota | 0,07 (muito fraca) | sem base de tendência |
+| Confiança | 73,5 | 0,16 (muito fraca) | sem base de tendência |
 | Aprendizagem | 56 | 0,49 (utilizável) | +1,6 em 10 anos, sobre 2 indicadores |
 | Experimentação | 46,5 | 0,21 (muito fraca) | +10,7 em 10 anos, sobre 2 indicadores |
 | Adaptação | 79 | 0,47 (utilizável) | +4,8 em 10 anos, sobre 4 indicadores |
@@ -22,14 +22,6 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Confiança: confiança 0,07, muito fraca
-
-Quanta cooperação é possível além das redes pessoais imediatas?
-
-- Baseada em um indicador observado.
-- Lacunas declaradas: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
-
 ### Propósito compartilhado: confiança 0,14, muito fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
@@ -37,6 +29,14 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Baseada em um indicador observado.
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
 - Bases rejeitadas: Voz e responsabilização.
+
+### Confiança: confiança 0,16, muito fraca
+
+Quanta cooperação é possível além das redes pessoais imediatas?
+
+- Baseada em 2 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ### Coordenação: confiança 0,18, muito fraca
 
@@ -65,7 +65,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## Agenda de medição
 
-27 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+26 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -76,7 +76,6 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 | Coordenação | Colaboração universidade-empresa | Intensidade da colaboração de pesquisa entre universidades e empresas. |
 | Coordenação | Força da sociedade civil | Autonomia, densidade e alcance participativo das organizações da sociedade civil. |
 | Coordenação | Colaboração público-privada | Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais. |
-| Confiança | Confiança interpessoal generalizada | Parcela que concorda que se pode confiar na maioria das pessoas. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
 | Confiança | Cooperação além do próprio grupo | Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade. |
 | Confiança | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
@@ -97,11 +96,13 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 | Propósito compartilhado | Participação cívica | Participação ativa em associações, sindicatos, partidos e organizações comunitárias. |
 
-## O que os indicadores não veem sobre Singapura
+## Mudança institucional: entregas que não mudam as notas, mas mudam Singapura.
 
-Entregas documentadas como evidência. Elas nunca afetam as notas ou a confiança.
+Estas são mudanças institucionais documentadas em Singapura que o framework registra como evidência. Elas ficam ao lado da nota e não mudam a nota ou a confiança.
 
 - **SkillsFuture Credit** (Aprendizagem). Singapore gave every citizen aged 25 and over an individual training account in 2016 and keeps topping it up, and in 2024 260,000 Singaporeans spent credit on courses, up 35 percent on the year before.
+- **Housing and Development Board, public housing at scale** (Construção). Singapore set up the Housing and Development Board in 1960 to address a severe housing shortage, and it built more than 21,000 flats within its first three years.
+- **Centre for Strategic Futures, foresight inside government** (Antecipação). Singapore established the Centre for Strategic Futures in 2009 inside the Prime Minister's Office strategy system to study blind spots, run long-term futures research and develop foresight methods.
 
 ## Contribua
 

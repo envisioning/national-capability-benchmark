@@ -83,6 +83,10 @@ export const EN: Lexicon = {
       "Brazilian institutional change: deliveries that don't move scores but move countries.",
     brazilEvidenceIntro:
       'These are documented Brazilian institutional changes the framework files as evidence. They are not scored. They are the historical record that the capability measurement sits next to.',
+    institutionalHistoryHeading:
+      "Institutional change: deliveries that don't move scores but move {countryTopic}.",
+    institutionalHistoryIntro:
+      'These are documented institutional changes in {country} that the framework files as evidence. They sit beside the score and do not change it or its confidence.',
     contributeHeading: 'Contribute',
     contributeBody:
       'Fill a gap, file evidence or challenge an indicator at {repo}. The docs explain the method and decisions.',

@@ -1423,6 +1423,186 @@
           "A funding body with enough flexibility to contract applied work faster than ordinary grants"
         ]
       }
+    },
+    {
+      "id": "est-defence-league",
+      "indicatorId": "institutional_responsiveness",
+      "iso3": "EST",
+      "title": "Estonian Defence League, national defence rebuilt after independence",
+      "claim": "The Estonian Defence League was re-established in February 1990, before the country regained independence, and operates as a voluntary national defence organisation under the Ministry of Defence with territorial units and its own training structure.",
+      "metric": {
+        "name": "Year the Defence League was re-established",
+        "value": 1990,
+        "unit": "year",
+        "asOf": "1990"
+      },
+      "started": 1990,
+      "status": "operating",
+      "source": {
+        "publisher": "Estonian Defence League, history",
+        "url": "https://kaitseliit.ee/en/defence-league/history/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-30"
+      },
+      "limits": "The re-establishment date and organisational description show institutional intent and continuity, not readiness, effectiveness or public support. The source describes the Defence League itself, so it does not independently test its performance.",
+      "pattern": {
+        "mechanism": "A state rebuilt a territorial volunteer defence organisation before independence was restored, preserving a civic channel for mobilisation alongside the formal defence forces.",
+        "preconditions": [
+          "A population willing to sustain a voluntary defence organisation",
+          "A legal route from civic organisation to public defence responsibility",
+          "A ministry able to train and coordinate territorial units"
+        ]
+      }
+    },
+    {
+      "id": "sgp-hdb",
+      "indicatorId": "large_project_delivery",
+      "iso3": "SGP",
+      "title": "Housing and Development Board, public housing at scale",
+      "claim": "Singapore set up the Housing and Development Board in 1960 to address a severe housing shortage, and it built more than 21,000 flats within its first three years.",
+      "metric": {
+        "name": "Flats built in the first three years",
+        "value": 21000,
+        "unit": "flats",
+        "asOf": "1963"
+      },
+      "started": 1960,
+      "status": "operating",
+      "source": {
+        "publisher": "Housing and Development Board, Our history",
+        "url": "https://www.hdb.gov.sg/about-us/our-story/our-history",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-30"
+      },
+      "limits": "The early construction count shows delivery at scale, not housing quality, affordability or equal access over the full history of the programme. The account is published by the agency responsible for the programme.",
+      "pattern": {
+        "mechanism": "A public housing authority combined land, planning, finance and construction into one delivery system, allowing a severe national shortage to be treated as a programme rather than as separate private projects.",
+        "preconditions": [
+          "Public authority over enough land for coordinated development",
+          "Finance and construction capacity that can be directed to a common programme",
+          "A long-term administrative mandate that survives individual projects"
+        ]
+      }
+    },
+    {
+      "id": "sgp-csf",
+      "indicatorId": "government_foresight_capacity",
+      "iso3": "SGP",
+      "title": "Centre for Strategic Futures, foresight inside government",
+      "claim": "Singapore established the Centre for Strategic Futures in 2009 inside the Prime Minister's Office strategy system to study blind spots, run long-term futures research and develop foresight methods.",
+      "metric": {
+        "name": "Year the Centre for Strategic Futures was established",
+        "value": 2009,
+        "unit": "year",
+        "asOf": "2009"
+      },
+      "started": 2009,
+      "status": "operating",
+      "source": {
+        "publisher": "Centre for Strategic Futures, Who we are",
+        "url": "https://www.csf.gov.sg/who-we-are/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-30"
+      },
+      "limits": "Creating a foresight unit shows a formal capability for examining uncertainty, not whether its work changes budgets, policies or decisions. The centre describes its own mandate and does not publish a counterfactual for decisions made without it.",
+      "pattern": {
+        "mechanism": "A central strategy unit gives government a standing place to examine emerging risks and challenge assumptions before those risks become immediate policy demands.",
+        "preconditions": [
+          "A centre of government willing to receive uncomfortable analysis",
+          "Access to policy teams that can act on long-horizon findings",
+          "Methods and networks that keep foresight connected to evidence"
+        ]
+      }
+    },
+    {
+      "id": "kor-epb",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "KOR",
+      "title": "Economic Planning Board, long-run industrial coordination",
+      "claim": "South Korea's Economic Planning Board operated from 1961 to 1994 as the government body responsible for economic development planning and budget planning before its functions moved through later finance ministries.",
+      "metric": {
+        "name": "Year the Economic Planning Board was established",
+        "value": 1961,
+        "unit": "year",
+        "asOf": "1961"
+      },
+      "started": 1961,
+      "status": "concluded",
+      "source": {
+        "publisher": "Ministry of Strategy and Finance, ministry history",
+        "url": "https://english.moef.go.kr/images/MOSF_Brochure_2016.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-30"
+      },
+      "limits": "The board's mandate and lifespan show a coordination architecture, not the independent contribution of planning to industrial outcomes or the distribution of its gains. A ministry history is an official account and is not a comparative evaluation.",
+      "pattern": {
+        "mechanism": "Planning, budgeting and economic coordination were placed in one central institution, giving government a durable route to align public investment with industrial priorities and private-sector expansion.",
+        "preconditions": [
+          "A centre of government with authority over development priorities and budgets",
+          "Administrative capacity to turn plans into financing and implementation",
+          "Firms able to respond to coordinated infrastructure, credit and export policy"
+        ]
+      }
+    },
+    {
+      "id": "kor-kisa",
+      "indicatorId": "institutional_responsiveness",
+      "iso3": "KOR",
+      "title": "Korea Internet and Security Agency, a consolidated digital authority",
+      "claim": "Korea established the Korea Internet and Security Agency in July 2009 by integrating three predecessor organisations, giving the country one public body for internet development, security and international information technology cooperation.",
+      "metric": {
+        "name": "Year the Korea Internet and Security Agency was established",
+        "value": 2009,
+        "unit": "year",
+        "asOf": "2009"
+      },
+      "started": 2009,
+      "status": "operating",
+      "source": {
+        "publisher": "Korea Internet and Security Agency, history",
+        "url": "https://www.kisa.or.kr/EN/403",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-30"
+      },
+      "limits": "The integration date and mandate show a public response to a changing digital environment, not the agency's effectiveness against cyber threats or its performance across every programme. The agency is the source for its own institutional history.",
+      "pattern": {
+        "mechanism": "Three specialised organisations were combined into one agency so that internet development, security and international cooperation could be handled through a shared public capability.",
+        "preconditions": [
+          "A government willing to merge overlapping specialist bodies",
+          "Technical staff and institutional knowledge that can survive the merger",
+          "A mandate broad enough to connect infrastructure, security and cooperation"
+        ]
+      }
+    },
+    {
+      "id": "kor-mydata",
+      "indicatorId": "institutional_trust",
+      "iso3": "KOR",
+      "title": "MyData, citizen-directed data portability",
+      "claim": "South Korea's MyData policy gives people a route to request and direct the transfer of personal data between services, with the Personal Information Protection Commission describing the scheme as a way to give people control over data portability after the March 2023 legal amendment.",
+      "metric": {
+        "name": "Year of the legal amendment establishing the data portability right",
+        "value": 2023,
+        "unit": "year",
+        "asOf": "2023"
+      },
+      "started": 2023,
+      "status": "operating",
+      "source": {
+        "publisher": "Personal Information Protection Commission, MyData policy notice",
+        "url": "https://www.pipc.go.kr/eng/user/ltn/new/noticeDetail.do?bbsId=BBSMSTR_000000000001&nttId=2804",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-30"
+      },
+      "limits": "A portability right shows a legal design for user control, not whether people understand it, use it safely or receive better services. The policy notice describes the legal framework and is not an independent assessment of outcomes.",
+      "pattern": {
+        "mechanism": "The state gives people a legal route to move their own data between providers, shifting data access from a private platform choice toward a user-directed right.",
+        "preconditions": [
+          "A privacy authority able to define consent and portability rules",
+          "Interoperable data formats and secure transfer channels",
+          "Providers willing and able to respond to a person's authorised request"
+        ]
+      }
     }
   ]
 }

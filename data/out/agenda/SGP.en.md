@@ -1,6 +1,6 @@
 # Capability agenda: Singapore
 
-*Generated 2026-08-28*
+*Generated 2026-08-30*
 
 The frame includes 52 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
@@ -11,7 +11,7 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 | Anticipation | 78.1 | 0.62 (usable) | +14.5 over 10 years using 5 indicators |
 | Agency | 84.9 | 0.57 (usable) | +10.7 over 10 years using 3 indicators |
 | Coordination | 90.4 | 0.18 (very thin) | no trend |
-| Trust | not scored | 0.07 (very thin) | no trend |
+| Trust | 73.5 | 0.16 (very thin) | no trend |
 | Learning | 56 | 0.49 (usable) | +1.6 over 10 years using 2 indicators |
 | Experimentation | 46.5 | 0.21 (very thin) | +10.7 over 10 years using 2 indicators |
 | Adaptability | 79 | 0.47 (usable) | +4.8 over 10 years using 4 indicators |
@@ -22,14 +22,6 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Trust: confidence 0.07, very thin
-
-How much cooperation is possible beyond immediate personal networks?
-
-- Uses one observed indicator.
-- Missing indicators: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
-
 ### Shared Purpose: confidence 0.14, very thin
 
 To what extent can people imagine themselves as participants in a common project?
@@ -37,6 +29,14 @@ To what extent can people imagine themselves as participants in a common project
 - Uses one observed indicator.
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
 - Rejected datasets: Voice and accountability.
+
+### Trust: confidence 0.16, very thin
+
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 2 observed indicators.
+- Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
 ### Coordination: confidence 0.18, very thin
 
@@ -65,7 +65,7 @@ These scores are at least 50 with usable evidence. They still need watching.
 
 ## Missing data
 
-27 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+26 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -76,7 +76,6 @@ These scores are at least 50 with usable evidence. They still need watching.
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
 | Coordination | Civil society strength | Autonomy, density and participatory reach of civil society organisations. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
-| Trust | Generalised interpersonal trust | Share agreeing that most people can be trusted. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
 | Trust | Cooperation beyond the in-group | Reported trust in people met for the first time and in people of another nationality. |
 | Trust | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
@@ -97,11 +96,13 @@ These scores are at least 50 with usable evidence. They still need watching.
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
 
-## What the indicators miss about Singapore
+## Institutional change: deliveries that don't move scores but move Singapore.
 
-Documented deliveries linked to missing indicators. They do not affect scores or confidence.
+These are documented institutional changes in Singapore that the framework files as evidence. They sit beside the score and do not change it or its confidence.
 
 - **SkillsFuture Credit** (Learning). Singapore gave every citizen aged 25 and over an individual training account in 2016 and keeps topping it up, and in 2024 260,000 Singaporeans spent credit on courses, up 35 percent on the year before.
+- **Housing and Development Board, public housing at scale** (Building). Singapore set up the Housing and Development Board in 1960 to address a severe housing shortage, and it built more than 21,000 flats within its first three years.
+- **Centre for Strategic Futures, foresight inside government** (Anticipation). Singapore established the Centre for Strategic Futures in 2009 inside the Prime Minister's Office strategy system to study blind spots, run long-term futures research and develop foresight methods.
 
 ## Contribute
 

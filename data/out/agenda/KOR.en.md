@@ -1,6 +1,6 @@
 # Capability agenda: South Korea
 
-*Generated 2026-08-28*
+*Generated 2026-08-30*
 
 The frame includes 52 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
@@ -11,7 +11,7 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 | Anticipation | 80.6 | 0.64 (usable) | +21.4 over 10 years using 5 indicators |
 | Agency | 78.9 | 0.6 (usable) | +6.8 over 10 years using 4 indicators |
 | Coordination | 90.6 | 0.18 (very thin) | no trend |
-| Trust | not scored | 0.07 (very thin) | no trend |
+| Trust | 67.4 | 0.16 (very thin) | no trend |
 | Learning | 55.9 | 0.54 (usable) | +16.5 over 10 years using 2 indicators |
 | Experimentation | 72.2 | 0.39 (thin) | +16.9 over 10 years using 2 indicators |
 | Adaptability | 82.1 | 0.48 (usable) | +7.8 over 10 years using 4 indicators |
@@ -22,12 +22,12 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Trust: confidence 0.07, very thin
+### Trust: confidence 0.16, very thin
 
 How much cooperation is possible beyond immediate personal networks?
 
-- Uses one observed indicator.
-- Missing indicators: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
+- Uses 2 observed indicators.
+- Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
 ### Coordination: confidence 0.18, very thin
@@ -65,7 +65,7 @@ These scores are at least 50 with usable evidence. They still need watching.
 
 ## Missing data
 
-27 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+26 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -76,7 +76,6 @@ These scores are at least 50 with usable evidence. They still need watching.
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
 | Coordination | Civil society strength | Autonomy, density and participatory reach of civil society organisations. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
-| Trust | Generalised interpersonal trust | Share agreeing that most people can be trusted. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
 | Trust | Cooperation beyond the in-group | Reported trust in people met for the first time and in people of another nationality. |
 | Trust | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
@@ -96,6 +95,14 @@ These scores are at least 50 with usable evidence. They still need watching.
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
+
+## Institutional change: deliveries that don't move scores but move South Korea.
+
+These are documented institutional changes in South Korea that the framework files as evidence. They sit beside the score and do not change it or its confidence.
+
+- **Economic Planning Board, long-run industrial coordination** (Coordination). South Korea's Economic Planning Board operated from 1961 to 1994 as the government body responsible for economic development planning and budget planning before its functions moved through later finance ministries.
+- **Korea Internet and Security Agency, a consolidated digital authority** (Adaptability). Korea established the Korea Internet and Security Agency in July 2009 by integrating three predecessor organisations, giving the country one public body for internet development, security and international information technology cooperation.
+- **MyData, citizen-directed data portability** (Trust). South Korea's MyData policy gives people a route to request and direct the transfer of personal data between services, with the Personal Information Protection Commission describing the scheme as a way to give people control over data portability after the March 2023 legal amendment.
 
 ## Contribute
 

@@ -5,6 +5,8 @@ import {
   INDICATORS_BY_ID,
   LIMITS_DOC,
   REPO_URL,
+  AGENDA_HISTORY_MIN_ENTRIES,
+  isAgendaHistoryCountry,
   docHref,
   indicatorsFor,
 } from '../model/index.js'
@@ -454,9 +456,18 @@ export function renderAgenda(agenda: CountryAgenda, lex: Lexicon): string {
   out.push('')
 
   if (agenda.ownEvidence.length > 0) {
-    const evidenceHeading =
-      agenda.iso3 === 'BRA' ? s.brazilEvidenceHeading : fill(s.ownEvidenceHeading, { countryTopic: topic })
-    const evidenceIntro = agenda.iso3 === 'BRA' ? s.brazilEvidenceIntro : s.ownEvidenceIntro
+    const hasInstitutionalHistory =
+      isAgendaHistoryCountry(agenda.iso3) && agenda.ownEvidence.length >= AGENDA_HISTORY_MIN_ENTRIES
+    const evidenceHeading = hasInstitutionalHistory
+      ? fill(s.institutionalHistoryHeading, { countryTopic: topic })
+      : agenda.iso3 === 'BRA'
+        ? s.brazilEvidenceHeading
+        : fill(s.ownEvidenceHeading, { countryTopic: topic })
+    const evidenceIntro = hasInstitutionalHistory
+      ? fill(s.institutionalHistoryIntro, { country: name })
+      : agenda.iso3 === 'BRA'
+        ? s.brazilEvidenceIntro
+        : s.ownEvidenceIntro
     out.push(`## ${evidenceHeading}`)
     out.push('')
     out.push(evidenceIntro)

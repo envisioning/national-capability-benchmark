@@ -31,6 +31,7 @@ import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises'
 import { buildDataPackage, jsonSchemas } from '../pipeline/datapackage.js'
 import { flatTable, scoreAll } from '../pipeline/score.js'
 import { buildAgenda, renderAgenda } from '../pipeline/agenda.js'
+import { assertAgendaHistoryFloor, readAgendaHistoryDiscipline } from '../pipeline/agenda-history.js'
 import { LANGS, LEXICONS } from '../i18n/index.js'
 import type { Lang } from '../i18n/index.js'
 import { runDiagnostics } from '../pipeline/diagnostics.js'
@@ -222,6 +223,7 @@ async function trust(args: Args): Promise<void> {
  */
 async function agenda(args: Args, countries: CountryResult[]): Promise<void> {
   const evidence = await loadEvidence()
+  const discipline = await readAgendaHistoryDiscipline()
   const requested = args._.slice(1).map((s) => s.toUpperCase())
   const targets = requested.length > 0 ? requested : countries.map((c) => c.iso3)
   const langFlag = str(args, 'lang', 'all')
@@ -233,6 +235,7 @@ async function agenda(args: Args, countries: CountryResult[]): Promise<void> {
   const generatedAt = new Date().toISOString()
   for (const iso3 of targets) {
     const built = buildAgenda(countries, evidence, iso3, generatedAt)
+    assertAgendaHistoryFloor(iso3, built.ownEvidence.length, discipline)
     await writeOut(agendaFile(iso3), `${JSON.stringify(built, null, 2)}\n`)
     for (const lang of langs) {
       const lex = LEXICONS[lang]
