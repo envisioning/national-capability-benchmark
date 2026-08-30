@@ -15,7 +15,7 @@ and may skip versions that were never committed.
   near-black tile in the browser tab, on a home screen and in a bookmark list,
   generated at every size the platforms ask for.
 - **The front page opens on a dark band.** It spans the window, on the same
-  surface the footer uses, lit by the lime glow the brand reserves for a hero.
+  surface the footer uses.
 - **The navigation hangs from one edge.** The sections, the trail into a page
   and the tabs under the header now line up on the right on a wide screen.
 - **Buttons, fields and filters share one shape.** Every control on the site now

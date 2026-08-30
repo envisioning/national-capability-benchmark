@@ -541,14 +541,16 @@ as the reference, and see NOTICE.md before reusing the brand.
   because its header draws sections, a crumb trail and a tab strip in one stack,
   and the lime underline says where the reader is. See D81.
 - The front page opens on `hero-band`, the site's one dark surface above the
-  footer, and `hero-glow` is the one gradient the brand permits. Both live in
-  `globals.css`. A band spans the window through `full-bleed` and supplies its
-  own `max-w-6xl` container, the way envisioning.com draws a section: `main` is
-  a centred container, so a band that only sits inside it reads as a card.
-  `html, body { overflow-x: clip }` absorbs the scrollbar overshoot `100vw`
-  causes, and `clip` is required over `hidden` because `hidden` would make the
-  element a scroll container and break any future sticky chrome. Never put a
-  second dark band on a page and never draw the glow anywhere else. See D81.
+  footer, and it is flat. A band spans the window through `full-bleed` and
+  supplies its own `max-w-6xl` container, the way envisioning.com draws a
+  section: `main` is a centred container, so a band that only sits inside it
+  reads as a card. `html, body { overflow-x: clip }` absorbs the scrollbar
+  overshoot `100vw` causes, and `clip` is required over `hidden` because
+  `hidden` would make the element a scroll container and break any future
+  sticky chrome. Never put a second dark band on a page. **The viewer draws no
+  gradient at all**, including the lime hero glow envisioning.com permits: the
+  accent already lands on the highlight marker inside the band, and a wash
+  behind it spends the accent twice. See D81.
 - Navigation hangs from one edge. The sections sit right from `md` up, so the
   crumb trail and the tab strip are `md:justify-end` as well and the reader
   tracks one column down. Below `md` the sections fold into the sheet, there is

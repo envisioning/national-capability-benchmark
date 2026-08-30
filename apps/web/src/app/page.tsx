@@ -110,11 +110,11 @@ export default async function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: datasetJsonLd(data) }} />
-      {/* The site's one dark band above the footer, and the only place the lime
-          glow renders. It spans the window and supplies its own container, the
-          way envisioning.com draws a section, so the band reads as the page
-          opening rather than as a card sitting on it. */}
-      <div className="hero-band hero-glow full-bleed -mt-12 mb-12 sm:-mt-16">
+      {/* The site's one dark band above the footer. It spans the window and
+          supplies its own container, the way envisioning.com draws a section, so
+          the band reads as the page opening rather than as a card sitting on
+          it. The surface is flat: the lime lands once, on the marker below. */}
+      <div className="hero-band full-bleed -mt-12 mb-12 sm:-mt-16">
         <div className="m-auto max-w-6xl px-6 py-12 sm:px-12 sm:py-20">
           <HeroTitle>What is a country capable of doing?</HeroTitle>
           <Headline>

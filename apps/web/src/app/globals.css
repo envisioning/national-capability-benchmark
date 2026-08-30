@@ -287,16 +287,20 @@ html {
 }
 
 /* The one dark band above the fold, spanning the window and sharing the
- * footer's surface, so the page opens and closes on the same colour. The custom properties keep anything
- * placed inside it legible without touching the page-wide tokens, exactly as
- * .footer-band does. */
+ * footer's surface, so the page opens and closes on the same colour. The custom
+ * properties keep anything placed inside it legible without touching the
+ * page-wide tokens, exactly as .footer-band does.
+ *
+ * The band is flat. envisioning.com permits one gradient, a lime glow at the
+ * top of a dark hero, and this site does not draw it: the lime already carries
+ * the highlight marker in the sentence under the title, and a wash behind it
+ * spends the accent twice. See D81. */
 .hero-band {
   --hero-bg: #1a1d2b;
   --background: var(--hero-bg);
   --foreground: #ffffff;
   --muted: #b5bddf;
   --rule: rgba(255, 255, 255, 0.12);
-  position: relative;
   background: var(--hero-bg);
   color: #ffffff;
 }
@@ -306,25 +310,6 @@ html {
     --hero-bg: #191c2b;
     --muted: #b8bdd9;
   }
-}
-
-/* The one permitted gradient: a lime glow at the top of a dark hero. It is a
- * layer over the band rather than the band's own background, so the fill and
- * the glow stay independent. */
-.hero-glow::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image: radial-gradient(
-    ellipse at top,
-    rgba(214, 242, 73, 0.14) 0%,
-    rgba(214, 242, 73, 0) 58%
-  );
-}
-
-.hero-band > * {
-  position: relative;
 }
 
 /* Evidence records read as separate posts, while their short intro stays
