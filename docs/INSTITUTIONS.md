@@ -69,12 +69,19 @@ country even though their legal forms and powers differ. A source and a plain
 description carry that local difference rather than a Brazil-specific field in
 the schema.
 
-The viewer has two readings of the same graph. The overview renders every node
-and edge in system clusters so the whole institutional field is visible at
-once. The focus reading centers one selected institution and shows its direct
-neighbors with the relationship verbs. Clicking a node in either reading keeps
-the selected profile in sync. This is a presentation choice only; it does not
-change the network file or add a second interpretation of an edge.
+The viewer has three readings of the same graph. The directory keeps every node
+reachable by name, level, system and jurisdiction. The profile centers one
+institution and shows its direct neighbors with the relationship verbs. The
+system matrix counts the channels between systems and links back to the
+profiles. Clicking an institution in any surface keeps the selected profile in
+sync. These are presentation choices only; they do not change the network file
+or add a second interpretation of an edge.
+
+The shared ontology includes a `public_security_defense` system. It keeps
+policing, intelligence, civil protection and military defence visible as a
+distinct institutional function rather than treating every security body as a
+court or a ministry. Its occupants remain country-specific, so another country
+can use a different legal arrangement without changing the schema.
 
 ## Coverage is a claim
 
@@ -98,10 +105,19 @@ A state reaches pilot coverage when it has, at minimum:
 
 - executive, legislature, state court, public prosecution and external and
   internal control;
+- civil police, uniformed police, fire and rescue, and public defence;
 - the main organisations for finance, statistics or data, workforce formation,
   science and technology, regulation and municipal delivery;
 - a source for every node and every edge;
 - at least one cross-level relationship to a federal or municipal institution.
+
+The Brazil file currently gives every state and the Federal District a first
+security and rights layer. That layer is still `scaffold`: it records the
+institutions and a few durable links, but it does not yet describe each state's
+finance, health, education, environmental, data or regulatory systems. São
+Paulo remains the only state with the deeper pilot treatment. The federative
+pilot also adds one finance or planning anchor in Maranhão, Minas Gerais and
+Pará, while São Paulo is still the only municipality represented.
 
 ## Connection to the NCB
 

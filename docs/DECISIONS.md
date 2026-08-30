@@ -2827,3 +2827,34 @@ evidence that the declared reconciliation rules systematically mislead readers,
 would justify revising this boundary. A source that publishes only incompatible
 geometries would justify withholding its fixture rather than relaxing the
 schema.
+
+## D74: Brazil's institution map uses an explicit inclusion rule and a federative pilot
+
+*Recorded 2026-08-30. Extends D56 and D58.*
+
+**Choice.** An institution belongs in a country map when it is a federative-level
+entity that allocates authoritative public data on at least one NCB dimension
+indicator, or a federal entity that exercises authority over a capability-relevant
+activity at national scope and has a public source citation a Brazilian reader
+can follow in under two clicks. The rule is descriptive: inclusion does not
+measure performance, enter a score or imply that the institution delivered well.
+
+Brazil's first federative pilot names the state finance and planning functions
+alongside the São Paulo State Public Defender: Sefaz-SP, Sefaz-MA, Seplag-MG,
+Sefa-PA and the São Paulo Defensoria Pública. The rest of the state layer stays
+scaffolded until its sectoral institutions have the same source-backed treatment.
+
+**Why.** The original map showed the federal lens well but made the state layer
+look more complete than its evidence warranted. Naming the rule makes expansion
+repeatable, while the five-entry pilot tests whether the same concepts survive
+when authority, data and delivery sit below the Union.
+
+**Costs.** A public source can make an institution easy to find without proving
+that it has capability in practice. The pilot also leaves many state functions
+outside the map, and the two-click test depends on websites that can move.
+
+**Overturned by.** Evidence that the inclusion rule systematically favors bodies
+with better websites over bodies with greater authority, which would require a
+separate source-access criterion. A state-level map whose institutions cannot be
+described without adding a new level or system, which would overturn the current
+federative pilot shape.

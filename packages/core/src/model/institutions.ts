@@ -20,6 +20,7 @@ export const InstitutionSystem = z.enum([
   'learning_workforce',
   'data_digital',
   'regulation',
+  'public_security_defense',
   'territorial_delivery',
 ])
 export type InstitutionSystem = z.infer<typeof InstitutionSystem>
@@ -49,10 +50,12 @@ export const InstitutionRole = z.enum([
   'checks_constitutionality',
   'prosecutes',
   'represents_state',
+  'defends_rights',
   'checks',
   'audits',
   'coordinates',
   'plans',
+  'administers',
   'finances',
   'regulates',
   'produces_evidence',
@@ -60,6 +63,10 @@ export const InstitutionRole = z.enum([
   'trains',
   'operates_infrastructure',
   'delivers_services',
+  'investigates',
+  'protects',
+  'intelligence',
+  'defends',
 ])
 export type InstitutionRole = z.infer<typeof InstitutionRole>
 

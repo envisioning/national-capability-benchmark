@@ -42,7 +42,52 @@ const SUMMARIES: Record<string, string> = {
   'bra.federal.dataprev': 'Processa dados e opera sistemas de previdência e políticas sociais.',
   'bra.federal.cade': 'Defende a concorrência e julga atos de concentração e condutas anticompetitivas.',
   'bra.federal.inpi': 'Concede e administra direitos de propriedade industrial, como marcas e patentes.',
+  'bra.federal.mjsp': 'Coordena a política federal de justiça e segurança pública e articula o sistema nacional de segurança.',
+  'bra.federal.pf': 'Exerce a polícia judiciária da União e investiga crimes federais, interestaduais e internacionais.',
+  'bra.federal.prf': 'Faz o policiamento das rodovias federais, protege usuários e apoia o combate a crimes transfronteiriços.',
+  'bra.federal.defesa': 'Coordena a política de defesa nacional e a administração das Forças Armadas.',
+  'bra.federal.gsi': 'Assessora a Presidência em segurança institucional, infraestrutura crítica e coordenação de inteligência.',
+  'bra.federal.abin': 'Produz inteligência para decisões de Estado e coordena o sistema brasileiro de inteligência.',
+  'bra.federal.tse': 'Organiza as eleições, administra a Justiça Eleitoral e julga conflitos eleitorais.',
+  'bra.federal.cnj': 'Supervisiona a gestão administrativa e financeira do Judiciário e publica dados da Justiça.',
+  'bra.federal.cnmp': 'Fiscaliza a atuação administrativa e funcional do Ministério Público.',
+  'bra.federal.dpu': 'Presta assistência jurídica e defende os direitos de pessoas sem recursos em questões federais.',
+  'bra.federal.tst': 'Uniformiza a orientação da Justiça do Trabalho e julga processos de sua competência constitucional.',
+  'bra.federal.mpt': 'Defende direitos trabalhistas e move ações coletivas contra violações no trabalho.',
+  'bra.federal.receita': 'Administra tributos federais e a aduana, apoia a política tributária e combate ilícitos fiscais.',
+  'bra.federal.tesouro': 'Administra a dívida pública federal, as contas fiscais e os padrões de informação financeira do setor público.',
+  'bra.federal.pgfn': 'Representa a União em matéria tributária e cobra a dívida ativa federal.',
+  'bra.federal.inss': 'Opera o sistema federal de benefícios previdenciários por meio de uma rede nacional de atendimento.',
+  'bra.federal.caixa': 'Oferece serviços bancários públicos, financiamento habitacional e infraestrutura de pagamentos de programas federais.',
+  'bra.federal.bb': 'Oferece serviços bancários, crédito agrícola e pagamentos com mandato público e rede nacional.',
+  'bra.federal.mte': 'Coordena as políticas federais de trabalho, emprego e renda.',
+  'bra.federal.mds': 'Coordena a assistência social, a segurança alimentar e as políticas de transferência de renda.',
+  'bra.federal.mma': 'Coordena a política ambiental federal e a agenda climática.',
+  'bra.federal.mda': 'Coordena políticas de desenvolvimento agrário e agricultura familiar.',
+  'bra.federal.mpi': 'Coordena políticas federais para os povos indígenas e a proteção de seus direitos e territórios.',
+  'bra.federal.ibama': 'Licencia, monitora e fiscaliza regras ambientais federais e combate infrações ambientais.',
+  'bra.federal.icmbio': 'Administra unidades de conservação federais e protege a biodiversidade com operações de campo e pesquisa.',
+  'bra.federal.funai': 'Protege direitos indígenas e coordena a ação federal em terras indígenas.',
+  'bra.federal.incra': 'Executa reforma agrária, regularização fundiária e programas de desenvolvimento rural.',
+  'bra.federal.ana': 'Regula recursos hídricos federais e produz informação para segurança hídrica e saneamento.',
+  'bra.federal.anpd': 'Orienta e fiscaliza a proteção de dados pessoais no Brasil.',
+  'bra.federal.mcom': 'Coordena políticas federais de comunicação, conectividade e serviços postais.',
+  'bra.federal.mme': 'Coordena políticas federais de energia, mineração e combustíveis.',
+  'bra.federal.transport': 'Coordena a política federal de transportes terrestres e o planejamento de infraestrutura.',
+  'bra.federal.midr': 'Coordena desenvolvimento regional, resposta à seca, proteção civil e infraestrutura hídrica.',
+  'bra.federal.anatel': 'Regula telecomunicações e fiscaliza a qualidade e a concorrência nos serviços de comunicação.',
+  'bra.federal.aneel': 'Regula geração, transmissão e distribuição de energia elétrica e o atendimento ao consumidor.',
+  'bra.federal.anp': 'Regula os mercados de petróleo, gás e biocombustíveis e acompanha seu abastecimento e qualidade.',
+  'bra.federal.antt': 'Regula concessões federais de rodovias e ferrovias e suas obrigações de serviço.',
+  'bra.federal.anac': 'Regula a segurança da aviação civil, o acesso ao mercado e as concessões aeroportuárias.',
+  'bra.federal.antaq': 'Regula o transporte aquaviário e as instalações portuárias sob competência federal.',
+  'bra.federal.ans': 'Regula planos de saúde privados e protege consumidores na saúde suplementar.',
+  'bra.federal.anm': 'Regula direitos minerários, segurança e obrigações ambientais do setor mineral.',
+  'bra.federal.cvm': 'Regula o mercado de valores mobiliários e protege investidores com transparência e supervisão.',
+  'bra.federal.susep': 'Supervisiona seguros, resseguros, capitalização e previdência aberta.',
+  'bra.federal.fnde': 'Financia e opera programas federais de apoio à educação básica nos estados e municípios.',
   'bra.sp.government': 'Dirige o Executivo paulista e coordena políticas e serviços de alcance estadual.',
+  'bra.sp.fazenda': 'Arrecada receitas estaduais e coordena o planejamento financeiro, orçamentário e econômico de São Paulo.',
   'bra.sp.alesp': 'Aprova leis e o orçamento do estado e fiscaliza o Executivo paulista.',
   'bra.sp.tjsp': 'Julga conflitos na Justiça estadual de São Paulo.',
   'bra.sp.tcesp': 'Fiscaliza contas, contratos e gastos do estado e dos municípios paulistas dentro de sua jurisdição.',
@@ -58,6 +103,9 @@ const SUMMARIES: Record<string, string> = {
   'bra.sp.cps': 'Mantém as Etecs e Fatecs e oferece educação profissional e tecnológica em todo o estado.',
   'bra.sp.city_sao_paulo': 'Governa o município de São Paulo e entrega serviços locais diretamente à população.',
   'bra.sp.fiap': 'Centro universitário privado de São Paulo voltado à formação em tecnologia, gestão e áreas relacionadas.',
+  'bra.ma.fazenda': 'Coordena a administração tributária e a gestão financeira do Maranhão.',
+  'bra.mg.planejamento': 'Coordena o planejamento, a gestão e a modernização do setor público em Minas Gerais.',
+  'bra.pa.fazenda': 'Coordena a administração tributária e a gestão financeira do Pará.',
 }
 
 const STATE_LABELS_PT_BR: Record<string, string> = {
@@ -109,6 +157,18 @@ function stateSummary(node: InstitutionNetworkFile['nodes'][number]): string | u
   }
   if (node.id.endsWith('.cge')) {
     return `Coordena controle interno, integridade e auditoria no Executivo de ${state}.`
+  }
+  if (node.id.endsWith('.civil_police')) {
+    return `Investiga crimes e exerce a polícia judiciária no estado de ${state}.`
+  }
+  if (node.id.endsWith('.military_police')) {
+    return `Faz o policiamento ostensivo e preserva a segurança pública em ${state}.`
+  }
+  if (node.id.endsWith('.fire')) {
+    return `Atua em prevenção, resposta a incêndios e defesa civil em ${state}.`
+  }
+  if (node.id.endsWith('.defensoria')) {
+    return `Presta assistência jurídica integral e defende direitos em ${state}.`
   }
   return undefined
 }
