@@ -28,12 +28,17 @@ export function ContactForm({
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  /* The form's height at the moment it sent. The confirmation reserves it, so
+     the page keeps its length and whatever follows the form stays put. */
+  const [reserved, setReserved] = useState<number>()
 
   async function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
     setSending(true)
     setError(null)
-    const form = new FormData(event.currentTarget)
+    const element = event.currentTarget
+    const height = element.offsetHeight
+    const form = new FormData(element)
     const read = (key: string): string => String(form.get(key) ?? '').trim()
     try {
       const response = await fetch(contactApiHref, {
@@ -52,6 +57,7 @@ export function ContactForm({
       })
       const data = (await response.json()) as { error?: string; ok?: boolean }
       if (!response.ok || !data.ok) throw new Error(data.error ?? 'The message could not be sent.')
+      setReserved(height)
       setSent(true)
     } catch (caught) {
       setError(caught instanceof Error ? caught.message : 'The message could not be sent.')
@@ -61,9 +67,11 @@ export function ContactForm({
 
   if (sent) {
     return (
-      <p className="max-w-3xl rounded-lg border border-[var(--rule)] bg-[var(--surface-sunken)] px-4 py-3 text-lg leading-relaxed">
-        Your message reached us. A person reads every one and replies.
-      </p>
+      <div className="max-w-3xl" style={{ minHeight: reserved }}>
+        <p className="rounded-lg border border-[var(--rule)] bg-[var(--surface-sunken)] px-4 py-3 text-lg leading-relaxed">
+          Message sent. We will reply by email.
+        </p>
+      </div>
     )
   }
 
