@@ -16,6 +16,7 @@ import {
   aboutHref,
   capabilitiesHref,
   challengeHref,
+  thesisHref,
 } from '@/lib/links'
 
 /**
@@ -46,6 +47,7 @@ const PRIMARY_NOTES: Record<string, string> = {
   '/': 'Every country, nine dimensions each, with the confidence beside every score.',
   [capabilitiesHref]: 'One page per capability: what it asks, what measures it, who scores well.',
   '/agenda': 'What each country should raise, measure and hold, computed from its own profile.',
+  [thesisHref]: 'Why capability matters when intelligence, agents and robotics change the conditions of action.',
   '/method': 'How the benchmark is built and how to audit it.',
   [challengeHref]: 'What would overturn the model, and how to file an objection.',
   [aboutHref]: 'What this is, who built it, and where to start reading.',

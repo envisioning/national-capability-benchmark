@@ -9,6 +9,7 @@ import {
   countryProfileHref,
   digestHref,
   METHOD_SUBNAV,
+  thesisHref,
 } from '@/lib/links'
 
 export const dynamic = 'force-static'
@@ -33,6 +34,7 @@ export async function GET(): Promise<Response> {
   add(capabilitiesHref)
   for (const dimension of DIMENSIONS) add(`${capabilitiesHref}/${dimension}`)
   add('/agenda')
+  add(thesisHref)
   add('/pt')
   add('/pt/agenda')
   add('/country/BRA/institutions')

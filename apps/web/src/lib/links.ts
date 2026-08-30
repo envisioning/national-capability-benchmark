@@ -17,6 +17,9 @@ export const countryLocalHref = (iso3: string): string =>
 /** The methodology overview. */
 export const methodHref = '/method'
 
+/** The public statement of what the benchmark is for. */
+export const thesisHref = '/thesis'
+
 /** Stable fragment for one dimension's score on a country profile. */
 export const scoreAnchorHref = (iso3: string, dimension: Dimension): string =>
   `${countryProfileHref(iso3)}#score-${dimension}`
@@ -231,6 +234,7 @@ export const PRIMARY_NAV = [
   { href: '/', label: 'Countries' },
   { href: capabilitiesHref, label: 'Capabilities' },
   { href: '/agenda', label: 'Agendas' },
+  { href: thesisHref, label: 'Thesis' },
   { href: '/method', label: 'Method' },
   { href: challengeHref, label: 'Challenge' },
   { href: aboutHref, label: 'About' },
