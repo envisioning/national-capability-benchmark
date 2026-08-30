@@ -1,11 +1,39 @@
 import Link from 'next/link'
-import { COUNTRIES, DIMENSIONS, DIMENSION_LABELS, DIMENSION_QUESTIONS, REPO_URL } from '@ncb/core'
-import { DIMENSION_ICON, Icon } from '@/components/Icon'
+import { COUNTRIES, DATASET_VERSION, INDICATORS, isScored } from '@ncb/core'
 import { FlagHistogram } from '@/components/FlagHistogram'
-import { Empty, Eyebrow, FrameNote, Headline, Highlight, PageTitle, Section } from '@/components/ui'
-import { MISSING_DATA_HINT, loadIndex } from '@/lib/data'
-import { capabilitiesHref, capabilityHref, countriesHref } from '@/lib/links'
-import { toHistogramProfile } from '@/lib/profile'
+import {
+  Empty,
+  Eyebrow,
+  FactStrip,
+  FrameNote,
+  Headline,
+  Highlight,
+  PageTitle,
+  Score,
+  Section,
+  type Fact,
+} from '@/components/ui'
+import { MISSING_DATA_HINT, loadDiagnostics, loadEvidence, loadIndex } from '@/lib/data'
+import {
+  aboutHref,
+  agendasHref,
+  capabilitiesHref,
+  challengeHref,
+  changelogReleaseHref,
+  compareBaseHref,
+  contactHref,
+  countriesHref,
+  countryProfileHref,
+  decisionsHref,
+  diagnosticsHref,
+  indicatorsHref,
+  limitsHref,
+  methodHref,
+  thesisHref,
+} from '@/lib/links'
+import { toHistogramProfile, widestSpread } from '@/lib/profile'
+import { readWealthTracking } from '@/lib/wealth'
+import { capitalize, countWord } from '@/lib/words'
 
 export const dynamic = 'force-dynamic'
 
@@ -41,14 +69,44 @@ function datasetJsonLd(data: { generatedAt: string; version?: string }): string 
  * English. It does not change language with the browser: the project publishes
  * no second copy of itself, so there is nothing to switch to. A country layer
  * is reached from that country's pages. See D69.
+ *
+ * Every section under the chart stands for one part of the site, and each one
+ * carries a sentence, a live number and one link out. No section reprints a
+ * list that has a page of its own, which is what kept the nine capabilities on
+ * this page three times over. See D75.
  */
 export default async function Page() {
-  const data = await loadIndex()
+  const [data, diag, evidence] = await Promise.all([
+    loadIndex(),
+    loadDiagnostics(),
+    loadEvidence(),
+  ])
   if (!data || data.countries.length === 0) return <Empty hint={MISSING_DATA_HINT} />
 
   const profiles = [...data.countries]
     .sort((a, b) => a.country.localeCompare(b.country))
     .map(toHistogramProfile)
+
+  const wealth = diag ? readWealthTracking(diag) : null
+  const spread = widestSpread(profiles)
+  const wired = INDICATORS.filter(isScored).length
+  const gaps = INDICATORS.filter((i) => i.ingest === 'gap').length
+
+  const facts: Fact[] = [
+    {
+      label: 'Dataset',
+      value: data.version ?? DATASET_VERSION,
+      href: changelogReleaseHref(data.version ?? DATASET_VERSION),
+    },
+    { label: 'Countries', value: COUNTRIES.length, href: countriesHref },
+    {
+      label: 'Indicators',
+      value: `${wired} of ${INDICATORS.length}`,
+      href: indicatorsHref,
+      note: `${gaps} declared gaps.`,
+    },
+    { label: 'Generated', value: data.generatedAt.slice(0, 10), href: methodHref },
+  ]
 
   return (
     <>
@@ -69,67 +127,124 @@ export default async function Page() {
       </Section>
 
       <Section
-        title="The nine capabilities"
-        hint="Each one asks a question the others do not, and each has its own indicators, country comparison and known gaps."
-      >
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {DIMENSIONS.map((dimension) => (
-            <Link
-              key={dimension}
-              href={capabilityHref(dimension)}
-              className="group rounded-xl border border-[var(--rule)] p-5 transition-all duration-200 hover:border-[var(--foreground)]"
-            >
-              <div className="flex items-center gap-3">
-                <Icon name={DIMENSION_ICON[dimension]} size={20} className="text-[var(--muted)]" />
-                <h3 className="text-xl font-medium tracking-tight group-hover:underline">
-                  {DIMENSION_LABELS[dimension]}
-                </h3>
-              </div>
-              <p className="mt-3 text-xs leading-relaxed text-[var(--muted)]">
-                {DIMENSION_QUESTIONS[dimension]}
-              </p>
-            </Link>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        title="Where to go next"
-        hint="The benchmark is built to be argued with, so every number links back to the data and the reasoning behind it."
+        title="A country is a shape, and no country is one number"
+        hint="Every profile draws the nine together, so a strength and a weakness are read in the same glance."
       >
         <p className="max-w-3xl text-lg leading-relaxed">
+          {spread ? (
+            <>
+              The widest case today is{' '}
+              <Link
+                href={countryProfileHref(spread.iso3)}
+                className="underline underline-offset-4"
+              >
+                {spread.country}
+              </Link>
+              , at <Score value={spread.high.value} size="sm" /> on{' '}
+              {spread.high.label.toLowerCase()} and <Score value={spread.low.value} size="sm" /> on{' '}
+              {spread.low.label.toLowerCase()}, a gap of {spread.range.toFixed(0)} points inside one
+              country. An average of the nine would erase it.{' '}
+            </>
+          ) : null}
           <Link href={countriesHref} className="underline underline-offset-4">
             All {COUNTRIES.length} countries
           </Link>{' '}
-          reads each one as a nine-dimension shape.{' '}
+          are drawn as shapes, and{' '}
+          <Link href={compareBaseHref} className="underline underline-offset-4">
+            compare
+          </Link>{' '}
+          puts one country beside up to three others. The{' '}
           <Link href={capabilitiesHref} className="underline underline-offset-4">
-            The capabilities directory
+            capabilities directory
           </Link>{' '}
-          carries the full score table. The{' '}
-          <Link href="/method" className="underline underline-offset-4">
-            method page
-          </Link>{' '}
-          explains the scoring, the{' '}
-          <Link href="/glossary" className="underline underline-offset-4">
-            glossary
-          </Link>{' '}
-          defines the terms, and the{' '}
-          <Link href="/limits" className="underline underline-offset-4">
-            limits page
-          </Link>{' '}
-          records where the current data is wrong about the world.
+          reads the same data the other way, one capability across every country.
         </p>
-        <p className="mt-4 max-w-3xl text-lg leading-relaxed">
-          The code and data are open.{' '}
-          <a
-            href={REPO_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="underline underline-offset-4"
-          >
-            Open the repository on GitHub
-          </a>
-          .
+      </Section>
+
+      {wealth ? (
+        <Section
+          title="The claim is that capability is not simply wealth"
+          hint="If a country's ability to act were only its income, this benchmark would be an income table. The test runs on every release."
+        >
+          <p className="max-w-3xl text-lg leading-relaxed">
+            The nine capabilities correlate with GDP per head from{' '}
+            {wealth.weakest?.strength?.toFixed(2)} on {wealth.weakest?.label.toLowerCase()} to{' '}
+            {wealth.strongest?.strength?.toFixed(2)} on {wealth.strongest?.label.toLowerCase()}.{' '}
+            {capitalize(countWord(wealth.separate.length))} of the nine come through the test and{' '}
+            {countWord(wealth.tracking.length)} do not, which the project publishes as a known
+            failure.{' '}
+            <Link href={thesisHref} className="underline underline-offset-4">
+              The thesis
+            </Link>{' '}
+            makes the argument and draws the result, and the{' '}
+            <Link href={diagnosticsHref} className="underline underline-offset-4">
+              diagnostics
+            </Link>{' '}
+            hold the full test.
+          </p>
+        </Section>
+      ) : null}
+
+      <Section
+        title="Each country gets an agenda, not a grade"
+        hint="The scores turn into three lists: what to raise, what to measure first and what to hold."
+      >
+        <p className="max-w-3xl text-lg leading-relaxed">
+          <Link href={agendasHref()} className="underline underline-offset-4">
+            {COUNTRIES.length} agendas
+          </Link>{' '}
+          are computed from the same data, one per country. Beside them sit{' '}
+          {countWord(evidence.length)} documented deliveries, filed against indicators that have no
+          dataset behind them. None of those records moves a score. They are what a country has already
+          built where the benchmark can only record a gap.
+        </p>
+      </Section>
+
+      <Section
+        title="Every number here can be checked, and argued with"
+        hint="The method, the limits and the reasoning behind each choice are published beside the data."
+      >
+        <FactStrip facts={facts} />
+        <p className="mt-6 max-w-3xl text-lg leading-relaxed">
+          The{' '}
+          <Link href={methodHref} className="underline underline-offset-4">
+            method
+          </Link>{' '}
+          explains how a statistic becomes a score, the{' '}
+          <Link href={limitsHref} className="underline underline-offset-4">
+            limits
+          </Link>{' '}
+          record where the data is wrong about the world, the{' '}
+          <Link href={decisionsHref} className="underline underline-offset-4">
+            decision log
+          </Link>{' '}
+          says what would overturn each choice, and the{' '}
+          <Link href={challengeHref} className="underline underline-offset-4">
+            challenge page
+          </Link>{' '}
+          is where an objection enters the record.
+        </p>
+      </Section>
+
+      <Section
+        title="Envisioning built this as a research prototype"
+        hint="It is early, the gaps are declared, and it is looking for institutions to improve it."
+      >
+        <p className="max-w-3xl text-lg leading-relaxed">
+          <a href="https://envisioning.com" className="underline underline-offset-4" rel="noopener">
+            Envisioning
+          </a>{' '}
+          researches how societies anticipate and act on change. The benchmark ranks nobody and
+          advises nobody. It reads a country&apos;s capability shape from public data and says how
+          confident it is.{' '}
+          <Link href={aboutHref} className="underline underline-offset-4">
+            About
+          </Link>{' '}
+          says what it is made of and what it refuses to do, and{' '}
+          <Link href={contactHref} className="underline underline-offset-4">
+            contact
+          </Link>{' '}
+          reaches a person.
         </p>
       </Section>
     </>

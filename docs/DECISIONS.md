@@ -2921,8 +2921,11 @@ agenda. A dimension with no score publishes no residual, a country with no
 income observation publishes none at all, and a dimension fitted on fewer than
 20 countries publishes neither a fit nor its residuals.
 
-The layer is offline. Nothing in the viewer reads it until a later decision
-promotes it under D65.
+The layer is offline in the sense D65 means. It renders at
+`/method/residual/sandbox`, which is unlinked and carries `robots: noindex`,
+the same shape as the velocity and leverage sandboxes. No score, confidence,
+agenda, country page or public surface reads the file, and no navigation points
+at the sandbox until a later decision promotes it.
 
 **Why.** D1 refuses a composite because the mean of nine dimensions ranks
 countries. Measured on the current release, that mean correlates with log GDP
@@ -2967,6 +2970,13 @@ rather than hiding it.
 - The mean absolute rank shift is in places, so it is read against `n` in the
   same row and is not comparable across dimensions with different country
   counts.
+- A straight line in log income predicts scores the scale cannot hold. Five of
+  424 cells fit below zero, all of them Ethiopia, Haiti and Rwanda on
+  Experimentation and Anticipation, and the residual there carries the
+  impossible part with it. The cell records this as `outOfScale`, the same
+  convention a clamped scored cell uses with `outOfFrame`. Clamping the fitted
+  value would break the property that makes the residual worth having, because
+  residuals of a clamped line no longer sum to zero against income.
 - Venezuela and Cuba have no GDP per capita observation in the current
   ingestion, so they carry no residual on any dimension.
 
@@ -3328,3 +3338,52 @@ with better websites over bodies with greater authority, which would require a
 separate source-access criterion. A state-level map whose institutions cannot be
 described without adding a new level or system, which would overturn the current
 federative pilot shape.
+
+## D75: The thesis argues, the about page describes, and the front page carries one module per section
+
+*Recorded 2026-08-30.*
+
+**Choice.** Three public pages are split by job and never restate each other.
+
+1. **`/thesis` owns the argument.** Why capability is worth measuring, what the
+   claim is, and how far the current data supports it. It draws the wealth
+   correlation for all nine dimensions, so the reader sees the result rather
+   than a promise to look it up. The two provisional layers are described as
+   computed and unpublished, gated by D65, never in the future tense.
+2. **`/about` owns the object.** What the dataset is made of, how big it is,
+   when it last ran, what the benchmark refuses to do, what it gets wrong and
+   how to argue with it. It states no second version of the claim, and links to
+   the thesis for it.
+3. **The front page carries one module per section of the site.** Each module
+   is a sentence, a live number and one link out. No module reprints a list that
+   has a page of its own.
+
+Numbers inside these pages are computed, never typed into the copy.
+`readWealthTracking` in `apps/web/src/lib/wealth.ts` is the only place the
+GDP correlation column is summarised, and the front page, the thesis and the
+about page all read it, so the three cannot state different results for the
+same run.
+
+**Why.** The two pages had grown into one argument told twice: both listed the
+nine capabilities, both named Brazil as the first case, both named Envisioning,
+and both stated the wealth claim. Two statements of one claim drift apart the
+first time only one of them is edited, and the about page had already drifted
+into promising a diagnostic result that the diagnostics had answered several
+releases earlier. The front page had the opposite failure. It printed the nine
+capabilities twice, once as the histogram's switch and once as a card grid, and
+compressed every other section of the site into a single paragraph of inline
+links, so a reader could not tell that agendas, limits or the decision log
+existed.
+
+**Costs.** A reader who lands on `/about` looking for the argument has to follow
+one link. The front page is longer, and each module has to be maintained against
+the section it stands for: a new top-level section needs a module or it goes
+unmentioned. The `widestSpread` sentence names whichever country currently has
+the widest gap, so it can change between runs, which is the point of computing
+it rather than writing it.
+
+**Overturned by.** Evidence that readers arriving on the about page expect the
+argument there and do not follow the link would move the claim back. Evidence
+that the front page's modules are read as a menu rather than as the benchmark
+would return it to the chart alone. A front page that grows past one module per
+section is the signal that this rule has stopped holding.

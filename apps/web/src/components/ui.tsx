@@ -372,6 +372,58 @@ export function Note({
   )
 }
 
+/** One fact about the object itself: what it is made of, not what it measures. */
+export type Fact = {
+  label: string
+  value: React.ReactNode
+  /** Where the reader checks it. */
+  href?: string
+  /** One line of context under the value. */
+  note?: string
+}
+
+/**
+ * The facts a reader needs before trusting a number: the version, the size, the
+ * date it was generated.
+ *
+ * These are counts and identifiers, never capability scores, so they are
+ * deliberately not rendered through `Score`. The front page and the about page
+ * both print them from the same registry values, so the two can never state
+ * different sizes for the same dataset.
+ */
+export function FactStrip({ facts }: { facts: Fact[] }) {
+  return (
+    <dl className="grid gap-px overflow-hidden rounded-xl border border-[var(--rule)] bg-[var(--rule)] sm:grid-cols-2 lg:grid-cols-4">
+      {facts.map((fact) => {
+        const value = (
+          <span className="text-xl font-medium tracking-tight" style={{ fontVariantNumeric: 'tabular-nums' }}>
+            {fact.value}
+          </span>
+        )
+        return (
+          <div key={fact.label} className="bg-[var(--background)] p-5">
+            <dt className="text-xs uppercase tracking-[0.05em] text-[var(--muted)]">
+              {fact.label}
+            </dt>
+            <dd className="mt-2">
+              {fact.href ? (
+                <Link href={fact.href} className="underline underline-offset-4">
+                  {value}
+                </Link>
+              ) : (
+                value
+              )}
+              {fact.note ? (
+                <p className="mt-1 text-xs leading-relaxed text-[var(--muted)]">{fact.note}</p>
+              ) : null}
+            </dd>
+          </div>
+        )
+      })}
+    </dl>
+  )
+}
+
 export function Empty({ hint }: { hint: string }) {
   return (
     <div className="rounded-xl border border-dashed border-[var(--rule)] px-6 py-16 text-center text-lg text-[var(--muted)]">

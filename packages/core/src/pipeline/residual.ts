@@ -105,6 +105,7 @@ function fitDimension(
       score: round(p.score, 1),
       predicted: round(predicted, 1),
       residual: round(residuals[i] as number, 1),
+      outOfScale: predicted < 0 || predicted > 100,
     })
   })
 

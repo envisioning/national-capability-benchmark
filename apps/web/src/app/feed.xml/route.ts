@@ -1,7 +1,13 @@
 import { DATASET_VERSION } from '@ncb/core'
 import { loadIndex } from '@/lib/data'
 import { loadAgendaFeedEntries, loadDatasetFeedEntries } from '@/lib/distribution'
-import { absoluteHref, agendaHrefInLanguage, feedHref, digestHref } from '@/lib/links'
+import {
+  absoluteHref,
+  agendaHrefInLanguage,
+  changelogReleaseHref,
+  feedHref,
+  digestHref,
+} from '@/lib/links'
 
 export const dynamic = 'force-static'
 
@@ -39,9 +45,9 @@ export async function GET(): Promise<Response> {
   })
   const datasetEntries = versions.map((entry) => ({
     id: `${absoluteHref(feedHref)}#dataset-${entry.version}`,
-    link: absoluteHref('/about'),
+    link: absoluteHref(changelogReleaseHref(entry.version)),
     title: `Dataset ${entry.version}`,
-    summary: `Dataset version ${entry.version} was recorded in the changelog.`,
+    summary: entry.summary,
     updated: entry.updated,
   }))
   const digestUrl = absoluteHref(digestHref(date))

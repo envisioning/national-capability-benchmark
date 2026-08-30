@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import {
   COUNTRY_NAMES,
   DIMENSION_LABELS,
@@ -11,8 +11,8 @@ import {
   isReversal,
 } from '@ncb/core'
 import type { EvidenceRecord } from '@ncb/core'
-import { DataTable, type Column } from '@/components/DataTable'
-import { EvidenceFilters, useEvidenceFilters } from '@/components/EvidenceFilters'
+import { compareSortValues, type SortDirection } from '@/components/DataTable'
+import { CONTROL, EvidenceFilters, useEvidenceFilters } from '@/components/EvidenceFilters'
 import { CapabilityLink } from '@/components/CapabilityLink'
 import { DIMENSION_ICON, Icon, TIER_ICON } from '@/components/Icon'
 import { CountryLabel, Empty } from '@/components/ui'
@@ -26,15 +26,15 @@ import {
 } from '@/lib/links'
 
 /**
- * Every documented delivery as one sortable row, newest first.
+ * Every documented delivery as one sortable, readable record, newest first.
  *
  * The agendas name what a country should raise and what it should measure
- * first. This table is the other half of that: what countries actually built
+ * first. This register is the other half of that: what countries actually built
  * against those same missing indicators, with the start year, the published
- * number, the publisher and the delivery status all on the row, so a reader
- * can rank the corpus by recency, by durability or by who published it without
- * opening 50 cards. It opens on the start year descending, because the first
- * question anyone asks of a corpus of deliveries is what is recent.
+ * number, the publisher and the delivery status in grouped metadata beside the
+ * claim. The narrative gets a wide column, while the sort control keeps the
+ * register useful for recency, durability or publisher questions without
+ * forcing prose into a narrow table cell.
  *
  * A record is never scored and never raises confidence. See D20 and D46.
  */
@@ -42,6 +42,27 @@ import {
 function tierLabel(tier: keyof typeof SOURCE_TIERS): string {
   return tier.replace(/_/g, ' ')
 }
+
+type DeliverySortKey =
+  | 'started'
+  | 'title'
+  | 'country'
+  | 'capability'
+  | 'status'
+  | 'metric'
+  | 'source'
+  | 'mechanism'
+
+const SORT_OPTIONS: Array<{ key: DeliverySortKey; label: string; defaultDir: SortDirection }> = [
+  { key: 'started', label: 'Started', defaultDir: 'desc' },
+  { key: 'title', label: 'Delivery', defaultDir: 'asc' },
+  { key: 'country', label: 'Country', defaultDir: 'asc' },
+  { key: 'capability', label: 'Capability', defaultDir: 'asc' },
+  { key: 'status', label: 'Status', defaultDir: 'asc' },
+  { key: 'metric', label: 'Published number', defaultDir: 'desc' },
+  { key: 'source', label: 'Source', defaultDir: 'asc' },
+  { key: 'mechanism', label: 'Mechanism', defaultDir: 'desc' },
+]
 
 /** A published number with its reference period, on two lines. */
 function MetricCell({ record }: { record: EvidenceRecord }) {
@@ -65,136 +86,163 @@ function MetricCell({ record }: { record: EvidenceRecord }) {
   )
 }
 
-function columns(): Column<EvidenceRecord>[] {
-  return [
-    {
-      key: 'started',
-      label: 'Started',
-      align: 'right',
-      title: 'Year the programme started, as recorded',
-      sort: (r) => r.started,
-      render: (r) => r.started,
-    },
-    {
-      key: 'delivery',
-      label: 'Delivery',
-      title: 'What was built, and at what scale',
-      sort: (r) => r.title,
-      render: (r) => (
-        <>
-          <Link
-            href={evidenceHref(r.id)}
-            className="block font-medium underline underline-offset-4"
-          >
-            {r.title}
-          </Link>
-          <span className="mt-1 block max-w-[46ch] leading-relaxed text-[var(--muted)]">
-            {r.claim}
-          </span>
-        </>
-      ),
-    },
-    {
-      key: 'country',
-      label: 'Country',
-      title: 'Links to that country’s capability agenda',
-      sort: (r) => COUNTRY_NAMES[r.iso3] ?? r.iso3,
-      render: (r) => (
-        <Link href={agendaHref(r.iso3)} className="hover:underline">
-          <CountryLabel iso3={r.iso3} name={COUNTRY_NAMES[r.iso3] ?? r.iso3} />
+function sortValue(record: EvidenceRecord, key: DeliverySortKey): number | string | null {
+  switch (key) {
+    case 'started':
+      return record.started
+    case 'title':
+      return record.title
+    case 'country':
+      return COUNTRY_NAMES[record.iso3] ?? record.iso3
+    case 'capability': {
+      const dimension = evidenceDimension(record)
+      return dimension ? DIMENSION_LABELS[dimension] : null
+    }
+    case 'status':
+      return EVIDENCE_STATUS_ORDER[record.status]
+    case 'metric':
+      return record.metric.asOf
+    case 'source':
+      return record.source.publisher
+    case 'mechanism':
+      return record.pattern ? 1 : 0
+  }
+}
+
+function DeliveryCard({ record }: { record: EvidenceRecord }) {
+  const dimension = evidenceDimension(record)
+  const def = INDICATORS_BY_ID[record.indicatorId]
+
+  return (
+    <article className="rounded-lg border border-[var(--rule)] bg-[var(--surface)]">
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-b border-[var(--rule-soft)] px-4 py-3 text-xs text-[var(--muted)] sm:px-5">
+        <span className="tabular-nums text-[var(--foreground)]">{record.started}</span>
+        <Link href={agendaHref(record.iso3)} className="font-medium hover:underline">
+          <CountryLabel iso3={record.iso3} name={COUNTRY_NAMES[record.iso3] ?? record.iso3} />
         </Link>
-      ),
-    },
-    {
-      key: 'capability',
-      label: 'Capability',
-      title: 'The capability, and the missing indicator this record bears on',
-      sort: (r) => {
-        const d = evidenceDimension(r)
-        return d ? DIMENSION_LABELS[d] : null
-      },
-      render: (r) => {
-        const dimension = evidenceDimension(r)
-        const def = INDICATORS_BY_ID[r.indicatorId]
-        return (
-          <>
-            {dimension ? (
-              <span className="inline-flex items-center gap-2">
-                <Icon name={DIMENSION_ICON[dimension]} size={13} />
-                <CapabilityLink dimension={dimension} />
-              </span>
-            ) : (
-              <span className="text-[var(--muted)]">no capability</span>
-            )}
-            <Link
-              href={indicatorHref(r.indicatorId)}
-              className="mt-1 block text-[var(--muted)] hover:underline"
-            >
-              {def?.name ?? r.indicatorId}
-            </Link>
-          </>
-        )
-      },
-    },
-    {
-      key: 'status',
-      label: 'Status',
-      title: 'Where the delivery stands, best first',
-      sort: (r) => EVIDENCE_STATUS_ORDER[r.status],
-      render: (r) => (
-        <span className="inline-flex items-center gap-2">
-          {isReversal(r.status) ? (
-            <Icon name="triangle-alert" size={13} className="shrink-0 text-[var(--muted)]" />
-          ) : null}
-          {EVIDENCE_STATUS_LABELS[r.status]}
-        </span>
-      ),
-    },
-    {
-      key: 'metric',
-      label: 'Published number',
-      title: 'The number that carries the claim, and the period it covers',
-      sort: (r) => r.metric.asOf,
-      render: (r) => <MetricCell record={r} />,
-    },
-    {
-      key: 'source',
-      label: 'Source',
-      title: 'Who published the number, and at which tier',
-      sort: (r) => r.source.publisher,
-      render: (r) => (
-        <>
-          <a
-            href={r.source.url}
-            className="block underline underline-offset-2"
-            rel="noreferrer"
-            target="_blank"
-          >
-            {r.source.publisher}
-          </a>
-          <span className="mt-1 inline-flex items-center gap-2 text-[var(--muted)]">
-            <Icon name={TIER_ICON[r.source.tier]} size={13} />
-            {tierLabel(r.source.tier)}, retrieved {r.source.retrievedAt}
-          </span>
-        </>
-      ),
-    },
-    {
-      key: 'mechanism',
-      label: 'Mechanism',
-      title: 'Whether the move behind the delivery is written down. Our reading, not the publisher’s.',
-      sort: (r) => (r.pattern ? 1 : 0),
-      render: (r) =>
-        r.pattern ? (
+        {dimension ? (
           <span className="inline-flex items-center gap-2">
-            <Icon name="compass" size={13} />
-            written
+            <Icon name={DIMENSION_ICON[dimension]} size={13} />
+            <CapabilityLink dimension={dimension} />
+            <Link
+              href={indicatorHref(record.indicatorId)}
+              className="hover:underline"
+            >
+              {def?.name ?? record.indicatorId}
+            </Link>
           </span>
         ) : (
-          <span className="text-[var(--muted)]">not yet</span>
-        ),
-    },
-  ]
+          <span>no capability</span>
+        )}
+        <span className="inline-flex items-center gap-2">
+          {isReversal(record.status) ? (
+            <Icon name="triangle-alert" size={13} className="shrink-0" />
+          ) : null}
+          {EVIDENCE_STATUS_LABELS[record.status]}
+        </span>
+      </div>
+
+      <div className="grid gap-6 p-4 sm:p-5 lg:grid-cols-[minmax(0,1.55fr)_minmax(15rem,0.75fr)] lg:gap-8">
+        <div className="min-w-0">
+          <h3 className="text-xl font-medium tracking-tight">
+            <Link href={evidenceHref(record.id)} className="underline underline-offset-4">
+              {record.title}
+            </Link>
+          </h3>
+          <p className="mt-3 max-w-[60ch] text-lg leading-relaxed text-[var(--muted)]">
+            {record.claim}
+          </p>
+        </div>
+
+        <dl className="grid content-start gap-4 border-t border-[var(--rule-soft)] pt-4 text-xs sm:grid-cols-2 lg:block lg:border-t-0 lg:border-l lg:pl-6 lg:pt-0">
+          <div>
+            <dt className="uppercase tracking-[0.05em] text-[var(--muted)]">Published number</dt>
+            <dd className="mt-1">
+              <MetricCell record={record} />
+            </dd>
+          </div>
+          <div>
+            <dt className="uppercase tracking-[0.05em] text-[var(--muted)]">Source</dt>
+            <dd className="mt-1">
+              <a
+                href={record.source.url}
+                className="underline underline-offset-2"
+                rel="noreferrer"
+                target="_blank"
+              >
+                {record.source.publisher}
+              </a>
+              <span className="mt-1 inline-flex items-center gap-2 text-[var(--muted)]">
+                <Icon name={TIER_ICON[record.source.tier]} size={13} />
+                {tierLabel(record.source.tier)}, retrieved {record.source.retrievedAt}
+              </span>
+            </dd>
+          </div>
+          <div>
+            <dt className="uppercase tracking-[0.05em] text-[var(--muted)]">Mechanism</dt>
+            <dd className="mt-1">
+              {record.pattern ? (
+                <span className="inline-flex items-center gap-2">
+                  <Icon name="compass" size={13} />
+                  written
+                </span>
+              ) : (
+                <span className="text-[var(--muted)]">not yet</span>
+              )}
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </article>
+  )
+}
+
+function DeliverySortBar({
+  sort,
+  onSort,
+  onDirection,
+}: {
+  sort: { key: DeliverySortKey; dir: SortDirection }
+  onSort: (key: DeliverySortKey) => void
+  onDirection: () => void
+}) {
+  const option = SORT_OPTIONS.find((candidate) => candidate.key === sort.key) ?? SORT_OPTIONS[0]!
+  const direction = sort.key === 'started'
+    ? sort.dir === 'desc' ? 'newest first' : 'oldest first'
+    : sort.dir === 'asc' ? 'A to Z' : 'Z to A'
+  const nextDirection = direction === 'newest first'
+    ? 'oldest first'
+    : direction === 'oldest first'
+      ? 'newest first'
+      : direction === 'A to Z'
+        ? 'Z to A'
+        : 'A to Z'
+
+  return (
+    <div className="mb-5 flex flex-wrap items-center gap-3 rounded-lg border border-[var(--rule)] bg-[var(--surface-sunken)] px-4 py-3 text-xs">
+      <label htmlFor="delivery-sort" className="text-[var(--muted)]">Sort by</label>
+      <select
+        id="delivery-sort"
+        value={sort.key}
+        onChange={(event) => onSort(event.target.value as DeliverySortKey)}
+        className={CONTROL}
+      >
+        {SORT_OPTIONS.map((candidate) => (
+          <option key={candidate.key} value={candidate.key}>
+            {candidate.label}
+          </option>
+        ))}
+      </select>
+      <button
+        type="button"
+        onClick={onDirection}
+        className="rounded-md border border-[var(--rule)] px-2 py-1 text-[var(--muted)] hover:text-[var(--foreground)]"
+        aria-label={`Sort ${option.label.toLowerCase()} ${nextDirection}`}
+      >
+        {direction}
+      </button>
+    </div>
+  )
 }
 
 export function DeliveryTable({
@@ -205,7 +253,14 @@ export function DeliveryTable({
   initial?: PatternFilters
 }) {
   const state = useEvidenceFilters(records, initial)
-  const cols = useMemo(columns, [])
+  const [sort, setSort] = useState<{ key: DeliverySortKey; dir: SortDirection }>({
+    key: 'started',
+    dir: 'desc',
+  })
+
+  const sorted = useMemo(() => {
+    return [...state.shown].sort((a, b) => compareSortValues(sortValue(a, sort.key), sortValue(b, sort.key), sort.dir))
+  }, [sort, state.shown])
 
   return (
     <>
@@ -213,12 +268,26 @@ export function DeliveryTable({
       {state.shown.length === 0 ? (
         <Empty hint="No delivery matches those filters. Clear one and try again." />
       ) : (
-        <DataTable
-          rows={state.shown}
-          columns={cols}
-          initialSort={{ key: 'started', dir: 'desc' }}
-          caption="Documented deliveries, newest first. Sort by any column."
-        />
+        <>
+          <DeliverySortBar
+            sort={sort}
+            onSort={(key) => {
+              const option = SORT_OPTIONS.find((candidate) => candidate.key === key) ?? SORT_OPTIONS[0]!
+              setSort({ key, dir: option.defaultDir })
+            }}
+            onDirection={() => setSort((current) => ({
+              ...current,
+              dir: current.dir === 'asc' ? 'desc' : 'asc',
+            }))}
+          />
+          <div className="space-y-4" role="list" aria-label="Documented deliveries">
+            {sorted.map((record) => (
+              <div key={record.id} role="listitem">
+                <DeliveryCard record={record} />
+              </div>
+            ))}
+          </div>
+        </>
       )}
     </>
   )

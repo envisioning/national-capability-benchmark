@@ -1,11 +1,11 @@
 import { readdir, readFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
-import { COUNTRIES, DIMENSIONS } from '@ncb/core'
+import { CHANGELOG_DOC, COUNTRIES, DIMENSIONS } from '@ncb/core'
 import type { CountryResult } from '@ncb/core'
 import { DATA_ROOT } from './data'
 
 const AGENDA_DIR = resolve(DATA_ROOT, 'out/agenda')
-const CHANGELOG_PATH = resolve(DATA_ROOT, '../CHANGELOG.md')
+const CHANGELOG_PATH = resolve(DATA_ROOT, '..', CHANGELOG_DOC)
 
 export type AgendaFeedEntry = {
   iso3: string
@@ -18,6 +18,7 @@ export type AgendaFeedEntry = {
 export type DatasetFeedEntry = {
   version: string
   updated: string
+  summary: string
 }
 
 const isoDate = (date: string): string => `${date}T00:00:00.000Z`
@@ -72,25 +73,43 @@ export async function loadAgendaFeedEntries(): Promise<AgendaFeedEntry[]> {
   )
 }
 
+/** Read the one human-curated changelog source used by the viewer and feed. */
+export async function loadChangelog(): Promise<string | null> {
+  try {
+    return await readFile(CHANGELOG_PATH, 'utf8')
+  } catch {
+    return null
+  }
+}
+
+const RELEASE_HEADING = /^##\s+(?:v)?(\d+\.\d+\.\d+)(?:\s+[—–-]\s+(\d{4}-\d{2}-\d{2}))?\s*$/gm
+
+/**
+ * Parse release headings and their first paragraph without introducing a
+ * second release-notes format. The full markdown remains available to the
+ * changelog page; feeds only need a short summary and a stable date.
+ */
+export function parseChangelogReleases(markdown: string, defaultDate: string): DatasetFeedEntry[] {
+  const headings = [...markdown.matchAll(RELEASE_HEADING)]
+  return headings.map((heading, index) => {
+    const start = (heading.index ?? 0) + heading[0].length
+    const end = headings[index + 1]?.index ?? markdown.length
+    const version = heading[1] ?? ''
+    const date = heading[2] ?? defaultDate
+    return {
+      version,
+      updated: isoDate(date),
+      summary:
+        firstParagraph(markdown.slice(start, end)) ||
+        `Dataset version ${version} was recorded in the changelog.`,
+    }
+  })
+}
+
 /** Read every semantic version explicitly recorded in CHANGELOG.md. */
 export async function loadDatasetFeedEntries(defaultDate: string): Promise<DatasetFeedEntry[]> {
-  let changelog: string
-  try {
-    changelog = await readFile(CHANGELOG_PATH, 'utf8')
-  } catch {
-    return []
-  }
-
-  const entries: DatasetFeedEntry[] = []
-  const heading = /^##\s+[^\n]*?(?:\[|\b)(?:v)?(\d+\.\d+\.\d+)(?:\]|\b)[^\n]*$/gm
-  for (const match of changelog.matchAll(heading)) {
-    const line = match[0]
-    const version = match[1]
-    if (!version) continue
-    const date = line.match(/\b(\d{4}-\d{2}-\d{2})\b/)?.[1] ?? defaultDate
-    entries.push({ version, updated: isoDate(date) })
-  }
-  return entries
+  const changelog = await loadChangelog()
+  return changelog ? parseChangelogReleases(changelog, defaultDate) : []
 }
 
 /** The flat table's RFC 4180 escaping, reused by the per-country export. */

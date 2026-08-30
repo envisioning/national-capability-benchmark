@@ -486,6 +486,12 @@ export const ResidualCell = z.object({
   predicted: z.number(),
   /** score minus predicted. Positive is above the line for its income. */
   residual: z.number(),
+  /**
+   * The fitted value fell outside the 0 to 100 scale, so the line predicts a
+   * score that cannot exist and the residual is inflated by the impossible
+   * part. Same convention as `outOfFrame` on a scored cell.
+   */
+  outOfScale: z.boolean(),
 })
 export type ResidualCell = z.infer<typeof ResidualCell>
 

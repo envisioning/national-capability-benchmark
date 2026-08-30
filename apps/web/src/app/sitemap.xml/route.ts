@@ -8,6 +8,7 @@ import {
   agendaHref,
   capabilitiesHref,
   challengeHref,
+  changelogHref,
   compareBaseHref,
   contactHref,
   countriesHref,
@@ -57,6 +58,7 @@ export async function GET(): Promise<Response> {
     }
   }
   add(aboutHref)
+  add(changelogHref)
   add(challengeHref)
   add(supportHref)
   add(contactHref)

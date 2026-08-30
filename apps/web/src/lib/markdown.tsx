@@ -94,6 +94,8 @@ export function MarkdownLine({ text }: { text: string }) {
 function headingId(text: string): string {
   const token = text.match(/^([A-Z]\d+)\b/)
   if (token) return token[1] as string
+  const version = text.match(/^(?:v)?(\d+\.\d+\.\d+)\b/)
+  if (version?.[1]) return version[1].replace(/\./g, '-')
   return text
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')

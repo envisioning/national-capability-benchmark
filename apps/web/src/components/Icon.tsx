@@ -29,6 +29,7 @@ export type IconName =
   | 'graduation-cap'
   | 'layers'
   | 'list-filter'
+  | 'menu'
   | 'minus'
   | 'plug'
   | 'ruler'
@@ -73,6 +74,7 @@ const PATHS: Record<IconName, string> = {
   'graduation-cap': `<path d='M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z' /> <path d='M22 10v6' /> <path d='M6 12.5V16a6 3 0 0 0 12 0v-3.5' />`,
   'layers': `<path d='M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z' /> <path d='M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12' /> <path d='M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17' />`,
   'list-filter': `<path d='M3 6h18' /> <path d='M7 12h10' /> <path d='M10 18h4' />`,
+  'menu': `<path d='M4 6h16' /> <path d='M4 12h16' /> <path d='M4 18h16' />`,
   'languages': `<path d='m5 8 6 6' /> <path d='m4 14 6-6 2-3' /> <path d='M2 5h12' /> <path d='M7 2h1' /> <path d='m22 22-5-10-5 10' /> <path d='M14 18h6' />`,
   'calendar': `<path d='M8 2v4' /> <path d='M16 2v4' /> <rect width='18' height='18' x='3' y='4' rx='2' /> <path d='M3 10h18' />`,
   'minus': `<path d='M5 12h14' />`,
@@ -191,4 +193,3 @@ export const CONFIDENCE_ICON = {
   usable: 'signal-high',
   good: 'signal',
 } as const satisfies Record<string, IconName>
-

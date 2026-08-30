@@ -10,6 +10,7 @@ import {
   InstitutionNetworkFile,
   isScored,
   LeverageFile as LeverageFileSchema,
+  ResidualFile as ResidualFileSchema,
   VelocityFile as VelocityFileSchema,
 } from '@ncb/core'
 import { DATA_DIR } from '@ncb/core/node'
@@ -23,6 +24,7 @@ import type {
   IndicatorAcrossCountries,
   DisputeRecord,
   LeverageFile,
+  ResidualFile,
   VelocityFile,
 } from '@ncb/core'
 
@@ -60,6 +62,7 @@ const PATHS = {
     resolve(DATA_ROOT, 'out/br-subnational', `${indicatorId}.json`),
   velocity: resolve(DATA_ROOT, 'out/velocity.json'),
   leverage: resolve(DATA_ROOT, 'out/leverage.json'),
+  residual: resolve(DATA_ROOT, 'out/residual.json'),
 }
 
 async function readJson<T>(path: string): Promise<T | null> {
@@ -103,6 +106,13 @@ export async function loadVelocity(): Promise<VelocityFile | null> {
 export async function loadLeverage(): Promise<LeverageFile | null> {
   const raw = await readJson<unknown>(PATHS.leverage)
   const parsed = LeverageFileSchema.safeParse(raw)
+  return parsed.success ? parsed.data : null
+}
+
+/** The provisional wealth-residual fixture, validated before the sandbox reads it. */
+export async function loadResidual(): Promise<ResidualFile | null> {
+  const raw = await readJson<unknown>(PATHS.residual)
+  const parsed = ResidualFileSchema.safeParse(raw)
   return parsed.success ? parsed.data : null
 }
 

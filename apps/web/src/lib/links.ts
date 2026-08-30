@@ -116,6 +116,12 @@ export function readCompareCodes(segments: readonly string[] | undefined): strin
 /** The methodology overview. */
 export const methodHref = '/method'
 
+/** The indicator registry, scored rows and declared gaps together. */
+export const indicatorsHref = '/indicators'
+
+/** The tests the model runs against itself, wealth sensitivity included. */
+export const diagnosticsHref = '/diagnostics'
+
 /** The public statement of what the benchmark is for. */
 export const thesisHref = '/thesis'
 
@@ -309,6 +315,13 @@ export const challengeApiHref = (iso3: string, dimension: Dimension): string =>
 
 /** What the benchmark is, who built it, and where to start reading. */
 export const aboutHref = '/about'
+
+/** The human-readable release history for the dataset and viewer. */
+export const changelogHref = '/changelog'
+
+/** One release entry inside the changelog. */
+export const changelogReleaseHref = (version: string): string =>
+  `${changelogHref}#${version.replace(/[^0-9]+/g, '-').replace(/^-|-$/g, '')}`
 
 /**
  * How an institution can back the work: use it, contribute to it, fund it.

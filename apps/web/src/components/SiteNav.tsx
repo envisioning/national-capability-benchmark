@@ -2,13 +2,19 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useEffect, useState } from 'react'
+import { Icon } from '@/components/Icon'
 import { Flag } from '@/components/ui'
 import { FOOTER_NAV_GROUPS, navRows, nodeOwns, type NavNode, type NavRow } from '@/lib/nav'
 
 const SECTION_LINK =
-  'text-sm font-medium transition-all duration-200 text-[var(--muted)] hover:text-[var(--foreground)]'
+  'inline-flex items-center rounded-md px-3 py-1.5 text-sm font-medium text-[var(--muted)] transition-colors duration-200 hover:bg-[var(--surface-sunken)] hover:text-[var(--foreground)]'
 const SECTION_CURRENT =
-  'text-sm font-medium text-[var(--foreground)] underline decoration-[var(--primary)] decoration-2 underline-offset-8'
+  'inline-flex items-center rounded-md px-3 py-1.5 text-sm font-semibold text-[var(--foreground)] underline decoration-[var(--primary)] decoration-2 underline-offset-[6px]'
+const SECTION_MOBILE_LINK =
+  'flex w-full items-center rounded-md px-3 py-3 text-sm font-medium text-[var(--foreground)] transition-colors duration-200 hover:bg-[var(--surface-sunken)]'
+const SECTION_MOBILE_CURRENT =
+  'flex w-full items-center rounded-md bg-[var(--surface-sunken)] px-3 py-3 text-sm font-semibold text-[var(--foreground)]'
 
 const CRUMB_LINK =
   'text-xs font-medium text-[var(--muted)] transition-all duration-200 hover:text-[var(--foreground)]'
@@ -64,6 +70,35 @@ function Crumb({ nodes, active }: { nodes: NavNode[]; active: NavNode | null }) 
   )
 }
 
+/** The section parents, rendered once for the desktop band and once in the mobile menu. */
+function SectionLinks({ sections, mobile = false }: { sections: NavRow; mobile?: boolean }) {
+  return (
+    <nav
+      aria-label={mobile ? 'Mobile sections' : 'Sections'}
+      className={mobile ? 'flex flex-col gap-1' : 'flex flex-wrap items-center justify-end gap-1'}
+    >
+      {sections.entries.map((node) => (
+        <Link
+          key={node.href}
+          href={node.href}
+          aria-current={node === sections.active ? 'page' : undefined}
+          className={
+            mobile
+              ? node === sections.active
+                ? SECTION_MOBILE_CURRENT
+                : SECTION_MOBILE_LINK
+              : node === sections.active
+                ? SECTION_CURRENT
+                : SECTION_LINK
+          }
+        >
+          {node.label}
+        </Link>
+      ))}
+    </nav>
+  )
+}
+
 /**
  * The sections, and the trail into wherever the reader is.
  *
@@ -75,6 +110,12 @@ function Crumb({ nodes, active }: { nodes: NavNode[]; active: NavNode | null }) 
 export function HeaderNav() {
   const pathname = usePathname()
   const rows = navRows(pathname)
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  useEffect(() => {
+    setMenuOpen(false)
+  }, [pathname])
+
   const sections = rows[0]
   if (!sections) return null
   /* A trail of one crumb repeats the section already underlined above it, so
@@ -83,22 +124,33 @@ export function HeaderNav() {
   const trail: NavRow[] = full.length > 1 ? full : []
 
   return (
-    <div className="flex min-w-0 flex-1 flex-col gap-3">
-      <nav aria-label="Sections" className="flex flex-wrap gap-x-6 gap-y-2">
-        {sections.entries.map((node) => (
-          <Link
-            key={node.href}
-            href={node.href}
-            aria-current={node === sections.active ? 'page' : undefined}
-            className={node === sections.active ? SECTION_CURRENT : SECTION_LINK}
-          >
-            {node.label}
-          </Link>
-        ))}
-      </nav>
+    <div className="contents">
+      <div className="hidden md:ml-auto md:block">
+        <SectionLinks sections={sections} />
+      </div>
+
+      <button
+        type="button"
+        aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+        aria-expanded={menuOpen}
+        aria-controls="site-nav-mobile"
+        onClick={() => setMenuOpen((open) => !open)}
+        className="ml-auto inline-flex h-10 w-10 items-center justify-center rounded-md text-[var(--foreground)] transition-colors hover:bg-[var(--surface-sunken)] md:hidden"
+      >
+        <Icon name={menuOpen ? 'x' : 'menu'} size={20} />
+      </button>
+
+      {menuOpen ? (
+        <div
+          id="site-nav-mobile"
+          className="basis-full border-t border-[var(--rule)] pt-3 md:hidden"
+        >
+          <SectionLinks sections={sections} mobile />
+        </div>
+      ) : null}
 
       {trail.length > 0 ? (
-        <nav aria-label="Breadcrumb">
+        <nav aria-label="Breadcrumb" className="basis-full">
           <ol className="flex flex-wrap items-center gap-x-2 gap-y-1">
             {trail.map((row, index) => (
               <li key={row.parent?.href ?? 'root'} className="flex items-center gap-x-2">

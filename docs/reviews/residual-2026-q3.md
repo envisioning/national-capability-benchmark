@@ -15,6 +15,12 @@ where the fit is weak the residual repeats the score: Coordination and Shared
 Purpose sit at r² 0.218 and 0.204, and their rank orders move 6.9 and 5.5 places
 against country counts of 44 and 46.
 
+A straight line in log income also predicts scores the 0 to 100 scale cannot
+hold. Five of 424 cells fit below zero, all of them Ethiopia, Haiti and Rwanda
+on Experimentation and Anticipation. Those cells are flagged `outOfScale` rather
+than clamped, because clamping the line would destroy the property the layer
+exists for.
+
 Leave-one-out fitting is the named candidate for 0.2. It is not in 0.1 because
 the published fit would then no longer be the fit that produced any single
 residual, and the first version has to be inspectable before it is accurate.
@@ -32,8 +38,8 @@ countries rather than on 52, and Trust at 35 is the thinnest.
 
 ## What did we learn about the reader?
 
-Nothing yet. The layer is offline, there is no sandbox URL, and no reader has
-seen a residual. The first reader question to test is whether a negative
+Nothing yet. The sandbox at `/method/residual/sandbox` is unlinked and
+noindexed, and no reader has seen a residual. The first reader question to test is whether a negative
 residual is read as a fact about a fit or as a judgment about a country. The
 layer has no user-facing copy and must not get one before that question has an
 answer.

@@ -1,5 +1,5 @@
-import { DIMENSIONS, primaryMomentum } from '@ncb/core'
-import type { CountryResult } from '@ncb/core'
+import { DIMENSIONS, DIMENSION_LABELS, primaryMomentum } from '@ncb/core'
+import type { CountryResult, Dimension } from '@ncb/core'
 
 /**
  * The slice of a country a radar needs.
@@ -45,4 +45,49 @@ export function toHistogramProfile(c: CountryResult): HistogramProfile {
       return dim ? primaryMomentum(dim.momentum)?.delta ?? null : null
     }),
   }
+}
+
+/** One country's furthest-apart capabilities. */
+export type CapabilitySpread = {
+  iso3: string
+  country: string
+  high: { dimension: Dimension; label: string; value: number }
+  low: { dimension: Dimension; label: string; value: number }
+  /** Score points between the two. */
+  range: number
+}
+
+/**
+ * The country whose capabilities sit furthest apart.
+ *
+ * One number per country is what this benchmark refuses to publish, and the
+ * cheapest proof that the refusal is not a pose is a country that sits near the
+ * top of one capability and near the floor of another. The front page states
+ * that case rather than asserting the principle. Ties break on the country code
+ * so the sentence holds still between two runs of the same data.
+ */
+export function widestSpread(profiles: RadarProfile[]): CapabilitySpread | null {
+  let best: CapabilitySpread | null = null
+
+  for (const profile of profiles) {
+    let high: { dimension: Dimension; label: string; value: number } | null = null
+    let low: { dimension: Dimension; label: string; value: number } | null = null
+
+    DIMENSIONS.forEach((dimension, i) => {
+      const value = profile.values[i]
+      if (value === null || value === undefined) return
+      const point = { dimension, label: DIMENSION_LABELS[dimension], value }
+      if (high === null || value > high.value) high = point
+      if (low === null || value < low.value) low = point
+    })
+
+    if (high === null || low === null) continue
+    const ends = { high: high as CapabilitySpread['high'], low: low as CapabilitySpread['low'] }
+    const range = ends.high.value - ends.low.value
+    if (best === null || range > best.range) {
+      best = { iso3: profile.iso3, country: profile.country, ...ends, range }
+    }
+  }
+
+  return best
 }

@@ -1,5 +1,6 @@
 import {
   COUNTRIES,
+  CHANGELOG_DOC,
   DATASET_VERSION,
   DIMENSIONS,
   FOR_AGENTS_DOC,
@@ -15,6 +16,7 @@ import {
   aboutHref,
   capabilitiesHref,
   challengeHref,
+  changelogHref,
   compareBaseHref,
   countriesHref,
   thesisHref,
@@ -54,6 +56,7 @@ const PRIMARY_NOTES: Record<string, string> = {
   '/method': 'How the benchmark is built and how to audit it.',
   [challengeHref]: 'What would overturn the model, and how to file an objection.',
   [aboutHref]: 'What this is, who built it, and where to start reading.',
+  [changelogHref]: 'What changed in each published dataset and viewer release.',
 }
 
 const METHOD_NOTES: Record<string, string> = {
@@ -100,6 +103,9 @@ export async function GET(request: Request): Promise<Response> {
     `- [The quoting contract for automated readers](${rawHref(FOR_AGENTS_DOC)}): what a score means, which fields must travel with it, and the six things not to do with it. Read this first.`,
     `- [Known limits](${rawHref(LIMITS_DOC)}): where the model currently produces a number that is wrong about the world. Rendered at ${abs(origin, '/limits')}.`,
     `- [Decision record](${rawHref(DECISIONS_DOC)}): every methodological choice, what it costs, and what evidence would overturn it. Rendered at ${abs(origin, '/decisions')}.`,
+    '',
+    '## Project history',
+    `- [Changelog](${abs(origin, changelogHref)}): human-readable release notes for the dataset and viewer. The source is [${CHANGELOG_DOC}](${rawHref(CHANGELOG_DOC)}).`,
     '',
     '## Data',
     '',

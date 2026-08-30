@@ -3,7 +3,7 @@ import type { CSSProperties } from 'react'
 /**
  * The Envisioning EV glyph, vendored as a presentational SVG from the parent
  * brand mark. It inherits currentColor so it can sit naturally in the NCB
- * footer without adding an image request.
+ * header and footer without adding an image request.
  */
 export function EnvisioningMark({
   className,

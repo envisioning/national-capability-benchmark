@@ -28,6 +28,9 @@ export const ISSUES_URL = `${REPO_URL}/issues`
 /** The limits every agenda tells the reader to open before quoting a number. */
 export const LIMITS_DOC = 'docs/KNOWN-ARTEFACTS.md'
 
+/** The release history for the benchmark and its viewer. */
+export const CHANGELOG_DOC = 'CHANGELOG.md'
+
 /** The decision log. Named wherever a rendered document defends a choice. */
 export const DECISIONS_DOC = 'docs/DECISIONS.md'
 

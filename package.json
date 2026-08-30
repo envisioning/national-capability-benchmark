@@ -5,6 +5,9 @@
   "packageManager": "pnpm@10.26.2",
   "scripts": {
     "bench": "pnpm --filter @ncb/core exec tsx src/cli/index.ts",
+    "changelog:check": "node scripts/check-changelog.mjs",
+    "prebuild": "pnpm changelog:check",
+    "pretypecheck": "pnpm changelog:check",
     "ingest": "pnpm bench ingest",
     "delphi": "pnpm bench delphi",
     "score": "pnpm bench score",

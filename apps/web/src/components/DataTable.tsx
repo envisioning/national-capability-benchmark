@@ -22,9 +22,13 @@ export type Column<T> = {
   title?: string
 }
 
-type Dir = 'asc' | 'desc'
+export type SortDirection = 'asc' | 'desc'
 
-function compare(a: number | string | null, b: number | string | null, dir: Dir): number {
+export function compareSortValues(
+  a: number | string | null,
+  b: number | string | null,
+  dir: SortDirection,
+): number {
   if (a === null && b === null) return 0
   if (a === null) return 1
   if (b === null) return -1
@@ -46,10 +50,10 @@ export function DataTable<T>({
 }: {
   rows: T[]
   columns: Array<Column<T>>
-  initialSort?: { key: string; dir?: Dir }
+  initialSort?: { key: string; dir?: SortDirection }
   caption?: string
 }) {
-  const [sort, setSort] = useState<{ key: string; dir: Dir } | null>(
+  const [sort, setSort] = useState<{ key: string; dir: SortDirection } | null>(
     initialSort ? { key: initialSort.key, dir: initialSort.dir ?? 'asc' } : null,
   )
 
@@ -57,14 +61,14 @@ export function DataTable<T>({
     if (!sort) return rows
     const col = columns.find((c) => c.key === sort.key)
     if (!col?.sort) return rows
-    return [...rows].sort((x, y) => compare(col.sort!(x), col.sort!(y), sort.dir))
+    return [...rows].sort((x, y) => compareSortValues(col.sort!(x), col.sort!(y), sort.dir))
   }, [rows, columns, sort])
 
   function toggle(col: Column<T>) {
     if (!col.sort) return
     setSort((cur) => {
       if (cur?.key !== col.key) {
-        const firstDir: Dir = col.align === 'right' ? 'desc' : 'asc'
+        const firstDir: SortDirection = col.align === 'right' ? 'desc' : 'asc'
         return { key: col.key, dir: firstDir }
       }
       return { key: col.key, dir: cur.dir === 'asc' ? 'desc' : 'asc' }

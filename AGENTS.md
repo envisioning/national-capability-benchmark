@@ -287,6 +287,15 @@ port 3888. That entry starts Next directly and does not use the proxy.
   `apps/web/src/lib/layers.ts`. Keep `INSTITUTION_MAPS` in step with
   `data/institutions/*.json`. A new top-level page needs a node in the tree or
   it lights nothing. See D73.
+- **The thesis argues, the about page describes, and neither restates the
+  other.** `/thesis` owns the claim and draws how far the data supports it.
+  `/about` owns the object: size, date, refusals, known failures and how to
+  argue with it. The front page carries one module per section of the site, each
+  a sentence, a live number and one link out, and no module reprints a list that
+  has a page of its own. Every number in those three pages is computed:
+  `readWealthTracking` in `apps/web/src/lib/wealth.ts` is the only place the GDP
+  correlation column is summarised, and all three read it. Never type a
+  correlation, a count or a dimension name into that copy by hand. See D75.
 - The World Bank fetch is described once, in
   `packages/core/src/model/sources.ts`: the API base, the database ids, the
   first year, the route labels and the request builder. `pipeline/ingest.ts`

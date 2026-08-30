@@ -51,14 +51,14 @@ export default async function AgendaIndexPage({
       <PageTitle>Capability agendas</PageTitle>
       <Headline>
         Each agenda turns a country&apos;s scores into actions: what to raise, what to measure
-        first and what to keep watching. The table below is what countries have already{' '}
+        first and what to keep watching. The register below shows what countries have already{' '}
         <Highlight>built</Highlight> against the same missing indicators.
       </Headline>
       <p className="mb-12 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
         A delivery is filed against an indicator that has no dataset behind it, so none of these
-        rows moves a score or a confidence. Sort by any column. The table opens on the start year,
-        newest first. The card view of the same corpus, with preconditions and where each move has
-        travelled, is at{' '}
+        records moves a score or a confidence. Filter or sort the register to find a delivery,
+        then open its full record. The grouped view of the same corpus, with preconditions and
+        where each move has travelled, is at{' '}
         <Link href={patternsHref()} className="underline underline-offset-4">
           patterns
         </Link>
@@ -68,7 +68,7 @@ export default async function AgendaIndexPage({
       <Section
         title="What countries built"
         icon={<Icon name="hammer" size={22} />}
-        hint="One row per documented delivery, with the year it started, the published number that carries it, who published that number and whether it still runs."
+        hint="Each delivery keeps its claim readable beside the year, country, capability, status, published number, source and mechanism."
       >
         {records.length === 0 ? (
           <Empty hint="No evidence records yet. Add them to data/evidence/records.json." />

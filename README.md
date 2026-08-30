@@ -52,6 +52,9 @@ pnpm build
 pnpm typecheck
 ~~~
 
+Both commands run the release-notes gate. Run it directly with
+`pnpm changelog:check` when changing the dataset version or `CHANGELOG.md`.
+
 Run pnpm bench validate after changing data/delphi or data/evidence.
 
 ## Commands
@@ -74,6 +77,7 @@ The CLI lives in packages/core and is available through pnpm bench.
 | pnpm bench probe --series a,b[@db] | Test candidate series across the country set before wiring them. |
 | pnpm bench validate [--fetch] | Schema-check Delphi, evidence and institutional data. --fetch checks evidence URLs too. |
 | pnpm bench all | Run ingest, score, diagnose, report and agenda in order. |
+| pnpm changelog:check | Verify the newest release note matches `DATASET_VERSION`. |
 
 ## The nine dimensions
 
@@ -192,6 +196,17 @@ data. They show where capability is held and how it moves. They never enter a
 score or confidence. The current data and authoring rules are in
 [docs/INSTITUTIONS.md](docs/INSTITUTIONS.md).
 
+## Versioning and changelog
+
+`CHANGELOG.md` is the single human-curated release history for the dataset and
+viewer. The `/changelog` page, footer, Atom feed, sitemap and `/llms.txt` all
+read or link to that source. The build checks that entries are dated, unique,
+newest first and aligned with `DATASET_VERSION`; it never writes release notes
+or commits generated changes.
+
+The complete release workflow and the major/minor/patch rules are in
+[`docs/VERSIONING.md`](docs/VERSIONING.md).
+
 ## Published output
 
 data/out is generated output. pnpm bench score also writes the Frictionless Data
@@ -205,6 +220,7 @@ Package descriptor and JSON Schemas.
 | data/out/table.csv | Flat country by dimension table. |
 | data/out/diagnostics.json | Correlations, redundancy and GDP-sensitivity diagnostics. |
 | data/out/report.md | Human-readable findings report. |
+| CHANGELOG.md | Human-readable release history, rendered at `/changelog`. |
 | data/delphi/{runId}.json | Immutable record of one Delphi run and its provenance. |
 | data/delphi/latest.json | Active Delphi run copied from one archived run. |
 | data/out/agenda/{ISO3}.json | Language-neutral computed agenda. |

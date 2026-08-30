@@ -6,6 +6,7 @@ import {
   capabilitiesHref,
   capabilityHref,
   challengeHref,
+  changelogHref,
   compareBaseHref,
   countriesHref,
   countryLayerHref,
@@ -181,7 +182,15 @@ export const NAV_TREE: NavNode[] = [
   { href: thesisHref, label: 'Thesis' },
   { href: '/method', label: 'Method', claims: isMethodSection, children: METHOD_PAGES },
   { href: challengeHref, label: 'Challenge' },
-  { href: aboutHref, label: 'About', exact: true },
+  {
+    href: aboutHref,
+    label: 'About',
+    claims: (pathname) => pathname === aboutHref || pathname === changelogHref,
+    children: [
+      { href: aboutHref, label: 'Overview', exact: true },
+      { href: changelogHref, label: 'Changelog', exact: true },
+    ],
+  },
 ]
 
 /**

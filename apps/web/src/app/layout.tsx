@@ -5,7 +5,7 @@ import Script from 'next/script'
 import { COUNTRIES, DATASET_VERSION, LICENSE_DOC, REPO_URL, docHref } from '@ncb/core'
 import { EnvisioningMark } from '@/components/EnvisioningMark'
 import { FooterNav, HeaderNav, SectionTabs } from '@/components/SiteNav'
-import { siteOrigin } from '@/lib/links'
+import { changelogHref, siteOrigin } from '@/lib/links'
 import './globals.css'
 
 const PLAUSIBLE_DOMAIN = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN ?? 'ncb.envisioning.com'
@@ -62,22 +62,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </a>
 
         <header className="w-full border-b border-[var(--rule)]">
-          <div className="m-auto flex max-w-6xl flex-wrap items-start gap-x-8 gap-y-4 px-6 py-6 sm:px-12">
-            {/* The lockup: the short name carries the size, the long name sits
-                under it in three lines so the block stays narrow beside the nav. */}
-            <Link href="/" className="flex flex-col leading-none">
-              <span
-                className="font-display text-[40px] leading-[0.9]"
-                style={{ fontVariationSettings: '"wght" 500, "wdth" 100' }}
-              >
-                NCB
-              </span>
-              <span className="mt-1.5 text-[10px] uppercase leading-[1.25] tracking-[0.06em] text-[var(--muted)]">
-                National
-                <br />
-                Capability
-                <br />
-                Benchmark
+          <div className="m-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-3 px-6 py-4 sm:gap-x-8 sm:px-12 sm:py-5">
+            {/* The compact lockup follows the parent Envisioning shell: EV glyph,
+                then the product name. The full name remains available to assistive
+                technology without making the global header compete with the page. */}
+            <Link
+              href="/"
+              aria-label="NCB, National Capability Benchmark home"
+              className="inline-flex shrink-0 items-center gap-3 text-[var(--foreground)]"
+            >
+              <EnvisioningMark className="h-5 w-5" />
+              <span className="flex flex-col leading-none">
+                <span
+                  className="font-display text-[34px] leading-none"
+                  style={{ fontVariationSettings: '"wght" 500, "wdth" 100' }}
+                >
+                  NCB
+                </span>
+                <span className="mt-1 text-[9px] uppercase leading-[1.15] tracking-[0.06em] text-[var(--muted)]">
+                  National Capability Benchmark
+                </span>
               </span>
             </Link>
             <HeaderNav />
@@ -141,6 +145,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <nav aria-label="Project and legal information">
               <ul className="flex flex-wrap gap-x-4 gap-y-2">
                 <li>Dataset {DATASET_VERSION}</li>
+                <li>
+                  <Link href={changelogHref}>Changelog</Link>
+                </li>
                 <li>
                   <a href={REPO_URL} target="_blank" rel="noreferrer">
                     GitHub

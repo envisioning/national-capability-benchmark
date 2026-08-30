@@ -282,7 +282,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: 'Wealth residual',
     group: 'What sits beside the score',
     short: 'The gap between a dimension score and the score a country\'s income predicts.',
-    full: 'Richer countries score higher on most of these dimensions. The wealth residual removes that pattern from one dimension at a time: a line is fitted through every country\'s score against its income per head, and the residual is how far above or below its own line a country sits. It is published per dimension and never added up, because nine residuals averaged into one number is the single ranking this benchmark withholds. A residual is only as meaningful as the line behind it, so every residual carries the strength of its fit. Where the fit is weak, income explains little and the residual almost repeats the score.',
+    full: 'Richer countries score higher on most of these dimensions. The wealth residual removes that pattern from one dimension at a time: a line is fitted through every country\'s score against its income per head, and the residual is how far above or below its own line a country sits. It is published per dimension and never added up, because nine residuals averaged into one number is the single ranking this benchmark withholds. A residual is only as meaningful as the line behind it, so every residual carries the strength of its fit. Where the fit is weak, income explains little and the residual almost repeats the score. The layer is provisional: it is computed and inspectable, and no country page or score reads it.',
     example: 'Brazil sits 18.3 points below the income line on Trust and 9.1 above it on Coordination, from the same two scores.',
   },
   {
