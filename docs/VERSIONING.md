@@ -41,9 +41,10 @@ changelog entry belong in the same reviewed change.
 - **Patch** means a bug fix, copy change or visual refinement.
 
 An app release can include a dataset release, but it must name the dataset
-version it publishes. The first tracked product release is `0.1.0` while the
-benchmark remains a prototype and the provisional research layers remain under
-review.
+version it publishes. The first formal public product release is `1.0.0`: the
+benchmark remains a prototype as a research object, but the surrounding
+application is a complete public product. The provisional research layers
+remain explicitly under review.
 
 ## Build contract
 

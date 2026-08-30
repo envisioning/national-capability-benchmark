@@ -3,7 +3,6 @@ import { COUNTRIES, DATASET_VERSION, INDICATORS, isScored } from '@ncb/core'
 import { FlagHistogram } from '@/components/FlagHistogram'
 import {
   Empty,
-  Eyebrow,
   FactStrip,
   FrameNote,
   Headline,
@@ -111,7 +110,6 @@ export default async function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: datasetJsonLd(data) }} />
-      <Eyebrow>{profiles.length} countries, nine capabilities</Eyebrow>
       <HeroTitle>What is a country capable of doing?</HeroTitle>
       <Headline>
         Nine capabilities, scored from public data. Pick one and every country lands on the{' '}

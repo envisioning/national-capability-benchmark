@@ -11,7 +11,7 @@ import {
 } from '@ncb/core'
 import type { Dimension } from '@ncb/core'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
-import { Eyebrow, Headline, Highlight, Note, PageTitle, Section } from '@/components/ui'
+import { Headline, Highlight, Note, PageTitle, Section } from '@/components/ui'
 import {
   capabilityHref,
   contactTopicHref,
@@ -50,7 +50,6 @@ export default function GapsPage() {
 
   return (
     <>
-      <Eyebrow>{gaps.length} open gaps</Eyebrow>
       <PageTitle>What the benchmark cannot measure</PageTitle>
       <Headline>
         A gap is an indicator the model asks for and no comparable dataset answers. It stays in

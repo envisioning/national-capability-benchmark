@@ -9,10 +9,11 @@
  * - **minor** — a new public capability, page or non-breaking surface; and
  * - **patch** — a bug fix, copy change or visual refinement.
  *
- * The first formal product release is 0.1.0 while the benchmark remains a
- * prototype and the provisional research layers remain under review.
+ * The first formal public product release is 1.0.0. The benchmark remains a
+ * prototype as a research object, and the provisional research layers remain
+ * under review; that does not make the surrounding application a 0.x release.
  */
-export const APP_VERSION = '0.1.0'
+export const APP_VERSION = '1.0.0'
 
 /**
  * The dataset version, semantic. Stamped into `data/out/index.json`, every

@@ -6,7 +6,6 @@ import {
   CountryLabel,
   DimensionLegend,
   Empty,
-  Eyebrow,
   FrameNote,
   Headline,
   PageTitle,
@@ -35,7 +34,6 @@ export default async function CountriesPage() {
 
   return (
     <>
-      <Eyebrow>{countries.length} countries, nine dimensions</Eyebrow>
       <PageTitle>Every country as a shape</PageTitle>
       <Headline>
         Nine capability scores read together. Two countries with the same average can have

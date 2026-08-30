@@ -5,11 +5,11 @@ releases describe the whole user-facing product; dataset releases describe the
 scored data contract. The build checks that the newest entry in each stream
 matches its source version.
 
-The entries before App 0.1.0 are retrospective, high-level summaries
+The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
-## App 0.1.0 — 2026-08-30
+## App 1.0.0 — 2026-08-30
 
 The first formal product release gathers the benchmark, its research surfaces
 and its public viewer into one navigable application.

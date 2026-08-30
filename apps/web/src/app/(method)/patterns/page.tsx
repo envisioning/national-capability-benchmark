@@ -1,5 +1,5 @@
 import { PatternsView } from '@/components/views/PatternsView'
-import { Empty, Eyebrow, Headline, Highlight, PageTitle } from '@/components/ui'
+import { Empty, Headline, Highlight, PageTitle } from '@/components/ui'
 import { loadEvidence } from '@/lib/data'
 import { readPatternFilters } from '@/lib/links'
 
@@ -23,14 +23,10 @@ export default async function PatternsPage({
     return <Empty hint="No evidence records yet. Add them to data/evidence/records.json." />
   }
 
-  const countries = new Set(records.map((r) => r.iso3))
   const withPattern = records.filter((r) => r.pattern)
 
   return (
     <>
-      <Eyebrow>
-        {records.length} deliveries, {countries.size} countries
-      </Eyebrow>
       <PageTitle>What countries built</PageTitle>
       <Headline>
         Each record describes something a country built that the indicators miss. The source

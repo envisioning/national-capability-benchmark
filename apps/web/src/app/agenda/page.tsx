@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { COUNTRY_NAMES } from '@ncb/core'
 import { DeliveryTable } from '@/components/views/DeliveryTable'
-import { Empty, Eyebrow, Headline, Highlight, PageTitle, Section } from '@/components/ui'
+import { Empty, Headline, Highlight, PageTitle, Section } from '@/components/ui'
 import { CountryLabel } from '@/components/ui'
 import { Icon } from '@/components/Icon'
 import { MISSING_DATA_HINT, loadEvidence, loadIndex } from '@/lib/data'
@@ -45,9 +45,6 @@ export default async function AgendaIndexPage({
 
   return (
     <>
-      <Eyebrow>
-        {countries.length} agendas, {records.length} documented deliveries
-      </Eyebrow>
       <PageTitle>Capability agendas</PageTitle>
       <Headline>
         Each agenda turns a country&apos;s scores into actions: what to raise, what to measure
