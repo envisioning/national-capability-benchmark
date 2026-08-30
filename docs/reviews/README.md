@@ -1,11 +1,12 @@
 # Provisional layer reviews
 
-Velocity and Exponential Leverage are provisional, offline layers. Review each
-one once per quarter after its fixture is refreshed. The review should be
-written during the following week and saved as
-`{layer}-YYYY-q{quarter}.md`, using `velocity` or `leverage` as the layer name.
+Velocity, Exponential Leverage and the wealth residual are provisional, offline
+layers. Review each one once per quarter after its fixture is refreshed. The
+review should be written during the following week and saved as
+`{layer}-YYYY-q{quarter}.md`, using `velocity`, `leverage` or `residual` as the
+layer name.
 
-Run `pnpm reviews:check` to confirm that both layers have a review for the
+Run `pnpm reviews:check` to confirm that every layer has a review for the
 current quarter. The scheduled GitHub check runs the same command. A missing
 review is a maintenance failure, not evidence that the layer is ready for
 public use.

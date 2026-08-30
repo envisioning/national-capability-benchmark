@@ -1,14 +1,21 @@
 import { COUNTRIES, DIMENSIONS } from '@ncb/core'
 import { loadIndex } from '@/lib/data'
+import { COUNTRY_LAYERS } from '@/lib/layers'
+import { METHOD_PAGES } from '@/lib/nav'
 import {
   absoluteHref,
   aboutHref,
   agendaHref,
   capabilitiesHref,
   challengeHref,
+  compareBaseHref,
+  contactHref,
+  countriesHref,
+  countryLayerHref,
   countryProfileHref,
   digestHref,
-  METHOD_SUBNAV,
+  layerSectionHref,
+  supportHref,
   thesisHref,
 } from '@/lib/links'
 
@@ -31,20 +38,32 @@ export async function GET(): Promise<Response> {
   const add = (path: string, modified = lastmod) => paths.set(path, modified)
 
   add('/')
+  add(countriesHref)
+  /* The bare comparison page only. A combination is a reader's selection, not
+     a published page, and 52 countries make more pairs than a crawl map should
+     carry. See D70. */
+  add(compareBaseHref)
   add(capabilitiesHref)
   for (const dimension of DIMENSIONS) add(`${capabilitiesHref}/${dimension}`)
   add('/agenda')
   add(thesisHref)
-  add('/pt')
-  add('/pt/agenda')
   add('/country/BRA/institutions')
+  /* Every country layer and the sections it holds of its own. A section that
+     still lives in the ground layer is already listed there. See D69. */
+  for (const layer of COUNTRY_LAYERS) {
+    add(countryLayerHref(layer))
+    for (const section of layer.sections) {
+      if (section.slug) add(layerSectionHref(layer, section))
+    }
+  }
   add(aboutHref)
   add(challengeHref)
-  for (const entry of METHOD_SUBNAV) add(entry.href)
+  add(supportHref)
+  add(contactHref)
+  for (const entry of METHOD_PAGES) add(entry.href)
   for (const country of COUNTRIES) {
     add(countryProfileHref(country.iso3))
-    add(agendaHref(country.iso3, 'en'))
-    add(agendaHref(country.iso3, 'pt-BR'))
+    add(agendaHref(country.iso3))
   }
   add(digestHref(date), date)
 

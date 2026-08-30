@@ -141,7 +141,7 @@ export default async function CapabilityPage({
         <EmbedCode
           src={absoluteHref(embedCompareHref(embedCountry.iso3, dimension))}
           title={`${DIMENSION_LABELS[dimension]} country comparison`}
-          height={300}
+          height={420}
           label={`Embed ${embedCountry.country}'s comparison`}
         />
       </div>
@@ -152,8 +152,9 @@ export default async function CapabilityPage({
         icon={<Icon name={DIMENSION_ICON[dimension]} size={22} />}
       >
         <p className="mb-4 max-w-2xl text-xs leading-relaxed text-[var(--muted)]">
-          Scores use one 0 to 100 scale for all countries. Each dot is a country. The box covers the
-          middle half of the field, and the line is the median. Hollow dots have thin evidence.
+          Scores use one 0 to 100 scale for all countries. Each flag is a country, and the ring
+          around it carries how well evidenced that score is. Point at a flag to read the country,
+          click it to open the profile.
         </p>
         <CapabilityCountryTable
           dimension={dimension}

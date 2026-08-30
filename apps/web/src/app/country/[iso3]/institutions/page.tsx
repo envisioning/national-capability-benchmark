@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { COUNTRY_NAMES, EN } from '@ncb/core'
 import { InstitutionsView } from '@/components/views/InstitutionsView'
-import { Empty, Eyebrow, Headline, PageTitle } from '@/components/ui'
+import { Empty, Eyebrow, Headline, Note, PageTitle } from '@/components/ui'
 import { loadInstitutionNetwork } from '@/lib/data'
 
 export const dynamic = 'force-dynamic'
@@ -26,10 +26,25 @@ export default async function CountryInstitutionsPage({
   const name = COUNTRY_NAMES[iso3]
   if (!name) return <Empty hint="This country is not in the benchmark." />
 
-  const network = await loadInstitutionNetwork(iso3)
-  if (!network) {
-    return <Empty hint={`We have not yet mapped this country's institutions.`} />
+  const networkResult = await loadInstitutionNetwork(iso3)
+  if (networkResult.error) {
+    if (networkResult.error.kind === 'missing') {
+      return <Empty hint={`We have not yet mapped this country's institutions.`} />
+    }
+
+    return (
+      <>
+        <Eyebrow>Institutional map of {name}</Eyebrow>
+        <PageTitle>The institution map could not be loaded</PageTitle>
+        <Headline>The institution network could not be loaded.</Headline>
+        <Note tone="stop">{networkResult.error.message}</Note>
+        <p className="max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
+          Fix the network file, then run <code>pnpm bench validate</code> before reloading this page.
+        </p>
+      </>
+    )
   }
+  const network = networkResult.network
 
   return (
     <>

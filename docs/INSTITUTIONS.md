@@ -135,6 +135,13 @@ benchmark. They would first need comparable construction across countries and
 a decision showing that the result measures capability rather than the amount
 of documentation available.
 
+The generated country agenda carries the reverse navigation as `institutionIds`
+on each dimension-level agenda item. The ids are derived from the node's
+existing `dimensions` field, so the agenda and the institution map cannot drift
+into two mappings. They help a reader move from an agenda item to institutions
+worth investigating. They do not claim that an institution performed well and
+they never enter a score or confidence calculation.
+
 ## Validation
 
 Run `pnpm bench validate` after editing an institutional network. The validator

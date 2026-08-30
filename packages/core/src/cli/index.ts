@@ -38,11 +38,13 @@ import { runDiagnostics } from '../pipeline/diagnostics.js'
 import { buildReport } from '../pipeline/report.js'
 import { writeVelocity } from '../pipeline/velocity.js'
 import { writeLeverage } from '../pipeline/leverage.js'
+import { writeResidual } from '../pipeline/residual.js'
 import { writeBrazilSubnational } from '../pipeline/br-subnational.js'
 import {
   acrossCountries,
   loadDelphi,
   loadEvidence,
+  loadInstitutionNetwork,
   loadObservations,
   saveDelphi,
   summarize,
@@ -234,7 +236,8 @@ async function agenda(args: Args, countries: CountryResult[]): Promise<void> {
   }
   const generatedAt = new Date().toISOString()
   for (const iso3 of targets) {
-    const built = buildAgenda(countries, evidence, iso3, generatedAt)
+    const institutionNetwork = await loadInstitutionNetwork(iso3)
+    const built = buildAgenda(countries, evidence, iso3, generatedAt, institutionNetwork)
     assertAgendaHistoryFloor(iso3, built.ownEvidence.length, discipline)
     await writeOut(agendaFile(iso3), `${JSON.stringify(built, null, 2)}\n`)
     for (const lang of langs) {
@@ -297,6 +300,15 @@ async function main() {
       const output = await writeLeverage()
       console.log(
         `leverage   -> ${FILES.leverage} (${Object.keys(output.countries).length} countries, 11 dimensions)`,
+      )
+      break
+    }
+
+    case 'residual': {
+      const output = await writeResidual()
+      const weak = output.fits.filter((fit) => fit.fitStrength === 'weak')
+      console.log(
+        `residual   -> ${FILES.residual} (${output.fits.length} dimensions fitted, ${weak.length} weak, ${output.exclusions.length} countries without income data)`,
       )
       break
     }
@@ -773,6 +785,7 @@ Start with file 1.
   pnpm bench diagnose                     correlations, redundancy, GDP-sensitivity test
   pnpm bench velocity                     write the provisional five-year velocity fixture
   pnpm bench leverage                     write the provisional leverage fixture
+  pnpm bench residual                     write the provisional wealth-residual fixture
   pnpm bench br-subnational [--year 2024] fetch the Brazil state-level Gini fixture
   pnpm bench trust    fetch                fetch and parse Joint EVS/WVS A165 trust results
   pnpm bench prompt    [BRA IND ...] [--stance wealth_sceptic] [--system] [--audit trust]

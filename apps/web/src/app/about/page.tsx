@@ -11,13 +11,17 @@ import {
   isScored,
 } from '@ncb/core'
 import { Eyebrow, Headline, Note, PageTitle, Section } from '@/components/ui'
+import { countryLayer } from '@/lib/layers'
 import {
   capabilitiesHref,
   capabilityHref,
   challengeHref,
+  contactHref,
+  countryLayerHref,
   decisionsHref,
   glossaryHref,
   limitsHref,
+  supportHref,
 } from '@/lib/links'
 
 export const metadata: Metadata = {
@@ -27,6 +31,7 @@ export const metadata: Metadata = {
 }
 
 export default function AboutPage() {
+  const brazilLayer = countryLayer('BRA')
   const wired = INDICATORS.filter(isScored).length
   const gaps = INDICATORS.filter((i) => i.ingest === 'gap').length
 
@@ -97,11 +102,16 @@ export default function AboutPage() {
         </p>
         <p className="mt-4 max-w-3xl text-lg leading-relaxed">
           Brazil has no special treatment in the code. Adding a country rebases the frame and
-          requires a major version bump. A{' '}
-          <Link href="/pt" className="underline underline-offset-4">
-          Portuguese version
-          </Link>{' '}
-          opens on Brazil&apos;s shape and agenda.
+          requires a major version bump. What Brazil does have is a layer of its own: a{' '}
+          {brazilLayer ? (
+            <Link href={countryLayerHref(brazilLayer)} className="underline underline-offset-4">
+              Brazilian reading in Portuguese
+            </Link>
+          ) : (
+            'Brazilian reading in Portuguese'
+          )}{' '}
+          that carries the institution map and the subnational spread beside the national shape.
+          The benchmark itself is not published a second time in another language.
         </p>
       </Section>
 
@@ -172,6 +182,16 @@ export default function AboutPage() {
           It is a research prototype. It does not rank countries or give policy advice. Delphi
           estimates are model output. Envisioning seeks institutional partners to improve the
           method, fill gaps with comparable data, and connect diagnosis to intervention.
+        </p>
+        <p className="mt-4 max-w-3xl text-lg leading-relaxed">
+          <Link href={supportHref} className="underline underline-offset-4">
+            Support
+          </Link>{' '}
+          says what backing the work looks like, and{' '}
+          <Link href={contactHref} className="underline underline-offset-4">
+            contact
+          </Link>{' '}
+          reaches a person.
         </p>
       </Section>
 

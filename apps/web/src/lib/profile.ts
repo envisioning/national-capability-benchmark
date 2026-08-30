@@ -1,4 +1,4 @@
-import { DIMENSIONS } from '@ncb/core'
+import { DIMENSIONS, primaryMomentum } from '@ncb/core'
 import type { CountryResult } from '@ncb/core'
 
 /**
@@ -21,5 +21,28 @@ export function toProfile(c: CountryResult): RadarProfile {
     country: c.country,
     values: DIMENSIONS.map((d) => c.dimensions[d]?.score ?? null),
     confidences: DIMENSIONS.map((d) => c.dimensions[d]?.confidence ?? null),
+  }
+}
+
+/**
+ * A radar profile plus the one number the radar does not carry: where each
+ * dimension is heading.
+ *
+ * The flag histogram reads a country on hover, and a score with no direction
+ * invites the reader to treat it as permanent. The trend is the primary
+ * momentum span, computed on the indicators observed at both ends, which is a
+ * smaller basket than the score. See D22 and D24.
+ */
+export type HistogramProfile = RadarProfile & {
+  deltas: Array<number | null>
+}
+
+export function toHistogramProfile(c: CountryResult): HistogramProfile {
+  return {
+    ...toProfile(c),
+    deltas: DIMENSIONS.map((d) => {
+      const dim = c.dimensions[d]
+      return dim ? primaryMomentum(dim.momentum)?.delta ?? null : null
+    }),
   }
 }

@@ -360,6 +360,7 @@ export function Note({
   const stop = tone === 'stop'
   return (
     <p
+      role={stop ? 'alert' : undefined}
       className={`mb-6 max-w-3xl rounded-lg border px-4 py-3 text-lg leading-relaxed ${
         stop
           ? 'border-[#ef4444]/40 bg-[#ef4444]/10'
@@ -596,9 +597,12 @@ export function DimensionLegend({
   names?: Partial<Record<(typeof DIMENSIONS)[number], string>>
 } = {}) {
   return (
-    <ul className="mb-6 flex flex-wrap gap-x-5 gap-y-2 text-xs">
+    <ul className="mb-6 flex flex-wrap gap-2 text-xs">
       {DIMENSIONS.map((d) => (
-        <li key={d} className="inline-flex items-center gap-2">
+        <li
+          key={d}
+          className="inline-flex items-center gap-2 rounded-full border border-[var(--rule)] bg-[var(--surface-sunken)] px-3 py-1 font-medium text-[var(--muted)]"
+        >
           <Icon name={DIMENSION_ICON[d]} size={14} className="text-[var(--muted)]" />
           <span>{names?.[d] ?? DIMENSION_LABELS[d]}</span>
         </li>

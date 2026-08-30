@@ -9,16 +9,21 @@ const config: NextConfig = {
   // Set NEXT_DIST_DIR to build into a different directory and leave the dev
   // server alone.
   distDir: process.env.NEXT_DIST_DIR ?? '.next',
+  // The Portuguese edition was a mirror of the whole benchmark. It is now one
+  // country layer, so every address it held lands either in that layer or back
+  // in the English ground layer. See D67.
   async redirects() {
     return [
       { source: '/agenda/:iso3', destination: '/country/:iso3/agenda', statusCode: 301 },
-      {
-        source: '/pt/agenda/:iso3',
-        destination: '/country/:iso3/agenda?lang=pt-BR',
-        statusCode: 301,
-      },
-      { source: '/pt/instituicoes', destination: '/country/BRA/institutions', statusCode: 301 },
-      { source: '/pt', destination: '/', statusCode: 301 },
+      { source: '/pt/agenda/BRA', destination: '/brasil/agenda', statusCode: 301 },
+      { source: '/pt/agenda/:iso3', destination: '/country/:iso3/agenda', statusCode: 301 },
+      { source: '/pt/agenda', destination: '/agenda', statusCode: 301 },
+      { source: '/pt/instituicoes', destination: '/brasil/instituicoes', statusCode: 301 },
+      { source: '/pt/method', destination: '/method', statusCode: 301 },
+      { source: '/pt/glossary', destination: '/glossary', statusCode: 301 },
+      { source: '/pt/limits', destination: '/limits', statusCode: 301 },
+      { source: '/pt/decisions', destination: '/decisions', statusCode: 301 },
+      { source: '/pt', destination: '/brasil', statusCode: 301 },
     ]
   },
   async rewrites() {

@@ -49,7 +49,8 @@ export function spearman(xs: number[], ys: number[]): number | null {
   return pearson(rank(xs), rank(ys))
 }
 
-function rank(xs: number[]): number[] {
+/** Ascending ranks, ties averaged. Exported for the residual layer. */
+export function rank(xs: number[]): number[] {
   const order = xs.map((v, i) => ({ v, i })).sort((a, b) => a.v - b.v)
   const out = new Array<number>(xs.length)
   let i = 0

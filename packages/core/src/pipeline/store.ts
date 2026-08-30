@@ -1,6 +1,7 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import { DelphiRunFile, EvidenceFile, ObservationFile } from '../model/schema.js'
+import { InstitutionNetworkFile } from '../model/institutions.js'
 import type { EvidenceRecord, Observation } from '../model/schema.js'
 
 import type {
@@ -8,7 +9,7 @@ import type {
   Dimension,
   IndicatorAcrossCountries,
 } from '../model/index.js'
-import { DELPHI_DIR, FILES } from './paths.js'
+import { DELPHI_DIR, FILES, institutionFile } from './paths.js'
 
 async function readJson(path: string): Promise<unknown | null> {
   try {
@@ -41,6 +42,30 @@ export async function loadEvidence(path = FILES.evidence): Promise<EvidenceRecor
   const parsed = EvidenceFile.safeParse(raw)
   if (!parsed.success) throw new Error(`${path}: ${parsed.error.message}`)
   return parsed.data.records
+}
+
+/**
+ * Load the optional country institution network for agenda cross-references.
+ * A malformed network is an error rather than an empty map, so generated
+ * agenda links cannot silently disappear behind a bad source file.
+ */
+export async function loadInstitutionNetwork(
+  iso3: string,
+  path = institutionFile(iso3),
+): Promise<InstitutionNetworkFile | null> {
+  let raw: unknown
+  try {
+    raw = JSON.parse(await readFile(path, 'utf8'))
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === 'ENOENT') return null
+    throw new Error(`Cannot read institutional network ${path}: ${String(error)}`)
+  }
+  const parsed = InstitutionNetworkFile.safeParse(raw)
+  if (!parsed.success) throw new Error(`${path}: ${parsed.error.message}`)
+  if (parsed.data.iso3 !== iso3.toUpperCase()) {
+    throw new Error(`${path}: network country ${parsed.data.iso3} does not match ${iso3.toUpperCase()}`)
+  }
+  return parsed.data
 }
 
 export async function loadDelphi(path = FILES.delphiLatest): Promise<DelphiRunFile | null> {

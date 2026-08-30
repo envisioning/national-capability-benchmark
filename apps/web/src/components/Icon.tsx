@@ -34,6 +34,7 @@ export type IconName =
   | 'ruler'
   | 'search-x'
   | 'target'
+  | 'x'
   | 'trending-down'
   | 'trending-up'
   | 'triangle-alert'
@@ -77,6 +78,7 @@ const PATHS: Record<IconName, string> = {
   'minus': `<path d='M5 12h14' />`,
   'plug': `<path d='M12 22v-5' /> <path d='M15 8V2' /> <path d='M17 8a1 1 0 0 1 1 1v4a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1z' /> <path d='M9 8V2' />`,
   'ruler': `<path d='M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z' /> <path d='m14.5 12.5 2-2' /> <path d='m11.5 9.5 2-2' /> <path d='m8.5 6.5 2-2' /> <path d='m17.5 15.5 2-2' />`,
+  'x': `<path d='M18 6 6 18' /> <path d='m6 6 12 12' />`,
   'search-x': `<path d='m13.5 8.5-5 5' /> <path d='m8.5 8.5 5 5' /> <circle cx='11' cy='11' r='8' /> <path d='m21 21-4.3-4.3' />`,
   'target': `<circle cx='12' cy='12' r='10' /> <circle cx='12' cy='12' r='6' /> <circle cx='12' cy='12' r='2' />`,
   'trending-down': `<path d='M16 17h6v-6' /> <path d='m22 17-8.5-8.5-5 5L2 7' />`,

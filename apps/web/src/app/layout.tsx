@@ -1,10 +1,16 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import Link from 'next/link'
+import Script from 'next/script'
 import { COUNTRIES, DATASET_VERSION, LICENSE_DOC, REPO_URL, docHref } from '@ncb/core'
-import { LanguageSwitch } from '@/components/NavLinks'
-import { FooterNav, HeaderNav } from '@/components/SiteNav'
+import { EnvisioningMark } from '@/components/EnvisioningMark'
+import { FooterNav, HeaderNav, SectionTabs } from '@/components/SiteNav'
+import { siteOrigin } from '@/lib/links'
 import './globals.css'
+
+const PLAUSIBLE_DOMAIN = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN ?? 'ncb.envisioning.com'
+const PLAUSIBLE_SCRIPT_URL =
+  process.env.NEXT_PUBLIC_PLAUSIBLE_SCRIPT_URL ?? 'https://plausible.io/js/script.js'
 
 /*
  * Inter is self-hosted from rsms/inter, matching envisioning.com. Envisioning
@@ -38,9 +44,7 @@ const octa = localFont({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? 'https://national-capability-benchmark.vercel.app',
-  ),
+  metadataBase: new URL(siteOrigin()),
   title: 'NCB, the National Capability Benchmark',
   description:
     'A prototype that measures what a country can do, separately from how rich it is.',
@@ -77,46 +81,87 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </span>
             </Link>
             <HeaderNav />
-            {/* Language is an interpretation layer, not a section, so the switch
-                sits apart from the nav and appears only where a counterpart
-                page exists. See D35. */}
-            <LanguageSwitch />
           </div>
         </header>
+
+        {/* The deepest level of the nav tree, on its own rule under the header,
+            so the trail and the sibling pages read as different things. It
+            renders nothing on a page that has no pages beside it. See D73. */}
+        <SectionTabs />
 
         <main id="main" className="m-auto max-w-6xl px-6 py-12 sm:px-12 sm:py-16">
           {children}
         </main>
 
-        <footer className="w-full border-t border-[var(--rule)] bg-[var(--surface-sunken)]">
+        <footer className="footer-band w-full border-t border-[var(--rule)]">
           <div className="m-auto max-w-6xl px-6 py-12 sm:px-12">
-            <p className="max-w-3xl text-lg leading-relaxed">
-              NCB is a prototype benchmark from Envisioning, a technology research institute and
-              advisory.
-            </p>
-            <p className="mt-4 max-w-3xl text-xs text-[var(--muted)]">
-              It scores {COUNTRIES.length} countries on nine dimensions using public data. Every
-              score runs from 0 to 100 and carries its own confidence value. There is no overall
-              ranking.
-            </p>
-            <FooterNav />
-            {/* The one place every page names the dataset it is showing and where the code lives. */}
-            <p className="mt-10 flex flex-wrap gap-x-6 gap-y-2 border-t border-[var(--rule)] pt-6 text-xs text-[var(--muted)]">
-              <span>Dataset {DATASET_VERSION}</span>
-              <a
-                href={REPO_URL}
-                target="_blank"
-                rel="noreferrer"
-                className="underline underline-offset-4 hover:text-[var(--foreground)]"
+            <div className="flex flex-col gap-4 border-b border-[var(--rule)] pb-10 sm:flex-row sm:items-center sm:gap-8">
+              <Link
+                href="/"
+                aria-label="NCB home"
+                className="footer-brand-lockup flex shrink-0 items-center gap-3"
               >
-                Open-source repository on GitHub
+                <EnvisioningMark className="h-[18px] w-[18px]" />
+                <span
+                  className="font-display text-[32px] leading-none"
+                  style={{ fontVariationSettings: '"wght" 500, "wdth" 100' }}
+                >
+                  NCB
+                </span>
+              </Link>
+              <div>
+                <p className="max-w-3xl text-lg leading-relaxed">
+                  <span className="text-[var(--footer-ink)]">NCB</span> is a prototype benchmark
+                  from Envisioning for reading what a country can do under uncertainty.
+                </p>
+                <p className="mt-2 max-w-3xl text-xs text-[var(--footer-muted)]">
+                  It scores {COUNTRIES.length} countries on nine dimensions using public data.
+                  Every score runs from 0 to 100 and carries its own confidence value. There is
+                  no overall ranking.
+                </p>
+              </div>
+            </div>
+
+            <FooterNav />
+          </div>
+
+          {/* The one place every page names the dataset it is showing and where the code lives. */}
+          <div className="m-auto flex max-w-6xl flex-col gap-4 border-t border-[var(--rule)] px-6 pt-6 pb-14 text-xs sm:flex-row sm:items-center sm:justify-between sm:px-12">
+            <p>
+              Powered by{' '}
+              <a
+                href="https://envisioning.com"
+                rel="noopener external"
+                className="footer-strong-link underline underline-offset-2"
+              >
+                Envisioning
               </a>
-              <a href={docHref(LICENSE_DOC)} className="hover:text-[var(--foreground)]">
-                MIT code, published data under its own terms
-              </a>
+              , a technology research institute and advisory.
             </p>
+            <nav aria-label="Project and legal information">
+              <ul className="flex flex-wrap gap-x-4 gap-y-2">
+                <li>Dataset {DATASET_VERSION}</li>
+                <li>
+                  <a href={REPO_URL} target="_blank" rel="noreferrer">
+                    GitHub
+                  </a>
+                </li>
+                <li>
+                  <a href={docHref(LICENSE_DOC)}>License</a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </footer>
+
+        {process.env.NODE_ENV === 'production' ? (
+          <Script
+            id="plausible-analytics"
+            src={PLAUSIBLE_SCRIPT_URL}
+            data-domain={PLAUSIBLE_DOMAIN}
+            strategy="afterInteractive"
+          />
+        ) : null}
       </body>
     </html>
   )

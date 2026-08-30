@@ -1,46 +1,102 @@
 import Link from 'next/link'
 import { COUNTRY_NAMES } from '@ncb/core'
+import { DeliveryTable } from '@/components/views/DeliveryTable'
+import { Empty, Eyebrow, Headline, Highlight, PageTitle, Section } from '@/components/ui'
 import { CountryLabel } from '@/components/ui'
-import { Empty, Eyebrow, PageTitle } from '@/components/ui'
-import { MISSING_DATA_HINT, loadIndex } from '@/lib/data'
-import { agendaHref } from '@/lib/links'
+import { Icon } from '@/components/Icon'
+import { MISSING_DATA_HINT, loadEvidence, loadIndex } from '@/lib/data'
+import { agendaHref, patternsHref, readPatternFilters } from '@/lib/links'
 
 export const dynamic = 'force-dynamic'
 
 export const metadata = {
   title: 'Capability agendas',
-  description: 'Country agendas computed from the benchmark data.',
+  description:
+    'Country agendas computed from the benchmark data, and every documented delivery filed against the indicators they say to measure first.',
 }
 
 /**
- * The agendas, one per country. The agenda itself explains its own rules; this
- * page only routes. Portuguese lives at /pt as an interpretation layer over
- * the same JSON. See D35.
+ * The agendas, one per country, and the deliveries they point at.
+ *
+ * An agenda names what a country should raise and what it should measure
+ * first. The table answers the same question from the other side: what has
+ * already been built against those missing indicators, when it started, what
+ * number carries it and whether it still runs. The filters live in the query
+ * string, so a reader who has narrowed the table can send that view on. See
+ * D46.
+ *
+ * Every agenda here is English, because the ground layer is. A country with a
+ * layer of its own publishes the same agenda inside that layer, in that
+ * layer's language, from the same JSON. See D35 and D69.
  */
-export default async function AgendaIndexPage() {
-  const data = await loadIndex()
+export default async function AgendaIndexPage({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>
+}) {
+  const filters = readPatternFilters(await searchParams)
+  const [data, records] = await Promise.all([loadIndex(), loadEvidence()])
   if (!data || data.countries.length === 0) return <Empty hint={MISSING_DATA_HINT} />
+
   const countries = [...data.countries].sort((a, b) =>
     (COUNTRY_NAMES[a.iso3] ?? a.iso3).localeCompare(COUNTRY_NAMES[b.iso3] ?? b.iso3),
   )
+  const withRecords = new Set(records.map((r) => r.iso3))
 
   return (
     <>
-      <Eyebrow>One agenda per country</Eyebrow>
+      <Eyebrow>
+        {countries.length} agendas, {records.length} documented deliveries
+      </Eyebrow>
       <PageTitle>Capability agendas</PageTitle>
-      <p className="mt-3 max-w-3xl text-lg leading-relaxed">
-        Each agenda turns a country&apos;s scores into actions: what to raise, what to measure first
-        and what to keep watching. It also lists the missing data. The lists come from the data.
+      <Headline>
+        Each agenda turns a country&apos;s scores into actions: what to raise, what to measure
+        first and what to keep watching. The table below is what countries have already{' '}
+        <Highlight>built</Highlight> against the same missing indicators.
+      </Headline>
+      <p className="mb-12 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
+        A delivery is filed against an indicator that has no dataset behind it, so none of these
+        rows moves a score or a confidence. Sort by any column. The table opens on the start year,
+        newest first. The card view of the same corpus, with preconditions and where each move has
+        travelled, is at{' '}
+        <Link href={patternsHref()} className="underline underline-offset-4">
+          patterns
+        </Link>
+        .
       </p>
-      <ul className="mt-10 grid gap-x-8 gap-y-2 text-lg sm:grid-cols-2 lg:grid-cols-3">
-        {countries.map((c) => (
-          <li key={c.iso3}>
-            <Link href={agendaHref(c.iso3)} className="underline underline-offset-4">
-              <CountryLabel iso3={c.iso3} name={COUNTRY_NAMES[c.iso3] ?? c.iso3} />
-            </Link>
-          </li>
-        ))}
-      </ul>
+
+      <Section
+        title="What countries built"
+        icon={<Icon name="hammer" size={22} />}
+        hint="One row per documented delivery, with the year it started, the published number that carries it, who published that number and whether it still runs."
+      >
+        {records.length === 0 ? (
+          <Empty hint="No evidence records yet. Add them to data/evidence/records.json." />
+        ) : (
+          <DeliveryTable records={records} initial={filters} />
+        )}
+      </Section>
+
+      <Section
+        title="One agenda per country"
+        icon={<Icon name="list-filter" size={22} />}
+        hint="Every country in the benchmark has an agenda, including the ones with no delivery recorded yet. A marked country has at least one row in the table above."
+      >
+        <ul className="grid gap-x-8 gap-y-2 text-lg sm:grid-cols-2 lg:grid-cols-3">
+          {countries.map((c) => (
+            <li key={c.iso3}>
+              <Link href={agendaHref(c.iso3)} className="underline underline-offset-4">
+                <CountryLabel iso3={c.iso3} name={COUNTRY_NAMES[c.iso3] ?? c.iso3} />
+              </Link>
+              {withRecords.has(c.iso3) ? (
+                <span className="ml-2 text-xs text-[var(--muted)]">
+                  {records.filter((r) => r.iso3 === c.iso3).length} recorded
+                </span>
+              ) : null}
+            </li>
+          ))}
+        </ul>
+      </Section>
     </>
   )
 }

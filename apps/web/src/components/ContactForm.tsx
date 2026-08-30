@@ -1,0 +1,128 @@
+'use client'
+
+import { useState } from 'react'
+import { CONTACT_TOPICS, CONTACT_TOPIC_LABELS, MIN_CONTACT_MESSAGE } from '@ncb/core'
+import type { ContactTopic } from '@ncb/core'
+import { contactApiHref } from '@/lib/links'
+
+/**
+ * The one form in the viewer that writes to a person.
+ *
+ * It posts to /api/contact, which forwards to the Envisioning CRM. Nothing is
+ * stored in this repository, so nothing here needs a review queue. The topic
+ * arrives preset from whichever page sent the reader, which is the only thing
+ * a support page has to hand over. See D71.
+ */
+
+const FIELD =
+  'mt-2 block w-full rounded-md border border-[var(--rule)] bg-[var(--surface)] px-3 py-2 text-lg font-normal'
+
+export function ContactForm({ topic = 'general' }: { topic?: ContactTopic }) {
+  const [sent, setSent] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+
+  async function submit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    setSending(true)
+    setError(null)
+    const form = new FormData(event.currentTarget)
+    const read = (key: string): string => String(form.get(key) ?? '').trim()
+    try {
+      const response = await fetch(contactApiHref, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          name: read('name'),
+          email: read('email'),
+          organization: read('organization'),
+          country: read('country') || undefined,
+          role: read('role') || undefined,
+          topic: read('topic'),
+          message: read('message'),
+          newsletterOptIn: form.get('newsletterOptIn') === 'on',
+        }),
+      })
+      const data = (await response.json()) as { error?: string; ok?: boolean }
+      if (!response.ok || !data.ok) throw new Error(data.error ?? 'The message could not be sent.')
+      setSent(true)
+    } catch (caught) {
+      setError(caught instanceof Error ? caught.message : 'The message could not be sent.')
+      setSending(false)
+    }
+  }
+
+  if (sent) {
+    return (
+      <p className="max-w-3xl rounded-lg border border-[var(--rule)] bg-[var(--surface-sunken)] px-4 py-3 text-lg leading-relaxed">
+        Your message reached us. A person reads every one and replies.
+      </p>
+    )
+  }
+
+  return (
+    <form onSubmit={submit} className="max-w-2xl space-y-5">
+      <div className="grid gap-5 sm:grid-cols-2">
+        <label className="block text-xs font-medium">
+          Your name
+          <input name="name" required maxLength={200} className={FIELD} />
+        </label>
+        <label className="block text-xs font-medium">
+          Email
+          <input name="email" type="email" required maxLength={200} className={FIELD} />
+        </label>
+        <label className="block text-xs font-medium">
+          Organization
+          <input name="organization" required maxLength={200} className={FIELD} />
+        </label>
+        <label className="block text-xs font-medium">
+          Role <span className="font-normal text-[var(--muted)]">(optional)</span>
+          <input name="role" maxLength={200} className={FIELD} />
+        </label>
+      </div>
+
+      <label className="block text-xs font-medium">
+        Country <span className="font-normal text-[var(--muted)]">(optional)</span>
+        <input name="country" maxLength={100} className={FIELD} placeholder="Brazil" />
+      </label>
+
+      <label className="block text-xs font-medium">
+        What is this about
+        <select name="topic" defaultValue={topic} className={FIELD}>
+          {CONTACT_TOPICS.map((id) => (
+            <option key={id} value={id}>
+              {CONTACT_TOPIC_LABELS[id]}
+            </option>
+          ))}
+        </select>
+      </label>
+
+      <label className="block text-xs font-medium">
+        Your message
+        <textarea
+          name="message"
+          required
+          minLength={MIN_CONTACT_MESSAGE}
+          maxLength={4000}
+          className={`${FIELD} min-h-36 leading-relaxed`}
+          placeholder="What are you working on, and what would you want from the benchmark?"
+        />
+      </label>
+
+      <label className="flex items-start gap-3 text-xs leading-relaxed">
+        <input name="newsletterOptIn" type="checkbox" className="mt-0.5" />
+        <span>Send me the Envisioning newsletter as well.</span>
+      </label>
+
+      {error ? <p className="text-xs text-[#ef4444]">{error}</p> : null}
+
+      <button
+        type="submit"
+        disabled={sending}
+        className="rounded-md bg-accent px-4 py-2 text-xs font-medium text-black disabled:opacity-50"
+      >
+        {sending ? 'Sending' : 'Send message'}
+      </button>
+    </form>
+  )
+}

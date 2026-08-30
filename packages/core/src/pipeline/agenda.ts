@@ -14,6 +14,7 @@ import type {
   CountryResult,
   Dimension,
   EvidenceRecord,
+  InstitutionNetworkFile,
 } from '../model/index.js'
 import { CONFIDENCE_BANDS, confidenceBand } from './confidence.js'
 import type { ConfidenceBandId } from './confidence.js'
@@ -22,6 +23,7 @@ import { mdTable } from './report.js'
 import { fill } from '../i18n/index.js'
 import type { Lexicon } from '../i18n/index.js'
 import { round } from './stats.js'
+import { institutionIdsForDimension } from './institutions.js'
 
 /**
  * The capability agenda: the country's scores turned into a list of things to
@@ -80,6 +82,11 @@ export type AgendaDimension = {
   exemplars: AgendaExemplar[]
   /** Evidence records other countries filed against this dimension's gaps. */
   evidenceElsewhere: AgendaEvidenceRef[]
+  /**
+   * Institution node ids that help a reader investigate this dimension-level
+   * agenda item. Navigation only: these ids never enter a score or confidence.
+   */
+  institutionIds: string[]
 }
 
 export type CountryAgenda = {
@@ -137,6 +144,7 @@ export function buildAgenda(
   evidence: EvidenceRecord[],
   iso3: string,
   generatedAt: string,
+  institutionNetwork: Pick<InstitutionNetworkFile, 'nodes'> | null = null,
 ): CountryAgenda {
   const subject = countries.find((c) => c.iso3 === iso3)
   if (!subject) throw new Error(`No scored result for ${iso3}`)
@@ -220,6 +228,9 @@ export function buildAgenda(
       retired,
       exemplars,
       evidenceElsewhere,
+      institutionIds: institutionNetwork
+        ? institutionIdsForDimension(institutionNetwork.nodes, dimension)
+        : [],
     }
   })
 

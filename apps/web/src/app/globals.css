@@ -277,6 +277,157 @@ html {
   );
 }
 
+/* Evidence records read as separate posts, while their short intro stays
+ * attached to the section. The selector is deliberately tied to the record
+ * links so the similar behavioural-check panel keeps its existing treatment. */
+div.mt-6.rounded-lg.border:has(> ul.space-y-5 li > p:first-child a[href^='/patterns/']) {
+  margin-top: 1.5rem;
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
+div.mt-6.rounded-lg.border:has(> ul.space-y-5 li > p:first-child a[href^='/patterns/'])
+  > p.mb-1.inline-flex {
+  margin-bottom: 0.5rem;
+}
+
+div.mt-6.rounded-lg.border:has(> ul.space-y-5 li > p:first-child a[href^='/patterns/'])
+  > p.mb-4 {
+  margin-bottom: 0;
+}
+
+div.mt-6.rounded-lg.border:has(> ul.space-y-5 li > p:first-child a[href^='/patterns/'])
+  > ul.space-y-5 {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  padding: 0;
+  list-style: none;
+}
+
+div.mt-6.rounded-lg.border:has(> ul.space-y-5 li > p:first-child a[href^='/patterns/'])
+  > ul.space-y-5 > :not(:first-child) {
+  margin-top: 0;
+}
+
+div.mt-6.rounded-lg.border:has(> ul.space-y-5 li > p:first-child a[href^='/patterns/'])
+  > ul.space-y-5 > li {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  padding: 1.25rem 1.5rem;
+}
+
+div.mt-6.rounded-lg.border:has(> ul.space-y-5 li > p:first-child a[href^='/patterns/'])
+  > ul.space-y-5 > li:focus-within {
+  border-color: var(--muted);
+}
+
+div.mt-6.rounded-lg.border:has(> ul.space-y-5 li > p:first-child a[href^='/patterns/'])
+  > ul.space-y-5 > li > p:first-child {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.75rem;
+  border-bottom: 1px solid var(--rule-soft);
+  margin-bottom: 0;
+  padding-bottom: 0.875rem;
+  font-size: 0.8rem;
+}
+
+div.mt-6.rounded-lg.border:has(> ul.space-y-5 li > p:first-child a[href^='/patterns/'])
+  > ul.space-y-5 > li > p:first-child > a {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+div.mt-6.rounded-lg.border:has(> ul.space-y-5 li > p:first-child a[href^='/patterns/'])
+  > ul.space-y-5 > li > p:first-child > span {
+  margin-left: 0;
+}
+
+div.mt-6.rounded-lg.border:has(> ul.space-y-5 li > p:first-child a[href^='/patterns/'])
+  > ul.space-y-5 > li > p:nth-of-type(2) {
+  margin-top: 1rem;
+  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+  line-height: 1.45;
+}
+
+div.mt-6.rounded-lg.border:has(> ul.space-y-5 li > p:first-child a[href^='/patterns/'])
+  > ul.space-y-5 > li > p:nth-of-type(3) {
+  margin-top: 0.75rem;
+  line-height: 1.5;
+}
+
+div.mt-6.rounded-lg.border:has(> ul.space-y-5 li > p:first-child a[href^='/patterns/'])
+  > ul.space-y-5 > li > p.max-w-3xl:not(.flex) {
+  margin-top: 1.25rem;
+  border-top: 1px solid var(--rule-soft);
+  padding-top: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+div.mt-6.rounded-lg.border:has(> ul.space-y-5 li > p:first-child a[href^='/patterns/'])
+  > ul.space-y-5 > li > p.flex.max-w-3xl {
+  max-width: none;
+  margin-top: 1.25rem;
+  border: 1px solid var(--rule-soft);
+  border-radius: var(--radius-md);
+  background: var(--surface-sunken);
+  padding: 0.875rem 1rem;
+}
+
+@media (max-width: 640px) {
+  div.mt-6.rounded-lg.border:has(> ul.space-y-5 li > p:first-child a[href^='/patterns/'])
+    > ul.space-y-5 > li {
+    padding: 1rem;
+  }
+}
+
+/* The footer borrows Signals' parent-brand band: a dark, quiet field that
+ * gives the EV glyph and the navigation columns room to read as one lockup.
+ * The custom properties keep FooterNav's existing shared classes legible on
+ * the darker surface without changing the page-wide light/dark tokens. */
+.footer-band {
+  --footer-bg: #1a1d2b;
+  --footer-ink: #ffffff;
+  --footer-muted: #b5bddf;
+  --footer-rule: rgba(255, 255, 255, 0.12);
+  --background: var(--footer-bg);
+  --foreground: var(--footer-ink);
+  --muted: var(--footer-muted);
+  --rule: var(--footer-rule);
+  background: var(--footer-bg);
+  color: var(--footer-muted);
+}
+
+.footer-band a {
+  color: var(--footer-muted);
+  transition: color 200ms ease;
+}
+
+.footer-band a:hover {
+  color: var(--footer-ink);
+}
+
+.footer-band a.footer-brand-lockup,
+.footer-band a.footer-strong-link {
+  color: var(--footer-ink);
+}
+
+.footer-band nav h2 {
+  color: var(--footer-ink);
+}
+
+@media (prefers-color-scheme: dark) {
+  .footer-band {
+    --footer-bg: #191c2b;
+    --footer-muted: #b8bdd9;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

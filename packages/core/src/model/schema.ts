@@ -451,6 +451,67 @@ export const LeverageFile = z.object({
 })
 export type LeverageFile = z.infer<typeof LeverageFile>
 
+/**
+ * One dimension's fit of score on log10 GDP per capita, and how much the fit
+ * moves the order. A residual read against a weak fit is close to the score
+ * itself, so the fit travels with every residual that came out of it.
+ */
+export const ResidualFit = z.object({
+  dimension: DimensionEnum,
+  /** Score points per tenfold increase in income, from ordinary least squares. */
+  slope: z.number(),
+  intercept: z.number(),
+  pearson: z.number(),
+  /** Share of the dimension's variation the income line explains. */
+  rSquared: z.number(),
+  n: z.number().int(),
+  /** Spread of the residuals, so a reader can see what a large gap is. */
+  residualSd: z.number(),
+  /** strong, moderate or weak, banded on rSquared. */
+  fitStrength: z.enum(['strong', 'moderate', 'weak']),
+  /**
+   * Mean absolute rank change between the score order and the residual order,
+   * in places, read against `n` in the same row. A small number means the
+   * residual re-states the score and ranks countries the same way the raw
+   * score does.
+   */
+  meanAbsRankShift: z.number(),
+})
+export type ResidualFit = z.infer<typeof ResidualFit>
+
+/** One country's distance from the income line on one dimension. */
+export const ResidualCell = z.object({
+  score: z.number(),
+  /** What the dimension's income line predicts for this country. */
+  predicted: z.number(),
+  /** score minus predicted. Positive is above the line for its income. */
+  residual: z.number(),
+})
+export type ResidualCell = z.infer<typeof ResidualCell>
+
+/**
+ * The complete provisional wealth-residual fixture written by `bench residual`.
+ *
+ * There is no country-level field in this shape and there never will be. Nine
+ * residuals averaged into one number is the headline score D1 withholds, with a
+ * regression in front of it. See D68.
+ */
+export const ResidualFile = z.object({
+  generatedAt: z.string(),
+  methodVersion: z.literal('residual/0.1-exploratory'),
+  /** The World Bank context series the fit reads. Never scored. */
+  gdpSeries: z.string(),
+  fits: z.array(ResidualFit),
+  countries: z.record(z.string().length(3), z.record(DimensionEnum, ResidualCell.nullable())),
+  exclusions: z.array(
+    z.object({
+      iso3: z.string().length(3),
+      reason: z.string(),
+    }),
+  ),
+})
+export type ResidualFile = z.infer<typeof ResidualFile>
+
 /** One check's latest observed value for one country. Never scored. See D60. */
 export const CheckResult = z.object({
   checkId: z.string(),

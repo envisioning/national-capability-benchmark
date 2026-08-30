@@ -1,0 +1,2386 @@
+{
+  "generatedAt": "2026-08-30T12:27:07.951Z",
+  "methodVersion": "residual/0.1-exploratory",
+  "gdpSeries": "NY.GDP.PCAP.PP.KD",
+  "fits": [
+    {
+      "dimension": "anticipation",
+      "slope": 48.92,
+      "intercept": -172.41,
+      "pearson": 0.873,
+      "rSquared": 0.763,
+      "n": 50,
+      "residualSd": 11.24,
+      "fitStrength": "strong",
+      "meanAbsRankShift": 11.9
+    },
+    {
+      "dimension": "agency",
+      "slope": 37.72,
+      "intercept": -106.7,
+      "pearson": 0.85,
+      "rSquared": 0.722,
+      "n": 50,
+      "residualSd": 9.64,
+      "fitStrength": "strong",
+      "meanAbsRankShift": 10.7
+    },
+    {
+      "dimension": "coordination",
+      "slope": 20.02,
+      "intercept": -10.81,
+      "pearson": 0.467,
+      "rSquared": 0.218,
+      "n": 44,
+      "residualSd": 15.63,
+      "fitStrength": "weak",
+      "meanAbsRankShift": 6.9
+    },
+    {
+      "dimension": "trust",
+      "slope": 35.38,
+      "intercept": -106.96,
+      "pearson": 0.627,
+      "rSquared": 0.394,
+      "n": 35,
+      "residualSd": 16.49,
+      "fitStrength": "moderate",
+      "meanAbsRankShift": 5.6
+    },
+    {
+      "dimension": "learning",
+      "slope": 30.11,
+      "intercept": -87.27,
+      "pearson": 0.725,
+      "rSquared": 0.525,
+      "n": 50,
+      "residualSd": 11.8,
+      "fitStrength": "strong",
+      "meanAbsRankShift": 9.2
+    },
+    {
+      "dimension": "experimentation",
+      "slope": 36.55,
+      "intercept": -135.56,
+      "pearson": 0.622,
+      "rSquared": 0.387,
+      "n": 49,
+      "residualSd": 18.54,
+      "fitStrength": "moderate",
+      "meanAbsRankShift": 10.1
+    },
+    {
+      "dimension": "adaptability",
+      "slope": 35.09,
+      "intercept": -92.38,
+      "pearson": 0.818,
+      "rSquared": 0.669,
+      "n": 50,
+      "residualSd": 10.19,
+      "fitStrength": "strong",
+      "meanAbsRankShift": 10.3
+    },
+    {
+      "dimension": "building",
+      "slope": 22.83,
+      "intercept": -61.81,
+      "pearson": 0.641,
+      "rSquared": 0.411,
+      "n": 50,
+      "residualSd": 11.27,
+      "fitStrength": "moderate",
+      "meanAbsRankShift": 9.5
+    },
+    {
+      "dimension": "shared_purpose",
+      "slope": 21.09,
+      "intercept": -36.84,
+      "pearson": 0.451,
+      "rSquared": 0.204,
+      "n": 46,
+      "residualSd": 15.84,
+      "fitStrength": "weak",
+      "meanAbsRankShift": 5.5
+    }
+  ],
+  "countries": {
+    "BRA": {
+      "anticipation": {
+        "score": 37.3,
+        "predicted": 38,
+        "residual": -0.7
+      },
+      "agency": {
+        "score": 59.6,
+        "predicted": 55.5,
+        "residual": 4.1
+      },
+      "coordination": {
+        "score": 84.4,
+        "predicted": 75.3,
+        "residual": 9.1
+      },
+      "trust": {
+        "score": 26.9,
+        "predicted": 45.2,
+        "residual": -18.3
+      },
+      "learning": {
+        "score": 43.2,
+        "predicted": 42.3,
+        "residual": 0.9
+      },
+      "experimentation": {
+        "score": 30,
+        "predicted": 21.7,
+        "residual": 8.3
+      },
+      "adaptability": {
+        "score": 56.8,
+        "predicted": 58.6,
+        "residual": -1.8
+      },
+      "building": {
+        "score": 25.3,
+        "predicted": 36.4,
+        "residual": -11.1
+      },
+      "shared_purpose": {
+        "score": 34.9,
+        "predicted": 53.9,
+        "residual": -19
+      }
+    },
+    "USA": {
+      "anticipation": {
+        "score": 70.2,
+        "predicted": 66.6,
+        "residual": 3.6
+      },
+      "agency": {
+        "score": 92.6,
+        "predicted": 77.6,
+        "residual": 15
+      },
+      "coordination": null,
+      "trust": {
+        "score": 64.6,
+        "predicted": 65.9,
+        "residual": -1.3
+      },
+      "learning": {
+        "score": 49.5,
+        "predicted": 59.9,
+        "residual": -10.4
+      },
+      "experimentation": {
+        "score": 55.8,
+        "predicted": 43,
+        "residual": 12.8
+      },
+      "adaptability": {
+        "score": 76.2,
+        "predicted": 79.1,
+        "residual": -2.9
+      },
+      "building": {
+        "score": 58.4,
+        "predicted": 49.7,
+        "residual": 8.7
+      },
+      "shared_purpose": {
+        "score": 40.8,
+        "predicted": 66.2,
+        "residual": -25.4
+      }
+    },
+    "NLD": {
+      "anticipation": {
+        "score": 72.3,
+        "predicted": 65,
+        "residual": 7.3
+      },
+      "agency": {
+        "score": 72.8,
+        "predicted": 76.4,
+        "residual": -3.6
+      },
+      "coordination": {
+        "score": 98,
+        "predicted": 86.4,
+        "residual": 11.6
+      },
+      "trust": null,
+      "learning": {
+        "score": 65.3,
+        "predicted": 58.9,
+        "residual": 6.4
+      },
+      "experimentation": {
+        "score": 28,
+        "predicted": 41.8,
+        "residual": -13.8
+      },
+      "adaptability": {
+        "score": 90.1,
+        "predicted": 77.9,
+        "residual": 12.2
+      },
+      "building": {
+        "score": 45.2,
+        "predicted": 49,
+        "residual": -3.8
+      },
+      "shared_purpose": {
+        "score": 96,
+        "predicted": 65.5,
+        "residual": 30.5
+      }
+    },
+    "CHE": {
+      "anticipation": {
+        "score": 81.1,
+        "predicted": 68.9,
+        "residual": 12.2
+      },
+      "agency": {
+        "score": 76.1,
+        "predicted": 79.4,
+        "residual": -3.3
+      },
+      "coordination": {
+        "score": 98.3,
+        "predicted": 87.9,
+        "residual": 10.4
+      },
+      "trust": {
+        "score": 75.3,
+        "predicted": 67.6,
+        "residual": 7.7
+      },
+      "learning": {
+        "score": 65.1,
+        "predicted": 61.3,
+        "residual": 3.8
+      },
+      "experimentation": {
+        "score": 50.7,
+        "predicted": 44.7,
+        "residual": 6
+      },
+      "adaptability": {
+        "score": 88.6,
+        "predicted": 80.7,
+        "residual": 7.9
+      },
+      "building": {
+        "score": 58.1,
+        "predicted": 50.8,
+        "residual": 7.3
+      },
+      "shared_purpose": {
+        "score": 52.2,
+        "predicted": 67.2,
+        "residual": -15
+      }
+    },
+    "SGP": {
+      "anticipation": {
+        "score": 78.1,
+        "predicted": 79.3,
+        "residual": -1.2
+      },
+      "agency": {
+        "score": 84.9,
+        "predicted": 87.4,
+        "residual": -2.5
+      },
+      "coordination": {
+        "score": 90.4,
+        "predicted": 92.2,
+        "residual": -1.8
+      },
+      "trust": {
+        "score": 73.5,
+        "predicted": 75.1,
+        "residual": -1.6
+      },
+      "learning": {
+        "score": 56,
+        "predicted": 67.7,
+        "residual": -11.7
+      },
+      "experimentation": {
+        "score": 46.5,
+        "predicted": 52.5,
+        "residual": -6
+      },
+      "adaptability": {
+        "score": 79,
+        "predicted": 88.2,
+        "residual": -9.2
+      },
+      "building": {
+        "score": 71.2,
+        "predicted": 55.6,
+        "residual": 15.6
+      },
+      "shared_purpose": null
+    },
+    "KOR": {
+      "anticipation": {
+        "score": 80.6,
+        "predicted": 59.8,
+        "residual": 20.8
+      },
+      "agency": {
+        "score": 78.9,
+        "predicted": 72.3,
+        "residual": 6.6
+      },
+      "coordination": {
+        "score": 90.6,
+        "predicted": 84.2,
+        "residual": 6.4
+      },
+      "trust": {
+        "score": 67.4,
+        "predicted": 60.9,
+        "residual": 6.5
+      },
+      "learning": {
+        "score": 55.9,
+        "predicted": 55.6,
+        "residual": 0.3
+      },
+      "experimentation": {
+        "score": 72.2,
+        "predicted": 37.9,
+        "residual": 34.3
+      },
+      "adaptability": {
+        "score": 82.1,
+        "predicted": 74.2,
+        "residual": 7.9
+      },
+      "building": {
+        "score": 63.1,
+        "predicted": 46.5,
+        "residual": 16.6
+      },
+      "shared_purpose": {
+        "score": 61,
+        "predicted": 63.2,
+        "residual": -2.2
+      }
+    },
+    "EST": {
+      "anticipation": {
+        "score": 63.9,
+        "predicted": 53.6,
+        "residual": 10.3
+      },
+      "agency": {
+        "score": 84.8,
+        "predicted": 67.5,
+        "residual": 17.3
+      },
+      "coordination": {
+        "score": 94.6,
+        "predicted": 81.7,
+        "residual": 12.9
+      },
+      "trust": {
+        "score": 61.8,
+        "predicted": 56.5,
+        "residual": 5.3
+      },
+      "learning": {
+        "score": 56.8,
+        "predicted": 51.8,
+        "residual": 5
+      },
+      "experimentation": {
+        "score": 30.2,
+        "predicted": 33.3,
+        "residual": -3.1
+      },
+      "adaptability": {
+        "score": 64.1,
+        "predicted": 69.7,
+        "residual": -5.6
+      },
+      "building": {
+        "score": 30.8,
+        "predicted": 43.6,
+        "residual": -12.8
+      },
+      "shared_purpose": {
+        "score": 82.4,
+        "predicted": 60.6,
+        "residual": 21.8
+      }
+    },
+    "IND": {
+      "anticipation": {
+        "score": 26.7,
+        "predicted": 23.4,
+        "residual": 3.3
+      },
+      "agency": {
+        "score": 49.6,
+        "predicted": 44.2,
+        "residual": 5.4
+      },
+      "coordination": {
+        "score": 82.9,
+        "predicted": 69.3,
+        "residual": 13.6
+      },
+      "trust": {
+        "score": 9.9,
+        "predicted": 34.6,
+        "residual": -24.7
+      },
+      "learning": {
+        "score": 20.2,
+        "predicted": 33.2,
+        "residual": -13
+      },
+      "experimentation": {
+        "score": 9.8,
+        "predicted": 10.7,
+        "residual": -0.9
+      },
+      "adaptability": {
+        "score": 38.7,
+        "predicted": 48.1,
+        "residual": -9.4
+      },
+      "building": {
+        "score": 39,
+        "predicted": 29.5,
+        "residual": 9.5
+      },
+      "shared_purpose": {
+        "score": 61.8,
+        "predicted": 47.5,
+        "residual": 14.3
+      }
+    },
+    "CHL": {
+      "anticipation": {
+        "score": 39.3,
+        "predicted": 47.2,
+        "residual": -7.9
+      },
+      "agency": {
+        "score": 73.7,
+        "predicted": 62.6,
+        "residual": 11.1
+      },
+      "coordination": {
+        "score": 81.4,
+        "predicted": 79.1,
+        "residual": 2.3
+      },
+      "trust": {
+        "score": 42.9,
+        "predicted": 51.9,
+        "residual": -9
+      },
+      "learning": {
+        "score": 53.5,
+        "predicted": 47.9,
+        "residual": 5.6
+      },
+      "experimentation": {
+        "score": 46.7,
+        "predicted": 28.5,
+        "residual": 18.2
+      },
+      "adaptability": {
+        "score": 59.2,
+        "predicted": 65.2,
+        "residual": -6
+      },
+      "building": {
+        "score": 30.5,
+        "predicted": 40.7,
+        "residual": -10.2
+      },
+      "shared_purpose": {
+        "score": 52.9,
+        "predicted": 57.8,
+        "residual": -4.9
+      }
+    },
+    "ZAF": {
+      "anticipation": {
+        "score": 35.5,
+        "predicted": 29.8,
+        "residual": 5.7
+      },
+      "agency": {
+        "score": 59.2,
+        "predicted": 49.2,
+        "residual": 10
+      },
+      "coordination": {
+        "score": 68.9,
+        "predicted": 71.9,
+        "residual": -3
+      },
+      "trust": null,
+      "learning": {
+        "score": 23.4,
+        "predicted": 37.2,
+        "residual": -13.8
+      },
+      "experimentation": {
+        "score": 18.8,
+        "predicted": 15.5,
+        "residual": 3.3
+      },
+      "adaptability": {
+        "score": 23.6,
+        "predicted": 52.7,
+        "residual": -29.1
+      },
+      "building": {
+        "score": 23.7,
+        "predicted": 32.5,
+        "residual": -8.8
+      },
+      "shared_purpose": {
+        "score": 48,
+        "predicted": 50.3,
+        "residual": -2.3
+      }
+    },
+    "MEX": {
+      "anticipation": {
+        "score": 30.5,
+        "predicted": 40,
+        "residual": -9.5
+      },
+      "agency": {
+        "score": 49,
+        "predicted": 57,
+        "residual": -8
+      },
+      "coordination": {
+        "score": 84.9,
+        "predicted": 76.1,
+        "residual": 8.8
+      },
+      "trust": {
+        "score": 48,
+        "predicted": 46.6,
+        "residual": 1.4
+      },
+      "learning": {
+        "score": 44.8,
+        "predicted": 43.4,
+        "residual": 1.4
+      },
+      "experimentation": {
+        "score": 32.7,
+        "predicted": 23.1,
+        "residual": 9.6
+      },
+      "adaptability": {
+        "score": 58.8,
+        "predicted": 60,
+        "residual": -1.2
+      },
+      "building": {
+        "score": 37.7,
+        "predicted": 37.3,
+        "residual": 0.4
+      },
+      "shared_purpose": {
+        "score": 47.1,
+        "predicted": 54.7,
+        "residual": -7.6
+      }
+    },
+    "ARG": {
+      "anticipation": {
+        "score": 34.4,
+        "predicted": 45,
+        "residual": -10.6
+      },
+      "agency": {
+        "score": 50.1,
+        "predicted": 60.9,
+        "residual": -10.8
+      },
+      "coordination": {
+        "score": 58.1,
+        "predicted": 78.2,
+        "residual": -20.1
+      },
+      "trust": {
+        "score": 29.2,
+        "predicted": 50.3,
+        "residual": -21.1
+      },
+      "learning": {
+        "score": 54.9,
+        "predicted": 46.6,
+        "residual": 8.3
+      },
+      "experimentation": {
+        "score": 21.5,
+        "predicted": 26.9,
+        "residual": -5.4
+      },
+      "adaptability": {
+        "score": 50.8,
+        "predicted": 63.6,
+        "residual": -12.8
+      },
+      "building": {
+        "score": 26.6,
+        "predicted": 39.6,
+        "residual": -13
+      },
+      "shared_purpose": {
+        "score": 39.2,
+        "predicted": 56.9,
+        "residual": -17.7
+      }
+    },
+    "COL": {
+      "anticipation": {
+        "score": 28.8,
+        "predicted": 36.7,
+        "residual": -7.9
+      },
+      "agency": {
+        "score": 50.8,
+        "predicted": 54.5,
+        "residual": -3.7
+      },
+      "coordination": {
+        "score": 52.7,
+        "predicted": 74.7,
+        "residual": -22
+      },
+      "trust": {
+        "score": 6.4,
+        "predicted": 44.2,
+        "residual": -37.8
+      },
+      "learning": {
+        "score": 44.3,
+        "predicted": 41.4,
+        "residual": 2.9
+      },
+      "experimentation": {
+        "score": 40.1,
+        "predicted": 20.6,
+        "residual": 19.5
+      },
+      "adaptability": {
+        "score": 53.8,
+        "predicted": 57.6,
+        "residual": -3.8
+      },
+      "building": {
+        "score": 24.4,
+        "predicted": 35.7,
+        "residual": -11.3
+      },
+      "shared_purpose": {
+        "score": 27.4,
+        "predicted": 53.3,
+        "residual": -25.9
+      }
+    },
+    "PER": {
+      "anticipation": {
+        "score": 33.6,
+        "predicted": 33.4,
+        "residual": 0.2
+      },
+      "agency": {
+        "score": 48.6,
+        "predicted": 52,
+        "residual": -3.4
+      },
+      "coordination": {
+        "score": 75.1,
+        "predicted": 73.4,
+        "residual": 1.7
+      },
+      "trust": {
+        "score": 37.7,
+        "predicted": 41.9,
+        "residual": -4.2
+      },
+      "learning": {
+        "score": 47.7,
+        "predicted": 39.4,
+        "residual": 8.3
+      },
+      "experimentation": {
+        "score": 20.2,
+        "predicted": 18.2,
+        "residual": 2
+      },
+      "adaptability": {
+        "score": 59.4,
+        "predicted": 55.2,
+        "residual": 4.2
+      },
+      "building": {
+        "score": 26,
+        "predicted": 34.2,
+        "residual": -8.2
+      },
+      "shared_purpose": {
+        "score": 53.5,
+        "predicted": 51.9,
+        "residual": 1.6
+      }
+    },
+    "URY": {
+      "anticipation": {
+        "score": 34.5,
+        "predicted": 48.5,
+        "residual": -14
+      },
+      "agency": {
+        "score": 60,
+        "predicted": 63.6,
+        "residual": -3.6
+      },
+      "coordination": {
+        "score": 68.6,
+        "predicted": 79.6,
+        "residual": -11
+      },
+      "trust": {
+        "score": 36.1,
+        "predicted": 52.8,
+        "residual": -16.7
+      },
+      "learning": {
+        "score": 49.3,
+        "predicted": 48.7,
+        "residual": 0.6
+      },
+      "experimentation": {
+        "score": 34.3,
+        "predicted": 29.5,
+        "residual": 4.8
+      },
+      "adaptability": {
+        "score": 68.8,
+        "predicted": 66.1,
+        "residual": 2.7
+      },
+      "building": {
+        "score": 30.7,
+        "predicted": 41.3,
+        "residual": -10.6
+      },
+      "shared_purpose": {
+        "score": 57.3,
+        "predicted": 58.4,
+        "residual": -1.1
+      }
+    },
+    "CRI": {
+      "anticipation": {
+        "score": 33.4,
+        "predicted": 45.5,
+        "residual": -12.1
+      },
+      "agency": {
+        "score": 53.4,
+        "predicted": 61.3,
+        "residual": -7.9
+      },
+      "coordination": {
+        "score": 88.6,
+        "predicted": 78.4,
+        "residual": 10.2
+      },
+      "trust": null,
+      "learning": {
+        "score": 48.5,
+        "predicted": 46.9,
+        "residual": 1.6
+      },
+      "experimentation": {
+        "score": 25.5,
+        "predicted": 27.2,
+        "residual": -1.7
+      },
+      "adaptability": {
+        "score": 54.6,
+        "predicted": 63.9,
+        "residual": -9.3
+      },
+      "building": {
+        "score": 38,
+        "predicted": 39.9,
+        "residual": -1.9
+      },
+      "shared_purpose": {
+        "score": 39.5,
+        "predicted": 57.1,
+        "residual": -17.6
+      }
+    },
+    "DEU": {
+      "anticipation": {
+        "score": 71.2,
+        "predicted": 62.3,
+        "residual": 8.9
+      },
+      "agency": {
+        "score": 64,
+        "predicted": 74.3,
+        "residual": -10.3
+      },
+      "coordination": {
+        "score": 84.5,
+        "predicted": 85.2,
+        "residual": -0.7
+      },
+      "trust": null,
+      "learning": {
+        "score": 56.2,
+        "predicted": 57.2,
+        "residual": -1
+      },
+      "experimentation": {
+        "score": 72.5,
+        "predicted": 39.8,
+        "residual": 32.7
+      },
+      "adaptability": {
+        "score": 85.9,
+        "predicted": 76,
+        "residual": 9.9
+      },
+      "building": {
+        "score": 64.4,
+        "predicted": 47.7,
+        "residual": 16.7
+      },
+      "shared_purpose": {
+        "score": 55.1,
+        "predicted": 64.3,
+        "residual": -9.2
+      }
+    },
+    "FRA": {
+      "anticipation": {
+        "score": 61.3,
+        "predicted": 59.6,
+        "residual": 1.7
+      },
+      "agency": {
+        "score": 74.8,
+        "predicted": 72.1,
+        "residual": 2.7
+      },
+      "coordination": {
+        "score": 95.9,
+        "predicted": 84.1,
+        "residual": 11.8
+      },
+      "trust": {
+        "score": 56.2,
+        "predicted": 60.8,
+        "residual": -4.6
+      },
+      "learning": {
+        "score": 60.9,
+        "predicted": 55.5,
+        "residual": 5.4
+      },
+      "experimentation": {
+        "score": 55,
+        "predicted": 37.7,
+        "residual": 17.3
+      },
+      "adaptability": {
+        "score": 76.1,
+        "predicted": 74,
+        "residual": 2.1
+      },
+      "building": {
+        "score": 53.1,
+        "predicted": 46.4,
+        "residual": 6.7
+      },
+      "shared_purpose": {
+        "score": 80.7,
+        "predicted": 63.1,
+        "residual": 17.6
+      }
+    },
+    "GBR": {
+      "anticipation": {
+        "score": 65.3,
+        "predicted": 59.1,
+        "residual": 6.2
+      },
+      "agency": {
+        "score": 87.5,
+        "predicted": 71.8,
+        "residual": 15.7
+      },
+      "coordination": null,
+      "trust": null,
+      "learning": {
+        "score": 68.4,
+        "predicted": 55.2,
+        "residual": 13.2
+      },
+      "experimentation": {
+        "score": 43.2,
+        "predicted": 37.4,
+        "residual": 5.8
+      },
+      "adaptability": {
+        "score": 76.3,
+        "predicted": 73.7,
+        "residual": 2.6
+      },
+      "building": {
+        "score": 46.7,
+        "predicted": 46.2,
+        "residual": 0.5
+      },
+      "shared_purpose": {
+        "score": 87.4,
+        "predicted": 63,
+        "residual": 24.4
+      }
+    },
+    "ESP": {
+      "anticipation": {
+        "score": 58,
+        "predicted": 57.2,
+        "residual": 0.8
+      },
+      "agency": {
+        "score": 66.7,
+        "predicted": 70.3,
+        "residual": -3.6
+      },
+      "coordination": {
+        "score": 90,
+        "predicted": 83.1,
+        "residual": 6.9
+      },
+      "trust": {
+        "score": 65.2,
+        "predicted": 59.1,
+        "residual": 6.1
+      },
+      "learning": {
+        "score": 65.6,
+        "predicted": 54.1,
+        "residual": 11.5
+      },
+      "experimentation": {
+        "score": 14.2,
+        "predicted": 36,
+        "residual": -21.8
+      },
+      "adaptability": {
+        "score": 67,
+        "predicted": 72.3,
+        "residual": -5.3
+      },
+      "building": {
+        "score": 36,
+        "predicted": 45.3,
+        "residual": -9.3
+      },
+      "shared_purpose": {
+        "score": 63.2,
+        "predicted": 62.1,
+        "residual": 1.1
+      }
+    },
+    "POL": {
+      "anticipation": {
+        "score": 55.7,
+        "predicted": 56.1,
+        "residual": -0.4
+      },
+      "agency": {
+        "score": 53.1,
+        "predicted": 69.5,
+        "residual": -16.4
+      },
+      "coordination": {
+        "score": 95.5,
+        "predicted": 82.7,
+        "residual": 12.8
+      },
+      "trust": {
+        "score": 45.2,
+        "predicted": 58.3,
+        "residual": -13.1
+      },
+      "learning": {
+        "score": 52.4,
+        "predicted": 53.4,
+        "residual": -1
+      },
+      "experimentation": {
+        "score": 17.8,
+        "predicted": 35.2,
+        "residual": -17.4
+      },
+      "adaptability": {
+        "score": 70.9,
+        "predicted": 71.6,
+        "residual": -0.7
+      },
+      "building": {
+        "score": 35.4,
+        "predicted": 44.8,
+        "residual": -9.4
+      },
+      "shared_purpose": {
+        "score": 77.5,
+        "predicted": 61.7,
+        "residual": 15.8
+      }
+    },
+    "SWE": {
+      "anticipation": {
+        "score": 83.5,
+        "predicted": 62.5,
+        "residual": 21
+      },
+      "agency": {
+        "score": 77.9,
+        "predicted": 74.4,
+        "residual": 3.5
+      },
+      "coordination": null,
+      "trust": {
+        "score": 83.2,
+        "predicted": 62.9,
+        "residual": 20.3
+      },
+      "learning": {
+        "score": 67.4,
+        "predicted": 57.3,
+        "residual": 10.1
+      },
+      "experimentation": {
+        "score": 29.6,
+        "predicted": 39.9,
+        "residual": -10.3
+      },
+      "adaptability": {
+        "score": 79.7,
+        "predicted": 76.1,
+        "residual": 3.6
+      },
+      "building": {
+        "score": 41.5,
+        "predicted": 47.8,
+        "residual": -6.3
+      },
+      "shared_purpose": {
+        "score": 93.4,
+        "predicted": 64.4,
+        "residual": 29
+      }
+    },
+    "FIN": {
+      "anticipation": {
+        "score": 82,
+        "predicted": 59.8,
+        "residual": 22.2
+      },
+      "agency": {
+        "score": 73.5,
+        "predicted": 72.3,
+        "residual": 1.2
+      },
+      "coordination": {
+        "score": 75.7,
+        "predicted": 84.2,
+        "residual": -8.5
+      },
+      "trust": {
+        "score": 87.5,
+        "predicted": 61,
+        "residual": 26.5
+      },
+      "learning": {
+        "score": 77.9,
+        "predicted": 55.7,
+        "residual": 22.2
+      },
+      "experimentation": {
+        "score": 38.6,
+        "predicted": 37.9,
+        "residual": 0.7
+      },
+      "adaptability": {
+        "score": 74.1,
+        "predicted": 74.2,
+        "residual": -0.1
+      },
+      "building": {
+        "score": 39.2,
+        "predicted": 46.5,
+        "residual": -7.3
+      },
+      "shared_purpose": {
+        "score": 93.1,
+        "predicted": 63.2,
+        "residual": 29.9
+      }
+    },
+    "IRL": {
+      "anticipation": {
+        "score": 67.1,
+        "predicted": 78,
+        "residual": -10.9
+      },
+      "agency": {
+        "score": 69.2,
+        "predicted": 86.4,
+        "residual": -17.2
+      },
+      "coordination": {
+        "score": 84.6,
+        "predicted": 91.7,
+        "residual": -7.1
+      },
+      "trust": null,
+      "learning": {
+        "score": 60.5,
+        "predicted": 66.9,
+        "residual": -6.4
+      },
+      "experimentation": null,
+      "adaptability": {
+        "score": 73.2,
+        "predicted": 87.2,
+        "residual": -14
+      },
+      "building": {
+        "score": 75.3,
+        "predicted": 55,
+        "residual": 20.3
+      },
+      "shared_purpose": {
+        "score": 76.5,
+        "predicted": 71.1,
+        "residual": 5.4
+      }
+    },
+    "CAN": {
+      "anticipation": {
+        "score": 66.3,
+        "predicted": 60.6,
+        "residual": 5.7
+      },
+      "agency": {
+        "score": 79.4,
+        "predicted": 73,
+        "residual": 6.4
+      },
+      "coordination": null,
+      "trust": {
+        "score": 54,
+        "predicted": 61.6,
+        "residual": -7.6
+      },
+      "learning": {
+        "score": 56.6,
+        "predicted": 56.2,
+        "residual": 0.4
+      },
+      "experimentation": {
+        "score": 24.8,
+        "predicted": 38.5,
+        "residual": -13.7
+      },
+      "adaptability": {
+        "score": 80.7,
+        "predicted": 74.8,
+        "residual": 5.9
+      },
+      "building": {
+        "score": 32.8,
+        "predicted": 46.9,
+        "residual": -14.1
+      },
+      "shared_purpose": {
+        "score": 64.2,
+        "predicted": 63.6,
+        "residual": 0.6
+      }
+    },
+    "AUS": {
+      "anticipation": {
+        "score": 66.8,
+        "predicted": 61.4,
+        "residual": 5.4
+      },
+      "agency": {
+        "score": 89.8,
+        "predicted": 73.6,
+        "residual": 16.2
+      },
+      "coordination": {
+        "score": 88.7,
+        "predicted": 84.9,
+        "residual": 3.8
+      },
+      "trust": {
+        "score": 75.2,
+        "predicted": 62.1,
+        "residual": 13.1
+      },
+      "learning": {
+        "score": 70.3,
+        "predicted": 56.7,
+        "residual": 13.6
+      },
+      "experimentation": {
+        "score": 38.9,
+        "predicted": 39.1,
+        "residual": -0.2
+      },
+      "adaptability": {
+        "score": 81.5,
+        "predicted": 75.4,
+        "residual": 6.1
+      },
+      "building": {
+        "score": 36.1,
+        "predicted": 47.3,
+        "residual": -11.2
+      },
+      "shared_purpose": {
+        "score": 78.7,
+        "predicted": 63.9,
+        "residual": 14.8
+      }
+    },
+    "JPN": {
+      "anticipation": {
+        "score": 64.7,
+        "predicted": 56.7,
+        "residual": 8
+      },
+      "agency": {
+        "score": 71,
+        "predicted": 70,
+        "residual": 1
+      },
+      "coordination": {
+        "score": 63,
+        "predicted": 83,
+        "residual": -20
+      },
+      "trust": {
+        "score": 65.3,
+        "predicted": 58.8,
+        "residual": 6.5
+      },
+      "learning": {
+        "score": 47.2,
+        "predicted": 53.8,
+        "residual": -6.6
+      },
+      "experimentation": {
+        "score": 66.7,
+        "predicted": 35.6,
+        "residual": 31.1
+      },
+      "adaptability": {
+        "score": 86.1,
+        "predicted": 72,
+        "residual": 14.1
+      },
+      "building": {
+        "score": 50.2,
+        "predicted": 45.1,
+        "residual": 5.1
+      },
+      "shared_purpose": {
+        "score": 58,
+        "predicted": 61.9,
+        "residual": -3.9
+      }
+    },
+    "CHN": {
+      "anticipation": {
+        "score": 35.1,
+        "predicted": 42.8,
+        "residual": -7.7
+      },
+      "agency": {
+        "score": 86.8,
+        "predicted": 59.2,
+        "residual": 27.6
+      },
+      "coordination": {
+        "score": 91.5,
+        "predicted": 77.3,
+        "residual": 14.2
+      },
+      "trust": {
+        "score": 83.2,
+        "predicted": 48.7,
+        "residual": 34.5
+      },
+      "learning": {
+        "score": 59.1,
+        "predicted": 45.2,
+        "residual": 13.9
+      },
+      "experimentation": {
+        "score": 100,
+        "predicted": 25.2,
+        "residual": 74.8
+      },
+      "adaptability": {
+        "score": 81.6,
+        "predicted": 62,
+        "residual": 19.6
+      },
+      "building": {
+        "score": 64.9,
+        "predicted": 38.6,
+        "residual": 26.3
+      },
+      "shared_purpose": {
+        "score": 43.8,
+        "predicted": 55.9,
+        "residual": -12.1
+      }
+    },
+    "IDN": {
+      "anticipation": {
+        "score": 30.6,
+        "predicted": 32,
+        "residual": -1.4
+      },
+      "agency": {
+        "score": 43.3,
+        "predicted": 50.9,
+        "residual": -7.6
+      },
+      "coordination": {
+        "score": 82.3,
+        "predicted": 72.8,
+        "residual": 9.5
+      },
+      "trust": {
+        "score": 41,
+        "predicted": 40.9,
+        "residual": 0.1
+      },
+      "learning": {
+        "score": 24.3,
+        "predicted": 38.6,
+        "residual": -14.3
+      },
+      "experimentation": {
+        "score": 2.9,
+        "predicted": 17.2,
+        "residual": -14.3
+      },
+      "adaptability": {
+        "score": 56.2,
+        "predicted": 54.3,
+        "residual": 1.9
+      },
+      "building": {
+        "score": 38.7,
+        "predicted": 33.6,
+        "residual": 5.1
+      },
+      "shared_purpose": {
+        "score": 54.2,
+        "predicted": 51.3,
+        "residual": 2.9
+      }
+    },
+    "VNM": {
+      "anticipation": {
+        "score": 27.4,
+        "predicted": 32.5,
+        "residual": -5.1
+      },
+      "agency": {
+        "score": 59.2,
+        "predicted": 51.3,
+        "residual": 7.9
+      },
+      "coordination": {
+        "score": 81.2,
+        "predicted": 73.1,
+        "residual": 8.1
+      },
+      "trust": {
+        "score": 59.1,
+        "predicted": 41.3,
+        "residual": 17.8
+      },
+      "learning": {
+        "score": 28.3,
+        "predicted": 38.9,
+        "residual": -10.6
+      },
+      "experimentation": {
+        "score": 6.9,
+        "predicted": 17.5,
+        "residual": -10.6
+      },
+      "adaptability": {
+        "score": 75.2,
+        "predicted": 54.6,
+        "residual": 20.6
+      },
+      "building": {
+        "score": 54.2,
+        "predicted": 33.8,
+        "residual": 20.4
+      },
+      "shared_purpose": null
+    },
+    "PHL": {
+      "anticipation": {
+        "score": 24.1,
+        "predicted": 24.8,
+        "residual": -0.7
+      },
+      "agency": {
+        "score": 34.5,
+        "predicted": 45.4,
+        "residual": -10.9
+      },
+      "coordination": {
+        "score": 79.5,
+        "predicted": 69.9,
+        "residual": 9.6
+      },
+      "trust": {
+        "score": 19.7,
+        "predicted": 35.7,
+        "residual": -16
+      },
+      "learning": {
+        "score": 36.2,
+        "predicted": 34.1,
+        "residual": 2.1
+      },
+      "experimentation": {
+        "score": 2.7,
+        "predicted": 11.8,
+        "residual": -9.1
+      },
+      "adaptability": {
+        "score": 50.5,
+        "predicted": 49.1,
+        "residual": 1.4
+      },
+      "building": {
+        "score": 49.6,
+        "predicted": 30.2,
+        "residual": 19.4
+      },
+      "shared_purpose": {
+        "score": 51.9,
+        "predicted": 48.2,
+        "residual": 3.7
+      }
+    },
+    "MYS": {
+      "anticipation": {
+        "score": 41.6,
+        "predicted": 50.2,
+        "residual": -8.6
+      },
+      "agency": {
+        "score": 65.5,
+        "predicted": 64.9,
+        "residual": 0.6
+      },
+      "coordination": {
+        "score": 88,
+        "predicted": 80.3,
+        "residual": 7.7
+      },
+      "trust": {
+        "score": 51.8,
+        "predicted": 54,
+        "residual": -2.2
+      },
+      "learning": {
+        "score": 35.9,
+        "predicted": 49.7,
+        "residual": -13.8
+      },
+      "experimentation": {
+        "score": 6.9,
+        "predicted": 30.7,
+        "residual": -23.8
+      },
+      "adaptability": {
+        "score": 60.1,
+        "predicted": 67.3,
+        "residual": -7.2
+      },
+      "building": {
+        "score": 59.6,
+        "predicted": 42,
+        "residual": 17.6
+      },
+      "shared_purpose": {
+        "score": 45.9,
+        "predicted": 59.1,
+        "residual": -13.2
+      }
+    },
+    "THA": {
+      "anticipation": {
+        "score": 37.1,
+        "predicted": 40.5,
+        "residual": -3.4
+      },
+      "agency": {
+        "score": 72.1,
+        "predicted": 57.4,
+        "residual": 14.7
+      },
+      "coordination": {
+        "score": 83.9,
+        "predicted": 76.3,
+        "residual": 7.6
+      },
+      "trust": {
+        "score": 59.2,
+        "predicted": 47,
+        "residual": 12.2
+      },
+      "learning": {
+        "score": 32.9,
+        "predicted": 43.7,
+        "residual": -10.8
+      },
+      "experimentation": {
+        "score": 4.8,
+        "predicted": 23.5,
+        "residual": -18.7
+      },
+      "adaptability": {
+        "score": 68.9,
+        "predicted": 60.3,
+        "residual": 8.6
+      },
+      "building": {
+        "score": 48.2,
+        "predicted": 37.5,
+        "residual": 10.7
+      },
+      "shared_purpose": {
+        "score": 63.8,
+        "predicted": 54.9,
+        "residual": 8.9
+      }
+    },
+    "TUR": {
+      "anticipation": {
+        "score": 44,
+        "predicted": 51.3,
+        "residual": -7.3
+      },
+      "agency": {
+        "score": 59.5,
+        "predicted": 65.7,
+        "residual": -6.2
+      },
+      "coordination": {
+        "score": 79.3,
+        "predicted": 80.7,
+        "residual": -1.4
+      },
+      "trust": {
+        "score": 39.7,
+        "predicted": 54.8,
+        "residual": -15.1
+      },
+      "learning": {
+        "score": 47.2,
+        "predicted": 50.4,
+        "residual": -3.2
+      },
+      "experimentation": {
+        "score": 45.9,
+        "predicted": 31.5,
+        "residual": 14.4
+      },
+      "adaptability": {
+        "score": 49.1,
+        "predicted": 68.1,
+        "residual": -19
+      },
+      "building": {
+        "score": 41.3,
+        "predicted": 42.5,
+        "residual": -1.2
+      },
+      "shared_purpose": {
+        "score": 50.4,
+        "predicted": 59.6,
+        "residual": -9.2
+      }
+    },
+    "ISR": {
+      "anticipation": {
+        "score": 80.6,
+        "predicted": 56.7,
+        "residual": 23.9
+      },
+      "agency": {
+        "score": 66.4,
+        "predicted": 69.9,
+        "residual": -3.5
+      },
+      "coordination": null,
+      "trust": null,
+      "learning": {
+        "score": 44.7,
+        "predicted": 53.7,
+        "residual": -9
+      },
+      "experimentation": {
+        "score": 21.4,
+        "predicted": 35.6,
+        "residual": -14.2
+      },
+      "adaptability": {
+        "score": 73.8,
+        "predicted": 72,
+        "residual": 1.8
+      },
+      "building": {
+        "score": 38.8,
+        "predicted": 45.1,
+        "residual": -6.3
+      },
+      "shared_purpose": {
+        "score": 70.4,
+        "predicted": 61.9,
+        "residual": 8.5
+      }
+    },
+    "ARE": {
+      "anticipation": {
+        "score": 42.4,
+        "predicted": 64.5,
+        "residual": -22.1
+      },
+      "agency": {
+        "score": 70.2,
+        "predicted": 76,
+        "residual": -5.8
+      },
+      "coordination": null,
+      "trust": null,
+      "learning": {
+        "score": 40.3,
+        "predicted": 58.6,
+        "residual": -18.3
+      },
+      "experimentation": {
+        "score": 6.1,
+        "predicted": 41.4,
+        "residual": -35.3
+      },
+      "adaptability": {
+        "score": 85.8,
+        "predicted": 77.6,
+        "residual": 8.2
+      },
+      "building": {
+        "score": 38.1,
+        "predicted": 48.7,
+        "residual": -10.6
+      },
+      "shared_purpose": {
+        "score": 48.4,
+        "predicted": 65.3,
+        "residual": -16.9
+      }
+    },
+    "NGA": {
+      "anticipation": {
+        "score": 17.5,
+        "predicted": 18.9,
+        "residual": -1.4
+      },
+      "agency": {
+        "score": 41.3,
+        "predicted": 40.8,
+        "residual": 0.5
+      },
+      "coordination": {
+        "score": 11.5,
+        "predicted": 67.5,
+        "residual": -56
+      },
+      "trust": {
+        "score": 47.7,
+        "predicted": 31.4,
+        "residual": 16.3
+      },
+      "learning": {
+        "score": 11.6,
+        "predicted": 30.5,
+        "residual": -18.9
+      },
+      "experimentation": {
+        "score": 0.5,
+        "predicted": 7.4,
+        "residual": -6.9
+      },
+      "adaptability": {
+        "score": 59.6,
+        "predicted": 44.9,
+        "residual": 14.7
+      },
+      "building": {
+        "score": 16.8,
+        "predicted": 27.5,
+        "residual": -10.7
+      },
+      "shared_purpose": null
+    },
+    "KEN": {
+      "anticipation": {
+        "score": 24.2,
+        "predicted": 12.4,
+        "residual": 11.8
+      },
+      "agency": {
+        "score": 43.9,
+        "predicted": 35.8,
+        "residual": 8.1
+      },
+      "coordination": {
+        "score": 78.1,
+        "predicted": 64.8,
+        "residual": 13.3
+      },
+      "trust": {
+        "score": 42.4,
+        "predicted": 26.7,
+        "residual": 15.7
+      },
+      "learning": {
+        "score": 26,
+        "predicted": 26.5,
+        "residual": -0.5
+      },
+      "experimentation": {
+        "score": 0.9,
+        "predicted": 2.5,
+        "residual": -1.6
+      },
+      "adaptability": {
+        "score": 36.1,
+        "predicted": 40.2,
+        "residual": -4.1
+      },
+      "building": {
+        "score": 17.5,
+        "predicted": 24.4,
+        "residual": -6.9
+      },
+      "shared_purpose": {
+        "score": 52.7,
+        "predicted": 42.8,
+        "residual": 9.9
+      }
+    },
+    "RWA": {
+      "anticipation": {
+        "score": 21.4,
+        "predicted": 1.3,
+        "residual": 20.1
+      },
+      "agency": {
+        "score": 41.5,
+        "predicted": 27.2,
+        "residual": 14.3
+      },
+      "coordination": {
+        "score": 74.4,
+        "predicted": 60.3,
+        "residual": 14.1
+      },
+      "trust": null,
+      "learning": {
+        "score": 22.4,
+        "predicted": 19.7,
+        "residual": 2.7
+      },
+      "experimentation": {
+        "score": 0.4,
+        "predicted": -5.8,
+        "residual": 6.2
+      },
+      "adaptability": {
+        "score": 30.8,
+        "predicted": 32.2,
+        "residual": -1.4
+      },
+      "building": {
+        "score": 25.3,
+        "predicted": 19.3,
+        "residual": 6
+      },
+      "shared_purpose": {
+        "score": 49.3,
+        "predicted": 38,
+        "residual": 11.3
+      }
+    },
+    "ETH": {
+      "anticipation": {
+        "score": 12.1,
+        "predicted": -1.6,
+        "residual": 13.7
+      },
+      "agency": {
+        "score": 23.8,
+        "predicted": 25,
+        "residual": -1.2
+      },
+      "coordination": {
+        "score": 84.2,
+        "predicted": 59.1,
+        "residual": 25.1
+      },
+      "trust": {
+        "score": 41.7,
+        "predicted": 16.5,
+        "residual": 25.2
+      },
+      "learning": {
+        "score": 9.5,
+        "predicted": 17.8,
+        "residual": -8.3
+      },
+      "experimentation": {
+        "score": 0,
+        "predicted": -8,
+        "residual": 8
+      },
+      "adaptability": {
+        "score": 43.1,
+        "predicted": 30.1,
+        "residual": 13
+      },
+      "building": {
+        "score": 15.5,
+        "predicted": 17.9,
+        "residual": -2.4
+      },
+      "shared_purpose": {
+        "score": 45.5,
+        "predicted": 36.8,
+        "residual": 8.7
+      }
+    },
+    "BOL": {
+      "anticipation": {
+        "score": 19.6,
+        "predicted": 25.3,
+        "residual": -5.7
+      },
+      "agency": {
+        "score": 37.7,
+        "predicted": 45.7,
+        "residual": -8
+      },
+      "coordination": {
+        "score": 63.8,
+        "predicted": 70.1,
+        "residual": -6.3
+      },
+      "trust": {
+        "score": 36.7,
+        "predicted": 36,
+        "residual": 0.7
+      },
+      "learning": {
+        "score": 79.5,
+        "predicted": 34.4,
+        "residual": 45.1
+      },
+      "experimentation": {
+        "score": 2.9,
+        "predicted": 12.1,
+        "residual": -9.2
+      },
+      "adaptability": {
+        "score": 67.3,
+        "predicted": 49.4,
+        "residual": 17.9
+      },
+      "building": {
+        "score": 29.7,
+        "predicted": 30.4,
+        "residual": -0.7
+      },
+      "shared_purpose": {
+        "score": 54.1,
+        "predicted": 48.4,
+        "residual": 5.7
+      }
+    },
+    "PRY": {
+      "anticipation": {
+        "score": 23.2,
+        "predicted": 34.9,
+        "residual": -11.7
+      },
+      "agency": {
+        "score": 46.2,
+        "predicted": 53.1,
+        "residual": -6.9
+      },
+      "coordination": {
+        "score": 51.4,
+        "predicted": 74,
+        "residual": -22.6
+      },
+      "trust": null,
+      "learning": {
+        "score": 34.2,
+        "predicted": 40.3,
+        "residual": -6.1
+      },
+      "experimentation": {
+        "score": 18.3,
+        "predicted": 19.3,
+        "residual": -1
+      },
+      "adaptability": {
+        "score": 57.4,
+        "predicted": 56.3,
+        "residual": 1.1
+      },
+      "building": {
+        "score": 32,
+        "predicted": 34.9,
+        "residual": -2.9
+      },
+      "shared_purpose": {
+        "score": 37.7,
+        "predicted": 52.5,
+        "residual": -14.8
+      }
+    },
+    "ECU": {
+      "anticipation": {
+        "score": 27.1,
+        "predicted": 30.9,
+        "residual": -3.8
+      },
+      "agency": {
+        "score": 38.7,
+        "predicted": 50.1,
+        "residual": -11.4
+      },
+      "coordination": {
+        "score": 70.5,
+        "predicted": 72.4,
+        "residual": -1.9
+      },
+      "trust": {
+        "score": 37.2,
+        "predicted": 40.1,
+        "residual": -2.9
+      },
+      "learning": {
+        "score": 47,
+        "predicted": 37.9,
+        "residual": 9.1
+      },
+      "experimentation": {
+        "score": 6,
+        "predicted": 16.3,
+        "residual": -10.3
+      },
+      "adaptability": {
+        "score": 52.8,
+        "predicted": 53.5,
+        "residual": -0.7
+      },
+      "building": {
+        "score": 27,
+        "predicted": 33.1,
+        "residual": -6.1
+      },
+      "shared_purpose": {
+        "score": 38.1,
+        "predicted": 50.8,
+        "residual": -12.7
+      }
+    },
+    "VEN": {
+      "anticipation": null,
+      "agency": null,
+      "coordination": null,
+      "trust": null,
+      "learning": null,
+      "experimentation": null,
+      "adaptability": null,
+      "building": null,
+      "shared_purpose": null
+    },
+    "PAN": {
+      "anticipation": {
+        "score": 27.2,
+        "predicted": 51.4,
+        "residual": -24.2
+      },
+      "agency": {
+        "score": 60.8,
+        "predicted": 65.8,
+        "residual": -5
+      },
+      "coordination": {
+        "score": 77.6,
+        "predicted": 80.8,
+        "residual": -3.2
+      },
+      "trust": null,
+      "learning": {
+        "score": 28.2,
+        "predicted": 50.5,
+        "residual": -22.3
+      },
+      "experimentation": {
+        "score": 8.8,
+        "predicted": 31.6,
+        "residual": -22.8
+      },
+      "adaptability": {
+        "score": 57.5,
+        "predicted": 68.1,
+        "residual": -10.6
+      },
+      "building": {
+        "score": 27.5,
+        "predicted": 42.6,
+        "residual": -15.1
+      },
+      "shared_purpose": {
+        "score": 20.4,
+        "predicted": 59.6,
+        "residual": -39.2
+      }
+    },
+    "GTM": {
+      "anticipation": {
+        "score": 20.3,
+        "predicted": 28.8,
+        "residual": -8.5
+      },
+      "agency": {
+        "score": 41,
+        "predicted": 48.5,
+        "residual": -7.5
+      },
+      "coordination": {
+        "score": 47.1,
+        "predicted": 71.5,
+        "residual": -24.4
+      },
+      "trust": {
+        "score": 12.4,
+        "predicted": 38.6,
+        "residual": -26.2
+      },
+      "learning": {
+        "score": 42,
+        "predicted": 36.6,
+        "residual": 5.4
+      },
+      "experimentation": {
+        "score": 1.4,
+        "predicted": 14.8,
+        "residual": -13.4
+      },
+      "adaptability": {
+        "score": 45.6,
+        "predicted": 52,
+        "residual": -6.4
+      },
+      "building": {
+        "score": 28.9,
+        "predicted": 32.1,
+        "residual": -3.2
+      },
+      "shared_purpose": {
+        "score": 36.6,
+        "predicted": 49.9,
+        "residual": -13.3
+      }
+    },
+    "HND": {
+      "anticipation": {
+        "score": 16.4,
+        "predicted": 14.9,
+        "residual": 1.5
+      },
+      "agency": {
+        "score": 32.4,
+        "predicted": 37.7,
+        "residual": -5.3
+      },
+      "coordination": {
+        "score": 67.7,
+        "predicted": 65.8,
+        "residual": 1.9
+      },
+      "trust": null,
+      "learning": {
+        "score": 40.8,
+        "predicted": 28,
+        "residual": 12.8
+      },
+      "experimentation": {
+        "score": 1.6,
+        "predicted": 4.3,
+        "residual": -2.7
+      },
+      "adaptability": {
+        "score": 23.5,
+        "predicted": 42,
+        "residual": -18.5
+      },
+      "building": {
+        "score": 28.7,
+        "predicted": 25.6,
+        "residual": 3.1
+      },
+      "shared_purpose": {
+        "score": 42.2,
+        "predicted": 43.9,
+        "residual": -1.7
+      }
+    },
+    "SLV": {
+      "anticipation": {
+        "score": 19.7,
+        "predicted": 27.3,
+        "residual": -7.6
+      },
+      "agency": {
+        "score": 42.6,
+        "predicted": 47.2,
+        "residual": -4.6
+      },
+      "coordination": {
+        "score": 86.7,
+        "predicted": 70.9,
+        "residual": 15.8
+      },
+      "trust": null,
+      "learning": {
+        "score": 33.5,
+        "predicted": 35.6,
+        "residual": -2.1
+      },
+      "experimentation": {
+        "score": 5.8,
+        "predicted": 13.6,
+        "residual": -7.8
+      },
+      "adaptability": {
+        "score": 54.1,
+        "predicted": 50.8,
+        "residual": 3.3
+      },
+      "building": {
+        "score": 25.8,
+        "predicted": 31.3,
+        "residual": -5.5
+      },
+      "shared_purpose": {
+        "score": 65,
+        "predicted": 49.2,
+        "residual": 15.8
+      }
+    },
+    "NIC": {
+      "anticipation": {
+        "score": 11.7,
+        "predicted": 18.4,
+        "residual": -6.7
+      },
+      "agency": {
+        "score": 43.4,
+        "predicted": 40.4,
+        "residual": 3
+      },
+      "coordination": {
+        "score": 34.7,
+        "predicted": 67.3,
+        "residual": -32.6
+      },
+      "trust": {
+        "score": 37.3,
+        "predicted": 31,
+        "residual": 6.3
+      },
+      "learning": {
+        "score": 31.3,
+        "predicted": 30.2,
+        "residual": 1.1
+      },
+      "experimentation": {
+        "score": 1.2,
+        "predicted": 7,
+        "residual": -5.8
+      },
+      "adaptability": {
+        "score": 42.1,
+        "predicted": 44.5,
+        "residual": -2.4
+      },
+      "building": {
+        "score": 24.4,
+        "predicted": 27.2,
+        "residual": -2.8
+      },
+      "shared_purpose": {
+        "score": 50.8,
+        "predicted": 45.4,
+        "residual": 5.4
+      }
+    },
+    "DOM": {
+      "anticipation": {
+        "score": 24.7,
+        "predicted": 42.4,
+        "residual": -17.7
+      },
+      "agency": {
+        "score": 51.9,
+        "predicted": 58.9,
+        "residual": -7
+      },
+      "coordination": {
+        "score": 62.8,
+        "predicted": 77.1,
+        "residual": -14.3
+      },
+      "trust": null,
+      "learning": {
+        "score": 36.8,
+        "predicted": 44.9,
+        "residual": -8.1
+      },
+      "experimentation": {
+        "score": 6.5,
+        "predicted": 24.9,
+        "residual": -18.4
+      },
+      "adaptability": {
+        "score": 51.8,
+        "predicted": 61.7,
+        "residual": -9.9
+      },
+      "building": {
+        "score": 28.3,
+        "predicted": 38.4,
+        "residual": -10.1
+      },
+      "shared_purpose": {
+        "score": 53.1,
+        "predicted": 55.7,
+        "residual": -2.6
+      }
+    },
+    "CUB": {
+      "anticipation": null,
+      "agency": null,
+      "coordination": null,
+      "trust": null,
+      "learning": null,
+      "experimentation": null,
+      "adaptability": null,
+      "building": null,
+      "shared_purpose": null
+    },
+    "HTI": {
+      "anticipation": {
+        "score": 0,
+        "predicted": -4.7,
+        "residual": 4.7
+      },
+      "agency": {
+        "score": 14.9,
+        "predicted": 22.6,
+        "residual": -7.7
+      },
+      "coordination": {
+        "score": 65.2,
+        "predicted": 57.8,
+        "residual": 7.4
+      },
+      "trust": null,
+      "learning": {
+        "score": 12.3,
+        "predicted": 16,
+        "residual": -3.7
+      },
+      "experimentation": {
+        "score": 0.2,
+        "predicted": -10.3,
+        "residual": 10.5
+      },
+      "adaptability": {
+        "score": 27.8,
+        "predicted": 27.9,
+        "residual": -0.1
+      },
+      "building": {
+        "score": 34.4,
+        "predicted": 16.4,
+        "residual": 18
+      },
+      "shared_purpose": null
+    }
+  },
+  "exclusions": [
+    {
+      "iso3": "VEN",
+      "reason": "no GDP per capita observation, so no residual on any dimension"
+    },
+    {
+      "iso3": "CUB",
+      "reason": "no GDP per capita observation, so no residual on any dimension"
+    }
+  ]
+}

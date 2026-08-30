@@ -1,7 +1,7 @@
 import { DATASET_VERSION } from '@ncb/core'
 import { loadIndex } from '@/lib/data'
 import { loadAgendaFeedEntries, loadDatasetFeedEntries } from '@/lib/distribution'
-import { absoluteHref, agendaHref, feedHref, digestHref } from '@/lib/links'
+import { absoluteHref, agendaHrefInLanguage, feedHref, digestHref } from '@/lib/links'
 
 export const dynamic = 'force-static'
 
@@ -13,8 +13,14 @@ function xml(value: string): string {
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&apos;')
 }
-function entryUrl(iso3: string, lang: 'en' | 'pt-BR'): string {
-  return absoluteHref(agendaHref(iso3, lang))
+/**
+ * The feed carries one entry per agenda document the viewer can show. A
+ * rendered lexicon with no page behind it is not a published thing, so it does
+ * not reach the feed. See D69.
+ */
+function entryUrl(iso3: string, lang: 'en' | 'pt-BR'): string | null {
+  const href = agendaHrefInLanguage(iso3, lang)
+  return href ? absoluteHref(href) : null
 }
 
 export async function GET(): Promise<Response> {
@@ -25,13 +31,12 @@ export async function GET(): Promise<Response> {
     loadDatasetFeedEntries(date),
   ])
 
-  const agendaEntries = agendas.map((entry) => ({
-    id: entryUrl(entry.iso3, entry.lang),
-    link: entryUrl(entry.iso3, entry.lang),
-    title: entry.title,
-    summary: entry.summary,
-    updated: entry.updated,
-  }))
+  const agendaEntries = agendas.flatMap((entry) => {
+    const url = entryUrl(entry.iso3, entry.lang)
+    return url
+      ? [{ id: url, link: url, title: entry.title, summary: entry.summary, updated: entry.updated }]
+      : []
+  })
   const datasetEntries = versions.map((entry) => ({
     id: `${absoluteHref(feedHref)}#dataset-${entry.version}`,
     link: absoluteHref('/about'),

@@ -16,6 +16,7 @@ pnpm bench diagnose    correlations, redundancy, GDP-sensitivity test
 pnpm bench report      write data/out/report.md
 pnpm bench agenda      write the capability agenda: JSON per country plus one markdown per lexicon
 pnpm bench cost        measure the panel prompts and price a run before making it
+pnpm bench residual    write the provisional wealth-residual fixture, one number per dimension
 pnpm bench probe       test candidate World Bank series before wiring them: --series a,b[@db]
 pnpm bench validate    schema-check data/delphi and data/evidence; add --fetch to live-check evidence source URLs
 pnpm bench all         ingest, score, diagnose, report, agenda
@@ -88,7 +89,10 @@ port 3888. That entry starts Next directly and does not use the proxy.
   build a list: that is the 7 MB mistake D27 exists to prevent. Plus the flat
   table, diagnostics and report. `agenda/{ISO3}.json` is the computed capability
   agenda, language neutral, with `{ISO3}.{lang}.md` rendered beside it, one per
-  lexicon. See D35. `datapackage.json` and `schema/` make the directory
+  lexicon. See D35. `residual.json` is the provisional wealth residual: each
+  dimension score against the score its income predicts, one number per
+  dimension and never one per country, offline until D65 promotes it. See D68.
+  `datapackage.json` and `schema/` make the directory
   self-describing: a Frictionless Data Package descriptor plus one JSON Schema
   per published shape, generated from the Zod schemas on `bench score`. See D37.
 
@@ -118,6 +122,16 @@ port 3888. That entry starts Next directly and does not use the proxy.
   the browser renders as a tooltip. Grid cards inside a link pass
   `interactive={false}` and stay pictures. Language reaches it as one `lex`
   prop, never as loose strings. See D53.
+- One field chart draws every country on one 0 to 100 axis, everywhere it is
+  drawn: `FlagField` in `apps/web/src/components/FlagField.tsx`, used by the
+  front page, the capability pages, both peek panels and the compare embed.
+  `FlagBubble` is the only place a flag mark is drawn, and `FlagHistogram` adds
+  the nine-capability switch on top of the field. Certainty is the bubble's ring
+  and never the flag's opacity, and the ramp both it and the radar read is
+  `evidenceOpenness` in `apps/web/src/lib/evidence.ts`. Never draw a second
+  distribution: extend the point type instead. The words at each end of an axis
+  come from `DIMENSION_ENDPOINTS` in the registry, never from a page. The grid
+  of country radars lives at `/countries`. See D67.
 - Confidence is never folded into the capability score. Two numbers, always. The
   radar draws thin evidence as a dashed edge with a hollow point, and the dash
   gap widens as confidence falls (see D32). Use `isThinEvidence` from
@@ -148,6 +162,14 @@ port 3888. That entry starts Next directly and does not use the proxy.
   A check carries the reason it is not scored in its `notes`, which renders to
   the reader, and adding one needs a decision entry naming the test it failed.
   A series that passes the tests is an indicator, not a check. See D60.
+- The wealth residual is never summed across dimensions. `ResidualFile` has no
+  country-level field, `buildResidual` in
+  `packages/core/src/pipeline/residual.ts` computes one fit per dimension, and
+  nine residuals averaged into one number is the headline score D1 withholds
+  with a regression in front of it. A residual is published with the strength of
+  the fit that produced it, because a weak fit makes the residual repeat the
+  score. Nothing in the viewer reads the file until D65 promotes the layer. See
+  D68.
 - Evidence records in `data/evidence` never enter a score or a confidence. A
   gap is promoted to a scored indicator only when a comparable series covers at
   least two countries, which is the minimum `buildFrame` accepts. See D20.
@@ -223,10 +245,48 @@ port 3888. That entry starts Next directly and does not use the proxy.
   lexicons under `packages/core/src/i18n/`, one data file per language, and
   every lookup falls back to the registry English, so a partial lexicon renders
   complete pages. Never translate in place, and never let a rendered document
-  compute a number the JSON does not carry. See D35. In the viewer, language
-  switching is one control in the layout header, driven by `languageCounterpart`
-  in `apps/web/src/lib/links.ts`. Never add a language link to the nav or to a
-  page body.
+  compute a number the JSON does not carry. See D35.
+- **The viewer publishes no translated edition.** It publishes one English
+  benchmark and country layers beside it. A country layer is a second reading
+  of one country in that country's language: its shape, its agenda, its
+  institutions and its subnational spread. `COUNTRY_LAYERS` in
+  `apps/web/src/lib/layers.ts` is the only place a layer is declared, and the
+  href helpers, the layer nav and the language gate in
+  `apps/web/src/lib/links.ts` all read it. Brazil is the only layer, at
+  `/brasil`, and its folder name is that registry entry's slug. Never add a
+  language switch, never branch on `Accept-Language`, never honour a `?lang=`
+  on a ground-layer page, and never put a layer in the primary nav: a layer
+  serves one country's audience and is reached from that country's pages. A
+  lexicon that renders a country with no page behind it is not published, so
+  it does not reach the feed or the sitemap either. See D69.
+- The viewer has one inbox. `/contact` is the only page that carries a form for
+  writing to the project, `/api/contact` is the only route that sends one, and
+  every invitation to get in touch links there with a topic in the query string.
+  The route stores nothing: it validates `ContactSubmission` from
+  `packages/core/src/model/contact.ts` and forwards the lead to
+  core.envisioning.com through `apps/web/src/lib/core-api.ts`, which signs every
+  request with `INTERNAL_REQUEST_SECRET`. Never call Core with a bare fetch.
+  Never send `sourcePage`, because Core answers 500 when it is present, and
+  never send an empty `title`, because Core rejects a blank one. Support is a
+  page per layer: `/support` on the ground layer, `/brasil/apoie` inside
+  Brazil's, both declared through `LayerSectionId`. See D71.
+- **Navigation is one tree.** `apps/web/src/lib/nav.ts` holds it and `navRows`
+  resolves it against the path. Nothing else in the viewer draws navigation,
+  and no page or layout renders a nav of its own. The tree is four deep and
+  never more: the sections, the country you are in, which reading of it, then
+  the pages of that reading. It reaches the reader as two bands: `HeaderNav`
+  draws the sections and turns every level above the deepest into a breadcrumb,
+  and `SectionTabs` draws the deepest level as a tab strip under the header.
+  Never stack nav rows instead. A country layer is a reading beside the English
+  one, never a level under its pages, and both readings share one crumb joined
+  by a middot, because they are alternatives rather than steps. Countries
+  resolves its child from the path because 52 will not fit in a control; Method
+  and Capabilities list theirs. Both bands render above every layout that could
+  read a file, so which surfaces a country has comes from a registry and never
+  from the filesystem: `hasLocalDestination` and `INSTITUTION_MAPS`, both in
+  `apps/web/src/lib/layers.ts`. Keep `INSTITUTION_MAPS` in step with
+  `data/institutions/*.json`. A new top-level page needs a node in the tree or
+  it lights nothing. See D73.
 - The World Bank fetch is described once, in
   `packages/core/src/model/sources.ts`: the API base, the database ids, the
   first year, the route labels and the request builder. `pipeline/ingest.ts`
@@ -240,6 +300,14 @@ port 3888. That entry starts Next directly and does not use the proxy.
   `readPatternFilters` parses the query string and `patternsHref` builds it, and
   the server page and the client view both use them, so the address is read
   where it is written. See D46.
+- The comparison at `/compare` holds one reference country plus at most three
+  others, and the selection is the address. `compareHref` and
+  `readCompareCodes` in `apps/web/src/lib/links.ts` are the only place that
+  shape is written or parsed, `COMPARE_MAX` is the cap, and the page redirects
+  to the canonical hyphen form before it draws anything. The first code is the
+  reference: it keeps the filled shape and every other column is a distance
+  from it. Never stack four shapes on one radar, and never put a combination in
+  the sitemap. See D70.
 - A decision id or an artefact id written in a document is a link. The markdown
   renderer turns a bare `D47` or `A10` into a link to `/decisions#D47` or
   `/limits#A10`, so write the bare id and never hand a URL to it.

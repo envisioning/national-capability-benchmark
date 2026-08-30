@@ -12,7 +12,13 @@ import { InstitutionsView } from '@/components/views/InstitutionsView'
 import { NeighbourSparkline } from '@/components/NeighbourSparkline'
 import { Radar } from '@/components/Radar'
 import { CountryLabel, DefineLink, Empty, Eyebrow, Headline, Note, PageTitle, Section } from '@/components/ui'
-import { challengeDetailHref, countryProfileHref, methodHref } from '@/lib/links'
+import {
+  challengeDetailHref,
+  compareHref,
+  countryProfileHref,
+  hasLocalDestination,
+  methodHref,
+} from '@/lib/links'
 import {
   loadCorroboration,
   loadCountry,
@@ -48,7 +54,7 @@ export default async function CountryLocalPage({
 
   if (!name) return <Empty hint="This country is not in the benchmark." />
 
-  if (iso3 !== 'BRA') {
+  if (!hasLocalDestination(iso3)) {
     return (
       <div className="rounded-xl border border-dashed border-[var(--rule)] px-6 py-16 text-center text-lg text-[var(--muted)]">
         <p>A local destination view is not available for {name} yet.</p>
@@ -62,7 +68,7 @@ export default async function CountryLocalPage({
     )
   }
 
-  const [country, index, network, corroboration, records] = await Promise.all([
+  const [country, index, networkResult, corroboration, records] = await Promise.all([
     loadCountry('BRA'),
     loadIndex(),
     loadInstitutionNetwork('BRA'),
@@ -127,13 +133,13 @@ export default async function CountryLocalPage({
 
       <Section
         title="Four peers put Brazil&apos;s shape in context"
-        hint="Each mini-radar uses the same nine national dimensions and current comparison frame."
+        hint="Each mini-radar uses the same nine national dimensions and current comparison frame. Open one to read it beside Brazil, row by row and indicator by indicator."
       >
         <div className="grid gap-4 sm:grid-cols-2">
           {peers.map((peer) => (
             <Link
               key={peer.iso3}
-              href={countryProfileHref(peer.iso3)}
+              href={compareHref(['BRA', peer.iso3])}
               className="flex items-center gap-4 rounded-lg border border-[var(--rule)] p-4 hover:border-[var(--muted)]"
             >
               <NeighbourSparkline profile={peer} />
@@ -165,18 +171,23 @@ export default async function CountryLocalPage({
         title="Institutions make the local system visible"
         hint="The map is an explanatory layer. It does not measure institutional performance or change the national scores."
       >
-        {network ? (
+        {networkResult.network ? (
           <>
             <Note>the agency disagrees with this entry</Note>
             <p className="mb-8 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-              Brazil&apos;s network contains {network.nodes.length} institutions and {network.edges.length}{' '}
+              Brazil&apos;s network contains {networkResult.network.nodes.length} institutions and {networkResult.network.edges.length}{' '}
               sourced relationships. The same map is embedded here so the institutional layer can
               be read beside the radar and the state evidence.
             </p>
-            <InstitutionsView network={network} lex={EN} />
+            <InstitutionsView network={networkResult.network} lex={EN} />
           </>
-        ) : (
+        ) : networkResult.error.kind === 'missing' ? (
           <Empty hint="Brazil's institutional map is not available in this deployment." />
+        ) : (
+          <Note tone="stop">
+            Brazil&apos;s institutional map could not be loaded. {networkResult.error.message}{' '}
+            Fix the network file and run <code>pnpm bench validate</code> before reloading this page.
+          </Note>
         )}
       </Section>
 

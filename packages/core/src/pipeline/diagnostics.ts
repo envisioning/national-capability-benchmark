@@ -33,7 +33,7 @@ export const DIMENSION_OVERLAP_THRESHOLD = 0.9
 /** The family an indicator falls into when its registry row declares none. */
 export const UNASSIGNED_FAMILY = 'unassigned'
 
-function logGdpByCountry(observations: Observation[], series: string): Map<string, number> {
+export function logGdpByCountry(observations: Observation[], series: string): Map<string, number> {
   /* The observation file carries every year, so pick the latest one per country
    * rather than the first row encountered. */
   const latest = new Map<string, { value: number; year: number }>()

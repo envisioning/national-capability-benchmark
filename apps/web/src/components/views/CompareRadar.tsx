@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useState } from 'react'
 import { countryFlag } from '@ncb/core'
 import type { Dimension } from '@ncb/core'
@@ -7,6 +8,7 @@ import { Radar } from '@/components/Radar'
 import { CountryLabel, FrameNote, RadarEvidenceLegend } from '@/components/ui'
 import type { RadarProfile } from '@/lib/profile'
 import { DimensionDialog } from '@/components/views/DimensionPeek'
+import { compareHref } from '@/lib/links'
 
 /**
  * One country's shape, with a second country available behind a selector.
@@ -99,6 +101,18 @@ export function CompareRadar({
           </select>
         </label>
       </div>
+
+      <p className="mt-3 text-xs text-[var(--muted)]">
+        <Link
+          href={compareHref(comparator ? [focus.iso3, comparator.iso3] : [focus.iso3])}
+          className="underline underline-offset-4"
+        >
+          {comparator
+            ? `Read ${focus.country} and ${comparator.country} side by side`
+            : `Read ${focus.country} beside up to three other countries`}
+        </Link>
+        , down to the indicator behind every row.
+      </p>
 
       <RadarEvidenceLegend />
       <FrameNote />

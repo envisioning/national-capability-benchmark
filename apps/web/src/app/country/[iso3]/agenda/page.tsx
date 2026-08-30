@@ -1,21 +1,11 @@
 import type { Metadata } from 'next'
-import { headers } from 'next/headers'
 import { notFound } from 'next/navigation'
-import { COUNTRY_NAMES, EN, PT_BR } from '@ncb/core'
+import { COUNTRY_NAMES, EN } from '@ncb/core'
 import { AgendaView } from '@/components/views/AgendaView'
 import { loadAgenda } from '@/lib/agenda'
 import { countryProfileHref, ogAgendaHref } from '@/lib/links'
 
 export const dynamic = 'force-dynamic'
-
-function requestedLanguage(
-  search: Record<string, string | string[] | undefined>,
-  acceptLanguage: string | null,
-): 'en' | 'pt-BR' {
-  const explicit = Array.isArray(search.lang) ? search.lang[0] : search.lang
-  if (explicit?.toLowerCase() === 'pt-br') return 'pt-BR'
-  return acceptLanguage?.toLowerCase().includes('pt-br') ? 'pt-BR' : 'en'
-}
 
 export async function generateMetadata({
   params,
@@ -35,23 +25,21 @@ export async function generateMetadata({
   }
 }
 
+/**
+ * One country's agenda in the ground layer, which is English for every
+ * country. A country with a layer of its own also publishes its agenda inside
+ * that layer, in that layer's language, from this same JSON. The page does not
+ * change language with a query string or a browser header: that turned every
+ * country into a second edition nobody had written. See D69.
+ */
 export default async function CountryAgendaPage({
   params,
-  searchParams,
 }: {
   params: Promise<{ iso3: string }>
-  searchParams: Promise<Record<string, string | string[] | undefined>>
 }) {
-  const [{ iso3 }, search, requestHeaders] = await Promise.all([params, searchParams, headers()])
+  const { iso3 } = await params
   const agenda = await loadAgenda(iso3)
   if (!agenda) notFound()
 
-  const lang = requestedLanguage(search, requestHeaders.get('accept-language'))
-  return lang === 'pt-BR' ? (
-    <div lang="pt-BR">
-      <AgendaView agenda={agenda} lex={PT_BR} profileHref={countryProfileHref(agenda.iso3)} />
-    </div>
-  ) : (
-    <AgendaView agenda={agenda} lex={EN} profileHref={countryProfileHref(agenda.iso3)} />
-  )
+  return <AgendaView agenda={agenda} lex={EN} profileHref={countryProfileHref(agenda.iso3)} />
 }

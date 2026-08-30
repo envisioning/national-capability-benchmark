@@ -42,7 +42,6 @@ import {
   absoluteHref,
   capabilityHref,
   countryCsvHref,
-  countryLocalHref,
   embedCountryHref,
   ogCountryHref,
 } from '@/lib/links'
@@ -111,13 +110,6 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
       )}
 
       <div className="mb-10 -mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
-        {country.iso3 === 'BRA' ? (
-          <p className="text-xs text-[var(--muted)]">
-            <Link href={countryLocalHref(country.iso3)} className="underline underline-offset-4">
-              Read more on Brazil
-            </Link>
-          </p>
-        ) : null}
         <p className="text-xs text-[var(--muted)]">
           <a href={countryCsvHref(country.iso3)} className="underline underline-offset-4">
             Download this country as CSV

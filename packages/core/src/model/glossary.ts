@@ -139,6 +139,13 @@ export const GLOSSARY: GlossaryEntry[] = [
     full: 'All countries set each indicator’s endpoints. The frame stays fixed within a version, so score changes reflect data. Adding a country changes the frame and restates scores.',
   },
   {
+    term: 'Reference country',
+    group: 'How a number is made',
+    short: 'The country a side-by-side comparison is read from.',
+    full: 'When countries are put side by side, one of them is named the reference. It keeps the filled shape on the charts and every other column is read as a distance from it. The reference changes nothing in the data: the scores, the confidence and the indicator values are the published ones, and swapping the reference only changes which country the differences are measured from. It is not a benchmark, a target or a best case.',
+    example: 'With Brazil as the reference, Indonesia’s Coordination column shows its own score and how far that sits above or below Brazil’s.',
+  },
+  {
     term: 'Frame rebase',
     group: 'How a number is made',
     short: 'A new scale after the country set changes.',
@@ -270,6 +277,13 @@ export const GLOSSARY: GlossaryEntry[] = [
     group: 'How good the evidence is',
     short: 'An indicator that mostly restates income per head.',
     full: 'Each indicator is correlated with log GDP per capita. Above 0.7, it is flagged as a wealth proxy and removed in a sensitivity test. The panel gets the same test.',
+  },
+  {
+    term: 'Wealth residual',
+    group: 'What sits beside the score',
+    short: 'The gap between a dimension score and the score a country\'s income predicts.',
+    full: 'Richer countries score higher on most of these dimensions. The wealth residual removes that pattern from one dimension at a time: a line is fitted through every country\'s score against its income per head, and the residual is how far above or below its own line a country sits. It is published per dimension and never added up, because nine residuals averaged into one number is the single ranking this benchmark withholds. A residual is only as meaningful as the line behind it, so every residual carries the strength of its fit. Where the fit is weak, income explains little and the residual almost repeats the score.',
+    example: 'Brazil sits 18.3 points below the income line on Trust and 9.1 above it on Coordination, from the same two scores.',
   },
   {
     term: 'Capability agenda',

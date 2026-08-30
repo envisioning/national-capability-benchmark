@@ -3,8 +3,8 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const reviewsDir = join(dirname(fileURLToPath(import.meta.url)), '..', 'docs', 'reviews')
-const layers = ['velocity', 'leverage']
-const reviewPattern = /^(velocity|leverage)-(\d{4})-q([1-4])\.md$/
+const layers = ['velocity', 'leverage', 'residual']
+const reviewPattern = /^(velocity|leverage|residual)-(\d{4})-q([1-4])\.md$/
 const requiredHeadings = [
   'What did we learn about the methodology?',
   'What did we learn about the data sources?',

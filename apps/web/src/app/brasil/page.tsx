@@ -29,48 +29,53 @@ import {
 } from '@/components/ui'
 import { loadAgenda } from '@/lib/agenda'
 import { loadEvidence, loadIndex } from '@/lib/data'
-import { agendaHref, countryProfileHref, decisionsHref, limitsHref } from '@/lib/links'
+import { countryLayer, layerSection } from '@/lib/layers'
+import {
+  countriesHref,
+  countryProfileHref,
+  decisionsHref,
+  layerSectionHref,
+  limitsHref,
+} from '@/lib/links'
 import { toProfile } from '@/lib/profile'
 
 export const dynamic = 'force-dynamic'
 
 export const metadata = {
-  title: 'NCB, o que o Brasil é capaz de fazer',
+  title: 'Brasil, o que o país é capaz de fazer',
   description:
-    'Nove dimensões de capacidade nacional, medidas a partir de dados públicos e lidas em português. O Brasil é o primeiro caso de campo.',
-  alternates: { languages: { en: '/' } },
+    'A camada brasileira do NCB: nove dimensões de capacidade nacional, as instituições que entregam política pública e a agenda que a evidência sustenta.',
 }
 
 /**
- * The Portuguese entry point: an interpretation layer over the English ground
- * layer, and the page the project shows a Brazilian institution first. One
- * scroll: the claim, Brazil's shape and agenda, the nine dimensions in full,
- * the peers, the uses and the road ahead. Every number is read from the JSON
- * at request time, and the deep data pages stay in the ground layer on
- * purpose, so a translated claim can always be checked against its source.
- * See D35.
+ * The front page of Brazil's layer.
+ *
+ * The benchmark itself stays comparative and English. This is the one country
+ * where the project has done country-specific work, so this is the one country
+ * with a reading of its own: the shape, the agenda, the institution map and
+ * the subnational spread, written for a Brazilian institutional reader. It is
+ * not the benchmark in Portuguese. Every number is read from the same JSON the
+ * ground layer reads, and the deep method pages stay in English on purpose, so
+ * a claim made here can always be checked against its source. See D69.
  */
-export default async function PortugueseHomePage() {
+export default async function BrazilLayerPage() {
+  const layer = countryLayer('BRA')
   const data = await loadIndex()
-  if (!data || data.countries.length === 0) {
-    return (
-      <div lang="pt-BR">
-        <Empty hint="Ainda não há dados gerados. Rode pnpm bench all na raiz do repositório e recarregue." />
-      </div>
-    )
+  if (!layer || !data || data.countries.length === 0) {
+    return <Empty hint="Ainda não há dados gerados. Rode pnpm bench all na raiz do repositório e recarregue." />
   }
 
-  const countries = [...data.countries].sort((a, b) =>
-    countryName(PT_BR, a.iso3).localeCompare(countryName(PT_BR, b.iso3), 'pt-BR'),
-  )
   const total = data.countries.length
-
   const brazil = data.countries.find((c) => c.iso3 === 'BRA')
   const agenda = await loadAgenda('BRA')
   const split = agenda ? splitAgenda(agenda) : null
   const evidence = await loadEvidence()
   const brazilEvidence = agenda?.ownEvidence.length ?? 0
   const scoredCount = INDICATORS.filter(isScored).length
+
+  const agendaSection = layerSection(layer, 'agenda')
+  const institutionsSection = layerSection(layer, 'institutions')
+  const localSection = layerSection(layer, 'local')
 
   const s = PT_BR.agenda
   const indicatorName = (id: string): string =>
@@ -89,8 +94,8 @@ export default async function PortugueseHomePage() {
   const kindLabel = { raise: 'Elevar', measure: 'Medir antes de gerir', hold: 'Manter' } as const
 
   return (
-    <div lang="pt-BR">
-      <Eyebrow>Edição em português</Eyebrow>
+    <>
+      <Eyebrow>Camada Brasil</Eyebrow>
       <PageTitle>O que o Brasil é capaz de fazer?</PageTitle>
       <Headline>
         Nove dimensões de capacidade, medidas com dados públicos. A <Highlight>forma</Highlight>{' '}
@@ -102,7 +107,11 @@ export default async function PortugueseHomePage() {
         opostos. A forma mostra onde uma intervenção pode ajudar.
       </p>
       <p className="-mt-6 mb-10 max-w-3xl text-lg leading-relaxed">
-        O código e os dados são abertos.{' '}
+        Esta é a leitura brasileira do benchmark. Ela reúne o que o projeto apurou sobre o Brasil:
+        a forma nacional, a agenda calculada, o mapa das instituições que entregam política pública
+        e a variação entre os estados. O benchmark comparativo, com {total} países na mesma régua,
+        continua em inglês e é a fonte de cada número desta página. O código e os dados são
+        abertos.{' '}
         <a
           href={REPO_URL}
           target="_blank"
@@ -132,8 +141,8 @@ export default async function PortugueseHomePage() {
       </div>
 
       <Section
-        title="O Brasil é o primeiro caso"
-        hint={`Este é o primeiro teste. Os ${total} países usam as mesmas dimensões, indicadores e régua.`}
+        title="O Brasil é o primeiro caso de campo"
+        hint={`Os ${total} países usam as mesmas dimensões, os mesmos indicadores e a mesma régua. O Brasil é o único que também tem uma camada própria.`}
       >
         <div className="grid gap-10 lg:grid-cols-2">
           {brazil ? (
@@ -190,13 +199,18 @@ export default async function PortugueseHomePage() {
               <p className="text-lg leading-relaxed">
                 A agenda explica cada linha, com fontes, lacunas e entregas documentadas.
               </p>
-              <p>
-                <Highlight>
-                  <Link href={agendaHref('BRA', 'pt-BR')} className="underline underline-offset-4">
-                    Leia a agenda de capacidades do Brasil
-                  </Link>
-                </Highlight>
-              </p>
+              {agendaSection ? (
+                <p>
+                  <Highlight>
+                    <Link
+                      href={layerSectionHref(layer, agendaSection)}
+                      className="underline underline-offset-4"
+                    >
+                      Leia a agenda de capacidades do Brasil
+                    </Link>
+                  </Highlight>
+                </p>
+              ) : null}
               <p className="text-lg">
                 <Link href={countryProfileHref('BRA')} className="underline underline-offset-4">
                   {s.profileLink}
@@ -209,7 +223,7 @@ export default async function PortugueseHomePage() {
 
       {agenda ? (
         <Section
-        title="As nove dimensões"
+          title="As nove dimensões"
           hint="Cada cartão mostra nota, confiança, tendência e estado da medição. Cheio = observado; vazio = lacuna; cortado = base rejeitada. Passe o cursor para ver o indicador."
         >
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -289,15 +303,47 @@ export default async function PortugueseHomePage() {
       ) : null}
 
       <Section
+        title="A nota nacional é a primeira camada, e não a última"
+        hint="O Brasil tem vários centros de ação. A camada reúne o que a comparação internacional não alcança."
+      >
+        <div className="grid gap-5 sm:grid-cols-2">
+          {institutionsSection ? (
+            <Link
+              href={layerSectionHref(layer, institutionsSection)}
+              className="rounded-xl border border-[var(--rule)] p-5 transition-all duration-200 hover:border-[var(--foreground)]"
+            >
+              <h3 className="text-xl font-medium tracking-tight">Instituições</h3>
+              <p className="mt-2 text-lg leading-relaxed text-[var(--muted)]">
+                Quem autoriza, financia, regula, controla, aprende e entrega. O mapa explica
+                funções e vínculos, com fonte em cada relação. Ele não mede desempenho e não altera
+                nenhuma nota.
+              </p>
+            </Link>
+          ) : null}
+          {localSection ? (
+            <Link
+              href={layerSectionHref(layer, localSection)}
+              className="rounded-xl border border-[var(--rule)] p-5 transition-all duration-200 hover:border-[var(--foreground)]"
+            >
+              <h3 className="text-xl font-medium tracking-tight">{localSection.label}</h3>
+              <p className="mt-2 text-lg leading-relaxed text-[var(--muted)]">
+                Um agregado federal responde à pergunta comparativa e esconde a variação entre as
+                unidades que entregam a política. A leitura subnacional mostra essa faixa, com a
+                fonte e a regra de reconciliação à vista. Esta página ainda está em inglês.
+              </p>
+            </Link>
+          ) : null}
+        </div>
+      </Section>
+
+      <Section
         title="A América Latina usa a mesma régua"
-        hint={`Os ${LATAM_ISO3.length} países usam os mesmos indicadores e a mesma régua. Perfis diferentes mostram o que a renda não explica. Eixos vazios mostram dados ausentes. Abra uma forma para ver a agenda.`}
+        hint={`Os ${LATAM_ISO3.length} países usam os mesmos indicadores e a mesma régua. Perfis diferentes mostram o que a renda não explica. Eixos vazios mostram dados ausentes. Abra uma forma para ver o perfil, no benchmark comparativo, em inglês.`}
       >
         <DimensionLegend names={PT_BR.dimensions} />
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {[...LATAM_ISO3]
-            .sort((a, b) =>
-              countryName(PT_BR, a).localeCompare(countryName(PT_BR, b), 'pt-BR'),
-            )
+            .sort((a, b) => countryName(PT_BR, a).localeCompare(countryName(PT_BR, b), 'pt-BR'))
             .map((iso3) => {
               const c = data.countries.find((x) => x.iso3 === iso3)
               if (!c) return null
@@ -305,7 +351,7 @@ export default async function PortugueseHomePage() {
               return (
                 <Link
                   key={iso3}
-                  href={agendaHref(iso3, 'pt-BR')}
+                  href={countryProfileHref(iso3)}
                   className="rounded-xl border border-[var(--rule)] p-4 transition-all duration-200 hover:border-[var(--foreground)]"
                 >
                   <div className="mb-2 flex items-baseline justify-between">
@@ -317,6 +363,7 @@ export default async function PortugueseHomePage() {
                   <Radar
                     labels="icons"
                     interactive={false}
+                    hoverLabels
                     lex={PT_BR}
                     series={[
                       {
@@ -357,14 +404,14 @@ export default async function PortugueseHomePage() {
       </Section>
 
       <Section
-        title="Nenhum número muda na tradução"
-        hint="Ids, registro de indicadores, JSON, método e decisões permanecem em inglês. Esta edição traduz a camada de leitura, e cada afirmação pode ser conferida no arquivo de origem."
+        title="A camada brasileira não muda nenhum número"
+        hint="O projeto não publica uma segunda cópia do benchmark em português. Ids, registro de indicadores, JSON, método e decisões permanecem em inglês, e esta camada lê exatamente esses arquivos."
       >
         <div className="max-w-3xl space-y-4 text-lg leading-relaxed">
           <p>
             O{' '}
             <Link href="/method" className="underline underline-offset-4">
-            método
+              método
             </Link>{' '}
             explica como uma estatística vira nota. O{' '}
             <Link href="/glossary" className="underline underline-offset-4">
@@ -379,6 +426,14 @@ export default async function PortugueseHomePage() {
               limites conhecidos
             </Link>{' '}
             mostram onde o benchmark falha. Tudo em inglês, aberto e datado.
+          </p>
+          <p>
+            Os{' '}
+            <Link href={countriesHref} className="underline underline-offset-4">
+              {total} países medidos
+            </Link>{' '}
+            e suas agendas ficam no benchmark comparativo. Cada um tem a mesma leitura calculada da
+            mesma régua.
           </p>
         </div>
       </Section>
@@ -433,21 +488,6 @@ export default async function PortugueseHomePage() {
           ))}
         </div>
       </Section>
-
-      <Section
-        title="Cada país tem uma agenda"
-        hint="A mesma leitura existe para cada país medido, calculada da mesma régua."
-      >
-        <ul className="grid gap-x-8 gap-y-2 text-lg sm:grid-cols-2 lg:grid-cols-3">
-          {countries.map((c) => (
-            <li key={c.iso3}>
-              <Link href={agendaHref(c.iso3, 'pt-BR')} className="underline underline-offset-4">
-                <CountryLabel iso3={c.iso3} name={countryName(PT_BR, c.iso3)} />
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </Section>
-    </div>
+    </>
   )
 }

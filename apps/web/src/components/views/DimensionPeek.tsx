@@ -1,12 +1,13 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { DIMENSION_LABELS, DIMENSION_QUESTIONS, confidenceBand, isThinEvidence } from '@ncb/core'
+import { DIMENSION_LABELS, DIMENSION_QUESTIONS, confidenceBand } from '@ncb/core'
 import type { Dimension } from '@ncb/core'
-import { Distribution } from '@/components/Distribution'
+import { FlagField } from '@/components/FlagField'
 import { CapabilityLink } from '@/components/CapabilityLink'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { CountryLabel, Score } from '@/components/ui'
+import { countryProfileHref } from '@/lib/links'
 
 type Row = {
   iso3: string
@@ -135,10 +136,10 @@ export function DimensionDialog({
           </div>
 
           <p className="mb-4 max-w-2xl text-xs leading-relaxed text-[var(--muted)]">
-            Scores use one 0 to 100 scale for all countries. Each dot is a country. The box covers
-            the middle half of the field, and the line is the median. Hollow dots have thin
-            evidence. The band beside each score shows its evidence level. The last column shows
-            the trend and the number of indicators behind it.
+            Scores use one 0 to 100 scale for all countries. Each flag is a country, and the ring
+            around it carries how well evidenced that score is. The band beside each score in the
+            list shows its evidence level, and the last column shows the trend and the number of
+            indicators behind it.
             {rank && rows ? ` This country ranks ${rank} of ${rows.length}.` : ''}
           </p>
 
@@ -146,14 +147,16 @@ export function DimensionDialog({
           {!rows && !error ? <p className="text-lg text-[var(--muted)]">Loading…</p> : null}
 
           {rows ? (
-            <Distribution
+            <FlagField
               points={rows.map((r) => ({
                 key: r.iso3,
+                iso3: r.iso3,
                 label: r.country,
                 value: r.score,
-                detail: `${confidenceBand(r.confidence).label} evidence`,
+                confidence: r.confidence,
+                delta: r.delta,
                 focal: r.iso3 === iso3,
-                hollow: isThinEvidence(r.confidence),
+                href: countryProfileHref(r.iso3),
               }))}
             />
           ) : null}

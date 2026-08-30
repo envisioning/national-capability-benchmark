@@ -8,6 +8,7 @@ import type {
   InstitutionRelationFamily,
   InstitutionSystem,
 } from '../model/institutions.js'
+import type { Dimension } from '../model/dimensions.js'
 
 /**
  * Derived views over an institution map.
@@ -59,6 +60,20 @@ export type InstitutionMatrix = {
   /** Cells holding at least one relation. */
   filled: number
   max: number
+}
+
+/**
+ * Find the institution nodes that a country's dimension-level agenda item
+ * should point to. `InstitutionNode.dimensions` is already the curated
+ * navigation relationship between an institution and an NCB question. Keep
+ * this lookup in one place so the agenda does not grow a second mapping.
+ * These ids are links for investigation, never evidence, scores or weights.
+ */
+export function institutionIdsForDimension(
+  nodes: InstitutionNode[],
+  dimension: Dimension,
+): string[] {
+  return [...new Set(nodes.filter((node) => node.dimensions.includes(dimension)).map((node) => node.id))].sort()
 }
 
 /** Where a count falls on the ramp. Empty cells have no band. */

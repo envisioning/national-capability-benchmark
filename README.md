@@ -137,7 +137,10 @@ The agenda pipeline turns each country into three lists:
 
 The language-neutral agenda JSON and rendered English or Brazilian Portuguese
 documents are written to data/out/agenda. The agenda is computed from the
-score and registry; it does not invent a new number.
+score and registry; it does not invent a new number. Where a country has an
+institutional network, each dimension-level agenda item also carries the ids of
+the related institution nodes for investigation. Those links are navigation,
+not evidence or score inputs.
 
 ## Two assessment tracks
 
@@ -217,8 +220,10 @@ country files to build a list.
 
 The Next.js viewer is in apps/web. It provides country profiles, capability
 comparisons, agendas, indicators, sources, diagnostics, the Delphi panel,
-patterns, limits, decisions, the glossary and a challenge page. The Portuguese
-interpretation layer starts at /pt.
+patterns, limits, decisions, the glossary and a challenge page. All of it is
+English, because the comparison is the subject. Brazil also has a country
+layer at /brasil: one country read in its own language, with its institution
+map and its subnational spread beside the national shape.
 
 Vercel deploys the project national-capability-benchmark under the ev-io scope
 with apps/web as the Root Directory. The build command is:

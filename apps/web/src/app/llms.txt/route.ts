@@ -10,12 +10,13 @@ import {
   rawHref,
 } from '@ncb/core'
 import { loadIndex } from '@/lib/data'
+import { METHOD_PAGES, NAV_TREE } from '@/lib/nav'
 import {
-  METHOD_SUBNAV,
-  PRIMARY_NAV,
   aboutHref,
   capabilitiesHref,
   challengeHref,
+  compareBaseHref,
+  countriesHref,
   thesisHref,
 } from '@/lib/links'
 
@@ -45,6 +46,8 @@ const spell = (n: number): string => WORDS[n] ?? String(n)
 /** What each reader lens is for, in one line. Keyed by the nav href. */
 const PRIMARY_NOTES: Record<string, string> = {
   '/': 'Every country, nine dimensions each, with the confidence beside every score.',
+  [countriesHref]: 'Every country drawn as its nine-dimension shape, with confidence beside every score.',
+  [compareBaseHref]: 'Two to four countries side by side, down to the indicator behind every row. The selection is in the path: /compare/BRA-IDN-ZAF.',
   [capabilitiesHref]: 'One page per capability: what it asks, what measures it, who scores well.',
   '/agenda': 'What each country should raise, measure and hold, computed from its own profile.',
   [thesisHref]: 'Why capability matters when intelligence, agents and robotics change the conditions of action.',
@@ -115,13 +118,13 @@ export async function GET(request: Request): Promise<Response> {
     '',
     '## Reading',
     '',
-    ...PRIMARY_NAV.map(
+    ...NAV_TREE.map(
       (entry) => `- [${entry.label}](${abs(origin, entry.href)}): ${PRIMARY_NOTES[entry.href] ?? ''}`,
     ),
     '',
     '## Method',
     '',
-    ...METHOD_SUBNAV.map(
+    ...METHOD_PAGES.map(
       (entry) => `- [${entry.label}](${abs(origin, entry.href)}): ${METHOD_NOTES[entry.href] ?? ''}`,
     ),
     '',

@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { INDICATORS_BY_ID, MEASUREMENT_CLASS_MEANING } from '@ncb/core'
 import type { IndicatorAcrossCountries } from '@ncb/core'
-import { Distribution } from '@/components/Distribution'
+import { FlagField } from '@/components/FlagField'
 import { Icon } from '@/components/Icon'
 import { indicatorHref } from '@/lib/links'
 import { ClassBadge, CountryLabel, Score } from '@/components/ui'
@@ -127,9 +127,8 @@ export function IndicatorPeek({
             <a href={indicatorHref(def.id)} className="underline underline-offset-4">
               indicator registry
             </a>
-            . Each dot is a country. The box covers the middle half of the field, and the line is
-            the median. The bar shows the normalized position from 0 to 100, with higher always
-            meaning better.
+            . Each flag is a country at its normalized position from 0 to 100, where higher always
+            means better. The bar in the list below shows the same position.
             {rank ? ` This country ranks ${rank} of ${values.length} on the values we hold.` : ''}
           </p>
 
@@ -137,9 +136,10 @@ export function IndicatorPeek({
           {!view && !error ? <p className="text-lg text-[var(--muted)]">Loading…</p> : null}
 
           {view ? (
-            <Distribution
+            <FlagField
               points={values.map((v) => ({
                 key: v.iso3,
+                iso3: v.iso3,
                 label: v.country,
                 value: v.normalized,
                 detail: `${v.raw.toLocaleString('en-US')} ${def.unit}, ${v.year}`,

@@ -2828,6 +2828,476 @@ would justify revising this boundary. A source that publishes only incompatible
 geometries would justify withholding its fixture rather than relaxing the
 schema.
 
+## D67: The front page reads one capability at a time, and certainty is the ring
+
+*Recorded 2026-08-30. Extends D32, D47 and D53.*
+
+**Choice.** The front page opens on a single capability, drawn as every country
+on one 0 to 100 axis, and the reader switches capability rather than scrolling
+past nine charts. One component, `FlagHistogram`, serves all nine dimensions.
+Switching moves each country from its old score to its new one instead of
+redrawing the field. The frame is laid out for all nine dimensions at once, so
+the chart height and the axis hold still while the flags travel.
+
+Pointing at a flag opens a card beside it that reads the country at a glance:
+the score on this capability, its confidence, its trend, and the highest and
+lowest of the same country's nine capabilities. The card never takes the
+pointer. The flag itself is a link into the country profile, so the card can
+stay purely informative and a reader never has to travel into a tooltip to
+click something. No flag fades while another is read: the halo says which one
+is being pointed at, and 52 flags at two strengths reads as a rendering fault.
+
+The chart itself is `FlagField`, and it is the only one of its kind. The
+capability pages, the dimension and indicator peek panels and the compare embed
+all draw the same picture with the same geometry, from the same component. A
+surface that needs more in the hover card adds a field to `FlagFieldPoint`
+rather than a second distribution. `Distribution`, the older strip chart that
+mapped confidence to marker opacity, is deleted.
+
+The mark is `FlagBubble`: a flag inside a bubble, drawn at the origin so the
+chart owns the position. The bubble's ring carries the evidence and the flag
+never does. The ring is solid at the usable band's floor and above, and it
+breaks below it, with the gaps opening as confidence falls. The ramp lives in
+`apps/web/src/lib/evidence.ts` as `evidenceOpenness`, and the radar's dashed
+edge reads the same function, so the two charts cannot disagree about which
+countries are drawn solid.
+
+Each dimension names both ends of its own axis. `DIMENSION_ENDPOINTS` in
+`packages/core/src/model/dimensions.ts` is the only place those words are
+written, beside the questions they belong to.
+
+The grid of 52 radars moves to `/countries`, which the Countries nav entry now
+points at, and the full score table is added to `/capabilities`. The front page
+keeps the dataset markup and gains no ranking.
+
+**Why.** The old front page asked a reader to compare 52 nine-axis shapes
+before knowing what any axis meant. A shape is the right picture for one
+country and the wrong one for a first visit. One capability on one axis is
+readable without instruction, and moving the flags between capabilities is the
+only way the page demonstrates its own claim: that a country strong on one
+capability can sit at the floor of the next. That claim is the reason there is
+no composite score.
+
+Opacity was the wrong channel for certainty. It asks a reader to compare the
+strength of 52 marks against different backgrounds, it collides with the
+dimming used for hover, and on a flag it reads as a rendering fault rather than
+as a measure. A ring is a separate channel from the mark it surrounds, and it
+already means thin evidence on the radar.
+
+**Costs.** The front page now shows one dimension rather than nine, so a reader
+who wants the whole picture makes one more click. The animation needs every
+country's nine scores in the client bundle, which is the slim index and not the
+country files. The shared field is taller than the strip chart it replaces,
+because a bubble needs more column spacing than a bare flag, so the compare
+embed's advertised height rises from 300 to 420 and anybody who has already
+embedded it keeps the old height until they update the snippet.
+
+**Overturned by.** Evidence that readers cannot find the capability switch, or
+that they read the animated move as data changing rather than as the question
+changing, would justify returning to nine small charts shown together. Evidence
+that a broken ring is not read as uncertainty in testing would justify a
+different second channel, but not a return to flag opacity.
+
+## D68: The wealth residual is published per dimension and never summed
+
+*Recorded 2026-08-30. Extends D1, D23 and D47. Joins the provisional gate in
+D65.*
+
+**Choice.** A new provisional layer, written by `pnpm bench residual` into
+`data/out/residual.json` under `residual/0.1-exploratory`. For each dimension,
+ordinary least squares fits the published score against log10 GDP per capita
+across every country scored on that dimension. The residual is the observed
+score minus the fitted score. The layer publishes:
+
+- one residual per country per dimension, beside the score and the fitted value,
+- one fit per dimension carrying slope, intercept, Pearson r, r², n, the
+  standard error of the estimate, a fit strength band and the mean absolute rank
+  shift between the score order and the residual order.
+
+The shape has no country-level field and never will. Nine residuals averaged
+into one number is the headline score D1 withholds with a regression in front of
+it. Residuals never enter `score`, `blendedScore`, confidence, momentum or the
+agenda. A dimension with no score publishes no residual, a country with no
+income observation publishes none at all, and a dimension fitted on fewer than
+20 countries publishes neither a fit nor its residuals.
+
+The layer is offline. Nothing in the viewer reads it until a later decision
+promotes it under D65.
+
+**Why.** D1 refuses a composite because the mean of nine dimensions ranks
+countries. Measured on the current release, that mean correlates with log GDP
+per capita at r 0.866, Spearman 0.879, higher than seven of the nine dimensions
+on their own. Averaging cancels the two dimensions that do not track income,
+Shared Purpose at 0.451 and Coordination at 0.467, against the ones that do, and
+what survives the cancellation is wealth. The mean is also computed over
+different baskets: 23 of 52 countries score fewer than nine dimensions under the
+D45 coverage floor, so a mean over five and a mean over nine would print as the
+same kind of number.
+
+The residual answers the question the composite was reaching for and does not
+reproduce the development ranking. It says whether a country is above or below
+what its income buys, which is the comparison this benchmark exists to make. The
+first run puts China +21.6, South Korea +11.4, Finland +10.2, Rwanda +9.6 and
+Ethiopia +8.9 above their income lines on the mean of the nine residuals, and
+Panama -17.2, the United Arab Emirates -16.8 and Argentina -11.1 below. Those
+five numbers are stated here as the evidence for the layer and are exactly what
+the published file refuses to compute, because the same averaging failure
+applies to residuals.
+
+The fit travels with every residual for one reason. Where the income line
+explains little, the residual is close to the score, and a weak fit dressed as
+a residual would smuggle a capability ranking back in. Coordination and Shared
+Purpose are both weak on this release, at r² 0.218 and 0.204, and their mean
+absolute rank shifts are 6.9 places out of 44 and 5.5 out of 46. Anticipation,
+at r² 0.763, moves 11.9 places out of 50. The layer publishes the difference
+rather than hiding it.
+
+**Costs.**
+
+- A regression sits between the reader and the data. Every published residual
+  depends on a modeling choice, which no score in this benchmark does.
+- The country being read helped fit the line it is measured against, so an
+  outlier pulls the line toward itself and understates its own residual. China
+  is the case to watch. A leave-one-out fit is the candidate fix for 0.2.
+- The residual inherits A3. Where a dimension's evidence is itself wealth
+  correlated, removing income removes part of the capability signal too.
+- A negative residual reads as blame. "Below what its income predicts" is a
+  statement about a fit, not about effort, and the layer has no user-facing copy
+  yet that says so.
+- The mean absolute rank shift is in places, so it is read against `n` in the
+  same row and is not comparable across dimensions with different country
+  counts.
+- Venezuela and Cuba have no GDP per capita observation in the current
+  ingestion, so they carry no residual on any dimension.
+
+**Overturned by.** Evidence that residual order tracks income anyway. Pearson
+against log GDP per capita is zero by construction under a full-set linear fit,
+so the test is the rank correlation, which is not forced. On this release every
+dimension sits between -0.081 and +0.129 in Spearman terms. A later release
+carrying a dimension above about 0.3 would mean the relation between income and
+that dimension is not linear in log income, and a straight line is the wrong
+model for it. Evidence that readers read a residual
+as a capability score would stop promotion under D65 rather than change the
+method. Evidence that leave-one-out fits move outlier residuals by more than the
+standard error of the estimate would make the full-set fit in 0.1 wrong rather
+than simple.
+
+---
+
+## D69: A country layer replaces the translated edition
+
+*Recorded 2026-08-30. Supersedes the viewer half of D35.*
+
+**Choice.** The viewer publishes one benchmark, in English, and country layers
+beside it. A country layer is a second reading of one country, written in that
+country's language and at that country's depth: its shape, its computed
+agenda, its institution map and its subnational spread. It is not the benchmark
+translated. Brazil is the first and today the only layer, at `/brasil`.
+
+`COUNTRY_LAYERS` in `apps/web/src/lib/layers.ts` is the only place a layer is
+declared: the country, the slug, the language, the section order and the
+labels. Every address, the nav between the layer's pages, the way back out to
+the comparison, and the gate on which languages a country's pages may render
+in, all read that registry.
+
+The Portuguese mirror is gone: `/pt`, the Portuguese agenda list over all 52
+countries, and the translated method, glossary, limits and decisions pages.
+Every one of those addresses now redirects into the layer or back into the
+ground layer. The home page no longer changes language with `Accept-Language`,
+the country agenda no longer honours `?lang=`, and the header carries no
+language control. A lexicon still renders any country, but a rendered lexicon
+with no page behind it is not a published thing, so the feed drops those
+entries.
+
+No country layer appears in the sections at the top of the site, and no layer
+has a nav of its own. A layer serves one country's audience and is reached from
+that country. Where it sits in the navigation is settled by D73, which gives
+the whole viewer one tree: a layer is a reading of its country, beside the
+English one.
+
+The ground-layer half of D35 stands unchanged. Ids, registry definitions, JSON
+output and the method documents stay English, and the layer reads exactly those
+files, so a claim it makes can be checked against its source.
+
+**Why.** A translated edition promises a second complete site and cannot keep
+it. Ours mirrored nine pages of a growing site, and the mirror drifted the
+moment either side moved, while the pages a Brazilian institution actually
+needs, the institution map and the state spread, had no home in either
+language. A layer inverts that cost: it grows only where the project has done
+country-specific work, and its existence is evidence that the work was done. It
+also states the audience honestly. The benchmark's subject is the comparison,
+and a reader who wants Brazil is a sub-audience, reached from Brazil rather
+than from the top of the site.
+
+**Cost.** Brazil's pages exist twice, once in the comparison and once in the
+layer, and the two can disagree in emphasis even though they read the same
+JSON. A Portuguese reader on any other country now gets English with no offer
+of anything else, which is a real loss for the 51 countries that will not get a
+layer. `pnpm bench agenda` still renders `{ISO3}.pt-BR.md` for every country,
+so those files are generated with no page behind them; restricting generation
+to layer countries is separate work. The layer's subnational section is still
+the English ground-layer page at `/country/BRA/local`, declared in the registry
+with a null slug until it is written in Portuguese.
+
+**Overturned by.** A second lusophone or hispanophone country layer whose
+sections turn out to be identical to Brazil's, which would show that what we
+called country-specific work was a language after all. Evidence that readers
+arriving from a Portuguese search reach the English home and leave, which would
+justify an entry offer on the ground layer rather than only inside Brazil's
+pages. A partner institution that needs the method and limits documents in
+Portuguese in order to review the framework, which would justify translating
+those two documents as documents rather than restoring an edition.
+
+---
+
+## D70: A comparison is an address, and one country in it is the reference
+
+*Recorded 2026-08-30.*
+
+**Choice.** The viewer publishes a top-level comparison at `/compare`. It holds
+one reference country plus up to three others, and the whole selection lives in
+the path: `/compare/BRA-IDN-ZAF`. The first code is the reference. Every other
+column is read as a distance from it, and moving a country to the front changes
+the reading without changing a number.
+
+`compareHref` and `readCompareCodes` in `apps/web/src/lib/links.ts` are the only
+places the shape is written or parsed, as D46 requires. The parser is forgiving
+in the ways a person writing a URL is: hyphens, slashes and commas all separate,
+case does not matter, and a code that is not in the country registry is dropped
+rather than raised. The page then redirects to the canonical hyphen form, so a
+hand-typed address and a shared one are the same page. `COMPARE_MAX` is four.
+
+The picker writes the address and never local state, so every selection a reader
+builds is a link they can send. The page reads the country files rather than the
+index, because it goes down to the indicator rows; four files is a bounded read
+and never the list D27 forbids.
+
+Four shapes are not stacked on one radar. Each country gets its own card with
+the reference drawn behind it as a muted outline. Comparison stays in the
+tables: nine capability rows with the gap from the reference under each score,
+confidence in its own table, trend in a third, and then every indicator in the
+registry with each country's normalised chip and published value.
+
+`Reference country` is a glossary entry, because the page invents the term.
+
+**Why.** A score in this benchmark only means something against other countries,
+and until now the viewer offered two ways to get there: one comparator behind a
+selector on a country profile, which vanished when the reader navigated away, and
+one capability across all 52 countries. Neither answers the question a reader
+actually arrives with, which is how a small set of countries differ across the
+whole profile. Putting the selection in the path makes that reading a citable
+object: a researcher can send `/compare/BRA-IDN` into a document and it opens the
+same page for everybody.
+
+The reference is named rather than implied because a table of four columns with
+no stated baseline invites the reader to invent one, usually the highest column,
+which is the ranking this project withholds. Naming it makes the arithmetic
+explicit and reversible.
+
+**Cost.** The page is the only surface that loads several country files at once,
+so it is the heaviest page in the viewer, and the indicator section grows with
+the registry. A four-country comparison is wide on a phone: the tables scroll
+horizontally inside their own containers rather than reflowing. The reference
+also carries a risk the picker cannot remove, which is that a reader treats the
+reference country as a target instead of a baseline. The glossary entry and the
+column label say it is not; nothing enforces it.
+
+Combinations are not in the sitemap. 52 countries make 1,326 pairs before any
+triple, and a crawl map that carried them would drown the pages that are actually
+published. Only `/compare` is listed.
+
+**Overturned by.** Evidence that readers build comparisons and never send them,
+which would make the address a cost with no benefit and argue for local state and
+a shorter page. A reader study showing that the reference column is read as a
+target would force the gap column out, leaving four independent columns. A fifth
+country asked for often enough would mean the page is being used as a table, and
+the answer to that is the flat CSV rather than a wider page.
+
+## D71: One inbox, and support is a page on both layers
+
+*Recorded 2026-08-30.*
+
+**Choice.** The viewer publishes one communication page, `/contact`, and one
+support page per layer: `/support` on the ground layer and `/brasil/apoie`
+inside Brazil's layer. `supportHref` and `contactHref` in
+`apps/web/src/lib/links.ts` are the only places those addresses are written, as
+D46 requires, and `support` joins `LayerSectionId` in
+`apps/web/src/lib/layers.ts`, so a layer either holds its own reading of the
+page or falls back to the ground-layer one through the same map every other
+section uses.
+
+The support pages name three things and no more: use the benchmark, contribute
+to it, fund a named piece of it. Each way ends at an address a reader can act on
+today, and every invitation to write ends at `/contact` carrying a topic in the
+query string.
+
+`/api/contact` validates `ContactSubmission` from
+`packages/core/src/model/contact.ts`, redeems a Turnstile token when the keys
+are set, and forwards the lead to core.envisioning.com over an HMAC-signed
+request through `apps/web/src/lib/core-api.ts`. It stores nothing in this
+repository. The payload is the one envisioning.com and event-bff already send,
+including the two traps those repositories document: `sourcePage` is never sent,
+because Core answers 500 when it is present, and an empty `title` is replaced
+with a placeholder, because Core rejects a blank one. Without
+`INTERNAL_REQUEST_SECRET` the route answers 503 rather than pretending to send.
+
+**Why.** A benchmark that asks institutions to use it, argue with it and fund it
+has to say where each of those goes. Until now the site named the issue tracker
+and nothing else, so an institution with a budget line and no GitHub account had
+no address at all.
+
+One inbox rather than a form per page, because a second form is a second payload
+to keep in step and a second place a message can go unread. The message reaches
+the CRM that already fans a lead out to the sender's confirmation mail, the team
+notification and Slack, so nothing new has to be built or watched. Nothing is
+stored here on purpose: a dispute is published beside the number it argues with,
+which is why `/api/challenge` writes to disk, and an enquiry is private, which
+is why this one does not.
+
+Two support pages rather than one translated page, for the reason D69 gives.
+Funding is the most local thing on the site. The ground page names research
+grants and multilateral budgets in general; the Brazilian page names the windows
+a Brazilian institution actually holds, and that list is not a translation of
+anything.
+
+**Cost.** The route depends on a service outside this repository, so the form
+fails when Core does, and the failure is only visible in the logs. The pages
+name funding venues that change, which is prose that will go stale and that no
+test catches. Adding `support` to `LayerSectionId` means every future layer has
+to answer whether it holds its own support page, even where the ground-layer one
+would do. The contact form is English on a page a Portuguese reader can reach;
+the Brazilian page says so and says the reply comes in Portuguese, which is a
+statement about how the team behaves rather than something the code enforces.
+
+**Overturned by.** Messages arriving that the CRM cannot route, which would
+argue for a repository-side record the way disputes have one. A second country
+layer whose institutions want a support page identical to the ground-layer one,
+which would make the per-layer section the wrong shape and argue for one page
+with a country-specific funding block. Evidence that readers use the form to
+file objections about specific scores, which would mean the split between
+`/contact` and `/challenge` is legible to us and not to them.
+
+## D72: Agenda items carry navigation to related institutions
+
+*Recorded 2026-08-30.* Extends D35 and D54.
+
+**Choice.** Each dimension-level item in a generated country agenda carries an
+`institutionIds` array. The ids point to nodes in that country's
+`data/institutions/{ISO3}.json` network. The array is computed from the node's
+existing `dimensions` field, which is already the curated navigation link from
+an institution to an NCB question. Countries without an institutional network
+carry an empty array. The links are explanatory navigation only: they do not
+add evidence, alter a score or change confidence.
+
+**Why.** The agenda and institutional map previously met only through a reader
+who knew both files. The new field makes the path from a current agenda item to
+the institutions worth investigating explicit, while keeping one mapping to
+curate. Brazil is the first test: its agenda now carries the ids of the
+institutions tagged for each of the nine dimensions.
+
+**Cost.** A broad dimension can point to many institutions, especially in
+Brazil's scaffolded state layer. The ids say where to look, not which actor is
+responsible for a specific gap or that it delivered well. A future item-level
+relationship may need a more specific, sourced link when the agenda stops being
+dimension-level.
+
+**Overturned by.** Evidence that the node dimension tags are too broad to help
+readers navigate, which would justify a separately curated agenda relationship
+with its own source and scope. A country layer whose agenda items are more
+specific than dimensions would justify adding stable item ids before extending
+the link.
+
+---
+
+## D73: Navigation is one tree, resolved against the path, drawn as a breadcrumb and tabs
+
+*Recorded 2026-08-30. Supersedes the nav rules in D69 and folds in the method
+subnav.*
+
+**Choice.** The viewer has one navigation tree, in `apps/web/src/lib/nav.ts`,
+and one rule for what is current. `navRows` walks it against the current path
+and returns the rows to draw; `HeaderNav` draws them and nothing else in the
+viewer draws navigation. Every row sits in the header.
+
+The tree is four deep and the walk stops there:
+
+1. the sections
+2. the country you are in
+3. which reading of it, where the project has written more than one
+4. the pages of that reading
+
+It reaches the reader as two bands rather than four rows. Everything above the
+deepest level is a breadcrumb in the header; the deepest level is a tab strip
+on its own rule under the header. Stacking four nav rows failed a look test:
+three levels each drew the same lime underline for current, so nothing said
+which one was the deepest, and two adjacent rows read as one group. The
+breadcrumb and the tab bar are borrowed shapes, and the borrowing is the point.
+A reader already knows what a slash-separated trail means and what a tab does,
+so neither has to be learned.
+
+A trail of one crumb repeats the section already marked in the row above it, so
+it does not render. Method and Capabilities go straight from their section to
+their tabs, and the breadcrumb appears only where there is a trail to state.
+
+The markup is copied in rather than installed, the way `Icon.tsx` copies Lucide
+paths. Both are plain elements with Tailwind classes.
+
+A node declares how it claims a path and what opens under it. Countries has 52
+children and no control can show them, so its child is resolved from the path:
+the crumb names the one country you are in, never the set. Method and
+Capabilities enumerate their children, because nine fits in a tab strip.
+
+A country layer is a reading of that country and sits beside the English one,
+never under its pages. That is what keeps the tree four deep rather than five,
+and it is also what the layer is: another way to read the same country. Both
+readings render in the same crumb, separated by a middot rather than a slash,
+because they are alternatives at one level and not steps in a trail. A country
+with one reading skips that level, so its trail ends at the country.
+
+A crumb marks its selection only when it holds more than one node. A lone crumb
+is a step, and a step is an ancestor of the current page rather than the page
+itself, so it carries no marker. A crumb offering both readings marks the
+selected one with the same lime underline the sections and the tabs use, which
+keeps one meaning for that mark across the whole nav and stops the selection
+resting on a colour difference alone.
+
+Because the rows render in the header, above every layout that could open a
+file, which surfaces a country has must be knowable without touching the
+filesystem. `hasLocalDestination` already read the layer registry;
+`INSTITUTION_MAPS` in `apps/web/src/lib/layers.ts` now names the countries whose
+institution map is published.
+
+This replaces three mechanisms that each had their own idea of what counted as
+current: `PRIMARY_NAV` with `primaryNavOwns`, `METHOD_SUBNAV` with
+`methodSubnavOwns`, and `CountrySubnav` with `countrySubnavOwns`. The first two
+rendered in the header and the third in the page body, so the site had two
+places a reader had to look to find out where they were.
+
+**Why.** Three ownership rules is three chances to disagree, and they did: a
+country page lit Countries in the header while its own row of pages appeared
+somewhere else entirely, and the layer arrived with a fourth rule. One tree
+makes the depth a property of the structure rather than of whichever component
+happened to render. It also forces the honest question at every node, which is
+what a level means: section, then which reading of which country, then which
+page. A level that cannot answer that does not belong in the nav.
+
+**Costs.** The header carries a breadcrumb under the sections, and a tab strip
+sits beneath it, where a country's pages used to sit at the top of the page
+body. The tab strip is a second band with its own rule, so the site has two
+horizontal rules above the content instead of one. `INSTITUTION_MAPS` is a hand-maintained list that can fall out of
+step with `data/institutions/*.json`; a stale entry costs a link to a page that
+says the country is not mapped yet, which is a state that page already renders.
+Pages outside the seven sections, `/support`, `/contact` and the comparison's
+own deep links, light nothing at level one except where a node claims them, so
+a new top-level page has to be placed in the tree or it will read as orphaned.
+
+**Overturned by.** A fifth level that cannot be collapsed into a reading or a
+page, which would mean the four-deep cap is wrong rather than the content.
+Evidence that readers do not read the middot crumb as a choice between
+readings, which would justify a labelled switcher instead. A country whose
+pages do not fit in one tab strip, which would justify the docs-site shape of
+moving the lower levels into a left rail.
+
 ## D74: Brazil's institution map uses an explicit inclusion rule and a federative pilot
 
 *Recorded 2026-08-30. Extends D56 and D58.*

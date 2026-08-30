@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
-import { confidenceBand, DIMENSIONS, DIMENSION_LABELS, isThinEvidence } from '@ncb/core'
+import { confidenceBand, DIMENSIONS, DIMENSION_LABELS } from '@ncb/core'
 import type { Dimension } from '@ncb/core'
-import { Distribution, type DistributionPoint } from '@/components/Distribution'
+import { FlagField, type FlagFieldPoint } from '@/components/FlagField'
 import { EmbedShell, embedTheme } from '@/components/EmbedShell'
 import { CountryLabel, FrameNote, PageTitle } from '@/components/ui'
 import { loadIndex } from '@/lib/data'
@@ -29,17 +29,18 @@ export default async function CompareEmbedPage({
   const focal = data?.countries.find((country) => country.iso3 === iso3)
   if (!data || !focal) notFound()
 
-  const points: DistributionPoint[] = data.countries.flatMap((country) => {
+  const points: FlagFieldPoint[] = data.countries.flatMap((country) => {
     const result = country.dimensions[dimension]
     if (result?.score === null || result?.score === undefined) return []
     const band = confidenceBand(result.confidence)
     return [{
       key: country.iso3,
+      iso3: country.iso3,
       label: country.country,
       value: result.score,
+      confidence: result.confidence,
       detail: `${band.label} evidence`,
       focal: country.iso3 === focal.iso3,
-      hollow: isThinEvidence(result.confidence),
     }]
   })
 
@@ -52,7 +53,7 @@ export default async function CompareEmbedPage({
           <CountryLabel iso3={focal.iso3} name={focal.country} /> compared with the countries in
           the frame
         </p>
-        <Distribution points={points} />
+        <FlagField points={points} />
         <FrameNote />
         <p className="embed-source">
           <a href={absoluteHref(capabilityHref(dimension))}>

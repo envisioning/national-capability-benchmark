@@ -1,5 +1,13 @@
-import { DIMENSIONS, EVIDENCE_STATUS_LABELS } from '@ncb/core'
+import { COUNTRY_NAMES, DIMENSIONS, EVIDENCE_STATUS_LABELS } from '@ncb/core'
 import type { Dimension, EvidenceStatus, Lang } from '@ncb/core'
+import {
+  countryLayer,
+  layerSection,
+  servesLanguage,
+  type CountryLayer,
+  type LayerSection,
+  type LayerSectionId,
+} from '@/lib/layers'
 
 /**
  * Where a named thing lives in the viewer. One rule per kind of thing, so a
@@ -7,12 +15,103 @@ import type { Dimension, EvidenceStatus, Lang } from '@ncb/core'
  * page, and a new page moves every reference to it at once.
  */
 
+/** Every country in the benchmark, each drawn as its nine-dimension shape. */
+export const countriesHref = '/countries'
+
 /** The full country profile. Ground layer, English. */
 export const countryProfileHref = (iso3: string): string => `/country/${iso3}`
 
 /** The local destination view for countries that have one. */
 export const countryLocalHref = (iso3: string): string =>
   `${countryProfileHref(iso3.toUpperCase())}/local`
+
+/**
+ * Whether this country has a local destination view.
+ *
+ * A local reading is one section of a country layer, so the layer registry
+ * answers this. A country without a layer never gets a link to a page that
+ * answers that it does not exist. See D69.
+ */
+export const hasLocalDestination = (iso3: string): boolean => {
+  const layer = countryLayer(iso3)
+  return layer ? layerSection(layer, 'local') !== null : false
+}
+
+/** The front page of one country's layer. */
+export const countryLayerHref = (layer: CountryLayer): string => `/${layer.slug}`
+
+/**
+ * One section of one layer.
+ *
+ * A section with a slug lives inside the layer. A section without one is still
+ * a ground-layer page that the layer links to, so the address comes from the
+ * helper that owns it. See D69.
+ */
+export function layerSectionHref(layer: CountryLayer, section: LayerSection): string {
+  if (section.slug) return `${countryLayerHref(layer)}/${section.slug}`
+  const ground: Record<LayerSectionId, string> = {
+    agenda: agendaHref(layer.iso3),
+    institutions: institutionNetworkHref(layer.iso3),
+    local: countryLocalHref(layer.iso3),
+    support: supportHref,
+  }
+  return ground[section.id]
+}
+
+/**
+ * Two to four countries read side by side.
+ *
+ * The address carries the whole selection, so a comparison is a thing a reader
+ * can send to somebody else. The first code is the reference country: it keeps
+ * the filled shape and every other column is read as a difference from it. See
+ * D70.
+ */
+export const compareBaseHref = '/compare'
+
+/** One reference country plus at most three others. */
+export const COMPARE_MAX = 4
+
+/** Drop repeats while keeping the order the caller asked for. */
+function uniqueCodes(codes: readonly string[]): string[] {
+  const seen = new Set<string>()
+  const out: string[] = []
+  for (const code of codes) {
+    const upper = code.toUpperCase()
+    if (seen.has(upper)) continue
+    seen.add(upper)
+    out.push(upper)
+  }
+  return out
+}
+
+/**
+ * The canonical address for one selection. Codes are joined with hyphens in
+ * the order given, so `/compare/BRA-IDN` and `/compare/IDN-BRA` are different
+ * readings of the same pair and each says which country is the reference.
+ */
+export function compareHref(iso3s: readonly string[]): string {
+  const codes = uniqueCodes(iso3s).slice(0, COMPARE_MAX)
+  return codes.length === 0 ? compareBaseHref : `${compareBaseHref}/${codes.join('-')}`
+}
+
+/**
+ * Read a selection out of the path.
+ *
+ * A hand-written address is expected here, so the parser is forgiving in the
+ * ways a person is: hyphens, slashes and commas all separate, case does not
+ * matter, and anything that is not a country in the registry is dropped rather
+ * than raised. What survives is capped at `COMPARE_MAX`, because a fifth column
+ * is a table and this page is a comparison.
+ */
+export function readCompareCodes(segments: readonly string[] | undefined): string[] {
+  const raw = (segments ?? []).flatMap((segment) =>
+    decodeURIComponent(segment).split(/[-,+\s]+/),
+  )
+  const known = raw
+    .map((code) => code.toUpperCase())
+    .filter((code) => /^[A-Z]{3}$/.test(code) && code in COUNTRY_NAMES)
+  return uniqueCodes(known).slice(0, COMPARE_MAX)
+}
 
 /** The methodology overview. */
 export const methodHref = '/method'
@@ -47,11 +146,24 @@ export const ogDimensionHref = (dimension: Dimension): string => `/og/dimension/
 /** Static social card for one country's capability agenda. */
 export const ogAgendaHref = (iso3: string): string => `/og/agenda/${iso3}`
 
-/** One country's capability agenda, in the language the reader is already in. */
-export const agendaHref = (iso3: string, lang: Lang = 'en'): string =>
-  lang === 'pt-BR'
-    ? `/country/${iso3.toUpperCase()}/agenda?lang=pt-BR`
-    : `/country/${iso3.toUpperCase()}/agenda`
+/** One country's capability agenda. Ground layer, English. */
+export const agendaHref = (iso3: string): string => `/country/${iso3.toUpperCase()}/agenda`
+
+/**
+ * Where one country's agenda can be read in one language, or null when it
+ * cannot.
+ *
+ * A lexicon can render any country, but only a country with a layer in that
+ * language has a page for it, and that page is inside the layer. Nothing else
+ * is published twice. See D69.
+ */
+export function agendaHrefInLanguage(iso3: string, lang: Lang): string | null {
+  if (lang === 'en') return agendaHref(iso3)
+  if (!servesLanguage(iso3, lang)) return null
+  const layer = countryLayer(iso3)
+  const section = layer ? layerSection(layer, 'agenda') : null
+  return layer && section ? layerSectionHref(layer, section) : null
+}
 
 /** Embeddable radar for one country profile. */
 export const embedCountryHref = (iso3: string): string =>
@@ -141,6 +253,16 @@ export function patternFiltersQuery(filters: PatternFilters): string {
   return query ? `?${query}` : ''
 }
 
+/**
+ * The agenda index, narrowed or whole.
+ *
+ * The page carries a table over the same delivery corpus /patterns groups into
+ * cards, so it reads and writes the same filter contract. One parser, one
+ * builder, two surfaces. See D46.
+ */
+export const agendasHref = (filters: PatternFilters = NO_PATTERN_FILTERS): string =>
+  `/agenda${patternFiltersQuery(filters)}`
+
 /** The list of documented deliveries, narrowed or whole. */
 export const patternsHref = (filters: PatternFilters = NO_PATTERN_FILTERS): string =>
   `/patterns${patternFiltersQuery(filters)}`
@@ -168,7 +290,7 @@ export const robotsHref = '/robots.txt'
 /** One dated country-of-the-week digest. */
 export const digestHref = (date: string): string => `/digest/${date}.html`
 
-const DEFAULT_SITE_ORIGIN = 'https://ncb-envisioning.vercel.app'
+const DEFAULT_SITE_ORIGIN = 'https://ncb.envisioning.com'
 
 /** The canonical origin used in machine-readable links. */
 export const siteOrigin = (): string =>
@@ -188,100 +310,25 @@ export const challengeApiHref = (iso3: string, dimension: Dimension): string =>
 /** What the benchmark is, who built it, and where to start reading. */
 export const aboutHref = '/about'
 
-/** Methodology pages that share the secondary nav under the header. */
-export const METHOD_SECTION_HREFS = [
-  '/method',
-  '/indicators',
-  '/sources',
-  '/diagnostics',
-  '/delphi',
-  '/patterns',
-  '/limits',
-  '/decisions',
-  '/glossary',
-] as const
+/**
+ * How an institution can back the work: use it, contribute to it, fund it.
+ *
+ * The ground-layer page is the comparative one and a country layer may hold a
+ * second reading of it, written for that country's institutions and its own
+ * funding venues. Both end at the same contact page. See D71.
+ */
+export const supportHref = '/support'
 
-export type MethodSectionHref = (typeof METHOD_SECTION_HREFS)[number]
+/**
+ * The one place a reader writes to the project.
+ *
+ * Every invitation to get in touch, on either layer, points here. A second
+ * form is a second inbox and a second thing to keep in sync. See D71.
+ */
+export const contactHref = '/contact'
 
-/** Ordered walk through how the benchmark is built and audited. */
-export const METHOD_SUBNAV: { href: MethodSectionHref; label: string }[] = [
-  { href: '/method', label: 'Overview' },
-  { href: '/indicators', label: 'Indicators' },
-  { href: '/sources', label: 'Sources' },
-  { href: '/diagnostics', label: 'Diagnostics' },
-  { href: '/delphi', label: 'Delphi panel' },
-  { href: '/patterns', label: 'Patterns' },
-  { href: '/limits', label: 'Limits' },
-  { href: '/decisions', label: 'Decisions' },
-  { href: '/glossary', label: 'Glossary' },
-]
-
-/** Whether the current path belongs to the method section. */
-export function isMethodSection(pathname: string): boolean {
-  return METHOD_SECTION_HREFS.some(
-    (href) => pathname === href || (href !== '/method' && pathname.startsWith(`${href}/`)),
-  )
-}
-
-/** Which method subnav entry owns the current path. */
-export function methodSubnavOwns(href: MethodSectionHref, pathname: string): boolean {
-  if (href === '/method') return pathname === '/method'
-  return pathname === href || pathname.startsWith(`${href}/`)
-}
-
-/** Primary nav: reader lenses plus the method hub and challenge entry. */
-export const PRIMARY_NAV = [
-  { href: '/', label: 'Countries' },
-  { href: capabilitiesHref, label: 'Capabilities' },
-  { href: '/agenda', label: 'Agendas' },
-  { href: thesisHref, label: 'Thesis' },
-  { href: '/method', label: 'Method' },
-  { href: challengeHref, label: 'Challenge' },
-  { href: aboutHref, label: 'About' },
-] as const
-
-export type PrimaryNavHref = (typeof PRIMARY_NAV)[number]['href']
-
-/** Whether a primary nav entry owns the current path. */
-export function primaryNavOwns(href: PrimaryNavHref, pathname: string): boolean {
-  if (href === '/') {
-    return pathname === '/' || pathname.startsWith('/country')
-  }
-  if (href === capabilitiesHref) {
-    return pathname === capabilitiesHref || pathname.startsWith(`${capabilitiesHref}/`)
-  }
-  if (href === '/agenda') {
-    return (
-      pathname === '/agenda' ||
-      pathname.startsWith('/agenda/') ||
-      pathname === '/pt/agenda' ||
-      pathname.startsWith('/pt/agenda/')
-    )
-  }
-  if (href === '/method') {
-    return isMethodSection(pathname)
-  }
-  if (href === aboutHref) {
-    return pathname === aboutHref
-  }
-  if (href === challengeHref) {
-    return pathname === challengeHref
-  }
-  return pathname === href
-}
-
-/** Footer columns: same destinations as the header, grouped for a vertical layout. */
-export const FOOTER_NAV_GROUPS = [
-  {
-    label: 'Explore',
-    items: PRIMARY_NAV.filter((entry) => entry.href !== '/method' && entry.href !== challengeHref),
-  },
-  { label: 'Method', items: METHOD_SUBNAV },
-  {
-    label: 'Participate',
-    items: [{ href: challengeHref, label: 'Challenge' }],
-  },
-] as const
+/** The endpoint the contact form posts to. */
+export const contactApiHref = '/api/contact'
 
 /** Who publishes the data and how each series is fetched. */
 export const sourcesHref = '/sources'
@@ -314,42 +361,5 @@ export const decisionsHref = '/decisions'
  */
 export const decisionHref = (id: string): string => `${decisionsHref}#${id}`
 
-/**
- * The same page in the other language, where one exists.
- *
- * Language switching is not navigation: the Portuguese edition mirrors the
- * interpretation-layer pages that have been translated, so the switch is
- * contextual and appears only where a counterpart page exists. One rule here,
- * one control in the layout, no per-page switch links. See D35.
- */
-export function languageCounterpart(
-  pathname: string,
-  search = '',
-): { href: string; label: string; lang: Lang } | null {
-  if (pathname === '/' || pathname === '') {
-    const portuguese = new URLSearchParams(search).get('lang')?.toLowerCase() === 'pt-br'
-    return portuguese
-      ? { href: '/?lang=en', label: 'English', lang: 'en' }
-      : { href: '/pt', label: 'Português', lang: 'pt-BR' }
-  }
-  if (pathname === '/pt') return { href: '/?lang=en', label: 'English', lang: 'en' }
-  /* The Portuguese edition's reading of the agendas starts at /pt. */
-  if (pathname === '/agenda') return { href: '/pt', label: 'Português', lang: 'pt-BR' }
-  const agenda = pathname.match(/^\/agenda\/([A-Z]{3})$/)
-  if (agenda) return { href: `/pt/agenda/${agenda[1]}`, label: 'Português', lang: 'pt-BR' }
-  const ptAgenda = pathname.match(/^\/pt\/agenda\/([A-Z]{3})$/)
-  if (ptAgenda) return { href: `/agenda/${ptAgenda[1]}`, label: 'English', lang: 'en' }
-  if (pathname === '/pt/agenda') return { href: '/agenda', label: 'English', lang: 'en' }
-  const countryAgenda = pathname.match(/^\/country\/([A-Z]{3})\/agenda$/)
-  if (countryAgenda) {
-    const portuguese = new URLSearchParams(search).get('lang')?.toLowerCase() === 'pt-br'
-    return portuguese
-      ? { href: `/country/${countryAgenda[1]}/agenda`, label: 'English', lang: 'en' }
-      : { href: `/country/${countryAgenda[1]}/agenda?lang=pt-BR`, label: 'Português', lang: 'pt-BR' }
-  }
-  const credibility = pathname.match(/^\/(method|decisions|limits|glossary)$/)
-  if (credibility) return { href: `/pt/${credibility[1]}`, label: 'Português', lang: 'pt-BR' }
-  const ptCredibility = pathname.match(/^\/pt\/(method|decisions|limits|glossary)$/)
-  if (ptCredibility) return { href: `/${ptCredibility[1]}`, label: 'English', lang: 'en' }
-  return null
-}
+/** Whether one country's pages may render in one language. Re-exported so a page reads one module. */
+export { servesLanguage }

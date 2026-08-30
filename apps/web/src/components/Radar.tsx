@@ -1,16 +1,10 @@
 'use client'
 
 import { useRef, useState } from 'react'
-import {
-  CONFIDENCE_BANDS,
-  DIMENSIONS,
-  DIMENSION_LABELS,
-  EN,
-  confidenceBand,
-  isThinEvidence,
-} from '@ncb/core'
+import { DIMENSIONS, DIMENSION_LABELS, EN, confidenceBand } from '@ncb/core'
 import type { Dimension, Lexicon } from '@ncb/core'
 import { DIMENSION_ICON, Icon, iconMarkup } from '@/components/Icon'
+import { evidenceOpenness, isThinConfidence } from '@/lib/evidence'
 import { ConfidenceBar, Score } from '@/components/ui'
 import { radarAngle, radarPoint } from '@/components/radarGeometry'
 import { ChallengeLink, ContestedBadge } from '@/components/ChallengeLink'
@@ -70,31 +64,21 @@ function wedgePath(index: number, radius: number): string {
 const SEGMENTS = 14
 const DASH = 2.2
 /**
- * Solid at or above the usable band's floor, read from the bands so the chart
- * cannot drift from the thresholds the tables use. Fully open at OPEN_AT, a
- * display tuning deliberately below the thin band's floor, so the most broken
- * dashing is reached only deep inside very thin evidence. See D32.
- */
-const SOLID_AT = CONFIDENCE_BANDS.find((b) => b.id === 'usable')?.min ?? 0.45
-const OPEN_AT = 0.15
-
-/**
  * The gap between dashes for a given confidence.
  *
  * Zero is a solid line. It grows as the evidence thins, so an edge running from
  * a well-evidenced dimension to a poorly evidenced one comes apart gradually
- * instead of switching state at some threshold nobody can see.
+ * instead of switching state at some threshold nobody can see. The ramp itself
+ * is shared with the flag bubble, so the two charts cannot disagree about which
+ * countries are drawn solid.
  */
 function dashGap(confidence: number | null): number {
-  if (confidence === null) return 0
-  if (confidence >= SOLID_AT) return 0
-  const t = Math.min(1, Math.max(0, (SOLID_AT - confidence) / (SOLID_AT - OPEN_AT)))
-  return 0.6 + t * 2.6
+  const open = evidenceOpenness(confidence)
+  return open === 0 ? 0 : 0.6 + open * 2.6
 }
 
 function thinAt(series: RadarSeries, i: number): boolean {
-  const c = series.confidences?.[i]
-  return c === null || c === undefined ? false : isThinEvidence(c)
+  return isThinConfidence(series.confidences?.[i])
 }
 
 function valueAt(series: RadarSeries, i: number): number | null {
@@ -175,6 +159,7 @@ export function Radar({
   labels = 'full',
   lex = EN,
   interactive = true,
+  hoverLabels = false,
   onSelectDimension,
   contestedCounts = {},
 }: {
@@ -192,12 +177,21 @@ export function Radar({
    * exists for, so they turn it off and stay a picture.
    */
   interactive?: boolean
+  /** Reveal all dimension names when a compact, passive radar is hovered. */
+  hoverLabels?: boolean
   /** When given, clicking an axis opens that dimension. */
   onSelectDimension?: (dimension: Dimension) => void
   /** Contested counts are computed on the server and passed as a small map. */
   contestedCounts?: Record<string, number>
 }) {
   const g = GEOMETRY[labels]
+  const passiveHoverLabels = !interactive && hoverLabels && labels === 'icons'
+  /* Reserve the word-label margin from the start so hover can add the names
+   * without resizing the chart underneath the pointer. The plotted shape keeps
+   * the compact icon geometry. */
+  const view = passiveHoverLabels
+    ? { ...g, padX: GEOMETRY.full.padX, padRight: GEOMETRY.full.padRight }
+    : g
   const at = (i: number, value: number) => radarPoint(i, value, { size: SIZE, radius: g.radius })
   const nameOf = (d: Dimension) => shortLabel(lex.dimensions[d] ?? DIMENSION_LABELS[d])
   const noDataLabel = lex.agenda.noScore
@@ -264,13 +258,13 @@ export function Radar({
   }
 
   return (
-    <div>
+    <div className={passiveHoverLabels ? 'group/radar' : undefined}>
       {/* The chart carries its name in `aria-label` rather than in an SVG
           `<title>`, which the browser renders as a hover tooltip. A tooltip
           over a chart that is itself a hover surface fires on every reading
           and covers the shape it is naming. */}
       <svg
-        viewBox={`${-g.padX} 0 ${SIZE + g.padX + g.padRight} ${SIZE}`}
+        viewBox={`${-view.padX} 0 ${SIZE + view.padX + view.padRight} ${SIZE}`}
         className="h-auto w-full"
         role="img"
         aria-label={`${series.map((s) => s.label).join(' compared with ')}. ${described}`}
@@ -414,15 +408,27 @@ export function Radar({
         {labels === 'icons' &&
           DIMENSIONS.map((d, i) => {
             const [x, y] = at(i, g.ring)
+            const anchor = x < CENTER - 4 ? 'end' : x > CENTER + 4 ? 'start' : 'middle'
+            const stacked = anchor === 'middle'
+            const side = anchor === 'end' ? -1 : 1
+            const above = y < CENTER
             return (
-              <AxisIcon
-                key={d}
-                d={d}
-                x={x}
-                y={y}
-                size={13}
-                opacity={active === i ? 1 : 0.5}
-              />
+              <g key={d}>
+                <AxisIcon d={d} x={x} y={y} size={13} opacity={active === i ? 1 : 0.5} />
+                {passiveHoverLabels ? (
+                  <text
+                    x={stacked ? x : x + side * 17}
+                    y={stacked ? y + (above ? 3 : -3) : y}
+                    textAnchor={anchor}
+                    dominantBaseline="middle"
+                    fontSize={7.5}
+                    fill="currentColor"
+                    className="pointer-events-none opacity-0 transition-opacity duration-150 group-hover/radar:opacity-100 group-focus-within/radar:opacity-100"
+                  >
+                    {nameOf(d)}
+                  </text>
+                ) : null}
+              </g>
             )
           })}
 

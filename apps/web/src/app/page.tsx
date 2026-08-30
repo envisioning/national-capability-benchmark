@@ -1,34 +1,13 @@
 import Link from 'next/link'
-import { headers } from 'next/headers'
-import { REPO_URL } from '@ncb/core'
-import { Radar } from '@/components/Radar'
-import { ConfidenceTable, ScoreTable } from '@/components/views/ScoreTables'
-import { contestedDisputeCounts } from '@ncb/core'
-import {
-  ConfidenceLegend,
-  CountryLabel,
-  DimensionLegend,
-  Empty,
-  Eyebrow,
-  FrameNote,
-  Headline,
-  Highlight,
-  PageTitle,
-  RadarEvidenceLegend,
-  ScoreLegend,
-  Section,
-} from '@/components/ui'
-import { MISSING_DATA_HINT, loadDisputes, loadIndex } from '@/lib/data'
-import { capabilitiesHref, countryProfileHref } from '@/lib/links'
-import { toProfile } from '@/lib/profile'
-import PortugueseHomePage from './pt/page'
+import { COUNTRIES, DIMENSIONS, DIMENSION_LABELS, DIMENSION_QUESTIONS, REPO_URL } from '@ncb/core'
+import { DIMENSION_ICON, Icon } from '@/components/Icon'
+import { FlagHistogram } from '@/components/FlagHistogram'
+import { Empty, Eyebrow, FrameNote, Headline, Highlight, PageTitle, Section } from '@/components/ui'
+import { MISSING_DATA_HINT, loadIndex } from '@/lib/data'
+import { capabilitiesHref, capabilityHref, countriesHref } from '@/lib/links'
+import { toHistogramProfile } from '@/lib/profile'
 
 export const dynamic = 'force-dynamic'
-
-/** The Portuguese edition is the same page read in the other language. See D35. */
-export const metadata = {
-  alternates: { languages: { 'pt-BR': '/pt' } },
-}
 
 /**
  * Schema.org Dataset markup, so the benchmark is indexable by dataset search
@@ -57,120 +36,101 @@ function datasetJsonLd(data: { generatedAt: string; version?: string }): string 
   return JSON.stringify(json).replace(/</g, '\\u003c')
 }
 
-export default async function Page({
-  searchParams,
-}: {
-  searchParams: Promise<Record<string, string | string[] | undefined>>
-}) {
-  const [requestHeaders, query] = await Promise.all([headers(), searchParams])
-  const requested = Array.isArray(query.lang) ? query.lang[0] : query.lang
-  const portuguese =
-    requested?.toLowerCase() === 'pt-br' ||
-    (requested?.toLowerCase() !== 'en' && requestHeaders.get('accept-language')?.toLowerCase().includes('pt-br'))
-  if (portuguese) return <PortugueseHomePage />
-  const [data, disputes] = await Promise.all([loadIndex(), loadDisputes()])
+/**
+ * The home page is the benchmark, and the benchmark is comparative and
+ * English. It does not change language with the browser: the project publishes
+ * no second copy of itself, so there is nothing to switch to. A country layer
+ * is reached from that country's pages. See D69.
+ */
+export default async function Page() {
+  const data = await loadIndex()
   if (!data || data.countries.length === 0) return <Empty hint={MISSING_DATA_HINT} />
 
-  /* Alphabetical. Any other order on this page would be a ranking, and there is
-   * no headline number to rank by. */
-  const countries = [...data.countries].sort((a, b) => a.country.localeCompare(b.country))
-  const contestedCounts = contestedDisputeCounts(disputes)
+  const profiles = [...data.countries]
+    .sort((a, b) => a.country.localeCompare(b.country))
+    .map(toHistogramProfile)
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: datasetJsonLd(data) }} />
-      <Eyebrow>{countries.length} countries, nine dimensions</Eyebrow>
+      <Eyebrow>{profiles.length} countries, nine capabilities</Eyebrow>
       <PageTitle>What is a country capable of doing?</PageTitle>
       <Headline>
-        Nine capability dimensions, scored from public data and shown as a <Highlight>shape</Highlight>.
-        Each score links to its raw indicators and a separate confidence number.
+        Nine capabilities, scored from public data. Pick one and every country lands on the{' '}
+        <Highlight>same scale</Highlight>, each carrying its own confidence.
       </Headline>
-      <p className="mb-10 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-        New here?{' '}
-        <Link href="/method" className="underline underline-offset-4">
-          method page
-        </Link>{' '}
-        explains the scoring, the{' '}
-        <Link href="/glossary" className="underline underline-offset-4">
-          glossary
-        </Link>{' '}
-        defines the terms, and the{' '}
-        <Link href="/limits" className="underline underline-offset-4">
-          limits page
-        </Link>{' '}
-        records known failures. The{' '}
-        <Link href={capabilitiesHref} className="underline underline-offset-4">
-          capabilities directory
-        </Link>{' '}
-        compares countries by dimension.
-      </p>
-      <p className="-mt-6 mb-10 max-w-3xl text-lg leading-relaxed">
-        The code and data are open.{' '}
-        <a
-          href={REPO_URL}
-          target="_blank"
-          rel="noreferrer"
-          className="underline underline-offset-4"
-        >
-          Open the repository on GitHub
-        </a>
-        .
-      </p>
 
       <Section
-        title="Countries have different profiles"
-        hint="Scores run 0 to 100 using all countries as the frame. There is no composite, so countries with the same average can have different profiles."
+        title="One capability at a time"
+        hint="Switch capability and watch the countries move. A country that sits high on one of these can sit at the floor of the next, which is why there is no overall ranking here."
       >
-        <DimensionLegend />
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {countries.map((c) => {
-            const profile = toProfile(c)
-            return (
-              <Link
-                key={profile.iso3}
-                href={countryProfileHref(profile.iso3)}
-                className="rounded-xl border border-[var(--rule)] p-4 transition-all duration-200 hover:border-[var(--foreground)]"
-              >
-                <div className="mb-2 flex items-baseline justify-between">
-                  <span className="text-xs font-medium">
-                    <CountryLabel iso3={profile.iso3} name={profile.country} />
-                  </span>
-                  <span className="text-xs text-[var(--muted)]">{profile.iso3}</span>
-                </div>
-                <Radar
-                  labels="icons"
-                  interactive={false}
-                  series={[
-                    {
-                      label: profile.country,
-                      values: profile.values,
-                      confidences: profile.confidences,
-                      color: 'var(--primary)',
-                    },
-                  ]}
-                />
-              </Link>
-            )
-          })}
-        </div>
-        <RadarEvidenceLegend interactive={false} />
+        <FlagHistogram profiles={profiles} />
         <FrameNote />
       </Section>
 
       <Section
-        title="The scores in a table"
-        hint="Click any heading to sort."
+        title="The nine capabilities"
+        hint="Each one asks a question the others do not, and each has its own indicators, country comparison and known gaps."
       >
-        <ScoreLegend />
-        <ScoreTable countries={countries} contestedCounts={contestedCounts} />
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {DIMENSIONS.map((dimension) => (
+            <Link
+              key={dimension}
+              href={capabilityHref(dimension)}
+              className="group rounded-xl border border-[var(--rule)] p-5 transition-all duration-200 hover:border-[var(--foreground)]"
+            >
+              <div className="flex items-center gap-3">
+                <Icon name={DIMENSION_ICON[dimension]} size={20} className="text-[var(--muted)]" />
+                <h3 className="text-xl font-medium tracking-tight group-hover:underline">
+                  {DIMENSION_LABELS[dimension]}
+                </h3>
+              </div>
+              <p className="mt-3 text-xs leading-relaxed text-[var(--muted)]">
+                {DIMENSION_QUESTIONS[dimension]}
+              </p>
+            </Link>
+          ))}
+        </div>
       </Section>
 
       <Section
-        title="Score and confidence are separate"
-        hint="Confidence is coverage times recency times source quality. It sits beside the score; missing data lowers coverage and is never imputed."
+        title="Where to go next"
+        hint="The benchmark is built to be argued with, so every number links back to the data and the reasoning behind it."
       >
-        <ConfidenceLegend />
-        <ConfidenceTable countries={countries} />
+        <p className="max-w-3xl text-lg leading-relaxed">
+          <Link href={countriesHref} className="underline underline-offset-4">
+            All {COUNTRIES.length} countries
+          </Link>{' '}
+          reads each one as a nine-dimension shape.{' '}
+          <Link href={capabilitiesHref} className="underline underline-offset-4">
+            The capabilities directory
+          </Link>{' '}
+          carries the full score table. The{' '}
+          <Link href="/method" className="underline underline-offset-4">
+            method page
+          </Link>{' '}
+          explains the scoring, the{' '}
+          <Link href="/glossary" className="underline underline-offset-4">
+            glossary
+          </Link>{' '}
+          defines the terms, and the{' '}
+          <Link href="/limits" className="underline underline-offset-4">
+            limits page
+          </Link>{' '}
+          records where the current data is wrong about the world.
+        </p>
+        <p className="mt-4 max-w-3xl text-lg leading-relaxed">
+          The code and data are open.{' '}
+          <a
+            href={REPO_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="underline underline-offset-4"
+          >
+            Open the repository on GitHub
+          </a>
+          .
+        </p>
       </Section>
     </>
   )

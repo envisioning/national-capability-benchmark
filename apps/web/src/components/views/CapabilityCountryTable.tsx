@@ -1,10 +1,10 @@
 'use client'
 
 import Link from 'next/link'
-import { DIMENSION_LABELS, confidenceBand, isThinEvidence } from '@ncb/core'
+import { DIMENSION_LABELS } from '@ncb/core'
 import type { Dimension } from '@ncb/core'
 import { DataTable } from '@/components/DataTable'
-import { Distribution } from '@/components/Distribution'
+import { FlagField } from '@/components/FlagField'
 import { ConfidenceBar, CountryLabel, Delta, DimensionScore } from '@/components/ui'
 import { countryProfileHref } from '@/lib/links'
 import { ChallengeLink, ContestedBadge } from '@/components/ChallengeLink'
@@ -45,13 +45,15 @@ export function CapabilityCountryTable({
     <>
       {scored.length > 0 ? (
         <div className="mb-8">
-          <Distribution
+          <FlagField
             points={scored.map((row) => ({
               key: row.iso3,
+              iso3: row.iso3,
               label: row.country,
               value: row.score,
-              detail: `${confidenceBand(row.confidence).label} evidence`,
-              hollow: isThinEvidence(row.confidence),
+              confidence: row.confidence,
+              delta: row.delta,
+              href: countryProfileHref(row.iso3),
             }))}
           />
         </div>

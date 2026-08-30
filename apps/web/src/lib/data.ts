@@ -196,11 +196,73 @@ export async function loadDispute(id: string): Promise<DisputeRecord | null> {
  */
 export async function loadInstitutionNetwork(
   iso3: string,
-): Promise<InstitutionNetworkFile | null> {
-  const raw = await readJson<unknown>(PATHS.institutions(iso3))
+): Promise<InstitutionNetworkLoad> {
+  const code = iso3.toUpperCase()
+  const path = PATHS.institutions(code)
+  const label = `data/institutions/${code}.json`
+
+  let text: string
+  try {
+    text = await readFile(path, 'utf8')
+  } catch (error) {
+    const code =
+      typeof error === 'object' && error !== null && 'code' in error
+        ? String(error.code)
+        : undefined
+    return {
+      network: null,
+      error: {
+        kind: code === 'ENOENT' ? 'missing' : 'read',
+        message:
+          code === 'ENOENT'
+            ? `${label} was not found.`
+            : `${label} could not be read.`,
+      },
+    }
+  }
+
+  let raw: unknown
+  try {
+    raw = JSON.parse(text) as unknown
+  } catch (error) {
+    return {
+      network: null,
+      error: {
+        kind: 'invalid_json',
+        message: `${label} is not valid JSON${error instanceof Error ? `: ${error.message}` : '.'}`,
+      },
+    }
+  }
+
   const parsed = InstitutionNetworkFile.safeParse(raw)
-  return parsed.success ? parsed.data : null
+  if (!parsed.success) {
+    const issues = parsed.error.issues.slice(0, 3).map((issue) => {
+      const location = issue.path.length ? issue.path.join('.') : 'root'
+      return `${location}: ${issue.message}`
+    })
+    const more = parsed.error.issues.length > issues.length
+      ? ` ${parsed.error.issues.length - issues.length} more validation error(s).`
+      : ''
+    return {
+      network: null,
+      error: {
+        kind: 'invalid_schema',
+        message: `${label} failed validation. ${issues.join(' ')}${more}`,
+      },
+    }
+  }
+
+  return { network: parsed.data, error: null }
 }
+
+export type InstitutionNetworkError = {
+  kind: 'missing' | 'read' | 'invalid_json' | 'invalid_schema'
+  message: string
+}
+
+export type InstitutionNetworkLoad =
+  | { network: InstitutionNetworkFile; error: null }
+  | { network: null; error: InstitutionNetworkError }
 
 /**
  * One subnational corroboration fixture, kept outside the national score

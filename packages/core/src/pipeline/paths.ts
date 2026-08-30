@@ -32,7 +32,13 @@ export const FILES = {
   report: resolve(OUT_DIR, 'report.md'),
   velocity: resolve(OUT_DIR, 'velocity.json'),
   leverage: resolve(OUT_DIR, 'leverage.json'),
+  residual: resolve(OUT_DIR, 'residual.json'),
   datapackage: resolve(OUT_DIR, 'datapackage.json'),
+}
+
+/** One country-specific institutional network. */
+export function institutionFile(iso3: string): string {
+  return resolve(INSTITUTIONS_DIR, `${iso3.toUpperCase()}.json`)
 }
 
 /** One file per country, so a page loads what it needs and nothing else. See D27. */
