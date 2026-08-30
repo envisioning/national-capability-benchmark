@@ -153,6 +153,9 @@ Estas são mudanças institucionais brasileiras documentadas que o framework reg
 - **Telebras, the telecom system that was dismantled** (Adaptação). Created in 1972, Telebras coordinated Brazil's state telecom system until its 1998 privatisation, when 54 concessionaires were split out and the state moved from operating the network to regulating and universalising service.
 - **EMBRAPII, industry-led applied research** (Experimentação). Created in 2013, EMBRAPII connects companies to public and private research units through shared-risk funding, and it contracted a record 811 new industrial research projects in 2025.
 
+- **SIBRATEC, the documented innovation-centre network** (Agência). The Ministry of Science and Technology implemented SIBRATEC as a national system of 56 research and development networks, including 14 innovation-centre networks, 20 technological-service networks and 22 extension networks organized across the states to support innovation in micro and small firms.
+- **SUS health councils, permanent public participation** (Propósito compartilhado). Since Law 8.142 established them in 1990, Brazil's SUS has required permanent, deliberative health councils at the national, state and municipal levels, with users holding 50 percent of seats and health workers and government or providers holding 25 percent each.
+
 ## Contribua
 
 Preencha uma lacuna, registre uma evidência ou conteste um indicador em https://github.com/envisioning/national-capability-benchmark. Os documentos explicam o método e suas decisões.

@@ -1,6 +1,6 @@
 # Capability agenda: Brazil
 
-*Generated 2026-08-29*
+*Generated 2026-08-30*
 
 The frame includes 52 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
@@ -152,6 +152,9 @@ These are documented Brazilian institutional changes the framework files as evid
 - **CGEE, the strategic studies center** (Anticipation). Created in 2001, the Centro de Gestão e Estudos Estratégicos was designed to produce prospective studies and long-term recommendations for Brazilian science, technology and innovation policy, with 273 researchers and specialists signing its creation record.
 - **Telebras, the telecom system that was dismantled** (Adaptability). Created in 1972, Telebras coordinated Brazil's state telecom system until its 1998 privatisation, when 54 concessionaires were split out and the state moved from operating the network to regulating and universalising service.
 - **EMBRAPII, industry-led applied research** (Experimentation). Created in 2013, EMBRAPII connects companies to public and private research units through shared-risk funding, and it contracted a record 811 new industrial research projects in 2025.
+
+- **SIBRATEC, the documented innovation-centre network** (Agency). The Ministry of Science and Technology implemented SIBRATEC as a national system of 56 research and development networks, including 14 innovation-centre networks, 20 technological-service networks and 22 extension networks organized across the states to support innovation in micro and small firms.
+- **SUS health councils, permanent public participation** (Shared Purpose). Since Law 8.142 established them in 1990, Brazil's SUS has required permanent, deliberative health councils at the national, state and municipal levels, with users holding 50 percent of seats and health workers and government or providers holding 25 percent each.
 
 ## Contribute
 

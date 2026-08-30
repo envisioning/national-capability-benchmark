@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T00:00:00.000Z",
+  "generatedAt": "2026-08-30T00:00:00.000Z",
   "records": [
     {
       "id": "bra-pix",
@@ -1421,6 +1421,66 @@
           "Research units with equipment and technical depth ready to work with firms",
           "Companies able to define a problem and contribute a financial counterpart",
           "A funding body with enough flexibility to contract applied work faster than ordinary grants"
+        ]
+      }
+    },
+    {
+      "id": "bra-sibratec",
+      "indicatorId": "adult_digital_skills",
+      "iso3": "BRA",
+      "title": "SIBRATEC, the documented innovation-centre network",
+      "claim": "The Ministry of Science and Technology implemented SIBRATEC as a national system of 56 research and development networks, including 14 innovation-centre networks, 20 technological-service networks and 22 extension networks organized across the states to support innovation in micro and small firms.",
+      "metric": {
+        "name": "SIBRATEC national R&D networks reported",
+        "value": 56,
+        "unit": "networks",
+        "asOf": "2010"
+      },
+      "started": 2007,
+      "status": "concluded",
+      "source": {
+        "publisher": "Ministry of Science and Technology, Plan of Action in Science, Technology and Innovation 2007-2010 results report",
+        "url": "https://repositorio.mctic.gov.br/bitstream/mctic/5059/1/2010_plano_acao_ciencia_tecnologia_inovacao_principais_resultados_avancos_2007_2010.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-30"
+      },
+      "limits": "The network count records an institutional architecture, not the share of adults who acquired digital skills, improved productivity or gained lasting agency. The report is an official programme account and does not independently evaluate firm-level outcomes. It is the sourced correction to the requested RECINE label: the claimed 2004-2008 RECINE programme and its 28 centres could not be verified.",
+      "pattern": {
+        "mechanism": "The ministry linked research groups, technology centres and state-level extension networks so firms could reach technical support outside universities and turn a production problem into a shared R&D project.",
+        "preconditions": [
+          "Public research and technology centres able to work on firms' production problems",
+          "A coordinating ministry with funding routes through FINEP and partner agencies",
+          "Small firms able to identify a technical problem and use an external support network"
+        ]
+      }
+    },
+    {
+      "id": "bra-sus-conselhos",
+      "indicatorId": "civic_participation",
+      "iso3": "BRA",
+      "title": "SUS health councils, permanent public participation",
+      "claim": "Since Law 8.142 established them in 1990, Brazil's SUS has required permanent, deliberative health councils at the national, state and municipal levels, with users holding 50 percent of seats and health workers and government or providers holding 25 percent each.",
+      "metric": {
+        "name": "User share of health council seats",
+        "value": 50,
+        "unit": "% of seats",
+        "asOf": "current"
+      },
+      "started": 1990,
+      "status": "operating",
+      "source": {
+        "publisher": "Ministry of Health, SUS councils, with Law 8.142/1990",
+        "url": "https://www.gov.br/saude/pt-br/sus/conselhos",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-30"
+      },
+      "limits": "A mandated seat structure creates a route for participation but does not show whether councils meet regularly, deliberate independently, change health priorities or attract people beyond organised representatives. The 50/25/25 composition is a legal and administrative design, not a measure of actual attendance or influence, and the ministry describes the system without an independent evaluation of outcomes.",
+      "pattern": {
+        "mechanism": "Brazil made participation part of the health system's operating structure: users, workers, government and providers share a permanent council whose decisions feed into policy formulation and control of execution.",
+        "preconditions": [
+          "A national health system with responsibilities distributed across government levels",
+          "A legal requirement that makes councils permanent and deliberative",
+          "Representative organisations able to select users and workers for the councils"
         ]
       }
     },
