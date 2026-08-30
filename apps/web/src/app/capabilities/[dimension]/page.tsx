@@ -18,7 +18,7 @@ import { CapabilityCountryTable, type CapabilityCountryRow } from '@/components/
 import { EvidenceList } from '@/components/views/EvidenceList'
 import { IndicatorRegistry } from '@/components/views/IndicatorRegistry'
 import { EmbedCode } from '@/components/EmbedCode'
-import { Empty, Eyebrow, FrameNote, Headline, Meta, PageTitle, Section } from '@/components/ui'
+import { Empty, FrameNote, Headline, Meta, PageTitle, Section } from '@/components/ui'
 import { MISSING_DATA_HINT, loadDisputes, loadEvidence, loadIndex } from '@/lib/data'
 import {
   absoluteHref,
@@ -122,7 +122,6 @@ export default async function CapabilityPage({
         </Link>
       </p>
 
-      <Eyebrow>One of nine capability dimensions</Eyebrow>
       <PageTitle>{DIMENSION_LABELS[dimension]}</PageTitle>
       <Headline>{DIMENSION_QUESTIONS[dimension]}</Headline>
       <p className="mb-10 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
@@ -147,7 +146,7 @@ export default async function CapabilityPage({
       </div>
 
       <Section
-        title="All countries use the same frame"
+        title="Every country on one scale"
         hint="The table opens alphabetically. Sort by score, confidence, coverage or trend. Scores need two observed indicators; trends use indicators observed at both ends."
         icon={<Icon name={DIMENSION_ICON[dimension]} size={22} />}
       >
@@ -168,7 +167,7 @@ export default async function CapabilityPage({
 
       {checks.length > 0 ? (
         <Section
-          title="One series is published beside the score and stays out of it"
+          title="A series published beside the score"
           hint="A behavioral check measures something real about this capability and fails the test for scoring it. The country pages carry its value."
           icon={<Icon name="eye" size={22} />}
         >
@@ -196,7 +195,7 @@ export default async function CapabilityPage({
 
       {dimensionEvidence.length > 0 ? (
         <Section
-          title="Documented deliveries add context to the data"
+          title="What countries built here"
           hint="These records describe a country doing something this capability should capture. They stay outside the score because one case is not a comparable series."
           icon={<Icon name="file-clock" size={22} />}
         >

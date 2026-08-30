@@ -211,8 +211,9 @@ covered by the code licence.
 
 ## 7. If you find an error
 
-The project wants to be corrected. `/challenge` on the site lists what would
-overturn the model and how to file an objection, and issues go to
+The project wants to be corrected. `/objections` on the site lists what would
+overturn the model and how to file an objection, `/gaps` lists every indicator
+it cannot measure yet, and issues go to
 https://github.com/envisioning/national-capability-benchmark/issues.
 
 A useful objection names the decision or the artefact it disputes, and says what

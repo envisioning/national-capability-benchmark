@@ -187,6 +187,20 @@ export const DIMENSION_ICON = {
   shared_purpose: 'flag',
 } as const satisfies Record<string, IconName>
 
+/**
+ * One icon per way of taking part. The registry in `@ncb/core` holds no icons,
+ * because an icon is a viewer concern, exactly as with `DIMENSION_ICON`.
+ */
+export const CONTRIBUTION_ICON = {
+  object: 'triangle-alert',
+  gap: 'circle-dashed',
+  evidence: 'file-clock',
+  use: 'compass',
+  code: 'plug',
+  layer: 'globe',
+  fund: 'handshake',
+} as const satisfies Record<string, IconName>
+
 export const CONFIDENCE_ICON = {
   very_thin: 'signal-low',
   thin: 'signal-medium',

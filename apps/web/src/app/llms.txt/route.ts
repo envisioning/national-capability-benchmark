@@ -1,4 +1,5 @@
 import {
+  APP_VERSION,
   COUNTRIES,
   CHANGELOG_DOC,
   DATASET_VERSION,
@@ -11,14 +12,18 @@ import {
   rawHref,
 } from '@ncb/core'
 import { loadIndex } from '@/lib/data'
-import { METHOD_PAGES, NAV_TREE } from '@/lib/nav'
+import { METHOD_PAGES, PARTICIPATE_PAGES, READING_PAGES } from '@/lib/nav'
 import {
   aboutHref,
+  agendasIndexHref,
   capabilitiesHref,
-  challengeHref,
   changelogHref,
   compareBaseHref,
+  contactHref,
   countriesHref,
+  gapsHref,
+  objectionsHref,
+  supportHref,
   thesisHref,
 } from '@/lib/links'
 
@@ -51,12 +56,20 @@ const PRIMARY_NOTES: Record<string, string> = {
   [countriesHref]: 'Every country drawn as its nine-dimension shape, with confidence beside every score.',
   [compareBaseHref]: 'Two to four countries side by side, down to the indicator behind every row. The selection is in the path: /compare/BRA-IDN-ZAF.',
   [capabilitiesHref]: 'One page per capability: what it asks, what measures it, who scores well.',
-  '/agenda': 'What each country should raise, measure and hold, computed from its own profile.',
+  [agendasIndexHref]: 'What each country should raise, measure and hold, computed from its own profile.',
   [thesisHref]: 'Why capability matters when intelligence, agents and robotics change the conditions of action.',
   '/method': 'How the benchmark is built and how to audit it.',
-  [challengeHref]: 'What would overturn the model, and how to file an objection.',
+  [supportHref]: 'Every way to take part, from a five-minute correction to a funded piece of work.',
   [aboutHref]: 'What this is, who built it, and where to start reading.',
   [changelogHref]: 'What changed in each published dataset and viewer release.',
+}
+
+/** The participate row, keyed the same way. */
+const PARTICIPATE_NOTES: Record<string, string> = {
+  [supportHref]: 'Every way to take part, with what each one needs and what it changes.',
+  [gapsHref]: 'Every indicator the benchmark asks for and cannot measure, and what would close it.',
+  [objectionsHref]: 'What would overturn the model, and how to file an objection.',
+  [contactHref]: 'The one address that reaches a person.',
 }
 
 const METHOD_NOTES: Record<string, string> = {
@@ -88,7 +101,7 @@ export async function GET(request: Request): Promise<Response> {
     `> ${COUNTRIES.length} countries, ${spell(DIMENSIONS.length)} capability dimensions, each scored 0 to 100 from`,
     '> public data, each with a separate confidence number, and no headline ranking.',
     '',
-    `Dataset version ${version}, generated ${generated}. The registry holds ${INDICATORS.length} indicators:`,
+    `App release ${APP_VERSION}; Dataset version ${version}, generated ${generated}. The registry holds ${INDICATORS.length} indicators:`,
     `${scored} are scored, ${gaps} are declared gaps with no adequate dataset, and ${retired} were`,
     'rejected after inspection. Gaps and retired rows stay listed and lower confidence,',
     'because they are the data-collection agenda.',
@@ -105,7 +118,7 @@ export async function GET(request: Request): Promise<Response> {
     `- [Decision record](${rawHref(DECISIONS_DOC)}): every methodological choice, what it costs, and what evidence would overturn it. Rendered at ${abs(origin, '/decisions')}.`,
     '',
     '## Project history',
-    `- [Changelog](${abs(origin, changelogHref)}): human-readable release notes for the dataset and viewer. The source is [${CHANGELOG_DOC}](${rawHref(CHANGELOG_DOC)}).`,
+    `- [Changelog](${abs(origin, changelogHref)}): human-readable release notes for app releases and dataset versions. The source is [${CHANGELOG_DOC}](${rawHref(CHANGELOG_DOC)}).`,
     '',
     '## Data',
     '',
@@ -124,7 +137,7 @@ export async function GET(request: Request): Promise<Response> {
     '',
     '## Reading',
     '',
-    ...NAV_TREE.map(
+    ...READING_PAGES.map(
       (entry) => `- [${entry.label}](${abs(origin, entry.href)}): ${PRIMARY_NOTES[entry.href] ?? ''}`,
     ),
     '',
@@ -132,6 +145,12 @@ export async function GET(request: Request): Promise<Response> {
     '',
     ...METHOD_PAGES.map(
       (entry) => `- [${entry.label}](${abs(origin, entry.href)}): ${METHOD_NOTES[entry.href] ?? ''}`,
+    ),
+    '',
+    '## Taking part',
+    '',
+    ...PARTICIPATE_PAGES.map(
+      (entry) => `- [${entry.label}](${abs(origin, entry.href)}): ${PARTICIPATE_NOTES[entry.href] ?? ''}`,
     ),
     '',
     '## Optional',

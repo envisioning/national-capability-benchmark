@@ -8,6 +8,8 @@ export const ROOT = resolve(here, '../../../..')
 export const DATA_DIR = resolve(ROOT, 'data')
 export const OBSERVATIONS_DIR = resolve(DATA_DIR, 'observations')
 export const DELPHI_DIR = resolve(DATA_DIR, 'delphi')
+export const RESEARCH_DIR = resolve(DATA_DIR, 'research')
+export const RESEARCH_RUNS_DIR = resolve(RESEARCH_DIR, 'runs')
 export const EVIDENCE_DIR = resolve(DATA_DIR, 'evidence')
 export const INSTITUTIONS_DIR = resolve(DATA_DIR, 'institutions')
 export const SNAPSHOT_DIR = resolve(OBSERVATIONS_DIR, 'snapshots')
@@ -24,6 +26,7 @@ export const FILES = {
   manual: resolve(OBSERVATIONS_DIR, 'manual.json'),
   revisions: resolve(OBSERVATIONS_DIR, 'revisions.json'),
   delphiLatest: resolve(DELPHI_DIR, 'latest.json'),
+  researchInventory: resolve(RESEARCH_DIR, 'inventory.json'),
   evidence: resolve(EVIDENCE_DIR, 'records.json'),
   institutionsBrazil: resolve(INSTITUTIONS_DIR, 'BRA.json'),
   index: resolve(OUT_DIR, 'index.json'),

@@ -1,35 +1,45 @@
 # Changelog
 
-Release notes for the benchmark frame and the viewer that publishes it. The
-version is the semantic dataset version; the build checks that the newest entry
-matches it.
+Release notes for the benchmark frame and the viewer that publishes it. App
+releases describe the whole user-facing product; dataset releases describe the
+scored data contract. The build checks that the newest entry in each stream
+matches its source version.
 
-The entries before 4.4.0 are retrospective, high-level summaries reconstructed
-from the repository history. They document explicit version bumps and may skip
-versions that were never committed.
+The entries before App 0.1.0 are retrospective, high-level summaries
+reconstructed from the repository history. They document explicit version bumps
+and may skip versions that were never committed.
 
-## 4.4.0 — 2026-08-30
+## App 0.1.0 — 2026-08-30
 
-The current published frame brings the full country set, the research layers
-around it and the open viewer into one readable release.
+The first formal product release gathers the benchmark, its research surfaces
+and its public viewer into one navigable application.
 
-- **A complete 52-country benchmark.** Every country is scored on the same nine
-  capability dimensions, with confidence, gaps, trends and raw sources kept
-  beside the score.
-- **Trust has a source-backed adapter.** The pinned Joint EVS/WVS A165 table
-  enters the observation store as publisher-weighted data; the behavioural check
-  remains visible but outside the score.
-- **Brazil has a local reading.** The institutional map and subnational
-  corroboration show where capability is held and how a national result can be
-  questioned without changing the country score.
-- **The published output is inspectable.** Country files, indicator files, a
-  flat table, diagnostics, agendas and a self-describing data package are
-  produced from the same scoring run.
-- **The viewer is ready to distribute.** Country CSV exports, a weekly digest,
-  crawler metadata, an agent-readable contract and a public Atom feed now sit
-  beside the interactive benchmark.
+- **The viewer is a complete reading surface.** Country profiles, comparisons,
+  capability pages, agendas, diagnostics, sources and method pages are linked
+  through one navigation tree.
+- **Research is visible without being confused with scores.** Brazil's
+  institutional map and subnational reading, the thesis, evidence workflow and
+  provisional leverage, velocity and residual layers each state their scope.
+- **The project is ready to be used and challenged.** Contact/support paths,
+  embeddable views, social metadata, an agent-readable contract, public feeds
+  and a human changelog are part of the release.
+- **This app release publishes Dataset 4.4.0.** The dataset remains the stable
+  reference for any quoted score; this app version identifies the surrounding
+  product release.
 
-## 4.3.0 — 2026-08-29
+## Dataset 4.4.0 — 2026-08-29
+
+The Trust dimension gained its first source-backed international adapter while
+the 52-country frame stayed fixed.
+
+- **Trust now has a source-backed adapter.** The pinned Joint EVS/WVS A165 table
+  enters the observation store as publisher-weighted data.
+- **Behavioural evidence remains separate.** The bribery-incidence check stays
+  visible beside Trust but remains outside scores, confidence and coverage.
+- **The existing 52-country frame remains the reference.** No country was added
+  and no normalization rebase was performed in this release.
+
+## Dataset 4.3.0 — 2026-08-29
 
 This release made the boundary between scored evidence and useful but
 non-scoring checks explicit.
@@ -43,7 +53,7 @@ non-scoring checks explicit.
   jump records a contract change while leaving the existing country results
   comparable.
 
-## 4.1.0 — 2026-08-28
+## Dataset 4.1.0 — 2026-08-28
 
 Coordination gained a directly observed measure of whether public budgets are
 executed close to plan.
@@ -54,7 +64,7 @@ executed close to plan.
 - **The frame was rescored and the new indicator was published** in the
   country, indicator and flat-table outputs.
 
-## 4.0.0 — 2026-08-28
+## Dataset 4.0.0 — 2026-08-28
 
 The benchmark expanded to a complete 52-country frame and rebased its ruler.
 
@@ -66,7 +76,7 @@ The benchmark expanded to a complete 52-country frame and rebased its ruler.
 - **The Portuguese country reading covered the full region**, alongside the
   viewer and method-page updates that explained the rebased frame.
 
-## 3.0.0 — 2026-08-28
+## Dataset 3.0.0 — 2026-08-28
 
 The scoring frame stopped treating any country as an external reference.
 
@@ -78,7 +88,7 @@ The scoring frame stopped treating any country as an external reference.
   panelist, chat-ready prompts and merged panel replies were added to the
   research workflow.
 
-## 2.0.0 — 2026-08-27
+## Dataset 2.0.0 — 2026-08-27
 
 The benchmark began withholding claims where the evidence could not support a
 dimension score.
@@ -90,7 +100,7 @@ dimension score.
 - **The viewer learned to preserve missingness honestly**, leaving unsupported
   radar axes empty and labeling them as not measured.
 
-## 1.1.0 — 2026-08-27
+## Dataset 1.1.0 — 2026-08-27
 
 The first data contract was regenerated with the provenance and trend details
 needed to inspect a result over time.
@@ -100,7 +110,7 @@ needed to inspect a result over time.
 - **Data gaps and agenda holds became explicit published states**, rather than
   disappearing into an empty result.
 
-## 1.0.0 — 2026-08-27
+## Dataset 1.0.0 — 2026-08-27
 
 The first versioned benchmark contract established the project as a published,
 inspectable dataset rather than only a prototype viewer.

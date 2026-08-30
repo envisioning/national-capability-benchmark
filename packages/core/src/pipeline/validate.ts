@@ -3,7 +3,8 @@ import { basename, resolve } from 'node:path'
 import { COUNTRY_ISO3, DIMENSIONS, INDICATORS_BY_ID, isScored } from '../model/index.js'
 import { InstitutionNetworkFile } from '../model/institutions.js'
 import { DelphiRunFile, EvidenceFile, isEvidential, isPanel, isReversal } from '../model/schema.js'
-import { DELPHI_DIR, FILES } from './paths.js'
+import { ResearchRunFile, ResearchScoutRunFile } from '../model/research.js'
+import { DELPHI_DIR, FILES, RESEARCH_RUNS_DIR } from './paths.js'
 
 export type Problem = { file: string; severity: 'error' | 'warning'; problem: string }
 
@@ -201,6 +202,214 @@ export async function validateEvidence(path = FILES.evidence): Promise<Problem[]
       severity: 'warning',
       problem: `${reversals} reversal(s) in ${records.length} records; D33 asks for one in five, so the next records must document erosion or dismantling`,
     })
+  }
+
+  const countryCounts = new Map<string, number>()
+  for (const record of records) {
+    countryCounts.set(record.iso3, (countryCounts.get(record.iso3) ?? 0) + 1)
+  }
+  const countryCeiling = Math.floor(records.length / 3)
+  for (const [iso3, count] of countryCounts) {
+    if (records.length >= 3 && count > countryCeiling) {
+      problems.push({
+        file,
+        severity: 'warning',
+        problem: `${iso3} has ${count} of ${records.length} records; D33's one-third country ceiling is ${countryCeiling}, so new research should move elsewhere`,
+      })
+    }
+  }
+
+  return problems
+}
+
+/**
+ * Validates AI research artifacts without treating them as evidence. The
+ * scout and critique runs are deliberately separate from records.json: an AI
+ * can generate useful search work while the publication gate remains human
+ * and source-grounded.
+ */
+export async function validateResearchRuns(dir = RESEARCH_RUNS_DIR): Promise<Problem[]> {
+  let entries: string[]
+  try {
+    entries = (await readdir(dir)).filter((entry) => entry.endsWith('.json')).sort()
+  } catch {
+    return []
+  }
+  const problems: Problem[] = []
+
+  for (const entry of entries) {
+    const file = basename(entry)
+    let raw: unknown
+    try {
+      raw = JSON.parse(await readFile(resolve(dir, entry), 'utf8'))
+    } catch (error) {
+      problems.push({
+        file,
+        severity: 'error',
+        problem: `unreadable JSON: ${error instanceof Error ? error.message : String(error)}`,
+      })
+      continue
+    }
+
+    const parsed = ResearchRunFile.safeParse(raw)
+    if (!parsed.success) {
+      for (const issue of parsed.error.issues.slice(0, 8)) {
+        problems.push({
+          file,
+          severity: 'error',
+          problem: `${issue.path.join('.') || '(root)'}: ${issue.message}`,
+        })
+      }
+      continue
+    }
+
+    const run = parsed.data
+    if (run.provenance === 'mock') {
+      problems.push({ file, severity: 'warning', problem: 'offline scaffold; not evidence' })
+    }
+    if (new Set(run.countrySet).size !== run.countrySet.length) {
+      problems.push({ file, severity: 'error', problem: 'duplicate country code in declared country set' })
+    }
+    const badDeclaredIso = run.countrySet.filter(
+      (iso3) => !COUNTRY_ISO3.includes(iso3 as never),
+    )
+    for (const iso3 of badDeclaredIso) {
+      problems.push({ file, severity: 'error', problem: `unknown declared country code ${iso3}` })
+    }
+    if (run.kind === 'scout') {
+      const slotKeys = new Set<string>()
+      for (const slot of run.slots) {
+        const key = `${slot.iso3}|${slot.indicatorId}`
+        if (slotKeys.has(key)) {
+          problems.push({ file, severity: 'error', problem: `duplicate research slot ${key}` })
+        }
+        slotKeys.add(key)
+        const def = INDICATORS_BY_ID[slot.indicatorId]
+        if (!def) {
+          problems.push({ file, severity: 'error', problem: `unknown indicator id ${slot.indicatorId}` })
+        } else {
+          if (def.ingest !== 'gap') {
+            problems.push({
+              file,
+              severity: 'error',
+              problem: `${slot.indicatorId}: research slots must target declared gaps`,
+            })
+          }
+          if (def.dimension !== slot.dimension) {
+            problems.push({
+              file,
+              severity: 'error',
+              problem: `${slot.indicatorId}: slot dimension ${slot.dimension} disagrees with registry ${def.dimension}`,
+            })
+          }
+        }
+        if (!run.countrySet.includes(slot.iso3)) {
+          problems.push({ file, severity: 'error', problem: `slot ${key} is outside the declared country set` })
+        }
+        if (!COUNTRY_ISO3.includes(slot.iso3 as never)) {
+          problems.push({ file, severity: 'error', problem: `unknown country code ${slot.iso3}` })
+        }
+      }
+
+      const candidateIds = new Set<string>()
+      const candidateKeys = new Set<string>()
+      for (const candidate of run.candidates) {
+        if (candidateIds.has(candidate.id)) {
+          problems.push({ file, severity: 'error', problem: `duplicate candidate id ${candidate.id}` })
+        }
+        candidateIds.add(candidate.id)
+        const key = `${candidate.iso3}|${candidate.indicatorId}`
+        if (candidateKeys.has(key)) {
+          problems.push({ file, severity: 'error', problem: `duplicate candidate target ${key}` })
+        }
+        candidateKeys.add(key)
+        if (!slotKeys.has(key)) {
+          problems.push({ file, severity: 'error', problem: `${candidate.id}: target is outside the scout slots` })
+        }
+        if (!run.countrySet.includes(candidate.iso3)) {
+          problems.push({ file, severity: 'error', problem: `${candidate.id}: target is outside the declared country set` })
+        }
+        if (!COUNTRY_ISO3.includes(candidate.iso3 as never)) {
+          problems.push({ file, severity: 'error', problem: `${candidate.id}: unknown country code ${candidate.iso3}` })
+        }
+        const def = INDICATORS_BY_ID[candidate.indicatorId]
+        if (!def) {
+          problems.push({ file, severity: 'error', problem: `${candidate.id}: unknown indicator id ${candidate.indicatorId}` })
+        } else if (def.ingest !== 'gap') {
+          problems.push({
+            file,
+            severity: 'error',
+            problem: `${candidate.id}: candidate must target a declared gap`,
+          })
+        }
+      }
+      for (const key of slotKeys) {
+        if (!candidateKeys.has(key)) {
+          problems.push({ file, severity: 'error', problem: `missing candidate for scout slot ${key}` })
+        }
+      }
+    } else {
+      let scout: ReturnType<typeof ResearchScoutRunFile.parse> | null = null
+      try {
+        const scoutRaw = JSON.parse(
+          await readFile(resolve(dir, `${run.scoutRunId}.json`), 'utf8'),
+        )
+        const parsedScout = ResearchScoutRunFile.safeParse(scoutRaw)
+        if (!parsedScout.success) {
+          problems.push({
+            file,
+            severity: 'error',
+            problem: `linked scout run ${run.scoutRunId} is not a valid scout artifact`,
+          })
+        } else {
+          scout = parsedScout.data
+          if (scout.datasetVersion !== run.datasetVersion) {
+            problems.push({ file, severity: 'error', problem: 'critique and scout dataset versions differ' })
+          }
+          if (scout.countrySet.join(',') !== run.countrySet.join(',')) {
+            problems.push({ file, severity: 'error', problem: 'critique and scout country sets differ' })
+          }
+        }
+      } catch {
+        problems.push({
+          file,
+          severity: 'error',
+          problem: `linked scout run ${run.scoutRunId} is missing`,
+        })
+      }
+      const reviewIds = new Set<string>()
+      for (const review of run.reviews) {
+        if (reviewIds.has(review.candidateId)) {
+          problems.push({ file, severity: 'error', problem: `duplicate review for ${review.candidateId}` })
+        }
+        reviewIds.add(review.candidateId)
+        if (review.verdict === 'ready_for_source_check') {
+          problems.push({
+            file,
+            severity: 'warning',
+            problem: `${review.candidateId}: ready for source check is still unpublished`,
+          })
+        }
+      }
+      for (const reviewId of reviewIds) {
+        if (!reviewId) {
+          problems.push({ file, severity: 'error', problem: 'critique contains an empty candidate id' })
+        }
+      }
+      if (scout) {
+        const candidateIds = new Set(scout.candidates.map((candidate) => candidate.id))
+        for (const reviewId of reviewIds) {
+          if (!candidateIds.has(reviewId)) {
+            problems.push({ file, severity: 'error', problem: `review refers to unknown candidate ${reviewId}` })
+          }
+        }
+        for (const candidateId of candidateIds) {
+          if (!reviewIds.has(candidateId)) {
+            problems.push({ file, severity: 'error', problem: `missing review for candidate ${candidateId}` })
+          }
+        }
+      }
+    }
   }
 
   return problems

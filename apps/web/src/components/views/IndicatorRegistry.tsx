@@ -22,7 +22,7 @@ export function IndicatorRegistry({ dimension }: { dimension?: Dimension } = {})
             {DIMENSION_LABELS[dimension]} indicators
           </Link>
         ) : (
-          'Every indicator is listed, including the missing ones'
+          'Every indicator, including the missing ones'
         )
       }
       hint={

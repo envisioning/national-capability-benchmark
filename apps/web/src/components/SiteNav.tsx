@@ -217,7 +217,8 @@ export function FooterNav() {
 
   return (
     <nav aria-label="Site" className="mt-10">
-      <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      {/* Method holds nine pages and takes two columns of the five. */}
+      <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
         {FOOTER_NAV_GROUPS.map((group) => (
           <div
             key={group.label}

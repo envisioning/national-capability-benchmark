@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { CHALLENGE_STATUS_LABELS, DIMENSION_LABELS, MIN_DISPUTES_FOR_CONTESTED } from '@ncb/core'
 import type { Dimension } from '@ncb/core'
 import { useRouter } from 'next/navigation'
-import { challengeApiHref, challengeDetailHref } from '@/lib/links'
+import { challengeApiHref, objectionDetailHref } from '@/lib/links'
 
 export function ContestedBadge({ count }: { count: number }) {
   if (count < MIN_DISPUTES_FOR_CONTESTED) return null
@@ -68,7 +68,7 @@ export function ChallengeLink({
       })
       const data = (await response.json()) as { error?: string; id?: string }
       if (!response.ok || !data.id) throw new Error(data.error ?? 'Could not submit the dispute.')
-      router.push(challengeDetailHref(data.id))
+      router.push(objectionDetailHref(data.id))
     } catch (caught) {
       setError(caught instanceof Error ? caught.message : 'Could not submit the dispute.')
       setSubmitting(false)

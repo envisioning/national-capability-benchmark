@@ -10,7 +10,7 @@ import {
   type Dimension,
 } from '@ncb/core'
 import { DATA_ROOT, loadCountry } from '@/lib/data'
-import { challengeDetailHref } from '@/lib/links'
+import { objectionDetailHref } from '@/lib/links'
 
 export const runtime = 'nodejs'
 
@@ -74,7 +74,7 @@ export async function POST(
   )
 
   return NextResponse.json(
-    { id: record.id, href: challengeDetailHref(record.id) },
+    { id: record.id, href: objectionDetailHref(record.id) },
     { status: 201 },
   )
 }

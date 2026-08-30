@@ -67,7 +67,25 @@ import {
   validateDelphiRuns,
   validateEvidence,
   validateInstitutionNetwork,
+  validateResearchRuns,
 } from '../pipeline/validate.js'
+import {
+  buildResearchCritiquePrompt,
+  buildResearchInventory,
+  buildResearchScoutPrompt,
+  mockResearchCandidates,
+  mockResearchReviews,
+  RESEARCH_PROMPT_VERSION,
+  selectResearchSlots,
+} from '../pipeline/research.js'
+import {
+  ResearchCritiqueOutput,
+  ResearchCritiqueRunFile,
+  ResearchScoutRunFile,
+  ResearchScoutOutput,
+} from '../model/research.js'
+import { GatewayResearchProvider } from '../research/provider.js'
+import { RESEARCH_RUNS_DIR } from '../pipeline/paths.js'
 
 type Args = { _: string[]; flags: Map<string, string | boolean> }
 
@@ -176,6 +194,148 @@ async function diagnose(args: Args) {
   await writeOut(FILES.diagnostics, `${JSON.stringify(diag, null, 2)}\n`)
   console.log(`diagnostics -> ${FILES.diagnostics}`)
   return { countries, diag, delphi }
+}
+
+function csvFlag(args: Args, key: string): string[] | undefined {
+  const raw = str(args, key, '')
+  if (!raw) return undefined
+  return raw
+    .split(',')
+    .map((value) => value.trim())
+    .filter(Boolean)
+}
+
+function researchRunId(args: Args, stage: string): string {
+  const supplied = str(args, 'run-id', '')
+  if (supplied) return supplied
+  return `research-${stage}-${new Date().toISOString().replace(/[-:.TZ]/g, '').slice(0, 14)}`
+}
+
+async function research(args: Args): Promise<void> {
+  const action = args._[1] ?? 'inventory'
+  const evidence = await loadEvidence()
+
+  if (action === 'inventory') {
+    const inventory = buildResearchInventory(evidence)
+    await writeOut(FILES.researchInventory, `${JSON.stringify(inventory, null, 2)}\n`)
+    console.log(`inventory   -> ${FILES.researchInventory}`)
+    console.log(
+      `${inventory.recordCount} deliveries, ${inventory.countriesRepresented}/${COUNTRY_ISO3.length} countries, ${inventory.gapIndicatorsRepresented}/${inventory.indicators.length} gap indicators represented`,
+    )
+    console.log(
+      `${inventory.guardrails.reversalCount}/${inventory.guardrails.reversalMinimum} reversals required; ${inventory.guardrails.reversalDeficit} still needed at the current corpus size`,
+    )
+    console.log(`next queue  -> ${inventory.slots.length} uncovered country-gap slots`)
+    return
+  }
+
+  if (action === 'scout') {
+    const inventory = buildResearchInventory(evidence)
+    const countries = csvFlag(args, 'countries')
+    const indicators = csvFlag(args, 'indicators')
+    const slots = selectResearchSlots(inventory, {
+      ...(countries ? { countries } : {}),
+      ...(indicators ? { indicators } : {}),
+      limit: num(args, 'limit', 24),
+    })
+    if (slots.length === 0) throw new Error('No uncovered country-gap slots match the requested filters.')
+    const prompt = buildResearchScoutPrompt(slots)
+    if (bool(args, 'prompt-only')) {
+      console.log(prompt)
+      return
+    }
+
+    const model = str(args, 'model', process.env['NCB_RESEARCH_MODEL'] ?? modelsFromEnv()[0] ?? 'unknown')
+    const useMock = bool(args, 'mock') || !process.env['AI_GATEWAY_API_KEY']
+    if (useMock && !bool(args, 'mock')) {
+      console.log('AI_GATEWAY_API_KEY is not set. Falling back to the deterministic research scaffold.')
+    }
+    const output = useMock
+      ? ResearchScoutOutput.parse({ candidates: mockResearchCandidates(slots) })
+      : await new GatewayResearchProvider(model).scout(prompt)
+    const run = ResearchScoutRunFile.parse({
+      kind: 'scout',
+      runId: researchRunId(args, 'scout'),
+      generatedAt: new Date().toISOString(),
+      provenance: useMock ? 'mock' : 'gateway',
+      model: useMock ? 'mock' : model,
+      datasetVersion: DATASET_VERSION,
+      countrySet: COUNTRY_ISO3,
+      promptVersion: RESEARCH_PROMPT_VERSION,
+      note: useMock
+        ? 'Deterministic offline research scaffold. It is not evidence and must not be copied into data/evidence/records.json.'
+        : 'AI-generated research leads. Source leads are unverified and this run is not evidence.',
+      slots,
+      candidates: output.candidates,
+    })
+    const slotKeys = new Set(slots.map((slot) => `${slot.iso3}|${slot.indicatorId}`))
+    const invalid = run.candidates.filter((candidate) => !slotKeys.has(`${candidate.iso3}|${candidate.indicatorId}`))
+    if (invalid.length > 0) {
+      throw new Error(`Scout returned ${invalid.length} candidate(s) outside the requested slots.`)
+    }
+    const candidateKeys = run.candidates.map((candidate) => `${candidate.iso3}|${candidate.indicatorId}`)
+    const missing = slots.filter((slot) => !candidateKeys.includes(`${slot.iso3}|${slot.indicatorId}`))
+    if (missing.length > 0) {
+      throw new Error(`Scout omitted ${missing.length} requested slot(s); rerun the scout with the same prompt.`)
+    }
+    if (new Set(candidateKeys).size !== candidateKeys.length) {
+      throw new Error('Scout returned duplicate candidates for the same country-gap slot.')
+    }
+    const outFile = resolve(RESEARCH_RUNS_DIR, `${run.runId}.json`)
+    await writeOut(outFile, `${JSON.stringify(run, null, 2)}\n`)
+    console.log(`scout       -> ${outFile}`)
+    console.log(`${run.candidates.length} research lead(s); none are publishable evidence`)
+    return
+  }
+
+  if (action === 'critique') {
+    const input = str(args, 'in', '')
+    if (!input) throw new Error('`pnpm bench research critique --in data/research/runs/<scout>.json` requires --in.')
+    const scout = ResearchScoutRunFile.parse(JSON.parse(await readFile(resolve(input), 'utf8')))
+    const prompt = buildResearchCritiquePrompt(scout.candidates)
+    const model = str(args, 'model', process.env['NCB_RESEARCH_MODEL'] ?? modelsFromEnv()[0] ?? 'unknown')
+    const useMock = bool(args, 'mock') || !process.env['AI_GATEWAY_API_KEY']
+    if (useMock && !bool(args, 'mock')) {
+      console.log('AI_GATEWAY_API_KEY is not set. Falling back to the deterministic research critique.')
+    }
+    const output = useMock
+      ? { reviews: mockResearchReviews(scout.candidates) }
+      : await new GatewayResearchProvider(model).critique(prompt)
+    const parsedOutput = ResearchCritiqueOutput.parse(output)
+    const candidateIds = new Set(scout.candidates.map((candidate) => candidate.id))
+    const unknown = parsedOutput.reviews.filter((review) => !candidateIds.has(review.candidateId))
+    if (unknown.length > 0) throw new Error(`Critique returned ${unknown.length} review(s) for unknown candidates.`)
+    const reviewIds = parsedOutput.reviews.map((review) => review.candidateId)
+    const missingReviews = scout.candidates.filter((candidate) => !reviewIds.includes(candidate.id))
+    if (missingReviews.length > 0) {
+      throw new Error(`Critique omitted ${missingReviews.length} candidate review(s); rerun the critique.`)
+    }
+    if (new Set(reviewIds).size !== reviewIds.length) {
+      throw new Error('Critique returned duplicate reviews for the same candidate.')
+    }
+    const run = ResearchCritiqueRunFile.parse({
+      kind: 'critique',
+      runId: researchRunId(args, 'critique'),
+      generatedAt: new Date().toISOString(),
+      provenance: useMock ? 'mock' : 'gateway',
+      model: useMock ? 'mock' : model,
+      datasetVersion: scout.datasetVersion,
+      countrySet: scout.countrySet,
+      promptVersion: RESEARCH_PROMPT_VERSION,
+      note: useMock
+        ? 'Deterministic offline critique. It is not evidence and cannot approve publication.'
+        : 'AI red-team critique of research leads. It cannot approve publication.',
+      scoutRunId: scout.runId,
+      reviews: parsedOutput.reviews,
+    })
+    const outFile = resolve(RESEARCH_RUNS_DIR, `${run.runId}.json`)
+    await writeOut(outFile, `${JSON.stringify(run, null, 2)}\n`)
+    console.log(`critique    -> ${outFile}`)
+    console.log(`${run.reviews.length} lead critique(s); source verification remains outstanding`)
+    return
+  }
+
+  throw new Error(`Unknown research action "${action}". Use inventory, scout or critique.`)
 }
 
 async function trust(args: Args): Promise<void> {
@@ -323,6 +483,10 @@ async function main() {
 
     case 'trust':
       await trust(args)
+      break
+
+    case 'research':
+      await research(args)
       break
 
     case 'agenda': {
@@ -745,6 +909,7 @@ Start with file 1.
       const problems = [
         ...(await validateDelphiRuns()),
         ...(await validateEvidence()),
+        ...(await validateResearchRuns()),
         ...(await validateInstitutionNetwork()),
       ]
       if (args.flags.get('fetch')) {
@@ -788,6 +953,9 @@ Start with file 1.
   pnpm bench residual                     write the provisional wealth-residual fixture
   pnpm bench br-subnational [--year 2024] fetch the Brazil state-level Gini fixture
   pnpm bench trust    fetch                fetch and parse Joint EVS/WVS A165 trust results
+  pnpm bench research inventory           write the deterministic country-gap research inventory
+  pnpm bench research scout               ask AI for bounded, unpublished research leads
+  pnpm bench research critique --in FILE  red-team a scout run; still cannot approve publication
   pnpm bench prompt    [BRA IND ...] [--stance wealth_sceptic] [--system] [--audit trust]
                        [--paste] [--batch 4] [--out paste] [--local]
                                           print the exact panel prompt; --paste writes chat-ready bundles

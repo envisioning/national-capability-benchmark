@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import Link from 'next/link'
 import Script from 'next/script'
-import { COUNTRIES, DATASET_VERSION, LICENSE_DOC, REPO_URL, docHref } from '@ncb/core'
+import { APP_VERSION, COUNTRIES, DATASET_VERSION, LICENSE_DOC, REPO_URL, docHref } from '@ncb/core'
 import { EnvisioningMark } from '@/components/EnvisioningMark'
 import { FooterNav, HeaderNav, SectionTabs } from '@/components/SiteNav'
 import { changelogHref, siteOrigin } from '@/lib/links'
@@ -14,8 +14,9 @@ const PLAUSIBLE_SCRIPT_URL =
 
 /*
  * Inter is self-hosted from rsms/inter, matching envisioning.com. Envisioning
- * Octa is display only: page titles and the wordmark, never body, labels or
- * tables. Set Octa with font-variation-settings so the width axis travels.
+ * Octa is display only, and rare: the wordmark and the front page hero title.
+ * Page titles are Inter. Set Octa with font-variation-settings so the width
+ * axis travels.
  */
 const inter = localFont({
   variable: '--font-inter',
@@ -106,22 +107,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 className="footer-brand-lockup flex shrink-0 items-center gap-3"
               >
                 <EnvisioningMark className="h-[18px] w-[18px]" />
-                <span
-                  className="font-display text-[32px] leading-none"
-                  style={{ fontVariationSettings: '"wght" 500, "wdth" 100' }}
-                >
-                  NCB
+                {/* The footer carries the full name, unlike the compact header lockup:
+                    this is the last place on the page that can say what NCB stands for. */}
+                <span className="flex flex-col leading-none">
+                  <span
+                    className="font-display text-[32px] leading-none"
+                    style={{ fontVariationSettings: '"wght" 500, "wdth" 100' }}
+                  >
+                    NCB
+                  </span>
+                  <span className="mt-1 text-[9px] uppercase leading-[1.15] tracking-[0.06em] text-[var(--footer-muted)]">
+                    National Capability Benchmark
+                  </span>
                 </span>
               </Link>
               <div>
                 <p className="max-w-3xl text-lg leading-relaxed">
-                  <span className="text-[var(--footer-ink)]">NCB</span> is a prototype benchmark
-                  from Envisioning for reading what a country can do under uncertainty.
+                  NCB measures what a country can do, apart from how rich it is.
                 </p>
                 <p className="mt-2 max-w-3xl text-xs text-[var(--footer-muted)]">
-                  It scores {COUNTRIES.length} countries on nine dimensions using public data.
-                  Every score runs from 0 to 100 and carries its own confidence value. There is
-                  no overall ranking.
+                  {COUNTRIES.length} countries, nine capabilities, public data, no ranking.
                 </p>
               </div>
             </div>
@@ -144,6 +149,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </p>
             <nav aria-label="Project and legal information">
               <ul className="flex flex-wrap gap-x-4 gap-y-2">
+                <li>App {APP_VERSION}</li>
                 <li>Dataset {DATASET_VERSION}</li>
                 <li>
                   <Link href={changelogHref}>Changelog</Link>

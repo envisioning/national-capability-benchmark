@@ -11,7 +11,6 @@ import {
 } from '@ncb/core'
 import {
   Empty,
-  Eyebrow,
   FactStrip,
   Headline,
   Note,
@@ -23,8 +22,7 @@ import { MISSING_DATA_HINT, loadDiagnostics, loadIndex } from '@/lib/data'
 import { countryLayer } from '@/lib/layers'
 import {
   agendasHref,
-  capabilitiesHref,
-  challengeHref,
+  objectionsHref,
   changelogHref,
   changelogReleaseHref,
   contactHref,
@@ -32,6 +30,7 @@ import {
   countryLayerHref,
   decisionsHref,
   diagnosticsHref,
+  gapsHref,
   glossaryHref,
   indicatorsHref,
   limitsHref,
@@ -98,8 +97,7 @@ export default async function AboutPage() {
 
   return (
     <>
-      <Eyebrow>About</Eyebrow>
-      <PageTitle>We measure what a country can do</PageTitle>
+      <PageTitle>What this benchmark is</PageTitle>
       <Headline>
         NCB is a research prototype from Envisioning. It scores {COUNTRIES.length} countries on
         nine capabilities using public data, gives every score its own confidence value, and
@@ -107,7 +105,7 @@ export default async function AboutPage() {
       </Headline>
 
       <Section
-        title="Every number here comes from one dated run"
+        title="What is in the current release"
         hint="How big the dataset is, how much of it is measured, and when it last ran."
       >
         <FactStrip facts={facts} />
@@ -123,8 +121,8 @@ export default async function AboutPage() {
       </Section>
 
       <Section
-        title="The benchmark refuses to rank, average, advise or guess"
-        hint="The things it refuses are as much of the design as the things it computes."
+        title="What it will not do"
+        hint="Four things it does not do."
       >
         <ul className="max-w-3xl list-disc space-y-3 pl-5 text-lg leading-relaxed">
           <li>
@@ -150,8 +148,8 @@ export default async function AboutPage() {
       </Section>
 
       <Section
-        title="It is a prototype, and the gaps are published"
-        hint="The benchmark is early. Reading it well means reading what it gets wrong."
+        title="Where it is weak"
+        hint="The benchmark is early. Here is what it currently gets wrong."
       >
         <p className="max-w-3xl text-lg leading-relaxed">
           {tracking === null
@@ -189,7 +187,7 @@ export default async function AboutPage() {
           </li>
           <li>
             The{' '}
-            <Link href={challengeHref} className="underline underline-offset-4">
+            <Link href={objectionsHref} className="underline underline-offset-4">
               challenge page
             </Link>{' '}
             is where an objection, a gap fill or a documented delivery enters the record.
@@ -210,8 +208,8 @@ export default async function AboutPage() {
       </Section>
 
       <Section
-        title="Envisioning built it"
-        hint="Envisioning researches how societies anticipate and act on change. The benchmark is one instrument in that work."
+        title="Who built it"
+        hint="Envisioning researches how societies anticipate and act on change. The benchmark is part of that work."
       >
         <p className="max-w-3xl text-lg leading-relaxed">
           <a href="https://envisioning.com" className="underline underline-offset-4" rel="noopener">
@@ -235,46 +233,79 @@ export default async function AboutPage() {
           <Link href={supportHref} className="underline underline-offset-4">
             Support
           </Link>{' '}
-          says what backing the work looks like, and{' '}
+          says what backing the work looks like. Anything else goes to{' '}
           <Link href={contactHref} className="underline underline-offset-4">
             contact
-          </Link>{' '}
-          reaches a person.
+          </Link>
+          .
         </p>
       </Section>
 
-      <Section title="Start with the countries page">
-        <ul className="max-w-3xl list-disc space-y-3 pl-5 text-lg leading-relaxed">
-          <li>
-            <Link href={countriesHref} className="underline underline-offset-4">
-              Countries
-            </Link>{' '}
-            draws each one as a nine-capability shape and opens its full profile.
-          </li>
-          <li>
-            <Link href={capabilitiesHref} className="underline underline-offset-4">
-              Capabilities
-            </Link>{' '}
-            reads one capability across the whole set, with the indicators behind it.
-          </li>
-          <li>
-            <Link href={agendasHref()} className="underline underline-offset-4">
-              Agendas
-            </Link>{' '}
-            turn a country&apos;s scores into a raise, measure and hold list.
-          </li>
-          <li>
-            The{' '}
-            <Link href={methodHref} className="underline underline-offset-4">
-              method
-            </Link>{' '}
-            explains the scoring, and the{' '}
-            <Link href={glossaryHref} className="underline underline-offset-4">
-              glossary
-            </Link>{' '}
-            defines every term this project invents.
-          </li>
-        </ul>
+      <Section
+        title="Where to start"
+        hint="Four kinds of reader, four first pages."
+      >
+        <dl className="max-w-3xl space-y-5 text-lg leading-relaxed">
+          <div>
+            <dt className="font-medium">If you report on a country</dt>
+            <dd className="mt-1">
+              Open its{' '}
+              <Link href={countriesHref} className="underline underline-offset-4">
+                profile
+              </Link>{' '}
+              for the shape, then the{' '}
+              <Link href={limitsHref} className="underline underline-offset-4">
+                limits
+              </Link>{' '}
+              before you quote a number. Confidence sits beside every score and belongs in the
+              sentence with it.
+            </dd>
+          </div>
+          <div>
+            <dt className="font-medium">If you work inside government</dt>
+            <dd className="mt-1">
+              Start at your country&apos;s{' '}
+              <Link href={agendasHref()} className="underline underline-offset-4">
+                agenda
+              </Link>
+              . It names what to raise, what to measure first and what to hold, computed from the
+              scores rather than recommended by us.
+            </dd>
+          </div>
+          <div>
+            <dt className="font-medium">If you do research</dt>
+            <dd className="mt-1">
+              The{' '}
+              <Link href={methodHref} className="underline underline-offset-4">
+                method
+              </Link>{' '}
+              explains the scoring, the{' '}
+              <Link href={diagnosticsHref} className="underline underline-offset-4">
+                diagnostics
+              </Link>{' '}
+              test the model against itself, the{' '}
+              <Link href={glossaryHref} className="underline underline-offset-4">
+                glossary
+              </Link>{' '}
+              defines every term this project invents, and the output directory is a Frictionless
+              data package with a schema per published shape.
+            </dd>
+          </div>
+          <div>
+            <dt className="font-medium">If you want to help</dt>
+            <dd className="mt-1">
+              <Link href={supportHref} className="underline underline-offset-4">
+                Ways to help
+              </Link>{' '}
+              lists every way in, cheapest first. The fastest useful one is naming a dataset for
+              an{' '}
+              <Link href={gapsHref} className="underline underline-offset-4">
+                open gap
+              </Link>
+              .
+            </dd>
+          </div>
+        </dl>
         <Note>
           Check the confidence before quoting a score. A thin dimension rests on one or two
           indicators, and the viewer marks it wherever it is drawn.

@@ -37,7 +37,7 @@ export function LeverageView({ leverage }: { leverage: LeverageFile }) {
   return (
     <>
       <Section
-        title="The fixture keeps access separate from capability"
+        title="Access is kept separate from capability"
         hint="Each row is one country and provisional leverage resource. Sort the table to inspect the weighted inputs; the null rows mark sources that have not been integrated."
       >
         <Note>

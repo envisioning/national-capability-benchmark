@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { DECISIONS_DOC, WHY_DOC, docHref } from '@ncb/core'
-import { Empty, Eyebrow, Headline, Highlight, Note, PageTitle, Section } from '@/components/ui'
+import { Empty, Headline, Highlight, Note, PageTitle, Section } from '@/components/ui'
 import { WealthTracking } from '@/components/WealthTracking'
 import { MISSING_DATA_HINT, loadDiagnostics } from '@/lib/data'
 import { countryLayer } from '@/lib/layers'
@@ -58,16 +58,15 @@ export default async function ThesisPage() {
 
   return (
     <>
-      <Eyebrow>Thesis</Eyebrow>
-      <PageTitle>Capability becomes the bottleneck when intelligence is abundant</PageTitle>
+      <PageTitle>Cheap intelligence makes capability the bottleneck</PageTitle>
       <Headline>
-        Intelligence is getting easier to reach. The scarce thing is the ability to choose,
-        coordinate, trust, deploy, maintain and scale what it makes possible. That ability is what
-        this benchmark tries to <Highlight>measure</Highlight>.
+        Intelligence is getting easier to reach. What stays scarce is the ability to choose a
+        direction, coordinate people and build what the technology makes possible. That ability is
+        what this benchmark tries to <Highlight>measure</Highlight>.
       </Headline>
 
       <Section
-        title="The conditions of action have changed"
+        title="What changed"
         hint="Agents lower the cost of execution, AI speeds up science, and robotics carries both into physical production."
       >
         <div className="max-w-3xl space-y-4 text-lg leading-relaxed">
@@ -86,7 +85,7 @@ export default async function ThesisPage() {
       </Section>
 
       <Section
-        title="The claim can fail, and part of it does"
+        title="Where the claim holds, and where it fails"
         hint="If a country's ability to act is separate from its wealth, the nine capabilities will not simply follow income. Here is how far that holds in the current data."
       >
         <div className="mb-8 max-w-3xl space-y-4 text-lg leading-relaxed">
@@ -145,14 +144,13 @@ export default async function ThesisPage() {
       </Section>
 
       <Section
-        title="Leverage would measure what amplifies capability"
+        title="Leverage: what multiplies a capability"
         hint="The second layer covers the resources through which a capability gets multiplied."
       >
         <p className="max-w-3xl text-lg leading-relaxed">
           Singapore and Brazil can reach the same frontier model. The systems around that model
-          decide what happens next. Capability without leverage leaves ideas undeployed, and
-          leverage without capability absorbs technology without compounding it. The layer would
-          measure the second side:
+          decide what happens next. A country with capability and no leverage leaves its ideas
+          undeployed. The layer would measure the resources:
         </p>
         <ul className="mt-6 max-w-3xl list-disc space-y-2 pl-5 text-lg leading-relaxed">
           {LEVERAGE.map((item) => (
@@ -162,7 +160,7 @@ export default async function ThesisPage() {
       </Section>
 
       <Section
-        title="Velocity would measure whether the system is moving"
+        title="Velocity: how fast a capability moves"
         hint="The third layer follows the rate at which a capability changes, because under fast change the level alone is misleading."
       >
         <p className="max-w-3xl text-lg leading-relaxed">
@@ -218,14 +216,13 @@ export default async function ThesisPage() {
       </Section>
 
       <Section
-        title="The benchmark has a narrow job"
+        title="What the benchmark is for"
         hint="It gives a public-sector leader, a journalist and a citizen one question and one body of evidence."
       >
         <div className="max-w-3xl space-y-4 text-lg leading-relaxed">
           <p>
-            This is not a research agenda for another model. The benchmark exists so that
-            different readers can ask what a country can actually do and check the answer against
-            its sources. It sits inside Envisioning&apos;s wider work: signals detect exponential
+            The benchmark exists so that different readers can ask what a country can actually do
+            and check the answer against its sources. It sits inside Envisioning&apos;s wider work: signals detect exponential
             change, the benchmark measures whether a society can absorb it, and the capability
             programmes and institutional design labs work on raising the number.
           </p>

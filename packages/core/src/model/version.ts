@@ -1,4 +1,20 @@
 /**
+ * The user-facing application release. This covers the viewer, routes,
+ * research surfaces and documentation shipped as one product release. It is
+ * separate from DATASET_VERSION because a new page does not restate a score.
+ *
+ * App release bump rules:
+ *
+ * - **major** — a breaking route, API or reader-facing contract change;
+ * - **minor** — a new public capability, page or non-breaking surface; and
+ * - **patch** — a bug fix, copy change or visual refinement.
+ *
+ * The first formal product release is 0.1.0 while the benchmark remains a
+ * prototype and the provisional research layers remain under review.
+ */
+export const APP_VERSION = '0.1.0'
+
+/**
  * The dataset version, semantic. Stamped into `data/out/index.json`, every
  * country file and `datapackage.json`, so a consumer can pin what it reads.
  *

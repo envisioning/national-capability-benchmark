@@ -12,8 +12,18 @@ import {
   SOURCE_TIERS,
 } from '@ncb/core'
 import type { MeasurementClass } from '@ncb/core'
-import { CountryLabel, Eyebrow, Headline, PageTitle, Scroller, Section, Table, Td, Th } from '@/components/ui'
-import { capabilityHref, challengeHref, sourcesHref } from '@/lib/links'
+import {
+  ClassBadge,
+  CountryLabel,
+  Headline,
+  PageTitle,
+  Scroller,
+  Section,
+  Table,
+  Td,
+  Th,
+} from '@/components/ui'
+import { capabilityHref, objectionsHref, sourcesHref } from '@/lib/links'
 import { DIMENSION_ICON, Icon, TIER_ICON } from '@/components/Icon'
 
 export const metadata: Metadata = {
@@ -32,8 +42,7 @@ export default function MethodPage() {
 
   return (
     <>
-      <Eyebrow>Method</Eyebrow>
-      <PageTitle>Capability is measured apart from wealth</PageTitle>
+      <PageTitle>How a statistic becomes a score</PageTitle>
       <Headline>
         The benchmark asks whether a country&apos;s capacity to act is distinct from its income.
         Every choice is open to challenge.
@@ -75,7 +84,7 @@ export default function MethodPage() {
       </Section>
 
       <Section
-        title="This measures capability, not wealth"
+        title="Capability against wealth"
         hint="The benchmark measures capacity to anticipate, coordinate, learn, adapt and build under uncertainty. Wealth, quality of life and popularity are outside its scope."
       >
         <Scroller>
@@ -132,7 +141,7 @@ export default function MethodPage() {
       </Section>
 
       <Section
-        title="National scores have a second reading"
+        title="The second reading below the national score"
         hint="The benchmark compares countries at the national level, while selected destination pages show constituent data as corroboration or context."
       >
         <div className="max-w-3xl space-y-4 text-lg leading-relaxed">
@@ -152,24 +161,27 @@ export default function MethodPage() {
       </Section>
 
       <Section
-        title="Every indicator states what it measures"
+        title="What each indicator claims to measure"
         hint="The dataset labels each indicator as C, I, O or P so the classification can be checked."
       >
         {/* Rendered from the glossary's single source, never retyped: the exact
             drift D26 forbids is a second copy of these four sentences. */}
         <ul className="max-w-3xl space-y-3 text-lg leading-relaxed">
           {classes.map((c) => (
-            <li key={c}>
-              <strong>{c}</strong>, {MEASUREMENT_CLASS_MEANING[c].label}.{' '}
-              {MEASUREMENT_CLASS_MEANING[c].plain}{' '}
-              <span className="text-[var(--muted)]">{MEASUREMENT_CLASS_MEANING[c].example}</span>
+            <li key={c} className="flex items-baseline gap-3">
+              <ClassBadge value={c} />
+              <span>
+                {MEASUREMENT_CLASS_MEANING[c].label}.{' '}
+                {MEASUREMENT_CLASS_MEANING[c].plain}{' '}
+                <span className="text-[var(--muted)]">{MEASUREMENT_CLASS_MEANING[c].example}</span>
+              </span>
             </li>
           ))}
         </ul>
       </Section>
 
       <Section
-        title="Source quality affects confidence only"
+        title="Source quality moves confidence only"
         hint="Each tier affects confidence. Delphi estimates have the least weight."
       >
         <Scroller>
@@ -205,7 +217,7 @@ export default function MethodPage() {
       </Section>
 
       <Section
-        title="Thin evidence appears on the chart"
+        title="Thin evidence shows on the chart"
         hint="Confidence never enters the score. Thin evidence gets a dashed edge and hollow point. The gap widens as confidence falls."
       >
         <ul className="max-w-3xl list-disc space-y-2 pl-5 text-lg leading-relaxed">
@@ -217,7 +229,7 @@ export default function MethodPage() {
       </Section>
 
       <Section
-        title="Momentum uses only matching indicators"
+        title="Momentum uses matching indicators only"
         hint="Momentum shows score change over time on the current frame. Only indicators observed at both ends count."
       >
         <ul className="max-w-3xl list-disc space-y-2 pl-5 text-lg leading-relaxed">
@@ -258,7 +270,7 @@ export default function MethodPage() {
       </Section>
 
       <Section
-        title="Documented deliveries sit outside the score"
+        title="Documented deliveries stay outside the score"
         hint="Evidence records describe work that a gap indicator cannot measure. They do not change scores."
       >
         <ul className="max-w-3xl list-disc space-y-2 pl-5 text-lg leading-relaxed">
@@ -272,7 +284,7 @@ export default function MethodPage() {
       </Section>
 
       <Section
-        title="A panel reviews what the data misses"
+        title="What the panel adds"
         hint="Each panelist has a fixed stance. The panel interprets the source-backed evidence and reviews the indicators."
       >
         <ul className="max-w-3xl list-disc space-y-3 pl-5 text-lg leading-relaxed">
@@ -300,14 +312,14 @@ export default function MethodPage() {
             <Link href="/delphi" className="underline underline-offset-4">
               Delphi page
             </Link>{' '}
-            shows the current run and its provenance. The active run is a working session, not a
-            panel.
+            shows the current run and its provenance. The active run is a working session, so it
+            carries no panel distribution.
           </li>
         </ul>
       </Section>
 
       <Section
-        title="The country set defines the scale"
+        title="The 52 countries set the scale"
         hint={`All ${COUNTRIES.length} countries set each indicator's fences and endpoints. The frame stays fixed within a version. Adding a country rebases it and requires a major version bump.`}
       >
         <Scroller>
@@ -333,7 +345,7 @@ export default function MethodPage() {
       </Section>
 
       <Section
-        title="The assumptions are public"
+        title="The assumptions"
         hint="The decision log records each choice and what evidence would overturn it."
       >
         <ul className="max-w-3xl list-disc space-y-2 pl-5 text-lg leading-relaxed">
@@ -360,7 +372,7 @@ export default function MethodPage() {
           <li>Political uniformity is never treated as a capability.</li>
         </ul>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed">
-          <Link href={challengeHref} className="underline underline-offset-4">
+          <Link href={objectionsHref} className="underline underline-offset-4">
           How to argue with any of this
           </Link>{' '}
           and what would make each decision fall.

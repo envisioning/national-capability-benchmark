@@ -3387,3 +3387,238 @@ argument there and do not follow the link would move the claim back. Evidence
 that the front page's modules are read as a menu rather than as the benchmark
 would return it to the chart alone. A front page that grows past one module per
 section is the signal that this rule has stopped holding.
+
+## D76: AI scouts the evidence queue, but source checks and publication stay separate
+
+*Recorded 2026-08-30. Extends D20, D31, D33 and D52.*
+
+**Choice.** Evidence expansion becomes an AI-first, source-first workflow with
+three explicit objects:
+
+1. A **research slot** is an uncovered country × declared-gap combination,
+   selected by a deterministic inventory of the current evidence corpus.
+2. A **research lead** is an AI-generated hypothesis containing a route, a
+   possible mechanism, a scale test, disqualifiers and source-search targets.
+3. An **evidence record** remains the source-checked, human-approved object in
+   `data/evidence/records.json`.
+
+`pnpm bench research inventory` writes the queue and balance report.
+`pnpm bench research scout` uses the AI Gateway to generate bounded leads, and
+`pnpm bench research critique` red-teams them against the five inclusion tests.
+Runs are immutable artifacts under `data/research/runs`. They are validated but
+never loaded by scoring, confidence, the agenda generator or the viewer's
+documented-delivery table. No AI stage can approve publication.
+
+The scout must distinguish a possible institutional case, a source-backed
+dataset task and a gap that should not be forced into a case story. It must
+return search targets rather than invented URLs, numbers or coverage claims.
+The researcher still opens the source, verifies the metric and reference
+period, writes the limits and pattern fields, and runs the existing evidence
+validation gate before adding a record.
+
+**Why.** The current evidence layer has 52 records but is concentrated in 20
+countries, 15 gap indicators and one dimension, while its own reversal quota is
+below target. Hand-authoring one story at a time will keep selecting visible
+countries and familiar programmes. A deterministic slot inventory gives the AI
+a bounded search space that points at the actual missing cells rather than at
+whatever country has the best English-language documentation.
+
+AI is useful for breadth: it can generate competing search hypotheses, identify
+adjacent constructs, propose source families and attack a lead before research
+time is spent. It is unsafe as an unreviewed fact source. Separating leads from
+records preserves D20's score boundary and D33's selection discipline while
+making the discovery process repeatable and auditable.
+
+The first planning milestone is 100 qualified deliveries across at least 40
+countries and 20 gap indicators, with at least 20 reversals and no country above
+one-third of the corpus. This is a corpus target, not a scoring threshold.
+
+**Costs.** AI scout output can still be plausible and wrong, so a valid JSON
+run is not evidence and a critique is not a source check. The extra stages add
+research artifacts and review time. The deterministic queue can encode the
+existing corpus's blind spots, so its priority is a starting order rather than
+a claim about which countries matter most. AI model choice, prompts and source
+access also become part of the research record and need versioning.
+
+The current evidence schema does not gain AI-authored factual fields. That
+keeps the published contract stable and means an AI run cannot accidentally be
+served as a delivery. If future work needs source packets, reviewer identities
+or automatic draft comparison, those fields require a new decision rather than
+being smuggled into `EvidenceRecord`.
+
+**Overturned by.** Evidence that AI-generated leads systematically reduce
+source quality or increase conceptual mismatches compared with unaided
+research, which would narrow AI to clerical extraction. Evidence that the
+research queue is too broad to review, which would require a smaller slot
+contract or a separate country-set research frame. A source-backed comparable
+series that closes a gap supersedes the case lane for that indicator under D20.
+
+## D77: Correct the D76 corpus-balance description
+
+*Recorded 2026-08-30. Clarifies D76; it does not change the workflow.*
+
+**Choice.** The current evidence corpus is represented across all nine
+dimensions. It is uneven rather than one-dimensional: Building has the largest
+share at 19 of 52 records, followed by Adaptability at 8, while the remaining
+dimensions have between 1 and 5 records. The AI research queue must therefore
+expand countries, gap indicators and thin dimensions, while preserving the
+reversal and concentration guardrails.
+
+**Why.** D76's phrase "one dimension" was inaccurate. Leaving it in the
+decision log would give the AI queue the wrong diagnosis and make the research
+plan less auditable.
+
+**Overturned by.** A refreshed inventory showing a different distribution
+supersedes these counts; the rule to derive the diagnosis from the inventory
+remains.
+
+## D78: Taking part is a section of the site, and one registry declares the ways in
+
+*Recorded 2026-08-30. Extends D71 and D75, and renames the surface D50 reads.*
+
+**Choice.** Four things, together.
+
+1. **Participate is a section.** `/support`, `/gaps`, `/objections` and
+   `/contact` sit under one node in `apps/web/src/lib/nav.ts`, and the footer
+   column derives from it. Before this, `/support` and `/contact` were in no
+   navigation at all: a reader who had decided to help could only find them
+   through a sentence at the foot of another page.
+2. **One contribution registry.** `packages/core/src/model/contribute.ts` holds
+   every way in. Each entry names the ask, what it has to carry, who usually
+   brings it, how much work it is and what changes in the published benchmark
+   when it lands. `ContributionList` renders it and `contributionHref` in
+   `links.ts` addresses it. No page writes its own list of ways to help.
+3. **The gaps are published as open work.** `/gaps` is a second reading of
+   `ingest: 'gap'` and `ingest: 'retired'` from the indicator registry, one
+   entry per gap with what it tries to observe, why it is open and a link that
+   opens the contact form on that indicator. No new data.
+4. **`/challenge` becomes `/objections`.** The old address redirects
+   permanently. The score-side control keeps the verb, because challenging a
+   score is what the reader is doing there.
+
+The funded pieces in `FUNDABLE_PIECES` each state a scope and an effect, so a
+reader can size the work before writing.
+
+**Why.** The project asked for help in four places, in four vocabularies, and
+scaled every ask to an institution. Nothing a single reader could do in five
+minutes was addressed anywhere, while the most specific request the project can
+make, the 26 declared gaps, rendered only as rows in a registry table. The word
+challenge read as a competition to somebody arriving from outside, which is the
+opposite of an invitation to argue. A registry rather than four page sections
+means a new way in is declared once and appears everywhere it belongs, which is
+the rule the indicator registry and the glossary already follow.
+
+**Costs.** The contribution registry is prose held in code, so a copy change is
+a build. `/gaps` restates registry rows that `/indicators` already renders,
+which is a second surface over one source and has to stay a second reading
+rather than becoming a second list. The rename leaves a redirect to carry, and
+older links and citations that name `/challenge` now take a hop.
+
+**Overturned by.** Evidence that readers use the participate section as a menu
+and never act would mean the ways are wrong rather than badly addressed.
+Evidence that `/gaps` produces unusable dataset suggestions in volume would
+mean the five-minute rung needs a higher bar, not a wider door. If a country
+layer needs its own contribution registry, because its institutions take part
+in ways this one cannot express, the registry becomes per layer and this
+decision is superseded.
+
+## D79: Headings are short and plain, and Octa is the wordmark plus one title
+
+**Decision.** Two rules on the rendered surface, one for language and one for
+type.
+
+1. **A heading states what the section holds, in about six words.** It stays a
+   statement that could be true or false, per the existing rule, but it drops
+   the aphorism. "How much of this is income?" replaces "The claim is that
+   capability is not simply wealth". "What each country should work on"
+   replaces "Each country gets an agenda, not a grade". "Nine scores, read
+   together" replaces "A country is a shape, and no country is one number". The
+   "X, not Y" inversion goes out of headings entirely rather than being capped
+   at one per page, because a heading is where the reader notices it.
+2. **Octa is the wordmark and the front page hero title.** `PageTitle` renders
+   Inter. `HeroTitle` in `apps/web/src/components/ui.tsx` is the only Octa
+   title on the site and is one step larger than a page title, at `text-4xl
+   sm:text-6xl` against `text-3xl sm:text-4xl`.
+
+The same pass removed the connective filler that named two pages and joined
+them with "and", of which "About says what it is made of and what it refuses to
+do, and contact reaches a person" was the clearest case.
+
+**Why.** The maxim heading was the project's house style and it read as
+generated text. Every section opened with a small thesis, so a reader scanning
+the page met nine arguments and no map, and the pattern told them nothing about
+where to click. The heading rule that produced it, "a statement that could be
+true or false", is still right; what it lacked was a length and a subject. The
+subject of a heading is the section, never the project's belief about the
+section. Octa had the same problem in type: a display face on every page title
+is a body face with extra weight, and it stopped marking anything. One Octa
+title per site restores the signal, and the front page is where a first-time
+reader meets the name.
+
+**Costs.** Some headings lost information that now has to sit in the hint line
+below, which is one more line to keep true. Short headings are more likely to
+collide across pages, so "Known failures" and "Datasets we rejected" now appear
+in more than one place and a reader arriving from search sees less context.
+Dropping Octa from page titles makes the site quieter, and the brand mark now
+rests on the wordmark, the accent and the layout rather than on the typeface.
+
+**Overturned by.** Evidence that readers cannot tell sections apart from
+headings alone would mean the six-word target is too tight for this material.
+A brand revision at envisioning.com that puts Octa back on section titles would
+supersede the type half of this decision, which follows the parent system
+rather than setting it.
+
+## D80: The site has five sections, and a page joins the one that answers its reader's question
+
+*Recorded 2026-08-30. Amends the tree D73 declared and the placement D75 and D78
+assumed.*
+
+**Choice.** The header carries five sections and no more:
+
+```
+Countries · Capabilities · Method · Participate · About
+```
+
+Two sections fold into others, and nothing about the pages changes.
+
+1. **Agendas moves under Countries.** The row under Countries answers "which
+   country". Once the path names one, that country is the row, because 52 will
+   not fit in a control. Before it does, the row offers the readings that take
+   the whole set: all countries, compare, agendas. `COUNTRY_INDEX_PAGES` holds
+   them. An agenda index is a way of reading the country set, not a separate
+   thing the site is about.
+2. **Thesis moves under About.** `ABOUT_PAGES` is overview, thesis, changelog.
+   D75 gave those two pages different jobs and that stands: the thesis argues
+   and the overview describes. Both answer the question a newcomer asks before
+   either of them, which is what a section is.
+
+Adding a sixth section is a decision, not a page. A new page joins the list
+whose reader's question it answers, all four of which live in
+`apps/web/src/lib/nav.ts` beside the tree.
+
+`READING_PAGES` in the same file flattens the destinations for `/llms.txt`,
+because a machine has no rows to open. The footer renders four columns from the
+same lists.
+
+**Why.** Seven sections made the header a menu of the project's own internal
+distinctions. Thesis and About were separate because they do different jobs,
+which is a reason for two pages and not for two headings: the site was saying
+"here is what we are" twice at the top level, and a reader arriving cold had to
+guess which one to open first. Agendas was a section because it has an index
+page, which is not the same as being one of the things the site is about. A
+section is a reader's question, and there are five of them: which country, which
+capability, how is it built, how do I take part, what is this.
+
+**Costs.** The thesis is the project's strongest single page and it now sits one
+click below the header. The agenda index loses its permanent slot, and inside a
+country the header no longer offers a route back to compare or to the agenda
+index, only to the section itself. Countries' second row changes membership with
+the path, which is one more rule than a fixed list, and it is why that behaviour
+is written down here and commented at the node.
+
+**Overturned by.** Evidence that readers cannot find the thesis, or that traffic
+to it collapses against its old placement, would restore it as a section rather
+than reopen the grouping. Evidence that the changing row under Countries reads
+as instability, rather than as one question answered two ways, would split it
+into a fixed row plus a country crumb, which costs a level of depth D73 caps at
+four.

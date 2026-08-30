@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import { CONTRIBUTING_DOC, EVIDENCE_DOC, ISSUES_URL, REPO_URL, docHref } from '@ncb/core'
-import { Eyebrow, Headline, Highlight, Note, PageTitle, Section } from '@/components/ui'
+import { Headline, Highlight, Note, PageTitle, Section } from '@/components/ui'
 import { countryLayer, layerSection } from '@/lib/layers'
 import {
-  challengeHref,
+  objectionsHref,
   contactHref,
   countryProfileHref,
   layerSectionHref,
@@ -35,8 +35,7 @@ export default function BrazilSupportPage() {
 
   return (
     <>
-      <Eyebrow>Camada Brasil</Eyebrow>
-      <PageTitle>Um benchmark aberto ainda precisa ser sustentado</PageTitle>
+      <PageTitle>Apoie o benchmark</PageTitle>
       <Headline>
         O benchmark é aberto e gratuito. O que ele ainda precisa é de{' '}
         <Highlight>uso, evidência e tempo</Highlight>. Uma instituição brasileira pode dar os três.
@@ -76,7 +75,7 @@ export default function BrazilSupportPage() {
           </li>
           <li>
             Discorde de uma nota específica na{' '}
-            <Link href={challengeHref} className="underline underline-offset-4">
+            <Link href={objectionsHref} className="underline underline-offset-4">
               página de contestação
             </Link>
             . A objeção fica publicada ao lado do número que ela contesta.
@@ -178,7 +177,7 @@ export default function BrazilSupportPage() {
       </Section>
 
       <Section
-        title="Mantenha a conversa"
+        title="Continue a conversa"
         hint="O benchmark melhora por discordância, não por concordância."
       >
         <p className="max-w-3xl text-lg leading-relaxed">

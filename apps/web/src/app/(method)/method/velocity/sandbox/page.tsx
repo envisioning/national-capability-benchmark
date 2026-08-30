@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Empty, Eyebrow, Headline, PageTitle } from '@/components/ui'
+import { Empty, Headline, PageTitle } from '@/components/ui'
 import { VelocityView } from '@/components/views/VelocityView'
 import { MISSING_DATA_HINT, loadVelocity } from '@/lib/data'
 
@@ -17,7 +17,6 @@ export default async function VelocitySandboxPage() {
 
   return (
     <>
-      <Eyebrow>Provisional layer</Eyebrow>
       <PageTitle>Velocity is an offline experiment</PageTitle>
       <Headline>
         This sandbox applies a placeholder rate to the foundation&apos;s existing momentum series so

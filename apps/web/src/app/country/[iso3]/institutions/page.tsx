@@ -34,7 +34,6 @@ export default async function CountryInstitutionsPage({
 
     return (
       <>
-        <Eyebrow>Institutional map of {name}</Eyebrow>
         <PageTitle>The institution map could not be loaded</PageTitle>
         <Headline>The institution network could not be loaded.</Headline>
         <Note tone="stop">{networkResult.error.message}</Note>
@@ -49,7 +48,7 @@ export default async function CountryInstitutionsPage({
   return (
     <>
       <Eyebrow>Institutional map of {name} · experimental version {network.version}</Eyebrow>
-      <PageTitle>Institutions show how capability is organized</PageTitle>
+      <PageTitle>How the country is organized to act</PageTitle>
       <Headline>
         Choose an institution to see what it does, who limits its power and which relationships its action depends on.
       </Headline>

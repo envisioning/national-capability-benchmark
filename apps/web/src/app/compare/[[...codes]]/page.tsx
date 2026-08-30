@@ -5,7 +5,7 @@ import { COUNTRIES } from '@ncb/core'
 import type { CountryResult } from '@ncb/core'
 import { CompareBoard } from '@/components/views/CompareBoard'
 import { ComparePicker } from '@/components/views/ComparePicker'
-import { DefineLink, Empty, Eyebrow, Headline, PageTitle } from '@/components/ui'
+import { DefineLink, Empty, Headline, PageTitle } from '@/components/ui'
 import { MISSING_DATA_HINT, loadCountry, loadIndex } from '@/lib/data'
 import {
   compareBaseHref,
@@ -59,7 +59,6 @@ export default async function ComparePage({ params }: Params) {
 
   return (
     <>
-      <Eyebrow>One reference country, up to three others</Eyebrow>
       <PageTitle>Countries side by side</PageTitle>
       <Headline>
         A country score only means something against other countries. This page puts a reference

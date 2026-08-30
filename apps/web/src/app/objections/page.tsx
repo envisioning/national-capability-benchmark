@@ -7,18 +7,18 @@ import {
   DATASET_VERSION,
   DECISIONS_DOC,
   EVIDENCE_DOC,
-  ISSUES_URL,
   LICENSE_DOC,
   LIMITS_DOC,
   NOTICE_DOC,
   REPO_URL,
   WHY_DOC,
+  contributionWay,
   docHref,
 } from '@ncb/core'
+import type { ContributionId } from '@ncb/core'
 import {
   CountryLabel,
   Empty,
-  Eyebrow,
   Headline,
   Note,
   PageTitle,
@@ -29,25 +29,31 @@ import {
   Th,
 } from '@/components/ui'
 import { MarkdownLine } from '@/lib/markdown'
+import { ContributionList } from '@/components/ContributionList'
 import { decisionChallenges, openArtefacts } from '@/lib/docs'
 import { loadDisputes, loadDoc, loadIndex } from '@/lib/data'
 import {
   artefactHref,
-  challengeDetailHref,
   decisionHref,
   decisionsHref,
+  gapsHref,
   limitsHref,
+  objectionDetailHref,
+  supportHref,
 } from '@/lib/links'
 import { capitalize, countWord } from '@/lib/words'
 
 export const dynamic = 'force-dynamic'
 
+/** The ways in that end up in a public record rather than in the inbox. */
+const OBJECTION_WAYS: ContributionId[] = ['object', 'gap', 'evidence']
+
 export const metadata: Metadata = {
-  title: 'Challenge this, NCB',
+  title: 'Objections, NCB',
   description: 'Known failures, decisions under review, and ways to object.',
 }
 
-export default async function ChallengePage() {
+export default async function ObjectionsPage() {
   const [decisionsDoc, limitsDoc, index, records] = await Promise.all([
     loadDoc('DECISIONS.md'),
     loadDoc('KNOWN-ARTEFACTS.md'),
@@ -65,15 +71,14 @@ export default async function ChallengePage() {
 
   return (
     <>
-      <Eyebrow>Challenge this</Eyebrow>
-      <PageTitle>The benchmark is built to be argued with</PageTitle>
+      <PageTitle>Argue with the benchmark</PageTitle>
       <Headline>
         Every decision names the evidence that would overturn it. Known failures sit beside the
         scores they affect. Bring a series, a case or an objection.
       </Headline>
 
       <Section
-        title="Public disputes stay attached to the number"
+        title="Open disputes"
         hint={`${disputes.length} dispute${disputes.length === 1 ? '' : 's'} in the ledger. New submissions await maintainer review.`}
       >
         {disputes.length > 0 ? (
@@ -92,7 +97,7 @@ export default async function ChallengePage() {
                 {disputes.map((dispute) => (
                   <tr key={dispute.id}>
                     <Td>
-                      <Link href={challengeDetailHref(dispute.id)} className="hover:underline">
+                      <Link href={objectionDetailHref(dispute.id)} className="hover:underline">
                         {dispute.id}
                       </Link>
                     </Td>
@@ -114,13 +119,13 @@ export default async function ChallengePage() {
           </Scroller>
         ) : (
           <p className="max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-            No disputes have been submitted yet. Use Challenge beside a score to file the first one.
+            No objections have been filed yet. Use the challenge control beside any score to file the first one.
           </p>
         )}
       </Section>
 
       <Section
-        title="Start with the known failures"
+        title="Known failures"
         hint={`${capitalize(countWord(artefacts.length))} artefacts are open: places where the model produces a number that misdescribes the world.${
           worst > 0
             ? ` ${capitalize(countWord(worst))} ${worst === 1 ? 'has' : 'have'} high severity.`
@@ -165,7 +170,7 @@ export default async function ChallengePage() {
       </Section>
 
       <Section
-        title="Each decision says what could overturn it"
+        title="What would overturn each decision"
         hint="The decision log lists each challenge clause, newest first. New evidence adds a superseding entry."
       >
         {challenges.length > 0 ? (
@@ -208,29 +213,10 @@ export default async function ChallengePage() {
       </Section>
 
       <Section
-        title="Ways to object"
-        hint="Use the repository so the argument remains visible after it is settled."
+        title="How to object"
+        hint="Each one keeps its record in public, so the argument stays visible after it is settled."
       >
-        <ul className="max-w-3xl space-y-4 text-lg leading-relaxed">
-          <li>
-            <strong className="font-medium">Dispute a decision.</strong> Name the decision id and
-            evidence in an issue. A new entry supersedes a decision; the old one stays visible.
-          </li>
-          <li>
-            <strong className="font-medium">Fill a gap.</strong> Point to a published series covering
-            at least two countries with comparable definitions, an open URL, publisher, reference
-            period and method. National statistical sources are welcome.
-          </li>
-          <li>
-            <strong className="font-medium">File an evidence record.</strong> Document a national
-            delivery with one published number and a statement of what it does not show. Records
-            never enter a score, and one in five must document erosion or collapse.
-          </li>
-          <li>
-            <strong className="font-medium">Add a language.</strong> Add a lexicon data file. The
-            English ground layer lets readers check the translation against its source.
-          </li>
-        </ul>
+        <ContributionList ways={OBJECTION_WAYS.map(contributionWay).filter((way) => way !== null)} />
         <p className="mt-6 max-w-3xl text-lg leading-relaxed">
           <a href={docHref(CONTRIBUTING_DOC)} className="underline underline-offset-4">
             {CONTRIBUTING_DOC}
@@ -239,15 +225,19 @@ export default async function ChallengePage() {
           <a href={docHref(EVIDENCE_DOC)} className="underline underline-offset-4">
             {EVIDENCE_DOC}
           </a>{' '}
-          has the inclusion test for records, and{' '}
+          has the inclusion test for evidence records, and{' '}
           <a href={docHref(WHY_DOC)} className="underline underline-offset-4">
             {WHY_DOC}
           </a>{' '}
-          states the claim under test. Objections go to{' '}
-          <a href={ISSUES_URL} className="underline underline-offset-4">
-            the issue tracker
-          </a>
-          .
+          states the claim under test. The{' '}
+          <Link href={gapsHref} className="underline underline-offset-4">
+            open gaps
+          </Link>{' '}
+          name every indicator with no dataset behind it, and{' '}
+          <Link href={supportHref} className="underline underline-offset-4">
+            ways to help
+          </Link>{' '}
+          holds every other way in.
         </p>
       </Section>
 

@@ -10,7 +10,7 @@ import {
 import type { Dimension } from '@ncb/core'
 import { DataTable } from '@/components/DataTable'
 import { CapabilityLink } from '@/components/CapabilityLink'
-import { Eyebrow, Headline, Meta, PageTitle, PanelProvenanceNote, Section } from '@/components/ui'
+import { ClassBadge, Headline, Meta, PageTitle, PanelProvenanceNote, Section } from '@/components/ui'
 import type { Diagnostics } from '@ncb/core'
 import { capitalize, countWord } from '@/lib/words'
 
@@ -47,8 +47,7 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
 
   return (
     <>
-      <Eyebrow>Diagnostics</Eyebrow>
-      <PageTitle>The diagnostics test the model</PageTitle>
+      <PageTitle>Tests the model has to pass</PageTitle>
       <Headline>
         They check for income bias, duplicate indicators, weak evidence and scores that change
         sharply when inputs change.
@@ -140,7 +139,7 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
       </Section>
 
       <Section
-        title="Some indicators track income"
+        title="Indicators that track income"
         hint="This compares each indicator with log GDP per capita and with the registry's prior."
       >
         <DataTable
@@ -168,7 +167,7 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
               key: 'class',
               label: 'Class',
               sort: (i) => i.measurementClass,
-              render: (i) => muted(i.measurementClass),
+              render: (i) => <ClassBadge value={i.measurementClass} />,
             },
             {
               key: 'r',
@@ -189,7 +188,7 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
       </Section>
 
       <Section
-        title="One indicator can drive the income signal"
+        title="When one indicator drives the income signal"
         hint="Each row removes one indicator. A positive delta means the dimension tracks income more without it."
       >
         <DataTable
@@ -525,7 +524,7 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
       </Section>
 
       <Section
-        title="These indicators have no data"
+        title="Indicators with no data"
         hint="The model specifies them, but no adequate dataset covers them. They stay in the registry and lower confidence."
       >
         <DataTable
@@ -553,7 +552,7 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
 
       {retired.length > 0 ? (
         <Section
-          title="These datasets were rejected"
+          title="Datasets we rejected"
           hint="Retired rows stay in the registry and lower confidence like gaps. The reason for each rejection is recorded."
         >
           <DataTable

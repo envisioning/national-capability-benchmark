@@ -1,5 +1,12 @@
-import { COUNTRY_NAMES, DIMENSIONS, EVIDENCE_STATUS_LABELS } from '@ncb/core'
-import type { Dimension, EvidenceStatus, Lang } from '@ncb/core'
+import {
+  CONTRIBUTING_DOC,
+  COUNTRY_NAMES,
+  DIMENSIONS,
+  EVIDENCE_STATUS_LABELS,
+  ISSUES_URL,
+  docHref,
+} from '@ncb/core'
+import type { ContactTopic, ContributionWay, Dimension, EvidenceStatus, Lang } from '@ncb/core'
 import {
   countryLayer,
   layerSection,
@@ -266,8 +273,10 @@ export function patternFiltersQuery(filters: PatternFilters): string {
  * cards, so it reads and writes the same filter contract. One parser, one
  * builder, two surfaces. See D46.
  */
+export const agendasIndexHref = '/agenda'
+
 export const agendasHref = (filters: PatternFilters = NO_PATTERN_FILTERS): string =>
-  `/agenda${patternFiltersQuery(filters)}`
+  `${agendasIndexHref}${patternFiltersQuery(filters)}`
 
 /** The list of documented deliveries, narrowed or whole. */
 export const patternsHref = (filters: PatternFilters = NO_PATTERN_FILTERS): string =>
@@ -281,8 +290,19 @@ export const patternsHref = (filters: PatternFilters = NO_PATTERN_FILTERS): stri
  */
 export const evidenceHref = (recordId: string): string => `/patterns/${recordId}`
 
-/** What would overturn the model, and how to file an objection. */
-export const challengeHref = '/challenge'
+/**
+ * What would overturn the model, and how to file an objection.
+ *
+ * The page was `/challenge` until D78. A reader outside the project read that
+ * word as a competition rather than as an invitation to argue, so the address
+ * and the label both say objections now. `/challenge` redirects. The score-side
+ * control keeps the verb, because "challenge this score" is what the reader is
+ * doing there.
+ */
+export const objectionsHref = '/objections'
+
+/** The declared gaps, read as open work rather than as a registry table. */
+export const gapsHref = '/gaps'
 
 /** The public machine-readable distribution feed. */
 export const feedHref = '/feed.xml'
@@ -306,8 +326,8 @@ export const siteOrigin = (): string =>
 export const absoluteHref = (path: string): string => `${siteOrigin()}${path}`
 
 /** One public dispute record. */
-export const challengeDetailHref = (id: string): string =>
-  `${challengeHref}/${encodeURIComponent(id)}`
+export const objectionDetailHref = (id: string): string =>
+  `${objectionsHref}/${encodeURIComponent(id)}`
 
 /** The endpoint used by the score challenge form. */
 export const challengeApiHref = (iso3: string, dimension: Dimension): string =>
@@ -320,8 +340,10 @@ export const aboutHref = '/about'
 export const changelogHref = '/changelog'
 
 /** One release entry inside the changelog. */
-export const changelogReleaseHref = (version: string): string =>
-  `${changelogHref}#${version.replace(/[^0-9]+/g, '-').replace(/^-|-$/g, '')}`
+export const changelogReleaseHref = (version: string, kind: 'app' | 'dataset' = 'dataset'): string => {
+  const slug = version.replace(/[^0-9]+/g, '-').replace(/^-|-$/g, '')
+  return `${changelogHref}#${kind === 'app' ? `app-${slug}` : slug}`
+}
 
 /**
  * How an institution can back the work: use it, contribute to it, fund it.
@@ -342,6 +364,43 @@ export const contactHref = '/contact'
 
 /** The endpoint the contact form posts to. */
 export const contactApiHref = '/api/contact'
+
+/**
+ * The contact form, opened on one subject.
+ *
+ * `about` names the thing the message is about, currently an indicator id. The
+ * page turns it into the first line of the message, so a reader who arrives
+ * from a gap does not have to remember which gap it was. See D78.
+ */
+export const contactTopicHref = (topic: ContactTopic, about?: string): string => {
+  const params = new URLSearchParams({ topic })
+  if (about) params.set('about', about)
+  return `${contactHref}?${params.toString()}`
+}
+
+/**
+ * Where one way of taking part actually goes.
+ *
+ * The registry in `@ncb/core` says what each contribution is and what it needs.
+ * It holds no addresses, because core does not know the viewer's URLs, so the
+ * mapping lives here with every other URL shape. See D46 and D78.
+ */
+export function contributionHref(way: ContributionWay): string {
+  switch (way.channel) {
+    case 'objections':
+      return objectionsHref
+    case 'issues':
+      return ISSUES_URL
+    case 'pull-request':
+      return docHref(CONTRIBUTING_DOC)
+    case 'contact':
+      return contactTopicHref(way.topic)
+  }
+}
+
+/** Whether a contribution leaves the viewer, so a link can say so. */
+export const contributionIsExternal = (way: ContributionWay): boolean =>
+  way.channel === 'issues' || way.channel === 'pull-request'
 
 /** Who publishes the data and how each series is fetched. */
 export const sourcesHref = '/sources'

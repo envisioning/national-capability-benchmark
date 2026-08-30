@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Empty, Eyebrow, Headline, PageTitle } from '@/components/ui'
+import { Empty, Headline, PageTitle } from '@/components/ui'
 import { LeverageView } from '@/components/views/LeverageView'
 import { MISSING_DATA_HINT, loadLeverage } from '@/lib/data'
 
@@ -17,7 +17,6 @@ export default async function LeverageSandboxPage() {
 
   return (
     <>
-      <Eyebrow>Provisional layer</Eyebrow>
       <PageTitle>Leverage is an offline experiment</PageTitle>
       <Headline>
         This sandbox applies a placeholder weighted sum to six transparent public-data proxies and

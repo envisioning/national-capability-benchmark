@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Glossary, NCB',
   description: 'Terms used by the benchmark, explained in plain language.',
 }
-import { ClassBadge, Eyebrow, Headline, PageTitle, Section } from '@/components/ui'
+import { ClassBadge, Headline, PageTitle, Section } from '@/components/ui'
 import { GROUP_ICON, Icon } from '@/components/Icon'
 
 const CLASSES: MeasurementClass[] = ['C', 'I', 'O', 'P']
@@ -14,8 +14,7 @@ const CLASSES: MeasurementClass[] = ['C', 'I', 'O', 'P']
 export default function GlossaryPage() {
   return (
     <>
-      <Eyebrow>Glossary</Eyebrow>
-      <PageTitle>The glossary explains the terms</PageTitle>
+      <PageTitle>What the terms mean</PageTitle>
       <Headline>
         This page explains the terms used by the benchmark. If a letter, band or dashed line is
         unclear, start here.

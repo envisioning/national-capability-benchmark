@@ -17,7 +17,14 @@ import { contactApiHref } from '@/lib/links'
 const FIELD =
   'mt-2 block w-full rounded-md border border-[var(--rule)] bg-[var(--surface)] px-3 py-2 text-lg font-normal'
 
-export function ContactForm({ topic = 'general' }: { topic?: ContactTopic }) {
+export function ContactForm({
+  topic = 'general',
+  draft = '',
+}: {
+  topic?: ContactTopic
+  /** Opening text, where the page that sent the reader knows what this is about. */
+  draft?: string
+}) {
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -104,6 +111,7 @@ export function ContactForm({ topic = 'general' }: { topic?: ContactTopic }) {
           required
           minLength={MIN_CONTACT_MESSAGE}
           maxLength={4000}
+          defaultValue={draft}
           className={`${FIELD} min-h-36 leading-relaxed`}
           placeholder="What are you working on, and what would you want from the benchmark?"
         />

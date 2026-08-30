@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { DIMENSIONS, DIMENSION_LABELS, DIMENSION_QUESTIONS, contestedDisputeCounts } from '@ncb/core'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { ScoreTable } from '@/components/views/ScoreTables'
-import { Empty, Eyebrow, FrameNote, Headline, PageTitle, ScoreLegend, Section } from '@/components/ui'
+import { Empty, FrameNote, Headline, PageTitle, ScoreLegend, Section } from '@/components/ui'
 import { MISSING_DATA_HINT, loadDisputes, loadIndex } from '@/lib/data'
 import { capabilityHref } from '@/lib/links'
 
@@ -24,7 +24,6 @@ export default async function CapabilitiesPage() {
 
   return (
     <>
-      <Eyebrow>Capabilities</Eyebrow>
       <PageTitle>Compare countries by capability</PageTitle>
       <Headline>Each capability has its own question, indicators and country comparison.</Headline>
 
@@ -52,7 +51,7 @@ export default async function CapabilitiesPage() {
       </div>
 
       <Section
-        title="The scores in a table"
+        title="The same scores as a table"
         hint="Every country on every capability, in one grid. Click any heading to sort."
       >
         {countries.length === 0 ? (

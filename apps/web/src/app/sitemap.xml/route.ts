@@ -5,13 +5,15 @@ import { METHOD_PAGES } from '@/lib/nav'
 import {
   absoluteHref,
   aboutHref,
+  agendasIndexHref,
   agendaHref,
   capabilitiesHref,
-  challengeHref,
+  objectionsHref,
   changelogHref,
   compareBaseHref,
   contactHref,
   countriesHref,
+  gapsHref,
   countryLayerHref,
   countryProfileHref,
   digestHref,
@@ -46,7 +48,7 @@ export async function GET(): Promise<Response> {
   add(compareBaseHref)
   add(capabilitiesHref)
   for (const dimension of DIMENSIONS) add(`${capabilitiesHref}/${dimension}`)
-  add('/agenda')
+  add(agendasIndexHref)
   add(thesisHref)
   add('/country/BRA/institutions')
   /* Every country layer and the sections it holds of its own. A section that
@@ -59,8 +61,9 @@ export async function GET(): Promise<Response> {
   }
   add(aboutHref)
   add(changelogHref)
-  add(challengeHref)
   add(supportHref)
+  add(gapsHref)
+  add(objectionsHref)
   add(contactHref)
   for (const entry of METHOD_PAGES) add(entry.href)
   for (const country of COUNTRIES) {

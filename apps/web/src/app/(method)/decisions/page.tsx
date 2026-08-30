@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { DECISIONS_DOC, docHref } from '@ncb/core'
 import { Markdown } from '@/lib/markdown'
 import { loadDoc } from '@/lib/data'
-import { Empty, Eyebrow, Headline, PageTitle } from '@/components/ui'
+import { Empty, Headline, PageTitle } from '@/components/ui'
 
 export const dynamic = 'force-dynamic'
 
@@ -24,7 +24,6 @@ export default async function DecisionsPage() {
 
   return (
     <>
-      <Eyebrow>The decision log</Eyebrow>
       <PageTitle>Why the benchmark works this way</PageTitle>
       <Headline>
         Each entry records a choice, its trade-offs and what could overturn it. The log is

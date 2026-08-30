@@ -21,7 +21,6 @@ export default async function BrazilInstitutionsPage() {
 
     return (
       <>
-        <Eyebrow>Mapa institucional do Brasil</Eyebrow>
         <PageTitle>O mapa institucional não pôde ser carregado</PageTitle>
         <Headline>A rede institucional não pôde ser carregada.</Headline>
         <Note tone="stop">{networkResult.error.message}</Note>
@@ -37,7 +36,7 @@ export default async function BrazilInstitutionsPage() {
   return (
     <>
       <Eyebrow>Mapa institucional do Brasil · versão experimental {network.version}</Eyebrow>
-      <PageTitle>Nenhum organograma explica sozinho como o Brasil funciona</PageTitle>
+      <PageTitle>Como o Brasil se organiza para agir</PageTitle>
       <Headline>
         Escolha uma instituição para ver o que ela faz, quem limita seu poder e de quais{' '}
         <Highlight>relações</Highlight> sua atuação depende.

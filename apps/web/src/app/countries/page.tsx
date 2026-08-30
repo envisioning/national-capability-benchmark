@@ -39,8 +39,7 @@ export default async function CountriesPage() {
       <PageTitle>Every country as a shape</PageTitle>
       <Headline>
         Nine capability scores read together. Two countries with the same average can have
-        completely different shapes, which is the whole reason this benchmark publishes no single
-        number.
+        completely different shapes, so the benchmark publishes no single number.
       </Headline>
       <p className="mb-10 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
         Open a country for its indicator rows, its trend and its agenda. To read a few countries
@@ -56,7 +55,7 @@ export default async function CountriesPage() {
       </p>
 
       <Section
-        title="Countries have different profiles"
+        title="Same average, different shape"
         hint="Scores run 0 to 100 using all countries as the frame. There is no composite, so countries with the same average can have different profiles."
       >
         <DimensionLegend />
@@ -97,7 +96,7 @@ export default async function CountriesPage() {
       </Section>
 
       <Section
-        title="Score and confidence are separate"
+        title="Score and confidence stay separate"
         hint="Confidence is coverage times recency times source quality. It sits beside the score; missing data lowers coverage and is never imputed."
       >
         <ConfidenceLegend />

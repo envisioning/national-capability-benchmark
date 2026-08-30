@@ -336,12 +336,10 @@ export const PT_BR: Lexicon = {
     ownEvidenceHeading: 'O que os indicadores não veem sobre {countryTopic}',
     ownEvidenceIntro:
       'Entregas documentadas como evidência. Elas nunca afetam as notas ou a confiança.',
-    brazilEvidenceHeading:
-      'Mudança institucional brasileira: entregas que não mudam as notas, mas mudam países.',
+    brazilEvidenceHeading: 'O que o Brasil construiu e nenhum indicador conta',
     brazilEvidenceIntro:
       'Estas são mudanças institucionais brasileiras documentadas que o framework registra como evidência. Elas não são pontuadas. São o registro histórico ao lado da medição de capacidades.',
-    institutionalHistoryHeading:
-      'Mudança institucional: entregas que não mudam as notas, mas mudam {countryTopic}.',
+    institutionalHistoryHeading: 'O que {countryTopic} construiu e nenhum indicador conta',
     institutionalHistoryIntro:
       'Estas são mudanças institucionais documentadas em {country} que o framework registra como evidência. Elas ficam ao lado da nota e não mudam a nota ou a confiança.',
     contributeHeading: 'Contribua',
@@ -462,7 +460,7 @@ export const PT_BR: Lexicon = {
     relationCountOne: 'Uma relação registrada',
     noRelations: 'Nenhuma relação registrada para esta instituição.',
     sourceLink: 'Fonte institucional',
-    matrixHeading: 'Autoridade, controle e dinheiro não percorrem os mesmos caminhos',
+    matrixHeading: 'Como autoridade, controle e dinheiro circulam',
     matrixIntro:
       'Cada célula conta as relações que vão do sistema da linha para o sistema da coluna. Selecione uma célula para lê-las.',
     matrixFrom: 'De',

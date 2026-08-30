@@ -194,6 +194,11 @@ port 3888. That entry starts Next directly and does not use the proxy.
   indicators or fields added with no country added. Patch = re-ingest under the
   same registry and country set. Bump it in the same change that earns the bump.
   See D37 and D47.
+- The app release version is also defined in
+  `packages/core/src/model/version.ts` as `APP_VERSION`. It covers the
+  user-facing viewer, routes, research surfaces and documentation, and is
+  recorded in an `App X.Y.Z` changelog entry. It moves independently from the
+  dataset version, which is recorded in a `Dataset X.Y.Z` entry.
 - A value outside the frame clamps to 0 or 100 and sets `outOfFrame` on the
   cell. A current value cannot do this, because its own country helped build the
   frame. A historical value can, which is what the trend clamp counts report.
@@ -279,14 +284,29 @@ port 3888. That entry starts Next directly and does not use the proxy.
   and `SectionTabs` draws the deepest level as a tab strip under the header.
   Never stack nav rows instead. A country layer is a reading beside the English
   one, never a level under its pages, and both readings share one crumb joined
-  by a middot, because they are alternatives rather than steps. Countries
-  resolves its child from the path because 52 will not fit in a control; Method
-  and Capabilities list theirs. Both bands render above every layout that could
+  by a middot, because they are alternatives rather than steps. **There are five
+  sections and adding a sixth is a decision, not a page.** A new page joins the
+  section that already answers its reader's question: `COUNTRY_INDEX_PAGES`,
+  `METHOD_PAGES`, `PARTICIPATE_PAGES` or `ABOUT_PAGES`, all in the same file.
+  Countries resolves its row from the path because 52 countries will not fit in
+  a control, and before the path names one it offers the cross-country readings
+  instead; Method, Participate, Capabilities and About list theirs. See D80.
+  Both bands render above every layout that could
   read a file, so which surfaces a country has comes from a registry and never
   from the filesystem: `hasLocalDestination` and `INSTITUTION_MAPS`, both in
   `apps/web/src/lib/layers.ts`. Keep `INSTITUTION_MAPS` in step with
   `data/institutions/*.json`. A new top-level page needs a node in the tree or
   it lights nothing. See D73.
+- **One registry declares the ways to take part.**
+  `packages/core/src/model/contribute.ts` holds every way in, each with what it
+  needs, who brings it, how much work it is and what it changes in the published
+  benchmark. `ContributionList` renders it, `contributionHref` in `links.ts`
+  addresses it, and `FUNDABLE_PIECES` holds the funded work with a scope and an
+  effect on each. Never write a list of ways to help into a page. Taking part is
+  a section of the nav tree, `PARTICIPATE_PAGES`, holding `/support`, `/gaps`,
+  `/objections` and `/contact`: a page that asks for help and sits in no
+  navigation is not published. `/gaps` is a second reading of the indicator
+  registry and never a second list of gaps. See D78.
 - **The thesis argues, the about page describes, and neither restates the
   other.** `/thesis` owns the claim and draws how far the data supports it.
   `/about` owns the object: size, date, refusals, known failures and how to
@@ -335,7 +355,7 @@ port 3888. That entry starts Next directly and does not use the proxy.
   `outputFileTracingIncludes`. A new doc rendered by a page needs the same
   tracing entry, or the deployed page silently shows its empty state.
 - A decision's falsification clause is labelled `**Overturned by.**`. The
-  `/challenge` page lifts that clause out of every entry, so a differently
+  `/objections` page lifts that clause out of every entry, so a differently
   named label drops the decision off the page and nothing errors. See D50.
 - Two sessions appending to `docs/DECISIONS.md` collide. Read the highest number
   in the file immediately before you write, and re-check it after: a concurrent
@@ -494,10 +514,13 @@ as the reference, and see NOTICE.md before reusing the brand.
 - Typefaces are self-hosted in `apps/web/src/app/fonts`: `InterVariable.woff2`,
   `InterVariable-Italic.woff2`, `EnvisioningOcta-VF.woff2`. Copied from
   `envisioning.com/app/fonts`. Re-copy if upstream updates them.
-- Octa is display only: the wordmark and page titles, above 24px. Never body,
-  labels, tables or anything under 18px. Set it with `font-variation-settings`
-  so the width axis travels, never with `font-weight` alone, and hold `wdth` at
-  100 across the whole layout.
+- Octa is display only and rare: the wordmark, and one hero title on the front
+  page. Every other page title is Inter, through `PageTitle`. `HeroTitle` in
+  `apps/web/src/components/ui.tsx` is the only Octa title on the site, and it
+  is larger than a page title because a display face needs the size to earn its
+  place. Never body, labels, tables or anything under 18px. Set it with
+  `font-variation-settings` so the width axis travels, never with `font-weight`
+  alone, and hold `wdth` at 100 across the whole layout. See D79.
 - Every 0 to 100 score renders through `Score` in `apps/web/src/components/ui.tsx`,
   banded by `packages/core/src/pipeline/bands.ts`. Never render a score as a bare
   number or invent a per-table treatment. See D18.
@@ -541,6 +564,15 @@ as the reference, and see NOTICE.md before reusing the brand.
 - Headings must be statements that could be true or false, never stacked noun
   phrases. "Two dimensions do not survive without wealth-correlated data", not
   "Wealth sensitivity".
+- A heading is short, plain and obvious. Aim for six words. Say what the section
+  holds, not what the project believes about it. "How much of this is income?",
+  never "The claim is that capability is not simply wealth". Cut every
+  aphorism: a heading that reads as a maxim is the loudest AI tell on the page.
+  A question is allowed when it is the question the section answers. See D79.
+- A sentence that only names two pages and joins them with "and" is filler.
+  "About says what it is made of and what it refuses to do, and contact reaches
+  a person" tells a reader nothing they could act on. Say what the page holds
+  and link the words a reader would look for. See D79.
 - **No em dashes or en dashes in rendered copy.** This repo's internal docs still
   use them; the viewer must not.
 - The "X, not Y" inversion is capped at one per page. VOICE.md calls it the most

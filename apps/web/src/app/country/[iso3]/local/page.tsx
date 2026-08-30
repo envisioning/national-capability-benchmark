@@ -11,9 +11,9 @@ import type { DisputeRecord } from '@ncb/core'
 import { InstitutionsView } from '@/components/views/InstitutionsView'
 import { NeighbourSparkline } from '@/components/NeighbourSparkline'
 import { Radar } from '@/components/Radar'
-import { CountryLabel, DefineLink, Empty, Eyebrow, Headline, Note, PageTitle, Section } from '@/components/ui'
+import { CountryLabel, DefineLink, Empty, Headline, Note, PageTitle, Section } from '@/components/ui'
 import {
-  challengeDetailHref,
+  objectionDetailHref,
   compareHref,
   countryProfileHref,
   hasLocalDestination,
@@ -93,9 +93,8 @@ export default async function CountryLocalPage({
 
   return (
     <>
-      <Eyebrow>Brazil destination</Eyebrow>
       <PageTitle>
-        <CountryLabel iso3="BRA" name="Brazil" /> has a local reading
+        <CountryLabel iso3="BRA" name="Brazil" /> below the national score
       </PageTitle>
       <Headline>
         The national benchmark shows Brazil beside its peers. This page shows what the national
@@ -103,7 +102,7 @@ export default async function CountryLocalPage({
       </Headline>
 
       <Section
-        title="Brazil&apos;s national shape is only the first layer"
+        title="The national score is the first layer"
         hint="The radar keeps the nine national dimensions together. The paragraph beside it explains what the shape can and cannot say."
       >
         <div className="grid items-start gap-8 md:grid-cols-[10rem_1fr]">
@@ -132,7 +131,7 @@ export default async function CountryLocalPage({
       </Section>
 
       <Section
-        title="Four peers put Brazil&apos;s shape in context"
+        title="Brazil beside four peers"
         hint="Each mini-radar uses the same nine national dimensions and current comparison frame. Open one to read it beside Brazil, row by row and indicator by indicator."
       >
         <div className="grid gap-4 sm:grid-cols-2">
@@ -157,7 +156,7 @@ export default async function CountryLocalPage({
       </Section>
 
       <Section
-        title="The national inequality value sits among Brazil&apos;s states"
+        title="One national value, 27 states"
         hint="One indicator is available in the pilot. The state range adds detail without entering the country comparison."
       >
         {corroboration ? (
@@ -168,7 +167,7 @@ export default async function CountryLocalPage({
       </Section>
 
       <Section
-        title="Institutions make the local system visible"
+        title="Who acts locally"
         hint="The map is an explanatory layer. It does not measure institutional performance or change the national scores."
       >
         {networkResult.network ? (
@@ -192,7 +191,7 @@ export default async function CountryLocalPage({
       </Section>
 
       <Section
-        title="Disputes remain attached to the national ledger"
+        title="Disputes stay on the national ledger"
         hint="Accepted and live Brazil disputes stay visible here, while rejected records remain out of the public destination view."
       >
         {disputes.length ? (
@@ -200,7 +199,7 @@ export default async function CountryLocalPage({
             {disputes.map((dispute) => (
               <li key={dispute.id} className="rounded-lg border border-[var(--rule)] p-4">
                 <div className="flex flex-wrap items-baseline justify-between gap-3 text-xs">
-                  <Link href={challengeDetailHref(dispute.id)} className="font-medium underline underline-offset-4">
+                  <Link href={objectionDetailHref(dispute.id)} className="font-medium underline underline-offset-4">
                     {dispute.id}
                   </Link>
                   <span className="text-[var(--muted)]">{CHALLENGE_STATUS_LABELS[dispute.status]}</span>

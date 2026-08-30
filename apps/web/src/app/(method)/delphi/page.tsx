@@ -17,7 +17,6 @@ import {
   CountryLabel,
   DefineLink,
   Empty,
-  Eyebrow,
   Headline,
   Meta,
   Note,
@@ -67,8 +66,7 @@ export default async function DelphiPage() {
 
   return (
     <>
-      <Eyebrow>The judgment layer</Eyebrow>
-      <PageTitle>Panel estimates stay beside the scores</PageTitle>
+      <PageTitle>Panel estimates never enter a score</PageTitle>
       <Headline>
         A <DefineLink term="Delphi panel">panel</DefineLink> reviews selected dimensions from the
         source-backed evidence and audits the registry. Its estimates do not change the indicator
@@ -91,7 +89,7 @@ export default async function DelphiPage() {
       </p>
 
       <Section
-        title="Panelists use fixed stances"
+        title="Each panelist holds a fixed stance"
         hint="Each stance gives disagreement a reason."
       >
         {!evidential ? (
@@ -129,7 +127,7 @@ export default async function DelphiPage() {
       </Section>
 
       <Section
-        title="The panel's disagreement stays visible"
+        title="Where the panel disagreed"
         hint={`A cell is marked when the middle half of the panel spans more than ${DISSENT_IQR} points.`}
       >
         {dissent.length === 0 ? (
@@ -145,7 +143,7 @@ export default async function DelphiPage() {
 
       {shifts.length === 0 ? (
         <Section
-          title="A second round can change the estimates"
+          title="What a second round changes"
           hint="This run has one round, so there is no median or IQR shift yet."
         >
           <p className="max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
@@ -154,7 +152,7 @@ export default async function DelphiPage() {
         </Section>
       ) : (
         <Section
-          title="Later rounds show what changed"
+          title="What moved between rounds"
           hint="A negative IQR shift means the panel narrowed."
         >
           <Scroller>
@@ -208,7 +206,7 @@ export default async function DelphiPage() {
         </Section>
       ) : (
         <Section
-          title="The panel also rates each indicator"
+          title="How the panel rated each indicator"
           hint="Each indicator gets a class, a validity rating and a wealth-proxy risk rating. The weakest validity comes first."
         >
           <Scroller>
@@ -256,7 +254,7 @@ export default async function DelphiPage() {
 
       {missing.length > 0 ? (
         <Section
-          title="Evidence the panel requested"
+          title="Evidence the panel asked for"
           hint="Panelists name evidence they want to see. The list feeds the collection agenda."
         >
           <Scroller>

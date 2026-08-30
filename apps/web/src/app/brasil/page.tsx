@@ -19,7 +19,6 @@ import {
   CountryLabel,
   DimensionLegend,
   Empty,
-  Eyebrow,
   Headline,
   Highlight,
   Meta,
@@ -95,7 +94,6 @@ export default async function BrazilLayerPage() {
 
   return (
     <>
-      <Eyebrow>Camada Brasil</Eyebrow>
       <PageTitle>O que o Brasil é capaz de fazer?</PageTitle>
       <Headline>
         Nove dimensões de capacidade, medidas com dados públicos. A <Highlight>forma</Highlight>{' '}
@@ -303,7 +301,7 @@ export default async function BrazilLayerPage() {
       ) : null}
 
       <Section
-        title="A nota nacional é a primeira camada, e não a última"
+        title="A nota nacional é só a primeira camada"
         hint="O Brasil tem vários centros de ação. A camada reúne o que a comparação internacional não alcança."
       >
         <div className="grid gap-5 sm:grid-cols-2">
@@ -472,7 +470,7 @@ export default async function BrazilLayerPage() {
       </Section>
 
       <Section
-        title="O próximo trabalho está definido"
+        title="O próximo trabalho"
         hint={`O protótipo está publicado${data.version ? ` na versão ${data.version}` : ''}, com ${total} países. Agora precisa ficar seguro para citação.`}
       >
         <div className="grid gap-5 lg:grid-cols-3">

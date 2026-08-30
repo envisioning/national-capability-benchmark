@@ -1,6 +1,6 @@
-import { DATASET_VERSION } from '@ncb/core'
+import { APP_VERSION, DATASET_VERSION } from '@ncb/core'
 import { loadIndex } from '@/lib/data'
-import { loadAgendaFeedEntries, loadDatasetFeedEntries } from '@/lib/distribution'
+import { loadAgendaFeedEntries, loadChangelogFeedEntries } from '@/lib/distribution'
 import {
   absoluteHref,
   agendaHrefInLanguage,
@@ -32,9 +32,9 @@ function entryUrl(iso3: string, lang: 'en' | 'pt-BR'): string | null {
 export async function GET(): Promise<Response> {
   const index = await loadIndex()
   const date = index?.generatedAt?.slice(0, 10) ?? new Date().toISOString().slice(0, 10)
-  const [agendas, versions] = await Promise.all([
+  const [agendas, releases] = await Promise.all([
     loadAgendaFeedEntries(),
-    loadDatasetFeedEntries(date),
+    loadChangelogFeedEntries(date),
   ])
 
   const agendaEntries = agendas.flatMap((entry) => {
@@ -43,17 +43,17 @@ export async function GET(): Promise<Response> {
       ? [{ id: url, link: url, title: entry.title, summary: entry.summary, updated: entry.updated }]
       : []
   })
-  const datasetEntries = versions.map((entry) => ({
-    id: `${absoluteHref(feedHref)}#dataset-${entry.version}`,
-    link: absoluteHref(changelogReleaseHref(entry.version)),
-    title: `Dataset ${entry.version}`,
+  const releaseEntries = releases.map((entry) => ({
+    id: `${absoluteHref(feedHref)}#${entry.kind}-${entry.version}`,
+    link: absoluteHref(changelogReleaseHref(entry.version, entry.kind)),
+    title: `${entry.kind === 'app' ? 'App' : 'Dataset'} ${entry.version}`,
     summary: entry.summary,
     updated: entry.updated,
   }))
   const digestUrl = absoluteHref(digestHref(date))
   const entries = [
     ...agendaEntries,
-    ...datasetEntries,
+    ...releaseEntries,
     {
       id: digestUrl,
       link: digestUrl,
@@ -84,7 +84,7 @@ export async function GET(): Promise<Response> {
   <link href="${xml(absoluteHref(feedHref))}" rel="self" type="application/atom+xml" />
   <link href="${xml(absoluteHref('/'))}" />
   <updated>${xml(index?.generatedAt ?? new Date().toISOString())}</updated>
-  <subtitle>Country capability agendas, dataset updates and the weekly digest. Dataset ${xml(version)}.</subtitle>${body}
+  <subtitle>Country capability agendas, app releases, dataset updates and the weekly digest. App ${xml(APP_VERSION)}; dataset ${xml(version)}.</subtitle>${body}
 </feed>
 `
 

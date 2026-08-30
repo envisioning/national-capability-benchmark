@@ -7,8 +7,8 @@ import {
   FactStrip,
   FrameNote,
   Headline,
+  HeroTitle,
   Highlight,
-  PageTitle,
   Score,
   Section,
   type Fact,
@@ -18,7 +18,7 @@ import {
   aboutHref,
   agendasHref,
   capabilitiesHref,
-  challengeHref,
+  objectionsHref,
   changelogReleaseHref,
   compareBaseHref,
   contactHref,
@@ -112,7 +112,7 @@ export default async function Page() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: datasetJsonLd(data) }} />
       <Eyebrow>{profiles.length} countries, nine capabilities</Eyebrow>
-      <PageTitle>What is a country capable of doing?</PageTitle>
+      <HeroTitle>What is a country capable of doing?</HeroTitle>
       <Headline>
         Nine capabilities, scored from public data. Pick one and every country lands on the{' '}
         <Highlight>same scale</Highlight>, each carrying its own confidence.
@@ -127,8 +127,8 @@ export default async function Page() {
       </Section>
 
       <Section
-        title="A country is a shape, and no country is one number"
-        hint="Every profile draws the nine together, so a strength and a weakness are read in the same glance."
+        title="Nine scores, read together"
+        hint="A profile draws all nine at once, so a strength and a weakness show up in the same glance."
       >
         <p className="max-w-3xl text-lg leading-relaxed">
           {spread ? (
@@ -163,8 +163,8 @@ export default async function Page() {
 
       {wealth ? (
         <Section
-          title="The claim is that capability is not simply wealth"
-          hint="If a country's ability to act were only its income, this benchmark would be an income table. The test runs on every release."
+          title="How much of this is income?"
+          hint="If a capability were only a country's income, this would be an income table. The test runs on every release."
         >
           <p className="max-w-3xl text-lg leading-relaxed">
             The nine capabilities correlate with GDP per head from{' '}
@@ -186,7 +186,7 @@ export default async function Page() {
       ) : null}
 
       <Section
-        title="Each country gets an agenda, not a grade"
+        title="What each country should work on"
         hint="The scores turn into three lists: what to raise, what to measure first and what to hold."
       >
         <p className="max-w-3xl text-lg leading-relaxed">
@@ -201,7 +201,7 @@ export default async function Page() {
       </Section>
 
       <Section
-        title="Every number here can be checked, and argued with"
+        title="Check the numbers"
         hint="The method, the limits and the reasoning behind each choice are published beside the data."
       >
         <FactStrip facts={facts} />
@@ -219,7 +219,7 @@ export default async function Page() {
             decision log
           </Link>{' '}
           says what would overturn each choice, and the{' '}
-          <Link href={challengeHref} className="underline underline-offset-4">
+          <Link href={objectionsHref} className="underline underline-offset-4">
             challenge page
           </Link>{' '}
           is where an objection enters the record.
@@ -227,8 +227,8 @@ export default async function Page() {
       </Section>
 
       <Section
-        title="Envisioning built this as a research prototype"
-        hint="It is early, the gaps are declared, and it is looking for institutions to improve it."
+        title="Who built this"
+        hint="A research prototype from Envisioning. It is early, the gaps are declared, and it needs institutions to improve it."
       >
         <p className="max-w-3xl text-lg leading-relaxed">
           <a href="https://envisioning.com" className="underline underline-offset-4" rel="noopener">
@@ -236,15 +236,15 @@ export default async function Page() {
           </a>{' '}
           researches how societies anticipate and act on change. The benchmark ranks nobody and
           advises nobody. It reads a country&apos;s capability shape from public data and says how
-          confident it is.{' '}
+          confident it is. The{' '}
           <Link href={aboutHref} className="underline underline-offset-4">
-            About
+            about page
           </Link>{' '}
-          says what it is made of and what it refuses to do, and{' '}
+          covers what the data is and where it fails. Questions and corrections go to{' '}
           <Link href={contactHref} className="underline underline-offset-4">
-            contact
-          </Link>{' '}
-          reaches a person.
+            one inbox
+          </Link>
+          .
         </p>
       </Section>
     </>

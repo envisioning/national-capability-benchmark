@@ -6,9 +6,9 @@ import {
   COUNTRY_NAMES,
   DIMENSION_LABELS,
 } from '@ncb/core'
-import { CountryLabel, Eyebrow, Meta, Note, PageTitle, Section } from '@/components/ui'
+import { CountryLabel, Meta, Note, PageTitle, Section } from '@/components/ui'
 import { loadDispute } from '@/lib/data'
-import { capabilityHref, challengeHref } from '@/lib/links'
+import { capabilityHref, objectionsHref } from '@/lib/links'
 
 export const dynamic = 'force-dynamic'
 
@@ -23,11 +23,11 @@ export async function generateMetadata({
   const country = COUNTRY_NAMES[dispute.target.iso3] ?? dispute.target.iso3
   return {
     title: `Dispute for ${country} ${DIMENSION_LABELS[dispute.target.dimension]}, NCB`,
-    description: 'A public challenge to one National Capability Benchmark score.',
+    description: 'A public objection to one National Capability Benchmark score.',
   }
 }
 
-export default async function ChallengeDetailPage({
+export default async function ObjectionDetailPage({
   params,
 }: {
   params: Promise<{ id: string }>
@@ -41,11 +41,10 @@ export default async function ChallengeDetailPage({
   return (
     <>
       <p className="mb-6">
-        <Link href={challengeHref} className="text-xs text-[var(--muted)] underline underline-offset-4">
-          All challenges
+        <Link href={objectionsHref} className="text-xs text-[var(--muted)] underline underline-offset-4">
+          All objections
         </Link>
       </p>
-      <Eyebrow>Public dispute record</Eyebrow>
       <PageTitle>A reader challenged this score</PageTitle>
       <p className="mt-4 flex flex-wrap gap-2">
         <Meta>{CHALLENGE_STATUS_LABELS[dispute.status]}</Meta>

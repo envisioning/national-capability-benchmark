@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import type { Lexicon, MeasurementClass, Provenance } from '@ncb/core'
 import { DIMENSIONS, DIMENSION_LABELS, EN, countryFlag, fill, isEvidential } from '@ncb/core'
-import { CLASS_ICON, CONFIDENCE_ICON, DIMENSION_ICON, Icon, type IconName } from '@/components/Icon'
+import { CONFIDENCE_ICON, DIMENSION_ICON, Icon, type IconName } from '@/components/Icon'
+import { ClassBadge } from '@/components/ClassBadge'
 import {
   CONFIDENCE_BANDS,
   MEASUREMENT_CLASS_LABELS,
@@ -11,6 +12,8 @@ import {
   scoreBand,
 } from '@ncb/core'
 
+export { ClassBadge }
+
 /*
  * Type scale and surfaces follow envisioning.com/DESIGN.md. Titles are
  * font-light 300: the quietness is the point, and the lime highlight carries
@@ -18,10 +21,24 @@ import {
  * radar fill and the highlight marker and nowhere else.
  */
 
+/**
+ * Every page title on the site. Inter, not Octa: Octa is reserved for the
+ * wordmark and for the one hero title on the front page, so a display face
+ * stays a signal instead of a default. See HeroTitle.
+ */
 export function PageTitle({ children }: { children: React.ReactNode }) {
+  return <h1 className="text-3xl font-light leading-tight sm:text-4xl">{children}</h1>
+}
+
+/**
+ * The one Octa title on the site, on the front page. It is larger than a page
+ * title because a display face needs the size to earn its place. Never use it
+ * on a second page.
+ */
+export function HeroTitle({ children }: { children: React.ReactNode }) {
   return (
     <h1
-      className="font-display text-3xl font-light leading-tight sm:text-4xl"
+      className="font-display text-4xl font-light leading-[1.05] sm:text-6xl"
       style={{ fontVariationSettings: '"wght" 300, "wdth" 100' }}
     >
       {children}
@@ -328,25 +345,6 @@ export function ConfidenceLegend({ lex = EN }: { lex?: Lexicon } = {}) {
         ))}
       </ul>
     </div>
-  )
-}
-
-/**
- * The measurement class of an indicator: an icon and a letter together.
- *
- * The icon is the same everywhere that class appears, so it becomes learnable.
- * The letter stays because the icon alone would be a puzzle, and the tooltip
- * carries the sentence for anybody who wants it now rather than on the glossary.
- */
-export function ClassBadge({ value }: { value: MeasurementClass }) {
-  return (
-    <span
-      title={`${MEASUREMENT_CLASS_LABELS[value]}. ${MEASUREMENT_CLASS_MEANING[value].plain}`}
-      className="inline-flex items-center gap-1 rounded-md border border-[var(--rule)] px-1.5 py-0.5 text-xs font-medium"
-    >
-      <Icon name={CLASS_ICON[value]} size={12} />
-      {value}
-    </span>
   )
 }
 

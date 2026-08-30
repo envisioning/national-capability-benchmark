@@ -39,7 +39,7 @@ export default async function AgendaEmbedPage({
     <EmbedShell theme={embedTheme(query)}>
       <div className="embed-card">
         <p className="embed-kicker">National Capability Benchmark</p>
-        <h1 className="font-display text-3xl font-light leading-tight" style={{ fontVariationSettings: '"wght" 300, "wdth" 100' }}>
+        <h1 className="text-3xl font-light leading-tight">
           Capability agenda: {agenda.country}
         </h1>
         <div className="embed-agenda">

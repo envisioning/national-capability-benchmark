@@ -36,7 +36,7 @@ export function VelocityView({ velocity }: { velocity: VelocityFile }) {
   return (
     <>
       <Section
-        title="The fixture shows movement without making a ranking"
+        title="Movement, with no ranking"
         hint="Each row is one country and dimension. Sort the table to inspect the exploratory rates; excluded countries remain visible so missing coverage can be challenged."
       >
         <Note>
@@ -110,7 +110,7 @@ export function VelocityView({ velocity }: { velocity: VelocityFile }) {
       </Section>
 
       <Section
-        title="The rate remains deliberately provisional"
+        title="The rate is provisional"
         hint="The denominator floors the five percent base-score allowance at five score points. The fixture keeps the signed annual series so the next review can test the formula against gaps, breaks, and changes in the underlying foundation."
       >
         <p className="max-w-3xl text-lg leading-relaxed text-[var(--muted)]">

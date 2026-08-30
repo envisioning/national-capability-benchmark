@@ -229,6 +229,13 @@ export const GLOSSARY: GlossaryEntry[] = [
     example: 'Brazil’s records run from Embrapa in 1973 to Pix in 2020. The immunisation programme is recorded as operating below its peak: 99 percent coverage in 2003, 91 percent in 2024.',
   },
   {
+    term: 'Research lead',
+    group: 'What is missing',
+    short: 'An AI-generated hypothesis about what to investigate, not a verified fact.',
+    full: 'A research lead names an uncovered country-gap question, a possible route and the source search needed to test it. It remains outside scores, confidence and published evidence until a researcher opens the source, verifies the number and writes a record that passes the evidence rules.',
+    example: 'A scout may suggest looking for a national disaster-recovery programme in Chile. That suggestion is not a Chilean delivery until its publisher, metric, scale and limits are checked.',
+  },
+  {
     term: 'Institutional capability network',
     group: 'What sits beside the score',
     short: 'A sourced map of which organisations hold capability and how they constrain or support one another.',

@@ -79,12 +79,10 @@ export const EN: Lexicon = {
     ownEvidenceHeading: 'What the indicators miss about {countryTopic}',
     ownEvidenceIntro:
       'Documented deliveries linked to missing indicators. They do not affect scores or confidence.',
-    brazilEvidenceHeading:
-      "Brazilian institutional change: deliveries that don't move scores but move countries.",
+    brazilEvidenceHeading: 'What Brazil built that no indicator counts',
     brazilEvidenceIntro:
       'These are documented Brazilian institutional changes the framework files as evidence. They are not scored. They are the historical record that the capability measurement sits next to.',
-    institutionalHistoryHeading:
-      "Institutional change: deliveries that don't move scores but move {countryTopic}.",
+    institutionalHistoryHeading: 'What {countryTopic} built that no indicator counts',
     institutionalHistoryIntro:
       'These are documented institutional changes in {country} that the framework files as evidence. They sit beside the score and do not change it or its confidence.',
     contributeHeading: 'Contribute',
@@ -202,7 +200,7 @@ export const EN: Lexicon = {
     relationCountOne: 'One recorded relation',
     noRelations: 'No relation is recorded for this institution.',
     sourceLink: 'Institutional source',
-    matrixHeading: 'Authority, control and money do not travel the same paths',
+    matrixHeading: 'How authority, control and money move',
     matrixIntro:
       'Each cell counts the relations running from the system in its row to the system in its column. Select a cell to read them.',
     matrixFrom: 'From',

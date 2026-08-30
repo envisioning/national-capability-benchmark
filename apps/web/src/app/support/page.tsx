@@ -1,48 +1,60 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  CONTRIBUTION_EFFORTS,
   COUNTRIES,
-  CONTRIBUTING_DOC,
-  EVIDENCE_DOC,
-  ISSUES_URL,
+  FUNDABLE_PIECES,
+  INDICATORS,
   REPO_URL,
-  docHref,
+  contributionsByEffort,
 } from '@ncb/core'
-import { Eyebrow, Headline, Highlight, Note, PageTitle, Section } from '@/components/ui'
+import { ContributionList } from '@/components/ContributionList'
+import { Headline, Highlight, Note, PageTitle, Section } from '@/components/ui'
 import { COUNTRY_LAYERS } from '@/lib/layers'
 import {
-  challengeHref,
-  contactHref,
+  contactTopicHref,
   countryLayerHref,
+  gapsHref,
   limitsHref,
-  patternsHref,
+  objectionsHref,
   thesisHref,
 } from '@/lib/links'
 
 export const metadata: Metadata = {
-  title: 'Support this work, NCB',
+  title: 'Ways to help, NCB',
   description:
-    'Three ways an institution can back the National Capability Benchmark: use it, contribute to it, fund it.',
+    'Every way to take part in the National Capability Benchmark, from a five-minute correction to a funded piece of work.',
+}
+
+/** What each tier is for, above the cards in it. */
+const EFFORT_HINT: Record<(typeof CONTRIBUTION_EFFORTS)[number], string> = {
+  minutes:
+    'You know something the data does not. These take one message and no commitment beyond it.',
+  project:
+    'You have a case, a series or a decision to test the benchmark against. These take real work and change what the benchmark can measure.',
+  funded:
+    'The work is modular on purpose, so a funder backs a named piece with a scope and a stated effect.',
 }
 
 /**
- * How an institution backs the work.
+ * The front door for taking part.
  *
- * The page names three things and no more: use the benchmark, contribute to
- * it, fund it. Each one ends at an address a reader can act on today, and all
- * three end at the same contact page, because the project has one inbox. A
- * country layer may hold its own reading of this page, written for that
- * country's institutions and its own funding venues. See D71.
+ * The page renders the contribution registry in `@ncb/core` rather than
+ * restating it, and it opens on the cheapest thing a reader can do rather than
+ * on a funding ask. A country layer may hold its own reading of this page,
+ * written for that country's institutions and its own funding venues. See D71
+ * and D78.
  */
 export default function SupportPage() {
+  const gaps = INDICATORS.filter((i) => i.ingest === 'gap').length
+
   return (
     <>
-      <Eyebrow>Support</Eyebrow>
-      <PageTitle>A prototype becomes an instrument when institutions use it</PageTitle>
+      <PageTitle>Support the benchmark</PageTitle>
       <Headline>
         {COUNTRIES.length} countries, nine capabilities, public data, open code. What it still
-        needs is <Highlight>use, evidence and time</Highlight>. An institution can give all
-        three.
+        needs is <Highlight>use, evidence and time</Highlight>. Ways to help are below, cheapest
+        first.
       </Headline>
 
       <Note>
@@ -50,64 +62,90 @@ export default function SupportPage() {
         condition of using it.
       </Note>
 
+      {CONTRIBUTION_EFFORTS.map((effort) => (
+        <Section
+          key={effort}
+          title={
+            effort === 'minutes'
+              ? 'Start here if you have five minutes'
+              : effort === 'project'
+                ? 'These take a piece of work'
+                : 'These need funding'
+          }
+          hint={EFFORT_HINT[effort]}
+        >
+          <ContributionList ways={contributionsByEffort(effort)} showEffort={false} />
+          {effort === 'minutes' ? (
+            <p className="mt-6 max-w-3xl text-lg leading-relaxed">
+              The fastest useful thing is to close a gap. {gaps} indicators in the registry have no
+              dataset behind them, and each one lowers confidence for every country at once. The{' '}
+              <Link href={gapsHref} className="underline underline-offset-4">
+                open gaps
+              </Link>{' '}
+              list says what each is trying to measure and what a usable series would look like.
+            </p>
+          ) : null}
+        </Section>
+      ))}
+
       <Section
-        title="Use it, and tell us where it broke"
-        hint="A measure nobody applies stays a hypothesis. The most useful thing an institution can do is put the benchmark against a decision it is already making."
+        title="What funding pays for"
+        hint="Each piece names its scope and what changes in the published data once it is done."
       >
-        <ul className="max-w-3xl space-y-4 text-lg leading-relaxed">
-          <li>
-            Read{' '}
-            <Link href={thesisHref} className="underline underline-offset-4">
-              the thesis
-            </Link>{' '}
-            first. It states the claim under test and what would sink it.
-          </li>
-          <li>
-            Then read{' '}
-            <Link href={limitsHref} className="underline underline-offset-4">
-              the known limits
-            </Link>
-            . Some numbers say more about a missing dataset than about the country, and the
-            project names which ones before anybody quotes them.
-          </li>
-          <li>
-            Argue with a score at{' '}
-            <Link href={challengeHref} className="underline underline-offset-4">
-              the challenge page
-            </Link>
-            . A dispute is published next to the number it targets, so the objection travels with
-            the score.
-          </li>
-        </ul>
+        <div className="space-y-8">
+          {FUNDABLE_PIECES.map((piece) => (
+            <div key={piece.id} className="max-w-3xl">
+              <h3 className="text-xl font-medium tracking-tight">{piece.label}</h3>
+              <dl className="mt-3 space-y-2 text-lg leading-relaxed">
+                <div>
+                  <dt className="inline font-medium">Scope. </dt>
+                  <dd className="inline">{piece.scope}</dd>
+                </div>
+                <div>
+                  <dt className="inline font-medium">Effect. </dt>
+                  <dd className="inline">{piece.effect}</dd>
+                </div>
+                <div>
+                  <dt className="inline font-medium">Funded by. </dt>
+                  <dd className="inline text-[var(--muted)]">{piece.funders}</dd>
+                </div>
+              </dl>
+            </div>
+          ))}
+        </div>
+        <p className="mt-8 max-w-3xl text-lg leading-relaxed">
+          If you hold one of those windows, or you know which one this fits,{' '}
+          <Link href={contactTopicHref('support')} className="underline underline-offset-4">
+            write to us
+          </Link>{' '}
+          and say which piece.
+        </p>
       </Section>
 
       <Section
-        title="Contribute data, evidence or a country layer"
-        hint="Every declared gap in the registry is a data-collection agenda item. Closing one is worth more than any commentary."
+        title="Read the limits first"
+        hint="Do not fund it or quote it without knowing where it fails."
       >
         <ul className="max-w-3xl space-y-4 text-lg leading-relaxed">
           <li>
-            A comparable series that covers at least two countries can become a scored indicator.{' '}
-            <a href={docHref(CONTRIBUTING_DOC)} className="underline underline-offset-4">
-              CONTRIBUTING.md
-            </a>{' '}
-            says how to propose one.
+            <Link href={thesisHref} className="underline underline-offset-4">
+              The thesis
+            </Link>{' '}
+            states the claim under test and shows how far the data supports it today.
           </li>
           <li>
-            A documented delivery, with a publisher behind it, becomes{' '}
-            <Link href={patternsHref()} className="underline underline-offset-4">
-              an evidence record
-            </Link>
-            . Records are never scored. They are what lets a capability with no dataset behind it
-            still be read.{' '}
-            <a href={docHref(EVIDENCE_DOC)} className="underline underline-offset-4">
-              The inclusion rule
-            </a>{' '}
-            is short.
+            <Link href={limitsHref} className="underline underline-offset-4">
+              The known limits
+            </Link>{' '}
+            name the numbers that say more about a missing dataset than about the country.
           </li>
           <li>
-            A country layer is a second reading of one country, in that country's language and at
-            that country's depth.{' '}
+            <Link href={objectionsHref} className="underline underline-offset-4">
+              The objections
+            </Link>{' '}
+            are published beside the scores they argue with.
+          </li>
+          <li>
             {COUNTRY_LAYERS.map((layer) => (
               <Link
                 key={layer.slug}
@@ -117,80 +155,35 @@ export default function SupportPage() {
                 {layer.label}
               </Link>
             ))}{' '}
-            is the first one, and the shape it uses works for any country whose institutions want
-            to build the same thing.
-          </li>
-          <li>
-            Everything else, including a bug, goes to{' '}
-            <a
-              href={ISSUES_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="underline underline-offset-4"
-            >
-              the issue tracker
-            </a>
-            . The code and the data live at{' '}
-            <a
-              href={REPO_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="underline underline-offset-4"
-            >
-              the repository on GitHub
-            </a>
-            .
-          </li>
-        </ul>
-      </Section>
-
-      <Section
-        title="Fund a piece of it"
-        hint="The work is modular on purpose, so a funder backs a named piece with a scope and a deliverable."
-      >
-        <ul className="max-w-3xl space-y-4 text-lg leading-relaxed">
-          <li>
-            <span className="font-medium">A capability</span>: one dimension, its indicator set, its
-            gaps closed and its evidence corpus built out. Most research grants are already this
-            size.
-          </li>
-          <li>
-            <span className="font-medium">A country layer</span>: one country read in its own language,
-            with its institution map and its subnational spread. Usually funded by a development
-            bank, a school of government or a public foundation in that country.
-          </li>
-          <li>
-            <span className="font-medium">A source adapter</span>: one publisher wired in and kept
-            current, which raises confidence across every country at once.
-          </li>
-          <li>
-            <span className="font-medium">The expert panel</span>: a reviewed run across the full country
-            set, which is what turns session estimates into evidence.
+            is the first country layer, and the shape it uses works for any country whose
+            institutions want to build the same thing.
           </li>
         </ul>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed">
-          Research grants, public-sector procurement, philanthropic funds and multilateral
-          research budgets have all funded pieces of work shaped like these. If you hold one, or
-          you know which window this fits,{' '}
-          <Link href={`${contactHref}?topic=support`} className="underline underline-offset-4">
-            write to us
-          </Link>{' '}
-          and say which piece.
+          The code and the data are at{' '}
+          <a
+            href={REPO_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="underline underline-offset-4"
+          >
+            the repository on GitHub
+          </a>
+          .
         </p>
       </Section>
 
       <Section
-        title="Keep the conversation going"
-        hint="The benchmark improves through argument, not through agreement."
+        title="If none of that fits"
+        hint="Several of the gaps in the registry came out of a conversation with somebody who measures a country for a living."
       >
         <p className="max-w-3xl text-lg leading-relaxed">
-          If none of the above fits yet, the useful thing is still to talk. Tell us what your
-          institution measures, what it cannot measure, and which decision it would want this to
-          inform.{' '}
-          <Link href={contactHref} className="underline underline-offset-4">
-            One message reaches a person
+          Tell us what your institution measures, what it cannot measure, and which decision it
+          would want this to inform.{' '}
+          <Link href={contactTopicHref('general')} className="underline underline-offset-4">
+            Write to us
           </Link>
-          , and those conversations are where several of the gaps in the registry came from.
+          .
         </p>
       </Section>
     </>

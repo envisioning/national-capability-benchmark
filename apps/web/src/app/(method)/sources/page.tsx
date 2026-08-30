@@ -15,7 +15,7 @@ import {
   worldBankSeriesUrl,
 } from '@ncb/core'
 import type { IngestRoute, PublisherSummary } from '@ncb/core'
-import { DefineLink, Eyebrow, Headline, Note, PageTitle, Scroller, Section, Table, Td, Th } from '@/components/ui'
+import { DefineLink, Headline, Note, PageTitle, Scroller, Section, Table, Td, Th } from '@/components/ui'
 import { Icon, TIER_ICON } from '@/components/Icon'
 import { loadIndicatorCoverage } from '@/lib/data'
 import { indicatorHref, limitsHref, publisherSlug } from '@/lib/links'
@@ -88,8 +88,7 @@ export default async function SourcesPage() {
 
   return (
     <>
-      <Eyebrow>Sources</Eyebrow>
-      <PageTitle>The registry names every source</PageTitle>
+      <PageTitle>Where every number comes from</PageTitle>
       <Headline>
         {INDICATORS.length} indicators are listed here. {fetched.length + adapters.length + manual.length} have data:
         {' '}{fetched.length} come from the World Bank API, {adapters.length} from source adapters and {manual.length} from published tables.
@@ -97,7 +96,7 @@ export default async function SourcesPage() {
       </Headline>
 
       <Section
-        title="The API request is reproducible"
+        title="Repeat the API request yourself"
         hint={`Requests cover all ${COUNTRY_ISO3.length} countries from ${INGEST_FROM_YEAR} onward. Scoring uses the latest value; older values feed trends.`}
         icon={<Icon name="globe" size={22} />}
       >
@@ -152,7 +151,7 @@ export default async function SourcesPage() {
       </Section>
 
       <Section
-        title="Each publisher and its data"
+        title="Publishers and their data"
           hint={`A publisher with no fetched rows is a planned source. Values count country cells, so one series across ${COUNTRY_ISO3.length} countries counts ${COUNTRY_ISO3.length} times.`}
       >
         <Scroller>
@@ -333,7 +332,7 @@ export default async function SourcesPage() {
         </p>
       </Section>
 
-      <Section title="Tools can read the published files">
+      <Section title="Reading the files directly">
         <ul className="max-w-3xl list-disc space-y-3 pl-5 text-lg leading-relaxed">
           <li>
             <a href={docHref('data/out/datapackage.json')} className="underline underline-offset-4">

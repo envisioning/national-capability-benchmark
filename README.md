@@ -53,7 +53,7 @@ pnpm typecheck
 ~~~
 
 Both commands run the release-notes gate. Run it directly with
-`pnpm changelog:check` when changing the dataset version or `CHANGELOG.md`.
+`pnpm changelog:check` when changing either release version or `CHANGELOG.md`.
 
 Run pnpm bench validate after changing data/delphi or data/evidence.
 
@@ -75,9 +75,12 @@ The CLI lives in packages/core and is available through pnpm bench.
 | pnpm bench merge ... | Merge pasted chat replies into a Delphi run file. |
 | pnpm bench probe --search <regex> | Find candidate World Bank series by name and database. |
 | pnpm bench probe --series a,b[@db] | Test candidate series across the country set before wiring them. |
+| pnpm bench research inventory | Build the deterministic country × gap research queue and corpus balance report. |
+| pnpm bench research scout | Ask the AI research scout for bounded, unpublished leads; add `--mock` or `--prompt-only` for offline work. |
+| pnpm bench research critique --in FILE | Red-team a scout run; it cannot approve publication. |
 | pnpm bench validate [--fetch] | Schema-check Delphi, evidence and institutional data. --fetch checks evidence URLs too. |
 | pnpm bench all | Run ingest, score, diagnose, report and agenda in order. |
-| pnpm changelog:check | Verify the newest release note matches `DATASET_VERSION`. |
+| pnpm changelog:check | Verify the newest App and Dataset release notes match their source versions. |
 
 ## The nine dimensions
 
@@ -117,8 +120,8 @@ For each scored indicator, the pipeline:
 
 Every country in the registry sets the normalization frame. The frame stays
 fixed within a dataset version. Adding a country changes the frame, restates
-published scores and requires a major version bump. The semantic version is defined in
-packages/core/src/model/version.ts.
+published scores and requires a major dataset version bump. The dataset and app
+release versions are both defined in packages/core/src/model/version.ts.
 
 Ingestion keeps the full World Bank history from 1990 while scoring uses the
 latest value. Every ingest compares itself with the previous observation file
@@ -149,6 +152,15 @@ not evidence or score inputs.
 ## Two assessment tracks
 
 The benchmark keeps measurement and interpretation in separate tracks.
+
+The evidence expansion workflow is AI-first but source-first. `pnpm bench
+research inventory` builds deterministic uncovered country-gap slots;
+`research scout` uses a structured model call to propose leads and source search
+targets; `research critique` red-teams them. These runs are stored under
+`data/research/runs` and never enter `data/evidence` automatically. A researcher
+must still open and verify the source, write the limits paragraph and pass
+`pnpm bench validate` before a delivery appears on the agenda. Read
+[docs/RESEARCH-AI.md](docs/RESEARCH-AI.md) for the full loop.
 
 **Source-backed measurement.** The registry defines each indicator and its
 source, units, transform and direction. World Bank data and reproducible source
@@ -199,10 +211,11 @@ score or confidence. The current data and authoring rules are in
 ## Versioning and changelog
 
 `CHANGELOG.md` is the single human-curated release history for the dataset and
-viewer. The `/changelog` page, footer, Atom feed, sitemap and `/llms.txt` all
-read or link to that source. The build checks that entries are dated, unique,
-newest first and aligned with `DATASET_VERSION`; it never writes release notes
-or commits generated changes.
+viewer. App releases describe the whole product; Dataset releases describe the
+scored data contract. The `/changelog` page, footer, Atom feed, sitemap and
+`/llms.txt` all read or link to that source. The build checks that entries are
+dated, unique, newest first within each stream and aligned with `APP_VERSION` or
+`DATASET_VERSION`; it never writes release notes or commits generated changes.
 
 The complete release workflow and the major/minor/patch rules are in
 [`docs/VERSIONING.md`](docs/VERSIONING.md).

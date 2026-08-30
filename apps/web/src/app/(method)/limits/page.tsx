@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { LIMITS_DOC, docHref } from '@ncb/core'
 import { Markdown } from '@/lib/markdown'
 import { loadDoc } from '@/lib/data'
-import { Empty, Eyebrow, Headline, PageTitle } from '@/components/ui'
+import { Empty, Headline, PageTitle } from '@/components/ui'
 
 export const dynamic = 'force-dynamic'
 
@@ -22,7 +22,6 @@ export default async function LimitsPage() {
 
   return (
     <>
-      <Eyebrow>Read before quoting</Eyebrow>
       <PageTitle>Some numbers here are wrong</PageTitle>
       <Headline>
         These are known measurement failures, with the evidence and possible fix. The pipeline is

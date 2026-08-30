@@ -219,7 +219,7 @@ export function CompareBoard({ countries }: { countries: CountryResult[] }) {
       </Section>
 
       <Section
-        title="Confidence stays a second number"
+        title="Confidence, the second number"
         hint="Confidence is coverage times recency times source quality. It never enters the score above, and a country can lead a row on a thinner evidence base than the country beside it."
       >
         <ConfidenceLegend />
@@ -253,7 +253,7 @@ export function CompareBoard({ countries }: { countries: CountryResult[] }) {
       </Section>
 
       <Section
-        title="Where each country is heading"
+        title="Which way each country is moving"
         hint="A trend is measured on the indicators observed at both ends of the span, which is a smaller basket than the score. The basket size is printed beside each change, and two countries can be on different baskets in the same row."
       >
         <Scroller>
@@ -301,7 +301,7 @@ export function CompareBoard({ countries }: { countries: CountryResult[] }) {
       </Section>
 
       <Section
-        title="Every indicator behind those rows"
+        title="The indicators behind those rows"
         hint="The chip is the indicator normalized onto the 0 to 100 frame, so higher is better on every row whatever the unit does. The published value and its year sit under it. A row with no dataset is a declared gap and lowers confidence for every country at once."
       >
         {DIMENSIONS.map((d) => {

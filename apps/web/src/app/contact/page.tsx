@@ -2,15 +2,18 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
   CONTACT_TOPICS,
-  CONTRIBUTING_DOC,
-  ISSUES_URL,
+  INDICATORS_BY_ID,
   REPO_URL,
-  docHref,
+  contributionWay,
 } from '@ncb/core'
-import type { ContactTopic } from '@ncb/core'
+import type { ContactTopic, ContributionId } from '@ncb/core'
 import { ContactForm } from '@/components/ContactForm'
-import { Eyebrow, Headline, PageTitle, Section } from '@/components/ui'
-import { challengeHref, supportHref } from '@/lib/links'
+import { ContributionList } from '@/components/ContributionList'
+import { Headline, PageTitle, Section } from '@/components/ui'
+import { gapsHref, supportHref } from '@/lib/links'
+
+/** The three that keep their record in public, so they never come through the form. */
+const PUBLIC_CHANNELS: ContributionId[] = ['object', 'gap', 'code']
 
 export const metadata: Metadata = {
   title: 'Contact, NCB',
@@ -36,58 +39,51 @@ export default async function ContactPage({
     ? (raw as ContactTopic)
     : 'general'
 
+  /* A reader who arrives from a gap should not have to remember which gap it
+     was. The id is resolved against the registry, so an unknown one prefills
+     nothing rather than pasting a stray string into the message. */
+  const about = Array.isArray(params.about) ? params.about[0] : params.about
+  const indicator = about ? INDICATORS_BY_ID[about] : undefined
+  const draft = indicator
+    ? `About the gap "${indicator.name}" (${indicator.id}). The dataset I know is:\n\n`
+    : ''
+
   return (
     <>
-      <Eyebrow>Contact</Eyebrow>
-      <PageTitle>Write to the people who build this</PageTitle>
+      <PageTitle>Write to us</PageTitle>
       <Headline>
-        One address for the whole project. Tell us who you are and what you are working on, and a
-        person answers.
+        One inbox for the whole project. Tell us who you are and what you are working on. A person
+        reads it and replies.
       </Headline>
 
       <Section
         title="Send a message"
         hint="Your message reaches the Envisioning team directly. Nothing you write here is published."
       >
-        <ContactForm topic={topic} />
+        <ContactForm topic={topic} draft={draft} />
       </Section>
 
       <Section
-        title="Some things belong somewhere else"
-        hint="Three channels stay separate, because each one keeps its record in public where it is useful."
+        title="Faster ways to reach an answer"
+        hint="These leave a public record, so the answer stays useful to the next person."
       >
-        <ul className="max-w-3xl space-y-4 text-lg leading-relaxed">
-          <li>
-            An objection to a specific score goes through{' '}
-            <Link href={challengeHref} className="underline underline-offset-4">
-              the challenge page
-            </Link>
-            . A dispute is published beside the number it argues with, so the disagreement stays
-            attached to the score.
-          </li>
-          <li>
-            A bug, a broken series or a wrong label goes to{' '}
-            <a
-              href={ISSUES_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="underline underline-offset-4"
-            >
-              the issue tracker on GitHub
-            </a>
-            .
-          </li>
-          <li>
-            A source, an evidence record or a lexicon comes as a pull request.{' '}
-            <a href={docHref(CONTRIBUTING_DOC)} className="underline underline-offset-4">
-              CONTRIBUTING.md
-            </a>{' '}
-            says what each one has to carry.
-          </li>
-        </ul>
+        <ContributionList
+          ways={PUBLIC_CHANNELS.map(contributionWay).filter((way) => way !== null)}
+        />
+        <p className="mt-6 max-w-3xl text-lg leading-relaxed">
+          The{' '}
+          <Link href={gapsHref} className="underline underline-offset-4">
+            open gaps
+          </Link>{' '}
+          list names every indicator with no dataset behind it, and{' '}
+          <Link href={supportHref} className="underline underline-offset-4">
+            ways to help
+          </Link>{' '}
+          holds the rest, including the funded pieces.
+        </p>
       </Section>
 
-      <Section title="Envisioning builds this">
+      <Section title="Who answers">
         <p className="max-w-3xl text-lg leading-relaxed">
           NCB is built by{' '}
           <a

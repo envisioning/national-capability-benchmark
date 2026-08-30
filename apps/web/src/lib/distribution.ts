@@ -15,7 +15,10 @@ export type AgendaFeedEntry = {
   updated: string
 }
 
-export type DatasetFeedEntry = {
+export type ChangelogReleaseKind = 'app' | 'dataset'
+
+export type ChangelogFeedEntry = {
+  kind: ChangelogReleaseKind
   version: string
   updated: string
   summary: string
@@ -82,32 +85,35 @@ export async function loadChangelog(): Promise<string | null> {
   }
 }
 
-const RELEASE_HEADING = /^##\s+(?:v)?(\d+\.\d+\.\d+)(?:\s+[—–-]\s+(\d{4}-\d{2}-\d{2}))?\s*$/gm
+const RELEASE_HEADING =
+  /^##\s+(App|Dataset)\s+(?:v)?(\d+\.\d+\.\d+)(?:\s+[—–-]\s+(\d{4}-\d{2}-\d{2}))?\s*$/gm
 
 /**
  * Parse release headings and their first paragraph without introducing a
  * second release-notes format. The full markdown remains available to the
- * changelog page; feeds only need a short summary and a stable date.
+ * changelog page; feeds only need a kind, short summary and stable date.
  */
-export function parseChangelogReleases(markdown: string, defaultDate: string): DatasetFeedEntry[] {
+export function parseChangelogReleases(markdown: string, defaultDate: string): ChangelogFeedEntry[] {
   const headings = [...markdown.matchAll(RELEASE_HEADING)]
   return headings.map((heading, index) => {
     const start = (heading.index ?? 0) + heading[0].length
     const end = headings[index + 1]?.index ?? markdown.length
-    const version = heading[1] ?? ''
-    const date = heading[2] ?? defaultDate
+    const kind = (heading[1] ?? 'Dataset').toLowerCase() as ChangelogReleaseKind
+    const version = heading[2] ?? ''
+    const date = heading[3] ?? defaultDate
     return {
+      kind,
       version,
       updated: isoDate(date),
       summary:
         firstParagraph(markdown.slice(start, end)) ||
-        `Dataset version ${version} was recorded in the changelog.`,
+        `${kind === 'app' ? 'App release' : 'Dataset version'} ${version} was recorded in the changelog.`,
     }
   })
 }
 
-/** Read every semantic version explicitly recorded in CHANGELOG.md. */
-export async function loadDatasetFeedEntries(defaultDate: string): Promise<DatasetFeedEntry[]> {
+/** Read every app and dataset release explicitly recorded in CHANGELOG.md. */
+export async function loadChangelogFeedEntries(defaultDate: string): Promise<ChangelogFeedEntry[]> {
   const changelog = await loadChangelog()
   return changelog ? parseChangelogReleases(changelog, defaultDate) : []
 }

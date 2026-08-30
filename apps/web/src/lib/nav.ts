@@ -3,18 +3,22 @@ import { countryLayer, hasInstitutionMap, layerBySlug } from '@/lib/layers'
 import {
   aboutHref,
   agendaHref,
+  agendasIndexHref,
   capabilitiesHref,
   capabilityHref,
-  challengeHref,
   changelogHref,
   compareBaseHref,
+  contactHref,
   countriesHref,
   countryLayerHref,
   countryLocalHref,
   countryProfileHref,
+  gapsHref,
   hasLocalDestination,
   institutionNetworkHref,
   layerSectionHref,
+  objectionsHref,
+  supportHref,
   thesisHref,
 } from '@/lib/links'
 
@@ -81,6 +85,58 @@ export const METHOD_PAGES: NavNode[] = [
   { href: '/decisions', label: 'Decisions' },
   { href: '/glossary', label: 'Glossary' },
 ]
+
+/**
+ * The cross-country views, which is what the row under Countries offers before
+ * the reader has picked a country.
+ *
+ * That row answers one question, "which country", and these are the readings
+ * that take all of them at once. An agenda is one country's scores turned into
+ * actions, so the index of 52 agendas belongs here rather than in a section of
+ * its own: it is a way of reading the country set, not a sixth thing the site
+ * is about. See D80.
+ */
+export const COUNTRY_INDEX_PAGES: NavNode[] = [
+  { href: countriesHref, label: 'All countries', exact: true },
+  { href: compareBaseHref, label: 'Compare' },
+  { href: agendasIndexHref, label: 'Agendas' },
+]
+
+/**
+ * What the project says about itself.
+ *
+ * The thesis argues and the overview describes, which D75 settled, and both
+ * answer the one question a newcomer asks before either: what is this and
+ * should I believe it. Two jobs are two pages, never two sections. See D80.
+ */
+export const ABOUT_PAGES: NavNode[] = [
+  { href: aboutHref, label: 'Overview', exact: true },
+  { href: thesisHref, label: 'Thesis' },
+  { href: changelogHref, label: 'Changelog', exact: true },
+]
+
+/** Whether a path belongs to the about section. */
+export const isAboutSection = (pathname: string): boolean =>
+  ABOUT_PAGES.some((page) => nodeOwns(page, pathname))
+
+/**
+ * How somebody takes part, in reading order.
+ *
+ * The project had four ways in and no address for three of them: `/support`
+ * and `/contact` were in no navigation at all, reachable only from a sentence
+ * at the foot of another page. A section that asks for help has to be findable
+ * by a reader who has decided to give it. See D78.
+ */
+export const PARTICIPATE_PAGES: NavNode[] = [
+  { href: supportHref, label: 'Ways to help', exact: true },
+  { href: gapsHref, label: 'Open gaps' },
+  { href: objectionsHref, label: 'Objections' },
+  { href: contactHref, label: 'Contact' },
+]
+
+/** Whether a path belongs to the participate section. */
+export const isParticipateSection = (pathname: string): boolean =>
+  PARTICIPATE_PAGES.some((page) => nodeOwns(page, pathname))
 
 /** Whether a path belongs to the method section. */
 export const isMethodSection = (pathname: string): boolean =>
@@ -158,16 +214,21 @@ export const NAV_TREE: NavNode[] = [
   {
     href: countriesHref,
     label: 'Countries',
-    /* A comparison is several countries at once, so it names no single one and
-       opens no second row. It still belongs to this section. */
+    /* A comparison and an agenda index are both several countries at once, so
+       neither names a single one. Both belong to this section. */
     claims: (pathname) =>
       pathCountry(pathname) !== null ||
-      pathname === compareBaseHref ||
-      pathname.startsWith(`${compareBaseHref}/`),
+      nodeOwns({ href: compareBaseHref, label: '' }, pathname) ||
+      nodeOwns({ href: agendasIndexHref, label: '' }, pathname),
+    /* The row under Countries answers "which country". Once the path names one,
+       that country is the row, because 52 of them will not fit in a control.
+       Before it does, the row offers the readings that take the whole set. See
+       D73 and D80. */
     resolveChildren: (pathname) => {
       const iso3 = pathCountry(pathname)
-      const node = iso3 ? countryNode(iso3) : null
-      return node ? [node] : []
+      if (!iso3) return COUNTRY_INDEX_PAGES
+      const node = countryNode(iso3)
+      return node ? [node] : COUNTRY_INDEX_PAGES
     },
   },
   {
@@ -178,18 +239,18 @@ export const NAV_TREE: NavNode[] = [
       label: DIMENSION_LABELS[dimension],
     })),
   },
-  { href: '/agenda', label: 'Agendas' },
-  { href: thesisHref, label: 'Thesis' },
   { href: '/method', label: 'Method', claims: isMethodSection, children: METHOD_PAGES },
-  { href: challengeHref, label: 'Challenge' },
+  {
+    href: supportHref,
+    label: 'Participate',
+    claims: isParticipateSection,
+    children: PARTICIPATE_PAGES,
+  },
   {
     href: aboutHref,
     label: 'About',
-    claims: (pathname) => pathname === aboutHref || pathname === changelogHref,
-    children: [
-      { href: aboutHref, label: 'Overview', exact: true },
-      { href: changelogHref, label: 'Changelog', exact: true },
-    ],
+    claims: isAboutSection,
+    children: ABOUT_PAGES,
   },
 ]
 
@@ -230,8 +291,26 @@ export function navRows(pathname: string): NavRow[] {
 export const FOOTER_NAV_GROUPS: { label: string; items: NavNode[] }[] = [
   {
     label: 'Explore',
-    items: NAV_TREE.filter((node) => node.href !== '/method' && node.href !== challengeHref),
+    items: [
+      ...COUNTRY_INDEX_PAGES,
+      { href: capabilitiesHref, label: 'Capabilities' },
+    ],
   },
   { label: 'Method', items: METHOD_PAGES },
-  { label: 'Participate', items: NAV_TREE.filter((node) => node.href === challengeHref) },
+  { label: 'Participate', items: PARTICIPATE_PAGES },
+  { label: 'About', items: ABOUT_PAGES },
+]
+
+/**
+ * The pages a reader lands on, flat.
+ *
+ * The header shows five sections and opens the rest a level down. A machine
+ * reading `/llms.txt` has no rows to open, so it gets the destinations instead,
+ * from the same lists the header walks. See D59 and D80.
+ */
+export const READING_PAGES: NavNode[] = [
+  { href: '/', label: 'Overview', exact: true },
+  ...COUNTRY_INDEX_PAGES,
+  { href: capabilitiesHref, label: 'Capabilities' },
+  ...ABOUT_PAGES,
 ]

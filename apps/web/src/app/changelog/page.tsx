@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { CHANGELOG_DOC, docHref } from '@ncb/core'
-import { Empty, Eyebrow, Headline, PageTitle } from '@/components/ui'
+import { APP_VERSION, CHANGELOG_DOC, DATASET_VERSION, docHref } from '@ncb/core'
+import { Empty, Headline, PageTitle } from '@/components/ui'
 import { loadChangelog } from '@/lib/distribution'
 import { Markdown } from '@/lib/markdown'
 
@@ -21,11 +21,11 @@ export default async function ChangelogPage() {
 
   return (
     <>
-      <Eyebrow>Release notes</Eyebrow>
       <PageTitle>What changed</PageTitle>
       <Headline>
         A short history of the benchmark frame, the viewer and the research work around them.
-        Dataset versions are semantic, so a major version means the numbers need a new reading.
+        App releases describe the product; Dataset {DATASET_VERSION} is the current semantic data
+        contract, so a major dataset version means the numbers need a new reading.
       </Headline>
       {changelog ? (
         <Markdown source={changelog} />
@@ -39,7 +39,8 @@ export default async function ChangelogPage() {
         <a href={docHref(CHANGELOG_DOC)} className="underline underline-offset-4">
           {CHANGELOG_DOC}
         </a>{' '}
-        in the repository. The build checks that its newest release matches the dataset version.
+        in the repository. The current app release is {APP_VERSION}; the build checks the newest
+        App and Dataset entries against their source versions.
       </p>
     </>
   )

@@ -63,7 +63,7 @@ export function ResidualView({ residual }: { residual: ResidualFile }) {
   return (
     <>
       <Section
-        title="Each dimension carries its own income line"
+        title="One income line per dimension"
         hint="Read a gap against the spread of its own dimension. A gap smaller than that spread sits inside the noise of the fit."
       >
         <Note>
@@ -137,7 +137,7 @@ export function ResidualView({ residual }: { residual: ResidualFile }) {
       </Section>
 
       <Section
-        title="A country can sit above its income line on one dimension and below it on the next"
+        title="Above the line here, below it there"
         hint="One row per country, one column per dimension, each cell in score points. Sort by a dimension to see who is furthest from its line."
       >
         <DataTable
@@ -175,7 +175,7 @@ export function ResidualView({ residual }: { residual: ResidualFile }) {
       </Section>
 
       <Section
-        title="A gap is only as good as the score and the line behind it"
+        title="A gap is only as good as its fit"
         hint="The layer stays offline until a review answers these. The method is in D68 and the promotion gate is in D65."
       >
         <ul className="max-w-3xl space-y-4 text-lg leading-relaxed text-[var(--muted)]">
