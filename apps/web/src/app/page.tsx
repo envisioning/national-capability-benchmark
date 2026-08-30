@@ -110,11 +110,19 @@ export default async function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: datasetJsonLd(data) }} />
-      <HeroTitle>What is a country capable of doing?</HeroTitle>
-      <Headline>
-        Nine capabilities, scored from public data. Pick one and every country lands on the{' '}
-        <Highlight>same scale</Highlight>, each carrying its own confidence.
-      </Headline>
+      {/* The site's one dark band above the footer, and the only place the lime
+          glow renders. It spans the window and supplies its own container, the
+          way envisioning.com draws a section, so the band reads as the page
+          opening rather than as a card sitting on it. */}
+      <div className="hero-band hero-glow full-bleed -mt-12 mb-12 sm:-mt-16">
+        <div className="m-auto max-w-6xl px-6 py-12 sm:px-12 sm:py-20">
+          <HeroTitle>What is a country capable of doing?</HeroTitle>
+          <Headline>
+            Nine capabilities, scored from public data. Pick one and every country lands on the{' '}
+            <Highlight>same scale</Highlight>, each carrying its own confidence.
+          </Headline>
+        </div>
+      </div>
 
       <Section
         title="One capability at a time"

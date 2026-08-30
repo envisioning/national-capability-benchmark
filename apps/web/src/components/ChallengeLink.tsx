@@ -5,6 +5,7 @@ import { CHALLENGE_STATUS_LABELS, DIMENSION_LABELS, MIN_DISPUTES_FOR_CONTESTED }
 import type { Dimension } from '@ncb/core'
 import { useRouter } from 'next/navigation'
 import { challengeApiHref, objectionDetailHref } from '@/lib/links'
+import { Button, fieldClass } from '@/components/ui'
 
 export function ContestedBadge({ count }: { count: number }) {
   if (count < MIN_DISPUTES_FOR_CONTESTED) return null
@@ -104,13 +105,9 @@ export function ChallengeLink({
                 Give the benchmark a specific reason to reconsider this number.
               </p>
             </div>
-            <button
-              type="button"
-              onClick={close}
-              className="shrink-0 rounded-md border border-[var(--rule)] px-2 py-1 text-xs"
-            >
+            <Button type="button" size="sm" onClick={close}>
               Close
-            </button>
+            </Button>
           </div>
 
           <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 text-xs">
@@ -132,7 +129,7 @@ export function ChallengeLink({
               maxLength={4000}
               value={argument}
               onChange={(event) => setArgument(event.target.value)}
-              className="mt-2 block min-h-36 w-full rounded-md border border-[var(--rule)] bg-[var(--surface)] p-3 text-lg font-normal leading-relaxed"
+              className={fieldClass('mt-2 min-h-36 py-2 leading-relaxed')}
               placeholder="What evidence or reasoning shows that this score misreads the country?"
             />
           </label>
@@ -143,7 +140,7 @@ export function ChallengeLink({
               type="url"
               value={sourceUrl}
               onChange={(event) => setSourceUrl(event.target.value)}
-              className="mt-2 block w-full rounded-md border border-[var(--rule)] bg-[var(--surface)] px-3 py-2 text-lg font-normal"
+              className={fieldClass('mt-2 h-10')}
               placeholder="https://"
             />
           </label>
@@ -154,20 +151,12 @@ export function ChallengeLink({
             can add a response and signature after review.
           </p>
           <div className="flex justify-end gap-3">
-            <button
-              type="button"
-              onClick={close}
-              className="rounded-md border border-[var(--rule)] px-3 py-2 text-xs font-medium"
-            >
+            <Button type="button" onClick={close}>
               Cancel
-            </button>
-            <button
-              type="submit"
-              disabled={submitting}
-              className="rounded-md bg-[var(--foreground)] px-3 py-2 text-xs font-medium text-[var(--surface)] disabled:opacity-50"
-            >
+            </Button>
+            <Button type="submit" variant="default" disabled={submitting}>
               {submitting ? 'Submitting…' : 'Submit dispute'}
-            </button>
+            </Button>
           </div>
         </form>
       </dialog>

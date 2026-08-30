@@ -6,7 +6,7 @@ import type { Dimension } from '@ncb/core'
 import { FlagField } from '@/components/FlagField'
 import { CapabilityLink } from '@/components/CapabilityLink'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
-import { CountryLabel, Score } from '@/components/ui'
+import { Button, CountryLabel, Score } from '@/components/ui'
 import { countryProfileHref } from '@/lib/links'
 
 type Row = {
@@ -126,13 +126,9 @@ export function DimensionDialog({
                 {DIMENSION_QUESTIONS[dimension]}
               </p>
             </div>
-            <button
-              type="button"
-              onClick={onClose}
-              className="shrink-0 rounded-md border border-[var(--rule)] px-2 py-1 text-xs"
-            >
+            <Button type="button" size="sm" onClick={onClose}>
               Close
-            </button>
+            </Button>
           </div>
 
           <p className="mb-4 max-w-2xl text-xs leading-relaxed text-[var(--muted)]">

@@ -24,6 +24,7 @@ import type {
   MatrixFamily,
 } from '@ncb/core'
 import { Icon } from '@/components/Icon'
+import { Card, controlClass } from '@/components/ui'
 
 /**
  * One country's institution map.
@@ -41,8 +42,7 @@ import { Icon } from '@/components/Icon'
  * the component as one `lex` prop. See D56.
  */
 
-const CONTROL =
-  'rounded-md border border-[var(--rule)] bg-[var(--surface)] px-3 py-2 text-xs text-[var(--foreground)]'
+const CONTROL = controlClass()
 
 const INITIAL_ID = 'bra.federal.bndes'
 
@@ -586,7 +586,7 @@ export function InstitutionsView({
   return (
     <>
       <section>
-        <div className="rounded-lg border border-[var(--rule)] bg-[var(--surface-sunken)] p-4">
+        <Card>
           <p className="mb-3 inline-flex items-center gap-2 text-xs uppercase tracking-[0.05em] text-[var(--muted)]">
             <Icon name="list-filter" size={14} />
             {s.findHeading}
@@ -660,7 +660,7 @@ export function InstitutionsView({
               </select>
             </label>
           </div>
-        </div>
+        </Card>
 
         <p className="mt-3 text-right text-xs tabular-nums text-[var(--muted)]">
           {fill(s.shown, { n: filtered.length })}

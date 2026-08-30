@@ -7,14 +7,18 @@ import { Icon } from '@/components/Icon'
 import { Flag } from '@/components/ui'
 import { FOOTER_NAV_GROUPS, navRows, nodeOwns, type NavNode, type NavRow } from '@/lib/nav'
 
+/* Navigation carries label type, the same 12px the brand gives every button
+   and every table header. The crumb band and the tab strip already sit at that
+   size, so all three levels of the tree read as one system and the lime
+   underline, not a font size, says where the reader is. */
 const SECTION_LINK =
-  'inline-flex items-center rounded-md px-3 py-1.5 text-sm font-medium text-[var(--muted)] transition-colors duration-200 hover:bg-[var(--surface-sunken)] hover:text-[var(--foreground)]'
+  'inline-flex items-center rounded-md px-3 py-2 text-xs font-medium text-[var(--muted)] transition-colors duration-200 hover:bg-[var(--surface-sunken)] hover:text-[var(--foreground)]'
 const SECTION_CURRENT =
-  'inline-flex items-center rounded-md px-3 py-1.5 text-sm font-semibold text-[var(--foreground)] underline decoration-[var(--primary)] decoration-2 underline-offset-[6px]'
+  'inline-flex items-center rounded-md px-3 py-2 text-xs font-semibold text-[var(--foreground)] underline decoration-[var(--primary)] decoration-2 underline-offset-[6px]'
 const SECTION_MOBILE_LINK =
-  'flex w-full items-center rounded-md px-3 py-3 text-sm font-medium text-[var(--foreground)] transition-colors duration-200 hover:bg-[var(--surface-sunken)]'
+  'flex w-full items-center rounded-md px-3 py-3 text-xs font-medium text-[var(--foreground)] transition-colors duration-200 hover:bg-[var(--surface-sunken)]'
 const SECTION_MOBILE_CURRENT =
-  'flex w-full items-center rounded-md bg-[var(--surface-sunken)] px-3 py-3 text-sm font-semibold text-[var(--foreground)]'
+  'flex w-full items-center rounded-md bg-[var(--surface-sunken)] px-3 py-3 text-xs font-semibold text-[var(--foreground)]'
 
 const CRUMB_LINK =
   'text-xs font-medium text-[var(--muted)] transition-all duration-200 hover:text-[var(--foreground)]'
@@ -151,7 +155,7 @@ export function HeaderNav() {
 
       {trail.length > 0 ? (
         <nav aria-label="Breadcrumb" className="basis-full">
-          <ol className="flex flex-wrap items-center gap-x-2 gap-y-1">
+          <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 md:justify-end">
             {trail.map((row, index) => (
               <li key={row.parent?.href ?? 'root'} className="flex items-center gap-x-2">
                 {index > 0 ? (
@@ -192,7 +196,11 @@ export function SectionTabs() {
         aria-label={tabs.parent?.label ?? 'Pages'}
         className="m-auto max-w-6xl px-6 sm:px-12"
       >
-        <ul className="-mb-px flex flex-wrap gap-x-6 pt-3">
+        {/* The sections sit at the right edge from md up, so every level below
+            them hangs from the same edge and the eye tracks one column down.
+            Below md the sections fold into the sheet and there is no right edge
+            to agree with, so the tabs read from the left. */}
+        <ul className="-mb-px flex flex-wrap gap-x-6 pt-3 md:justify-end">
           {tabs.entries.map((node) => (
             <li key={node.href}>
               <Link

@@ -3641,3 +3641,76 @@ than reopen the grouping. Evidence that the changing row under Countries reads
 as instability, rather than as one question answered two ways, would split it
 into a fixed row plus a country crumb, which costs a level of depth D73 caps at
 four.
+
+## D81: The viewer owns one button, one field and one control, and no shadows
+
+*Recorded 2026-08-30. Extends the brand contract D18 and D79 set.*
+
+**Choice.** Four primitives in `apps/web/src/components/ui.tsx` hold every
+interactive and panel geometry on the site.
+
+1. **`Button`, `ButtonLink` and `buttonClass`.** 40px tall, 32px at
+   `size="sm"`, a 12px medium label at both, `rounded-md`, a 200ms colour
+   transition. Four variants carry emphasis and nothing else: `default` is the
+   filled action, `accent` is lime on navy ink and a page carries at most one,
+   `outline` sits beside content, `ghost` goes inside a control that already has
+   an edge.
+2. **`fieldClass`.** 40px, `rounded-md`, body type, because a reader writes prose
+   into a form field and 12px is not a size to write in. A field and the button
+   under it share a height, so a form lands on one rhythm.
+3. **`controlClass`.** 32px, `rounded-md`, label type. A filter names a choice
+   rather than taking prose, and it matches the small button so a filter strip
+   mixing a select and a button sits on one line.
+4. **`Card`.** `rounded-lg` over a 1px rule, three fills and three paddings.
+
+Two consequences follow. **The viewer publishes no shadows.** envisioning.com
+specifies a four-tier neutral shadow scale and puts `shadow-md` on cards; this
+site uses none. **Navigation carries label type at every level**, so there is no
+`text-sm` anywhere, which the type scale in `AGENTS.md` already stated and the
+header alone was breaking.
+
+The front page opens on `hero-band`, a dark section on the footer's surface,
+and `hero-glow` renders over it. The glow is the one gradient the brand permits
+and it had been dead CSS since it was written. The band spans the window through
+`full-bleed` and carries its own container: `main` is a centred column, and a
+dark surface that stops at the column edge reads as a card sitting on the page
+rather than as the page opening. That is how envisioning.com draws every
+section, and it is why `html` and `body` now clip their horizontal overflow,
+which absorbs the scrollbar width `100vw` overshoots by.
+
+Navigation hangs from one edge for the same reason. The sections sit right from
+`md` up, so the crumb trail and the tab strip do too.
+
+**Why.** Before this, eight files hand-rolled a button and reached five
+different geometries: `px-4 py-2`, `px-3 py-2`, `px-3 py-1.5`, `px-2 py-1` and
+`px-1.5 py-0.5`. Two files declared a `CONTROL` constant with different padding
+under the same name, and two more inlined a third copy. Nine files repeated one
+card class string verbatim. Every one of them was individually reasonable and
+together they meant the site had no button, so a change to how a button looks
+was a change to eight files and a chance to miss one.
+
+The shadow omission is a real divergence from the parent brand and is recorded
+rather than left to look like an oversight. An elevation under a table of scores
+reads as chrome and competes with the score bands, which are the one thing on
+the page that has to be read by tone. The 1px rule already separates a panel
+from the page on both themes.
+
+The nav size is the other divergence. envisioning.com's nav is 14px; NCB's
+header stacks sections, a crumb trail and a tab strip, and the crumbs and tabs
+were already 12px. Making the sections 12px too means a reader locates
+themselves by the lime underline and the position, not by a font size that only
+distinguished the top row.
+
+**What it costs.** The three heights are three numbers to keep apart, and the
+next agent will reach for the wrong one at least once. A 12px section link is a
+small target, so the desktop row carries `py-2` and the mobile sheet keeps
+`py-3`. Two panels in `EvidenceList` and `CheckList` still hold their classes by
+hand, because the `:has()` rules in `globals.css` select on them, and a reader
+of those two files will not find the `Card` the rest of the site uses.
+
+**Overturned by.** Evidence that a 12px section link is missed or mis-tapped
+would take navigation back to 14px and record it as the scale's one exception.
+Evidence that panels do not separate from the page on a real screen, rather than
+in a design review, would bring back the shadow scale. A second dark band
+proving useful on a page other than the front page would turn `hero-band` from
+a one-off into a section treatment.

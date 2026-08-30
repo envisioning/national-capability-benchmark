@@ -49,6 +49,7 @@ export const metadata: Metadata = {
   title: 'NCB, the National Capability Benchmark',
   description:
     'A prototype that measures whether a country can anticipate change, coordinate around it and build what it decides to build.',
+  manifest: '/manifest.webmanifest',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

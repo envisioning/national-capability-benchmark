@@ -5,7 +5,7 @@ import { useState } from 'react'
 import { countryFlag } from '@ncb/core'
 import type { Dimension } from '@ncb/core'
 import { Radar } from '@/components/Radar'
-import { CountryLabel, FrameNote, RadarEvidenceLegend } from '@/components/ui'
+import { CountryLabel, FrameNote, RadarEvidenceLegend, controlClass } from '@/components/ui'
 import type { RadarProfile } from '@/lib/profile'
 import { DimensionDialog } from '@/components/views/DimensionPeek'
 import { compareHref } from '@/lib/links'
@@ -90,7 +90,7 @@ export function CompareRadar({
           <select
             value={iso3}
             onChange={(e) => setIso3(e.target.value)}
-            className="rounded-md border border-[var(--rule)] bg-[var(--surface)] px-2 py-1 text-xs"
+            className={controlClass()}
           >
             <option value="">nobody</option>
             {options.map((o) => (

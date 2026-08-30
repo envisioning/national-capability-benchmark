@@ -23,6 +23,7 @@ pnpm bench all         ingest, score, diagnose, report, agenda
 pnpm build             tsc for packages/core, then next build for apps/web
 pnpm typecheck         both packages
 pnpm dev               the viewer at https://ncb.localhost (port 3888 behind it)
+pnpm icons             rasterise the favicon set from the brand mark
 ```
 
 The green gate is `pnpm build` plus `pnpm typecheck`. Both must pass. Run
@@ -521,6 +522,37 @@ as the reference, and see NOTICE.md before reusing the brand.
   place. Never body, labels, tables or anything under 18px. Set it with
   `font-variation-settings` so the width axis travels, never with `font-weight`
   alone, and hold `wdth` at 100 across the whole layout. See D79.
+- **There is one button, one field and one filter control.** `Button`,
+  `ButtonLink`, `buttonClass`, `fieldClass` and `controlClass`, all in
+  `apps/web/src/components/ui.tsx`, hold every geometry: a button is 40px tall
+  (32px at `size="sm"`) with a 12px medium label, a form field is 40px with body
+  type because a reader writes prose into it, and a filter control is 32px with
+  label type so it lines up with a small button beside it. Never hand-roll a
+  `px-3 py-2 rounded-md` control in a page or a view. `accent` is the one loud
+  variant, so a page carries at most one. See D81.
+- Panels are `Card` in the same file, at `rounded-lg` over a 1px rule. **The
+  viewer publishes no shadows.** envisioning.com's four-tier shadow scale is a
+  deliberate omission here: under a dense table of scores an elevation reads as
+  chrome, and the rule already separates the panel from the page. Two panels in
+  `EvidenceList` and `CheckList` keep their hand-written classes because the
+  `:has()` rules in `globals.css` select on them. See D81.
+- Navigation carries label type, `text-xs`, at all three levels. There is no
+  `text-sm` on the site. envisioning.com's own nav uses 14px; NCB does not,
+  because its header draws sections, a crumb trail and a tab strip in one stack,
+  and the lime underline says where the reader is. See D81.
+- The front page opens on `hero-band`, the site's one dark surface above the
+  footer, and `hero-glow` is the one gradient the brand permits. Both live in
+  `globals.css`. A band spans the window through `full-bleed` and supplies its
+  own `max-w-6xl` container, the way envisioning.com draws a section: `main` is
+  a centred container, so a band that only sits inside it reads as a card.
+  `html, body { overflow-x: clip }` absorbs the scrollbar overshoot `100vw`
+  causes, and `clip` is required over `hidden` because `hidden` would make the
+  element a scroll container and break any future sticky chrome. Never put a
+  second dark band on a page and never draw the glow anywhere else. See D81.
+- Navigation hangs from one edge. The sections sit right from `md` up, so the
+  crumb trail and the tab strip are `md:justify-end` as well and the reader
+  tracks one column down. Below `md` the sections fold into the sheet, there is
+  no right edge to agree with, and all three read from the left. See D81.
 - Every 0 to 100 score renders through `Score` in `apps/web/src/components/ui.tsx`,
   banded by `packages/core/src/pipeline/bands.ts`. Never render a score as a bare
   number or invent a per-table treatment. See D18.
@@ -549,6 +581,16 @@ as the reference, and see NOTICE.md before reusing the brand.
   or a data file. Every other emoji stays out.
 - No gradients except the one radial lime glow (`.hero-glow`). No colored
   shadows, no backdrop-blur.
+- The favicon set is generated, never hand-drawn. `scripts/generate-favicons.mjs`
+  reads `apps/web/public/brand/envisioning-mark.svg`, composes it on a rounded
+  near-black tile in lime, and writes `icon.png`, `apple-icon.png` and
+  `favicon.ico` into `apps/web/src/app`, plus the PNG sizes and
+  `manifest.webmanifest` into `apps/web/public`. It is the same generator the
+  other Envisioning sites use, so keep the padding, radius and colours in step
+  with them. The outputs are committed and `sharp` is a devDependency of the
+  repository root, so no deploy rasterises anything. The mark SVG carries the
+  same geometry as `EnvisioningMark` in `apps/web/src/components`: change one and
+  change the other, then run `pnpm icons`.
 - Icons come from `apps/web/src/components/Icon.tsx`, which holds Lucide path
   data copied in rather than installed. Add a new one by copying its path from
   lucide.dev into that file. One icon per concept, reused everywhere that

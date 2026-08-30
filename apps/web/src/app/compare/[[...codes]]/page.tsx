@@ -5,7 +5,7 @@ import { COUNTRIES } from '@ncb/core'
 import type { CountryResult } from '@ncb/core'
 import { CompareBoard } from '@/components/views/CompareBoard'
 import { ComparePicker } from '@/components/views/ComparePicker'
-import { DefineLink, Empty, Headline, PageTitle } from '@/components/ui'
+import { Card, DefineLink, Empty, Headline, PageTitle } from '@/components/ui'
 import { MISSING_DATA_HINT, loadCountry, loadIndex } from '@/lib/data'
 import {
   compareBaseHref,
@@ -76,7 +76,7 @@ export default async function ComparePage({ params }: Params) {
       <ComparePicker selected={selected} all={all} />
 
       {countries.length < 2 ? (
-        <div className="max-w-3xl rounded-lg border border-[var(--rule)] bg-[var(--surface-sunken)] p-4">
+        <Card className="max-w-3xl">
           <p className="text-lg leading-relaxed">
             Pick a second country to start the comparison. Every country in the benchmark is
             available, and all of them are measured against the same frame, so any pair is a fair
@@ -104,7 +104,7 @@ export default async function ComparePage({ params }: Params) {
             </Link>
             .
           </p>
-        </div>
+        </Card>
       ) : (
         <CompareBoard countries={countries} />
       )}

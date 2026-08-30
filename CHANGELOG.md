@@ -9,6 +9,19 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.0.1 — 2026-08-30
+
+- **The viewer has an icon.** The Envisioning mark now sits on a rounded
+  near-black tile in the browser tab, on a home screen and in a bookmark list,
+  generated at every size the platforms ask for.
+- **The front page opens on a dark band.** It spans the window, on the same
+  surface the footer uses, lit by the lime glow the brand reserves for a hero.
+- **The navigation hangs from one edge.** The sections, the trail into a page
+  and the tabs under the header now line up on the right on a wide screen.
+- **Buttons, fields and filters share one shape.** Every control on the site now
+  comes from one place, so a form, a filter strip and a dialog agree about how
+  tall a button is and how large its label reads.
+
 ## App 1.0.0 — 2026-08-30
 
 The first formal product release gathers the benchmark, its research surfaces

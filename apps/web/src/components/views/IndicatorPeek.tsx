@@ -6,7 +6,7 @@ import type { IndicatorAcrossCountries } from '@ncb/core'
 import { FlagField } from '@/components/FlagField'
 import { Icon } from '@/components/Icon'
 import { indicatorHref } from '@/lib/links'
-import { ClassBadge, CountryLabel, Score } from '@/components/ui'
+import { Button, ClassBadge, CountryLabel, Score } from '@/components/ui'
 
 /**
  * A number in a table is not information until you know what else it could have
@@ -95,13 +95,9 @@ export function IndicatorPeek({
               <h2 className="text-2xl font-light leading-tight">{def.name}</h2>
               <p className="mt-2 max-w-2xl text-lg leading-relaxed">{def.definition}</p>
             </div>
-            <button
-              type="button"
-              onClick={() => setOpen(false)}
-              className="shrink-0 rounded-md border border-[var(--rule)] px-2 py-1 text-xs"
-            >
+            <Button type="button" size="sm" onClick={() => setOpen(false)}>
               Close
-            </button>
+            </Button>
           </div>
 
           <p className="mb-4 max-w-2xl text-xs leading-relaxed text-[var(--muted)]">

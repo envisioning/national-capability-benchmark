@@ -11,7 +11,16 @@ import type { DisputeRecord } from '@ncb/core'
 import { InstitutionsView } from '@/components/views/InstitutionsView'
 import { NeighbourSparkline } from '@/components/NeighbourSparkline'
 import { Radar } from '@/components/Radar'
-import { CountryLabel, DefineLink, Empty, Headline, Note, PageTitle, Section } from '@/components/ui'
+import {
+  Card,
+  CountryLabel,
+  DefineLink,
+  Empty,
+  Headline,
+  Note,
+  PageTitle,
+  Section,
+} from '@/components/ui'
 import {
   objectionDetailHref,
   compareHref,
@@ -106,9 +115,9 @@ export default async function CountryLocalPage({
         hint="The radar keeps the nine national dimensions together. The paragraph beside it explains what the shape can and cannot say."
       >
         <div className="grid items-start gap-8 md:grid-cols-[10rem_1fr]">
-          <div className="w-40 rounded-lg border border-[var(--rule)] bg-[var(--surface-sunken)] p-2">
+          <Card padding="sm" className="w-40">
             <RadarPlaceholder profile={profile} />
-          </div>
+          </Card>
           <p className="max-w-3xl text-lg leading-relaxed">
             Brazil&apos;s benchmark shape is a national view of a country with several centres of
             action. The federal score captures evidence that can be compared across the benchmark
@@ -272,7 +281,7 @@ function CorroborationCard({
   )
 
   return (
-    <div className="max-w-3xl rounded-lg border border-[var(--rule)] bg-[var(--surface-sunken)] p-5">
+    <Card padding="lg" className="max-w-3xl">
       <div className="grid gap-6 sm:grid-cols-2">
         <div>
           <p className="text-xs font-medium text-[var(--muted)]">National coefficient</p>
@@ -307,6 +316,6 @@ function CorroborationCard({
         shown on the coefficient scale and stay outside the NCB score.
       </p>
       <p className="mt-4 text-xs leading-relaxed text-[var(--muted)]">Source: {source}.</p>
-    </div>
+    </Card>
   )
 }

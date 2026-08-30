@@ -23,6 +23,7 @@ import { IndicatorPeek } from '@/components/views/IndicatorPeek'
 import { EmbedCode } from '@/components/EmbedCode'
 import Link from 'next/link'
 import {
+  Card,
   ClassBadge,
   ClassLegend,
   DefineLink,
@@ -135,7 +136,7 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
         />
       </div>
 
-      <div className="mb-12 max-w-3xl rounded-lg border border-[var(--rule)] bg-[var(--surface-sunken)] p-4">
+      <Card className="mb-12 max-w-3xl">
         <p className="mb-2 text-xs uppercase tracking-[0.05em] text-[var(--muted)]">
           How to read this page
         </p>
@@ -167,7 +168,7 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
           </Link>
           .
         </p>
-      </div>
+      </Card>
 
       {run && countryHasEstimates ? (
         <PanelProvenanceNote provenance={run.provenance} panelists={run.panel.length} />
@@ -309,7 +310,7 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
               <EvidenceList records={evidence.filter((e) => INDICATORS_BY_ID[e.indicatorId]?.dimension === d)} />
 
               {finals.length > 0 && run ? (
-                <div className="mt-6 rounded-lg border border-[var(--rule)] bg-[var(--surface-sunken)] p-4">
+                <Card className="mt-6">
                   <p className="mb-3 text-xs uppercase tracking-[0.05em] text-[var(--muted)]">
                     {isPanel(run) ? 'Panel estimate' : 'Session estimate'}, round{' '}
                     {finalRound},{' '}
@@ -328,7 +329,7 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
                       </li>
                     ))}
                   </ul>
-                </div>
+                </Card>
               ) : null}
             </Section>
           </div>

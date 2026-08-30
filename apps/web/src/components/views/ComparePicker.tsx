@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation'
 import { countryFlag } from '@ncb/core'
 import { Icon } from '@/components/Icon'
+import { Card, controlClass } from '@/components/ui'
 import { COMPARE_MAX, compareHref } from '@/lib/links'
 
 export type ComparePickerCountry = { iso3: string; country: string }
@@ -30,7 +31,7 @@ export function ComparePicker({
     .sort((a, b) => a.country.localeCompare(b.country))
 
   return (
-    <div className="mb-10 rounded-lg border border-[var(--rule)] bg-[var(--surface-sunken)] p-4">
+    <Card className="mb-10">
       <p className="mb-3 text-xs uppercase tracking-[0.05em] text-[var(--muted)]">
         Countries in this comparison
       </p>
@@ -39,7 +40,7 @@ export function ComparePicker({
         {selected.map((c, i) => (
           <span
             key={c.iso3}
-            className="inline-flex items-center gap-2 rounded-md border border-[var(--rule)] bg-[var(--surface)] px-2 py-1 text-xs"
+            className={controlClass('inline-flex items-center gap-2')}
           >
             <span aria-hidden="true">{countryFlag(c.iso3)}</span>
             <span className="font-medium">{c.country}</span>
@@ -73,7 +74,7 @@ export function ComparePicker({
               onChange={(e) => {
                 if (e.target.value) go([...codes, e.target.value])
               }}
-              className="rounded-md border border-[var(--rule)] bg-[var(--surface)] px-2 py-1 text-xs"
+              className={controlClass()}
             >
               <option value="">a country</option>
               {available.map((c) => (
@@ -99,6 +100,6 @@ export function ComparePicker({
           </button>
         ) : null}
       </div>
-    </div>
+    </Card>
   )
 }

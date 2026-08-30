@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { COUNTRY_NAMES, EVIDENCE_STATUS_LABELS, INDICATORS_BY_ID } from '@ncb/core'
 import type { EvidenceRecord } from '@ncb/core'
 import { Icon } from '@/components/Icon'
-import { CountryLabel } from '@/components/ui'
+import { Card, CountryLabel } from '@/components/ui'
 import { countryProfileHref, evidenceHref } from '@/lib/links'
 
 /**
@@ -65,7 +65,7 @@ export function PatternMetrics({ record }: { record: EvidenceRecord }) {
 export function PatternMechanism({ record }: { record: EvidenceRecord }) {
   if (!record.pattern) return null
   return (
-    <div className="mt-4 rounded-lg border border-[var(--rule)] bg-[var(--surface-sunken)] p-4">
+    <Card className="mt-4">
       <p className="mb-2 inline-flex items-center gap-2 text-xs uppercase tracking-[0.05em] text-[var(--muted)]">
         <Icon name="shuffle" size={14} />
         The move, and what it needed
@@ -82,7 +82,7 @@ export function PatternMechanism({ record }: { record: EvidenceRecord }) {
           Where it travelled: {record.pattern.travelled}
         </p>
       ) : null}
-    </div>
+    </Card>
   )
 }
 

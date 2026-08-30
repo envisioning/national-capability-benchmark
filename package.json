@@ -15,9 +15,11 @@
     "reviews:check": "node scripts/check-provisional-reviews.mjs",
     "build": "pnpm -r build",
     "typecheck": "pnpm -r typecheck",
-    "dev": "pnpm --filter @ncb/web dev"
+    "dev": "pnpm --filter @ncb/web dev",
+    "icons": "node scripts/generate-favicons.mjs"
   },
   "devDependencies": {
+    "sharp": "^0.34.0",
     "typescript": "^5.9.2"
   },
   "pnpm": {

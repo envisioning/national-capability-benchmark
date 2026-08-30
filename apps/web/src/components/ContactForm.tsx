@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { CONTACT_TOPICS, CONTACT_TOPIC_LABELS, MIN_CONTACT_MESSAGE } from '@ncb/core'
 import type { ContactTopic } from '@ncb/core'
 import { contactApiHref } from '@/lib/links'
+import { Button, fieldClass } from '@/components/ui'
 
 /**
  * The one form in the viewer that writes to a person.
@@ -14,8 +15,10 @@ import { contactApiHref } from '@/lib/links'
  * a support page has to hand over. See D71.
  */
 
-const FIELD =
-  'mt-2 block w-full rounded-md border border-[var(--rule)] bg-[var(--surface)] px-3 py-2 text-lg font-normal'
+/* One control geometry for the whole site. A single-line field is the 40px
+   button height, so the submit button lines up with the fields above it. */
+const FIELD = fieldClass('mt-2 h-10')
+const AREA = fieldClass('mt-2 min-h-36 py-2 leading-relaxed')
 
 export function ContactForm({
   topic = 'general',
@@ -120,7 +123,7 @@ export function ContactForm({
           minLength={MIN_CONTACT_MESSAGE}
           maxLength={4000}
           defaultValue={draft}
-          className={`${FIELD} min-h-36 leading-relaxed`}
+          className={AREA}
           placeholder="What are you working on, and what would you want from the benchmark?"
         />
       </label>
@@ -132,13 +135,9 @@ export function ContactForm({
 
       {error ? <p className="text-xs text-[#ef4444]">{error}</p> : null}
 
-      <button
-        type="submit"
-        disabled={sending}
-        className="rounded-md bg-accent px-4 py-2 text-xs font-medium text-black disabled:opacity-50"
-      >
+      <Button type="submit" variant="accent" disabled={sending}>
         {sending ? 'Sending' : 'Send message'}
-      </button>
+      </Button>
     </form>
   )
 }

@@ -348,6 +348,139 @@ export function ConfidenceLegend({ lex = EN }: { lex?: Lexicon } = {}) {
   )
 }
 
+/**
+ * The one button geometry on the site, matching envisioning.com's button
+ * component: 40px tall, a 12px medium label at every size, `rounded-md`.
+ * The label stays deliberately small against the 18px body so an action reads
+ * as precise instead of loud.
+ *
+ * Variants carry emphasis, never decoration. `accent` is lime on navy ink and
+ * is the one loud button, so a page holds at most one. `default` is the plain
+ * filled action, `outline` sits beside content, and `ghost` is an affordance
+ * inside a control that already has an edge. Nothing here takes a shadow: the
+ * viewer builds depth from 1px rules, not elevation.
+ */
+export type ButtonVariant = 'default' | 'accent' | 'outline' | 'ghost'
+
+const BUTTON_BASE =
+  'inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-md text-xs font-medium transition-colors duration-200 disabled:pointer-events-none disabled:opacity-50'
+
+const BUTTON_SIZES: Record<'sm' | 'md', string> = {
+  sm: 'h-8 px-3',
+  md: 'h-10 px-4',
+}
+
+const BUTTON_VARIANTS: Record<ButtonVariant, string> = {
+  default: 'bg-[var(--foreground)] text-[var(--background)] hover:opacity-90',
+  accent: 'bg-accent text-black hover:bg-accentDown',
+  outline:
+    'border border-[var(--rule)] bg-[var(--surface)] text-[var(--foreground)] hover:bg-[var(--surface-sunken)]',
+  ghost: 'text-[var(--muted)] hover:bg-[var(--surface-sunken)] hover:text-[var(--foreground)]',
+}
+
+export function buttonClass(
+  variant: ButtonVariant = 'outline',
+  size: 'sm' | 'md' = 'md',
+  className = '',
+): string {
+  return `${BUTTON_BASE} ${BUTTON_SIZES[size]} ${BUTTON_VARIANTS[variant]} ${className}`.trim()
+}
+
+export function Button({
+  variant = 'outline',
+  size = 'md',
+  className = '',
+  ...props
+}: React.ButtonHTMLAttributes<HTMLButtonElement> & {
+  variant?: ButtonVariant
+  size?: 'sm' | 'md'
+}) {
+  return <button {...props} className={buttonClass(variant, size, className)} />
+}
+
+/**
+ * A link that carries an action rather than a destination in prose. Same
+ * geometry as `Button`, so a row can mix the two without a seam.
+ */
+export function ButtonLink({
+  href,
+  variant = 'outline',
+  size = 'md',
+  className = '',
+  children,
+}: {
+  href: string
+  variant?: ButtonVariant
+  size?: 'sm' | 'md'
+  className?: string
+  children: React.ReactNode
+}) {
+  return (
+    <Link href={href} className={buttonClass(variant, size, className)}>
+      {children}
+    </Link>
+  )
+}
+
+/**
+ * The one form-control geometry: 40px tall, `rounded-md`, body type, so a
+ * field and a button beside it share a baseline. `fieldClass` is for the
+ * controls that cannot take a component, which is every native `select` and
+ * `textarea` the views build inline.
+ */
+export function fieldClass(className = ''): string {
+  return `block w-full rounded-md border border-[var(--rule)] bg-[var(--surface)] px-3 text-lg font-normal text-[var(--foreground)] ${className}`.trim()
+}
+
+/**
+ * A filter-bar control: a select, or a small toggle that sits beside one. It
+ * holds the small button's height, so a strip mixing a select and a `size="sm"`
+ * button lands on one line with one baseline.
+ *
+ * This is a different size from `fieldClass`, and deliberately. A form field
+ * takes prose the reader writes, so it carries body type at the button height.
+ * A filter names a choice, so it carries label type.
+ */
+export function controlClass(className = ''): string {
+  return `h-8 rounded-md border border-[var(--rule)] bg-[var(--surface)] px-3 text-xs text-[var(--foreground)] ${className}`.trim()
+}
+
+/**
+ * A panel: the viewer's one card. Depth comes from a 1px rule and a sunken
+ * fill, never from a shadow, because a shadow under a table of scores adds
+ * noise and reads as chrome.
+ *
+ * `tone` picks the fill. `sunken` is the default and separates a panel from the
+ * page; `plain` sits on the page surface and is for a card inside an already
+ * sunken area; `none` keeps the page behind it and is for a card whose job is
+ * only to draw an edge.
+ */
+export function Card({
+  tone = 'sunken',
+  padding = 'md',
+  className = '',
+  children,
+}: {
+  tone?: 'sunken' | 'plain' | 'none'
+  padding?: 'sm' | 'md' | 'lg'
+  className?: string
+  children: React.ReactNode
+}) {
+  const fills = {
+    sunken: 'bg-[var(--surface-sunken)]',
+    plain: 'bg-[var(--surface)]',
+    none: '',
+  }
+  const paddings = { sm: 'p-2', md: 'p-4', lg: 'p-5' }
+  return (
+    <div
+      className={`rounded-lg border border-[var(--rule)] ${fills[tone]} ${paddings[padding]} ${className}`.trim()}
+    >
+      {children}
+    </div>
+  )
+}
+
 export function Note({
   children,
   tone = 'neutral',

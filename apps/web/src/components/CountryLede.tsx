@@ -4,7 +4,7 @@ import { DIMENSION_LABELS, RAISE_BELOW, splitAgenda } from '@ncb/core'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { CapabilityLink } from '@/components/CapabilityLink'
 import { agendaHref } from '@/lib/links'
-import { ConfidenceBar, DefineLink, Score } from '@/components/ui'
+import { Card, ConfidenceBar, DefineLink, Score } from '@/components/ui'
 
 /**
  * The computed agenda at the top of a country page.
@@ -99,7 +99,7 @@ function Group({
   empty: string
 }) {
   return (
-    <div className="rounded-lg border border-[var(--rule)] p-4">
+    <Card tone="none">
       <p className="mb-3 text-xs uppercase tracking-[0.05em] text-[var(--muted)]">{label}</p>
       {items.length === 0 ? (
         <p className="text-xs text-[var(--muted)]">{empty}</p>
@@ -129,6 +129,6 @@ function Group({
           ))}
         </ul>
       )}
-    </div>
+    </Card>
   )
 }

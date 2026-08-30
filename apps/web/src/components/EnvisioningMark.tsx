@@ -4,6 +4,9 @@ import type { CSSProperties } from 'react'
  * The Envisioning EV glyph, vendored as a presentational SVG from the parent
  * brand mark. It inherits currentColor so it can sit naturally in the NCB
  * header and footer without adding an image request.
+ *
+ * The same geometry is the favicon source at public/brand/envisioning-mark.svg,
+ * which scripts/generate-favicons.mjs rasterises. Change one and change the other.
  */
 export function EnvisioningMark({
   className,

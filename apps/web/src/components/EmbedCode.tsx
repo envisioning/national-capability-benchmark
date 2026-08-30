@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { Button } from '@/components/ui'
 
 function escapeAttribute(value: string): string {
   return value.replace(/&/g, '&amp;').replace(/"/g, '&quot;')
@@ -54,13 +55,9 @@ export function EmbedCode({
 
   return (
     <div className="inline-flex flex-wrap items-center gap-3">
-      <button
-        type="button"
-        onClick={copy}
-        className="rounded-md border border-[var(--rule)] px-3 py-1.5 text-xs font-medium underline underline-offset-4 hover:bg-[var(--surface-sunken)]"
-      >
+      <Button type="button" size="sm" onClick={copy}>
         {label}
-      </button>
+      </Button>
       <span aria-live="polite" className="text-xs text-[var(--muted)]">
         {state === 'copied'
           ? 'Copied iframe code'

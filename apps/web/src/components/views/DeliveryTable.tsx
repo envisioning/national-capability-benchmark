@@ -15,7 +15,7 @@ import { compareSortValues, type SortDirection } from '@/components/DataTable'
 import { CONTROL, EvidenceFilters, useEvidenceFilters } from '@/components/EvidenceFilters'
 import { CapabilityLink } from '@/components/CapabilityLink'
 import { DIMENSION_ICON, Icon, TIER_ICON } from '@/components/Icon'
-import { CountryLabel, Empty } from '@/components/ui'
+import { Button, CountryLabel, Empty } from '@/components/ui'
 import { EVIDENCE_STATUS_ORDER, evidenceDimension } from '@/lib/evidence'
 import {
   NO_PATTERN_FILTERS,
@@ -233,14 +233,15 @@ function DeliverySortBar({
           </option>
         ))}
       </select>
-      <button
+      <Button
         type="button"
+        size="sm"
+        variant="ghost"
         onClick={onDirection}
-        className="rounded-md border border-[var(--rule)] px-2 py-1 text-[var(--muted)] hover:text-[var(--foreground)]"
         aria-label={`Sort ${option.label.toLowerCase()} ${nextDirection}`}
       >
         {direction}
-      </button>
+      </Button>
     </div>
   )
 }

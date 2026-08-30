@@ -10,6 +10,7 @@ import {
 } from '@ncb/core'
 import type { Dimension, EvidenceRecord } from '@ncb/core'
 import { Icon } from '@/components/Icon'
+import { Card, controlClass } from '@/components/ui'
 import { evidenceDimension, filterEvidence } from '@/lib/evidence'
 import { NO_PATTERN_FILTERS, patternFiltersQuery, type PatternFilters } from '@/lib/links'
 
@@ -22,9 +23,8 @@ import { NO_PATTERN_FILTERS, patternFiltersQuery, type PatternFilters } from '@/
  * other lacks. See D46.
  */
 
-/** The shared input treatment. One surface, one rule, one border. */
-export const CONTROL =
-  'rounded-md border border-[var(--rule)] bg-[var(--surface)] px-2 py-1 text-xs text-[var(--foreground)]'
+/** The shared filter-control treatment. Geometry lives in ui.tsx. */
+export const CONTROL = controlClass()
 
 /** A status filter value. `reversal` covers the two ways a delivery is lost. */
 type StatusFilter = PatternFilters['status']
@@ -106,7 +106,7 @@ export function EvidenceFilters({
   )
 
   return (
-    <div className="mb-8 rounded-lg border border-[var(--rule)] bg-[var(--surface-sunken)] p-4">
+    <Card className="mb-8">
       <p className="mb-3 inline-flex items-center gap-2 text-xs uppercase tracking-[0.05em] text-[var(--muted)]">
         <Icon name="list-filter" size={14} />
         Narrow the list
@@ -191,6 +191,6 @@ export function EvidenceFilters({
           ) : null}
         </span>
       </div>
-    </div>
+    </Card>
   )
 }
