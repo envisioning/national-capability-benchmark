@@ -125,7 +125,7 @@ These scores are at least 50 with usable evidence. They still need watching.
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
 
-## Brazilian institutional change: deliveries that don't move scores but move countries.
+## What Brazil built that no indicator counts
 
 These are documented Brazilian institutional changes the framework files as evidence. They are not scored. They are the historical record that the capability measurement sits next to.
 

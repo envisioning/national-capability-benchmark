@@ -104,7 +104,7 @@ export function OgFrame({
       </div>
 
       <div style={{ borderTop: `1px solid ${COLORS.rule}`, color: COLORS.muted, display: 'flex', fontSize: 16, paddingTop: 16 }}>
-        Public data, nine capability dimensions, no overall ranking
+        Nine capabilities from public data, each with the confidence behind it
       </div>
     </div>
   )

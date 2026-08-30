@@ -1,6 +1,6 @@
 # Capability agenda: Japan
 
-*Generated 2026-08-28*
+*Generated 2026-08-30*
 
 The frame includes 52 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
@@ -11,7 +11,7 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 | Anticipation | 64.7 | 0.64 (usable) | +12.7 over 10 years using 5 indicators |
 | Agency | 71 | 0.61 (usable) | +1.9 over 10 years using 4 indicators |
 | Coordination | 63 | 0.17 (very thin) | no trend |
-| Trust | not scored | 0.07 (very thin) | no trend |
+| Trust | 65.3 | 0.16 (very thin) | no trend |
 | Learning | 47.2 | 0.52 (usable) | +2.1 over 10 years using 2 indicators |
 | Experimentation | 66.7 | 0.18 (very thin) | -6.8 over 10 years using 2 indicators |
 | Adaptability | 86.1 | 0.47 (usable) | +8.6 over 10 years using 4 indicators |
@@ -28,20 +28,12 @@ How effectively does the country acquire, distribute, and update knowledge?
 
 - Uses 5 observed indicators.
 - Highest usable scores: Finland 77.9, Australia 70.3, United Kingdom 68.4.
-- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland).
+- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); CAPES, federal postgraduate funding (Brazil); INEP, the standing education statistics institution (Brazil).
 - Missing indicators: Adult learning participation, Research citation impact.
 
 ## What to measure first
 
 The evidence is too thin to manage these dimensions confidently.
-
-### Trust: confidence 0.07, very thin
-
-How much cooperation is possible beyond immediate personal networks?
-
-- Uses one observed indicator.
-- Missing indicators: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
 ### Shared Purpose: confidence 0.1, very thin
 
@@ -50,6 +42,14 @@ To what extent can people imagine themselves as participants in a common project
 - Uses 2 observed indicators.
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
 - Rejected datasets: Voice and accountability.
+
+### Trust: confidence 0.16, very thin
+
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 2 observed indicators.
+- Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
 ### Coordination: confidence 0.17, very thin
 
@@ -77,7 +77,7 @@ These scores are at least 50 with usable evidence. They still need watching.
 
 ## Missing data
 
-27 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+26 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -88,7 +88,6 @@ These scores are at least 50 with usable evidence. They still need watching.
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
 | Coordination | Civil society strength | Autonomy, density and participatory reach of civil society organisations. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
-| Trust | Generalised interpersonal trust | Share agreeing that most people can be trusted. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
 | Trust | Cooperation beyond the in-group | Reported trust in people met for the first time and in people of another nationality. |
 | Trust | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import Link from 'next/link'
 import Script from 'next/script'
-import { APP_VERSION, COUNTRIES, DATASET_VERSION, LICENSE_DOC, REPO_URL, docHref } from '@ncb/core'
+import { APP_VERSION, DATASET_VERSION, LICENSE_DOC, REPO_URL, docHref } from '@ncb/core'
 import { EnvisioningMark } from '@/components/EnvisioningMark'
 import { FooterNav, HeaderNav, SectionTabs } from '@/components/SiteNav'
 import { changelogHref, siteOrigin } from '@/lib/links'
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteOrigin()),
   title: 'NCB, the National Capability Benchmark',
   description:
-    'A prototype that measures what a country can do, separately from how rich it is.',
+    'A prototype that measures whether a country can anticipate change, coordinate around it and build what it decides to build.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -123,10 +123,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </Link>
               <div>
                 <p className="max-w-3xl text-lg leading-relaxed">
-                  NCB measures what a country can do, apart from how rich it is.
+                  NCB measures whether a country can anticipate change, coordinate around it and
+                  build what it decides to build.
                 </p>
                 <p className="mt-2 max-w-3xl text-xs text-[var(--footer-muted)]">
-                  {COUNTRIES.length} countries, nine capabilities, public data, no ranking.
+                  Nine capabilities from public data, each with the confidence behind it.
                 </p>
               </div>
             </div>

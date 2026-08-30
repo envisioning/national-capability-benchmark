@@ -125,7 +125,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 | Propósito compartilhado | Participação cívica | Participação ativa em associações, sindicatos, partidos e organizações comunitárias. |
 
-## Mudança institucional brasileira: entregas que não mudam as notas, mas mudam países.
+## O que o Brasil construiu e nenhum indicador conta
 
 Estas são mudanças institucionais brasileiras documentadas que o framework registra como evidência. Elas não são pontuadas. São o registro histórico ao lado da medição de capacidades.
 

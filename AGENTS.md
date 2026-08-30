@@ -573,6 +573,20 @@ as the reference, and see NOTICE.md before reusing the brand.
   "About says what it is made of and what it refuses to do, and contact reaches
   a person" tells a reader nothing they could act on. Say what the page holds
   and link the words a reader would look for. See D79.
+- **Never put an internal fact in reader copy.** "One inbox for the whole
+  project", "one registry", "a single source of truth" are contracts between
+  agents, and a reader did not ask how many inboxes exist. They belong in this
+  file and in the decision log. See D79.
+- **Never reassure.** "A person reads it and replies" invites the suspicion it
+  denies, and promises something the page cannot keep. State what happens, once:
+  "Nothing you write here is published." See D79.
+- Three short sentences in a row is the rhythm of generated text, whatever the
+  words are. Vary the length or cut to one. See D79.
+- **The project describes itself by what it measures, never by what it refuses
+  to be.** The footer line, the metadata description and the social card all
+  say the same positive thing, and none of them leads with a count or the word
+  ranking. The refusals have a home on `/about`, which is the page whose job is
+  to hold them. See D79.
 - **No em dashes or en dashes in rendered copy.** This repo's internal docs still
   use them; the viewer must not.
 - The "X, not Y" inversion is capped at one per page. VOICE.md calls it the most

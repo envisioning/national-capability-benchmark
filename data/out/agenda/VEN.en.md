@@ -1,6 +1,6 @@
 # Capability agenda: Venezuela
 
-*Generated 2026-08-28*
+*Generated 2026-08-30*
 
 The frame includes 52 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
@@ -11,7 +11,7 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 | Anticipation | 8.6 | 0.54 (usable) | -1.7 over 10 years using 4 indicators |
 | Agency | 33.2 | 0.39 (thin) | +30.6 over 10 years using 2 indicators |
 | Coordination | not scored | 0.06 (very thin) | no trend |
-| Trust | not scored | 0.07 (very thin) | no trend |
+| Trust | 36.1 | 0.16 (very thin) | no trend |
 | Learning | 56.8 | 0.1 (very thin) | no trend |
 | Experimentation | 5.2 | 0.1 (very thin) | no trend |
 | Adaptability | 34.7 | 0.47 (usable) | +4.2 over 10 years using 4 indicators, with 1 at the frame edge |
@@ -28,7 +28,7 @@ How capable is the country of identifying and preparing for emerging change?
 
 - Uses 5 observed indicators.
 - Highest usable scores: Sweden 83.5, Finland 82, Switzerland 81.1.
-- Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands).
+- Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore).
 - Missing indicators: Government foresight capacity, Long-horizon research share.
 
 ### Adaptability: 34.7, confidence usable
@@ -37,7 +37,7 @@ How effectively can the system respond when circumstances change?
 
 - Uses 4 observed indicators.
 - Highest usable scores: Netherlands 90.1, Switzerland 88.6, Japan 86.1.
-- Related deliveries in other countries: Plano Real, the 1994 currency stabilisation (Brazil); Proalcool, the fuel substitution after the oil shock (Brazil); The Convertibility Plan, and its collapse (Argentina); Kurzarbeit in the 2008-2009 crisis (Germany); The 2001 stabilisation, and its unwinding (Turkey).
+- Related deliveries in other countries: Plano Real, the 1994 currency stabilisation (Brazil); Proalcool, the fuel substitution after the oil shock (Brazil); The Convertibility Plan, and its collapse (Argentina); Kurzarbeit in the 2008-2009 crisis (Germany); The 2001 stabilisation, and its unwinding (Turkey); Telebras, the telecom system that was dismantled (Brazil); Estonian Defence League, national defence rebuilt after independence (Estonia); Korea Internet and Security Agency, a consolidated digital authority (South Korea).
 - Missing indicators: Long-term unemployment share, Export diversification, Disaster preparedness and recovery, Institutional responsiveness.
 
 ## What to measure first
@@ -60,14 +60,6 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Civil society strength, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
-### Trust: confidence 0.07, very thin
-
-How much cooperation is possible beyond immediate personal networks?
-
-- Uses one observed indicator.
-- Missing indicators: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
-
 ### Learning: confidence 0.1, very thin
 
 How effectively does the country acquire, distribute, and update knowledge?
@@ -81,6 +73,14 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 
 - Uses 2 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
+
+### Trust: confidence 0.16, very thin
+
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 2 observed indicators.
+- Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
 ### Building: confidence 0.2, very thin
 
@@ -99,7 +99,7 @@ How able are individuals and organizations to turn an intention into action?
 
 ## Missing data
 
-27 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+26 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -110,7 +110,6 @@ How able are individuals and organizations to turn an intention into action?
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
 | Coordination | Civil society strength | Autonomy, density and participatory reach of civil society organisations. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
-| Trust | Generalised interpersonal trust | Share agreeing that most people can be trusted. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
 | Trust | Cooperation beyond the in-group | Reported trust in people met for the first time and in people of another nationality. |
 | Trust | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |

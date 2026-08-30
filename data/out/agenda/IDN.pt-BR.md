@@ -1,6 +1,6 @@
 # Agenda de capacidades: Indonésia
 
-*Gerado em 2026-08-28*
+*Gerado em 2026-08-30*
 
 Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
@@ -11,7 +11,7 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | Antecipação | 30,6 | 0,58 (utilizável) | +17,4 em 10 anos, sobre 3 indicadores |
 | Agência | 43,3 | 0,61 (utilizável) | +22,2 em 10 anos, sobre 4 indicadores |
 | Coordenação | 82,3 | 0,19 (muito fraca) | sem base de tendência |
-| Confiança | sem nota | 0,07 (muito fraca) | sem base de tendência |
+| Confiança | 41 | 0,16 (muito fraca) | sem base de tendência |
 | Aprendizagem | 24,3 | 0,53 (utilizável) | +3,8 em 10 anos, sobre 3 indicadores |
 | Experimentação | 2,9 | 0,18 (muito fraca) | +1,1 em 10 anos, sobre 2 indicadores |
 | Adaptação | 56,2 | 0,47 (utilizável) | +5,8 em 10 anos, sobre 4 indicadores |
@@ -28,7 +28,7 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,4.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia).
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil).
 - Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ### Antecipação: 30,6, confiança utilizável
@@ -37,7 +37,7 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Suécia 83,5, Finlândia 82, Suíça 81,1.
-- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos).
+- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura).
 - Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
 ### Construção: 38,7, confiança utilizável
@@ -46,7 +46,7 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Irlanda 75,3, Singapura 71,2, China 64,9.
-- Entregas documentadas em outros países: Pix instant payment system (Brasil); GOV.BR federal identity and service platform (Brasil); X-Road national data exchange layer (Estônia); Pradhan Mantri Jan Dhan Yojana bank accounts (Índia); Electricity supply rebuilt on renewable sources (Uruguai); Plan Ceibal, one connected laptop per child (Uruguai); Sistema Unico de Saude, universal public health system (Brasil); Programa Nacional de Imunizacoes, and its erosion (Brasil); Luz para Todos, rural electrification (Brasil); Bolsa Familia and the single registry behind it (Brasil); Fully electronic national elections (Brasil); Deepwater and pre-salt oil production (Brasil); Seguro Popular, and its abolition (México); Sure Start children's centres, and their erosion (Reino Unido); Grid power, and load shedding (África do Sul); Measles elimination, and its erosion (Estados Unidos).
+- Entregas documentadas em outros países: Pix instant payment system (Brasil); GOV.BR federal identity and service platform (Brasil); X-Road national data exchange layer (Estônia); Pradhan Mantri Jan Dhan Yojana bank accounts (Índia); Electricity supply rebuilt on renewable sources (Uruguai); Plan Ceibal, one connected laptop per child (Uruguai); Sistema Unico de Saude, universal public health system (Brasil); Programa Nacional de Imunizacoes, and its erosion (Brasil); Luz para Todos, rural electrification (Brasil); Bolsa Familia and the single registry behind it (Brasil); Fully electronic national elections (Brasil); Deepwater and pre-salt oil production (Brasil); Seguro Popular, and its abolition (México); Sure Start children's centres, and their erosion (Reino Unido); Grid power, and load shedding (África do Sul); Measles elimination, and its erosion (Estados Unidos); BNDES, the national development bank (Brasil); Casa da Moeda do Brasil, the national mint (Brasil); Housing and Development Board, public housing at scale (Singapura).
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística.
 
@@ -56,19 +56,12 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 
 - Baseada em 6 indicadores observados.
 - Maiores notas utilizáveis: Estados Unidos 92,6, Austrália 89,8, Reino Unido 87,5.
+- Entregas documentadas em outros países: SIBRATEC, the documented innovation-centre network (Brasil).
 - Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
 
 ## Dimensões para medir primeiro
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
-
-### Confiança: confiança 0,07, muito fraca
-
-Quanta cooperação é possível além das redes pessoais imediatas?
-
-- Baseada em um indicador observado.
-- Lacunas declaradas: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ### Propósito compartilhado: confiança 0,15, muito fraca
 
@@ -77,6 +70,14 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
 - Bases rejeitadas: Voz e responsabilização.
+
+### Confiança: confiança 0,16, muito fraca
+
+Quanta cooperação é possível além das redes pessoais imediatas?
+
+- Baseada em 2 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ### Experimentação: confiança 0,18, muito fraca
 
@@ -101,7 +102,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## Agenda de medição
 
-27 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+26 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -112,7 +113,6 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 | Coordenação | Colaboração universidade-empresa | Intensidade da colaboração de pesquisa entre universidades e empresas. |
 | Coordenação | Força da sociedade civil | Autonomia, densidade e alcance participativo das organizações da sociedade civil. |
 | Coordenação | Colaboração público-privada | Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais. |
-| Confiança | Confiança interpessoal generalizada | Parcela que concorda que se pode confiar na maioria das pessoas. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
 | Confiança | Cooperação além do próprio grupo | Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade. |
 | Confiança | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |

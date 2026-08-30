@@ -235,16 +235,16 @@ export default async function Page() {
             Envisioning
           </a>{' '}
           researches how societies anticipate and act on change. The benchmark ranks nobody and
-          advises nobody. It reads a country&apos;s capability shape from public data and says how
+          advises nobody: it reads a country&apos;s capability shape from public data and says how
           confident it is. The{' '}
           <Link href={aboutHref} className="underline underline-offset-4">
             about page
           </Link>{' '}
-          covers what the data is and where it fails. Questions and corrections go to{' '}
+          records where that breaks down, and a{' '}
           <Link href={contactHref} className="underline underline-offset-4">
-            one inbox
-          </Link>
-          .
+            correction
+          </Link>{' '}
+          is worth sending.
         </p>
       </Section>
     </>

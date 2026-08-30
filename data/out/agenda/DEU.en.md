@@ -1,6 +1,6 @@
 # Capability agenda: Germany
 
-*Generated 2026-08-28*
+*Generated 2026-08-30*
 
 The frame includes 52 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
@@ -27,7 +27,7 @@ The evidence is too thin to manage these dimensions confidently.
 How much cooperation is possible beyond immediate personal networks?
 
 - Uses one observed indicator.
-- Missing indicators: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
+- Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
 ### Coordination: confidence 0.17, very thin
@@ -65,7 +65,7 @@ These scores are at least 50 with usable evidence. They still need watching.
 
 ## Missing data
 
-27 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+26 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -76,7 +76,6 @@ These scores are at least 50 with usable evidence. They still need watching.
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
 | Coordination | Civil society strength | Autonomy, density and participatory reach of civil society organisations. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
-| Trust | Generalised interpersonal trust | Share agreeing that most people can be trusted. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
 | Trust | Cooperation beyond the in-group | Reported trust in people met for the first time and in people of another nationality. |
 | Trust | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |

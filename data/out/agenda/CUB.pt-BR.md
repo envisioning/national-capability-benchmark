@@ -1,6 +1,6 @@
 # Agenda de capacidades: Cuba
 
-*Gerado em 2026-08-28*
+*Gerado em 2026-08-30*
 
 Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
@@ -28,7 +28,7 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 
 - Baseada em 4 indicadores observados.
 - Maiores notas utilizáveis: Suécia 83,5, Finlândia 82, Suíça 81,1.
-- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos).
+- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura).
 - Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
 ### Adaptação: 42,7, confiança utilizável
@@ -37,7 +37,7 @@ Com que eficácia o sistema responde quando as circunstâncias mudam?
 
 - Baseada em 4 indicadores observados.
 - Maiores notas utilizáveis: Países Baixos 90,1, Suíça 88,6, Japão 86,1.
-- Entregas documentadas em outros países: Plano Real, the 1994 currency stabilisation (Brasil); Proalcool, the fuel substitution after the oil shock (Brasil); The Convertibility Plan, and its collapse (Argentina); Kurzarbeit in the 2008-2009 crisis (Alemanha); The 2001 stabilisation, and its unwinding (Turquia).
+- Entregas documentadas em outros países: Plano Real, the 1994 currency stabilisation (Brasil); Proalcool, the fuel substitution after the oil shock (Brasil); The Convertibility Plan, and its collapse (Argentina); Kurzarbeit in the 2008-2009 crisis (Alemanha); The 2001 stabilisation, and its unwinding (Turquia); Telebras, the telecom system that was dismantled (Brasil); Estonian Defence League, national defence rebuilt after independence (Estônia); Korea Internet and Security Agency, a consolidated digital authority (Coreia do Sul).
 - Lacunas declaradas: Parcela de desemprego de longa duração, Diversificação das exportações, Preparação e recuperação de desastres, Capacidade de resposta institucional.
 
 ## Dimensões para medir primeiro
@@ -57,7 +57,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 Quanta cooperação é possível além das redes pessoais imediatas?
 
 - Baseada em 0 indicadores observados.
-- Lacunas declaradas: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ### Propósito compartilhado: confiança 0, muito fraca
@@ -99,7 +99,7 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 ## Agenda de medição
 
-27 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+26 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -110,7 +110,6 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 | Coordenação | Colaboração universidade-empresa | Intensidade da colaboração de pesquisa entre universidades e empresas. |
 | Coordenação | Força da sociedade civil | Autonomia, densidade e alcance participativo das organizações da sociedade civil. |
 | Coordenação | Colaboração público-privada | Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais. |
-| Confiança | Confiança interpessoal generalizada | Parcela que concorda que se pode confiar na maioria das pessoas. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
 | Confiança | Cooperação além do próprio grupo | Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade. |
 | Confiança | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |

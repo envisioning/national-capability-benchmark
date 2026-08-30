@@ -109,7 +109,7 @@ These scores are at least 50 with usable evidence. They still need watching.
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
 
-## Institutional change: deliveries that don't move scores but move Estonia.
+## What Estonia built that no indicator counts
 
 These are documented institutional changes in Estonia that the framework files as evidence. They sit beside the score and do not change it or its confidence.
 

@@ -1,6 +1,6 @@
 # Capability agenda: China
 
-*Generated 2026-08-28*
+*Generated 2026-08-30*
 
 The frame includes 52 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
@@ -11,7 +11,7 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 | Anticipation | 35.1 | 0.64 (usable) | +14.5 over 10 years using 5 indicators |
 | Agency | 86.8 | 0.61 (usable) | +21.9 over 10 years using 4 indicators |
 | Coordination | 91.5 | 0.19 (very thin) | no trend |
-| Trust | not scored | 0.07 (very thin) | no trend |
+| Trust | 83.2 | 0.16 (very thin) | no trend |
 | Learning | 59.1 | 0.56 (usable) | +13 over 10 years using 2 indicators, with 1 at the frame edge |
 | Experimentation | 100 | 0.18 (very thin) | +30.6 over 10 years using 2 indicators |
 | Adaptability | 81.6 | 0.47 (usable) | +11.8 over 10 years using 4 indicators |
@@ -28,19 +28,19 @@ How capable is the country of identifying and preparing for emerging change?
 
 - Uses 5 observed indicators.
 - Highest usable scores: Sweden 83.5, Finland 82, Switzerland 81.1.
-- Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands).
+- Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore).
 - Missing indicators: Government foresight capacity, Long-horizon research share.
 
 ## What to measure first
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Trust: confidence 0.07, very thin
+### Trust: confidence 0.16, very thin
 
 How much cooperation is possible beyond immediate personal networks?
 
-- Uses one observed indicator.
-- Missing indicators: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
+- Uses 2 observed indicators.
+- Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
 ### Experimentation: confidence 0.18, very thin
@@ -77,7 +77,7 @@ These scores are at least 50 with usable evidence. They still need watching.
 
 ## Missing data
 
-27 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+26 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -88,7 +88,6 @@ These scores are at least 50 with usable evidence. They still need watching.
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
 | Coordination | Civil society strength | Autonomy, density and participatory reach of civil society organisations. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
-| Trust | Generalised interpersonal trust | Share agreeing that most people can be trusted. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
 | Trust | Cooperation beyond the in-group | Reported trust in people met for the first time and in people of another nationality. |
 | Trust | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |

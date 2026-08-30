@@ -1,6 +1,6 @@
 # Capability agenda: Chile
 
-*Generated 2026-08-28*
+*Generated 2026-08-30*
 
 The frame includes 52 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
@@ -11,7 +11,7 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 | Anticipation | 39.3 | 0.62 (usable) | +9.2 over 10 years using 5 indicators |
 | Agency | 73.7 | 0.6 (usable) | +13.7 over 10 years using 4 indicators |
 | Coordination | 81.4 | 0.17 (very thin) | no trend |
-| Trust | not scored | 0.07 (very thin) | no trend |
+| Trust | 42.9 | 0.16 (very thin) | no trend |
 | Learning | 53.5 | 0.54 (usable) | +7.3 over 10 years using 2 indicators |
 | Experimentation | 46.7 | 0.39 (thin) | +7.2 over 10 years using 2 indicators |
 | Adaptability | 59.2 | 0.48 (usable) | +1.6 over 10 years using 4 indicators |
@@ -28,7 +28,7 @@ How capable is the country of turning plans and knowledge into functioning syste
 
 - Uses 5 observed indicators.
 - Highest usable scores: Ireland 75.3, Singapore 71.2, China 64.9.
-- Related deliveries in other countries: Pix instant payment system (Brazil); GOV.BR federal identity and service platform (Brazil); X-Road national data exchange layer (Estonia); Pradhan Mantri Jan Dhan Yojana bank accounts (India); Electricity supply rebuilt on renewable sources (Uruguay); Plan Ceibal, one connected laptop per child (Uruguay); Sistema Unico de Saude, universal public health system (Brazil); Programa Nacional de Imunizacoes, and its erosion (Brazil); Luz para Todos, rural electrification (Brazil); Bolsa Familia and the single registry behind it (Brazil); Fully electronic national elections (Brazil); Deepwater and pre-salt oil production (Brazil); Seguro Popular, and its abolition (Mexico); Sure Start children's centres, and their erosion (United Kingdom); Grid power, and load shedding (South Africa); Measles elimination, and its erosion (United States).
+- Related deliveries in other countries: Pix instant payment system (Brazil); GOV.BR federal identity and service platform (Brazil); X-Road national data exchange layer (Estonia); Pradhan Mantri Jan Dhan Yojana bank accounts (India); Electricity supply rebuilt on renewable sources (Uruguay); Plan Ceibal, one connected laptop per child (Uruguay); Sistema Unico de Saude, universal public health system (Brazil); Programa Nacional de Imunizacoes, and its erosion (Brazil); Luz para Todos, rural electrification (Brazil); Bolsa Familia and the single registry behind it (Brazil); Fully electronic national elections (Brazil); Deepwater and pre-salt oil production (Brazil); Seguro Popular, and its abolition (Mexico); Sure Start children's centres, and their erosion (United Kingdom); Grid power, and load shedding (South Africa); Measles elimination, and its erosion (United States); BNDES, the national development bank (Brazil); Casa da Moeda do Brasil, the national mint (Brazil); Housing and Development Board, public housing at scale (Singapore).
 - Missing indicators: Large project delivery, Firm scale-up rate.
 - Rejected datasets: Logistics infrastructure quality.
 
@@ -38,19 +38,19 @@ How capable is the country of identifying and preparing for emerging change?
 
 - Uses 5 observed indicators.
 - Highest usable scores: Sweden 83.5, Finland 82, Switzerland 81.1.
-- Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands).
+- Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore).
 - Missing indicators: Government foresight capacity, Long-horizon research share.
 
 ## What to measure first
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Trust: confidence 0.07, very thin
+### Trust: confidence 0.16, very thin
 
 How much cooperation is possible beyond immediate personal networks?
 
-- Uses one observed indicator.
-- Missing indicators: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
+- Uses 2 observed indicators.
+- Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
 ### Coordination: confidence 0.17, very thin
@@ -86,7 +86,7 @@ These scores are at least 50 with usable evidence. They still need watching.
 
 ## Missing data
 
-27 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+26 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -97,7 +97,6 @@ These scores are at least 50 with usable evidence. They still need watching.
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
 | Coordination | Civil society strength | Autonomy, density and participatory reach of civil society organisations. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
-| Trust | Generalised interpersonal trust | Share agreeing that most people can be trusted. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
 | Trust | Cooperation beyond the in-group | Reported trust in people met for the first time and in people of another nationality. |
 | Trust | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |

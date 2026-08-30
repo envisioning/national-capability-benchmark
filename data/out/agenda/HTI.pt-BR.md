@@ -1,6 +1,6 @@
 # Agenda de capacidades: Haiti
 
-*Gerado em 2026-08-28*
+*Gerado em 2026-08-30*
 
 Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
@@ -42,7 +42,7 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 Quanta cooperação é possível além das redes pessoais imediatas?
 
 - Baseada em um indicador observado.
-- Lacunas declaradas: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ### Coordenação: confiança 0,17, muito fraca
@@ -91,7 +91,7 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 
 ## Agenda de medição
 
-27 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+26 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -102,7 +102,6 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 | Coordenação | Colaboração universidade-empresa | Intensidade da colaboração de pesquisa entre universidades e empresas. |
 | Coordenação | Força da sociedade civil | Autonomia, densidade e alcance participativo das organizações da sociedade civil. |
 | Coordenação | Colaboração público-privada | Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais. |
-| Confiança | Confiança interpessoal generalizada | Parcela que concorda que se pode confiar na maioria das pessoas. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
 | Confiança | Cooperação além do próprio grupo | Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade. |
 | Confiança | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |

@@ -1,6 +1,6 @@
 # Capability agenda: Switzerland
 
-*Generated 2026-08-28*
+*Generated 2026-08-30*
 
 The frame includes 52 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
@@ -11,7 +11,7 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 | Anticipation | 81.1 | 0.64 (usable) | +8.3 over 10 years using 5 indicators, with 1 at the frame edge |
 | Agency | 76.1 | 0.51 (usable) | +1.8 over 10 years using 3 indicators |
 | Coordination | 98.3 | 0.14 (very thin) | no trend |
-| Trust | not scored | 0.07 (very thin) | no trend |
+| Trust | 75.3 | 0.16 (very thin) | no trend |
 | Learning | 65.1 | 0.54 (usable) | +5.1 over 10 years using 2 indicators |
 | Experimentation | 50.7 | 0.39 (thin) | +1.8 over 10 years using 2 indicators |
 | Adaptability | 88.6 | 0.48 (usable) | +2.7 over 10 years using 4 indicators |
@@ -22,14 +22,6 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Trust: confidence 0.07, very thin
-
-How much cooperation is possible beyond immediate personal networks?
-
-- Uses one observed indicator.
-- Missing indicators: Generalised interpersonal trust, Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
-
 ### Coordination: confidence 0.14, very thin
 
 How effectively can independent actors organize around shared objectives?
@@ -37,6 +29,14 @@ How effectively can independent actors organize around shared objectives?
 - Uses 2 observed indicators.
 - Missing indicators: University-industry collaboration, Civil society strength, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
+
+### Trust: confidence 0.16, very thin
+
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 2 observed indicators.
+- Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
 ### Shared Purpose: confidence 0.25, very thin
 
@@ -65,7 +65,7 @@ These scores are at least 50 with usable evidence. They still need watching.
 
 ## Missing data
 
-27 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+26 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -76,7 +76,6 @@ These scores are at least 50 with usable evidence. They still need watching.
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
 | Coordination | Civil society strength | Autonomy, density and participatory reach of civil society organisations. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
-| Trust | Generalised interpersonal trust | Share agreeing that most people can be trusted. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
 | Trust | Cooperation beyond the in-group | Reported trust in people met for the first time and in people of another nationality. |
 | Trust | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |

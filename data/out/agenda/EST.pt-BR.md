@@ -109,7 +109,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 | Propósito compartilhado | Participação cívica | Participação ativa em associações, sindicatos, partidos e organizações comunitárias. |
 
-## Mudança institucional: entregas que não mudam as notas, mas mudam a Estônia.
+## O que a Estônia construiu e nenhum indicador conta
 
 Estas são mudanças institucionais documentadas em Estônia que o framework registra como evidência. Elas ficam ao lado da nota e não mudam a nota ou a confiança.
 

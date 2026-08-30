@@ -149,7 +149,7 @@ export default async function AboutPage() {
 
       <Section
         title="Where it is weak"
-        hint="The benchmark is early. Here is what it currently gets wrong."
+        hint="The benchmark is early, and these are its current failures."
       >
         <p className="max-w-3xl text-lg leading-relaxed">
           {tracking === null
@@ -243,7 +243,7 @@ export default async function AboutPage() {
 
       <Section
         title="Where to start"
-        hint="Four kinds of reader, four first pages."
+        hint="Four kinds of reader, and the page each one should open first."
       >
         <dl className="max-w-3xl space-y-5 text-lg leading-relaxed">
           <div>

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T23:34:39.838Z",
+  "generatedAt": "2026-08-30T16:19:13.276Z",
   "iso3": "KEN",
   "country": "Kenya",
   "dimensions": [
@@ -61,8 +61,30 @@
           "country": "Netherlands",
           "indicatorId": "government_foresight_capacity",
           "title": "The Delta Programme and its fund"
+        },
+        {
+          "id": "bra-lei-informatica",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "basic_research_share",
+          "title": "Lei de Informática, a sectoral industrial policy"
+        },
+        {
+          "id": "bra-cgee",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "government_foresight_capacity",
+          "title": "CGEE, the strategic studies center"
+        },
+        {
+          "id": "sgp-csf",
+          "iso3": "SGP",
+          "country": "Singapore",
+          "indicatorId": "government_foresight_capacity",
+          "title": "Centre for Strategic Futures, foresight inside government"
         }
-      ]
+      ],
+      "institutionIds": []
     },
     {
       "dimension": "agency",
@@ -109,7 +131,16 @@
           "confidence": 0.613
         }
       ],
-      "evidenceElsewhere": []
+      "evidenceElsewhere": [
+        {
+          "id": "bra-sibratec",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "adult_digital_skills",
+          "title": "SIBRATEC, the documented innovation-centre network"
+        }
+      ],
+      "institutionIds": []
     },
     {
       "dimension": "coordination",
@@ -147,21 +178,36 @@
           "country": "Switzerland",
           "indicatorId": "public_private_collaboration",
           "title": "Dual-track vocational training"
+        },
+        {
+          "id": "bra-itaipu",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "public_private_collaboration",
+          "title": "Itaipu Binacional, the treaty-built power system"
+        },
+        {
+          "id": "kor-epb",
+          "iso3": "KOR",
+          "country": "South Korea",
+          "indicatorId": "public_private_collaboration",
+          "title": "Economic Planning Board, long-run industrial coordination"
         }
-      ]
+      ],
+      "institutionIds": []
     },
     {
       "dimension": "trust",
       "kind": "measure",
-      "score": null,
-      "confidence": 0.069,
+      "score": 42.4,
+      "confidence": 0.159,
       "band": "very_thin",
       "trend": null,
       "scoredOn": [
-        "contract_enforcement_days"
+        "contract_enforcement_days",
+        "interpersonal_trust"
       ],
       "gaps": [
-        "interpersonal_trust",
         "institutional_trust",
         "willingness_to_cooperate_strangers",
         "court_case_clearance"
@@ -172,7 +218,30 @@
         "homicide_rate"
       ],
       "exemplars": [],
-      "evidenceElsewhere": []
+      "evidenceElsewhere": [
+        {
+          "id": "bra-cadunico",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "institutional_trust",
+          "title": "Cadastro Único, the unified social registry"
+        },
+        {
+          "id": "bra-portal-transparencia",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "institutional_trust",
+          "title": "Portal da Transparência, the federal open-books system"
+        },
+        {
+          "id": "kor-mydata",
+          "iso3": "KOR",
+          "country": "South Korea",
+          "indicatorId": "institutional_trust",
+          "title": "MyData, citizen-directed data portability"
+        }
+      ],
+      "institutionIds": []
     },
     {
       "dimension": "learning",
@@ -232,8 +301,23 @@
           "country": "Finland",
           "indicatorId": "adult_learning_participation",
           "title": "The public library system"
+        },
+        {
+          "id": "bra-capes",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "research_citation_impact",
+          "title": "CAPES, federal postgraduate funding"
+        },
+        {
+          "id": "bra-inep",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "research_citation_impact",
+          "title": "INEP, the standing education statistics institution"
         }
-      ]
+      ],
+      "institutionIds": []
     },
     {
       "dimension": "experimentation",
@@ -268,8 +352,16 @@
           "country": "Israel",
           "indicatorId": "venture_capital_gdp",
           "title": "Yozma, the venture capital catalyst"
+        },
+        {
+          "id": "bra-embrapii",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "business_rd_share",
+          "title": "EMBRAPII, industry-led applied research"
         }
-      ]
+      ],
+      "institutionIds": []
     },
     {
       "dimension": "adaptability",
@@ -351,8 +443,30 @@
           "country": "Turkey",
           "indicatorId": "institutional_responsiveness",
           "title": "The 2001 stabilisation, and its unwinding"
+        },
+        {
+          "id": "bra-telebras",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Telebras, the telecom system that was dismantled"
+        },
+        {
+          "id": "est-defence-league",
+          "iso3": "EST",
+          "country": "Estonia",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Estonian Defence League, national defence rebuilt after independence"
+        },
+        {
+          "id": "kor-kisa",
+          "iso3": "KOR",
+          "country": "South Korea",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Korea Internet and Security Agency, a consolidated digital authority"
         }
-      ]
+      ],
+      "institutionIds": []
     },
     {
       "dimension": "building",
@@ -512,8 +626,30 @@
           "country": "United States",
           "indicatorId": "large_project_delivery",
           "title": "Measles elimination, and its erosion"
+        },
+        {
+          "id": "bra-bndes",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "large_project_delivery",
+          "title": "BNDES, the national development bank"
+        },
+        {
+          "id": "bra-casa-da-moeda",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "large_project_delivery",
+          "title": "Casa da Moeda do Brasil, the national mint"
+        },
+        {
+          "id": "sgp-hdb",
+          "iso3": "SGP",
+          "country": "Singapore",
+          "indicatorId": "large_project_delivery",
+          "title": "Housing and Development Board, public housing at scale"
         }
-      ]
+      ],
+      "institutionIds": []
     },
     {
       "dimension": "shared_purpose",
@@ -562,8 +698,16 @@
           "country": "Rwanda",
           "indicatorId": "volunteering_rate",
           "title": "Umuganda community work"
+        },
+        {
+          "id": "bra-sus-conselhos",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "civic_participation",
+          "title": "SUS health councils, permanent public participation"
         }
-      ]
+      ],
+      "institutionIds": []
     }
   ],
   "ownEvidence": [
@@ -575,5 +719,5 @@
       "claim": "Kenya's central bank let a phone company build a national payments system in 2007 and supervised it into ubiquity, and by June 2026 Kenya had 94.2 million registered mobile money accounts and 572,104 agents, in a population of about 55 million."
     }
   ],
-  "gapCount": 27
+  "gapCount": 26
 }

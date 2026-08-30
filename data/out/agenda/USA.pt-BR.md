@@ -1,6 +1,6 @@
 # Agenda de capacidades: Estados Unidos
 
-*Gerado em 2026-08-28*
+*Gerado em 2026-08-30*
 
 Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
@@ -11,7 +11,7 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | Antecipação | 70,2 | 0,63 (utilizável) | +9,9 em 10 anos, sobre 5 indicadores |
 | Agência | 92,6 | 0,5 (utilizável) | +7,9 em 10 anos, sobre 3 indicadores |
 | Coordenação | sem nota | 0,07 (muito fraca) | sem base de tendência |
-| Confiança | sem nota | 0,07 (muito fraca) | sem base de tendência |
+| Confiança | 64,6 | 0,16 (muito fraca) | sem base de tendência |
 | Aprendizagem | 49,5 | 0,45 (utilizável) | -0,5 em 10 anos, sobre 2 indicadores |
 | Experimentação | 55,8 | 0,39 (fraca) | +3,2 em 10 anos, sobre 2 indicadores |
 | Adaptação | 76,2 | 0,48 (utilizável) | +6 em 10 anos, sobre 4 indicadores |
@@ -28,7 +28,7 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,4.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia).
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil).
 - Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ## Dimensões para medir primeiro
@@ -43,12 +43,12 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Força da sociedade civil, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
-### Confiança: confiança 0,07, muito fraca
+### Confiança: confiança 0,16, muito fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
 
-- Baseada em um indicador observado.
-- Lacunas declaradas: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Baseada em 2 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ### Propósito compartilhado: confiança 0,27, fraca
@@ -77,7 +77,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## Agenda de medição
 
-27 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+26 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -88,7 +88,6 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 | Coordenação | Colaboração universidade-empresa | Intensidade da colaboração de pesquisa entre universidades e empresas. |
 | Coordenação | Força da sociedade civil | Autonomia, densidade e alcance participativo das organizações da sociedade civil. |
 | Coordenação | Colaboração público-privada | Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais. |
-| Confiança | Confiança interpessoal generalizada | Parcela que concorda que se pode confiar na maioria das pessoas. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
 | Confiança | Cooperação além do próprio grupo | Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade. |
 | Confiança | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |

@@ -1,6 +1,6 @@
 # Agenda de capacidades: Etiópia
 
-*Gerado em 2026-08-28*
+*Gerado em 2026-08-30*
 
 Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
@@ -11,7 +11,7 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | Antecipação | 12,1 | 0,51 (utilizável) | +10,6 em 10 anos, sobre 3 indicadores, 1 truncados na borda da régua |
 | Agência | 23,8 | 0,51 (utilizável) | +11,8 em 10 anos, sobre 3 indicadores, 2 truncados na borda da régua |
 | Coordenação | 84,2 | 0,19 (muito fraca) | sem base de tendência |
-| Confiança | sem nota | 0,07 (muito fraca) | sem base de tendência |
+| Confiança | 41,7 | 0,16 (muito fraca) | sem base de tendência |
 | Aprendizagem | 9,5 | 0,42 (fraca) | -24,8 em 10 anos, sobre 2 indicadores |
 | Experimentação | 0 | 0,17 (muito fraca) | sem base de tendência |
 | Adaptação | 43,1 | 0,47 (utilizável) | -7,8 em 10 anos, sobre 4 indicadores |
@@ -28,7 +28,7 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Suécia 83,5, Finlândia 82, Suíça 81,1.
-- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos).
+- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura).
 - Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
 ### Construção: 15,5, confiança utilizável
@@ -37,7 +37,7 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Irlanda 75,3, Singapura 71,2, China 64,9.
-- Entregas documentadas em outros países: Pix instant payment system (Brasil); GOV.BR federal identity and service platform (Brasil); X-Road national data exchange layer (Estônia); Pradhan Mantri Jan Dhan Yojana bank accounts (Índia); Electricity supply rebuilt on renewable sources (Uruguai); Plan Ceibal, one connected laptop per child (Uruguai); Sistema Unico de Saude, universal public health system (Brasil); Programa Nacional de Imunizacoes, and its erosion (Brasil); Luz para Todos, rural electrification (Brasil); Bolsa Familia and the single registry behind it (Brasil); Fully electronic national elections (Brasil); Deepwater and pre-salt oil production (Brasil); Seguro Popular, and its abolition (México); Sure Start children's centres, and their erosion (Reino Unido); Grid power, and load shedding (África do Sul); Measles elimination, and its erosion (Estados Unidos).
+- Entregas documentadas em outros países: Pix instant payment system (Brasil); GOV.BR federal identity and service platform (Brasil); X-Road national data exchange layer (Estônia); Pradhan Mantri Jan Dhan Yojana bank accounts (Índia); Electricity supply rebuilt on renewable sources (Uruguai); Plan Ceibal, one connected laptop per child (Uruguai); Sistema Unico de Saude, universal public health system (Brasil); Programa Nacional de Imunizacoes, and its erosion (Brasil); Luz para Todos, rural electrification (Brasil); Bolsa Familia and the single registry behind it (Brasil); Fully electronic national elections (Brasil); Deepwater and pre-salt oil production (Brasil); Seguro Popular, and its abolition (México); Sure Start children's centres, and their erosion (Reino Unido); Grid power, and load shedding (África do Sul); Measles elimination, and its erosion (Estados Unidos); BNDES, the national development bank (Brasil); Casa da Moeda do Brasil, the national mint (Brasil); Housing and Development Board, public housing at scale (Singapura).
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística.
 
@@ -47,6 +47,7 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 
 - Baseada em 6 indicadores observados.
 - Maiores notas utilizáveis: Estados Unidos 92,6, Austrália 89,8, Reino Unido 87,5.
+- Entregas documentadas em outros países: SIBRATEC, the documented innovation-centre network (Brasil).
 - Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
 
 ### Adaptação: 43,1, confiança utilizável
@@ -55,19 +56,19 @@ Com que eficácia o sistema responde quando as circunstâncias mudam?
 
 - Baseada em 4 indicadores observados.
 - Maiores notas utilizáveis: Países Baixos 90,1, Suíça 88,6, Japão 86,1.
-- Entregas documentadas em outros países: Plano Real, the 1994 currency stabilisation (Brasil); Proalcool, the fuel substitution after the oil shock (Brasil); The Convertibility Plan, and its collapse (Argentina); Kurzarbeit in the 2008-2009 crisis (Alemanha); The 2001 stabilisation, and its unwinding (Turquia).
+- Entregas documentadas em outros países: Plano Real, the 1994 currency stabilisation (Brasil); Proalcool, the fuel substitution after the oil shock (Brasil); The Convertibility Plan, and its collapse (Argentina); Kurzarbeit in the 2008-2009 crisis (Alemanha); The 2001 stabilisation, and its unwinding (Turquia); Telebras, the telecom system that was dismantled (Brasil); Estonian Defence League, national defence rebuilt after independence (Estônia); Korea Internet and Security Agency, a consolidated digital authority (Coreia do Sul).
 - Lacunas declaradas: Parcela de desemprego de longa duração, Diversificação das exportações, Preparação e recuperação de desastres, Capacidade de resposta institucional.
 
 ## Dimensões para medir primeiro
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Confiança: confiança 0,07, muito fraca
+### Confiança: confiança 0,16, muito fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
 
-- Baseada em um indicador observado.
-- Lacunas declaradas: Confiança interpessoal generalizada, Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Baseada em 2 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ### Experimentação: confiança 0,17, muito fraca
@@ -102,7 +103,7 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 ## Agenda de medição
 
-27 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+26 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -113,7 +114,6 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 | Coordenação | Colaboração universidade-empresa | Intensidade da colaboração de pesquisa entre universidades e empresas. |
 | Coordenação | Força da sociedade civil | Autonomia, densidade e alcance participativo das organizações da sociedade civil. |
 | Coordenação | Colaboração público-privada | Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais. |
-| Confiança | Confiança interpessoal generalizada | Parcela que concorda que se pode confiar na maioria das pessoas. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
 | Confiança | Cooperação além do próprio grupo | Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade. |
 | Confiança | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |

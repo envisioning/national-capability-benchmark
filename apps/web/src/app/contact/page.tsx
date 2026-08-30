@@ -52,8 +52,7 @@ export default async function ContactPage({
     <>
       <PageTitle>Write to us</PageTitle>
       <Headline>
-        One inbox for the whole project. Tell us who you are and what you are working on. A person
-        reads it and replies.
+        The most useful messages name a dataset we missed or a number that looks wrong.
       </Headline>
 
       <Section

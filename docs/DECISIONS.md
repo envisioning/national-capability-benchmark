@@ -3524,7 +3524,7 @@ decision is superseded.
 
 ## D79: Headings are short and plain, and Octa is the wordmark plus one title
 
-**Decision.** Two rules on the rendered surface, one for language and one for
+**Decision.** Three rules on the rendered surface, two for language and one for
 type.
 
 1. **A heading states what the section holds, in about six words.** It stays a
@@ -3540,12 +3540,31 @@ type.
    title on the site and is one step larger than a page title, at `text-4xl
    sm:text-6xl` against `text-3xl sm:text-4xl`.
 
+3. **The project describes itself by what it measures.** The footer line, the
+   metadata description and the social card carried "measures what a country
+   can do, apart from how rich it is" over "52 countries, nine capabilities,
+   public data, no ranking". All three now name capabilities: "measures whether
+   a country can anticipate change, coordinate around it and build what it
+   decides to build". The refusals keep their home on `/about`, whose job is to
+   hold them.
+
 The same pass removed the connective filler that named two pages and joined
 them with "and", of which "About says what it is made of and what it refuses to
 do, and contact reaches a person" was the clearest case.
 
+Three further rules came out of the same reading. Reader copy carries no
+internal fact: "one inbox for the whole project" is a contract between agents
+and a reader never asked how many inboxes exist. Reader copy never reassures:
+"a person reads it and replies" invites the suspicion it denies and promises
+what the page cannot keep. And three short sentences in a row is the rhythm of
+generated text whatever the words are, so vary the length or cut to one.
+
 **Why.** The maxim heading was the project's house style and it read as
-generated text. Every section opened with a small thesis, so a reader scanning
+generated text. The self-description had the matching fault: a benchmark that
+introduces itself as not-wealth and not-a-ranking has told the reader two
+things it is not before naming one thing it does, and a count is not a claim.
+
+On the headings, every section opened with a small thesis, so a reader scanning
 the page met nine arguments and no map, and the pattern told them nothing about
 where to click. The heading rule that produced it, "a statement that could be
 true or false", is still right; what it lacked was a length and a subject. The
