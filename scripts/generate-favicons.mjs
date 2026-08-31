@@ -35,7 +35,10 @@ const RADIUS = 0.22
 // metadata file convention, or `apps/web/public/`, which the manifest and
 // external surfaces reference by URL.
 const PNG_OUTPUTS = [
-  { size: 192, out: 'apps/web/src/app/icon.png' },
+  /* 512 matches the icon Signals ships. 180 is the Apple touch-icon standard,
+     which envisioning.com, envisioning-core, vocab and apparelsignals all use;
+     Signals' 192 is the outlier there. */
+  { size: 512, out: 'apps/web/src/app/icon.png' },
   { size: 180, out: 'apps/web/src/app/apple-icon.png' },
   { size: 192, out: 'apps/web/public/icon-192.png' },
   { size: 512, out: 'apps/web/public/icon-512.png' },
