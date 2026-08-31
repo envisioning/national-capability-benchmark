@@ -2,27 +2,27 @@
 
 *Gerado em 2026-08-31*
 
-Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
+Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
 ## Onde a Alemanha está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 71,2 | 0,64 (utilizável) | +9,9 em 10 anos, sobre 5 indicadores |
-| Agência | 64 | 0,6 (utilizável) | +3,1 em 10 anos, sobre 4 indicadores |
-| Coordenação | 88,8 | 0,24 (muito fraca) | sem base de tendência |
-| Confiança | sem nota | 0,07 (muito fraca) | sem base de tendência |
+| Agência | 63,8 | 0,6 (utilizável) | +3,1 em 10 anos, sobre 4 indicadores |
+| Coordenação | 88,7 | 0,39 (fraca) | sem base de tendência |
+| Confiança | sem nota | 0,11 (muito fraca) | sem base de tendência |
 | Aprendizagem | 56,5 | 0,54 (utilizável) | +6,9 em 10 anos, sobre 2 indicadores |
 | Experimentação | 72,5 | 0,18 (muito fraca) | +4,9 em 10 anos, sobre 2 indicadores |
-| Adaptação | 85,9 | 0,48 (utilizável) | +5,2 em 10 anos, sobre 4 indicadores |
-| Construção | 64,4 | 0,54 (utilizável) | -1,6 em 10 anos, sobre 4 indicadores |
-| Propósito compartilhado | 55,1 | 0,25 (muito fraca) | -5,9 em 10 anos, sobre 2 indicadores |
+| Adaptação | 85,8 | 0,48 (utilizável) | +5,2 em 10 anos, sobre 4 indicadores |
+| Construção | 64,4 | 0,62 (utilizável) | -1,6 em 10 anos, sobre 4 indicadores |
+| Propósito compartilhado | 55,1 | 0,29 (fraca) | -5,9 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para medir primeiro
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Confiança: confiança 0,07, muito fraca
+### Confiança: confiança 0,11, muito fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
 
@@ -37,15 +37,7 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
-### Coordenação: confiança 0,24, muito fraca
-
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
-
-### Propósito compartilhado: confiança 0,25, muito fraca
+### Propósito compartilhado: confiança 0,29, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
@@ -53,14 +45,22 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
 - Bases rejeitadas: Voz e responsabilização.
 
+### Coordenação: confiança 0,39, fraca
+
+Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
+- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
+
 ## Dimensões para manter
 
 Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência utilizável. Ainda precisam ser acompanhadas.
 
-- Adaptação: 85,9, confiança utilizável
+- Adaptação: 85,8, confiança utilizável
 - Antecipação: 71,2, confiança utilizável
 - Construção: 64,4, confiança utilizável
-- Agência: 64, confiança utilizável
+- Agência: 63,8, confiança utilizável
 - Aprendizagem: 56,5, confiança utilizável
 
 ## Agenda de medição

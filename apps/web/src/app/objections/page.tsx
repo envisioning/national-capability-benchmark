@@ -119,7 +119,7 @@ export default async function ObjectionsPage() {
           </Scroller>
         ) : (
           <p className="max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-            No objections have been filed yet. Use the challenge control beside any score to file the first one.
+            No objections have been filed yet. Use the Challenge action in the top navigation to file the first one.
           </p>
         )}
       </Section>

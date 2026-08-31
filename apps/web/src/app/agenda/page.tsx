@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { AgendaEvidenceMatrix } from '@/components/views/AgendaEvidenceMatrix'
 import { DeliveryTable } from '@/components/views/DeliveryTable'
-import { Empty, Headline, Highlight, PageTitle, Section } from '@/components/ui'
+import { Empty, Headline, PageTitle, Section } from '@/components/ui'
 import { Icon } from '@/components/Icon'
 import { MISSING_DATA_HINT, loadEvidence, loadIndex } from '@/lib/data'
 import { patternFiltersQuery, patternsHref, readPatternFilters } from '@/lib/links'
@@ -41,8 +41,8 @@ export default async function AgendaIndexPage({
       <PageTitle>Capability agendas</PageTitle>
       <Headline>
         Each agenda turns a country&apos;s scores into actions: what to raise, what to measure
-        first and what to keep watching. The register below shows what countries have already{' '}
-        <Highlight>built</Highlight> against the same missing indicators.
+        first and what to keep watching. The register below shows what countries have already built
+        against the same missing indicators.
       </Headline>
       <p className="mb-12 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
         A delivery is filed against an indicator that has no dataset behind it, so none of these

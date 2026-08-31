@@ -4,7 +4,7 @@ import { DIMENSION_LABELS, RAISE_BELOW, splitAgenda } from '@ncb/core'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { CapabilityLink } from '@/components/CapabilityLink'
 import { agendaHref } from '@/lib/links'
-import { Card, ConfidenceBar, DefineLink, Score } from '@/components/ui'
+import { Card, Confidence, DefineLink, Score } from '@/components/ui'
 
 /**
  * The computed agenda at the top of a country page.
@@ -48,7 +48,7 @@ export function CountryLede({
         {thinnest ? (
           <>
             <DimensionLink d={thinnest} /> needs more evidence: confidence is{' '}
-            <ConfidenceBar value={thinnest.confidence} />.
+            <Confidence value={thinnest.confidence} />.
           </>
         ) : null}
       </p>
@@ -155,7 +155,7 @@ function Group({
                   </th>
                   <td className="py-3 text-right">
                     <span className="inline-flex w-full justify-end">
-                      <ConfidenceBar value={d.confidence} size="md" />
+                      <Confidence value={d.confidence} size="md" />
                     </span>
                   </td>
                   <td className="py-3 pl-3 text-right tabular-nums">

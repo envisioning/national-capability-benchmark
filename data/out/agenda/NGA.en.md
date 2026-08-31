@@ -2,21 +2,21 @@
 
 *Generated 2026-08-31*
 
-The frame includes 52 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
+The frame includes 53 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
 ## Where Nigeria stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 17.5 | 0.55 (usable) | +10.3 over 10 years using 3 indicators |
-| Agency | 41.3 | 0.57 (usable) | +11.5 over 10 years using 4 indicators |
-| Coordination | 35.8 | 0.26 (thin) | no trend |
-| Trust | 47.7 | 0.16 (very thin) | no trend |
+| Agency | 41.1 | 0.57 (usable) | +11.4 over 10 years using 4 indicators |
+| Coordination | 35.7 | 0.41 (thin) | no trend |
+| Trust | 47.7 | 0.26 (thin) | no trend |
 | Learning | 12.5 | 0.38 (thin) | +3.2 over 10 years using 2 indicators |
 | Experimentation | 0.5 | 0.15 (very thin) | no trend |
-| Adaptability | 59.6 | 0.47 (usable) | +3.3 over 10 years using 4 indicators, with 1 at the frame edge |
-| Building | 16.8 | 0.54 (usable) | -0.5 over 10 years using 4 indicators |
-| Shared Purpose | not scored | 0.11 (very thin) | no trend |
+| Adaptability | 59.5 | 0.47 (usable) | +3.4 over 10 years using 4 indicators, with 1 at the frame edge |
+| Building | 16.8 | 0.62 (usable) | -0.5 over 10 years using 4 indicators |
+| Shared Purpose | not scored | 0.13 (very thin) | no trend |
 
 ## What to raise
 
@@ -41,12 +41,12 @@ How capable is the country of identifying and preparing for emerging change?
 - Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan); National basic-research funding allocation (China).
 - Missing indicators: Government foresight capacity, Long-horizon research share.
 
-### Agency: 41.3, confidence usable
+### Agency: 41.1, confidence usable
 
 How able are individuals and organizations to turn an intention into action?
 
 - Uses 6 observed indicators.
-- Highest usable scores: United States 92.6, Australia 89.8, United Kingdom 87.5.
+- Highest usable scores: United States 92.5, Australia 89.1, United Kingdom 86.7.
 - Related deliveries in other countries: SIBRATEC, the documented innovation-centre network (Brazil); Singapore's national ICT-skills measurement and baseline (Singapore).
 - Missing indicators: Adult digital skills, Perceived control over life.
 
@@ -54,7 +54,7 @@ How able are individuals and organizations to turn an intention into action?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Shared Purpose: confidence 0.11, very thin
+### Shared Purpose: confidence 0.13, very thin
 
 To what extent can people imagine themselves as participants in a common project?
 
@@ -69,21 +69,13 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Uses 2 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
-### Trust: confidence 0.16, very thin
+### Trust: confidence 0.26, thin
 
 How much cooperation is possible beyond immediate personal networks?
 
 - Uses 2 observed indicators.
 - Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
-
-### Coordination: confidence 0.26, thin
-
-How effectively can independent actors organize around shared objectives?
-
-- Uses 3 observed indicators.
-- Missing indicators: University-industry collaboration, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
 ### Learning: confidence 0.38, thin
 
@@ -92,11 +84,19 @@ How effectively does the country acquire, distribute, and update knowledge?
 - Uses 5 observed indicators.
 - Missing indicators: Adult learning participation, Research citation impact.
 
+### Coordination: confidence 0.41, thin
+
+How effectively can independent actors organize around shared objectives?
+
+- Uses 3 observed indicators.
+- Missing indicators: University-industry collaboration, Public-private collaboration.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
+
 ## What to keep watching
 
 These scores are at least 50 with usable evidence. They still need watching.
 
-- Adaptability: 59.6, confidence usable
+- Adaptability: 59.5, confidence usable
 
 ## Missing data
 

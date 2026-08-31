@@ -2,27 +2,27 @@
 
 *Generated 2026-08-31*
 
-The frame includes 52 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
+The frame includes 53 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
 ## Where United Kingdom stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 65.3 | 0.58 (usable) | +8.2 over 10 years using 4 indicators |
-| Agency | 87.5 | 0.61 (usable) | +2.1 over 10 years using 4 indicators |
-| Coordination | 88.2 | 0.14 (very thin) | no trend |
-| Trust | not scored | 0.07 (very thin) | no trend |
+| Agency | 86.7 | 0.61 (usable) | +1.8 over 10 years using 4 indicators |
+| Coordination | 88.2 | 0.23 (very thin) | no trend |
+| Trust | not scored | 0.11 (very thin) | no trend |
 | Learning | 68.6 | 0.52 (usable) | +13 over 10 years using 2 indicators |
-| Experimentation | 43.2 | 0.18 (very thin) | +6.2 over 10 years using 2 indicators |
-| Adaptability | 76.3 | 0.48 (usable) | +0.3 over 10 years using 4 indicators |
-| Building | 46.7 | 0.54 (usable) | +0.7 over 10 years using 4 indicators |
-| Shared Purpose | 87.4 | 0.24 (very thin) | +4.2 over 10 years using 2 indicators |
+| Experimentation | 43.3 | 0.18 (very thin) | +6.2 over 10 years using 2 indicators |
+| Adaptability | 76.2 | 0.48 (usable) | +0.4 over 10 years using 4 indicators |
+| Building | 46.8 | 0.62 (usable) | +0.6 over 10 years using 4 indicators |
+| Shared Purpose | 87.4 | 0.28 (thin) | +4.2 over 10 years using 2 indicators |
 
 ## What to raise
 
 These are the lowest scores with usable evidence. Thin evidence appears below.
 
-### Building: 46.7, confidence usable
+### Building: 46.8, confidence usable
 
 How capable is the country of turning plans and knowledge into functioning systems?
 
@@ -36,21 +36,13 @@ How capable is the country of turning plans and knowledge into functioning syste
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Trust: confidence 0.07, very thin
+### Trust: confidence 0.11, very thin
 
 How much cooperation is possible beyond immediate personal networks?
 
 - Uses one observed indicator.
 - Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
-
-### Coordination: confidence 0.14, very thin
-
-How effectively can independent actors organize around shared objectives?
-
-- Uses 2 observed indicators.
-- Missing indicators: University-industry collaboration, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
 ### Experimentation: confidence 0.18, very thin
 
@@ -59,7 +51,15 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Uses 2 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
-### Shared Purpose: confidence 0.24, very thin
+### Coordination: confidence 0.23, very thin
+
+How effectively can independent actors organize around shared objectives?
+
+- Uses 2 observed indicators.
+- Missing indicators: University-industry collaboration, Public-private collaboration.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
+
+### Shared Purpose: confidence 0.28, thin
 
 To what extent can people imagine themselves as participants in a common project?
 
@@ -71,8 +71,8 @@ To what extent can people imagine themselves as participants in a common project
 
 These scores are at least 50 with usable evidence. They still need watching.
 
-- Agency: 87.5, confidence usable
-- Adaptability: 76.3, confidence usable
+- Agency: 86.7, confidence usable
+- Adaptability: 76.2, confidence usable
 - Learning: 68.6, confidence usable
 - Anticipation: 65.3, confidence usable
 

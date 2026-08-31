@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { CONTRIBUTING_DOC, EVIDENCE_DOC, ISSUES_URL, REPO_URL, docHref } from '@ncb/core'
-import { Headline, Highlight, Note, PageTitle, Section } from '@/components/ui'
+import { Headline, Note, PageTitle, Section } from '@/components/ui'
 import { countryLayer, layerSection } from '@/lib/layers'
 import {
   objectionsHref,
@@ -37,8 +37,8 @@ export default function BrazilSupportPage() {
     <>
       <PageTitle>Apoie o benchmark</PageTitle>
       <Headline>
-        O benchmark é aberto e gratuito. O que ele ainda precisa é de{' '}
-        <Highlight>uso, evidência e tempo</Highlight>. Uma instituição brasileira pode dar os três.
+        O benchmark é aberto e gratuito. O que ele ainda precisa é de uso, evidência e tempo. Uma
+        instituição brasileira pode dar os três.
       </Headline>
 
       <Note>

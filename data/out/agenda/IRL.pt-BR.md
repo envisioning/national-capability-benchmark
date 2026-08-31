@@ -2,33 +2,25 @@
 
 *Gerado em 2026-08-31*
 
-Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
+Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
 ## Onde a Irlanda está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 67,1 | 0,64 (utilizável) | +9,7 em 10 anos, sobre 5 indicadores |
-| Agência | 69,2 | 0,61 (utilizável) | +2,5 em 10 anos, sobre 4 indicadores |
-| Coordenação | 89 | 0,24 (muito fraca) | sem base de tendência |
-| Confiança | sem nota | 0,07 (muito fraca) | sem base de tendência |
+| Agência | 68,7 | 0,61 (utilizável) | +2,6 em 10 anos, sobre 4 indicadores |
+| Coordenação | 88,8 | 0,39 (fraca) | sem base de tendência |
+| Confiança | sem nota | 0,11 (muito fraca) | sem base de tendência |
 | Aprendizagem | 60,8 | 0,51 (utilizável) | -4,6 em 10 anos, sobre 2 indicadores |
 | Experimentação | sem nota | 0,09 (muito fraca) | sem base de tendência |
-| Adaptação | 73,2 | 0,48 (utilizável) | +10 em 10 anos, sobre 4 indicadores |
-| Construção | 75,3 | 0,54 (utilizável) | +18,1 em 10 anos, sobre 4 indicadores |
-| Propósito compartilhado | 76,5 | 0,26 (fraca) | +5,3 em 10 anos, sobre 2 indicadores |
+| Adaptação | 73 | 0,48 (utilizável) | +10,1 em 10 anos, sobre 4 indicadores |
+| Construção | 75,3 | 0,62 (utilizável) | +18,2 em 10 anos, sobre 4 indicadores |
+| Propósito compartilhado | 76,5 | 0,3 (fraca) | +5,3 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para medir primeiro
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
-
-### Confiança: confiança 0,07, muito fraca
-
-Quanta cooperação é possível além das redes pessoais imediatas?
-
-- Baseada em um indicador observado.
-- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ### Experimentação: confiança 0,09, muito fraca
 
@@ -37,15 +29,15 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Baseada em um indicador observado.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
-### Coordenação: confiança 0,24, muito fraca
+### Confiança: confiança 0,11, muito fraca
 
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+Quanta cooperação é possível além das redes pessoais imediatas?
 
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
+- Baseada em um indicador observado.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
-### Propósito compartilhado: confiança 0,26, fraca
+### Propósito compartilhado: confiança 0,3, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
@@ -53,13 +45,21 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
 - Bases rejeitadas: Voz e responsabilização.
 
+### Coordenação: confiança 0,39, fraca
+
+Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
+- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
+
 ## Dimensões para manter
 
 Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência utilizável. Ainda precisam ser acompanhadas.
 
 - Construção: 75,3, confiança utilizável
-- Adaptação: 73,2, confiança utilizável
-- Agência: 69,2, confiança utilizável
+- Adaptação: 73, confiança utilizável
+- Agência: 68,7, confiança utilizável
 - Antecipação: 67,1, confiança utilizável
 - Aprendizagem: 60,8, confiança utilizável
 

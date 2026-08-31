@@ -2,6 +2,12 @@ import { CONFIDENCE_BANDS, COUNTRY_NAMES, INDICATORS_BY_ID, isReversal, isThinEv
 import type { Dimension, EvidenceRecord, EvidenceStatus } from '@ncb/core'
 import type { PatternFilters } from '@/lib/links'
 
+/** Format a published evidence value without grouping calendar years. */
+export function formatEvidenceMetricValue(value: number, unit: string): string {
+  if (unit === 'year' || unit === 'years') return String(value)
+  return value.toLocaleString('en-US')
+}
+
 /**
  * How openly a mark should be drawn for a given confidence.
  *

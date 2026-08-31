@@ -2,27 +2,27 @@
 
 *Gerado em 2026-08-31*
 
-Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
+Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
 ## Onde a Suécia está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 83,5 | 0,64 (utilizável) | +10 em 10 anos, sobre 5 indicadores |
-| Agência | 77,9 | 0,61 (utilizável) | 0 em 10 anos, sobre 4 indicadores |
-| Coordenação | 97,2 | 0,14 (muito fraca) | sem base de tendência |
-| Confiança | 83,2 | 0,16 (muito fraca) | sem base de tendência |
+| Agência | 77,5 | 0,61 (utilizável) | 0 em 10 anos, sobre 4 indicadores |
+| Coordenação | 97,2 | 0,23 (muito fraca) | sem base de tendência |
+| Confiança | 83,2 | 0,26 (fraca) | sem base de tendência |
 | Aprendizagem | 67,7 | 0,54 (utilizável) | -5,8 em 10 anos, sobre 3 indicadores |
-| Experimentação | 29,6 | 0,18 (muito fraca) | -6 em 10 anos, sobre 2 indicadores |
-| Adaptação | 79,7 | 0,48 (utilizável) | +1,1 em 10 anos, sobre 4 indicadores |
-| Construção | 41,5 | 0,54 (utilizável) | -0,5 em 10 anos, sobre 4 indicadores |
-| Propósito compartilhado | 93,4 | 0,26 (fraca) | +0,5 em 10 anos, sobre 2 indicadores, 1 truncados na borda da régua |
+| Experimentação | 29,7 | 0,18 (muito fraca) | -6,1 em 10 anos, sobre 2 indicadores |
+| Adaptação | 79,4 | 0,48 (utilizável) | +1 em 10 anos, sobre 4 indicadores |
+| Construção | 41,6 | 0,62 (utilizável) | -0,5 em 10 anos, sobre 4 indicadores |
+| Propósito compartilhado | 93,4 | 0,3 (fraca) | +0,5 em 10 anos, sobre 2 indicadores, 1 truncados na borda da régua |
 
 ## Dimensões para elevar
 
 Da nota mais baixa para a mais alta. Só entram dimensões com evidência utilizável. Evidência fraca vai para a próxima seção.
 
-### Construção: 41,5, confiança utilizável
+### Construção: 41,6, confiança utilizável
 
 Quão capaz é o país de transformar planos e conhecimento em sistemas que funcionam?
 
@@ -36,22 +36,6 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Coordenação: confiança 0,14, muito fraca
-
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
-
-### Confiança: confiança 0,16, muito fraca
-
-Quanta cooperação é possível além das redes pessoais imediatas?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
-
 ### Experimentação: confiança 0,18, muito fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
@@ -59,7 +43,23 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
-### Propósito compartilhado: confiança 0,26, fraca
+### Coordenação: confiança 0,23, muito fraca
+
+Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+
+- Baseada em 2 indicadores observados.
+- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
+- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
+
+### Confiança: confiança 0,26, fraca
+
+Quanta cooperação é possível além das redes pessoais imediatas?
+
+- Baseada em 2 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
+
+### Propósito compartilhado: confiança 0,3, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
@@ -72,8 +72,8 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência utilizável. Ainda precisam ser acompanhadas.
 
 - Antecipação: 83,5, confiança utilizável
-- Adaptação: 79,7, confiança utilizável
-- Agência: 77,9, confiança utilizável
+- Adaptação: 79,4, confiança utilizável
+- Agência: 77,5, confiança utilizável
 - Aprendizagem: 67,7, confiança utilizável
 
 ## Agenda de medição

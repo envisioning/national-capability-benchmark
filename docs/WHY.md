@@ -29,7 +29,7 @@ with Latin America measured beside it since D51.
 
 That is about where the work starts, not what the model measures. A frame that
 works for one country only describes that country. The same dimensions,
-indicators, transforms and frame apply to all 52 countries. Adding a country
+indicators, transforms and frame apply to all 53 countries. Adding a country
 rebases the frame for everyone as a versioned, announced act (D47). Brazil has
 no special treatment in the code.
 

@@ -319,7 +319,7 @@ export default function MethodPage() {
       </Section>
 
       <Section
-        title="The 52 countries set the scale"
+        title="The 53 countries set the scale"
         hint={`All ${COUNTRIES.length} countries set each indicator's fences and endpoints. The frame stays fixed within a version. Adding a country rebases it and requires a major version bump.`}
       >
         <Scroller>

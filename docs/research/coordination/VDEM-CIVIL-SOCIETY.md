@@ -21,13 +21,13 @@ The release is publicly downloadable as a ZIP archive at
 March 2025 under CC BY-SA 4.0. The adapter fixes the release, variable and
 reference year (2024), extracts the CSV and emits the project's existing
 national observation shape. The raw archive is not committed; the derived
-52-row observation file is.
+53-row observation file is.
 
 ## Coverage and treatment
 
 | Test | Result |
 | --- | --- |
-| Benchmark countries | 52 / 52 |
+| Benchmark countries | 53 / 53 |
 | Reference year | 2024 for every emitted row |
 | Value range | 0–1, as published |
 | Direction | Higher is better |
@@ -43,7 +43,7 @@ The new row has Pearson r = 0.395 with log GDP per capita (n = 50), below the
 0.70 wealth-proxy screen. The Coordination dimension is r = 0.561 (Spearman
 0.611, n = 50); the row contributes a wealth-attribution delta of 0.046 and
 does not form a redundant pair with an existing Coordination row. Coordination
-publishes a score for 51 of 52 countries because the coverage floor still
+publishes a score for 52 of 53 countries because the coverage floor still
 requires two observed indicators.
 
 These tests are necessary, not proof that expert judgements are unbiased. The

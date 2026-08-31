@@ -5,9 +5,9 @@ import { DIMENSION_LABELS } from '@ncb/core'
 import type { Dimension } from '@ncb/core'
 import { DataTable } from '@/components/DataTable'
 import { FlagField } from '@/components/FlagField'
-import { ConfidenceBar, CountryLabel, Delta, DimensionScore } from '@/components/ui'
+import { Confidence, CountryLabel, Delta, DimensionScore } from '@/components/ui'
 import { countryProfileHref } from '@/lib/links'
-import { ChallengeLink, ContestedBadge } from '@/components/ChallengeLink'
+import { ContestedBadge } from '@/components/ChallengeDialog'
 
 export type CapabilityCountryRow = {
   iso3: string
@@ -82,13 +82,6 @@ export function CapabilityCountryTable({
             <span className="inline-flex items-center gap-2">
               <DimensionScore dim={row} />
               <ContestedBadge count={row.contestedCount} />
-              <ChallengeLink
-                iso3={row.iso3}
-                country={row.country}
-                dimension={dimension}
-                value={row.score}
-                confidence={row.confidence}
-              />
             </span>
           ),
         },
@@ -97,7 +90,7 @@ export function CapabilityCountryTable({
           label: 'Confidence',
           align: 'right',
           sort: (row) => row.confidence,
-          render: (row) => <ConfidenceBar value={row.confidence} />,
+          render: (row) => <Confidence value={row.confidence} />,
         },
         {
           key: 'coverage',

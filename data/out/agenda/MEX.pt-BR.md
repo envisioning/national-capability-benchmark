@@ -2,21 +2,21 @@
 
 *Gerado em 2026-08-31*
 
-Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
+Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
 ## Onde o México está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 30,5 | 0,67 (boa) | +7,2 em 10 anos, sobre 5 indicadores |
-| Agência | 49 | 0,61 (utilizável) | +12,7 em 10 anos, sobre 4 indicadores |
-| Coordenação | 68 | 0,23 (muito fraca) | sem base de tendência |
-| Confiança | 48 | 0,16 (muito fraca) | sem base de tendência |
+| Agência | 48,7 | 0,61 (utilizável) | +12,7 em 10 anos, sobre 4 indicadores |
+| Coordenação | 67,8 | 0,37 (fraca) | sem base de tendência |
+| Confiança | 48 | 0,26 (fraca) | sem base de tendência |
 | Aprendizagem | 45,3 | 0,53 (utilizável) | 0 em 10 anos, sobre 2 indicadores |
 | Experimentação | 32,7 | 0,39 (fraca) | +1,8 em 10 anos, sobre 2 indicadores |
-| Adaptação | 58,8 | 0,48 (utilizável) | +9,2 em 10 anos, sobre 4 indicadores |
-| Construção | 37,7 | 0,54 (utilizável) | +0,1 em 10 anos, sobre 4 indicadores |
-| Propósito compartilhado | 47,1 | 0,27 (fraca) | +10,7 em 10 anos, sobre 2 indicadores |
+| Adaptação | 58,7 | 0,48 (utilizável) | +9,2 em 10 anos, sobre 4 indicadores |
+| Construção | 37,7 | 0,62 (utilizável) | +0,1 em 10 anos, sobre 4 indicadores |
+| Propósito compartilhado | 47,1 | 0,32 (fraca) | +10,7 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para elevar
 
@@ -47,15 +47,15 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,6.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França).
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal).
 - Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
-### Agência: 49, confiança utilizável
+### Agência: 48,7, confiança utilizável
 
 Quão capazes são pessoas e organizações de transformar uma intenção em ação?
 
 - Baseada em 6 indicadores observados.
-- Maiores notas utilizáveis: Estados Unidos 92,6, Austrália 89,8, Reino Unido 87,5.
+- Maiores notas utilizáveis: Estados Unidos 92,5, Austrália 89,1, Reino Unido 86,7.
 - Entregas documentadas em outros países: SIBRATEC, the documented innovation-centre network (Brasil); Singapore's national ICT-skills measurement and baseline (Singapura).
 - Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
 
@@ -63,7 +63,7 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Confiança: confiança 0,16, muito fraca
+### Confiança: confiança 0,26, fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
 
@@ -71,21 +71,21 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 - Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
-### Coordenação: confiança 0,23, muito fraca
-
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
-
-### Propósito compartilhado: confiança 0,27, fraca
+### Propósito compartilhado: confiança 0,32, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
 - Bases rejeitadas: Voz e responsabilização.
+
+### Coordenação: confiança 0,37, fraca
+
+Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
+- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
 ### Experimentação: confiança 0,39, fraca
 
@@ -98,7 +98,7 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 
 Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência utilizável. Ainda precisam ser acompanhadas.
 
-- Adaptação: 58,8, confiança utilizável
+- Adaptação: 58,7, confiança utilizável
 
 ## Agenda de medição
 

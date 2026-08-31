@@ -4428,3 +4428,264 @@ from a country page, or that the homepage hover card becomes too tall to read,
 would justify revisiting the placement. A second surface needing the same shape
 should extend `FlagFieldPoint` or a shared profile component, not recreate the
 radar or add another menu-specific data path.
+
+## D96 — Native tooltips are for exceptions, not metrics
+
+*Recorded 2026-08-31. Extends D18, D53 and D67.*
+
+**Choice.** The viewer does not attach native browser tooltips to every score,
+confidence meter, trend mark, table cell or chart point. Score bands are
+explained in the visible score legend; confidence bands are explained in the
+visible confidence legend; trend context is printed beside the change; and
+compact states such as clamping, missing coverage and rejected inputs are
+named in the row or a screen-reader-only description. SVG charts use their
+chart-level accessible names and visible event lists rather than `<title>`
+elements that appear on pointer hover.
+
+The deliberate `FlagField` country card remains the one richer hover reading.
+It is part of the field's interaction contract, is pointer-transparent, and
+does not add a second link or a tooltip to each metric inside the card. See
+D67 and D95.
+
+**Why.** Native `title` hovers are browser-controlled, inconsistent across
+devices, unavailable on touch, and easy to trigger accidentally when a table is
+dense. The same explanations were already present in page copy, legends,
+dialog content or linked detail pages, so repeating them on every number made
+the interface feel noisy without adding a reliable reading path. Moving the
+important meanings into the page also preserves them for keyboard and touch
+readers.
+
+**Cost.** A reader no longer gets an extra sentence by pausing over an
+individual score or chart point. The replacement is intentionally less
+per-cell: legends and row labels explain the shared rule, while the field card
+is reserved for the chart that needs point-of-attention context. A future
+detail interaction should be an explicit, keyboard-reachable disclosure rather
+than another native `title` attribute.
+
+**Overturned by.** Evidence that a specific dense view loses an important
+meaning after the change would justify adding a visible or keyboard-reachable
+detail control for that view. It would not justify restoring a repeated native
+tooltip to a shared metric component.
+
+## D97 — Challenge entry is centralized in the header
+
+*Recorded 2026-08-31. Supersedes the score-side trigger in D62 and the
+score-side wording in D78.*
+
+**Choice.** The score-side Challenge control is removed from radar readouts and
+score tables. One `Challenge` action lives in the global header on desktop and
+mobile. It opens the public dispute form with country and capability selectors;
+the submission endpoint still validates the target and captures the current
+score and confidence from the country file. Contested badges remain beside
+affected scores because they report state rather than offer an action.
+
+`/objections` remains the public ledger and explanation of how to object. The
+header action is the single entry point for a new score dispute, so a reader
+does not have to find a particular table cell before deciding to argue with the
+benchmark.
+
+**Why.** A challenge button in every score cell repeated the same action across
+the radar, country profile, capability table and all-country table. That made
+the benchmark's invitation to argue compete with the scores themselves and
+made the most useful action depend on which surface happened to be open. A
+single header action is discoverable everywhere while the selectors preserve
+the target snapshot that D62 requires.
+
+**Cost.** The form no longer inherits a target automatically from the number
+beside it. The reader must choose the country and capability, and the form
+does not show the selected score until the server records the submission. The
+public ledger and the contested state remain separate from the entry action so
+that removing a button does not remove the review trail.
+
+**Overturned by.** Evidence that readers cannot identify the target from the
+selectors, or that objections fall because the score is no longer visible at
+the moment the form opens, would justify adding a target-aware preview to the
+central form. It would not justify restoring a button to every score cell.
+
+## D98 — Confidence values use one compact display
+
+*Recorded 2026-08-31. Supersedes the confidence-meter presentation in D17 and
+the `ConfidenceBar` presentation described in D18.*
+
+**Choice.** Every viewer surface renders a confidence value as one
+band-colored chip containing its exact two-decimal number. The separate track
+and number are removed. Confidence remains a separate claim from the score;
+the visible confidence legend names the bands, and radar edges and flag rings
+continue to provide the chart-specific evidence encoding.
+
+**Why.** A track followed by a number made one confidence value read as two
+controls and consumed more space than the score it qualified. One compact
+display keeps the exact value legible, preserves the band distinction, and
+lets tables, cards and prose use the same treatment.
+
+**Cost.** The chip no longer uses bar length to show the magnitude within a
+band. The number is the precise magnitude and the legend explains the shared
+band colors; charts retain their own dashed-edge and ring treatments.
+
+**Overturned by.** Evidence that readers mistake the chip's band color or lose
+the exact value would justify a more explicit single-element treatment, such as
+a chip that includes the band label, but not a return to a repeated track and
+number pair.
+
+## D99 — Portugal joins the benchmark frame as a source-backed country
+
+*Recorded 2026-08-31. Extends D47, D52, D64 and D83.*
+
+**Choice.** Portugal (`PRT`, flag code `PT`) joins the single country registry.
+No indicator, weight or transform changes. The 53-country set therefore builds
+the normalization frame, and the published dataset moves from 5.1.0 to 6.0.0.
+The existing World Bank ingest, Joint EVS/WVS trust adapter and V-Dem adapter
+are rerun against the expanded set; no manual or synthetic Portugal values are
+added.
+
+The source-backed release emits 841 World Bank observations for Portugal, one
+2022 Joint EVS/WVS A165 trust observation and one 2024 V-Dem civil-society
+observation. Portugal publishes all nine dimension scores in the rebased output,
+with the lowest current scores in Experimentation (30.3) and Building (33.9).
+Trust is readable but remains very thin at 36.8 with confidence 0.159, so the
+profile is a measured research case rather than a claim of a complete national
+capability picture.
+
+Portugal has no documented delivery records yet. The refreshed research
+inventory keeps it in the queue with 25 uncovered country-gap slots; those
+slots are leads for source and case research, not evidence and not scores.
+
+**Why.** Portugal adds a useful Southern European comparison to Spain and the
+other European cases while preserving the benchmark's one shared frame. The
+country is added as a data-set expansion because it is an explicit research
+case, not as a side effect of closing an indicator gap.
+
+**Cost.** Every score and historical normalized series is restated under 6.0.0;
+5.1.0 values are not comparable to the new frame. The country addition also
+increases the current evidence matrix from 468 to 477 country-dimension cells.
+Portugal remains absent from the Brazil-specific country layer under D69, and
+its research queue remains empty of documented deliveries until a source-backed
+or evidence-track contribution passes the existing gates.
+
+**Overturned by.** Evidence that Portugal is outside the benchmark's declared
+comparison purpose, that its source mappings are not reproducible, or that the
+expanded frame distorts well-evidenced countries enough to invalidate the
+relative scale would justify removing or revising this case in a subsequent
+versioned rebase.
+
+---
+## D100 — A retired row no longer lowers coverage
+
+*Recorded 2026-08-31. Amends D23 and D45; the confidence definition comes from D37's contract.*
+
+**Choice.** `confidence = coverage x recency x source_quality` keeps its shape,
+and `coverage` changes its denominator. It was observed indicators over every
+row the dimension declares. It is now observed indicators over the rows that
+could carry a number: the observed rows plus the declared gaps. Rows marked
+`ingest: 'retired'` leave the denominator.
+
+Retired rows do not leave anything else. They stay in the registry, they stay
+published on each country's indicator list with `status: 'retired'`, they stay
+counted in `measurability` in the diagnostics, and the evidence for rejecting
+each one stays in its registry note and its decision. A reader can still see
+that Trust declares eight constructs and measures two.
+
+**Why.** A gap and a retirement are different facts about the world and the
+denominator was reading them as one. A gap says nobody publishes a comparable
+series, so the dimension cannot be measured here yet. A retirement says a series
+exists, this project inspected it, and it measures the wrong thing: the four WGI
+series correlating with each other between 0.93 and 0.98 and with log GDP per
+capita at 0.91 (D23, A4), the LPI recording how a country looks to freight
+forwarders (A9). Charging a dimension for refusing those was charging it for the
+discipline that makes the rest of the number worth reading.
+
+It also put a ceiling nothing could lift. Coordination and Trust each declare
+eight rows and retire three. Under the old denominator their coverage could not
+exceed 0.625 however much data landed, which capped their confidence near 0.53
+and made the `good` band unreachable by construction rather than by evidence.
+A confidence scale that a dimension cannot climb is not measuring how much is
+known about it.
+
+**Cost.** Every published confidence value for Coordination, Trust, Building and
+Shared Purpose restates upward, and two dimensions cross a band boundary:
+Coordination from very thin to thin, Shared Purpose from very thin to thin. No
+score moves, the normalization frame is untouched, and no country is added or
+removed. The change makes four dimensions look better evidenced without a single
+new observation, which is real: the reader must still read `observedIndicators`
+beside the confidence, and A12 remains the entry that says what Trust and
+Coordination actually rest on.
+
+The bump is minor. The frame holds and no published field is added or removed,
+so D37's major test is not met, but a consumer pinned to a confidence band will
+see cells move. D37's three cases do not describe a change to how a published
+number is computed, and this entry records that the bump was chosen rather than
+derived.
+
+The change is not sufficient for its own motivation. Measured against the
+current output it moves the site mean confidence from 0.386 to 0.422, and Trust
+stays very thin at 0.209 because Trust's problem is two observed rows, not three
+retired ones. Coverage still has to be earned.
+
+**Overturned by.** Evidence that readers take the higher confidence as a claim
+about evidence rather than about declared measurability, or a decision to retire
+rows for reasons other than rejecting an inspected dataset, which would make the
+denominator selective in a way this entry does not defend.
+
+---
+## D101 — Portugal's first evidence batch stays outside the score
+
+*Recorded 2026-08-31. Amends the research-state statements in D99 and extends
+D20 and D33.*
+
+**Choice.** Five source-backed records for Portugal enter
+`data/evidence/records.json`: national digital identity, the CoLAB
+applied-research network, the Qualifica adult-learning programme, Portugal
+Ventures, and the dismantled Novas Oportunidades programme. They document
+delivered institutional cases against four gap indicators, include one reversal,
+and remain evidence rather than observations: they do not enter a score,
+confidence value, normalization frame or dimension coverage count.
+
+The refreshed research inventory therefore reports 204 deliveries across all 53
+countries and 21 gap indicators, including five Portugal records. Portugal still
+has 21 uncovered country-gap slots, which remain the queue for comparable source
+work. The records' claims, dates, publishers and limits stay in the evidence
+ledger; no research lead is treated as a scored series.
+
+**Why.** Portugal's source-backed country profile benefits from documented cases
+that show how institutions deliver, rebuild or scale capability, especially where
+the benchmark's comparable indicators remain gaps. Keeping the cases in the
+evidence layer preserves the distinction between a sourced national example and
+a country-comparable measurement.
+
+**Cost.** D99's statements that Portugal had no documented delivery records and
+25 uncovered country-gap slots are superseded by this batch. The dataset remains
+6.0.0, all nine Portugal scores and the 53-country frame are unchanged, and the
+four gap indicators remain gaps until a comparable series covers at least two
+countries. If a gap is later promoted, these records may be stranded under D20;
+the decision and git history keep that research trail auditable.
+
+**Overturned by.** A source correction, failure of the evidence inclusion tests,
+or proof that a record is an announcement rather than a delivered institutional
+case would justify removing or rewriting that record in a later evidence change.
+
+---
+## D102 — The confidence-method update keeps Portugal on the same frame
+
+*Recorded 2026-08-31. Extends D37, D99, D100 and D101.*
+
+**Choice.** The Portugal country addition remains the Dataset 6.0.0 frame rebase.
+The later retired-row denominator change in D100 is published as Dataset 6.1.0:
+it restates confidence values, but does not add or remove a country, alter the
+normalization frame or change any dimension score. Portugal remains one of 53
+countries with nine published scores, five non-scored evidence records and 21
+uncovered research slots.
+
+**Why.** The semantic version separates the material country-set rebase from a
+method change that affects confidence but leaves scores and the frame intact.
+Naming both releases lets a reader distinguish Portugal's admission from the
+later confidence restatement while keeping the evidence and research trail
+continuous.
+
+**Cost.** A consumer pinned to Dataset 6.0.0 will see different confidence values
+than one reading 6.1.0, even though the Portugal scores and frame are identical.
+The current Portugal Trust confidence is 0.255 under the 6.1.0 denominator, and
+its low confidence still limits how strongly that score should be read.
+
+**Overturned by.** Evidence that the denominator change altered a score or the
+normalization frame, or that the version boundary hides a published-shape change,
+would justify revising the release classification in a later decision.

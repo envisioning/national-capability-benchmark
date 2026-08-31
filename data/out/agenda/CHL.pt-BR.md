@@ -2,21 +2,21 @@
 
 *Gerado em 2026-08-31*
 
-Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
+Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
 ## Onde o Chile está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 39,3 | 0,62 (utilizável) | +9,2 em 10 anos, sobre 5 indicadores |
-| Agência | 73,7 | 0,6 (utilizável) | +13,7 em 10 anos, sobre 4 indicadores |
-| Coordenação | 82,5 | 0,24 (muito fraca) | sem base de tendência |
-| Confiança | 42,9 | 0,16 (muito fraca) | sem base de tendência |
+| Agência | 73,3 | 0,6 (utilizável) | +13,5 em 10 anos, sobre 4 indicadores |
+| Coordenação | 82,4 | 0,39 (fraca) | sem base de tendência |
+| Confiança | 42,9 | 0,26 (fraca) | sem base de tendência |
 | Aprendizagem | 53,5 | 0,54 (utilizável) | +6,8 em 10 anos, sobre 2 indicadores |
 | Experimentação | 46,7 | 0,39 (fraca) | +7,2 em 10 anos, sobre 2 indicadores |
-| Adaptação | 59,2 | 0,48 (utilizável) | +1,6 em 10 anos, sobre 4 indicadores |
-| Construção | 30,5 | 0,54 (utilizável) | -0,2 em 10 anos, sobre 4 indicadores |
-| Propósito compartilhado | 52,9 | 0,27 (fraca) | +5,5 em 10 anos, sobre 2 indicadores |
+| Adaptação | 58,9 | 0,48 (utilizável) | +1,5 em 10 anos, sobre 4 indicadores |
+| Construção | 30,5 | 0,62 (utilizável) | -0,2 em 10 anos, sobre 4 indicadores |
+| Propósito compartilhado | 52,9 | 0,32 (fraca) | +5,5 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para elevar
 
@@ -45,7 +45,7 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Confiança: confiança 0,16, muito fraca
+### Confiança: confiança 0,26, fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
 
@@ -53,21 +53,21 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 - Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
-### Coordenação: confiança 0,24, muito fraca
-
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
-
-### Propósito compartilhado: confiança 0,27, fraca
+### Propósito compartilhado: confiança 0,32, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
 - Bases rejeitadas: Voz e responsabilização.
+
+### Coordenação: confiança 0,39, fraca
+
+Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
+- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
 ### Experimentação: confiança 0,39, fraca
 
@@ -80,8 +80,8 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 
 Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência utilizável. Ainda precisam ser acompanhadas.
 
-- Agência: 73,7, confiança utilizável
-- Adaptação: 59,2, confiança utilizável
+- Agência: 73,3, confiança utilizável
+- Adaptação: 58,9, confiança utilizável
 - Aprendizagem: 53,5, confiança utilizável
 
 ## Agenda de medição

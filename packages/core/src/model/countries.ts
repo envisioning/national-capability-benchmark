@@ -33,6 +33,7 @@ export const COUNTRIES = [
   { iso3: 'FRA', iso2: 'FR', name: 'France', reason: 'Centralized state with a long tradition of directing industrial policy' },
   { iso3: 'GBR', iso2: 'GB', name: 'United Kingdom', reason: 'Services and finance concentration with weak recent productivity growth' },
   { iso3: 'ESP', iso2: 'ES', name: 'Spain', reason: 'Southern European comparison with strong infrastructure delivery and high unemployment' },
+  { iso3: 'PRT', iso2: 'PT', name: 'Portugal', reason: 'Southern European comparison with strong social trust and a long convergence path' },
   { iso3: 'POL', iso2: 'PL', name: 'Poland', reason: 'Post-socialist convergence case that rebuilt institutions and industry together' },
   { iso3: 'SWE', iso2: 'SE', name: 'Sweden', reason: 'High-trust Nordic state with an unusual mix of large firms and startups' },
   { iso3: 'FIN', iso2: 'FI', name: 'Finland', reason: 'Small state with an institutionalized foresight function and strong measured learning' },

@@ -2,21 +2,21 @@
 
 *Gerado em 2026-08-31*
 
-Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
+Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
 ## Onde o Paraguai está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 23,2 | 0,64 (utilizável) | +12,9 em 10 anos, sobre 5 indicadores |
-| Agência | 46,2 | 0,61 (utilizável) | +25,1 em 10 anos, sobre 4 indicadores, 2 truncados na borda da régua |
-| Coordenação | 49 | 0,23 (muito fraca) | sem base de tendência |
-| Confiança | sem nota | 0,07 (muito fraca) | sem base de tendência |
+| Agência | 45,1 | 0,61 (utilizável) | +25 em 10 anos, sobre 4 indicadores, 2 truncados na borda da régua |
+| Coordenação | 48,7 | 0,37 (fraca) | sem base de tendência |
+| Confiança | sem nota | 0,11 (muito fraca) | sem base de tendência |
 | Aprendizagem | 34,8 | 0,41 (fraca) | -2,6 em 20 anos, sobre 2 indicadores |
 | Experimentação | 18,3 | 0,18 (muito fraca) | +6,2 em 20 anos, sobre 2 indicadores |
-| Adaptação | 57,4 | 0,46 (utilizável) | +1,4 em 10 anos, sobre 4 indicadores |
-| Construção | 32 | 0,54 (utilizável) | +1,8 em 10 anos, sobre 4 indicadores |
-| Propósito compartilhado | 37,7 | 0,27 (fraca) | +9,7 em 10 anos, sobre 2 indicadores |
+| Adaptação | 57,3 | 0,46 (utilizável) | +1,5 em 10 anos, sobre 4 indicadores |
+| Construção | 32 | 0,62 (utilizável) | +1,8 em 10 anos, sobre 4 indicadores |
+| Propósito compartilhado | 37,7 | 0,32 (fraca) | +9,7 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para elevar
 
@@ -41,12 +41,12 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística.
 
-### Agência: 46,2, confiança utilizável
+### Agência: 45,1, confiança utilizável
 
 Quão capazes são pessoas e organizações de transformar uma intenção em ação?
 
 - Baseada em 6 indicadores observados.
-- Maiores notas utilizáveis: Estados Unidos 92,6, Austrália 89,8, Reino Unido 87,5.
+- Maiores notas utilizáveis: Estados Unidos 92,5, Austrália 89,1, Reino Unido 86,7.
 - Entregas documentadas em outros países: SIBRATEC, the documented innovation-centre network (Brasil); Singapore's national ICT-skills measurement and baseline (Singapura).
 - Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
 
@@ -54,7 +54,7 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Confiança: confiança 0,07, muito fraca
+### Confiança: confiança 0,11, muito fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
 
@@ -69,21 +69,21 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
-### Coordenação: confiança 0,23, muito fraca
-
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
-
-### Propósito compartilhado: confiança 0,27, fraca
+### Propósito compartilhado: confiança 0,32, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
 - Bases rejeitadas: Voz e responsabilização.
+
+### Coordenação: confiança 0,37, fraca
+
+Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
+- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
 ### Aprendizagem: confiança 0,41, fraca
 
@@ -96,7 +96,7 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência utilizável. Ainda precisam ser acompanhadas.
 
-- Adaptação: 57,4, confiança utilizável
+- Adaptação: 57,3, confiança utilizável
 
 ## Agenda de medição
 

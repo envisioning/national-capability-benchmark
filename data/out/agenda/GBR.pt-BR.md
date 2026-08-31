@@ -2,27 +2,27 @@
 
 *Gerado em 2026-08-31*
 
-Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
+Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
 ## Onde o Reino Unido está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 65,3 | 0,58 (utilizável) | +8,2 em 10 anos, sobre 4 indicadores |
-| Agência | 87,5 | 0,61 (utilizável) | +2,1 em 10 anos, sobre 4 indicadores |
-| Coordenação | 88,2 | 0,14 (muito fraca) | sem base de tendência |
-| Confiança | sem nota | 0,07 (muito fraca) | sem base de tendência |
+| Agência | 86,7 | 0,61 (utilizável) | +1,8 em 10 anos, sobre 4 indicadores |
+| Coordenação | 88,2 | 0,23 (muito fraca) | sem base de tendência |
+| Confiança | sem nota | 0,11 (muito fraca) | sem base de tendência |
 | Aprendizagem | 68,6 | 0,52 (utilizável) | +13 em 10 anos, sobre 2 indicadores |
-| Experimentação | 43,2 | 0,18 (muito fraca) | +6,2 em 10 anos, sobre 2 indicadores |
-| Adaptação | 76,3 | 0,48 (utilizável) | +0,3 em 10 anos, sobre 4 indicadores |
-| Construção | 46,7 | 0,54 (utilizável) | +0,7 em 10 anos, sobre 4 indicadores |
-| Propósito compartilhado | 87,4 | 0,24 (muito fraca) | +4,2 em 10 anos, sobre 2 indicadores |
+| Experimentação | 43,3 | 0,18 (muito fraca) | +6,2 em 10 anos, sobre 2 indicadores |
+| Adaptação | 76,2 | 0,48 (utilizável) | +0,4 em 10 anos, sobre 4 indicadores |
+| Construção | 46,8 | 0,62 (utilizável) | +0,6 em 10 anos, sobre 4 indicadores |
+| Propósito compartilhado | 87,4 | 0,28 (fraca) | +4,2 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para elevar
 
 Da nota mais baixa para a mais alta. Só entram dimensões com evidência utilizável. Evidência fraca vai para a próxima seção.
 
-### Construção: 46,7, confiança utilizável
+### Construção: 46,8, confiança utilizável
 
 Quão capaz é o país de transformar planos e conhecimento em sistemas que funcionam?
 
@@ -36,21 +36,13 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Confiança: confiança 0,07, muito fraca
+### Confiança: confiança 0,11, muito fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
 
 - Baseada em um indicador observado.
 - Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
-
-### Coordenação: confiança 0,14, muito fraca
-
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
 ### Experimentação: confiança 0,18, muito fraca
 
@@ -59,7 +51,15 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
-### Propósito compartilhado: confiança 0,24, muito fraca
+### Coordenação: confiança 0,23, muito fraca
+
+Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+
+- Baseada em 2 indicadores observados.
+- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
+- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
+
+### Propósito compartilhado: confiança 0,28, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
@@ -71,8 +71,8 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 
 Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência utilizável. Ainda precisam ser acompanhadas.
 
-- Agência: 87,5, confiança utilizável
-- Adaptação: 76,3, confiança utilizável
+- Agência: 86,7, confiança utilizável
+- Adaptação: 76,2, confiança utilizável
 - Aprendizagem: 68,6, confiança utilizável
 - Antecipação: 65,3, confiança utilizável
 

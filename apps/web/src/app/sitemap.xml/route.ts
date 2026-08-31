@@ -43,7 +43,7 @@ export async function GET(): Promise<Response> {
   add('/')
   add(countriesHref)
   /* The bare comparison page only. A combination is a reader's selection, not
-     a published page, and 52 countries make more pairs than a crawl map should
+     a published page, and 53 countries make more pairs than a crawl map should
      carry. See D70. */
   add(compareBaseHref)
   add(capabilitiesHref)

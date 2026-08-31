@@ -3,6 +3,7 @@ import { COUNTRY_NAMES, EVIDENCE_STATUS_LABELS, INDICATORS_BY_ID } from '@ncb/co
 import type { EvidenceRecord } from '@ncb/core'
 import { Icon } from '@/components/Icon'
 import { Card, CountryLabel, Meta } from '@/components/ui'
+import { formatEvidenceMetricValue } from '@/lib/evidence'
 import { countryProfileHref, evidenceHref } from '@/lib/links'
 
 /**
@@ -38,13 +39,13 @@ export function PatternMetrics({ record }: { record: EvidenceRecord }) {
   return (
     <p className="mt-2 text-xs text-[var(--muted)]">
       <span className="tabular-nums text-[var(--foreground)]">
-        {record.metric.value.toLocaleString('en-US')}
+        {formatEvidenceMetricValue(record.metric.value, record.metric.unit)}
       </span>{' '}
       {record.metric.unit}, {record.metric.name.toLowerCase()}, {record.metric.asOf}.{' '}
       {record.secondMetric ? (
         <>
           <span className="tabular-nums text-[var(--foreground)]">
-            {record.secondMetric.value.toLocaleString('en-US')}
+            {formatEvidenceMetricValue(record.secondMetric.value, record.secondMetric.unit)}
           </span>{' '}
           {record.secondMetric.unit}, {record.secondMetric.name.toLowerCase()},{' '}
           {record.secondMetric.asOf}.{' '}

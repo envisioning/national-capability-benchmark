@@ -2,7 +2,7 @@
 
 *Generated 2026-08-31*
 
-The frame includes 52 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
+The frame includes 53 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
 ## Where Venezuela stands
 
@@ -10,13 +10,13 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 | --- | --- | --- | --- |
 | Anticipation | 8.6 | 0.54 (usable) | -1.7 over 10 years using 4 indicators |
 | Agency | 33.2 | 0.39 (thin) | +30.6 over 10 years using 2 indicators |
-| Coordination | 16.5 | 0.14 (very thin) | no trend |
-| Trust | 36.1 | 0.16 (very thin) | no trend |
+| Coordination | 16.5 | 0.22 (very thin) | no trend |
+| Trust | 36.1 | 0.26 (thin) | no trend |
 | Learning | 57.1 | 0.1 (very thin) | no trend |
 | Experimentation | 5.2 | 0.1 (very thin) | no trend |
-| Adaptability | 34.7 | 0.47 (usable) | +4.2 over 10 years using 4 indicators, with 1 at the frame edge |
-| Building | 0 | 0.2 (very thin) | no trend |
-| Shared Purpose | not scored | 0.01 (very thin) | no trend |
+| Adaptability | 34.6 | 0.47 (usable) | +4.3 over 10 years using 4 indicators, with 1 at the frame edge |
+| Building | 0 | 0.23 (very thin) | no trend |
+| Shared Purpose | not scored | 0.02 (very thin) | no trend |
 
 ## What to raise
 
@@ -31,20 +31,20 @@ How capable is the country of identifying and preparing for emerging change?
 - Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan); National basic-research funding allocation (China).
 - Missing indicators: Government foresight capacity, Long-horizon research share.
 
-### Adaptability: 34.7, confidence usable
+### Adaptability: 34.6, confidence usable
 
 How effectively can the system respond when circumstances change?
 
 - Uses 4 observed indicators.
-- Highest usable scores: Netherlands 90.1, Switzerland 88.6, Japan 86.1.
-- Related deliveries in other countries: Plano Real, the 1994 currency stabilisation (Brazil); Proalcool, the fuel substitution after the oil shock (Brazil); The Convertibility Plan, and its collapse (Argentina); Kurzarbeit in the 2008-2009 crisis (Germany); The 2001 stabilisation, and its unwinding (Turkey); Telebras, the telecom system that was dismantled (Brazil); Estonian Defence League, national defence rebuilt after independence (Estonia); Korea Internet and Security Agency, a consolidated digital authority (South Korea); Federal siren warning network, and its dismantling (Germany); Room for the River, flood safety delivered across the Rhine branches (Netherlands); Childcare benefits administration, and the recovery after institutional failure (Netherlands); National Police, one corps from twenty-five regional forces (Netherlands); NL-Alert, a tested multi-channel emergency warning system (Netherlands); DigiD Machtigen, delegated access to public services (Netherlands); DigiNotar, a certificate breach that forced a trust-chain reset (Netherlands); Programmatic Approach to Nitrogen, and the permitting reversal (Netherlands); 27F reconstruction, a nationwide recovery programme after the 2010 earthquake (Chile); Cédula digital, an identity service upgraded for mobile use (Colombia); Victims' reparations, a long-running administrative response to conflict (Colombia); Fondo Adaptación, recovery and safer resettlement after La Niña (Colombia); My Number Card, a national identity rail extended into services (Japan); Tōhoku reconstruction, a decade-long recovery programme (Japan); Juntos, a conditional-transfer system at national scale (Peru); Certified digital signature across public services (Costa Rica); REDCUDI childcare network and SINIRUBE referrals (Costa Rica); Dollarization as an emergency monetary redesign (Ecuador); 2016 earthquake national emergency coordination (Ecuador); 120 a los 65 social pension (Panama); Canal water-and-transit response to the 2023–24 drought (Panama); Bono Juana Azurduy maternal and child health transfer (Bolivia); Renta Dignidad non-contributory old-age pension (Bolivia); Tekoporã Mbarete family-support programme (Paraguay); SIFEN national electronic invoicing rollout (Paraguay); Asignación Universal por Hijo child benefit (Argentina); SUBE national electronic fare and subsidy rail (Argentina); PhilSys foundational national ID rollout (Philippines); Pantawid Pamilyang Pilipino Program (4Ps) (Philippines); Typhoon Yolanda shelter and recovery programme (Philippines); Jaminan Kesehatan Nasional, a near-universal health-insurance pool (Indonesia); InaRISK national disaster-risk information platform (Indonesia); VNeID national electronic identity (Vietnam); Vietnam Social Security health-insurance expansion (Vietnam); Typhoon Yagi emergency restoration (Vietnam); MySejahtera and the national COVID-19 immunisation programme (Malaysia); National flood-warning SMS system (Malaysia); Universal Coverage Scheme and the 30-baht health system (Thailand); National Digital ID framework (Thailand); T-Alert national cell-broadcast warning system (Thailand); Cl@ve shared digital identity (Spain); La Palma volcanic-eruption recovery and monitoring (Spain); mObywatel digital ID wallet (Poland); Rodzina 500+ and 800+ child-benefit delivery (Poland); Alert RCB national emergency SMS channel (Poland); BankID federated electronic identity (Sweden); 1177 national health portal and helpline (Sweden); VMA multi-channel public warning system (Sweden); MyGovID single sign-on for public services (Ireland); National COVID-19 vaccination delivery (Ireland); National Asset Management Agency crisis workout (Ireland); Met Éireann national weather-warning service (Ireland); Salário mínimo and its permanent revaluation rule (Brazil); eNaira, a national rollout with an adoption gap (Nigeria); Productive Safety Net Programme for drought resilience (Ethiopia); National 9-1-1 emergency-response system (Dominican Republic); Sistema Nacional de Emergencias 911 (Honduras); National COVID-19 vaccination campaign (Cuba); Bitcoin Law, and its 2025 rollback (El Salvador); Routine immunization coverage, and its erosion (Haiti); Ramp Up, PROCOMER's export-readiness programme (Costa Rica); France's long-term unemployment decline (France).
+- Highest usable scores: Netherlands 90, Switzerland 88.5, Japan 86.1.
+- Related deliveries in other countries: Plano Real, the 1994 currency stabilisation (Brazil); Proalcool, the fuel substitution after the oil shock (Brazil); The Convertibility Plan, and its collapse (Argentina); Kurzarbeit in the 2008-2009 crisis (Germany); The 2001 stabilisation, and its unwinding (Turkey); Telebras, the telecom system that was dismantled (Brazil); Estonian Defence League, national defence rebuilt after independence (Estonia); Korea Internet and Security Agency, a consolidated digital authority (South Korea); Federal siren warning network, and its dismantling (Germany); Room for the River, flood safety delivered across the Rhine branches (Netherlands); Childcare benefits administration, and the recovery after institutional failure (Netherlands); National Police, one corps from twenty-five regional forces (Netherlands); NL-Alert, a tested multi-channel emergency warning system (Netherlands); DigiD Machtigen, delegated access to public services (Netherlands); DigiNotar, a certificate breach that forced a trust-chain reset (Netherlands); Programmatic Approach to Nitrogen, and the permitting reversal (Netherlands); 27F reconstruction, a nationwide recovery programme after the 2010 earthquake (Chile); Cédula digital, an identity service upgraded for mobile use (Colombia); Victims' reparations, a long-running administrative response to conflict (Colombia); Fondo Adaptación, recovery and safer resettlement after La Niña (Colombia); My Number Card, a national identity rail extended into services (Japan); Tōhoku reconstruction, a decade-long recovery programme (Japan); Juntos, a conditional-transfer system at national scale (Peru); Certified digital signature across public services (Costa Rica); REDCUDI childcare network and SINIRUBE referrals (Costa Rica); Dollarization as an emergency monetary redesign (Ecuador); 2016 earthquake national emergency coordination (Ecuador); 120 a los 65 social pension (Panama); Canal water-and-transit response to the 2023–24 drought (Panama); Bono Juana Azurduy maternal and child health transfer (Bolivia); Renta Dignidad non-contributory old-age pension (Bolivia); Tekoporã Mbarete family-support programme (Paraguay); SIFEN national electronic invoicing rollout (Paraguay); Asignación Universal por Hijo child benefit (Argentina); SUBE national electronic fare and subsidy rail (Argentina); PhilSys foundational national ID rollout (Philippines); Pantawid Pamilyang Pilipino Program (4Ps) (Philippines); Typhoon Yolanda shelter and recovery programme (Philippines); Jaminan Kesehatan Nasional, a near-universal health-insurance pool (Indonesia); InaRISK national disaster-risk information platform (Indonesia); VNeID national electronic identity (Vietnam); Vietnam Social Security health-insurance expansion (Vietnam); Typhoon Yagi emergency restoration (Vietnam); MySejahtera and the national COVID-19 immunisation programme (Malaysia); National flood-warning SMS system (Malaysia); Universal Coverage Scheme and the 30-baht health system (Thailand); National Digital ID framework (Thailand); T-Alert national cell-broadcast warning system (Thailand); Cl@ve shared digital identity (Spain); La Palma volcanic-eruption recovery and monitoring (Spain); mObywatel digital ID wallet (Poland); Rodzina 500+ and 800+ child-benefit delivery (Poland); Alert RCB national emergency SMS channel (Poland); BankID federated electronic identity (Sweden); 1177 national health portal and helpline (Sweden); VMA multi-channel public warning system (Sweden); MyGovID single sign-on for public services (Ireland); National COVID-19 vaccination delivery (Ireland); National Asset Management Agency crisis workout (Ireland); Met Éireann national weather-warning service (Ireland); Salário mínimo and its permanent revaluation rule (Brazil); eNaira, a national rollout with an adoption gap (Nigeria); Productive Safety Net Programme for drought resilience (Ethiopia); National 9-1-1 emergency-response system (Dominican Republic); Sistema Nacional de Emergencias 911 (Honduras); National COVID-19 vaccination campaign (Cuba); Bitcoin Law, and its 2025 rollback (El Salvador); Routine immunization coverage, and its erosion (Haiti); Ramp Up, PROCOMER's export-readiness programme (Costa Rica); France's long-term unemployment decline (France); Chave Móvel Digital and Portugal's digital identity layer (Portugal).
 - Missing indicators: Long-term unemployment share, Export diversification, Disaster preparedness and recovery, Institutional responsiveness.
 
 ## What to measure first
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Shared Purpose: confidence 0.01, very thin
+### Shared Purpose: confidence 0.02, very thin
 
 To what extent can people imagine themselves as participants in a common project?
 
@@ -66,7 +66,7 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Uses 2 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
-### Coordination: confidence 0.14, very thin
+### Coordination: confidence 0.22, very thin
 
 How effectively can independent actors organize around shared objectives?
 
@@ -74,21 +74,21 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
-### Trust: confidence 0.16, very thin
-
-How much cooperation is possible beyond immediate personal networks?
-
-- Uses 2 observed indicators.
-- Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
-
-### Building: confidence 0.2, very thin
+### Building: confidence 0.23, very thin
 
 How capable is the country of turning plans and knowledge into functioning systems?
 
 - Uses 3 observed indicators.
 - Missing indicators: Large project delivery, Firm scale-up rate.
 - Rejected datasets: Logistics infrastructure quality.
+
+### Trust: confidence 0.26, thin
+
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 2 observed indicators.
+- Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
 ### Agency: confidence 0.39, thin
 

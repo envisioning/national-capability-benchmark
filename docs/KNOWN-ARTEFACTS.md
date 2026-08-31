@@ -7,7 +7,7 @@ needs to know them before quoting a score.
 
 Evidence for each is either a diagnostic in `data/out/diagnostics.json` or the
 in-session panel run in `data/delphi/in-session-round1.json`, which scored 144
-of the 468 country-dimension cells against the same evidence briefs.
+of the 477 country-dimension cells against the same evidence briefs.
 
 Numbers here are from dataset 4.0.0 unless a figure names the run it comes from.
 Where a figure predates the current frame it says so, because the scale it was
@@ -21,9 +21,9 @@ measured on is not the scale in use.
 Four of eight indicators are observed. GEM early-stage entrepreneurial activity
 and fear of failure carry half the dimension, so it no longer rests on patents
 alone. Venture capital, regulatory sandboxes, university spinouts and business
-R&D share are still gaps. Mean confidence is 0.226, above only Coordination,
-Trust and Shared Purpose, and the GEM series covers 16 of the 52 countries, so
-36 are scored on patents and trademarks alone. See D21.
+R&D share are still gaps. Mean confidence is 0.225, above only Coordination,
+Trust and Shared Purpose, and the GEM series covers 16 of the 53 countries, so
+37 are scored on patents and trademarks alone. See D21.
 
 Resident patents and resident trademarks per head measure formalised, completed,
 defensible invention, which is close to the opposite of the many-cheap-
@@ -76,12 +76,12 @@ indicators, reported separately.
 
 **Severity: high. The first source-backed Trust release is still thin.**
 
-The current figures are from dataset 5.0.0. Coordination publishes a score for
-51 of 52 countries, based on border time, budget execution and V-Dem's
+The current figures are from dataset 6.0.0. Coordination publishes a score for
+52 of 53 countries, based on border time, budget execution and V-Dem's
 expert-coded civil-society index. Trust publishes a
-score for 36 of 52 countries, based on the Joint EVS/WVS A165 social-trust
+score for 37 of 53 countries, based on the Joint EVS/WVS A165 social-trust
 measure and the 2019-frozen contract-enforcement measure. Trust's dimension
-correlation with log GDP per capita is 0.627 (Spearman 0.711, n=35), so the
+correlation with log GDP per capita is 0.611 (Spearman 0.684, n=36), so the
 release is usable as a research baseline but not a clean claim of wealth-free
 trust. D23 retired the WGI perception composites and D44 retired homicide.
 
@@ -108,10 +108,10 @@ The pattern to read is the class column. Every indicator that failed the old
 test was class P and every indicator that survived was class C. The current
 Trust release adds a class P social measure from a named academic survey to the
 class C contract measure. The social measure alone correlates with log GDP per
-capita at 0.669 in the current alignment, so it is a watch item rather than a
+capita at 0.657 in the current alignment, so it is a watch item rather than a
 verdict. Coordination now has a 2024 V-Dem civil-society index beside the
 World Bank budget-execution and older border-time rows; the new index's own
-correlation is 0.395, but all three remain a partial operational proxy rather
+correlation is 0.398, but all three remain a partial operational proxy rather
 than a direct test of cross-agency delivery.
 
 **Fix.** These dimensions need observable, behavioural indicators that are not
@@ -160,7 +160,7 @@ not simply to raise Singapore.
 
 Voice and accountability is retired, so Singapore's 20.9 is gone. Shared Purpose
 now rests on two indicators, tax revenue and income inequality, at mean
-confidence 0.223, and it publishes a score for 46 of 52 countries. Its
+confidence 0.223, and it publishes a score for 47 of 53 countries. Its
 correlation with log GDP per capita is 0.45, the lowest of the seven dimensions
 that publish. The behavioural measures it needs are civic participation and
 volunteering, both still gaps, plus voter turnout, which is published by
@@ -178,7 +178,7 @@ archived the codes.
 
 The recency term already marks them down, so this is visible rather than hidden.
 It is listed because these five have to migrate to B-READY, which is in the API
-as `IC.BRE.*` inside World Development Indicators and covers 12 of the 52
+as `IC.BRE.*` inside World Development Indicators and covers 12 of the 53
 countries in its 2024 round. The migration waits on coverage and not on the
 publisher. See A12.
 
@@ -206,11 +206,11 @@ data does not exist.
 
 **Severity: structural.**
 
-Every correlation in `diagnostics.json` is computed on the 52 countries loaded.
-Fifty-two points is enough to reverse a finding and not enough to establish one.
+Every correlation in `diagnostics.json` is computed on the 53 countries loaded.
+Fifty-three points is enough to reverse a finding and not enough to establish one.
 Two dimension pairs sat at 0.94 on the 16-country run and read as
-near-duplicates. At 52 no dimension pair passes the redundancy threshold at all,
-and the highest is Anticipation with Agency at 0.83. The nine dimensions
+near-duplicates. At 53 no dimension pair passes the redundancy threshold at all,
+and the highest is Anticipation with Agency at 0.84. The nine dimensions
 separate when the sample is wide enough to separate them.
 
 The redundancy and wealth-proxy findings are strong enough to act on because
@@ -250,13 +250,13 @@ Delivery records for cross-agency national programmes would be the direct
 measure, and they are a declared gap.
 
 ---
-## A10 — The frame is 52 countries wide, and they are not the world
+## A10 — The frame is 53 countries wide, and they are not the world
 
 **Severity: structural.**
 
 Every country in the benchmark sets the endpoints of every indicator scale and is
 measured against the result. See D47. So 0 and 100 mean "weakest and strongest of
-these 52", and the 52 were picked to expose contrasts and to cover Latin America
+these 53", and the 53 were picked to expose contrasts and to cover Latin America
 whole (D51), not to sample the world. A score is a position in this set and
 carries no claim about a country outside it.
 
@@ -267,10 +267,10 @@ the endpoints it touches and restates every number. That is done as an announced
 rebase with a major version bump, and 3.0.0 numbers do not compare with 4.0.0
 ones. Anything quoting a score has to quote the version with it.
 
-**Clamping has moved to history.** No observed cell clamps: 0 of 1,604, because a
+**Clamping has moved to history.** No observed cell clamps: 0 of 1,772, because a
 current value cannot fall outside a frame its own country helped build. The
 `outOfFrame` flag now fires only where a historical value sits outside the
-current frame, which is 64 of 603 momentum baskets. A trend carrying a clamped
+current frame, which is 105 of 819 momentum baskets. A trend carrying a clamped
 basket member is part distance-to-the-clamp rather than movement in the country,
 and every surface that prints a trend prints that count.
 
@@ -299,8 +299,9 @@ The two indicators that would carry the delivery construct,
 **Fix.** Two parts, one done and one open. Documented deliveries are now
 recorded in `data/evidence/records.json` against the gap they bear on, outside
 the score, so the cases are written down with sources and limits instead of
-being argued in prose. Seventy-nine records cover 22 countries and bear on 16
-different gaps. Brazil's 24 run from Casa da Moeda in 1694 to Pix in 2020. See D20.
+being argued in prose. Two hundred and four records cover 53 countries and bear
+on 21 different gaps. Brazil's 25 run from Casa da Moeda in 1694 to Pix in 2020.
+See D20.
 The open part is a comparable delivery series across the country set, without
 which the gap cannot be promoted to an indicator.
 
@@ -313,19 +314,20 @@ here, and the benchmark currently has no way to say so.
 
 **Severity: high. Trust is partly measured and Coordination remains narrow.**
 
-The figures in this entry are from dataset 5.0.0.
+The figures in this entry are from dataset 6.0.0.
 
 | Dimension | Observed indicators | Confidence | What is left | Publishes a score |
 | --- | ---: | ---: | --- | --- |
-| Coordination | 3 of 8 for 51 countries | 0.063 to 0.258, mean 0.226 | Border time from 2019, budget execution and V-Dem civil-society strength at 2024 | 51 of 52 |
-| Trust | 2 of 8 for 36 countries | 0.000 to 0.159, mean 0.130 | Joint EVS/WVS A165 plus contract enforcement days from 2019; court clearance remains a gap | 36 of 52 |
-| Shared Purpose | 2 of 7 | 0.000 to 0.272, mean 0.223 | Tax revenue, income inequality | 46 of 52 |
+| Coordination | 3 of 8 for 52 countries | 0.100 to 0.413, mean 0.362 | Border time from 2019, budget execution and V-Dem civil-society strength at 2024 | 52 of 53 |
+| Trust | 2 of 8 for 37 countries | 0.000 to 0.255, mean 0.209 | Joint EVS/WVS A165 plus contract enforcement days from 2019; court clearance remains a gap | 37 of 53 |
+| Shared Purpose | 2 of 7 | 0.000 to 0.316, mean 0.260 | Tax revenue, income inequality | 47 of 53 |
 
 Coordination's score now carries a third row from V-Dem's expert-coded civil
 society participation index. It remains a narrow operational proxy: budget
 alignment, border processing and civil-society judgements do not show whether
-several institutions delivered a shared national objective. Trust now prints a provisional score where both rows are observed,
-but every published score rests on exactly two indicators at confidence 0.159.
+several institutions delivered a shared national objective. Trust now prints a
+provisional score where both rows are observed, but country-level confidence
+ranges from 0.000 to 0.255 and its mean is 0.209.
 Sixteen countries remain below the coverage floor. Shared Purpose sits one
 indicator above the floor and prints, drawn dashed with a marked axis and a
 confidence band that says do not quote it alone. That is a mitigation and not a
@@ -334,8 +336,8 @@ fix.
 **Trust still has a narrow family balance.** D57 splits the dimension into a
 social family, which asks whether people rely on strangers, and an institutional
 family, which asks whether they rely on courts, government and the civil
-service. The current social family has one observed row in 36 countries. The
-institutional family has one observed row in 51, while court performance and
+service. The current social family has one observed row in 37 countries. The
+institutional family has one observed row in 52, while court performance and
 institutional trust remain gaps. `familyBalance` publishes this coverage, so a
 reader can see that the structural test is met only by the social plus stale
 contract pair.
@@ -350,14 +352,14 @@ beside the indicator score and never become observations.
 
 **What the World Bank can and cannot supply.** `GF.XPD.BUDG.ZS`, primary
 government expenditure as a proportion of the original approved budget, covers
-44 of 52 at 2024 and correlates with log GDP per capita at 0.285. The value is
+45 of 53 at 2024 and correlates with log GDP per capita at 0.285. The value is
 two-sided: both underspending and overspending can indicate weak execution, so
 the registry converts it to absolute distance from 100 before scoring. The CPIA
-cluster covers only 10 of 52. Of the two Enterprise Survey corruption series,
+cluster covers only 10 of 53. Of the two Enterprise Survey corruption series,
 `IC.FRM.CORR.ZS` asks a firm what it believes firms similar to itself pay, so it
 records belief and is ineligible, while `IC.FRM.BRIB.ZS` asks whether the
 responding firm was itself asked for a bribe across six public transactions. The
-second covers 49 of 52, 44 of them at 2023 or later, and D60 wires it as a
+second covers 50 of 53, 45 of them at 2023 or later, and D60 wires it as a
 behavioural check: fetched, published beside Trust and excluded from the frame,
 the mean, the coverage floor and the confidence. It is not admissible as the
 score, because it puts the two-indicator dimension at about 0.53 against log GDP
@@ -369,8 +371,8 @@ OECD Government at a Glance and a harmonized court or audit source.
 
 **B-READY is what the frozen rows become.** `IC.BRE.*` replaces Doing Business
 inside World Development Indicators. The API's 2024 dispute-resolution rows
-cover only 12 of the 52 countries; the official 2025 downloadable package
-reaches 25, one country below the half-frame gate, so it remains a candidate
+cover only 12 of the 53 countries; the official 2025 downloadable package
+reaches 25, two countries below the half-frame gate, so it remains a candidate
 rather than a scored replacement. Its dispute-resolution and operational-
 efficiency fields are promising, but the package mixes expert and firm-survey
 inputs and does not publish the court clearance numerator and denominator the

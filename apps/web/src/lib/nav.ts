@@ -40,7 +40,7 @@ import {
  *
  * The tree is data, not a promise that every level gets its own horizontal
  * row. The sections occupy the global header, and the contextual levels plus
- * the deepest page set share one subnav band. Countries has 52 children and no
+ * the deepest page set share one subnav band. Countries has 53 children and no
  * control can show them, so its child is resolved from the path: the context
  * names the one country you are in. A country layer is a reading of that
  * country, beside the English one rather than under its pages. See D69 and
@@ -97,7 +97,7 @@ export const METHOD_PAGES: NavNode[] = [
  *
  * That row answers one question, "which country", and these are the readings
  * that take all of them at once. An agenda is one country's scores turned into
- * actions, so the index of 52 agendas belongs here rather than in a section of
+ * actions, so the index of 53 agendas belongs here rather than in a section of
  * its own: it is a way of reading the country set, not a sixth thing the site
  * is about. See D80.
  */
@@ -226,7 +226,7 @@ export const NAV_TREE: NavNode[] = [
       nodeOwns({ href: compareBaseHref, label: '' }, pathname) ||
       nodeOwns({ href: agendasIndexHref, label: '' }, pathname),
     /* The row under Countries answers "which country". Once the path names one,
-       that country is the row, because 52 of them will not fit in a control.
+       that country is the row, because 53 of them will not fit in a control.
        Before it does, the row offers the readings that take the whole set. See
        D73 and D80. */
     resolveChildren: (pathname) => {

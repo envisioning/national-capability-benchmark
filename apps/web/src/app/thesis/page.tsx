@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { DECISIONS_DOC, WHY_DOC, docHref } from '@ncb/core'
-import { Empty, Headline, Highlight, Note, PageTitle, Section } from '@/components/ui'
+import { Empty, Headline, Note, PageTitle, Section } from '@/components/ui'
 import { WealthTracking } from '@/components/WealthTracking'
 import { MISSING_DATA_HINT, loadDiagnostics } from '@/lib/data'
 import { countryLayer } from '@/lib/layers'
@@ -62,7 +62,7 @@ export default async function ThesisPage() {
       <Headline>
         Intelligence is getting easier to reach. What stays scarce is the ability to choose a
         direction, coordinate people and build what the technology makes possible. That ability is
-        what this benchmark tries to <Highlight>measure</Highlight>.
+        what this benchmark tries to measure.
       </Headline>
 
       <Section

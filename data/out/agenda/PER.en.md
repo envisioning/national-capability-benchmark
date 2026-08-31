@@ -2,21 +2,21 @@
 
 *Generated 2026-08-31*
 
-The frame includes 52 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
+The frame includes 53 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
 ## Where Peru stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 33.6 | 0.52 (usable) | +16.2 over 10 years using 4 indicators |
-| Agency | 48.6 | 0.61 (usable) | +22.6 over 10 years using 4 indicators |
-| Coordination | 69.6 | 0.24 (very thin) | no trend |
-| Trust | 37.7 | 0.16 (very thin) | no trend |
+| Agency | 47.7 | 0.61 (usable) | +22.5 over 10 years using 4 indicators |
+| Coordination | 69.3 | 0.39 (thin) | no trend |
+| Trust | 37.7 | 0.26 (thin) | no trend |
 | Learning | 48.1 | 0.49 (usable) | +13 over 20 years using 2 indicators |
 | Experimentation | 20.2 | 0.39 (thin) | +1.8 over 10 years using 2 indicators |
-| Adaptability | 59.4 | 0.47 (usable) | -1.9 over 10 years using 4 indicators |
-| Building | 26 | 0.54 (usable) | -0.4 over 10 years using 4 indicators |
-| Shared Purpose | 53.5 | 0.24 (very thin) | +10.1 over 10 years using 2 indicators |
+| Adaptability | 59.3 | 0.47 (usable) | -1.9 over 10 years using 4 indicators |
+| Building | 26 | 0.62 (usable) | -0.4 over 10 years using 4 indicators |
+| Shared Purpose | 53.5 | 0.28 (thin) | +10.1 over 10 years using 2 indicators |
 
 ## What to raise
 
@@ -41,29 +41,29 @@ How capable is the country of identifying and preparing for emerging change?
 - Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan); National basic-research funding allocation (China).
 - Missing indicators: Government foresight capacity, Long-horizon research share.
 
+### Agency: 47.7, confidence usable
+
+How able are individuals and organizations to turn an intention into action?
+
+- Uses 6 observed indicators.
+- Highest usable scores: United States 92.5, Australia 89.1, United Kingdom 86.7.
+- Related deliveries in other countries: SIBRATEC, the documented innovation-centre network (Brazil); Singapore's national ICT-skills measurement and baseline (Singapore).
+- Missing indicators: Adult digital skills, Perceived control over life.
+
 ### Learning: 48.1, confidence usable
 
 How effectively does the country acquire, distribute, and update knowledge?
 
 - Uses 5 observed indicators.
 - Highest usable scores: Finland 77.9, Australia 70.3, United Kingdom 68.6.
-- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); CAPES, federal postgraduate funding (Brazil); INEP, the standing education statistics institution (Brazil); Kartu Prakerja, a national lifelong-learning delivery system (Indonesia); Compte personnel de formation (France).
+- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); CAPES, federal postgraduate funding (Brazil); INEP, the standing education statistics institution (Brazil); Kartu Prakerja, a national lifelong-learning delivery system (Indonesia); Compte personnel de formation (France); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal).
 - Missing indicators: Adult learning participation, Research citation impact.
-
-### Agency: 48.6, confidence usable
-
-How able are individuals and organizations to turn an intention into action?
-
-- Uses 6 observed indicators.
-- Highest usable scores: United States 92.6, Australia 89.8, United Kingdom 87.5.
-- Related deliveries in other countries: SIBRATEC, the documented innovation-centre network (Brazil); Singapore's national ICT-skills measurement and baseline (Singapore).
-- Missing indicators: Adult digital skills, Perceived control over life.
 
 ## What to measure first
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Trust: confidence 0.16, very thin
+### Trust: confidence 0.26, thin
 
 How much cooperation is possible beyond immediate personal networks?
 
@@ -71,7 +71,7 @@ How much cooperation is possible beyond immediate personal networks?
 - Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
-### Shared Purpose: confidence 0.24, very thin
+### Shared Purpose: confidence 0.28, thin
 
 To what extent can people imagine themselves as participants in a common project?
 
@@ -79,7 +79,7 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
 - Rejected datasets: Voice and accountability.
 
-### Coordination: confidence 0.24, very thin
+### Coordination: confidence 0.39, thin
 
 How effectively can independent actors organize around shared objectives?
 
@@ -98,7 +98,7 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 
 These scores are at least 50 with usable evidence. They still need watching.
 
-- Adaptability: 59.4, confidence usable
+- Adaptability: 59.3, confidence usable
 
 ## Missing data
 

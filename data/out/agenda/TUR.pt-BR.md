@@ -2,27 +2,27 @@
 
 *Gerado em 2026-08-31*
 
-Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
+Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
 ## Onde a Turquia está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 44 | 0,64 (utilizável) | +11,8 em 10 anos, sobre 5 indicadores |
-| Agência | 59,5 | 0,61 (utilizável) | +16,2 em 10 anos, sobre 4 indicadores |
-| Coordenação | 64,1 | 0,24 (muito fraca) | sem base de tendência |
-| Confiança | 39,7 | 0,16 (muito fraca) | sem base de tendência |
+| Agência | 59,2 | 0,61 (utilizável) | +16,1 em 10 anos, sobre 4 indicadores |
+| Coordenação | 63,7 | 0,39 (fraca) | sem base de tendência |
+| Confiança | 39,7 | 0,26 (fraca) | sem base de tendência |
 | Aprendizagem | 47,2 | 0,53 (utilizável) | -11,8 em 10 anos, sobre 3 indicadores |
-| Experimentação | 45,9 | 0,18 (muito fraca) | +18,5 em 10 anos, sobre 2 indicadores |
-| Adaptação | 49,1 | 0,48 (utilizável) | +15,6 em 10 anos, sobre 4 indicadores, 1 truncados na borda da régua |
-| Construção | 41,3 | 0,54 (utilizável) | +4 em 10 anos, sobre 4 indicadores |
-| Propósito compartilhado | 50,4 | 0,26 (fraca) | -4,5 em 10 anos, sobre 2 indicadores |
+| Experimentação | 46 | 0,18 (muito fraca) | +18,5 em 10 anos, sobre 2 indicadores |
+| Adaptação | 48,8 | 0,48 (utilizável) | +15,7 em 10 anos, sobre 4 indicadores, 1 truncados na borda da régua |
+| Construção | 41,4 | 0,62 (utilizável) | +4 em 10 anos, sobre 4 indicadores |
+| Propósito compartilhado | 50,4 | 0,3 (fraca) | -4,5 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para elevar
 
 Da nota mais baixa para a mais alta. Só entram dimensões com evidência utilizável. Evidência fraca vai para a próxima seção.
 
-### Construção: 41,3, confiança utilizável
+### Construção: 41,4, confiança utilizável
 
 Quão capaz é o país de transformar planos e conhecimento em sistemas que funcionam?
 
@@ -47,29 +47,21 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,6.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França).
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal).
 - Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
-### Adaptação: 49,1, confiança utilizável
+### Adaptação: 48,8, confiança utilizável
 
 Com que eficácia o sistema responde quando as circunstâncias mudam?
 
 - Baseada em 4 indicadores observados.
-- Maiores notas utilizáveis: Países Baixos 90,1, Suíça 88,6, Japão 86,1.
-- Entregas documentadas em outros países: Plano Real, the 1994 currency stabilisation (Brasil); Proalcool, the fuel substitution after the oil shock (Brasil); The Convertibility Plan, and its collapse (Argentina); Kurzarbeit in the 2008-2009 crisis (Alemanha); Telebras, the telecom system that was dismantled (Brasil); Estonian Defence League, national defence rebuilt after independence (Estônia); Korea Internet and Security Agency, a consolidated digital authority (Coreia do Sul); Federal siren warning network, and its dismantling (Alemanha); Room for the River, flood safety delivered across the Rhine branches (Países Baixos); Childcare benefits administration, and the recovery after institutional failure (Países Baixos); National Police, one corps from twenty-five regional forces (Países Baixos); NL-Alert, a tested multi-channel emergency warning system (Países Baixos); DigiD Machtigen, delegated access to public services (Países Baixos); DigiNotar, a certificate breach that forced a trust-chain reset (Países Baixos); Programmatic Approach to Nitrogen, and the permitting reversal (Países Baixos); 27F reconstruction, a nationwide recovery programme after the 2010 earthquake (Chile); Cédula digital, an identity service upgraded for mobile use (Colômbia); Victims' reparations, a long-running administrative response to conflict (Colômbia); Fondo Adaptación, recovery and safer resettlement after La Niña (Colômbia); My Number Card, a national identity rail extended into services (Japão); Tōhoku reconstruction, a decade-long recovery programme (Japão); Juntos, a conditional-transfer system at national scale (Peru); Certified digital signature across public services (Costa Rica); REDCUDI childcare network and SINIRUBE referrals (Costa Rica); Dollarization as an emergency monetary redesign (Equador); 2016 earthquake national emergency coordination (Equador); 120 a los 65 social pension (Panamá); Canal water-and-transit response to the 2023–24 drought (Panamá); Bono Juana Azurduy maternal and child health transfer (Bolívia); Renta Dignidad non-contributory old-age pension (Bolívia); Tekoporã Mbarete family-support programme (Paraguai); SIFEN national electronic invoicing rollout (Paraguai); Asignación Universal por Hijo child benefit (Argentina); SUBE national electronic fare and subsidy rail (Argentina); PhilSys foundational national ID rollout (Filipinas); Pantawid Pamilyang Pilipino Program (4Ps) (Filipinas); Typhoon Yolanda shelter and recovery programme (Filipinas); Jaminan Kesehatan Nasional, a near-universal health-insurance pool (Indonésia); InaRISK national disaster-risk information platform (Indonésia); VNeID national electronic identity (Vietnã); Vietnam Social Security health-insurance expansion (Vietnã); Typhoon Yagi emergency restoration (Vietnã); MySejahtera and the national COVID-19 immunisation programme (Malásia); National flood-warning SMS system (Malásia); Universal Coverage Scheme and the 30-baht health system (Tailândia); National Digital ID framework (Tailândia); T-Alert national cell-broadcast warning system (Tailândia); Cl@ve shared digital identity (Espanha); La Palma volcanic-eruption recovery and monitoring (Espanha); mObywatel digital ID wallet (Polônia); Rodzina 500+ and 800+ child-benefit delivery (Polônia); Alert RCB national emergency SMS channel (Polônia); BankID federated electronic identity (Suécia); 1177 national health portal and helpline (Suécia); VMA multi-channel public warning system (Suécia); MyGovID single sign-on for public services (Irlanda); National COVID-19 vaccination delivery (Irlanda); National Asset Management Agency crisis workout (Irlanda); Met Éireann national weather-warning service (Irlanda); Salário mínimo and its permanent revaluation rule (Brasil); eNaira, a national rollout with an adoption gap (Nigéria); Productive Safety Net Programme for drought resilience (Etiópia); National 9-1-1 emergency-response system (República Dominicana); Sistema Nacional de Emergencias 911 (Honduras); National COVID-19 vaccination campaign (Cuba); Bitcoin Law, and its 2025 rollback (El Salvador); Routine immunization coverage, and its erosion (Haiti); Ramp Up, PROCOMER's export-readiness programme (Costa Rica); France's long-term unemployment decline (França).
+- Maiores notas utilizáveis: Países Baixos 90, Suíça 88,5, Japão 86,1.
+- Entregas documentadas em outros países: Plano Real, the 1994 currency stabilisation (Brasil); Proalcool, the fuel substitution after the oil shock (Brasil); The Convertibility Plan, and its collapse (Argentina); Kurzarbeit in the 2008-2009 crisis (Alemanha); Telebras, the telecom system that was dismantled (Brasil); Estonian Defence League, national defence rebuilt after independence (Estônia); Korea Internet and Security Agency, a consolidated digital authority (Coreia do Sul); Federal siren warning network, and its dismantling (Alemanha); Room for the River, flood safety delivered across the Rhine branches (Países Baixos); Childcare benefits administration, and the recovery after institutional failure (Países Baixos); National Police, one corps from twenty-five regional forces (Países Baixos); NL-Alert, a tested multi-channel emergency warning system (Países Baixos); DigiD Machtigen, delegated access to public services (Países Baixos); DigiNotar, a certificate breach that forced a trust-chain reset (Países Baixos); Programmatic Approach to Nitrogen, and the permitting reversal (Países Baixos); 27F reconstruction, a nationwide recovery programme after the 2010 earthquake (Chile); Cédula digital, an identity service upgraded for mobile use (Colômbia); Victims' reparations, a long-running administrative response to conflict (Colômbia); Fondo Adaptación, recovery and safer resettlement after La Niña (Colômbia); My Number Card, a national identity rail extended into services (Japão); Tōhoku reconstruction, a decade-long recovery programme (Japão); Juntos, a conditional-transfer system at national scale (Peru); Certified digital signature across public services (Costa Rica); REDCUDI childcare network and SINIRUBE referrals (Costa Rica); Dollarization as an emergency monetary redesign (Equador); 2016 earthquake national emergency coordination (Equador); 120 a los 65 social pension (Panamá); Canal water-and-transit response to the 2023–24 drought (Panamá); Bono Juana Azurduy maternal and child health transfer (Bolívia); Renta Dignidad non-contributory old-age pension (Bolívia); Tekoporã Mbarete family-support programme (Paraguai); SIFEN national electronic invoicing rollout (Paraguai); Asignación Universal por Hijo child benefit (Argentina); SUBE national electronic fare and subsidy rail (Argentina); PhilSys foundational national ID rollout (Filipinas); Pantawid Pamilyang Pilipino Program (4Ps) (Filipinas); Typhoon Yolanda shelter and recovery programme (Filipinas); Jaminan Kesehatan Nasional, a near-universal health-insurance pool (Indonésia); InaRISK national disaster-risk information platform (Indonésia); VNeID national electronic identity (Vietnã); Vietnam Social Security health-insurance expansion (Vietnã); Typhoon Yagi emergency restoration (Vietnã); MySejahtera and the national COVID-19 immunisation programme (Malásia); National flood-warning SMS system (Malásia); Universal Coverage Scheme and the 30-baht health system (Tailândia); National Digital ID framework (Tailândia); T-Alert national cell-broadcast warning system (Tailândia); Cl@ve shared digital identity (Espanha); La Palma volcanic-eruption recovery and monitoring (Espanha); mObywatel digital ID wallet (Polônia); Rodzina 500+ and 800+ child-benefit delivery (Polônia); Alert RCB national emergency SMS channel (Polônia); BankID federated electronic identity (Suécia); 1177 national health portal and helpline (Suécia); VMA multi-channel public warning system (Suécia); MyGovID single sign-on for public services (Irlanda); National COVID-19 vaccination delivery (Irlanda); National Asset Management Agency crisis workout (Irlanda); Met Éireann national weather-warning service (Irlanda); Salário mínimo and its permanent revaluation rule (Brasil); eNaira, a national rollout with an adoption gap (Nigéria); Productive Safety Net Programme for drought resilience (Etiópia); National 9-1-1 emergency-response system (República Dominicana); Sistema Nacional de Emergencias 911 (Honduras); National COVID-19 vaccination campaign (Cuba); Bitcoin Law, and its 2025 rollback (El Salvador); Routine immunization coverage, and its erosion (Haiti); Ramp Up, PROCOMER's export-readiness programme (Costa Rica); France's long-term unemployment decline (França); Chave Móvel Digital and Portugal's digital identity layer (Portugal).
 - Lacunas declaradas: Parcela de desemprego de longa duração, Diversificação das exportações, Preparação e recuperação de desastres, Capacidade de resposta institucional.
 
 ## Dimensões para medir primeiro
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
-
-### Confiança: confiança 0,16, muito fraca
-
-Quanta cooperação é possível além das redes pessoais imediatas?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ### Experimentação: confiança 0,18, muito fraca
 
@@ -78,15 +70,15 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
-### Coordenação: confiança 0,24, muito fraca
+### Confiança: confiança 0,26, fraca
 
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+Quanta cooperação é possível além das redes pessoais imediatas?
 
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
+- Baseada em 2 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
-### Propósito compartilhado: confiança 0,26, fraca
+### Propósito compartilhado: confiança 0,3, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
@@ -94,11 +86,19 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
 - Bases rejeitadas: Voz e responsabilização.
 
+### Coordenação: confiança 0,39, fraca
+
+Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
+- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
+
 ## Dimensões para manter
 
 Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência utilizável. Ainda precisam ser acompanhadas.
 
-- Agência: 59,5, confiança utilizável
+- Agência: 59,2, confiança utilizável
 
 ## Agenda de medição
 

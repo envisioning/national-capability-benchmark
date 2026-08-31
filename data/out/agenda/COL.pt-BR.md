@@ -2,21 +2,21 @@
 
 *Gerado em 2026-08-31*
 
-Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
+Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
 ## Onde a Colômbia está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 28,8 | 0,54 (utilizável) | +11,9 em 10 anos, sobre 3 indicadores |
-| Agência | 50,8 | 0,61 (utilizável) | +12 em 10 anos, sobre 4 indicadores |
-| Coordenação | 59,5 | 0,24 (muito fraca) | sem base de tendência |
-| Confiança | 6,4 | 0,16 (muito fraca) | sem base de tendência |
+| Agência | 50,4 | 0,61 (utilizável) | +12 em 10 anos, sobre 4 indicadores |
+| Coordenação | 59,1 | 0,39 (fraca) | sem base de tendência |
+| Confiança | 6,4 | 0,26 (fraca) | sem base de tendência |
 | Aprendizagem | 44,7 | 0,49 (utilizável) | +13 em 20 anos, sobre 2 indicadores |
 | Experimentação | 40,1 | 0,38 (fraca) | +0,5 em 10 anos, sobre 2 indicadores |
-| Adaptação | 53,8 | 0,48 (utilizável) | +2,9 em 10 anos, sobre 4 indicadores |
-| Construção | 24,4 | 0,54 (utilizável) | -1,9 em 10 anos, sobre 4 indicadores |
-| Propósito compartilhado | 27,4 | 0,27 (fraca) | -3,1 em 10 anos, sobre 2 indicadores |
+| Adaptação | 53,5 | 0,48 (utilizável) | +2,9 em 10 anos, sobre 4 indicadores |
+| Construção | 24,4 | 0,62 (utilizável) | -1,9 em 10 anos, sobre 4 indicadores |
+| Propósito compartilhado | 27,4 | 0,32 (fraca) | -3,1 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para elevar
 
@@ -47,14 +47,14 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,6.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França).
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal).
 - Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ## Dimensões para medir primeiro
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Confiança: confiança 0,16, muito fraca
+### Confiança: confiança 0,26, fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
 
@@ -62,15 +62,7 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 - Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
-### Coordenação: confiança 0,24, muito fraca
-
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
-
-### Propósito compartilhado: confiança 0,27, fraca
+### Propósito compartilhado: confiança 0,32, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
@@ -85,12 +77,20 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Baseada em 4 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
+### Coordenação: confiança 0,39, fraca
+
+Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
+- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
+
 ## Dimensões para manter
 
 Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência utilizável. Ainda precisam ser acompanhadas.
 
-- Adaptação: 53,8, confiança utilizável
-- Agência: 50,8, confiança utilizável
+- Adaptação: 53,5, confiança utilizável
+- Agência: 50,4, confiança utilizável
 
 ## Agenda de medição
 

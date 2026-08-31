@@ -1,10 +1,16 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
-import { CHALLENGE_STATUS_LABELS, DIMENSION_LABELS, MIN_DISPUTES_FOR_CONTESTED } from '@ncb/core'
+import { useEffect, useId, useRef, useState } from 'react'
+import {
+  CHALLENGE_STATUS_LABELS,
+  COUNTRIES,
+  DIMENSIONS,
+  DIMENSION_LABELS,
+  MIN_DISPUTES_FOR_CONTESTED,
+} from '@ncb/core'
 import type { Dimension } from '@ncb/core'
 import { useRouter } from 'next/navigation'
-import { challengeApiHref, objectionDetailHref } from '@/lib/links'
+import { objectionDetailHref, challengeApiHref } from '@/lib/links'
 import { Button, fieldClass } from '@/components/ui'
 
 export function ContestedBadge({ count }: { count: number }) {
@@ -21,22 +27,14 @@ export function ContestedBadge({ count }: { count: number }) {
   )
 }
 
-export function ChallengeLink({
-  iso3,
-  country,
-  dimension,
-  value,
-  confidence,
-}: {
-  iso3: string
-  country?: string
-  dimension: Dimension
-  value: number | null
-  confidence: number | null
-}) {
+/** The single entry point for filing a score objection, kept in the header. */
+export function ChallengeDialog() {
   const router = useRouter()
   const dialog = useRef<HTMLDialogElement>(null)
+  const dialogId = useId()
   const [open, setOpen] = useState(false)
+  const [iso3, setIso3] = useState<string>(COUNTRIES[0]!.iso3)
+  const [dimension, setDimension] = useState<Dimension>(DIMENSIONS[0]!)
   const [argument, setArgument] = useState('')
   const [sourceUrl, setSourceUrl] = useState('')
   const [error, setError] = useState<string | null>(null)
@@ -48,8 +46,6 @@ export function ChallengeLink({
     if (open && !node.open) node.showModal()
     if (!open && node.open) node.close()
   }, [open])
-
-  if (value === null) return null
 
   function close() {
     setOpen(false)
@@ -78,32 +74,35 @@ export function ChallengeLink({
     }
   }
 
-  const countryLabel = country ? `${country} (${iso3})` : iso3
-
   return (
     <>
-      <button
+      <Button
         type="button"
+        variant="ghost"
+        size="sm"
         onClick={() => setOpen(true)}
-        className="rounded-md border border-[var(--rule)] px-1.5 py-0.5 text-[10px] font-medium text-[var(--muted)] hover:text-[var(--foreground)]"
+        aria-haspopup="dialog"
+        aria-expanded={open}
+        aria-controls={dialogId}
       >
         Challenge
-      </button>
+      </Button>
 
       <dialog
         ref={dialog}
+        id={dialogId}
         onClose={close}
         onClick={(event) => {
           if (event.target === dialog.current) close()
         }}
-        className="m-auto w-[min(38rem,92vw)] rounded-xl border border-[var(--rule)] bg-[var(--surface)] p-0 text-left text-[var(--foreground)] backdrop:bg-black/50"
+        className="m-auto max-h-[90dvh] w-[min(38rem,92vw)] rounded-xl border border-[var(--rule)] bg-[var(--surface)] p-0 text-left text-[var(--foreground)] backdrop:bg-black/50"
       >
-        <form onSubmit={submit} className="space-y-5 p-6">
+        <form onSubmit={submit} className="max-h-[90dvh] space-y-5 overflow-y-auto p-6 sm:p-8">
           <div className="flex items-start justify-between gap-6">
             <div>
-              <h2 className="text-2xl font-light leading-tight">This score can be challenged</h2>
+              <h2 className="text-2xl font-light leading-tight">Challenge the benchmark</h2>
               <p className="mt-2 text-lg leading-relaxed text-[var(--muted)]">
-                Give the benchmark a specific reason to reconsider this number.
+                Choose a score and give the benchmark a specific reason to reconsider it.
               </p>
             </div>
             <Button type="button" size="sm" onClick={close}>
@@ -111,16 +110,42 @@ export function ChallengeLink({
             </Button>
           </div>
 
-          <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 text-xs">
-            <dt className="text-[var(--muted)]">Country</dt>
-            <dd className="font-medium">{countryLabel}</dd>
-            <dt className="text-[var(--muted)]">Dimension</dt>
-            <dd className="font-medium">{DIMENSION_LABELS[dimension]}</dd>
-            <dt className="text-[var(--muted)]">Score</dt>
-            <dd className="tabular-nums">{value.toFixed(1)}</dd>
-            <dt className="text-[var(--muted)]">Confidence</dt>
-            <dd className="tabular-nums">{confidence === null ? 'no data' : confidence.toFixed(2)}</dd>
-          </dl>
+          <div className="grid gap-5 sm:grid-cols-2">
+            <label className="block text-xs font-medium">
+              Country
+              <select
+                value={iso3}
+                onChange={(event) => setIso3(event.target.value)}
+                className={fieldClass('mt-2 h-10 py-0')}
+              >
+                {COUNTRIES.map((country) => (
+                  <option key={country.iso3} value={country.iso3}>
+                    {country.name} ({country.iso3})
+                  </option>
+                ))}
+              </select>
+            </label>
+
+            <label className="block text-xs font-medium">
+              Capability
+              <select
+                value={dimension}
+                onChange={(event) => setDimension(event.target.value as Dimension)}
+                className={fieldClass('mt-2 h-10 py-0')}
+              >
+                {DIMENSIONS.map((candidate) => (
+                  <option key={candidate} value={candidate}>
+                    {DIMENSION_LABELS[candidate]}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+
+          <p className="text-xs leading-relaxed text-[var(--muted)]">
+            The selected score and confidence are read from the current country file when you
+            submit.
+          </p>
 
           <label className="block text-xs font-medium">
             Your argument

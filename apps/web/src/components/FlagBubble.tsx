@@ -51,7 +51,7 @@ export function FlagBubble({
   const gap = unit * (0.18 + open * 0.42)
   const stroke = focal ? 'var(--primary)' : 'var(--rule)'
 
-  /* Pointing at one mark never fades the others. A field of 52 flags read at
+  /* Pointing at one mark never fades the others. A field of 53 flags read at
    * two strengths looks like a rendering fault, and the halo already says which
    * one is being read. */
   return (

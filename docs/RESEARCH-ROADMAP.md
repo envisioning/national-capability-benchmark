@@ -90,7 +90,7 @@ pnpm bench probe --search "search terms"
 pnpm bench probe --series SERIES[@DATABASE]
 ```
 
-The probe is a preflight. Its current screen is at least half of the 52-country
+The probe is a preflight. Its current screen is at least half of the 53-country
 frame, a latest value no older than eight years, at least three distinct values,
 and correlation with log GDP per capita below 0.70. A pass is necessary, not a
 promotion decision. Read what the series measures and run the full diagnostics
@@ -186,7 +186,7 @@ preflight, not the published panel.
 
 Trust currently has eight registry rows, two observed indicators, three retired
 rows and three gaps. The first source-backed release publishes a provisional
-Trust score for 36 of 52 countries from one generalized social-trust measure
+Trust score for 37 of 53 countries from one generalized social-trust measure
 and the existing institutional-performance contract-enforcement measure. D57's
 two-family acceptance test is structurally met for those cells, but the result
 remains thin: confidence is 0.159 where both rows are observed, the social
@@ -194,7 +194,7 @@ measure is a perception proxy, contract enforcement is frozen at 2019, and
 court performance is still missing. D60's bribery-incidence series remains a
 useful behavioural check and is deliberately excluded from the score.
 
-The current dataset is 5.0.0: Coordination now also has a full-frame V-Dem
+The current dataset is 6.0.0: Portugal has joined the frame, and Coordination now also has a full-frame V-Dem
 civil-society row, documented under `docs/research/coordination/` and D83.
 
 Do not treat the first score as the finished Trust construct. The next work is
@@ -229,7 +229,7 @@ can be trusted. Its published country results are weighted by `gwght`; `1`
 means trusted, `2` means careful, and negative codes are missing in the source
 codebook. The adapter uses the publisher's weighted percentage for `1`, stores
 the release year 2022, and does not copy respondent-level microdata. It
-currently recognizes 39 benchmark countries and emits 36 unique country rows.
+currently recognizes 40 benchmark countries and emits 37 unique country rows.
 Germany, Great Britain and the Netherlands have separate EVS and WVS rows and
 are held until pooled microdata weights can be harmonised reproducibly.
 
@@ -244,7 +244,7 @@ into one series because they share a label.
 
 **Acceptance gate:** the derived series has a named variable and codebook,
 documented weighting and missing-value treatment, a comparable reference period,
-coverage reported against all 52 countries, and no unexplained country-specific
+coverage reported against all 53 countries, and no unexplained country-specific
 recoding. Use the half-frame screen as the first coverage test. If it fails,
 keep the row as a gap and explain why.
 
@@ -271,7 +271,7 @@ country.
 
 The [OECD Trust Survey](https://www.oecd.org/en/publications/2024/07/oecd-survey-on-drivers-of-trust-in-public-institutions-2024-results_eeb36452.html)
 is a useful comparator for institutional trust, but its 2023 wave covers 30 OECD
-countries. It cannot by itself satisfy the current 52-country performance
+countries. It cannot by itself satisfy the current 53-country performance
 measure gate.
 
 **Fallback:** a comparable institutional-performance series that observes
@@ -280,7 +280,7 @@ quality is not enough for this gate.
 
 **Acceptance gate:** the numerator, denominator, case scope and year are known
 for every country-year used; countries with incompatible court systems are
-flagged rather than silently pooled; coverage is reported for all 52 countries;
+flagged rather than silently pooled; coverage is reported for all 53 countries;
 and the series is recent enough to be useful. The series must add information
 to the existing 2019 contract-enforcement row rather than duplicate it.
 
@@ -350,7 +350,7 @@ research result. It does not alter the observations, score or confidence.
 World Bank perception composites.
 
 **Status:** complete in dataset 4.5.0. The pinned V-Dem Country-Year Core v15
-release emits `v2x_cspart` for all 52 countries at 2024. The adapter, source
+release emits `v2x_cspart` for all 53 countries at 2024. The adapter, source
 memo, derived observation file and diagnostic review are committed together.
 
 **Open:** this is expert-coded evidence, not administrative delivery. The next
@@ -421,7 +421,7 @@ Do not add countries while closing a source gap unless the user explicitly
 requests a frame expansion. Adding a country changes the normalization frame
 and requires a major version, a full re-ingest, a full rescore, refreshed
 diagnostics and a full Delphi rerun. The source research queue should first
-make the current 52-country frame more informative.
+make the current 53-country frame more informative.
 
 ## Agent handoff template
 
@@ -433,7 +433,7 @@ Track: source-backed, evidence or Delphi
 Status: research, candidate, blocked, promoted or rejected
 Dataset and release:
 Indicator ids:
-Countries covered: n / 52
+Countries covered: n / 53
 Years covered:
 Source and license:
 Files changed:

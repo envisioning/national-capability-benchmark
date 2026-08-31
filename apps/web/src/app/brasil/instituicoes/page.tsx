@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { PT_BR, localizeInstitutionNetwork } from '@ncb/core'
 import { InstitutionsView } from '@/components/views/InstitutionsView'
-import { Empty, Eyebrow, Headline, Highlight, Note, PageTitle } from '@/components/ui'
+import { Empty, Eyebrow, Headline, Note, PageTitle } from '@/components/ui'
 import { loadInstitutionNetwork } from '@/lib/data'
 
 export const dynamic = 'force-dynamic'
@@ -38,8 +38,8 @@ export default async function BrazilInstitutionsPage() {
       <Eyebrow>Mapa institucional do Brasil · versão experimental {network.version}</Eyebrow>
       <PageTitle>Como o Brasil se organiza para agir</PageTitle>
       <Headline>
-        Escolha uma instituição para ver o que ela faz, quem limita seu poder e de quais{' '}
-        <Highlight>relações</Highlight> sua atuação depende.
+        Escolha uma instituição para ver o que ela faz, quem limita seu poder e de quais relações
+        sua atuação depende.
       </Headline>
       <p className="mb-12 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
         {network.scope} O mapa explica funções e vínculos. Ele não mede desempenho e não altera as

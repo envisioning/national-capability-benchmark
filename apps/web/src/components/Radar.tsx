@@ -5,9 +5,9 @@ import { DIMENSIONS, DIMENSION_LABELS, EN, confidenceBand } from '@ncb/core'
 import type { Dimension, Lexicon } from '@ncb/core'
 import { DIMENSION_ICON, Icon, iconMarkup } from '@/components/Icon'
 import { evidenceOpenness, isThinConfidence } from '@/lib/evidence'
-import { ConfidenceBar, Score } from '@/components/ui'
+import { Confidence, Score } from '@/components/ui'
 import { radarAngle, radarPoint } from '@/components/radarGeometry'
-import { ChallengeLink, ContestedBadge } from '@/components/ChallengeLink'
+import { ContestedBadge } from '@/components/ChallengeDialog'
 
 export type RadarSeries = {
   label: string
@@ -415,11 +415,17 @@ export function Radar({
             const above = y < CENTER
             return (
               <g key={d}>
-                <AxisIcon d={d} x={x} y={y} size={13} opacity={active === i ? 1 : 0.5} />
+                <AxisIcon
+                  d={d}
+                  x={x}
+                  y={stacked && above ? y - 2 : y}
+                  size={13}
+                  opacity={active === i ? 1 : 0.5}
+                />
                 {passiveHoverLabels ? (
                   <text
                     x={stacked ? x : x + side * 17}
-                    y={stacked ? y + (above ? 3 : -3) : y}
+                    y={stacked ? y + (above ? 9 : -3) : y}
                     textAnchor={anchor}
                     dominantBaseline="middle"
                     fontSize={7.5}
@@ -625,20 +631,7 @@ function RadarReadout({
               size={si === 0 ? 'lg' : 'md'}
               nullLabel={noDataLabel}
             />
-            {si === 0 && value !== null ? (
-              <>
-                <ContestedBadge count={contestedCount} />
-                {focal.iso3 ? (
-                  <ChallengeLink
-                    iso3={focal.iso3}
-                    country={focal.label}
-                    dimension={d}
-                    value={value}
-                    confidence={confidence}
-                  />
-                ) : null}
-              </>
-            ) : null}
+            {si === 0 && value !== null ? <ContestedBadge count={contestedCount} /> : null}
           </span>
         ))}
       </span>
@@ -651,7 +644,7 @@ function RadarReadout({
           <span>{noDataLabel}</span>
         ) : (
           <>
-            <ConfidenceBar value={confidence} />
+            <Confidence value={confidence} />
             <span>{lex.bands[confidenceBand(confidence).id]}</span>
           </>
         )}

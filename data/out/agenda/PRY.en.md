@@ -2,21 +2,21 @@
 
 *Generated 2026-08-31*
 
-The frame includes 52 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
+The frame includes 53 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
 ## Where Paraguay stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 23.2 | 0.64 (usable) | +12.9 over 10 years using 5 indicators |
-| Agency | 46.2 | 0.61 (usable) | +25.1 over 10 years using 4 indicators, with 2 at the frame edge |
-| Coordination | 49 | 0.23 (very thin) | no trend |
-| Trust | not scored | 0.07 (very thin) | no trend |
+| Agency | 45.1 | 0.61 (usable) | +25 over 10 years using 4 indicators, with 2 at the frame edge |
+| Coordination | 48.7 | 0.37 (thin) | no trend |
+| Trust | not scored | 0.11 (very thin) | no trend |
 | Learning | 34.8 | 0.41 (thin) | -2.6 over 20 years using 2 indicators |
 | Experimentation | 18.3 | 0.18 (very thin) | +6.2 over 20 years using 2 indicators |
-| Adaptability | 57.4 | 0.46 (usable) | +1.4 over 10 years using 4 indicators |
-| Building | 32 | 0.54 (usable) | +1.8 over 10 years using 4 indicators |
-| Shared Purpose | 37.7 | 0.27 (thin) | +9.7 over 10 years using 2 indicators |
+| Adaptability | 57.3 | 0.46 (usable) | +1.5 over 10 years using 4 indicators |
+| Building | 32 | 0.62 (usable) | +1.8 over 10 years using 4 indicators |
+| Shared Purpose | 37.7 | 0.32 (thin) | +9.7 over 10 years using 2 indicators |
 
 ## What to raise
 
@@ -41,12 +41,12 @@ How capable is the country of turning plans and knowledge into functioning syste
 - Missing indicators: Large project delivery, Firm scale-up rate.
 - Rejected datasets: Logistics infrastructure quality.
 
-### Agency: 46.2, confidence usable
+### Agency: 45.1, confidence usable
 
 How able are individuals and organizations to turn an intention into action?
 
 - Uses 6 observed indicators.
-- Highest usable scores: United States 92.6, Australia 89.8, United Kingdom 87.5.
+- Highest usable scores: United States 92.5, Australia 89.1, United Kingdom 86.7.
 - Related deliveries in other countries: SIBRATEC, the documented innovation-centre network (Brazil); Singapore's national ICT-skills measurement and baseline (Singapore).
 - Missing indicators: Adult digital skills, Perceived control over life.
 
@@ -54,7 +54,7 @@ How able are individuals and organizations to turn an intention into action?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Trust: confidence 0.07, very thin
+### Trust: confidence 0.11, very thin
 
 How much cooperation is possible beyond immediate personal networks?
 
@@ -69,21 +69,21 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Uses 2 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
-### Coordination: confidence 0.23, very thin
-
-How effectively can independent actors organize around shared objectives?
-
-- Uses 3 observed indicators.
-- Missing indicators: University-industry collaboration, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
-
-### Shared Purpose: confidence 0.27, thin
+### Shared Purpose: confidence 0.32, thin
 
 To what extent can people imagine themselves as participants in a common project?
 
 - Uses 2 observed indicators.
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
 - Rejected datasets: Voice and accountability.
+
+### Coordination: confidence 0.37, thin
+
+How effectively can independent actors organize around shared objectives?
+
+- Uses 3 observed indicators.
+- Missing indicators: University-industry collaboration, Public-private collaboration.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
 ### Learning: confidence 0.41, thin
 
@@ -96,7 +96,7 @@ How effectively does the country acquire, distribute, and update knowledge?
 
 These scores are at least 50 with usable evidence. They still need watching.
 
-- Adaptability: 57.4, confidence usable
+- Adaptability: 57.3, confidence usable
 
 ## Missing data
 

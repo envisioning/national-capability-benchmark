@@ -64,8 +64,8 @@ export function confidenceBand(value: number): ConfidenceBand {
  * color vision deficiencies and would read as pass/fail rather than as a
  * quantity. Worst adjacent pair is dE 18.7 light and 18.2 dark under normal
  * vision. The dark pair sits at dE 6.8 under tritanopia, which is legal only
- * because the numeric value is printed beside every bar and the bar length
- * carries the same magnitude.
+ * because the numeric value is printed in every confidence chip and the
+ * visible legend names the bands.
  */
 export const CONFIDENCE_BAND_COLORS: Record<ConfidenceBandId, { light: string; dark: string }> = {
   very_thin: { light: '#b8bdd9', dark: '#565d80' },

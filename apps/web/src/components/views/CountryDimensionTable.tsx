@@ -4,10 +4,10 @@ import { CapabilityLink } from '@/components/CapabilityLink'
 import { DIMENSIONS, DIMENSION_LABELS, DISSENT_IQR, primaryMomentum } from '@ncb/core'
 import type { CountryResult } from '@ncb/core'
 import { DataTable } from '@/components/DataTable'
-import { ConfidenceBar, Delta, DimensionScore, Score } from '@/components/ui'
+import { Confidence, Delta, DimensionScore, Score } from '@/components/ui'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { DimensionPeek } from '@/components/views/DimensionPeek'
-import { ChallengeLink, ContestedBadge } from '@/components/ChallengeLink'
+import { ContestedBadge } from '@/components/ChallengeDialog'
 import { scoreAnchorId } from '@/lib/links'
 
 export function CountryDimensionTable({
@@ -55,13 +55,6 @@ export function CountryDimensionTable({
             <DimensionScore dim={r.dim} />
           </DimensionPeek>
           <ContestedBadge count={contestedCounts[`${country.iso3}|${r.d}`] ?? 0} />
-          <ChallengeLink
-            iso3={country.iso3}
-            country={country.country}
-            dimension={r.d}
-            value={r.dim.score}
-            confidence={r.dim.confidence}
-          />
         </span>
       ),
     },
@@ -69,7 +62,7 @@ export function CountryDimensionTable({
       key: 'confidence',
       label: 'Confidence',
       sort: (r: (typeof rows)[number]) => r.dim.confidence,
-      render: (r: (typeof rows)[number]) => <ConfidenceBar value={r.dim.confidence} />,
+      render: (r: (typeof rows)[number]) => <Confidence value={r.dim.confidence} />,
     },
     {
       key: 'coverage',

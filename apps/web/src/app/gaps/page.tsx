@@ -11,7 +11,7 @@ import {
 } from '@ncb/core'
 import type { Dimension } from '@ncb/core'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
-import { Headline, Highlight, Note, PageTitle, Section } from '@/components/ui'
+import { Headline, Note, PageTitle, Section } from '@/components/ui'
 import {
   capabilityHref,
   contactTopicHref,
@@ -53,8 +53,8 @@ export default function GapsPage() {
       <PageTitle>What the benchmark cannot measure</PageTitle>
       <Headline>
         A gap is an indicator the model asks for and no comparable dataset answers. It stays in
-        the registry, it lowers confidence, and it is never deleted to make the numbers look{' '}
-        <Highlight>better</Highlight>.
+        the registry, it lowers confidence, and it is never deleted to make the numbers look
+        better.
       </Headline>
 
       <Note>
@@ -68,7 +68,7 @@ export default function GapsPage() {
       </Note>
 
       <Section
-        title="One gap holds back all 52 countries"
+        title="One gap holds back all 53 countries"
         hint={`Confidence is made of coverage, recency and source quality. A gap holds the first of those down for all ${COUNTRIES.length} countries, not just the ones with a weak score.`}
       >
         <p className="max-w-3xl text-lg leading-relaxed">

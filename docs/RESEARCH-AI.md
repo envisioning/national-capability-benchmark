@@ -128,11 +128,12 @@ The first expansion milestone is a planning target, not a score threshold:
 - at least 20 reversals;
 - no country above one-third of the corpus.
 
-The current corpus has 79 deliveries, 22 represented countries, 16 represented
-gap indicators and 17 reversals. The reversal quota is met; each expansion batch
-must keep it at or above one in five. No country is currently above one-third of
-the corpus, though Brazil (24 records) and the Netherlands (21) remain much more
-represented than the other 50 countries. New work should prioritize countries
+The current corpus has 204 deliveries, 53 represented countries, 21 represented
+gap indicators and 40 reversals. The first expansion milestone is met; each
+subsequent batch must keep the reversal quota at or above one in five. No country
+is currently above one-third of the corpus, though Brazil (25 records) and the
+Netherlands (21) remain much more represented than the other 51 countries. New
+work should prioritize countries
 with no record and the thinnest dimensions.
 
 The queue prioritises thin dimensions, but it does not force a record into a

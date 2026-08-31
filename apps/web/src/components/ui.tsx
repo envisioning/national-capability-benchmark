@@ -16,9 +16,8 @@ export { ClassBadge }
 
 /*
  * Type scale and surfaces follow envisioning.com/DESIGN.md. Titles are
- * font-light 300: the quietness is the point, and the lime highlight carries
- * the visual weight. Lime is used confidently but rarely, so it appears on the
- * radar fill and the highlight marker and nowhere else.
+ * font-light 300: the quietness is the point. Lime is reserved for data
+ * visualisations and interactive states.
  */
 
 /**
@@ -109,11 +108,6 @@ export function Meta({
       {children}
     </span>
   )
-}
-
-/** One per page at most. One word or a short phrase, never a full sentence. */
-export function Highlight({ children }: { children: React.ReactNode }) {
-  return <span className="bg-accent px-1 text-black">{children}</span>
 }
 
 export function Section({
@@ -303,43 +297,45 @@ export function ScoreLegend({
   )
 }
 
-export function ConfidenceBar({
+/**
+ * The one display for a confidence value.
+ *
+ * Confidence stays a separate claim from the score, but its compact display is
+ * one band-colored chip rather than a track and a separate number. The exact
+ * value remains text, while the visible confidence legend explains the bands.
+ */
+export function Confidence({
   value,
   size = 'sm',
 }: {
   value: number | null
   size?: 'sm' | 'md'
 }) {
-  /* A missing confidence must never draw as a very short bar: 0.00 and "we do
-   * not know" are different claims. Score makes the same distinction. */
+  /* A missing confidence must never draw as an empty chip: 0.00 and "we do not
+   * know" are different claims. Score makes the same distinction. */
   if (value === null || Number.isNaN(value)) {
     return <span className="text-[var(--muted)]">no data</span>
   }
   const band = confidenceBand(value)
-  const track = size === 'md' ? 'h-2 w-28' : 'h-1.5 w-16'
-  const trackHeight = size === 'md' ? 'h-2' : 'h-1.5'
-  const gap = size === 'md' ? 'gap-3' : 'gap-2'
-  const text = size === 'md' ? 'text-sm' : 'text-xs'
+  const sizing =
+    size === 'md'
+      ? 'min-w-14 px-2 py-1 text-sm font-medium'
+      : 'min-w-11 px-1.5 py-0.5 text-xs font-medium'
   return (
     <span
-      className={`inline-flex items-center ${gap}`}
+      className={`inline-block rounded-md text-center tabular-nums ${sizing}`}
+      style={{
+        background: `var(--band-${band.id})`,
+        color: `var(--band-${band.id}-ink)`,
+      }}
     >
-      <span className={`${track} rounded-full bg-[var(--rule-soft)]`}>
-        <span
-          className={`${trackHeight} block rounded-full`}
-          style={{
-            width: `${Math.max(4, Math.round(value * 100))}%`,
-            background: `var(--band-${band.id})`,
-          }}
-        />
-      </span>
-      <span className={`tabular-nums ${text} text-[var(--muted)]`}>{value.toFixed(2)}</span>
+      {value.toFixed(2)}
     </span>
   )
 }
 
 /**
- * Always shipped beside a table of confidence meters.
+ * Always shipped beside a table of confidence values.
  *
  * The band meanings are printed, not tucked into tooltips: "do not quote it on
  * its own" is the strongest caveat in the system and has to survive touch
@@ -598,7 +594,7 @@ export function Empty({ hint }: { hint: string }) {
 
 /**
  * Shipped under any radar drawn with confidences. The dash is a second
- * encoding of the same thing the confidence meters carry, so thin evidence is
+ * encoding of the same thing the confidence chips carry, so thin evidence is
  * visible in the shape and not only in a table further down the page.
  */
 export function RadarEvidenceLegend({
@@ -654,22 +650,10 @@ export function FrameNote() {
   )
 }
 
-/** A plain directional trend mark: compact and legible at table size. */
-export function TrendGlyph({ direction }: { direction: 'up' | 'down' }) {
-  return (
-    <span
-      aria-hidden="true"
-      className="inline-block w-[0.75em] text-center font-mono font-bold leading-none"
-    >
-      {direction === 'up' ? '^' : 'V'}
-    </span>
-  )
-}
-
 /**
  * Change in a dimension score over the momentum span.
  *
- * Sign and glyph both carry the direction, so nothing here rests on color. The
+ * Sign and chevron both carry the direction, so nothing here rests on color. The
  * number is the change in score points on the matched basket, which is a
  * smaller set of indicators than the headline score.
  */
@@ -682,11 +666,11 @@ export function Delta({
   const flat = Math.abs(value) < 0.05
   return (
     <span className="inline-flex items-center gap-1 tabular-nums">
-      {flat ? (
-        <Icon name="minus" size={13} className="text-[var(--muted)]" />
-      ) : (
-        <TrendGlyph direction={value > 0 ? 'up' : 'down'} />
-      )}
+      <Icon
+        name={flat ? 'minus' : value > 0 ? 'chevron-up' : 'chevron-down'}
+        size={13}
+        className="text-[var(--muted)]"
+      />
       {flat ? '0.0' : `${value > 0 ? '+' : ''}${value.toFixed(1)}`}
     </span>
   )

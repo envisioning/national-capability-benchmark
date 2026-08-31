@@ -606,6 +606,8 @@ export const DimensionResult = z.object({
   /** coverage x recency x source_quality. Reported separately, never folded into score. */
   confidence: z.number(),
   confidenceParts: z.object({
+    /** Observed indicators over the dimension's gap-and-observed rows. Retired
+     * rows are excluded from the denominator: see D100. */
     coverage: z.number(),
     recency: z.number(),
     sourceQuality: z.number(),

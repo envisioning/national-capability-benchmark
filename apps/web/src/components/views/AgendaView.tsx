@@ -26,7 +26,7 @@ import {
 import { fillNodes, joinNodes } from '@/lib/fill'
 import { countryProfileHref, evidenceHref, indicatorHref, limitsHref } from '@/lib/links'
 import {
-  ConfidenceBar,
+  Confidence,
   ConfidenceLegend,
   CountryLabel,
   Eyebrow,
@@ -189,7 +189,7 @@ export function AgendaView({
                     <Score value={d.score} size="sm" nullLabel={s.noScore} />
                   </Td>
                   <Td>
-                    <ConfidenceBar value={d.confidence} />
+                    <Confidence value={d.confidence} />
                   </Td>
                   <Td dim>{trendText(d)}</Td>
                 </tr>
@@ -339,16 +339,42 @@ export function AgendaView({
 
       {hold.length > 0 ? (
         <Section title={s.holdHeading} hint={fill(s.holdIntro, { threshold: RAISE_BELOW })}>
-          <ul className="max-w-3xl space-y-2 text-lg leading-relaxed">
-            {hold.map((d) => (
-              <li key={d.dimension} className="flex flex-wrap items-center gap-2">
-                <Icon name={DIMENSION_ICON[d.dimension]} size={15} className="text-[var(--muted)]" />
-                {lex.dimensions[d.dimension]}
-                <Score value={d.score} size="sm" nullLabel={s.noScore} />
-                <ConfidenceBar value={d.confidence} />
-              </li>
-            ))}
-          </ul>
+          <Scroller>
+            <Table>
+              <thead>
+                <tr>
+                  <Th>{s.colDimension}</Th>
+                  <Th align="right">{s.colScore}</Th>
+                  <Th align="right">{s.colConfidence}</Th>
+                </tr>
+              </thead>
+              <tbody>
+                {hold.map((d) => (
+                  <tr key={d.dimension}>
+                    <Td>
+                      <CapabilityLink
+                        dimension={d.dimension}
+                        className="inline-flex items-center gap-2"
+                      >
+                        <Icon
+                          name={DIMENSION_ICON[d.dimension]}
+                          size={15}
+                          className="text-[var(--muted)]"
+                        />
+                        {lex.dimensions[d.dimension]}
+                      </CapabilityLink>
+                    </Td>
+                    <Td align="right">
+                      <Score value={d.score} size="sm" nullLabel={s.noScore} />
+                    </Td>
+                    <Td align="right">
+                      <Confidence value={d.confidence} />
+                    </Td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+          </Scroller>
         </Section>
       ) : null}
 
@@ -465,7 +491,7 @@ function AgendaCard({
           <CapabilityLink dimension={dimension}>{name}</CapabilityLink>
         </h3>
         {score}
-        <ConfidenceBar value={confidence} />
+        <Confidence value={confidence} />
       </div>
       <p className="mt-2 text-lg leading-relaxed text-[var(--muted)]">{question}</p>
       <div className="mt-4 divide-y divide-[var(--rule-soft)] border-t border-[var(--rule-soft)]">

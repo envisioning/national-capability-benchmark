@@ -109,7 +109,7 @@ carries round 1 back. Both grow with the registry.
 As of 2026-08-26, a four-panelist, two-round, 10-country run that includes every
 dimension and the indicator audit is 116 calls, roughly 446k input and 329k
 output tokens, and about **$7** with two Anthropic panelists and two others.
-Run `pnpm bench cost --max-coverage 1` for the current 52-country estimate
+Run `pnpm bench cost --max-coverage 1` for the current 53-country estimate
 before starting the full panel.
 
 Caveats the command prints for itself: characters-per-token is an approximation,

@@ -44,7 +44,7 @@ pnpm bench prompt BRA IND --stance wealth_sceptic
 pnpm bench prompt --audit trust --stance bottom_up
 ```
 
-With no country codes, `pnpm bench prompt` prints all 52 countries in the
+With no country codes, `pnpm bench prompt` prints all 53 countries in the
 current dataset. Each country block is
 separated by `---`. The `--system` output is the rule set that governs every
 answer, and it binds you even though the per-country prompt does not repeat it.
@@ -117,7 +117,7 @@ when the files were produced in separate sessions by different models.
 
 ## Current state
 
-The current dataset is version 4.5.0 with 52 countries and 468
+The current dataset is version 6.0.0 with 53 countries and 477
 country-dimension cells. The repository contains three in-session,
 one-panelist artifacts. `data/delphi/latest.json` points to an old Claude
 round-1 artifact from 2026-08-26 with 144 cell estimates and no

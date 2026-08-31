@@ -2,21 +2,21 @@
 
 *Gerado em 2026-08-31*
 
-Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
+Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
 ## Onde a Malásia está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 41,6 | 0,62 (utilizável) | +10 em 10 anos, sobre 5 indicadores |
-| Agência | 65,5 | 0,61 (utilizável) | +8,6 em 10 anos, sobre 4 indicadores |
-| Coordenação | 84,3 | 0,26 (fraca) | sem base de tendência |
-| Confiança | 51,8 | 0,16 (muito fraca) | sem base de tendência |
+| Agência | 65 | 0,61 (utilizável) | +8,6 em 10 anos, sobre 4 indicadores |
+| Coordenação | 84,2 | 0,41 (fraca) | sem base de tendência |
+| Confiança | 51,8 | 0,26 (fraca) | sem base de tendência |
 | Aprendizagem | 36,5 | 0,56 (utilizável) | +0,9 em 10 anos, sobre 3 indicadores |
-| Experimentação | 6,9 | 0,18 (muito fraca) | -1,4 em 10 anos, sobre 2 indicadores |
-| Adaptação | 60,1 | 0,47 (utilizável) | +4,2 em 10 anos, sobre 4 indicadores |
-| Construção | 59,6 | 0,54 (utilizável) | +5,3 em 10 anos, sobre 4 indicadores |
-| Propósito compartilhado | 45,9 | 0,24 (muito fraca) | -1,4 em 10 anos, sobre 2 indicadores |
+| Experimentação | 7 | 0,18 (muito fraca) | -1,3 em 10 anos, sobre 2 indicadores |
+| Adaptação | 60 | 0,47 (utilizável) | +4,2 em 10 anos, sobre 4 indicadores |
+| Construção | 59,7 | 0,62 (utilizável) | +5,4 em 10 anos, sobre 4 indicadores |
+| Propósito compartilhado | 45,9 | 0,28 (fraca) | -1,4 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para elevar
 
@@ -28,7 +28,7 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,6.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França).
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal).
 - Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ### Antecipação: 41,6, confiança utilizável
@@ -44,14 +44,6 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Confiança: confiança 0,16, muito fraca
-
-Quanta cooperação é possível além das redes pessoais imediatas?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
-
 ### Experimentação: confiança 0,18, muito fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
@@ -59,7 +51,15 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
-### Propósito compartilhado: confiança 0,24, muito fraca
+### Confiança: confiança 0,26, fraca
+
+Quanta cooperação é possível além das redes pessoais imediatas?
+
+- Baseada em 2 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
+
+### Propósito compartilhado: confiança 0,28, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
@@ -67,7 +67,7 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
 - Bases rejeitadas: Voz e responsabilização.
 
-### Coordenação: confiança 0,26, fraca
+### Coordenação: confiança 0,41, fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
 
@@ -79,9 +79,9 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência utilizável. Ainda precisam ser acompanhadas.
 
-- Agência: 65,5, confiança utilizável
-- Adaptação: 60,1, confiança utilizável
-- Construção: 59,6, confiança utilizável
+- Agência: 65, confiança utilizável
+- Adaptação: 60, confiança utilizável
+- Construção: 59,7, confiança utilizável
 
 ## Agenda de medição
 

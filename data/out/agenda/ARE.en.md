@@ -2,21 +2,21 @@
 
 *Generated 2026-08-31*
 
-The frame includes 52 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
+The frame includes 53 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
 ## Where United Arab Emirates stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 42.4 | 0.6 (usable) | +19.5 over 10 years using 5 indicators |
-| Agency | 70.2 | 0.52 (usable) | +2.1 over 10 years using 3 indicators |
-| Coordination | 51.2 | 0.14 (very thin) | no trend |
-| Trust | not scored | 0.07 (very thin) | no trend |
+| Agency | 70.1 | 0.52 (usable) | +2.1 over 10 years using 3 indicators |
+| Coordination | 51.2 | 0.23 (very thin) | no trend |
+| Trust | not scored | 0.11 (very thin) | no trend |
 | Learning | 40.8 | 0.38 (thin) | no trend |
 | Experimentation | 6.1 | 0.18 (very thin) | +1 over 10 years using 2 indicators |
-| Adaptability | 85.8 | 0.47 (usable) | +14.2 over 10 years using 4 indicators |
-| Building | 38.1 | 0.53 (usable) | +2.7 over 10 years using 4 indicators |
-| Shared Purpose | 48.4 | 0.2 (very thin) | no trend |
+| Adaptability | 85.8 | 0.47 (usable) | +14.3 over 10 years using 4 indicators |
+| Building | 38.1 | 0.61 (usable) | +2.7 over 10 years using 4 indicators |
+| Shared Purpose | 48.4 | 0.24 (very thin) | no trend |
 
 ## What to raise
 
@@ -45,21 +45,13 @@ How capable is the country of identifying and preparing for emerging change?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Trust: confidence 0.07, very thin
+### Trust: confidence 0.11, very thin
 
 How much cooperation is possible beyond immediate personal networks?
 
 - Uses one observed indicator.
 - Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
-
-### Coordination: confidence 0.14, very thin
-
-How effectively can independent actors organize around shared objectives?
-
-- Uses 2 observed indicators.
-- Missing indicators: University-industry collaboration, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
 ### Experimentation: confidence 0.18, very thin
 
@@ -68,7 +60,15 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Uses 2 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
-### Shared Purpose: confidence 0.2, very thin
+### Coordination: confidence 0.23, very thin
+
+How effectively can independent actors organize around shared objectives?
+
+- Uses 2 observed indicators.
+- Missing indicators: University-industry collaboration, Public-private collaboration.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
+
+### Shared Purpose: confidence 0.24, very thin
 
 To what extent can people imagine themselves as participants in a common project?
 
@@ -88,7 +88,7 @@ How effectively does the country acquire, distribute, and update knowledge?
 These scores are at least 50 with usable evidence. They still need watching.
 
 - Adaptability: 85.8, confidence usable
-- Agency: 70.2, confidence usable
+- Agency: 70.1, confidence usable
 
 ## Missing data
 

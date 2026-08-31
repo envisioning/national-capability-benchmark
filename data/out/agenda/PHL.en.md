@@ -2,21 +2,21 @@
 
 *Generated 2026-08-31*
 
-The frame includes 52 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
+The frame includes 53 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
 ## Where Philippines stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 24.1 | 0.58 (usable) | +10.8 over 10 years using 3 indicators |
-| Agency | 34.5 | 0.61 (usable) | +16.6 over 10 years using 4 indicators |
-| Coordination | 75 | 0.21 (very thin) | no trend |
-| Trust | 19.7 | 0.16 (very thin) | no trend |
+| Agency | 33.5 | 0.61 (usable) | +16.5 over 10 years using 4 indicators |
+| Coordination | 74.8 | 0.33 (thin) | no trend |
+| Trust | 19.7 | 0.26 (thin) | no trend |
 | Learning | 36.7 | 0.55 (usable) | -2.2 over 10 years using 3 indicators |
 | Experimentation | 2.7 | 0.18 (very thin) | +0.8 over 10 years using 2 indicators |
-| Adaptability | 50.5 | 0.47 (usable) | +2.6 over 10 years using 4 indicators |
-| Building | 49.6 | 0.54 (usable) | -3.2 over 10 years using 3 indicators |
-| Shared Purpose | 51.9 | 0.26 (thin) | +11.5 over 10 years using 2 indicators |
+| Adaptability | 50.4 | 0.47 (usable) | +2.6 over 10 years using 4 indicators |
+| Building | 49.6 | 0.62 (usable) | -3.2 over 10 years using 3 indicators |
+| Shared Purpose | 51.9 | 0.3 (thin) | +11.5 over 10 years using 2 indicators |
 
 ## What to raise
 
@@ -31,12 +31,12 @@ How capable is the country of identifying and preparing for emerging change?
 - Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan); National basic-research funding allocation (China).
 - Missing indicators: Government foresight capacity, Long-horizon research share.
 
-### Agency: 34.5, confidence usable
+### Agency: 33.5, confidence usable
 
 How able are individuals and organizations to turn an intention into action?
 
 - Uses 6 observed indicators.
-- Highest usable scores: United States 92.6, Australia 89.8, United Kingdom 87.5.
+- Highest usable scores: United States 92.5, Australia 89.1, United Kingdom 86.7.
 - Related deliveries in other countries: SIBRATEC, the documented innovation-centre network (Brazil); Singapore's national ICT-skills measurement and baseline (Singapore).
 - Missing indicators: Adult digital skills, Perceived control over life.
 
@@ -46,7 +46,7 @@ How effectively does the country acquire, distribute, and update knowledge?
 
 - Uses 5 observed indicators.
 - Highest usable scores: Finland 77.9, Australia 70.3, United Kingdom 68.6.
-- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); CAPES, federal postgraduate funding (Brazil); INEP, the standing education statistics institution (Brazil); Kartu Prakerja, a national lifelong-learning delivery system (Indonesia); Compte personnel de formation (France).
+- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); CAPES, federal postgraduate funding (Brazil); INEP, the standing education statistics institution (Brazil); Kartu Prakerja, a national lifelong-learning delivery system (Indonesia); Compte personnel de formation (France); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal).
 - Missing indicators: Adult learning participation, Research citation impact.
 
 ### Building: 49.6, confidence usable
@@ -63,14 +63,6 @@ How capable is the country of turning plans and knowledge into functioning syste
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Trust: confidence 0.16, very thin
-
-How much cooperation is possible beyond immediate personal networks?
-
-- Uses 2 observed indicators.
-- Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
-
 ### Experimentation: confidence 0.18, very thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
@@ -78,15 +70,15 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Uses 2 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
-### Coordination: confidence 0.21, very thin
+### Trust: confidence 0.26, thin
 
-How effectively can independent actors organize around shared objectives?
+How much cooperation is possible beyond immediate personal networks?
 
-- Uses 3 observed indicators.
-- Missing indicators: University-industry collaboration, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
+- Uses 2 observed indicators.
+- Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
-### Shared Purpose: confidence 0.26, thin
+### Shared Purpose: confidence 0.3, thin
 
 To what extent can people imagine themselves as participants in a common project?
 
@@ -94,11 +86,19 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
 - Rejected datasets: Voice and accountability.
 
+### Coordination: confidence 0.33, thin
+
+How effectively can independent actors organize around shared objectives?
+
+- Uses 3 observed indicators.
+- Missing indicators: University-industry collaboration, Public-private collaboration.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
+
 ## What to keep watching
 
 These scores are at least 50 with usable evidence. They still need watching.
 
-- Adaptability: 50.5, confidence usable
+- Adaptability: 50.4, confidence usable
 
 ## Missing data
 

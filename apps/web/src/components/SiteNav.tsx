@@ -2,9 +2,11 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useEffect, useId, useRef, useState } from 'react'
-import { Icon } from '@/components/Icon'
+import { useCallback, useEffect, useId, useRef, useState } from 'react'
+import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { Flag } from '@/components/ui'
+import { ChallengeDialog } from '@/components/ChallengeDialog'
+import { CommandMenu } from '@/components/CommandMenu'
 import {
   FOOTER_NAV_GROUPS,
   navRows,
@@ -87,9 +89,120 @@ function footerColumns(groups: { items: unknown[] }[]): string {
 }
 
 const TAB =
-  'inline-block border-b-2 border-transparent pb-3 text-xs font-medium text-[var(--muted)] transition-all duration-200 hover:text-[var(--foreground)]'
+  'inline-flex items-center gap-1.5 border-b-2 border-transparent pb-3 text-xs font-medium text-[var(--muted)] transition-all duration-200 hover:text-[var(--foreground)]'
 const TAB_CURRENT =
-  'inline-block border-b-2 border-[var(--primary)] pb-3 text-xs font-medium text-[var(--foreground)]'
+  'inline-flex items-center gap-1.5 border-b-2 border-[var(--primary)] pb-3 text-xs font-medium text-[var(--foreground)]'
+
+const SCROLL_THRESHOLD = 12
+
+/**
+ * Hide the sticky header while the reader is moving down, then bring it back
+ * after a meaningful upward movement. Scroll position and direction are kept
+ * in refs so the listener does not render on every scroll frame.
+ */
+function useAutoHideOnScroll(pathname: string) {
+  const [hidden, setHidden] = useState(false)
+  const hiddenRef = useRef(false)
+  const lastScrollY = useRef(0)
+  const accumulatedDelta = useRef(0)
+  const direction = useRef<'up' | 'down' | null>(null)
+  const frame = useRef<number | null>(null)
+
+  useEffect(() => {
+    const reveal = () => {
+      accumulatedDelta.current = 0
+      if (!hiddenRef.current) return
+      hiddenRef.current = false
+      setHidden(false)
+    }
+
+    lastScrollY.current = window.scrollY
+
+    const onScroll = () => {
+      if (frame.current !== null) return
+
+      frame.current = window.requestAnimationFrame(() => {
+        frame.current = null
+        const currentY = window.scrollY
+        const delta = currentY - lastScrollY.current
+        lastScrollY.current = currentY
+
+        if (currentY <= 8) {
+          direction.current = null
+          reveal()
+          return
+        }
+        if (delta === 0) return
+
+        const nextDirection = delta > 0 ? 'down' : 'up'
+        if (direction.current !== nextDirection) {
+          direction.current = nextDirection
+          accumulatedDelta.current = 0
+        }
+        accumulatedDelta.current += delta
+
+        if (
+          direction.current === 'down' &&
+          !hiddenRef.current &&
+          accumulatedDelta.current >= SCROLL_THRESHOLD
+        ) {
+          hiddenRef.current = true
+          setHidden(true)
+          accumulatedDelta.current = 0
+        } else if (
+          direction.current === 'up' &&
+          hiddenRef.current &&
+          accumulatedDelta.current <= -SCROLL_THRESHOLD
+        ) {
+          reveal()
+        }
+      })
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      if (frame.current !== null) window.cancelAnimationFrame(frame.current)
+      frame.current = null
+    }
+  }, [])
+
+  /* Route changes should always start with the navigation available. */
+  useEffect(() => {
+    hiddenRef.current = false
+    setHidden(false)
+    accumulatedDelta.current = 0
+    direction.current = null
+    lastScrollY.current = window.scrollY
+  }, [pathname])
+
+  return {
+    hidden,
+    reveal: () => {
+      accumulatedDelta.current = 0
+      if (!hiddenRef.current) return
+      hiddenRef.current = false
+      setHidden(false)
+    },
+  }
+}
+
+/** Sticky site chrome that gives the reader the header back when scrolling up. */
+export function ScrollAwareHeader({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname()
+  const { hidden, reveal } = useAutoHideOnScroll(pathname)
+
+  return (
+    <header
+      onFocusCapture={reveal}
+      className={`sticky top-0 z-40 w-full border-b border-[var(--rule)] bg-[var(--background)]/95 backdrop-blur will-change-transform transition-transform duration-200 ease-out motion-reduce:transition-none ${
+        hidden ? '-translate-y-full' : 'translate-y-0'
+      }`}
+    >
+      {children}
+    </header>
+  )
+}
 
 /**
  * One crumb: a single place in the trail, or a choice between the readings of
@@ -131,7 +244,14 @@ function Crumb({ nodes, active }: { nodes: NavNode[]; active: NavNode | null }) 
 }
 
 /** One entry inside an opened section, on either band. */
+function capabilityIcon(node: NavNode) {
+  const match = /^\/capabilities\/([^/]+)$/.exec(node.href)
+  if (!match) return null
+  return DIMENSION_ICON[match[1] as keyof typeof DIMENSION_ICON] ?? null
+}
+
 function MenuItem({ node, current, mobile }: { node: NavNode; current: boolean; mobile?: boolean }) {
+  const icon = capabilityIcon(node)
   return (
     <Link
       href={node.href}
@@ -142,6 +262,7 @@ function MenuItem({ node, current, mobile }: { node: NavNode; current: boolean; 
         mobile ? ' justify-start py-2.5 text-left' : ' justify-end text-right'
       }`}
     >
+      {icon ? <Icon name={icon} size={14} className="shrink-0" /> : null}
       {node.iso3 ? <Flag iso3={node.iso3} /> : null}
       {node.label}
     </Link>
@@ -160,15 +281,20 @@ function MenuItem({ node, current, mobile }: { node: NavNode; current: boolean; 
  * The panel hangs directly under the link, and the gap above it is a
  * transparent part of the panel rather than a gap: empty space between a
  * trigger and what it opens is somewhere for the pointer to fall through. It
- * closes when the pointer leaves both, after a beat long enough to survive a
- * cut corner, and on Escape with focus back on the link, and on arriving at a
- * new page.
+ * closes as soon as the pointer leaves both, and on Escape with focus back on
+ * the link, and on arriving at a new page.
  *
  * A keyboard has no hover, so ArrowDown from the link opens the panel and
  * lands on its first item, and the arrow keys walk it from there because
  * `role="menu"` promises they will. See D85.
  */
-function SectionMenu({ node, current }: { node: NavNode; current: boolean }) {
+function SectionMenu({
+  node,
+  current,
+}: {
+  node: NavNode
+  current: boolean
+}) {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
   /* Which item the keyboard asked for, held until the panel exists to hold it. */
@@ -176,7 +302,6 @@ function SectionMenu({ node, current }: { node: NavNode; current: boolean }) {
   const wrapper = useRef<HTMLDivElement>(null)
   const link = useRef<HTMLAnchorElement>(null)
   const panel = useRef<HTMLDivElement>(null)
-  const closing = useRef<ReturnType<typeof setTimeout> | null>(null)
   const panelId = useId()
   const entries = sectionMenuEntries(node, pathname)
 
@@ -189,17 +314,12 @@ function SectionMenu({ node, current }: { node: NavNode; current: boolean }) {
     items[(index + items.length) % items.length]?.focus()
   }
 
-  function hold() {
-    if (!closing.current) return
-    clearTimeout(closing.current)
-    closing.current = null
-  }
-
-  /* A pointer cutting the corner between the link and the panel should not
-     close the thing it is on its way to. */
-  function closeSoon() {
-    hold()
-    closing.current = setTimeout(() => setOpen(false), 140)
+  /* The panel and its transparent bridge are children of the wrapper, so a
+     leave here means the pointer has gone to another section or the page. A
+     synchronous close prevents the next section's hover menu from overlapping
+     this one. */
+  function close() {
+    setOpen(false)
   }
 
   /* A keyboard open has to wait for the panel to mount before it can focus
@@ -215,8 +335,6 @@ function SectionMenu({ node, current }: { node: NavNode; current: boolean }) {
   useEffect(() => {
     setOpen(false)
   }, [pathname])
-
-  useEffect(() => () => hold(), [])
 
   useEffect(() => {
     if (!open) return
@@ -237,6 +355,7 @@ function SectionMenu({ node, current }: { node: NavNode; current: boolean }) {
     return (
       <Link
         href={node.href}
+        lang={node.lang}
         aria-current={current ? 'page' : undefined}
         className={current ? SECTION_CURRENT : SECTION_LINK}
       >
@@ -250,10 +369,9 @@ function SectionMenu({ node, current }: { node: NavNode; current: boolean }) {
       ref={wrapper}
       className="relative"
       onMouseEnter={() => {
-        hold()
         setOpen(true)
       }}
-      onMouseLeave={closeSoon}
+      onMouseLeave={close}
     >
       <Link
         ref={link}
@@ -265,7 +383,6 @@ function SectionMenu({ node, current }: { node: NavNode; current: boolean }) {
         onKeyDown={(event) => {
           if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp') return
           event.preventDefault()
-          hold()
           setOpen(true)
           setPendingFocus(event.key === 'ArrowDown' ? 0 : -1)
         }}
@@ -329,7 +446,11 @@ function SectionLinks({ sections }: { sections: NavRow }) {
   return (
     <nav aria-label="Sections" className="flex flex-wrap items-center justify-end gap-1">
       {sections.entries.map((node) => (
-        <SectionMenu key={node.href} node={node} current={node === sections.active} />
+        <SectionMenu
+          key={node.href}
+          node={node}
+          current={node === sections.active}
+        />
       ))}
     </nav>
   )
@@ -417,6 +538,7 @@ export function HeaderNav() {
   const pathname = usePathname()
   const rows = navRows(pathname)
   const [menuOpen, setMenuOpen] = useState(false)
+  const closeMobileMenu = useCallback(() => setMenuOpen(false), [])
 
   useEffect(() => {
     setMenuOpen(false)
@@ -427,20 +549,23 @@ export function HeaderNav() {
 
   return (
     <div className="contents">
-      <div className="hidden md:ml-auto md:block">
-        <SectionLinks sections={sections} />
+      <div className="ml-auto flex items-center gap-1">
+        <div className="hidden md:block">
+          <SectionLinks sections={sections} />
+        </div>
+        <CommandMenu onOpen={closeMobileMenu} />
+        <ChallengeDialog />
+        <button
+          type="button"
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={menuOpen}
+          aria-controls="site-nav-mobile"
+          onClick={() => setMenuOpen((open) => !open)}
+          className="inline-flex h-10 w-10 items-center justify-center rounded-md text-[var(--foreground)] transition-colors hover:bg-[var(--surface-sunken)] md:hidden"
+        >
+          <Icon name={menuOpen ? 'x' : 'menu'} size={20} />
+        </button>
       </div>
-
-      <button
-        type="button"
-        aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-        aria-expanded={menuOpen}
-        aria-controls="site-nav-mobile"
-        onClick={() => setMenuOpen((open) => !open)}
-        className="ml-auto inline-flex h-10 w-10 items-center justify-center rounded-md text-[var(--foreground)] transition-colors hover:bg-[var(--surface-sunken)] md:hidden"
-      >
-        <Icon name={menuOpen ? 'x' : 'menu'} size={20} />
-      </button>
 
       {/* The sheet rides inside a sticky header, and a sticky box taller than the
           window has a bottom the reader cannot scroll to. It carries its own
@@ -504,18 +629,22 @@ export function SectionTabs() {
           {/* The page set stays at the right edge from md up. On narrow screens
               the surrounding flex row wraps naturally below the context. */}
           <ul className="-mb-px flex flex-wrap gap-x-6 pt-1 md:justify-end">
-            {tabs.entries.map((node) => (
-              <li key={node.href}>
-                <Link
-                  href={node.href}
-                  lang={node.lang}
-                  aria-current={node === tabs.active ? 'page' : undefined}
-                  className={node === tabs.active ? TAB_CURRENT : TAB}
-                >
-                  {node.label}
-                </Link>
-              </li>
-            ))}
+            {tabs.entries.map((node) => {
+              const icon = capabilityIcon(node)
+              return (
+                <li key={node.href}>
+                  <Link
+                    href={node.href}
+                    lang={node.lang}
+                    aria-current={node === tabs.active ? 'page' : undefined}
+                    className={node === tabs.active ? TAB_CURRENT : TAB}
+                  >
+                    {icon ? <Icon name={icon} size={14} className="shrink-0" /> : null}
+                    {node.label}
+                  </Link>
+                </li>
+              )
+            })}
           </ul>
         </nav>
       </div>

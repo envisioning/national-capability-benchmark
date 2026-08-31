@@ -2,21 +2,21 @@
 
 *Gerado em 2026-08-31*
 
-Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
+Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
 ## Onde o Canadá está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 66,3 | 0,64 (utilizável) | +6,5 em 10 anos, sobre 5 indicadores |
-| Agência | 79,4 | 0,49 (utilizável) | +1,5 em 10 anos, sobre 2 indicadores |
-| Coordenação | 95,7 | 0,14 (muito fraca) | sem base de tendência |
-| Confiança | 54 | 0,16 (muito fraca) | sem base de tendência |
+| Agência | 79,2 | 0,49 (utilizável) | +1,5 em 10 anos, sobre 2 indicadores |
+| Coordenação | 95,7 | 0,23 (muito fraca) | sem base de tendência |
+| Confiança | 54 | 0,26 (fraca) | sem base de tendência |
 | Aprendizagem | 56,9 | 0,53 (utilizável) | +3,3 em 10 anos, sobre 2 indicadores |
-| Experimentação | 24,8 | 0,18 (muito fraca) | -5,1 em 10 anos, sobre 2 indicadores |
-| Adaptação | 80,7 | 0,48 (utilizável) | +5,1 em 10 anos, sobre 4 indicadores |
-| Construção | 32,8 | 0,52 (utilizável) | -0,4 em 10 anos, sobre 4 indicadores |
-| Propósito compartilhado | 64,2 | 0,25 (muito fraca) | +4,4 em 10 anos, sobre 2 indicadores |
+| Experimentação | 24,9 | 0,18 (muito fraca) | -5 em 10 anos, sobre 2 indicadores |
+| Adaptação | 80,5 | 0,48 (utilizável) | +5,1 em 10 anos, sobre 4 indicadores |
+| Construção | 32,8 | 0,6 (utilizável) | -0,4 em 10 anos, sobre 4 indicadores |
+| Propósito compartilhado | 64,2 | 0,29 (fraca) | +4,4 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para elevar
 
@@ -36,22 +36,6 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Coordenação: confiança 0,14, muito fraca
-
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
-
-### Confiança: confiança 0,16, muito fraca
-
-Quanta cooperação é possível além das redes pessoais imediatas?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
-
 ### Experimentação: confiança 0,18, muito fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
@@ -59,7 +43,23 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
-### Propósito compartilhado: confiança 0,25, muito fraca
+### Coordenação: confiança 0,23, muito fraca
+
+Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+
+- Baseada em 2 indicadores observados.
+- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
+- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
+
+### Confiança: confiança 0,26, fraca
+
+Quanta cooperação é possível além das redes pessoais imediatas?
+
+- Baseada em 2 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
+
+### Propósito compartilhado: confiança 0,29, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
@@ -71,8 +71,8 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 
 Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência utilizável. Ainda precisam ser acompanhadas.
 
-- Adaptação: 80,7, confiança utilizável
-- Agência: 79,4, confiança utilizável
+- Adaptação: 80,5, confiança utilizável
+- Agência: 79,2, confiança utilizável
 - Antecipação: 66,3, confiança utilizável
 - Aprendizagem: 56,9, confiança utilizável
 

@@ -2,21 +2,21 @@
 
 *Gerado em 2026-08-31*
 
-Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
+Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
 ## Onde a China está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 35,1 | 0,64 (utilizável) | +14,5 em 10 anos, sobre 5 indicadores |
-| Agência | 86,8 | 0,61 (utilizável) | +21,9 em 10 anos, sobre 4 indicadores |
-| Coordenação | 65,9 | 0,26 (fraca) | sem base de tendência |
-| Confiança | 83,2 | 0,16 (muito fraca) | sem base de tendência |
+| Agência | 86,1 | 0,61 (utilizável) | +21,9 em 10 anos, sobre 4 indicadores |
+| Coordenação | 65,8 | 0,41 (fraca) | sem base de tendência |
+| Confiança | 83,2 | 0,26 (fraca) | sem base de tendência |
 | Aprendizagem | 59,4 | 0,56 (utilizável) | +12,4 em 10 anos, sobre 2 indicadores, 1 truncados na borda da régua |
 | Experimentação | 100 | 0,18 (muito fraca) | +30,6 em 10 anos, sobre 2 indicadores |
-| Adaptação | 81,6 | 0,47 (utilizável) | +11,8 em 10 anos, sobre 4 indicadores |
-| Construção | 64,9 | 0,54 (utilizável) | -1,9 em 10 anos, sobre 4 indicadores |
-| Propósito compartilhado | 43,8 | 0,25 (muito fraca) | +0,7 em 10 anos, sobre 2 indicadores |
+| Adaptação | 81,4 | 0,47 (utilizável) | +11,7 em 10 anos, sobre 4 indicadores |
+| Construção | 64,9 | 0,62 (utilizável) | -1,9 em 10 anos, sobre 4 indicadores |
+| Propósito compartilhado | 43,8 | 0,29 (fraca) | +0,7 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para elevar
 
@@ -35,14 +35,6 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Confiança: confiança 0,16, muito fraca
-
-Quanta cooperação é possível além das redes pessoais imediatas?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
-
 ### Experimentação: confiança 0,18, muito fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
@@ -50,7 +42,15 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
-### Propósito compartilhado: confiança 0,25, muito fraca
+### Confiança: confiança 0,26, fraca
+
+Quanta cooperação é possível além das redes pessoais imediatas?
+
+- Baseada em 2 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
+
+### Propósito compartilhado: confiança 0,29, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
@@ -58,7 +58,7 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
 - Bases rejeitadas: Voz e responsabilização.
 
-### Coordenação: confiança 0,26, fraca
+### Coordenação: confiança 0,41, fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
 
@@ -70,8 +70,8 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência utilizável. Ainda precisam ser acompanhadas.
 
-- Agência: 86,8, confiança utilizável
-- Adaptação: 81,6, confiança utilizável
+- Agência: 86,1, confiança utilizável
+- Adaptação: 81,4, confiança utilizável
 - Construção: 64,9, confiança utilizável
 - Aprendizagem: 59,4, confiança utilizável
 

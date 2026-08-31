@@ -1,0 +1,1797 @@
+{
+  "generatedAt": "2026-08-31T19:46:27.293Z",
+  "iso3": "PRT",
+  "country": "Portugal",
+  "dimensions": [
+    {
+      "dimension": "anticipation",
+      "kind": "hold",
+      "score": 66.8,
+      "confidence": 0.644,
+      "band": "usable",
+      "trend": {
+        "spanYears": 10,
+        "delta": 14.3,
+        "basket": 5,
+        "clamped": 0
+      },
+      "scoredOn": [
+        "rd_expenditure_gdp",
+        "researchers_per_million",
+        "sci_articles_per_million",
+        "statistical_performance",
+        "secure_internet_servers"
+      ],
+      "gaps": [
+        "government_foresight_capacity",
+        "basic_research_share"
+      ],
+      "retired": [],
+      "exemplars": [
+        {
+          "iso3": "SWE",
+          "country": "Sweden",
+          "score": 83.5,
+          "confidence": 0.644
+        },
+        {
+          "iso3": "FIN",
+          "country": "Finland",
+          "score": 82,
+          "confidence": 0.644
+        },
+        {
+          "iso3": "CHE",
+          "country": "Switzerland",
+          "score": 81.1,
+          "confidence": 0.644
+        }
+      ],
+      "evidenceElsewhere": [
+        {
+          "id": "bra-embrapa",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "government_foresight_capacity",
+          "title": "Embrapa, a fifty-year bet on tropical agriculture"
+        },
+        {
+          "id": "nld-delta-programme",
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "indicatorId": "government_foresight_capacity",
+          "title": "The Delta Programme and its fund"
+        },
+        {
+          "id": "bra-lei-informatica",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "basic_research_share",
+          "title": "Lei de Informática, a sectoral industrial policy"
+        },
+        {
+          "id": "bra-cgee",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "government_foresight_capacity",
+          "title": "CGEE, the strategic studies center"
+        },
+        {
+          "id": "sgp-csf",
+          "iso3": "SGP",
+          "country": "Singapore",
+          "indicatorId": "government_foresight_capacity",
+          "title": "Centre for Strategic Futures, foresight inside government"
+        },
+        {
+          "id": "gbr-carbon-budgets",
+          "iso3": "GBR",
+          "country": "United Kingdom",
+          "indicatorId": "government_foresight_capacity",
+          "title": "Legally binding carbon budgets"
+        },
+        {
+          "id": "jpn-fukushima-roadmap",
+          "iso3": "JPN",
+          "country": "Japan",
+          "indicatorId": "government_foresight_capacity",
+          "title": "Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon"
+        },
+        {
+          "id": "chn-basic-research",
+          "iso3": "CHN",
+          "country": "China",
+          "indicatorId": "basic_research_share",
+          "title": "National basic-research funding allocation"
+        }
+      ],
+      "institutionIds": []
+    },
+    {
+      "dimension": "agency",
+      "kind": "hold",
+      "score": 71.7,
+      "confidence": 0.613,
+      "band": "usable",
+      "trend": {
+        "spanYears": 10,
+        "delta": 9.6,
+        "basket": 4,
+        "clamped": 0
+      },
+      "scoredOn": [
+        "new_business_density",
+        "business_start_days",
+        "business_start_procedures",
+        "internet_users",
+        "account_ownership",
+        "domestic_credit_private"
+      ],
+      "gaps": [
+        "adult_digital_skills",
+        "perceived_control"
+      ],
+      "retired": [],
+      "exemplars": [
+        {
+          "iso3": "USA",
+          "country": "United States",
+          "score": 92.5,
+          "confidence": 0.495
+        },
+        {
+          "iso3": "AUS",
+          "country": "Australia",
+          "score": 89.1,
+          "confidence": 0.613
+        },
+        {
+          "iso3": "GBR",
+          "country": "United Kingdom",
+          "score": 86.7,
+          "confidence": 0.613
+        }
+      ],
+      "evidenceElsewhere": [
+        {
+          "id": "bra-sibratec",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "adult_digital_skills",
+          "title": "SIBRATEC, the documented innovation-centre network"
+        },
+        {
+          "id": "sgp-digital-skills",
+          "iso3": "SGP",
+          "country": "Singapore",
+          "indicatorId": "adult_digital_skills",
+          "title": "Singapore's national ICT-skills measurement and baseline"
+        }
+      ],
+      "institutionIds": []
+    },
+    {
+      "dimension": "coordination",
+      "kind": "measure",
+      "score": 91.6,
+      "confidence": 0.387,
+      "band": "thin",
+      "trend": null,
+      "scoredOn": [
+        "time_to_export",
+        "budget_execution_fidelity",
+        "civil_society_strength"
+      ],
+      "gaps": [
+        "university_industry_collaboration",
+        "public_private_collaboration"
+      ],
+      "retired": [
+        "government_effectiveness",
+        "regulatory_quality",
+        "logistics_performance"
+      ],
+      "exemplars": [],
+      "evidenceElsewhere": [
+        {
+          "id": "deu-fraunhofer",
+          "iso3": "DEU",
+          "country": "Germany",
+          "indicatorId": "university_industry_collaboration",
+          "title": "The Fraunhofer contract-research model"
+        },
+        {
+          "id": "ken-mpesa",
+          "iso3": "KEN",
+          "country": "Kenya",
+          "indicatorId": "public_private_collaboration",
+          "title": "M-Pesa, and the regulator that let it run"
+        },
+        {
+          "id": "che-dual-vet",
+          "iso3": "CHE",
+          "country": "Switzerland",
+          "indicatorId": "public_private_collaboration",
+          "title": "Dual-track vocational training"
+        },
+        {
+          "id": "bra-itaipu",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "public_private_collaboration",
+          "title": "Itaipu Binacional, the treaty-built power system"
+        },
+        {
+          "id": "kor-epb",
+          "iso3": "KOR",
+          "country": "South Korea",
+          "indicatorId": "public_private_collaboration",
+          "title": "Economic Planning Board, long-run industrial coordination"
+        },
+        {
+          "id": "ury-snig",
+          "iso3": "URY",
+          "country": "Uruguay",
+          "indicatorId": "public_private_collaboration",
+          "title": "SNIG, universal individual cattle traceability"
+        },
+        {
+          "id": "nld-ser",
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "indicatorId": "public_private_collaboration",
+          "title": "Social and Economic Council, the institutionalised polder bargain"
+        },
+        {
+          "id": "nld-topsectors",
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "indicatorId": "public_private_collaboration",
+          "title": "Top Sectors and mission-driven innovation policy"
+        },
+        {
+          "id": "nld-ideal",
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "indicatorId": "public_private_collaboration",
+          "title": "iDEAL, interoperable online payments through Dutch banks"
+        },
+        {
+          "id": "nld-eherkenning",
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "indicatorId": "public_private_collaboration",
+          "title": "eHerkenning, a public-private business identity framework"
+        },
+        {
+          "id": "nld-digipoort",
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "indicatorId": "public_private_collaboration",
+          "title": "Digipoort, an electronic post office for government–business data"
+        },
+        {
+          "id": "chl-chilecompra",
+          "iso3": "CHL",
+          "country": "Chile",
+          "indicatorId": "public_private_collaboration",
+          "title": "ChileCompra, a national public-procurement marketplace"
+        },
+        {
+          "id": "chl-startup-chile",
+          "iso3": "CHL",
+          "country": "Chile",
+          "indicatorId": "public_private_collaboration",
+          "title": "Start-Up Chile, a public accelerator for global startups"
+        },
+        {
+          "id": "col-secop-ii",
+          "iso3": "COL",
+          "country": "Colombia",
+          "indicatorId": "public_private_collaboration",
+          "title": "SECOP II, a transaction platform for public procurement"
+        },
+        {
+          "id": "peru-obras-por-impuestos",
+          "iso3": "PER",
+          "country": "Peru",
+          "indicatorId": "public_private_collaboration",
+          "title": "Obras por Impuestos, firms financing public infrastructure"
+        },
+        {
+          "id": "cri-fonafifo-psa",
+          "iso3": "CRI",
+          "country": "Costa Rica",
+          "indicatorId": "public_private_collaboration",
+          "title": "FONAFIFO Payment for Environmental Services"
+        },
+        {
+          "id": "ecu-facturacion-electronica",
+          "iso3": "ECU",
+          "country": "Ecuador",
+          "indicatorId": "public_private_collaboration",
+          "title": "SRI electronic invoicing at economy-wide scale"
+        },
+        {
+          "id": "ecu-credito-desarrollo-humano",
+          "iso3": "ECU",
+          "country": "Ecuador",
+          "indicatorId": "public_private_collaboration",
+          "title": "Crédito de Desarrollo Humano for beneficiary-led businesses"
+        },
+        {
+          "id": "pry-ruta-py02",
+          "iso3": "PRY",
+          "country": "Paraguay",
+          "indicatorId": "public_private_collaboration",
+          "title": "Ruta PY02 public-private road concession"
+        },
+        {
+          "id": "arg-vaca-muerta",
+          "iso3": "ARG",
+          "country": "Argentina",
+          "indicatorId": "public_private_collaboration",
+          "title": "Vaca Muerta unconventional energy build-out"
+        },
+        {
+          "id": "idn-palapa-ring",
+          "iso3": "IDN",
+          "country": "Indonesia",
+          "indicatorId": "public_private_collaboration",
+          "title": "Palapa Ring national fibre network"
+        },
+        {
+          "id": "mys-jendela",
+          "iso3": "MYS",
+          "country": "Malaysia",
+          "indicatorId": "public_private_collaboration",
+          "title": "JENDELA national digital-network plan"
+        },
+        {
+          "id": "tha-promptpay",
+          "iso3": "THA",
+          "country": "Thailand",
+          "indicatorId": "public_private_collaboration",
+          "title": "PromptPay national instant-payment rail"
+        },
+        {
+          "id": "esp-kit-digital",
+          "iso3": "ESP",
+          "country": "Spain",
+          "indicatorId": "public_private_collaboration",
+          "title": "Kit Digital SME digitalisation programme"
+        },
+        {
+          "id": "pol-baltic-pipe",
+          "iso3": "POL",
+          "country": "Poland",
+          "indicatorId": "public_private_collaboration",
+          "title": "Baltic Pipe gas interconnection"
+        },
+        {
+          "id": "swe-swish",
+          "iso3": "SWE",
+          "country": "Sweden",
+          "indicatorId": "public_private_collaboration",
+          "title": "Swish mobile instant payments"
+        },
+        {
+          "id": "irl-national-broadband-plan",
+          "iso3": "IRL",
+          "country": "Ireland",
+          "indicatorId": "public_private_collaboration",
+          "title": "National Broadband Plan rural fibre rollout"
+        },
+        {
+          "id": "are-uae-pass",
+          "iso3": "ARE",
+          "country": "United Arab Emirates",
+          "indicatorId": "public_private_collaboration",
+          "title": "UAE Pass, the shared digital identity layer"
+        },
+        {
+          "id": "gtm-guatecompras",
+          "iso3": "GTM",
+          "country": "Guatemala",
+          "indicatorId": "public_private_collaboration",
+          "title": "Guatecompras, the national procurement marketplace"
+        },
+        {
+          "id": "gbr-ktp",
+          "iso3": "GBR",
+          "country": "United Kingdom",
+          "indicatorId": "university_industry_collaboration",
+          "title": "Knowledge Transfer Partnerships"
+        },
+        {
+          "id": "aus-crc",
+          "iso3": "AUS",
+          "country": "Australia",
+          "indicatorId": "university_industry_collaboration",
+          "title": "Cooperative Research Centres programme"
+        }
+      ],
+      "institutionIds": []
+    },
+    {
+      "dimension": "trust",
+      "kind": "measure",
+      "score": 36.8,
+      "confidence": 0.255,
+      "band": "thin",
+      "trend": null,
+      "scoredOn": [
+        "contract_enforcement_days",
+        "interpersonal_trust"
+      ],
+      "gaps": [
+        "institutional_trust",
+        "willingness_to_cooperate_strangers",
+        "court_case_clearance"
+      ],
+      "retired": [
+        "rule_of_law",
+        "control_of_corruption",
+        "homicide_rate"
+      ],
+      "exemplars": [],
+      "evidenceElsewhere": [
+        {
+          "id": "bra-cadunico",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "institutional_trust",
+          "title": "Cadastro Único, the unified social registry"
+        },
+        {
+          "id": "bra-portal-transparencia",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "institutional_trust",
+          "title": "Portal da Transparência, the federal open-books system"
+        },
+        {
+          "id": "kor-mydata",
+          "iso3": "KOR",
+          "country": "South Korea",
+          "indicatorId": "institutional_trust",
+          "title": "MyData, citizen-directed data portability"
+        },
+        {
+          "id": "sgp-court-clearance",
+          "iso3": "SGP",
+          "country": "Singapore",
+          "indicatorId": "court_case_clearance",
+          "title": "Singapore Courts' case-clearance discipline"
+        }
+      ],
+      "institutionIds": []
+    },
+    {
+      "dimension": "learning",
+      "kind": "hold",
+      "score": 57.1,
+      "confidence": 0.52,
+      "band": "usable",
+      "trend": {
+        "spanYears": 10,
+        "delta": 4.4,
+        "basket": 2,
+        "clamped": 0
+      },
+      "scoredOn": [
+        "human_capital_index",
+        "tertiary_enrollment",
+        "education_expenditure_gdp",
+        "vocational_secondary_share",
+        "firm_training_incidence"
+      ],
+      "gaps": [
+        "adult_learning_participation",
+        "research_citation_impact"
+      ],
+      "retired": [],
+      "exemplars": [
+        {
+          "iso3": "FIN",
+          "country": "Finland",
+          "score": 77.9,
+          "confidence": 0.543
+        },
+        {
+          "iso3": "AUS",
+          "country": "Australia",
+          "score": 70.3,
+          "confidence": 0.543
+        },
+        {
+          "iso3": "GBR",
+          "country": "United Kingdom",
+          "score": 68.6,
+          "confidence": 0.52
+        }
+      ],
+      "evidenceElsewhere": [
+        {
+          "id": "sgp-skillsfuture",
+          "iso3": "SGP",
+          "country": "Singapore",
+          "indicatorId": "adult_learning_participation",
+          "title": "SkillsFuture Credit"
+        },
+        {
+          "id": "fin-libraries",
+          "iso3": "FIN",
+          "country": "Finland",
+          "indicatorId": "adult_learning_participation",
+          "title": "The public library system"
+        },
+        {
+          "id": "bra-capes",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "research_citation_impact",
+          "title": "CAPES, federal postgraduate funding"
+        },
+        {
+          "id": "bra-inep",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "research_citation_impact",
+          "title": "INEP, the standing education statistics institution"
+        },
+        {
+          "id": "idn-prakerja",
+          "iso3": "IDN",
+          "country": "Indonesia",
+          "indicatorId": "adult_learning_participation",
+          "title": "Kartu Prakerja, a national lifelong-learning delivery system"
+        },
+        {
+          "id": "fra-cpf",
+          "iso3": "FRA",
+          "country": "France",
+          "indicatorId": "adult_learning_participation",
+          "title": "Compte personnel de formation"
+        }
+      ],
+      "institutionIds": []
+    },
+    {
+      "dimension": "experimentation",
+      "kind": "measure",
+      "score": 30.3,
+      "confidence": 0.178,
+      "band": "very_thin",
+      "trend": {
+        "spanYears": 10,
+        "delta": 4.1,
+        "basket": 2,
+        "clamped": 0
+      },
+      "scoredOn": [
+        "resident_patents_per_million",
+        "resident_trademarks_per_million"
+      ],
+      "gaps": [
+        "venture_capital_gdp",
+        "regulatory_sandbox_activity",
+        "university_spinouts",
+        "business_rd_share"
+      ],
+      "retired": [],
+      "exemplars": [],
+      "evidenceElsewhere": [
+        {
+          "id": "gbr-fca-sandbox",
+          "iso3": "GBR",
+          "country": "United Kingdom",
+          "indicatorId": "regulatory_sandbox_activity",
+          "title": "The FCA regulatory sandbox"
+        },
+        {
+          "id": "isr-yozma",
+          "iso3": "ISR",
+          "country": "Israel",
+          "indicatorId": "venture_capital_gdp",
+          "title": "Yozma, the venture capital catalyst"
+        },
+        {
+          "id": "bra-embrapii",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "business_rd_share",
+          "title": "EMBRAPII, industry-led applied research"
+        },
+        {
+          "id": "kor-regulatory-sandbox",
+          "iso3": "KOR",
+          "country": "South Korea",
+          "indicatorId": "regulatory_sandbox_activity",
+          "title": "Korean regulatory-sandbox system across eight sectors"
+        },
+        {
+          "id": "sgp-mas-sandbox",
+          "iso3": "SGP",
+          "country": "Singapore",
+          "indicatorId": "regulatory_sandbox_activity",
+          "title": "MAS FinTech Regulatory Sandbox variants"
+        },
+        {
+          "id": "gbr-british-patient-capital",
+          "iso3": "GBR",
+          "country": "United Kingdom",
+          "indicatorId": "venture_capital_gdp",
+          "title": "British Patient Capital, a public venture-capital catalyst"
+        },
+        {
+          "id": "gbr-icure",
+          "iso3": "GBR",
+          "country": "United Kingdom",
+          "indicatorId": "university_spinouts",
+          "title": "ICURe, from university research to spinouts"
+        },
+        {
+          "id": "gbr-business-rd-share",
+          "iso3": "GBR",
+          "country": "United Kingdom",
+          "indicatorId": "business_rd_share",
+          "title": "Business-funded R&D as the UK's dominant research sector"
+        }
+      ],
+      "institutionIds": []
+    },
+    {
+      "dimension": "adaptability",
+      "kind": "hold",
+      "score": 77,
+      "confidence": 0.475,
+      "band": "usable",
+      "trend": {
+        "spanYears": 10,
+        "delta": 15.6,
+        "basket": 4,
+        "clamped": 0
+      },
+      "scoredOn": [
+        "labor_force_participation",
+        "unemployment_rate",
+        "broadband_subscriptions",
+        "electricity_transmission_losses"
+      ],
+      "gaps": [
+        "long_term_unemployment_share",
+        "export_diversification",
+        "disaster_preparedness",
+        "institutional_responsiveness"
+      ],
+      "retired": [],
+      "exemplars": [
+        {
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "score": 90,
+          "confidence": 0.475
+        },
+        {
+          "iso3": "CHE",
+          "country": "Switzerland",
+          "score": 88.5,
+          "confidence": 0.475
+        },
+        {
+          "iso3": "JPN",
+          "country": "Japan",
+          "score": 86.1,
+          "confidence": 0.465
+        }
+      ],
+      "evidenceElsewhere": [
+        {
+          "id": "bra-plano-real",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Plano Real, the 1994 currency stabilisation"
+        },
+        {
+          "id": "bra-proalcool",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Proalcool, the fuel substitution after the oil shock"
+        },
+        {
+          "id": "arg-convertibility",
+          "iso3": "ARG",
+          "country": "Argentina",
+          "indicatorId": "institutional_responsiveness",
+          "title": "The Convertibility Plan, and its collapse"
+        },
+        {
+          "id": "deu-kurzarbeit",
+          "iso3": "DEU",
+          "country": "Germany",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Kurzarbeit in the 2008-2009 crisis"
+        },
+        {
+          "id": "tur-disinflation-2001",
+          "iso3": "TUR",
+          "country": "Turkey",
+          "indicatorId": "institutional_responsiveness",
+          "title": "The 2001 stabilisation, and its unwinding"
+        },
+        {
+          "id": "bra-telebras",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Telebras, the telecom system that was dismantled"
+        },
+        {
+          "id": "est-defence-league",
+          "iso3": "EST",
+          "country": "Estonia",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Estonian Defence League, national defence rebuilt after independence"
+        },
+        {
+          "id": "kor-kisa",
+          "iso3": "KOR",
+          "country": "South Korea",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Korea Internet and Security Agency, a consolidated digital authority"
+        },
+        {
+          "id": "deu-siren-network",
+          "iso3": "DEU",
+          "country": "Germany",
+          "indicatorId": "disaster_preparedness",
+          "title": "Federal siren warning network, and its dismantling"
+        },
+        {
+          "id": "nld-room-for-river",
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "indicatorId": "disaster_preparedness",
+          "title": "Room for the River, flood safety delivered across the Rhine branches"
+        },
+        {
+          "id": "nld-childcare-benefits",
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Childcare benefits administration, and the recovery after institutional failure"
+        },
+        {
+          "id": "nld-national-police",
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "indicatorId": "institutional_responsiveness",
+          "title": "National Police, one corps from twenty-five regional forces"
+        },
+        {
+          "id": "nld-nl-alert",
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "indicatorId": "disaster_preparedness",
+          "title": "NL-Alert, a tested multi-channel emergency warning system"
+        },
+        {
+          "id": "nld-digid-machtigen",
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "indicatorId": "institutional_responsiveness",
+          "title": "DigiD Machtigen, delegated access to public services"
+        },
+        {
+          "id": "nld-diginotar",
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "indicatorId": "institutional_responsiveness",
+          "title": "DigiNotar, a certificate breach that forced a trust-chain reset"
+        },
+        {
+          "id": "nld-pas",
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Programmatic Approach to Nitrogen, and the permitting reversal"
+        },
+        {
+          "id": "chl-27f-reconstruction",
+          "iso3": "CHL",
+          "country": "Chile",
+          "indicatorId": "disaster_preparedness",
+          "title": "27F reconstruction, a nationwide recovery programme after the 2010 earthquake"
+        },
+        {
+          "id": "col-digital-id",
+          "iso3": "COL",
+          "country": "Colombia",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Cédula digital, an identity service upgraded for mobile use"
+        },
+        {
+          "id": "col-victims-reparation",
+          "iso3": "COL",
+          "country": "Colombia",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Victims' reparations, a long-running administrative response to conflict"
+        },
+        {
+          "id": "col-fondo-adaptacion",
+          "iso3": "COL",
+          "country": "Colombia",
+          "indicatorId": "disaster_preparedness",
+          "title": "Fondo Adaptación, recovery and safer resettlement after La Niña"
+        },
+        {
+          "id": "jpn-my-number",
+          "iso3": "JPN",
+          "country": "Japan",
+          "indicatorId": "institutional_responsiveness",
+          "title": "My Number Card, a national identity rail extended into services"
+        },
+        {
+          "id": "jpn-tohoku-reconstruction",
+          "iso3": "JPN",
+          "country": "Japan",
+          "indicatorId": "disaster_preparedness",
+          "title": "Tōhoku reconstruction, a decade-long recovery programme"
+        },
+        {
+          "id": "peru-juntos",
+          "iso3": "PER",
+          "country": "Peru",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Juntos, a conditional-transfer system at national scale"
+        },
+        {
+          "id": "cri-firma-digital",
+          "iso3": "CRI",
+          "country": "Costa Rica",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Certified digital signature across public services"
+        },
+        {
+          "id": "cri-redcudi",
+          "iso3": "CRI",
+          "country": "Costa Rica",
+          "indicatorId": "institutional_responsiveness",
+          "title": "REDCUDI childcare network and SINIRUBE referrals"
+        },
+        {
+          "id": "ecu-dollarization",
+          "iso3": "ECU",
+          "country": "Ecuador",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Dollarization as an emergency monetary redesign"
+        },
+        {
+          "id": "ecu-16a-response",
+          "iso3": "ECU",
+          "country": "Ecuador",
+          "indicatorId": "disaster_preparedness",
+          "title": "2016 earthquake national emergency coordination"
+        },
+        {
+          "id": "pan-120-a-los-65",
+          "iso3": "PAN",
+          "country": "Panama",
+          "indicatorId": "institutional_responsiveness",
+          "title": "120 a los 65 social pension"
+        },
+        {
+          "id": "pan-canal-drought",
+          "iso3": "PAN",
+          "country": "Panama",
+          "indicatorId": "disaster_preparedness",
+          "title": "Canal water-and-transit response to the 2023–24 drought"
+        },
+        {
+          "id": "bol-bono-juana-azurduy",
+          "iso3": "BOL",
+          "country": "Bolivia",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Bono Juana Azurduy maternal and child health transfer"
+        },
+        {
+          "id": "bol-renta-dignidad",
+          "iso3": "BOL",
+          "country": "Bolivia",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Renta Dignidad non-contributory old-age pension"
+        },
+        {
+          "id": "pry-tekopora",
+          "iso3": "PRY",
+          "country": "Paraguay",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Tekoporã Mbarete family-support programme"
+        },
+        {
+          "id": "pry-sifen",
+          "iso3": "PRY",
+          "country": "Paraguay",
+          "indicatorId": "institutional_responsiveness",
+          "title": "SIFEN national electronic invoicing rollout"
+        },
+        {
+          "id": "arg-auh",
+          "iso3": "ARG",
+          "country": "Argentina",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Asignación Universal por Hijo child benefit"
+        },
+        {
+          "id": "arg-sube",
+          "iso3": "ARG",
+          "country": "Argentina",
+          "indicatorId": "institutional_responsiveness",
+          "title": "SUBE national electronic fare and subsidy rail"
+        },
+        {
+          "id": "ph-philsys",
+          "iso3": "PHL",
+          "country": "Philippines",
+          "indicatorId": "institutional_responsiveness",
+          "title": "PhilSys foundational national ID rollout"
+        },
+        {
+          "id": "ph-4ps",
+          "iso3": "PHL",
+          "country": "Philippines",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Pantawid Pamilyang Pilipino Program (4Ps)"
+        },
+        {
+          "id": "ph-yolanda-recovery",
+          "iso3": "PHL",
+          "country": "Philippines",
+          "indicatorId": "disaster_preparedness",
+          "title": "Typhoon Yolanda shelter and recovery programme"
+        },
+        {
+          "id": "idn-jkn",
+          "iso3": "IDN",
+          "country": "Indonesia",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Jaminan Kesehatan Nasional, a near-universal health-insurance pool"
+        },
+        {
+          "id": "idn-inarisk",
+          "iso3": "IDN",
+          "country": "Indonesia",
+          "indicatorId": "disaster_preparedness",
+          "title": "InaRISK national disaster-risk information platform"
+        },
+        {
+          "id": "vnm-vneid",
+          "iso3": "VNM",
+          "country": "Vietnam",
+          "indicatorId": "institutional_responsiveness",
+          "title": "VNeID national electronic identity"
+        },
+        {
+          "id": "vnm-health-insurance",
+          "iso3": "VNM",
+          "country": "Vietnam",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Vietnam Social Security health-insurance expansion"
+        },
+        {
+          "id": "vnm-yagi-recovery",
+          "iso3": "VNM",
+          "country": "Vietnam",
+          "indicatorId": "disaster_preparedness",
+          "title": "Typhoon Yagi emergency restoration"
+        },
+        {
+          "id": "mys-mysejahtera-vaccination",
+          "iso3": "MYS",
+          "country": "Malaysia",
+          "indicatorId": "institutional_responsiveness",
+          "title": "MySejahtera and the national COVID-19 immunisation programme"
+        },
+        {
+          "id": "mys-flood-sms",
+          "iso3": "MYS",
+          "country": "Malaysia",
+          "indicatorId": "disaster_preparedness",
+          "title": "National flood-warning SMS system"
+        },
+        {
+          "id": "tha-ucs",
+          "iso3": "THA",
+          "country": "Thailand",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Universal Coverage Scheme and the 30-baht health system"
+        },
+        {
+          "id": "tha-digital-id",
+          "iso3": "THA",
+          "country": "Thailand",
+          "indicatorId": "institutional_responsiveness",
+          "title": "National Digital ID framework"
+        },
+        {
+          "id": "tha-t-alert",
+          "iso3": "THA",
+          "country": "Thailand",
+          "indicatorId": "disaster_preparedness",
+          "title": "T-Alert national cell-broadcast warning system"
+        },
+        {
+          "id": "esp-clave",
+          "iso3": "ESP",
+          "country": "Spain",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Cl@ve shared digital identity"
+        },
+        {
+          "id": "esp-la-palma",
+          "iso3": "ESP",
+          "country": "Spain",
+          "indicatorId": "disaster_preparedness",
+          "title": "La Palma volcanic-eruption recovery and monitoring"
+        },
+        {
+          "id": "pol-mobywatel",
+          "iso3": "POL",
+          "country": "Poland",
+          "indicatorId": "institutional_responsiveness",
+          "title": "mObywatel digital ID wallet"
+        },
+        {
+          "id": "pol-800-plus",
+          "iso3": "POL",
+          "country": "Poland",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Rodzina 500+ and 800+ child-benefit delivery"
+        },
+        {
+          "id": "pol-alert-rcb",
+          "iso3": "POL",
+          "country": "Poland",
+          "indicatorId": "disaster_preparedness",
+          "title": "Alert RCB national emergency SMS channel"
+        },
+        {
+          "id": "swe-bankid",
+          "iso3": "SWE",
+          "country": "Sweden",
+          "indicatorId": "institutional_responsiveness",
+          "title": "BankID federated electronic identity"
+        },
+        {
+          "id": "swe-1177",
+          "iso3": "SWE",
+          "country": "Sweden",
+          "indicatorId": "institutional_responsiveness",
+          "title": "1177 national health portal and helpline"
+        },
+        {
+          "id": "swe-vma",
+          "iso3": "SWE",
+          "country": "Sweden",
+          "indicatorId": "disaster_preparedness",
+          "title": "VMA multi-channel public warning system"
+        },
+        {
+          "id": "irl-mygovid",
+          "iso3": "IRL",
+          "country": "Ireland",
+          "indicatorId": "institutional_responsiveness",
+          "title": "MyGovID single sign-on for public services"
+        },
+        {
+          "id": "irl-covid-vaccination",
+          "iso3": "IRL",
+          "country": "Ireland",
+          "indicatorId": "disaster_preparedness",
+          "title": "National COVID-19 vaccination delivery"
+        },
+        {
+          "id": "irl-nama",
+          "iso3": "IRL",
+          "country": "Ireland",
+          "indicatorId": "institutional_responsiveness",
+          "title": "National Asset Management Agency crisis workout"
+        },
+        {
+          "id": "irl-meteireann-warnings",
+          "iso3": "IRL",
+          "country": "Ireland",
+          "indicatorId": "disaster_preparedness",
+          "title": "Met Éireann national weather-warning service"
+        },
+        {
+          "id": "bra-salario-minimo",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Salário mínimo and its permanent revaluation rule"
+        },
+        {
+          "id": "nga-enaira",
+          "iso3": "NGA",
+          "country": "Nigeria",
+          "indicatorId": "institutional_responsiveness",
+          "title": "eNaira, a national rollout with an adoption gap"
+        },
+        {
+          "id": "eth-psnp",
+          "iso3": "ETH",
+          "country": "Ethiopia",
+          "indicatorId": "disaster_preparedness",
+          "title": "Productive Safety Net Programme for drought resilience"
+        },
+        {
+          "id": "dom-911",
+          "iso3": "DOM",
+          "country": "Dominican Republic",
+          "indicatorId": "disaster_preparedness",
+          "title": "National 9-1-1 emergency-response system"
+        },
+        {
+          "id": "hnd-911",
+          "iso3": "HND",
+          "country": "Honduras",
+          "indicatorId": "disaster_preparedness",
+          "title": "Sistema Nacional de Emergencias 911"
+        },
+        {
+          "id": "cub-covid-vaccination",
+          "iso3": "CUB",
+          "country": "Cuba",
+          "indicatorId": "disaster_preparedness",
+          "title": "National COVID-19 vaccination campaign"
+        },
+        {
+          "id": "slv-bitcoin-law-rollback",
+          "iso3": "SLV",
+          "country": "El Salvador",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Bitcoin Law, and its 2025 rollback"
+        },
+        {
+          "id": "hti-immunization-erosion",
+          "iso3": "HTI",
+          "country": "Haiti",
+          "indicatorId": "disaster_preparedness",
+          "title": "Routine immunization coverage, and its erosion"
+        },
+        {
+          "id": "cri-ramp-up",
+          "iso3": "CRI",
+          "country": "Costa Rica",
+          "indicatorId": "export_diversification",
+          "title": "Ramp Up, PROCOMER's export-readiness programme"
+        },
+        {
+          "id": "fra-long-term-unemployment",
+          "iso3": "FRA",
+          "country": "France",
+          "indicatorId": "long_term_unemployment_share",
+          "title": "France's long-term unemployment decline"
+        }
+      ],
+      "institutionIds": []
+    },
+    {
+      "dimension": "building",
+      "kind": "raise",
+      "score": 33.9,
+      "confidence": 0.622,
+      "band": "usable",
+      "trend": {
+        "spanYears": 10,
+        "delta": 0.3,
+        "basket": 4,
+        "clamped": 0
+      },
+      "scoredOn": [
+        "manufacturing_value_added",
+        "high_tech_exports_share",
+        "labour_productivity",
+        "electricity_connection_speed",
+        "economic_complexity"
+      ],
+      "gaps": [
+        "large_project_delivery",
+        "firm_scale_up_rate"
+      ],
+      "retired": [
+        "logistics_infrastructure"
+      ],
+      "exemplars": [
+        {
+          "iso3": "IRL",
+          "country": "Ireland",
+          "score": 75.3,
+          "confidence": 0.622
+        },
+        {
+          "iso3": "SGP",
+          "country": "Singapore",
+          "score": 71.2,
+          "confidence": 0.622
+        },
+        {
+          "iso3": "CHN",
+          "country": "China",
+          "score": 64.9,
+          "confidence": 0.622
+        }
+      ],
+      "evidenceElsewhere": [
+        {
+          "id": "bra-pix",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "large_project_delivery",
+          "title": "Pix instant payment system"
+        },
+        {
+          "id": "bra-govbr",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "large_project_delivery",
+          "title": "GOV.BR federal identity and service platform"
+        },
+        {
+          "id": "est-x-road",
+          "iso3": "EST",
+          "country": "Estonia",
+          "indicatorId": "large_project_delivery",
+          "title": "X-Road national data exchange layer"
+        },
+        {
+          "id": "ind-pmjdy",
+          "iso3": "IND",
+          "country": "India",
+          "indicatorId": "large_project_delivery",
+          "title": "Pradhan Mantri Jan Dhan Yojana bank accounts"
+        },
+        {
+          "id": "ury-electricity",
+          "iso3": "URY",
+          "country": "Uruguay",
+          "indicatorId": "large_project_delivery",
+          "title": "Electricity supply rebuilt on renewable sources"
+        },
+        {
+          "id": "ury-ceibal",
+          "iso3": "URY",
+          "country": "Uruguay",
+          "indicatorId": "large_project_delivery",
+          "title": "Plan Ceibal, one connected laptop per child"
+        },
+        {
+          "id": "bra-sus",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "large_project_delivery",
+          "title": "Sistema Unico de Saude, universal public health system"
+        },
+        {
+          "id": "bra-pni",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "large_project_delivery",
+          "title": "Programa Nacional de Imunizacoes, and its erosion"
+        },
+        {
+          "id": "bra-luz-para-todos",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "large_project_delivery",
+          "title": "Luz para Todos, rural electrification"
+        },
+        {
+          "id": "bra-bolsa-familia",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "large_project_delivery",
+          "title": "Bolsa Familia and the single registry behind it"
+        },
+        {
+          "id": "bra-urna-eletronica",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "large_project_delivery",
+          "title": "Fully electronic national elections"
+        },
+        {
+          "id": "bra-presal",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "large_project_delivery",
+          "title": "Deepwater and pre-salt oil production"
+        },
+        {
+          "id": "mex-seguro-popular",
+          "iso3": "MEX",
+          "country": "Mexico",
+          "indicatorId": "large_project_delivery",
+          "title": "Seguro Popular, and its abolition"
+        },
+        {
+          "id": "gbr-sure-start",
+          "iso3": "GBR",
+          "country": "United Kingdom",
+          "indicatorId": "large_project_delivery",
+          "title": "Sure Start children's centres, and their erosion"
+        },
+        {
+          "id": "zaf-eskom-loadshedding",
+          "iso3": "ZAF",
+          "country": "South Africa",
+          "indicatorId": "large_project_delivery",
+          "title": "Grid power, and load shedding"
+        },
+        {
+          "id": "usa-measles-elimination",
+          "iso3": "USA",
+          "country": "United States",
+          "indicatorId": "large_project_delivery",
+          "title": "Measles elimination, and its erosion"
+        },
+        {
+          "id": "bra-bndes",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "large_project_delivery",
+          "title": "BNDES, the national development bank"
+        },
+        {
+          "id": "bra-casa-da-moeda",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "large_project_delivery",
+          "title": "Casa da Moeda do Brasil, the national mint"
+        },
+        {
+          "id": "sgp-hdb",
+          "iso3": "SGP",
+          "country": "Singapore",
+          "indicatorId": "large_project_delivery",
+          "title": "Housing and Development Board, public housing at scale"
+        },
+        {
+          "id": "ury-rail-network",
+          "iso3": "URY",
+          "country": "Uruguay",
+          "indicatorId": "large_project_delivery",
+          "title": "AFE passenger rail and network contraction"
+        },
+        {
+          "id": "fra-flamanville",
+          "iso3": "FRA",
+          "country": "France",
+          "indicatorId": "large_project_delivery",
+          "title": "Flamanville 3 EPR, and the erosion of nuclear new-build delivery"
+        },
+        {
+          "id": "can-phoenix",
+          "iso3": "CAN",
+          "country": "Canada",
+          "indicatorId": "large_project_delivery",
+          "title": "Phoenix pay system, and its prolonged failure"
+        },
+        {
+          "id": "nld-groningen",
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "indicatorId": "large_project_delivery",
+          "title": "Groningen gas system, and its closure after induced earthquakes"
+        },
+        {
+          "id": "nld-digid",
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "indicatorId": "large_project_delivery",
+          "title": "DigiD, a shared digital identity rail for public services"
+        },
+        {
+          "id": "nld-delta-works",
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "indicatorId": "large_project_delivery",
+          "title": "Delta Works, a 43-year national flood-defence programme"
+        },
+        {
+          "id": "nld-betuweroute",
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "indicatorId": "large_project_delivery",
+          "title": "Betuweroute, a freight railway that missed its operating promise"
+        },
+        {
+          "id": "nld-mijnoverheid",
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "indicatorId": "large_project_delivery",
+          "title": "MijnOverheid, a shared citizen mailbox and data portal"
+        },
+        {
+          "id": "nld-fyra",
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "indicatorId": "large_project_delivery",
+          "title": "Fyra V250, a high-speed service withdrawn after a failed launch"
+        },
+        {
+          "id": "nld-ovpay",
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "indicatorId": "large_project_delivery",
+          "title": "OVpay, nationwide contactless transit payments"
+        },
+        {
+          "id": "nld-omgevingswet",
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "indicatorId": "large_project_delivery",
+          "title": "Omgevingswet and the Digital Environment System"
+        },
+        {
+          "id": "chl-transantiago",
+          "iso3": "CHL",
+          "country": "Chile",
+          "indicatorId": "large_project_delivery",
+          "title": "Transantiago, an integrated transport reform with rising subsidy dependence"
+        },
+        {
+          "id": "col-4g-programme",
+          "iso3": "COL",
+          "country": "Colombia",
+          "indicatorId": "large_project_delivery",
+          "title": "4G road concessions, a national infrastructure portfolio"
+        },
+        {
+          "id": "col-reficar",
+          "iso3": "COL",
+          "country": "Colombia",
+          "indicatorId": "large_project_delivery",
+          "title": "Reficar, a refinery modernization with a fiscal-liability finding"
+        },
+        {
+          "id": "jpn-giga-school",
+          "iso3": "JPN",
+          "country": "Japan",
+          "indicatorId": "large_project_delivery",
+          "title": "GIGA School, one learning device per student"
+        },
+        {
+          "id": "jpn-monju",
+          "iso3": "JPN",
+          "country": "Japan",
+          "indicatorId": "large_project_delivery",
+          "title": "Monju, a fast-breeder programme ended before commercial operation"
+        },
+        {
+          "id": "peru-invierte",
+          "iso3": "PER",
+          "country": "Peru",
+          "indicatorId": "large_project_delivery",
+          "title": "Invierte.pe, a national multi-year investment-management system"
+        },
+        {
+          "id": "peru-reconstruccion-con-cambios",
+          "iso3": "PER",
+          "country": "Peru",
+          "indicatorId": "large_project_delivery",
+          "title": "Reconstrucción con Cambios, a delayed recovery portfolio"
+        },
+        {
+          "id": "cri-electricidad-renovable",
+          "iso3": "CRI",
+          "country": "Costa Rica",
+          "indicatorId": "large_project_delivery",
+          "title": "ICE and a mostly renewable national electricity system"
+        },
+        {
+          "id": "cri-seguro-salud",
+          "iso3": "CRI",
+          "country": "Costa Rica",
+          "indicatorId": "large_project_delivery",
+          "title": "CCSS universal health-insurance reach"
+        },
+        {
+          "id": "ecu-metro-quito",
+          "iso3": "ECU",
+          "country": "Ecuador",
+          "indicatorId": "large_project_delivery",
+          "title": "Metro de Quito, a cross-administration urban rail delivery"
+        },
+        {
+          "id": "pan-canal-operations",
+          "iso3": "PAN",
+          "country": "Panama",
+          "indicatorId": "large_project_delivery",
+          "title": "Panama Canal expansion and self-financing operations"
+        },
+        {
+          "id": "pan-metro",
+          "iso3": "PAN",
+          "country": "Panama",
+          "indicatorId": "large_project_delivery",
+          "title": "Metro de Panamá network operations"
+        },
+        {
+          "id": "bol-mi-teleferico",
+          "iso3": "BOL",
+          "country": "Bolivia",
+          "indicatorId": "large_project_delivery",
+          "title": "Mi Teleférico urban cable-car network"
+        },
+        {
+          "id": "bol-lithium-plant",
+          "iso3": "BOL",
+          "country": "Bolivia",
+          "indicatorId": "large_project_delivery",
+          "title": "Industrial lithium carbonate plant below design capacity"
+        },
+        {
+          "id": "pry-itaipu",
+          "iso3": "PRY",
+          "country": "Paraguay",
+          "indicatorId": "large_project_delivery",
+          "title": "Itaipú binational hydropower operations"
+        },
+        {
+          "id": "pry-metrobus",
+          "iso3": "PRY",
+          "country": "Paraguay",
+          "indicatorId": "large_project_delivery",
+          "title": "Metrobús, an unfinished bus rapid transit project"
+        },
+        {
+          "id": "arg-arsat-3",
+          "iso3": "ARG",
+          "country": "Argentina",
+          "indicatorId": "large_project_delivery",
+          "title": "ARSAT-3 satellite programme suspended before launch"
+        },
+        {
+          "id": "ph-dpwh-transparency",
+          "iso3": "PHL",
+          "country": "Philippines",
+          "indicatorId": "large_project_delivery",
+          "title": "DPWH national infrastructure delivery and transparency portal"
+        },
+        {
+          "id": "ph-bataan-nuclear",
+          "iso3": "PHL",
+          "country": "Philippines",
+          "indicatorId": "large_project_delivery",
+          "title": "Bataan Nuclear Power Plant, a mothballed megaproject"
+        },
+        {
+          "id": "idn-trans-sumatra",
+          "iso3": "IDN",
+          "country": "Indonesia",
+          "indicatorId": "large_project_delivery",
+          "title": "Trans-Sumatra toll-road programme, still short of its planned network"
+        },
+        {
+          "id": "vnm-expressways-2024",
+          "iso3": "VNM",
+          "country": "Vietnam",
+          "indicatorId": "large_project_delivery",
+          "title": "National expressway build-out in 2024"
+        },
+        {
+          "id": "vnm-cat-linh-ha-dong",
+          "iso3": "VNM",
+          "country": "Vietnam",
+          "indicatorId": "large_project_delivery",
+          "title": "Cat Linh–Ha Dong metro, a delayed and over-budget delivery"
+        },
+        {
+          "id": "mys-putrajaya-mrt",
+          "iso3": "MYS",
+          "country": "Malaysia",
+          "indicatorId": "large_project_delivery",
+          "title": "MRT Putrajaya Line"
+        },
+        {
+          "id": "mys-hsr-termination",
+          "iso3": "MYS",
+          "country": "Malaysia",
+          "indicatorId": "large_project_delivery",
+          "title": "Kuala Lumpur–Singapore high-speed rail, terminated before construction"
+        },
+        {
+          "id": "tha-hopewell",
+          "iso3": "THA",
+          "country": "Thailand",
+          "indicatorId": "large_project_delivery",
+          "title": "Hopewell elevated road-and-rail concession, and its termination"
+        },
+        {
+          "id": "esp-ave-network",
+          "iso3": "ESP",
+          "country": "Spain",
+          "indicatorId": "large_project_delivery",
+          "title": "AVE high-speed rail network"
+        },
+        {
+          "id": "esp-castor",
+          "iso3": "ESP",
+          "country": "Spain",
+          "indicatorId": "large_project_delivery",
+          "title": "Castor underground gas storage, and its closure"
+        },
+        {
+          "id": "pol-ostroleka-c",
+          "iso3": "POL",
+          "country": "Poland",
+          "indicatorId": "large_project_delivery",
+          "title": "Ostrołęka C coal block, and its abandonment"
+        },
+        {
+          "id": "swe-nya-karolinska",
+          "iso3": "SWE",
+          "country": "Sweden",
+          "indicatorId": "large_project_delivery",
+          "title": "Nya Karolinska Solna public–private hospital project"
+        },
+        {
+          "id": "swe-barseback",
+          "iso3": "SWE",
+          "country": "Sweden",
+          "indicatorId": "large_project_delivery",
+          "title": "Barsebäck nuclear plant closure and decommissioning"
+        },
+        {
+          "id": "irl-new-childrens-hospital",
+          "iso3": "IRL",
+          "country": "Ireland",
+          "indicatorId": "large_project_delivery",
+          "title": "New Children's Hospital cost escalation"
+        },
+        {
+          "id": "nic-electrification",
+          "iso3": "NIC",
+          "country": "Nicaragua",
+          "indicatorId": "large_project_delivery",
+          "title": "Rural electrification and near-universal grid coverage"
+        },
+        {
+          "id": "ven-gmvv",
+          "iso3": "VEN",
+          "country": "Venezuela",
+          "indicatorId": "large_project_delivery",
+          "title": "Gran Misión Vivienda Venezuela's five-million-home milestone"
+        }
+      ],
+      "institutionIds": []
+    },
+    {
+      "dimension": "shared_purpose",
+      "kind": "measure",
+      "score": 76.3,
+      "confidence": 0.303,
+      "band": "thin",
+      "trend": {
+        "spanYears": 10,
+        "delta": 1.8,
+        "basket": 2,
+        "clamped": 0
+      },
+      "scoredOn": [
+        "tax_revenue_gdp",
+        "income_inequality"
+      ],
+      "gaps": [
+        "national_belonging",
+        "volunteering_rate",
+        "political_polarization",
+        "civic_participation"
+      ],
+      "retired": [
+        "voice_and_accountability"
+      ],
+      "exemplars": [],
+      "evidenceElsewhere": [
+        {
+          "id": "est-i-voting",
+          "iso3": "EST",
+          "country": "Estonia",
+          "indicatorId": "civic_participation",
+          "title": "Internet voting in national elections"
+        },
+        {
+          "id": "aus-compulsory-voting",
+          "iso3": "AUS",
+          "country": "Australia",
+          "indicatorId": "civic_participation",
+          "title": "Compulsory voting"
+        },
+        {
+          "id": "rwa-umuganda",
+          "iso3": "RWA",
+          "country": "Rwanda",
+          "indicatorId": "volunteering_rate",
+          "title": "Umuganda community work"
+        },
+        {
+          "id": "bra-sus-conselhos",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "civic_participation",
+          "title": "SUS health councils, permanent public participation"
+        },
+        {
+          "id": "deu-thw",
+          "iso3": "DEU",
+          "country": "Germany",
+          "indicatorId": "volunteering_rate",
+          "title": "THW, volunteer civil protection as a federal institution"
+        },
+        {
+          "id": "jpn-volunteer-fire-corps",
+          "iso3": "JPN",
+          "country": "Japan",
+          "indicatorId": "volunteering_rate",
+          "title": "Volunteer fire corps, and its membership erosion"
+        },
+        {
+          "id": "usa-government-shutdown",
+          "iso3": "USA",
+          "country": "United States",
+          "indicatorId": "political_polarization",
+          "title": "Federal funding gaps and the 2019 shutdown"
+        }
+      ],
+      "institutionIds": []
+    }
+  ],
+  "ownEvidence": [
+    {
+      "id": "prt-cmd",
+      "indicatorId": "institutional_responsiveness",
+      "dimension": "adaptability",
+      "title": "Chave Móvel Digital and Portugal's digital identity layer",
+      "claim": "Portugal's digital-government platform reported 4.4 million active Chave Móvel Digital credentials and 141 million authentications by 23 October 2025, with 490 entities using Autenticação.gov.",
+      "started": 2014
+    },
+    {
+      "id": "prt-colab",
+      "indicatorId": "university_industry_collaboration",
+      "dimension": "coordination",
+      "title": "Portugal's CoLAB applied-research network",
+      "claim": "Portugal's Agência Nacional de Inovação reported 41 recognized Collaborative Laboratories (CoLABs), and its 2024 innovation report recorded 639 highly qualified staff contracted by CoLABs, 32 percent of them PhDs.",
+      "started": 2017
+    },
+    {
+      "id": "prt-qualifica",
+      "indicatorId": "adult_learning_participation",
+      "dimension": "learning",
+      "title": "Programa Qualifica and Portugal's adult-learning network",
+      "claim": "Portugal's ANQEP reported 1,025,569 cumulative Qualifica registrations by December 2023; 90 percent received a training or recognition, validation and certification referral, and 510,113 registrants obtained some certification.",
+      "started": 2017
+    },
+    {
+      "id": "prt-portugal-ventures",
+      "indicatorId": "venture_capital_gdp",
+      "dimension": "experimentation",
+      "title": "Portugal Ventures, a public venture-capital bridge",
+      "claim": "Portugal Ventures, the public venture-capital company in the Banco Português de Fomento group, reports €233.2 million invested in 256 new companies since 2012 and €283 million under management.",
+      "started": 2012
+    },
+    {
+      "id": "prt-novas-oportunidades",
+      "indicatorId": "adult_learning_participation",
+      "dimension": "learning",
+      "title": "Novas Oportunidades, and the qualification-policy interruption",
+      "claim": "ANQEP's national review records 1,568,490 adult enrolments in Novas Oportunidades between 2006 and July 2011; after the initiative's peak and a period of disinvestment, Portugal launched Qualifica in 2017 and rebuilt a network of more than 300 Centros Qualifica.",
+      "started": 2006
+    }
+  ],
+  "gapCount": 25
+}

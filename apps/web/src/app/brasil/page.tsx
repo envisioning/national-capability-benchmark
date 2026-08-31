@@ -15,18 +15,16 @@ import {
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { Radar } from '@/components/Radar'
 import {
-  ConfidenceBar,
+  Confidence,
   ConfidenceLegend,
   CountryLabel,
   DimensionLegend,
   Empty,
   Headline,
-  Highlight,
   Meta,
   PageTitle,
   Score,
   Section,
-  TrendGlyph,
 } from '@/components/ui'
 import { loadAgenda } from '@/lib/agenda'
 import { loadEvidence, loadIndex } from '@/lib/data'
@@ -95,9 +93,8 @@ export default async function BrazilLayerPage() {
     <>
       <PageTitle>O que o Brasil é capaz de fazer?</PageTitle>
       <Headline>
-        Nove dimensões de capacidade, medidas com dados públicos. A <Highlight>forma</Highlight>{' '}
-        mostra o perfil do país; não há ranking. Cada nota vem com seus indicadores e sua
-        confiança.
+        Nove dimensões de capacidade, medidas com dados públicos. A forma mostra o perfil do país;
+        não há ranking. Cada nota vem com seus indicadores e sua confiança.
       </Headline>
       <p className="mb-10 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
         Riqueza e capacidade são propriedades diferentes. Países com a mesma renda podem ter perfis
@@ -198,14 +195,12 @@ export default async function BrazilLayerPage() {
               </p>
               {agendaSection ? (
                 <p>
-                  <Highlight>
-                    <Link
-                      href={layerSectionHref(layer, agendaSection)}
-                      className="underline underline-offset-4"
-                    >
-                      Leia a agenda de capacidades do Brasil
-                    </Link>
-                  </Highlight>
+                  <Link
+                    href={layerSectionHref(layer, agendaSection)}
+                    className="underline underline-offset-4"
+                  >
+                    Leia a agenda de capacidades do Brasil
+                  </Link>
                 </p>
               ) : null}
               <p className="text-lg">
@@ -241,13 +236,20 @@ export default async function BrazilLayerPage() {
                   {PT_BR.questions[d.dimension]}
                 </p>
                 <div className="mt-4 flex flex-col gap-2">
-                  <ConfidenceBar value={d.confidence} />
+                  <Confidence value={d.confidence} />
                   <span className="inline-flex items-center gap-1.5 text-xs text-[var(--muted)]">
-                    {d.trend && Math.abs(d.trend.delta) >= 0.05 ? (
-                      <TrendGlyph direction={d.trend.delta > 0 ? 'up' : 'down'} />
-                    ) : (
-                      <Icon name="minus" size={13} />
-                    )}
+                    <Icon
+                      name={
+                        d.trend
+                          ? Math.abs(d.trend.delta) < 0.05
+                            ? 'minus'
+                            : d.trend.delta > 0
+                              ? 'chevron-up'
+                              : 'chevron-down'
+                          : 'minus'
+                      }
+                      size={13}
+                    />
                     {trendLine(d)}
                   </span>
                   <div className="mt-1 flex flex-wrap items-center gap-1" aria-hidden="true">

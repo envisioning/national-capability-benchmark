@@ -12,17 +12,16 @@ import {
   isEvidential,
   isPanel,
 } from '@ncb/core'
-import { DIMENSION_ICON, Icon, STATUS_ICON } from '@/components/Icon'
+import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { CountryLede } from '@/components/CountryLede'
 import { CompareRadar } from '@/components/views/CompareRadar'
 import { CheckList } from '@/components/views/CheckList'
 import { CountryDimensionTable } from '@/components/views/CountryDimensionTable'
+import { CountryIndicatorList } from '@/components/views/CountryIndicatorList'
 import { EvidenceList } from '@/components/views/EvidenceList'
-import { IndicatorPeek } from '@/components/views/IndicatorPeek'
 import Link from 'next/link'
 import {
   Card,
-  ClassBadge,
   ClassLegend,
   ConfidenceLegend,
   DefineLink,
@@ -31,12 +30,8 @@ import {
   PageTitle,
   PanelProvenanceNote,
   Score,
-  Scroller,
   Section,
   Sparkline,
-  Table,
-  Td,
-  Th,
 } from '@/components/ui'
 import { capabilityHref, countryCsvHref, ogCountryHref } from '@/lib/links'
 import { loadAgenda } from '@/lib/agenda'
@@ -133,7 +128,7 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
           shows where this country sits among all {COUNTRIES.length} countries in the{' '}
           <DefineLink term="Comparison frame">comparison frame</DefineLink>, not a percentage.{' '}
           <DefineLink term="Confidence" /> sits beside the score. A dashed radar edge and hollow
-          point mean the evidence is thin. The tables below show each{' '}
+          point mean the evidence is thin. The records below show each{' '}
           <DefineLink term="Indicator">indicator</DefineLink>, its raw value, year and source.
         </p>
         <p className="mt-3 text-lg leading-relaxed">
@@ -210,93 +205,11 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
                   below still show the available history.
                 </p>
               )}
-              <Scroller>
-                <Table>
-                  <thead>
-                    <tr>
-                      <Th>Indicator</Th>
-                      <Th>Class</Th>
-                      <Th align="right">Raw</Th>
-                      <Th>Unit</Th>
-                      <Th align="right">Year</Th>
-                      <Th align="right">Normalized</Th>
-                      <Th>Source</Th>
-                      <Th>Status</Th>
-                      <Th>History</Th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {dim.indicators.map((row) => {
-                      const def = INDICATORS_BY_ID[row.indicatorId]
-                      return (
-                        <tr key={row.indicatorId}>
-                          <Td>
-                            {row.status === 'observed' ? (
-                              <IndicatorPeek indicatorId={row.indicatorId} iso3={country.iso3}>
-                                {row.name}
-                              </IndicatorPeek>
-                            ) : (
-                              <span>
-                                {row.name}
-                                {def?.notes ? (
-                                  <span className="block text-xs leading-relaxed text-[var(--muted)]">
-                                    {def.notes}
-                                  </span>
-                                ) : null}
-                              </span>
-                            )}
-                          </Td>
-                          <Td>
-                            <ClassBadge value={row.measurementClass} />
-                          </Td>
-                          <Td align="right">{row.raw ?? 'no data'}</Td>
-                          <Td dim>{def?.unit}</Td>
-                          <Td align="right" dim>
-                            {row.year ?? ''}
-                          </Td>
-                          <Td align="right">
-                            {row.status === 'observed' && row.normalized !== null ? (
-                              <IndicatorPeek indicatorId={row.indicatorId} iso3={country.iso3}>
-                                <Score value={row.normalized} size="sm" />
-                              </IndicatorPeek>
-                            ) : (
-                              <Score value={row.normalized} size="sm" />
-                            )}
-                            {row.outOfFrame ? (
-                              <span
-                                className="ml-1.5 inline-flex items-center gap-1 text-[10px] text-[var(--muted)]"
-                              >
-                                <Icon name="triangle-alert" size={11} />
-                                clamped
-                              </span>
-                            ) : null}
-                          </Td>
-                          <Td dim>{row.source}</Td>
-                          <Td dim>
-                            <span className="inline-flex items-center gap-1.5">
-                              <Icon name={STATUS_ICON[row.status]} size={13} />
-                              {row.status === 'gap'
-                                ? gapLabel(
-                                    evidence.filter((e) => e.indicatorId === row.indicatorId).length,
-                                  )
-                                : row.status === 'retired'
-                                  ? 'retired, see notes'
-                                  : row.status}
-                            </span>
-                          </Td>
-                          <Td>
-                            {row.series.length > 1 ? (
-                              <Sparkline series={seriesForSparkline(row.series)} width={90} height={22} />
-                            ) : (
-                              <span className="text-[var(--muted)]">-</span>
-                            )}
-                          </Td>
-                        </tr>
-                      )
-                    })}
-                  </tbody>
-                </Table>
-              </Scroller>
+              <CountryIndicatorList
+                indicators={dim.indicators}
+                countryIso3={country.iso3}
+                evidence={evidence}
+              />
 
               <CheckList checks={dim.checks} />
 
@@ -330,17 +243,4 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
       })}
     </>
   )
-}
-
-/** A gap row says what is missing, and says when somebody wrote down a case anyway. */
-function gapLabel(records: number): string {
-  if (records === 0) return 'no dataset exists'
-  return records === 1 ? 'no dataset exists, 1 record' : `no dataset exists, ${records} records`
-}
-
-/** The indicator line uses the same component as the dimension line. */
-function seriesForSparkline(
-  series: Array<{ year: number; normalized: number }>,
-): Array<{ year: number; score: number }> {
-  return series.map((p) => ({ year: p.year, score: p.normalized }))
 }

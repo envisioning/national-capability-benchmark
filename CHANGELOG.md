@@ -9,10 +9,68 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## Dataset 6.1.0 — 2026-08-31
+
+Retired indicator rows leave the coverage denominator. Scores and the
+normalization frame are unchanged; published confidence values restate upward
+for Coordination, Trust, Building and Shared Purpose.
+
+- **A rejected dataset is no longer counted as a hole.** Coverage is now
+  observed indicators over the observed and gap rows. A row retired for cause
+  stays in the registry, stays published with `status: "retired"` and stays in
+  the diagnostics, but no longer lowers confidence. See D100.
+- **Two dimensions cross a band.** Coordination and Shared Purpose move from
+  very thin to thin. Trust stays very thin: it rests on two observed rows.
+
+## App 1.6.1 — 2026-08-31
+
+- **Confidence values are compact.** Every confidence value uses one
+  band-colored numeric chip instead of a separate meter and number, while the
+  exact value and shared band legend remain visible.
+
+## App 1.6.0 — 2026-08-31
+
+- **Search is available everywhere.** The top navigation opens a searchable
+  command palette with ⌘K/Ctrl+K, covering pages, countries, capabilities and
+  indicators.
+
+## Dataset 6.0.0 — 2026-08-31
+
+Portugal (`PRT`) joins the benchmark as its 53rd country. The normalization
+frame is rebased and every published score is regenerated; Dataset 5.1.0 values
+are not comparable with this release.
+
+- **Portugal is source-backed from the existing pipeline.** The release adds
+  World Bank history, a Joint EVS/WVS trust observation and a V-Dem civil-society
+  observation without adding synthetic or manual values.
+- **Portugal enters the research queue.** Five documented, non-scored evidence
+  records now cover four of its gap indicators, while the research inventory
+  keeps 21 uncovered country-gap slots visible for further source work.
+
+## App 1.5.6 — 2026-08-31
+
+- **Challenge entry is centralized.** Score tables and radar readouts no longer
+  repeat a challenge button; the top navigation now opens one shared form where
+  readers choose the country and capability they want to contest.
+
+## App 1.5.5 — 2026-08-31
+
+- **Hover menus switch cleanly.** Leaving one top-level item closes its menu
+  immediately, so moving across the navigation never leaves two panels open.
+
+## App 1.5.4 — 2026-08-31
+
+- **The top navigation hides while scrolling down.** It returns when the reader
+  scrolls up, reaches the top, navigates to a new page or focuses the header.
+
 ## App 1.5.3 — 2026-08-31
 
 - **The NCB lockup follows the parent brand alignment.** The glyph now sits
   beside the wordmark, with the full benchmark name aligned beneath it.
+- **Hover explanations are quieter.** Scores, confidence, trends and chart
+  points now use visible legends, inline context and accessible labels instead
+  of a field of native browser tooltips. The intentional country field hover
+  card remains.
 
 ## App 1.5.2 — 2026-08-31
 

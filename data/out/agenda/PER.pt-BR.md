@@ -2,21 +2,21 @@
 
 *Gerado em 2026-08-31*
 
-Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
+Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
 ## Onde o Peru está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 33,6 | 0,52 (utilizável) | +16,2 em 10 anos, sobre 4 indicadores |
-| Agência | 48,6 | 0,61 (utilizável) | +22,6 em 10 anos, sobre 4 indicadores |
-| Coordenação | 69,6 | 0,24 (muito fraca) | sem base de tendência |
-| Confiança | 37,7 | 0,16 (muito fraca) | sem base de tendência |
+| Agência | 47,7 | 0,61 (utilizável) | +22,5 em 10 anos, sobre 4 indicadores |
+| Coordenação | 69,3 | 0,39 (fraca) | sem base de tendência |
+| Confiança | 37,7 | 0,26 (fraca) | sem base de tendência |
 | Aprendizagem | 48,1 | 0,49 (utilizável) | +13 em 20 anos, sobre 2 indicadores |
 | Experimentação | 20,2 | 0,39 (fraca) | +1,8 em 10 anos, sobre 2 indicadores |
-| Adaptação | 59,4 | 0,47 (utilizável) | -1,9 em 10 anos, sobre 4 indicadores |
-| Construção | 26 | 0,54 (utilizável) | -0,4 em 10 anos, sobre 4 indicadores |
-| Propósito compartilhado | 53,5 | 0,24 (muito fraca) | +10,1 em 10 anos, sobre 2 indicadores |
+| Adaptação | 59,3 | 0,47 (utilizável) | -1,9 em 10 anos, sobre 4 indicadores |
+| Construção | 26 | 0,62 (utilizável) | -0,4 em 10 anos, sobre 4 indicadores |
+| Propósito compartilhado | 53,5 | 0,28 (fraca) | +10,1 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para elevar
 
@@ -41,29 +41,29 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 - Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japão); National basic-research funding allocation (China).
 - Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
+### Agência: 47,7, confiança utilizável
+
+Quão capazes são pessoas e organizações de transformar uma intenção em ação?
+
+- Baseada em 6 indicadores observados.
+- Maiores notas utilizáveis: Estados Unidos 92,5, Austrália 89,1, Reino Unido 86,7.
+- Entregas documentadas em outros países: SIBRATEC, the documented innovation-centre network (Brasil); Singapore's national ICT-skills measurement and baseline (Singapura).
+- Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
+
 ### Aprendizagem: 48,1, confiança utilizável
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,6.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França).
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal).
 - Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
-
-### Agência: 48,6, confiança utilizável
-
-Quão capazes são pessoas e organizações de transformar uma intenção em ação?
-
-- Baseada em 6 indicadores observados.
-- Maiores notas utilizáveis: Estados Unidos 92,6, Austrália 89,8, Reino Unido 87,5.
-- Entregas documentadas em outros países: SIBRATEC, the documented innovation-centre network (Brasil); Singapore's national ICT-skills measurement and baseline (Singapura).
-- Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
 
 ## Dimensões para medir primeiro
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Confiança: confiança 0,16, muito fraca
+### Confiança: confiança 0,26, fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
 
@@ -71,7 +71,7 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 - Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
-### Propósito compartilhado: confiança 0,24, muito fraca
+### Propósito compartilhado: confiança 0,28, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
@@ -79,7 +79,7 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
 - Bases rejeitadas: Voz e responsabilização.
 
-### Coordenação: confiança 0,24, muito fraca
+### Coordenação: confiança 0,39, fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
 
@@ -98,7 +98,7 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 
 Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência utilizável. Ainda precisam ser acompanhadas.
 
-- Adaptação: 59,4, confiança utilizável
+- Adaptação: 59,3, confiança utilizável
 
 ## Agenda de medição
 

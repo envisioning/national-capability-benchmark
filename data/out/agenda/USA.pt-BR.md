@@ -2,21 +2,21 @@
 
 *Gerado em 2026-08-31*
 
-Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
+Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
 ## Onde os Estados Unidos está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 70,2 | 0,63 (utilizável) | +9,9 em 10 anos, sobre 5 indicadores |
-| Agência | 92,6 | 0,5 (utilizável) | +7,9 em 10 anos, sobre 3 indicadores |
-| Coordenação | 99,6 | 0,14 (muito fraca) | sem base de tendência |
-| Confiança | 64,6 | 0,16 (muito fraca) | sem base de tendência |
+| Agência | 92,5 | 0,5 (utilizável) | +7,9 em 10 anos, sobre 3 indicadores |
+| Coordenação | 99,5 | 0,23 (muito fraca) | sem base de tendência |
+| Confiança | 64,6 | 0,26 (fraca) | sem base de tendência |
 | Aprendizagem | 49,8 | 0,45 (utilizável) | -0,4 em 10 anos, sobre 2 indicadores |
 | Experimentação | 55,8 | 0,39 (fraca) | +3,2 em 10 anos, sobre 2 indicadores |
-| Adaptação | 76,2 | 0,48 (utilizável) | +6 em 10 anos, sobre 4 indicadores |
-| Construção | 58,4 | 0,52 (utilizável) | +2,4 em 10 anos, sobre 4 indicadores |
-| Propósito compartilhado | 40,8 | 0,27 (fraca) | -1,1 em 10 anos, sobre 2 indicadores |
+| Adaptação | 76,1 | 0,48 (utilizável) | +6 em 10 anos, sobre 4 indicadores |
+| Construção | 58,4 | 0,59 (utilizável) | +2,4 em 10 anos, sobre 4 indicadores |
+| Propósito compartilhado | 40,8 | 0,32 (fraca) | -1,1 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para elevar
 
@@ -28,14 +28,14 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,6.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França).
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal).
 - Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ## Dimensões para medir primeiro
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Coordenação: confiança 0,14, muito fraca
+### Coordenação: confiança 0,23, muito fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
 
@@ -43,7 +43,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
-### Confiança: confiança 0,16, muito fraca
+### Confiança: confiança 0,26, fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
 
@@ -51,7 +51,7 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 - Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
-### Propósito compartilhado: confiança 0,27, fraca
+### Propósito compartilhado: confiança 0,32, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
@@ -70,8 +70,8 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 
 Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência utilizável. Ainda precisam ser acompanhadas.
 
-- Agência: 92,6, confiança utilizável
-- Adaptação: 76,2, confiança utilizável
+- Agência: 92,5, confiança utilizável
+- Adaptação: 76,1, confiança utilizável
 - Antecipação: 70,2, confiança utilizável
 - Construção: 58,4, confiança utilizável
 

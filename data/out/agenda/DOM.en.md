@@ -2,21 +2,21 @@
 
 *Generated 2026-08-31*
 
-The frame includes 52 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
+The frame includes 53 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
 ## Where Dominican Republic stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 24.7 | 0.51 (usable) | +9.7 over 10 years using 3 indicators |
-| Agency | 51.9 | 0.55 (usable) | +17.2 over 10 years using 3 indicators |
-| Coordination | 70.6 | 0.23 (very thin) | no trend |
-| Trust | not scored | 0.07 (very thin) | no trend |
+| Agency | 51.5 | 0.55 (usable) | +17.2 over 10 years using 3 indicators |
+| Coordination | 69.9 | 0.37 (thin) | no trend |
+| Trust | not scored | 0.11 (very thin) | no trend |
 | Learning | 37.2 | 0.56 (usable) | +8.3 over 10 years using 3 indicators |
 | Experimentation | 6.5 | 0.18 (very thin) | +0.9 over 10 years using 2 indicators |
-| Adaptability | 51.8 | 0.47 (usable) | +8.4 over 10 years using 4 indicators |
-| Building | 28.3 | 0.54 (usable) | +1.8 over 10 years using 4 indicators |
-| Shared Purpose | 53.1 | 0.27 (thin) | +14.8 over 10 years using 2 indicators |
+| Adaptability | 51.7 | 0.47 (usable) | +8.6 over 10 years using 4 indicators |
+| Building | 28.3 | 0.62 (usable) | +1.8 over 10 years using 4 indicators |
+| Shared Purpose | 53.1 | 0.32 (thin) | +14.8 over 10 years using 2 indicators |
 
 ## What to raise
 
@@ -47,14 +47,14 @@ How effectively does the country acquire, distribute, and update knowledge?
 
 - Uses 5 observed indicators.
 - Highest usable scores: Finland 77.9, Australia 70.3, United Kingdom 68.6.
-- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); CAPES, federal postgraduate funding (Brazil); INEP, the standing education statistics institution (Brazil); Kartu Prakerja, a national lifelong-learning delivery system (Indonesia); Compte personnel de formation (France).
+- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); CAPES, federal postgraduate funding (Brazil); INEP, the standing education statistics institution (Brazil); Kartu Prakerja, a national lifelong-learning delivery system (Indonesia); Compte personnel de formation (France); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal).
 - Missing indicators: Adult learning participation, Research citation impact.
 
 ## What to measure first
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Trust: confidence 0.07, very thin
+### Trust: confidence 0.11, very thin
 
 How much cooperation is possible beyond immediate personal networks?
 
@@ -69,15 +69,7 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Uses 2 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
-### Coordination: confidence 0.23, very thin
-
-How effectively can independent actors organize around shared objectives?
-
-- Uses 3 observed indicators.
-- Missing indicators: University-industry collaboration, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
-
-### Shared Purpose: confidence 0.27, thin
+### Shared Purpose: confidence 0.32, thin
 
 To what extent can people imagine themselves as participants in a common project?
 
@@ -85,12 +77,20 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
 - Rejected datasets: Voice and accountability.
 
+### Coordination: confidence 0.37, thin
+
+How effectively can independent actors organize around shared objectives?
+
+- Uses 3 observed indicators.
+- Missing indicators: University-industry collaboration, Public-private collaboration.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
+
 ## What to keep watching
 
 These scores are at least 50 with usable evidence. They still need watching.
 
-- Agency: 51.9, confidence usable
-- Adaptability: 51.8, confidence usable
+- Adaptability: 51.7, confidence usable
+- Agency: 51.5, confidence usable
 
 ## Missing data
 

@@ -220,7 +220,15 @@ function confidenceFor(
   currentYear: number,
 ): DimensionResult['confidenceParts'] {
   const observed = cells.filter((c): c is Cell => Boolean(c))
-  const coverage = defs.length === 0 ? 0 : observed.length / defs.length
+  /* A retired row is a dataset this project inspected and rejected, so it is
+   * not a hole in the evidence the way a gap is. Counting it in the denominator
+   * charged a dimension for the discipline of refusing a bad series, and it put
+   * a ceiling on Coordination and Trust that no amount of new data could lift.
+   * Retired rows stay in the registry, stay published on the indicator rows with
+   * status 'retired', and stay counted in the diagnostics. They no longer lower
+   * coverage. See D100, which amends D23. */
+  const counted = defs.filter((d) => d.ingest !== 'retired')
+  const coverage = counted.length === 0 ? 0 : observed.length / counted.length
   const recency =
     observed.length === 0 ? 0 : mean(observed.map((c) => recencyWeight(c.year, currentYear)))
   const sourceQuality =

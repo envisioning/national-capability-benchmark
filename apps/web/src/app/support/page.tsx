@@ -9,7 +9,7 @@ import {
   contributionsByEffort,
 } from '@ncb/core'
 import { ContributionList } from '@/components/ContributionList'
-import { Headline, Highlight, Note, PageTitle, Section } from '@/components/ui'
+import { Headline, Note, PageTitle, Section } from '@/components/ui'
 import { COUNTRY_LAYERS } from '@/lib/layers'
 import {
   contactTopicHref,
@@ -53,8 +53,7 @@ export default function SupportPage() {
       <PageTitle>Support the benchmark</PageTitle>
       <Headline>
         {COUNTRIES.length} countries, nine capabilities, public data, open code. What it still
-        needs is <Highlight>use, evidence and time</Highlight>. Ways to help are below, cheapest
-        first.
+        needs is use, evidence and time. Ways to help are below, cheapest first.
       </Headline>
 
       <Note>

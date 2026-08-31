@@ -1,5 +1,5 @@
 import { PatternsView } from '@/components/views/PatternsView'
-import { Empty, Headline, Highlight, PageTitle } from '@/components/ui'
+import { Empty, Headline, PageTitle } from '@/components/ui'
 import { loadEvidence } from '@/lib/data'
 import { readPatternFilters } from '@/lib/links'
 
@@ -30,7 +30,7 @@ export default async function PatternsPage({
       <PageTitle>What countries built</PageTitle>
       <Headline>
         Each record describes something a country built that the indicators miss. The source
-        provides the number; the <Highlight>mechanism</Highlight> is our interpretation.
+        provides the number; the mechanism is our interpretation.
       </Headline>
       <p className="mb-12 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
         Scores describe outcomes. These records describe how a country acted, what it needed and

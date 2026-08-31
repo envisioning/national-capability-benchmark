@@ -7030,6 +7030,191 @@
         ],
         "travelled": "Funding-gap reversals travel as a warning: constitutional checks need a credible continuity mechanism, or polarised bargaining can turn a disagreement into a measurable loss of state capacity."
       }
+    },
+    {
+      "id": "prt-cmd",
+      "indicatorId": "institutional_responsiveness",
+      "iso3": "PRT",
+      "title": "Chave Móvel Digital and Portugal's digital identity layer",
+      "claim": "Portugal's digital-government platform reported 4.4 million active Chave Móvel Digital credentials and 141 million authentications by 23 October 2025, with 490 entities using Autenticação.gov.",
+      "metric": {
+        "name": "Active Chave Móvel Digital credentials",
+        "value": 4400000,
+        "unit": "active digital identities",
+        "asOf": "2025-10-23"
+      },
+      "secondMetric": {
+        "name": "Authentications through Autenticação.gov",
+        "value": 141000000,
+        "unit": "authentications",
+        "asOf": "2025-10-23"
+      },
+      "started": 2014,
+      "status": "operating",
+      "source": {
+        "publisher": "Portugal Digital / ARTE, Identidade Digital statistics",
+        "url": "https://digital.gov.pt/pt/servicos-publicos-digitais/identidade-digital",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-31"
+      },
+      "limits": "These are administrative adoption and usage totals, not measures of service quality, inclusion, authentication success, fraud or trust. An active credential is not necessarily a unique active person, and the government platform reports the totals itself; the figures do not show whether citizens can complete the services they authenticate for.",
+      "pattern": {
+        "mechanism": "Portugal made one state-certified mobile credential usable for authentication and signatures across public services and participating private services, so each new service can reuse an existing identity rather than build a separate account system.",
+        "preconditions": [
+          "A trusted civil-identity register and a legal basis for remote signatures",
+          "Interoperable authentication APIs and agencies willing to adopt one national gateway",
+          "Registration, recovery and offline support for people who cannot rely on a smartphone"
+        ],
+        "travelled": "A shared digital identity travels when legal recognition, cross-agency interoperability and assisted access travel with the credential; a login count alone can hide exclusion or weak service completion."
+      }
+    },
+    {
+      "id": "prt-colab",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "PRT",
+      "title": "Portugal's CoLAB applied-research network",
+      "claim": "Portugal's Agência Nacional de Inovação reported 41 recognized Collaborative Laboratories (CoLABs), and its 2024 innovation report recorded 639 highly qualified staff contracted by CoLABs, 32 percent of them PhDs.",
+      "metric": {
+        "name": "Recognized Collaborative Laboratories",
+        "value": 41,
+        "unit": "CoLABs",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Highly qualified staff contracted by CoLABs",
+        "value": 639,
+        "unit": "staff",
+        "asOf": "2024"
+      },
+      "started": 2017,
+      "status": "operating",
+      "source": {
+        "publisher": "Agência Nacional de Inovação, Relatório Nacional de Inovação 2024",
+        "url": "https://ani.pt/wp-content/uploads/2025/08/RNI2024_20082025.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-31"
+      },
+      "limits": "The network and staffing totals show institutional reach, not research quality, business adoption, additionality or durable jobs. CoLABs are separate private non-profit entities and report through the programme; the figures do not cover every university-industry link or establish that public recognition caused the reported staffing.",
+      "pattern": {
+        "mechanism": "Portugal gives mission-led applied-research organisations a formal recognition and monitoring route, then combines public base or competitive funding with industry-facing agendas so researchers have an institution whose job is to carry work across the university-business boundary.",
+        "preconditions": [
+          "Universities and firms willing to share researchers, facilities and intellectual-property arrangements",
+          "A public agency able to recognize, monitor and renew organisations against research and transfer agendas",
+          "Stable mixed funding so an applied laboratory can pursue long projects without becoming a consultancy only"
+        ],
+        "travelled": "The CoLAB form travels when recognition is tied to an accountable applied mission and real employer or industry demand; a list of centres without shared incentives does not create technology transfer."
+      }
+    },
+    {
+      "id": "prt-qualifica",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "PRT",
+      "title": "Programa Qualifica and Portugal's adult-learning network",
+      "claim": "Portugal's ANQEP reported 1,025,569 cumulative Qualifica registrations by December 2023; 90 percent received a training or recognition, validation and certification referral, and 510,113 registrants obtained some certification.",
+      "metric": {
+        "name": "Cumulative Qualifica registrations",
+        "value": 1025569,
+        "unit": "registrations",
+        "asOf": "2023-12"
+      },
+      "secondMetric": {
+        "name": "Registrants receiving a certification",
+        "value": 510113,
+        "unit": "people",
+        "asOf": "2023-12"
+      },
+      "started": 2017,
+      "status": "operating",
+      "source": {
+        "publisher": "ANQEP, Plano de Atividades 2024",
+        "url": "https://www.anqep.gov.pt/np4/file/1046/PA_2024_ANQEP_19Fev2024_VF.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-31"
+      },
+      "limits": "These are cumulative programme reach and certification totals, not an annual participation rate, completion quality, learning gain or employment and wage effect. The count can include partial certifications and administrative registrations, and it does not identify how many participants would have qualified without Qualifica; ANQEP reports the programme's own administrative data.",
+      "pattern": {
+        "mechanism": "A national network of Centros Qualifica gives adults a common entry point for counselling, recognition and validation of prior learning (RVCC), formal training and a portable qualification record, linking fragmented providers to a visible pathway.",
+        "preconditions": [
+          "Local centres with counsellors and assessors able to validate work-based learning",
+          "A qualification framework and records that employers and schools can understand",
+          "Funding and referral links to training providers, employment services and employers"
+        ],
+        "travelled": "Adult-learning systems travel when advice, prior-learning recognition and funded courses form one route; registrations without follow-through can otherwise become a throughput statistic rather than capability."
+      }
+    },
+    {
+      "id": "prt-portugal-ventures",
+      "indicatorId": "venture_capital_gdp",
+      "iso3": "PRT",
+      "title": "Portugal Ventures, a public venture-capital bridge",
+      "claim": "Portugal Ventures, the public venture-capital company in the Banco Português de Fomento group, reports €233.2 million invested in 256 new companies since 2012 and €283 million under management.",
+      "metric": {
+        "name": "Invested since launch",
+        "value": 233200000,
+        "unit": "EUR invested",
+        "asOf": "2026-08-31"
+      },
+      "secondMetric": {
+        "name": "New companies backed since launch",
+        "value": 256,
+        "unit": "companies",
+        "asOf": "2026-08-31"
+      },
+      "started": 2012,
+      "status": "operating",
+      "source": {
+        "publisher": "Portugal Ventures, institutional performance figures",
+        "url": "https://www.portugalventures.pt/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-31"
+      },
+      "limits": "These are company-reported cumulative portfolio figures, not venture-capital investment as a share of GDP, additionality, exits, survival, jobs or a counterfactual. The homepage does not give a full reference-year methodology, and the totals can include private co-investment effects as well as Portugal Ventures' own capital.",
+      "pattern": {
+        "mechanism": "A state-backed investor supplies pre-seed, seed and Series A capital, often alongside private investors, using staged minority investments and portfolio support to bridge companies that are too early for ordinary bank finance.",
+        "preconditions": [
+          "A pipeline of founders and research-derived firms large enough to fill investment rounds",
+          "Investment professionals with authority to make commercial decisions inside a public mandate",
+          "Follow-on private capital and exit markets so public money can recycle rather than become permanent subsidy"
+        ],
+        "travelled": "Public venture capital travels when it crowds in follow-on investors and accepts portfolio risk transparently; a state fund that only replaces missing private money can preserve firms without building a market."
+      }
+    },
+    {
+      "id": "prt-novas-oportunidades",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "PRT",
+      "title": "Novas Oportunidades, and the qualification-policy interruption",
+      "claim": "ANQEP's national review records 1,568,490 adult enrolments in Novas Oportunidades between 2006 and July 2011; after the initiative's peak and a period of disinvestment, Portugal launched Qualifica in 2017 and rebuilt a network of more than 300 Centros Qualifica.",
+      "metric": {
+        "name": "Adult enrolments in Novas Oportunidades",
+        "value": 1568490,
+        "unit": "adult enrolments",
+        "asOf": "2011-07"
+      },
+      "secondMetric": {
+        "name": "Centros Qualifica in the replacement network",
+        "value": 300,
+        "unit": "centres (more than)",
+        "asOf": "2017"
+      },
+      "started": 2006,
+      "status": "dismantled",
+      "source": {
+        "publisher": "ANQEP, Plano Nacional de Literacia de Adultos",
+        "url": "https://anqep.gov.pt/np4/file/314/Plano_Nacional_de_Literacia_de_Adultos_R.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-31"
+      },
+      "limits": "Enrolment is a reach measure, not completed learning, quality, labour-market effect or value for money. The review's 1.57 million figure covers a high-activity period, while the later 300-plus-centre figure describes the replacement network rather than retained Novas Oportunidades capacity; the record evidences interruption and rebuilding, not a causal estimate of the policy's return.",
+      "pattern": {
+        "mechanism": "Novas Oportunidades scaled adult qualification through recognition and validation of prior learning (RVCC), adult education and training (EFA) routes and a national delivery network; when political and fiscal support receded, the infrastructure contracted and a successor programme had to rebuild entry points.",
+        "preconditions": [
+          "A national qualification framework that can turn work experience into recognized credits",
+          "Local centres, assessors and training providers able to process large cohorts",
+          "Long-horizon funding and cross-party continuity, because adult-learning capacity is slow to rebuild after a stop"
+        ],
+        "travelled": "The interruption travels as a warning: mass adult-learning systems need continuity and credible standards, or a high-enrolment push can leave a capability gap when the delivery network is withdrawn."
+      }
     }
   ]
 }

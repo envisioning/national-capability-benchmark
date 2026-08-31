@@ -2,21 +2,21 @@
 
 *Gerado em 2026-08-31*
 
-Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
+Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
 ## Onde a Nigéria está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 17,5 | 0,55 (utilizável) | +10,3 em 10 anos, sobre 3 indicadores |
-| Agência | 41,3 | 0,57 (utilizável) | +11,5 em 10 anos, sobre 4 indicadores |
-| Coordenação | 35,8 | 0,26 (fraca) | sem base de tendência |
-| Confiança | 47,7 | 0,16 (muito fraca) | sem base de tendência |
+| Agência | 41,1 | 0,57 (utilizável) | +11,4 em 10 anos, sobre 4 indicadores |
+| Coordenação | 35,7 | 0,41 (fraca) | sem base de tendência |
+| Confiança | 47,7 | 0,26 (fraca) | sem base de tendência |
 | Aprendizagem | 12,5 | 0,38 (fraca) | +3,2 em 10 anos, sobre 2 indicadores |
 | Experimentação | 0,5 | 0,15 (muito fraca) | sem base de tendência |
-| Adaptação | 59,6 | 0,47 (utilizável) | +3,3 em 10 anos, sobre 4 indicadores, 1 truncados na borda da régua |
-| Construção | 16,8 | 0,54 (utilizável) | -0,5 em 10 anos, sobre 4 indicadores |
-| Propósito compartilhado | sem nota | 0,11 (muito fraca) | sem base de tendência |
+| Adaptação | 59,5 | 0,47 (utilizável) | +3,4 em 10 anos, sobre 4 indicadores, 1 truncados na borda da régua |
+| Construção | 16,8 | 0,62 (utilizável) | -0,5 em 10 anos, sobre 4 indicadores |
+| Propósito compartilhado | sem nota | 0,13 (muito fraca) | sem base de tendência |
 
 ## Dimensões para elevar
 
@@ -41,12 +41,12 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 - Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japão); National basic-research funding allocation (China).
 - Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
-### Agência: 41,3, confiança utilizável
+### Agência: 41,1, confiança utilizável
 
 Quão capazes são pessoas e organizações de transformar uma intenção em ação?
 
 - Baseada em 6 indicadores observados.
-- Maiores notas utilizáveis: Estados Unidos 92,6, Austrália 89,8, Reino Unido 87,5.
+- Maiores notas utilizáveis: Estados Unidos 92,5, Austrália 89,1, Reino Unido 86,7.
 - Entregas documentadas em outros países: SIBRATEC, the documented innovation-centre network (Brasil); Singapore's national ICT-skills measurement and baseline (Singapura).
 - Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
 
@@ -54,7 +54,7 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Propósito compartilhado: confiança 0,11, muito fraca
+### Propósito compartilhado: confiança 0,13, muito fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
@@ -69,21 +69,13 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
-### Confiança: confiança 0,16, muito fraca
+### Confiança: confiança 0,26, fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
 
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
-
-### Coordenação: confiança 0,26, fraca
-
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
 ### Aprendizagem: confiança 0,38, fraca
 
@@ -92,11 +84,19 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 - Baseada em 5 indicadores observados.
 - Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
+### Coordenação: confiança 0,41, fraca
+
+Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
+- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
+
 ## Dimensões para manter
 
 Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência utilizável. Ainda precisam ser acompanhadas.
 
-- Adaptação: 59,6, confiança utilizável
+- Adaptação: 59,5, confiança utilizável
 
 ## Agenda de medição
 

@@ -301,7 +301,7 @@ const RAW: Raw[] = [
     transform: 'distance_from_100',
     source: WB('GF.XPD.BUDG.ZS'),
     ingest: 'worldbank',
-    notes: 'Observable alignment between an approved public plan and what government spent. The API covers 44 of 52 countries at 2024. Values above and below 100 both indicate deviation, so the transform measures absolute distance from the approved budget rather than rewarding overspending. See D55.',
+    notes: 'Observable alignment between an approved public plan and what government spent. The API covers 45 of 53 countries at 2024. Values above and below 100 both indicate deviation, so the transform measures absolute distance from the approved budget rather than rewarding overspending. See D55.',
     wealthProxyPrior: 0.15,
   },
   {
@@ -1027,7 +1027,9 @@ export function worldBankSeries(): SeriesRequest[] {
  * Whether an indicator contributes a number.
  *
  * `gap` has no dataset and `retired` has one this project rejected. Both stay
- * in the registry, both lower coverage, and neither is fetched or scored.
+ * in the registry and neither is fetched or scored. Only `gap` lowers coverage:
+ * a rejected dataset is a measurement this project declined to make, not a
+ * measurement nobody can make. See D100.
  */
 export function isScored(def: IndicatorDef): boolean {
   return def.ingest !== 'gap' && def.ingest !== 'retired'

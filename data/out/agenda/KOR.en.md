@@ -2,27 +2,27 @@
 
 *Generated 2026-08-31*
 
-The frame includes 52 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
+The frame includes 53 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
 ## Where South Korea stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 80.6 | 0.64 (usable) | +21.4 over 10 years using 5 indicators |
-| Agency | 78.9 | 0.6 (usable) | +6.8 over 10 years using 4 indicators |
-| Coordination | 87.4 | 0.25 (thin) | no trend |
-| Trust | 67.4 | 0.16 (very thin) | no trend |
+| Agency | 78.5 | 0.6 (usable) | +6.8 over 10 years using 4 indicators |
+| Coordination | 87.3 | 0.4 (thin) | no trend |
+| Trust | 67.4 | 0.26 (thin) | no trend |
 | Learning | 55.9 | 0.54 (usable) | +16.1 over 10 years using 2 indicators |
 | Experimentation | 72.2 | 0.39 (thin) | +16.9 over 10 years using 2 indicators |
-| Adaptability | 82.1 | 0.48 (usable) | +7.8 over 10 years using 4 indicators |
-| Building | 63.1 | 0.54 (usable) | +3.1 over 10 years using 4 indicators |
-| Shared Purpose | 61 | 0.24 (very thin) | +4 over 10 years using 2 indicators |
+| Adaptability | 82.1 | 0.48 (usable) | +8 over 10 years using 4 indicators |
+| Building | 63.1 | 0.62 (usable) | +3.2 over 10 years using 4 indicators |
+| Shared Purpose | 61 | 0.28 (thin) | +4 over 10 years using 2 indicators |
 
 ## What to measure first
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Trust: confidence 0.16, very thin
+### Trust: confidence 0.26, thin
 
 How much cooperation is possible beyond immediate personal networks?
 
@@ -30,21 +30,13 @@ How much cooperation is possible beyond immediate personal networks?
 - Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
-### Shared Purpose: confidence 0.24, very thin
+### Shared Purpose: confidence 0.28, thin
 
 To what extent can people imagine themselves as participants in a common project?
 
 - Uses 2 observed indicators.
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
 - Rejected datasets: Voice and accountability.
-
-### Coordination: confidence 0.25, thin
-
-How effectively can independent actors organize around shared objectives?
-
-- Uses 3 observed indicators.
-- Missing indicators: University-industry collaboration, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
 ### Experimentation: confidence 0.39, thin
 
@@ -53,13 +45,21 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Uses 4 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
+### Coordination: confidence 0.4, thin
+
+How effectively can independent actors organize around shared objectives?
+
+- Uses 3 observed indicators.
+- Missing indicators: University-industry collaboration, Public-private collaboration.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
+
 ## What to keep watching
 
 These scores are at least 50 with usable evidence. They still need watching.
 
 - Adaptability: 82.1, confidence usable
 - Anticipation: 80.6, confidence usable
-- Agency: 78.9, confidence usable
+- Agency: 78.5, confidence usable
 - Building: 63.1, confidence usable
 - Learning: 55.9, confidence usable
 

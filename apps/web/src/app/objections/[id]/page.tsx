@@ -6,7 +6,7 @@ import {
   COUNTRY_NAMES,
   DIMENSION_LABELS,
 } from '@ncb/core'
-import { CountryLabel, Meta, Note, PageTitle, Section } from '@/components/ui'
+import { Confidence, CountryLabel, Meta, Note, PageTitle, Section } from '@/components/ui'
 import { loadDispute } from '@/lib/data'
 import { capabilityHref, objectionsHref } from '@/lib/links'
 
@@ -67,11 +67,7 @@ export default async function ObjectionDetailPage({
           <span className="text-[var(--muted)]">Score</span>
           <span className="tabular-nums">{dispute.target.value?.toFixed(1) ?? 'no data'}</span>
           <span className="text-[var(--muted)]">Confidence</span>
-          <span className="tabular-nums">
-            {dispute.target.confidence === null
-              ? 'no data'
-              : dispute.target.confidence.toFixed(2)}
-          </span>
+          <Confidence value={dispute.target.confidence} />
         </div>
       </Section>
 

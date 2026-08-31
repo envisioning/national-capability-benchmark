@@ -1,278 +1,278 @@
 {
-  "generatedAt": "2026-08-31T11:07:09.250Z",
+  "generatedAt": "2026-08-31T19:46:26.186Z",
   "gdpSeries": "NY.GDP.PCAP.PP.KD",
   "dimensionVsGdp": [
     {
       "dimension": "anticipation",
       "pearson": 0.873,
       "spearman": 0.921,
-      "n": 50
+      "n": 51
     },
     {
       "dimension": "agency",
-      "pearson": 0.85,
-      "spearman": 0.861,
-      "n": 50
+      "pearson": 0.851,
+      "spearman": 0.857,
+      "n": 51
     },
     {
       "dimension": "coordination",
-      "pearson": 0.561,
-      "spearman": 0.611,
-      "n": 50
+      "pearson": 0.563,
+      "spearman": 0.618,
+      "n": 51
     },
     {
       "dimension": "trust",
-      "pearson": 0.627,
-      "spearman": 0.711,
-      "n": 35
+      "pearson": 0.611,
+      "spearman": 0.684,
+      "n": 36
     },
     {
       "dimension": "learning",
-      "pearson": 0.725,
-      "spearman": 0.734,
-      "n": 50
+      "pearson": 0.731,
+      "spearman": 0.733,
+      "n": 51
     },
     {
       "dimension": "experimentation",
-      "pearson": 0.622,
-      "spearman": 0.754,
-      "n": 49
+      "pearson": 0.623,
+      "spearman": 0.75,
+      "n": 50
     },
     {
       "dimension": "adaptability",
       "pearson": 0.818,
-      "spearman": 0.829,
-      "n": 50
+      "spearman": 0.831,
+      "n": 51
     },
     {
       "dimension": "building",
-      "pearson": 0.641,
-      "spearman": 0.661,
-      "n": 50
+      "pearson": 0.635,
+      "spearman": 0.657,
+      "n": 51
     },
     {
       "dimension": "shared_purpose",
-      "pearson": 0.451,
-      "spearman": 0.461,
-      "n": 46
+      "pearson": 0.457,
+      "spearman": 0.477,
+      "n": 47
     }
   ],
   "dimensionPairs": [
     {
       "a": "anticipation",
       "b": "agency",
-      "r": 0.834,
-      "n": 51
+      "r": 0.835,
+      "n": 52
     },
     {
       "a": "anticipation",
       "b": "adaptability",
-      "r": 0.785,
+      "r": 0.788,
+      "n": 53
+    },
+    {
+      "a": "agency",
+      "b": "adaptability",
+      "r": 0.769,
       "n": 52
     },
     {
       "a": "trust",
       "b": "adaptability",
-      "r": 0.772,
-      "n": 36
-    },
-    {
-      "a": "agency",
-      "b": "adaptability",
-      "r": 0.766,
-      "n": 51
+      "r": 0.744,
+      "n": 37
     },
     {
       "a": "agency",
       "b": "trust",
-      "r": 0.733,
-      "n": 36
+      "r": 0.713,
+      "n": 37
     },
     {
       "a": "anticipation",
       "b": "trust",
-      "r": 0.732,
-      "n": 36
+      "r": 0.702,
+      "n": 37
     },
     {
       "a": "agency",
       "b": "experimentation",
       "r": 0.699,
-      "n": 50
-    },
-    {
-      "a": "anticipation",
-      "b": "coordination",
-      "r": 0.685,
       "n": 51
     },
     {
       "a": "anticipation",
-      "b": "shared_purpose",
-      "r": 0.654,
-      "n": 46
-    },
-    {
-      "a": "adaptability",
-      "b": "building",
-      "r": 0.651,
+      "b": "coordination",
+      "r": 0.692,
       "n": 52
     },
     {
       "a": "anticipation",
-      "b": "experimentation",
+      "b": "shared_purpose",
+      "r": 0.662,
+      "n": 47
+    },
+    {
+      "a": "anticipation",
+      "b": "learning",
       "r": 0.644,
-      "n": 51
+      "n": 53
     },
     {
       "a": "anticipation",
-      "b": "learning",
-      "r": 0.639,
+      "b": "experimentation",
+      "r": 0.643,
       "n": 52
+    },
+    {
+      "a": "adaptability",
+      "b": "building",
+      "r": 0.641,
+      "n": 53
     },
     {
       "a": "experimentation",
       "b": "building",
-      "r": 0.638,
-      "n": 51
+      "r": 0.637,
+      "n": 52
     },
     {
       "a": "anticipation",
       "b": "building",
-      "r": 0.632,
-      "n": 52
+      "r": 0.62,
+      "n": 53
     },
     {
       "a": "experimentation",
       "b": "adaptability",
-      "r": 0.621,
-      "n": 51
-    },
-    {
-      "a": "agency",
-      "b": "building",
-      "r": 0.604,
-      "n": 51
+      "r": 0.62,
+      "n": 52
     },
     {
       "a": "agency",
       "b": "learning",
-      "r": 0.602,
-      "n": 51
+      "r": 0.609,
+      "n": 52
     },
     {
       "a": "learning",
       "b": "adaptability",
-      "r": 0.599,
-      "n": 52
+      "r": 0.604,
+      "n": 53
     },
     {
-      "a": "trust",
-      "b": "shared_purpose",
-      "r": 0.595,
-      "n": 32
+      "a": "agency",
+      "b": "building",
+      "r": 0.597,
+      "n": 52
     },
     {
       "a": "agency",
       "b": "coordination",
-      "r": 0.582,
-      "n": 51
+      "r": 0.584,
+      "n": 52
+    },
+    {
+      "a": "trust",
+      "b": "shared_purpose",
+      "r": 0.56,
+      "n": 33
     },
     {
       "a": "trust",
       "b": "building",
-      "r": 0.536,
-      "n": 36
+      "r": 0.537,
+      "n": 37
     },
     {
       "a": "learning",
       "b": "shared_purpose",
-      "r": 0.528,
-      "n": 46
+      "r": 0.534,
+      "n": 47
     },
     {
       "a": "learning",
       "b": "experimentation",
-      "r": 0.524,
-      "n": 51
+      "r": 0.522,
+      "n": 52
     },
     {
       "a": "trust",
       "b": "experimentation",
-      "r": 0.518,
-      "n": 36
+      "r": 0.514,
+      "n": 37
     },
     {
       "a": "coordination",
-      "b": "building",
-      "r": 0.506,
-      "n": 51
+      "b": "shared_purpose",
+      "r": 0.511,
+      "n": 47
     },
     {
       "a": "coordination",
       "b": "adaptability",
-      "r": 0.502,
-      "n": 51
+      "r": 0.51,
+      "n": 52
     },
     {
       "a": "coordination",
-      "b": "shared_purpose",
-      "r": 0.499,
-      "n": 46
+      "b": "building",
+      "r": 0.496,
+      "n": 52
     },
     {
       "a": "adaptability",
       "b": "shared_purpose",
-      "r": 0.483,
-      "n": 46
-    },
-    {
-      "a": "trust",
-      "b": "learning",
-      "r": 0.476,
-      "n": 36
+      "r": 0.493,
+      "n": 47
     },
     {
       "a": "agency",
       "b": "shared_purpose",
-      "r": 0.475,
-      "n": 46
+      "r": 0.482,
+      "n": 47
+    },
+    {
+      "a": "trust",
+      "b": "learning",
+      "r": 0.463,
+      "n": 37
     },
     {
       "a": "coordination",
       "b": "learning",
-      "r": 0.42,
-      "n": 51
+      "r": 0.428,
+      "n": 52
     },
     {
       "a": "coordination",
       "b": "trust",
-      "r": 0.416,
-      "n": 36
+      "r": 0.397,
+      "n": 37
     },
     {
       "a": "coordination",
       "b": "experimentation",
-      "r": 0.372,
-      "n": 50
+      "r": 0.373,
+      "n": 51
     },
     {
       "a": "learning",
       "b": "building",
-      "r": 0.325,
-      "n": 52
+      "r": 0.316,
+      "n": 53
     },
     {
       "a": "building",
       "b": "shared_purpose",
-      "r": 0.288,
-      "n": 46
+      "r": 0.277,
+      "n": 47
     },
     {
       "a": "experimentation",
       "b": "shared_purpose",
-      "r": 0.165,
-      "n": 45
+      "r": 0.169,
+      "n": 46
     }
   ],
   "duplicateDimensionCandidates": [],
@@ -289,7 +289,7 @@
       "indicatorId": "labour_productivity",
       "dimension": "building",
       "measurementClass": "O",
-      "r": 0.893,
+      "r": 0.892,
       "wealthProxyPrior": 0.9,
       "flaggedAsWealthProxy": true
     },
@@ -305,7 +305,7 @@
       "indicatorId": "human_capital_index",
       "dimension": "learning",
       "measurementClass": "C",
-      "r": 0.878,
+      "r": 0.877,
       "wealthProxyPrior": 0.5,
       "flaggedAsWealthProxy": true
     },
@@ -313,15 +313,23 @@
       "indicatorId": "broadband_subscriptions",
       "dimension": "adaptability",
       "measurementClass": "I",
-      "r": 0.849,
+      "r": 0.845,
       "wealthProxyPrior": 0.6,
+      "flaggedAsWealthProxy": true
+    },
+    {
+      "indicatorId": "tertiary_enrollment",
+      "dimension": "learning",
+      "measurementClass": "I",
+      "r": 0.806,
+      "wealthProxyPrior": 0.5,
       "flaggedAsWealthProxy": true
     },
     {
       "indicatorId": "sci_articles_per_million",
       "dimension": "anticipation",
       "measurementClass": "O",
-      "r": 0.797,
+      "r": 0.794,
       "wealthProxyPrior": 0.4,
       "flaggedAsWealthProxy": true
     },
@@ -329,7 +337,7 @@
       "indicatorId": "account_ownership",
       "dimension": "agency",
       "measurementClass": "I",
-      "r": 0.789,
+      "r": 0.79,
       "wealthProxyPrior": 0.5,
       "flaggedAsWealthProxy": true
     },
@@ -337,15 +345,7 @@
       "indicatorId": "researchers_per_million",
       "dimension": "anticipation",
       "measurementClass": "I",
-      "r": 0.788,
-      "wealthProxyPrior": 0.5,
-      "flaggedAsWealthProxy": true
-    },
-    {
-      "indicatorId": "tertiary_enrollment",
-      "dimension": "learning",
-      "measurementClass": "I",
-      "r": 0.785,
+      "r": 0.787,
       "wealthProxyPrior": 0.5,
       "flaggedAsWealthProxy": true
     },
@@ -353,7 +353,7 @@
       "indicatorId": "statistical_performance",
       "dimension": "anticipation",
       "measurementClass": "C",
-      "r": 0.763,
+      "r": 0.765,
       "wealthProxyPrior": 0.25,
       "flaggedAsWealthProxy": true
     },
@@ -361,7 +361,7 @@
       "indicatorId": "electricity_transmission_losses",
       "dimension": "adaptability",
       "measurementClass": "O",
-      "r": 0.691,
+      "r": 0.69,
       "wealthProxyPrior": 0.4,
       "flaggedAsWealthProxy": false
     },
@@ -369,7 +369,7 @@
       "indicatorId": "interpersonal_trust",
       "dimension": "trust",
       "measurementClass": "P",
-      "r": 0.669,
+      "r": 0.657,
       "wealthProxyPrior": 0.25,
       "flaggedAsWealthProxy": false
     },
@@ -385,7 +385,7 @@
       "indicatorId": "rd_expenditure_gdp",
       "dimension": "anticipation",
       "measurementClass": "I",
-      "r": 0.631,
+      "r": 0.632,
       "wealthProxyPrior": 0.5,
       "flaggedAsWealthProxy": false
     },
@@ -393,7 +393,7 @@
       "indicatorId": "business_start_days",
       "dimension": "agency",
       "measurementClass": "C",
-      "r": 0.598,
+      "r": 0.597,
       "wealthProxyPrior": 0.2,
       "flaggedAsWealthProxy": false
     },
@@ -401,7 +401,7 @@
       "indicatorId": "resident_trademarks_per_million",
       "dimension": "experimentation",
       "measurementClass": "O",
-      "r": 0.574,
+      "r": 0.578,
       "wealthProxyPrior": 0.3,
       "flaggedAsWealthProxy": false
     },
@@ -409,7 +409,7 @@
       "indicatorId": "labor_force_participation",
       "dimension": "adaptability",
       "measurementClass": "I",
-      "r": 0.572,
+      "r": 0.575,
       "wealthProxyPrior": 0.15,
       "flaggedAsWealthProxy": false
     },
@@ -417,7 +417,7 @@
       "indicatorId": "time_to_export",
       "dimension": "coordination",
       "measurementClass": "C",
-      "r": 0.547,
+      "r": 0.551,
       "wealthProxyPrior": 0.3,
       "flaggedAsWealthProxy": false
     },
@@ -425,7 +425,7 @@
       "indicatorId": "domestic_credit_private",
       "dimension": "agency",
       "measurementClass": "I",
-      "r": 0.543,
+      "r": 0.542,
       "wealthProxyPrior": 0.55,
       "flaggedAsWealthProxy": false
     },
@@ -433,7 +433,7 @@
       "indicatorId": "resident_patents_per_million",
       "dimension": "experimentation",
       "measurementClass": "O",
-      "r": 0.527,
+      "r": 0.524,
       "wealthProxyPrior": 0.45,
       "flaggedAsWealthProxy": false
     },
@@ -449,7 +449,7 @@
       "indicatorId": "economic_complexity",
       "dimension": "building",
       "measurementClass": "O",
-      "r": 0.464,
+      "r": 0.462,
       "wealthProxyPrior": 0.45,
       "flaggedAsWealthProxy": false
     },
@@ -457,7 +457,7 @@
       "indicatorId": "high_tech_exports_share",
       "dimension": "building",
       "measurementClass": "O",
-      "r": 0.459,
+      "r": 0.447,
       "wealthProxyPrior": 0.4,
       "flaggedAsWealthProxy": false
     },
@@ -465,7 +465,7 @@
       "indicatorId": "new_business_density",
       "dimension": "agency",
       "measurementClass": "C",
-      "r": 0.405,
+      "r": 0.408,
       "wealthProxyPrior": 0.35,
       "flaggedAsWealthProxy": false
     },
@@ -473,7 +473,7 @@
       "indicatorId": "civil_society_strength",
       "dimension": "coordination",
       "measurementClass": "C",
-      "r": 0.395,
+      "r": 0.398,
       "wealthProxyPrior": 0.15,
       "flaggedAsWealthProxy": false
     },
@@ -481,7 +481,7 @@
       "indicatorId": "income_inequality",
       "dimension": "shared_purpose",
       "measurementClass": "O",
-      "r": 0.379,
+      "r": 0.383,
       "wealthProxyPrior": 0.2,
       "flaggedAsWealthProxy": false
     },
@@ -489,7 +489,7 @@
       "indicatorId": "education_expenditure_gdp",
       "dimension": "learning",
       "measurementClass": "I",
-      "r": 0.35,
+      "r": 0.351,
       "wealthProxyPrior": 0.3,
       "flaggedAsWealthProxy": false
     },
@@ -499,6 +499,14 @@
       "measurementClass": "C",
       "r": -0.296,
       "wealthProxyPrior": 0.15,
+      "flaggedAsWealthProxy": false
+    },
+    {
+      "indicatorId": "vocational_secondary_share",
+      "dimension": "learning",
+      "measurementClass": "I",
+      "r": 0.26,
+      "wealthProxyPrior": 0.1,
       "flaggedAsWealthProxy": false
     },
     {
@@ -513,23 +521,15 @@
       "indicatorId": "budget_execution_fidelity",
       "dimension": "coordination",
       "measurementClass": "C",
-      "r": 0.218,
+      "r": 0.224,
       "wealthProxyPrior": 0.15,
-      "flaggedAsWealthProxy": false
-    },
-    {
-      "indicatorId": "vocational_secondary_share",
-      "dimension": "learning",
-      "measurementClass": "I",
-      "r": 0.218,
-      "wealthProxyPrior": 0.1,
       "flaggedAsWealthProxy": false
     },
     {
       "indicatorId": "tax_revenue_gdp",
       "dimension": "shared_purpose",
       "measurementClass": "O",
-      "r": 0.209,
+      "r": 0.217,
       "wealthProxyPrior": 0.3,
       "flaggedAsWealthProxy": false
     },
@@ -537,7 +537,7 @@
       "indicatorId": "manufacturing_value_added",
       "dimension": "building",
       "measurementClass": "O",
-      "r": 0.178,
+      "r": 0.172,
       "wealthProxyPrior": 0.2,
       "flaggedAsWealthProxy": false
     },
@@ -545,7 +545,7 @@
       "indicatorId": "contract_enforcement_days",
       "dimension": "trust",
       "measurementClass": "C",
-      "r": 0.173,
+      "r": 0.166,
       "wealthProxyPrior": 0.2,
       "flaggedAsWealthProxy": false
     },
@@ -553,7 +553,7 @@
       "indicatorId": "unemployment_rate",
       "dimension": "adaptability",
       "measurementClass": "O",
-      "r": 0.158,
+      "r": 0.155,
       "wealthProxyPrior": 0.25,
       "flaggedAsWealthProxy": false
     },
@@ -561,74 +561,81 @@
       "indicatorId": "electricity_connection_speed",
       "dimension": "building",
       "measurementClass": "C",
-      "r": 0.026,
+      "r": 0.025,
       "wealthProxyPrior": 0.25,
       "flaggedAsWealthProxy": false
     }
   ],
   "wealthAttribution": [
     {
-      "indicatorId": "time_to_export",
-      "dimension": "coordination",
-      "dimensionR": 0.561,
-      "dimensionRWithout": 0.361,
-      "delta": 0.2
-    },
-    {
       "indicatorId": "labour_productivity",
       "dimension": "building",
-      "dimensionR": 0.641,
-      "dimensionRWithout": 0.442,
-      "delta": 0.199
+      "dimensionR": 0.635,
+      "dimensionRWithout": 0.434,
+      "delta": 0.201
+    },
+    {
+      "indicatorId": "time_to_export",
+      "dimension": "coordination",
+      "dimensionR": 0.563,
+      "dimensionRWithout": 0.365,
+      "delta": 0.198
     },
     {
       "indicatorId": "interpersonal_trust",
       "dimension": "trust",
-      "dimensionR": 0.367,
-      "dimensionRWithout": 0.173,
-      "delta": 0.194
+      "dimensionR": 0.354,
+      "dimensionRWithout": 0.166,
+      "delta": 0.188
     },
     {
       "indicatorId": "income_inequality",
       "dimension": "shared_purpose",
-      "dimensionR": 0.379,
-      "dimensionRWithout": 0.209,
-      "delta": 0.171
+      "dimensionR": 0.386,
+      "dimensionRWithout": 0.217,
+      "delta": 0.169
     },
     {
       "indicatorId": "broadband_subscriptions",
       "dimension": "adaptability",
       "dimensionR": 0.818,
-      "dimensionRWithout": 0.664,
-      "delta": 0.154
+      "dimensionRWithout": 0.663,
+      "delta": 0.155
     },
     {
       "indicatorId": "human_capital_index",
       "dimension": "learning",
-      "dimensionR": 0.725,
-      "dimensionRWithout": 0.617,
-      "delta": 0.108
+      "dimensionR": 0.731,
+      "dimensionRWithout": 0.621,
+      "delta": 0.111
     },
     {
       "indicatorId": "tertiary_enrollment",
       "dimension": "learning",
-      "dimensionR": 0.725,
-      "dimensionRWithout": 0.637,
+      "dimensionR": 0.731,
+      "dimensionRWithout": 0.643,
       "delta": 0.088
     },
     {
       "indicatorId": "internet_users",
       "dimension": "agency",
-      "dimensionR": 0.85,
-      "dimensionRWithout": 0.778,
-      "delta": 0.072
+      "dimensionR": 0.851,
+      "dimensionRWithout": 0.78,
+      "delta": 0.071
     },
     {
       "indicatorId": "economic_complexity",
       "dimension": "building",
-      "dimensionR": 0.641,
-      "dimensionRWithout": 0.578,
-      "delta": 0.063
+      "dimensionR": 0.635,
+      "dimensionRWithout": 0.571,
+      "delta": 0.064
+    },
+    {
+      "indicatorId": "resident_trademarks_per_million",
+      "dimension": "experimentation",
+      "dimensionR": 0.565,
+      "dimensionRWithout": 0.512,
+      "delta": 0.053
     },
     {
       "indicatorId": "electricity_transmission_losses",
@@ -638,31 +645,24 @@
       "delta": 0.048
     },
     {
-      "indicatorId": "resident_trademarks_per_million",
-      "dimension": "experimentation",
-      "dimensionR": 0.563,
-      "dimensionRWithout": 0.517,
-      "delta": 0.047
-    },
-    {
       "indicatorId": "civil_society_strength",
       "dimension": "coordination",
-      "dimensionR": 0.561,
-      "dimensionRWithout": 0.515,
-      "delta": 0.046
+      "dimensionR": 0.563,
+      "dimensionRWithout": 0.518,
+      "delta": 0.045
     },
     {
       "indicatorId": "account_ownership",
       "dimension": "agency",
-      "dimensionR": 0.85,
-      "dimensionRWithout": 0.811,
+      "dimensionR": 0.851,
+      "dimensionRWithout": 0.812,
       "delta": 0.039
     },
     {
       "indicatorId": "secure_internet_servers",
       "dimension": "anticipation",
       "dimensionR": 0.873,
-      "dimensionRWithout": 0.838,
+      "dimensionRWithout": 0.837,
       "delta": 0.036
     },
     {
@@ -675,72 +675,65 @@
     {
       "indicatorId": "resident_patents_per_million",
       "dimension": "experimentation",
-      "dimensionR": 0.563,
-      "dimensionRWithout": 0.543,
-      "delta": 0.02
+      "dimensionR": 0.565,
+      "dimensionRWithout": 0.548,
+      "delta": 0.017
     },
     {
       "indicatorId": "failure_tolerance",
       "dimension": "experimentation",
-      "dimensionR": 0.563,
-      "dimensionRWithout": 0.55,
-      "delta": 0.013
+      "dimensionR": 0.565,
+      "dimensionRWithout": 0.552,
+      "delta": 0.012
     },
     {
       "indicatorId": "business_start_days",
       "dimension": "agency",
-      "dimensionR": 0.85,
-      "dimensionRWithout": 0.841,
-      "delta": 0.009
+      "dimensionR": 0.851,
+      "dimensionRWithout": 0.843,
+      "delta": 0.008
     },
     {
       "indicatorId": "business_start_procedures",
       "dimension": "agency",
-      "dimensionR": 0.85,
-      "dimensionRWithout": 0.843,
-      "delta": 0.007
+      "dimensionR": 0.851,
+      "dimensionRWithout": 0.845,
+      "delta": 0.006
     },
     {
       "indicatorId": "firm_training_incidence",
       "dimension": "learning",
-      "dimensionR": 0.725,
-      "dimensionRWithout": 0.718,
-      "delta": 0.007
+      "dimensionR": 0.731,
+      "dimensionRWithout": 0.725,
+      "delta": 0.006
     },
     {
       "indicatorId": "tax_revenue_gdp",
       "dimension": "shared_purpose",
-      "dimensionR": 0.379,
-      "dimensionRWithout": 0.379,
-      "delta": 0.001
+      "dimensionR": 0.386,
+      "dimensionRWithout": 0.383,
+      "delta": 0.003
     },
     {
       "indicatorId": "sci_articles_per_million",
       "dimension": "anticipation",
       "dimensionR": 0.873,
       "dimensionRWithout": 0.874,
-      "delta": 0
+      "delta": -0.001
     },
     {
       "indicatorId": "domestic_credit_private",
       "dimension": "agency",
-      "dimensionR": 0.85,
+      "dimensionR": 0.851,
       "dimensionRWithout": 0.862,
-      "delta": -0.012
-    },
-    {
-      "indicatorId": "high_tech_exports_share",
-      "dimension": "building",
-      "dimensionR": 0.641,
-      "dimensionRWithout": 0.657,
-      "delta": -0.016
+      "delta": -0.011
     },
     {
       "indicatorId": "rd_expenditure_gdp",
       "dimension": "anticipation",
       "dimensionR": 0.873,
-      "dimensionRWithout": 0.89,
-      "delta": -0.017
+      "dimensionRWithout": 0.888,
+      "delta": -0.015
     },
     {
       "indicatorId": "researchers_per_million",
@@ -750,10 +743,17 @@
       "delta": -0.017
     },
     {
+      "indicatorId": "high_tech_exports_share",
+      "dimension": "building",
+      "dimensionR": 0.635,
+      "dimensionRWithout": 0.654,
+      "delta": -0.019
+    },
+    {
       "indicatorId": "early_stage_entrepreneurial_activity",
       "dimension": "experimentation",
-      "dimensionR": 0.563,
-      "dimensionRWithout": 0.583,
+      "dimensionR": 0.565,
+      "dimensionRWithout": 0.584,
       "delta": -0.02
     },
     {
@@ -764,13 +764,6 @@
       "delta": -0.02
     },
     {
-      "indicatorId": "education_expenditure_gdp",
-      "dimension": "learning",
-      "dimensionR": 0.725,
-      "dimensionRWithout": 0.749,
-      "delta": -0.024
-    },
-    {
       "indicatorId": "unemployment_rate",
       "dimension": "adaptability",
       "dimensionR": 0.818,
@@ -778,46 +771,53 @@
       "delta": -0.027
     },
     {
+      "indicatorId": "education_expenditure_gdp",
+      "dimension": "learning",
+      "dimensionR": 0.731,
+      "dimensionRWithout": 0.761,
+      "delta": -0.03
+    },
+    {
       "indicatorId": "new_business_density",
       "dimension": "agency",
-      "dimensionR": 0.85,
-      "dimensionRWithout": 0.884,
-      "delta": -0.034
+      "dimensionR": 0.851,
+      "dimensionRWithout": 0.883,
+      "delta": -0.032
     },
     {
       "indicatorId": "budget_execution_fidelity",
       "dimension": "coordination",
-      "dimensionR": 0.561,
-      "dimensionRWithout": 0.608,
-      "delta": -0.047
+      "dimensionR": 0.563,
+      "dimensionRWithout": 0.611,
+      "delta": -0.048
     },
     {
       "indicatorId": "electricity_connection_speed",
       "dimension": "building",
-      "dimensionR": 0.641,
-      "dimensionRWithout": 0.692,
-      "delta": -0.051
+      "dimensionR": 0.635,
+      "dimensionRWithout": 0.685,
+      "delta": -0.05
     },
     {
       "indicatorId": "vocational_secondary_share",
       "dimension": "learning",
-      "dimensionR": 0.725,
-      "dimensionRWithout": 0.782,
-      "delta": -0.057
+      "dimensionR": 0.731,
+      "dimensionRWithout": 0.787,
+      "delta": -0.056
     },
     {
       "indicatorId": "manufacturing_value_added",
       "dimension": "building",
-      "dimensionR": 0.641,
-      "dimensionRWithout": 0.705,
-      "delta": -0.064
+      "dimensionR": 0.635,
+      "dimensionRWithout": 0.7,
+      "delta": -0.065
     },
     {
       "indicatorId": "contract_enforcement_days",
       "dimension": "trust",
-      "dimensionR": 0.367,
-      "dimensionRWithout": 0.669,
-      "delta": -0.302
+      "dimensionR": 0.354,
+      "dimensionRWithout": 0.657,
+      "delta": -0.303
     }
   ],
   "panelVsGdp": null,
@@ -825,38 +825,38 @@
     {
       "a": "researchers_per_million",
       "b": "sci_articles_per_million",
-      "r": 0.916,
-      "n": 49
+      "r": 0.918,
+      "n": 50
     },
     {
       "a": "rd_expenditure_gdp",
       "b": "researchers_per_million",
-      "r": 0.89,
-      "n": 48
+      "r": 0.885,
+      "n": 49
     },
     {
       "a": "human_capital_index",
       "b": "broadband_subscriptions",
-      "r": 0.872,
-      "n": 49
+      "r": 0.874,
+      "n": 50
     },
     {
       "a": "researchers_per_million",
       "b": "human_capital_index",
-      "r": 0.865,
-      "n": 46
-    },
-    {
-      "a": "secure_internet_servers",
-      "b": "account_ownership",
-      "r": 0.86,
-      "n": 51
+      "r": 0.868,
+      "n": 47
     },
     {
       "a": "secure_internet_servers",
       "b": "human_capital_index",
-      "r": 0.86,
-      "n": 49
+      "r": 0.862,
+      "n": 50
+    },
+    {
+      "a": "secure_internet_servers",
+      "b": "account_ownership",
+      "r": 0.861,
+      "n": 52
     }
   ],
   "measurability": [
@@ -867,7 +867,7 @@
       "gaps": 2,
       "retired": 0,
       "meanCoverage": 0.698,
-      "meanConfidence": 0.6,
+      "meanConfidence": 0.601,
       "classMix": {
         "C": 2,
         "I": 4,
@@ -883,7 +883,7 @@
       "gaps": 2,
       "retired": 0,
       "meanCoverage": 0.731,
-      "meanConfidence": 0.576,
+      "meanConfidence": 0.577,
       "classMix": {
         "C": 4,
         "I": 3,
@@ -898,8 +898,8 @@
       "indicatorsObserved": 3,
       "gaps": 2,
       "retired": 3,
-      "meanCoverage": 0.353,
-      "meanConfidence": 0.226,
+      "meanCoverage": 0.566,
+      "meanConfidence": 0.362,
       "classMix": {
         "C": 5,
         "I": 0,
@@ -914,8 +914,8 @@
       "indicatorsObserved": 2,
       "gaps": 3,
       "retired": 3,
-      "meanCoverage": 0.209,
-      "meanConfidence": 0.13,
+      "meanCoverage": 0.336,
+      "meanConfidence": 0.209,
       "classMix": {
         "C": 1,
         "I": 0,
@@ -930,8 +930,8 @@
       "indicatorsObserved": 5,
       "gaps": 2,
       "retired": 0,
-      "meanCoverage": 0.689,
-      "meanConfidence": 0.494,
+      "meanCoverage": 0.695,
+      "meanConfidence": 0.495,
       "classMix": {
         "C": 3,
         "I": 3,
@@ -946,8 +946,8 @@
       "indicatorsObserved": 4,
       "gaps": 4,
       "retired": 0,
-      "meanCoverage": 0.322,
-      "meanConfidence": 0.226,
+      "meanCoverage": 0.321,
+      "meanConfidence": 0.225,
       "classMix": {
         "C": 4,
         "I": 1,
@@ -978,8 +978,8 @@
       "indicatorsObserved": 5,
       "gaps": 2,
       "retired": 1,
-      "meanCoverage": 0.611,
-      "meanConfidence": 0.527,
+      "meanCoverage": 0.698,
+      "meanConfidence": 0.603,
       "classMix": {
         "C": 3,
         "I": 0,
@@ -994,8 +994,8 @@
       "indicatorsObserved": 2,
       "gaps": 4,
       "retired": 1,
-      "meanCoverage": 0.267,
-      "meanConfidence": 0.223,
+      "meanCoverage": 0.311,
+      "meanConfidence": 0.26,
       "classMix": {
         "C": 2,
         "I": 0,
@@ -1021,7 +1021,7 @@
         }
       ],
       "countriesOnOneFamily": 0,
-      "countriesScored": 36
+      "countriesScored": 37
     }
   ],
   "behaviouralChecks": [
@@ -1029,11 +1029,11 @@
       "checkId": "bribery_incidence",
       "dimension": "trust",
       "name": "Bribery incidence",
-      "countries": 49,
+      "countries": 50,
       "latestYear": 2025,
-      "r": -0.553,
-      "dimensionR": -0.295,
-      "dimensionN": 36
+      "r": -0.552,
+      "dimensionR": -0.293,
+      "dimensionN": 37
     }
   ],
   "discriminationTrend": {
@@ -1044,31 +1044,47 @@
       {
         "indicatorId": "income_inequality",
         "dimension": "shared_purpose",
-        "countries": 44,
+        "countries": 45,
         "years": 10,
         "firstYear": 2006,
         "lastYear": 2026,
-        "firstSpread": 59.08,
-        "lastSpread": 34.34,
-        "changeShare": -0.419,
-        "spearman": -0.988,
-        "carriedForwardCells": 185,
+        "firstSpread": 57.44,
+        "lastSpread": 33.56,
+        "changeShare": -0.416,
+        "spearman": -0.976,
+        "carriedForwardCells": 188,
         "clampedCells": 20,
         "fading": true,
         "lowDiscrimination": false
       },
       {
-        "indicatorId": "internet_users",
+        "indicatorId": "domestic_credit_private",
         "dimension": "agency",
-        "countries": 52,
+        "countries": 42,
         "years": 21,
         "firstYear": 2006,
         "lastYear": 2026,
-        "firstSpread": 43.46,
-        "lastSpread": 27.65,
-        "changeShare": -0.364,
-        "spearman": -0.788,
-        "carriedForwardCells": 102,
+        "firstSpread": 41.5,
+        "lastSpread": 32.13,
+        "changeShare": -0.226,
+        "spearman": -0.846,
+        "carriedForwardCells": 69,
+        "clampedCells": 3,
+        "fading": false,
+        "lowDiscrimination": false
+      },
+      {
+        "indicatorId": "internet_users",
+        "dimension": "agency",
+        "countries": 53,
+        "years": 21,
+        "firstYear": 2006,
+        "lastYear": 2026,
+        "firstSpread": 42.12,
+        "lastSpread": 27.64,
+        "changeShare": -0.344,
+        "spearman": -0.792,
+        "carriedForwardCells": 104,
         "clampedCells": 168,
         "fading": true,
         "lowDiscrimination": false
@@ -1076,95 +1092,79 @@
       {
         "indicatorId": "resident_patents_per_million",
         "dimension": "experimentation",
-        "countries": 39,
+        "countries": 40,
         "years": 19,
         "firstYear": 2006,
         "lastYear": 2026,
-        "firstSpread": 39.31,
-        "lastSpread": 34.83,
-        "changeShare": -0.114,
-        "spearman": -0.764,
-        "carriedForwardCells": 205,
+        "firstSpread": 38.31,
+        "lastSpread": 34.31,
+        "changeShare": -0.104,
+        "spearman": -0.717,
+        "carriedForwardCells": 210,
         "clampedCells": 0,
-        "fading": false,
-        "lowDiscrimination": false
-      },
-      {
-        "indicatorId": "domestic_credit_private",
-        "dimension": "agency",
-        "countries": 41,
-        "years": 21,
-        "firstYear": 2006,
-        "lastYear": 2026,
-        "firstSpread": 40.35,
-        "lastSpread": 33.62,
-        "changeShare": -0.167,
-        "spearman": -0.661,
-        "carriedForwardCells": 67,
-        "clampedCells": 3,
-        "fading": false,
-        "lowDiscrimination": false
-      },
-      {
-        "indicatorId": "labour_productivity",
-        "dimension": "building",
-        "countries": 50,
-        "years": 21,
-        "firstYear": 2006,
-        "lastYear": 2026,
-        "firstSpread": 32.49,
-        "lastSpread": 31.37,
-        "changeShare": -0.034,
-        "spearman": -0.453,
-        "carriedForwardCells": 51,
-        "clampedCells": 27,
-        "fading": false,
-        "lowDiscrimination": false
-      },
-      {
-        "indicatorId": "electricity_transmission_losses",
-        "dimension": "adaptability",
-        "countries": 52,
-        "years": 21,
-        "firstYear": 2006,
-        "lastYear": 2026,
-        "firstSpread": 27.08,
-        "lastSpread": 25.94,
-        "changeShare": -0.042,
-        "spearman": -0.398,
-        "carriedForwardCells": 132,
-        "clampedCells": 9,
         "fading": false,
         "lowDiscrimination": false
       },
       {
         "indicatorId": "unemployment_rate",
         "dimension": "adaptability",
-        "countries": 52,
+        "countries": 53,
         "years": 21,
         "firstYear": 2006,
         "lastYear": 2026,
-        "firstSpread": 27.72,
-        "lastSpread": 21.76,
-        "changeShare": -0.215,
-        "spearman": -0.372,
-        "carriedForwardCells": 52,
+        "firstSpread": 28.1,
+        "lastSpread": 21.61,
+        "changeShare": -0.231,
+        "spearman": -0.556,
+        "carriedForwardCells": 53,
         "clampedCells": 10,
+        "fading": false,
+        "lowDiscrimination": false
+      },
+      {
+        "indicatorId": "electricity_transmission_losses",
+        "dimension": "adaptability",
+        "countries": 53,
+        "years": 21,
+        "firstYear": 2006,
+        "lastYear": 2026,
+        "firstSpread": 26.58,
+        "lastSpread": 25.8,
+        "changeShare": -0.029,
+        "spearman": -0.453,
+        "carriedForwardCells": 134,
+        "clampedCells": 9,
+        "fading": false,
+        "lowDiscrimination": false
+      },
+      {
+        "indicatorId": "labour_productivity",
+        "dimension": "building",
+        "countries": 51,
+        "years": 21,
+        "firstYear": 2006,
+        "lastYear": 2026,
+        "firstSpread": 32.15,
+        "lastSpread": 31.21,
+        "changeShare": -0.029,
+        "spearman": -0.452,
+        "carriedForwardCells": 52,
+        "clampedCells": 27,
         "fading": false,
         "lowDiscrimination": false
       },
       {
         "indicatorId": "labor_force_participation",
         "dimension": "adaptability",
-        "countries": 52,
+        "countries": 53,
         "years": 21,
         "firstYear": 2006,
         "lastYear": 2026,
-        "firstSpread": 39.33,
-        "lastSpread": 35.03,
-        "changeShare": -0.109,
-        "spearman": -0.346,
-        "carriedForwardCells": 52,
+        "firstSpread": 38.55,
+        "lastSpread": 33.84,
+        "changeShare": -0.122,
+        "spearman": -0.44,
+        "carriedForwardCells": 53,
         "clampedCells": 32,
         "fading": false,
         "lowDiscrimination": false
@@ -1172,32 +1172,48 @@
       {
         "indicatorId": "education_expenditure_gdp",
         "dimension": "learning",
-        "countries": 37,
+        "countries": 38,
         "years": 20,
         "firstYear": 2006,
         "lastYear": 2026,
-        "firstSpread": 23.84,
-        "lastSpread": 23.03,
-        "changeShare": -0.034,
-        "spearman": -0.036,
-        "carriedForwardCells": 155,
+        "firstSpread": 23.31,
+        "lastSpread": 22.4,
+        "changeShare": -0.039,
+        "spearman": -0.075,
+        "carriedForwardCells": 160,
         "clampedCells": 14,
         "fading": false,
         "lowDiscrimination": false
       },
       {
-        "indicatorId": "tax_revenue_gdp",
-        "dimension": "shared_purpose",
-        "countries": 35,
+        "indicatorId": "resident_trademarks_per_million",
+        "dimension": "experimentation",
+        "countries": 31,
+        "years": 19,
+        "firstYear": 2006,
+        "lastYear": 2026,
+        "firstSpread": 19.48,
+        "lastSpread": 29.83,
+        "changeShare": 0.531,
+        "spearman": 0.629,
+        "carriedForwardCells": 182,
+        "clampedCells": 17,
+        "fading": false,
+        "lowDiscrimination": false
+      },
+      {
+        "indicatorId": "manufacturing_value_added",
+        "dimension": "building",
+        "countries": 52,
         "years": 21,
         "firstYear": 2006,
         "lastYear": 2026,
-        "firstSpread": 32.33,
-        "lastSpread": 38.38,
-        "changeShare": 0.187,
-        "spearman": 0.468,
-        "carriedForwardCells": 83,
-        "clampedCells": 13,
+        "firstSpread": 18.09,
+        "lastSpread": 21.89,
+        "changeShare": 0.21,
+        "spearman": 0.657,
+        "carriedForwardCells": 66,
+        "clampedCells": 3,
         "fading": false,
         "lowDiscrimination": false
       },
@@ -1208,9 +1224,9 @@
         "years": 21,
         "firstYear": 2006,
         "lastYear": 2026,
-        "firstSpread": 10.37,
-        "lastSpread": 24.49,
-        "changeShare": 1.362,
+        "firstSpread": 10.72,
+        "lastSpread": 25.33,
+        "changeShare": 1.363,
         "spearman": 0.659,
         "carriedForwardCells": 44,
         "clampedCells": 6,
@@ -1218,49 +1234,33 @@
         "lowDiscrimination": false
       },
       {
-        "indicatorId": "resident_trademarks_per_million",
-        "dimension": "experimentation",
-        "countries": 30,
-        "years": 19,
-        "firstYear": 2006,
-        "lastYear": 2026,
-        "firstSpread": 18.06,
-        "lastSpread": 26.66,
-        "changeShare": 0.476,
-        "spearman": 0.666,
-        "carriedForwardCells": 177,
-        "clampedCells": 17,
-        "fading": false,
-        "lowDiscrimination": false
-      },
-      {
-        "indicatorId": "manufacturing_value_added",
-        "dimension": "building",
-        "countries": 51,
+        "indicatorId": "tax_revenue_gdp",
+        "dimension": "shared_purpose",
+        "countries": 36,
         "years": 21,
         "firstYear": 2006,
         "lastYear": 2026,
-        "firstSpread": 17.85,
-        "lastSpread": 22.11,
-        "changeShare": 0.239,
-        "spearman": 0.668,
-        "carriedForwardCells": 65,
-        "clampedCells": 3,
+        "firstSpread": 34.32,
+        "lastSpread": 38.37,
+        "changeShare": 0.118,
+        "spearman": 0.73,
+        "carriedForwardCells": 85,
+        "clampedCells": 13,
         "fading": false,
         "lowDiscrimination": false
       },
       {
         "indicatorId": "rd_expenditure_gdp",
         "dimension": "anticipation",
-        "countries": 35,
+        "countries": 36,
         "years": 16,
         "firstYear": 2006,
         "lastYear": 2026,
-        "firstSpread": 27.64,
-        "lastSpread": 33.23,
-        "changeShare": 0.202,
-        "spearman": 0.767,
-        "carriedForwardCells": 147,
+        "firstSpread": 27.14,
+        "lastSpread": 32.2,
+        "changeShare": 0.186,
+        "spearman": 0.826,
+        "carriedForwardCells": 150,
         "clampedCells": 1,
         "fading": false,
         "lowDiscrimination": false
@@ -1268,15 +1268,15 @@
       {
         "indicatorId": "sci_articles_per_million",
         "dimension": "anticipation",
-        "countries": 52,
+        "countries": 53,
         "years": 21,
         "firstYear": 2006,
         "lastYear": 2026,
-        "firstSpread": 35.57,
-        "lastSpread": 48.65,
-        "changeShare": 0.368,
-        "spearman": 0.894,
-        "carriedForwardCells": 156,
+        "firstSpread": 34.83,
+        "lastSpread": 49.25,
+        "changeShare": 0.414,
+        "spearman": 0.829,
+        "carriedForwardCells": 159,
         "clampedCells": 56,
         "fading": false,
         "lowDiscrimination": false
@@ -1284,15 +1284,15 @@
       {
         "indicatorId": "new_business_density",
         "dimension": "agency",
-        "countries": 34,
+        "countries": 35,
         "years": 21,
         "firstYear": 2006,
         "lastYear": 2026,
-        "firstSpread": 15.99,
-        "lastSpread": 26.7,
-        "changeShare": 0.67,
-        "spearman": 0.918,
-        "carriedForwardCells": 76,
+        "firstSpread": 15.7,
+        "lastSpread": 25.8,
+        "changeShare": 0.643,
+        "spearman": 0.923,
+        "carriedForwardCells": 78,
         "clampedCells": 3,
         "fading": false,
         "lowDiscrimination": false
@@ -1300,15 +1300,15 @@
       {
         "indicatorId": "broadband_subscriptions",
         "dimension": "adaptability",
-        "countries": 49,
+        "countries": 50,
         "years": 21,
         "firstYear": 2006,
         "lastYear": 2026,
-        "firstSpread": 36.24,
-        "lastSpread": 54.37,
-        "changeShare": 0.5,
-        "spearman": 0.921,
-        "carriedForwardCells": 108,
+        "firstSpread": 36.22,
+        "lastSpread": 54.52,
+        "changeShare": 0.505,
+        "spearman": 0.943,
+        "carriedForwardCells": 110,
         "clampedCells": 42,
         "fading": false,
         "lowDiscrimination": false
@@ -1316,15 +1316,15 @@
       {
         "indicatorId": "researchers_per_million",
         "dimension": "anticipation",
-        "countries": 30,
+        "countries": 31,
         "years": 15,
         "firstYear": 2006,
         "lastYear": 2026,
-        "firstSpread": 32.97,
-        "lastSpread": 54.18,
-        "changeShare": 0.643,
+        "firstSpread": 32.79,
+        "lastSpread": 54.56,
+        "changeShare": 0.664,
         "spearman": 0.984,
-        "carriedForwardCells": 130,
+        "carriedForwardCells": 133,
         "clampedCells": 0,
         "fading": false,
         "lowDiscrimination": false
@@ -1501,7 +1501,7 @@
         "changeShare": null,
         "spearman": null,
         "carriedForwardCells": 100,
-        "clampedCells": 4,
+        "clampedCells": 0,
         "fading": false,
         "lowDiscrimination": false
       },
@@ -1524,7 +1524,7 @@
       {
         "indicatorId": "firm_training_incidence",
         "dimension": "learning",
-        "countries": 23,
+        "countries": 24,
         "years": 7,
         "firstYear": 2006,
         "lastYear": 2026,
@@ -1532,7 +1532,7 @@
         "lastSpread": null,
         "changeShare": null,
         "spearman": null,
-        "carriedForwardCells": 122,
+        "carriedForwardCells": 129,
         "clampedCells": 0,
         "fading": false,
         "lowDiscrimination": false
@@ -1626,10 +1626,10 @@
       "internet_users",
       "human_capital_index",
       "broadband_subscriptions",
+      "tertiary_enrollment",
       "sci_articles_per_million",
       "account_ownership",
       "researchers_per_million",
-      "tertiary_enrollment",
       "statistical_performance"
     ],
     "dimensionsEmptied": [],
@@ -1640,7 +1640,7 @@
       },
       {
         "dimension": "agency",
-        "meanAbsShift": 8.31
+        "meanAbsShift": 8.5
       },
       {
         "dimension": "coordination",
@@ -1652,7 +1652,7 @@
       },
       {
         "dimension": "learning",
-        "meanAbsShift": 8.09
+        "meanAbsShift": 8.06
       },
       {
         "dimension": "experimentation",
@@ -1660,11 +1660,11 @@
       },
       {
         "dimension": "adaptability",
-        "meanAbsShift": 6.43
+        "meanAbsShift": 6.38
       },
       {
         "dimension": "building",
-        "meanAbsShift": 3.86
+        "meanAbsShift": 3.8
       },
       {
         "dimension": "shared_purpose",
@@ -1675,42 +1675,42 @@
       {
         "iso3": "BRA",
         "country": "Brazil",
-        "meanAbsShift": 2.48
+        "meanAbsShift": 2.55
       },
       {
         "iso3": "USA",
         "country": "United States",
-        "meanAbsShift": 1.84
+        "meanAbsShift": 1.9
       },
       {
         "iso3": "NLD",
         "country": "Netherlands",
-        "meanAbsShift": 3.37
+        "meanAbsShift": 3.4
       },
       {
         "iso3": "CHE",
         "country": "Switzerland",
-        "meanAbsShift": 2.14
+        "meanAbsShift": 2.19
       },
       {
         "iso3": "SGP",
         "country": "Singapore",
-        "meanAbsShift": 6
+        "meanAbsShift": 6.01
       },
       {
         "iso3": "KOR",
         "country": "South Korea",
-        "meanAbsShift": 5.64
+        "meanAbsShift": 5.67
       },
       {
         "iso3": "EST",
         "country": "Estonia",
-        "meanAbsShift": 1.95
+        "meanAbsShift": 2.02
       },
       {
         "iso3": "IND",
         "country": "India",
-        "meanAbsShift": 4.35
+        "meanAbsShift": 4.46
       },
       {
         "iso3": "CHL",
@@ -1720,7 +1720,7 @@
       {
         "iso3": "ZAF",
         "country": "South Africa",
-        "meanAbsShift": 2.79
+        "meanAbsShift": 2.77
       },
       {
         "iso3": "MEX",
@@ -1730,97 +1730,102 @@
       {
         "iso3": "ARG",
         "country": "Argentina",
-        "meanAbsShift": 3.58
+        "meanAbsShift": 3.62
       },
       {
         "iso3": "COL",
         "country": "Colombia",
-        "meanAbsShift": 1.99
+        "meanAbsShift": 2.05
       },
       {
         "iso3": "PER",
         "country": "Peru",
-        "meanAbsShift": 3.39
+        "meanAbsShift": 3.49
       },
       {
         "iso3": "URY",
         "country": "Uruguay",
-        "meanAbsShift": 2.13
+        "meanAbsShift": 2.16
       },
       {
         "iso3": "CRI",
         "country": "Costa Rica",
-        "meanAbsShift": 2.33
+        "meanAbsShift": 2.46
       },
       {
         "iso3": "DEU",
         "country": "Germany",
-        "meanAbsShift": 4.59
+        "meanAbsShift": 4.67
       },
       {
         "iso3": "FRA",
         "country": "France",
-        "meanAbsShift": 2.97
+        "meanAbsShift": 3.06
       },
       {
         "iso3": "GBR",
         "country": "United Kingdom",
-        "meanAbsShift": 2.04
+        "meanAbsShift": 2.13
       },
       {
         "iso3": "ESP",
         "country": "Spain",
-        "meanAbsShift": 3.47
+        "meanAbsShift": 3.56
+      },
+      {
+        "iso3": "PRT",
+        "country": "Portugal",
+        "meanAbsShift": 3.05
       },
       {
         "iso3": "POL",
         "country": "Poland",
-        "meanAbsShift": 4.45
+        "meanAbsShift": 4.55
       },
       {
         "iso3": "SWE",
         "country": "Sweden",
-        "meanAbsShift": 2.44
+        "meanAbsShift": 2.53
       },
       {
         "iso3": "FIN",
         "country": "Finland",
-        "meanAbsShift": 2.72
+        "meanAbsShift": 2.75
       },
       {
         "iso3": "IRL",
         "country": "Ireland",
-        "meanAbsShift": 5.43
+        "meanAbsShift": 5.52
       },
       {
         "iso3": "CAN",
         "country": "Canada",
-        "meanAbsShift": 3.09
+        "meanAbsShift": 3.15
       },
       {
         "iso3": "AUS",
         "country": "Australia",
-        "meanAbsShift": 2.39
+        "meanAbsShift": 2.41
       },
       {
         "iso3": "JPN",
         "country": "Japan",
-        "meanAbsShift": 3.98
+        "meanAbsShift": 4.05
       },
       {
         "iso3": "CHN",
         "country": "China",
-        "meanAbsShift": 2.4
+        "meanAbsShift": 2.5
       },
       {
         "iso3": "IDN",
         "country": "Indonesia",
-        "meanAbsShift": 4.5
+        "meanAbsShift": 4.57
       },
       {
         "iso3": "VNM",
         "country": "Vietnam",
-        "meanAbsShift": 5.47
+        "meanAbsShift": 5.63
       },
       {
         "iso3": "PHL",
@@ -1830,117 +1835,117 @@
       {
         "iso3": "MYS",
         "country": "Malaysia",
-        "meanAbsShift": 4.35
+        "meanAbsShift": 4.45
       },
       {
         "iso3": "THA",
         "country": "Thailand",
-        "meanAbsShift": 4.74
+        "meanAbsShift": 4.81
       },
       {
         "iso3": "TUR",
         "country": "Turkey",
-        "meanAbsShift": 3.98
+        "meanAbsShift": 3.96
       },
       {
         "iso3": "ISR",
         "country": "Israel",
-        "meanAbsShift": 3.47
+        "meanAbsShift": 3.59
       },
       {
         "iso3": "ARE",
         "country": "United Arab Emirates",
-        "meanAbsShift": 4.1
+        "meanAbsShift": 4.17
       },
       {
         "iso3": "NGA",
         "country": "Nigeria",
-        "meanAbsShift": 4.46
+        "meanAbsShift": 4.3
       },
       {
         "iso3": "KEN",
         "country": "Kenya",
-        "meanAbsShift": 2.7
+        "meanAbsShift": 2.64
       },
       {
         "iso3": "RWA",
         "country": "Rwanda",
-        "meanAbsShift": 5.34
+        "meanAbsShift": 5.2
       },
       {
         "iso3": "ETH",
         "country": "Ethiopia",
-        "meanAbsShift": 3.29
+        "meanAbsShift": 3.1
       },
       {
         "iso3": "BOL",
         "country": "Bolivia",
-        "meanAbsShift": 3.86
+        "meanAbsShift": 3.93
       },
       {
         "iso3": "PRY",
         "country": "Paraguay",
-        "meanAbsShift": 3.69
+        "meanAbsShift": 3.66
       },
       {
         "iso3": "ECU",
         "country": "Ecuador",
-        "meanAbsShift": 3.14
+        "meanAbsShift": 3.29
       },
       {
         "iso3": "VEN",
         "country": "Venezuela",
-        "meanAbsShift": 5.11
+        "meanAbsShift": 5.14
       },
       {
         "iso3": "PAN",
         "country": "Panama",
-        "meanAbsShift": 1.93
+        "meanAbsShift": 1.96
       },
       {
         "iso3": "GTM",
         "country": "Guatemala",
-        "meanAbsShift": 4.3
+        "meanAbsShift": 4.2
       },
       {
         "iso3": "HND",
         "country": "Honduras",
-        "meanAbsShift": 3.79
+        "meanAbsShift": 3.76
       },
       {
         "iso3": "SLV",
         "country": "El Salvador",
-        "meanAbsShift": 2.37
+        "meanAbsShift": 2.24
       },
       {
         "iso3": "NIC",
         "country": "Nicaragua",
-        "meanAbsShift": 3.87
+        "meanAbsShift": 3.75
       },
       {
         "iso3": "DOM",
         "country": "Dominican Republic",
-        "meanAbsShift": 3.23
+        "meanAbsShift": 3.33
       },
       {
         "iso3": "CUB",
         "country": "Cuba",
-        "meanAbsShift": 6.07
+        "meanAbsShift": 5.85
       },
       {
         "iso3": "HTI",
         "country": "Haiti",
-        "meanAbsShift": 4.86
+        "meanAbsShift": 4.18
       }
     ],
     "rankChanges": [
       {
         "dimension": "anticipation",
-        "changedPositions": 52
+        "changedPositions": 53
       },
       {
         "dimension": "agency",
-        "changedPositions": 45
+        "changedPositions": 44
       },
       {
         "dimension": "coordination",
@@ -1960,11 +1965,11 @@
       },
       {
         "dimension": "adaptability",
-        "changedPositions": 46
+        "changedPositions": 48
       },
       {
         "dimension": "building",
-        "changedPositions": 41
+        "changedPositions": 42
       },
       {
         "dimension": "shared_purpose",
@@ -2239,7 +2244,7 @@
     }
   ],
   "outOfFrame": {
-    "observedCells": 1736,
+    "observedCells": 1772,
     "clampedCells": 0,
     "share": 0,
     "perCountry": []

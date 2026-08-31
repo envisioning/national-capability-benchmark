@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Script from 'next/script'
 import { APP_VERSION, DATASET_VERSION, LICENSE_DOC, REPO_URL, docHref } from '@ncb/core'
 import { EnvisioningMark } from '@/components/EnvisioningMark'
-import { FooterNav, HeaderNav, SectionTabs } from '@/components/SiteNav'
+import { FooterNav, HeaderNav, ScrollAwareHeader, SectionTabs } from '@/components/SiteNav'
 import { changelogHref, siteOrigin } from '@/lib/links'
 import './globals.css'
 
@@ -67,7 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             the header, and a menu the page can scroll out from under is a menu
             that has to be scrolled back to. `overflow-x: clip` in globals.css
             is what lets this stick. See D85. */}
-        <header className="sticky top-0 z-40 w-full border-b border-[var(--rule)] bg-[var(--background)]/95 backdrop-blur">
+        <ScrollAwareHeader>
           <div>
             <div className="m-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-3 px-6 py-3 sm:gap-x-8 sm:px-12 sm:py-4">
               {/* The compact lockup follows the parent Envisioning shell: the EV glyph
@@ -100,7 +100,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               that has no pages beside it and rides inside the sticky header so
               the whole navigation stays together. See D73 and D91. */}
           <SectionTabs />
-        </header>
+        </ScrollAwareHeader>
 
         <main id="main" className="m-auto max-w-6xl px-6 py-12 sm:px-12 sm:py-16">
           {children}

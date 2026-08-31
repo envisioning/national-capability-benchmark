@@ -16,7 +16,11 @@ import { EvidenceFilters, useEvidenceFilters } from '@/components/EvidenceFilter
 import { CapabilityLink } from '@/components/CapabilityLink'
 import { DIMENSION_ICON, Icon, TIER_ICON } from '@/components/Icon'
 import { CountryLabel, Empty, Meta } from '@/components/ui'
-import { EVIDENCE_STATUS_ORDER, evidenceDimension } from '@/lib/evidence'
+import {
+  EVIDENCE_STATUS_ORDER,
+  evidenceDimension,
+  formatEvidenceMetricValue,
+} from '@/lib/evidence'
 import {
   NO_PATTERN_FILTERS,
   agendaHref,
@@ -69,7 +73,7 @@ function MetricCell({ record }: { record: EvidenceRecord }) {
   return (
     <>
       <span className="block tabular-nums text-[var(--foreground)]">
-        {record.metric.value.toLocaleString('en-US')} {record.metric.unit}
+        {formatEvidenceMetricValue(record.metric.value, record.metric.unit)} {record.metric.unit}
       </span>
       <span className="block text-[var(--muted)]">
         {record.metric.name.toLowerCase()}, {record.metric.asOf}
@@ -77,7 +81,8 @@ function MetricCell({ record }: { record: EvidenceRecord }) {
       {record.secondMetric ? (
         <span className="block text-[var(--muted)]">
           <span className="tabular-nums">
-            {record.secondMetric.value.toLocaleString('en-US')} {record.secondMetric.unit}
+            {formatEvidenceMetricValue(record.secondMetric.value, record.secondMetric.unit)}{' '}
+            {record.secondMetric.unit}
           </span>{' '}
           {record.secondMetric.name.toLowerCase()}, {record.secondMetric.asOf}
         </span>

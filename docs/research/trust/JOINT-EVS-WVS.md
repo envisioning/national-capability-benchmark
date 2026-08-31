@@ -27,9 +27,10 @@ committed.
 
 ## Coverage and harmonisation
 
-The adapter compares every source label against the canonical 52-country
-registry. It recognized 39 benchmark countries and emitted 36 unique country
-rows. Germany, Great Britain and the Netherlands have separate EVS and WVS
+The adapter compares every source label against the canonical 53-country
+registry. In the 2026-08-31 rerun for dataset 6.0.0, it recognized 40 benchmark
+countries and emitted 37 unique country rows, including Portugal. Germany, Great
+Britain and the Netherlands have separate EVS and WVS
 rows in the aggregate table. They are held rather than averaged because the
 project has not yet documented a pooled respondent-weight rule. The other 16
 benchmark countries have no usable A165 row in this release.

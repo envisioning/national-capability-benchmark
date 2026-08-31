@@ -5,7 +5,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { confidenceBand } from '@ncb/core'
 import { FlagBubble, FlagBubbleLegend } from '@/components/FlagBubble'
-import { ConfidenceBar, Delta, Flag, Score } from '@/components/ui'
+import { Confidence, Delta, Flag, Score } from '@/components/ui'
 
 /* The radar is only needed after a country flag is pointed at. Keep it out of
    the field's initial bundle, especially for surfaces that do not provide a
@@ -138,7 +138,9 @@ export function layoutField(points: FlagFieldPoint[]): FlagFieldLayout {
  * one the tables print.
  *
  * It never takes the pointer, so moving toward it is impossible and the flag
- * underneath stays hovered. The flag itself is the link.
+ * underneath stays hovered. The flag itself is the link. When the full shape
+ * is available, the card becomes a two-column reading: facts on the left and
+ * the radar on the right, so the visual does not get pushed below the fold.
  */
 function CountryCard({
   point,
@@ -157,24 +159,11 @@ function CountryCard({
     ? null
     : confidenceBand(point.confidence)
 
-  return (
-    <div
-      className="pointer-events-none absolute z-10 w-60 rounded-xl border border-[var(--rule)] bg-[var(--surface)] p-4"
-      style={{
-        left: `${leftPercent}%`,
-        top: `${topPercent}%`,
-        transform: `translate(${shiftX}, ${shiftY})`,
-      }}
-    >
-      <p className="flex items-baseline justify-between gap-2 text-xs font-medium">
-        <span className="inline-flex items-baseline gap-2">
-          <Flag iso3={point.iso3} />
-          <span>{point.label}</span>
-        </span>
-        <span className="text-[var(--muted)]">{point.iso3}</span>
-      </p>
-
-      <div className="mt-3 flex items-center justify-between gap-3 border-t border-[var(--rule)] pt-3">
+  const details = (
+    <>
+      <div
+        className={`${point.radar ? '' : 'mt-3 border-t border-[var(--rule)] pt-3'} flex items-center justify-between gap-3`}
+      >
         <span className="text-xs text-[var(--muted)]">Score</span>
         <Score value={point.value} size="md" />
       </div>
@@ -184,7 +173,7 @@ function CountryCard({
       {band ? (
         <div className="mt-2 flex items-center justify-between gap-3 text-xs">
           <span className="text-[var(--muted)]">Confidence</span>
-          <ConfidenceBar value={point.confidence ?? null} />
+          <Confidence value={point.confidence ?? null} />
         </div>
       ) : null}
       {point.delta !== undefined ? (
@@ -212,23 +201,50 @@ function CountryCard({
           {point.href ? ' Click the flag for the full profile.' : ''}
         </p>
       ) : null}
+    </>
+  )
+
+  return (
+    <div
+      className={`pointer-events-none absolute z-10 rounded-xl border border-[var(--rule)] bg-[var(--surface)] p-4 ${
+        point.radar ? 'w-[32rem] max-w-[calc(100vw-2rem)]' : 'w-60'
+      }`}
+      style={{
+        left: `${leftPercent}%`,
+        top: `${topPercent}%`,
+        transform: `translate(${shiftX}, ${shiftY})`,
+      }}
+    >
+      <p className="flex items-baseline justify-between gap-2 text-xs font-medium">
+        <span className="inline-flex items-baseline gap-2">
+          <Flag iso3={point.iso3} />
+          <span>{point.label}</span>
+        </span>
+        <span className="text-[var(--muted)]">{point.iso3}</span>
+      </p>
+
       {point.radar ? (
-        <div className="mt-3 border-t border-[var(--rule)] pt-3">
-          <Radar
-            labels="icons"
-            interactive={false}
-            series={[
-              {
-                label: point.label,
-                iso3: point.iso3,
-                values: point.radar.values,
-                confidences: point.radar.confidences,
-                color: 'var(--primary)',
-              },
-            ]}
-          />
+        <div className="mt-3 grid grid-cols-[minmax(0,1fr)_12rem] items-start gap-4 border-t border-[var(--rule)] pt-3">
+          <div className="min-w-0">{details}</div>
+          <div className="min-w-0 border-l border-[var(--rule)] pl-4">
+            <Radar
+              labels="icons"
+              interactive={false}
+              series={[
+                {
+                  label: point.label,
+                  iso3: point.iso3,
+                  values: point.radar.values,
+                  confidences: point.radar.confidences,
+                  color: 'var(--primary)',
+                },
+              ]}
+            />
+          </div>
         </div>
-      ) : null}
+      ) : (
+        details
+      )}
     </div>
   )
 }

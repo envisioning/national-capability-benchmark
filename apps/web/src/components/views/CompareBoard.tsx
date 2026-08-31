@@ -10,7 +10,7 @@ import type { CountryResult, Dimension, IndicatorResult } from '@ncb/core'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { Radar } from '@/components/Radar'
 import {
-  ConfidenceBar,
+  Confidence,
   ConfidenceLegend,
   CountryLabel,
   Delta,
@@ -251,7 +251,7 @@ export function CompareBoard({ countries }: { countries: CountryResult[] }) {
                   <Td>{DIMENSION_LABELS[d]}</Td>
                   {countries.map((c) => (
                     <Td key={c.iso3} align="right">
-                      <ConfidenceBar value={c.dimensions[d]?.confidence ?? null} />
+                      <Confidence value={c.dimensions[d]?.confidence ?? null} />
                     </Td>
                   ))}
                 </tr>

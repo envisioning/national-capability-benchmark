@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T17:46:16.107Z",
+  "generatedAt": "2026-08-31T19:46:27.293Z",
   "iso3": "FRA",
   "country": "France",
   "dimensions": [
@@ -110,12 +110,12 @@
     {
       "dimension": "agency",
       "kind": "hold",
-      "score": 74.8,
+      "score": 74.5,
       "confidence": 0.613,
       "band": "usable",
       "trend": {
         "spanYears": 10,
-        "delta": 7.7,
+        "delta": 7.6,
         "basket": 4,
         "clamped": 0
       },
@@ -136,19 +136,19 @@
         {
           "iso3": "USA",
           "country": "United States",
-          "score": 92.6,
+          "score": 92.5,
           "confidence": 0.495
         },
         {
           "iso3": "AUS",
           "country": "Australia",
-          "score": 89.8,
+          "score": 89.1,
           "confidence": 0.613
         },
         {
           "iso3": "GBR",
           "country": "United Kingdom",
-          "score": 87.5,
+          "score": 86.7,
           "confidence": 0.613
         }
       ],
@@ -173,9 +173,9 @@
     {
       "dimension": "coordination",
       "kind": "measure",
-      "score": 94,
-      "confidence": 0.242,
-      "band": "very_thin",
+      "score": 93.9,
+      "confidence": 0.387,
+      "band": "thin",
       "trend": null,
       "scoredOn": [
         "time_to_export",
@@ -409,6 +409,13 @@
           "country": "Australia",
           "indicatorId": "university_industry_collaboration",
           "title": "Cooperative Research Centres programme"
+        },
+        {
+          "id": "prt-colab",
+          "iso3": "PRT",
+          "country": "Portugal",
+          "indicatorId": "university_industry_collaboration",
+          "title": "Portugal's CoLAB applied-research network"
         }
       ],
       "institutionIds": []
@@ -417,8 +424,8 @@
       "dimension": "trust",
       "kind": "measure",
       "score": 56.2,
-      "confidence": 0.159,
-      "band": "very_thin",
+      "confidence": 0.255,
+      "band": "thin",
       "trend": null,
       "scoredOn": [
         "contract_enforcement_days",
@@ -541,6 +548,20 @@
           "country": "Indonesia",
           "indicatorId": "adult_learning_participation",
           "title": "Kartu Prakerja, a national lifelong-learning delivery system"
+        },
+        {
+          "id": "prt-qualifica",
+          "iso3": "PRT",
+          "country": "Portugal",
+          "indicatorId": "adult_learning_participation",
+          "title": "Programa Qualifica and Portugal's adult-learning network"
+        },
+        {
+          "id": "prt-novas-oportunidades",
+          "iso3": "PRT",
+          "country": "Portugal",
+          "indicatorId": "adult_learning_participation",
+          "title": "Novas Oportunidades, and the qualification-policy interruption"
         }
       ],
       "institutionIds": []
@@ -548,7 +569,7 @@
     {
       "dimension": "experimentation",
       "kind": "measure",
-      "score": 55,
+      "score": 55.1,
       "confidence": 0.178,
       "band": "very_thin",
       "trend": {
@@ -625,6 +646,13 @@
           "country": "United Kingdom",
           "indicatorId": "business_rd_share",
           "title": "Business-funded R&D as the UK's dominant research sector"
+        },
+        {
+          "id": "prt-portugal-ventures",
+          "iso3": "PRT",
+          "country": "Portugal",
+          "indicatorId": "venture_capital_gdp",
+          "title": "Portugal Ventures, a public venture-capital bridge"
         }
       ],
       "institutionIds": []
@@ -632,12 +660,12 @@
     {
       "dimension": "adaptability",
       "kind": "hold",
-      "score": 76.1,
+      "score": 75.9,
       "confidence": 0.475,
       "band": "usable",
       "trend": {
         "spanYears": 10,
-        "delta": 9,
+        "delta": 9.1,
         "basket": 4,
         "clamped": 0
       },
@@ -658,13 +686,13 @@
         {
           "iso3": "NLD",
           "country": "Netherlands",
-          "score": 90.1,
+          "score": 90,
           "confidence": 0.475
         },
         {
           "iso3": "CHE",
           "country": "Switzerland",
-          "score": 88.6,
+          "score": 88.5,
           "confidence": 0.475
         },
         {
@@ -1157,6 +1185,13 @@
           "country": "Costa Rica",
           "indicatorId": "export_diversification",
           "title": "Ramp Up, PROCOMER's export-readiness programme"
+        },
+        {
+          "id": "prt-cmd",
+          "iso3": "PRT",
+          "country": "Portugal",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Chave Móvel Digital and Portugal's digital identity layer"
         }
       ],
       "institutionIds": []
@@ -1165,7 +1200,7 @@
       "dimension": "building",
       "kind": "hold",
       "score": 53.1,
-      "confidence": 0.544,
+      "confidence": 0.622,
       "band": "usable",
       "trend": {
         "spanYears": 10,
@@ -1192,19 +1227,19 @@
           "iso3": "IRL",
           "country": "Ireland",
           "score": 75.3,
-          "confidence": 0.544
+          "confidence": 0.622
         },
         {
           "iso3": "SGP",
           "country": "Singapore",
           "score": 71.2,
-          "confidence": 0.544
+          "confidence": 0.622
         },
         {
           "iso3": "CHN",
           "country": "China",
           "score": 64.9,
-          "confidence": 0.544
+          "confidence": 0.622
         }
       ],
       "evidenceElsewhere": [
@@ -1649,7 +1684,7 @@
       "dimension": "shared_purpose",
       "kind": "measure",
       "score": 80.7,
-      "confidence": 0.26,
+      "confidence": 0.303,
       "band": "thin",
       "trend": {
         "spanYears": 10,

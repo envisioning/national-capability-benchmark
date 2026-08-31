@@ -2,7 +2,7 @@
 
 *Gerado em 2026-08-31*
 
-Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
+Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
 ## Onde o Haiti está
 
@@ -10,19 +10,33 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | --- | --- | --- | --- |
 | Antecipação | 0 | 0,4 (fraca) | 0 em 10 anos, sobre 3 indicadores, 3 truncados na borda da régua |
 | Agência | 14,9 | 0,44 (fraca) | +14,2 em 10 anos, sobre 2 indicadores |
-| Coordenação | 51,6 | 0,24 (muito fraca) | sem base de tendência |
-| Confiança | sem nota | 0,07 (muito fraca) | sem base de tendência |
+| Coordenação | 50,9 | 0,39 (fraca) | sem base de tendência |
+| Confiança | sem nota | 0,11 (muito fraca) | sem base de tendência |
 | Aprendizagem | 7,3 | 0,24 (muito fraca) | sem base de tendência |
 | Experimentação | 0,2 | 0,04 (muito fraca) | sem base de tendência |
-| Adaptação | 27,8 | 0,44 (fraca) | -2,6 em 10 anos, sobre 4 indicadores, 1 truncados na borda da régua |
-| Construção | 34,4 | 0,43 (fraca) | +3,6 em 10 anos, sobre 3 indicadores, 1 truncados na borda da régua |
-| Propósito compartilhado | sem nota | 0,01 (muito fraca) | sem base de tendência |
+| Adaptação | 27,3 | 0,44 (fraca) | -2,6 em 10 anos, sobre 4 indicadores, 1 truncados na borda da régua |
+| Construção | 34,4 | 0,49 (utilizável) | +3,6 em 10 anos, sobre 3 indicadores, 1 truncados na borda da régua |
+| Propósito compartilhado | sem nota | 0,02 (muito fraca) | sem base de tendência |
+
+## Dimensões para elevar
+
+Da nota mais baixa para a mais alta. Só entram dimensões com evidência utilizável. Evidência fraca vai para a próxima seção.
+
+### Construção: 34,4, confiança utilizável
+
+Quão capaz é o país de transformar planos e conhecimento em sistemas que funcionam?
+
+- Baseada em 4 indicadores observados.
+- Maiores notas utilizáveis: Irlanda 75,3, Singapura 71,2, China 64,9.
+- Entregas documentadas em outros países: Pix instant payment system (Brasil); GOV.BR federal identity and service platform (Brasil); X-Road national data exchange layer (Estônia); Pradhan Mantri Jan Dhan Yojana bank accounts (Índia); Electricity supply rebuilt on renewable sources (Uruguai); Plan Ceibal, one connected laptop per child (Uruguai); Sistema Unico de Saude, universal public health system (Brasil); Programa Nacional de Imunizacoes, and its erosion (Brasil); Luz para Todos, rural electrification (Brasil); Bolsa Familia and the single registry behind it (Brasil); Fully electronic national elections (Brasil); Deepwater and pre-salt oil production (Brasil); Seguro Popular, and its abolition (México); Sure Start children's centres, and their erosion (Reino Unido); Grid power, and load shedding (África do Sul); Measles elimination, and its erosion (Estados Unidos); BNDES, the national development bank (Brasil); Casa da Moeda do Brasil, the national mint (Brasil); Housing and Development Board, public housing at scale (Singapura); AFE passenger rail and network contraction (Uruguai); Flamanville 3 EPR, and the erosion of nuclear new-build delivery (França); Phoenix pay system, and its prolonged failure (Canadá); Groningen gas system, and its closure after induced earthquakes (Países Baixos); DigiD, a shared digital identity rail for public services (Países Baixos); Delta Works, a 43-year national flood-defence programme (Países Baixos); Betuweroute, a freight railway that missed its operating promise (Países Baixos); MijnOverheid, a shared citizen mailbox and data portal (Países Baixos); Fyra V250, a high-speed service withdrawn after a failed launch (Países Baixos); OVpay, nationwide contactless transit payments (Países Baixos); Omgevingswet and the Digital Environment System (Países Baixos); Transantiago, an integrated transport reform with rising subsidy dependence (Chile); 4G road concessions, a national infrastructure portfolio (Colômbia); Reficar, a refinery modernization with a fiscal-liability finding (Colômbia); GIGA School, one learning device per student (Japão); Monju, a fast-breeder programme ended before commercial operation (Japão); Invierte.pe, a national multi-year investment-management system (Peru); Reconstrucción con Cambios, a delayed recovery portfolio (Peru); ICE and a mostly renewable national electricity system (Costa Rica); CCSS universal health-insurance reach (Costa Rica); Metro de Quito, a cross-administration urban rail delivery (Equador); Panama Canal expansion and self-financing operations (Panamá); Metro de Panamá network operations (Panamá); Mi Teleférico urban cable-car network (Bolívia); Industrial lithium carbonate plant below design capacity (Bolívia); Itaipú binational hydropower operations (Paraguai); Metrobús, an unfinished bus rapid transit project (Paraguai); ARSAT-3 satellite programme suspended before launch (Argentina); DPWH national infrastructure delivery and transparency portal (Filipinas); Bataan Nuclear Power Plant, a mothballed megaproject (Filipinas); Trans-Sumatra toll-road programme, still short of its planned network (Indonésia); National expressway build-out in 2024 (Vietnã); Cat Linh–Ha Dong metro, a delayed and over-budget delivery (Vietnã); MRT Putrajaya Line (Malásia); Kuala Lumpur–Singapore high-speed rail, terminated before construction (Malásia); Hopewell elevated road-and-rail concession, and its termination (Tailândia); AVE high-speed rail network (Espanha); Castor underground gas storage, and its closure (Espanha); Ostrołęka C coal block, and its abandonment (Polônia); Nya Karolinska Solna public–private hospital project (Suécia); Barsebäck nuclear plant closure and decommissioning (Suécia); New Children's Hospital cost escalation (Irlanda); Rural electrification and near-universal grid coverage (Nicarágua); Gran Misión Vivienda Venezuela's five-million-home milestone (Venezuela).
+- Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
+- Bases rejeitadas: Qualidade da infraestrutura logística.
 
 ## Dimensões para medir primeiro
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Propósito compartilhado: confiança 0,01, muito fraca
+### Propósito compartilhado: confiança 0,02, muito fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
@@ -37,21 +51,13 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
-### Confiança: confiança 0,07, muito fraca
+### Confiança: confiança 0,11, muito fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
 
 - Baseada em um indicador observado.
 - Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
-
-### Coordenação: confiança 0,24, muito fraca
-
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
 ### Aprendizagem: confiança 0,24, muito fraca
 
@@ -60,20 +66,20 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 - Baseada em 4 indicadores observados.
 - Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
+### Coordenação: confiança 0,39, fraca
+
+Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
+- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
+
 ### Antecipação: confiança 0,4, fraca
 
 Quão capaz é o país de identificar mudanças emergentes e se preparar para elas?
 
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
-
-### Construção: confiança 0,43, fraca
-
-Quão capaz é o país de transformar planos e conhecimento em sistemas que funcionam?
-
-- Baseada em 4 indicadores observados.
-- Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
-- Bases rejeitadas: Qualidade da infraestrutura logística.
 
 ### Adaptação: confiança 0,44, fraca
 

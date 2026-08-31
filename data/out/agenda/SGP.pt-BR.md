@@ -2,41 +2,33 @@
 
 *Gerado em 2026-08-31*
 
-Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
+Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
 ## Onde Singapura está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 78,1 | 0,62 (utilizável) | +14,5 em 10 anos, sobre 5 indicadores |
-| Agência | 84,9 | 0,57 (utilizável) | +10,7 em 10 anos, sobre 3 indicadores |
-| Coordenação | 71,1 | 0,25 (fraca) | sem base de tendência |
-| Confiança | 73,5 | 0,16 (muito fraca) | sem base de tendência |
+| Agência | 84,4 | 0,57 (utilizável) | +10,4 em 10 anos, sobre 3 indicadores |
+| Coordenação | 71 | 0,4 (fraca) | sem base de tendência |
+| Confiança | 73,5 | 0,26 (fraca) | sem base de tendência |
 | Aprendizagem | 56,1 | 0,49 (utilizável) | +1,4 em 10 anos, sobre 2 indicadores |
-| Experimentação | 46,5 | 0,21 (muito fraca) | +10,7 em 10 anos, sobre 2 indicadores |
-| Adaptação | 79 | 0,47 (utilizável) | +4,8 em 10 anos, sobre 4 indicadores |
-| Construção | 71,2 | 0,54 (utilizável) | +7,7 em 10 anos, sobre 4 indicadores |
-| Propósito compartilhado | sem nota | 0,14 (muito fraca) | sem base de tendência |
+| Experimentação | 46,6 | 0,21 (muito fraca) | +10,8 em 10 anos, sobre 2 indicadores |
+| Adaptação | 79 | 0,47 (utilizável) | +4,9 em 10 anos, sobre 4 indicadores |
+| Construção | 71,2 | 0,62 (utilizável) | +7,7 em 10 anos, sobre 4 indicadores |
+| Propósito compartilhado | sem nota | 0,16 (muito fraca) | sem base de tendência |
 
 ## Dimensões para medir primeiro
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Propósito compartilhado: confiança 0,14, muito fraca
+### Propósito compartilhado: confiança 0,16, muito fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
 - Baseada em um indicador observado.
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
 - Bases rejeitadas: Voz e responsabilização.
-
-### Confiança: confiança 0,16, muito fraca
-
-Quanta cooperação é possível além das redes pessoais imediatas?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ### Experimentação: confiança 0,21, muito fraca
 
@@ -45,7 +37,15 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Baseada em 4 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
-### Coordenação: confiança 0,25, fraca
+### Confiança: confiança 0,26, fraca
+
+Quanta cooperação é possível além das redes pessoais imediatas?
+
+- Baseada em 2 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
+
+### Coordenação: confiança 0,4, fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
 
@@ -57,7 +57,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência utilizável. Ainda precisam ser acompanhadas.
 
-- Agência: 84,9, confiança utilizável
+- Agência: 84,4, confiança utilizável
 - Adaptação: 79, confiança utilizável
 - Antecipação: 78,1, confiança utilizável
 - Construção: 71,2, confiança utilizável

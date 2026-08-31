@@ -2,21 +2,21 @@
 
 *Gerado em 2026-08-31*
 
-Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
+Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
 ## Onde as Filipinas está
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 24,1 | 0,58 (utilizável) | +10,8 em 10 anos, sobre 3 indicadores |
-| Agência | 34,5 | 0,61 (utilizável) | +16,6 em 10 anos, sobre 4 indicadores |
-| Coordenação | 75 | 0,21 (muito fraca) | sem base de tendência |
-| Confiança | 19,7 | 0,16 (muito fraca) | sem base de tendência |
+| Agência | 33,5 | 0,61 (utilizável) | +16,5 em 10 anos, sobre 4 indicadores |
+| Coordenação | 74,8 | 0,33 (fraca) | sem base de tendência |
+| Confiança | 19,7 | 0,26 (fraca) | sem base de tendência |
 | Aprendizagem | 36,7 | 0,55 (utilizável) | -2,2 em 10 anos, sobre 3 indicadores |
 | Experimentação | 2,7 | 0,18 (muito fraca) | +0,8 em 10 anos, sobre 2 indicadores |
-| Adaptação | 50,5 | 0,47 (utilizável) | +2,6 em 10 anos, sobre 4 indicadores |
-| Construção | 49,6 | 0,54 (utilizável) | -3,2 em 10 anos, sobre 3 indicadores |
-| Propósito compartilhado | 51,9 | 0,26 (fraca) | +11,5 em 10 anos, sobre 2 indicadores |
+| Adaptação | 50,4 | 0,47 (utilizável) | +2,6 em 10 anos, sobre 4 indicadores |
+| Construção | 49,6 | 0,62 (utilizável) | -3,2 em 10 anos, sobre 3 indicadores |
+| Propósito compartilhado | 51,9 | 0,3 (fraca) | +11,5 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para elevar
 
@@ -31,12 +31,12 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 - Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japão); National basic-research funding allocation (China).
 - Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
-### Agência: 34,5, confiança utilizável
+### Agência: 33,5, confiança utilizável
 
 Quão capazes são pessoas e organizações de transformar uma intenção em ação?
 
 - Baseada em 6 indicadores observados.
-- Maiores notas utilizáveis: Estados Unidos 92,6, Austrália 89,8, Reino Unido 87,5.
+- Maiores notas utilizáveis: Estados Unidos 92,5, Austrália 89,1, Reino Unido 86,7.
 - Entregas documentadas em outros países: SIBRATEC, the documented innovation-centre network (Brasil); Singapore's national ICT-skills measurement and baseline (Singapura).
 - Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
 
@@ -46,7 +46,7 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,6.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França).
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal).
 - Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ### Construção: 49,6, confiança utilizável
@@ -63,14 +63,6 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Confiança: confiança 0,16, muito fraca
-
-Quanta cooperação é possível além das redes pessoais imediatas?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
-
 ### Experimentação: confiança 0,18, muito fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
@@ -78,15 +70,15 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
-### Coordenação: confiança 0,21, muito fraca
+### Confiança: confiança 0,26, fraca
 
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+Quanta cooperação é possível além das redes pessoais imediatas?
 
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
+- Baseada em 2 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
-### Propósito compartilhado: confiança 0,26, fraca
+### Propósito compartilhado: confiança 0,3, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
@@ -94,11 +86,19 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
 - Bases rejeitadas: Voz e responsabilização.
 
+### Coordenação: confiança 0,33, fraca
+
+Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
+- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
+
 ## Dimensões para manter
 
 Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência utilizável. Ainda precisam ser acompanhadas.
 
-- Adaptação: 50,5, confiança utilizável
+- Adaptação: 50,4, confiança utilizável
 
 ## Agenda de medição
 
