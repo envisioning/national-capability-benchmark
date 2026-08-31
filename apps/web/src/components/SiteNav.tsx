@@ -58,6 +58,39 @@ const CRUMB_CURRENT = 'text-xs font-medium text-[var(--foreground)]'
 const CRUMB_SELECTED =
   'text-xs font-medium text-[var(--foreground)] underline decoration-[var(--primary)] decoration-2 underline-offset-4'
 
+/* Past this many entries a footer column stops reading as a list and starts
+   reading as a wall, so it takes a second column and splits across both. */
+const LONG_FOOTER_GROUP = 6
+
+/** Whether a footer group is wide enough to need two columns. */
+const isLongGroup = (group: { items: unknown[] }) => group.items.length > LONG_FOOTER_GROUP
+
+/**
+ * How many columns the footer row needs, which is a fact about the tree.
+ *
+ * The count was written into the markup as `lg:grid-cols-5` beside a comment
+ * naming the one group that took two of them. Deriving the groups from the
+ * tree and leaving that number behind put one section on a row of its own the
+ * first time the counts moved. Tailwind reads class names out of the source,
+ * so the widths are spelled out here and picked, never built. See D88.
+ */
+const FOOTER_COLUMNS: Record<number, string> = {
+  4: 'lg:grid-cols-4',
+  5: 'lg:grid-cols-5',
+  6: 'lg:grid-cols-6',
+  7: 'lg:grid-cols-7',
+  8: 'lg:grid-cols-8',
+  9: 'lg:grid-cols-9',
+}
+
+function footerColumns(groups: { items: unknown[] }[]): string {
+  const units = groups.reduce((total, group) => total + (isLongGroup(group) ? 2 : 1), 0)
+  /* A tree wider than the map wraps rather than overflows, which is the right
+     failure: a footer of two rows is readable and a footer of nine slivers is
+     not. */
+  return FOOTER_COLUMNS[units] ?? 'lg:grid-cols-6'
+}
+
 const TAB =
   'inline-block border-b-2 border-transparent pb-3 text-xs font-medium text-[var(--muted)] transition-all duration-200 hover:text-[var(--foreground)]'
 const TAB_CURRENT =
@@ -507,44 +540,42 @@ export function FooterNav() {
 
   return (
     <nav aria-label="Site" className="mt-10">
-      {/* Method holds nine pages and takes two columns of the five. */}
-      <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
-        {FOOTER_NAV_GROUPS.map((group) => (
-          <div
-            key={group.label}
-            className={group.label === 'Method' ? 'sm:col-span-2' : undefined}
-          >
-            <h2 className="text-xs font-medium uppercase tracking-[0.05em] text-[var(--muted)]">
-              {group.label}
-            </h2>
-            <ul
-              className={
-                group.label === 'Method'
-                  ? 'mt-4 grid grid-cols-2 gap-x-6 gap-y-2 sm:grid-cols-3'
-                  : 'mt-4 space-y-2'
-              }
-            >
-              {group.items.map((node) => {
-                const current = nodeOwns(node, pathname)
-                return (
-                  <li key={node.href}>
-                    <Link
-                      href={node.href}
-                      aria-current={current ? 'page' : undefined}
-                      className={
-                        current
-                          ? 'text-xs font-medium text-[var(--foreground)]'
-                          : 'text-xs font-medium text-[var(--muted)] transition-all duration-200 hover:text-[var(--foreground)]'
-                      }
-                    >
-                      {node.label}
-                    </Link>
-                  </li>
-                )
-              })}
-            </ul>
-          </div>
-        ))}
+      {/* The columns are the sections, so how many there are and how long each
+          one is are both facts about the tree. A group too long to read as one
+          list takes two columns and splits inside them; the rule is the length
+          and never the name, or the footer breaks the next time a section
+          grows. See D88. */}
+      <div className={`grid gap-10 sm:grid-cols-2 ${footerColumns(FOOTER_NAV_GROUPS)}`}>
+        {FOOTER_NAV_GROUPS.map((group) => {
+          const long = isLongGroup(group)
+          return (
+            <div key={group.label} className={long ? 'sm:col-span-2' : undefined}>
+              <h2 className="text-xs font-medium uppercase tracking-[0.05em] text-[var(--muted)]">
+                {group.label}
+              </h2>
+              <ul className={long ? 'mt-4 grid grid-cols-2 gap-x-6 gap-y-2' : 'mt-4 space-y-2'}>
+                {group.items.map((node) => {
+                  const current = nodeOwns(node, pathname)
+                  return (
+                    <li key={node.href}>
+                      <Link
+                        href={node.href}
+                        aria-current={current ? 'page' : undefined}
+                        className={
+                          current
+                            ? 'text-xs font-medium text-[var(--foreground)]'
+                            : 'text-xs font-medium text-[var(--muted)] transition-all duration-200 hover:text-[var(--foreground)]'
+                        }
+                      >
+                        {node.label}
+                      </Link>
+                    </li>
+                  )
+                })}
+              </ul>
+            </div>
+          )
+        })}
       </div>
     </nav>
   )

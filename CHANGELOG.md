@@ -21,6 +21,14 @@ Coordination gained a full-frame, adapter-backed civil-society measure.
 - **The frame stays at 52 countries.** This is a minor release: the new row
   changes scores and confidence, but does not rebase the country ruler.
 
+## App 1.2.1 — 2026-08-31
+
+- **The footer lists what the header opens.** Its columns are now the site's
+  sections, read from the same navigation tree the header walks, so every
+  capability appears there alongside every method page. The footer had drifted:
+  Capabilities opened nine pages in the header and offered one at the foot of
+  the page.
+
 ## App 1.2.0 — 2026-08-31
 
 Sections open their pages from the header, and the header stays with the reader.

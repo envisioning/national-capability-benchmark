@@ -316,19 +316,26 @@ export function sectionMenuEntries(node: NavNode, pathname: string): NavNode[] {
   return node.menuChildren ?? node.children ?? node.resolveChildren?.(pathname) ?? []
 }
 
-/** Footer columns: the same tree, grouped for a vertical layout. */
-export const FOOTER_NAV_GROUPS: { label: string; items: NavNode[] }[] = [
-  {
-    label: 'Explore',
-    items: [
-      ...COUNTRY_INDEX_PAGES,
-      { href: capabilitiesHref, label: 'Capabilities' },
-    ],
-  },
-  { label: 'Method', items: METHOD_PAGES },
-  { label: 'Participate', items: PARTICIPATE_PAGES },
-  { label: 'About', items: ABOUT_PAGES },
-]
+/**
+ * Footer columns: one per section, from the same tree.
+ *
+ * This was a hand-written list of four groups that happened to spread the same
+ * page arrays the tree walks, which is a copy that agrees with its original
+ * only for as long as somebody edits both. It already disagreed: Capabilities
+ * opened nine dimensions in the header and was a single link down here, and a
+ * sixth section would have reached the header and never the footer. See D73
+ * and D88.
+ *
+ * A section is asked what it opens while standing at its own address, so the
+ * answer is the one that holds from anywhere: `menuChildren` where a node has
+ * one, and the walk where it does not.
+ */
+export const FOOTER_NAV_GROUPS: { label: string; items: NavNode[] }[] = NAV_TREE.map(
+  (section) => ({
+    label: section.label,
+    items: sectionMenuEntries(section, section.href),
+  }),
+)
 
 /**
  * The pages a reader lands on, flat.

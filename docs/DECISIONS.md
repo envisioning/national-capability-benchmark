@@ -4083,3 +4083,50 @@ survives a re-ingest that changes it.
 navigate and are slowed by a picture in the way; or a second menu wanting a
 preview of its own, which would make `menuPreview` a general mechanism rather
 than the one exception it is written as.
+
+## D88 — The footer is the tree, not a copy of it
+
+*Recorded 2026-08-31. Completes D73.*
+
+**Choice.** `FOOTER_NAV_GROUPS` is derived from `NAV_TREE`: one column per
+section, labelled by the section, holding what that section opens. It was a
+hand-written list of four groups that spread the same page arrays the tree
+walks, close enough to look derived and not derived at all.
+
+It had already drifted. Capabilities opened nine dimensions in the header and
+was a single link in the footer, and the footer's first column was called
+Explore, which is not a section and answers to nothing in the tree. A sixth
+section would have reached the header, the crumb, the tab strip and the sheet,
+and never the footer, and nothing would have failed.
+
+The column count is derived as well. It was `lg:grid-cols-5` in the markup
+beside a comment naming the one group that took two of them, which is the same
+kind of fact written down in the same wrong place: the moment the groups came
+from the tree, that number put a section on a row of its own. A group longer
+than six entries takes two columns and splits inside them, and the row is as
+wide as the groups need. The rule is the length and never the name.
+
+D73 said one tree, one ownership rule, one renderer, and it meant the header.
+The footer was outside that sentence and stayed a copy for as long as the
+sentence stopped where it did.
+
+**Why.** Two lists of one thing agree only while somebody edits both, and the
+proof that nobody had was sitting in the footer: a section that opened nine
+pages upstairs offered one downstairs. A missing footer link is the quietest
+possible failure, because the page it points at still exists and still works,
+and nothing anywhere reports that the way in went away.
+
+**Cost.** The footer now shows every capability, which is nine more links in a
+place that carried 19 and now carries 28, and the sections no longer get to
+disagree with it on purpose. A footer that wants to say less than the header
+says, which is a reasonable thing for a footer to want, now has to say it in
+the tree or not at all. The width map spells out the classes Tailwind can see,
+so a tree wider than the map wraps to a second row rather than overflowing:
+that is the right failure, and it is still a failure that only shows up on
+screen.
+
+**Overturned by.** A section whose footer column is the wrong shape for what it
+holds, most plausibly Countries once there is a way to offer more than the
+three cross-country readings; or a decision that the footer's job is a chosen
+short list rather than the whole tree, which would want the choice recorded in
+the tree as a field, never as a second array.

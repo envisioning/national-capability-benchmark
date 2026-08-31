@@ -594,6 +594,13 @@ as the reference, and see NOTICE.md before reusing the brand.
   keyboard. The header is sticky and the tab strip sits inside the `header`
   element so both bands stick as one, which is also what keeps the embed rule
   in `globals.css` pointing at one element. See D85.
+- The footer is the tree too. `FOOTER_NAV_GROUPS` in
+  `apps/web/src/lib/nav.ts` is derived from `NAV_TREE`, one column per section,
+  and the column count is derived from the groups. Never hand-write a footer
+  column, a group label or a grid width: all three are facts about the tree,
+  and a footer that states them itself goes stale silently, which is how
+  Capabilities came to open nine pages in the header and offer one at the foot
+  of the page. See D88.
 - A menu may draw a picture above its rows, and exactly one does: the Countries
   menu draws the shape of the country the path names, through
   `NavCountryShape`. The node declares `menuPreview` and `SiteNav` decides how
