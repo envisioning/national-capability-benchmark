@@ -26,6 +26,7 @@ pnpm build             tsc for packages/core, then next build for apps/web
 pnpm typecheck         both packages
 pnpm dev               the viewer at https://ncb.localhost (port 3888 behind it)
 pnpm icons             rasterise the favicon set from the brand mark
+pnpm icons:measure     report the glyph fraction inside an icon file
 ```
 
 The green gate is `pnpm build` plus `pnpm typecheck`. Both must pass. Run
@@ -607,6 +608,16 @@ as the reference, and see NOTICE.md before reusing the brand.
   `iso2` code in the country registry. Never write a flag character into a page
   or a data file. Every other emoji stays out.
 - No gradients, no colored shadows, no backdrop-blur.
+- **The glyph is the same size in every Envisioning icon.** `GLYPH_SCALE` in
+  `scripts/generate-favicons.mjs` is 0.4667, which is what envisioning.com
+  draws: 84px of mark in a 180px tile, matched to the pixel by
+  envisioning-core. Colours and corner radius are each site's own; the glyph
+  fraction is not, because a row of Envisioning tabs at different scales stops
+  reading as one family. `PADDING` derives from it and is never set by hand.
+  Check a change with `pnpm icons:measure <file>`, which reports what a file
+  actually contains and works on any site's icons. Read the 180px and 512px
+  rows: below about 64px the mark is a few pixels of antialiasing and measures
+  low whatever was drawn.
 - The favicon set is generated, never hand-drawn. `scripts/generate-favicons.mjs`
   reads `apps/web/public/brand/envisioning-mark.svg`, composes it on a rounded
   near-black tile in lime, and writes `icon.png`, `apple-icon.png` and

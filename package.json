@@ -17,7 +17,8 @@
     "typecheck": "pnpm -r typecheck",
     "test": "pnpm --filter @ncb/core test",
     "dev": "pnpm --filter @ncb/web dev",
-    "icons": "node scripts/generate-favicons.mjs"
+    "icons": "node scripts/generate-favicons.mjs",
+    "icons:measure": "node scripts/measure-icons.mjs"
   },
   "devDependencies": {
     "sharp": "^0.34.0",

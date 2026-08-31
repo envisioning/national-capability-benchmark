@@ -25,9 +25,28 @@ const SOURCE_SVG = resolve(ROOT, 'apps/web/public/brand/envisioning-mark.svg')
 const ACCENT = '#d6f249' // lime, the --color-accent token in globals.css
 const BG = '#0a0a0a' // near-black tile
 const GLYPH = ACCENT
-// Inner padding around the glyph, as a fraction of the tile size.
-const PADDING = 0.18
-// Corner radius, as a fraction of the tile size. About 22% matches iOS and Android.
+
+/**
+ * How much of the tile the glyph's longest side covers. This is the one number
+ * every Envisioning site shares, and envisioning.com is canonical: its
+ * 180px `apple-touch-icon.png` draws the mark 84px wide, and
+ * envisioning-core's matches to the pixel.
+ *
+ * Colours and corner radius are each site's own. The glyph size is not, because
+ * a row of Envisioning tabs with the mark at a different scale in each one
+ * stops reading as one family.
+ *
+ * Verify a change by measuring the output, never by eye: the mark should come
+ * back at 46.7% of whatever tile it was drawn on.
+ */
+const GLYPH_SCALE = 0.4667
+
+/** Inner padding, as a fraction of the tile. Derived, never set by hand. */
+const PADDING = (1 - GLYPH_SCALE) / 2
+
+// Corner radius, as a fraction of the tile size. About 22% matches iOS and
+// Android. envisioning.com and envisioning-core use square tiles; this is one
+// of the things a site keeps its own.
 const RADIUS = 0.22
 
 // ── Output set ───────────────────────────────────────────────────────────────
