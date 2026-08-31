@@ -63,37 +63,45 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to content
         </a>
 
-        <header className="w-full border-b border-[var(--rule)]">
-          <div className="m-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-3 px-6 py-4 sm:gap-x-8 sm:px-12 sm:py-5">
-            {/* The compact lockup follows the parent Envisioning shell: EV glyph,
-                then the product name. The full name remains available to assistive
-                technology without making the global header compete with the page. */}
-            <Link
-              href="/"
-              aria-label="NCB, National Capability Benchmark home"
-              className="inline-flex shrink-0 items-center gap-3 text-[var(--foreground)]"
-            >
-              <EnvisioningMark className="h-5 w-5" />
-              <span className="flex flex-col leading-none">
-                <span
-                  className="font-display text-[34px] leading-none"
-                  style={{ fontVariationSettings: '"wght" 500, "wdth" 100' }}
-                >
-                  NCB
+        {/* The whole nav travels with the reader. A section opens its pages from
+            the header, and a menu the page can scroll out from under is a menu
+            that has to be scrolled back to. `overflow-x: clip` in globals.css
+            is what lets this stick. See D85. */}
+        <header className="sticky top-0 z-40 w-full bg-[var(--background)]/95 backdrop-blur">
+          <div className="border-b border-[var(--rule)]">
+            <div className="m-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-3 px-6 py-4 sm:gap-x-8 sm:px-12 sm:py-5">
+              {/* The compact lockup follows the parent Envisioning shell: EV glyph,
+                  then the product name. The full name remains available to assistive
+                  technology without making the global header compete with the page. */}
+              <Link
+                href="/"
+                aria-label="NCB, National Capability Benchmark home"
+                className="inline-flex shrink-0 items-center gap-3 text-[var(--foreground)]"
+              >
+                <EnvisioningMark className="h-5 w-5" />
+                <span className="flex flex-col leading-none">
+                  <span
+                    className="font-display text-[34px] leading-none"
+                    style={{ fontVariationSettings: '"wght" 500, "wdth" 100' }}
+                  >
+                    NCB
+                  </span>
+                  <span className="mt-1 text-[9px] uppercase leading-[1.15] tracking-[0.06em] text-[var(--muted)]">
+                    National Capability Benchmark
+                  </span>
                 </span>
-                <span className="mt-1 text-[9px] uppercase leading-[1.15] tracking-[0.06em] text-[var(--muted)]">
-                  National Capability Benchmark
-                </span>
-              </span>
-            </Link>
-            <HeaderNav />
+              </Link>
+              <HeaderNav />
+            </div>
           </div>
-        </header>
 
-        {/* The deepest level of the nav tree, on its own rule under the header,
-            so the trail and the sibling pages read as different things. It
-            renders nothing on a page that has no pages beside it. See D73. */}
-        <SectionTabs />
+          {/* The deepest level of the nav tree, on its own rule under the header,
+              so the trail and the sibling pages read as different things. It
+              renders nothing on a page that has no pages beside it. It rides
+              inside the header so the two bands stick as one, and so the embed
+              rule in globals.css still has one element to hide. See D73. */}
+          <SectionTabs />
+        </header>
 
         <main id="main" className="m-auto max-w-6xl px-6 py-12 sm:px-12 sm:py-16">
           {children}

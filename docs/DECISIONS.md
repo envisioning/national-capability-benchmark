@@ -3911,3 +3911,175 @@ invert the sign for a class of indicator; or a fading flag that survives its
 carried-forward and clamped counts, which would make the block a trigger for
 reweighting rather than a report, and would need a decision saying what a
 faded indicator's share becomes.
+
+## D85 — A section opens its pages from the header, and the header travels with the reader
+
+*Recorded 2026-08-31. Extends D73, which stands: one tree, one ownership rule.*
+
+**Choice.** Every section in the header opens its own pages. The section is
+one control and not two: it is a link, hovering it opens what it holds, and a
+click always means the same thing, which is go there. The panel shows what the
+tab strip would otherwise show only once the reader is already inside. Below
+`md` there is no hover to open anything, so the sheet keeps a separate chevron
+and the pages open in place under the section.
+
+The panel reads the same level of the same tree the tabs read, through
+`sectionMenuEntries` in `apps/web/src/lib/nav.ts`. A menu and a tab strip
+cannot disagree about what a section holds, because neither knows anything the
+tree did not tell it.
+
+One node needed a second answer. Countries resolves its row from the path, so
+on a country page the row is that country, which is what the crumb is for. A
+menu is opened from anywhere, and answering "which country am I in" to a reader
+who asked "what is in Countries" is answering a question nobody asked. A node
+may now declare `menuChildren`, the row it offers when opened rather than when
+walked, and Countries declares the three cross-country readings. It is the only
+node that needs it, and the field exists so the exception is stated in the tree
+instead of being guessed at by the renderer.
+
+The panel hangs directly under the link, and the offset above it belongs to
+the panel rather than being a gap: empty space between a trigger and what it
+opens is somewhere for the pointer to fall through on the way down. A menu
+closes when the pointer leaves both, after a beat long enough to survive a cut
+corner, and on Escape with focus back on the link, and on arriving at a new
+page. Escape is read from the document rather than from the panel, because a
+hover opens a menu without moving focus into it.
+
+A keyboard has no hover. ArrowDown from a section link opens its panel and
+lands on the first item, the arrow keys walk it and wrap at both ends, and Home
+and End reach the ends directly, because `role="menu"` promises a reader that
+they will. The item focused on a keyboard open is chosen in a render and not in
+a frame callback: a tab that is not painting never runs a frame, and the focus
+was silently lost there before this was written down.
+
+The lime mark moved from the control onto the label inside it. The control now
+holds a chevron as well, and an underline drawn under a chevron is a smudge.
+
+The header is sticky, and the tab strip rides inside it so the two bands stick
+as one. A menu the page can scroll out from under is a menu that has to be
+scrolled back to. `html, body { overflow-x: clip }` in `globals.css` is what
+allows this, and D81 chose `clip` over `hidden` for exactly this reason. The
+tab strip moved inside the `header` element rather than beside it, which also
+keeps the embed rule in `globals.css` pointing at one element to hide.
+
+The sheet carries its own scroll at `70dvh`. A sticky box taller than the
+window has a bottom that no amount of scrolling reaches, and the sheet with a
+section expanded is taller than a phone.
+
+**Why.** The tab strip only exists once the reader is standing in the section
+that owns it, so the site's shape was legible only from inside. Nine method
+pages, three cross-country readings and four ways to take part were one click
+away from a reader who already knew they existed and invisible to one who did
+not. The footer listed them, which is a fine second answer and a poor first
+one. This costs the header a duplicate of the row already under it while the
+reader is inside a section, and that duplicate is the price of the same set
+being reachable from outside it.
+
+**Cost.** Hover is not an input every reader has. A touch reader taps a
+section and goes there, which is what the tap did before this, so the panels
+are a desktop affordance and the sheet's chevron is what stands in for them.
+The sticky band is 189px on a country page, where the crumb takes a line of its
+own, against 120px on a method page and 72px where a section has no pages under
+it; on a short window that is a real share of the fold. A panel that opens on
+hover also opens on the way past, which is the price of not making the reader
+click for it.
+
+**Overturned by.** Evidence that readers open sections they are already in more
+than sections they are not, which would make the menus a duplicate of the tabs
+rather than a way past them; or a header that has to grow a fourth row, which
+would make the sticky band too tall to keep.
+
+## D86 — The front page states the claim under test, not the shape of the data
+
+*Recorded 2026-08-31. Divides with D75 and D80.*
+
+**Choice.** The dark band that opens the front page says what the benchmark is
+testing: that a country's capability is separate from its wealth, and that
+public data can see the difference. It no longer says how the data is shaped.
+The count of dimensions, the common scale and the confidence beside each score
+left the band, and the sections under it keep all three.
+
+Three pages now hold three different things about one project, and none of them
+repeats another. `/thesis` argues why capability is the bottleneck now, which
+is a claim about the world. The front page states the claim the benchmark can
+fail, which is a claim about the instrument. `/about` says what the instrument
+is made of. D75 split the second and third; this splits the first from both.
+
+**Why.** The band read as a specification. "Nine capabilities, scored from
+public data" answers a question nobody has asked yet: a reader who has not been
+told why capability is worth separating from income has no use for how many
+parts it has, and the two sections directly under the band already say it
+better, with the data drawn beside them. An opening that describes its own
+format spends the one place on the site where a stranger is still deciding
+whether the project is about anything.
+
+Stating the claim also states the failure. "Tests whether" is a promise that
+the answer could be no, and the diagnostics section further down the same page
+reports how far the separation actually holds. An opening that can be wrong is
+worth more than one that cannot.
+
+**Cost.** The band no longer says what the reader is looking at, so the first
+concrete fact about the data now arrives one section down. A reader who came
+for the numbers reads a sentence of argument first. The claim is also stated in
+`docs/WHY.md` and argued on `/thesis`, so three surfaces now carry a version of
+it and can drift apart; the front page holds the shortest one on purpose, and
+it is the one to change last.
+
+**Overturned by.** Evidence that readers arrive already knowing why capability
+is worth measuring and leave because the front page will not tell them what it
+holds, which would make the band the wrong place for an argument.
+
+## D87 — The Countries menu draws the country you are standing in
+
+*Recorded 2026-08-31. Extends D85.*
+
+**Choice.** The Countries menu opens with the shape of the country the path
+names, drawn as the same nine-axis radar the countries grid gives every card,
+above the three cross-country rows. Away from a country there is no shape and
+the menu is what it was.
+
+This is the answer to a problem D85 created. That decision made the menu's rows
+path-independent on purpose: a menu is opened from anywhere, so it offers the
+readings that hold from anywhere, and a reader standing in Chile who opens
+Countries sees the same three rows as a reader standing in Japan. Correct, and
+it leaves the menu with nothing that says where the reader is. The shape says
+it, in the one language this site is built to be read in. It is also the
+argument for publishing no single number, made in the smallest space the site
+has: nine axes at a glance, and no total anywhere on them.
+
+A node declares `menuPreview` and the renderer decides how to draw it, the same
+division `menuChildren` uses. The tree says there is a picture and what it is
+of; it does not know what a radar is.
+
+The shape is fetched when the menu opens, from `/api/shape/[iso3]`, which
+returns nine scores and nine confidences and nothing else. The header renders
+above every page, and the slim index is 597KB with no cache in `loadIndex`, so
+reading it in the root layout would make a reader on the glossary page parse
+every country in the benchmark to render a chart they will never open. The
+cache holds the request rather than the answer, so the second mount joins the
+first instead of asking again. The radar is loaded with the menu through
+`next/dynamic` for the same reason: it is the largest component in the viewer
+and it should not sit in the first bundle of a reader who never opens a menu.
+
+The picture is not a link. The rows below it are where the menu goes, and the
+country's own profile is one click away in the crumb beside it, so a third
+target here would compete with both.
+
+**Why.** A shape is what this project has instead of a rank, and the menu was
+the one place a reader could open, on a country page, and be told nothing about
+that country. It also costs nothing to a reader who does not open it, which is
+what made it worth adding to a header whose restraint is deliberate.
+
+**Cost.** A chart that arrives over the network arrives late: the panel opens
+at its full height with an empty box where the shape will be, and on a slow
+connection the reader sees the rows before the picture. Holding the height is
+the deliberate half of that, because a panel that grows under a moving pointer
+is worse than one that waits. It is also the first thing in the viewer that
+draws data outside a page, which means the header can now be wrong about the
+data in a way it never could before: a shape cached at the top of a session
+survives a re-ingest that changes it.
+
+**Overturned by.** A measurement that readers open the Countries menu to
+navigate and are slowed by a picture in the way; or a second menu wanting a
+preview of its own, which would make `menuPreview` a general mechanism rather
+than the one exception it is written as.

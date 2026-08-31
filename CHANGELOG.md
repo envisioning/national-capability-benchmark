@@ -21,6 +21,34 @@ Coordination gained a full-frame, adapter-backed civil-society measure.
 - **The frame stays at 52 countries.** This is a minor release: the new row
   changes scores and confidence, but does not rebase the country ruler.
 
+## App 1.2.0 — 2026-08-31
+
+Sections open their pages from the header, and the header stays with the reader.
+
+- **A section can be opened without being entered.** Hovering a section in the
+  header shows the pages under it, so what Countries, Capabilities, Method,
+  Participate and About hold is reachable from anywhere instead of only from
+  inside. The section is still one control: a click goes there. On a phone,
+  where there is no hover, the menu sheet opens a section in place.
+- **The Countries menu shows the country you are reading.** Open it from a
+  country page and it draws that country's shape above the links, the same
+  nine-axis radar the countries grid uses. Away from a country the menu is
+  unchanged.
+- **The menus close the way a reader expects.** Moving the pointer away,
+  Escape with focus back on the section, or arriving at a new page. For a
+  keyboard, ArrowDown opens a section and the arrow keys walk it, with Home and
+  End reaching its ends.
+- **The front page opens on what the benchmark is testing.** The band now
+  states the claim it can fail, that a country's capability is separate from
+  its wealth, instead of describing the shape of the data. The dimension count,
+  the common scale and the confidence beside each score are all still there, in
+  the sections under it that draw them.
+- **The dot motif on the front page is quieter.** The band's texture was
+  competing with the sentence it sits behind, so the dots now read as
+  atmosphere rather than as something to look at.
+- **The header and the tab strip travel together.** Both are pinned to the top
+  of the window, so a section is one click away at any depth of a long page.
+
 ## App 1.1.0 — 2026-08-30
 
 - **Brazil's institution map is published for a drawn network.** The map is

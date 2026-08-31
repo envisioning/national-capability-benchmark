@@ -8,7 +8,6 @@ import {
   FrameNote,
   Headline,
   HeroTitle,
-  Highlight,
   Score,
   Section,
   type Fact,
@@ -114,14 +113,22 @@ export default async function Page() {
       {/* The site's one dark band above the footer. It spans the window and
           supplies its own container, the way envisioning.com draws a section, so
           the band reads as the page opening rather than as a card sitting on
-          it. The lime lands once inside it, on the marker. */}
+          it. It carries no lime: the band is the opening, and a marker inside a
+          sentence this size reads as a correction to it.
+
+          The band states the claim under test and nothing else. What the
+          benchmark is made of is the sections below it and the about page, and
+          the count of dimensions is one of those: a reader who has not yet been
+          told why capability is worth separating from income has no use for how
+          many parts it has. See D75 and D86. */}
       <div className="hero-band full-bleed -mt-12 mb-12 sm:-mt-16">
         <DotField id="hero-dots" />
         <div className="relative m-auto max-w-6xl px-6 py-12 sm:px-12 sm:py-20">
-          <HeroTitle>What is a country capable of doing?</HeroTitle>
+          <HeroTitle>Wealth is not capability</HeroTitle>
           <Headline>
-            Nine capabilities, scored from public data. Pick one and every country lands on the{' '}
-            <Highlight>same scale</Highlight>, each carrying its own confidence.
+            Most international indices measure income and stop there. NCB tests whether a
+            country&apos;s ability to anticipate change, coordinate around it and build what it
+            decides is something separate, and whether public data can see it.
           </Headline>
         </div>
       </div>

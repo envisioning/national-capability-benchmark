@@ -7,10 +7,16 @@
  * canvas animation, because a research surface does not need a background that
  * moves, and a still SVG costs no JavaScript.
  *
- * The numbers are the parent's, not ours: 36px spacing, a fixed 1.5px centre,
- * a bubble from 2.5px to 10px, and `AMBIENT_OUTER_ALPHA` at 0.15. The bubble
- * size follows the same diagonal phase the animated grid breathes on, frozen at
- * one moment, so this reads as the same motif standing still.
+ * The geometry is the parent's, not ours: 36px spacing, a fixed 1.5px centre,
+ * and a bubble from 2.5px to 10px. The bubble size follows the same diagonal
+ * phase the animated grid breathes on, frozen at one moment, so this reads as
+ * the same motif standing still.
+ *
+ * The alphas are ours. The parent draws this over its own surfaces at
+ * `AMBIENT_OUTER_ALPHA` 0.15 with an opaque centre, and on this band that
+ * centre is a pure white pinprick every 36px: a texture loud enough to read as
+ * content in a band whose job is to carry one sentence. Both are pulled down
+ * until the motif is felt rather than seen. See D81.
  *
  * It is atmosphere and never data. Every real distribution on this site is a
  * `FlagField`, where a bubble means confidence and a position means a score.
@@ -20,7 +26,10 @@ const SPACING = 36
 const INNER_RADIUS = 1.5
 const BUBBLE_MIN = 2.5
 const BUBBLE_MAX = 10
-const AMBIENT_ALPHA = 0.15
+/* Atmosphere, not texture. The centre is the brighter of the two and carries
+   the motif; the bubble is barely there. */
+const AMBIENT_ALPHA = 0.05
+const CENTRE_ALPHA = 0.22
 /* The parent's PHASE_STEP: the phase each step along a diagonal advances by. */
 const PHASE_STEP = 0.55
 
@@ -68,7 +77,7 @@ export function DotField({ id = 'dot-field', className = '' }: { id?: string; cl
           {dots.map((dot) => (
             <g key={`${dot.x}-${dot.y}`} fill="currentColor">
               <circle cx={dot.x} cy={dot.y} r={dot.bubble} opacity={AMBIENT_ALPHA} />
-              <circle cx={dot.x} cy={dot.y} r={INNER_RADIUS} />
+              <circle cx={dot.x} cy={dot.y} r={INNER_RADIUS} opacity={CENTRE_ALPHA} />
             </g>
           ))}
         </pattern>

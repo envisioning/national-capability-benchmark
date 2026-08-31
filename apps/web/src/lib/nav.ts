@@ -61,6 +61,16 @@ export type NavNode = {
   children?: NavNode[]
   /** The same, for a node whose children are too many to list. */
   resolveChildren?: (pathname: string) => NavNode[]
+  /**
+   * The row this node offers in a menu, where the resolved row would name
+   * where the reader is standing instead of what the section holds. See D85.
+   */
+  menuChildren?: NavNode[]
+  /**
+   * A picture the menu draws above its rows. The tree declares that there is
+   * one and what it is of; `SiteNav` decides how to draw it. See D87.
+   */
+  menuPreview?: 'country'
 }
 
 /** Whether one node is the current one for a path. */
@@ -230,6 +240,13 @@ export const NAV_TREE: NavNode[] = [
       const node = countryNode(iso3)
       return node ? [node] : COUNTRY_INDEX_PAGES
     },
+    /* Opened from a country page, the resolved row is that one country, which
+       is the crumb's job. A menu is opened from anywhere, so it offers the
+       readings that hold whatever the path says. See D85. */
+    menuChildren: COUNTRY_INDEX_PAGES,
+    /* The rows are the same from everywhere, so the shape is what says where
+       the reader is standing. See D87. */
+    menuPreview: 'country',
   },
   {
     href: capabilitiesHref,
@@ -285,6 +302,18 @@ export function navRows(pathname: string): NavRow[] {
   }
 
   return rows
+}
+
+/**
+ * What a section opens in the header, before the reader has gone there.
+ *
+ * The tab strip shows a section's pages once the reader is inside it. A menu
+ * shows them from anywhere, so it reads the same tree at the same level, and
+ * takes `menuChildren` where a resolved row would answer a different question
+ * than the one the reader asked by opening the menu. See D85.
+ */
+export function sectionMenuEntries(node: NavNode, pathname: string): NavNode[] {
+  return node.menuChildren ?? node.children ?? node.resolveChildren?.(pathname) ?? []
 }
 
 /** Footer columns: the same tree, grouped for a vertical layout. */

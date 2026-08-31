@@ -572,11 +572,36 @@ as the reference, and see NOTICE.md before reusing the brand.
 - The dot motif is `DotField` in `apps/web/src/components/DotField.tsx`, drawn
   as a still SVG pattern rather than the parent's canvas animation. The
   geometry is envisioning.com's `lib/design/dot-motif.ts` and the wave grid
-  that reads it: 36px spacing, a 1.5px opaque centre, a 2.5px to 10px bubble,
-  ambient alpha 0.15. It is atmosphere and never data. Every distribution on
+  that reads it: 36px spacing, a 1.5px centre, a 2.5px to 10px bubble. The
+  alphas are not the parent's. It draws the motif over its own surfaces at
+  ambient 0.15 with an opaque centre; on the hero band that centre is a pure
+  white pinprick every 36px, so this viewer runs the bubble at 0.05 and the
+  centre at 0.22. Atmosphere is felt, not seen: if you can count the dots
+  before you have read the sentence over them, they are too loud. It is atmosphere and never data. Every distribution on
   this site is a `FlagField`, where a bubble means confidence and a position
   means a score, so never put a `DotField` where a reader could take it for
   one. See D81.
+- A section opens its own pages from the header, and it is one control and not
+  two: `SectionMenu` in `apps/web/src/components/SiteNav.tsx` is the section
+  link, opens its panel on hover, and navigates on click. It reads
+  `sectionMenuEntries` in `apps/web/src/lib/nav.ts`, which is the same level of
+  the same tree the tab strip reads. Never give a menu its own list: a node
+  that owes a menu something different than it owes the walk declares
+  `menuChildren`, and Countries is the only one that does. The panel's top
+  offset is padding on the panel and never a margin, or the pointer falls
+  through the gap; it closes on pointer-out after a beat, on Escape with focus
+  back on the link, and on a route change, and ArrowDown opens it for a
+  keyboard. The header is sticky and the tab strip sits inside the `header`
+  element so both bands stick as one, which is also what keeps the embed rule
+  in `globals.css` pointing at one element. See D85.
+- A menu may draw a picture above its rows, and exactly one does: the Countries
+  menu draws the shape of the country the path names, through
+  `NavCountryShape`. The node declares `menuPreview` and `SiteNav` decides how
+  to draw it, the same division `menuChildren` uses. The data comes from
+  `/api/shape/[iso3]` when the menu opens, never from the root layout: the
+  header renders above every page and `loadIndex` reads 597KB with no cache, so
+  a chart nobody opened would be charged to every page on the site. The radar
+  loads through `next/dynamic` for the same reason. See D87.
 - Navigation hangs from one edge. The sections sit right from `md` up, so the
   crumb trail and the tab strip are `md:justify-end` as well and the reader
   tracks one column down. Below `md` the sections fold into the sheet, there is
