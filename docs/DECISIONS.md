@@ -3853,3 +3853,61 @@ the row above the wealth-proxy threshold or into a redundant pair; or direct
 validation showing that the CSV values cannot be reproduced from the pinned
 archive. Any of those would return the row to `gap` or replace it with a more
 observable series.
+
+---
+
+## D84 — An indicator is checked for whether it still separates countries
+
+*Recorded 2026-08-31. Extends D22 and D42. Adds `discriminationTrend` to
+`data/out/diagnostics.json` and a section to the report. Changes no score.*
+
+**Choice.** Report, for every scored indicator, the interquartile spread of its
+normalised values in each year of a twenty-year window, and whether that spread
+is narrowing. Two flags: `fading`, where the rank correlation of spread against
+year is at or below -0.5 and the spread has narrowed by at least a quarter, and
+`lowDiscrimination`, where the latest spread is under ten points regardless of
+what it has done over time. The window's rules are the trend layer's rules
+rather than new ones. Historical values are scored against the frame built from
+every country's current values, so a change in spread is a change in the
+countries and never a change in the scale, and the spread is computed on the
+countries observed at both ends, so an indicator that gained coverage does not
+read as one that gained variance. The balanced panel size, the filled year
+count, the carried-forward cell count and the clamped cell count are published
+beside every row, because each of them can hold a spread still rather than
+measure it.
+
+**Why.** Every other block in the diagnostics is a cross-section of the latest
+year: how a series correlates with income, whether two series carry the same
+information, how much of a dimension rests on judgement. None of them can see a
+series that has stopped varying. An indicator whose cross-country spread has
+collapsed still contributes a full share to its dimension's equal-weight mean,
+and what it contributes after that is closer to noise than to a measurement.
+That failure is silent, it arrives gradually, and nothing in the pipeline would
+have noticed it. The first run finds it in two places, both of them plausible
+as real convergence rather than as error: internet use, which the world has
+genuinely levelled on, and income inequality, on a series sparse enough that
+the carried-forward count has to be read beside the trend.
+
+The test also answers a question the registry could not otherwise ask. Eighteen
+of the thirty-six scored indicators cannot be tested at all, because they start
+after the window opens or stop before it closes. That is a finding about what
+this benchmark can watch over time, and it now has a number.
+
+**Cost.** A falling spread has more than one cause and this reports only the
+number. Real convergence, a publisher's methodology change, a survey series
+repeating its last round between waves and a frame that clamps early values all
+produce the same shape, and only the carried-forward and clamped counts
+separate them, and only partially. The twenty-year window is a choice: it is
+long enough to see a slow narrowing and short enough that half the registry
+still reaches it, but an indicator whose decay is slower than the window will
+pass. The flag thresholds are conventions with no theory behind them. Nothing
+reads the block, by design: it changes no score, no confidence and no
+weighting, so an indicator that fades goes on carrying a full share until a
+separate decision retires or reweights it.
+
+**Overturned by.** A demonstration that spread on the fixed frame is the wrong
+statistic, most plausibly because clamping compresses early years enough to
+invert the sign for a class of indicator; or a fading flag that survives its
+carried-forward and clamped counts, which would make the block a trigger for
+reweighting rather than a report, and would need a decision saying what a
+faded indicator's share becomes.

@@ -1,6 +1,6 @@
 # National Capability Benchmark, prototype v0
 
-*Generated 2026-08-31T07:33:56.655Z*
+*Generated 2026-08-31T11:07:09.250Z*
 
 This run covers 52 countries and nine dimensions. Indicators carry equal weight within each dimension, and the benchmark has no headline ranking.
 
@@ -367,6 +367,29 @@ The test removes 10 indicators correlated with log GDP per capita at 0.7 or abov
 ## Some historical values fall outside the frame
 
 0 of 1736 observed cells (0%) sit outside the frame and clamp to 0 or 100. A current value cannot fall outside a frame its own country helped build, so a clamp here comes from a value the published frame did not see.
+
+## Some indicators separate countries less than they did
+
+Every other test here reads the latest year. This one asks whether an indicator still tells the 52 countries apart, by measuring the interquartile spread of its normalised values in each year from 2006 to 2026. The spread is in points of the same 0 to 100 scale a score is on. An indicator whose spread is collapsing has stopped discriminating, and what it adds to a dimension mean after that is closer to noise than to a measurement.
+
+Two rules carry over from the trend layer. Historical values are scored against the frame built from every country's current values, so a change in spread is a change in the countries and not a change in the scale. And the spread is computed on the countries observed at both ends of the window, so an indicator that gained coverage does not read as one that gained variance. That panel is printed beside every row.
+
+18 of 36 scored indicators reach back far enough to test. The other 18 either start after 2006 or stop before 2021, which is its own finding about what the registry can watch over time.
+
+| Indicator | Dimension | Countries | Years | Spread 2006 | Spread 2026 | Change | Trend |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Income inequality | Shared Purpose | 44 | 10 | 59.08 | 34.34 | -42% | -0.988 |
+| Individuals using the internet | Agency | 52 | 21 | 43.46 | 27.65 | -36% | -0.788 |
+| Resident patent applications | Experimentation | 39 | 19 | 39.31 | 34.83 | -11% | -0.764 |
+| Credit to the private sector | Agency | 41 | 21 | 40.35 | 33.62 | -17% | -0.661 |
+| Output per worker | Building | 50 | 21 | 32.49 | 31.37 | -3% | -0.453 |
+| Electricity transmission losses | Adaptability | 52 | 21 | 27.08 | 25.94 | -4% | -0.398 |
+| Unemployment rate | Adaptability | 52 | 21 | 27.72 | 21.76 | -21% | -0.372 |
+| Labour force participation | Adaptability | 52 | 21 | 39.33 | 35.03 | -11% | -0.346 |
+| Public education expenditure | Learning | 37 | 20 | 23.84 | 23.03 | -3% | -0.036 |
+| Tax revenue | Shared Purpose | 35 | 21 | 32.33 | 38.38 | 19% | 0.468 |
+
+2 indicators fall on both tests, a rank correlation against year at or below -0.5 and a narrowing of at least 25%: Income inequality, Individuals using the internet. Convergence is a real thing the world does, so a falling spread is a finding rather than a fault. What it rules out is going on reading the indicator as though it still separated countries as well as it once did.
 
 ## Indicator pairs are checked for overlap
 

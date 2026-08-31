@@ -18,8 +18,10 @@ import type {
   Observation,
   Provenance,
 } from '../model/index.js'
-import { mean, pearson, round, spearman } from './stats.js'
-import { scoreAll, type Matrix, type ScoreOptions } from './score.js'
+import { iqr, mean, pearson, round, spearman } from './stats.js'
+import { buildFrames, scoreAll, type Matrix, type ScoreOptions } from './score.js'
+import { buildHistory, normalizedAt } from './trend.js'
+import type { Frame } from './normalize.js'
 
 export const CONTEXT_PREFIX = '__context__'
 export const DENOMINATOR_PREFIX = '__denominator__'
@@ -32,6 +34,21 @@ export const REDUNDANCY_THRESHOLD = 0.85
 export const DIMENSION_OVERLAP_THRESHOLD = 0.9
 /** The family an indicator falls into when its registry row declares none. */
 export const UNASSIGNED_FAMILY = 'unassigned'
+
+/** How far back the discrimination test reaches, in years. */
+export const DISCRIMINATION_SPAN = 20
+/** A reading counts for a year while it is no older than this, matching the momentum rule. */
+export const DISCRIMINATION_MAX_AGE = 5
+/** Below this many countries in the balanced panel, no spread is reported. */
+export const DISCRIMINATION_MIN_COUNTRIES = 10
+/** Below this many filled years, no trend is reported. */
+export const DISCRIMINATION_MIN_YEARS = 8
+/** Rank correlation of spread against year at or below this counts as falling. */
+export const DISCRIMINATION_FADE_SPEARMAN = -0.5
+/** Relative change in spread at or below this counts as falling. */
+export const DISCRIMINATION_FADE_SHARE = -0.25
+/** Interquartile spread in points below which an indicator barely separates countries. */
+export const DISCRIMINATION_FLOOR = 10
 
 export function logGdpByCountry(observations: Observation[], series: string): Map<string, number> {
   /* The observation file carries every year, so pick the latest one per country
@@ -266,6 +283,66 @@ export type Diagnostics = {
     dimensionR: number | null
     dimensionN: number
   }>
+  /**
+   * Whether each indicator still separates the countries from each other.
+   *
+   * Every other block here is a cross-section of the latest year. This one is
+   * the only question asked across time, and it is not about any country: it is
+   * about whether the ruler still has markings on it. An indicator whose
+   * cross-country spread is collapsing has stopped discriminating, and whatever
+   * it contributes to a dimension mean after that is mostly noise wearing the
+   * name of a measurement. Convergence is a real thing the world does, so a
+   * falling spread is a finding rather than a fault. What it forbids is
+   * continuing to read the indicator as though it still told countries apart.
+   *
+   * Two rules make the number mean something, and they are the trend layer's
+   * rules rather than new ones. Historical values are scored against the frame
+   * built from every country's current values, so a change in spread is a
+   * change in the countries and never a change in the scale. And the spread is
+   * computed on a balanced panel, the countries observed at both ends of the
+   * window, so an indicator that gained coverage does not read as one that
+   * gained variance. The panel size is published beside every figure for the
+   * same reason a momentum basket is. See D22.
+   *
+   * Spread is the interquartile range of the normalised values, in points of
+   * the same 0 to 100 scale a score is on, which makes it comparable across
+   * indicators that share no unit.
+   */
+  discriminationTrend: {
+    span: number
+    baseYear: number
+    currentYear: number
+    perIndicator: Array<{
+      indicatorId: string
+      dimension: Dimension
+      /** Countries observed at both ends. Spread is computed on these and no others. */
+      countries: number
+      /** Years the whole panel could be filled. The trend is computed over these. */
+      years: number
+      firstYear: number | null
+      lastYear: number | null
+      /** Interquartile spread of normalised values at the first filled year. */
+      firstSpread: number | null
+      /** The same at the last filled year. */
+      lastSpread: number | null
+      /** Relative change between the two, negative where the spread has narrowed. */
+      changeShare: number | null
+      /** Rank correlation of spread against year. Negative means it is falling. */
+      spearman: number | null
+      /**
+       * Cells whose reading was carried forward from an earlier year. A survey
+       * series repeats its last round between waves, which holds a spread still
+       * rather than measuring it.
+       */
+      carriedForwardCells: number
+      /** Cells that clamped to 0 or 100. A clamp compresses spread by construction. */
+      clampedCells: number
+      /** The spread is falling on both tests. */
+      fading: boolean
+      /** The latest spread is under the floor, whatever it has done over time. */
+      lowDiscrimination: boolean
+    }>
+  }
   gdpStrippedTest: {
     excluded: string[]
     /** Dimensions that lose every indicator once the wealth-correlated ones go. */
@@ -343,6 +420,100 @@ function panelVsGdpFor(
     hasDistribution: isPanel(run),
     perDimension,
   }
+}
+
+/**
+ * Cross-country spread per indicator over the window, and whether it is
+ * narrowing.
+ *
+ * The balanced panel is built once per indicator from the two ends of the
+ * window. A year that cannot fill the whole panel is skipped rather than
+ * measured on a smaller one, because a spread over a different country set is
+ * not comparable with the year before it.
+ */
+function discriminationTrendFor(
+  observations: Observation[],
+  opts: ScoreOptions,
+): Diagnostics['discriminationTrend'] {
+  const history = buildHistory(observations)
+  const frames = buildFrames(observations, opts)
+  const baseYear = opts.currentYear - DISCRIMINATION_SPAN
+  const maxAge = DISCRIMINATION_MAX_AGE
+
+  const perIndicator = INDICATORS.filter((def) => isScored(def) && frames.has(def.id)).map(
+    (def) => {
+      const frame = frames.get(def.id) as Frame
+      const at = (iso3: string, year: number) =>
+        normalizedAt(def, history, iso3, year, maxAge, frame)
+
+      const panel = COUNTRY_ISO3.filter(
+        (iso3) => at(iso3, baseYear) !== null && at(iso3, opts.currentYear) !== null,
+      )
+
+      const spreads: Array<{ year: number; spread: number }> = []
+      let carriedForwardCells = 0
+      let clampedCells = 0
+
+      if (panel.length >= DISCRIMINATION_MIN_COUNTRIES) {
+        for (let year = baseYear; year <= opts.currentYear; year++) {
+          const values: number[] = []
+          let carried = 0
+          let clamped = 0
+          for (const iso3 of panel) {
+            const cell = at(iso3, year)
+            if (!cell) break
+            values.push(cell.normalized)
+            if (cell.year !== year) carried += 1
+            if (cell.outOfFrame) clamped += 1
+          }
+          if (values.length < panel.length) continue
+          spreads.push({ year, spread: round(iqr(values), 2) })
+          carriedForwardCells += carried
+          clampedCells += clamped
+        }
+      }
+
+      const first = spreads[0] ?? null
+      const last = spreads[spreads.length - 1] ?? null
+      const enough = spreads.length >= DISCRIMINATION_MIN_YEARS
+      const rho = enough
+        ? spearman(
+            spreads.map((s) => s.year),
+            spreads.map((s) => s.spread),
+          )
+        : null
+      const changeShare =
+        enough && first && last && first.spread > 0
+          ? round((last.spread - first.spread) / first.spread, 3)
+          : null
+
+      return {
+        indicatorId: def.id,
+        dimension: def.dimension,
+        countries: panel.length,
+        years: spreads.length,
+        firstYear: first?.year ?? null,
+        lastYear: last?.year ?? null,
+        firstSpread: enough ? (first?.spread ?? null) : null,
+        lastSpread: enough ? (last?.spread ?? null) : null,
+        changeShare,
+        spearman: rho === null ? null : round(rho, 3),
+        carriedForwardCells,
+        clampedCells,
+        fading:
+          rho !== null &&
+          rho <= DISCRIMINATION_FADE_SPEARMAN &&
+          changeShare !== null &&
+          changeShare <= DISCRIMINATION_FADE_SHARE,
+        lowDiscrimination: enough && last !== null && last.spread < DISCRIMINATION_FLOOR,
+      }
+    },
+  )
+
+  /* Most negative first, and the indicators the window could not test last. */
+  perIndicator.sort((a, b) => (a.spearman ?? 2) - (b.spearman ?? 2))
+
+  return { span: DISCRIMINATION_SPAN, baseYear, currentYear: opts.currentYear, perIndicator }
 }
 
 function rankOrder(values: Map<string, number>): string[] {
@@ -592,6 +763,7 @@ export function runDiagnostics(
     measurability,
     familyBalance,
     behaviouralChecks,
+    discriminationTrend: discriminationTrendFor(observations, opts),
     gdpStrippedTest: {
       excluded,
       dimensionsEmptied: DIMENSIONS.filter((d) =>

@@ -14,6 +14,10 @@ import { momentumSpansIn } from './trend.js'
 import type { CountryResult, DelphiRunFile, Dimension } from '../model/index.js'
 import {
   DIMENSION_OVERLAP_THRESHOLD,
+  DISCRIMINATION_FADE_SHARE,
+  DISCRIMINATION_FADE_SPEARMAN,
+  DISCRIMINATION_FLOOR,
+  DISCRIMINATION_MAX_AGE,
   REDUNDANCY_THRESHOLD,
   WEALTH_CORRELATION_THRESHOLD,
   type Diagnostics,
@@ -322,6 +326,66 @@ export function buildReport(
         ['Country', 'Clamped cells'],
         diag.outOfFrame.perCountry.slice(0, 10).map((c) => [c.country, c.clampedCells]),
       ),
+    )
+    out.push('')
+  }
+
+  const disc = diag.discriminationTrend
+  const tested = disc.perIndicator.filter((i) => i.spearman !== null)
+  const fading = disc.perIndicator.filter((i) => i.fading)
+  const low = disc.perIndicator.filter((i) => i.lowDiscrimination)
+  out.push('## Some indicators separate countries less than they did')
+  out.push('')
+  out.push(
+    `Every other test here reads the latest year. This one asks whether an indicator still tells the ${countries.length} countries apart, by measuring the interquartile spread of its normalised values in each year from ${disc.baseYear} to ${disc.currentYear}. The spread is in points of the same 0 to 100 scale a score is on. An indicator whose spread is collapsing has stopped discriminating, and what it adds to a dimension mean after that is closer to noise than to a measurement.`,
+  )
+  out.push('')
+  out.push(
+    `Two rules carry over from the trend layer. Historical values are scored against the frame built from every country's current values, so a change in spread is a change in the countries and not a change in the scale. And the spread is computed on the countries observed at both ends of the window, so an indicator that gained coverage does not read as one that gained variance. That panel is printed beside every row.`,
+  )
+  out.push('')
+  out.push(
+    `${tested.length} of ${disc.perIndicator.length} scored indicators reach back far enough to test. The other ${disc.perIndicator.length - tested.length} either start after ${disc.baseYear} or stop before ${disc.currentYear - DISCRIMINATION_MAX_AGE}, which is its own finding about what the registry can watch over time.`,
+  )
+  out.push('')
+  if (tested.length > 0) {
+    out.push(
+      table(
+        [
+          'Indicator',
+          'Dimension',
+          'Countries',
+          'Years',
+          `Spread ${disc.baseYear}`,
+          `Spread ${disc.currentYear}`,
+          'Change',
+          'Trend',
+        ],
+        tested
+          .slice(0, 10)
+          .map((i) => [
+            INDICATORS_BY_ID[i.indicatorId]?.name ?? i.indicatorId,
+            DIMENSION_LABELS[i.dimension],
+            i.countries,
+            i.years,
+            i.firstSpread,
+            i.lastSpread,
+            i.changeShare === null ? null : `${Math.round(i.changeShare * 100)}%`,
+            i.spearman,
+          ]),
+      ),
+    )
+    out.push('')
+  }
+  out.push(
+    fading.length === 0
+      ? `No indicator falls on both tests, which are a rank correlation against year at or below ${DISCRIMINATION_FADE_SPEARMAN} and a narrowing of at least ${Math.round(Math.abs(DISCRIMINATION_FADE_SHARE) * 100)}%.`
+      : `${fading.length === 1 ? 'One indicator falls' : `${fading.length} indicators fall`} on both tests, a rank correlation against year at or below ${DISCRIMINATION_FADE_SPEARMAN} and a narrowing of at least ${Math.round(Math.abs(DISCRIMINATION_FADE_SHARE) * 100)}%: ${fading.map((i) => INDICATORS_BY_ID[i.indicatorId]?.name ?? i.indicatorId).join(', ')}. Convergence is a real thing the world does, so a falling spread is a finding rather than a fault. What it rules out is going on reading the indicator as though it still separated countries as well as it once did.`,
+  )
+  out.push('')
+  if (low.length > 0) {
+    out.push(
+      `${low.length === 1 ? 'One indicator ends' : `${low.length} indicators end`} the window under ${DISCRIMINATION_FLOOR} points of spread, which is little separation whatever the trend has done: ${low.map((i) => INDICATORS_BY_ID[i.indicatorId]?.name ?? i.indicatorId).join(', ')}.`,
     )
     out.push('')
   }

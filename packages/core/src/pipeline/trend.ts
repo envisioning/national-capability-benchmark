@@ -76,14 +76,22 @@ function asOf(series: Series | undefined, year: number, maxAge: number): Series[
   return null
 }
 
-function normalizedAt(
+/**
+ * One country's value for one indicator as it stood at `year`, normalised
+ * against the current frame.
+ *
+ * `year` in the result is the year of the observation that was in force, which
+ * is not always the year asked for: `asOf` carries the last reading forward up
+ * to `maxAge`. A caller that cares how stale the answer is reads it.
+ */
+export function normalizedAt(
   def: IndicatorDef,
   history: History,
   iso3: string,
   year: number,
   maxAge: number,
   frame: Frame,
-): { normalized: number; outOfFrame: boolean } | null {
+): { normalized: number; outOfFrame: boolean; year: number } | null {
   const point = asOf(history.get(def.id)?.get(iso3), year, maxAge)
   if (!point) return null
 
@@ -102,7 +110,7 @@ function normalizedAt(
   if (transformed === null || !Number.isFinite(transformed)) return null
 
   const scored = scoreAgainstFrame(transformed, frame, def.direction)
-  return { normalized: scored.normalized, outOfFrame: scored.outOfFrame }
+  return { normalized: scored.normalized, outOfFrame: scored.outOfFrame, year: point.year }
 }
 
 export function momentumFor(
