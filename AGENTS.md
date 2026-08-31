@@ -614,6 +614,12 @@ as the reference, and see NOTICE.md before reusing the brand.
   envisioning-core. Colours and corner radius are each site's own; the glyph
   fraction is not, because a row of Envisioning tabs at different scales stops
   reading as one family. `PADDING` derives from it and is never set by hand.
+  **The source SVG must be cropped tight to the mark**, which
+  `apps/web/public/brand/envisioning-mark.svg` is. The generator scales the
+  viewBox to fill the inner box, so padding inside the viewBox shrinks the mark
+  on the tile and the constant stops describing what comes out. Signals shipped
+  a 44x44 viewBox with the mark at 65% of it, and raising its padding made the
+  mark smaller.
   Check a change with `pnpm icons:measure <file>`, which reports what a file
   actually contains and works on any site's icons. Read the 180px and 512px
   rows: below about 64px the mark is a few pixels of antialiasing and measures
