@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import { PT_BR } from '@ncb/core'
 import { AgendaView } from '@/components/views/AgendaView'
 import { loadAgenda } from '@/lib/agenda'
+import { loadCountry } from '@/lib/data'
 import { countryProfileHref, ogAgendaHref } from '@/lib/links'
 
 export const dynamic = 'force-dynamic'
@@ -23,8 +24,8 @@ export const metadata: Metadata = {
  * /country/BRA/agenda, and both render the same JSON. See D69.
  */
 export default async function BrazilAgendaPage() {
-  const agenda = await loadAgenda('BRA')
-  if (!agenda) notFound()
+  const [agenda, country] = await Promise.all([loadAgenda('BRA'), loadCountry('BRA')])
+  if (!agenda || !country) notFound()
 
-  return <AgendaView agenda={agenda} lex={PT_BR} profileHref={countryProfileHref('BRA')} />
+  return <AgendaView agenda={agenda} country={country} lex={PT_BR} profileHref={countryProfileHref('BRA')} />
 }

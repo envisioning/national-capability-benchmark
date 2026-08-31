@@ -60,7 +60,7 @@ both generated from the same Zod schemas the pipeline validates against.
 | --- | --- | --- |
 | `data/out/datapackage.json` | The descriptor. Version, licence, sources, every resource and its schema. | First. It tells you what the rest is. |
 | `data/out/index.json` | Every country, nine dimensions each, with score, confidence, coverage and trend. No indicator rows, no yearly series. | You want more than one country. |
-| `data/out/countries/{ISO3}.json` | One country in full: every indicator row, its raw and normalised value, its source and year, and its whole series back to 1990. | You want one country in depth. |
+| `data/out/countries/{ISO3}.json` | One country in full: every indicator row, its raw and normalised value, its source and year, and its whole series back to 1960 where data exists. | You want one country in depth. |
 | `data/out/indicators/{id}.json` | One indicator across every country. The same data turned inside out. | You want one measure compared across the frame. |
 | `data/out/agenda/{ISO3}.json` | The computed capability agenda: which dimensions to raise, which to measure, which to hold. Language neutral. | You want the reading rather than the numbers. |
 | `data/out/agenda/{ISO3}.{lang}.md` | The same agenda rendered as prose, one file per lexicon. | You want the reading in a language. |

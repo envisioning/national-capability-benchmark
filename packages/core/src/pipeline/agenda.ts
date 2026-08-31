@@ -57,6 +57,34 @@ export type AgendaEvidenceRef = {
   title: string
 }
 
+/** One country x capability cell in the documented-delivery coverage matrix. */
+export type AgendaEvidenceCoverageCell = {
+  dimension: Dimension
+  records: AgendaEvidenceRef[]
+}
+
+/** One current benchmark country, including empty capability cells. */
+export type AgendaEvidenceCoverageRow = {
+  iso3: string
+  country: string
+  capabilitiesCovered: number
+  recordCount: number
+  cells: Record<Dimension, AgendaEvidenceCoverageCell>
+}
+
+/**
+ * A complete country x capability inventory of the published evidence corpus.
+ * Empty cells are retained because they are the research agenda; a record in a
+ * cell is a documented delivery and never a score or confidence input.
+ */
+export type AgendaEvidenceCoverage = {
+  rows: AgendaEvidenceCoverageRow[]
+  dimensionTotals: Record<Dimension, { countries: number; records: number }>
+  countriesRepresented: number
+  filledCells: number
+  recordCount: number
+}
+
 export type AgendaTrend = {
   spanYears: number
   delta: number
@@ -102,9 +130,75 @@ export type CountryAgenda = {
     dimension: Dimension
     title: string
     claim: string
+    /** Year the documented delivery or institution started. */
+    started: number
   }>
   /** Total declared gaps across the registry, the size of the measurement agenda. */
   gapCount: number
+}
+
+/**
+ * Turn the evidence register into the matrix a researcher needs to see its
+ * blind spots. The current country registry and the canonical capability order
+ * set the frame, so no page or export can quietly omit an empty row or column.
+ */
+export function buildAgendaEvidenceCoverage(
+  evidence: readonly EvidenceRecord[],
+): AgendaEvidenceCoverage {
+  const rows = COUNTRY_ISO3.map((iso3): AgendaEvidenceCoverageRow => ({
+    iso3,
+    country: COUNTRY_NAMES[iso3] ?? iso3,
+    capabilitiesCovered: 0,
+    recordCount: 0,
+    cells: Object.fromEntries(
+      DIMENSIONS.map((dimension) => [dimension, { dimension, records: [] }]),
+    ) as unknown as Record<Dimension, AgendaEvidenceCoverageCell>,
+  }))
+  const rowByIso3 = new Map(rows.map((row) => [row.iso3, row]))
+
+  for (const record of evidence) {
+    const row = rowByIso3.get(record.iso3)
+    const dimension = INDICATORS_BY_ID[record.indicatorId]?.dimension
+    if (!row || !dimension) continue
+    row.cells[dimension].records.push({
+      id: record.id,
+      iso3: record.iso3,
+      country: row.country,
+      indicatorId: record.indicatorId,
+      title: record.title,
+    })
+  }
+
+  for (const row of rows) {
+    row.capabilitiesCovered = DIMENSIONS.filter(
+      (dimension) => row.cells[dimension].records.length > 0,
+    ).length
+    row.recordCount = DIMENSIONS.reduce(
+      (total, dimension) => total + row.cells[dimension].records.length,
+      0,
+    )
+  }
+
+  const dimensionTotals = Object.fromEntries(
+    DIMENSIONS.map((dimension) => [
+      dimension,
+      {
+        countries: rows.filter((row) => row.cells[dimension].records.length > 0).length,
+        records: rows.reduce(
+          (total, row) => total + row.cells[dimension].records.length,
+          0,
+        ),
+      },
+    ]),
+  ) as AgendaEvidenceCoverage['dimensionTotals']
+
+  return {
+    rows,
+    dimensionTotals,
+    countriesRepresented: rows.filter((row) => row.recordCount > 0).length,
+    filledCells: rows.reduce((total, row) => total + row.capabilitiesCovered, 0),
+    recordCount: rows.reduce((total, row) => total + row.recordCount, 0),
+  }
 }
 
 /**
@@ -242,6 +336,7 @@ export function buildAgenda(
       dimension: INDICATORS_BY_ID[r.indicatorId]?.dimension as Dimension,
       title: r.title,
       claim: r.claim,
+      started: r.started,
     }))
 
   return {

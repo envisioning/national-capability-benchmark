@@ -12,7 +12,7 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 | Agency | 78.9 | 0.6 (usable) | +6.8 over 10 years using 4 indicators |
 | Coordination | 87.4 | 0.25 (thin) | no trend |
 | Trust | 67.4 | 0.16 (very thin) | no trend |
-| Learning | 55.9 | 0.54 (usable) | +16.5 over 10 years using 2 indicators |
+| Learning | 55.9 | 0.54 (usable) | +16.1 over 10 years using 2 indicators |
 | Experimentation | 72.2 | 0.39 (thin) | +16.9 over 10 years using 2 indicators |
 | Adaptability | 82.1 | 0.48 (usable) | +7.8 over 10 years using 4 indicators |
 | Building | 63.1 | 0.54 (usable) | +3.1 over 10 years using 4 indicators |
@@ -102,6 +102,7 @@ These are documented institutional changes in South Korea that the framework fil
 - **Economic Planning Board, long-run industrial coordination** (Coordination). South Korea's Economic Planning Board operated from 1961 to 1994 as the government body responsible for economic development planning and budget planning before its functions moved through later finance ministries.
 - **Korea Internet and Security Agency, a consolidated digital authority** (Adaptability). Korea established the Korea Internet and Security Agency in July 2009 by integrating three predecessor organisations, giving the country one public body for internet development, security and international information technology cooperation.
 - **MyData, citizen-directed data portability** (Trust). South Korea's MyData policy gives people a route to request and direct the transfer of personal data between services, with the Personal Information Protection Commission describing the scheme as a way to give people control over data portability after the March 2023 legal amendment.
+- **Korean regulatory-sandbox system across eight sectors** (Experimentation). South Korea expanded its regulatory-sandbox system from ICT and industrial-convergence fields in January 2019 to eight sectoral regimes by 2024, adding finance, regulatory-free zones, smart cities, R&D zones, mobility and circular economy testing.
 
 ## Contribute
 

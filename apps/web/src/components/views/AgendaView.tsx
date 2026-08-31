@@ -1,9 +1,10 @@
 import Link from 'next/link'
-import type { CountryAgenda, Dimension, Lexicon } from '@ncb/core'
+import type { CountryAgenda, CountryResult, Dimension, Lexicon } from '@ncb/core'
 import {
   RAISE_BELOW,
   AGENDA_HISTORY_MIN_ENTRIES,
   COUNTRY_ISO3,
+  INGEST_FROM_YEAR,
   REPO_URL,
   countryName,
   countryTopic,
@@ -18,6 +19,10 @@ import {
 } from '@ncb/core'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { CapabilityLink } from '@/components/CapabilityLink'
+import {
+  AgendaHistoryChart,
+  type AgendaHistoryDimension,
+} from '@/components/views/AgendaHistoryChart'
 import { fillNodes, joinNodes } from '@/lib/fill'
 import { countryProfileHref, evidenceHref, indicatorHref, limitsHref } from '@/lib/links'
 import {
@@ -43,16 +48,19 @@ import {
 const LINK = 'underline underline-offset-4 hover:decoration-2'
 
 /**
- * One country's capability agenda, rendered through one lexicon. The same
- * JSON drives this page in every language and the markdown in
- * data/out/agenda, so the three cannot disagree. See D35.
+ * One country's capability agenda, rendered through one lexicon. The agenda
+ * JSON drives this page in every language and the markdown in data/out/agenda;
+ * the viewer-only history chart reads the matching yearly series from the full
+ * country output. See D35.
  */
 export function AgendaView({
   agenda,
+  country,
   lex,
   profileHref,
 }: {
   agenda: CountryAgenda
+  country: CountryResult
   lex: Lexicon
   /** The full country profile in the ground layer. */
   profileHref: string
@@ -98,6 +106,28 @@ export function AgendaView({
           c: d.trend.clamped,
         })
       : s.noTrend
+
+  const historyDimensions: AgendaHistoryDimension[] = agenda.dimensions.map((d) => ({
+    dimension: d.dimension,
+    label: lex.dimensions[d.dimension],
+    spans: (country.dimensions[d.dimension]?.momentum ?? []).map((momentum) => ({
+      spanYears: momentum.currentYear - momentum.baseYear,
+      baseYear: momentum.baseYear,
+      currentYear: momentum.currentYear,
+      baseScore: momentum.baseScore,
+      currentScore: momentum.currentScore,
+      delta: momentum.delta,
+      matchedIndicators: momentum.matchedIndicators,
+      clamped: momentum.clamped,
+      series: momentum.series,
+    })),
+  }))
+  const historyEvents = agenda.ownEvidence.map((item) => ({
+    id: item.id,
+    dimension: item.dimension,
+    title: item.title,
+    year: item.started,
+  }))
 
   return (
     <>
@@ -167,8 +197,39 @@ export function AgendaView({
             </tbody>
           </Table>
         </Scroller>
-        <ScoreLegend lex={lex} />
-        <ConfidenceLegend lex={lex} />
+        <div className="mt-6 grid gap-6 border-t border-[var(--rule-soft)] pt-5 lg:grid-cols-2">
+          <ScoreLegend lex={lex} className="mb-0" />
+          <ConfidenceLegend lex={lex} className="mt-0" />
+        </div>
+      </Section>
+
+      <Section
+        title={s.historyHeading}
+        hint={fill(s.historyIntro, { country: name })}
+      >
+        <AgendaHistoryChart
+          key={agenda.iso3}
+          dimensions={historyDimensions}
+          events={historyEvents}
+          timelineStartYear={INGEST_FROM_YEAR}
+          numberLocale={lex.numberLocale}
+          labels={{
+            dimension: s.historyDimension,
+            period: s.historyPeriod,
+            axis: s.historyAxis,
+            years: s.historyYears,
+            noHistory: s.historyNoHistory,
+            noSpan: s.historyNoSpan,
+            readout: s.historyReadout,
+            readoutClamped: s.historyReadoutClamped,
+            caveat: s.historyCaveat,
+            chartAria: s.historyChartAria,
+            pointAria: s.historyPointAria,
+            agendaItems: s.historyAgendaItems,
+            eventTimelineAria: s.historyEventTimelineAria,
+            eventAria: s.historyEventAria,
+          }}
+        />
       </Section>
 
       {raise.length > 0 ? (

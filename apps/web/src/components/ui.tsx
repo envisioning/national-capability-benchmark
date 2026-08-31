@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import type { Lexicon, MeasurementClass, Provenance } from '@ncb/core'
 import { DIMENSIONS, DIMENSION_LABELS, EN, countryFlag, fill, isEvidential } from '@ncb/core'
-import { CONFIDENCE_ICON, DIMENSION_ICON, Icon, type IconName } from '@/components/Icon'
+import { DIMENSION_ICON, Icon, type IconName } from '@/components/Icon'
 import { ClassBadge } from '@/components/ClassBadge'
 import {
   CONFIDENCE_BANDS,
@@ -92,9 +92,19 @@ export function CountryLabel({ iso3, name }: { iso3: string; name: string }) {
  * A pill, not a sentence, so a reader can tell provenance apart from prose at a
  * glance. Group several in one flex row.
  */
-export function Meta({ icon, children }: { icon?: IconName; children: React.ReactNode }) {
+export function Meta({
+  icon,
+  children,
+  className = '',
+}: {
+  icon?: IconName
+  children: React.ReactNode
+  className?: string
+}) {
   return (
-    <span className="inline-flex items-center gap-1.5 rounded-full border border-[var(--rule)] px-3 py-1 text-xs font-medium text-[var(--muted)]">
+    <span
+      className={`inline-flex items-center gap-1.5 rounded-full border border-[var(--rule)] px-3 py-1 text-xs font-medium text-[var(--muted)] ${className}`}
+    >
       {icon ? <Icon name={icon} size={12} /> : null}
       {children}
     </span>
@@ -257,27 +267,39 @@ export function DimensionScore({
  * language page passes its lexicon; the thresholds come from the band registry
  * either way.
  */
-export function ScoreLegend({ lex = EN }: { lex?: Lexicon } = {}) {
+export function ScoreLegend({
+  lex = EN,
+  className = 'mb-4',
+}: { lex?: Lexicon; className?: string } = {}) {
   return (
-    <ul className="mb-4 flex flex-wrap gap-x-5 gap-y-2 text-xs">
-      {[...SCORE_BANDS].reverse().map((b, i, all) => {
-        const next = all[i + 1]
-        const range = next
-          ? fill(lex.legendRange, { a: b.min, b: next.min })
-          : fill(lex.legendRangeTop, { a: b.min })
-        const band = lex.scoreBands[b.id]
-        return (
-          <li key={b.id} className="inline-flex items-center gap-2" title={band.meaning}>
-            <span
-              className="inline-block h-4 w-7 rounded-md"
-              style={{ background: `var(--score-${b.id})` }}
-            />
-            <span className="font-medium">{band.label}</span>
-            <span className="tabular-nums text-[var(--muted)]">{range}</span>
-          </li>
-        )
-      })}
-    </ul>
+    <div className={className}>
+      <p className="mb-2 text-xs font-medium uppercase tracking-[0.05em] text-[var(--muted)]">
+        {lex.agenda.colScore}
+      </p>
+      <ul className="grid gap-2 text-xs sm:grid-cols-2">
+        {[...SCORE_BANDS].reverse().map((b, i, all) => {
+          const next = all[i + 1]
+          const range = next
+            ? fill(lex.legendRange, { a: b.min, b: next.min })
+            : fill(lex.legendRangeTop, { a: b.min })
+          const band = lex.scoreBands[b.id]
+          return (
+            <li
+              key={b.id}
+              className="flex items-center gap-2 rounded-lg border border-[var(--rule-soft)] px-2.5 py-2"
+              title={band.meaning}
+            >
+              <span
+                className="inline-block h-4 w-7 shrink-0 rounded-md"
+                style={{ background: `var(--score-${b.id})` }}
+              />
+              <span className="font-medium">{band.label}</span>
+              <span className="ml-auto tabular-nums text-[var(--muted)]">{range}</span>
+            </li>
+          )
+        })}
+      </ul>
+    </div>
   )
 }
 
@@ -293,7 +315,6 @@ export function ConfidenceBar({ value }: { value: number | null }) {
       className="inline-flex items-center gap-2"
       title={`${band.label}: ${band.meaning}`}
     >
-      <Icon name={CONFIDENCE_ICON[band.id]} size={13} className="text-[var(--muted)]" />
       <span className="h-1.5 w-16 rounded-full bg-[var(--rule-soft)]">
         <span
           className="block h-1.5 rounded-full"
@@ -315,34 +336,37 @@ export function ConfidenceBar({ value }: { value: number | null }) {
  * its own" is the strongest caveat in the system and has to survive touch
  * screens and skim reading.
  */
-export function ConfidenceLegend({ lex = EN }: { lex?: Lexicon } = {}) {
+export function ConfidenceLegend({
+  lex = EN,
+  className = 'mt-4',
+}: { lex?: Lexicon; className?: string } = {}) {
   return (
-    <div className="mt-4">
-      <ul className="flex flex-wrap gap-x-6 gap-y-2 text-xs">
+    <div className={className}>
+      <p className="mb-2 text-xs font-medium uppercase tracking-[0.05em] text-[var(--muted)]">
+        {lex.agenda.colConfidence}
+      </p>
+      <ul className="grid gap-2 text-xs sm:grid-cols-2">
         {[...CONFIDENCE_BANDS].reverse().map((b, i, all) => {
           const next = all[i + 1]
           const range = next
             ? fill(lex.legendRange, { a: b.min.toFixed(2), b: next.min.toFixed(2) })
             : fill(lex.legendRangeTop, { a: b.min.toFixed(2) })
           return (
-            <li key={b.id} className="inline-flex items-center gap-2">
-              <Icon name={CONFIDENCE_ICON[b.id]} size={13} className="text-[var(--muted)]" />
-              <span
-                className="inline-block h-1.5 w-6 rounded-full"
-                style={{ background: `var(--band-${b.id})` }}
-              />
-              <span className="font-medium">{lex.bands[b.id]}</span>
-              <span className="tabular-nums text-[var(--muted)]">{range}</span>
+            <li key={b.id} className="rounded-lg border border-[var(--rule-soft)] p-3">
+              <div className="flex items-center gap-2">
+                <span
+                  className="inline-block h-1.5 w-6 shrink-0 rounded-full"
+                  style={{ background: `var(--band-${b.id})` }}
+                />
+                <span className="font-medium">{lex.bands[b.id]}</span>
+                <span className="ml-auto tabular-nums text-[var(--muted)]">{range}</span>
+              </div>
+              <p className="mt-2 leading-relaxed text-[var(--muted)]">
+                {lex.bandMeanings[b.id]}
+              </p>
             </li>
           )
         })}
-      </ul>
-      <ul className="mt-2 max-w-3xl space-y-0.5 text-xs leading-relaxed text-[var(--muted)]">
-        {[...CONFIDENCE_BANDS].reverse().map((b) => (
-          <li key={b.id}>
-            <span className="font-medium">{lex.bands[b.id]}</span>: {lex.bandMeanings[b.id]}
-          </li>
-        ))}
       </ul>
     </div>
   )

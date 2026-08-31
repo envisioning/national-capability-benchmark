@@ -12,6 +12,7 @@ import {
   isEvidential,
   indicatorsFor,
   isScored,
+  INGEST_FROM_YEAR,
 } from '../model/index.js'
 import type {
   CheckResult,
@@ -321,7 +322,11 @@ export function scoreAll(observations: Observation[], opts: ScoreOptions): Score
     (!opts.datasetVersion || isDelphiRunForDataset(opts.delphiRun, opts.datasetVersion))
       ? opts.delphiRun
       : undefined
-  const spans = opts.momentumSpans ?? [10, 20]
+  const spans = opts.momentumSpans ?? [
+    ...new Set(
+      [10, 20, 30, 50, opts.currentYear - INGEST_FROM_YEAR].filter((span) => span > 0),
+    ),
+  ]
   const frames = spans.length > 0 ? allFrames : null
   const history = spans.length > 0 ? buildHistory(observations) : null
   const checks = checkValues(observations)

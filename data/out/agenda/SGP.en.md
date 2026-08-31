@@ -12,7 +12,7 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 | Agency | 84.9 | 0.57 (usable) | +10.7 over 10 years using 3 indicators |
 | Coordination | 71.1 | 0.25 (thin) | no trend |
 | Trust | 73.5 | 0.16 (very thin) | no trend |
-| Learning | 56 | 0.49 (usable) | +1.6 over 10 years using 2 indicators |
+| Learning | 56.1 | 0.49 (usable) | +1.4 over 10 years using 2 indicators |
 | Experimentation | 46.5 | 0.21 (very thin) | +10.7 over 10 years using 2 indicators |
 | Adaptability | 79 | 0.47 (usable) | +4.8 over 10 years using 4 indicators |
 | Building | 71.2 | 0.54 (usable) | +7.7 over 10 years using 4 indicators |
@@ -61,7 +61,7 @@ These scores are at least 50 with usable evidence. They still need watching.
 - Adaptability: 79, confidence usable
 - Anticipation: 78.1, confidence usable
 - Building: 71.2, confidence usable
-- Learning: 56, confidence usable
+- Learning: 56.1, confidence usable
 
 ## Missing data
 
@@ -102,6 +102,9 @@ These are documented institutional changes in Singapore that the framework files
 - **SkillsFuture Credit** (Learning). Singapore gave every citizen aged 25 and over an individual training account in 2016 and keeps topping it up, and in 2024 260,000 Singaporeans spent credit on courses, up 35 percent on the year before.
 - **Housing and Development Board, public housing at scale** (Building). Singapore set up the Housing and Development Board in 1960 to address a severe housing shortage, and it built more than 21,000 flats within its first three years.
 - **Centre for Strategic Futures, foresight inside government** (Anticipation). Singapore established the Centre for Strategic Futures in 2009 inside the Prime Minister's Office strategy system to study blind spots, run long-term futures research and develop foresight methods.
+- **MAS FinTech Regulatory Sandbox variants** (Experimentation). Singapore's Monetary Authority operates three FinTech Regulatory Sandbox variants—Sandbox, Sandbox Express and Sandbox Plus—giving firms distinct routes to test regulated products with real customers under defined safeguards.
+- **Singapore's national ICT-skills measurement and baseline** (Agency). Singapore's Department of Statistics ICT-skills table reports 99.0% in the total row for residents aged 16–74 in 2025, while 55.2% could use a basic arithmetic formula in a spreadsheet; the government uses the series to track SDG 4.4.1 and its Digital Skills for Life framework.
+- **Singapore Courts' case-clearance discipline** (Trust). Singapore's State Courts disposed of 21,816 civil cases against 20,358 filings in 2023, a 107% civil clearance rate; its Community Justice and Tribunals courts recorded a 99% clearance rate in the same year.
 
 ## Contribute
 

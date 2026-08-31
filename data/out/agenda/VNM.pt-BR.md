@@ -12,7 +12,7 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | Agência | 59,2 | 0,59 (utilizável) | +27 em 10 anos, sobre 4 indicadores |
 | Coordenação | 75,9 | 0,25 (fraca) | sem base de tendência |
 | Confiança | 59,1 | 0,16 (muito fraca) | sem base de tendência |
-| Aprendizagem | 28,3 | 0,48 (utilizável) | -5,7 em 10 anos, sobre 3 indicadores |
+| Aprendizagem | 29 | 0,48 (utilizável) | -5,7 em 10 anos, sobre 3 indicadores |
 | Experimentação | 6,9 | 0,18 (muito fraca) | +1,8 em 10 anos, sobre 2 indicadores |
 | Adaptação | 75,2 | 0,47 (utilizável) | +5,7 em 10 anos, sobre 4 indicadores |
 | Construção | 54,2 | 0,53 (utilizável) | +8,6 em 10 anos, sobre 4 indicadores |
@@ -28,16 +28,16 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Suécia 83,5, Finlândia 82, Suíça 81,1.
-- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido).
+- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japão); National basic-research funding allocation (China).
 - Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
-### Aprendizagem: 28,3, confiança utilizável
+### Aprendizagem: 29, confiança utilizável
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Baseada em 5 indicadores observados.
-- Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,4.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil).
+- Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,6.
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França).
 - Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ## Dimensões para medir primeiro
@@ -114,6 +114,16 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 | Propósito compartilhado | Participação cívica | Participação ativa em associações, sindicatos, partidos e organizações comunitárias. |
+
+## O que o Vietnã construiu e nenhum indicador conta
+
+Estas são mudanças institucionais documentadas em Vietnã que o framework registra como evidência. Elas ficam ao lado da nota e não mudam a nota ou a confiança.
+
+- **VNeID national electronic identity** (Adaptação). Vietnam's Ministry of Public Security reported more than 70.2 million electronic-identification accounts issued by January 2024, with VNeID designed to replace paper documents and authenticate public and private services against the national population database.
+- **Vietnam Social Security health-insurance expansion** (Adaptação). Vietnam Social Security reported 95.523 million people enrolled in health insurance in 2024, covering 94.29% of the population and approaching the country's 95% universal-coverage target for 2025.
+- **National expressway build-out in 2024** (Construção). Vietnam's Ministry of Transport reported that seven road projects were completed and opened in 2024, bringing the national expressway network to more than 2,021 kilometres.
+- **Cat Linh–Ha Dong metro, a delayed and over-budget delivery** (Construção). Vietnam's State Audit reported in 2019 that the Cat Linh–Ha Dong metro's approved investment had risen from VND8,700 billion to VND18,000 billion and that a line originally due in November 2013 was still unfinished after repeated schedule changes.
+- **Typhoon Yagi emergency restoration** (Adaptação). After Typhoon Yagi struck northern Vietnam, the government reported on 16 September 2024 that power had returned to 92.5% of customers in affected localities and that 8,386 of 9,235 damaged mobile base stations had been restored.
 
 ## Contribua
 

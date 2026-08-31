@@ -12,7 +12,7 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | Agência | 76,1 | 0,51 (utilizável) | +1,8 em 10 anos, sobre 3 indicadores |
 | Coordenação | 98,3 | 0,22 (muito fraca) | sem base de tendência |
 | Confiança | 75,3 | 0,16 (muito fraca) | sem base de tendência |
-| Aprendizagem | 65,1 | 0,54 (utilizável) | +5,1 em 10 anos, sobre 2 indicadores |
+| Aprendizagem | 65,4 | 0,54 (utilizável) | +4,9 em 10 anos, sobre 2 indicadores |
 | Experimentação | 50,7 | 0,39 (fraca) | +1,8 em 10 anos, sobre 2 indicadores |
 | Adaptação | 88,6 | 0,48 (utilizável) | +2,7 em 10 anos, sobre 4 indicadores |
 | Construção | 58,1 | 0,54 (utilizável) | +2,6 em 10 anos, sobre 4 indicadores |
@@ -60,7 +60,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 - Adaptação: 88,6, confiança utilizável
 - Antecipação: 81,1, confiança utilizável
 - Agência: 76,1, confiança utilizável
-- Aprendizagem: 65,1, confiança utilizável
+- Aprendizagem: 65,4, confiança utilizável
 - Construção: 58,1, confiança utilizável
 
 ## Agenda de medição

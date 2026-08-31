@@ -12,7 +12,7 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | Agência | 65,5 | 0,61 (utilizável) | +8,6 em 10 anos, sobre 4 indicadores |
 | Coordenação | 84,3 | 0,26 (fraca) | sem base de tendência |
 | Confiança | 51,8 | 0,16 (muito fraca) | sem base de tendência |
-| Aprendizagem | 35,9 | 0,56 (utilizável) | +0,8 em 10 anos, sobre 3 indicadores |
+| Aprendizagem | 36,5 | 0,56 (utilizável) | +0,9 em 10 anos, sobre 3 indicadores |
 | Experimentação | 6,9 | 0,18 (muito fraca) | -1,4 em 10 anos, sobre 2 indicadores |
 | Adaptação | 60,1 | 0,47 (utilizável) | +4,2 em 10 anos, sobre 4 indicadores |
 | Construção | 59,6 | 0,54 (utilizável) | +5,3 em 10 anos, sobre 4 indicadores |
@@ -22,13 +22,13 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 
 Da nota mais baixa para a mais alta. Só entram dimensões com evidência utilizável. Evidência fraca vai para a próxima seção.
 
-### Aprendizagem: 35,9, confiança utilizável
+### Aprendizagem: 36,5, confiança utilizável
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Baseada em 5 indicadores observados.
-- Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,4.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil).
+- Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,6.
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França).
 - Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ### Antecipação: 41,6, confiança utilizável
@@ -37,7 +37,7 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Suécia 83,5, Finlândia 82, Suíça 81,1.
-- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido).
+- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japão); National basic-research funding allocation (China).
 - Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
 ## Dimensões para medir primeiro
@@ -114,6 +114,16 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 | Propósito compartilhado | Participação cívica | Participação ativa em associações, sindicatos, partidos e organizações comunitárias. |
+
+## O que a Malásia construiu e nenhum indicador conta
+
+Estas são mudanças institucionais documentadas em Malásia que o framework registra como evidência. Elas ficam ao lado da nota e não mudam a nota ou a confiança.
+
+- **MySejahtera and the national COVID-19 immunisation programme** (Adaptação). Malaysia's national COVID-19 immunisation programme had administered 57,119,777 doses by 31 December 2021, while the MySejahtera application was used to collect 974,134 adverse-event responses for vaccine safety monitoring.
+- **MRT Putrajaya Line** (Construção). Malaysia completed and opened the 57.7-kilometre MRT Putrajaya Line in two phases, with 36 operational stations serving a corridor of about two million people; full operations began on 16 March 2023.
+- **Kuala Lumpur–Singapore high-speed rail, terminated before construction** (Construção). Malaysia allowed the bilateral Kuala Lumpur–Singapore high-speed rail agreement to terminate on 31 December 2020 after repeated suspensions and paid Singapore SGD102,815,576 in March 2021 for verified development and suspension costs.
+- **National flood-warning SMS system** (Adaptação). Malaysia's National Disaster Management Agency (NADMA), water and meteorological agencies and telecommunications companies sent more than five million flood-warning SMS messages during the 2023/24 monsoon season and upgraded 442 transmission-tower sites to keep warnings and communications functioning.
+- **JENDELA national digital-network plan** (Coordenação). Malaysia's JENDELA Phase 1 connected 7.74 million premises with fibre by 2022, above its 7.5 million target, and raised 4G coverage in populated areas to 96.92% through a regulator-led programme delivered with telecommunications providers.
 
 ## Contribua
 

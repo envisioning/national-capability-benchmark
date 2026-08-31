@@ -12,7 +12,7 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | Agência | 14,9 | 0,44 (fraca) | +14,2 em 10 anos, sobre 2 indicadores |
 | Coordenação | 51,6 | 0,24 (muito fraca) | sem base de tendência |
 | Confiança | sem nota | 0,07 (muito fraca) | sem base de tendência |
-| Aprendizagem | 12,3 | 0,22 (muito fraca) | sem base de tendência |
+| Aprendizagem | 7,3 | 0,24 (muito fraca) | sem base de tendência |
 | Experimentação | 0,2 | 0,04 (muito fraca) | sem base de tendência |
 | Adaptação | 27,8 | 0,44 (fraca) | -2,6 em 10 anos, sobre 4 indicadores, 1 truncados na borda da régua |
 | Construção | 34,4 | 0,43 (fraca) | +3,6 em 10 anos, sobre 3 indicadores, 1 truncados na borda da régua |
@@ -45,13 +45,6 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 - Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
-### Aprendizagem: confiança 0,22, muito fraca
-
-Com que eficácia o país adquire, distribui e atualiza conhecimento?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
-
 ### Coordenação: confiança 0,24, muito fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
@@ -59,6 +52,13 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
+
+### Aprendizagem: confiança 0,24, muito fraca
+
+Com que eficácia o país adquire, distribui e atualiza conhecimento?
+
+- Baseada em 4 indicadores observados.
+- Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ### Antecipação: confiança 0,4, fraca
 
@@ -120,6 +120,12 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 | Propósito compartilhado | Participação cívica | Participação ativa em associações, sindicatos, partidos e organizações comunitárias. |
+
+## O que os indicadores não veem sobre o Haiti
+
+Entregas documentadas como evidência. Elas nunca afetam as notas ou a confiança.
+
+- **Routine immunization coverage, and its erosion** (Adaptação). WHO and UNICEF estimated Haiti's national DTP3 routine-immunization coverage at 51% in 2022, down from 68% in 2011, while documenting vaccine and syringe stockouts and weak administrative reporting in the national programme.
 
 ## Contribua
 

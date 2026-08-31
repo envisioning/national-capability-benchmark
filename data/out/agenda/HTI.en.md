@@ -12,7 +12,7 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 | Agency | 14.9 | 0.44 (thin) | +14.2 over 10 years using 2 indicators |
 | Coordination | 51.6 | 0.24 (very thin) | no trend |
 | Trust | not scored | 0.07 (very thin) | no trend |
-| Learning | 12.3 | 0.22 (very thin) | no trend |
+| Learning | 7.3 | 0.24 (very thin) | no trend |
 | Experimentation | 0.2 | 0.04 (very thin) | no trend |
 | Adaptability | 27.8 | 0.44 (thin) | -2.6 over 10 years using 4 indicators, with 1 at the frame edge |
 | Building | 34.4 | 0.43 (thin) | +3.6 over 10 years using 3 indicators, with 1 at the frame edge |
@@ -45,13 +45,6 @@ How much cooperation is possible beyond immediate personal networks?
 - Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
-### Learning: confidence 0.22, very thin
-
-How effectively does the country acquire, distribute, and update knowledge?
-
-- Uses 2 observed indicators.
-- Missing indicators: Adult learning participation, Research citation impact.
-
 ### Coordination: confidence 0.24, very thin
 
 How effectively can independent actors organize around shared objectives?
@@ -59,6 +52,13 @@ How effectively can independent actors organize around shared objectives?
 - Uses 3 observed indicators.
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
+
+### Learning: confidence 0.24, very thin
+
+How effectively does the country acquire, distribute, and update knowledge?
+
+- Uses 4 observed indicators.
+- Missing indicators: Adult learning participation, Research citation impact.
 
 ### Anticipation: confidence 0.4, thin
 
@@ -120,6 +120,12 @@ How able are individuals and organizations to turn an intention into action?
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
+
+## What the indicators miss about Haiti
+
+Documented deliveries linked to missing indicators. They do not affect scores or confidence.
+
+- **Routine immunization coverage, and its erosion** (Adaptability). WHO and UNICEF estimated Haiti's national DTP3 routine-immunization coverage at 51% in 2022, down from 68% in 2011, while documenting vaccine and syringe stockouts and weak administrative reporting in the national programme.
 
 ## Contribute
 

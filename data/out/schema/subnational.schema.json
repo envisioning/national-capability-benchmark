@@ -1,0 +1,208 @@
+{
+  "$ref": "#/definitions/SubnationalFile",
+  "definitions": {
+    "SubnationalFile": {
+      "type": "object",
+      "properties": {
+        "indicatorId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "iso3": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 3
+        },
+        "geometry": {
+          "type": "string",
+          "enum": [
+            "state",
+            "province",
+            "region",
+            "municipality"
+          ]
+        },
+        "reconciliation": {
+          "type": "string",
+          "enum": [
+            "aggregate",
+            "independent",
+            "context_only"
+          ]
+        },
+        "denominator": {
+          "type": "string",
+          "enum": [
+            "population",
+            "equal",
+            "none"
+          ]
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "direction": {
+          "type": "string",
+          "enum": [
+            "higher_better",
+            "lower_better"
+          ]
+        },
+        "transform": {
+          "type": "string",
+          "enum": [
+            "none",
+            "per_million_population",
+            "log10",
+            "distance_from_100"
+          ]
+        },
+        "asOf": {
+          "type": "string",
+          "format": "date"
+        },
+        "retrievedAt": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceUrl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "denominatorSource": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "publisher": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "url": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "required": [
+                "publisher",
+                "year",
+                "url"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "national": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "number"
+            },
+            "year": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "value",
+            "year"
+          ],
+          "additionalProperties": false
+        },
+        "check": {
+          "type": "object",
+          "properties": {
+            "recomposed": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "national": {
+              "type": "number"
+            },
+            "residual": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "tolerance": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "recomposed",
+            "national",
+            "residual",
+            "tolerance"
+          ],
+          "additionalProperties": false
+        },
+        "units": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "iso": {
+                "type": "string",
+                "minLength": 2
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "value": {
+                "type": "number"
+              },
+              "year": {
+                "type": "integer"
+              },
+              "denominatorValue": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              }
+            },
+            "required": [
+              "iso",
+              "name",
+              "value",
+              "year"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "indicatorId",
+        "iso3",
+        "geometry",
+        "reconciliation",
+        "denominator",
+        "unit",
+        "direction",
+        "transform",
+        "asOf",
+        "retrievedAt",
+        "source",
+        "sourceUrl",
+        "denominatorSource",
+        "national",
+        "check",
+        "units"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

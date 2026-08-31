@@ -12,7 +12,7 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | Agência | 53,4 | 0,61 (utilizável) | +8,2 em 10 anos, sobre 4 indicadores |
 | Coordenação | 88,5 | 0,23 (muito fraca) | sem base de tendência |
 | Confiança | sem nota | 0,07 (muito fraca) | sem base de tendência |
-| Aprendizagem | 48,5 | 0,5 (utilizável) | -2 em 20 anos, sobre 2 indicadores |
+| Aprendizagem | 49 | 0,5 (utilizável) | -2 em 20 anos, sobre 2 indicadores |
 | Experimentação | 25,5 | 0,39 (fraca) | +2,6 em 10 anos, sobre 2 indicadores |
 | Adaptação | 54,6 | 0,48 (utilizável) | +7,4 em 10 anos, sobre 4 indicadores |
 | Construção | 38 | 0,54 (utilizável) | +4,8 em 10 anos, sobre 4 indicadores |
@@ -28,7 +28,7 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Suécia 83,5, Finlândia 82, Suíça 81,1.
-- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido).
+- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japão); National basic-research funding allocation (China).
 - Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
 ### Construção: 38, confiança utilizável
@@ -37,17 +37,17 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Irlanda 75,3, Singapura 71,2, China 64,9.
-- Entregas documentadas em outros países: Pix instant payment system (Brasil); GOV.BR federal identity and service platform (Brasil); X-Road national data exchange layer (Estônia); Pradhan Mantri Jan Dhan Yojana bank accounts (Índia); Electricity supply rebuilt on renewable sources (Uruguai); Plan Ceibal, one connected laptop per child (Uruguai); Sistema Unico de Saude, universal public health system (Brasil); Programa Nacional de Imunizacoes, and its erosion (Brasil); Luz para Todos, rural electrification (Brasil); Bolsa Familia and the single registry behind it (Brasil); Fully electronic national elections (Brasil); Deepwater and pre-salt oil production (Brasil); Seguro Popular, and its abolition (México); Sure Start children's centres, and their erosion (Reino Unido); Grid power, and load shedding (África do Sul); Measles elimination, and its erosion (Estados Unidos); BNDES, the national development bank (Brasil); Casa da Moeda do Brasil, the national mint (Brasil); Housing and Development Board, public housing at scale (Singapura); AFE passenger rail and network contraction (Uruguai); Flamanville 3 EPR, and the erosion of nuclear new-build delivery (França); Phoenix pay system, and its prolonged failure (Canadá); Groningen gas system, and its closure after induced earthquakes (Países Baixos).
+- Entregas documentadas em outros países: Pix instant payment system (Brasil); GOV.BR federal identity and service platform (Brasil); X-Road national data exchange layer (Estônia); Pradhan Mantri Jan Dhan Yojana bank accounts (Índia); Electricity supply rebuilt on renewable sources (Uruguai); Plan Ceibal, one connected laptop per child (Uruguai); Sistema Unico de Saude, universal public health system (Brasil); Programa Nacional de Imunizacoes, and its erosion (Brasil); Luz para Todos, rural electrification (Brasil); Bolsa Familia and the single registry behind it (Brasil); Fully electronic national elections (Brasil); Deepwater and pre-salt oil production (Brasil); Seguro Popular, and its abolition (México); Sure Start children's centres, and their erosion (Reino Unido); Grid power, and load shedding (África do Sul); Measles elimination, and its erosion (Estados Unidos); BNDES, the national development bank (Brasil); Casa da Moeda do Brasil, the national mint (Brasil); Housing and Development Board, public housing at scale (Singapura); AFE passenger rail and network contraction (Uruguai); Flamanville 3 EPR, and the erosion of nuclear new-build delivery (França); Phoenix pay system, and its prolonged failure (Canadá); Groningen gas system, and its closure after induced earthquakes (Países Baixos); DigiD, a shared digital identity rail for public services (Países Baixos); Delta Works, a 43-year national flood-defence programme (Países Baixos); Betuweroute, a freight railway that missed its operating promise (Países Baixos); MijnOverheid, a shared citizen mailbox and data portal (Países Baixos); Fyra V250, a high-speed service withdrawn after a failed launch (Países Baixos); OVpay, nationwide contactless transit payments (Países Baixos); Omgevingswet and the Digital Environment System (Países Baixos); Transantiago, an integrated transport reform with rising subsidy dependence (Chile); 4G road concessions, a national infrastructure portfolio (Colômbia); Reficar, a refinery modernization with a fiscal-liability finding (Colômbia); GIGA School, one learning device per student (Japão); Monju, a fast-breeder programme ended before commercial operation (Japão); Invierte.pe, a national multi-year investment-management system (Peru); Reconstrucción con Cambios, a delayed recovery portfolio (Peru); Metro de Quito, a cross-administration urban rail delivery (Equador); Panama Canal expansion and self-financing operations (Panamá); Metro de Panamá network operations (Panamá); Mi Teleférico urban cable-car network (Bolívia); Industrial lithium carbonate plant below design capacity (Bolívia); Itaipú binational hydropower operations (Paraguai); Metrobús, an unfinished bus rapid transit project (Paraguai); ARSAT-3 satellite programme suspended before launch (Argentina); DPWH national infrastructure delivery and transparency portal (Filipinas); Bataan Nuclear Power Plant, a mothballed megaproject (Filipinas); Trans-Sumatra toll-road programme, still short of its planned network (Indonésia); National expressway build-out in 2024 (Vietnã); Cat Linh–Ha Dong metro, a delayed and over-budget delivery (Vietnã); MRT Putrajaya Line (Malásia); Kuala Lumpur–Singapore high-speed rail, terminated before construction (Malásia); Hopewell elevated road-and-rail concession, and its termination (Tailândia); AVE high-speed rail network (Espanha); Castor underground gas storage, and its closure (Espanha); Ostrołęka C coal block, and its abandonment (Polônia); Nya Karolinska Solna public–private hospital project (Suécia); Barsebäck nuclear plant closure and decommissioning (Suécia); New Children's Hospital cost escalation (Irlanda); Rural electrification and near-universal grid coverage (Nicarágua); Gran Misión Vivienda Venezuela's five-million-home milestone (Venezuela).
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística.
 
-### Aprendizagem: 48,5, confiança utilizável
+### Aprendizagem: 49, confiança utilizável
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Baseada em 5 indicadores observados.
-- Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,4.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil).
+- Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,6.
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França).
 - Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ## Dimensões para medir primeiro
@@ -123,6 +123,17 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 | Propósito compartilhado | Participação cívica | Participação ativa em associações, sindicatos, partidos e organizações comunitárias. |
+
+## O que a Costa Rica construiu e nenhum indicador conta
+
+Estas são mudanças institucionais documentadas em Costa Rica que o framework registra como evidência. Elas ficam ao lado da nota e não mudam a nota ou a confiança.
+
+- **FONAFIFO Payment for Environmental Services** (Coordenação). Costa Rica's FONAFIFO Payment for Environmental Services programme paid contracts covering 208,089 hectares in 2024, disbursing ₡9.234 billion while using public, donor and market-linked finance to keep private land in forest uses.
+- **ICE and a mostly renewable national electricity system** (Construção). Costa Rica's integrated electricity system generated 89.4% of its electricity from renewable sources in 2024, while ICE reported electrical coverage reaching 98.7% of households despite one of the country's driest years on record.
+- **Certified digital signature across public services** (Adaptação). Costa Rica's MICITT reported in October 2023 that more than 60 public institutions used certified digital signatures across more than 100 citizen services, with almost 75,000 certificates issued during that year.
+- **REDCUDI childcare network and SINIRUBE referrals** (Adaptação). Costa Rica's IMAS reported that its national Childcare and Early Development benefit reached 25,704 children in 2024 with an investment of ₡13.2 billion, while interinstitutional referrals used SINIRUBE to match eligible families to available places.
+- **CCSS universal health-insurance reach** (Construção). Costa Rica's Caja Costarricense de Seguro Social reported health-insurance coverage of 92.92% of the national population in 2024, using household-survey and administrative records to include contributors, dependents, pensioners and state-covered households.
+- **Ramp Up, PROCOMER's export-readiness programme** (Adaptação). Costa Rica's export agency PROCOMER reported that 40 SMEs graduated from its 16-week Ramp Up 2024 programme, delivered with INA and the Sistema de Banca para el Desarrollo, bringing the number of firms benefiting since the programme began in 2021 to 175.
 
 ## Contribua
 

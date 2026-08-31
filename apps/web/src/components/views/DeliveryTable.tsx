@@ -12,10 +12,10 @@ import {
 } from '@ncb/core'
 import type { EvidenceRecord } from '@ncb/core'
 import { compareSortValues, type SortDirection } from '@/components/DataTable'
-import { CONTROL, EvidenceFilters, useEvidenceFilters } from '@/components/EvidenceFilters'
+import { EvidenceFilters, useEvidenceFilters } from '@/components/EvidenceFilters'
 import { CapabilityLink } from '@/components/CapabilityLink'
 import { DIMENSION_ICON, Icon, TIER_ICON } from '@/components/Icon'
-import { Button, CountryLabel, Empty } from '@/components/ui'
+import { CountryLabel, Empty, Meta } from '@/components/ui'
 import { EVIDENCE_STATUS_ORDER, evidenceDimension } from '@/lib/evidence'
 import {
   NO_PATTERN_FILTERS,
@@ -115,31 +115,36 @@ function DeliveryCard({ record }: { record: EvidenceRecord }) {
 
   return (
     <article className="rounded-lg border border-[var(--rule)] bg-[var(--surface)]">
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-b border-[var(--rule-soft)] px-4 py-3 text-xs text-[var(--muted)] sm:px-5">
-        <span className="tabular-nums text-[var(--foreground)]">{record.started}</span>
-        <Link href={agendaHref(record.iso3)} className="font-medium hover:underline">
-          <CountryLabel iso3={record.iso3} name={COUNTRY_NAMES[record.iso3] ?? record.iso3} />
-        </Link>
+      <div className="flex flex-wrap items-center gap-2 border-b border-[var(--rule-soft)] px-4 py-3 sm:px-5">
+        <Meta className="bg-[var(--surface)] tabular-nums text-[var(--foreground)]">
+          {record.started}
+        </Meta>
+        <Meta className="bg-[var(--surface)]">
+          <Link href={agendaHref(record.iso3)} className="hover:underline">
+            <CountryLabel iso3={record.iso3} name={COUNTRY_NAMES[record.iso3] ?? record.iso3} />
+          </Link>
+        </Meta>
         {dimension ? (
-          <span className="inline-flex items-center gap-2">
-            <Icon name={DIMENSION_ICON[dimension]} size={13} />
-            <CapabilityLink dimension={dimension} />
-            <Link
-              href={indicatorHref(record.indicatorId)}
-              className="hover:underline"
-            >
-              {def?.name ?? record.indicatorId}
-            </Link>
-          </span>
+          <>
+            <Meta icon={DIMENSION_ICON[dimension]} className="bg-[var(--surface)]">
+              <CapabilityLink dimension={dimension} />
+            </Meta>
+            <Meta className="bg-[var(--surface)]">
+              <Link href={indicatorHref(record.indicatorId)} className="hover:underline">
+                {def?.name ?? record.indicatorId}
+              </Link>
+            </Meta>
+          </>
         ) : (
-          <span>no capability</span>
+          <Meta className="bg-[var(--surface)]">no capability</Meta>
         )}
-        <span className="inline-flex items-center gap-2">
-          {isReversal(record.status) ? (
-            <Icon name="triangle-alert" size={13} className="shrink-0" />
-          ) : null}
-          {EVIDENCE_STATUS_LABELS[record.status]}
-        </span>
+        {isReversal(record.status) ? (
+          <Meta icon="triangle-alert" className="bg-[var(--surface)]">
+            {EVIDENCE_STATUS_LABELS[record.status]}
+          </Meta>
+        ) : (
+          <Meta className="bg-[var(--surface)]">{EVIDENCE_STATUS_LABELS[record.status]}</Meta>
+        )}
       </div>
 
       <div className="grid gap-6 p-4 sm:p-5 lg:grid-cols-[minmax(0,1.55fr)_minmax(15rem,0.75fr)] lg:gap-8">
@@ -197,55 +202,6 @@ function DeliveryCard({ record }: { record: EvidenceRecord }) {
   )
 }
 
-function DeliverySortBar({
-  sort,
-  onSort,
-  onDirection,
-}: {
-  sort: { key: DeliverySortKey; dir: SortDirection }
-  onSort: (key: DeliverySortKey) => void
-  onDirection: () => void
-}) {
-  const option = SORT_OPTIONS.find((candidate) => candidate.key === sort.key) ?? SORT_OPTIONS[0]!
-  const direction = sort.key === 'started'
-    ? sort.dir === 'desc' ? 'newest first' : 'oldest first'
-    : sort.dir === 'asc' ? 'A to Z' : 'Z to A'
-  const nextDirection = direction === 'newest first'
-    ? 'oldest first'
-    : direction === 'oldest first'
-      ? 'newest first'
-      : direction === 'A to Z'
-        ? 'Z to A'
-        : 'A to Z'
-
-  return (
-    <div className="mb-5 flex flex-wrap items-center gap-3 rounded-lg border border-[var(--rule)] bg-[var(--surface-sunken)] px-4 py-3 text-xs">
-      <label htmlFor="delivery-sort" className="text-[var(--muted)]">Sort by</label>
-      <select
-        id="delivery-sort"
-        value={sort.key}
-        onChange={(event) => onSort(event.target.value as DeliverySortKey)}
-        className={CONTROL}
-      >
-        {SORT_OPTIONS.map((candidate) => (
-          <option key={candidate.key} value={candidate.key}>
-            {candidate.label}
-          </option>
-        ))}
-      </select>
-      <Button
-        type="button"
-        size="sm"
-        variant="ghost"
-        onClick={onDirection}
-        aria-label={`Sort ${option.label.toLowerCase()} ${nextDirection}`}
-      >
-        {direction}
-      </Button>
-    </div>
-  )
-}
-
 export function DeliveryTable({
   records,
   initial = NO_PATTERN_FILTERS,
@@ -263,24 +219,42 @@ export function DeliveryTable({
     return [...state.shown].sort((a, b) => compareSortValues(sortValue(a, sort.key), sortValue(b, sort.key), sort.dir))
   }, [sort, state.shown])
 
+  const sortDirection = sort.key === 'started'
+    ? sort.dir === 'desc' ? 'newest first' : 'oldest first'
+    : sort.dir === 'asc' ? 'A to Z' : 'Z to A'
+  const nextSortDirection = sortDirection === 'newest first'
+    ? 'oldest first'
+    : sortDirection === 'oldest first'
+      ? 'newest first'
+      : sortDirection === 'A to Z'
+        ? 'Z to A'
+        : 'A to Z'
+
   return (
     <>
-      <EvidenceFilters records={records} state={state} />
+      <EvidenceFilters
+        records={records}
+        state={state}
+        sort={{
+          value: sort.key,
+          options: SORT_OPTIONS,
+          direction: sortDirection,
+          nextDirection: nextSortDirection,
+          onChange: (key) => {
+            const nextKey = key as DeliverySortKey
+            const option = SORT_OPTIONS.find((candidate) => candidate.key === nextKey) ?? SORT_OPTIONS[0]!
+            setSort({ key: nextKey, dir: option.defaultDir })
+          },
+          onDirection: () => setSort((current) => ({
+            ...current,
+            dir: current.dir === 'asc' ? 'desc' : 'asc',
+          })),
+        }}
+      />
       {state.shown.length === 0 ? (
         <Empty hint="No delivery matches those filters. Clear one and try again." />
       ) : (
         <>
-          <DeliverySortBar
-            sort={sort}
-            onSort={(key) => {
-              const option = SORT_OPTIONS.find((candidate) => candidate.key === key) ?? SORT_OPTIONS[0]!
-              setSort({ key, dir: option.defaultDir })
-            }}
-            onDirection={() => setSort((current) => ({
-              ...current,
-              dir: current.dir === 'asc' ? 'desc' : 'asc',
-            }))}
-          />
           <div className="space-y-4" role="list" aria-label="Documented deliveries">
             {sorted.map((record) => (
               <div key={record.id} role="listitem">

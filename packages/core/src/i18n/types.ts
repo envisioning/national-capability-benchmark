@@ -48,6 +48,29 @@ export type AgendaStrings = {
   colScore: string
   colConfidence: string
   colTrend: string
+  historyHeading: string
+  /** {country}: context for the dimension history chart. */
+  historyIntro: string
+  historyDimension: string
+  historyPeriod: string
+  historyAxis: string
+  historyYears: string
+  historyNoHistory: string
+  historyNoSpan: string
+  /** {from} {to} {delta} {years} {n} */
+  historyReadout: string
+  /** {from} {to} {delta} {years} {n} {c} */
+  historyReadoutClamped: string
+  historyCaveat: string
+  /** {dimension} {baseYear} {currentYear} */
+  historyChartAria: string
+  /** {dimension} {year} {score} */
+  historyPointAria: string
+  historyAgendaItems: string
+  /** {dimension} {baseYear} {currentYear} */
+  historyEventTimelineAria: string
+  /** {title} {year} */
+  historyEventAria: string
   /** {delta} {years} {n} */
   trendCell: string
   /** {delta} {years} {n} {c}: the variant for a basket partly clamped at the frame edge. */

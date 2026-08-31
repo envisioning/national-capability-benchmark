@@ -194,7 +194,7 @@ measure is a perception proxy, contract enforcement is frozen at 2019, and
 court performance is still missing. D60's bribery-incidence series remains a
 useful behavioural check and is deliberately excluded from the score.
 
-The current dataset is 4.5.0: Coordination now also has a full-frame V-Dem
+The current dataset is 5.0.0: Coordination now also has a full-frame V-Dem
 civil-society row, documented under `docs/research/coordination/` and D83.
 
 Do not treat the first score as the finished Trust construct. The next work is
@@ -356,6 +356,48 @@ memo, derived observation file and diagnostic review are committed together.
 **Open:** this is expert-coded evidence, not administrative delivery. The next
 Coordination task is a cross-agency performance series; the next Trust task is
 court-case clearance. Neither can be inferred from V-Dem.
+
+### SUBNATIONAL-0: make the Brazil diagnostic layer maintainable
+
+**Goal:** keep subnational research useful without creating a second capability
+score or a hidden input to the national frame.
+
+**Status:** complete in dataset 5.0.0. D89 supersedes the old fixture contract.
+The registry, computed reconciliation check, revision log, datapackage schemas,
+`bench all` integration and viewer tracing are live. The current IBGE SIDRA
+state Gini is explicitly `independent`: its equal-unit mean is a diagnostic and
+does not claim to recompose the national Gini.
+
+**Read:** D66 and D89; `docs/research/subnational/BRIEF.md`.
+
+**Open:** source-backed series selection. The layer should grow only where a
+national dimension is weak and a subnational source reveals delivery,
+coordination or variation the national frame cannot observe.
+
+### SUBNATIONAL-1: test budget-execution fidelity
+
+**Target:** `budget_execution_fidelity` by Brazilian state, as a Coordination
+candidate.
+
+**Status:** candidate; source and coverage preflight complete. The source memo
+at `docs/research/subnational/SICONFI-BUDGET-EXECUTION.md` records 27 / 27 state
+coverage for sampled RREO Anexo 01 releases in 2020, 2022 and 2024, with all
+five candidate fields present. No SICONFI values have been promoted or
+committed. The denominator and construct remain open because original-to-updated
+budget revisions are material and execution ratios cross 100%.
+
+**Primary source:** Secretaria do Tesouro Nacional's SICONFI RREO open-data
+API, with Anexo 01 Balanço Orçamentário as the starting table. The candidate is
+not assumed to be aggregate merely because it is administrative budget data.
+
+**Acceptance gate:** distinguish original from amended budgets and empenhado
+from liquidado or pago, inspect retifications, settle the construct and
+denominator, then review GDP attribution and redundancy. If it fails, record the
+result as a gap or evidence-only source and retain the Coordination gap.
+
+**Next action:** resolve whether the layer is measuring plan fidelity, budget
+reallocation or current-budget execution before adding a second registry entry
+or adapter.
 
 ## The next queue after Trust
 

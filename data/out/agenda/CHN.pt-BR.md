@@ -12,7 +12,7 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | Agência | 86,8 | 0,61 (utilizável) | +21,9 em 10 anos, sobre 4 indicadores |
 | Coordenação | 65,9 | 0,26 (fraca) | sem base de tendência |
 | Confiança | 83,2 | 0,16 (muito fraca) | sem base de tendência |
-| Aprendizagem | 59,1 | 0,56 (utilizável) | +13 em 10 anos, sobre 2 indicadores, 1 truncados na borda da régua |
+| Aprendizagem | 59,4 | 0,56 (utilizável) | +12,4 em 10 anos, sobre 2 indicadores, 1 truncados na borda da régua |
 | Experimentação | 100 | 0,18 (muito fraca) | +30,6 em 10 anos, sobre 2 indicadores |
 | Adaptação | 81,6 | 0,47 (utilizável) | +11,8 em 10 anos, sobre 4 indicadores |
 | Construção | 64,9 | 0,54 (utilizável) | -1,9 em 10 anos, sobre 4 indicadores |
@@ -28,7 +28,7 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Suécia 83,5, Finlândia 82, Suíça 81,1.
-- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido).
+- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japão).
 - Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
 ## Dimensões para medir primeiro
@@ -73,7 +73,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 - Agência: 86,8, confiança utilizável
 - Adaptação: 81,6, confiança utilizável
 - Construção: 64,9, confiança utilizável
-- Aprendizagem: 59,1, confiança utilizável
+- Aprendizagem: 59,4, confiança utilizável
 
 ## Agenda de medição
 
@@ -106,6 +106,12 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 | Propósito compartilhado | Participação cívica | Participação ativa em associações, sindicatos, partidos e organizações comunitárias. |
+
+## O que os indicadores não veem sobre a China
+
+Entregas documentadas como evidência. Elas nunca afetam as notas ou a confiança.
+
+- **National basic-research funding allocation** (Antecipação). China's National Bureau of Statistics, Ministry of Science and Technology and Ministry of Finance reported 225.91 billion yuan in basic-research expenditure in 2023, equal to 6.77% of national R&D spending.
 
 ## Contribua
 

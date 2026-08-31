@@ -12,7 +12,7 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 | Agency | 65.5 | 0.61 (usable) | +8.6 over 10 years using 4 indicators |
 | Coordination | 84.3 | 0.26 (thin) | no trend |
 | Trust | 51.8 | 0.16 (very thin) | no trend |
-| Learning | 35.9 | 0.56 (usable) | +0.8 over 10 years using 3 indicators |
+| Learning | 36.5 | 0.56 (usable) | +0.9 over 10 years using 3 indicators |
 | Experimentation | 6.9 | 0.18 (very thin) | -1.4 over 10 years using 2 indicators |
 | Adaptability | 60.1 | 0.47 (usable) | +4.2 over 10 years using 4 indicators |
 | Building | 59.6 | 0.54 (usable) | +5.3 over 10 years using 4 indicators |
@@ -22,13 +22,13 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 
 These are the lowest scores with usable evidence. Thin evidence appears below.
 
-### Learning: 35.9, confidence usable
+### Learning: 36.5, confidence usable
 
 How effectively does the country acquire, distribute, and update knowledge?
 
 - Uses 5 observed indicators.
-- Highest usable scores: Finland 77.9, Australia 70.3, United Kingdom 68.4.
-- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); CAPES, federal postgraduate funding (Brazil); INEP, the standing education statistics institution (Brazil).
+- Highest usable scores: Finland 77.9, Australia 70.3, United Kingdom 68.6.
+- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); CAPES, federal postgraduate funding (Brazil); INEP, the standing education statistics institution (Brazil); Kartu Prakerja, a national lifelong-learning delivery system (Indonesia); Compte personnel de formation (France).
 - Missing indicators: Adult learning participation, Research citation impact.
 
 ### Anticipation: 41.6, confidence usable
@@ -37,7 +37,7 @@ How capable is the country of identifying and preparing for emerging change?
 
 - Uses 5 observed indicators.
 - Highest usable scores: Sweden 83.5, Finland 82, Switzerland 81.1.
-- Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom).
+- Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan); National basic-research funding allocation (China).
 - Missing indicators: Government foresight capacity, Long-horizon research share.
 
 ## What to measure first
@@ -114,6 +114,16 @@ These scores are at least 50 with usable evidence. They still need watching.
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
+
+## What Malaysia built that no indicator counts
+
+These are documented institutional changes in Malaysia that the framework files as evidence. They sit beside the score and do not change it or its confidence.
+
+- **MySejahtera and the national COVID-19 immunisation programme** (Adaptability). Malaysia's national COVID-19 immunisation programme had administered 57,119,777 doses by 31 December 2021, while the MySejahtera application was used to collect 974,134 adverse-event responses for vaccine safety monitoring.
+- **MRT Putrajaya Line** (Building). Malaysia completed and opened the 57.7-kilometre MRT Putrajaya Line in two phases, with 36 operational stations serving a corridor of about two million people; full operations began on 16 March 2023.
+- **Kuala Lumpur–Singapore high-speed rail, terminated before construction** (Building). Malaysia allowed the bilateral Kuala Lumpur–Singapore high-speed rail agreement to terminate on 31 December 2020 after repeated suspensions and paid Singapore SGD102,815,576 in March 2021 for verified development and suspension costs.
+- **National flood-warning SMS system** (Adaptability). Malaysia's National Disaster Management Agency (NADMA), water and meteorological agencies and telecommunications companies sent more than five million flood-warning SMS messages during the 2023/24 monsoon season and upgraded 442 transmission-tower sites to keep warnings and communications functioning.
+- **JENDELA national digital-network plan** (Coordination). Malaysia's JENDELA Phase 1 connected 7.74 million premises with fibre by 2022, above its 7.5 million target, and raised 4G coverage in populated areas to 96.92% through a regulator-led programme delivered with telecommunications providers.
 
 ## Contribute
 

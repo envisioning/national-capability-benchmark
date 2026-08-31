@@ -1,12 +1,198 @@
 import { readdir, readFile } from 'node:fs/promises'
 import { basename, resolve } from 'node:path'
-import { COUNTRY_ISO3, DIMENSIONS, INDICATORS_BY_ID, isScored } from '../model/index.js'
+import {
+  BR_STATES,
+  COUNTRY_ISO3,
+  DIMENSIONS,
+  INDICATORS_BY_ID,
+  isScored,
+  SubnationalFile,
+  SubnationalIndexFile,
+  SUBNATIONAL_SERIES,
+} from '../model/index.js'
 import { InstitutionNetworkFile } from '../model/institutions.js'
 import { DelphiRunFile, EvidenceFile, isEvidential, isPanel, isReversal } from '../model/schema.js'
 import { ResearchRunFile, ResearchScoutRunFile } from '../model/research.js'
-import { DELPHI_DIR, FILES, RESEARCH_RUNS_DIR } from './paths.js'
+import { DELPHI_DIR, FILES, RESEARCH_RUNS_DIR, subnationalFile } from './paths.js'
+import { recomposeSubnational } from './br-subnational.js'
 
 export type Problem = { file: string; severity: 'error' | 'warning'; problem: string }
+
+/**
+ * Validates the published subnational registry and its files. This layer is
+ * deliberately separate from the national score: it checks its own source,
+ * unit coverage and reconciliation math, but never feeds observations into
+ * `buildFrame`.
+ */
+export async function validateSubnational(
+  indexPath = FILES.subnationalIndex,
+): Promise<Problem[]> {
+  const file = basename(indexPath)
+  let raw: unknown
+  try {
+    raw = JSON.parse(await readFile(indexPath, 'utf8'))
+  } catch {
+    return [{ file, severity: 'warning', problem: 'no subnational index yet' }]
+  }
+
+  const parsedIndex = SubnationalIndexFile.safeParse(raw)
+  if (!parsedIndex.success) {
+    return parsedIndex.error.issues.slice(0, 8).map((issue) => ({
+      file,
+      severity: 'error' as const,
+      problem: `${issue.path.join('.') || '(root)'}: ${issue.message}`,
+    }))
+  }
+
+  const problems: Problem[] = []
+  const expected = new Map(
+    SUBNATIONAL_SERIES.map((series) => [`${series.iso3}|${series.indicatorId}`, series]),
+  )
+  const seen = new Set<string>()
+
+  const rounded = (value: number) => Number(value.toFixed(3))
+  for (const entry of parsedIndex.data.files) {
+    const key = `${entry.iso3}|${entry.indicatorId}`
+    if (seen.has(key)) {
+      problems.push({ file, severity: 'error', problem: `duplicate subnational entry ${key}` })
+      continue
+    }
+    seen.add(key)
+    const definition = expected.get(key)
+    if (!definition) {
+      problems.push({ file, severity: 'error', problem: `unregistered subnational entry ${key}` })
+      continue
+    }
+
+    const expectedPath = `subnational/${entry.iso3}/${entry.indicatorId}.json`
+    if (entry.path !== expectedPath) {
+      problems.push({ file, severity: 'error', problem: `${key}: index path must be ${expectedPath}` })
+    }
+
+    const subnationalPath = subnationalFile(entry.iso3, entry.indicatorId)
+    let rawSubnational: unknown
+    try {
+      rawSubnational = JSON.parse(await readFile(subnationalPath, 'utf8'))
+    } catch {
+      problems.push({ file: subnationalPath, severity: 'error', problem: 'file named by index is missing or unreadable' })
+      continue
+    }
+    const parsedSubnational = SubnationalFile.safeParse(rawSubnational)
+    if (!parsedSubnational.success) {
+      for (const issue of parsedSubnational.error.issues.slice(0, 8)) {
+        problems.push({
+          file: subnationalPath,
+          severity: 'error',
+          problem: `${issue.path.join('.') || '(root)'}: ${issue.message}`,
+        })
+      }
+      continue
+    }
+    const subnational = parsedSubnational.data
+
+    for (const [field, actual, expectedValue] of [
+      ['indicatorId', subnational.indicatorId, definition.indicatorId],
+      ['iso3', subnational.iso3, definition.iso3],
+      ['geometry', subnational.geometry, definition.geometry],
+      ['reconciliation', subnational.reconciliation, definition.reconciliation],
+      ['denominator', subnational.denominator, definition.denominator],
+      ['unit', subnational.unit, definition.unit],
+      ['direction', subnational.direction, definition.direction],
+      ['transform', subnational.transform, definition.transform],
+    ] as const) {
+      if (actual !== expectedValue) {
+        problems.push({
+          file: subnationalPath,
+          severity: 'error',
+          problem: `${field} ${String(actual)} disagrees with registry ${String(expectedValue)}`,
+        })
+      }
+    }
+
+    if (subnational.geometry === 'state' && subnational.iso3 === 'BRA') {
+      if (subnational.units.length !== BR_STATES.length) {
+        problems.push({
+          file: subnationalPath,
+          severity: 'error',
+          problem: `expected ${BR_STATES.length} Brazilian state units, found ${subnational.units.length}`,
+        })
+      }
+      const states = new Map(BR_STATES.map((state) => [`BR-${state.iso}`, state]))
+      for (const unit of subnational.units) {
+        const state = states.get(unit.iso)
+        if (!state) {
+          problems.push({ file: subnationalPath, severity: 'error', problem: `unknown Brazilian unit ${unit.iso}` })
+          continue
+        }
+        if (unit.name !== state.name) {
+          problems.push({ file: subnationalPath, severity: 'error', problem: `${unit.iso}: name disagrees with state registry` })
+        }
+        if (unit.year !== subnational.national.year) {
+          problems.push({ file: subnationalPath, severity: 'error', problem: `${unit.iso}: year differs from national value` })
+        }
+        if (subnational.denominator === 'population' && unit.denominatorValue !== state.population) {
+          problems.push({ file: subnationalPath, severity: 'error', problem: `${unit.iso}: population denominator disagrees with state registry` })
+        }
+      }
+    }
+
+    if (subnational.denominator === 'population' && !subnational.denominatorSource) {
+      problems.push({ file: subnationalPath, severity: 'error', problem: 'population denominator has no source' })
+    }
+
+    let recomposed: number | null = null
+    try {
+      recomposed = recomposeSubnational(subnational.units, subnational.denominator)
+    } catch (error) {
+      problems.push({
+        file: subnationalPath,
+        severity: 'error',
+        problem: error instanceof Error ? error.message : String(error),
+      })
+    }
+    const expectedRecomposed = recomposed === null ? null : rounded(recomposed)
+    if (subnational.check.recomposed !== expectedRecomposed) {
+      problems.push({
+        file: subnationalPath,
+        severity: 'error',
+        problem: `check.recomposed ${subnational.check.recomposed} does not match calculated ${expectedRecomposed}`,
+      })
+    }
+    if (subnational.check.national !== subnational.national.value) {
+      problems.push({
+        file: subnationalPath,
+        severity: 'error',
+        problem: `check.national ${subnational.check.national} does not match national.value ${subnational.national.value}`,
+      })
+    }
+    const expectedResidual = expectedRecomposed === null ? null : rounded(expectedRecomposed - subnational.check.national)
+    if (subnational.check.residual !== expectedResidual) {
+      problems.push({
+        file: subnationalPath,
+        severity: 'error',
+        problem: `check.residual ${subnational.check.residual} does not match calculated ${expectedResidual}`,
+      })
+    }
+    if (subnational.reconciliation === 'aggregate') {
+      if (subnational.check.residual === null || Math.abs(subnational.check.residual) > subnational.check.tolerance) {
+        problems.push({
+          file: subnationalPath,
+          severity: 'error',
+          problem: `aggregate reconciliation residual ${subnational.check.residual ?? 'null'} exceeds tolerance ${subnational.check.tolerance}`,
+        })
+      }
+    }
+
+    if (entry.year !== subnational.national.year || entry.units !== subnational.units.length || entry.residual !== subnational.check.residual) {
+      problems.push({ file, severity: 'error', problem: `${key}: index summary disagrees with published file` })
+    }
+  }
+
+  for (const key of expected.keys()) {
+    if (!seen.has(key)) problems.push({ file, severity: 'error', problem: `registry series ${key} is missing from index` })
+  }
+  return problems
+}
 
 /**
  * Schema-checks every Delphi run on disk and reports coverage holes. Hand-authored

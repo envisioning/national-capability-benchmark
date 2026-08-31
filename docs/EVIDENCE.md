@@ -67,8 +67,9 @@ from being advocacy.
   in to cover a dimension.
 
 - **One country never dominates.** When one country holds more than a third of
-  the corpus, the next records come from elsewhere. Brazil holds eleven of
-  fifteen as this rule is written; the rule exists because of that.
+  the corpus, the next records come from elsewhere. Brazil holds 24 of the
+  current 79 records and the Netherlands 21; the rule exists because of that
+  concentration.
 
 - **A record is one delivery.** One programme, one record. If a programme has
   two distinct phases with separate evidence, that is still one record; put

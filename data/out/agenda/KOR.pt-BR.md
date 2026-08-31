@@ -12,7 +12,7 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | Agência | 78,9 | 0,6 (utilizável) | +6,8 em 10 anos, sobre 4 indicadores |
 | Coordenação | 87,4 | 0,25 (fraca) | sem base de tendência |
 | Confiança | 67,4 | 0,16 (muito fraca) | sem base de tendência |
-| Aprendizagem | 55,9 | 0,54 (utilizável) | +16,5 em 10 anos, sobre 2 indicadores |
+| Aprendizagem | 55,9 | 0,54 (utilizável) | +16,1 em 10 anos, sobre 2 indicadores |
 | Experimentação | 72,2 | 0,39 (fraca) | +16,9 em 10 anos, sobre 2 indicadores |
 | Adaptação | 82,1 | 0,48 (utilizável) | +7,8 em 10 anos, sobre 4 indicadores |
 | Construção | 63,1 | 0,54 (utilizável) | +3,1 em 10 anos, sobre 4 indicadores |
@@ -102,6 +102,7 @@ Estas são mudanças institucionais documentadas em Coreia do Sul que o framewor
 - **Economic Planning Board, long-run industrial coordination** (Coordenação). South Korea's Economic Planning Board operated from 1961 to 1994 as the government body responsible for economic development planning and budget planning before its functions moved through later finance ministries.
 - **Korea Internet and Security Agency, a consolidated digital authority** (Adaptação). Korea established the Korea Internet and Security Agency in July 2009 by integrating three predecessor organisations, giving the country one public body for internet development, security and international information technology cooperation.
 - **MyData, citizen-directed data portability** (Confiança). South Korea's MyData policy gives people a route to request and direct the transfer of personal data between services, with the Personal Information Protection Commission describing the scheme as a way to give people control over data portability after the March 2023 legal amendment.
+- **Korean regulatory-sandbox system across eight sectors** (Experimentação). South Korea expanded its regulatory-sandbox system from ICT and industrial-convergence fields in January 2019 to eight sectoral regimes by 2024, adding finance, regulatory-free zones, smart cities, R&D zones, mobility and circular economy testing.
 
 ## Contribua
 

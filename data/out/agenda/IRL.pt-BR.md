@@ -12,7 +12,7 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | Agência | 69,2 | 0,61 (utilizável) | +2,5 em 10 anos, sobre 4 indicadores |
 | Coordenação | 89 | 0,24 (muito fraca) | sem base de tendência |
 | Confiança | sem nota | 0,07 (muito fraca) | sem base de tendência |
-| Aprendizagem | 60,5 | 0,51 (utilizável) | -4,7 em 10 anos, sobre 2 indicadores |
+| Aprendizagem | 60,8 | 0,51 (utilizável) | -4,6 em 10 anos, sobre 2 indicadores |
 | Experimentação | sem nota | 0,09 (muito fraca) | sem base de tendência |
 | Adaptação | 73,2 | 0,48 (utilizável) | +10 em 10 anos, sobre 4 indicadores |
 | Construção | 75,3 | 0,54 (utilizável) | +18,1 em 10 anos, sobre 4 indicadores |
@@ -61,7 +61,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 - Adaptação: 73,2, confiança utilizável
 - Agência: 69,2, confiança utilizável
 - Antecipação: 67,1, confiança utilizável
-- Aprendizagem: 60,5, confiança utilizável
+- Aprendizagem: 60,8, confiança utilizável
 
 ## Agenda de medição
 
@@ -94,6 +94,17 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 | Propósito compartilhado | Participação cívica | Participação ativa em associações, sindicatos, partidos e organizações comunitárias. |
+
+## O que a Irlanda construiu e nenhum indicador conta
+
+Estas são mudanças institucionais documentadas em Irlanda que o framework registra como evidência. Elas ficam ao lado da nota e não mudam a nota ou a confiança.
+
+- **MyGovID single sign-on for public services** (Adaptação). Ireland built MyGovID as a reusable online identity for welfare, tax, transport, education and childcare services; the 2025 Digital Decade country report records more than 2.7 million verified accounts in December 2024, close to 65% of adults.
+- **National Broadband Plan rural fibre rollout** (Coordenação). Ireland's National Broadband Plan combined commercial investment with a state intervention contract for rural areas covering more than 560,000 premises; by October 2024 the government reported over 102,600 premises connected to the National Broadband Ireland network.
+- **National COVID-19 vaccination delivery** (Adaptação). Ireland's HSE vaccination programme built a national booking, supply and reporting operation during COVID-19; by 21 July 2021 its dashboard recorded 5,344,686 administered doses, including 2,854,040 first doses.
+- **National Asset Management Agency crisis workout** (Adaptação). Ireland created NAMA in response to the property and banking crisis, acquired distressed loans and worked them down through asset sales and development; by the end of 2023 it had generated €47.7 billion in cash and transferred more than €4.25 billion to the Exchequer while preparing an orderly wind-down.
+- **New Children's Hospital cost escalation** (Construção). Ireland's New Children's Hospital project saw its approved budget rise from €1.73 billion to €2.24 billion by February 2024 after an independent review recorded €450 million of earlier escalation and weaknesses in set-up, planning, execution and governance.
+- **Met Éireann national weather-warning service** (Adaptação). Ireland's national meteorological service uses a standard Yellow–Orange–Red warning system and briefs the National Emergency Coordination Group so government departments and agencies can coordinate ahead of severe weather; warnings are issued up to 48 hours before anticipated conditions.
 
 ## Contribua
 

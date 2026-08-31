@@ -12,7 +12,7 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | Agência | 92,6 | 0,5 (utilizável) | +7,9 em 10 anos, sobre 3 indicadores |
 | Coordenação | 99,6 | 0,14 (muito fraca) | sem base de tendência |
 | Confiança | 64,6 | 0,16 (muito fraca) | sem base de tendência |
-| Aprendizagem | 49,5 | 0,45 (utilizável) | -0,5 em 10 anos, sobre 2 indicadores |
+| Aprendizagem | 49,8 | 0,45 (utilizável) | -0,4 em 10 anos, sobre 2 indicadores |
 | Experimentação | 55,8 | 0,39 (fraca) | +3,2 em 10 anos, sobre 2 indicadores |
 | Adaptação | 76,2 | 0,48 (utilizável) | +6 em 10 anos, sobre 4 indicadores |
 | Construção | 58,4 | 0,52 (utilizável) | +2,4 em 10 anos, sobre 4 indicadores |
@@ -22,13 +22,13 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 
 Da nota mais baixa para a mais alta. Só entram dimensões com evidência utilizável. Evidência fraca vai para a próxima seção.
 
-### Aprendizagem: 49,5, confiança utilizável
+### Aprendizagem: 49,8, confiança utilizável
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Baseada em 5 indicadores observados.
-- Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,4.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil).
+- Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,6.
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França).
 - Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ## Dimensões para medir primeiro
@@ -112,6 +112,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 Entregas documentadas como evidência. Elas nunca afetam as notas ou a confiança.
 
 - **Measles elimination, and its erosion** (Construção). The United States eliminated endemic measles transmission by 2000 through school-entry vaccination requirements, and falling coverage brought 2,777 confirmed cases by August 2026, the most since 1991, against 285 in all of 2024.
+- **Federal funding gaps and the 2019 shutdown** (Propósito compartilhado). The Congressional Research Service records 20 federal funding-gap shutdowns with at least one full day between FY1977 and FY2019, including the 35-day partial shutdown from 21 December 2018 to 25 January 2019, the longest in the period it surveys.
 
 ## Contribua
 

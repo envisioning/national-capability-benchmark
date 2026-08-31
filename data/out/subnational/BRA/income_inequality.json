@@ -2,15 +2,27 @@
   "indicatorId": "income_inequality",
   "iso3": "BRA",
   "geometry": "state",
-  "reconciliation": "aggregate",
+  "reconciliation": "independent",
+  "denominator": "equal",
+  "unit": "Gini coefficient (0–1)",
+  "direction": "lower_better",
+  "transform": "none",
   "asOf": "2024-12-31",
-  "source": "IBGE, PNAD Contínua, table 7435",
+  "retrievedAt": "2026-08-31T08:55:58.348Z",
+  "source": "IBGE, PNAD Contínua, SIDRA table 7435, variable 10681",
   "sourceUrl": "https://sidra.ibge.gov.br/tabela/7435",
+  "denominatorSource": null,
   "national": {
     "value": 0.503,
     "year": 2024
   },
-  "states": [
+  "check": {
+    "recomposed": 0.486,
+    "national": 0.503,
+    "residual": -0.017,
+    "tolerance": 0.005
+  },
+  "units": [
     {
       "iso": "BR-RO",
       "name": "Rondônia",

@@ -6,6 +6,7 @@ import {
   DIMENSIONS,
   DIMENSION_LABELS,
   EN,
+  SUBNATIONAL_SERIES,
 } from '@ncb/core'
 import type { DisputeRecord } from '@ncb/core'
 import { InstitutionsView } from '@/components/views/InstitutionsView'
@@ -29,7 +30,7 @@ import {
   methodHref,
 } from '@/lib/links'
 import {
-  loadCorroboration,
+  loadSubnationalFile,
   loadCountry,
   loadDisputes,
   loadIndex,
@@ -39,7 +40,7 @@ import { toProfile } from '@/lib/profile'
 
 export const dynamic = 'force-dynamic'
 
-const LOCAL_INDICATOR = 'income_inequality'
+const LOCAL_SERIES = SUBNATIONAL_SERIES.find((series) => series.iso3 === 'BRA')
 const PEER_CODES = ['ARG', 'MEX', 'IDN', 'IND'] as const
 
 export async function generateMetadata({
@@ -76,12 +77,13 @@ export default async function CountryLocalPage({
       </div>
     )
   }
+  if (!LOCAL_SERIES) return <Empty hint="No subnational series is registered for Brazil yet." />
 
-  const [country, index, networkResult, corroboration, records] = await Promise.all([
+  const [country, index, networkResult, subnational, records] = await Promise.all([
     loadCountry('BRA'),
     loadIndex(),
     loadInstitutionNetwork('BRA'),
-    loadCorroboration('BRA', LOCAL_INDICATOR),
+    loadSubnationalFile('BRA', LOCAL_SERIES.indicatorId),
     loadDisputes(),
   ])
   if (!country) return <Empty hint="Brazil's scored output is not available in this deployment." />
@@ -168,10 +170,10 @@ export default async function CountryLocalPage({
         title="One national value, 27 states"
         hint="One indicator is available in the pilot. The state range adds detail without entering the country comparison."
       >
-        {corroboration ? (
-          <CorroborationCard file={corroboration} />
+        {subnational ? (
+          <SubnationalCard file={subnational} />
         ) : (
-          <Empty hint="The Brazil corroboration fixture is not available in this deployment." />
+          <Empty hint="The Brazil subnational file is not available in this deployment." />
         )}
       </Section>
 
@@ -260,13 +262,13 @@ function peerSentence(profile: ReturnType<typeof toProfile>): string {
     : `${profile.country} is a peer reference with a comparable national frame.`
 }
 
-function CorroborationCard({
+function SubnationalCard({
   file,
 }: {
-  file: Awaited<ReturnType<typeof loadCorroboration>>
+  file: Awaited<ReturnType<typeof loadSubnationalFile>>
 }) {
   if (!file) return null
-  const values = file.states.map((state) => state.value)
+  const values = file.units.map((state) => state.value)
   const low = Math.min(...values)
   const high = Math.max(...values)
   const source = (
@@ -306,14 +308,17 @@ function CorroborationCard({
             {low.toFixed(3)} to {high.toFixed(3)}
           </a>
           <p className="mt-1 text-xs text-[var(--muted)]">
-            {file.states.length} federative units, {file.asOf}
+            {file.units.length} federative units, {file.asOf}
           </p>
         </div>
       </div>
       <p className="mt-6 text-lg leading-relaxed">
         <DefineLink term="Reconciliation rule" />: <strong>{file.reconciliation}</strong>. The
-        state values corroborate the published national coefficient for the same year. They are
-        shown on the coefficient scale and stay outside the NCB score.
+        equal-unit recomposition is {file.check.recomposed?.toFixed(3) ?? 'not available'}, against
+        a national value of {file.check.national.toFixed(3)}; the signed residual is{' '}
+        {file.check.residual?.toFixed(3) ?? 'not available'}. This is a diagnostic of the gap
+        between the state view and the national statistic, not a state score or a failed national
+        result. The values stay outside the NCB score.
       </p>
       <p className="mt-4 text-xs leading-relaxed text-[var(--muted)]">Source: {source}.</p>
     </Card>

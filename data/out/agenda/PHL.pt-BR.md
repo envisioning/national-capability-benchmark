@@ -12,7 +12,7 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | Agência | 34,5 | 0,61 (utilizável) | +16,6 em 10 anos, sobre 4 indicadores |
 | Coordenação | 75 | 0,21 (muito fraca) | sem base de tendência |
 | Confiança | 19,7 | 0,16 (muito fraca) | sem base de tendência |
-| Aprendizagem | 36,2 | 0,55 (utilizável) | -2,1 em 10 anos, sobre 3 indicadores |
+| Aprendizagem | 36,7 | 0,55 (utilizável) | -2,2 em 10 anos, sobre 3 indicadores |
 | Experimentação | 2,7 | 0,18 (muito fraca) | +0,8 em 10 anos, sobre 2 indicadores |
 | Adaptação | 50,5 | 0,47 (utilizável) | +2,6 em 10 anos, sobre 4 indicadores |
 | Construção | 49,6 | 0,54 (utilizável) | -3,2 em 10 anos, sobre 3 indicadores |
@@ -28,7 +28,7 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Suécia 83,5, Finlândia 82, Suíça 81,1.
-- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido).
+- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japão); National basic-research funding allocation (China).
 - Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
 ### Agência: 34,5, confiança utilizável
@@ -37,16 +37,16 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 
 - Baseada em 6 indicadores observados.
 - Maiores notas utilizáveis: Estados Unidos 92,6, Austrália 89,8, Reino Unido 87,5.
-- Entregas documentadas em outros países: SIBRATEC, the documented innovation-centre network (Brasil).
+- Entregas documentadas em outros países: SIBRATEC, the documented innovation-centre network (Brasil); Singapore's national ICT-skills measurement and baseline (Singapura).
 - Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
 
-### Aprendizagem: 36,2, confiança utilizável
+### Aprendizagem: 36,7, confiança utilizável
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Baseada em 5 indicadores observados.
-- Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,4.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil).
+- Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,6.
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França).
 - Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ### Construção: 49,6, confiança utilizável
@@ -55,7 +55,7 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Irlanda 75,3, Singapura 71,2, China 64,9.
-- Entregas documentadas em outros países: Pix instant payment system (Brasil); GOV.BR federal identity and service platform (Brasil); X-Road national data exchange layer (Estônia); Pradhan Mantri Jan Dhan Yojana bank accounts (Índia); Electricity supply rebuilt on renewable sources (Uruguai); Plan Ceibal, one connected laptop per child (Uruguai); Sistema Unico de Saude, universal public health system (Brasil); Programa Nacional de Imunizacoes, and its erosion (Brasil); Luz para Todos, rural electrification (Brasil); Bolsa Familia and the single registry behind it (Brasil); Fully electronic national elections (Brasil); Deepwater and pre-salt oil production (Brasil); Seguro Popular, and its abolition (México); Sure Start children's centres, and their erosion (Reino Unido); Grid power, and load shedding (África do Sul); Measles elimination, and its erosion (Estados Unidos); BNDES, the national development bank (Brasil); Casa da Moeda do Brasil, the national mint (Brasil); Housing and Development Board, public housing at scale (Singapura); AFE passenger rail and network contraction (Uruguai); Flamanville 3 EPR, and the erosion of nuclear new-build delivery (França); Phoenix pay system, and its prolonged failure (Canadá); Groningen gas system, and its closure after induced earthquakes (Países Baixos).
+- Entregas documentadas em outros países: Pix instant payment system (Brasil); GOV.BR federal identity and service platform (Brasil); X-Road national data exchange layer (Estônia); Pradhan Mantri Jan Dhan Yojana bank accounts (Índia); Electricity supply rebuilt on renewable sources (Uruguai); Plan Ceibal, one connected laptop per child (Uruguai); Sistema Unico de Saude, universal public health system (Brasil); Programa Nacional de Imunizacoes, and its erosion (Brasil); Luz para Todos, rural electrification (Brasil); Bolsa Familia and the single registry behind it (Brasil); Fully electronic national elections (Brasil); Deepwater and pre-salt oil production (Brasil); Seguro Popular, and its abolition (México); Sure Start children's centres, and their erosion (Reino Unido); Grid power, and load shedding (África do Sul); Measles elimination, and its erosion (Estados Unidos); BNDES, the national development bank (Brasil); Casa da Moeda do Brasil, the national mint (Brasil); Housing and Development Board, public housing at scale (Singapura); AFE passenger rail and network contraction (Uruguai); Flamanville 3 EPR, and the erosion of nuclear new-build delivery (França); Phoenix pay system, and its prolonged failure (Canadá); Groningen gas system, and its closure after induced earthquakes (Países Baixos); DigiD, a shared digital identity rail for public services (Países Baixos); Delta Works, a 43-year national flood-defence programme (Países Baixos); Betuweroute, a freight railway that missed its operating promise (Países Baixos); MijnOverheid, a shared citizen mailbox and data portal (Países Baixos); Fyra V250, a high-speed service withdrawn after a failed launch (Países Baixos); OVpay, nationwide contactless transit payments (Países Baixos); Omgevingswet and the Digital Environment System (Países Baixos); Transantiago, an integrated transport reform with rising subsidy dependence (Chile); 4G road concessions, a national infrastructure portfolio (Colômbia); Reficar, a refinery modernization with a fiscal-liability finding (Colômbia); GIGA School, one learning device per student (Japão); Monju, a fast-breeder programme ended before commercial operation (Japão); Invierte.pe, a national multi-year investment-management system (Peru); Reconstrucción con Cambios, a delayed recovery portfolio (Peru); ICE and a mostly renewable national electricity system (Costa Rica); CCSS universal health-insurance reach (Costa Rica); Metro de Quito, a cross-administration urban rail delivery (Equador); Panama Canal expansion and self-financing operations (Panamá); Metro de Panamá network operations (Panamá); Mi Teleférico urban cable-car network (Bolívia); Industrial lithium carbonate plant below design capacity (Bolívia); Itaipú binational hydropower operations (Paraguai); Metrobús, an unfinished bus rapid transit project (Paraguai); ARSAT-3 satellite programme suspended before launch (Argentina); Trans-Sumatra toll-road programme, still short of its planned network (Indonésia); National expressway build-out in 2024 (Vietnã); Cat Linh–Ha Dong metro, a delayed and over-budget delivery (Vietnã); MRT Putrajaya Line (Malásia); Kuala Lumpur–Singapore high-speed rail, terminated before construction (Malásia); Hopewell elevated road-and-rail concession, and its termination (Tailândia); AVE high-speed rail network (Espanha); Castor underground gas storage, and its closure (Espanha); Ostrołęka C coal block, and its abandonment (Polônia); Nya Karolinska Solna public–private hospital project (Suécia); Barsebäck nuclear plant closure and decommissioning (Suécia); New Children's Hospital cost escalation (Irlanda); Rural electrification and near-universal grid coverage (Nicarágua); Gran Misión Vivienda Venezuela's five-million-home milestone (Venezuela).
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística.
 
@@ -131,6 +131,16 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 | Propósito compartilhado | Participação cívica | Participação ativa em associações, sindicatos, partidos e organizações comunitárias. |
+
+## O que as Filipinas construiu e nenhum indicador conta
+
+Estas são mudanças institucionais documentadas em Filipinas que o framework registra como evidência. Elas ficam ao lado da nota e não mudam a nota ou a confiança.
+
+- **PhilSys foundational national ID rollout** (Adaptação). The Philippine Statistics Authority reported 90,017,565 people registered to PhilSys by 19 September 2024, or 97.8% of the year's 92 million registration target, with the ID designed for government and private-sector transactions.
+- **Pantawid Pamilyang Pilipino Program (4Ps)** (Adaptação). The Philippines' 4Ps conditional cash-transfer programme reached 4,064,354 households by 30 June 2024 across 41,746 barangays, 148 cities and 1,485 municipalities, with beneficiaries linked to health, education and nutrition conditions.
+- **DPWH national infrastructure delivery and transparency portal** (Construção). The Philippine Department of Public Works and Highways' live transparency portal records 209,419 completed contracts and 997 terminated contracts out of 258,645 contracts from 2016 to 2026, against ₱6.4 trillion of listed investment.
+- **Typhoon Yolanda shelter and recovery programme** (Adaptação). After Typhoon Yolanda, the Philippines' recovery programme had provided shelter assistance to about 1.14 million families by September 2016; the National Housing Authority had completed 29,661 permanent units while 102,240 more were under construction across six regions, 14 provinces and 115 cities and municipalities.
+- **Bataan Nuclear Power Plant, a mothballed megaproject** (Construção). The Philippine Department of Energy's 2017 annual report describes the Bataan Nuclear Power Plant as mothballed and records its reassessment as part of a proposed national nuclear programme, after the original plant failed to become an operating power asset.
 
 ## Contribua
 

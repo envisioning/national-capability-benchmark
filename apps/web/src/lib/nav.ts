@@ -38,13 +38,13 @@ import {
  *   3. which reading of it, where the project has written more than one
  *   4. the pages of that reading
  *
- * It reaches the reader as two bands, not four rows. Everything above the
- * deepest level is a breadcrumb, and the deepest level is a tab bar, so the
- * trail and the sibling pages never look alike. Countries has 52 children and
- * no control can show them, so its child is resolved from the path: the crumb
+ * The tree is data, not a promise that every level gets its own horizontal
+ * row. The sections occupy the global header, and the contextual levels plus
+ * the deepest page set share one subnav band. Countries has 52 children and no
+ * control can show them, so its child is resolved from the path: the context
  * names the one country you are in. A country layer is a reading of that
- * country, beside the English one rather than under its pages. A country with
- * one reading skips level three entirely. See D69 and D73.
+ * country, beside the English one rather than under its pages. See D69 and
+ * D91.
  */
 export type NavNode = {
   href: string
@@ -284,9 +284,8 @@ const MAX_DEPTH = 4
 /**
  * The levels for one path. The first is always the sections; each level after
  * it is the children of the level above's current entry, and the walk stops as
- * soon as a level has no current entry or no children. The renderer turns
- * everything but the deepest level into a breadcrumb and the deepest into
- * tabs.
+ * soon as a level has no current entry or no children. `SiteNav` groups the
+ * contextual rows and the deepest row into one subnav band.
  */
 export function navRows(pathname: string): NavRow[] {
   const rows: NavRow[] = []

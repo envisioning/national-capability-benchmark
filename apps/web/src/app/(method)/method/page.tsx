@@ -244,11 +244,11 @@ export default function MethodPage() {
             score. Its size is printed beside the trend.
           </li>
           <li>
-            Ten-year and twenty-year spans are published. A missing span shows how far the data
-            reaches.
+            Ten-year, twenty-year and longer spans are published when the matched evidence supports
+            them. A missing span shows how far the data reaches.
           </li>
           <li>
-            Each indicator has its own line back to 1990 where data exists. Nothing is carried
+            Each indicator has its own line back to 1960 where data exists. Nothing is carried
             forward or filled in.
           </li>
           <li>

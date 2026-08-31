@@ -54,6 +54,10 @@ export type Geometry = z.infer<typeof Geometry>
 export const Reconciliation = z.enum(['aggregate', 'independent', 'context_only'])
 export type Reconciliation = z.infer<typeof Reconciliation>
 
+/** How a published subnational file recomposes its constituent values. */
+export const SubnationalDenominator = z.enum(['population', 'equal', 'none'])
+export type SubnationalDenominator = z.infer<typeof SubnationalDenominator>
+
 export const IndicatorSource = z.object({
   /** Publisher, e.g. "World Bank", "OECD", "World Values Survey". */
   publisher: z.string(),
@@ -66,6 +70,7 @@ export const IndicatorSource = z.object({
   /** False for proprietary rankings whose underlying data cannot be inspected. */
   inspectable: z.boolean(),
 })
+export type IndicatorSource = z.infer<typeof IndicatorSource>
 
 export const IndicatorDef = z.object({
   id: z.string(),
@@ -165,22 +170,68 @@ export const SubnationalValue = z.object({
   name: z.string().min(1),
   value: z.number(),
   year: z.number().int(),
+  /** Required when the file's denominator is `population`. */
+  denominatorValue: z.number().positive().optional(),
 })
 export type SubnationalValue = z.infer<typeof SubnationalValue>
 
-/** v1 corroboration file consumed by the Brazil destination page. */
-export const CorroborationFile = z.object({
+/** The computed reconciliation result carried by every subnational file. */
+export const SubnationalCheck = z.object({
+  /** Null when denominator is `none`, because no recomposition is claimed. */
+  recomposed: z.number().nullable(),
+  national: z.number(),
+  /** Signed as recomposed minus national; null when no recomposition is claimed. */
+  residual: z.number().nullable(),
+  /** A per-series display and validation tolerance, in the file's unit. */
+  tolerance: z.number().nonnegative(),
+})
+export type SubnationalCheck = z.infer<typeof SubnationalCheck>
+
+/** A published subnational series, kept beside and outside the national score. */
+export const SubnationalFile = z.object({
   indicatorId: z.string().min(1),
   iso3: z.string().length(3),
   geometry: Geometry.exclude(['national']),
   reconciliation: Reconciliation,
+  denominator: SubnationalDenominator,
+  unit: z.string().min(1),
+  direction: Direction,
+  transform: Transform,
   asOf: z.string().date(),
+  retrievedAt: z.string(),
   source: z.string().min(1),
   sourceUrl: z.string().url(),
+  denominatorSource: z
+    .object({
+      publisher: z.string().min(1),
+      year: z.number().int(),
+      url: z.string().url(),
+    })
+    .nullable(),
   national: z.object({ value: z.number(), year: z.number().int() }),
-  states: z.array(SubnationalValue),
+  check: SubnationalCheck,
+  units: z.array(SubnationalValue),
 })
-export type CorroborationFile = z.infer<typeof CorroborationFile>
+export type SubnationalFile = z.infer<typeof SubnationalFile>
+
+/** Small directory index for readers and layer registries. */
+export const SubnationalIndexFile = z.object({
+  generatedAt: z.string(),
+  files: z.array(
+    z.object({
+      indicatorId: z.string().min(1),
+      iso3: z.string().length(3),
+      path: z.string().min(1),
+      geometry: Geometry.exclude(['national']),
+      year: z.number().int(),
+      reconciliation: Reconciliation,
+      denominator: SubnationalDenominator,
+      residual: z.number().nullable(),
+      units: z.number().int().nonnegative(),
+    }),
+  ),
+})
+export type SubnationalIndexFile = z.infer<typeof SubnationalIndexFile>
 
 export const ObservationFile = z.object({
   generatedAt: z.string(),
@@ -199,6 +250,8 @@ export const Revision = z.object({
   indicatorId: z.string(),
   iso3: z.string().length(3),
   geometry: Geometry.default('national'),
+  /** Constituent-unit id for subnational revisions; absent for national rows. */
+  unit: z.string().optional(),
   year: z.number().int(),
   /** Null when the run added a year that was not there before. */
   from: z.number().nullable(),

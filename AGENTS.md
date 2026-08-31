@@ -301,13 +301,13 @@ port 3888. That entry starts Next directly and does not use the proxy.
   resolves it against the path. Nothing else in the viewer draws navigation,
   and no page or layout renders a nav of its own. The tree is four deep and
   never more: the sections, the country you are in, which reading of it, then
-  the pages of that reading. It reaches the reader as two bands: `HeaderNav`
-  draws the sections and turns every level above the deepest into a breadcrumb,
-  and `SectionTabs` draws the deepest level as a tab strip under the header.
-  Never stack nav rows instead. A country layer is a reading beside the English
-  one, never a level under its pages, and both readings share one crumb joined
-  by a middot, because they are alternatives rather than steps. **There are five
-  sections and adding a sixth is a decision, not a page.** A new page joins the
+  the pages of that reading. `HeaderNav` draws the sections and `SectionTabs`
+  draws one contextual band beneath them: any country/reading context and the
+  deepest page set share that band. Never stack subnav rows instead. A country
+  layer is a reading beside the English one, never a level under its pages, and
+  both readings share one crumb joined by a middot, because they are alternatives
+  rather than steps. **There are five sections and adding a sixth is a decision,
+  not a page.** A new page joins the
   section that already answers its reader's question: `COUNTRY_INDEX_PAGES`,
   `METHOD_PAGES`, `PARTICIPATE_PAGES` or `ABOUT_PAGES`, all in the same file.
   Countries resolves its row from the path because 52 countries will not fit in

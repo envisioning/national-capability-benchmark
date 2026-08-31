@@ -12,7 +12,7 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | Agência | 59,6 | 0,61 (utilizável) | +20 em 10 anos, sobre 4 indicadores |
 | Coordenação | 86,5 | 0,23 (muito fraca) | sem base de tendência |
 | Confiança | 26,9 | 0,16 (muito fraca) | sem base de tendência |
-| Aprendizagem | 43,2 | 0,54 (utilizável) | +5,5 em 10 anos, sobre 2 indicadores |
+| Aprendizagem | 43,5 | 0,54 (utilizável) | +5,1 em 10 anos, sobre 2 indicadores |
 | Experimentação | 30 | 0,39 (fraca) | +6,9 em 10 anos, sobre 2 indicadores |
 | Adaptação | 56,8 | 0,48 (utilizável) | +15,2 em 10 anos, sobre 4 indicadores |
 | Construção | 25,3 | 0,54 (utilizável) | -1,3 em 10 anos, sobre 4 indicadores |
@@ -28,7 +28,7 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Irlanda 75,3, Singapura 71,2, China 64,9.
-- Entregas documentadas em outros países: X-Road national data exchange layer (Estônia); Pradhan Mantri Jan Dhan Yojana bank accounts (Índia); Electricity supply rebuilt on renewable sources (Uruguai); Plan Ceibal, one connected laptop per child (Uruguai); Seguro Popular, and its abolition (México); Sure Start children's centres, and their erosion (Reino Unido); Grid power, and load shedding (África do Sul); Measles elimination, and its erosion (Estados Unidos); Housing and Development Board, public housing at scale (Singapura); AFE passenger rail and network contraction (Uruguai); Flamanville 3 EPR, and the erosion of nuclear new-build delivery (França); Phoenix pay system, and its prolonged failure (Canadá); Groningen gas system, and its closure after induced earthquakes (Países Baixos).
+- Entregas documentadas em outros países: X-Road national data exchange layer (Estônia); Pradhan Mantri Jan Dhan Yojana bank accounts (Índia); Electricity supply rebuilt on renewable sources (Uruguai); Plan Ceibal, one connected laptop per child (Uruguai); Seguro Popular, and its abolition (México); Sure Start children's centres, and their erosion (Reino Unido); Grid power, and load shedding (África do Sul); Measles elimination, and its erosion (Estados Unidos); Housing and Development Board, public housing at scale (Singapura); AFE passenger rail and network contraction (Uruguai); Flamanville 3 EPR, and the erosion of nuclear new-build delivery (França); Phoenix pay system, and its prolonged failure (Canadá); Groningen gas system, and its closure after induced earthquakes (Países Baixos); DigiD, a shared digital identity rail for public services (Países Baixos); Delta Works, a 43-year national flood-defence programme (Países Baixos); Betuweroute, a freight railway that missed its operating promise (Países Baixos); MijnOverheid, a shared citizen mailbox and data portal (Países Baixos); Fyra V250, a high-speed service withdrawn after a failed launch (Países Baixos); OVpay, nationwide contactless transit payments (Países Baixos); Omgevingswet and the Digital Environment System (Países Baixos); Transantiago, an integrated transport reform with rising subsidy dependence (Chile); 4G road concessions, a national infrastructure portfolio (Colômbia); Reficar, a refinery modernization with a fiscal-liability finding (Colômbia); GIGA School, one learning device per student (Japão); Monju, a fast-breeder programme ended before commercial operation (Japão); Invierte.pe, a national multi-year investment-management system (Peru); Reconstrucción con Cambios, a delayed recovery portfolio (Peru); ICE and a mostly renewable national electricity system (Costa Rica); CCSS universal health-insurance reach (Costa Rica); Metro de Quito, a cross-administration urban rail delivery (Equador); Panama Canal expansion and self-financing operations (Panamá); Metro de Panamá network operations (Panamá); Mi Teleférico urban cable-car network (Bolívia); Industrial lithium carbonate plant below design capacity (Bolívia); Itaipú binational hydropower operations (Paraguai); Metrobús, an unfinished bus rapid transit project (Paraguai); ARSAT-3 satellite programme suspended before launch (Argentina); DPWH national infrastructure delivery and transparency portal (Filipinas); Bataan Nuclear Power Plant, a mothballed megaproject (Filipinas); Trans-Sumatra toll-road programme, still short of its planned network (Indonésia); National expressway build-out in 2024 (Vietnã); Cat Linh–Ha Dong metro, a delayed and over-budget delivery (Vietnã); MRT Putrajaya Line (Malásia); Kuala Lumpur–Singapore high-speed rail, terminated before construction (Malásia); Hopewell elevated road-and-rail concession, and its termination (Tailândia); AVE high-speed rail network (Espanha); Castor underground gas storage, and its closure (Espanha); Ostrołęka C coal block, and its abandonment (Polônia); Nya Karolinska Solna public–private hospital project (Suécia); Barsebäck nuclear plant closure and decommissioning (Suécia); New Children's Hospital cost escalation (Irlanda); Rural electrification and near-universal grid coverage (Nicarágua); Gran Misión Vivienda Venezuela's five-million-home milestone (Venezuela).
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística.
 
@@ -38,16 +38,16 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Suécia 83,5, Finlândia 82, Suíça 81,1.
-- Entregas documentadas em outros países: The Delta Programme and its fund (Países Baixos); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido).
+- Entregas documentadas em outros países: The Delta Programme and its fund (Países Baixos); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japão); National basic-research funding allocation (China).
 - Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
-### Aprendizagem: 43,2, confiança utilizável
+### Aprendizagem: 43,5, confiança utilizável
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Baseada em 5 indicadores observados.
-- Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,4.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia).
+- Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,6.
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França).
 - Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ## Dimensões para medir primeiro
@@ -152,6 +152,7 @@ Estas são mudanças institucionais brasileiras documentadas que o framework reg
 - **EMBRAPII, industry-led applied research** (Experimentação). Created in 2013, EMBRAPII connects companies to public and private research units through shared-risk funding, and it contracted a record 811 new industrial research projects in 2025.
 - **SIBRATEC, the documented innovation-centre network** (Agência). The Ministry of Science and Technology implemented SIBRATEC as a national system of 56 research and development networks, including 14 innovation-centre networks, 20 technological-service networks and 22 extension networks organized across the states to support innovation in micro and small firms.
 - **SUS health councils, permanent public participation** (Propósito compartilhado). Since Law 8.142 established them in 1990, Brazil's SUS has required permanent, deliberative health councils at the national, state and municipal levels, with users holding 50 percent of seats and health workers and government or providers holding 25 percent each.
+- **Salário mínimo and its permanent revaluation rule** (Adaptação). Brazil's Congress and president established a permanent annual valorização do salário mínimo in Law 14.663/2023, setting the national floor at R$1,320 from May 2023 and linking later adjustments to INPC inflation plus real GDP growth from two years earlier.
 
 ## Contribua
 

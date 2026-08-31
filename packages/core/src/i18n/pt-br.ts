@@ -305,6 +305,25 @@ export const PT_BR: Lexicon = {
     colScore: 'Nota',
     colConfidence: 'Confiança',
     colTrend: 'Tendência',
+    historyHeading: 'Capacidade ao longo do tempo',
+    historyIntro:
+      'Escolha uma dimensão para ver como a evidência comparável do {country} mudou ao longo do tempo. A escala vertical é a régua comparativa atual de 0 a 100.',
+    historyDimension: 'Dimensão',
+    historyPeriod: 'Período',
+    historyAxis: 'Posição da capacidade na régua atual',
+    historyYears: 'anos',
+    historyNoHistory: 'Nenhuma dimensão tem evidência histórica comparável suficiente ainda.',
+    historyNoSpan: 'Não há histórico comparável disponível para este período.',
+    historyReadout: '{from} a {to} ({delta}) em {years} anos, sobre {n} indicadores',
+    historyReadoutClamped:
+      '{from} a {to} ({delta}) em {years} anos, sobre {n} indicadores; {c} tocaram a borda da régua',
+    historyCaveat:
+      'Os valores históricos usam a régua atual de 0 a 100 e um conjunto pareado de indicadores. Eles mostram movimento na evidência disponível, não uma nota geral de desenvolvimento. As agendas datadas ficam em uma faixa própria e não alteram a nota. Uma linha ausente significa que a evidência não sustenta uma tendência comparável para aquela dimensão.',
+    historyChartAria: 'Histórico de {dimension} de {baseYear} a {currentYear}',
+    historyPointAria: '{dimension}: {score} em {year}',
+    historyAgendaItems: 'Itens da agenda nesta linha do tempo',
+    historyEventTimelineAria: 'Itens da agenda de {dimension} de {baseYear} a {currentYear}',
+    historyEventAria: '{title}, item da agenda iniciado em {year}',
     trendCell: '{delta} em {years} anos, sobre {n} indicadores',
     trendCellClamped:
       '{delta} em {years} anos, sobre {n} indicadores, {c} truncados na borda da régua',

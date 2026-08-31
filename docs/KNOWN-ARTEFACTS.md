@@ -76,7 +76,7 @@ indicators, reported separately.
 
 **Severity: high. The first source-backed Trust release is still thin.**
 
-The current figures are from dataset 4.5.0. Coordination publishes a score for
+The current figures are from dataset 5.0.0. Coordination publishes a score for
 51 of 52 countries, based on border time, budget execution and V-Dem's
 expert-coded civil-society index. Trust publishes a
 score for 36 of 52 countries, based on the Joint EVS/WVS A165 social-trust
@@ -299,8 +299,8 @@ The two indicators that would carry the delivery construct,
 **Fix.** Two parts, one done and one open. Documented deliveries are now
 recorded in `data/evidence/records.json` against the gap they bear on, outside
 the score, so the cases are written down with sources and limits instead of
-being argued in prose. Thirty-three records cover 19 countries and bear on 10
-different gaps. Brazil's 11 run from Embrapa in 1973 to Pix in 2020. See D20.
+being argued in prose. Seventy-nine records cover 22 countries and bear on 16
+different gaps. Brazil's 24 run from Casa da Moeda in 1694 to Pix in 2020. See D20.
 The open part is a comparable delivery series across the country set, without
 which the gap cannot be promoted to an indicator.
 
@@ -313,7 +313,7 @@ here, and the benchmark currently has no way to say so.
 
 **Severity: high. Trust is partly measured and Coordination remains narrow.**
 
-The figures in this entry are from dataset 4.5.0.
+The figures in this entry are from dataset 5.0.0.
 
 | Dimension | Observed indicators | Confidence | What is left | Publishes a score |
 | --- | ---: | ---: | --- | --- |

@@ -12,7 +12,7 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 | Agency | 59.2 | 0.59 (usable) | +27 over 10 years using 4 indicators |
 | Coordination | 75.9 | 0.25 (thin) | no trend |
 | Trust | 59.1 | 0.16 (very thin) | no trend |
-| Learning | 28.3 | 0.48 (usable) | -5.7 over 10 years using 3 indicators |
+| Learning | 29 | 0.48 (usable) | -5.7 over 10 years using 3 indicators |
 | Experimentation | 6.9 | 0.18 (very thin) | +1.8 over 10 years using 2 indicators |
 | Adaptability | 75.2 | 0.47 (usable) | +5.7 over 10 years using 4 indicators |
 | Building | 54.2 | 0.53 (usable) | +8.6 over 10 years using 4 indicators |
@@ -28,16 +28,16 @@ How capable is the country of identifying and preparing for emerging change?
 
 - Uses 5 observed indicators.
 - Highest usable scores: Sweden 83.5, Finland 82, Switzerland 81.1.
-- Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom).
+- Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan); National basic-research funding allocation (China).
 - Missing indicators: Government foresight capacity, Long-horizon research share.
 
-### Learning: 28.3, confidence usable
+### Learning: 29, confidence usable
 
 How effectively does the country acquire, distribute, and update knowledge?
 
 - Uses 5 observed indicators.
-- Highest usable scores: Finland 77.9, Australia 70.3, United Kingdom 68.4.
-- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); CAPES, federal postgraduate funding (Brazil); INEP, the standing education statistics institution (Brazil).
+- Highest usable scores: Finland 77.9, Australia 70.3, United Kingdom 68.6.
+- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); CAPES, federal postgraduate funding (Brazil); INEP, the standing education statistics institution (Brazil); Kartu Prakerja, a national lifelong-learning delivery system (Indonesia); Compte personnel de formation (France).
 - Missing indicators: Adult learning participation, Research citation impact.
 
 ## What to measure first
@@ -114,6 +114,16 @@ These scores are at least 50 with usable evidence. They still need watching.
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
+
+## What Vietnam built that no indicator counts
+
+These are documented institutional changes in Vietnam that the framework files as evidence. They sit beside the score and do not change it or its confidence.
+
+- **VNeID national electronic identity** (Adaptability). Vietnam's Ministry of Public Security reported more than 70.2 million electronic-identification accounts issued by January 2024, with VNeID designed to replace paper documents and authenticate public and private services against the national population database.
+- **Vietnam Social Security health-insurance expansion** (Adaptability). Vietnam Social Security reported 95.523 million people enrolled in health insurance in 2024, covering 94.29% of the population and approaching the country's 95% universal-coverage target for 2025.
+- **National expressway build-out in 2024** (Building). Vietnam's Ministry of Transport reported that seven road projects were completed and opened in 2024, bringing the national expressway network to more than 2,021 kilometres.
+- **Cat Linh–Ha Dong metro, a delayed and over-budget delivery** (Building). Vietnam's State Audit reported in 2019 that the Cat Linh–Ha Dong metro's approved investment had risen from VND8,700 billion to VND18,000 billion and that a line originally due in November 2013 was still unfinished after repeated schedule changes.
+- **Typhoon Yagi emergency restoration** (Adaptability). After Typhoon Yagi struck northern Vietnam, the government reported on 16 September 2024 that power had returned to 92.5% of customers in affected localities and that 8,386 of 9,235 damaged mobile base stations had been restored.
 
 ## Contribute
 

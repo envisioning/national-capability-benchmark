@@ -4,7 +4,7 @@ import { readdir } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import {
   ChallengeRecord,
-  CorroborationFile as CorroborationFileSchema,
+  SubnationalFile as SubnationalFileSchema,
   DelphiRunFile as DelphiRunFileSchema,
   INDICATORS,
   InstitutionNetworkFile,
@@ -19,7 +19,7 @@ import type {
   InstitutionExplorerFeed,
   Lang,
   ChallengeRecord as ChallengeRecordType,
-  CorroborationFile,
+  SubnationalFile,
   DelphiRunFile,
   Diagnostics,
   EvidenceRecord,
@@ -62,8 +62,8 @@ const PATHS = {
     resolve(DATA_ROOT, 'institutions', `${iso3.toUpperCase()}.json`),
   institutionExplorer: (iso3: string, lang: string) =>
     resolve(DATA_ROOT, 'out/institutions', `${iso3.toUpperCase()}.${lang}.json`),
-  corroboration: (indicatorId: string) =>
-    resolve(DATA_ROOT, 'out/br-subnational', `${indicatorId}.json`),
+  subnational: (iso3: string, indicatorId: string) =>
+    resolve(DATA_ROOT, 'out/subnational', iso3.toUpperCase(), `${indicatorId}.json`),
   velocity: resolve(DATA_ROOT, 'out/velocity.json'),
   leverage: resolve(DATA_ROOT, 'out/leverage.json'),
   residual: resolve(DATA_ROOT, 'out/residual.json'),
@@ -279,12 +279,6 @@ export type InstitutionNetworkLoad =
   | { network: null; error: InstitutionNetworkError }
 
 /**
- * One subnational corroboration fixture, kept outside the national score
- * files. The file is keyed by indicator because v1 has one Brazil fixture, and
- * the parsed country check prevents a future indicator from being shown on the
- * wrong destination page.
- */
-/**
  * One country's institution map, projected for an external explorer.
  *
  * Written by `pnpm bench institutions`, one file per lexicon. The viewer
@@ -299,23 +293,27 @@ export async function loadInstitutionExplorer(
   return readJson<InstitutionExplorerFeed>(PATHS.institutionExplorer(iso3, lang))
 }
 
-export async function loadCorroboration(
+/**
+ * One subnational file, kept outside the national score files. The parsed
+ * country check prevents a future series from being shown on the wrong page.
+ */
+export async function loadSubnationalFile(
   iso3: string,
   indicatorId: string,
-): Promise<CorroborationFile | null> {
-  const raw = await readJson<unknown>(PATHS.corroboration(indicatorId))
-  const parsed = CorroborationFileSchema.safeParse(raw)
+): Promise<SubnationalFile | null> {
+  const raw = await readJson<unknown>(PATHS.subnational(iso3, indicatorId))
+  const parsed = SubnationalFileSchema.safeParse(raw)
   if (!parsed.success || parsed.data.iso3 !== iso3.toUpperCase()) return null
   return parsed.data
 }
 
-/** The constituent-unit rows from a corroboration fixture. */
+/** The constituent-unit rows from a subnational diagnostic file. */
 export async function loadSubnationalIndicator(
   iso3: string,
   indicatorId: string,
-): Promise<CorroborationFile['states']> {
-  const file = await loadCorroboration(iso3, indicatorId)
-  return file?.states ?? []
+): Promise<SubnationalFile['units']> {
+  const file = await loadSubnationalFile(iso3, indicatorId)
+  return file?.units ?? []
 }
 
 /**

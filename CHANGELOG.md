@@ -9,6 +9,79 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.5.0 — 2026-08-31
+
+- **Agenda evidence is positioned on the timeline.** Dated agenda items now
+  appear on an aligned event rail for the selected capability, with the full
+  item list kept visible below it.
+- **Longer history is the default view.** The chart opens on the longest
+  published capability span available for that country.
+
+## Dataset 5.1.0 — 2026-08-31
+
+The historical source window now reaches 1960, and agenda evidence carries its
+documented start year into the published agenda JSON.
+
+- **The source request stays complete at the longer horizon.** World Bank
+  requests allow the full 52-country historical response instead of truncating
+  once the 1960 window exceeds the former page size.
+- **Long spans remain selective.** Ten-, twenty-, thirty-, fifty- and
+  oldest-window momentum entries are attempted; only matched baskets that pass
+  the existing evidence floor are published.
+
+## App 1.4.0 — 2026-08-31
+
+- **Agendas show capability history.** Each country agenda now has a selectable
+  dimension chart with ten-year, twenty-year and longer spans where the matched
+  evidence supports them.
+- **Long history stays honest.** The chart keeps the current 0–100 frame,
+  reports the matched-indicator count and leaves unsupported spans absent rather
+  than interpolating them.
+
+## Dataset 5.0.1 — 2026-08-31
+
+The historical observation window now starts in 1976, adding the older source
+values needed to test approximately 50-year capability movement.
+
+- **Longer spans are published when earned.** The score output now attempts
+  ten-, twenty-, thirty- and oldest-available-year momentum entries.
+- **Current scores remain the same contract.** Older observations feed history
+  and do not enter the current frame or headline dimension score.
+
+## App 1.3.1 — 2026-08-31
+
+- **Country navigation uses one contextual band.** The country context,
+  reading choices and page tabs no longer occupy separate horizontal rows.
+
+## App 1.3.0 — 2026-08-31
+
+- **The agenda shows its research blind spots.** A complete 52-country by
+  nine-capability matrix keeps every empty cell visible and links each filled
+  cell to its source-checked delivery records.
+- **Counts remain inventory, not scores.** Row and column totals describe the
+  evidence corpus only; they never enter capability scores or confidence.
+
+## Dataset 5.0.0 — 2026-08-31
+
+The Brazil subnational pilot is now a maintained, self-describing diagnostic
+layer.
+
+- **Reconciliation is computed.** The former aggregate claim for the state Gini
+  is now independent, with the equal-unit recomposition and signed residual
+  published beside the national coefficient.
+- **The output contract is generic.** Files live under
+  `subnational/{ISO3}/{indicatorId}.json`, are indexed, and are generated from
+  a registry rather than a one-off adapter.
+- **Subnational values remain outside the benchmark.** They never enter a
+  national frame, score, confidence, agenda or ranking. Aggregate claims are
+  rejected when their per-series tolerance is exceeded.
+
+## App 1.2.2 — 2026-08-31
+
+- **Brazil's local reading names the diagnostic clearly.** The page now shows
+  the computed recomposition and residual without describing the independent
+  state Gini as corroborating a national value.
+
 ## Dataset 4.5.0 — 2026-08-31
 
 Coordination gained a full-frame, adapter-backed civil-society measure.

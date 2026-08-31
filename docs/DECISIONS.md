@@ -4130,3 +4130,259 @@ holds, most plausibly Countries once there is a way to offer more than the
 three cross-country readings; or a decision that the footer's job is a chosen
 short list rather than the whole tree, which would want the choice recorded in
 the tree as a field, never as a second array.
+---
+## D89 — The subnational layer is a computable diagnostic registry, not a second score
+
+*Recorded 2026-08-31. Supersedes the fixture language in D66 while preserving
+its national-score boundary.*
+
+**Choice.** Subnational output is published through a registry of country,
+geometry, source, unit, reconciliation rule and denominator method. Each
+published file carries the national value beside its constituent values, the
+retrieval metadata and a `check` block containing the recomposed value, the
+national value, the signed residual and a tolerance. `aggregate` is a claim
+that the build tests: validation fails when the recomposed value differs from
+the published national value by more than that series' tolerance. `equal` and
+`population` describe how the diagnostic recomposition is calculated;
+`none` means no recomposition is claimed. The denominator is therefore a
+calculation method, not evidence that the statistic is additively decomposable.
+
+The 2024 IBGE state Gini fixture is restated as `independent` with an equal-unit
+diagnostic. Its published state mean is 0.486 against a national coefficient of
+0.503, a signed residual of about -0.017. That residual is shown because it
+reveals the between-state component that a state range hides; it is not a
+failed build and it is not a national score. Population denominators are
+recorded from IBGE's 1 July 2024 federative-unit estimates so a future
+aggregate series can be recomposed without an unsourced weighting.
+
+The registry and its files remain outside `buildFrame`, `score`, `confidence`,
+`momentum`, agendas and rankings. A subnational unit receives no capability
+score and no benchmark confidence. The first maintained geometry is state;
+publishing municipal output requires a separate decision about the unit of
+analysis and the resulting reader contract.
+
+**Why.** D66 correctly kept subnational observations beside the comparison
+layer, but a hand-written reconciliation label let the first fixture assert a
+false aggregate relationship. Making the calculation and its inputs explicit
+turns the label into an auditable claim. A registry prevents every new series
+from growing a bespoke adapter, while a small index makes the research layer
+discoverable without filesystem probing. Keeping the Gini independent preserves
+the useful local variation instead of forcing a mathematically invalid national
+recomposition. The first candidate for expansion is SICONFI budget execution,
+but it must pass the source-memo and exact-variable checks before publication.
+
+**Costs.** The output contract and path are breaking for consumers of the pilot,
+so the dataset version moves major even though national scores do not move. A
+per-series tolerance needs editorial review, and population estimates may not
+be the right denominator for every administrative statistic. The registry
+still needs one adapter per publisher family, and a state census can show
+variation without proving delivery quality. Municipal data is deliberately
+left unresolved rather than smuggled in through a state-shaped interface.
+
+**Overturned by.** A reproducible decomposition method showing that the Gini
+fixture's state values can validly compose the national coefficient; evidence
+that readers mistake the diagnostic residual for a score; or a source release
+whose unit definitions cannot be mapped to the registry without silent
+imputation would require revising the contract. A successful municipal pilot
+with a clear audience and stable unit identifiers would justify a separate
+geometry decision, not a relaxation of the national boundary.
+
+## D90 — Evidence coverage is a complete country-by-capability matrix
+
+*Recorded 2026-08-31. Extends D20, D35, D46 and D76.*
+
+**Choice.** The agenda index derives one complete matrix from the published
+evidence register: every country in `COUNTRY_ISO3` is a row and every dimension
+in `DIMENSIONS` is a column, including the empty cells. A filled cell prints the
+number of documented deliveries filed against that country's gap indicators in
+that dimension and links to the same filtered delivery register D46 defines.
+Row totals state both capabilities covered and records filed; column totals
+state countries represented and records filed.
+
+`buildAgendaEvidenceCoverage` in `packages/core/src/pipeline/agenda.ts` is the
+only aggregation. It reads each record's dimension through the indicator
+registry, so a record cannot be filed into a second hand-written capability
+map. The matrix remains a reading of `data/evidence/records.json`: it enters no
+score, confidence, coverage floor or research-run approval path.
+
+An empty cell is labelled as an uncovered research slot, not as evidence that
+the country lacks the capability. A filled cell is evidence that at least one
+qualifying delivery was documented, not evidence that the whole capability is
+present. Record counts are therefore inventory counts and never capability
+weights.
+
+**Why.** The delivery register could answer which cases exist after filtering,
+and the research inventory counted countries and dimensions separately, but
+neither showed their intersection. A reader could see 79 records and 22
+represented countries without seeing that the current corpus fills only 44 of
+468 country-dimension cells. Keeping every zero visible makes language bias,
+country concentration and thin dimensions concrete before the next source
+search begins.
+
+The matrix also replaces the agenda index's separate country list. Every row
+still reaches the country's agenda, while the page no longer prints the same
+country set twice.
+
+**Costs.** Fifty-two rows and nine capability columns require horizontal
+scrolling on a narrow screen. A count can conceal that several deliveries use
+the same publisher or bear on the same gap indicator, so the cell is a doorway
+to the records rather than a quality grade. As the corpus grows, large counts
+may become less useful than a status or source-family split; adding either must
+still preserve the one-record-one-delivery rule and the empty cells.
+
+**Overturned by.** Evidence that researchers choose better-balanced source
+checks from a smaller queue view, or that readers consistently mistake filled
+cells for scored capability, would move the matrix off the public agenda index
+and leave it as a research artifact. A comparable series that closes a gap
+removes that indicator from the case lane under D20; the matrix must then be
+rebuilt from the remaining admissible records rather than preserving a stale
+cell for visual completeness.
+
+## D91 — Country context and page links share one subnavigation band
+
+*Recorded 2026-08-31. Supersedes the visible rendering half of D73; the single
+navigation tree and path-based ownership remain.*
+
+**Choice.** The five global sections remain the only top-level row. Every route
+with child pages gets one subnavigation band beneath it. On a country route,
+the country context and the deepest page set share that band; on a layered
+country route, the country context, the English/local reading choices and the
+current reading's page set share it as well. The global section is not repeated
+inside the breadcrumb because it is already active in the row above. The tree
+in `nav.ts` still carries the levels needed to resolve ownership and links, but
+the renderer never gives each level its own horizontal row.
+
+**Why.** The country screenshot made the navigation read as three steps:
+section, country and page. The repeated `Countries` label added no wayfinding,
+and a separate country row followed by a page row made the header taller than
+the page hierarchy required. Keeping the country context beside its page links
+preserves the reader's location and every destination while making the one
+subnav rule consistent with Method, Capabilities and the country index.
+
+**Costs.** A narrow viewport can wrap the context and page links within the same
+band, so it is a flexible row rather than a guaranteed single line. Layered
+countries still have more choices in that row because their reading is a real
+alternative, and the breadcrumb remains a compact context selector rather than
+a full linear history. The navigation tree is deeper than its visible bands,
+which must stay clear in comments and accessibility labels.
+
+**Overturned by.** Evidence that readers cannot tell country context from page
+links in the shared band, or that the wrapped row becomes harder to operate than
+the previous stacked treatment, would justify restoring separate context and
+page bands. A new kind of country layer with more than one reading or a page
+set that cannot fit the shared row would require a new layout decision rather
+than an exception in a component.
+
+## D92 — The agenda history reaches for the oldest fetched year, but never invents a trend
+
+*Recorded 2026-08-31. Extends D22 and D24.*
+
+**Choice.** World Bank ingestion now requests history from 1976, which is the
+current 50-year look-back. The default momentum spans are ten years, twenty
+years, thirty years and the oldest configured ingest year. The last span is
+derived from `INGEST_FROM_YEAR` and the scoring year rather than hard-coded, so
+the horizon follows the source window. A span is published only when its
+matched basket still has at least two indicators and covers half of the
+country's current observed indicators in that dimension. The agenda chart
+offers the spans present in that country's published output, one dimension at a
+time, on today's 0–100 frame.
+
+The older fetch added 3,611 observations without restating or dropping an
+existing value. In the current 52-country run, a 50-year matched basket exists
+for eight country-dimension cells; Brazil's dimension-level history reaches
+thirty years in Agency, Adaptability and Building, while individual indicators
+can reach further. A missing 50-year dimension line is therefore an evidence
+boundary, not a claim that the country did not change.
+
+**Why.** The request for a longer country timeline is useful, and the raw
+World Bank series contain some pre-1990 history. Extending the fetch gives the
+chart a chance to show a genuine long movement while preserving D22's two
+guards against dataset churn: one current ruler and one basket held constant
+between the endpoints. Keeping ten and twenty years beside the longer views
+also shows when a long line depends on a narrower set of measures.
+
+**Costs.** The observation and country output files grow, and a 50-year span is
+available for only a small minority of country-dimension cells because many
+indicators began later or are periodic. The current frame makes historical
+values comparable but not absolute development levels; values outside it still
+clamp and are counted. A 1976 start is a retrieval boundary, not evidence that
+every country is observed continuously from that year. The chart must continue
+to show gaps rather than fill them.
+
+**Overturned by.** A source window with stable, comparable pre-1976 coverage
+would justify moving the ingest start earlier. Evidence that a longer matched
+trend systematically misleads readers about a discontinuity, or that its
+minimum basket hides more than it reveals, would justify removing the oldest
+default span while retaining the indicator-level histories.
+
+## D93 — The history window reaches 1960, and the fetch must not truncate it
+
+*Recorded 2026-08-31. Supersedes the 1976 retrieval boundary in D92 while
+preserving its matched-basket and no-imputation rules.*
+
+**Choice.** `INGEST_FROM_YEAR` moves to 1960, the earliest year the registered
+World Bank request can usefully ask for across the benchmark's current source
+families. The default momentum spans keep ten, twenty, thirty and fifty years,
+then add the oldest configured window, which is derived from the scoring year
+and the ingest start. The World Bank request page size rises from 3,000 to
+10,000 rows so 52 countries over the longer window arrive in one complete
+response. The ingest report remains authoritative: a source failure is carried
+forward, while a successful response is never silently truncated.
+
+The first corrected 1960 fetch added 4,570 observations and dropped none. The
+previous incomplete attempt had recorded 4,251 apparent drops before the page
+size was corrected; the following run restored them as additions, leaving the
+observation file complete for the successful response. No value was restated.
+
+**Why.** More history gives the agenda a wider context and lets the benchmark
+test whether a dimension's movement survives a longer comparison. The window
+is intentionally wider than the requested fifty years so a source series that
+starts in 1960 can be used at its earliest point. The published dimension trend
+still requires two indicators at both ends and half of the current observed
+basket. A missing long span is evidence coverage, not a zero and not an
+extrapolation.
+
+**Costs.** Many World Bank indicators begin after 1960, so dimension-level
+trends will remain much shorter than individual indicator lines. The files and
+revision log grow, and the ingest boundary may span political or statistical
+breaks that the model cannot identify. A large page size is safe only while the
+country set and requested years fit below it; if they grow beyond that, the
+fetcher needs explicit pagination rather than another silent increase.
+
+**Overturned by.** A registered source release with earlier, comparable data
+would justify moving the window again. Evidence of incomplete responses under
+the current page size, or a reader test showing that the extra context is
+mistaken for an absolute development score, would require pagination or a
+different presentation boundary before extending the range further.
+
+## D94 — Dated agenda evidence anchors a separate history rail
+
+*Recorded 2026-08-31. Extends D20, D22, D35 and D92.*
+
+**Choice.** Every country's agenda evidence record carries its sourced
+`started` year into `ownEvidence`. The agenda history chart filters those
+records to the selected dimension and plots them by year on a separate rail
+aligned to the full configured source window. The capability line remains the
+matched indicator basket and retains its own span, base score, current score,
+confidence and clamp caveat. The event rail is context only: it never enters a
+score, confidence, momentum basket, agenda kind or ranking. Each marker has
+the record title and year in its accessible label, and the visible list below
+the rail keeps the items discoverable without requiring hover.
+
+**Why.** The benchmark already records institutional changes beside missing
+indicators, but the prose list made it hard to see sequence and overlap. A
+separate rail puts a documented delivery next to the period in which the
+quantitative evidence moved without pretending that the delivery caused that
+movement. Keeping it separate also allows an older agenda item to remain useful
+when no dimension-level basket reaches back to its year.
+
+**Costs.** A dated delivery is not a complete history and its start year is not
+the year its effects appeared. Several items can share a year, so markers may
+stack into lanes. The rail can show only evidence records with a sourced start
+year inside the configured window; earlier records stay in the agenda list.
+
+**Overturned by.** Evidence that readers infer causation from proximity alone,
+or that the rail becomes too dense to identify individual records, would justify
+removing it or limiting it to an explicit event-selection view. A comparable
+series that directly measures the documented delivery could move it into the
+capability line under D20, but it would still not make the event marker a score.

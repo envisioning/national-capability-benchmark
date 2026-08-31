@@ -12,7 +12,7 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | Agência | 72,1 | 0,61 (utilizável) | +18,5 em 10 anos, sobre 4 indicadores |
 | Coordenação | 78,6 | 0,26 (fraca) | sem base de tendência |
 | Confiança | 59,2 | 0,16 (muito fraca) | sem base de tendência |
-| Aprendizagem | 32,9 | 0,56 (utilizável) | -1,4 em 10 anos, sobre 3 indicadores |
+| Aprendizagem | 33,4 | 0,56 (utilizável) | -1,5 em 10 anos, sobre 3 indicadores |
 | Experimentação | 4,8 | 0,18 (muito fraca) | -0,7 em 10 anos, sobre 2 indicadores |
 | Adaptação | 68,9 | 0,47 (utilizável) | +2,7 em 10 anos, sobre 4 indicadores, 1 truncados na borda da régua |
 | Construção | 48,2 | 0,54 (utilizável) | 0 em 10 anos, sobre 4 indicadores |
@@ -22,13 +22,13 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 
 Da nota mais baixa para a mais alta. Só entram dimensões com evidência utilizável. Evidência fraca vai para a próxima seção.
 
-### Aprendizagem: 32,9, confiança utilizável
+### Aprendizagem: 33,4, confiança utilizável
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Baseada em 5 indicadores observados.
-- Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,4.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil).
+- Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,6.
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França).
 - Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ### Antecipação: 37,1, confiança utilizável
@@ -37,7 +37,7 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Suécia 83,5, Finlândia 82, Suíça 81,1.
-- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido).
+- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japão); National basic-research funding allocation (China).
 - Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
 ### Construção: 48,2, confiança utilizável
@@ -46,7 +46,7 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Irlanda 75,3, Singapura 71,2, China 64,9.
-- Entregas documentadas em outros países: Pix instant payment system (Brasil); GOV.BR federal identity and service platform (Brasil); X-Road national data exchange layer (Estônia); Pradhan Mantri Jan Dhan Yojana bank accounts (Índia); Electricity supply rebuilt on renewable sources (Uruguai); Plan Ceibal, one connected laptop per child (Uruguai); Sistema Unico de Saude, universal public health system (Brasil); Programa Nacional de Imunizacoes, and its erosion (Brasil); Luz para Todos, rural electrification (Brasil); Bolsa Familia and the single registry behind it (Brasil); Fully electronic national elections (Brasil); Deepwater and pre-salt oil production (Brasil); Seguro Popular, and its abolition (México); Sure Start children's centres, and their erosion (Reino Unido); Grid power, and load shedding (África do Sul); Measles elimination, and its erosion (Estados Unidos); BNDES, the national development bank (Brasil); Casa da Moeda do Brasil, the national mint (Brasil); Housing and Development Board, public housing at scale (Singapura); AFE passenger rail and network contraction (Uruguai); Flamanville 3 EPR, and the erosion of nuclear new-build delivery (França); Phoenix pay system, and its prolonged failure (Canadá); Groningen gas system, and its closure after induced earthquakes (Países Baixos).
+- Entregas documentadas em outros países: Pix instant payment system (Brasil); GOV.BR federal identity and service platform (Brasil); X-Road national data exchange layer (Estônia); Pradhan Mantri Jan Dhan Yojana bank accounts (Índia); Electricity supply rebuilt on renewable sources (Uruguai); Plan Ceibal, one connected laptop per child (Uruguai); Sistema Unico de Saude, universal public health system (Brasil); Programa Nacional de Imunizacoes, and its erosion (Brasil); Luz para Todos, rural electrification (Brasil); Bolsa Familia and the single registry behind it (Brasil); Fully electronic national elections (Brasil); Deepwater and pre-salt oil production (Brasil); Seguro Popular, and its abolition (México); Sure Start children's centres, and their erosion (Reino Unido); Grid power, and load shedding (África do Sul); Measles elimination, and its erosion (Estados Unidos); BNDES, the national development bank (Brasil); Casa da Moeda do Brasil, the national mint (Brasil); Housing and Development Board, public housing at scale (Singapura); AFE passenger rail and network contraction (Uruguai); Flamanville 3 EPR, and the erosion of nuclear new-build delivery (França); Phoenix pay system, and its prolonged failure (Canadá); Groningen gas system, and its closure after induced earthquakes (Países Baixos); DigiD, a shared digital identity rail for public services (Países Baixos); Delta Works, a 43-year national flood-defence programme (Países Baixos); Betuweroute, a freight railway that missed its operating promise (Países Baixos); MijnOverheid, a shared citizen mailbox and data portal (Países Baixos); Fyra V250, a high-speed service withdrawn after a failed launch (Países Baixos); OVpay, nationwide contactless transit payments (Países Baixos); Omgevingswet and the Digital Environment System (Países Baixos); Transantiago, an integrated transport reform with rising subsidy dependence (Chile); 4G road concessions, a national infrastructure portfolio (Colômbia); Reficar, a refinery modernization with a fiscal-liability finding (Colômbia); GIGA School, one learning device per student (Japão); Monju, a fast-breeder programme ended before commercial operation (Japão); Invierte.pe, a national multi-year investment-management system (Peru); Reconstrucción con Cambios, a delayed recovery portfolio (Peru); ICE and a mostly renewable national electricity system (Costa Rica); CCSS universal health-insurance reach (Costa Rica); Metro de Quito, a cross-administration urban rail delivery (Equador); Panama Canal expansion and self-financing operations (Panamá); Metro de Panamá network operations (Panamá); Mi Teleférico urban cable-car network (Bolívia); Industrial lithium carbonate plant below design capacity (Bolívia); Itaipú binational hydropower operations (Paraguai); Metrobús, an unfinished bus rapid transit project (Paraguai); ARSAT-3 satellite programme suspended before launch (Argentina); DPWH national infrastructure delivery and transparency portal (Filipinas); Bataan Nuclear Power Plant, a mothballed megaproject (Filipinas); Trans-Sumatra toll-road programme, still short of its planned network (Indonésia); National expressway build-out in 2024 (Vietnã); Cat Linh–Ha Dong metro, a delayed and over-budget delivery (Vietnã); MRT Putrajaya Line (Malásia); Kuala Lumpur–Singapore high-speed rail, terminated before construction (Malásia); AVE high-speed rail network (Espanha); Castor underground gas storage, and its closure (Espanha); Ostrołęka C coal block, and its abandonment (Polônia); Nya Karolinska Solna public–private hospital project (Suécia); Barsebäck nuclear plant closure and decommissioning (Suécia); New Children's Hospital cost escalation (Irlanda); Rural electrification and near-universal grid coverage (Nicarágua); Gran Misión Vivienda Venezuela's five-million-home milestone (Venezuela).
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística.
 
@@ -123,6 +123,16 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 | Propósito compartilhado | Participação cívica | Participação ativa em associações, sindicatos, partidos e organizações comunitárias. |
+
+## O que a Tailândia construiu e nenhum indicador conta
+
+Estas são mudanças institucionais documentadas em Tailândia que o framework registra como evidência. Elas ficam ao lado da nota e não mudam a nota ou a confiança.
+
+- **PromptPay national instant-payment rail** (Coordenação). Thailand's central bank and commercial-bank network have run PromptPay as a shared instant-payment rail since 2016; by December 2024, 87.5 million proxy numbers were registered and average daily volume reached 66.4 million transactions, with a one-day peak of 89.2 million in September.
+- **Universal Coverage Scheme and the 30-baht health system** (Adaptação). Thailand's National Health Security Office has sustained the tax-funded Universal Coverage Scheme since 2002; in fiscal 2023 it covered more than 47.2 million people and contracted 17,247 public and private health units to provide care.
+- **National Digital ID framework** (Adaptação). Thailand's Digital ID Framework aligned government and private identity providers around common standards in its 2022–2024 first phase; the Electronic Transactions Development Agency reports at least 113 million users across the major ThaiD, Tang Rat, Paotang and NDID platforms and services.
+- **T-Alert national cell-broadcast warning system** (Adaptação). Thailand launched T-Alert in September 2025 as a nationwide cell-broadcast warning system: it covers eight hazard categories, was built with the disaster agency, digital ministry, telecom regulator and AIS, True and NT, and followed three staged tests in 2025 before use in real floods and other incidents.
+- **Hopewell elevated road-and-rail concession, and its termination** (Construção). Thailand approved Hopewell's 60-kilometre Bangkok Elevated Road and Train System concession in 1991, but work stalled at 14 percent completion for more than nine months during the 1997 property-market collapse and the government terminated the concession in spring 1998.
 
 ## Contribua
 

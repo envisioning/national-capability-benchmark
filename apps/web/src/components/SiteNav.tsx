@@ -17,9 +17,8 @@ import {
 } from '@/lib/nav'
 
 /* Navigation carries label type, the same 12px the brand gives every button
-   and every table header. The crumb band and the tab strip already sit at that
-   size, so all three levels of the tree read as one system and the lime
-   underline, not a font size, says where the reader is. */
+   and every table header. The contextual trail and page tabs share one band,
+   so the lime underline, not a stack of rows, says where the reader is. */
 const SECTION_LINK =
   'inline-flex items-center gap-1.5 rounded-md px-3 py-2 text-xs font-medium text-[var(--muted)] transition-colors duration-200 hover:bg-[var(--surface-sunken)] hover:text-[var(--foreground)]'
 const SECTION_CURRENT =
@@ -433,10 +432,6 @@ export function HeaderNav() {
 
   const sections = rows[0]
   if (!sections) return null
-  /* A trail of one crumb repeats the section already underlined above it, so
-     it carries nothing. Method and Capabilities go straight to their tabs. */
-  const full: NavRow[] = rows.slice(0, -1)
-  const trail: NavRow[] = full.length > 1 ? full : []
 
   return (
     <div className="contents">
@@ -468,35 +463,15 @@ export function HeaderNav() {
         </div>
       ) : null}
 
-      {trail.length > 0 ? (
-        <nav aria-label="Breadcrumb" className="basis-full">
-          <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 md:justify-end">
-            {trail.map((row, index) => (
-              <li key={row.parent?.href ?? 'root'} className="flex items-center gap-x-2">
-                {index > 0 ? (
-                  <span aria-hidden className="text-[var(--muted)] opacity-40">
-                    /
-                  </span>
-                ) : null}
-                {/* The sections are drawn in full above, so the trail names only
-                    the current one. Every level below is a set of alternatives
-                    and the crumb offers all of them. */}
-                <Crumb
-                  nodes={index === 0 ? (row.active ? [row.active] : []) : row.entries}
-                  active={row.active}
-                />
-              </li>
-            ))}
-          </ol>
-        </nav>
-      ) : null}
     </div>
   )
 }
 
 /**
- * The pages of wherever the reader is, as a tab strip on its own rule under
- * the header. It is the deepest level of the same walk `HeaderNav` renders.
+ * The one contextual band beneath the global sections. Country context and
+ * reading choices stay beside the deepest page tabs instead of taking rows of
+ * their own, so a country page has one subnav row rather than a breadcrumb row
+ * followed by a tab row.
  */
 export function SectionTabs() {
   const pathname = usePathname()
@@ -504,32 +479,53 @@ export function SectionTabs() {
   if (rows.length < 2) return null
   const tabs = rows[rows.length - 1]
   if (!tabs) return null
+  /* The first row is the global sections and the last is the page set. Any
+     rows between them are contextual country/reading choices. The section is
+     already visible above, so it never repeats in this trail. */
+  const trail = rows.length > 2 ? rows.slice(1, -1) : []
 
   return (
     <div className="w-full border-b border-[var(--rule)]">
-      <nav
-        aria-label={tabs.parent?.label ?? 'Pages'}
-        className="m-auto max-w-6xl px-6 sm:px-12"
-      >
-        {/* The sections sit at the right edge from md up, so every level below
-            them hangs from the same edge and the eye tracks one column down.
-            Below md the sections fold into the sheet and there is no right edge
-            to agree with, so the tabs read from the left. */}
-        <ul className="-mb-px flex flex-wrap gap-x-6 pt-3 md:justify-end">
-          {tabs.entries.map((node) => (
-            <li key={node.href}>
-              <Link
-                href={node.href}
-                lang={node.lang}
-                aria-current={node === tabs.active ? 'page' : undefined}
-                className={node === tabs.active ? TAB_CURRENT : TAB}
-              >
-                {node.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <div className="m-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-2 px-6 sm:px-12">
+        {trail.length > 0 ? (
+          <nav aria-label="Breadcrumb" className="flex min-w-0 flex-1 py-3">
+            <ol className="flex flex-wrap items-center gap-x-2 gap-y-1">
+              {trail.map((row, index) => (
+                <li key={row.parent?.href ?? 'root'} className="flex items-center gap-x-2">
+                  {index > 0 ? (
+                    <span aria-hidden className="text-[var(--muted)] opacity-40">
+                      /
+                    </span>
+                  ) : null}
+                  <Crumb
+                    nodes={index === 0 ? (row.active ? [row.active] : []) : row.entries}
+                    active={row.active}
+                  />
+                </li>
+              ))}
+            </ol>
+          </nav>
+        ) : null}
+
+        <nav aria-label={tabs.parent?.label ?? 'Pages'} className="ml-auto text-right">
+          {/* The page set stays at the right edge from md up. On narrow screens
+              the surrounding flex row wraps naturally below the context. */}
+          <ul className="-mb-px flex flex-wrap gap-x-6 pt-3 md:justify-end">
+            {tabs.entries.map((node) => (
+              <li key={node.href}>
+                <Link
+                  href={node.href}
+                  lang={node.lang}
+                  aria-current={node === tabs.active ? 'page' : undefined}
+                  className={node === tabs.active ? TAB_CURRENT : TAB}
+                >
+                  {node.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
     </div>
   )
 }

@@ -8,6 +8,9 @@ import {
   CountryFile,
   IndexFile,
   IndicatorAcrossCountries,
+  SubnationalFile,
+  SubnationalIndexFile,
+  SUBNATIONAL_SERIES,
 } from '../model/index.js'
 
 /*
@@ -24,6 +27,8 @@ export function jsonSchemas(): Record<string, object> {
     'index.schema.json': zodToJsonSchema(IndexFile, 'IndexFile'),
     'country.schema.json': zodToJsonSchema(CountryFile, 'CountryFile'),
     'indicator.schema.json': zodToJsonSchema(IndicatorAcrossCountries, 'IndicatorAcrossCountries'),
+    'subnational.schema.json': zodToJsonSchema(SubnationalFile, 'SubnationalFile'),
+    'subnational-index.schema.json': zodToJsonSchema(SubnationalIndexFile, 'SubnationalIndexFile'),
   }
 }
 
@@ -94,6 +99,24 @@ export function buildDataPackage(indicatorIds: string[], generatedAt: string): o
             ...DIMENSIONS.map((d) => ({ name: d, type: 'number' })),
           ],
         },
+      },
+      {
+        name: 'subnational-index',
+        path: 'subnational/index.json',
+        title: 'Published subnational series and their diagnostic summaries',
+        format: 'json',
+        mediatype: 'application/json',
+        schema: 'schema/subnational-index.schema.json',
+      },
+      {
+        name: 'subnational',
+        path: SUBNATIONAL_SERIES.map((series) =>
+          `subnational/${series.iso3}/${series.indicatorId}.json`,
+        ),
+        title: 'Subnational values beside the national comparison layer; never scored',
+        format: 'json',
+        mediatype: 'application/json',
+        schema: 'schema/subnational.schema.json',
       },
     ],
   }

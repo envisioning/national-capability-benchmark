@@ -12,7 +12,7 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 | Agency | 92.6 | 0.5 (usable) | +7.9 over 10 years using 3 indicators |
 | Coordination | 99.6 | 0.14 (very thin) | no trend |
 | Trust | 64.6 | 0.16 (very thin) | no trend |
-| Learning | 49.5 | 0.45 (usable) | -0.5 over 10 years using 2 indicators |
+| Learning | 49.8 | 0.45 (usable) | -0.4 over 10 years using 2 indicators |
 | Experimentation | 55.8 | 0.39 (thin) | +3.2 over 10 years using 2 indicators |
 | Adaptability | 76.2 | 0.48 (usable) | +6 over 10 years using 4 indicators |
 | Building | 58.4 | 0.52 (usable) | +2.4 over 10 years using 4 indicators |
@@ -22,13 +22,13 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 
 These are the lowest scores with usable evidence. Thin evidence appears below.
 
-### Learning: 49.5, confidence usable
+### Learning: 49.8, confidence usable
 
 How effectively does the country acquire, distribute, and update knowledge?
 
 - Uses 5 observed indicators.
-- Highest usable scores: Finland 77.9, Australia 70.3, United Kingdom 68.4.
-- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); CAPES, federal postgraduate funding (Brazil); INEP, the standing education statistics institution (Brazil).
+- Highest usable scores: Finland 77.9, Australia 70.3, United Kingdom 68.6.
+- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); CAPES, federal postgraduate funding (Brazil); INEP, the standing education statistics institution (Brazil); Kartu Prakerja, a national lifelong-learning delivery system (Indonesia); Compte personnel de formation (France).
 - Missing indicators: Adult learning participation, Research citation impact.
 
 ## What to measure first
@@ -112,6 +112,7 @@ These scores are at least 50 with usable evidence. They still need watching.
 Documented deliveries linked to missing indicators. They do not affect scores or confidence.
 
 - **Measles elimination, and its erosion** (Building). The United States eliminated endemic measles transmission by 2000 through school-entry vaccination requirements, and falling coverage brought 2,777 confirmed cases by August 2026, the most since 1991, against 285 in all of 2024.
+- **Federal funding gaps and the 2019 shutdown** (Shared Purpose). The Congressional Research Service records 20 federal funding-gap shutdowns with at least one full day between FY1977 and FY2019, including the 35-day partial shutdown from 21 December 2018 to 25 January 2019, the longest in the period it surveys.
 
 ## Contribute
 

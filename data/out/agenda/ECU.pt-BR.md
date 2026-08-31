@@ -12,7 +12,7 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | Agência | 38,7 | 0,61 (utilizável) | +18 em 10 anos, sobre 4 indicadores |
 | Coordenação | 70,8 | 0,24 (muito fraca) | sem base de tendência |
 | Confiança | 37,2 | 0,16 (muito fraca) | sem base de tendência |
-| Aprendizagem | 47 | 0,55 (utilizável) | +6,3 em 10 anos, sobre 2 indicadores |
+| Aprendizagem | 47,4 | 0,55 (utilizável) | +5,8 em 10 anos, sobre 2 indicadores |
 | Experimentação | 6 | 0,18 (muito fraca) | +1,5 em 10 anos, sobre 2 indicadores |
 | Adaptação | 52,8 | 0,47 (utilizável) | +0,5 em 10 anos, sobre 4 indicadores |
 | Construção | 27 | 0,54 (utilizável) | -0,6 em 10 anos, sobre 4 indicadores |
@@ -28,7 +28,7 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Irlanda 75,3, Singapura 71,2, China 64,9.
-- Entregas documentadas em outros países: Pix instant payment system (Brasil); GOV.BR federal identity and service platform (Brasil); X-Road national data exchange layer (Estônia); Pradhan Mantri Jan Dhan Yojana bank accounts (Índia); Electricity supply rebuilt on renewable sources (Uruguai); Plan Ceibal, one connected laptop per child (Uruguai); Sistema Unico de Saude, universal public health system (Brasil); Programa Nacional de Imunizacoes, and its erosion (Brasil); Luz para Todos, rural electrification (Brasil); Bolsa Familia and the single registry behind it (Brasil); Fully electronic national elections (Brasil); Deepwater and pre-salt oil production (Brasil); Seguro Popular, and its abolition (México); Sure Start children's centres, and their erosion (Reino Unido); Grid power, and load shedding (África do Sul); Measles elimination, and its erosion (Estados Unidos); BNDES, the national development bank (Brasil); Casa da Moeda do Brasil, the national mint (Brasil); Housing and Development Board, public housing at scale (Singapura); AFE passenger rail and network contraction (Uruguai); Flamanville 3 EPR, and the erosion of nuclear new-build delivery (França); Phoenix pay system, and its prolonged failure (Canadá); Groningen gas system, and its closure after induced earthquakes (Países Baixos).
+- Entregas documentadas em outros países: Pix instant payment system (Brasil); GOV.BR federal identity and service platform (Brasil); X-Road national data exchange layer (Estônia); Pradhan Mantri Jan Dhan Yojana bank accounts (Índia); Electricity supply rebuilt on renewable sources (Uruguai); Plan Ceibal, one connected laptop per child (Uruguai); Sistema Unico de Saude, universal public health system (Brasil); Programa Nacional de Imunizacoes, and its erosion (Brasil); Luz para Todos, rural electrification (Brasil); Bolsa Familia and the single registry behind it (Brasil); Fully electronic national elections (Brasil); Deepwater and pre-salt oil production (Brasil); Seguro Popular, and its abolition (México); Sure Start children's centres, and their erosion (Reino Unido); Grid power, and load shedding (África do Sul); Measles elimination, and its erosion (Estados Unidos); BNDES, the national development bank (Brasil); Casa da Moeda do Brasil, the national mint (Brasil); Housing and Development Board, public housing at scale (Singapura); AFE passenger rail and network contraction (Uruguai); Flamanville 3 EPR, and the erosion of nuclear new-build delivery (França); Phoenix pay system, and its prolonged failure (Canadá); Groningen gas system, and its closure after induced earthquakes (Países Baixos); DigiD, a shared digital identity rail for public services (Países Baixos); Delta Works, a 43-year national flood-defence programme (Países Baixos); Betuweroute, a freight railway that missed its operating promise (Países Baixos); MijnOverheid, a shared citizen mailbox and data portal (Países Baixos); Fyra V250, a high-speed service withdrawn after a failed launch (Países Baixos); OVpay, nationwide contactless transit payments (Países Baixos); Omgevingswet and the Digital Environment System (Países Baixos); Transantiago, an integrated transport reform with rising subsidy dependence (Chile); 4G road concessions, a national infrastructure portfolio (Colômbia); Reficar, a refinery modernization with a fiscal-liability finding (Colômbia); GIGA School, one learning device per student (Japão); Monju, a fast-breeder programme ended before commercial operation (Japão); Invierte.pe, a national multi-year investment-management system (Peru); Reconstrucción con Cambios, a delayed recovery portfolio (Peru); ICE and a mostly renewable national electricity system (Costa Rica); CCSS universal health-insurance reach (Costa Rica); Panama Canal expansion and self-financing operations (Panamá); Metro de Panamá network operations (Panamá); Mi Teleférico urban cable-car network (Bolívia); Industrial lithium carbonate plant below design capacity (Bolívia); Itaipú binational hydropower operations (Paraguai); Metrobús, an unfinished bus rapid transit project (Paraguai); ARSAT-3 satellite programme suspended before launch (Argentina); DPWH national infrastructure delivery and transparency portal (Filipinas); Bataan Nuclear Power Plant, a mothballed megaproject (Filipinas); Trans-Sumatra toll-road programme, still short of its planned network (Indonésia); National expressway build-out in 2024 (Vietnã); Cat Linh–Ha Dong metro, a delayed and over-budget delivery (Vietnã); MRT Putrajaya Line (Malásia); Kuala Lumpur–Singapore high-speed rail, terminated before construction (Malásia); Hopewell elevated road-and-rail concession, and its termination (Tailândia); AVE high-speed rail network (Espanha); Castor underground gas storage, and its closure (Espanha); Ostrołęka C coal block, and its abandonment (Polônia); Nya Karolinska Solna public–private hospital project (Suécia); Barsebäck nuclear plant closure and decommissioning (Suécia); New Children's Hospital cost escalation (Irlanda); Rural electrification and near-universal grid coverage (Nicarágua); Gran Misión Vivienda Venezuela's five-million-home milestone (Venezuela).
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística.
 
@@ -38,16 +38,16 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 
 - Baseada em 6 indicadores observados.
 - Maiores notas utilizáveis: Estados Unidos 92,6, Austrália 89,8, Reino Unido 87,5.
-- Entregas documentadas em outros países: SIBRATEC, the documented innovation-centre network (Brasil).
+- Entregas documentadas em outros países: SIBRATEC, the documented innovation-centre network (Brasil); Singapore's national ICT-skills measurement and baseline (Singapura).
 - Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
 
-### Aprendizagem: 47, confiança utilizável
+### Aprendizagem: 47,4, confiança utilizável
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Baseada em 5 indicadores observados.
-- Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,4.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil).
+- Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,6.
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França).
 - Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ## Dimensões para medir primeiro
@@ -129,6 +129,16 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 | Propósito compartilhado | Participação cívica | Participação ativa em associações, sindicatos, partidos e organizações comunitárias. |
+
+## O que o Equador construiu e nenhum indicador conta
+
+Estas são mudanças institucionais documentadas em Equador que o framework registra como evidência. Elas ficam ao lado da nota e não mudam a nota ou a confiança.
+
+- **Dollarization as an emergency monetary redesign** (Adaptação). Ecuador adopted the US dollar as legal tender in January 2000 during a banking and currency crisis; a Central Bank review reports inflation falling from 96.1% in 2000 to below 8% in 2003 while the new regime removed the exchange-rate tool.
+- **2016 earthquake national emergency coordination** (Adaptação). After Ecuador's 7.8-magnitude earthquake in April 2016, the national emergency committee reported 17 shelters and 59 temporary shelters active, assisting 25,931 people while mobile health units and security forces were deployed across affected provinces.
+- **Metro de Quito, a cross-administration urban rail delivery** (Construção). Quito opened the first line of its metro in December 2023 after a multi-administration build, and the operator reported more than 54 million passenger trips during 2024 with uninterrupted service.
+- **SRI electronic invoicing at economy-wide scale** (Coordenação). Ecuador's tax authority received approximately 3.299 billion electronic receipts from January through December 2024, using a legally mandated, digitally signed rail that connects private taxpayers to the public tax system.
+- **Crédito de Desarrollo Humano for beneficiary-led businesses** (Coordenação). Ecuador's Ministry of Economic and Social Inclusion reported delivering 44,622 Crédito de Desarrollo Humano loans in 2024, including 6,622 to Indigenous people, turning a social-transfer registry into small-enterprise finance and market-access support.
 
 ## Contribua
 

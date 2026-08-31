@@ -12,7 +12,7 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | Agência | 74,8 | 0,61 (utilizável) | +7,7 em 10 anos, sobre 4 indicadores |
 | Coordenação | 94 | 0,24 (muito fraca) | sem base de tendência |
 | Confiança | 56,2 | 0,16 (muito fraca) | sem base de tendência |
-| Aprendizagem | 60,9 | 0,54 (utilizável) | sem base de tendência |
+| Aprendizagem | 61,2 | 0,54 (utilizável) | sem base de tendência |
 | Experimentação | 55 | 0,18 (muito fraca) | +1,6 em 10 anos, sobre 2 indicadores |
 | Adaptação | 76,1 | 0,48 (utilizável) | +9 em 10 anos, sobre 4 indicadores |
 | Construção | 53,1 | 0,54 (utilizável) | -5 em 10 anos, sobre 4 indicadores |
@@ -60,7 +60,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 - Adaptação: 76,1, confiança utilizável
 - Agência: 74,8, confiança utilizável
 - Antecipação: 61,3, confiança utilizável
-- Aprendizagem: 60,9, confiança utilizável
+- Aprendizagem: 61,2, confiança utilizável
 - Construção: 53,1, confiança utilizável
 
 ## Agenda de medição
@@ -100,6 +100,8 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 Entregas documentadas como evidência. Elas nunca afetam as notas ou a confiança.
 
 - **Flamanville 3 EPR, and the erosion of nuclear new-build delivery** (Construção). France's Flamanville 3 EPR took about 16.5 years from construction beginning in September 2007 to completion in early 2024, and its commissioning was the country's first new nuclear reactor since Civaux 2 in 1999, a 25-year gap.
+- **Compte personnel de formation** (Aprendizagem). France's Compte personnel de formation generated 1,387,500 training starts in 2024, with 1,232,100 people entering a CPF-funded course through the national account and platform.
+- **France's long-term unemployment decline** (Adaptação). France's national statistics office Insee reported that people unemployed for at least one year represented 23.3% of all unemployed people in 2024, while the long-term unemployment rate was 1.7% of the active population, down from 3.1% in 2015.
 
 ## Contribua
 

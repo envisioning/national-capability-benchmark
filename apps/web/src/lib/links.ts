@@ -178,18 +178,6 @@ export function agendaHrefInLanguage(iso3: string, lang: Lang): string | null {
   return layer && section ? layerSectionHref(layer, section) : null
 }
 
-/** Embeddable radar for one country profile. */
-export const embedCountryHref = (iso3: string): string =>
-  `/embed/country/${iso3.toUpperCase()}`
-
-/** Embeddable distribution for one country on one capability. */
-export const embedCompareHref = (iso3: string, dimension: Dimension): string =>
-  `/embed/compare/${iso3.toUpperCase()}/${dimension}`
-
-/** Embeddable three-part agenda for one country. */
-export const embedAgendaHref = (iso3: string): string =>
-  `/embed/agenda/${iso3.toUpperCase()}`
-
 /** The registry row for one indicator, declared gaps included. */
 export const indicatorHref = (id: string): string => `/indicators#${id}`
 

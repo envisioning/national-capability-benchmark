@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { COUNTRY_NAMES, EVIDENCE_STATUS_LABELS, INDICATORS_BY_ID } from '@ncb/core'
 import type { EvidenceRecord } from '@ncb/core'
 import { Icon } from '@/components/Icon'
-import { Card, CountryLabel } from '@/components/ui'
+import { Card, CountryLabel, Meta } from '@/components/ui'
 import { countryProfileHref, evidenceHref } from '@/lib/links'
 
 /**
@@ -17,16 +17,18 @@ import { countryProfileHref, evidenceHref } from '@/lib/links'
 export function PatternMeta({ record }: { record: EvidenceRecord }) {
   const def = INDICATORS_BY_ID[record.indicatorId]
   return (
-    <div className="flex flex-wrap items-baseline gap-x-3 text-xs text-[var(--muted)]">
-      <Link
-        href={countryProfileHref(record.iso3)}
-        className="font-medium underline underline-offset-4"
-      >
-        <CountryLabel iso3={record.iso3} name={COUNTRY_NAMES[record.iso3] ?? record.iso3} />
-      </Link>
-      <span>since {record.started}</span>
-      <span>{EVIDENCE_STATUS_LABELS[record.status]}</span>
-      <span>bears on {def?.name ?? record.indicatorId}</span>
+    <div className="flex flex-wrap items-center gap-2">
+      <Meta className="bg-[var(--surface)]">
+        <Link
+          href={countryProfileHref(record.iso3)}
+          className="font-medium underline underline-offset-4"
+        >
+          <CountryLabel iso3={record.iso3} name={COUNTRY_NAMES[record.iso3] ?? record.iso3} />
+        </Link>
+      </Meta>
+      <Meta className="bg-[var(--surface)]">since {record.started}</Meta>
+      <Meta className="bg-[var(--surface)]">{EVIDENCE_STATUS_LABELS[record.status]}</Meta>
+      <Meta className="bg-[var(--surface)]">bears on {def?.name ?? record.indicatorId}</Meta>
     </div>
   )
 }

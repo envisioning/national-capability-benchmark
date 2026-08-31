@@ -3,8 +3,8 @@
   "name": "national-capability-benchmark",
   "title": "NCB, the National Capability Benchmark",
   "description": "A prototype that measures what a country can do, separately from how rich it is. Nine capability dimensions scored from public data, each with a separate confidence number.",
-  "version": "4.5.0",
-  "created": "2026-08-31T07:33:54.907Z",
+  "version": "5.1.0",
+  "created": "2026-08-31T17:46:08.625Z",
   "homepage": "https://github.com/envisioning/national-capability-benchmark",
   "licenses": [
     {
@@ -216,6 +216,24 @@
           }
         ]
       }
+    },
+    {
+      "name": "subnational-index",
+      "path": "subnational/index.json",
+      "title": "Published subnational series and their diagnostic summaries",
+      "format": "json",
+      "mediatype": "application/json",
+      "schema": "schema/subnational-index.schema.json"
+    },
+    {
+      "name": "subnational",
+      "path": [
+        "subnational/BRA/income_inequality.json"
+      ],
+      "title": "Subnational values beside the national comparison layer; never scored",
+      "format": "json",
+      "mediatype": "application/json",
+      "schema": "schema/subnational.schema.json"
     }
   ]
 }

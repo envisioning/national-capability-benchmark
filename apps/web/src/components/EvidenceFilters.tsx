@@ -10,7 +10,7 @@ import {
 } from '@ncb/core'
 import type { Dimension, EvidenceRecord } from '@ncb/core'
 import { Icon } from '@/components/Icon'
-import { Card, controlClass } from '@/components/ui'
+import { Button, Card, controlClass } from '@/components/ui'
 import { evidenceDimension, filterEvidence } from '@/lib/evidence'
 import { NO_PATTERN_FILTERS, patternFiltersQuery, type PatternFilters } from '@/lib/links'
 
@@ -48,6 +48,16 @@ export type EvidenceFilterState = {
   filtered: boolean
 }
 
+/** Optional sorting controls that share the filter panel's menu treatment. */
+export type EvidenceSortState = {
+  value: string
+  options: Array<{ key: string; label: string }>
+  direction: string
+  nextDirection: string
+  onChange: (key: string) => void
+  onDirection: () => void
+}
+
 /**
  * Filter state that writes itself into the address.
  *
@@ -81,12 +91,14 @@ export function useEvidenceFilters(
 export function EvidenceFilters({
   records,
   state,
+  sort,
   /** What one row is called, so the count reads in the surface's own words. */
   noun = 'delivery',
   nounPlural = 'deliveries',
 }: {
   records: EvidenceRecord[]
   state: EvidenceFilterState
+  sort?: EvidenceSortState
   noun?: string
   nounPlural?: string
 }) {
@@ -191,6 +203,34 @@ export function EvidenceFilters({
           ) : null}
         </span>
       </div>
+      {sort ? (
+        <div className="mt-4 flex flex-wrap items-center gap-3 border-t border-[var(--rule)] pt-4 text-xs">
+          <label htmlFor="evidence-sort" className="text-[var(--muted)]">
+            Sort by
+          </label>
+          <select
+            id="evidence-sort"
+            value={sort.value}
+            onChange={(event) => sort.onChange(event.target.value)}
+            className={CONTROL}
+          >
+            {sort.options.map((option) => (
+              <option key={option.key} value={option.key}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+          <Button
+            type="button"
+            size="sm"
+            variant="ghost"
+            onClick={sort.onDirection}
+            aria-label={`Sort ${sort.options.find((option) => option.key === sort.value)?.label.toLowerCase() ?? 'results'} ${sort.nextDirection}`}
+          >
+            {sort.direction}
+          </Button>
+        </div>
+      ) : null}
     </Card>
   )
 }

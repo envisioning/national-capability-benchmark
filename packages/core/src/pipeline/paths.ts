@@ -16,7 +16,7 @@ export const SNAPSHOT_DIR = resolve(OBSERVATIONS_DIR, 'snapshots')
 export const OUT_DIR = resolve(DATA_DIR, 'out')
 export const COUNTRY_OUT_DIR = resolve(OUT_DIR, 'countries')
 export const INDICATOR_OUT_DIR = resolve(OUT_DIR, 'indicators')
-export const BR_SUBNATIONAL_OUT_DIR = resolve(OUT_DIR, 'br-subnational')
+export const SUBNATIONAL_OUT_DIR = resolve(OUT_DIR, 'subnational')
 export const AGENDA_OUT_DIR = resolve(OUT_DIR, 'agenda')
 export const INSTITUTION_OUT_DIR = resolve(OUT_DIR, 'institutions')
 export const SCHEMA_OUT_DIR = resolve(OUT_DIR, 'schema')
@@ -39,6 +39,7 @@ export const FILES = {
   leverage: resolve(OUT_DIR, 'leverage.json'),
   residual: resolve(OUT_DIR, 'residual.json'),
   datapackage: resolve(OUT_DIR, 'datapackage.json'),
+  subnationalIndex: resolve(SUBNATIONAL_OUT_DIR, 'index.json'),
 }
 
 /** One country-specific institutional network. */
@@ -56,9 +57,9 @@ export function indicatorFile(id: string): string {
   return resolve(INDICATOR_OUT_DIR, `${id}.json`)
 }
 
-/** One corroboration fixture per subnational indicator. */
-export function brSubnationalFile(indicatorId: string): string {
-  return resolve(BR_SUBNATIONAL_OUT_DIR, `${indicatorId}.json`)
+/** One subnational file per country and indicator. */
+export function subnationalFile(iso3: string, indicatorId: string): string {
+  return resolve(SUBNATIONAL_OUT_DIR, iso3.toUpperCase(), `${indicatorId}.json`)
 }
 
 /** The language-neutral agenda, one file per country. See D35. */

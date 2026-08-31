@@ -12,7 +12,7 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | Agência | 71 | 0,61 (utilizável) | +1,9 em 10 anos, sobre 4 indicadores |
 | Coordenação | 64,1 | 0,24 (muito fraca) | sem base de tendência |
 | Confiança | 65,3 | 0,16 (muito fraca) | sem base de tendência |
-| Aprendizagem | 47,2 | 0,52 (utilizável) | +2,1 em 10 anos, sobre 2 indicadores |
+| Aprendizagem | 47,6 | 0,52 (utilizável) | +2,1 em 10 anos, sobre 2 indicadores |
 | Experimentação | 66,7 | 0,18 (muito fraca) | -6,8 em 10 anos, sobre 2 indicadores |
 | Adaptação | 86,1 | 0,47 (utilizável) | +8,6 em 10 anos, sobre 4 indicadores |
 | Construção | 50,2 | 0,54 (utilizável) | -2,1 em 10 anos, sobre 4 indicadores |
@@ -22,13 +22,13 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 
 Da nota mais baixa para a mais alta. Só entram dimensões com evidência utilizável. Evidência fraca vai para a próxima seção.
 
-### Aprendizagem: 47,2, confiança utilizável
+### Aprendizagem: 47,6, confiança utilizável
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Baseada em 5 indicadores observados.
-- Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,4.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil).
+- Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,6.
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França).
 - Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ## Dimensões para medir primeiro
@@ -106,6 +106,17 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 | Propósito compartilhado | Participação cívica | Participação ativa em associações, sindicatos, partidos e organizações comunitárias. |
+
+## O que o Japão construiu e nenhum indicador conta
+
+Estas são mudanças institucionais documentadas em Japão que o framework registra como evidência. Elas ficam ao lado da nota e não mudam a nota ou a confiança.
+
+- **My Number Card, a national identity rail extended into services** (Adaptação). By July 2024 Japan reported 93.08 million My Number Cards held, about 75% of the population; 73.71 million had valid health-insurance-card registrations in June 2024, while 566 businesses used the public-key identity infrastructure.
+- **GIGA School, one learning device per student** (Construção). Japan's MEXT GIGA School programme reached a one-device-per-student environment in 1,810 of 1,812 local school authorities (99.9%) by the end of fiscal 2022, with the remaining two scheduled to finish during fiscal 2023.
+- **Tōhoku reconstruction, a decade-long recovery programme** (Adaptação). After the 2011 earthquake and tsunami, Japan completed the planned 29,654 public-housing units by December 2020, completed 18,226 higher-ground residential-land units, opened about 570 kilometres of reconstruction roads by December 2021 and restored all damaged railways by March 2020.
+- **Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon** (Antecipação). After the 2011 Fukushima Daiichi accident, Japan adopted a government-led mid-and-long-term decommissioning roadmap and set completion at roughly 30–40 years after cold shutdown, treating the work as continuous risk reduction rather than a one-off rebuild.
+- **Monju, a fast-breeder programme ended before commercial operation** (Construção). Japan decided in December 2016 not to restart the Monju prototype fast-breeder reactor and moved to decommissioning after a 1995 sodium leak, a 2010 restart followed by equipment trouble and 2012 inspection failures; the approved plan targets roughly 30 years of decommissioning.
+- **Volunteer fire corps, and its membership erosion** (Propósito compartilhado). Japan's Fire and Disaster Management Agency reported 732,223 volunteer fire-corps members on 1 April 2025, a fall of 14,458 in one year in the local disaster-response corps that it describes as a core of community resilience.
 
 ## Contribua
 

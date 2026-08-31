@@ -1,0 +1,90 @@
+{
+  "$ref": "#/definitions/SubnationalIndexFile",
+  "definitions": {
+    "SubnationalIndexFile": {
+      "type": "object",
+      "properties": {
+        "generatedAt": {
+          "type": "string"
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "indicatorId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "iso3": {
+                "type": "string",
+                "minLength": 3,
+                "maxLength": 3
+              },
+              "path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "geometry": {
+                "type": "string",
+                "enum": [
+                  "state",
+                  "province",
+                  "region",
+                  "municipality"
+                ]
+              },
+              "year": {
+                "type": "integer"
+              },
+              "reconciliation": {
+                "type": "string",
+                "enum": [
+                  "aggregate",
+                  "independent",
+                  "context_only"
+                ]
+              },
+              "denominator": {
+                "type": "string",
+                "enum": [
+                  "population",
+                  "equal",
+                  "none"
+                ]
+              },
+              "residual": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "units": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "indicatorId",
+              "iso3",
+              "path",
+              "geometry",
+              "year",
+              "reconciliation",
+              "denominator",
+              "residual",
+              "units"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "generatedAt",
+        "files"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

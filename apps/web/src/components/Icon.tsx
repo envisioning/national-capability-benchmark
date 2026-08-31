@@ -49,10 +49,6 @@ export type IconName =
   | 'handshake'
   | 'network'
   | 'shuffle'
-  | 'signal'
-  | 'signal-high'
-  | 'signal-low'
-  | 'signal-medium'
   | 'telescope'
   | 'languages'
   | 'calendar'
@@ -97,10 +93,6 @@ const PATHS: Record<IconName, string> = {
   'handshake': `<path d='m11 17 2 2a1 1 0 1 0 3-3' /> <path d='m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4' /> <path d='m21 3 1 11h-2' /> <path d='M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3' /> <path d='M3 4h8' />`,
   'network': `<rect x='16' y='16' width='6' height='6' rx='1' /> <rect x='2' y='16' width='6' height='6' rx='1' /> <rect x='9' y='2' width='6' height='6' rx='1' /> <path d='M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3' /> <path d='M12 12V8' />`,
   'shuffle': `<path d='m18 14 4 4-4 4' /> <path d='m18 2 4 4-4 4' /> <path d='M2 18h1.973a4 4 0 0 0 3.3-1.7l5.454-8.6a4 4 0 0 1 3.3-1.7H22' /> <path d='M2 6h1.972a4 4 0 0 1 3.6 2.2' /> <path d='M22 18h-6.041a4 4 0 0 1-3.3-1.8l-.359-.45' />`,
-  'signal': `<path d='M2 20h.01' /> <path d='M7 20v-4' /> <path d='M12 20v-8' /> <path d='M17 20V8' /> <path d='M22 4v16' />`,
-  'signal-high': `<path d='M2 20h.01' /> <path d='M7 20v-4' /> <path d='M12 20v-8' /> <path d='M17 20V8' />`,
-  'signal-low': `<path d='M2 20h.01' /> <path d='M7 20v-4' />`,
-  'signal-medium': `<path d='M2 20h.01' /> <path d='M7 20v-4' /> <path d='M12 20v-8' />`,
   'telescope': `<path d='m10.065 12.493-6.18 1.318a.934.934 0 0 1-1.108-.702l-.537-2.15a1.07 1.07 0 0 1 .691-1.265l13.504-4.44' /> <path d='m13.56 11.747 4.332-.924' /> <path d='m16 21-3.105-6.21' /> <path d='M16.485 5.94a2 2 0 0 1 1.455-2.425l1.09-.272a1 1 0 0 1 1.212.727l1.515 6.06a1 1 0 0 1-.727 1.213l-1.09.272a2 2 0 0 1-2.425-1.455z' /> <path d='m6.158 8.633 1.114 4.456' /> <path d='m8 21 3.105-6.21' /> <circle cx='12' cy='13' r='2' />`,
 }
 
@@ -201,11 +193,4 @@ export const CONTRIBUTION_ICON = {
   code: 'plug',
   layer: 'globe',
   fund: 'handshake',
-} as const satisfies Record<string, IconName>
-
-export const CONFIDENCE_ICON = {
-  very_thin: 'signal-low',
-  thin: 'signal-medium',
-  usable: 'signal-high',
-  good: 'signal',
 } as const satisfies Record<string, IconName>

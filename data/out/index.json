@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-31T07:33:54.907Z",
-  "version": "4.5.0",
+  "generatedAt": "2026-08-31T17:46:08.625Z",
+  "version": "5.1.0",
   "countries": [
     {
       "country": "Brazil",
@@ -102,6 +102,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 9.5,
+              "currentScore": 58.2,
+              "delta": 48.7,
+              "matchedIndicators": 2,
+              "basket": [
+                "internet_users",
+                "domestic_credit_private"
+              ],
+              "clamped": 1,
+              "series": []
             }
           ],
           "indicators": [],
@@ -160,7 +174,7 @@
           ]
         },
         "learning": {
-          "score": 43.2,
+          "score": 43.5,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.543,
@@ -172,15 +186,15 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 43.2,
+          "blendedScore": 43.5,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 57.2,
-              "currentScore": 62.7,
-              "delta": 5.5,
+              "baseScore": 58.5,
+              "currentScore": 63.6,
+              "delta": 5.1,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -288,6 +302,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 49.5,
+              "currentScore": 59.3,
+              "delta": 9.8,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -331,6 +360,20 @@
               "baseScore": 26.3,
               "currentScore": 24.2,
               "delta": -2.1,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 24.6,
+              "currentScore": 24.2,
+              "delta": -0.4,
               "matchedIndicators": 2,
               "basket": [
                 "manufacturing_value_added",
@@ -430,6 +473,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 39.6,
+              "currentScore": 52.2,
+              "delta": 12.6,
+              "matchedIndicators": 3,
+              "basket": [
+                "rd_expenditure_gdp",
+                "researchers_per_million",
+                "sci_articles_per_million"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -478,6 +536,20 @@
                 "domestic_credit_private"
               ],
               "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 33.9,
+              "currentScore": 96.6,
+              "delta": 62.7,
+              "matchedIndicators": 2,
+              "basket": [
+                "internet_users",
+                "domestic_credit_private"
+              ],
+              "clamped": 1,
               "series": []
             }
           ],
@@ -537,7 +609,7 @@
           ]
         },
         "learning": {
-          "score": 49.5,
+          "score": 49.8,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.454,
@@ -549,15 +621,15 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 49.5,
+          "blendedScore": 49.8,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 66.6,
-              "currentScore": 66.1,
-              "delta": -0.5,
+              "baseScore": 67.1,
+              "currentScore": 66.7,
+              "delta": -0.4,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -665,6 +737,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 73.8,
+              "currentScore": 75.2,
+              "delta": 1.4,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -763,6 +850,34 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 44.6,
+              "currentScore": 40.8,
+              "delta": -3.8,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1976,
+              "currentYear": 2026,
+              "baseScore": 51.5,
+              "currentScore": 40.8,
+              "delta": -10.7,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -813,6 +928,21 @@
               "baseScore": 40.5,
               "currentScore": 58.6,
               "delta": 18.1,
+              "matchedIndicators": 3,
+              "basket": [
+                "rd_expenditure_gdp",
+                "researchers_per_million",
+                "sci_articles_per_million"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 33.5,
+              "currentScore": 58.6,
+              "delta": 25.1,
               "matchedIndicators": 3,
               "basket": [
                 "rd_expenditure_gdp",
@@ -929,7 +1059,7 @@
           ]
         },
         "learning": {
-          "score": 65.3,
+          "score": 65.5,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.531,
@@ -941,15 +1071,15 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 65.3,
+          "blendedScore": 65.5,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 66.1,
-              "currentScore": 68,
-              "delta": 1.9,
+              "baseScore": 66.8,
+              "currentScore": 68.5,
+              "delta": 1.7,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -961,9 +1091,9 @@
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 54.4,
-              "currentScore": 68,
-              "delta": 13.6,
+              "baseScore": 55.5,
+              "currentScore": 68.5,
+              "delta": 13,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -1042,6 +1172,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 77.8,
+              "currentScore": 90.9,
+              "delta": 13.1,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -1092,6 +1237,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 37.9,
+              "currentScore": 39.2,
+              "delta": 1.3,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -1133,6 +1292,20 @@
               "baseScore": 80.7,
               "currentScore": 96,
               "delta": 15.3,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 80.6,
+              "currentScore": 96,
+              "delta": 15.4,
               "matchedIndicators": 2,
               "basket": [
                 "tax_revenue_gdp",
@@ -1190,6 +1363,21 @@
               "baseScore": 54.8,
               "currentScore": 71.7,
               "delta": 16.9,
+              "matchedIndicators": 3,
+              "basket": [
+                "rd_expenditure_gdp",
+                "researchers_per_million",
+                "sci_articles_per_million"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 45.1,
+              "currentScore": 71.7,
+              "delta": 26.6,
               "matchedIndicators": 3,
               "basket": [
                 "rd_expenditure_gdp",
@@ -1305,7 +1493,7 @@
           ]
         },
         "learning": {
-          "score": 65.1,
+          "score": 65.4,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.543,
@@ -1317,15 +1505,15 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 65.1,
+          "blendedScore": 65.4,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 54.8,
-              "currentScore": 59.9,
-              "delta": 5.1,
+              "baseScore": 55.8,
+              "currentScore": 60.7,
+              "delta": 4.9,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -1337,9 +1525,9 @@
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 46.9,
-              "currentScore": 59.9,
-              "delta": 13,
+              "baseScore": 48.3,
+              "currentScore": 60.7,
+              "delta": 12.4,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -1447,6 +1635,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 81.2,
+              "currentScore": 86.1,
+              "delta": 4.9,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -1497,6 +1700,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 49.7,
+              "currentScore": 57.9,
+              "delta": 8.2,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -1538,6 +1755,20 @@
               "baseScore": 51.3,
               "currentScore": 52.2,
               "delta": 0.9,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 49.7,
+              "currentScore": 52.2,
+              "delta": 2.5,
               "matchedIndicators": 2,
               "basket": [
                 "tax_revenue_gdp",
@@ -1595,6 +1826,21 @@
               "baseScore": 56.6,
               "currentScore": 66.2,
               "delta": 9.6,
+              "matchedIndicators": 3,
+              "basket": [
+                "rd_expenditure_gdp",
+                "researchers_per_million",
+                "sci_articles_per_million"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 24.6,
+              "currentScore": 66.2,
+              "delta": 41.6,
               "matchedIndicators": 3,
               "basket": [
                 "rd_expenditure_gdp",
@@ -1710,7 +1956,7 @@
           ]
         },
         "learning": {
-          "score": 56,
+          "score": 56.1,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.488,
@@ -1722,15 +1968,15 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 56,
+          "blendedScore": 56.1,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 53,
-              "currentScore": 54.6,
-              "delta": 1.6,
+              "baseScore": 53.6,
+              "currentScore": 55,
+              "delta": 1.4,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -1824,6 +2070,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 71.6,
+              "currentScore": 86.4,
+              "delta": 14.8,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -1867,6 +2128,20 @@
               "baseScore": 70.6,
               "currentScore": 70.6,
               "delta": 0,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 57.5,
+              "currentScore": 70.6,
+              "delta": 13.1,
               "matchedIndicators": 2,
               "basket": [
                 "manufacturing_value_added",
@@ -1951,6 +2226,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 21.5,
+              "currentScore": 77.7,
+              "delta": 56.2,
+              "matchedIndicators": 3,
+              "basket": [
+                "rd_expenditure_gdp",
+                "researchers_per_million",
+                "sci_articles_per_million"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -2001,6 +2291,20 @@
                 "domestic_credit_private"
               ],
               "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 11.8,
+              "currentScore": 88.3,
+              "delta": 76.5,
+              "matchedIndicators": 2,
+              "basket": [
+                "internet_users",
+                "domestic_credit_private"
+              ],
+              "clamped": 1,
               "series": []
             }
           ],
@@ -2078,9 +2382,9 @@
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 64.8,
+              "baseScore": 65.2,
               "currentScore": 81.3,
-              "delta": 16.5,
+              "delta": 16.1,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -2092,9 +2396,9 @@
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 68.4,
+              "baseScore": 68.6,
               "currentScore": 58.7,
-              "delta": -9.7,
+              "delta": -9.9,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -2202,6 +2506,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 68.6,
+              "currentScore": 76.9,
+              "delta": 8.3,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -2245,6 +2564,20 @@
               "baseScore": 50.6,
               "currentScore": 58.6,
               "delta": 8,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 45.1,
+              "currentScore": 58.6,
+              "delta": 13.5,
               "matchedIndicators": 2,
               "basket": [
                 "manufacturing_value_added",
@@ -2467,7 +2800,7 @@
           ]
         },
         "learning": {
-          "score": 56.8,
+          "score": 57.2,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.531,
@@ -2479,14 +2812,14 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 56.8,
+          "blendedScore": 57.2,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 55.4,
-              "currentScore": 56.1,
+              "baseScore": 56,
+              "currentScore": 56.7,
               "delta": 0.7,
               "matchedIndicators": 3,
               "basket": [
@@ -2500,8 +2833,8 @@
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 64.6,
-              "currentScore": 56.1,
+              "baseScore": 65.2,
+              "currentScore": 56.7,
               "delta": -8.5,
               "matchedIndicators": 3,
               "basket": [
@@ -2611,6 +2944,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 49.1,
+              "currentScore": 61.4,
+              "delta": 12.3,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -2661,6 +3009,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 29.7,
+              "currentScore": 30.8,
+              "delta": 1.1,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -2702,6 +3064,20 @@
               "baseScore": 72.1,
               "currentScore": 82.4,
               "delta": 10.3,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 81.9,
+              "currentScore": 82.4,
+              "delta": 0.5,
               "matchedIndicators": 2,
               "basket": [
                 "tax_revenue_gdp",
@@ -2801,6 +3177,20 @@
               ],
               "clamped": 1,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 5.1,
+              "currentScore": 41.1,
+              "delta": 36,
+              "matchedIndicators": 2,
+              "basket": [
+                "internet_users",
+                "domestic_credit_private"
+              ],
+              "clamped": 1,
+              "series": []
             }
           ],
           "indicators": [],
@@ -2859,7 +3249,7 @@
           ]
         },
         "learning": {
-          "score": 20.2,
+          "score": 20.9,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.554,
@@ -2871,15 +3261,15 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 20.2,
+          "blendedScore": 20.9,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 37.3,
-              "currentScore": 24.5,
-              "delta": -12.8,
+              "baseScore": 38.5,
+              "currentScore": 25.6,
+              "delta": -12.9,
               "matchedIndicators": 3,
               "basket": [
                 "tertiary_enrollment",
@@ -2892,9 +3282,9 @@
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 19.2,
-              "currentScore": 24.5,
-              "delta": 5.3,
+              "baseScore": 20.6,
+              "currentScore": 25.6,
+              "delta": 5,
               "matchedIndicators": 3,
               "basket": [
                 "tertiary_enrollment",
@@ -3003,6 +3393,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 38.9,
+              "currentScore": 49.5,
+              "delta": 10.6,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -3053,6 +3458,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 26,
+              "currentScore": 23.4,
+              "delta": -2.6,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -3094,6 +3513,20 @@
               "baseScore": 65.9,
               "currentScore": 61.8,
               "delta": -4.1,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 65.1,
+              "currentScore": 61.8,
+              "delta": -3.3,
               "matchedIndicators": 2,
               "basket": [
                 "tax_revenue_gdp",
@@ -3271,9 +3704,9 @@
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 70.2,
+              "baseScore": 70.7,
               "currentScore": 77.5,
-              "delta": 7.3,
+              "delta": 6.8,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -3285,9 +3718,9 @@
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 44.1,
+              "baseScore": 44.9,
               "currentScore": 64.4,
-              "delta": 20.3,
+              "delta": 19.5,
               "matchedIndicators": 3,
               "basket": [
                 "tertiary_enrollment",
@@ -3382,6 +3815,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 51.6,
+              "currentScore": 62.8,
+              "delta": 11.2,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -3425,6 +3873,20 @@
               "baseScore": 26.8,
               "currentScore": 24.7,
               "delta": -2.1,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 29.3,
+              "currentScore": 24.7,
+              "delta": -4.6,
               "matchedIndicators": 2,
               "basket": [
                 "manufacturing_value_added",
@@ -3479,6 +3941,20 @@
                 "income_inequality"
               ],
               "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 29,
+              "currentScore": 52.9,
+              "delta": 23.9,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 1,
               "series": []
             }
           ],
@@ -3589,6 +4065,20 @@
               ],
               "clamped": 1,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 25.8,
+              "currentScore": 57.9,
+              "delta": 32.1,
+              "matchedIndicators": 2,
+              "basket": [
+                "internet_users",
+                "domestic_credit_private"
+              ],
+              "clamped": 1,
+              "series": []
             }
           ],
           "indicators": [],
@@ -3647,7 +4137,7 @@
           ]
         },
         "learning": {
-          "score": 23.4,
+          "score": 24.2,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.509,
@@ -3659,15 +4149,29 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 23.4,
+          "blendedScore": 24.2,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 37.7,
-              "currentScore": 43.4,
-              "delta": 5.7,
+              "baseScore": 39.6,
+              "currentScore": 45.2,
+              "delta": 5.6,
+              "matchedIndicators": 2,
+              "basket": [
+                "tertiary_enrollment",
+                "education_expenditure_gdp"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 35.7,
+              "currentScore": 45.2,
+              "delta": 9.5,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -3775,6 +4279,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 31.8,
+              "currentScore": 27.9,
+              "delta": -3.9,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -3825,6 +4344,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 36,
+              "currentScore": 26.3,
+              "delta": -9.7,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -3866,6 +4399,20 @@
               "baseScore": 44.6,
               "currentScore": 48,
               "delta": 3.4,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 1,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 38.3,
+              "currentScore": 48,
+              "delta": 9.7,
               "matchedIndicators": 2,
               "basket": [
                 "tax_revenue_gdp",
@@ -3923,6 +4470,21 @@
               "baseScore": 4.1,
               "currentScore": 4.7,
               "delta": 0.6,
+              "matchedIndicators": 3,
+              "basket": [
+                "rd_expenditure_gdp",
+                "researchers_per_million",
+                "sci_articles_per_million"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 2.5,
+              "currentScore": 4.7,
+              "delta": 2.2,
               "matchedIndicators": 3,
               "basket": [
                 "rd_expenditure_gdp",
@@ -4040,7 +4602,7 @@
           ]
         },
         "learning": {
-          "score": 44.8,
+          "score": 45.3,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.531,
@@ -4052,15 +4614,15 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 44.8,
+          "blendedScore": 45.3,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 42.7,
-              "currentScore": 43,
-              "delta": 0.3,
+              "baseScore": 44.3,
+              "currentScore": 44.3,
+              "delta": 0,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -4072,9 +4634,9 @@
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 32.5,
-              "currentScore": 43.9,
-              "delta": 11.4,
+              "baseScore": 33.7,
+              "currentScore": 44.8,
+              "delta": 11.1,
               "matchedIndicators": 3,
               "basket": [
                 "tertiary_enrollment",
@@ -4183,6 +4745,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 49.7,
+              "currentScore": 63.6,
+              "delta": 13.9,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -4233,6 +4810,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 41.1,
+              "currentScore": 37.6,
+              "delta": -3.5,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -4260,6 +4851,20 @@
               "baseScore": 36.4,
               "currentScore": 47.1,
               "delta": 10.7,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 18.6,
+              "currentScore": 47.1,
+              "delta": 28.5,
               "matchedIndicators": 2,
               "basket": [
                 "tax_revenue_gdp",
@@ -4376,6 +4981,20 @@
               ],
               "clamped": 1,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 4.3,
+              "currentScore": 47,
+              "delta": 42.7,
+              "matchedIndicators": 2,
+              "basket": [
+                "internet_users",
+                "domestic_credit_private"
+              ],
+              "clamped": 1,
+              "series": []
             }
           ],
           "indicators": [],
@@ -4434,7 +5053,7 @@
           ]
         },
         "learning": {
-          "score": 54.9,
+          "score": 55,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.409,
@@ -4446,15 +5065,15 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 54.9,
+          "blendedScore": 55,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 70.3,
-              "currentScore": 76.9,
-              "delta": 6.6,
+              "baseScore": 70.8,
+              "currentScore": 77,
+              "delta": 6.2,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -4466,9 +5085,37 @@
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 52.3,
-              "currentScore": 76.9,
-              "delta": 24.6,
+              "baseScore": 53.2,
+              "currentScore": 77,
+              "delta": 23.8,
+              "matchedIndicators": 2,
+              "basket": [
+                "tertiary_enrollment",
+                "education_expenditure_gdp"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 37.4,
+              "currentScore": 77,
+              "delta": 39.6,
+              "matchedIndicators": 2,
+              "basket": [
+                "tertiary_enrollment",
+                "education_expenditure_gdp"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1976,
+              "currentYear": 2026,
+              "baseScore": 16.9,
+              "currentScore": 77,
+              "delta": 60.1,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -4576,6 +5223,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 35.3,
+              "currentScore": 50,
+              "delta": 14.7,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -4626,6 +5288,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 36.2,
+              "currentScore": 30.8,
+              "delta": -5.4,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -4667,6 +5343,20 @@
               "baseScore": 36.9,
               "currentScore": 39.2,
               "delta": 2.3,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 22.6,
+              "currentScore": 39.2,
+              "delta": 16.6,
               "matchedIndicators": 2,
               "basket": [
                 "tax_revenue_gdp",
@@ -4765,6 +5455,20 @@
               ],
               "clamped": 1,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 8.1,
+              "currentScore": 46,
+              "delta": 37.9,
+              "matchedIndicators": 2,
+              "basket": [
+                "internet_users",
+                "domestic_credit_private"
+              ],
+              "clamped": 1,
+              "series": []
             }
           ],
           "indicators": [],
@@ -4823,7 +5527,7 @@
           ]
         },
         "learning": {
-          "score": 44.3,
+          "score": 44.7,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.486,
@@ -4835,15 +5539,15 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 44.3,
+          "blendedScore": 44.7,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 37.4,
-              "currentScore": 50.9,
-              "delta": 13.5,
+              "baseScore": 39,
+              "currentScore": 52,
+              "delta": 13,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -4951,6 +5655,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 41.2,
+              "currentScore": 60.1,
+              "delta": 18.9,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -4994,6 +5713,20 @@
               "baseScore": 28.4,
               "currentScore": 21.2,
               "delta": -7.2,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 25.5,
+              "currentScore": 21.2,
+              "delta": -4.3,
               "matchedIndicators": 2,
               "basket": [
                 "manufacturing_value_added",
@@ -5156,6 +5889,20 @@
               ],
               "clamped": 1,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 4.5,
+              "currentScore": 47.6,
+              "delta": 43.1,
+              "matchedIndicators": 2,
+              "basket": [
+                "internet_users",
+                "domestic_credit_private"
+              ],
+              "clamped": 1,
+              "series": []
             }
           ],
           "indicators": [],
@@ -5214,7 +5961,7 @@
           ]
         },
         "learning": {
-          "score": 47.7,
+          "score": 48.1,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.486,
@@ -5226,7 +5973,7 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 47.7,
+          "blendedScore": 48.1,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -5328,6 +6075,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 53.7,
+              "currentScore": 71.3,
+              "delta": 17.6,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -5378,6 +6140,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 25,
+              "currentScore": 22.7,
+              "delta": -2.3,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -5419,6 +6195,20 @@
               "baseScore": 35.4,
               "currentScore": 53.5,
               "delta": 18.1,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 43.5,
+              "currentScore": 53.5,
+              "delta": 10,
               "matchedIndicators": 2,
               "basket": [
                 "tax_revenue_gdp",
@@ -5535,6 +6325,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 6,
+              "currentScore": 51.8,
+              "delta": 45.8,
+              "matchedIndicators": 2,
+              "basket": [
+                "internet_users",
+                "domestic_credit_private"
+              ],
+              "clamped": 1,
+              "series": []
             }
           ],
           "indicators": [],
@@ -5593,7 +6397,7 @@
           ]
         },
         "learning": {
-          "score": 49.3,
+          "score": 49.5,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.543,
@@ -5605,15 +6409,15 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 49.3,
+          "blendedScore": 49.5,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 50.3,
-              "currentScore": 62.3,
-              "delta": 12,
+              "baseScore": 51.3,
+              "currentScore": 63,
+              "delta": 11.7,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -5625,14 +6429,28 @@
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 32.3,
-              "currentScore": 54.3,
-              "delta": 22,
+              "baseScore": 33.2,
+              "currentScore": 54.7,
+              "delta": 21.5,
               "matchedIndicators": 3,
               "basket": [
                 "tertiary_enrollment",
                 "education_expenditure_gdp",
                 "firm_training_incidence"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 28.8,
+              "currentScore": 63,
+              "delta": 34.2,
+              "matchedIndicators": 2,
+              "basket": [
+                "tertiary_enrollment",
+                "education_expenditure_gdp"
               ],
               "clamped": 0,
               "series": []
@@ -5707,6 +6525,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 42.7,
+              "currentScore": 69.2,
+              "delta": 26.5,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -5757,6 +6590,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 35.6,
+              "currentScore": 26.4,
+              "delta": -9.2,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -5798,6 +6645,20 @@
               "baseScore": 48.9,
               "currentScore": 57.3,
               "delta": 8.4,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 55,
+              "currentScore": 57.3,
+              "delta": 2.3,
               "matchedIndicators": 2,
               "basket": [
                 "tax_revenue_gdp",
@@ -5971,7 +6832,7 @@
           ]
         },
         "learning": {
-          "score": 48.5,
+          "score": 49,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.497,
@@ -5983,7 +6844,7 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 48.5,
+          "blendedScore": 49,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -6099,6 +6960,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 52.3,
+              "currentScore": 57,
+              "delta": 4.7,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -6149,6 +7025,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 33.5,
+              "currentScore": 31.5,
+              "delta": -2,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -6190,6 +7080,20 @@
               "baseScore": 33.6,
               "currentScore": 39.5,
               "delta": 5.9,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 36.2,
+              "currentScore": 39.5,
+              "delta": 3.3,
               "matchedIndicators": 2,
               "basket": [
                 "tax_revenue_gdp",
@@ -6247,6 +7151,21 @@
               "baseScore": 38.5,
               "currentScore": 54.7,
               "delta": 16.2,
+              "matchedIndicators": 3,
+              "basket": [
+                "rd_expenditure_gdp",
+                "researchers_per_million",
+                "sci_articles_per_million"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 31.5,
+              "currentScore": 54.7,
+              "delta": 23.2,
               "matchedIndicators": 3,
               "basket": [
                 "rd_expenditure_gdp",
@@ -6364,7 +7283,7 @@
           ]
         },
         "learning": {
-          "score": 56.2,
+          "score": 56.5,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.543,
@@ -6376,15 +7295,15 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 56.2,
+          "blendedScore": 56.5,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 56.6,
-              "currentScore": 63.7,
-              "delta": 7.1,
+              "baseScore": 57.5,
+              "currentScore": 64.4,
+              "delta": 6.9,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -6492,6 +7411,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 64,
+              "currentScore": 83.5,
+              "delta": 19.5,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -6542,6 +7476,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 48.2,
+              "currentScore": 49.3,
+              "delta": 1.1,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -6583,6 +7531,20 @@
               "baseScore": 59.8,
               "currentScore": 55.1,
               "delta": -4.7,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 64.4,
+              "currentScore": 55.1,
+              "delta": -9.3,
               "matchedIndicators": 2,
               "basket": [
                 "tax_revenue_gdp",
@@ -6640,6 +7602,21 @@
               "baseScore": 35.4,
               "currentScore": 42.3,
               "delta": 6.9,
+              "matchedIndicators": 3,
+              "basket": [
+                "rd_expenditure_gdp",
+                "researchers_per_million",
+                "sci_articles_per_million"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 31.4,
+              "currentScore": 42.3,
+              "delta": 10.9,
               "matchedIndicators": 3,
               "basket": [
                 "rd_expenditure_gdp",
@@ -6757,7 +7734,7 @@
           ]
         },
         "learning": {
-          "score": 60.9,
+          "score": 61.2,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.543,
@@ -6769,7 +7746,7 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 60.9,
+          "blendedScore": 61.2,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -6856,6 +7833,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 52.8,
+              "currentScore": 68.2,
+              "delta": 15.4,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -6906,6 +7898,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 40.4,
+              "currentScore": 38.1,
+              "delta": -2.3,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -6947,6 +7953,34 @@
               "baseScore": 84.1,
               "currentScore": 80.7,
               "delta": -3.4,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 76.2,
+              "currentScore": 80.7,
+              "delta": 4.5,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1976,
+              "currentYear": 2026,
+              "baseScore": 66.6,
+              "currentScore": 80.7,
+              "delta": 14.1,
               "matchedIndicators": 2,
               "basket": [
                 "tax_revenue_gdp",
@@ -7010,6 +8044,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 37.1,
+              "currentScore": 49,
+              "delta": 11.9,
+              "matchedIndicators": 2,
+              "basket": [
+                "rd_expenditure_gdp",
+                "sci_articles_per_million"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -7060,6 +8108,20 @@
                 "domestic_credit_private"
               ],
               "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 24.4,
+              "currentScore": 74.7,
+              "delta": 50.3,
+              "matchedIndicators": 2,
+              "basket": [
+                "internet_users",
+                "domestic_credit_private"
+              ],
+              "clamped": 1,
               "series": []
             }
           ],
@@ -7119,7 +8181,7 @@
           ]
         },
         "learning": {
-          "score": 68.4,
+          "score": 68.6,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.52,
@@ -7131,15 +8193,15 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 68.4,
+          "blendedScore": 68.6,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 56.1,
-              "currentScore": 69.6,
-              "delta": 13.5,
+              "baseScore": 57.2,
+              "currentScore": 70.2,
+              "delta": 13,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -7151,9 +8213,9 @@
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 53.8,
-              "currentScore": 69.6,
-              "delta": 15.8,
+              "baseScore": 54.9,
+              "currentScore": 70.2,
+              "delta": 15.3,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -7261,6 +8323,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 65.9,
+              "currentScore": 73.1,
+              "delta": 7.2,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -7311,6 +8388,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 37.7,
+              "currentScore": 32,
+              "delta": -5.7,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -7352,6 +8443,34 @@
               "baseScore": 79.1,
               "currentScore": 87.4,
               "delta": 8.3,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 75,
+              "currentScore": 87.4,
+              "delta": 12.4,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1976,
+              "currentYear": 2026,
+              "baseScore": 89.9,
+              "currentScore": 87.4,
+              "delta": -2.5,
               "matchedIndicators": 2,
               "basket": [
                 "tax_revenue_gdp",
@@ -7409,6 +8528,21 @@
               "baseScore": 27,
               "currentScore": 36.9,
               "delta": 9.9,
+              "matchedIndicators": 3,
+              "basket": [
+                "rd_expenditure_gdp",
+                "researchers_per_million",
+                "sci_articles_per_million"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 15.6,
+              "currentScore": 36.9,
+              "delta": 21.3,
               "matchedIndicators": 3,
               "basket": [
                 "rd_expenditure_gdp",
@@ -7526,7 +8660,7 @@
           ]
         },
         "learning": {
-          "score": 65.6,
+          "score": 65.8,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.543,
@@ -7538,15 +8672,15 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 65.6,
+          "blendedScore": 65.8,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 63.4,
-              "currentScore": 67.7,
-              "delta": 4.3,
+              "baseScore": 63.9,
+              "currentScore": 68.1,
+              "delta": 4.2,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -7558,9 +8692,9 @@
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 56.9,
-              "currentScore": 76,
-              "delta": 19.1,
+              "baseScore": 57.4,
+              "currentScore": 76.2,
+              "delta": 18.8,
               "matchedIndicators": 3,
               "basket": [
                 "tertiary_enrollment",
@@ -7669,6 +8803,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 30.1,
+              "currentScore": 62.7,
+              "delta": 32.6,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -7719,6 +8868,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 43.3,
+              "currentScore": 36,
+              "delta": -7.3,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -7760,6 +8923,20 @@
               "baseScore": 64.7,
               "currentScore": 63.2,
               "delta": -1.5,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 59.2,
+              "currentScore": 63.2,
+              "delta": 4,
               "matchedIndicators": 2,
               "basket": [
                 "tax_revenue_gdp",
@@ -7825,6 +9002,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 11.9,
+              "currentScore": 32.4,
+              "delta": 20.5,
+              "matchedIndicators": 3,
+              "basket": [
+                "rd_expenditure_gdp",
+                "researchers_per_million",
+                "sci_articles_per_million"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -7875,6 +9067,20 @@
                 "domestic_credit_private"
               ],
               "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 3.9,
+              "currentScore": 50.4,
+              "delta": 46.5,
+              "matchedIndicators": 2,
+              "basket": [
+                "internet_users",
+                "domestic_credit_private"
+              ],
+              "clamped": 1,
               "series": []
             }
           ],
@@ -7934,7 +9140,7 @@
           ]
         },
         "learning": {
-          "score": 52.4,
+          "score": 52.6,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.543,
@@ -7946,15 +9152,15 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 52.4,
+          "blendedScore": 52.6,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 51.7,
-              "currentScore": 47.4,
-              "delta": -4.3,
+              "baseScore": 52.3,
+              "currentScore": 47.9,
+              "delta": -4.4,
               "matchedIndicators": 3,
               "basket": [
                 "tertiary_enrollment",
@@ -7967,9 +9173,9 @@
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 62.8,
-              "currentScore": 47.4,
-              "delta": -15.4,
+              "baseScore": 63.4,
+              "currentScore": 47.9,
+              "delta": -15.5,
               "matchedIndicators": 3,
               "basket": [
                 "tertiary_enrollment",
@@ -8078,6 +9284,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 44,
+              "currentScore": 77.3,
+              "delta": 33.3,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -8128,6 +9349,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 33.1,
+              "currentScore": 40,
+              "delta": 6.9,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -8169,6 +9404,20 @@
               "baseScore": 65,
               "currentScore": 77.5,
               "delta": 12.5,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 77.1,
+              "currentScore": 77.5,
+              "delta": 0.4,
               "matchedIndicators": 2,
               "basket": [
                 "tax_revenue_gdp",
@@ -8285,6 +9534,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 7.2,
+              "currentScore": 78.1,
+              "delta": 70.9,
+              "matchedIndicators": 2,
+              "basket": [
+                "internet_users",
+                "domestic_credit_private"
+              ],
+              "clamped": 1,
+              "series": []
             }
           ],
           "indicators": [],
@@ -8343,7 +9606,7 @@
           ]
         },
         "learning": {
-          "score": 67.4,
+          "score": 67.7,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.543,
@@ -8355,15 +9618,15 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 67.4,
+          "blendedScore": 67.7,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 79.1,
-              "currentScore": 73.5,
-              "delta": -5.6,
+              "baseScore": 79.7,
+              "currentScore": 73.9,
+              "delta": -5.8,
               "matchedIndicators": 3,
               "basket": [
                 "tertiary_enrollment",
@@ -8376,9 +9639,9 @@
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 71.9,
-              "currentScore": 79.9,
-              "delta": 8,
+              "baseScore": 72.6,
+              "currentScore": 80.5,
+              "delta": 7.9,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -8472,6 +9735,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 69.7,
+              "currentScore": 78.6,
+              "delta": 8.9,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -8522,6 +9800,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 44.3,
+              "currentScore": 42.5,
+              "delta": -1.8,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -8563,6 +9855,34 @@
               "baseScore": 98.4,
               "currentScore": 93.4,
               "delta": -5,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 1,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 100,
+              "currentScore": 93.4,
+              "delta": -6.6,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 2,
+              "series": []
+            },
+            {
+              "baseYear": 1976,
+              "currentYear": 2026,
+              "baseScore": 85.3,
+              "currentScore": 93.4,
+              "delta": 8.1,
               "matchedIndicators": 2,
               "basket": [
                 "tax_revenue_gdp",
@@ -8755,9 +10075,9 @@
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 79.9,
+              "baseScore": 80.4,
               "currentScore": 86.6,
-              "delta": 6.7,
+              "delta": 6.2,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -8769,9 +10089,9 @@
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 75.8,
+              "baseScore": 76.2,
               "currentScore": 86.6,
-              "delta": 10.8,
+              "delta": 10.4,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -8879,6 +10199,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 53.6,
+              "currentScore": 73.9,
+              "delta": 20.3,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -8922,6 +10257,20 @@
               "baseScore": 53.8,
               "currentScore": 43.4,
               "delta": -10.4,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 48.9,
+              "currentScore": 43.4,
+              "delta": -5.5,
               "matchedIndicators": 2,
               "basket": [
                 "manufacturing_value_added",
@@ -8977,6 +10326,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 90,
+              "currentScore": 93.1,
+              "delta": 3.1,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 1,
+              "series": []
             }
           ],
           "indicators": [],
@@ -9027,6 +10390,21 @@
               "baseScore": 31.6,
               "currentScore": 49.7,
               "delta": 18.1,
+              "matchedIndicators": 3,
+              "basket": [
+                "rd_expenditure_gdp",
+                "researchers_per_million",
+                "sci_articles_per_million"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 20.6,
+              "currentScore": 49.7,
+              "delta": 29.1,
               "matchedIndicators": 3,
               "basket": [
                 "rd_expenditure_gdp",
@@ -9144,7 +10522,7 @@
           ]
         },
         "learning": {
-          "score": 60.5,
+          "score": 60.8,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.509,
@@ -9156,15 +10534,15 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 60.5,
+          "blendedScore": 60.8,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 54.4,
-              "currentScore": 49.7,
-              "delta": -4.7,
+              "baseScore": 55.1,
+              "currentScore": 50.5,
+              "delta": -4.6,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -9176,9 +10554,9 @@
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 64.6,
-              "currentScore": 59.2,
-              "delta": -5.4,
+              "baseScore": 65.4,
+              "currentScore": 59.7,
+              "delta": -5.7,
               "matchedIndicators": 3,
               "basket": [
                 "tertiary_enrollment",
@@ -9258,6 +10636,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 57,
+              "currentScore": 75.6,
+              "delta": 18.6,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -9308,6 +10701,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 46.6,
+              "currentScore": 100,
+              "delta": 53.4,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -9349,6 +10756,20 @@
               "baseScore": 86.8,
               "currentScore": 76.5,
               "delta": -10.3,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 82.5,
+              "currentScore": 76.5,
+              "delta": -6,
               "matchedIndicators": 2,
               "basket": [
                 "tax_revenue_gdp",
@@ -9406,6 +10827,21 @@
               "baseScore": 45.8,
               "currentScore": 49.5,
               "delta": 3.7,
+              "matchedIndicators": 3,
+              "basket": [
+                "rd_expenditure_gdp",
+                "researchers_per_million",
+                "sci_articles_per_million"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 34.8,
+              "currentScore": 49.5,
+              "delta": 14.7,
               "matchedIndicators": 3,
               "basket": [
                 "rd_expenditure_gdp",
@@ -9506,7 +10942,7 @@
           ]
         },
         "learning": {
-          "score": 56.6,
+          "score": 56.9,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.531,
@@ -9518,15 +10954,15 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 56.6,
+          "blendedScore": 56.9,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 57.6,
-              "currentScore": 61.1,
-              "delta": 3.5,
+              "baseScore": 58.5,
+              "currentScore": 61.8,
+              "delta": 3.3,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -9538,9 +10974,9 @@
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 52.2,
-              "currentScore": 61.1,
-              "delta": 8.9,
+              "baseScore": 53.3,
+              "currentScore": 61.8,
+              "delta": 8.5,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -9630,6 +11066,21 @@
                 "labor_force_participation",
                 "unemployment_rate",
                 "broadband_subscriptions",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 64.2,
+              "currentScore": 78.7,
+              "delta": 14.5,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
                 "electricity_transmission_losses"
               ],
               "clamped": 0,
@@ -9732,6 +11183,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 62.3,
+              "currentScore": 64.2,
+              "delta": 1.9,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -9781,6 +11246,20 @@
               "baseScore": 50.3,
               "currentScore": 54,
               "delta": 3.7,
+              "matchedIndicators": 2,
+              "basket": [
+                "rd_expenditure_gdp",
+                "sci_articles_per_million"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 35.8,
+              "currentScore": 54,
+              "delta": 18.2,
               "matchedIndicators": 2,
               "basket": [
                 "rd_expenditure_gdp",
@@ -9838,6 +11317,20 @@
                 "domestic_credit_private"
               ],
               "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 17.2,
+              "currentScore": 80.5,
+              "delta": 63.3,
+              "matchedIndicators": 2,
+              "basket": [
+                "internet_users",
+                "domestic_credit_private"
+              ],
+              "clamped": 1,
               "series": []
             }
           ],
@@ -10010,6 +11503,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 67.1,
+              "currentScore": 83.9,
+              "delta": 16.8,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -10053,6 +11561,20 @@
               "baseScore": 33.1,
               "currentScore": 29.1,
               "delta": -4,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 34.4,
+              "currentScore": 29.1,
+              "delta": -5.3,
               "matchedIndicators": 2,
               "basket": [
                 "manufacturing_value_added",
@@ -10137,6 +11659,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 40.5,
+              "currentScore": 48.2,
+              "delta": 7.7,
+              "matchedIndicators": 3,
+              "basket": [
+                "rd_expenditure_gdp",
+                "researchers_per_million",
+                "sci_articles_per_million"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -10183,6 +11720,20 @@
               "matchedIndicators": 3,
               "basket": [
                 "new_business_density",
+                "internet_users",
+                "domestic_credit_private"
+              ],
+              "clamped": 1,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 47.1,
+              "currentScore": 87.2,
+              "delta": 40.1,
+              "matchedIndicators": 2,
+              "basket": [
                 "internet_users",
                 "domestic_credit_private"
               ],
@@ -10246,7 +11797,7 @@
           ]
         },
         "learning": {
-          "score": 47.2,
+          "score": 47.6,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.52,
@@ -10258,14 +11809,14 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 47.2,
+          "blendedScore": 47.6,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 44.1,
-              "currentScore": 46.2,
+              "baseScore": 45.1,
+              "currentScore": 47.2,
               "delta": 2.1,
               "matchedIndicators": 2,
               "basket": [
@@ -10360,6 +11911,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 75.7,
+              "currentScore": 88.5,
+              "delta": 12.8,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -10403,6 +11969,20 @@
               "baseScore": 46.6,
               "currentScore": 43.7,
               "delta": -2.9,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 48.1,
+              "currentScore": 43.7,
+              "delta": -4.4,
               "matchedIndicators": 2,
               "basket": [
                 "manufacturing_value_added",
@@ -10487,6 +12067,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 4.8,
+              "currentScore": 29.7,
+              "delta": 24.9,
+              "matchedIndicators": 3,
+              "basket": [
+                "rd_expenditure_gdp",
+                "researchers_per_million",
+                "sci_articles_per_million"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -10530,6 +12125,20 @@
               "baseScore": 26.4,
               "currentScore": 92.9,
               "delta": 66.5,
+              "matchedIndicators": 2,
+              "basket": [
+                "internet_users",
+                "domestic_credit_private"
+              ],
+              "clamped": 1,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 21.6,
+              "currentScore": 92.9,
+              "delta": 71.3,
               "matchedIndicators": 2,
               "basket": [
                 "internet_users",
@@ -10595,7 +12204,7 @@
           ]
         },
         "learning": {
-          "score": 59.1,
+          "score": 59.4,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.565,
@@ -10607,19 +12216,47 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 59.1,
+          "blendedScore": 59.4,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 70.5,
-              "currentScore": 83.5,
-              "delta": 13,
+              "baseScore": 71.8,
+              "currentScore": 84.2,
+              "delta": 12.4,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
                 "firm_training_incidence"
+              ],
+              "clamped": 1,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 11.3,
+              "currentScore": 56.2,
+              "delta": 44.9,
+              "matchedIndicators": 2,
+              "basket": [
+                "tertiary_enrollment",
+                "education_expenditure_gdp"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1976,
+              "currentYear": 2026,
+              "baseScore": 9.2,
+              "currentScore": 56.2,
+              "delta": 47,
+              "matchedIndicators": 2,
+              "basket": [
+                "tertiary_enrollment",
+                "education_expenditure_gdp"
               ],
               "clamped": 1,
               "series": []
@@ -10719,6 +12356,21 @@
                 "labor_force_participation",
                 "unemployment_rate",
                 "broadband_subscriptions",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 84.1,
+              "currentScore": 76.6,
+              "delta": -7.5,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
                 "electricity_transmission_losses"
               ],
               "clamped": 0,
@@ -10970,7 +12622,7 @@
           ]
         },
         "learning": {
-          "score": 24.3,
+          "score": 24.8,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.531,
@@ -10982,15 +12634,15 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 24.3,
+          "blendedScore": 24.8,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 14.8,
-              "currentScore": 18.6,
-              "delta": 3.8,
+              "baseScore": 15.9,
+              "currentScore": 19.5,
+              "delta": 3.6,
               "matchedIndicators": 3,
               "basket": [
                 "tertiary_enrollment",
@@ -11003,9 +12655,37 @@
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 20.8,
-              "currentScore": 24.3,
-              "delta": 3.5,
+              "baseScore": 22.8,
+              "currentScore": 25.7,
+              "delta": 2.9,
+              "matchedIndicators": 2,
+              "basket": [
+                "tertiary_enrollment",
+                "education_expenditure_gdp"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 9.4,
+              "currentScore": 25.7,
+              "delta": 16.3,
+              "matchedIndicators": 2,
+              "basket": [
+                "tertiary_enrollment",
+                "education_expenditure_gdp"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1976,
+              "currentYear": 2026,
+              "baseScore": 15.9,
+              "currentScore": 25.7,
+              "delta": 9.8,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -11099,6 +12779,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 61.7,
+              "currentScore": 71.6,
+              "delta": 9.9,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -11142,6 +12837,20 @@
               "baseScore": 42.7,
               "currentScore": 32.7,
               "delta": -10,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 39.4,
+              "currentScore": 32.7,
+              "delta": -6.7,
               "matchedIndicators": 2,
               "basket": [
                 "manufacturing_value_added",
@@ -11276,6 +12985,20 @@
               ],
               "clamped": 1,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 3.9,
+              "currentScore": 70.6,
+              "delta": 66.7,
+              "matchedIndicators": 2,
+              "basket": [
+                "internet_users",
+                "domestic_credit_private"
+              ],
+              "clamped": 1,
+              "series": []
             }
           ],
           "indicators": [],
@@ -11334,7 +13057,7 @@
           ]
         },
         "learning": {
-          "score": 28.3,
+          "score": 29,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.477,
@@ -11346,14 +13069,14 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 28.3,
+          "blendedScore": 29,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 28.7,
-              "currentScore": 23,
+              "baseScore": 29.8,
+              "currentScore": 24.1,
               "delta": -5.7,
               "matchedIndicators": 3,
               "basket": [
@@ -11445,6 +13168,21 @@
                 "labor_force_participation",
                 "unemployment_rate",
                 "broadband_subscriptions",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 74.9,
+              "currentScore": 84.1,
+              "delta": 9.2,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
                 "electricity_transmission_losses"
               ],
               "clamped": 0,
@@ -11610,6 +13348,20 @@
               ],
               "clamped": 1,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 10,
+              "currentScore": 41.4,
+              "delta": 31.4,
+              "matchedIndicators": 2,
+              "basket": [
+                "internet_users",
+                "domestic_credit_private"
+              ],
+              "clamped": 1,
+              "series": []
             }
           ],
           "indicators": [],
@@ -11668,7 +13420,7 @@
           ]
         },
         "learning": {
-          "score": 36.2,
+          "score": 36.7,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.554,
@@ -11680,15 +13432,15 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 36.2,
+          "blendedScore": 36.7,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 47.3,
-              "currentScore": 45.2,
-              "delta": -2.1,
+              "baseScore": 48.3,
+              "currentScore": 46.1,
+              "delta": -2.2,
               "matchedIndicators": 3,
               "basket": [
                 "tertiary_enrollment",
@@ -11701,9 +13453,23 @@
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 22.6,
-              "currentScore": 42.1,
-              "delta": 19.5,
+              "baseScore": 24.3,
+              "currentScore": 43.4,
+              "delta": 19.1,
+              "matchedIndicators": 2,
+              "basket": [
+                "tertiary_enrollment",
+                "education_expenditure_gdp"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 28.6,
+              "currentScore": 43.4,
+              "delta": 14.8,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -11793,6 +13559,21 @@
                 "labor_force_participation",
                 "unemployment_rate",
                 "broadband_subscriptions",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 52,
+              "currentScore": 62.5,
+              "delta": 10.5,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
                 "electricity_transmission_losses"
               ],
               "clamped": 0,
@@ -11894,6 +13675,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 46.6,
+              "currentScore": 51.9,
+              "delta": 5.3,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -11944,6 +13739,21 @@
               "baseScore": 6,
               "currentScore": 18.3,
               "delta": 12.3,
+              "matchedIndicators": 3,
+              "basket": [
+                "rd_expenditure_gdp",
+                "researchers_per_million",
+                "sci_articles_per_million"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 1.9,
+              "currentScore": 18.3,
+              "delta": 16.4,
               "matchedIndicators": 3,
               "basket": [
                 "rd_expenditure_gdp",
@@ -12003,6 +13813,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 34.9,
+              "currentScore": 77.7,
+              "delta": 42.8,
+              "matchedIndicators": 2,
+              "basket": [
+                "internet_users",
+                "domestic_credit_private"
+              ],
+              "clamped": 1,
+              "series": []
             }
           ],
           "indicators": [],
@@ -12061,7 +13885,7 @@
           ]
         },
         "learning": {
-          "score": 35.9,
+          "score": 36.5,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.565,
@@ -12073,15 +13897,15 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 35.9,
+          "blendedScore": 36.5,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 37.5,
-              "currentScore": 38.3,
-              "delta": 0.8,
+              "baseScore": 38.4,
+              "currentScore": 39.3,
+              "delta": 0.9,
               "matchedIndicators": 3,
               "basket": [
                 "tertiary_enrollment",
@@ -12094,9 +13918,23 @@
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 35.9,
-              "currentScore": 35.1,
-              "delta": -0.8,
+              "baseScore": 37.7,
+              "currentScore": 36.6,
+              "delta": -1.1,
+              "matchedIndicators": 2,
+              "basket": [
+                "tertiary_enrollment",
+                "education_expenditure_gdp"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 32.9,
+              "currentScore": 36.6,
+              "delta": 3.7,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -12204,6 +14042,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 57.3,
+              "currentScore": 70.9,
+              "delta": 13.6,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -12254,6 +14107,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 49.3,
+              "currentScore": 45.2,
+              "delta": -4.1,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -12295,6 +14162,20 @@
               "baseScore": 42.7,
               "currentScore": 45.9,
               "delta": 3.2,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 45.4,
+              "currentScore": 45.9,
+              "delta": 0.5,
               "matchedIndicators": 2,
               "basket": [
                 "tax_revenue_gdp",
@@ -12352,6 +14233,21 @@
               "baseScore": 3.1,
               "currentScore": 13.5,
               "delta": 10.4,
+              "matchedIndicators": 3,
+              "basket": [
+                "rd_expenditure_gdp",
+                "researchers_per_million",
+                "sci_articles_per_million"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 1.1,
+              "currentScore": 13.5,
+              "delta": 12.4,
               "matchedIndicators": 3,
               "basket": [
                 "rd_expenditure_gdp",
@@ -12468,7 +14364,7 @@
           ]
         },
         "learning": {
-          "score": 32.9,
+          "score": 33.4,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.565,
@@ -12480,15 +14376,15 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 32.9,
+          "blendedScore": 33.4,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 34.4,
-              "currentScore": 33,
-              "delta": -1.4,
+              "baseScore": 35.3,
+              "currentScore": 33.8,
+              "delta": -1.5,
               "matchedIndicators": 3,
               "basket": [
                 "tertiary_enrollment",
@@ -12501,14 +14397,42 @@
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 59,
-              "currentScore": 33,
-              "delta": -26,
+              "baseScore": 60,
+              "currentScore": 33.8,
+              "delta": -26.2,
               "matchedIndicators": 3,
               "basket": [
                 "tertiary_enrollment",
                 "education_expenditure_gdp",
                 "firm_training_incidence"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 29.1,
+              "currentScore": 35.2,
+              "delta": 6.1,
+              "matchedIndicators": 2,
+              "basket": [
+                "tertiary_enrollment",
+                "education_expenditure_gdp"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1976,
+              "currentYear": 2026,
+              "baseScore": 17.6,
+              "currentScore": 35.2,
+              "delta": 17.6,
+              "matchedIndicators": 2,
+              "basket": [
+                "tertiary_enrollment",
+                "education_expenditure_gdp"
               ],
               "clamped": 0,
               "series": []
@@ -12612,6 +14536,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 83.7,
+              "currentScore": 81.8,
+              "delta": -1.9,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -12662,6 +14601,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 40.9,
+              "currentScore": 41.4,
+              "delta": 0.5,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -12703,6 +14656,20 @@
               "baseScore": 50,
               "currentScore": 63.8,
               "delta": 13.8,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 50.1,
+              "currentScore": 63.8,
+              "delta": 13.7,
               "matchedIndicators": 2,
               "basket": [
                 "tax_revenue_gdp",
@@ -12760,6 +14727,21 @@
               "baseScore": 8.6,
               "currentScore": 24.5,
               "delta": 15.9,
+              "matchedIndicators": 3,
+              "basket": [
+                "rd_expenditure_gdp",
+                "researchers_per_million",
+                "sci_articles_per_million"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 4.4,
+              "currentScore": 24.5,
+              "delta": 20.1,
               "matchedIndicators": 3,
               "basket": [
                 "rd_expenditure_gdp",
@@ -12894,8 +14876,8 @@
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 59.8,
-              "currentScore": 48,
+              "baseScore": 59.9,
+              "currentScore": 48.1,
               "delta": -11.8,
               "matchedIndicators": 3,
               "basket": [
@@ -12909,13 +14891,27 @@
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 34.8,
-              "currentScore": 54.9,
-              "delta": 20.1,
+              "baseScore": 36.3,
+              "currentScore": 55,
+              "delta": 18.7,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
                 "firm_training_incidence"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 20.1,
+              "currentScore": 64.4,
+              "delta": 44.3,
+              "matchedIndicators": 2,
+              "basket": [
+                "tertiary_enrollment",
+                "education_expenditure_gdp"
               ],
               "clamped": 0,
               "series": []
@@ -13005,6 +15001,21 @@
               ],
               "clamped": 1,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 39.8,
+              "currentScore": 49.6,
+              "delta": 9.8,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 1,
+              "series": []
             }
           ],
           "indicators": [],
@@ -13055,6 +15066,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 42.7,
+              "currentScore": 42.2,
+              "delta": -0.5,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -13082,6 +15107,20 @@
               "baseScore": 54.9,
               "currentScore": 50.4,
               "delta": -4.5,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 42.2,
+              "currentScore": 50.4,
+              "delta": 8.2,
               "matchedIndicators": 2,
               "basket": [
                 "tax_revenue_gdp",
@@ -13145,6 +15184,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 48.8,
+              "currentScore": 77.2,
+              "delta": 28.4,
+              "matchedIndicators": 2,
+              "basket": [
+                "rd_expenditure_gdp",
+                "sci_articles_per_million"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -13195,6 +15248,20 @@
                 "domestic_credit_private"
               ],
               "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 14.3,
+              "currentScore": 59.9,
+              "delta": 45.6,
+              "matchedIndicators": 2,
+              "basket": [
+                "internet_users",
+                "domestic_credit_private"
+              ],
+              "clamped": 1,
               "series": []
             }
           ],
@@ -13254,7 +15321,7 @@
           ]
         },
         "learning": {
-          "score": 44.7,
+          "score": 45.2,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.543,
@@ -13266,15 +15333,15 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 44.7,
+          "blendedScore": 45.2,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 46.9,
-              "currentScore": 40.2,
-              "delta": -6.7,
+              "baseScore": 47.6,
+              "currentScore": 41,
+              "delta": -6.6,
               "matchedIndicators": 3,
               "basket": [
                 "tertiary_enrollment",
@@ -13287,9 +15354,9 @@
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 55.5,
-              "currentScore": 58.3,
-              "delta": 2.8,
+              "baseScore": 56.6,
+              "currentScore": 59.5,
+              "delta": 2.9,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -13397,6 +15464,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 64.4,
+              "currentScore": 78.6,
+              "delta": 14.2,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -13447,6 +15529,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 36,
+              "currentScore": 35.9,
+              "delta": -0.1,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -13488,6 +15584,20 @@
               "baseScore": 68.5,
               "currentScore": 70.4,
               "delta": 1.9,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 78.8,
+              "currentScore": 70.4,
+              "delta": -8.4,
               "matchedIndicators": 2,
               "basket": [
                 "tax_revenue_gdp",
@@ -13631,7 +15741,7 @@
           ]
         },
         "learning": {
-          "score": 40.3,
+          "score": 40.8,
           "observedIndicators": 4,
           "belowCoverageFloor": false,
           "confidence": 0.384,
@@ -13643,7 +15753,7 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 40.3,
+          "blendedScore": 40.8,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -13730,6 +15840,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 82.1,
+              "currentScore": 86.6,
+              "delta": 4.5,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -13773,6 +15898,20 @@
               "baseScore": 43.1,
               "currentScore": 33.9,
               "delta": -9.2,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 49.5,
+              "currentScore": 33.9,
+              "delta": -15.6,
               "matchedIndicators": 2,
               "basket": [
                 "manufacturing_value_added",
@@ -13891,6 +16030,20 @@
               ],
               "clamped": 1,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 0.7,
+              "currentScore": 13.9,
+              "delta": 13.2,
+              "matchedIndicators": 2,
+              "basket": [
+                "internet_users",
+                "domestic_credit_private"
+              ],
+              "clamped": 1,
+              "series": []
             }
           ],
           "indicators": [],
@@ -13949,7 +16102,7 @@
           ]
         },
         "learning": {
-          "score": 11.6,
+          "score": 12.5,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.378,
@@ -13961,7 +16114,7 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 11.6,
+          "blendedScore": 12.5,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -14048,6 +16201,21 @@
               ],
               "clamped": 1,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 73.9,
+              "currentScore": 79.5,
+              "delta": 5.6,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -14091,6 +16259,20 @@
               "baseScore": 14.6,
               "currentScore": 14.2,
               "delta": -0.4,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 28.9,
+              "currentScore": 14.2,
+              "delta": -14.7,
               "matchedIndicators": 2,
               "basket": [
                 "manufacturing_value_added",
@@ -14207,6 +16389,20 @@
               ],
               "clamped": 1,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 4.7,
+              "currentScore": 15.6,
+              "delta": 10.9,
+              "matchedIndicators": 2,
+              "basket": [
+                "internet_users",
+                "domestic_credit_private"
+              ],
+              "clamped": 1,
+              "series": []
             }
           ],
           "indicators": [],
@@ -14265,7 +16461,7 @@
           ]
         },
         "learning": {
-          "score": 26,
+          "score": 26.8,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.511,
@@ -14277,14 +16473,14 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 26,
+          "blendedScore": 26.8,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 37.1,
-              "currentScore": 31.1,
+              "baseScore": 38.5,
+              "currentScore": 32.5,
               "delta": -6,
               "matchedIndicators": 3,
               "basket": [
@@ -14298,9 +16494,23 @@
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 41.4,
-              "currentScore": 24.9,
-              "delta": -16.5,
+              "baseScore": 42.3,
+              "currentScore": 27,
+              "delta": -15.3,
+              "matchedIndicators": 2,
+              "basket": [
+                "tertiary_enrollment",
+                "education_expenditure_gdp"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1976,
+              "currentYear": 2026,
+              "baseScore": 33.4,
+              "currentScore": 27,
+              "delta": -6.4,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -14379,6 +16589,21 @@
               ],
               "clamped": 1,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 65,
+              "currentScore": 46.1,
+              "delta": -18.9,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -14422,6 +16647,20 @@
               "baseScore": 19.3,
               "currentScore": 12,
               "delta": -7.3,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 18.2,
+              "currentScore": 12,
+              "delta": -6.2,
               "matchedIndicators": 2,
               "basket": [
                 "manufacturing_value_added",
@@ -14556,6 +16795,20 @@
               ],
               "clamped": 2,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 0.9,
+              "currentScore": 11,
+              "delta": 10.1,
+              "matchedIndicators": 2,
+              "basket": [
+                "internet_users",
+                "domestic_credit_private"
+              ],
+              "clamped": 1,
+              "series": []
             }
           ],
           "indicators": [],
@@ -14614,7 +16867,7 @@
           ]
         },
         "learning": {
-          "score": 22.4,
+          "score": 23.2,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.565,
@@ -14626,14 +16879,14 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 22.4,
+          "blendedScore": 23.2,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 36.3,
-              "currentScore": 29.5,
+              "baseScore": 37.7,
+              "currentScore": 30.9,
               "delta": -6.8,
               "matchedIndicators": 3,
               "basket": [
@@ -14647,16 +16900,16 @@
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 29.3,
-              "currentScore": 29.5,
-              "delta": 0.2,
+              "baseScore": 30.1,
+              "currentScore": 30.9,
+              "delta": 0.8,
               "matchedIndicators": 3,
               "basket": [
                 "tertiary_enrollment",
                 "education_expenditure_gdp",
                 "firm_training_incidence"
               ],
-              "clamped": 1,
+              "clamped": 0,
               "series": []
             }
           ],
@@ -14744,6 +16997,21 @@
               ],
               "clamped": 1,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 30.9,
+              "currentScore": 40.7,
+              "delta": 9.8,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -14787,6 +17055,20 @@
               "baseScore": 13.4,
               "currentScore": 12.8,
               "delta": -0.6,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 1,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 17,
+              "currentScore": 12.8,
+              "delta": -4.2,
               "matchedIndicators": 2,
               "basket": [
                 "manufacturing_value_added",
@@ -14962,7 +17244,7 @@
           ]
         },
         "learning": {
-          "score": 9.5,
+          "score": 10.4,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.419,
@@ -14974,7 +17256,7 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 9.5,
+          "blendedScore": 10.4,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -15075,6 +17357,21 @@
               ],
               "clamped": 1,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 83.3,
+              "currentScore": 57.1,
+              "delta": -26.2,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -15125,6 +17422,20 @@
               ],
               "clamped": 1,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 7.5,
+              "currentScore": 6.3,
+              "delta": -1.2,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 1,
+              "series": []
             }
           ],
           "indicators": [],
@@ -15166,6 +17477,20 @@
               "baseScore": 56.9,
               "currentScore": 45.5,
               "delta": -11.4,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 32.2,
+              "currentScore": 45.5,
+              "delta": 13.3,
               "matchedIndicators": 2,
               "basket": [
                 "tax_revenue_gdp",
@@ -15271,6 +17596,20 @@
               "baseScore": 8.1,
               "currentScore": 49.3,
               "delta": 41.2,
+              "matchedIndicators": 2,
+              "basket": [
+                "internet_users",
+                "domestic_credit_private"
+              ],
+              "clamped": 1,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 12.5,
+              "currentScore": 49.3,
+              "delta": 36.8,
               "matchedIndicators": 2,
               "basket": [
                 "internet_users",
@@ -15450,6 +17789,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 69.8,
+              "currentScore": 81.5,
+              "delta": 11.7,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -15493,6 +17847,20 @@
               "baseScore": 19.1,
               "currentScore": 21.9,
               "delta": 2.8,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 26.2,
+              "currentScore": 21.9,
+              "delta": -4.3,
               "matchedIndicators": 2,
               "basket": [
                 "manufacturing_value_added",
@@ -15627,6 +17995,20 @@
               ],
               "clamped": 1,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 5.7,
+              "currentScore": 51.5,
+              "delta": 45.8,
+              "matchedIndicators": 2,
+              "basket": [
+                "internet_users",
+                "domestic_credit_private"
+              ],
+              "clamped": 1,
+              "series": []
             }
           ],
           "indicators": [],
@@ -15685,7 +18067,7 @@
           ]
         },
         "learning": {
-          "score": 34.2,
+          "score": 34.8,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.409,
@@ -15697,7 +18079,7 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 34.2,
+          "blendedScore": 34.8,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -15799,6 +18181,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 71.3,
+              "currentScore": 67.8,
+              "delta": -3.5,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 1,
+              "series": []
             }
           ],
           "indicators": [],
@@ -15842,6 +18239,20 @@
               "baseScore": 30.7,
               "currentScore": 34.4,
               "delta": 3.7,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 25.5,
+              "currentScore": 34.4,
+              "delta": 8.9,
               "matchedIndicators": 2,
               "basket": [
                 "manufacturing_value_added",
@@ -16047,7 +18458,7 @@
           ]
         },
         "learning": {
-          "score": 47,
+          "score": 47.4,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.554,
@@ -16059,15 +18470,15 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 47,
+          "blendedScore": 47.4,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 43.7,
-              "currentScore": 50,
-              "delta": 6.3,
+              "baseScore": 45.1,
+              "currentScore": 50.9,
+              "delta": 5.8,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -16175,6 +18586,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 46.7,
+              "currentScore": 58.6,
+              "delta": 11.9,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -16218,6 +18644,20 @@
               "baseScore": 24.2,
               "currentScore": 24.1,
               "delta": -0.1,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 35.8,
+              "currentScore": 24.1,
+              "delta": -11.7,
               "matchedIndicators": 2,
               "basket": [
                 "manufacturing_value_added",
@@ -16407,7 +18847,7 @@
           ]
         },
         "learning": {
-          "score": 56.8,
+          "score": 57.1,
           "observedIndicators": 4,
           "belowCoverageFloor": false,
           "confidence": 0.097,
@@ -16419,7 +18859,7 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 56.8,
+          "blendedScore": 57.1,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -16487,6 +18927,21 @@
                 "labor_force_participation",
                 "unemployment_rate",
                 "broadband_subscriptions",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 38.3,
+              "currentScore": 37.5,
+              "delta": -0.8,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
                 "electricity_transmission_losses"
               ],
               "clamped": 0,
@@ -16579,6 +19034,21 @@
               "baseScore": 1.8,
               "currentScore": 2.7,
               "delta": 0.9,
+              "matchedIndicators": 3,
+              "basket": [
+                "rd_expenditure_gdp",
+                "researchers_per_million",
+                "sci_articles_per_million"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 2.4,
+              "currentScore": 2.7,
+              "delta": 0.3,
               "matchedIndicators": 3,
               "basket": [
                 "rd_expenditure_gdp",
@@ -16680,7 +19150,7 @@
           ]
         },
         "learning": {
-          "score": 28.2,
+          "score": 28.7,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.531,
@@ -16692,15 +19162,15 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 28.2,
+          "blendedScore": 28.7,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 38.5,
-              "currentScore": 35.8,
-              "delta": -2.7,
+              "baseScore": 39.8,
+              "currentScore": 37,
+              "delta": -2.8,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -16712,14 +19182,42 @@
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 42.8,
-              "currentScore": 29.1,
-              "delta": -13.7,
+              "baseScore": 43.8,
+              "currentScore": 30,
+              "delta": -13.8,
               "matchedIndicators": 3,
               "basket": [
                 "tertiary_enrollment",
                 "education_expenditure_gdp",
                 "firm_training_incidence"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 38.2,
+              "currentScore": 37,
+              "delta": -1.2,
+              "matchedIndicators": 2,
+              "basket": [
+                "tertiary_enrollment",
+                "education_expenditure_gdp"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1976,
+              "currentYear": 2026,
+              "baseScore": 32.1,
+              "currentScore": 37,
+              "delta": 4.9,
+              "matchedIndicators": 2,
+              "basket": [
+                "tertiary_enrollment",
+                "education_expenditure_gdp"
               ],
               "clamped": 0,
               "series": []
@@ -16809,6 +19307,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 44,
+              "currentScore": 64.4,
+              "delta": 20.4,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -16852,6 +19365,20 @@
               "baseScore": 18.1,
               "currentScore": 21.9,
               "delta": 3.8,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 22.6,
+              "currentScore": 21.9,
+              "delta": -0.7,
               "matchedIndicators": 2,
               "basket": [
                 "manufacturing_value_added",
@@ -17060,7 +19587,7 @@
           ]
         },
         "learning": {
-          "score": 42,
+          "score": 42.7,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.565,
@@ -17072,15 +19599,15 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 42,
+          "blendedScore": 42.7,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 23.7,
-              "currentScore": 27.1,
-              "delta": 3.4,
+              "baseScore": 25.6,
+              "currentScore": 28.8,
+              "delta": 3.2,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -17092,14 +19619,42 @@
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 23.3,
-              "currentScore": 48.4,
-              "delta": 25.1,
+              "baseScore": 24.7,
+              "currentScore": 49.5,
+              "delta": 24.8,
               "matchedIndicators": 3,
               "basket": [
                 "tertiary_enrollment",
                 "education_expenditure_gdp",
                 "firm_training_incidence"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 11.1,
+              "currentScore": 28.8,
+              "delta": 17.7,
+              "matchedIndicators": 2,
+              "basket": [
+                "tertiary_enrollment",
+                "education_expenditure_gdp"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1976,
+              "currentYear": 2026,
+              "baseScore": 9.6,
+              "currentScore": 28.8,
+              "delta": 19.2,
+              "matchedIndicators": 2,
+              "basket": [
+                "tertiary_enrollment",
+                "education_expenditure_gdp"
               ],
               "clamped": 0,
               "series": []
@@ -17174,6 +19729,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 59.2,
+              "currentScore": 57.2,
+              "delta": -2,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -17217,6 +19787,20 @@
               "baseScore": 31.9,
               "currentScore": 24.5,
               "delta": -7.4,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 23.7,
+              "currentScore": 24.5,
+              "delta": 0.8,
               "matchedIndicators": 2,
               "basket": [
                 "manufacturing_value_added",
@@ -17422,7 +20006,7 @@
           ]
         },
         "learning": {
-          "score": 40.8,
+          "score": 41.5,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.475,
@@ -17434,15 +20018,29 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 40.8,
+          "blendedScore": 41.5,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 42.7,
-              "currentScore": 34.3,
-              "delta": -8.4,
+              "baseScore": 44.6,
+              "currentScore": 36.1,
+              "delta": -8.5,
+              "matchedIndicators": 2,
+              "basket": [
+                "tertiary_enrollment",
+                "education_expenditure_gdp"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 18.4,
+              "currentScore": 36.1,
+              "delta": 17.7,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -17520,6 +20118,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 51.8,
+              "currentScore": 28.3,
+              "delta": -23.5,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -17563,6 +20176,20 @@
               "baseScore": 29.6,
               "currentScore": 24.2,
               "delta": -5.4,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 28.2,
+              "currentScore": 24.2,
+              "delta": -4,
               "matchedIndicators": 2,
               "basket": [
                 "manufacturing_value_added",
@@ -17741,7 +20368,7 @@
           ]
         },
         "learning": {
-          "score": 33.5,
+          "score": 34.2,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.554,
@@ -17753,14 +20380,14 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 33.5,
+          "blendedScore": 34.2,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 43.4,
-              "currentScore": 34.8,
+              "baseScore": 44.5,
+              "currentScore": 35.9,
               "delta": -8.6,
               "matchedIndicators": 3,
               "basket": [
@@ -17774,14 +20401,28 @@
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 38.9,
-              "currentScore": 34.8,
-              "delta": -4.1,
+              "baseScore": 40.1,
+              "currentScore": 35.9,
+              "delta": -4.2,
               "matchedIndicators": 3,
               "basket": [
                 "tertiary_enrollment",
                 "education_expenditure_gdp",
                 "firm_training_incidence"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1976,
+              "currentYear": 2026,
+              "baseScore": 6.6,
+              "currentScore": 32.8,
+              "delta": 26.2,
+              "matchedIndicators": 2,
+              "basket": [
+                "tertiary_enrollment",
+                "education_expenditure_gdp"
               ],
               "clamped": 0,
               "series": []
@@ -17871,6 +20512,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 47.9,
+              "currentScore": 63.7,
+              "delta": 15.8,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -17914,6 +20570,20 @@
               "baseScore": 27.2,
               "currentScore": 22.5,
               "delta": -4.7,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 30.2,
+              "currentScore": 22.5,
+              "delta": -7.7,
               "matchedIndicators": 2,
               "basket": [
                 "manufacturing_value_added",
@@ -18117,7 +20787,7 @@
           ]
         },
         "learning": {
-          "score": 31.3,
+          "score": 32,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.398,
@@ -18129,15 +20799,43 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 31.3,
+          "blendedScore": 32,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 18.6,
-              "currentScore": 27.2,
-              "delta": 8.6,
+              "baseScore": 20.6,
+              "currentScore": 28.9,
+              "delta": 8.3,
+              "matchedIndicators": 2,
+              "basket": [
+                "tertiary_enrollment",
+                "education_expenditure_gdp"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 20.6,
+              "currentScore": 28.9,
+              "delta": 8.3,
+              "matchedIndicators": 2,
+              "basket": [
+                "tertiary_enrollment",
+                "education_expenditure_gdp"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1976,
+              "currentYear": 2026,
+              "baseScore": 16.3,
+              "currentScore": 28.9,
+              "delta": 12.6,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -18216,6 +20914,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 33.2,
+              "currentScore": 52.3,
+              "delta": 19.1,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -18259,6 +20972,20 @@
               "baseScore": 21.5,
               "currentScore": 20.6,
               "delta": -0.9,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 21.4,
+              "currentScore": 20.6,
+              "delta": -0.8,
               "matchedIndicators": 2,
               "basket": [
                 "manufacturing_value_added",
@@ -18433,7 +21160,7 @@
           ]
         },
         "learning": {
-          "score": 36.8,
+          "score": 37.2,
           "observedIndicators": 5,
           "belowCoverageFloor": false,
           "confidence": 0.565,
@@ -18445,15 +21172,15 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 36.8,
+          "blendedScore": 37.2,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 38.8,
-              "currentScore": 47,
-              "delta": 8.2,
+              "baseScore": 39.5,
+              "currentScore": 47.8,
+              "delta": 8.3,
               "matchedIndicators": 3,
               "basket": [
                 "tertiary_enrollment",
@@ -18466,9 +21193,9 @@
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 22.5,
-              "currentScore": 45.6,
-              "delta": 23.1,
+              "baseScore": 24.1,
+              "currentScore": 46.7,
+              "delta": 22.6,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -18576,6 +21303,21 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 37.7,
+              "currentScore": 61.5,
+              "delta": 23.8,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -18619,6 +21361,20 @@
               "baseScore": 31.5,
               "currentScore": 27.4,
               "delta": -4.1,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 37.3,
+              "currentScore": 27.4,
+              "delta": -9.9,
               "matchedIndicators": 2,
               "basket": [
                 "manufacturing_value_added",
@@ -18674,6 +21430,20 @@
               ],
               "clamped": 0,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 30.4,
+              "currentScore": 53.1,
+              "delta": 22.7,
+              "matchedIndicators": 2,
+              "basket": [
+                "tax_revenue_gdp",
+                "income_inequality"
+              ],
+              "clamped": 0,
+              "series": []
             }
           ],
           "indicators": [],
@@ -18722,6 +21492,20 @@
               "baseScore": 5.5,
               "currentScore": 5.6,
               "delta": 0.1,
+              "matchedIndicators": 2,
+              "basket": [
+                "rd_expenditure_gdp",
+                "sci_articles_per_million"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 3.7,
+              "currentScore": 5.6,
+              "delta": 1.9,
               "matchedIndicators": 2,
               "basket": [
                 "rd_expenditure_gdp",
@@ -18806,7 +21590,7 @@
           ]
         },
         "learning": {
-          "score": 59.3,
+          "score": 60.3,
           "observedIndicators": 3,
           "belowCoverageFloor": false,
           "confidence": 0.328,
@@ -18818,15 +21602,15 @@
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 59.3,
+          "blendedScore": 60.3,
           "blendedFrom": "indicators",
           "momentum": [
             {
               "baseYear": 2016,
               "currentYear": 2026,
-              "baseScore": 63.8,
-              "currentScore": 67.6,
-              "delta": 3.8,
+              "baseScore": 65.3,
+              "currentScore": 69,
+              "delta": 3.7,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
@@ -18838,15 +21622,29 @@
             {
               "baseYear": 2006,
               "currentYear": 2026,
-              "baseScore": 87.2,
-              "currentScore": 67.6,
-              "delta": -19.6,
+              "baseScore": 87.8,
+              "currentScore": 69,
+              "delta": -18.8,
               "matchedIndicators": 2,
               "basket": [
                 "tertiary_enrollment",
                 "education_expenditure_gdp"
               ],
               "clamped": 1,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 38.2,
+              "currentScore": 69,
+              "delta": 30.8,
+              "matchedIndicators": 2,
+              "basket": [
+                "tertiary_enrollment",
+                "education_expenditure_gdp"
+              ],
+              "clamped": 0,
               "series": []
             }
           ],
@@ -18939,6 +21737,21 @@
               "baseScore": 55.1,
               "currentScore": 54.8,
               "delta": -0.3,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 38.1,
+              "currentScore": 54.8,
+              "delta": 16.7,
               "matchedIndicators": 3,
               "basket": [
                 "labor_force_participation",
@@ -19089,6 +21902,20 @@
               ],
               "clamped": 1,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 2.4,
+              "currentScore": 16.6,
+              "delta": 14.2,
+              "matchedIndicators": 2,
+              "basket": [
+                "internet_users",
+                "domestic_credit_private"
+              ],
+              "clamped": 1,
+              "series": []
             }
           ],
           "indicators": [],
@@ -19147,19 +21974,19 @@
           ]
         },
         "learning": {
-          "score": 12.3,
-          "observedIndicators": 2,
+          "score": 7.3,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.215,
+          "confidence": 0.242,
           "confidenceParts": {
-            "coverage": 0.286,
-            "recency": 0.792,
+            "coverage": 0.571,
+            "recency": 0.446,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 12.3,
+          "blendedScore": 7.3,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -19230,6 +22057,21 @@
               ],
               "clamped": 1,
               "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 32,
+              "currentScore": 36.9,
+              "delta": 4.9,
+              "matchedIndicators": 3,
+              "basket": [
+                "labor_force_participation",
+                "unemployment_rate",
+                "electricity_transmission_losses"
+              ],
+              "clamped": 1,
+              "series": []
             }
           ],
           "indicators": [],
@@ -19272,6 +22114,20 @@
               "baseScore": 24.7,
               "currentScore": 29.8,
               "delta": 5.1,
+              "matchedIndicators": 2,
+              "basket": [
+                "manufacturing_value_added",
+                "labour_productivity"
+              ],
+              "clamped": 0,
+              "series": []
+            },
+            {
+              "baseYear": 1996,
+              "currentYear": 2026,
+              "baseScore": 21.3,
+              "currentScore": 29.8,
+              "delta": 8.5,
               "matchedIndicators": 2,
               "basket": [
                 "manufacturing_value_added",

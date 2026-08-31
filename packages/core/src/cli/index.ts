@@ -23,7 +23,6 @@ import {
   SCHEMA_OUT_DIR,
   agendaDoc,
   agendaFile,
-  brSubnationalFile,
   countryFile,
   indicatorFile,
 } from '../pipeline/paths.js'
@@ -40,7 +39,7 @@ import { buildReport } from '../pipeline/report.js'
 import { writeVelocity } from '../pipeline/velocity.js'
 import { writeLeverage } from '../pipeline/leverage.js'
 import { writeResidual } from '../pipeline/residual.js'
-import { writeBrazilSubnational } from '../pipeline/br-subnational.js'
+import { writeSubnationalOutputs } from '../pipeline/br-subnational.js'
 import { writeInstitutionExplorer } from '../pipeline/institution-explorer-out.js'
 import {
   acrossCountries,
@@ -70,6 +69,7 @@ import {
   validateEvidence,
   validateInstitutionNetwork,
   validateResearchRuns,
+  validateSubnational,
 } from '../pipeline/validate.js'
 import {
   buildResearchCritiquePrompt,
@@ -124,6 +124,10 @@ const num = (a: Args, k: string, d: number): number => {
   const v = a.flags.get(k)
   return typeof v === 'string' && v.trim() !== '' && Number.isFinite(Number(v)) ? Number(v) : d
 }
+const optionalNum = (a: Args, k: string): number | undefined => {
+  const v = a.flags.get(k)
+  return typeof v === 'string' && v.trim() !== '' && Number.isFinite(Number(v)) ? Number(v) : undefined
+}
 const bool = (a: Args, k: string): boolean => a.flags.get(k) === true || a.flags.get(k) === 'true'
 
 const CURRENT_YEAR = new Date().getFullYear()
@@ -174,7 +178,7 @@ async function score(args: Args): Promise<CountryResult[]> {
   console.log(`countries -> ${COUNTRY_OUT_DIR} (${countries.length} files)`)
   console.log(`indicators-> ${INDICATOR_OUT_DIR} (${views.length} files)`)
   console.log(`flat table-> ${FILES.flatTable}`)
-  console.log(`schemas   -> ${SCHEMA_OUT_DIR} (3 files) and ${FILES.datapackage}`)
+  console.log(`schemas   -> ${SCHEMA_OUT_DIR} (5 files) and ${FILES.datapackage}`)
   return countries
 }
 
@@ -508,9 +512,9 @@ async function main() {
     }
 
     case 'br-subnational': {
-      const output = await writeBrazilSubnational(num(args, 'year', 2024))
+      const output = await writeSubnationalOutputs(optionalNum(args, 'year'))
       console.log(
-        `Brazil subnational -> ${brSubnationalFile(output.indicatorId)} (${output.states.length} states, ${output.national.year} national value)`,
+        `subnational -> ${FILES.subnationalIndex} (${output.files.length} published series)`,
       )
       break
     }
@@ -958,13 +962,14 @@ Start with file 1.
         ...(await validateEvidence()),
         ...(await validateResearchRuns()),
         ...(await validateInstitutionNetwork()),
+        ...(await validateSubnational()),
       ]
       if (args.flags.get('fetch')) {
         console.log('Checking evidence source URLs against the live web...')
         problems.push(...(await checkEvidenceUrls()))
       }
       if (problems.length === 0) {
-        console.log('All Delphi runs, evidence records and institutional networks pass validation.')
+        console.log('All Delphi runs, evidence records, institutional networks and subnational files pass validation.')
         break
       }
       for (const p of problems) console.log(`  ${p.file.padEnd(46)} ${p.problem}`)
@@ -978,6 +983,8 @@ Start with file 1.
       await ingestWorldBank(num(args, 'from', INGEST_FROM_YEAR), {
         snapshot: Boolean(args.flags.get('snapshot')),
       })
+      const subnational = await writeSubnationalOutputs()
+      console.log(`subnational -> ${FILES.subnationalIndex} (${subnational.files.length} published series)`)
       await score(args)
       const { countries, diag, delphi } = await diagnose(args)
       await writeOut(FILES.report, buildReport(countries, diag, delphi))
@@ -989,7 +996,7 @@ Start with file 1.
     default:
       console.log(`National Capability Benchmark
 
-  pnpm bench ingest    [--from 1990] [--snapshot]  fetch World Bank series into data/observations
+  pnpm bench ingest    [--from 1960] [--snapshot]  fetch World Bank series into data/observations
   pnpm bench score                        normalize, score, write index.json, one file per country, table.csv
   pnpm bench delphi    [--mock] [--rounds 2] [--countries BRA,IND] [--models a,b]
                        [--max-coverage 0.5] [--no-judge] [--concurrency 4] [--activate]
@@ -998,7 +1005,7 @@ Start with file 1.
   pnpm bench velocity                     write the provisional five-year velocity fixture
   pnpm bench leverage                     write the provisional leverage fixture
   pnpm bench residual                     write the provisional wealth-residual fixture
-  pnpm bench br-subnational [--year 2024] fetch the Brazil state-level Gini fixture
+  pnpm bench br-subnational [--year 2024]          fetch the registered Brazil subnational series
   pnpm bench institutions [--country BRA]  project the institution map into the explorer feed, one file per lexicon
   pnpm bench trust    fetch                fetch and parse Joint EVS/WVS A165 trust results
   pnpm bench vdem     fetch                fetch and parse V-Dem v15 civil-society strength
@@ -1016,7 +1023,7 @@ Start with file 1.
                                           measure the prompts and price the panel run
   pnpm bench probe     --search <regex> [--limit 40]             find World Bank series by name, with the database each needs
   pnpm bench probe     --series a,b[@db] [--from 2010] [--json]  test candidate World Bank series before wiring them
-  pnpm bench validate  [--fetch]          schema-check Delphi, evidence and institution data; --fetch live-checks evidence URLs
+  pnpm bench validate  [--fetch]          schema-check Delphi, evidence, institution and subnational data; --fetch live-checks evidence URLs
   pnpm bench report                       write the findings report
   pnpm bench agenda    [BRA IND ...] [--lang pt-BR]
                                           write the capability agenda, JSON plus one markdown per lexicon

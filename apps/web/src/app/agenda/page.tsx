@@ -1,11 +1,10 @@
 import Link from 'next/link'
-import { COUNTRY_NAMES } from '@ncb/core'
+import { AgendaEvidenceMatrix } from '@/components/views/AgendaEvidenceMatrix'
 import { DeliveryTable } from '@/components/views/DeliveryTable'
 import { Empty, Headline, Highlight, PageTitle, Section } from '@/components/ui'
-import { CountryLabel } from '@/components/ui'
 import { Icon } from '@/components/Icon'
 import { MISSING_DATA_HINT, loadEvidence, loadIndex } from '@/lib/data'
-import { agendaHref, patternsHref, readPatternFilters } from '@/lib/links'
+import { patternFiltersQuery, patternsHref, readPatternFilters } from '@/lib/links'
 
 export const dynamic = 'force-dynamic'
 
@@ -19,11 +18,10 @@ export const metadata = {
  * The agendas, one per country, and the deliveries they point at.
  *
  * An agenda names what a country should raise and what it should measure
- * first. The table answers the same question from the other side: what has
- * already been built against those missing indicators, when it started, what
- * number carries it and whether it still runs. The filters live in the query
- * string, so a reader who has narrowed the table can send that view on. See
- * D46.
+ * first. The matrix shows which country-capability cells already carry a
+ * documented delivery; the register below gives each one its claim, date,
+ * source and status. The filters live in the query string, so a reader who has
+ * narrowed the table can send that view on. See D46 and D90.
  *
  * Every agenda here is English, because the ground layer is. A country with a
  * layer of its own publishes the same agenda inside that layer, in that
@@ -37,11 +35,6 @@ export default async function AgendaIndexPage({
   const filters = readPatternFilters(await searchParams)
   const [data, records] = await Promise.all([loadIndex(), loadEvidence()])
   if (!data || data.countries.length === 0) return <Empty hint={MISSING_DATA_HINT} />
-
-  const countries = [...data.countries].sort((a, b) =>
-    (COUNTRY_NAMES[a.iso3] ?? a.iso3).localeCompare(COUNTRY_NAMES[b.iso3] ?? b.iso3),
-  )
-  const withRecords = new Set(records.map((r) => r.iso3))
 
   return (
     <>
@@ -63,6 +56,14 @@ export default async function AgendaIndexPage({
       </p>
 
       <Section
+        title="Where examples exist"
+        icon={<Icon name="list-filter" size={22} />}
+        hint="Every benchmark country and all nine capabilities stay visible. Filled cells link to the source-checked examples; empty cells show where the research agenda is still open."
+      >
+        <AgendaEvidenceMatrix records={records} active={filters} />
+      </Section>
+
+      <Section
         title="What countries built"
         icon={<Icon name="hammer" size={22} />}
         hint="Each delivery keeps its claim readable beside the year, country, capability, status, published number, source and mechanism."
@@ -70,29 +71,12 @@ export default async function AgendaIndexPage({
         {records.length === 0 ? (
           <Empty hint="No evidence records yet. Add them to data/evidence/records.json." />
         ) : (
-          <DeliveryTable records={records} initial={filters} />
+          <DeliveryTable
+            key={patternFiltersQuery(filters)}
+            records={records}
+            initial={filters}
+          />
         )}
-      </Section>
-
-      <Section
-        title="One agenda per country"
-        icon={<Icon name="list-filter" size={22} />}
-        hint="Every country in the benchmark has an agenda, including the ones with no delivery recorded yet. A marked country has at least one row in the table above."
-      >
-        <ul className="grid gap-x-8 gap-y-2 text-lg sm:grid-cols-2 lg:grid-cols-3">
-          {countries.map((c) => (
-            <li key={c.iso3}>
-              <Link href={agendaHref(c.iso3)} className="underline underline-offset-4">
-                <CountryLabel iso3={c.iso3} name={COUNTRY_NAMES[c.iso3] ?? c.iso3} />
-              </Link>
-              {withRecords.has(c.iso3) ? (
-                <span className="ml-2 text-xs text-[var(--muted)]">
-                  {records.filter((r) => r.iso3 === c.iso3).length} recorded
-                </span>
-              ) : null}
-            </li>
-          ))}
-        </ul>
       </Section>
     </>
   )

@@ -12,7 +12,7 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 | Agency | 74.8 | 0.61 (usable) | +7.7 over 10 years using 4 indicators |
 | Coordination | 94 | 0.24 (very thin) | no trend |
 | Trust | 56.2 | 0.16 (very thin) | no trend |
-| Learning | 60.9 | 0.54 (usable) | no trend |
+| Learning | 61.2 | 0.54 (usable) | no trend |
 | Experimentation | 55 | 0.18 (very thin) | +1.6 over 10 years using 2 indicators |
 | Adaptability | 76.1 | 0.48 (usable) | +9 over 10 years using 4 indicators |
 | Building | 53.1 | 0.54 (usable) | -5 over 10 years using 4 indicators |
@@ -60,7 +60,7 @@ These scores are at least 50 with usable evidence. They still need watching.
 - Adaptability: 76.1, confidence usable
 - Agency: 74.8, confidence usable
 - Anticipation: 61.3, confidence usable
-- Learning: 60.9, confidence usable
+- Learning: 61.2, confidence usable
 - Building: 53.1, confidence usable
 
 ## Missing data
@@ -100,6 +100,8 @@ These scores are at least 50 with usable evidence. They still need watching.
 Documented deliveries linked to missing indicators. They do not affect scores or confidence.
 
 - **Flamanville 3 EPR, and the erosion of nuclear new-build delivery** (Building). France's Flamanville 3 EPR took about 16.5 years from construction beginning in September 2007 to completion in early 2024, and its commissioning was the country's first new nuclear reactor since Civaux 2 in 1999, a 25-year gap.
+- **Compte personnel de formation** (Learning). France's Compte personnel de formation generated 1,387,500 training starts in 2024, with 1,232,100 people entering a CPF-funded course through the national account and platform.
+- **France's long-term unemployment decline** (Adaptability). France's national statistics office Insee reported that people unemployed for at least one year represented 23.3% of all unemployed people in 2024, while the long-term unemployment rate was 1.7% of the active population, down from 3.1% in 2015.
 
 ## Contribute
 

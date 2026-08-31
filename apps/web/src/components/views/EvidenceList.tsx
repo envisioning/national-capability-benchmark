@@ -1,7 +1,8 @@
 import Link from 'next/link'
-import { EVIDENCE_STATUS_LABELS, INDICATORS_BY_ID } from '@ncb/core'
+import { COUNTRY_NAMES, EVIDENCE_STATUS_LABELS, INDICATORS_BY_ID } from '@ncb/core'
 import { Icon } from '@/components/Icon'
-import { evidenceHref } from '@/lib/links'
+import { CountryLabel, Meta } from '@/components/ui'
+import { countryProfileHref, evidenceHref } from '@/lib/links'
 import type { EvidenceRecord } from '@ncb/core'
 
 /**
@@ -30,14 +31,25 @@ export function EvidenceList({ records }: { records: EvidenceRecord[] }) {
           const def = INDICATORS_BY_ID[r.indicatorId]
           return (
             <li key={r.id}>
+              <div className="mb-2 flex flex-wrap items-center gap-2">
+                <Meta className="bg-[var(--surface)]">
+                  <Link
+                    href={countryProfileHref(r.iso3)}
+                    className="font-medium underline underline-offset-4"
+                  >
+                    <CountryLabel iso3={r.iso3} name={COUNTRY_NAMES[r.iso3] ?? r.iso3} />
+                  </Link>
+                </Meta>
+                <Meta className="bg-[var(--surface)]">linked to {def?.name ?? r.indicatorId}</Meta>
+                <Meta className="bg-[var(--surface)]">started {r.started}</Meta>
+                <Meta className="bg-[var(--surface)]">
+                  {EVIDENCE_STATUS_LABELS[r.status]}
+                </Meta>
+              </div>
               <p className="text-xs font-medium tracking-tight">
                 <Link href={evidenceHref(r.id)} className="underline underline-offset-4">
                   {r.title}
                 </Link>
-                <span className="ml-2 font-normal text-[var(--muted)]">
-                  linked to {def?.name ?? r.indicatorId}, started {r.started},{' '}
-                  {EVIDENCE_STATUS_LABELS[r.status]}
-                </span>
               </p>
               <p className="mt-1 text-lg leading-relaxed">{r.claim}</p>
               <p className="mt-1 text-xs text-[var(--muted)]">

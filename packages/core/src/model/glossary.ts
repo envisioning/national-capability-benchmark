@@ -245,8 +245,8 @@ export const GLOSSARY: GlossaryEntry[] = [
   {
     term: 'Momentum',
     group: 'How things change over time',
-    short: 'How much a dimension moved over ten or twenty years, on the same ruler.',
-    full: 'History uses today\'s frame, so score change reflects the country. Ten-year and twenty-year spans answer different questions. Values up to five years old can count at a span end, and clamped values are reported.',
+    short: 'How much a dimension moved over ten, twenty or longer spans, on the same ruler.',
+    full: 'History uses today\'s frame, so score change reflects the country. Ten-year, twenty-year and longer spans answer different questions. Values up to five years old can count at a span end, and clamped values are reported.',
     example: 'Brazil gained 26.2 points on Agency over ten years, against a median of 11.4 across the current country set, with two of the four basket indicators clamped at the frame edge.',
   },
   {
@@ -259,7 +259,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: 'Indicator line',
     group: 'How things change over time',
     short: 'One indicator\'s own history, as far back as its data goes.',
-    full: 'An indicator is comparable with itself, so its line reaches back to 1990 where data exists. Each point carries the published, normalized and source-tier values. Nothing is filled in or carried forward.',
+    full: 'An indicator is comparable with itself, so its line reaches back to 1960 where data exists. Each point carries the published, normalized and source-tier values. Nothing is filled in or carried forward.',
   },
   {
     term: 'Delphi panel',

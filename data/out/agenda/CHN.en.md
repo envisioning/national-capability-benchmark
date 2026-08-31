@@ -12,7 +12,7 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 | Agency | 86.8 | 0.61 (usable) | +21.9 over 10 years using 4 indicators |
 | Coordination | 65.9 | 0.26 (thin) | no trend |
 | Trust | 83.2 | 0.16 (very thin) | no trend |
-| Learning | 59.1 | 0.56 (usable) | +13 over 10 years using 2 indicators, with 1 at the frame edge |
+| Learning | 59.4 | 0.56 (usable) | +12.4 over 10 years using 2 indicators, with 1 at the frame edge |
 | Experimentation | 100 | 0.18 (very thin) | +30.6 over 10 years using 2 indicators |
 | Adaptability | 81.6 | 0.47 (usable) | +11.8 over 10 years using 4 indicators |
 | Building | 64.9 | 0.54 (usable) | -1.9 over 10 years using 4 indicators |
@@ -28,7 +28,7 @@ How capable is the country of identifying and preparing for emerging change?
 
 - Uses 5 observed indicators.
 - Highest usable scores: Sweden 83.5, Finland 82, Switzerland 81.1.
-- Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom).
+- Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan).
 - Missing indicators: Government foresight capacity, Long-horizon research share.
 
 ## What to measure first
@@ -73,7 +73,7 @@ These scores are at least 50 with usable evidence. They still need watching.
 - Agency: 86.8, confidence usable
 - Adaptability: 81.6, confidence usable
 - Building: 64.9, confidence usable
-- Learning: 59.1, confidence usable
+- Learning: 59.4, confidence usable
 
 ## Missing data
 
@@ -106,6 +106,12 @@ These scores are at least 50 with usable evidence. They still need watching.
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
+
+## What the indicators miss about China
+
+Documented deliveries linked to missing indicators. They do not affect scores or confidence.
+
+- **National basic-research funding allocation** (Anticipation). China's National Bureau of Statistics, Ministry of Science and Technology and Ministry of Finance reported 225.91 billion yuan in basic-research expenditure in 2023, equal to 6.77% of national R&D spending.
 
 ## Contribute
 

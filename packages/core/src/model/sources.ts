@@ -16,8 +16,8 @@ export const WB_API_BASE = 'https://api.worldbank.org/v2'
 /** World Development Indicators. The v2 API assumes it and takes no source parameter for it. */
 export const WB_DEFAULT_DATABASE = 2
 
-/** The first year every series is asked for. History feeds the trend layer. See D22. */
-export const INGEST_FROM_YEAR = 1990
+/** The first year every series is asked for. History feeds the trend layer. See D22, D92 and D93. */
+export const INGEST_FROM_YEAR = 1960
 
 export type WbDatabase = {
   id: number
@@ -73,7 +73,7 @@ export function worldBankSeriesUrl(opts: {
   const sourceId = opts.sourceId ?? WB_DEFAULT_DATABASE
   return (
     `${WB_API_BASE}/country/${opts.countries.join(';')}/indicator/${opts.series}` +
-    `?format=json&per_page=3000&date=${opts.fromYear}:${opts.toYear}` +
+    `?format=json&per_page=10000&date=${opts.fromYear}:${opts.toYear}` +
     (sourceId === WB_DEFAULT_DATABASE ? '' : `&source=${sourceId}`)
   )
 }
@@ -92,7 +92,7 @@ export const PUBLISHER_HOME: Record<string, string> = {
   [VDEM_PUBLISHER]: 'https://www.v-dem.net/data/the-v-dem-dataset/',
 }
 
-/** The official IBGE table used for the Brazil subnational corroboration fixture. */
+/** The official IBGE table used for the Brazil state-level Gini series. */
 export const BR_SUBNATIONAL_SOURCE = {
   publisher: 'IBGE, PNAD Contínua',
   table: '7435',
@@ -101,9 +101,21 @@ export const BR_SUBNATIONAL_SOURCE = {
   apiBase: 'https://apisidra.ibge.gov.br/values',
 } as const
 
-/** The exact source call for one Brazil state-level Gini release. */
-export function brSubnationalSeriesUrl(year: number): string {
-  return `${BR_SUBNATIONAL_SOURCE.apiBase}/t/${BR_SUBNATIONAL_SOURCE.table}/n3/all/v/${BR_SUBNATIONAL_SOURCE.variable}/p/${year}`
+/** The official population denominator used by future aggregate checks. */
+export const BR_STATE_POPULATION_SOURCE = {
+  publisher: 'IBGE',
+  year: 2024,
+  url: 'https://ftp.ibge.gov.br/Estimativas_de_Populacao/Estimativas_2024/estimativa_dou_2024.pdf',
+} as const
+
+/** The exact source call for one Brazil state-level SIDRA release. */
+export function brSubnationalSeriesUrl(
+  year: number,
+  opts: { table?: string; variable?: string } = {},
+): string {
+  const table = opts.table ?? BR_SUBNATIONAL_SOURCE.table
+  const variable = opts.variable ?? BR_SUBNATIONAL_SOURCE.variable
+  return `${BR_SUBNATIONAL_SOURCE.apiBase}/t/${table}/n3/all/v/${variable}/p/${year}`
 }
 
 export type IngestRoute = IndicatorDef['ingest']

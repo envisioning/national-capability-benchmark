@@ -12,7 +12,7 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 | Agency | 71 | 0.61 (usable) | +1.9 over 10 years using 4 indicators |
 | Coordination | 64.1 | 0.24 (very thin) | no trend |
 | Trust | 65.3 | 0.16 (very thin) | no trend |
-| Learning | 47.2 | 0.52 (usable) | +2.1 over 10 years using 2 indicators |
+| Learning | 47.6 | 0.52 (usable) | +2.1 over 10 years using 2 indicators |
 | Experimentation | 66.7 | 0.18 (very thin) | -6.8 over 10 years using 2 indicators |
 | Adaptability | 86.1 | 0.47 (usable) | +8.6 over 10 years using 4 indicators |
 | Building | 50.2 | 0.54 (usable) | -2.1 over 10 years using 4 indicators |
@@ -22,13 +22,13 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 
 These are the lowest scores with usable evidence. Thin evidence appears below.
 
-### Learning: 47.2, confidence usable
+### Learning: 47.6, confidence usable
 
 How effectively does the country acquire, distribute, and update knowledge?
 
 - Uses 5 observed indicators.
-- Highest usable scores: Finland 77.9, Australia 70.3, United Kingdom 68.4.
-- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); CAPES, federal postgraduate funding (Brazil); INEP, the standing education statistics institution (Brazil).
+- Highest usable scores: Finland 77.9, Australia 70.3, United Kingdom 68.6.
+- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); CAPES, federal postgraduate funding (Brazil); INEP, the standing education statistics institution (Brazil); Kartu Prakerja, a national lifelong-learning delivery system (Indonesia); Compte personnel de formation (France).
 - Missing indicators: Adult learning participation, Research citation impact.
 
 ## What to measure first
@@ -106,6 +106,17 @@ These scores are at least 50 with usable evidence. They still need watching.
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
+
+## What Japan built that no indicator counts
+
+These are documented institutional changes in Japan that the framework files as evidence. They sit beside the score and do not change it or its confidence.
+
+- **My Number Card, a national identity rail extended into services** (Adaptability). By July 2024 Japan reported 93.08 million My Number Cards held, about 75% of the population; 73.71 million had valid health-insurance-card registrations in June 2024, while 566 businesses used the public-key identity infrastructure.
+- **GIGA School, one learning device per student** (Building). Japan's MEXT GIGA School programme reached a one-device-per-student environment in 1,810 of 1,812 local school authorities (99.9%) by the end of fiscal 2022, with the remaining two scheduled to finish during fiscal 2023.
+- **Tōhoku reconstruction, a decade-long recovery programme** (Adaptability). After the 2011 earthquake and tsunami, Japan completed the planned 29,654 public-housing units by December 2020, completed 18,226 higher-ground residential-land units, opened about 570 kilometres of reconstruction roads by December 2021 and restored all damaged railways by March 2020.
+- **Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon** (Anticipation). After the 2011 Fukushima Daiichi accident, Japan adopted a government-led mid-and-long-term decommissioning roadmap and set completion at roughly 30–40 years after cold shutdown, treating the work as continuous risk reduction rather than a one-off rebuild.
+- **Monju, a fast-breeder programme ended before commercial operation** (Building). Japan decided in December 2016 not to restart the Monju prototype fast-breeder reactor and moved to decommissioning after a 1995 sodium leak, a 2010 restart followed by equipment trouble and 2012 inspection failures; the approved plan targets roughly 30 years of decommissioning.
+- **Volunteer fire corps, and its membership erosion** (Shared Purpose). Japan's Fire and Disaster Management Agency reported 732,223 volunteer fire-corps members on 1 April 2025, a fall of 14,458 in one year in the local disaster-response corps that it describes as a core of community resilience.
 
 ## Contribute
 

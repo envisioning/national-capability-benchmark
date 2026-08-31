@@ -20,7 +20,6 @@ import { CheckList } from '@/components/views/CheckList'
 import { CountryDimensionTable } from '@/components/views/CountryDimensionTable'
 import { EvidenceList } from '@/components/views/EvidenceList'
 import { IndicatorPeek } from '@/components/views/IndicatorPeek'
-import { EmbedCode } from '@/components/EmbedCode'
 import Link from 'next/link'
 import {
   Card,
@@ -39,13 +38,7 @@ import {
   Td,
   Th,
 } from '@/components/ui'
-import {
-  absoluteHref,
-  capabilityHref,
-  countryCsvHref,
-  embedCountryHref,
-  ogCountryHref,
-} from '@/lib/links'
+import { capabilityHref, countryCsvHref, ogCountryHref } from '@/lib/links'
 import { loadAgenda } from '@/lib/agenda'
 import { loadCountry, loadDelphiRun, loadDisputes, loadEvidence, loadIndex } from '@/lib/data'
 import { toProfile } from '@/lib/profile'
@@ -116,11 +109,6 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
             Download this country as CSV
           </a>
         </p>
-        <EmbedCode
-          src={absoluteHref(embedCountryHref(country.iso3))}
-          title={`${country.country} capability radar`}
-          height={520}
-        />
       </div>
 
       <div className="mb-10 grid gap-10 lg:grid-cols-[minmax(0,460px)_1fr]">

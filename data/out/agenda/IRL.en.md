@@ -12,7 +12,7 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 | Agency | 69.2 | 0.61 (usable) | +2.5 over 10 years using 4 indicators |
 | Coordination | 89 | 0.24 (very thin) | no trend |
 | Trust | not scored | 0.07 (very thin) | no trend |
-| Learning | 60.5 | 0.51 (usable) | -4.7 over 10 years using 2 indicators |
+| Learning | 60.8 | 0.51 (usable) | -4.6 over 10 years using 2 indicators |
 | Experimentation | not scored | 0.09 (very thin) | no trend |
 | Adaptability | 73.2 | 0.48 (usable) | +10 over 10 years using 4 indicators |
 | Building | 75.3 | 0.54 (usable) | +18.1 over 10 years using 4 indicators |
@@ -61,7 +61,7 @@ These scores are at least 50 with usable evidence. They still need watching.
 - Adaptability: 73.2, confidence usable
 - Agency: 69.2, confidence usable
 - Anticipation: 67.1, confidence usable
-- Learning: 60.5, confidence usable
+- Learning: 60.8, confidence usable
 
 ## Missing data
 
@@ -94,6 +94,17 @@ These scores are at least 50 with usable evidence. They still need watching.
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
+
+## What Ireland built that no indicator counts
+
+These are documented institutional changes in Ireland that the framework files as evidence. They sit beside the score and do not change it or its confidence.
+
+- **MyGovID single sign-on for public services** (Adaptability). Ireland built MyGovID as a reusable online identity for welfare, tax, transport, education and childcare services; the 2025 Digital Decade country report records more than 2.7 million verified accounts in December 2024, close to 65% of adults.
+- **National Broadband Plan rural fibre rollout** (Coordination). Ireland's National Broadband Plan combined commercial investment with a state intervention contract for rural areas covering more than 560,000 premises; by October 2024 the government reported over 102,600 premises connected to the National Broadband Ireland network.
+- **National COVID-19 vaccination delivery** (Adaptability). Ireland's HSE vaccination programme built a national booking, supply and reporting operation during COVID-19; by 21 July 2021 its dashboard recorded 5,344,686 administered doses, including 2,854,040 first doses.
+- **National Asset Management Agency crisis workout** (Adaptability). Ireland created NAMA in response to the property and banking crisis, acquired distressed loans and worked them down through asset sales and development; by the end of 2023 it had generated €47.7 billion in cash and transferred more than €4.25 billion to the Exchequer while preparing an orderly wind-down.
+- **New Children's Hospital cost escalation** (Building). Ireland's New Children's Hospital project saw its approved budget rise from €1.73 billion to €2.24 billion by February 2024 after an independent review recorded €450 million of earlier escalation and weaknesses in set-up, planning, execution and governance.
+- **Met Éireann national weather-warning service** (Adaptability). Ireland's national meteorological service uses a standard Yellow–Orange–Red warning system and briefs the National Emergency Coordination Group so government departments and agencies can coordinate ahead of severe weather; warnings are issued up to 48 hours before anticipated conditions.
 
 ## Contribute
 
