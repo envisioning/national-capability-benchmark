@@ -67,39 +67,38 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             the header, and a menu the page can scroll out from under is a menu
             that has to be scrolled back to. `overflow-x: clip` in globals.css
             is what lets this stick. See D85. */}
-        <header className="sticky top-0 z-40 w-full bg-[var(--background)]/95 backdrop-blur">
-          <div className="border-b border-[var(--rule)]">
-            <div className="m-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-3 px-6 py-4 sm:gap-x-8 sm:px-12 sm:py-5">
-              {/* The compact lockup follows the parent Envisioning shell: EV glyph,
-                  then the product name. The full name remains available to assistive
-                  technology without making the global header compete with the page. */}
+        <header className="sticky top-0 z-40 w-full border-b border-[var(--rule)] bg-[var(--background)]/95 backdrop-blur">
+          <div>
+            <div className="m-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-3 px-6 py-3 sm:gap-x-8 sm:px-12 sm:py-4">
+              {/* The compact lockup follows the parent Envisioning shell: the EV glyph
+                  and product name share one row, while the descriptor sits beneath the
+                  wordmark rather than changing the glyph's vertical alignment. */}
               <Link
                 href="/"
                 aria-label="NCB, National Capability Benchmark home"
-                className="inline-flex shrink-0 items-center gap-3 text-[var(--foreground)]"
+                className="inline-flex shrink-0 flex-col items-start text-[var(--foreground)]"
               >
-                <EnvisioningMark className="h-5 w-5" />
-                <span className="flex flex-col leading-none">
+                <span className="inline-flex items-center gap-3">
+                  <EnvisioningMark className="h-5 w-5" />
                   <span
                     className="font-display text-[34px] leading-none"
                     style={{ fontVariationSettings: '"wght" 500, "wdth" 100' }}
                   >
                     NCB
                   </span>
-                  <span className="mt-1 text-[9px] uppercase leading-[1.15] tracking-[0.06em] text-[var(--muted)]">
-                    National Capability Benchmark
-                  </span>
+                </span>
+                <span className="mt-1 pl-8 text-[9px] uppercase leading-[1.15] tracking-[0.06em] text-[var(--muted)]">
+                  National Capability Benchmark
                 </span>
               </Link>
               <HeaderNav />
             </div>
           </div>
 
-          {/* The deepest level of the nav tree, on its own rule under the header,
-              so the trail and the sibling pages read as different things. It
-              renders nothing on a page that has no pages beside it. It rides
-              inside the header so the two bands stick as one, and so the embed
-              rule in globals.css still has one element to hide. See D73. */}
+          {/* The deepest level of the nav tree shares the header surface instead
+              of sitting behind its own separator. It renders nothing on a page
+              that has no pages beside it and rides inside the sticky header so
+              the whole navigation stays together. See D73 and D91. */}
           <SectionTabs />
         </header>
 
@@ -113,21 +112,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link
                 href="/"
                 aria-label="NCB home"
-                className="footer-brand-lockup flex shrink-0 items-center gap-3"
+                className="footer-brand-lockup flex shrink-0 flex-col items-start"
               >
-                <EnvisioningMark className="h-[18px] w-[18px]" />
-                {/* The footer carries the full name, unlike the compact header lockup:
-                    this is the last place on the page that can say what NCB stands for. */}
-                <span className="flex flex-col leading-none">
+                <span className="inline-flex items-center gap-3">
+                  <EnvisioningMark className="h-[18px] w-[18px]" />
                   <span
                     className="font-display text-[32px] leading-none"
                     style={{ fontVariationSettings: '"wght" 500, "wdth" 100' }}
                   >
                     NCB
                   </span>
-                  <span className="mt-1 text-[9px] uppercase leading-[1.15] tracking-[0.06em] text-[var(--footer-muted)]">
-                    National Capability Benchmark
-                  </span>
+                </span>
+                <span className="mt-1 pl-[30px] text-[9px] uppercase leading-[1.15] tracking-[0.06em] text-[var(--footer-muted)]">
+                  National Capability Benchmark
                 </span>
               </Link>
               <div>

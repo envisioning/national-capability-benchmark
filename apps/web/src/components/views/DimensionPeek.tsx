@@ -50,7 +50,6 @@ export function DimensionPeek({
         role="button"
         onClick={() => setOpen(true)}
         className="inline-flex items-center gap-1.5 underline decoration-dotted underline-offset-4 hover:decoration-solid"
-        title={`See every country on ${DIMENSION_LABELS[dimension]}`}
       >
         {children}
       </button>
@@ -184,16 +183,11 @@ export function DimensionDialog({
                       </span>
                       <Score value={r.score} size="sm" />
                     </span>
-                    <span className="text-right text-[var(--muted)]" title={band.meaning}>
+                    <span className="text-right text-[var(--muted)]">
                       {band.label}
                     </span>
                     <span
                       className="text-right tabular-nums text-[var(--muted)]"
-                      title={
-                        r.delta === null
-                          ? undefined
-                          : `Change over ${r.spanYears} years on ${r.basket} matched indicators.`
-                      }
                     >
                       {r.delta === null
                         ? ''

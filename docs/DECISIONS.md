@@ -4386,3 +4386,45 @@ or that the rail becomes too dense to identify individual records, would justify
 removing it or limiting it to an explicit event-selection view. A comparable
 series that directly measures the documented delivery could move it into the
 capability line under D20, but it would still not make the event marker a score.
+
+## D95 — The country shape belongs to the field hover, not the Countries menu
+
+*Recorded 2026-08-31. Supersedes D87.*
+
+**Choice.** The homepage's FlagHistogram passes each country's nine scores and
+confidences into the shared `FlagFieldPoint`, and the field's existing hover
+card draws the country radar beside its one-capability position. The Countries
+menu keeps only the navigation rows it opens; it carries no country preview.
+
+The radar is passive and not a second target: the flag remains the link to the
+country profile. It is loaded dynamically when a hover card needs it, so the
+field's initial bundle and the other FlagField surfaces do not pay for a chart
+that has not been requested. Other surfaces can opt in by supplying the same
+optional shape field, while the shared field geometry and hover behavior remain
+the only distribution implementation.
+
+D87 put the right picture in the wrong place. A reader looking at the field is
+already asking what the country at that position looks like across the other
+capabilities; a navigation menu is answering where its links go. Keeping the
+shape with the flag makes the explanation arrive at the point of attention and
+leaves the menu legible as a menu.
+
+**Why.** The homepage is the comparative entry point and already has the full
+slim profile for every country. Re-fetching one profile from a header menu
+added latency, a second data path and a large visual interruption to a control
+whose job is navigation. The hover card has the score, confidence, trend and
+within-country spread already, so the radar completes that reading without
+introducing a new interaction target.
+
+**Cost.** The shape is available only while a flag's hover card is open and is
+not present in the Countries menu. A compact radar adds height to that card and
+can extend above or below the field near an edge, so the card remains
+pointer-transparent and the flag remains the only link. The homepage already
+ships the nine-value profile needed to draw it; dynamic loading limits the
+additional JavaScript cost until the reader asks for the shape.
+
+**Overturned by.** Evidence that readers need country context while navigating
+from a country page, or that the homepage hover card becomes too tall to read,
+would justify revisiting the placement. A second surface needing the same shape
+should extend `FlagFieldPoint` or a shared profile component, not recreate the
+radar or add another menu-specific data path.

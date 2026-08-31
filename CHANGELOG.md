@@ -9,6 +9,23 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.5.3 — 2026-08-31
+
+- **The NCB lockup follows the parent brand alignment.** The glyph now sits
+  beside the wordmark, with the full benchmark name aligned beneath it.
+
+## App 1.5.2 — 2026-08-31
+
+- **The contextual navigation joins the header.** The subnav now shares the
+  top-level navigation's surface and outer rule, with a tighter rhythm between
+  the active section and the links it contains.
+
+## App 1.5.1 — 2026-08-31
+
+- **Country shapes appear on the homepage field.** Hovering a flag in the
+  distribution now shows its nine-capability radar; the Countries menu remains
+  focused on navigation.
+
 ## App 1.5.0 — 2026-08-31
 
 - **Agenda evidence is positioned on the timeline.** Dated agenda items now

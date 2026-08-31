@@ -16,6 +16,7 @@ import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { Radar } from '@/components/Radar'
 import {
   ConfidenceBar,
+  ConfidenceLegend,
   CountryLabel,
   DimensionLegend,
   Empty,
@@ -25,6 +26,7 @@ import {
   PageTitle,
   Score,
   Section,
+  TrendGlyph,
 } from '@/components/ui'
 import { loadAgenda } from '@/lib/agenda'
 import { loadEvidence, loadIndex } from '@/lib/data'
@@ -77,9 +79,6 @@ export default async function BrazilLayerPage() {
   const localSection = layerSection(layer, 'local')
 
   const s = PT_BR.agenda
-  const indicatorName = (id: string): string =>
-    PT_BR.indicators[id] ?? INDICATORS.find((def) => def.id === id)?.name ?? id
-
   const trendLine = (d: CountryAgenda['dimensions'][number]): string =>
     d.trend
       ? fill(d.trend.clamped > 0 ? s.trendCellClamped : s.trendCell, {
@@ -222,7 +221,7 @@ export default async function BrazilLayerPage() {
       {agenda ? (
         <Section
           title="As nove dimensões"
-          hint="Cada cartão mostra nota, confiança, tendência e estado da medição. Cheio = observado; vazio = lacuna; cortado = base rejeitada. Passe o cursor para ver o indicador."
+          hint="Cada cartão mostra nota, confiança, tendência e estado da medição. Cheio = observado; vazio = lacuna; cortado = base rejeitada."
         >
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {agenda.dimensions.map((d) => (
@@ -244,39 +243,29 @@ export default async function BrazilLayerPage() {
                 <div className="mt-4 flex flex-col gap-2">
                   <ConfidenceBar value={d.confidence} />
                   <span className="inline-flex items-center gap-1.5 text-xs text-[var(--muted)]">
-                    <Icon
-                      name={
-                        d.trend
-                          ? Math.abs(d.trend.delta) < 0.05
-                            ? 'minus'
-                            : d.trend.delta > 0
-                              ? 'trending-up'
-                              : 'trending-down'
-                          : 'minus'
-                      }
-                      size={13}
-                    />
+                    {d.trend && Math.abs(d.trend.delta) >= 0.05 ? (
+                      <TrendGlyph direction={d.trend.delta > 0 ? 'up' : 'down'} />
+                    ) : (
+                      <Icon name="minus" size={13} />
+                    )}
                     {trendLine(d)}
                   </span>
                   <div className="mt-1 flex flex-wrap items-center gap-1" aria-hidden="true">
                     {d.scoredOn.map((id) => (
                       <span
                         key={id}
-                        title={indicatorName(id)}
                         className="inline-block h-2.5 w-2.5 rounded-[3px] bg-[var(--foreground)] opacity-70"
                       />
                     ))}
                     {d.gaps.map((id) => (
                       <span
                         key={id}
-                        title={indicatorName(id)}
                         className="inline-block h-2.5 w-2.5 rounded-[3px] border border-[var(--foreground)] opacity-50"
                       />
                     ))}
                     {d.retired.map((id) => (
                       <span
                         key={id}
-                        title={indicatorName(id)}
                         className="relative inline-block h-2.5 w-2.5 rounded-[3px] border border-[var(--foreground)] opacity-30"
                       >
                         <span className="absolute inset-0 m-auto h-px w-3 -rotate-45 bg-[var(--foreground)]" />
@@ -297,6 +286,7 @@ export default async function BrazilLayerPage() {
               </article>
             ))}
           </div>
+          <ConfidenceLegend lex={PT_BR} className="mt-5" />
         </Section>
       ) : null}
 

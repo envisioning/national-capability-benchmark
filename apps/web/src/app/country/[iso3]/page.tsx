@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import type { IndicatorResult } from '@ncb/core'
 import {
   COUNTRIES,
   COUNTRY_NAMES,
@@ -25,6 +24,7 @@ import {
   Card,
   ClassBadge,
   ClassLegend,
+  ConfidenceLegend,
   DefineLink,
   Delta,
   CountryLabel,
@@ -142,6 +142,7 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
           the estimate.
         </p>
         <ClassLegend />
+        <ConfidenceLegend className="mt-4" />
         <p className="text-xs leading-relaxed text-[var(--muted)]">
           A row marked <em>no dataset exists</em> is a{' '}
           <DefineLink term="Gap">gap</DefineLink>: the benchmark wants data that nobody publishes.
@@ -235,7 +236,14 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
                                 {row.name}
                               </IndicatorPeek>
                             ) : (
-                              <span title={def?.notes}>{row.name}</span>
+                              <span>
+                                {row.name}
+                                {def?.notes ? (
+                                  <span className="block text-xs leading-relaxed text-[var(--muted)]">
+                                    {def.notes}
+                                  </span>
+                                ) : null}
+                              </span>
                             )}
                           </Td>
                           <Td>
@@ -257,7 +265,6 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
                             {row.outOfFrame ? (
                               <span
                                 className="ml-1.5 inline-flex items-center gap-1 text-[10px] text-[var(--muted)]"
-                                title="The raw value sits outside the frame, so this position is clamped to the edge of the scale."
                               >
                                 <Icon name="triangle-alert" size={11} />
                                 clamped
@@ -279,9 +286,7 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
                           </Td>
                           <Td>
                             {row.series.length > 1 ? (
-                              <span title={seriesTitle(row, def?.unit)}>
-                                <Sparkline series={seriesForSparkline(row.series)} width={90} height={22} />
-                              </span>
+                              <Sparkline series={seriesForSparkline(row.series)} width={90} height={22} />
                             ) : (
                               <span className="text-[var(--muted)]">-</span>
                             )}
@@ -338,19 +343,4 @@ function seriesForSparkline(
   series: Array<{ year: number; normalized: number }>,
 ): Array<{ year: number; score: number }> {
   return series.map((p) => ({ year: p.year, score: p.normalized }))
-}
-
-/** Everything a reader needs to check the line: count, span, raw ends, tier. */
-function seriesTitle(row: IndicatorResult, unit: string | undefined): string {
-  const first = row.series[0]
-  const last = row.series[row.series.length - 1]
-  if (!first || !last) return ''
-  const tiers = [...new Set(row.series.map((p) => p.tier))].join(', ').replace(/_/g, ' ')
-  const gaps = last.year - first.year + 1 - row.series.length
-  return [
-    `${row.series.length} observations, ${first.year} to ${last.year}${gaps > 0 ? `, ${gaps} year(s) with no value` : ''}.`,
-    `As published: ${first.raw} in ${first.year}, ${last.raw} in ${last.year}${unit ? ` ${unit}` : ''}.`,
-    `Source tier: ${tiers}.`,
-    'The line plots the normalized value, where higher is always better.',
-  ].join(' ')
 }

@@ -132,10 +132,6 @@ export const diagnosticsHref = '/diagnostics'
 /** The public statement of what the benchmark is for. */
 export const thesisHref = '/thesis'
 
-/** Stable fragment for one dimension's score on a country profile. */
-export const scoreAnchorHref = (iso3: string, dimension: Dimension): string =>
-  `${countryProfileHref(iso3)}#score-${dimension}`
-
 /** Full DOM id for a score cell, useful when several country cells are present. */
 export const scoreAnchorId = (iso3: string, dimension: Dimension): string =>
   `score-${dimension}-${iso3.toUpperCase()}`

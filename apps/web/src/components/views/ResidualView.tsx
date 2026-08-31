@@ -33,14 +33,8 @@ function Gap({ cell, fit }: { cell: ResidualCell | null; fit: ResidualFit | null
   if (!cell) return <Missing>no data</Missing>
   const spread = fit?.residualSd ?? 0
   const inside = Math.abs(cell.residual) <= spread
-  const label = `Score ${cell.score.toFixed(1)}, income predicts ${cell.predicted.toFixed(1)}${
-    cell.outOfScale ? ', which the 0 to 100 scale cannot hold' : ''
-  }. ${inside ? `Inside the spread of ${spread.toFixed(1)}` : `Beyond the spread of ${spread.toFixed(1)}`}.`
   return (
-    <span
-      title={label}
-      className={`tabular-nums ${inside ? 'text-[var(--muted)]' : ''}`}
-    >
+    <span className={`tabular-nums ${inside ? 'text-[var(--muted)]' : ''}`}>
       {cell.outOfScale ? `[${signed(cell.residual)}]` : signed(cell.residual)}
     </span>
   )
@@ -84,17 +78,15 @@ export function ResidualView({ residual }: { residual: ResidualFile }) {
             },
             {
               key: 'slope',
-              label: 'Points per tenfold income',
+              label: 'Points per 10× income',
               align: 'right',
-              title: 'Score points the line adds when income per head multiplies by ten',
               sort: (fit) => fit.slope,
               render: (fit) => <span className="tabular-nums">{fit.slope.toFixed(1)}</span>,
             },
             {
               key: 'explained',
-              label: 'Explained',
+              label: 'Income explained',
               align: 'right',
-              title: 'Share of the dimension the income line accounts for',
               sort: (fit) => fit.rSquared,
               render: (fit) => (
                 <span className="tabular-nums">{`${Math.round(fit.rSquared * 100)}%`}</span>
@@ -108,17 +100,15 @@ export function ResidualView({ residual }: { residual: ResidualFile }) {
             },
             {
               key: 'spread',
-              label: 'Spread',
+              label: 'Fit spread',
               align: 'right',
-              title: 'Standard error of the estimate, in score points',
               sort: (fit) => fit.residualSd,
               render: (fit) => <span className="tabular-nums">{fit.residualSd.toFixed(1)}</span>,
             },
             {
               key: 'shift',
-              label: 'Order moved',
+              label: 'Mean order shift',
               align: 'right',
-              title: 'Mean places a country moves between the score order and the residual order',
               sort: (fit) => fit.meanAbsRankShift,
               render: (fit) => (
                 <span className="tabular-nums">{`${fit.meanAbsRankShift.toFixed(1)} of ${fit.n}`}</span>
@@ -157,9 +147,6 @@ export function ResidualView({ residual }: { residual: ResidualFile }) {
                 key: dimension,
                 label: DIMENSION_LABELS[dimension],
                 align: 'right' as const,
-                title: fit
-                  ? `${DIMENSION_LABELS[dimension]}: ${fit.fitStrength} fit, spread ${fit.residualSd.toFixed(1)} points`
-                  : DIMENSION_LABELS[dimension],
                 sort: (row: ResidualRow) => row.cells[dimension]?.residual ?? null,
                 render: (row: ResidualRow) => <Gap cell={row.cells[dimension]} fit={fit} />,
               }
@@ -168,9 +155,9 @@ export function ResidualView({ residual }: { residual: ResidualFile }) {
         />
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
           A quiet number sits inside the spread of its own column and is not a finding. Brackets
-          mark a fitted value the 0 to 100 scale cannot hold. Point at any cell for the score, the
-          prediction and the spread behind it. Venezuela and Cuba carry no income observation, so
-          they read no data across the row and stay visible rather than being dropped.
+          mark a fitted value the 0 to 100 scale cannot hold. Read each cell against the fit and
+          spread shown in the first table. Venezuela and Cuba carry no income observation, so they
+          read no data across the row and stay visible rather than being dropped.
         </p>
       </Section>
 

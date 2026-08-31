@@ -312,15 +312,7 @@ export function AgendaHistoryChart({
                     fill="var(--primary)"
                     stroke="var(--surface-sunken)"
                     strokeWidth={1.5}
-                  >
-                    <title>
-                      {fill(labels.pointAria, {
-                        dimension: activeDimension.label,
-                        year: point.year,
-                        score: formatNumber(point.score),
-                      })}
-                    </title>
-                  </circle>
+                  />
                 ))}
               </svg>
             </div>
@@ -430,14 +422,7 @@ export function AgendaHistoryChart({
                             fill="var(--surface-sunken)"
                             stroke="var(--ring)"
                             strokeWidth={2}
-                          >
-                            <title>
-                              {fill(labels.eventAria, {
-                                title: event.title,
-                                year: event.year,
-                              })}
-                            </title>
-                          </circle>
+                          />
                         </g>
                       )
                     })}

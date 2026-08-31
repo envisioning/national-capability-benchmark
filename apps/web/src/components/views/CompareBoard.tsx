@@ -41,7 +41,7 @@ function Gap({ value, reference }: { value: number | null; reference: number | n
   const gap = value - reference
   const text = Math.abs(gap) < 0.05 ? 'level' : `${gap > 0 ? '+' : ''}${gap.toFixed(1)}`
   return (
-    <span className="block text-xs tabular-nums text-[var(--muted)]" title="Difference from the reference country on this axis">
+    <span className="block text-xs tabular-nums text-[var(--muted)]">
       {text}
     </span>
   )
@@ -125,6 +125,13 @@ function rowsFor(country: CountryResult | undefined, dimension: Dimension): Indi
   return country?.dimensions[dimension]?.indicators ?? []
 }
 
+/** Keep the comparison shapes as large as the selected country set allows. */
+function shapeGridColumns(countryCount: number): string {
+  if (countryCount === 2) return 'lg:grid-cols-2'
+  if (countryCount === 3) return 'lg:grid-cols-3'
+  return 'lg:grid-cols-4'
+}
+
 /**
  * Two to four countries read against each other, dimension by dimension and
  * then indicator by indicator.
@@ -154,7 +161,9 @@ export function CompareBoard({ countries }: { countries: CountryResult[] }) {
         title="Each shape against the reference"
         hint="The reference country is drawn as an outline behind every other card, so each card answers the same question: where does this country leave the reference. The nine axes are in the same order on every chart."
       >
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div
+          className={`grid grid-cols-1 gap-8 sm:grid-cols-2 ${shapeGridColumns(countries.length)}`}
+        >
           {countries.map((c) => (
             <ShapeCard key={c.iso3} country={c} reference={reference} />
           ))}
@@ -164,7 +173,7 @@ export function CompareBoard({ countries }: { countries: CountryResult[] }) {
       </Section>
 
       <Section
-        title="Nine capabilities, one row each"
+        title="Capability scores, side by side"
         hint="Scores run 0 to 100 against all countries in the comparison frame, so a gap of 10 points means the same thing on every row. The number under each score is the distance from the reference."
       >
         <ScoreLegend />
@@ -219,7 +228,7 @@ export function CompareBoard({ countries }: { countries: CountryResult[] }) {
       </Section>
 
       <Section
-        title="Confidence, the second number"
+        title="Confidence in each score"
         hint="Confidence is coverage times recency times source quality. It never enters the score above, and a country can lead a row on a thinner evidence base than the country beside it."
       >
         <ConfidenceLegend />
@@ -281,7 +290,6 @@ export function CompareBoard({ countries }: { countries: CountryResult[] }) {
                           <span className="inline-flex items-center gap-1">
                             <Delta
                               value={m.delta}
-                              title={`Change since ${m.baseYear} on ${m.matchedIndicators} indicators: ${m.baseScore.toFixed(1)} to ${m.currentScore.toFixed(1)}.`}
                             />
                             <span className="text-[10px] text-[var(--muted)]">
                               ({m.matchedIndicators})
@@ -346,7 +354,6 @@ export function CompareBoard({ countries }: { countries: CountryResult[] }) {
                             <Link
                               href={indicatorHref(row.indicatorId)}
                               className="hover:underline"
-                              title={def?.notes}
                             >
                               {row.name}
                             </Link>

@@ -120,7 +120,6 @@ export function AgendaEvidenceMatrix({
                       {cell.records.length > 0 ? (
                         <Link
                           href={cellHref(row.iso3, dimension)}
-                          title={titles}
                           aria-current={selected ? 'location' : undefined}
                           className={`inline-flex h-8 min-w-8 items-center justify-center rounded-md border px-2 font-medium transition-colors hover:border-[var(--primary)] hover:bg-[var(--surface-sunken)] ${
                             selected

@@ -294,8 +294,9 @@ export function Radar({
           rings.map((r) => (
             <text
               key={`ring-${r}`}
-              x={CENTER + 3}
+              x={CENTER}
               y={CENTER + (r / 100) * g.radius + 2}
+              textAnchor="middle"
               fontSize={6}
               fill="currentColor"
               fillOpacity={0.4}

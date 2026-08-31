@@ -1,10 +1,19 @@
 'use client'
 
+import dynamic from 'next/dynamic'
 import { useState } from 'react'
 import Link from 'next/link'
 import { confidenceBand } from '@ncb/core'
 import { FlagBubble, FlagBubbleLegend } from '@/components/FlagBubble'
 import { ConfidenceBar, Delta, Flag, Score } from '@/components/ui'
+
+/* The radar is only needed after a country flag is pointed at. Keep it out of
+   the field's initial bundle, especially for surfaces that do not provide a
+   country shape. */
+const Radar = dynamic(() => import('@/components/Radar').then((m) => m.Radar), {
+  ssr: false,
+  loading: () => <div className="h-[200px] w-full" />,
+})
 
 /**
  * Every country on one 0 to 100 axis, as a field of flags.
@@ -59,6 +68,11 @@ export type FlagFieldPoint = {
     lowest: { label: string; value: number } | null
     scored: number
     total: number
+  }
+  /** The full capability shape, for a surface that shows it on hover. */
+  radar?: {
+    values: Array<number | null>
+    confidences: Array<number | null>
   }
 }
 
@@ -197,6 +211,23 @@ function CountryCard({
           {point.shape.scored} of {point.shape.total} capabilities scored.
           {point.href ? ' Click the flag for the full profile.' : ''}
         </p>
+      ) : null}
+      {point.radar ? (
+        <div className="mt-3 border-t border-[var(--rule)] pt-3">
+          <Radar
+            labels="icons"
+            interactive={false}
+            series={[
+              {
+                label: point.label,
+                iso3: point.iso3,
+                values: point.radar.values,
+                confidences: point.radar.confidences,
+                color: 'var(--primary)',
+              },
+            ]}
+          />
+        </div>
       ) : null}
     </div>
   )

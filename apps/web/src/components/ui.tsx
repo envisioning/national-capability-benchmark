@@ -220,7 +220,6 @@ export function Score({
         : 'min-w-11 px-2 py-1 font-medium'
   return (
     <span
-      title={`${band.label}: ${band.meaning}`}
       className={`inline-block rounded-md text-center tabular-nums ${sizing}`}
       style={{
         background: `var(--score-${band.id})`,
@@ -251,11 +250,12 @@ export function DimensionScore({
   if (dim?.belowCoverageFloor) {
     const n = dim.observedIndicators ?? 0
     return (
-      <span
-        className="text-xs text-[var(--muted)]"
-        title={`No score. ${n === 1 ? 'One indicator is' : `${n} indicators are`} observed here; this model needs two before it can average a dimension score.`}
-      >
+      <span className="text-xs text-[var(--muted)]">
         not measured
+        <span className="sr-only">
+          . No score. {n === 1 ? 'One indicator is' : `${n} indicators are`} observed here; this
+          model needs two before it can average a dimension score.
+        </span>
       </span>
     )
   }
@@ -276,7 +276,7 @@ export function ScoreLegend({
       <p className="mb-2 text-xs font-medium uppercase tracking-[0.05em] text-[var(--muted)]">
         {lex.agenda.colScore}
       </p>
-      <ul className="grid gap-2 text-xs sm:grid-cols-2">
+      <ul className="grid gap-2 text-xs sm:grid-cols-4">
         {[...SCORE_BANDS].reverse().map((b, i, all) => {
           const next = all[i + 1]
           const range = next
@@ -286,14 +286,14 @@ export function ScoreLegend({
           return (
             <li
               key={b.id}
-              className="flex items-center gap-2 rounded-lg border border-[var(--rule-soft)] px-2.5 py-2"
-              title={band.meaning}
+              className="flex items-start gap-2 rounded-lg border border-[var(--rule-soft)] px-2.5 py-2"
             >
               <span
-                className="inline-block h-4 w-7 shrink-0 rounded-md"
+                className="mt-0.5 inline-block h-4 w-7 shrink-0 rounded-md"
                 style={{ background: `var(--score-${b.id})` }}
               />
               <span className="font-medium">{band.label}</span>
+              <span className="min-w-0 flex-1 text-[var(--muted)]">{band.meaning}</span>
               <span className="ml-auto tabular-nums text-[var(--muted)]">{range}</span>
             </li>
           )
@@ -303,28 +303,37 @@ export function ScoreLegend({
   )
 }
 
-export function ConfidenceBar({ value }: { value: number | null }) {
+export function ConfidenceBar({
+  value,
+  size = 'sm',
+}: {
+  value: number | null
+  size?: 'sm' | 'md'
+}) {
   /* A missing confidence must never draw as a very short bar: 0.00 and "we do
    * not know" are different claims. Score makes the same distinction. */
   if (value === null || Number.isNaN(value)) {
     return <span className="text-[var(--muted)]">no data</span>
   }
   const band = confidenceBand(value)
+  const track = size === 'md' ? 'h-2 w-28' : 'h-1.5 w-16'
+  const trackHeight = size === 'md' ? 'h-2' : 'h-1.5'
+  const gap = size === 'md' ? 'gap-3' : 'gap-2'
+  const text = size === 'md' ? 'text-sm' : 'text-xs'
   return (
     <span
-      className="inline-flex items-center gap-2"
-      title={`${band.label}: ${band.meaning}`}
+      className={`inline-flex items-center ${gap}`}
     >
-      <span className="h-1.5 w-16 rounded-full bg-[var(--rule-soft)]">
+      <span className={`${track} rounded-full bg-[var(--rule-soft)]`}>
         <span
-          className="block h-1.5 rounded-full"
+          className={`${trackHeight} block rounded-full`}
           style={{
             width: `${Math.max(4, Math.round(value * 100))}%`,
             background: `var(--band-${band.id})`,
           }}
         />
       </span>
-      <span className="tabular-nums text-xs text-[var(--muted)]">{value.toFixed(2)}</span>
+      <span className={`tabular-nums ${text} text-[var(--muted)]`}>{value.toFixed(2)}</span>
     </span>
   )
 }
@@ -345,7 +354,7 @@ export function ConfidenceLegend({
       <p className="mb-2 text-xs font-medium uppercase tracking-[0.05em] text-[var(--muted)]">
         {lex.agenda.colConfidence}
       </p>
-      <ul className="grid gap-2 text-xs sm:grid-cols-2">
+      <ul className="grid gap-2 text-xs sm:grid-cols-4">
         {[...CONFIDENCE_BANDS].reverse().map((b, i, all) => {
           const next = all[i + 1]
           const range = next
@@ -645,29 +654,39 @@ export function FrameNote() {
   )
 }
 
+/** A plain directional trend mark: compact and legible at table size. */
+export function TrendGlyph({ direction }: { direction: 'up' | 'down' }) {
+  return (
+    <span
+      aria-hidden="true"
+      className="inline-block w-[0.75em] text-center font-mono font-bold leading-none"
+    >
+      {direction === 'up' ? '^' : 'V'}
+    </span>
+  )
+}
+
 /**
  * Change in a dimension score over the momentum span.
  *
- * Sign and arrow both carry the direction, so nothing here rests on color. The
+ * Sign and glyph both carry the direction, so nothing here rests on color. The
  * number is the change in score points on the matched basket, which is a
  * smaller set of indicators than the headline score.
  */
 export function Delta({
   value,
-  title,
 }: {
   value: number | null
-  title?: string
 }) {
   if (value === null) return <span className="text-[var(--muted)]">no trend</span>
   const flat = Math.abs(value) < 0.05
   return (
-    <span className="inline-flex items-center gap-1 tabular-nums" title={title}>
-      <Icon
-        name={flat ? 'minus' : value > 0 ? 'trending-up' : 'trending-down'}
-        size={13}
-        className="text-[var(--muted)]"
-      />
+    <span className="inline-flex items-center gap-1 tabular-nums">
+      {flat ? (
+        <Icon name="minus" size={13} className="text-[var(--muted)]" />
+      ) : (
+        <TrendGlyph direction={value > 0 ? 'up' : 'down'} />
+      )}
       {flat ? '0.0' : `${value > 0 ? '+' : ''}${value.toFixed(1)}`}
     </span>
   )
@@ -750,7 +769,6 @@ export function DefineLink({ term, children }: { term: string; children?: React.
     <Link
       href={`/glossary#${anchor}`}
       className="underline decoration-dotted underline-offset-4"
-      title={`What "${term}" means`}
     >
       {children ?? term}
     </Link>

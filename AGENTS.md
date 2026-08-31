@@ -601,14 +601,12 @@ as the reference, and see NOTICE.md before reusing the brand.
   and a footer that states them itself goes stale silently, which is how
   Capabilities came to open nine pages in the header and offer one at the foot
   of the page. See D88.
-- A menu may draw a picture above its rows, and exactly one does: the Countries
-  menu draws the shape of the country the path names, through
-  `NavCountryShape`. The node declares `menuPreview` and `SiteNav` decides how
-  to draw it, the same division `menuChildren` uses. The data comes from
-  `/api/shape/[iso3]` when the menu opens, never from the root layout: the
-  header renders above every page and `loadIndex` reads 597KB with no cache, so
-  a chart nobody opened would be charged to every page on the site. The radar
-  loads through `next/dynamic` for the same reason. See D87.
+- The homepage's FlagHistogram carries each country's nine scores into the
+  shared `FlagFieldPoint`, and `CountryCard` renders that shape as a compact
+  radar when a flag is hovered. The radar is passive, because the flag remains
+  the link, and loads through `next/dynamic` only when a hover card needs it.
+  The Countries menu stays a navigation menu: it has no data preview. See
+  D95, which supersedes D87.
 - Navigation hangs from one edge. The sections sit right from `md` up, so the
   crumb trail and the tab strip are `md:justify-end` as well and the reader
   tracks one column down. Below `md` the sections fold into the sheet, there is

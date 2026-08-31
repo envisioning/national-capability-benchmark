@@ -102,32 +102,70 @@ function Group({
     <Card tone="none">
       <p className="mb-3 text-xs uppercase tracking-[0.05em] text-[var(--muted)]">{label}</p>
       {items.length === 0 ? (
-        <p className="text-xs text-[var(--muted)]">{empty}</p>
+        <p className="text-sm text-[var(--muted)]">{empty}</p>
       ) : (
-        <ul className="space-y-2">
-          {items.map((d) => (
-            <li
-              key={d.dimension}
-              className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1"
-            >
-              <CapabilityLink
-                dimension={d.dimension}
-                className="inline-flex items-center gap-2 text-xs font-medium underline underline-offset-4"
-              >
-                <Icon
-                  name={DIMENSION_ICON[d.dimension]}
-                  size={14}
-                  className="text-[var(--muted)]"
-                />
-                {DIMENSION_LABELS[d.dimension]}
-              </CapabilityLink>
-              <span className="inline-flex items-center gap-3">
-                <ConfidenceBar value={d.confidence} />
-                <Score value={d.score} size="sm" />
-              </span>
-            </li>
-          ))}
-        </ul>
+        <div className="overflow-x-auto">
+          <table className="w-full min-w-[28rem] table-fixed border-collapse text-sm">
+            <caption className="sr-only">{label}</caption>
+            <colgroup>
+              <col />
+              <col className="w-[10.5rem]" />
+              <col className="w-[4.5rem]" />
+            </colgroup>
+            <thead>
+              <tr className="border-b border-[var(--rule)]">
+                <th
+                  scope="col"
+                  className="pb-2 text-left text-[10px] font-medium uppercase tracking-[0.05em] text-[var(--muted)]"
+                >
+                  Dimension
+                </th>
+                <th
+                  scope="col"
+                  className="pb-2 text-right text-[10px] font-medium uppercase tracking-[0.05em] text-[var(--muted)]"
+                >
+                  Confidence
+                </th>
+                <th
+                  scope="col"
+                  className="pb-2 text-right text-[10px] font-medium uppercase tracking-[0.05em] text-[var(--muted)]"
+                >
+                  Score
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {items.map((d) => (
+                <tr
+                  key={d.dimension}
+                  className="border-b border-[var(--rule-soft)] last:border-b-0"
+                >
+                  <th scope="row" className="py-3 pr-3 text-left font-medium">
+                    <CapabilityLink
+                      dimension={d.dimension}
+                      className="flex min-w-0 items-center gap-2 underline underline-offset-4"
+                    >
+                      <Icon
+                        name={DIMENSION_ICON[d.dimension]}
+                        size={16}
+                        className="shrink-0 text-[var(--muted)]"
+                      />
+                      <span className="min-w-0 truncate">{DIMENSION_LABELS[d.dimension]}</span>
+                    </CapabilityLink>
+                  </th>
+                  <td className="py-3 text-right">
+                    <span className="inline-flex w-full justify-end">
+                      <ConfidenceBar value={d.confidence} size="md" />
+                    </span>
+                  </td>
+                  <td className="py-3 pl-3 text-right tabular-nums">
+                    <Score value={d.score} size="md" />
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       )}
     </Card>
   )

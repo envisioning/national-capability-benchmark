@@ -5,12 +5,10 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useId, useRef, useState } from 'react'
 import { Icon } from '@/components/Icon'
 import { Flag } from '@/components/ui'
-import { NavCountryShape } from '@/components/NavCountryShape'
 import {
   FOOTER_NAV_GROUPS,
   navRows,
   nodeOwns,
-  pathCountry,
   sectionMenuEntries,
   type NavNode,
   type NavRow,
@@ -38,10 +36,8 @@ const DISCLOSURE_MOBILE =
    through the rule rather than through the panel. See D81. */
 const MENU_PANEL =
   'rounded-lg border border-[var(--rule)] bg-[var(--surface)] p-1'
-/* A row of words needs the width of its longest word. A shape needs enough to
-   be read as one, which is the width the countries grid gives its cards. */
-const MENU_WIDTH = 'min-w-[13rem]'
-const MENU_WIDTH_PREVIEW = 'w-[15rem]'
+/* Keep short menus compact; a longer label can still grow the panel naturally. */
+const MENU_WIDTH = 'min-w-[10rem]'
 const MENU_ITEM =
   'flex items-center gap-2 rounded-md px-3 py-2 text-xs font-medium text-[var(--muted)] transition-colors duration-200 hover:bg-[var(--surface-sunken)] hover:text-[var(--foreground)]'
 const MENU_ITEM_CURRENT =
@@ -142,7 +138,9 @@ function MenuItem({ node, current, mobile }: { node: NavNode; current: boolean; 
       lang={node.lang}
       role="menuitem"
       aria-current={current ? 'page' : undefined}
-      className={`${current ? MENU_ITEM_CURRENT : MENU_ITEM}${mobile ? ' py-2.5' : ''}`}
+      className={`${current ? MENU_ITEM_CURRENT : MENU_ITEM}${
+        mobile ? ' justify-start py-2.5 text-left' : ' justify-end text-right'
+      }`}
     >
       {node.iso3 ? <Flag iso3={node.iso3} /> : null}
       {node.label}
@@ -233,11 +231,6 @@ function SectionMenu({ node, current }: { node: NavNode; current: boolean }) {
     return () => document.removeEventListener('keydown', onKeyDown)
   }, [open])
 
-  /* The tree says a menu has a picture and what it is of; this decides whether
-     there is one to draw. A country menu opened away from a country has
-     nothing to show, and shows nothing. */
-  const previewIso3 = node.menuPreview === 'country' ? pathCountry(pathname) : null
-
   const label = current ? <span className={SECTION_MARK}>{node.label}</span> : node.label
 
   if (entries.length === 0) {
@@ -319,9 +312,8 @@ function SectionMenu({ node, current }: { node: NavNode; current: boolean }) {
                 focusItem(-1)
               }
             }}
-            className={`${MENU_PANEL} ${previewIso3 ? MENU_WIDTH_PREVIEW : MENU_WIDTH}`}
+            className={`${MENU_PANEL} ${MENU_WIDTH}`}
           >
-            {previewIso3 ? <NavCountryShape iso3={previewIso3} /> : null}
             {entries.map((entry) => (
               <MenuItem key={entry.href} node={entry} current={nodeOwns(entry, pathname)} />
             ))}
@@ -469,9 +461,10 @@ export function HeaderNav() {
 
 /**
  * The one contextual band beneath the global sections. Country context and
- * reading choices stay beside the deepest page tabs instead of taking rows of
- * their own, so a country page has one subnav row rather than a breadcrumb row
- * followed by a tab row.
+ * page links share one subnav band rather than taking rows of their own, so a
+ * country page has one subnav row rather than a breadcrumb row followed by a
+ * tab row. It shares the header surface and outer rule with the global row, so
+ * the section and its current reading feel like one navigation unit.
  */
 export function SectionTabs() {
   const pathname = usePathname()
@@ -485,10 +478,10 @@ export function SectionTabs() {
   const trail = rows.length > 2 ? rows.slice(1, -1) : []
 
   return (
-    <div className="w-full border-b border-[var(--rule)]">
-      <div className="m-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-2 px-6 sm:px-12">
+    <div className="w-full">
+      <div className="m-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-1 px-6 pb-2 sm:px-12 sm:pb-2.5">
         {trail.length > 0 ? (
-          <nav aria-label="Breadcrumb" className="flex min-w-0 flex-1 py-3">
+          <nav aria-label="Breadcrumb" className="flex min-w-0 flex-1 pt-1 sm:pt-0">
             <ol className="flex flex-wrap items-center gap-x-2 gap-y-1">
               {trail.map((row, index) => (
                 <li key={row.parent?.href ?? 'root'} className="flex items-center gap-x-2">
@@ -510,7 +503,7 @@ export function SectionTabs() {
         <nav aria-label={tabs.parent?.label ?? 'Pages'} className="ml-auto text-right">
           {/* The page set stays at the right edge from md up. On narrow screens
               the surrounding flex row wraps naturally below the context. */}
-          <ul className="-mb-px flex flex-wrap gap-x-6 pt-3 md:justify-end">
+          <ul className="-mb-px flex flex-wrap gap-x-6 pt-1 md:justify-end">
             {tabs.entries.map((node) => (
               <li key={node.href}>
                 <Link

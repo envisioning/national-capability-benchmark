@@ -97,8 +97,9 @@ export function VelocityView({ velocity }: { velocity: VelocityFile }) {
                 if (!row.cell) return <span className="text-[var(--muted)]">no data</span>
                 if (row.excluded) {
                   return (
-                    <span title={excluded.get(row.iso3)} className="text-[var(--muted)]">
+                    <span className="text-[var(--muted)]">
                       partial country
+                      <span className="sr-only">: {excluded.get(row.iso3)}</span>
                     </span>
                   )
                 }

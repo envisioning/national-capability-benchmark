@@ -70,6 +70,10 @@ export function FlagHistogram({
         delta: p.deltas[i] ?? null,
         href: countryProfileHref(p.iso3),
         shape: shapeOf(p),
+        radar: {
+          values: p.values,
+          confidences: p.confidences,
+        },
       }))
       built[d] = { points, layout: layoutField(points) }
     })

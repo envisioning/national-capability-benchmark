@@ -12,9 +12,11 @@ export function ContestedBadge({ count }: { count: number }) {
   return (
     <span
       className="inline-flex items-center rounded-md border border-[#ef4444]/40 px-1.5 py-0.5 text-[10px] font-medium text-[#ef4444]"
-      title={`${count} non-rejected disputes from distinct countries target this dimension.`}
     >
       Contested ({count})
+      <span className="sr-only">
+        {count} non-rejected disputes from distinct countries target this dimension.
+      </span>
     </span>
   )
 }
@@ -84,7 +86,6 @@ export function ChallengeLink({
         type="button"
         onClick={() => setOpen(true)}
         className="rounded-md border border-[var(--rule)] px-1.5 py-0.5 text-[10px] font-medium text-[var(--muted)] hover:text-[var(--foreground)]"
-        title={`Challenge the ${DIMENSION_LABELS[dimension]} score for ${countryLabel}`}
       >
         Challenge
       </button>

@@ -66,11 +66,6 @@ export type NavNode = {
    * where the reader is standing instead of what the section holds. See D85.
    */
   menuChildren?: NavNode[]
-  /**
-   * A picture the menu draws above its rows. The tree declares that there is
-   * one and what it is of; `SiteNav` decides how to draw it. See D87.
-   */
-  menuPreview?: 'country'
 }
 
 /** Whether one node is the current one for a path. */
@@ -244,9 +239,6 @@ export const NAV_TREE: NavNode[] = [
        is the crumb's job. A menu is opened from anywhere, so it offers the
        readings that hold whatever the path says. See D85. */
     menuChildren: COUNTRY_INDEX_PAGES,
-    /* The rows are the same from everywhere, so the shape is what says where
-       the reader is standing. See D87. */
-    menuPreview: 'country',
   },
   {
     href: capabilitiesHref,

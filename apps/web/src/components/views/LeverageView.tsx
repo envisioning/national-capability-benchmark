@@ -100,12 +100,14 @@ export function LeverageView({ leverage }: { leverage: LeverageFile }) {
               label: 'Source',
               render: (row) =>
                 row.cell.source ? (
-                  <span title={row.cell.note}>
+                  <span>
                     {row.cell.source.publisher}, {row.cell.source.year}
+                    <span className="block text-[var(--muted)]">{row.cell.note}</span>
                   </span>
                 ) : (
-                  <span title={row.cell.note} className="text-[var(--muted)]">
+                  <span className="text-[var(--muted)]">
                     future work
+                    <span className="block">{row.cell.note}</span>
                   </span>
                 ),
             },

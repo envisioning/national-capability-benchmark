@@ -18,8 +18,6 @@ export type Column<T> = {
    * nesting error and hydration fails, which kills sorting on the whole table.
    */
   render: (row: T) => React.ReactNode
-  /** Tooltip on the header. */
-  title?: string
 }
 
 export type SortDirection = 'asc' | 'desc'
@@ -89,7 +87,6 @@ export function DataTable<T>({
                   key={col.key}
                   scope="col"
                   aria-sort={col.sort ? ariaSort : undefined}
-                  title={col.title}
                   className={`border-b border-[var(--rule)] px-3 py-3 text-xs font-medium text-[var(--muted)] ${
                     col.align === 'right' ? 'text-right' : 'text-left'
                   }`}

@@ -8,8 +8,7 @@ import { ConfidenceBar, Delta, DimensionScore, Score } from '@/components/ui'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { DimensionPeek } from '@/components/views/DimensionPeek'
 import { ChallengeLink, ContestedBadge } from '@/components/ChallengeLink'
-import { CopyCellLink } from '@/components/CopyCellLink'
-import { scoreAnchorHref, scoreAnchorId } from '@/lib/links'
+import { scoreAnchorId } from '@/lib/links'
 
 export function CountryDimensionTable({
   country,
@@ -55,7 +54,6 @@ export function CountryDimensionTable({
           <DimensionPeek dimension={r.d} iso3={country.iso3}>
             <DimensionScore dim={r.dim} />
           </DimensionPeek>
-          <CopyCellLink href={scoreAnchorHref(country.iso3, r.d)} />
           <ContestedBadge count={contestedCounts[`${country.iso3}|${r.d}`] ?? 0} />
           <ChallengeLink
             iso3={country.iso3}
@@ -94,19 +92,19 @@ export function CountryDimensionTable({
       sort: (r: (typeof rows)[number]) => primaryMomentum(r.dim.momentum)?.delta ?? null,
       render: (r: (typeof rows)[number]) => {
         const m = primaryMomentum(r.dim.momentum)
-        if (!m) return <Delta value={null} title="Not enough indicators have values at both ends" />
+        if (!m) return <Delta value={null} />
         return (
           <span className="inline-flex items-center gap-1">
             <Delta
               value={m.delta}
-              title={`Change since ${m.baseYear} using ${m.matchedIndicators} indicators: ${m.baseScore.toFixed(1)} to ${m.currentScore.toFixed(1)}.`}
             />
             {/* The basket size is printed, never tooltip only: a trend and a
                 score sit on different baskets and the reader must see the size. */}
             <span className="text-[10px] text-[var(--muted)]">({m.matchedIndicators})</span>
             {m.clamped > 0 ? (
-              <span title={`${m.clamped} indicators reached the edge of the frame.`}>
-                <Icon name="triangle-alert" size={11} className="text-[var(--muted)]" />
+              <span className="text-[10px] text-[var(--muted)]">
+                <Icon name="triangle-alert" size={11} className="mr-0.5 inline" />
+                {m.clamped} at edge
               </span>
             ) : null}
           </span>
@@ -142,7 +140,6 @@ export function CountryDimensionTable({
             return (
               <span
                 className={wide ? 'font-medium' : 'text-[var(--muted)]'}
-                title={`Difference between the ${panel.isPanel ? 'panel median' : 'session estimate'} and the indicator score.${wide ? ` ${DISSENT_IQR} points is a quarter of the scale.` : ''}`}
               >
                 {g > 0 ? '+' : ''}
                 {g.toFixed(1)}

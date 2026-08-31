@@ -69,7 +69,6 @@ export function IndicatorPeek({
         type="button"
         onClick={() => setOpen(true)}
         className="inline-flex items-center gap-1.5 text-left underline decoration-dotted underline-offset-4 hover:decoration-solid"
-        title={`See every country on ${def.name}`}
       >
         {children}
         <Icon name="search-x" size={12} className="shrink-0 text-[var(--muted)]" />
