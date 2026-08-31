@@ -16,6 +16,8 @@ import {
 import { DATA_DIR } from '@ncb/core/node'
 import type {
   CountryResult,
+  InstitutionExplorerFeed,
+  Lang,
   ChallengeRecord as ChallengeRecordType,
   CorroborationFile,
   DelphiRunFile,
@@ -58,6 +60,8 @@ const PATHS = {
   indicator: (id: string) => resolve(DATA_ROOT, 'out/indicators', `${id}.json`),
   institutions: (iso3: string) =>
     resolve(DATA_ROOT, 'institutions', `${iso3.toUpperCase()}.json`),
+  institutionExplorer: (iso3: string, lang: string) =>
+    resolve(DATA_ROOT, 'out/institutions', `${iso3.toUpperCase()}.${lang}.json`),
   corroboration: (indicatorId: string) =>
     resolve(DATA_ROOT, 'out/br-subnational', `${indicatorId}.json`),
   velocity: resolve(DATA_ROOT, 'out/velocity.json'),
@@ -280,6 +284,21 @@ export type InstitutionNetworkLoad =
  * the parsed country check prevents a future indicator from being shown on the
  * wrong destination page.
  */
+/**
+ * One country's institution map, projected for an external explorer.
+ *
+ * Written by `pnpm bench institutions`, one file per lexicon. The viewer
+ * serves it and never renders it: the drawn network lives outside this
+ * repository, because the library that draws it is closed source and this
+ * repository is public. See D82.
+ */
+export async function loadInstitutionExplorer(
+  iso3: string,
+  lang: Lang,
+): Promise<InstitutionExplorerFeed | null> {
+  return readJson<InstitutionExplorerFeed>(PATHS.institutionExplorer(iso3, lang))
+}
+
 export async function loadCorroboration(
   iso3: string,
   indicatorId: string,

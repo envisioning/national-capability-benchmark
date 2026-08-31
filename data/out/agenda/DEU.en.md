@@ -1,6 +1,6 @@
 # Capability agenda: Germany
 
-*Generated 2026-08-30*
+*Generated 2026-08-31*
 
 The frame includes 52 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
@@ -10,7 +10,7 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 | --- | --- | --- | --- |
 | Anticipation | 71.2 | 0.64 (usable) | +9.9 over 10 years using 5 indicators |
 | Agency | 64 | 0.6 (usable) | +3.1 over 10 years using 4 indicators |
-| Coordination | 84.5 | 0.17 (very thin) | no trend |
+| Coordination | 88.8 | 0.24 (very thin) | no trend |
 | Trust | not scored | 0.07 (very thin) | no trend |
 | Learning | 56.2 | 0.54 (usable) | +7.1 over 10 years using 2 indicators |
 | Experimentation | 72.5 | 0.18 (very thin) | +4.9 over 10 years using 2 indicators |
@@ -30,20 +30,20 @@ How much cooperation is possible beyond immediate personal networks?
 - Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
-### Coordination: confidence 0.17, very thin
-
-How effectively can independent actors organize around shared objectives?
-
-- Uses 2 observed indicators.
-- Missing indicators: University-industry collaboration, Civil society strength, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
-
 ### Experimentation: confidence 0.18, very thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
 - Uses 2 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
+
+### Coordination: confidence 0.24, very thin
+
+How effectively can independent actors organize around shared objectives?
+
+- Uses 3 observed indicators.
+- Missing indicators: University-industry collaboration, Public-private collaboration.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
 ### Shared Purpose: confidence 0.25, very thin
 
@@ -65,7 +65,7 @@ These scores are at least 50 with usable evidence. They still need watching.
 
 ## Missing data
 
-26 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+25 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -74,7 +74,6 @@ These scores are at least 50 with usable evidence. They still need watching.
 | Agency | Adult digital skills | Share of adults who can perform standard digital tasks. |
 | Agency | Perceived control over life | Self-reported freedom of choice and control over the course of one’s life. |
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
-| Coordination | Civil society strength | Autonomy, density and participatory reach of civil society organisations. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
 | Trust | Cooperation beyond the in-group | Reported trust in people met for the first time and in people of another nationality. |
@@ -96,12 +95,14 @@ These scores are at least 50 with usable evidence. They still need watching.
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
 
-## What the indicators miss about Germany
+## What Germany built that no indicator counts
 
-Documented deliveries linked to missing indicators. They do not affect scores or confidence.
+These are documented institutional changes in Germany that the framework files as evidence. They sit beside the score and do not change it or its confidence.
 
 - **The Fraunhofer contract-research model** (Coordination). Germany funds the Fraunhofer-Gesellschaft's institutes in proportion to what they earn from industry, and in 2025 the society performed 3.2 billion euros of contract research, 966 million euros of it paid by industry.
 - **Kurzarbeit in the 2008-2009 crisis** (Adaptability). Germany answered the 2008-2009 collapse in manufacturing orders by paying firms to cut hours instead of jobs, and short-time work covered 1.44 million workers at the May 2009 peak, about 5 percent of insured employment, while unemployment barely rose.
+- **THW, volunteer civil protection as a federal institution** (Shared Purpose). Germany's federal civil-protection agency trains and equips a volunteer force that reached about 88,000 people across 669 local units in May 2025, supported by about 2,200 paid staff.
+- **Federal siren warning network, and its dismantling** (Adaptability). West Germany built a federal warning service after 1955; after the Cold War the federally owned service was dissolved, its ten warning offices were abandoned and the nationwide siren alarm network was dismantled or transferred to municipalities, ending a system that had relied on about 1,700 volunteer helpers.
 
 ## Contribute
 

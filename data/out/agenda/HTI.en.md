@@ -1,6 +1,6 @@
 # Capability agenda: Haiti
 
-*Generated 2026-08-30*
+*Generated 2026-08-31*
 
 The frame includes 52 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
@@ -10,7 +10,7 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 | --- | --- | --- | --- |
 | Anticipation | 0 | 0.4 (thin) | 0 over 10 years using 3 indicators, with 3 at the frame edge |
 | Agency | 14.9 | 0.44 (thin) | +14.2 over 10 years using 2 indicators |
-| Coordination | 65.2 | 0.17 (very thin) | no trend |
+| Coordination | 51.6 | 0.24 (very thin) | no trend |
 | Trust | not scored | 0.07 (very thin) | no trend |
 | Learning | 12.3 | 0.22 (very thin) | no trend |
 | Experimentation | 0.2 | 0.04 (very thin) | no trend |
@@ -45,20 +45,20 @@ How much cooperation is possible beyond immediate personal networks?
 - Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
-### Coordination: confidence 0.17, very thin
-
-How effectively can independent actors organize around shared objectives?
-
-- Uses 2 observed indicators.
-- Missing indicators: University-industry collaboration, Civil society strength, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
-
 ### Learning: confidence 0.22, very thin
 
 How effectively does the country acquire, distribute, and update knowledge?
 
 - Uses 2 observed indicators.
 - Missing indicators: Adult learning participation, Research citation impact.
+
+### Coordination: confidence 0.24, very thin
+
+How effectively can independent actors organize around shared objectives?
+
+- Uses 3 observed indicators.
+- Missing indicators: University-industry collaboration, Public-private collaboration.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
 ### Anticipation: confidence 0.4, thin
 
@@ -91,7 +91,7 @@ How able are individuals and organizations to turn an intention into action?
 
 ## Missing data
 
-26 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+25 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -100,7 +100,6 @@ How able are individuals and organizations to turn an intention into action?
 | Agency | Adult digital skills | Share of adults who can perform standard digital tasks. |
 | Agency | Perceived control over life | Self-reported freedom of choice and control over the course of one’s life. |
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
-| Coordination | Civil society strength | Autonomy, density and participatory reach of civil society organisations. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
 | Trust | Cooperation beyond the in-group | Reported trust in people met for the first time and in people of another nationality. |

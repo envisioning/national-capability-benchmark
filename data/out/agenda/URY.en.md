@@ -1,6 +1,6 @@
 # Capability agenda: Uruguay
 
-*Generated 2026-08-30*
+*Generated 2026-08-31*
 
 The frame includes 52 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
@@ -10,7 +10,7 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 | --- | --- | --- | --- |
 | Anticipation | 34.5 | 0.66 (good) | +12.7 over 10 years using 5 indicators |
 | Agency | 60 | 0.61 (usable) | +19.8 over 10 years using 4 indicators |
-| Coordination | 68.6 | 0.16 (very thin) | no trend |
+| Coordination | 74 | 0.23 (very thin) | no trend |
 | Trust | 36.1 | 0.16 (very thin) | no trend |
 | Learning | 49.3 | 0.54 (usable) | +12 over 10 years using 2 indicators |
 | Experimentation | 34.3 | 0.34 (thin) | no trend |
@@ -28,7 +28,7 @@ How capable is the country of turning plans and knowledge into functioning syste
 
 - Uses 5 observed indicators.
 - Highest usable scores: Ireland 75.3, Singapore 71.2, China 64.9.
-- Related deliveries in other countries: Pix instant payment system (Brazil); GOV.BR federal identity and service platform (Brazil); X-Road national data exchange layer (Estonia); Pradhan Mantri Jan Dhan Yojana bank accounts (India); Sistema Unico de Saude, universal public health system (Brazil); Programa Nacional de Imunizacoes, and its erosion (Brazil); Luz para Todos, rural electrification (Brazil); Bolsa Familia and the single registry behind it (Brazil); Fully electronic national elections (Brazil); Deepwater and pre-salt oil production (Brazil); Seguro Popular, and its abolition (Mexico); Sure Start children's centres, and their erosion (United Kingdom); Grid power, and load shedding (South Africa); Measles elimination, and its erosion (United States); BNDES, the national development bank (Brazil); Casa da Moeda do Brasil, the national mint (Brazil); Housing and Development Board, public housing at scale (Singapore).
+- Related deliveries in other countries: Pix instant payment system (Brazil); GOV.BR federal identity and service platform (Brazil); X-Road national data exchange layer (Estonia); Pradhan Mantri Jan Dhan Yojana bank accounts (India); Sistema Unico de Saude, universal public health system (Brazil); Programa Nacional de Imunizacoes, and its erosion (Brazil); Luz para Todos, rural electrification (Brazil); Bolsa Familia and the single registry behind it (Brazil); Fully electronic national elections (Brazil); Deepwater and pre-salt oil production (Brazil); Seguro Popular, and its abolition (Mexico); Sure Start children's centres, and their erosion (United Kingdom); Grid power, and load shedding (South Africa); Measles elimination, and its erosion (United States); BNDES, the national development bank (Brazil); Casa da Moeda do Brasil, the national mint (Brazil); Housing and Development Board, public housing at scale (Singapore); Flamanville 3 EPR, and the erosion of nuclear new-build delivery (France); Phoenix pay system, and its prolonged failure (Canada); Groningen gas system, and its closure after induced earthquakes (Netherlands).
 - Missing indicators: Large project delivery, Firm scale-up rate.
 - Rejected datasets: Logistics infrastructure quality.
 
@@ -38,7 +38,7 @@ How capable is the country of identifying and preparing for emerging change?
 
 - Uses 5 observed indicators.
 - Highest usable scores: Sweden 83.5, Finland 82, Switzerland 81.1.
-- Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore).
+- Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom).
 - Missing indicators: Government foresight capacity, Long-horizon research share.
 
 ### Learning: 49.3, confidence usable
@@ -54,14 +54,6 @@ How effectively does the country acquire, distribute, and update knowledge?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Coordination: confidence 0.16, very thin
-
-How effectively can independent actors organize around shared objectives?
-
-- Uses 2 observed indicators.
-- Missing indicators: University-industry collaboration, Civil society strength, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
-
 ### Trust: confidence 0.16, very thin
 
 How much cooperation is possible beyond immediate personal networks?
@@ -69,6 +61,14 @@ How much cooperation is possible beyond immediate personal networks?
 - Uses 2 observed indicators.
 - Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
+
+### Coordination: confidence 0.23, very thin
+
+How effectively can independent actors organize around shared objectives?
+
+- Uses 3 observed indicators.
+- Missing indicators: University-industry collaboration, Public-private collaboration.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
 ### Shared Purpose: confidence 0.27, thin
 
@@ -94,7 +94,7 @@ These scores are at least 50 with usable evidence. They still need watching.
 
 ## Missing data
 
-26 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+25 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -103,7 +103,6 @@ These scores are at least 50 with usable evidence. They still need watching.
 | Agency | Adult digital skills | Share of adults who can perform standard digital tasks. |
 | Agency | Perceived control over life | Self-reported freedom of choice and control over the course of one’s life. |
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
-| Coordination | Civil society strength | Autonomy, density and participatory reach of civil society organisations. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
 | Trust | Cooperation beyond the in-group | Reported trust in people met for the first time and in people of another nationality. |
@@ -125,12 +124,14 @@ These scores are at least 50 with usable evidence. They still need watching.
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
 
-## What the indicators miss about Uruguay
+## What Uruguay built that no indicator counts
 
-Documented deliveries linked to missing indicators. They do not affect scores or confidence.
+These are documented institutional changes in Uruguay that the framework files as evidence. They sit beside the score and do not change it or its confidence.
 
 - **Electricity supply rebuilt on renewable sources** (Building). Uruguay rebuilt its electricity supply between 2010 and 2017 through public tenders and long-term contracts, and in 2025 fossil fuels produced 293 GWh of the 15,855 GWh generated, so 98.2 percent came from hydro, wind, biomass and solar.
 - **Plan Ceibal, one connected laptop per child** (Building). Uruguay gave a connected laptop to every child in public primary school from 2007, the first country to do it nationally, and the household survey found a Ceibal computer in the homes of 35.8 percent of the population in 2018.
+- **SNIG, universal individual cattle traceability** (Coordination). Uruguay required producers to register every calf in a national traceability system from 2006, and by October 2011 the registry covered 100 percent of the herd, 11.75 million live cattle, while identification tags reached more than 45,000 producers each year.
+- **AFE passenger rail and network contraction** (Building). Uruguay's state railway suspended passenger service in January 1988 to focus on freight; by 1990 about half of the national network had been declared non-operational, leaving 1,484 kilometres active from a 2,998-kilometre network, before passenger services returned only partially in 1993.
 
 ## Contribute
 

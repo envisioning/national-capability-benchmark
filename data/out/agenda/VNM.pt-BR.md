@@ -1,6 +1,6 @@
 # Agenda de capacidades: Vietnã
 
-*Gerado em 2026-08-30*
+*Gerado em 2026-08-31*
 
 Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
@@ -10,7 +10,7 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | --- | --- | --- | --- |
 | Antecipação | 27,4 | 0,64 (utilizável) | +12,1 em 10 anos, sobre 5 indicadores |
 | Agência | 59,2 | 0,59 (utilizável) | +27 em 10 anos, sobre 4 indicadores |
-| Coordenação | 81,2 | 0,18 (muito fraca) | sem base de tendência |
+| Coordenação | 75,9 | 0,25 (fraca) | sem base de tendência |
 | Confiança | 59,1 | 0,16 (muito fraca) | sem base de tendência |
 | Aprendizagem | 28,3 | 0,48 (utilizável) | -5,7 em 10 anos, sobre 3 indicadores |
 | Experimentação | 6,9 | 0,18 (muito fraca) | +1,8 em 10 anos, sobre 2 indicadores |
@@ -28,7 +28,7 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Suécia 83,5, Finlândia 82, Suíça 81,1.
-- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura).
+- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido).
 - Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
 ### Aprendizagem: 28,3, confiança utilizável
@@ -60,20 +60,20 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 - Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
-### Coordenação: confiança 0,18, muito fraca
-
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Força da sociedade civil, Colaboração público-privada.
-- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
-
 ### Experimentação: confiança 0,18, muito fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
+
+### Coordenação: confiança 0,25, fraca
+
+Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
+- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
 ## Dimensões para manter
 
@@ -85,7 +85,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## Agenda de medição
 
-26 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+25 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -94,7 +94,6 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 | Agência | Habilidades digitais de adultos | Parcela de adultos capazes de executar tarefas digitais padrão. |
 | Agência | Percepção de controle sobre a própria vida | Liberdade de escolha e controle sobre o rumo da própria vida, autodeclarados. |
 | Coordenação | Colaboração universidade-empresa | Intensidade da colaboração de pesquisa entre universidades e empresas. |
-| Coordenação | Força da sociedade civil | Autonomia, densidade e alcance participativo das organizações da sociedade civil. |
 | Coordenação | Colaboração público-privada | Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
 | Confiança | Cooperação além do próprio grupo | Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade. |

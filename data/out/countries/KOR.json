@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-29T18:22:04.547Z",
-  "version": "4.4.0",
+  "generatedAt": "2026-08-31T07:33:54.907Z",
+  "version": "4.5.0",
   "country": {
     "country": "South Korea",
     "iso3": "KOR",
@@ -2017,19 +2017,19 @@
         "checks": []
       },
       "coordination": {
-        "score": 90.6,
-        "observedIndicators": 2,
+        "score": 87.4,
+        "observedIndicators": 3,
         "belowCoverageFloor": false,
-        "confidence": 0.178,
+        "confidence": 0.25,
         "confidenceParts": {
-          "coverage": 0.25,
-          "recency": 0.75,
-          "sourceQuality": 0.95
+          "coverage": 0.375,
+          "recency": 0.833,
+          "sourceQuality": 0.8
         },
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 90.6,
+        "blendedScore": 87.4,
         "blendedFrom": "indicators",
         "momentum": [],
         "indicators": [
@@ -2171,16 +2171,23 @@
             "indicatorId": "civil_society_strength",
             "name": "Civil society strength",
             "measurementClass": "C",
-            "raw": null,
-            "transformed": null,
-            "normalized": null,
-            "year": null,
-            "source": "V-Dem",
-            "sourceTier": null,
+            "raw": 0.814,
+            "transformed": 0.814,
+            "normalized": 81.1,
+            "year": 2024,
+            "source": "V-Dem (v2x_cspart)",
+            "sourceTier": "expert_panel",
             "winsorized": false,
             "outOfFrame": false,
-            "series": [],
-            "status": "gap"
+            "series": [
+              {
+                "year": 2024,
+                "raw": 0.814,
+                "normalized": 81.1,
+                "tier": "expert_panel"
+              }
+            ],
+            "status": "observed"
           },
           {
             "indicatorId": "public_private_collaboration",

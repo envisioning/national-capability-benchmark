@@ -2,6 +2,7 @@ import type {
   InstitutionNetworkFile,
   LocalizedInstitutionNetwork,
 } from '../model/institutions.js'
+import type { Lang } from './types.js'
 
 /**
  * The Brazilian institution map's own prose. The enum vocabulary lives in the
@@ -185,4 +186,20 @@ export function localizeInstitutionNetworkPtBr(
       summary: SUMMARIES[node.id] ?? stateSummary(node) ?? node.summary,
     })),
   }
+}
+
+/**
+ * One country's institution map, rendered in one language.
+ *
+ * Every surface that shows an institution's own prose calls this, so the
+ * viewer's ledger and the explorer feed cannot describe the same institution
+ * in different words. A language with no localiser falls back to the file's
+ * English ground layer, which is what a partial lexicon is meant to do.
+ */
+export function localizeInstitutionNetwork(
+  network: InstitutionNetworkFile,
+  lang: Lang,
+): LocalizedInstitutionNetwork {
+  if (lang === 'pt-BR' && network.iso3 === 'BRA') return localizeInstitutionNetworkPtBr(network)
+  return { ...network, nodes: network.nodes.map((node) => ({ ...node })) }
 }

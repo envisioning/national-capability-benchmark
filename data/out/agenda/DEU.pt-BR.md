@@ -1,6 +1,6 @@
 # Agenda de capacidades: Alemanha
 
-*Gerado em 2026-08-30*
+*Gerado em 2026-08-31*
 
 Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
@@ -10,7 +10,7 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | --- | --- | --- | --- |
 | Antecipação | 71,2 | 0,64 (utilizável) | +9,9 em 10 anos, sobre 5 indicadores |
 | Agência | 64 | 0,6 (utilizável) | +3,1 em 10 anos, sobre 4 indicadores |
-| Coordenação | 84,5 | 0,17 (muito fraca) | sem base de tendência |
+| Coordenação | 88,8 | 0,24 (muito fraca) | sem base de tendência |
 | Confiança | sem nota | 0,07 (muito fraca) | sem base de tendência |
 | Aprendizagem | 56,2 | 0,54 (utilizável) | +7,1 em 10 anos, sobre 2 indicadores |
 | Experimentação | 72,5 | 0,18 (muito fraca) | +4,9 em 10 anos, sobre 2 indicadores |
@@ -30,20 +30,20 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 - Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
-### Coordenação: confiança 0,17, muito fraca
-
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Força da sociedade civil, Colaboração público-privada.
-- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
-
 ### Experimentação: confiança 0,18, muito fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
+
+### Coordenação: confiança 0,24, muito fraca
+
+Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
+- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
 ### Propósito compartilhado: confiança 0,25, muito fraca
 
@@ -65,7 +65,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## Agenda de medição
 
-26 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+25 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -74,7 +74,6 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 | Agência | Habilidades digitais de adultos | Parcela de adultos capazes de executar tarefas digitais padrão. |
 | Agência | Percepção de controle sobre a própria vida | Liberdade de escolha e controle sobre o rumo da própria vida, autodeclarados. |
 | Coordenação | Colaboração universidade-empresa | Intensidade da colaboração de pesquisa entre universidades e empresas. |
-| Coordenação | Força da sociedade civil | Autonomia, densidade e alcance participativo das organizações da sociedade civil. |
 | Coordenação | Colaboração público-privada | Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
 | Confiança | Cooperação além do próprio grupo | Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade. |
@@ -96,12 +95,14 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 | Propósito compartilhado | Participação cívica | Participação ativa em associações, sindicatos, partidos e organizações comunitárias. |
 
-## O que os indicadores não veem sobre a Alemanha
+## O que a Alemanha construiu e nenhum indicador conta
 
-Entregas documentadas como evidência. Elas nunca afetam as notas ou a confiança.
+Estas são mudanças institucionais documentadas em Alemanha que o framework registra como evidência. Elas ficam ao lado da nota e não mudam a nota ou a confiança.
 
 - **The Fraunhofer contract-research model** (Coordenação). Germany funds the Fraunhofer-Gesellschaft's institutes in proportion to what they earn from industry, and in 2025 the society performed 3.2 billion euros of contract research, 966 million euros of it paid by industry.
 - **Kurzarbeit in the 2008-2009 crisis** (Adaptação). Germany answered the 2008-2009 collapse in manufacturing orders by paying firms to cut hours instead of jobs, and short-time work covered 1.44 million workers at the May 2009 peak, about 5 percent of insured employment, while unemployment barely rose.
+- **THW, volunteer civil protection as a federal institution** (Propósito compartilhado). Germany's federal civil-protection agency trains and equips a volunteer force that reached about 88,000 people across 669 local units in May 2025, supported by about 2,200 paid staff.
+- **Federal siren warning network, and its dismantling** (Adaptação). West Germany built a federal warning service after 1955; after the Cold War the federally owned service was dissolved, its ten warning offices were abandoned and the nationwide siren alarm network was dismantled or transferred to municipalities, ending a system that had relied on about 1,700 volunteer helpers.
 
 ## Contribua
 

@@ -9,9 +9,10 @@ beside the score. It does not change a score, confidence, frame or ranking.
 ## Entry floor
 
 An international history section appears only when the country has at least
-three entries. The first batch covers Estonia, Singapore and South Korea. The
-pipeline reads this document when it generates agendas and refuses to publish a
-selected starter country below the floor.
+three entries. The first batch covers Estonia, Singapore and South Korea; the
+second adds Germany, the United Kingdom and Uruguay; this follow-up adds the
+Netherlands. The pipeline reads this document when it generates agendas and
+refuses to publish a selected country below the floor.
 
 Three entries are the minimum because one case can be an anecdote and two can
 be a pair chosen to support a preferred story. Three cases make a small section
@@ -39,13 +40,21 @@ must be able to reach the source in two clicks from the agenda record.
 
 Choose cases that show different kinds of institutional work. A history should
 not become a list of successful ministries or a catalogue of one sector. The
-three starter countries use the same shape while retaining country-specific
+selected countries use the same shape while retaining country-specific
 examples:
 
 - Estonia: X-Road, internet voting and the Defence League.
 - Singapore: SkillsFuture Credit, public housing and the Centre for Strategic
   Futures.
 - South Korea: economic planning, KISA and MyData.
+- Germany: Fraunhofer contract research, Kurzarbeit and the THW volunteer
+  civil-protection corps.
+- United Kingdom: the FCA regulatory sandbox, Sure Start and statutory carbon
+  budgets.
+- Uruguay: Plan Ceibal, renewable electricity delivery and universal cattle
+  traceability.
+- Netherlands: the Delta Programme, Room for the River, the Groningen gas
+  closure and the childcare-benefits recovery.
 
 The entries are documented deliveries and institutional changes, not a national
 history. They do not imply that the institution is effective in every respect,
@@ -54,8 +63,8 @@ copy it without the same preconditions.
 
 ## Maintenance
 
-Add a country only through an explicit editorial change to the starter list and
-with a batch of at least three entries. Refresh the sources during the normal
-quarterly editorial cycle. Do not fill a section with a weak case merely to
-meet the floor. A stronger replacement can supersede an existing entry while
+Add a country only through an explicit editorial change to the selected-country
+list and with a batch of at least three entries. Refresh the sources during the
+normal quarterly editorial cycle. Do not fill a section with a weak case merely
+to meet the floor. A stronger replacement can supersede an existing entry while
 the record of the editorial choice remains in git.

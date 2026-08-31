@@ -1663,6 +1663,376 @@
           "Providers willing and able to respond to a person's authorised request"
         ]
       }
+    },
+    {
+      "id": "deu-thw",
+      "indicatorId": "volunteering_rate",
+      "iso3": "DEU",
+      "title": "THW, volunteer civil protection as a federal institution",
+      "claim": "Germany's federal civil-protection agency trains and equips a volunteer force that reached about 88,000 people across 669 local units in May 2025, supported by about 2,200 paid staff.",
+      "metric": {
+        "name": "Volunteer THW members",
+        "value": 88000,
+        "unit": "people",
+        "asOf": "2025-05"
+      },
+      "secondMetric": {
+        "name": "Local THW units",
+        "value": 669,
+        "unit": "local units",
+        "asOf": "2025-05"
+      },
+      "started": 1950,
+      "status": "operating",
+      "source": {
+        "publisher": "Bundesanstalt Technisches Hilfswerk, agency overview",
+        "url": "https://ov-erfurt.thw.de/fileadmin/user_upload/LVTH/GERF/OERF/Anfordern/THW_im_Ueberblick_2025.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-30"
+      },
+      "limits": "Membership in one emergency-service organisation is not the share of adults who volunteered in the last month, which is what the indicator asks for, and it cannot be compared directly with countries that organise civil protection through paid services. The agency reports its own membership, the count includes more than 17,000 youth members, and it does not show how often each member trains or deploys.",
+      "pattern": {
+        "mechanism": "The federal government supplies equipment, doctrine and a small professional backbone while local volunteer units recruit, train and retain the people who operate it, turning civic participation into standing disaster-response capacity.",
+        "preconditions": [
+          "Local associations able to recruit and hold volunteers over many years",
+          "Federal finance for specialised equipment, training and paid coordination",
+          "Employers willing to release volunteers when an emergency triggers deployment"
+        ],
+        "travelled": "Volunteer fire and civil-protection systems exist across Europe, but the German combination of a federal technical agency and locally embedded unpaid units is unusually institutionalised. A copy has to fund readiness between disasters, not just recruit after one."
+      }
+    },
+    {
+      "id": "gbr-carbon-budgets",
+      "indicatorId": "government_foresight_capacity",
+      "iso3": "GBR",
+      "title": "Legally binding carbon budgets",
+      "claim": "The United Kingdom's 2008 Climate Change Act made five-year emissions budgets a standing legal cycle set twelve years ahead, and by July 2026 seven budgets covered 2008 through 2042 while the first three had been met.",
+      "metric": {
+        "name": "Carbon budgets set in law",
+        "value": 7,
+        "unit": "five-year budgets",
+        "asOf": "2026-07"
+      },
+      "secondMetric": {
+        "name": "Completed carbon budgets met",
+        "value": 3,
+        "unit": "five-year budgets",
+        "asOf": "2024"
+      },
+      "started": 2008,
+      "status": "operating",
+      "source": {
+        "publisher": "UK Department for Energy Security and Net Zero, carbon budgets guidance",
+        "url": "https://www.gov.uk/guidance/carbon-budgets",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-30"
+      },
+      "limits": "A statutory cycle and three budgets met show continuity and compliance with a national accounting framework, not that the framework caused the emissions reductions or that budgets four to seven will be delivered. Territorial accounts omit emissions embodied in imports, and government reports its own compliance even though an independent Climate Change Committee advises and scrutinises it.",
+      "pattern": {
+        "mechanism": "Parliament requires each government to set a quantified five-year ceiling twelve years in advance, receive independent advice, publish a delivery plan and report the final account, converting a distant target into a recurring decision and scrutiny cycle.",
+        "preconditions": [
+          "A national emissions inventory stable enough to support legal accounting",
+          "An independent body with the standing and expertise to challenge government plans",
+          "A legislature willing to bind successive governments to decisions beyond one term"
+        ],
+        "travelled": "France and several other countries later adopted carbon-budget frameworks. What travels is the rolling statutory cycle; a target without independent advice, advance budgets and final accounts keeps the name but drops the institutional work."
+      }
+    },
+    {
+      "id": "ury-snig",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "URY",
+      "title": "SNIG, universal individual cattle traceability",
+      "claim": "Uruguay required producers to register every calf in a national traceability system from 2006, and by October 2011 the registry covered 100 percent of the herd, 11.75 million live cattle, while identification tags reached more than 45,000 producers each year.",
+      "metric": {
+        "name": "Live cattle registered and individually identified",
+        "value": 11750000,
+        "unit": "cattle",
+        "asOf": "2011-10"
+      },
+      "secondMetric": {
+        "name": "Producers receiving identification tags each year",
+        "value": 45000,
+        "unit": "producers",
+        "asOf": "2011"
+      },
+      "started": 2006,
+      "status": "operating",
+      "source": {
+        "publisher": "Presidency of Uruguay, SNIG traceability report",
+        "url": "https://www.gub.uy/presidencia/comunicacion/noticias/trazabilidad-100-del-ganado-vacuno-uruguayo-registrado-identificado",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-30"
+      },
+      "limits": "A complete administrative register does not prove that every movement is reported correctly, that inspectors can reconcile cattle with the database, or that the commercial benefit exceeds the public and producer cost. The source is a government report from 2011, and the collaboration rests on a legal obligation rather than voluntary agreement, so it evidences coordinated national implementation more strongly than mutual public-private agenda-setting.",
+      "pattern": {
+        "mechanism": "The agriculture ministry made lifetime identification compulsory, issued paired visual and electronic tags, reused the existing producer register and enlisted the postal service to deliver tags to farms, while producers and processors recorded every movement through one national system.",
+        "preconditions": [
+          "A pre-existing register of livestock holders and annual herd declarations",
+          "Producer organisations and processors able to adopt one identification standard",
+          "A ministry with the legal authority and field capacity to enforce universal registration"
+        ],
+        "travelled": "Many exporters trace selected animals or supply chains. Uruguay's distinctive move was to make one public system universal, so small and large producers faced the same standard and any animal could enter a demanding export market."
+      }
+    },
+    {
+      "id": "deu-siren-network",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "DEU",
+      "title": "Federal siren warning network, and its dismantling",
+      "claim": "West Germany built a federal warning service after 1955; after the Cold War the federally owned service was dissolved, its ten warning offices were abandoned and the nationwide siren alarm network was dismantled or transferred to municipalities, ending a system that had relied on about 1,700 volunteer helpers.",
+      "metric": {
+        "name": "Federal warning offices abandoned",
+        "value": 10,
+        "unit": "offices",
+        "asOf": "1997"
+      },
+      "secondMetric": {
+        "name": "Volunteer helpers in the former warning service",
+        "value": 1700,
+        "unit": "people",
+        "asOf": "1997"
+      },
+      "started": 1955,
+      "status": "dismantled",
+      "source": {
+        "publisher": "German Bundestag, report on civil-protection structures",
+        "url": "https://dserver.bundestag.de/btd/16/015/1601571.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-31"
+      },
+      "limits": "The number of offices and volunteers describes the architecture that was removed, not how many people the sirens actually reached or how well the replacement warning channels worked. Responsibilities moved to Länder and municipalities rather than disappearing from every locality, and some sirens were retained for fire services. The Bundestag report is an official retrospective, not an independent test of warning performance.",
+      "pattern": {
+        "mechanism": "After the Cold War, the federal government treated a nationally coordinated warning service as obsolete, dissolved its dedicated organisation and shifted much of the remaining equipment and responsibility to local authorities without a ready replacement with the same audible reach.",
+        "preconditions": [
+          "A federal system able to finance and coordinate warning infrastructure across municipalities",
+          "Local authorities willing to accept ownership and operating costs after transfer",
+          "A replacement communications plan that works when electricity or mobile networks fail"
+        ],
+        "travelled": "The post-Cold War drawdown was common across Europe. Germany's later investment in warning apps, cell broadcast and renewed siren funding shows the cost of dismantling a capability before the next hazard makes its value visible."
+      }
+    },
+    {
+      "id": "ury-rail-network",
+      "indicatorId": "large_project_delivery",
+      "iso3": "URY",
+      "title": "AFE passenger rail and network contraction",
+      "claim": "Uruguay's state railway suspended passenger service in January 1988 to focus on freight; by 1990 about half of the national network had been declared non-operational, leaving 1,484 kilometres active from a 2,998-kilometre network, before passenger services returned only partially in 1993.",
+      "metric": {
+        "name": "Rail network remaining active after the contraction",
+        "value": 1484,
+        "unit": "kilometres",
+        "asOf": "1990"
+      },
+      "secondMetric": {
+        "name": "Rail network before the contraction",
+        "value": 2998,
+        "unit": "kilometres",
+        "asOf": "1985"
+      },
+      "started": 1952,
+      "status": "eroded",
+      "source": {
+        "publisher": "Ministry of Transport and Public Works, National Railway Network Statement 2025",
+        "url": "https://www.gub.uy/ministerio-transporte-obras-publicas/sites/ministerio-transporte-obras-publicas/files/documentos/publicaciones/Declaraci%C3%B3n%20de%20Red%202025.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-31"
+      },
+      "limits": "Track kilometres are an infrastructure count, not a measure of trains, reliability, passengers or freight capacity, and the source does not establish that every kilometre declared non-operational was physically removed. Passenger service returned on selected routes in 1993, so this is a contraction and partial recovery rather than a permanently closed railway. The network statement is a government description and does not evaluate the decision's social or economic effects.",
+      "pattern": {
+        "mechanism": "The state railway concentrated scarce operating capacity on freight, suspended passenger service and then allowed half the network to fall outside the active system; the later partial restart could not simply recreate the connections and maintenance routines that had been dropped.",
+        "preconditions": [
+          "A state railway carrying both public-service and commercial obligations",
+          "Budget and management pressure strong enough to prioritise freight over access",
+          "Alternative road transport available to absorb passengers when rail service stopped"
+        ],
+        "travelled": "Rail contractions are common where a network is asked to behave like a freight business while serving as public infrastructure. Uruguay's current Central Railway rebuild is a second attempt to restore a network after the operating base was allowed to thin."
+      }
+    },
+    {
+      "id": "fra-flamanville",
+      "indicatorId": "large_project_delivery",
+      "iso3": "FRA",
+      "title": "Flamanville 3 EPR, and the erosion of nuclear new-build delivery",
+      "claim": "France's Flamanville 3 EPR took about 16.5 years from construction beginning in September 2007 to completion in early 2024, and its commissioning was the country's first new nuclear reactor since Civaux 2 in 1999, a 25-year gap.",
+      "metric": {
+        "name": "Construction duration",
+        "value": 16.5,
+        "unit": "years",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Gap since the previous French reactor commissioning",
+        "value": 25,
+        "unit": "years",
+        "asOf": "2024"
+      },
+      "started": 2007,
+      "status": "eroded",
+      "source": {
+        "publisher": "French Nuclear Safety Authority, oversight of the Flamanville EPR",
+        "url": "https://regulation-oversight.asnr.fr/oversight/oversight-of-the-flamanville-epr-reactor",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-31"
+      },
+      "limits": "The durations are calculated from the start and completion dates and from the previous commissioning date stated by the regulator; they do not isolate the causes of delay, the project's cost or the reactor's long-run availability. Flamanville eventually entered service and the regulator reports nearly 600 construction inspections, so the case documents a thin and difficult delivery capability rather than a project that never completed. The regulator describes its own oversight and is not an independent cost auditor.",
+      "pattern": {
+        "mechanism": "A state-backed utility attempted a first-of-kind reactor after a long pause in domestic nuclear construction, while the regulator accumulated inspections and prescriptions as construction, manufacturing and testing problems appeared; the project delivered, but the decade-plus gap exposed how much build-and-supply-chain capability had gone unused.",
+        "preconditions": [
+          "A utility and regulator able to retain nuclear engineering knowledge through a long construction pause",
+          "A supply chain capable of qualifying safety-critical components to current standards",
+          "Political and financial capacity to carry a first-of-kind project through repeated redesigns"
+        ],
+        "travelled": "The EPR experience is now being used in France, Finland, China and the United Kingdom as a common warning about first-of-kind nuclear delivery. The lesson that travels is to rebuild the industrial base before promising a fleet, not to copy the reactor design alone."
+      }
+    },
+    {
+      "id": "can-phoenix",
+      "indicatorId": "large_project_delivery",
+      "iso3": "CAN",
+      "title": "Phoenix pay system, and its prolonged failure",
+      "claim": "Canada rolled out the Phoenix federal pay system in 2016, then spent more than C$2.6 billion by April 2022 to support and stabilise it and correct pay-file errors, with a further roughly C$1 billion allocated through the 2024-25 fiscal year.",
+      "metric": {
+        "name": "Support and correction spending by April 2022",
+        "value": 2600000000,
+        "unit": "Canadian dollars",
+        "asOf": "2022-04"
+      },
+      "secondMetric": {
+        "name": "Further funding allocated through fiscal year 2024-25",
+        "value": 1000000000,
+        "unit": "Canadian dollars",
+        "asOf": "2023"
+      },
+      "started": 2016,
+      "status": "eroded",
+      "source": {
+        "publisher": "Office of the Auditor General of Canada, Modernizing Information Technology Systems",
+        "url": "https://www.oag-bvg.gc.ca/internet/docs/parl_oag_202310_07_e.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-31"
+      },
+      "limits": "Spending on stabilisation and correction measures shows the scale of a delivery failure, not the total social cost of late or incorrect pay, nor whether a replacement will perform better. The Auditor General notes that the total implementation cost was still not known, and the figures combine technical support, error correction and later stabilisation rather than one clean project budget. The system continued to operate while the government explored its replacement.",
+      "pattern": {
+        "mechanism": "A central agency replaced a complex government-wide payroll system through a schedule-driven rollout with insufficient independent oversight; once errors spread across departments, the state converted the project into a permanent stabilisation operation while designing a successor.",
+        "preconditions": [
+          "A payroll system serving many departments with different rules and legacy data",
+          "Central oversight strong enough to challenge a schedule and budget that look achievable on paper",
+          "A fallback payroll process that protects workers while the digital system is repaired"
+        ],
+        "travelled": "Phoenix is now used inside Canada's digital-government controls as a failure case. The transferable lesson is governance: independent review has to see the whole operating complexity before a government-wide launch, not after the backlog appears."
+      }
+    },
+    {
+      "id": "nld-groningen",
+      "indicatorId": "large_project_delivery",
+      "iso3": "NLD",
+      "title": "Groningen gas system, and its closure after induced earthquakes",
+      "claim": "The Netherlands ended roughly sixty years of Groningen gas extraction with the permanent closure of all production locations on 19 April 2024; by the end of 2024 the response system had handled more than 500,000 damage reports and paid over €2.5 billion in compensation.",
+      "metric": {
+        "name": "Damage reports handled after the extraction period",
+        "value": 500000,
+        "unit": "reports",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Compensation paid for gas-extraction damage",
+        "value": 2500000000,
+        "unit": "euros",
+        "asOf": "2024"
+      },
+      "started": 1963,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Dutch House of Representatives, government letter on ending Groningen extraction",
+        "url": "https://www.tweedekamer.nl/kamerstukken/brieven_regering/detail?did=2025D27893&id=2025Z12199",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-31"
+      },
+      "limits": "Damage reports and compensation measure the burden of the extraction system and the state's response, not the engineering reliability or economic value of the gas infrastructure. The figures include cases handled by successor agencies and do not show how many homes are safe or how long recovery will take. Closure was a deliberate response to induced earthquakes, so the case is evidence of a capability being withdrawn after its harms became politically unavoidable, not a verdict on every use of natural gas.",
+      "pattern": {
+        "mechanism": "The state and a private operator ran a national energy system for decades, then progressively restricted and finally closed the field as evidence of induced earthquakes and resident harm made the old production objective untenable; the institutional challenge shifted from extraction to repair and trust.",
+        "preconditions": [
+          "A public-private operating structure able to produce and distribute gas nationally",
+          "Seismic monitoring and a legal route for government to reduce production and close the field",
+          "Administrative capacity to process large-scale damage claims after the revenue stream ended"
+        ],
+        "travelled": "The case travels as a warning about lock-in: a system that reliably delivers an economic objective can still require an equally large exit and repair capability when its external costs accumulate."
+      }
+    },
+    {
+      "id": "nld-room-for-river",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "NLD",
+      "title": "Room for the River, flood safety delivered across the Rhine branches",
+      "claim": "The Netherlands ran Room for the River from 2006 to 2019, delivering 39 measures at 34 locations along the IJssel, Waal, Nederrijn and Lek for about four million residents at a total cost of €2.3 billion.",
+      "metric": {
+        "name": "Flood-safety measures delivered",
+        "value": 39,
+        "unit": "measures",
+        "asOf": "2019"
+      },
+      "secondMetric": {
+        "name": "Locations receiving measures",
+        "value": 34,
+        "unit": "locations",
+        "asOf": "2019"
+      },
+      "started": 2006,
+      "status": "concluded",
+      "source": {
+        "publisher": "Rijkswaterstaat, Room for the River programme",
+        "url": "https://www.rijkswaterstaat.nl/water/waterbeheer/bescherming-tegen-het-water/maatregelen-om-overstromingen-te-voorkomen/ruimte-voor-de-rivieren",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-31"
+      },
+      "limits": "The measure and location counts show delivery, not the ex post reduction in flood risk, maintenance, cost-effectiveness or local equity. The official programme account does not independently test hydraulic performance, and the four-million figure is the population in the programme area rather than a safety outcome.",
+      "pattern": {
+        "mechanism": "After the near-floods of 1993 and 1995, central government and regional authorities moved dikes inland, lowered floodplains and dug side channels so high water could spread safely, using one programme to coordinate Rijkswaterstaat, water boards, provinces, municipalities, landowners and residents.",
+        "preconditions": [
+          "A national water authority with technical and land-management capacity",
+          "Water boards and local governments able to share decisions and long-term maintenance",
+          "Multi-year funding and a credible process for acquiring land and compensating residents"
+        ],
+        "travelled": "The approach has been studied and adapted in other deltas. What travels is the portfolio logic—many local measures under one hydraulic model—not a single signature project, and it depends on institutions that can keep negotiating for fifteen years."
+      }
+    },
+    {
+      "id": "nld-childcare-benefits",
+      "indicatorId": "institutional_responsiveness",
+      "iso3": "NLD",
+      "title": "Childcare benefits administration, and the recovery after institutional failure",
+      "claim": "The Netherlands' tax administration put tens of thousands of childcare-benefits parents into debt between 2004 and 2019; by February 2026 the recovery operation had recognized more than 43,000 parents as harmed among about 69,000 applicants and guaranteed each recognized parent at least €30,000.",
+      "metric": {
+        "name": "Parents recognized as harmed",
+        "value": 43000,
+        "unit": "parents",
+        "asOf": "2026-02"
+      },
+      "secondMetric": {
+        "name": "People who applied for recovery",
+        "value": 69000,
+        "unit": "people",
+        "asOf": "2026-02"
+      },
+      "started": 2004,
+      "status": "eroded",
+      "source": {
+        "publisher": "Rijksoverheid, recovery operation for childcare benefits",
+        "url": "https://www.rijksoverheid.nl/actueel/nieuws/2026/02/12/alle-gedupeerde-ouders-hebben-de-integrale-beoordeling-doorlopen",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-31"
+      },
+      "limits": "The application and recognition counts describe the scale of harm and the administrative response, not whether compensation restores lost homes, jobs, health or trust. The €30,000 floor is a legal payment rule rather than a measure of full loss, and the government reports the recovery operation about itself. The case therefore shows a serious failure and a continuing repair effort, not a settled measure of responsiveness.",
+      "pattern": {
+        "mechanism": "A rigid fraud-control regime treated small administrative errors as evidence of wrongdoing and allowed repayment demands to compound across years; after public and parliamentary scrutiny, the state created a separate recovery organisation, integral assessments, debt relief and a standard €30,000 first payment.",
+        "preconditions": [
+          "Benefits data and automated risk rules powerful enough to stop payments at scale",
+          "Weak internal challenge and fragmented appeal routes that let an error persist across agencies",
+          "A parliamentary and judicial route capable of forcing an apology, new rules and a large-scale redress operation"
+        ],
+        "travelled": "The transferable lesson is institutional: auditability, human review and a single route for appeal matter as much as detection. A recovery fund can pay money after failure, but it cannot recreate the years of security that a responsive administration would have protected."
+      }
     }
   ]
 }

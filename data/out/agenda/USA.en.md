@@ -1,6 +1,6 @@
 # Capability agenda: United States
 
-*Generated 2026-08-30*
+*Generated 2026-08-31*
 
 The frame includes 52 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
@@ -10,7 +10,7 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 | --- | --- | --- | --- |
 | Anticipation | 70.2 | 0.63 (usable) | +9.9 over 10 years using 5 indicators |
 | Agency | 92.6 | 0.5 (usable) | +7.9 over 10 years using 3 indicators |
-| Coordination | not scored | 0.07 (very thin) | no trend |
+| Coordination | 99.6 | 0.14 (very thin) | no trend |
 | Trust | 64.6 | 0.16 (very thin) | no trend |
 | Learning | 49.5 | 0.45 (usable) | -0.5 over 10 years using 2 indicators |
 | Experimentation | 55.8 | 0.39 (thin) | +3.2 over 10 years using 2 indicators |
@@ -35,12 +35,12 @@ How effectively does the country acquire, distribute, and update knowledge?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Coordination: confidence 0.07, very thin
+### Coordination: confidence 0.14, very thin
 
 How effectively can independent actors organize around shared objectives?
 
-- Uses one observed indicator.
-- Missing indicators: University-industry collaboration, Civil society strength, Public-private collaboration.
+- Uses 2 observed indicators.
+- Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
 ### Trust: confidence 0.16, very thin
@@ -77,7 +77,7 @@ These scores are at least 50 with usable evidence. They still need watching.
 
 ## Missing data
 
-26 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+25 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -86,7 +86,6 @@ These scores are at least 50 with usable evidence. They still need watching.
 | Agency | Adult digital skills | Share of adults who can perform standard digital tasks. |
 | Agency | Perceived control over life | Self-reported freedom of choice and control over the course of one’s life. |
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
-| Coordination | Civil society strength | Autonomy, density and participatory reach of civil society organisations. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
 | Trust | Cooperation beyond the in-group | Reported trust in people met for the first time and in people of another nationality. |

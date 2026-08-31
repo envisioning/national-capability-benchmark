@@ -1,6 +1,6 @@
 # Capability agenda: Canada
 
-*Generated 2026-08-30*
+*Generated 2026-08-31*
 
 The frame includes 52 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
@@ -10,7 +10,7 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 | --- | --- | --- | --- |
 | Anticipation | 66.3 | 0.64 (usable) | +6.5 over 10 years using 5 indicators |
 | Agency | 79.4 | 0.49 (usable) | +1.5 over 10 years using 2 indicators |
-| Coordination | not scored | 0.07 (very thin) | no trend |
+| Coordination | 95.7 | 0.14 (very thin) | no trend |
 | Trust | 54 | 0.16 (very thin) | no trend |
 | Learning | 56.6 | 0.53 (usable) | +3.5 over 10 years using 2 indicators |
 | Experimentation | 24.8 | 0.18 (very thin) | -5.1 over 10 years using 2 indicators |
@@ -28,7 +28,7 @@ How capable is the country of turning plans and knowledge into functioning syste
 
 - Uses 5 observed indicators.
 - Highest usable scores: Ireland 75.3, Singapore 71.2, China 64.9.
-- Related deliveries in other countries: Pix instant payment system (Brazil); GOV.BR federal identity and service platform (Brazil); X-Road national data exchange layer (Estonia); Pradhan Mantri Jan Dhan Yojana bank accounts (India); Electricity supply rebuilt on renewable sources (Uruguay); Plan Ceibal, one connected laptop per child (Uruguay); Sistema Unico de Saude, universal public health system (Brazil); Programa Nacional de Imunizacoes, and its erosion (Brazil); Luz para Todos, rural electrification (Brazil); Bolsa Familia and the single registry behind it (Brazil); Fully electronic national elections (Brazil); Deepwater and pre-salt oil production (Brazil); Seguro Popular, and its abolition (Mexico); Sure Start children's centres, and their erosion (United Kingdom); Grid power, and load shedding (South Africa); Measles elimination, and its erosion (United States); BNDES, the national development bank (Brazil); Casa da Moeda do Brasil, the national mint (Brazil); Housing and Development Board, public housing at scale (Singapore).
+- Related deliveries in other countries: Pix instant payment system (Brazil); GOV.BR federal identity and service platform (Brazil); X-Road national data exchange layer (Estonia); Pradhan Mantri Jan Dhan Yojana bank accounts (India); Electricity supply rebuilt on renewable sources (Uruguay); Plan Ceibal, one connected laptop per child (Uruguay); Sistema Unico de Saude, universal public health system (Brazil); Programa Nacional de Imunizacoes, and its erosion (Brazil); Luz para Todos, rural electrification (Brazil); Bolsa Familia and the single registry behind it (Brazil); Fully electronic national elections (Brazil); Deepwater and pre-salt oil production (Brazil); Seguro Popular, and its abolition (Mexico); Sure Start children's centres, and their erosion (United Kingdom); Grid power, and load shedding (South Africa); Measles elimination, and its erosion (United States); BNDES, the national development bank (Brazil); Casa da Moeda do Brasil, the national mint (Brazil); Housing and Development Board, public housing at scale (Singapore); AFE passenger rail and network contraction (Uruguay); Flamanville 3 EPR, and the erosion of nuclear new-build delivery (France); Groningen gas system, and its closure after induced earthquakes (Netherlands).
 - Missing indicators: Large project delivery, Firm scale-up rate.
 - Rejected datasets: Logistics infrastructure quality.
 
@@ -36,12 +36,12 @@ How capable is the country of turning plans and knowledge into functioning syste
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Coordination: confidence 0.07, very thin
+### Coordination: confidence 0.14, very thin
 
 How effectively can independent actors organize around shared objectives?
 
-- Uses one observed indicator.
-- Missing indicators: University-industry collaboration, Civil society strength, Public-private collaboration.
+- Uses 2 observed indicators.
+- Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
 ### Trust: confidence 0.16, very thin
@@ -78,7 +78,7 @@ These scores are at least 50 with usable evidence. They still need watching.
 
 ## Missing data
 
-26 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+25 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -87,7 +87,6 @@ These scores are at least 50 with usable evidence. They still need watching.
 | Agency | Adult digital skills | Share of adults who can perform standard digital tasks. |
 | Agency | Perceived control over life | Self-reported freedom of choice and control over the course of one’s life. |
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
-| Coordination | Civil society strength | Autonomy, density and participatory reach of civil society organisations. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
 | Trust | Cooperation beyond the in-group | Reported trust in people met for the first time and in people of another nationality. |
@@ -108,6 +107,12 @@ These scores are at least 50 with usable evidence. They still need watching.
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
+
+## What the indicators miss about Canada
+
+Documented deliveries linked to missing indicators. They do not affect scores or confidence.
+
+- **Phoenix pay system, and its prolonged failure** (Building). Canada rolled out the Phoenix federal pay system in 2016, then spent more than C$2.6 billion by April 2022 to support and stabilise it and correct pay-file errors, with a further roughly C$1 billion allocated through the 2024-25 fiscal year.
 
 ## Contribute
 

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { PT_BR, localizeInstitutionNetworkPtBr } from '@ncb/core'
+import { PT_BR, localizeInstitutionNetwork } from '@ncb/core'
 import { InstitutionsView } from '@/components/views/InstitutionsView'
 import { Empty, Eyebrow, Headline, Highlight, Note, PageTitle } from '@/components/ui'
 import { loadInstitutionNetwork } from '@/lib/data'
@@ -31,7 +31,7 @@ export default async function BrazilInstitutionsPage() {
     )
   }
   const raw = networkResult.network
-  const network = localizeInstitutionNetworkPtBr(raw)
+  const network = localizeInstitutionNetwork(raw, 'pt-BR')
 
   return (
     <>

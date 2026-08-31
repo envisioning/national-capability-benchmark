@@ -207,4 +207,9 @@ export type InstitutionStrings = {
   matrixCellNone: string
   /** {total} {filled} {cells} */
   matrixSummary: string
+  /**
+   * {institutions} {relations}. The one-line scale of a country's map, used
+   * where a surface names the map itself rather than one institution.
+   */
+  mapSummary: string
 }

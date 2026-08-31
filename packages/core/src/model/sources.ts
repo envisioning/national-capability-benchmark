@@ -1,6 +1,6 @@
 import { INDICATORS, WB_PUBLISHER } from './indicators.js'
 import type { IndicatorDef, SourceTier } from './schema.js'
-import { JOINT_EVS_WVS_PUBLISHER } from './source-catalog.js'
+import { JOINT_EVS_WVS_PUBLISHER, VDEM_PUBLISHER } from './source-catalog.js'
 
 /**
  * Where the data comes from, described once for both the fetcher and the reader.
@@ -89,6 +89,7 @@ export const PUBLISHER_HOME: Record<string, string> = {
   [WB_PUBLISHER]: 'https://data.worldbank.org',
   'Global Entrepreneurship Monitor': 'https://www.gemconsortium.org',
   [JOINT_EVS_WVS_PUBLISHER]: 'https://www.worldvaluessurvey.org/WVSEVSjoint2017.jsp',
+  [VDEM_PUBLISHER]: 'https://www.v-dem.net/data/the-v-dem-dataset/',
 }
 
 /** The official IBGE table used for the Brazil subnational corroboration fixture. */

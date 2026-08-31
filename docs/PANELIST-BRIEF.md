@@ -117,15 +117,15 @@ when the files were produced in separate sessions by different models.
 
 ## Current state
 
-The current dataset is version 4.4.0 with 52 countries and 468
+The current dataset is version 4.5.0 with 52 countries and 468
 country-dimension cells. The repository contains three in-session,
 one-panelist artifacts. `data/delphi/latest.json` points to an old Claude
 round-1 artifact from 2026-08-26 with 144 cell estimates and no
 `datasetVersion` or country-set metadata. The two later stance files are
-anchored to dataset 4.0.0. None is a current panel for 4.4.0, and none should
+anchored to dataset 4.0.0. None is a current panel for 4.5.0, and none should
 be presented as publishable multi-model evidence.
 
 Round 2 and indicator judgements still need to be run for the current dataset.
-Generate prompts from the live pipeline after scoring 4.4.0. A reviewed gateway
+Generate prompts from the live pipeline after scoring 4.5.0. A reviewed gateway
 run should use at least three independent panelists and cover the intended
 country set before it replaces `latest.json`.

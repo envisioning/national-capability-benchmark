@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T18:22:17.579Z",
+  "generatedAt": "2026-08-31T07:33:56.655Z",
   "gdpSeries": "NY.GDP.PCAP.PP.KD",
   "dimensionVsGdp": [
     {
@@ -16,9 +16,9 @@
     },
     {
       "dimension": "coordination",
-      "pearson": 0.467,
-      "spearman": 0.583,
-      "n": 44
+      "pearson": 0.561,
+      "spearman": 0.611,
+      "n": 50
     },
     {
       "dimension": "trust",
@@ -102,6 +102,12 @@
     },
     {
       "a": "anticipation",
+      "b": "coordination",
+      "r": 0.685,
+      "n": 51
+    },
+    {
+      "a": "anticipation",
       "b": "shared_purpose",
       "r": 0.654,
       "n": 46
@@ -167,10 +173,10 @@
       "n": 32
     },
     {
-      "a": "anticipation",
+      "a": "agency",
       "b": "coordination",
-      "r": 0.546,
-      "n": 44
+      "r": 0.582,
+      "n": 51
     },
     {
       "a": "trust",
@@ -199,26 +205,26 @@
     {
       "a": "coordination",
       "b": "building",
-      "r": 0.504,
-      "n": 44
+      "r": 0.506,
+      "n": 51
     },
     {
-      "a": "agency",
-      "b": "coordination",
-      "r": 0.498,
-      "n": 44
+      "a": "coordination",
+      "b": "adaptability",
+      "r": 0.502,
+      "n": 51
+    },
+    {
+      "a": "coordination",
+      "b": "shared_purpose",
+      "r": 0.499,
+      "n": 46
     },
     {
       "a": "adaptability",
       "b": "shared_purpose",
       "r": 0.483,
       "n": 46
-    },
-    {
-      "a": "coordination",
-      "b": "shared_purpose",
-      "r": 0.48,
-      "n": 40
     },
     {
       "a": "trust",
@@ -234,27 +240,21 @@
     },
     {
       "a": "coordination",
-      "b": "trust",
-      "r": 0.419,
-      "n": 32
-    },
-    {
-      "a": "coordination",
-      "b": "adaptability",
-      "r": 0.401,
-      "n": 44
-    },
-    {
-      "a": "coordination",
       "b": "learning",
-      "r": 0.388,
-      "n": 44
+      "r": 0.42,
+      "n": 51
+    },
+    {
+      "a": "coordination",
+      "b": "trust",
+      "r": 0.416,
+      "n": 36
     },
     {
       "a": "coordination",
       "b": "experimentation",
-      "r": 0.362,
-      "n": 43
+      "r": 0.372,
+      "n": 50
     },
     {
       "a": "learning",
@@ -470,6 +470,14 @@
       "flaggedAsWealthProxy": false
     },
     {
+      "indicatorId": "civil_society_strength",
+      "dimension": "coordination",
+      "measurementClass": "C",
+      "r": 0.395,
+      "wealthProxyPrior": 0.15,
+      "flaggedAsWealthProxy": false
+    },
+    {
       "indicatorId": "income_inequality",
       "dimension": "shared_purpose",
       "measurementClass": "O",
@@ -562,9 +570,9 @@
     {
       "indicatorId": "time_to_export",
       "dimension": "coordination",
-      "dimensionR": 0.515,
-      "dimensionRWithout": 0.218,
-      "delta": 0.297
+      "dimensionR": 0.561,
+      "dimensionRWithout": 0.361,
+      "delta": 0.2
     },
     {
       "indicatorId": "labour_productivity",
@@ -635,6 +643,13 @@
       "dimensionR": 0.563,
       "dimensionRWithout": 0.517,
       "delta": 0.047
+    },
+    {
+      "indicatorId": "civil_society_strength",
+      "dimension": "coordination",
+      "dimensionR": 0.561,
+      "dimensionRWithout": 0.515,
+      "delta": 0.046
     },
     {
       "indicatorId": "account_ownership",
@@ -763,18 +778,18 @@
       "delta": -0.027
     },
     {
-      "indicatorId": "budget_execution_fidelity",
-      "dimension": "coordination",
-      "dimensionR": 0.515,
-      "dimensionRWithout": 0.547,
-      "delta": -0.032
-    },
-    {
       "indicatorId": "new_business_density",
       "dimension": "agency",
       "dimensionR": 0.85,
       "dimensionRWithout": 0.884,
       "delta": -0.034
+    },
+    {
+      "indicatorId": "budget_execution_fidelity",
+      "dimension": "coordination",
+      "dimensionR": 0.561,
+      "dimensionRWithout": 0.608,
+      "delta": -0.047
     },
     {
       "indicatorId": "electricity_connection_speed",
@@ -880,18 +895,18 @@
     {
       "dimension": "coordination",
       "indicatorsDefined": 8,
-      "indicatorsObserved": 2,
-      "gaps": 3,
+      "indicatorsObserved": 3,
+      "gaps": 2,
       "retired": 3,
-      "meanCoverage": 0.228,
-      "meanConfidence": 0.152,
+      "meanCoverage": 0.353,
+      "meanConfidence": 0.226,
       "classMix": {
         "C": 5,
         "I": 0,
         "O": 0,
         "P": 3
       },
-      "subjectivityShare": 0.75
+      "subjectivityShare": 0.625
     },
     {
       "dimension": "trust",
@@ -1082,7 +1097,7 @@
       {
         "iso3": "USA",
         "country": "United States",
-        "meanAbsShift": 2.1
+        "meanAbsShift": 1.84
       },
       {
         "iso3": "NLD",
@@ -1167,7 +1182,7 @@
       {
         "iso3": "GBR",
         "country": "United Kingdom",
-        "meanAbsShift": 2.38
+        "meanAbsShift": 2.04
       },
       {
         "iso3": "ESP",
@@ -1182,7 +1197,7 @@
       {
         "iso3": "SWE",
         "country": "Sweden",
-        "meanAbsShift": 2.79
+        "meanAbsShift": 2.44
       },
       {
         "iso3": "FIN",
@@ -1197,7 +1212,7 @@
       {
         "iso3": "CAN",
         "country": "Canada",
-        "meanAbsShift": 3.53
+        "meanAbsShift": 3.09
       },
       {
         "iso3": "AUS",
@@ -1247,12 +1262,12 @@
       {
         "iso3": "ISR",
         "country": "Israel",
-        "meanAbsShift": 4.05
+        "meanAbsShift": 3.47
       },
       {
         "iso3": "ARE",
         "country": "United Arab Emirates",
-        "meanAbsShift": 4.78
+        "meanAbsShift": 4.1
       },
       {
         "iso3": "NGA",
@@ -1292,7 +1307,7 @@
       {
         "iso3": "VEN",
         "country": "Venezuela",
-        "meanAbsShift": 5.97
+        "meanAbsShift": 5.11
       },
       {
         "iso3": "PAN",
@@ -1437,14 +1452,6 @@
       "name": "University-industry collaboration",
       "publisher": "Global Innovation Index",
       "reason": "GII carries it, but the underlying item is a WEF executive opinion survey whose microdata is not inspectable. Excluded on principle 4.",
-      "status": "gap"
-    },
-    {
-      "dimension": "coordination",
-      "indicatorId": "civil_society_strength",
-      "name": "Civil society strength",
-      "publisher": "V-Dem",
-      "reason": "V-Dem core civil society index is inspectable and would fill this. Not yet wired; it needs its own ingestion adapter.",
       "status": "gap"
     },
     {
@@ -1649,7 +1656,7 @@
     }
   ],
   "outOfFrame": {
-    "observedCells": 1684,
+    "observedCells": 1736,
     "clampedCells": 0,
     "share": 0,
     "perCountry": []

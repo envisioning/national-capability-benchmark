@@ -194,6 +194,9 @@ measure is a perception proxy, contract enforcement is frozen at 2019, and
 court performance is still missing. D60's bribery-incidence series remains a
 useful behavioural check and is deliberately excluded from the score.
 
+The current dataset is 4.5.0: Coordination now also has a full-frame V-Dem
+civil-society row, documented under `docs/research/coordination/` and D83.
+
 Do not treat the first score as the finished Trust construct. The next work is
 to pool the held Joint EVS/WVS rows reproducibly and to land court-case
 clearance or another comparable institutional-performance measure. Delphi can
@@ -341,6 +344,19 @@ dataset version and country set.
 The panel may disagree with the new Trust score. That disagreement is a
 research result. It does not alter the observations, score or confidence.
 
+### COORD-1: V-Dem civil-society adapter
+
+**Goal:** add one inspectable Coordination signal without reviving the retired
+World Bank perception composites.
+
+**Status:** complete in dataset 4.5.0. The pinned V-Dem Country-Year Core v15
+release emits `v2x_cspart` for all 52 countries at 2024. The adapter, source
+memo, derived observation file and diagnostic review are committed together.
+
+**Open:** this is expert-coded evidence, not administrative delivery. The next
+Coordination task is a cross-agency performance series; the next Trust task is
+court-case clearance. Neither can be inferred from V-Dem.
+
 ## The next queue after Trust
 
 These are ordered by measurement risk and expected usefulness, not by country.
@@ -349,7 +365,7 @@ These are ordered by measurement risk and expected usefulness, not by country.
 | --- | --- | --- | --- |
 | P1 | Experimentation | OpenAlex citation impact | Inspectable field-normalized impact series with country coverage and a wealth-attribution review. |
 | P1 | Learning | PISA or PIAAC outcomes | Comparable outcome series with an explicit country coverage decision. |
-| P1 | Coordination | V-Dem civil society, then cross-agency delivery | A behavioral or institutional series that does not recreate the retired WGI problem. |
+| P1 | Coordination | Cross-agency delivery | A behavioral or institutional series that does not recreate the retired WGI problem. |
 | P2 | Adaptability | ILOSTAT long-term unemployment and UNCTAD export diversification | Recent, comparable series with denominator and country mapping documented. |
 | P2 | Shared Purpose | WVS civic participation and IDEA voter turnout | A behavioral participation measure that does not confuse pluralism with conformity. |
 | P2 | Building | Large-project delivery | A comparable cost and schedule dataset, or a documented decision that it remains an evidence-only gap. |

@@ -22,8 +22,8 @@ pnpm dev
 
 pnpm bench all fetches World Bank observations from 1990, scores the countries,
 runs diagnostics, writes the report, and regenerates the capability agendas. To
-refresh the source-backed Trust row as well, run `pnpm bench trust fetch` before
-the scoring step.
+refresh the source-backed Trust and Coordination adapter rows as well, run
+`pnpm bench trust fetch` and `pnpm bench vdem fetch` before the scoring step.
 
 The viewer runs at https://ncb.localhost through portless on port 3888. To run
 without the proxy, use either:
@@ -65,6 +65,7 @@ The CLI lives in packages/core and is available through pnpm bench.
 | --- | --- |
 | pnpm bench ingest [--from 1990] [--snapshot] | Fetch World Bank history into data/observations and record restatements in revisions.json. |
 | pnpm bench trust fetch | Fetch and parse the pinned Joint EVS/WVS A165 trust table into the shared observation store. |
+| pnpm bench vdem fetch | Fetch and parse the pinned V-Dem v15 civil-society series into the shared observation store. |
 | pnpm bench score | Normalize and score the current observations, writing the published output. |
 | pnpm bench diagnose | Run correlations, redundancy checks and the GDP-sensitivity test. |
 | pnpm bench report | Write data/out/report.md. |
@@ -79,6 +80,7 @@ The CLI lives in packages/core and is available through pnpm bench.
 | pnpm bench research scout | Ask the AI research scout for bounded, unpublished leads; add `--mock` or `--prompt-only` for offline work. |
 | pnpm bench research critique --in FILE | Red-team a scout run; it cannot approve publication. |
 | pnpm bench validate [--fetch] | Schema-check Delphi, evidence and institutional data. --fetch checks evidence URLs too. |
+| pnpm test | Run the core pipeline and adapter regression tests. |
 | pnpm bench all | Run ingest, score, diagnose, report and agenda in order. |
 | pnpm changelog:check | Verify the newest App and Dataset release notes match their source versions. |
 

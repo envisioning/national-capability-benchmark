@@ -15,6 +15,7 @@
     "reviews:check": "node scripts/check-provisional-reviews.mjs",
     "build": "pnpm -r build",
     "typecheck": "pnpm -r typecheck",
+    "test": "pnpm --filter @ncb/core test",
     "dev": "pnpm --filter @ncb/web dev",
     "icons": "node scripts/generate-favicons.mjs"
   },

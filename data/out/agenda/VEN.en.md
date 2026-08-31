@@ -1,6 +1,6 @@
 # Capability agenda: Venezuela
 
-*Generated 2026-08-30*
+*Generated 2026-08-31*
 
 The frame includes 52 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
@@ -10,7 +10,7 @@ The frame includes 52 countries. Each dimension runs from 0 to 100, with no over
 | --- | --- | --- | --- |
 | Anticipation | 8.6 | 0.54 (usable) | -1.7 over 10 years using 4 indicators |
 | Agency | 33.2 | 0.39 (thin) | +30.6 over 10 years using 2 indicators |
-| Coordination | not scored | 0.06 (very thin) | no trend |
+| Coordination | 16.5 | 0.14 (very thin) | no trend |
 | Trust | 36.1 | 0.16 (very thin) | no trend |
 | Learning | 56.8 | 0.1 (very thin) | no trend |
 | Experimentation | 5.2 | 0.1 (very thin) | no trend |
@@ -28,7 +28,7 @@ How capable is the country of identifying and preparing for emerging change?
 
 - Uses 5 observed indicators.
 - Highest usable scores: Sweden 83.5, Finland 82, Switzerland 81.1.
-- Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore).
+- Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom).
 - Missing indicators: Government foresight capacity, Long-horizon research share.
 
 ### Adaptability: 34.7, confidence usable
@@ -37,7 +37,7 @@ How effectively can the system respond when circumstances change?
 
 - Uses 4 observed indicators.
 - Highest usable scores: Netherlands 90.1, Switzerland 88.6, Japan 86.1.
-- Related deliveries in other countries: Plano Real, the 1994 currency stabilisation (Brazil); Proalcool, the fuel substitution after the oil shock (Brazil); The Convertibility Plan, and its collapse (Argentina); Kurzarbeit in the 2008-2009 crisis (Germany); The 2001 stabilisation, and its unwinding (Turkey); Telebras, the telecom system that was dismantled (Brazil); Estonian Defence League, national defence rebuilt after independence (Estonia); Korea Internet and Security Agency, a consolidated digital authority (South Korea).
+- Related deliveries in other countries: Plano Real, the 1994 currency stabilisation (Brazil); Proalcool, the fuel substitution after the oil shock (Brazil); The Convertibility Plan, and its collapse (Argentina); Kurzarbeit in the 2008-2009 crisis (Germany); The 2001 stabilisation, and its unwinding (Turkey); Telebras, the telecom system that was dismantled (Brazil); Estonian Defence League, national defence rebuilt after independence (Estonia); Korea Internet and Security Agency, a consolidated digital authority (South Korea); Federal siren warning network, and its dismantling (Germany); Room for the River, flood safety delivered across the Rhine branches (Netherlands); Childcare benefits administration, and the recovery after institutional failure (Netherlands).
 - Missing indicators: Long-term unemployment share, Export diversification, Disaster preparedness and recovery, Institutional responsiveness.
 
 ## What to measure first
@@ -52,14 +52,6 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
 - Rejected datasets: Voice and accountability.
 
-### Coordination: confidence 0.06, very thin
-
-How effectively can independent actors organize around shared objectives?
-
-- Uses one observed indicator.
-- Missing indicators: University-industry collaboration, Civil society strength, Public-private collaboration.
-- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
-
 ### Learning: confidence 0.1, very thin
 
 How effectively does the country acquire, distribute, and update knowledge?
@@ -73,6 +65,14 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 
 - Uses 2 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
+
+### Coordination: confidence 0.14, very thin
+
+How effectively can independent actors organize around shared objectives?
+
+- Uses 2 observed indicators.
+- Missing indicators: University-industry collaboration, Public-private collaboration.
+- Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
 ### Trust: confidence 0.16, very thin
 
@@ -99,7 +99,7 @@ How able are individuals and organizations to turn an intention into action?
 
 ## Missing data
 
-26 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+25 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -108,7 +108,6 @@ How able are individuals and organizations to turn an intention into action?
 | Agency | Adult digital skills | Share of adults who can perform standard digital tasks. |
 | Agency | Perceived control over life | Self-reported freedom of choice and control over the course of one’s life. |
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
-| Coordination | Civil society strength | Autonomy, density and participatory reach of civil society organisations. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
 | Trust | Cooperation beyond the in-group | Reported trust in people met for the first time and in people of another nationality. |

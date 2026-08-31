@@ -9,6 +9,30 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## Dataset 4.5.0 — 2026-08-31
+
+Coordination gained a full-frame, adapter-backed civil-society measure.
+
+- **V-Dem civil society strength is now scored.** The pinned Country-Year Core
+  v15 release contributes `v2x_cspart` for all 52 benchmark countries at 2024.
+- **The adapter and provenance are reproducible.** The source release, variable,
+  year and archive URL are fixed in the catalog; the derived observation file
+  carries the expert-coded source tier and license note.
+- **The frame stays at 52 countries.** This is a minor release: the new row
+  changes scores and confidence, but does not rebase the country ruler.
+
+## App 1.1.0 — 2026-08-30
+
+- **Brazil's institution map is published for a drawn network.** The map is
+  projected into a feed at `/api/institutions/BRA`, in English and in
+  Portuguese, so the network can be drawn on a surface of its own. The relation
+  ledger on the institution page is still where a relation's direction and its
+  verb are read.
+- **Only a jurisdiction the map has actually mapped is drawable.** The union,
+  the state of Sao Paulo and the municipality of Sao Paulo carry enough
+  recorded relations to have a shape. The 26 state entries that are still
+  scaffolds do not, and the feed says so rather than drawing them.
+
 ## App 1.0.1 — 2026-08-30
 
 - **The viewer has an icon.** The Envisioning mark now sits on a rounded

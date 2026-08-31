@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-30T16:19:13.276Z",
+  "generatedAt": "2026-08-31T07:33:57.460Z",
   "iso3": "ECU",
   "country": "Ecuador",
   "dimensions": [
@@ -82,6 +82,13 @@
           "country": "Singapore",
           "indicatorId": "government_foresight_capacity",
           "title": "Centre for Strategic Futures, foresight inside government"
+        },
+        {
+          "id": "gbr-carbon-budgets",
+          "iso3": "GBR",
+          "country": "United Kingdom",
+          "indicatorId": "government_foresight_capacity",
+          "title": "Legally binding carbon budgets"
         }
       ],
       "institutionIds": []
@@ -145,17 +152,17 @@
     {
       "dimension": "coordination",
       "kind": "measure",
-      "score": 70.5,
-      "confidence": 0.168,
+      "score": 70.8,
+      "confidence": 0.242,
       "band": "very_thin",
       "trend": null,
       "scoredOn": [
         "time_to_export",
-        "budget_execution_fidelity"
+        "budget_execution_fidelity",
+        "civil_society_strength"
       ],
       "gaps": [
         "university_industry_collaboration",
-        "civil_society_strength",
         "public_private_collaboration"
       ],
       "retired": [
@@ -199,6 +206,13 @@
           "country": "South Korea",
           "indicatorId": "public_private_collaboration",
           "title": "Economic Planning Board, long-run industrial coordination"
+        },
+        {
+          "id": "ury-snig",
+          "iso3": "URY",
+          "country": "Uruguay",
+          "indicatorId": "public_private_collaboration",
+          "title": "SNIG, universal individual cattle traceability"
         }
       ],
       "institutionIds": []
@@ -476,6 +490,27 @@
           "country": "South Korea",
           "indicatorId": "institutional_responsiveness",
           "title": "Korea Internet and Security Agency, a consolidated digital authority"
+        },
+        {
+          "id": "deu-siren-network",
+          "iso3": "DEU",
+          "country": "Germany",
+          "indicatorId": "disaster_preparedness",
+          "title": "Federal siren warning network, and its dismantling"
+        },
+        {
+          "id": "nld-room-for-river",
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "indicatorId": "disaster_preparedness",
+          "title": "Room for the River, flood safety delivered across the Rhine branches"
+        },
+        {
+          "id": "nld-childcare-benefits",
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Childcare benefits administration, and the recovery after institutional failure"
         }
       ],
       "institutionIds": []
@@ -659,6 +694,34 @@
           "country": "Singapore",
           "indicatorId": "large_project_delivery",
           "title": "Housing and Development Board, public housing at scale"
+        },
+        {
+          "id": "ury-rail-network",
+          "iso3": "URY",
+          "country": "Uruguay",
+          "indicatorId": "large_project_delivery",
+          "title": "AFE passenger rail and network contraction"
+        },
+        {
+          "id": "fra-flamanville",
+          "iso3": "FRA",
+          "country": "France",
+          "indicatorId": "large_project_delivery",
+          "title": "Flamanville 3 EPR, and the erosion of nuclear new-build delivery"
+        },
+        {
+          "id": "can-phoenix",
+          "iso3": "CAN",
+          "country": "Canada",
+          "indicatorId": "large_project_delivery",
+          "title": "Phoenix pay system, and its prolonged failure"
+        },
+        {
+          "id": "nld-groningen",
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "indicatorId": "large_project_delivery",
+          "title": "Groningen gas system, and its closure after induced earthquakes"
         }
       ],
       "institutionIds": []
@@ -717,11 +780,18 @@
           "country": "Brazil",
           "indicatorId": "civic_participation",
           "title": "SUS health councils, permanent public participation"
+        },
+        {
+          "id": "deu-thw",
+          "iso3": "DEU",
+          "country": "Germany",
+          "indicatorId": "volunteering_rate",
+          "title": "THW, volunteer civil protection as a federal institution"
         }
       ],
       "institutionIds": []
     }
   ],
   "ownEvidence": [],
-  "gapCount": 26
+  "gapCount": 25
 }

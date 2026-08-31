@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-30T16:19:13.276Z",
+  "generatedAt": "2026-08-31T07:33:57.460Z",
   "iso3": "DEU",
   "country": "Germany",
   "dimensions": [
@@ -82,6 +82,13 @@
           "country": "Singapore",
           "indicatorId": "government_foresight_capacity",
           "title": "Centre for Strategic Futures, foresight inside government"
+        },
+        {
+          "id": "gbr-carbon-budgets",
+          "iso3": "GBR",
+          "country": "United Kingdom",
+          "indicatorId": "government_foresight_capacity",
+          "title": "Legally binding carbon budgets"
         }
       ],
       "institutionIds": []
@@ -145,17 +152,17 @@
     {
       "dimension": "coordination",
       "kind": "measure",
-      "score": 84.5,
-      "confidence": 0.168,
+      "score": 88.8,
+      "confidence": 0.242,
       "band": "very_thin",
       "trend": null,
       "scoredOn": [
         "time_to_export",
-        "budget_execution_fidelity"
+        "budget_execution_fidelity",
+        "civil_society_strength"
       ],
       "gaps": [
         "university_industry_collaboration",
-        "civil_society_strength",
         "public_private_collaboration"
       ],
       "retired": [
@@ -192,6 +199,13 @@
           "country": "South Korea",
           "indicatorId": "public_private_collaboration",
           "title": "Economic Planning Board, long-run industrial coordination"
+        },
+        {
+          "id": "ury-snig",
+          "iso3": "URY",
+          "country": "Uruguay",
+          "indicatorId": "public_private_collaboration",
+          "title": "SNIG, universal individual cattle traceability"
         }
       ],
       "institutionIds": []
@@ -461,6 +475,20 @@
           "country": "South Korea",
           "indicatorId": "institutional_responsiveness",
           "title": "Korea Internet and Security Agency, a consolidated digital authority"
+        },
+        {
+          "id": "nld-room-for-river",
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "indicatorId": "disaster_preparedness",
+          "title": "Room for the River, flood safety delivered across the Rhine branches"
+        },
+        {
+          "id": "nld-childcare-benefits",
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "indicatorId": "institutional_responsiveness",
+          "title": "Childcare benefits administration, and the recovery after institutional failure"
         }
       ],
       "institutionIds": []
@@ -644,6 +672,34 @@
           "country": "Singapore",
           "indicatorId": "large_project_delivery",
           "title": "Housing and Development Board, public housing at scale"
+        },
+        {
+          "id": "ury-rail-network",
+          "iso3": "URY",
+          "country": "Uruguay",
+          "indicatorId": "large_project_delivery",
+          "title": "AFE passenger rail and network contraction"
+        },
+        {
+          "id": "fra-flamanville",
+          "iso3": "FRA",
+          "country": "France",
+          "indicatorId": "large_project_delivery",
+          "title": "Flamanville 3 EPR, and the erosion of nuclear new-build delivery"
+        },
+        {
+          "id": "can-phoenix",
+          "iso3": "CAN",
+          "country": "Canada",
+          "indicatorId": "large_project_delivery",
+          "title": "Phoenix pay system, and its prolonged failure"
+        },
+        {
+          "id": "nld-groningen",
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "indicatorId": "large_project_delivery",
+          "title": "Groningen gas system, and its closure after induced earthquakes"
         }
       ],
       "institutionIds": []
@@ -721,7 +777,21 @@
       "dimension": "adaptability",
       "title": "Kurzarbeit in the 2008-2009 crisis",
       "claim": "Germany answered the 2008-2009 collapse in manufacturing orders by paying firms to cut hours instead of jobs, and short-time work covered 1.44 million workers at the May 2009 peak, about 5 percent of insured employment, while unemployment barely rose."
+    },
+    {
+      "id": "deu-thw",
+      "indicatorId": "volunteering_rate",
+      "dimension": "shared_purpose",
+      "title": "THW, volunteer civil protection as a federal institution",
+      "claim": "Germany's federal civil-protection agency trains and equips a volunteer force that reached about 88,000 people across 669 local units in May 2025, supported by about 2,200 paid staff."
+    },
+    {
+      "id": "deu-siren-network",
+      "indicatorId": "disaster_preparedness",
+      "dimension": "adaptability",
+      "title": "Federal siren warning network, and its dismantling",
+      "claim": "West Germany built a federal warning service after 1955; after the Cold War the federally owned service was dissolved, its ten warning offices were abandoned and the nationwide siren alarm network was dismantled or transferred to municipalities, ending a system that had relied on about 1,700 volunteer helpers."
     }
   ],
-  "gapCount": 26
+  "gapCount": 25
 }

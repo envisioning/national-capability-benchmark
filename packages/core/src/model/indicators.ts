@@ -4,6 +4,8 @@ import type { Dimension } from './dimensions.js'
 import {
   JOINT_EVS_WVS_PUBLISHER,
   JOINT_EVS_WVS_RESULTS_URL,
+  VDEM_CY_CORE_V15_PAGE_URL,
+  VDEM_PUBLISHER,
 } from './source-catalog.js'
 
 type Raw = z.input<typeof IndicatorDef>
@@ -323,9 +325,9 @@ const RAW: Raw[] = [
     unit: 'index 0-1',
     measurementClass: 'C',
     direction: 'higher_better',
-    source: { publisher: 'V-Dem', tier: 'expert_panel', inspectable: true },
-    ingest: 'gap',
-    notes: 'V-Dem core civil society index is inspectable and would fill this. Not yet wired; it needs its own ingestion adapter.',
+    source: { publisher: VDEM_PUBLISHER, series: 'v2x_cspart', url: VDEM_CY_CORE_V15_PAGE_URL, tier: 'expert_panel', inspectable: true },
+    ingest: 'adapter',
+    notes: 'V-Dem civil society participation index, country-year release v15. It is expert-coded rather than administrative data, so it remains a perception-adjacent measure and its wealth correlation is reviewed in D83.',
     wealthProxyPrior: 0.15,
   },
   {

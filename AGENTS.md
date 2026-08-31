@@ -10,6 +10,7 @@ countries, nine dimensions, equal weights and no headline ranking.
 pnpm install
 pnpm bench ingest      fetch World Bank series from 1990 into data/observations/worldbank.json
 pnpm bench trust fetch import the pinned Joint EVS/WVS A165 trust table into data/observations/joint-evs-wvs.json
+pnpm bench vdem fetch  import the pinned V-Dem civil-society series into data/observations/vdem-cy-core.json
 pnpm bench score       normalise and score, write data/out/index.json, data/out/countries/*.json and table.csv
 pnpm bench delphi      run the LLM panel (add --mock to run offline)
 pnpm bench diagnose    correlations, redundancy, GDP-sensitivity test
@@ -17,6 +18,7 @@ pnpm bench report      write data/out/report.md
 pnpm bench agenda      write the capability agenda: JSON per country plus one markdown per lexicon
 pnpm bench cost        measure the panel prompts and price a run before making it
 pnpm bench residual    write the provisional wealth-residual fixture, one number per dimension
+pnpm bench institutions project the institution map into the explorer feed: one JSON per lexicon
 pnpm bench probe       test candidate World Bank series before wiring them: --series a,b[@db]
 pnpm bench validate    schema-check data/delphi and data/evidence; add --fetch to live-check evidence source URLs
 pnpm bench all         ingest, score, diagnose, report, agenda
@@ -73,8 +75,9 @@ port 3888. That entry starts Next directly and does not use the proxy.
   diagnostics, Delphi, CLI. Compiles to `dist`.
 - `apps/web` — Next.js viewer. Reads `data/out/*.json` at request time.
 - `data/observations` — raw values with source and year. `worldbank.json` holds
-  the World Bank series and `joint-evs-wvs.json` holds the pinned Trust adapter
-  output. `revisions.json` is the append-only log of what each run restated,
+  the World Bank series, `joint-evs-wvs.json` holds the pinned Trust adapter
+  output and `vdem-cy-core.json` holds the pinned V-Dem adapter output.
+  `revisions.json` is the append-only log of what each run restated,
   added or dropped, and `snapshots/` holds dated full copies written only on
   `--snapshot`.
 - `data/delphi` — one file per panel run, plus `latest.json`, which is a pointer
@@ -93,6 +96,8 @@ port 3888. That entry starts Next directly and does not use the proxy.
   lexicon. See D35. `residual.json` is the provisional wealth residual: each
   dimension score against the score its income predicts, one number per
   dimension and never one per country, offline until D65 promotes it. See D68.
+  `institutions/{ISO3}.{lang}.json` is the explorer feed, one file per lexicon,
+  read by the drawn network that lives outside this repository. See D82.
   `datapackage.json` and `schema/` make the directory
   self-describing: a Frictionless Data Package descriptor plus one JSON Schema
   per published shape, generated from the Zod schemas on `bench score`. See D37.
@@ -227,6 +232,21 @@ port 3888. That entry starts Next directly and does not use the proxy.
   `*_PT_BR` imports in a component. Never lay an institution out by hand: every
   surface derives from counts, because a country file grows. See D56, which
   supersedes the interface D54 described.
+- **The drawn institution network lives outside this repository.**
+  `@envisioning/app` draws it, it is closed source, and this repository is
+  public, so the viewer never imports it. `bench institutions` projects
+  `data/institutions/{ISO3}.json` into
+  `data/out/institutions/{ISO3}.{lang}.json`, and
+  `/api/institutions/{ISO3}?lang=` serves that feed to a separate deployment.
+  `buildInstitutionExplorer` in
+  `packages/core/src/pipeline/institution-explorer.ts` is the only projection,
+  and `localizeInstitutionNetwork` is the only place a country file's own prose
+  becomes a language, so the ledger and the feed cannot use different words.
+  Only a jurisdiction the map marks `baseline` or `pilot` is drawable, read
+  from the file through `DRAWABLE_COVERAGE` and never from a list. A line
+  carries a relation family and nothing else: direction and the 13 verbs stay
+  in the ledger, which is still authoritative. Rerun the command after touching
+  any `data/institutions/*.json`. See D82.
 - The one whole-country picture is the system matrix, computed by
   `buildInstitutionMatrix` in `packages/core/src/pipeline/institutions.ts` and
   nowhere else. Its ramp is the three fixed breaks in `MATRIX_BANDS`, on the
@@ -494,7 +514,7 @@ single-digit dollars, so cost is not the constraint — see D13.
 
 The repository contains old in-session one-panelist artifacts, including the
 run pointed to by `data/delphi/latest.json`. They are useful research notes, but
-they are not a current panel for dataset 4.4.0. Replace them with a reviewed
+they are not a current panel for dataset 4.5.0. Replace them with a reviewed
 gateway run covering the current country set before publishing anything.
 
 ## Brand

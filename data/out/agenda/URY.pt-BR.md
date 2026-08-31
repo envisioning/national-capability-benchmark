@@ -1,6 +1,6 @@
 # Agenda de capacidades: Uruguai
 
-*Gerado em 2026-08-30*
+*Gerado em 2026-08-31*
 
 Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
@@ -10,7 +10,7 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | --- | --- | --- | --- |
 | Antecipação | 34,5 | 0,66 (boa) | +12,7 em 10 anos, sobre 5 indicadores |
 | Agência | 60 | 0,61 (utilizável) | +19,8 em 10 anos, sobre 4 indicadores |
-| Coordenação | 68,6 | 0,16 (muito fraca) | sem base de tendência |
+| Coordenação | 74 | 0,23 (muito fraca) | sem base de tendência |
 | Confiança | 36,1 | 0,16 (muito fraca) | sem base de tendência |
 | Aprendizagem | 49,3 | 0,54 (utilizável) | +12 em 10 anos, sobre 2 indicadores |
 | Experimentação | 34,3 | 0,34 (fraca) | sem base de tendência |
@@ -28,7 +28,7 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Irlanda 75,3, Singapura 71,2, China 64,9.
-- Entregas documentadas em outros países: Pix instant payment system (Brasil); GOV.BR federal identity and service platform (Brasil); X-Road national data exchange layer (Estônia); Pradhan Mantri Jan Dhan Yojana bank accounts (Índia); Sistema Unico de Saude, universal public health system (Brasil); Programa Nacional de Imunizacoes, and its erosion (Brasil); Luz para Todos, rural electrification (Brasil); Bolsa Familia and the single registry behind it (Brasil); Fully electronic national elections (Brasil); Deepwater and pre-salt oil production (Brasil); Seguro Popular, and its abolition (México); Sure Start children's centres, and their erosion (Reino Unido); Grid power, and load shedding (África do Sul); Measles elimination, and its erosion (Estados Unidos); BNDES, the national development bank (Brasil); Casa da Moeda do Brasil, the national mint (Brasil); Housing and Development Board, public housing at scale (Singapura).
+- Entregas documentadas em outros países: Pix instant payment system (Brasil); GOV.BR federal identity and service platform (Brasil); X-Road national data exchange layer (Estônia); Pradhan Mantri Jan Dhan Yojana bank accounts (Índia); Sistema Unico de Saude, universal public health system (Brasil); Programa Nacional de Imunizacoes, and its erosion (Brasil); Luz para Todos, rural electrification (Brasil); Bolsa Familia and the single registry behind it (Brasil); Fully electronic national elections (Brasil); Deepwater and pre-salt oil production (Brasil); Seguro Popular, and its abolition (México); Sure Start children's centres, and their erosion (Reino Unido); Grid power, and load shedding (África do Sul); Measles elimination, and its erosion (Estados Unidos); BNDES, the national development bank (Brasil); Casa da Moeda do Brasil, the national mint (Brasil); Housing and Development Board, public housing at scale (Singapura); Flamanville 3 EPR, and the erosion of nuclear new-build delivery (França); Phoenix pay system, and its prolonged failure (Canadá); Groningen gas system, and its closure after induced earthquakes (Países Baixos).
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística.
 
@@ -38,7 +38,7 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Suécia 83,5, Finlândia 82, Suíça 81,1.
-- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura).
+- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido).
 - Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
 ### Aprendizagem: 49,3, confiança utilizável
@@ -54,14 +54,6 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Coordenação: confiança 0,16, muito fraca
-
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Força da sociedade civil, Colaboração público-privada.
-- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
-
 ### Confiança: confiança 0,16, muito fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
@@ -69,6 +61,14 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
+
+### Coordenação: confiança 0,23, muito fraca
+
+Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
+- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
 ### Propósito compartilhado: confiança 0,27, fraca
 
@@ -94,7 +94,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## Agenda de medição
 
-26 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+25 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -103,7 +103,6 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 | Agência | Habilidades digitais de adultos | Parcela de adultos capazes de executar tarefas digitais padrão. |
 | Agência | Percepção de controle sobre a própria vida | Liberdade de escolha e controle sobre o rumo da própria vida, autodeclarados. |
 | Coordenação | Colaboração universidade-empresa | Intensidade da colaboração de pesquisa entre universidades e empresas. |
-| Coordenação | Força da sociedade civil | Autonomia, densidade e alcance participativo das organizações da sociedade civil. |
 | Coordenação | Colaboração público-privada | Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
 | Confiança | Cooperação além do próprio grupo | Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade. |
@@ -125,12 +124,14 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 | Propósito compartilhado | Participação cívica | Participação ativa em associações, sindicatos, partidos e organizações comunitárias. |
 
-## O que os indicadores não veem sobre o Uruguai
+## O que o Uruguai construiu e nenhum indicador conta
 
-Entregas documentadas como evidência. Elas nunca afetam as notas ou a confiança.
+Estas são mudanças institucionais documentadas em Uruguai que o framework registra como evidência. Elas ficam ao lado da nota e não mudam a nota ou a confiança.
 
 - **Electricity supply rebuilt on renewable sources** (Construção). Uruguay rebuilt its electricity supply between 2010 and 2017 through public tenders and long-term contracts, and in 2025 fossil fuels produced 293 GWh of the 15,855 GWh generated, so 98.2 percent came from hydro, wind, biomass and solar.
 - **Plan Ceibal, one connected laptop per child** (Construção). Uruguay gave a connected laptop to every child in public primary school from 2007, the first country to do it nationally, and the household survey found a Ceibal computer in the homes of 35.8 percent of the population in 2018.
+- **SNIG, universal individual cattle traceability** (Coordenação). Uruguay required producers to register every calf in a national traceability system from 2006, and by October 2011 the registry covered 100 percent of the herd, 11.75 million live cattle, while identification tags reached more than 45,000 producers each year.
+- **AFE passenger rail and network contraction** (Construção). Uruguay's state railway suspended passenger service in January 1988 to focus on freight; by 1990 about half of the national network had been declared non-operational, leaving 1,484 kilometres active from a 2,998-kilometre network, before passenger services returned only partially in 1993.
 
 ## Contribua
 

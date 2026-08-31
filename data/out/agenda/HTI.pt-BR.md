@@ -1,6 +1,6 @@
 # Agenda de capacidades: Haiti
 
-*Gerado em 2026-08-30*
+*Gerado em 2026-08-31*
 
 Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
@@ -10,7 +10,7 @@ Os 52 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | --- | --- | --- | --- |
 | Antecipação | 0 | 0,4 (fraca) | 0 em 10 anos, sobre 3 indicadores, 3 truncados na borda da régua |
 | Agência | 14,9 | 0,44 (fraca) | +14,2 em 10 anos, sobre 2 indicadores |
-| Coordenação | 65,2 | 0,17 (muito fraca) | sem base de tendência |
+| Coordenação | 51,6 | 0,24 (muito fraca) | sem base de tendência |
 | Confiança | sem nota | 0,07 (muito fraca) | sem base de tendência |
 | Aprendizagem | 12,3 | 0,22 (muito fraca) | sem base de tendência |
 | Experimentação | 0,2 | 0,04 (muito fraca) | sem base de tendência |
@@ -45,20 +45,20 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 - Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
-### Coordenação: confiança 0,17, muito fraca
-
-Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Colaboração universidade-empresa, Força da sociedade civil, Colaboração público-privada.
-- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
-
 ### Aprendizagem: confiança 0,22, muito fraca
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
+
+### Coordenação: confiança 0,24, muito fraca
+
+Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
+- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
 ### Antecipação: confiança 0,4, fraca
 
@@ -91,7 +91,7 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 
 ## Agenda de medição
 
-26 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+25 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -100,7 +100,6 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 | Agência | Habilidades digitais de adultos | Parcela de adultos capazes de executar tarefas digitais padrão. |
 | Agência | Percepção de controle sobre a própria vida | Liberdade de escolha e controle sobre o rumo da própria vida, autodeclarados. |
 | Coordenação | Colaboração universidade-empresa | Intensidade da colaboração de pesquisa entre universidades e empresas. |
-| Coordenação | Força da sociedade civil | Autonomia, densidade e alcance participativo das organizações da sociedade civil. |
 | Coordenação | Colaboração público-privada | Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
 | Confiança | Cooperação além do próprio grupo | Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade. |

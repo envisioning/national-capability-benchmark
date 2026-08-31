@@ -3724,3 +3724,132 @@ Evidence that panels do not separate from the page on a real screen, rather than
 in a design review, would bring back the shadow scale. A second dark band
 proving useful on a page other than the front page would turn `hero-band` from
 a one-off into a section treatment.
+
+---
+
+## D82: The drawn network is a separate deployment reading a published feed
+
+*Recorded 2026-08-30. Extends D54, D56 and D59. Does not supersede D56: the
+ledger stays the authoritative reading of a relation.*
+
+**Choice.** The project publishes an explorer feed for each mapped country at
+`data/out/institutions/{ISO3}.{lang}.json`, written by `pnpm bench
+institutions` and served at `/api/institutions/{ISO3}?lang=`. The feed is a
+projection of `data/institutions/{ISO3}.json` and never a second source of
+truth: every institution, relation and source comes from that file, and every
+label comes from a lexicon.
+
+The network is drawn by `@envisioning/app`, which is not a dependency of this
+repository. It is closed source and this repository is public, so a viewer that
+imported it could not be installed or built by anyone outside Envisioning. The
+explorer is therefore a separate deployment that reads the feed over HTTP.
+
+`localizeInstitutionNetwork` in `packages/core/src/i18n/institutions-pt-br.ts`
+is the one place a country file's own prose is rendered into a language. The
+viewer's ledger and the feed both call it, so the two surfaces cannot describe
+the same institution in different words.
+
+Only a jurisdiction the map marks `baseline` or `pilot` is worth drawing.
+`DRAWABLE_COVERAGE` reads that status from the file rather than from a
+hand-written list.
+
+**Why.** D56 refused a node-link diagram and its reasons were specific: 13
+relation verbs rendered identically, a star topology that spent the canvas on
+spokes, and labels below the type scale. Two of those are now answerable. The
+force layout has a selected-item mode that draws concentric rings around one
+institution, which is the interface D56 described in words, and its labels are
+measured pills at `mn` and `sm` rather than 9px SVG text.
+
+The third is not answerable and the data says so louder than before. The
+Brazilian map has grown to 359 institutions and 378 relations, and 261 of those
+institutions carry exactly one relation. The 26 scaffold states are each one hub
+with about eight spokes: 26 copies of the same star. Drawing all of it would
+show a fringe, not a structure. The union carries 85 internal relations and Sao
+Paulo 22, and those two do have a shape, which is why the drawable rule reads
+coverage status.
+
+A picture also cannot carry a relation's direction. `RELATION_FAMILY_STRENGTH`
+maps the four families onto line width, and that is the whole of what the
+drawing distinguishes. Direction and verb stay in the ledger, which is why the
+ledger remains authoritative and the network is a second reading beside it.
+
+Keeping the drawing outside this repository is what makes it affordable. An
+in-repo mount would add about 30 transitive dependencies to a repository that
+today depends on Next, React and its own core, pin React to an exact patch
+version, and require a private registry token to install. The cost of the
+separate deployment is one HTTP hop and one published shape.
+
+**Cost.** The feed is a published artefact that can go stale against the map
+behind it. `pnpm bench institutions` is a separate command rather than part of
+`pnpm bench all`, following `velocity`, `leverage` and `residual`, so a change
+to `data/institutions/*.json` that does not rerun it leaves the explorer
+showing the previous map.
+
+Language is baked in at write time, because the feed embeds rendered labels. A
+new lexicon means a new file rather than a parameter, which is the same trade
+the agenda documents make.
+
+The explorer's chrome is not this project's. It brings its own header, menu and
+URL grammar, so it cannot sit inside the navigation tree D73 and D80 describe.
+It is reached as a leaf from the institution page and is not a nav tab.
+
+`level` still carries Brazilian assumptions, as D56 already recorded, and
+`LEVEL_COLOURS` now spends the one accent on `federal`. A country whose
+capability backbone is not federal will need that mapping revisited rather than
+reused.
+
+**Overturned by.** Evidence from readers that they arrive wanting the whole
+network shape, which would make the drawing the institution page's first
+surface rather than a leaf beside it. Or a relation schema that records
+direction and scope in a way a line can carry, which would remove the reason
+the ledger stays authoritative. Or `@envisioning/app` becoming installable from
+a public registry, which would make the in-repo mount cost only its
+dependencies.
+
+## D83 — V-Dem civil-society strength is the first adapter-backed Coordination repair
+
+*Recorded 2026-08-31. Extends D23, D55 and the Coordination queue in the
+research roadmap. Promotes `civil_society_strength` from a gap to an adapter.*
+
+**Choice.** Add V-Dem's country-year civil society participation index
+(`v2x_cspart`) from the pinned Country-Year Core v15 release as a third
+Coordination indicator. The adapter fetches the public CC BY-SA 4.0 archive,
+extracts the 2024 country-year rows and emits the existing observation shape;
+the release, variable and year are fixed in `source-catalog.ts`. All 52
+benchmark countries are present, so no country is silently carried forward or
+excluded. The source remains explicitly expert-coded (`expert_panel`), and the
+confidence penalty for that tier stays visible beside every score.
+
+The first rescore gives Coordination a third observed row for 51 of 52
+countries (the coverage floor therefore publishes 51 scores). Coordination's
+Pearson correlation with log GDP per capita is 0.561 (Spearman 0.611, n=50),
+down from the 0.627 Trust correlation and below the 0.70 wealth-proxy screen.
+The new row's own correlation is 0.395 and its wealth-attribution delta is
+0.046; it forms no redundant pair with an existing Coordination row. The row
+does not erase the remaining gaps: university-industry collaboration and
+public-private collaboration stay unmeasured, and the single-country score
+below the floor stays visibly null.
+
+**Why.** The index measures autonomy, organisation and participatory reach of
+civil society rather than government reputation, so it answers a declared
+Coordination construct without restoring the four mutually redundant WGI
+composites retired by D23. It is not administrative performance data and it is
+not a substitute for cross-agency delivery. Publishing the expert-coded source
+with its tier and keeping the wealth diagnostics live is the smallest repair
+that adds a full-frame signal while preserving those limits.
+
+**Cost.** Coordination scores move materially because a new 0–1 frame is added;
+old values are not comparable, so this is a minor dataset release and every
+generated output is restated. The adapter depends on the publisher's archive
+layout and on `unzip`; a future release must update the pinned variable or
+fixture deliberately rather than changing the URL in place. V-Dem's expert
+coding can still reflect the evaluators' assumptions, so a lower GDP
+correlation is not proof that the measure is unbiased. Court performance,
+cross-agency delivery and the Trust institutional family remain open work.
+
+**Overturned by.** A release revision that changes the construct or removes
+country coverage below the half-frame gate; a diagnostic release that pushes
+the row above the wealth-proxy threshold or into a redundant pair; or direct
+validation showing that the CSV values cannot be reproduced from the pinned
+archive. Any of those would return the row to `gap` or replace it with a more
+observable series.

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-30T16:19:13.276Z",
+  "generatedAt": "2026-08-31T07:33:57.460Z",
   "iso3": "NLD",
   "country": "Netherlands",
   "dimensions": [
@@ -75,6 +75,13 @@
           "country": "Singapore",
           "indicatorId": "government_foresight_capacity",
           "title": "Centre for Strategic Futures, foresight inside government"
+        },
+        {
+          "id": "gbr-carbon-budgets",
+          "iso3": "GBR",
+          "country": "United Kingdom",
+          "indicatorId": "government_foresight_capacity",
+          "title": "Legally binding carbon budgets"
         }
       ],
       "institutionIds": []
@@ -138,17 +145,17 @@
     {
       "dimension": "coordination",
       "kind": "measure",
-      "score": 98,
-      "confidence": 0.168,
+      "score": 96,
+      "confidence": 0.242,
       "band": "very_thin",
       "trend": null,
       "scoredOn": [
         "time_to_export",
-        "budget_execution_fidelity"
+        "budget_execution_fidelity",
+        "civil_society_strength"
       ],
       "gaps": [
         "university_industry_collaboration",
-        "civil_society_strength",
         "public_private_collaboration"
       ],
       "retired": [
@@ -192,6 +199,13 @@
           "country": "South Korea",
           "indicatorId": "public_private_collaboration",
           "title": "Economic Planning Board, long-run industrial coordination"
+        },
+        {
+          "id": "ury-snig",
+          "iso3": "URY",
+          "country": "Uruguay",
+          "indicatorId": "public_private_collaboration",
+          "title": "SNIG, universal individual cattle traceability"
         }
       ],
       "institutionIds": []
@@ -464,6 +478,13 @@
           "country": "South Korea",
           "indicatorId": "institutional_responsiveness",
           "title": "Korea Internet and Security Agency, a consolidated digital authority"
+        },
+        {
+          "id": "deu-siren-network",
+          "iso3": "DEU",
+          "country": "Germany",
+          "indicatorId": "disaster_preparedness",
+          "title": "Federal siren warning network, and its dismantling"
         }
       ],
       "institutionIds": []
@@ -647,6 +668,27 @@
           "country": "Singapore",
           "indicatorId": "large_project_delivery",
           "title": "Housing and Development Board, public housing at scale"
+        },
+        {
+          "id": "ury-rail-network",
+          "iso3": "URY",
+          "country": "Uruguay",
+          "indicatorId": "large_project_delivery",
+          "title": "AFE passenger rail and network contraction"
+        },
+        {
+          "id": "fra-flamanville",
+          "iso3": "FRA",
+          "country": "France",
+          "indicatorId": "large_project_delivery",
+          "title": "Flamanville 3 EPR, and the erosion of nuclear new-build delivery"
+        },
+        {
+          "id": "can-phoenix",
+          "iso3": "CAN",
+          "country": "Canada",
+          "indicatorId": "large_project_delivery",
+          "title": "Phoenix pay system, and its prolonged failure"
         }
       ],
       "institutionIds": []
@@ -705,6 +747,13 @@
           "country": "Brazil",
           "indicatorId": "civic_participation",
           "title": "SUS health councils, permanent public participation"
+        },
+        {
+          "id": "deu-thw",
+          "iso3": "DEU",
+          "country": "Germany",
+          "indicatorId": "volunteering_rate",
+          "title": "THW, volunteer civil protection as a federal institution"
         }
       ],
       "institutionIds": []
@@ -717,7 +766,28 @@
       "dimension": "anticipation",
       "title": "The Delta Programme and its fund",
       "claim": "The Netherlands legislated a standing programme against flooding and fresh-water shortage, run by an independent Delta Commissioner and paid from a dedicated Delta Fund that expects 27.4 billion euros to be available through 2050."
+    },
+    {
+      "id": "nld-groningen",
+      "indicatorId": "large_project_delivery",
+      "dimension": "building",
+      "title": "Groningen gas system, and its closure after induced earthquakes",
+      "claim": "The Netherlands ended roughly sixty years of Groningen gas extraction with the permanent closure of all production locations on 19 April 2024; by the end of 2024 the response system had handled more than 500,000 damage reports and paid over €2.5 billion in compensation."
+    },
+    {
+      "id": "nld-room-for-river",
+      "indicatorId": "disaster_preparedness",
+      "dimension": "adaptability",
+      "title": "Room for the River, flood safety delivered across the Rhine branches",
+      "claim": "The Netherlands ran Room for the River from 2006 to 2019, delivering 39 measures at 34 locations along the IJssel, Waal, Nederrijn and Lek for about four million residents at a total cost of €2.3 billion."
+    },
+    {
+      "id": "nld-childcare-benefits",
+      "indicatorId": "institutional_responsiveness",
+      "dimension": "adaptability",
+      "title": "Childcare benefits administration, and the recovery after institutional failure",
+      "claim": "The Netherlands' tax administration put tens of thousands of childcare-benefits parents into debt between 2004 and 2019; by February 2026 the recovery operation had recognized more than 43,000 parents as harmed among about 69,000 applicants and guaranteed each recognized parent at least €30,000."
     }
   ],
-  "gapCount": 26
+  "gapCount": 25
 }

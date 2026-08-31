@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-29T18:22:04.547Z",
-  "version": "4.4.0",
+  "generatedAt": "2026-08-31T07:33:54.907Z",
+  "version": "4.5.0",
   "country": {
     "country": "United Kingdom",
     "iso3": "GBR",
@@ -1985,20 +1985,20 @@
         "checks": []
       },
       "coordination": {
-        "score": null,
-        "observedIndicators": 1,
-        "belowCoverageFloor": true,
-        "confidence": 0.069,
+        "score": 88.2,
+        "observedIndicators": 2,
+        "belowCoverageFloor": false,
+        "confidence": 0.144,
         "confidenceParts": {
-          "coverage": 0.125,
-          "recency": 0.583,
-          "sourceQuality": 0.95
+          "coverage": 0.25,
+          "recency": 0.792,
+          "sourceQuality": 0.725
         },
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": null,
-        "blendedFrom": "none",
+        "blendedScore": 88.2,
+        "blendedFrom": "indicators",
         "momentum": [],
         "indicators": [
           {
@@ -2132,16 +2132,23 @@
             "indicatorId": "civil_society_strength",
             "name": "Civil society strength",
             "measurementClass": "C",
-            "raw": null,
-            "transformed": null,
-            "normalized": null,
-            "year": null,
-            "source": "V-Dem",
-            "sourceTier": null,
+            "raw": 0.899,
+            "transformed": 0.899,
+            "normalized": 90.7,
+            "year": 2024,
+            "source": "V-Dem (v2x_cspart)",
+            "sourceTier": "expert_panel",
             "winsorized": false,
             "outOfFrame": false,
-            "series": [],
-            "status": "gap"
+            "series": [
+              {
+                "year": 2024,
+                "raw": 0.899,
+                "normalized": 90.7,
+                "tier": "expert_panel"
+              }
+            ],
+            "status": "observed"
           },
           {
             "indicatorId": "public_private_collaboration",

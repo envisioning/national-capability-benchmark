@@ -471,5 +471,6 @@ export const PT_BR: Lexicon = {
     matrixCellOne: 'Uma relação de {from} para {to}',
     matrixCellNone: 'Nenhuma relação de {from} para {to}',
     matrixSummary: '{total} relações em {filled} de {cells} células',
+    mapSummary: '{institutions} instituições, {relations} relações registradas',
   },
 }

@@ -211,5 +211,6 @@ export const EN: Lexicon = {
     matrixCellOne: 'One relation from {from} to {to}',
     matrixCellNone: 'No relation from {from} to {to}',
     matrixSummary: '{total} relations in {filled} of {cells} cells',
+    mapSummary: '{institutions} institutions, {relations} recorded relations',
   },
 }

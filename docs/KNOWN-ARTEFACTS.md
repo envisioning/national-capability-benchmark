@@ -76,15 +76,16 @@ indicators, reported separately.
 
 **Severity: high. The first source-backed Trust release is still thin.**
 
-The current figures are from dataset 4.4.0. Coordination publishes a score for
-44 of 52 countries, based on two operational indicators. Trust publishes a
+The current figures are from dataset 4.5.0. Coordination publishes a score for
+51 of 52 countries, based on border time, budget execution and V-Dem's
+expert-coded civil-society index. Trust publishes a
 score for 36 of 52 countries, based on the Joint EVS/WVS A165 social-trust
 measure and the 2019-frozen contract-enforcement measure. Trust's dimension
 correlation with log GDP per capita is 0.627 (Spearman 0.711, n=35), so the
 release is usable as a research baseline but not a clean claim of wealth-free
 trust. D23 retired the WGI perception composites and D44 retired homicide.
 
-Both dimensions leaned on the Worldwide Governance Indicators, which are expert
+Both dimensions once leaned on the Worldwide Governance Indicators, which are expert
 and firm perception composites that track income closely by construction. On the
 16-country run, with those indicators in place, Coordination correlated with log
 GDP per capita at 0.90 and Trust at 0.88.
@@ -108,13 +109,14 @@ test was class P and every indicator that survived was class C. The current
 Trust release adds a class P social measure from a named academic survey to the
 class C contract measure. The social measure alone correlates with log GDP per
 capita at 0.669 in the current alignment, so it is a watch item rather than a
-verdict. Coordination has a 2024 World Bank budget-execution series beside the
-older border-time measure, but that combination remains an operational proxy
-with uneven country coverage.
+verdict. Coordination now has a 2024 V-Dem civil-society index beside the
+World Bank budget-execution and older border-time rows; the new index's own
+correlation is 0.395, but all three remain a partial operational proxy rather
+than a direct test of cross-agency delivery.
 
 **Fix.** These dimensions need observable, behavioural indicators that are not
-WGI and not frozen at 2019. Budget execution is a useful API-backed addition for
-Coordination, but it does not show whether agencies delivered the same
+WGI and not frozen at 2019. V-Dem and budget execution are useful additions for
+Coordination, but they do not show whether agencies delivered the same
 objective. Trust needs pooled EVS/WVS rows, a recent court-throughput or case
 clearance series, and broader institutional-performance evidence. See also A9,
 which is the same problem seen from a small competent state, and D20, where
@@ -311,18 +313,18 @@ here, and the benchmark currently has no way to say so.
 
 **Severity: high. Trust is partly measured and Coordination remains narrow.**
 
-The figures in this entry are from dataset 4.4.0.
+The figures in this entry are from dataset 4.5.0.
 
 | Dimension | Observed indicators | Confidence | What is left | Publishes a score |
 | --- | ---: | ---: | --- | --- |
-| Coordination | 2 of 8 for 44 countries | 0.000 to 0.188, mean 0.152 | Border time from 2019 and budget execution, latest 2024 | 44 of 52 |
+| Coordination | 3 of 8 for 51 countries | 0.063 to 0.258, mean 0.226 | Border time from 2019, budget execution and V-Dem civil-society strength at 2024 | 51 of 52 |
 | Trust | 2 of 8 for 36 countries | 0.000 to 0.159, mean 0.130 | Joint EVS/WVS A165 plus contract enforcement days from 2019; court clearance remains a gap | 36 of 52 |
 | Shared Purpose | 2 of 7 | 0.000 to 0.272, mean 0.223 | Tax revenue, income inequality | 46 of 52 |
 
-Coordination's new score is visible with its confidence and its two indicator
-rows. It remains a narrow operational proxy: budget alignment and border
-processing do not show whether several institutions delivered a shared national
-objective. Trust now prints a provisional score where both rows are observed,
+Coordination's score now carries a third row from V-Dem's expert-coded civil
+society participation index. It remains a narrow operational proxy: budget
+alignment, border processing and civil-society judgements do not show whether
+several institutions delivered a shared national objective. Trust now prints a provisional score where both rows are observed,
 but every published score rests on exactly two indicators at confidence 0.159.
 Sixteen countries remain below the coverage floor. Shared Purpose sits one
 indicator above the floor and prints, drawn dashed with a marked axis and a
@@ -339,9 +341,10 @@ reader can see that the structural test is met only by the social plus stale
 contract pair.
 
 **Fix.** Pool the held EVS/WVS country rows with respondent-level weights when
-the license permits, then land court throughput and case clearance, civil
-society strength, cross-agency delivery records, institutional trust, and
-behavioural measures of corruption experience. The generative panel can
+the license permits, then land court throughput and case clearance, cross-agency
+delivery records, institutional trust, and behavioural measures of corruption
+experience. The V-Dem row is a partial Coordination repair, not a replacement
+for delivery records. The generative panel can
 interpret the dimensions while those data are missing, but its values stay
 beside the indicator score and never become observations.
 
@@ -361,21 +364,26 @@ score, because it puts the two-indicator dimension at about 0.53 against log GDP
 per capita where contract enforcement days alone sits at about 0.14, a larger
 wealth contribution than the one D44 retired an indicator over. Trust now has a
 source-backed score from the Joint EVS/WVS adapter, but still needs court data
-and a broader social and institutional comparison. The current shortlist is
-V-Dem, OECD Government at a Glance, and a harmonized court or audit source.
+and a broader social and institutional comparison. The remaining shortlist is
+OECD Government at a Glance and a harmonized court or audit source.
 
 **B-READY is what the frozen rows become.** `IC.BRE.*` replaces Doing Business
-inside World Development Indicators, and its dispute resolution score is the
-most income-independent series in the sweep at -0.034. The 2024 round covers 12
-of the 52 countries, so nothing is wireable from it yet. It is what Coordination's
-time to export and Trust's contract enforcement days turn into when its coverage
-arrives, which is the closing condition for A6 as well.
+inside World Development Indicators. The API's 2024 dispute-resolution rows
+cover only 12 of the 52 countries; the official 2025 downloadable package
+reaches 25, one country below the half-frame gate, so it remains a candidate
+rather than a scored replacement. Its dispute-resolution and operational-
+efficiency fields are promising, but the package mixes expert and firm-survey
+inputs and does not publish the court clearance numerator and denominator the
+Trust gate requires. Revisit the next release instead of forcing a partial
+series into the frame.
 
-Civil society strength, voter turnout, volunteering and civic participation are
-absent from the catalogue under any database id, and the interpersonal and
-institutional trust items were never World Bank series. The Joint EVS/WVS
-adapter now supplies the first social row; Trust still needs an adapter for
-court clearance and Coordination needs one for anything past budget execution.
+V-Dem civil-society strength is now an adapter-backed Coordination row (D83),
+but its expert coding keeps confidence low and does not answer cross-agency
+delivery. Voter turnout, volunteering and civic participation are absent from
+the catalogue under any database id, and the interpersonal and institutional
+trust items were never World Bank series. The Joint EVS/WVS adapter now supplies
+the first social row; Trust still needs an adapter for court clearance and
+Coordination needs one for delivery beyond the V-Dem and budget rows.
 The shortlist is ILOSTAT, IDEA voter turnout, and OECD government at a glance
 for court clearance. `ingest: 'manual'` remains available for sources with no
 usable API.

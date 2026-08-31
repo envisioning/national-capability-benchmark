@@ -12,6 +12,7 @@ import {
 import type { CountryResult, Dimension } from '../model/index.js'
 import { ingestWorldBank, recordRevisions } from '../pipeline/ingest.js'
 import { fetchJointEvsWvsTrust } from '../pipeline/adapters/joint-evs-wvs.js'
+import { fetchVdemCivilSociety } from '../pipeline/adapters/vdem.js'
 import { probeSeries, registrySeries, searchCatalogue } from '../pipeline/probe.js'
 import type { ProbeRequest } from '../pipeline/probe.js'
 import {
@@ -40,6 +41,7 @@ import { writeVelocity } from '../pipeline/velocity.js'
 import { writeLeverage } from '../pipeline/leverage.js'
 import { writeResidual } from '../pipeline/residual.js'
 import { writeBrazilSubnational } from '../pipeline/br-subnational.js'
+import { writeInstitutionExplorer } from '../pipeline/institution-explorer-out.js'
 import {
   acrossCountries,
   loadDelphi,
@@ -377,6 +379,38 @@ async function trust(args: Args): Promise<void> {
   )
 }
 
+async function vdem(args: Args): Promise<void> {
+  const action = args._[1] ?? 'fetch'
+  if (action !== 'fetch') {
+    throw new Error(`Unknown V-Dem action "${action}". Use pnpm bench vdem fetch.`)
+  }
+  const retrievedAt = new Date().toISOString()
+  const result = await fetchVdemCivilSociety({ retrievedAt })
+  let existing: unknown | null = null
+  try {
+    existing = JSON.parse(await readFile(FILES.vdem, 'utf8'))
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code !== 'ENOENT') {
+      throw new Error(`Cannot read existing V-Dem observations: ${String(error)}`)
+    }
+  }
+  const parsedExisting = existing ? ObservationFile.safeParse(existing) : null
+  if (existing && !parsedExisting?.success) {
+    throw new Error(`Existing V-Dem observations failed schema validation: ${FILES.vdem}`)
+  }
+  const before = parsedExisting?.success ? parsedExisting.data.observations : []
+  const previousRetrievedAt = parsedExisting?.success ? parsedExisting.data.generatedAt : null
+  await writeOut(FILES.vdem, `${JSON.stringify({ generatedAt: retrievedAt, observations: result.observations }, null, 2)}\n`)
+  const revisions = await recordRevisions(before, previousRetrievedAt, result.observations, retrievedAt)
+
+  console.log(`V-Dem ${result.release}: ${result.observations.length}/${COUNTRY_ISO3.length} benchmark countries emitted`)
+  console.log(`  source coverage: ${result.availableCountries.length}/${COUNTRY_ISO3.length}`)
+  console.log(`vdem data   -> ${FILES.vdem}`)
+  console.log(
+    `revisions   -> ${revisions.changed} changed, ${revisions.added} added, ${revisions.removed} removed in ${FILES.revisions}`,
+  )
+}
+
 /**
  * Write the capability agenda: language-neutral JSON per country, plus one
  * rendered markdown per lexicon. The JSON is the ground layer, the markdown is
@@ -481,8 +515,21 @@ async function main() {
       break
     }
 
+    case 'institutions': {
+      const iso3 = str(args, 'country', 'BRA')
+      const output = await writeInstitutionExplorer(iso3)
+      console.log(
+        `institutions -> ${output.written.join(', ')} (${output.institutions} institutions, drawable: ${output.drawable.join(', ') || 'none'})`,
+      )
+      break
+    }
+
     case 'trust':
       await trust(args)
+      break
+
+    case 'vdem':
+      await vdem(args)
       break
 
     case 'research':
@@ -952,7 +999,9 @@ Start with file 1.
   pnpm bench leverage                     write the provisional leverage fixture
   pnpm bench residual                     write the provisional wealth-residual fixture
   pnpm bench br-subnational [--year 2024] fetch the Brazil state-level Gini fixture
+  pnpm bench institutions [--country BRA]  project the institution map into the explorer feed, one file per lexicon
   pnpm bench trust    fetch                fetch and parse Joint EVS/WVS A165 trust results
+  pnpm bench vdem     fetch                fetch and parse V-Dem v15 civil-society strength
   pnpm bench research inventory           write the deterministic country-gap research inventory
   pnpm bench research scout               ask AI for bounded, unpublished research leads
   pnpm bench research critique --in FILE  red-team a scout run; still cannot approve publication

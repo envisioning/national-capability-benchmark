@@ -18,11 +18,13 @@ export const COUNTRY_OUT_DIR = resolve(OUT_DIR, 'countries')
 export const INDICATOR_OUT_DIR = resolve(OUT_DIR, 'indicators')
 export const BR_SUBNATIONAL_OUT_DIR = resolve(OUT_DIR, 'br-subnational')
 export const AGENDA_OUT_DIR = resolve(OUT_DIR, 'agenda')
+export const INSTITUTION_OUT_DIR = resolve(OUT_DIR, 'institutions')
 export const SCHEMA_OUT_DIR = resolve(OUT_DIR, 'schema')
 
 export const FILES = {
   worldBank: resolve(OBSERVATIONS_DIR, 'worldbank.json'),
   jointEvsWvs: resolve(OBSERVATIONS_DIR, 'joint-evs-wvs.json'),
+  vdem: resolve(OBSERVATIONS_DIR, 'vdem-cy-core.json'),
   manual: resolve(OBSERVATIONS_DIR, 'manual.json'),
   revisions: resolve(OBSERVATIONS_DIR, 'revisions.json'),
   delphiLatest: resolve(DELPHI_DIR, 'latest.json'),
@@ -62,6 +64,16 @@ export function brSubnationalFile(indicatorId: string): string {
 /** The language-neutral agenda, one file per country. See D35. */
 export function agendaFile(iso3: string): string {
   return resolve(AGENDA_OUT_DIR, `${iso3.toUpperCase()}.json`)
+}
+
+/**
+ * One institution explorer feed per country per lexicon.
+ *
+ * The feed carries rendered labels, so language is chosen at write time. The
+ * language-neutral artefact is the institution map itself. See D82.
+ */
+export function institutionExplorerFile(iso3: string, lang: string): string {
+  return resolve(INSTITUTION_OUT_DIR, `${iso3.toUpperCase()}.${lang}.json`)
 }
 
 /** One rendered agenda per country per lexicon. See D35. */

@@ -17,11 +17,11 @@ const evidence = EvidenceFile.parse(
 const inventory = buildResearchInventory(evidence.records, '2026-08-30T00:00:00.000Z', DATASET_VERSION)
 
 assert.equal(inventory.recordCount, evidence.records.length)
-assert.equal(inventory.countriesRepresented, 20)
-assert.equal(inventory.gapIndicatorsRepresented, 15)
-assert.equal(inventory.guardrails.reversalCount, 7)
-assert.equal(inventory.guardrails.reversalMinimum, 10)
-assert.equal(inventory.guardrails.reversalDeficit, 3)
+assert.equal(inventory.countriesRepresented, 22)
+assert.equal(inventory.gapIndicatorsRepresented, 16)
+assert.equal(inventory.guardrails.reversalCount, 13)
+assert.equal(inventory.guardrails.reversalMinimum, 12)
+assert.equal(inventory.guardrails.reversalDeficit, 0)
 assert.equal(inventory.guardrails.mostRepresentedCountry, 'BRA')
 assert.equal(inventory.guardrails.mostRepresentedCountryRecords, 24)
 
