@@ -4,7 +4,9 @@ import { useState } from 'react'
 import { CONTACT_TOPICS, CONTACT_TOPIC_LABELS, MIN_CONTACT_MESSAGE } from '@ncb/core'
 import type { ContactTopic } from '@ncb/core'
 import { contactApiHref } from '@/lib/links'
+import { countryOptions } from '@/lib/countries'
 import { Button, fieldClass } from '@/components/ui'
+import { CountryCombobox } from '@/components/CountryCombobox'
 
 /**
  * The one form in the viewer that writes to a person.
@@ -29,6 +31,9 @@ export function ContactForm({
   draft?: string
 }) {
   const [sent, setSent] = useState(false)
+  /* An ISO 3166-1 alpha-2 code, which is what Core stores. The picker cannot
+     produce anything else, so the route no longer has to guess at free text. */
+  const [country, setCountry] = useState('')
   const [sending, setSending] = useState(false)
   const [error, setError] = useState<string | null>(null)
   /* The form's height at the moment it sent. The confirmation reserves it, so
@@ -99,10 +104,22 @@ export function ContactForm({
         </label>
       </div>
 
-      <label className="block text-xs font-medium">
-        Country <span className="font-normal text-[var(--muted)]">(optional)</span>
-        <input name="country" maxLength={100} className={FIELD} placeholder="Brazil" />
-      </label>
+      <div className="block text-xs font-medium">
+        <label htmlFor="ncb-country">
+          Country <span className="font-normal text-[var(--muted)]">(optional)</span>
+        </label>
+        <div className="mt-2">
+          <CountryCombobox
+            id="ncb-country"
+            name="country"
+            options={countryOptions}
+            value={country}
+            onChange={setCountry}
+            className={fieldClass('h-10 w-full')}
+            placeholder="Search countries…"
+          />
+        </div>
+      </div>
 
       <label className="block text-xs font-medium">
         What is this about
