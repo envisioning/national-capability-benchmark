@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Script from 'next/script'
 import { APP_VERSION, DATASET_VERSION, LICENSE_DOC, REPO_URL, docHref } from '@ncb/core'
 import { EnvisioningMark } from '@/components/EnvisioningMark'
-import { FooterNav, HeaderNav, ScrollAwareHeader, SectionTabs } from '@/components/SiteNav'
+import { FooterNav, HeaderNav, ScrollAwareHeader, SectionTabs, SiteChrome } from '@/components/SiteNav'
 import { changelogHref, siteOrigin } from '@/lib/links'
 import './globals.css'
 
@@ -67,6 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             the header, and a menu the page can scroll out from under is a menu
             that has to be scrolled back to. `overflow-x: clip` in globals.css
             is what lets this stick. See D85. */}
+        <SiteChrome>
         <ScrollAwareHeader>
           <div>
             <div className="m-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-3 px-6 py-3 sm:gap-x-8 sm:px-12 sm:py-4">
@@ -101,11 +102,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               the whole navigation stays together. See D73 and D91. */}
           <SectionTabs />
         </ScrollAwareHeader>
+        </SiteChrome>
 
         <main id="main" className="m-auto max-w-6xl px-6 py-12 sm:px-12 sm:py-16">
           {children}
         </main>
 
+        <SiteChrome>
         <footer className="footer-band w-full border-t border-[var(--rule)]">
           <div className="m-auto max-w-6xl px-6 py-12 sm:px-12">
             <div className="flex flex-col gap-4 border-b border-[var(--rule)] pb-10 sm:flex-row sm:items-center sm:gap-8">
@@ -173,6 +176,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </nav>
           </div>
         </footer>
+        </SiteChrome>
 
         {process.env.NODE_ENV === 'production' ? (
           <Script

@@ -7,6 +7,7 @@ import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { Flag } from '@/components/ui'
 import { ChallengeDialog } from '@/components/ChallengeDialog'
 import { CommandMenu } from '@/components/CommandMenu'
+import { drawsOwnChrome } from '@/lib/links'
 import {
   FOOTER_NAV_GROUPS,
   navRows,
@@ -188,6 +189,21 @@ function useAutoHideOnScroll(pathname: string) {
 }
 
 /** Sticky site chrome that gives the reader the header back when scrolling up. */
+/**
+ * The site's own chrome, withheld from a surface that brings its own.
+ *
+ * The explorer at `/network` is a full-viewport application with a header, a
+ * rail and panels of its own, so stacking the site header and footer on top of
+ * it produced two competing chromes and a footer bleeding through the graph.
+ * The gate is a route test rather than a prop, so a page cannot forget to pass
+ * it. See D104.
+ */
+export function SiteChrome({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname()
+  if (drawsOwnChrome(pathname)) return null
+  return <>{children}</>
+}
+
 export function ScrollAwareHeader({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
   const { hidden, reveal } = useAutoHideOnScroll(pathname)

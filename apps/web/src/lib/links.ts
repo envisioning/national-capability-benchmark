@@ -399,6 +399,16 @@ export const sourcesHref = '/sources'
  */
 export const institutionGraphHref = '/network'
 
+/**
+ * Whether a path belongs to a surface that draws its own chrome.
+ *
+ * `@envisioning/app` renders a header, a rail and its own panels against the
+ * viewport, so the site's header and footer are not drawn over it. This is the
+ * one place that exception is declared. See D104.
+ */
+export const drawsOwnChrome = (pathname: string): boolean =>
+  pathname === institutionGraphHref || pathname.startsWith(`${institutionGraphHref}/`)
+
 /** A country's explanatory map of institutions and their typed relationships. */
 export const institutionNetworkHref = (iso3: string, lang: Lang = 'en'): string =>
   `/country/${iso3.toUpperCase()}/institutions`

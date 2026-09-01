@@ -80,17 +80,12 @@
 }
 
 /*
- * The explorer owns the viewport below the header.
+ * The explorer owns the viewport.
  *
- * The root layout renders a centred column and a footer under it, and the
- * library positions its own rail and panels against the viewport, so the two
- * chromes collided: the footer bled through the graph and the canvas ran past
- * the right edge. Making the body a flex column gives the header its natural
- * height and hands every remaining pixel to the explorer, with no magic number
- * for the header to drift away from.
- *
- * Every rule is guarded by `:has(.explorer-shell)`, so it applies on this route
- * and cannot reach a page that does not mount the explorer.
+ * `SiteChrome` withholds the site header and footer on this route, so the only
+ * thing left between the explorer and the window is the root layout's centred
+ * column. These rules hand it every pixel. They are guarded by
+ * `:has(.explorer-shell)`, so they apply here and cannot reach another page.
  */
 body:has(.explorer-shell) {
   display: flex;
@@ -105,11 +100,6 @@ body:has(.explorer-shell) > main {
   min-height: 0;
   max-width: none;
   padding: 0;
-}
-
-/* The footer is a page's closing chrome. An application does not close. */
-body:has(.explorer-shell) > footer {
-  display: none;
 }
 
 .explorer-shell {
