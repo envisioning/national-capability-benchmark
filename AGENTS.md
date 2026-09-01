@@ -98,7 +98,7 @@ port 3888. That entry starts Next directly and does not use the proxy.
   dimension score against the score its income predicts, one number per
   dimension and never one per country, offline until D65 promotes it. See D68.
   `institutions/{ISO3}.{lang}.json` is the explorer feed, one file per lexicon,
-  read by the drawn network that lives outside this repository. See D82.
+  read by the drawn network at `/network`. See D82 and D104.
   `datapackage.json` and `schema/` make the directory
   self-describing: a Frictionless Data Package descriptor plus one JSON Schema
   per published shape, generated from the Zod schemas on `bench score`. See D37.
@@ -235,12 +235,18 @@ port 3888. That entry starts Next directly and does not use the proxy.
   `*_PT_BR` imports in a component. Never lay an institution out by hand: every
   surface derives from counts, because a country file grows. See D56, which
   supersedes the interface D54 described.
-- **The drawn institution network lives outside this repository.**
-  `@envisioning/app` draws it, it is closed source, and this repository is
-  public, so the viewer never imports it. `bench institutions` projects
+- **The drawn institution network is `/network`, and it needs a token to
+  install.** `@envisioning/app` draws it. The package is closed source on GitHub
+  Packages, so `.npmrc` names the scope and `pnpm install` fails with a 401
+  without a `read:packages` token in `~/.npmrc`; Vercel needs the same through
+  an `NPM_RC` variable. That cost is recorded in D104, which supersedes D82's
+  separate deployment. The route is a leaf with its own layout and stylesheet
+  import, never a node in the nav tree, because the library brings its own
+  chrome. `bench institutions` projects
   `data/institutions/{ISO3}.json` into
   `data/out/institutions/{ISO3}.{lang}.json`, and
-  `/api/institutions/{ISO3}?lang=` serves that feed to a separate deployment.
+  `/network` reads that feed and `/api/institutions/{ISO3}?lang=` publishes it
+  for readers outside this deployment.
   `buildInstitutionExplorer` in
   `packages/core/src/pipeline/institution-explorer.ts` is the only projection,
   and `localizeInstitutionNetwork` is the only place a country file's own prose

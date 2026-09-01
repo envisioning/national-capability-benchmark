@@ -1,0 +1,115 @@
+import type { Config } from '@envisioning/app'
+
+/** The panel content for one institution, and the lists behind it. */
+export const blocks: Config['navigation']['blocks'] = [
+  { id: 'spacerSm', block: 'GapBlock', gap: 'sm' },
+  { id: 'spacerMd', block: 'GapBlock', gap: 'md' },
+  { id: 'spacerLg', block: 'GapBlock', gap: 'lg' },
+
+  {
+    id: 'institutionTitle',
+    block: 'ItemTitleBlock',
+    mainLabel: '{title}',
+    extraLabel: '{system.label}',
+    mainLabelSize: 'xl',
+    mainLabelWeight: 'bold',
+    extraLabelUppercase: true,
+    extraLabelSize: 'mn',
+    align: 'left',
+    isMultiline: true,
+    variant: 'labelTop',
+  },
+  { id: 'contextSummary', block: 'TextBlock', text: '{summary}' },
+  { id: 'contextDescription', block: 'MarkdownBlock', markdown: '{description}' },
+
+  { id: 'divisionRelations', block: 'DivisionBlock', label: { en: 'Relations', pt: 'Relações' } },
+  {
+    id: 'relatedConnections',
+    block: 'RelatedConnectionsBlock',
+    itemBlockId: 'connectionListItem',
+    gap: 1,
+  },
+  {
+    /* `connectionLabel` is the relation family, which is the whole of what a
+     * drawn line can carry. The direction and the verb are in the ledger. */
+    id: 'connectionListItem',
+    block: 'ListItemBlock',
+    mainLabel: '{title}',
+    extraLabel: '{connectionLabel}',
+    thumbColor: '{level.color.hex | panel}',
+    to: { page: 'institution', id: '{id}' },
+    variant: 'labelBottom',
+    size: 'md',
+    mainLabelSize: 'md',
+    showFavorite: false,
+  },
+
+  { id: 'divisionSources', block: 'DivisionBlock', label: { en: 'Sources', pt: 'Fontes' } },
+  { id: 'institutionSources', block: 'SourceListBlock', allItemsPath: 'context.sources' },
+
+  {
+    id: 'institutionsList',
+    block: 'GridBlock',
+    root: '$.pageContext',
+    itemBlockId: 'institutionListItem',
+    gap: 1.5,
+  },
+  {
+    id: 'institutionListItem',
+    block: 'ListItemBlock',
+    mainLabel: '{title}',
+    extraLabel: '{system.label}',
+    thumbColor: '{level.color.hex | panel}',
+    to: { page: 'institution', id: '{id}' },
+    variant: 'labelTop',
+    size: 'lg',
+    mainLabelSize: 'md',
+    highlight: true,
+    showFavorite: false,
+  },
+  { id: 'listToolbar', block: 'FiltersToolbarBlock' },
+  { id: 'panelSearch', block: 'SearchFieldBlock' },
+  {
+    id: 'institutionsPagination',
+    block: 'PaginationBlock',
+    root: '$.data.allInstitutions',
+    mode: 'nextPrevious',
+    pathToLabel: 'title',
+  },
+
+  {
+    id: 'systemsList',
+    block: 'GridBlock',
+    root: '$.pageContext',
+    itemBlockId: 'systemListItem',
+    gap: 1.5,
+  },
+  {
+    id: 'systemListItem',
+    block: 'ListItemBlock',
+    mainLabel: '{label}',
+    to: { page: 'system' },
+    variant: 'labelBottom',
+    size: 'lg',
+    mainLabelSize: 'md',
+    showFavorite: false,
+  },
+  {
+    id: 'groupTitle',
+    block: 'ItemTitleBlock',
+    mainLabel: '{label}',
+    mainLabelSize: 'xl',
+    mainLabelWeight: 'bold',
+    align: 'left',
+    isMultiline: true,
+    variant: 'default',
+  },
+  {
+    id: 'relatedEntitiesList',
+    block: 'GridBlock',
+    root: '$.pageContext._allEntities',
+    itemBlockId: 'institutionListItem',
+    gap: 1.5,
+  },
+  { id: 'homeIntro', block: 'MarkdownBlock', markdown: '{data.project.description}' },
+]

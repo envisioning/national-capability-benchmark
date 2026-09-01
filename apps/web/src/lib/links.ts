@@ -389,6 +389,16 @@ export const contributionIsExternal = (way: ContributionWay): boolean =>
 /** Who publishes the data and how each series is fetched. */
 export const sourcesHref = '/sources'
 
+/**
+ * The same map drawn as a network.
+ *
+ * A second reading of the institution page, never a replacement: a line
+ * carries a relation family and cannot carry a direction or one of the 13
+ * verbs, so the ledger stays authoritative. The explorer brings its own
+ * chrome, so this is a leaf and not a level of the nav tree. See D82.
+ */
+export const institutionGraphHref = '/network'
+
 /** A country's explanatory map of institutions and their typed relationships. */
 export const institutionNetworkHref = (iso3: string, lang: Lang = 'en'): string =>
   `/country/${iso3.toUpperCase()}/institutions`

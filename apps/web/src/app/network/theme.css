@@ -1,0 +1,120 @@
+/*
+ * The explorer's palette, mapped onto NCB's tokens.
+ *
+ * `@envisioning/app` ships an OKLCH system with a blue accent. AGENTS.md
+ * forbids sampling colour from it, so every variable here is the NCB value
+ * from globals.css restated in the shape the library reads. Lime is the accent
+ * and stays rare: it marks the federal level and the current selection, and
+ * nothing else. See D82.
+ */
+.explorer-shell {
+  /* neutral */
+  --black: #272a3d;
+  --white: #ffffff;
+  --gray: #5c6180;
+
+  /* content */
+  --foreground: #272a3d;
+  --dimmed: #5c6180;
+  --disabled: #b8bdd9;
+  --tick: #d9d9de;
+
+  /* surface */
+  --border: #d9d9de;
+  --panel-down: #f2f5f9;
+  --panel: #ffffff;
+  --panel-up: #f2f5f9;
+  --panel-plus: #e4e4e7;
+
+  /* semantic */
+  --accent: #d6f249;
+  --accent-up: #aacc00;
+  --accent-fg: #272a3d;
+
+  --accent2: #454c70;
+  --accent2-up: #272a3d;
+  --accent2-fg: #fafafa;
+
+  --stop: #b8bdd9;
+  --stop-up: #8b93b5;
+  --stop-fg: #272a3d;
+
+  --go: #aacc00;
+  --go-up: #d6f249;
+  --go-fg: #272a3d;
+}
+
+@media (prefers-color-scheme: dark) {
+  .explorer-shell {
+    --black: #191c2b;
+    --white: #fafafa;
+    --gray: #b8bdd9;
+
+    --foreground: #fafafa;
+    --dimmed: #b8bdd9;
+    --disabled: #565d80;
+    --tick: #313650;
+
+    --border: #525252;
+    --panel-down: #191c2b;
+    --panel: #313650;
+    --panel-up: #3a4060;
+    --panel-plus: #454c70;
+
+    --accent: #d6f249;
+    --accent-up: #aacc00;
+    --accent-fg: #202333;
+
+    --accent2: #c9cfe6;
+    --accent2-up: #fafafa;
+    --accent2-fg: #202333;
+
+    --stop: #565d80;
+    --stop-up: #8b93b5;
+    --stop-fg: #fafafa;
+
+    --go: #aacc00;
+    --go-up: #d6f249;
+    --go-fg: #202333;
+  }
+}
+
+/*
+ * The explorer owns the viewport below the header.
+ *
+ * The root layout renders a centred column and a footer under it, and the
+ * library positions its own rail and panels against the viewport, so the two
+ * chromes collided: the footer bled through the graph and the canvas ran past
+ * the right edge. Making the body a flex column gives the header its natural
+ * height and hands every remaining pixel to the explorer, with no magic number
+ * for the header to drift away from.
+ *
+ * Every rule is guarded by `:has(.explorer-shell)`, so it applies on this route
+ * and cannot reach a page that does not mount the explorer.
+ */
+body:has(.explorer-shell) {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+body:has(.explorer-shell) > main {
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 0;
+  max-width: none;
+  padding: 0;
+}
+
+/* The footer is a page's closing chrome. An application does not close. */
+body:has(.explorer-shell) > footer {
+  display: none;
+}
+
+.explorer-shell {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
