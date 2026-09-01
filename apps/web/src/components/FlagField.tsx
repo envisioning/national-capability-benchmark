@@ -5,6 +5,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { confidenceBand } from '@ncb/core'
 import { FlagBubble, FlagBubbleLegend } from '@/components/FlagBubble'
+import { CHART_INK, CHART_MOTION, CHART_STROKE } from '@/components/chartTokens'
 import { Confidence, Delta, Flag, Score } from '@/components/ui'
 
 /* The radar is only needed after a country flag is pointed at. Keep it out of
@@ -40,7 +41,12 @@ const R = 15
 const COL_STEP = 28
 const ROW = 31
 const TICK_ROOM = 30
-const MOVE = 'transform 700ms cubic-bezier(0.22, 0.61, 0.36, 1)'
+const MOVE = `transform ${CHART_MOTION.travel}`
+/** The scale numbers under the axis, and the focal country's name above it.
+ *  Sized against this chart's own 960 unit field, so they stay out of the
+ *  shared tokens. See D103. */
+const TICK_TEXT = 10
+const NAME_TEXT = 11
 
 export type FlagFieldPoint = {
   /** Stable across a change of field, so a country keeps its node and travels. */
@@ -323,7 +329,7 @@ export function FlagField({
             width={1}
             height={height - TICK_ROOM - 12}
             fill="currentColor"
-            fillOpacity={0.05}
+            fillOpacity={CHART_INK.band}
             style={{
               transformBox: 'view-box',
               transformOrigin: '0 0',
@@ -340,8 +346,8 @@ export function FlagField({
             x2={FIELD_WIDTH - PAD}
             y2={0}
             stroke="currentColor"
-            strokeOpacity={0.18}
-            strokeWidth={0.75}
+            strokeOpacity={CHART_INK.grid}
+            strokeWidth={CHART_STROKE.hair}
           />
           <line
             x1={0}
@@ -349,8 +355,8 @@ export function FlagField({
             x2={0}
             y2={bottom - TICK_ROOM - 6}
             stroke="currentColor"
-            strokeOpacity={0.35}
-            strokeWidth={1}
+            strokeOpacity={CHART_INK.emphasis}
+            strokeWidth={CHART_STROKE.rule}
             style={{
               transformBox: 'view-box',
               transformOrigin: '0 0',
@@ -367,16 +373,16 @@ export function FlagField({
                 x2={axisX(t)}
                 y2={bottom - TICK_ROOM + 9}
                 stroke="currentColor"
-                strokeOpacity={0.25}
-                strokeWidth={0.75}
+                strokeOpacity={CHART_INK.frame}
+                strokeWidth={CHART_STROKE.hair}
               />
               <text
                 x={axisX(t)}
                 y={bottom - TICK_ROOM + 21}
                 textAnchor="middle"
-                fontSize={10}
+                fontSize={TICK_TEXT}
                 fill="currentColor"
-                fillOpacity={0.55}
+                fillOpacity={CHART_INK.label}
               >
                 {t}
               </text>
@@ -406,7 +412,7 @@ export function FlagField({
                 transform: `translate(${(placed?.x ?? axisX(field.median)).toFixed(2)}px, ${(
                   placed?.y ?? 0
                 ).toFixed(2)}px)`,
-                transition: `${MOVE}, opacity 250ms ease`,
+                transition: `${MOVE}, opacity ${CHART_MOTION.fade}`,
               },
             }
             const mark = (
@@ -426,8 +432,8 @@ export function FlagField({
                     x2={0}
                     y2={-R - 7}
                     stroke="currentColor"
-                    strokeOpacity={0.5}
-                    strokeWidth={1}
+                    strokeOpacity={CHART_INK.emphasis}
+                    strokeWidth={CHART_STROKE.rule}
                   />
                 ) : null}
               </>
@@ -450,7 +456,7 @@ export function FlagField({
               x={Math.min(FIELD_WIDTH - PAD, Math.max(PAD, focal.x))}
               y={focal.y - R - 10}
               textAnchor="middle"
-              fontSize={11}
+              fontSize={NAME_TEXT}
               fontWeight={500}
               fill="currentColor"
             >

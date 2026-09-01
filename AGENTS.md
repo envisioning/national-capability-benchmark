@@ -25,6 +25,7 @@ pnpm bench all         ingest, score, diagnose, report, agenda
 pnpm build             tsc for packages/core, then next build for apps/web
 pnpm typecheck         both packages
 pnpm dev               the viewer at https://ncb.localhost (port 3888 behind it)
+pnpm design:check      warn where the viewer drifts from the design rules
 pnpm icons             rasterise the favicon set from the brand mark
 pnpm icons:measure     report the glyph fraction inside an icon file
 ```
@@ -139,6 +140,21 @@ port 3888. That entry starts Next directly and does not use the proxy.
   distribution: extend the point type instead. The words at each end of an axis
   come from `DIMENSION_ENDPOINTS` in the registry, never from a page. The grid
   of country radars lives at `/countries`. See D67.
+- **Every chart draws from one set of weights and shades.** `CHART_STROKE`,
+  `CHART_INK` and `CHART_MOTION` in `apps/web/src/components/chartTokens.ts`
+  hold five line weights, five opacities and three speeds, and `Radar`,
+  `FlagField`, `FlagBubble` and `Sparkline` read them. Never write a stroke
+  width or a frame opacity into a chart by hand: a hairline is the frame and a
+  heavy line is the data, on every chart, and a sixth weight nobody named is how
+  that stops being true. In-chart text is not in that file, because the radar
+  labels a 260 unit field and the field labels a 960 unit one, so those sizes
+  are named inside each chart's own geometry. `Icon` keeps Lucide's weight,
+  `EnvisioningMark` is brand geometry, `Og` draws a 1200 pixel card and
+  `DotField` is atmosphere: none of them read the tokens. See D103.
+- `pnpm design:check` reads the rules above that a machine can check: a stroke
+  width written by hand, a `text-sm`, a dash in reader copy, a bare `docs/*.md`
+  path. It warns and never fails, and it runs before every build and typecheck.
+  A warning is a judgment to make, not a build to fix. See D103.
 - Confidence is never folded into the capability score. Two numbers, always. The
   radar draws thin evidence as a dashed edge with a hollow point, and the dash
   gap widens as confidence falls (see D32). Use `isThinEvidence` from

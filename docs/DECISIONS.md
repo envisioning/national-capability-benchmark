@@ -4689,3 +4689,63 @@ its low confidence still limits how strongly that score should be read.
 **Overturned by.** Evidence that the denominator change altered a score or the
 normalization frame, or that the version boundary hides a published-shape change,
 would justify revising the release classification in a later decision.
+
+## D103 — Every chart draws from one set of weights and shades
+
+*Recorded 2026-09-01. Extends D81 to the charts.*
+
+**Choice.** `CHART_STROKE`, `CHART_INK` and `CHART_MOTION` in
+`apps/web/src/components/chartTokens.ts` hold five line weights, five opacities
+and three speeds, and the radar, the flag field, the flag bubble and the
+sparkline read them. A stroke width or a frame opacity written into a chart by
+hand is drift, and `pnpm design:check` says so.
+
+The four charts carried nine stroke widths and twelve opacities between them,
+every one of them chosen in the file that used it. Almost all of them were
+already within a tenth of each other, which is the tell: nobody was disagreeing,
+everybody was eyeballing. Collapsed onto five steps each, no weight moved by
+more than 0.1 and no shade by more than 0.1, and the radar's filled edge, the
+sparkline's series and the focal bubble's ring now say the same thing at the
+same weight.
+
+The steps are absolute rather than relative, because every chart here draws a
+viewBox unit at roughly one displayed pixel. A chart deliberately shrunk below
+that, like the peer radar in a table cell or the shape inside the field's
+hover card, shrinks whole and keeps the ratios, which is what it is for.
+
+In-chart text is not in the file. The radar names its axes inside a 260 unit
+field and the flag field labels its ticks inside a 960 unit one, so one number
+cannot mean one size across both, and a token that has to be scaled at every
+use is a literal with a longer name. Those sizes are named inside each chart's
+own geometry instead, where the field width they are sized against is.
+
+Four things that draw are outside it and say why in their own file: `Icon`
+carries Lucide's weight on Lucide's grid, `EnvisioningMark` is brand geometry,
+`Og` draws a 1200 pixel social card in a different medium, and `DotField` is
+atmosphere rather than data, which D81 already required it to stay.
+
+**Why.** A reader learns a picture once. The weight of a line is how a chart
+says whether something is the frame or the finding, and that only works while
+every chart on the site agrees. Nothing was holding the agreement together: the
+weights were close because they were copied, and a copy drifts on the first
+change nobody compares. The same argument D81 makes for the button and the
+field, one step down, where it is harder to see going wrong.
+
+The check that guards it warns rather than fails. Every rule in it is a judgment
+the author is allowed to overrule, a stroke width is not a broken build, and a
+gate that stops a deploy over a hairline teaches people to route around it. What
+it buys is that the drift is said out loud on the build where it happened.
+
+**Cost.** Five steps is fewer than the charts were using, so a chart that wants
+a weight between two of them has to argue for a sixth step in this file rather
+than type a number. That is the intended cost and it will be paid by somebody
+who is right. The shades moved slightly: the median line on the flag field is a
+little darker, its ticks a little lighter, and the radar's outer ring a little
+lighter than they were. The warning-only check will be ignored the first time
+somebody is in a hurry, and nothing will report that it was.
+
+**Overturned by.** A chart whose natural drawing scale is not one unit to one
+pixel, which would make an absolute scale wrong rather than merely coarse and
+would want the weights expressed as a ratio of the field; or evidence that a
+reader distinguishes fewer than five weights on these surfaces, which would
+shorten the scale rather than lengthen it.

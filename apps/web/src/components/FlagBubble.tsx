@@ -1,4 +1,5 @@
 import { countryFlag } from '@ncb/core'
+import { CHART_INK, CHART_STROKE } from '@/components/chartTokens'
 import { evidenceOpenness } from '@/lib/evidence'
 
 /**
@@ -57,14 +58,20 @@ export function FlagBubble({
   return (
     <g>
       {active ? (
-        <circle r={r + 3} fill="none" stroke="var(--foreground)" strokeOpacity={0.18} strokeWidth={1.5} />
+        <circle
+          r={r + 3}
+          fill="none"
+          stroke="var(--foreground)"
+          strokeOpacity={CHART_INK.grid}
+          strokeWidth={CHART_STROKE.line}
+        />
       ) : null}
       <circle r={r} fill="var(--surface)" />
       <circle
         r={r}
         fill="none"
         stroke={stroke}
-        strokeWidth={focal ? 2 : 1.25}
+        strokeWidth={focal ? CHART_STROKE.data : CHART_STROKE.mark}
         strokeOpacity={focal ? 1 : 0.9}
         strokeDasharray={open > 0 ? `${(unit - gap).toFixed(2)} ${gap.toFixed(2)}` : undefined}
         strokeLinecap="round"
@@ -105,7 +112,7 @@ export function FlagBubbleLegend({ note }: { note?: string }) {
     <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-xs text-[var(--muted)]">
       <li className="inline-flex items-center gap-2">
         <svg width="16" height="16" viewBox="-8 -8 16 16" aria-hidden="true">
-          <circle r={6.5} fill="none" stroke="var(--foreground)" strokeWidth={1.25} />
+          <circle r={6.5} fill="none" stroke="var(--foreground)" strokeWidth={CHART_STROKE.mark} />
         </svg>
         <span>Solid ring: usable or good evidence</span>
       </li>
@@ -115,7 +122,7 @@ export function FlagBubbleLegend({ note }: { note?: string }) {
             r={6.5}
             fill="none"
             stroke="var(--foreground)"
-            strokeWidth={1.25}
+            strokeWidth={CHART_STROKE.mark}
             strokeDasharray="2.6 2.6"
             strokeLinecap="round"
           />

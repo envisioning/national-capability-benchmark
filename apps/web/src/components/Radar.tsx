@@ -4,6 +4,7 @@ import { useRef, useState } from 'react'
 import { DIMENSIONS, DIMENSION_LABELS, EN, confidenceBand } from '@ncb/core'
 import type { Dimension, Lexicon } from '@ncb/core'
 import { DIMENSION_ICON, Icon, iconMarkup } from '@/components/Icon'
+import { CHART_INK, CHART_MOTION, CHART_STROKE } from '@/components/chartTokens'
 import { evidenceOpenness, isThinConfidence } from '@/lib/evidence'
 import { Confidence, Score } from '@/components/ui'
 import { radarAngle, radarPoint } from '@/components/radarGeometry'
@@ -26,6 +27,13 @@ export type RadarSeries = {
 
 const SIZE = 260
 const CENTER = SIZE / 2
+/** The ring values and the axis names, sized against this chart's own 260 unit
+ *  field rather than shared with the wider charts. See D103. */
+const RING_TEXT = 6
+const AXIS_TEXT = 7.5
+/** Lucide's own stroke width, drawn on its own 24 unit grid. The axis marks
+ *  scale it down with the glyph, so it is not one of the chart's weights. */
+const LUCIDE_STROKE = 2
 
 /**
  * How much room the labels need, and therefore how big the shape can be.
@@ -142,13 +150,13 @@ function AxisIcon({
       fill="none"
       stroke="currentColor"
       strokeOpacity={opacity}
-      /* Lucide's own stroke width. The transform scales it down with the shape,
-       * which is the point: compensating for the scale here made a 10-unit icon
-       * carry a 4-unit stroke and turned every mark into a blob. */
-      strokeWidth={2}
+      /* The transform scales Lucide's weight down with the shape, which is the
+       * point: compensating for the scale here made a 10-unit icon carry a
+       * 4-unit stroke and turned every mark into a blob. */
+      strokeWidth={LUCIDE_STROKE}
       strokeLinecap="round"
       strokeLinejoin="round"
-      style={{ transition: 'stroke-opacity 140ms ease' }}
+      style={{ transition: `stroke-opacity ${CHART_MOTION.state}` }}
       dangerouslySetInnerHTML={{ __html: iconMarkup(DIMENSION_ICON[d]) }}
     />
   )
@@ -281,8 +289,8 @@ export function Radar({
             points={DIMENSIONS.map((_, i) => at(i, r).join(',')).join(' ')}
             fill="none"
             stroke="currentColor"
-            strokeOpacity={r === 100 ? 0.28 : 0.12}
-            strokeWidth={0.75}
+            strokeOpacity={r === 100 ? CHART_INK.frame : CHART_INK.grid}
+            strokeWidth={CHART_STROKE.hair}
           />
         ))}
 
@@ -297,9 +305,10 @@ export function Radar({
               x={CENTER}
               y={CENTER + (r / 100) * g.radius + 2}
               textAnchor="middle"
-              fontSize={6}
+              fontSize={RING_TEXT}
               fill="currentColor"
-              fillOpacity={0.4}
+              /* A step quieter than a label, because these sit inside the shape. */
+              fillOpacity={CHART_INK.emphasis}
             >
               {r}
             </text>
@@ -314,9 +323,9 @@ export function Radar({
               x2={x}
               y2={y}
               stroke="currentColor"
-              strokeOpacity={active === i ? 0.42 : 0.12}
-              strokeWidth={active === i ? 1 : 0.75}
-              style={{ transition: 'stroke-opacity 140ms ease' }}
+              strokeOpacity={active === i ? CHART_INK.emphasis : CHART_INK.grid}
+              strokeWidth={active === i ? CHART_STROKE.rule : CHART_STROKE.hair}
+              style={{ transition: `stroke-opacity ${CHART_MOTION.state}` }}
             />
           )
         })}
@@ -367,7 +376,7 @@ export function Radar({
                       x2={from[0] + (to[0] - from[0]) * t1}
                       y2={from[1] + (to[1] - from[1]) * t1}
                       stroke={s.color}
-                      strokeWidth={s.outline ? 1.3 : 1.9}
+                      strokeWidth={s.outline ? CHART_STROKE.mark : CHART_STROKE.data}
                       strokeLinecap={gap > 0 ? 'round' : 'butt'}
                       strokeDasharray={gap > 0 ? `${DASH} ${gap}` : undefined}
                     />
@@ -389,7 +398,7 @@ export function Radar({
                       r={5.5}
                       fill={s.color}
                       fillOpacity={on ? 0.24 : 0}
-                      style={{ transition: 'fill-opacity 140ms ease' }}
+                      style={{ transition: `fill-opacity ${CHART_MOTION.state}` }}
                     />
                     <circle
                       cx={p[0]}
@@ -397,7 +406,7 @@ export function Radar({
                       r={on ? (thin ? 3 : 2.8) : thin ? 2.2 : 2}
                       fill={thin ? 'var(--surface)' : s.color}
                       stroke={thin ? s.color : 'none'}
-                      strokeWidth={thin ? 1.1 : 0}
+                      strokeWidth={thin ? CHART_STROKE.rule : 0}
                     />
                   </g>
                 )
@@ -428,7 +437,7 @@ export function Radar({
                     y={stacked ? y + (above ? 9 : -3) : y}
                     textAnchor={anchor}
                     dominantBaseline="middle"
-                    fontSize={7.5}
+                    fontSize={AXIS_TEXT}
                     fill="currentColor"
                     className="pointer-events-none opacity-0 transition-opacity duration-150 group-hover/radar:opacity-100 group-focus-within/radar:opacity-100"
                   >
@@ -484,11 +493,11 @@ export function Radar({
                   y={stacked ? y + (above ? 3 : -3) : y}
                   textAnchor={anchor}
                   dominantBaseline="middle"
-                  fontSize={7.5}
+                  fontSize={AXIS_TEXT}
                   fill="currentColor"
-                  fillOpacity={dim ? 0.5 : 1}
+                  fillOpacity={dim ? CHART_INK.label : 1}
                   style={{
-                    transition: 'fill-opacity 140ms ease',
+                    transition: `fill-opacity ${CHART_MOTION.state}`,
                     ...(selectable
                       ? {
                           textDecoration: dim ? 'underline dotted' : 'underline solid',
@@ -526,7 +535,7 @@ export function Radar({
                 style={{
                   pointerEvents: 'all',
                   cursor: selectable ? 'pointer' : 'default',
-                  transition: 'fill-opacity 140ms ease',
+                  transition: `fill-opacity ${CHART_MOTION.state}`,
                   outline: 'none',
                 }}
                 onPointerDown={(e) => {
