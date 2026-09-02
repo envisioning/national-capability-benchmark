@@ -46,6 +46,18 @@ for Coordination, Trust, Building and Shared Purpose.
   of the benchmarked countries belong to it and whether the country being read
   does. Nothing in the ledger enters a score or a confidence. See D107.
 
+## App 1.6.2 — 2026-09-01
+
+- **The charts draw from one set of weights and shades.** The radar, the flag
+  field, the flag bubble and the sparkline carried nine stroke widths and twelve
+  opacities between them, each chosen in its own file. They now read one scale
+  of five weights and five shades, so a hairline means the frame and a heavy
+  line means the data on every chart. Nothing moved by more than 0.1.
+- **A design check runs before every build.** It warns, and never fails, when a
+  stroke width is written by hand, when text-sm appears in a viewer file, when
+  an em dash reaches reader copy, or when a repository document is named as a
+  bare path instead of a link.
+
 ## App 1.6.1 — 2026-08-31
 
 - **Confidence values are compact.** Every confidence value uses one

@@ -3,6 +3,7 @@ import type { Lexicon, MeasurementClass, Provenance } from '@ncb/core'
 import { DIMENSIONS, DIMENSION_LABELS, EN, countryFlag, fill, isEvidential } from '@ncb/core'
 import { DIMENSION_ICON, Icon, type IconName } from '@/components/Icon'
 import { ClassBadge } from '@/components/ClassBadge'
+import { CHART_INK, CHART_STROKE } from '@/components/chartTokens'
 import {
   CONFIDENCE_BANDS,
   MEASUREMENT_CLASS_LABELS,
@@ -611,7 +612,7 @@ export function RadarEvidenceLegend({
     <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-xs text-[var(--muted)]">
       <li className="inline-flex items-center gap-2">
         <svg width="26" height="8" aria-hidden="true">
-          <line x1="1" y1="4" x2="25" y2="4" stroke="var(--primary)" strokeWidth="1.6" />
+          <line x1="1" y1="4" x2="25" y2="4" stroke="var(--primary)" strokeWidth={CHART_STROKE.line} />
         </svg>
         <span>Usable or good evidence</span>
       </li>
@@ -623,7 +624,7 @@ export function RadarEvidenceLegend({
             x2="25"
             y2="4"
             stroke="var(--primary)"
-            strokeWidth="1.6"
+            strokeWidth={CHART_STROKE.line}
             strokeDasharray="3 2.5"
           />
         </svg>
@@ -711,10 +712,10 @@ export function Sparkline({
         x2={width}
         y2={y(0)}
         stroke="currentColor"
-        strokeOpacity={0.15}
-        strokeWidth={0.75}
+        strokeOpacity={CHART_INK.grid}
+        strokeWidth={CHART_STROKE.hair}
       />
-      <polyline points={points} fill="none" stroke="var(--primary)" strokeWidth={1.4} />
+      <polyline points={points} fill="none" stroke="var(--primary)" strokeWidth={CHART_STROKE.line} />
       <circle cx={x(last.year)} cy={y(last.score)} r={2} fill="var(--primary)" />
     </svg>
   )

@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "portless",
     "dev:app": "next dev --port 3888",
-    "prebuild": "pnpm --dir ../.. changelog:check",
-    "pretypecheck": "pnpm --dir ../.. changelog:check",
+    "prebuild": "pnpm --dir ../.. changelog:check && pnpm --dir ../.. design:check",
+    "pretypecheck": "pnpm --dir ../.. changelog:check && pnpm --dir ../.. design:check",
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit"
