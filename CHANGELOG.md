@@ -22,6 +22,15 @@ for Coordination, Trust, Building and Shared Purpose.
 - **Two dimensions cross a band.** Coordination and Shared Purpose move from
   very thin to thin. Trust stays very thin: it rests on two observed rows.
 
+## App 1.10.0 — 2026-09-02
+
+- **The institution network has a readable scope.** Broad network views open
+  with state-level institutions hidden, because Brazil's feed has 282 of them
+  against 75 federal institutions. A route-owned switch adds them back without
+  losing the current URL filters, and institution-specific views keep their
+  state relations visible by default. The full multi-select Level filter stays
+  available for more exact combinations. See D110.
+
 ## App 1.9.1 — 2026-09-02
 
 - **The institution network chrome is solid and deterministic.** The

@@ -146,4 +146,114 @@ body:has(.explorer-shell) > main {
   min-width: 0;
   min-height: 0;
   overflow: hidden;
+  position: relative;
+}
+
+/* A route-owned scope control stays with the graph, not in the library's
+ * generic filter modal. Its surface is opaque for the same reason as the
+ * toolbar: the graph must not bleed through its controls. */
+.network-state-scope-control {
+  position: fixed;
+  z-index: 30;
+  top: 4.25rem;
+  left: 4.5rem;
+  pointer-events: none;
+}
+
+/* When an institution panel is open, keep the scope affordance in the graph
+ * column instead of sitting over the panel's title and description. */
+.network-state-scope-control.is-contextual {
+  left: 38rem;
+}
+
+.network-state-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-width: 13rem;
+  min-height: 2.75rem;
+  padding: 0.45rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 0.65rem;
+  background: var(--panel);
+  color: var(--foreground);
+  box-shadow: 0 0.25rem 1rem rgb(0 0 0 / 18%);
+  cursor: pointer;
+  pointer-events: auto;
+  text-align: left;
+  transition: border-color 140ms ease, background-color 140ms ease;
+}
+
+.network-state-toggle:hover,
+.network-state-toggle:focus-visible {
+  background: var(--panel-up);
+  border-color: var(--accent);
+}
+
+.network-state-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.network-state-toggle__dot {
+  width: 0.65rem;
+  height: 0.65rem;
+  flex: none;
+  border: 1px solid var(--dimmed);
+  border-radius: 999px;
+  background: transparent;
+}
+
+.network-state-toggle.is-on .network-state-toggle__dot {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.network-state-toggle__copy {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.network-state-toggle__label,
+.network-state-toggle__status {
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.network-state-toggle__count {
+  overflow: hidden;
+  color: var(--dimmed);
+  font-size: 0.68rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.network-state-toggle__status {
+  color: var(--dimmed);
+  font-size: 0.62rem;
+}
+
+.network-state-toggle.is-on .network-state-toggle__status {
+  color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .network-state-scope-control {
+    top: 4rem;
+    right: 0.75rem;
+    left: 0.75rem;
+  }
+
+  .network-state-scope-control.is-contextual {
+    left: 0.75rem;
+  }
+
+  .network-state-toggle {
+    width: 100%;
+  }
 }

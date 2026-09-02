@@ -5055,3 +5055,45 @@ choice at its own route boundary.
 an opaque network-toolbar option, which would remove the route adapter; or
 evidence that the graph is more legible when its controls are translucent,
 which would justify restoring alpha for this visualization.
+
+---
+
+## D110 — The network opens on a national scope, with state institutions one switch away
+
+*Recorded 2026-09-02. Extends D82, D104 and D109.*
+
+**Choice.** The mounted network keeps the state layer in the published feed but
+opens broad views with it hidden. Brazil has 282 state-level institutions and
+75 federal institutions, so all levels together make the overview carry more
+labels than the national structure can support. A route-owned
+`StateLevelToggle` writes the library's existing `criteria[level.id][$in][]`
+grammar into the address. The dependency adapter applies that criterion to the
+`allInstitutions` entity set, so the switch removes state nodes and their lines
+from the graph rather than merely highlighting them. The generic Level filter
+remains the full multi-select control for exact scopes.
+
+The default is conditional. A view without a selected institution starts on
+the non-state levels present in that feed; a view with an institution selected
+keeps all levels, because a state relation is part of that institution's
+neighbourhood. A URL-specified level criterion always wins. Other criteria and
+the dataset selection survive the switch, and the feed, API and source ledger
+are unchanged.
+
+**Why.** The network's forcefield visualization reads entities without applying
+the app's generic filter state. Copying the filter into a second local state
+would make the modal, the address and the graph disagree. Reusing the app's
+criteria shape at the route dependency boundary gives the quick switch and the
+full filter one scope contract, while keeping the source data complete for
+institution pages and later visualizations.
+
+**Cost.** The route adapter follows the library's current query grammar and
+filters the entity collection for every surface mounted under the network,
+not only the drawing. On a live scope change the library may animate removed
+labels out before they disappear, so the map settles rather than snapping.
+The default hides the state layer only for an unselected overview; readers who
+want the full map must make one explicit switch or clear the level criterion.
+
+**Overturned by.** `@envisioning/app` exposing a supported visualization-level
+`applyCriteria` or scope API, which would let the route remove its adapter and
+use the library's own control end to end; or evidence that the 282-state-node
+overview is a clearer first reading than the national scope.

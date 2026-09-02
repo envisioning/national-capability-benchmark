@@ -78,7 +78,11 @@ export default async function NetworkPage({ params, searchParams }: Props) {
     <Suspense fallback={<Loading logMessage="Loading the institution map..." />}>
       <DependenciesProvider>
         <StoreProvider data={data} config={config} basePath={BASE_PATH}>
-          <CustomMainView />
+          <CustomMainView
+            availableLevelIds={data.allLevels.map((level) => level.id)}
+            stateCount={data.allInstitutions.filter((institution) => institution.level.id === 'state').length}
+            institutionCount={data.allInstitutions.length}
+          />
         </StoreProvider>
       </DependenciesProvider>
     </Suspense>
