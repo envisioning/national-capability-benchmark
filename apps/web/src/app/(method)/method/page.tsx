@@ -141,7 +141,7 @@ export default function MethodPage() {
       </Section>
 
       <Section
-        title="The second reading below the national score"
+        title="Subnational data adds context"
         hint="The benchmark compares countries at the national level, while selected destination pages show constituent data as corroboration or context."
       >
         <div className="max-w-3xl space-y-4 text-lg leading-relaxed">

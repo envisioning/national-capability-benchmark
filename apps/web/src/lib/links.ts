@@ -423,6 +423,10 @@ export const sourcesHref = '/sources'
  */
 export const institutionGraphHref = '/network'
 
+/** The network surface for one published institution dataset. */
+export const institutionGraphDatasetHref = (iso3: string): string =>
+  `${institutionGraphHref}?dataset=${encodeURIComponent(iso3.toUpperCase())}`
+
 /**
  * Whether a path belongs to a surface that draws its own chrome.
  *

@@ -7,7 +7,7 @@ export const dynamic = 'force-dynamic'
 
 export const metadata = {
   title: 'Patterns, NCB',
-  description: 'Documented examples of what countries built, with sources and limits.',
+  description: 'Documented examples of what countries have built, with sources and limits.',
 }
 
 export default async function PatternsPage({
@@ -27,10 +27,10 @@ export default async function PatternsPage({
 
   return (
     <>
-      <PageTitle>What countries built</PageTitle>
+      <PageTitle>Documented examples</PageTitle>
       <Headline>
-        Each record describes something a country built that the indicators miss. The source
-        provides the number; the mechanism is our interpretation.
+        Each record describes something a country built that the indicators do not capture. The
+        source provides the published number; the mechanism is our interpretation.
       </Headline>
       <p className="mb-12 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
         Scores describe outcomes. These records describe how a country acted, what it needed and

@@ -29,9 +29,19 @@ The four stances are defined in `packages/core/src/delphi/panel.ts`:
 | Wealth sceptic | Is this capability, or is it money? |
 | Execution realist | What has this country actually built or changed? |
 
-Models come from `NCB_PANEL` and are dealt to stances round-robin. With four
-stances and three models, one vendor gets two stances. Supply four models or run
-`--stances 3`.
+Models come from `NCB_PANEL` and are dealt to stances round-robin. **Supply four
+distinct vendors.** With four stances and three models one vendor takes two
+stances, the panel loses a quarter of its independence, and nothing in the run
+file says so. The default is now four: Anthropic, OpenAI, Google and Mistral.
+
+Check every id against the gateway's own list before a run. It is public, needs
+no key, and carries the price each model is billed at:
+
+```bash
+curl -s https://ai-gateway.vercel.sh/v1/models
+```
+
+A stale id fails that whole panelist rather than degrading. See D106.
 
 ## Rounds
 
@@ -89,6 +99,18 @@ pnpm bench score && pnpm bench report
 
 Without a key the CLI falls back to the mock provider and says so.
 
+**Nothing activates itself.** `--activate` is required for every run, including
+a full-frame one. Until you pass it, `latest.json` keeps pointing at the
+previous run and the new file sits beside it for review.
+
+**A failed call is dropped, counted and published.** One vendor rate-limiting
+does not cost the other 459 calls, so the run continues. The cells that call
+covered come back with fewer panelists, and a shorter list has a narrower IQR,
+so a partial failure would otherwise read as agreement. `attemptedCalls` and
+`failedCalls` travel on the run file, the command prints a warning, and
+`bench validate` reports both the count and any cell-round short of the declared
+panel. Read that warning before you activate.
+
 Useful flags: `--countries BRA,IND` to make a preflight for a subset,
 `--max-coverage 0.5` to include only dimensions with thin source coverage,
 `--max-coverage 1` to review all nine dimensions, `--activate` to make a
@@ -106,11 +128,10 @@ scope as the run command. It is a command rather than a documented figure
 because the evidence brief grows with the indicator registry, and round 2
 carries round 1 back. Both grow with the registry.
 
-As of 2026-08-26, a four-panelist, two-round, 10-country run that includes every
-dimension and the indicator audit is 116 calls, roughly 446k input and 329k
-output tokens, and about **$7** with two Anthropic panelists and two others.
 Run `pnpm bench cost --max-coverage 1` for the current 53-country estimate
-before starting the full panel.
+before starting the full panel. Prices come from the gateway's public model
+list, which states the rate a run is billed at, so re-verify them there rather
+than on a vendor pricing page.
 
 Caveats the command prints for itself: characters-per-token is an approximation,
 the output figure includes a 3× multiplier for reasoning tokens, list prices are

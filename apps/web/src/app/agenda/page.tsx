@@ -41,8 +41,8 @@ export default async function AgendaIndexPage({
       <PageTitle>Capability agendas</PageTitle>
       <Headline>
         Each agenda turns a country&apos;s scores into actions: what to raise, what to measure
-        first and what to keep watching. The register below shows what countries have already built
-        against the same missing indicators.
+        first, and what to keep watching. The register below records what countries have already
+        built in areas the benchmark cannot yet measure.
       </Headline>
       <p className="mb-12 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
         A delivery is filed against an indicator that has no dataset behind it, so none of these
@@ -64,9 +64,9 @@ export default async function AgendaIndexPage({
       </Section>
 
       <Section
-        title="What countries built"
+        title="Documented examples"
         icon={<Icon name="hammer" size={22} />}
-        hint="Each delivery keeps its claim readable beside the year, country, capability, status, published number, source and mechanism."
+        hint="Each delivery shows its claim alongside the year, country, capability, status, published number, source, and mechanism."
       >
         {records.length === 0 ? (
           <Empty hint="No evidence records yet. Add them to data/evidence/records.json." />

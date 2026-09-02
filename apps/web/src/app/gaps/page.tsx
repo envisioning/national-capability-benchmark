@@ -68,8 +68,8 @@ export default function GapsPage() {
       </Note>
 
       <Section
-        title="One gap holds back all 53 countries"
-        hint={`Confidence is made of coverage, recency and source quality. A gap holds the first of those down for all ${COUNTRIES.length} countries, not just the ones with a weak score.`}
+        title={`One gap lowers confidence for all ${COUNTRIES.length} countries`}
+        hint={`Confidence combines coverage, recency, and source quality. A gap reduces coverage for all ${COUNTRIES.length} countries, not only for countries with a weak score.`}
       >
         <p className="max-w-3xl text-lg leading-relaxed">
           These {countWord(gaps.length)} gaps sit across{' '}

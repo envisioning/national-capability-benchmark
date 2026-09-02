@@ -48,11 +48,21 @@ export type Panelist = {
  * Panel defaults. These are gateway model ids, not API model ids. Check them
  * against the gateway's own model list before a real run: vendors rename and
  * retire ids, and a stale id fails the whole panelist rather than degrading.
+ *
+ * There are four, one per stance, and they must stay four distinct vendors.
+ * `buildPanel` deals models round-robin, so a three-model list gives one vendor
+ * two stances and the panel loses a quarter of its independence without saying
+ * so. The whole reason the panel costs money rather than running in a session is
+ * that four vendors disagree for reasons one vendor cannot. See D106.
+ *
+ * Verified against https://ai-gateway.vercel.sh/v1/models on 2026-08-31. That
+ * endpoint is public, needs no key, and carries the gateway's own prices.
  */
 export const DEFAULT_MODELS = [
   'anthropic/claude-opus-5',
   'openai/gpt-5',
   'google/gemini-2.5-pro',
+  'mistral/mistral-medium-3.5',
 ]
 
 export function buildPanel(models: string[], stanceCount = 4): Panelist[] {

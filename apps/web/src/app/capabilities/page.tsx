@@ -24,8 +24,10 @@ export default async function CapabilitiesPage() {
 
   return (
     <>
-      <PageTitle>Compare countries by capability</PageTitle>
-      <Headline>Each capability has its own question, indicators and country comparison.</Headline>
+      <PageTitle>Compare capabilities across countries</PageTitle>
+      <Headline>
+        Each capability has a question, a set of indicators, and a comparison across countries.
+      </Headline>
 
       <div className="mb-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {DIMENSIONS.map((dimension) => (
@@ -51,8 +53,8 @@ export default async function CapabilitiesPage() {
       </div>
 
       <Section
-        title="The same scores as a table"
-        hint="Every country on every capability, in one grid. Click any heading to sort."
+        title="Compare scores in a table"
+        hint="The table shows every country and capability. Click a column heading to sort."
       >
         {countries.length === 0 ? (
           <Empty hint={MISSING_DATA_HINT} />

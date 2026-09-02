@@ -1,6 +1,6 @@
 # Capability agenda: Switzerland
 
-*Generated 2026-08-31*
+*Generated 2026-09-02*
 
 The frame includes 53 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 

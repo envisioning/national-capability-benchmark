@@ -600,15 +600,24 @@ async function main() {
         onProgress: (m) => console.log(`  ${m}`),
       })
 
-      const partial = run.scope === 'subset' || maxCoverage < 1
-      const activate = bool(args, 'activate') || !partial
+      /* Activation is always explicit. A full-frame run used to activate itself,
+       * which put an unreviewed panel behind every Delphi surface the moment it
+       * finished, and a run that lost calls looks complete. PANEL.md and the
+       * research roadmap both say to activate after review; this makes the code
+       * agree with them. See D106. */
+      const activate = bool(args, 'activate')
       const path = await saveDelphi(run, { activate })
       console.log(`\n${run.cellEstimates.length} cell estimates, ${run.indicatorJudgements.length} indicator judgements`)
+      if (run.failedCalls) {
+        console.log(
+          `WARNING ${run.failedCalls} of ${run.attemptedCalls ?? 0} calls failed. Cells they covered carry fewer panelists, so their IQR understates disagreement. Review before activating.`,
+        )
+      }
       console.log(`delphi      -> ${path}`)
       console.log(
         activate
           ? `latest      -> ${FILES.delphiLatest}`
-          : 'active run   unchanged (use --activate after reviewing this subset or thin-cell run)',
+          : 'active run   unchanged (pass --activate once you have reviewed this run)',
       )
       break
     }

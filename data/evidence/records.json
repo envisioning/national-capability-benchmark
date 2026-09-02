@@ -7215,6 +7215,537 @@
         ],
         "travelled": "The interruption travels as a warning: mass adult-learning systems need continuity and credible standards, or a high-enrolment push can leave a capability gap when the delivery network is withdrawn."
       }
+    },
+    {
+      "id": "prt-opp",
+      "indicatorId": "civic_participation",
+      "iso3": "PRT",
+      "title": "Orçamento Participativo Portugal",
+      "claim": "Portugal's first national participatory-budget cycle drew almost 80,000 votes and committed €3.18 million to winning projects, which were written into the 2018 state budget.",
+      "metric": {
+        "name": "Votes cast in the first OPP cycle (approximately)",
+        "value": 80000,
+        "unit": "votes",
+        "asOf": "2017"
+      },
+      "secondMetric": {
+        "name": "Investment committed to winning projects",
+        "value": 3180000,
+        "unit": "EUR",
+        "asOf": "2017"
+      },
+      "started": 2017,
+      "status": "concluded",
+      "source": {
+        "publisher": "Presidência e Modernização Administrativa, OPP 2017 results",
+        "url": "https://portugal.gov.pt/gc21/comunicacao/noticias/20170914-mpma-opp",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-31"
+      },
+      "limits": "A single cycle's votes do not establish sustained civic participation, representativeness, deliberative quality or whether every winning project was delivered on time. The government announcement reports the programme's own participation and budget totals, and the national cycle was later redesigned rather than becoming a stable annual measure of citizen voice.",
+      "pattern": {
+        "mechanism": "The central government opened a national proposal and voting platform, reserved a defined slice of the state budget, and promised to place winning projects in departmental budgets so participation could produce a visible delivery rather than only consultation.",
+        "preconditions": [
+          "A public budget line that can be set aside before proposals are voted on",
+          "A technical process for screening proposals without removing the final choice from citizens",
+          "Departments and regions willing to implement projects they did not originate"
+        ],
+        "travelled": "Participatory budgeting travels when a vote is linked to a protected implementation route; a platform without a budget, screening and delivery owner produces participation theatre."
+      }
+    },
+    {
+      "id": "prt-empresa-na-hora",
+      "indicatorId": "institutional_responsiveness",
+      "iso3": "PRT",
+      "title": "Empresa na Hora and the one-stop company registry",
+      "claim": "Portugal's IRN reports 369,447 societies created through Empresa na Hora over its first 20 years; the service is available at more than 200 posts and averages 41 minutes from formation to registration.",
+      "metric": {
+        "name": "Companies created through Empresa na Hora",
+        "value": 369447,
+        "unit": "companies",
+        "asOf": "2025-08"
+      },
+      "secondMetric": {
+        "name": "Average service time",
+        "value": 41,
+        "unit": "minutes",
+        "asOf": "2025-08"
+      },
+      "started": 2005,
+      "status": "operating",
+      "source": {
+        "publisher": "Instituto dos Registos e do Notariado, Empresa na Hora 20-year results",
+        "url": "https://irn.justica.gov.pt/Noticias-do-IRN/Em-20-anos-nasceram-mais-de-369-mil-Empresas-na-Hora",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-31"
+      },
+      "limits": "The throughput and elapsed-time figures measure a standard incorporation route, not the full time or cost of becoming operational, survival, access for less standard firms or the quality of subsequent regulation. IRN reports its own service and cumulative count, and the average can hide variation by company type, name choice and whether applicants arrive prepared.",
+      "pattern": {
+        "mechanism": "A single state counter combines name approval, incorporation and registration, passes the record between public services electronically and later extends the same workflow online, converting a multi-agency legal process into one accountable transaction.",
+        "preconditions": [
+          "A shared company register and legal authority for one service to complete several acts",
+          "Interoperable registries and pre-approved names that remove sequential approvals",
+          "A fallback for complex companies and foreign founders whose cases do not fit the standard route"
+        ],
+        "travelled": "One-stop registries travel when back-office data sharing is real and the simple route is measured end to end; a fast counter that leaves tax, licensing and beneficial-ownership steps separate only moves the queue."
+      }
+    },
+    {
+      "id": "prt-prr",
+      "indicatorId": "large_project_delivery",
+      "iso3": "PRT",
+      "title": "Plano de Recuperação e Resiliência delivery governance",
+      "claim": "Portugal's PRR barometer recorded €21.9 billion across 121 investments and 43 reforms, with €14.43 billion paid to beneficiaries by 27 August 2026.",
+      "metric": {
+        "name": "PRR funds paid",
+        "value": 14431510367.98,
+        "unit": "EUR paid",
+        "asOf": "2026-08-27"
+      },
+      "secondMetric": {
+        "name": "Investments in the plan",
+        "value": 121,
+        "unit": "investments",
+        "asOf": "2026-08-27"
+      },
+      "started": 2021,
+      "status": "operating",
+      "source": {
+        "publisher": "Portal Mais Transparência / Estrutura de Missão Recuperar Portugal, PRR barometer",
+        "url": "https://transparencia.gov.pt/pt/fundos-europeus/prr/barometro",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-31"
+      },
+      "limits": "Funds paid, investment counts and reform counts are programme inputs and milestones, not completed infrastructure, cost and schedule performance or long-run outcomes. The plan is EU-funded and centrally coordinated but executed through many ministries and beneficiaries; the barometer's aggregate totals cannot attribute results to one delivery unit or show which projects will remain useful after the funding window closes.",
+      "pattern": {
+        "mechanism": "Portugal bound a large cross-government investment programme to a reform-and-milestone schedule, central monitoring and payment requests, while leaving implementation to ministries, public bodies, firms and local beneficiaries. The financing contract creates a common delivery clock across otherwise separate projects.",
+        "preconditions": [
+          "A central authority able to consolidate milestones and submit evidence for payment",
+          "Project owners with procurement, co-financing and reporting capacity",
+          "A transparent public dashboard that exposes slippage and reallocations before the deadline"
+        ],
+        "travelled": "Milestone-funded national plans travel when the payment gate is credible and project owners can report comparable evidence; a large envelope without a delivery spine becomes a catalogue of announcements."
+      }
+    },
+    {
+      "id": "prt-sgifr",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "PRT",
+      "title": "Sistema de Gestão Integrada de Fogos Rurais",
+      "claim": "Portugal's integrated rural-fire system reported 85 of 97 national-action projects in progress and 48 percent cumulative execution in 2024; €638 million was spent that year, with 55 percent on prevention, even as 137,651 hectares burned.",
+      "metric": {
+        "name": "National-action projects in progress",
+        "value": 85,
+        "unit": "projects",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "SGIFR expenditure",
+        "value": 638000000,
+        "unit": "EUR",
+        "asOf": "2024"
+      },
+      "started": 2018,
+      "status": "operating",
+      "source": {
+        "publisher": "Agência para a Gestão Integrada de Fogos Rurais, SGIFR annual results 2024",
+        "url": "https://www.sgifr.gov.pt/relatorios-anuais",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-31"
+      },
+      "limits": "Projects in progress and spending are capacity measures, not proof that communities are safe; the 2024 burned-area and mortality figures show the residual risk plainly. Annual fire outcomes also depend on weather, land use and ignition behaviour, so the record cannot identify the causal contribution of coordination, prevention or suppression spending.",
+      "pattern": {
+        "mechanism": "After the 2017 fires, Portugal replaced a mainly suppression-led model with a cross-government system linking prevention, landscape management, preparedness, suppression and recovery, coordinated by AGIF and reported against a national action programme.",
+        "preconditions": [
+          "A permanent coordinating agency with authority to aggregate eleven ministries and dozens of entities",
+          "Shared risk data and annual reporting that make prevention visible beside emergency response",
+          "Municipalities, landowners and emergency services able to turn national priorities into local work"
+        ],
+        "travelled": "Integrated fire governance travels when prevention budgets, operational command and landowner incentives share one accountable plan; extra firefighting capacity alone does not change the hazard."
+      }
+    },
+    {
+      "id": "prt-simplex-labx",
+      "indicatorId": "institutional_responsiveness",
+      "iso3": "PRT",
+      "title": "Simplex and LabX, a standing simplification-and-experimentation loop",
+      "claim": "AMA's 2022 activity report records 48 Simplex administrative-simplification measures, 24 PRR and modernisation milestones executed, and 62 innovation, participation and simplification activities across the agency's portfolio.",
+      "metric": {
+        "name": "Simplex measures in the 2022 edition",
+        "value": 48,
+        "unit": "measures",
+        "asOf": "2022"
+      },
+      "secondMetric": {
+        "name": "Innovation, participation and simplification activities",
+        "value": 62,
+        "unit": "activities",
+        "asOf": "2022"
+      },
+      "started": 2006,
+      "status": "operating",
+      "source": {
+        "publisher": "Agência para a Modernização Administrativa, Activity Report 2022",
+        "url": "https://www.ama.gov.pt/documents/24077/28687/ama_relatorio-de-atividades__AMA_2022.pdf/cff91b58-25be-479b-9275-8d3a3e114db7",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-31"
+      },
+      "limits": "Counting measures and workshops shows an administrative improvement pipeline, not reduced burden, faster case resolution or better user outcomes. AMA reports its own activity, and combining the recurring Simplex programme with LabX experiments hides which initiatives reached routine service delivery and which remained pilots.",
+      "pattern": {
+        "mechanism": "Portugal pairs a rolling political simplification agenda with a public-sector innovation lab: Simplex names and tracks changes, while LabX researches user needs, co-creates prototypes and tests service redesign before agencies adopt it.",
+        "preconditions": [
+          "A centre of government able to convene ministries around cross-cutting administrative changes",
+          "A safe experimental space with permission to test services with citizens and officials",
+          "Owners and monitoring that carry a successful prototype into law, procurement and routine operations"
+        ],
+        "travelled": "A simplification-and-experimentation loop travels when pilots have a route into the rulebook and service budget; a lab without an adoption owner becomes a workshop catalogue."
+      }
+    },
+    {
+      "id": "prt-pnv",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "PRT",
+      "title": "Programa Nacional de Vacinação and seasonal immunisation",
+      "claim": "Portugal's DGS reported 86 percent immunisation of eligible infants in the first RSV campaign, 98–99 percent first-year coverage for the universal childhood schedule, and nearly four million seasonal vaccines administered in 2024–2025.",
+      "metric": {
+        "name": "Eligible infants immunised against RSV",
+        "value": 86,
+        "unit": "%",
+        "asOf": "2024-2025"
+      },
+      "secondMetric": {
+        "name": "Universal-schedule first-year coverage (lower bound)",
+        "value": 98,
+        "unit": "%",
+        "asOf": "2024"
+      },
+      "started": 1965,
+      "status": "operating",
+      "source": {
+        "publisher": "Direção-Geral da Saúde, Programa Nacional de Vacinação annual results",
+        "url": "https://www.dgs.pt/em-destaque/86-das-criancas-elegiveis-imunizadas-contra-o-vsr.aspx",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-08-31"
+      },
+      "limits": "Coverage is not the same as immunity, health impact or equal access, and the rounded seasonal-dose total is not a count of unique people. These figures mainly cover Portugal Continental and the DGS reports the programme's administrative data; high routine coverage can coexist with gaps in older groups, migrants or particular municipalities.",
+      "pattern": {
+        "mechanism": "A national schedule, procurement and registry make routine childhood vaccination a standing service, while seasonal campaigns add new products, broaden delivery through pharmacies and publish coverage by age and municipality so the system can adapt to a changing respiratory threat.",
+        "preconditions": [
+          "A trusted national immunisation schedule and supply chain",
+          "Primary-care, hospital and pharmacy channels able to share records and deliver at scale",
+          "Local surveillance and public communication that can identify pockets of low coverage"
+        ],
+        "travelled": "Vaccination systems travel when routine infrastructure can absorb a new campaign quickly and coverage is visible below the national average; a one-off mass purchase without records and delivery channels fades when the emergency does."
+      }
+    },
+    {
+      "id": "prt-stayaway-covid",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "PRT",
+      "title": "STAYAWAY COVID, a contact-tracing app suspended after the emergency",
+      "claim": "Portugal launched the voluntary STAYAWAY COVID exposure-notification app on 1 September 2020; the European Commission's case study records more than 3.2 million downloads and says the app was later suspended.",
+      "metric": {
+        "name": "App downloads (more than)",
+        "value": 3200000,
+        "unit": "downloads",
+        "asOf": "2020-2021"
+      },
+      "started": 2020,
+      "status": "dismantled",
+      "source": {
+        "publisher": "European Commission, Digital Contact Tracing Study: Portugal case",
+        "url": "https://commission.europa.eu/system/files/2023-02/DigitalContactTracingStudy.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-08-31"
+      },
+      "limits": "Downloads do not show active use, the share of infected people entering test codes, alerts delivered or epidemiological effect. The voluntary, privacy-preserving design depended on test-result integration and public trust, and suspension after the emergency means the adoption peak was not a durable surveillance capability.",
+      "pattern": {
+        "mechanism": "Portugal combined a national health authority with research and technology partners to deploy an anonymous Bluetooth exposure-notification app quickly, using voluntary adoption rather than a centralised movement database.",
+        "preconditions": [
+          "A trusted health authority able to validate positive-test codes",
+          "Interoperable laboratory and notification systems that make an alert actionable",
+          "Public trust in privacy safeguards and a clear endpoint when the emergency passes"
+        ],
+        "travelled": "Digital emergency tools travel when they connect to routine health workflows and retain legitimacy after the crisis; a download surge without operational integration is easy to dismantle."
+      }
+    },
+    {
+      "id": "prt-escola",
+      "indicatorId": "adult_digital_skills",
+      "iso3": "PRT",
+      "title": "e.escola, a national laptop-and-broadband push",
+      "claim": "The European Commission's eSchool case study records more than 1.3 million people requesting laptops and broadband through Portugal's e.escola programme and more than one million laptops delivered in its first two years; the Portuguese government suspended the programme in 2011.",
+      "metric": {
+        "name": "People requesting laptops and broadband (more than)",
+        "value": 1300000,
+        "unit": "people",
+        "asOf": "2007-2009"
+      },
+      "secondMetric": {
+        "name": "Laptops delivered in the first two years (more than)",
+        "value": 1000000,
+        "unit": "laptops",
+        "asOf": "2007-2009"
+      },
+      "started": 2007,
+      "status": "dismantled",
+      "source": {
+        "publisher": "European Commission Interoperable Europe, eSchool Programme (Portugal case)",
+        "url": "https://interoperable-europe.ec.europa.eu/collection/education-culture-and-sport/document/eschool-programme-eschool-eescola",
+        "tier": "international_organization",
+        "retrievedAt": "2026-08-31"
+      },
+      "limits": "Device distribution measures access, not sustained use, adult or student digital competence, learning outcomes or affordability after the subsidy. The scale figures come from the programme case study, while the suspension is recorded in a Portuguese government archive; the partnership and outstanding state payments also complicate any simple claim of a completed success.",
+      "pattern": {
+        "mechanism": "The state used a dedicated fund and mobile-operator partnership to put subsidised laptops and broadband into the hands of students, teachers and adult trainees, using schools and private partners for decentralised delivery.",
+        "preconditions": [
+          "A mechanism to target subsidies across students, teachers and low-income households",
+          "Private network operators able to supply devices and connectivity at national scale",
+          "Maintenance, training and replacement funding that lasts beyond the initial hardware handout"
+        ],
+        "travelled": "Device-and-connectivity programmes travel when skills support, maintenance and a durable funding model accompany procurement; a rapid hardware push can leave a capability gap when the subsidy is withdrawn."
+      }
+    },
+    {
+      "id": "prt-planapp-replan",
+      "indicatorId": "government_foresight_capacity",
+      "iso3": "PRT",
+      "title": "PLANAPP and REPLAN, a centre-of-government foresight network",
+      "claim": "Portugal's PLANAPP operates as a Centre of Government body for evidence-based foresight, planning, monitoring, evaluation and impact analysis; its REPLAN network lists five multisectoral team remits and held its inaugural meeting on 23 November 2022.",
+      "metric": {
+        "name": "Named multisectoral REPLAN team remits",
+        "value": 5,
+        "unit": "team remits",
+        "asOf": "2022-11-23"
+      },
+      "started": 2022,
+      "status": "operating",
+      "source": {
+        "publisher": "PLANAPP, REPLAN presentation",
+        "url": "https://www.planapp.gov.pt/replan-presentation/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-02"
+      },
+      "limits": "The five is a count of named remits on PLANAPP's presentation page, not a verified staffing or output measure; the same page describes the teams as four before listing five. The record therefore evidences a formal foresight-and-coordination architecture and its inaugural date, not continuity across governments, the quality of forecasts or whether advice changed decisions.",
+      "pattern": {
+        "mechanism": "Portugal placed foresight, planning, monitoring and evaluation in a centre-of-government body, then connected ministry planning units through REPLAN so cross-cutting work could be commissioned and reviewed across departmental boundaries.",
+        "preconditions": [
+          "A centre-of-government mandate that can convene ministries and set common planning instruments",
+          "Planning and foresight units inside each governmental area with staff able to join joint work",
+          "Shared indicators, evaluation practice and a route from foresight outputs into budget and policy decisions"
+        ],
+        "travelled": "A foresight network travels when it has a convening mandate and a decision route; a named unit without ministry participation or a budget link is only an advisory label."
+      }
+    },
+    {
+      "id": "prt-agendas-mobilizadoras",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "PRT",
+      "title": "Agendas Mobilizadoras and green innovation alliances",
+      "claim": "Portugal's PRR transparency portal reports 52 Agendas Mobilizadoras and Verdes representing €5,278,338,665.70 of approved investment and €3,051,632,468.10 of approved support as of 17 August 2026.",
+      "metric": {
+        "name": "Agendas Mobilizadoras and Verdes represented",
+        "value": 52,
+        "unit": "consortia/agendas",
+        "asOf": "2026-08-17"
+      },
+      "secondMetric": {
+        "name": "Approved investment across the agendas",
+        "value": 5278338665.70,
+        "unit": "EUR",
+        "asOf": "2026-08-17"
+      },
+      "started": 2021,
+      "status": "operating",
+      "source": {
+        "publisher": "Portal Mais Transparência / Estrutura de Missão Recuperar Portugal, PRR project C05-i01.01",
+        "url": "https://transparencia.gov.pt/pt/fundos-europeus/prr/beneficiarios-projetos/projeto/C05-i01.01/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-02"
+      },
+      "limits": "Approved investment and support are programme commitments, not money spent, products delivered, export growth or additional private R&D. The portal aggregates consortia with different sectors and execution rates, and the figures are reported by the programme itself; they show a coordination mechanism at national scale, not that every alliance will complete its milestones by the 2026 deadline.",
+      "pattern": {
+        "mechanism": "Portugal used an open call to assemble firms, research organisations, clusters and public bodies into contract-based consortia, then tied public support to innovation, production, skills and technology-transfer work inside each agenda.",
+        "preconditions": [
+          "A central agency able to run a competitive call and monitor many heterogeneous consortia",
+          "Firms and research organisations with enough technical and financial capacity to share a multi-year plan",
+          "Milestones, procurement and payment controls that keep public support conditional on joint delivery"
+        ],
+        "travelled": "Consortium programmes travel when public money buys a shared delivery obligation rather than a collection of grants; a call without a lead firm, research partner and milestone gate rarely creates durable collaboration."
+      }
+    },
+    {
+      "id": "prt-sifide",
+      "indicatorId": "business_rd_share",
+      "iso3": "PRT",
+      "title": "SIFIDE, Portugal's business R&D tax incentive",
+      "claim": "Portugal's ANI reports that SIFIDE, created in 1997, offers a 32.5% base corporate-tax deduction for eligible business R&D spending, plus a 50% incremental deduction up to €1.5 million, making practical recovery of up to 82.5% possible.",
+      "metric": {
+        "name": "Base SIFIDE deduction rate",
+        "value": 32.5,
+        "unit": "% of eligible R&D expense",
+        "asOf": "2026-04-12"
+      },
+      "secondMetric": {
+        "name": "Maximum practical recovery described by ANI",
+        "value": 82.5,
+        "unit": "% of R&D investment",
+        "asOf": "2026-04-12"
+      },
+      "started": 1997,
+      "status": "operating",
+      "source": {
+        "publisher": "Agência Nacional de Inovação, SIFIDE overview",
+        "url": "https://ani.pt/sifide-sistema-de-incentivos-fiscais-a-ied-empresarial/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-02"
+      },
+      "limits": "The deduction rates evidence a long-running incentive mechanism, not the share of national R&D performed by business, additionality, research quality or commercial success. The 82.5% figure is ANI's practical maximum combining base and incremental rules; firms may receive less, and eligibility, tax position and the €1.5 million incremental cap constrain actual claims. The agency that administers the instrument also describes its benefits.",
+      "pattern": {
+        "mechanism": "Portugal lowers the after-tax cost of company R&D through a recurring, ANI-certified corporate-tax credit, with an incremental allowance for firms that increase spending and a separate recognition route for entities judged able to conduct R&D.",
+        "preconditions": [
+          "A tax administration and innovation agency able to define and audit eligible R&D expenditure",
+          "Companies with enough taxable profit and record-keeping capacity to claim a multi-year credit",
+          "A review process that can distinguish experimental development from routine product or process work"
+        ],
+        "travelled": "R&D tax credits travel when eligibility is auditable and additionality is tested; a generous headline rate without review can subsidise work firms would have done anyway."
+      }
+    },
+    {
+      "id": "prt-civil-court-clearance",
+      "indicatorId": "court_case_clearance",
+      "iso3": "PRT",
+      "title": "Civil-court clearance and the CEPEJ monitoring series",
+      "claim": "The CEPEJ Portugal country fiche records a 96.1% clearance rate for civil and commercial litigious cases at first instance in 2023, alongside 101.1% at second instance and 105.5% at the Supreme Court; first-instance disposition time was 267 days.",
+      "metric": {
+        "name": "First-instance civil and commercial clearance rate",
+        "value": 96.1,
+        "unit": "% of incoming cases",
+        "asOf": "2023"
+      },
+      "secondMetric": {
+        "name": "First-instance disposition time",
+        "value": 267,
+        "unit": "days",
+        "asOf": "2023"
+      },
+      "started": 2013,
+      "status": "operating",
+      "source": {
+        "publisher": "European Commission for the Efficiency of Justice (CEPEJ), Portugal country fiche",
+        "url": "https://rm.coe.int/cepej-country-fiche-scoreboard-portugal-2023/1680b6abe2",
+        "tier": "international_organization",
+        "retrievedAt": "2026-09-02"
+      },
+      "limits": "The clearance rate is an administrative throughput measure for one year and one case class, not a judgment-quality, access-to-justice or public-trust measure. Disposition time is a theoretical estimate derived from pending and resolved cases, and rates differ sharply by court instance; CEPEJ republishes national data and the fiche cannot identify which reforms or court-management practices caused the result.",
+      "pattern": {
+        "mechanism": "Portugal's courts feed case-flow data into a recurring national and European monitoring framework, making incoming, resolved and pending civil cases visible by instance and allowing backlog pressure to be compared over time.",
+        "preconditions": [
+          "Court case registers with consistent definitions of incoming, resolved and pending matters",
+          "A justice statistics authority that can aggregate courts without changing the underlying case counts",
+          "A management response that uses the series to allocate judges, staff or procedural capacity"
+        ],
+        "travelled": "Clearance monitoring travels when case definitions stay stable and managers act on the series; a published percentage without backlog, duration and instance detail can reward fast closure rather than justice."
+      }
+    },
+    {
+      "id": "prt-tgv-poceirao-caia",
+      "indicatorId": "large_project_delivery",
+      "iso3": "PRT",
+      "title": "Lisbon–Madrid high-speed rail concession, formally abandoned",
+      "claim": "Portugal's 2011 Council of Ministers formally abandoned the previous Lisbon–Madrid high-speed rail project, replacing its passenger priority with a freight connection through Sines, Lisbon, Setúbal, Poceirão and Madrid.",
+      "metric": {
+        "name": "High-speed rail projects formally abandoned",
+        "value": 1,
+        "unit": "project",
+        "asOf": "2011-11-10"
+      },
+      "started": 2010,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Diário da República, Resolução do Conselho de Ministros n.º 45/2011",
+        "url": "https://diariodarepublica.pt/dr/detalhe/resolucao-conselho-ministros/45-2011-146536",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-02"
+      },
+      "limits": "The number is categorical: one formally abandoned national project. The resolution records a policy reversal, not the project's final cost, the amount already spent or a completed line; the replacement freight priority and a later revival of high-speed planning mean this is evidence of stop-and-reframe capacity, not proof that Portugal solved rail delivery.",
+      "pattern": {
+        "mechanism": "Under fiscal pressure, the government stopped a politically committed passenger megaproject by resolution and redirected the corridor toward freight interoperability, changing the objective before further construction commitments accumulated.",
+        "preconditions": [
+          "A cabinet with authority to revoke or redirect a concession-backed transport priority",
+          "A planning and appraisal process capable of naming the financial risk of the existing pipeline",
+          "An alternative corridor objective that can preserve part of the strategic value while dropping the original scope"
+        ],
+        "travelled": "Project reversals travel when governments can expose sunk costs and change scope openly; abandoning a line without a credible replacement only defers the delivery problem."
+      }
+    },
+    {
+      "id": "prt-test-beds",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "PRT",
+      "title": "Rede Nacional de Test Beds for company experimentation",
+      "claim": "ANI's National Innovation Report records 47 recognised Portuguese test beds and €150 million allocated to the national network for developing and testing new products and services at technology-readiness levels 5 to 9.",
+      "metric": {
+        "name": "Recognised test beds",
+        "value": 47,
+        "unit": "test beds",
+        "asOf": "2024-12-31"
+      },
+      "secondMetric": {
+        "name": "PRR allocation to the test-bed network",
+        "value": 150000000,
+        "unit": "EUR",
+        "asOf": "2022-2025"
+      },
+      "started": 2022,
+      "status": "operating",
+      "source": {
+        "publisher": "Agência Nacional de Inovação, Relatório Nacional de Inovação 2024",
+        "url": "https://ani.pt/wp-content/uploads/2025/08/RNI2024_06082025.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-02"
+      },
+      "limits": "The count and allocation show a national experimentation infrastructure, not the number of live trials, firms served, products commercialised or regulatory changes that resulted. ANI's report says 47 were recognised at publication but gives no common utilisation definition, and the €150 million is an allocation rather than completed spending or additional private investment.",
+      "pattern": {
+        "mechanism": "Portugal funded and recognised shared facilities where SMEs and startups can develop and test near-market products, lowering the cost of moving an experiment from prototype toward demonstration without requiring every firm to build its own laboratory.",
+        "preconditions": [
+          "Facilities with technical staff, equipment and safety procedures that can host external firms",
+          "A recognition and funding process that makes test results credible to customers and investors",
+          "A pipeline of SMEs and startups with products mature enough to test at TRL 5 to 9"
+        ],
+        "travelled": "Test-bed networks travel when access, measurement and procurement pathways connect a facility to real adopters; a list of subsidised facilities without utilisation data can become an infrastructure inventory rather than an experimentation capability."
+      }
+    },
+    {
+      "id": "prt-zlt",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "PRT",
+      "title": "Zonas Livres Tecnológicas, regulator-supervised experimentation zones",
+      "claim": "ANI's National Innovation Report records four Portuguese Zonas Livres Tecnológicas (technological free zones) by the end of 2024, where innovators can test technology-based processes in real or near-real environments under continuous regulator supervision.",
+      "metric": {
+        "name": "Technological free zones identified",
+        "value": 4,
+        "unit": "zones",
+        "asOf": "2024-12-31"
+      },
+      "started": 2021,
+      "status": "operating",
+      "source": {
+        "publisher": "Agência Nacional de Inovação, Relatório Nacional de Inovação 2024",
+        "url": "https://ani.pt/wp-content/uploads/2025/08/RNI2024_06082025.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-02"
+      },
+      "limits": "Four zones are an institutional count, not a measure of trials, firms admitted, time to authorisation or successful regulatory adaptation. ANI's report uses a 31 December 2024 cutoff and does not provide a common utilisation or outcome series, so the record shows that a sandbox channel exists rather than that it is broad or effective.",
+      "pattern": {
+        "mechanism": "Portugal created a legal route for regulators and innovators to run controlled tests in defined physical environments, using supervised evidence from those tests to clarify or adapt rules where existing law is uncertain.",
+        "preconditions": [
+          "Regulators willing to supervise experiments while protecting safety and public rights",
+          "A legal framework that permits controlled derogations or clarifications without suspending accountability",
+          "Test environments with monitoring, reporting and a route to ordinary market authorisation"
+        ],
+        "travelled": "Regulatory sandboxes travel when the evidence gathered in a zone can change a rule or unlock a normal licence; a protected pilot site with no route out simply postpones the regulatory decision."
+      }
     }
   ]
 }

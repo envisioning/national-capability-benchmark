@@ -1,6 +1,6 @@
 # Agenda de capacidades: Portugal
 
-*Gerado em 2026-08-31*
+*Gerado em 2026-09-02*
 
 Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
@@ -117,6 +117,21 @@ Entregas documentadas como evidência. Elas nunca afetam as notas ou a confianç
 - **Programa Qualifica and Portugal's adult-learning network** (Aprendizagem). Portugal's ANQEP reported 1,025,569 cumulative Qualifica registrations by December 2023; 90 percent received a training or recognition, validation and certification referral, and 510,113 registrants obtained some certification.
 - **Portugal Ventures, a public venture-capital bridge** (Experimentação). Portugal Ventures, the public venture-capital company in the Banco Português de Fomento group, reports €233.2 million invested in 256 new companies since 2012 and €283 million under management.
 - **Novas Oportunidades, and the qualification-policy interruption** (Aprendizagem). ANQEP's national review records 1,568,490 adult enrolments in Novas Oportunidades between 2006 and July 2011; after the initiative's peak and a period of disinvestment, Portugal launched Qualifica in 2017 and rebuilt a network of more than 300 Centros Qualifica.
+- **Orçamento Participativo Portugal** (Propósito compartilhado). Portugal's first national participatory-budget cycle drew almost 80,000 votes and committed €3.18 million to winning projects, which were written into the 2018 state budget.
+- **Empresa na Hora and the one-stop company registry** (Adaptação). Portugal's IRN reports 369,447 societies created through Empresa na Hora over its first 20 years; the service is available at more than 200 posts and averages 41 minutes from formation to registration.
+- **Plano de Recuperação e Resiliência delivery governance** (Construção). Portugal's PRR barometer recorded €21.9 billion across 121 investments and 43 reforms, with €14.43 billion paid to beneficiaries by 27 August 2026.
+- **Sistema de Gestão Integrada de Fogos Rurais** (Adaptação). Portugal's integrated rural-fire system reported 85 of 97 national-action projects in progress and 48 percent cumulative execution in 2024; €638 million was spent that year, with 55 percent on prevention, even as 137,651 hectares burned.
+- **Simplex and LabX, a standing simplification-and-experimentation loop** (Adaptação). AMA's 2022 activity report records 48 Simplex administrative-simplification measures, 24 PRR and modernisation milestones executed, and 62 innovation, participation and simplification activities across the agency's portfolio.
+- **Programa Nacional de Vacinação and seasonal immunisation** (Adaptação). Portugal's DGS reported 86 percent immunisation of eligible infants in the first RSV campaign, 98–99 percent first-year coverage for the universal childhood schedule, and nearly four million seasonal vaccines administered in 2024–2025.
+- **STAYAWAY COVID, a contact-tracing app suspended after the emergency** (Adaptação). Portugal launched the voluntary STAYAWAY COVID exposure-notification app on 1 September 2020; the European Commission's case study records more than 3.2 million downloads and says the app was later suspended.
+- **e.escola, a national laptop-and-broadband push** (Agência). The European Commission's eSchool case study records more than 1.3 million people requesting laptops and broadband through Portugal's e.escola programme and more than one million laptops delivered in its first two years; the Portuguese government suspended the programme in 2011.
+- **PLANAPP and REPLAN, a centre-of-government foresight network** (Antecipação). Portugal's PLANAPP operates as a Centre of Government body for evidence-based foresight, planning, monitoring, evaluation and impact analysis; its REPLAN network lists five multisectoral team remits and held its inaugural meeting on 23 November 2022.
+- **Agendas Mobilizadoras and green innovation alliances** (Coordenação). Portugal's PRR transparency portal reports 52 Agendas Mobilizadoras and Verdes representing €5,278,338,665.70 of approved investment and €3,051,632,468.10 of approved support as of 17 August 2026.
+- **SIFIDE, Portugal's business R&D tax incentive** (Experimentação). Portugal's ANI reports that SIFIDE, created in 1997, offers a 32.5% base corporate-tax deduction for eligible business R&D spending, plus a 50% incremental deduction up to €1.5 million, making practical recovery of up to 82.5% possible.
+- **Civil-court clearance and the CEPEJ monitoring series** (Confiança). The CEPEJ Portugal country fiche records a 96.1% clearance rate for civil and commercial litigious cases at first instance in 2023, alongside 101.1% at second instance and 105.5% at the Supreme Court; first-instance disposition time was 267 days.
+- **Lisbon–Madrid high-speed rail concession, formally abandoned** (Construção). Portugal's 2011 Council of Ministers formally abandoned the previous Lisbon–Madrid high-speed rail project, replacing its passenger priority with a freight connection through Sines, Lisbon, Setúbal, Poceirão and Madrid.
+- **Rede Nacional de Test Beds for company experimentation** (Experimentação). ANI's National Innovation Report records 47 recognised Portuguese test beds and €150 million allocated to the national network for developing and testing new products and services at technology-readiness levels 5 to 9.
+- **Zonas Livres Tecnológicas, regulator-supervised experimentation zones** (Experimentação). ANI's National Innovation Report records four Portuguese Zonas Livres Tecnológicas (technological free zones) by the end of 2024, where innovators can test technology-based processes in real or near-real environments under continuous regulator supervision.
 
 ## Contribua
 

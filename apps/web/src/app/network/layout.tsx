@@ -12,7 +12,7 @@ import { Icons } from '@envisioning/app'
  */
 export default function NetworkLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="explorer-shell">
+    <div className="explorer-shell dark">
       {/* The library's icons are an SVG sprite that every one of its components
           references by id. Without this the rail and the toolbars render empty
           boxes. */}

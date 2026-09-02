@@ -59,18 +59,18 @@ export default async function ComparePage({ params }: Params) {
 
   return (
     <>
-      <PageTitle>Countries side by side</PageTitle>
+      <PageTitle>Compare countries side by side</PageTitle>
       <Headline>
-        A country score only means something against other countries. This page puts a reference
-        country beside up to three others on the same nine axes, then follows every row down to the
-        indicator it was built from.
+        A score is meaningful only in comparison with other countries. This page puts one reference
+        country beside up to three others on the same nine axes, then shows the indicator behind
+        each score.
       </Headline>
       <p className="mb-10 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
         The first country is the{' '}
         <DefineLink term="Reference country">reference</DefineLink>: it keeps the filled shape and
-        every other column is read as a distance from it. The selection lives in the address, so{' '}
+        every other country is shown as a distance from it. The selection is part of the address, so{' '}
         <code className="text-xs">{compareBaseHref}/BRA-IDN-ZAF</code> is a comparison you can send
-        to somebody. There is still no composite score and no ranking.
+        to someone. There is no composite score or ranking.
       </p>
 
       <ComparePicker selected={selected} all={all} />
@@ -83,11 +83,11 @@ export default async function ComparePage({ params }: Params) {
             reading.
           </p>
           <p className="mt-3 text-lg leading-relaxed text-[var(--muted)]">
-            Browsing first is fine:{' '}
+            You can browse first:{' '}
             <Link href={countriesHref} className="underline underline-offset-4">
-              every country as a shape
+              country profiles
             </Link>{' '}
-            shows all {data.countries.length} at once, and a few pairs worth opening are{' '}
+            shows all {data.countries.length} at once. A few comparisons worth opening are{' '}
             <Link href={compareHref(['BRA', 'IDN'])} className="underline underline-offset-4">
               Brazil and Indonesia
             </Link>

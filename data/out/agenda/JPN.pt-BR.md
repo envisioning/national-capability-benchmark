@@ -1,6 +1,6 @@
 # Agenda de capacidades: Japão
 
-*Gerado em 2026-08-31*
+*Gerado em 2026-09-02*
 
 Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 

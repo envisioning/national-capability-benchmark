@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { PT_BR, localizeInstitutionNetwork } from '@ncb/core'
-import { institutionGraphHref } from '@/lib/links'
+import { institutionGraphDatasetHref } from '@/lib/links'
 import { InstitutionsView } from '@/components/views/InstitutionsView'
 import { Empty, Eyebrow, Headline, Note, PageTitle } from '@/components/ui'
 import { loadInstitutionNetwork } from '@/lib/data'
@@ -50,7 +50,7 @@ export default async function BrazilInstitutionsPage() {
       </p>
 
       <p className="mb-12 max-w-3xl text-lg leading-relaxed">
-        <Link href={institutionGraphHref} className="underline underline-offset-2">
+        <Link href={institutionGraphDatasetHref('BRA')} className="underline underline-offset-2">
           Ver o mesmo mapa desenhado como rede
         </Link>
         . A rede mostra a vizinhança de uma instituição de cada vez. O sentido de cada relação e o

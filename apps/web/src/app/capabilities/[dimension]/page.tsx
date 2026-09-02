@@ -117,8 +117,8 @@ export default async function CapabilityPage({
       <PageTitle>{DIMENSION_LABELS[dimension]}</PageTitle>
       <Headline>{DIMENSION_QUESTIONS[dimension]}</Headline>
       <p className="mb-10 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-        This page puts the country comparison, indicator registry and documented cases together. It
-        shows how much of the capability the current data can see.
+        This page brings together the country comparison, indicator registry, and documented cases.
+        It shows how much of this capability the current data can capture.
       </p>
 
       <p className="mb-10 flex flex-wrap gap-2">
@@ -129,8 +129,8 @@ export default async function CapabilityPage({
       </p>
 
       <Section
-        title="Every country on one scale"
-        hint="The table opens alphabetically. Sort by score, confidence, coverage or trend. Scores need two observed indicators; trends use indicators observed at both ends."
+        title="Compare every country on one scale"
+        hint="The table starts in alphabetical order. Sort by score, confidence, coverage, or trend. A score needs two observed indicators; a trend uses indicators observed at both ends."
         icon={<Icon name={DIMENSION_ICON[dimension]} size={22} />}
       >
         <p className="mb-4 max-w-2xl text-xs leading-relaxed text-[var(--muted)]">
@@ -150,8 +150,8 @@ export default async function CapabilityPage({
 
       {checks.length > 0 ? (
         <Section
-          title="A series published beside the score"
-          hint="A behavioral check measures something real about this capability and fails the test for scoring it. The country pages carry its value."
+          title="A check beside the score"
+          hint="This check measures something real about the capability, but it does not meet the model's test for scoring. Country pages show its value."
           icon={<Icon name="eye" size={22} />}
         >
           <ul className="space-y-5">
@@ -178,8 +178,8 @@ export default async function CapabilityPage({
 
       {dimensionEvidence.length > 0 ? (
         <Section
-          title="What countries built here"
-          hint="These records describe a country doing something this capability should capture. They stay outside the score because one case is not a comparable series."
+          title="Documented examples"
+          hint="These records describe something a country has done that this capability should capture. They stay outside the score because one case is not a comparable series."
           icon={<Icon name="file-clock" size={22} />}
         >
           <EvidenceList records={dimensionEvidence} />

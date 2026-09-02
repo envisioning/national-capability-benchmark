@@ -42,10 +42,35 @@
   --go: #aacc00;
   --go-up: #d6f249;
   --go-fg: #272a3d;
+
+  /* `@envisioning/app` publishes these aliases at :root. Because the NCB
+   * palette is scoped to this leaf route, the aliases must be scoped here too:
+   * otherwise `var(--panel)` is resolved at :root before the shell can supply
+   * it and every `bg-panel` surface falls back to transparent. */
+  --color-border: var(--border);
+  --color-tick: var(--tick);
+  --color-foreground: var(--foreground);
+  --color-disabled: var(--disabled);
+  --color-dimmed: var(--dimmed);
+  --color-panel: var(--panel);
+  --color-panel-up: var(--panel-up);
+  --color-panel-plus: var(--panel-plus);
+  --color-panel-down: var(--panel-down);
+  --color-accent: var(--accent);
+  --color-accent-up: var(--accent-up);
+  --color-accent-fg: var(--accent-fg);
+  --color-accent2: var(--accent2);
+  --color-accent2-up: var(--accent2-up);
+  --color-accent2-fg: var(--accent2-fg);
+  --color-stop: var(--stop);
+  --color-stop-up: var(--stop-up);
+  --color-stop-fg: var(--stop-fg);
+  --color-go: var(--go);
+  --color-go-up: var(--go-up);
+  --color-go-fg: var(--go-fg);
 }
 
-@media (prefers-color-scheme: dark) {
-  .explorer-shell {
+.explorer-shell.dark {
     --black: #191c2b;
     --white: #fafafa;
     --gray: #b8bdd9;
@@ -76,7 +101,21 @@
     --go: #aacc00;
     --go-up: #d6f249;
     --go-fg: #202333;
-  }
+}
+
+/* The network is a graph-reading surface, so its chrome stays dark and does
+ * not change with the host OS. This also keeps the route's graph and controls
+ * on one stable contrast system, as the event-bff map does with `.light`. */
+.explorer-shell.dark {
+  color-scheme: dark;
+}
+
+/* The Envisioning toolbar intentionally uses 90%/95% panels in general
+ * visualizations. Around this dense network those edges make the graph bleed
+ * through the chrome, so the route makes its controls solid. */
+.explorer-shell [class~='sm:bg-panel/90'],
+.explorer-shell [class~='sm:bg-panel/95'] {
+  background-color: var(--panel) !important;
 }
 
 /*

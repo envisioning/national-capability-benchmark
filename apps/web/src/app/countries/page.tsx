@@ -21,7 +21,7 @@ export const dynamic = 'force-dynamic'
 export const metadata = {
   title: 'Countries, NCB',
   description:
-    'Every country in the benchmark as a nine-dimension shape, with the confidence behind each score.',
+    'Nine-dimension profiles for every country in the benchmark, with the confidence behind each score.',
 }
 
 export default async function CountriesPage() {
@@ -34,18 +34,18 @@ export default async function CountriesPage() {
 
   return (
     <>
-      <PageTitle>Every country as a shape</PageTitle>
+      <PageTitle>Country profiles</PageTitle>
       <Headline>
-        Nine capability scores read together. Two countries with the same average can have
-        completely different shapes, so the benchmark publishes no single number.
+        Each profile shows nine capability scores together. Two countries can have the same average
+        and very different profiles, so the benchmark does not publish an overall score.
       </Headline>
       <p className="mb-10 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-        Open a country for its indicator rows, its trend and its agenda. To read a few countries
-        against each other, put{' '}
+        Open a country to see its indicator rows, trend, and agenda. To compare a few countries,
+        put{' '}
         <Link href={compareBaseHref} className="underline underline-offset-4">
           up to four side by side
         </Link>
-        . To take one capability across the whole set, the{' '}
+        . To compare one capability across the full set, the{' '}
         <Link href={capabilitiesHref} className="underline underline-offset-4">
           capabilities directory
         </Link>{' '}
@@ -53,8 +53,8 @@ export default async function CountriesPage() {
       </p>
 
       <Section
-        title="Same average, different shape"
-        hint="Scores run 0 to 100 using all countries as the frame. There is no composite, so countries with the same average can have different profiles."
+        title="Different profiles, same average"
+        hint="Each score runs from 0 to 100, using all countries to set the comparison frame. The benchmark has no composite score, so countries with the same average can still have different profiles."
       >
         <DimensionLegend />
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">

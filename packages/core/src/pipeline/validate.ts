@@ -288,6 +288,30 @@ export async function validateDelphiRuns(dir = DELPHI_DIR): Promise<Problem[]> {
       }
     }
 
+    if (run.failedCalls && run.failedCalls > 0) {
+      problems.push({
+        file,
+        severity: 'warning',
+        problem: `${run.failedCalls} of ${run.attemptedCalls ?? 0} provider calls failed: affected cells carry fewer panelists and their IQR understates disagreement`,
+      })
+    }
+
+    const perCell = new Map<string, Set<string>>()
+    for (const e of run.cellEstimates) {
+      const key = `${e.iso3}|${e.dimension}|${e.round}`
+      const seen = perCell.get(key) ?? new Set<string>()
+      seen.add(e.panelist)
+      perCell.set(key, seen)
+    }
+    const short = [...perCell.values()].filter((seen) => seen.size < run.panel.length).length
+    if (short > 0 && run.panel.length > 1) {
+      problems.push({
+        file,
+        severity: 'warning',
+        problem: `${short} cell-round(s) have fewer than the declared ${run.panel.length} panelists`,
+      })
+    }
+
     if (isEvidential(run.provenance) && !isPanel(run)) {
       problems.push({
         file,

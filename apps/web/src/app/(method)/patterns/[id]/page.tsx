@@ -112,7 +112,7 @@ export default async function PatternPage({ params }: { params: Promise<{ id: st
 
       {sameIndicator.length > 0 ? (
         <Section
-          title="The same gap elsewhere"
+          title="The same indicator elsewhere"
           icon={<Icon name={dimension ? DIMENSION_ICON[dimension] : 'layers'} size={22} />}
           hint={`${sameIndicator.length} ${sameIndicator.length === 1 ? 'delivery' : 'deliveries'} linked to ${def?.name ?? record.indicatorId} in other countries.`}
         >

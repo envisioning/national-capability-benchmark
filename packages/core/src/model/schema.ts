@@ -383,6 +383,16 @@ export const DelphiRunFile = z.object({
   promptVersion: z.string().optional(),
   panel: z.array(z.object({ panelist: z.string(), model: z.string(), stance: z.string() })),
   rounds: z.number().int(),
+  /** Provider calls attempted across every round and the audit. */
+  attemptedCalls: z.number().int().optional(),
+  /**
+   * Provider calls that failed after retries. A failed call is dropped and the
+   * run continues, so the cells it covered carry fewer panelists than the panel
+   * declares. A shorter list narrows the IQR, and IQR is the dissent signal, so
+   * a partial failure reads as agreement unless this number is published beside
+   * it. See D106.
+   */
+  failedCalls: z.number().int().optional(),
   cellEstimates: z.array(DelphiCellEstimate),
   indicatorJudgements: z.array(DelphiIndicatorJudgement),
 })

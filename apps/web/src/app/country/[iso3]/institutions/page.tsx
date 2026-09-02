@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { InstitutionsView } from '@/components/views/InstitutionsView'
 import { Empty, Eyebrow, Headline, Note, PageTitle } from '@/components/ui'
 import { loadInstitutionNetwork } from '@/lib/data'
-import { institutionGraphHref } from '@/lib/links'
+import { institutionGraphDatasetHref } from '@/lib/links'
 
 export const dynamic = 'force-dynamic'
 
@@ -58,7 +58,7 @@ export default async function CountryInstitutionsPage({
         {network.scope} The map explains functions and relationships. It does not measure performance or change NCB scores. There are {network.nodes.length} institutions and {network.edges.length} relationships, each with a source.
       </p>
       <p className="mb-12 max-w-3xl text-lg leading-relaxed">
-        <Link href={institutionGraphHref} className="underline underline-offset-2">
+        <Link href={institutionGraphDatasetHref(iso3)} className="underline underline-offset-2">
           See the same map drawn as a network
         </Link>
         . The network shows one institution's neighbourhood at a time. Which way each relation runs,

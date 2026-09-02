@@ -158,8 +158,8 @@ export function CompareBoard({ countries }: { countries: CountryResult[] }) {
   return (
     <>
       <Section
-        title="Each shape against the reference"
-        hint="The reference country is drawn as an outline behind every other card, so each card answers the same question: where does this country leave the reference. The nine axes are in the same order on every chart."
+        title="Each country compared with the reference"
+        hint="The reference country appears as an outline behind each comparison card. The nine axes stay in the same order, so each card shows how that country differs from the reference."
       >
         <div
           className={`grid grid-cols-1 gap-8 sm:grid-cols-2 ${shapeGridColumns(countries.length)}`}
@@ -173,8 +173,8 @@ export function CompareBoard({ countries }: { countries: CountryResult[] }) {
       </Section>
 
       <Section
-        title="Capability scores, side by side"
-        hint="Scores run 0 to 100 against all countries in the comparison frame, so a gap of 10 points means the same thing on every row. The number under each score is the distance from the reference."
+        title="Capability scores side by side"
+        hint="Scores run from 0 to 100 against all countries in the comparison frame, so a 10-point gap has the same meaning in every row. The number under each score is the distance from the reference."
       >
         <ScoreLegend />
         <Scroller>
@@ -229,7 +229,7 @@ export function CompareBoard({ countries }: { countries: CountryResult[] }) {
 
       <Section
         title="Confidence in each score"
-        hint="Confidence is coverage times recency times source quality. It never enters the score above, and a country can lead a row on a thinner evidence base than the country beside it."
+        hint="Confidence combines coverage, recency, and source quality. It never changes the score, and a country can lead a row with thinner evidence than the country beside it."
       >
         <ConfidenceLegend />
         <Scroller>
@@ -263,7 +263,7 @@ export function CompareBoard({ countries }: { countries: CountryResult[] }) {
 
       <Section
         title="Which way each country is moving"
-        hint="A trend is measured on the indicators observed at both ends of the span, which is a smaller basket than the score. The basket size is printed beside each change, and two countries can be on different baskets in the same row."
+        hint="A trend uses only indicators observed at both ends of the span, so it may cover fewer indicators than the score. The number of matched indicators appears beside each change, and countries can use different sets in the same row."
       >
         <Scroller>
           <Table>
@@ -310,7 +310,7 @@ export function CompareBoard({ countries }: { countries: CountryResult[] }) {
 
       <Section
         title="The indicators behind those rows"
-        hint="The chip is the indicator normalized onto the 0 to 100 frame, so higher is better on every row whatever the unit does. The published value and its year sit under it. A row with no dataset is a declared gap and lowers confidence for every country at once."
+        hint="The chip shows the indicator normalized to the 0 to 100 frame, so higher always means better, regardless of the original unit. The published value and year appear below it. A row without a dataset is a declared gap and lowers confidence for every country."
       >
         {DIMENSIONS.map((d) => {
           const rows = indicatorRows(d)

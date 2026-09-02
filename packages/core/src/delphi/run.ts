@@ -48,10 +48,23 @@ type CellJob = {
   dimensions: Dimension[]
 }
 
-/** Bounded-concurrency map. Keeps the panel from opening 40 sockets at once. */
+/** Attempted and failed provider calls, accumulated across every pool() call. */
+type CallTally = { attempted: number; failed: number }
+
+/**
+ * Bounded-concurrency map. Keeps the panel from opening 40 sockets at once.
+ *
+ * A call that throws after the provider's own retries is dropped and the run
+ * continues, because losing one panelist on one country should not cost the
+ * other 460 calls. The tally is what makes that safe: without it a run that
+ * lost a vendor to rate limiting writes a file that looks complete, with a
+ * narrower IQR on the affected cells and therefore less apparent dissent. See
+ * D106.
+ */
 async function pool<T, R>(
   items: T[],
   limit: number,
+  tally: CallTally,
   fn: (item: T, index: number) => Promise<R>,
 ): Promise<Array<R | null>> {
   const out = new Array<R | null>(items.length).fill(null)
@@ -60,10 +73,12 @@ async function pool<T, R>(
     for (;;) {
       const i = next++
       if (i >= items.length) return
+      tally.attempted++
       try {
         out[i] = await fn(items[i] as T, i)
       } catch (err) {
         out[i] = null
+        tally.failed++
         console.error(`  ! ${err instanceof Error ? err.message : String(err)}`)
       }
     }
@@ -82,6 +97,7 @@ export async function runDelphi(
       : results
   const log = opts.onProgress ?? (() => {})
 
+  const tally: CallTally = { attempted: 0, failed: 0 }
   const cellEstimates: DelphiCellEstimate[] = []
   const jobs: CellJob[] = targets.flatMap((result) => {
     const dimensions = delphiDimensions(result, opts.maxCoverage)
@@ -115,7 +131,7 @@ export async function runDelphi(
       )
     })
 
-    const answers = await pool(jobs, opts.concurrency, async (job, i) =>
+    const answers = await pool(jobs, opts.concurrency, tally, async (job, i) =>
       opts.provider.cellScores(job.panelist, prompts[i] as string),
     )
 
@@ -138,7 +154,10 @@ export async function runDelphi(
         })
       }
     })
-    log(`round ${round}: ${cellEstimates.filter((e) => e.round === round).length} estimates recorded`)
+    log(
+      `round ${round}: ${cellEstimates.filter((e) => e.round === round).length} estimates recorded` +
+        (tally.failed > 0 ? `, ${tally.failed} call(s) failed so far` : ''),
+    )
   }
 
   const indicatorJudgements: DelphiIndicatorJudgement[] = []
@@ -147,7 +166,7 @@ export async function runDelphi(
       opts.panel.map((panelist) => ({ dimension, panelist })),
     )
     log(`indicator audit: ${auditJobs.length} calls`)
-    const audits = await pool(auditJobs, opts.concurrency, async (job) =>
+    const audits = await pool(auditJobs, opts.concurrency, tally, async (job) =>
       opts.provider.indicatorJudgements(job.panelist, indicatorJudgementPrompt(job.panelist, job.dimension)),
     )
     audits.forEach((audit, i) => {
@@ -193,6 +212,8 @@ export async function runDelphi(
       stance: p.stance.label,
     })),
     rounds: opts.rounds,
+    attemptedCalls: tally.attempted,
+    failedCalls: tally.failed,
     cellEstimates: cellEstimates.map((e) => ({ ...e, model: modelFor(e.model) })),
     indicatorJudgements: indicatorJudgements.map((j) => ({ ...j, model: modelFor(j.model) })),
   }

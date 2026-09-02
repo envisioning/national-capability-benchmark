@@ -22,6 +22,12 @@ for Coordination, Trust, Building and Shared Purpose.
 - **Two dimensions cross a band.** Coordination and Shared Purpose move from
   very thin to thin. Trust stays very thin: it rests on two observed rows.
 
+## App 1.9.1 — 2026-09-02
+
+- **The institution network chrome is solid and deterministic.** The
+  Envisioning panel aliases now resolve inside the route-owned theme, and the
+  dense network toolbar no longer lets graph lines bleed through its controls.
+
 ## App 1.9.0 — 2026-09-02
 
 - **The indicator registry can be read as lanes.** A new page at `/explore`
@@ -46,6 +52,35 @@ for Coordination, Trust, Building and Shared Purpose.
   of the benchmarked countries belong to it and whether the country being read
   does. Nothing in the ledger enters a score or a confidence. See D107.
 
+## App 1.7.0 — 2026-09-01
+
+- **The institution map can be read as a network.** A new page at `/network`
+  draws Brazil's institutions and the relations between them, opening on one
+  institution's neighbourhood rather than on the whole graph. Both institution
+  pages link to it.
+- **The relation ledger is still where a relation is read.** A drawn line shows
+  that two institutions are connected and which family the relation belongs to.
+  Which way it runs, and the verb that names it, stay on the institution page.
+
+## App 1.6.3 — 2026-08-31
+
+Panel run path, ahead of the first gateway run.
+
+- **A run no longer activates itself.** A full-frame run used to replace
+  `latest.json` whether or not `--activate` was passed, which put an unreviewed
+  panel behind every Delphi surface the moment it finished. Activation is now
+  always explicit.
+- **Failed provider calls are counted and published.** A call that fails after
+  retries is still dropped so the run survives, but `attemptedCalls` and
+  `failedCalls` now travel on the run file, the command prints a warning, and
+  `bench validate` reports both the failure count and any cell-round that came
+  back with fewer panelists than the panel declares.
+- **The default panel is four distinct vendors.** Mistral joins Anthropic,
+  OpenAI and Google. The previous three-model default dealt one vendor two
+  stances.
+- **Panel prices come from the gateway.** The pricing table is read from the
+  gateway's public model list, which states the rate a run is billed at, so no
+  panel model carries an unverified price. See D106.
 ## App 1.6.2 — 2026-09-01
 
 - **The charts draw from one set of weights and shades.** The radar, the flag

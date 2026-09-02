@@ -1,15 +1,19 @@
 /**
- * Published list prices, US dollars per million tokens.
+ * Prices the gateway charges, US dollars per million tokens.
  *
- * These are first-party vendor rates. The panel runs through the Vercel AI
- * Gateway, which may apply its own margin, and vendors change prices. Treat this
- * table as an estimate input, not as a bill.
+ * These are read from https://ai-gateway.vercel.sh/v1/models, which is public,
+ * needs no key, and states the rate the panel is actually billed at. That is a
+ * better source than a vendor pricing page, because the run does not go to the
+ * vendor. Every entry below was checked against that endpoint on LAST_VERIFIED.
  *
- * Re-verify against the vendor pricing pages and update `LAST_VERIFIED` when you
- * do. A stale price here produces a confident wrong number, which is worse than
- * no number.
+ * Re-verify and update `LAST_VERIFIED` when you change the panel:
+ *
+ *   curl -s https://ai-gateway.vercel.sh/v1/models
+ *
+ * A stale price here produces a confident wrong number, which is worse than no
+ * number.
  */
-export const LAST_VERIFIED = '2026-08-26'
+export const LAST_VERIFIED = '2026-08-31'
 
 export type Price = { input: number; output: number; verified: boolean }
 
@@ -17,9 +21,9 @@ export const PRICES: Record<string, Price> = {
   'anthropic/claude-opus-5': { input: 5, output: 25, verified: true },
   'anthropic/claude-sonnet-5': { input: 3, output: 15, verified: true },
   'anthropic/claude-haiku-4-5': { input: 1, output: 5, verified: true },
-  // Not verified from inside this repo. Check the vendor pricing page before quoting.
-  'openai/gpt-5': { input: 1.25, output: 10, verified: false },
-  'google/gemini-2.5-pro': { input: 1.25, output: 10, verified: false },
+  'openai/gpt-5': { input: 1.25, output: 10, verified: true },
+  'google/gemini-2.5-pro': { input: 1.25, output: 10, verified: true },
+  'mistral/mistral-medium-3.5': { input: 1.5, output: 7.5, verified: true },
 }
 
 /** Fallback used when a model id is not in the table. Deliberately Opus-tier. */

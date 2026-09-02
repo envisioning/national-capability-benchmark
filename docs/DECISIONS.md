@@ -4691,7 +4691,6 @@ normalization frame, or that the version boundary hides a published-shape change
 would justify revising the release classification in a later decision.
 
 ---
-
 ## D103 — Every chart draws from one set of weights and shades
 
 *Recorded 2026-09-01. Extends D81 to the charts.*
@@ -4751,6 +4750,114 @@ pixel, which would make an absolute scale wrong rather than merely coarse and
 would want the weights expressed as a ratio of the field; or evidence that a
 reader distinguishes fewer than five weights on these surfaces, which would
 shorten the scale rather than lengthen it.
+
+---
+
+## D104 — The drawn network is mounted in this repository, and the ledger stays authoritative
+
+*Recorded 2026-09-01. Supersedes the deployment clause of D82. Keeps everything
+else D82 recorded: the projection, the feed, the drawable rule and the ledger's
+primacy.*
+
+**Choice.** `@envisioning/app` is a dependency of `apps/web`, and the drawn
+network is mounted at `/network`, reading the same feed `bench institutions`
+writes. `/api/institutions/{ISO3}` still publishes that feed, now for readers
+outside this deployment rather than for the drawing itself.
+
+The route is a leaf. The library brings its own header, menu and URL grammar,
+so `/network` is reached from a link on each institution page and is not a node
+in the navigation tree D73 and D80 describe. Its stylesheet is imported in the
+route's own layout, so it loads there and nowhere else, and `theme.css` restates
+NCB's tokens in the shape the library reads rather than sampling its palette.
+
+**Why.** D82 put the drawing outside the repository because this repository is
+public and the library is not, so an in-repo dependency makes the viewer
+uninstallable for anyone without an Envisioning token. That cost was stated and
+accepted deliberately: one deployment is simpler to keep in step than two, and
+the project's contributors today are the people who have the token.
+
+**Cost.** This is the real one, and it is not small.
+
+An outside contributor cannot run `pnpm install` at all. The failure is not
+scoped to `/network`: it is the whole workspace, and the error is a 401 with no
+explanation of what to do about it. `CONTRIBUTING.md` describes a build that a
+reader of the public repository cannot perform.
+
+The dependency adds 246 packages to a repository that previously depended on
+Next, React and its own core, including d3, zustand, three Radix packages and
+the AI SDK. `/network` is a 519 kB first load against roughly 150 kB for every
+other route.
+
+The peer dependency is an exact pin, `react@19.2.4`, and this repository
+resolves 19.2.8. pnpm reports it as an unmet peer on every install. Nothing
+fails today, and a future release of either side can turn that warning into a
+break.
+
+Deployment needs the token too. Vercel has no `.npmrc` for a private scope
+unless one is provided, so the build fails there until an `NPM_RC` environment
+variable carries the registry line and a token that has not expired.
+
+**Overturned by.** A contributor outside Envisioning who cannot build the
+project, which is the failure this trades away and the one that should reverse
+it. Or `@envisioning/app` published to a public registry, which removes the
+whole cost. Or the drawing earning its own deployment for another reason, which
+would return to what D82 described without needing this entry.
+
+---
+## D106 — The panel is four vendors, activation is explicit, and lost calls are counted
+
+*Recorded 2026-08-31. Extends D12, D13 and D14. Governs the first gateway run.*
+
+**Choice.** Three changes to the Delphi run path, taken together because they
+are the same failure: a panel that looks stronger than it is.
+
+1. **Four distinct vendors, one per stance.** `DEFAULT_MODELS` gains
+   `mistral/mistral-medium-3.5` beside Anthropic, OpenAI and Google. `buildPanel`
+   deals models round-robin across four stances, so the previous three-model
+   default gave `anthropic/claude-opus-5` both the Institutionalist and the
+   Execution realist seat. Half the panel was one model arguing with itself, and
+   nothing in the run file said so.
+2. **Activation is always explicit.** A run with `--max-coverage 1` over the full
+   country set used to set `activate` true whether or not the flag was passed,
+   replacing `latest.json` the moment the run finished. `docs/PANEL.md` and
+   `docs/RESEARCH-ROADMAP.md` both say to activate after review. The code now
+   agrees with them.
+3. **Failed calls are counted and published.** A provider call that fails after
+   retries is still dropped so one vendor timing out does not cost the other 459
+   calls. `attemptedCalls` and `failedCalls` now travel on the run file, the
+   command warns, and `bench validate` reports the count and any cell-round that
+   came back with fewer panelists than the panel declares.
+
+The pricing table is also read from the gateway's public model list rather than
+from vendor pricing pages, so no panel model carries an unverified price.
+
+**Why.** D12 makes the interquartile range the dissent signal, and dissent above
+25 points is how this project finds likely mismeasurement. Every one of the
+three defects narrows that range without narrowing the disagreement it is
+supposed to measure. Two stances on one model agree more than two vendors would.
+A run that lost a vendor to rate limiting returns cells scored by three
+panelists instead of four, and a shorter list has a smaller IQR. An unreviewed
+run reaching `latest.json` publishes both artefacts before anyone can see them.
+A partial failure therefore reads as consensus, which is the one reading the
+panel must never produce by accident.
+
+D13 says cost is not the constraint at this scale, so widening the panel to four
+vendors is not a budget question. The gateway list gives the fourth vendor at
+$1.50 and $7.50 per million tokens.
+
+**Cost.** `pnpm bench delphi` no longer activates anything on its own, so an
+operator who relied on the old behaviour must add `--activate` after review.
+`DelphiRunFile` gains two optional fields; existing runs parse unchanged and
+report nothing, which is correct, because a run written before this change has
+no failure record to publish. Model ids still have to be checked against the
+gateway before a run: the endpoint is public and needs no key, but a stale id
+still fails a whole panelist, and that failure is now counted rather than
+silent.
+
+**Overturned by.** Evidence that stance and vendor are not separable, which
+would make the round-robin deal the wrong unit; or a provider contract that
+makes a dropped call recoverable, which would let the run retry rather than
+record.
 
 ---
 
@@ -4916,3 +5023,35 @@ the encodings need a legend the field does not carry or the drawing needs to
 go. Or the lane picture of the institution map being built and the two
 components diverging, which would mean the projection was not general enough
 and the second drawing should have been a data change.
+
+---
+
+## D109 — The mounted network owns a deterministic, opaque theme boundary
+
+*Recorded 2026-09-02. Extends D103 and D104.*
+
+**Choice.** The `/network` leaf pins `@envisioning/app` to the dark theme in
+its own layout. Its route stylesheet maps the NCB palette to the library's
+surface tokens and repeats the library's `--color-*` aliases inside the shell.
+The dense network toolbar's `sm:bg-panel/90` and `sm:bg-panel/95` surfaces are
+solid on this route; the graph drawing itself is unchanged.
+
+**Why.** The library declares its Tailwind aliases at `:root` as values such
+as `var(--panel)`. NCB had supplied `--panel` only on `.explorer-shell`, so
+the alias was resolved at the root before the shell could provide its value.
+The library's nominally solid `bg-panel` surfaces consequently computed as
+transparent, and its intentionally translucent toolbar let graph lines bleed
+through the controls. Event-bff demonstrates the required boundary by pinning
+its map to a real `.light` wrapper; the network keeps NCB's dark graph palette
+but follows the same ownership rule.
+
+**Cost.** The network has a stable dark presentation rather than inheriting the
+host OS preference. The adapter depends on the library's current token names
+and toolbar class names, so a library upgrade needs a surface check. A future
+visualization can choose a different chrome policy, but it must document that
+choice at its own route boundary.
+
+**Overturned by.** `@envisioning/app` exposing a supported scoped-theme API and
+an opaque network-toolbar option, which would remove the route adapter; or
+evidence that the graph is more legible when its controls are translucent,
+which would justify restoring alpha for this visualization.

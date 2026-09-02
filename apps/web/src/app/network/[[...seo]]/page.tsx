@@ -22,13 +22,24 @@ export const dynamic = 'force-dynamic'
 
 const BASE_PATH = '/network'
 
-/** The only mapped country today. A second one makes this a path segment. */
-const ISO3 = INSTITUTION_MAPS[0] ?? 'BRA'
+/** The default dataset is the first one declared as published. */
+const DEFAULT_DATASET = INSTITUTION_MAPS[0] ?? null
+
+/** Keep dataset selection on the published-map registry, never in a filename. */
+function readDataset(value: string | string[] | undefined): string | null {
+  const requested = Array.isArray(value) ? value[0] : value
+  const candidate = requested?.toUpperCase()
+  if (candidate && INSTITUTION_MAPS.includes(candidate)) return candidate
+  return DEFAULT_DATASET
+}
 
 /** The app's locale ids, mapped onto the lexicons the feed is written for. */
 const FEED_LANG: Record<string, Lang> = { en: 'en', pt: 'pt-BR' }
 
-type Props = { params: Promise<{ seo?: string[] }> }
+type Props = {
+  params: Promise<{ seo?: string[] }>
+  searchParams: Promise<Record<string, string | string[] | undefined>>
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { seo = [] } = await params
@@ -36,15 +47,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return generateSEO({ pageId: page, currentLang: lang, config })
 }
 
-export default async function NetworkPage({ params }: Props) {
+export default async function NetworkPage({ params, searchParams }: Props) {
   const { seo = [] } = await params
   const { lang = 'en' } = parsePath(seo.join('/'), BASE_PATH)
-  const data = await loadInstitutionExplorer(ISO3, FEED_LANG[lang] ?? 'en')
+  const query = await searchParams
+  const dataset = readDataset(query.dataset)
+  const data = dataset
+    ? await loadInstitutionExplorer(dataset, FEED_LANG[lang] ?? 'en')
+    : null
 
   if (!data) {
     return (
       <p className="p-12 text-lg">
-        The institution feed has not been generated. Run <code>pnpm bench institutions</code>.
+        The selected institution feed has not been generated. Run{' '}
+        <code>pnpm bench institutions</code>.
       </p>
     )
   }
