@@ -1,5 +1,5 @@
 import type {
-  InstitutionNetworkFile,
+  InstitutionNetwork,
   LocalizedInstitutionNetwork,
 } from '../model/institutions.js'
 import type { Lang } from './types.js'
@@ -109,6 +109,22 @@ const SUMMARIES: Record<string, string> = {
   'bra.pa.fazenda': 'Coordena a administração tributária e a gestão financeira do Pará.',
 }
 
+/**
+ * The global ledger's own prose in Portuguese. A global body is attached to a
+ * country's map by id, so its Portuguese summary is one entry here and never a
+ * copy in a country's list.
+ */
+const GLOBAL_SUMMARIES: Record<string, string> = {
+  'global.un': 'Organização intergovernamental fundada em 1945 e reunindo 193 Estados-membros; define normas, coordena ação coletiva e mantém o sistema estatístico e os programas de que os países participam.',
+  'global.undp': 'Programa das Nações Unidas presente em cerca de 170 países; financia e assessora reformas da administração pública e publica o Índice de Desenvolvimento Humano.',
+  'global.world_bank': 'Banco multilateral de desenvolvimento com 189 países-membros; empresta a governos nacionais e subnacionais e publica diagnósticos e dados por país.',
+  'global.imf': 'Instituição monetária multilateral de participação quase universal; avalia as políticas econômicas de cada membro nas consultas do Artigo IV e empresta em crises de balanço de pagamentos.',
+  'global.oecd': 'Organização intergovernamental de 38 Estados-membros; produz padrões, revisões por pares e estatísticas comparáveis sobre políticas públicas.',
+  'global.wto': 'Organização intergovernamental que administra as regras do comércio internacional e resolve disputas entre eles.',
+  'global.who': 'Agência das Nações Unidas para a saúde, com 194 Estados-membros; define normas sanitárias e coordena a resposta a emergências de saúde.',
+  'global.ilo': 'Agência tripartite das Nações Unidas com 187 Estados-membros; fixa normas internacionais do trabalho e produz estatísticas do trabalho.',
+}
+
 const STATE_LABELS_PT_BR: Record<string, string> = {
   'BR-AC': 'Acre',
   'BR-AL': 'Alagoas',
@@ -138,7 +154,7 @@ const STATE_LABELS_PT_BR: Record<string, string> = {
   'BR-TO': 'Tocantins',
 }
 
-function stateSummary(node: InstitutionNetworkFile['nodes'][number]): string | undefined {
+function stateSummary(node: InstitutionNetwork['nodes'][number]): string | undefined {
   const state = STATE_LABELS_PT_BR[node.jurisdictionCode]
   if (!state) return undefined
   if (node.id.endsWith('.government')) {
@@ -175,7 +191,7 @@ function stateSummary(node: InstitutionNetworkFile['nodes'][number]): string | u
 }
 
 export function localizeInstitutionNetworkPtBr(
-  network: InstitutionNetworkFile,
+  network: InstitutionNetwork,
 ): LocalizedInstitutionNetwork {
   return {
     ...network,
@@ -183,7 +199,8 @@ export function localizeInstitutionNetworkPtBr(
       'Primeiro recorte da infraestrutura institucional brasileira: âncoras constitucionais, órgãos de controle e organizações que concentram financiamento, dados, formação, ciência, tecnologia e capacidade de entrega. São Paulo é o piloto subnacional.',
     nodes: network.nodes.map((node) => ({
       ...node,
-      summary: SUMMARIES[node.id] ?? stateSummary(node) ?? node.summary,
+      summary:
+        GLOBAL_SUMMARIES[node.id] ?? SUMMARIES[node.id] ?? stateSummary(node) ?? node.summary,
     })),
   }
 }
@@ -197,9 +214,18 @@ export function localizeInstitutionNetworkPtBr(
  * English ground layer, which is what a partial lexicon is meant to do.
  */
 export function localizeInstitutionNetwork(
-  network: InstitutionNetworkFile,
+  network: InstitutionNetwork,
   lang: Lang,
 ): LocalizedInstitutionNetwork {
   if (lang === 'pt-BR' && network.iso3 === 'BRA') return localizeInstitutionNetworkPtBr(network)
+  if (lang === 'pt-BR') {
+    return {
+      ...network,
+      nodes: network.nodes.map((node) => ({
+        ...node,
+        summary: GLOBAL_SUMMARIES[node.id] ?? node.summary,
+      })),
+    }
+  }
   return { ...network, nodes: network.nodes.map((node) => ({ ...node })) }
 }

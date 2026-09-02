@@ -83,6 +83,36 @@ distinct institutional function rather than treating every security body as a
 court or a ministry. Its occupants remain country-specific, so another country
 can use a different legal arrangement without changing the schema.
 
+## Bodies no country owns
+
+The United Nations, its programmes and agencies, the multilateral lenders and
+the intergovernmental standard setters belong to no country. They live once,
+in `data/institutions/global.json`, and never in a country file. A global node
+has the same shape as a country node, at the level `global`, with an id that
+starts with `global.` and a `members` field: the registry codes of the
+benchmarked countries that belong to it, sourced from the body's own member
+list. A programme with no membership omits the field.
+
+A country map reaches a global body by id in an edge. That edge lives in the
+country file, because a relation between a global body and a national
+institution is a fact about the country and carries a source of its own:
+UNDP delivers the Atlas of Human Development with Ipea, so the edge is in
+Brazil's file. An edge between two global bodies, such as a programme attached
+to the UN, lives in the ledger.
+
+Before anything renders, `attachGlobalInstitutions` joins the two: every body
+the country's edges name and every body that lists the country as a member
+enters the country's network at the global level, and a ledger edge comes along
+only when both of its ends are attached. Membership renders as a line on the
+body's profile. It never enters a score or a confidence. See D107.
+
+A body enters the ledger under the same rules as any other organisation, read
+from the country's side: it funds, regulates, trains, produces evidence for or
+delivers with a national institution, or a benchmarked country is a member of
+it. A regional body, such as a development bank that serves one continent,
+also belongs to no country and can enter the ledger; the decision log records
+that a rule for regional bodies is not yet written.
+
 ## Coverage is a claim
 
 Each file declares its territorial coverage. `baseline` means the national
@@ -146,5 +176,8 @@ they never enter a score or confidence calculation.
 
 Run `pnpm bench validate` after editing an institutional network. The validator
 checks the schema, duplicate ids, missing endpoints, self-relations, duplicate
-coverage areas and orphaned nodes. A valid file can still be wrong about the
+coverage areas and orphaned nodes. It also checks the global ledger: every
+member is a registry code, no country file mints a `global.` id, a country edge
+naming a global body resolves against the ledger, and no country edge joins
+two global bodies. A valid file can still be wrong about the
 world. Read each cited source before changing a competency or relationship.

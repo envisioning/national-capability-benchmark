@@ -83,6 +83,10 @@ port 3888. That entry starts Next directly and does not use the proxy.
   `--snapshot`.
 - `data/delphi` — one file per panel run, plus `latest.json`, which is a pointer
   to the active run rather than an archive. Keep the original alongside it.
+- `data/institutions` — one country map per ISO3, plus `global.json`, the
+  ledger of bodies no country owns. A country file never holds a global node:
+  it reaches one by id in an edge, and `attachGlobalInstitutions` joins the
+  two before anything renders. See D107.
 - `data/evidence` — evidence records: documented deliveries filed against
   indicators that have no dataset. Never scored. Inclusion rule and authoring
   guide in `docs/EVIDENCE.md`. See D20.
@@ -266,6 +270,20 @@ port 3888. That entry starts Next directly and does not use the proxy.
   carries a relation family and nothing else: direction and the 13 verbs stay
   in the ledger, which is still authoritative. Rerun the command after touching
   any `data/institutions/*.json`. See D82.
+- **A global body lives once, in `data/institutions/global.json`.** Its id
+  starts with `global.`, its level is `global`, and the validator rejects one
+  in a country file. A relation between a global body and a country's
+  institution is a fact about that country, so it lives in the country file;
+  a relation between two global bodies lives in the ledger. `members` is the
+  registry codes of the benchmarked countries that belong to the body, sourced
+  once there and never as 53 edges; a programme with no membership omits the
+  field. `attachGlobalInstitutions` in
+  `packages/core/src/pipeline/institutions.ts` is the only place a global node
+  enters a country's network: it attaches every body the country's edges name
+  or that lists the country as a member, and the viewer loader, the explorer
+  feed and the tests all call it. The agenda reads the country file alone,
+  because its links point at institutions the country can act through. See
+  D107.
 - The one whole-country picture is the system matrix, computed by
   `buildInstitutionMatrix` in `packages/core/src/pipeline/institutions.ts` and
   nowhere else. Its ramp is the three fixed breaks in `MATRIX_BANDS`, on the

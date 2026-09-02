@@ -1,7 +1,9 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import { DelphiRunFile, EvidenceFile, ObservationFile } from '../model/schema.js'
-import { InstitutionNetworkFile } from '../model/institutions.js'
+import { GlobalInstitutionLedger, InstitutionNetworkFile } from '../model/institutions.js'
+import type { InstitutionNetwork } from '../model/institutions.js'
+import { attachGlobalInstitutions } from './institutions.js'
 import type { EvidenceRecord, Observation } from '../model/schema.js'
 
 import type {
@@ -66,6 +68,38 @@ export async function loadInstitutionNetwork(
     throw new Error(`${path}: network country ${parsed.data.iso3} does not match ${iso3.toUpperCase()}`)
   }
   return parsed.data
+}
+
+/**
+ * The global ledger. Missing is an empty ledger, because a country map is
+ * complete without it; malformed is an error, for the same reason as above.
+ */
+export async function loadGlobalInstitutions(
+  path = FILES.institutionsGlobal,
+): Promise<GlobalInstitutionLedger | null> {
+  let raw: unknown
+  try {
+    raw = JSON.parse(await readFile(path, 'utf8'))
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === 'ENOENT') return null
+    throw new Error(`Cannot read global institution ledger ${path}: ${String(error)}`)
+  }
+  const parsed = GlobalInstitutionLedger.safeParse(raw)
+  if (!parsed.success) throw new Error(`${path}: ${parsed.error.message}`)
+  return parsed.data
+}
+
+/**
+ * One country's map with the global bodies it reaches attached: what every
+ * rendering surface reads. The agenda reads the file alone, because its links
+ * point at the institutions a country can act through. See D107.
+ */
+export async function loadAttachedInstitutionNetwork(
+  iso3: string,
+): Promise<InstitutionNetwork | null> {
+  const network = await loadInstitutionNetwork(iso3)
+  if (!network) return null
+  return attachGlobalInstitutions(network, await loadGlobalInstitutions())
 }
 
 export async function loadDelphi(path = FILES.delphiLatest): Promise<DelphiRunFile | null> {

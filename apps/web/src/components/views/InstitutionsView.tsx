@@ -2,12 +2,16 @@
 
 import { useCallback, useMemo, useRef, useState } from 'react'
 import {
+  COUNTRY_ISO3,
+  COUNTRY_NAMES,
   INSTITUTION_RELATION_FAMILIES,
   INSTITUTION_RELATION_FAMILY,
   INSTITUTION_SYSTEMS,
   MATRIX_BANDS,
   buildInstitutionMatrix,
   fill,
+  isGlobalInstitution,
+  isGlobalInstitutionId,
   matrixBand,
 } from '@ncb/core'
 import type {
@@ -514,17 +518,42 @@ export function InstitutionsView({
     () => network.coverage.filter((area) => area.level === 'state'),
     [network.coverage],
   )
+  /* Which jurisdictions each global body reaches through a relation. A global
+   * body sits beside the union everywhere, and beside a state only when one of
+   * its relations lands there, so a scaffold state's view is not 10 state
+   * bodies under a ring of 8 global ones. */
+  const globalReach = useMemo(() => {
+    const reach = new Map<string, Set<string>>()
+    for (const edge of network.edges) {
+      for (const [self, other] of [
+        [edge.sourceId, edge.targetId],
+        [edge.targetId, edge.sourceId],
+      ] as const) {
+        if (!isGlobalInstitutionId(self)) continue
+        const code = byId.get(other)?.jurisdictionCode
+        if (!code) continue
+        if (!reach.has(self)) reach.set(self, new Set())
+        reach.get(self)!.add(code)
+      }
+    }
+    return reach
+  }, [network.edges, byId])
   const scopedNodes = useMemo(
     () =>
       network.nodes.filter((node) => {
-        if (jurisdiction === 'BR') return node.level === 'federal'
+        if (node.level === 'federal') return true
+        if (jurisdiction === 'BR') return node.level === 'global'
+        if (node.level === 'global') {
+          return [...(globalReach.get(node.id) ?? [])].some(
+            (code) => code === jurisdiction || code.startsWith(`${jurisdiction}-`),
+          )
+        }
         return (
-          node.level === 'federal' ||
           node.jurisdictionCode === jurisdiction ||
           node.jurisdictionCode.startsWith(`${jurisdiction}-`)
         )
       }),
-    [network.nodes, jurisdiction],
+    [network.nodes, jurisdiction, globalReach],
   )
   const scopedIds = useMemo(() => new Set(scopedNodes.map((node) => node.id)), [scopedNodes])
   const scopedEdges = useMemo(
@@ -719,6 +748,15 @@ export function InstitutionsView({
           </p>
           <h2 className="mt-2 text-2xl font-light sm:text-3xl">{selected.officialName}</h2>
           <p className="mt-3 text-lg leading-relaxed">{selected.summary}</p>
+          {isGlobalInstitution(selected) && selected.members ? (
+            <p className="mt-3 text-xs text-[var(--muted)]">
+              <span className="font-medium">{s.membersHeading}:</span>{' '}
+              {fill(s.memberCount, { n: selected.members.length, total: COUNTRY_ISO3.length })}.{' '}
+              {fill(selected.members.includes(network.iso3) ? s.memberHere : s.notMemberHere, {
+                country: lex.countries[network.iso3] ?? COUNTRY_NAMES[network.iso3] ?? network.iso3,
+              })}
+            </p>
+          ) : null}
         </div>
 
         <div className="mx-auto mt-8 grid max-w-3xl gap-6 border-y border-[var(--rule-soft)] py-5 sm:grid-cols-3">

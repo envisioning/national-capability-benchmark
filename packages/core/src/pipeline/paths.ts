@@ -31,6 +31,8 @@ export const FILES = {
   researchInventory: resolve(RESEARCH_DIR, 'inventory.json'),
   evidence: resolve(EVIDENCE_DIR, 'records.json'),
   institutionsBrazil: resolve(INSTITUTIONS_DIR, 'BRA.json'),
+  /** The bodies no country owns, held once and reached by id. See D107. */
+  institutionsGlobal: resolve(INSTITUTIONS_DIR, 'global.json'),
   index: resolve(OUT_DIR, 'index.json'),
   flatTable: resolve(OUT_DIR, 'table.csv'),
   diagnostics: resolve(OUT_DIR, 'diagnostics.json'),

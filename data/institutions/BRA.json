@@ -15773,6 +15773,44 @@
         "url": "https://www.pa.gov.br/orgao?id_orgao=11",
         "retrievedAt": "2026-08-30"
       }
+    },
+    {
+      "id": "undp-delivers_with-ipea",
+      "sourceId": "global.undp",
+      "targetId": "bra.federal.ipea",
+      "relation": "delivers_with",
+      "dimensions": [
+        "learning"
+      ],
+      "source": {
+        "title": "Atlas do Desenvolvimento Humano no Brasil, realização PNUD, Ipea e FJP",
+        "url": "http://www.atlasbrasil.org.br/",
+        "retrievedAt": "2026-09-02"
+      }
+    },
+    {
+      "id": "imf-provides_evidence_to-bcb",
+      "sourceId": "global.imf",
+      "targetId": "bra.federal.bcb",
+      "relation": "provides_evidence_to",
+      "dimensions": [],
+      "source": {
+        "title": "IMF, Brazil country page and Article IV consultations",
+        "url": "https://www.imf.org/en/Countries/BRA",
+        "retrievedAt": "2026-09-02"
+      }
+    },
+    {
+      "id": "ibge-provides_evidence_to-un",
+      "sourceId": "bra.federal.ibge",
+      "targetId": "global.un",
+      "relation": "provides_evidence_to",
+      "dimensions": [],
+      "source": {
+        "title": "Indicadores Brasileiros para os Objetivos de Desenvolvimento Sustentável, IBGE",
+        "url": "https://odsbrasil.gov.br/",
+        "retrievedAt": "2026-09-02"
+      }
     }
   ],
   "coverage": [

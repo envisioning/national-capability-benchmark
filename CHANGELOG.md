@@ -33,6 +33,19 @@ for Coordination, Trust, Building and Shared Purpose.
   diagnostics find redundant. Pointing at a dot reads it under the field, and
   the registry and the diagnostics pages both link to the drawing. See D108.
 
+## App 1.8.0 — 2026-09-02
+
+- **Bodies no country owns have a place.** A global ledger at
+  `data/institutions/global.json` holds the UN, its programmes and agencies,
+  the multilateral lenders and the intergovernmental standard setters, each
+  once, with the benchmarked countries that are members of it. A country map
+  reaches a body by id in a sourced relation, and the body then appears in
+  that country's institution pages and drawn network at the global level.
+  Brazil's map reaches UNDP, the IMF and the UN today.
+- **Membership is a fact about the body.** Each global profile states how many
+  of the benchmarked countries belong to it and whether the country being read
+  does. Nothing in the ledger enters a score or a confidence. See D107.
+
 ## App 1.6.1 — 2026-08-31
 
 - **Confidence values are compact.** Every confidence value uses one

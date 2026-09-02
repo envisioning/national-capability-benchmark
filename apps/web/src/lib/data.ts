@@ -3,9 +3,11 @@ import { readFile } from 'node:fs/promises'
 import { readdir } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import {
+  attachGlobalInstitutions,
   ChallengeRecord,
   SubnationalFile as SubnationalFileSchema,
   DelphiRunFile as DelphiRunFileSchema,
+  GlobalInstitutionLedger,
   INDICATORS,
   InstitutionNetworkFile,
   isScored,
@@ -16,6 +18,7 @@ import {
 import { DATA_DIR } from '@ncb/core/node'
 import type {
   CountryResult,
+  InstitutionNetwork,
   InstitutionExplorerFeed,
   Lang,
   ChallengeRecord as ChallengeRecordType,
@@ -60,6 +63,7 @@ const PATHS = {
   indicator: (id: string) => resolve(DATA_ROOT, 'out/indicators', `${id}.json`),
   institutions: (iso3: string) =>
     resolve(DATA_ROOT, 'institutions', `${iso3.toUpperCase()}.json`),
+  institutionsGlobal: resolve(DATA_ROOT, 'institutions', 'global.json'),
   institutionExplorer: (iso3: string, lang: string) =>
     resolve(DATA_ROOT, 'out/institutions', `${iso3.toUpperCase()}.${lang}.json`),
   subnational: (iso3: string, indicatorId: string) =>
@@ -266,7 +270,54 @@ export async function loadInstitutionNetwork(
     }
   }
 
-  return { network: parsed.data, error: null }
+  /* The global bodies this country reaches are attached here and nowhere
+   * else in the viewer, so every page renders the same network. A missing
+   * ledger is an empty one; a malformed ledger fails the page the way a
+   * malformed country file does. See D107. */
+  let ledgerText: string | null = null
+  try {
+    ledgerText = await readFile(PATHS.institutionsGlobal, 'utf8')
+  } catch (error) {
+    const code =
+      typeof error === 'object' && error !== null && 'code' in error
+        ? String(error.code)
+        : undefined
+    if (code !== 'ENOENT') {
+      return {
+        network: null,
+        error: { kind: 'read', message: 'data/institutions/global.json could not be read.' },
+      }
+    }
+  }
+  let ledger: GlobalInstitutionLedger | null = null
+  if (ledgerText !== null) {
+    let ledgerRaw: unknown
+    try {
+      ledgerRaw = JSON.parse(ledgerText) as unknown
+    } catch (error) {
+      return {
+        network: null,
+        error: {
+          kind: 'invalid_json',
+          message: `data/institutions/global.json is not valid JSON${error instanceof Error ? `: ${error.message}` : '.'}`,
+        },
+      }
+    }
+    const parsedLedger = GlobalInstitutionLedger.safeParse(ledgerRaw)
+    if (!parsedLedger.success) {
+      const issue = parsedLedger.error.issues[0]
+      return {
+        network: null,
+        error: {
+          kind: 'invalid_schema',
+          message: `data/institutions/global.json failed validation. ${issue ? `${issue.path.join('.') || 'root'}: ${issue.message}` : ''}`,
+        },
+      }
+    }
+    ledger = parsedLedger.data
+  }
+
+  return { network: attachGlobalInstitutions(parsed.data, ledger), error: null }
 }
 
 export type InstitutionNetworkError = {
@@ -275,7 +326,7 @@ export type InstitutionNetworkError = {
 }
 
 export type InstitutionNetworkLoad =
-  | { network: InstitutionNetworkFile; error: null }
+  | { network: InstitutionNetwork; error: null }
   | { network: null; error: InstitutionNetworkError }
 
 /**

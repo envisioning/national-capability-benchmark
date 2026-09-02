@@ -196,6 +196,17 @@ export type InstitutionStrings = {
   findSystem: string
   findJurisdiction: string
   nationalJurisdiction: string
+  /** The jurisdiction label of a body no country owns. */
+  globalJurisdiction: string
+  globalJurisdictionNote: string
+  /** Heading over a global body's membership line. */
+  membersHeading: string
+  /** {n} {total}: how many benchmarked countries belong to a global body. */
+  memberCount: string
+  /** {country} */
+  memberHere: string
+  /** {country} */
+  notMemberHere: string
   anyLevel: string
   anySystem: string
   /** {n} */

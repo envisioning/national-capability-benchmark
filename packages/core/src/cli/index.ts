@@ -67,6 +67,7 @@ import {
   checkEvidenceUrls,
   validateDelphiRuns,
   validateEvidence,
+  validateGlobalInstitutions,
   validateInstitutionNetwork,
   validateResearchRuns,
   validateSubnational,
@@ -961,6 +962,7 @@ Start with file 1.
         ...(await validateDelphiRuns()),
         ...(await validateEvidence()),
         ...(await validateResearchRuns()),
+        ...(await validateGlobalInstitutions()),
         ...(await validateInstitutionNetwork()),
         ...(await validateSubnational()),
       ]

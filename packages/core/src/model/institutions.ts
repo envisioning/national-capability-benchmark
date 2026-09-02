@@ -7,8 +7,32 @@ import { DIMENSIONS } from './dimensions.js'
  * capability score or confidence calculation.
  */
 
-export const InstitutionLevel = z.enum(['federal', 'state', 'municipal', 'external'])
+/**
+ * The levels a country's own map may place an institution at. `external` is a
+ * body outside the state that acts inside the country, such as a private
+ * university.
+ */
+export const CountryInstitutionLevel = z.enum(['federal', 'state', 'municipal', 'external'])
+export type CountryInstitutionLevel = z.infer<typeof CountryInstitutionLevel>
+
+/**
+ * Every level, including `global`: a body no country owns, held once in the
+ * global ledger and reached from a country map by id. See D107.
+ */
+export const InstitutionLevel = z.enum([...CountryInstitutionLevel.options, 'global'])
 export type InstitutionLevel = z.infer<typeof InstitutionLevel>
+
+/** Reading order for the levels, innermost first. */
+export const INSTITUTION_LEVELS: InstitutionLevel[] = InstitutionLevel.options
+
+/**
+ * The jurisdiction code every global institution carries. It is not a place,
+ * so no coverage entry describes it and nothing draws it on its own.
+ */
+export const GLOBAL_JURISDICTION = 'GLOBAL'
+
+/** Every id in the global ledger starts with this, so a country file cannot mint one. */
+export const GLOBAL_ID_PREFIX = 'global.'
 
 export const InstitutionSystem = z.enum([
   'democratic_authority',
@@ -40,6 +64,7 @@ export const InstitutionLegalNature = z.enum([
   'mixed_capital_company',
   'public_university',
   'private_education',
+  'international_organization',
 ])
 export type InstitutionLegalNature = z.infer<typeof InstitutionLegalNature>
 
@@ -140,10 +165,13 @@ export const InstitutionSource = z.object({
   retrievedAt: z.string(),
 })
 
-export const InstitutionNode = z.object({
+/**
+ * What every mapped institution carries, whichever file holds it. The country
+ * node adds the country it belongs to; the global node adds who belongs to it.
+ */
+const InstitutionNodeBase = z.object({
   id: z.string().regex(/^[a-z0-9]+(?:[._-][a-z0-9]+)*$/),
-  iso3: z.string().length(3),
-  /** BR, BR-SP or a municipality code such as BR-SP-SAO. */
+  /** BR, BR-SP or a municipality code such as BR-SP-SAO; GLOBAL in the ledger. */
   jurisdictionCode: z.string(),
   /** Official name in the institution's own language. */
   officialName: z.string(),
@@ -164,7 +192,35 @@ export const InstitutionNode = z.object({
     .default({ kind: 'manual' }),
   status: z.enum(['current', 'historical']).default('current'),
 })
+
+export const InstitutionNode = InstitutionNodeBase.extend({
+  iso3: z.string().length(3),
+  level: CountryInstitutionLevel,
+})
 export type InstitutionNode = z.infer<typeof InstitutionNode>
+
+/**
+ * A body no country owns: the UN, a development bank, a standards body. It
+ * lives once, in `data/institutions/global.json`, and a country map reaches it
+ * by id in an edge. `members` is the registry codes of the benchmarked
+ * countries that belong to it, sourced once here and never as 53 edges. A
+ * programme or a bank with no membership omits the field, which is different
+ * from an empty list. See D107.
+ */
+export const GlobalInstitutionNode = InstitutionNodeBase.extend({
+  id: z.string().regex(/^global\.[a-z0-9]+(?:[._-][a-z0-9]+)*$/),
+  jurisdictionCode: z.literal(GLOBAL_JURISDICTION).default(GLOBAL_JURISDICTION),
+  level: z.literal('global').default('global'),
+  members: z.array(z.string().length(3)).optional(),
+})
+export type GlobalInstitutionNode = z.infer<typeof GlobalInstitutionNode>
+
+/** Any institution a surface may render, from either file. */
+export type MappedInstitutionNode = InstitutionNode | GlobalInstitutionNode
+
+export const isGlobalInstitution = (
+  node: MappedInstitutionNode,
+): node is GlobalInstitutionNode => node.level === 'global'
 
 export const InstitutionEdge = z.object({
   id: z.string().regex(/^[a-z0-9]+(?:[._-][a-z0-9]+)*$/),
@@ -196,11 +252,32 @@ export const InstitutionNetworkFile = z.object({
 })
 export type InstitutionNetworkFile = z.infer<typeof InstitutionNetworkFile>
 
-export type LocalizedInstitutionNode = Omit<InstitutionNode, 'summary'> & {
-  summary: string
+/**
+ * The global ledger. Its edges run between global bodies only, such as a
+ * programme attached to the UN; every relation between a global body and a
+ * country's institution is a fact about that country and lives in its file.
+ */
+export const GlobalInstitutionLedger = z.object({
+  version: z.string(),
+  generatedAt: z.string(),
+  scope: z.string(),
+  nodes: z.array(GlobalInstitutionNode),
+  edges: z.array(InstitutionEdge).default([]),
+})
+export type GlobalInstitutionLedger = z.infer<typeof GlobalInstitutionLedger>
+
+/**
+ * A country map with the global bodies it reaches attached. This is what every
+ * surface renders; the file on disk never holds a global node. See
+ * `attachGlobalInstitutions`.
+ */
+export type InstitutionNetwork = Omit<InstitutionNetworkFile, 'nodes'> & {
+  nodes: MappedInstitutionNode[]
 }
 
-export type LocalizedInstitutionNetwork = Omit<InstitutionNetworkFile, 'scope' | 'nodes'> & {
+export type LocalizedInstitutionNode = MappedInstitutionNode
+
+export type LocalizedInstitutionNetwork = Omit<InstitutionNetwork, 'scope' | 'nodes'> & {
   scope: string
   nodes: LocalizedInstitutionNode[]
 }

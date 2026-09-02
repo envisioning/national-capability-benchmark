@@ -2,7 +2,7 @@
   "project": {
     "id": "ncb-institutions-bra",
     "title": "Brasil",
-    "summary": "359 instituições, 378 relações registradas",
+    "summary": "366 instituições, 382 relações registradas",
     "description": "Primeiro recorte da infraestrutura institucional brasileira: âncoras constitucionais, órgãos de controle e organizações que concentram financiamento, dados, formação, ciência, tecnologia e capacidade de entrega. São Paulo é o piloto subnacional."
   },
   "allJurisdictions": [
@@ -179,6 +179,12 @@
       "label": "Tocantins",
       "summary": "Núcleo estadual curado; expansão setorial pendente.",
       "drawable": false
+    },
+    {
+      "id": "GLOBAL",
+      "label": "Global",
+      "summary": "Organismos que nenhum país controla, registrados uma vez no livro global e alcançados por este mapa pelo id.",
+      "drawable": false
     }
   ],
   "allSystems": [
@@ -269,6 +275,14 @@
       "summary": "",
       "color": {
         "hex": "#5c6180"
+      }
+    },
+    {
+      "id": "global",
+      "label": "Global",
+      "summary": "",
+      "color": {
+        "hex": "#3b3f5c"
       }
     }
   ],
@@ -7899,7 +7913,7 @@
       "number": 165,
       "title": "IBGE",
       "summary": "Produz as estatísticas, os censos e as informações geográficas oficiais usadas pelo país.",
-      "description": "Instituto Brasileiro de Geografia e Estatística\n\nFederal · Fundação pública · Dados e infraestrutura digital\n\n**O que faz:** produz evidência, faz pesquisa.\n\n**Capacidades relacionadas:** Antecipação, Aprendizagem, Coordenação.\n\n**Autoridade.** é vinculada a MGI.\n\n**Controle.** Nenhuma relação de controle registrada.\n\n**Financiamento.** Nenhuma relação de financiamento registrada.\n\n**Trabalho conjunto.** produz evidência para MPO; produz evidência para Governo de SP.",
+      "description": "Instituto Brasileiro de Geografia e Estatística\n\nFederal · Fundação pública · Dados e infraestrutura digital\n\n**O que faz:** produz evidência, faz pesquisa.\n\n**Capacidades relacionadas:** Antecipação, Aprendizagem, Coordenação.\n\n**Autoridade.** é vinculada a MGI.\n\n**Controle.** Nenhuma relação de controle registrada.\n\n**Financiamento.** Nenhuma relação de financiamento registrada.\n\n**Trabalho conjunto.** produz evidência para MPO; produz evidência para Governo de SP; produz evidência para UN.",
       "system": {
         "id": "data_digital"
       },
@@ -7917,7 +7931,7 @@
         "id": "mandate-2",
         "value": 2
       },
-      "relationCount": 3,
+      "relationCount": 4,
       "connections": [
         {
           "id": "bra.federal.mgi",
@@ -7933,6 +7947,11 @@
           "id": "bra.sp.government",
           "strength": 0.35,
           "label": "Trabalho conjunto"
+        },
+        {
+          "id": "global.un",
+          "strength": 0.35,
+          "label": "Trabalho conjunto"
         }
       ],
       "sources": [
@@ -7945,6 +7964,11 @@
           "url": "https://www.gov.br/pt-br/orgaos-do-governo",
           "title": "Órgãos do Governo",
           "linkLabel": "Fonte institucional"
+        },
+        {
+          "url": "https://odsbrasil.gov.br/",
+          "title": "Indicadores Brasileiros para os Objetivos de Desenvolvimento Sustentável, IBGE",
+          "linkLabel": "Fonte institucional"
         }
       ]
     },
@@ -7953,7 +7977,7 @@
       "number": 166,
       "title": "Ipea",
       "summary": "Pesquisa políticas públicas e assessora o Estado em decisões estratégicas.",
-      "description": "Instituto de Pesquisa Econômica Aplicada\n\nFederal · Fundação pública · Ciência e tecnologia\n\n**O que faz:** faz pesquisa, produz evidência, planeja.\n\n**Capacidades relacionadas:** Antecipação, Aprendizagem, Adaptação.\n\n**Autoridade.** é vinculada a MPO.\n\n**Controle.** Nenhuma relação de controle registrada.\n\n**Financiamento.** Nenhuma relação de financiamento registrada.\n\n**Trabalho conjunto.** produz evidência para Presidência.",
+      "description": "Instituto de Pesquisa Econômica Aplicada\n\nFederal · Fundação pública · Ciência e tecnologia\n\n**O que faz:** faz pesquisa, produz evidência, planeja.\n\n**Capacidades relacionadas:** Antecipação, Aprendizagem, Adaptação.\n\n**Autoridade.** é vinculada a MPO.\n\n**Controle.** Nenhuma relação de controle registrada.\n\n**Financiamento.** Nenhuma relação de financiamento registrada.\n\n**Trabalho conjunto.** produz evidência para Presidência; entrega junto com UNDP.",
       "system": {
         "id": "science_technology"
       },
@@ -7964,14 +7988,14 @@
         "id": "BR"
       },
       "reach": {
-        "id": "reach-2",
-        "value": 2
+        "id": "reach-3",
+        "value": 3
       },
       "mandate": {
         "id": "mandate-3",
         "value": 3
       },
-      "relationCount": 2,
+      "relationCount": 3,
       "connections": [
         {
           "id": "bra.federal.mpo",
@@ -7980,6 +8004,11 @@
         },
         {
           "id": "bra.federal.presidency",
+          "strength": 0.35,
+          "label": "Trabalho conjunto"
+        },
+        {
+          "id": "global.undp",
           "strength": 0.35,
           "label": "Trabalho conjunto"
         }
@@ -7994,6 +8023,11 @@
           "url": "https://www.gov.br/pt-br/orgaos-do-governo",
           "title": "Órgãos do Governo",
           "linkLabel": "Fonte institucional"
+        },
+        {
+          "url": "http://www.atlasbrasil.org.br/",
+          "title": "Atlas do Desenvolvimento Humano no Brasil, realização PNUD, Ipea e FJP",
+          "linkLabel": "Fonte institucional"
         }
       ]
     },
@@ -8002,7 +8036,7 @@
       "number": 167,
       "title": "Banco Central",
       "summary": "Conduz a política monetária, regula o sistema financeiro e opera partes centrais da infraestrutura de pagamentos.",
-      "description": "Banco Central do Brasil\n\nFederal · Autarquia · Financiamento e investimento\n\n**O que faz:** regula, opera infraestrutura, planeja.\n\n**Capacidades relacionadas:** Coordenação, Construção, Adaptação.\n\n**Autoridade.** tem integrantes nomeados por Presidência; tem nomeações aprovadas por Senado.\n\n**Controle.** regula CVM; regula Susep; regula Caixa; regula Banco do Brasil; regula BNDES.\n\n**Financiamento.** Nenhuma relação de financiamento registrada.\n\n**Trabalho conjunto.** Nenhuma relação de trabalho conjunto registrada.",
+      "description": "Banco Central do Brasil\n\nFederal · Autarquia · Financiamento e investimento\n\n**O que faz:** regula, opera infraestrutura, planeja.\n\n**Capacidades relacionadas:** Coordenação, Construção, Adaptação.\n\n**Autoridade.** tem integrantes nomeados por Presidência; tem nomeações aprovadas por Senado.\n\n**Controle.** regula CVM; regula Susep; regula Caixa; regula Banco do Brasil; regula BNDES.\n\n**Financiamento.** Nenhuma relação de financiamento registrada.\n\n**Trabalho conjunto.** usa evidência produzida por IMF.",
       "system": {
         "id": "finance_investment"
       },
@@ -8020,7 +8054,7 @@
         "id": "mandate-3",
         "value": 3
       },
-      "relationCount": 7,
+      "relationCount": 8,
       "connections": [
         {
           "id": "bra.federal.cvm",
@@ -8056,6 +8090,11 @@
           "id": "bra.federal.bndes",
           "strength": 0.8,
           "label": "Controle"
+        },
+        {
+          "id": "global.imf",
+          "strength": 0.35,
+          "label": "Trabalho conjunto"
         }
       ],
       "sources": [
@@ -8077,6 +8116,11 @@
         {
           "url": "https://www.bndes.gov.br/wps/portal/site/home/quem-somos/governanca-controle/estrutura-de-gestao-sistema-bndes/relacao-orgaos-governamentais",
           "title": "Relação do BNDES com órgãos governamentais",
+          "linkLabel": "Fonte institucional"
+        },
+        {
+          "url": "https://www.imf.org/en/Countries/BRA",
+          "title": "IMF, Brazil country page and Article IV consultations",
           "linkLabel": "Fonte institucional"
         }
       ]
@@ -18150,6 +18194,285 @@
         {
           "url": "https://www.to.gov.br/",
           "title": "Instituições de Tocantins, portais oficiais",
+          "linkLabel": "Fonte institucional"
+        }
+      ]
+    },
+    {
+      "id": "global.un",
+      "number": 360,
+      "title": "UN",
+      "summary": "Organização intergovernamental fundada em 1945 e reunindo 193 Estados-membros; define normas, coordena ação coletiva e mantém o sistema estatístico e os programas de que os países participam.",
+      "description": "United Nations\n\nGlobal · Organização internacional · Estratégia e gestão\n\n**Participação:** 53 dos 53 países do benchmark são membros. Brasil é membro.\n\n**O que faz:** coordena, produz evidência.\n\n**Capacidades relacionadas:** Coordenação, Confiança.\n\n**Autoridade.** tem vínculo administrativo com UNDP.\n\n**Controle.** Nenhuma relação de controle registrada.\n\n**Financiamento.** Nenhuma relação de financiamento registrada.\n\n**Trabalho conjunto.** usa evidência produzida por IBGE.",
+      "system": {
+        "id": "strategy_management"
+      },
+      "level": {
+        "id": "global"
+      },
+      "jurisdiction": {
+        "id": "GLOBAL"
+      },
+      "reach": {
+        "id": "reach-2",
+        "value": 2
+      },
+      "mandate": {
+        "id": "mandate-2",
+        "value": 2
+      },
+      "relationCount": 2,
+      "connections": [
+        {
+          "id": "bra.federal.ibge",
+          "strength": 0.35,
+          "label": "Trabalho conjunto"
+        },
+        {
+          "id": "global.undp",
+          "strength": 1,
+          "label": "Autoridade"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.un.org/en/about-us/member-states",
+          "title": "United Nations, member states",
+          "linkLabel": "Fonte institucional"
+        },
+        {
+          "url": "https://odsbrasil.gov.br/",
+          "title": "Indicadores Brasileiros para os Objetivos de Desenvolvimento Sustentável, IBGE",
+          "linkLabel": "Fonte institucional"
+        },
+        {
+          "url": "https://www.undp.org/about-us",
+          "title": "UNDP, about us",
+          "linkLabel": "Fonte institucional"
+        }
+      ]
+    },
+    {
+      "id": "global.undp",
+      "number": 361,
+      "title": "UNDP",
+      "summary": "Programa das Nações Unidas presente em cerca de 170 países; financia e assessora reformas da administração pública e publica o Índice de Desenvolvimento Humano.",
+      "description": "United Nations Development Programme\n\nGlobal · Organização internacional · Estratégia e gestão\n\n**O que faz:** financia, produz evidência, forma pessoas.\n\n**Capacidades relacionadas:** Aprendizagem, Coordenação.\n\n**Autoridade.** é vinculada a UN.\n\n**Controle.** Nenhuma relação de controle registrada.\n\n**Financiamento.** Nenhuma relação de financiamento registrada.\n\n**Trabalho conjunto.** entrega junto com Ipea.",
+      "system": {
+        "id": "strategy_management"
+      },
+      "level": {
+        "id": "global"
+      },
+      "jurisdiction": {
+        "id": "GLOBAL"
+      },
+      "reach": {
+        "id": "reach-2",
+        "value": 2
+      },
+      "mandate": {
+        "id": "mandate-3",
+        "value": 3
+      },
+      "relationCount": 2,
+      "connections": [
+        {
+          "id": "bra.federal.ipea",
+          "strength": 0.35,
+          "label": "Trabalho conjunto"
+        },
+        {
+          "id": "global.un",
+          "strength": 1,
+          "label": "Autoridade"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.undp.org/about-us",
+          "title": "UNDP, about us",
+          "linkLabel": "Fonte institucional"
+        },
+        {
+          "url": "http://www.atlasbrasil.org.br/",
+          "title": "Atlas do Desenvolvimento Humano no Brasil, realização PNUD, Ipea e FJP",
+          "linkLabel": "Fonte institucional"
+        }
+      ]
+    },
+    {
+      "id": "global.world_bank",
+      "number": 362,
+      "title": "World Bank",
+      "summary": "Banco multilateral de desenvolvimento com 189 países-membros; empresta a governos nacionais e subnacionais e publica diagnósticos e dados por país.",
+      "description": "World Bank Group\n\nGlobal · Organização internacional · Financiamento e investimento\n\n**Participação:** 52 dos 53 países do benchmark são membros. Brasil é membro.\n\n**O que faz:** financia, produz evidência.\n\n**Capacidades relacionadas:** Construção, Aprendizagem.\n\n**Autoridade.** Nenhuma relação de autoridade ou vínculo registrada.\n\n**Controle.** Nenhuma relação de controle registrada.\n\n**Financiamento.** Nenhuma relação de financiamento registrada.\n\n**Trabalho conjunto.** Nenhuma relação de trabalho conjunto registrada.",
+      "system": {
+        "id": "finance_investment"
+      },
+      "level": {
+        "id": "global"
+      },
+      "jurisdiction": {
+        "id": "GLOBAL"
+      },
+      "reach": {
+        "id": "reach-1",
+        "value": 1
+      },
+      "mandate": {
+        "id": "mandate-2",
+        "value": 2
+      },
+      "relationCount": 0,
+      "connections": [],
+      "sources": [
+        {
+          "url": "https://www.worldbank.org/en/about/leadership/members",
+          "title": "World Bank Group, member countries",
+          "linkLabel": "Fonte institucional"
+        }
+      ]
+    },
+    {
+      "id": "global.imf",
+      "number": 363,
+      "title": "IMF",
+      "summary": "Instituição monetária multilateral de participação quase universal; avalia as políticas econômicas de cada membro nas consultas do Artigo IV e empresta em crises de balanço de pagamentos.",
+      "description": "International Monetary Fund\n\nGlobal · Organização internacional · Financiamento e investimento\n\n**Participação:** 52 dos 53 países do benchmark são membros. Brasil é membro.\n\n**O que faz:** produz evidência, financia.\n\n**Capacidades relacionadas:** Coordenação, Confiança.\n\n**Autoridade.** Nenhuma relação de autoridade ou vínculo registrada.\n\n**Controle.** Nenhuma relação de controle registrada.\n\n**Financiamento.** Nenhuma relação de financiamento registrada.\n\n**Trabalho conjunto.** produz evidência para Banco Central.",
+      "system": {
+        "id": "finance_investment"
+      },
+      "level": {
+        "id": "global"
+      },
+      "jurisdiction": {
+        "id": "GLOBAL"
+      },
+      "reach": {
+        "id": "reach-1",
+        "value": 1
+      },
+      "mandate": {
+        "id": "mandate-2",
+        "value": 2
+      },
+      "relationCount": 1,
+      "connections": [
+        {
+          "id": "bra.federal.bcb",
+          "strength": 0.35,
+          "label": "Trabalho conjunto"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.imf.org/external/np/sec/memdir/memdate.htm",
+          "title": "IMF, list of members",
+          "linkLabel": "Fonte institucional"
+        },
+        {
+          "url": "https://www.imf.org/en/Countries/BRA",
+          "title": "IMF, Brazil country page and Article IV consultations",
+          "linkLabel": "Fonte institucional"
+        }
+      ]
+    },
+    {
+      "id": "global.wto",
+      "number": 364,
+      "title": "WTO",
+      "summary": "Organização intergovernamental que administra as regras do comércio internacional e resolve disputas entre eles.",
+      "description": "World Trade Organization\n\nGlobal · Organização internacional · Regulação\n\n**Participação:** 52 dos 53 países do benchmark são membros. Brasil é membro.\n\n**O que faz:** regula, julga conflitos.\n\n**Capacidades relacionadas:** Coordenação, Confiança.\n\n**Autoridade.** Nenhuma relação de autoridade ou vínculo registrada.\n\n**Controle.** Nenhuma relação de controle registrada.\n\n**Financiamento.** Nenhuma relação de financiamento registrada.\n\n**Trabalho conjunto.** Nenhuma relação de trabalho conjunto registrada.",
+      "system": {
+        "id": "regulation"
+      },
+      "level": {
+        "id": "global"
+      },
+      "jurisdiction": {
+        "id": "GLOBAL"
+      },
+      "reach": {
+        "id": "reach-1",
+        "value": 1
+      },
+      "mandate": {
+        "id": "mandate-2",
+        "value": 2
+      },
+      "relationCount": 0,
+      "connections": [],
+      "sources": [
+        {
+          "url": "https://www.wto.org/english/thewto_e/whatis_e/tif_e/org6_e.htm",
+          "title": "WTO, members and observers",
+          "linkLabel": "Fonte institucional"
+        }
+      ]
+    },
+    {
+      "id": "global.who",
+      "number": 365,
+      "title": "WHO",
+      "summary": "Agência das Nações Unidas para a saúde, com 194 Estados-membros; define normas sanitárias e coordena a resposta a emergências de saúde.",
+      "description": "World Health Organization\n\nGlobal · Organização internacional · Regulação\n\n**Participação:** 53 dos 53 países do benchmark são membros. Brasil é membro.\n\n**O que faz:** regula, coordena, produz evidência.\n\n**Capacidades relacionadas:** Coordenação, Agência.\n\n**Autoridade.** Nenhuma relação de autoridade ou vínculo registrada.\n\n**Controle.** Nenhuma relação de controle registrada.\n\n**Financiamento.** Nenhuma relação de financiamento registrada.\n\n**Trabalho conjunto.** Nenhuma relação de trabalho conjunto registrada.",
+      "system": {
+        "id": "regulation"
+      },
+      "level": {
+        "id": "global"
+      },
+      "jurisdiction": {
+        "id": "GLOBAL"
+      },
+      "reach": {
+        "id": "reach-1",
+        "value": 1
+      },
+      "mandate": {
+        "id": "mandate-3",
+        "value": 3
+      },
+      "relationCount": 0,
+      "connections": [],
+      "sources": [
+        {
+          "url": "https://www.who.int/countries",
+          "title": "WHO, countries",
+          "linkLabel": "Fonte institucional"
+        }
+      ]
+    },
+    {
+      "id": "global.ilo",
+      "number": 366,
+      "title": "ILO",
+      "summary": "Agência tripartite das Nações Unidas com 187 Estados-membros; fixa normas internacionais do trabalho e produz estatísticas do trabalho.",
+      "description": "International Labour Organization\n\nGlobal · Organização internacional · Regulação\n\n**Participação:** 53 dos 53 países do benchmark são membros. Brasil é membro.\n\n**O que faz:** regula, produz evidência.\n\n**Capacidades relacionadas:** Confiança, Aprendizagem.\n\n**Autoridade.** Nenhuma relação de autoridade ou vínculo registrada.\n\n**Controle.** Nenhuma relação de controle registrada.\n\n**Financiamento.** Nenhuma relação de financiamento registrada.\n\n**Trabalho conjunto.** Nenhuma relação de trabalho conjunto registrada.",
+      "system": {
+        "id": "regulation"
+      },
+      "level": {
+        "id": "global"
+      },
+      "jurisdiction": {
+        "id": "GLOBAL"
+      },
+      "reach": {
+        "id": "reach-1",
+        "value": 1
+      },
+      "mandate": {
+        "id": "mandate-2",
+        "value": 2
+      },
+      "relationCount": 0,
+      "connections": [],
+      "sources": [
+        {
+          "url": "https://www.ilo.org/about-ilo/how-ilo-works/ilo-member-states",
+          "title": "ILO, member states",
           "linkLabel": "Fonte institucional"
         }
       ]

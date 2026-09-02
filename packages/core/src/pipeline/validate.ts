@@ -10,7 +10,11 @@ import {
   SubnationalIndexFile,
   SUBNATIONAL_SERIES,
 } from '../model/index.js'
-import { InstitutionNetworkFile } from '../model/institutions.js'
+import {
+  GLOBAL_ID_PREFIX,
+  GlobalInstitutionLedger,
+  InstitutionNetworkFile,
+} from '../model/institutions.js'
 import { DelphiRunFile, EvidenceFile, isEvidential, isPanel, isReversal } from '../model/schema.js'
 import { ResearchRunFile, ResearchScoutRunFile } from '../model/research.js'
 import { DELPHI_DIR, FILES, RESEARCH_RUNS_DIR, subnationalFile } from './paths.js'
@@ -609,6 +613,7 @@ export async function validateResearchRuns(dir = RESEARCH_RUNS_DIR): Promise<Pro
  */
 export async function validateInstitutionNetwork(
   path = FILES.institutionsBrazil,
+  ledgerPath = FILES.institutionsGlobal,
 ): Promise<Problem[]> {
   const file = basename(path)
   let raw: unknown
@@ -627,6 +632,16 @@ export async function validateInstitutionNetwork(
     }))
   }
 
+  /* A country edge may name a global body. Those ids resolve against the
+   * ledger, and the ledger's own problems are reported by its own check. */
+  const globalIds = new Set<string>()
+  try {
+    const ledger = GlobalInstitutionLedger.safeParse(JSON.parse(await readFile(ledgerPath, 'utf8')))
+    if (ledger.success) for (const node of ledger.data.nodes) globalIds.add(node.id)
+  } catch {
+    /* No ledger: every global reference below is reported as unknown. */
+  }
+
   const problems: Problem[] = []
   const network = parsed.data
   const nodeIds = new Set<string>()
@@ -635,6 +650,13 @@ export async function validateInstitutionNetwork(
       problems.push({ file, severity: 'error', problem: `duplicate institution id ${node.id}` })
     }
     nodeIds.add(node.id)
+    if (node.id.startsWith(GLOBAL_ID_PREFIX)) {
+      problems.push({
+        file,
+        severity: 'error',
+        problem: `${node.id}: a global body lives in the global ledger, never in a country file`,
+      })
+    }
     if (node.iso3 !== network.iso3) {
       problems.push({
         file,
@@ -652,15 +674,22 @@ export async function validateInstitutionNetwork(
     }
     edgeIds.add(edge.id)
     for (const id of [edge.sourceId, edge.targetId]) {
-      if (!nodeIds.has(id)) {
+      if (nodeIds.has(id)) {
+        degree.set(id, (degree.get(id) ?? 0) + 1)
+      } else if (!globalIds.has(id)) {
         problems.push({
           file,
           severity: 'error',
           problem: `${edge.id}: unknown institution id ${id}`,
         })
-      } else {
-        degree.set(id, (degree.get(id) ?? 0) + 1)
       }
+    }
+    if (globalIds.has(edge.sourceId) && globalIds.has(edge.targetId)) {
+      problems.push({
+        file,
+        severity: 'error',
+        problem: `${edge.id}: a relation between two global bodies belongs in the global ledger`,
+      })
     }
     if (edge.sourceId === edge.targetId) {
       problems.push({ file, severity: 'error', problem: `${edge.id}: relation points to itself` })
@@ -687,6 +716,78 @@ export async function validateInstitutionNetwork(
       })
     }
     coverageCodes.add(area.jurisdictionCode)
+  }
+
+  return problems
+}
+
+/**
+ * Checks the global ledger: the bodies no country owns. Ids carry the global
+ * prefix so a country file cannot mint one, members are registry codes, and a
+ * ledger edge joins two ledger bodies. See D107.
+ */
+export async function validateGlobalInstitutions(
+  path = FILES.institutionsGlobal,
+): Promise<Problem[]> {
+  const file = basename(path)
+  let raw: unknown
+  try {
+    raw = JSON.parse(await readFile(path, 'utf8'))
+  } catch {
+    return [{ file, severity: 'warning', problem: 'no global institution ledger yet' }]
+  }
+
+  const parsed = GlobalInstitutionLedger.safeParse(raw)
+  if (!parsed.success) {
+    return parsed.error.issues.slice(0, 8).map((issue) => ({
+      file,
+      severity: 'error' as const,
+      problem: `${issue.path.join('.') || '(root)'}: ${issue.message}`,
+    }))
+  }
+
+  const problems: Problem[] = []
+  const ledger = parsed.data
+  const known = new Set(COUNTRY_ISO3)
+  const nodeIds = new Set<string>()
+  for (const node of ledger.nodes) {
+    if (nodeIds.has(node.id)) {
+      problems.push({ file, severity: 'error', problem: `duplicate institution id ${node.id}` })
+    }
+    nodeIds.add(node.id)
+    for (const member of node.members ?? []) {
+      if (!known.has(member)) {
+        problems.push({
+          file,
+          severity: 'error',
+          problem: `${node.id}: member ${member} is not in the country registry`,
+        })
+      }
+    }
+    const seen = new Set(node.members ?? [])
+    if (seen.size !== (node.members ?? []).length) {
+      problems.push({ file, severity: 'error', problem: `${node.id}: a member is listed twice` })
+    }
+  }
+
+  const edgeIds = new Set<string>()
+  for (const edge of ledger.edges) {
+    if (edgeIds.has(edge.id)) {
+      problems.push({ file, severity: 'error', problem: `duplicate relation id ${edge.id}` })
+    }
+    edgeIds.add(edge.id)
+    for (const id of [edge.sourceId, edge.targetId]) {
+      if (!nodeIds.has(id)) {
+        problems.push({
+          file,
+          severity: 'error',
+          problem: `${edge.id}: ${id} is not in the ledger; a relation with a country's institution lives in that country's file`,
+        })
+      }
+    }
+    if (edge.sourceId === edge.targetId) {
+      problems.push({ file, severity: 'error', problem: `${edge.id}: relation points to itself` })
+    }
   }
 
   return problems

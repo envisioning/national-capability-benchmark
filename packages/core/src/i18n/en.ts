@@ -115,6 +115,7 @@ export const EN: Lexicon = {
       state: 'State',
       municipal: 'Municipal',
       external: 'Outside the state',
+      global: 'Global',
     },
     systems: {
       democratic_authority: 'Democratic authority',
@@ -138,6 +139,7 @@ export const EN: Lexicon = {
       mixed_capital_company: 'Mixed capital company',
       public_university: 'Public university',
       private_education: 'Private education institution',
+      international_organization: 'International organization',
     },
     roles: {
       governs: 'governs',
@@ -204,6 +206,13 @@ export const EN: Lexicon = {
     findSystem: 'System',
     findJurisdiction: 'Jurisdiction',
     nationalJurisdiction: 'Union',
+    globalJurisdiction: 'Global',
+    globalJurisdictionNote:
+      'Bodies no country owns, held once in the global ledger and reached from this map by id.',
+    membersHeading: 'Membership',
+    memberCount: '{n} of the {total} benchmarked countries are members',
+    memberHere: '{country} is a member.',
+    notMemberHere: '{country} is not a member.',
     anyLevel: 'All',
     anySystem: 'All',
     shown: '{n} shown',

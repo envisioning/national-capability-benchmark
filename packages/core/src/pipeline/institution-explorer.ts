@@ -1,8 +1,12 @@
 import {
+  GLOBAL_JURISDICTION,
+  INSTITUTION_LEVELS,
   INSTITUTION_RELATION_FAMILIES,
   INSTITUTION_RELATION_FAMILY,
   INSTITUTION_SYSTEMS,
+  isGlobalInstitution,
 } from '../model/institutions.js'
+import { COUNTRY_ISO3 } from '../model/countries.js'
 import type {
   InstitutionCoverage,
   InstitutionEdge,
@@ -97,6 +101,7 @@ export const LEVEL_COLOURS: Record<InstitutionLevel, string> = {
   state: '#8b93b5',
   municipal: '#c9cfe6',
   external: '#5c6180',
+  global: '#3b3f5c',
 }
 
 export type ExplorerBand = {
@@ -218,6 +223,7 @@ function describe(
   edges: InstitutionEdge[],
   names: Map<string, string>,
   lex: Lexicon,
+  country: { iso3: string; name: string },
 ): string {
   const inst = lex.institutions
   const parts: string[] = []
@@ -228,6 +234,17 @@ function describe(
       `${inst.levels[node.level]} · ${inst.natures[node.legalNature]} · ${inst.systems[node.system]}`,
     ].join('\n\n'),
   )
+
+  /* Membership is a fact about the body, held once in the ledger, so a
+   * country's feed states it beside the body rather than drawing 53 lines. */
+  if (isGlobalInstitution(node) && node.members) {
+    const count = fill(inst.memberCount, { n: node.members.length, total: COUNTRY_ISO3.length })
+    const here = fill(
+      node.members.includes(country.iso3) ? inst.memberHere : inst.notMemberHere,
+      { country: country.name },
+    )
+    parts.push(`**${inst.membersHeading}:** ${count}. ${here}`)
+  }
 
   parts.push(
     `**${inst.rolesHeading}:** ${node.roles.map((role) => inst.roles[role]).join(', ')}.`,
@@ -317,7 +334,10 @@ export function buildInstitutionExplorer(
       number: index + 1,
       title: node.shortName,
       summary: node.summary,
-      description: describe(node, nodeEdges, names, lex),
+      description: describe(node, nodeEdges, names, lex, {
+        iso3: network.iso3,
+        name: countryName,
+      }),
       system: { id: node.system },
       level: { id: node.level },
       jurisdiction: { id: node.jurisdictionCode },
@@ -341,6 +361,14 @@ export function buildInstitutionExplorer(
     .sort()
     .map((code) => {
       const entry = coverageByCode.get(code)
+      if (code === GLOBAL_JURISDICTION) {
+        return {
+          id: code,
+          label: inst.globalJurisdiction,
+          summary: inst.globalJurisdictionNote,
+          drawable: false,
+        }
+      }
       return {
         id: code,
         label: entry?.label ?? code,
@@ -359,10 +387,7 @@ export function buildInstitutionExplorer(
   }))
 
   const usedLevels = new Set(network.nodes.map((node) => node.level))
-  const allLevels: ExplorerLevel[] = (
-    ['federal', 'state', 'municipal', 'external'] as InstitutionLevel[]
-  )
-    .filter((level) => usedLevels.has(level))
+  const allLevels: ExplorerLevel[] = INSTITUTION_LEVELS.filter((level) => usedLevels.has(level))
     .map((level) => ({
       id: level,
       label: inst.levels[level],

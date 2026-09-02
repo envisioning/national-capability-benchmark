@@ -243,6 +243,13 @@ export const GLOSSARY: GlossaryEntry[] = [
     example: 'Brazil’s first network links the federal backbone to a São Paulo pilot, including the BNDES, Finep, Enap, the STF, the STJ, FAPESP, state universities and the municipality of São Paulo.',
   },
   {
+    term: 'Global institution ledger',
+    group: 'What sits beside the score',
+    short: 'The bodies no country owns, recorded once and reached from each country map by id.',
+    full: 'A United Nations agency or a development bank belongs to no country, so it is not written into any country network. The ledger holds each such body once, with its source and the list of benchmarked countries that are members of it. A country network reaches the body through a sourced relation, such as a programme delivered together, and the body then appears in that country\'s map at the global level. Membership and relations never enter a score or a confidence.',
+    example: 'UNDP produces the Atlas of Human Development in Brazil with Ipea, so UNDP appears in Brazil\'s map, attached to the UN, with a note that the UN has all 53 benchmarked countries as members.',
+  },
+  {
     term: 'Momentum',
     group: 'How things change over time',
     short: 'How much a dimension moved over ten, twenty or longer spans, on the same ruler.',

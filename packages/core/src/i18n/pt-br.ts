@@ -372,6 +372,7 @@ export const PT_BR: Lexicon = {
       state: 'Estadual',
       municipal: 'Municipal',
       external: 'Fora do Estado',
+      global: 'Global',
     },
     systems: {
       democratic_authority: 'Autoridade democrática',
@@ -395,6 +396,7 @@ export const PT_BR: Lexicon = {
       mixed_capital_company: 'Sociedade de economia mista',
       public_university: 'Universidade pública',
       private_education: 'Instituição privada de ensino',
+      international_organization: 'Organização internacional',
     },
     roles: {
       governs: 'governa',
@@ -464,6 +466,13 @@ export const PT_BR: Lexicon = {
     findSystem: 'Sistema',
     findJurisdiction: 'Jurisdição',
     nationalJurisdiction: 'União',
+    globalJurisdiction: 'Global',
+    globalJurisdictionNote:
+      'Organismos que nenhum país controla, registrados uma vez no livro global e alcançados por este mapa pelo id.',
+    membersHeading: 'Participação',
+    memberCount: '{n} dos {total} países do benchmark são membros',
+    memberHere: '{country} é membro.',
+    notMemberHere: '{country} não é membro.',
     anyLevel: 'Todas',
     anySystem: 'Todos',
     shown: '{n} exibidas',

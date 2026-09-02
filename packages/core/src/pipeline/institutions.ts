@@ -1,12 +1,16 @@
 import {
+  GLOBAL_ID_PREFIX,
   INSTITUTION_RELATION_FAMILY,
   INSTITUTION_SYSTEMS,
 } from '../model/institutions.js'
 import type {
+  GlobalInstitutionLedger,
   InstitutionEdge,
-  InstitutionNode,
+  InstitutionNetwork,
+  InstitutionNetworkFile,
   InstitutionRelationFamily,
   InstitutionSystem,
+  MappedInstitutionNode,
 } from '../model/institutions.js'
 import type { Dimension } from '../model/dimensions.js'
 
@@ -70,10 +74,52 @@ export type InstitutionMatrix = {
  * These ids are links for investigation, never evidence, scores or weights.
  */
 export function institutionIdsForDimension(
-  nodes: InstitutionNode[],
+  nodes: MappedInstitutionNode[],
   dimension: Dimension,
 ): string[] {
   return [...new Set(nodes.filter((node) => node.dimensions.includes(dimension)).map((node) => node.id))].sort()
+}
+
+/** Whether an id names a body in the global ledger. */
+export const isGlobalInstitutionId = (id: string): boolean => id.startsWith(GLOBAL_ID_PREFIX)
+
+/**
+ * Attach the global bodies a country reaches to its own map.
+ *
+ * A global body joins the country's network when one of the country's edges
+ * names it, or when the country is listed among its members. Ledger edges come
+ * along only when both ends are attached, so a programme's attachment to the UN
+ * appears beside the country that works with both. The file on disk is not
+ * touched: this is the only place a global node enters a country's network,
+ * so every surface sees the same one. See D107.
+ */
+export function attachGlobalInstitutions(
+  network: InstitutionNetworkFile,
+  ledger: GlobalInstitutionLedger | null,
+): InstitutionNetwork {
+  if (!ledger) return { ...network, nodes: [...network.nodes] }
+
+  const reached = new Set<string>()
+  for (const edge of network.edges) {
+    for (const id of [edge.sourceId, edge.targetId]) {
+      if (isGlobalInstitutionId(id)) reached.add(id)
+    }
+  }
+  for (const node of ledger.nodes) {
+    if (node.members?.includes(network.iso3)) reached.add(node.id)
+  }
+
+  const attached = ledger.nodes.filter((node) => reached.has(node.id))
+  const attachedIds = new Set(attached.map((node) => node.id))
+  const ledgerEdges = ledger.edges.filter(
+    (edge) => attachedIds.has(edge.sourceId) && attachedIds.has(edge.targetId),
+  )
+
+  return {
+    ...network,
+    nodes: [...network.nodes, ...attached],
+    edges: [...network.edges, ...ledgerEdges],
+  }
 }
 
 /** Where a count falls on the ramp. Empty cells have no band. */
@@ -88,7 +134,7 @@ export function matrixBand(count: number): MatrixBandId | null {
  * narrows the count to one relation family; 'all' counts every relation.
  */
 export function buildInstitutionMatrix(
-  nodes: InstitutionNode[],
+  nodes: MappedInstitutionNode[],
   edges: InstitutionEdge[],
   family: MatrixFamily = 'all',
 ): InstitutionMatrix {

@@ -4692,6 +4692,84 @@ would justify revising the release classification in a later decision.
 
 ---
 
+## D107 — A global body lives once, in a ledger, and a country map reaches it by id
+
+*Recorded 2026-09-02. Extends D54, D56 and D82. Answers the question D56 left
+open about what `external` means outside Brazil.*
+
+**Choice.** `data/institutions/global.json` holds the bodies no country owns:
+the United Nations and its programmes and agencies, the multilateral lenders
+and the intergovernmental standard setters. Each is one node with the same
+shape as a country node, at a new level, `global`, under a new legal nature,
+`international_organization`, with an id that starts with `global.` and a
+`members` field listing the registry codes of the benchmarked countries that
+belong to it. A body with no membership, such as a programme, omits the field.
+
+A country file never holds a global node. It reaches one by id in an edge,
+which is where a relation between a global body and a national institution
+belongs, because that relation is a fact about the country with a source of
+its own: UNDP produces the Atlas of Human Development with Ipea, the IMF's
+Article IV consultation produces evidence for the Banco Central, IBGE produces
+Brazil's SDG indicators for the UN statistical system. A relation between two
+global bodies, such as UNDP's attachment to the UN, lives in the ledger.
+
+`attachGlobalInstitutions` in `packages/core/src/pipeline/institutions.ts` is
+the only place a global node enters a country's network. It attaches every body
+the country's edges name and every body that lists the country as a member,
+and it brings a ledger edge along only when both of its ends are attached.
+The viewer's loader, the explorer feed and the tests all call it, so every
+surface renders the same network and the file on disk stays a country file.
+The agenda reads the file alone: its `institutionIds` point at institutions a
+country can act through, and a country does not act through the IMF.
+
+Membership renders as a line on the body's profile, in the ledger and in the
+drawn network's description: how many of the benchmarked countries belong to
+it, and whether the country being read does. The validator checks that every
+member is a registry code, that no country file mints a `global.` id, that a
+country edge naming a global id resolves against the ledger, and that no
+country edge joins two global bodies.
+
+**Why.** D56 recorded that `external` carries a Brazilian assumption and that
+the enum survives a second country only because its labels are a lexicon
+lookup. This is the case it was waiting for. A foreign private university
+inside São Paulo and the IMF are not the same kind of outsider: one acts
+inside one country and is a fact about that country's map, the other belongs
+to no country and would be duplicated 53 times if it were. Duplication is
+the failure D26 and the registry invariants exist to prevent: 53 copies of
+the UN with 53 sources and 53 summaries drift, and a reader comparing two
+countries' maps sees two UNs.
+
+Membership sits on the body rather than as a `member_of` edge because it is a
+property of the body, sourced once from its own member list, and because a
+membership edge would need a national node to hang from. Brazil's map has no
+node for the state itself; the union is a jurisdiction, not an institution.
+
+**Cost.** The ledger is a second file every institution surface must read,
+and a country page now fails when the ledger is malformed, the way it fails
+when the country file is. The `members` field is a second kind of fact in a
+file that otherwise records mechanisms, and it will need refreshing when a
+country joins or leaves a body. Two of the eight sources, the OECD and IMF
+member pages, refuse automated fetches, so a live check of the ledger's URLs
+cannot confirm them.
+
+A body's system and dimensions are a judgment: the WHO under `regulation`
+and the UN under `strategy_management` are defensible and not the only
+reading. The 11 systems were drawn for a state and a global body fits them
+loosely.
+
+The drawn network gives global bodies their own jurisdiction cluster, which
+is not drawable on its own, so they appear only beside the union's network or
+in a selected institution's neighbourhood.
+
+**Overturned by.** A body that belongs to no country but acts inside only
+one, which would make the ledger a place for regional bodies too and need a
+rule for which file holds them. Or a second country map whose relations to
+global bodies do not sort into the four families, the same test D56 set. Or
+readers treating membership counts as a score, which would mean the line
+should come off the profile.
+
+---
+
 ## D108 — The registry and its diagnostics are drawn as lanes, and the drawing is a viewer component
 
 *Recorded 2026-09-02. Extends D26, D53 and D67. Does not touch D56, D58 or

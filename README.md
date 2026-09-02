@@ -205,7 +205,7 @@ an offline stand-in and is not evidence. A run with fewer than three panelists
 is a session estimate, not a panel. Read
 [docs/PANEL.md](docs/PANEL.md) for the full contract.
 
-**Institutional data.** Country-specific institutional networks are explanatory
+**Institutional data.** Bodies no country owns, such as the UN or the World Bank, are recorded once in a global ledger and reached from a country map by id. Country-specific institutional networks are explanatory
 data. They show where capability is held and how it moves. They never enter a
 score or confidence. The current data and authoring rules are in
 [docs/INSTITUTIONS.md](docs/INSTITUTIONS.md).

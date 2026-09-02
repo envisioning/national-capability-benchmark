@@ -5,7 +5,7 @@ import { COUNTRY_NAMES } from '../model/countries.js'
 import { buildInstitutionExplorer } from './institution-explorer.js'
 import type { InstitutionExplorerFeed } from './institution-explorer.js'
 import { institutionExplorerFile } from './paths.js'
-import { loadInstitutionNetwork, writeOut } from './store.js'
+import { loadAttachedInstitutionNetwork, writeOut } from './store.js'
 
 /**
  * Write one country's explorer feed, one file per lexicon.
@@ -19,7 +19,7 @@ export async function writeInstitutionExplorer(
   iso3: string,
   langs: Lang[] = LANGS,
 ): Promise<{ iso3: string; written: string[]; institutions: number; drawable: string[] }> {
-  const network = await loadInstitutionNetwork(iso3)
+  const network = await loadAttachedInstitutionNetwork(iso3)
   if (!network) throw new Error(`No institution map for ${iso3.toUpperCase()}`)
 
   const countryName = COUNTRY_NAMES[network.iso3] ?? network.iso3
