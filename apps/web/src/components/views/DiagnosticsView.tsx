@@ -8,11 +8,13 @@ import {
   WEALTH_CORRELATION_THRESHOLD,
 } from '@ncb/core'
 import type { Dimension } from '@ncb/core'
+import Link from 'next/link'
 import { DataTable } from '@/components/DataTable'
 import { CapabilityLink } from '@/components/CapabilityLink'
 import { ClassBadge, Headline, Meta, PageTitle, PanelProvenanceNote, Section } from '@/components/ui'
 import type { Diagnostics } from '@ncb/core'
 import { capitalize, countWord } from '@/lib/words'
+import { exploreHref } from '@/lib/links'
 
 const name = (id: string) => INDICATORS_BY_ID[id]?.name ?? id
 const muted = (v: React.ReactNode) => <span className="text-[var(--muted)]">{v}</span>
@@ -334,6 +336,14 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
             },
           ]}
         />
+        <p className="mt-4 max-w-3xl text-lg leading-relaxed">
+          The same pairs are{' '}
+          <Link href={exploreHref('measure')} className="underline underline-offset-4">
+            drawn as lanes
+          </Link>
+          , each indicator placed by its correlation with income and every pair above joined by a
+          line.
+        </p>
       </Section>
 
       <Section

@@ -13,6 +13,7 @@ import {
   compareBaseHref,
   contactHref,
   countriesHref,
+  exploreHref,
   gapsHref,
   countryLayerHref,
   countryProfileHref,
@@ -50,6 +51,7 @@ export async function GET(): Promise<Response> {
   for (const dimension of DIMENSIONS) add(`${capabilitiesHref}/${dimension}`)
   add(agendasIndexHref)
   add(thesisHref)
+  add(exploreHref())
   add('/country/BRA/institutions')
   /* Every country layer and the sections it holds of its own. A section that
      still lives in the ground layer is already listed there. See D69. */

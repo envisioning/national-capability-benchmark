@@ -129,6 +129,30 @@ export const indicatorsHref = '/indicators'
 /** The tests the model runs against itself, wealth sensitivity included. */
 export const diagnosticsHref = '/diagnostics'
 
+/**
+ * How the lane field is arranged.
+ *
+ * `registry` packs each capability's indicators in registry order. `measure`
+ * moves every indicator with data to its correlation with income. The
+ * arrangement is the address, so a reader can send the measured view to
+ * somebody else, and the default carries no query at all. See D108.
+ */
+export type LaneArrangement = 'registry' | 'measure'
+
+export const LANE_ARRANGEMENTS: readonly LaneArrangement[] = ['registry', 'measure']
+
+/** The indicator registry and its diagnostics drawn as lanes. */
+export const exploreHref = (arrangement: LaneArrangement = 'registry'): string =>
+  arrangement === 'registry' ? '/explore' : `/explore?arrange=${arrangement}`
+
+export function readLaneArrangement(
+  params: Record<string, string | string[] | undefined>,
+): LaneArrangement {
+  const raw = params.arrange
+  const value = Array.isArray(raw) ? raw[0] : raw
+  return value === 'measure' ? 'measure' : 'registry'
+}
+
 /** The public statement of what the benchmark is for. */
 export const thesisHref = '/thesis'
 

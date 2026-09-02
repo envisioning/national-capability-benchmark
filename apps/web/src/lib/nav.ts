@@ -13,6 +13,7 @@ import {
   countryLayerHref,
   countryLocalHref,
   countryProfileHref,
+  exploreHref,
   gapsHref,
   hasLocalDestination,
   institutionNetworkHref,
@@ -82,6 +83,7 @@ export function nodeOwns(node: NavNode, pathname: string): boolean {
 export const METHOD_PAGES: NavNode[] = [
   { href: '/method', label: 'Overview', exact: true },
   { href: '/indicators', label: 'Indicators' },
+  { href: exploreHref(), label: 'Explore' },
   { href: '/sources', label: 'Sources' },
   { href: '/diagnostics', label: 'Diagnostics' },
   { href: '/delphi', label: 'Delphi panel' },

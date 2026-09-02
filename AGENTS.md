@@ -139,6 +139,16 @@ port 3888. That entry starts Next directly and does not use the proxy.
   distribution: extend the point type instead. The words at each end of an axis
   come from `DIMENSION_ENDPOINTS` in the registry, never from a page. The grid
   of country radars lives at `/countries`. See D67.
+- The lane field is `LaneField` in `apps/web/src/components/LaneField.tsx`,
+  drawn at `/explore`. A lane is a capability, a dot is an indicator, the mark
+  is whether the row has data, and a line is a redundant pair. It reads one
+  projection, `buildIndicatorLanes` in `packages/core/src/pipeline/lanes.ts`,
+  which is the only place the registry and the diagnostics are joined for a
+  drawing. No dot is sized, ringed or flagged: size would read as a score, a
+  ring is the flag bubble's certainty and a flag is a country. The arrangement
+  is the address, through `exploreHref` and `readLaneArrangement` in
+  `links.ts`. The institution network at `/network` is not replaced by it. See
+  D108.
 - Confidence is never folded into the capability score. Two numbers, always. The
   radar draws thin evidence as a dashed edge with a hollow point, and the dash
   gap widens as confidence falls (see D32). Use `isThinEvidence` from

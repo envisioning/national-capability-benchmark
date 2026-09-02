@@ -4689,3 +4689,90 @@ its low confidence still limits how strongly that score should be read.
 **Overturned by.** Evidence that the denominator change altered a score or the
 normalization frame, or that the version boundary hides a published-shape change,
 would justify revising the release classification in a later decision.
+
+---
+
+## D108 — The registry and its diagnostics are drawn as lanes, and the drawing is a viewer component
+
+*Recorded 2026-09-02. Extends D26, D53 and D67. Does not touch D56, D58 or
+D104: the institution map keeps its ledger, its matrix and its drawn network.*
+
+**Choice.** The viewer publishes one lane field, `LaneField` in
+`apps/web/src/components/LaneField.tsx`, and one page that draws it, `/explore`
+in the Method section. A lane is a capability, a dot is an indicator, and the
+mark says whether the row has data: a filled dot does, a dashed ring is a
+declared gap and a thin ring is a retired row. A line joins two indicators
+whose series correlate at `REDUNDANCY_THRESHOLD` or above. The field has two
+arrangements. `registry` packs each lane in registry order, so the length of
+a lane is the size of the capability's basket. `measure` moves every dot with
+data to its absolute correlation with log GDP per capita, draws
+`WEALTH_CORRELATION_THRESHOLD` as a rule, marks each lane's own correlation as
+a tick and parks the unmeasured rows at the left. A dot keeps its node between
+the two arrangements, so the reader watches it travel. The arrangement is the
+address: `exploreHref` and `readLaneArrangement` in `apps/web/src/lib/links.ts`
+are the only place that shape is written or read.
+
+The projection is computed once, by `buildIndicatorLanes` in
+`packages/core/src/pipeline/lanes.ts`, from the registry and the published
+diagnostics. It reads `indicatorVsGdp`, `wealthAttribution`, `dimensionVsGdp`
+and `redundantIndicatorPairs` and nothing else. Nothing in it reaches a score,
+a confidence or `data/out`.
+
+The field owns its readout, as the radar and the system matrix do. It always
+reads one dot and never none, at a fixed height a hover cannot change, and it
+opens on the dot with the most links because that is the dot the diagnostics
+have most to say about. The readout names every joined indicator as a control
+that moves the reading there, so the field is a way into the diagnostics and
+not only a summary of them.
+
+The encodings are chosen against the charts that already exist. No dot is
+sized, because size on this site would read as a score. No dot carries a ring
+for certainty, because that ring belongs to the flag bubble. No dot is a flag,
+because a flag is a country and these are indicators. The selected dot is the
+page's one lime mark. Lane names are DOM text beside the field, never SVG text
+inside it, and the field lays out in pixels from a measured width rather than
+through a scaled `viewBox`, so a dot is the same size on a phone as on a desk.
+
+**Why.** The registry page and the diagnostics page hold the same 69 rows as
+tables, and neither shows the shape of the whole: that Anticipation and
+Agency fill their lanes with data while Trust and Shared Purpose are mostly
+rings, or that every redundant pair the diagnostics find runs through the
+same five income-tracking indicators. A3 states the second fact in prose. A
+line between two dots past the threshold states it in one glance, and the
+`measure` arrangement puts the whole of the wealth-sensitivity finding on one
+axis with the threshold drawn through it.
+
+The lane layout was chosen over the force layout the institution network uses
+because position here means something. A force layout's plane encodes nothing
+a reader can name, which is what D56 held against the drawn overview. A lane
+encodes membership and, in the measured arrangement, a number the diagnostics
+already publish, so the plane carries two facts before any line is drawn.
+
+The projection lives in core rather than in the view so a second drawing can
+read it. The institution map is the dataset whose shape matches this picture
+most closely, and a lane version of it is a candidate to replace the
+closed-source network D104 mounts. That decision is not taken here. The
+component is built so that taking it later is a data change and not a second
+component.
+
+**Cost.** The `measure` arrangement puts 36 dots on one axis, and the site's
+rule that every distribution is a `FlagField` was written for countries on a
+score axis. This is a different object, indicators on a correlation, and it is
+drawn with different marks so the two cannot be confused, but it is a second
+axis chart and a reader who has learned the field will meet a new one.
+
+Six links is a sparse picture. The redundancy threshold is deliberately high,
+so the drawing says little about pairs at 0.8, and a reader could take the
+absence of a line for independence. The readout prints the threshold for that
+reason.
+
+Dots that share a correlation step above or below one another by a fixed
+offset, so a vertical position inside a lane means nothing and could be read
+as if it did. The lane is 48 pixels tall to keep that offset small.
+
+**Overturned by.** A reader taking a dot's position inside a lane, or its
+absence of a line, for a finding the diagnostics do not make, which would mean
+the encodings need a legend the field does not carry or the drawing needs to
+go. Or the lane picture of the institution map being built and the two
+components diverging, which would mean the projection was not general enough
+and the second drawing should have been a data change.

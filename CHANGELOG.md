@@ -22,6 +22,17 @@ for Coordination, Trust, Building and Shared Purpose.
 - **Two dimensions cross a band.** Coordination and Shared Purpose move from
   very thin to thin. Trust stays very thin: it rests on two observed rows.
 
+## App 1.9.0 — 2026-09-02
+
+- **The indicator registry can be read as lanes.** A new page at `/explore`
+  draws every indicator in the lane of the capability it measures. A filled
+  dot has data, a dashed ring is a declared gap and a thin ring is a retired
+  row. A second arrangement moves each indicator to how closely its series
+  tracks income, with the wealth threshold drawn as a rule and each
+  capability's own correlation as a tick. A line joins the indicator pairs the
+  diagnostics find redundant. Pointing at a dot reads it under the field, and
+  the registry and the diagnostics pages both link to the drawing. See D108.
+
 ## App 1.6.1 — 2026-08-31
 
 - **Confidence values are compact.** Every confidence value uses one

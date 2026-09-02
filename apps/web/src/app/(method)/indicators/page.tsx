@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { INDICATORS, isScored } from '@ncb/core'
 import { IndicatorRegistry } from '@/components/views/IndicatorRegistry'
 import { Headline, PageTitle } from '@/components/ui'
+import { exploreHref } from '@/lib/links'
 
 export const metadata: Metadata = {
   title: 'Indicator registry, NCB',
@@ -16,7 +18,12 @@ export default function IndicatorsPage() {
       <PageTitle>Every indicator the model asks for</PageTitle>
       <Headline>
         {INDICATORS.length} indicators are listed here. {wired} have data. Gaps and retired rows
-        remain visible because they affect confidence and the collection agenda.
+        remain visible because they affect confidence and the collection agenda. The same registry
+        is{' '}
+        <Link href={exploreHref()} className="underline underline-offset-4">
+          drawn as lanes
+        </Link>
+        .
       </Headline>
       <IndicatorRegistry />
     </>

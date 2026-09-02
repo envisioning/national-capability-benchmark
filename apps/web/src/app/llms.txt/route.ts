@@ -75,6 +75,7 @@ const PARTICIPATE_NOTES: Record<string, string> = {
 const METHOD_NOTES: Record<string, string> = {
   '/method': 'Normalisation, scoring, confidence and the coverage floor.',
   '/indicators': 'The registry: every indicator, including the declared gaps and the retired rows.',
+  '/explore': 'The registry drawn as lanes, one per capability, with each indicator placed by how closely it tracks income and the overlapping pairs joined.',
   '/sources': 'Who publishes each series and the exact call that fetches it.',
   '/diagnostics': 'Correlations, redundancy and the GDP-sensitivity test.',
   '/delphi': 'The expert layer, its provenance, and why it never enters a score.',
