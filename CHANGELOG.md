@@ -22,6 +22,13 @@ for Coordination, Trust, Building and Shared Purpose.
 - **Two dimensions cross a band.** Coordination and Shared Purpose move from
   very thin to thin. Trust stays very thin: it rests on two observed rows.
 
+## App 1.12.0 — 2026-09-02
+
+- **The dot motif behind the front page breathes.** The bubbles grow and
+  shrink on the parent brand's 3.2 second cycle, at the same faint alphas as
+  before. A reader whose system asks for reduced motion gets the still frame,
+  and the motion stops while the band is off screen. See D112.
+
 ## App 1.10.0 — 2026-09-02
 
 - **The institution network has a readable scope.** Broad network views open

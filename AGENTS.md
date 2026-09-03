@@ -621,18 +621,20 @@ as the reference, and see NOTICE.md before reusing the brand.
   overshoot `100vw` causes, and `clip` is required over `hidden` because
   `hidden` would make the element a scroll container and break any future
   sticky chrome. Never put a second dark band on a page. See D81.
-- The dot motif is `DotField` in `apps/web/src/components/DotField.tsx`, drawn
-  as a still SVG pattern rather than the parent's canvas animation. The
+- The dot motif is `DotField` in `apps/web/src/components/DotField.tsx`. The
   geometry is envisioning.com's `lib/design/dot-motif.ts` and the wave grid
-  that reads it: 36px spacing, a 1.5px centre, a 2.5px to 10px bubble. The
-  alphas are not the parent's. It draws the motif over its own surfaces at
-  ambient 0.15 with an opaque centre; on the hero band that centre is a pure
-  white pinprick every 36px, so this viewer runs the bubble at 0.05 and the
-  centre at 0.22. Atmosphere is felt, not seen: if you can count the dots
-  before you have read the sentence over them, they are too loud. It is atmosphere and never data. Every distribution on
-  this site is a `FlagField`, where a bubble means confidence and a position
-  means a score, so never put a `DotField` where a reader could take it for
-  one. See D81.
+  that reads it: 36px spacing, a 1.5px centre, a 2.5px to 10px bubble, a
+  3200ms breath along a diagonal phase. It breathes on a canvas only when the
+  reader allows motion and the band is on screen; the server and a
+  reduced-motion reader get one still SVG frame, and the canvas's first frame
+  is that frame, because both read `phaseAt`. Change the geometry in one place
+  and both drawings follow. The alphas are not the parent's: ambient 0.05 and
+  centre 0.22, because on the hero band the parent's opaque centre is a white
+  pinprick every 36px. Atmosphere is felt, not seen: if you can count the dots
+  before you have read the sentence over them, they are too loud. It is
+  atmosphere and never data. Every distribution on this site is a `FlagField`,
+  where a bubble means confidence and a position means a score, so never put a
+  `DotField` where a reader could take it for one. See D81 and D112.
 - A section opens its own pages from the header, and it is one control and not
   two: `SectionMenu` in `apps/web/src/components/SiteNav.tsx` is the section
   link, opens its panel on hover, and navigates on click. It reads

@@ -5097,3 +5097,49 @@ want the full map must make one explicit switch or clear the level criterion.
 `applyCriteria` or scope API, which would let the route remove its adapter and
 use the library's own control end to end; or evidence that the 282-state-node
 overview is a clearer first reading than the national scope.
+
+---
+
+## D112 — The hero's dot motif breathes, behind the reader's motion setting
+
+*Recorded 2026-09-02. Supersedes the still-only clause of D81. Keeps every
+other clause of D81: the alphas, the geometry, the one dark band, and the
+rule that the motif is atmosphere and never data.*
+
+**Choice.** `DotField` draws the parent brand's breathing motion. The bubble
+around each centre grows and shrinks on a sine along the same diagonal phase
+the still frame already froze, on the parent's 3200ms cycle, at the alphas
+D81 set. The motion is gated three ways. A reader whose system asks for
+reduced motion gets the still SVG pattern and no script runs for it. The
+server renders that same still frame, so it is what every reader sees first.
+The canvas takes over only when motion is allowed, and it stops drawing when
+the band leaves the viewport or the tab is hidden. Its first frame is the
+still frame, because both read one `phaseAt` and time starts at mount, so
+the handover does not jump.
+
+**Why.** D81 recorded that a research surface does not need a background that
+moves and that a still frame costs no JavaScript. Both are still true and
+neither was the reason a reader asked whether the motif was animated. The
+still frame is one moment of a motion the parent site runs everywhere, and a
+reader who knows the parent reads it as animation that has stopped, which is
+a broken thing rather than a quiet one. Drawing the motion restores the motif
+to what it is, and gating it behind the reader's own setting keeps the quiet
+version for the readers who asked for it.
+
+The alphas do not move. At 0.05 and 0.22 the breath is felt in peripheral
+vision and is hard to see when looked at, which is the test D81 set for the
+still frame and the test the moving one has to pass too.
+
+**Cost.** The hero now runs a requestAnimationFrame loop while it is on
+screen, on the one route that opens the site. The loop draws about 300
+circles a frame at desktop width and stops off screen, so the cost is a few
+milliseconds a frame for as long as the band is visible and nothing after.
+The still pattern is kept for the reduced-motion reader, so there are two
+drawings of one motif in one file, and a change to the geometry has to reach
+both, which `phaseAt` and `bubbleAt` are there to make one change.
+
+**Overturned by.** A reader finding the motion distracting at these alphas,
+which would mean atmosphere has become texture and the still clause of D81
+should return. Or a measured cost on the front page's interaction readiness
+that the loop causes, which would mean the canvas has to wait for idle before
+it starts.
