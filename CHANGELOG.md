@@ -22,6 +22,13 @@ for Coordination, Trust, Building and Shared Purpose.
 - **Two dimensions cross a band.** Coordination and Shared Purpose move from
   very thin to thin. Trust stays very thin: it rests on two observed rows.
 
+## App 1.13.0 — 2026-09-02
+
+- **The front page shows two drawings instead of naming them.** The wealth
+  module carries the lane field in its measured arrangement, and a new module
+  carries Brazil's system matrix. Each picture is the link to its page. See
+  D113.
+
 ## App 1.12.0 — 2026-09-02
 
 - **The dot motif behind the front page breathes.** The bubbles grow and

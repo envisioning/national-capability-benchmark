@@ -241,14 +241,23 @@ export type LaneFieldProps = {
   field: LaneField
   arrangement: LaneArrangement
   labels?: LaneFieldLabels
-  /** A mark for each lane, drawn beside its name and never instead of it. */
-  laneIcon?: (laneId: LaneFieldDot['laneId']) => IconName
+  /**
+   * A mark for each lane, drawn beside its name and never instead of it. A
+   * map rather than a function, so a server page can hand it across.
+   */
+  laneIcon?: Partial<Record<LaneFieldDot['laneId'], IconName>>
   /** Where a lane's name goes. */
   laneHref?: (laneId: LaneFieldDot['laneId']) => string
   /** Where a dot's name goes. */
   dotHref?: (dot: LaneFieldDot) => string
   /** Page-specific rows under the readout: a class badge, a publisher, a link out. */
   renderDetail?: (dot: LaneFieldDot) => React.ReactNode
+  /**
+   * False draws the field as a picture: no readout, no hover, no keyboard, the
+   * opening dot's links raised. A page wraps that picture in one link. The
+   * radar does the same inside a grid card. See D53.
+   */
+  interactive?: boolean
 }
 
 export function LaneField({
@@ -259,6 +268,7 @@ export function LaneField({
   laneHref,
   dotHref,
   renderDetail,
+  interactive = true,
 }: LaneFieldProps) {
   const frame = useRef<HTMLDivElement>(null)
   const [width, setWidth] = useState(DEFAULT_WIDTH)
@@ -299,7 +309,7 @@ export function LaneField({
   /* A focus ring on an SVG group is not drawn by every browser, so the field
    * draws its own when a keyboard lands on a dot. */
   const [focused, setFocused] = useState<string | null>(null)
-  const activeId = hover ?? pinned ?? opening
+  const activeId = interactive ? hover ?? pinned ?? opening : opening
   const active = activeId ? byId.get(activeId) ?? null : null
   const activeLinks = active ? linksOf(field, active.id) : []
   const joined = new Set(activeLinks.flatMap((link) => [link.a, link.b]))
@@ -358,8 +368,8 @@ export function LaneField({
                 className="flex items-center gap-2 px-3 sm:pr-4"
                 style={{ height: LANE_H }}
               >
-                {laneIcon ? (
-                  <Icon name={laneIcon(lane.id)} size={14} className="text-[var(--muted)]" />
+                {laneIcon?.[lane.id] ? (
+                  <Icon name={laneIcon[lane.id] as IconName} size={14} className="text-[var(--muted)]" />
                 ) : null}
                 {laneHref ? (
                   <Link href={laneHref(lane.id)} className="hover:underline">
@@ -381,7 +391,7 @@ export function LaneField({
             role="img"
             aria-label={described}
             className="block overflow-visible"
-            onPointerLeave={() => setHover(null)}
+            onPointerLeave={interactive ? () => setHover(null) : undefined}
           >
             {/* Lane rules, drawn behind everything. */}
             {field.lanes.map((lane, i) =>
@@ -499,24 +509,31 @@ export function LaneField({
               return (
                 <g
                   key={dot.id}
-                  role="button"
-                  tabIndex={pinned === dot.id ? 0 : -1}
-                  aria-label={`${dot.label}, ${lane?.label ?? ''}, ${state}.${measureText}`}
-                  aria-pressed={on}
-                  className="cursor-pointer outline-none motion-reduce:transition-none"
+                  role={interactive ? 'button' : undefined}
+                  tabIndex={interactive ? (pinned === dot.id ? 0 : -1) : undefined}
+                  aria-label={
+                    interactive ? `${dot.label}, ${lane?.label ?? ''}, ${state}.${measureText}` : undefined
+                  }
+                  aria-pressed={interactive ? on : undefined}
+                  className={`${interactive ? 'cursor-pointer' : ''} outline-none motion-reduce:transition-none`}
                   style={{
                     transform: `translate(${p.x}px, ${p.y}px)`,
                     transformBox: 'view-box',
                     transition: MOVE,
                   }}
-                  onPointerEnter={() => setHover(dot.id)}
-                  onPointerDown={() => setPinned(dot.id)}
-                  onFocus={() => {
-                    setPinned(dot.id)
-                    setFocused(dot.id)
-                  }}
-                  onBlur={() => setFocused((f) => (f === dot.id ? null : f))}
+                  onPointerEnter={interactive ? () => setHover(dot.id) : undefined}
+                  onPointerDown={interactive ? () => setPinned(dot.id) : undefined}
+                  onFocus={
+                    interactive
+                      ? () => {
+                          setPinned(dot.id)
+                          setFocused(dot.id)
+                        }
+                      : undefined
+                  }
+                  onBlur={interactive ? () => setFocused((f) => (f === dot.id ? null : f)) : undefined}
                   onKeyDown={(e) => {
+                    if (!interactive) return
                     const keys: Record<string, [number, number]> = {
                       ArrowLeft: [-1, 0],
                       ArrowRight: [1, 0],
@@ -551,6 +568,7 @@ export function LaneField({
       </div>
 
       {/* The readout: always one dot, fixed height, so pointing changes words and not layout. */}
+      {interactive ? (
       <div
         className="mt-4 rounded-lg border border-[var(--rule)] bg-[var(--surface-sunken)] p-4"
         style={{ minHeight: 148 }}
@@ -570,6 +588,7 @@ export function LaneField({
           />
         ) : null}
       </div>
+      ) : null}
     </div>
   )
 }

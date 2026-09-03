@@ -28,6 +28,7 @@ import type {
   MatrixFamily,
 } from '@ncb/core'
 import { Icon } from '@/components/Icon'
+import { MATRIX_FILL } from '@/components/MatrixPicture'
 import { Card, controlClass } from '@/components/ui'
 
 /**
@@ -56,11 +57,6 @@ const INITIAL_ID = 'bra.federal.bndes'
  * of 100 lime cells would spend the one accent this page has. The breaks
  * themselves live in `MATRIX_BANDS` in the core package. See D58.
  */
-const MATRIX_FILL: Record<MatrixBandId, string> = {
-  low: 'weak',
-  middle: 'below_middle',
-  high: 'above_middle',
-}
 
 type Connection = {
   edge: InstitutionEdge

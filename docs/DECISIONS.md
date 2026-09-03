@@ -5143,3 +5143,52 @@ which would mean atmosphere has become texture and the still clause of D81
 should return. Or a measured cost on the front page's interaction readiness
 that the loop causes, which would mean the canvas has to wait for idle before
 it starts.
+
+---
+
+## D113 — The front page shows a surface rather than naming it
+
+*Recorded 2026-09-02. Amends the one-link clause of D75. Extends D53, D58 and
+D108.*
+
+**Choice.** Where a section of the site is a drawing, the front page draws it
+and the drawing is the link. Two modules changed. The wealth module, which
+states how far each capability tracks income, now carries the lane field in
+its measured arrangement as a still picture, and the picture opens `/explore`.
+A new module carries Brazil's system matrix as a still picture, cells shaded
+by count and nothing else, and the picture opens `/network`. Both pictures
+are the same components the pages draw, in a non-interactive mode: no readout,
+no hover, no keyboard, one link around the whole. `LaneField` gained
+`interactive={false}` for it, the way `Radar` has inside a grid card, and
+`MatrixPicture` in `apps/web/src/components/MatrixPicture.tsx` is the matrix
+without its readout, reading the same `MATRIX_FILL` the institution page reads.
+
+**Why.** A sentence that names a page tells a reader it exists. The page's
+own picture, at the size the front page has room for, tells the reader what it
+is, and that is the difference between a visit and a link that was never
+followed. D75 wrote each module as a sentence, a live number and one link out,
+and a link that is a picture keeps the count while carrying more.
+
+Brazil is drawn because it is the one country with a map. The front page does
+not choose it; it has nothing else to draw. When a second map lands, this
+module becomes a choice and needs a rule, which is why the module is gated on
+the file and not on a list.
+
+**Cost.** The front page now loads the Brazilian institution file and the
+global ledger on every request, beside the index, the diagnostics and the
+evidence corpus. It is a few hundred kilobytes of JSON read from disk, and
+nothing is cached, which is the cost every other page pays too.
+
+The lane field is a client component, so the front page ships it whether or
+not the reader points at it. It is drawn without a readout, which makes the
+still picture the picture's whole meaning: a reader who cannot point at a dot
+reads nothing about any one indicator here and has to open the page.
+
+The matrix picture carries no axis names. Ten unlabeled rows against ten
+unlabeled columns is a texture until the reader opens the page, and the
+section hint has to carry what the axes are.
+
+**Overturned by.** A second institution map, which makes the Brazilian module
+a choice the front page has no rule for. Or a measured cost on the front
+page's response time from the added reads, which would mean the matrix
+should be computed once by `bench institutions` and read from `data/out`.

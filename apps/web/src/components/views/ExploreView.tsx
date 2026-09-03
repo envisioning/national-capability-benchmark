@@ -60,7 +60,7 @@ export function ExploreView({
       <LaneField
         field={field}
         arrangement={arrangement}
-        laneIcon={(id) => DIMENSION_ICON[id]}
+        laneIcon={DIMENSION_ICON}
         laneHref={capabilityHref}
         dotHref={(dot) => indicatorHref(dot.id)}
         renderDetail={(dot) => (

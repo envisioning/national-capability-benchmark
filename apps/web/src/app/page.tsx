@@ -1,7 +1,17 @@
 import Link from 'next/link'
-import { COUNTRIES, DATASET_VERSION, INDICATORS, isScored } from '@ncb/core'
+import {
+  COUNTRIES,
+  DATASET_VERSION,
+  INDICATORS,
+  buildIndicatorLanes,
+  buildInstitutionMatrix,
+  isScored,
+} from '@ncb/core'
 import { DotField } from '@/components/DotField'
 import { FlagHistogram } from '@/components/FlagHistogram'
+import { DIMENSION_ICON } from '@/components/Icon'
+import { LaneField } from '@/components/LaneField'
+import { MatrixPicture } from '@/components/MatrixPicture'
 import {
   Empty,
   FactStrip,
@@ -12,7 +22,13 @@ import {
   Section,
   type Fact,
 } from '@/components/ui'
-import { MISSING_DATA_HINT, loadDiagnostics, loadEvidence, loadIndex } from '@/lib/data'
+import {
+  MISSING_DATA_HINT,
+  loadDiagnostics,
+  loadEvidence,
+  loadIndex,
+  loadInstitutionNetwork,
+} from '@/lib/data'
 import {
   aboutHref,
   agendasHref,
@@ -27,6 +43,7 @@ import {
   diagnosticsHref,
   exploreHref,
   indicatorsHref,
+  institutionNetworkHref,
   limitsHref,
   methodHref,
   thesisHref,
@@ -76,10 +93,14 @@ function datasetJsonLd(data: { generatedAt: string; version?: string }): string 
  * this page three times over. See D75.
  */
 export default async function Page() {
-  const [data, diag, evidence] = await Promise.all([
+  /* Brazil is the one country with an institution map, so its wiring is the
+   * one such picture the front page can draw. A second map makes this a list
+   * and a choice. See D113. */
+  const [data, diag, evidence, brazil] = await Promise.all([
     loadIndex(),
     loadDiagnostics(),
     loadEvidence(),
+    loadInstitutionNetwork('BRA'),
   ])
   if (!data || data.countries.length === 0) return <Empty hint={MISSING_DATA_HINT} />
 
@@ -88,6 +109,10 @@ export default async function Page() {
     .map(toHistogramProfile)
 
   const wealth = diag ? readWealthTracking(diag) : null
+  const lanes = diag ? buildIndicatorLanes(diag) : null
+  const wiring = brazil.network
+    ? buildInstitutionMatrix(brazil.network.nodes, brazil.network.edges)
+    : null
   const spread = widestSpread(profiles)
   const wired = INDICATORS.filter(isScored).length
   const gaps = INDICATORS.filter((i) => i.ingest === 'gap').length
@@ -196,12 +221,41 @@ export default async function Page() {
             <Link href={diagnosticsHref} className="underline underline-offset-4">
               diagnostics
             </Link>{' '}
-            hold the full test. To see it in one picture,{' '}
-            <Link href={exploreHref('measure')} className="underline underline-offset-4">
-              explore every indicator by how closely it tracks income
-            </Link>
-            .
+            hold the full test.
           </p>
+          {lanes ? (
+            <Link
+              href={exploreHref('measure')}
+              aria-label="Every indicator by how closely it tracks income, drawn as lanes"
+              className="mt-8 block rounded-xl transition-opacity hover:opacity-90"
+            >
+              <LaneField
+                field={lanes}
+                arrangement="measure"
+                interactive={false}
+                laneIcon={DIMENSION_ICON}
+              />
+            </Link>
+          ) : null}
+        </Section>
+      ) : null}
+
+      {wiring && brazil.network ? (
+        <Section
+          title="One country's institutions, wired"
+          hint="Every system of the Brazilian state against every other, a cell shaded by how many relations run through it. The map explains a score and never enters one."
+        >
+          <Link
+            href={institutionNetworkHref('BRA')}
+            aria-label={`${brazil.network.nodes.length} institutions and ${brazil.network.edges.length} relations, drawn as a network`}
+            className="inline-block rounded-xl transition-opacity hover:opacity-90"
+          >
+            <MatrixPicture
+              matrix={wiring}
+              cell={22}
+              label={`${wiring.filled} of ${wiring.cells.length} system pairs hold a relation. ${wiring.total} relations in all.`}
+            />
+          </Link>
         </Section>
       ) : null}
 
