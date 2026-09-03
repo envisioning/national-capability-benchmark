@@ -32,10 +32,19 @@ function patchHistoryOnce() {
 
   const originalPushState = history.pushState.bind(history)
   const originalReplaceState = history.replaceState.bind(history)
+  /* Next syncs the address from inside a `useInsertionEffect`, and a listener
+   * that sets state synchronously from there is an error. The event is
+   * dispatched on the next tick, after that commit has finished, and only
+   * when the search actually changed. */
+  let lastSearch = window.location.search
   const notify = () => {
-    const event = document.createEvent('Event')
-    event.initEvent('ncb-network-locationchange', false, false)
-    window.dispatchEvent(event)
+    if (window.location.search === lastSearch) return
+    lastSearch = window.location.search
+    window.setTimeout(() => {
+      const event = document.createEvent('Event')
+      event.initEvent('ncb-network-locationchange', false, false)
+      window.dispatchEvent(event)
+    }, 0)
   }
 
   history.pushState = (...args: Parameters<History['pushState']>) => {
