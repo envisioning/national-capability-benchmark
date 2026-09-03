@@ -43,7 +43,7 @@ import {
   diagnosticsHref,
   exploreHref,
   indicatorsHref,
-  institutionNetworkHref,
+  institutionGraphDatasetHref,
   limitsHref,
   methodHref,
   thesisHref,
@@ -246,7 +246,7 @@ export default async function Page() {
           hint="Every system of the Brazilian state against every other, a cell shaded by how many relations run through it. The map explains a score and never enters one."
         >
           <Link
-            href={institutionNetworkHref('BRA')}
+            href={institutionGraphDatasetHref('BRA')}
             aria-label={`${brazil.network.nodes.length} institutions and ${brazil.network.edges.length} relations, drawn as a network`}
             className="inline-block rounded-xl transition-opacity hover:opacity-90"
           >
