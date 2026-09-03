@@ -25,6 +25,7 @@ import {
   countryProfileHref,
   decisionsHref,
   diagnosticsHref,
+  exploreHref,
   indicatorsHref,
   limitsHref,
   methodHref,
@@ -195,7 +196,11 @@ export default async function Page() {
             <Link href={diagnosticsHref} className="underline underline-offset-4">
               diagnostics
             </Link>{' '}
-            hold the full test.
+            hold the full test. To see it in one picture,{' '}
+            <Link href={exploreHref('measure')} className="underline underline-offset-4">
+              explore every indicator by how closely it tracks income
+            </Link>
+            .
           </p>
         </Section>
       ) : null}
