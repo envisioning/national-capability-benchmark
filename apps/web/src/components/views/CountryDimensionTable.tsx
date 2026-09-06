@@ -1,8 +1,16 @@
 'use client'
 
 import { CapabilityLink } from '@/components/CapabilityLink'
-import { DIMENSIONS, DIMENSION_LABELS, DISSENT_IQR, primaryMomentum } from '@ncb/core'
+import {
+  DIMENSIONS,
+  DIMENSION_LABELS,
+  DISSENT_IQR,
+  countedForCoverage,
+  indicatorsFor,
+  primaryMomentum,
+} from '@ncb/core'
 import type { CountryResult } from '@ncb/core'
+import { CoverageMark } from '@/components/CoverageMark'
 import { DataTable } from '@/components/DataTable'
 import { Confidence, Delta, DimensionScore, Score } from '@/components/ui'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
@@ -67,9 +75,14 @@ export function CountryDimensionTable({
     {
       key: 'coverage',
       label: 'Coverage',
-      align: 'right' as const,
       sort: (r: (typeof rows)[number]) => r.dim.confidenceParts.coverage,
-      render: (r: (typeof rows)[number]) => muted(r.dim.confidenceParts.coverage.toFixed(2)),
+      render: (r: (typeof rows)[number]) => (
+        <CoverageMark
+          observed={r.dim.observedIndicators}
+          total={countedForCoverage(indicatorsFor(r.d)).length}
+          className="text-[var(--muted)]"
+        />
+      ),
     },
     {
       key: 'recency',

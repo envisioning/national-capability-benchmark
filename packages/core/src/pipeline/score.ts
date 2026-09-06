@@ -8,6 +8,7 @@ import {
   INDICATORS,
   SOURCE_TIERS,
   checksFor,
+  countedForCoverage,
   isDelphiRunForDataset,
   isEvidential,
   indicatorsFor,
@@ -227,7 +228,7 @@ function confidenceFor(
    * Retired rows stay in the registry, stay published on the indicator rows with
    * status 'retired', and stay counted in the diagnostics. They no longer lower
    * coverage. See D100, which amends D23. */
-  const counted = defs.filter((d) => d.ingest !== 'retired')
+  const counted = countedForCoverage(defs)
   const coverage = counted.length === 0 ? 0 : observed.length / counted.length
   const recency =
     observed.length === 0 ? 0 : mean(observed.map((c) => recencyWeight(c.year, currentYear)))

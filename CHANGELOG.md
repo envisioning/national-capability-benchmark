@@ -22,6 +22,19 @@ for Coordination, Trust, Building and Shared Purpose.
 - **Two dimensions cross a band.** Coordination and Shared Purpose move from
   very thin to thin. Trust stays very thin: it rests on two observed rows.
 
+## App 1.14.0 — 2026-09-06
+
+- **Coverage is drawn as the count it is.** How many of a capability's
+  indicator rows were observed for a country used to read as a two decimal
+  ratio, and as the words "not measured" where the count fell below the floor.
+  It is now one tick per row, filled where the row was observed, with a notch at
+  the two rows a score needs. The count is still printed beside it.
+- **An observed year sits on a rail.** Every indicator record and every
+  publisher row now shows when the value was observed as a position between 1990
+  and this year, with the line trailing the tick showing how long ago that was.
+- **A workbench page collects every mark.** Not published and in no navigation:
+  it draws each chart beside the states it can take, from the live index.
+
 ## App 1.13.0 — 2026-09-02
 
 - **The front page shows two drawings instead of naming them.** The wealth

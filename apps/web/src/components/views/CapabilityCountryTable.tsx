@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { DIMENSION_LABELS } from '@ncb/core'
 import type { Dimension } from '@ncb/core'
+import { CoverageMark } from '@/components/CoverageMark'
 import { DataTable } from '@/components/DataTable'
 import { FlagField } from '@/components/FlagField'
 import { Confidence, CountryLabel, Delta, DimensionScore } from '@/components/ui'
@@ -37,6 +38,7 @@ export function CapabilityCountryTable({
 }: {
   dimension: Dimension
   rows: CapabilityCountryRow[]
+  /** Rows coverage is counted against, which excludes retired rows. See D100. */
   indicatorCount: number
 }) {
   const scored = rows.filter((row): row is CapabilityCountryRow & { score: number } => row.score !== null)
@@ -95,12 +97,13 @@ export function CapabilityCountryTable({
         {
           key: 'coverage',
           label: 'Observed',
-          align: 'right',
           sort: (row) => row.observedIndicators,
           render: (row) => (
-            <span className="text-[var(--muted)]">
-              {row.observedIndicators} of {indicatorCount}
-            </span>
+            <CoverageMark
+              observed={row.observedIndicators}
+              total={indicatorCount}
+              className="text-[var(--muted)]"
+            />
           ),
         },
         {

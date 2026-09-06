@@ -8,6 +8,7 @@ import {
   INDICATORS_BY_ID,
   checksFor,
   contestedDisputeCounts,
+  countedForCoverage,
   indicatorsFor,
   isScored,
   primaryMomentum,
@@ -141,7 +142,7 @@ export default async function CapabilityPage({
         <CapabilityCountryTable
           dimension={dimension}
           rows={rows}
-          indicatorCount={definitions.length}
+          indicatorCount={countedForCoverage(definitions).length}
         />
         <FrameNote />
       </Section>

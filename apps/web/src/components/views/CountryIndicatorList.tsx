@@ -1,5 +1,6 @@
 import { INDICATORS_BY_ID } from '@ncb/core'
 import type { DimensionResult, EvidenceRecord } from '@ncb/core'
+import { RecencyTick } from '@/components/RecencyTick'
 import { IndicatorPeek } from '@/components/views/IndicatorPeek'
 import { ClassBadge, Score, Sparkline } from '@/components/ui'
 import { Icon, STATUS_ICON } from '@/components/Icon'
@@ -88,7 +89,7 @@ function IndicatorCard({
           <span className="mt-1 block text-xs text-[var(--muted)]">{def?.unit ?? '—'}</span>
         </Fact>
         <Fact label="Year">
-          <span className="tabular-nums">{row.year ?? '—'}</span>
+          <RecencyTick year={row.year} width={56} />
         </Fact>
         <Fact label="Normalized">
           <span className="inline-flex items-center gap-2">

@@ -5192,3 +5192,57 @@ section hint has to carry what the axes are.
 a choice the front page has no rule for. Or a measured cost on the front
 page's response time from the added reads, which would mean the matrix
 should be computed once by `bench institutions` and read from `data/out`.
+
+## D114 — A count is drawn as a count, and a year as a position in time
+
+*Recorded 2026-09-02. Extends D103. Serves D45 and D100.*
+
+**Choice.** Two marks, both second encodings of numbers the viewer already
+printed. `CoverageMark` draws one tick per indicator row a capability is
+measured against, filled where the row was observed for this country, with a
+notch at the coverage floor. `RecencyTick` draws a rail from the first year the
+ingest fetches to the current one, with a tick at the year a value was observed
+and a quiet line trailing it for how long ago that was. Both print the number
+beside the mark and neither replaces it.
+
+Coverage reached the reader as `0.71`. Seven rows cannot produce a hundred
+values, so two decimals claimed a resolution the count does not have, and the
+ratio hid the thing a reader most needs from it: how far a capability is from
+the two rows a score requires. Below the floor it was worse. The page printed
+the words "not measured" and the count that explains them existed only in
+screen reader text, so the reader who could see the page was told least.
+
+Recency is one of the three factors behind every confidence and it reached the
+reader as a decimal in a sortable column, or as a bare year on an indicator
+record. Both are unreadable without a scale: 2011 means nothing until it sits
+next to what a current round looks like. The rail is that scale, and the length
+of the trailing line is the staleness the decimal was trying to say.
+
+Both denominators come from `countedForCoverage` in the registry, which the
+scorer also uses, so the mark and the confidence figure beside it can never be
+counted against different denominators. A retired row is in neither.
+
+**Why.** These are the two things this dataset is least certain about, and both
+were rendered as the kind of number a reader skims past. A count drawn as a
+count is read without being parsed: five ticks lit of seven is a glance, 0.71 is
+arithmetic. The floor notch is the same argument for D45, which withholds a
+score below two observed rows and until now gave the reader no way to see how
+close a capability was to publishing one.
+
+**Cost.** Two more marks to learn, on tables that already carry a score band, a
+confidence chip and a trend arrow. The coverage mark stops being countable
+somewhere above a dozen rows, so a capability that grows past that needs a
+different form rather than a tighter pitch. The recency rail's right edge is
+the current year, which means every mark on the site shifts by a hair each
+January, and a screenshot taken now will not line up with one taken next year.
+
+Two places that were named as candidates and refused. `/gaps` counts registry
+rows with no dataset, which is a different claim from rows observed for a
+country, and one mark meaning two things is worse than two marks. The indicator
+peek panel already draws a field above its list and a bar in every row, so a
+third mark there would crowd a reading rather than open it.
+
+**Overturned by.** A capability with enough rows that the ticks stop being
+countable, which would want a different form for coverage and not a smaller
+pitch; or evidence that readers take the trailing line for a bar rather than
+for elapsed time, which would make the rail worse than the year it replaced.

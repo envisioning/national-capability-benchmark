@@ -1007,6 +1007,18 @@ export function indicatorsFor(dimension: Dimension): IndicatorDef[] {
   return INDICATORS.filter((i) => i.dimension === dimension)
 }
 
+/**
+ * The rows a coverage figure is measured against.
+ *
+ * A retired row is a dataset this project inspected and rejected, so it is not
+ * a hole in the evidence the way a gap is and it leaves the denominator. The
+ * scorer and the viewer both read this, so a coverage figure and the mark drawn
+ * beside it can never be counted against different denominators. See D100.
+ */
+export function countedForCoverage(defs: IndicatorDef[]): IndicatorDef[] {
+  return defs.filter((d) => d.ingest !== 'retired')
+}
+
 export type SeriesRequest = { series: string; sourceId: number }
 
 /** Series the ingester must fetch, including denominators, de-duplicated. */

@@ -165,6 +165,17 @@ port 3888. That entry starts Next directly and does not use the proxy.
   are named inside each chart's own geometry. `Icon` keeps Lucide's weight,
   `EnvisioningMark` is brand geometry, `Og` draws a 1200 pixel card and
   `DotField` is atmosphere: none of them read the tokens. See D103.
+- **A count is drawn as a count and a year as a position in time.**
+  `CoverageMark` in `apps/web/src/components/CoverageMark.tsx` draws one tick
+  per row a capability's coverage is measured against, with a notch at
+  `MIN_INDICATORS_FOR_SCORE`, and `RecencyTick` in the same folder draws the
+  observed year on a rail from `INGEST_FROM_YEAR` to now. Both print the number
+  beside the mark: the mark is a second encoding and never the only one, so
+  neither carries an `aria-label` of its own. Every denominator comes from
+  `countedForCoverage` in the registry, which the scorer also reads, so a
+  coverage figure and the mark beside it can never count different rows. Never
+  draw a coverage ratio as a meter: seven rows do not make a percentage. See
+  D114.
 - `pnpm design:check` reads the rules above that a machine can check: a stroke
   width written by hand, a `text-sm`, a dash in reader copy, a bare `docs/*.md`
   path. It warns and never fails, and it runs before every build and typecheck.

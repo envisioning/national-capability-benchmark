@@ -17,6 +17,7 @@ import {
 import type { IngestRoute, PublisherSummary } from '@ncb/core'
 import { DefineLink, Headline, Note, PageTitle, Scroller, Section, Table, Td, Th } from '@/components/ui'
 import { Icon, TIER_ICON } from '@/components/Icon'
+import { RecencyTick } from '@/components/RecencyTick'
 import { loadIndicatorCoverage } from '@/lib/data'
 import { indicatorHref, limitsHref, publisherSlug } from '@/lib/links'
 import { capitalize, countWord } from '@/lib/words'
@@ -167,7 +168,7 @@ export default async function SourcesPage() {
                   <DefineLink term="Ingest route">Route</DefineLink>
                 </Th>
                 <Th align="right">Values</Th>
-                <Th align="right">Latest year</Th>
+                <Th>Latest year</Th>
               </tr>
             </thead>
             <tbody>
@@ -189,7 +190,13 @@ export default async function SourcesPage() {
                     <Td align="right">{p.total}</Td>
                     <Td dim>{routeSummary(p.routes)}</Td>
                     <Td align="right">{values || ''}</Td>
-                    <Td align="right">{latestYear ?? ''}</Td>
+                    <Td>
+                      {latestYear === null ? (
+                        ''
+                      ) : (
+                        <RecencyTick year={latestYear} to={thisYear} width={56} />
+                      )}
+                    </Td>
                   </tr>
                 )
               })}
