@@ -9,7 +9,6 @@
 @theme {
   --color-accent: #d6f249;
   --color-accentDown: #aacc00;
-  --color-whiteDown: var(--whiteDown);
   --color-gray: #d9d9de;
   --color-grayDown: #b8bdd9;
   --color-blackUp: #5c6180;
@@ -27,71 +26,44 @@
   --radius-2xl: 16px;
 }
 
+/* Every token is declared once, with its light and dark value side by side.
+ * `color-scheme` is the switch: `light dark` on :root lets the OS decide, and
+ * the embed wrappers below pin `light` or `dark` so an iframe is stable
+ * whatever the host browser prefers (DESIGN.md, Light and dark). The same
+ * property hands scrollbars, form controls and ::selection to the right
+ * scheme, which the site used to leave to the browser's default. */
 :root {
-  --background: #ffffff;
-  --foreground: #272a3d;
-  --whiteDown: #f2f5f9;
-  --surface: #ffffff;
-  --surface-sunken: #f2f5f9;
-  --rule: #d9d9de;
-  --rule-soft: #e4e4e7;
-  --muted: #5c6180;
-  --primary: #aacc00;
+  color-scheme: light dark;
+  --background: light-dark(#ffffff, #202333);
+  --foreground: light-dark(#272a3d, #fafafa);
+  --surface: light-dark(#ffffff, #313650);
+  --surface-sunken: light-dark(#f2f5f9, #191c2b);
+  --rule: light-dark(#d9d9de, #525252);
+  --rule-soft: light-dark(#e4e4e7, #404040);
+  --muted: light-dark(#5c6180, #b8bdd9);
+  --primary: light-dark(#aacc00, #d6f249);
   --ring: var(--primary);
-  --focus-ring-offset-color: #ffffff;
+  --focus-ring-offset-color: light-dark(#ffffff, #202333);
 
   /* Score bands. See packages/core/src/pipeline/bands.ts */
-  --score-weak: #d7dbe8;
-  --score-weak-ink: #272a3d;
-  --score-below_middle: #8b93b5;
-  --score-below_middle-ink: #272a3d;
-  --score-above_middle: #454c70;
-  --score-above_middle-ink: #fafafa;
-  --score-strong: #aacc00;
+  --score-weak: light-dark(#d7dbe8, #2b3049);
+  --score-weak-ink: light-dark(#272a3d, #fafafa);
+  --score-below_middle: light-dark(#8b93b5, #646b8f);
+  --score-below_middle-ink: light-dark(#272a3d, #fafafa);
+  --score-above_middle: light-dark(#454c70, #c9cfe6);
+  --score-above_middle-ink: light-dark(#fafafa, #272a3d);
+  --score-strong: light-dark(#aacc00, #d6f249);
   --score-strong-ink: #272a3d;
 
   /* Confidence bands, validated against this surface. See packages/core/src/pipeline/confidence.ts */
-  --band-very_thin: #b8bdd9;
-  --band-very_thin-ink: #272a3d;
-  --band-thin: #7b83a8;
+  --band-very_thin: light-dark(#b8bdd9, #565d80);
+  --band-very_thin-ink: light-dark(#272a3d, #fafafa);
+  --band-thin: light-dark(#7b83a8, #8b93b5);
   --band-thin-ink: #272a3d;
-  --band-usable: #454c70;
-  --band-usable-ink: #fafafa;
-  --band-good: #aacc00;
+  --band-usable: light-dark(#454c70, #c9cfe6);
+  --band-usable-ink: light-dark(#fafafa, #272a3d);
+  --band-good: light-dark(#aacc00, #d6f249);
   --band-good-ink: #272a3d;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #202333;
-    --foreground: #fafafa;
-    --whiteDown: #202333;
-    --surface: #313650;
-    --surface-sunken: #191c2b;
-    --rule: #525252;
-    --rule-soft: #404040;
-    --muted: #b8bdd9;
-    --primary: #d6f249;
-    --focus-ring-offset-color: #202333;
-
-    --score-weak: #2b3049;
-    --score-weak-ink: #fafafa;
-    --score-below_middle: #646b8f;
-    --score-below_middle-ink: #fafafa;
-    --score-above_middle: #c9cfe6;
-    --score-above_middle-ink: #272a3d;
-    --score-strong: #d6f249;
-    --score-strong-ink: #272a3d;
-
-    --band-very_thin: #565d80;
-    --band-very_thin-ink: #fafafa;
-    --band-thin: #8b93b5;
-    --band-thin-ink: #272a3d;
-    --band-usable: #c9cfe6;
-    --band-usable-ink: #272a3d;
-    --band-good: #d6f249;
-    --band-good-ink: #272a3d;
-  }
 }
 
 html {
@@ -150,58 +122,20 @@ body:has(.embed-shell) > main > .embed-shell {
   padding: 1.5rem;
 }
 
+/* Pinning the scheme is all an embed needs: every token above resolves
+ * through light-dark() against the nearest color-scheme, so the score and
+ * band families come along without being restated. The html and body
+ * selectors matter because body paints var(--background) itself. */
 html:has(.embed-theme-light),
 body:has(.embed-theme-light),
 .embed-theme-light {
   color-scheme: light;
-  --background: #ffffff;
-  --foreground: #272a3d;
-  --surface: #ffffff;
-  --surface-sunken: #f2f5f9;
-  --rule: #d9d9de;
-  --rule-soft: #e4e4e7;
-  --muted: #5c6180;
-  --primary: #aacc00;
-  --focus-ring-offset-color: #ffffff;
-  --score-weak: #d7dbe8;
-  --score-weak-ink: #272a3d;
-  --score-below_middle: #8b93b5;
-  --score-below_middle-ink: #272a3d;
-  --score-above_middle: #454c70;
-  --score-above_middle-ink: #fafafa;
-  --score-strong: #aacc00;
-  --score-strong-ink: #272a3d;
-  --band-very_thin: #b8bdd9;
-  --band-thin: #7b83a8;
-  --band-usable: #454c70;
-  --band-good: #aacc00;
 }
 
 html:has(.embed-theme-dark),
 body:has(.embed-theme-dark),
 .embed-theme-dark {
   color-scheme: dark;
-  --background: #202333;
-  --foreground: #fafafa;
-  --surface: #313650;
-  --surface-sunken: #191c2b;
-  --rule: #525252;
-  --rule-soft: #404040;
-  --muted: #b8bdd9;
-  --primary: #d6f249;
-  --focus-ring-offset-color: #202333;
-  --score-weak: #2b3049;
-  --score-weak-ink: #fafafa;
-  --score-below_middle: #646b8f;
-  --score-below_middle-ink: #fafafa;
-  --score-above_middle: #c9cfe6;
-  --score-above_middle-ink: #272a3d;
-  --score-strong: #d6f249;
-  --score-strong-ink: #272a3d;
-  --band-very_thin: #565d80;
-  --band-thin: #8b93b5;
-  --band-usable: #c9cfe6;
-  --band-good: #d6f249;
 }
 
 html:has(.embed-theme-print),
@@ -300,10 +234,10 @@ html {
  * page-wide tokens, exactly as .footer-band does. The band is flat: its only
  * decoration is the dot motif, which DotField draws behind the content. */
 .hero-band {
-  --hero-bg: #1a1d2b;
+  --hero-bg: light-dark(#1a1d2b, #191c2b);
   --background: var(--hero-bg);
   --foreground: #ffffff;
-  --muted: #b5bddf;
+  --muted: light-dark(#b5bddf, #b8bdd9);
   --rule: rgba(255, 255, 255, 0.12);
   position: relative;
   isolation: isolate;
@@ -311,21 +245,14 @@ html {
   color: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  .hero-band {
-    --hero-bg: #191c2b;
-    --muted: #b8bdd9;
-  }
-}
-
 /* The footer borrows Signals' parent-brand band: a dark, quiet field that
  * gives the EV glyph and the navigation columns room to read as one lockup.
  * The custom properties keep FooterNav's existing shared classes legible on
  * the darker surface without changing the page-wide light/dark tokens. */
 .footer-band {
-  --footer-bg: #1a1d2b;
+  --footer-bg: light-dark(#1a1d2b, #191c2b);
   --footer-ink: #ffffff;
-  --footer-muted: #b5bddf;
+  --footer-muted: light-dark(#b5bddf, #b8bdd9);
   --footer-rule: rgba(255, 255, 255, 0.12);
   --background: var(--footer-bg);
   --foreground: var(--footer-ink);
@@ -351,13 +278,6 @@ html {
 
 .footer-band nav h2 {
   color: var(--footer-ink);
-}
-
-@media (prefers-color-scheme: dark) {
-  .footer-band {
-    --footer-bg: #191c2b;
-    --footer-muted: #b8bdd9;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

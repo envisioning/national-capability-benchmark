@@ -23,7 +23,11 @@ const ROOT = resolve(fileURLToPath(import.meta.url), '../..')
 // ── Brand config ─────────────────────────────────────────────────────────────
 const SOURCE_SVG = resolve(ROOT, 'apps/web/public/brand/envisioning-mark.svg')
 const ACCENT = '#d6f249' // lime, the --color-accent token in globals.css
-const BG = '#0a0a0a' // near-black tile
+const BG = '#202333' // the tile is the dark canvas, --color-blackDown in globals.css
+/* The manifest describes the page, not the icon: the splash and chrome match
+ * the light --background in globals.css, which is what an install opens on.
+ * layout.tsx carries the light/dark pair for the browser's own theme-color. */
+const PAGE_BG = '#ffffff'
 const GLYPH = ACCENT
 
 /**
@@ -172,8 +176,8 @@ async function main() {
       { src: '/icon-192.png', sizes: '192x192', type: 'image/png' },
       { src: '/icon-512.png', sizes: '512x512', type: 'image/png' },
     ],
-    theme_color: BG,
-    background_color: BG,
+    theme_color: PAGE_BG,
+    background_color: PAGE_BG,
   }
   await writeBuf(MANIFEST_OUTPUT, Buffer.from(`${JSON.stringify(manifest, null, 2)}\n`))
 

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import localFont from 'next/font/local'
 import Link from 'next/link'
 import Script from 'next/script'
@@ -50,6 +50,16 @@ export const metadata: Metadata = {
   description:
     'A prototype that measures whether a country can anticipate change, coordinate around it and build what it decides to build.',
   manifest: '/manifest.webmanifest',
+}
+
+/* The browser chrome follows the page: the same pair as --background in
+ * globals.css, chosen by the OS the way the tokens are. */
+export const viewport: Viewport = {
+  colorScheme: 'light dark',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#202333' },
+  ],
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
