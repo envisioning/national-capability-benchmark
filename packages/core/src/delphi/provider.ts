@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { DIMENSIONS, indicatorsFor } from '../model/index.js'
+import { DIMENSIONS, indicatorsFor, isScored } from '../model/index.js'
 import type { CountryResult, Dimension, Provenance } from '../model/index.js'
 import type { Panelist } from './panel.js'
 import { SYSTEM_RULES } from './prompts.js'
@@ -129,7 +129,7 @@ export class MockProvider implements PanelProvider {
           ),
         )
         const gaps = indicatorsFor(dimension)
-          .filter((d) => d.ingest === 'gap' || d.ingest === 'retired')
+          .filter((d) => !isScored(d))
           .slice(0, 3)
           .map((d) => `${d.name} (${d.source.publisher})`)
         return {

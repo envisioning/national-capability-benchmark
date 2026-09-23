@@ -7,6 +7,7 @@ import {
   DIMENSION_QUESTIONS,
   DISSENT_IQR,
   INDICATORS,
+  isDeclaredGap,
   MEASUREMENT_CLASS_MEANING,
   isScored,
   SOURCE_TIERS,
@@ -23,7 +24,7 @@ import {
   Td,
   Th,
 } from '@/components/ui'
-import { capabilityHref, objectionsHref, sourcesHref } from '@/lib/links'
+import { capabilityHref, delphiHref, diagnosticsHref, limitsHref, objectionsHref, sourcesHref } from '@/lib/links'
 import { DIMENSION_ICON, Icon, TIER_ICON } from '@/components/Icon'
 
 export const metadata: Metadata = {
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
 }
 
 export default function MethodPage() {
-  const gaps = INDICATORS.filter((i) => i.ingest === 'gap').length
+  const gaps = INDICATORS.filter(isDeclaredGap).length
   const retired = INDICATORS.filter((i) => i.ingest === 'retired').length
   const wired = INDICATORS.filter(isScored).length
   const adapters = INDICATORS.filter((i) => i.ingest === 'adapter').length
@@ -71,11 +72,11 @@ export default function MethodPage() {
           </li>
           <li>
             The{' '}
-            <Link href="/diagnostics" className="underline underline-offset-4">
+            <Link href={diagnosticsHref} className="underline underline-offset-4">
               diagnostics
             </Link>{' '}
             tests whether dimensions collapse into income. The{' '}
-            <Link href="/limits" className="underline underline-offset-4">
+            <Link href={limitsHref} className="underline underline-offset-4">
               limits
             </Link>{' '}
             page records known failures.
@@ -309,7 +310,7 @@ export default function MethodPage() {
           </li>
           <li>
             The{' '}
-            <Link href="/delphi" className="underline underline-offset-4">
+            <Link href={delphiHref} className="underline underline-offset-4">
               Delphi page
             </Link>{' '}
             shows the current run and its provenance. The active run is a working session, so it
@@ -364,7 +365,7 @@ export default function MethodPage() {
           <li>
             Retiring the perception composites left Coordination, Trust and Shared Purpose with
             one or two indicators each. The{' '}
-            <Link href="/limits" className="underline underline-offset-4">
+            <Link href={limitsHref} className="underline underline-offset-4">
               limits page
             </Link>{' '}
             carries the detail.

@@ -5,6 +5,7 @@ import {
   DIMENSIONS,
   INDICATORS,
   INDICATORS_BY_ID,
+  isDeclaredGap,
   isReversal,
 } from '../model/index.js'
 import type { Dimension, EvidenceRecord } from '../model/index.js'
@@ -42,7 +43,7 @@ export function buildResearchInventory(
   for (const dimension of DIMENSIONS) {
     dimensionCounts.set(dimension, { records: 0, countries: new Set(), indicators: new Set() })
   }
-  for (const def of INDICATORS.filter((indicator) => indicator.ingest === 'gap')) {
+  for (const def of INDICATORS.filter(isDeclaredGap)) {
     indicatorCounts.set(def.id, { records: 0, countries: new Set() })
   }
 
@@ -63,7 +64,7 @@ export function buildResearchInventory(
       indicator.records++
       indicator.countries.add(record.iso3)
     }
-    if (def?.ingest === 'gap') existingSlots.add(`${record.iso3}|${record.indicatorId}`)
+    if (def && isDeclaredGap(def)) existingSlots.add(`${record.iso3}|${record.indicatorId}`)
   }
 
   const dimensions = DIMENSIONS.map((dimension) => {
@@ -86,7 +87,7 @@ export function buildResearchInventory(
     records: countryCounts.get(iso3) ?? 0,
   }))
 
-  const indicators = INDICATORS.filter((indicator) => indicator.ingest === 'gap').map((def) => {
+  const indicators = INDICATORS.filter(isDeclaredGap).map((def) => {
     const counts = indicatorCounts.get(def.id) as { records: number; countries: Set<string> }
     return {
       indicatorId: def.id,
@@ -104,7 +105,7 @@ export function buildResearchInventory(
 
   const slots: ResearchSlot[] = []
   for (const iso3 of COUNTRY_ISO3) {
-    for (const def of INDICATORS.filter((indicator) => indicator.ingest === 'gap')) {
+    for (const def of INDICATORS.filter(isDeclaredGap)) {
       if (existingSlots.has(`${iso3}|${def.id}`)) continue
       const countryRecords = countryCounts.get(iso3) ?? 0
       const dimension = dimensionCounts.get(def.dimension) as {

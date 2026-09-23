@@ -6,6 +6,7 @@ import {
   DIMENSIONS,
   FOR_AGENTS_DOC,
   INDICATORS,
+  isDeclaredGap,
   LIMITS_DOC,
   DECISIONS_DOC,
   isScored,
@@ -21,8 +22,18 @@ import {
   compareBaseHref,
   contactHref,
   countriesHref,
+  decisionsHref,
+  delphiHref,
+  diagnosticsHref,
+  exploreHref,
   gapsHref,
+  glossaryHref,
+  indicatorsHref,
+  limitsHref,
+  methodHref,
   objectionsHref,
+  patternsHref,
+  sourcesHref,
   supportHref,
   thesisHref,
 } from '@/lib/links'
@@ -58,7 +69,7 @@ const PRIMARY_NOTES: Record<string, string> = {
   [capabilitiesHref]: 'One page per capability: what it asks, what measures it, who scores well.',
   [agendasIndexHref]: 'What each country should raise, measure and hold, computed from its own profile.',
   [thesisHref]: 'Why capability matters when intelligence, agents and robotics change the conditions of action.',
-  '/method': 'How the benchmark is built and how to audit it.',
+  [methodHref]: 'How the benchmark is built and how to audit it.',
   [supportHref]: 'Every way to take part, from a five-minute correction to a funded piece of work.',
   [aboutHref]: 'What this is, who built it, and where to start reading.',
   [changelogHref]: 'What changed in each published dataset and viewer release.',
@@ -73,16 +84,16 @@ const PARTICIPATE_NOTES: Record<string, string> = {
 }
 
 const METHOD_NOTES: Record<string, string> = {
-  '/method': 'Normalisation, scoring, confidence and the coverage floor.',
-  '/indicators': 'The registry: every indicator, including the declared gaps and the retired rows.',
-  '/explore': 'The registry drawn as lanes, one per capability, with each indicator placed by how closely it tracks income and the overlapping pairs joined.',
-  '/sources': 'Who publishes each series and the exact call that fetches it.',
-  '/diagnostics': 'Correlations, redundancy and the GDP-sensitivity test.',
-  '/delphi': 'The expert layer, its provenance, and why it never enters a score.',
-  '/patterns': 'Documented deliveries filed against indicators that have no dataset.',
-  '/limits': 'Where the model is wrong about the world rather than informative about it.',
-  '/decisions': 'Every methodological choice, its cost, and what would overturn it.',
-  '/glossary': 'Every term this project invents, defined once.',
+  [methodHref]: 'Normalisation, scoring, confidence and the coverage floor.',
+  [indicatorsHref]: 'The registry: every indicator, including the declared gaps and the retired rows.',
+  [exploreHref()]: 'The registry drawn as lanes, one per capability, with each indicator placed by how closely it tracks income and the overlapping pairs joined.',
+  [sourcesHref]: 'Who publishes each series and the exact call that fetches it.',
+  [diagnosticsHref]: 'Correlations, redundancy and the GDP-sensitivity test.',
+  [delphiHref]: 'The expert layer, its provenance, and why it never enters a score.',
+  [patternsHref()]: 'Documented deliveries filed against indicators that have no dataset.',
+  [limitsHref]: 'Where the model is wrong about the world rather than informative about it.',
+  [decisionsHref]: 'Every methodological choice, its cost, and what would overturn it.',
+  [glossaryHref]: 'Every term this project invents, defined once.',
 }
 
 export async function GET(request: Request): Promise<Response> {
@@ -90,7 +101,7 @@ export async function GET(request: Request): Promise<Response> {
   const index = await loadIndex()
 
   const scored = INDICATORS.filter(isScored).length
-  const gaps = INDICATORS.filter((i) => i.ingest === 'gap').length
+  const gaps = INDICATORS.filter(isDeclaredGap).length
   const retired = INDICATORS.filter((i) => i.ingest === 'retired').length
   const generated = index?.generatedAt?.slice(0, 10) ?? 'unpublished'
   const version = index?.version ?? DATASET_VERSION
@@ -115,8 +126,8 @@ export async function GET(request: Request): Promise<Response> {
     '## Start here',
     '',
     `- [The quoting contract for automated readers](${rawHref(FOR_AGENTS_DOC)}): what a score means, which fields must travel with it, and the six things not to do with it. Read this first.`,
-    `- [Known limits](${rawHref(LIMITS_DOC)}): where the model currently produces a number that is wrong about the world. Rendered at ${abs(origin, '/limits')}.`,
-    `- [Decision record](${rawHref(DECISIONS_DOC)}): every methodological choice, what it costs, and what evidence would overturn it. Rendered at ${abs(origin, '/decisions')}.`,
+    `- [Known limits](${rawHref(LIMITS_DOC)}): where the model currently produces a number that is wrong about the world. Rendered at ${abs(origin, limitsHref)}.`,
+    `- [Decision record](${rawHref(DECISIONS_DOC)}): every methodological choice, what it costs, and what evidence would overturn it. Rendered at ${abs(origin, decisionsHref)}.`,
     '',
     '## Project history',
     `- [Changelog](${abs(origin, changelogHref)}): human-readable release notes for app releases and dataset versions. The source is [${CHANGELOG_DOC}](${rawHref(CHANGELOG_DOC)}).`,

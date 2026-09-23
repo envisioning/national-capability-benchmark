@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react'
 import type { Dimension } from '@ncb/core'
 import { fill, signed } from '@ncb/core'
 import { Icon } from '@/components/Icon'
+import { CHART_STROKE } from '@/components/chartTokens'
 
 export type AgendaHistorySpan = {
   spanYears: number
@@ -34,6 +35,7 @@ export type AgendaHistoryLabels = {
   dimension: string
   period: string
   axis: string
+  axisRange: string
   years: string
   noHistory: string
   noSpan: string
@@ -215,7 +217,7 @@ export function AgendaHistoryChart({
           <div className="rounded-xl border border-[var(--rule)] bg-[var(--surface-sunken)] p-3 sm:p-5">
             <div className="mb-3 flex items-center justify-between gap-4 text-xs text-[var(--muted)]">
               <span>{labels.axis}</span>
-              <span className="tabular-nums">0–100</span>
+              <span className="tabular-nums">{labels.axisRange}</span>
             </div>
             <div className="overflow-x-auto">
               <svg
@@ -242,7 +244,7 @@ export function AgendaHistoryChart({
                         y2={y}
                         stroke="var(--rule)"
                         strokeOpacity={tick === 0 ? 0.9 : 0.55}
-                        strokeWidth={tick === 0 ? 1 : 0.75}
+                        strokeWidth={tick === 0 ? CHART_STROKE.rule : CHART_STROKE.hair}
                       />
                       <text
                         x={PLOT.left - 10}
@@ -268,7 +270,7 @@ export function AgendaHistoryChart({
                         y2={HEIGHT - PLOT.bottom}
                         stroke="var(--rule)"
                         strokeOpacity={0.35}
-                        strokeWidth={0.75}
+                        strokeWidth={CHART_STROKE.hair}
                       />
                       <text
                         x={x}
@@ -297,7 +299,7 @@ export function AgendaHistoryChart({
                       .join(' ')}
                     fill="none"
                     stroke="var(--primary)"
-                    strokeWidth={2.25}
+                    strokeWidth={CHART_STROKE.data}
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
@@ -311,14 +313,14 @@ export function AgendaHistoryChart({
                     r={3.5}
                     fill="var(--primary)"
                     stroke="var(--surface-sunken)"
-                    strokeWidth={1.5}
+                    strokeWidth={CHART_STROKE.line}
                   />
                 ))}
               </svg>
             </div>
           </div>
 
-          <p className="mt-4 text-sm leading-relaxed">
+          <p className="mt-4 text-xs leading-relaxed">
             <span className="font-medium">{activeDimension.label}</span>{' '}
             {activeSpan.baseYear} → {activeSpan.currentYear}:{' '}
             {fill(activeSpan.clamped > 0 ? labels.readoutClamped : labels.readout, {
@@ -367,7 +369,7 @@ export function AgendaHistoryChart({
                             y2={EVENT_BASELINE}
                             stroke="var(--rule)"
                             strokeOpacity={0.4}
-                            strokeWidth={0.75}
+                            strokeWidth={CHART_STROKE.hair}
                           />
                           <text
                             x={x}
@@ -387,7 +389,7 @@ export function AgendaHistoryChart({
                       x2={WIDTH - EVENT_PLOT.right}
                       y2={EVENT_BASELINE}
                       stroke="var(--rule)"
-                      strokeWidth={1}
+                      strokeWidth={CHART_STROKE.rule}
                     />
                     {activeEvents.map((event, index) => {
                       const x = xPosition(
@@ -413,7 +415,7 @@ export function AgendaHistoryChart({
                             y2={EVENT_BASELINE}
                             stroke="var(--ring)"
                             strokeOpacity={0.65}
-                            strokeWidth={1.25}
+                            strokeWidth={CHART_STROKE.mark}
                           />
                           <circle
                             cx={x}
@@ -421,7 +423,7 @@ export function AgendaHistoryChart({
                             r={4}
                             fill="var(--surface-sunken)"
                             stroke="var(--ring)"
-                            strokeWidth={2}
+                            strokeWidth={CHART_STROKE.data}
                           />
                         </g>
                       )

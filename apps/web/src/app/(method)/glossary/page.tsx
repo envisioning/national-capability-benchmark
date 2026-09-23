@@ -8,6 +8,7 @@ export const metadata: Metadata = {
 }
 import { ClassBadge, Headline, PageTitle, Section } from '@/components/ui'
 import { GROUP_ICON, Icon } from '@/components/Icon'
+import { glossaryAnchorId } from '@/lib/links'
 
 const CLASSES: MeasurementClass[] = ['C', 'I', 'O', 'P']
 
@@ -54,7 +55,7 @@ export default function GlossaryPage() {
           >
             <dl className="max-w-3xl space-y-8">
               {entries.map((e) => (
-                <div key={e.term} id={e.term.toLowerCase().replace(/[^a-z]+/g, '-')}>
+                <div key={e.term} id={glossaryAnchorId(e.term)}>
                   <dt className="mb-1 text-xl font-medium tracking-tight">{e.term}</dt>
                   <dd className="text-lg leading-relaxed">
                     <p className="text-[var(--muted)]">{e.short}</p>

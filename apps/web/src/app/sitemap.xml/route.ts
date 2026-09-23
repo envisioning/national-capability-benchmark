@@ -1,6 +1,6 @@
 import { COUNTRIES, DIMENSIONS } from '@ncb/core'
 import { loadIndex } from '@/lib/data'
-import { COUNTRY_LAYERS } from '@/lib/layers'
+import { COUNTRY_LAYERS, INSTITUTION_MAPS } from '@/lib/layers'
 import { METHOD_PAGES } from '@/lib/nav'
 import {
   absoluteHref,
@@ -8,6 +8,7 @@ import {
   agendasIndexHref,
   agendaHref,
   capabilitiesHref,
+  capabilityHref,
   objectionsHref,
   changelogHref,
   compareBaseHref,
@@ -15,6 +16,7 @@ import {
   countriesHref,
   exploreHref,
   gapsHref,
+  institutionNetworkHref,
   countryLayerHref,
   countryProfileHref,
   digestHref,
@@ -48,11 +50,11 @@ export async function GET(): Promise<Response> {
      carry. See D70. */
   add(compareBaseHref)
   add(capabilitiesHref)
-  for (const dimension of DIMENSIONS) add(`${capabilitiesHref}/${dimension}`)
+  for (const dimension of DIMENSIONS) add(capabilityHref(dimension))
   add(agendasIndexHref)
   add(thesisHref)
   add(exploreHref())
-  add('/country/BRA/institutions')
+  for (const iso3 of INSTITUTION_MAPS) add(institutionNetworkHref(iso3))
   /* Every country layer and the sections it holds of its own. A section that
      still lives in the ground layer is already listed there. See D69. */
   for (const layer of COUNTRY_LAYERS) {

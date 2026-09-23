@@ -3,6 +3,7 @@ import {
   COUNTRIES,
   DATASET_VERSION,
   INDICATORS,
+  isDeclaredGap,
   buildIndicatorLanes,
   buildInstitutionMatrix,
   isScored,
@@ -115,7 +116,7 @@ export default async function Page() {
     : null
   const spread = widestSpread(profiles)
   const wired = INDICATORS.filter(isScored).length
-  const gaps = INDICATORS.filter((i) => i.ingest === 'gap').length
+  const gaps = INDICATORS.filter(isDeclaredGap).length
 
   const facts: Fact[] = [
     {

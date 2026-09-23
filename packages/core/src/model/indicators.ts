@@ -1046,3 +1046,14 @@ export function worldBankSeries(): SeriesRequest[] {
 export function isScored(def: IndicatorDef): boolean {
   return def.ingest !== 'gap' && def.ingest !== 'retired'
 }
+
+/**
+ * Whether an indicator is a declared gap: a measurement the model asks for and
+ * no comparable dataset supplies. Counting these is legitimate, because they
+ * are the data-collection agenda and the rows that lower confidence. Branch on
+ * `isScored` to decide whether a row contributes a number, and on this to count
+ * or list what is missing. A retired row is neither. See D23 and D100.
+ */
+export function isDeclaredGap(def: IndicatorDef): boolean {
+  return def.ingest === 'gap'
+}

@@ -33,8 +33,10 @@ import {
   countriesHref,
   countryProfileHref,
   decisionsHref,
+  glossaryHref,
   layerSectionHref,
   limitsHref,
+  methodHref,
 } from '@/lib/links'
 import { toProfile } from '@/lib/profile'
 
@@ -400,11 +402,11 @@ export default async function BrazilLayerPage() {
         <div className="max-w-3xl space-y-4 text-lg leading-relaxed">
           <p>
             O{' '}
-            <Link href="/method" className="underline underline-offset-4">
+            <Link href={methodHref} className="underline underline-offset-4">
               método
             </Link>{' '}
             explica como uma estatística vira nota. O{' '}
-            <Link href="/glossary" className="underline underline-offset-4">
+            <Link href={glossaryHref} className="underline underline-offset-4">
               glossário
             </Link>{' '}
             define os termos destas páginas. O{' '}

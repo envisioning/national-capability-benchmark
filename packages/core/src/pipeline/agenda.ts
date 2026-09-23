@@ -9,6 +9,7 @@ import {
   isAgendaHistoryCountry,
   docHref,
   indicatorsFor,
+  isDeclaredGap,
 } from '../model/index.js'
 import type {
   CountryResult,
@@ -249,7 +250,7 @@ export function buildAgenda(
     if (!result) throw new Error(`${iso3} has no result for ${dimension}`)
 
     const defs = indicatorsFor(dimension)
-    const gaps = defs.filter((d) => d.ingest === 'gap').map((d) => d.id)
+    const gaps = defs.filter(isDeclaredGap).map((d) => d.id)
     const retired = defs.filter((d) => d.ingest === 'retired').map((d) => d.id)
     const scoredOn = result.indicators
       .filter((i) => i.status === 'observed')

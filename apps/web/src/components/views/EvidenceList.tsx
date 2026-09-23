@@ -81,7 +81,7 @@ export function EvidenceList({ records }: { records: EvidenceRecord[] }) {
                 , retrieved {r.source.retrievedAt}.
               </p>
               {r.pattern ? (
-                <p className="evidence-record-mechanism mt-4 max-w-3xl border-t border-[var(--rule-soft)] pt-4 text-sm leading-relaxed">
+                <p className="evidence-record-mechanism mt-4 max-w-3xl border-t border-[var(--rule-soft)] pt-4 text-xs leading-relaxed">
                   <span className="text-[var(--muted)]">How it worked: </span>
                   {r.pattern.mechanism}
                 </p>

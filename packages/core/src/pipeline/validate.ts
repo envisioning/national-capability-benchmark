@@ -5,6 +5,7 @@ import {
   COUNTRY_ISO3,
   DIMENSIONS,
   INDICATORS_BY_ID,
+  isDeclaredGap,
   isScored,
   SubnationalFile,
   SubnationalIndexFile,
@@ -502,7 +503,7 @@ export async function validateResearchRuns(dir = RESEARCH_RUNS_DIR): Promise<Pro
         if (!def) {
           problems.push({ file, severity: 'error', problem: `unknown indicator id ${slot.indicatorId}` })
         } else {
-          if (def.ingest !== 'gap') {
+          if (!isDeclaredGap(def)) {
             problems.push({
               file,
               severity: 'error',
@@ -549,7 +550,7 @@ export async function validateResearchRuns(dir = RESEARCH_RUNS_DIR): Promise<Pro
         const def = INDICATORS_BY_ID[candidate.indicatorId]
         if (!def) {
           problems.push({ file, severity: 'error', problem: `${candidate.id}: unknown indicator id ${candidate.indicatorId}` })
-        } else if (def.ingest !== 'gap') {
+        } else if (!isDeclaredGap(def)) {
           problems.push({
             file,
             severity: 'error',

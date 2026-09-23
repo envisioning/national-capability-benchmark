@@ -4,6 +4,7 @@ import { DIMENSIONS, DIMENSION_LABELS, EN, countryFlag, fill, isEvidential } fro
 import { DIMENSION_ICON, Icon, type IconName } from '@/components/Icon'
 import { ClassBadge } from '@/components/ClassBadge'
 import { CHART_INK, CHART_STROKE } from '@/components/chartTokens'
+import { delphiHref, glossaryTermHref } from '@/lib/links'
 import {
   CONFIDENCE_BANDS,
   MEASUREMENT_CLASS_LABELS,
@@ -320,7 +321,7 @@ export function Confidence({
   const band = confidenceBand(value)
   const sizing =
     size === 'md'
-      ? 'min-w-14 px-2 py-1 text-sm font-medium'
+      ? 'min-w-14 px-2 py-1 font-medium'
       : 'min-w-11 px-1.5 py-0.5 text-xs font-medium'
   return (
     <span
@@ -749,10 +750,9 @@ export function ClassLegend() {
 
 /** A link to the full definition of a term, for the first place it appears. */
 export function DefineLink({ term, children }: { term: string; children?: React.ReactNode }) {
-  const anchor = term.toLowerCase().replace(/[^a-z]+/g, '-')
   return (
     <Link
-      href={`/glossary#${anchor}`}
+      href={glossaryTermHref(term)}
       className="underline decoration-dotted underline-offset-4"
     >
       {children ?? term}
@@ -788,7 +788,7 @@ export function PanelProvenanceNote({
     <Note tone="stop">
       These estimates come from {panelists === 1 ? 'a single analyst' : `${panelists} analysts`}{' '}
       working in session. There is no distribution behind the median: read every number here as
-      one judgment. <Link href="/delphi" className="underline underline-offset-4">How the panel layer works</Link>.
+      one judgment. <Link href={delphiHref} className="underline underline-offset-4">How the panel layer works</Link>.
     </Note>
   )
 }
