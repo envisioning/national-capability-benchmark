@@ -114,25 +114,25 @@ test('a historical value outside the frame clamps to 0 or 100 and sets outOfFram
   assert.equal(far.outOfFrame, true)
 })
 
-test(
-  'a historical value beyond a fence that is also the endpoint sets outOfFrame',
-  {
-    todo:
-      'BUG: when a current outlier puts frame.max on frame.hi, a historical value above hi ' +
-      'is clipped to hi = max, so raw = 1 and outOfFrame stays false although the value ' +
-      'clamps to 100 from outside the frame. Contradicts the D47/KNOWN-ARTEFACTS contract ' +
-      'that a historical value outside the current frame sets outOfFrame (and so the ' +
-      'momentum clamped count undercounts). Symmetric on the lower side.',
-  },
-  () => {
-    const frame = buildFrame([0, 1, 2, 3, 4, 5, 6, 7, 8, 1000])
-    assert.ok(frame)
-    assert.equal(frame.max, frame.hi)
-    const history = scoreAgainstFrame(500, frame, 'higher_better')
-    assert.equal(history.normalized, 100)
-    assert.equal(history.outOfFrame, true)
-  },
-)
+test('a historical value beyond every value that built the frame is out of frame, even at a fence', () => {
+  // The current outlier (1000) is winsorized onto the upper fence, so the fence
+  // is also the top endpoint and clipping alone cannot show a value past it.
+  const frame = buildFrame([0, 1, 2, 3, 4, 5, 6, 7, 8, 1000])
+  assert.ok(frame)
+  assert.equal(frame.max, frame.hi)
+  const current = scoreAgainstFrame(1000, frame, 'higher_better')
+  assert.equal(current.outOfFrame, false, 'a current value never falls outside its own frame')
+  assert.equal(current.winsorized, true)
+  const inside = scoreAgainstFrame(500, frame, 'higher_better')
+  assert.equal(inside.outOfFrame, false, 'winsorized like the current outlier, but inside the frame')
+  const beyond = scoreAgainstFrame(2000, frame, 'higher_better')
+  assert.equal(beyond.normalized, 100)
+  assert.equal(beyond.outOfFrame, true)
+  const below = scoreAgainstFrame(-1000, buildFrame([-1000, 0, 1, 2, 3, 4, 5, 6, 7, 8])!, 'higher_better')
+  assert.equal(below.outOfFrame, false)
+  const pastBelow = scoreAgainstFrame(-2000, buildFrame([-1000, 0, 1, 2, 3, 4, 5, 6, 7, 8])!, 'higher_better')
+  assert.equal(pastBelow.outOfFrame, true)
+})
 
 test('a frame with no spread scores every value at the midpoint', () => {
   const frame = buildFrame([7, 7, 7])

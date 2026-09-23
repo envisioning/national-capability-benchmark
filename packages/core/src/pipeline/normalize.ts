@@ -47,6 +47,13 @@ export type Frame = {
   /** Endpoints of the 0 to 100 scale, after winsorizing. */
   min: number
   max: number
+  /**
+   * The most extreme values that built the frame, before winsorizing. A value
+   * inside them is in frame even when it is winsorized, because a current
+   * country sits there too. Only a value beyond them is out of frame.
+   */
+  observedMin: number
+  observedMax: number
 }
 
 /**
@@ -61,7 +68,14 @@ export function buildFrame(values: number[], k = 3): Frame | null {
   if (values.length < 2) return null
   const { lo, hi } = tukeyFences(values, k)
   const clipped = values.map((v) => Math.min(hi, Math.max(lo, v)))
-  return { lo, hi, min: Math.min(...clipped), max: Math.max(...clipped) }
+  return {
+    lo,
+    hi,
+    min: Math.min(...clipped),
+    max: Math.max(...clipped),
+    observedMin: Math.min(...values),
+    observedMax: Math.max(...values),
+  }
 }
 
 export type Scored = {
@@ -96,7 +110,10 @@ export function scoreAgainstFrame(
   }
 
   const raw = (clipped - frame.min) / (frame.max - frame.min)
-  const outOfFrame = raw < 0 || raw > 1
+  // Read against the unclipped extremes: once a current outlier is winsorized
+  // onto the fence, the fence is also the endpoint, and a clipped value can no
+  // longer land beyond it.
+  const outOfFrame = raw < 0 || raw > 1 || value < frame.observedMin || value > frame.observedMax
   const unit = Math.min(1, Math.max(0, raw))
   return {
     transformed: clipped,
