@@ -6,6 +6,7 @@ import {
   DIMENSIONS,
   DIMENSION_LABELS,
   INDICATORS,
+  isDeclaredGap,
   MEASUREMENT_CLASS_LABELS,
   docHref,
 } from '@ncb/core'
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
  * and `ingest: 'retired'` from the one indicator registry. See D23 and D78.
  */
 export default function GapsPage() {
-  const gaps = INDICATORS.filter((i) => i.ingest === 'gap')
+  const gaps = INDICATORS.filter(isDeclaredGap)
   const retired = INDICATORS.filter((i) => i.ingest === 'retired')
   const byDimension = DIMENSIONS.map((dimension) => ({
     dimension,

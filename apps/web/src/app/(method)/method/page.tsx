@@ -7,6 +7,7 @@ import {
   DIMENSION_QUESTIONS,
   DISSENT_IQR,
   INDICATORS,
+  isDeclaredGap,
   MEASUREMENT_CLASS_MEANING,
   isScored,
   SOURCE_TIERS,
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
 }
 
 export default function MethodPage() {
-  const gaps = INDICATORS.filter((i) => i.ingest === 'gap').length
+  const gaps = INDICATORS.filter(isDeclaredGap).length
   const retired = INDICATORS.filter((i) => i.ingest === 'retired').length
   const wired = INDICATORS.filter(isScored).length
   const adapters = INDICATORS.filter((i) => i.ingest === 'adapter').length

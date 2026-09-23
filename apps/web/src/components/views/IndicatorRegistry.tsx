@@ -1,6 +1,6 @@
 'use client'
 
-import { DIMENSIONS, DIMENSION_LABELS, INDICATORS, indicatorsFor, isScored } from '@ncb/core'
+import { DIMENSIONS, DIMENSION_LABELS, INDICATORS, indicatorsFor, isDeclaredGap, isScored } from '@ncb/core'
 import type { Dimension, IndicatorDef } from '@ncb/core'
 import { DataTable } from '@/components/DataTable'
 import { ClassBadge, ClassLegend, Section } from '@/components/ui'
@@ -10,7 +10,7 @@ import { capabilityHref } from '@/lib/links'
 const muted = (v: React.ReactNode) => <span className="text-[var(--muted)]">{v}</span>
 
 export function IndicatorRegistry({ dimension }: { dimension?: Dimension } = {}) {
-  const gaps = INDICATORS.filter((i) => i.ingest === 'gap').length
+  const gaps = INDICATORS.filter(isDeclaredGap).length
   const retired = INDICATORS.filter((i) => i.ingest === 'retired').length
   const dimensions: readonly Dimension[] = dimension ? [dimension] : DIMENSIONS
 
@@ -58,7 +58,7 @@ export function IndicatorRegistry({ dimension }: { dimension?: Dimension } = {})
                     {i.name}
                     {isScored(i) ? null : (
                       <span className="ml-2 rounded-md border border-[var(--rule)] px-1.5 py-0.5 text-xs">
-                        {i.ingest === 'gap' ? 'no dataset' : 'retired'}
+                        {isDeclaredGap(i) ? 'no dataset' : 'retired'}
                       </span>
                     )}
                   </span>

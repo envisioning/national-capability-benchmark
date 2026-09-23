@@ -3,6 +3,7 @@ import Link from 'next/link'
 import {
   COUNTRY_ISO3,
   INDICATORS,
+  isDeclaredGap,
   INGEST_FROM_YEAR,
   INGEST_ROUTES,
   INGEST_ROUTE_LABELS,
@@ -60,7 +61,7 @@ export default async function SourcesPage() {
   const adapters = INDICATORS.filter((i) => i.ingest === 'adapter')
   const manual = INDICATORS.filter((i) => i.ingest === 'manual')
   const retired = INDICATORS.filter((i) => i.ingest === 'retired')
-  const gaps = INDICATORS.filter((i) => i.ingest === 'gap')
+  const gaps = INDICATORS.filter(isDeclaredGap)
   const example = INDICATORS.find((i) => i.id === EXAMPLE_ID)
   /* The retirements so far are all perception composites bar one. See D23 and D44. */
   const perception = retired.filter((i) => i.measurementClass === 'P').length

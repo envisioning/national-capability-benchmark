@@ -5,6 +5,7 @@ import {
   COUNTRIES,
   FUNDABLE_PIECES,
   INDICATORS,
+  isDeclaredGap,
   REPO_URL,
   contributionsByEffort,
 } from '@ncb/core'
@@ -46,7 +47,7 @@ const EFFORT_HINT: Record<(typeof CONTRIBUTION_EFFORTS)[number], string> = {
  * and D78.
  */
 export default function SupportPage() {
-  const gaps = INDICATORS.filter((i) => i.ingest === 'gap').length
+  const gaps = INDICATORS.filter(isDeclaredGap).length
 
   return (
     <>

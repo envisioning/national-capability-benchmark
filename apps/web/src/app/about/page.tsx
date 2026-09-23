@@ -4,6 +4,7 @@ import {
   COUNTRIES,
   DATASET_VERSION,
   INDICATORS,
+  isDeclaredGap,
   REPO_URL,
   docHref,
   isScored,
@@ -66,7 +67,7 @@ export default async function AboutPage() {
   const tracking = diag ? readWealthTracking(diag).tracking.length : null
   const brazilLayer = countryLayer('BRA')
   const wired = INDICATORS.filter(isScored).length
-  const gaps = INDICATORS.filter((i) => i.ingest === 'gap').length
+  const gaps = INDICATORS.filter(isDeclaredGap).length
 
   const facts: Fact[] = [
     {

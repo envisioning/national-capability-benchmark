@@ -6,6 +6,7 @@ import {
   DIMENSIONS,
   FOR_AGENTS_DOC,
   INDICATORS,
+  isDeclaredGap,
   LIMITS_DOC,
   DECISIONS_DOC,
   isScored,
@@ -100,7 +101,7 @@ export async function GET(request: Request): Promise<Response> {
   const index = await loadIndex()
 
   const scored = INDICATORS.filter(isScored).length
-  const gaps = INDICATORS.filter((i) => i.ingest === 'gap').length
+  const gaps = INDICATORS.filter(isDeclaredGap).length
   const retired = INDICATORS.filter((i) => i.ingest === 'retired').length
   const generated = index?.generatedAt?.slice(0, 10) ?? 'unpublished'
   const version = index?.version ?? DATASET_VERSION

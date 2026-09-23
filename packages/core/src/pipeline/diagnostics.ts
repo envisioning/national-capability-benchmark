@@ -8,6 +8,7 @@ import {
   indicatorsFor,
   isEvidential,
   isPanel,
+  isDeclaredGap,
   isScored,
 } from '../model/index.js'
 import type {
@@ -611,7 +612,7 @@ export function runDiagnostics(
       dimension,
       indicatorsDefined: defs.length,
       indicatorsObserved: observedIds.length,
-      gaps: defs.filter((d) => d.ingest === 'gap').length,
+      gaps: defs.filter(isDeclaredGap).length,
       retired: defs.filter((d) => d.ingest === 'retired').length,
       meanCoverage: round(mean(coverages), 3),
       meanConfidence: round(mean(confidences), 3),

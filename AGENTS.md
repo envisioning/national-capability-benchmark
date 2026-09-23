@@ -258,6 +258,8 @@ port 3888. That entry starts Next directly and does not use the proxy.
   denominator: only a gap lowers confidence, because a rejected dataset is a
   measurement this project declined to make rather than one nobody can make.
   Branch on `isScored(def)` from `@ncb/core`, never on `ingest === 'gap'`.
+  Counting or listing the gaps is legitimate, and goes through
+  `isDeclaredGap(def)` beside it.
   Retiring an indicator needs a decision entry naming the evidence. See D23 and
   D100.
 - Delphi provenance is stored on the run file, never inferred from a model
