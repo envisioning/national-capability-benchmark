@@ -5246,3 +5246,95 @@ third mark there would crowd a reading rather than open it.
 countable, which would want a different form for coverage and not a smaller
 pitch; or evidence that readers take the trailing line for a bar rather than
 for elapsed time, which would make the rail worse than the year it replaced.
+
+---
+
+## D115 — V-Dem polarization is scored in Shared Purpose, and the closed-regime reading is published beside it
+
+*Recorded 2026-09-23. Extends D20, D23, D83 and D100. Promotes
+`political_polarization` from a gap to an adapter. Issue #22.*
+
+**Choice.** Score V-Dem's political polarization item, `v2cacamps`, as the third
+Shared Purpose indicator. The adapter reads `v2cacamps_osp`, the measurement
+model estimate on the codebook's original 0 to 4 scale, where 0 means
+supporters of opposing camps generally interact in a friendly manner and 4 that
+they generally interact in a hostile one. The direction is `lower_better`. The
+release is V-Dem v15 (2025-03-04), the year 2024, the source tier
+`expert_panel`, and the licence CC BY-SA 4.0.
+
+The item is not in the Core archive D83 pinned. It is in the Full+Others
+archive of the same release, so the adapter now pins
+`V-Dem-CY-FullOthers-v15_csv.zip` for both of its rows and streams the 400 MB
+CSV line by line. The `v2x_cspart` values in it match Core's for all 53
+countries, so civil-society strength does not restate. The observation file
+keeps its name, `vdem-cy-core.json`.
+
+**Evidence.**
+
+| Test | Result |
+| --- | --- |
+| Coverage | 53 of 53 at 2024, 52 distinct values, 3 to 10 coders per country |
+| Row against log GDP per capita | r = 0.335 (n = 51), below the 0.70 screen |
+| Strongest correlation with any scored row | 0.565 with `interpersonal_trust` (n = 37), below the 0.85 redundancy threshold |
+| Against the other Shared Purpose rows | 0.30 with income inequality, 0.04 with tax revenue |
+| Against Coordination rows | 0.17 with civil-society strength, under 0.10 with border time and budget execution |
+| Wealth attribution | Shared Purpose at 0.479 with the row and 0.386 without it, a delta of 0.093 |
+| Shared Purpose against log GDP per capita | 0.479 (n = 51), from 0.457 (n = 47) |
+| Model estimate against the 0 to 4 version | r = 0.985 |
+
+The row raises the dimension's wealth correlation. The rise is twice the 0.046
+D83 accepted for civil-society strength and a third of the 0.288 over which D44
+retired homicide, and Shared Purpose remains the least wealth-tracking of the
+nine dimensions. The roadmap asks for a written decision when a row raises a
+dimension's wealth correlation; this is it.
+
+Shared Purpose now publishes for 52 of 53 countries, from 47, and its mean
+confidence rises from 0.260 to 0.350. Singapore, Vietnam, Nigeria, Venezuela
+and Haiti publish for the first time; Cuba, with one observed row, still does
+not. Scores move by 9.4 points on average. The largest falls are Poland (77.5
+to 51.6), France (80.7 to 59.0) and India (61.8 to 43.4); the largest rises are
+Panama (20.4 to 38.3), Rwanda (49.3 to 60.8) and the United Arab Emirates (48.4
+to 59.5).
+
+The evidence record `usa-government-shutdown`, filed against the gap, is
+stranded by the promotion and is not deleted. The evidence guide says to delete
+a stranded record in the promoting change, but this one is an `eroded` record,
+and the corpus holds 43 reversals against a D33 quota of 43 at 219 records.
+Deleting it leaves 42 against 43 and fails the corpus test. The record stays,
+`pnpm bench validate` warns that it adds nothing the score carries, and it is
+deleted in the change that adds the next reversal. It records the CRS count of
+20 federal funding-gap shutdowns from FY1977 to FY2019 and the 35-day partial
+shutdown of 2018 and 2019.
+
+**Why.** The registry asked for a measure that counts hostility and not
+disagreement, because pluralism is the target. The V-Dem question is framed
+exactly that way: it asks whether political difference reaches into family,
+associations and the workplace, not whether parties disagree. It passes every
+numeric gate, it is inspectable, it covers the whole frame at a current year,
+and it is not a check under D60 because it fails none of the tests a check has
+to name. Shared Purpose sat on its two-row floor for 47 countries and below it
+for six, the thinnest dimension this row could reach.
+
+**Cost.** The row cannot tell a society where camps meet in friendship from one
+where no opposition camp may exist. On V-Dem's own regime classification the
+2024 values form a U: liberal democracies average 1.77 and closed autocracies
+1.85, while electoral autocracies average 2.98 and electoral democracies 2.80.
+That is why the United Arab Emirates and Rwanda rise by more than 11 points and
+why Singapore and Vietnam publish at 63.8 and 66.5. A5 records that political
+uniformity is not a capability, and this row rewards it where the regime
+suppresses the camps it would measure. A13 publishes that reading with the
+numbers. The row is also an expert judgement, not a behavioural measure, so it
+raises coverage without answering whether people act on a common project; civic
+participation, volunteering and voter turnout remain the rows that would.
+
+The adapter now downloads 26 MB instead of 15 MB and depends on the Full+Others
+member name as well as on `unzip`. The bump is minor: an indicator is added, no
+country is added and no published field is removed.
+
+**Overturned by.** A behavioural Shared Purpose row landing and disagreeing with
+this one where closed regimes read calm, which would show the row is measuring
+suppression there and should be conditioned on political competition or
+retired; a panel run that consistently places the closed regimes the row lifts
+well below their new scores for this reason; a V-Dem release that changes the
+question or drops coverage below the half-frame gate; or a diagnostic run that
+puts the row above the wealth-proxy threshold or into a redundant pair.

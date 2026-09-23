@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T12:46:36.238Z",
+  "generatedAt": "2026-09-23T15:03:48.519Z",
   "iso3": "AUS",
   "country": "Australia",
   "dimensions": [
@@ -1795,18 +1795,18 @@
     {
       "dimension": "shared_purpose",
       "kind": "measure",
-      "score": 78.7,
-      "confidence": 0.237,
-      "band": "very_thin",
+      "score": 77.5,
+      "confidence": 0.333,
+      "band": "thin",
       "trend": null,
       "scoredOn": [
         "tax_revenue_gdp",
-        "income_inequality"
+        "income_inequality",
+        "political_polarization"
       ],
       "gaps": [
         "national_belonging",
         "volunteering_rate",
-        "political_polarization",
         "civic_participation"
       ],
       "retired": [
@@ -1850,13 +1850,6 @@
           "title": "Volunteer fire corps, and its membership erosion"
         },
         {
-          "id": "usa-government-shutdown",
-          "iso3": "USA",
-          "country": "United States",
-          "indicatorId": "political_polarization",
-          "title": "Federal funding gaps and the 2019 shutdown"
-        },
-        {
           "id": "prt-opp",
           "iso3": "PRT",
           "country": "Portugal",
@@ -1885,5 +1878,5 @@
       "started": 1991
     }
   ],
-  "gapCount": 25
+  "gapCount": 24
 }

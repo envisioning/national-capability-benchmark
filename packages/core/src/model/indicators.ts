@@ -4,7 +4,7 @@ import type { Dimension } from './dimensions.js'
 import {
   JOINT_EVS_WVS_PUBLISHER,
   JOINT_EVS_WVS_RESULTS_URL,
-  VDEM_CY_CORE_V15_PAGE_URL,
+  VDEM_CY_V15_PAGE_URL,
   VDEM_PUBLISHER,
 } from './source-catalog.js'
 
@@ -325,7 +325,7 @@ const RAW: Raw[] = [
     unit: 'index 0-1',
     measurementClass: 'C',
     direction: 'higher_better',
-    source: { publisher: VDEM_PUBLISHER, series: 'v2x_cspart', url: VDEM_CY_CORE_V15_PAGE_URL, tier: 'expert_panel', inspectable: true },
+    source: { publisher: VDEM_PUBLISHER, series: 'v2x_cspart', url: VDEM_CY_V15_PAGE_URL, tier: 'expert_panel', inspectable: true },
     ingest: 'adapter',
     notes: 'V-Dem civil society participation index, country-year release v15. It is expert-coded rather than administrative data, so it remains a perception-adjacent measure and its wealth correlation is reviewed in D83.',
     wealthProxyPrior: 0.15,
@@ -977,9 +977,9 @@ const RAW: Raw[] = [
     unit: 'index 0-4',
     measurementClass: 'P',
     direction: 'lower_better',
-    source: { publisher: 'V-Dem', tier: 'expert_panel', inspectable: true },
-    ingest: 'gap',
-    notes: 'V-Dem political polarisation is inspectable and would fill this. Pluralism is the target, so only hostile polarisation should count against a country.',
+    source: { publisher: VDEM_PUBLISHER, series: 'v2cacamps_osp', url: VDEM_CY_V15_PAGE_URL, tier: 'expert_panel', inspectable: true },
+    ingest: 'adapter',
+    notes: 'V-Dem political polarization (v2cacamps), country-year release v15, on its original 0-4 scale: whether supporters of opposing political camps meet in a hostile rather than a friendly manner. Pluralism is the target, so the question counts hostility and not disagreement. A closed regime with no organised opposition can read as calm, so a low value is not evidence of a shared project on its own. Reviewed in D115.',
     wealthProxyPrior: 0.05,
   },
   {

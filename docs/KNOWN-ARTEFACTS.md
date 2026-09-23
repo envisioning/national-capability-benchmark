@@ -9,7 +9,7 @@ Evidence for each is either a diagnostic in `data/out/diagnostics.json` or the
 in-session panel run in `data/delphi/in-session-round1.json`, which scored 144
 of the 477 country-dimension cells against the same evidence briefs.
 
-Numbers here are from dataset 6.1.0 unless a figure names the run it comes from.
+Numbers here are from dataset 6.2.0 unless a figure names the run it comes from.
 Where a figure predates the current frame it says so, because the scale it was
 measured on is not the scale in use.
 
@@ -161,10 +161,13 @@ The spec is explicit that political uniformity is not a capability, so the fix i
 not simply to raise Singapore.
 
 Voice and accountability is retired, so Singapore's 20.9 is gone. Shared Purpose
-now rests on two indicators, tax revenue and income inequality, at mean
-confidence 0.260, and it publishes a score for 47 of 53 countries. Its
-correlation with log GDP per capita is 0.457 (n=47), the lowest of the nine
-dimensions. The behavioural measures it needs are civic participation and
+now rests on three indicators, tax revenue, income inequality and V-Dem
+political polarization, at mean confidence 0.350, and it publishes a score for
+52 of 53 countries. Its correlation with log GDP per capita is 0.479 (n=51), the
+lowest of the nine dimensions. The polarization row brings back the Singapore
+question from the other side: a regime with no organised opposition can read as
+calm, which A13 records. The behavioural measures it needs are civic
+participation and
 volunteering, both still gaps, plus voter turnout, which is published by
 International IDEA and would have to be entered by hand.
 
@@ -302,7 +305,8 @@ The two indicators that would carry the delivery construct,
 recorded in `data/evidence/records.json` against the gap they bear on, outside
 the score, so the cases are written down with sources and limits instead of
 being argued in prose. Two hundred and nineteen records cover 53 countries and
-bear on 21 different gaps. Brazil's 25 run from Casa da Moeda in 1694 to the
+bear on 21 indicators. Twenty are still gaps; the record filed against
+political polarization is held past its promotion (D115). Brazil's 25 run from Casa da Moeda in 1694 to the
 minimum-wage revaluation rule in 2023.
 See D20.
 The open part is a comparable delivery series across the country set, without
@@ -317,13 +321,13 @@ here, and the benchmark currently has no way to say so.
 
 **Severity: high. Trust is partly measured and Coordination remains narrow.**
 
-The figures in this entry are from dataset 6.1.0.
+The figures in this entry are from dataset 6.2.0.
 
 | Dimension | Observed indicators | Confidence | What is left | Publishes a score |
 | --- | ---: | ---: | --- | --- |
 | Coordination | 3 of 5 for 45 countries | 0.100 to 0.413, mean 0.362 | Border time from 2019, budget execution from 2018 to 2024 and V-Dem civil-society strength at 2024 | 52 of 53 |
 | Trust | 2 of 5 for 37 countries | 0.000 to 0.255, mean 0.209 | Joint EVS/WVS A165 plus contract enforcement days from 2019; court clearance remains a gap | 37 of 53 |
-| Shared Purpose | 2 of 6 for 47 countries | 0.000 to 0.316, mean 0.260 | Tax revenue, income inequality | 47 of 53 |
+| Shared Purpose | 3 of 6 for 47 countries | 0.084 to 0.400, mean 0.350 | Tax revenue, income inequality and V-Dem political polarization at 2024 | 52 of 53 |
 
 Coordination's score now carries a third row from V-Dem's expert-coded civil
 society participation index. It remains a narrow operational proxy: budget
@@ -331,10 +335,10 @@ alignment, border processing and civil-society judgements do not show whether
 several institutions delivered a shared national objective. Trust now prints a
 provisional score where both rows are observed, but country-level confidence
 ranges from 0.000 to 0.255 and its mean is 0.209.
-Sixteen countries remain below the coverage floor. Shared Purpose sits on the
-floor, two observed rows where a score needs two, and prints, drawn dashed with
-a marked axis and a confidence band that says do not quote it alone. That is a
-mitigation and not a fix.
+Sixteen countries remain below the Trust coverage floor. Shared Purpose clears
+its floor by one row for 47 countries and sits on it for five; only Cuba falls
+below. Its third row is an expert judgement and not a behavioural measure, so it
+lifts coverage without answering whether people act on a common project.
 
 **Trust still has a narrow family balance.** D57 splits the dimension into a
 social family, which asks whether people rely on strangers, and an institutional
@@ -408,3 +412,34 @@ release meets that structure with A165 and contract enforcement, but court
 performance, broader coverage and the wealth and redundancy review remain open.
 The budget series opens the Coordination door; it does not close its measurement
 problem.
+
+---
+## A13 — Polarization reads calm where there are no camps to polarize
+
+**Severity: medium. Closed autocracies read about as calm as liberal
+democracies. See D115.**
+
+`political_polarization` is V-Dem's `v2cacamps`: whether supporters of opposing
+political camps meet in a hostile rather than a friendly manner. The question
+counts hostility and not disagreement, which is what the registry asks for. It
+cannot tell a society where camps meet in friendship from one where no
+opposition camp is allowed to exist.
+
+The 2024 values sort by V-Dem's own regime classification into a U. On the 0 to
+4 scale the 16 liberal democracies in the frame average 1.77 and the five closed
+autocracies 1.85, while the 11 electoral autocracies average 2.98 and the 21
+electoral democracies 2.80. The United Arab Emirates reads 1.06, Rwanda 0.98 and
+Singapore 1.15, beside Ireland at 0.40 and Japan at 0.87. Across the frame the
+calm reading correlates with V-Dem's electoral democracy index at only 0.23.
+
+The row moves Shared Purpose for these countries in the direction the spec
+refuses. The United Arab Emirates rises 11.1 points and Rwanda 11.5, and
+Singapore and Vietnam publish a Shared Purpose score for the first time, at
+63.8 and 66.5, because the calm reading is their second row. Political
+uniformity is not a capability (A5), and this row cannot see the difference.
+
+**Fix.** Read a low value beside the regime. The candidates are a second
+V-Dem item that conditions the reading on competition existing at all, or a
+behavioural row, civic participation or voter turnout, which would outweigh a
+single expert judgement in the mean. Neither is wired. Until one is, a high
+Shared Purpose score for a closed regime is the artefact and not the finding.

@@ -68,7 +68,7 @@ from being advocacy.
 
 - **One country never dominates.** When one country holds more than a third of
   the corpus, the next records come from elsewhere. Brazil holds 25 of the
-  current 204 records and the Netherlands 21; the rule exists because of that
+  current 219 records and the Netherlands 21; the rule exists because of that
   concentration.
 
 - **A record is one delivery.** One programme, one record. If a programme has

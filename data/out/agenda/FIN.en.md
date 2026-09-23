@@ -1,6 +1,6 @@
 # Capability agenda: Finland
 
-*Generated 2026-09-02*
+*Generated 2026-09-23*
 
 The frame includes 53 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
@@ -16,7 +16,7 @@ The frame includes 53 countries. Each dimension runs from 0 to 100, with no over
 | Experimentation | 38.8 | 0.18 (very thin) | +2.6 over 10 years using 2 indicators |
 | Adaptability | 73.7 | 0.48 (usable) | +5.1 over 10 years using 4 indicators |
 | Building | 39.2 | 0.62 (usable) | -0.9 over 10 years using 4 indicators |
-| Shared Purpose | 93.1 | 0.3 (thin) | +7.6 over 10 years using 2 indicators |
+| Shared Purpose | 88.1 | 0.39 (thin) | +7.6 over 10 years using 2 indicators |
 
 ## What to raise
 
@@ -51,14 +51,6 @@ How much cooperation is possible beyond immediate personal networks?
 - Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
-### Shared Purpose: confidence 0.3, thin
-
-To what extent can people imagine themselves as participants in a common project?
-
-- Uses 2 observed indicators.
-- Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
-- Rejected datasets: Voice and accountability.
-
 ### Coordination: confidence 0.39, thin
 
 How effectively can independent actors organize around shared objectives?
@@ -66,6 +58,14 @@ How effectively can independent actors organize around shared objectives?
 - Uses 3 observed indicators.
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
+
+### Shared Purpose: confidence 0.39, thin
+
+To what extent can people imagine themselves as participants in a common project?
+
+- Uses 3 observed indicators.
+- Missing indicators: Sense of national belonging, Volunteering, Civic participation.
+- Rejected datasets: Voice and accountability.
 
 ## What to keep watching
 
@@ -78,7 +78,7 @@ These scores are at least 50 with usable evidence. They still need watching.
 
 ## Missing data
 
-25 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+24 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -105,7 +105,6 @@ These scores are at least 50 with usable evidence. They still need watching.
 | Building | Firm scale-up rate | Share of young firms reaching significant employment or turnover thresholds. |
 | Shared Purpose | Sense of national belonging | Reported pride in and identification with the national community. |
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
-| Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
 
 ## What the indicators miss about Finland

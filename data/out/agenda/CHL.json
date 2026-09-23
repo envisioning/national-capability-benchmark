@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T12:46:36.238Z",
+  "generatedAt": "2026-09-23T15:03:48.519Z",
   "iso3": "CHL",
   "country": "Chile",
   "dimensions": [
@@ -1781,8 +1781,8 @@
     {
       "dimension": "shared_purpose",
       "kind": "measure",
-      "score": 52.9,
-      "confidence": 0.316,
+      "score": 54.6,
+      "confidence": 0.4,
       "band": "thin",
       "trend": {
         "spanYears": 10,
@@ -1792,12 +1792,12 @@
       },
       "scoredOn": [
         "tax_revenue_gdp",
-        "income_inequality"
+        "income_inequality",
+        "political_polarization"
       ],
       "gaps": [
         "national_belonging",
         "volunteering_rate",
-        "political_polarization",
         "civic_participation"
       ],
       "retired": [
@@ -1848,13 +1848,6 @@
           "title": "Volunteer fire corps, and its membership erosion"
         },
         {
-          "id": "usa-government-shutdown",
-          "iso3": "USA",
-          "country": "United States",
-          "indicatorId": "political_polarization",
-          "title": "Federal funding gaps and the 2019 shutdown"
-        },
-        {
           "id": "prt-opp",
           "iso3": "PRT",
           "country": "Portugal",
@@ -1899,5 +1892,5 @@
       "started": 2007
     }
   ],
-  "gapCount": 25
+  "gapCount": 24
 }

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-31T19:46:16.655Z",
-  "version": "6.1.0",
+  "generatedAt": "2026-09-23T15:03:45.996Z",
+  "version": "6.2.0",
   "country": {
     "country": "China",
     "iso3": "CHN",
@@ -6620,19 +6620,19 @@
         "checks": []
       },
       "shared_purpose": {
-        "score": 43.8,
-        "observedIndicators": 2,
+        "score": 45.7,
+        "observedIndicators": 3,
         "belowCoverageFloor": false,
-        "confidence": 0.29,
+        "confidence": 0.378,
         "confidenceParts": {
-          "coverage": 0.333,
-          "recency": 0.917,
-          "sourceQuality": 0.95
+          "coverage": 0.5,
+          "recency": 0.944,
+          "sourceQuality": 0.8
         },
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 43.8,
+        "blendedScore": 45.7,
         "blendedFrom": "indicators",
         "momentum": [
           {
@@ -7134,16 +7134,23 @@
             "indicatorId": "political_polarization",
             "name": "Political polarisation",
             "measurementClass": "P",
-            "raw": null,
-            "transformed": null,
-            "normalized": null,
-            "year": null,
-            "source": "V-Dem",
-            "sourceTier": null,
+            "raw": 2.207,
+            "transformed": 2.207,
+            "normalized": 49.5,
+            "year": 2024,
+            "source": "V-Dem (v2cacamps_osp)",
+            "sourceTier": "expert_panel",
             "winsorized": false,
             "outOfFrame": false,
-            "series": [],
-            "status": "gap"
+            "series": [
+              {
+                "year": 2024,
+                "raw": 2.207,
+                "normalized": 49.5,
+                "tier": "expert_panel"
+              }
+            ],
+            "status": "observed"
           },
           {
             "indicatorId": "civic_participation",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T19:46:26.186Z",
+  "generatedAt": "2026-09-23T15:03:47.705Z",
   "gdpSeries": "NY.GDP.PCAP.PP.KD",
   "dimensionVsGdp": [
     {
@@ -52,9 +52,9 @@
     },
     {
       "dimension": "shared_purpose",
-      "pearson": 0.457,
-      "spearman": 0.477,
-      "n": 47
+      "pearson": 0.479,
+      "spearman": 0.508,
+      "n": 51
     }
   ],
   "dimensionPairs": [
@@ -108,12 +108,6 @@
     },
     {
       "a": "anticipation",
-      "b": "shared_purpose",
-      "r": 0.662,
-      "n": 47
-    },
-    {
-      "a": "anticipation",
       "b": "learning",
       "r": 0.644,
       "n": 53
@@ -131,9 +125,21 @@
       "n": 53
     },
     {
+      "a": "trust",
+      "b": "shared_purpose",
+      "r": 0.638,
+      "n": 37
+    },
+    {
       "a": "experimentation",
       "b": "building",
       "r": 0.637,
+      "n": 52
+    },
+    {
+      "a": "anticipation",
+      "b": "shared_purpose",
+      "r": 0.626,
       "n": 52
     },
     {
@@ -173,22 +179,22 @@
       "n": 52
     },
     {
-      "a": "trust",
+      "a": "adaptability",
       "b": "shared_purpose",
-      "r": 0.56,
-      "n": 33
+      "r": 0.555,
+      "n": 52
+    },
+    {
+      "a": "agency",
+      "b": "shared_purpose",
+      "r": 0.54,
+      "n": 52
     },
     {
       "a": "trust",
       "b": "building",
       "r": 0.537,
       "n": 37
-    },
-    {
-      "a": "learning",
-      "b": "shared_purpose",
-      "r": 0.534,
-      "n": 47
     },
     {
       "a": "learning",
@@ -204,12 +210,6 @@
     },
     {
       "a": "coordination",
-      "b": "shared_purpose",
-      "r": 0.511,
-      "n": 47
-    },
-    {
-      "a": "coordination",
       "b": "adaptability",
       "r": 0.51,
       "n": 52
@@ -221,22 +221,16 @@
       "n": 52
     },
     {
-      "a": "adaptability",
-      "b": "shared_purpose",
-      "r": 0.493,
-      "n": 47
-    },
-    {
-      "a": "agency",
-      "b": "shared_purpose",
-      "r": 0.482,
-      "n": 47
-    },
-    {
       "a": "trust",
       "b": "learning",
       "r": 0.463,
       "n": 37
+    },
+    {
+      "a": "coordination",
+      "b": "shared_purpose",
+      "r": 0.448,
+      "n": 52
     },
     {
       "a": "coordination",
@@ -258,21 +252,27 @@
     },
     {
       "a": "learning",
+      "b": "shared_purpose",
+      "r": 0.368,
+      "n": 52
+    },
+    {
+      "a": "building",
+      "b": "shared_purpose",
+      "r": 0.352,
+      "n": 52
+    },
+    {
+      "a": "learning",
       "b": "building",
       "r": 0.316,
       "n": 53
     },
     {
-      "a": "building",
-      "b": "shared_purpose",
-      "r": 0.277,
-      "n": 47
-    },
-    {
       "a": "experimentation",
       "b": "shared_purpose",
-      "r": 0.169,
-      "n": 46
+      "r": 0.214,
+      "n": 51
     }
   ],
   "duplicateDimensionCandidates": [],
@@ -494,6 +494,14 @@
       "flaggedAsWealthProxy": false
     },
     {
+      "indicatorId": "political_polarization",
+      "dimension": "shared_purpose",
+      "measurementClass": "P",
+      "r": 0.335,
+      "wealthProxyPrior": 0.05,
+      "flaggedAsWealthProxy": false
+    },
+    {
       "indicatorId": "early_stage_entrepreneurial_activity",
       "dimension": "experimentation",
       "measurementClass": "C",
@@ -589,13 +597,6 @@
       "delta": 0.188
     },
     {
-      "indicatorId": "income_inequality",
-      "dimension": "shared_purpose",
-      "dimensionR": 0.386,
-      "dimensionRWithout": 0.217,
-      "delta": 0.169
-    },
-    {
       "indicatorId": "broadband_subscriptions",
       "dimension": "adaptability",
       "dimensionR": 0.818,
@@ -610,11 +611,25 @@
       "delta": 0.111
     },
     {
+      "indicatorId": "political_polarization",
+      "dimension": "shared_purpose",
+      "dimensionR": 0.479,
+      "dimensionRWithout": 0.386,
+      "delta": 0.093
+    },
+    {
       "indicatorId": "tertiary_enrollment",
       "dimension": "learning",
       "dimensionR": 0.731,
       "dimensionRWithout": 0.643,
       "delta": 0.088
+    },
+    {
+      "indicatorId": "income_inequality",
+      "dimension": "shared_purpose",
+      "dimensionR": 0.479,
+      "dimensionRWithout": 0.396,
+      "delta": 0.083
     },
     {
       "indicatorId": "internet_users",
@@ -673,6 +688,13 @@
       "delta": 0.03
     },
     {
+      "indicatorId": "tax_revenue_gdp",
+      "dimension": "shared_purpose",
+      "dimensionR": 0.479,
+      "dimensionRWithout": 0.453,
+      "delta": 0.026
+    },
+    {
       "indicatorId": "resident_patents_per_million",
       "dimension": "experimentation",
       "dimensionR": 0.565,
@@ -706,13 +728,6 @@
       "dimensionR": 0.731,
       "dimensionRWithout": 0.725,
       "delta": 0.006
-    },
-    {
-      "indicatorId": "tax_revenue_gdp",
-      "dimension": "shared_purpose",
-      "dimensionR": 0.386,
-      "dimensionRWithout": 0.383,
-      "delta": 0.003
     },
     {
       "indicatorId": "sci_articles_per_million",
@@ -991,11 +1006,11 @@
     {
       "dimension": "shared_purpose",
       "indicatorsDefined": 7,
-      "indicatorsObserved": 2,
-      "gaps": 4,
+      "indicatorsObserved": 3,
+      "gaps": 3,
       "retired": 1,
-      "meanCoverage": 0.311,
-      "meanConfidence": 0.26,
+      "meanCoverage": 0.478,
+      "meanConfidence": 0.35,
       "classMix": {
         "C": 2,
         "I": 0,
@@ -1616,6 +1631,22 @@
         "clampedCells": 0,
         "fading": false,
         "lowDiscrimination": false
+      },
+      {
+        "indicatorId": "political_polarization",
+        "dimension": "shared_purpose",
+        "countries": 0,
+        "years": 0,
+        "firstYear": null,
+        "lastYear": null,
+        "firstSpread": null,
+        "lastSpread": null,
+        "changeShare": null,
+        "spearman": null,
+        "carriedForwardCells": 0,
+        "clampedCells": 0,
+        "fading": false,
+        "lowDiscrimination": false
       }
     ]
   },
@@ -1695,7 +1726,7 @@
       {
         "iso3": "SGP",
         "country": "Singapore",
-        "meanAbsShift": 6.01
+        "meanAbsShift": 5.26
       },
       {
         "iso3": "KOR",
@@ -1825,7 +1856,7 @@
       {
         "iso3": "VNM",
         "country": "Vietnam",
-        "meanAbsShift": 5.63
+        "meanAbsShift": 4.93
       },
       {
         "iso3": "PHL",
@@ -1860,7 +1891,7 @@
       {
         "iso3": "NGA",
         "country": "Nigeria",
-        "meanAbsShift": 4.3
+        "meanAbsShift": 3.76
       },
       {
         "iso3": "KEN",
@@ -1895,7 +1926,7 @@
       {
         "iso3": "VEN",
         "country": "Venezuela",
-        "meanAbsShift": 5.14
+        "meanAbsShift": 4.5
       },
       {
         "iso3": "PAN",
@@ -1935,7 +1966,7 @@
       {
         "iso3": "HTI",
         "country": "Haiti",
-        "meanAbsShift": 4.18
+        "meanAbsShift": 3.59
       }
     ],
     "rankChanges": [
@@ -1999,7 +2030,7 @@
       "indicatorId": "adult_digital_skills",
       "name": "Adult digital skills",
       "publisher": "ITU",
-      "reason": "ITU collects this but coverage across these ten countries is broken and the task lists differ by year.",
+      "reason": "ITU collects this but coverage across the country set is broken and the task lists differ by year.",
       "status": "gap"
     },
     {
@@ -2119,7 +2150,7 @@
       "indicatorId": "venture_capital_gdp",
       "name": "Venture capital investment",
       "publisher": "OECD / national VC associations",
-      "reason": "Still a gap after a direct check on 2026-08-26. The OECD SME and Entrepreneurship Financing scoreboard is the only inspectable aggregate and it carries venture capital for 6 of these 16 countries, in national currency rather than as a share of GDP, latest year 2022. Brazil, India, South Africa and Singapore are all absent, so wiring it would score the rich half of the set and lower coverage for the rest. Commercial databases cover the world and are not inspectable. Read A1 before treating this dimension as measured.",
+      "reason": "Still a gap after a direct check on 2026-08-26. The OECD SME and Entrepreneurship Financing scoreboard is the only inspectable aggregate and it carries venture capital for 6 of the 16 countries the frame held at that check, in national currency rather than as a share of GDP, latest year 2022. Brazil, India, South Africa and Singapore are all absent, so wiring it would score the rich half of the set and lower coverage for the rest. Commercial databases cover the world and are not inspectable. Read A1 before treating this dimension as measured.",
       "status": "gap"
     },
     {
@@ -2228,14 +2259,6 @@
     },
     {
       "dimension": "shared_purpose",
-      "indicatorId": "political_polarization",
-      "name": "Political polarisation",
-      "publisher": "V-Dem",
-      "reason": "V-Dem political polarisation is inspectable and would fill this. Pluralism is the target, so only hostile polarisation should count against a country.",
-      "status": "gap"
-    },
-    {
-      "dimension": "shared_purpose",
       "indicatorId": "civic_participation",
       "name": "Civic participation",
       "publisher": "World Values Survey",
@@ -2244,7 +2267,7 @@
     }
   ],
   "outOfFrame": {
-    "observedCells": 1772,
+    "observedCells": 1825,
     "clampedCells": 0,
     "share": 0,
     "perCountry": []

@@ -1,6 +1,6 @@
 # Capability agenda: Venezuela
 
-*Generated 2026-09-02*
+*Generated 2026-09-23*
 
 The frame includes 53 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
@@ -16,7 +16,7 @@ The frame includes 53 countries. Each dimension runs from 0 to 100, with no over
 | Experimentation | 5.2 | 0.1 (very thin) | no trend |
 | Adaptability | 34.6 | 0.47 (usable) | +4.3 over 10 years using 4 indicators, with 1 at the frame edge |
 | Building | 0 | 0.23 (very thin) | no trend |
-| Shared Purpose | not scored | 0.02 (very thin) | no trend |
+| Shared Purpose | 19.4 | 0.13 (very thin) | no trend |
 
 ## What to raise
 
@@ -44,14 +44,6 @@ How effectively can the system respond when circumstances change?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Shared Purpose: confidence 0.02, very thin
-
-To what extent can people imagine themselves as participants in a common project?
-
-- Uses one observed indicator.
-- Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
-- Rejected datasets: Voice and accountability.
-
 ### Learning: confidence 0.1, very thin
 
 How effectively does the country acquire, distribute, and update knowledge?
@@ -65,6 +57,14 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 
 - Uses 2 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
+
+### Shared Purpose: confidence 0.13, very thin
+
+To what extent can people imagine themselves as participants in a common project?
+
+- Uses 2 observed indicators.
+- Missing indicators: Sense of national belonging, Volunteering, Civic participation.
+- Rejected datasets: Voice and accountability.
 
 ### Coordination: confidence 0.22, very thin
 
@@ -99,7 +99,7 @@ How able are individuals and organizations to turn an intention into action?
 
 ## Missing data
 
-25 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+24 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -126,7 +126,6 @@ How able are individuals and organizations to turn an intention into action?
 | Building | Firm scale-up rate | Share of young firms reaching significant employment or turnover thresholds. |
 | Shared Purpose | Sense of national belonging | Reported pride in and identification with the national community. |
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
-| Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
 
 ## What the indicators miss about Venezuela

@@ -9,6 +9,28 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## Dataset 6.2.0 — 2026-09-23
+
+Shared Purpose gains a third indicator, V-Dem political polarization. No
+country is added and the frame for every other indicator is unchanged; Shared
+Purpose scores and confidence restate, and no other dimension moves.
+
+- **Polarization is scored.** `political_polarization` is V-Dem's `v2cacamps`
+  on its original 0 to 4 scale, from the pinned v15 release, for all 53
+  countries at 2024. Lower is better. It asks whether supporters of opposing
+  political camps meet in a hostile rather than a friendly manner. See D115.
+- **Shared Purpose publishes for 52 of 53 countries**, up from 47, and mean
+  confidence rises from 0.260 to 0.350. Singapore, Vietnam, Nigeria, Venezuela
+  and Haiti publish a score for the first time; Cuba still does not.
+- **Closed regimes can read as calm.** A country with no organised opposition
+  scores well on this row. A13 records how far that moves the dimension.
+- **The V-Dem adapter reads the Full+Others archive** of the same release,
+  because the Core archive omits the polarization item. Civil-society strength
+  reads identical values from it.
+- **One evidence record is now stranded.** `usa-government-shutdown` was filed
+  against the polarization gap. It stays until another reversal replaces it,
+  because removing it would put the corpus one short of its reversal quota.
+
 ## Dataset 6.1.0 — 2026-08-31
 
 Retired indicator rows leave the coverage denominator. Scores and the

@@ -194,10 +194,11 @@ measure is a perception proxy, contract enforcement is frozen at 2019, and
 court performance is still missing. D60's bribery-incidence series remains a
 useful behavioural check and is deliberately excluded from the score.
 
-The current dataset is 6.1.0. Portugal joined the frame in 6.0.0, retired rows
-left the coverage denominator in 6.1.0 (D100), and Coordination now also has a
-full-frame V-Dem civil-society row, documented under `docs/research/coordination/`
-and D83.
+The current dataset is 6.2.0. Portugal joined the frame in 6.0.0, retired rows
+left the coverage denominator in 6.1.0 (D100), Coordination has a full-frame
+V-Dem civil-society row, documented under `docs/research/coordination/` and D83,
+and Shared Purpose gained a full-frame V-Dem polarization row in 6.2.0,
+documented under `docs/research/shared-purpose/` and D115.
 
 Do not treat the first score as the finished Trust construct. The next work is
 to pool the held Joint EVS/WVS rows reproducibly and to land court-case

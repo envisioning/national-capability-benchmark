@@ -1,6 +1,6 @@
 # Capability agenda: Panama
 
-*Generated 2026-09-02*
+*Generated 2026-09-23*
 
 The frame includes 53 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
@@ -16,7 +16,7 @@ The frame includes 53 countries. Each dimension runs from 0 to 100, with no over
 | Experimentation | 8.8 | 0.18 (very thin) | -2.7 over 10 years using 2 indicators |
 | Adaptability | 57.2 | 0.46 (usable) | +5.3 over 10 years using 4 indicators |
 | Building | 27.5 | 0.62 (usable) | +0.6 over 10 years using 4 indicators |
-| Shared Purpose | 20.4 | 0.32 (thin) | -4.2 over 10 years using 2 indicators |
+| Shared Purpose | 38.3 | 0.4 (thin) | -4.2 over 10 years using 2 indicators |
 
 ## What to raise
 
@@ -69,14 +69,6 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Uses 2 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
-### Shared Purpose: confidence 0.32, thin
-
-To what extent can people imagine themselves as participants in a common project?
-
-- Uses 2 observed indicators.
-- Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
-- Rejected datasets: Voice and accountability.
-
 ### Coordination: confidence 0.37, thin
 
 How effectively can independent actors organize around shared objectives?
@@ -84,6 +76,14 @@ How effectively can independent actors organize around shared objectives?
 - Uses 3 observed indicators.
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
+
+### Shared Purpose: confidence 0.4, thin
+
+To what extent can people imagine themselves as participants in a common project?
+
+- Uses 3 observed indicators.
+- Missing indicators: Sense of national belonging, Volunteering, Civic participation.
+- Rejected datasets: Voice and accountability.
 
 ## What to keep watching
 
@@ -94,7 +94,7 @@ These scores are at least 50 with usable evidence. They still need watching.
 
 ## Missing data
 
-25 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+24 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -121,7 +121,6 @@ These scores are at least 50 with usable evidence. They still need watching.
 | Building | Firm scale-up rate | Share of young firms reaching significant employment or turnover thresholds. |
 | Shared Purpose | Sense of national belonging | Reported pride in and identification with the national community. |
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
-| Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
 
 ## What Panama built that no indicator counts

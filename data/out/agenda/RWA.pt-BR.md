@@ -1,6 +1,6 @@
 # Agenda de capacidades: Ruanda
 
-*Gerado em 2026-09-02*
+*Gerado em 2026-09-23*
 
 Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
@@ -16,7 +16,7 @@ Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | Experimentação | 0,4 | 0,18 (muito fraca) | +0,3 em 10 anos, sobre 2 indicadores |
 | Adaptação | 30,4 | 0,47 (utilizável) | +8 em 10 anos, sobre 4 indicadores |
 | Construção | 25,3 | 0,6 (utilizável) | -2,2 em 10 anos, sobre 4 indicadores, 1 truncados na borda da régua |
-| Propósito compartilhado | 49,3 | 0,29 (fraca) | +4,6 em 10 anos, sobre 2 indicadores |
+| Propósito compartilhado | 60,8 | 0,38 (fraca) | +4,6 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para elevar
 
@@ -87,12 +87,12 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
-### Propósito compartilhado: confiança 0,29, fraca
+### Propósito compartilhado: confiança 0,38, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Participação cívica.
 - Bases rejeitadas: Voz e responsabilização.
 
 ### Coordenação: confiança 0,41, fraca
@@ -105,7 +105,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 ## Agenda de medição
 
-25 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+24 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -132,7 +132,6 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 | Construção | Empresas jovens que ganham escala | Parcela de empresas jovens que atingem patamares relevantes de emprego ou faturamento. |
 | Propósito compartilhado | Sentimento de pertencimento nacional | Orgulho e identificação com a comunidade nacional, autodeclarados. |
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
-| Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 | Propósito compartilhado | Participação cívica | Participação ativa em associações, sindicatos, partidos e organizações comunitárias. |
 
 ## O que os indicadores não veem sobre Ruanda

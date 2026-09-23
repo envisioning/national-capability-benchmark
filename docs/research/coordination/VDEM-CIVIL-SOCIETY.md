@@ -16,9 +16,12 @@ construct of `civil_society_strength`; it is not a score of government
 reputation and it does not claim to measure court throughput or cross-agency
 delivery.
 
-The release is publicly downloadable as a ZIP archive at
-`https://www.v-dem.net/media/datasets/V-Dem-CY-Core-v15_csv.zip`, published in
-March 2025 under CC BY-SA 4.0. The adapter fixes the release, variable and
+The release is publicly downloadable as a ZIP archive, published in March 2025
+under CC BY-SA 4.0. The adapter now reads the Full+Others archive of the same
+release,
+`https://www.v-dem.net/media/datasets/V-Dem-CY-FullOthers-v15_csv.zip`, because
+the Core archive omits the polarization item Shared Purpose needs; its
+`v2x_cspart` values are identical to Core's for all 53 countries (D115). The adapter fixes the release, variable and
 reference year (2024), extracts the CSV and emits the project's existing
 national observation shape. The raw archive is not committed; the derived
 53-row observation file is.

@@ -1,6 +1,6 @@
 # Agenda de capacidades: Japão
 
-*Gerado em 2026-09-02*
+*Gerado em 2026-09-23*
 
 Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
@@ -16,7 +16,7 @@ Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | Experimentação | 66,7 | 0,18 (muito fraca) | -6,8 em 10 anos, sobre 2 indicadores |
 | Adaptação | 86,1 | 0,47 (utilizável) | +8,7 em 10 anos, sobre 4 indicadores |
 | Construção | 50,2 | 0,62 (utilizável) | -2 em 10 anos, sobre 4 indicadores |
-| Propósito compartilhado | 58 | 0,12 (muito fraca) | sem base de tendência |
+| Propósito compartilhado | 67,6 | 0,24 (muito fraca) | sem base de tendência |
 
 ## Dimensões para elevar
 
@@ -35,20 +35,20 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Propósito compartilhado: confiança 0,12, muito fraca
-
-Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
-- Bases rejeitadas: Voz e responsabilização.
-
 ### Experimentação: confiança 0,18, muito fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
+
+### Propósito compartilhado: confiança 0,24, muito fraca
+
+Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Participação cívica.
+- Bases rejeitadas: Voz e responsabilização.
 
 ### Confiança: confiança 0,26, fraca
 
@@ -77,7 +77,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## Agenda de medição
 
-25 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+24 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -104,7 +104,6 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 | Construção | Empresas jovens que ganham escala | Parcela de empresas jovens que atingem patamares relevantes de emprego ou faturamento. |
 | Propósito compartilhado | Sentimento de pertencimento nacional | Orgulho e identificação com a comunidade nacional, autodeclarados. |
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
-| Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 | Propósito compartilhado | Participação cívica | Participação ativa em associações, sindicatos, partidos e organizações comunitárias. |
 
 ## O que o Japão construiu e nenhum indicador conta

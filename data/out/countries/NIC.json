@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-31T19:46:16.655Z",
-  "version": "6.1.0",
+  "generatedAt": "2026-09-23T15:03:45.996Z",
+  "version": "6.2.0",
   "country": {
     "country": "Nicaragua",
     "iso3": "NIC",
@@ -5437,19 +5437,19 @@
         "checks": []
       },
       "shared_purpose": {
-        "score": 50.8,
-        "observedIndicators": 2,
+        "score": 34,
+        "observedIndicators": 3,
         "belowCoverageFloor": false,
-        "confidence": 0.184,
+        "confidence": 0.289,
         "confidenceParts": {
-          "coverage": 0.333,
-          "recency": 0.583,
-          "sourceQuality": 0.95
+          "coverage": 0.5,
+          "recency": 0.722,
+          "sourceQuality": 0.8
         },
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 50.8,
+        "blendedScore": 34,
         "blendedFrom": "indicators",
         "momentum": [],
         "indicators": [
@@ -5780,16 +5780,23 @@
             "indicatorId": "political_polarization",
             "name": "Political polarisation",
             "measurementClass": "P",
-            "raw": null,
-            "transformed": null,
-            "normalized": null,
-            "year": null,
-            "source": "V-Dem",
-            "sourceTier": null,
+            "raw": 3.961,
+            "transformed": 3.961,
+            "normalized": 0.4,
+            "year": 2024,
+            "source": "V-Dem (v2cacamps_osp)",
+            "sourceTier": "expert_panel",
             "winsorized": false,
             "outOfFrame": false,
-            "series": [],
-            "status": "gap"
+            "series": [
+              {
+                "year": 2024,
+                "raw": 3.961,
+                "normalized": 0.4,
+                "tier": "expert_panel"
+              }
+            ],
+            "status": "observed"
           },
           {
             "indicatorId": "civic_participation",

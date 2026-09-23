@@ -1,6 +1,6 @@
 # Agenda de capacidades: Bolívia
 
-*Gerado em 2026-09-02*
+*Gerado em 2026-09-23*
 
 Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
@@ -16,7 +16,7 @@ Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | Experimentação | 2,9 | 0,18 (muito fraca) | +0,8 em 10 anos, sobre 2 indicadores |
 | Adaptação | 67,2 | 0,47 (utilizável) | +15,2 em 10 anos, sobre 4 indicadores |
 | Construção | 29,7 | 0,62 (utilizável) | +2,8 em 10 anos, sobre 4 indicadores |
-| Propósito compartilhado | 54,1 | 0,17 (muito fraca) | sem base de tendência |
+| Propósito compartilhado | 37,8 | 0,28 (fraca) | sem base de tendência |
 
 ## Dimensões para elevar
 
@@ -54,14 +54,6 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Propósito compartilhado: confiança 0,17, muito fraca
-
-Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
-- Bases rejeitadas: Voz e responsabilização.
-
 ### Experimentação: confiança 0,18, muito fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
@@ -76,6 +68,14 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
+
+### Propósito compartilhado: confiança 0,28, fraca
+
+Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Participação cívica.
+- Bases rejeitadas: Voz e responsabilização.
 
 ### Aprendizagem: confiança 0,34, fraca
 
@@ -100,7 +100,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## Agenda de medição
 
-25 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+24 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -127,7 +127,6 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 | Construção | Empresas jovens que ganham escala | Parcela de empresas jovens que atingem patamares relevantes de emprego ou faturamento. |
 | Propósito compartilhado | Sentimento de pertencimento nacional | Orgulho e identificação com a comunidade nacional, autodeclarados. |
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
-| Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 | Propósito compartilhado | Participação cívica | Participação ativa em associações, sindicatos, partidos e organizações comunitárias. |
 
 ## O que a Bolívia construiu e nenhum indicador conta

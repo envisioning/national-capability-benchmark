@@ -1,6 +1,6 @@
 # Agenda de capacidades: Reino Unido
 
-*Gerado em 2026-09-02*
+*Gerado em 2026-09-23*
 
 Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
 
@@ -16,7 +16,7 @@ Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 | Experimentação | 43,3 | 0,18 (muito fraca) | +6,2 em 10 anos, sobre 2 indicadores |
 | Adaptação | 76,2 | 0,48 (utilizável) | +0,4 em 10 anos, sobre 4 indicadores |
 | Construção | 46,8 | 0,62 (utilizável) | +0,6 em 10 anos, sobre 4 indicadores |
-| Propósito compartilhado | 87,4 | 0,28 (fraca) | +4,2 em 10 anos, sobre 2 indicadores |
+| Propósito compartilhado | 75,9 | 0,37 (fraca) | +4,2 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para elevar
 
@@ -59,12 +59,12 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
-### Propósito compartilhado: confiança 0,28, fraca
+### Propósito compartilhado: confiança 0,37, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Participação cívica.
 - Bases rejeitadas: Voz e responsabilização.
 
 ## Dimensões para manter
@@ -78,7 +78,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## Agenda de medição
 
-25 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+24 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -105,7 +105,6 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 | Construção | Empresas jovens que ganham escala | Parcela de empresas jovens que atingem patamares relevantes de emprego ou faturamento. |
 | Propósito compartilhado | Sentimento de pertencimento nacional | Orgulho e identificação com a comunidade nacional, autodeclarados. |
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
-| Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 | Propósito compartilhado | Participação cívica | Participação ativa em associações, sindicatos, partidos e organizações comunitárias. |
 
 ## O que o Reino Unido construiu e nenhum indicador conta

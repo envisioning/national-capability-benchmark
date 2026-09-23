@@ -1,6 +1,6 @@
 # Capability agenda: Haiti
 
-*Generated 2026-09-02*
+*Generated 2026-09-23*
 
 The frame includes 53 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
@@ -16,7 +16,7 @@ The frame includes 53 countries. Each dimension runs from 0 to 100, with no over
 | Experimentation | 0.2 | 0.04 (very thin) | no trend |
 | Adaptability | 27.3 | 0.44 (thin) | -2.6 over 10 years using 4 indicators, with 1 at the frame edge |
 | Building | 34.4 | 0.49 (usable) | +3.6 over 10 years using 3 indicators, with 1 at the frame edge |
-| Shared Purpose | not scored | 0.02 (very thin) | no trend |
+| Shared Purpose | 40 | 0.13 (very thin) | no trend |
 
 ## What to raise
 
@@ -36,14 +36,6 @@ How capable is the country of turning plans and knowledge into functioning syste
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Shared Purpose: confidence 0.02, very thin
-
-To what extent can people imagine themselves as participants in a common project?
-
-- Uses one observed indicator.
-- Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
-- Rejected datasets: Voice and accountability.
-
 ### Experimentation: confidence 0.04, very thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
@@ -58,6 +50,14 @@ How much cooperation is possible beyond immediate personal networks?
 - Uses one observed indicator.
 - Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
+
+### Shared Purpose: confidence 0.13, very thin
+
+To what extent can people imagine themselves as participants in a common project?
+
+- Uses 2 observed indicators.
+- Missing indicators: Sense of national belonging, Volunteering, Civic participation.
+- Rejected datasets: Voice and accountability.
 
 ### Learning: confidence 0.24, very thin
 
@@ -97,7 +97,7 @@ How able are individuals and organizations to turn an intention into action?
 
 ## Missing data
 
-25 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+24 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -124,7 +124,6 @@ How able are individuals and organizations to turn an intention into action?
 | Building | Firm scale-up rate | Share of young firms reaching significant employment or turnover thresholds. |
 | Shared Purpose | Sense of national belonging | Reported pride in and identification with the national community. |
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
-| Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
 
 ## What the indicators miss about Haiti

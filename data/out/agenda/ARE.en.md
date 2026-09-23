@@ -1,6 +1,6 @@
 # Capability agenda: United Arab Emirates
 
-*Generated 2026-09-02*
+*Generated 2026-09-23*
 
 The frame includes 53 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
@@ -16,7 +16,7 @@ The frame includes 53 countries. Each dimension runs from 0 to 100, with no over
 | Experimentation | 6.1 | 0.18 (very thin) | +1 over 10 years using 2 indicators |
 | Adaptability | 85.8 | 0.47 (usable) | +14.3 over 10 years using 4 indicators |
 | Building | 38.1 | 0.61 (usable) | +2.7 over 10 years using 4 indicators |
-| Shared Purpose | 48.4 | 0.24 (very thin) | no trend |
+| Shared Purpose | 59.5 | 0.33 (thin) | no trend |
 
 ## What to raise
 
@@ -68,12 +68,12 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
-### Shared Purpose: confidence 0.24, very thin
+### Shared Purpose: confidence 0.33, thin
 
 To what extent can people imagine themselves as participants in a common project?
 
-- Uses 2 observed indicators.
-- Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
+- Uses 3 observed indicators.
+- Missing indicators: Sense of national belonging, Volunteering, Civic participation.
 - Rejected datasets: Voice and accountability.
 
 ### Learning: confidence 0.38, thin
@@ -92,7 +92,7 @@ These scores are at least 50 with usable evidence. They still need watching.
 
 ## Missing data
 
-25 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+24 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -119,7 +119,6 @@ These scores are at least 50 with usable evidence. They still need watching.
 | Building | Firm scale-up rate | Share of young firms reaching significant employment or turnover thresholds. |
 | Shared Purpose | Sense of national belonging | Reported pride in and identification with the national community. |
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
-| Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
 
 ## What the indicators miss about United Arab Emirates

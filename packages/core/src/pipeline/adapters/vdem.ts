@@ -1,23 +1,23 @@
 import { spawn } from 'node:child_process'
-import type { ChildProcessWithoutNullStreams } from 'node:child_process'
-import { mkdtemp, unlink, writeFile } from 'node:fs/promises'
+import { mkdtemp, rm, writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
 import { tmpdir } from 'node:os'
+import { createInterface } from 'node:readline'
 import {
   COUNTRIES,
-  VDEM_CY_CORE_V15_RELEASE,
-  VDEM_CY_CORE_V15_URL,
-  VDEM_CY_CORE_V15_VARIABLE,
-  VDEM_CY_CORE_V15_YEAR,
+  VDEM_CY_V15_CSV,
+  VDEM_CY_V15_DATASET,
+  VDEM_CY_V15_RELEASE,
+  VDEM_CY_V15_URL,
+  VDEM_CY_V15_VARIABLES,
+  VDEM_CY_V15_YEAR,
   VDEM_PUBLISHER,
 } from '../../model/index.js'
 import type { Observation } from '../../model/schema.js'
 import type { SourceAdapterResult } from './types.js'
 
 /** Stable adapter id stored in source notes and handoffs. */
-export const VDEM_CIVIL_SOCIETY_ADAPTER_ID = 'v-dem-cy-core-v15-civil-society'
-
-type CsvRow = Record<string, string>
+export const VDEM_ADAPTER_ID = 'v-dem-cy-full-v15'
 
 /** Parse one RFC 4180 row without adding a runtime dependency for one source. */
 function parseCsvLine(line: string): string[] {
@@ -48,111 +48,148 @@ function parseCsvLine(line: string): string[] {
   return fields
 }
 
-function parseCsv(text: string): CsvRow[] {
-  const lines = text.split(/\r?\n/).filter((line) => line.length > 0)
-  if (lines.length < 2) throw new Error('V-Dem CSV has no data rows')
-  const headers = parseCsvLine(lines[0]!)
-  const required = ['country_text_id', 'year', VDEM_CY_CORE_V15_VARIABLE]
-  for (const name of required) {
-    if (!headers.includes(name)) throw new Error(`V-Dem CSV is missing ${name}`)
-  }
-  return lines.slice(1).map((line) => {
-    const values = parseCsvLine(line)
-    return Object.fromEntries(headers.map((header, index) => [header, values[index] ?? '']))
-  })
+export type VdemResult = SourceAdapterResult & {
+  /** Countries emitted per indicator, so a partial variable cannot hide behind a full one. */
+  coverageByIndicator: Record<string, number>
 }
 
-export type VdemCivilSocietyResult = SourceAdapterResult
+/**
+ * Accumulates the pinned release year from a stream of CSV lines. The
+ * Full+Others file is about 400 MB, so rows are filtered as they arrive
+ * instead of being held as one string.
+ */
+class VdemAccumulator {
+  private headers: string[] | null = null
+  private index: { iso3: number; year: number; variables: number[] } | null = null
+  private readonly benchmark: Set<string> = new Set(COUNTRIES.map((country) => country.iso3))
+  private readonly yearText = String(VDEM_CY_V15_YEAR)
+  readonly observations: Observation[] = []
+
+  constructor(
+    private readonly retrievedAt: string,
+    private readonly sourceUrl: string,
+  ) {}
+
+  push(line: string): void {
+    if (line.length === 0) return
+    if (!this.headers) {
+      this.headers = parseCsvLine(line)
+      const find = (name: string) => {
+        const at = this.headers!.indexOf(name)
+        if (at < 0) throw new Error(`V-Dem CSV is missing ${name}`)
+        return at
+      }
+      this.index = {
+        iso3: find('country_text_id'),
+        year: find('year'),
+        variables: VDEM_CY_V15_VARIABLES.map((spec) => find(spec.variable)),
+      }
+      return
+    }
+    /* Cheap reject before a full parse: the release year must appear in the line. */
+    if (!line.includes(this.yearText)) return
+    const values = parseCsvLine(line)
+    const index = this.index!
+    const iso3 = values[index.iso3] ?? ''
+    if (!this.benchmark.has(iso3) || Number(values[index.year]) !== VDEM_CY_V15_YEAR) return
+    VDEM_CY_V15_VARIABLES.forEach((spec, i) => {
+      const rawValue = values[index.variables[i]!] ?? ''
+      if (rawValue.trim() === '') return
+      const value = Number(rawValue)
+      if (!Number.isFinite(value) || value < spec.min || value > spec.max) return
+      this.observations.push({
+        indicatorId: spec.indicatorId,
+        iso3,
+        geometry: 'national',
+        reconciliation: 'context_only',
+        value,
+        year: VDEM_CY_V15_YEAR,
+        sourceTier: 'expert_panel',
+        sourceUrl: this.sourceUrl,
+        retrievedAt: this.retrievedAt,
+        note: `${spec.variable}; ${VDEM_PUBLISHER} ${VDEM_CY_V15_DATASET} v${VDEM_CY_V15_RELEASE}; ${spec.scaleNote}; CC BY-SA 4.0.`,
+      })
+    })
+  }
+
+  result(): VdemResult {
+    if (!this.headers) throw new Error('V-Dem CSV has no header row')
+    const observations = [...this.observations].sort(
+      (a, b) => a.indicatorId.localeCompare(b.indicatorId) || a.iso3.localeCompare(b.iso3),
+    )
+    const countries = [...new Set(observations.map((o) => o.iso3))].sort()
+    const coverageByIndicator = Object.fromEntries(
+      VDEM_CY_V15_VARIABLES.map((spec) => [
+        spec.indicatorId,
+        observations.filter((o) => o.indicatorId === spec.indicatorId).length,
+      ]),
+    )
+    return {
+      adapterId: VDEM_ADAPTER_ID,
+      observations,
+      availableCountries: countries,
+      emittedCountries: countries,
+      heldCountries: [],
+      unmappedLabels: [],
+      sourceUrl: this.sourceUrl,
+      release: VDEM_CY_V15_RELEASE,
+      coverageByIndicator,
+    }
+  }
+}
 
 /**
  * Parse the pinned V-Dem country-year release into the existing observation
  * shape. Only the latest release year is emitted; the adapter deliberately
  * does not invent a time series from a source whose release is versioned.
  */
-export function parseVdemCivilSociety(
+export function parseVdem(
   csv: string,
   retrievedAt = new Date().toISOString(),
-  sourceUrl = VDEM_CY_CORE_V15_URL,
-): VdemCivilSocietyResult {
-  const benchmark: Set<string> = new Set(COUNTRIES.map((country) => country.iso3))
-  const rows = parseCsv(csv)
-  const available = new Set<string>()
-  const observations: Observation[] = []
-
-  for (const row of rows) {
-    const iso3 = row.country_text_id ?? ''
-    if (!benchmark.has(iso3) || Number(row.year) !== VDEM_CY_CORE_V15_YEAR) continue
-    const rawValue = row[VDEM_CY_CORE_V15_VARIABLE] ?? ''
-    if (rawValue.trim() === '') continue
-    const value = Number(rawValue)
-    if (!Number.isFinite(value) || value < 0 || value > 1) continue
-    available.add(iso3)
-    observations.push({
-      indicatorId: 'civil_society_strength',
-      iso3,
-      geometry: 'national',
-      reconciliation: 'context_only',
-      value,
-      year: VDEM_CY_CORE_V15_YEAR,
-      sourceTier: 'expert_panel',
-      sourceUrl,
-      retrievedAt,
-      note: `${VDEM_CY_CORE_V15_VARIABLE}; ${VDEM_PUBLISHER} Country-Year Core v${VDEM_CY_CORE_V15_RELEASE}; expert-coded index on a 0-1 scale; CC BY-SA 4.0.`,
-    })
-  }
-
-  observations.sort((a, b) => a.iso3.localeCompare(b.iso3))
-  const emittedCountries = observations.map((observation) => observation.iso3)
-  return {
-    adapterId: VDEM_CIVIL_SOCIETY_ADAPTER_ID,
-    observations,
-    availableCountries: [...available].sort(),
-    emittedCountries,
-    heldCountries: [],
-    unmappedLabels: [],
-    sourceUrl,
-    release: VDEM_CY_CORE_V15_RELEASE,
-  }
+  sourceUrl = VDEM_CY_V15_URL,
+): VdemResult {
+  const accumulator = new VdemAccumulator(retrievedAt, sourceUrl)
+  for (const line of csv.split(/\r?\n/)) accumulator.push(line)
+  return accumulator.result()
 }
 
-async function unzipCsv(zip: Uint8Array): Promise<string> {
+/** Stream the pinned CSV out of the archive and parse it line by line. */
+async function parseZip(zip: Uint8Array, retrievedAt: string, sourceUrl: string): Promise<VdemResult> {
   const directory = await mkdtemp(join(tmpdir(), 'ncb-vdem-'))
   const archive = join(directory, 'release.zip')
   await writeFile(archive, zip)
   try {
-    return await new Promise((resolve, reject) => {
-    const child: ChildProcessWithoutNullStreams = spawn('unzip', [
-      '-p',
-      archive,
-      'V-Dem-CY-Core-v15.csv',
-    ])
-    const stdout: Buffer[] = []
+    const child = spawn('unzip', ['-p', archive, VDEM_CY_V15_CSV])
     const stderr: Buffer[] = []
-    child.stdout.on('data', (chunk: Buffer) => stdout.push(chunk))
     child.stderr.on('data', (chunk: Buffer) => stderr.push(chunk))
-    child.on('error', (error) => reject(new Error(`Cannot run unzip for V-Dem: ${error.message}`)))
-    child.on('close', (code) => {
-      if (code === 0) {
-        resolve(Buffer.concat(stdout).toString('utf8'))
-      } else {
-        reject(new Error(`unzip failed (${code}): ${Buffer.concat(stderr).toString('utf8').trim()}`))
-      }
+    const exited = new Promise<number | null>((resolve, reject) => {
+      child.on('error', (error) => reject(new Error(`Cannot run unzip for V-Dem: ${error.message}`)))
+      child.on('close', (code) => resolve(code))
     })
     child.stdin.end()
-    })
+    const accumulator = new VdemAccumulator(retrievedAt, sourceUrl)
+    const lines = createInterface({ input: child.stdout, crlfDelay: Infinity })
+    for await (const line of lines) accumulator.push(line)
+    const code = await exited
+    if (code !== 0) {
+      throw new Error(`unzip failed (${code}): ${Buffer.concat(stderr).toString('utf8').trim()}`)
+    }
+    return accumulator.result()
   } finally {
-    await unlink(archive).catch(() => undefined)
-    await unlink(directory).catch(() => undefined)
+    await rm(directory, { recursive: true, force: true })
   }
 }
 
 /** Fetch and parse the pinned public V-Dem release. */
-export async function fetchVdemCivilSociety(
+export async function fetchVdem(
   opts: { sourceUrl?: string; retrievedAt?: string } = {},
-): Promise<VdemCivilSocietyResult> {
-  const sourceUrl = opts.sourceUrl ?? VDEM_CY_CORE_V15_URL
+): Promise<VdemResult> {
+  const sourceUrl = opts.sourceUrl ?? VDEM_CY_V15_URL
   const response = await fetch(sourceUrl)
   if (!response.ok) throw new Error(`V-Dem: HTTP ${response.status}`)
-  const csv = await unzipCsv(new Uint8Array(await response.arrayBuffer()))
-  return parseVdemCivilSociety(csv, opts.retrievedAt ?? new Date().toISOString(), sourceUrl)
+  return parseZip(
+    new Uint8Array(await response.arrayBuffer()),
+    opts.retrievedAt ?? new Date().toISOString(),
+    sourceUrl,
+  )
 }

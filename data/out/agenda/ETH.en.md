@@ -1,6 +1,6 @@
 # Capability agenda: Ethiopia
 
-*Generated 2026-09-02*
+*Generated 2026-09-23*
 
 The frame includes 53 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
 
@@ -16,7 +16,7 @@ The frame includes 53 countries. Each dimension runs from 0 to 100, with no over
 | Experimentation | 0 | 0.17 (very thin) | no trend |
 | Adaptability | 43 | 0.47 (usable) | -7.9 over 10 years using 4 indicators |
 | Building | 15.5 | 0.61 (usable) | -2.3 over 10 years using 4 indicators, with 1 at the frame edge |
-| Shared Purpose | 45.5 | 0.28 (thin) | -2.1 over 10 years using 2 indicators |
+| Shared Purpose | 39 | 0.37 (thin) | -2.1 over 10 years using 2 indicators |
 
 ## What to raise
 
@@ -78,12 +78,12 @@ How much cooperation is possible beyond immediate personal networks?
 - Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
-### Shared Purpose: confidence 0.28, thin
+### Shared Purpose: confidence 0.37, thin
 
 To what extent can people imagine themselves as participants in a common project?
 
-- Uses 2 observed indicators.
-- Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
+- Uses 3 observed indicators.
+- Missing indicators: Sense of national belonging, Volunteering, Civic participation.
 - Rejected datasets: Voice and accountability.
 
 ### Coordination: confidence 0.41, thin
@@ -103,7 +103,7 @@ How effectively does the country acquire, distribute, and update knowledge?
 
 ## Missing data
 
-25 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+24 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -130,7 +130,6 @@ How effectively does the country acquire, distribute, and update knowledge?
 | Building | Firm scale-up rate | Share of young firms reaching significant employment or turnover thresholds. |
 | Shared Purpose | Sense of national belonging | Reported pride in and identification with the national community. |
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
-| Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 | Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
 
 ## What the indicators miss about Ethiopia

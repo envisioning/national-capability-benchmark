@@ -10,7 +10,7 @@ countries, nine dimensions, equal weights and no headline ranking.
 pnpm install
 pnpm bench ingest      fetch World Bank series from 1990 into data/observations/worldbank.json
 pnpm bench trust fetch import the pinned Joint EVS/WVS A165 trust table into data/observations/joint-evs-wvs.json
-pnpm bench vdem fetch  import the pinned V-Dem civil-society series into data/observations/vdem-cy-core.json
+pnpm bench vdem fetch  import the pinned V-Dem civil-society and polarization series into data/observations/vdem-cy-core.json
 pnpm bench score       normalise and score, write data/out/index.json, data/out/countries/*.json and table.csv
 pnpm bench delphi      run the LLM panel (add --mock to run offline)
 pnpm bench diagnose    correlations, redundancy, GDP-sensitivity test

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-31T19:46:16.655Z",
-  "version": "6.1.0",
+  "generatedAt": "2026-09-23T15:03:45.996Z",
+  "version": "6.2.0",
   "country": {
     "country": "Ireland",
     "iso3": "IRL",
@@ -6130,19 +6130,19 @@
         "checks": []
       },
       "shared_purpose": {
-        "score": 76.5,
-        "observedIndicators": 2,
+        "score": 84.3,
+        "observedIndicators": 3,
         "belowCoverageFloor": false,
-        "confidence": 0.303,
+        "confidence": 0.389,
         "confidenceParts": {
-          "coverage": 0.333,
-          "recency": 0.958,
-          "sourceQuality": 0.95
+          "coverage": 0.5,
+          "recency": 0.972,
+          "sourceQuality": 0.8
         },
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 76.5,
+        "blendedScore": 84.3,
         "blendedFrom": "indicators",
         "momentum": [
           {
@@ -7005,16 +7005,23 @@
             "indicatorId": "political_polarization",
             "name": "Political polarisation",
             "measurementClass": "P",
-            "raw": null,
-            "transformed": null,
-            "normalized": null,
-            "year": null,
-            "source": "V-Dem",
-            "sourceTier": null,
+            "raw": 0.401,
+            "transformed": 0.401,
+            "normalized": 100,
+            "year": 2024,
+            "source": "V-Dem (v2cacamps_osp)",
+            "sourceTier": "expert_panel",
             "winsorized": false,
             "outOfFrame": false,
-            "series": [],
-            "status": "gap"
+            "series": [
+              {
+                "year": 2024,
+                "raw": 0.401,
+                "normalized": 100,
+                "tier": "expert_panel"
+              }
+            ],
+            "status": "observed"
           },
           {
             "indicatorId": "civic_participation",

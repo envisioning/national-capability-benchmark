@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-31T19:46:16.655Z",
-  "version": "6.1.0",
+  "generatedAt": "2026-09-23T15:03:45.996Z",
+  "version": "6.2.0",
   "country": {
     "country": "Cuba",
     "iso3": "CUB",
@@ -5036,13 +5036,13 @@
       },
       "shared_purpose": {
         "score": null,
-        "observedIndicators": 0,
+        "observedIndicators": 1,
         "belowCoverageFloor": true,
-        "confidence": 0,
+        "confidence": 0.084,
         "confidenceParts": {
-          "coverage": 0,
-          "recency": 0,
-          "sourceQuality": 0
+          "coverage": 0.167,
+          "recency": 1,
+          "sourceQuality": 0.5
         },
         "delphiScore": null,
         "delphiIqr": null,
@@ -5130,16 +5130,23 @@
             "indicatorId": "political_polarization",
             "name": "Political polarisation",
             "measurementClass": "P",
-            "raw": null,
-            "transformed": null,
-            "normalized": null,
-            "year": null,
-            "source": "V-Dem",
-            "sourceTier": null,
+            "raw": 1.754,
+            "transformed": 1.754,
+            "normalized": 62.2,
+            "year": 2024,
+            "source": "V-Dem (v2cacamps_osp)",
+            "sourceTier": "expert_panel",
             "winsorized": false,
             "outOfFrame": false,
-            "series": [],
-            "status": "gap"
+            "series": [
+              {
+                "year": 2024,
+                "raw": 1.754,
+                "normalized": 62.2,
+                "tier": "expert_panel"
+              }
+            ],
+            "status": "observed"
           },
           {
             "indicatorId": "civic_participation",
