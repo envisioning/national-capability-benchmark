@@ -189,13 +189,15 @@ rows and three gaps. The first source-backed release publishes a provisional
 Trust score for 37 of 53 countries from one generalized social-trust measure
 and the existing institutional-performance contract-enforcement measure. D57's
 two-family acceptance test is structurally met for those cells, but the result
-remains thin: confidence is 0.159 where both rows are observed, the social
+remains thin: confidence is 0.255 where both rows are observed, the social
 measure is a perception proxy, contract enforcement is frozen at 2019, and
 court performance is still missing. D60's bribery-incidence series remains a
 useful behavioural check and is deliberately excluded from the score.
 
-The current dataset is 6.0.0: Portugal has joined the frame, and Coordination now also has a full-frame V-Dem
-civil-society row, documented under `docs/research/coordination/` and D83.
+The current dataset is 6.1.0. Portugal joined the frame in 6.0.0, retired rows
+left the coverage denominator in 6.1.0 (D100), and Coordination now also has a
+full-frame V-Dem civil-society row, documented under `docs/research/coordination/`
+and D83.
 
 Do not treat the first score as the finished Trust construct. The next work is
 to pool the held Joint EVS/WVS rows reproducibly and to land court-case
@@ -213,9 +215,11 @@ interpret the thin release, but it cannot fill either gap.
 current dataset version, observed coverage, family coverage, retired rows,
 known artefacts and the two-series acceptance test.
 
-**Status:** complete for dataset 4.4.0. Another agent can reproduce the
-baseline and knows which existing series must remain excluded. The source
-promotion and generated output are documented below.
+**Status:** complete. `docs/research/trust/BASELINE.md` freezes the baseline as
+it stood at dataset 4.4.0; current figures come from `data/out/diagnostics.json`
+for dataset 6.1.0. Another agent can reproduce the baseline and knows which
+existing series must remain excluded. The source promotion and generated output
+are documented below.
 
 ### TRUST-1: harmonise the social measure
 

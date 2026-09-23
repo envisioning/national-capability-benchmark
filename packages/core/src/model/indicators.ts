@@ -217,7 +217,7 @@ const RAW: Raw[] = [
     direction: 'higher_better',
     source: { publisher: 'ITU', tier: 'international_organization', inspectable: true },
     ingest: 'gap',
-    notes: 'ITU collects this but coverage across these ten countries is broken and the task lists differ by year.',
+    notes: 'ITU collects this but coverage across the country set is broken and the task lists differ by year.',
     wealthProxyPrior: 0.4,
   },
   {
@@ -607,7 +607,7 @@ const RAW: Raw[] = [
     direction: 'higher_better',
     source: { publisher: 'OECD / national VC associations', tier: 'international_organization', inspectable: true },
     ingest: 'gap',
-    notes: 'Still a gap after a direct check on 2026-08-26. The OECD SME and Entrepreneurship Financing scoreboard is the only inspectable aggregate and it carries venture capital for 6 of these 16 countries, in national currency rather than as a share of GDP, latest year 2022. Brazil, India, South Africa and Singapore are all absent, so wiring it would score the rich half of the set and lower coverage for the rest. Commercial databases cover the world and are not inspectable. Read A1 before treating this dimension as measured.',
+    notes: 'Still a gap after a direct check on 2026-08-26. The OECD SME and Entrepreneurship Financing scoreboard is the only inspectable aggregate and it carries venture capital for 6 of the 16 countries the frame held at that check, in national currency rather than as a share of GDP, latest year 2022. Brazil, India, South Africa and Singapore are all absent, so wiring it would score the rich half of the set and lower coverage for the rest. Commercial databases cover the world and are not inspectable. Read A1 before treating this dimension as measured.',
     wealthProxyPrior: 0.6,
   },
   {

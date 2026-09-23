@@ -578,7 +578,7 @@ single-digit dollars, so cost is not the constraint — see D13.
 
 The repository contains old in-session one-panelist artifacts, including the
 run pointed to by `data/delphi/latest.json`. They are useful research notes, but
-they are not a current panel for dataset 4.5.0. Replace them with a reviewed
+they are not a current panel for dataset 6.1.0. Replace them with a reviewed
 gateway run covering the current country set before publishing anything.
 
 ## Brand
