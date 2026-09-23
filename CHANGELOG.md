@@ -9,6 +9,13 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## Dataset 6.1.2 — 2026-09-23
+
+- **The business R&D gap says why it is still a gap.** Its note claimed UIS
+  publishes the series. UIS stopped in 2023, the remaining sources cover too
+  few countries, and together they track income over the screen. No value
+  changes.
+
 ## App 1.15.0 — 2026-09-23
 
 - **The sources page prints every call.** Behavioural checks are fetched on

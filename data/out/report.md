@@ -1,6 +1,6 @@
 # National Capability Benchmark, prototype v0
 
-*Generated 2026-09-23T15:15:33.726Z*
+*Generated 2026-09-23T15:28:42.448Z*
 
 This run covers 53 countries and nine dimensions. Indicators carry equal weight within each dimension, and the benchmark has no headline ranking.
 
@@ -595,7 +595,7 @@ Weakest: Experimentation (30), Trust (26.9), Building (25.3).
 - Venture capital investment: Still a gap after a direct check on 2026-08-26. The OECD SME and Entrepreneurship Financing scoreboard is the only inspectable aggregate and it carries venture capital for 6 of the 16 countries the frame held at that check, in national currency rather than as a share of GDP, latest year 2022. Brazil, India, South Africa and Singapore are all absent, so wiring it would score the rich half of the set and lower coverage for the rest. Commercial databases cover the world and are not inspectable. Read A1 before treating this dimension as measured.
 - Regulatory sandbox activity: Countable from primary sources but nobody maintains a comparable register. A realistic candidate for Envisioning to build.
 - University spinouts: Reported nationally with incompatible definitions of what counts as a spinout.
-- Business share of R&D: UIS publishes this and it is a good candidate for the next ingestion adapter.
+- Business share of R&D: UIS stopped publishing R&D expenditure by sector of performance in March 2023. Its frozen 2021 archive covers 45 of 53 countries with almost nothing after 2019, and OECD MSTI covers 27, without Brazil or India. Combined, the series tracks log GDP per capita at about 0.72, over the 0.70 screen. Checked 2026-09-23; see issue 25.
 
 **Adaptability**
 

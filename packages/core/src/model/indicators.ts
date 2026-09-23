@@ -684,7 +684,7 @@ const RAW: Raw[] = [
     direction: 'higher_better',
     source: { publisher: 'UNESCO UIS', tier: 'international_organization', inspectable: true },
     ingest: 'gap',
-    notes: 'UIS publishes this and it is a good candidate for the next ingestion adapter.',
+    notes: 'UIS stopped publishing R&D expenditure by sector of performance in March 2023. Its frozen 2021 archive covers 45 of 53 countries with almost nothing after 2019, and OECD MSTI covers 27, without Brazil or India. Combined, the series tracks log GDP per capita at about 0.72, over the 0.70 screen. Checked 2026-09-23; see issue 25.',
     wealthProxyPrior: 0.4,
   },
 
