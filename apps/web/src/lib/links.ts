@@ -204,6 +204,15 @@ export const indicatorHref = (id: string): string => `/indicators#${id}`
 /** Every term this project defines, in one place. */
 export const glossaryHref = '/glossary'
 
+/** The anchor a glossary entry carries, derived from its term. */
+export const glossaryAnchorId = (term: string): string => term.toLowerCase().replace(/[^a-z]+/g, '-')
+
+/** One term's entry on the glossary page. */
+export const glossaryTermHref = (term: string): string => `${glossaryHref}#${glossaryAnchorId(term)}`
+
+/** How the panel layer works, its provenance and the runs on file. */
+export const delphiHref = '/delphi'
+
 /**
  * How the patterns list is narrowed.
  *

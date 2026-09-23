@@ -33,7 +33,7 @@ import {
   Section,
   Sparkline,
 } from '@/components/ui'
-import { capabilityHref, countryCsvHref, ogCountryHref } from '@/lib/links'
+import { capabilityHref, countryCsvHref, delphiHref, glossaryHref, limitsHref, ogCountryHref } from '@/lib/links'
 import { loadAgenda } from '@/lib/agenda'
 import { loadCountry, loadDelphiRun, loadDisputes, loadEvidence, loadIndex } from '@/lib/data'
 import { toProfile } from '@/lib/profile'
@@ -143,11 +143,11 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
           <DefineLink term="Gap">gap</DefineLink>: the benchmark wants data that nobody publishes.
           A <em>retired</em> row has a source this project chose not to use. Both reduce confidence.
           The{' '}
-          <Link href="/glossary" className="underline underline-offset-4">
+          <Link href={glossaryHref} className="underline underline-offset-4">
             glossary
           </Link>
           , and the places where these numbers are known to be wrong about the world are on the{' '}
-          <Link href="/limits" className="underline underline-offset-4">
+          <Link href={limitsHref} className="underline underline-offset-4">
             limits page
           </Link>
           .
@@ -220,7 +220,7 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
                   <p className="mb-3 text-xs uppercase tracking-[0.05em] text-[var(--muted)]">
                     {isPanel(run) ? 'Panel estimate' : 'Session estimate'}, round{' '}
                     {finalRound},{' '}
-                    <Link href="/delphi" className="underline underline-offset-4">
+                    <Link href={delphiHref} className="underline underline-offset-4">
                       how this layer works
                     </Link>
                   </p>

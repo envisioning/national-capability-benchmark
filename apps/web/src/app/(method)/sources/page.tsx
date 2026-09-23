@@ -19,7 +19,7 @@ import { DefineLink, Headline, Note, PageTitle, Scroller, Section, Table, Td, Th
 import { Icon, TIER_ICON } from '@/components/Icon'
 import { RecencyTick } from '@/components/RecencyTick'
 import { loadIndicatorCoverage } from '@/lib/data'
-import { indicatorHref, limitsHref, publisherSlug } from '@/lib/links'
+import { indicatorHref, indicatorsHref, limitsHref, publisherSlug } from '@/lib/links'
 import { capitalize, countWord } from '@/lib/words'
 
 export const metadata: Metadata = {
@@ -205,7 +205,7 @@ export default async function SourcesPage() {
         </Scroller>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
           Rows without a publisher are open collection questions. The{' '}
-          <Link href="/indicators" className="underline underline-offset-4">
+          <Link href={indicatorsHref} className="underline underline-offset-4">
             registry
           </Link>{' '}
           carries the reason on each row.

@@ -20,7 +20,7 @@ import { EvidenceList } from '@/components/views/EvidenceList'
 import { IndicatorRegistry } from '@/components/views/IndicatorRegistry'
 import { Empty, FrameNote, Headline, Meta, PageTitle, Section } from '@/components/ui'
 import { MISSING_DATA_HINT, loadDisputes, loadEvidence, loadIndex } from '@/lib/data'
-import { capabilitiesHref, ogDimensionHref } from '@/lib/links'
+import { capabilitiesHref, limitsHref, methodHref, ogDimensionHref } from '@/lib/links'
 
 export const dynamic = 'force-dynamic'
 
@@ -189,11 +189,11 @@ export default async function CapabilityPage({
 
       <p className="text-xs leading-relaxed text-[var(--muted)]">
         Read how the benchmark turns an indicator into a score on the{' '}
-        <Link href="/method" className="underline underline-offset-4">
+        <Link href={methodHref} className="underline underline-offset-4">
           method page
         </Link>
         . The{' '}
-        <Link href="/limits" className="underline underline-offset-4">
+        <Link href={limitsHref} className="underline underline-offset-4">
           limits page
         </Link>{' '}
         records where this capability is still poorly observed.
