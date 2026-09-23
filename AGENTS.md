@@ -523,6 +523,12 @@ because `NPM_RC` was never set after D104 made the install need a token. The
 Quality workflow fails at the same step for the same reason until the package
 grants this repository read access.
 
+Until `NPM_RC` is set, publish from a machine whose `~/.npmrc` can read the
+package: `vercel build --prod && vercel deploy --prebuilt --prod --scope ev-io`
+from the repository root, after a one-time `vercel link` and `vercel pull`.
+The build runs the same changelog check and command as Vercel's. Check the
+live `/changelog` for the new version afterwards.
+
 Data is committed, so a deploy ships whatever `data/out` held at the last commit.
 Refreshing the site means running `pnpm bench all`, committing the output and
 deploying again.
