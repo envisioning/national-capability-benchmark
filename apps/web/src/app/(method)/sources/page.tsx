@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  CHECKS,
   COUNTRY_ISO3,
+  DIMENSION_LABELS,
   INDICATORS,
   isDeclaredGap,
   INGEST_FROM_YEAR,
@@ -20,7 +22,7 @@ import { DefineLink, Headline, Note, PageTitle, Scroller, Section, Table, Td, Th
 import { Icon, TIER_ICON } from '@/components/Icon'
 import { RecencyTick } from '@/components/RecencyTick'
 import { loadIndicatorCoverage } from '@/lib/data'
-import { indicatorHref, indicatorsHref, limitsHref, publisherSlug } from '@/lib/links'
+import { capabilityHref, indicatorHref, indicatorsHref, limitsHref, publisherSlug } from '@/lib/links'
 import { capitalize, countWord } from '@/lib/words'
 
 export const metadata: Metadata = {
@@ -292,6 +294,65 @@ export default async function SourcesPage() {
               </tbody>
             </Table>
           </Scroller>
+        </Section>
+      ) : null}
+
+      {CHECKS.length > 0 ? (
+        <Section
+          title={`${capitalize(countWord(CHECKS.length))} ${CHECKS.length === 1 ? 'series is' : 'series are'} fetched and never scored`}
+          hint="These are fetched in the same pass as the indicators and shown beside a capability. None of them enters a score or a confidence."
+        >
+          <p className="max-w-3xl text-lg leading-relaxed">
+            Each capability page lists its{' '}
+            <DefineLink term="Behavioral check">behavioral checks</DefineLink> with the reason each one
+            stays out of the score.
+          </p>
+          <Scroller>
+            <Table>
+              <thead>
+                <tr>
+                  <Th>Check</Th>
+                  <Th>Capability</Th>
+                  <Th>Series code</Th>
+                  <Th>Database</Th>
+                </tr>
+              </thead>
+              <tbody>
+                {CHECKS.map((check) => (
+                  <tr key={check.id}>
+                    <Td>{check.name}</Td>
+                    <Td>
+                      <Link href={capabilityHref(check.dimension)} className="hover:underline">
+                        {DIMENSION_LABELS[check.dimension]}
+                      </Link>
+                    </Td>
+                    <Td dim>{check.source.series ?? 'no series code'}</Td>
+                    <Td dim>
+                      {check.source.publisher === WB_PUBLISHER
+                        ? WB_DATABASES[check.wbSourceId ?? WB_DEFAULT_DATABASE]?.name
+                        : ''}
+                    </Td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+          </Scroller>
+          {CHECKS.filter((check) => check.source.publisher === WB_PUBLISHER && check.source.series).map(
+            (check) => (
+              <div key={check.id} className="mt-6">
+                <p className="text-xs font-medium text-[var(--muted)]">The request for {check.name}</p>
+                <code className="mt-2 block overflow-x-auto whitespace-pre rounded bg-[var(--surface-sunken)] px-3 py-3 text-xs">
+                  {worldBankSeriesUrl({
+                    series: check.source.series ?? '',
+                    ...(check.wbSourceId === undefined ? {} : { sourceId: check.wbSourceId }),
+                    countries: COUNTRY_ISO3,
+                    fromYear: INGEST_FROM_YEAR,
+                    toYear: thisYear,
+                  })}
+                </code>
+              </div>
+            ),
+          )}
         </Section>
       ) : null}
 
