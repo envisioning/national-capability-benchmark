@@ -1,6 +1,6 @@
 # National Capability Benchmark, prototype v0
 
-*Generated 2026-08-31T19:46:26.186Z*
+*Generated 2026-09-23T15:15:33.726Z*
 
 This run covers 53 countries and nine dimensions. Indicators carry equal weight within each dimension, and the benchmark has no headline ranking.
 
@@ -571,7 +571,7 @@ Weakest: Experimentation (30), Trust (26.9), Building (25.3).
 
 **Agency**
 
-- Adult digital skills: ITU collects this but coverage across these ten countries is broken and the task lists differ by year.
+- Adult digital skills: ITU collects this but coverage across the country set is broken and the task lists differ by year.
 - Perceived control over life: WVS wave 7 covers most of these countries but fieldwork years differ by up to six years, and Singapore is thin.
 
 **Coordination**
@@ -592,7 +592,7 @@ Weakest: Experimentation (30), Trust (26.9), Building (25.3).
 
 **Experimentation**
 
-- Venture capital investment: Still a gap after a direct check on 2026-08-26. The OECD SME and Entrepreneurship Financing scoreboard is the only inspectable aggregate and it carries venture capital for 6 of these 16 countries, in national currency rather than as a share of GDP, latest year 2022. Brazil, India, South Africa and Singapore are all absent, so wiring it would score the rich half of the set and lower coverage for the rest. Commercial databases cover the world and are not inspectable. Read A1 before treating this dimension as measured.
+- Venture capital investment: Still a gap after a direct check on 2026-08-26. The OECD SME and Entrepreneurship Financing scoreboard is the only inspectable aggregate and it carries venture capital for 6 of the 16 countries the frame held at that check, in national currency rather than as a share of GDP, latest year 2022. Brazil, India, South Africa and Singapore are all absent, so wiring it would score the rich half of the set and lower coverage for the rest. Commercial databases cover the world and are not inspectable. Read A1 before treating this dimension as measured.
 - Regulatory sandbox activity: Countable from primary sources but nobody maintains a comparable register. A realistic candidate for Envisioning to build.
 - University spinouts: Reported nationally with incompatible definitions of what counts as a spinout.
 - Business share of R&D: UIS publishes this and it is a good candidate for the next ingestion adapter.

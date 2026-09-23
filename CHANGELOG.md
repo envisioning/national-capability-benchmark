@@ -9,6 +9,30 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.15.0 — 2026-09-23
+
+- **The sources page prints every call.** Behavioural checks are fetched on
+  every ingest and never scored; `/sources` now lists them with the request
+  that fetches each one, so the page repeats every call the benchmark makes.
+  See D116.
+- **Charts and type follow the scale.** Every chart line reads a named stroke
+  weight, the last `text-sm` is gone, and the agenda history axis reads "0 to
+  100". Internal links all come from one set of helpers.
+
+## Dataset 6.1.1 — 2026-09-23
+
+A correctness fix to the out-of-frame flag and a regeneration of three stale
+research layers. No score and no confidence changes.
+
+- **A historical value beyond every current value is flagged.** When a current
+  outlier was winsorized onto its fence, a historical value further out clamped
+  without setting `outOfFrame`. Four more cells now count as clamped in the
+  momentum baskets. See D115.
+- **Residual, velocity and leverage cover 53 countries.** The three offline
+  layers had not been regenerated since Portugal joined the frame.
+- **Docs quote the current dataset.** KNOWN-ARTEFACTS, the research roadmap and
+  the panelist brief now state 6.1 figures, recomputed from the output.
+
 ## Dataset 6.1.0 — 2026-08-31
 
 Retired indicator rows leave the coverage denominator. Scores and the

@@ -5246,3 +5246,53 @@ third mark there would crowd a reading rather than open it.
 countable, which would want a different form for coverage and not a smaller
 pitch; or evidence that readers take the trailing line for a bar rather than
 for elapsed time, which would make the rail worse than the year it replaced.
+
+---
+
+## D115 — Out of frame is read against the values that built the frame
+
+**Decision.** `buildFrame` keeps the unclipped extremes of the values that set
+it, as `observedMin` and `observedMax`, and `scoreAgainstFrame` marks a value
+out of frame when it lies beyond them, as well as when its clipped position
+falls outside the endpoints. Dataset 6.1.1.
+
+**Why.** D47 promises that a current value can never fall outside a frame its
+own country helped build, and that a historical value beyond it clamps and is
+flagged. The flag was read from the clipped value only. When a current outlier
+is winsorized onto the upper fence, that fence is also the top endpoint, so a
+historical value further out was clipped to exactly the endpoint and never
+reported. The synthetic test in `normalize.test.ts` found it. A value between
+the fence and the most extreme current value is winsorized exactly as that
+current value is, and stays in frame: the frame was built with a country there.
+
+**Cost.** Four more clamped cells across the momentum baskets in
+`diagnostics.json`. No score and no current cell moves, because a current value
+sits inside the observed extremes by construction. The two new fields live on
+the internal `Frame` type and are not published.
+
+**Overturned by.** A reason to treat the fence rather than the observed extreme
+as the edge of the frame, which would mean flagging every winsorized historical
+value, and the current outlier's own winsorized value with it, breaking the D47
+promise from the other side.
+
+---
+
+## D116 — The sources page prints the check series too
+
+**Decision.** `/sources` lists every behavioural check from `checks.ts` in its
+own section, with the series code, its database and the full request built by
+the same `worldBankSeriesUrl` call the indicator example uses. This closes the
+cost D60 recorded, that the fetch the page prints back was short by the check
+calls.
+
+**Why.** The page's claim is that a reader can repeat every call the benchmark
+makes. A check is fetched on every ingest, so leaving it off made that claim
+false by one series.
+
+**Cost.** A second table on a page that already carries the indicator one, for
+series that never enter a score. The section says so in its heading and links
+the glossary entry rather than defining a check again.
+
+**Overturned by.** A check fetched from somewhere other than the World Bank,
+which the request builder cannot print, and which would need the page to print
+another source's call shape before it could stay complete.
