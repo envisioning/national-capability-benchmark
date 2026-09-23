@@ -240,8 +240,8 @@ export function CommandMenu({ onOpen }: { onOpen?: () => void }) {
                     onMouseEnter={() => setSelectedIndex(index)}
                     className={
                       index === selectedIndex
-                        ? 'flex items-center gap-3 rounded-lg bg-[var(--surface-sunken)] px-3 py-2.5 text-sm text-[var(--foreground)] transition-colors'
-                        : 'flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-[var(--muted)] transition-colors hover:bg-[var(--surface-sunken)] hover:text-[var(--foreground)]'
+                        ? 'flex items-center gap-3 rounded-lg bg-[var(--surface-sunken)] px-3 py-2.5 text-xs font-medium text-[var(--foreground)] transition-colors'
+                        : 'flex items-center gap-3 rounded-lg px-3 py-2.5 text-xs font-medium text-[var(--muted)] transition-colors hover:bg-[var(--surface-sunken)] hover:text-[var(--foreground)]'
                     }
                   >
                     <span className="flex h-5 w-5 shrink-0 items-center justify-center">
@@ -254,7 +254,7 @@ export function CommandMenu({ onOpen }: { onOpen?: () => void }) {
               ))}
             </ul>
           ) : (
-            <p className="px-3 py-8 text-center text-sm text-[var(--muted)]">
+            <p className="px-3 py-8 text-center text-xs text-[var(--muted)]">
               No matching pages, countries, capabilities or indicators.
             </p>
           )}

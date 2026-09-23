@@ -137,7 +137,7 @@ export function AgendaEvidenceMatrix({
                           className="text-[var(--muted)]"
                           aria-label={`No documented delivery for ${row.country}, ${DIMENSION_LABELS[dimension]}`}
                         >
-                          —
+                          0
                         </span>
                       )}
                     </td>

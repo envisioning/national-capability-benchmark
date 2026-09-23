@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { linksOf } from '@ncb/core'
 import type { LaneDotState, LaneField, LaneFieldDot, LaneFieldLink } from '@ncb/core'
 import { Icon, type IconName } from '@/components/Icon'
+import { CHART_STROKE } from '@/components/chartTokens'
 import type { LaneArrangement } from '@/lib/links'
 
 /**
@@ -174,7 +175,7 @@ function Mark({ state, active }: { state: LaneDotState; active: boolean }) {
   const r = state === 'retired' ? DOT_R - 1 : DOT_R
   if (active) {
     return (
-      <circle r={r} fill="var(--primary)" stroke="var(--foreground)" strokeWidth={1.25} />
+      <circle r={r} fill="var(--primary)" stroke="var(--foreground)" strokeWidth={CHART_STROKE.mark} />
     )
   }
   if (state === 'scored') return <circle r={r} fill="currentColor" fillOpacity={0.85} />
@@ -184,12 +185,12 @@ function Mark({ state, active }: { state: LaneDotState; active: boolean }) {
         r={r}
         fill="none"
         stroke="currentColor"
-        strokeWidth={1.25}
+        strokeWidth={CHART_STROKE.mark}
         strokeDasharray="2.2 2"
       />
     )
   }
-  return <circle r={r} fill="none" stroke="var(--muted)" strokeWidth={1.25} />
+  return <circle r={r} fill="none" stroke="var(--muted)" strokeWidth={CHART_STROKE.mark} />
 }
 
 /** One legend sample, drawn with the same mark the field draws. */
@@ -214,7 +215,7 @@ export function LaneFieldLegend({
     { key: 'retired', sample: <Mark state="retired" active={false} />, label: labels.state.retired },
     {
       key: 'link',
-      sample: <path d="M -7 4 Q 0 -8 7 4" fill="none" stroke="currentColor" strokeWidth={1.5} />,
+      sample: <path d="M -7 4 Q 0 -8 7 4" fill="none" stroke="currentColor" strokeWidth={CHART_STROKE.line} />,
       label: labels.overlaps.toLowerCase(),
     },
   ]
@@ -403,7 +404,7 @@ export function LaneField({
                   y1={laneTop(i)}
                   y2={laneTop(i)}
                   stroke="var(--rule-soft)"
-                  strokeWidth={1}
+                  strokeWidth={CHART_STROKE.rule}
                 />
               ) : null,
             )}
@@ -435,7 +436,7 @@ export function LaneField({
                     y1={lanesBottom}
                     y2={lanesBottom + 5}
                     stroke="var(--rule)"
-                    strokeWidth={1}
+                    strokeWidth={CHART_STROKE.rule}
                   />
                   <text
                     x={AXIS_X0 + t * placed.span}
@@ -456,7 +457,7 @@ export function LaneField({
                 y2={lanesBottom}
                 stroke="currentColor"
                 strokeOpacity={0.35}
-                strokeWidth={1}
+                strokeWidth={CHART_STROKE.rule}
                 strokeDasharray="3 3"
               />
               {field.lanes.map((lane, i) => {
@@ -548,7 +549,7 @@ export function LaneField({
                 >
                   <circle r={HIT_R} fill="transparent" />
                   {joined.has(dot.id) && !on ? (
-                    <circle r={DOT_R + 3} fill="none" stroke="currentColor" strokeOpacity={0.35} strokeWidth={1} />
+                    <circle r={DOT_R + 3} fill="none" stroke="currentColor" strokeOpacity={0.35} strokeWidth={CHART_STROKE.rule} />
                   ) : null}
                   <Mark state={dot.state} active={on} />
                   {on || focused === dot.id ? (
@@ -557,7 +558,7 @@ export function LaneField({
                       fill="none"
                       stroke="var(--foreground)"
                       strokeOpacity={focused === dot.id ? 0.9 : 0.25}
-                      strokeWidth={focused === dot.id ? 1.5 : 1}
+                      strokeWidth={focused === dot.id ? CHART_STROKE.line : CHART_STROKE.rule}
                     />
                   ) : null}
                 </g>

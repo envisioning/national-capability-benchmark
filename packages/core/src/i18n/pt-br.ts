@@ -311,6 +311,7 @@ export const PT_BR: Lexicon = {
     historyDimension: 'Dimensão',
     historyPeriod: 'Período',
     historyAxis: 'Posição da capacidade na régua atual',
+    historyAxisRange: '0 a 100',
     historyYears: 'anos',
     historyNoHistory: 'Nenhuma dimensão tem evidência histórica comparável suficiente ainda.',
     historyNoSpan: 'Não há histórico comparável disponível para este período.',

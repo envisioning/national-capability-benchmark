@@ -217,6 +217,7 @@ export function AgendaView({
             dimension: s.historyDimension,
             period: s.historyPeriod,
             axis: s.historyAxis,
+            axisRange: s.historyAxisRange,
             years: s.historyYears,
             noHistory: s.historyNoHistory,
             noSpan: s.historyNoSpan,

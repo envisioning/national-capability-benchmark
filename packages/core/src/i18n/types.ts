@@ -54,6 +54,7 @@ export type AgendaStrings = {
   historyDimension: string
   historyPeriod: string
   historyAxis: string
+  historyAxisRange: string
   historyYears: string
   historyNoHistory: string
   historyNoSpan: string

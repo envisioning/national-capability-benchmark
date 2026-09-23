@@ -102,10 +102,10 @@ function Group({
     <Card tone="none">
       <p className="mb-3 text-xs uppercase tracking-[0.05em] text-[var(--muted)]">{label}</p>
       {items.length === 0 ? (
-        <p className="text-sm text-[var(--muted)]">{empty}</p>
+        <p className="text-xs text-[var(--muted)]">{empty}</p>
       ) : (
         <div className="overflow-x-auto">
-          <table className="w-full min-w-[28rem] table-fixed border-collapse text-sm">
+          <table className="w-full min-w-[28rem] table-fixed border-collapse text-xs">
             <caption className="sr-only">{label}</caption>
             <colgroup>
               <col />

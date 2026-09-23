@@ -55,6 +55,7 @@ export const EN: Lexicon = {
     historyDimension: 'Dimension',
     historyPeriod: 'Period',
     historyAxis: 'Capability position in the current frame',
+    historyAxisRange: '0 to 100',
     historyYears: 'years',
     historyNoHistory: 'No dimension has enough comparable historical evidence yet.',
     historyNoSpan: 'No comparable history is available for this period.',

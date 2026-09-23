@@ -86,7 +86,7 @@ function IndicatorCard({
       <dl className="grid gap-x-6 gap-y-4 p-4 sm:grid-cols-2 sm:p-5 lg:grid-cols-5">
         <Fact label="Raw value">
           <span className="tabular-nums">{row.raw ?? 'no data'}</span>
-          <span className="mt-1 block text-xs text-[var(--muted)]">{def?.unit ?? '—'}</span>
+          <span className="mt-1 block text-xs text-[var(--muted)]">{def?.unit ?? 'no unit'}</span>
         </Fact>
         <Fact label="Year">
           <RecencyTick year={row.year} width={56} />
@@ -115,7 +115,7 @@ function IndicatorCard({
           {row.series.length > 1 ? (
             <Sparkline series={seriesForSparkline(row.series)} width={110} height={24} />
           ) : (
-            <span className="text-[var(--muted)]">—</span>
+            <span className="text-[var(--muted)]">{row.series.length === 1 ? 'one year' : 'no data'}</span>
           )}
         </Fact>
       </dl>

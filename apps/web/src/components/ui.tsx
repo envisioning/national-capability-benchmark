@@ -320,7 +320,7 @@ export function Confidence({
   const band = confidenceBand(value)
   const sizing =
     size === 'md'
-      ? 'min-w-14 px-2 py-1 text-sm font-medium'
+      ? 'min-w-14 px-2 py-1 font-medium'
       : 'min-w-11 px-1.5 py-0.5 text-xs font-medium'
   return (
     <span
