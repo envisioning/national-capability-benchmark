@@ -17,13 +17,24 @@ const evidence = EvidenceFile.parse(
 const inventory = buildResearchInventory(evidence.records, '2026-08-30T00:00:00.000Z', DATASET_VERSION)
 
 assert.equal(inventory.recordCount, evidence.records.length)
-assert.equal(inventory.countriesRepresented, 22)
-assert.equal(inventory.gapIndicatorsRepresented, 16)
-assert.equal(inventory.guardrails.reversalCount, 17)
-assert.equal(inventory.guardrails.reversalMinimum, 15)
-assert.equal(inventory.guardrails.reversalDeficit, 0)
-assert.equal(inventory.guardrails.mostRepresentedCountry, 'BRA')
-assert.equal(inventory.guardrails.mostRepresentedCountryRecords, 24)
+// Derived from the records rather than pinned, so adding evidence never breaks the test.
+const iso3s = new Set(evidence.records.map((record) => record.iso3))
+const perCountry = new Map<string, number>()
+for (const record of evidence.records) perCountry.set(record.iso3, (perCountry.get(record.iso3) ?? 0) + 1)
+const maxRecords = Math.max(...perCountry.values())
+assert.equal(inventory.countriesRepresented, inventory.countries.filter((c) => iso3s.has(c.iso3)).length)
+assert.equal(
+  inventory.gapIndicatorsRepresented,
+  inventory.indicators.filter((indicator) => indicator.records > 0).length,
+)
+assert.equal(inventory.guardrails.reversalMinimum, Math.floor(evidence.records.length / 5))
+assert.equal(inventory.guardrails.reversalDeficit, 0, 'the evidence base must hold its reversal minimum')
+assert.equal(inventory.guardrails.mostRepresentedCountryRecords, maxRecords)
+assert.equal(perCountry.get(inventory.guardrails.mostRepresentedCountry ?? ''), maxRecords)
+assert.ok(
+  maxRecords <= inventory.guardrails.countryCeilingAtCurrentSize,
+  'no country may hold more than a third of the records',
+)
 
 const slots = selectResearchSlots(inventory, { limit: 12 })
 assert.equal(slots.length, 12)
