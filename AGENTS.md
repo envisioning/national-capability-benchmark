@@ -514,6 +514,15 @@ Two traps, both of which cost a failed deploy once:
   candidates and taking the first with an index. A tracing miss is silent: every
   page renders its empty state and nothing errors.
 
+After every push to `main`, check that the production deploy went through:
+`gh api repos/envisioning/national-capability-benchmark/commits/<sha>/status`
+reports the Vercel context, and `vercel ls national-capability-benchmark
+--scope ev-io` lists the runs. A failed deploy is silent: the site keeps
+serving the last good build, and in September 2026 it served one 22 days old
+because `NPM_RC` was never set after D104 made the install need a token. The
+Quality workflow fails at the same step for the same reason until the package
+grants this repository read access.
+
 Data is committed, so a deploy ships whatever `data/out` held at the last commit.
 Refreshing the site means running `pnpm bench all`, committing the output and
 deploying again.
