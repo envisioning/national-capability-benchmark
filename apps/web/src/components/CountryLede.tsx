@@ -72,8 +72,8 @@ export function CountryLede({
         scores.{' '}
         <Link href={agendaHref(agenda.iso3)} className="font-medium underline underline-offset-4">
           Read the full agenda
-        </Link>{' '}
-        It names comparable evidence from other countries and the {agenda.gapCount} gaps in the registry.
+        </Link>
+        . It names comparable evidence from other countries and the {agenda.gapCount} gaps in the registry.
       </p>
       {reason ? (
         <p className="mt-2 text-xs leading-relaxed text-[var(--muted)]">

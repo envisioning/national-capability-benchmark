@@ -143,8 +143,8 @@ export function ChallengeDialog() {
           </div>
 
           <p className="text-xs leading-relaxed text-[var(--muted)]">
-            The selected score and confidence are read from the current country file when you
-            submit.
+            When you submit, the form attaches the current score and confidence for the country
+            and capability you chose.
           </p>
 
           <label className="block text-xs font-medium">

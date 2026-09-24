@@ -82,7 +82,7 @@ export function PatternMechanism({ record }: { record: EvidenceRecord }) {
       </ul>
       {record.pattern.travelled ? (
         <p className="mt-3 text-xs leading-relaxed text-[var(--muted)]">
-          Where it travelled: {record.pattern.travelled}
+          Where else it has been used: {record.pattern.travelled}
         </p>
       ) : null}
     </Card>

@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 /** What each tier is for, above the cards in it. */
 const EFFORT_HINT: Record<(typeof CONTRIBUTION_EFFORTS)[number], string> = {
   minutes:
-    'You know something the data does not. These take one message and no commitment beyond it.',
+    'You know something the data does not. Each of these takes one message.',
   project:
     'You have a case, a series or a decision to test the benchmark against. These take real work and change what the benchmark can measure.',
   funded:
@@ -53,13 +53,13 @@ export default function SupportPage() {
     <>
       <PageTitle>Support the benchmark</PageTitle>
       <Headline>
-        {COUNTRIES.length} countries, nine capabilities, public data, open code. What it still
-        needs is use, evidence and time. Ways to help are below, cheapest first.
+        The benchmark scores {COUNTRIES.length} countries on nine capabilities from public data,
+        and its code is open. It still needs use, evidence and time. The ways to help below start
+        with the cheapest.
       </Headline>
 
       <Note>
-        The benchmark is free to read, free to quote and free to fork. Nothing on this page is a
-        condition of using it.
+        Anyone can read, quote and fork the benchmark for free.
       </Note>
 
       {CONTRIBUTION_EFFORTS.map((effort) => (
@@ -114,7 +114,7 @@ export default function SupportPage() {
           ))}
         </div>
         <p className="mt-8 max-w-3xl text-lg leading-relaxed">
-          If you hold one of those windows, or you know which one this fits,{' '}
+          If you work at one of those funders, or you know which funder a piece fits,{' '}
           <Link href={contactTopicHref('support')} className="underline underline-offset-4">
             write to us
           </Link>{' '}
@@ -155,8 +155,8 @@ export default function SupportPage() {
                 {layer.label}
               </Link>
             ))}{' '}
-            is the first country layer, and the shape it uses works for any country whose
-            institutions want to build the same thing.
+            is the first country layer. Its structure works for any country whose institutions
+            want to build the same thing.
           </li>
         </ul>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed">

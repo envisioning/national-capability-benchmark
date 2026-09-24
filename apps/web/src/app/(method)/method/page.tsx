@@ -59,23 +59,23 @@ export default function MethodPage() {
             only describe that country.
           </li>
           <li>
-            A high score is not a recipe. Mechanisms depend on local conditions. The shape says
-            where to look; context says what to build.
+            A high score is not a recipe, because what works depends on local conditions. The
+            profile shows where to look, and local context decides what to build.
           </li>
           <li>
             Capability changes below the national level, in groups small enough to act. A country
             score is a coarse proxy for their conditions.
           </li>
           <li>
-            Treat this as a measuring instrument. It tests whether an attempt to raise a capability
-            worked. Confidence, gaps and revisions sit beside each score.
+            Treat this as a measuring instrument that tests whether an attempt to raise a
+            capability worked. Confidence, gaps and revisions sit beside each score.
           </li>
           <li>
             The{' '}
             <Link href={diagnosticsHref} className="underline underline-offset-4">
               diagnostics
             </Link>{' '}
-            tests whether dimensions collapse into income. The{' '}
+            test whether dimensions track income. The{' '}
             <Link href={limitsHref} className="underline underline-offset-4">
               limits
             </Link>{' '}
@@ -130,8 +130,8 @@ export default function MethodPage() {
           </li>
         </ol>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-          Missing indicators lower coverage and drop out of the mean. Nothing is imputed. Equal
-          weighting keeps v0 easy to challenge.
+          Missing indicators lower coverage and drop out of the mean, and nothing is imputed.
+          Equal weighting keeps v0 easy to challenge.
         </p>
         <p className="mt-4 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
           The registry has {INDICATORS.length} indicators: {wired} with data, {gaps} gaps and{' '}
@@ -219,7 +219,7 @@ export default function MethodPage() {
 
       <Section
         title="Thin evidence shows on the chart"
-        hint="Confidence never enters the score. Thin evidence gets a dashed edge and hollow point. The gap widens as confidence falls."
+        hint="Confidence never enters the score. On the chart, thin evidence gets a dashed edge and a hollow point, and the gap widens as confidence falls."
       >
         <ul className="max-w-3xl list-disc space-y-2 pl-5 text-lg leading-relaxed">
           <li>Coverage is the share of a dimension's indicators that have a value.</li>
@@ -320,7 +320,7 @@ export default function MethodPage() {
       </Section>
 
       <Section
-        title="The 53 countries set the scale"
+        title={`The ${COUNTRIES.length} countries set the scale`}
         hint={`All ${COUNTRIES.length} countries set each indicator's fences and endpoints. The frame stays fixed within a version. Adding a country rebases it and requires a major version bump.`}
       >
         <Scroller>
@@ -376,7 +376,7 @@ export default function MethodPage() {
           <Link href={objectionsHref} className="underline underline-offset-4">
           How to argue with any of this
           </Link>{' '}
-          and what would make each decision fall.
+          and what evidence would overturn each decision.
         </p>
       </Section>
     </>

@@ -47,8 +47,8 @@ export default async function AgendaIndexPage({
       <p className="mb-12 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
         A delivery is filed against an indicator that has no dataset behind it, so none of these
         records moves a score or a confidence. Filter or sort the register to find a delivery,
-        then open its full record. The grouped view of the same corpus, with preconditions and
-        where each move has travelled, is at{' '}
+        then open its full record. The same records in a grouped view, with preconditions and
+        where else each move has been used, are at{' '}
         <Link href={patternsHref()} className="underline underline-offset-4">
           patterns
         </Link>

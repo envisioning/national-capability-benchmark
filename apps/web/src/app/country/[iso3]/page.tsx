@@ -145,12 +145,12 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
           The{' '}
           <Link href={glossaryHref} className="underline underline-offset-4">
             glossary
-          </Link>
-          , and the places where these numbers are known to be wrong about the world are on the{' '}
+          </Link>{' '}
+          defines each term, and the{' '}
           <Link href={limitsHref} className="underline underline-offset-4">
             limits page
-          </Link>
-          .
+          </Link>{' '}
+          lists where these numbers are known to be wrong about the world.
         </p>
       </Card>
 

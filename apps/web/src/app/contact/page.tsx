@@ -17,7 +17,7 @@ const PUBLIC_CHANNELS: ContributionId[] = ['object', 'gap', 'code']
 
 export const metadata: Metadata = {
   title: 'Contact, NCB',
-  description: 'One place to write to the people who build the National Capability Benchmark.',
+  description: 'Write to the Envisioning team that builds the National Capability Benchmark.',
 }
 
 /**
@@ -57,14 +57,14 @@ export default async function ContactPage({
 
       <Section
         title="Send a message"
-        hint="Your message reaches the Envisioning team directly. Nothing you write here is published."
+        hint="The form sends your message to the Envisioning team. Nothing you write here is published."
       >
         <ContactForm topic={topic} draft={draft} />
       </Section>
 
       <Section
         title="Faster ways to reach an answer"
-        hint="These leave a public record, so the answer stays useful to the next person."
+        hint="These channels keep the question and the answer in public."
       >
         <ContributionList
           ways={PUBLIC_CHANNELS.map(contributionWay).filter((way) => way !== null)}
@@ -102,7 +102,7 @@ export default async function ContactPage({
           >
             the repository on GitHub
           </a>
-          . If you want to back the work rather than ask about it, start at{' '}
+          . To fund or support the work, start at{' '}
           <Link href={supportHref} className="underline underline-offset-4">
             support
           </Link>

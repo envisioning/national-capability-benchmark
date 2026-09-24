@@ -118,8 +118,8 @@ export default async function CapabilityPage({
       <PageTitle>{DIMENSION_LABELS[dimension]}</PageTitle>
       <Headline>{DIMENSION_QUESTIONS[dimension]}</Headline>
       <p className="mb-10 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-        This page brings together the country comparison, indicator registry, and documented cases.
-        It shows how much of this capability the current data can capture.
+        The country comparison, the indicators and the documented cases below show how much of
+        this capability the current data can capture.
       </p>
 
       <p className="mb-10 flex flex-wrap gap-2">
@@ -136,7 +136,7 @@ export default async function CapabilityPage({
       >
         <p className="mb-4 max-w-2xl text-xs leading-relaxed text-[var(--muted)]">
           Scores use one 0 to 100 scale for all countries. Each flag is a country, and the ring
-          around it carries how well evidenced that score is. Point at a flag to read the country,
+          around it shows how strong the evidence behind that score is. Point at a flag to read the country,
           click it to open the profile.
         </p>
         <CapabilityCountryTable

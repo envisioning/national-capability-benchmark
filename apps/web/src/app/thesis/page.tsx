@@ -125,7 +125,7 @@ export default async function ThesisPage() {
             <Link href={limitsHref} className="underline underline-offset-4">
               limits
             </Link>{' '}
-            record which dimensions do not survive that removal. The{' '}
+            record which dimensions lose every measured indicator after that removal. The{' '}
             <Link href={methodHref} className="underline underline-offset-4">
               method
             </Link>{' '}
@@ -133,13 +133,13 @@ export default async function ThesisPage() {
             <a href={docHref(WHY_DOC)} className="underline underline-offset-4">
               {WHY_DOC}
             </a>{' '}
-            states the full argument with the evidence that would sink it.
+            states the full argument and the evidence that would disprove it.
           </p>
         </div>
         <Note>
           A correlation with income is not proof that income causes the capability. It marks a
-          dimension whose current indicators cannot separate the two, which is a data problem the
-          project publishes rather than hides.
+          dimension whose current indicators cannot separate the two. That is a data problem, and
+          the project publishes it.
         </Note>
       </Section>
 
@@ -190,14 +190,13 @@ export default async function ThesisPage() {
       >
         <div className="max-w-3xl space-y-4 text-lg leading-relaxed">
           <p>
-            Brazil is where the thesis meets a real institutional setting, through Envisioning&apos;s
-            Brasil Capaz work on raising individual and collective capability. The benchmark gives
-            that work a destination: a shape to move and a set of indicators that says which parts
-            are measured and which are guessed.
+            Envisioning tests the thesis in a real institutional setting in Brazil, through its
+            Brasil Capaz work on raising individual and collective capability. The benchmark gives that work a
+            target: nine scores to raise and a set of indicators that says which parts are
+            measured and which are guessed.
           </p>
           <p>
-            Brazil gets no special treatment in the model. What it has is a reading of its own:
-            the{' '}
+            Brazil gets no special treatment in the model. It does have a layer of its own: the{' '}
             {brazil ? (
               <Link href={countryLayerHref(brazil)} className="underline underline-offset-4">
                 Brazilian layer
@@ -210,7 +209,7 @@ export default async function ThesisPage() {
             <Link href={countryProfileHref('BRA')} className="underline underline-offset-4">
               English profile
             </Link>
-            . The programme argument belongs there, where its audience is.
+            . The argument for the program is on that layer, in the language of its readers.
           </p>
         </div>
       </Section>
@@ -224,15 +223,15 @@ export default async function ThesisPage() {
             The benchmark exists so that different readers can ask what a country can actually do
             and check the answer against its sources. It sits inside Envisioning&apos;s wider work: signals detect exponential
             change, the benchmark measures whether a society can absorb it, and the capability
-            programmes and institutional design labs work on raising the number.
+            programs and institutional design labs work on raising the number.
           </p>
           <p>
             Read the{' '}
             <a href={docHref(DECISIONS_DOC)} className="underline underline-offset-4">
               decision record
             </a>{' '}
-            before quoting a result. This page is the frame for the work and no substitute for its
-            sources or its limits.
+            before quoting a result. This page states the argument. It does not replace the
+            sources or the limits.
           </p>
         </div>
       </Section>

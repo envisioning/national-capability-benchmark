@@ -9,6 +9,14 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.15.1 — 2026-09-24
+
+- **Reader copy says what each page holds.** Headings, ledes, the llms.txt
+  summary and the English and Portuguese lexicons drop metaphor, slogans and
+  internal facts, and follow American spelling. No number, score or
+  dimension changes. Agenda markdown keeps its old intro lines until the next
+  agenda run.
+
 ## Dataset 6.1.2 — 2026-09-23
 
 - **The business R&D gap says why it is still a gap.** Its note claimed UIS

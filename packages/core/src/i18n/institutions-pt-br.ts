@@ -120,7 +120,7 @@ const GLOBAL_SUMMARIES: Record<string, string> = {
   'global.world_bank': 'Banco multilateral de desenvolvimento com 189 países-membros; empresta a governos nacionais e subnacionais e publica diagnósticos e dados por país.',
   'global.imf': 'Instituição monetária multilateral de participação quase universal; avalia as políticas econômicas de cada membro nas consultas do Artigo IV e empresta em crises de balanço de pagamentos.',
   'global.oecd': 'Organização intergovernamental de 38 Estados-membros; produz padrões, revisões por pares e estatísticas comparáveis sobre políticas públicas.',
-  'global.wto': 'Organização intergovernamental que administra as regras do comércio internacional e resolve disputas entre eles.',
+  'global.wto': 'Organização intergovernamental que administra as regras do comércio internacional e resolve disputas entre seus membros.',
   'global.who': 'Agência das Nações Unidas para a saúde, com 194 Estados-membros; define normas sanitárias e coordena a resposta a emergências de saúde.',
   'global.ilo': 'Agência tripartite das Nações Unidas com 187 Estados-membros; fixa normas internacionais do trabalho e produz estatísticas do trabalho.',
 }
@@ -196,7 +196,7 @@ export function localizeInstitutionNetworkPtBr(
   return {
     ...network,
     scope:
-      'Primeiro recorte da infraestrutura institucional brasileira: âncoras constitucionais, órgãos de controle e organizações que concentram financiamento, dados, formação, ciência, tecnologia e capacidade de entrega. São Paulo é o piloto subnacional.',
+      'Primeiro recorte da infraestrutura institucional brasileira: instituições previstas na Constituição, órgãos de controle e organizações que concentram financiamento, dados, formação, ciência, tecnologia e capacidade de entrega. São Paulo é o primeiro piloto subnacional.',
     nodes: network.nodes.map((node) => ({
       ...node,
       summary:

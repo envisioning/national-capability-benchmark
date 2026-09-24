@@ -54,8 +54,8 @@ export default function GapsPage() {
       <PageTitle>What the benchmark cannot measure</PageTitle>
       <Headline>
         A gap is an indicator the model asks for and no comparable dataset answers. It stays in
-        the registry, it lowers confidence, and it is never deleted to make the numbers look
-        better.
+        the registry and lowers confidence, and the project does not delete a gap to make the
+        numbers look better.
       </Headline>
 
       <Note>
@@ -75,8 +75,8 @@ export default function GapsPage() {
         <p className="max-w-3xl text-lg leading-relaxed">
           These {countWord(gaps.length)} gaps sit across{' '}
           {countWord(byDimension.length)} of the nine capabilities. If you know a dataset for one,
-          the message takes a minute and it does not need to be complete: a link and a publisher
-          is enough to start. Other ways to take part are on{' '}
+          send it. The message does not need to be complete: a link and a publisher is enough to
+          start. Other ways to take part are on{' '}
           <Link href={supportHref} className="underline underline-offset-4">
             the ways to help page
           </Link>
@@ -153,8 +153,8 @@ export default function GapsPage() {
             ))}
           </ul>
           <p className="mt-6 max-w-3xl text-lg leading-relaxed">
-            Retiring an indicator needs a decision entry naming the evidence, so each of these can
-            be argued with.{' '}
+            Each retirement has a decision entry that names the evidence, so you can argue with
+            any of them.{' '}
             <Link href={objectionsHref} className="underline underline-offset-4">
               File an objection
             </Link>{' '}

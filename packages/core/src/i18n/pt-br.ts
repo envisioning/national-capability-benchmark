@@ -276,7 +276,7 @@ export const PT_BR: Lexicon = {
   },
   bandMeanings: {
     good: 'Maioria dos indicadores observada, recente, de fontes oficiais ou intergovernamentais.',
-    usable: 'Evidência suficiente para comparar países, com buracos conhecidos.',
+    usable: 'Evidência suficiente para comparar países, com lacunas conhecidas.',
     thin: 'Minoria dos indicadores, ou evidência antiga o bastante para ter mudado. Leia com cuidado.',
     very_thin: 'A nota se apoia em um ou dois indicadores. Não a cite isoladamente.',
   },
@@ -298,7 +298,7 @@ export const PT_BR: Lexicon = {
     title: 'Agenda de capacidades: {country}',
     generated: 'Gerado em {date}',
     intro:
-      'Os {countries} países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia {limits} antes de citar uma.',
+      'A régua inclui {countries} países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a confiança ao lado. Leia {limits} antes de citar uma nota.',
     limitsLabel: 'os limites conhecidos dos dados',
     standingHeading: 'Onde {countryTopic} está',
     colDimension: 'Dimensão',
@@ -319,7 +319,7 @@ export const PT_BR: Lexicon = {
     historyReadoutClamped:
       '{from} a {to} ({delta}) em {years} anos, sobre {n} indicadores; {c} tocaram a borda da régua',
     historyCaveat:
-      'Os valores históricos usam a régua atual de 0 a 100 e um conjunto pareado de indicadores. Eles mostram movimento na evidência disponível, não uma nota geral de desenvolvimento. As agendas datadas ficam em uma faixa própria e não alteram a nota. Uma linha ausente significa que a evidência não sustenta uma tendência comparável para aquela dimensão.',
+      'Os valores históricos usam a régua atual de 0 a 100 e um conjunto pareado de indicadores. Eles mostram movimento na evidência disponível, não uma nota geral de desenvolvimento. Os itens datados da agenda aparecem em uma linha do tempo separada e não alteram a nota. Uma linha ausente significa que a evidência não sustenta uma tendência comparável para aquela dimensão.',
     historyChartAria: 'Histórico de {dimension} de {baseYear} a {currentYear}',
     historyPointAria: '{dimension}: {score} em {year}',
     historyAgendaItems: 'Itens da agenda nesta linha do tempo',
@@ -334,13 +334,13 @@ export const PT_BR: Lexicon = {
     measureItemHeading: '{dimension}: confiança {confidence}, {band}',
     raiseHeading: 'Dimensões para elevar',
     raiseIntro:
-      'Da nota mais baixa para a mais alta. Só entram dimensões com evidência utilizável. Evidência fraca vai para a próxima seção.',
+      'Estas são as notas mais baixas com evidência utilizável. A evidência fraca aparece abaixo.',
     measureHeading: 'Dimensões para medir primeiro',
     measureIntro:
       'A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.',
     holdHeading: 'Dimensões para manter',
     holdIntro:
-      'Da nota mais alta para a mais baixa. Estas pontuam pelo menos {threshold} com evidência utilizável. Ainda precisam ser acompanhadas.',
+      'Estas dimensões têm nota de pelo menos {threshold}, com evidência utilizável.',
     holdItemLine: '{dimension}: {score}, confiança {band}',
     scoredOn: 'Baseada em {n} indicadores observados.',
     scoredOnOne: 'Baseada em um indicador observado.',
@@ -350,18 +350,18 @@ export const PT_BR: Lexicon = {
     evidenceElsewhereLine: 'Entregas documentadas em outros países: {list}.',
     agendaHeading: 'Agenda de medição',
     agendaIntro:
-      '{n} indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.',
+      '{n} indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.',
     colIndicator: 'Indicador ausente',
     colAsks: 'O que ele pergunta',
     ownEvidenceHeading: 'O que os indicadores não veem sobre {countryTopic}',
     ownEvidenceIntro:
-      'Entregas documentadas como evidência. Elas nunca afetam as notas ou a confiança.',
+      'Entregas documentadas ligadas a indicadores ausentes. Elas não afetam as notas nem a confiança.',
     brazilEvidenceHeading: 'O que o Brasil construiu e nenhum indicador conta',
     brazilEvidenceIntro:
-      'Estas são mudanças institucionais brasileiras documentadas que o framework registra como evidência. Elas não são pontuadas. São o registro histórico ao lado da medição de capacidades.',
+      'Estas são mudanças institucionais documentadas no Brasil que o framework registra como evidência. Elas não recebem nota e aparecem ao lado das notas de capacidade como registro histórico.',
     institutionalHistoryHeading: 'O que {countryTopic} construiu e nenhum indicador conta',
     institutionalHistoryIntro:
-      'Estas são mudanças institucionais documentadas em {country} que o framework registra como evidência. Elas ficam ao lado da nota e não mudam a nota ou a confiança.',
+      'Estas são mudanças institucionais documentadas em {country} que o framework registra como evidência. Elas aparecem ao lado da nota e não mudam a nota nem a confiança.',
     contributeHeading: 'Contribua',
     contributeBody:
       'Preencha uma lacuna, registre uma evidência ou conteste um indicador em {repo}. Os documentos explicam o método e suas decisões.',
@@ -469,7 +469,7 @@ export const PT_BR: Lexicon = {
     nationalJurisdiction: 'União',
     globalJurisdiction: 'Global',
     globalJurisdictionNote:
-      'Organismos que nenhum país controla, registrados uma vez no livro global e alcançados por este mapa pelo id.',
+      'Organismos internacionais que nenhum país controla sozinho, registrados no livro global.',
     membersHeading: 'Participação',
     memberCount: '{n} dos {total} países do benchmark são membros',
     memberHere: '{country} é membro.',

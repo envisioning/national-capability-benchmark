@@ -243,8 +243,8 @@ export default async function Page() {
 
       {wiring && brazil.network ? (
         <Section
-          title="One country's institutions, wired"
-          hint="Every system of the Brazilian state against every other, a cell shaded by how many relations run through it. The map explains a score and never enters one."
+          title="How Brazil's institutions connect"
+          hint="Every system of the Brazilian state against every other, with each cell shaded by the number of relations between the two. The map helps explain a score but is not an input to any score."
         >
           <Link
             href={institutionGraphDatasetHref('BRA')}
@@ -297,7 +297,7 @@ export default async function Page() {
           <Link href={objectionsHref} className="underline underline-offset-4">
             challenge page
           </Link>{' '}
-          is where an objection enters the record.
+          is where you file an objection.
         </p>
       </Section>
 
@@ -309,17 +309,17 @@ export default async function Page() {
           <a href="https://envisioning.com" className="underline underline-offset-4" rel="noopener">
             Envisioning
           </a>{' '}
-          researches how societies anticipate and act on change. The benchmark ranks nobody and
-          advises nobody: it reads a country&apos;s capability shape from public data and says how
-          confident it is. The{' '}
+          researches how societies anticipate and act on change. The benchmark scores each
+          country&apos;s capabilities from public data and states how confident each score is.
+          The{' '}
           <Link href={aboutHref} className="underline underline-offset-4">
             about page
           </Link>{' '}
-          records where that breaks down, and a{' '}
+          records where the method fails. To send a correction, use the{' '}
           <Link href={contactHref} className="underline underline-offset-4">
-            correction
-          </Link>{' '}
-          is worth sending.
+            contact page
+          </Link>
+          .
         </p>
       </Section>
     </>

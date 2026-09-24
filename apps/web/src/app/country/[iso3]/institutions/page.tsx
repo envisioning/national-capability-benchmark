@@ -61,8 +61,8 @@ export default async function CountryInstitutionsPage({
         <Link href={institutionGraphDatasetHref(iso3)} className="underline underline-offset-2">
           See the same map drawn as a network
         </Link>
-        . The network shows one institution's neighbourhood at a time. Which way each relation runs,
-        and the verb that names it, stay on this page, because a line carries neither.
+        . The network shows one institution and its neighbors at a time. It does not show which
+        way each relation runs or the verb that names it. This page shows both.
       </p>
 
       <InstitutionsView network={network} lex={EN} />

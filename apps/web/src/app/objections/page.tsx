@@ -73,8 +73,8 @@ export default async function ObjectionsPage() {
     <>
       <PageTitle>Argue with the benchmark</PageTitle>
       <Headline>
-        Every decision names the evidence that would overturn it. Known failures sit beside the
-        scores they affect. Bring a series, a case or an objection.
+        Every decision names the evidence that would overturn it, and known failures sit beside
+        the scores they affect. Bring a series, a case or an objection.
       </Headline>
 
       <Section
@@ -126,7 +126,7 @@ export default async function ObjectionsPage() {
 
       <Section
         title="Known failures"
-        hint={`${capitalize(countWord(artefacts.length))} artefacts are open: places where the model produces a number that misdescribes the world.${
+        hint={`${capitalize(countWord(artefacts.length))} artifacts are open: places where the model produces a number that misdescribes the world.${
           worst > 0
             ? ` ${capitalize(countWord(worst))} ${worst === 1 ? 'has' : 'have'} high severity.`
             : ''
@@ -237,7 +237,7 @@ export default async function ObjectionsPage() {
           <Link href={supportHref} className="underline underline-offset-4">
             ways to help
           </Link>{' '}
-          holds every other way in.
+          lists every other way to help.
         </p>
       </Section>
 
@@ -256,12 +256,12 @@ export default async function ObjectionsPage() {
           . Data keeps the terms of its publishers, listed in{' '}
           <a href={docHref(NOTICE_DOC)} className="underline underline-offset-4">
             {NOTICE_DOC}
-          </a>{' '}
-          . Keep the attribution when redistributing a number.
+          </a>
+          . Keep the attribution when you redistribute a number.
         </p>
         <Note>
           This is a prototype. Read the limits and the confidence beside a score; a thin dimension
-          rests on one or two indicators and cannot carry an argument alone.
+          rests on one or two indicators and is not enough on its own to support an argument.
         </Note>
       </Section>
     </>

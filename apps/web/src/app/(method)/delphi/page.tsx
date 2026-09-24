@@ -90,7 +90,7 @@ export default async function DelphiPage() {
 
       <Section
         title="Each panelist holds a fixed stance"
-        hint="Each stance gives disagreement a reason."
+        hint="The stance explains why panelists disagree."
       >
         {!evidential ? (
           <Note tone="stop">

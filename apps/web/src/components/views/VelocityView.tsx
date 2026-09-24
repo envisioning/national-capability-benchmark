@@ -36,7 +36,7 @@ export function VelocityView({ velocity }: { velocity: VelocityFile }) {
   return (
     <>
       <Section
-        title="Movement, with no ranking"
+        title="The table shows each rate without a ranking"
         hint="Each row is one country and dimension. Sort the table to inspect the exploratory rates; excluded countries remain visible so missing coverage can be challenged."
       >
         <Note>

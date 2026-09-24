@@ -19,8 +19,8 @@ export default async function VelocitySandboxPage() {
     <>
       <PageTitle>Velocity is an offline experiment</PageTitle>
       <Headline>
-        This sandbox applies a placeholder rate to the foundation&apos;s existing momentum series so
-        the method can be inspected before it earns a public surface.
+        This sandbox applies a placeholder rate to the foundation&apos;s existing momentum series,
+        so that anyone can inspect the method before the site decides whether to publish it.
       </Headline>
       <VelocityView velocity={velocity} />
     </>

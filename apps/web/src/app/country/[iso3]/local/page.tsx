@@ -121,22 +121,19 @@ export default async function CountryLocalPage({
             <RadarPlaceholder profile={profile} />
           </Card>
           <p className="max-w-3xl text-lg leading-relaxed">
-            Brazil&apos;s benchmark shape is a national view of a country with several centres of
-            action. The federal score captures evidence that can be compared across the benchmark
-            set, so it is useful for asking where Brazil&apos;s capacity differs from its peers. It
-            does not describe every state, municipality or delivery system. A federal ministry,
-            state government and city can face different constraints while contributing to the
-            same national result. The local layer keeps that distinction visible. It brings
-            together a source-backed state range for one indicator, a map of institutions and the
-            public challenges attached to Brazil&apos;s national scores. Those additions are a way to
-            investigate the result, rather than a second score. They can show whether a national
-            value is broadly consistent with its constituent parts, where variation is large and
-            which organisations mediate action. They also show where the evidence stops. The
-            state fixture uses the publisher&apos;s coefficient and year, while the benchmark keeps
-            its existing national display and comparison frame. The two views can therefore be
-            read together without pretending that a state average is a capability score or that
-            one institution explains a whole dimension. Brazil&apos;s local reading is an invitation
-            to ask better follow-up questions.
+            Brazil&apos;s benchmark profile is a national view of a country with several centers
+            of action. The federal score uses evidence that is comparable across the
+            benchmark countries, so it shows where Brazil&apos;s capacity differs from its peers. It
+            does not describe every state, municipality or delivery system: a federal ministry, a
+            state government and a city can face different constraints and still contribute to
+            the same national result. This page adds a sourced state range for one indicator, a
+            map of institutions and the public challenges to Brazil&apos;s national scores. None of
+            these is a second score. They show whether a national value is broadly consistent with
+            its parts, where variation is large, which organizations mediate action and where the
+            evidence stops. The state data uses the publisher&apos;s coefficient and year, and the
+            benchmark keeps its national display and comparison frame. You can read the two views
+            together, but a state average is not a capability score, and one institution does not
+            explain a whole dimension.
           </p>
         </div>
       </Section>
@@ -186,8 +183,8 @@ export default async function CountryLocalPage({
             <Note>the agency disagrees with this entry</Note>
             <p className="mb-8 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
               Brazil&apos;s network contains {networkResult.network.nodes.length} institutions and {networkResult.network.edges.length}{' '}
-              sourced relationships. The same map is embedded here so the institutional layer can
-              be read beside the radar and the state evidence.
+              sourced relationships. The same map appears here beside the radar and the state
+              evidence.
             </p>
             <InstitutionsView network={networkResult.network} lex={EN} />
           </>
@@ -203,7 +200,7 @@ export default async function CountryLocalPage({
 
       <Section
         title="Disputes stay on the national ledger"
-        hint="Accepted and live Brazil disputes stay visible here, while rejected records remain out of the public destination view."
+        hint="This list shows accepted and live Brazil disputes. It leaves out rejected ones."
       >
         {disputes.length ? (
           <ul className="max-w-3xl space-y-4">

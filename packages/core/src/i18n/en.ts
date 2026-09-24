@@ -42,7 +42,7 @@ export const EN: Lexicon = {
     title: 'Capability agenda: {country}',
     generated: 'Generated {date}',
     intro:
-      'The frame includes {countries} countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read {limits} before quoting one.',
+      'The frame includes {countries} countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read {limits} before you quote a score.',
     limitsLabel: 'the known limits of the data',
     standingHeading: 'Where {countryTopic} stands',
     colDimension: 'Dimension',
@@ -51,7 +51,7 @@ export const EN: Lexicon = {
     colTrend: 'Trend',
     historyHeading: 'Capability over time',
     historyIntro:
-      'Select a dimension to see how {country}’s comparable evidence has moved over time. The vertical scale is the current 0–100 comparison frame.',
+      'Select a dimension to see how {country}’s comparable evidence has moved over time. The vertical scale is the current comparison frame, from 0 to 100.',
     historyDimension: 'Dimension',
     historyPeriod: 'Period',
     historyAxis: 'Capability position in the current frame',
@@ -63,7 +63,7 @@ export const EN: Lexicon = {
     historyReadoutClamped:
       '{from} to {to} ({delta}) over {years} years using {n} indicators; {c} touched the frame edge',
     historyCaveat:
-      'Historical values use today’s 0–100 frame and a matched basket of indicators. They show movement in the available evidence, not an overall development score. Dated agenda items sit on their own rail and do not change the score. A missing line means the evidence does not support a comparable trend for that dimension.',
+      'Historical values use today’s frame from 0 to 100 and a matched basket of indicators. They show movement in the available evidence, not an overall development score. Dated agenda items appear on a separate timeline and do not change the score. A missing line means the evidence does not support a comparable trend for that dimension.',
     historyChartAria: '{dimension} history from {baseYear} to {currentYear}',
     historyPointAria: '{dimension}: {score} in {year}',
     historyAgendaItems: 'Agenda items on this timeline',
@@ -83,7 +83,7 @@ export const EN: Lexicon = {
       'The evidence is too thin to manage these dimensions confidently.',
     holdHeading: 'What to keep watching',
     holdIntro:
-      'These scores are at least {threshold} with usable evidence. They still need watching.',
+      'These dimensions score at least {threshold} with usable evidence.',
     holdItemLine: '{dimension}: {score}, confidence {band}',
     scoredOn: 'Uses {n} observed indicators.',
     scoredOnOne: 'Uses one observed indicator.',
@@ -93,7 +93,7 @@ export const EN: Lexicon = {
     evidenceElsewhereLine: 'Related deliveries in other countries: {list}.',
     agendaHeading: 'Missing data',
     agendaIntro:
-      '{n} requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.',
+      '{n} requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.',
     colIndicator: 'Missing indicator',
     colAsks: 'What it asks',
     ownEvidenceHeading: 'What the indicators miss about {countryTopic}',
@@ -101,10 +101,10 @@ export const EN: Lexicon = {
       'Documented deliveries linked to missing indicators. They do not affect scores or confidence.',
     brazilEvidenceHeading: 'What Brazil built that no indicator counts',
     brazilEvidenceIntro:
-      'These are documented Brazilian institutional changes the framework files as evidence. They are not scored. They are the historical record that the capability measurement sits next to.',
+      'These are documented institutional changes in Brazil that the framework records as evidence. They are not scored, and they appear beside the capability scores as a historical record.',
     institutionalHistoryHeading: 'What {countryTopic} built that no indicator counts',
     institutionalHistoryIntro:
-      'These are documented institutional changes in {country} that the framework files as evidence. They sit beside the score and do not change it or its confidence.',
+      'These are documented institutional changes in {country} that the framework records as evidence. They appear beside the score and do not change it or its confidence.',
     contributeHeading: 'Contribute',
     contributeBody:
       'Fill a gap, file evidence or challenge an indicator at {repo}. The docs explain the method and decisions.',
@@ -128,7 +128,7 @@ export const EN: Lexicon = {
       learning_workforce: 'Learning and workforce',
       data_digital: 'Data and digital infrastructure',
       regulation: 'Regulation',
-      public_security_defense: 'Public security and defence',
+      public_security_defense: 'Public security and defense',
       territorial_delivery: 'Territorial delivery',
     },
     natures: {
@@ -209,7 +209,7 @@ export const EN: Lexicon = {
     nationalJurisdiction: 'Union',
     globalJurisdiction: 'Global',
     globalJurisdictionNote:
-      'Bodies no country owns, held once in the global ledger and reached from this map by id.',
+      'International bodies that no single country controls, recorded in the global ledger.',
     membersHeading: 'Membership',
     memberCount: '{n} of the {total} benchmarked countries are members',
     memberHere: '{country} is a member.',

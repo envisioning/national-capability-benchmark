@@ -24,8 +24,8 @@ export default async function LimitsPage() {
     <>
       <PageTitle>Some numbers here are wrong</PageTitle>
       <Headline>
-        These are known measurement failures, with the evidence and possible fix. The pipeline is
-        working as designed; the design is sometimes wrong.
+        These are known measurement failures, each with its evidence and a possible fix. The
+        pipeline runs as designed, and sometimes the design is wrong.
       </Headline>
       {doc ? (
         <Markdown source={doc} />

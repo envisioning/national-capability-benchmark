@@ -127,7 +127,7 @@ export function ResidualView({ residual }: { residual: ResidualFile }) {
       </Section>
 
       <Section
-        title="Above the line here, below it there"
+        title="How far each country sits from each line"
         hint="One row per country, one column per dimension, each cell in score points. Sort by a dimension to see who is furthest from its line."
       >
         <DataTable
@@ -162,12 +162,12 @@ export function ResidualView({ residual }: { residual: ResidualFile }) {
       </Section>
 
       <Section
-        title="A gap is only as good as its fit"
+        title="The fit limits what a gap can show"
         hint="The layer stays offline until a review answers these. The method is in D68 and the promotion gate is in D65."
       >
         <ul className="max-w-3xl space-y-4 text-lg leading-relaxed text-[var(--muted)]">
           <li>
-            The gap inherits every artefact in the score. A score that is wrong about the world
+            The gap inherits every artifact in the score. A score that is wrong about the world
             makes a gap that is wrong about the world and larger with it. China reads +74.8 on
             Experimentation from a score of 100 that{' '}
             <Link href={artefactHref('A1')} className="underline decoration-dotted underline-offset-4">

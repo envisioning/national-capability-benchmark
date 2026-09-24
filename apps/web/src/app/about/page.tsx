@@ -80,7 +80,7 @@ export default async function AboutPage() {
       label: 'Countries',
       value: COUNTRIES.length,
       href: countriesHref,
-      note: 'All of them build the frame every score is measured against.',
+      note: 'All of them set the frame that every score is measured against.',
     },
     {
       label: 'Indicators',
@@ -111,13 +111,13 @@ export default async function AboutPage() {
       >
         <FactStrip facts={facts} />
         <p className="mt-6 max-w-3xl text-lg leading-relaxed">
-          Raw values carry their source and their year. Missing values are dropped rather than
-          filled in, so a thin dimension shows as low confidence instead of a confident guess. Why
-          any of this is worth measuring is the{' '}
+          Raw values carry their source and their year. The pipeline drops missing values and
+          never fills them in, so a thin dimension shows low confidence. Why any of this is worth
+          measuring is the{' '}
           <Link href={thesisHref} className="underline underline-offset-4">
             thesis
           </Link>
-          , which also shows how far the claim survives contact with the data.
+          , which also shows how much of the claim the data supports.
         </p>
       </Section>
 
@@ -127,8 +127,8 @@ export default async function AboutPage() {
       >
         <ul className="max-w-3xl list-disc space-y-3 pl-5 text-lg leading-relaxed">
           <li>
-            No overall score. Nine capabilities averaged into one number would hide the shape,
-            which is the only interesting thing here.
+            No overall score. An average of the nine capabilities would hide where a country is
+            strong and where it is weak.
           </li>
           <li>
             No ranking table and no league position. A country sits in a distribution, and its
@@ -191,11 +191,11 @@ export default async function AboutPage() {
             <Link href={objectionsHref} className="underline underline-offset-4">
               challenge page
             </Link>{' '}
-            is where an objection, a gap fill or a documented delivery enters the record.
+            is where you file an objection, a dataset for a gap or a documented delivery.
           </li>
         </ul>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed">
-          Code, data and documents live in the{' '}
+          The code, data and documents are in the{' '}
           <a
             href={REPO_URL}
             target="_blank"
@@ -204,7 +204,7 @@ export default async function AboutPage() {
           >
             open repository on GitHub
           </a>
-          . Every number can be traced to the series it came from.
+          . You can trace every number to the series it came from.
         </p>
       </Section>
 
@@ -217,7 +217,7 @@ export default async function AboutPage() {
             Envisioning
           </a>{' '}
           is a technology research institute and advisory. Brazil is the first field case, and it
-          gets no special treatment in the model. What it has is a reading of its own: the{' '}
+          gets no special treatment in the model. It does have a layer of its own: the{' '}
           {brazilLayer ? (
             <Link href={countryLayerHref(brazilLayer)} className="underline underline-offset-4">
               Brazilian layer
@@ -254,7 +254,7 @@ export default async function AboutPage() {
               <Link href={countriesHref} className="underline underline-offset-4">
                 profile
               </Link>{' '}
-              for the shape, then the{' '}
+              for its nine scores, then the{' '}
               <Link href={limitsHref} className="underline underline-offset-4">
                 limits
               </Link>{' '}
@@ -298,7 +298,7 @@ export default async function AboutPage() {
               <Link href={supportHref} className="underline underline-offset-4">
                 Ways to help
               </Link>{' '}
-              lists every way in, cheapest first. The fastest useful one is naming a dataset for
+              lists every way to help, cheapest first. The fastest useful one is naming a dataset for
               an{' '}
               <Link href={gapsHref} className="underline underline-offset-4">
                 open gap

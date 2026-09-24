@@ -645,9 +645,9 @@ export function RadarEvidenceLegend({
 export function FrameNote() {
   return (
     <p className="mt-3 text-xs leading-relaxed text-[var(--muted)]">
-      0 to 100 is a position inside the frame every country builds together. Zero is the weakest on
-      a dimension and 100 is the strongest. A score of 10 puts a country near the floor of that
-      frame. It does not mean 10 percent of a capability.
+      A score from 0 to 100 is a position inside the frame that all the benchmark countries set:
+      zero is the weakest on a dimension and 100 is the strongest. A score of 10 puts a country
+      near the floor of that frame and does not mean 10 percent of a capability.
     </p>
   )
 }

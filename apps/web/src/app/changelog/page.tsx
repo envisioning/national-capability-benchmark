@@ -24,8 +24,9 @@ export default async function ChangelogPage() {
       <PageTitle>What changed</PageTitle>
       <Headline>
         A short history of the benchmark frame, the viewer and the research work around them.
-        App releases describe the product; Dataset {DATASET_VERSION} is the current semantic data
-        contract, so a major dataset version means the numbers need a new reading.
+        App releases change the viewer. Dataset releases change the numbers, and the current one
+        is Dataset {DATASET_VERSION}. After a new major dataset version, old and new scores are
+        not comparable.
       </Headline>
       {changelog ? (
         <Markdown source={changelog} />
@@ -39,8 +40,7 @@ export default async function ChangelogPage() {
         <a href={docHref(CHANGELOG_DOC)} className="underline underline-offset-4">
           {CHANGELOG_DOC}
         </a>{' '}
-        in the repository. The current app release is {APP_VERSION}; the build checks the newest
-        App and Dataset entries against their source versions.
+        in the repository. The current app release is {APP_VERSION}.
       </p>
     </>
   )
