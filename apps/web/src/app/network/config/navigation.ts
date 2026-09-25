@@ -12,6 +12,13 @@ const menu: Config['navigation']['menu'] = [
     pageId: 'institutions',
   },
   { id: 'systems', label: schema.objects.system.plural, icon: 'box', pageId: 'systems' },
+  { id: 'levels', label: schema.objects.level.plural, icon: 'tag', pageId: 'levels' },
+  {
+    id: 'jurisdictions',
+    label: schema.objects.jurisdiction.plural,
+    icon: 'mapPin',
+    pageId: 'jurisdictions',
+  },
 ]
 
 export const navigation: Config['navigation'] = { menu, pages, blocks }

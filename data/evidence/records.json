@@ -7746,6 +7746,876 @@
         ],
         "travelled": "Regulatory sandboxes travel when the evidence gathered in a zone can change a rule or unlock a normal licence; a protected pilot site with no route out simply postpones the regulatory decision."
       }
+    },
+    {
+      "id": "ind-pmgdisha",
+      "indicatorId": "adult_digital_skills",
+      "iso3": "IND",
+      "title": "Pradhan Mantri Gramin Digital Saksharta Abhiyan",
+      "claim": "India's PMGDISHA rural digital-literacy scheme enrolled 73,571,965 people, trained 63,941,718 and certified 47,836,188 by July 2024 through 20 hours of instruction in five digital-task modules.",
+      "metric": {
+        "name": "Candidates trained under PMGDISHA",
+        "value": 63941718,
+        "unit": "people",
+        "asOf": "2024-07-26"
+      },
+      "secondMetric": {
+        "name": "Candidates certified under PMGDISHA",
+        "value": 47836188,
+        "unit": "people",
+        "asOf": "2024-07-26"
+      },
+      "started": 2017,
+      "status": "concluded",
+      "source": {
+        "publisher": "Press Information Bureau, Ministry of Electronics and Information Technology, Government of India",
+        "url": "https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=2037600&lang=2&reg=48",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-02"
+      },
+      "limits": "The government reports administrative training and third-party certification totals, not independently tested digital competence or continued use of services. The scheme covered rural areas and one person per targeted household, so it is not a population-wide adult-skills rate; the source also does not report completion quality, attrition or post-training use.",
+      "pattern": {
+        "mechanism": "MeitY used village-level centres, a standard five-module curriculum and external certifying agencies to move a digital-literacy offer through rural India at household scale, with certificates uploaded to DigiLocker.",
+        "preconditions": [
+          "A delivery network able to reach Gram Panchayats and rural households",
+          "A common curriculum covering devices, internet, citizen services and digital payments",
+          "Independent assessment and an identity-linked certificate that makes completion portable"
+        ],
+        "travelled": "Digital-literacy programmes travel when training is tied to tasks people can immediately use and completion is independently checked; enrolment without post-training usage data can become a counting exercise."
+      }
+    },
+    {
+      "id": "ind-swayam",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "IND",
+      "title": "SWAYAM national online-course platform",
+      "claim": "India's SWAYAM platform offered more than 20,370 courses and recorded more than 65 million enrolments by 12 August 2026 as a national channel for flexible higher-education and skills learning.",
+      "metric": {
+        "name": "SWAYAM enrolments",
+        "value": 65000000,
+        "unit": "enrolments",
+        "asOf": "2026-08-12"
+      },
+      "secondMetric": {
+        "name": "SWAYAM courses offered",
+        "value": 20370,
+        "unit": "courses",
+        "asOf": "2026-08-12"
+      },
+      "started": 2017,
+      "status": "operating",
+      "source": {
+        "publisher": "Press Information Bureau, Government of India, Empowering Youth, Transforming India",
+        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2298773&lang=1&reg=3",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-02"
+      },
+      "limits": "Cumulative enrolment is not a share of adults participating in learning: one person can enrol repeatedly, and the release does not provide active users, completions or the adult/student split. Course supply and enrolment show a national learning channel, not learning gains, labour-market outcomes or equal access to broadband and devices.",
+      "pattern": {
+        "mechanism": "The Ministry of Education assembled university courses on one open platform, letting learners study remotely and connect course participation to formal credit and certification pathways.",
+        "preconditions": [
+          "Universities willing to publish reusable course material to a common technical standard",
+          "A credit and assessment framework that makes online study count beyond the platform",
+          "Connectivity and learner support good enough for participation outside campus"
+        ],
+        "travelled": "Open course platforms travel when enrolment can convert into recognised credit or skills; a large catalogue without completion and credential data measures supply more than continuous learning."
+      }
+    },
+    {
+      "id": "ind-upi",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "IND",
+      "title": "Unified Payments Interface, the bank-and-app network",
+      "claim": "NPCI's UPI rail connected 731 live banks and settled 22,716.07 million transactions worth ₹28,92,138.67 crore in June 2026 through participating banks and payment apps.",
+      "metric": {
+        "name": "UPI transactions settled in the month",
+        "value": 22716070000,
+        "unit": "transactions",
+        "asOf": "2026-06"
+      },
+      "secondMetric": {
+        "name": "Banks live on UPI",
+        "value": 731,
+        "unit": "banks",
+        "asOf": "2026-06"
+      },
+      "started": 2016,
+      "status": "operating",
+      "source": {
+        "publisher": "National Payments Corporation of India, UPI Product Statistics",
+        "url": "https://www.npci.org.in/product/upi/product-statistics",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-02"
+      },
+      "limits": "UPI volume and bank participation show a shared transaction rail, not the quality of public-private coordination across other national objectives. NPCI publishes the figures for the system it operates, the table excludes on-us transactions from August 2018 onward, and volume says nothing about access, fraud, outages or distributional reach.",
+      "pattern": {
+        "mechanism": "The Reserve Bank-regulated NPCI set a common protocol and settlement layer while banks and private payment apps competed at the customer interface, allowing one public standard to scale through many firms.",
+        "preconditions": [
+          "A regulated national payments operator trusted to set interoperable rules",
+          "Banks connected to a common account and settlement infrastructure",
+          "A legal and technical framework that lets private apps join without fragmenting the rail"
+        ],
+        "travelled": "Interoperable rails travel when the public layer is open enough for private distribution and strict enough to preserve settlement and consumer protection; transaction volume alone cannot show whether the partnership is inclusive."
+      }
+    },
+    {
+      "id": "ind-cowin",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "IND",
+      "title": "CoWIN national COVID-19 vaccination platform",
+      "claim": "India used CoWIN to register and scale COVID-19 vaccination nationally, recording more than 2.2067 billion vaccinations and 1.1093 billion registrations by 21 November 2023.",
+      "metric": {
+        "name": "COVID-19 vaccinations recorded by CoWIN",
+        "value": 2206700000,
+        "unit": "vaccinations",
+        "asOf": "2023-11-21"
+      },
+      "secondMetric": {
+        "name": "CoWIN registrations",
+        "value": 1109300000,
+        "unit": "registrations",
+        "asOf": "2023-11-21"
+      },
+      "started": 2021,
+      "status": "concluded",
+      "source": {
+        "publisher": "Ministry of Electronics and Information Technology, Government of India, Digital Innovations in India's Health Sector",
+        "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/jan/doc2024115298601.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-02"
+      },
+      "limits": "The counts are platform records, not unique people or a measure of protection, equity, adverse events or health outcomes. The ministry's explainer reports the totals itself and does not provide reconciliation rules, regional access gaps or the counterfactual contribution of CoWIN versus the underlying health and logistics system; the emergency programme has also ended.",
+      "pattern": {
+        "mechanism": "The Union government put registration, appointment, inventory-linked certification and national reporting on one platform, allowing states and vaccination sites to operate against a common record during a fast-moving shock.",
+        "preconditions": [
+          "A national identity and mobile-number layer capable of handling very large registration loads",
+          "Vaccination sites and state health teams connected to a shared reporting protocol",
+          "A central operations team able to change workflows as supply and eligibility rules shifted"
+        ],
+        "travelled": "Crisis platforms travel when a common data model links local delivery to central visibility; registrations and doses do not by themselves establish that the system reached the hardest-to-serve groups."
+      }
+    },
+    {
+      "id": "ind-commonwealth-games",
+      "indicatorId": "large_project_delivery",
+      "iso3": "IND",
+      "title": "Delhi Commonwealth Games, and the cost-estimate escalation",
+      "claim": "India and Delhi hosted the Commonwealth Games in October 2010, but the Comptroller and Auditor General recorded the total estimate rising from ₹1,200 crore in the May 2003 bid to ₹18,532.31 crore by October 2010.",
+      "metric": {
+        "name": "Total estimated expenditure by October 2010",
+        "value": 18532.31,
+        "unit": "INR crore",
+        "asOf": "2010-10"
+      },
+      "secondMetric": {
+        "name": "Initial bid estimate",
+        "value": 1200,
+        "unit": "INR crore",
+        "asOf": "2003-05"
+      },
+      "started": 2003,
+      "status": "eroded",
+      "source": {
+        "publisher": "Comptroller and Auditor General of India, Performance Audit of XIXth Commonwealth Games",
+        "url": "https://cag.gov.in/uploads/download_audit_report/2011/Union_Performance_Civil_XIXth_Commonwealth_Games_6_2011.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-02"
+      },
+      "limits": "The Games were delivered, so this is not a failed event; it documents erosion of the original cost promise. The CAG compares estimates assembled at different stages and scopes, and the October 2010 figure is not a single audited final-cost total. The audit identifies fragmented planning, late decisions and weak controls but does not attribute every rupee of the increase to one cause.",
+      "pattern": {
+        "mechanism": "A multi-agency event was delivered against an immovable deadline, but scope changes, late procurement and fragmented governance allowed the budget estimate to expand more than fifteen-fold between the bid and the event.",
+        "preconditions": [
+          "A host agreement that bound the Union and Delhi governments to the event and its liabilities",
+          "A portfolio of venues and city works dependent on many implementing agencies",
+          "Independent audit access to plans, estimates, procurement files and delivery evidence"
+        ],
+        "travelled": "Large-event delivery travels badly when an immovable deadline rewards late scope acceptance; an early integrated budget and clear decision rights matter more than the event brand."
+      }
+    },
+    {
+      "id": "zaf-lmi",
+      "indicatorId": "government_foresight_capacity",
+      "iso3": "ZAF",
+      "title": "Labour Market Intelligence Programme and forward skills planning",
+      "claim": "South Africa's Department of Higher Education and Training ran a Labour Market Intelligence Programme from 2012, published the fifth iteration of its national occupations-in-high-demand list by April 2024, and identified 138 occupations for the emerging hydrogen-economy value chain.",
+      "metric": {
+        "name": "National occupations-in-high-demand list iterations",
+        "value": 5,
+        "unit": "iterations",
+        "asOf": "2024-04-16"
+      },
+      "secondMetric": {
+        "name": "Occupations identified for the hydrogen-economy value chain",
+        "value": 138,
+        "unit": "occupations",
+        "asOf": "2024-04-16"
+      },
+      "started": 2012,
+      "status": "operating",
+      "source": {
+        "publisher": "Department of Higher Education and Training, Government of South Africa",
+        "url": "https://www.gov.za/news/speeches/minister-blade-nzimande-launch-key-labour-market-intelligence-lmi-research-reports",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-02"
+      },
+      "limits": "The programme's own ministerial account reports its outputs, and a list of occupations is a planning instrument rather than proof that enrolment, funding or curricula changed. The source describes the second phase and a third phase planned for 2025; the record therefore establishes a recurring foresight function and delivered reports, not the quality or current use of every forecast.",
+      "pattern": {
+        "mechanism": "DHET institutionalised a research cycle that combines labour-market data, sector studies and consultations with business, labour and government, then turns the findings into recurring occupations-in-demand lists and skills assessments for education planning.",
+        "preconditions": [
+          "A department with authority to connect labour-market evidence to post-school enrolment and funding decisions",
+          "Stable research financing and partnerships with public research organisations and universities",
+          "Stakeholder channels that let employers and labour organisations challenge or refine the forecast"
+        ],
+        "travelled": "Foresight travels when a recurring evidence cycle changes a budget, curriculum or visa rule; publishing another list without tracing decisions that used it is only a report series."
+      }
+    },
+    {
+      "id": "zaf-reipppp",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "ZAF",
+      "title": "Renewable Energy Independent Power Producer Procurement Programme",
+      "claim": "South Africa's IPP Office reported 95 independent power producers operational with 7,335 MW online by 31 March 2025, alongside 9,618 MW procured from 116 projects at financial close and R292.2 billion attracted for energy infrastructure.",
+      "metric": {
+        "name": "Operational IPP capacity",
+        "value": 7335,
+        "unit": "MW",
+        "asOf": "2025-03-31"
+      },
+      "secondMetric": {
+        "name": "Investment attracted by projects at financial close",
+        "value": 292200000000,
+        "unit": "South African rand",
+        "asOf": "2025-03-31"
+      },
+      "started": 2011,
+      "status": "operating",
+      "source": {
+        "publisher": "Independent Power Producers Office, South Africa, IPPPP Quarterly Report Q4 2024/25",
+        "url": "https://www.ipp-projects.co.za/_entity/annotation/15c9ffdd-503c-d00d-b44a-1976b66a1bc4",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-02"
+      },
+      "limits": "The IPP Office reports the programme it manages, and its figures combine several procurement windows and technologies. Operational MW and financial close show a functioning public–private delivery channel, not affordability, reliability, local ownership or emissions outcomes; terminated projects are excluded from current totals and the investment figure is attracted capital rather than completed public value.",
+      "pattern": {
+        "mechanism": "The state set capacity and development rules, ran repeated competitive tenders and gave private producers bankable power-purchase agreements, while Eskom and government agencies carried the grid and policy interfaces.",
+        "preconditions": [
+          "A creditworthy public offtaker and a grid connection process private bidders can rely on",
+          "Transparent bid windows with standard contracts and independent evaluation",
+          "A public procurement office able to monitor construction, commercial operation and economic-development obligations"
+        ],
+        "travelled": "Public–private energy programmes travel when the state makes risk allocation and payment rules credible; selected capacity without financial close or operation is still only a pipeline."
+      }
+    },
+    {
+      "id": "zaf-meerkat",
+      "indicatorId": "large_project_delivery",
+      "iso3": "ZAF",
+      "title": "MeerKAT radio telescope, a delivered national research facility",
+      "claim": "South Africa's National Research Foundation and SARAO completed the 64-dish MeerKAT radio telescope in March 2018 on schedule and on budget, then began science operations as a precursor to the Square Kilometre Array.",
+      "metric": {
+        "name": "MeerKAT dishes completed",
+        "value": 64,
+        "unit": "dishes",
+        "asOf": "2018-03"
+      },
+      "started": 2014,
+      "status": "operating",
+      "source": {
+        "publisher": "South African Radio Astronomy Observatory, National Research Foundation",
+        "url": "https://www.sarao.ac.za/news/dr-bernard-fanaroff-lifetime-achievement-nrf-awards/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-02"
+      },
+      "limits": "SARAO's institutional account states that the array was on schedule and on budget but does not publish an audited cost or baseline schedule in this record. Sixty-four dishes prove physical completion, not scientific productivity, local industrial spillovers or the performance of the larger SKA programme into which MeerKAT is being integrated.",
+      "pattern": {
+        "mechanism": "A national research agency led a staged telescope build, using prototype arrays, local engineering and university and industry partners to test components before integrating the full 64-dish facility in the Karoo.",
+        "preconditions": [
+          "A long-lived public research institution able to hold a technically demanding project across administrations",
+          "Prototype infrastructure and specialist engineering capacity before full-scale construction",
+          "A remote site, fibre and power systems, and a scientific user community ready to operate the facility"
+        ],
+        "travelled": "Research infrastructure travels when prototypes, procurement and user operations are designed as one delivery chain; a completed instrument without a funded operating model becomes a monument rather than capability."
+      }
+    },
+    {
+      "id": "zaf-seta-wbl",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "ZAF",
+      "title": "SETAs and workplace-based learning delivery",
+      "claim": "South Africa's Sector Education and Training Authorities reported 45,146 learnership completions, 83,578 skills-programme completions and 99,778 workplace-based learning opportunities for the 2024 post-school education and training intake.",
+      "metric": {
+        "name": "Learnerships completed",
+        "value": 45146,
+        "unit": "completions",
+        "asOf": "2024-01-22"
+      },
+      "secondMetric": {
+        "name": "Workplace-based learning opportunities created",
+        "value": 99778,
+        "unit": "opportunities",
+        "asOf": "2024-01-22"
+      },
+      "started": 2000,
+      "status": "operating",
+      "source": {
+        "publisher": "Department of Higher Education and Training, Government of South Africa",
+        "url": "https://www.gov.za/news/speeches/minister-blade-nzimande-post-school-education-and-training-sector-state-readiness-1",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-02"
+      },
+      "limits": "The ministerial statement aggregates 21 SETAs and counts opportunities and completions, not a harmonised share of adults participating in formal or non-formal learning. It does not report unique learners, demographic reach, completion quality, employment after training or the share of participants who were already in education; the figures are government-reported rather than independently audited here.",
+      "pattern": {
+        "mechanism": "Sector authorities levy and coordinate employer-linked training, then place learners into learnerships, skills programmes and workplace experience tied to occupational demand rather than leaving adult learning entirely to formal colleges.",
+        "preconditions": [
+          "A statutory levy and sector bodies with a mandate to fund training beyond public campuses",
+          "Employers willing to host learners and assess workplace competence",
+          "Occupational standards and certification routes that make short programmes legible to workers and firms"
+        ],
+        "travelled": "Workplace learning travels when employers share the cost and the credential is recognised across firms; opportunity counts without learner follow-up cannot show whether skills actually accumulated."
+      }
+    },
+    {
+      "id": "zaf-e-tolls",
+      "indicatorId": "institutional_responsiveness",
+      "iso3": "ZAF",
+      "title": "Gauteng e-tolls, and their cancellation after public resistance",
+      "claim": "South Africa operated Gauteng's e-toll system from December 2013 until the government withdrew the toll declaration effective 11 April 2024, ending urban e-toll charging after roughly 10.4 years.",
+      "metric": {
+        "name": "Years of e-toll collection before cancellation",
+        "value": 10.36,
+        "unit": "years",
+        "asOf": "2024-04-11"
+      },
+      "started": 2013,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Department of Transport, Government of South Africa",
+        "url": "https://www.gov.za/news/speeches/minister-sindisiwe-chikunga-media-briefing-e-tolls-10-apr-2024",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-02"
+      },
+      "limits": "The duration is calculated from the ministry's stated December 2013 start and 11 April 2024 end rather than published as a single statistic. Cancellation shows that government eventually changed a rule after resistance and a debt impasse, but it does not show how quickly the response was reached, the road programme's net value or the fiscal cost of replacing toll revenue.",
+      "pattern": {
+        "mechanism": "After motorists resisted the user-pay system and the funding model stalled, a joint transport, finance and provincial process replaced toll revenue with an alternative debt and maintenance arrangement and repurposed the gantries.",
+        "preconditions": [
+          "A legal authority able to withdraw a toll declaration while keeping the upgraded roads in the national network",
+          "A cross-government committee able to negotiate debt, maintenance and replacement funding",
+          "Enough public pressure and political attention to reopen a scheme that had already been implemented"
+        ],
+        "travelled": "Responsiveness travels when institutions can change a live programme without abandoning its underlying asset; delayed reversal still leaves a long tail of debt and trust costs."
+      }
+    },
+    {
+      "id": "mex-puntos-mexico-conectado",
+      "indicatorId": "adult_digital_skills",
+      "iso3": "MEX",
+      "title": "Puntos México Conectado, national digital learning centres",
+      "claim": "Mexico's communications ministry operated Puntos México Conectado centres in all 32 states, reporting more than 410,000 enrolled members and over 260,000 course enrolments by June 2017.",
+      "metric": {
+        "name": "Punto México Conectado enrolled members",
+        "value": 410000,
+        "unit": "members",
+        "asOf": "2017-06"
+      },
+      "secondMetric": {
+        "name": "Course enrolments reported by the network",
+        "value": 260000,
+        "unit": "enrolments",
+        "asOf": "2017-06"
+      },
+      "started": 2015,
+      "status": "concluded",
+      "source": {
+        "publisher": "Secretaría de Infraestructura, Comunicaciones y Transportes, Government of Mexico",
+        "url": "https://www.gob.mx/sict/prensa/firman-sct-y-samsung-convenio-de-colaboracion-para-impartir-cursos-de-realidad-virtual-en-puntos-mexico-conectado",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-02"
+      },
+      "limits": "The ministry reports registrations and course enrolments, not a comparable adult-skills test, completion rate or retained ability. The article is a programme announcement about a partnership and does not establish how many of the 410,000 members completed training or whether the network continued at that scale after 2017.",
+      "pattern": {
+        "mechanism": "The communications ministry put free digital classrooms in every state, then used equipment and curriculum partnerships with firms such as Samsung to turn connectivity points into places where people could practise new tools.",
+        "preconditions": [
+          "A national network of staffed community centres rather than connectivity alone",
+          "Public funding for access and instructors across all states",
+          "Private partners willing to provide current equipment and course material"
+        ],
+        "travelled": "Digital-learning hubs travel when the state supplies trusted physical access and partners refresh the content; registrations without completion data should not be mistaken for population-wide proficiency."
+      }
+    },
+    {
+      "id": "mex-jovenes-construyendo",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "MEX",
+      "title": "Jóvenes Construyendo el Futuro, government-workplace training",
+      "claim": "Mexico's labour ministry linked young people to more than half a million registered workplaces for on-the-job training, reporting 2.95 million beneficiaries nationwide after five years of Jóvenes Construyendo el Futuro in February 2024.",
+      "metric": {
+        "name": "Young people benefited",
+        "value": 2950000,
+        "unit": "people",
+        "asOf": "2024-02"
+      },
+      "secondMetric": {
+        "name": "Workplaces registered to host training",
+        "value": 500000,
+        "unit": "workplaces",
+        "asOf": "2024-02"
+      },
+      "started": 2019,
+      "status": "operating",
+      "source": {
+        "publisher": "Secretaría del Trabajo y Previsión Social, Government of Mexico",
+        "url": "https://www.gob.mx/stps/prensa/a-5-anos-de-jovenes-construyendo-el-futuro-se-ha-ganado-una-generacion-que-contribuira-a-un-mexico-mas-justo-y-equitativo?idiom=es",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-02"
+      },
+      "limits": "The ministry's total is a cumulative programme count and the workplace figure is rounded; neither shows unique completions, the quality of mentoring or whether trainees stayed employed. The government funds the stipend and insurance, so the record demonstrates a large public-private delivery interface rather than private financing of the programme.",
+      "pattern": {
+        "mechanism": "The labour ministry paid a stipend and social insurance while firms, shops and civil-society organisations supplied real work placements, with a shared digital platform matching young people to host workplaces.",
+        "preconditions": [
+          "A public payment and insurance system able to support people outside formal employment",
+          "A large enough network of employers willing to host and report trainees",
+          "A matching and inspection platform that gives the state visibility over placements"
+        ],
+        "travelled": "Workplace guarantees travel when the state underwrites the first months and employers provide the learning environment; the transferable component is the matching and verification loop, not the stipend size."
+      }
+    },
+    {
+      "id": "mex-cofepris-digital",
+      "indicatorId": "institutional_responsiveness",
+      "iso3": "MEX",
+      "title": "COFEPRIS digital regulatory procedures",
+      "claim": "Mexico's medicines and health-products regulator COFEPRIS completed 509,921 procedures entirely online with traceability by 5 September 2024, replacing paper hand-offs for a large share of its regulated users.",
+      "metric": {
+        "name": "Procedures completed fully digitally",
+        "value": 509921,
+        "unit": "procedures",
+        "asOf": "2024-09-05"
+      },
+      "started": 2023,
+      "status": "operating",
+      "source": {
+        "publisher": "Comisión Federal para la Protección contra Riesgos Sanitarios, Government of Mexico",
+        "url": "https://www.gob.mx/cofepris/articulos/mas-de-medio-millon-de-tramites-finalizados-de-manera-100-digital-en-cofepris",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-02"
+      },
+      "limits": "COFEPRIS publishes the number of completed digital procedures but not a before-and-after median processing time, rejection rate or compliance outcome. It is a regulator's own operational tally, and the article does not establish that every procedure type or every applicant could use the digital path.",
+      "pattern": {
+        "mechanism": "The regulator converted submission, tracking and completion into one traceable digital workflow, so applicants could see a case move without physically carrying documents between offices.",
+        "preconditions": [
+          "A regulator with authority to make its own procedural systems mandatory",
+          "Document and identity standards that can be checked electronically",
+          "A case-management system able to expose status without exposing protected data"
+        ],
+        "travelled": "Digital regulatory workflows travel when traceability is designed into the case record; moving a form online without a visible status trail leaves the old bottleneck intact."
+      }
+    },
+    {
+      "id": "mex-internet-para-todos",
+      "indicatorId": "large_project_delivery",
+      "iso3": "MEX",
+      "title": "CFE Telecomunicaciones e Internet para Todos",
+      "claim": "Mexico's state telecom operator CFE Telecomunicaciones e Internet para Todos installed 113,683 free public internet sites by September 2024, reaching 81.2 percent of its stated 140,000-site 2025 goal.",
+      "metric": {
+        "name": "Free public internet sites installed",
+        "value": 113683,
+        "unit": "sites",
+        "asOf": "2024-09"
+      },
+      "secondMetric": {
+        "name": "Share of the 2025 site goal reached",
+        "value": 81.2,
+        "unit": "% of goal",
+        "asOf": "2024-09"
+      },
+      "started": 2019,
+      "status": "operating",
+      "source": {
+        "publisher": "CFE Telecomunicaciones e Internet para Todos, Government of Mexico",
+        "url": "https://www.cfe.gob.mx/nuestraempresa/Informe%20de%20gestion%201824/EPS%20Telecomuniaciones%20e%20Internet%20para%20Todos.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-02"
+      },
+      "limits": "The management report is self-reported and counts installed sites, not uptime, geographic service quality, affordability after the free offer or actual use. The 81.2 percent figure is calculated from the report's installed count and stated goal, and the programme was still short of that goal at the reference date.",
+      "pattern": {
+        "mechanism": "A state-owned carrier combined satellite, fibre, copper and mobile contracts with public access points, using a federal operator to reach places commercial networks had not served.",
+        "preconditions": [
+          "A public operator able to aggregate several access technologies under one programme",
+          "Procurement and spectrum arrangements that reach isolated localities",
+          "Public facilities where a connection can be installed and maintained"
+        ],
+        "travelled": "Universal-access builds travel when a state carrier can fill commercial gaps, but the last fifth of a numerical rollout target is often the hardest and most expensive part."
+      }
+    },
+    {
+      "id": "mex-simulacro-nacional",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "MEX",
+      "title": "Simulacro Nacional 2024, a nationwide emergency exercise",
+      "claim": "Mexico's national civil-protection system coordinated a countrywide earthquake exercise in September 2024 in which 9,727,000 people participated, with alerts carried over 14,490 public loudspeakers and a multi-agency task force of 1.9 million personnel.",
+      "metric": {
+        "name": "Participants in the national drill",
+        "value": 9727000,
+        "unit": "people",
+        "asOf": "2024-09-19"
+      },
+      "secondMetric": {
+        "name": "Public loudspeakers activated",
+        "value": 14490,
+        "unit": "loudspeakers",
+        "asOf": "2024-09-19"
+      },
+      "started": 2024,
+      "status": "concluded",
+      "source": {
+        "publisher": "Secretaría de Seguridad y Protección Ciudadana, Government of Mexico",
+        "url": "https://www.gob.mx/sspc/prensa/participan-mas-de-9-millones-de-personas-en-simulacro-nacional-2024",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-02"
+      },
+      "limits": "A drill records mobilisation and protocol testing, not performance in a real disaster. Participation is self-reported by agencies and organisations, and the loudspeaker count covers only listed jurisdictions; the exercise used a hypothetical earthquake and cannot establish casualty reduction or recovery speed.",
+      "pattern": {
+        "mechanism": "The national protection agency set one scenario, aligned federal, state and municipal responders, pushed the same alert through public infrastructure and used the exercise to expose protocol gaps before a real shock.",
+        "preconditions": [
+          "A legal civil-protection system linking three government levels",
+          "An alert network and emergency command structure that can be tested at once",
+          "Schools, workplaces and households willing to participate in a common scenario"
+        ],
+        "travelled": "National drills travel when rehearsal is treated as an operational test rather than a ceremony; participation counts need follow-up on the failures found and fixed."
+      }
+    },
+    {
+      "id": "mex-prospera",
+      "indicatorId": "institutional_responsiveness",
+      "iso3": "MEX",
+      "title": "PROSPERA, and its replacement by a new scholarship authority",
+      "claim": "Mexico abolished the 2014 decree creating PROSPERA on 31 May 2019 and ordered its people, assets and budget to transfer to the new Benito Juárez scholarship coordination within 90 days.",
+      "metric": {
+        "name": "Legal transition window for PROSPERA assets and staff",
+        "value": 90,
+        "unit": "days",
+        "asOf": "2019-05-31"
+      },
+      "secondMetric": {
+        "name": "PROSPERA founding decree abrogated",
+        "value": 1,
+        "unit": "decree",
+        "asOf": "2019-05-31"
+      },
+      "started": 2014,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Diario Oficial de la Federación, Government of Mexico",
+        "url": "https://sidof.segob.gob.mx/notas/docFuente/5561693",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-02"
+      },
+      "limits": "The decree proves a formal policy and organisational change, not that the 90-day transfer happened on time or that beneficiaries experienced a seamless handover. It also does not compare PROSPERA's outcomes with the replacement scholarships, and the transition combined a programme redesign with a change in political administration.",
+      "pattern": {
+        "mechanism": "The executive used a new coordinating body and a single transition clause to move PROSPERA's staff, resources and education components into a different delivery model rather than preserve the old agency by inertia.",
+        "preconditions": [
+          "Central budget and administrative authority over the programme's people and funds",
+          "A replacement institution ready to receive the transferred functions",
+          "A legal instrument that can abrogate the old mandate and specify a deadline"
+        ],
+        "travelled": "Programme replacement travels when a government can name the receiving institution and fund the handover; a deadline on paper is not evidence that service continuity survived it."
+      }
+    },
+    {
+      "id": "mex-naicm",
+      "indicatorId": "large_project_delivery",
+      "iso3": "MEX",
+      "title": "New International Airport of Mexico, and its cancellation",
+      "claim": "Mexico cancelled the partially built Texcoco airport after construction and contracts had begun; the government's 2019 cancellation paper estimated a 100 billion peso cancellation cost, including 60 billion pesos already spent and 40 billion in non-recoverable commitments.",
+      "metric": {
+        "name": "Government estimate of cancellation cost",
+        "value": 100000000000,
+        "unit": "Mexican pesos",
+        "asOf": "2019-04-26"
+      },
+      "secondMetric": {
+        "name": "Construction expenditure already incurred at cancellation",
+        "value": 60000000000,
+        "unit": "Mexican pesos",
+        "asOf": "2019-04-26"
+      },
+      "started": 2014,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Grupo Aeroportuario de la Ciudad de México, Government of Mexico",
+        "url": "https://www.gacm.gob.mx/doc/fs_razones_canc_del_proy_del_na_en_texcoco.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-02"
+      },
+      "limits": "The 100 billion peso figure is the government's own estimate and excludes or treats differently the financing and legal costs that later audits and congressional analyses debated. Cancellation is evidence of a project running backwards and of a political decision to change course, not evidence that the replacement airport delivered better value or schedule performance.",
+      "pattern": {
+        "mechanism": "A new administration stopped a politically contested megaproject, terminated contracts and redirected the airport strategy to a different site, accepting sunk costs in exchange for a different delivery path.",
+        "preconditions": [
+          "Executive authority over the state airport holding company and the federal investment plan",
+          "A contracting and bond framework that permits negotiated termination",
+          "An alternative site and delivery institution available before the old project was abandoned"
+        ],
+        "travelled": "Stopping a megaproject travels as a governance option only when the government can disclose the sunk-cost trade-off and still offer a credible replacement; otherwise cancellation becomes delay with a bill attached."
+      }
+    },
+    {
+      "id": "tur-edevlet",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "TUR",
+      "title": "e-Devlet Gateway, a shared public-service front door",
+      "claim": "Türkiye's e-Devlet Gateway ended 2024 with 66,753,526 users, 8,309 online services and 1,080 participating institutions, including 127 private providers alongside central government, universities and municipalities.",
+      "metric": {
+        "name": "Registered e-Devlet Gateway users",
+        "value": 66753526,
+        "unit": "users",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Institutions offering services through the gateway",
+        "value": 1080,
+        "unit": "institutions",
+        "asOf": "2024"
+      },
+      "started": 2008,
+      "status": "operating",
+      "source": {
+        "publisher": "Digital Transformation Office / e-Devlet Gateway, Government of Türkiye",
+        "url": "https://www.turkiye.gov.tr/official-statistics-program?y=2024",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-03"
+      },
+      "limits": "User registrations and service listings measure reach and integration, not whether transactions complete, how long they take or whether private providers add value. The gateway's own statistics aggregate institutions with very different roles, and the 127 private providers are included as participants rather than evidence of joint financing or shared accountability.",
+      "pattern": {
+        "mechanism": "A central gateway gave public agencies, universities, municipalities and selected private providers one identity and service front door, while the state kept the common authentication and catalogue layer.",
+        "preconditions": [
+          "A national identity and authentication system that many institutions can trust",
+          "A centre-of-government operator able to set integration standards",
+          "Institutions with digital case systems mature enough to expose a service end to end"
+        ],
+        "travelled": "Shared portals travel when the common layer is more valuable than each institution's bespoke login; a catalogue of links without transaction completion only moves the queue online."
+      }
+    },
+    {
+      "id": "tur-marmaray",
+      "indicatorId": "large_project_delivery",
+      "iso3": "TUR",
+      "title": "Marmaray, the Bosphorus rail crossing",
+      "claim": "Türkiye opened the Marmaray rail tunnel between Europe and Asia in October 2013 and the transport ministry reported 196 million passenger journeys in 2024, with 1.226 billion cumulative journeys since opening.",
+      "metric": {
+        "name": "Marmaray passenger journeys in 2024",
+        "value": 196000000,
+        "unit": "journeys",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Cumulative passenger journeys since opening",
+        "value": 1226000000,
+        "unit": "journeys",
+        "asOf": "2024-12-20"
+      },
+      "started": 2004,
+      "status": "operating",
+      "source": {
+        "publisher": "Ministry of Transport and Infrastructure, Government of Türkiye",
+        "url": "https://www.uab.gov.tr/haberler/marmaraydan-yeni-rekor/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-03"
+      },
+      "limits": "Passenger journeys show that the completed line is used at scale, not whether construction met its original budget or schedule. The ministry's cumulative figure is a programme-reported total, and ridership also reflects Istanbul's population, fares and the network of connecting lines rather than the tunnel alone.",
+      "pattern": {
+        "mechanism": "The state assembled a cross-Bosphorus rail link, integrated it with existing suburban lines and then built ridership through frequent service rather than treating the tunnel as a stand-alone monument.",
+        "preconditions": [
+          "A metropolitan rail network on both sides of the crossing",
+          "Engineering and procurement capacity for a deep immersed-tube tunnel",
+          "An operating authority able to integrate timetables, fares and maintenance"
+        ],
+        "travelled": "A megaproject becomes capability when the operating system is funded and connected to everyday routes; a tunnel that opens without network integration will not produce this usage."
+      }
+    },
+    {
+      "id": "tur-afad-earthquake-recovery",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "TUR",
+      "title": "AFAD earthquake shelter and recovery operation",
+      "claim": "After the February 2023 earthquakes, Türkiye's AFAD established 350 tent cities providing shelter for 2.5 million people, moved about 700,000 people into 414 container cities before the first winter and delivered 46,000 permanent homes within the first year.",
+      "metric": {
+        "name": "People sheltered in post-earthquake tent cities",
+        "value": 2500000,
+        "unit": "people",
+        "asOf": "2023"
+      },
+      "secondMetric": {
+        "name": "Permanent disaster homes delivered within the first year",
+        "value": 46000,
+        "unit": "homes",
+        "asOf": "2024-02"
+      },
+      "started": 2023,
+      "status": "operating",
+      "source": {
+        "publisher": "Disaster and Emergency Management Presidency (AFAD), Government of Türkiye",
+        "url": "https://www.afad.gov.tr/kurumlar/afad.gov.tr/e_Kutuphane/Kurumsal-Raporlar/2023--AFAD-faaliyet-rapor/2023-idare-faaliyet-raporu_son_web.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-03"
+      },
+      "limits": "These are government-reported outputs after a catastrophe, so they demonstrate response and recovery logistics more directly than ex ante preparedness. Shelter and home counts do not show safety, quality, displacement duration or whether the response reached every affected household; recovery was still continuing when the report was published.",
+      "pattern": {
+        "mechanism": "AFAD combined a national incident command system with temporary settlements, cash support and a hand-off to permanent housing, keeping shelter, health, education and debris removal in one recovery operation.",
+        "preconditions": [
+          "A statutory national disaster agency with authority to coordinate ministries and provinces",
+          "Pre-existing logistics, procurement and temporary-settlement templates",
+          "Land, contractors and financing available for a second phase of permanent housing"
+        ],
+        "travelled": "Recovery systems travel when temporary shelter and permanent rebuilding are designed as one pipeline; a large first response can still leave a long tail if the hand-off is not funded."
+      }
+    },
+    {
+      "id": "tur-meb-lifelong-learning",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "TUR",
+      "title": "MEB public lifelong-learning network",
+      "claim": "Türkiye's Ministry of National Education reported 7,909,495 participants in public adult-learning programmes in 2024, including 6,493,700 attending in person and 1,415,795 using the HEMBA online platform; 5,305,688 earned a course certificate.",
+      "metric": {
+        "name": "Adult-learning participants",
+        "value": 7909495,
+        "unit": "participants",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Participants completing courses and eligible for a certificate",
+        "value": 5305688,
+        "unit": "participants",
+        "asOf": "2024"
+      },
+      "started": 2024,
+      "status": "operating",
+      "source": {
+        "publisher": "Directorate General for Lifelong Learning, Ministry of National Education, Government of Türkiye",
+        "url": "https://hbogm.meb.gov.tr/meb_iys_dosyalar/2025_05/05165645_izlemevedegerlendirmeraporu.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-03"
+      },
+      "limits": "The report counts course participations rather than unique adults, so repeat learners can appear more than once. Certificates indicate completion of a course, not labour-market value or durable skill acquisition, and the ministry's administrative data are not independently audited here.",
+      "pattern": {
+        "mechanism": "A dense network of public education centres offered locally requested courses while HEMBA moved a subset of the same provision online, allowing adult learners to enter through either a physical centre or a national platform.",
+        "preconditions": [
+          "A nationwide network of public adult-education centres",
+          "A course catalogue and credential system that can be updated centrally",
+          "Digital infrastructure and instructors able to support online as well as in-person delivery"
+        ],
+        "travelled": "Adult-learning networks travel when local access and a common credential reinforce one another; participation totals need unique-learner and outcome data before they become a capability score."
+      }
+    },
+    {
+      "id": "tur-fatih",
+      "indicatorId": "large_project_delivery",
+      "iso3": "TUR",
+      "title": "FATİH education technology infrastructure",
+      "claim": "Türkiye's Ministry of National Education reported that the FATİH project had installed 620,000 interactive classroom boards by 2023 and signed a five-year TÜRKSAT service contract covering about 2,000 schools.",
+      "metric": {
+        "name": "Interactive boards installed under FATİH",
+        "value": 620000,
+        "unit": "boards",
+        "asOf": "2023"
+      },
+      "secondMetric": {
+        "name": "Schools covered by the continuing service contract",
+        "value": 2000,
+        "unit": "schools",
+        "asOf": "2023"
+      },
+      "started": 2011,
+      "status": "operating",
+      "source": {
+        "publisher": "Ministry of National Education, Government of Türkiye",
+        "url": "https://www.meb.gov.tr/siniflarin-yuzde-99u-etkilesimli-tahtalarla-bulustu/haber/33062/tr",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-03"
+      },
+      "limits": "Equipment counts show installation, not whether teachers use the boards or whether learning improved. The ministry reports the hardware and contract itself, and the article does not give a national uptime, maintenance-cost or student-outcome series; the 2,000-school contract is a subset of the wider rollout.",
+      "pattern": {
+        "mechanism": "The education ministry treated classroom hardware, connectivity and content as one procurement programme, then used a national telecom operator for continuing access rather than ending delivery at installation.",
+        "preconditions": [
+          "A central school inventory and procurement authority",
+          "Electricity and connectivity in ordinary classrooms",
+          "A service provider able to maintain equipment across thousands of schools"
+        ],
+        "travelled": "Education technology projects travel when maintenance and teacher practice are funded alongside hardware; a board installed without a service contract quickly becomes furniture."
+      }
+    },
+    {
+      "id": "tur-yeka-res1",
+      "indicatorId": "large_project_delivery",
+      "iso3": "TUR",
+      "title": "YEKA RES-1 renewable tender, and its cancellation",
+      "claim": "Türkiye signed the 1,000 MWe YEKA RES-1 wind contract in February 2018 and completed its factory and R&D centre in 2019, but the Energy Ministry records that the contract was cancelled under a 2024 law.",
+      "metric": {
+        "name": "Wind capacity under the cancelled YEKA RES-1 contract",
+        "value": 1000,
+        "unit": "MWe",
+        "asOf": "2024-05-11"
+      },
+      "secondMetric": {
+        "name": "Factory and R&D-centre milestones completed before cancellation",
+        "value": 2,
+        "unit": "milestones",
+        "asOf": "2019"
+      },
+      "started": 2017,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Ministry of Energy and Natural Resources, Government of Türkiye",
+        "url": "https://www.enerji.gov.tr/eigm-yenilenebilir-enerji-uretim-faaliyetleri-yeka-modeli",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-03"
+      },
+      "limits": "The ministry page establishes the contract, capacity, factory and R&D milestones and the later cancellation, but it does not publish the cancellation cost, foregone generation or the reasons for the legislative change. Counting two completed facilities is a direct count of the page's milestones, not an independent audit of their operation; cancellation is evidence about delivery durability rather than renewable output.",
+      "pattern": {
+        "mechanism": "The state tied a renewable auction to domestic manufacturing and research obligations, then later used a statutory change to cancel the contract despite preparatory industrial facilities having been completed.",
+        "preconditions": [
+          "A ministry able to bundle generation rights with local-content obligations",
+          "Private consortia willing to build manufacturing and R&D capacity ahead of generation",
+          "Legislative authority able to reopen or cancel a signed concession"
+        ],
+        "travelled": "Industrial-policy tenders travel only when contract stability is part of the bargain; a local factory does not rescue a project whose legal foundation can be rewritten midstream."
+      }
+    },
+    {
+      "id": "tur-tubitak-1505",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "TUR",
+      "title": "TÜBİTAK 1505 university–industry support programme",
+      "claim": "TÜBİTAK's 1505 University–Industry Collaboration Support Programme received 116 project applications and began support for 59 projects in 2024, with 52 fellows working across the collaboration pipeline.",
+      "metric": {
+        "name": "Projects entering the support process",
+        "value": 59,
+        "unit": "projects",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Project applications received",
+        "value": 116,
+        "unit": "applications",
+        "asOf": "2024"
+      },
+      "started": 2024,
+      "status": "operating",
+      "source": {
+        "publisher": "Scientific and Technological Research Council of Türkiye (TÜBİTAK), 2024 activity report",
+        "url": "https://tubitak.gov.tr/sites/default/files/2025-03/TUBITAK_2024_Yili_Faaliyet_Raporu.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-09-03"
+      },
+      "limits": "Applications and support starts measure the interface, not the number of products commercialised or the durability of university–firm relationships. The activity report is an administrative source and does not identify the firms, project quality or completion rate; 52 fellows are a staffing input, not an outcome.",
+      "pattern": {
+        "mechanism": "TÜBİTAK made firms' needs the entry point for university research, with a public grant and named academic and customer organisations sharing the project rather than leaving technology transfer to informal contacts.",
+        "preconditions": [
+          "A public research fund able to contract with both universities and firms",
+          "Academic teams with usable research and firms willing to specify a problem",
+          "A review and reporting process that keeps the two sides accountable to one project plan"
+        ],
+        "travelled": "University–industry programmes travel when the firm is a real customer and the grant funds a jointly owned deliverable; a networking event without a project contract is not collaboration capacity."
+      }
     }
   ]
 }

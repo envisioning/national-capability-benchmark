@@ -5100,6 +5100,42 @@ overview is a clearer first reading than the national scope.
 
 ---
 
+## D111 — The network sidebar is the facet navigator
+
+*Recorded 2026-09-02. Extends D56, D82, D104 and D110.*
+
+**Choice.** The network sidebar exposes the institution directory plus one
+destination for each reusable facet in the feed: systems as clusters, levels
+as tags and jurisdictions as clusters. Each facet has an index and a detail
+page whose related-institutions list is joined from the same entity records.
+Facet cards show their related-institution count. The institution list keeps
+the exact multi-select filters and its `Group by` control, and the forcefield
+keeps its `Group by` control for changing the spatial arrangement. The sidebar
+therefore browses a facet, while the filters narrow a view and grouping changes
+how the current set is read.
+
+**Why.** Event-bff's Envisioning implementation treats clusters and tags as
+first-class navigation surfaces instead of hiding every useful dimension in a
+filter modal. NCB's feed already declared these relationships and the graph
+already knew how to cluster by them, but only systems were reachable from the
+sidebar. Giving the three facets stable entry points makes the same data
+legible as a directory, a tag index or a jurisdiction map without duplicating
+the ledger or inventing a second filtering model.
+
+**Cost.** The sidebar grows from three to five destinations and is therefore
+more dependent on the library's compact-menu and navigation-map behavior. A
+facet page is a browsing surface, not an independent dataset: its counts and
+related institutions change with the published feed, and it does not replace
+the exact filter grammar. The network's facet pages also inherit the mounted
+library's route and token contracts.
+
+**Overturned by.** Evidence that readers cannot distinguish browsing a facet
+from filtering the institution set, or that the sidebar becomes unusable at
+the supported breakpoints; or a supported Envisioning facet-navigation API
+that provides the same destinations without route configuration.
+
+---
+
 ## D112 — The hero's dot motif breathes, behind the reader's motion setting
 
 *Recorded 2026-09-02. Supersedes the still-only clause of D81. Keeps every

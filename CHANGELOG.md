@@ -80,6 +80,14 @@ for Coordination, Trust, Building and Shared Purpose.
   before. A reader whose system asks for reduced motion gets the still frame,
   and the motion stops while the band is off screen. See D112.
 
+## App 1.11.0 — 2026-09-02
+
+- **The institution network sidebar is a facet navigator.** Systems, levels and
+  jurisdictions now have their own index and detail destinations beside the
+  institution directory. Their cards show the number of institutions they
+  contain, while the institution list keeps exact filters and group-by controls.
+  See D111.
+
 ## App 1.10.0 — 2026-09-02
 
 - **The institution network has a readable scope.** Broad network views open

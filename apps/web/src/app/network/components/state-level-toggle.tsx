@@ -11,6 +11,14 @@ const LEVEL_QUERY_KEYS = [
   'criteria[level.id][]',
   'criteria[level.id]',
 ]
+const FACET_PAGES = new Set([
+  'systems',
+  'system',
+  'levels',
+  'level',
+  'jurisdictions',
+  'jurisdiction',
+])
 
 type Criteria = Record<string, unknown>
 
@@ -76,6 +84,7 @@ export function StateLevelToggle({
   institutionCount,
 }: StateLevelToggleProps) {
   const criteria = useAppStore((state) => state.ui.criteria)
+  const page = useAppStore((state) => state.ui.page)
   const currentId = useAppStore((state) => state.ui.id)
   const mode = useAppStore((state) => state.ui.mode)
   const isFilterOpen = useAppStore((state) => state.isFilterOpen)
@@ -88,13 +97,26 @@ export function StateLevelToggle({
     [availableLevelIds],
   )
   const currentLevels = includedLevels(criteria)
+  const serializedCurrentLevels = currentLevels?.join('|') ?? null
   const hasExplicitLevelFilter = criteria[LEVEL_CRITERIA_KEY] !== undefined
   const isStateVisible = currentLevels === null || currentLevels.includes(STATE_LEVEL_ID)
+  const isFacetPage = FACET_PAGES.has(page ?? '')
 
   // The overview has 282 state institutions against 75 federal ones. Keep a
   // broad opening view readable, but never override a level filter or an
   // institution-specific neighbourhood, where state relations are context.
+  // Facet pages are browse surfaces: remove only the overview's non-state
+  // default when navigation carries it along, then leave the full feed intact
+  // so a State card has its related institutions.
   useEffect(() => {
+    if (isFacetPage) {
+      if (currentLevels && sameSet(currentLevels, nonStateLevelIds)) {
+        defaultScopeApplied.current = true
+        writeLevelFilter(null, true)
+      }
+      return
+    }
+
     if (
       defaultScopeApplied.current ||
       currentId ||
@@ -106,7 +128,7 @@ export function StateLevelToggle({
 
     defaultScopeApplied.current = true
     writeLevelFilter(nonStateLevelIds, true)
-  }, [currentId, hasExplicitLevelFilter, nonStateLevelIds])
+  }, [currentId, hasExplicitLevelFilter, isFacetPage, nonStateLevelIds, serializedCurrentLevels])
 
   const toggleStateLayer = useCallback(() => {
     const allNonStateLevels = nonStateLevelIds
@@ -128,7 +150,7 @@ export function StateLevelToggle({
     writeLevelFilter([...new Set([...currentLevels, STATE_LEVEL_ID])])
   }, [currentLevels, isStateVisible, nonStateLevelIds])
 
-  if (stateCount === 0 || isFilterOpen || isNavigationOpen) return null
+  if (stateCount === 0 || isFacetPage || isFilterOpen || isNavigationOpen) return null
 
   const isPortuguese = lang === 'pt'
   const label = isPortuguese ? 'Esfera estadual' : 'State-level'
