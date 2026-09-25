@@ -529,6 +529,24 @@ from the repository root, after a one-time `vercel link` and `vercel pull`.
 The build runs the same changelog check and command as Vercel's. Check the
 live `/changelog` for the new version afterwards.
 
+When the token in `~/.npmrc` returns 401, use the `gh` token instead. It needs
+the `read:packages` scope once: `gh auth refresh -h github.com -s
+read:packages`, which MZ runs because it opens a browser. Then export a user
+config that exists only in memory, in the same shell as the install and the
+build:
+
+```
+export NPM_CONFIG_USERCONFIG=<(printf '@envisioning:registry=https://npm.pkg.github.com\n//npm.pkg.github.com/:_authToken=%s\n' "$(gh auth token)")
+pnpm install --frozen-lockfile
+vercel build --prod --scope ev-io
+```
+
+The token is never written to disk. Run `vercel deploy --prebuilt --prod
+--scope ev-io` from the repository root. Run from any other directory, the
+CLI asks which project to use; cancel it. Run `pnpm build` before `pnpm
+typecheck`: the typecheck reads `@ncb/core` from `dist`, and a stale `dist`
+reports exports as missing although the source has them.
+
 Data is committed, so a deploy ships whatever `data/out` held at the last commit.
 Refreshing the site means running `pnpm bench all`, committing the output and
 deploying again.
