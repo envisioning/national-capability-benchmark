@@ -1,8 +1,8 @@
 # Agenda de capacidades: França
 
-*Gerado em 2026-09-23*
+*Gerado em 2026-09-25*
 
-Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
+A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a confiança ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
 ## Onde a França está
 
@@ -55,7 +55,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 ## Dimensões para manter
 
-Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência utilizável. Ainda precisam ser acompanhadas.
+Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 75,9, confiança utilizável
 - Agência: 74,5, confiança utilizável
@@ -65,7 +65,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## Agenda de medição
 
-25 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+25 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -97,7 +97,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## O que os indicadores não veem sobre a França
 
-Entregas documentadas como evidência. Elas nunca afetam as notas ou a confiança.
+Entregas documentadas ligadas a indicadores ausentes. Elas não afetam as notas nem a confiança.
 
 - **Flamanville 3 EPR, and the erosion of nuclear new-build delivery** (Construção). France's Flamanville 3 EPR took about 16.5 years from construction beginning in September 2007 to completion in early 2024, and its commissioning was the country's first new nuclear reactor since Civaux 2 in 1999, a 25-year gap.
 - **Compte personnel de formation** (Aprendizagem). France's Compte personnel de formation generated 1,387,500 training starts in 2024, with 1,232,100 people entering a CPF-funded course through the national account and platform.

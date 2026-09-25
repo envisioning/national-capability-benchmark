@@ -1,8 +1,8 @@
 # Agenda de capacidades: Coreia do Sul
 
-*Gerado em 2026-09-23*
+*Gerado em 2026-09-25*
 
-Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
+A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a confiança ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
 ## Onde a Coreia do Sul está
 
@@ -55,7 +55,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 ## Dimensões para manter
 
-Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência utilizável. Ainda precisam ser acompanhadas.
+Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 82,1, confiança utilizável
 - Antecipação: 80,6, confiança utilizável
@@ -65,7 +65,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## Agenda de medição
 
-25 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+25 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -97,7 +97,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## O que a Coreia do Sul construiu e nenhum indicador conta
 
-Estas são mudanças institucionais documentadas em Coreia do Sul que o framework registra como evidência. Elas ficam ao lado da nota e não mudam a nota ou a confiança.
+Estas são mudanças institucionais documentadas em Coreia do Sul que o framework registra como evidência. Elas aparecem ao lado da nota e não mudam a nota nem a confiança.
 
 - **Economic Planning Board, long-run industrial coordination** (Coordenação). South Korea's Economic Planning Board operated from 1961 to 1994 as the government body responsible for economic development planning and budget planning before its functions moved through later finance ministries.
 - **Korea Internet and Security Agency, a consolidated digital authority** (Adaptação). Korea established the Korea Internet and Security Agency in July 2009 by integrating three predecessor organisations, giving the country one public body for internet development, security and international information technology cooperation.

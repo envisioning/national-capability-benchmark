@@ -1,8 +1,8 @@
 # Agenda de capacidades: Singapura
 
-*Gerado em 2026-09-23*
+*Gerado em 2026-09-25*
 
-Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
+A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a confiança ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
 ## Onde Singapura está
 
@@ -55,7 +55,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 ## Dimensões para manter
 
-Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência utilizável. Ainda precisam ser acompanhadas.
+Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
 - Agência: 84,4, confiança utilizável
 - Adaptação: 79, confiança utilizável
@@ -65,7 +65,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## Agenda de medição
 
-25 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+25 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -97,7 +97,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## O que Singapura construiu e nenhum indicador conta
 
-Estas são mudanças institucionais documentadas em Singapura que o framework registra como evidência. Elas ficam ao lado da nota e não mudam a nota ou a confiança.
+Estas são mudanças institucionais documentadas em Singapura que o framework registra como evidência. Elas aparecem ao lado da nota e não mudam a nota nem a confiança.
 
 - **SkillsFuture Credit** (Aprendizagem). Singapore gave every citizen aged 25 and over an individual training account in 2016 and keeps topping it up, and in 2024 260,000 Singaporeans spent credit on courses, up 35 percent on the year before.
 - **Housing and Development Board, public housing at scale** (Construção). Singapore set up the Housing and Development Board in 1960 to address a severe housing shortage, and it built more than 21,000 flats within its first three years.

@@ -1,8 +1,8 @@
 # Capability agenda: Japan
 
-*Generated 2026-09-23*
+*Generated 2026-09-25*
 
-The frame includes 53 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
+The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
 ## Where Japan stands
 
@@ -28,7 +28,7 @@ How effectively does the country acquire, distribute, and update knowledge?
 
 - Uses 5 observed indicators.
 - Highest usable scores: Finland 77.9, Australia 70.3, United Kingdom 68.6.
-- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); CAPES, federal postgraduate funding (Brazil); INEP, the standing education statistics institution (Brazil); Kartu Prakerja, a national lifelong-learning delivery system (Indonesia); Compte personnel de formation (France); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal).
+- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); CAPES, federal postgraduate funding (Brazil); INEP, the standing education statistics institution (Brazil); Kartu Prakerja, a national lifelong-learning delivery system (Indonesia); Compte personnel de formation (France); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (India); SETAs and workplace-based learning delivery (South Africa); MEB public lifelong-learning network (Turkey).
 - Missing indicators: Adult learning participation, Research citation impact.
 
 ## What to measure first
@@ -68,7 +68,7 @@ How effectively can independent actors organize around shared objectives?
 
 ## What to keep watching
 
-These scores are at least 50 with usable evidence. They still need watching.
+These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 86.1, confidence usable
 - Agency: 70.7, confidence usable
@@ -77,7 +77,7 @@ These scores are at least 50 with usable evidence. They still need watching.
 
 ## Missing data
 
-25 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+25 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -109,7 +109,7 @@ These scores are at least 50 with usable evidence. They still need watching.
 
 ## What Japan built that no indicator counts
 
-These are documented institutional changes in Japan that the framework files as evidence. They sit beside the score and do not change it or its confidence.
+These are documented institutional changes in Japan that the framework records as evidence. They appear beside the score and do not change it or its confidence.
 
 - **My Number Card, a national identity rail extended into services** (Adaptability). By July 2024 Japan reported 93.08 million My Number Cards held, about 75% of the population; 73.71 million had valid health-insurance-card registrations in June 2024, while 566 businesses used the public-key identity infrastructure.
 - **GIGA School, one learning device per student** (Building). Japan's MEXT GIGA School programme reached a one-device-per-student environment in 1,810 of 1,812 local school authorities (99.9%) by the end of fiscal 2022, with the remaining two scheduled to finish during fiscal 2023.

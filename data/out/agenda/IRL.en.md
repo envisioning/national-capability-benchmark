@@ -1,8 +1,8 @@
 # Capability agenda: Ireland
 
-*Generated 2026-09-23*
+*Generated 2026-09-25*
 
-The frame includes 53 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
+The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
 ## Where Ireland stands
 
@@ -55,7 +55,7 @@ How effectively can independent actors organize around shared objectives?
 
 ## What to keep watching
 
-These scores are at least 50 with usable evidence. They still need watching.
+These dimensions score at least 50 with usable evidence.
 
 - Building: 75.3, confidence usable
 - Adaptability: 73, confidence usable
@@ -65,7 +65,7 @@ These scores are at least 50 with usable evidence. They still need watching.
 
 ## Missing data
 
-25 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+25 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -97,7 +97,7 @@ These scores are at least 50 with usable evidence. They still need watching.
 
 ## What Ireland built that no indicator counts
 
-These are documented institutional changes in Ireland that the framework files as evidence. They sit beside the score and do not change it or its confidence.
+These are documented institutional changes in Ireland that the framework records as evidence. They appear beside the score and do not change it or its confidence.
 
 - **MyGovID single sign-on for public services** (Adaptability). Ireland built MyGovID as a reusable online identity for welfare, tax, transport, education and childcare services; the 2025 Digital Decade country report records more than 2.7 million verified accounts in December 2024, close to 65% of adults.
 - **National Broadband Plan rural fibre rollout** (Coordination). Ireland's National Broadband Plan combined commercial investment with a state intervention contract for rural areas covering more than 560,000 premises; by October 2024 the government reported over 102,600 premises connected to the National Broadband Ireland network.

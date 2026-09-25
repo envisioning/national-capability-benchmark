@@ -1,8 +1,8 @@
 # Agenda de capacidades: Japão
 
-*Gerado em 2026-09-23*
+*Gerado em 2026-09-25*
 
-Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
+A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a confiança ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
 ## Onde o Japão está
 
@@ -20,7 +20,7 @@ Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 
 ## Dimensões para elevar
 
-Da nota mais baixa para a mais alta. Só entram dimensões com evidência utilizável. Evidência fraca vai para a próxima seção.
+Estas são as notas mais baixas com evidência utilizável. A evidência fraca aparece abaixo.
 
 ### Aprendizagem: 47,6, confiança utilizável
 
@@ -28,7 +28,7 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,6.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal).
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (Índia); SETAs and workplace-based learning delivery (África do Sul); MEB public lifelong-learning network (Turquia).
 - Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ## Dimensões para medir primeiro
@@ -68,7 +68,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 ## Dimensões para manter
 
-Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência utilizável. Ainda precisam ser acompanhadas.
+Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 86,1, confiança utilizável
 - Agência: 70,7, confiança utilizável
@@ -77,7 +77,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## Agenda de medição
 
-25 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+25 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -109,7 +109,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## O que o Japão construiu e nenhum indicador conta
 
-Estas são mudanças institucionais documentadas em Japão que o framework registra como evidência. Elas ficam ao lado da nota e não mudam a nota ou a confiança.
+Estas são mudanças institucionais documentadas em Japão que o framework registra como evidência. Elas aparecem ao lado da nota e não mudam a nota nem a confiança.
 
 - **My Number Card, a national identity rail extended into services** (Adaptação). By July 2024 Japan reported 93.08 million My Number Cards held, about 75% of the population; 73.71 million had valid health-insurance-card registrations in June 2024, while 566 businesses used the public-key identity infrastructure.
 - **GIGA School, one learning device per student** (Construção). Japan's MEXT GIGA School programme reached a one-device-per-student environment in 1,810 of 1,812 local school authorities (99.9%) by the end of fiscal 2022, with the remaining two scheduled to finish during fiscal 2023.

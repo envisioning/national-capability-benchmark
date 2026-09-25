@@ -1,8 +1,8 @@
 # Capability agenda: Malaysia
 
-*Generated 2026-09-23*
+*Generated 2026-09-25*
 
-The frame includes 53 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
+The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
 ## Where Malaysia stands
 
@@ -28,7 +28,7 @@ How effectively does the country acquire, distribute, and update knowledge?
 
 - Uses 5 observed indicators.
 - Highest usable scores: Finland 77.9, Australia 70.3, United Kingdom 68.6.
-- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); CAPES, federal postgraduate funding (Brazil); INEP, the standing education statistics institution (Brazil); Kartu Prakerja, a national lifelong-learning delivery system (Indonesia); Compte personnel de formation (France); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal).
+- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); CAPES, federal postgraduate funding (Brazil); INEP, the standing education statistics institution (Brazil); Kartu Prakerja, a national lifelong-learning delivery system (Indonesia); Compte personnel de formation (France); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (India); SETAs and workplace-based learning delivery (South Africa); MEB public lifelong-learning network (Turkey).
 - Missing indicators: Adult learning participation, Research citation impact.
 
 ### Anticipation: 41.6, confidence usable
@@ -37,7 +37,7 @@ How capable is the country of identifying and preparing for emerging change?
 
 - Uses 5 observed indicators.
 - Highest usable scores: Sweden 83.5, Finland 82, Switzerland 81.1.
-- Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal).
+- Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (South Africa).
 - Missing indicators: Government foresight capacity, Long-horizon research share.
 
 ## What to measure first
@@ -77,7 +77,7 @@ How effectively can independent actors organize around shared objectives?
 
 ## What to keep watching
 
-These scores are at least 50 with usable evidence. They still need watching.
+These dimensions score at least 50 with usable evidence.
 
 - Agency: 65, confidence usable
 - Adaptability: 60, confidence usable
@@ -85,7 +85,7 @@ These scores are at least 50 with usable evidence. They still need watching.
 
 ## Missing data
 
-25 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+25 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -117,7 +117,7 @@ These scores are at least 50 with usable evidence. They still need watching.
 
 ## What Malaysia built that no indicator counts
 
-These are documented institutional changes in Malaysia that the framework files as evidence. They sit beside the score and do not change it or its confidence.
+These are documented institutional changes in Malaysia that the framework records as evidence. They appear beside the score and do not change it or its confidence.
 
 - **MySejahtera and the national COVID-19 immunisation programme** (Adaptability). Malaysia's national COVID-19 immunisation programme had administered 57,119,777 doses by 31 December 2021, while the MySejahtera application was used to collect 974,134 adverse-event responses for vaccine safety monitoring.
 - **MRT Putrajaya Line** (Building). Malaysia completed and opened the 57.7-kilometre MRT Putrajaya Line in two phases, with 36 operational stations serving a corridor of about two million people; full operations began on 16 March 2023.

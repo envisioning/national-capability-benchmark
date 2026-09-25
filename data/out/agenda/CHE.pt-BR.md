@@ -1,8 +1,8 @@
 # Agenda de capacidades: Suíça
 
-*Gerado em 2026-09-23*
+*Gerado em 2026-09-25*
 
-Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
+A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a confiança ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
 ## Onde a Suíça está
 
@@ -55,7 +55,7 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 
 ## Dimensões para manter
 
-Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência utilizável. Ainda precisam ser acompanhadas.
+Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 88,5, confiança utilizável
 - Antecipação: 81,1, confiança utilizável
@@ -65,7 +65,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## Agenda de medição
 
-25 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+25 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -97,7 +97,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## O que os indicadores não veem sobre a Suíça
 
-Entregas documentadas como evidência. Elas nunca afetam as notas ou a confiança.
+Entregas documentadas ligadas a indicadores ausentes. Elas não afetam as notas nem a confiança.
 
 - **Dual-track vocational training** (Coordenação). Switzerland runs most upper-secondary education through firms: of 218,259 students enrolled in vocational education and training in 2020, 90.6 percent, 197,782, were apprentices trained inside companies under federal law.
 

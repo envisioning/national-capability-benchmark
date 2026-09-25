@@ -1,8 +1,8 @@
 # Agenda de capacidades: China
 
-*Gerado em 2026-09-23*
+*Gerado em 2026-09-25*
 
-Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
+A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a confiança ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
 ## Onde a China está
 
@@ -20,7 +20,7 @@ Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 
 ## Dimensões para elevar
 
-Da nota mais baixa para a mais alta. Só entram dimensões com evidência utilizável. Evidência fraca vai para a próxima seção.
+Estas são as notas mais baixas com evidência utilizável. A evidência fraca aparece abaixo.
 
 ### Antecipação: 35,1, confiança utilizável
 
@@ -28,7 +28,7 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Suécia 83,5, Finlândia 82, Suíça 81,1.
-- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japão); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal).
+- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japão); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (África do Sul).
 - Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
 ## Dimensões para medir primeiro
@@ -68,7 +68,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 ## Dimensões para manter
 
-Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência utilizável. Ainda precisam ser acompanhadas.
+Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
 - Agência: 86,1, confiança utilizável
 - Adaptação: 81,4, confiança utilizável
@@ -77,7 +77,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## Agenda de medição
 
-25 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+25 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -109,7 +109,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## O que os indicadores não veem sobre a China
 
-Entregas documentadas como evidência. Elas nunca afetam as notas ou a confiança.
+Entregas documentadas ligadas a indicadores ausentes. Elas não afetam as notas nem a confiança.
 
 - **National basic-research funding allocation** (Antecipação). China's National Bureau of Statistics, Ministry of Science and Technology and Ministry of Finance reported 225.91 billion yuan in basic-research expenditure in 2023, equal to 6.77% of national R&D spending.
 

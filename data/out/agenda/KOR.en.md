@@ -1,8 +1,8 @@
 # Capability agenda: South Korea
 
-*Generated 2026-09-23*
+*Generated 2026-09-25*
 
-The frame includes 53 countries. Each dimension runs from 0 to 100, with no overall ranking. Confidence sits beside each score. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before quoting one.
+The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
 ## Where South Korea stands
 
@@ -55,7 +55,7 @@ How effectively can independent actors organize around shared objectives?
 
 ## What to keep watching
 
-These scores are at least 50 with usable evidence. They still need watching.
+These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 82.1, confidence usable
 - Anticipation: 80.6, confidence usable
@@ -65,7 +65,7 @@ These scores are at least 50 with usable evidence. They still need watching.
 
 ## Missing data
 
-25 requested indicators have no comparable dataset. Each lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+25 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -97,7 +97,7 @@ These scores are at least 50 with usable evidence. They still need watching.
 
 ## What South Korea built that no indicator counts
 
-These are documented institutional changes in South Korea that the framework files as evidence. They sit beside the score and do not change it or its confidence.
+These are documented institutional changes in South Korea that the framework records as evidence. They appear beside the score and do not change it or its confidence.
 
 - **Economic Planning Board, long-run industrial coordination** (Coordination). South Korea's Economic Planning Board operated from 1961 to 1994 as the government body responsible for economic development planning and budget planning before its functions moved through later finance ministries.
 - **Korea Internet and Security Agency, a consolidated digital authority** (Adaptability). Korea established the Korea Internet and Security Agency in July 2009 by integrating three predecessor organisations, giving the country one public body for internet development, security and international information technology cooperation.

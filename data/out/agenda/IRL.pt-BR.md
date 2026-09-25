@@ -1,8 +1,8 @@
 # Agenda de capacidades: Irlanda
 
-*Gerado em 2026-09-23*
+*Gerado em 2026-09-25*
 
-Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
+A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a confiança ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
 ## Onde a Irlanda está
 
@@ -55,7 +55,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 ## Dimensões para manter
 
-Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência utilizável. Ainda precisam ser acompanhadas.
+Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
 - Construção: 75,3, confiança utilizável
 - Adaptação: 73, confiança utilizável
@@ -65,7 +65,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## Agenda de medição
 
-25 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+25 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -97,7 +97,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## O que a Irlanda construiu e nenhum indicador conta
 
-Estas são mudanças institucionais documentadas em Irlanda que o framework registra como evidência. Elas ficam ao lado da nota e não mudam a nota ou a confiança.
+Estas são mudanças institucionais documentadas em Irlanda que o framework registra como evidência. Elas aparecem ao lado da nota e não mudam a nota nem a confiança.
 
 - **MyGovID single sign-on for public services** (Adaptação). Ireland built MyGovID as a reusable online identity for welfare, tax, transport, education and childcare services; the 2025 Digital Decade country report records more than 2.7 million verified accounts in December 2024, close to 65% of adults.
 - **National Broadband Plan rural fibre rollout** (Coordenação). Ireland's National Broadband Plan combined commercial investment with a state intervention contract for rural areas covering more than 560,000 premises; by October 2024 the government reported over 102,600 premises connected to the National Broadband Ireland network.

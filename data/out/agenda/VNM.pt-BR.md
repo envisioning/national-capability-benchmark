@@ -1,8 +1,8 @@
 # Agenda de capacidades: Vietnã
 
-*Gerado em 2026-09-23*
+*Gerado em 2026-09-25*
 
-Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
+A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a confiança ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
 ## Onde o Vietnã está
 
@@ -20,7 +20,7 @@ Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 
 ## Dimensões para elevar
 
-Da nota mais baixa para a mais alta. Só entram dimensões com evidência utilizável. Evidência fraca vai para a próxima seção.
+Estas são as notas mais baixas com evidência utilizável. A evidência fraca aparece abaixo.
 
 ### Antecipação: 27,4, confiança utilizável
 
@@ -28,7 +28,7 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Suécia 83,5, Finlândia 82, Suíça 81,1.
-- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japão); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal).
+- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japão); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (África do Sul).
 - Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
 ### Aprendizagem: 29, confiança utilizável
@@ -37,7 +37,7 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,6.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal).
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (Índia); SETAs and workplace-based learning delivery (África do Sul); MEB public lifelong-learning network (Turquia).
 - Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ## Dimensões para medir primeiro
@@ -77,7 +77,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 ## Dimensões para manter
 
-Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência utilizável. Ainda precisam ser acompanhadas.
+Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 75,1, confiança utilizável
 - Agência: 58,7, confiança utilizável
@@ -85,7 +85,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## Agenda de medição
 
-25 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+25 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -117,7 +117,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## O que o Vietnã construiu e nenhum indicador conta
 
-Estas são mudanças institucionais documentadas em Vietnã que o framework registra como evidência. Elas ficam ao lado da nota e não mudam a nota ou a confiança.
+Estas são mudanças institucionais documentadas em Vietnã que o framework registra como evidência. Elas aparecem ao lado da nota e não mudam a nota nem a confiança.
 
 - **VNeID national electronic identity** (Adaptação). Vietnam's Ministry of Public Security reported more than 70.2 million electronic-identification accounts issued by January 2024, with VNeID designed to replace paper documents and authenticate public and private services against the national population database.
 - **Vietnam Social Security health-insurance expansion** (Adaptação). Vietnam Social Security reported 95.523 million people enrolled in health insurance in 2024, covering 94.29% of the population and approaching the country's 95% universal-coverage target for 2025.

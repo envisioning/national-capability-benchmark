@@ -1,8 +1,8 @@
 # Agenda de capacidades: Estados Unidos
 
-*Gerado em 2026-09-23*
+*Gerado em 2026-09-25*
 
-Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
+A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a confiança ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
 ## Onde os Estados Unidos está
 
@@ -20,7 +20,7 @@ Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 
 ## Dimensões para elevar
 
-Da nota mais baixa para a mais alta. Só entram dimensões com evidência utilizável. Evidência fraca vai para a próxima seção.
+Estas são as notas mais baixas com evidência utilizável. A evidência fraca aparece abaixo.
 
 ### Aprendizagem: 49,8, confiança utilizável
 
@@ -28,7 +28,7 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,6.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal).
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (Índia); SETAs and workplace-based learning delivery (África do Sul); MEB public lifelong-learning network (Turquia).
 - Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ## Dimensões para medir primeiro
@@ -68,7 +68,7 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 
 ## Dimensões para manter
 
-Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência utilizável. Ainda precisam ser acompanhadas.
+Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
 - Agência: 92,5, confiança utilizável
 - Adaptação: 76,1, confiança utilizável
@@ -77,7 +77,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## Agenda de medição
 
-25 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+25 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -109,7 +109,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## O que os indicadores não veem sobre os Estados Unidos
 
-Entregas documentadas como evidência. Elas nunca afetam as notas ou a confiança.
+Entregas documentadas ligadas a indicadores ausentes. Elas não afetam as notas nem a confiança.
 
 - **Measles elimination, and its erosion** (Construção). The United States eliminated endemic measles transmission by 2000 through school-entry vaccination requirements, and falling coverage brought 2,777 confirmed cases by August 2026, the most since 1991, against 285 in all of 2024.
 - **Federal funding gaps and the 2019 shutdown** (Propósito compartilhado). The Congressional Research Service records 20 federal funding-gap shutdowns with at least one full day between FY1977 and FY2019, including the 35-day partial shutdown from 21 December 2018 to 25 January 2019, the longest in the period it surveys.

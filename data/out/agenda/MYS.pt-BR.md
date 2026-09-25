@@ -1,8 +1,8 @@
 # Agenda de capacidades: Malásia
 
-*Gerado em 2026-09-23*
+*Gerado em 2026-09-25*
 
-Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem ranking geral. A confiança aparece ao lado de cada nota. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma.
+A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a confiança ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
 ## Onde a Malásia está
 
@@ -20,7 +20,7 @@ Os 53 países definem a régua. As notas vão de 0 a 100 por dimensão, sem rank
 
 ## Dimensões para elevar
 
-Da nota mais baixa para a mais alta. Só entram dimensões com evidência utilizável. Evidência fraca vai para a próxima seção.
+Estas são as notas mais baixas com evidência utilizável. A evidência fraca aparece abaixo.
 
 ### Aprendizagem: 36,5, confiança utilizável
 
@@ -28,7 +28,7 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,6.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal).
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (Índia); SETAs and workplace-based learning delivery (África do Sul); MEB public lifelong-learning network (Turquia).
 - Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ### Antecipação: 41,6, confiança utilizável
@@ -37,7 +37,7 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 
 - Baseada em 5 indicadores observados.
 - Maiores notas utilizáveis: Suécia 83,5, Finlândia 82, Suíça 81,1.
-- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japão); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal).
+- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japão); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (África do Sul).
 - Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
 ## Dimensões para medir primeiro
@@ -77,7 +77,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 ## Dimensões para manter
 
-Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência utilizável. Ainda precisam ser acompanhadas.
+Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
 - Agência: 65, confiança utilizável
 - Adaptação: 60, confiança utilizável
@@ -85,7 +85,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## Agenda de medição
 
-25 indicadores pedidos não têm uma base comparável adequada. Cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+25 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -117,7 +117,7 @@ Da nota mais alta para a mais baixa. Estas pontuam pelo menos 50 com evidência 
 
 ## O que a Malásia construiu e nenhum indicador conta
 
-Estas são mudanças institucionais documentadas em Malásia que o framework registra como evidência. Elas ficam ao lado da nota e não mudam a nota ou a confiança.
+Estas são mudanças institucionais documentadas em Malásia que o framework registra como evidência. Elas aparecem ao lado da nota e não mudam a nota nem a confiança.
 
 - **MySejahtera and the national COVID-19 immunisation programme** (Adaptação). Malaysia's national COVID-19 immunisation programme had administered 57,119,777 doses by 31 December 2021, while the MySejahtera application was used to collect 974,134 adverse-event responses for vaccine safety monitoring.
 - **MRT Putrajaya Line** (Construção). Malaysia completed and opened the 57.7-kilometre MRT Putrajaya Line in two phases, with 36 operational stations serving a corridor of about two million people; full operations began on 16 March 2023.
