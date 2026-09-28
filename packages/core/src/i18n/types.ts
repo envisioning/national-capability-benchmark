@@ -65,8 +65,6 @@ export type AgendaStrings = {
   historyCaveat: string
   /** {dimension} {baseYear} {currentYear} */
   historyChartAria: string
-  /** {dimension} {year} {score} */
-  historyPointAria: string
   historyAgendaItems: string
   /** {dimension} {baseYear} {currentYear} */
   historyEventTimelineAria: string

@@ -321,7 +321,6 @@ export const PT_BR: Lexicon = {
     historyCaveat:
       'Os valores históricos usam a régua atual de 0 a 100 e um conjunto pareado de indicadores. Eles mostram movimento na evidência disponível, não uma nota geral de desenvolvimento. Os itens datados da agenda aparecem em uma linha do tempo separada e não alteram a nota. Uma linha ausente significa que a evidência não sustenta uma tendência comparável para aquela dimensão.',
     historyChartAria: 'Histórico de {dimension} de {baseYear} a {currentYear}',
-    historyPointAria: '{dimension}: {score} em {year}',
     historyAgendaItems: 'Itens da agenda nesta linha do tempo',
     historyEventTimelineAria: 'Itens da agenda de {dimension} de {baseYear} a {currentYear}',
     historyEventAria: '{title}, item da agenda iniciado em {year}',

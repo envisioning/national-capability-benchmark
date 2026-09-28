@@ -43,7 +43,6 @@ export type AgendaHistoryLabels = {
   readoutClamped: string
   caveat: string
   chartAria: string
-  pointAria: string
   agendaItems: string
   eventTimelineAria: string
   eventAria: string

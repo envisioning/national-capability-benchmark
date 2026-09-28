@@ -65,7 +65,6 @@ export const EN: Lexicon = {
     historyCaveat:
       'Historical values use today’s frame from 0 to 100 and a matched basket of indicators. They show movement in the available evidence, not an overall development score. Dated agenda items appear on a separate timeline and do not change the score. A missing line means the evidence does not support a comparable trend for that dimension.',
     historyChartAria: '{dimension} history from {baseYear} to {currentYear}',
-    historyPointAria: '{dimension}: {score} in {year}',
     historyAgendaItems: 'Agenda items on this timeline',
     historyEventTimelineAria: '{dimension} agenda items from {baseYear} to {currentYear}',
     historyEventAria: '{title}, agenda item started in {year}',

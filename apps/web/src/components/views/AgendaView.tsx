@@ -225,7 +225,6 @@ export function AgendaView({
             readoutClamped: s.historyReadoutClamped,
             caveat: s.historyCaveat,
             chartAria: s.historyChartAria,
-            pointAria: s.historyPointAria,
             agendaItems: s.historyAgendaItems,
             eventTimelineAria: s.historyEventTimelineAria,
             eventAria: s.historyEventAria,
