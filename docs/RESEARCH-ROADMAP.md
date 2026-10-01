@@ -9,6 +9,78 @@ The roadmap is an execution document. Methodological choices still belong in
 deliveries belong in `data/evidence`. If this file conflicts with a decision,
 the decision wins and this file must be updated.
 
+## What the research is for
+
+The benchmark makes one claim: a country's capability is separate from its
+wealth and can be observed (see `docs/WHY.md`). Research serves that claim
+through two objectives. Every task names the objective it moves, and every
+handoff reports the move. D117 sets this rule.
+
+**O1. Informative.** Every dimension carries enough evidence to read. Target: mean
+confidence of at least 0.40 in every dimension.
+
+**O2. Separable from wealth.** No dimension is a disguised income ranking.
+Target: no dimension above r = 0.70 against log GDP per capita, the threshold
+the probe already applies to a single series.
+
+**Guardrail.** Confidence must not come to track wealth. Today it barely does
+(r = 0.34 across 51 countries; the 10 poorest average 0.40 and the 10 richest
+0.42). A source that only covers rich countries raises O1 and breaks this.
+
+### Where the objectives stand
+
+Dataset 6.1.2. Recompute from `data/out/diagnostics.json` and
+`data/out/index.json` after any rescore; never carry these figures forward by
+hand.
+
+| Dimension | Mean confidence | Observed rows (mean) | r with log GDP | Misses |
+| --- | ---: | ---: | ---: | --- |
+| Trust | 0.21 | 1.7 | 0.61 (n 36) | O1 |
+| Experimentation | 0.23 | 2.6 | 0.62 | O1 |
+| Shared purpose | 0.26 | 1.9 | 0.46 | O1 |
+| Coordination | 0.36 | 2.8 | 0.56 | O1 |
+| Adaptability | 0.47 | 4.0 | 0.82 | O2 |
+| Learning | 0.50 | 4.9 | 0.73 | O2 |
+| Agency | 0.58 | 5.8 | 0.85 | O2 |
+| Anticipation | 0.60 | 4.9 | 0.87 | O2 |
+| Building | 0.60 | 4.9 | 0.64 | |
+
+The O2 failures have one visible cause. The rows that carry the correlation are
+mostly diffusion stocks, measurement class `I`: secure internet servers
+(r = 0.90), internet users (0.88), broadband subscriptions (0.85), with the
+human capital index (0.88) and tertiary enrolment (0.81) in Learning. A level of
+adoption mostly records what a country could afford. O2 work therefore looks for class `C` or `O`
+rows, and rates of change or performance relative to resources, that observe
+the same capability without the stock.
+
+## The queue
+
+Ordered by expected gain on the objectives per session, cheapest proven route
+first. A work package that passes triage runs to its gate; one that fails
+triage costs one paragraph.
+
+| # | Work package | Moves | Route | First output |
+| --- | --- | --- | --- | --- |
+| Q1 | V-Dem sweep | O1: Trust, Coordination, Shared purpose, Anticipation | The pinned V-Dem adapter (COORD-1) already covers 53 / 53 | Triage table of codebook variables against each dimension's gaps |
+| Q2 | EVS/WVS sweep beyond A165 | O1: Shared purpose, Trust | The Joint EVS/WVS adapter (TRUST-1) | Triage table of behavioural items (membership, volunteering, participation) |
+| Q3 | Wealth-link decomposition | O2: Anticipation, Agency, Adaptability, Learning | Existing diagnostics, then World Bank, ILOSTAT, UNCTAD | Per dimension: which rows carry the GDP link, and a non-stock candidate for each |
+| Q4 | IDEA voter turnout | O1: Shared purpose | IDEA open data, full frame | Triage note, including the compulsory-voting rule |
+| Q5 | OpenAlex research impact | O1 and O2: Experimentation | OpenAlex API, full frame | Triage note: field-normalised or relative measure only, never volume |
+| Q6 | Full Delphi rerun (TRUST-5) | Reading, not measurement | Needs `AI_GATEWAY_API_KEY` | After Q1 to Q3 change the dataset |
+
+Parked, with the reason:
+
+- **TRUST-1 pooling** (DEU, GBR, NLD): needs a GESIS account; every `gesis.org`
+  host answered 403 from a cloud session.
+- **TRUST-2 court clearance**: rejected at the coverage screen, 13 of 53.
+  Reopen only if a harmonised non-European series appears.
+- **Cross-agency delivery** (Coordination) and **large-project delivery**
+  (Building): no full-frame source family exists. Reopen if Q1 finds one.
+- **PISA or PIAAC** (Learning): coverage skips much of the frame and would feed
+  the guardrail. Reopen only as part of Q3.
+- **SUBNATIONAL-1**: waits on a construct decision (plan fidelity,
+  reallocation or execution), not on research.
+
 ## Read before starting
 
 An agent taking a research task reads these files in this order:
@@ -65,10 +137,10 @@ An agent should leave a clear artifact at every stage.
 
 ### 1. Select the research question
 
-Choose a dimension and a declared gap. Start with the gap that addresses the
-largest known measurement failure or the weakest family balance. Do not choose
-a country because it has an interesting story. The same source must be tested
-against the full current country set.
+Take the next item in the queue above, or name the objective a new item moves
+and the dimension it moves it in. Do not choose a country because it has an
+interesting story. The same source must be tested against the full current
+country set.
 
 Write a short source memo before implementation. It must state:
 
@@ -81,7 +153,26 @@ Write a short source memo before implementation. It must state:
 - whether the source is a candidate for scoring, a behavioural check, or an
   evidence record only.
 
-### 2. Test the candidate
+### 2. Triage at the desk
+
+Before fetching a single value, answer four questions from the publisher's own
+documentation. One paragraph per candidate is enough, and a table when a sweep
+covers many.
+
+1. **Ceiling.** How many of the 53 does the publisher list, at the registry's
+   scope? Below 27 the candidate is dead. Below 40 it needs a reason.
+2. **Spread.** Will the values separate countries, or do they sit near a fixed
+   point the way a clearance ratio sits near 100?
+3. **Wealth.** Is it a stock that money buys? Prefer class `C` or `O`, and rates
+   or relative measures, to levels of adoption or spending.
+4. **Cost.** Is there an adapter, or a publisher that serves the whole frame in
+   one file? A row assembled from 53 national yearbooks is a harmonisation this
+   project would author, and the answer is no unless the gain is large.
+
+A candidate that fails a question stops there, with the paragraph filed in the
+dimension's research folder. Only a pass earns a value preflight.
+
+### 3. Test the candidate
 
 For World Bank candidates:
 
@@ -101,7 +192,7 @@ country coverage, year coverage, value spread, missingness, harmonisation
 rules, source tier and the GDP comparison plan. Do not call a non-World Bank
 candidate "tested" merely because a publisher page exists.
 
-### 3. Decide the measurement treatment
+### 4. Decide the measurement treatment
 
 The candidate must be assigned one treatment:
 
@@ -117,7 +208,7 @@ If the choice changes a methodological rule, append a decision before changing
 the code. Read the highest decision number immediately before writing and
 re-check it after writing because another agent may append at the same time.
 
-### 4. Implement the smallest reusable path
+### 5. Implement the smallest reusable path
 
 The registry remains the only place that defines indicators. A source adapter
 may fetch, parse and normalize publisher data, but it must emit the existing
@@ -137,7 +228,7 @@ Never commit licensed microdata or credentials. Commit a permitted derived
 series, the extraction or transformation code, its source metadata and enough
 documentation for another agent to reproduce the result.
 
-### 5. Run the model checks
+### 6. Run the model checks
 
 After a source-backed change:
 
@@ -163,11 +254,14 @@ calling the work complete:
 - source recency, missingness and outliers;
 - whether a historical trend has enough matched observations.
 
+Report the change against the objectives: the dimension's mean confidence
+before and after, its r with log GDP before and after, and the guardrail.
+
 An indicator that raises a dimension's wealth correlation or duplicates an
 existing row needs a written rejection or a new decision. The diagnostics do
 not make that judgment automatically.
 
-### 6. Publish the change
+### 7. Publish the change
 
 Update the registry notes, source documentation, the relevant known artefact,
 and the decision log when the evidence changes a methodological choice. Bump
@@ -182,27 +276,10 @@ Record the old and new version in the handoff. If a country was added, rerun the
 full frame and full Delphi process after the rebase. A subset panel run is a
 preflight, not the published panel.
 
-## P0: finish Trust
+## Work package records
 
-Trust currently has eight registry rows, two observed indicators, three retired
-rows and three gaps. The first source-backed release publishes a provisional
-Trust score for 37 of 53 countries from one generalized social-trust measure
-and the existing institutional-performance contract-enforcement measure. D57's
-two-family acceptance test is structurally met for those cells, but the result
-remains thin: confidence is 0.255 where both rows are observed, the social
-measure is a perception proxy, contract enforcement is frozen at 2019, and
-court performance is still missing. D60's bribery-incidence series remains a
-useful behavioural check and is deliberately excluded from the score.
-
-The current dataset is 6.1.0. Portugal joined the frame in 6.0.0, retired rows
-left the coverage denominator in 6.1.0 (D100), and Coordination now also has a
-full-frame V-Dem civil-society row, documented under `docs/research/coordination/`
-and D83.
-
-Do not treat the first score as the finished Trust construct. The next work is
-to pool the held Joint EVS/WVS rows reproducibly and to land court-case
-clearance or another comparable institutional-performance measure. Delphi can
-interpret the thin release, but it cannot fill either gap.
+The detail behind finished, running and parked packages. The queue above says
+what to do next; these sections say what was done and why.
 
 ### TRUST-0: freeze the baseline
 
@@ -236,6 +313,9 @@ the release year 2022, and does not copy respondent-level microdata. It
 currently recognizes 40 benchmark countries and emits 37 unique country rows.
 Germany, Great Britain and the Netherlands have separate EVS and WVS rows and
 are held until pooled microdata weights can be harmonised reproducibly.
+Pooling them needs the registered GESIS microdata download. On 2026-10-01
+every `gesis.org` host answered 403 from a cloud session, so the pooling rule
+must be written from a machine with a GESIS account.
 
 The research memo must keep access, licensing, country coverage, fieldwork
 years, variable identifiers, response coding, weights, missing-value codes and
@@ -263,6 +343,13 @@ metadata and a coverage report. The current implementation is
 ### TRUST-2: land the institutional-performance measure
 
 **Target:** `court_case_clearance`.
+
+**Status:** rejected at the coverage screen, 2026-10-01. The value preflight
+found in-scope civil and commercial first-instance values for 2022 to 2024 in
+13 of 53 countries, against a screen of 27, with a ceiling of 19 if CEPEJ
+becomes readable and two flagged scopes resolve. CEJA pools every matter and
+cannot fill the row. The row stays a gap. Values, sources and diagnostics are
+in `docs/research/trust/COURT-CLEARANCE.md`.
 
 **Primary candidates:** [CEPEJ-STAT](https://www.coe.int/en/web/cepej/cepej-stat),
 OECD and national court statistics, as already named in the registry and A12.
@@ -403,22 +490,6 @@ result as a gap or evidence-only source and retain the Coordination gap.
 reallocation or current-budget execution before adding a second registry entry
 or adapter.
 
-## The next queue after Trust
-
-These are ordered by measurement risk and expected usefulness, not by country.
-
-| Priority | Work package | First candidate | Completion condition |
-| --- | --- | --- | --- |
-| P1 | Experimentation | OpenAlex citation impact | Inspectable field-normalized impact series with country coverage and a wealth-attribution review. |
-| P1 | Learning | PISA or PIAAC outcomes | Comparable outcome series with an explicit country coverage decision. |
-| P1 | Coordination | Cross-agency delivery | A behavioral or institutional series that does not recreate the retired WGI problem. |
-| P2 | Adaptability | ILOSTAT long-term unemployment and UNCTAD export diversification | Recent, comparable series with denominator and country mapping documented. |
-| P2 | Shared Purpose | WVS civic participation and IDEA voter turnout | A behavioral participation measure that does not confuse pluralism with conformity. |
-| P2 | Building | Large-project delivery | A comparable cost and schedule dataset, or a documented decision that it remains an evidence-only gap. |
-
-Each work package begins with a source memo and ends with the same diagnostic
-review. A candidate list in a registry note is not a completed task.
-
 ## Country-set changes are a separate project
 
 Do not add countries while closing a source gap unless the user explicitly
@@ -443,11 +514,13 @@ Source and license:
 Files changed:
 Commands run:
 Diagnostics result:
+Objective moved: O1 or O2, dimension, before and after
 Decision entry:
 Version impact:
 Next action:
 ```
 
-Use `blocked` only when a named external dependency prevents progress. Record
+Use `blocked` only when a named external dependency prevents progress.
+Use `rejected` for a triage or screen failure; it is a finished result. Record
 the attempted source and the evidence for the block so another agent does not
 repeat the same search.

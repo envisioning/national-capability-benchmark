@@ -5332,3 +5332,46 @@ the glossary entry rather than defining a check again.
 **Overturned by.** A check fetched from somewhere other than the World Bank,
 which the request builder cannot print, and which would need the page to print
 another source's call shape before it could stay complete.
+
+---
+
+## D117 — Research is chosen by two objectives and triaged before values are fetched
+
+**Decision.** Every research task names the objective it moves and reports the
+move in its handoff. O1, informative: every dimension reaches a mean confidence
+of at least 0.40. O2, separable from wealth: no dimension sits above r = 0.70
+against log GDP per capita. A guardrail sits beside them: mean confidence must
+not come to track wealth. `docs/RESEARCH-ROADMAP.md` holds the queue in that
+order and a desk triage step that every candidate passes before any value is
+fetched: the publisher's own coverage ceiling against the 53, whether the
+values will spread, whether the series is a stock that money buys, and whether
+one adapter or one file serves the whole frame. A candidate that fails triage is
+recorded in one paragraph and stopped. The queue opens with sweeps of the two
+source families that already have adapters and full coverage, V-Dem and the
+Joint EVS/WVS release, ahead of single indicators.
+
+**Why.** The claim under test is that capability is separate from wealth
+(`docs/WHY.md`, D1). At dataset 6.1.2 four dimensions miss O1 (Trust 0.21,
+Experimentation 0.23, Shared purpose 0.26, Coordination 0.36) and four miss O2
+(Anticipation 0.87, Agency 0.85, Adaptability 0.82, Learning 0.73), and the
+rows carrying O2 are mostly class `I` diffusion stocks. The queue was ordered
+by gap instead, and TRUST-2 showed the cost: a full value preflight and a search
+of every national judiciary ended at 13 of 53, a result the desk ceiling of 26
+already implied, on a ratio that sits between 0.87 and 1.02 in 12 of the 13
+countries it reached. Harmonised administrative statistics across this frame
+exist mostly where a regional body pays for them, so indicator-by-indicator
+search drifts toward rich-country sources, which is what the guardrail
+watches. Mean confidence against log GDP is r = 0.34 across 51 countries today.
+
+**Cost.** The two targets are judgment, not derived: 0.40 separates the four
+thin dimensions (0.21 to 0.36) from the rest (0.47 and up), and 0.70 reuses the probe's single-series screen at
+the dimension level. Candidates that would raise confidence only for rich
+countries, PISA among them, are parked, so Learning's O1 standing gains nothing
+from them for now. A triage paragraph can kill a series that a full preflight
+would have rescued.
+
+**Overturned by.** A dimension that reaches both targets and still fails the
+claim, for example by pairing with another dimension in
+`duplicateDimensionCandidates` in `diagnostics.json`, which would show the objectives measure the wrong thing; or
+a triaged-out candidate that a later preflight shows would have cleared the
+half-frame screen, which would show the triage questions are too strict.
