@@ -4,6 +4,9 @@ export const JOINT_EVS_WVS_PUBLISHER = 'Joint EVS/WVS'
 /** Official weighted results by country for Joint EVS/WVS v5.0.0. */
 export const JOINT_EVS_WVS_RESULTS_URL = 'https://access.gesis.org/dbk/69549'
 
+/** The file the results URL serves, as its Content-Disposition names it. */
+export const JOINT_EVS_WVS_RESULTS_FILE = 'ZA7505_cdb_Tables.pdf'
+
 /** The release period represented by the v5.0.0 results table. */
 export const JOINT_EVS_WVS_RELEASE_YEAR = 2022
 

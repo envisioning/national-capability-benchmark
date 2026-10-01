@@ -64,7 +64,7 @@ The CLI lives in packages/core and is available through pnpm bench.
 | Command | Purpose |
 | --- | --- |
 | pnpm bench ingest [--from 1990] [--snapshot] | Fetch World Bank history into data/observations and record restatements in revisions.json. |
-| pnpm bench evs fetch | Fetch and parse the pinned Joint EVS/WVS results tables (A165 trust, A173 perceived control, A080_01 charitable membership) into the shared observation store. `trust fetch` is an alias. |
+| pnpm bench evs fetch | Fetch and parse the pinned Joint EVS/WVS results tables (A165 trust, A173 perceived control, A080_01 charitable membership, and the E069_17 court confidence check) into the shared observation store. `trust fetch` is an alias. |
 | pnpm bench vdem fetch | Fetch and parse the pinned V-Dem v15 civil-society series into the shared observation store. |
 | pnpm bench score | Normalize and score the current observations, writing the published output. |
 | pnpm bench diagnose | Run correlations, redundancy checks and the GDP-sensitivity test. |

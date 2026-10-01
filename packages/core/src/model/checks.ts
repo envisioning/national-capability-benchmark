@@ -4,6 +4,10 @@ import type { Dimension } from './dimensions.js'
 import { WB_DEFAULT_DATABASE } from './sources.js'
 import type { SeriesRequest } from './indicators.js'
 import {
+  JOINT_EVS_WVS_PUBLISHER,
+  JOINT_EVS_WVS_RELEASE_YEAR,
+  JOINT_EVS_WVS_RESULTS_FILE,
+  JOINT_EVS_WVS_RESULTS_URL,
   VDEM_CY_V15_CSV,
   VDEM_CY_V15_DATASET,
   VDEM_CY_V15_PAGE_URL,
@@ -46,6 +50,12 @@ const NOTES_POLARIZATION =
  * each country's latest election up to 2024; see D129, A5 and A13. */
 const NOTES_TURNOUT =
   'Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen.'
+
+/* Rendered to readers, so American spelling and no dashes. The figures are the
+ * published "a great deal" shares of the 2017 to 2022 fieldwork, grouped by
+ * V-Dem's 2024 Regimes of the World; see D132 and A13. */
+const NOTES_COURT_CONFIDENCE =
+  'Confidence in the courts is the public half of what this capability asks: whether people expect the rules to be enforced when a stranger breaks them. It is not scored because the survey answer reads two things the number cannot tell apart. Where courts are independent, confidence is a judgment of how they perform. Where they answer to the state, it is also deference, and saying otherwise to an interviewer has a cost. In this frame the pattern runs the wrong way. India, the Philippines and Indonesia, all electoral autocracies in the V-Dem 2024 classification, lead on the share saying a great deal, and Vietnam and China, the two closed autocracies surveyed, lead once quite a lot is counted too. The nine electoral autocracies average 23.5 percent saying a great deal and the two closed autocracies 28.1, against 14.0 for liberal and 7.9 for electoral democracies. Scored, it would rank highest the states whose courts are least able to rule against them. Income is not why it is left out: the share correlates about -0.18 with log GDP per capita. The value is the share saying a great deal; the share saying quite a lot is in the source note.'
 
 const RAW: Raw[] = [
   {
@@ -105,6 +115,37 @@ const RAW: Raw[] = [
       years: 'latest_up_to',
     },
     notes: NOTES_TURNOUT,
+  },
+  {
+    /* Shares its id with the declared gap in indicators.ts on purpose, as
+     * polarization does: the gap is the measurement Trust still wants, and this
+     * is what the model looked at and declined to score in its place. The
+     * observation id carries the check prefix. See D132. */
+    id: 'institutional_trust',
+    dimension: 'trust',
+    family: 'institutional',
+    name: 'Confidence in the courts',
+    definition:
+      'Share of survey respondents saying they have a great deal of confidence in the justice system and courts, of the four answers a great deal, quite a lot, not very much and none at all, in the Joint EVS/WVS 2017 to 2022 survey round.',
+    unit: '% a great deal',
+    direction: 'higher_better',
+    ingest: 'adapter',
+    source: {
+      publisher: JOINT_EVS_WVS_PUBLISHER,
+      series: 'E069_17',
+      adapter: 'joint-evs-wvs-results-pdf',
+      url: JOINT_EVS_WVS_RESULTS_URL,
+      tier: 'academic_survey',
+      inspectable: true,
+    },
+    pinned: {
+      dataset: `${JOINT_EVS_WVS_PUBLISHER} 2017-2022 v5.0.0 results by country`,
+      url: JOINT_EVS_WVS_RESULTS_URL,
+      file: JOINT_EVS_WVS_RESULTS_FILE,
+      variable: 'E069_17',
+      year: JOINT_EVS_WVS_RELEASE_YEAR,
+    },
+    notes: NOTES_COURT_CONFIDENCE,
   },
 ]
 

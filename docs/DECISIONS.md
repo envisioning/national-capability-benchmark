@@ -6361,3 +6361,75 @@ A13 failure written down here; a harmonised court-performance series
 (clearance or enforcement) across the frame, which answers the institutional
 family more directly and would make this row a check beside it; or a redundancy
 reading at or above 0.85 with another Trust row.
+
+## D132 — Confidence in the courts is published as a check beside Trust; `institutional_trust` stays a gap
+
+*Recorded 2026-10-01. Extends D57, D60, D64, D118 and D121. The memo is
+`docs/research/trust/EVS-WVS-INSTITUTIONAL-TRUST.md`.*
+
+**Decision.** The Joint EVS/WVS adapter reads a fourth item from the same
+pinned results release (v5.0.0, weighted by `gwght`): E069_17, confidence in
+the justice system and courts. It is emitted as the behavioural check
+`__check__institutional_trust`, declared in `checks.ts` under the gap's own id
+with `ingest: 'adapter'` and a `pinned` entry naming `ZA7505_cdb_Tables.pdf`,
+as polarization shares its id with its gap (D121). The stored value is the
+published share answering "a great deal", over all respondents; the other
+published shares (quite a lot, not very much, none at all, don't know, no
+answer) and the fieldwork year are quoted in each observation's note. The
+same hold rule applies: Germany, Great Britain and the Netherlands have
+separate EVS and WVS rows and are held. 37 of 53 countries, fieldwork 2017 to
+2023. The `institutional_trust` row stays `ingest: 'gap'`. Nothing is scored.
+
+**Why this item.** The construct was written before any value was read.
+Courts answer the dimension most directly: a court is where a stranger goes
+when the rule is broken, so confidence in it is the respondent's estimate that
+the rule will be enforced. Civil service was the second choice. Government,
+parliament and parties were argued out because they read the incumbent and
+the electoral cycle of each fieldwork year, not whether the rules hold
+whoever governs; police was argued out because it carries crime exposure,
+which D44 showed travels with income. The table prints no mean and no "great
+deal plus quite a lot" column, so the one published number that reads
+confidence by itself is "a great deal"; the sum would be computed from two
+rounded columns, which D64's rule forbids.
+
+**Why a check and not a score.** The A13 test was run before deciding, on
+V-Dem v15's 2024 Regimes of the World (`v2x_regime`) read from the pinned
+archive. Share saying a great deal: closed autocracies 28.1 (China, Vietnam),
+electoral autocracies 23.5 (n 9), liberal democracies 14.0 (n 11), electoral
+democracies 7.9 (n 15). Counting quite a lot too: 88.3, 60.3, 60.9 and 36.2.
+India (39.7), the Philippines (33.0) and Indonesia (30.6) lead the published
+share; Vietnam and China lead the combined one. Every other item tested reads
+the same way, autocracies above democracies on both statistics: civil service
+(great deal 16.9 against 5.7), police (23.6 against 15.9), parliament (18.4
+against 4.2) and government (26.2 against 6.5). The item also does not track
+the institutional fact it would stand for: across the 37 countries it
+correlates -0.13 with V-Dem's government compliance with the courts
+(`court_compliance`, D131), the row that does score in this family. Scored, it
+would rank highest the states whose courts are least able to rule against
+them. That is A13's failure, and D60 says the honest form is a check.
+
+**Findings, reported and not used to decide.** The published share correlates
+-0.18 with log GDP per capita (n 36); the combined share would be 0.30.
+`behaviouralChecks` reports r -0.056 with the Trust score (n 37). Brazil reads
+11.8 percent a great deal (38.5 quite a lot), 19th of 37. Trust does not move:
+r with log GDP 0.671 (n 51), mean confidence 0.347, 52 countries scored,
+Brazil 55.9 at confidence 0.396, all as on dataset 7.4.0. The guardrail, the
+mean confidence across dimensions against log GDP per capita, stays 0.298. The
+A165, A173 and A080_01 observations are unchanged in value and note; only
+their retrieval stamp moves.
+
+**Cost.** Trust still misses O1's 0.40 confidence target and the institutional
+family still has no survey row: this change publishes evidence and closes
+nothing. A reader may take the check's high values for autocracies as a
+finding; the attached note is the only mitigation. Storing the "a great deal"
+share alone reads only the top category, which is a narrower and noisier
+statistic than the conventional two-category share; the alternative needed a
+computed value. No dataset version bump: a check adds no scored row.
+
+**Overturned by.** A release that publishes a valid-answer mean or a
+two-category share for the battery, with the regime pattern gone (autocracies
+no higher than democracies) when tested the same way; pooled microdata with a
+list-experiment or anonymity adjustment that removes the deference component
+in closed and electoral autocracies; or a confidence measure that tracks
+`court_compliance` (r at or above 0.5) rather than running against it, which
+would show it reads the institution and not the regime.
