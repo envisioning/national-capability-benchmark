@@ -5375,3 +5375,92 @@ claim, for example by pairing with another dimension in
 `duplicateDimensionCandidates` in `diagnostics.json`, which would show the objectives measure the wrong thing; or
 a triaged-out candidate that a later preflight shows would have cleared the
 half-frame screen, which would show the triage questions are too strict.
+
+---
+
+## D121 — V-Dem polarization is published as a behavioural check, not scored
+
+*Recorded 2026-10-01. Extends D60 and D83. Supersedes the overturn clause of
+D116. Issue #22.*
+
+**Decision.** V-Dem's political polarization item is published beside Shared
+Purpose as a behavioural check under D60 and enters no score. The check is
+`political_polarization` in `checks.ts`, read from `v2cacamps_osp`, the
+measurement-model estimate on the codebook's 0 to 4 scale, where 0 means
+supporters of opposing camps generally meet in a friendly manner and 4 in a
+hostile one, direction `lower_better`, V-Dem v15 (2025-03-04), year 2024,
+tier `expert_panel`, CC BY-SA 4.0. It covers 53 of 53 countries.
+
+The registry gap `political_polarization` in `indicators.ts` stays a gap. The
+measurement Shared Purpose wants, hostility between camps that are free to
+exist, is still unmade, and this item is not it. The check shares the gap's id
+on purpose, and its observations sit under `__check__political_polarization`,
+so the two never meet in a frame. The branch `polarization-vdem` (commit
+1c0f6b5) that scored the item is not merged; its adapter work is.
+
+The item is not in the Core archive D83 pinned, so the V-Dem adapter now pins
+the Full+Others archive of the same release, `V-Dem-CY-FullOthers-v15_csv.zip`,
+streams its 400 MB CSV line by line and reads a table of variables, one per
+observation id. Its `v2x_cspart` values match Core's for all 53 countries, so
+civil-society strength does not restate. The observation file keeps its name,
+`vdem-cy-core.json`.
+
+Checks are no longer World Bank only. `CheckDef` gains `ingest`, `worldbank`
+by default or `adapter`, and `pinned`, which names the dataset, the archive
+URL, the file inside it, the column and the year. An adapter check must carry
+`pinned`, and `checks.ts` refuses one that does not. The World Bank ingest and
+`worldBankCheckSeries` skip adapter checks, the adapter emits them under
+`CHECK_PREFIX`, and the scorer, `behaviouralChecks`, the report and the
+capability and country pages read them unchanged. `/sources` prints the World
+Bank request for a World Bank check and the pinned archive URL, file, column
+and year for an adapter check.
+
+**Why.** The project judges a row by what it measures first and reports its
+income correlation beside it; the correlation is evidence, not the gate. On
+construct this item fails in a way no numeric screen sees. Scored on the
+branch, it passed every gate: 0.335 against log GDP per capita, 0.565 at most
+against any scored row, 53 of 53 countries, and it lifted Shared Purpose from
+47 to 52 published countries. But a low reading has two causes the number
+cannot separate. On V-Dem's own regime classification the 2024 values form a
+U: liberal democracies average 1.77 and closed autocracies 1.85, while
+electoral democracies and electoral autocracies average 2.80 and 2.98. Scored,
+the item raised the United Arab Emirates by 11.1 points and Rwanda by 11.5,
+and published Singapore and Vietnam on the strength of their calm. Low
+measured polarization under repression is not people seeing themselves in a
+common project. It is A5 inverted: there a perception composite penalised
+political uniformity, here an expert item rewards it, and the spec refuses
+both readings. A13 records it.
+
+The item is still worth showing. It is current, full-frame, inspectable and
+asks the right question of every country where camps may compete. A check is
+the D60 shape for a series that is real and disqualified, and the reason
+travels with the number.
+
+**Cost.** Shared Purpose stays at two rows, 47 published countries and mean
+confidence 0.260; the coverage the item would have bought is declined. No score
+moves: all 477 country-dimension cells are identical with the check present.
+D60 framed a check as a series kept out on income. This one is kept out on
+construct, and its wealth correlation, -0.335 on the published value in
+`behaviouralChecks`, is reported and is not the reason; the glossary entry and
+the diagnostics comment now say a check can fail either way. A published
+number outside the score will be quoted as a finding for the closed regimes it
+flatters, and the attached note is the only guard. The adapter downloads
+26 MB instead of 15 MB and depends on the Full+Others member name as well as
+on `unzip`. The dataset version does not move: no scored row, field or country
+changes, and `checks` is an existing field.
+
+**D116 amended.** D116's overturn clause named a check fetched from somewhere
+other than the World Bank, which the request builder could not print. This
+decision is that check. D116 stands as amended: `/sources` stays complete by
+printing each check's own call shape, the World Bank request where `ingest` is
+`worldbank` and the pinned file, column and year where it is `adapter`. D116's
+clause is superseded by this decision's.
+
+**Overturned by.** A V-Dem reading conditioned on competition existing at all,
+or a behavioural Shared Purpose row (civic participation, volunteering, voter
+turnout) that agrees with this item outside the closed regimes, either of which
+would let the item or a variant score and move it to `indicators.ts`; a V-Dem
+release that changes the question or drops coverage below half the frame; or
+evidence that readers take the check for a score, which under D60 would retire
+it. For `/sources`: a check whose source has neither an API request nor a
+pinned file to print, which would leave the page short of a call again.

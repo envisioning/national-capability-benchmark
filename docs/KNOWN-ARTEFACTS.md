@@ -168,6 +168,10 @@ dimensions. The behavioural measures it needs are civic participation and
 volunteering, both still gaps, plus voter turnout, which is published by
 International IDEA and would have to be entered by hand.
 
+V-Dem's polarization item brings the Singapore question back from the other
+side: a regime with no organised opposition reads as calm. It is published
+beside Shared Purpose as a behavioural check and not scored. See A13 and D121.
+
 ---
 ## A6 — Doing Business indicators are frozen at 2019
 
@@ -408,3 +412,47 @@ release meets that structure with A165 and contract enforcement, but court
 performance, broader coverage and the wealth and redundancy review remain open.
 The budget series opens the Coordination door; it does not close its measurement
 problem.
+
+---
+## A13 — Polarization reads calm where there are no camps to polarize
+
+**Severity: low. The series is published as a behavioural check and is not
+scored. See D121.**
+
+The `political_polarization` check is V-Dem's `v2cacamps_osp`: whether
+supporters of opposing political camps meet in a hostile rather than a friendly
+manner, on a 0 to 4 scale. The question counts hostility and not disagreement,
+which is what the registry gap asks for. It cannot tell a society where camps
+meet in friendship from one where no opposition camp is allowed to exist.
+
+The 2024 values sort by V-Dem's own regime classification into a U. The 16
+liberal democracies in the frame average 1.77 and the five closed autocracies
+1.85, while the 11 electoral autocracies average 2.98 and the 21 electoral
+democracies 2.80. The United Arab Emirates reads 1.06, Rwanda 0.98 and
+Singapore 1.15, beside Ireland at 0.40 and Japan at 0.87. Across the frame the
+calm reading correlates with V-Dem's electoral democracy index at only 0.23.
+
+Scored as a third Shared Purpose row (branch `polarization-vdem`, commit
+1c0f6b5), it would have raised the United Arab Emirates by 11.1 points and
+Rwanda by 11.5, and let Singapore and Vietnam publish a Shared Purpose score
+for the first time, at 63.8 and 66.5, on the strength of their calm. That is A5
+inverted. A5 retired a perception composite that penalised political
+uniformity; this item rewards it. Political uniformity is not a capability, and
+low measured hostility under repression is not shared purpose.
+
+The numeric gates did not catch it. The scored row passed the wealth screen
+(0.335 against log GDP per capita) and the redundancy screen (0.565 at most),
+which is why the decision was taken on construct and not on correlation.
+
+**What is published.** The value sits on every country page under Shared
+Purpose as a check, not scored, with this reason attached, and the capability
+page lists it. On dataset 6.1.2, `behaviouralChecks` in `diagnostics.json`
+reports its correlation on the published value as -0.335 against log GDP per
+capita and -0.227 against the Shared Purpose score (n = 47). No Shared Purpose
+score, confidence or coverage count moves.
+
+**What remains.** A reader can still take a low value for a closed regime as a
+finding; the attached reason is the only mitigation. The fix that would let it
+score is a reading conditioned on competition existing at all, or a behavioural
+row (civic participation, volunteering, voter turnout) that agrees with the
+item outside the closed regimes. Neither is wired, and the gap stays open.

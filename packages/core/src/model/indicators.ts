@@ -4,7 +4,7 @@ import type { Dimension } from './dimensions.js'
 import {
   JOINT_EVS_WVS_PUBLISHER,
   JOINT_EVS_WVS_RESULTS_URL,
-  VDEM_CY_CORE_V15_PAGE_URL,
+  VDEM_CY_V15_PAGE_URL,
   VDEM_PUBLISHER,
 } from './source-catalog.js'
 
@@ -325,7 +325,7 @@ const RAW: Raw[] = [
     unit: 'index 0-1',
     measurementClass: 'C',
     direction: 'higher_better',
-    source: { publisher: VDEM_PUBLISHER, series: 'v2x_cspart', url: VDEM_CY_CORE_V15_PAGE_URL, tier: 'expert_panel', inspectable: true },
+    source: { publisher: VDEM_PUBLISHER, series: 'v2x_cspart', url: VDEM_CY_V15_PAGE_URL, tier: 'expert_panel', inspectable: true },
     ingest: 'adapter',
     notes: 'V-Dem civil society participation index, country-year release v15. It is expert-coded rather than administrative data, so it remains a perception-adjacent measure and its wealth correlation is reviewed in D83.',
     wealthProxyPrior: 0.15,
@@ -979,7 +979,7 @@ const RAW: Raw[] = [
     direction: 'lower_better',
     source: { publisher: 'V-Dem', tier: 'expert_panel', inspectable: true },
     ingest: 'gap',
-    notes: 'V-Dem political polarisation is inspectable and would fill this. Pluralism is the target, so only hostile polarisation should count against a country.',
+    notes: 'V-Dem political polarization (v2cacamps) is published beside this dimension as a behavioral check and is not scored, because a regime with no organized opposition reads as calm (D121, A13). The gap stays open for a measure that can tell calm between competing camps from calm where no camp may compete. Pluralism is the target, so only hostile polarization should count against a country.',
     wealthProxyPrior: 0.05,
   },
   {

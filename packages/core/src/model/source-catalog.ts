@@ -7,12 +7,19 @@ export const JOINT_EVS_WVS_RESULTS_URL = 'https://access.gesis.org/dbk/69549'
 /** The release period represented by the v5.0.0 results table. */
 export const JOINT_EVS_WVS_RELEASE_YEAR = 2022
 
-/** V-Dem's reproducible country-year release used for civil-society strength. */
+/**
+ * V-Dem's reproducible country-year release. The Full+Others archive is pinned
+ * because the Core archive of the same release omits `v2cacamps`, which the
+ * Shared Purpose polarization check reads; both archives carry identical
+ * `v2x_cspart` values for the benchmark countries. See D121.
+ */
 export const VDEM_PUBLISHER = 'V-Dem'
-export const VDEM_CY_CORE_V15_PAGE_URL =
-  'https://www.v-dem.net/data/the-v-dem-dataset/country-year-v-dem-core-v15/'
-export const VDEM_CY_CORE_V15_URL =
-  'https://www.v-dem.net/media/datasets/V-Dem-CY-Core-v15_csv.zip'
-export const VDEM_CY_CORE_V15_RELEASE = '15 (2025-03-04)'
-export const VDEM_CY_CORE_V15_VARIABLE = 'v2x_cspart'
-export const VDEM_CY_CORE_V15_YEAR = 2024
+export const VDEM_CY_V15_PAGE_URL =
+  'https://www.v-dem.net/data/the-v-dem-dataset/country-year-v-dem-fullothers-v15/'
+export const VDEM_CY_V15_URL =
+  'https://www.v-dem.net/media/datasets/V-Dem-CY-FullOthers-v15_csv.zip'
+/** The CSV member inside the pinned archive. */
+export const VDEM_CY_V15_CSV = 'V-Dem-CY-Full+Others-v15.csv'
+export const VDEM_CY_V15_DATASET = 'Country-Year Full+Others'
+export const VDEM_CY_V15_RELEASE = '15 (2025-03-04)'
+export const VDEM_CY_V15_YEAR = 2024
