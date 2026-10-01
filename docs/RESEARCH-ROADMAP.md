@@ -13,15 +13,30 @@ the decision wins and this file must be updated.
 
 The benchmark makes one claim: a country's capability is separate from its
 wealth and can be observed (see `docs/WHY.md`). Research serves that claim
-through two objectives. Every task names the objective it moves, and every
-handoff reports the move. D117 sets this rule.
+through one objective and one reported outcome. Every task names what it
+moves, and every handoff reports the move. D117 set this rule and D118 changed
+what O2 is.
+
+**Rows are chosen for what they measure (D118).** A candidate is decided on its
+construct: what it observes, whether that is a capability or a stock that
+money buys, and whether it is behaviour, an outcome or a perception. Write that
+argument in the source memo, dated, before any value is fetched. The income
+correlation is then computed and printed, and it decides nothing. A benchmark
+that keeps or drops rows by their income correlation cannot fail the test it
+exists to run.
+
+**What it serves next.** The next real use is a report on Brazil's
+adaptability, which maps what produces adaptability rather than scoring
+institutions. Adaptability is first in the queue. Every source is still tested
+against all 53 countries.
 
 **O1. Informative.** Every dimension carries enough evidence to read. Target: mean
 confidence of at least 0.40 in every dimension.
 
-**O2. Separable from wealth.** No dimension is a disguised income ranking.
-Target: no dimension above r = 0.70 against log GDP per capita, the threshold
-the probe already applies to a single series.
+**O2. Separable from wealth, reported and not targeted.** Every release prints
+each dimension's correlation with log GDP per capita. Above 0.70 is a finding
+against the claim, to be read and published. It is not a target, and no row is
+added or dropped to move it.
 
 **Guardrail.** Confidence must not come to track wealth. Today it barely does
 (r = 0.34 across 51 countries; the 10 poorest average 0.40 and the 10 richest
@@ -33,40 +48,43 @@ Dataset 6.1.2. Recompute from `data/out/diagnostics.json` and
 `data/out/index.json` after any rescore; never carry these figures forward by
 hand.
 
-| Dimension | Mean confidence | Observed rows (mean) | r with log GDP | Misses |
+| Dimension | Mean confidence | Observed rows (mean) | r with log GDP | Reading |
 | --- | ---: | ---: | ---: | --- |
-| Trust | 0.21 | 1.7 | 0.61 (n 36) | O1 |
-| Experimentation | 0.23 | 2.6 | 0.62 | O1 |
-| Shared purpose | 0.26 | 1.9 | 0.46 | O1 |
-| Coordination | 0.36 | 2.8 | 0.56 | O1 |
-| Adaptability | 0.47 | 4.0 | 0.82 | O2 |
-| Learning | 0.50 | 4.9 | 0.73 | O2 |
-| Agency | 0.58 | 5.8 | 0.85 | O2 |
-| Anticipation | 0.60 | 4.9 | 0.87 | O2 |
+| Trust | 0.21 | 1.7 | 0.61 (n 36) | misses O1 |
+| Experimentation | 0.23 | 2.6 | 0.62 | misses O1 |
+| Shared purpose | 0.26 | 1.9 | 0.46 | misses O1 |
+| Coordination | 0.36 | 2.8 | 0.56 | misses O1 |
+| Adaptability | 0.47 | 4.0 | 0.82 | tracks income |
+| Learning | 0.50 | 4.9 | 0.73 | tracks income |
+| Agency | 0.58 | 5.8 | 0.85 | tracks income |
+| Anticipation | 0.60 | 4.9 | 0.87 | tracks income |
 | Building | 0.60 | 4.9 | 0.64 | |
 
-The O2 failures have one visible cause. The rows that carry the correlation are
-mostly diffusion stocks, measurement class `I`: secure internet servers
+Four dimensions track income above 0.70. The rows that carry the correlation
+are mostly diffusion stocks, measurement class `I`: secure internet servers
 (r = 0.90), internet users (0.88), broadband subscriptions (0.85), with the
-human capital index (0.88) and tertiary enrolment (0.81) in Learning. A level of
-adoption mostly records what a country could afford. O2 work therefore looks for class `C` or `O`
-rows, and rates of change or performance relative to resources, that observe
-the same capability without the stock.
+human capital index (0.88) and tertiary enrolment (0.81) in Learning. That is
+a reason to ask whether each stock observes the capability its dimension
+names. It is not a reason to drop a row for its correlation. The Q3 construct
+audit asks the question row by row (D118).
 
 ## The queue
 
-Ordered by expected gain on the objectives per session, cheapest proven route
-first. A work package that passes triage runs to its gate; one that fails
-triage costs one paragraph.
+Ordered by what the Brazil adaptability report needs first, then by expected
+gain on O1 per session, cheapest proven route first (D118). A work package that
+passes triage runs to its gate. One that fails triage costs one paragraph.
 
 | # | Work package | Moves | Route | First output |
 | --- | --- | --- | --- | --- |
-| Q1 | V-Dem sweep | O1: Trust, Coordination, Shared purpose, Anticipation | The pinned V-Dem adapter (COORD-1) already covers 53 / 53 | Triage table of codebook variables against each dimension's gaps |
-| Q2 | EVS/WVS sweep beyond A165 | O1: Shared purpose, Trust | The Joint EVS/WVS adapter (TRUST-1) | Triage table of behavioural items (membership, volunteering, participation) |
-| Q3 | Wealth-link decomposition | O2: Anticipation, Agency, Adaptability, Learning | Existing diagnostics, then World Bank, ILOSTAT, UNCTAD | Per dimension: which rows carry the GDP link, and a non-stock candidate for each |
-| Q4 | IDEA voter turnout | O1: Shared purpose | IDEA open data, full frame | Triage note, including the compulsory-voting rule |
-| Q5 | OpenAlex research impact | O1 and O2: Experimentation | OpenAlex API, full frame | Triage note: field-normalised or relative measure only, never volume |
-| Q6 | Full Delphi rerun (TRUST-5) | Reading, not measurement | Needs `AI_GATEWAY_API_KEY` | After Q1 to Q3 change the dataset |
+| Q1 | Adaptability: wire the researched gaps | O1 and the report: Adaptability | UNCTAD export concentration (#24, D119) and ILOSTAT long-term unemployment with a plausibility gate (#26, D120) | Adapters, decision entries, one minor release |
+| Q2 | Adaptability: the remaining gaps and the stock row | Adaptability | Desk triage for `disaster_preparedness` and `institutional_responsiveness`, and a construct audit of `broadband_subscriptions` | One triage paragraph per gap and one audit verdict |
+| Q3 | Construct audit of stock rows | Reported O2: Anticipation, Agency, Learning | `wealthAttribution` names the rows. Each class `I` stock gets a verdict on what it observes | Keep or retire, with a construct reason for each; companions where the construct asks for one |
+| Q4 | Reopen exclusions that rested on income alone | O1: Trust | `bribery_incidence` (check since D60) first | Construct review; promote or confirm as a check |
+| Q5 | V-Dem sweep | O1: Trust, Coordination, Shared purpose | The pinned V-Dem adapter, 53 / 53. Polarization is published as a check (D121) | Triage table of codebook variables against each gap, construct first |
+| Q6 | EVS/WVS sweep beyond A165 | O1: Shared purpose, Trust | The Joint EVS/WVS adapter (TRUST-1) | Triage table of behavioural items (membership, volunteering, participation) |
+| Q7 | OpenAlex research impact | Learning | OpenAlex API, full frame. Memo on #23 recommends the share of works in the top 10% for their field, as a ratio to world | Adapter, from a local session with a polite-pool email |
+| Q8 | IDEA voter turnout | O1: Shared purpose | IDEA open data, full frame | Triage note, including the compulsory-voting rule |
+| Q9 | Full Delphi rerun (TRUST-5) | Reading, not measurement | Needs `AI_GATEWAY_API_KEY` | After the dataset changes |
 
 Parked, with the reason:
 
@@ -75,9 +93,9 @@ Parked, with the reason:
 - **TRUST-2 court clearance**: rejected at the coverage screen, 13 of 53.
   Reopen only if a harmonised non-European series appears.
 - **Cross-agency delivery** (Coordination) and **large-project delivery**
-  (Building): no full-frame source family exists. Reopen if Q1 finds one.
+  (Building): no full-frame source family exists. Reopen if the V-Dem sweep finds one.
 - **PISA or PIAAC** (Learning): coverage skips much of the frame and would feed
-  the guardrail. Reopen only as part of Q3.
+  the guardrail. Reopen only as part of the Q3 construct audit.
 - **SUBNATIONAL-1**: waits on a construct decision (plan fidelity,
   reallocation or execution), not on research.
 
@@ -163,8 +181,11 @@ covers many.
    scope? Below 27 the candidate is dead. Below 40 it needs a reason.
 2. **Spread.** Will the values separate countries, or do they sit near a fixed
    point the way a clearance ratio sits near 100?
-3. **Wealth.** Is it a stock that money buys? Prefer class `C` or `O`, and rates
-   or relative measures, to levels of adoption or spending.
+3. **Construct.** What does it observe, and is that the capability the
+   dimension names or a stock that money buys? Behaviour, outcomes, rates and
+   measures relative to resources usually observe capability, and levels of
+   adoption or spending usually do not. Answer this in writing before seeing the
+   value or its income correlation (D118).
 4. **Cost.** Is there an adapter, or a publisher that serves the whole frame in
    one file? A row assembled from 53 national yearbooks is a harmonisation this
    project would author, and the answer is no unless the gain is large.
@@ -182,9 +203,9 @@ pnpm bench probe --series SERIES[@DATABASE]
 ```
 
 The probe is a preflight. Its current screen is at least half of the 53-country
-frame, a latest value no older than eight years, at least three distinct values,
-and correlation with log GDP per capita below 0.70. A pass is necessary, not a
-promotion decision. Read what the series measures and run the full diagnostics
+frame, a latest value no older than eight years and at least three distinct
+values. A correlation with log GDP per capita of 0.70 or more is printed as a
+flag, not a failure (D118). A pass is necessary, not a promotion decision. Read what the series measures and run the full diagnostics
 after it is wired.
 
 For every other source, produce the same report before writing observations:

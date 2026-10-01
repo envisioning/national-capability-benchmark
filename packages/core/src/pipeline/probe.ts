@@ -13,8 +13,8 @@ import { median, pearson, round, spearman } from './stats.js'
  * Testing a candidate series before it enters the registry.
  *
  * A gap is filled by evidence, and the evidence is boring: does the series
- * cover the country set, is it recent, does it vary, and is it measuring income
- * again. A candidate that fails any of those is a wasted registry row and a
+ * cover the country set, is it recent, does it vary. Whether it is measuring
+ * income again is reported beside the verdict and does not decide it (D118). A candidate that fails any of those is a wasted registry row and a
  * false confidence gain, so the test runs before the row is written, not after.
  *
  * Nothing here writes to `data/`. The probe fetches, reports and exits, so it
@@ -46,10 +46,16 @@ export type ProbeResult = {
   gdpSpearman: number | null
   /** Countries carrying both a value and a GDP figure, which is what the correlation used. */
   n: number
-  /** True when the series covers enough of the set, is recent and is not a wealth proxy. */
+  /** True when the series covers enough of the set, is recent and varies. */
   usable: boolean
   /** Why it failed, in the order the tests run. Empty when it passed. */
   failures: string[]
+  /**
+   * What the reviewer must read before deciding, without failing the series.
+   * Tracking log GDP lands here and not in `failures`: since D118 a candidate
+   * is judged on what it measures, and its income correlation is a finding.
+   */
+  flags: string[]
   error: string | null
 }
 
@@ -199,8 +205,9 @@ export async function probeSeries(
       if (values.length > 0 && new Set(values.map((v) => v.value)).size < 3) {
         failures.push('fewer than three distinct values')
       }
+      const flags: string[] = []
       if (gdpPearson !== null && Math.abs(gdpPearson) >= WEALTH_CORRELATION_THRESHOLD) {
-        failures.push(`tracks log GDP at ${round(gdpPearson, 3)}`)
+        flags.push(`tracks log GDP at ${round(gdpPearson, 3)}`)
       }
       out.push({
         ...base,
@@ -217,6 +224,7 @@ export async function probeSeries(
         n: xs.length,
         usable: latest.size > 0 && failures.length === 0,
         failures,
+        flags,
         error: null,
       })
     } catch (e) {
@@ -239,6 +247,7 @@ export async function probeSeries(
             ? 'the API does not know this code'
             : 'not tested: the request failed',
         ],
+        flags: [],
         error: e instanceof Error ? e.message : String(e),
       })
     }

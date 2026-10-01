@@ -951,17 +951,17 @@ Start with file 1.
       )
       for (const r of results) {
         const cov = `${r.countries}/${r.countrySet}`
-        const verdict = r.usable ? 'usable' : r.failures.join('; ')
+        const verdict = [r.usable ? 'usable' : r.failures.join('; '), ...r.flags].join('; ')
         console.log(
           `${r.series.padEnd(30)} ${String(r.sourceId).padEnd(3)} ${cov.padEnd(7)} ${String(r.latestYear ?? '').padEnd(6)} ${String(r.gdpPearson ?? '').padEnd(7)} ${verdict}`,
         )
       }
       const usable = results.filter((r) => r.usable).length
       console.log(
-        `\n${usable} of ${results.length} pass coverage, recency, spread and the wealth test.`,
+        `\n${usable} of ${results.length} pass coverage, recency and spread.`,
       )
       console.log(
-        'A pass is a candidate, not a decision: read what it measures before writing a registry row.',
+        'A pass is a candidate, not a decision: read what it measures before writing a registry row. r(GDP) is a finding, not a gate (D118).',
       )
       break
     }

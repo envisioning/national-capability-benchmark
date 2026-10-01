@@ -5375,3 +5375,70 @@ claim, for example by pairing with another dimension in
 `duplicateDimensionCandidates` in `diagnostics.json`, which would show the objectives measure the wrong thing; or
 a triaged-out candidate that a later preflight shows would have cleared the
 half-frame screen, which would show the triage questions are too strict.
+
+---
+
+## D118 — A row is chosen for what it measures, and its income correlation is reported, not used to choose it
+
+*Recorded 2026-10-01. Supersedes the O2 target in D117, the wealth condition in
+D52's probe pass and the acceptance rule in D42. Keeps D42's diagnostic.*
+
+**Decision.** A candidate is accepted, held as a check, left as a gap or
+retired on its construct: what it observes, whether that is a capability or a
+stock that money buys, and whether it is behaviour, an outcome or a
+perception. The source memo states that argument, with its date, before any
+value is fetched. The correlation with log GDP per capita, the
+`wealthAttribution` delta and the dimension's correlation after the change are
+still computed, and every decision entry and handoff prints them. They are
+findings, and they no longer pass or fail a row.
+
+In practice:
+
+- `pnpm bench probe` reports a series that tracks log GDP at 0.70 or more as a
+  flag beside the verdict, not as a failure. Coverage, recency and spread still
+  fail a series.
+- O2 becomes a reported outcome. Each release prints every dimension's
+  correlation with income, and the research queue no longer aims at a
+  threshold. O1, the 0.40 confidence target, and the guardrail stay: neither
+  chooses rows by what they say about income.
+- The roadmap's wealth-link work becomes a construct audit. A diffusion stock
+  such as secure servers or broadband subscriptions is retired if it does not
+  observe the capability its dimension names, and kept if it does, whatever
+  its correlation.
+- Exclusions that rested on income alone are reopened for a construct review.
+  The `bribery_incidence` check (D60) is the first: it records experience, not
+  reputation, and D60 held it out only for its wealth contribution. D44's
+  retirement of `homicide_rate` gave construct reasons too and stands.
+- The next real use of the benchmark is a report on Brazil's adaptability, so
+  the queue serves Adaptability first. The frame does not change: every source
+  is still tested against all 53 countries, and Brazil has no special
+  treatment in the code.
+
+**Why.** `docs/WHY.md` calls the benchmark a test of whether capability is
+separate from wealth, and names the failure: the nine dimensions collapse into
+one factor that tracks GDP per head. If rows are admitted or dropped by what
+they do to that correlation, the test cannot fail, because any row that would
+make it fail is removed. D42 and D44 show the mechanism. `IC.FRM.CORR.ZS` was
+wired and reverted in one session because it moved Trust from 0.385 to 0.619,
+and D60 held out a behavioural bribery measure for the same reason. Both were
+reasonable steps under the rule as written. Repeated across the registry,
+though, the rule makes a low income correlation a product of the selection.
+Choosing by construct and letting the correlation land where it does turns the
+dimension correlations back into evidence. The wealth residual (D68) still
+shows what a dimension carries beyond income, and it does so honestly only if
+the rows were not chosen to make it large.
+
+**Cost.** Some dimension correlations will rise, and a dimension may cross 0.70
+and stay there. That is published as a finding against the claim. A construct
+argument is softer than a number and easier to dispute, so the memo states it
+before the values are seen. The rows chosen under the old screen are not
+re-admitted wholesale: each reopening is its own reviewed change, and that is
+slow. D117's triage keeps its ceiling, spread and cost questions, and its
+wealth question becomes the construct question above.
+
+**Overturned by.** An audit of rows decided after this entry showing that the
+construct arguments, written before the values, still drift toward rows that
+lower the income correlation. That would show the pre-commitment is not
+working. It would also be overturned by rows admitted under this rule that
+reviewers agree are levels of spending or adoption under another name, which
+would show the construct question is too loose to stand in for the number.

@@ -17,6 +17,10 @@ and a dimension can improve without the country first getting richer. If it is
 wrong, the nine dimensions collapse into one factor that tracks GDP per head.
 The diagnostics are designed to show that: see D1 and the README.
 
+For the test to be able to fail, no indicator is chosen for its correlation with
+income. A row is admitted for what it observes, and its correlation with GDP per
+head is then published as a finding. See D118.
+
 ## Where the nine dimensions come from
 
 They come from an Envisioning strategy on national capability. Its argument is
