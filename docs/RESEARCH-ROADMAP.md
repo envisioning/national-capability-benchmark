@@ -236,6 +236,9 @@ the release year 2022, and does not copy respondent-level microdata. It
 currently recognizes 40 benchmark countries and emits 37 unique country rows.
 Germany, Great Britain and the Netherlands have separate EVS and WVS rows and
 are held until pooled microdata weights can be harmonised reproducibly.
+Pooling them needs the registered GESIS microdata download. On 2026-10-01
+every `gesis.org` host answered 403 from a cloud session, so the pooling rule
+must be written from a machine with a GESIS account.
 
 The research memo must keep access, licensing, country coverage, fieldwork
 years, variable identifiers, response coding, weights, missing-value codes and
@@ -264,11 +267,12 @@ metadata and a coverage report. The current implementation is
 
 **Target:** `court_case_clearance`.
 
-**Status:** desk preflight complete, values not fetched. The coverage map and
-construct findings are in `docs/research/trust/COURT-CLEARANCE.md`: CEPEJ and
-CEJA reach 26 of 53 countries, one short of the half-frame screen, and a
-single-year clearance mostly measures backlog change. The value preflight is
-specified in `docs/research/trust/HANDOFF-TRUST-2.md`.
+**Status:** rejected at the coverage screen, 2026-10-01. The value preflight
+found in-scope civil and commercial first-instance values for 2022 to 2024 in
+13 of 53 countries, against a screen of 27, with a ceiling of 19 if CEPEJ
+becomes readable and two flagged scopes resolve. CEJA pools every matter and
+cannot fill the row. The row stays a gap. Values, sources and diagnostics are
+in `docs/research/trust/COURT-CLEARANCE.md`.
 
 **Primary candidates:** [CEPEJ-STAT](https://www.coe.int/en/web/cepej/cepej-stat),
 OECD and national court statistics, as already named in the registry and A12.

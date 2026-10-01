@@ -1,5 +1,9 @@
 # Handoff: TRUST-2 court case clearance value preflight
 
+**Done 2026-10-01.** Steps 1 to 5 were run and the screen failed at 13 of 53.
+The result is in `COURT-CLEARANCE.md` under "Value preflight". This file is
+kept as the record of what was asked.
+
 For an agent with open web access. Written 2026-10-01 at the end of a session
 whose egress policy blocked every primary host.
 
