@@ -88,14 +88,16 @@ passes triage runs to its gate. One that fails triage costs one paragraph.
 | Q8 | IDEA voter turnout | O1: Shared purpose | IDEA open data, full frame | Triage note, including the compulsory-voting rule |
 | Q9 | Full Delphi rerun (TRUST-5) | Reading, not measurement | Needs `AI_GATEWAY_API_KEY` | After the dataset changes |
 
-**Q1 status (2026-10-01): started, no output yet.** The pinned Core v15 archive
-downloads from a cloud session (`V-Dem-CY-Core-v15_csv.zip`, codebook inside).
-A v16 Core release exists at the same URL pattern (`-v16_csv.zip`, March
+**Q5 status (2026-10-01): started, no output yet.** The adapter now pins the
+Full+Others v15 archive (D121), which downloads from a cloud session and
+carries the Core variables too.
+A v16 release exists at the same URL pattern (`-v16_csv.zip`, March
 2026): pin it in a separate patch-level change, not inside the sweep. Starting
 hypotheses to triage, none tested:
 
-- `political_polarization` (Shared purpose) against `v2cacamps`, an expert
-  rating of antagonistic camps, which reads close to the registry definition.
+- `political_polarization` (Shared purpose) against `v2cacamps`: done. It is
+  published as a check, not scored, because closed autocracies read as calm
+  (D121, A13). The gap stays open.
 - A Trust institutional-performance row from government compliance with the
   courts (`v2jucomp`, `v2juhccomp`) or impartial administration (`v2clrspct`).
   These would be new rows, not existing gaps, so they need a decision.
@@ -106,9 +108,12 @@ hypotheses to triage, none tested:
 - Nothing in V-Dem answers `institutional_trust` (public confidence),
   `volunteering_rate`, `national_belonging` or `government_foresight_capacity`.
 
-The triage is quantitative and cheap: for each variable at 2024, report
-coverage of the 53, spread, r with log GDP, and r with the dimension's
-existing rows. Write the table to `docs/research/vdem-sweep/TRIAGE.md`.
+Triage construct first (D118): write what each variable observes, and whether it
+is an expert perception of the same kind D23 retired, before reading its
+values. Then report, for each variable at 2024, coverage of the 53, spread, r
+with log GDP and r with the dimension's existing rows. The correlations are
+findings and decide nothing. The A13 test, whether closed autocracies score
+well for the wrong reason, applies to every V-Dem candidate. Write the table to `docs/research/vdem-sweep/TRIAGE.md`.
 
 Parked, with the reason:
 
