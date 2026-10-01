@@ -4,7 +4,7 @@
 Research tool for D125, not part of the build. Reproduce with:
 
     python3 -m venv .venv && .venv/bin/pip install pymupdf
-    for id in 51858 51621 51377 51147; do
+    for id in 51858 51621 51377 51147 50900 50691 50443; do
       curl -sSL -o gem-$id.pdf "https://www.gemconsortium.org/file/open?fileId=$id"
     done
     .venv/bin/python gem-extract.py <dir-with-pdfs>  > gem-extract.json
@@ -21,7 +21,7 @@ import sys
 
 import pymupdf
 
-NUM = re.compile(r'^(-?\d+(\.\d+)?[*=]?|—\*?|–|-)$')
+NUM = re.compile(r'^(=?-?\d+(\.\d+)?[*=]?|—\*?|–|-)$')
 
 ISO3 = {
     'Argentina': 'ARG', 'Brazil': 'BRA', 'Canada': 'CAN', 'Chile': 'CHL', 'China': 'CHN',
@@ -32,7 +32,7 @@ ISO3 = {
     'Republic of Korea': 'KOR', 'South Africa': 'ZAF', 'Spain': 'ESP', 'Sweden': 'SWE',
     'Switzerland': 'CHE', 'Thailand': 'THA', 'United Arab Emirates': 'ARE',
     'United Kingdom': 'GBR', 'United States': 'USA', 'Uruguay': 'URY', 'Venezuela': 'VEN',
-    # Benchmark countries never seen in the 2022-2025 tables, listed so a
+    # Benchmark countries never seen in the 2019-2025 tables, listed so a
     # future edition that carries them is picked up.
     'Singapore': 'SGP', 'Portugal': 'PRT', 'Ireland': 'IRL', 'Australia': 'AUS',
     'Viet Nam': 'VNM', 'Vietnam': 'VNM', 'Philippines': 'PHL', 'Malaysia': 'MYS',
@@ -55,6 +55,12 @@ TABLES = {
         (51377, 2023, 'GEM 2023/2024 Global Report', 'Table A2', 215, 215, 0, 6),
         (51147, 2022, 'GEM 2022/2023 Global Report', 'Table A2', 226, 226, 0, 6),
         (51147, 2022, 'GEM 2022/2023 Global Report', 'Table A2', 227, 227, 0, 6),
+        (50900, 2021, 'GEM 2021/2022 Global Report', 'Table A2', 202, 202, 0, 6),
+        (50900, 2021, 'GEM 2021/2022 Global Report', 'Table A2', 203, 203, 0, 6),
+        (50691, 2020, 'GEM 2020/2021 Global Report', 'Table A2', 184, 185, 2, 8),
+        (50691, 2020, 'GEM 2020/2021 Global Report', 'Table A2 (continued)', 186, 187, 2, 8),
+        (50443, 2019, 'GEM 2019/2020 Global Report', 'Table A1', 196, 197, 2, 8),
+        (50443, 2019, 'GEM 2019/2020 Global Report', 'Table A1 (continued)', 198, 199, 2, 8),
     ],
     'fear_of_failure': [
         (51858, 2025, 'GEM 2025/2026 Global Report', 'Table A2', 228, 228, 1, 4),
@@ -65,6 +71,12 @@ TABLES = {
         (51377, 2023, 'GEM 2023/2024 Global Report', 'Table A3 (continued)', 218, 219, 1, 3),
         (51147, 2022, 'GEM 2022/2023 Global Report', 'Table A3', 228, 229, 1, 3),
         (51147, 2022, 'GEM 2022/2023 Global Report', 'Table A3 (continued)', 230, 231, 1, 3),
+        (50900, 2021, 'GEM 2021/2022 Global Report', 'Table A3', 205, 205, 0, 3),
+        (50900, 2021, 'GEM 2021/2022 Global Report', 'Table A3 (continued)', 207, 207, 0, 3),
+        (50691, 2020, 'GEM 2020/2021 Global Report', 'Table A3', 188, 188, 8, 10),
+        (50691, 2020, 'GEM 2020/2021 Global Report', 'Table A3 (continued)', 190, 190, 8, 10),
+        (50443, 2019, 'GEM 2019/2020 Global Report', 'Table A2', 200, 201, 0, 10),
+        (50443, 2019, 'GEM 2019/2020 Global Report', 'Table A2 (continued)', 202, 203, 0, 10),
     ],
 }
 
@@ -96,8 +108,16 @@ def lines(page):
     return out
 
 
+def country(name):
+    """The registry country a row label names. The 2019 and 2020 tables put
+    region and income words after the name, so match the longest name the
+    label starts with."""
+    hits = [k for k in ISO3 if name == k or name.startswith(k + ' ')]
+    return max(hits, key=len) if hits else None
+
+
 def names_by_y(page):
-    return [(y, n) for y, n, _ in lines(page) if n in ISO3]
+    return [(y, country(n)) for y, n, _ in lines(page) if country(n)]
 
 
 def values_by_y(page):

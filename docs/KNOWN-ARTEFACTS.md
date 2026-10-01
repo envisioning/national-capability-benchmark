@@ -21,10 +21,10 @@ measured on is not the scale in use.
 Five of nine indicators are observed. GEM early-stage entrepreneurial activity
 and fear of failure carry two of them, so it no longer rests on patents alone.
 Venture capital, regulatory sandboxes, university spinouts and business R&D
-share are still gaps. Mean confidence is 0.338. GEM covers 35 of the 53
-countries for TEA and 34 for fear of failure (D125); the 18 or 19 it misses are
+share are still gaps. Mean confidence is 0.350. GEM covers 40 of the 53
+countries for TEA and 39 for fear of failure (D125); the 13 or 14 it misses are
 scored on patents, trademarks and industrial designs (D126), and they are
-mostly lower-income, so the dimension's confidence tracks income (r 0.45 with
+mostly lower-income, so the dimension's confidence tracks income (r 0.56 with
 log GDP per capita). Ireland has two observed rows and publishes a score.
 See D21.
 
@@ -38,16 +38,16 @@ covers:
 
 | Country | Indicators | Panel | Gap |
 | --- | ---: | ---: | ---: |
-| United States | 51.5 | 95 | +43.5 |
-| Estonia | 29.8 | 70 | +40.2 |
-| Netherlands | 33.9 | 65 | +31.1 |
-| India | 12.3 | 40 | +27.7 |
+| United States | 48.6 | 95 | +46.4 |
+| Estonia | 28.2 | 70 | +41.8 |
+| Netherlands | 31.0 | 65 | +34.0 |
+| India | 10.5 | 40 | +29.5 |
 
 The panel column is the in-session run of 2026-08-26 (`data/delphi/latest.json`);
-the indicator column is the current dataset. The Netherlands' 33.9 is not a
+the indicator column is the current dataset. The Netherlands' 31.0 is not a
 finding about Dutch innovation. It is the absence of venture-capital data and of
-a national design series. Uruguay scores 28.2, having legalised and regulated a
-national cannabis market and run a fintech sandbox. Argentina scores 20.6, having
+a national design series. Uruguay scores 23.7, having legalised and regulated a
+national cannabis market and run a fintech sandbox. Argentina scores 17.0, having
 produced more technology firms of scale per head than anywhere else in the
 region.
 
@@ -55,8 +55,8 @@ region.
 aggregate, the OECD SME and Entrepreneurship Financing scoreboard, covers 6 of
 the 16 original countries and omits Brazil, India, South Africa and Singapore.
 Business R&D share is the next best candidate, from UNESCO or OECD research and
-development statistics. GEM has not surveyed the other 18 countries since at
-least 2022, so its coverage cannot grow from the published reports.
+development statistics. GEM has not surveyed the other 14 countries since at
+least 2019, so its coverage cannot grow from the published reports.
 
 ---
 
