@@ -67,9 +67,11 @@ port 3888. That entry starts Next directly and does not use the proxy.
   selection, cost, and how to hand-author a run.
 - `docs/EVIDENCE.md` — the inclusion rule for evidence records and how to
   author one. Read it before adding anything to `data/evidence`. See D33.
-- `docs/RESEARCH-ROADMAP.md` — the executable research queue, source promotion
-  gates and the Trust work package. Read it before extending the registry or
-  adding a source adapter.
+- `docs/RESEARCH-ROADMAP.md` — the two research objectives and where each
+  dimension stands against them, the queue ordered by them, the desk triage
+  every candidate passes before values are fetched, and the source promotion
+  gates. Read it before extending the registry or adding a source adapter.
+  See D117.
 
 ## Layout
 

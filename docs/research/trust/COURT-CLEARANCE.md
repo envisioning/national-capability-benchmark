@@ -304,6 +304,7 @@ Source and license: EU Justice Scoreboard 2026 (CC BY 4.0, CEPEJ third-party sta
 Files changed: docs/research/trust/COURT-CLEARANCE.md, docs/RESEARCH-ROADMAP.md
 Commands run: none against the pipeline; source files fetched and parsed in a scratch directory
 Diagnostics result: clearance vs log GDP r -0.55, rho -0.25 (n 13); vs contract days r -0.22 (n 13); disposition vs contract days r +0.58 (n 10)
+Objective moved: none; Trust stays at mean confidence 0.21 (O1). The desk ceiling of 26 should have stopped it at triage (D117).
 Decision entry: none; no model change
 Version impact: none
 Next action: none on this row until CEPEJ is readable or a non-European comparable series exists
