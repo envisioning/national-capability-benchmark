@@ -9,6 +9,18 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.24.4 — 2026-10-01
+
+- **31 more documented deliveries, nine of them losses.** Every country now
+  has at least three. The losses include HS2, Mexico's disaster fund
+  FONDEN, Singapore's Tuaspring desalination partnership, PPP Canada,
+  China's PPP programme, India's UDAN regional flights and Sweden's health
+  emergency stockpile. The flagships include Crossrail, the Champlain
+  Bridge, the Hokuriku Shinkansen, Singapore's Jobs Support Scheme,
+  Ireland's research centres and Nicaragua's disaster insurance through
+  CCRIF. A second reviewer checked every number at its official source.
+  The capability agenda is regenerated.
+
 ## App 1.24.3 — 2026-10-01
 
 - **27 more documented deliveries, six of them losses.** The losses are

@@ -11837,6 +11837,1119 @@
         ],
         "travelled": "Close in design to France's CIFRE industrial doctorates (since 1981) and Denmark's Industrial PhD. Poland's version runs through annual ministerial editions rather than a standing agency."
       }
+    },
+    {
+      "id": "sgp-tuaspring",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "SGP",
+      "title": "Tuaspring desalination partnership, and its collapse",
+      "claim": "PUB contracted Hyflux's Tuaspring Pte Ltd under a water purchase agreement for Singapore's largest desalination plant, opened in 2013, then terminated the agreement on 17 April 2019 after the operator failed to keep the plant reliably operational, took the plant into public ownership in May 2019 and spent around $80 million on repairs due for completion in mid-2021.",
+      "metric": {
+        "name": "PUB repair cost after taking over the failed partnership plant",
+        "value": 80,
+        "unit": "million SGD",
+        "asOf": "2021-02"
+      },
+      "started": 2013,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Ministry of Sustainability and the Environment, Singapore, written reply to Parliamentary Question on Tuas South Desalination Plant",
+        "url": "https://www.mse.gov.sg/latest-news/written-reply-to-pq-on-tuas-south-desalination-plant/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "This is one contract failing, not the end of Singapore's public-private water model: PUB's own page lists Keppel Marina East (2020) and Jurong Island (2022) desalination plants built and run by private firms after the collapse, so the partnership approach survived and the record documents the loss of one delivery inside it. The $80 million is a ministerial answer to a parliamentary question, not an audited figure, and it covers repairs only, not PUB's operating costs since takeover or what the private partner's investors lost. The original 25-year term and contracted capacity of the agreement are reported only by press and secondary sources found today, so the record does not carry them. A hostile reviewer can also read the episode as the state's contractual safeguards working, which is how the minister presented it: the water supply was not interrupted.",
+      "pattern": {
+        "mechanism": "PUB bought desalinated water from a private developer under a long-term purchase agreement and, when the developer's finances failed, used the contract's default and termination remedies to take the plant into public ownership and repair it itself.",
+        "preconditions": [
+          "A water agency with in-house capacity to run the same plant technology it contracts out, here PUB's own Tuas Desalination Plant",
+          "Termination and step-in clauses written into the purchase agreement before anything went wrong",
+          "A private partner whose balance sheet depended on an integrated water and power plant that could lose money on the power side"
+        ]
+      }
+    },
+    {
+      "id": "sgp-jss",
+      "indicatorId": "institutional_responsiveness",
+      "iso3": "SGP",
+      "title": "Jobs Support Scheme and the four 2020 Budgets",
+      "claim": "Singapore's Ministry of Finance introduced the Jobs Support Scheme in the Unity Budget of 18 February 2020, raised and extended it through the Resilience, Solidarity and Fortitude Budgets, the fourth of them presented on 26 May 2020, and disbursed $22.6 billion of wage support from April to December 2020.",
+      "metric": {
+        "name": "Jobs Support Scheme wage support disbursed",
+        "value": 22.6,
+        "unit": "billion SGD",
+        "asOf": "2020-04 to 2020-12"
+      },
+      "secondMetric": {
+        "name": "Budgets presented to Parliament in 2020 by 26 May",
+        "value": 4,
+        "unit": "budgets",
+        "asOf": "2020-05-26"
+      },
+      "started": 2020,
+      "status": "concluded",
+      "source": {
+        "publisher": "Ministry of Finance, Singapore, press release on the interim assessment of 2020 COVID-19 Budget measures",
+        "url": "https://www.mof.gov.sg/news-resources/newsroom/budget-2020-covid-19-measures-brought-significant-relief-to-workers-families-and-businesses/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "Every figure is the Ministry of Finance assessing its own measures. Disbursement measures how fast money moved, not whether the rules changed for the right reasons or whether the jobs would have been lost without it; the ministry's own job-saving figure on the same page is a modelled estimate, and the record does not carry it. The speed rested on accumulated reserves that most of the benchmarked countries do not have, so the case shows what a cash-rich centre of government can do, not responsiveness under fiscal constraint. Four budgets in about 14 weeks counts revisions; it does not show that each revision was well targeted, and wage subsidies paid on every local employee reached firms that would have kept their workers anyway. The scheme was temporary by design and wound down after the crisis, so the record is a concluded delivery and not evidence of standing institutional agility.",
+      "pattern": {
+        "mechanism": "The Finance Ministry built one wage-subsidy scheme on the existing payroll and pension contribution records, paid it automatically without applications, and then changed its rate and duration in each supplementary budget as the lockdown was imposed and extended.",
+        "preconditions": [
+          "A payroll and social contribution register that already identifies every local employee and employer",
+          "Fiscal reserves that Parliament could draw on without borrowing",
+          "A cabinet and Parliament able to pass supplementary budgets within weeks"
+        ],
+        "travelled": "Similar automatic wage subsidies ran in other countries during the pandemic, including Australia's JobKeeper and Germany's Kurzarbeit, which already existed; the distinctive part here was paying without applications through existing contribution records."
+      }
+    },
+    {
+      "id": "sgp-drainage",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "SGP",
+      "title": "PUB drainage programme and the shrinking of flood-prone land",
+      "claim": "Singapore's drainage authorities, the Drainage Department and later PUB, expanded the national drainage system under a drainage master plan, with a development drainage code from 1976, and reduced flood-prone areas from about 3,200 hectares in the 1970s to less than 25 hectares by 2025, with about $2.5 billion spent on drainage upgrades since 2011.",
+      "metric": {
+        "name": "Flood-prone area remaining",
+        "value": 25,
+        "unit": "hectares (upper bound, 'less than')",
+        "asOf": "2025-02"
+      },
+      "secondMetric": {
+        "name": "Flood-prone area in the 1970s",
+        "value": 3200,
+        "unit": "hectares",
+        "asOf": "1970s"
+      },
+      "started": 1976,
+      "status": "operating",
+      "source": {
+        "publisher": "Ministry of Sustainability and the Environment, Singapore, oral reply to Parliamentary Question on drainage improvement",
+        "url": "https://www.mse.gov.sg/latest-news/oral-reply-on-drainage-improvement-feb2025/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "Flood-prone area is PUB's own definition, counted by the agency that is responsible for reducing it, and the method behind the count is not published with it. The 1970s baseline is a rounded single figure with no year. An intermediate official figure, 40 hectares in 2013 in the PUB annual report, is consistent with a falling series, but the curve cannot be rebuilt from one dataset. The drop combines drainage works with land reclamation, raised platform levels and redevelopment, so it does not isolate the drainage programme. Flash floods still occur at listed hotspots, and the number says nothing about recovery from a major shock, because Singapore has not had a catastrophic flood in the period to test it. Most of the reduction predates the climate projections the ministry now plans against, so it shows capacity built against past rainfall, not readiness for sea-level rise. The started year is when the drainage code began, not the first drainage works.",
+      "pattern": {
+        "mechanism": "A single drainage authority drew a national master plan, built and widened canals and drains against it, and wrote flood protection into the development code so that every new building carried its own platform level and runoff controls.",
+        "preconditions": [
+          "One authority with jurisdiction over drainage across the whole territory",
+          "Planning control strong enough to impose platform levels and detention requirements on every developer",
+          "A small, fully urbanised catchment where engineering can reach most flood-prone land"
+        ],
+        "travelled": "The source-control rule, detention tanks and rain gardens required on larger sites since 2014, is the part that travels to larger cities; the full reduction depended on a city-state's control of land use."
+      }
+    },
+    {
+      "id": "nic-ccrif",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "NIC",
+      "title": "Catastrophe risk insurance through CCRIF",
+      "claim": "Nicaragua's Ministry of Finance joined the CCRIF regional catastrophe insurance pool in 2015, renewed every year to at least 2021, raised its cyclone cover ahead of the 2020 season, and received five payouts totalling US$32.25 million, including US$30.6 million after hurricanes Eta and Iota.",
+      "metric": {
+        "name": "CCRIF payouts received since joining",
+        "value": 32.25,
+        "unit": "million USD",
+        "asOf": "2015 to 2021"
+      },
+      "secondMetric": {
+        "name": "Payouts after hurricanes Eta and Iota",
+        "value": 30.6,
+        "unit": "million USD",
+        "asOf": "2020-11"
+      },
+      "started": 2015,
+      "status": "operating",
+      "source": {
+        "publisher": "World Bank, Results Brief on the Nicaragua Catastrophe Risk Insurance Project",
+        "url": "https://www.worldbank.org/en/results/2021/11/01/pooling-catastrophe-risk-to-protect-against-natural-hazards-nicaragua-s-experience-in-disaster-risk-management-and-finan",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The World Bank is reporting on its own project, and the brief covers the years to project closure in 2021; nothing in it documents payouts or cover after that. Operating status after 2021 is unconfirmed by the opened source. The premiums were mostly not paid by Nicaragua: an IDA credit of US$12 million financed participation fees and premiums for seven years; CCRIF and its donors offered 50 percent premium discounts, and the share of the premium paid from the credit fell in the last two years, with the Ministry of Finance budgeting the balance. The record therefore evidences a financing arrangement the state used, not one it funded. US$30.6 million is liquidity, not recovery: the brief gives no damage total for Eta and Iota to set it against, and a parametric payout measures whether a model threshold was crossed, not how well the money was spent. The brief's comparison of fatalities with hurricane Felix in 2007 is not carried here. The record overlaps in time with the existing SINAPRED evacuation record and documents a different delivery, the fiscal side of preparedness.",
+      "pattern": {
+        "mechanism": "The Ministry of Finance bought parametric insurance from a regional risk pool, sized the cyclone cover each season on the national meteorological institute's forecast, and drew the payout within two weeks of a storm to bridge the gap before other funding arrived.",
+        "preconditions": [
+          "A regional pool that spreads risk across many small economies so premiums are affordable",
+          "Donor or development-bank finance for entry fees and premiums while the budget cannot carry them",
+          "A hazard agency whose forecasts the finance ministry trusts enough to change its cover"
+        ],
+        "travelled": "The regional pooling model also runs in Africa and the Pacific, where low premium budgets have repeatedly limited cover."
+      }
+    },
+    {
+      "id": "zaf-cet-colleges",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "ZAF",
+      "title": "Community Education and Training colleges, and their erosion",
+      "claim": "South Africa's Department of Higher Education and Training merged the public adult learning centres into nine Community Education and Training colleges on 1 April 2015; the colleges enrolled 273,431 people in 2016 and 120,081 in 2023, against a National Development Plan target of one million by 2030.",
+      "metric": {
+        "name": "Students enrolled in public CET colleges",
+        "value": 120081,
+        "unit": "students",
+        "asOf": "2023"
+      },
+      "secondMetric": {
+        "name": "Students enrolled in public CET colleges in the first year after the merger reported by DHET",
+        "value": 273431,
+        "unit": "students",
+        "asOf": "2016"
+      },
+      "started": 2015,
+      "status": "eroded",
+      "source": {
+        "publisher": "Department of Higher Education and Training, Statistics on Post-School Education and Training in South Africa 2023",
+        "url": "https://www.dhet.gov.za/Information%20Systems%20Management/Statistics%20on%20Post-School%20Education%20and%20Training%20in%20South%20Africa,%202023.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The two figures come from two DHET publications, and the peak is not established: 2016 is the earliest CET-college figure found, and the same Monitor puts the predecessor adult basic education system at 297,491 in 2010, so the decline began before the merger. Enrolment is a headcount, not the share of adults in learning that the indicator asks for, and the 2023 count rests on an 83.5 percent response rate, so it is understated by an unknown amount. DHET says enrolments have been dwindling since data moved to audited unit-level records, so part of the fall may be the removal of unaudited or phantom enrolments rather than learners lost. Most enrolments are Grade 12 and GETC, which is second-chance schooling rather than adult training; the largest group is aged 20 to 24; and DHET suggests part of the 2023 Grade 12 drop moved to the Department of Basic Education's second-chance programme. The sector's own report notes centres with lecturers and no students. Both numbers are in PDFs.",
+      "pattern": {
+        "mechanism": "DHET took provincial adult learning centres into nine national CET colleges to professionalise public adult education. Enrolments kept dwindling, and some centres had lecturers but no students.",
+        "preconditions": [
+          "A national department able to fund and accredit adult programmes that adults actually want, not only school-equivalent certificates",
+          "An enrolment record that is audited, so that a decline can be told apart from a data clean-up",
+          "Physical learning centres and outreach in the communities the colleges are meant to serve"
+        ],
+        "travelled": "DHET's response is to tie CET colleges to SETA and National Skills Fund occupational programmes, which grew 118.8 percent in 2023 from a base of 558."
+      }
+    },
+    {
+      "id": "zaf-ifwg-sandbox",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "ZAF",
+      "title": "IFWG Regulatory Sandbox",
+      "claim": "South Africa's Intergovernmental Fintech Working Group, a joint body of the financial regulators, opened a cross-regulator sandbox in April 2020 that took 54 unique applications and admitted nine sandbox tests from eight firms in its first cohort, then moved to a rolling intake.",
+      "metric": {
+        "name": "Sandbox tests admitted to the first IFWG cohort",
+        "value": 9,
+        "unit": "sandbox tests",
+        "asOf": "2020"
+      },
+      "secondMetric": {
+        "name": "Unique applications to the first cohort",
+        "value": 54,
+        "unit": "applications",
+        "asOf": "2020-05-15"
+      },
+      "started": 2020,
+      "status": "operating",
+      "source": {
+        "publisher": "South African Reserve Bank for the Intergovernmental Fintech Working Group, First Regulatory Sandbox Report, October 2022",
+        "url": "https://www.resbank.co.za/content/dam/sarb/publications/media-releases/2022/fintech-iwfg-sandbox-report/IFWG%20First%20Regulatory%20Sandbox%20Report%20October%202022.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "Nine tests is a small count, and the source is the regulators reporting on their own sandbox. The report does not show that any rule changed because of a test: it says two tests confirmed compliance with existing rules and seven produced insights for possible future frameworks. The 'operating' status rests on the October 2022 statement that the IFWG voted to move to a rolling intake. No official page that opened on the retrieval date counted participants after the first cohort, and the IFWG's own site (ifwg.co.za) did not respond to scripted requests. The sandbox covers financial services only, so it shows nothing about controlled trial regimes in other sectors. The figures are in a PDF.",
+      "pattern": {
+        "mechanism": "The Reserve Bank, the FSCA and other financial regulators ran one sandbox through a joint working group, so an innovator whose product crossed mandates such as crypto cross-border payments was tested by every relevant regulator at once.",
+        "preconditions": [
+          "Regulators willing to share one intake and one set of case managers across mandates",
+          "Enough supervisory staff to assess applications; the report says the volume of applications strained capacity",
+          "An Innovation Hub with a guidance unit to absorb the many applicants who do not need a sandbox"
+        ],
+        "travelled": "The IFWG moved from a cohort-based window to an adjusted rolling-based approach after its first round."
+      }
+    },
+    {
+      "id": "isr-covid-vaccination",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "ISR",
+      "title": "National COVID-19 vaccination campaign",
+      "claim": "Israel started COVID-19 vaccination in December 2020 through its four health funds and had fully vaccinated about 70 percent of adults by April 2021; at the end of April 2021, 55 percent of its population was vaccinated, when coverage in most OECD countries was between 11 percent and less than one percent.",
+      "metric": {
+        "name": "Adult population fully vaccinated (two doses)",
+        "value": 70,
+        "unit": "% of adults (about)",
+        "asOf": "2021-04"
+      },
+      "secondMetric": {
+        "name": "Population vaccinated at the end of April 2021",
+        "value": 55,
+        "unit": "% of population",
+        "asOf": "2021-04-30"
+      },
+      "started": 2020,
+      "status": "concluded",
+      "source": {
+        "publisher": "OECD, Economic Surveys: Israel 2023",
+        "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/04/oecd-economic-surveys-israel-2023_396ca9be/901365a6-en.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The 70 percent is an approximate figure that the OECD takes from the Bank of Israel, not an OECD count. The speed was bought in part by an early Pfizer/BioNTech supply deal paid for with weekly anonymised aggregate epidemiological data, and Israel has a young population, so the case says little about what a slower procurement position would have achieved. An OECD working paper says Israel later fell into the lower half of OECD vaccine coverage, and it puts ultra-Orthodox vaccination at about half the rate of the rest of the population. The 2023 survey also records that excess mortality was around the OECD average, so fast vaccination did not by itself produce better mortality outcomes. This is response to one shock, not evidence of preparation before it. Both figures are in PDFs.",
+      "pattern": {
+        "mechanism": "The government bought early supply with a data-sharing agreement. It then delivered the campaign through the four health funds, which used their electronic records to call people in by risk group and their employed nurses to vaccinate, and it paid the funds premiums for reaching coverage targets.",
+        "preconditions": [
+          "Near-universal enrolment in a few health funds with complete electronic records",
+          "A primary care nursing workforce the funds could redeploy at once",
+          "A government able to sign a fast, unconventional procurement deal"
+        ]
+      }
+    },
+    {
+      "id": "isr-rail-electrification",
+      "indicatorId": "large_project_delivery",
+      "iso3": "ISR",
+      "title": "Israel Railways electrification and the Jerusalem express line, and their delays",
+      "claim": "Israel Railways began electrifying the national network in 2000 and opened the electric express line to Jerusalem in September 2018, but by May 2020 only about 64 of 480 planned route kilometres were electrified, and the forecast completion date had moved from 2019, set in 2013, to the end of 2025, on an estimated cost of ILS 12.1 billion.",
+      "metric": {
+        "name": "Forecast completion year of the electrification project, as updated in March 2020",
+        "value": 2025,
+        "unit": "year",
+        "asOf": "2020-03"
+      },
+      "secondMetric": {
+        "name": "Forecast completion year defined in 2013",
+        "value": 2019,
+        "unit": "year",
+        "asOf": "2013"
+      },
+      "started": 2000,
+      "status": "operating",
+      "source": {
+        "publisher": "State Comptroller and Ombudsman of Israel, Annual Report 71A (2020), Execution of the Railway Lines Electrification Project and Opening of the Express Line to Jerusalem, follow-up audit",
+        "url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2020/71A/EN/2020-71A-301-Railway-to-Jerusalem-Taktzir-EN.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "This is a delivery still in progress, not a finished one. At the audit date it had reached 13.3 percent of the planned route, and no official source that opened on the retrieval date gave a later figure, so whether the 2025 date held is not shown. The audit gives an estimated cost (ILS 12.1 billion) but no original budget, so the cost overrun cannot be computed from this source; the schedule slip from 2019 to 2025 is the only performance figure. The completion dates are Israel Railways' own forecasts, which the Comptroller reports. The audit also found that the Jerusalem line opened without its own rolling stock and ran with passengers in test mode for about a year, cancelling 2.6 percent of trips against 0.5 percent on other lines. A hostile reviewer would say the record shows a slipping project, not a delivered one.",
+      "pattern": {
+        "mechanism": "A state-owned rail company ran a network-wide electrification programme alongside a new flagship line and opened the line first, diverting cars from other lines to do it. Completion dates were reset repeatedly while the State Comptroller ran follow-up audits.",
+        "preconditions": [
+          "One state company carrying planning, procurement and operations, so a slip in one stream delays all of them",
+          "Repeated external audit that publishes the forecast dates, which is what makes the slippage visible",
+          "An operator willing to open a line before it had its own rolling stock, by diverting cars from other lines"
+        ]
+      }
+    },
+    {
+      "id": "can-ppp-canada",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "CAN",
+      "title": "PPP Canada and the P3 Canada Fund, and its dissolution",
+      "claim": "Canada's federal Crown corporation PPP Canada, operational from 2009, committed over C$1.3 billion through the P3 Canada Fund to 25 public-private partnership projects across the country before the government dissolved it, with operations ceasing at the end of 2017 and the corporation dissolved effective March 31, 2018.",
+      "metric": {
+        "name": "P3 Canada Fund investments committed over the corporation's life",
+        "value": 1300000000,
+        "unit": "Canadian dollars (committed, 'over')",
+        "asOf": "2018-03"
+      },
+      "secondMetric": {
+        "name": "Projects in the P3 Canada Fund portfolio at dissolution",
+        "value": 25,
+        "unit": "projects",
+        "asOf": "2018-03"
+      },
+      "started": 2009,
+      "status": "dismantled",
+      "source": {
+        "publisher": "PPP Canada Inc., Annual Report 2017-18 (published by Housing, Infrastructure and Communities Canada)",
+        "url": "https://housing-infrastructure.canada.ca/pub/other-autre/annual-report-rapport-annuel-eng.html",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "This is a dismantling by decision, not a collapse. The government's stated reason was that PPP Canada had 'successfully fulfilled its mandate', and its files were transitioned to Infrastructure Canada. The corporation carried performance-based payment liabilities of approximately C$1.3 billion over five years. A hostile reviewer would say the record shows a federal agency closing, not a national capability lost. The C$1.3 billion is commitments rather than disbursements (the audited statements show far smaller annual payments to recipients) and is a federal top-up of up to 25% of eligible costs, so it does not measure the scale of the joint delivery, its value for money or whether the 25 assets performed. The narrative and the figure are the corporation's own annual report; only the financial statements carry an Auditor General audit opinion.",
+      "pattern": {
+        "mechanism": "The federal government created a Crown corporation with a dedicated fund that paid up to a quarter of eligible costs to provinces, municipalities and Indigenous communities that procured infrastructure as public-private partnerships, plus template contracts and screening of federal projects; once it judged the market mature, it folded the corporation into the infrastructure department.",
+        "preconditions": [
+          "Provincial P3 agencies and a domestic market of builders, financiers and advisers already able to bid long design-build-finance-maintain contracts.",
+          "A federal transfer large enough to change a smaller jurisdiction's procurement choice without paying for the whole asset.",
+          "A department able to absorb the portfolio and its long-dated payment liabilities when the agency closed."
+        ]
+      }
+    },
+    {
+      "id": "can-champlain-bridge",
+      "indicatorId": "large_project_delivery",
+      "iso3": "CAN",
+      "title": "Samuel De Champlain Bridge corridor",
+      "claim": "Infrastructure Canada delivered the Samuel De Champlain Bridge corridor in Montreal as a public-private partnership signed in 2015, opening the bridge in July 2019 against a contractual in-service date of December 1, 2018, at a total project cost the department reports as C$4.2 billion, after a C$235 million settlement in 2018 that paid for delay-recovery measures and oversized-part transport issues.",
+      "metric": {
+        "name": "Total cost of the project as reported by the department",
+        "value": 4200000000,
+        "unit": "Canadian dollars",
+        "asOf": "2019"
+      },
+      "secondMetric": {
+        "name": "Settlement paid to the private partner for delay recovery and oversized-part transport",
+        "value": 235000000,
+        "unit": "Canadian dollars",
+        "asOf": "2018-04"
+      },
+      "started": 2015,
+      "status": "concluded",
+      "source": {
+        "publisher": "Housing, Infrastructure and Communities Canada (formerly Infrastructure Canada), Samuel De Champlain Bridge project story",
+        "url": "https://housing-infrastructure.canada.ca/investments-investissements/stories-histoires/trans-mobil/montreal-qc-eng.html",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "No published figure states the outturn against the baseline, so overrun has to be pieced together by the reader. The value-for-money report gives a 2015 total of C$4.239 billion and a contractual in-service date of December 1, 2018; the department's own story page gives a rounded C$4.2 billion total and a July 2019 opening; the 2018 settlement adds C$235 million and moved the delivery date to December 21, 2018, which was itself missed. The C$4.2 billion therefore cannot include the settlement and appears to restate the original envelope, so the true outturn is at least about 5.5% above it (a computed figure, not published) and the bridge opened about seven months after the contract date. Costs also bundle a 30-year operation and maintenance period and financing, so the number is not a construction cost. All figures are the department's own; the Auditor General's 2018 doubts about the schedule are reported only in the press here. The canada.ca news release refused a scripted curl request and was read through a browser-like fetch. This is one megaproject, not a national portfolio.",
+      "pattern": {
+        "mechanism": "Infrastructure Canada replaced a failing federal bridge through a design-build-finance-operate-maintain contract with liquidated damages for late opening, then bought back schedule with a negotiated settlement when transport restrictions and disputes threatened the date.",
+        "preconditions": [
+          "A federal asset owner with an urgent safety case (the old bridge at the end of its safe life) that justified a fixed in-service date.",
+          "A mature domestic P3 market and an owner's engineer able to price and monitor a 30-year contract.",
+          "Budget room to pay a nine-figure settlement rather than litigate through the delay."
+        ]
+      }
+    },
+    {
+      "id": "col-sena-complementaria",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "COL",
+      "title": "SENA complementary training (formación complementaria)",
+      "claim": "Colombia's Servicio Nacional de Aprendizaje, created by decree in 1957, recorded 5,469,951 learners in short complementary training courses in 2023 (7,035,749 course places), and certified 3,661,218 completions in that strand the same year.",
+      "metric": {
+        "name": "Learners (aprendices) in SENA complementary training",
+        "value": 5469951,
+        "unit": "learners",
+        "asOf": "2023-12"
+      },
+      "secondMetric": {
+        "name": "Complementary training certifications",
+        "value": 3661218,
+        "unit": "certifications",
+        "asOf": "2023-12"
+      },
+      "started": 1957,
+      "status": "operating",
+      "source": {
+        "publisher": "Servicio Nacional de Aprendizaje (SENA), Dirección de Planeación, Informe Estadístico Diciembre 2023",
+        "url": "https://historico.sena.edu.co/es-co/transparencia/InformeEstadistico2020/2023/Diciembre/Informe%20Estadistico%20Diciembre%202023.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The indicator asks for the share of adults trained in the last 12 months; SENA reports learner counts from its own enrolment system (Sofia Plus), not a population share, and they cannot be turned into one: the count includes young people below adult age, enrolments through coverage-extension agreements with third parties, and short virtual and bilingualism courses, and a person enrolled in several courses during the year may be counted more than once. Completion is weak: the same table reports 47.29% dropout in complementary training. The started year is the creating decree, not the first course. The www.sena.edu.co copy of the report now serves an empty web app; the figure was read from SENA's own historico mirror, and the December 2024 edition was not found at the same path.",
+      "pattern": {
+        "mechanism": "The state funds a national training agency from a payroll levy on employers and lets it run short, free, open-enrolment courses, in person and online, alongside its longer technical programmes, so any working adult can take a module without a qualification track.",
+        "preconditions": [
+          "A dedicated payroll contribution that funds the agency outside annual budget fights.",
+          "A national network of training centres in every region plus a virtual platform to reach rural learners.",
+          "Employers and unions on the governing board, which keeps course content close to jobs."
+        ],
+        "travelled": "The levy-funded national training agency model is shared with Brazil's SENAI and SENAC, which predate SENA and were a reference for its design."
+      }
+    },
+    {
+      "id": "chn-ppp",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "CHN",
+      "title": "National PPP programme and project library, and its dismantling",
+      "claim": "China's Ministry of Finance ran a national government and social capital cooperation (PPP) programme under the 2015 State Council guidance, whose management library held 10,332 projects with 16.6 trillion yuan of investment by the end of October 2022; in November 2023 the State Council ended the 2015 regime for every project not yet procured and replaced it with a concession-only, user-fee mechanism that bars availability payments.",
+      "metric": {
+        "name": "Projects in the national PPP management library, cumulative",
+        "value": 10332,
+        "unit": "projects",
+        "asOf": "2022-10"
+      },
+      "secondMetric": {
+        "name": "Projects removed from the library in the 2017-2018 clean-up",
+        "value": 1695,
+        "unit": "projects",
+        "asOf": "2018-04-23"
+      },
+      "started": 2015,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Ministry of Finance of the People's Republic of China (mof.gov.cn, republishing China Finance and Economics News)",
+        "url": "http://www.mof.gov.cn/zhengwuxinxi/caijingshidian/zgcjb/202211/t20221122_3852657.htm",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "Both project figures sit in articles by Ministry of Finance affiliated newspapers (China Finance and Economics News, Economic Daily) republished on mof.gov.cn, not in a Ministry statistical release; the Ministry's own monthly library reports on jrs.mof.gov.cn stop at January 2020, so the 2022 figure cannot be checked against a primary table. The source is a ministry press page rather than a statistics release. A count of library projects measures entries in an administrative register, not collaboration: many entries were government-paid availability-payment schemes that the Ministry itself purged in 2017-2018 as disguised local borrowing, so a large share of the 'partnership' was public debt with a private contractor in front. The library count is cumulative and does not show how many projects reached operation or delivered value for money. Dismantling applies to the 2015 regime for new projects; existing contracts keep running and PPP continues as user-fee concessions under the National Development and Reform Commission, so this is the end of one national model, not of public-private delivery in China. The 2023 notice gives the reasons in general terms (hidden local-government debt, private investment) and no figure for what failed.",
+      "pattern": {
+        "mechanism": "The Ministry of Finance built a national PPP framework, a central project library and disclosure platform from 2014-2015 and pushed local governments to procure infrastructure through it; when the library became a channel for hidden local debt, the Ministry purged it in 2017-2018 and the State Council replaced the regime in 2023 with user-fee concessions run by the planning commission.",
+        "preconditions": [
+          "A central finance ministry able to define eligibility and hold a national register of local projects",
+          "Local governments with borrowing limits that make off-balance-sheet payment commitments attractive",
+          "A fiscal-risk authority willing to purge and then close a programme it had itself promoted"
+        ],
+        "travelled": "China copied PPP units and project libraries from the United Kingdom and multilateral advisers; the reversal mirrors the UK's own 2018 abolition of PF2, in both cases after availability payments were judged to hide public liabilities."
+      }
+    },
+    {
+      "id": "chn-skills-upgrading",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "CHN",
+      "title": "Vocational skills upgrading action, 2019-2021",
+      "claim": "Under a State Council plan funded with 100 billion yuan from the unemployment insurance fund surplus, China's human resources ministry organised 32.184 million person-times of subsidised vocational skills training in 2021 alone, the final year of a three-year action that targeted more than 50 million.",
+      "metric": {
+        "name": "Subsidised vocational skills training delivered in the year",
+        "value": 32184000,
+        "unit": "person-times",
+        "asOf": "2021"
+      },
+      "secondMetric": {
+        "name": "Subsidised vocational skills training since the start of the 14th Five-Year Plan, cumulative",
+        "value": 92000000,
+        "unit": "person-times (more than)",
+        "asOf": "2025-09"
+      },
+      "started": 2019,
+      "status": "eroded",
+      "source": {
+        "publisher": "Ministry of Human Resources and Social Security, 2021 statistical bulletin on human resources and social security development",
+        "url": "http://www.job.mohrss.gov.cn/u/cms/www/202206/07141054646j.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "Person-times are enrolments, not people: one worker trained twice counts twice, so the figure cannot be turned into the share of adults trained that the construct asks for. Even if every person-time were a different adult, 32 million is a small single-digit share of China's working-age population. The count is administrative and self-reported up through provincial human resources bureaux whose budgets depended on hitting the plan target; the bulletin publishes no completion, certification or employment outcome. The 2021 figure coincided with pandemic-era job retention schemes and sits beside 15 million 'training in place of work' subsidies, a wage support instrument. The second metric comes from a gov.cn news article, not a bulletin, and implies by subtraction that annual volume after 2021 fell to roughly half the 2021 level once the special fund ended: more than 92 million person-times from 2021 to September 2025, less 32.184 million in 2021, leaves about 60 million over about 3.7 years, against 32 million in 2021 alone. That drop is computed by subtraction, not published, and it is why the record is marked eroded. The 2023 and 2024 bulletins are on mohrss.gov.cn, which serves a script bot check, and were not read.",
+      "pattern": {
+        "mechanism": "The State Council set a three-year national training target and released 100 billion yuan from the unemployment insurance fund surplus into ring-fenced provincial accounts, and the human resources ministry paid accredited providers and employers per trainee against a published target catalogue.",
+        "preconditions": [
+          "An unemployment insurance fund with a large accumulated surplus that the centre could redirect",
+          "A provincial human resources administration able to accredit providers and verify claims at scale",
+          "Employers and migrant workers reachable through workplace and village channels"
+        ],
+        "travelled": "Singapore's SkillsFuture and Korea's employment insurance training accounts finance adult training from payroll-linked funds; China's version was a time-bound surge rather than an individual entitlement, which is why volume fell when the fund was spent."
+      }
+    },
+    {
+      "id": "jpn-regulatory-sandbox",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "JPN",
+      "title": "Project-based regulatory sandbox (new technology demonstration scheme)",
+      "claim": "Japan's cross-government regulatory sandbox, created in 2018 under the Productivity Improvement Act and made permanent in 2021 under the Industrial Competitiveness Enhancement Act, had approved 33 demonstration plans involving 152 businesses by 19 March 2025, across mobility, IoT, fintech and healthcare.",
+      "metric": {
+        "name": "Demonstration plans approved under the regulatory sandbox, cumulative",
+        "value": 33,
+        "unit": "plans",
+        "asOf": "2025-03-19"
+      },
+      "secondMetric": {
+        "name": "Businesses in approved plans, cumulative",
+        "value": 152,
+        "unit": "businesses",
+        "asOf": "2025-03-19"
+      },
+      "started": 2018,
+      "status": "operating",
+      "source": {
+        "publisher": "Cabinet Secretariat, regulatory sandbox one-stop window, 'Japan's Regulatory Sandbox' briefing",
+        "url": "https://www.cas.go.jp/jp/seisaku/s-portal/pdf/underlyinglaw/Japans_Regulatory_Sandbox.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The count comes from the sandbox's own secretariat in a promotional briefing, not a statistics release. Thirty-three plans over more than six years is about five a year, a modest rate for an economy of Japan's size, and the count says nothing about how many trials led to a permanent rule change; the annex lists some special measures (for example a 2020 insurance-law exception for P2P insurance) but the briefing gives no total of rules amended. A plan is counted at approval, not completion, and several approved plans are small single-firm demonstrations. The briefing's annex dates each approval: 19 of the 33 plans were approved by October 2020, and about three a year since, with one in 2024, so the scheme's use slowed sharply after its first two years. Japan runs other experimentation regimes (national strategic special zones, the grey-zone resolution system, the FSA fintech hub) that are not in this count, so it understates sandbox-type activity as the construct defines it while also overstating it as evidence of reform.",
+      "pattern": {
+        "mechanism": "The Cabinet Secretariat opened one government-wide window where a firm can propose a time- and participant-limited trial, and the minister responsible for each affected law approves it after checking with an expert committee, so ministries must answer within fixed timelines and use the trial data to review the rule.",
+        "preconditions": [
+          "A cabinet-level secretariat with authority to route a proposal to every regulating ministry",
+          "A statute that lets ministers approve trials without first amending the underlying law",
+          "Firms willing to publish trial plans and results for the data to inform rule changes"
+        ],
+        "travelled": "Built on the UK FCA's fintech sandbox but widened from one regulator to all ministries; Korea's 2019 regulatory sandbox took the cross-sector form further and reports far higher approval counts."
+      }
+    },
+    {
+      "id": "jpn-hokuriku-shinkansen",
+      "indicatorId": "large_project_delivery",
+      "iso3": "JPN",
+      "title": "Hokuriku Shinkansen Kanazawa to Tsuruga extension, and its overrun",
+      "claim": "Japan's Railway Construction, Transport and Technology Agency built the 125 km Kanazawa to Tsuruga extension of the Hokuriku Shinkansen from 2012; its authorised cost rose from 1.1858 trillion yen in 2017 to 1.6779 trillion yen after a second increase of 265.8 billion yen in March 2021, completion slipped one year to the end of fiscal 2023, and the line opened on 16 March 2024.",
+      "metric": {
+        "name": "Authorised project cost after the March 2021 revision",
+        "value": 16779,
+        "unit": "100 million yen (oku-yen)",
+        "asOf": "2021-03"
+      },
+      "secondMetric": {
+        "name": "Cost increase approved in the March 2021 revision",
+        "value": 2658,
+        "unit": "100 million yen (oku-yen)",
+        "asOf": "2021-03"
+      },
+      "started": 2012,
+      "status": "concluded",
+      "source": {
+        "publisher": "Board of Audit of Japan, fiscal 2020 audit report, chapter 4 item 11",
+        "url": "https://report.jbaudit.go.jp/org/r02/2020-r02-0768-0.htm",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "This is a delivery with a large overrun, filed because the construct asks for cost and schedule performance, not as a success. The overrun against the 2017 authorised cost is about 41 percent (1.6779 against 1.1858 trillion yen), a figure computed here, not published; against the 2012 plan it cannot be computed from this source. The final outturn cost after the March 2021 revision is not in the audit report, and the opening date comes from the delivery agency's own page. The one-year slip is measured against a deadline that the government had itself pulled three years forward in 2015, so part of the 'delay' is a political acceleration that did not hold. Some of the increase reflects new seismic standards and a consumption-tax rise, which an auditor might count as scope or price change rather than poor management; the audit office and the ministry's own verification committee nonetheless found weak reporting from site to headquarters and inadequate ministry oversight, and the ministry issued a formal business-improvement order. One project is not a national track record.",
+      "pattern": {
+        "mechanism": "The transport ministry authorised a state construction agency to build the line on a politically accelerated deadline; when the agency disclosed a second overrun late, the ministry set up an external verification committee, downgraded the agency's performance rating and issued a statutory improvement order, and the Board of Audit examined the causes in its annual report.",
+        "preconditions": [
+          "A specialised state construction agency with decades of high-speed rail experience",
+          "Independent audit and ministerial evaluation that can publish an overrun against a named project",
+          "Funding arrangements (lease fees, existing-line sale proceeds, local contributions) able to absorb an increase without stopping the works"
+        ],
+        "travelled": "Japan's verification committee and audit report resemble the UK's National Audit Office reviews of HS2; the difference is that the Japanese line opened within one year of its revised date while HS2 was cut back."
+      }
+    },
+    {
+      "id": "cri-ina",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "CRI",
+      "title": "INA national vocational training, and its contraction",
+      "claim": "Costa Rica's Instituto Nacional de Aprendizaje (INA) recorded 204,773 training enrolments in 2024, down from 313,276 in 2015 at the high point of its 2010 to 2019 plateau, a fall of about 35 percent that the 2020 to 2024 recovery did not reverse.",
+      "metric": {
+        "name": "INA total enrolments (Gestión Total matrículas), current",
+        "value": 204773,
+        "unit": "enrolments",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "INA total enrolments at the high point of the 2010 to 2019 plateau",
+        "value": 313276,
+        "unit": "enrolments",
+        "asOf": "2015"
+      },
+      "started": 1965,
+      "status": "eroded",
+      "source": {
+        "publisher": "Instituto Nacional de Aprendizaje (INA), Unidad de Planificación y Evaluación, INA en Cifras 2024, Cuadro 8.1",
+        "url": "https://www.ina.ac.cr/transparencia/Documentos%20compartidos/INA_en_cifras/INA_cifras_2024.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "Enrolments are a count of course registrations at one provider, not the share of adults in education or training that the gap asks for: a person can enrol more than once, and INA counted 97,870 distinct participants in 2024, roughly 2 to 3 percent of the adult population on our own rough arithmetic, with private, university, employer and online training invisible here. The table is INA reporting on itself and is not independently audited. The series is not clearly comparable across the break: the 2020 to 2024 tables state that enrolments cover programme modules, certifiable modules, technical assistance and competency certification, and the same yearbook reports enrolments in services run by accredited outside entities separately (87,258 in 2023, 65,300 in 2024), so part of the fall may be reclassification rather than lost reach; the yearbook does not reconcile the definitions. The single highest year is 2009 at 382,786, an isolated spike, so the peak named here is the 2015 plateau high and the fall would read as about 47 percent against 2009. The steepest drop (266,679 in 2019 to 172,664 in 2020) is the pandemic year, but the decline had begun in 2019 and enrolments stayed near 205,000 to 212,000 from 2022 to 2024. The number says nothing about training quality, completion or job outcomes, and the PDF has to be opened and read off a table.",
+      "pattern": {
+        "mechanism": "Costa Rica built a single national training institute in 1965 and financed it largely from an employer payroll contribution, so INA could run free courses across every region without competing for annual budget allocations; after 2019 its enrolments fell back to roughly the level of the mid-2000s.",
+        "preconditions": [
+          "A dedicated, earmarked revenue stream that does not depend on yearly appropriations",
+          "A regional network of training centres able to reach rural planning regions as well as the Central Valley",
+          "A curriculum and certification model that employers recognise, which INA has been redesigning around competencies"
+        ],
+        "travelled": "The payroll-levy training institute is a Latin American family (SENA in Colombia, SENAI in Brazil, INA in Costa Rica). Costa Rica's series shows that the protected revenue keeps the institution alive but does not by itself keep participation from contracting when delivery models change."
+      }
+    },
+    {
+      "id": "nga-nassp",
+      "indicatorId": "institutional_responsiveness",
+      "iso3": "NGA",
+      "title": "National Social Safety Nets Project and the COVID-19 Rapid Response Register",
+      "claim": "Nigeria's National Social Safety Nets Coordinating Office built a National Social Register of 15,673,296 households and, during COVID-19, a new Rapid Response Register that captured 2.7 million households, while the project paid targeted cash transfers to 9,666,420 direct beneficiaries in 37 states between 2017 and its close in December 2022.",
+      "metric": {
+        "name": "Households captured by the COVID-19 Rapid Response Register",
+        "value": 2700000,
+        "unit": "households",
+        "asOf": "2022-12"
+      },
+      "secondMetric": {
+        "name": "Households included in the National Social Register",
+        "value": 15673296,
+        "unit": "households",
+        "asOf": "2022-12"
+      },
+      "started": 2017,
+      "status": "operating",
+      "source": {
+        "publisher": "World Bank Independent Evaluation Group, ICR Review ICRR0023725, National Social Safety Nets Project (P151488)",
+        "url": "https://documents1.worldbank.org/curated/en/099012624183017071/pdf/P1514881e50fcd0261bd211ca45ab33dadc.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The gap asks for the speed at which programmes change, and the source gives no elapsed time: it shows that a shock register was built during COVID-19, not how many weeks it took or how quickly payments followed. The figures come from the World Bank's own completion review of a project it financed (IDA credit of about US$491 million, plus about US$335.5 million from the Abacha restitution fund), not from a Nigerian statistical source, and the review prints the original NSR target as 4,000, apparently a unit error that it does not explain. Registration is not payment: only 53 percent of beneficiaries were in the bottom two quintiles against a target of 80, only 6 percent of households received top-up transfers, more than three-quarters of households joined too late for three years of support, and benefit levels were lower than designed. After the review closes, the World Bank's January 2025 status report for the follow-on scale-up (https://documents1.worldbank.org/curated/en/099012925120031079/pdf/P17693518b066e0ff1b62c194b8b78c78dd.pdf) records that transfers since March 2024 go only to NIN- or BVN-verified beneficiaries, that oversight passed for a period to an inter-ministerial panel, and that about 1.4 million of 5 million supported households had received second and third tranches, so the delivery system's continuity is not secure.",
+      "pattern": {
+        "mechanism": "Nigeria's federal government set up NASSCO and the National Cash Transfer Office to build one national social register and an electronic payment rail, then reused that infrastructure during COVID-19 to stand up a rapid-response register from satellite poverty maps and phone data for urban households outside the original register.",
+        "preconditions": [
+          "A standing social register and payment system already in place before the shock, so a new caseload could be added rather than built from nothing",
+          "External finance and restitution funds ring-fenced for transfers, which kept payments flowing through federal budget stress",
+          "An identity layer (NIN or BVN) that later became a hard gate, and whose coverage gaps then slowed payments"
+        ],
+        "travelled": "Shock-responsive registers spread across Africa during COVID-19, Togo's Novissi being the best known. Nigeria's version shows that the register scales faster than the payment and identity-verification rails behind it."
+      }
+    },
+    {
+      "id": "swe-beredskapslager",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "SWE",
+      "title": "State medical emergency stockpiles, and their dismantling",
+      "claim": "Sweden's civil defence agency ÖCB began procuring long-term stocks of medical consumables for wartime care in 1989, and the national build-up by ÖCB and Socialstyrelsen was completed in 1995 to 1996; the stocks were run down from the late 1990s, ÖCB's stockpiles ended entirely in 2001, and by the start of the COVID-19 pandemic in 2020 Socialstyrelsen held no personal protective equipment in its emergency stockpile.",
+      "metric": {
+        "name": "Personal protective equipment held in Socialstyrelsen's national emergency stockpile before the pandemic",
+        "value": 0,
+        "unit": "items",
+        "asOf": "2020"
+      },
+      "secondMetric": {
+        "name": "Patients covered by Socialstyrelsen's emergency stockpile, peak versus after the 1996/1997 defence decision",
+        "value": 150000,
+        "unit": "patients (peak; reduced to 5,000)",
+        "asOf": "1996/1997"
+      },
+      "started": 1989,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Coronakommissionen, Sverige under pandemin (SOU 2021:89), published by Sveriges riksdag",
+        "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/statens-offentliga-utredningar/sverige-under-pandemin_h9b389/html/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "SOU 2021:19 sizes the stockpile at its peak in patients covered, not in volume or value: stocks for 150,000 patients and at most about 200 consumable items in 1996/1997, reduced to 5,000 patients with a trauma-care focus after the 1996/1997 defence decision. The build-up was sized for one to two months of wartime surgical consumption. The 2020 PPE zero measures a category the 1990s wartime stock is not shown to have held. The zero is Socialstyrelsen's own answer to the commission, and the same report says PPE bought during the 2014 Ebola outbreak had been held and lent to the regions, so 'no PPE' describes what was on hand in early 2020, not a stock that never existed. The dismantling was a deliberate decision based on a reassessed wartime threat, with the regions expected to hold their own stocks; the record documents a capability given up by choice, not one that collapsed. The 1950s figure of about 124,000 emergency hospital beds in SOU 2021:19 covers a different, older programme and is not used here. Both inquiries are long HTML transcriptions of PDFs with hyphenation breaks, and Sweden has since begun rebuilding health-sector stockpiling, which this record does not evaluate.",
+      "pattern": {
+        "mechanism": "The government had ÖCB and later Socialstyrelsen build national stocks of medical consumables and equipment for wartime casualties, then, after the 1996 total defence decision, the agencies sold off and ran down the stocks and moved supply onto the regions' just-in-time procurement.",
+        "preconditions": [
+          "A threat assessment that justified paying to store goods that are mostly never used",
+          "A national agency with storage sites and a mandate to rotate perishable stock",
+          "A political settlement that would keep funding the stock once the war threat receded, which is what failed"
+        ]
+      }
+    },
+    {
+      "id": "swe-botniabanan",
+      "indicatorId": "large_project_delivery",
+      "iso3": "SWE",
+      "title": "Botniabanan coastal railway",
+      "claim": "Sweden built the Botniabanan railway between Nyland on the Ångermanälven and Umeå through the state and municipally owned company Botniabanan AB, starting construction in 1999 and opening it in August 2010, four years after the original 2006 schedule, at a final cost of almost SEK 16 billion in 2010 prices, which the national audit office calculated as 73 percent above the original estimate.",
+      "metric": {
+        "name": "Final construction cost increase over the original cost estimate, 2010 prices",
+        "value": 73,
+        "unit": "% overrun",
+        "asOf": "2010"
+      },
+      "secondMetric": {
+        "name": "Total cost of delivering the planned Botniabanan traffic, including follow-on investments on connecting lines, above the estimate before the decision",
+        "value": 140,
+        "unit": "% above the pre-decision estimate",
+        "asOf": "2011"
+      },
+      "started": 1999,
+      "status": "operating",
+      "source": {
+        "publisher": "Riksrevisionen (Swedish National Audit Office), audit RiR 2011:22 as reproduced in Government communication 2011/12:20, published by Sveriges riksdag",
+        "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/skrivelse/riksrevisionens-granskning-av-botniabanan-och_gz0320/html/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The 73 percent is Riksrevisionen's own recalculation in constant 2010 prices; the government's communication in the same document gives SEK 15 billion in current prices, about 3 billion more than at the 1997 decision, so the size of the overrun depends on the price basis chosen. The 140 percent counts follow-on investments on Ådalsbanan and other connecting lines that the audit office judged necessary, a boundary Trafikverket disputed. The four-year delay is computed from two sentences, not published as a figure, and much of it came from environmental permitting under the 1999 Environmental Code rather than construction. The start year rests on a 1999/2000 parliamentary motion saying construction had just begun, because the audit itself dates only the 1997 decision. One railway line is a single project, so this is not a portfolio-level overrun rate, and the audit predates a decade of operation, so whether ridership and freight benefits arrived is not shown.",
+      "pattern": {
+        "mechanism": "Parliament chose to build the line through a dedicated company, Botniabanan AB, owned by the state and the municipalities along the route and loan-financed so it could build quickly, while Banverket kept the physical planning; the state then rents the line back from the company.",
+        "preconditions": [
+          "Regional and municipal co-owners willing to share financing and risk",
+          "A planning and environmental permitting process that can be forecast, which is where the schedule broke",
+          "An early estimate that covered the connecting lines the project needed to work, which the audit found was missing"
+        ]
+      }
+    },
+    {
+      "id": "swe-kunskapslyftet",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "SWE",
+      "title": "Kunskapslyftet adult education initiative",
+      "claim": "Sweden's government funded municipalities to expand upper secondary adult education from autumn 1997 until 2002, and in spring 1999 municipal adult education produced about 157,000 places, of which about 120,000 full-year places were counted within Kunskapslyftet.",
+      "metric": {
+        "name": "Full-year places in municipal upper secondary adult education counted within Kunskapslyftet",
+        "value": 120000,
+        "unit": "full-year places",
+        "asOf": "spring 1999"
+      },
+      "started": 1997,
+      "status": "concluded",
+      "source": {
+        "publisher": "Kunskapslyftskommittén, Kunskapsbygget 2000 del 1 (SOU 2000:28), published by Sveriges riksdag",
+        "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/statens-offentliga-utredningar/kunskapsbygget-2000-del-1_gob328d1/html/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The figure counts full-year places, a volume measure, not people, and not a share of adults: one place can be several part-time students, so it does not translate into the participation rate the gap asks for. It is one semester's figure reported by the committee that ran and evaluated the initiative, citing a Skolverket follow-up, so the programme is partly reporting on itself. The committee's own figure in another passage of the same report is just under 112,000 full-year places, so the count depends on what is included. The same report's Skolverket table gives 228,000 participants (Deltagare) in spring 1999 in municipal upper secondary adult education, which is a count of people but still not a share of adults. The initiative was time-limited to 2002 by design. Effects on earnings and employment are contested in the evaluation literature and are not shown by this number.",
+      "pattern": {
+        "mechanism": "The government paid municipalities earmarked grants for adult education places and paid unemployed adults a special education grant at the level of unemployment benefit, so a year of study cost the learner nothing compared with staying on benefits.",
+        "preconditions": [
+          "A municipal adult education system (komvux) already present in every municipality",
+          "An unemployment insurance system whose benefit level could be matched by the study grant",
+          "Fiscal room to fund around 100,000 places a year for five years during a recovery from recession"
+        ],
+        "travelled": "Sweden itself relaunched the idea as a new Kunskapslyft in 2015, with vocational adult education rather than general upper secondary courses at its centre."
+      }
+    },
+    {
+      "id": "irl-sfi-research-centres",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "IRL",
+      "title": "SFI Research Centres programme",
+      "claim": "Science Foundation Ireland funded a network of 16 university-based research centres from 2013, whose cumulative SFI investment of €684 million was matched by €638 million of industry commitment by 2021 (Annual Report 2021), and which by the end of 2022 had signed 1,426 collaborative research agreements with 688 companies, 366 of them in Ireland.",
+      "metric": {
+        "name": "Cumulative collaborative research agreements signed by SFI Research Centres with companies",
+        "value": 1426,
+        "unit": "agreements",
+        "asOf": "end of 2022"
+      },
+      "secondMetric": {
+        "name": "Companies party to those agreements",
+        "value": 688,
+        "unit": "companies",
+        "asOf": "end of 2022"
+      },
+      "started": 2013,
+      "status": "operating",
+      "source": {
+        "publisher": "Science Foundation Ireland, Annual Report 2022",
+        "url": "https://www.sfi.ie/Annual-Report-2022/SFI_AnnualReport_2022_Website.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "These are the funder's own counts of its own programme, in an annual report, inside an 87-page PDF. An agreement count says nothing about the size, duration or research content of each agreement; in 2022 alone 136 agreements carried €32.2 million of industry commitment. The €638 million is industry commitment, not verified cash received, and the programme's design required industry co-funding, so collaboration is partly a condition of funding rather than demand from firms. 317 of the 688 companies are multinationals, so the figure mixes Irish firms' engagement with foreign affiliates attracted by tax and investment policy. Science Foundation Ireland was merged into Research Ireland in 2024, so the series ends with 2023 reporting under the old name and the sfi.ie URLs may move.",
+      "pattern": {
+        "mechanism": "Science Foundation Ireland funded large, multi-university research centres for six-year terms and made part of each award conditional on industry co-funding, so every centre had to sign agreements with firms to keep its public money.",
+        "preconditions": [
+          "A funding agency with a statutory mandate to tie research money to economic objectives",
+          "A large base of multinational R&D-performing firms present in the country",
+          "Universities able to pool researchers across institutions under one centre's governance"
+        ]
+      }
+    },
+    {
+      "id": "irl-springboard",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "IRL",
+      "title": "Springboard+ upskilling programme",
+      "claim": "Ireland's Higher Education Authority has run Springboard+ since 2011, funding free or heavily subsidised higher education places for unemployed people, returners and employed adults, with over €400 million spent and over 110,000 people benefiting by 2025, when 7,719 places were offered on 249 courses at 37 institutions.",
+      "metric": {
+        "name": "People who have benefited from Springboard+ since 2011, cumulative",
+        "value": 110000,
+        "unit": "people (lower bound, 'over')",
+        "asOf": "2025"
+      },
+      "secondMetric": {
+        "name": "Springboard+ places offered in the 2025 call (offered, not taken up)",
+        "value": 7719,
+        "unit": "places",
+        "asOf": "2025"
+      },
+      "started": 2011,
+      "status": "operating",
+      "source": {
+        "publisher": "Higher Education Authority (Ireland), Springboard+ 2025 launch",
+        "url": "https://hea.ie/2025/05/27/minister-lawless-launches-springboard-2025-highlighting-futureproofing-as-a-key-motivator-for-potential-applicants/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The figure is a rounded, cumulative lower bound from a ministerial launch press release by the agency that runs the programme; 'benefited' is not defined and may count enrolments rather than completions or distinct people. The source is the agency's own launch press release for the 2025 call, and only the cumulative 110,000 figure describes delivery. Over 14 years, 110,000 is a small slice of an adult population of several million, so the programme says little about the national participation rate the gap asks for. Employment outcomes the HEA reports come from its own follow-up surveys and are not used here.",
+      "pattern": {
+        "mechanism": "The Higher Education Authority runs an annual call in which colleges bid to offer short, accredited courses in skills-shortage areas, and the state pays full fees for unemployed applicants and 90 percent for employed ones.",
+        "preconditions": [
+          "Higher education institutions willing to build short part-time courses on an annual funding cycle",
+          "A skills-forecasting function to tell the call which shortage areas to fund",
+          "Labour market slack after 2008, which created the demand the programme was built for"
+        ]
+      }
+    },
+    {
+      "id": "gbr-hs2",
+      "indicatorId": "large_project_delivery",
+      "iso3": "GBR",
+      "title": "High Speed Two, and the cancellation of Phase 2",
+      "claim": "The Department for Transport and HS2 Ltd began building High Speed Two in 2020. The government cancelled everything beyond Birmingham in 2023. By May 2026 the London to Birmingham railway alone was estimated at £87.7 billion to £102.7 billion, more than double the 2020 Phase 1 estimate, with services from Old Oak Common expected between 2036 and 2039 against a 2012 plan to complete the full network by 2033.",
+      "metric": {
+        "name": "Cost increase over the 2020 Phase 1 estimate, low end of the May 2026 range",
+        "value": 100,
+        "unit": "% overrun (more than, excluding inflation)",
+        "asOf": "2026-05"
+      },
+      "secondMetric": {
+        "name": "Year DfT expected the full London, Manchester and Leeds network to be complete at the 2012 approval",
+        "value": 2033,
+        "unit": "year",
+        "asOf": "2012"
+      },
+      "started": 2020,
+      "status": "eroded",
+      "source": {
+        "publisher": "National Audit Office (UK), High Speed Two reset, HC 52, Session 2026-27, 29 June 2026",
+        "url": "https://www.nao.org.uk/wp-content/uploads/2026/06/high-speed-two-reset-summary.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "No HS2 train has run. This is a record of a build in progress, not a delivered railway, and the erosion is to planned scope: the Manchester and Leeds legs were cancelled before they were built, so nothing in service was lost. The May 2026 estimate is in a mixed price base and the NAO says it carries a high level of uncertainty until a baseline is set in spring 2027. The over 100% figure compares a London to Birmingham estimate with the 2020 Phase 1 estimate, which excluded inflation and was itself a rebaseline after the 2019 Oakervee review, so the overrun against the 2012 approval is larger and is not stated as one number by the NAO. The 2033 completion year is for a network that no longer exists, so it is a schedule reference, not a like-for-like comparison. Both figures are read from PDFs, with text-extraction spacing artefacts cleaned in the quotes. Spend to March 2026 was £46.8 billion in nominal prices, including the cancelled Phase 2.",
+      "pattern": {
+        "mechanism": "The Department for Transport approved a national high-speed line, set up an arm's-length company to build it, and committed to construction contracts in 2020 before designs and costs were stable. It then responded to the cost growth by cutting the northern phases instead of the scope of Phase 1.",
+        "preconditions": [
+          "A sponsoring department able to commit tens of billions over decades without a firm cost baseline",
+          "Construction contracts let before a reliable total cost estimate existed, which HS2 Ltd began renegotiating in 2025 to better incentivise cost-effective delivery",
+          "Repeated political resets in 2020, 2023 and 2025 that changed scope faster than the client organisation could re-estimate"
+        ],
+        "travelled": "The NAO's 2026 report records the government's 2025 changes to how it manages mega-projects and a separate Euston delivery company set up in April 2026, both framed as lessons from HS2."
+      }
+    },
+    {
+      "id": "gbr-crossrail",
+      "indicatorId": "large_project_delivery",
+      "iso3": "GBR",
+      "title": "Crossrail, the Elizabeth line",
+      "claim": "The Department for Transport and Transport for London built Crossrail through Crossrail Ltd from 2009. The NAO put its forecast cost at 28% above the 2010 budget of £14.8 billion and its opening at up to three and a half years past the original December 2018 date. The central section opened in 2022 and carried 257.4 million journeys between April 2025 and March 2026.",
+      "metric": {
+        "name": "Nominal cost increase to build the railway over the 2010 budget of £14.8 billion",
+        "value": 28,
+        "unit": "% overrun (nominal)",
+        "asOf": "2021-05"
+      },
+      "secondMetric": {
+        "name": "Passenger journeys on the Elizabeth line",
+        "value": 257400000,
+        "unit": "journeys",
+        "asOf": "2025-04 to 2026-03"
+      },
+      "started": 2009,
+      "status": "concluded",
+      "source": {
+        "publisher": "National Audit Office (UK), Crossrail: a progress update, HC 299, Session 2021-22, 9 July 2021",
+        "url": "https://www.nao.org.uk/wp-content/uploads/2021/07/Crossrail-a-progress-update-2.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The 28% is the NAO's May 2021 forecast, made before the line opened; this record has not verified the final outturn cost from an audit source, and the NAO itself notes that later funding packages kept moving. The schedule figure is also a 2021 forecast of 'at least 3 years' late; the opening in 2022 is confirmed only by the regulator's statement that the central section opened that year. The cost is nominal, so part of the 28% is inflation over a decade. Crossrail is a London line co-sponsored and part funded by Transport for London and the Greater London Authority, including a business rate supplement, so it is not purely a national delivery, and its success in carrying passengers says nothing about the governance failures the NAO documented in 2018 to 2019. The journey count is a regulator's estimate from ticketing data.",
+      "pattern": {
+        "mechanism": "The Department for Transport and Transport for London set up a dedicated delivery company, Crossrail Ltd, with private delivery partners, and when it missed its 2018 opening they replaced its leadership, added £825 million and more, and handed the finished asset to Transport for London to operate.",
+        "preconditions": [
+          "Joint sponsorship by a national department and a city transport authority with its own revenue base",
+          "Dedicated local funding streams, including a business rate supplement, alongside central grant",
+          "An operator ready to take over and run the line once commissioned"
+        ]
+      }
+    },
+    {
+      "id": "gbr-covid-vaccine",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "GBR",
+      "title": "COVID-19 Vaccine Taskforce and national vaccination rollout",
+      "claim": "The UK government set up the Vaccine Taskforce in April 2020, became the first country to authorise a COVID-19 vaccine and begin vaccination in December 2020, and by the end of October 2021 the NHS in England had given two doses to 85% of adults.",
+      "metric": {
+        "name": "Share of adults in England who had received two doses",
+        "value": 85,
+        "unit": "% of adults",
+        "asOf": "2021-10-31"
+      },
+      "secondMetric": {
+        "name": "Vaccine doses administered in England",
+        "value": 87000000,
+        "unit": "doses (around)",
+        "asOf": "2021-10-31"
+      },
+      "started": 2020,
+      "status": "concluded",
+      "source": {
+        "publisher": "National Audit Office (UK), The rollout of the COVID-19 vaccination programme in England, Session 2021-22, 25 February 2022",
+        "url": "https://www.nao.org.uk/wp-content/uploads/2022/02/The-rollout-of-the-COVID-19-vaccination-programme-in-England.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The figures cover England only, not the United Kingdom; health is devolved and Scotland, Wales and Northern Ireland ran their own rollouts. The rollout responded to a shock already under way, so it shows capacity to recover, not preparation: the UK's pre-pandemic preparedness and 2020 death toll are outside this number. Uptake was uneven, at 64% among 18 to 24 year olds and 48% to 49% among some ethnic minority groups, and around 3.7 million adults were still unvaccinated at the end of January 2022. About 4.7 million doses were wasted, including 1.9 million AstraZeneca doses written off. The deaths averted figure in the same report is a UKHSA model estimate and is not used here. The data come from NHS England's own administrative reporting, analysed by the NAO.",
+      "pattern": {
+        "mechanism": "The government created a Vaccine Taskforce outside normal departmental lines, gave it fast-track approval and broad indemnities to sign advance contracts with several developers before any vaccine was proven, and had the NHS deliver doses mainly through GPs and community pharmacies.",
+        "preconditions": [
+          "A single national health service with a GP registry that could call people by priority group",
+          "Treasury willingness to fund at-risk purchases across several candidate vaccines",
+          "A domestic regulator able to authorise quickly and a domestic research base (Oxford) with a vaccine candidate"
+        ]
+      }
+    },
+    {
+      "id": "ind-udan",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "IND",
+      "title": "UDAN regional air connectivity scheme, and its lapsed routes",
+      "claim": "India's Ministry of Civil Aviation paid viability-gap funding to private airlines to fly underserved regional routes from April 2017. Of the 774 routes awarded in the first three rounds, 371 commenced, and only 174 were still flying in March 2023; only 54 of the 112 routes that completed their three-year concession kept operating afterwards.",
+      "metric": {
+        "name": "UDAN 1 to 3 routes in operation",
+        "value": 174,
+        "unit": "routes",
+        "asOf": "2023-03"
+      },
+      "secondMetric": {
+        "name": "UDAN 1 to 3 routes that commenced operations",
+        "value": 371,
+        "unit": "routes (cumulative)",
+        "asOf": "2023-03"
+      },
+      "started": 2017,
+      "status": "eroded",
+      "source": {
+        "publisher": "Comptroller and Auditor General of India, Report No. 22 of 2023, Compliance Audit on Regional Connectivity Scheme - UDAN, Ministry of Civil Aviation",
+        "url": "https://cag.gov.in/webroot/uploads/download_audit_report/2023/Report-No.22-English-064d5dc4be9bf67.48739275.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The 371 is a cumulative count of routes that ever commenced, not a simultaneous peak, so the fall to 174 overstates how many routes were flying at any one time. Routes from the third round had less time to lapse, which flatters their survival rate. The audit covers UDAN 1 to 3 to March 2021 with route figures updated to March 2023, so later rounds and the scheme's current state are not shown. A lapsed route is a commercial failure for the airline as much as a policy failure, and some routes stopped because airlines collapsed. The figures come from the scheme's own RCS cell, as the audit notes. The 120 page report is a 12 MB PDF and the quoted table is read from text extraction.",
+      "pattern": {
+        "mechanism": "The Ministry of Civil Aviation auctioned regional routes to private airlines, paid the winners a viability-gap subsidy for three years funded by a levy on other flights, and asked states and the Airports Authority to revive unused airstrips; most routes did not survive the end of the subsidy.",
+        "preconditions": [
+          "A levy on trunk air traffic large enough to fund subsidies to regional routes",
+          "State governments and the Airports Authority willing to upgrade small airports at public cost",
+          "Private airlines with the aircraft and balance sheets to fly thin routes, which several winning bidders lacked"
+        ]
+      }
+    },
+    {
+      "id": "ind-dfc",
+      "indicatorId": "large_project_delivery",
+      "iso3": "IND",
+      "title": "Dedicated Freight Corridors, Eastern and Western",
+      "claim": "Indian Railways, through the Dedicated Freight Corridor Corporation, built two freight-only corridors approved by Cabinet in 2008 at ₹28,181 crore and reassessed in 2015 at ₹81,459 crore, and by March 2025 had commissioned 2,741 of their 2,843 route kilometres.",
+      "metric": {
+        "name": "Increase of the 2015 revised project cost over the 2008 Cabinet-approved estimate, computed from CAG figures",
+        "value": 189,
+        "unit": "% overrun (nominal, computed)",
+        "asOf": "2015"
+      },
+      "secondMetric": {
+        "name": "Dedicated freight corridor route kilometres commissioned and operational, of 2,843",
+        "value": 2741,
+        "unit": "route km",
+        "asOf": "2025-03-19"
+      },
+      "started": 2008,
+      "status": "operating",
+      "source": {
+        "publisher": "Comptroller and Auditor General of India, Report No. 22 of 2021 (Railways), para 3.1, Implementation of Dedicated Freight Corridor Project",
+        "url": "https://cag.gov.in/uploads/download_audit_report/2021/22%20of%202021-0624d80426ef498.58288689.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The 189% is computed here from two CAG figures; the CAG does not publish it as a percentage. The two estimates are not like for like: the scope changed between them, route lengths were revised upward, the Sonnagar to Dankuni section was added in 2008 and is not part of the corridors now reported as 2,843 km, and both figures are nominal across seven years. The 2015 figure is itself old, and no later audited completion cost is used here. The CAG found avoidable price escalation of ₹2,233.81 crore from delays, contract awards 13 to 25 months late, and a target of March 2017 for the first Eastern section, so the schedule slipped by years, but the report states no single schedule overrun figure. The commissioning figure is a ministry press release, self-reported and unaudited. The PIB page refused an automated fetch tool (HTTP 403) but opened with a standard browser user agent.",
+      "pattern": {
+        "mechanism": "The Ministry of Railways created a dedicated special-purpose company in 2006 to build freight-only lines alongside the trunk network, financed largely by World Bank and JICA loans, and kept building through large cost revisions until almost the whole length was commissioned.",
+        "preconditions": [
+          "A state railway able to set up and capitalise a separate construction company",
+          "Multilateral and bilateral lenders willing to finance most of the cost on long tenors",
+          "State governments acquiring land along long linear routes, which the CAG found was a main source of delay"
+        ]
+      }
+    },
+    {
+      "id": "mex-fonden",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "MEX",
+      "title": "FONDEN, the natural disaster fund, and its abolition",
+      "claim": "Mexico's federal government ran FONDEN from 1999 as a pre-arranged national fund for post-disaster reconstruction, allocating a record US$833 million to it in 2011 and insuring it with catastrophe bonds, and abrogated the FONDEN trust by the decree of 6 November 2020, moving disaster spending onto ordinary budget lines.",
+      "metric": {
+        "name": "FONDEN annual federal budget allocation, the highest to that date",
+        "value": 833,
+        "unit": "US$ million",
+        "asOf": "2011"
+      },
+      "started": 1999,
+      "status": "dismantled",
+      "source": {
+        "publisher": "World Bank, GFDRR and Government of Mexico, FONDEN: Mexico's Natural Disaster Fund, A Review (2012)",
+        "url": "https://openknowledge.worldbank.org/bitstreams/1b663900-2ded-5ef0-a6b5-55447da39721/download",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The metric shows the fund at its peak, not its dismantling. The abolition rests on a second World Bank document with no number in it: the Mexico Inclusive and Sustainable Economic Growth DPL (P178224, https://documents1.worldbank.org/curated/en/556411654274244589/pdf/Mexico-Inclusive-and-Sustainable-Economic-Growth-Development-Policy-Loan.pdf) refers to \"the abrogation of the Mexico's National Disaster Fund (FONDEN)\" (page 31), and the government's own letter in its annex says that after \"the Decree published on 6 November 2020, the financial instrument FONDEN is changing from a trust to a budgetary scheme\". So disaster spending did not stop. What ended was the trust, its reserve-building and its inter-institutional rules, and the same DPL says the 2022 emergency budget covered only an average year's losses. The record has no post-abolition figure for reconstruction spending or speed, so the claim that capacity fell is the World Bank's reading, not a measurement. The 2011 allocation is one year inside a volatile series. The same review says spending exceeded FONDEN's resources in five of the years from 1999 to 2011 and needed transfers of over US$3.3 billion in 2010, so the fund was never fully self-sufficient. The review was co-authored with the Mexican government it describes.",
+      "pattern": {
+        "mechanism": "The Finance Ministry and the Interior Ministry built a rules-based trust that set aside budget for reconstruction before disasters and reinsured it through catastrophe bonds. A new administration and Congress then folded the trust into ordinary budget lines through a decree converting it into a budgetary scheme, justified by transparency.",
+        "preconditions": [
+          "A trust structure that could be extinguished by decree",
+          "An administration that treated off-budget trusts as a corruption risk rather than as insurance",
+          "No statutory floor that protected the reserve once the trust was gone"
+        ],
+        "travelled": "FONDEN's design, an ex-ante disaster fund topped up by parametric catastrophe bonds, was promoted by the World Bank as a template."
+      }
+    },
+    {
+      "id": "mex-olmeca-refinery",
+      "indicatorId": "large_project_delivery",
+      "iso3": "MEX",
+      "title": "Olmeca refinery at Dos Bocas",
+      "claim": "Pemex built the Olmeca refinery at Dos Bocas, authorized in December 2018 and fully operational from February 2025, under an authorized budget of US$15,963.0 million, 79 percent above the US$8,918.5 million Class IV estimate stated when its board authorized the FEL II phase in July 2020.",
+      "metric": {
+        "name": "Authorized project budget after the August 2022 rebaseline, excluding US$853.3 million for start-up",
+        "value": 15963,
+        "unit": "US$ million including VAT",
+        "asOf": "2022"
+      },
+      "secondMetric": {
+        "name": "Class IV cost estimate approved at FEL II",
+        "value": 8918.5,
+        "unit": "US$ million",
+        "asOf": "2020-07"
+      },
+      "started": 2019,
+      "status": "operating",
+      "source": {
+        "publisher": "Petróleos Mexicanos, annual report on Form 20-F for fiscal year 2023, filed with the US Securities and Exchange Commission",
+        "url": "https://www.sec.gov/Archives/edgar/data/932782/000093278224000004/ck0000932782-20231231.htm",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "Pemex is the state oil company reporting on its own project. The filing is made under US securities law and carries legal liability, but it is not an audit, and Mexico's audit office (ASF) is not reachable from outside Mexico to check against. The publisher is a state enterprise, not a ministry or statistics office, so a strict reading of the publisher rule could exclude it. The 79 percent overrun is our computation from two figures that do not measure the same thing. The Class IV estimate excludes external works, escalation, contingency and administrative costs and carries a stated range of +30 to -25 percent, while the later budget includes VAT. A share of the gap is therefore a change of definition and not an overrun. The government's original public figure, around US$8 billion, appears only in press reports and is not used here. The schedule is shown only by the issuer's own changing expectations. The FY2025 filing (https://www.sec.gov/Archives/edgar/data/0000932782/000093278226000006/ck0000932782-20251231.htm) says the refinery \"has been fully operational since February 2025\". No filing states an original completion date to measure the slip against. Full operation is a claim about start-up, not about utilisation or margins, which the FY2025 filing excludes from its refining margin series.",
+      "pattern": {
+        "mechanism": "The federal government chose a greenfield refinery as a political flagship and had Pemex deliver it through a dedicated subsidiary, PTI Infraestructura de Desarrollo, funded through equity contributions from Pemex Industrial Transformation (2020 to 2023). The board re-authorized the scope and budget mid-construction in August 2022.",
+        "preconditions": [
+          "A state oil company able to absorb repeated capital contributions outside the normal investment appraisal",
+          "Political commitment strong enough to keep funding through cost rebaselining",
+          "A site and licensor package secured before front-end engineering was complete"
+        ]
+      }
+    },
+    {
+      "id": "tur-koi-ppp",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "TUR",
+      "title": "Kamu-Özel İşbirliği, the national public-private partnership programme",
+      "claim": "Turkey's central government signed 277 public-private partnership contracts from 1986 to September 2025, worth US$112.09 billion in September 2025 prices across transport, energy and health, with 262 in operation, including 18 PPP city hospitals holding 29,325 registered beds.",
+      "metric": {
+        "name": "Total investment size of signed PPP contracts since 1986",
+        "value": 112.09,
+        "unit": "US$ billion, September 2025 prices",
+        "asOf": "2025-09"
+      },
+      "secondMetric": {
+        "name": "Registered beds in the 18 city hospitals completed under PPP",
+        "value": 29325,
+        "unit": "beds",
+        "asOf": "2025"
+      },
+      "started": 1986,
+      "status": "operating",
+      "source": {
+        "publisher": "Presidency of the Republic of Türkiye, Strategy and Budget Office (SBB), 2026 Presidential Annual Programme",
+        "url": "https://www.sbb.gov.tr/wp-content/uploads/2025/10/2026-Yili-Cumhurbaskanligi-Yillik-Programi.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The registry's own note on this gap says PPP investment databases measure infrastructure finance, not collaboration capacity, and this record rests on exactly that kind of figure. US$112.09 billion is contracted investment size in current prices, not money spent or value delivered. It includes transfers of operating rights (İHD), which are closer to concessions or privatisation than to joint delivery. The government reports on its own programme. The same document shows what the collaboration costs the public side: in 2026 it programs 57.5 billion TL for goods and services and 78.7 billion TL in capital spending to run the completed PPP city hospitals, and adds 101.8 billion TL in current transfers to finance demand guarantees on completed PPP transport projects. A hostile reviewer would say those guarantees left the risk with the state, so the record shows private construction finance with public risk-bearing more than shared delivery. No cost or schedule performance is reported for individual contracts, and the count spans four decades and very different legal models.",
+      "pattern": {
+        "mechanism": "Successive governments, and the Strategy and Budget Office as coordinator, used build-operate-transfer, build-lease-transfer and operating-rights contracts to move large transport, energy and hospital builds off the annual budget. The state then pays through guarantees and availability payments over the contract life.",
+        "preconditions": [
+          "Sector laws for each contract model, including Law 6428 for health facilities",
+          "A treasury willing to issue long-dated demand and availability guarantees",
+          "Domestic contractors large enough to bid, often in consortium with foreign firms and lenders"
+        ]
+      }
+    },
+    {
+      "id": "tur-dask",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "TUR",
+      "title": "DASK compulsory earthquake insurance",
+      "claim": "After the 1999 Marmara earthquake, Turkey's government created the Turkish Catastrophe Insurance Pool (DASK) in 2000 to provide compulsory earthquake insurance, and coverage rose from 23 percent of dwellings as reported by the World Bank in January 2011 to 57.7 percent, or 11.6 million insured homes, by October 2025.",
+      "metric": {
+        "name": "Share of dwellings covered by compulsory earthquake insurance",
+        "value": 57.7,
+        "unit": "% of dwellings",
+        "asOf": "2025-10"
+      },
+      "secondMetric": {
+        "name": "Share of dwellings covered, World Bank reading",
+        "value": 23,
+        "unit": "% of dwellings",
+        "asOf": "2011-01"
+      },
+      "started": 2000,
+      "status": "operating",
+      "source": {
+        "publisher": "Presidency of the Republic of Türkiye, Strategy and Budget Office (SBB), 2026 Presidential Annual Programme, citing DASK data",
+        "url": "https://www.sbb.gov.tr/wp-content/uploads/2025/10/2026-Yili-Cumhurbaskanligi-Yillik-Programi.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "Insurance penetration measures financial preparation for rebuilding private homes, not the capacity to prepare for or recover from a shock. It says nothing about building safety. The scheme has been compulsory since 2000, yet after 25 years 42 percent of dwellings are still uninsured, falling to 45 percent coverage in the Black Sea region. Only legally built dwellings on registered land are eligible. The two figures come from different publishers and may use different denominators. The 2025 figure is DASK's own data reported through the government's annual programme, not an independent count. The record has no figure for claims paid or payout speed after the February 2023 earthquakes, which is the test that matters. Cover per policy is capped, so insured losses understate household losses. The World Bank, which co-designed the pool and seeded it with a US$100 million contingent loan, is also the source of the earlier figure.",
+      "pattern": {
+        "mechanism": "The government, with World Bank financial and technical assistance, set up a public catastrophe pool that sells statutory earthquake cover through around 30 private insurers, keeps a retention layer and passes excess risk to international reinsurers.",
+        "preconditions": [
+          "A catastrophic earthquake that made the fiscal cost of rebuilding private homes politically visible",
+          "A property registry able to identify eligible dwellings",
+          "Access to international reinsurance at actuarially priced rates"
+        ]
+      }
     }
   ]
 }
