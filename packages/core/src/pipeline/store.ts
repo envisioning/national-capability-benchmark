@@ -2,6 +2,8 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import { DelphiRunFile, EvidenceFile, ObservationFile } from '../model/schema.js'
 import { GlobalInstitutionLedger, InstitutionNetworkFile } from '../model/institutions.js'
+import { NoCaseFile } from '../model/research.js'
+import type { NoCaseNote } from '../model/research.js'
 import type { InstitutionNetwork } from '../model/institutions.js'
 import { attachGlobalInstitutions } from './institutions.js'
 import type { EvidenceRecord, Observation } from '../model/schema.js'
@@ -44,6 +46,18 @@ export async function loadEvidence(path = FILES.evidence): Promise<EvidenceRecor
   const parsed = EvidenceFile.safeParse(raw)
   if (!parsed.success) throw new Error(`${path}: ${parsed.error.message}`)
   return parsed.data.records
+}
+
+/**
+ * Evidence grid cells closed without a record. Research bookkeeping only:
+ * nothing that scores, weighs confidence or renders a page reads it. See D135.
+ */
+export async function loadNoCaseNotes(path = FILES.evidenceSearched): Promise<NoCaseNote[]> {
+  const raw = await readJson(path)
+  if (!raw) return []
+  const parsed = NoCaseFile.safeParse(raw)
+  if (!parsed.success) throw new Error(`${path}: ${parsed.error.message}`)
+  return parsed.data.notes
 }
 
 /**

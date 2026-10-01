@@ -122,6 +122,103 @@ export const ResearchRunFile = z.discriminatedUnion('kind', [
 ])
 export type ResearchRunFile = z.infer<typeof ResearchRunFile>
 
+/**
+ * The columns of the evidence grid: the declared gaps whose construct a
+ * documented delivery can evidence. The other gaps are survey constructs or
+ * wait on a dataset, so a case story would be the wrong instrument for them.
+ * Every id here must stay a declared gap; the validator errors when one is
+ * promoted or retired, because a closed column would then be counting cells
+ * the score already carries. See docs/EVIDENCE.md and D135.
+ */
+export const EVIDENCE_GRID_INDICATORS = [
+  'large_project_delivery',
+  'institutional_responsiveness',
+  'disaster_preparedness',
+  'public_private_collaboration',
+  'university_industry_collaboration',
+  'government_foresight_capacity',
+  'regulatory_sandbox_activity',
+  'adult_learning_participation',
+] as const
+export type EvidenceGridIndicator = (typeof EVIDENCE_GRID_INDICATORS)[number]
+
+/** The five inclusion tests in docs/EVIDENCE.md, in their published order. */
+export const InclusionTest = z.enum([
+  'declared_gap',
+  'publisher_metric',
+  'institutional',
+  'delivered',
+  'honest_limits',
+])
+export type InclusionTest = z.infer<typeof InclusionTest>
+
+/**
+ * A grid cell closed without a record. It says the candidate lists were
+ * searched on a date and nothing passed the inclusion rule, which is a
+ * finding about what this protocol can carry, not a claim that the country
+ * lacks the capability. A record for the same cell supersedes it.
+ */
+export const NoCaseNote = z.object({
+  iso3: z.string().length(3),
+  indicatorId: z.string(),
+  /** The day the search was run, YYYY-MM-DD. */
+  checkedAt: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  /** The candidate lists or publishers searched, so the search can be repeated. */
+  searched: z.array(z.string()).min(1),
+  /** Each programme considered, and the first inclusion test it failed. */
+  candidates: z.array(
+    z.object({
+      name: z.string(),
+      failed: InclusionTest,
+      why: z.string(),
+    }),
+  ),
+  note: z.string().optional(),
+})
+export type NoCaseNote = z.infer<typeof NoCaseNote>
+
+export const NoCaseFile = z.object({
+  generatedAt: z.string(),
+  notes: z.array(NoCaseNote),
+})
+export type NoCaseFile = z.infer<typeof NoCaseFile>
+
+export const EvidenceGridCellStatus = z.enum(['record', 'no_case', 'open'])
+export type EvidenceGridCellStatus = z.infer<typeof EvidenceGridCellStatus>
+
+/** Every country against every grid column, and how far each is closed. */
+export const EvidenceGrid = z.object({
+  total: z.number().int().min(0),
+  closedByRecord: z.number().int().min(0),
+  closedByNote: z.number().int().min(0),
+  open: z.number().int().min(0),
+  columns: z.array(
+    z.object({
+      indicatorId: z.string(),
+      record: z.number().int().min(0),
+      noCase: z.number().int().min(0),
+      open: z.number().int().min(0),
+    }),
+  ),
+  countries: z.array(
+    z.object({
+      iso3: z.string().length(3),
+      record: z.number().int().min(0),
+      noCase: z.number().int().min(0),
+      open: z.number().int().min(0),
+    }),
+  ),
+  cells: z.array(
+    z.object({
+      iso3: z.string().length(3),
+      indicatorId: z.string(),
+      status: EvidenceGridCellStatus,
+      records: z.number().int().min(0),
+    }),
+  ),
+})
+export type EvidenceGrid = z.infer<typeof EvidenceGrid>
+
 /** Counts and queues derived from the current evidence corpus. */
 export const ResearchInventory = z.object({
   generatedAt: z.string(),
@@ -162,5 +259,6 @@ export const ResearchInventory = z.object({
     countryCeilingAtCurrentSize: z.number().int().min(0),
   }),
   slots: z.array(ResearchSlot),
+  grid: EvidenceGrid,
 })
 export type ResearchInventory = z.infer<typeof ResearchInventory>

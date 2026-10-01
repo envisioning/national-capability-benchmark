@@ -10,12 +10,14 @@ import {
 } from '../model/index.js'
 import type { Dimension, EvidenceRecord } from '../model/index.js'
 import {
+  EVIDENCE_GRID_INDICATORS,
+  EvidenceGrid,
   ResearchCandidate,
   ResearchInventory,
   ResearchScoutOutput,
   ResearchSlot,
 } from '../model/research.js'
-import type { ResearchCandidate as ResearchCandidateType } from '../model/research.js'
+import type { NoCaseNote, ResearchCandidate as ResearchCandidateType } from '../model/research.js'
 
 export const RESEARCH_PROMPT_VERSION = 'research-1'
 
@@ -23,6 +25,52 @@ export type ResearchSlotFilters = {
   countries?: readonly string[]
   indicators?: readonly string[]
   limit?: number
+}
+
+const cellKey = (iso3: string, indicatorId: string): string => `${iso3}|${indicatorId}`
+
+/**
+ * Every registry country against every grid column. A cell is closed by a
+ * record, or by a no-case note when no record exists; a record always wins,
+ * because a note only says nothing passed when it was written. See D135.
+ */
+export function buildEvidenceGrid(
+  records: readonly EvidenceRecord[],
+  notes: readonly NoCaseNote[] = [],
+): EvidenceGrid {
+  const recordCounts = new Map<string, number>()
+  for (const record of records) {
+    const key = cellKey(record.iso3, record.indicatorId)
+    recordCounts.set(key, (recordCounts.get(key) ?? 0) + 1)
+  }
+  const noted = new Set(notes.map((note) => cellKey(note.iso3, note.indicatorId)))
+
+  const cells = COUNTRY_ISO3.flatMap((iso3) =>
+    EVIDENCE_GRID_INDICATORS.map((indicatorId) => {
+      const count = recordCounts.get(cellKey(iso3, indicatorId)) ?? 0
+      const status = count > 0 ? 'record' : noted.has(cellKey(iso3, indicatorId)) ? 'no_case' : 'open'
+      return { iso3, indicatorId, status, records: count } as const
+    }),
+  )
+  const tally = (subset: readonly (typeof cells)[number][]) => ({
+    record: subset.filter((cell) => cell.status === 'record').length,
+    noCase: subset.filter((cell) => cell.status === 'no_case').length,
+    open: subset.filter((cell) => cell.status === 'open').length,
+  })
+  const all = tally(cells)
+
+  return EvidenceGrid.parse({
+    total: cells.length,
+    closedByRecord: all.record,
+    closedByNote: all.noCase,
+    open: all.open,
+    columns: EVIDENCE_GRID_INDICATORS.map((indicatorId) => ({
+      indicatorId,
+      ...tally(cells.filter((cell) => cell.indicatorId === indicatorId)),
+    })),
+    countries: COUNTRY_ISO3.map((iso3) => ({ iso3, ...tally(cells.filter((cell) => cell.iso3 === iso3)) })),
+    cells,
+  })
 }
 
 /**
@@ -34,11 +82,14 @@ export function buildResearchInventory(
   records: readonly EvidenceRecord[],
   generatedAt = new Date().toISOString(),
   datasetVersion = DATASET_VERSION,
+  notes: readonly NoCaseNote[] = [],
 ): ResearchInventory {
   const countryCounts = new Map(COUNTRY_ISO3.map((iso3) => [iso3, 0]))
   const dimensionCounts = new Map<Dimension, { records: number; countries: Set<string>; indicators: Set<string> }>()
   const indicatorCounts = new Map<string, { records: number; countries: Set<string> }>()
   const existingSlots = new Set<string>()
+  // A no-case note closes its cell, so the queue stops offering it.
+  for (const note of notes) existingSlots.add(cellKey(note.iso3, note.indicatorId))
 
   for (const dimension of DIMENSIONS) {
     dimensionCounts.set(dimension, { records: 0, countries: new Set(), indicators: new Set() })
@@ -64,7 +115,7 @@ export function buildResearchInventory(
       indicator.records++
       indicator.countries.add(record.iso3)
     }
-    if (def && isDeclaredGap(def)) existingSlots.add(`${record.iso3}|${record.indicatorId}`)
+    if (def && isDeclaredGap(def)) existingSlots.add(cellKey(record.iso3, record.indicatorId))
   }
 
   const dimensions = DIMENSIONS.map((dimension) => {
@@ -106,7 +157,7 @@ export function buildResearchInventory(
   const slots: ResearchSlot[] = []
   for (const iso3 of COUNTRY_ISO3) {
     for (const def of INDICATORS.filter(isDeclaredGap)) {
-      if (existingSlots.has(`${iso3}|${def.id}`)) continue
+      if (existingSlots.has(cellKey(iso3, def.id))) continue
       const countryRecords = countryCounts.get(iso3) ?? 0
       const dimension = dimensionCounts.get(def.dimension) as {
         records: number
@@ -149,6 +200,7 @@ export function buildResearchInventory(
       countryCeilingAtCurrentSize: Math.floor(records.length / 3),
     },
     slots,
+    grid: buildEvidenceGrid(records, notes),
   })
 }
 

@@ -19,7 +19,12 @@ import {
   InstitutionNetworkFile,
 } from '../model/institutions.js'
 import { DelphiRunFile, EvidenceFile, isEvidential, isPanel, isReversal } from '../model/schema.js'
-import { ResearchRunFile, ResearchScoutRunFile } from '../model/research.js'
+import {
+  EVIDENCE_GRID_INDICATORS,
+  NoCaseFile,
+  ResearchRunFile,
+  ResearchScoutRunFile,
+} from '../model/research.js'
 import { DELPHI_DIR, FILES, RESEARCH_RUNS_DIR, subnationalFile } from './paths.js'
 import { recomposeSubnational } from './br-subnational.js'
 
@@ -432,6 +437,87 @@ export async function validateEvidence(path = FILES.evidence): Promise<Problem[]
         file,
         severity: 'warning',
         problem: `${iso3} has ${count} of ${records.length} records; D33's one-third country ceiling is ${countryCeiling}, so new research should move elsewhere`,
+      })
+    }
+  }
+
+  return problems
+}
+
+/**
+ * Schema-checks the no-case notes that close evidence grid cells, and the grid
+ * columns themselves. A column that stops being a declared gap is an error:
+ * its cells would count work the score already does. A note on a cell that
+ * now has a record is stale and should be deleted, since the record answers
+ * the question the note left open. See D135.
+ */
+export async function validateNoCaseNotes(
+  path = FILES.evidenceSearched,
+  evidencePath = FILES.evidence,
+): Promise<Problem[]> {
+  const file = basename(path)
+  const problems: Problem[] = []
+
+  for (const indicatorId of EVIDENCE_GRID_INDICATORS) {
+    const def = INDICATORS_BY_ID[indicatorId]
+    if (!def || !isDeclaredGap(def)) {
+      problems.push({
+        file,
+        severity: 'error',
+        problem: `grid column ${indicatorId} is not a declared gap; remove it from EVIDENCE_GRID_INDICATORS in the same change that promotes or retires it`,
+      })
+    }
+  }
+
+  let raw: unknown
+  try {
+    raw = JSON.parse(await readFile(path, 'utf8'))
+  } catch {
+    return problems
+  }
+  const parsed = NoCaseFile.safeParse(raw)
+  if (!parsed.success) {
+    return [
+      ...problems,
+      ...parsed.error.issues.slice(0, 5).map((issue) => ({
+        file,
+        severity: 'error' as const,
+        problem: `${issue.path.join('.') || '(root)'}: ${issue.message}`,
+      })),
+    ]
+  }
+
+  let recordCells = new Set<string>()
+  try {
+    const evidence = EvidenceFile.parse(JSON.parse(await readFile(evidencePath, 'utf8')))
+    recordCells = new Set(evidence.records.map((record) => `${record.iso3}|${record.indicatorId}`))
+  } catch {
+    // validateEvidence reports a broken records file; nothing to cross-check here.
+  }
+
+  const columns = new Set<string>(EVIDENCE_GRID_INDICATORS)
+  const seen = new Set<string>()
+  for (const note of parsed.data.notes) {
+    const cell = `${note.iso3}|${note.indicatorId}`
+    if (!COUNTRY_ISO3.includes(note.iso3 as never)) {
+      problems.push({ file, severity: 'error', problem: `${cell}: unknown country code ${note.iso3}` })
+    }
+    if (!columns.has(note.indicatorId)) {
+      problems.push({
+        file,
+        severity: 'error',
+        problem: `${cell}: ${note.indicatorId} is not a grid column, so a note cannot close it`,
+      })
+    }
+    if (seen.has(cell)) {
+      problems.push({ file, severity: 'error', problem: `${cell}: more than one note for the same cell` })
+    }
+    seen.add(cell)
+    if (recordCells.has(cell)) {
+      problems.push({
+        file,
+        severity: 'warning',
+        problem: `${cell}: a record now closes this cell, so the note is stale and should be deleted`,
       })
     }
   }

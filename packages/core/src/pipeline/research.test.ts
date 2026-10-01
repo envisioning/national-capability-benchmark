@@ -1,11 +1,16 @@
 import assert from 'node:assert/strict'
 import { readFile } from 'node:fs/promises'
 import {
+  COUNTRY_ISO3,
   DATASET_VERSION,
+  EVIDENCE_GRID_INDICATORS,
   EvidenceFile,
+  INDICATORS_BY_ID,
+  isDeclaredGap,
   ResearchScoutRunFile,
 } from '../model/index.js'
 import {
+  buildEvidenceGrid,
   buildResearchInventory,
   mockResearchCandidates,
   selectResearchSlots,
@@ -56,5 +61,35 @@ const run = ResearchScoutRunFile.parse({
 })
 assert.equal(run.candidates.length, slots.length)
 assert.ok(run.candidates.every((candidate) => candidate.status === 'lead'))
+
+// D135: every grid column is a declared gap, and the grid covers every country.
+for (const id of EVIDENCE_GRID_INDICATORS) {
+  const def = INDICATORS_BY_ID[id]
+  assert.ok(def && isDeclaredGap(def), `${id} must be a declared gap to be a grid column`)
+}
+const grid = inventory.grid
+assert.equal(grid.total, COUNTRY_ISO3.length * EVIDENCE_GRID_INDICATORS.length)
+assert.equal(grid.closedByRecord + grid.closedByNote + grid.open, grid.total)
+assert.equal(grid.closedByNote, 0, 'no notes were passed to this inventory')
+
+// A note closes an open cell and drops it from the queue; a record outranks a note.
+const openCell = grid.cells.find((cell) => cell.status === 'open')
+const recordCell = grid.cells.find((cell) => cell.status === 'record')
+assert.ok(openCell && recordCell)
+const notes = [openCell, recordCell].map((cell) => ({
+  iso3: cell.iso3,
+  indicatorId: cell.indicatorId,
+  checkedAt: '2026-10-01',
+  searched: ['test list'],
+  candidates: [],
+}))
+const noted = buildEvidenceGrid(evidence.records, notes)
+assert.equal(noted.closedByNote, 1)
+assert.equal(noted.closedByRecord, grid.closedByRecord)
+const notedInventory = buildResearchInventory(evidence.records, '2026-08-30T00:00:00.000Z', DATASET_VERSION, notes)
+assert.ok(
+  !notedInventory.slots.some((slot) => slot.iso3 === openCell.iso3 && slot.indicatorId === openCell.indicatorId),
+  'a closed cell leaves the research queue',
+)
 
 console.log(`Research inventory validated: ${inventory.slots.length} uncovered slots; ${run.candidates.length} mock leads.`)

@@ -33,6 +33,8 @@ export const FILES = {
   delphiLatest: resolve(DELPHI_DIR, 'latest.json'),
   researchInventory: resolve(RESEARCH_DIR, 'inventory.json'),
   evidence: resolve(EVIDENCE_DIR, 'records.json'),
+  /** Grid cells closed without a record: what was searched and why nothing passed. See D135. */
+  evidenceSearched: resolve(EVIDENCE_DIR, 'searched.json'),
   institutionsBrazil: resolve(INSTITUTIONS_DIR, 'BRA.json'),
   /** The bodies no country owns, held once and reached by id. See D107. */
   institutionsGlobal: resolve(INSTITUTIONS_DIR, 'global.json'),

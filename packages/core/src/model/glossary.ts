@@ -243,6 +243,13 @@ export const GLOSSARY: GlossaryEntry[] = [
     example: 'Brazil’s records run from Embrapa in 1973 to Pix in 2020. The immunisation programme is recorded as operating below its peak: 99 percent coverage in 2003, 91 percent in 2024.',
   },
   {
+    term: 'Evidence grid',
+    group: 'What is missing',
+    short: 'Every country against every gap that a documented delivery can speak to, with each cell either closed or open.',
+    full: 'The evidence grid is how this project knows whether its evidence records are complete. Each row is a country and each column is a gap where a delivered programme can show the capability, such as large project delivery or disaster preparedness. A cell is closed by an evidence record, or by a no-case note: a dated record of which sources were searched and why no programme passed the inclusion rules. A no-case note says the search found nothing this method can carry. It does not say the country lacks the capability.',
+    example: 'Finland’s disaster preparedness cell is closed by its civil defence shelters record. A country whose regulators have never run a sandbox can have that cell closed by a no-case note.',
+  },
+  {
     term: 'Research lead',
     group: 'What is missing',
     short: 'An AI-generated hypothesis about what to investigate, not a verified fact.',

@@ -78,36 +78,41 @@ from being advocacy.
 ## The country grid
 
 "Exhaustive" has one meaning here: every cell of a country-by-gap grid is
-closed. The rows are the 53 registry countries. The columns are the nine gaps
-whose construct a delivery can evidence:
+closed. The rows are the 53 registry countries. The columns are the declared
+gaps whose construct a delivery can evidence, held in
+`EVIDENCE_GRID_INDICATORS` in `packages/core/src/model/research.ts`: large
+project delivery, institutional responsiveness, disaster preparedness,
+public-private collaboration, university-industry collaboration, government
+foresight, regulatory sandbox activity and adult learning participation.
+D135 is the decision.
 
-`large_project_delivery`, `institutional_responsiveness`,
-`disaster_preparedness`, `public_private_collaboration`,
-`university_industry_collaboration`, `government_foresight_capacity`,
-`regulatory_sandbox_activity`, `adult_learning_participation`,
-`civic_participation`.
-
-The other gaps are not columns. Interpersonal trust, institutional trust,
-perceived control, national belonging, volunteering and adult digital skills
-are survey constructs, and the remainder (court clearance, citation impact,
-business R&D share, venture capital, long-horizon research share, firm
-scale-up, spinouts) wait on a dataset. Records already filed against them
-stay, and the grid does not ask for more.
+The other gaps are not columns. Some are survey constructs and the rest wait
+on a dataset. Records already filed against them stay, and the grid does not
+ask for more.
 
 A cell closes in one of two ways:
 
 1. **A record** that passes the inclusion rule. One record closes the cell;
    a second adds depth but does not reopen it.
-2. **A no-case note** naming the candidates checked and the test each failed,
-   with the date. Until a file holds these notes, they are comments on the
-   tracking issue. A no-case note is a finding: it says the country has no
-   documented national delivery in that construct that this protocol can
-   carry, which is not the same as saying it has no capability there.
+2. **A no-case note** in `data/evidence/searched.json`, schema `NoCaseNote`:
+   the cell, `checkedAt`, the candidate lists `searched`, and each candidate
+   with the first inclusion test it `failed` (`declared_gap`,
+   `publisher_metric`, `institutional`, `delivered`, `honest_limits`) and
+   `why`. A note says the country has no documented national delivery in
+   that construct that this protocol can carry, which is not the same as
+   saying it has no capability there. A record for the same cell supersedes
+   it, and the validator warns until the note is deleted.
+
+`pnpm bench validate` prints the grid on every run, column by column, and
+`pnpm bench research inventory` writes it to `data/research/inventory.json`
+and drops closed cells from the research queue.
 
 Work the grid column by column, thinnest column first, so the selection rule
-above still holds. A cell is never closed by a weaker record to finish a row:
-a no-case note is the honest close, and the reversal quota and the country
-ceiling still apply to every batch.
+above still holds. Search the same candidate lists for every country in a
+column, and name them in each note, or the closed cells only record what the
+researcher already knew. A cell is never closed by a weaker record to finish
+a row: a no-case note is the honest close, and the reversal quota and the
+country ceiling still apply to every batch.
 
 ## Authoring a record
 

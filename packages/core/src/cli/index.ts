@@ -49,6 +49,7 @@ import {
   loadDelphi,
   loadEvidence,
   loadInstitutionNetwork,
+  loadNoCaseNotes,
   loadObservations,
   saveDelphi,
   summarize,
@@ -72,10 +73,12 @@ import {
   validateEvidence,
   validateGlobalInstitutions,
   validateInstitutionNetwork,
+  validateNoCaseNotes,
   validateResearchRuns,
   validateSubnational,
 } from '../pipeline/validate.js'
 import {
+  buildEvidenceGrid,
   buildResearchCritiquePrompt,
   buildResearchInventory,
   buildResearchScoutPrompt,
@@ -84,6 +87,7 @@ import {
   RESEARCH_PROMPT_VERSION,
   selectResearchSlots,
 } from '../pipeline/research.js'
+import type { EvidenceGrid } from '../model/research.js'
 import {
   ResearchCritiqueOutput,
   ResearchCritiqueRunFile,
@@ -221,12 +225,25 @@ function researchRunId(args: Args, stage: string): string {
   return `research-${stage}-${new Date().toISOString().replace(/[-:.TZ]/g, '').slice(0, 14)}`
 }
 
+/** How far the evidence grid is closed, column by column. See D135. */
+function printEvidenceGrid(grid: EvidenceGrid): void {
+  console.log(
+    `evidence grid: ${grid.closedByRecord + grid.closedByNote}/${grid.total} cells closed (${grid.closedByRecord} by a record, ${grid.closedByNote} by a no-case note), ${grid.open} open`,
+  )
+  const columns = [...grid.columns].sort((a, b) => b.open - a.open || a.indicatorId.localeCompare(b.indicatorId))
+  for (const column of columns) {
+    console.log(
+      `  ${column.indicatorId.padEnd(36)} ${String(column.record).padStart(3)} record  ${String(column.noCase).padStart(3)} no-case  ${String(column.open).padStart(3)} open`,
+    )
+  }
+}
+
 async function research(args: Args): Promise<void> {
   const action = args._[1] ?? 'inventory'
   const evidence = await loadEvidence()
 
   if (action === 'inventory') {
-    const inventory = buildResearchInventory(evidence)
+    const inventory = buildResearchInventory(evidence, undefined, undefined, await loadNoCaseNotes())
     await writeOut(FILES.researchInventory, `${JSON.stringify(inventory, null, 2)}\n`)
     console.log(`inventory   -> ${FILES.researchInventory}`)
     console.log(
@@ -235,12 +252,13 @@ async function research(args: Args): Promise<void> {
     console.log(
       `${inventory.guardrails.reversalCount}/${inventory.guardrails.reversalMinimum} reversals required; ${inventory.guardrails.reversalDeficit} still needed at the current corpus size`,
     )
+    printEvidenceGrid(inventory.grid)
     console.log(`next queue  -> ${inventory.slots.length} uncovered country-gap slots`)
     return
   }
 
   if (action === 'scout') {
-    const inventory = buildResearchInventory(evidence)
+    const inventory = buildResearchInventory(evidence, undefined, undefined, await loadNoCaseNotes())
     const countries = csvFlag(args, 'countries')
     const indicators = csvFlag(args, 'indicators')
     const slots = selectResearchSlots(inventory, {
@@ -1123,11 +1141,13 @@ Start with file 1.
       const problems = [
         ...(await validateDelphiRuns()),
         ...(await validateEvidence()),
+        ...(await validateNoCaseNotes()),
         ...(await validateResearchRuns()),
         ...(await validateGlobalInstitutions()),
         ...(await validateInstitutionNetwork()),
         ...(await validateSubnational()),
       ]
+      printEvidenceGrid(buildEvidenceGrid(await loadEvidence(), await loadNoCaseNotes()))
       if (args.flags.get('fetch')) {
         console.log('Checking evidence source URLs against the live web...')
         problems.push(...(await checkEvidenceUrls()))

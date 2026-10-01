@@ -9,6 +9,15 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.21.0 — 2026-10-01
+
+- **The evidence corpus has a finish line (D135).** Every country is checked
+  against eight gaps a documented delivery can speak to, 424 cells in all. A
+  cell closes with an evidence record or with a dated note of what was
+  searched and why nothing qualified. 142 cells are closed today. The
+  glossary gains an entry for the grid, and the research queue no longer
+  offers a cell that is already closed.
+
 ## App 1.20.0 — 2026-10-01
 
 - **Mexico, Colombia, Chile and Argentina get Spanish layers.** `/mexico`,

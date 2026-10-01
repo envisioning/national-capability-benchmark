@@ -6630,3 +6630,49 @@ without country work is a translation, and would move the map to the ground
 layer for every country with the layers as readings of it; or a reader in
 one of the four countries finding the neutral Spanish wrong enough to need a
 national lexicon.
+
+---
+
+## D135 — The evidence corpus is complete when every grid cell is closed, and a cell can close without a record
+
+*Recorded 2026-10-01. Extends D33 and D76.*
+
+**Decision.** "Exhaustive" evidence research has one meaning: every cell of a
+grid of the 53 registry countries against the declared gaps a delivery can
+evidence is closed. The columns are `EVIDENCE_GRID_INDICATORS` in
+`packages/core/src/model/research.ts`: large project delivery, institutional
+responsiveness, disaster preparedness, public-private collaboration,
+university-industry collaboration, government foresight, regulatory sandbox
+activity and adult learning participation, 424 cells. A cell closes with an
+evidence record, or with a no-case note in `data/evidence/searched.json`:
+the date, the candidate lists searched, and each candidate with the first
+inclusion test it failed. A record always outranks a note.
+`buildEvidenceGrid` in `packages/core/src/pipeline/research.ts` derives the
+grid, the D76 inventory carries it and drops closed cells from its queue,
+and `pnpm bench validate` prints it on every run. The validator errors when
+a column stops being a declared gap and warns when a record has made a note
+stale.
+
+**Why.** The corpus could only grow, never finish. D76's slot queue listed
+every uncovered country-gap pair, about 900 of them, including survey
+constructs a delivery cannot evidence, and a slot only left the queue when a
+record filled it. A country with no sandbox or no foresight unit would stay
+open forever, and the queue would keep sending research to it, which is the
+pressure that turns a weak case into a record. A dated note makes the
+negative result a finding that can be checked and repeated. The first run
+of the check found that `civic_participation` had already been moved to a
+measured row from the Joint EVS/WVS release, which is why it is not a
+column.
+
+**Cost.** A no-case note is only as good as the lists searched. A
+researcher who searches a thin list closes a cell too early, and the grid
+then reads as complete when it is not. The column set is judgment: adult
+learning participation and university-industry collaboration sit close to
+survey and dataset constructs, and records against them are often one step
+from the indicator's definition. The grid counts closure, not quality, so a
+cell closed by a weak record looks the same as one closed by a strong one.
+
+**Overturned by.** Notes that a later search with the same lists overturns
+at a high rate, which would show the notes are closing cells on thin
+searches and need a second researcher; or a comparable series for any
+column, which promotes the gap under D20 and removes the column.
