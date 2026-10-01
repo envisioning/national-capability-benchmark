@@ -173,6 +173,11 @@ V-Dem's polarization item brings the Singapore question back from the other
 side: a regime with no organised opposition reads as calm. It is published
 beside Shared Purpose as a behavioural check and not scored. See A13 and D121.
 
+Voter turnout, from the same pinned V-Dem file, is now published beside Shared
+Purpose as a behavioural check and not scored, because it reads this same
+democratic channel as well as compulsory voting and managed mobilisation. See
+D129.
+
 ---
 ## A6 — Doing Business indicators are frozen at 2019
 

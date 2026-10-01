@@ -26,7 +26,17 @@ export const VDEM_ADAPTER_ID = 'v-dem-cy-full-v15'
  *
  * An id under `CHECK_PREFIX` is a behavioural check from `checks.ts`: it is
  * stored beside the indicators and never enters a frame, a mean or a
- * confidence. Polarization is a check and not a scored row. See D60 and D121.
+ * confidence. Polarization and voter turnout are checks and not scored rows.
+ * See D60, D121 and D129.
+ *
+ * `years` says which country-year a variable is read from. `release_year`
+ * reads the pinned release year and nothing else. `latest_election` exists
+ * because V-Dem codes election variables in election years only, so a single
+ * pinned year would leave most of the frame blank: it reads each country's most
+ * recent row up to the release year that carries a value, records that row's
+ * year on the observation, and never falls back to an earlier election when the
+ * latest one is unreadable. `context` names variables read from that same
+ * country-year and written into the observation note, never as values.
  */
 export const VDEM_CY_V15_VARIABLES = [
   {
@@ -35,6 +45,8 @@ export const VDEM_CY_V15_VARIABLES = [
     min: 0,
     max: 1,
     scaleNote: 'expert-coded index on a 0-1 scale',
+    years: 'release_year',
+    context: [],
   },
   {
     variable: 'v2cacamps_osp',
@@ -42,8 +54,52 @@ export const VDEM_CY_V15_VARIABLES = [
     min: 0,
     max: 4,
     scaleNote: 'expert-coded polarization on the original 0-4 response scale, 0 friendly and 4 hostile',
+    years: 'release_year',
+    context: [],
   },
-] as const
+  {
+    variable: 'v2eltrnout',
+    indicatorId: `${CHECK_PREFIX}voter_turnout`,
+    min: 0,
+    max: 100,
+    scaleNote:
+      'percent of registered voters who cast a vote in the national election, official results; where executive and legislative elections fall on one day V-Dem codes the executive turnout, and the country-year takes the maximum',
+    years: 'latest_election',
+    context: ['v2elcomvot', 'v2x_regime'],
+  },
+] as const satisfies ReadonlyArray<{
+  variable: string
+  indicatorId: string
+  min: number
+  max: number
+  scaleNote: string
+  years: 'release_year' | 'latest_election'
+  context: readonly string[]
+}>
+
+/** Codebook 3.1.2.3 response labels for compulsory voting. */
+const COMPULSORY_VOTING: Record<string, string> = {
+  '0': 'not compulsory',
+  '1': 'compulsory, no sanctions or sanctions not enforced',
+  '2': 'compulsory, sanctions enforced at minimal cost',
+  '3': 'compulsory, sanctions enforced at considerable cost',
+}
+
+/** Codebook 5.1.1 response labels for Regimes of the World. */
+const REGIME: Record<string, string> = {
+  '0': 'closed autocracy',
+  '1': 'electoral autocracy',
+  '2': 'electoral democracy',
+  '3': 'liberal democracy',
+}
+
+/** Render one context variable for an observation note. */
+function contextNote(variable: string, raw: string): string {
+  const code = raw.trim()
+  if (code === '') return `${variable} not coded`
+  const label = variable === 'v2elcomvot' ? COMPULSORY_VOTING[code] : variable === 'v2x_regime' ? REGIME[code] : undefined
+  return label ? `${variable} ${code} (${label})` : `${variable} ${code}`
+}
 
 /** Parse one RFC 4180 row without adding a runtime dependency for one source. */
 function parseCsvLine(line: string): string[] {
@@ -74,6 +130,35 @@ function parseCsvLine(line: string): string[] {
   return fields
 }
 
+/** The first `count` fields of a row, enough to read the country and year cheaply. */
+function parseCsvPrefix(line: string, count: number): string[] {
+  const fields: string[] = []
+  let field = ''
+  let quoted = false
+  for (let i = 0; i < line.length && fields.length < count; i += 1) {
+    const char = line[i]
+    if (quoted) {
+      if (char === '"' && line[i + 1] === '"') {
+        field += '"'
+        i += 1
+      } else if (char === '"') {
+        quoted = false
+      } else {
+        field += char
+      }
+    } else if (char === '"' && field.length === 0) {
+      quoted = true
+    } else if (char === ',') {
+      fields.push(field)
+      field = ''
+    } else {
+      field += char
+    }
+  }
+  if (fields.length < count) fields.push(field)
+  return fields
+}
+
 export type VdemResult = SourceAdapterResult & {
   /** Countries emitted per indicator, so a partial variable cannot hide behind a full one. */
   coverageByIndicator: Record<string, number>
@@ -86,9 +171,18 @@ export type VdemResult = SourceAdapterResult & {
  */
 class VdemAccumulator {
   private headers: string[] | null = null
-  private index: { iso3: number; year: number; variables: number[] } | null = null
+  private index: {
+    iso3: number
+    year: number
+    prefix: number
+    variables: number[]
+    context: number[][]
+  } | null = null
   private readonly benchmark: Set<string> = new Set(COUNTRIES.map((country) => country.iso3))
-  private readonly yearText = String(VDEM_CY_V15_YEAR)
+  private readonly anyLatest = VDEM_CY_V15_VARIABLES.some((spec) => spec.years === 'latest_election')
+  /** Per latest-election variable, the newest coded row per country so far. */
+  private readonly latest: Array<Map<string, { year: number; raw: string; context: string[] }>> =
+    VDEM_CY_V15_VARIABLES.map(() => new Map())
   readonly observations: Observation[] = []
 
   constructor(
@@ -105,41 +199,77 @@ class VdemAccumulator {
         if (at < 0) throw new Error(`V-Dem CSV is missing ${name}`)
         return at
       }
+      const iso3 = find('country_text_id')
+      const year = find('year')
       this.index = {
-        iso3: find('country_text_id'),
-        year: find('year'),
+        iso3,
+        year,
+        prefix: Math.max(iso3, year) + 1,
         variables: VDEM_CY_V15_VARIABLES.map((spec) => find(spec.variable)),
+        context: VDEM_CY_V15_VARIABLES.map((spec) => spec.context.map((name) => find(name))),
       }
       return
     }
-    /* Cheap reject before a full parse: the release year must appear in the line. */
-    if (!line.includes(this.yearText)) return
-    const values = parseCsvLine(line)
     const index = this.index!
-    const iso3 = values[index.iso3] ?? ''
-    if (!this.benchmark.has(iso3) || Number(values[index.year]) !== VDEM_CY_V15_YEAR) return
+    /* Cheap reject before a full parse: read only the leading fields. */
+    const head = parseCsvPrefix(line, index.prefix)
+    const iso3 = head[index.iso3] ?? ''
+    const year = Number(head[index.year])
+    if (!this.benchmark.has(iso3) || !Number.isInteger(year) || year > VDEM_CY_V15_YEAR) return
+    if (year !== VDEM_CY_V15_YEAR && !this.anyLatest) return
+    const values = parseCsvLine(line)
     VDEM_CY_V15_VARIABLES.forEach((spec, i) => {
       const rawValue = values[index.variables[i]!] ?? ''
-      if (rawValue.trim() === '') return
-      const value = Number(rawValue)
-      if (!Number.isFinite(value) || value < spec.min || value > spec.max) return
-      this.observations.push({
-        indicatorId: spec.indicatorId,
-        iso3,
-        geometry: 'national',
-        reconciliation: 'context_only',
-        value,
-        year: VDEM_CY_V15_YEAR,
-        sourceTier: 'expert_panel',
-        sourceUrl: this.sourceUrl,
-        retrievedAt: this.retrievedAt,
-        note: `${spec.variable}; ${VDEM_PUBLISHER} ${VDEM_CY_V15_DATASET} v${VDEM_CY_V15_RELEASE}; ${spec.scaleNote}; CC BY-SA 4.0.`,
-      })
+      if (spec.years === 'latest_election') {
+        if (rawValue.trim() === '') return
+        const seen = this.latest[i]!.get(iso3)
+        if (seen && seen.year >= year) return
+        this.latest[i]!.set(iso3, {
+          year,
+          raw: rawValue,
+          context: index.context[i]!.map((at, k) => contextNote(spec.context[k]!, values[at] ?? '')),
+        })
+        return
+      }
+      if (year !== VDEM_CY_V15_YEAR) return
+      this.emit(spec, iso3, rawValue, VDEM_CY_V15_YEAR, [])
+    })
+  }
+
+  private emit(
+    spec: (typeof VDEM_CY_V15_VARIABLES)[number],
+    iso3: string,
+    rawValue: string,
+    year: number,
+    context: string[],
+  ): void {
+    if (rawValue.trim() === '') return
+    const value = Number(rawValue)
+    if (!Number.isFinite(value) || value < spec.min || value > spec.max) return
+    const yearNote =
+      spec.years === 'latest_election' ? ` election year ${year}, the latest coded up to ${VDEM_CY_V15_YEAR};` : ''
+    const contextText = context.length ? ` ${context.join('; ')};` : ''
+    this.observations.push({
+      indicatorId: spec.indicatorId,
+      iso3,
+      geometry: 'national',
+      reconciliation: 'context_only',
+      value,
+      year,
+      sourceTier: 'expert_panel',
+      sourceUrl: this.sourceUrl,
+      retrievedAt: this.retrievedAt,
+      note: `${spec.variable}; ${VDEM_PUBLISHER} ${VDEM_CY_V15_DATASET} v${VDEM_CY_V15_RELEASE}; ${spec.scaleNote};${yearNote}${contextText} CC BY-SA 4.0.`,
     })
   }
 
   result(): VdemResult {
     if (!this.headers) throw new Error('V-Dem CSV has no header row')
+    /* The newest coded election is the reading; an out-of-scale value there
+     * drops the country rather than reaching back to an older election. */
+    VDEM_CY_V15_VARIABLES.forEach((spec, i) => {
+      for (const [iso3, row] of this.latest[i]!) this.emit(spec, iso3, row.raw, row.year, row.context)
+    })
     const observations = [...this.observations].sort(
       (a, b) => a.indicatorId.localeCompare(b.indicatorId) || a.iso3.localeCompare(b.iso3),
     )
@@ -166,8 +296,10 @@ class VdemAccumulator {
 
 /**
  * Parse the pinned V-Dem country-year release into the existing observation
- * shape. Only the latest release year is emitted; the adapter deliberately
- * does not invent a time series from a source whose release is versioned.
+ * shape. One value per country and variable is emitted: the release year, or
+ * for an election variable the latest election up to it. The adapter
+ * deliberately does not invent a time series from a source whose release is
+ * versioned.
  */
 export function parseVdem(
   csv: string,
