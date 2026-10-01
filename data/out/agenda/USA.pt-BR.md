@@ -13,7 +13,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Coordenação | 99,5 | 0,23 (muito fraca) | sem base de tendência |
 | Confiança | 73,6 | 0,37 (fraca) | sem base de tendência |
 | Aprendizagem | 45,5 | 0,47 (utilizável) | sem base de tendência |
-| Experimentação | 55,8 | 0,39 (fraca) | +3,2 em 10 anos, sobre 2 indicadores |
+| Experimentação | 49,5 | 0,43 (fraca) | +0,8 em 10 anos, sobre 3 indicadores |
 | Adaptação | 81,8 | 0,68 (boa) | +3,4 em 10 anos, sobre 3 indicadores |
 | Construção | 58,2 | 0,53 (utilizável) | +0,5 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 55,3 | 0,43 (fraca) | -1,1 em 10 anos, sobre 2 indicadores |
@@ -58,11 +58,11 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 - Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
-### Experimentação: confiança 0,39, fraca
+### Experimentação: confiança 0,43, fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
-- Baseada em 4 indicadores observados.
+- Baseada em 5 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
 ### Propósito compartilhado: confiança 0,43, fraca

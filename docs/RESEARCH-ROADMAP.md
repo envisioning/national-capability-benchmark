@@ -38,8 +38,8 @@ each dimension's correlation with log GDP per capita. Above 0.70 is a finding
 against the claim, to be read and published. It is not a target, and no row is
 added or dropped to move it.
 
-**Guardrail.** Confidence must not come to track wealth. At 7.2.0 the mean
-confidence across dimensions correlates with log GDP per capita at r = 0.29
+**Guardrail.** Confidence must not come to track wealth. At 7.3.0 the mean
+confidence across dimensions correlates with log GDP per capita at r = 0.30
 across 51 countries. The bought conditions that left the scores (D122) were
 better covered in rich countries, and the ILOSTAT row's plausibility gate still
 holds or ages more middle-income countries than rich ones. Watch it, and read
@@ -48,14 +48,14 @@ raises O1 and breaks this.
 
 ### Where the objectives stand
 
-Dataset 7.2.0. Recompute from `data/out/diagnostics.json` and
+Dataset 7.3.0. Recompute from `data/out/diagnostics.json` and
 `data/out/index.json` after any rescore; never carry these figures forward by
 hand.
 
 | Dimension | Mean confidence | Observed rows (mean) | r with log GDP | Reading |
 | --- | ---: | ---: | ---: | --- |
 | Trust | 0.31 | 2.6 | 0.57 (n 49) | misses O1 |
-| Experimentation | 0.23 | 2.6 | 0.62 | misses O1 |
+| Experimentation | 0.27 | 3.5 | 0.57 | misses O1 |
 | Shared purpose | 0.34 | 2.6 | 0.20 (n 50) | misses O1 |
 | Coordination | 0.36 | 2.8 | 0.56 | misses O1 |
 | Learning | 0.50 | 3.9 | 0.75 | |

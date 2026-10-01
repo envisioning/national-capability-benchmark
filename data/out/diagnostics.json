@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T10:43:53.847Z",
+  "generatedAt": "2026-10-01T13:39:17.755Z",
   "gdpSeries": "NY.GDP.PCAP.PP.KD",
   "income": [
     {
@@ -291,9 +291,9 @@
     },
     {
       "dimension": "experimentation",
-      "pearson": 0.623,
-      "spearman": 0.75,
-      "n": 50
+      "pearson": 0.572,
+      "spearman": 0.726,
+      "n": 51
     },
     {
       "dimension": "adaptability",
@@ -352,21 +352,9 @@
       "n": 52
     },
     {
-      "a": "trust",
-      "b": "experimentation",
-      "r": 0.571,
-      "n": 49
-    },
-    {
       "a": "agency",
       "b": "learning",
       "r": 0.559,
-      "n": 52
-    },
-    {
-      "a": "experimentation",
-      "b": "building",
-      "r": 0.558,
       "n": 52
     },
     {
@@ -376,10 +364,10 @@
       "n": 50
     },
     {
-      "a": "anticipation",
+      "a": "trust",
       "b": "experimentation",
       "r": 0.549,
-      "n": 51
+      "n": 50
     },
     {
       "a": "adaptability",
@@ -388,16 +376,28 @@
       "n": 53
     },
     {
-      "a": "learning",
-      "b": "experimentation",
-      "r": 0.54,
-      "n": 52
-    },
-    {
       "a": "coordination",
       "b": "learning",
       "r": 0.538,
       "n": 52
+    },
+    {
+      "a": "experimentation",
+      "b": "building",
+      "r": 0.535,
+      "n": 53
+    },
+    {
+      "a": "anticipation",
+      "b": "experimentation",
+      "r": 0.527,
+      "n": 52
+    },
+    {
+      "a": "learning",
+      "b": "experimentation",
+      "r": 0.518,
+      "n": 53
     },
     {
       "a": "agency",
@@ -418,18 +418,6 @@
       "n": 51
     },
     {
-      "a": "experimentation",
-      "b": "adaptability",
-      "r": 0.45,
-      "n": 52
-    },
-    {
-      "a": "agency",
-      "b": "experimentation",
-      "r": 0.437,
-      "n": 51
-    },
-    {
       "a": "agency",
       "b": "trust",
       "r": 0.435,
@@ -440,6 +428,12 @@
       "b": "shared_purpose",
       "r": 0.433,
       "n": 51
+    },
+    {
+      "a": "experimentation",
+      "b": "adaptability",
+      "r": 0.433,
+      "n": 53
     },
     {
       "a": "coordination",
@@ -466,6 +460,12 @@
       "n": 52
     },
     {
+      "a": "agency",
+      "b": "experimentation",
+      "r": 0.381,
+      "n": 52
+    },
+    {
       "a": "learning",
       "b": "shared_purpose",
       "r": 0.377,
@@ -473,15 +473,15 @@
     },
     {
       "a": "coordination",
-      "b": "experimentation",
-      "r": 0.373,
-      "n": 51
-    },
-    {
-      "a": "coordination",
       "b": "trust",
       "r": 0.369,
       "n": 50
+    },
+    {
+      "a": "coordination",
+      "b": "experimentation",
+      "r": 0.368,
+      "n": 52
     },
     {
       "a": "agency",
@@ -528,8 +528,8 @@
     {
       "a": "experimentation",
       "b": "shared_purpose",
-      "r": -0.065,
-      "n": 50
+      "r": -0.058,
+      "n": 51
     }
   ],
   "duplicateDimensionCandidates": [],
@@ -636,6 +636,14 @@
       "measurementClass": "O",
       "r": 0.524,
       "wealthProxyPrior": 0.45,
+      "flaggedAsWealthProxy": false
+    },
+    {
+      "indicatorId": "resident_industrial_designs_per_million",
+      "dimension": "experimentation",
+      "measurementClass": "O",
+      "r": 0.494,
+      "wealthProxyPrior": 0.3,
       "flaggedAsWealthProxy": false
     },
     {
@@ -884,13 +892,6 @@
       "delta": 0.059
     },
     {
-      "indicatorId": "resident_trademarks_per_million",
-      "dimension": "experimentation",
-      "dimensionR": 0.565,
-      "dimensionRWithout": 0.512,
-      "delta": 0.053
-    },
-    {
       "indicatorId": "export_diversification",
       "dimension": "adaptability",
       "dimensionR": 0.738,
@@ -914,16 +915,23 @@
     {
       "indicatorId": "resident_patents_per_million",
       "dimension": "experimentation",
-      "dimensionR": 0.565,
-      "dimensionRWithout": 0.548,
-      "delta": 0.017
+      "dimensionR": 0.571,
+      "dimensionRWithout": 0.528,
+      "delta": 0.043
+    },
+    {
+      "indicatorId": "resident_trademarks_per_million",
+      "dimension": "experimentation",
+      "dimensionR": 0.571,
+      "dimensionRWithout": 0.556,
+      "delta": 0.015
     },
     {
       "indicatorId": "failure_tolerance",
       "dimension": "experimentation",
-      "dimensionR": 0.565,
-      "dimensionRWithout": 0.552,
-      "delta": 0.012
+      "dimensionR": 0.571,
+      "dimensionRWithout": 0.561,
+      "delta": 0.011
     },
     {
       "indicatorId": "interpersonal_trust",
@@ -931,6 +939,13 @@
       "dimensionR": 0.516,
       "dimensionRWithout": 0.506,
       "delta": 0.01
+    },
+    {
+      "indicatorId": "resident_industrial_designs_per_million",
+      "dimension": "experimentation",
+      "dimensionR": 0.571,
+      "dimensionRWithout": 0.565,
+      "delta": 0.007
     },
     {
       "indicatorId": "new_business_density",
@@ -949,9 +964,9 @@
     {
       "indicatorId": "early_stage_entrepreneurial_activity",
       "dimension": "experimentation",
-      "dimensionR": 0.565,
-      "dimensionRWithout": 0.584,
-      "delta": -0.02
+      "dimensionR": 0.571,
+      "dimensionRWithout": 0.582,
+      "delta": -0.01
     },
     {
       "indicatorId": "firm_training_incidence",
@@ -1102,19 +1117,19 @@
     },
     {
       "dimension": "experimentation",
-      "indicatorsDefined": 8,
-      "indicatorsObserved": 4,
+      "indicatorsDefined": 9,
+      "indicatorsObserved": 5,
       "gaps": 4,
       "retired": 0,
-      "meanCoverage": 0.321,
-      "meanConfidence": 0.225,
+      "meanCoverage": 0.39,
+      "meanConfidence": 0.271,
       "classMix": {
         "C": 4,
         "I": 1,
-        "O": 2,
+        "O": 3,
         "P": 1
       },
-      "subjectivityShare": 0.625
+      "subjectivityShare": 0.556
     },
     {
       "dimension": "adaptability",
@@ -1347,6 +1362,22 @@
         "carriedForwardCells": 188,
         "clampedCells": 20,
         "fading": true,
+        "lowDiscrimination": false
+      },
+      {
+        "indicatorId": "resident_industrial_designs_per_million",
+        "dimension": "experimentation",
+        "countries": 30,
+        "years": 15,
+        "firstYear": 2006,
+        "lastYear": 2026,
+        "firstSpread": 62.97,
+        "lastSpread": 58.32,
+        "changeShare": -0.074,
+        "spearman": -0.813,
+        "carriedForwardCells": 161,
+        "clampedCells": 3,
+        "fading": false,
         "lowDiscrimination": false
       },
       {
@@ -2018,7 +2049,7 @@
       {
         "iso3": "IRL",
         "country": "Ireland",
-        "meanAbsShift": 0.56
+        "meanAbsShift": 0.49
       },
       {
         "iso3": "CAN",
@@ -2427,7 +2458,7 @@
     }
   ],
   "outOfFrame": {
-    "observedCells": 1526,
+    "observedCells": 1576,
     "clampedCells": 0,
     "share": 0,
     "perCountry": []

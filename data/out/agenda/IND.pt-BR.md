@@ -13,7 +13,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Coordenação | 73,9 | 0,41 (fraca) | sem base de tendência |
 | Confiança | 31,1 | 0,37 (fraca) | sem base de tendência |
 | Aprendizagem | 15,3 | 0,56 (utilizável) | sem base de tendência |
-| Experimentação | 9,8 | 0,39 (fraca) | +1,7 em 10 anos, sobre 2 indicadores |
+| Experimentação | 8,8 | 0,43 (fraca) | +2 em 10 anos, sobre 3 indicadores |
 | Adaptação | 59,5 | 0,53 (utilizável) | +12,2 em 10 anos, sobre 3 indicadores, 1 truncados na borda da régua |
 | Construção | 47,1 | 0,57 (utilizável) | +5,8 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 66,4 | 0,38 (fraca) | -2,2 em 10 anos, sobre 2 indicadores |
@@ -79,13 +79,6 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e responsabilização.
 
-### Experimentação: confiança 0,39, fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- Baseada em 4 indicadores observados.
-- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
-
 ### Coordenação: confiança 0,41, fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
@@ -93,6 +86,13 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
+
+### Experimentação: confiança 0,43, fraca
+
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
+
+- Baseada em 5 indicadores observados.
+- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
 ## Dimensões para manter
 

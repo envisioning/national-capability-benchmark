@@ -13,7 +13,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Coordenação | 87,3 | 0,4 (fraca) | sem base de tendência |
 | Confiança | 78,3 | 0,37 (fraca) | sem base de tendência |
 | Aprendizagem | 42,4 | 0,54 (utilizável) | sem base de tendência |
-| Experimentação | 72,2 | 0,39 (fraca) | +16,9 em 10 anos, sobre 2 indicadores |
+| Experimentação | 77,7 | 0,43 (fraca) | +11,3 em 10 anos, sobre 3 indicadores, 1 truncados na borda da régua |
 | Adaptação | 76,9 | 0,54 (utilizável) | +5,2 em 10 anos, sobre 3 indicadores |
 | Construção | 69,8 | 0,57 (utilizável) | +2,8 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 43,6 | 0,4 (fraca) | +4 em 10 anos, sobre 2 indicadores |
@@ -43,13 +43,6 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 - Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
-### Experimentação: confiança 0,39, fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- Baseada em 4 indicadores observados.
-- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
-
 ### Propósito compartilhado: confiança 0,4, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
@@ -65,6 +58,13 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
+
+### Experimentação: confiança 0,43, fraca
+
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
+
+- Baseada em 5 indicadores observados.
+- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
 ## Dimensões para manter
 

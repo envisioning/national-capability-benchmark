@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-01T10:43:48.911Z",
-  "version": "7.2.0",
+  "generatedAt": "2026-10-01T13:39:16.021Z",
+  "version": "7.3.0",
   "country": {
     "country": "Ireland",
     "iso3": "IRL",
@@ -1785,21 +1785,81 @@
         ]
       },
       "experimentation": {
-        "score": null,
-        "observedIndicators": 1,
-        "belowCoverageFloor": true,
-        "confidence": 0.089,
+        "score": 4.8,
+        "observedIndicators": 2,
+        "belowCoverageFloor": false,
+        "confidence": 0.158,
         "confidenceParts": {
-          "coverage": 0.125,
+          "coverage": 0.222,
           "recency": 0.75,
           "sourceQuality": 0.95
         },
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": null,
-        "blendedFrom": "none",
-        "momentum": [],
+        "blendedScore": 4.8,
+        "blendedFrom": "indicators",
+        "momentum": [
+          {
+            "baseYear": 2016,
+            "currentYear": 2026,
+            "baseScore": 6.7,
+            "currentScore": 4.8,
+            "delta": -1.9,
+            "matchedIndicators": 2,
+            "basket": [
+              "resident_patents_per_million",
+              "resident_industrial_designs_per_million"
+            ],
+            "clamped": 0,
+            "series": [
+              {
+                "year": 2016,
+                "score": 6.7
+              },
+              {
+                "year": 2017,
+                "score": 6.4
+              },
+              {
+                "year": 2018,
+                "score": 5.1
+              },
+              {
+                "year": 2019,
+                "score": 5.3
+              },
+              {
+                "year": 2020,
+                "score": 10.5
+              },
+              {
+                "year": 2021,
+                "score": 5.2
+              },
+              {
+                "year": 2022,
+                "score": 5.1
+              },
+              {
+                "year": 2023,
+                "score": 5
+              },
+              {
+                "year": 2024,
+                "score": 4.9
+              },
+              {
+                "year": 2025,
+                "score": 4.8
+              },
+              {
+                "year": 2026,
+                "score": 4.8
+              }
+            ]
+          }
+        ],
         "indicators": [
           {
             "indicatorId": "resident_patents_per_million",
@@ -1939,6 +1999,76 @@
             "outOfFrame": false,
             "series": [],
             "status": "missing"
+          },
+          {
+            "indicatorId": "resident_industrial_designs_per_million",
+            "name": "Resident industrial design applications",
+            "measurementClass": "O",
+            "raw": 95,
+            "transformed": 17.322,
+            "normalized": 6.6,
+            "year": 2021,
+            "source": "World Bank (IP.IDS.RSCT)",
+            "sourceTier": "international_organization",
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [
+              {
+                "year": 2008,
+                "raw": 107,
+                "normalized": 9,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2010,
+                "raw": 110,
+                "normalized": 9.1,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2015,
+                "raw": 115,
+                "normalized": 9.3,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2016,
+                "raw": 122,
+                "normalized": 9.7,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2017,
+                "raw": 125,
+                "normalized": 9.8,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2018,
+                "raw": 88,
+                "normalized": 6.8,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2019,
+                "raw": 105,
+                "normalized": 8,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2020,
+                "raw": 234,
+                "normalized": 17.7,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2021,
+                "raw": 95,
+                "normalized": 7,
+                "tier": "international_organization"
+              }
+            ],
+            "status": "observed"
           },
           {
             "indicatorId": "venture_capital_gdp",

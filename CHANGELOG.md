@@ -9,6 +9,20 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## Dataset 7.3.0 — 2026-10-01
+
+- **Experimentation scores industrial design applications (D126).** Resident
+  design filings per million people, World Bank `IP.IDS.RSCT`, 50 of 53. A
+  filed design is a registered attempt at a new product form, cheaper and more
+  frequent than a patent. Experimentation now scores all 53 countries, mean
+  confidence 0.23 to 0.27, and its correlation with income falls from 0.62 to
+  0.57. It partly overlaps trademarks (r 0.82).
+- **The GEM extension is held (D125).** GEM's 2019 to 2025 reports would take
+  entrepreneurial activity and fear of failure from 16 countries to 40, but
+  the 14 they miss are mostly lower-income, and confidence would come to track
+  income (0.29 to 0.39). The values are recorded in the research memo and not
+  scored.
+
 ## App 1.18.0 — 2026-10-01
 
 - **Brazil's layer maps Adaptability.** `/brasil/adaptacao` reads Brazil's

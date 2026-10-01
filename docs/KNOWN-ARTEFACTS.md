@@ -18,13 +18,15 @@ measured on is not the scale in use.
 
 **Severity: medium.**
 
-Four of eight indicators are observed. GEM early-stage entrepreneurial activity
-and fear of failure carry half the dimension, so it no longer rests on patents
-alone. Venture capital, regulatory sandboxes, university spinouts and business
-R&D share are still gaps. Mean confidence is 0.225, above only Trust, and the
-GEM series covers 16 of the 53 countries, so 36 are scored on patents and
-trademarks alone and Ireland, with one observed row, publishes no score. See
-D21.
+Four of nine indicators are observed for most countries: resident patents,
+trademarks and industrial designs per head (D126), and, for the 16 countries
+GEM covered first, early-stage entrepreneurial activity and fear of failure.
+Venture capital, regulatory sandboxes, university spinouts and business R&D
+share are still gaps. Mean confidence is 0.271 on dataset 7.3.0, the lowest of
+the nine dimensions. 37 countries are scored on patents, trademarks and
+designs alone. GEM's later reports reach 40 of the 53, but the extension is
+held because the 14 countries GEM skips are mostly lower-income and the gain
+would sit where income already is (D125). See D21.
 
 Resident patents and resident trademarks per head measure formalised, completed,
 defensible invention, which is close to the opposite of the many-cheap-
@@ -36,14 +38,16 @@ covers:
 
 | Country | Indicators | Panel | Gap |
 | --- | ---: | ---: | ---: |
-| Estonia | 30.2 | 70 | +39.8 |
-| United States | 55.8 | 95 | +39.2 |
-| Netherlands | 28.1 | 65 | +36.9 |
-| India | 9.8 | 40 | +30.2 |
+| United States | 48.6 | 95 | +46.4 |
+| Estonia | 28.2 | 70 | +41.8 |
+| Netherlands | 31.0 | 65 | +34.0 |
+| India | 10.5 | 40 | +29.5 |
 
-The Netherlands' 28.1 is not a finding about Dutch innovation. It is the absence
-of venture-capital data. Uruguay scores 34.3, having legalised and regulated a
-national cannabis market and run a fintech sandbox. Argentina scores 21.5, having
+The panel column is the in-session run of 2026-08-26 (`data/delphi/latest.json`);
+the indicator column is the current dataset. The Netherlands' 31.0 is not a
+finding about Dutch innovation. It is the absence of venture-capital data and of
+a national design series. Uruguay scores 23.7, having legalised and regulated a
+national cannabis market and run a fintech sandbox. Argentina scores 17.0, having
 produced more technology firms of scale per head than anywhere else in the
 region.
 
@@ -51,8 +55,8 @@ region.
 aggregate, the OECD SME and Entrepreneurship Financing scoreboard, covers 6 of
 the 16 original countries and omits Brazil, India, South Africa and Singapore.
 Business R&D share is the next best candidate, from UNESCO or OECD research and
-development statistics. Extending GEM coverage to the other 37 countries is the
-cheaper half.
+development statistics. GEM has not surveyed 14 of the countries since at
+least 2019, so its coverage cannot grow evenly from the published reports.
 
 ---
 

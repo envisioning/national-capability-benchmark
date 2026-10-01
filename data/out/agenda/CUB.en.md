@@ -13,7 +13,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Coordination | not scored | 0.1 (very thin) | no trend |
 | Trust | not scored | 0 (very thin) | no trend |
 | Learning | 21.5 | 0.24 (very thin) | no trend |
-| Experimentation | 1.4 | 0.18 (very thin) | -0.4 over 10 years using 2 indicators |
+| Experimentation | 1.1 | 0.24 (very thin) | -0.1 over 10 years using 3 indicators |
 | Adaptability | 63.7 | 0.55 (usable) | -5.5 over 10 years using 3 indicators |
 | Building | 21.8 | 0.29 (thin) | -27.1 over 10 years using 2 indicators |
 | Shared Purpose | not scored | 0 (very thin) | no trend |
@@ -53,19 +53,19 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
-### Experimentation: confidence 0.18, very thin
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 2 observed indicators.
-- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
-
 ### Anticipation: confidence 0.22, very thin
 
 How capable is the country of identifying and preparing for emerging change?
 
 - Uses one observed indicator.
 - Missing indicators: Government foresight capacity, Long-horizon research share.
+
+### Experimentation: confidence 0.24, very thin
+
+How easily can new approaches be attempted, tested, abandoned, and improved?
+
+- Uses 3 observed indicators.
+- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
 ### Learning: confidence 0.24, very thin
 

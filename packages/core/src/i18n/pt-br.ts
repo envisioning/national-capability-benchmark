@@ -183,6 +183,7 @@ export const PT_BR: Lexicon = {
     research_citation_impact: 'Impacto de citação da pesquisa',
     resident_patents_per_million: 'Pedidos de patente de residentes',
     resident_trademarks_per_million: 'Pedidos de marca de residentes',
+    resident_industrial_designs_per_million: 'Pedidos de desenho industrial de residentes',
     venture_capital_gdp: 'Investimento de capital de risco',
     early_stage_entrepreneurial_activity: 'Atividade empreendedora em estágio inicial',
     failure_tolerance: 'Tolerância ao fracasso empreendedor',

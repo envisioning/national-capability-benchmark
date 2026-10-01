@@ -13,7 +13,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Coordenação | 81,1 | 0,41 (fraca) | sem base de tendência |
 | Confiança | 40,2 | 0,36 (fraca) | sem base de tendência |
 | Aprendizagem | 24,8 | 0,52 (utilizável) | sem base de tendência |
-| Experimentação | 2,9 | 0,18 (muito fraca) | +1,1 em 10 anos, sobre 2 indicadores |
+| Experimentação | 3,2 | 0,24 (muito fraca) | +0,8 em 10 anos, sobre 3 indicadores |
 | Adaptação | 73,1 | 0,66 (boa) | +5,8 em 10 anos, sobre 3 indicadores |
 | Construção | 46,1 | 0,57 (utilizável) | -0,5 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 69 | 0,3 (fraca) | sem base de tendência |
@@ -54,11 +54,11 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Experimentação: confiança 0,18, muito fraca
+### Experimentação: confiança 0,24, muito fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
-- Baseada em 2 indicadores observados.
+- Baseada em 3 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
 ### Propósito compartilhado: confiança 0,3, fraca

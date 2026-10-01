@@ -6184,3 +6184,87 @@ half the peers swapping on a routine re-ingest), which would move the rule to
 a wider set or a band; or a second dimension's map showing the layout does not
 carry it, which would move the page to the ground layer with the layer as one
 reading of it.
+
+---
+
+## D125 — The GEM extension is held, because it adds evidence mostly where income already is
+
+*Recorded 2026-10-01. Brief: the Experimentation section of
+`docs/research/O1-TRIAGE-SWEEP.md`. The extraction is kept in
+`docs/research/experimentation/GEM-AND-DESIGNS.md` and `gem-extract.py`.*
+
+**Decision.** `early_stage_entrepreneurial_activity` and `failure_tolerance`
+stay on their original 16 countries. The values for every other benchmark
+country in the seven GEM Global Reports for survey years 2019 to 2025 were
+read, checked against the printed pages and recorded in the memo, and they are
+not entered in `manual.json`. Industrial designs (D126) ships without them.
+
+**Why.** The guardrail beside O1 says confidence must not come to track
+wealth (D117). GEM participation is chosen and paid for by national teams, and
+the 14 benchmark countries it has not surveyed since 2019 are, apart from
+Singapore, lower-income: Vietnam, the Philippines, Malaysia, Nigeria, Kenya,
+Rwanda, Ethiopia, Bolivia, Paraguay, Honduras, Nicaragua, Cuba and Haiti.
+Measured on dataset 7.2.0, where the guardrail is 0.286: the extension
+over 2022 to 2025 raises it to 0.357; widening the window to 2019 to 2025, to
+reach poorer countries surveyed earlier, raises it further to 0.387, because
+three of the five countries the wider window adds are high-income. With
+industrial designs alone it is 0.298. Experimentation's own confidence against
+log GDP would go from 0.20 to 0.57. The extension would raise
+Experimentation's mean confidence from 0.225 to 0.350, and that gain would sit
+almost entirely in countries the benchmark already knows best.
+
+The construct is not the problem. TEA counts people trying and fear of
+failure is the attitude the dimension names; the rule for a future entry
+stands: survey year, not report year; the latest year in the window, never an
+average; and only the fear of failure question GEM introduced in 2019, over
+adults who see good opportunities.
+
+**Cost.** Experimentation stays the thinnest dimension, at mean confidence
+0.27 with designs, and 37 countries stay scored on patents, trademarks and
+designs alone (A1). Values that were read and verified stay unpublished.
+
+**Overturned by.** GEM surveying enough of the missing lower-income countries
+that the extension no longer raises the guardrail, or an open GEM data release
+that covers them; or a decision that a source raising confidence in richer
+countries is acceptable when its construct is sound, which would supersede
+this entry and D117's guardrail together.
+
+---
+
+## D126 — Resident industrial design applications are scored in Experimentation
+
+*Recorded 2026-10-01. Same brief as D125.*
+
+**Decision.** A new Experimentation row, `resident_industrial_designs_per_million`,
+World Bank `IP.IDS.RSCT`: industrial design applications by residents at
+their national office, per million people, `higher_better`, class `O`. The
+per-head transform is the one `resident_trademarks_per_million` uses
+(`per_million_population` over `SP.POP.TOTL`), so the two rows are built
+alike. Coverage 50 of 53 (no NLD, VEN, HTI); 45 at 2021, the others between
+2007 (ETH) and 2020.
+
+**Why.** Construct first. A filed design is a registered attempt at a new
+product form. It costs less and is filed more often than a patent, which is
+closer to the dimension's many-small-experiments reading than patents are,
+and it is an output rather than a stock. Reported as findings, not tests: the
+probe gives r = 0.02 for the raw count against GDP; the scored row's
+normalised value correlates with log GDP per capita at r = 0.494 (trademarks
+0.578, patents 0.524), its wealth-attribution delta is 0.007, and its r with
+`resident_trademarks_per_million` is 0.816 (n 49), under the 0.85 redundancy
+flag. On dataset 7.3.0 this row takes Experimentation from r = 0.623 to 0.572
+with log GDP and its mean confidence from 0.225 to 0.271; the guardrail moves
+from 0.286 to 0.298. The GEM extension it was built beside is held (D125).
+
+**Cost.** Three traps, all in the registry note. China subsidised design
+filings as it did patents, so its count runs ahead of the attempts behind it;
+it reaches the fence with Korea, Turkey, Germany, France, the United Kingdom
+and Switzerland. EU applicants increasingly file at the EUIPO, which a
+national resident count misses, so EU members read low. The Netherlands files
+through the Benelux office and has no national series. The row partly
+duplicates trademarks (r 0.816), so filing culture weighs twice.
+
+**Overturned by.** A redundancy reading at or above 0.85 with trademarks, which
+would make one of the two rows a check; evidence that subsidised or strategic
+filing, not attempts, sets the cross-country order; or a WIPO series that
+counts a country's residents at every office it files at (national, EUIPO,
+Hague), which would replace this one.

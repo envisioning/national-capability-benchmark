@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-01T10:43:48.911Z",
-  "version": "7.2.0",
+  "generatedAt": "2026-10-01T13:39:16.021Z",
+  "version": "7.3.0",
   "country": {
     "country": "Ethiopia",
     "iso3": "ETH",
@@ -1793,19 +1793,19 @@
         ]
       },
       "experimentation": {
-        "score": 0,
-        "observedIndicators": 2,
+        "score": 0.2,
+        "observedIndicators": 3,
         "belowCoverageFloor": false,
-        "confidence": 0.168,
+        "confidence": 0.16,
         "confidenceParts": {
-          "coverage": 0.25,
-          "recency": 0.708,
+          "coverage": 0.333,
+          "recency": 0.506,
           "sourceQuality": 0.95
         },
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 0,
+        "blendedScore": 0.2,
         "blendedFrom": "indicators",
         "momentum": [],
         "indicators": [
@@ -2022,6 +2022,82 @@
                 "year": 2021,
                 "raw": 1428,
                 "normalized": 0,
+                "tier": "international_organization"
+              }
+            ],
+            "status": "observed"
+          },
+          {
+            "indicatorId": "resident_industrial_designs_per_million",
+            "name": "Resident industrial design applications",
+            "measurementClass": "O",
+            "raw": 220,
+            "transformed": 1.624,
+            "normalized": 0.6,
+            "year": 2007,
+            "source": "World Bank (IP.IDS.RSCT)",
+            "sourceTier": "international_organization",
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [
+              {
+                "year": 1998,
+                "raw": 47,
+                "normalized": 0.2,
+                "tier": "international_organization"
+              },
+              {
+                "year": 1999,
+                "raw": 7,
+                "normalized": 0,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2000,
+                "raw": 8,
+                "normalized": 0,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2001,
+                "raw": 50,
+                "normalized": 0.2,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2002,
+                "raw": 61,
+                "normalized": 0.3,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2003,
+                "raw": 73,
+                "normalized": 0.3,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2004,
+                "raw": 144,
+                "normalized": 0.7,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2005,
+                "raw": 97,
+                "normalized": 0.4,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2006,
+                "raw": 152,
+                "normalized": 0.7,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2007,
+                "raw": 220,
+                "normalized": 1,
                 "tier": "international_organization"
               }
             ],

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-01T10:43:48.911Z",
-  "version": "7.2.0",
+  "generatedAt": "2026-10-01T13:39:16.021Z",
+  "version": "7.3.0",
   "country": {
     "country": "Nicaragua",
     "iso3": "NIC",
@@ -1708,19 +1708,19 @@
         ]
       },
       "experimentation": {
-        "score": 1.2,
-        "observedIndicators": 2,
+        "score": 0.8,
+        "observedIndicators": 3,
         "belowCoverageFloor": false,
-        "confidence": 0.032,
+        "confidence": 0.039,
         "confidenceParts": {
-          "coverage": 0.25,
-          "recency": 0.133,
+          "coverage": 0.333,
+          "recency": 0.122,
           "sourceQuality": 0.95
         },
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 1.2,
+        "blendedScore": 0.8,
         "blendedFrom": "indicators",
         "momentum": [],
         "indicators": [
@@ -1847,6 +1847,28 @@
                 "year": 2013,
                 "raw": 1146,
                 "normalized": 2.8,
+                "tier": "international_organization"
+              }
+            ],
+            "status": "observed"
+          },
+          {
+            "indicatorId": "resident_industrial_designs_per_million",
+            "name": "Resident industrial design applications",
+            "measurementClass": "O",
+            "raw": 1,
+            "transformed": 0.143,
+            "normalized": 0,
+            "year": 2013,
+            "source": "World Bank (IP.IDS.RSCT)",
+            "sourceTier": "international_organization",
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [
+              {
+                "year": 2013,
+                "raw": 1,
+                "normalized": 0,
                 "tier": "international_organization"
               }
             ],

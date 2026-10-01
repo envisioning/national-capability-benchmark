@@ -13,7 +13,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Coordenação | 88,2 | 0,23 (muito fraca) | sem base de tendência |
 | Confiança | 86,2 | 0,25 (fraca) | sem base de tendência |
 | Aprendizagem | 72,3 | 0,54 (utilizável) | sem base de tendência |
-| Experimentação | 43,3 | 0,18 (muito fraca) | +6,2 em 10 anos, sobre 2 indicadores |
+| Experimentação | 62,2 | 0,24 (muito fraca) | +20,5 em 10 anos, sobre 3 indicadores |
 | Adaptação | 76,1 | 0,68 (boa) | -1,9 em 10 anos, sobre 3 indicadores |
 | Construção | 48,1 | 0,57 (utilizável) | +0,1 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 87,4 | 0,28 (fraca) | +4,2 em 10 anos, sobre 2 indicadores |
@@ -36,13 +36,6 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Experimentação: confiança 0,18, muito fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
-
 ### Coordenação: confiança 0,23, muito fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
@@ -50,6 +43,13 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
+
+### Experimentação: confiança 0,24, muito fraca
+
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
 ### Confiança: confiança 0,25, fraca
 

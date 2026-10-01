@@ -13,7 +13,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Coordination | 63.7 | 0.39 (thin) | no trend |
 | Trust | 57.4 | 0.37 (thin) | no trend |
 | Learning | 34.5 | 0.54 (usable) | no trend |
-| Experimentation | 46 | 0.18 (very thin) | +18.5 over 10 years using 2 indicators |
+| Experimentation | 64 | 0.24 (very thin) | +12.3 over 10 years using 3 indicators |
 | Adaptability | 63.8 | 0.68 (good) | +13.8 over 10 years using 3 indicators, with 1 at the frame edge |
 | Building | 43 | 0.57 (usable) | +2.7 over 10 years using 3 indicators |
 | Shared Purpose | 37.8 | 0.42 (thin) | -4.5 over 10 years using 2 indicators |
@@ -54,11 +54,11 @@ How capable is the country of identifying and preparing for emerging change?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Experimentation: confidence 0.18, very thin
+### Experimentation: confidence 0.24, very thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
-- Uses 2 observed indicators.
+- Uses 3 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
 ### Trust: confidence 0.37, thin

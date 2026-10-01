@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-01T10:43:48.911Z",
-  "version": "7.2.0",
+  "generatedAt": "2026-10-01T13:39:16.021Z",
+  "version": "7.3.0",
   "country": {
     "country": "Poland",
     "iso3": "POL",
@@ -1955,19 +1955,19 @@
         ]
       },
       "experimentation": {
-        "score": 17.9,
-        "observedIndicators": 2,
+        "score": 20.6,
+        "observedIndicators": 3,
         "belowCoverageFloor": false,
-        "confidence": 0.178,
+        "confidence": 0.237,
         "confidenceParts": {
-          "coverage": 0.25,
+          "coverage": 0.333,
           "recency": 0.75,
           "sourceQuality": 0.95
         },
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 17.9,
+        "blendedScore": 20.6,
         "blendedFrom": "indicators",
         "momentum": [
           {
@@ -2517,6 +2517,40 @@
                 "year": 2021,
                 "raw": 35855,
                 "normalized": 14.7,
+                "tier": "international_organization"
+              }
+            ],
+            "status": "observed"
+          },
+          {
+            "indicatorId": "resident_industrial_designs_per_million",
+            "name": "Resident industrial design applications",
+            "measurementClass": "O",
+            "raw": 2489,
+            "transformed": 68.312,
+            "normalized": 26,
+            "year": 2021,
+            "source": "World Bank (IP.IDS.RSCT)",
+            "sourceTier": "international_organization",
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [
+              {
+                "year": 2019,
+                "raw": 1053,
+                "normalized": 10.5,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2020,
+                "raw": 1939,
+                "normalized": 19.7,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2021,
+                "raw": 2489,
+                "normalized": 25.6,
                 "tier": "international_organization"
               }
             ],
