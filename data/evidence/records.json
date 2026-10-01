@@ -10852,6 +10852,991 @@
         ],
         "travelled": "Later Korean lines (Honam, Suseo to Pyeongtaek) were built by the same authority with domestic rolling stock; the Gyeongbu record is the standard example of optimism bias in a first-of-a-kind national project."
       }
+    },
+    {
+      "id": "per-gasoducto-sur",
+      "indicatorId": "large_project_delivery",
+      "iso3": "PER",
+      "title": "Gasoducto Sur Peruano, a terminated pipeline concession",
+      "claim": "Peru's Gasoducto Sur Peruano concession, signed in July 2014 for a US$7.328 billion gas pipeline due in commercial operation by March 2019, stood at 37.32% overall progress against 76.49% scheduled in December 2016, according to the energy regulator Osinergmin, and the Ministry of Energy and Mines terminated the concession in January 2017 after the consortium failed to reach financial close.",
+      "metric": {
+        "name": "Actual overall project progress",
+        "value": 37.32,
+        "unit": "% complete",
+        "asOf": "2016-12-25"
+      },
+      "secondMetric": {
+        "name": "Scheduled overall project progress at the same date",
+        "value": 76.49,
+        "unit": "% complete",
+        "asOf": "2016-12-25"
+      },
+      "started": 2015,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Osinergmin (energy regulator), Gas Natural supervision division, monthly supervision report on the GSP project, December 2016",
+        "url": "https://www.osinergmin.gob.pe/seccion/centro_documental/gas_natural/Documentos/Decreto-Urgencia-001-2017/Informes-Supervision/12-Informe-Mensual-Diciembre-2016.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "Both progress figures are the concessionaire's own report as relayed by the regulator (the table cites 'Fuente: Reporte de Concesionario Gasoducto Sur Peruano SA'); Osinergmin supervised but did not independently measure overall progress. The figure is a weighted composite of permits, engineering, logistics and construction, so 37% overstates what was built: construction and assembly stood at 10.37% against 63.78% planned. The record does not show the final cost to the state, the arbitration outcome, the value of stranded assets, or how far the collapse stemmed from the Odebrecht corruption case and lost bank financing rather than from Peruvian institutions' project management. It is a concession (design, finance, build, operate), so the schedule failure is shared between the grantor and a private consortium. The numbers sit inside PDFs, not a statistical API. Later governments have repeatedly proposed reviving the pipeline under new names; this record concerns the 2014 concession, which ended by decision.",
+      "pattern": {
+        "mechanism": "Peru's energy ministry awarded a single private consortium a design-build-finance-operate concession for a strategic southern gas pipeline, backed by a guaranteed-revenue charge on electricity bills, and then terminated it when the consortium could not close financing; the regulator was left administering the half-built assets.",
+        "preconditions": [
+          "A concession framework that ties construction milestones to financial close and lets the grantor terminate cleanly",
+          "Bidders whose financing does not collapse when a sponsor is caught in a corruption case",
+          "A fallback plan, with budget, for custody and re-tendering of stranded assets"
+        ],
+        "travelled": "Large energy concessions with guaranteed revenue travel across Latin America; the GSP case is the cautionary version, where a single sponsor's legal collapse took the financing and the schedule with it."
+      }
+    },
+    {
+      "id": "per-refineria-talara",
+      "indicatorId": "large_project_delivery",
+      "iso3": "PER",
+      "title": "Talara refinery modernisation, delivered late and over cost",
+      "claim": "Petroperú's Talara Refinery Modernisation Project, begun with the May 2014 EPC contract, reached full operation in 2023 after Peru's Contraloría found its estimated investment had risen from US$1.3 billion to more than US$5 billion by October 2020, about 400%, and a cumulative schedule slippage of more than three years in the project's execution schedule, traced to the auxiliary-units contracting.",
+      "metric": {
+        "name": "Increase in estimated investment from feasibility estimate (US$1.3bn) to October 2020 (over US$5bn)",
+        "value": 400,
+        "unit": "% increase",
+        "asOf": "2020-10"
+      },
+      "secondMetric": {
+        "name": "Cumulative schedule slippage, auxiliary units and complementary works",
+        "value": 3,
+        "unit": "years (more than)",
+        "asOf": "2021-09-09"
+      },
+      "started": 2014,
+      "status": "operating",
+      "source": {
+        "publisher": "Contraloría General de la República del Perú, press release on compliance audit N° 15543-2021-CG/MPROY-AC of the PMRT",
+        "url": "https://www.gob.pe/institucion/contraloria/noticias/521251-demora-en-unidades-auxiliares-de-refineria-de-talara-de-petroperu-ocasiona-perjuicio-de-s-1-115-millones",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The 400% figure is a conditional statement ('estaría significando') attributed to the Comptroller General in a press release, comparing a feasibility-study estimate with an October 2020 cost, not an audited final cost; part of the rise reflects scope changes (Flexicoking, auxiliary units) rather than pure overrun, and the press release does not separate them. The press release's own figures (US$1.3bn to over US$5bn) imply an increase of about 285%, or roughly 3.85 times the estimate, so the stated 400% is the Comptroller's rounding and not the arithmetic; the metric keeps 400 because it is the published figure. The three-year slippage is the audit's figure for the auxiliary-units component over its 2014 to 2018 review window, not a measured end-to-end delay. Petroperú is a state-owned company, not a ministry: the record judges the state as project owner, and Petroperú's subsequent financial distress and government bailouts are not shown here. 'Operating' rests on a ministry press release declaring 100% operability in September 2023, not on independent utilisation data. The evidence is of a delivery that was completed late and far over cost, not a success.",
+      "pattern": {
+        "mechanism": "Peru legislated a state-owned refiner's modernisation, let the company contract a single EPC builder and then improvise the auxiliary works, and the Contraloría's audit traced repeated procurement reversals to a schedule slip of over three years and a several-fold cost rise before the plant reached full operation.",
+        "preconditions": [
+          "A state enterprise with procurement rules and project-management capacity matched to a multi-billion dollar build",
+          "A cost baseline updated before the investment decision, so scope changes are not read as overrun after the fact",
+          "An audit office able to review a megaproject while it is still under construction"
+        ],
+        "travelled": "National-oil-company refinery megaprojects (Dos Bocas in Mexico, Abreu e Lima in Brazil) show the same pattern of baseline estimates that bear little relation to final cost; Talara is the Peruvian instance with an audit trail."
+      }
+    },
+    {
+      "id": "phl-tesda",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "PHL",
+      "title": "TESDA technical-vocational training at national scale",
+      "claim": "The Philippines' Technical Education and Skills Development Authority, created in 1994, recorded 1,633,393 enrollees and 1,428,724 graduates in technical-vocational education and training across all regions in 2023, with enrollment 29.61% above 2022.",
+      "metric": {
+        "name": "TVET enrollees",
+        "value": 1633393,
+        "unit": "people",
+        "asOf": "2023"
+      },
+      "secondMetric": {
+        "name": "Increase in TVET enrollees compared with 2022",
+        "value": 29.61,
+        "unit": "%",
+        "asOf": "2023"
+      },
+      "started": 1994,
+      "status": "operating",
+      "source": {
+        "publisher": "Technical Education and Skills Development Authority (TESDA), Annual TVET Statistics 2023",
+        "url": "https://www.tesda.gov.ph/Uploads/File/Planning2024/Annual%20Report/24.03.25%20ANNUAL%20TVET%20Statistics%202023.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The gap asks for the share of adults in training in the last 12 months; this is a count of enrollments, not a population share, and the record does not compute one. Enrollments are not unique people: one person taking two courses counts twice, and the figure includes young people entering the labour market for the first time as well as adults returning to learning. The counts are TESDA's own administrative statistics, covering public and registered private providers; informal and employer training outside TESDA registration is missing, and course length ranges from short modules to multi-month programmes. A 29.61% rise in one year partly reflects recovery from the pandemic years and scholarship budget swings, so year-on-year growth is not a trend. The source is a PDF statistical report, not an API, and it shows output, not employment or wage effects.",
+      "pattern": {
+        "mechanism": "The Philippines merged its manpower council, technical-education bureau and apprenticeship office into one authority that sets training regulations, registers public and private providers, funds scholarships and certifies competencies, so a national skills system runs through thousands of local providers under one standard.",
+        "preconditions": [
+          "Promulgated competency standards and an assessment-and-certification system employers recognise",
+          "A network of public training institutes plus regulated private providers that reaches every region",
+          "Scholarship funding that can be scaled up and down with labour-market needs without collapsing provider capacity"
+        ],
+        "travelled": "Unified TVET authorities with competency-based certification echo Australia's and Singapore's models; the Philippine case shows the scale such a body can reach while leaving labour-market relevance a separate test."
+      }
+    },
+    {
+      "id": "idn-35000-mw",
+      "indicatorId": "large_project_delivery",
+      "iso3": "IDN",
+      "title": "Program 35.000 MW power generation programme, and its schedule slip",
+      "claim": "Indonesia's Ministry of Energy and Mineral Resources launched the 35,000 MW generation programme in May 2015 to be completed by 2019; by December 2022, 415 units with 16,596 MW, 47 percent of the programme, had reached commercial operation.",
+      "metric": {
+        "name": "Capacity at commercial operation, share of the 35,000 MW programme",
+        "value": 16596,
+        "unit": "MW (47 percent of 35,000 MW)",
+        "asOf": "2022-12"
+      },
+      "secondMetric": {
+        "name": "Original programme target completed by 2019",
+        "value": 35000,
+        "unit": "MW",
+        "asOf": "2019 target, restated by the minister on 2018-03-06"
+      },
+      "started": 2015,
+      "status": "operating",
+      "source": {
+        "publisher": "Kementerian Energi dan Sumber Daya Mineral, press release 040.Pers/04/SJI/2023",
+        "url": "https://www.esdm.go.id/id/media-center/arsip-berita/proyek-35000-mw-47-persen-pembangkit-telah-beroperasi",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "This is a schedule record, not a cost record: no official source located gives the programme's budgeted against actual cost, so the cost half of the construct is missing. The 47 percent is the ministry reporting on its own flagship. It is a capacity count at commercial operation, not a measure of whether plants run, at what availability, or at what tariff burden on PLN. The target moved: launched as a need for 35,000 MW over 2015 to 2019, it was restated in March 2018 as about 20,000 MW by 2019 with the rest in 2024 to 2025, on the argument that demand grew more slowly than the 7 percent growth assumption. Even the restated 2019 milestone had not been reached by December 2022. The ministry attributes the shortfall partly to over-forecast demand, so part of the slip may be a deliberate deferral rather than a delivery failure, and a reviewer can read the low completion as prudence. Most capacity (about 70 percent of units) is built by private IPPs under PLN purchase agreements, so delivery is joint and not attributable to the state alone. The latest official progress figure found is December 2022; nothing later was verified, and the share may be higher now.",
+      "pattern": {
+        "mechanism": "The Ministry of Energy and Mineral Resources set a single national capacity target, signed PPAs and EPC letters of intent with private producers and PLN at launch, and issued pricing and licensing rules to pull IPP finance into it; when demand undershot, the minister rephased the target instead of holding the deadline.",
+        "preconditions": [
+          "A single-buyer utility (PLN) able to sign long-term power purchase agreements that lenders accept",
+          "Land acquisition and one-stop licensing rules that can move dozens of plant sites in parallel",
+          "Demand forecasts honest enough that a capacity target does not lock in surplus take-or-pay contracts"
+        ],
+        "travelled": "Headline megawatt targets travel easily between governments; the Indonesian case shows that the target is the cheap part, and that a rephasing announced as on target can hide a schedule miss unless the original deadline stays on the record."
+      }
+    },
+    {
+      "id": "idn-ojk-sandbox",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "IDN",
+      "title": "OJK regulatory sandbox for financial-sector technological innovation",
+      "claim": "Indonesia's Financial Services Authority (OJK), running a regulatory sandbox since 2018 and under POJK 3/2024 since February 2024, had received 26 applications and approved 9 sandbox participants by December 2025, four of which had completed testing and been declared passed.",
+      "metric": {
+        "name": "Sandbox participants approved under POJK 3/2024",
+        "value": 9,
+        "unit": "participants",
+        "asOf": "2025-12"
+      },
+      "secondMetric": {
+        "name": "Applications to join the sandbox",
+        "value": 26,
+        "unit": "applications",
+        "asOf": "2025-12"
+      },
+      "started": 2018,
+      "status": "operating",
+      "source": {
+        "publisher": "Otoritas Jasa Keuangan, press release SP 05/GKPB/OJK/I/2026 (Board of Commissioners monthly meeting, December 2025)",
+        "url": "https://ojk.go.id/id/berita-dan-kegiatan/siaran-pers/Pages/RDKB-Des-2025.aspx",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The count of 9 covers only the regime under POJK 3/2024, so it omits every participant tested under the 2018 regulation, and the press release gives no cumulative total since 2018. The regulator reports on its own sandbox. The release's own breakdown names 4 in testing and 4 passed, which sums to 8, so one approved participant is unaccounted for in the text. The cohort is concentrated in digital financial assets and crypto (tokenised gold, tokenised bonds, tokenised property), so breadth across financial activities is narrow. A sandbox count shows that trials run, not that rules changed because of them, although the release does say that business models matching a passed participant may register without a trial. Bank Indonesia runs a separate payments sandbox that is not counted here. The OJK site rejects requests that do not send browser-like headers (a plain curl returned 'Request Rejected'), so automated URL checks may flag it.",
+      "pattern": {
+        "mechanism": "OJK wrote the sandbox into binding regulation, first in 2018 and again in 2024 when it took over crypto and digital-asset supervision, and used graduation from the sandbox to open a registration route for whole business models rather than for one firm.",
+        "preconditions": [
+          "A financial regulator with a statutory mandate over the new activity, here extended to crypto assets by the 2023 financial-sector law",
+          "Staff able to supervise live trials and write graduation decisions that set precedent",
+          "A pipeline of firms willing to test under supervision instead of operating offshore"
+        ],
+        "travelled": "Regulatory sandboxes spread from the UK FCA's 2016 model; Indonesia's version shows the sandbox being reused as the entry gate when a regulator inherits a new sector."
+      }
+    },
+    {
+      "id": "pan-vale-digital",
+      "indicatorId": "institutional_responsiveness",
+      "iso3": "PAN",
+      "title": "Plan Panamá Solidario, Vale Digital",
+      "claim": "Panama's government created the Plan Panamá Solidario digital voucher during the 2020 COVID-19 closures, reaching 90,492 people in its first month (April 2020), 458,662 in May and a peak of 949,343 in November 2020, then tapered it as employment returned and ended it in 2023.",
+      "metric": {
+        "name": "Monthly voucher beneficiaries at peak",
+        "value": 949343,
+        "unit": "people",
+        "asOf": "2020-11"
+      },
+      "secondMetric": {
+        "name": "Monthly voucher beneficiaries in the second month of operation",
+        "value": 458662,
+        "unit": "people",
+        "asOf": "2020-05"
+      },
+      "started": 2020,
+      "status": "concluded",
+      "source": {
+        "publisher": "Ministerio de Desarrollo Social, Informe de Gestión julio 2019 a junio 2024 (Cuadro No. 13, data from the Autoridad de Innovación Gubernamental)",
+        "url": "https://www.mides.gob.pa/wp-content/uploads/2024/06/Informe-Gestion.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The figures are the ministry's own management report at the end of a government's term, sourced to the digital-government authority's platform, and are not audited. Monthly beneficiary counts show how fast the programme scaled, not whether it reached the right people: MIDES itself introduced the Ficha Social later to screen out people who did not need it, which implies early targeting was loose. The table counts people receiving a recharge in a month, and the report's own headline of about 1.3 million people ever covered is a different, cumulative measure. The voucher was a temporary emergency measure ended by design, so a later case with no comparable shock cannot be read from it. Speed came partly from an emergency mandate and from spending about B/.2.08 billion paid to merchants between 2020 and March 2024 (Cuadro No. 15), which says nothing about fiscal sustainability. The figures sit in a PDF table, and the server rejects requests without a browser-like user agent, so checking takes manual work.",
+      "pattern": {
+        "mechanism": "The national government, through MIDES and the Autoridad de Innovación Gubernamental, built a digital voucher tied to the national identity number and paid merchants directly, so it could switch on a nationwide transfer within weeks of the closures and switch it off gradually as people went back to work.",
+        "preconditions": [
+          "A national identity number usable as the key for eligibility and payment",
+          "A digital-government agency able to build and run a registration and recharge platform at national scale",
+          "A merchant network willing to accept vouchers and a treasury able to pay them promptly"
+        ],
+        "travelled": "Pandemic voucher schemes ran across Latin America in 2020; Panama's shows that an exit rule (re-screening through a social file as employment returned) is part of a responsive programme, not an afterthought."
+      }
+    },
+    {
+      "id": "pan-inadeh",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "PAN",
+      "title": "INADEH national vocational training",
+      "claim": "Panama's national vocational training institute, INADEH, restructured by Decree Law 8 of 2006, recorded 156,032 course graduates in 2021, against 90,107 in 2019 and 38,628 in the pandemic year 2020.",
+      "metric": {
+        "name": "INADEH course, workshop and programme graduates",
+        "value": 156032,
+        "unit": "graduates",
+        "asOf": "2021"
+      },
+      "secondMetric": {
+        "name": "INADEH graduates before the pandemic",
+        "value": 90107,
+        "unit": "graduates",
+        "asOf": "2019"
+      },
+      "started": 2006,
+      "status": "operating",
+      "source": {
+        "publisher": "Instituto Nacional de Formación Profesional y Capacitación para el Desarrollo Humano (INADEH), Reporte estadístico 2023, historical table 2011 to 2021",
+        "url": "https://www.inadeh.edu.pa/wp-content/uploads/2023/03/10-3-estadistica-3.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The construct asks for the share of adults trained in the last 12 months; this is a count of graduations from one public provider, so it is neither a share nor a count of people: one person finishing three short courses counts three times, and private and employer training are missing. The 2021 jump is driven by the virtual campus (55,968 graduates at 'Virtual Sede' that year, none before 2020) and by short courses, so it may reflect lighter course formats rather than more training hours. The institute reports on itself and calls the figures preliminary, extracted from its SISGED database. The table carries visible typos (a 2013 female count printed as 32,64), and nothing after 2021 was found in this series. The started year is the 2006 decree law that restructured INAFORP, a predecessor created in 1983, into INADEH, so national vocational training predates it.",
+      "pattern": {
+        "mechanism": "Panama's government, through a tripartite board chaired by the labour minister, runs one autonomous national training institute with fixed regional centres, mobile courses and, since 2020, a virtual campus, so short courses can be scaled up in a crisis without new institutions.",
+        "preconditions": [
+          "A dedicated training levy or budget line that survives changes of government",
+          "A network of regional centres and mobile units that reaches comarcas and rural provinces",
+          "A course registry able to count enrolment and completion by area and centre"
+        ],
+        "travelled": "National training institutes on the SENA and SENAI model are common in Latin America; INADEH's pandemic shift to a virtual campus shows the model scaling through cheap online short courses, which raises the count faster than it raises skills."
+      }
+    },
+    {
+      "id": "bol-mutun-steel",
+      "indicatorId": "large_project_delivery",
+      "iso3": "BOL",
+      "title": "El Mutún steel complex, inaugurated in 2025 and found never to have operated",
+      "claim": "Bolivia's Empresa Siderúrgica del Mutún, whose turnkey contract with Sinosteel was awarded in 2016 and whose complex the President inaugurated in February 2025, reported in its 2026 initial accountability review that the project stood at 92% physical progress against 100% accumulated financial execution, that its own supervision found the complex had never entered operation, and that it had served notice of intent to terminate the contract in January 2026.",
+      "metric": {
+        "name": "Physical progress of the Mutún steel project",
+        "value": 92,
+        "unit": "%",
+        "asOf": "2026 (initial accountability review)"
+      },
+      "secondMetric": {
+        "name": "Accumulated financial execution of the EXIMBANK and Treasury financed contract",
+        "value": 100,
+        "unit": "%",
+        "asOf": "2026 (initial accountability review)"
+      },
+      "started": 2016,
+      "status": "eroded",
+      "source": {
+        "publisher": "Empresa Siderúrgica del Mutún (state steel company), Rendición Pública de Cuentas Inicial 2026, published by Bolivia's Ministry of Mining and Metallurgy",
+        "url": "https://www.mineria.gob.bo/wp-content/uploads/2026/04/8.-PPT_RPCI_2026-E.S.-MUTUN-d.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The source is a slide presentation, not an audit: the figures are read off slides whose PDF text extracts garbled, and a reviewer will need to open slide 11 to check them. The review was written by the company's management under the government that took office in late 2025, which has an interest in blaming the previous administration and the contractor; Sinosteel answered the termination notice on 11 February 2026 and the dispute is unresolved, and the external audit and Contraloría opinion the review schedules had not been published at retrieval. The 100% financial execution covers the EXIMBANK and Treasury tranche only; an additional FINPRO credit stood at 55.79%. No official baseline schedule was opened, so the record carries no percentage schedule overrun, and the 2020 suspension under the interim government is part of the delay. The contract amendment from USD 422.6 million to USD 443.98 million on slide 13 is legible only as chart labels and is not used as the metric. The status 'eroded' records the withdrawal of a completion the state had declared in 2025, not the loss of an operating peak, because the plant never produced at scale; a reviewer may prefer to read it as a failed delivery.",
+      "pattern": {
+        "mechanism": "Bolivia's Ministry of Mining had its state steel company sign a single turnkey design-build-operate contract with a Chinese state contractor, financed 85% by a China Eximbank credit, and accepted provisional and final receptions of each plant before the complex had run as a whole; the next administration's site supervision rejected those receptions.",
+        "preconditions": [
+          "A tied export credit that pays out against contractor milestones rather than against verified operation",
+          "A state owner company with thin in-house engineering supervision relative to the contractor",
+          "A political calendar that rewarded an inauguration date over a commissioning test"
+        ],
+        "travelled": "The lithium carbonate plant (bol-lithium-plant) shows the same state-led industrialisation model delivering a plant that runs well below design capacity."
+      }
+    },
+    {
+      "id": "bol-yo-si-puedo",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "BOL",
+      "title": "Yo, sí puedo national literacy campaign and post-literacy programme",
+      "claim": "Bolivia's Ministry of Education reports that its national literacy programmes, run as 'Yo, sí puedo' from 2006 to 2008 and continued as a post-literacy programme from 2009, taught more than one million people over 15 to read and write between 2006 and 2017, 74% of them women.",
+      "metric": {
+        "name": "People made literate by the national literacy and post-literacy programmes (more than)",
+        "value": 1000000,
+        "unit": "people",
+        "asOf": "2006-2017"
+      },
+      "started": 2006,
+      "status": "concluded",
+      "source": {
+        "publisher": "Bolivia Ministry of Education, Vice-Ministry of Alternative and Special Education, Dirección General de Post-alfabetización",
+        "url": "https://www.minedu.gob.bo/index.php?option=com_content&view=article&id=357&Itemid=757",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The ministry that ran the programmes reports its own cumulative total, as a rounded 'more than one million', with no annual series and no independent verification; the same page gives a second, malformed figure ('1.oo1,372') for 2006 to 2008 alone, which, if accurate, leaves almost no growth in the cumulative total after 2008, so the two figures are either loosely rounded or show the post-literacy phase adding few new literates, and the page is dated 11 May 2016 while citing 2017 data, so it was edited after publication. A count of people made literate over twelve years is not the construct's share of adults in education or training in the last 12 months, and basic literacy is the narrowest form of adult learning; nothing here shows retention of literacy, completion of post-literacy, or participation by adults who were already literate. The page's illiteracy rate of 2.5% in 2017 is not used as a metric: it is not sourced to INE on the page, and higher government-cited rates for 2023 and 2024 appear in state press, so the rate series is contested. The 'Yo, sí puedo' method and early delivery relied on Cuban and Venezuelan support, which a reviewer may weigh against test three, though the programme was mandated and run by Bolivia's ministry.",
+      "pattern": {
+        "mechanism": "Bolivia's Ministry of Education ran a time-bound national literacy campaign with a standardised audiovisual method and local volunteer facilitators in community centres, then converted its graduates into the enrolment base of a standing post-literacy directorate.",
+        "preconditions": [
+          "A census-based count of illiterate adults to set targets and find learners",
+          "A ready-made, low-skill teaching method that volunteers could deliver without trained teachers",
+          "Political priority sustained across the campaign years and a ministry unit to inherit the graduates"
+        ],
+        "travelled": "The same Cuban 'Yo, sí puedo' method was used in Venezuela, Nicaragua and Ecuador before and alongside Bolivia, with national literacy declarations in each that independent surveys later qualified."
+      }
+    },
+    {
+      "id": "vnm-de-an-1956",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "VNM",
+      "title": "Project 1956 vocational training for rural workers",
+      "claim": "Vietnam's General Department of Vocational Education reported that, by the end of 2019, about 9.6 million rural workers had received vocational training at various levels under the Prime Minister's Project 1956, 87.2% of its 11 million target, including 5.59 million whose elementary and under-three-month courses the project subsidised, 85.5% of a 6.54 million target for 2010 to 2020.",
+      "metric": {
+        "name": "Rural workers who received vocational training at various levels",
+        "value": 9600000,
+        "unit": "people",
+        "asOf": "end 2019"
+      },
+      "secondMetric": {
+        "name": "Rural workers supported for elementary or under-three-month training under Project 1956 policy",
+        "value": 5590000,
+        "unit": "people",
+        "asOf": "end 2019"
+      },
+      "started": 2010,
+      "status": "concluded",
+      "source": {
+        "publisher": "Vietnam General Department of Vocational Education (Ministry of Labour, Invalids and Social Affairs), figures reported by the Government News portal (baochinhphu.vn)",
+        "url": "https://baochinhphu.vn/nghe-lam-nong-can-nhung-chinh-sach-thiet-thuc-102267202.htm",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The figures come from the directorate that administered the project, reported in the Government's own news outlet in January 2020, so 'by the end of 2019' was at best a preliminary tally and no final 2020 closing figure was opened. The count is cumulative over ten years and does not give the construct's share of adults trained in the last 12 months; it is likely to count enrolments rather than distinct people, and most of the subsidised training was courses under three months. The 9.6 million total includes training at all levels that the project did not fund, so the 5.59 million is the number attributable to the project's own policy. The project missed both targets. The article's employment outcome (more than 80.4% with new or better-paid work after training) is self-reported and includes people who kept the same occupation; no independent impact evaluation was opened. Provincial reports in the same years record uneven quality and courses that did not match local labour demand.",
+      "pattern": {
+        "mechanism": "Vietnam's Prime Minister set a national ten-year quota for rural vocational training, and the labour ministry's vocational directorate financed short courses per head through provinces and districts, which commissioned public and private training providers against annual targets.",
+        "preconditions": [
+          "A provincial and district administration able to recruit learners and commission courses against a central quota",
+          "A network of district vocational centres and private providers to deliver short courses at volume",
+          "A per-trainee subsidy schedule set centrally, which made the quota financeable"
+        ]
+      }
+    },
+    {
+      "id": "vnm-500kv-circuit-3",
+      "indicatorId": "large_project_delivery",
+      "iso3": "VNM",
+      "title": "Quang Trach to Pho Noi 500kV circuit-3 transmission line",
+      "claim": "Vietnam built the 519-kilometre Quang Trach to Pho Noi 500kV circuit-3 transmission line across nine provinces after construction began on 18 January 2024, and the Government reported it in operation on 29 August 2024 'after six months of construction', meeting the Prime Minister's deadline of completion before September, at an investment of over VND22.3 trillion.",
+      "metric": {
+        "name": "Length of the 500kV circuit-3 transmission line put into operation",
+        "value": 519,
+        "unit": "kilometres",
+        "asOf": "2024-08-29"
+      },
+      "secondMetric": {
+        "name": "Construction period as reported by the Government",
+        "value": 6,
+        "unit": "months",
+        "asOf": "2024-08-29"
+      },
+      "started": 2024,
+      "status": "operating",
+      "source": {
+        "publisher": "Viet Nam Government News (Government Office portal), inauguration report",
+        "url": "https://en.baochinhphu.vn/500kv-circuit-3-power-transmission-line-inaugurated-111240829143515542.htm",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The duration is the Government's own framing: 18 January to 27 to 29 August 2024 is over seven months of construction, not six, and design, investment approval and land clearance before January are not counted. The deadline it met was set during construction by the Prime Minister, so 'on schedule' measures against a political target, not an original baseline, and no approved budget was published to compare with the outturn: the Government's own articles give the investment as VND22 trillion on 14 August and over VND22.3 trillion on 29 August. A single line built under emergency priority after the 2023 northern power shortages shows what the state can do when it concentrates resources; it does not show routine project performance. Construction quality, safety, compensation paid to displaced households and the line's actual utilisation are not in the source, and the outlet is the Government's news portal, not an audit.",
+      "pattern": {
+        "mechanism": "Vietnam's Prime Minister made the line a dated national priority with his own progress reviews, Vietnam Electricity's transmission corporation split it into four component projects built in parallel, and the nine provinces on the route were held responsible for site clearance at the same time as construction.",
+        "preconditions": [
+          "A state-owned grid company able to mobilise contractors and equipment across four sections at once",
+          "Provincial governments that answer to the centre and can clear land on a central deadline",
+          "An acute supply crisis, the 2023 northern power cuts, that justified bypassing normal sequencing"
+        ]
+      }
+    },
+    {
+      "id": "ecu-coca-codo-sinclair",
+      "indicatorId": "large_project_delivery",
+      "iso3": "ECU",
+      "title": "Coca Codo Sinclair hydroelectric plant",
+      "claim": "Ecuador contracted the 1,500 MW Coca Codo Sinclair plant in October 2009 for USD 1,979.7 million with a 60-month term ending 5 October 2014; the plant entered commercial operation in November 2016, and a National Assembly oversight report found it had cost USD 2,712.5 million by August 2021, about 37 percent above the contract price, excluding a USD 599 million transmission line.",
+      "metric": {
+        "name": "Cost of the project to the state by August 2021",
+        "value": 2712.49,
+        "unit": "USD million",
+        "asOf": "2021-08"
+      },
+      "secondMetric": {
+        "name": "EPC contract price at signature",
+        "value": 1979.7,
+        "unit": "USD million",
+        "asOf": "2009-10"
+      },
+      "started": 2009,
+      "status": "operating",
+      "source": {
+        "publisher": "Asamblea Nacional del Ecuador, Comisión de Fiscalización y Control Político, Informe General de Fiscalización sobre el Proyecto Hidroeléctrico Coca Codo Sinclair (Informe Nro. CEPFCP-2021-2023-004-I)",
+        "url": "https://www.asambleanacional.gob.ec/sites/default/files/private/asambleanacional/filesasambleanacionalnameuid-591/INFORME%20FINAL%20COCA%20CODO%20SINCLAIR.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The 37 percent overrun and the roughly 25-month delay are our arithmetic on two figures in the report, not a figure the report states; the report itself compares against the USD 987 million planning estimate, which would make the overrun far larger, so the baseline choice matters. The source is a parliamentary oversight committee report produced in a politically adversarial investigation, written partly as narrative with annexes, inside a 346-page PDF; it is not an audited cost statement, and the 'USD 2.712.490.418,04 millones' wording mixes units. The report also documents thousands of cracks in the turbine distributors, regressive erosion of the Coca river threatening the intake, and net output of 37,927 GWh from April 2016 to May 2022 against about 62,934 GWh expected, so the plant operates well below design; none of that is in the cost metric. The construction contract was signed before financing was firm and outside the public procurement law. Started is the contract signature year, not the start of physical works.",
+      "pattern": {
+        "mechanism": "Ecuador's government declared the plant a national priority, signed a turnkey EPC contract with Sinohydro financed by China Eximbank, and let the contractor set implementation costs, which delivered a 1,500 MW plant two years late and well above the contract price.",
+        "preconditions": [
+          "Bilateral resource-backed finance that made a large single project fundable quickly",
+          "A political decision to size the plant at 1,500 MW before definitive engineering studies existed",
+          "Weak owner-side engineering and supervision capacity relative to an open EPC contract"
+        ],
+        "travelled": "The turnkey, lender-tied model was repeated across Ecuador's other emblematic hydro plants and in other Chinese-financed projects in the region; the Coca Codo record is the case most cited when that model's owner-side risks are discussed."
+      }
+    },
+    {
+      "id": "mys-duitnow",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "MYS",
+      "title": "DuitNow on the Real-time Retail Payments Platform",
+      "claim": "Bank Negara Malaysia merged its clearing subsidiary with the banks' payment consortium into PayNet, jointly owned by the central bank and the financial industry, which rolled out the Real-time Retail Payments Platform with DuitNow from December 2018; BNM statistics record 5,438.6 million RPP transactions worth RM3,638.1 billion in 2025, up from 109.3 million in 2019.",
+      "metric": {
+        "name": "RPP (DuitNow) transaction volume",
+        "value": 5438.6,
+        "unit": "million transactions",
+        "asOf": "2025"
+      },
+      "secondMetric": {
+        "name": "RPP (DuitNow) transaction volume in the first full year",
+        "value": 109.3,
+        "unit": "million transactions",
+        "asOf": "2019"
+      },
+      "started": 2018,
+      "status": "operating",
+      "source": {
+        "publisher": "Bank Negara Malaysia, Payment Statistics, Table 3 Payment Systems (transaction volume and value)",
+        "url": "https://www.bnm.gov.my/documents/20124/20848086/T3+-+Payment+Systems.xlsx",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "Transaction volume measures use of a shared rail, not the depth of collaboration: it does not show how costs, governance or pricing are split between BNM and the banks that owned MEPS (11 domestic banks per the 2017 release), nor whether non-bank participants get fair access in practice. Part of the growth substitutes for other electronic channels (Interbank GIRO, Instant Transfer) rather than adding new payments, and the 2019 base is the platform's ramp-up year, so the multiple overstates organic growth. The joint-ownership fact comes from a 2017 announcement of intent ('will be jointly owned'), not a current shareholder register. The central bank is both shareholder and overseer, so this is a central-bank-led utility as much as a partnership.",
+      "pattern": {
+        "mechanism": "Bank Negara Malaysia merged its own clearing house with the banks' payment consortium into one jointly owned operator, then used it to build a shared real-time rail with a national proxy (phone and ID number) addressing database that every bank connects to.",
+        "preconditions": [
+          "A central bank willing to take an equity stake and bring a bank-owned consortium under one shared utility",
+          "An incumbent bank consortium with existing ATM and instant-transfer networks to fold in",
+          "Regulatory power to require participation and keep interbank fees low"
+        ],
+        "travelled": "Malaysia linked DuitNow to Singapore's PayNow and Indonesia's QRIS through bilateral agreements, and BNM and PayNet joined the BIS Project Nexus proof of concept, so the model is now travelling as cross-border linkage of national fast-payment utilities."
+      }
+    },
+    {
+      "id": "mys-bnm-sandbox",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "MYS",
+      "title": "Bank Negara Malaysia Fintech Regulatory Sandbox",
+      "claim": "Bank Negara Malaysia has operated a fintech regulatory sandbox since October 2016 and added an accelerated Green Lane for financial institutions in February 2024; as of June 2026 it reported 139 Standard and Green Lane applications submitted to date and five solutions in live testing.",
+      "metric": {
+        "name": "Solutions currently in testing in the sandbox",
+        "value": 5,
+        "unit": "count",
+        "asOf": "2026-06"
+      },
+      "secondMetric": {
+        "name": "Standard and Green Lane applications submitted since 2016",
+        "value": 139,
+        "unit": "count",
+        "asOf": "2026-06"
+      },
+      "started": 2016,
+      "status": "operating",
+      "source": {
+        "publisher": "Bank Negara Malaysia, Regulatory Sandbox page (Activities in the Sandbox)",
+        "url": "https://www.bnm.gov.my/sandbox",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The page is the regulator reporting on its own programme, as a live dashboard with no archived history, so the figures can change without notice and earlier values cannot be checked. 139 counts applications (the page also calls them applicants), not admissions: BNM publishes no count of participants admitted or graduated, so the share rejected, withdrawn or still in assessment is unknown. The same page's table of solutions currently in the sandbox lists six firms (one dating from June 2022) against the counter's five, so the live-test count is itself inconsistent on the source page. Five live tests after almost ten years is a small number, and the count says nothing about whether tested products reached the market or led to rule changes. It covers one regulator's sandbox; other Malaysian regulators' sandboxes are not counted here.",
+      "pattern": {
+        "mechanism": "Bank Negara Malaysia published a sandbox framework that lets fintech firms test regulated financial services live under tailored conditions, then added a faster Green Lane so incumbents with a strong risk-management record can test with lighter procedures.",
+        "preconditions": [
+          "A single integrated prudential and conduct regulator for banking, insurance and payments that can grant case-by-case flexibility",
+          "Legal powers to vary requirements for a defined test without amending statute",
+          "Supervisory staff able to assess and monitor novel business models one by one"
+        ],
+        "travelled": "BNM launched in the same year as Singapore's and after the UK's, and its 2024 Green Lane revision follows the wider move from start-up sandboxes toward faster testing tracks for incumbents."
+      }
+    },
+    {
+      "id": "tha-dpm-warning-network",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "THA",
+      "title": "Public disaster warning network of the Department of Disaster Prevention and Mitigation, and its erosion",
+      "claim": "Thailand's State Audit Office found in 2024 that the public warning system, for which the state allocated THB 1,074.95 million in fiscal years 2020 to 2022, and whose telemetry the Department of Disaster Prevention and Mitigation publishes through its DPM Alert app, was not working as intended: 318 of 555 telemetry stations (57.30%) failed to measure continuously for more than two days, and 54 of 82 sampled warning towers and receivers (65.85%) were not ready to sound an alert, which the auditor attributed to damaged or deteriorated key parts.",
+      "metric": {
+        "name": "Sampled warning devices (towers, satellite receivers, relay stations, broadcast towers) not ready to alert",
+        "value": 65.85,
+        "unit": "% of 82 devices tested in 7 provinces",
+        "asOf": "audit findings released March 2024, covering FY2020-2022"
+      },
+      "secondMetric": {
+        "name": "Telemetry stations in the DPM Alert warning network, the installed base the audit tested (of which 318 failed continuous measurement)",
+        "value": 555,
+        "unit": "stations",
+        "asOf": "audit findings released March 2024, covering FY2020-2022"
+      },
+      "started": 2020,
+      "status": "eroded",
+      "source": {
+        "publisher": "State Audit Office of the Kingdom of Thailand (สำนักงานการตรวจเงินแผ่นดิน), audit findings on the public disaster warning system",
+        "url": "https://www.audit.go.th/th/%E0%B8%AA%E0%B8%95%E0%B8%87-%E0%B8%A3%E0%B9%88%E0%B8%A7%E0%B8%A1%E0%B9%80%E0%B8%9D%E0%B9%89%E0%B8%B2%E0%B8%A3%E0%B8%B0%E0%B8%A7%E0%B8%B1%E0%B8%87%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B9%80%E0%B8%95%E0%B8%B7%E0%B8%AD%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%A0%E0%B8%B1%E0%B8%A2",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The page is hosted on the State Audit Office's own site, but it is a newspaper clipping (Siang Samphan, dated 28 March 2024) of the office's release, not the full audit report; the report itself was not opened. The release names no agency; attributing the network to DPM rests on the DPM Alert app. Part of the telemetry was still under the supplier's defect warranty, so its 57.30% failure rate is underperformance of new equipment, not decay; the erosion is carried by the tower test. The device test covers 82 devices in seven provinces chosen by the auditors, not a national random sample, so 65.85% is not a national failure rate. The 'peak' in secondMetric is the installed size of the telemetry network, not an observed year in which all 555 stations worked: the audit does not say when, or whether, the network last ran at full function, so the erosion is from design capacity rather than a measured earlier high. The started year is the first fiscal year of the audited budget window. The audit tests readiness of equipment, not outcomes in a real disaster, and it predates the September 2025 T-Alert cell-broadcast rollout recorded separately as tha-t-alert, which may have replaced part of the function. The finding of THB 514 million in poorly spent funds is the auditor's judgement of value for money.",
+      "pattern": {
+        "mechanism": "Thailand's disaster department funded and installed warning towers, telemetry and a public app, but left maintenance after warranty, data integration and provincial alerting duties without owners, so the installed network decayed into equipment that was present but not ready to sound.",
+        "preconditions": [
+          "A maintenance budget and named custodians for every device after the supplier warranty ends",
+          "A routine national test that records which towers actually sound and feeds repairs",
+          "Provincial and local units obliged to issue and log alerts within the warning window, with someone checking they did"
+        ],
+        "travelled": "Siren and telemetry networks erode the same way elsewhere once the post-disaster budget passes. Thailand's audit is unusual for counting the decay device by device, which is what made the later shift to cell broadcast an evidence-based choice rather than a fashion."
+      }
+    },
+    {
+      "id": "tha-bot-sandbox",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "THA",
+      "title": "Bank of Thailand regulatory sandbox",
+      "claim": "The Bank of Thailand, which opened a fintech regulatory sandbox in late 2016, listed 10 sandbox project tracks as of April 2026, whose participant counts sum to 90, from QR payment (14) and biometrics (19) to letters of guarantee (18), the National Digital ID (12) and programmable payment.",
+      "metric": {
+        "name": "Project tracks listed under the Bank of Thailand regulatory sandbox",
+        "value": 10,
+        "unit": "sandbox project tracks",
+        "asOf": "2026-04"
+      },
+      "secondMetric": {
+        "name": "Participants summed across the listed sandbox project tracks",
+        "value": 90,
+        "unit": "participants",
+        "asOf": "2026-04"
+      },
+      "started": 2016,
+      "status": "operating",
+      "source": {
+        "publisher": "Bank of Thailand, Regulatory Sandbox page",
+        "url": "https://www.bot.or.th/en/financial-innovation/digital-finance/fintech-in-thailand/regulatory-sandbox.html",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The count is the regulator's own listing on a web page rendered from its CMS, not an audited statistic, and the page does not say whether the participants are live today or cumulative since each track opened: the linked P2P list includes firms that exited or discontinued (one discontinued in 2022, one in 2023), so 90 is likely cumulative, not live. The total of 90 is computed by summing the table. A track is the Bank's own grouping, so 10 tracks is not comparable to a count of sandbox regimes elsewhere. The figures show breadth of testing, not how many tests became licensed products, what was learned, or whether consumers were protected; the started year rests on a Bank of Thailand research note, not the 2016 guideline itself. Other Thai regulators' sandboxes are not counted here.",
+      "pattern": {
+        "mechanism": "The Bank of Thailand let banks, fintechs and technology providers test payment, identity and lending services under limited scope and temporary relief, then wrote what worked into rules.",
+        "preconditions": [
+          "A central bank with legal room to grant temporary, conditional relief and to supervise tests closely",
+          "Incumbent banks willing to test shared standards inside the sandbox rather than lobby against them",
+          "A path from a successful test to a licence or a published standard, so the sandbox is not a holding pen"
+        ],
+        "travelled": "Sandboxes spread across ASEAN after 2016; Thailand's variant is notable for running thematic tracks (QR, biometrics, digital ID)."
+      }
+    },
+    {
+      "id": "pry-puente-heroes-del-chaco",
+      "indicatorId": "large_project_delivery",
+      "iso3": "PRY",
+      "title": "Puente Héroes del Chaco, Asunción to Chaco'i bridge",
+      "claim": "Paraguay's Ministry of Public Works began building the Héroes del Chaco cable-stayed bridge, the first road link from Asunción to the Chaco, in 2020 on an estimated 36-month schedule; at the end of 2023 it reported 90% physical progress against 100% planned, and the bridge was inaugurated on 3 March 2024 and recorded as concluded with provisional acceptance in the 2024 balance.",
+      "metric": {
+        "name": "Physical progress against plan at year end (planned 100%)",
+        "value": 90,
+        "unit": "% physical progress",
+        "asOf": "2023-12"
+      },
+      "secondMetric": {
+        "name": "Estimated execution period",
+        "value": 36,
+        "unit": "months",
+        "asOf": "2021 balance"
+      },
+      "started": 2020,
+      "status": "concluded",
+      "source": {
+        "publisher": "Paraguay Ministry of Public Works and Communications (MOPC), Balance Anual de Gestión Pública 2023",
+        "url": "https://mopc.gov.py/uplmoo9eib8eefou3ooze4y/2024/05/BAGP_2023.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "All figures are the ministry's own reports; no audit-office or independent value-for-money review was opened. The schedule figure is a progress-against-plan percentage in a year-end table, which says the works were behind their own plan at end-2023 but not by how many months; the official sources opened give the construction start only as a year, so a month-precise overrun cannot be computed (a 2020 start plus 36 months gives completion within 2023, against an inauguration on 3 March 2024, i.e. at least two months late, and the 2021 balance showed the works ahead of plan, 43.25% against 32.30%). No total contract cost, original award value or cost overrun appears in the balances opened: the 2024 table carries only that year's spending (G. 98,099,704,513). Press reports describing the bridge as delayed and more expensive were leads only and are not the source.",
+      "pattern": {
+        "mechanism": "MOPC tendered the bridge through national public tender MOPC No 156/2019, awarded it to Consorcio Union, financed it from the general budget, and tracked planned against physical progress each year in its public balance.",
+        "preconditions": [
+          "A ministry able to finance a multi-year river crossing without a multilateral lender's supervision",
+          "Domestic contractors with enough balance sheet and imported expertise to take on a cable-stayed span",
+          "An annual public reporting format that records planned against actual progress, so slippage is visible before inauguration"
+        ],
+        "travelled": "The transferable part is the plain planned-versus-actual table in the annual balance, which lets a reader see both the early lead and the late slip."
+      }
+    },
+    {
+      "id": "deu-bildungspraemie",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "DEU",
+      "title": "Bildungsprämie training voucher, and its end",
+      "claim": "The federal education ministry paid half the cost of job-related further training for lower-income workers through a voucher from December 2008, issued more than 400,000 vouchers, and stopped issuing them on 31 December 2021.",
+      "metric": {
+        "name": "Training vouchers (Prämiengutscheine) issued over the life of the programme",
+        "value": 400000,
+        "unit": "vouchers (lower bound, 'über 400.000')",
+        "asOf": "2008-12/2021-12"
+      },
+      "started": 2008,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Bundesministerium für Bildung und Forschung, Bildungsprämie programme site",
+        "url": "https://www.bildungspraemie.info/de/programm-bildungspraemie-21.php",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The figure is the programme's self-report on the BMBF's own programme site, a cumulative total and is a lower bound ('over 400,000'), with no year-by-year series on the page, so the peak and the shape of the decline cannot be read from it. Vouchers issued are not vouchers redeemed, and not people trained. At about 30,000 a year on average, computed from the cumulative total over 13 years, against a workforce of over 40 million, the programme never moved the national participation share the indicator asks for. It was co-financed by the European Social Fund and ended with an ESF funding period, so the end reads as a funding decision rather than a judged failure, and federal support for adult training continued through other instruments; the record documents the loss of this one delivery, not a collapse of adult-learning support. The half-cost and 500 euro terms used in the claim and pattern come from BIBB (https://www.bibb.de/de/742.php), not from the source page.",
+      "pattern": {
+        "mechanism": "The federal education ministry, with ESF money, handed eligible low-income workers a voucher covering half of a course fee up to 500 euros after a counselling session, putting the purchasing decision in the worker's hands rather than the employer's.",
+        "preconditions": [
+          "A large market of accredited private and public training providers able to accept the voucher",
+          "A nationwide network of counselling points to issue vouchers and check eligibility",
+          "Co-financing from the European Social Fund, which tied the programme's life to an EU funding period"
+        ],
+        "travelled": "Individual learning accounts and vouchers were tried widely, from the United Kingdom's ILAs to France's CPF. The German version stayed small and ended; the lesson that travels is that a voucher needs reach and redemption, not issuance, to change participation."
+      }
+    },
+    {
+      "id": "deu-lng-terminals",
+      "indicatorId": "large_project_delivery",
+      "iso3": "DEU",
+      "title": "Floating LNG import terminals of 2022",
+      "claim": "After Russia's invasion of Ukraine the federal government chartered floating storage and regasification units, commissioned the first at Wilhelmshaven in December 2022, and by February 2023 expected to spend about 10 billion euros renting and running five units, against 2.94 billion euros of federal funding made available for four in May 2022.",
+      "metric": {
+        "name": "Expected expenditure for chartering and operating five FSRUs (government estimate)",
+        "value": 10000000000,
+        "unit": "euros",
+        "asOf": "2023-02"
+      },
+      "secondMetric": {
+        "name": "Federal funding available for four FSRUs at the May 2022 decision",
+        "value": 2940000000,
+        "unit": "euros",
+        "asOf": "2022-05"
+      },
+      "started": 2022,
+      "status": "operating",
+      "source": {
+        "publisher": "Deutscher Bundestag, heute im bundestag (hib 137/2023), reporting the federal government's answer in Drucksache 20/5784",
+        "url": "https://www.bundestag.de/presse/hib/kurzmeldungen-936066",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The two cost figures are not like for like and must not be read as an overrun percentage: the May 2022 figure was funding made available for four units, the February 2023 figure is an expected spend for five units over charter terms the government puts at five to 15 years, and the government says a large part will flow back through landing fees. The charter contracts are classified (VS-Vertraulich), so no outside reader can check either number. The schedule claim, decision in late February 2022 to commissioning in December 2022, is computed from two documents rather than published as one figure, and it covers only the first unit; the sources verified here give no commissioning dates for the others, and plans for Stade and a second Wilhelmshaven unit were only targets for end 2023. Part of the speed was bought by suspending process: the government's answer confirms that under the LNG Acceleration Act no environmental impact assessment was carried out at Wilhelmshaven or Brunsbüttel. Nothing here shows how fully the terminals have been used, which is the main criticism of the build-out.",
+      "pattern": {
+        "mechanism": "The economy ministry chartered ready-built floating terminals through the utilities RWE and Uniper instead of building onshore plants, and Parliament passed an acceleration act letting authorities skip environmental assessment and relax procurement for these projects.",
+        "preconditions": [
+          "A global charter market with floating regasification ships available at short notice",
+          "A shock severe enough for Parliament to suspend permitting and procurement rules",
+          "A federal budget able to commit billions before the full cost was known"
+        ],
+        "travelled": "Finland, Italy and the Netherlands also chartered floating units in 2022. The German case is the one cited for permitting speed, and also for the overcapacity and cost debate that followed."
+      }
+    },
+    {
+      "id": "deu-aufstiegs-bafoeg",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "DEU",
+      "title": "Aufstiegs-BAföG, upgrading training support",
+      "claim": "Federal and state governments paid grants and loans to 186,100 people taking vocational upgrading courses such as master craftsman or certified educator in 2025, 3.8 times the 49,300 supported in 1997, with 1.1 billion euros approved.",
+      "metric": {
+        "name": "People receiving Aufstiegs-BAföG support",
+        "value": 186100,
+        "unit": "people",
+        "asOf": "2025"
+      },
+      "secondMetric": {
+        "name": "People receiving Aufstiegs-BAföG support in the first complete survey year",
+        "value": 49300,
+        "unit": "people",
+        "asOf": "1997"
+      },
+      "started": 1996,
+      "status": "operating",
+      "source": {
+        "publisher": "Statistisches Bundesamt (Destatis), press release 224 of 29 June 2026, statistics of upgrading training support (GENESIS 21421)",
+        "url": "https://www.destatis.de/DE/Presse/Pressemitteilungen/2026/06/PD26_224_214.html",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "A count of funded people is not the share of adults who took part in education or training, which is what the indicator asks for, and it says nothing about people who trained without this support. The 1996 start year is derived from 'thirty years ago' in a 2026 release. 28 percent (52,000) of recipients in 2025 were trainee educators (Erzieher), so the total moves with one occupation's staffing policy. The count has slipped from its 2022 peak of 192,400, a small decline that is noted here but not large enough to call the delivery eroded.",
+      "pattern": {
+        "mechanism": "Federal law entitles anyone taking a recognised upgrading qualification to support for course fees and living costs, part grant and part loan, so a skilled worker can leave or reduce work to train for a master or technician certificate without employer sponsorship.",
+        "preconditions": [
+          "A codified ladder of upgrading qualifications (Meister, Techniker, Fachwirt) that employers recognise",
+          "Federal and state co-funding under a statutory entitlement rather than a time-limited programme",
+          "Chambers and schools able to run courses and examinations at national scale"
+        ],
+        "travelled": "Austria and Switzerland support similar higher vocational qualifications, but the German entitlement model depends on the Meister system existing first; countries without that ladder have little to attach it to."
+      }
+    },
+    {
+      "id": "arg-atucha-ii",
+      "indicatorId": "large_project_delivery",
+      "iso3": "ARG",
+      "title": "Atucha II nuclear plant, and its 33-year build",
+      "claim": "Argentina's state nuclear operator connected Atucha II to the grid in June 2014, almost 33 years after construction began in July 1981, and began commercial operation in May 2016, after a build halted in 1994 and restarted in 2006.",
+      "metric": {
+        "name": "Time from construction start (1981-07) to first grid connection (2014-06)",
+        "value": 32.9,
+        "unit": "years (computed from IAEA dates)",
+        "asOf": "2014-06"
+      },
+      "secondMetric": {
+        "name": "Energy availability factor, 2015 to 2025",
+        "value": 52.59,
+        "unit": "%",
+        "asOf": "2015-2025"
+      },
+      "started": 1981,
+      "status": "operating",
+      "source": {
+        "publisher": "International Atomic Energy Agency, Nuclear Power Reactors in the World, Reference Data Series No. 2, 2026 edition, Table 14",
+        "url": "https://www-pub.iaea.org/MTCD/publications/PDF/RDS-2_46web.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The 32.9 years is computed from two month-precision dates in an IAEA table, and the national regulator dates the start to 1982, so the figure could be a year shorter. No cost figure was found at an official source, so the record carries schedule only, and the indicator asks for cost too. Most of the delay is a 12-year suspension (1994 to 2006) caused by fiscal crisis and policy, not slow building, so the number mixes a stopped project with a slow one. The IAEA data are reported to the IAEA by the national authorities. The plant's energy availability factor of about 53 percent over 2015 to 2025 shows that completion did not bring reliable output, and the record should not be read as a success story beyond the fact of delivery.",
+      "pattern": {
+        "mechanism": "The state nuclear company NA-SA and the atomic energy commission CNEA restarted a German-designed reactor abandoned mid-build, under a 2006 national reactivation plan, and finished it with Argentine engineering after the original vendor's nuclear business had left the field.",
+        "preconditions": [
+          "A standing nuclear institution (CNEA) that kept engineers and know-how through the suspension",
+          "State finance able to fund a restart once the fiscal crisis passed",
+          "A design close enough to Atucha I that domestic teams could complete and license it"
+        ],
+        "travelled": "Restarting a long-suspended nuclear build has rarely worked elsewhere; Brazil's Angra 3 is the comparable case and remains unfinished, which is why Atucha II is cited as proof of completion rather than of efficient delivery."
+      }
+    },
+    {
+      "id": "arg-sinarame",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "ARG",
+      "title": "SINARAME national weather radar network",
+      "claim": "The national water resources secretariat contracted the state technology firm INVAP in 2011 to build Argentine weather radars, and by December 2024 the network operated 14 radars feeding an operations centre at the national weather service, after 11 had covered 40 percent of the territory together with three INTA radars in 2023.",
+      "metric": {
+        "name": "Weather radars (RMA) in the SINARAME network",
+        "value": 14,
+        "unit": "radars",
+        "asOf": "2024-12"
+      },
+      "secondMetric": {
+        "name": "Share of national territory covered by 11 SINARAME radars plus 3 INTA radars",
+        "value": 40,
+        "unit": "% of territory",
+        "asOf": "2023-03"
+      },
+      "started": 2011,
+      "status": "operating",
+      "source": {
+        "publisher": "Servicio Meteorológico Nacional, news item on argentina.gob.ar, 4 December 2024",
+        "url": "https://www.argentina.gob.ar/noticias/sinarame-san-luis-cuenta-con-un-nuevo-radar-meteorologico",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "A radar count is an input to early warning, not demonstrated capacity to prepare for and recover from a shock, which is what the indicator asks for; nothing here shows that warnings reached people or reduced losses. Both figures are the government's own announcements, and the count is inconsistent across them: 11 radars plus a prototype in March 2023 and 14 in December 2024, so it is unclear whether the prototype is counted. The 2011 start is a contract signature, and the sources do not date the first operational radar. The March 2023 announcement announced a third stage of 10 more radars (RMA12 to RMA21) for 70 percent coverage, and by December 2024 only about three had been added. Later installations in 2025 were reported but not verified here at an official source. The 40 percent coverage figure includes three radars owned by INTA, outside the network.",
+      "pattern": {
+        "mechanism": "The water resources secretariat bought radars from INVAP, the state-owned engineering firm, instead of importing them, and later contracted INVAP to operate and maintain the network while the national weather service ran a central operations centre.",
+        "preconditions": [
+          "A domestic firm with prior radar and complex-systems experience (INVAP)",
+          "A ministry willing to fund a multi-stage build across changes of government",
+          "Provinces supplying sites, power and fibre under cooperation agreements"
+        ],
+        "travelled": "Most countries import weather radars; Argentina's choice to build them domestically is the unusual part, and the slow third stage shows the cost of depending on one national supplier and one budget line."
+      }
+    },
+    {
+      "id": "esp-sandbox-financiero",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "ESP",
+      "title": "Sandbox financiero (Ley 7/2020), and the fall in applications",
+      "claim": "Spain's Treasury ran a national financial regulatory sandbox under Law 7/2020 from 2021. Its first cohort drew 66 applications, 12 of which entered testing. By 2025 demand had fallen to two applications across the ninth and tenth cohorts, one of which received a favourable assessment, and the Government approved a draft law (Anteproyecto, 17 December 2024) that replaces closed cohorts with year-round intake and cuts pre-assessment to 45 working days.",
+      "metric": {
+        "name": "Applications received in the 9th and 10th cohorts",
+        "value": 2,
+        "unit": "applications",
+        "asOf": "2025"
+      },
+      "secondMetric": {
+        "name": "Applications received in the first cohort (peak)",
+        "value": 66,
+        "unit": "applications",
+        "asOf": "2021"
+      },
+      "started": 2021,
+      "status": "eroded",
+      "source": {
+        "publisher": "Secretaría General del Tesoro y Financiación Internacional (Ministry of Economy), Informe bienal del Sandbox financiero 2024-2025",
+        "url": "https://www.tesoro.es/sites/default/files/publicaciones/Informe%20Bienal%20Sandbox%202024-2025.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "Applications measure demand for the regime. They do not measure the regime's regulatory value, and the Treasury reports its own programme. The first cohort's surge was partly pent-up demand from the two-year legislative delay before Law 7/2020, so 66 is an unusual peak and not a steady state. Some of the later fall may reflect substitutes rather than lost capability: the EU DLT Pilot Regime, MiCA, the Bank of Spain's innovation hub and new Spanish sandboxes such as the AI pilot under RD 817/2023, Eco-Lab and the mobility sandbox. Spain opened further sandboxes (AI pilot, Eco-Lab, mobility) modelled on this one. The same report counts 117 applications over ten cohorts, four projects fully in the market and three legal changes traced to tests: Law 6/2023 on DLT securities and fund units, and RD 668/2023 on pension contributions. Read as one regime, the decline is real. Read as Spain's whole sandbox capacity, it overstates erosion. Every figure is a PDF read and there is no machine-readable series. The cohort chart in section 1.1 gives per-cohort counts only as unlabelled values, so the record uses the two figures stated in prose.",
+      "pattern": {
+        "mechanism": "The Treasury built a cohort-based sandbox in which the Bank of Spain, the securities regulator CNMV and the insurance supervisor DGSFP assessed and monitored tests under one statute, then fed the conclusions back into legislation. Demand collapsed once the first cohort's backlog cleared, and the Government answered with a draft law for year-round intake and a shorter pre-assessment.",
+        "preconditions": [
+          "A statute that lets supervisors grant time-limited testing protocols without licensing",
+          "Supervisors with staff to assess applications and write public conclusions for each test",
+          "A steady supply of firms whose innovation is blocked by a specific rule, rather than one-off pent-up demand"
+        ],
+        "travelled": "The UK FCA's sandbox model was copied widely after 2016. Spain's cohort data show the common afterlife of such regimes: an opening surge, then thin demand once EU-level regimes and innovation hubs offer cheaper routes."
+      }
+    },
+    {
+      "id": "esp-formacion-programada",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "ESP",
+      "title": "Formación programada por las empresas (FUNDAE training credit)",
+      "claim": "Spain finances employer-organised training through rebates on firms' social security vocational-training contributions, managed by the state foundation FUNDAE. In 2024, 347,442 firms trained 3,378,343 workers, 22.7 percent of private-sector employees, across 5,824,016 participations.",
+      "metric": {
+        "name": "Population coverage: workers trained in employer-programmed courses as a share of private-sector employees (EPA annual average)",
+        "value": 22.7,
+        "unit": "% of private-sector employees",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Firms training their workers as a share of firms paying the vocational-training contribution (peak)",
+        "value": 29.7,
+        "unit": "% of contributing firms",
+        "asOf": "2014"
+      },
+      "started": 2004,
+      "status": "eroded",
+      "source": {
+        "publisher": "Fundación Estatal para la Formación en el Empleo (FUNDAE), Balance de situación 2024 (data at 31 March 2025)",
+        "url": "https://www.fundae.es/docs/default-source/publicaciones-y-evaluaciones/informes-y-balances/balance-de-situaci%C3%B3n-2024-(1).pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The figures are FUNDAE's own administrative counts of training that firms report in order to claim rebates, so training that is not reported or not rebated is missing. The coverage rate divides people trained by the EPA private-sector employee count, which leaves out the self-employed, the public sector and the unemployed, so it is not the adult population share the gap asks for. The 22.7 percent and the 39.2 percent are different rates: 39.2 percent counts participations, and one person can count several times. The 22.7 and 3,378,343 values are read off an infographic page of the PDF, while the 5.8 million and 347,442 are in prose. Training is short, at 13.3 hours per participant in 2024 against 24 in 2014, and nothing shows skills gained. Reach across firms has eroded: 20.5 percent of eligible firms trained in 2024, against 29.7 percent (471,590 firms) in 2014, both on p.3 of the same Balance 2024 PDF. Micro firms cover 15.3 percent while large firms cover 91.8 percent, and firms used only 53 percent of their assigned credit. Worker participation rose while the firm base and training hours eroded, so the record is filed as eroded, with the 2014 firm-coverage peak as its second metric.",
+      "pattern": {
+        "mechanism": "The state ring-fenced a payroll levy for vocational training and let every contributing firm reclaim it as a social security rebate for training it organises itself. A tripartite foundation, now FUNDAE, governed by government, employers and unions, verifies the training and publishes coverage.",
+        "preconditions": [
+          "A payroll training levy collected through the social security system that can be returned as a rebate",
+          "Social partners willing to co-govern the fund and accept its verification rules",
+          "Enough administrative capacity in firms to organise and report training, which is why micro-enterprise take-up stays low"
+        ],
+        "travelled": "Levy-rebate schemes run in France and Singapore. Spain's coverage split by firm size shows the design reaches employees of large firms far better than workers in small firms, who need the training most."
+      }
+    },
+    {
+      "id": "rwa-marburg-2024",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "RWA",
+      "title": "Rwanda's 2024 Marburg outbreak response",
+      "claim": "Rwanda's Ministry of Health declared a Marburg virus disease outbreak on 27 September 2024 and declared it over on 20 December 2024. WHO reported 66 confirmed cases and 15 deaths, a case fatality ratio of 23 percent, with the last confirmed case on 30 October.",
+      "metric": {
+        "name": "Case fatality ratio of the 2024 Marburg outbreak",
+        "value": 23,
+        "unit": "% of confirmed cases",
+        "asOf": "2024-12-19"
+      },
+      "secondMetric": {
+        "name": "Confirmed Marburg cases",
+        "value": 66,
+        "unit": "confirmed cases",
+        "asOf": "2024-12-19"
+      },
+      "started": 2024,
+      "status": "concluded",
+      "source": {
+        "publisher": "World Health Organization, Disease Outbreak News, Marburg virus disease - Rwanda (DON548)",
+        "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON548",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "This is one 12-week event, not a standing programme, and a single outcome cannot separate preparedness from luck or case mix. The low fatality ratio is partly a case-mix effect. Almost 80 percent of cases were health workers, from two health facilities in Kigali (WHO: almost 78 percent of confirmed cases; 46 percent of all cases aged 30 to 39), treated at a dedicated MVD treatment centre with WHO critical-care support. They are not comparable to rural community cases in earlier outbreaks. That most cases were health workers is itself evidence of an infection-control failure at the start: the virus spread inside hospitals before it was detected. WHO's page does not say how long transmission ran before detection. The response was not purely national. WHO provided surge clinical support, IOM supported points-of-entry capacity, and US CDC, USAID and Africa CDC supplied laboratory supplies and technical support, and the DON lists therapeutics and vaccine research as a response function, so the investigational products may have contributed in ways this record cannot separate. The DON does not give the historical fatality range, so the comparison with earlier outbreaks is not made from this source. The figures are WHO restating Ministry of Health reports, so the government is reporting on its own response.",
+      "pattern": {
+        "mechanism": "Rwanda's Ministry of Health and Rwanda Biomedical Centre ran an incident-management structure with WHO and partner surge support. They traced and tested contacts at scale, with 7,874 Marburg tests by 6 December. Cases were moved to a dedicated treatment centre with critical care, and the WHO 42-day rule was followed before the end was declared.",
+        "preconditions": [
+          "A national public health institute with in-country filovirus PCR capacity",
+          "An administrative system able to trace contacts quickly in a dense capital",
+          "Standing relationships with WHO, Africa CDC and US agencies that could deploy surge teams within days"
+        ],
+        "travelled": "The Ebola response model from West Africa and the DRC, adapted to a mostly urban, hospital-centred outbreak in a capital city."
+      }
+    },
+    {
+      "id": "pol-vistula-spit-canal",
+      "indicatorId": "large_project_delivery",
+      "iso3": "POL",
+      "title": "Vistula Spit shipping canal (Przekop Mierzei Wiślanej)",
+      "claim": "Poland's Maritime Office in Gdynia signed the first construction contract for the Vistula Spit waterway on 4 October 2019 and opened the canal on 17 September 2022. The Supreme Audit Office found that by April 2023 the programme's value had risen 125 percent, from PLN 880 million to over PLN 1,984 million, and that its completion deadline had slipped two years to the end of 2024.",
+      "metric": {
+        "name": "Cost overrun of the Vistula Spit waterway programme against its original value",
+        "value": 125,
+        "unit": "% overrun (PLN 880 million to over PLN 1,984 million)",
+        "asOf": "2023-04"
+      },
+      "secondMetric": {
+        "name": "Extension of the programme's completion deadline",
+        "value": 2,
+        "unit": "years (to end of 2024)",
+        "asOf": "2023-05"
+      },
+      "started": 2019,
+      "status": "operating",
+      "source": {
+        "publisher": "Najwyższa Izba Kontroli (Supreme Audit Office), audit of the programme 'Budowa drogi wodnej łączącej Zalew Wiślany z Zatoką Gdańską'",
+        "url": "https://www.nik.gov.pl/aktualnosci/przekop-przez-mierzeje-wislana.html",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "This is a delivery with a large documented overrun, and it should be read as evidence of poor cost and schedule performance, not as a success. The 125 percent is NIK's figure for the programme budget as revised up to April 2023. Against the further revision to PLN 2,127.5 million in May 2023 the overrun is about 142 percent, a figure computed here and not published by NIK. Final outturn cost after 2024 was not checked. NIK found that the cost-benefit threshold was crossed at a 20 percent cost increase, and that the minister knew of a more than 100 percent rise before the first contract was signed. The project is therefore uneconomic on the state's own appraisal, and NIK said it was considering notifications of suspected crime and of breaches of public finance discipline. Only the canal and lock are open. NIK states that the sea-going vessels the programme was designed for cannot call at Elbląg until port works there are finished, so the canal's stated purpose was not delivered on the date the first metric describes. The ministry's count of more than 1,770 vessels in the first year is mostly small craft and is not used. The programme was set up by a Council of Ministers resolution of 24 May 2016. 'Started' uses the first construction contract in 2019, and a reviewer could set it at 2016.",
+      "pattern": {
+        "mechanism": "The Council of Ministers established a multi-year programme and the Maritime Office in Gdynia contracted and built it. The minister responsible raised the budget twice and extended the deadline without telling the cabinet that the project no longer passed its own cost-benefit test. A strategic objective, sea access that bypassed Russian-controlled waters, overrode the economic appraisal.",
+        "preconditions": [
+          "A strategic or security rationale strong enough to survive a failed cost-benefit test",
+          "A multi-year programme instrument whose budget the responsible minister can revise",
+          "An audit office with the mandate to publish findings after the fact and to notify suspected crime and breaches of public finance discipline"
+        ],
+        "travelled": "The pattern of a politically fixed opening date and a budget revised to fit is common to prestige infrastructure. What sets this case apart is NIK's documentation that the threshold breach was known before the first contract was signed."
+      }
+    },
+    {
+      "id": "pol-doktorat-wdrozeniowy",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "POL",
+      "title": "Doktorat wdrożeniowy (implementation doctorate) programme",
+      "claim": "Poland's science ministry opened the implementation doctorate in the 2017/2018 academic year, funding doctoral candidates to do their research inside a firm or institution. In its first five editions 2,293 projects were approved, 479 people qualified for the sixth edition in 2022/2023, and 69.6 percent of the doctorates ran in the private sector.",
+      "metric": {
+        "name": "Implementation doctorate projects approved in the first five editions",
+        "value": 2293,
+        "unit": "approved doctoral projects",
+        "asOf": "2022"
+      },
+      "secondMetric": {
+        "name": "Candidates qualified for the sixth edition",
+        "value": 479,
+        "unit": "doctoral candidates",
+        "asOf": "2022/2023"
+      },
+      "started": 2017,
+      "status": "operating",
+      "source": {
+        "publisher": "Polish Ministry of Education and Science, '5 lat programu Doktorat wdrożeniowy'",
+        "url": "https://www.gov.pl/web/edukacja/5-lat-programu-doktorat-wdrozeniowy",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The figures are the ministry reporting on its own programme. They restate a report by the state-owned Łukasiewicz Research Network, not a statistical release. 2,293 is approved projects, not completed doctorates. The page gives no completion, dropout or defence rate, and no figure for patents, products or firm R&D that came out of the work. The latest count read here is from 2022. Figures for the editions since then, including later press totals of about 3,000 participants, were not verified at an official source. A co-funded PhD placement is one channel of university-firm collaboration, and it does not measure the intensity of joint research the indicator asks for, such as co-publications, contract research or co-patenting. 30.4 percent of placements are in the public sector, including state-owned companies and public institutions, so not every project links a university with a private firm. Firms may use the scholarship as a wage subsidy for staff they would have employed anyway.",
+      "pattern": {
+        "mechanism": "The science ministry paid a scholarship to doctoral candidates who were also employed by a firm, with a supervisor on each side. The firm gets a researcher working on its own problem and the university gets a funded doctorate. Each edition was a national competition that universities applied to.",
+        "preconditions": [
+          "Universities accredited to award doctorates and willing to accept dissertations built on applied work",
+          "Firms with enough technical depth to host and co-supervise a doctoral project",
+          "A ministry budget line able to fund multi-year scholarships on top of the firm's salary"
+        ],
+        "travelled": "Close in design to France's CIFRE industrial doctorates (since 1981) and Denmark's Industrial PhD. Poland's version runs through annual ministerial editions rather than a standing agency."
+      }
     }
   ]
 }

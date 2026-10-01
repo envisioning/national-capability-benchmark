@@ -9,6 +9,18 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.24.3 — 2026-10-01
+
+- **27 more documented deliveries, six of them losses.** The losses are
+  Peru's southern gas pipeline, Bolivia's Mutún steel plant, Thailand's
+  disaster warning towers, Germany's Bildungsprämie, Spain's fintech
+  sandbox and Spanish employer training. The flagships include Peru's
+  Talara refinery, Indonesia's 35,000 MW programme, Ecuador's Coca Codo
+  Sinclair, Germany's LNG terminals, Argentina's Atucha II, Poland's
+  Vistula Spit canal and Rwanda's Marburg response. A second reviewer
+  checked every number at its official source. The capability agenda is
+  regenerated.
+
 ## App 1.24.2 — 2026-10-01
 
 - **30 more documented deliveries, eight of them losses.** The new records
