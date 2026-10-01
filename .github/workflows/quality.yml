@@ -4,6 +4,10 @@ on:
   push:
   pull_request:
 
+permissions:
+  contents: read
+  packages: read
+
 jobs:
   green-gate:
     runs-on: ubuntu-latest
@@ -17,7 +21,14 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
+          registry-url: https://npm.pkg.github.com
+          scope: '@envisioning'
+      # @envisioning/app is private on GitHub Packages (D104). The repo secret
+      # is a classic PAT with read:packages; without it the job token is tried,
+      # which needs this repo granted read under the package's Actions access.
       - run: pnpm install --frozen-lockfile
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN || github.token }}
       - run: pnpm test
       - run: pnpm bench validate
       - run: pnpm build
