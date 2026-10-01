@@ -1,15 +1,18 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { DECISIONS_DOC, WHY_DOC, docHref } from '@ncb/core'
+import { DECISIONS_DOC, FACTOR_INCOME_BANDS, WHY_DOC, docHref } from '@ncb/core'
 import { Empty, Headline, Note, PageTitle, Section } from '@/components/ui'
 import { WealthTracking } from '@/components/WealthTracking'
-import { MISSING_DATA_HINT, loadDiagnostics } from '@/lib/data'
+import { FactorHistory } from '@/components/FactorHistory'
+import { MISSING_DATA_HINT, loadDiagnostics, loadFactorHistory } from '@/lib/data'
+import { factorHistorySentence, readFactorTest } from '@/lib/factor'
 import { countryLayer } from '@/lib/layers'
 import {
   countryLayerHref,
   countryProfileHref,
   decisionHref,
   diagnosticsHref,
+  glossaryTermHref,
   limitsHref,
   methodHref,
 } from '@/lib/links'
@@ -54,6 +57,9 @@ export default async function ThesisPage() {
   const diag = await loadDiagnostics()
   if (!diag) return <Empty hint={MISSING_DATA_HINT} />
   const wealth = readWealthTracking(diag)
+  const factor = readFactorTest(diag)
+  const history = await loadFactorHistory()
+  const historySentence = history ? factorHistorySentence(history) : null
   const brazil = countryLayer('BRA')
 
   return (
@@ -136,6 +142,42 @@ export default async function ThesisPage() {
             states the full argument and the evidence that would disprove it.
           </p>
         </div>
+        {factor ? (
+          <div className="mt-12">
+            <h3 className="mb-4 text-xl font-medium tracking-tight">
+              Are the nine really one thing?
+            </h3>
+            <div className="mb-8 max-w-3xl space-y-4 text-lg leading-relaxed">
+              <p>
+                If the claim is wrong, the nine capabilities collapse into one factor that tracks
+                GDP per head. The diagnostics measure that directly: how much of the variation
+                across countries one{' '}
+                <Link href={glossaryTermHref('First factor')} className="underline underline-offset-4">
+                  first factor
+                </Link>{' '}
+                carries, and how closely that factor follows income.
+              </p>
+              <p>{factor.shareSentence}</p>
+              {factor.incomeSentence ? <p>{factor.incomeSentence}</p> : null}
+            </div>
+            {history && history.releases.length > 1 ? (
+              <>
+                <FactorHistory releases={history.releases} />
+                <p className="mt-4 max-w-3xl text-xs leading-relaxed text-[var(--muted)]">
+                  Each point is one dataset release, in order. The shaded band runs from the
+                  average share chance produces at that release&apos;s number of countries to its
+                  95th percentile. A hollow point reads fewer than nine capabilities, because too
+                  few countries had all nine scored that release. The dashed line in the lower
+                  panel marks {FACTOR_INCOME_BANDS.strong.toFixed(1)}, at or above which the page
+                  reads the shared factor as income.
+                </p>
+                {historySentence ? (
+                  <p className="mt-6 max-w-3xl text-lg leading-relaxed">{historySentence}</p>
+                ) : null}
+              </>
+            ) : null}
+          </div>
+        ) : null}
         <Note>
           A correlation with income is not proof that income causes the capability. It marks a
           dimension whose current indicators cannot separate the two. That is a data problem, and

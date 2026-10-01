@@ -314,6 +314,13 @@ export const GLOSSARY: GlossaryEntry[] = [
     full: 'Each indicator is correlated with log GDP per capita. Above 0.7, it is flagged as a wealth proxy and removed in a sensitivity test. The panel gets the same test.',
   },
   {
+    term: 'First factor',
+    group: 'How good the evidence is',
+    short: 'The single pattern that explains the most of how countries differ across all nine capabilities at once.',
+    full: 'Take every country with all nine capabilities scored and ask how far the nine rise and fall together. The first factor is the one combined pattern that accounts for the most of that shared movement, found by principal component analysis of how the nine scores correlate. Its share is the part of all the variation that one pattern carries: 100% would mean the nine are one number under nine names, and the share an unrelated set of nine would show by chance, at the same number of countries, is published beside it. The first factor is then compared with income per head. If it carries most of the variation and follows income closely, the nine capabilities are measuring wealth, and the benchmark\'s claim fails. Like every correlation here, it is read on a few dozen countries, so treat it as a hint that more countries could overturn.',
+    example: 'In dataset 7.6.0 the first factor carries 52.9% of the variation across 51 countries, against 18.9% expected by chance, and it correlates 0.86 with log GDP per head.',
+  },
+  {
     term: 'Wealth residual',
     group: 'What sits beside the score',
     short: 'The gap between a dimension score and the score a country\'s income predicts.',

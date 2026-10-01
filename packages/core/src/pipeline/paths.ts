@@ -41,6 +41,8 @@ export const FILES = {
   index: resolve(OUT_DIR, 'index.json'),
   flatTable: resolve(OUT_DIR, 'table.csv'),
   diagnostics: resolve(OUT_DIR, 'diagnostics.json'),
+  /** The factor test at every committed dataset release, read from git on `bench diagnose`. See D137. */
+  factorHistory: resolve(OUT_DIR, 'factor-history.json'),
   report: resolve(OUT_DIR, 'report.md'),
   velocity: resolve(OUT_DIR, 'velocity.json'),
   leverage: resolve(OUT_DIR, 'leverage.json'),

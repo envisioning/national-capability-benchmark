@@ -9,6 +9,31 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.23.0 — 2026-10-01
+
+- **The thesis shows whether the nine capabilities are one thing.** "Where
+  the claim holds, and where it fails" gains a computed reading of the
+  one-factor test: how much of the variation one shared factor carries
+  (52.9% over 51 countries), what chance would give at that size (18.9%,
+  21.5% at the 95th percentile), and how closely the factor follows income
+  (r 0.86, n 50). At that strength the page says plainly that the shared
+  factor looks like income. A chart draws the share against the chance band
+  and the factor's correlation with income at every dataset release since
+  1.0.0. `/diagnostics` publishes the loadings, the eigenvalues, the countries
+  left out and the full release table, the front page's income module gains
+  one sentence, and the glossary defines "first factor". See D137.
+
+## Dataset 7.6.0 — 2026-10-01
+
+- **New published field: `diagnostics.factorStructure` (D137).** The
+  correlation matrix of the nine dimension scores over the countries with all
+  nine scored, its eigenvalues, the first factor's share and loadings, its
+  correlation with log GDP per capita, and a seeded Monte Carlo chance level.
+  Below 30 complete cases the dimensions scored for at least 90% of countries
+  are solved as well. `data/out/factor-history.json` holds the same test at
+  every committed dataset release, read from git by `bench diagnose`, and
+  `schema/factor-structure.schema.json` and `schema/factor-history.schema.json`
+  describe both. No score or confidence changes.
 ## App 1.22.1 — 2026-10-01
 
 - **Two sandbox records.** Brazil's central bank admitted seven of 52

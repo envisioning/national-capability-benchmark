@@ -1,0 +1,132 @@
+{
+  "$ref": "#/definitions/FactorHistoryFile",
+  "definitions": {
+    "FactorHistoryFile": {
+      "type": "object",
+      "properties": {
+        "generatedAt": {
+          "type": "string"
+        },
+        "releases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "version": {
+                "type": "string"
+              },
+              "commit": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "date": {
+                "type": "string"
+              },
+              "basis": {
+                "type": "string",
+                "enum": [
+                  "complete",
+                  "nearFull"
+                ]
+              },
+              "dimensions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "anticipation",
+                    "agency",
+                    "coordination",
+                    "trust",
+                    "learning",
+                    "experimentation",
+                    "adaptability",
+                    "building",
+                    "shared_purpose"
+                  ]
+                }
+              },
+              "countries": {
+                "type": "integer"
+              },
+              "firstFactorShare": {
+                "type": "number"
+              },
+              "chance": {
+                "type": "object",
+                "properties": {
+                  "draws": {
+                    "type": "integer"
+                  },
+                  "seed": {
+                    "type": "integer"
+                  },
+                  "mean": {
+                    "type": "number"
+                  },
+                  "p95": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "draws",
+                  "seed",
+                  "mean",
+                  "p95"
+                ],
+                "additionalProperties": false
+              },
+              "income": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "r": {
+                        "type": "number"
+                      },
+                      "rSquared": {
+                        "type": "number"
+                      },
+                      "n": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "r",
+                      "rSquared",
+                      "n"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "version",
+              "commit",
+              "date",
+              "basis",
+              "dimensions",
+              "countries",
+              "firstFactorShare",
+              "chance",
+              "income"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "generatedAt",
+        "releases"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

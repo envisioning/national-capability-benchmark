@@ -1,6 +1,6 @@
 # National Capability Benchmark, prototype v0
 
-*Generated 2026-10-01T14:11:58.441Z*
+*Generated 2026-10-01T15:43:15.137Z*
 
 This run covers 53 countries and nine dimensions. Indicators carry equal weight within each dimension, and the benchmark has no headline ranking.
 
@@ -479,6 +479,28 @@ Both correlations read the value after the registry transform, so secure servers
 | Coordination | 0.563 | 0.618 | 51 |
 | Building | 0.434 | 0.457 | 51 |
 | Shared Purpose | 0.202 | 0.216 | 50 |
+
+## The dimensions are checked for one shared factor
+
+Over the 51 countries with all nine dimensions scored, the first principal component of the dimension correlation matrix carries 52.9% of the variance. The same number of independent dimensions at the same size would give 18.9% on average and 21.5% at the 95th percentile (2000 draws, seed 20261001).
+
+The first factor's country scores correlate 0.859 with log GDP per capita (n 50), so income accounts for 74% of it. The shared factor looks like income.
+
+| Dimension | Loading on the first factor |
+| --- | --- |
+| Anticipation | 0.914 |
+| Agency | 0.635 |
+| Coordination | 0.758 |
+| Trust | 0.798 |
+| Learning | 0.846 |
+| Experimentation | 0.646 |
+| Adaptability | 0.745 |
+| Building | 0.621 |
+| Shared Purpose | 0.483 |
+
+Eigenvalues: 4.757, 1.208, 0.85, 0.738, 0.411, 0.392, 0.3, 0.208, 0.136.
+
+Left out for a missing dimension: CUB, HTI.
 
 ## Indicators are checked for income bias
 

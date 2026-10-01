@@ -6788,3 +6788,77 @@ included; a published field carrying the survey and the gate's drops, which
 would retire `COUNTRY_ROW_FACTS` in favour of the data; or the fact table
 growing past one indicator, which would show the facts are a data problem and
 move them into the adapter's output.
+
+## D137 — The one-factor test is computed and published every release
+
+*Recorded 2026-10-01. Puts in the data the test docs/WHY.md names first under
+what would show the idea was wrong: "the nine dimensions collapse into one
+factor across a wide country set, with no information beyond income per
+head." Until now it was computed by hand, once, on a different basis.*
+
+**Decision.** `diagnostics.factorStructure` publishes, on every
+`bench diagnose`, a principal-component reading of the nine dimension scores:
+
+- The correlation matrix of the published dimension scores (`score`, never
+  `blendedScore`, so the panel cannot enter) over the **complete cases**:
+  countries with all nine scored. Every dropped country is named with the
+  dimensions it lacks. Pairwise correlations over different country sets were
+  rejected because the result need not be a correlation matrix of anything and
+  its eigenvalues can go negative. Nothing is imputed (the rule since D45).
+- If complete cases fall below `FACTOR_MIN_COUNTRIES` (30), the same
+  solution is also computed on the dimensions scored for at least
+  `FACTOR_NEAR_FULL_COVERAGE` (90%) of countries, and the page names them. A
+  one-line reading quotes that fallback only then.
+- Eigenvalues by cyclic Jacobi rotation in `pipeline/stats.ts`, no new
+  dependency. The **first-factor share** is the largest eigenvalue over the
+  number of dimensions. Loadings are the eigenvector times the root of its
+  eigenvalue (each dimension's correlation with the factor), signed so they
+  sum positive.
+- The first factor's country scores (standardised scores times the unit
+  eigenvector) correlated with log GDP per capita, with its n, and r squared
+  as the share of the factor income accounts for.
+- A **chance level**: the first-factor share of `n` by `p` independent
+  standard normal draws, 2000 samples, seed 20261001, mean and 95th
+  percentile. At n 51 and nine dimensions chance alone gives about 0.19, so
+  a share is never read against 1/9.
+- Reading: at an absolute r of 0.8 or more with income, every surface says
+  the shared factor looks like income; from 0.5 it says income accounts for
+  part of it; below, that it is mostly something else
+  (`FACTOR_INCOME_BANDS`). The sentences are templates over the numbers in
+  `apps/web/src/lib/factor.ts` and `report.ts`, never fixed prose.
+
+The release history is `data/out/factor-history.json`, written by `bench
+diagnose` from git: for every `Dataset X.Y.Z` changelog release, the last
+commit whose `data/out/index.json` carried that version, run through the same
+function. Income comes from that commit's diagnostics (D130 on) or, before
+that, from the GDP context series in its `worldbank.json`. Past output is
+read as published rather than rescored, because the question is what each
+release said. The current release comes from the run itself. Without git the
+committed file is kept. It sits in `data/out`, not `data/research`, because
+the viewer reads it and `data/research` holds the evidence corpus.
+
+On dataset 7.6.0: 51 complete cases (Cuba, Haiti dropped), share 0.529
+against chance 0.189 (95th 0.215); the factor correlates 0.86 with log GDP
+per capita (n 50), r squared 0.74. The shared factor looks like income, and
+the page says so. History: 0.604 at 6.2.0 and 0.498 at 7.0.0, both on 33
+complete cases, when the stock rows left the scores (D122). The hand figure
+quoted before (0.62 to 0.50) was on eight dimensions with Trust left out and
+46 countries; this rule replaces it.
+
+**Why.** It is the test the project names as the one that would show it is
+wrong, and a test computed once by hand cannot fail in public.
+
+**Cost.** A principal-component share is one summary of a 9 by 9 matrix: it
+says how much moves together, not what the remaining variation is worth. At
+51 countries a share or an r moves by several hundredths on a handful of
+countries (A8). The chance level assumes Gaussian independent dimensions;
+bounded 0 to 100 scores are not Gaussian, and the baseline is a reference,
+not a significance test. Complete cases drop the least-measured countries,
+which are not a random sample. The 0.8 and 0.5 reading bands are judgment.
+
+**Overturned by.** A country set wide enough that the factor's r with income
+can be estimated within a few hundredths, which would replace the bands with
+a confidence interval; a parallel-analysis or permutation baseline built on
+the actual score distributions, if it moves the chance level by more than
+0.02; or an imputation rule adopted elsewhere in the model, which would make
+complete cases the odd one out.

@@ -477,6 +477,14 @@ port 3888. That entry starts Next directly and does not use the proxy.
   `readWealthTracking` in `apps/web/src/lib/wealth.ts` is the only place the GDP
   correlation column is summarised, and all three read it. Never type a
   correlation, a count or a dimension name into that copy by hand. See D75.
+  The one-factor test is read the same way: `readFactorTest` in
+  `apps/web/src/lib/factor.ts` turns `diagnostics.factorStructure` into the
+  sentences the thesis, the diagnostics and the front page print, and the
+  reading of the factor's correlation with income moves with
+  `FACTOR_INCOME_BANDS`, never with fixed prose. `bench diagnose` also writes
+  `data/out/factor-history.json` from git, one row per committed dataset
+  release; past rows come from the committed output and are never rescored.
+  See D137.
 - The World Bank fetch is described once, in
   `packages/core/src/model/sources.ts`: the API base, the database ids, the
   first year, the route labels and the request builder. `pipeline/ingest.ts`

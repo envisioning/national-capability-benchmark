@@ -228,8 +228,12 @@ Every correlation in `diagnostics.json` is computed on the 53 countries loaded.
 Fifty-three points is enough to reverse a finding and not enough to establish one.
 Two dimension pairs sat at 0.94 on the 16-country run and read as
 near-duplicates. At 53 no dimension pair passes the redundancy threshold at all,
-and on dataset 7.0.0 the highest is Anticipation with Coordination at 0.75. The
-nine dimensions separate when the sample is wide enough to separate them.
+and on dataset 7.6.0 the highest is Anticipation with Learning at 0.79 (n 52).
+Pairs separating is not the same as the nine being separate: on dataset 7.6.0
+one shared factor carries 0.53 of the variance over the 51 countries with all
+nine scored, well above the 0.19 chance gives at that size, and that factor
+correlates 0.86 with log GDP per capita (n 50). The one-factor test (D137) is
+the stronger reading, and it too is a hint at 51 countries.
 
 The redundancy and wealth-proxy findings are strong enough to act on because
 they also have a mechanical explanation, not because the coefficient is large.

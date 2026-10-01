@@ -623,6 +623,105 @@ export const ResidualFile = z.object({
 })
 export type ResidualFile = z.infer<typeof ResidualFile>
 
+/**
+ * The chance level a first-factor share is read against: the same statistic
+ * on independent standard normal columns at the same number of countries and
+ * dimensions, drawn with a fixed seed so the figure repeats. See D137.
+ */
+export const FactorChance = z.object({
+  draws: z.number().int(),
+  seed: z.number().int(),
+  /** Mean first-factor share across the draws. */
+  mean: z.number(),
+  /** 95th percentile of the same. A share at or under it is indistinguishable from noise. */
+  p95: z.number(),
+})
+export type FactorChance = z.infer<typeof FactorChance>
+
+/**
+ * One principal-component reading of the dimension scores: the correlation
+ * matrix over the countries that have every listed dimension scored, its
+ * eigenvalues, and how much of the first component income accounts for.
+ */
+export const FactorSolution = z.object({
+  /** The dimensions this solution reads, in registry order. */
+  dimensions: z.array(DimensionEnum),
+  /** Countries with every listed dimension scored. The correlations use these and no others. */
+  countries: z.number().int(),
+  /** Countries left out, each with the listed dimensions it publishes no score for. */
+  dropped: z.array(
+    z.object({ iso3: z.string().length(3), missing: z.array(DimensionEnum) }),
+  ),
+  /** Every eigenvalue of the correlation matrix, largest first. They sum to the dimension count. */
+  eigenvalues: z.array(z.number()),
+  /** Largest eigenvalue over the dimension count: the share of the total variance one factor carries. */
+  firstFactorShare: z.number(),
+  /**
+   * Each dimension's correlation with the first factor (eigenvector times the
+   * square root of its eigenvalue). The sign is set so the loadings sum to a
+   * positive number.
+   */
+  loadings: z.array(z.object({ dimension: DimensionEnum, loading: z.number() })),
+  /**
+   * The first factor's country scores against log GDP per capita, over the
+   * countries above that also have an income figure. `rSquared` is the share
+   * of the factor income accounts for. Null where too few countries remain.
+   */
+  income: z
+    .object({ r: z.number(), rSquared: z.number(), n: z.number().int() })
+    .nullable(),
+  chance: FactorChance,
+})
+export type FactorSolution = z.infer<typeof FactorSolution>
+
+/**
+ * The benchmark's central falsification test, computed every release. If the
+ * nine dimensions are one factor that tracks income per head, the claim that
+ * capability can be read apart from wealth fails. See D137.
+ */
+export const FactorStructure = z.object({
+  /** Below this many complete cases the near-full solution is computed as well. */
+  minCountries: z.number().int(),
+  /** Share of countries a dimension has to score to count as near-full coverage. */
+  nearFullCoverage: z.number(),
+  /** All nine dimensions, complete cases only. Null when fewer than three countries remain. */
+  complete: FactorSolution.nullable(),
+  /**
+   * The dimensions scored for at least `nearFullCoverage` of countries, on
+   * their own complete cases. Present only when `complete` falls under
+   * `minCountries`, and then the page says which dimensions it reads.
+   */
+  nearFull: FactorSolution.nullable(),
+})
+export type FactorStructure = z.infer<typeof FactorStructure>
+
+/**
+ * The same test at every dataset release whose output was committed, read
+ * from git by `bench diagnose`. Past releases are restated only if their
+ * committed output changes, which it does not. See D137.
+ */
+export const FactorHistoryRelease = z.object({
+  version: z.string(),
+  /** Short commit hash the release's data/out/index.json was read from. Null for the working tree. */
+  commit: z.string().nullable(),
+  date: z.string(),
+  /** Which solution the row reports: all nine on complete cases, or the near-full fallback. */
+  basis: z.enum(['complete', 'nearFull']),
+  dimensions: z.array(DimensionEnum),
+  countries: z.number().int(),
+  firstFactorShare: z.number(),
+  chance: FactorChance,
+  /** Null where that release's diagnostics carried no income column. */
+  income: z.object({ r: z.number(), rSquared: z.number(), n: z.number().int() }).nullable(),
+})
+export type FactorHistoryRelease = z.infer<typeof FactorHistoryRelease>
+
+export const FactorHistoryFile = z.object({
+  generatedAt: z.string(),
+  releases: z.array(FactorHistoryRelease),
+})
+export type FactorHistoryFile = z.infer<typeof FactorHistoryFile>
+
 /** One check's latest observed value for one country. Never scored. See D60. */
 export const CheckResult = z.object({
   checkId: z.string(),

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T14:11:58.441Z",
+  "generatedAt": "2026-10-01T15:43:15.137Z",
   "gdpSeries": "NY.GDP.PCAP.PP.KD",
   "income": [
     {
@@ -533,6 +533,104 @@
     }
   ],
   "duplicateDimensionCandidates": [],
+  "factorStructure": {
+    "minCountries": 30,
+    "nearFullCoverage": 0.9,
+    "complete": {
+      "dimensions": [
+        "anticipation",
+        "agency",
+        "coordination",
+        "trust",
+        "learning",
+        "experimentation",
+        "adaptability",
+        "building",
+        "shared_purpose"
+      ],
+      "countries": 51,
+      "dropped": [
+        {
+          "iso3": "CUB",
+          "missing": [
+            "anticipation",
+            "agency",
+            "coordination",
+            "trust",
+            "shared_purpose"
+          ]
+        },
+        {
+          "iso3": "HTI",
+          "missing": [
+            "shared_purpose"
+          ]
+        }
+      ],
+      "eigenvalues": [
+        4.757,
+        1.208,
+        0.85,
+        0.738,
+        0.411,
+        0.392,
+        0.3,
+        0.208,
+        0.136
+      ],
+      "firstFactorShare": 0.529,
+      "loadings": [
+        {
+          "dimension": "anticipation",
+          "loading": 0.914
+        },
+        {
+          "dimension": "agency",
+          "loading": 0.635
+        },
+        {
+          "dimension": "coordination",
+          "loading": 0.758
+        },
+        {
+          "dimension": "trust",
+          "loading": 0.798
+        },
+        {
+          "dimension": "learning",
+          "loading": 0.846
+        },
+        {
+          "dimension": "experimentation",
+          "loading": 0.646
+        },
+        {
+          "dimension": "adaptability",
+          "loading": 0.745
+        },
+        {
+          "dimension": "building",
+          "loading": 0.621
+        },
+        {
+          "dimension": "shared_purpose",
+          "loading": 0.483
+        }
+      ],
+      "income": {
+        "r": 0.859,
+        "rSquared": 0.737,
+        "n": 50
+      },
+      "chance": {
+        "draws": 2000,
+        "seed": 20261001,
+        "mean": 0.189,
+        "p95": 0.215
+      }
+    },
+    "nearFull": null
+  },
   "indicatorVsGdp": [
     {
       "indicatorId": "human_capital_index",

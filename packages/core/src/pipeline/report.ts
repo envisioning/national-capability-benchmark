@@ -20,6 +20,8 @@ import {
   DISCRIMINATION_MAX_AGE,
   REDUNDANCY_THRESHOLD,
   WEALTH_CORRELATION_THRESHOLD,
+  factorIncomeBand,
+  headlineFactor,
   type Diagnostics,
 } from './diagnostics.js'
 import { cellConsensus, indicatorConsensus, missingEvidenceRanking } from '../delphi/consensus.js'
@@ -299,6 +301,43 @@ export function buildReport(
     ),
   )
   out.push('')
+
+  const factor = diag.factorStructure ? headlineFactor(diag.factorStructure) : null
+  if (factor) {
+    const f = factor.solution
+    const band = factorIncomeBand(f.income?.r ?? null)
+    out.push('## The dimensions are checked for one shared factor')
+    out.push('')
+    out.push(
+      `Over the ${f.countries} countries with ${factor.basis === 'complete' ? 'all nine dimensions' : `${f.dimensions.length} near-fully covered dimensions (${f.dimensions.map((d) => DIMENSION_LABELS[d]).join(', ')})`} scored, the first principal component of the dimension correlation matrix carries ${round(f.firstFactorShare * 100, 1)}% of the variance. The same number of independent dimensions at the same size would give ${round(f.chance.mean * 100, 1)}% on average and ${round(f.chance.p95 * 100, 1)}% at the 95th percentile (${f.chance.draws} draws, seed ${f.chance.seed}).`,
+    )
+    out.push('')
+    if (f.income) {
+      out.push(
+        `The first factor's country scores correlate ${f.income.r} with log GDP per capita (n ${f.income.n}), so income accounts for ${round(f.income.rSquared * 100, 0)}% of it. ${
+          band === 'strong'
+            ? 'The shared factor looks like income.'
+            : band === 'moderate'
+              ? 'Income accounts for part of the shared factor and leaves part of it.'
+              : 'The shared factor is mostly not income.'
+        }`,
+      )
+      out.push('')
+    }
+    out.push(
+      table(
+        ['Dimension', 'Loading on the first factor'],
+        f.loadings.map((l) => [DIMENSION_LABELS[l.dimension], l.loading]),
+      ),
+    )
+    out.push('')
+    out.push(`Eigenvalues: ${f.eigenvalues.join(', ')}.`)
+    if (f.dropped.length) {
+      out.push('')
+      out.push(`Left out for a missing dimension: ${f.dropped.map((d) => d.iso3).join(', ')}.`)
+    }
+    out.push('')
+  }
 
   out.push('## Indicators are checked for income bias')
   out.push('')

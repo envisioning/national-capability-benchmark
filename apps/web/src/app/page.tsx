@@ -51,6 +51,7 @@ import {
 } from '@/lib/links'
 import { toHistogramProfile, widestSpread } from '@/lib/profile'
 import { readWealthTracking } from '@/lib/wealth'
+import { readFactorTest } from '@/lib/factor'
 import { capitalize, countWord } from '@/lib/words'
 
 export const dynamic = 'force-dynamic'
@@ -110,6 +111,7 @@ export default async function Page() {
     .map(toHistogramProfile)
 
   const wealth = diag ? readWealthTracking(diag) : null
+  const factor = diag ? readFactorTest(diag) : null
   const lanes = diag ? buildIndicatorLanes(diag) : null
   const wiring = brazil.network
     ? buildInstitutionMatrix(brazil.network.nodes, brazil.network.edges)
@@ -215,6 +217,9 @@ export default async function Page() {
             {capitalize(countWord(wealth.separate.length))} of the nine come through the test and{' '}
             {countWord(wealth.tracking.length)} do not, which the project publishes as a known
             failure.{' '}
+            {factor?.solution.income
+              ? `Taken together, one shared factor carries ${factor.sharePct} of the variation across ${factor.solution.countries} countries and correlates ${Math.abs(factor.solution.income.r).toFixed(2)} with income. `
+              : null}
             <Link href={thesisHref} className="underline underline-offset-4">
               The thesis
             </Link>{' '}
