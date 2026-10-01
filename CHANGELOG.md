@@ -9,6 +9,14 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.16.1 — 2026-10-01
+
+- **Three evidence records, one of them a reversal.** The Gotthard Base
+  Tunnel opened on schedule at 51 percent over its 1998 cost basis. Finland
+  has shelter places for about 4.8 million people. Germany ran its public
+  shelter places down from about 1.6 million to 477,593, none of them
+  operational. The capability agenda is regenerated on the larger corpus.
+
 ## App 1.16.0 — 2026-10-01
 
 - **Checks can come from any source.** The sources page gains a database or

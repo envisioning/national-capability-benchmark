@@ -98,6 +98,7 @@ These dimensions score at least 50 with usable evidence.
 Documented deliveries linked to missing indicators. They do not affect scores or confidence.
 
 - **Dual-track vocational training** (Coordination). Switzerland runs most upper-secondary education through firms: of 218,259 students enrolled in vocational education and training in 2020, 90.6 percent, 197,782, were apprentices trained inside companies under federal law.
+- **Gotthard Base Tunnel** (Building). Switzerland built the 57 km Gotthard Base Tunnel under the voter-approved NEAT programme and opened it to commercial traffic on 11 December 2016, on the date set, at a final cost forecast of CHF 9.541 billion against a 1998 cost basis of CHF 6.323 billion, both in 1998 prices.
 
 ## Contribute
 

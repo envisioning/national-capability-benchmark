@@ -67,13 +67,47 @@ from being advocacy.
   in to cover a dimension.
 
 - **One country never dominates.** When one country holds more than a third of
-  the corpus, the next records come from elsewhere. Brazil holds 25 of the
-  current 204 records and the Netherlands 21; the rule exists because of that
-  concentration.
+  the corpus, the next records come from elsewhere. Brazil, the Netherlands and
+  Portugal held 66 of 246 records between them on 2026-10-01, while 16
+  countries held one each; the rule exists because of that concentration.
 
 - **A record is one delivery.** One programme, one record. If a programme has
   two distinct phases with separate evidence, that is still one record; put
   the second number in the claim, as `bra-pni` does.
+
+## The country grid
+
+"Exhaustive" has one meaning here: every cell of a country-by-gap grid is
+closed. The rows are the 53 registry countries. The columns are the nine gaps
+whose construct a delivery can evidence:
+
+`large_project_delivery`, `institutional_responsiveness`,
+`disaster_preparedness`, `public_private_collaboration`,
+`university_industry_collaboration`, `government_foresight_capacity`,
+`regulatory_sandbox_activity`, `adult_learning_participation`,
+`civic_participation`.
+
+The other gaps are not columns. Interpersonal trust, institutional trust,
+perceived control, national belonging, volunteering and adult digital skills
+are survey constructs, and the remainder (court clearance, citation impact,
+business R&D share, venture capital, long-horizon research share, firm
+scale-up, spinouts) wait on a dataset. Records already filed against them
+stay, and the grid does not ask for more.
+
+A cell closes in one of two ways:
+
+1. **A record** that passes the inclusion rule. One record closes the cell;
+   a second adds depth but does not reopen it.
+2. **A no-case note** naming the candidates checked and the test each failed,
+   with the date. Until a file holds these notes, they are comments on the
+   tracking issue. A no-case note is a finding: it says the country has no
+   documented national delivery in that construct that this protocol can
+   carry, which is not the same as saying it has no capability there.
+
+Work the grid column by column, thinnest column first, so the selection rule
+above still holds. A cell is never closed by a weaker record to finish a row:
+a no-case note is the honest close, and the reversal quota and the country
+ceiling still apply to every batch.
 
 ## Authoring a record
 

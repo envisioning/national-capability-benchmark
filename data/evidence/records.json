@@ -8616,6 +8616,117 @@
         ],
         "travelled": "University–industry programmes travel when the firm is a real customer and the grant funds a jointly owned deliverable; a networking event without a project contract is not collaboration capacity."
       }
+    },
+    {
+      "id": "che-gotthard",
+      "indicatorId": "large_project_delivery",
+      "iso3": "CHE",
+      "title": "Gotthard Base Tunnel",
+      "claim": "Switzerland built the 57 km Gotthard Base Tunnel under the voter-approved NEAT programme and opened it to commercial traffic on 11 December 2016, on the date set, at a final cost forecast of CHF 9.541 billion against a 1998 cost basis of CHF 6.323 billion, both in 1998 prices.",
+      "metric": {
+        "name": "Cost growth against the 1998 cost basis, Gotthard axis including connections",
+        "value": 51,
+        "unit": "% overrun, 1998 prices",
+        "asOf": "2016"
+      },
+      "secondMetric": {
+        "name": "Commercial opening against the scheduled timetable change",
+        "value": 0,
+        "unit": "months late",
+        "asOf": "2016"
+      },
+      "started": 1998,
+      "status": "concluded",
+      "source": {
+        "publisher": "Swiss Federal Assembly, NEAT supervisory delegation (NAD), report on the oversight of NEAT construction in 2016, BBl 2017 5413",
+        "url": "https://www.parlament.ch/centers/documents/de/bericht-nad-2017-04-26-d.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The 51 percent is computed from the NAD's Table 2 (6,323 to 9,541 million francs, 1998 prices) and is not a headline the publisher states. That column mixes true overrun with scope added after 1998, including extra safety works and the Sedrun geology, so a like-for-like overrun would be lower. The cost basis is in real 1998 francs; the nominal bill, about CHF 12.2 billion with inflation, VAT and interest according to the Federal Office of Transport, is larger. On schedule means against the timetable fixed late in the project, which the NAD calls on time, not against the opening years implied by the 1992 vote. The started year is the 1998 financing vote; main construction contracts followed. The source is a PDF and the figures sit in Table 2 and section 1.8.",
+      "pattern": {
+        "mechanism": "Voters approved the programme and a ring-fenced rail fund, parliament set a total credit and a standing supervisory delegation that reports every year, and a single-purpose federal subsidiary, AlpTransit Gotthard, built it under that oversight.",
+        "preconditions": [
+          "Direct democracy that ties a ring-fenced fund to one programme",
+          "A standing parliamentary delegation that publishes cost forecasts every year",
+          "Tunnelling and rail engineering capacity already in the country"
+        ],
+        "travelled": "The Brenner and Mont Cenis base tunnels copy the engineering but run across two states with EU co-financing, and both have moved their opening dates repeatedly."
+      }
+    },
+    {
+      "id": "fin-civil-defence-shelters",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "FIN",
+      "title": "Civil defence shelters",
+      "claim": "Finland requires a shelter in every building above a size threshold, nationwide since 1991, and by 2023 had about 50,500 shelters with places for about 4.8 million people, in a country of about 5.6 million.",
+      "metric": {
+        "name": "Civil defence shelter places",
+        "value": 4800000,
+        "unit": "places",
+        "asOf": "2023"
+      },
+      "secondMetric": {
+        "name": "Civil defence shelters",
+        "value": 50500,
+        "unit": "shelters",
+        "asOf": "2023"
+      },
+      "started": 1991,
+      "status": "operating",
+      "source": {
+        "publisher": "Finnish Government, Ministry of the Interior",
+        "url": "https://valtioneuvosto.fi/en/-/1410869/finland-has-civil-defence-shelters-for-about-4.8-million-people",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "Both numbers are rounded by the ministry, which says the decades-long history makes precise register data hard to compile. Places are unevenly spread: the same release puts Helsinki at 34 percent more places than residents and South Ostrobothnia at places for 48 percent of its population, so the national figure overstates rural protection. A place is a built room, not a tested capability; the ministry's later condition review found most shelters in good order but some equipment needing maintenance. Shelters protect against attack and hazardous releases and say little about recovery from floods or pandemics, which the indicator also asks about. 1991 is when the duty became nationwide; designated municipalities built shelters for decades before.",
+      "pattern": {
+        "mechanism": "The state put the cost of protection on construction itself: the Rescue Act obliges owners of large residential and workplace buildings to build a shelter, which peacetime uses as storage, car parks or sports halls on condition it can be cleared within 72 hours.",
+        "preconditions": [
+          "A threat perception shared across parties since the Second World War",
+          "A building code and permit inspection that enforce the duty before construction",
+          "Housing built mostly as concrete multi-storey blocks"
+        ],
+        "travelled": "Switzerland runs the same building duty. Germany and Sweden let theirs lapse after 1990 and are now rebuilding from a smaller stock."
+      }
+    },
+    {
+      "id": "deu-public-shelters",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "DEU",
+      "title": "Public civil defence shelters, and their dismantling",
+      "claim": "Germany held 1,967 public shelters with about 1.6 million places in 2008, decided with the states to abandon them, and decommissioned them until March 2022, leaving 579 shelters with 477,593 places, none of them functional or operational.",
+      "metric": {
+        "name": "Public shelter places still designated",
+        "value": 477593,
+        "unit": "places",
+        "asOf": "2025"
+      },
+      "secondMetric": {
+        "name": "Public shelter places at the start of the run-down",
+        "value": 1600000,
+        "unit": "places",
+        "asOf": "2008"
+      },
+      "started": 1965,
+      "status": "dismantled",
+      "source": {
+        "publisher": "German Federal Government, answer to a parliamentary question, Bundestag Drucksache 20/14631, figures from the Federal Institute for Real Estate (BImA)",
+        "url": "https://dserver.bundestag.de/btd/20/146/2014631.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The 2008 figure is rounded by the government and covers only the western states and Berlin: shelters of the former GDR never entered the federal concept, so the stock was never national. Shelter places are an old measure of protection, and the government now argues bunkers cannot meet modern warning times and plans to rely on basements, car parks and metro stations, so the loss of places overstates the loss of preparedness if that concept is delivered. It had not been when this answer was given. The started year is the 1965 Shelter Construction Act; the federal funding programme for public shelters ran from 1968 to 1996. The source is a PDF; the numbers are in the answers to questions one and seven.",
+      "pattern": {
+        "mechanism": "The federal government and the states read the end of the Cold War as the end of the threat, stopped maintenance and budgeted to decommission and release the shelters, until the interior ministry froze the process by decree three weeks after Russia invaded Ukraine.",
+        "preconditions": [
+          "A peace dividend read as permanent across parties",
+          "Shelters owned federally but sited in municipalities with other uses for the land",
+          "No statutory floor on protection places that a budget line could not override"
+        ],
+        "travelled": "Sweden and the Baltic states ran down civil defence in the same years and began rebuilding after 2014; Finland and Switzerland kept their building duty and are the comparators the German debate now cites."
+      }
     }
   ]
 }

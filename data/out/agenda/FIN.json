@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T09:09:06.197Z",
+  "generatedAt": "2026-10-01T09:18:00.283Z",
   "iso3": "FIN",
   "country": "Finland",
   "dimensions": [
@@ -1393,6 +1393,13 @@
           "country": "Turkey",
           "indicatorId": "disaster_preparedness",
           "title": "AFAD earthquake shelter and recovery operation"
+        },
+        {
+          "id": "deu-public-shelters",
+          "iso3": "DEU",
+          "country": "Germany",
+          "indicatorId": "disaster_preparedness",
+          "title": "Public civil defence shelters, and their dismantling"
         }
       ],
       "institutionIds": []
@@ -1947,6 +1954,13 @@
           "country": "Turkey",
           "indicatorId": "large_project_delivery",
           "title": "YEKA RES-1 renewable tender, and its cancellation"
+        },
+        {
+          "id": "che-gotthard",
+          "iso3": "CHE",
+          "country": "Switzerland",
+          "indicatorId": "large_project_delivery",
+          "title": "Gotthard Base Tunnel"
         }
       ],
       "institutionIds": []
@@ -2046,6 +2060,14 @@
       "title": "The public library system",
       "claim": "Finland runs the world's most used public library system under a statutory duty dating to 1928, and in 2024 Finns borrowed 85.4 million items, 15.3 per inhabitant, and visited libraries 50.7 million times.",
       "started": 1928
+    },
+    {
+      "id": "fin-civil-defence-shelters",
+      "indicatorId": "disaster_preparedness",
+      "dimension": "adaptability",
+      "title": "Civil defence shelters",
+      "claim": "Finland requires a shelter in every building above a size threshold, nationwide since 1991, and by 2023 had about 50,500 shelters with places for about 4.8 million people, in a country of about 5.6 million.",
+      "started": 1991
     }
   ],
   "gapCount": 23

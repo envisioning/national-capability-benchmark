@@ -101,6 +101,7 @@ These are documented institutional changes in Germany that the framework records
 - **Kurzarbeit in the 2008-2009 crisis** (Adaptability). Germany answered the 2008-2009 collapse in manufacturing orders by paying firms to cut hours instead of jobs, and short-time work covered 1.44 million workers at the May 2009 peak, about 5 percent of insured employment, while unemployment barely rose.
 - **THW, volunteer civil protection as a federal institution** (Shared Purpose). Germany's federal civil-protection agency trains and equips a volunteer force that reached about 88,000 people across 669 local units in May 2025, supported by about 2,200 paid staff.
 - **Federal siren warning network, and its dismantling** (Adaptability). West Germany built a federal warning service after 1955; after the Cold War the federally owned service was dissolved, its ten warning offices were abandoned and the nationwide siren alarm network was dismantled or transferred to municipalities, ending a system that had relied on about 1,700 volunteer helpers.
+- **Public civil defence shelters, and their dismantling** (Adaptability). Germany held 1,967 public shelters with about 1.6 million places in 2008, decided with the states to abandon them, and decommissioned them until March 2022, leaving 579 shelters with 477,593 places, none of them functional or operational.
 
 ## Contribute
 
