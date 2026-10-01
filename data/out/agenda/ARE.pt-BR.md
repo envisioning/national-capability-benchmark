@@ -13,7 +13,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Coordenação | 51,2 | 0,23 (muito fraca) | sem base de tendência |
 | Confiança | sem nota | 0,09 (muito fraca) | sem base de tendência |
 | Aprendizagem | 49,9 | 0,34 (fraca) | sem base de tendência |
-| Experimentação | 6,1 | 0,18 (muito fraca) | +1 em 10 anos, sobre 2 indicadores |
+| Experimentação | 5,2 | 0,24 (muito fraca) | +0,7 em 10 anos, sobre 3 indicadores |
 | Adaptação | 74,7 | 0,67 (boa) | +0,9 em 10 anos, sobre 3 indicadores |
 | Construção | 37,6 | 0,55 (utilizável) | +5 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 48,4 | 0,24 (muito fraca) | sem base de tendência |
@@ -53,13 +53,6 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 - Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
-### Experimentação: confiança 0,18, muito fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
-
 ### Coordenação: confiança 0,23, muito fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
@@ -67,6 +60,13 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
+
+### Experimentação: confiança 0,24, muito fraca
+
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
 ### Propósito compartilhado: confiança 0,24, muito fraca
 

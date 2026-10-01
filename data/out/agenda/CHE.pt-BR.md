@@ -13,7 +13,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Coordenação | 98,3 | 0,35 (fraca) | sem base de tendência |
 | Confiança | 83,2 | 0,37 (fraca) | sem base de tendência |
 | Aprendizagem | 73,9 | 0,54 (utilizável) | sem base de tendência |
-| Experimentação | 50,7 | 0,39 (fraca) | +1,8 em 10 anos, sobre 2 indicadores |
+| Experimentação | 60,6 | 0,43 (fraca) | +1,2 em 10 anos, sobre 3 indicadores |
 | Adaptação | 75,3 | 0,68 (boa) | +2,3 em 10 anos, sobre 3 indicadores |
 | Construção | 57,6 | 0,57 (utilizável) | +1,3 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 49,3 | 0,41 (fraca) | -1 em 10 anos, sobre 2 indicadores |
@@ -38,13 +38,6 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 - Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
-### Experimentação: confiança 0,39, fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- Baseada em 4 indicadores observados.
-- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
-
 ### Propósito compartilhado: confiança 0,41, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
@@ -52,6 +45,13 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e responsabilização.
+
+### Experimentação: confiança 0,43, fraca
+
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
+
+- Baseada em 5 indicadores observados.
+- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
 ## Dimensões para manter
 

@@ -13,7 +13,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Coordination | 67.8 | 0.37 (thin) | no trend |
 | Trust | 49.5 | 0.36 (thin) | no trend |
 | Learning | 41.7 | 0.52 (usable) | no trend |
-| Experimentation | 32.7 | 0.39 (thin) | +1.8 over 10 years using 2 indicators |
+| Experimentation | 26.9 | 0.43 (thin) | +0.6 over 10 years using 3 indicators |
 | Adaptability | 69.2 | 0.54 (usable) | +6.4 over 10 years using 3 indicators |
 | Building | 43 | 0.57 (usable) | +0.6 over 10 years using 3 indicators |
 | Shared Purpose | 46.9 | 0.43 (thin) | +10.7 over 10 years using 2 indicators |
@@ -61,11 +61,11 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
-### Experimentation: confidence 0.39, thin
+### Experimentation: confidence 0.43, thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
-- Uses 4 observed indicators.
+- Uses 5 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
 ### Shared Purpose: confidence 0.43, thin

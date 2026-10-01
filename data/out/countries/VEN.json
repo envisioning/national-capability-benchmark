@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-01T10:43:48.911Z",
-  "version": "7.2.0",
+  "generatedAt": "2026-10-01T13:39:16.021Z",
+  "version": "7.3.0",
   "country": {
     "country": "Venezuela",
     "iso3": "VEN",
@@ -1625,9 +1625,9 @@
         "score": 5.2,
         "observedIndicators": 2,
         "belowCoverageFloor": false,
-        "confidence": 0.099,
+        "confidence": 0.088,
         "confidenceParts": {
-          "coverage": 0.25,
+          "coverage": 0.222,
           "recency": 0.417,
           "sourceQuality": 0.95
         },
@@ -1951,6 +1951,21 @@
               }
             ],
             "status": "observed"
+          },
+          {
+            "indicatorId": "resident_industrial_designs_per_million",
+            "name": "Resident industrial design applications",
+            "measurementClass": "O",
+            "raw": null,
+            "transformed": null,
+            "normalized": null,
+            "year": null,
+            "source": "World Bank (IP.IDS.RSCT)",
+            "sourceTier": null,
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [],
+            "status": "missing"
           },
           {
             "indicatorId": "venture_capital_gdp",

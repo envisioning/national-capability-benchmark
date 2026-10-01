@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-01T10:43:48.911Z",
-  "version": "7.2.0",
+  "generatedAt": "2026-10-01T13:39:16.021Z",
+  "version": "7.3.0",
   "country": {
     "country": "Nigeria",
     "iso3": "NGA",
@@ -1511,19 +1511,19 @@
         ]
       },
       "experimentation": {
-        "score": 0.5,
-        "observedIndicators": 2,
+        "score": 0.8,
+        "observedIndicators": 3,
         "belowCoverageFloor": false,
-        "confidence": 0.148,
+        "confidence": 0.202,
         "confidenceParts": {
-          "coverage": 0.25,
-          "recency": 0.625,
+          "coverage": 0.333,
+          "recency": 0.639,
           "sourceQuality": 0.95
         },
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 0.5,
+        "blendedScore": 0.8,
         "blendedFrom": "indicators",
         "momentum": [],
         "indicators": [
@@ -1650,6 +1650,70 @@
                 "year": 2019,
                 "raw": 11341,
                 "normalized": 0.7,
+                "tier": "international_organization"
+              }
+            ],
+            "status": "observed"
+          },
+          {
+            "indicatorId": "resident_industrial_designs_per_million",
+            "name": "Resident industrial design applications",
+            "measurementClass": "O",
+            "raw": 1016,
+            "transformed": 4.277,
+            "normalized": 1.6,
+            "year": 2020,
+            "source": "World Bank (IP.IDS.RSCT)",
+            "sourceTier": "international_organization",
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [
+              {
+                "year": 2011,
+                "raw": 800,
+                "normalized": 1.7,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2012,
+                "raw": 638,
+                "normalized": 1.3,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2013,
+                "raw": 829,
+                "normalized": 1.7,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2016,
+                "raw": 640,
+                "normalized": 1.2,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2017,
+                "raw": 910,
+                "normalized": 1.7,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2018,
+                "raw": 1889,
+                "normalized": 3.5,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2019,
+                "raw": 1913,
+                "normalized": 3.4,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2020,
+                "raw": 1016,
+                "normalized": 1.8,
                 "tier": "international_organization"
               }
             ],

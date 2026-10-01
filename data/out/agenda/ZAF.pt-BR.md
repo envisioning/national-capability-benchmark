@@ -13,7 +13,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Coordenação | 71,6 | 0,39 (fraca) | sem base de tendência |
 | Confiança | 80,7 | 0,2 (muito fraca) | sem base de tendência |
 | Aprendizagem | 25,4 | 0,48 (utilizável) | sem base de tendência |
-| Experimentação | 18,9 | 0,39 (fraca) | +1,8 em 10 anos, sobre 2 indicadores |
+| Experimentação | 15,9 | 0,43 (fraca) | +0,2 em 10 anos, sobre 3 indicadores |
 | Adaptação | 34,1 | 0,67 (boa) | +0,4 em 10 anos, sobre 3 indicadores |
 | Construção | 25,5 | 0,57 (utilizável) | -1,2 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 48 | 0,29 (fraca) | +2,5 em 10 anos, sobre 2 indicadores, 1 truncados na borda da régua |
@@ -87,19 +87,19 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
-### Experimentação: confiança 0,39, fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- Baseada em 4 indicadores observados.
-- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
-
 ### Agência: confiança 0,41, fraca
 
 Quão capazes são pessoas e organizações de transformar uma intenção em ação?
 
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Habilidades digitais de adultos.
+
+### Experimentação: confiança 0,43, fraca
+
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
+
+- Baseada em 5 indicadores observados.
+- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
 ## O que a África do Sul tem para trabalhar
 

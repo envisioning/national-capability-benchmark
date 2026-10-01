@@ -13,7 +13,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Coordenação | 68,8 | 0,39 (fraca) | sem base de tendência |
 | Confiança | 69,8 | 0,24 (muito fraca) | sem base de tendência |
 | Aprendizagem | 27,4 | 0,52 (utilizável) | sem base de tendência |
-| Experimentação | 5,8 | 0,18 (muito fraca) | +1,3 em 10 anos, sobre 2 indicadores |
+| Experimentação | 4,2 | 0,24 (muito fraca) | +0,9 em 10 anos, sobre 3 indicadores |
 | Adaptação | 69,4 | 0,53 (utilizável) | +9,9 em 10 anos, sobre 3 indicadores |
 | Construção | 30,3 | 0,57 (utilizável) | -3,4 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 65 | 0,3 (fraca) | +8,7 em 10 anos, sobre 2 indicadores |
@@ -54,13 +54,6 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Experimentação: confiança 0,18, muito fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
-
 ### Confiança: confiança 0,24, muito fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
@@ -68,6 +61,13 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
+
+### Experimentação: confiança 0,24, muito fraca
+
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
 ### Propósito compartilhado: confiança 0,3, fraca
 

@@ -13,7 +13,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Coordenação | 61 | 0,41 (fraca) | sem base de tendência |
 | Confiança | 78,9 | 0,24 (muito fraca) | sem base de tendência |
 | Aprendizagem | 29,4 | 0,54 (utilizável) | sem base de tendência |
-| Experimentação | 0,4 | 0,18 (muito fraca) | +0,3 em 10 anos, sobre 2 indicadores |
+| Experimentação | 0,3 | 0,24 (muito fraca) | +0,2 em 10 anos, sobre 3 indicadores |
 | Adaptação | 50,7 | 0,67 (boa) | +10,3 em 10 anos, sobre 3 indicadores |
 | Construção | 31,3 | 0,54 (utilizável) | -3,3 em 10 anos, sobre 3 indicadores, 1 truncados na borda da régua |
 | Propósito compartilhado | 49,3 | 0,29 (fraca) | +4,6 em 10 anos, sobre 2 indicadores |
@@ -54,13 +54,6 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Experimentação: confiança 0,18, muito fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
-
 ### Confiança: confiança 0,24, muito fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
@@ -68,6 +61,13 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
+
+### Experimentação: confiança 0,24, muito fraca
+
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
 ### Propósito compartilhado: confiança 0,29, fraca
 

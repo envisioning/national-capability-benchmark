@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T10:43:57.777Z",
+  "generatedAt": "2026-10-01T13:39:18.581Z",
   "iso3": "USA",
   "country": "United States",
   "dimensions": [
@@ -725,18 +725,19 @@
     {
       "dimension": "experimentation",
       "kind": "measure",
-      "score": 55.8,
-      "confidence": 0.394,
+      "score": 49.5,
+      "confidence": 0.43,
       "band": "thin",
       "trend": {
         "spanYears": 10,
-        "delta": 3.2,
-        "basket": 2,
+        "delta": 0.8,
+        "basket": 3,
         "clamped": 0
       },
       "scoredOn": [
         "resident_patents_per_million",
         "resident_trademarks_per_million",
+        "resident_industrial_designs_per_million",
         "early_stage_entrepreneurial_activity",
         "failure_tolerance"
       ],

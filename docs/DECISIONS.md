@@ -6187,89 +6187,47 @@ reading of it.
 
 ---
 
-## D125 — GEM rows extend to every benchmark country in the 2019 to 2025 reports
+## D125 — The GEM extension is held, because it adds evidence mostly where income already is
 
 *Recorded 2026-10-01. Brief: the Experimentation section of
-`docs/research/O1-TRIAGE-SWEEP.md`. D127 and D128 are being written on another
-branch.*
+`docs/research/O1-TRIAGE-SWEEP.md`. The extraction is kept in
+`docs/research/experimentation/GEM-AND-DESIGNS.md` and `gem-extract.py`.*
 
 **Decision.** `early_stage_entrepreneurial_activity` and `failure_tolerance`
-take every benchmark country that appears in the appendix tables of the seven
-GEM Global Reports covering survey years 2019 to 2025, entered in
-`manual.json` with the report PDF as `sourceUrl` and the table, printed page
-and column in the note:
+stay on their original 16 countries. The values for every other benchmark
+country in the seven GEM Global Reports for survey years 2019 to 2025 were
+read, checked against the printed pages and recorded in the memo, and they are
+not entered in `manual.json`. Industrial designs (D126) ships without them.
 
-| Report | fileId | GEM data year | TEA table | Fear of failure table |
-| --- | --- | --- | --- | --- |
-| 2025/2026 | 51858 | 2025 | A1 | A2 |
-| 2024/2025 | 51621 | 2024 | A3 | A2 |
-| 2023/2024 | 51377 | 2023 | A2 | A3 |
-| 2022/2023 | 51147 | 2022 | A2 | A3 |
-| 2021/2022 | 50900 | 2021 | A2 | A3 |
-| 2020/2021 | 50691 | 2020 | A2 | A3 |
-| 2019/2020 | 50443 | 2019 | A1 | A2 |
+**Why.** The guardrail beside O1 says confidence must not come to track
+wealth (D117). GEM participation is chosen and paid for by national teams, and
+the 14 benchmark countries it has not surveyed since 2019 are, apart from
+Singapore, lower-income: Vietnam, the Philippines, Malaysia, Nigeria, Kenya,
+Rwanda, Ethiopia, Bolivia, Paraguay, Honduras, Nicaragua, Cuba and Haiti.
+Measured on dataset 7.2.0, where the guardrail is 0.286: the extension
+over 2022 to 2025 raises it to 0.357; widening the window to 2019 to 2025, to
+reach poorer countries surveyed earlier, raises it further to 0.387, because
+three of the five countries the wider window adds are high-income. With
+industrial designs alone it is 0.298. Experimentation's own confidence against
+log GDP would go from 0.20 to 0.57. The extension would raise
+Experimentation's mean confidence from 0.225 to 0.350, and that gain would sit
+almost entirely in countries the benchmark already knows best.
 
-Three rules.
+The construct is not the problem. TEA counts people trying and fear of
+failure is the attitude the dimension names; the rule for a future entry
+stands: survey year, not report year; the latest year in the window, never an
+average; and only the fear of failure question GEM introduced in 2019, over
+adults who see good opportunities.
 
-1. **Year.** A value carries the GEM survey year, not the report year: report
-   n/n+1 prints the Adult Population Survey run in year n (the 2025/2026 report
-   says 53 economies took part "in 2025"; the 2019/2020 tables are headed
-   "GEM 2019"; each edition's rank denominator is that year's count).
-2. **Pooling.** Each country takes its latest value among the 2019 to 2025
-   survey years. Years are never averaged, and nothing older than 2019 is
-   added. The recency term discounts the older values. The window starts in
-   2019 because that is when the fear of failure question in rule 3 began,
-   so both rows share one window. The existing 16 rows are kept; all 15 that
-   appear in these reports match the PDF to the decimal, and none had a newer
-   value.
-3. **Fear of failure.** Only the question GEM introduced in the 2019 APS is
-   used: "There are good opportunities, but I would not start a business for
-   fear it might fail", reported as a share of adults who see good
-   opportunities (2025/2026 report, printed page 37: "since the introduction
-   of this question in the 2019 GEM APS"). Every edition from 2019/2020 on
-   prints that denominator in the column header, so they pool without
-   adjustment. A value from a survey before 2019 answers a different question
-   and is not entered. Singapore's 2014 value, the only such row, is removed.
-   Its 2014 TEA stays, because the TEA definition did not change.
+**Cost.** Experimentation stays the thinnest dimension, at mean confidence
+0.27 with designs, and 37 countries stay scored on patents, trademarks and
+designs alone (A1). Values that were read and verified stay unpublished.
 
-Coverage moves from 16 to 40 countries for TEA (39 from these reports plus
-Singapore 2014) and from 16 to 39 for failure tolerance. The 2019 to 2021
-reports add five countries no later report carries: Australia and Portugal
-(2019), Ireland, Turkey and the Dominican Republic (2021); the 2020 report adds
-none. Values were read with `docs/research/experimentation/gem-extract.py`
-and each one checked by eye against the rendered page; the per-country table
-is in `docs/research/experimentation/GEM-AND-DESIGNS.md`.
-
-**Why.** Construct unchanged: TEA counts people trying, and fear of failure is
-the attitude the dimension names. GEM is the only harmonised adult survey of
-start-up activity, and the 16-country rows left 37 countries scored on patents
-and trademarks alone (A1). Entering by hand stays acceptable because GEM has no
-API and seven appendix tables are a bounded task; the script makes the reading
-reproducible without becoming an adapter.
-
-**Cost.** GEM participation is self-selected and paid for by national teams.
-The 14 benchmark countries GEM has not surveyed since 2019 are lower-income
-apart from Singapore (SGP VNM PHL MYS NGA KEN RWA ETH BOL PRY HND NIC CUB HTI),
-so the extension raises confidence more in rich countries than in poor ones.
-Reported as findings, from a local run on dataset 7.2.0, against the 7.2.0
-baseline of mean confidence 0.225, r with log GDP per capita 0.623 and
-guardrail (mean confidence across dimensions against log GDP) 0.286: with the
-GEM extension alone, Experimentation's mean confidence is 0.314, its r 0.701
-and the guardrail 0.387; with industrial designs (D126) as well, 0.350, 0.685
-and 0.385. A 2022 to 2025 window gave a guardrail of 0.357 alone and 0.360
-with designs; widening it to 2019 raised it further, because three of the
-five countries it adds are high-income. Industrial designs alone moves it
-only to 0.298. The triage memo expected the guardrail to
-improve; it worsens. Japan's fear of failure rests on the small share of
-adults who see good opportunities (12.7% in 2022). Values from up to seven
-different years sit in one column.
-
-**Overturned by.** GEM publishing the fear of failure rate over all adults
-again, or restating 2019 to 2025 on a new base, which would need a new rule;
-an open GEM data release that an adapter can read, which would replace the
-manual rows; or evidence that the year mix (2019 against 2025) moves a
-country's rank more than the cross-country spread, which would argue for a
-single common year.
+**Overturned by.** GEM surveying enough of the missing lower-income countries
+that the extension no longer raises the guardrail, or an open GEM data release
+that covers them; or a decision that a source raising confidence in richer
+countries is acceptable when its construct is sound, which would supersede
+this entry and D117's guardrail together.
 
 ---
 
@@ -6291,11 +6249,11 @@ closer to the dimension's many-small-experiments reading than patents are,
 and it is an output rather than a stock. Reported as findings, not tests: the
 probe gives r = 0.02 for the raw count against GDP; the scored row's
 normalised value correlates with log GDP per capita at r = 0.494 (trademarks
-0.578, patents 0.524), its wealth-attribution delta is -0.016 (without it
-the dimension's r would be 0.701, not 0.685), and its r with
+0.578, patents 0.524), its wealth-attribution delta is 0.007, and its r with
 `resident_trademarks_per_million` is 0.816 (n 49), under the 0.85 redundancy
-flag. With D125, Experimentation moves to r = 0.685 with log GDP and mean
-confidence 0.350; this row alone takes the dimension from 0.623 to 0.572.
+flag. On dataset 7.3.0 this row takes Experimentation from r = 0.623 to 0.572
+with log GDP and its mean confidence from 0.225 to 0.271; the guardrail moves
+from 0.286 to 0.298. The GEM extension it was built beside is held (D125).
 
 **Cost.** Three traps, all in the registry note. China subsidised design
 filings as it did patents, so its count runs ahead of the attempts behind it;

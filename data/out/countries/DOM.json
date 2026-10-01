@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-01T10:43:48.911Z",
-  "version": "7.2.0",
+  "generatedAt": "2026-10-01T13:39:16.021Z",
+  "version": "7.3.0",
   "country": {
     "country": "Dominican Republic",
     "iso3": "DOM",
@@ -1743,77 +1743,78 @@
         ]
       },
       "experimentation": {
-        "score": 6.5,
-        "observedIndicators": 2,
+        "score": 4.4,
+        "observedIndicators": 3,
         "belowCoverageFloor": false,
-        "confidence": 0.178,
+        "confidence": 0.237,
         "confidenceParts": {
-          "coverage": 0.25,
+          "coverage": 0.333,
           "recency": 0.75,
           "sourceQuality": 0.95
         },
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 6.5,
+        "blendedScore": 4.4,
         "blendedFrom": "indicators",
         "momentum": [
           {
             "baseYear": 2016,
             "currentYear": 2026,
-            "baseScore": 5.6,
-            "currentScore": 6.5,
-            "delta": 0.9,
-            "matchedIndicators": 2,
+            "baseScore": 4.3,
+            "currentScore": 4.4,
+            "delta": 0.1,
+            "matchedIndicators": 3,
             "basket": [
               "resident_patents_per_million",
-              "resident_trademarks_per_million"
+              "resident_trademarks_per_million",
+              "resident_industrial_designs_per_million"
             ],
             "clamped": 0,
             "series": [
               {
                 "year": 2016,
-                "score": 5.6
+                "score": 4.3
               },
               {
                 "year": 2017,
-                "score": 5.9
+                "score": 4.4
               },
               {
                 "year": 2018,
-                "score": 6.1
+                "score": 4.1
               },
               {
                 "year": 2019,
-                "score": 5.7
+                "score": 3.8
               },
               {
                 "year": 2020,
-                "score": 5.6
+                "score": 3.8
               },
               {
                 "year": 2021,
-                "score": 6.7
+                "score": 4.5
               },
               {
                 "year": 2022,
-                "score": 6.7
+                "score": 4.5
               },
               {
                 "year": 2023,
-                "score": 6.6
+                "score": 4.4
               },
               {
                 "year": 2024,
-                "score": 6.6
+                "score": 4.4
               },
               {
                 "year": 2025,
-                "score": 6.5
+                "score": 4.4
               },
               {
                 "year": 2026,
-                "score": 6.5
+                "score": 4.4
               }
             ]
           },
@@ -2197,6 +2198,82 @@
                 "year": 2021,
                 "raw": 9806,
                 "normalized": 13.3,
+                "tier": "international_organization"
+              }
+            ],
+            "status": "observed"
+          },
+          {
+            "indicatorId": "resident_industrial_designs_per_million",
+            "name": "Resident industrial design applications",
+            "measurementClass": "O",
+            "raw": 4,
+            "transformed": 0.347,
+            "normalized": 0.1,
+            "year": 2021,
+            "source": "World Bank (IP.IDS.RSCT)",
+            "sourceTier": "international_organization",
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [
+              {
+                "year": 2012,
+                "raw": 32,
+                "normalized": 1.2,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2013,
+                "raw": 7,
+                "normalized": 0.2,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2014,
+                "raw": 28,
+                "normalized": 1,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2015,
+                "raw": 48,
+                "normalized": 1.7,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2016,
+                "raw": 50,
+                "normalized": 1.8,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2017,
+                "raw": 35,
+                "normalized": 1.2,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2018,
+                "raw": 5,
+                "normalized": 0.1,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2019,
+                "raw": 5,
+                "normalized": 0.1,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2020,
+                "raw": 4,
+                "normalized": 0.1,
+                "tier": "international_organization"
+              },
+              {
+                "year": 2021,
+                "raw": 4,
+                "normalized": 0.1,
                 "tier": "international_organization"
               }
             ],

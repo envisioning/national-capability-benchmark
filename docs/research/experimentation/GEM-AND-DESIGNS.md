@@ -6,8 +6,12 @@ the first run raised the guardrail
 
 Track: source-backed measurement
 
-Status: GEM rows extended (D125), industrial designs wired (D126). Retrieved
-2026-10-01, local run on dataset 7.2.0. No version bump in this change.
+Status: industrial designs wired (D126), shipped in dataset 7.3.0. The GEM
+extension below was extracted and verified and is **held, not entered**
+(D125): it raised the guardrail from 0.286 to 0.385 because the countries GEM
+skips are mostly lower-income. The tables below record what the extension
+would have done; the values stay here so it can be reopened. Retrieved
+2026-10-01.
 
 ## What moved
 

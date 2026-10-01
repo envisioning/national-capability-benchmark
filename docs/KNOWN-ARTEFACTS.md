@@ -18,15 +18,15 @@ measured on is not the scale in use.
 
 **Severity: medium.**
 
-Five of nine indicators are observed. GEM early-stage entrepreneurial activity
-and fear of failure carry two of them, so it no longer rests on patents alone.
+Four of nine indicators are observed for most countries: resident patents,
+trademarks and industrial designs per head (D126), and, for the 16 countries
+GEM covered first, early-stage entrepreneurial activity and fear of failure.
 Venture capital, regulatory sandboxes, university spinouts and business R&D
-share are still gaps. Mean confidence is 0.350. GEM covers 40 of the 53
-countries for TEA and 39 for fear of failure (D125); the 13 or 14 it misses are
-scored on patents, trademarks and industrial designs (D126), and they are
-mostly lower-income, so the dimension's confidence tracks income (r 0.56 with
-log GDP per capita). Ireland has two observed rows and publishes a score.
-See D21.
+share are still gaps. Mean confidence is 0.271 on dataset 7.3.0, the lowest of
+the nine dimensions. 37 countries are scored on patents, trademarks and
+designs alone. GEM's later reports reach 40 of the 53, but the extension is
+held because the 14 countries GEM skips are mostly lower-income and the gain
+would sit where income already is (D125). See D21.
 
 Resident patents and resident trademarks per head measure formalised, completed,
 defensible invention, which is close to the opposite of the many-cheap-
@@ -55,8 +55,8 @@ region.
 aggregate, the OECD SME and Entrepreneurship Financing scoreboard, covers 6 of
 the 16 original countries and omits Brazil, India, South Africa and Singapore.
 Business R&D share is the next best candidate, from UNESCO or OECD research and
-development statistics. GEM has not surveyed the other 14 countries since at
-least 2019, so its coverage cannot grow from the published reports.
+development statistics. GEM has not surveyed 14 of the countries since at
+least 2019, so its coverage cannot grow evenly from the published reports.
 
 ---
 

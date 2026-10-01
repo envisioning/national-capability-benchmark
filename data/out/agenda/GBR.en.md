@@ -13,7 +13,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Coordination | 88.2 | 0.23 (very thin) | no trend |
 | Trust | 86.2 | 0.25 (thin) | no trend |
 | Learning | 72.3 | 0.54 (usable) | no trend |
-| Experimentation | 43.3 | 0.18 (very thin) | +6.2 over 10 years using 2 indicators |
+| Experimentation | 62.2 | 0.24 (very thin) | +20.5 over 10 years using 3 indicators |
 | Adaptability | 76.1 | 0.68 (good) | -1.9 over 10 years using 3 indicators |
 | Building | 48.1 | 0.57 (usable) | +0.1 over 10 years using 3 indicators |
 | Shared Purpose | 87.4 | 0.28 (thin) | +4.2 over 10 years using 2 indicators |
@@ -36,13 +36,6 @@ How capable is the country of turning plans and knowledge into functioning syste
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Experimentation: confidence 0.18, very thin
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 2 observed indicators.
-- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
-
 ### Coordination: confidence 0.23, very thin
 
 How effectively can independent actors organize around shared objectives?
@@ -50,6 +43,13 @@ How effectively can independent actors organize around shared objectives?
 - Uses 2 observed indicators.
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
+
+### Experimentation: confidence 0.24, very thin
+
+How easily can new approaches be attempted, tested, abandoned, and improved?
+
+- Uses 3 observed indicators.
+- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
 ### Trust: confidence 0.25, thin
 

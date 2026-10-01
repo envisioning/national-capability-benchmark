@@ -13,7 +13,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Coordenação | sem nota | 0,1 (muito fraca) | sem base de tendência |
 | Confiança | sem nota | 0 (muito fraca) | sem base de tendência |
 | Aprendizagem | 21,5 | 0,24 (muito fraca) | sem base de tendência |
-| Experimentação | 1,4 | 0,18 (muito fraca) | -0,4 em 10 anos, sobre 2 indicadores |
+| Experimentação | 1,1 | 0,24 (muito fraca) | -0,1 em 10 anos, sobre 3 indicadores |
 | Adaptação | 63,7 | 0,55 (utilizável) | -5,5 em 10 anos, sobre 3 indicadores |
 | Construção | 21,8 | 0,29 (fraca) | -27,1 em 10 anos, sobre 2 indicadores |
 | Propósito compartilhado | sem nota | 0 (muito fraca) | sem base de tendência |
@@ -53,19 +53,19 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
-### Experimentação: confiança 0,18, muito fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
-
 ### Antecipação: confiança 0,22, muito fraca
 
 Quão capaz é o país de identificar mudanças emergentes e se preparar para elas?
 
 - Baseada em um indicador observado.
 - Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
+
+### Experimentação: confiança 0,24, muito fraca
+
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
 ### Aprendizagem: confiança 0,24, muito fraca
 

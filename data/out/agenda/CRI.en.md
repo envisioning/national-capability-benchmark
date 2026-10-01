@@ -13,7 +13,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Coordination | 88.4 | 0.37 (thin) | no trend |
 | Trust | 64.7 | 0.24 (very thin) | no trend |
 | Learning | 40.3 | 0.54 (usable) | no trend |
-| Experimentation | 25.5 | 0.39 (thin) | +2.6 over 10 years using 2 indicators |
+| Experimentation | 20.5 | 0.43 (thin) | +1.6 over 10 years using 3 indicators |
 | Adaptability | 66.3 | 0.68 (good) | +3.1 over 10 years using 3 indicators |
 | Building | 41.8 | 0.57 (usable) | +4.5 over 10 years using 3 indicators |
 | Shared Purpose | 39.5 | 0.32 (thin) | +5.4 over 10 years using 2 indicators |
@@ -69,19 +69,19 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
-### Experimentation: confidence 0.39, thin
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 4 observed indicators.
-- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
-
 ### Agency: confidence 0.41, thin
 
 How able are individuals and organizations to turn an intention into action?
 
 - Uses 3 observed indicators.
 - Missing indicators: Adult digital skills.
+
+### Experimentation: confidence 0.43, thin
+
+How easily can new approaches be attempted, tested, abandoned, and improved?
+
+- Uses 5 observed indicators.
+- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
 ## What to keep watching
 

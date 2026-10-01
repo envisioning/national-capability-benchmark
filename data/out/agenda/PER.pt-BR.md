@@ -13,7 +13,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Coordenação | 69,3 | 0,39 (fraca) | sem base de tendência |
 | Confiança | 50,9 | 0,36 (fraca) | sem base de tendência |
 | Aprendizagem | 37,7 | 0,54 (utilizável) | sem base de tendência |
-| Experimentação | 20,2 | 0,39 (fraca) | +1,8 em 10 anos, sobre 2 indicadores |
+| Experimentação | 16,4 | 0,43 (fraca) | +1,2 em 10 anos, sobre 3 indicadores |
 | Adaptação | 69,6 | 0,53 (utilizável) | -5,8 em 10 anos, sobre 3 indicadores |
 | Construção | 30,2 | 0,57 (utilizável) | -0,9 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 39,8 | 0,4 (fraca) | +10,1 em 10 anos, sobre 2 indicadores |
@@ -70,13 +70,6 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
-### Experimentação: confiança 0,39, fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- Baseada em 4 indicadores observados.
-- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
-
 ### Propósito compartilhado: confiança 0,4, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
@@ -84,6 +77,13 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e responsabilização.
+
+### Experimentação: confiança 0,43, fraca
+
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
+
+- Baseada em 5 indicadores observados.
+- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
 ## Dimensões para manter
 
