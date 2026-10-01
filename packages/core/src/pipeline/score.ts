@@ -8,6 +8,8 @@ import {
   INDICATORS,
   SOURCE_TIERS,
   checksFor,
+  conditionsFor,
+  CONDITIONS,
   countedForCoverage,
   isDelphiRunForDataset,
   isEvidential,
@@ -17,6 +19,7 @@ import {
 } from '../model/index.js'
 import type {
   CheckResult,
+  ConditionResult,
   CountryResult,
   DelphiCellEstimate,
   DelphiRunFile,
@@ -316,6 +319,77 @@ function checkRows(
   })
 }
 
+type ConditionValue = {
+  value: number
+  /** The value after the registry transform, which the rank reads. */
+  transformed: number
+  year: number
+  sourceTier: SourceTier
+  rank: number
+}
+type ConditionColumn = { n: number; byCountry: Map<string, ConditionValue> }
+
+/**
+ * The latest value of every condition per country, and its rank among the
+ * countries that have one.
+ *
+ * A condition is an ordinary row in the observation file under its own id and
+ * never reaches `buildFrame` or `buildMatrix`, because `isScored` is false for
+ * it. The value is published as the publisher wrote it. Its place among the
+ * countries is a rank, 1 the best in the row's direction, read on the value
+ * after the registry transform so a per-head row ranks per head. Ties share
+ * the better rank. No value is put on the 0 to 100 scale. See D122.
+ */
+export function conditionValues(observations: Observation[]): Map<string, ConditionColumn> {
+  const byKey = latest(observations)
+  const out = new Map<string, ConditionColumn>()
+  for (const def of CONDITIONS) {
+    const rows = transformedRows(def, byKey)
+    const sign = def.direction === 'lower_better' ? -1 : 1
+    const ordered = [...rows].sort((a, b) => sign * (b.transformed - a.transformed))
+    const byCountry = new Map<string, ConditionValue>()
+    ordered.forEach((r, i) => {
+      const prev = i > 0 ? ordered[i - 1] : undefined
+      const prevRank = prev ? byCountry.get(prev.iso3)?.rank : undefined
+      const rank = prev && prev.transformed === r.transformed && prevRank ? prevRank : i + 1
+      byCountry.set(r.iso3, {
+        value: r.obs.value,
+        transformed: r.transformed,
+        year: r.obs.year,
+        sourceTier: r.obs.sourceTier,
+        rank,
+      })
+    })
+    out.set(def.id, { n: ordered.length, byCountry })
+  }
+  return out
+}
+
+function conditionRows(
+  values: Map<string, ConditionColumn>,
+  dimension: Dimension,
+  iso3: string,
+): ConditionResult[] {
+  return conditionsFor(dimension).map((def) => {
+    const column = values.get(def.id)
+    const v = column?.byCountry.get(iso3)
+    return {
+      indicatorId: def.id,
+      name: def.name,
+      definition: def.definition,
+      unit: def.unit,
+      direction: def.direction,
+      value: v ? round(v.value, 3) : null,
+      year: v ? v.year : null,
+      source: def.source.publisher + (def.source.series ? ` (${def.source.series})` : ''),
+      sourceTier: v ? v.sourceTier : null,
+      rank: v ? v.rank : null,
+      n: column?.n ?? 0,
+      note: def.notes,
+    }
+  })
+}
+
 export type ScoreOutput = {
   countries: CountryResult[]
   matrix: Matrix
@@ -339,6 +413,7 @@ export function scoreAll(observations: Observation[], opts: ScoreOptions): Score
   const frames = spans.length > 0 ? allFrames : null
   const history = spans.length > 0 ? buildHistory(observations) : null
   const checks = checkValues(observations)
+  const conditions = conditionValues(observations)
 
   const countries: CountryResult[] = COUNTRIES.map((country) => {
     const dimensions = {} as Record<Dimension, DimensionResult>
@@ -400,6 +475,7 @@ export function scoreAll(observations: Observation[], opts: ScoreOptions): Score
           ),
         ),
         checks: checkRows(checks, dimension, country.iso3),
+        conditions: conditionRows(conditions, dimension, country.iso3),
       }
     }
 

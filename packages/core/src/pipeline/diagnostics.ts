@@ -1,5 +1,6 @@
 import {
   CHECKS,
+  CONDITIONS,
   COUNTRY_ISO3,
   COUNTRY_NAMES,
   DIMENSIONS,
@@ -8,6 +9,7 @@ import {
   indicatorsFor,
   isEvidential,
   isPanel,
+  isCondition,
   isDeclaredGap,
   isScored,
 } from '../model/index.js'
@@ -20,7 +22,13 @@ import type {
   Provenance,
 } from '../model/index.js'
 import { iqr, mean, pearson, round, spearman } from './stats.js'
-import { buildFrames, scoreAll, type Matrix, type ScoreOptions } from './score.js'
+import {
+  buildFrames,
+  conditionValues,
+  scoreAll,
+  type Matrix,
+  type ScoreOptions,
+} from './score.js'
 import { buildHistory, normalizedAt } from './trend.js'
 import type { Frame } from './normalize.js'
 
@@ -283,6 +291,32 @@ export type Diagnostics = {
     /** Pearson r of the published value against log GDP per capita. */
     r: number | null
     /** The same against the dimension's own score. Null where it publishes none. */
+    dimensionR: number | null
+    dimensionN: number
+  }>
+  /**
+   * Every condition against income and against the capability it sits beside.
+   *
+   * A condition records what a country has to work with and is never scored.
+   * `r` asks whether having it goes with being rich. `dimensionR` asks whether
+   * having it goes with doing the capability its dimension names, which is the
+   * question the conditions layer exists to put: a condition that tracks income
+   * and not the capability is money the capability does not turn into action.
+   * Both are Pearson r on the value after the registry transform (so secure
+   * servers are read logged), signed so that positive means more of the
+   * condition in its own direction. See D122.
+   */
+  conditions: Array<{
+    indicatorId: string
+    dimension: Dimension
+    name: string
+    measurementClass: MeasurementClass
+    countries: number
+    latestYear: number | null
+    /** Pearson r against log GDP per capita. */
+    r: number | null
+    n: number
+    /** The same against the dimension's own published score. */
     dimensionR: number | null
     dimensionN: number
   }>
@@ -676,6 +710,34 @@ export function runDiagnostics(
     }
   })
 
+  const conditionColumns = conditionValues(observations)
+  const conditions = CONDITIONS.map((def) => {
+    const column = conditionColumns.get(def.id)
+    const sign = def.direction === 'lower_better' ? -1 : 1
+    const values = new Map<string, number>()
+    const years: number[] = []
+    for (const [iso3, v] of column?.byCountry ?? []) {
+      values.set(iso3, sign * v.transformed)
+      years.push(v.year)
+    }
+    const g = alignedPair(values, gdp)
+    const r = pearson(g.xs, g.ys)
+    const d = alignedPair(values, dimensionSeries(countries, def.dimension))
+    const dimensionR = pearson(d.xs, d.ys)
+    return {
+      indicatorId: def.id,
+      dimension: def.dimension,
+      name: def.name,
+      measurementClass: def.measurementClass,
+      countries: values.size,
+      latestYear: years.length ? Math.max(...years) : null,
+      r: r === null ? null : round(r, 3),
+      n: g.xs.length,
+      dimensionR: dimensionR === null ? null : round(dimensionR, 3),
+      dimensionN: d.xs.length,
+    }
+  })
+
   const excluded = indicatorVsGdp.filter((i) => i.flaggedAsWealthProxy).map((i) => i.indicatorId)
   /* The strip test compares levels, so skip the trend work it does not read. */
   const stripped = scoreAll(observations, {
@@ -720,7 +782,9 @@ export function runDiagnostics(
     return { dimension, changedPositions: changed }
   })
 
-  const dataGaps = INDICATORS.filter((d) => !isScored(d)).map((d) => ({
+  /* A condition is not a gap or a rejection: it has data and is published in
+   * `conditions`. See D122. */
+  const dataGaps = INDICATORS.filter((d) => !isScored(d) && !isCondition(d)).map((d) => ({
     dimension: d.dimension,
     indicatorId: d.id,
     name: d.name,
@@ -766,6 +830,7 @@ export function runDiagnostics(
     measurability,
     familyBalance,
     behaviouralChecks,
+    conditions,
     discriminationTrend: discriminationTrendFor(observations, opts),
     gdpStrippedTest: {
       excluded,

@@ -5,18 +5,20 @@
  *
  * Covered: the frame over every country (D47), history clamping (D22), missing
  * values dropped and never imputed, the coverage floor (D45), retired rows out
- * of the coverage denominator (D100), and the Delphi fallback (D63).
+ * of the coverage denominator (D100), conditions published beside a dimension
+ * and never scored (D122), and the Delphi fallback (D63).
  */
 import assert from 'node:assert/strict'
 import test from 'node:test'
 import {
   COUNTRY_ISO3,
   DelphiRunFile,
+  conditionsFor,
   countedForCoverage,
   indicatorsFor,
   isScored,
 } from '../model/index.js'
-import type { Dimension, DimensionResult, IndicatorDef, Observation } from '../model/index.js'
+import type { ConditionResult, Dimension, DimensionResult, IndicatorDef, Observation } from '../model/index.js'
 import { MIN_INDICATORS_FOR_SCORE, buildFrames, recencyWeight, scoreAll } from './score.js'
 import { buildHistory, normalizedAt } from './trend.js'
 import { mean, round } from './stats.js'
@@ -266,6 +268,42 @@ test('retired rows leave the coverage denominator and gaps stay in it (D100)', (
   }
   for (const g of gaps) {
     assert.equal(res.indicators.find((x) => x.indicatorId === g.id)?.status, 'gap')
+  }
+})
+
+test('a condition is published with a rank and never scored (D122)', () => {
+  const conditions = conditionsFor(LEARNING)
+  assert.ok(conditions.length > 0, 'fixture needs a learning condition')
+  for (const c of conditions) {
+    assert.equal(isScored(c), false)
+    assert.ok(!learningDefs.includes(c), `${c.id} is not one of the dimension's rows`)
+  }
+  const condition = conditions[0] as IndicatorDef
+  assert.equal(condition.direction, 'higher_better')
+
+  const base = learningObservations()
+  const withCondition = [...base]
+  // Country i holds value i, so the last country ranks first.
+  for (let i = 0; i < N; i++) withCondition.push(obs(condition.id, iso(i), i + 1))
+  const without = scoreAll(base, baseOpts)
+  const withIt = scoreAll(withCondition, baseOpts)
+
+  assert.equal(withIt.matrix.has(condition.id), false)
+  for (let i = 0; i < N; i++) {
+    const a: DimensionResult | undefined = without.countries[i]?.dimensions[LEARNING]
+    const b: DimensionResult | undefined = withIt.countries[i]?.dimensions[LEARNING]
+    assert.ok(a && b)
+    // Nothing the dimension publishes as a number moves.
+    assert.equal(b.score, a.score)
+    assert.equal(b.confidence, a.confidence)
+    assert.deepEqual(b.confidenceParts, a.confidenceParts)
+    assert.equal(b.observedIndicators, a.observedIndicators)
+    assert.ok(!b.indicators.some((row) => row.indicatorId === condition.id))
+    const row: ConditionResult | undefined = b.conditions.find((c) => c.indicatorId === condition.id)
+    assert.ok(row)
+    assert.equal(row.value, i + 1)
+    assert.equal(row.rank, N - i)
+    assert.equal(row.n, N)
   }
 })
 

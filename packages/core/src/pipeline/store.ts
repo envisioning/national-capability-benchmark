@@ -193,8 +193,43 @@ export function acrossCountries(countries: CountryResult[]): IndicatorAcrossCoun
     }
   }
 
-  return [...byIndicator.entries()].map(([indicatorId, values]) => ({
+  const scored: IndicatorAcrossCountries[] = [...byIndicator.entries()].map(
+    ([indicatorId, values]) => ({
+      indicatorId,
+      role: 'capability' as const,
+      values: values.sort((a, b) => (b.normalized ?? 0) - (a.normalized ?? 0)),
+    }),
+  )
+
+  /* A condition has no normalised value, so its file is ordered by the rank
+   * the scorer already published: best first in the row's direction, read on
+   * the same transform. The file keeps the same path as a scored row so a
+   * link to it keeps working, and `role` says what it is. See D122. */
+  const conditions = new Map<string, Array<IndicatorAcrossCountries['values'][number] & { rank: number }>>()
+  for (const country of countries) {
+    for (const dimension of Object.values(country.dimensions)) {
+      for (const row of dimension.conditions ?? []) {
+        if (row.value === null || row.year === null || row.sourceTier === null || row.rank === null) continue
+        const list = conditions.get(row.indicatorId) ?? []
+        list.push({
+          iso3: country.iso3,
+          country: country.country,
+          raw: row.value,
+          normalized: null,
+          year: row.year,
+          tier: row.sourceTier,
+          outOfFrame: false,
+          rank: row.rank,
+        })
+        conditions.set(row.indicatorId, list)
+      }
+    }
+  }
+  const held: IndicatorAcrossCountries[] = [...conditions.entries()].map(([indicatorId, values]) => ({
     indicatorId,
-    values: values.sort((a, b) => b.normalized - a.normalized),
+    role: 'condition' as const,
+    values: values.sort((a, b) => a.rank - b.rank).map(({ rank: _rank, ...v }) => v),
   }))
+
+  return [...scored, ...held]
 }

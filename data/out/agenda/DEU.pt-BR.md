@@ -8,14 +8,14 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 71,2 | 0,64 (utilizável) | +9,9 em 10 anos, sobre 5 indicadores |
-| Agência | 63,8 | 0,6 (utilizável) | +3,1 em 10 anos, sobre 4 indicadores |
+| Antecipação | 73,5 | 0,46 (utilizável) | +4,3 em 10 anos, sobre 2 indicadores |
+| Agência | 51,9 | 0,41 (fraca) | sem base de tendência |
 | Coordenação | 88,7 | 0,39 (fraca) | sem base de tendência |
 | Confiança | sem nota | 0,11 (muito fraca) | sem base de tendência |
-| Aprendizagem | 56,5 | 0,54 (utilizável) | +6,9 em 10 anos, sobre 2 indicadores |
+| Aprendizagem | 51,3 | 0,41 (fraca) | sem base de tendência |
 | Experimentação | 72,5 | 0,18 (muito fraca) | +4,9 em 10 anos, sobre 2 indicadores |
-| Adaptação | 84,7 | 0,71 (boa) | +5,2 em 10 anos, sobre 4 indicadores |
-| Construção | 64,4 | 0,62 (utilizável) | -1,6 em 10 anos, sobre 4 indicadores |
+| Adaptação | 83 | 0,68 (boa) | +2,1 em 10 anos, sobre 3 indicadores |
+| Construção | 68,9 | 0,57 (utilizável) | -2,8 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 55,1 | 0,29 (fraca) | -5,9 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para medir primeiro
@@ -53,15 +53,44 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
+### Agência: confiança 0,41, fraca
+
+Quão capazes são pessoas e organizações de transformar uma intenção em ação?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
+
+### Aprendizagem: confiança 0,41, fraca
+
+Com que eficácia o país adquire, distribui e atualiza conhecimento?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
+
 ## Dimensões para manter
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 84,7, confiança boa
-- Antecipação: 71,2, confiança utilizável
-- Construção: 64,4, confiança utilizável
-- Agência: 63,8, confiança utilizável
-- Aprendizagem: 56,5, confiança utilizável
+- Adaptação: 83, confiança boa
+- Antecipação: 73,5, confiança utilizável
+- Construção: 68,9, confiança utilizável
+
+## O que a Alemanha tem para trabalhar
+
+Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na nota, na confiança nem na tendência. Lidas contra a nota, mostram se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.
+
+| Dimensão | Condição | Valor | Ano | Posição |
+| --- | --- | --- | --- | --- |
+| Antecipação | Dispêndio em P&D | 3,2 % do PIB | 2023 | 7º de 51 |
+| Antecipação | Pesquisadores em P&D | 5.926,1 por milhão de pessoas | 2023 | 8º de 50 |
+| Antecipação | Servidores seguros de internet | 152.113,8 por milhão de pessoas | 2024 | 6º de 53 |
+| Agência | Pessoas que usam a internet | 93,5 % da população | 2024 | 16º de 53 |
+| Agência | Titularidade de conta financeira | 98,3 % das pessoas com 15 anos ou mais | 2024 | 11º de 52 |
+| Agência | Crédito ao setor privado | 77,3 % do PIB | 2023 | 21º de 52 |
+| Aprendizagem | Matrícula no ensino superior | 76,7 % (taxa bruta) | 2024 | 19º de 52 |
+| Aprendizagem | Dispêndio público em educação | 5,2 % do PIB | 2022 | 15º de 53 |
+| Adaptação | Assinaturas de banda larga fixa | 45,6 por 100 pessoas | 2024 | 5º de 53 |
+| Construção | Produto por trabalhador | 125.086,3 US$ PPC constantes de 2021 | 2025 | 8º de 51 |
 
 ## Agenda de medição
 

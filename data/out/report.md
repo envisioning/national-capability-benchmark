@@ -1,6 +1,6 @@
 # National Capability Benchmark, prototype v0
 
-*Generated 2026-10-01T09:09:05.391Z*
+*Generated 2026-10-01T09:42:46.110Z*
 
 This run covers 53 countries and nine dimensions. Indicators carry equal weight within each dimension, and the benchmark has no headline ranking.
 
@@ -11,117 +11,117 @@ All 53 countries set the comparison frame and are measured against it. Adding a 
 
 | Country | Anticipation | Agency | Coordination | Trust | Learning | Experimentation | Adaptability | Building | Shared Purpose |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Brazil | 37.3 | 58.9 | 86.4 | 26.9 | 43.5 | 30 | 62.7 | 25.3 | 34.9 |
-| United States | 70.2 | 92.5 | 99.5 | 64.6 | 49.8 | 55.8 | 81.4 | 58.4 | 40.8 |
-| Netherlands | 72.3 | 72.6 | 96 | no data | 65.5 | 28.1 | 91.3 | 45.2 | 96 |
-| Switzerland | 81.1 | 75.7 | 98.3 | 75.3 | 65.4 | 50.7 | 78.8 | 58.1 | 52.2 |
-| Singapore | 78.1 | 84.4 | 71 | 73.5 | 56.1 | 46.6 | 80.2 | 71.2 | no data |
-| South Korea | 80.6 | 78.5 | 87.3 | 67.4 | 55.9 | 72.2 | 81.1 | 63.1 | 61 |
-| Estonia | 63.9 | 84.8 | 93 | 61.8 | 57.2 | 30.2 | 71.5 | 30.8 | 82.4 |
-| India | 26.7 | 49.2 | 73.9 | 9.9 | 20.9 | 9.8 | 48.8 | 39.1 | 61.8 |
-| Chile | 39.3 | 73.3 | 82.4 | 42.9 | 53.5 | 46.7 | 62.2 | 30.5 | 52.9 |
-| South Africa | 35.5 | 57.6 | 71.6 | no data | 24.2 | 18.9 | 30.2 | 23.7 | 48 |
-| Mexico | 30.5 | 48.7 | 67.8 | 48 | 45.3 | 32.7 | 64.2 | 37.7 | 47.1 |
-| Argentina | 34.4 | 49.8 | 64.3 | 29.2 | 55 | 21.5 | 56.4 | 26.6 | 39.2 |
-| Colombia | 28.8 | 50.4 | 59.1 | 6.4 | 44.7 | 40.1 | 58.2 | 24.4 | 27.4 |
-| Peru | 33.6 | 47.7 | 69.3 | 37.7 | 48.1 | 20.2 | 60.4 | 26 | 53.5 |
-| Uruguay | 34.5 | 59.7 | 73.9 | 36.1 | 49.5 | 34.3 | 68.2 | 30.7 | 57.3 |
-| Costa Rica | 33.4 | 52.6 | 88.4 | no data | 49 | 25.5 | 63.2 | 38 | 39.5 |
-| Germany | 71.2 | 63.8 | 88.7 | no data | 56.5 | 72.5 | 84.7 | 64.4 | 55.1 |
-| France | 61.3 | 74.5 | 93.9 | 56.2 | 61.2 | 55.1 | 79.7 | 53.1 | 80.7 |
-| United Kingdom | 65.3 | 86.7 | 88.2 | no data | 68.6 | 43.3 | 77.8 | 46.8 | 87.4 |
-| Spain | 58 | 66.2 | 89.3 | 65.2 | 65.8 | 14.2 | 71.2 | 36.1 | 63.2 |
-| Portugal | 66.8 | 71.7 | 91.6 | 36.8 | 57.1 | 30.3 | 77.1 | 33.9 | 76.3 |
-| Poland | 55.7 | 52 | 86.8 | 45.2 | 52.6 | 17.9 | 75.4 | 35.5 | 77.5 |
-| Sweden | 83.5 | 77.5 | 97.2 | 83.2 | 67.7 | 29.7 | 82.4 | 41.6 | 93.4 |
-| Finland | 82 | 72.9 | 82.9 | 87.5 | 77.9 | 38.8 | 76.8 | 39.2 | 93.1 |
-| Ireland | 67.1 | 68.7 | 88.8 | no data | 60.8 | no data | 71.7 | 75.3 | 76.5 |
-| Canada | 66.3 | 79.2 | 95.7 | 54 | 56.9 | 24.9 | 84.4 | 32.8 | 64.2 |
-| Australia | 66.8 | 89.1 | 86.7 | 75.2 | 70.3 | 39 | 78.7 | 36.1 | 78.7 |
-| Japan | 64.7 | 70.7 | 63.4 | 65.3 | 47.6 | 66.7 | 81.6 | 50.2 | 58 |
-| China | 35.1 | 86.1 | 65.8 | 83.2 | 59.4 | 100 | 84.2 | 64.9 | 43.8 |
-| Indonesia | 30.6 | 42.9 | 81.1 | 41 | 24.8 | 2.9 | 62.5 | 38.7 | 54.2 |
-| Vietnam | 27.4 | 58.7 | 75.8 | 59.1 | 29 | 6.9 | 78.4 | 54.2 | no data |
-| Philippines | 24.1 | 33.5 | 74.8 | 19.7 | 36.7 | 2.7 | 51.7 | 49.6 | 51.9 |
-| Malaysia | 41.6 | 65 | 84.2 | 51.8 | 36.5 | 7 | 67.7 | 59.7 | 45.9 |
-| Thailand | 37.1 | 71.9 | 78.5 | 59.2 | 33.4 | 4.9 | 78.1 | 48.2 | 63.8 |
-| Turkey | 44 | 59.2 | 63.7 | 39.7 | 47.2 | 46 | 61.1 | 41.4 | 50.4 |
-| Israel | 80.6 | 66 | 80.1 | no data | 45.2 | 21.5 | 80.3 | 38.8 | 70.4 |
-| United Arab Emirates | 42.4 | 70.1 | 51.2 | no data | 40.8 | 6.1 | 76.1 | 38.1 | 48.4 |
-| Nigeria | 17.5 | 41.1 | 35.7 | 47.7 | 12.5 | 0.5 | 47.9 | 16.8 | no data |
-| Kenya | 24.2 | 43.2 | 80.7 | 42.4 | 26.8 | 0.9 | 41.7 | 17.5 | 52.7 |
-| Rwanda | 21.4 | 41.3 | 61 | no data | 23.2 | 0.4 | 42.4 | 25.3 | 49.3 |
-| Ethiopia | 12.1 | 22.9 | 76.2 | 41.7 | 10.4 | 0 | 41.8 | 15.5 | 45.5 |
-| Bolivia | 19.6 | 36.5 | 68.4 | 36.7 | 79.5 | 2.9 | 69.7 | 29.7 | 54.1 |
-| Paraguay | 23.2 | 45.1 | 48.7 | no data | 34.8 | 18.3 | 62.8 | 32 | 37.7 |
-| Ecuador | 27.1 | 37.3 | 70.7 | 37.2 | 47.4 | 6 | 61.2 | 27 | 38.1 |
-| Venezuela | 8.6 | 33.2 | 16.5 | 36.1 | 57.1 | 5.2 | 37.2 | 0 | no data |
-| Panama | 27.2 | 60.5 | 71.2 | no data | 28.7 | 8.8 | 67.5 | 27.5 | 20.4 |
-| Guatemala | 20.3 | 40.5 | 53.2 | 12.4 | 42.7 | 1.4 | 56.3 | 28.9 | 36.6 |
-| Honduras | 16.4 | 31.2 | 69.9 | no data | 41.5 | 1.6 | 38 | 28.7 | 42.2 |
-| El Salvador | 19.7 | 42.1 | 68.8 | no data | 34.2 | 5.8 | 60.6 | 25.8 | 65 |
-| Nicaragua | 11.7 | 42.9 | 23.1 | 37.3 | 32 | 1.2 | 56.2 | 24.4 | 50.8 |
-| Dominican Republic | 24.7 | 51.5 | 69.9 | no data | 37.2 | 6.5 | 62.5 | 28.3 | 53.1 |
-| Cuba | 16.4 | no data | no data | no data | 60.3 | 1.4 | 54.1 | 21.8 | no data |
-| Haiti | 0 | 14.9 | 50.9 | no data | 7.3 | 0.2 | 30.1 | 34.4 | no data |
+| Brazil | 45.8 | 51.6 | 86.4 | 26.9 | 30.2 | 30 | 65.4 | 28.2 | 34.9 |
+| United States | 72.7 | 86.4 | 99.5 | 64.6 | 38.5 | 55.8 | 81.8 | 58.2 | 40.8 |
+| Netherlands | 78.5 | 66.9 | 96 | no data | 63.5 | 28.1 | 92 | 44.4 | 96 |
+| Switzerland | 96.3 | 58.8 | 98.3 | 75.3 | 68.6 | 50.7 | 75.3 | 57.6 | 52.2 |
+| Singapore | 84.8 | 84.3 | 71 | 73.5 | 56.9 | 46.6 | 84.9 | 66.6 | no data |
+| South Korea | 76.6 | 66.1 | 87.3 | 67.4 | 38.9 | 72.2 | 76.9 | 69.8 | 61 |
+| Estonia | 72 | 96.9 | 93 | 61.8 | 55.8 | 30.2 | 71.4 | 31.1 | 82.4 |
+| India | 35.5 | 42.3 | 73.9 | 9.9 | 9.2 | 9.8 | 59.5 | 47.1 | 61.8 |
+| Chile | 55.5 | 71.6 | 82.4 | 42.9 | 37.5 | 46.7 | 64.9 | 32.3 | 52.9 |
+| South Africa | 44 | 51.4 | 71.6 | no data | 10.1 | 18.9 | 34.1 | 25.5 | 48 |
+| Mexico | 51.2 | 53 | 67.8 | 48 | 45.9 | 32.7 | 69.2 | 43 | 47.1 |
+| Argentina | 42.3 | 42.8 | 64.3 | 29.2 | 40.3 | 21.5 | 57 | 27.8 | 39.2 |
+| Colombia | 44.8 | 55.5 | 59.1 | 6.4 | 36.8 | 40.1 | 62.9 | 27.2 | 27.4 |
+| Peru | 43.1 | 48.1 | 69.3 | 37.7 | 42.4 | 20.2 | 69.6 | 30.2 | 53.5 |
+| Uruguay | 44.6 | 62.9 | 73.9 | 36.1 | 40.5 | 34.3 | 68.4 | 32.6 | 57.3 |
+| Costa Rica | 50.9 | 48.3 | 88.4 | no data | 45 | 25.5 | 66.3 | 41.8 | 39.5 |
+| Germany | 73.5 | 51.9 | 88.7 | no data | 51.3 | 72.5 | 83 | 68.9 | 55.1 |
+| France | 64 | 69.9 | 93.9 | 56.2 | 60.2 | 55.1 | 75.6 | 54.4 | 80.7 |
+| United Kingdom | 74 | 90.5 | 88.2 | no data | 67.6 | 43.3 | 76.1 | 48.1 | 87.4 |
+| Spain | 73.5 | 56.2 | 89.3 | 65.2 | 64.3 | 14.2 | 69.4 | 34.9 | 63.2 |
+| Portugal | 81.8 | 73 | 91.6 | 36.8 | 54.7 | 30.3 | 74 | 34.2 | 76.3 |
+| Poland | 65.6 | 43.1 | 86.8 | 45.2 | 47.3 | 17.9 | 80.1 | 35.4 | 77.5 |
+| Sweden | 90 | 70.1 | 97.2 | 83.2 | 59.1 | 29.7 | 82.3 | 39.9 | 93.4 |
+| Finland | 87.5 | 66.9 | 82.9 | 87.5 | 72.1 | 38.8 | 77.3 | 37.8 | 93.1 |
+| Ireland | 77.6 | 69.1 | 88.8 | no data | 67.7 | no data | 72.9 | 69.2 | 76.5 |
+| Canada | 80.2 | 74.5 | 95.7 | 54 | 53.7 | 24.9 | 83.9 | 30.5 | 64.2 |
+| Australia | 86 | 92.1 | 86.7 | 75.2 | 65.4 | 39 | 79.6 | 34.4 | 78.7 |
+| Japan | 64 | 50.5 | 63.4 | 65.3 | 47.9 | 66.7 | 82.1 | 54.8 | 58 |
+| China | 31 | 81.4 | 65.8 | 83.2 | 61.6 | 100 | 81.1 | 77 | 43.8 |
+| Indonesia | 43.1 | 44.2 | 81.1 | 41 | 24.2 | 2.9 | 73.1 | 46.1 | 54.2 |
+| Vietnam | 28.5 | 49.7 | 75.8 | 59.1 | 26.7 | 6.9 | 84.4 | 65.7 | no data |
+| Philippines | 42.6 | 27.8 | 74.8 | 19.7 | 32.3 | 2.7 | 61.1 | 60.2 | 51.9 |
+| Malaysia | 56 | 49.7 | 84.2 | 51.8 | 36.4 | 7 | 75.7 | 68.2 | 45.9 |
+| Thailand | 47.5 | 61 | 78.5 | 59.2 | 32.2 | 4.9 | 87.6 | 57.1 | 63.8 |
+| Turkey | 49.3 | 57 | 63.7 | 39.7 | 35.8 | 46 | 63.8 | 43 | 50.4 |
+| Israel | 75 | 63.4 | 80.1 | no data | 35.7 | 21.5 | 84.4 | 38.9 | 70.4 |
+| United Arab Emirates | 49.7 | 69.1 | 51.2 | no data | 31.3 | 6.1 | 74.7 | 37.6 | 48.4 |
+| Nigeria | 28.9 | 55.5 | 35.7 | 47.7 | 18.2 | 0.5 | 57.4 | 20 | no data |
+| Kenya | 32.8 | 46.9 | 80.7 | 42.4 | 26.7 | 0.9 | 48.8 | 21.1 | 52.7 |
+| Rwanda | 31.9 | 63.7 | 61 | no data | 18.5 | 0.4 | 50.7 | 31.3 | 49.3 |
+| Ethiopia | 22.3 | 32.3 | 76.2 | 41.7 | 7.7 | 0 | 49.9 | 19.3 | 45.5 |
+| Bolivia | 29.4 | 25.6 | 68.4 | 36.7 | 74.8 | 2.9 | 78.7 | 35.8 | 54.1 |
+| Paraguay | 33.5 | 39.6 | 48.7 | no data | 33.8 | 18.3 | 70.1 | 37.1 | 37.7 |
+| Ecuador | 41.9 | 23.7 | 70.7 | 37.2 | 45.1 | 6 | 66.4 | 31.5 | 38.1 |
+| Venezuela | 0.9 | 0 | 16.5 | 36.1 | 39 | 5.2 | 39.4 | 0 | no data |
+| Panama | 37.3 | 65.2 | 71.2 | no data | 23.2 | 8.8 | 73.6 | 27 | 20.4 |
+| Guatemala | 37.7 | 52.5 | 53.2 | 12.4 | 52 | 1.4 | 65.4 | 33.6 | 36.6 |
+| Honduras | 25.2 | 25.8 | 69.9 | no data | 45.1 | 1.6 | 43.8 | 34.8 | 42.2 |
+| El Salvador | 32.6 | 46.2 | 68.8 | no data | 35.1 | 5.8 | 69.4 | 30.3 | 65 |
+| Nicaragua | 15.9 | 74.7 | 23.1 | 37.3 | 34 | 1.2 | 65.1 | 29.5 | 50.8 |
+| Dominican Republic | 33.9 | 50.4 | 69.9 | no data | 30.9 | 6.5 | 70.5 | 30.7 | 53.1 |
+| Cuba | no data | no data | no data | no data | no data | 1.4 | 63.7 | 21.8 | no data |
+| Haiti | 0 | 14.8 | 50.9 | no data | 10.6 | 0.2 | 37.5 | 45.8 | no data |
 
 Confidence is reported beside the score. Each cell shows the value and its band.
 
 | Country | Anticipation | Agency | Coordination | Trust | Learning | Experimentation | Adaptability | Building | Shared Purpose |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Brazil | 0.54 usable | 0.61 usable | 0.37 thin | 0.26 thin | 0.54 usable | 0.39 thin | 0.71 good | 0.62 usable | 0.32 thin |
-| United States | 0.63 usable | 0.49 usable | 0.23 very thin | 0.26 thin | 0.45 usable | 0.39 thin | 0.71 good | 0.59 usable | 0.32 thin |
-| Netherlands | 0.64 usable | 0.59 usable | 0.39 thin | 0.11 very thin | 0.53 usable | 0.30 thin | 0.71 good | 0.62 usable | 0.28 thin |
-| Switzerland | 0.64 usable | 0.51 usable | 0.35 thin | 0.26 thin | 0.54 usable | 0.39 thin | 0.71 good | 0.62 usable | 0.29 thin |
-| Singapore | 0.62 usable | 0.57 usable | 0.40 thin | 0.26 thin | 0.49 usable | 0.21 very thin | 0.70 good | 0.62 usable | 0.16 very thin |
-| South Korea | 0.64 usable | 0.60 usable | 0.40 thin | 0.26 thin | 0.54 usable | 0.39 thin | 0.59 usable | 0.62 usable | 0.28 thin |
-| Estonia | 0.64 usable | 0.61 usable | 0.37 thin | 0.26 thin | 0.53 usable | 0.39 thin | 0.71 good | 0.62 usable | 0.30 thin |
-| India | 0.58 usable | 0.61 usable | 0.41 thin | 0.26 thin | 0.55 usable | 0.39 thin | 0.58 usable | 0.62 usable | 0.26 thin |
-| Chile | 0.62 usable | 0.60 usable | 0.39 thin | 0.26 thin | 0.54 usable | 0.39 thin | 0.71 good | 0.62 usable | 0.32 thin |
-| South Africa | 0.62 usable | 0.61 usable | 0.39 thin | 0.11 very thin | 0.51 usable | 0.39 thin | 0.70 good | 0.62 usable | 0.29 thin |
-| Mexico | 0.67 good | 0.61 usable | 0.37 thin | 0.26 thin | 0.53 usable | 0.39 thin | 0.59 usable | 0.62 usable | 0.32 thin |
-| Argentina | 0.64 usable | 0.61 usable | 0.37 thin | 0.26 thin | 0.41 thin | 0.39 thin | 0.71 good | 0.62 usable | 0.32 thin |
-| Colombia | 0.54 usable | 0.61 usable | 0.39 thin | 0.26 thin | 0.49 usable | 0.38 thin | 0.71 good | 0.62 usable | 0.32 thin |
-| Peru | 0.52 usable | 0.61 usable | 0.39 thin | 0.26 thin | 0.49 usable | 0.39 thin | 0.58 usable | 0.62 usable | 0.28 thin |
-| Uruguay | 0.66 good | 0.61 usable | 0.37 thin | 0.26 thin | 0.54 usable | 0.34 thin | 0.58 usable | 0.62 usable | 0.32 thin |
-| Costa Rica | 0.64 usable | 0.61 usable | 0.37 thin | 0.11 very thin | 0.50 usable | 0.39 thin | 0.71 good | 0.62 usable | 0.32 thin |
-| Germany | 0.64 usable | 0.60 usable | 0.39 thin | 0.11 very thin | 0.54 usable | 0.18 very thin | 0.71 good | 0.62 usable | 0.29 thin |
-| France | 0.64 usable | 0.61 usable | 0.39 thin | 0.26 thin | 0.54 usable | 0.18 very thin | 0.71 good | 0.62 usable | 0.30 thin |
-| United Kingdom | 0.58 usable | 0.61 usable | 0.23 very thin | 0.11 very thin | 0.52 usable | 0.18 very thin | 0.71 good | 0.62 usable | 0.28 thin |
-| Spain | 0.64 usable | 0.61 usable | 0.39 thin | 0.26 thin | 0.54 usable | 0.18 very thin | 0.71 good | 0.62 usable | 0.30 thin |
-| Portugal | 0.64 usable | 0.61 usable | 0.39 thin | 0.26 thin | 0.52 usable | 0.18 very thin | 0.71 good | 0.62 usable | 0.30 thin |
-| Poland | 0.64 usable | 0.61 usable | 0.41 thin | 0.26 thin | 0.54 usable | 0.18 very thin | 0.71 good | 0.62 usable | 0.29 thin |
-| Sweden | 0.64 usable | 0.61 usable | 0.23 very thin | 0.26 thin | 0.54 usable | 0.18 very thin | 0.71 good | 0.62 usable | 0.30 thin |
-| Finland | 0.64 usable | 0.61 usable | 0.39 thin | 0.26 thin | 0.54 usable | 0.18 very thin | 0.71 good | 0.62 usable | 0.30 thin |
-| Ireland | 0.64 usable | 0.61 usable | 0.39 thin | 0.11 very thin | 0.51 usable | 0.09 very thin | 0.71 good | 0.62 usable | 0.30 thin |
-| Canada | 0.64 usable | 0.49 usable | 0.23 very thin | 0.26 thin | 0.53 usable | 0.18 very thin | 0.71 good | 0.60 usable | 0.29 thin |
-| Australia | 0.51 usable | 0.61 usable | 0.40 thin | 0.26 thin | 0.54 usable | 0.18 very thin | 0.71 good | 0.62 usable | 0.24 very thin |
-| Japan | 0.64 usable | 0.61 usable | 0.39 thin | 0.26 thin | 0.52 usable | 0.18 very thin | 0.63 usable | 0.62 usable | 0.12 very thin |
-| China | 0.64 usable | 0.61 usable | 0.41 thin | 0.26 thin | 0.56 usable | 0.18 very thin | 0.58 usable | 0.62 usable | 0.29 thin |
-| Indonesia | 0.58 usable | 0.61 usable | 0.41 thin | 0.26 thin | 0.53 usable | 0.18 very thin | 0.69 good | 0.62 usable | 0.17 very thin |
-| Vietnam | 0.64 usable | 0.59 usable | 0.40 thin | 0.26 thin | 0.48 usable | 0.18 very thin | 0.70 good | 0.61 usable | 0.13 very thin |
-| Philippines | 0.58 usable | 0.61 usable | 0.33 thin | 0.26 thin | 0.55 usable | 0.18 very thin | 0.58 usable | 0.62 usable | 0.30 thin |
-| Malaysia | 0.62 usable | 0.61 usable | 0.41 thin | 0.26 thin | 0.56 usable | 0.18 very thin | 0.68 good | 0.62 usable | 0.28 thin |
-| Thailand | 0.64 usable | 0.61 usable | 0.41 thin | 0.26 thin | 0.56 usable | 0.18 very thin | 0.70 good | 0.62 usable | 0.32 thin |
-| Turkey | 0.64 usable | 0.61 usable | 0.39 thin | 0.26 thin | 0.53 usable | 0.18 very thin | 0.71 good | 0.62 usable | 0.30 thin |
-| Israel | 0.52 usable | 0.61 usable | 0.23 very thin | 0.11 very thin | 0.54 usable | 0.18 very thin | 0.71 good | 0.62 usable | 0.29 thin |
-| United Arab Emirates | 0.60 usable | 0.52 usable | 0.23 very thin | 0.11 very thin | 0.38 thin | 0.18 very thin | 0.70 good | 0.61 usable | 0.24 very thin |
-| Nigeria | 0.55 usable | 0.57 usable | 0.41 thin | 0.26 thin | 0.38 thin | 0.15 very thin | 0.70 good | 0.62 usable | 0.13 very thin |
-| Kenya | 0.67 good | 0.60 usable | 0.41 thin | 0.26 thin | 0.51 usable | 0.17 very thin | 0.68 good | 0.62 usable | 0.28 thin |
-| Rwanda | 0.64 usable | 0.54 usable | 0.41 thin | 0.11 very thin | 0.56 usable | 0.18 very thin | 0.70 good | 0.60 usable | 0.29 thin |
-| Ethiopia | 0.51 usable | 0.51 usable | 0.41 thin | 0.26 thin | 0.42 thin | 0.17 very thin | 0.60 usable | 0.61 usable | 0.28 thin |
-| Bolivia | 0.60 usable | 0.60 usable | 0.39 thin | 0.26 thin | 0.34 thin | 0.18 very thin | 0.70 good | 0.62 usable | 0.17 very thin |
-| Paraguay | 0.64 usable | 0.61 usable | 0.37 thin | 0.11 very thin | 0.41 thin | 0.18 very thin | 0.69 good | 0.62 usable | 0.32 thin |
-| Ecuador | 0.44 thin | 0.61 usable | 0.39 thin | 0.26 thin | 0.55 usable | 0.18 very thin | 0.70 good | 0.62 usable | 0.29 thin |
-| Venezuela | 0.54 usable | 0.39 thin | 0.22 very thin | 0.26 thin | 0.10 very thin | 0.10 very thin | 0.63 usable | 0.23 very thin | 0.02 very thin |
-| Panama | 0.67 good | 0.55 usable | 0.37 thin | 0.11 very thin | 0.53 usable | 0.18 very thin | 0.69 good | 0.62 usable | 0.32 thin |
-| Guatemala | 0.64 usable | 0.61 usable | 0.37 thin | 0.26 thin | 0.56 usable | 0.10 very thin | 0.70 good | 0.62 usable | 0.30 thin |
-| Honduras | 0.55 usable | 0.61 usable | 0.37 thin | 0.11 very thin | 0.47 usable | 0.15 very thin | 0.70 good | 0.62 usable | 0.26 thin |
-| El Salvador | 0.64 usable | 0.61 usable | 0.39 thin | 0.11 very thin | 0.55 usable | 0.18 very thin | 0.58 usable | 0.62 usable | 0.30 thin |
-| Nicaragua | 0.44 thin | 0.49 usable | 0.37 thin | 0.26 thin | 0.40 thin | 0.03 very thin | 0.60 usable | 0.62 usable | 0.18 very thin |
-| Dominican Republic | 0.51 usable | 0.55 usable | 0.37 thin | 0.11 very thin | 0.56 usable | 0.18 very thin | 0.70 good | 0.62 usable | 0.32 thin |
-| Cuba | 0.53 usable | 0.12 very thin | 0.10 very thin | 0.00 very thin | 0.33 thin | 0.18 very thin | 0.60 usable | 0.25 very thin | 0.00 very thin |
-| Haiti | 0.40 thin | 0.44 thin | 0.39 thin | 0.11 very thin | 0.24 very thin | 0.04 very thin | 0.55 usable | 0.49 usable | 0.02 very thin |
+| Brazil | 0.46 usable | 0.41 thin | 0.37 thin | 0.26 thin | 0.41 thin | 0.39 thin | 0.68 good | 0.57 usable | 0.32 thin |
+| United States | 0.46 usable | 0.22 very thin | 0.23 very thin | 0.26 thin | 0.34 thin | 0.39 thin | 0.68 good | 0.53 usable | 0.32 thin |
+| Netherlands | 0.46 usable | 0.38 thin | 0.39 thin | 0.11 very thin | 0.41 thin | 0.30 thin | 0.68 good | 0.57 usable | 0.28 thin |
+| Switzerland | 0.46 usable | 0.38 thin | 0.35 thin | 0.26 thin | 0.41 thin | 0.39 thin | 0.68 good | 0.57 usable | 0.29 thin |
+| Singapore | 0.46 usable | 0.41 thin | 0.40 thin | 0.26 thin | 0.32 thin | 0.21 very thin | 0.67 good | 0.57 usable | 0.16 very thin |
+| South Korea | 0.46 usable | 0.40 thin | 0.40 thin | 0.26 thin | 0.41 thin | 0.39 thin | 0.54 usable | 0.57 usable | 0.28 thin |
+| Estonia | 0.46 usable | 0.41 thin | 0.37 thin | 0.26 thin | 0.40 thin | 0.39 thin | 0.68 good | 0.57 usable | 0.30 thin |
+| India | 0.46 usable | 0.41 thin | 0.41 thin | 0.26 thin | 0.43 thin | 0.39 thin | 0.53 usable | 0.57 usable | 0.26 thin |
+| Chile | 0.46 usable | 0.40 thin | 0.39 thin | 0.26 thin | 0.41 thin | 0.39 thin | 0.68 good | 0.57 usable | 0.32 thin |
+| South Africa | 0.46 usable | 0.41 thin | 0.39 thin | 0.11 very thin | 0.35 thin | 0.39 thin | 0.67 good | 0.57 usable | 0.29 thin |
+| Mexico | 0.46 usable | 0.41 thin | 0.37 thin | 0.26 thin | 0.40 thin | 0.39 thin | 0.54 usable | 0.57 usable | 0.32 thin |
+| Argentina | 0.46 usable | 0.41 thin | 0.37 thin | 0.26 thin | 0.23 very thin | 0.39 thin | 0.68 good | 0.57 usable | 0.32 thin |
+| Colombia | 0.46 usable | 0.41 thin | 0.39 thin | 0.26 thin | 0.40 thin | 0.38 thin | 0.68 good | 0.57 usable | 0.32 thin |
+| Peru | 0.46 usable | 0.41 thin | 0.39 thin | 0.26 thin | 0.41 thin | 0.39 thin | 0.53 usable | 0.57 usable | 0.28 thin |
+| Uruguay | 0.46 usable | 0.41 thin | 0.37 thin | 0.26 thin | 0.41 thin | 0.34 thin | 0.53 usable | 0.57 usable | 0.32 thin |
+| Costa Rica | 0.46 usable | 0.41 thin | 0.37 thin | 0.11 very thin | 0.41 thin | 0.39 thin | 0.68 good | 0.57 usable | 0.32 thin |
+| Germany | 0.46 usable | 0.41 thin | 0.39 thin | 0.11 very thin | 0.41 thin | 0.18 very thin | 0.68 good | 0.57 usable | 0.29 thin |
+| France | 0.46 usable | 0.41 thin | 0.39 thin | 0.26 thin | 0.41 thin | 0.18 very thin | 0.68 good | 0.57 usable | 0.30 thin |
+| United Kingdom | 0.46 usable | 0.41 thin | 0.23 very thin | 0.11 very thin | 0.41 thin | 0.18 very thin | 0.68 good | 0.57 usable | 0.28 thin |
+| Spain | 0.46 usable | 0.41 thin | 0.39 thin | 0.26 thin | 0.41 thin | 0.18 very thin | 0.68 good | 0.57 usable | 0.30 thin |
+| Portugal | 0.46 usable | 0.41 thin | 0.39 thin | 0.26 thin | 0.40 thin | 0.18 very thin | 0.68 good | 0.57 usable | 0.30 thin |
+| Poland | 0.46 usable | 0.41 thin | 0.41 thin | 0.26 thin | 0.41 thin | 0.18 very thin | 0.68 good | 0.57 usable | 0.29 thin |
+| Sweden | 0.46 usable | 0.41 thin | 0.23 very thin | 0.26 thin | 0.41 thin | 0.18 very thin | 0.68 good | 0.57 usable | 0.30 thin |
+| Finland | 0.46 usable | 0.41 thin | 0.39 thin | 0.26 thin | 0.41 thin | 0.18 very thin | 0.68 good | 0.57 usable | 0.30 thin |
+| Ireland | 0.46 usable | 0.41 thin | 0.39 thin | 0.11 very thin | 0.41 thin | 0.09 very thin | 0.68 good | 0.57 usable | 0.30 thin |
+| Canada | 0.46 usable | 0.38 thin | 0.23 very thin | 0.26 thin | 0.41 thin | 0.18 very thin | 0.68 good | 0.54 usable | 0.29 thin |
+| Australia | 0.46 usable | 0.41 thin | 0.40 thin | 0.26 thin | 0.41 thin | 0.18 very thin | 0.68 good | 0.57 usable | 0.24 very thin |
+| Japan | 0.46 usable | 0.41 thin | 0.39 thin | 0.26 thin | 0.41 thin | 0.18 very thin | 0.60 usable | 0.57 usable | 0.12 very thin |
+| China | 0.46 usable | 0.41 thin | 0.41 thin | 0.26 thin | 0.43 thin | 0.18 very thin | 0.53 usable | 0.57 usable | 0.29 thin |
+| Indonesia | 0.46 usable | 0.41 thin | 0.41 thin | 0.26 thin | 0.40 thin | 0.18 very thin | 0.66 good | 0.57 usable | 0.17 very thin |
+| Vietnam | 0.46 usable | 0.41 thin | 0.40 thin | 0.26 thin | 0.32 thin | 0.18 very thin | 0.67 good | 0.55 usable | 0.13 very thin |
+| Philippines | 0.46 usable | 0.41 thin | 0.33 thin | 0.26 thin | 0.40 thin | 0.18 very thin | 0.53 usable | 0.57 usable | 0.30 thin |
+| Malaysia | 0.46 usable | 0.41 thin | 0.41 thin | 0.26 thin | 0.43 thin | 0.18 very thin | 0.64 usable | 0.57 usable | 0.28 thin |
+| Thailand | 0.46 usable | 0.41 thin | 0.41 thin | 0.26 thin | 0.43 thin | 0.18 very thin | 0.67 good | 0.57 usable | 0.32 thin |
+| Turkey | 0.46 usable | 0.41 thin | 0.39 thin | 0.26 thin | 0.41 thin | 0.18 very thin | 0.68 good | 0.57 usable | 0.30 thin |
+| Israel | 0.46 usable | 0.41 thin | 0.23 very thin | 0.11 very thin | 0.41 thin | 0.18 very thin | 0.68 good | 0.57 usable | 0.29 thin |
+| United Arab Emirates | 0.46 usable | 0.35 thin | 0.23 very thin | 0.11 very thin | 0.21 very thin | 0.18 very thin | 0.67 good | 0.55 usable | 0.24 very thin |
+| Nigeria | 0.46 usable | 0.38 thin | 0.41 thin | 0.26 thin | 0.34 thin | 0.15 very thin | 0.67 good | 0.57 usable | 0.13 very thin |
+| Kenya | 0.46 usable | 0.41 thin | 0.41 thin | 0.26 thin | 0.34 thin | 0.17 very thin | 0.64 usable | 0.57 usable | 0.28 thin |
+| Rwanda | 0.46 usable | 0.41 thin | 0.41 thin | 0.11 very thin | 0.41 thin | 0.18 very thin | 0.67 good | 0.54 usable | 0.29 thin |
+| Ethiopia | 0.46 usable | 0.41 thin | 0.41 thin | 0.26 thin | 0.36 thin | 0.17 very thin | 0.55 usable | 0.55 usable | 0.28 thin |
+| Bolivia | 0.46 usable | 0.40 thin | 0.39 thin | 0.26 thin | 0.28 thin | 0.18 very thin | 0.67 good | 0.57 usable | 0.17 very thin |
+| Paraguay | 0.46 usable | 0.41 thin | 0.37 thin | 0.11 very thin | 0.36 thin | 0.18 very thin | 0.67 good | 0.57 usable | 0.32 thin |
+| Ecuador | 0.46 usable | 0.41 thin | 0.39 thin | 0.26 thin | 0.41 thin | 0.18 very thin | 0.67 good | 0.57 usable | 0.29 thin |
+| Venezuela | 0.46 usable | 0.22 very thin | 0.22 very thin | 0.26 thin | 0.10 very thin | 0.10 very thin | 0.59 usable | 0.27 thin | 0.02 very thin |
+| Panama | 0.46 usable | 0.38 thin | 0.37 thin | 0.11 very thin | 0.40 thin | 0.18 very thin | 0.67 good | 0.57 usable | 0.32 thin |
+| Guatemala | 0.46 usable | 0.41 thin | 0.37 thin | 0.26 thin | 0.43 thin | 0.10 very thin | 0.67 good | 0.57 usable | 0.30 thin |
+| Honduras | 0.46 usable | 0.41 thin | 0.37 thin | 0.11 very thin | 0.30 thin | 0.15 very thin | 0.67 good | 0.57 usable | 0.26 thin |
+| El Salvador | 0.46 usable | 0.41 thin | 0.39 thin | 0.11 very thin | 0.40 thin | 0.18 very thin | 0.53 usable | 0.57 usable | 0.30 thin |
+| Nicaragua | 0.46 usable | 0.22 very thin | 0.37 thin | 0.26 thin | 0.21 very thin | 0.03 very thin | 0.55 usable | 0.57 usable | 0.18 very thin |
+| Dominican Republic | 0.46 usable | 0.32 thin | 0.37 thin | 0.11 very thin | 0.43 thin | 0.18 very thin | 0.67 good | 0.57 usable | 0.32 thin |
+| Cuba | 0.22 very thin | 0.00 very thin | 0.10 very thin | 0.00 very thin | 0.11 very thin | 0.18 very thin | 0.55 usable | 0.29 thin | 0.00 very thin |
+| Haiti | 0.46 usable | 0.24 very thin | 0.39 thin | 0.11 very thin | 0.15 very thin | 0.04 very thin | 0.52 usable | 0.41 thin | 0.02 very thin |
 
 ## Trends use the same frame
 
@@ -131,203 +131,193 @@ Trends use the current frame and only indicators observed at both ends. The bask
 
 | Country | Anticipation | Agency | Coordination | Trust | Learning | Experimentation | Adaptability | Building | Shared Purpose |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Brazil | +10.8 (4) | +19.9 (4) | no data | no data | +5.1 (2) | +6.9 (2) | +15.4 (4) | -1.2 (4) | +8.6 (2) |
-| United States | +9.9 (5) | +7.9 (3) | no data | no data | -0.4 (2) | +3.2 (2) | +6.0 (4) | +2.4 (4) | -1.1 (2) |
-| Netherlands | +11.4 (5) | -1.0 (4) | no data | no data | +1.7 (2) | no data | +7.1 (4) | +0.2 (4) | +9.9 (2) |
-| Switzerland | +8.3 (5, 1 clamped) | +1.9 (3) | no data | no data | +4.9 (2) | +1.8 (2) | +2.8 (4) | +2.7 (4) | -1.0 (2) |
-| Singapore | +14.5 (5) | +10.4 (3) | no data | no data | +1.4 (2) | +10.8 (2) | +4.9 (4) | +7.7 (4) | no data |
-| South Korea | +21.4 (5) | +6.8 (4) | no data | no data | +16.1 (2) | +16.9 (2) | +8.0 (4) | +3.2 (4) | +4.0 (2) |
-| Estonia | +14.0 (5) | +3.7 (4) | no data | no data | +0.7 (3) | +7.0 (2) | -7.4 (4) | -2.9 (4) | +2.7 (2) |
-| India | +17.4 (3) | +27.9 (4, 1 clamped) | no data | no data | -12.9 (3) | +1.7 (2) | +10.1 (4, 1 clamped) | +4.9 (4) | -2.2 (2) |
-| Chile | +9.2 (5) | +13.5 (4) | no data | no data | +6.8 (2) | +7.2 (2) | +1.5 (4) | -0.2 (4) | +5.5 (2) |
-| South Africa | +7.3 (5) | +8.7 (4) | no data | no data | +5.6 (2) | +1.8 (2) | +2.0 (4) | -1.1 (4) | +2.5 (2, 1 clamped) |
-| Mexico | +7.2 (5) | +12.7 (4) | no data | no data | 0.0 (2) | +1.8 (2) | +9.2 (4) | +0.1 (4) | +10.7 (2) |
-| Argentina | +9.7 (5) | +16.9 (4) | no data | no data | +6.2 (2) | +0.7 (2) | +3.8 (4) | -3.2 (4) | -3.3 (2) |
-| Colombia | +11.9 (3) | +12.0 (4) | no data | no data | no data | +0.5 (2) | +2.9 (4) | -1.9 (4) | -3.1 (2) |
-| Peru | +16.2 (4) | +22.5 (4) | no data | no data | no data | +1.8 (2) | -1.9 (4) | -0.4 (4) | +10.1 (2) |
-| Uruguay | +12.7 (5) | +19.7 (4) | no data | no data | +11.7 (2) | no data | +6.2 (4) | -0.7 (4) | -7.8 (2) |
-| Costa Rica | +7.4 (5) | +8.3 (4) | no data | no data | no data | +2.6 (2) | +7.5 (4) | +4.8 (4) | +5.4 (2) |
-| Germany | +9.9 (5) | +3.1 (4) | no data | no data | +6.9 (2) | +4.9 (2) | +5.2 (4) | -1.6 (4) | -5.9 (2) |
-| France | +6.3 (5) | +7.6 (4) | no data | no data | no data | +1.6 (2) | +9.1 (4) | -5.0 (4) | -0.6 (2) |
-| United Kingdom | +8.2 (4) | +1.8 (4) | no data | no data | +13.0 (2) | +6.2 (2) | +0.4 (4) | +0.6 (4) | +4.2 (2) |
-| Spain | +10.3 (5) | +1.0 (4) | no data | no data | +4.2 (2) | -4.1 (2) | +18.1 (4) | +1.3 (4) | +6.5 (2) |
-| Portugal | +14.3 (5) | +9.6 (4) | no data | no data | +4.4 (2) | +4.1 (2) | +15.6 (4) | +0.3 (4) | +1.8 (2) |
-| Poland | +13.6 (5) | +5.7 (4) | no data | no data | -4.4 (3) | -2.6 (2) | +11.6 (4) | +2.9 (4) | +8.1 (2) |
-| Sweden | +10.0 (5) | 0.0 (4) | no data | no data | -5.8 (3) | -6.1 (2) | +1.0 (4) | -0.5 (4) | +0.5 (2, 1 clamped) |
-| Finland | +11.9 (5) | +3.6 (4, 1 clamped) | no data | no data | +6.2 (2) | +2.6 (2) | +5.1 (4) | -0.9 (4) | +7.6 (2) |
-| Ireland | +9.7 (5) | +2.6 (4) | no data | no data | -4.6 (2) | no data | +10.1 (4) | +18.2 (4) | +5.3 (2) |
-| Canada | +6.5 (5) | +1.5 (2) | no data | no data | +3.3 (2) | -5.0 (2) | +5.1 (4) | -0.4 (4) | +4.4 (2) |
-| Australia | +3.3 (4) | +5.0 (4) | no data | no data | no data | +1.1 (2) | +7.9 (4) | +1.2 (4) | no data |
-| Japan | +12.7 (5) | +1.9 (4) | no data | no data | +2.1 (2) | -6.8 (2) | +8.7 (4) | -2.0 (4) | no data |
-| China | +14.5 (5) | +21.9 (4) | no data | no data | +12.4 (2, 1 clamped) | +30.6 (2) | +11.7 (4) | -1.9 (4) | +0.7 (2) |
-| Indonesia | +17.4 (3) | +22.1 (4) | no data | no data | +3.6 (3) | +1.1 (2) | +5.8 (4) | +0.2 (4) | no data |
-| Vietnam | +12.1 (5) | +27.0 (4) | no data | no data | -5.7 (3) | +1.8 (2) | +5.7 (4) | +8.6 (4) | no data |
-| Philippines | +10.8 (3) | +16.5 (4) | no data | no data | -2.2 (3) | +0.8 (2) | +2.6 (4) | -3.2 (3) | +11.5 (2) |
-| Malaysia | +10.0 (5) | +8.6 (4) | no data | no data | +0.9 (3) | -1.3 (2) | +4.2 (4) | +5.4 (4) | -1.4 (2) |
-| Thailand | +11.0 (5) | +18.5 (4) | no data | no data | -1.5 (3) | -0.6 (2) | +2.7 (4, 1 clamped) | 0.0 (4) | +4.1 (2) |
-| Turkey | +11.8 (5) | +16.1 (4) | no data | no data | -11.8 (3) | +18.5 (2) | +15.7 (4, 1 clamped) | +4.0 (4) | -4.5 (2) |
-| Israel | +16.5 (4) | +2.9 (4) | no data | no data | -6.6 (3) | +1.4 (2) | +2.9 (4) | +6.8 (4) | +1.5 (2) |
-| United Arab Emirates | +19.5 (5) | +2.1 (3) | no data | no data | no data | +1.0 (2) | +14.3 (4) | +2.7 (4) | no data |
-| Nigeria | +10.3 (3) | +11.4 (4) | no data | no data | +3.2 (2) | no data | +3.4 (4, 1 clamped) | -0.5 (4) | no data |
-| Kenya | +20.8 (3) | +11.7 (3, 1 clamped) | no data | no data | -6.0 (3) | no data | -13.0 (4) | -3.1 (4) | +2.2 (2) |
-| Rwanda | +12.4 (5) | +6.2 (3, 1 clamped) | no data | no data | -6.8 (3) | +0.3 (2) | +8.0 (4) | -2.2 (4, 1 clamped) | +4.6 (2) |
-| Ethiopia | +10.6 (3, 1 clamped) | +11.8 (3, 2 clamped) | no data | no data | -24.8 (2) | no data | -7.9 (4) | -2.3 (4, 1 clamped) | -2.1 (2) |
-| Bolivia | +15.0 (3) | +22.7 (3) | no data | no data | no data | +0.8 (2) | +15.2 (4) | +2.8 (4) | no data |
-| Paraguay | +12.9 (5) | +25.0 (4, 2 clamped) | no data | no data | no data | no data | +1.5 (4) | +1.8 (4) | +9.7 (2) |
-| Ecuador | +12.1 (3) | +18.0 (4) | no data | no data | +5.8 (2) | +1.5 (2) | +0.6 (4) | -0.6 (4) | -4.3 (2) |
-| Venezuela | -1.7 (4) | +30.6 (2) | no data | no data | no data | no data | +4.3 (4, 1 clamped) | no data | no data |
-| Panama | +12.1 (5) | +12.3 (3) | no data | no data | -2.8 (2) | -2.7 (2) | +5.3 (4) | +0.6 (4) | -4.2 (2) |
-| Guatemala | +9.7 (5) | +8.0 (4) | no data | no data | +3.2 (2) | no data | -0.2 (4) | -0.5 (4) | +7.7 (2) |
-| Honduras | +9.3 (3) | +15.4 (4) | no data | no data | -8.5 (2) | no data | -2.6 (4) | -0.9 (4) | no data |
-| El Salvador | +4.7 (5) | +16.0 (4) | no data | no data | -8.6 (3) | +1.3 (2) | +10.5 (4) | -2.4 (4) | +8.7 (2) |
-| Nicaragua | +7.9 (3) | +14.6 (3, 1 clamped) | no data | no data | no data | no data | +2.2 (4) | -1.1 (4) | no data |
-| Dominican Republic | +9.7 (3) | +17.2 (3) | no data | no data | +8.3 (3) | +0.9 (2) | +8.6 (4) | +1.8 (4) | +14.8 (2) |
-| Cuba | +11.1 (3, 1 clamped) | no data | no data | no data | +3.7 (2, 1 clamped) | -0.4 (2) | -2.6 (4) | -27.1 (2) | no data |
-| Haiti | 0.0 (3, 3 clamped) | +14.2 (2) | no data | no data | no data | no data | -2.6 (4, 1 clamped) | +3.6 (3, 1 clamped) | no data |
+| Brazil | +7.8 (2) | no data | no data | no data | no data | +6.9 (2) | +13.1 (3) | -2.0 (3) | +8.6 (2) |
+| United States | +0.5 (2) | no data | no data | no data | no data | +3.2 (2) | +3.4 (3) | +0.5 (3) | -1.1 (2) |
+| Netherlands | +9.3 (2) | no data | no data | no data | no data | no data | +8.8 (3) | -0.5 (3) | +9.9 (2) |
+| Switzerland | +4.0 (2, 1 clamped) | no data | no data | no data | no data | +1.8 (2) | +2.3 (3) | +1.3 (3) | -1.0 (2) |
+| Singapore | +17.5 (2) | no data | no data | no data | no data | +10.8 (2) | +6.9 (3) | +5.0 (3) | no data |
+| South Korea | +17.8 (2) | no data | no data | no data | no data | +16.9 (2) | +5.2 (3) | +2.8 (3) | +4.0 (2) |
+| Estonia | +9.7 (2) | no data | no data | no data | no data | +7.0 (2) | -12.4 (3) | -4.8 (3) | +2.7 (2) |
+| India | +9.0 (2) | no data | no data | no data | no data | +1.7 (2) | +12.2 (3, 1 clamped) | +5.8 (3) | -2.2 (2) |
+| Chile | +10.6 (2) | no data | no data | no data | no data | +7.2 (2) | -3.4 (3) | -1.0 (3) | +5.5 (2) |
+| South Africa | +5.2 (2) | no data | no data | no data | no data | +1.8 (2) | +0.4 (3) | -1.2 (3) | +2.5 (2, 1 clamped) |
+| Mexico | +10.9 (2) | no data | no data | no data | no data | +1.8 (2) | +6.4 (3) | +0.6 (3) | +10.7 (2) |
+| Argentina | +13.8 (2) | no data | no data | no data | no data | +0.7 (2) | -1.4 (3) | -3.4 (3) | -3.3 (2) |
+| Colombia | +11.9 (2) | no data | no data | no data | no data | +0.5 (2) | +0.7 (3) | -3.1 (3) | -3.1 (2) |
+| Peru | +20.1 (2) | no data | no data | no data | no data | +1.8 (2) | -5.8 (3) | -0.9 (3) | +10.1 (2) |
+| Uruguay | +14.9 (2) | no data | no data | no data | no data | no data | +4.4 (3) | -1.5 (3) | -7.8 (2) |
+| Costa Rica | +12.5 (2) | no data | no data | no data | no data | +2.6 (2) | +3.1 (3) | +4.5 (3) | +5.4 (2) |
+| Germany | +4.3 (2) | no data | no data | no data | no data | +4.9 (2) | +2.1 (3) | -2.8 (3) | -5.9 (2) |
+| France | +0.3 (2) | no data | no data | no data | no data | +1.6 (2) | +7.8 (3) | -7.1 (3) | -0.6 (2) |
+| United Kingdom | +3.4 (2) | no data | no data | no data | no data | +6.2 (2) | -1.9 (3) | +0.1 (3) | +4.2 (2) |
+| Spain | +6.5 (2) | no data | no data | no data | no data | -4.1 (2) | +17.9 (3) | +2.0 (3) | +6.5 (2) |
+| Portugal | +11.2 (2) | no data | no data | no data | no data | +4.1 (2) | +12.2 (3) | -0.6 (3) | +1.8 (2) |
+| Poland | +8.4 (2) | no data | no data | no data | no data | -2.6 (2) | +11.2 (3) | +0.6 (3) | +8.1 (2) |
+| Sweden | +2.3 (2) | no data | no data | no data | no data | -6.1 (2) | -1.1 (3) | -1.7 (3) | +0.5 (2, 1 clamped) |
+| Finland | +1.8 (2) | no data | no data | no data | no data | +2.6 (2) | +3.2 (3) | -1.1 (3) | +7.6 (2) |
+| Ireland | +6.0 (2) | no data | no data | no data | no data | no data | +11.0 (3) | +13.7 (3) | +5.3 (2) |
+| Canada | +2.8 (2) | no data | no data | no data | no data | -5.0 (2) | +3.0 (3) | -1.2 (3) | +4.4 (2) |
+| Australia | -0.4 (2) | no data | no data | no data | no data | +1.1 (2) | +6.4 (3) | +1.6 (3) | no data |
+| Japan | +13.5 (2) | no data | no data | no data | no data | -6.8 (2) | +6.5 (3) | -2.6 (3) | no data |
+| China | +11.1 (2) | no data | no data | no data | no data | +30.6 (2) | -0.9 (3) | -5.0 (3) | +0.7 (2) |
+| Indonesia | +15.1 (2) | no data | no data | no data | no data | +1.1 (2) | +5.8 (3) | -0.5 (3) | no data |
+| Vietnam | +14.1 (2) | no data | no data | no data | no data | +1.8 (2) | -2.0 (3) | +10.1 (3) | no data |
+| Philippines | +10.4 (2) | no data | no data | no data | no data | +0.8 (2) | +0.5 (3) | -5.7 (2) | +11.5 (2) |
+| Malaysia | +23.9 (2) | no data | no data | no data | no data | -1.3 (2) | +2.1 (3) | +5.8 (3) | -1.4 (2) |
+| Thailand | +8.8 (2) | no data | no data | no data | no data | -0.6 (2) | +0.4 (3, 1 clamped) | -0.7 (3) | +4.1 (2) |
+| Turkey | +9.4 (2) | no data | no data | no data | no data | +18.5 (2) | +13.8 (3, 1 clamped) | +2.7 (3) | -4.5 (2) |
+| Israel | +10.4 (2) | no data | no data | no data | no data | +1.4 (2) | +2.9 (3) | +7.5 (3) | +1.5 (2) |
+| United Arab Emirates | +36.7 (2) | no data | no data | no data | no data | +1.0 (2) | +0.9 (3) | +5.0 (3) | no data |
+| Nigeria | +11.5 (2) | no data | no data | no data | no data | no data | +4.6 (3) | -0.3 (3) | no data |
+| Kenya | +16.5 (2) | no data | no data | no data | no data | no data | -19.1 (3) | -4.6 (3) | +2.2 (2) |
+| Rwanda | +16.9 (2) | no data | no data | no data | no data | +0.3 (2) | +10.3 (3) | -3.3 (3, 1 clamped) | +4.6 (2) |
+| Ethiopia | +10.5 (2) | no data | no data | no data | no data | no data | -10.6 (3) | -3.1 (3) | -2.1 (2) |
+| Bolivia | +11.3 (2) | no data | no data | no data | no data | +0.8 (2) | +13.8 (3) | +4.4 (3) | no data |
+| Paraguay | +20.0 (2) | no data | no data | no data | no data | no data | -4.1 (3) | +2.0 (3) | +9.7 (2) |
+| Ecuador | +11.3 (2) | no data | no data | no data | no data | +1.5 (2) | -4.4 (3) | -0.9 (3) | -4.3 (2) |
+| Venezuela | -5.5 (2) | no data | no data | no data | no data | no data | +2.6 (3, 1 clamped) | no data | no data |
+| Panama | +21.6 (2) | no data | no data | no data | no data | -2.7 (2) | +2.1 (3) | -1.0 (3) | -4.2 (2) |
+| Guatemala | +19.0 (2) | no data | no data | no data | no data | no data | -1.7 (3) | -1.2 (3) | +7.7 (2) |
+| Honduras | +6.2 (2) | no data | no data | no data | no data | no data | -5.0 (3) | -1.6 (3) | no data |
+| El Salvador | +6.0 (2) | no data | no data | no data | no data | +1.3 (2) | +9.9 (3) | -3.4 (3) | +8.7 (2) |
+| Nicaragua | +7.1 (2) | no data | no data | no data | no data | no data | +0.9 (3) | -1.6 (3) | no data |
+| Dominican Republic | +11.2 (2) | no data | no data | no data | no data | +0.9 (2) | +8.7 (3) | +1.4 (3) | +14.8 (2) |
+| Cuba | no data | no data | no data | no data | no data | -0.4 (2) | -5.5 (3) | -27.1 (2) | no data |
+| Haiti | 0.0 (2, 2 clamped) | no data | no data | no data | no data | no data | -3.7 (3) | +5.7 (2, 1 clamped) | no data |
 
 | Dimension | Median change over 10 years | Countries with a trend |
 | --- | --- | --- |
-| Anticipation | 10.8 | 53 |
-| Agency | 11.6 | 52 |
-| Learning | 1.9 | 42 |
+| Anticipation | 10.5 | 52 |
 | Experimentation | 1.5 | 41 |
-| Adaptability | 5.1 | 53 |
-| Building | -0.1 | 52 |
+| Adaptability | 2.6 | 53 |
+| Building | -0.8 | 52 |
 | Shared Purpose | 3.4 | 40 |
 
 ### Over 20 years
 
 | Country | Anticipation | Agency | Coordination | Trust | Learning | Experimentation | Adaptability | Building | Shared Purpose |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Brazil | +4.3 (2) | +37.4 (3) | no data | no data | no data | +9.4 (2) | +16.8 (4) | -2.1 (2) | no data |
-| United States | +8.7 (3) | +17.3 (2) | no data | no data | no data | +4.9 (2) | +10.5 (4) | +3.2 (2) | -1.2 (2) |
-| Netherlands | +18.1 (3) | +0.8 (2) | no data | no data | +13.0 (2) | no data | +13.2 (4) | +1.1 (2) | +15.3 (2) |
-| Switzerland | +16.9 (3) | +12.2 (2) | no data | no data | +12.4 (2) | +0.3 (2) | +12.4 (4) | +3.9 (2) | +0.9 (2) |
-| Singapore | +9.6 (3) | +35.9 (2) | no data | no data | no data | no data | +14.5 (4) | 0.0 (2) | no data |
-| South Korea | +39.2 (3) | +18.2 (3) | no data | no data | -9.9 (2) | +22.8 (2) | +15.6 (4) | +8.0 (2) | -1.9 (2) |
-| Estonia | +19.8 (3) | +22.8 (3) | no data | no data | -8.5 (3) | +1.2 (2) | +5.7 (4) | -2.7 (2) | +10.3 (2) |
-| India | no data | +20.8 (3, 1 clamped) | no data | no data | +5.0 (3) | +3.2 (2) | +12.0 (4) | -2.9 (2) | -4.1 (2) |
-| Chile | no data | +40.4 (3) | no data | no data | +19.5 (3) | no data | +18.9 (4) | -2.1 (2) | +5.6 (2) |
-| South Africa | +0.8 (3) | +20.4 (3, 1 clamped) | no data | no data | no data | +1.2 (2) | +1.8 (4) | -4.1 (2) | +3.4 (2, 1 clamped) |
-| Mexico | +0.6 (3) | +29.6 (3, 1 clamped) | no data | no data | +11.1 (3) | +5.4 (2) | +16.2 (4) | +0.7 (2) | no data |
-| Argentina | +2.9 (3) | +29.8 (3, 1 clamped) | no data | no data | +23.8 (2) | -1.5 (2) | +11.7 (4) | -6.2 (2) | +2.3 (2) |
-| Colombia | no data | +39.9 (2, 1 clamped) | no data | no data | +13.0 (2) | +2.9 (2) | +21.7 (4) | -7.2 (2) | +6.6 (2) |
-| Peru | +2.9 (2) | +33.1 (3, 1 clamped) | no data | no data | +13.0 (2) | no data | +0.7 (4) | -3.9 (2) | +18.1 (2) |
-| Uruguay | +6.5 (3) | +29.8 (3) | no data | no data | +21.5 (3) | no data | +31.0 (4) | -2.8 (2) | +8.4 (2) |
-| Costa Rica | +1.9 (3) | +43.1 (2) | no data | no data | -2.0 (2) | +3.3 (2) | +10.6 (4) | +1.0 (2) | +5.9 (2) |
-| Germany | +16.2 (3) | +5.6 (3) | no data | no data | no data | +2.6 (2) | +26.6 (4) | -2.5 (2) | -4.7 (2) |
-| France | +6.9 (3) | +26.4 (3) | no data | no data | no data | no data | +19.4 (4) | -1.1 (2) | -3.4 (2) |
-| United Kingdom | +7.7 (2) | +18.5 (3) | no data | no data | +15.3 (2) | +2.9 (2) | +10.6 (4) | -1.7 (2) | +8.3 (2) |
-| Spain | +9.9 (3) | +3.7 (3) | no data | no data | +18.8 (3) | -7.9 (2) | +13.1 (4) | -1.4 (2) | -1.5 (2) |
-| Portugal | +30.0 (3) | +22.0 (3) | no data | no data | +2.8 (2) | +12.8 (2) | +20.4 (4) | +1.3 (2) | +9.6 (2) |
-| Poland | +16.5 (3) | +22.1 (3) | no data | no data | -15.5 (3) | +4.1 (2) | +35.4 (4) | +5.5 (2) | +12.5 (2) |
-| Sweden | +12.8 (3) | +11.9 (3) | no data | no data | +7.9 (2) | no data | +10.5 (4) | -3.4 (2) | -5.0 (2, 1 clamped) |
-| Finland | +3.6 (3) | +13.1 (3) | no data | no data | +10.4 (2) | -13.2 (2) | +6.4 (4) | -10.4 (2) | +8.3 (2) |
-| Ireland | +18.1 (3) | -2.0 (3) | no data | no data | -5.7 (3) | no data | +10.8 (4) | +48.4 (2) | -10.3 (2) |
-| Canada | +3.7 (3) | no data | no data | no data | +8.5 (2) | no data | +10.1 (4) | -3.3 (2) | +5.2 (2) |
-| Australia | +3.7 (2) | +29.1 (3) | no data | no data | no data | -0.1 (2) | +15.7 (4) | -4.0 (2) | no data |
-| Japan | +0.7 (3) | +11.3 (3, 1 clamped) | no data | no data | no data | no data | +18.8 (4) | -2.9 (2) | no data |
-| China | +17.5 (3) | +66.5 (2, 1 clamped) | no data | no data | no data | +85.7 (2) | +20.8 (4) | -3.7 (2) | +4.9 (2) |
-| Indonesia | no data | +34.4 (2, 1 clamped) | no data | no data | +2.9 (2) | no data | +15.1 (4) | -10.0 (2) | no data |
-| Vietnam | +5.0 (3) | +54.9 (2, 1 clamped) | no data | no data | no data | no data | +15.5 (4) | +10.9 (2) | no data |
-| Philippines | no data | +23.9 (3, 1 clamped) | no data | no data | +19.1 (2) | no data | +8.4 (4) | -10.6 (2) | +16.0 (2) |
-| Malaysia | +12.3 (3) | +22.4 (3) | no data | no data | -1.1 (2) | +1.6 (2) | +12.6 (4) | -4.5 (2) | +3.2 (2) |
-| Thailand | +10.4 (3) | +45.9 (2, 1 clamped) | no data | no data | -26.2 (3) | +0.8 (2) | +6.8 (4) | -7.0 (2) | +13.8 (2) |
-| Turkey | +15.9 (3) | +45.3 (2, 1 clamped) | no data | no data | +18.7 (2) | no data | +20.2 (4, 1 clamped) | +5.9 (2) | no data |
-| Israel | +14.1 (2) | +25.3 (3) | no data | no data | +2.9 (2) | -3.6 (2) | +16.8 (4) | -2.0 (2) | +1.9 (2) |
-| United Arab Emirates | no data | no data | no data | no data | no data | no data | +21.9 (4) | -9.2 (2) | no data |
-| Nigeria | no data | +9.5 (3, 1 clamped) | no data | no data | no data | no data | +5.6 (4, 1 clamped) | -0.4 (2) | no data |
-| Kenya | no data | +10.6 (2, 1 clamped) | no data | no data | -15.3 (2) | no data | -12.9 (4, 1 clamped) | -7.3 (2) | no data |
-| Rwanda | no data | +9.9 (3, 2 clamped) | no data | no data | +0.8 (3) | no data | +8.5 (4, 1 clamped) | -0.6 (2, 1 clamped) | no data |
-| Ethiopia | no data | no data | no data | no data | -38.9 (2) | no data | -20.5 (4, 1 clamped) | -0.5 (2, 1 clamped) | -11.4 (2) |
-| Bolivia | -1.2 (3) | +41.2 (2, 1 clamped) | no data | no data | -1.9 (2) | no data | +16.1 (4) | +2.8 (2) | no data |
-| Paraguay | +1.0 (3) | +49.4 (2, 1 clamped) | no data | no data | -2.6 (2) | +6.2 (2) | +5.8 (4) | +3.7 (2) | +20.8 (2) |
-| Ecuador | no data | +31.5 (3, 1 clamped) | no data | no data | no data | 0.0 (2) | +11.8 (4) | -0.1 (2) | no data |
-| Venezuela | -0.5 (2) | no data | no data | no data | no data | no data | +4.3 (4) | no data | no data |
-| Panama | +0.9 (3) | no data | no data | no data | -13.8 (3) | no data | +14.6 (4) | +3.8 (2) | no data |
-| Guatemala | -0.3 (3, 1 clamped) | +18.3 (3, 1 clamped) | no data | no data | +24.8 (3) | no data | +1.5 (4) | -7.4 (2) | +15.1 (2, 1 clamped) |
-| Honduras | no data | +21.5 (3, 1 clamped) | no data | no data | no data | no data | -13.2 (3) | -5.4 (2) | no data |
-| El Salvador | no data | +22.4 (3, 1 clamped) | no data | no data | -4.2 (3) | no data | +13.7 (4) | -4.7 (2) | +21.7 (2) |
-| Nicaragua | no data | +26.7 (2, 1 clamped) | no data | no data | +8.3 (2) | no data | +11.3 (4) | -0.9 (2) | no data |
-| Dominican Republic | no data | +47.8 (2, 1 clamped) | no data | no data | +22.6 (2) | +2.8 (2) | +13.8 (4) | -4.1 (2) | +23.8 (2) |
-| Cuba | +0.1 (2) | no data | no data | no data | -18.8 (2, 1 clamped) | +0.3 (2) | -0.2 (3) | no data | no data |
-| Haiti | no data | +15.3 (2, 1 clamped) | no data | no data | no data | no data | +20.8 (3, 1 clamped) | +5.1 (2) | no data |
+| Brazil | no data | no data | no data | no data | no data | +9.4 (2) | +7.7 (3) | no data | no data |
+| United States | no data | no data | no data | no data | no data | +4.9 (2) | +1.2 (3) | no data | -1.2 (2) |
+| Netherlands | no data | no data | no data | no data | no data | no data | +9.8 (3) | no data | +15.3 (2) |
+| Switzerland | no data | no data | no data | no data | no data | +0.3 (2) | +3.1 (3) | no data | +0.9 (2) |
+| Singapore | no data | no data | no data | no data | no data | no data | +12.4 (3) | no data | no data |
+| South Korea | no data | no data | no data | no data | no data | +22.8 (2) | +8.1 (3) | no data | -1.9 (2) |
+| Estonia | no data | no data | no data | no data | no data | +1.2 (2) | -4.1 (3) | no data | +10.3 (2) |
+| India | no data | no data | no data | no data | no data | +3.2 (2) | +13.9 (3) | no data | -4.1 (2) |
+| Chile | no data | no data | no data | no data | no data | no data | +13.1 (3) | no data | +5.6 (2) |
+| South Africa | no data | no data | no data | no data | no data | +1.2 (2) | -0.8 (3) | no data | +3.4 (2, 1 clamped) |
+| Mexico | no data | no data | no data | no data | no data | +5.4 (2) | +8.8 (3) | no data | no data |
+| Argentina | no data | no data | no data | no data | no data | -1.5 (2) | +0.5 (3) | no data | +2.3 (2) |
+| Colombia | no data | no data | no data | no data | no data | +2.9 (2) | +18.3 (3) | no data | +6.6 (2) |
+| Peru | no data | no data | no data | no data | no data | no data | -5.9 (3) | no data | +18.1 (2) |
+| Uruguay | no data | no data | no data | no data | no data | no data | +21.1 (3) | no data | +8.4 (2) |
+| Costa Rica | no data | no data | no data | no data | no data | +3.3 (2) | -0.4 (3) | no data | +5.9 (2) |
+| Germany | no data | no data | no data | no data | no data | +2.6 (2) | +16.8 (3) | no data | -4.7 (2) |
+| France | no data | no data | no data | no data | no data | no data | +6.4 (3) | no data | -3.4 (2) |
+| United Kingdom | no data | no data | no data | no data | no data | +2.9 (2) | -0.1 (3) | no data | +8.3 (2) |
+| Spain | no data | no data | no data | no data | no data | -7.9 (2) | +1.0 (3) | no data | -1.5 (2) |
+| Portugal | no data | no data | no data | no data | no data | +12.8 (2) | +5.5 (3) | no data | +9.6 (2) |
+| Poland | no data | no data | no data | no data | no data | +4.1 (2) | +35.0 (3) | no data | +12.5 (2) |
+| Sweden | no data | no data | no data | no data | no data | no data | +4.9 (3) | no data | -5.0 (2, 1 clamped) |
+| Finland | no data | no data | no data | no data | no data | -13.2 (2) | +2.2 (3) | no data | +8.3 (2) |
+| Ireland | no data | no data | no data | no data | no data | no data | +1.4 (3) | no data | -10.3 (2) |
+| Canada | no data | no data | no data | no data | no data | no data | +1.2 (3) | no data | +5.2 (2) |
+| Australia | no data | no data | no data | no data | no data | -0.1 (2) | +8.9 (3) | no data | no data |
+| Japan | no data | no data | no data | no data | no data | no data | +12.7 (3) | no data | no data |
+| China | no data | no data | no data | no data | no data | +85.7 (2) | -1.8 (3) | no data | +4.9 (2) |
+| Indonesia | no data | no data | no data | no data | no data | no data | +16.8 (3) | no data | no data |
+| Vietnam | no data | no data | no data | no data | no data | no data | +4.9 (3) | no data | no data |
+| Philippines | no data | no data | no data | no data | no data | no data | +6.6 (3) | no data | +16.0 (2) |
+| Malaysia | no data | no data | no data | no data | no data | +1.6 (2) | +9.4 (3) | no data | +3.2 (2) |
+| Thailand | no data | no data | no data | no data | no data | +0.8 (2) | -0.1 (3) | no data | +13.8 (2) |
+| Turkey | no data | no data | no data | no data | no data | no data | +13.7 (3, 1 clamped) | no data | no data |
+| Israel | no data | no data | no data | no data | no data | -3.6 (2) | +16.8 (3) | no data | +1.9 (2) |
+| United Arab Emirates | no data | no data | no data | no data | no data | no data | +4.6 (3) | no data | no data |
+| Nigeria | no data | no data | no data | no data | no data | no data | +7.5 (3) | no data | no data |
+| Kenya | no data | no data | no data | no data | no data | no data | -19.2 (3) | no data | no data |
+| Rwanda | no data | no data | no data | no data | no data | no data | +11.0 (3) | no data | no data |
+| Ethiopia | no data | no data | no data | no data | no data | no data | -27.7 (3) | no data | -11.4 (2) |
+| Bolivia | no data | no data | no data | no data | no data | no data | +13.3 (3) | no data | no data |
+| Paraguay | no data | no data | no data | no data | no data | +6.2 (2) | -1.1 (3) | no data | +20.8 (2) |
+| Ecuador | no data | no data | no data | no data | no data | 0.0 (2) | +4.1 (3) | no data | no data |
+| Venezuela | no data | no data | no data | no data | no data | no data | -1.8 (3) | no data | no data |
+| Panama | no data | no data | no data | no data | no data | no data | +9.4 (3) | no data | no data |
+| Guatemala | no data | no data | no data | no data | no data | no data | -1.5 (3) | no data | +15.1 (2, 1 clamped) |
+| Honduras | no data | no data | no data | no data | no data | no data | -13.2 (3) | no data | no data |
+| El Salvador | no data | no data | no data | no data | no data | no data | +10.6 (3) | no data | +21.7 (2) |
+| Nicaragua | no data | no data | no data | no data | no data | no data | +11.4 (3) | no data | no data |
+| Dominican Republic | no data | no data | no data | no data | no data | +2.8 (2) | +11.5 (3) | no data | +23.8 (2) |
+| Cuba | no data | no data | no data | no data | no data | +0.3 (2) | -0.2 (3) | no data | no data |
+| Haiti | no data | no data | no data | no data | no data | no data | +20.8 (3, 1 clamped) | no data | no data |
 
 | Dimension | Median change over 20 years | Countries with a trend |
 | --- | --- | --- |
-| Anticipation | 6.9 | 37 |
-| Agency | 22.8 | 47 |
-| Learning | 5 | 37 |
 | Experimentation | 2.7 | 26 |
-| Adaptability | 12.6 | 53 |
-| Building | -2.1 | 51 |
+| Adaptability | 6.4 | 53 |
 | Shared Purpose | 5.6 | 33 |
 
 ### Over 30 years
 
 | Country | Anticipation | Agency | Coordination | Trust | Learning | Experimentation | Adaptability | Building | Shared Purpose |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Brazil | no data | +48.7 (2, 1 clamped) | no data | no data | no data | no data | +10.0 (3) | -0.4 (2) | no data |
-| United States | +12.6 (3) | +62.7 (2, 1 clamped) | no data | no data | no data | no data | +1.4 (3) | no data | -3.8 (2) |
-| Netherlands | +25.1 (3) | no data | no data | no data | no data | no data | +13.2 (3) | +1.3 (2) | +15.4 (2) |
-| Switzerland | +26.6 (3) | no data | no data | no data | no data | no data | +4.8 (3) | +8.2 (2) | +2.5 (2) |
-| Singapore | +41.6 (3) | no data | no data | no data | no data | no data | +14.9 (3) | +13.1 (2) | no data |
-| South Korea | +56.2 (3) | +76.5 (2, 1 clamped) | no data | no data | no data | no data | +8.3 (3) | +13.5 (2) | no data |
-| Estonia | no data | no data | no data | no data | no data | no data | +12.3 (3) | +1.1 (2) | +0.5 (2) |
-| India | no data | +36.0 (2, 1 clamped) | no data | no data | no data | no data | +10.7 (3) | -2.6 (2) | -3.3 (2) |
-| Chile | no data | no data | no data | no data | no data | no data | +11.1 (3) | -4.6 (2) | +23.9 (2, 1 clamped) |
-| South Africa | no data | +32.1 (2, 1 clamped) | no data | no data | +9.5 (2) | no data | -3.9 (3) | -9.7 (2) | +9.7 (2, 1 clamped) |
-| Mexico | +2.2 (3) | no data | no data | no data | no data | no data | +14.0 (3) | -3.5 (2) | +28.5 (2) |
-| Argentina | no data | +42.7 (2, 1 clamped) | no data | no data | +39.6 (2) | no data | +15.2 (3) | -5.4 (2) | +16.6 (2) |
-| Colombia | no data | +37.9 (2, 1 clamped) | no data | no data | no data | no data | +19.1 (3) | -4.3 (2) | no data |
-| Peru | no data | +43.1 (2, 1 clamped) | no data | no data | no data | no data | +17.6 (3) | -2.3 (2) | +10.0 (2) |
-| Uruguay | no data | +45.8 (2, 1 clamped) | no data | no data | +34.2 (2) | no data | +26.7 (3) | -9.2 (2) | +2.3 (2) |
-| Costa Rica | no data | no data | no data | no data | no data | no data | +4.7 (3) | -2.0 (2) | +3.3 (2) |
-| Germany | +23.2 (3) | no data | no data | no data | no data | no data | +19.7 (3) | +1.1 (2) | -9.3 (2) |
-| France | +10.9 (3) | no data | no data | no data | no data | no data | +15.7 (3) | -2.3 (2) | +4.5 (2) |
-| United Kingdom | +11.9 (2) | +50.3 (2, 1 clamped) | no data | no data | no data | no data | +7.4 (3) | -5.7 (2) | +12.4 (2) |
-| Spain | +21.3 (3) | no data | no data | no data | no data | no data | +32.1 (3) | -7.3 (2) | +4.0 (2) |
-| Portugal | +42.1 (3) | no data | no data | no data | no data | no data | +13.5 (3) | -3.5 (2) | no data |
-| Poland | +20.5 (3) | +46.5 (2, 1 clamped) | no data | no data | no data | no data | +33.8 (3) | +6.9 (2) | +0.4 (2) |
-| Sweden | no data | +70.9 (2, 1 clamped) | no data | no data | no data | no data | +9.0 (3) | -1.8 (2) | -6.6 (2, 2 clamped) |
-| Finland | no data | no data | no data | no data | no data | no data | +20.7 (3) | -5.5 (2) | +3.1 (2, 1 clamped) |
-| Ireland | +29.1 (3) | no data | no data | no data | no data | no data | +18.9 (3) | +53.4 (2) | -6.0 (2) |
-| Canada | +14.7 (3) | no data | no data | no data | no data | no data | +14.6 (3) | no data | +1.9 (2) |
-| Australia | +18.2 (2) | +63.3 (2, 1 clamped) | no data | no data | no data | no data | +17.0 (3) | -5.3 (2) | no data |
-| Japan | +7.7 (3) | +40.1 (2, 1 clamped) | no data | no data | no data | no data | +12.9 (3) | -4.4 (2) | no data |
-| China | +24.9 (3) | +71.3 (2, 1 clamped) | no data | no data | +44.9 (2) | no data | -7.5 (3) | no data | no data |
-| Indonesia | no data | no data | no data | no data | +16.3 (2) | no data | +10.0 (3) | -6.7 (2) | no data |
-| Vietnam | no data | +66.7 (2, 1 clamped) | no data | no data | no data | no data | +9.1 (3) | no data | no data |
-| Philippines | no data | +31.4 (2, 1 clamped) | no data | no data | +14.8 (2) | no data | +10.5 (3) | no data | +5.3 (2) |
-| Malaysia | +16.4 (3) | +42.8 (2, 1 clamped) | no data | no data | +3.7 (2) | no data | +13.5 (3) | -4.1 (2) | +0.5 (2) |
-| Thailand | +12.4 (3) | no data | no data | no data | +6.1 (2) | no data | -1.9 (3) | +0.5 (2) | +13.7 (2) |
-| Turkey | +20.1 (3) | no data | no data | no data | +44.3 (2) | no data | +9.7 (3, 1 clamped) | -0.5 (2) | +8.2 (2) |
-| Israel | +28.4 (2) | +45.6 (2, 1 clamped) | no data | no data | no data | no data | +14.5 (3) | -0.1 (2) | -8.4 (2) |
-| United Arab Emirates | no data | no data | no data | no data | no data | no data | +4.4 (3) | -15.6 (2) | no data |
-| Nigeria | no data | +13.2 (2, 1 clamped) | no data | no data | no data | no data | +5.6 (3) | -14.7 (2) | no data |
-| Kenya | no data | +10.9 (2, 1 clamped) | no data | no data | no data | no data | -19.0 (3) | -6.2 (2) | no data |
-| Rwanda | no data | +10.1 (2, 1 clamped) | no data | no data | no data | no data | +9.8 (3) | -4.2 (2, 1 clamped) | no data |
-| Ethiopia | no data | no data | no data | no data | no data | no data | -26.2 (3) | -1.2 (2, 1 clamped) | +13.3 (2) |
-| Bolivia | no data | +36.8 (2, 1 clamped) | no data | no data | no data | no data | +11.7 (3) | -4.3 (2) | no data |
-| Paraguay | no data | +45.8 (2, 1 clamped) | no data | no data | no data | no data | -3.4 (3, 1 clamped) | +8.9 (2) | no data |
-| Ecuador | no data | no data | no data | no data | no data | no data | +12.0 (3) | -11.7 (2) | no data |
+| Brazil | no data | no data | no data | no data | no data | no data | +10.0 (3) | no data | no data |
+| United States | no data | no data | no data | no data | no data | no data | +1.4 (3) | no data | -3.8 (2) |
+| Netherlands | no data | no data | no data | no data | no data | no data | +13.2 (3) | no data | +15.4 (2) |
+| Switzerland | no data | no data | no data | no data | no data | no data | +4.8 (3) | no data | +2.5 (2) |
+| Singapore | no data | no data | no data | no data | no data | no data | +14.9 (3) | no data | no data |
+| South Korea | no data | no data | no data | no data | no data | no data | +8.3 (3) | no data | no data |
+| Estonia | no data | no data | no data | no data | no data | no data | +12.3 (3) | no data | +0.5 (2) |
+| India | no data | no data | no data | no data | no data | no data | +10.7 (3) | no data | -3.3 (2) |
+| Chile | no data | no data | no data | no data | no data | no data | +11.1 (3) | no data | +23.9 (2, 1 clamped) |
+| South Africa | no data | no data | no data | no data | no data | no data | -3.9 (3) | no data | +9.7 (2, 1 clamped) |
+| Mexico | no data | no data | no data | no data | no data | no data | +14.0 (3) | no data | +28.5 (2) |
+| Argentina | no data | no data | no data | no data | no data | no data | +15.2 (3) | no data | +16.6 (2) |
+| Colombia | no data | no data | no data | no data | no data | no data | +19.1 (3) | no data | no data |
+| Peru | no data | no data | no data | no data | no data | no data | +17.6 (3) | no data | +10.0 (2) |
+| Uruguay | no data | no data | no data | no data | no data | no data | +26.7 (3) | no data | +2.3 (2) |
+| Costa Rica | no data | no data | no data | no data | no data | no data | +4.7 (3) | no data | +3.3 (2) |
+| Germany | no data | no data | no data | no data | no data | no data | +19.7 (3) | no data | -9.3 (2) |
+| France | no data | no data | no data | no data | no data | no data | +15.7 (3) | no data | +4.5 (2) |
+| United Kingdom | no data | no data | no data | no data | no data | no data | +7.4 (3) | no data | +12.4 (2) |
+| Spain | no data | no data | no data | no data | no data | no data | +32.1 (3) | no data | +4.0 (2) |
+| Portugal | no data | no data | no data | no data | no data | no data | +13.5 (3) | no data | no data |
+| Poland | no data | no data | no data | no data | no data | no data | +33.8 (3) | no data | +0.4 (2) |
+| Sweden | no data | no data | no data | no data | no data | no data | +9.0 (3) | no data | -6.6 (2, 2 clamped) |
+| Finland | no data | no data | no data | no data | no data | no data | +20.7 (3) | no data | +3.1 (2, 1 clamped) |
+| Ireland | no data | no data | no data | no data | no data | no data | +18.9 (3) | no data | -6.0 (2) |
+| Canada | no data | no data | no data | no data | no data | no data | +14.6 (3) | no data | +1.9 (2) |
+| Australia | no data | no data | no data | no data | no data | no data | +17.0 (3) | no data | no data |
+| Japan | no data | no data | no data | no data | no data | no data | +12.9 (3) | no data | no data |
+| China | no data | no data | no data | no data | no data | no data | -7.5 (3) | no data | no data |
+| Indonesia | no data | no data | no data | no data | no data | no data | +10.0 (3) | no data | no data |
+| Vietnam | no data | no data | no data | no data | no data | no data | +9.1 (3) | no data | no data |
+| Philippines | no data | no data | no data | no data | no data | no data | +10.5 (3) | no data | +5.3 (2) |
+| Malaysia | no data | no data | no data | no data | no data | no data | +13.5 (3) | no data | +0.5 (2) |
+| Thailand | no data | no data | no data | no data | no data | no data | -1.9 (3) | no data | +13.7 (2) |
+| Turkey | no data | no data | no data | no data | no data | no data | +9.7 (3, 1 clamped) | no data | +8.2 (2) |
+| Israel | no data | no data | no data | no data | no data | no data | +14.5 (3) | no data | -8.4 (2) |
+| United Arab Emirates | no data | no data | no data | no data | no data | no data | +4.4 (3) | no data | no data |
+| Nigeria | no data | no data | no data | no data | no data | no data | +5.6 (3) | no data | no data |
+| Kenya | no data | no data | no data | no data | no data | no data | -19.0 (3) | no data | no data |
+| Rwanda | no data | no data | no data | no data | no data | no data | +9.8 (3) | no data | no data |
+| Ethiopia | no data | no data | no data | no data | no data | no data | -26.2 (3) | no data | +13.3 (2) |
+| Bolivia | no data | no data | no data | no data | no data | no data | +11.7 (3) | no data | no data |
+| Paraguay | no data | no data | no data | no data | no data | no data | -3.4 (3, 1 clamped) | no data | no data |
+| Ecuador | no data | no data | no data | no data | no data | no data | +12.0 (3) | no data | no data |
 | Venezuela | no data | no data | no data | no data | no data | no data | -0.5 (3) | no data | no data |
-| Panama | +0.3 (3) | no data | no data | no data | -1.2 (2) | no data | +20.3 (3) | -0.7 (2) | no data |
-| Guatemala | no data | no data | no data | no data | +17.7 (2) | no data | -2.0 (3) | +0.8 (2) | no data |
-| Honduras | no data | no data | no data | no data | +17.7 (2) | no data | -23.5 (3) | -4.0 (2) | no data |
-| El Salvador | no data | no data | no data | no data | no data | no data | +16.0 (3) | -7.7 (2) | no data |
-| Nicaragua | no data | no data | no data | no data | +8.3 (2) | no data | +19.1 (3) | -0.8 (2) | no data |
-| Dominican Republic | no data | no data | no data | no data | no data | no data | +23.9 (3) | -9.9 (2) | +22.7 (2) |
-| Cuba | +1.9 (2) | no data | no data | no data | +30.8 (2) | no data | +17.0 (3) | no data | no data |
-| Haiti | no data | +14.2 (2, 1 clamped) | no data | no data | no data | no data | +4.6 (3, 1 clamped) | +8.5 (2) | no data |
+| Panama | no data | no data | no data | no data | no data | no data | +20.3 (3) | no data | no data |
+| Guatemala | no data | no data | no data | no data | no data | no data | -2.0 (3) | no data | no data |
+| Honduras | no data | no data | no data | no data | no data | no data | -23.5 (3) | no data | no data |
+| El Salvador | no data | no data | no data | no data | no data | no data | +16.0 (3) | no data | no data |
+| Nicaragua | no data | no data | no data | no data | no data | no data | +19.1 (3) | no data | no data |
+| Dominican Republic | no data | no data | no data | no data | no data | no data | +23.9 (3) | no data | +22.7 (2) |
+| Cuba | no data | no data | no data | no data | no data | no data | +17.0 (3) | no data | no data |
+| Haiti | no data | no data | no data | no data | no data | no data | +4.6 (3, 1 clamped) | no data | no data |
 
 | Dimension | Median change over 30 years | Countries with a trend |
 | --- | --- | --- |
-| Anticipation | 20.1 | 23 |
-| Agency | 43.1 | 25 |
-| Learning | 17 | 14 |
 | Adaptability | 11.7 | 53 |
-| Building | -3 | 46 |
 | Shared Purpose | 3.7 | 28 |
 
 ### Over 50 years
@@ -345,7 +335,7 @@ Trends use the current frame and only indicators observed at both ends. The bask
 | Chile | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | South Africa | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Mexico | no data | no data | no data | no data | no data | no data | no data | no data | no data |
-| Argentina | no data | no data | no data | no data | +60.1 (2) | no data | no data | no data | no data |
+| Argentina | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Colombia | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Peru | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Uruguay | no data | no data | no data | no data | no data | no data | no data | no data | no data |
@@ -362,40 +352,39 @@ Trends use the current frame and only indicators observed at both ends. The bask
 | Canada | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Australia | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Japan | no data | no data | no data | no data | no data | no data | no data | no data | no data |
-| China | no data | no data | no data | no data | +47.0 (2, 1 clamped) | no data | no data | no data | no data |
-| Indonesia | no data | no data | no data | no data | +9.8 (2) | no data | no data | no data | no data |
+| China | no data | no data | no data | no data | no data | no data | no data | no data | no data |
+| Indonesia | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Vietnam | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Philippines | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Malaysia | no data | no data | no data | no data | no data | no data | no data | no data | no data |
-| Thailand | no data | no data | no data | no data | +17.6 (2) | no data | no data | no data | no data |
+| Thailand | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Turkey | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Israel | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | United Arab Emirates | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Nigeria | no data | no data | no data | no data | no data | no data | no data | no data | no data |
-| Kenya | no data | no data | no data | no data | -6.4 (2, 1 clamped) | no data | no data | no data | no data |
+| Kenya | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Rwanda | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Ethiopia | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Bolivia | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Paraguay | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Ecuador | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Venezuela | no data | no data | no data | no data | no data | no data | no data | no data | no data |
-| Panama | no data | no data | no data | no data | +4.9 (2) | no data | no data | no data | no data |
-| Guatemala | no data | no data | no data | no data | +19.2 (2) | no data | no data | no data | no data |
+| Panama | no data | no data | no data | no data | no data | no data | no data | no data | no data |
+| Guatemala | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Honduras | no data | no data | no data | no data | no data | no data | no data | no data | no data |
-| El Salvador | no data | no data | no data | no data | +26.2 (2) | no data | no data | no data | no data |
-| Nicaragua | no data | no data | no data | no data | +12.6 (2) | no data | no data | no data | no data |
+| El Salvador | no data | no data | no data | no data | no data | no data | no data | no data | no data |
+| Nicaragua | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Dominican Republic | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Cuba | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 | Haiti | no data | no data | no data | no data | no data | no data | no data | no data | no data |
 
 | Dimension | Median change over 50 years | Countries with a trend |
 | --- | --- | --- |
-| Learning | 17.6 | 9 |
 | Shared Purpose | 2.8 | 4 |
 
 Read the median first. Global adoption can lift every country, so a positive change does not necessarily mean catching up. A country gains ground when it beats the median. Short and long spans use different baskets, which shows how far the data reaches.
 
-The strongest evidence base in this run is 0.71, in the good band. 43 of 477 country and dimension pairs reach the good band.
+The strongest evidence base in this run is 0.68, in the good band. 37 of 477 country and dimension pairs reach the good band.
 
 Confidence bands:
 
@@ -408,11 +397,11 @@ Confidence bands:
 
 | Dimension | Indicators | Observed | Gaps | Mean coverage | Mean confidence | Subjectivity share |
 | --- | --- | --- | --- | --- | --- | --- |
-| Adaptability | 8 | 6 | 2 | 0.729 | 0.676 | 0.25 |
-| Building | 8 | 5 | 2 | 0.698 | 0.603 | 0.375 |
-| Anticipation | 7 | 5 | 2 | 0.698 | 0.601 | 0.286 |
-| Agency | 8 | 6 | 2 | 0.731 | 0.577 | 0.25 |
-| Learning | 7 | 5 | 2 | 0.695 | 0.495 | 0.286 |
+| Adaptability | 7 | 5 | 2 | 0.69 | 0.638 | 0.286 |
+| Building | 7 | 4 | 2 | 0.654 | 0.551 | 0.429 |
+| Anticipation | 4 | 2 | 2 | 0.495 | 0.451 | 0.5 |
+| Agency | 5 | 3 | 2 | 0.577 | 0.383 | 0.4 |
+| Learning | 5 | 3 | 2 | 0.577 | 0.368 | 0.4 |
 | Coordination | 8 | 3 | 2 | 0.566 | 0.362 | 0.625 |
 | Shared Purpose | 7 | 2 | 4 | 0.311 | 0.26 | 0.714 |
 | Experimentation | 8 | 4 | 4 | 0.321 | 0.225 | 0.625 |
@@ -426,6 +415,7 @@ Strongest evidence: Adaptability, Building, Anticipation. Weakest evidence: Shar
 - **Shared Purpose**: 71% of its indicators are perception proxies or have no data at all (4 of 7 unmeasured).
 - **Coordination**: 63% of its indicators are perception proxies or have no data at all (2 of 8 unmeasured).
 - **Experimentation**: 63% of its indicators are perception proxies or have no data at all (4 of 8 unmeasured).
+- **Anticipation**: 50% of its indicators are perception proxies or have no data at all (2 of 4 unmeasured).
 
 ## Some dimensions ask more than one question
 
@@ -454,54 +444,68 @@ The correlation is computed on the value as published, so its sign reads the way
 - **Bribery incidence** (Trust, % of firms): Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score.
 - **Political polarization** (Shared Purpose, index 0-4): The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita.
 
+## Conditions sit beside each dimension
+
+A condition records what a country has to work with: a stock of infrastructure, access, money, people or enrolment, or income itself. It is fetched and published as the publisher wrote it, with its rank among the countries that have it, and it enters no frame, mean, coverage count, confidence or trend. The first column asks whether having it goes with income, the second whether it goes with doing the capability it sits beside. See D122.
+
+| Condition | Dimension | Countries | Latest | r vs log GDP per capita | r vs dimension score |
+| --- | --- | --- | --- | --- | --- |
+| R&D expenditure | Anticipation | 51 | 2024 | 0.632 (n 49) | 0.710 (n 50) |
+| Researchers in R&D | Anticipation | 50 | 2024 | 0.787 (n 48) | 0.876 (n 49) |
+| Secure internet servers | Anticipation | 53 | 2024 | 0.895 (n 51) | 0.887 (n 52) |
+| Individuals using the internet | Agency | 53 | 2025 | 0.879 (n 51) | 0.456 (n 52) |
+| Financial account ownership | Agency | 52 | 2024 | 0.790 (n 51) | 0.497 (n 52) |
+| Credit to the private sector | Agency | 52 | 2025 | 0.542 (n 51) | 0.495 (n 52) |
+| Tertiary enrolment | Learning | 52 | 2025 | 0.806 (n 50) | 0.674 (n 51) |
+| Public education expenditure | Learning | 53 | 2025 | 0.351 (n 51) | 0.472 (n 52) |
+| Fixed broadband subscriptions | Adaptability | 53 | 2024 | 0.845 (n 51) | 0.666 (n 53) |
+| Output per worker | Building | 51 | 2025 | 0.892 (n 51) | 0.461 (n 51) |
+
+Both correlations read the value after the registry transform, so secure servers are read logged.
+
 ## Every dimension is checked against income
 
 | Dimension | Pearson r vs log GDP per capita | Spearman | n |
 | --- | --- | --- | --- |
-| Anticipation | 0.873 | 0.921 | 51 |
-| Agency | 0.851 | 0.857 | 51 |
-| Adaptability | 0.839 | 0.84 | 51 |
-| Learning | 0.731 | 0.733 | 51 |
-| Building | 0.635 | 0.657 | 51 |
+| Anticipation | 0.872 | 0.892 | 51 |
+| Adaptability | 0.738 | 0.714 | 51 |
+| Learning | 0.658 | 0.636 | 51 |
+| Agency | 0.638 | 0.653 | 51 |
 | Experimentation | 0.623 | 0.75 | 50 |
 | Trust | 0.611 | 0.684 | 36 |
 | Coordination | 0.563 | 0.618 | 51 |
 | Shared Purpose | 0.457 | 0.477 | 47 |
+| Building | 0.434 | 0.457 | 51 |
 
 ## Indicators are checked for income bias
 
 | Indicator | Dimension | Class | r vs log GDP pc | Registry prior |
 | --- | --- | --- | --- | --- |
-| Secure internet servers | Anticipation | I | 0.895 | 0.6 |
-| Output per worker | Building | O | 0.892 | 0.9 |
-| Individuals using the internet | Agency | I | 0.879 | 0.55 |
 | Human Capital Index | Learning | C | 0.877 | 0.5 |
-| Fixed broadband subscriptions | Adaptability | I | 0.845 | 0.6 |
-| Tertiary enrolment | Learning | I | 0.806 | 0.5 |
 | Scientific articles | Anticipation | O | 0.794 | 0.4 |
-| Financial account ownership | Agency | I | 0.79 | 0.5 |
-| Researchers in R&D | Anticipation | I | 0.787 | 0.5 |
 | Statistical performance | Anticipation | C | 0.765 | 0.25 |
 
 ## What changes when income-linked indicators are removed
 
-The test removes 10 indicators correlated with log GDP per capita at 0.7 or above, then scores the remaining data.
+The test removes 3 indicators correlated with log GDP per capita at 0.7 or above, then scores the remaining data.
+
+Anticipation lose every measured indicator in this test and cannot be scored without income-linked evidence. As currently specified, those dimensions are not separable from income per head.
 
 | Dimension | Mean absolute score shift | Countries changing rank position |
 | --- | --- | --- |
-| Anticipation | no data | 53 |
-| Agency | 8.5 | 44 |
+| Anticipation | no data | 52 |
+| Agency | 0 | 0 |
 | Coordination | 0 | 0 |
 | Trust | 0 | 0 |
-| Learning | 8.06 | 47 |
+| Learning | 7.5 | 51 |
 | Experimentation | 0 | 0 |
-| Adaptability | 4.76 | 46 |
-| Building | 3.8 | 42 |
+| Adaptability | 0 | 0 |
+| Building | 0 | 0 |
 | Shared Purpose | 0 | 0 |
 
 ## Some historical values fall outside the frame
 
-0 of 1869 observed cells (0%) sit outside the frame and clamp to 0 or 100. A current value cannot fall outside a frame its own country helped build, so a clamp here comes from a value the published frame did not see.
+0 of 1349 observed cells (0%) sit outside the frame and clamp to 0 or 100. A current value cannot fall outside a frame its own country helped build, so a clamp here comes from a value the published frame did not see.
 
 ## Some indicators separate countries less than they did
 
@@ -509,33 +513,26 @@ Every other test here reads the latest year. This one asks whether an indicator 
 
 Two rules carry over from the trend layer. Historical values are scored against the frame built from every country's current values, so a change in spread is a change in the countries and not a change in the scale. And the spread is computed on the countries observed at both ends of the window, so an indicator that gained coverage does not read as one that gained variance. That panel is printed beside every row.
 
-18 of 38 scored indicators reach back far enough to test. The other 20 either start after 2006 or stop before 2021, which is its own finding about what the registry can watch over time.
+11 of 28 scored indicators reach back far enough to test. The other 17 either start after 2006 or stop before 2021, which is its own finding about what the registry can watch over time.
 
 | Indicator | Dimension | Countries | Years | Spread 2006 | Spread 2026 | Change | Trend |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Income inequality | Shared Purpose | 45 | 10 | 57.44 | 33.56 | -42% | -0.976 |
-| Credit to the private sector | Agency | 42 | 21 | 41.5 | 32.13 | -23% | -0.846 |
-| Individuals using the internet | Agency | 53 | 21 | 42.12 | 27.64 | -34% | -0.792 |
 | Resident patent applications | Experimentation | 40 | 19 | 38.31 | 34.31 | -10% | -0.717 |
 | Unemployment rate | Adaptability | 53 | 21 | 28.1 | 21.61 | -23% | -0.556 |
 | Electricity transmission losses | Adaptability | 53 | 21 | 26.58 | 25.8 | -3% | -0.453 |
-| Output per worker | Building | 51 | 21 | 32.15 | 31.21 | -3% | -0.452 |
 | Labour force participation | Adaptability | 53 | 21 | 38.55 | 33.84 | -12% | -0.44 |
-| Public education expenditure | Learning | 38 | 20 | 23.31 | 22.4 | -4% | -0.075 |
 | Resident trademark applications | Experimentation | 31 | 19 | 19.48 | 29.83 | 53% | 0.629 |
+| Manufacturing value added | Building | 52 | 21 | 18.09 | 21.89 | 21% | 0.657 |
+| Budget execution fidelity | Coordination | 10 | 21 | 10.72 | 25.33 | 136% | 0.659 |
+| Tax revenue | Shared Purpose | 36 | 21 | 34.32 | 38.37 | 12% | 0.73 |
+| Scientific articles | Anticipation | 53 | 21 | 34.83 | 49.25 | 41% | 0.829 |
 
-2 indicators fall on both tests, a rank correlation against year at or below -0.5 and a narrowing of at least 25%: Income inequality, Individuals using the internet. Convergence is a real thing the world does, so a falling spread is a finding rather than a fault. What it rules out is going on reading the indicator as though it still separated countries as well as it once did.
+One indicator falls on both tests, a rank correlation against year at or below -0.5 and a narrowing of at least 25%: Income inequality. Convergence is a real thing the world does, so a falling spread is a finding rather than a fault. What it rules out is going on reading the indicator as though it still separated countries as well as it once did.
 
 ## Indicator pairs are checked for overlap
 
-| Indicator A | Indicator B | r |
-| --- | --- | --- |
-| Researchers in R&D | Scientific articles | 0.918 |
-| R&D expenditure | Researchers in R&D | 0.885 |
-| Human Capital Index | Fixed broadband subscriptions | 0.874 |
-| Researchers in R&D | Human Capital Index | 0.868 |
-| Secure internet servers | Human Capital Index | 0.862 |
-| Secure internet servers | Financial account ownership | 0.861 |
+No indicator pair reaches 0.85 across the 53 countries.
 
 ## Dimension pairs are checked for overlap
 
@@ -547,21 +544,21 @@ No dimension pair reaches 0.9. At this sample size, the nine dimensions carry di
 
 | Dimension | CHE | SGP | EST |
 | --- | --- | --- | --- |
-| Anticipation | 81.1 | 78.1 | 63.9 |
-| Agency | 75.7 | 84.4 | 84.8 |
+| Anticipation | 96.3 | 84.8 | 72 |
+| Agency | 58.8 | 84.3 | 96.9 |
 | Coordination | 98.3 | 71 | 93 |
 | Trust | 75.3 | 73.5 | 61.8 |
-| Learning | 65.4 | 56.1 | 57.2 |
+| Learning | 68.6 | 56.9 | 55.8 |
 | Experimentation | 50.7 | 46.6 | 30.2 |
-| Adaptability | 78.8 | 80.2 | 71.5 |
-| Building | 58.1 | 71.2 | 30.8 |
+| Adaptability | 75.3 | 84.9 | 71.4 |
+| Building | 57.6 | 66.6 | 31.1 |
 | Shared Purpose | 52.2 | no data | 82.4 |
 
 ## Brazil is the first case
 
-Strongest: Coordination (86.4), Adaptability (62.7), Agency (58.9).
+Strongest: Coordination (86.4), Adaptability (65.4), Agency (51.6).
 
-Weakest: Experimentation (30), Trust (26.9), Building (25.3).
+Weakest: Experimentation (30), Building (28.2), Trust (26.9).
 
 ## Some indicators have no dataset
 

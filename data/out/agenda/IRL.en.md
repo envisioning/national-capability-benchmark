@@ -8,14 +8,14 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 67.1 | 0.64 (usable) | +9.7 over 10 years using 5 indicators |
-| Agency | 68.7 | 0.61 (usable) | +2.6 over 10 years using 4 indicators |
+| Anticipation | 77.6 | 0.46 (usable) | +6 over 10 years using 2 indicators |
+| Agency | 69.1 | 0.41 (thin) | no trend |
 | Coordination | 88.8 | 0.39 (thin) | no trend |
 | Trust | not scored | 0.11 (very thin) | no trend |
-| Learning | 60.8 | 0.51 (usable) | -4.6 over 10 years using 2 indicators |
+| Learning | 67.7 | 0.41 (thin) | no trend |
 | Experimentation | not scored | 0.09 (very thin) | no trend |
-| Adaptability | 71.7 | 0.71 (good) | +10.1 over 10 years using 4 indicators |
-| Building | 75.3 | 0.62 (usable) | +18.2 over 10 years using 4 indicators |
+| Adaptability | 72.9 | 0.68 (good) | +11 over 10 years using 3 indicators |
+| Building | 69.2 | 0.57 (usable) | +13.7 over 10 years using 3 indicators |
 | Shared Purpose | 76.5 | 0.3 (thin) | +5.3 over 10 years using 2 indicators |
 
 ## What to measure first
@@ -53,15 +53,44 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
+### Agency: confidence 0.41, thin
+
+How able are individuals and organizations to turn an intention into action?
+
+- Uses 3 observed indicators.
+- Missing indicators: Adult digital skills, Perceived control over life.
+
+### Learning: confidence 0.41, thin
+
+How effectively does the country acquire, distribute, and update knowledge?
+
+- Uses 3 observed indicators.
+- Missing indicators: Adult learning participation, Research citation impact.
+
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
-- Building: 75.3, confidence usable
-- Adaptability: 71.7, confidence good
-- Agency: 68.7, confidence usable
-- Anticipation: 67.1, confidence usable
-- Learning: 60.8, confidence usable
+- Anticipation: 77.6, confidence usable
+- Adaptability: 72.9, confidence good
+- Building: 69.2, confidence usable
+
+## What Ireland has to work with
+
+Conditions describe what a country has to work with: infrastructure, access, money, people, enrolment and income itself. Each is published beside a capability and is not part of its score, its confidence or its trend. Read against the score, they show whether what a country has turns into what it does. The rank counts the countries with a value, best first.
+
+| Dimension | Condition | Value | Year | Rank |
+| --- | --- | --- | --- | --- |
+| Anticipation | R&D expenditure | 1.6 % of GDP | 2023 | 18 of 51 |
+| Anticipation | Researchers in R&D | 5,752.8 per million people | 2023 | 9 of 50 |
+| Anticipation | Secure internet servers | 121,467.8 per million people | 2024 | 8 of 53 |
+| Agency | Individuals using the internet | 97.2 % of population | 2024 | 5 of 53 |
+| Agency | Financial account ownership | 98.3 % aged 15+ | 2024 | 12 of 52 |
+| Agency | Credit to the private sector | 23.8 % of GDP | 2024 | 47 of 52 |
+| Learning | Tertiary enrolment | 77.6 % gross | 2022 | 17 of 52 |
+| Learning | Public education expenditure | 2.9 % of GDP | 2021 | 44 of 53 |
+| Adaptability | Fixed broadband subscriptions | 32.3 per 100 people | 2024 | 19 of 53 |
+| Building | Output per worker | 259,304.4 constant 2021 PPP $ | 2025 | 1 of 51 |
 
 ## Missing data
 

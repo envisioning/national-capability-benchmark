@@ -1,7 +1,8 @@
 # Conditions audit: which scored rows observe capability, and which describe its conditions
 
-Status: proposal for review, 2026-10-01. Dataset 6.2.0. Nothing in the registry
-has moved.
+Status: Tier A adopted in dataset 7.0.0 (D122), 2026-10-01. Tier B and the two
+borderline rows are held. The figures below are the scratch rescore of 6.2.0
+that the decision was made on.
 
 ## Why
 

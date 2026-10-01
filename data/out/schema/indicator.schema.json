@@ -7,6 +7,14 @@
         "indicatorId": {
           "type": "string"
         },
+        "role": {
+          "type": "string",
+          "enum": [
+            "capability",
+            "condition"
+          ],
+          "default": "capability"
+        },
         "values": {
           "type": "array",
           "items": {
@@ -24,7 +32,10 @@
                 "type": "number"
               },
               "normalized": {
-                "type": "number"
+                "type": [
+                  "number",
+                  "null"
+                ]
               },
               "year": {
                 "type": "integer"

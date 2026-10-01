@@ -7,10 +7,13 @@ import {
   PT_BR,
   REPO_URL,
   countryName,
+  countryTopic,
   fill,
+  indicatorName,
   isScored,
   signed,
   splitAgenda,
+  unitName,
 } from '@ncb/core'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { Radar } from '@/components/Radar'
@@ -39,6 +42,7 @@ import {
   methodHref,
 } from '@/lib/links'
 import { toProfile } from '@/lib/profile'
+import { conditionValue } from '@/components/views/ConditionList'
 
 export const dynamic = 'force-dynamic'
 
@@ -291,6 +295,64 @@ export default async function BrazilLayerPage() {
             ))}
           </div>
           <ConfidenceLegend lex={PT_BR} className="mt-5" />
+        </Section>
+      ) : null}
+
+      {/* Conditions beside each capability: what the country has on one side,
+          what it does on the other. Read from the agenda JSON the same way the
+          cards above are, through the lexicon, and never drawn with Score
+          because a raw value on the score ramp reads as a score. See D122. */}
+      {agenda && agenda.dimensions.some((d) => d.conditions.length > 0) ? (
+        <Section title={fill(s.conditionsHeading, { countryTopic: countryTopic(PT_BR, 'BRA') })}>
+          <p className="mb-8 max-w-3xl text-lg leading-relaxed">{s.conditionsIntro}</p>
+          <div className="grid gap-5 sm:grid-cols-2">
+            {agenda.dimensions
+              .filter((d) => d.conditions.length > 0)
+              .map((d) => (
+                <article key={d.dimension} className="rounded-xl border border-[var(--rule)] p-5">
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+                    <Icon
+                      name={DIMENSION_ICON[d.dimension]}
+                      size={16}
+                      className="text-[var(--muted)]"
+                    />
+                    <h3 className="text-xl font-medium tracking-tight">
+                      {PT_BR.dimensions[d.dimension]}
+                    </h3>
+                    <Score value={d.score} size="sm" nullLabel={s.noScore} />
+                  </div>
+                  <ul className="mt-4 space-y-3">
+                    {d.conditions.map((c) => (
+                      <li key={c.id}>
+                        <p className="text-xs font-medium tracking-tight">
+                          {indicatorName(PT_BR, c.id)}
+                          {c.year === null ? '' : (
+                            <span className="ml-2 font-normal text-[var(--muted)]">{c.year}</span>
+                          )}
+                        </p>
+                        <p className="mt-1 text-lg leading-relaxed">
+                          {c.value === null ? (
+                            <span className="text-[var(--muted)]">sem valor</span>
+                          ) : (
+                            <>
+                              <span className="tabular-nums">
+                                {conditionValue(c.value, PT_BR.numberLocale)}
+                              </span>{' '}
+                              {unitName(PT_BR, c.unit)}
+                              {c.rank === null ? null : (
+                                <span className="text-[var(--muted)]">
+                                  , {fill(s.conditionRank, { rank: c.rank, n: c.n })}
+                                </span>
+                              )}
+                            </>
+                          )}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+          </div>
         </Section>
       ) : null}
 

@@ -80,7 +80,7 @@ export function buildDataPackage(indicatorIds: string[], generatedAt: string): o
       {
         name: 'indicators',
         path: indicatorIds.map((id) => `indicators/${id}.json`),
-        title: 'One indicator across every country, ranked best first',
+        title: 'One indicator or condition across every country, ranked best first',
         format: 'json',
         mediatype: 'application/json',
         schema: 'schema/indicator.schema.json',

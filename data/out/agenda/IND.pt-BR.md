@@ -8,65 +8,38 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 26,7 | 0,58 (utilizável) | +17,4 em 10 anos, sobre 3 indicadores |
-| Agência | 49,2 | 0,61 (utilizável) | +27,9 em 10 anos, sobre 4 indicadores, 1 truncados na borda da régua |
+| Antecipação | 35,5 | 0,46 (utilizável) | +9 em 10 anos, sobre 2 indicadores |
+| Agência | 42,3 | 0,41 (fraca) | sem base de tendência |
 | Coordenação | 73,9 | 0,41 (fraca) | sem base de tendência |
 | Confiança | 9,9 | 0,26 (fraca) | sem base de tendência |
-| Aprendizagem | 20,9 | 0,55 (utilizável) | -12,9 em 10 anos, sobre 3 indicadores |
+| Aprendizagem | 9,2 | 0,43 (fraca) | sem base de tendência |
 | Experimentação | 9,8 | 0,39 (fraca) | +1,7 em 10 anos, sobre 2 indicadores |
-| Adaptação | 48,8 | 0,58 (utilizável) | +10,1 em 10 anos, sobre 4 indicadores, 1 truncados na borda da régua |
-| Construção | 39,1 | 0,62 (utilizável) | +4,9 em 10 anos, sobre 4 indicadores |
+| Adaptação | 59,5 | 0,53 (utilizável) | +12,2 em 10 anos, sobre 3 indicadores, 1 truncados na borda da régua |
+| Construção | 47,1 | 0,57 (utilizável) | +5,8 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 61,8 | 0,26 (fraca) | -2,2 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para elevar
 
 Estas são as notas mais baixas com evidência utilizável. A evidência fraca aparece abaixo.
 
-### Aprendizagem: 20,9, confiança utilizável
-
-Com que eficácia o país adquire, distribui e atualiza conhecimento?
-
-- Baseada em 5 indicadores observados.
-- Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,6.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SETAs and workplace-based learning delivery (África do Sul); MEB public lifelong-learning network (Turquia).
-- Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
-
-### Antecipação: 26,7, confiança utilizável
+### Antecipação: 35,5, confiança utilizável
 
 Quão capaz é o país de identificar mudanças emergentes e se preparar para elas?
 
-- Baseada em 5 indicadores observados.
-- Maiores notas utilizáveis: Suécia 83,5, Finlândia 82, Suíça 81,1.
+- Baseada em 2 indicadores observados.
+- Maiores notas utilizáveis: Suíça 96,3, Suécia 90, Finlândia 87,5.
 - Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japão); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (África do Sul).
 - Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
-### Construção: 39,1, confiança utilizável
+### Construção: 47,1, confiança utilizável
 
 Quão capaz é o país de transformar planos e conhecimento em sistemas que funcionam?
 
-- Baseada em 5 indicadores observados.
-- Maiores notas utilizáveis: Irlanda 75,3, Singapura 71,2, China 64,9.
+- Baseada em 4 indicadores observados.
+- Maiores notas utilizáveis: China 77, Coreia do Sul 69,8, Irlanda 69,2.
 - Entregas documentadas em outros países: Pix instant payment system (Brasil); GOV.BR federal identity and service platform (Brasil); X-Road national data exchange layer (Estônia); Electricity supply rebuilt on renewable sources (Uruguai); Plan Ceibal, one connected laptop per child (Uruguai); Sistema Unico de Saude, universal public health system (Brasil); Programa Nacional de Imunizacoes, and its erosion (Brasil); Luz para Todos, rural electrification (Brasil); Bolsa Familia and the single registry behind it (Brasil); Fully electronic national elections (Brasil); Deepwater and pre-salt oil production (Brasil); Seguro Popular, and its abolition (México); Sure Start children's centres, and their erosion (Reino Unido); Grid power, and load shedding (África do Sul); Measles elimination, and its erosion (Estados Unidos); BNDES, the national development bank (Brasil); Casa da Moeda do Brasil, the national mint (Brasil); Housing and Development Board, public housing at scale (Singapura); AFE passenger rail and network contraction (Uruguai); Flamanville 3 EPR, and the erosion of nuclear new-build delivery (França); Phoenix pay system, and its prolonged failure (Canadá); Groningen gas system, and its closure after induced earthquakes (Países Baixos); DigiD, a shared digital identity rail for public services (Países Baixos); Delta Works, a 43-year national flood-defence programme (Países Baixos); Betuweroute, a freight railway that missed its operating promise (Países Baixos); MijnOverheid, a shared citizen mailbox and data portal (Países Baixos); Fyra V250, a high-speed service withdrawn after a failed launch (Países Baixos); OVpay, nationwide contactless transit payments (Países Baixos); Omgevingswet and the Digital Environment System (Países Baixos); Transantiago, an integrated transport reform with rising subsidy dependence (Chile); 4G road concessions, a national infrastructure portfolio (Colômbia); Reficar, a refinery modernization with a fiscal-liability finding (Colômbia); GIGA School, one learning device per student (Japão); Monju, a fast-breeder programme ended before commercial operation (Japão); Invierte.pe, a national multi-year investment-management system (Peru); Reconstrucción con Cambios, a delayed recovery portfolio (Peru); ICE and a mostly renewable national electricity system (Costa Rica); CCSS universal health-insurance reach (Costa Rica); Metro de Quito, a cross-administration urban rail delivery (Equador); Panama Canal expansion and self-financing operations (Panamá); Metro de Panamá network operations (Panamá); Mi Teleférico urban cable-car network (Bolívia); Industrial lithium carbonate plant below design capacity (Bolívia); Itaipú binational hydropower operations (Paraguai); Metrobús, an unfinished bus rapid transit project (Paraguai); ARSAT-3 satellite programme suspended before launch (Argentina); DPWH national infrastructure delivery and transparency portal (Filipinas); Bataan Nuclear Power Plant, a mothballed megaproject (Filipinas); Trans-Sumatra toll-road programme, still short of its planned network (Indonésia); National expressway build-out in 2024 (Vietnã); Cat Linh–Ha Dong metro, a delayed and over-budget delivery (Vietnã); MRT Putrajaya Line (Malásia); Kuala Lumpur–Singapore high-speed rail, terminated before construction (Malásia); Hopewell elevated road-and-rail concession, and its termination (Tailândia); AVE high-speed rail network (Espanha); Castor underground gas storage, and its closure (Espanha); Ostrołęka C coal block, and its abandonment (Polônia); Nya Karolinska Solna public–private hospital project (Suécia); Barsebäck nuclear plant closure and decommissioning (Suécia); New Children's Hospital cost escalation (Irlanda); Rural electrification and near-universal grid coverage (Nicarágua); Gran Misión Vivienda Venezuela's five-million-home milestone (Venezuela); Plano de Recuperação e Resiliência delivery governance (Portugal); Lisbon–Madrid high-speed rail concession, formally abandoned (Portugal); MeerKAT radio telescope, a delivered national research facility (África do Sul); CFE Telecomunicaciones e Internet para Todos (México); New International Airport of Mexico, and its cancellation (México); Marmaray, the Bosphorus rail crossing (Turquia); FATİH education technology infrastructure (Turquia); YEKA RES-1 renewable tender, and its cancellation (Turquia); Gotthard Base Tunnel (Suíça).
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística.
-
-### Adaptação: 48,8, confiança utilizável
-
-Com que eficácia o sistema responde quando as circunstâncias mudam?
-
-- Baseada em 5 indicadores observados.
-- Maiores notas utilizáveis: Países Baixos 91,3, Alemanha 84,7, Canadá 84,4.
-- Entregas documentadas em outros países: Plano Real, the 1994 currency stabilisation (Brasil); Proalcool, the fuel substitution after the oil shock (Brasil); The Convertibility Plan, and its collapse (Argentina); Kurzarbeit in the 2008-2009 crisis (Alemanha); The 2001 stabilisation, and its unwinding (Turquia); Telebras, the telecom system that was dismantled (Brasil); Estonian Defence League, national defence rebuilt after independence (Estônia); Korea Internet and Security Agency, a consolidated digital authority (Coreia do Sul); Federal siren warning network, and its dismantling (Alemanha); Room for the River, flood safety delivered across the Rhine branches (Países Baixos); Childcare benefits administration, and the recovery after institutional failure (Países Baixos); National Police, one corps from twenty-five regional forces (Países Baixos); NL-Alert, a tested multi-channel emergency warning system (Países Baixos); DigiD Machtigen, delegated access to public services (Países Baixos); DigiNotar, a certificate breach that forced a trust-chain reset (Países Baixos); Programmatic Approach to Nitrogen, and the permitting reversal (Países Baixos); 27F reconstruction, a nationwide recovery programme after the 2010 earthquake (Chile); Cédula digital, an identity service upgraded for mobile use (Colômbia); Victims' reparations, a long-running administrative response to conflict (Colômbia); Fondo Adaptación, recovery and safer resettlement after La Niña (Colômbia); My Number Card, a national identity rail extended into services (Japão); Tōhoku reconstruction, a decade-long recovery programme (Japão); Juntos, a conditional-transfer system at national scale (Peru); Certified digital signature across public services (Costa Rica); REDCUDI childcare network and SINIRUBE referrals (Costa Rica); Dollarization as an emergency monetary redesign (Equador); 2016 earthquake national emergency coordination (Equador); 120 a los 65 social pension (Panamá); Canal water-and-transit response to the 2023–24 drought (Panamá); Bono Juana Azurduy maternal and child health transfer (Bolívia); Renta Dignidad non-contributory old-age pension (Bolívia); Tekoporã Mbarete family-support programme (Paraguai); SIFEN national electronic invoicing rollout (Paraguai); Asignación Universal por Hijo child benefit (Argentina); SUBE national electronic fare and subsidy rail (Argentina); PhilSys foundational national ID rollout (Filipinas); Pantawid Pamilyang Pilipino Program (4Ps) (Filipinas); Typhoon Yolanda shelter and recovery programme (Filipinas); Jaminan Kesehatan Nasional, a near-universal health-insurance pool (Indonésia); InaRISK national disaster-risk information platform (Indonésia); VNeID national electronic identity (Vietnã); Vietnam Social Security health-insurance expansion (Vietnã); Typhoon Yagi emergency restoration (Vietnã); MySejahtera and the national COVID-19 immunisation programme (Malásia); National flood-warning SMS system (Malásia); Universal Coverage Scheme and the 30-baht health system (Tailândia); National Digital ID framework (Tailândia); T-Alert national cell-broadcast warning system (Tailândia); Cl@ve shared digital identity (Espanha); La Palma volcanic-eruption recovery and monitoring (Espanha); mObywatel digital ID wallet (Polônia); Rodzina 500+ and 800+ child-benefit delivery (Polônia); Alert RCB national emergency SMS channel (Polônia); BankID federated electronic identity (Suécia); 1177 national health portal and helpline (Suécia); VMA multi-channel public warning system (Suécia); MyGovID single sign-on for public services (Irlanda); National COVID-19 vaccination delivery (Irlanda); National Asset Management Agency crisis workout (Irlanda); Met Éireann national weather-warning service (Irlanda); Salário mínimo and its permanent revaluation rule (Brasil); eNaira, a national rollout with an adoption gap (Nigéria); Productive Safety Net Programme for drought resilience (Etiópia); National 9-1-1 emergency-response system (República Dominicana); Sistema Nacional de Emergencias 911 (Honduras); National COVID-19 vaccination campaign (Cuba); Bitcoin Law, and its 2025 rollback (El Salvador); Routine immunization coverage, and its erosion (Haiti); Chave Móvel Digital and Portugal's digital identity layer (Portugal); Empresa na Hora and the one-stop company registry (Portugal); Sistema de Gestão Integrada de Fogos Rurais (Portugal); Simplex and LabX, a standing simplification-and-experimentation loop (Portugal); Programa Nacional de Vacinação and seasonal immunisation (Portugal); STAYAWAY COVID, a contact-tracing app suspended after the emergency (Portugal); Gauteng e-tolls, and their cancellation after public resistance (África do Sul); COFEPRIS digital regulatory procedures (México); Simulacro Nacional 2024, a nationwide emergency exercise (México); PROSPERA, and its replacement by a new scholarship authority (México); AFAD earthquake shelter and recovery operation (Turquia); Civil defence shelters (Finlândia); Public civil defence shelters, and their dismantling (Alemanha).
-- Lacunas declaradas: Preparação e recuperação de desastres, Capacidade de resposta institucional.
-
-### Agência: 49,2, confiança utilizável
-
-Quão capazes são pessoas e organizações de transformar uma intenção em ação?
-
-- Baseada em 6 indicadores observados.
-- Maiores notas utilizáveis: Estados Unidos 92,5, Austrália 89,1, Reino Unido 86,7.
-- Entregas documentadas em outros países: SIBRATEC, the documented innovation-centre network (Brasil); Singapore's national ICT-skills measurement and baseline (Singapura); e.escola, a national laptop-and-broadband push (Portugal); Puntos México Conectado, national digital learning centres (México).
-- Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
 
 ## Dimensões para medir primeiro
 
@@ -95,6 +68,13 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Baseada em 4 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
+### Agência: confiança 0,41, fraca
+
+Quão capazes são pessoas e organizações de transformar uma intenção em ação?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
+
 ### Coordenação: confiança 0,41, fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
@@ -102,6 +82,36 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
+
+### Aprendizagem: confiança 0,43, fraca
+
+Com que eficácia o país adquire, distribui e atualiza conhecimento?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
+
+## Dimensões para manter
+
+Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
+
+- Adaptação: 59,5, confiança utilizável
+
+## O que a Índia tem para trabalhar
+
+Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na nota, na confiança nem na tendência. Lidas contra a nota, mostram se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.
+
+| Dimensão | Condição | Valor | Ano | Posição |
+| --- | --- | --- | --- | --- |
+| Antecipação | Dispêndio em P&D | 0,6 % do PIB | 2020 | 29º de 51 |
+| Antecipação | Pesquisadores em P&D | 259,3 por milhão de pessoas | 2020 | 37º de 50 |
+| Antecipação | Servidores seguros de internet | 1.212,4 por milhão de pessoas | 2024 | 34º de 53 |
+| Agência | Pessoas que usam a internet | 70 % da população | 2025 | 43º de 53 |
+| Agência | Titularidade de conta financeira | 89 % das pessoas com 15 anos ou mais | 2024 | 22º de 52 |
+| Agência | Crédito ao setor privado | 44 % do PIB | 2025 | 35º de 52 |
+| Aprendizagem | Matrícula no ensino superior | 34,4 % (taxa bruta) | 2025 | 42º de 52 |
+| Aprendizagem | Dispêndio público em educação | 4,1 % do PIB | 2022 | 30º de 53 |
+| Adaptação | Assinaturas de banda larga fixa | 3,2 por 100 pessoas | 2024 | 47º de 53 |
+| Construção | Produto por trabalhador | 24.842,1 US$ PPC constantes de 2021 | 2025 | 42º de 51 |
 
 ## Agenda de medição
 

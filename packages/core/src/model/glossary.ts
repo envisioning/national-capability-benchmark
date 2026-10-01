@@ -114,10 +114,17 @@ export const GLOSSARY: GlossaryEntry[] = [
     example: 'Bribery incidence asks whether a firm was itself asked for a bribe. It reads on trust and it also tracks income, so Trust publishes it beside the score and never inside it.',
   },
   {
+    term: 'Condition',
+    group: 'What sits beside the score',
+    short: 'What a country has to work with, published beside a capability and left out of its score.',
+    full: 'Some published series record what a country has rather than what it does: roads and cables, bank accounts and credit, researchers and students, money spent on schools and laboratories, and income itself. These are conditions. A capability score reads what a country does with what it has, so a condition is published beside the capability it bears on and kept out of the score, the confidence and the trend. Its value is shown as the publisher wrote it, with its rank among the countries that have one, never on the 0 to 100 scale. Reading a condition against the score shows whether what a country has turns into what it does.',
+    example: 'Fixed broadband subscriptions are a condition beside Adaptability. A country can have fast lines everywhere and still be slow to move workers into new jobs, and the two readings side by side show that.',
+  },
+  {
     term: 'Measurement class',
     group: 'What is being measured',
     short: 'Whether an indicator measures the capability, an input, a result, or an opinion.',
-    full: 'The registry labels every indicator C, I, O or P. C measures the capability itself; I measures an input; O measures a result; P records a perception. The benchmark prefers C and I. P was retired after it tracked income too closely.',
+    full: 'The registry labels every indicator C, I, O or P. C measures the capability itself; I measures an input; O measures a result; P records a perception. The benchmark prefers C. Most I rows record a stock the country has, so they are published as conditions beside the score. P was retired after it tracked income too closely.',
     example: 'Time to register a company is C. Research spending is I. Patents are O. An expert survey about government quality is P.',
   },
   {

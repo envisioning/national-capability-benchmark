@@ -29,6 +29,7 @@ function item(
     exemplars: [],
     evidenceElsewhere: [],
     institutionIds: [],
+    conditions: [],
   }
 }
 

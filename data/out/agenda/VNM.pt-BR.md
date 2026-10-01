@@ -8,37 +8,28 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 27,4 | 0,64 (utilizável) | +12,1 em 10 anos, sobre 5 indicadores |
-| Agência | 58,7 | 0,59 (utilizável) | +27 em 10 anos, sobre 4 indicadores |
+| Antecipação | 28,5 | 0,46 (utilizável) | +14,1 em 10 anos, sobre 2 indicadores |
+| Agência | 49,7 | 0,41 (fraca) | sem base de tendência |
 | Coordenação | 75,8 | 0,4 (fraca) | sem base de tendência |
 | Confiança | 59,1 | 0,26 (fraca) | sem base de tendência |
-| Aprendizagem | 29 | 0,48 (utilizável) | -5,7 em 10 anos, sobre 3 indicadores |
+| Aprendizagem | 26,7 | 0,32 (fraca) | sem base de tendência |
 | Experimentação | 6,9 | 0,18 (muito fraca) | +1,8 em 10 anos, sobre 2 indicadores |
-| Adaptação | 78,4 | 0,7 (boa) | +5,7 em 10 anos, sobre 4 indicadores |
-| Construção | 54,2 | 0,61 (utilizável) | +8,6 em 10 anos, sobre 4 indicadores |
+| Adaptação | 84,4 | 0,67 (boa) | -2 em 10 anos, sobre 3 indicadores |
+| Construção | 65,7 | 0,55 (utilizável) | +10,1 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | sem nota | 0,13 (muito fraca) | sem base de tendência |
 
 ## Dimensões para elevar
 
 Estas são as notas mais baixas com evidência utilizável. A evidência fraca aparece abaixo.
 
-### Antecipação: 27,4, confiança utilizável
+### Antecipação: 28,5, confiança utilizável
 
 Quão capaz é o país de identificar mudanças emergentes e se preparar para elas?
 
-- Baseada em 5 indicadores observados.
-- Maiores notas utilizáveis: Suécia 83,5, Finlândia 82, Suíça 81,1.
+- Baseada em 2 indicadores observados.
+- Maiores notas utilizáveis: Suíça 96,3, Suécia 90, Finlândia 87,5.
 - Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japão); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (África do Sul).
 - Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
-
-### Aprendizagem: 29, confiança utilizável
-
-Com que eficácia o país adquire, distribui e atualiza conhecimento?
-
-- Baseada em 5 indicadores observados.
-- Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,6.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (Índia); SETAs and workplace-based learning delivery (África do Sul); MEB public lifelong-learning network (Turquia).
-- Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ## Dimensões para medir primeiro
 
@@ -67,6 +58,13 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 - Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
+### Aprendizagem: confiança 0,32, fraca
+
+Com que eficácia o país adquire, distribui e atualiza conhecimento?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
+
 ### Coordenação: confiança 0,4, fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
@@ -75,13 +73,36 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
+### Agência: confiança 0,41, fraca
+
+Quão capazes são pessoas e organizações de transformar uma intenção em ação?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
+
 ## Dimensões para manter
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 78,4, confiança boa
-- Agência: 58,7, confiança utilizável
-- Construção: 54,2, confiança utilizável
+- Adaptação: 84,4, confiança boa
+- Construção: 65,7, confiança utilizável
+
+## O que o Vietnã tem para trabalhar
+
+Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na nota, na confiança nem na tendência. Lidas contra a nota, mostram se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.
+
+| Dimensão | Condição | Valor | Ano | Posição |
+| --- | --- | --- | --- | --- |
+| Antecipação | Dispêndio em P&D | 0,4 % do PIB | 2023 | 34º de 51 |
+| Antecipação | Pesquisadores em P&D | 836,1 por milhão de pessoas | 2023 | 28º de 50 |
+| Antecipação | Servidores seguros de internet | 5.733,7 por milhão de pessoas | 2024 | 25º de 53 |
+| Agência | Pessoas que usam a internet | 84,2 % da população | 2024 | 31º de 53 |
+| Agência | Titularidade de conta financeira | 70,6 % das pessoas com 15 anos ou mais | 2024 | 34º de 52 |
+| Agência | Crédito ao setor privado | 125 % do PIB | 2022 | 10º de 52 |
+| Aprendizagem | Matrícula no ensino superior | 37,6 % (taxa bruta) | 2024 | 41º de 52 |
+| Aprendizagem | Dispêndio público em educação | 2,9 % do PIB | 2022 | 45º de 53 |
+| Adaptação | Assinaturas de banda larga fixa | 23,7 por 100 pessoas | 2024 | 26º de 53 |
+| Construção | Produto por trabalhador | 27.957,3 US$ PPC constantes de 2021 | 2025 | 40º de 51 |
 
 ## Agenda de medição
 
