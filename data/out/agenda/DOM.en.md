@@ -8,47 +8,38 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 24.7 | 0.51 (usable) | +9.7 over 10 years using 3 indicators |
-| Agency | 51.5 | 0.55 (usable) | +17.2 over 10 years using 3 indicators |
+| Anticipation | 33.9 | 0.46 (usable) | +11.2 over 10 years using 2 indicators |
+| Agency | 50.4 | 0.32 (thin) | no trend |
 | Coordination | 69.9 | 0.37 (thin) | no trend |
 | Trust | not scored | 0.11 (very thin) | no trend |
-| Learning | 37.2 | 0.56 (usable) | +8.3 over 10 years using 3 indicators |
+| Learning | 30.9 | 0.43 (thin) | no trend |
 | Experimentation | 6.5 | 0.18 (very thin) | +0.9 over 10 years using 2 indicators |
-| Adaptability | 62.5 | 0.7 (good) | +8.6 over 10 years using 4 indicators |
-| Building | 28.3 | 0.62 (usable) | +1.8 over 10 years using 4 indicators |
+| Adaptability | 70.5 | 0.67 (good) | +8.7 over 10 years using 3 indicators |
+| Building | 30.7 | 0.57 (usable) | +1.4 over 10 years using 3 indicators |
 | Shared Purpose | 53.1 | 0.32 (thin) | +14.8 over 10 years using 2 indicators |
 
 ## What to raise
 
 These are the lowest scores with usable evidence. Thin evidence appears below.
 
-### Anticipation: 24.7, confidence usable
-
-How capable is the country of identifying and preparing for emerging change?
-
-- Uses 4 observed indicators.
-- Highest usable scores: Sweden 83.5, Finland 82, Switzerland 81.1.
-- Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (South Africa).
-- Missing indicators: Government foresight capacity, Long-horizon research share.
-
-### Building: 28.3, confidence usable
+### Building: 30.7, confidence usable
 
 How capable is the country of turning plans and knowledge into functioning systems?
 
-- Uses 5 observed indicators.
-- Highest usable scores: Ireland 75.3, Singapore 71.2, China 64.9.
+- Uses 4 observed indicators.
+- Highest usable scores: China 77, South Korea 69.8, Ireland 69.2.
 - Related deliveries in other countries: Pix instant payment system (Brazil); GOV.BR federal identity and service platform (Brazil); X-Road national data exchange layer (Estonia); Pradhan Mantri Jan Dhan Yojana bank accounts (India); Electricity supply rebuilt on renewable sources (Uruguay); Plan Ceibal, one connected laptop per child (Uruguay); Sistema Unico de Saude, universal public health system (Brazil); Programa Nacional de Imunizacoes, and its erosion (Brazil); Luz para Todos, rural electrification (Brazil); Bolsa Familia and the single registry behind it (Brazil); Fully electronic national elections (Brazil); Deepwater and pre-salt oil production (Brazil); Seguro Popular, and its abolition (Mexico); Sure Start children's centres, and their erosion (United Kingdom); Grid power, and load shedding (South Africa); Measles elimination, and its erosion (United States); BNDES, the national development bank (Brazil); Casa da Moeda do Brasil, the national mint (Brazil); Housing and Development Board, public housing at scale (Singapore); AFE passenger rail and network contraction (Uruguay); Flamanville 3 EPR, and the erosion of nuclear new-build delivery (France); Phoenix pay system, and its prolonged failure (Canada); Groningen gas system, and its closure after induced earthquakes (Netherlands); DigiD, a shared digital identity rail for public services (Netherlands); Delta Works, a 43-year national flood-defence programme (Netherlands); Betuweroute, a freight railway that missed its operating promise (Netherlands); MijnOverheid, a shared citizen mailbox and data portal (Netherlands); Fyra V250, a high-speed service withdrawn after a failed launch (Netherlands); OVpay, nationwide contactless transit payments (Netherlands); Omgevingswet and the Digital Environment System (Netherlands); Transantiago, an integrated transport reform with rising subsidy dependence (Chile); 4G road concessions, a national infrastructure portfolio (Colombia); Reficar, a refinery modernization with a fiscal-liability finding (Colombia); GIGA School, one learning device per student (Japan); Monju, a fast-breeder programme ended before commercial operation (Japan); Invierte.pe, a national multi-year investment-management system (Peru); Reconstrucción con Cambios, a delayed recovery portfolio (Peru); ICE and a mostly renewable national electricity system (Costa Rica); CCSS universal health-insurance reach (Costa Rica); Metro de Quito, a cross-administration urban rail delivery (Ecuador); Panama Canal expansion and self-financing operations (Panama); Metro de Panamá network operations (Panama); Mi Teleférico urban cable-car network (Bolivia); Industrial lithium carbonate plant below design capacity (Bolivia); Itaipú binational hydropower operations (Paraguay); Metrobús, an unfinished bus rapid transit project (Paraguay); ARSAT-3 satellite programme suspended before launch (Argentina); DPWH national infrastructure delivery and transparency portal (Philippines); Bataan Nuclear Power Plant, a mothballed megaproject (Philippines); Trans-Sumatra toll-road programme, still short of its planned network (Indonesia); National expressway build-out in 2024 (Vietnam); Cat Linh–Ha Dong metro, a delayed and over-budget delivery (Vietnam); MRT Putrajaya Line (Malaysia); Kuala Lumpur–Singapore high-speed rail, terminated before construction (Malaysia); Hopewell elevated road-and-rail concession, and its termination (Thailand); AVE high-speed rail network (Spain); Castor underground gas storage, and its closure (Spain); Ostrołęka C coal block, and its abandonment (Poland); Nya Karolinska Solna public–private hospital project (Sweden); Barsebäck nuclear plant closure and decommissioning (Sweden); New Children's Hospital cost escalation (Ireland); Rural electrification and near-universal grid coverage (Nicaragua); Gran Misión Vivienda Venezuela's five-million-home milestone (Venezuela); Plano de Recuperação e Resiliência delivery governance (Portugal); Lisbon–Madrid high-speed rail concession, formally abandoned (Portugal); Delhi Commonwealth Games, and the cost-estimate escalation (India); MeerKAT radio telescope, a delivered national research facility (South Africa); CFE Telecomunicaciones e Internet para Todos (Mexico); New International Airport of Mexico, and its cancellation (Mexico); Marmaray, the Bosphorus rail crossing (Turkey); FATİH education technology infrastructure (Turkey); YEKA RES-1 renewable tender, and its cancellation (Turkey); Gotthard Base Tunnel (Switzerland).
 - Missing indicators: Large project delivery, Firm scale-up rate.
 - Rejected datasets: Logistics infrastructure quality.
 
-### Learning: 37.2, confidence usable
+### Anticipation: 33.9, confidence usable
 
-How effectively does the country acquire, distribute, and update knowledge?
+How capable is the country of identifying and preparing for emerging change?
 
-- Uses 5 observed indicators.
-- Highest usable scores: Finland 77.9, Australia 70.3, United Kingdom 68.6.
-- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); CAPES, federal postgraduate funding (Brazil); INEP, the standing education statistics institution (Brazil); Kartu Prakerja, a national lifelong-learning delivery system (Indonesia); Compte personnel de formation (France); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (India); SETAs and workplace-based learning delivery (South Africa); MEB public lifelong-learning network (Turkey).
-- Missing indicators: Adult learning participation, Research citation impact.
+- Uses 2 observed indicators.
+- Highest usable scores: Switzerland 96.3, Sweden 90, Finland 87.5.
+- Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (South Africa).
+- Missing indicators: Government foresight capacity, Long-horizon research share.
 
 ## What to measure first
 
@@ -77,6 +68,13 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
 - Rejected datasets: Voice and accountability.
 
+### Agency: confidence 0.32, thin
+
+How able are individuals and organizations to turn an intention into action?
+
+- Uses 3 observed indicators.
+- Missing indicators: Adult digital skills, Perceived control over life.
+
 ### Coordination: confidence 0.37, thin
 
 How effectively can independent actors organize around shared objectives?
@@ -85,12 +83,34 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
+### Learning: confidence 0.43, thin
+
+How effectively does the country acquire, distribute, and update knowledge?
+
+- Uses 3 observed indicators.
+- Missing indicators: Adult learning participation, Research citation impact.
+
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 62.5, confidence good
-- Agency: 51.5, confidence usable
+- Adaptability: 70.5, confidence good
+
+## What Dominican Republic has to work with
+
+Conditions describe what a country has to work with: infrastructure, access, money, people, enrolment and income itself. Each is published beside a capability and is not part of its score, its confidence or its trend. Read against the score, they show whether what a country has turns into what it does. The rank counts the countries with a value, best first.
+
+| Dimension | Condition | Value | Year | Rank |
+| --- | --- | --- | --- | --- |
+| Anticipation | Researchers in R&D | 20 per million people | 2022 | 49 of 50 |
+| Anticipation | Secure internet servers | 180.9 per million people | 2024 | 45 of 53 |
+| Agency | Individuals using the internet | 91 % of population | 2024 | 20 of 53 |
+| Agency | Financial account ownership | 64.8 % aged 15+ | 2024 | 35 of 52 |
+| Agency | Credit to the private sector | 32.8 % of GDP | 2025 | 42 of 52 |
+| Learning | Tertiary enrolment | 57.7 % gross | 2024 | 30 of 52 |
+| Learning | Public education expenditure | 3.8 % of GDP | 2023 | 36 of 53 |
+| Adaptability | Fixed broadband subscriptions | 11.2 per 100 people | 2024 | 40 of 53 |
+| Building | Output per worker | 54,042.5 constant 2021 PPP $ | 2025 | 28 of 51 |
 
 ## Missing data
 

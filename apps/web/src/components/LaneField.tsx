@@ -13,7 +13,8 @@ import type { LaneArrangement } from '@/lib/links'
  *
  * A lane is a capability and a dot is an indicator. The mark says whether the
  * row has data: a filled dot does, a dashed ring asks for a dataset that does
- * not exist, and a thin ring was rejected. A line joins two dots whose series
+ * not exist, a thin ring was rejected, and a square is a condition: it has
+ * data and is published beside the capability rather than scored in it. A line joins two dots whose series
  * are close enough to be one measurement. None of this is a score, which is
  * why no dot is sized, no dot is a flag and nothing here reads the score ramp.
  *
@@ -49,7 +50,7 @@ export type LaneFieldLabels = {
 }
 
 export const LANE_FIELD_LABELS_EN: LaneFieldLabels = {
-  state: { scored: 'has data', gap: 'no dataset', retired: 'retired' },
+  state: { scored: 'has data', gap: 'no dataset', retired: 'retired', condition: 'condition, not scored' },
   measure: 'Correlation with income',
   flagged: 'past the wealth threshold',
   laneMeasure: "the capability's own correlation",
@@ -66,7 +67,7 @@ const PAD_L = 16
 const PAD_R = 20
 const DOT_R = 5
 const HIT_R = 12
-/** Spacing between packed dots, and between the three state groups. */
+/** Spacing between packed dots, and between the state groups. */
 const STEP = 18
 const GROUP_GAP = 10
 /** The parked zone in the measure arrangement. */
@@ -79,7 +80,7 @@ const FADE = 'opacity 400ms ease'
 
 type Placed = { x: number; y: number }
 
-const STATE_ORDER: Record<LaneDotState, number> = { scored: 0, gap: 1, retired: 2 }
+const STATE_ORDER: Record<LaneDotState, number> = { scored: 0, gap: 1, retired: 2, condition: 3 }
 
 function laneTop(index: number): number {
   return index * LANE_H
@@ -179,6 +180,12 @@ function Mark({ state, active }: { state: LaneDotState; active: boolean }) {
     )
   }
   if (state === 'scored') return <circle r={r} fill="currentColor" fillOpacity={0.85} />
+  /* A condition has data and is not scored, so it is a different shape rather
+   * than a different size or ring. See D122. */
+  if (state === 'condition') {
+    const side = r * 1.6
+    return <rect x={-side / 2} y={-side / 2} width={side} height={side} fill="currentColor" fillOpacity={0.45} />
+  }
   if (state === 'gap') {
     return (
       <circle
@@ -213,6 +220,7 @@ export function LaneFieldLegend({
     { key: 'scored', sample: <Mark state="scored" active={false} />, label: labels.state.scored },
     { key: 'gap', sample: <Mark state="gap" active={false} />, label: labels.state.gap },
     { key: 'retired', sample: <Mark state="retired" active={false} />, label: labels.state.retired },
+    { key: 'condition', sample: <Mark state="condition" active={false} />, label: labels.state.condition },
     {
       key: 'link',
       sample: <path d="M -7 4 Q 0 -8 7 4" fill="none" stroke="currentColor" strokeWidth={CHART_STROKE.line} />,
@@ -349,10 +357,11 @@ export function LaneField({
       scored: acc.scored + lane.counts.scored,
       gap: acc.gap + lane.counts.gap,
       retired: acc.retired + lane.counts.retired,
+      condition: acc.condition + lane.counts.condition,
     }),
-    { scored: 0, gap: 0, retired: 0 },
+    { scored: 0, gap: 0, retired: 0, condition: 0 },
   )
-  const described = `${field.dots.length} indicators in ${field.lanes.length} lanes. ${counts.scored} ${labels.state.scored}, ${counts.gap} ${labels.state.gap}, ${counts.retired} ${labels.state.retired}. ${field.links.length} pairs overlap.`
+  const described = `${field.dots.length} indicators in ${field.lanes.length} lanes. ${counts.scored} ${labels.state.scored}, ${counts.gap} ${labels.state.gap}, ${counts.retired} ${labels.state.retired}, ${counts.condition} ${labels.state.condition}. ${field.links.length} pairs overlap.`
 
   return (
     <div className="text-[var(--foreground)]">

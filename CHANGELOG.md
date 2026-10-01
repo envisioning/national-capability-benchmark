@@ -9,6 +9,35 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.17.0 — 2026-10-01
+
+- **Conditions sit beside every capability.** Country pages list what the
+  country has to work with under each capability, with the published value,
+  the year and its rank, in a panel separate from the behavioural checks.
+  Capability pages show how each condition goes with income and with the
+  capability's score. The Brazil layer and both agenda lexicons carry the
+  same reading in Portuguese and English. `/sources` and `/indicators` mark
+  conditions, `/explore` draws them as squares, and the glossary defines the
+  term. See D122.
+
+## Dataset 7.0.0 — 2026-10-01
+
+- **Ten bought conditions leave the scores (D122).** Research spending,
+  researchers and secure servers (Anticipation), internet users, account
+  ownership and private credit (Agency), tertiary enrolment and education
+  spending (Learning), broadband (Adaptability) and output per worker
+  (Building) are fetched and published as `conditions` on each dimension,
+  with a rank and never a 0 to 100 value. They enter no score, confidence or
+  trend. `diagnostics.json` gains `conditions`: each one against income and
+  against its dimension's score.
+- **Scores move in five dimensions and are not comparable with 6.x.** Agency
+  falls from r 0.85 to 0.64 against log GDP per capita, Learning from 0.73 to
+  0.66, Adaptability from 0.84 to 0.74 and Building from 0.64 to 0.43.
+  Anticipation stays at 0.87. The first factor's share of the dimension scores
+  falls from 0.62 to 0.50. Agency and Learning confidence fall below 0.40.
+  Brazil reads 45.8 on Anticipation, 51.6 on Agency, 30.2 on Learning, 65.4 on
+  Adaptability and 28.2 on Building.
+
 ## App 1.16.1 — 2026-10-01
 
 - **Three evidence records, one of them a reversal.** The Gotthard Base

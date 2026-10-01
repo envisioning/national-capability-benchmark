@@ -35,6 +35,11 @@ const WB = (series: string) => ({
  * internationally comparable dataset exists that we can pull. Those rows stay in
  * the registry on purpose: they lower the confidence score, they appear in the
  * data-gap report, and they are what the Delphi panel is asked to reason about.
+ *
+ * `role: 'condition'` marks a row that records what a country has to work with
+ * rather than what it does. It is fetched and published beside its dimension
+ * and never scored. It stays here, in its dimension's block, so the registry
+ * remains the one place a row is declared. See D122.
  */
 const RAW: Raw[] = [
   /* --------------------------- 1. Anticipation --------------------------- */
@@ -48,7 +53,9 @@ const RAW: Raw[] = [
     direction: 'higher_better',
     source: WB('GB.XPD.RSDV.GD.ZS'),
     ingest: 'worldbank',
-    notes: 'Money committed to looking ahead. An input: spending it does not prove the country reads the future well.',
+    role: 'condition',
+    notes:
+      'A condition, not scored: money committed to research is what a country spends, and spending it does not show the country reads the future well (D122).',
     wealthProxyPrior: 0.5,
   },
   {
@@ -61,7 +68,9 @@ const RAW: Raw[] = [
     direction: 'higher_better',
     source: WB('SP.POP.SCIE.RD.P6'),
     ingest: 'worldbank',
-    notes: 'Standing capacity to investigate. Correlates with income but survives size normalisation.',
+    role: 'condition',
+    notes:
+      'A condition, not scored: a standing stock of people who could investigate is what a country has, not a record of what they found (D122). Correlates with income but survives size normalization.',
     wealthProxyPrior: 0.5,
   },
   {
@@ -103,7 +112,9 @@ const RAW: Raw[] = [
     transform: 'log10',
     source: WB('IT.NET.SECR.P6'),
     ingest: 'worldbank',
-    notes: 'Proxy for digital technology adoption. Spans four orders of magnitude, so it is logged before normalising.',
+    role: 'condition',
+    notes:
+      'A condition, not scored: a diffusion stock of digital adoption that money buys, not an act of anticipation (D122). Spans four orders of magnitude, so its rank is read on the published value and its correlations on the logged one.',
     wealthProxyPrior: 0.6,
   },
   {
@@ -185,7 +196,9 @@ const RAW: Raw[] = [
     direction: 'higher_better',
     source: WB('IT.NET.USER.ZS'),
     ingest: 'worldbank',
-    notes: 'Access to the basic tool of modern agency. Saturates near 95%, which compresses the top of the range.',
+    role: 'condition',
+    notes:
+      'A condition, not scored: access to the basic tool of modern agency is what people have to act with, not a record of them acting (D122). Saturates near 95%, which compresses the top of the range.',
     wealthProxyPrior: 0.55,
   },
   {
@@ -198,7 +211,9 @@ const RAW: Raw[] = [
     direction: 'higher_better',
     source: WB('FX.OWN.TOTL.ZS'),
     ingest: 'worldbank',
-    notes: 'Global Findex, published every three years. Precondition for almost any economic action.',
+    role: 'condition',
+    notes:
+      'A condition, not scored: holding an account is the precondition for almost any economic action, not the action (D122). Global Findex, published every three years.',
     wealthProxyPrior: 0.5,
   },
   {
@@ -211,7 +226,9 @@ const RAW: Raw[] = [
     direction: 'higher_better',
     source: WB('FS.AST.PRVT.GD.ZS'),
     ingest: 'worldbank',
-    notes: 'Access to finance at the system level. High values can also signal a credit bubble, so it is not monotonic in capability.',
+    role: 'condition',
+    notes:
+      'A condition, not scored: financial depth is a stock of money available to actors, not what they do with it (D122). High values can also signal a credit bubble, so more is not always better.',
     wealthProxyPrior: 0.55,
   },
   {
@@ -504,7 +521,9 @@ const RAW: Raw[] = [
     direction: 'higher_better',
     source: WB('SE.TER.ENRR'),
     ingest: 'worldbank',
-    notes: 'Volume of formal education. Says nothing about what is learned, which is the trap the spec warns about.',
+    role: 'condition',
+    notes:
+      'A condition, not scored: enrolment counts people in formal education and records nothing learned (D122).',
     wealthProxyPrior: 0.5,
   },
   {
@@ -517,7 +536,9 @@ const RAW: Raw[] = [
     direction: 'higher_better',
     source: WB('SE.XPD.TOTL.GD.ZS'),
     ingest: 'worldbank',
-    notes: 'Pure input. Included so the model can be tested for whether inputs add anything over the capability measures.',
+    role: 'condition',
+    notes:
+      'A condition, not scored: public spending on education is a pure input, and learning is what the dimension asks about (D122).',
     wealthProxyPrior: 0.3,
   },
   {
@@ -752,7 +773,9 @@ const RAW: Raw[] = [
     direction: 'higher_better',
     source: WB('IT.NET.BBND.P2'),
     ingest: 'worldbank',
-    notes: 'Infrastructure that lets a country change how it works. Penalises mobile-first countries such as India and South Africa.',
+    role: 'condition',
+    notes:
+      'A condition, not scored: installed infrastructure is what a country has to change with, not a record of it changing (D122). Penalizes mobile-first countries such as India and South Africa.',
     wealthProxyPrior: 0.6,
   },
   {
@@ -853,7 +876,9 @@ const RAW: Raw[] = [
     direction: 'higher_better',
     source: WB('SL.GDP.PCAP.EM.KD'),
     ingest: 'worldbank',
-    notes: 'The most wealth-contaminated indicator in the registry. Kept deliberately so the GDP-sensitivity test has something to bite on.',
+    role: 'condition',
+    notes:
+      'A condition, not scored: output per worker is income per worker, the wealth the benchmark tests capability against, so it is published beside Building as context (D122).',
     wealthProxyPrior: 0.9,
   },
   {
@@ -1025,25 +1050,55 @@ export const INDICATORS_BY_ID: Record<string, IndicatorDef> = Object.fromEntries
   INDICATORS.map((i) => [i.id, i]),
 )
 
+/**
+ * Whether a row describes what a country has to work with rather than what it
+ * does. A condition is fetched and published beside its dimension and never
+ * scored. See D122.
+ */
+export function isCondition(def: IndicatorDef): boolean {
+  return def.role === 'condition'
+}
+
+/**
+ * The rows that define a dimension: scored, gap and retired, in registry order.
+ *
+ * A condition is in the registry and not in this list. It sits beside the
+ * dimension rather than inside it, so every reading that walks a dimension's
+ * rows, the scorer's indicator rows, the coverage denominator, the agenda and
+ * the panel brief, leaves it out by construction. `conditionsFor` lists it.
+ * See D122.
+ */
 export function indicatorsFor(dimension: Dimension): IndicatorDef[] {
-  return INDICATORS.filter((i) => i.dimension === dimension)
+  return INDICATORS.filter((i) => i.dimension === dimension && !isCondition(i))
+}
+
+/** Every condition in the registry, in registry order. See D122. */
+export const CONDITIONS: IndicatorDef[] = INDICATORS.filter(isCondition)
+
+/** The conditions published beside one dimension. See D122. */
+export function conditionsFor(dimension: Dimension): IndicatorDef[] {
+  return CONDITIONS.filter((i) => i.dimension === dimension)
 }
 
 /**
  * The rows a coverage figure is measured against.
  *
  * A retired row is a dataset this project inspected and rejected, so it is not
- * a hole in the evidence the way a gap is and it leaves the denominator. The
+ * a hole in the evidence the way a gap is and it leaves the denominator. A
+ * condition is not evidence of the capability at all, so it leaves it too. The
  * scorer and the viewer both read this, so a coverage figure and the mark drawn
  * beside it can never be counted against different denominators. See D100.
  */
 export function countedForCoverage(defs: IndicatorDef[]): IndicatorDef[] {
-  return defs.filter((d) => d.ingest !== 'retired')
+  return defs.filter((d) => d.ingest !== 'retired' && !isCondition(d))
 }
 
 export type SeriesRequest = { series: string; sourceId: number }
 
-/** Series the ingester must fetch, including denominators, de-duplicated. */
+/**
+ * Series the ingester must fetch, including denominators, de-duplicated.
+ * Conditions are fetched: they are published even though they are not scored.
+ */
 export function worldBankSeries(): SeriesRequest[] {
   const byKey = new Map<string, SeriesRequest>()
   const add = (series: string, sourceId: number) => {
@@ -1063,10 +1118,12 @@ export function worldBankSeries(): SeriesRequest[] {
  * `gap` has no dataset and `retired` has one this project rejected. Both stay
  * in the registry and neither is fetched or scored. Only `gap` lowers coverage:
  * a rejected dataset is a measurement this project declined to make, not a
- * measurement nobody can make. See D100.
+ * measurement nobody can make. See D100. A condition is fetched and published
+ * and is not scored either: it records what a country has, not what it does,
+ * and it leaves coverage like a retired row. See D122.
  */
 export function isScored(def: IndicatorDef): boolean {
-  return def.ingest !== 'gap' && def.ingest !== 'retired'
+  return def.ingest !== 'gap' && def.ingest !== 'retired' && !isCondition(def)
 }
 
 /**

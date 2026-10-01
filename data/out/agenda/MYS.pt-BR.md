@@ -8,37 +8,15 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 41,6 | 0,62 (utilizável) | +10 em 10 anos, sobre 5 indicadores |
-| Agência | 65 | 0,61 (utilizável) | +8,6 em 10 anos, sobre 4 indicadores |
+| Antecipação | 56 | 0,46 (utilizável) | +23,9 em 10 anos, sobre 2 indicadores |
+| Agência | 49,7 | 0,41 (fraca) | sem base de tendência |
 | Coordenação | 84,2 | 0,41 (fraca) | sem base de tendência |
 | Confiança | 51,8 | 0,26 (fraca) | sem base de tendência |
-| Aprendizagem | 36,5 | 0,56 (utilizável) | +0,9 em 10 anos, sobre 3 indicadores |
+| Aprendizagem | 36,4 | 0,43 (fraca) | sem base de tendência |
 | Experimentação | 7 | 0,18 (muito fraca) | -1,3 em 10 anos, sobre 2 indicadores |
-| Adaptação | 67,7 | 0,68 (boa) | +4,2 em 10 anos, sobre 4 indicadores |
-| Construção | 59,7 | 0,62 (utilizável) | +5,4 em 10 anos, sobre 4 indicadores |
+| Adaptação | 75,7 | 0,64 (utilizável) | +2,1 em 10 anos, sobre 3 indicadores |
+| Construção | 68,2 | 0,57 (utilizável) | +5,8 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 45,9 | 0,28 (fraca) | -1,4 em 10 anos, sobre 2 indicadores |
-
-## Dimensões para elevar
-
-Estas são as notas mais baixas com evidência utilizável. A evidência fraca aparece abaixo.
-
-### Aprendizagem: 36,5, confiança utilizável
-
-Com que eficácia o país adquire, distribui e atualiza conhecimento?
-
-- Baseada em 5 indicadores observados.
-- Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,6.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (Índia); SETAs and workplace-based learning delivery (África do Sul); MEB public lifelong-learning network (Turquia).
-- Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
-
-### Antecipação: 41,6, confiança utilizável
-
-Quão capaz é o país de identificar mudanças emergentes e se preparar para elas?
-
-- Baseada em 5 indicadores observados.
-- Maiores notas utilizáveis: Suécia 83,5, Finlândia 82, Suíça 81,1.
-- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japão); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (África do Sul).
-- Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
 ## Dimensões para medir primeiro
 
@@ -67,6 +45,13 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
 - Bases rejeitadas: Voz e responsabilização.
 
+### Agência: confiança 0,41, fraca
+
+Quão capazes são pessoas e organizações de transformar uma intenção em ação?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
+
 ### Coordenação: confiança 0,41, fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
@@ -75,13 +60,37 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
+### Aprendizagem: confiança 0,43, fraca
+
+Com que eficácia o país adquire, distribui e atualiza conhecimento?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
+
 ## Dimensões para manter
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 67,7, confiança boa
-- Agência: 65, confiança utilizável
-- Construção: 59,7, confiança utilizável
+- Adaptação: 75,7, confiança utilizável
+- Construção: 68,2, confiança utilizável
+- Antecipação: 56, confiança utilizável
+
+## O que a Malásia tem para trabalhar
+
+Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na nota, na confiança nem na tendência. Lidas contra a nota, mostram se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.
+
+| Dimensão | Condição | Valor | Ano | Posição |
+| --- | --- | --- | --- | --- |
+| Antecipação | Dispêndio em P&D | 1 % do PIB | 2022 | 24º de 51 |
+| Antecipação | Pesquisadores em P&D | 1.218,3 por milhão de pessoas | 2022 | 25º de 50 |
+| Antecipação | Servidores seguros de internet | 7.475,5 por milhão de pessoas | 2024 | 23º de 53 |
+| Agência | Pessoas que usam a internet | 98 % da população | 2024 | 2º de 53 |
+| Agência | Titularidade de conta financeira | 88,7 % das pessoas com 15 anos ou mais | 2024 | 23º de 52 |
+| Agência | Crédito ao setor privado | 117,9 % do PIB | 2025 | 12º de 52 |
+| Aprendizagem | Matrícula no ensino superior | 38,5 % (taxa bruta) | 2024 | 39º de 52 |
+| Aprendizagem | Dispêndio público em educação | 3,5 % do PIB | 2023 | 39º de 53 |
+| Adaptação | Assinaturas de banda larga fixa | 13,5 por 100 pessoas | 2024 | 34º de 53 |
+| Construção | Produto por trabalhador | 70.821,2 US$ PPC constantes de 2021 | 2025 | 23º de 51 |
 
 ## Agenda de medição
 

@@ -5648,3 +5648,129 @@ release that changes the question or drops coverage below half the frame; or
 evidence that readers take the check for a score, which under D60 would retire
 it. For `/sources`: a check whose source has neither an API request nor a
 pinned file to print, which would leave the page short of a call again.
+
+---
+
+## D122 — What a country has is published beside its score as a condition, not scored
+
+*Recorded 2026-10-01. Extends D118 and D60. Dataset 7.0.0. Memo:
+`docs/research/CONDITIONS-AUDIT.md`.*
+
+**Decision.** The registry gains a second role. A row with `role: 'capability'`
+observes the country doing what its dimension names, a behaviour, a
+throughput, an outcome or performance relative to resources, and it is scored
+when it has data. A row with `role: 'condition'` records what the country has
+to work with, a stock of infrastructure, access, money, people or enrolment,
+or income itself. A condition stays in `indicators.ts` and keeps its ingest
+route, so it is fetched on every World Bank ingest. It is not scored:
+`isScored` is false for it, so it leaves the frame, the dimension mean, the
+coverage denominator, the confidence, the momentum basket, the redundancy test
+and `wealthAttribution`, exactly as a retired row leaves the denominator under
+D100. `indicatorsFor` no longer returns it and `conditionsFor` does.
+
+It is published beside its dimension as `conditions` on every
+`DimensionResult`: the value as the publisher wrote it, unit, year, source,
+and its rank among the `n` countries that have it, read in the row's direction
+on the registry transform. No condition is put on the 0 to 100 scale, for the
+reason D60 gives for checks: a number on that scale reads as a score.
+`indicators/{id}.json` is still written for each condition, with
+`role: 'condition'`, no normalised value and countries in rank order.
+`diagnostics.conditions` correlates every condition with log GDP per capita
+and with its own dimension's published score. The country page, the
+capability page, the Brazil layer, the agenda in both lexicons, `/sources`,
+`/indicators` and `/explore` show conditions as a separate layer. On
+`/explore` a condition is a square in its capability's lane, placed by its
+correlation with income in the measure arrangement, never flagged as a wealth
+proxy and never joined by a redundancy line, because both are verdicts on
+scored rows.
+
+Tier A of the audit moves, 10 rows: `rd_expenditure_gdp`,
+`researchers_per_million` and `secure_internet_servers` beside Anticipation;
+`internet_users`, `account_ownership` and `domestic_credit_private` beside
+Agency; `tertiary_enrollment` and `education_expenditure_gdp` beside Learning;
+`broadband_subscriptions` beside Adaptability; `labour_productivity` beside
+Building. Each row's note says why, on construct. Tier B (business start days
+and procedures, vocational share, labour force participation, transmission
+losses, income inequality) stays scored, and so do the two borderline rows,
+`sci_articles_per_million` and `human_capital_index`. A Tier B row moves only
+on its own decision entry, and only once its dimension has a capability row to
+take its place: as a block Tier B leaves Agency and Shared Purpose below the
+D45 floor in every country.
+
+**Why.** `docs/WHY.md` says the benchmark tests whether capability is separate
+from wealth. D118 chose rows by what they measure, and the construct audit
+then found that ten scored rows measure what money buys rather than what a
+country does with it. Averaging them into a capability score answers the
+question the benchmark refuses, how rich is this country, under the name of
+another. Retiring them would have thrown away the other half of the reading.
+The Brazil adaptability report needs both sides: what a country has to work
+with, and whether it turns that into capability. The second correlation in
+`diagnostics.conditions` is that map. It is the reason the layer exists.
+
+Measured on the 7.0.0 run against 6.2.0, same observations, no re-ingest:
+
+| Dimension | r log GDP | Mean confidence | Scored countries | Brazil |
+| --- | --- | --- | --- | --- |
+| Anticipation | 0.873 → 0.872 | 0.601 → 0.451 | 53 → 52 | 37.3 → 45.8 |
+| Agency | 0.851 → 0.638 | 0.577 → 0.383 | 52 → 52 | 58.9 → 51.6 |
+| Learning | 0.731 → 0.658 | 0.495 → 0.368 | 53 → 52 | 43.5 → 30.2 |
+| Adaptability | 0.839 → 0.738 | 0.676 → 0.638 | 53 → 53 | 62.7 → 65.4 |
+| Building | 0.635 → 0.434 | 0.603 → 0.551 | 53 → 53 | 25.3 → 28.2 |
+
+Coordination, Trust, Experimentation and Shared Purpose do not move. Across
+the eight dimensions with a complete panel (46 countries, Trust left out for
+coverage), the first factor's share of variance falls from 0.62 to 0.50 and the
+mean absolute correlation between dimensions from 0.55 to 0.42. On all nine
+(33 countries) the share falls from 0.60 to 0.50. The guardrail, mean
+confidence across dimensions against log GDP per capita, falls from 0.39 to
+0.32 (n 51). Redundant indicator pairs fall from six to none. Cuba loses its
+Anticipation and Learning scores, each now on one observed row. 261 of 477
+country-dimension cells change.
+
+The conditions themselves, r against log GDP per capita and against their
+dimension's score:
+
+| Condition | Dimension | r log GDP | r dimension score |
+| --- | --- | ---: | ---: |
+| R&D expenditure | Anticipation | 0.63 (n 49) | 0.71 (n 50) |
+| Researchers in R&D | Anticipation | 0.79 (n 48) | 0.88 (n 49) |
+| Secure internet servers (logged) | Anticipation | 0.90 (n 51) | 0.89 (n 52) |
+| Internet users | Agency | 0.88 (n 51) | 0.46 (n 52) |
+| Account ownership | Agency | 0.79 (n 51) | 0.50 (n 52) |
+| Credit to the private sector | Agency | 0.54 (n 51) | 0.50 (n 52) |
+| Tertiary enrolment | Learning | 0.81 (n 50) | 0.67 (n 51) |
+| Public education expenditure | Learning | 0.35 (n 51) | 0.47 (n 52) |
+| Fixed broadband subscriptions | Adaptability | 0.85 (n 51) | 0.67 (n 53) |
+| Output per worker | Building | 0.89 (n 51) | 0.46 (n 51) |
+
+Most conditions go with income more closely than with the capability they sit
+beside, which is what the split was for. Anticipation is the exception: its
+conditions go with its score as closely as with income, and its two capability
+rows track income at 0.87 by themselves. That is published as a finding
+against the claim, not corrected.
+
+**Cost.** Confidence falls where conditions carried it. Agency (0.38) and
+Learning (0.37) drop below the O1 target of 0.40, and Anticipation scores on
+two rows. That evidence was always this thin; the stocks hid it. Agency now
+rests on new business density and two Doing Business series frozen at 2019
+(A6), and its scores move most: Nicaragua rises 31.8 points, Rwanda 22.4,
+Japan falls 20.2 and Venezuela reaches 0. The GDP-stripped test now empties
+Anticipation, because both of its remaining rows sit past the wealth
+threshold. Published scores move in five dimensions and `DimensionResult`
+gains a field, so this is a major version under D37 and 6.x numbers are not
+comparable. A condition beside a score will be read as part of it by some
+readers, as a check can be; the panel says "not scored" in its label and the
+note travels with the value. The rule is a construct judgment, and the audit
+was written with the income correlations in view, which the memo discloses.
+A row's role can be argued, and each argument costs a decision entry.
+
+**Overturned by.** Evidence that a condition observes the capability after all,
+for instance a use measure that tracks the stock so closely that the two
+cannot be separated, which would return that row to the score by its own
+decision. Readers or consumers treating the conditions layer as a second
+score, which would mean the layer does the harm D60 warns of and the rows
+should move to the indicator rows with status, or out of the published
+dimension altogether. Or a capability row for Anticipation, Agency or Learning
+whose arrival shows that the confidence lost here was a cost of the split
+rather than of thin evidence, which would reopen whether the move should have
+waited for replacements, as Tier B does.

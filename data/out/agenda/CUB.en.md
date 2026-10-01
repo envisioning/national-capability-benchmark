@@ -8,32 +8,26 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 16.4 | 0.53 (usable) | +11.1 over 10 years using 3 indicators, with 1 at the frame edge |
-| Agency | not scored | 0.12 (very thin) | no trend |
+| Anticipation | not scored | 0.22 (very thin) | no trend |
+| Agency | not scored | 0 (very thin) | no trend |
 | Coordination | not scored | 0.1 (very thin) | no trend |
 | Trust | not scored | 0 (very thin) | no trend |
-| Learning | 60.3 | 0.33 (thin) | +3.7 over 10 years using 2 indicators, with 1 at the frame edge |
+| Learning | not scored | 0.11 (very thin) | no trend |
 | Experimentation | 1.4 | 0.18 (very thin) | -0.4 over 10 years using 2 indicators |
-| Adaptability | 54.1 | 0.6 (usable) | -2.6 over 10 years using 4 indicators |
-| Building | 21.8 | 0.25 (very thin) | -27.1 over 10 years using 2 indicators |
+| Adaptability | 63.7 | 0.55 (usable) | -5.5 over 10 years using 3 indicators |
+| Building | 21.8 | 0.29 (thin) | -27.1 over 10 years using 2 indicators |
 | Shared Purpose | not scored | 0 (very thin) | no trend |
-
-## What to raise
-
-These are the lowest scores with usable evidence. Thin evidence appears below.
-
-### Anticipation: 16.4, confidence usable
-
-How capable is the country of identifying and preparing for emerging change?
-
-- Uses 4 observed indicators.
-- Highest usable scores: Sweden 83.5, Finland 82, Switzerland 81.1.
-- Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (South Africa).
-- Missing indicators: Government foresight capacity, Long-horizon research share.
 
 ## What to measure first
 
 The evidence is too thin to manage these dimensions confidently.
+
+### Agency: confidence 0, very thin
+
+How able are individuals and organizations to turn an intention into action?
+
+- Uses 0 observed indicators.
+- Missing indicators: Adult digital skills, Perceived control over life.
 
 ### Trust: confidence 0, very thin
 
@@ -59,12 +53,12 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
-### Agency: confidence 0.12, very thin
+### Learning: confidence 0.11, very thin
 
-How able are individuals and organizations to turn an intention into action?
+How effectively does the country acquire, distribute, and update knowledge?
 
 - Uses one observed indicator.
-- Missing indicators: Adult digital skills, Perceived control over life.
+- Missing indicators: Adult learning participation, Research citation impact.
 
 ### Experimentation: confidence 0.18, very thin
 
@@ -73,7 +67,14 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Uses 2 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
-### Building: confidence 0.25, very thin
+### Anticipation: confidence 0.22, very thin
+
+How capable is the country of identifying and preparing for emerging change?
+
+- Uses one observed indicator.
+- Missing indicators: Government foresight capacity, Long-horizon research share.
+
+### Building: confidence 0.29, thin
 
 How capable is the country of turning plans and knowledge into functioning systems?
 
@@ -81,18 +82,25 @@ How capable is the country of turning plans and knowledge into functioning syste
 - Missing indicators: Large project delivery, Firm scale-up rate.
 - Rejected datasets: Logistics infrastructure quality.
 
-### Learning: confidence 0.33, thin
-
-How effectively does the country acquire, distribute, and update knowledge?
-
-- Uses 3 observed indicators.
-- Missing indicators: Adult learning participation, Research citation impact.
-
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 54.1, confidence usable
+- Adaptability: 63.7, confidence usable
+
+## What Cuba has to work with
+
+Conditions describe what a country has to work with: infrastructure, access, money, people, enrolment and income itself. Each is published beside a capability and is not part of its score, its confidence or its trend. Read against the score, they show whether what a country has turns into what it does. The rank counts the countries with a value, best first.
+
+| Dimension | Condition | Value | Year | Rank |
+| --- | --- | --- | --- | --- |
+| Anticipation | R&D expenditure | 0.4 % of GDP | 2024 | 32 of 51 |
+| Anticipation | Researchers in R&D | 2,171.3 per million people | 2024 | 21 of 50 |
+| Anticipation | Secure internet servers | 192.5 per million people | 2024 | 43 of 53 |
+| Agency | Individuals using the internet | 70.5 % of population | 2024 | 42 of 53 |
+| Learning | Tertiary enrolment | 43.1 % gross | 2024 | 38 of 52 |
+| Learning | Public education expenditure | 8.4 % of GDP | 2022 | 1 of 53 |
+| Adaptability | Fixed broadband subscriptions | 3.1 per 100 people | 2024 | 48 of 53 |
 
 ## Missing data
 

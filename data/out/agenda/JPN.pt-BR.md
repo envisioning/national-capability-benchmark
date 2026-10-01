@@ -8,28 +8,15 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 64,7 | 0,64 (utilizável) | +12,7 em 10 anos, sobre 5 indicadores |
-| Agência | 70,7 | 0,61 (utilizável) | +1,9 em 10 anos, sobre 4 indicadores |
+| Antecipação | 64 | 0,46 (utilizável) | +13,5 em 10 anos, sobre 2 indicadores |
+| Agência | 50,5 | 0,41 (fraca) | sem base de tendência |
 | Coordenação | 63,4 | 0,39 (fraca) | sem base de tendência |
 | Confiança | 65,3 | 0,26 (fraca) | sem base de tendência |
-| Aprendizagem | 47,6 | 0,52 (utilizável) | +2,1 em 10 anos, sobre 2 indicadores |
+| Aprendizagem | 47,9 | 0,41 (fraca) | sem base de tendência |
 | Experimentação | 66,7 | 0,18 (muito fraca) | -6,8 em 10 anos, sobre 2 indicadores |
-| Adaptação | 81,6 | 0,63 (utilizável) | +8,7 em 10 anos, sobre 4 indicadores |
-| Construção | 50,2 | 0,62 (utilizável) | -2 em 10 anos, sobre 4 indicadores |
+| Adaptação | 82,1 | 0,6 (utilizável) | +6,5 em 10 anos, sobre 3 indicadores |
+| Construção | 54,8 | 0,57 (utilizável) | -2,6 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 58 | 0,12 (muito fraca) | sem base de tendência |
-
-## Dimensões para elevar
-
-Estas são as notas mais baixas com evidência utilizável. A evidência fraca aparece abaixo.
-
-### Aprendizagem: 47,6, confiança utilizável
-
-Com que eficácia o país adquire, distribui e atualiza conhecimento?
-
-- Baseada em 5 indicadores observados.
-- Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,6.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (Índia); SETAs and workplace-based learning delivery (África do Sul); MEB public lifelong-learning network (Turquia).
-- Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ## Dimensões para medir primeiro
 
@@ -66,14 +53,44 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
+### Agência: confiança 0,41, fraca
+
+Quão capazes são pessoas e organizações de transformar uma intenção em ação?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
+
+### Aprendizagem: confiança 0,41, fraca
+
+Com que eficácia o país adquire, distribui e atualiza conhecimento?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
+
 ## Dimensões para manter
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 81,6, confiança utilizável
-- Agência: 70,7, confiança utilizável
-- Antecipação: 64,7, confiança utilizável
-- Construção: 50,2, confiança utilizável
+- Adaptação: 82,1, confiança utilizável
+- Antecipação: 64, confiança utilizável
+- Construção: 54,8, confiança utilizável
+
+## O que o Japão tem para trabalhar
+
+Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na nota, na confiança nem na tendência. Lidas contra a nota, mostram se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.
+
+| Dimensão | Condição | Valor | Ano | Posição |
+| --- | --- | --- | --- | --- |
+| Antecipação | Dispêndio em P&D | 3,4 % do PIB | 2023 | 5º de 51 |
+| Antecipação | Pesquisadores em P&D | 5.608,6 por milhão de pessoas | 2023 | 11º de 50 |
+| Antecipação | Servidores seguros de internet | 32.928,8 por milhão de pessoas | 2024 | 15º de 53 |
+| Agência | Pessoas que usam a internet | 85,5 % da população | 2024 | 29º de 53 |
+| Agência | Titularidade de conta financeira | 98,5 % das pessoas com 15 anos ou mais | 2024 | 7º de 52 |
+| Agência | Crédito ao setor privado | 187,4 % do PIB | 2025 | 3º de 52 |
+| Aprendizagem | Matrícula no ensino superior | 64,5 % (taxa bruta) | 2023 | 27º de 52 |
+| Aprendizagem | Dispêndio público em educação | 3,3 % do PIB | 2021 | 40º de 53 |
+| Adaptação | Assinaturas de banda larga fixa | 38,6 por 100 pessoas | 2023 | 14º de 53 |
+| Construção | Produto por trabalhador | 87.888,3 US$ PPC constantes de 2021 | 2025 | 20º de 51 |
 
 ## Agenda de medição
 

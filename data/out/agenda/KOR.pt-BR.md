@@ -8,14 +8,14 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 80,6 | 0,64 (utilizável) | +21,4 em 10 anos, sobre 5 indicadores |
-| Agência | 78,5 | 0,6 (utilizável) | +6,8 em 10 anos, sobre 4 indicadores |
+| Antecipação | 76,6 | 0,46 (utilizável) | +17,8 em 10 anos, sobre 2 indicadores |
+| Agência | 66,1 | 0,4 (fraca) | sem base de tendência |
 | Coordenação | 87,3 | 0,4 (fraca) | sem base de tendência |
 | Confiança | 67,4 | 0,26 (fraca) | sem base de tendência |
-| Aprendizagem | 55,9 | 0,54 (utilizável) | +16,1 em 10 anos, sobre 2 indicadores |
+| Aprendizagem | 38,9 | 0,41 (fraca) | sem base de tendência |
 | Experimentação | 72,2 | 0,39 (fraca) | +16,9 em 10 anos, sobre 2 indicadores |
-| Adaptação | 81,1 | 0,59 (utilizável) | +8 em 10 anos, sobre 4 indicadores |
-| Construção | 63,1 | 0,62 (utilizável) | +3,2 em 10 anos, sobre 4 indicadores |
+| Adaptação | 76,9 | 0,54 (utilizável) | +5,2 em 10 anos, sobre 3 indicadores |
+| Construção | 69,8 | 0,57 (utilizável) | +2,8 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 61 | 0,28 (fraca) | +4 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para medir primeiro
@@ -45,6 +45,13 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Baseada em 4 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
+### Agência: confiança 0,4, fraca
+
+Quão capazes são pessoas e organizações de transformar uma intenção em ação?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
+
 ### Coordenação: confiança 0,4, fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
@@ -53,15 +60,37 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
+### Aprendizagem: confiança 0,41, fraca
+
+Com que eficácia o país adquire, distribui e atualiza conhecimento?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
+
 ## Dimensões para manter
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 81,1, confiança utilizável
-- Antecipação: 80,6, confiança utilizável
-- Agência: 78,5, confiança utilizável
-- Construção: 63,1, confiança utilizável
-- Aprendizagem: 55,9, confiança utilizável
+- Adaptação: 76,9, confiança utilizável
+- Antecipação: 76,6, confiança utilizável
+- Construção: 69,8, confiança utilizável
+
+## O que a Coreia do Sul tem para trabalhar
+
+Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na nota, na confiança nem na tendência. Lidas contra a nota, mostram se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.
+
+| Dimensão | Condição | Valor | Ano | Posição |
+| --- | --- | --- | --- | --- |
+| Antecipação | Dispêndio em P&D | 4,9 % do PIB | 2023 | 2º de 51 |
+| Antecipação | Pesquisadores em P&D | 9.471,8 por milhão de pessoas | 2023 | 1º de 50 |
+| Antecipação | Servidores seguros de internet | 11.902,4 por milhão de pessoas | 2024 | 21º de 53 |
+| Agência | Pessoas que usam a internet | 97,9 % da população | 2024 | 3º de 53 |
+| Agência | Titularidade de conta financeira | 96,9 % das pessoas com 15 anos ou mais | 2024 | 16º de 52 |
+| Agência | Crédito ao setor privado | 160,3 % do PIB | 2024 | 5º de 52 |
+| Aprendizagem | Matrícula no ensino superior | 111,9 % (taxa bruta) | 2024 | 1º de 52 |
+| Aprendizagem | Dispêndio público em educação | 5,4 % do PIB | 2022 | 11º de 53 |
+| Adaptação | Assinaturas de banda larga fixa | 47,8 por 100 pessoas | 2024 | 2º de 53 |
+| Construção | Produto por trabalhador | 99.046 US$ PPC constantes de 2021 | 2025 | 16º de 51 |
 
 ## Agenda de medição
 

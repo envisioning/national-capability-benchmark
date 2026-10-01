@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
   CHECKS,
+  CONDITIONS,
   COUNTRY_ISO3,
   DIMENSION_LABELS,
   INDICATORS,
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
 }
 
 /** The series the request example is built from. Any fetched row would do. */
-const EXAMPLE_ID = 'rd_expenditure_gdp'
+const EXAMPLE_ID = 'statistical_performance'
 
 /** The routes a publisher's rows take, as one phrase. Only "gap" takes a plural. */
 function routeSummary(routes: Record<IngestRoute, number>): string {
@@ -96,6 +97,7 @@ export default async function SourcesPage() {
       <Headline>
         {INDICATORS.length} indicators are listed here. {fetched.length + adapters.length + manual.length} have data:
         {' '}{fetched.length} come from the World Bank API, {adapters.length} from source adapters and {manual.length} from published tables.
+        {' '}{CONDITIONS.length} of those are conditions, published beside a capability and not scored.
         The remaining {gaps.length + retired.length} have no value yet and remain listed.
       </Headline>
 
@@ -367,6 +369,50 @@ export default async function SourcesPage() {
               </code>
             </div>
           ))}
+        </Section>
+      ) : null}
+
+      {CONDITIONS.length > 0 ? (
+        <Section
+          title={`${CONDITIONS.length} series are fetched as conditions`}
+          hint="A condition records what a country has to work with. It is fetched on the same request as the scored rows and published beside its capability with its rank. It enters no score, confidence or trend."
+          icon={<Icon name="package" size={22} />}
+        >
+          <p className="max-w-3xl text-lg leading-relaxed">
+            Each country page lists the{' '}
+            <DefineLink term="Condition">conditions</DefineLink> under every capability, with the
+            value as published and its rank among the countries that have one.
+          </p>
+          <Scroller>
+            <Table>
+              <thead>
+                <tr>
+                  <Th>Condition</Th>
+                  <Th>Capability</Th>
+                  <Th>Series code</Th>
+                  <Th align="right">Countries</Th>
+                </tr>
+              </thead>
+              <tbody>
+                {CONDITIONS.map((def) => (
+                  <tr key={def.id}>
+                    <Td>
+                      <Link href={indicatorHref(def.id)} className="hover:underline">
+                        {def.name}
+                      </Link>
+                    </Td>
+                    <Td>
+                      <Link href={capabilityHref(def.dimension)} className="hover:underline">
+                        {DIMENSION_LABELS[def.dimension]}
+                      </Link>
+                    </Td>
+                    <Td dim>{def.source.series ?? 'no series code'}</Td>
+                    <Td align="right">{coverage.get(def.id)?.countries ?? ''}</Td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+          </Scroller>
         </Section>
       ) : null}
 

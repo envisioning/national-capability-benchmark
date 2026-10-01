@@ -8,32 +8,26 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 16,4 | 0,53 (utilizável) | +11,1 em 10 anos, sobre 3 indicadores, 1 truncados na borda da régua |
-| Agência | sem nota | 0,12 (muito fraca) | sem base de tendência |
+| Antecipação | sem nota | 0,22 (muito fraca) | sem base de tendência |
+| Agência | sem nota | 0 (muito fraca) | sem base de tendência |
 | Coordenação | sem nota | 0,1 (muito fraca) | sem base de tendência |
 | Confiança | sem nota | 0 (muito fraca) | sem base de tendência |
-| Aprendizagem | 60,3 | 0,33 (fraca) | +3,7 em 10 anos, sobre 2 indicadores, 1 truncados na borda da régua |
+| Aprendizagem | sem nota | 0,11 (muito fraca) | sem base de tendência |
 | Experimentação | 1,4 | 0,18 (muito fraca) | -0,4 em 10 anos, sobre 2 indicadores |
-| Adaptação | 54,1 | 0,6 (utilizável) | -2,6 em 10 anos, sobre 4 indicadores |
-| Construção | 21,8 | 0,25 (muito fraca) | -27,1 em 10 anos, sobre 2 indicadores |
+| Adaptação | 63,7 | 0,55 (utilizável) | -5,5 em 10 anos, sobre 3 indicadores |
+| Construção | 21,8 | 0,29 (fraca) | -27,1 em 10 anos, sobre 2 indicadores |
 | Propósito compartilhado | sem nota | 0 (muito fraca) | sem base de tendência |
-
-## Dimensões para elevar
-
-Estas são as notas mais baixas com evidência utilizável. A evidência fraca aparece abaixo.
-
-### Antecipação: 16,4, confiança utilizável
-
-Quão capaz é o país de identificar mudanças emergentes e se preparar para elas?
-
-- Baseada em 4 indicadores observados.
-- Maiores notas utilizáveis: Suécia 83,5, Finlândia 82, Suíça 81,1.
-- Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japão); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (África do Sul).
-- Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
 ## Dimensões para medir primeiro
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
+
+### Agência: confiança 0, muito fraca
+
+Quão capazes são pessoas e organizações de transformar uma intenção em ação?
+
+- Baseada em 0 indicadores observados.
+- Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
 
 ### Confiança: confiança 0, muito fraca
 
@@ -59,12 +53,12 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
-### Agência: confiança 0,12, muito fraca
+### Aprendizagem: confiança 0,11, muito fraca
 
-Quão capazes são pessoas e organizações de transformar uma intenção em ação?
+Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Baseada em um indicador observado.
-- Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
+- Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ### Experimentação: confiança 0,18, muito fraca
 
@@ -73,7 +67,14 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
-### Construção: confiança 0,25, muito fraca
+### Antecipação: confiança 0,22, muito fraca
+
+Quão capaz é o país de identificar mudanças emergentes e se preparar para elas?
+
+- Baseada em um indicador observado.
+- Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
+
+### Construção: confiança 0,29, fraca
 
 Quão capaz é o país de transformar planos e conhecimento em sistemas que funcionam?
 
@@ -81,18 +82,25 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística.
 
-### Aprendizagem: confiança 0,33, fraca
-
-Com que eficácia o país adquire, distribui e atualiza conhecimento?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
-
 ## Dimensões para manter
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 54,1, confiança utilizável
+- Adaptação: 63,7, confiança utilizável
+
+## O que Cuba tem para trabalhar
+
+Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na nota, na confiança nem na tendência. Lidas contra a nota, mostram se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.
+
+| Dimensão | Condição | Valor | Ano | Posição |
+| --- | --- | --- | --- | --- |
+| Antecipação | Dispêndio em P&D | 0,4 % do PIB | 2024 | 32º de 51 |
+| Antecipação | Pesquisadores em P&D | 2.171,3 por milhão de pessoas | 2024 | 21º de 50 |
+| Antecipação | Servidores seguros de internet | 192,5 por milhão de pessoas | 2024 | 43º de 53 |
+| Agência | Pessoas que usam a internet | 70,5 % da população | 2024 | 42º de 53 |
+| Aprendizagem | Matrícula no ensino superior | 43,1 % (taxa bruta) | 2024 | 38º de 52 |
+| Aprendizagem | Dispêndio público em educação | 8,4 % do PIB | 2022 | 1º de 53 |
+| Adaptação | Assinaturas de banda larga fixa | 3,1 por 100 pessoas | 2024 | 48º de 53 |
 
 ## Agenda de medição
 

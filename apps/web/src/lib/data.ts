@@ -10,6 +10,7 @@ import {
   GlobalInstitutionLedger,
   INDICATORS,
   InstitutionNetworkFile,
+  isCondition,
   isScored,
   LeverageFile as LeverageFileSchema,
   ResidualFile as ResidualFileSchema,
@@ -147,7 +148,9 @@ export async function loadIndicatorAcrossCountries(
 export async function loadIndicatorCoverage(): Promise<
   Map<string, { countries: number; latestYear: number }>
 > {
-  const scored = INDICATORS.filter(isScored)
+  /* Conditions are fetched and publish a file too, so the sources page counts
+   * their values beside the scored rows'. See D122. */
+  const scored = INDICATORS.filter((def) => isScored(def) || isCondition(def))
   const files = await Promise.all(scored.map((def) => loadIndicatorAcrossCountries(def.id)))
   const out = new Map<string, { countries: number; latestYear: number }>()
   for (const file of files) {

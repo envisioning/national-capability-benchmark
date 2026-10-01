@@ -7,6 +7,7 @@ import {
   DIMENSION_QUESTIONS,
   INDICATORS_BY_ID,
   checksFor,
+  conditionsFor,
   contestedDisputeCounts,
   countedForCoverage,
   indicatorsFor,
@@ -19,7 +20,7 @@ import { CapabilityCountryTable, type CapabilityCountryRow } from '@/components/
 import { EvidenceList } from '@/components/views/EvidenceList'
 import { IndicatorRegistry } from '@/components/views/IndicatorRegistry'
 import { Empty, FrameNote, Headline, Meta, PageTitle, Section } from '@/components/ui'
-import { MISSING_DATA_HINT, loadDisputes, loadEvidence, loadIndex } from '@/lib/data'
+import { MISSING_DATA_HINT, loadDiagnostics, loadDisputes, loadEvidence, loadIndex } from '@/lib/data'
 import { capabilitiesHref, limitsHref, methodHref, ogDimensionHref } from '@/lib/links'
 
 export const dynamic = 'force-dynamic'
@@ -56,10 +57,11 @@ export default async function CapabilityPage({
   const dimension = asDimension(raw)
   if (!dimension) notFound()
 
-  const [data, evidence, disputes] = await Promise.all([
+  const [data, evidence, disputes, diagnostics] = await Promise.all([
     loadIndex(),
     loadEvidence(),
     loadDisputes(),
+    loadDiagnostics(),
   ])
   if (!data || data.countries.length === 0) return <Empty hint={MISSING_DATA_HINT} />
 
@@ -102,6 +104,20 @@ export default async function CapabilityPage({
       latestYear: years.length > 0 ? Math.max(...years) : null,
     }
   })
+
+  /* Conditions are what a country has to work with on this capability. The
+   * capability page reports their coverage and the two correlations the
+   * diagnostics compute, against income and against this score, because the
+   * pair is what a condition is published for. Values live on country pages.
+   * See D122. */
+  const conditionStats = new Map(
+    (diagnostics?.conditions ?? []).map((row) => [row.indicatorId, row] as const),
+  )
+  const conditions = conditionsFor(dimension).map((def) => ({
+    def,
+    stats: conditionStats.get(def.id) ?? null,
+  }))
+  const fmtR = (r: number) => r.toFixed(2)
 
   return (
     <>
@@ -170,6 +186,49 @@ export default async function CapabilityPage({
                 <p className="mt-1 max-w-3xl text-lg leading-relaxed">{check.definition}</p>
                 <p className="mt-1 max-w-3xl text-xs leading-relaxed text-[var(--muted)]">
                   {check.notes}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </Section>
+      ) : null}
+
+      {conditions.length > 0 ? (
+        <Section
+          title="What countries have to work with here"
+          hint="Conditions record what a country has, such as infrastructure, access, money, people or enrolment. They are not part of this score, its confidence or its trend. Country pages show each value with its rank."
+          icon={<Icon name="package" size={22} />}
+        >
+          <ul className="space-y-5">
+            {conditions.map(({ def, stats }) => (
+              <li key={def.id}>
+                <p className="text-xs font-medium tracking-tight">
+                  {def.name}
+                  <span className="ml-2 font-normal text-[var(--muted)]">
+                    {def.source.publisher}
+                    {def.source.series ? ` (${def.source.series})` : ''}
+                    {stats ? `, ${stats.countries} of ${data.countries.length} countries` : ''}
+                    {stats?.latestYear ? `, latest ${stats.latestYear}` : ''}
+                  </span>
+                </p>
+                <p className="mt-1 max-w-3xl text-lg leading-relaxed">{def.definition}</p>
+                {stats && stats.r !== null ? (
+                  <p className="mt-1 max-w-3xl text-lg leading-relaxed">
+                    Across countries it goes with income at r ={' '}
+                    <span className="tabular-nums">{fmtR(stats.r)}</span> (n {stats.n})
+                    {stats.dimensionR === null ? (
+                      ', and this capability publishes too few scores to compare it with.'
+                    ) : (
+                      <>
+                        {' '}and with this capability&apos;s score at r ={' '}
+                        <span className="tabular-nums">{fmtR(stats.dimensionR)}</span> (n{' '}
+                        {stats.dimensionN}).
+                      </>
+                    )}
+                  </p>
+                ) : null}
+                <p className="mt-1 max-w-3xl text-xs leading-relaxed text-[var(--muted)]">
+                  {def.notes}
                 </p>
               </li>
             ))}

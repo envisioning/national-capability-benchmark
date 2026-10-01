@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { DIMENSIONS, INDICATORS, buildIndicatorLanes, isScored } from '@ncb/core'
+import { CONDITIONS, DIMENSIONS, INDICATORS, buildIndicatorLanes, isScored } from '@ncb/core'
 import { ExploreView } from '@/components/views/ExploreView'
 import { Headline, PageTitle } from '@/components/ui'
 import { loadDiagnostics } from '@/lib/data'
@@ -31,9 +31,10 @@ export default async function ExplorePage({
     <>
       <PageTitle>Where every indicator sits</PageTitle>
       <Headline>
-        {INDICATORS.length} indicators in {countWord(DIMENSIONS.length)} lanes, one per capability.{' '}
-        {wired} have data. Point at a mark to read it, and change the arrangement to see how
-        closely each series tracks income.
+        {INDICATORS.length} rows in {countWord(DIMENSIONS.length)} lanes, one per capability.{' '}
+        {wired} are scored with data, and {CONDITIONS.length} are conditions: they have data and are
+        published beside the capability, not scored in it. Point at a mark to read it, and change
+        the arrangement to see how closely each series tracks income.
       </Headline>
       <ExploreView field={field} initial={arrangement} />
       <p className="mt-10 max-w-3xl text-lg leading-relaxed">

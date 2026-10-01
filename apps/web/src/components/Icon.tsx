@@ -33,6 +33,7 @@ export type IconName =
   | 'list-filter'
   | 'menu'
   | 'minus'
+  | 'package'
   | 'plug'
   | 'ruler'
   | 'search'
@@ -79,6 +80,7 @@ const PATHS: Record<IconName, string> = {
   'languages': `<path d='m5 8 6 6' /> <path d='m4 14 6-6 2-3' /> <path d='M2 5h12' /> <path d='M7 2h1' /> <path d='m22 22-5-10-5 10' /> <path d='M14 18h6' />`,
   'calendar': `<path d='M8 2v4' /> <path d='M16 2v4' /> <rect width='18' height='18' x='3' y='4' rx='2' /> <path d='M3 10h18' />`,
   'minus': `<path d='M5 12h14' />`,
+  'package': `<path d='M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z' /> <path d='M12 22V12' /> <path d='m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7' /> <path d='m7.5 4.27 9 5.15' />`,
   'plug': `<path d='M12 22v-5' /> <path d='M15 8V2' /> <path d='M17 8a1 1 0 0 1 1 1v4a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1z' /> <path d='M9 8V2' />`,
   'ruler': `<path d='M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z' /> <path d='m14.5 12.5 2-2' /> <path d='m11.5 9.5 2-2' /> <path d='m8.5 6.5 2-2' /> <path d='m17.5 15.5 2-2' />`,
   'search': `<circle cx='11' cy='11' r='8' /> <path d='m21 21-4.3-4.3' />`,
@@ -153,6 +155,7 @@ export const STATUS_ICON = {
   missing: 'dot',
   gap: 'circle-dashed',
   retired: 'archive',
+  condition: 'package',
 } as const satisfies Record<string, IconName>
 
 export const TIER_ICON = {

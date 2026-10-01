@@ -60,12 +60,13 @@ cheaper half.
 
 **Severity: medium.**
 
-India scores 9.8 on Experimentation and 26.7 on Anticipation. Both come from
-dividing absolute counts by 1.4 billion people. The arithmetic is correct and the
-result is not informative on Experimentation: it says India files few patents per
-head, which was never the question. The panel put India at 40 there, a gap of
-30.2 points, and at 25 on Anticipation, which the indicators now match within
-1.7.
+India scores 9.8 on Experimentation (dataset 7.0.0). It comes from dividing
+absolute counts by 1.4 billion people. The arithmetic is correct and the result
+is not informative: it says India files few patents per head, which was never
+the question. The panel put India at 40 there, a gap of 30.2 points.
+Anticipation reads 35.5 on articles per head and statistical performance, against
+the panel's 25; the per-head stocks of researchers and research spending are
+conditions beside it and do not enter it (D122).
 
 **Fix.** Per-capita is right for most indicators and wrong where capability is
 concentrated in institutions rather than spread across a population. Consider a
@@ -189,18 +190,20 @@ countries in its 2024 round. The migration waits on coverage and not on the
 publisher. See A12.
 
 ---
-## A7 — Learning overstates Brazil and understates Korea, Estonia and Singapore
+## A7 — Learning understates Korea, Estonia and Singapore
 
 **Severity: medium.**
 
-The Learning dimension leans on enrolment and expenditure, which are inputs, plus
-the Human Capital Index, whose last full round is 2020. Countries with high
-enrolment and weak outcomes score well. Countries with exceptional measured
-outcomes do not get credit for them.
+Learning is scored on three rows: the Human Capital Index, whose last full round
+is 2020, the vocational share of secondary enrolment, which is a structure of
+the school system and stale in many countries, and the share of firms offering
+formal training. Enrolment and public education spending are conditions beside
+the score (D122). None of the three scored rows observes what adults can do,
+so countries with exceptional measured outcomes do not get credit for them.
 
-Against the panel, Korea is 29.1 points low, Singapore 28.9 and Estonia 27.8.
-The error runs the other way where enrolment rose fast and measured outcomes did
-not follow: Peru is 20.1 points high, Mexico 15.3, Colombia 12.7 and Brazil 8.5.
+Against the panel, on dataset 7.0.0, Korea is 46.1 points low, Estonia 29.2 and
+Singapore 28.1. The error runs the other way for Mexico, 15.9 points high, and
+Peru, 14.4. Brazil reads 30.2, 4.8 below the panel.
 
 **Fix.** A learning-outcomes series (PISA or PIAAC) would resolve most of this.
 It is a gap because coverage across the country set is uneven, not because the
@@ -216,8 +219,8 @@ Every correlation in `diagnostics.json` is computed on the 53 countries loaded.
 Fifty-three points is enough to reverse a finding and not enough to establish one.
 Two dimension pairs sat at 0.94 on the 16-country run and read as
 near-duplicates. At 53 no dimension pair passes the redundancy threshold at all,
-and the highest is Anticipation with Agency at 0.84. The nine dimensions
-separate when the sample is wide enough to separate them.
+and on dataset 7.0.0 the highest is Anticipation with Coordination at 0.75. The
+nine dimensions separate when the sample is wide enough to separate them.
 
 The redundancy and wealth-proxy findings are strong enough to act on because
 they also have a mechanical explanation, not because the coefficient is large.
@@ -286,14 +289,15 @@ and every surface that prints a trend prints that count.
 
 **Severity: medium.**
 
-Building asks whether a country can build and deliver. Its five measured
-indicators are manufacturing value added, high-technology export share, labour
-productivity, electricity connection speed and economic complexity. All five
-describe industrial output. Nothing in the measured set can see a national
-programme that was specified, funded and delivered.
+Building asks whether a country can build and deliver. Its four measured
+indicators are manufacturing value added, high-technology export share,
+electricity connection speed and economic complexity. Output per worker sits
+beside them as a condition (D122). All four describe industrial output. Nothing
+in the measured set can see a national programme that was specified, funded and
+delivered.
 
-Brazil scores 25.3 at confidence 0.622, the best evidenced of its nine
-dimensions. The score is a correct statement about Brazilian industrial output
+On dataset 7.0.0 Brazil scores 28.2 at confidence 0.568, its second best
+evidenced dimension after Adaptability. The score is a correct statement about Brazilian industrial output
 and it is read as a statement about Brazilian delivery capacity, which is a
 different construct. In the same decade Brazil built and ran Pix, which settled
 7.98 billion transactions in July 2026, and GOV.BR, which reports 175 million
@@ -456,3 +460,24 @@ finding; the attached reason is the only mitigation. The fix that would let it
 score is a reading conditioned on competition existing at all, or a behavioural
 row (civic participation, volunteering, voter turnout) that agrees with the
 item outside the closed regimes. Neither is wired, and the gap stays open.
+
+---
+## A14 — Agency rests on two rows frozen at 2019
+
+**Severity: high.**
+
+Agency is scored on three rows: new business density, and the time and the
+number of procedures to start a business. The second and third come from Doing
+Business and stopped in 2019 (A6). Internet users, account ownership and
+private credit sit beside the score as conditions (D122), so two thirds of the
+scored evidence is now a 2019 reading of registration rules.
+
+Where new business density is missing, Agency is those two frozen rows and
+nothing else. That holds for the United States (86.4), Nicaragua (74.7) and
+Venezuela (0), each at confidence 0.22. The score then reads how hard it was to
+register a company in 2019, not what people do with the chance to act.
+
+Read Agency through its confidence. The fix is capability rows that observe
+people acting, which the O1 triage sweep is looking for. Until they land, a
+large move in an Agency score between dataset 6 and 7 is the conditions
+leaving, not the country changing.
