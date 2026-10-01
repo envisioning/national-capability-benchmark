@@ -19,6 +19,7 @@ export const EN: Lexicon = {
   countryArticles: {},
   indicators: {},
   indicatorDefinitions: {},
+  units: {},
   bands: {
     good: 'good',
     usable: 'usable',
@@ -108,6 +109,14 @@ export const EN: Lexicon = {
     contributeBody:
       'Fill a gap, file evidence or challenge an indicator at {repo}. The docs explain the method and decisions.',
     profileLink: 'Open the profile: indicators, values, years and sources',
+    conditionsHeading: 'What {countryTopic} has to work with',
+    conditionsIntro:
+      'Conditions describe what a country has to work with: infrastructure, access, money, people, enrolment and income itself. Each is published beside a capability and is not part of its score, its confidence or its trend. Read against the score, they show whether what a country has turns into what it does. The rank counts the countries with a value, best first.',
+    colCondition: 'Condition',
+    colValue: 'Value',
+    colYear: 'Year',
+    colRank: 'Rank',
+    conditionRank: '{rank} of {n}',
   },
   institutions: {
     levels: {

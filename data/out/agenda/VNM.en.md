@@ -8,37 +8,28 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 27.4 | 0.64 (usable) | +12.1 over 10 years using 5 indicators |
-| Agency | 58.7 | 0.59 (usable) | +27 over 10 years using 4 indicators |
+| Anticipation | 28.5 | 0.46 (usable) | +14.1 over 10 years using 2 indicators |
+| Agency | 49.7 | 0.41 (thin) | no trend |
 | Coordination | 75.8 | 0.4 (thin) | no trend |
 | Trust | 59.1 | 0.26 (thin) | no trend |
-| Learning | 29 | 0.48 (usable) | -5.7 over 10 years using 3 indicators |
+| Learning | 26.7 | 0.32 (thin) | no trend |
 | Experimentation | 6.9 | 0.18 (very thin) | +1.8 over 10 years using 2 indicators |
-| Adaptability | 78.4 | 0.7 (good) | +5.7 over 10 years using 4 indicators |
-| Building | 54.2 | 0.61 (usable) | +8.6 over 10 years using 4 indicators |
+| Adaptability | 84.4 | 0.67 (good) | -2 over 10 years using 3 indicators |
+| Building | 65.7 | 0.55 (usable) | +10.1 over 10 years using 3 indicators |
 | Shared Purpose | not scored | 0.13 (very thin) | no trend |
 
 ## What to raise
 
 These are the lowest scores with usable evidence. Thin evidence appears below.
 
-### Anticipation: 27.4, confidence usable
+### Anticipation: 28.5, confidence usable
 
 How capable is the country of identifying and preparing for emerging change?
 
-- Uses 5 observed indicators.
-- Highest usable scores: Sweden 83.5, Finland 82, Switzerland 81.1.
+- Uses 2 observed indicators.
+- Highest usable scores: Switzerland 96.3, Sweden 90, Finland 87.5.
 - Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (South Africa).
 - Missing indicators: Government foresight capacity, Long-horizon research share.
-
-### Learning: 29, confidence usable
-
-How effectively does the country acquire, distribute, and update knowledge?
-
-- Uses 5 observed indicators.
-- Highest usable scores: Finland 77.9, Australia 70.3, United Kingdom 68.6.
-- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); CAPES, federal postgraduate funding (Brazil); INEP, the standing education statistics institution (Brazil); Kartu Prakerja, a national lifelong-learning delivery system (Indonesia); Compte personnel de formation (France); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (India); SETAs and workplace-based learning delivery (South Africa); MEB public lifelong-learning network (Turkey).
-- Missing indicators: Adult learning participation, Research citation impact.
 
 ## What to measure first
 
@@ -67,6 +58,13 @@ How much cooperation is possible beyond immediate personal networks?
 - Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
+### Learning: confidence 0.32, thin
+
+How effectively does the country acquire, distribute, and update knowledge?
+
+- Uses 3 observed indicators.
+- Missing indicators: Adult learning participation, Research citation impact.
+
 ### Coordination: confidence 0.4, thin
 
 How effectively can independent actors organize around shared objectives?
@@ -75,13 +73,36 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
+### Agency: confidence 0.41, thin
+
+How able are individuals and organizations to turn an intention into action?
+
+- Uses 3 observed indicators.
+- Missing indicators: Adult digital skills, Perceived control over life.
+
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 78.4, confidence good
-- Agency: 58.7, confidence usable
-- Building: 54.2, confidence usable
+- Adaptability: 84.4, confidence good
+- Building: 65.7, confidence usable
+
+## What Vietnam has to work with
+
+Conditions describe what a country has to work with: infrastructure, access, money, people, enrolment and income itself. Each is published beside a capability and is not part of its score, its confidence or its trend. Read against the score, they show whether what a country has turns into what it does. The rank counts the countries with a value, best first.
+
+| Dimension | Condition | Value | Year | Rank |
+| --- | --- | --- | --- | --- |
+| Anticipation | R&D expenditure | 0.4 % of GDP | 2023 | 34 of 51 |
+| Anticipation | Researchers in R&D | 836.1 per million people | 2023 | 28 of 50 |
+| Anticipation | Secure internet servers | 5,733.7 per million people | 2024 | 25 of 53 |
+| Agency | Individuals using the internet | 84.2 % of population | 2024 | 31 of 53 |
+| Agency | Financial account ownership | 70.6 % aged 15+ | 2024 | 34 of 52 |
+| Agency | Credit to the private sector | 125 % of GDP | 2022 | 10 of 52 |
+| Learning | Tertiary enrolment | 37.6 % gross | 2024 | 41 of 52 |
+| Learning | Public education expenditure | 2.9 % of GDP | 2022 | 45 of 53 |
+| Adaptability | Fixed broadband subscriptions | 23.7 per 100 people | 2024 | 26 of 53 |
+| Building | Output per worker | 27,957.3 constant 2021 PPP $ | 2025 | 40 of 51 |
 
 ## Missing data
 

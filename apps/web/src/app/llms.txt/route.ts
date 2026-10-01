@@ -2,6 +2,7 @@ import {
   APP_VERSION,
   COUNTRIES,
   CHANGELOG_DOC,
+  CONDITIONS,
   DATASET_VERSION,
   DIMENSIONS,
   FOR_AGENTS_DOC,
@@ -103,6 +104,7 @@ export async function GET(request: Request): Promise<Response> {
   const scored = INDICATORS.filter(isScored).length
   const gaps = INDICATORS.filter(isDeclaredGap).length
   const retired = INDICATORS.filter((i) => i.ingest === 'retired').length
+  const conditions = CONDITIONS.length
   const generated = index?.generatedAt?.slice(0, 10) ?? 'unpublished'
   const version = index?.version ?? DATASET_VERSION
 
@@ -114,9 +116,10 @@ export async function GET(request: Request): Promise<Response> {
     '> public data, each with a separate confidence number, and no headline ranking.',
     '',
     `App release ${APP_VERSION}; Dataset version ${version}, generated ${generated}. The registry holds ${INDICATORS.length} indicators:`,
-    `${scored} are scored, ${gaps} are declared gaps with no adequate dataset, and ${retired} were`,
-    'rejected after inspection. Gaps and retired rows stay listed and lower confidence,',
-    'because they are the data-collection agenda.',
+    `${scored} are scored, ${gaps} are declared gaps with no adequate dataset, ${retired} were`,
+    `rejected after inspection, and ${conditions} are conditions: fetched and published beside a`,
+    'dimension as `conditions`, with a rank, and never scored. Gaps stay listed and lower',
+    'confidence, because they are the data-collection agenda.',
     '',
     'Every score published here comes with a confidence number, the count of',
     'indicators it rests on, and a flag for whether it cleared the coverage floor. Confidence is',

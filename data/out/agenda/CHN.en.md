@@ -8,26 +8,26 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 35.1 | 0.64 (usable) | +14.5 over 10 years using 5 indicators |
-| Agency | 86.1 | 0.61 (usable) | +21.9 over 10 years using 4 indicators |
+| Anticipation | 31 | 0.46 (usable) | +11.1 over 10 years using 2 indicators |
+| Agency | 81.4 | 0.41 (thin) | no trend |
 | Coordination | 65.8 | 0.41 (thin) | no trend |
 | Trust | 83.2 | 0.26 (thin) | no trend |
-| Learning | 59.4 | 0.56 (usable) | +12.4 over 10 years using 2 indicators, with 1 at the frame edge |
+| Learning | 61.6 | 0.43 (thin) | no trend |
 | Experimentation | 100 | 0.18 (very thin) | +30.6 over 10 years using 2 indicators |
-| Adaptability | 84.2 | 0.58 (usable) | +11.7 over 10 years using 4 indicators |
-| Building | 64.9 | 0.62 (usable) | -1.9 over 10 years using 4 indicators |
+| Adaptability | 81.1 | 0.53 (usable) | -0.9 over 10 years using 3 indicators |
+| Building | 77 | 0.57 (usable) | -5 over 10 years using 3 indicators |
 | Shared Purpose | 43.8 | 0.29 (thin) | +0.7 over 10 years using 2 indicators |
 
 ## What to raise
 
 These are the lowest scores with usable evidence. Thin evidence appears below.
 
-### Anticipation: 35.1, confidence usable
+### Anticipation: 31, confidence usable
 
 How capable is the country of identifying and preparing for emerging change?
 
-- Uses 5 observed indicators.
-- Highest usable scores: Sweden 83.5, Finland 82, Switzerland 81.1.
+- Uses 2 observed indicators.
+- Highest usable scores: Switzerland 96.3, Sweden 90, Finland 87.5.
 - Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (South Africa).
 - Missing indicators: Government foresight capacity, Long-horizon research share.
 
@@ -58,6 +58,13 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
 - Rejected datasets: Voice and accountability.
 
+### Agency: confidence 0.41, thin
+
+How able are individuals and organizations to turn an intention into action?
+
+- Uses 3 observed indicators.
+- Missing indicators: Adult digital skills, Perceived control over life.
+
 ### Coordination: confidence 0.41, thin
 
 How effectively can independent actors organize around shared objectives?
@@ -66,14 +73,36 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
+### Learning: confidence 0.43, thin
+
+How effectively does the country acquire, distribute, and update knowledge?
+
+- Uses 3 observed indicators.
+- Missing indicators: Adult learning participation, Research citation impact.
+
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
-- Agency: 86.1, confidence usable
-- Adaptability: 84.2, confidence usable
-- Building: 64.9, confidence usable
-- Learning: 59.4, confidence usable
+- Adaptability: 81.1, confidence usable
+- Building: 77, confidence usable
+
+## What China has to work with
+
+Conditions describe what a country has to work with: infrastructure, access, money, people, enrolment and income itself. Each is published beside a capability and is not part of its score, its confidence or its trend. Read against the score, they show whether what a country has turns into what it does. The rank counts the countries with a value, best first.
+
+| Dimension | Condition | Value | Year | Rank |
+| --- | --- | --- | --- | --- |
+| Anticipation | R&D expenditure | 2.6 % of GDP | 2023 | 10 of 51 |
+| Anticipation | Researchers in R&D | 2,107.3 per million people | 2023 | 22 of 50 |
+| Anticipation | Secure internet servers | 1,413.3 per million people | 2024 | 33 of 53 |
+| Agency | Individuals using the internet | 91.6 % of population | 2025 | 19 of 53 |
+| Agency | Financial account ownership | 89.4 % aged 15+ | 2024 | 20 of 52 |
+| Agency | Credit to the private sector | 194.3 % of GDP | 2024 | 2 of 52 |
+| Learning | Tertiary enrolment | 76.9 % gross | 2024 | 18 of 52 |
+| Learning | Public education expenditure | 3.9 % of GDP | 2023 | 34 of 53 |
+| Adaptability | Fixed broadband subscriptions | 47.2 per 100 people | 2024 | 3 of 53 |
+| Building | Output per worker | 48,125.8 constant 2021 PPP $ | 2025 | 31 of 51 |
 
 ## Missing data
 

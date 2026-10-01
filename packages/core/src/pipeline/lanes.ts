@@ -1,5 +1,5 @@
 import { DIMENSIONS, DIMENSION_LABELS } from '../model/dimensions.js'
-import { INDICATORS, isScored } from '../model/indicators.js'
+import { INDICATORS, isCondition, isScored } from '../model/indicators.js'
 import type { Dimension, IndicatorDef, MeasurementClass } from '../model/index.js'
 import {
   REDUNDANCY_THRESHOLD,
@@ -11,6 +11,8 @@ import {
  * The indicator registry and its diagnostics projected onto lanes.
  *
  * A lane is a capability. A dot is an indicator, marked by whether it has data.
+ * A condition is drawn in the lane it sits beside with its own mark, because it
+ * has data and is not scored.
  * A dot also carries a measure, its absolute correlation with log GDP per
  * capita, and a link joins two dots whose series are close enough to be one
  * measurement. This is the shape the lane field draws, and it is computed here
@@ -19,10 +21,14 @@ import {
  * score, a confidence or `data/out`. See D108.
  */
 
-/** Whether the row has data, asks for a dataset that does not exist, or was rejected. */
-export type LaneDotState = 'scored' | 'gap' | 'retired'
+/**
+ * Whether the row has data, asks for a dataset that does not exist, was
+ * rejected, or has data and is published beside the capability as a condition
+ * rather than scored in it. See D122.
+ */
+export type LaneDotState = 'scored' | 'gap' | 'retired' | 'condition'
 
-export const LANE_DOT_STATES: readonly LaneDotState[] = ['scored', 'gap', 'retired']
+export const LANE_DOT_STATES: readonly LaneDotState[] = ['scored', 'gap', 'retired', 'condition']
 
 export type LaneFieldLane = {
   id: Dimension
@@ -77,6 +83,7 @@ export type LaneField = {
 }
 
 export function laneDotState(def: IndicatorDef): LaneDotState {
+  if (isCondition(def)) return 'condition'
   if (isScored(def)) return 'scored'
   return def.ingest === 'retired' ? 'retired' : 'gap'
 }
@@ -91,11 +98,35 @@ export function buildIndicatorLanes(diag: Diagnostics | null): LaneField {
   const attributionByIndicator = new Map(
     (diag?.wealthAttribution ?? []).map((row) => [row.indicatorId, row.delta] as const),
   )
+  /* A condition is not in the matrix, so its correlation with income comes from
+   * the conditions block. It is the same measure on the same axis, and it
+   * carries no attribution because it is in no dimension mean. See D122. */
+  const conditionByIndicator = new Map(
+    (diag?.conditions ?? []).map((row) => [row.indicatorId, row] as const),
+  )
   const gdpByDimension = new Map(
     (diag?.dimensionVsGdp ?? []).map((row) => [row.dimension, row] as const),
   )
 
   const dots: LaneFieldDot[] = INDICATORS.map((def) => {
+    if (isCondition(def)) {
+      const r = conditionByIndicator.get(def.id)?.r ?? null
+      const measure = abs(r)
+      return {
+        id: def.id,
+        laneId: def.dimension,
+        label: def.name,
+        state: 'condition' as const,
+        measurementClass: def.measurementClass,
+        publisher: def.source.publisher,
+        definition: def.definition,
+        measure,
+        /* The wealth-proxy flag is a verdict on a scored row. A condition is
+         * already out of the score, so its measure is shown unflagged. */
+        flagged: false,
+        attribution: null,
+      }
+    }
     const gdp = gdpByIndicator.get(def.id)
     return {
       id: def.id,
@@ -123,6 +154,7 @@ export function buildIndicatorLanes(diag: Diagnostics | null): LaneField {
         scored: own.filter((dot) => dot.state === 'scored').length,
         gap: own.filter((dot) => dot.state === 'gap').length,
         retired: own.filter((dot) => dot.state === 'retired').length,
+        condition: own.filter((dot) => dot.state === 'condition').length,
       },
     }
   })

@@ -213,6 +213,15 @@ export const PT_BR: Lexicon = {
     political_polarization: 'Polarização política',
     civic_participation: 'Participação cívica',
   },
+  units: {
+    '% of GDP': '% do PIB',
+    'per million people': 'por milhão de pessoas',
+    '% of population': '% da população',
+    '% aged 15+': '% das pessoas com 15 anos ou mais',
+    '% gross': '% (taxa bruta)',
+    'per 100 people': 'por 100 pessoas',
+    'constant 2021 PPP $': 'US$ PPC constantes de 2021',
+  },
   indicatorDefinitions: {
     budget_execution_fidelity:
       'Distância entre a despesa primária do governo e o orçamento original aprovado.',
@@ -365,6 +374,14 @@ export const PT_BR: Lexicon = {
     contributeBody:
       'Preencha uma lacuna, registre uma evidência ou conteste um indicador em {repo}. Os documentos explicam o método e suas decisões.',
     profileLink: 'Abra o perfil completo: indicadores, valores, anos e fontes',
+    conditionsHeading: 'O que {countryTopic} tem para trabalhar',
+    conditionsIntro:
+      'Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na nota, na confiança nem na tendência. Lidas contra a nota, mostram se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.',
+    colCondition: 'Condição',
+    colValue: 'Valor',
+    colYear: 'Ano',
+    colRank: 'Posição',
+    conditionRank: '{rank}º de {n}',
   },
   institutions: {
     levels: {

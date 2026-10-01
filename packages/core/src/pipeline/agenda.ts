@@ -8,6 +8,7 @@ import {
   AGENDA_HISTORY_MIN_ENTRIES,
   isAgendaHistoryCountry,
   docHref,
+  conditionsFor,
   indicatorsFor,
   isDeclaredGap,
 } from '../model/index.js'
@@ -94,6 +95,20 @@ export type AgendaTrend = {
   clamped: number
 }
 
+/**
+ * One condition beside an agenda dimension: what the country has to work with,
+ * as published, with its rank. Never part of the score or the kind. See D122.
+ */
+export type AgendaCondition = {
+  id: string
+  value: number | null
+  unit: string
+  year: number | null
+  rank: number | null
+  /** Countries with a value, the denominator of `rank`. */
+  n: number
+}
+
 export type AgendaDimension = {
   dimension: Dimension
   kind: AgendaKind
@@ -116,6 +131,8 @@ export type AgendaDimension = {
    * agenda item. Navigation only: these ids never enter a score or confidence.
    */
   institutionIds: string[]
+  /** What the country has to work with on this dimension. Never scored. See D122. */
+  conditions: AgendaCondition[]
 }
 
 export type CountryAgenda = {
@@ -326,6 +343,17 @@ export function buildAgenda(
       institutionIds: institutionNetwork
         ? institutionIdsForDimension(institutionNetwork.nodes, dimension)
         : [],
+      conditions: conditionsFor(dimension).map((def) => {
+        const row = result.conditions.find((c) => c.indicatorId === def.id)
+        return {
+          id: def.id,
+          value: row?.value ?? null,
+          unit: def.unit,
+          year: row?.year ?? null,
+          rank: row?.rank ?? null,
+          n: row?.n ?? 0,
+        }
+      }),
     }
   })
 
@@ -373,6 +401,9 @@ export const signed = (n: number, locale: string): string =>
 
 export const indicatorName = (lex: Lexicon, id: string): string =>
   lex.indicators[id] ?? INDICATORS_BY_ID[id]?.name ?? id
+
+/** A registry unit through the lexicon, falling back to the registry English. */
+export const unitName = (lex: Lexicon, unit: string): string => lex.units?.[unit] ?? unit
 
 export const indicatorDefinition = (lex: Lexicon, id: string): string =>
   lex.indicatorDefinitions[id] ?? INDICATORS_BY_ID[id]?.definition ?? ''
@@ -540,6 +571,33 @@ export function renderAgenda(agenda: CountryAgenda, lex: Lexicon): string {
             })}`,
         )
         .join('\n'),
+    )
+    out.push('')
+  }
+
+  /* Conditions are what the country has to work with. They sit after the
+   * scored reading and outside it, so the agenda's kinds never read them. */
+  const conditionRows = agenda.dimensions.flatMap((d) =>
+    d.conditions
+      .filter((c) => c.value !== null)
+      .map((c) => [
+        lex.dimensions[d.dimension],
+        indicatorName(lex, c.id),
+        `${c.value === null ? '' : c.value.toLocaleString(lex.numberLocale, { maximumFractionDigits: 1 })} ${unitName(lex, c.unit)}`,
+        c.year === null ? '' : String(c.year),
+        c.rank === null ? '' : fill(s.conditionRank, { rank: c.rank, n: c.n }),
+      ]),
+  )
+  if (conditionRows.length > 0) {
+    out.push(`## ${fill(s.conditionsHeading, { countryTopic: topic })}`)
+    out.push('')
+    out.push(s.conditionsIntro)
+    out.push('')
+    out.push(
+      mdTable(
+        [s.colDimension, s.colCondition, s.colValue, s.colYear, s.colRank],
+        conditionRows,
+      ),
     )
     out.push('')
   }

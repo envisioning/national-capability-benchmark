@@ -16,6 +16,7 @@ import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { CountryLede } from '@/components/CountryLede'
 import { CompareRadar } from '@/components/views/CompareRadar'
 import { CheckList } from '@/components/views/CheckList'
+import { ConditionList } from '@/components/views/ConditionList'
 import { CountryDimensionTable } from '@/components/views/CountryDimensionTable'
 import { CountryIndicatorList } from '@/components/views/CountryIndicatorList'
 import { EvidenceList } from '@/components/views/EvidenceList'
@@ -212,6 +213,8 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
               />
 
               <CheckList checks={dim.checks} />
+
+              <ConditionList conditions={dim.conditions ?? []} />
 
               <EvidenceList records={evidence.filter((e) => INDICATORS_BY_ID[e.indicatorId]?.dimension === d)} />
 

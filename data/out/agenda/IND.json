@@ -1,26 +1,23 @@
 {
-  "generatedAt": "2026-10-01T09:18:00.283Z",
+  "generatedAt": "2026-10-01T09:42:48.428Z",
   "iso3": "IND",
   "country": "India",
   "dimensions": [
     {
       "dimension": "anticipation",
       "kind": "raise",
-      "score": 26.7,
-      "confidence": 0.577,
+      "score": 35.5,
+      "confidence": 0.455,
       "band": "usable",
       "trend": {
         "spanYears": 10,
-        "delta": 17.4,
-        "basket": 3,
+        "delta": 9,
+        "basket": 2,
         "clamped": 0
       },
       "scoredOn": [
-        "rd_expenditure_gdp",
-        "researchers_per_million",
         "sci_articles_per_million",
-        "statistical_performance",
-        "secure_internet_servers"
+        "statistical_performance"
       ],
       "gaps": [
         "government_foresight_capacity",
@@ -29,22 +26,22 @@
       "retired": [],
       "exemplars": [
         {
+          "iso3": "CHE",
+          "country": "Switzerland",
+          "score": 96.3,
+          "confidence": 0.455
+        },
+        {
           "iso3": "SWE",
           "country": "Sweden",
-          "score": 83.5,
-          "confidence": 0.644
+          "score": 90,
+          "confidence": 0.455
         },
         {
           "iso3": "FIN",
           "country": "Finland",
-          "score": 82,
-          "confidence": 0.644
-        },
-        {
-          "iso3": "CHE",
-          "country": "Switzerland",
-          "score": 81.1,
-          "confidence": 0.644
+          "score": 87.5,
+          "confidence": 0.455
         }
       ],
       "evidenceElsewhere": [
@@ -119,53 +116,52 @@
           "title": "Labour Market Intelligence Programme and forward skills planning"
         }
       ],
-      "institutionIds": []
+      "institutionIds": [],
+      "conditions": [
+        {
+          "id": "rd_expenditure_gdp",
+          "value": 0.646,
+          "unit": "% of GDP",
+          "year": 2020,
+          "rank": 29,
+          "n": 51
+        },
+        {
+          "id": "researchers_per_million",
+          "value": 259.263,
+          "unit": "per million people",
+          "year": 2020,
+          "rank": 37,
+          "n": 50
+        },
+        {
+          "id": "secure_internet_servers",
+          "value": 1212.442,
+          "unit": "per million people",
+          "year": 2024,
+          "rank": 34,
+          "n": 53
+        }
+      ]
     },
     {
       "dimension": "agency",
-      "kind": "raise",
-      "score": 49.2,
-      "confidence": 0.613,
-      "band": "usable",
-      "trend": {
-        "spanYears": 10,
-        "delta": 27.9,
-        "basket": 4,
-        "clamped": 1
-      },
+      "kind": "measure",
+      "score": 42.3,
+      "confidence": 0.412,
+      "band": "thin",
+      "trend": null,
       "scoredOn": [
         "new_business_density",
         "business_start_days",
-        "business_start_procedures",
-        "internet_users",
-        "account_ownership",
-        "domestic_credit_private"
+        "business_start_procedures"
       ],
       "gaps": [
         "adult_digital_skills",
         "perceived_control"
       ],
       "retired": [],
-      "exemplars": [
-        {
-          "iso3": "USA",
-          "country": "United States",
-          "score": 92.5,
-          "confidence": 0.495
-        },
-        {
-          "iso3": "AUS",
-          "country": "Australia",
-          "score": 89.1,
-          "confidence": 0.613
-        },
-        {
-          "iso3": "GBR",
-          "country": "United Kingdom",
-          "score": 86.7,
-          "confidence": 0.613
-        }
-      ],
+      "exemplars": [],
       "evidenceElsewhere": [
         {
           "id": "bra-sibratec",
@@ -196,7 +192,33 @@
           "title": "Puntos México Conectado, national digital learning centres"
         }
       ],
-      "institutionIds": []
+      "institutionIds": [],
+      "conditions": [
+        {
+          "id": "internet_users",
+          "value": 70,
+          "unit": "% of population",
+          "year": 2025,
+          "rank": 43,
+          "n": 53
+        },
+        {
+          "id": "account_ownership",
+          "value": 89.025,
+          "unit": "% aged 15+",
+          "year": 2024,
+          "rank": 22,
+          "n": 52
+        },
+        {
+          "id": "domestic_credit_private",
+          "value": 44.025,
+          "unit": "% of GDP",
+          "year": 2025,
+          "rank": 35,
+          "n": 52
+        }
+      ]
     },
     {
       "dimension": "coordination",
@@ -481,7 +503,8 @@
           "title": "TÜBİTAK 1505 university–industry support programme"
         }
       ],
-      "institutionIds": []
+      "institutionIds": [],
+      "conditions": []
     },
     {
       "dimension": "trust",
@@ -542,24 +565,18 @@
           "title": "Civil-court clearance and the CEPEJ monitoring series"
         }
       ],
-      "institutionIds": []
+      "institutionIds": [],
+      "conditions": []
     },
     {
       "dimension": "learning",
-      "kind": "raise",
-      "score": 20.9,
-      "confidence": 0.554,
-      "band": "usable",
-      "trend": {
-        "spanYears": 10,
-        "delta": -12.9,
-        "basket": 3,
-        "clamped": 0
-      },
+      "kind": "measure",
+      "score": 9.2,
+      "confidence": 0.427,
+      "band": "thin",
+      "trend": null,
       "scoredOn": [
         "human_capital_index",
-        "tertiary_enrollment",
-        "education_expenditure_gdp",
         "vocational_secondary_share",
         "firm_training_incidence"
       ],
@@ -568,26 +585,7 @@
         "research_citation_impact"
       ],
       "retired": [],
-      "exemplars": [
-        {
-          "iso3": "FIN",
-          "country": "Finland",
-          "score": 77.9,
-          "confidence": 0.543
-        },
-        {
-          "iso3": "AUS",
-          "country": "Australia",
-          "score": 70.3,
-          "confidence": 0.543
-        },
-        {
-          "iso3": "GBR",
-          "country": "United Kingdom",
-          "score": 68.6,
-          "confidence": 0.52
-        }
-      ],
+      "exemplars": [],
       "evidenceElsewhere": [
         {
           "id": "sgp-skillsfuture",
@@ -660,7 +658,25 @@
           "title": "MEB public lifelong-learning network"
         }
       ],
-      "institutionIds": []
+      "institutionIds": [],
+      "conditions": [
+        {
+          "id": "tertiary_enrollment",
+          "value": 34.447,
+          "unit": "% gross",
+          "year": 2025,
+          "rank": 42,
+          "n": 52
+        },
+        {
+          "id": "education_expenditure_gdp",
+          "value": 4.099,
+          "unit": "% of GDP",
+          "year": 2022,
+          "rank": 30,
+          "n": 53
+        }
+      ]
     },
     {
       "dimension": "experimentation",
@@ -774,24 +790,24 @@
           "title": "Zonas Livres Tecnológicas, regulator-supervised experimentation zones"
         }
       ],
-      "institutionIds": []
+      "institutionIds": [],
+      "conditions": []
     },
     {
       "dimension": "adaptability",
-      "kind": "raise",
-      "score": 48.8,
-      "confidence": 0.584,
+      "kind": "hold",
+      "score": 59.5,
+      "confidence": 0.531,
       "band": "usable",
       "trend": {
         "spanYears": 10,
-        "delta": 10.1,
-        "basket": 4,
+        "delta": 12.2,
+        "basket": 3,
         "clamped": 1
       },
       "scoredOn": [
         "labor_force_participation",
         "unemployment_rate",
-        "broadband_subscriptions",
         "electricity_transmission_losses",
         "export_diversification"
       ],
@@ -804,20 +820,20 @@
         {
           "iso3": "NLD",
           "country": "Netherlands",
-          "score": 91.3,
-          "confidence": 0.712
+          "score": 92,
+          "confidence": 0.678
         },
         {
-          "iso3": "DEU",
-          "country": "Germany",
-          "score": 84.7,
-          "confidence": 0.712
+          "iso3": "THA",
+          "country": "Thailand",
+          "score": 87.6,
+          "confidence": 0.667
         },
         {
-          "iso3": "CAN",
-          "country": "Canada",
-          "score": 84.4,
-          "confidence": 0.712
+          "iso3": "SGP",
+          "country": "Singapore",
+          "score": 84.9,
+          "confidence": 0.667
         }
       ],
       "evidenceElsewhere": [
@@ -1389,24 +1405,33 @@
           "title": "Public civil defence shelters, and their dismantling"
         }
       ],
-      "institutionIds": []
+      "institutionIds": [],
+      "conditions": [
+        {
+          "id": "broadband_subscriptions",
+          "value": 3.15,
+          "unit": "per 100 people",
+          "year": 2024,
+          "rank": 47,
+          "n": 53
+        }
+      ]
     },
     {
       "dimension": "building",
       "kind": "raise",
-      "score": 39.1,
-      "confidence": 0.622,
+      "score": 47.1,
+      "confidence": 0.568,
       "band": "usable",
       "trend": {
         "spanYears": 10,
-        "delta": 4.9,
-        "basket": 4,
+        "delta": 5.8,
+        "basket": 3,
         "clamped": 0
       },
       "scoredOn": [
         "manufacturing_value_added",
         "high_tech_exports_share",
-        "labour_productivity",
         "electricity_connection_speed",
         "economic_complexity"
       ],
@@ -1419,22 +1444,22 @@
       ],
       "exemplars": [
         {
-          "iso3": "IRL",
-          "country": "Ireland",
-          "score": 75.3,
-          "confidence": 0.622
-        },
-        {
-          "iso3": "SGP",
-          "country": "Singapore",
-          "score": 71.2,
-          "confidence": 0.622
-        },
-        {
           "iso3": "CHN",
           "country": "China",
-          "score": 64.9,
-          "confidence": 0.622
+          "score": 77,
+          "confidence": 0.568
+        },
+        {
+          "iso3": "KOR",
+          "country": "South Korea",
+          "score": 69.8,
+          "confidence": 0.568
+        },
+        {
+          "iso3": "IRL",
+          "country": "Ireland",
+          "score": 69.2,
+          "confidence": 0.568
         }
       ],
       "evidenceElsewhere": [
@@ -1936,7 +1961,17 @@
           "title": "Gotthard Base Tunnel"
         }
       ],
-      "institutionIds": []
+      "institutionIds": [],
+      "conditions": [
+        {
+          "id": "labour_productivity",
+          "value": 24842.112,
+          "unit": "constant 2021 PPP $",
+          "year": 2025,
+          "rank": 42,
+          "n": 51
+        }
+      ]
     },
     {
       "dimension": "shared_purpose",
@@ -2022,7 +2057,8 @@
           "title": "Orçamento Participativo Portugal"
         }
       ],
-      "institutionIds": []
+      "institutionIds": [],
+      "conditions": []
     }
   ],
   "ownEvidence": [

@@ -120,6 +120,16 @@ export type AgendaStrings = {
   contributeBody: string
   /** Link from an agenda to the full country profile in the ground layer. */
   profileLink: string
+  /** {countryTopic}: the heading over the conditions layer. See D122. */
+  conditionsHeading: string
+  /** What a condition is and that it is not part of the score. */
+  conditionsIntro: string
+  colCondition: string
+  colValue: string
+  colYear: string
+  colRank: string
+  /** {rank} {n}: a condition's place among the countries that have it. */
+  conditionRank: string
 }
 
 export type Lexicon = {
@@ -139,6 +149,8 @@ export type Lexicon = {
   indicators: Record<string, string>
   /** Indicator definitions by id. Missing ids fall back to the registry definition. */
   indicatorDefinitions: Record<string, string>
+  /** Registry unit strings, keyed by the English unit. Missing units fall back to the registry. */
+  units: Record<string, string>
   bands: Record<ConfidenceBandId, string>
   /** What each confidence band means, printed under the legend beside its label. */
   bandMeanings: Record<ConfidenceBandId, string>

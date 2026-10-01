@@ -5,6 +5,7 @@ import {
   COUNTRY_ISO3,
   DIMENSIONS,
   INDICATORS_BY_ID,
+  isCondition,
   isDeclaredGap,
   isScored,
   SubnationalFile,
@@ -373,11 +374,11 @@ export async function validateEvidence(path = FILES.evidence): Promise<Problem[]
         severity: 'error',
         problem: `${record.id}: unknown indicator id ${record.indicatorId}`,
       })
-    } else if (isScored(def)) {
+    } else if (isScored(def) || isCondition(def)) {
       problems.push({
         file,
         severity: 'warning',
-        problem: `${record.id}: ${record.indicatorId} is measured, so the record adds nothing the score does not already carry`,
+        problem: `${record.id}: ${record.indicatorId} is measured, so the record adds nothing the published value does not already carry`,
       })
     }
 

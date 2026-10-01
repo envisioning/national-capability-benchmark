@@ -8,32 +8,26 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 70,2 | 0,63 (utilizável) | +9,9 em 10 anos, sobre 5 indicadores |
-| Agência | 92,5 | 0,5 (utilizável) | +7,9 em 10 anos, sobre 3 indicadores |
+| Antecipação | 72,7 | 0,46 (utilizável) | +0,5 em 10 anos, sobre 2 indicadores |
+| Agência | 86,4 | 0,22 (muito fraca) | sem base de tendência |
 | Coordenação | 99,5 | 0,23 (muito fraca) | sem base de tendência |
 | Confiança | 64,6 | 0,26 (fraca) | sem base de tendência |
-| Aprendizagem | 49,8 | 0,45 (utilizável) | -0,4 em 10 anos, sobre 2 indicadores |
+| Aprendizagem | 38,5 | 0,34 (fraca) | sem base de tendência |
 | Experimentação | 55,8 | 0,39 (fraca) | +3,2 em 10 anos, sobre 2 indicadores |
-| Adaptação | 81,4 | 0,71 (boa) | +6 em 10 anos, sobre 4 indicadores |
-| Construção | 58,4 | 0,59 (utilizável) | +2,4 em 10 anos, sobre 4 indicadores |
+| Adaptação | 81,8 | 0,68 (boa) | +3,4 em 10 anos, sobre 3 indicadores |
+| Construção | 58,2 | 0,53 (utilizável) | +0,5 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 40,8 | 0,32 (fraca) | -1,1 em 10 anos, sobre 2 indicadores |
-
-## Dimensões para elevar
-
-Estas são as notas mais baixas com evidência utilizável. A evidência fraca aparece abaixo.
-
-### Aprendizagem: 49,8, confiança utilizável
-
-Com que eficácia o país adquire, distribui e atualiza conhecimento?
-
-- Baseada em 5 indicadores observados.
-- Maiores notas utilizáveis: Finlândia 77,9, Austrália 70,3, Reino Unido 68,6.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); CAPES, federal postgraduate funding (Brasil); INEP, the standing education statistics institution (Brasil); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (Índia); SETAs and workplace-based learning delivery (África do Sul); MEB public lifelong-learning network (Turquia).
-- Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ## Dimensões para medir primeiro
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
+
+### Agência: confiança 0,22, muito fraca
+
+Quão capazes são pessoas e organizações de transformar uma intenção em ação?
+
+- Baseada em 2 indicadores observados.
+- Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
 
 ### Coordenação: confiança 0,23, muito fraca
 
@@ -59,6 +53,13 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
 - Bases rejeitadas: Voz e responsabilização.
 
+### Aprendizagem: confiança 0,34, fraca
+
+Com que eficácia o país adquire, distribui e atualiza conhecimento?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
+
 ### Experimentação: confiança 0,39, fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
@@ -70,10 +71,26 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Agência: 92,5, confiança utilizável
-- Adaptação: 81,4, confiança boa
-- Antecipação: 70,2, confiança utilizável
-- Construção: 58,4, confiança utilizável
+- Adaptação: 81,8, confiança boa
+- Antecipação: 72,7, confiança utilizável
+- Construção: 58,2, confiança utilizável
+
+## O que os Estados Unidos tem para trabalhar
+
+Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na nota, na confiança nem na tendência. Lidas contra a nota, mostram se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.
+
+| Dimensão | Condição | Valor | Ano | Posição |
+| --- | --- | --- | --- | --- |
+| Antecipação | Dispêndio em P&D | 3,4 % do PIB | 2023 | 4º de 51 |
+| Antecipação | Pesquisadores em P&D | 4.937,5 por milhão de pessoas | 2022 | 13º de 50 |
+| Antecipação | Servidores seguros de internet | 196.616,1 por milhão de pessoas | 2024 | 3º de 53 |
+| Agência | Pessoas que usam a internet | 94,7 % da população | 2024 | 12º de 53 |
+| Agência | Titularidade de conta financeira | 97 % das pessoas com 15 anos ou mais | 2024 | 15º de 52 |
+| Agência | Crédito ao setor privado | 201,3 % do PIB | 2025 | 1º de 52 |
+| Aprendizagem | Matrícula no ensino superior | 79,4 % (taxa bruta) | 2022 | 14º de 52 |
+| Aprendizagem | Dispêndio público em educação | 5,4 % do PIB | 2021 | 10º de 53 |
+| Adaptação | Assinaturas de banda larga fixa | 38,9 por 100 pessoas | 2024 | 13º de 53 |
+| Construção | Produto por trabalhador | 156.983,2 US$ PPC constantes de 2021 | 2025 | 4º de 51 |
 
 ## Agenda de medição
 

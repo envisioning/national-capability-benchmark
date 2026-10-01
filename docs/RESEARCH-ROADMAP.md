@@ -38,15 +38,17 @@ each dimension's correlation with log GDP per capita. Above 0.70 is a finding
 against the claim, to be read and published. It is not a target, and no row is
 added or dropped to move it.
 
-**Guardrail.** Confidence must not come to track wealth. At 6.1.2 it barely
-did (r = 0.34 across 51 countries). At 6.2.0 it is r = 0.39: the ILOSTAT row's
-plausibility gate holds or ages more middle-income countries than rich ones.
-Watch it, and read the next source's effect on it first. A source that only
-covers rich countries raises O1 and breaks this.
+**Guardrail.** Confidence must not come to track wealth. At 7.0.0 the mean
+confidence across dimensions correlates with log GDP per capita at r = 0.32
+across 51 countries. The bought conditions that left the scores (D122) were
+better covered in rich countries, and the ILOSTAT row's plausibility gate still
+holds or ages more middle-income countries than rich ones. Watch it, and read
+the next source's effect on it first. A source that only covers rich countries
+raises O1 and breaks this.
 
 ### Where the objectives stand
 
-Dataset 6.2.0. Recompute from `data/out/diagnostics.json` and
+Dataset 7.0.0. Recompute from `data/out/diagnostics.json` and
 `data/out/index.json` after any rescore; never carry these figures forward by
 hand.
 
@@ -56,19 +58,25 @@ hand.
 | Experimentation | 0.23 | 2.6 | 0.62 | misses O1 |
 | Shared purpose | 0.26 | 1.9 | 0.46 | misses O1 |
 | Coordination | 0.36 | 2.8 | 0.56 | misses O1 |
-| Adaptability | 0.68 | 5.8 | 0.84 | tracks income |
-| Learning | 0.50 | 4.9 | 0.73 | tracks income |
-| Agency | 0.58 | 5.8 | 0.85 | tracks income |
-| Anticipation | 0.60 | 4.9 | 0.87 | tracks income |
-| Building | 0.60 | 4.9 | 0.64 | |
+| Learning | 0.37 | 2.9 | 0.66 | misses O1 |
+| Agency | 0.38 | 2.9 | 0.64 | misses O1 |
+| Anticipation | 0.45 | 2.0 | 0.87 | tracks income |
+| Building | 0.55 | 3.9 | 0.43 | |
+| Adaptability | 0.64 | 4.8 | 0.74 | tracks income |
 
-Four dimensions track income above 0.70. The rows that carry the correlation
-are mostly diffusion stocks, measurement class `I`: secure internet servers
-(r = 0.90), internet users (0.88), broadband subscriptions (0.85), with the
-human capital index (0.88) and tertiary enrolment (0.81) in Learning. That is
-a reason to ask whether each stock observes the capability its dimension
-names. It is not a reason to drop a row for its correlation. The Q3 construct
-audit asks the question row by row (D118).
+Ten bought conditions left the scores at 7.0.0 and are published beside their
+dimensions (D122): research spending, researchers and secure servers beside
+Anticipation, internet users, account ownership and private credit beside
+Agency, tertiary enrolment and education spending beside Learning, broadband
+beside Adaptability and output per worker beside Building. The share of
+variance on the first factor of the eight dimension scores with a complete
+panel fell from 0.62 to 0.50 (46 countries, Trust left out for coverage).
+
+Two dimensions still track income above 0.70. Anticipation stays at 0.87 on
+its two capability rows, articles per head and statistical performance, which
+both track income themselves; that is a finding against the claim. Adaptability
+is 0.74. Agency and Learning now miss O1: the evidence on them was thinner than
+the stocks made it look, so the queue points there.
 
 ## The queue
 
@@ -79,8 +87,8 @@ passes triage runs to its gate. One that fails triage costs one paragraph.
 | # | Work package | Moves | Route | First output |
 | --- | --- | --- | --- | --- |
 | Q1 | Adaptability: wire the researched gaps | O1 and the report: Adaptability | UNCTAD export concentration (#24, D119) and ILOSTAT long-term unemployment with a plausibility gate (#26, D120) | Adapters, decision entries, one minor release |
-| Q2 | Adaptability: the remaining gaps and the stock row | Adaptability | Desk triage for `disaster_preparedness` and `institutional_responsiveness`, and a construct audit of `broadband_subscriptions` | One triage paragraph per gap and one audit verdict |
-| Q3 | Construct audit of stock rows | Reported O2: Anticipation, Agency, Learning | `wealthAttribution` names the rows. Each class `I` stock gets a verdict on what it observes | Keep or retire, with a construct reason for each; companions where the construct asks for one |
+| Q2 | Adaptability: the remaining gaps | Adaptability | Desk triage for `disaster_preparedness` and `institutional_responsiveness`. `broadband_subscriptions` is a condition since D122 | One triage paragraph per gap |
+| Q3 | Construct audit of stock rows | Reported O2: Anticipation, Agency, Learning | Done for Tier A at 7.0.0: ten bought conditions moved to the conditions layer (`docs/research/CONDITIONS-AUDIT.md`, D122). Open: the six Tier B rows, each only once its dimension has a capability row to replace it, and replacements for the two borderline rows, `sci_articles_per_million` and `human_capital_index` | One decision per Tier B row; OpenAlex impact and a learning-outcome series as replacements |
 | Q4 | Reopen exclusions that rested on income alone | O1: Trust | `bribery_incidence` (check since D60) first | Construct review; promote or confirm as a check |
 | Q5 | V-Dem sweep | O1: Trust, Coordination, Shared purpose | The pinned V-Dem adapter, 53 / 53. Polarization is published as a check (D121) | Triage table of codebook variables against each gap, construct first |
 | Q6 | EVS/WVS sweep beyond A165 | O1: Shared purpose, Trust | The Joint EVS/WVS adapter (TRUST-1) | Triage table of behavioural items (membership, volunteering, participation) |

@@ -8,35 +8,35 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 8.6 | 0.54 (usable) | -1.7 over 10 years using 4 indicators |
-| Agency | 33.2 | 0.39 (thin) | +30.6 over 10 years using 2 indicators |
+| Anticipation | 0.9 | 0.46 (usable) | -5.5 over 10 years using 2 indicators |
+| Agency | 0 | 0.22 (very thin) | no trend |
 | Coordination | 16.5 | 0.22 (very thin) | no trend |
 | Trust | 36.1 | 0.26 (thin) | no trend |
-| Learning | 57.1 | 0.1 (very thin) | no trend |
+| Learning | 39 | 0.1 (very thin) | no trend |
 | Experimentation | 5.2 | 0.1 (very thin) | no trend |
-| Adaptability | 37.2 | 0.63 (usable) | +4.3 over 10 years using 4 indicators, with 1 at the frame edge |
-| Building | 0 | 0.23 (very thin) | no trend |
+| Adaptability | 39.4 | 0.59 (usable) | +2.6 over 10 years using 3 indicators, with 1 at the frame edge |
+| Building | 0 | 0.27 (thin) | no trend |
 | Shared Purpose | not scored | 0.02 (very thin) | no trend |
 
 ## What to raise
 
 These are the lowest scores with usable evidence. Thin evidence appears below.
 
-### Anticipation: 8.6, confidence usable
+### Anticipation: 0.9, confidence usable
 
 How capable is the country of identifying and preparing for emerging change?
 
-- Uses 5 observed indicators.
-- Highest usable scores: Sweden 83.5, Finland 82, Switzerland 81.1.
+- Uses 2 observed indicators.
+- Highest usable scores: Switzerland 96.3, Sweden 90, Finland 87.5.
 - Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (South Africa).
 - Missing indicators: Government foresight capacity, Long-horizon research share.
 
-### Adaptability: 37.2, confidence usable
+### Adaptability: 39.4, confidence usable
 
 How effectively can the system respond when circumstances change?
 
-- Uses 6 observed indicators.
-- Highest usable scores: Netherlands 91.3, Germany 84.7, Canada 84.4.
+- Uses 5 observed indicators.
+- Highest usable scores: Netherlands 92, Thailand 87.6, Singapore 84.9.
 - Related deliveries in other countries: Plano Real, the 1994 currency stabilisation (Brazil); Proalcool, the fuel substitution after the oil shock (Brazil); The Convertibility Plan, and its collapse (Argentina); Kurzarbeit in the 2008-2009 crisis (Germany); The 2001 stabilisation, and its unwinding (Turkey); Telebras, the telecom system that was dismantled (Brazil); Estonian Defence League, national defence rebuilt after independence (Estonia); Korea Internet and Security Agency, a consolidated digital authority (South Korea); Federal siren warning network, and its dismantling (Germany); Room for the River, flood safety delivered across the Rhine branches (Netherlands); Childcare benefits administration, and the recovery after institutional failure (Netherlands); National Police, one corps from twenty-five regional forces (Netherlands); NL-Alert, a tested multi-channel emergency warning system (Netherlands); DigiD Machtigen, delegated access to public services (Netherlands); DigiNotar, a certificate breach that forced a trust-chain reset (Netherlands); Programmatic Approach to Nitrogen, and the permitting reversal (Netherlands); 27F reconstruction, a nationwide recovery programme after the 2010 earthquake (Chile); Cédula digital, an identity service upgraded for mobile use (Colombia); Victims' reparations, a long-running administrative response to conflict (Colombia); Fondo Adaptación, recovery and safer resettlement after La Niña (Colombia); My Number Card, a national identity rail extended into services (Japan); Tōhoku reconstruction, a decade-long recovery programme (Japan); Juntos, a conditional-transfer system at national scale (Peru); Certified digital signature across public services (Costa Rica); REDCUDI childcare network and SINIRUBE referrals (Costa Rica); Dollarization as an emergency monetary redesign (Ecuador); 2016 earthquake national emergency coordination (Ecuador); 120 a los 65 social pension (Panama); Canal water-and-transit response to the 2023–24 drought (Panama); Bono Juana Azurduy maternal and child health transfer (Bolivia); Renta Dignidad non-contributory old-age pension (Bolivia); Tekoporã Mbarete family-support programme (Paraguay); SIFEN national electronic invoicing rollout (Paraguay); Asignación Universal por Hijo child benefit (Argentina); SUBE national electronic fare and subsidy rail (Argentina); PhilSys foundational national ID rollout (Philippines); Pantawid Pamilyang Pilipino Program (4Ps) (Philippines); Typhoon Yolanda shelter and recovery programme (Philippines); Jaminan Kesehatan Nasional, a near-universal health-insurance pool (Indonesia); InaRISK national disaster-risk information platform (Indonesia); VNeID national electronic identity (Vietnam); Vietnam Social Security health-insurance expansion (Vietnam); Typhoon Yagi emergency restoration (Vietnam); MySejahtera and the national COVID-19 immunisation programme (Malaysia); National flood-warning SMS system (Malaysia); Universal Coverage Scheme and the 30-baht health system (Thailand); National Digital ID framework (Thailand); T-Alert national cell-broadcast warning system (Thailand); Cl@ve shared digital identity (Spain); La Palma volcanic-eruption recovery and monitoring (Spain); mObywatel digital ID wallet (Poland); Rodzina 500+ and 800+ child-benefit delivery (Poland); Alert RCB national emergency SMS channel (Poland); BankID federated electronic identity (Sweden); 1177 national health portal and helpline (Sweden); VMA multi-channel public warning system (Sweden); MyGovID single sign-on for public services (Ireland); National COVID-19 vaccination delivery (Ireland); National Asset Management Agency crisis workout (Ireland); Met Éireann national weather-warning service (Ireland); Salário mínimo and its permanent revaluation rule (Brazil); eNaira, a national rollout with an adoption gap (Nigeria); Productive Safety Net Programme for drought resilience (Ethiopia); National 9-1-1 emergency-response system (Dominican Republic); Sistema Nacional de Emergencias 911 (Honduras); National COVID-19 vaccination campaign (Cuba); Bitcoin Law, and its 2025 rollback (El Salvador); Routine immunization coverage, and its erosion (Haiti); Chave Móvel Digital and Portugal's digital identity layer (Portugal); Empresa na Hora and the one-stop company registry (Portugal); Sistema de Gestão Integrada de Fogos Rurais (Portugal); Simplex and LabX, a standing simplification-and-experimentation loop (Portugal); Programa Nacional de Vacinação and seasonal immunisation (Portugal); STAYAWAY COVID, a contact-tracing app suspended after the emergency (Portugal); CoWIN national COVID-19 vaccination platform (India); Gauteng e-tolls, and their cancellation after public resistance (South Africa); COFEPRIS digital regulatory procedures (Mexico); Simulacro Nacional 2024, a nationwide emergency exercise (Mexico); PROSPERA, and its replacement by a new scholarship authority (Mexico); AFAD earthquake shelter and recovery operation (Turkey); Civil defence shelters (Finland); Public civil defence shelters, and their dismantling (Germany).
 - Missing indicators: Disaster preparedness and recovery, Institutional responsiveness.
 
@@ -56,7 +56,7 @@ To what extent can people imagine themselves as participants in a common project
 
 How effectively does the country acquire, distribute, and update knowledge?
 
-- Uses 4 observed indicators.
+- Uses 2 observed indicators.
 - Missing indicators: Adult learning participation, Research citation impact.
 
 ### Experimentation: confidence 0.1, very thin
@@ -74,13 +74,12 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
-### Building: confidence 0.23, very thin
+### Agency: confidence 0.22, very thin
 
-How capable is the country of turning plans and knowledge into functioning systems?
+How able are individuals and organizations to turn an intention into action?
 
-- Uses 3 observed indicators.
-- Missing indicators: Large project delivery, Firm scale-up rate.
-- Rejected datasets: Logistics infrastructure quality.
+- Uses 2 observed indicators.
+- Missing indicators: Adult digital skills, Perceived control over life.
 
 ### Trust: confidence 0.26, thin
 
@@ -90,12 +89,29 @@ How much cooperation is possible beyond immediate personal networks?
 - Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
-### Agency: confidence 0.39, thin
+### Building: confidence 0.27, thin
 
-How able are individuals and organizations to turn an intention into action?
+How capable is the country of turning plans and knowledge into functioning systems?
 
-- Uses 5 observed indicators.
-- Missing indicators: Adult digital skills, Perceived control over life.
+- Uses 3 observed indicators.
+- Missing indicators: Large project delivery, Firm scale-up rate.
+- Rejected datasets: Logistics infrastructure quality.
+
+## What Venezuela has to work with
+
+Conditions describe what a country has to work with: infrastructure, access, money, people, enrolment and income itself. Each is published beside a capability and is not part of its score, its confidence or its trend. Read against the score, they show whether what a country has turns into what it does. The rank counts the countries with a value, best first.
+
+| Dimension | Condition | Value | Year | Rank |
+| --- | --- | --- | --- | --- |
+| Anticipation | R&D expenditure | 0.3 % of GDP | 2014 | 37 of 51 |
+| Anticipation | Researchers in R&D | 180 per million people | 2023 | 40 of 50 |
+| Anticipation | Secure internet servers | 246.7 per million people | 2024 | 42 of 53 |
+| Agency | Individuals using the internet | 76.7 % of population | 2024 | 39 of 53 |
+| Agency | Financial account ownership | 87.3 % aged 15+ | 2024 | 24 of 52 |
+| Agency | Credit to the private sector | 27.5 % of GDP | 2013 | 46 of 52 |
+| Learning | Tertiary enrolment | 78.3 % gross | 2009 | 15 of 52 |
+| Learning | Public education expenditure | 6.9 % of GDP | 2009 | 4 of 53 |
+| Adaptability | Fixed broadband subscriptions | 12.9 per 100 people | 2024 | 35 of 53 |
 
 ## Missing data
 

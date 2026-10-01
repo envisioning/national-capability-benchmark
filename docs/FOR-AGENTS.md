@@ -159,6 +159,14 @@ publisher. Keep the two apart. See D20 and D31.
 value in the publisher's units. `normalized` is a 0 to 100 position inside this
 frame. A value outside the frame clamps and sets `outOfFrame` on the cell.
 
+**Do not read a condition as part of a score.** Each `DimensionResult` carries
+`conditions`: what the country has to work with on that dimension, such as
+broadband lines, bank accounts, research spending or output per worker. A
+condition is the publisher's value with its `rank` among the `n` countries that
+have it. It is never normalised and it enters no score, confidence or trend.
+Quote it as a condition beside the score, never as evidence of the capability.
+See D122.
+
 **Do not present a score as an absolute verdict.** It is a position among the
 countries in the benchmark. The frame is wide but it is not the world. See A10.
 

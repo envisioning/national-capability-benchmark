@@ -263,6 +263,31 @@ export function buildReport(
     out.push('')
   }
 
+  if (diag.conditions.length > 0) {
+    out.push('## Conditions sit beside each dimension')
+    out.push('')
+    out.push(
+      'A condition records what a country has to work with: a stock of infrastructure, access, money, people or enrolment, or income itself. It is fetched and published as the publisher wrote it, with its rank among the countries that have it, and it enters no frame, mean, coverage count, confidence or trend. The first column asks whether having it goes with income, the second whether it goes with doing the capability it sits beside. See D122.',
+    )
+    out.push('')
+    out.push(
+      table(
+        ['Condition', 'Dimension', 'Countries', 'Latest', 'r vs log GDP per capita', 'r vs dimension score'],
+        diag.conditions.map((c) => [
+          c.name,
+          DIMENSION_LABELS[c.dimension],
+          c.countries,
+          c.latestYear ?? 'no data',
+          c.r === null ? 'no data' : `${c.r.toFixed(3)} (n ${c.n})`,
+          c.dimensionR === null ? 'no data' : `${c.dimensionR.toFixed(3)} (n ${c.dimensionN})`,
+        ]),
+      ),
+    )
+    out.push('')
+    out.push('Both correlations read the value after the registry transform, so secure servers are read logged.')
+    out.push('')
+  }
+
   out.push('## Every dimension is checked against income')
   out.push('')
   out.push(

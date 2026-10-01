@@ -1,26 +1,23 @@
 {
-  "generatedAt": "2026-10-01T09:18:00.283Z",
+  "generatedAt": "2026-10-01T09:42:48.428Z",
   "iso3": "BRA",
   "country": "Brazil",
   "dimensions": [
     {
       "dimension": "anticipation",
       "kind": "raise",
-      "score": 37.3,
-      "confidence": 0.543,
+      "score": 45.8,
+      "confidence": 0.455,
       "band": "usable",
       "trend": {
         "spanYears": 10,
-        "delta": 10.8,
-        "basket": 4,
+        "delta": 7.8,
+        "basket": 2,
         "clamped": 0
       },
       "scoredOn": [
-        "rd_expenditure_gdp",
-        "researchers_per_million",
         "sci_articles_per_million",
-        "statistical_performance",
-        "secure_internet_servers"
+        "statistical_performance"
       ],
       "gaps": [
         "government_foresight_capacity",
@@ -29,22 +26,22 @@
       "retired": [],
       "exemplars": [
         {
+          "iso3": "CHE",
+          "country": "Switzerland",
+          "score": 96.3,
+          "confidence": 0.455
+        },
+        {
           "iso3": "SWE",
           "country": "Sweden",
-          "score": 83.5,
-          "confidence": 0.644
+          "score": 90,
+          "confidence": 0.455
         },
         {
           "iso3": "FIN",
           "country": "Finland",
-          "score": 82,
-          "confidence": 0.644
-        },
-        {
-          "iso3": "CHE",
-          "country": "Switzerland",
-          "score": 81.1,
-          "confidence": 0.644
+          "score": 87.5,
+          "confidence": 0.455
         }
       ],
       "evidenceElsewhere": [
@@ -123,53 +120,52 @@
         "bra.sp.fapesp",
         "bra.sp.unicamp",
         "bra.sp.usp"
+      ],
+      "conditions": [
+        {
+          "id": "rd_expenditure_gdp",
+          "value": 1.194,
+          "unit": "% of GDP",
+          "year": 2023,
+          "rank": 23,
+          "n": 51
+        },
+        {
+          "id": "researchers_per_million",
+          "value": 903.201,
+          "unit": "per million people",
+          "year": 2014,
+          "rank": 27,
+          "n": 50
+        },
+        {
+          "id": "secure_internet_servers",
+          "value": 6941.174,
+          "unit": "per million people",
+          "year": 2024,
+          "rank": 24,
+          "n": 53
+        }
       ]
     },
     {
       "dimension": "agency",
-      "kind": "hold",
-      "score": 58.9,
-      "confidence": 0.613,
-      "band": "usable",
-      "trend": {
-        "spanYears": 10,
-        "delta": 19.9,
-        "basket": 4,
-        "clamped": 0
-      },
+      "kind": "measure",
+      "score": 51.6,
+      "confidence": 0.412,
+      "band": "thin",
+      "trend": null,
       "scoredOn": [
         "new_business_density",
         "business_start_days",
-        "business_start_procedures",
-        "internet_users",
-        "account_ownership",
-        "domestic_credit_private"
+        "business_start_procedures"
       ],
       "gaps": [
         "adult_digital_skills",
         "perceived_control"
       ],
       "retired": [],
-      "exemplars": [
-        {
-          "iso3": "USA",
-          "country": "United States",
-          "score": 92.5,
-          "confidence": 0.495
-        },
-        {
-          "iso3": "AUS",
-          "country": "Australia",
-          "score": 89.1,
-          "confidence": 0.613
-        },
-        {
-          "iso3": "GBR",
-          "country": "United Kingdom",
-          "score": 86.7,
-          "confidence": 0.613
-        }
-      ],
+      "exemplars": [],
       "evidenceElsewhere": [
         {
           "id": "sgp-digital-skills",
@@ -382,6 +378,32 @@
         "bra.to.fire",
         "bra.to.military_police",
         "bra.to.prosecution"
+      ],
+      "conditions": [
+        {
+          "id": "internet_users",
+          "value": 84.463,
+          "unit": "% of population",
+          "year": 2024,
+          "rank": 30,
+          "n": 53
+        },
+        {
+          "id": "account_ownership",
+          "value": 86.381,
+          "unit": "% aged 15+",
+          "year": 2024,
+          "rank": 25,
+          "n": 52
+        },
+        {
+          "id": "domestic_credit_private",
+          "value": 75.103,
+          "unit": "% of GDP",
+          "year": 2025,
+          "rank": 23,
+          "n": 52
+        }
       ]
     },
     {
@@ -822,7 +844,8 @@
         "bra.to.government",
         "bra.to.legislature",
         "bra.to.military_police"
-      ]
+      ],
+      "conditions": []
     },
     {
       "dimension": "trust",
@@ -1121,24 +1144,18 @@
         "bra.to.military_police",
         "bra.to.prosecution",
         "bra.to.tce"
-      ]
+      ],
+      "conditions": []
     },
     {
       "dimension": "learning",
-      "kind": "raise",
-      "score": 43.5,
-      "confidence": 0.543,
-      "band": "usable",
-      "trend": {
-        "spanYears": 10,
-        "delta": 5.1,
-        "basket": 2,
-        "clamped": 0
-      },
+      "kind": "measure",
+      "score": 30.2,
+      "confidence": 0.412,
+      "band": "thin",
+      "trend": null,
       "scoredOn": [
         "human_capital_index",
-        "tertiary_enrollment",
-        "education_expenditure_gdp",
         "vocational_secondary_share",
         "firm_training_incidence"
       ],
@@ -1147,26 +1164,7 @@
         "research_citation_impact"
       ],
       "retired": [],
-      "exemplars": [
-        {
-          "iso3": "FIN",
-          "country": "Finland",
-          "score": 77.9,
-          "confidence": 0.543
-        },
-        {
-          "iso3": "AUS",
-          "country": "Australia",
-          "score": 70.3,
-          "confidence": 0.543
-        },
-        {
-          "iso3": "GBR",
-          "country": "United Kingdom",
-          "score": 68.6,
-          "confidence": 0.52
-        }
-      ],
+      "exemplars": [],
       "evidenceElsewhere": [
         {
           "id": "sgp-skillsfuture",
@@ -1307,6 +1305,24 @@
         "bra.sp.usp",
         "bra.to.cge",
         "bra.to.tce"
+      ],
+      "conditions": [
+        {
+          "id": "tertiary_enrollment",
+          "value": 69.732,
+          "unit": "% gross",
+          "year": 2024,
+          "rank": 24,
+          "n": 52
+        },
+        {
+          "id": "education_expenditure_gdp",
+          "value": 5.619,
+          "unit": "% of GDP",
+          "year": 2022,
+          "rank": 9,
+          "n": 53
+        }
       ]
     },
     {
@@ -1427,25 +1443,25 @@
         "bra.sp.unesp",
         "bra.sp.unicamp",
         "bra.sp.usp"
-      ]
+      ],
+      "conditions": []
     },
     {
       "dimension": "adaptability",
       "kind": "hold",
-      "score": 62.7,
-      "confidence": 0.712,
+      "score": 65.4,
+      "confidence": 0.678,
       "band": "good",
       "trend": {
         "spanYears": 10,
-        "delta": 15.4,
-        "basket": 4,
+        "delta": 13.1,
+        "basket": 3,
         "clamped": 0
       },
       "scoredOn": [
         "labor_force_participation",
         "unemployment_rate",
         "long_term_unemployment_share",
-        "broadband_subscriptions",
         "electricity_transmission_losses",
         "export_diversification"
       ],
@@ -1458,20 +1474,20 @@
         {
           "iso3": "NLD",
           "country": "Netherlands",
-          "score": 91.3,
-          "confidence": 0.712
+          "score": 92,
+          "confidence": 0.678
         },
         {
-          "iso3": "DEU",
-          "country": "Germany",
-          "score": 84.7,
-          "confidence": 0.712
+          "iso3": "THA",
+          "country": "Thailand",
+          "score": 87.6,
+          "confidence": 0.667
         },
         {
-          "iso3": "CAN",
-          "country": "Canada",
-          "score": 84.4,
-          "confidence": 0.712
+          "iso3": "SGP",
+          "country": "Singapore",
+          "score": 84.9,
+          "confidence": 0.667
         }
       ],
       "evidenceElsewhere": [
@@ -2142,24 +2158,33 @@
         "bra.to.cge",
         "bra.to.fire",
         "bra.to.government"
+      ],
+      "conditions": [
+        {
+          "id": "broadband_subscriptions",
+          "value": 24.079,
+          "unit": "per 100 people",
+          "year": 2024,
+          "rank": 24,
+          "n": 53
+        }
       ]
     },
     {
       "dimension": "building",
       "kind": "raise",
-      "score": 25.3,
-      "confidence": 0.622,
+      "score": 28.2,
+      "confidence": 0.568,
       "band": "usable",
       "trend": {
         "spanYears": 10,
-        "delta": -1.2,
-        "basket": 4,
+        "delta": -2,
+        "basket": 3,
         "clamped": 0
       },
       "scoredOn": [
         "manufacturing_value_added",
         "high_tech_exports_share",
-        "labour_productivity",
         "electricity_connection_speed",
         "economic_complexity"
       ],
@@ -2172,22 +2197,22 @@
       ],
       "exemplars": [
         {
-          "iso3": "IRL",
-          "country": "Ireland",
-          "score": 75.3,
-          "confidence": 0.622
-        },
-        {
-          "iso3": "SGP",
-          "country": "Singapore",
-          "score": 71.2,
-          "confidence": 0.622
-        },
-        {
           "iso3": "CHN",
           "country": "China",
-          "score": 64.9,
-          "confidence": 0.622
+          "score": 77,
+          "confidence": 0.568
+        },
+        {
+          "iso3": "KOR",
+          "country": "South Korea",
+          "score": 69.8,
+          "confidence": 0.568
+        },
+        {
+          "iso3": "IRL",
+          "country": "Ireland",
+          "score": 69.2,
+          "confidence": 0.568
         }
       ],
       "evidenceElsewhere": [
@@ -2741,6 +2766,16 @@
         "bra.sp.unesp",
         "bra.to.fire",
         "bra.to.government"
+      ],
+      "conditions": [
+        {
+          "id": "labour_productivity",
+          "value": 41840.01,
+          "unit": "constant 2021 PPP $",
+          "year": 2025,
+          "rank": 32,
+          "n": 51
+        }
       ]
     },
     {
@@ -2866,7 +2901,8 @@
         "bra.sp.alesp",
         "bra.sp.defensoria",
         "bra.to.defensoria"
-      ]
+      ],
+      "conditions": []
     }
   ],
   "ownEvidence": [

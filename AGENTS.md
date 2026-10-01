@@ -227,6 +227,22 @@ port 3888. That entry starts Next directly and does not use the proxy.
   adapter emits it under the prefix, the World Bank ingest skips it, and its
   `pinned` field names the file, column and year that `/sources` prints in
   place of an API request. See D121.
+- **A condition is fetched, published beside its dimension and never scored.**
+  A condition records what a country has to work with, a stock of
+  infrastructure, access, money, people or enrolment, or income itself. It is
+  an ordinary row in `indicators.ts` with `role: 'condition'`, so the registry
+  stays the one place a row is declared, and it keeps its ingest route so the
+  World Bank ingest still fetches it. `isScored` is false for it,
+  `countedForCoverage` drops it, and `indicatorsFor` leaves it out: walk a
+  dimension's conditions with `conditionsFor`, never by filtering
+  `indicatorsFor`. It reaches the output as `conditions` on each
+  `DimensionResult`, with the publisher's value, its year and its rank among
+  the `n` countries that have it, and never a 0 to 100 value, so never render
+  it with `Score`. `diagnostics.conditions` correlates each one with income and
+  with its dimension's score. It renders in `ConditionList`, a separate panel
+  from `CheckList`: a check is a reading of the capability the model declined
+  to score, a condition is not a reading of the capability. Moving a row in or
+  out of the role is a decision entry and a major dataset version. See D122.
 - The wealth residual is never summed across dimensions. `ResidualFile` has no
   country-level field, `buildResidual` in
   `packages/core/src/pipeline/residual.ts` computes one fit per dimension, and

@@ -356,6 +356,89 @@
                         ],
                         "additionalProperties": false
                       }
+                    },
+                    "conditions": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "indicatorId": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "definition": {
+                            "type": "string"
+                          },
+                          "unit": {
+                            "type": "string"
+                          },
+                          "direction": {
+                            "$ref": "#/definitions/IndexFile/properties/countries/items/properties/dimensions/additionalProperties/properties/checks/items/properties/direction"
+                          },
+                          "value": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "year": {
+                            "anyOf": [
+                              {
+                                "type": "integer"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "source": {
+                            "type": "string"
+                          },
+                          "sourceTier": {
+                            "anyOf": [
+                              {
+                                "$ref": "#/definitions/IndexFile/properties/countries/items/properties/dimensions/additionalProperties/properties/indicators/items/properties/sourceTier/anyOf/0"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "rank": {
+                            "anyOf": [
+                              {
+                                "type": "integer"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "n": {
+                            "type": "integer"
+                          },
+                          "note": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "indicatorId",
+                          "name",
+                          "definition",
+                          "unit",
+                          "direction",
+                          "value",
+                          "year",
+                          "source",
+                          "sourceTier",
+                          "rank",
+                          "n",
+                          "note"
+                        ],
+                        "additionalProperties": false
+                      }
                     }
                   },
                   "required": [
@@ -371,7 +454,8 @@
                     "blendedFrom",
                     "momentum",
                     "indicators",
-                    "checks"
+                    "checks",
+                    "conditions"
                   ],
                   "additionalProperties": false
                 },

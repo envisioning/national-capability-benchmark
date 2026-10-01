@@ -59,7 +59,12 @@ export function IndicatorPeek({
 
   if (!def) return <>{children}</>
 
-  const values = view?.values ?? []
+  /* A condition's file carries no normalised values, and a condition is never
+   * drawn on the 0 to 100 field. Only scored rows open this peek. See D122. */
+  const values = (view?.values ?? []).filter(
+    (v): v is IndicatorAcrossCountries['values'][number] & { normalized: number } =>
+      v.normalized !== null,
+  )
   const mine = values.find((v) => v.iso3 === iso3)
   const rank = mine ? values.indexOf(mine) + 1 : null
 

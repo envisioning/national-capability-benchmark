@@ -95,6 +95,18 @@ export const IndicatorDef = z.object({
    */
   ingest: z.enum(['worldbank', 'adapter', 'manual', 'gap', 'retired']),
   /**
+   * What the row is read as.
+   * - capability: the row observes the country doing what its dimension names,
+   *   a behaviour, a throughput, an outcome or performance relative to
+   *   resources. It is scored when it has data.
+   * - condition: the row records what the country has to work with, a stock of
+   *   infrastructure, access, money, people or enrolment, or income itself. It
+   *   is fetched like an indicator and published beside its dimension as the
+   *   publisher wrote it, and it enters no frame, mean, coverage count,
+   *   confidence or trend. See D122, which extends D118 and D60.
+   */
+  role: z.enum(['capability', 'condition']).default('capability'),
+  /**
    * Which family inside the dimension the indicator belongs to.
    *
    * A dimension can ask two different questions that both belong under one
@@ -624,6 +636,38 @@ export const CheckResult = z.object({
 })
 export type CheckResult = z.infer<typeof CheckResult>
 
+/**
+ * One condition's latest value for one country. Never scored. See D122.
+ *
+ * A condition is what a country has to work with: a stock of infrastructure,
+ * access, money, people or enrolment. The value is published as the publisher
+ * wrote it and is never put on the 0 to 100 scale, because a number on that
+ * scale reads as a score. Its place among the countries is a rank instead.
+ */
+export const ConditionResult = z.object({
+  indicatorId: z.string(),
+  name: z.string(),
+  definition: z.string(),
+  unit: z.string(),
+  direction: Direction,
+  /** Null where the publisher covers no year for this country. */
+  value: z.number().nullable(),
+  year: z.number().int().nullable(),
+  source: z.string(),
+  sourceTier: SourceTier.nullable(),
+  /**
+   * Position among the countries that have a value, 1 the highest where higher
+   * is better and the lowest where lower is better. Ties share a rank. Null
+   * where this country has no value.
+   */
+  rank: z.number().int().nullable(),
+  /** Countries with a value, the denominator of `rank`. */
+  n: z.number().int(),
+  /** Why the row is a condition. Carried into the file so a consumer reading only JSON still gets it. */
+  note: z.string(),
+})
+export type ConditionResult = z.infer<typeof ConditionResult>
+
 export const DimensionResult = z.object({
   /**
    * Indicator-derived score. Delphi never enters this number.
@@ -667,6 +711,12 @@ export const DimensionResult = z.object({
    * Empty for a dimension that declares no check. See D60.
    */
   checks: z.array(CheckResult),
+  /**
+   * What the country has to work with on this dimension, published beside it
+   * and excluded from every number above. Raw values with a rank, never a 0 to
+   * 100 value. Empty for a dimension that declares no condition. See D122.
+   */
+  conditions: z.array(ConditionResult),
 })
 export type DimensionResult = z.infer<typeof DimensionResult>
 
@@ -821,12 +871,19 @@ export const EvidenceFile = z.object({
  */
 export const IndicatorAcrossCountries = z.object({
   indicatorId: z.string(),
+  /**
+   * `condition` for a row published beside its dimension and never scored.
+   * Its values carry no normalised value and are ordered by the raw value in
+   * the row's direction. See D122.
+   */
+  role: z.enum(['capability', 'condition']).default('capability'),
   values: z.array(
     z.object({
       iso3: z.string().length(3),
       country: z.string(),
       raw: z.number(),
-      normalized: z.number(),
+      /** Null for a condition, which is never put on the 0 to 100 scale. */
+      normalized: z.number().nullable(),
       year: z.number().int(),
       tier: SourceTier,
       outOfFrame: z.boolean(),

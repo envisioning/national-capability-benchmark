@@ -8,28 +8,15 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 64.7 | 0.64 (usable) | +12.7 over 10 years using 5 indicators |
-| Agency | 70.7 | 0.61 (usable) | +1.9 over 10 years using 4 indicators |
+| Anticipation | 64 | 0.46 (usable) | +13.5 over 10 years using 2 indicators |
+| Agency | 50.5 | 0.41 (thin) | no trend |
 | Coordination | 63.4 | 0.39 (thin) | no trend |
 | Trust | 65.3 | 0.26 (thin) | no trend |
-| Learning | 47.6 | 0.52 (usable) | +2.1 over 10 years using 2 indicators |
+| Learning | 47.9 | 0.41 (thin) | no trend |
 | Experimentation | 66.7 | 0.18 (very thin) | -6.8 over 10 years using 2 indicators |
-| Adaptability | 81.6 | 0.63 (usable) | +8.7 over 10 years using 4 indicators |
-| Building | 50.2 | 0.62 (usable) | -2 over 10 years using 4 indicators |
+| Adaptability | 82.1 | 0.6 (usable) | +6.5 over 10 years using 3 indicators |
+| Building | 54.8 | 0.57 (usable) | -2.6 over 10 years using 3 indicators |
 | Shared Purpose | 58 | 0.12 (very thin) | no trend |
-
-## What to raise
-
-These are the lowest scores with usable evidence. Thin evidence appears below.
-
-### Learning: 47.6, confidence usable
-
-How effectively does the country acquire, distribute, and update knowledge?
-
-- Uses 5 observed indicators.
-- Highest usable scores: Finland 77.9, Australia 70.3, United Kingdom 68.6.
-- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); CAPES, federal postgraduate funding (Brazil); INEP, the standing education statistics institution (Brazil); Kartu Prakerja, a national lifelong-learning delivery system (Indonesia); Compte personnel de formation (France); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (India); SETAs and workplace-based learning delivery (South Africa); MEB public lifelong-learning network (Turkey).
-- Missing indicators: Adult learning participation, Research citation impact.
 
 ## What to measure first
 
@@ -66,14 +53,44 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
+### Agency: confidence 0.41, thin
+
+How able are individuals and organizations to turn an intention into action?
+
+- Uses 3 observed indicators.
+- Missing indicators: Adult digital skills, Perceived control over life.
+
+### Learning: confidence 0.41, thin
+
+How effectively does the country acquire, distribute, and update knowledge?
+
+- Uses 3 observed indicators.
+- Missing indicators: Adult learning participation, Research citation impact.
+
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 81.6, confidence usable
-- Agency: 70.7, confidence usable
-- Anticipation: 64.7, confidence usable
-- Building: 50.2, confidence usable
+- Adaptability: 82.1, confidence usable
+- Anticipation: 64, confidence usable
+- Building: 54.8, confidence usable
+
+## What Japan has to work with
+
+Conditions describe what a country has to work with: infrastructure, access, money, people, enrolment and income itself. Each is published beside a capability and is not part of its score, its confidence or its trend. Read against the score, they show whether what a country has turns into what it does. The rank counts the countries with a value, best first.
+
+| Dimension | Condition | Value | Year | Rank |
+| --- | --- | --- | --- | --- |
+| Anticipation | R&D expenditure | 3.4 % of GDP | 2023 | 5 of 51 |
+| Anticipation | Researchers in R&D | 5,608.6 per million people | 2023 | 11 of 50 |
+| Anticipation | Secure internet servers | 32,928.8 per million people | 2024 | 15 of 53 |
+| Agency | Individuals using the internet | 85.5 % of population | 2024 | 29 of 53 |
+| Agency | Financial account ownership | 98.5 % aged 15+ | 2024 | 7 of 52 |
+| Agency | Credit to the private sector | 187.4 % of GDP | 2025 | 3 of 52 |
+| Learning | Tertiary enrolment | 64.5 % gross | 2023 | 27 of 52 |
+| Learning | Public education expenditure | 3.3 % of GDP | 2021 | 40 of 53 |
+| Adaptability | Fixed broadband subscriptions | 38.6 per 100 people | 2023 | 14 of 53 |
+| Building | Output per worker | 87,888.3 constant 2021 PPP $ | 2025 | 20 of 51 |
 
 ## Missing data
 

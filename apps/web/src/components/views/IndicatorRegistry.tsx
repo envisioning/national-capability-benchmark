@@ -1,6 +1,16 @@
 'use client'
 
-import { DIMENSIONS, DIMENSION_LABELS, INDICATORS, indicatorsFor, isDeclaredGap, isScored } from '@ncb/core'
+import {
+  CONDITIONS,
+  DIMENSIONS,
+  DIMENSION_LABELS,
+  INDICATORS,
+  conditionsFor,
+  indicatorsFor,
+  isCondition,
+  isDeclaredGap,
+  isScored,
+} from '@ncb/core'
 import type { Dimension, IndicatorDef } from '@ncb/core'
 import { DataTable } from '@/components/DataTable'
 import { ClassBadge, ClassLegend, Section } from '@/components/ui'
@@ -27,8 +37,8 @@ export function IndicatorRegistry({ dimension }: { dimension?: Dimension } = {})
       }
       hint={
         dimension
-          ? `${indicatorsFor(dimension).length} indicators define this capability. Gaps and retired rows remain because they lower confidence. Click a heading to sort.`
-          : `${INDICATORS.length} indicators: ${gaps} gaps and ${retired} retired. Both lower confidence and shape the collection agenda. Click a heading to sort.`
+          ? `${indicatorsFor(dimension).length} indicators define this capability. Gaps and retired rows remain because they lower confidence.${conditionsFor(dimension).length > 0 ? ` Rows marked condition are published beside the score and are not part of it.` : ''} Click a heading to sort.`
+          : `${INDICATORS.length} rows: ${gaps} gaps, ${retired} retired and ${CONDITIONS.length} conditions. Gaps and retired rows shape the collection agenda, and gaps lower confidence. A condition records what a country has to work with and is published beside the score. Click a heading to sort.`
       }
     >
       <ClassLegend />
@@ -40,7 +50,7 @@ export function IndicatorRegistry({ dimension }: { dimension?: Dimension } = {})
             </Link>
           </h3>
           <DataTable
-            rows={indicatorsFor(d)}
+            rows={[...indicatorsFor(d), ...conditionsFor(d)]}
             initialSort={{ key: 'name' }}
             caption={`${DIMENSION_LABELS[d]} indicators`}
             columns={[
@@ -58,7 +68,7 @@ export function IndicatorRegistry({ dimension }: { dimension?: Dimension } = {})
                     {i.name}
                     {isScored(i) ? null : (
                       <span className="ml-2 rounded-md border border-[var(--rule)] px-1.5 py-0.5 text-xs">
-                        {isDeclaredGap(i) ? 'no dataset' : 'retired'}
+                        {isCondition(i) ? 'condition' : isDeclaredGap(i) ? 'no dataset' : 'retired'}
                       </span>
                     )}
                   </span>

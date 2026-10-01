@@ -8,14 +8,14 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 78,1 | 0,62 (utilizável) | +14,5 em 10 anos, sobre 5 indicadores |
-| Agência | 84,4 | 0,57 (utilizável) | +10,4 em 10 anos, sobre 3 indicadores |
+| Antecipação | 84,8 | 0,46 (utilizável) | +17,5 em 10 anos, sobre 2 indicadores |
+| Agência | 84,3 | 0,41 (fraca) | sem base de tendência |
 | Coordenação | 71 | 0,4 (fraca) | sem base de tendência |
 | Confiança | 73,5 | 0,26 (fraca) | sem base de tendência |
-| Aprendizagem | 56,1 | 0,49 (utilizável) | +1,4 em 10 anos, sobre 2 indicadores |
+| Aprendizagem | 56,9 | 0,32 (fraca) | sem base de tendência |
 | Experimentação | 46,6 | 0,21 (muito fraca) | +10,8 em 10 anos, sobre 2 indicadores |
-| Adaptação | 80,2 | 0,7 (boa) | +4,9 em 10 anos, sobre 4 indicadores |
-| Construção | 71,2 | 0,62 (utilizável) | +7,7 em 10 anos, sobre 4 indicadores |
+| Adaptação | 84,9 | 0,67 (boa) | +6,9 em 10 anos, sobre 3 indicadores |
+| Construção | 66,6 | 0,57 (utilizável) | +5 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | sem nota | 0,16 (muito fraca) | sem base de tendência |
 
 ## Dimensões para medir primeiro
@@ -45,6 +45,13 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 - Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
+### Aprendizagem: confiança 0,32, fraca
+
+Com que eficácia o país adquire, distribui e atualiza conhecimento?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
+
 ### Coordenação: confiança 0,4, fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
@@ -53,15 +60,37 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
+### Agência: confiança 0,41, fraca
+
+Quão capazes são pessoas e organizações de transformar uma intenção em ação?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
+
 ## Dimensões para manter
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Agência: 84,4, confiança utilizável
-- Adaptação: 80,2, confiança boa
-- Antecipação: 78,1, confiança utilizável
-- Construção: 71,2, confiança utilizável
-- Aprendizagem: 56,1, confiança utilizável
+- Adaptação: 84,9, confiança boa
+- Antecipação: 84,8, confiança utilizável
+- Construção: 66,6, confiança utilizável
+
+## O que Singapura tem para trabalhar
+
+Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na nota, na confiança nem na tendência. Lidas contra a nota, mostram se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.
+
+| Dimensão | Condição | Valor | Ano | Posição |
+| --- | --- | --- | --- | --- |
+| Antecipação | Dispêndio em P&D | 1,8 % do PIB | 2022 | 15º de 51 |
+| Antecipação | Pesquisadores em P&D | 8.781,7 por milhão de pessoas | 2022 | 3º de 50 |
+| Antecipação | Servidores seguros de internet | 209.665,5 por milhão de pessoas | 2024 | 1º de 53 |
+| Agência | Pessoas que usam a internet | 94,4 % da população | 2024 | 13º de 53 |
+| Agência | Titularidade de conta financeira | 98 % das pessoas com 15 anos ou mais | 2024 | 14º de 52 |
+| Agência | Crédito ao setor privado | 128,4 % do PIB | 2020 | 8º de 52 |
+| Aprendizagem | Matrícula no ensino superior | 97,3 % (taxa bruta) | 2023 | 7º de 52 |
+| Aprendizagem | Dispêndio público em educação | 2,2 % do PIB | 2024 | 50º de 53 |
+| Adaptação | Assinaturas de banda larga fixa | 27,8 por 100 pessoas | 2024 | 21º de 53 |
+| Construção | Produto por trabalhador | 233.454,4 US$ PPC constantes de 2021 | 2025 | 2º de 51 |
 
 ## Agenda de medição
 

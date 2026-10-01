@@ -8,14 +8,14 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 78.1 | 0.62 (usable) | +14.5 over 10 years using 5 indicators |
-| Agency | 84.4 | 0.57 (usable) | +10.4 over 10 years using 3 indicators |
+| Anticipation | 84.8 | 0.46 (usable) | +17.5 over 10 years using 2 indicators |
+| Agency | 84.3 | 0.41 (thin) | no trend |
 | Coordination | 71 | 0.4 (thin) | no trend |
 | Trust | 73.5 | 0.26 (thin) | no trend |
-| Learning | 56.1 | 0.49 (usable) | +1.4 over 10 years using 2 indicators |
+| Learning | 56.9 | 0.32 (thin) | no trend |
 | Experimentation | 46.6 | 0.21 (very thin) | +10.8 over 10 years using 2 indicators |
-| Adaptability | 80.2 | 0.7 (good) | +4.9 over 10 years using 4 indicators |
-| Building | 71.2 | 0.62 (usable) | +7.7 over 10 years using 4 indicators |
+| Adaptability | 84.9 | 0.67 (good) | +6.9 over 10 years using 3 indicators |
+| Building | 66.6 | 0.57 (usable) | +5 over 10 years using 3 indicators |
 | Shared Purpose | not scored | 0.16 (very thin) | no trend |
 
 ## What to measure first
@@ -45,6 +45,13 @@ How much cooperation is possible beyond immediate personal networks?
 - Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
+### Learning: confidence 0.32, thin
+
+How effectively does the country acquire, distribute, and update knowledge?
+
+- Uses 3 observed indicators.
+- Missing indicators: Adult learning participation, Research citation impact.
+
 ### Coordination: confidence 0.4, thin
 
 How effectively can independent actors organize around shared objectives?
@@ -53,15 +60,37 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
+### Agency: confidence 0.41, thin
+
+How able are individuals and organizations to turn an intention into action?
+
+- Uses 3 observed indicators.
+- Missing indicators: Adult digital skills, Perceived control over life.
+
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
-- Agency: 84.4, confidence usable
-- Adaptability: 80.2, confidence good
-- Anticipation: 78.1, confidence usable
-- Building: 71.2, confidence usable
-- Learning: 56.1, confidence usable
+- Adaptability: 84.9, confidence good
+- Anticipation: 84.8, confidence usable
+- Building: 66.6, confidence usable
+
+## What Singapore has to work with
+
+Conditions describe what a country has to work with: infrastructure, access, money, people, enrolment and income itself. Each is published beside a capability and is not part of its score, its confidence or its trend. Read against the score, they show whether what a country has turns into what it does. The rank counts the countries with a value, best first.
+
+| Dimension | Condition | Value | Year | Rank |
+| --- | --- | --- | --- | --- |
+| Anticipation | R&D expenditure | 1.8 % of GDP | 2022 | 15 of 51 |
+| Anticipation | Researchers in R&D | 8,781.7 per million people | 2022 | 3 of 50 |
+| Anticipation | Secure internet servers | 209,665.5 per million people | 2024 | 1 of 53 |
+| Agency | Individuals using the internet | 94.4 % of population | 2024 | 13 of 53 |
+| Agency | Financial account ownership | 98 % aged 15+ | 2024 | 14 of 52 |
+| Agency | Credit to the private sector | 128.4 % of GDP | 2020 | 8 of 52 |
+| Learning | Tertiary enrolment | 97.3 % gross | 2023 | 7 of 52 |
+| Learning | Public education expenditure | 2.2 % of GDP | 2024 | 50 of 53 |
+| Adaptability | Fixed broadband subscriptions | 27.8 per 100 people | 2024 | 21 of 53 |
+| Building | Output per worker | 233,454.4 constant 2021 PPP $ | 2025 | 2 of 51 |
 
 ## Missing data
 
