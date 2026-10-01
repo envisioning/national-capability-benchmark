@@ -68,6 +68,28 @@ triage costs one paragraph.
 | Q5 | OpenAlex research impact | O1 and O2: Experimentation | OpenAlex API, full frame | Triage note: field-normalised or relative measure only, never volume |
 | Q6 | Full Delphi rerun (TRUST-5) | Reading, not measurement | Needs `AI_GATEWAY_API_KEY` | After Q1 to Q3 change the dataset |
 
+**Q1 status (2026-10-01): started, no output yet.** The pinned Core v15 archive
+downloads from a cloud session (`V-Dem-CY-Core-v15_csv.zip`, codebook inside).
+A v16 Core release exists at the same URL pattern (`-v16_csv.zip`, March
+2026): pin it in a separate patch-level change, not inside the sweep. Starting
+hypotheses to triage, none tested:
+
+- `political_polarization` (Shared purpose) against `v2cacamps`, an expert
+  rating of antagonistic camps, which reads close to the registry definition.
+- A Trust institutional-performance row from government compliance with the
+  courts (`v2jucomp`, `v2juhccomp`) or impartial administration (`v2clrspct`).
+  These would be new rows, not existing gaps, so they need a decision.
+- Coordination from deliberation and state administration: `v2dlconslt`,
+  `v2stcritrecadm`.
+- CSO consultation and participation (`v2cscnsult`, `v2csprtcpt`) feed
+  `v2x_cspart`, which is already scored, so test them for redundancy first.
+- Nothing in V-Dem answers `institutional_trust` (public confidence),
+  `volunteering_rate`, `national_belonging` or `government_foresight_capacity`.
+
+The triage is quantitative and cheap: for each variable at 2024, report
+coverage of the 53, spread, r with log GDP, and r with the dimension's
+existing rows. Write the table to `docs/research/vdem-sweep/TRIAGE.md`.
+
 Parked, with the reason:
 
 - **TRUST-1 pooling** (DEU, GBR, NLD): needs a GESIS account; every `gesis.org`
