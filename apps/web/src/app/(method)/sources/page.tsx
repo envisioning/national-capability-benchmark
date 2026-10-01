@@ -341,7 +341,8 @@ export default async function SourcesPage() {
           </Scroller>
           {/* A World Bank check prints its API request. An adapter check has no
             * request to print, so it prints the pinned file, the column and the
-            * year the adapter reads. See D116 and D121. */}
+            * year the adapter reads, or the ceiling when it reads each country's
+            * latest coded year. See D116, D121 and D129. */}
           {CHECKS.filter((check) => check.ingest === 'worldbank' && check.source.series).map(
             (check) => (
               <div key={check.id} className="mt-6">
@@ -362,7 +363,11 @@ export default async function SourcesPage() {
             <div key={check.id} className="mt-6">
               <p className="text-xs font-medium text-[var(--muted)]">
                 The file behind {check.name}. Download it, open {check.pinned?.file} and read
-                column {check.pinned?.variable} for {check.pinned?.year}.
+                column {check.pinned?.variable}{' '}
+                {check.pinned?.years === 'latest_up_to'
+                  ? `in each country's latest year with a value, up to ${check.pinned?.year}`
+                  : `for ${check.pinned?.year}`}
+                .
               </p>
               <code className="mt-2 block overflow-x-auto whitespace-pre rounded bg-[var(--surface-sunken)] px-3 py-3 text-xs">
                 {check.pinned?.url}

@@ -5891,3 +5891,85 @@ coverage shown to bias the share by country income or region, which would
 make the row read indexing rather than research; or OpenAlex changing the
 percentile's pool or definition, which would need a new adapter version and a
 new entry.
+
+---
+
+## D129 — Voter turnout is published as a behavioural check beside Shared Purpose, not scored
+
+*Recorded 2026-10-01. Extends D60, D118 and D121. Answers Q8 of the O1 triage
+sweep.*
+
+**Decision.** V-Dem's election turnout is published beside Shared Purpose as
+a behavioural check under D60 and enters no score. The check is
+`voter_turnout` in `checks.ts`, read from `v2eltrnout` in the Full+Others
+archive the V-Dem adapter already pins (v15, 2025-03-04, CC BY-SA 4.0). The
+codebook (3.1.4.3) defines it as the percentage of all *registered* voters who
+cast a vote in the national election according to official results; it is not
+the voting-age-population reading, which is `v2elvaptrn`. Where executive and
+legislative elections fall on the same day V-Dem codes the executive turnout,
+and the country-year takes the maximum across that year's elections. Unit
+`% of registered voters`, direction `higher_better`, tier `expert_panel`. It
+covers 52 of 53 countries; China holds no national election V-Dem codes.
+
+V-Dem codes election variables in election years only, so the adapter's
+single-year design would leave most of the frame blank at 2024. Each entry in
+the adapter's variable table now names its year rule. `release_year` keeps the
+old behaviour for civil-society strength and polarization. `latest_election`
+reads each benchmark country's newest row up to 2024 that carries a value,
+emits it with that row's year, and never reaches back to an older election when
+the newest one is out of scale. Election years run 2016 (Haiti) to 2024: 18
+countries at 2024, 15 at 2023, 9 at 2022, 7 at 2021, one each at 2020, 2019
+(United Arab Emirates) and 2016. The observation note carries `v2elcomvot`
+(compulsory voting, codebook 3.1.2.3) and `v2x_regime` (Regimes of the World)
+for the same country-year, with their codebook labels, as context and never as
+values. `CheckDef.pinned` gains `years`, `only` by default or `latest_up_to`,
+and `/sources` prints "in each country's latest year with a value, up to 2024"
+for this check instead of "for 2024".
+
+No registry gap is added. Polarization shares its id with a declared gap
+because that gap names a measurement Shared Purpose still wants; turnout is not
+such a measurement, so the check stands alone. No scoring rule is added: the
+triage sweep's proposed rule (score where `v2x_regime` is 2 or 3 and
+`v2elcomvot` is 0 or 1) is recorded in the memo and not wired.
+
+**Why.** D118 chooses rows for what they measure. Turnout is a revealed act of
+taking part in a common decision, the most direct behaviour the benchmark can
+see for Shared Purpose, and that is why it is published. It is not scored
+because three things move it that are not whether people see themselves in a
+common project, and the number cannot tell them apart. It reads the democratic
+channel, which A5 retired voice and accountability for: a country without
+competitive elections reads low or high for reasons of regime. Compulsory
+voting turns it into a reading of the law: Brazil enforces it (code 2,
+sanctions enforced at minimal cost; 79.42% in 2022), and the eight countries
+that enforce sanctions average 82.6% against 65.4% for the 36 where voting is
+voluntary. And autocracies manage it, the A13 trap from the other side:
+Vietnam reads 95.6, Rwanda 98.2, Ethiopia 93.6 and Singapore 93.6, which is
+mobilisation, not participation. By regime at the election year the means are
+flat, 68.8 closed autocracies (n 3), 70.9 electoral autocracies (16), 67.5
+electoral democracies (15) and 69.6 liberal democracies (18): the series does
+not separate the regimes it should, which is the construct failure in one line.
+The sweep's rule would leave about 27 scorable countries and exclude Brazil,
+the benchmark's subject, so a scored row is declined.
+
+**Cost.** Shared Purpose stays at two rows, 47 published countries, mean
+confidence 0.260. No score moves: all 477 country-dimension cells, their
+confidences and every composite are identical with the check present; the only
+change in `index.json` is the new check row. Reported as a finding, not a
+reason: `behaviouralChecks` puts the published value at r = 0.053 against log
+GDP per capita (n 52) and 0.007 against the Shared Purpose score (n 46).
+Turnout is not a wealth proxy; it fails on construct alone, as polarization
+did. The latest-election rule mixes vintages up to eight years apart (Haiti
+2016), and a country-year maximum mixes presidential and parliamentary
+elections across countries; the year shown on every row is the only guard. The
+United Arab Emirates' 34.8% (2019) is turnout of a hand-picked electoral
+college, not of citizens. The adapter now fully parses every benchmark row up
+to 2024 instead of only the release year, which costs a few seconds. The
+dataset version does not move: no scored row, field or country changes.
+
+**Overturned by.** A scoring rule conditioned on regime and compulsion that
+the project adopts on construct, which would move the conditioned subset to
+`indicators.ts` as a row and leave the rest as this check; a turnout source
+that measures participation outside the electoral channel; a V-Dem release that
+changes `v2eltrnout`'s denominator or drops coverage below half the frame; or
+evidence that readers take the check for a score, which under D60 would retire
+it.
