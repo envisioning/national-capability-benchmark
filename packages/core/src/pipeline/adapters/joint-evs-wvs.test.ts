@@ -1,0 +1,163 @@
+import assert from 'node:assert/strict'
+import { INDICATORS, JOINT_EVS_WVS_PUBLISHER } from '../../model/index.js'
+import { JOINT_EVS_WVS_ITEMS, parseJointEvsWvs, parseJointEvsWvsFieldworkYears } from './joint-evs-wvs.js'
+
+/* Lines copied from `pdftotext -layout` of the pinned v5.0.0 results PDF,
+ * with the page breaks and repeated headers the real text carries. */
+const text = `
+year- Year survey
+
+                                                           Year survey
+                         TOTAL
+                                  2017     2018     2019      2020       2021     2022     2023
+Brazil                    1,762        -    100.0        -          -         -        -        -
+Germany EVS               2,178    100.0        -        -          -         -        -        -
+Germany WVS               1,528        -    100.0        -          -         -        -        -
+India                     1,692        -        -        -          -         -        -    100.0
+
+                                                                                                    Page 3 of 692
+                                          Joint EVS/WVS 2017-2022 Dataset Results by Country      2024-06-30
+                                                 Version 5-0-0 - Data weighted by 'gwght
+
+                                                        Year survey
+                   TOTAL
+                               2017     2018     2019      2020       2021     2022     2023
+Vietnam                1,200        -        -        -      100.0         -        -        -
+TOTAL              (156,939)   23.4%    41.6%     6.9%      15.3%      4.6%     7.0%     1.1%
+
+A173- How much freedom of choice and control
+
+                                                                               How much freedom of choice and control
+                    TOTAL None at                                                                          A great Don´t   No Missing:    Base
+                                       2         3          4         5      6      7       8        9                                            Mean Std Dev.
+                             all                                                                            deal    know answer Other     mean
+Bosnia and           (1,735)     1.9       0.9       2.8        2.1    9.9     7.8   12.1    18.1      9.8     34.4    0.1   0.1      -   (1,731)    7.8    2.3
+Herzegovina
+Brazil               (1,762)     3.8       1.0       1.8      2.1     16.5    7.3    10.9    11.4    5.1    37.6     1.9    0.5       -   (1,719)      7.5   2.5
+Germany EVS          (2,178)     1.0       0.5       2.4      3.4     13.3    9.2    19.9    23.8    9.9    14.5     1.8    0.3       -   (2,132)      7.2   1.9
+Germany WVS          (1,528)     0.1       0.9       1.9      3.8     15.5   10.5    20.4    25.7    8.1    12.3     0.7    0.1       -   (1,515)      7.1   1.8
+India                (1,692)     4.5       3.5       4.1      5.4      8.0    7.1    13.5    15.0   10.8    27.4     0.7      -       -   (1,681)      7.2   2.7
+
+                                                                                                                                             Page 133 of 692
+                                                    Joint EVS/WVS 2017-2022 Dataset Results by Country                                            2024-06-30
+                                                           Version 5-0-0 - Data weighted by 'gwght
+
+                                                                         How much freedom of choice and control
+                  TOTAL None at                                                                         A great Don´t       No Missing: Base
+                                     2       3       4        5        6        7        8        9                                                   Mean Std Dev.
+                            all                                                                          deal    know answer Other mean
+Netherlands WVS    (2,145)      0.5    0.6     2.3     2.7      6.7     12.0     28.4     29.4      7.4      3.2     3.8       0.4       2.7 (1,999)     7.1    1.5
+Vietnam            (1,200)      1.3    0.5     0.2     0.3      5.2      7.5     16.8     27.8     12.0     28.3       -         -         - (1,200)     8.1    1.8
+                 (156,939)      2.4    1.4     2.7     3.9     12.0     10.4     16.3     20.5      9.8     19.4     0.8 0.3 (434) 0.1 (106)(155,075)    7.2    2.2
+(N)
+                           (3,734) (2,229) (4,238) (6,190) (18,788) (16,370) (25,628) (32,111) (15,412) (30,376) (1,324)
+
+A027- Important child qualities: good manners
+
+                                                    Important child qualities: good manners
+                         TOTAL
+                                  Not mentioned   Mentioned       Don´t know         No answer   Missing: Other
+Brazil                    1,762          27.0          73.0                  -               -              -
+TOTAL              (156,939)        83.9%           14.4%             0.7%                0.8%             0.1%
+
+A080_01- Member: Belong to humanitarian or charitable organization
+
+                                               Member: Belong to humanitarian or charitable organization
+                         TOTAL
+                                  Not mentioned    Mentioned        Don´t know          No answer       Missing: Other
+Brazil                    1,762          88.1             9.7               2.1                0.2                 -
+Germany EVS               2,178          85.3            12.1               0.6                2.0                 -
+Germany WVS               1,528          86.0            13.8               0.1                0.1                 -
+India                     1,692          64.4            29.4               6.2                  -                 -
+
+                                                                                                                         Page 175 of 692
+                                        Joint EVS/WVS 2017-2022 Dataset Results by Country                               2024-06-30
+                                               Version 5-0-0 - Data weighted by 'gwght
+
+                                            Member: Belong to humanitarian or charitable organization
+                   TOTAL
+                               Not mentioned    Mentioned        Don´t know          No answer       Missing: Other
+Vietnam                1,200          90.6             9.4                 -                  -                 -
+TOTAL              (156,939)        83.9%           14.4%             0.7%                0.8%             0.1%
+
+A165- Most people can be trusted
+
+                                                                 Most people can be trusted
+                         TOTAL     Most people can   Can´t be too
+                                                                        Don´t know          No answer   Missing: Other
+                                     be trusted        careful
+Brazil                    1,762             5.3            94.0                0.2                0.5             -
+Germany EVS               2,178            44.6            53.6                1.6                0.2             -
+Germany WVS               1,528            41.6            57.1                1.0                0.3             -
+Vietnam                   1,200            27.0            73.0                  -                  -             -
+TOTAL              (156,939)        24.8%           73.2%             1.4%                0.6%             0.1%
+`
+
+const years = parseJointEvsWvsFieldworkYears(text)
+assert.equal(years.get('Brazil'), 2018)
+assert.equal(years.get('Germany EVS'), 2017)
+assert.equal(years.get('India'), 2023)
+assert.equal(years.get('Vietnam'), 2020, 'the year table continues across a page break')
+
+const result = parseJointEvsWvs(text, '2026-10-01T00:00:00.000Z', 'fixture://evs')
+const values = (id: string) =>
+  result.observations.filter((o) => o.indicatorId === id).map((o) => [o.iso3, o.value])
+
+/* A165 keeps the note and values D64 published, so a refetch restates nothing. */
+assert.deepEqual(values('interpersonal_trust'), [
+  ['BRA', 5.3],
+  ['VNM', 27],
+])
+assert.equal(
+  result.observations.find((o) => o.indicatorId === 'interpersonal_trust')?.note,
+  'A165; Joint EVS/WVS v5.0.0 results table; publisher-weighted by gwght; published sample size 1762. Countries with separate EVS and WVS rows are held until pooled microdata are harmonised.',
+)
+
+/* A173 stores the published mean, read across the page break, never a sum of categories. */
+assert.deepEqual(values('perceived_control'), [
+  ['BRA', 7.5],
+  ['IND', 7.2],
+  ['NLD', 7.1],
+  ['VNM', 8.1],
+])
+const control = result.observations.find((o) => o.indicatorId === 'perceived_control' && o.iso3 === 'BRA')
+assert.equal(
+  control?.note,
+  'A173; Joint EVS/WVS v5.0.0 results table; publisher-weighted by gwght; published mean on the 1-10 scale over 1719 valid answers; published sample size 1762; fieldwork 2018. Countries with separate EVS and WVS rows are held until pooled microdata are harmonised.',
+)
+assert.equal(control?.year, 2022, 'the release year, as for A165')
+assert.equal(control?.sourceUrl, 'fixture://evs')
+
+/* A080_01 stores the "Mentioned" column, the second percentage, not "Not mentioned". */
+assert.deepEqual(values('civic_participation'), [
+  ['BRA', 9.7],
+  ['IND', 29.4],
+  ['VNM', 9.4],
+])
+assert.match(
+  result.observations.find((o) => o.indicatorId === 'civic_participation' && o.iso3 === 'IND')?.note ?? '',
+  /^A080_01; .*published share mentioned, .*; published sample size 1692; fieldwork 2023\./,
+)
+
+/* Countries with an EVS and a WVS row are held per item; one row alone is emitted. */
+assert.deepEqual(result.coverageByIndicator.perceived_control?.heldCountries, ['DEU'])
+assert.deepEqual(result.coverageByIndicator.civic_participation?.heldCountries, ['DEU'])
+assert.deepEqual(result.coverageByIndicator.interpersonal_trust?.heldCountries, ['DEU'])
+assert.deepEqual(result.heldCountries, ['DEU'])
+assert.deepEqual(result.coverageByIndicator.perceived_control?.fieldworkYears, {
+  BRA: 2018,
+  IND: 2023,
+  VNM: 2020,
+})
+assert.ok(result.unmappedLabels.includes('Bosnia and'), 'a wrapped label is reported, not guessed')
+assert.ok(!result.observations.some((o) => o.indicatorId === 'perceived_control' && o.value === 7.2 && o.iso3 === 'DEU'))
+
+/* Every registry row this adapter fills is one it reads, under the id the registry stores. */
+const read = new Map(JOINT_EVS_WVS_ITEMS.map((item) => [item.variable, item.indicatorId]))
+const wired = INDICATORS.filter((i) => i.ingest === 'adapter' && i.source.publisher === JOINT_EVS_WVS_PUBLISHER)
+assert.deepEqual(wired.map((d) => d.id).sort(), ['civic_participation', 'interpersonal_trust', 'perceived_control'])
+for (const def of wired) assert.equal(read.get(def.source.series ?? ''), def.id, `adapter does not read ${def.id}`)
+
+assert.throws(() => parseJointEvsWvs(text.replace('A173- How much', 'A999- How much')), /do not contain A173/)
+
+console.log('Joint EVS/WVS adapter validated: A165 unchanged, A173 mean, A080_01 mentioned, per-item hold rule.')

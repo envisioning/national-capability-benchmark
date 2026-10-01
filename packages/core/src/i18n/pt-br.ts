@@ -280,7 +280,7 @@ export const PT_BR: Lexicon = {
     political_polarization:
       'Grau em que as diferenças políticas se alinham em uma única divisão hostil.',
     civic_participation:
-      'Participação ativa em associações, sindicatos, partidos e organizações comunitárias.',
+      'Parcela de adultos que declaram pertencer a uma organização humanitária ou de caridade.',
   },
   bands: {
     good: 'boa',

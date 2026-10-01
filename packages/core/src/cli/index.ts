@@ -11,7 +11,7 @@ import {
 } from '../model/index.js'
 import type { CountryResult, Dimension } from '../model/index.js'
 import { ingestWorldBank, recordRevisions } from '../pipeline/ingest.js'
-import { fetchJointEvsWvsTrust } from '../pipeline/adapters/joint-evs-wvs.js'
+import { fetchJointEvsWvs } from '../pipeline/adapters/joint-evs-wvs.js'
 import { fetchVdem } from '../pipeline/adapters/vdem.js'
 import { fetchUnctadExportConcentration } from '../pipeline/adapters/unctad.js'
 import { fetchIlostatLongTermUnemployment } from '../pipeline/adapters/ilostat.js'
@@ -348,13 +348,13 @@ async function research(args: Args): Promise<void> {
   throw new Error(`Unknown research action "${action}". Use inventory, scout or critique.`)
 }
 
-async function trust(args: Args): Promise<void> {
+async function evs(args: Args): Promise<void> {
   const action = args._[1] ?? 'fetch'
   if (action !== 'fetch') {
-    throw new Error(`Unknown trust action "${action}". Use pnpm bench trust fetch.`)
+    throw new Error(`Unknown Joint EVS/WVS action "${action}". Use pnpm bench evs fetch.`)
   }
   const retrievedAt = new Date().toISOString()
-  const result = await fetchJointEvsWvsTrust({ retrievedAt })
+  const result = await fetchJointEvsWvs({ retrievedAt })
   let existing: unknown | null = null
   try {
     existing = JSON.parse(await readFile(FILES.jointEvsWvs, 'utf8'))
@@ -373,15 +373,21 @@ async function trust(args: Args): Promise<void> {
   await writeOut(FILES.jointEvsWvs, body)
   const revisions = await recordRevisions(before, previousRetrievedAt, result.observations, retrievedAt)
 
-  console.log(`Joint EVS/WVS ${result.release}: ${result.observations.length}/${COUNTRY_ISO3.length} benchmark countries emitted`)
-  console.log(`  source coverage: ${result.availableCountries.length}/${COUNTRY_ISO3.length}`)
+  console.log(`Joint EVS/WVS ${result.release}: ${result.observations.length} observations`)
+  for (const [indicatorId, coverage] of Object.entries(result.coverageByIndicator)) {
+    const years = Object.values(coverage.fieldworkYears)
+    const span = years.length > 0 ? `, fieldwork ${Math.min(...years)}-${Math.max(...years)}` : ''
+    console.log(
+      `  ${coverage.variable} ${indicatorId}: ${coverage.emittedCountries.length}/${COUNTRY_ISO3.length} emitted, ${coverage.availableCountries.length} in source${span}`,
+    )
+  }
   if (result.heldCountries.length > 0) {
     console.log(`  held for pooled microdata: ${result.heldCountries.join(', ')}`)
   }
   if (result.unmappedLabels.length > 0) {
     console.log(`  source labels outside this country registry: ${result.unmappedLabels.length}`)
   }
-  console.log(`trust data  -> ${FILES.jointEvsWvs}`)
+  console.log(`evs data    -> ${FILES.jointEvsWvs}`)
   console.log(
     `revisions   -> ${revisions.changed} changed, ${revisions.added} added, ${revisions.removed} removed in ${FILES.revisions}`,
   )
@@ -661,8 +667,9 @@ async function main() {
       break
     }
 
+    case 'evs':
     case 'trust':
-      await trust(args)
+      await evs(args)
       break
 
     case 'vdem':
@@ -1160,7 +1167,7 @@ Start with file 1.
   pnpm bench residual                     write the provisional wealth-residual fixture
   pnpm bench br-subnational [--year 2024]          fetch the registered Brazil subnational series
   pnpm bench institutions [--country BRA]  project the institution map into the explorer feed, one file per lexicon
-  pnpm bench trust    fetch                fetch and parse Joint EVS/WVS A165 trust results
+  pnpm bench evs      fetch                fetch the Joint EVS/WVS items: A165 trust, A173 control, A080_01 charitable membership (alias: trust)
   pnpm bench vdem     fetch                fetch and parse V-Dem v15 civil society and the polarization check
   pnpm bench unctad   fetch                fetch and parse the pinned UNCTADstat export concentration index
   pnpm bench ilostat  fetch                fetch ILOSTAT unemployment by duration, derive the long-term share, gate it

@@ -3,6 +3,7 @@ import { basename, resolve } from 'node:path'
 import {
   BR_STATES,
   COUNTRY_ISO3,
+  DATASET_VERSION,
   DIMENSIONS,
   INDICATORS_BY_ID,
   isCondition,
@@ -493,6 +494,10 @@ export async function validateResearchRuns(dir = RESEARCH_RUNS_DIR): Promise<Pro
       problems.push({ file, severity: 'error', problem: `unknown declared country code ${iso3}` })
     }
     if (run.kind === 'scout') {
+      /* A scout run targets the gaps of the dataset it was made for. A row wired
+       * since then is measured now: the run stays a record of that search, and
+       * its slots on the row are reported, not failed. */
+      const wiredSince = run.datasetVersion !== DATASET_VERSION
       const slotKeys = new Set<string>()
       for (const slot of run.slots) {
         const key = `${slot.iso3}|${slot.indicatorId}`
@@ -505,11 +510,19 @@ export async function validateResearchRuns(dir = RESEARCH_RUNS_DIR): Promise<Pro
           problems.push({ file, severity: 'error', problem: `unknown indicator id ${slot.indicatorId}` })
         } else {
           if (!isDeclaredGap(def)) {
-            problems.push({
-              file,
-              severity: 'error',
-              problem: `${slot.indicatorId}: research slots must target declared gaps`,
-            })
+            problems.push(
+              wiredSince
+                ? {
+                    file,
+                    severity: 'warning',
+                    problem: `${slot.indicatorId}: a gap at dataset ${run.datasetVersion}, measured now`,
+                  }
+                : {
+                    file,
+                    severity: 'error',
+                    problem: `${slot.indicatorId}: research slots must target declared gaps`,
+                  },
+            )
           }
           if (def.dimension !== slot.dimension) {
             problems.push({
@@ -551,7 +564,7 @@ export async function validateResearchRuns(dir = RESEARCH_RUNS_DIR): Promise<Pro
         const def = INDICATORS_BY_ID[candidate.indicatorId]
         if (!def) {
           problems.push({ file, severity: 'error', problem: `${candidate.id}: unknown indicator id ${candidate.indicatorId}` })
-        } else if (!isDeclaredGap(def)) {
+        } else if (!isDeclaredGap(def) && !wiredSince) {
           problems.push({
             file,
             severity: 'error',

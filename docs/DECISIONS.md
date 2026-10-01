@@ -5894,6 +5894,135 @@ new entry.
 
 ---
 
+## D127 — Perceived control is scored in Agency from the Joint EVS/WVS A173 mean
+
+*Recorded 2026-10-01. Extends D64's adapter under D117 and D118. D125 and D126
+are being written on other branches; this entry and D128 take the next numbers
+after them.*
+
+**Decision.** `perceived_control` (Agency) moves from `gap` to `adapter`. The
+value is the publisher-weighted mean, on the 1 to 10 scale, of A173, "how much
+freedom of choice and control you feel you have over the way your life turns
+out", from the same pinned Joint EVS/WVS 2017-2022 v5.0.0 results PDF as
+`interpersonal_trust`. Class `P`, `higher_better`, tier `academic_survey`,
+unit `mean 1-10`, publisher Joint EVS/WVS. The adapter now reads an item table,
+`JOINT_EVS_WVS_ITEMS`, the way `vdem.ts` reads variables; country mapping and
+D64's hold rule are shared, so Germany, the United Kingdom and the Netherlands
+are held. The A165 output is unchanged: the refetch restated no trust value or
+note. `pnpm bench evs fetch` runs the adapter, with `trust` kept as an alias.
+The memo is `docs/research/agency/EVS-WVS-ITEMS.md`.
+
+The statistic is the published mean because it is what the table prints. The
+table gives the full distribution, the valid-answer base, the mean and the
+standard deviation, and no top-box share. A share answering 7 to 10 would have
+to be summed from category percentages whose denominator includes don't know
+and no answer, which is a number the publisher does not publish.
+
+**Why.** Construct first, written in the memo before values were read in.
+Agency asks how able people are to turn an intention into action. A173 does
+not observe action; it observes the felt capacity to act, whether people
+believe what they decide changes what happens to them. That is the half of the
+question no current row reaches: Agency rested on new business density and two
+Doing Business rows frozen at 2019 (A14). It is a perception and is labelled
+as one, as `interpersonal_trust` is.
+
+Reported as findings, not tests (D118), from a local run on dataset 7.1.0: the
+row covers 37 of 53 countries, fieldwork 2017 (eight countries, the United
+States among them) to 2023 (India), every value stamped with the release year
+2022. Brazil is 7.5 (16th of 37, fieldwork 2018). The value correlates with log
+GDP per capita at r = -0.154 (n 36); its `wealthAttribution` delta is -0.059.
+Agency moves from r = 0.638 to 0.579 against log GDP, its mean confidence from
+0.383 to 0.483, which crosses O1, and it stays scored in 52 countries. The
+United States, Nicaragua and Venezuela, which were Agency on the two frozen
+rows alone, now carry a third. The guardrail, mean confidence against log GDP,
+falls from 0.333 to 0.286 (n 51), together with D128. No redundant pair forms;
+the row correlates with interpersonal trust at -0.14.
+
+**Cost.** Response style on a 10-point scale differs across cultures, so part
+of the ordering is how samples use a scale: Mexico, Uruguay and Colombia sit at
+8.1 to 8.2, Japan at 6.0 on a mail survey. A closed or electoral autocracy can
+read high, and two do: Vietnam is third at 8.1 and Nicaragua fifth at 8.0,
+surveyed in 2019-20 after the 2018 crackdown. That is the A13 pattern in a
+perception, recorded as artefact A15 and not corrected. The mean is printed to
+one decimal over a spread of 6.0 to 8.2, so ties are common. Fieldwork years
+differ by up to six years and the stamped year hides it; the note carries each
+country's survey year. Sixteen countries have no row, Costa Rica, Ireland,
+Israel and South Africa among them.
+
+**Overturned by.** Evidence that the cross-country ordering is mostly response
+style, for example anchoring-vignette or scale-use studies that reorder the
+frame when applied, which would make the row a measure of how samples answer
+10-point questions; a behavioural Agency row with frame coverage that
+contradicts it, which would make it a check under D60; or a release whose
+pooled microdata let the three held countries in, which needs a new entry for
+the pooling rule.
+
+---
+
+## D128 — Civic participation is scored in Shared purpose from charitable membership (A080_01)
+
+*Recorded 2026-10-01. Extends D64's adapter under D117 and D118, beside D127.*
+
+**Decision.** `civic_participation` (Shared purpose) moves from `gap` to
+`adapter`. The value is the publisher-weighted share of respondents who mention
+membership of a humanitarian or charitable organisation, A080_01, in the same
+pinned results PDF, read by the same item table and hold rule as D127. Class
+`C`, `higher_better`, unit `% mentioning`. The definition narrows from "active
+membership in associations, unions, parties and community organisations" to
+what the row measures. Religious membership (A065) is left out because it
+reads religiosity; an "any non-religious membership" count would match the old
+definition better, but the aggregate table does not publish it and the adapter
+does not use microdata.
+
+The joint file harmonises two questions. EVS 2017 shows a list and asks which
+organisations the respondent belongs to; WVS 7 reads each type aloud and asks
+whether the respondent is an active member, an inactive member or not a
+member. The codebook recodes both WVS member answers to 1, so the stored
+"Mentioned" column is belongs (EVS) or active or inactive member (WVS), over
+all respondents including don't know and no answer.
+
+**Why.** Construct first, written in the memo before values were read in.
+Shared purpose asks whether people can imagine themselves as participants in
+a common project. Joining an organisation whose purpose is to act for people
+outside one's own network is a reported behaviour, and of the ten membership
+items it is the closest to acting for strangers; unions and professional
+bodies read interest groups, sports and culture read leisure, and parties are
+the democratic channel A5 retired. Shared purpose had two scored rows and was
+the thinnest dimension after Trust.
+
+Reported as findings (D118), same run: 37 of 53 countries, fieldwork 2017 to
+2023. Brazil is 9.7% (25th of 37). The value correlates with log GDP per
+capita at r = -0.331 (n 36); the `wealthAttribution` delta is -0.172. Shared
+purpose moves from r = 0.457 (n 47) to 0.202 (n 50) against log GDP, its mean
+confidence from 0.260 to 0.343, still under O1, and it is scored in 51
+countries instead of 47: Nigeria, Vietnam, Singapore and Venezuela clear the
+coverage floor. Brazil's Shared purpose moves from 34.9 to 30.7. No redundant
+pair forms. The A13 fear did not materialise: China reads 2.7% and Vietnam
+9.4%, so state mass organisations, which are unions and youth and women's
+federations, do not inflate a charitable item. Cuba is not in the release.
+
+**Cost.** Question format. The eight EVS countries in the frame average 9.9%
+and the 29 WVS countries 19.4%; among the ten countries surveyed by both
+programmes the WVS share is higher in eight, by a median 1.9 points (Great
+Britain +16.0, Czechia -5.0), with fieldwork years also differing inside the
+pairs. Inside the EVS group the share tracks income at 0.83; across the frame
+it runs against it. Part of the spread is the format, and a reader should
+check that before reading the negative income correlation as evidence for
+the claim. Estonia's 1.5% is the floor and the value most exposed to it; Kenya
+(38.4%) and Indonesia (37.9%) top the row with inactive members counted.
+Membership is not activity. One item is narrower than the construct. The row
+is artefact A15 with D127.
+
+**Overturned by.** Microdata showing that the EVS-WVS difference holds within
+countries after fieldwork year is controlled, at a size that reorders the
+frame, which would hold the row until a format adjustment is documented; a
+harmonised "any non-religious membership" or volunteering series with frame
+coverage, which would replace the single item; or evidence that charitable
+membership in some countries is a condition of employment or state
+programmes, which would make it the A13 case after all.
+
+---
+
 ## D130 — Brazil's layer publishes a computed map of Adaptability among its income peers
 
 **Decision.** The Brazil layer gains `/brasil/adaptacao`, a Portuguese page
