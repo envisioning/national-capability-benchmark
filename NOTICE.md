@@ -22,6 +22,11 @@ Index from the UNCTAD Data Hub (UNCTADstat), published under Creative Commons
 Attribution 3.0 IGO. Its terms ask that the UNCTAD Data Hub be cited as the
 source, and every observation in the file says so.
 
+`data/observations/openalex-citation-impact.json` holds counts of works read
+from the OpenAlex API (https://openalex.org). OpenAlex data is released under
+CC0 1.0, so no attribution is required. We credit OpenAlex anyway, and every
+observation in the file names it.
+
 If you redistribute the data, keep the attribution.
 
 ## Derived dataset

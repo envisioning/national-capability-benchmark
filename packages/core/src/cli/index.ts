@@ -15,6 +15,7 @@ import { fetchJointEvsWvsTrust } from '../pipeline/adapters/joint-evs-wvs.js'
 import { fetchVdem } from '../pipeline/adapters/vdem.js'
 import { fetchUnctadExportConcentration } from '../pipeline/adapters/unctad.js'
 import { fetchIlostatLongTermUnemployment } from '../pipeline/adapters/ilostat.js'
+import { fetchOpenAlexCitationImpact } from '../pipeline/adapters/openalex.js'
 import { probeSeries, registrySeries, searchCatalogue } from '../pipeline/probe.js'
 import type { ProbeRequest } from '../pipeline/probe.js'
 import {
@@ -497,6 +498,56 @@ async function ilostat(args: Args): Promise<void> {
   )
 }
 
+async function openalex(args: Args): Promise<void> {
+  const action = args._[1] ?? 'fetch'
+  if (action !== 'fetch') {
+    throw new Error(`Unknown OpenAlex action "${action}". Use pnpm bench openalex fetch.`)
+  }
+  const retrievedAt = new Date().toISOString()
+  const mailto = str(args, 'mailto', process.env.OPENALEX_MAILTO ?? '')
+  if (!mailto) console.log('  no --mailto or OPENALEX_MAILTO: requests go without a contact address')
+  const apiKey = process.env.OPENALEX_API_KEY ?? ''
+  const result = await fetchOpenAlexCitationImpact({
+    retrievedAt,
+    ...(mailto ? { mailto } : {}),
+    ...(apiKey ? { apiKey } : {}),
+  })
+  let existing: unknown | null = null
+  try {
+    existing = JSON.parse(await readFile(FILES.openalex, 'utf8'))
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code !== 'ENOENT') {
+      throw new Error(`Cannot read existing OpenAlex observations: ${String(error)}`)
+    }
+  }
+  const parsedExisting = existing ? ObservationFile.safeParse(existing) : null
+  if (existing && !parsedExisting?.success) {
+    throw new Error(`Existing OpenAlex observations failed schema validation: ${FILES.openalex}`)
+  }
+  const before = parsedExisting?.success ? parsedExisting.data.observations : []
+  const previousRetrievedAt = parsedExisting?.success ? parsedExisting.data.generatedAt : null
+  /* The pin travels in the same file: the requests, the totals and every count the values derive from. */
+  await writeOut(
+    FILES.openalex,
+    `${JSON.stringify({ generatedAt: retrievedAt, observations: result.observations, openalex: result.pin }, null, 2)}\n`,
+  )
+  const revisions = await recordRevisions(before, previousRetrievedAt, result.observations, retrievedAt)
+
+  const { pin } = result
+  console.log(`OpenAlex ${result.release}: ${result.observations.length}/${COUNTRY_ISO3.length} benchmark countries emitted`)
+  console.log(`  window ${pin.window.from}-${pin.window.to}, stamped ${pin.year}`)
+  console.log(
+    `  affiliated-world baseline: ${pin.totals.baselineTop10} of ${pin.totals.baselineWorks} works in the top 10% (${(100 * pin.baselineShare).toFixed(2)}%)`,
+  )
+  const fallback = Object.entries(pin.counts).filter(([, c]) => c.via === 'per_country').map(([iso3]) => iso3)
+  if (fallback.length > 0) console.log(`  counted one by one, missing from a grouped call: ${fallback.join(' ')}`)
+  if (result.heldCountries.length > 0) console.log(`  held, no works: ${result.heldCountries.join(' ')}`)
+  console.log(`openalex data -> ${FILES.openalex}`)
+  console.log(
+    `revisions   -> ${revisions.changed} changed, ${revisions.added} added, ${revisions.removed} removed in ${FILES.revisions}`,
+  )
+}
+
 /**
  * Write the capability agenda: language-neutral JSON per country, plus one
  * rendered markdown per lexicon. The JSON is the ground layer, the markdown is
@@ -623,6 +674,9 @@ async function main() {
       break
     case 'ilostat':
       await ilostat(args)
+      break
+    case 'openalex':
+      await openalex(args)
       break
 
     case 'research':
@@ -1110,6 +1164,7 @@ Start with file 1.
   pnpm bench vdem     fetch                fetch and parse V-Dem v15 civil society and the polarization check
   pnpm bench unctad   fetch                fetch and parse the pinned UNCTADstat export concentration index
   pnpm bench ilostat  fetch                fetch ILOSTAT unemployment by duration, derive the long-term share, gate it
+  pnpm bench openalex fetch [--mailto a@b] count the OpenAlex top 10% cited share, pin counts and requests
   pnpm bench research inventory           write the deterministic country-gap research inventory
   pnpm bench research scout               ask AI for bounded, unpublished research leads
   pnpm bench research critique --in FILE  red-team a scout run; still cannot approve publication

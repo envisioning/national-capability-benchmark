@@ -5648,3 +5648,76 @@ release that changes the question or drops coverage below half the frame; or
 evidence that readers take the check for a score, which under D60 would retire
 it. For `/sources`: a check whose source has neither an API request nor a
 pinned file to print, which would leave the page short of a call again.
+
+---
+
+## D124 — Research citation impact is wired from OpenAlex as a top 10% share
+
+*Recorded 2026-10-01. Issue #23. D122 and D123 are being written on other
+branches; this entry takes the next free number after them.*
+
+**Decision.** `research_citation_impact` (Learning) moves from `gap` to
+`adapter`. The value is the share of a country's articles and reviews,
+published 2019 to 2021 and stamped 2021, that OpenAlex places in the top 10%
+most cited for their subfield and publication year
+(`citation_normalized_percentile.is_in_top_10_percent`), divided by the same
+share across every work with an institution country. A work counts for every
+country any author's institution sits in (whole counting). Unit "ratio to
+world average", `higher_better`, class `O`, tier `academic_survey`. The
+definition is reworded from "field-normalised citation impact" to say this.
+
+The adapter `openalex-top10-share-v1` makes two grouped calls by
+`authorships.institutions.country_code` and two baseline counts, with
+`corpus=core` written into each request. It asserts that all 53 countries
+appear in both grouped results and counts any that does not with two
+per-country calls; on 2026-10-01 none was missing. OpenAlex has no version
+parameter, so the observation file carries the pin under `openalex`: every
+request, the retrieval date, the totals and each country's two counts. The
+values derive from those counts, a rescore never touches the network, and a
+refetch is the explicit `pnpm bench openalex fetch`, diffed into
+`revisions.json`. The `mailto` and any API key are sent and never stored.
+Brazil is 0.602 (62,795 of 606,599 works, 10.35% against 17.20%). The memo is
+`docs/research/learning/OPENALEX-CITATION-IMPACT.md`.
+
+**Why.** Construct first. Learning asks whether a country absorbs and produces
+knowledge. Whether the research it produces is used by others, relative to what
+is normal in that field, is an outcome of that, not a stock of spending,
+enrolment or researchers that money buys directly. A share is size
+independent, the field and year normalisation is OpenAlex's own, and a count of
+flags cannot be moved by one paper the way a mean FWCI can. The ratio to the
+affiliated world corrects a level OpenAlex sets against a pool dominated by
+unaffiliated, uncited works (affiliated works sit at 17%, not 10%); within one
+window it rescales every country alike and changes no score. Dataset 7.0.0
+(D122) moves Learning's stock rows to the conditions layer and leaves Learning
+thin, and this row measures the dimension rather than its inputs.
+
+Reported as findings, not tests, from a local run on dataset 6.2.0: the row's
+normalised score correlates with log GDP per capita at r = 0.588 (n 51), its
+wealth-attribution delta is 0.063, and Learning moves from r = 0.731 to 0.794
+(Spearman 0.733 to 0.813) while its mean confidence rises from 0.495 to 0.586.
+It forms no redundant pair; the closest rows are `interpersonal_trust` at
+0.799 and `sci_articles_per_million` at 0.796. The prior `wealthProxyPrior`
+moves from 0.3 to 0.6, which is what the issue memo measured.
+
+**Cost.** Whole counting lifts small countries whose researchers co-author
+with larger systems: counting only single-country works, Panama falls from
+21.25% to 3.14%, Kenya from 19.83% to 5.94% and Estonia from 32.89% to 18.26%.
+The domestic-only share is not published; it is the obvious behavioural check
+under D60 and is left as follow-up. 37% of articles and reviews with a
+percentile in the window carry no institution country, and missing affiliations
+thin small producers most; Haiti rests on 389 works and no floor is applied.
+Conference papers are out, which understates computing-heavy systems.
+The value drifts: OpenAlex recomputes citations, percentiles and affiliations
+continuously, and on the day of the fetch some counts moved within two minutes.
+A later fetch will restate every value, which `revisions.json` will show, and
+the number published is the number read on the stamped retrieval date. The
+data is CC0; the fetch costs four credits of the keyless $0.10 daily budget.
+
+**Overturned by.** A fractional-count or domestic-only reading, from the
+OpenAlex snapshot or the API, that reorders the frame enough to show whole
+counting is reading collaboration networks rather than use of a country's own
+research, which would swap the construct or make this row a check; affiliation
+coverage shown to bias the share by country income or region, which would
+make the row read indexing rather than research; or OpenAlex changing the
+percentile's pool or definition, which would need a new adapter version and a
+new entry.

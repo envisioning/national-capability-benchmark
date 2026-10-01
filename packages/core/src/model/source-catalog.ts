@@ -62,3 +62,28 @@ export const ILOSTAT_LTU_PAGE_URL =
 export const ILOSTAT_LTU_FROM_YEAR = 2010
 /** Stable id of the adapter that derives and gates the long-term share. */
 export const ILOSTAT_LTU_ADAPTER_ID = 'ilostat-une-tune-sex-age-dur-long-term-share'
+
+/**
+ * OpenAlex works, read through the REST API for research citation impact. See
+ * D124. OpenAlex is a live database with no version parameter: citations,
+ * percentiles and affiliation parsing are recomputed continuously, so a value
+ * fetched today is not reproducible from the API later. The pin is the exact
+ * request, the retrieval date and the counts it returned, all written into the
+ * observation file. The data is CC0.
+ */
+export const OPENALEX_PUBLISHER = 'OpenAlex'
+export const OPENALEX_WORKS_URL = 'https://api.openalex.org/works'
+/** The documentation of the citation metrics the percentile flag comes from. */
+export const OPENALEX_PAGE_URL = 'https://help.openalex.org/data/works/citations/'
+/** The work-level flag the numerator counts. */
+export const OPENALEX_TOP10_FIELD = 'citation_normalized_percentile.is_in_top_10_percent'
+/** The pooled publication window, stamped with its last year. */
+export const OPENALEX_WINDOW_FROM = 2019
+export const OPENALEX_WINDOW_TO = 2021
+/** Work types counted. Conference papers are excluded. */
+export const OPENALEX_WORK_TYPES = ['article', 'review'] as const
+/** Pinned explicitly so a change of the API default cannot move the counts. */
+export const OPENALEX_CORPUS = 'core'
+export const OPENALEX_LICENCE = 'CC0 1.0'
+/** Stable id of the adapter that counts the top 10% share. */
+export const OPENALEX_TOP10_ADAPTER_ID = 'openalex-top10-share-v1'

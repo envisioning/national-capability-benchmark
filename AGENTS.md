@@ -13,6 +13,7 @@ pnpm bench trust fetch import the pinned Joint EVS/WVS A165 trust table into dat
 pnpm bench vdem fetch  import the pinned V-Dem civil-society series and polarization check into data/observations/vdem-cy-core.json
 pnpm bench unctad fetch import the pinned UNCTADstat export concentration index into data/observations/unctad-concentration.json (needs bsdtar)
 pnpm bench ilostat fetch derive and gate the ILOSTAT long-term unemployment share into data/observations/ilostat-ltu.json
+pnpm bench openalex fetch count the OpenAlex top 10% cited share and pin requests and counts into data/observations/openalex-citation-impact.json (set OPENALEX_MAILTO; OPENALEX_API_KEY optional)
 pnpm bench score       normalise and score, write data/out/index.json, data/out/countries/*.json and table.csv
 pnpm bench delphi      run the LLM panel (add --mock to run offline)
 pnpm bench diagnose    correlations, redundancy, GDP-sensitivity test
@@ -87,6 +88,10 @@ port 3888. That entry starts Next directly and does not use the proxy.
   `unctad-concentration.json` holds the pinned UNCTADstat adapter output and
   `ilostat-ltu.json` holds the ILOSTAT long-term unemployment share, after
   the plausibility gate D120 applies to every country.
+  `openalex-citation-impact.json` holds the OpenAlex research citation
+  impact and, under `openalex`, the pin: every request, the retrieval date
+  and the counts the values derive from, because the API has no versions
+  (D124).
   `revisions.json` is the append-only log of what each run restated,
   added or dropped, and `snapshots/` holds dated full copies written only on
   `--snapshot`.
