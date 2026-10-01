@@ -11,8 +11,8 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Anticipation | 43.1 | 0.46 (usable) | +15.1 over 10 years using 2 indicators |
 | Agency | 44.2 | 0.41 (thin) | no trend |
 | Coordination | 81.1 | 0.41 (thin) | no trend |
-| Trust | 41 | 0.26 (thin) | no trend |
-| Learning | 24.2 | 0.4 (thin) | no trend |
+| Trust | 40.2 | 0.36 (thin) | no trend |
+| Learning | 24.8 | 0.52 (usable) | no trend |
 | Experimentation | 2.9 | 0.18 (very thin) | +1.1 over 10 years using 2 indicators |
 | Adaptability | 73.1 | 0.66 (good) | +5.8 over 10 years using 3 indicators |
 | Building | 46.1 | 0.57 (usable) | -0.5 over 10 years using 3 indicators |
@@ -21,6 +21,15 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 ## What to raise
 
 These are the lowest scores with usable evidence. Thin evidence appears below.
+
+### Learning: 24.8, confidence usable
+
+How effectively does the country acquire, distribute, and update knowledge?
+
+- Uses 4 observed indicators.
+- Highest usable scores: Finland 76.3, Switzerland 73.9, United Kingdom 72.3.
+- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); Compte personnel de formation (France); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (India); SETAs and workplace-based learning delivery (South Africa); MEB public lifelong-learning network (Turkey).
+- Missing indicators: Adult learning participation.
 
 ### Anticipation: 43.1, confidence usable
 
@@ -60,20 +69,13 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Uses 2 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
-### Trust: confidence 0.26, thin
+### Trust: confidence 0.36, thin
 
 How much cooperation is possible beyond immediate personal networks?
 
-- Uses 2 observed indicators.
+- Uses 3 observed indicators.
 - Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
-
-### Learning: confidence 0.4, thin
-
-How effectively does the country acquire, distribute, and update knowledge?
-
-- Uses 3 observed indicators.
-- Missing indicators: Adult learning participation, Research citation impact.
 
 ### Agency: confidence 0.41, thin
 
@@ -115,7 +117,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 ## Missing data
 
-23 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+22 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -129,7 +131,6 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Trust | Cooperation beyond the in-group | Reported trust in people met for the first time and in people of another nationality. |
 | Trust | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Learning | Adult learning participation | Share of adults in formal or non-formal education and training in the last 12 months. |
-| Learning | Research citation impact | Field-normalised citation impact of national research output. |
 | Experimentation | Venture capital investment | Venture capital deployed as a share of GDP. |
 | Experimentation | Regulatory sandbox activity | Number and breadth of live regulatory sandboxes and controlled trial regimes. |
 | Experimentation | University spinouts | Companies formed to commercialise university research, per million people. |

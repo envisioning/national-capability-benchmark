@@ -419,6 +419,22 @@ const RAW: Raw[] = [
     wealthProxyPrior: 0.2,
   },
   {
+    id: 'bribery_incidence',
+    dimension: 'trust',
+    family: 'institutional',
+    name: 'Bribery incidence',
+    definition:
+      'Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.',
+    unit: '% of firms',
+    measurementClass: 'O',
+    direction: 'lower_better',
+    source: WB('IC.FRM.BRIB.ZS'),
+    ingest: 'worldbank',
+    notes:
+      'Whether the rules hold where a firm meets the state as a stranger. Experience rather than reputation: the firm is asked whether it was itself asked, so it is not the perception composite D23 retired. World Bank Enterprise Surveys, which now run in high-income economies too. Respondent reticence is the known weakness: a firm may not report a request to a survey, so a low value can be a cautious answer. Held out as a check on income grounds under D60 and scored since D123.',
+    wealthProxyPrior: 0.5,
+  },
+  {
     id: 'homicide_rate',
     dimension: 'trust',
     name: 'Intentional homicide rate',

@@ -11,8 +11,8 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Anticipation | 28.5 | 0.46 (usable) | +14.1 over 10 years using 2 indicators |
 | Agency | 49.7 | 0.41 (thin) | no trend |
 | Coordination | 75.8 | 0.4 (thin) | no trend |
-| Trust | 59.1 | 0.26 (thin) | no trend |
-| Learning | 26.7 | 0.32 (thin) | no trend |
+| Trust | 41.5 | 0.36 (thin) | no trend |
+| Learning | 34.2 | 0.45 (usable) | no trend |
 | Experimentation | 6.9 | 0.18 (very thin) | +1.8 over 10 years using 2 indicators |
 | Adaptability | 84.4 | 0.67 (good) | -2 over 10 years using 3 indicators |
 | Building | 65.7 | 0.55 (usable) | +10.1 over 10 years using 3 indicators |
@@ -30,6 +30,15 @@ How capable is the country of identifying and preparing for emerging change?
 - Highest usable scores: Switzerland 96.3, Sweden 90, Finland 87.5.
 - Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (South Africa).
 - Missing indicators: Government foresight capacity, Long-horizon research share.
+
+### Learning: 34.2, confidence usable
+
+How effectively does the country acquire, distribute, and update knowledge?
+
+- Uses 4 observed indicators.
+- Highest usable scores: Finland 76.3, Switzerland 73.9, United Kingdom 72.3.
+- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); Kartu Prakerja, a national lifelong-learning delivery system (Indonesia); Compte personnel de formation (France); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (India); SETAs and workplace-based learning delivery (South Africa); MEB public lifelong-learning network (Turkey).
+- Missing indicators: Adult learning participation.
 
 ## What to measure first
 
@@ -50,20 +59,13 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Uses 2 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
-### Trust: confidence 0.26, thin
+### Trust: confidence 0.36, thin
 
 How much cooperation is possible beyond immediate personal networks?
 
-- Uses 2 observed indicators.
+- Uses 3 observed indicators.
 - Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
-
-### Learning: confidence 0.32, thin
-
-How effectively does the country acquire, distribute, and update knowledge?
-
-- Uses 3 observed indicators.
-- Missing indicators: Adult learning participation, Research citation impact.
 
 ### Coordination: confidence 0.4, thin
 
@@ -106,7 +108,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 ## Missing data
 
-23 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+22 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -120,7 +122,6 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Trust | Cooperation beyond the in-group | Reported trust in people met for the first time and in people of another nationality. |
 | Trust | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Learning | Adult learning participation | Share of adults in formal or non-formal education and training in the last 12 months. |
-| Learning | Research citation impact | Field-normalised citation impact of national research output. |
 | Experimentation | Venture capital investment | Venture capital deployed as a share of GDP. |
 | Experimentation | Regulatory sandbox activity | Number and breadth of live regulatory sandboxes and controlled trial regimes. |
 | Experimentation | University spinouts | Companies formed to commercialise university research, per million people. |

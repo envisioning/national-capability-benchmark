@@ -11,8 +11,8 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Anticipation | 81.8 | 0.46 (usable) | +11.2 over 10 years using 2 indicators |
 | Agency | 73 | 0.41 (thin) | no trend |
 | Coordination | 91.6 | 0.39 (thin) | no trend |
-| Trust | 36.8 | 0.26 (thin) | no trend |
-| Learning | 54.7 | 0.4 (thin) | no trend |
+| Trust | 50.2 | 0.36 (thin) | no trend |
+| Learning | 55.8 | 0.52 (usable) | no trend |
 | Experimentation | 30.3 | 0.18 (very thin) | +4.1 over 10 years using 2 indicators |
 | Adaptability | 74 | 0.68 (good) | +12.2 over 10 years using 3 indicators |
 | Building | 34.2 | 0.57 (usable) | -0.6 over 10 years using 3 indicators |
@@ -43,14 +43,6 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Uses 2 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
-### Trust: confidence 0.26, thin
-
-How much cooperation is possible beyond immediate personal networks?
-
-- Uses 2 observed indicators.
-- Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
-
 ### Shared Purpose: confidence 0.3, thin
 
 To what extent can people imagine themselves as participants in a common project?
@@ -59,6 +51,14 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
 - Rejected datasets: Voice and accountability.
 
+### Trust: confidence 0.36, thin
+
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 3 observed indicators.
+- Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
+
 ### Coordination: confidence 0.39, thin
 
 How effectively can independent actors organize around shared objectives?
@@ -66,13 +66,6 @@ How effectively can independent actors organize around shared objectives?
 - Uses 3 observed indicators.
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
-
-### Learning: confidence 0.4, thin
-
-How effectively does the country acquire, distribute, and update knowledge?
-
-- Uses 3 observed indicators.
-- Missing indicators: Adult learning participation, Research citation impact.
 
 ### Agency: confidence 0.41, thin
 
@@ -87,6 +80,7 @@ These dimensions score at least 50 with usable evidence.
 
 - Anticipation: 81.8, confidence usable
 - Adaptability: 74, confidence good
+- Learning: 55.8, confidence usable
 
 ## What Portugal has to work with
 
@@ -107,7 +101,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 ## Missing data
 
-23 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+22 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -121,7 +115,6 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Trust | Cooperation beyond the in-group | Reported trust in people met for the first time and in people of another nationality. |
 | Trust | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Learning | Adult learning participation | Share of adults in formal or non-formal education and training in the last 12 months. |
-| Learning | Research citation impact | Field-normalised citation impact of national research output. |
 | Experimentation | Venture capital investment | Venture capital deployed as a share of GDP. |
 | Experimentation | Regulatory sandbox activity | Number and breadth of live regulatory sandboxes and controlled trial regimes. |
 | Experimentation | University spinouts | Companies formed to commercialise university research, per million people. |

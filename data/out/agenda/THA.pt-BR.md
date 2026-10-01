@@ -11,8 +11,8 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Antecipação | 47,5 | 0,46 (utilizável) | +8,8 em 10 anos, sobre 2 indicadores |
 | Agência | 61 | 0,41 (fraca) | sem base de tendência |
 | Coordenação | 78,5 | 0,41 (fraca) | sem base de tendência |
-| Confiança | 59,2 | 0,26 (fraca) | sem base de tendência |
-| Aprendizagem | 32,2 | 0,43 (fraca) | sem base de tendência |
+| Confiança | 53,7 | 0,37 (fraca) | sem base de tendência |
+| Aprendizagem | 36,4 | 0,56 (utilizável) | sem base de tendência |
 | Experimentação | 4,9 | 0,18 (muito fraca) | -0,6 em 10 anos, sobre 2 indicadores |
 | Adaptação | 87,6 | 0,67 (boa) | +0,4 em 10 anos, sobre 3 indicadores, 1 truncados na borda da régua |
 | Construção | 57,1 | 0,57 (utilizável) | -0,7 em 10 anos, sobre 3 indicadores |
@@ -21,6 +21,15 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 ## Dimensões para elevar
 
 Estas são as notas mais baixas com evidência utilizável. A evidência fraca aparece abaixo.
+
+### Aprendizagem: 36,4, confiança utilizável
+
+Com que eficácia o país adquire, distribui e atualiza conhecimento?
+
+- Baseada em 4 indicadores observados.
+- Maiores notas utilizáveis: Finlândia 76,3, Suíça 73,9, Reino Unido 72,3.
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (Índia); SETAs and workplace-based learning delivery (África do Sul); MEB public lifelong-learning network (Turquia).
+- Lacunas declaradas: Participação de adultos em aprendizagem.
 
 ### Antecipação: 47,5, confiança utilizável
 
@@ -42,14 +51,6 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
-### Confiança: confiança 0,26, fraca
-
-Quanta cooperação é possível além das redes pessoais imediatas?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
-
 ### Propósito compartilhado: confiança 0,32, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
@@ -57,6 +58,14 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
 - Bases rejeitadas: Voz e responsabilização.
+
+### Confiança: confiança 0,37, fraca
+
+Quanta cooperação é possível além das redes pessoais imediatas?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ### Agência: confiança 0,41, fraca
 
@@ -72,13 +81,6 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
-
-### Aprendizagem: confiança 0,43, fraca
-
-Com que eficácia o país adquire, distribui e atualiza conhecimento?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ## Dimensões para manter
 
@@ -106,7 +108,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 ## Agenda de medição
 
-23 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+22 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -120,7 +122,6 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Confiança | Cooperação além do próprio grupo | Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade. |
 | Confiança | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Aprendizagem | Participação de adultos em aprendizagem | Parcela de adultos em educação e treinamento, formal ou não, nos últimos 12 meses. |
-| Aprendizagem | Impacto de citação da pesquisa | Impacto de citação da produção científica nacional, normalizado por área. |
 | Experimentação | Investimento de capital de risco | Capital de risco investido como parcela do PIB. |
 | Experimentação | Atividade de sandbox regulatório | Número e abrangência de sandboxes regulatórios e regimes de teste controlado em operação. |
 | Experimentação | Empresas nascidas de universidades | Empresas criadas para comercializar pesquisa universitária, por milhão de habitantes. |

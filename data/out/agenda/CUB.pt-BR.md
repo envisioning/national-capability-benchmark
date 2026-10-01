@@ -12,7 +12,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Agência | sem nota | 0 (muito fraca) | sem base de tendência |
 | Coordenação | sem nota | 0,1 (muito fraca) | sem base de tendência |
 | Confiança | sem nota | 0 (muito fraca) | sem base de tendência |
-| Aprendizagem | sem nota | 0,11 (muito fraca) | sem base de tendência |
+| Aprendizagem | 21,5 | 0,24 (muito fraca) | sem base de tendência |
 | Experimentação | 1,4 | 0,18 (muito fraca) | -0,4 em 10 anos, sobre 2 indicadores |
 | Adaptação | 63,7 | 0,55 (utilizável) | -5,5 em 10 anos, sobre 3 indicadores |
 | Construção | 21,8 | 0,29 (fraca) | -27,1 em 10 anos, sobre 2 indicadores |
@@ -53,13 +53,6 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
-### Aprendizagem: confiança 0,11, muito fraca
-
-Com que eficácia o país adquire, distribui e atualiza conhecimento?
-
-- Baseada em um indicador observado.
-- Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
-
 ### Experimentação: confiança 0,18, muito fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
@@ -73,6 +66,13 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 
 - Baseada em um indicador observado.
 - Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
+
+### Aprendizagem: confiança 0,24, muito fraca
+
+Com que eficácia o país adquire, distribui e atualiza conhecimento?
+
+- Baseada em 2 indicadores observados.
+- Lacunas declaradas: Participação de adultos em aprendizagem.
 
 ### Construção: confiança 0,29, fraca
 
@@ -104,7 +104,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 ## Agenda de medição
 
-23 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+22 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -118,7 +118,6 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Confiança | Cooperação além do próprio grupo | Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade. |
 | Confiança | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Aprendizagem | Participação de adultos em aprendizagem | Parcela de adultos em educação e treinamento, formal ou não, nos últimos 12 meses. |
-| Aprendizagem | Impacto de citação da pesquisa | Impacto de citação da produção científica nacional, normalizado por área. |
 | Experimentação | Investimento de capital de risco | Capital de risco investido como parcela do PIB. |
 | Experimentação | Atividade de sandbox regulatório | Número e abrangência de sandboxes regulatórios e regimes de teste controlado em operação. |
 | Experimentação | Empresas nascidas de universidades | Empresas criadas para comercializar pesquisa universitária, por milhão de habitantes. |

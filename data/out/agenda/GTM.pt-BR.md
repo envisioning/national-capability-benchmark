@@ -11,8 +11,8 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Antecipação | 37,7 | 0,46 (utilizável) | +19 em 10 anos, sobre 2 indicadores |
 | Agência | 52,5 | 0,41 (fraca) | sem base de tendência |
 | Coordenação | 53,2 | 0,37 (fraca) | sem base de tendência |
-| Confiança | 12,4 | 0,26 (fraca) | sem base de tendência |
-| Aprendizagem | 52 | 0,43 (fraca) | sem base de tendência |
+| Confiança | 34,5 | 0,37 (fraca) | sem base de tendência |
+| Aprendizagem | 45,5 | 0,56 (utilizável) | sem base de tendência |
 | Experimentação | 1,4 | 0,1 (muito fraca) | sem base de tendência |
 | Adaptação | 65,4 | 0,67 (boa) | -1,7 em 10 anos, sobre 3 indicadores |
 | Construção | 33,6 | 0,57 (utilizável) | -1,2 em 10 anos, sobre 3 indicadores |
@@ -41,6 +41,15 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 - Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japão); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (África do Sul).
 - Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
+### Aprendizagem: 45,5, confiança utilizável
+
+Com que eficácia o país adquire, distribui e atualiza conhecimento?
+
+- Baseada em 4 indicadores observados.
+- Maiores notas utilizáveis: Finlândia 76,3, Suíça 73,9, Reino Unido 72,3.
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (Índia); SETAs and workplace-based learning delivery (África do Sul); MEB public lifelong-learning network (Turquia).
+- Lacunas declaradas: Participação de adultos em aprendizagem.
+
 ## Dimensões para medir primeiro
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
@@ -52,14 +61,6 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
-### Confiança: confiança 0,26, fraca
-
-Quanta cooperação é possível além das redes pessoais imediatas?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
-
 ### Propósito compartilhado: confiança 0,3, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
@@ -67,6 +68,14 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
 - Bases rejeitadas: Voz e responsabilização.
+
+### Confiança: confiança 0,37, fraca
+
+Quanta cooperação é possível além das redes pessoais imediatas?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ### Coordenação: confiança 0,37, fraca
 
@@ -82,13 +91,6 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
-
-### Aprendizagem: confiança 0,43, fraca
-
-Com que eficácia o país adquire, distribui e atualiza conhecimento?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ## Dimensões para manter
 
@@ -115,7 +117,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 ## Agenda de medição
 
-23 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+22 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -129,7 +131,6 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Confiança | Cooperação além do próprio grupo | Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade. |
 | Confiança | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Aprendizagem | Participação de adultos em aprendizagem | Parcela de adultos em educação e treinamento, formal ou não, nos últimos 12 meses. |
-| Aprendizagem | Impacto de citação da pesquisa | Impacto de citação da produção científica nacional, normalizado por área. |
 | Experimentação | Investimento de capital de risco | Capital de risco investido como parcela do PIB. |
 | Experimentação | Atividade de sandbox regulatório | Número e abrangência de sandboxes regulatórios e regimes de teste controlado em operação. |
 | Experimentação | Empresas nascidas de universidades | Empresas criadas para comercializar pesquisa universitária, por milhão de habitantes. |

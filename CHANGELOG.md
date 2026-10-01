@@ -9,6 +9,19 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## Dataset 7.1.0 — 2026-10-01
+
+- **Trust scores bribery incidence (D123).** The share of firms asked for a
+  bribe in public transactions moves from a check to a scored row in Trust's
+  institutional family. It records experience, not reputation, and D60 held it
+  out only for its income correlation, which D118 no longer allows. Trust now
+  scores 50 countries instead of 37, mean confidence 0.21 to 0.31, and its
+  correlation with income falls from 0.61 to 0.57.
+- **Learning scores research citation impact (D124).** The share of a
+  country's articles and reviews in OpenAlex's top 10% for their field, as a
+  ratio to the world, covers 53 of 53. Learning's mean confidence rises from
+  0.37 to 0.50 and its correlation with income from 0.66 to 0.75.
+
 ## App 1.17.0 — 2026-10-01
 
 - **Conditions sit beside every capability.** Country pages list what the

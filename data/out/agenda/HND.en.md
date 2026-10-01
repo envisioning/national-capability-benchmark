@@ -11,8 +11,8 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Anticipation | 25.2 | 0.46 (usable) | +6.2 over 10 years using 2 indicators |
 | Agency | 25.8 | 0.41 (thin) | no trend |
 | Coordination | 69.9 | 0.37 (thin) | no trend |
-| Trust | not scored | 0.11 (very thin) | no trend |
-| Learning | 45.1 | 0.3 (thin) | no trend |
+| Trust | 57.3 | 0.14 (very thin) | no trend |
+| Learning | 38.2 | 0.43 (thin) | no trend |
 | Experimentation | 1.6 | 0.15 (very thin) | no trend |
 | Adaptability | 43.8 | 0.67 (good) | -5 over 10 years using 3 indicators |
 | Building | 34.8 | 0.57 (usable) | -1.6 over 10 years using 3 indicators |
@@ -54,11 +54,11 @@ How effectively can the system respond when circumstances change?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Trust: confidence 0.11, very thin
+### Trust: confidence 0.14, very thin
 
 How much cooperation is possible beyond immediate personal networks?
 
-- Uses one observed indicator.
+- Uses 2 observed indicators.
 - Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
@@ -77,13 +77,6 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
 - Rejected datasets: Voice and accountability.
 
-### Learning: confidence 0.3, thin
-
-How effectively does the country acquire, distribute, and update knowledge?
-
-- Uses 3 observed indicators.
-- Missing indicators: Adult learning participation, Research citation impact.
-
 ### Coordination: confidence 0.37, thin
 
 How effectively can independent actors organize around shared objectives?
@@ -98,6 +91,13 @@ How able are individuals and organizations to turn an intention into action?
 
 - Uses 3 observed indicators.
 - Missing indicators: Adult digital skills, Perceived control over life.
+
+### Learning: confidence 0.43, thin
+
+How effectively does the country acquire, distribute, and update knowledge?
+
+- Uses 4 observed indicators.
+- Missing indicators: Adult learning participation.
 
 ## What Honduras has to work with
 
@@ -118,7 +118,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 ## Missing data
 
-23 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+22 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -132,7 +132,6 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Trust | Cooperation beyond the in-group | Reported trust in people met for the first time and in people of another nationality. |
 | Trust | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Learning | Adult learning participation | Share of adults in formal or non-formal education and training in the last 12 months. |
-| Learning | Research citation impact | Field-normalised citation impact of national research output. |
 | Experimentation | Venture capital investment | Venture capital deployed as a share of GDP. |
 | Experimentation | Regulatory sandbox activity | Number and breadth of live regulatory sandboxes and controlled trial regimes. |
 | Experimentation | University spinouts | Companies formed to commercialise university research, per million people. |

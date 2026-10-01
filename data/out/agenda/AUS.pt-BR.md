@@ -11,8 +11,8 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Antecipação | 86 | 0,46 (utilizável) | -0,4 em 10 anos, sobre 2 indicadores |
 | Agência | 92,1 | 0,41 (fraca) | sem base de tendência |
 | Coordenação | 86,7 | 0,4 (fraca) | sem base de tendência |
-| Confiança | 75,2 | 0,26 (fraca) | sem base de tendência |
-| Aprendizagem | 65,4 | 0,41 (fraca) | sem base de tendência |
+| Confiança | 81 | 0,37 (fraca) | sem base de tendência |
+| Aprendizagem | 71,4 | 0,54 (utilizável) | sem base de tendência |
 | Experimentação | 39 | 0,18 (muito fraca) | +1,1 em 10 anos, sobre 2 indicadores |
 | Adaptação | 79,6 | 0,68 (boa) | +6,4 em 10 anos, sobre 3 indicadores |
 | Construção | 34,4 | 0,57 (utilizável) | +1,6 em 10 anos, sobre 3 indicadores |
@@ -51,11 +51,11 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
 - Bases rejeitadas: Voz e responsabilização.
 
-### Confiança: confiança 0,26, fraca
+### Confiança: confiança 0,37, fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
 
-- Baseada em 2 indicadores observados.
+- Baseada em 3 indicadores observados.
 - Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
@@ -74,19 +74,13 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
 
-### Aprendizagem: confiança 0,41, fraca
-
-Com que eficácia o país adquire, distribui e atualiza conhecimento?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
-
 ## Dimensões para manter
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
 - Antecipação: 86, confiança utilizável
 - Adaptação: 79,6, confiança boa
+- Aprendizagem: 71,4, confiança utilizável
 
 ## O que a Austrália tem para trabalhar
 
@@ -107,7 +101,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 ## Agenda de medição
 
-23 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+22 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -121,7 +115,6 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Confiança | Cooperação além do próprio grupo | Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade. |
 | Confiança | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Aprendizagem | Participação de adultos em aprendizagem | Parcela de adultos em educação e treinamento, formal ou não, nos últimos 12 meses. |
-| Aprendizagem | Impacto de citação da pesquisa | Impacto de citação da produção científica nacional, normalizado por área. |
 | Experimentação | Investimento de capital de risco | Capital de risco investido como parcela do PIB. |
 | Experimentação | Atividade de sandbox regulatório | Número e abrangência de sandboxes regulatórios e regimes de teste controlado em operação. |
 | Experimentação | Empresas nascidas de universidades | Empresas criadas para comercializar pesquisa universitária, por milhão de habitantes. |

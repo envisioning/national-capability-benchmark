@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T09:42:48.428Z",
+  "generatedAt": "2026-10-01T09:54:08.503Z",
   "iso3": "RWA",
   "country": "Rwanda",
   "dimensions": [
@@ -523,12 +523,13 @@
     {
       "dimension": "trust",
       "kind": "measure",
-      "score": null,
-      "confidence": 0.111,
+      "score": 78.9,
+      "confidence": 0.237,
       "band": "very_thin",
       "trend": null,
       "scoredOn": [
-        "contract_enforcement_days"
+        "contract_enforcement_days",
+        "bribery_incidence"
       ],
       "gaps": [
         "institutional_trust",
@@ -583,22 +584,41 @@
     },
     {
       "dimension": "learning",
-      "kind": "measure",
-      "score": 18.5,
-      "confidence": 0.412,
-      "band": "thin",
+      "kind": "raise",
+      "score": 29.4,
+      "confidence": 0.539,
+      "band": "usable",
       "trend": null,
       "scoredOn": [
         "human_capital_index",
         "vocational_secondary_share",
-        "firm_training_incidence"
-      ],
-      "gaps": [
-        "adult_learning_participation",
+        "firm_training_incidence",
         "research_citation_impact"
       ],
+      "gaps": [
+        "adult_learning_participation"
+      ],
       "retired": [],
-      "exemplars": [],
+      "exemplars": [
+        {
+          "iso3": "FIN",
+          "country": "Finland",
+          "score": 76.3,
+          "confidence": 0.539
+        },
+        {
+          "iso3": "CHE",
+          "country": "Switzerland",
+          "score": 73.9,
+          "confidence": 0.539
+        },
+        {
+          "iso3": "GBR",
+          "country": "United Kingdom",
+          "score": 72.3,
+          "confidence": 0.539
+        }
+      ],
       "evidenceElsewhere": [
         {
           "id": "sgp-skillsfuture",
@@ -613,20 +633,6 @@
           "country": "Finland",
           "indicatorId": "adult_learning_participation",
           "title": "The public library system"
-        },
-        {
-          "id": "bra-capes",
-          "iso3": "BRA",
-          "country": "Brazil",
-          "indicatorId": "research_citation_impact",
-          "title": "CAPES, federal postgraduate funding"
-        },
-        {
-          "id": "bra-inep",
-          "iso3": "BRA",
-          "country": "Brazil",
-          "indicatorId": "research_citation_impact",
-          "title": "INEP, the standing education statistics institution"
         },
         {
           "id": "idn-prakerja",
@@ -2104,5 +2110,5 @@
       "started": 2007
     }
   ],
-  "gapCount": 23
+  "gapCount": 22
 }

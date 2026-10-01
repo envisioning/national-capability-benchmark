@@ -11,8 +11,8 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Antecipação | 84,8 | 0,46 (utilizável) | +17,5 em 10 anos, sobre 2 indicadores |
 | Agência | 84,3 | 0,41 (fraca) | sem base de tendência |
 | Coordenação | 71 | 0,4 (fraca) | sem base de tendência |
-| Confiança | 73,5 | 0,26 (fraca) | sem base de tendência |
-| Aprendizagem | 56,9 | 0,32 (fraca) | sem base de tendência |
+| Confiança | 81,8 | 0,36 (fraca) | sem base de tendência |
+| Aprendizagem | 67,7 | 0,45 (utilizável) | sem base de tendência |
 | Experimentação | 46,6 | 0,21 (muito fraca) | +10,8 em 10 anos, sobre 2 indicadores |
 | Adaptação | 84,9 | 0,67 (boa) | +6,9 em 10 anos, sobre 3 indicadores |
 | Construção | 66,6 | 0,57 (utilizável) | +5 em 10 anos, sobre 3 indicadores |
@@ -37,20 +37,13 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Baseada em 4 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
-### Confiança: confiança 0,26, fraca
+### Confiança: confiança 0,36, fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
 
-- Baseada em 2 indicadores observados.
+- Baseada em 3 indicadores observados.
 - Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
-
-### Aprendizagem: confiança 0,32, fraca
-
-Com que eficácia o país adquire, distribui e atualiza conhecimento?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
 
 ### Coordenação: confiança 0,4, fraca
 
@@ -73,6 +66,7 @@ Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 84,9, confiança boa
 - Antecipação: 84,8, confiança utilizável
+- Aprendizagem: 67,7, confiança utilizável
 - Construção: 66,6, confiança utilizável
 
 ## O que Singapura tem para trabalhar
@@ -94,7 +88,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 ## Agenda de medição
 
-23 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+22 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -108,7 +102,6 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Confiança | Cooperação além do próprio grupo | Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade. |
 | Confiança | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Aprendizagem | Participação de adultos em aprendizagem | Parcela de adultos em educação e treinamento, formal ou não, nos últimos 12 meses. |
-| Aprendizagem | Impacto de citação da pesquisa | Impacto de citação da produção científica nacional, normalizado por área. |
 | Experimentação | Investimento de capital de risco | Capital de risco investido como parcela do PIB. |
 | Experimentação | Atividade de sandbox regulatório | Número e abrangência de sandboxes regulatórios e regimes de teste controlado em operação. |
 | Experimentação | Empresas nascidas de universidades | Empresas criadas para comercializar pesquisa universitária, por milhão de habitantes. |

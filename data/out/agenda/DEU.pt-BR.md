@@ -11,8 +11,8 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Antecipação | 73,5 | 0,46 (utilizável) | +4,3 em 10 anos, sobre 2 indicadores |
 | Agência | 51,9 | 0,41 (fraca) | sem base de tendência |
 | Coordenação | 88,7 | 0,39 (fraca) | sem base de tendência |
-| Confiança | sem nota | 0,11 (muito fraca) | sem base de tendência |
-| Aprendizagem | 51,3 | 0,41 (fraca) | sem base de tendência |
+| Confiança | 86,8 | 0,25 (fraca) | sem base de tendência |
+| Aprendizagem | 56,7 | 0,54 (utilizável) | sem base de tendência |
 | Experimentação | 72,5 | 0,18 (muito fraca) | +4,9 em 10 anos, sobre 2 indicadores |
 | Adaptação | 83 | 0,68 (boa) | +2,1 em 10 anos, sobre 3 indicadores |
 | Construção | 68,9 | 0,57 (utilizável) | -2,8 em 10 anos, sobre 3 indicadores |
@@ -22,20 +22,20 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Confiança: confiança 0,11, muito fraca
-
-Quanta cooperação é possível além das redes pessoais imediatas?
-
-- Baseada em um indicador observado.
-- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
-
 ### Experimentação: confiança 0,18, muito fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
+
+### Confiança: confiança 0,25, fraca
+
+Quanta cooperação é possível além das redes pessoais imediatas?
+
+- Baseada em 2 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ### Propósito compartilhado: confiança 0,29, fraca
 
@@ -60,13 +60,6 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
 
-### Aprendizagem: confiança 0,41, fraca
-
-Com que eficácia o país adquire, distribui e atualiza conhecimento?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
-
 ## Dimensões para manter
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
@@ -74,6 +67,7 @@ Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 - Adaptação: 83, confiança boa
 - Antecipação: 73,5, confiança utilizável
 - Construção: 68,9, confiança utilizável
+- Aprendizagem: 56,7, confiança utilizável
 
 ## O que a Alemanha tem para trabalhar
 
@@ -94,7 +88,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 ## Agenda de medição
 
-23 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+22 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -108,7 +102,6 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Confiança | Cooperação além do próprio grupo | Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade. |
 | Confiança | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Aprendizagem | Participação de adultos em aprendizagem | Parcela de adultos em educação e treinamento, formal ou não, nos últimos 12 meses. |
-| Aprendizagem | Impacto de citação da pesquisa | Impacto de citação da produção científica nacional, normalizado por área. |
 | Experimentação | Investimento de capital de risco | Capital de risco investido como parcela do PIB. |
 | Experimentação | Atividade de sandbox regulatório | Número e abrangência de sandboxes regulatórios e regimes de teste controlado em operação. |
 | Experimentação | Empresas nascidas de universidades | Empresas criadas para comercializar pesquisa universitária, por milhão de habitantes. |

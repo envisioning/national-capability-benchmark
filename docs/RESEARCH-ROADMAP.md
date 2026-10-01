@@ -48,17 +48,17 @@ raises O1 and breaks this.
 
 ### Where the objectives stand
 
-Dataset 7.0.0. Recompute from `data/out/diagnostics.json` and
+Dataset 7.1.0. Recompute from `data/out/diagnostics.json` and
 `data/out/index.json` after any rescore; never carry these figures forward by
 hand.
 
 | Dimension | Mean confidence | Observed rows (mean) | r with log GDP | Reading |
 | --- | ---: | ---: | ---: | --- |
-| Trust | 0.21 | 1.7 | 0.61 (n 36) | misses O1 |
+| Trust | 0.31 | 2.6 | 0.57 (n 49) | misses O1 |
 | Experimentation | 0.23 | 2.6 | 0.62 | misses O1 |
 | Shared purpose | 0.26 | 1.9 | 0.46 | misses O1 |
 | Coordination | 0.36 | 2.8 | 0.56 | misses O1 |
-| Learning | 0.37 | 2.9 | 0.66 | misses O1 |
+| Learning | 0.50 | 3.9 | 0.75 | |
 | Agency | 0.38 | 2.9 | 0.64 | misses O1 |
 | Anticipation | 0.45 | 2.0 | 0.87 | tracks income |
 | Building | 0.55 | 3.9 | 0.43 | |
@@ -89,7 +89,7 @@ passes triage runs to its gate. One that fails triage costs one paragraph.
 | Q1 | Adaptability: wire the researched gaps | O1 and the report: Adaptability | UNCTAD export concentration (#24, D119) and ILOSTAT long-term unemployment with a plausibility gate (#26, D120) | Adapters, decision entries, one minor release |
 | Q2 | Adaptability: the remaining gaps | Adaptability | Desk triage for `disaster_preparedness` and `institutional_responsiveness`. `broadband_subscriptions` is a condition since D122 | One triage paragraph per gap |
 | Q3 | Construct audit of stock rows | Reported O2: Anticipation, Agency, Learning | Done for Tier A at 7.0.0: ten bought conditions moved to the conditions layer (`docs/research/CONDITIONS-AUDIT.md`, D122). Open: the six Tier B rows, each only once its dimension has a capability row to replace it, and replacements for the two borderline rows, `sci_articles_per_million` and `human_capital_index` | One decision per Tier B row; OpenAlex impact and a learning-outcome series as replacements |
-| Q4 | Reopen exclusions that rested on income alone | O1: Trust | `bribery_incidence` (check since D60) first | Construct review; promote or confirm as a check |
+| Q4 | Reopen exclusions that rested on income alone | O1: Trust | `bribery_incidence` (check since D60) | Done: scored in Trust (D123), 50 / 53 |
 | Q5 | V-Dem sweep | O1: Trust, Coordination, Shared purpose | The pinned V-Dem adapter, 53 / 53. Polarization is published as a check (D121) | Triage table of codebook variables against each gap, construct first |
 | Q6 | EVS/WVS sweep beyond A165 | O1: Shared purpose, Trust | The Joint EVS/WVS adapter (TRUST-1) | Triage table of behavioural items (membership, volunteering, participation) |
 | Q7 | OpenAlex research impact | Learning | OpenAlex API, full frame. Memo on #23 recommends the share of works in the top 10% for their field, as a ratio to world | Wired as `research_citation_impact` (D124), 53 / 53 |

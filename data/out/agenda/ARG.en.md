@@ -11,8 +11,8 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Anticipation | 42.3 | 0.46 (usable) | +13.8 over 10 years using 2 indicators |
 | Agency | 42.8 | 0.41 (thin) | no trend |
 | Coordination | 64.3 | 0.37 (thin) | no trend |
-| Trust | 29.2 | 0.26 (thin) | no trend |
-| Learning | 40.3 | 0.23 (very thin) | no trend |
+| Trust | 43.5 | 0.28 (thin) | no trend |
+| Learning | 37.5 | 0.36 (thin) | no trend |
 | Experimentation | 21.5 | 0.39 (thin) | +0.7 over 10 years using 2 indicators |
 | Adaptability | 57 | 0.68 (good) | -1.4 over 10 years using 3 indicators |
 | Building | 27.8 | 0.57 (usable) | -3.4 over 10 years using 3 indicators |
@@ -45,18 +45,11 @@ How capable is the country of identifying and preparing for emerging change?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Learning: confidence 0.23, very thin
-
-How effectively does the country acquire, distribute, and update knowledge?
-
-- Uses 3 observed indicators.
-- Missing indicators: Adult learning participation, Research citation impact.
-
-### Trust: confidence 0.26, thin
+### Trust: confidence 0.28, thin
 
 How much cooperation is possible beyond immediate personal networks?
 
-- Uses 2 observed indicators.
+- Uses 3 observed indicators.
 - Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
@@ -67,6 +60,13 @@ To what extent can people imagine themselves as participants in a common project
 - Uses 2 observed indicators.
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
 - Rejected datasets: Voice and accountability.
+
+### Learning: confidence 0.36, thin
+
+How effectively does the country acquire, distribute, and update knowledge?
+
+- Uses 4 observed indicators.
+- Missing indicators: Adult learning participation.
 
 ### Coordination: confidence 0.37, thin
 
@@ -115,7 +115,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 ## Missing data
 
-23 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+22 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -129,7 +129,6 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Trust | Cooperation beyond the in-group | Reported trust in people met for the first time and in people of another nationality. |
 | Trust | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Learning | Adult learning participation | Share of adults in formal or non-formal education and training in the last 12 months. |
-| Learning | Research citation impact | Field-normalised citation impact of national research output. |
 | Experimentation | Venture capital investment | Venture capital deployed as a share of GDP. |
 | Experimentation | Regulatory sandbox activity | Number and breadth of live regulatory sandboxes and controlled trial regimes. |
 | Experimentation | University spinouts | Companies formed to commercialise university research, per million people. |
