@@ -264,6 +264,12 @@ metadata and a coverage report. The current implementation is
 
 **Target:** `court_case_clearance`.
 
+**Status:** desk preflight complete, values not fetched. The coverage map and
+construct findings are in `docs/research/trust/COURT-CLEARANCE.md`: CEPEJ and
+CEJA reach 26 of 53 countries, one short of the half-frame screen, and a
+single-year clearance mostly measures backlog change. The value preflight is
+specified in `docs/research/trust/HANDOFF-TRUST-2.md`.
+
 **Primary candidates:** [CEPEJ-STAT](https://www.coe.int/en/web/cepej/cepej-stat),
 OECD and national court statistics, as already named in the registry and A12.
 CEPEJ defines clearance rate as resolved cases divided by incoming cases and
