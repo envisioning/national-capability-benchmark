@@ -38,6 +38,7 @@ import { assertAgendaHistoryFloor, readAgendaHistoryDiscipline } from '../pipeli
 import { LANGS, LEXICONS, lexiconRenders } from '../i18n/index.js'
 import type { Lang } from '../i18n/index.js'
 import { runDiagnostics } from '../pipeline/diagnostics.js'
+import { buildFactorHistory } from '../pipeline/factor-history.js'
 import { buildReport } from '../pipeline/report.js'
 import { writeVelocity } from '../pipeline/velocity.js'
 import { writeLeverage } from '../pipeline/leverage.js'
@@ -186,7 +187,7 @@ async function score(args: Args): Promise<CountryResult[]> {
   console.log(`countries -> ${COUNTRY_OUT_DIR} (${countries.length} files)`)
   console.log(`indicators-> ${INDICATOR_OUT_DIR} (${views.length} files)`)
   console.log(`flat table-> ${FILES.flatTable}`)
-  console.log(`schemas   -> ${SCHEMA_OUT_DIR} (5 files) and ${FILES.datapackage}`)
+  console.log(`schemas   -> ${SCHEMA_OUT_DIR} (${Object.keys(jsonSchemas()).length} files) and ${FILES.datapackage}`)
   return countries
 }
 
@@ -207,6 +208,19 @@ async function diagnose(args: Args) {
   const diag = runDiagnostics(observations, countries, matrix, opts, GDP_PER_CAPITA_CODE, delphi)
   await writeOut(FILES.diagnostics, `${JSON.stringify(diag, null, 2)}\n`)
   console.log(`diagnostics -> ${FILES.diagnostics}`)
+  /* The factor test at every committed release, read from git. Without git
+   * the committed file stays as it is. See D137. */
+  const history = await buildFactorHistory({
+    version: DATASET_VERSION,
+    date: diag.generatedAt.slice(0, 10),
+    factorStructure: diag.factorStructure,
+  })
+  if (history) {
+    await writeOut(FILES.factorHistory, `${JSON.stringify(history, null, 2)}\n`)
+    console.log(`factor history -> ${FILES.factorHistory} (${history.releases.length} releases)`)
+  } else {
+    console.log('factor history: git unavailable, kept the committed file')
+  }
   return { countries, diag, delphi }
 }
 

@@ -17,11 +17,22 @@ import type {
   CountryResult,
   DelphiRunFile,
   Dimension,
+  FactorSolution,
+  FactorStructure,
   MeasurementClass,
   Observation,
   Provenance,
 } from '../model/index.js'
-import { iqr, mean, pearson, round, spearman } from './stats.js'
+import {
+  correlationMatrix,
+  firstFactorChance,
+  iqr,
+  mean,
+  pearson,
+  round,
+  spearman,
+  symmetricEigen,
+} from './stats.js'
 import {
   buildFrames,
   conditionValues,
@@ -43,6 +54,25 @@ export const REDUNDANCY_THRESHOLD = 0.85
 export const DIMENSION_OVERLAP_THRESHOLD = 0.9
 /** The family an indicator falls into when its registry row declares none. */
 export const UNASSIGNED_FAMILY = 'unassigned'
+
+/**
+ * Below this many complete cases the factor test is also run on the
+ * dimensions with near-full coverage. Thirty is where a correlation between
+ * two scores stops swinging by more than about 0.35 on sampling noise alone.
+ * See D137.
+ */
+export const FACTOR_MIN_COUNTRIES = 30
+/** A dimension scored for at least this share of countries counts as near-full coverage. */
+export const FACTOR_NEAR_FULL_COVERAGE = 0.9
+/** Monte Carlo draws behind the chance level, and the seed that makes them repeat. */
+export const FACTOR_CHANCE_DRAWS = 2000
+export const FACTOR_CHANCE_SEED = 20261001
+/**
+ * How a first factor's correlation with income is read in a sentence. At or
+ * above `strong` the shared factor looks like income; at or above `moderate`
+ * income accounts for part of it. Absolute values. See D137.
+ */
+export const FACTOR_INCOME_BANDS = { strong: 0.8, moderate: 0.5 } as const
 
 /** How far back the discrimination test reaches, in years. */
 export const DISCRIMINATION_SPAN = 20
@@ -189,6 +219,15 @@ export type Diagnostics = {
   }>
   dimensionPairs: Correlation[]
   duplicateDimensionCandidates: Correlation[]
+  /**
+   * Whether the nine dimensions are one thing. The correlation matrix of the
+   * dimension scores over the countries that have all nine, its eigenvalues,
+   * the first factor's loadings and its correlation with income, and the
+   * share the first factor would take by chance at the same size. If the
+   * dimensions collapse into one factor that tracks GDP per head, the
+   * benchmark's claim fails. See D137 and docs/WHY.md.
+   */
+  factorStructure: FactorStructure
   indicatorVsGdp: Array<{
     indicatorId: string
     dimension: Dimension
@@ -576,6 +615,138 @@ function discriminationTrendFor(
   return { span: DISCRIMINATION_SPAN, baseYear, currentYear: opts.currentYear, perIndicator }
 }
 
+/**
+ * One principal-component solution of the dimension scores.
+ *
+ * `scores` holds each country's published dimension scores, null where a
+ * dimension publishes none. Only countries with every listed dimension scored
+ * enter, because a correlation matrix built pairwise over different country
+ * sets need not be a correlation matrix of anything, and its eigenvalues can
+ * go negative. Nothing is imputed. Null when fewer than three countries remain.
+ */
+export function factorSolution(
+  scores: Map<string, Partial<Record<Dimension, number | null>>>,
+  logGdp: Map<string, number>,
+  dimensions: readonly Dimension[] = DIMENSIONS,
+  chance: { draws?: number; seed?: number } = {},
+): FactorSolution | null {
+  const kept: string[] = []
+  const dropped: FactorSolution['dropped'] = []
+  for (const [iso3, row] of [...scores.entries()].sort((a, b) => a[0].localeCompare(b[0]))) {
+    const missing = dimensions.filter((d) => row[d] === null || row[d] === undefined)
+    if (missing.length) dropped.push({ iso3, missing })
+    else kept.push(iso3)
+  }
+  const n = kept.length
+  const p = dimensions.length
+  if (n < 3 || p < 2) return null
+
+  const columns = dimensions.map((d) => kept.map((iso3) => scores.get(iso3)?.[d] as number))
+  const { values, vectors } = symmetricEigen(correlationMatrix(columns))
+  const first = vectors[0] ?? []
+  const lambda = values[0] ?? 0
+  /* An eigenvector's sign is arbitrary. Point it so the loadings sum positive,
+   * which makes a high factor score mean high scores across the board. */
+  const sign = first.reduce((a, b) => a + b, 0) < 0 ? -1 : 1
+  const weights = first.map((w) => w * sign)
+
+  /* Country scores on the first factor: standardised dimension scores times
+   * the unit eigenvector. */
+  const stats = columns.map((col) => {
+    const m = mean(col)
+    const sd = Math.sqrt(col.reduce((a, x) => a + (x - m) ** 2, 0) / (col.length - 1))
+    return { m, sd: sd || 1 }
+  })
+  const factorScores = new Map<string, number>()
+  kept.forEach((iso3, i) => {
+    let total = 0
+    for (let j = 0; j < p; j++) {
+      const s = stats[j] as { m: number; sd: number }
+      total += (weights[j] ?? 0) * (((columns[j] as number[])[i] as number) - s.m) / s.sd
+    }
+    factorScores.set(iso3, total)
+  })
+  /* Over the kept countries directly, so a release read from history whose
+   * country set differs from today's registry is still read whole. */
+  const g = { xs: [] as number[], ys: [] as number[] }
+  for (const iso3 of kept) {
+    const y = logGdp.get(iso3)
+    if (y === undefined) continue
+    g.xs.push(factorScores.get(iso3) as number)
+    g.ys.push(y)
+  }
+  const r = pearson(g.xs, g.ys)
+
+  const base = firstFactorChance(n, p, {
+    draws: chance.draws ?? FACTOR_CHANCE_DRAWS,
+    seed: chance.seed ?? FACTOR_CHANCE_SEED,
+  })
+
+  return {
+    dimensions: [...dimensions],
+    countries: n,
+    dropped,
+    eigenvalues: values.map((v) => round(v, 3)),
+    firstFactorShare: round(lambda / p, 3),
+    loadings: dimensions.map((dimension, j) => ({
+      dimension,
+      loading: round((weights[j] ?? 0) * Math.sqrt(Math.max(lambda, 0)), 3),
+    })),
+    income: r === null ? null : { r: round(r, 3), rSquared: round(r * r, 3), n: g.xs.length },
+    chance: { ...base, mean: round(base.mean, 3), p95: round(base.p95, 3) },
+  }
+}
+
+/**
+ * The factor test as published: all nine on complete cases, and, when too
+ * few countries have all nine, the dimensions with near-full coverage as well.
+ */
+export function factorStructureFor(
+  scores: Map<string, Partial<Record<Dimension, number | null>>>,
+  logGdp: Map<string, number>,
+  chance: { draws?: number; seed?: number } = {},
+): FactorStructure {
+  const complete = factorSolution(scores, logGdp, DIMENSIONS, chance)
+  let nearFull: FactorSolution | null = null
+  if (!complete || complete.countries < FACTOR_MIN_COUNTRIES) {
+    const total = scores.size
+    const covered = DIMENSIONS.filter((d) => {
+      let k = 0
+      for (const row of scores.values()) if (row[d] !== null && row[d] !== undefined) k += 1
+      return total > 0 && k / total >= FACTOR_NEAR_FULL_COVERAGE
+    })
+    if (covered.length >= 2 && covered.length < DIMENSIONS.length) {
+      nearFull = factorSolution(scores, logGdp, covered, chance)
+    }
+  }
+  return {
+    minCountries: FACTOR_MIN_COUNTRIES,
+    nearFullCoverage: FACTOR_NEAR_FULL_COVERAGE,
+    complete,
+    nearFull,
+  }
+}
+
+/** How strongly the first factor follows income, banded on the absolute r. */
+export function factorIncomeBand(r: number | null): 'strong' | 'moderate' | 'weak' | null {
+  if (r === null) return null
+  const a = Math.abs(r)
+  if (a >= FACTOR_INCOME_BANDS.strong) return 'strong'
+  if (a >= FACTOR_INCOME_BANDS.moderate) return 'moderate'
+  return 'weak'
+}
+
+/** The solution a one-line reading should quote: complete cases unless too few, then near-full. */
+export function headlineFactor(
+  fs: FactorStructure,
+): { basis: 'complete' | 'nearFull'; solution: FactorSolution } | null {
+  if (fs.complete && (fs.complete.countries >= fs.minCountries || !fs.nearFull)) {
+    return { basis: 'complete', solution: fs.complete }
+  }
+  if (fs.nearFull) return { basis: 'nearFull', solution: fs.nearFull }
+  return fs.complete ? { basis: 'complete', solution: fs.complete } : null
+}
+
 function rankOrder(values: Map<string, number>): string[] {
   return [...values.entries()].sort((a, b) => b[1] - a[1]).map(([iso3]) => iso3)
 }
@@ -606,6 +777,16 @@ export function runDiagnostics(
     }
   }
   dimensionPairs.sort((x, y) => Math.abs(y.r ?? 0) - Math.abs(x.r ?? 0))
+
+  const factorStructure = factorStructureFor(
+    new Map(
+      countries.map((c) => [
+        c.iso3,
+        Object.fromEntries(DIMENSIONS.map((d) => [d, c.dimensions[d]?.score ?? null])),
+      ]),
+    ),
+    gdp,
+  )
 
   const indicatorVsGdp = [...matrix.keys()].map((indicatorId) => {
     const def = INDICATORS_BY_ID[indicatorId]
@@ -853,6 +1034,7 @@ export function runDiagnostics(
     duplicateDimensionCandidates: dimensionPairs
       .filter((p) => (p.r ?? 0) >= DIMENSION_OVERLAP_THRESHOLD)
       .map((p) => ({ ...p, r: p.r === null ? null : round(p.r, 3) })),
+    factorStructure,
     indicatorVsGdp,
     wealthAttribution,
     panelVsGdp: delphi ? panelVsGdpFor(delphi, countries, gdp) : null,

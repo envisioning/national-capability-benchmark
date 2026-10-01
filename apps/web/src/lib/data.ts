@@ -14,6 +14,7 @@ import {
   isScored,
   LeverageFile as LeverageFileSchema,
   ResidualFile as ResidualFileSchema,
+  FactorHistoryFile as FactorHistoryFileSchema,
   VelocityFile as VelocityFileSchema,
 } from '@ncb/core'
 import { DATA_DIR } from '@ncb/core/node'
@@ -72,6 +73,7 @@ const PATHS = {
   velocity: resolve(DATA_ROOT, 'out/velocity.json'),
   leverage: resolve(DATA_ROOT, 'out/leverage.json'),
   residual: resolve(DATA_ROOT, 'out/residual.json'),
+  factorHistory: resolve(DATA_ROOT, 'out/factor-history.json'),
 }
 
 async function readJson<T>(path: string): Promise<T | null> {
@@ -122,6 +124,13 @@ export async function loadLeverage(): Promise<LeverageFile | null> {
 export async function loadResidual(): Promise<ResidualFile | null> {
   const raw = await readJson<unknown>(PATHS.residual)
   const parsed = ResidualFileSchema.safeParse(raw)
+  return parsed.success ? parsed.data : null
+}
+
+/** The factor test at every committed dataset release. See D137. */
+export async function loadFactorHistory(): Promise<FactorHistoryFileSchema | null> {
+  const raw = await readJson<unknown>(PATHS.factorHistory)
+  const parsed = FactorHistoryFileSchema.safeParse(raw)
   return parsed.success ? parsed.data : null
 }
 

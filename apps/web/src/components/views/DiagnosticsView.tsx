@@ -7,7 +7,7 @@ import {
   REDUNDANCY_THRESHOLD,
   WEALTH_CORRELATION_THRESHOLD,
 } from '@ncb/core'
-import type { Dimension } from '@ncb/core'
+import type { Dimension, FactorHistoryRelease, FactorSolution } from '@ncb/core'
 import Link from 'next/link'
 import { DataTable } from '@/components/DataTable'
 import { CapabilityLink } from '@/components/CapabilityLink'
@@ -15,6 +15,7 @@ import { ClassBadge, Headline, Meta, PageTitle, PanelProvenanceNote, Section } f
 import type { Diagnostics } from '@ncb/core'
 import { capitalize, countWord } from '@/lib/words'
 import { exploreHref } from '@/lib/links'
+import { readFactorTest } from '@/lib/factor'
 
 const name = (id: string) => INDICATORS_BY_ID[id]?.name ?? id
 const muted = (v: React.ReactNode) => <span className="text-[var(--muted)]">{v}</span>
@@ -25,7 +26,14 @@ const muted = (v: React.ReactNode) => <span className="text-[var(--muted)]">{v}<
  * whose headings can contradict its own tables costs more credibility than the
  * findings earn.
  */
-export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
+export function DiagnosticsView({
+  diag,
+  factorHistory,
+}: {
+  diag: Diagnostics
+  factorHistory: FactorHistoryRelease[]
+}) {
+  const factor = readFactorTest(diag)
   const n = diag.dimensionVsGdp[0]?.n ?? 0
   const wealthTracking = diag.dimensionVsGdp.filter(
     (d) => d.pearson !== null && Math.abs(d.pearson) >= WEALTH_CORRELATION_THRESHOLD,
@@ -92,6 +100,82 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
           ]}
         />
       </Section>
+
+      {factor ? (
+        <Section
+          title={`One factor carries ${factor.sharePct} of the variation`}
+          hint={`Principal components of the dimension scores over ${factor.solution.countries} countries with ${factor.scope} scored. Chance at that size gives ${factor.chanceMeanPct}, ${factor.chanceP95Pct} at the 95th percentile. Treat it as a hint at ${factor.solution.countries} countries.`}
+        >
+          <div className="mb-6 max-w-3xl space-y-4 text-lg leading-relaxed">
+            <p>{factor.shareSentence}</p>
+            {factor.incomeSentence ? <p>{factor.incomeSentence}</p> : null}
+          </div>
+          <FactorTables solution={factor.solution} label="All nine dimensions" />
+          {diag.factorStructure.nearFull && factor.basis === 'nearFull' && diag.factorStructure.complete ? (
+            <div className="mt-8">
+              <p className="mb-4 max-w-3xl text-lg leading-relaxed">
+                With all nine dimensions only {diag.factorStructure.complete.countries} countries
+                remain, under the floor of {diag.factorStructure.minCountries}. On those the first
+                factor carries {(diag.factorStructure.complete.firstFactorShare * 100).toFixed(1)}%.
+              </p>
+              <FactorTables solution={diag.factorStructure.complete} label="All nine, complete cases" />
+            </div>
+          ) : null}
+          {factorHistory.length > 0 ? (
+            <div className="mt-8">
+              <DataTable
+                rows={factorHistory}
+                caption="The same test at every dataset release"
+                columns={[
+                  {
+                    key: 'version',
+                    label: 'Dataset',
+                    render: (r) => r.version,
+                  },
+                  {
+                    key: 'dims',
+                    label: 'Dimensions',
+                    align: 'right',
+                    render: (r) => muted(r.dimensions.length),
+                  },
+                  { key: 'n', label: 'Countries', align: 'right', render: (r) => muted(r.countries) },
+                  {
+                    key: 'share',
+                    label: 'First-factor share',
+                    align: 'right',
+                    render: (r) => `${(r.firstFactorShare * 100).toFixed(1)}%`,
+                  },
+                  {
+                    key: 'chance',
+                    label: 'Chance mean',
+                    align: 'right',
+                    render: (r) => muted(`${(r.chance.mean * 100).toFixed(1)}%`),
+                  },
+                  {
+                    key: 'p95',
+                    label: 'Chance 95th',
+                    align: 'right',
+                    render: (r) => muted(`${(r.chance.p95 * 100).toFixed(1)}%`),
+                  },
+                  {
+                    key: 'income',
+                    label: 'r with income',
+                    align: 'right',
+                    render: (r) =>
+                      r.income ? `${Math.abs(r.income.r).toFixed(2)} (${r.income.n})` : 'no data',
+                  },
+                ]}
+              />
+              <p className="mt-3 max-w-3xl text-xs leading-relaxed text-[var(--muted)]">
+                Read from each release&apos;s committed output. A release with fewer than nine
+                dimensions had too few countries with all nine scored, so it reads the dimensions
+                scored for at least {Math.round(diag.factorStructure.nearFullCoverage * 100)}% of
+                countries.
+              </p>
+            </div>
+          ) : null}
+        </Section>
+      ) : null}
 
       <Section
         title={
@@ -589,5 +673,43 @@ export function DiagnosticsView({ diag }: { diag: Diagnostics }) {
         </Section>
       ) : null}
     </>
+  )
+}
+
+/** Eigenvalues and loadings of one factor solution, and the countries it left out. */
+function FactorTables({ solution, label }: { solution: FactorSolution; label: string }) {
+  return (
+    <div>
+      <DataTable
+        rows={solution.loadings}
+        initialSort={{ key: 'loading', dir: 'desc' }}
+        caption={`${label}: loadings on the first factor, ${solution.countries} countries`}
+        columns={[
+          {
+            key: 'dimension',
+            label: 'Dimension',
+            sort: (r) => DIMENSION_LABELS[r.dimension],
+            render: (r) => <CapabilityLink dimension={r.dimension} />,
+          },
+          {
+            key: 'loading',
+            label: 'Loading',
+            align: 'right',
+            sort: (r) => r.loading,
+            render: (r) => r.loading.toFixed(3),
+          },
+        ]}
+      />
+      <p className="mt-3 max-w-3xl text-xs leading-relaxed text-[var(--muted)]">
+        A loading is the dimension&apos;s correlation with the first factor. Eigenvalues, largest
+        first: {solution.eigenvalues.map((v) => v.toFixed(2)).join(', ')}. They sum to{' '}
+        {solution.dimensions.length}, and the first over {solution.dimensions.length} is the share.{' '}
+        {solution.dropped.length
+          ? `Left out because a dimension has no score: ${solution.dropped
+              .map((d) => `${d.iso3} (${d.missing.map((m) => DIMENSION_LABELS[m]).join(', ')})`)
+              .join('; ')}.`
+          : 'No country was left out.'}
+      </p>
+    </div>
   )
 }

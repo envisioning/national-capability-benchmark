@@ -68,9 +68,15 @@ Ten bought conditions left the scores at 7.0.0 and are published beside their
 dimensions (D122): research spending, researchers and secure servers beside
 Anticipation, internet users, account ownership and private credit beside
 Agency, tertiary enrolment and education spending beside Learning, broadband
-beside Adaptability and output per worker beside Building. The share of
-variance on the first factor of the eight dimension scores with a complete
-panel fell from 0.62 to 0.50 (46 countries, Trust left out for coverage).
+beside Adaptability and output per worker beside Building.
+
+The one-factor test (D137), dataset 7.6.0: one shared factor carries 0.529 of
+the variance of the nine dimension scores over 51 complete cases, against
+0.189 by chance (95th percentile 0.215), and it correlates 0.86 with log GDP
+per capita (n 50), so income accounts for 0.74 of it. The shared factor looks
+like income. On the same rule the share was 0.604 at 6.2.0 and 0.498 at 7.0.0
+(both 33 complete cases), when the stocks left the scores. Every release's
+figure is in `data/out/factor-history.json`.
 
 Two dimensions still track income above 0.70. Anticipation stays at 0.87 on
 its two capability rows, articles per head and statistical performance, which

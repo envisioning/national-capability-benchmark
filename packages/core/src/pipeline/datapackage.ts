@@ -6,6 +6,8 @@ import {
   REPO_URL,
   publisherSummaries,
   CountryFile,
+  FactorHistoryFile,
+  FactorStructure,
   IndexFile,
   IndicatorAcrossCountries,
   SubnationalFile,
@@ -29,6 +31,10 @@ export function jsonSchemas(): Record<string, object> {
     'indicator.schema.json': zodToJsonSchema(IndicatorAcrossCountries, 'IndicatorAcrossCountries'),
     'subnational.schema.json': zodToJsonSchema(SubnationalFile, 'SubnationalFile'),
     'subnational-index.schema.json': zodToJsonSchema(SubnationalIndexFile, 'SubnationalIndexFile'),
+    /* The factor test is one field of diagnostics.json, which has no schema
+     * of its own yet, so this one describes `factorStructure` alone. D137. */
+    'factor-structure.schema.json': zodToJsonSchema(FactorStructure, 'FactorStructure'),
+    'factor-history.schema.json': zodToJsonSchema(FactorHistoryFile, 'FactorHistoryFile'),
   }
 }
 
@@ -99,6 +105,22 @@ export function buildDataPackage(indicatorIds: string[], generatedAt: string): o
             ...DIMENSIONS.map((d) => ({ name: d, type: 'number' })),
           ],
         },
+      },
+      {
+        name: 'diagnostics',
+        path: 'diagnostics.json',
+        title:
+          'The tests the model has to pass. Its factorStructure field, whether the nine dimensions are one factor that tracks income, is described by schema/factor-structure.schema.json',
+        format: 'json',
+        mediatype: 'application/json',
+      },
+      {
+        name: 'factor-history',
+        path: 'factor-history.json',
+        title: 'The first-factor share and its chance level at every committed dataset release',
+        format: 'json',
+        mediatype: 'application/json',
+        schema: 'schema/factor-history.schema.json',
       },
       {
         name: 'subnational-index',
