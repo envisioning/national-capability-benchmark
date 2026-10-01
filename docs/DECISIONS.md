@@ -5375,3 +5375,63 @@ claim, for example by pairing with another dimension in
 `duplicateDimensionCandidates` in `diagnostics.json`, which would show the objectives measure the wrong thing; or
 a triaged-out candidate that a later preflight shows would have cleared the
 half-frame screen, which would show the triage questions are too strict.
+
+---
+
+## D120 — Long-term unemployment is wired from ILOSTAT behind a plausibility gate
+
+**Decision.** `long_term_unemployment_share` (Adaptability) moves from `gap` to
+`adapter`. The adapter reads ILOSTAT's `DF_UNE_TUNE_SEX_AGE_DUR_NB` in one SDMX
+call and derives the share as unemployed 12 months or more over the unemployed
+with a stated duration, both sexes, age 15 and over, a labour force survey
+preferred where ILOSTAT holds more than one. Lower is better, raw percentage.
+Before emitting, it runs a plausibility gate on every country, naming none: it
+drops a country-year under 3%; every year of a survey whose median for that
+country is under 3%; a run of one or two observations that sits more than 15
+points beyond both neighbours when those neighbours agree within 15 points; and
+a latest value more than 15 points from the one before it, which waits for the
+next year to confirm it. A jump the next year keeps is a level shift and stays.
+It emits the latest surviving year and logs every dropped value with its
+country, year, value and reason. The run of 2026-10-01 emits 44 of 53
+countries, holds KOR, MEX, PER, PHL, SLV and URY with no surviving year, and
+drops 78 country-years; Brazil is 30.2% in 2025 from PNAD Contínua. The list is
+in `docs/research/adaptability/ILOSTAT-LONG-TERM-UNEMPLOYMENT.md`.
+
+**Why.** Construct first. The row observes whether people who lose work find
+new work, which is reallocation, the centre of Adaptability, and it is
+behaviour rather than a stock money buys. That is the reason it is accepted.
+Its two readings are recorded in the registry note: a high share is slow
+reallocation where the unemployment rate is also high (South Africa, Kenya,
+Nigeria) and a small residual pool where the rate is low (Switzerland, Japan),
+so it is read beside `unemployment_rate`. Some questionnaires cannot record a
+long search, and their published shares (under 1% in every year for Korea,
+the Philippines and Peru, and for Uruguay outside 2021 and 2022) describe the
+instrument. A rule applied to every
+country keeps the exclusion auditable and stops it from becoming a list of
+countries the benchmark disliked. The survey-median clause exists because a
+year-by-year floor alone let one year of an otherwise sub-3% questionnaire
+through (Mexico 2022 at 3.1, El Salvador 2021 at 4.6), and those would have
+taken the best cells in the frame. As a reported finding, not a test: the
+row's normalised score correlates with log GDP per capita at r = 0.355 (raw
+share -0.355, n 42), its wealth-attribution delta is 0.005, and on the local
+run Adaptability moves from r = 0.818 to 0.824 (n 51) while its mean
+confidence rises from 0.469 to 0.558.
+
+**Cost.** The thresholds, 3% and 15 points, are judgment. A real one-year
+excursion of more than 15 points is dropped as a spike, and a real level shift
+in the latest year is held back for one release, emitting the year before.
+The survey-median clause goes beyond the owner's two-clause rule and removes
+values that clear 3%. The gate cannot see a break with no spike: Ethiopia is
+emitted at 53.9 for 2013 because its only other year, 2021, falls under the
+floor. ILO's own unreliable flag is recorded in each note and not used. Four
+emitted countries come from household surveys rather than labour force
+surveys, Brazil among them, and Argentina's survey is urban only. ILOSTAT
+revises in place, so the retrieval date is the release identifier.
+
+**Overturned by.** A national statistics office or the ILO documenting that a
+held series is a valid measure of long-term unemployment, which would make the
+floor a rule that removes real values; a second source for the same countries,
+such as OECD or Eurostat, that disagrees with the gate's survivors by more
+than the gate's own 15-point tolerance; or a review of `unemployment_rate`
+beside this row showing the two readings cannot be separated in practice,
+which would make the row a check under D60 instead of an indicator.
