@@ -6251,14 +6251,15 @@ reproducible without becoming an adapter.
 The 14 benchmark countries GEM has not surveyed since 2019 are lower-income
 apart from Singapore (SGP VNM PHL MYS NGA KEN RWA ETH BOL PRY HND NIC CUB HTI),
 so the extension raises confidence more in rich countries than in poor ones.
-Reported as findings, from a local run on dataset 7.1.0, against the 7.1.0
+Reported as findings, from a local run on dataset 7.2.0, against the 7.2.0
 baseline of mean confidence 0.225, r with log GDP per capita 0.623 and
-guardrail (mean confidence across dimensions against log GDP) 0.333: with the
+guardrail (mean confidence across dimensions against log GDP) 0.286: with the
 GEM extension alone, Experimentation's mean confidence is 0.314, its r 0.701
-and the guardrail 0.444; with industrial designs (D126) as well, 0.350, 0.685
-and 0.442. A 2022 to 2025 window gave 0.412 alone and 0.414 with designs;
-widening it to 2019 raised the guardrail further, because three of the five
-countries it adds are high-income. The triage memo expected the guardrail to
+and the guardrail 0.387; with industrial designs (D126) as well, 0.350, 0.685
+and 0.385. A 2022 to 2025 window gave a guardrail of 0.357 alone and 0.360
+with designs; widening it to 2019 raised it further, because three of the
+five countries it adds are high-income. Industrial designs alone moves it
+only to 0.298. The triage memo expected the guardrail to
 improve; it worsens. Japan's fear of failure rests on the small share of
 adults who see good opportunities (12.7% in 2022). Values from up to seven
 different years sit in one column.

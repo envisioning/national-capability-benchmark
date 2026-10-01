@@ -7,7 +7,7 @@ the first run raised the guardrail
 Track: source-backed measurement
 
 Status: GEM rows extended (D125), industrial designs wired (D126). Retrieved
-2026-10-01, local run on dataset 7.1.0. No version bump in this change.
+2026-10-01, local run on dataset 7.2.0. No version bump in this change.
 
 ## What moved
 
@@ -21,26 +21,28 @@ Status: GEM rows extended (D125), industrial designs wired (D126). Retrieved
 | Experimentation r with log GDP per capita (Pearson, n) | 0.623 (50) | 0.685 (51) |
 | Experimentation Spearman with log GDP per capita | 0.750 | 0.739 |
 | Countries with an Experimentation score | 52 (Ireland below the floor) | 53 |
-| Guardrail: mean confidence across dimensions against log GDP | 0.333 | 0.442 |
+| Guardrail: mean confidence across dimensions against log GDP | 0.286 | 0.385 |
 | Experimentation confidence against log GDP | 0.199 | 0.565 |
 | Brazil Experimentation score (confidence) | 30.0 (0.394) | 24.0 (0.430) |
 
 The 0.40 target for mean confidence (O1) is not reached, and the guardrail
-does not come back near 0.33. Each change run on its own:
+rises by about 0.10 over its baseline. Each change run on its own, all on
+dataset 7.2.0 (on 7.1.0, before D127 to D130, the same runs read 0.333,
+0.346, 0.412, 0.414, 0.444 and 0.442):
 
 | Run | Mean confidence | r log GDP | Guardrail |
 | --- | ---: | ---: | ---: |
-| Dataset 7.1.0 | 0.225 | 0.623 | 0.333 |
-| Industrial designs only | 0.271 | 0.572 | 0.346 |
-| GEM 2022-2025 only | 0.301 | 0.736 | 0.412 |
-| GEM 2022-2025 and designs | 0.338 | 0.654 | 0.414 |
-| GEM 2019-2025 only | 0.314 | 0.701 | 0.444 |
-| GEM 2019-2025 and designs (this change) | 0.350 | 0.685 | 0.442 |
+| Dataset 7.2.0 | 0.225 | 0.623 | 0.286 |
+| Industrial designs only | 0.271 | 0.572 | 0.298 |
+| GEM 2022-2025 only | 0.301 | 0.736 | 0.357 |
+| GEM 2022-2025 and designs | 0.338 | 0.654 | 0.360 |
+| GEM 2019-2025 only | 0.314 | 0.701 | 0.387 |
+| GEM 2019-2025 and designs (this change) | 0.350 | 0.685 | 0.385 |
 
 Widening the window to 2019 was meant to bring poorer countries in. It brought
 five: Australia and Portugal (2019), Ireland, Turkey and the Dominican
 Republic (2021). Three are high-income, so the guardrail rises again, from
-0.414 to 0.442. The 2020 report carries no benchmark country that a later one
+0.360 to 0.385. The 2020 report carries no benchmark country that a later one
 does not. The 14 countries GEM has not surveyed since 2019 are lower-income
 apart from Singapore (SGP VNM PHL MYS NGA KEN RWA ETH BOL PRY HND NIC CUB HTI),
 and they stay on two or three rows. Industrial designs covers 50 countries
