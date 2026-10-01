@@ -133,6 +133,13 @@ Parked, with the reason:
   (Building): no full-frame source family exists. Reopen if the V-Dem sweep finds one.
 - **PISA or PIAAC** (Learning): coverage skips much of the frame and would feed
   the guardrail. Reopen only as part of the Q3 construct audit.
+- **OxCGRT response speed** (`institutional_responsiveness`): failed triage on
+  construct, not coverage (53 of 53). The first non-zero economic-support code
+  is set by the cheapest decree, coded dates are effective dates backfilled
+  after the fact, 25 of 53 countries fall inside the coding error, and it is
+  one 2020 event that never updates. Not wired, not even as a check. Brazil's
+  dated 2020 sequence is usable as narrative in the adaptability report. See
+  the memo in `docs/research/adaptability/`.
 - **SUBNATIONAL-1**: waits on a construct decision (plan fidelity,
   reallocation or execution), not on research.
 
