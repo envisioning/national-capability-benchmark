@@ -460,3 +460,24 @@ finding; the attached reason is the only mitigation. The fix that would let it
 score is a reading conditioned on competition existing at all, or a behavioural
 row (civic participation, volunteering, voter turnout) that agrees with the
 item outside the closed regimes. Neither is wired, and the gap stays open.
+
+---
+## A14 — Agency rests on two rows frozen at 2019
+
+**Severity: high.**
+
+Agency is scored on three rows: new business density, and the time and the
+number of procedures to start a business. The second and third come from Doing
+Business and stopped in 2019 (A6). Internet users, account ownership and
+private credit sit beside the score as conditions (D122), so two thirds of the
+scored evidence is now a 2019 reading of registration rules.
+
+Where new business density is missing, Agency is those two frozen rows and
+nothing else. That holds for the United States (86.4), Nicaragua (74.7) and
+Venezuela (0), each at confidence 0.22. The score then reads how hard it was to
+register a company in 2019, not what people do with the chance to act.
+
+Read Agency through its confidence. The fix is capability rows that observe
+people acting, which the O1 triage sweep is looking for. Until they land, a
+large move in an Agency score between dataset 6 and 7 is the conditions
+leaving, not the country changing.
