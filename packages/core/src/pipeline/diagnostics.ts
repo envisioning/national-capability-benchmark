@@ -59,7 +59,11 @@ export const DISCRIMINATION_FADE_SHARE = -0.25
 /** Interquartile spread in points below which an indicator barely separates countries. */
 export const DISCRIMINATION_FLOOR = 10
 
-export function logGdpByCountry(observations: Observation[], series: string): Map<string, number> {
+/** The latest year of a context series per country, as published. */
+export function latestContextByCountry(
+  observations: Observation[],
+  series: string,
+): Map<string, { value: number; year: number }> {
   /* The observation file carries every year, so pick the latest one per country
    * rather than the first row encountered. */
   const latest = new Map<string, { value: number; year: number }>()
@@ -68,6 +72,11 @@ export function logGdpByCountry(observations: Observation[], series: string): Ma
     const cur = latest.get(o.iso3)
     if (!cur || o.year > cur.year) latest.set(o.iso3, { value: o.value, year: o.year })
   }
+  return latest
+}
+
+export function logGdpByCountry(observations: Observation[], series: string): Map<string, number> {
+  const latest = latestContextByCountry(observations, series)
   const out = new Map<string, number>()
   for (const [iso3, v] of latest) out.set(iso3, Math.log10(v.value))
   return out
@@ -157,6 +166,21 @@ export type Correlation = { a: string; b: string; r: number | null; n: number }
 export type Diagnostics = {
   generatedAt: string
   gdpSeries: string
+  /**
+   * The income each correlation here is read against: the latest year of
+   * `gdpSeries` per country, as the World Bank publishes it, in iso3 order.
+   * Context, never scored and never a column of any score. It is published so
+   * a surface that compares a country with countries at similar income draws
+   * that set from the same numbers the wealth tests read, rather than from a
+   * list somebody wrote. A country the series does not cover is absent. Older
+   * files written before D130 lack the field. See D130.
+   */
+  income?: Array<{
+    iso3: string
+    /** GDP per capita, PPP, constant international dollars, rounded to the dollar. */
+    gdpPerCapita: number
+    year: number
+  }>
   dimensionVsGdp: Array<{
     dimension: Dimension
     pearson: number | null
@@ -810,9 +834,16 @@ export function runDiagnostics(
       .sort((a, b) => b.clampedCells - a.clampedCells),
   }
 
+  const latestIncome = latestContextByCountry(observations, gdpSeries)
+  const income = COUNTRY_ISO3.flatMap((iso3) => {
+    const v = latestIncome.get(iso3)
+    return v && v.value > 0 ? [{ iso3, gdpPerCapita: Math.round(v.value), year: v.year }] : []
+  }).sort((a, b) => a.iso3.localeCompare(b.iso3))
+
   return {
     generatedAt: new Date().toISOString(),
     gdpSeries,
+    income,
     dimensionVsGdp: dimensionVsGdp.map((d) => ({
       ...d,
       pearson: d.pearson === null ? null : round(d.pearson, 3),

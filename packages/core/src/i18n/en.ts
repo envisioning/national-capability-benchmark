@@ -250,4 +250,79 @@ export const EN: Lexicon = {
     matrixSummary: '{total} relations in {filled} of {cells} cells',
     mapSummary: '{institutions} institutions, {relations} recorded relations',
   },
+  capabilityMap: {
+    navLabel: '{dimension}',
+    title: 'Where does {countryTopic} stand on {dimension}?',
+    metaTitle: '{dimension} map, {country}, NCB',
+    metaDescription:
+      'A reading of {dimension} for {countryTopic}: the score and its confidence, the indicators it rests on, the conditions beside it and its position among the countries at the nearest income. Computed from the published data.',
+    dataset: 'Dataset {version}',
+    intro:
+      'This page reads one capability from the published data and is recomputed with every release. It separates what {countryTopic} does, which makes the score, from what the country has, which sits beside the score, and places the country among the {count} countries at the nearest income. The text describes the data and recommends no policy.',
+    scoreHeading: 'What does the score rest on?',
+    scoreIntro:
+      'The {dimension} score is the equal-weight mean of the positions of {n} indicators on a 0 to 100 scale that every country sets together. Confidence measures the evidence behind the score and sits beside it as a second number.',
+    scoreLabel: 'Score',
+    confidenceLabel: 'Confidence',
+    bandLine: '{band} evidence',
+    rowsHeading: 'Observed indicators',
+    colPosition: 'Position on the scale',
+    colPeerMedian: 'Peer median',
+    rowSource: '{source}, {year}',
+    noValue: 'no value',
+    gapsLine: 'No comparable source yet, so lowering confidence: {list}.',
+    dimensionIncome:
+      'The {dimension} score tracks GDP per capita at r = {r} across {n} countries.',
+    conditionsIntro:
+      'Beside each condition, two r values read every country at once, one against income and one against the capability score. Where the r with income is much higher than the r with the score, having the condition goes with being rich more than with the capability measured.',
+    conditionIncome: 'r with income: {r} ({n} countries)',
+    conditionScore: 'r with the {dimension} score: {r} ({n} countries)',
+    conditionPeerMedian: 'Peer median: {value} {unit} ({n} peers with a value)',
+    peersHeading: 'Where does {countryTopic} sit among its peers?',
+    peerRule:
+      'The peers are the {count} countries at the nearest income. Income is GDP per capita at purchasing power parity, in constant international dollars, for the latest year the World Bank publishes, and distance is measured on a log scale, where half and double are equally far. No country is picked by hand, and the set changes when the data does.',
+    peerRange: 'In this release peer income runs from {min} to {max}, and {countryTopic} has {own} ({year}).',
+    peersUnscored: '{n} of the {count} peers have no score on this capability and are left out of the median.',
+    colCountry: 'Country',
+    colIncome: 'GDP per capita, PPP',
+    colScore: 'Score',
+    fieldAria: '{count} countries at similar income on a 0 to 100 scale for {dimension}.',
+    fieldNote: 'The shaded band is the middle half of the set and the line inside it is the median.',
+    readingHeading: 'What separates {countryTopic} from its peers?',
+    scoreAbove:
+      '{countryTopic} scores {score} on {dimension}, above the median of the {n} scored peers, which is {median}.',
+    scoreBelow:
+      '{countryTopic} scores {score} on {dimension}, below the median of the {n} scored peers, which is {median}.',
+    scoreLevel: '{countryTopic} scores {score} on {dimension}, level with the median of the {n} scored peers.',
+    rowsAbove: 'Above the peer median: {list}.',
+    rowsBelow: 'Below the peer median: {list}.',
+    rowsLevel: 'At the peer median: {list}.',
+    conditionsMore: '{countryTopic} has more than the peer median of {list}.',
+    conditionsLess: '{countryTopic} has less than the peer median of {list}.',
+    conditionsLevel: '{countryTopic} sits at the peer median on {list}.',
+    readingNote:
+      'Each sentence compares one position with one median. Why a difference exists, and what to do about it, lie outside this data.',
+    noPeers:
+      'This release does not publish country income, so the page cannot form the peer set.',
+    limitsHeading: 'What this reading does not show',
+    limitProxy:
+      'A national score is a coarse proxy. Adaptation happens in firms, cities, networks and groups below the level of the country, and a national average only describes the conditions they work in.',
+    limitPeers:
+      'Peers share income and nothing else. Size, production structure, region and political regime are outside the rule, and a set of {count} countries can change with any revision to GDP.',
+    limitCorrelation:
+      'An r reads the whole set at once and says nothing about one country alone. A correlation does not show a cause either.',
+    rowCaveats: {
+      long_term_unemployment_share: {
+        text: 'Long-term unemployment comes from ILOSTAT, after a plausibility gate applied the same way to every country. Some scored countries use a household survey instead of a labor force survey, Brazil among them with PNAD Contínua. A high share reads two ways: slow reallocation where unemployment is also high, or a small residual pool where it is low.',
+        decisions: ['D120'],
+      },
+      export_diversification: {
+        text: 'Export diversification reads the concentration of the merchandise basket UNCTAD publishes. How fast a country switches products is outside it, so are services, and countries selling a few high-value products read as concentrated.',
+        decisions: ['D119'],
+      },
+    },
+    decisionLink: 'decision {id}',
+    agendaLink: 'Open the capability agenda',
+    capabilityLink: 'See {dimension} across every country',
+  },
 }

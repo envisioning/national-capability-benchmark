@@ -303,6 +303,17 @@ port 3888. That entry starts Next directly and does not use the proxy.
   sorts an agenda into raise, measure and hold. The country lede and the agenda
   document both call it, so both name the same leading dimension. Never re-sort
   an agenda inside a component. See D39.
+- **A capability map describes and never prescribes.** `buildCapabilityMap`
+  in `packages/core/src/pipeline/capability-map.ts` is the only place one
+  country's capability rows, conditions and income peers are joined, and
+  `readCapabilityMap` the only place they are sorted into above, below and
+  level. Peers are the `MAP_PEER_COUNT` countries nearest in log GDP per
+  capita from `diagnostics.income`, never a list. Every sentence in
+  `Lexicon.capabilityMap` compares a value with a median or states a
+  correlation: no string says what a country should do, and none ranks it
+  among its peers. A layer reaches a map through a `map.<dimension>` section,
+  and `MAP_DIMENSIONS` lists the published ones; adding one is a decision
+  entry. Brazil's Adaptability map is `/brasil/adaptacao`. See D130.
 - The institution map publishes no node-link diagram. `INSTITUTION_RELATION_FAMILY`
   in `packages/core/src/model/institutions.ts` is the only place a relation verb
   is sorted into a family, and `InstitutionsView` renders every family in the

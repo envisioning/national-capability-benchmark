@@ -1,3 +1,6 @@
+import type { FlagFieldWords } from '@/components/FlagField'
+import type { ConditionListWords } from '@/components/views/ConditionList'
+
 /**
  * Copy-rule helpers for text the viewer computes.
  *
@@ -14,6 +17,37 @@ export const countWord = (n: number): string => COUNT_WORDS[n] ?? String(n)
 
 /** The same word at the start of a sentence. */
 export const capitalize = (s: string): string => s.charAt(0).toUpperCase() + s.slice(1)
+
+const PT_COUNT_WORDS = ['nenhum', 'um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove']
+
+/** A count as Portuguese prose, masculine: spelled out to nine, numerals from 10. */
+export const ptCountWord = (n: number): string => PT_COUNT_WORDS[n] ?? String(n)
+
+/** The field chart's words in Portuguese, for the Brazil layer. See D130. */
+export const PT_FIELD_WORDS: FlagFieldWords = {
+  score: 'Nota',
+  confidence: 'Confiança',
+  trend: 'Tendência',
+  highest: 'Maior',
+  lowest: 'Menor',
+  noScore: 'sem nota',
+  clamped: 'Truncado na borda da régua, então a posição real fica além dela.',
+  scoredOf: '{scored} de {total} capacidades com nota.',
+  clickFlag: ' Clique na bandeira para ver o perfil completo.',
+  aria: '{n} países numa régua de 0 a 100. Mediana {median}.',
+  legendNote: 'A faixa sombreada é a metade central do campo e a linha dentro dela é a mediana.',
+  solidRing: 'Anel contínuo: evidência utilizável ou boa',
+  brokenRing: 'Anel interrompido: evidência fraca, mais aberto quanto menor a confiança',
+}
+
+/** The conditions panel's words in Portuguese, for the Brazil layer. See D130. */
+export const PT_CONDITION_WORDS: ConditionListWords = {
+  label: 'Condições, fora da nota',
+  intro:
+    'O que o país tem para trabalhar nesta capacidade. Os valores aparecem como a fonte os publicou e não entram na nota, na confiança nem na tendência. A posição conta os países com valor, do melhor para o pior.',
+  noValue: 'Sem valor para este país. {definition}',
+  rank: '{rank}º de {n}',
+}
 
 /** Portuguese labels used by the translated methodology pages. */
 export const PT_METHOD = {
@@ -147,6 +181,8 @@ export const PT_GLOSSARY: Record<string, PortugueseGlossaryEntry> = {
   'Retired indicator': { group: 'What is missing', term: 'Indicador aposentado', short: 'Indicador com dataset existente, mas rejeitado pelo benchmark.', full: 'Um indicador aposentado fica visível, não é buscado nem pontuado e reduz a confiança como uma lacuna. A decisão registra a evidência que levou à rejeição.' },
   'Evidence record': { group: 'What is missing', term: 'Registro de evidência', short: 'Entrega documentada que fica ao lado de um indicador ausente.', full: 'Um registro de evidência documenta algo que uma lacuna não consegue medir. Ele tem número publicado, período, fonte e data de consulta, mas nunca altera pontuação ou confiança.' },
   'Institutional capability network': { group: 'What sits beside the score', term: 'Rede de capacidade institucional', short: 'Mapa das instituições e das relações que sustentam uma capacidade.', full: 'O mapa institucional mostra instituições, famílias de relações e contagens. Ele oferece contexto para as dimensões e não é uma pontuação nem um diagrama de nós.' },
+  'Capability map': { group: 'What sits beside the score', term: 'Mapa da capacidade', short: 'A leitura de uma capacidade para um país: o que ele faz, o que ele tem e onde fica entre países de renda parecida.', full: 'Uma página calculada a partir dos dados publicados para um país e uma capacidade. Ela mostra a nota e a confiança, cada indicador em que a nota se apoia, as condições publicadas ao lado dela com a correlação com a renda e com a nota, e a posição do país entre os pares de renda. Cada frase da página compara um valor com uma mediana. A página descreve os dados, não faz recomendações e é recalculada a cada versão.', example: 'O mapa de Adaptação do Brasil mostra a nota ao lado da mediana dos 10 pares de renda, e a banda larga fixa ao lado da correlação com a renda e com a nota de Adaptação.' },
+  'Income peers': { group: 'What sits beside the score', term: 'Pares de renda', short: 'Os países mais próximos de um país em PIB per capita, escolhidos por uma regra fixa.', full: 'Os 10 países cujo PIB per capita, em paridade de poder de compra e no último ano publicado, fica mais perto do país lido. A distância é medida em escala logarítmica, então um país com metade da renda e outro com o dobro ficam à mesma distância. Nenhum país é escolhido à mão, e o conjunto muda quando os dados de renda mudam. Os pares dividem a renda e mais nada: tamanho, região e estrutura produtiva ficam fora da regra.', example: 'Na versão 7.2.0 dos dados, os pares de renda do Brasil são Colômbia, México, Tailândia, Paraguai, República Dominicana, Peru, China, Vietnã, Indonésia e Argentina.' },
   Momentum: { group: 'How things change over time', term: 'Impulso', short: 'Mudança de uma pontuação ao longo do tempo em um quadro comum.', full: 'O impulso compara dois anos usando o quadro atual e apenas os indicadores observados nos dois extremos. O tamanho da cesta acompanha a mudança.' },
   'Matched basket': { group: 'How things change over time', term: 'Cesta compatível', short: 'Indicadores presentes nos dois extremos de uma tendência.', full: 'A cesta compatível impede que a entrada ou saída de um indicador crie uma mudança artificial. Ela pode ser menor que a dimensão.' },
   'Indicator line': { group: 'How things change over time', term: 'Linha do indicador', short: 'A série histórica de um indicador, sem preenchimento de lacunas.', full: 'Cada indicador tem sua própria linha desde 1960, quando há dados. Cada ponto mantém valor bruto, valor normalizado e nível da fonte.' },

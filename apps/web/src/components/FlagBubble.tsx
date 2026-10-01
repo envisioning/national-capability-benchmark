@@ -107,14 +107,23 @@ export function FlagBubble({
  * What a solid ring and a broken ring mean. Printed under any chart drawn with
  * flag bubbles, because the ring is the only place the certainty is shown.
  */
-export function FlagBubbleLegend({ note }: { note?: string }) {
+export function FlagBubbleLegend({
+  note,
+  solidRing = 'Solid ring: usable or good evidence',
+  brokenRing = 'Broken ring: thin evidence, opening further as confidence falls',
+}: {
+  note?: string
+  /** The legend's words, for a page written in another language. */
+  solidRing?: string
+  brokenRing?: string
+}) {
   return (
     <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-xs text-[var(--muted)]">
       <li className="inline-flex items-center gap-2">
         <svg width="16" height="16" viewBox="-8 -8 16 16" aria-hidden="true">
           <circle r={6.5} fill="none" stroke="var(--foreground)" strokeWidth={CHART_STROKE.mark} />
         </svg>
-        <span>Solid ring: usable or good evidence</span>
+        <span>{solidRing}</span>
       </li>
       <li className="inline-flex items-center gap-2">
         <svg width="16" height="16" viewBox="-8 -8 16 16" aria-hidden="true">
@@ -127,7 +136,7 @@ export function FlagBubbleLegend({ note }: { note?: string }) {
             strokeLinecap="round"
           />
         </svg>
-        <span>Broken ring: thin evidence, opening further as confidence falls</span>
+        <span>{brokenRing}</span>
       </li>
       <li>{note ?? 'The bubble sits at the score, because confidence never moves it.'}</li>
     </ul>

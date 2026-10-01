@@ -10,10 +10,12 @@ import type { ContactTopic, ContributionWay, Dimension, EvidenceStatus, Lang } f
 import {
   countryLayer,
   layerSection,
+  mapSectionDimension,
   servesLanguage,
   type CountryLayer,
   type LayerSection,
   type LayerSectionId,
+  type MapSectionId,
 } from '@/lib/layers'
 
 /**
@@ -56,13 +58,27 @@ export const countryLayerHref = (layer: CountryLayer): string => `/${layer.slug}
  */
 export function layerSectionHref(layer: CountryLayer, section: LayerSection): string {
   if (section.slug) return `${countryLayerHref(layer)}/${section.slug}`
-  const ground: Record<LayerSectionId, string> = {
+  /* A map without a page of its own in the layer points at the ground-layer
+   * page of the same capability, which holds every country on it. */
+  const dimension = mapSectionDimension(section.id)
+  if (dimension) return capabilityHref(dimension)
+  const ground: Record<Exclude<LayerSectionId, MapSectionId>, string> = {
     agenda: agendaHref(layer.iso3),
     institutions: institutionNetworkHref(layer.iso3),
     local: countryLocalHref(layer.iso3),
     support: supportHref,
   }
-  return ground[section.id]
+  return ground[section.id as Exclude<LayerSectionId, MapSectionId>]
+}
+
+/**
+ * One country's capability map inside its layer, or null where the layer has
+ * not published a map of that capability. See D130.
+ */
+export function capabilityMapHref(iso3: string, dimension: Dimension): string | null {
+  const layer = countryLayer(iso3)
+  const section = layer ? layerSection(layer, `map.${dimension}`) : null
+  return layer && section ? layerSectionHref(layer, section) : null
 }
 
 /**

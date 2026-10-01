@@ -321,6 +321,20 @@ export const GLOSSARY: GlossaryEntry[] = [
     example: 'The Brazil agenda lists Building, at 9.4 with usable confidence, as the first dimension to raise, and Coordination, at confidence 0.08, as a dimension to measure before managing.',
   },
   {
+    term: 'Capability map',
+    group: 'What sits beside the score',
+    short: 'One country\'s reading of one capability: what it does, what it has, and where it sits among countries at similar income.',
+    full: 'A page computed from the published data for one country and one capability. It shows the score and its confidence, each indicator the score rests on, the conditions published beside it with their correlation with income and with the score, and the country\'s position among its income peers. Every sentence on it compares a value with a median. It describes the data and makes no recommendation, and it regenerates with every release.',
+    example: 'Brazil\'s Adaptability map shows its score beside the median of its 10 income peers, and fixed broadband beside its correlation with income and with the Adaptability score.',
+  },
+  {
+    term: 'Income peers',
+    group: 'What sits beside the score',
+    short: 'The countries nearest to one country in GDP per capita, chosen by a fixed rule.',
+    full: 'The 10 countries whose GDP per capita, at purchasing power parity and for the latest published year, sits closest to the country being read. Distance is measured on a log scale, so a country at half the income and one at double it are equally far. No country is picked by hand, and the set changes when the income data does. Peers share income and nothing else: size, region and production structure are outside the rule.',
+    example: 'Brazil\'s income peers in dataset 7.2.0 are Colombia, Mexico, Thailand, Paraguay, the Dominican Republic, Peru, China, Vietnam, Indonesia and Argentina.',
+  },
+  {
     term: 'Interpretation layer',
     group: 'What sits beside the score',
     short: 'One language\'s rendering of the ground data. The numbers never translate.',

@@ -233,7 +233,7 @@ Package descriptor and JSON Schemas.
 | data/out/countries/{ISO3}.json | One country in full, including indicator rows and yearly series. |
 | data/out/indicators/{id}.json | One indicator across the country set. |
 | data/out/table.csv | Flat country by dimension table. |
-| data/out/diagnostics.json | Correlations, redundancy and GDP-sensitivity diagnostics. |
+| data/out/diagnostics.json | Correlations, redundancy and GDP-sensitivity diagnostics, plus the income each is read against. |
 | data/out/report.md | Human-readable findings report. |
 | CHANGELOG.md | Human-readable release history, rendered at `/changelog`. |
 | data/delphi/{runId}.json | Immutable record of one Delphi run and its provenance. |

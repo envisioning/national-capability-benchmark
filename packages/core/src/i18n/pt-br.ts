@@ -221,6 +221,10 @@ export const PT_BR: Lexicon = {
     '% gross': '% (taxa bruta)',
     'per 100 people': 'por 100 pessoas',
     'constant 2021 PPP $': 'US$ PPC constantes de 2021',
+    '% of labour force': '% da força de trabalho',
+    '% of unemployed': '% dos desempregados',
+    '% of output': '% da produção',
+    'index 0-1, lower = more diversified': 'índice de 0 a 1, menor = mais diversificado',
   },
   indicatorDefinitions: {
     budget_execution_fidelity:
@@ -256,6 +260,7 @@ export const PT_BR: Lexicon = {
       'Empresas criadas para comercializar pesquisa universitária, por milhão de habitantes.',
     business_rd_share:
       'Parcela do dispêndio bruto em P&D executada por empresas.',
+    broadband_subscriptions: 'Assinaturas de banda larga fixa por 100 pessoas.',
     long_term_unemployment_share:
       'Pessoas desempregadas há 12 meses ou mais, como parcela do desemprego total.',
     export_diversification:
@@ -517,5 +522,80 @@ export const PT_BR: Lexicon = {
     matrixCellNone: 'Nenhuma relação de {from} para {to}',
     matrixSummary: '{total} relações em {filled} de {cells} células',
     mapSummary: '{institutions} instituições, {relations} relações registradas',
+  },
+  capabilityMap: {
+    navLabel: '{dimension}',
+    title: 'Onde {countryTopic} está em {dimension}?',
+    metaTitle: 'Mapa de {dimension}, {country}, NCB',
+    metaDescription:
+      'Uma leitura de {dimension} para {countryTopic}: a nota e a confiança, os indicadores em que ela se apoia, as condições ao lado dela e a posição entre os países de renda mais próxima. Calculada a partir dos dados publicados.',
+    dataset: 'Dados da versão {version}',
+    intro:
+      'Esta página lê uma capacidade a partir dos dados publicados e é recalculada a cada versão. Ela separa o que {countryTopic} faz, que forma a nota, do que o país tem, que fica ao lado da nota, e coloca o país entre os {count} países de renda mais próxima. O texto descreve os dados e não recomenda políticas.',
+    scoreHeading: 'Em que a nota se apoia?',
+    scoreIntro:
+      'A nota de {dimension} é a média, com pesos iguais, das posições de {n} indicadores numa régua de 0 a 100 que todos os países definem juntos. A confiança mede a evidência por trás da nota e aparece ao lado dela, como um segundo número.',
+    scoreLabel: 'Nota',
+    confidenceLabel: 'Confiança',
+    bandLine: 'evidência {band}',
+    rowsHeading: 'Indicadores observados',
+    colPosition: 'Posição na régua',
+    colPeerMedian: 'Mediana dos pares',
+    rowSource: '{source}, {year}',
+    noValue: 'sem valor',
+    gapsLine: 'Ainda sem base comparável, e por isso baixando a confiança: {list}.',
+    dimensionIncome:
+      'A nota de {dimension} acompanha o PIB per capita com r = {r} entre {n} países.',
+    conditionsIntro:
+      'Ao lado de cada condição, dois r leem todos os países juntos, um contra a renda e outro contra a nota da capacidade. Quando o r com a renda é bem maior que o r com a nota, ter a condição anda mais com ser rico do que com a capacidade medida.',
+    conditionIncome: 'r com a renda: {r} ({n} países)',
+    conditionScore: 'r com a nota de {dimension}: {r} ({n} países)',
+    conditionPeerMedian: 'Mediana dos pares: {value} {unit} ({n} pares com valor)',
+    peersHeading: 'Onde {countryTopic} fica entre os pares?',
+    peerRule:
+      'Os pares são os {count} países de renda mais próxima. A renda é o PIB per capita em paridade de poder de compra, em dólares internacionais constantes, no último ano publicado pelo Banco Mundial, e a distância é medida em escala logarítmica, onde metade e o dobro ficam à mesma distância. Nenhum país é escolhido à mão, e o conjunto muda quando os dados mudam.',
+    peerRange: 'Nesta versão, a renda dos pares vai de {min} a {max}, e {countryTopic} tem {own} ({year}).',
+    peersUnscored: '{n} dos {count} pares não têm nota nesta capacidade e ficam fora da mediana.',
+    colCountry: 'País',
+    colIncome: 'PIB per capita, PPC',
+    colScore: 'Nota',
+    fieldAria: '{count} países de renda parecida numa régua de 0 a 100 em {dimension}.',
+    fieldNote: 'A faixa sombreada é a metade central do conjunto e a linha dentro dela é a mediana.',
+    readingHeading: 'O que separa {countryTopic} dos pares?',
+    scoreAbove:
+      '{countryTopic} tem nota {score} em {dimension}, acima da mediana dos {n} pares com nota, que é {median}.',
+    scoreBelow:
+      '{countryTopic} tem nota {score} em {dimension}, abaixo da mediana dos {n} pares com nota, que é {median}.',
+    scoreLevel: '{countryTopic} tem nota {score} em {dimension}, igual à mediana dos {n} pares com nota.',
+    rowsAbove: 'Acima da mediana dos pares: {list}.',
+    rowsBelow: 'Abaixo da mediana dos pares: {list}.',
+    rowsLevel: 'Na mediana dos pares: {list}.',
+    conditionsMore: '{countryTopic} tem mais do que a mediana dos pares em {list}.',
+    conditionsLess: '{countryTopic} tem menos do que a mediana dos pares em {list}.',
+    conditionsLevel: '{countryTopic} está na mediana dos pares em {list}.',
+    readingNote:
+      'Cada frase compara uma posição com uma mediana. A causa de uma diferença, e o que fazer com ela, ficam fora destes dados.',
+    noPeers:
+      'Esta versão dos dados não publica a renda dos países, por isso a página não forma o conjunto de pares.',
+    limitsHeading: 'O que esta leitura não mostra',
+    limitProxy:
+      'A nota nacional é uma aproximação grosseira. A adaptação acontece em empresas, cidades, redes e grupos, abaixo do nível do país, e uma média nacional descreve apenas as condições em que eles trabalham.',
+    limitPeers:
+      'Os pares dividem a renda e mais nada. Tamanho, estrutura produtiva, região e regime político ficam fora da regra, e um conjunto de {count} países pode mudar com qualquer revisão do PIB.',
+    limitCorrelation:
+      'Um r lê o conjunto inteiro de uma vez e nada diz sobre um país isolado. Correlação também não mostra causa.',
+    rowCaveats: {
+      long_term_unemployment_share: {
+        text: 'O desemprego de longa duração vem do ILOSTAT, depois de um filtro de plausibilidade aplicado igualmente a todos os países. Alguns países pontuados usam pesquisa domiciliar em vez de pesquisa de força de trabalho, e o Brasil é um deles, com a PNAD Contínua. Uma parcela alta tem duas leituras: realocação lenta onde o desemprego também é alto, ou um grupo residual pequeno onde ele é baixo.',
+        decisions: ['D120'],
+      },
+      export_diversification: {
+        text: 'A diversificação das exportações lê a concentração da pauta de mercadorias publicada pela UNCTAD. A velocidade com que um país troca de produto fica fora dela, assim como os serviços, e países que vendem poucos produtos de alto valor aparecem como concentrados.',
+        decisions: ['D119'],
+      },
+    },
+    decisionLink: 'decisão {id}',
+    agendaLink: 'Abra a agenda de capacidades',
+    capabilityLink: 'Veja {dimension} em todos os países, em inglês',
   },
 }

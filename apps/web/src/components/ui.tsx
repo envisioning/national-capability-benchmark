@@ -239,11 +239,15 @@ export function Score({
 export function DimensionScore({
   dim,
   size = 'md',
+  notMeasured,
 }: {
   dim: { score: number | null; belowCoverageFloor?: boolean; observedIndicators?: number } | null
-  size?: 'md' | 'sm'
+  size?: 'lg' | 'md' | 'sm'
+  /** What a withheld score reads as on a page written in another language. */
+  notMeasured?: string
 }) {
   if (dim?.belowCoverageFloor) {
+    if (notMeasured) return <span className="text-xs text-[var(--muted)]">{notMeasured}</span>
     const n = dim.observedIndicators ?? 0
     return (
       <span className="text-xs text-[var(--muted)]">
@@ -255,7 +259,13 @@ export function DimensionScore({
       </span>
     )
   }
-  return <Score value={dim?.score ?? null} size={size} />
+  return (
+    <Score
+      value={dim?.score ?? null}
+      size={size}
+      {...(notMeasured ? { nullLabel: notMeasured } : {})}
+    />
+  )
 }
 
 /**

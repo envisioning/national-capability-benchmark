@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic'
 import { useState } from 'react'
 import Link from 'next/link'
-import { confidenceBand } from '@ncb/core'
+import { confidenceBand, fill } from '@ncb/core'
 import { FlagBubble, FlagBubbleLegend } from '@/components/FlagBubble'
 import { CHART_INK, CHART_MOTION, CHART_STROKE } from '@/components/chartTokens'
 import { Confidence, Delta, Flag, Score } from '@/components/ui'
@@ -84,6 +84,44 @@ export type FlagFieldPoint = {
 
 type Placed = FlagFieldPoint & { x: number; y: number; value: number }
 
+/**
+ * The chart's own words. English by default; a layer page passes its own set,
+ * because the chart is the same chart in every language. See D69 and D130.
+ */
+export type FlagFieldWords = {
+  score: string
+  confidence: string
+  trend: string
+  highest: string
+  lowest: string
+  noScore: string
+  clamped: string
+  /** {scored} {total} */
+  scoredOf: string
+  clickFlag: string
+  /** {n} {median}: the chart's accessible name when the surface gives none. */
+  aria: string
+  legendNote: string
+  solidRing: string
+  brokenRing: string
+}
+
+export const FIELD_WORDS_EN: FlagFieldWords = {
+  score: 'Score',
+  confidence: 'Confidence',
+  trend: 'Trend',
+  highest: 'Highest',
+  lowest: 'Lowest',
+  noScore: 'no score',
+  clamped: 'Clamped at the edge of the frame, so the real position is further out.',
+  scoredOf: '{scored} of {total} capabilities scored.',
+  clickFlag: ' Click the flag for the full profile.',
+  aria: '{n} countries on a 0 to 100 scale. Median {median}.',
+  legendNote: 'The shaded band is the middle half of the field and the line inside it is the median.',
+  solidRing: 'Solid ring: usable or good evidence',
+  brokenRing: 'Broken ring: thin evidence, opening further as confidence falls',
+}
+
 const axisX = (v: number) => PAD + (Math.min(100, Math.max(0, v)) / 100) * (FIELD_WIDTH - PAD * 2)
 
 function quantile(sorted: number[], q: number): number {
@@ -152,10 +190,12 @@ function CountryCard({
   point,
   viewTop,
   viewHeight,
+  words,
 }: {
   point: Placed
   viewTop: number
   viewHeight: number
+  words: FlagFieldWords
 }) {
   const leftPercent = (point.x / FIELD_WIDTH) * 100
   const topPercent = ((point.y - viewTop) / viewHeight) * 100
@@ -170,7 +210,7 @@ function CountryCard({
       <div
         className={`${point.radar ? '' : 'mt-3 border-t border-[var(--rule)] pt-3'} flex items-center justify-between gap-3`}
       >
-        <span className="text-xs text-[var(--muted)]">Score</span>
+        <span className="text-xs text-[var(--muted)]">{words.score}</span>
         <Score value={point.value} size="md" />
       </div>
       {point.detail ? (
@@ -178,33 +218,33 @@ function CountryCard({
       ) : null}
       {band ? (
         <div className="mt-2 flex items-center justify-between gap-3 text-xs">
-          <span className="text-[var(--muted)]">Confidence</span>
+          <span className="text-[var(--muted)]">{words.confidence}</span>
           <Confidence value={point.confidence ?? null} />
         </div>
       ) : null}
       {point.delta !== undefined ? (
         <div className="mt-2 flex items-center justify-between gap-3 text-xs">
-          <span className="text-[var(--muted)]">Trend</span>
+          <span className="text-[var(--muted)]">{words.trend}</span>
           <Delta value={point.delta} />
         </div>
       ) : null}
 
       {point.shape ? (
         <dl className="mt-3 space-y-1 border-t border-[var(--rule)] pt-3 text-xs">
-          <Row label="Highest" entry={point.shape.highest} />
-          <Row label="Lowest" entry={point.shape.lowest} />
+          <Row label={words.highest} entry={point.shape.highest} noScore={words.noScore} />
+          <Row label={words.lowest} entry={point.shape.lowest} noScore={words.noScore} />
         </dl>
       ) : null}
 
       {point.clamped ? (
         <p className="mt-3 border-t border-[var(--rule)] pt-3 text-xs text-[var(--muted)]">
-          Clamped at the edge of the frame, so the real position is further out.
+          {words.clamped}
         </p>
       ) : null}
       {point.shape ? (
         <p className="mt-3 border-t border-[var(--rule)] pt-3 text-xs text-[var(--muted)]">
-          {point.shape.scored} of {point.shape.total} capabilities scored.
-          {point.href ? ' Click the flag for the full profile.' : ''}
+          {fill(words.scoredOf, { scored: point.shape.scored, total: point.shape.total })}
+          {point.href ? words.clickFlag : ''}
         </p>
       ) : null}
     </>
@@ -258,9 +298,11 @@ function CountryCard({
 function Row({
   label,
   entry,
+  noScore,
 }: {
   label: string
   entry: { label: string; value: number } | null
+  noScore: string
 }) {
   return (
     <div className="flex items-center justify-between gap-3">
@@ -272,7 +314,7 @@ function Row({
             <Score value={entry.value} size="sm" />
           </>
         ) : (
-          <span className="text-[var(--muted)]">no score</span>
+          <span className="text-[var(--muted)]">{noScore}</span>
         )}
       </dd>
     </div>
@@ -285,6 +327,7 @@ export function FlagField({
   reserveStack,
   ariaLabel,
   legend = true,
+  words = FIELD_WORDS_EN,
 }: {
   points: FlagFieldPoint[]
   /** Precomputed layout, for a surface that switches between fields. */
@@ -294,6 +337,8 @@ export function FlagField({
   ariaLabel?: string
   /** Off where the surface already prints the ring rule beneath it. */
   legend?: boolean
+  /** The chart's words, for a page written in another language. */
+  words?: FlagFieldWords
 }) {
   const [hovered, setHovered] = useState<string | null>(null)
   const field = layout ?? layoutField(points)
@@ -318,7 +363,7 @@ export function FlagField({
           role="img"
           aria-label={
             ariaLabel ??
-            `${field.placed.length} countries on a 0 to 100 scale. Median ${field.median.toFixed(1)}.`
+            fill(words.aria, { n: field.placed.length, median: field.median.toFixed(1) })
           }
           onMouseLeave={() => setHovered(null)}
         >
@@ -397,7 +442,7 @@ export function FlagField({
             const shown = placed !== undefined
             const shared = {
               'aria-label': `${point.label}, ${
-                shown ? placed.value.toFixed(1) : 'no score'
+                shown ? placed.value.toFixed(1) : words.noScore
               }${point.detail ? `, ${point.detail}` : ''}`,
               'aria-hidden': shown ? undefined : true,
               tabIndex: shown && point.href ? undefined : -1,
@@ -465,10 +510,18 @@ export function FlagField({
           ) : null}
         </svg>
 
-        {active ? <CountryCard point={active} viewTop={top} viewHeight={height} /> : null}
+        {active ? (
+          <CountryCard point={active} viewTop={top} viewHeight={height} words={words} />
+        ) : null}
       </div>
 
-      {legend ? <FlagBubbleLegend note="The shaded band is the middle half of the field and the line inside it is the median." /> : null}
+      {legend ? (
+        <FlagBubbleLegend
+          note={words.legendNote}
+          solidRing={words.solidRing}
+          brokenRing={words.brokenRing}
+        />
+      ) : null}
 
       <ul className="sr-only">
         {[...field.placed]

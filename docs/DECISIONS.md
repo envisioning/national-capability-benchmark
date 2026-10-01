@@ -5891,3 +5891,85 @@ coverage shown to bias the share by country income or region, which would
 make the row read indexing rather than research; or OpenAlex changing the
 percentile's pool or definition, which would need a new adapter version and a
 new entry.
+
+---
+
+## D130 — Brazil's layer publishes a computed map of Adaptability among its income peers
+
+**Decision.** The Brazil layer gains `/brasil/adaptacao`, a Portuguese page
+that reads one capability for one country as a map: the score and its
+confidence as two numbers, each capability row the score rests on (value as
+published, year, position on the 0 to 100 frame, source), each condition
+beside it with its value, rank and the two correlations D122 already
+publishes (with log GDP per capita and with the dimension's score), and the
+country's place among its income peers. `buildCapabilityMap` in
+`packages/core/src/pipeline/capability-map.ts` computes all of it from the
+published files and nothing else; the page renders it through the lexicon
+(`Lexicon.capabilityMap`, English and Portuguese). Only Adaptability is
+published. The function takes the dimension as a parameter, the layer section
+id is `map.<dimension>`, and `MAP_DIMENSIONS` lists what is published, so a
+second capability is a registry line, a slug and a decision entry. The slug is
+`adaptacao` because the lexicon names the dimension Adaptação.
+
+The peer rule: the 10 countries nearest the subject in log10 GDP per capita
+(`NY.GDP.PCAP.PP.KD`, latest published year per country), ties broken by
+iso3, the subject never its own peer, a country with no income never a peer.
+The set is the same for every dimension. A peer median is taken over the
+peers that have the value; a peer with no score is listed and left out of the
+score median. Above, below or level is decided at the precision the value is
+printed at (one decimal for a 0 to 100 position, three for a condition's
+published value). For the set to be computed from published data, income has
+to be published: `diagnostics.json` gains `income`, the latest GDP per capita
+per country with its year, rounded to the dollar. That is a field added, so
+the dataset moves to 7.2.0 and no published number changes.
+
+The no-prescription rule: every sentence the page computes compares one value
+with one median, or states a correlation. No string in `capabilityMap` may say
+what a country should do, rank it among its peers, or explain why a gap
+exists. The reading lists rows above, below and level with the peer median and
+conditions the country has more or less of, by id, through
+`readCapabilityMap`; the words are the lexicon's. Splitting the agenda stays
+`splitAgenda`'s job (D39); this page does not sort anything into raise or
+hold, and the FlagField it draws is the one chart (D67), fed only the peers
+and the subject.
+
+On dataset 7.2.0 Brazil's peers are Colombia, Mexico, Thailand, Paraguay, the
+Dominican Republic, Peru, China, Vietnam, Indonesia and Argentina, at US$
+15,091 to 27,847 against Brazil's 20,025 (2025). Brazil's Adaptability is
+65.4 (confidence 0.68, good) against a peer median of 70.3. All five scored
+rows sit below the peer median; export diversification only just (83.0
+against 83.4). Fixed broadband, the one condition, is above it (24.1 against
+16.1 per 100 people) and correlates 0.85 with income and 0.67 with the score.
+
+**Why.** The owner's framing is that the page is the map toward adaptability,
+not a verdict on it. D122 made the map possible by separating what a country
+does from what it has; this page lays the two side by side for the reader the
+layer serves. WHY.md rules out a ranking, a target and policy advice, and
+says a national score is a coarse proxy, so the comparison is a median and
+the limits are on the page: the proxy, the peer rule's blindness to
+everything but income, correlation read across the whole set, and the row
+caveats of D119 and D120 (merchandise concentration is a product mix;
+long-term unemployment passes a gate, and Brazil's comes from PNAD Contínua,
+a household survey). A hand-picked peer list would be the comparison the
+author wanted; a fixed rule on the series the wealth tests already read is
+one a reader can recompute. Ten is enough for a median to mean something and
+few enough that the set stays near in income (a factor of about 1.4 either
+side for Brazil); a ±band was rejected because its count swings with where a
+country sits in the income distribution.
+
+**Cost.** Income is the only thing peers share: size, region, production
+structure and regime are outside the rule, and a GDP revision can swap a
+peer. The page is Brazil-only and Portuguese-only, so the comparison is not
+yet checkable on the ground layer for another country. Level is decided at
+printed precision, so 83.0 against 83.4 reads as below. The row caveats are
+static lexicon text and must be kept in step with D119 and D120 by hand.
+Publishing GDP per capita puts income one click from every score, which the
+project has so far kept inside correlations.
+
+**Overturned by.** A reader or reviewer showing that a sentence on the page is
+read as advice despite the rule, which would cut the reading section back to
+numbers; evidence that the peer set is unstable across releases (more than
+half the peers swapping on a routine re-ingest), which would move the rule to
+a wider set or a band; or a second dimension's map showing the layout does not
+carry it, which would move the page to the ground layer with the layer as one
+reading of it.
