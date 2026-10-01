@@ -6520,3 +6520,113 @@ above and below as a result), which would drop the position column from the
 index and leave it on each page; a lexicon rename the redirect table cannot
 absorb; or a second country layer, which would move the map index to the
 ground layer as D130's clause already anticipates.
+
+---
+
+## D134 — Mexico, Colombia, Chile and Argentina get Spanish layers with the computed sections
+
+*Recorded 2026-10-01. Supersedes the sentence "Brazil is the first and today
+the only layer" in D69, and answers the second-layer clause of D130 and D133
+for these four countries.*
+
+**Decision.** The owner set the phase as using the instrument, and chose four
+Spanish-speaking countries to receive a layer each, like Brazil's: Mexico at
+`/mexico`, Colombia at `/colombia`, Chile at `/chile` and Argentina at
+`/argentina`. Each holds three things and nothing else: an overview, the agenda
+at `/<slug>/agenda` and the capability map at `/<slug>/mapa` with nine pages
+under it. All four read one lexicon, `packages/core/src/i18n/es.ts`, in
+neutral Latin American Spanish.
+
+The four are entries in `COUNTRY_LAYERS`, not folders. One dynamic `[layer]`
+route serves every layer without a folder of its own; Brazil's static
+`/brasil` folder wins over it and is unchanged, and any other first segment
+answers 404. The map pages of every layer, Brazil's included, render one
+shared component through the layer's lexicon and `LAYER_WORDS`, so Brazil's
+nine map pages and the Spanish ones cannot diverge in structure.
+
+What the Spanish layers do not hold, and why:
+
+- No institutions section. `data/institutions` has Brazil alone, and
+  `INSTITUTION_MAPS` stays `['BRA']`.
+- No subnational section. No subnational data exists for the four.
+- No support page. `/brasil/apoie` names Brazilian funding venues; the
+  ground-layer `/support` is the comparative page, and a Spanish one would be
+  a page of claims the project has not done the work for (D71, D78).
+- No hand-written overview. Brazil's overview is prose about Brazil. The
+  Spanish overview states nothing the published files do not: the nine scores
+  with the confidence beside each, in the model's order, links to the map and
+  the agenda, and the known artefacts that bear on the country's dimensions,
+  by id, from `ARTEFACT_SCOPES`. No sentence on it is a claim about the
+  country.
+
+Terms. The confidence number is "solidez de la evidencia", "solidez" for
+short, because "confianza" is the Trust dimension; the pt-BR copy made the
+same move to "solidez da evidência". The score is "puntuación" throughout,
+never "nota". Two dimension names are chosen for a Spanish reader rather than
+copied: Agency is "Iniciativa", because "agencia" reads as an organisation,
+and Building is "Ejecución", because "construcción" reads as the construction
+sector. The nine map segments are `mapSlug` of the Spanish names
+(`anticipacion`, `iniciativa`, `coordinacion`, `confianza`, `aprendizaje`,
+`experimentacion`, `adaptacion`, `ejecucion`, `proposito-compartido`), pinned
+by a test in `es.test.ts`. Numbers format as `es-419`.
+
+Rendering. A lexicon may now name the countries it is written for
+(`Lexicon.layerCountries`). `pnpm bench agenda` renders `{ISO3}.es.md` for the
+four only, and `bench institutions` writes no Spanish feed for Brazil. The
+viewer checks at load that the lexicon's list and the Spanish entries in
+`COUNTRY_LAYERS` name the same countries. Portuguese keeps rendering every
+country, which is the D69 cost this does not reopen. The feed reads the
+Spanish agendas through `agendaHrefInLanguage`, which already gates on the
+layer, and the sitemap lists every new page from the registry.
+
+Hand-written facts. Two, both in `capabilityMap.countryRowFacts` against D120,
+on the long-term unemployment row: Argentina's ILOSTAT series is the urban-only
+Encuesta Permanente de Hogares and the ILO flags the value unreliable, and
+Mexico's series fails the plausibility gate in every year, so the row is
+empty. The published output carries neither the survey name nor the reason a
+value is missing. Colombia and Chile get none: both are labour force surveys
+that pass the gate.
+
+On dataset 7.5.0 against the 10 income peers each (every peer scored on every
+dimension): Mexico reads above the peer median on seven dimensions and below
+on Coordination (67.8 against 69.6, 0.373, thin) and Trust (44.5 against
+60.1, 0.387, thin). Colombia reads above on Anticipation, Agency,
+Experimentation and Shared purpose and below on the other five. Chile reads
+above on six and below on Trust (66.7 against 67.4), Adaptability (64.9
+against 71.0) and Building (32.3 against 37.2). Argentina reads below the
+peer median on all nine. Peers: Mexico THA BRA DOM CHN COL PRY ARG CRI PER
+CHL; Colombia BRA PRY MEX PER THA VNM IDN DOM ECU CHN; Chile URY CRI ARG MYS
+TUR PAN CHN DOM EST THA; Argentina CRI CHL CHN DOM URY THA MEX MYS TUR PAN.
+These are findings that date the release; the pages compute them.
+
+**Why.** D69 grew a layer only where country-specific work was done, and
+argued that its existence was evidence of the work. D130 and D133 made the
+capability map a computed reading that needs no country-specific work: the
+same call, a lexicon and a peer rule. A layer that holds only computed
+sections is the instrument used, which is the phase the owner set. Keeping
+the overview computed keeps D69's argument honest: the Spanish layers claim
+nothing a reader cannot recompute, and where the project has done no work
+(institutions, states, funding) they publish no page. One route from the
+registry means a fifth layer is one entry and a lexicon, never a copied
+folder that drifts.
+
+**Cost.** The Spanish layers are thinner than Brazil's and look like it: an
+overview of nine rows is not what `/brasil` is. One neutral Spanish is not
+the Spanish of any of the four, and `es-419` prints decimals with a point,
+which Argentina, Chile and Colombia write with a comma. Argentina reads below
+its peer median on all nine dimensions, and a column of nine "below" invites
+the scorecard reading D133's overturn clause names. The ground-layer map
+index D130 and D133 anticipated for a second layer is not built: five
+countries have a map and 48 do not, and the map stays reachable only through
+a layer. The artefact pages, method, glossary and limits stay English, as for
+Brazil. "Iniciativa" and "Ejecución" diverge from the English names, so a
+reader moving between layers meets two words for one capability.
+
+**Overturned by.** A Spanish reader showing that a sentence on these pages
+reads as advice or as a claim about the country the data does not carry;
+the four layers' sections staying identical to each other through the next
+releases while Brazil's grow, which would show D69 was right that a layer
+without country work is a translation, and would move the map to the ground
+layer for every country with the layers as readings of it; or a reader in
+one of the four countries finding the neutral Spanish wrong enough to need a
+national lexicon.

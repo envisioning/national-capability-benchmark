@@ -13,7 +13,7 @@
  * prototype as a research object, and the provisional research layers remain
  * under review; that does not make the surrounding application a 0.x release.
  */
-export const APP_VERSION = '1.19.1'
+export const APP_VERSION = '1.20.0'
 
 /**
  * The dataset version, semantic. Stamped into `data/out/index.json`, every
