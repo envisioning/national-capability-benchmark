@@ -14,6 +14,7 @@ import { ingestWorldBank, recordRevisions } from '../pipeline/ingest.js'
 import { fetchJointEvsWvsTrust } from '../pipeline/adapters/joint-evs-wvs.js'
 import { fetchVdemCivilSociety } from '../pipeline/adapters/vdem.js'
 import { fetchUnctadExportConcentration } from '../pipeline/adapters/unctad.js'
+import { fetchIlostatLongTermUnemployment } from '../pipeline/adapters/ilostat.js'
 import { probeSeries, registrySeries, searchCatalogue } from '../pipeline/probe.js'
 import type { ProbeRequest } from '../pipeline/probe.js'
 import {
@@ -452,6 +453,45 @@ async function unctad(args: Args): Promise<void> {
   )
 }
 
+async function ilostat(args: Args): Promise<void> {
+  const action = args._[1] ?? 'fetch'
+  if (action !== 'fetch') {
+    throw new Error(`Unknown ILOSTAT action "${action}". Use pnpm bench ilostat fetch.`)
+  }
+  const retrievedAt = new Date().toISOString()
+  const result = await fetchIlostatLongTermUnemployment({ retrievedAt })
+  let existing: unknown | null = null
+  try {
+    existing = JSON.parse(await readFile(FILES.ilostat, 'utf8'))
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code !== 'ENOENT') {
+      throw new Error(`Cannot read existing ILOSTAT observations: ${String(error)}`)
+    }
+  }
+  const parsedExisting = existing ? ObservationFile.safeParse(existing) : null
+  if (existing && !parsedExisting?.success) {
+    throw new Error(`Existing ILOSTAT observations failed schema validation: ${FILES.ilostat}`)
+  }
+  const before = parsedExisting?.success ? parsedExisting.data.observations : []
+  const previousRetrievedAt = parsedExisting?.success ? parsedExisting.data.generatedAt : null
+  await writeOut(FILES.ilostat, `${JSON.stringify({ generatedAt: retrievedAt, observations: result.observations }, null, 2)}\n`)
+  const revisions = await recordRevisions(before, previousRetrievedAt, result.observations, retrievedAt)
+
+  console.log(`ILOSTAT ${result.release}: ${result.observations.length}/${COUNTRY_ISO3.length} benchmark countries emitted`)
+  console.log(`  source coverage: ${result.availableCountries.length}/${COUNTRY_ISO3.length}`)
+  if (result.heldCountries.length > 0) {
+    console.log(`  held, every year failed the plausibility gate: ${result.heldCountries.join(', ')}`)
+  }
+  console.log(`  dropped by the plausibility gate (D120): ${result.dropped.length} country-years`)
+  for (const d of result.dropped) {
+    console.log(`    ${d.iso3} ${d.year} ${d.value} ${d.reason} (${d.source})`)
+  }
+  console.log(`ilostat data -> ${FILES.ilostat}`)
+  console.log(
+    `revisions   -> ${revisions.changed} changed, ${revisions.added} added, ${revisions.removed} removed in ${FILES.revisions}`,
+  )
+}
+
 /**
  * Write the capability agenda: language-neutral JSON per country, plus one
  * rendered markdown per lexicon. The JSON is the ground layer, the markdown is
@@ -575,6 +615,9 @@ async function main() {
 
     case 'unctad':
       await unctad(args)
+      break
+    case 'ilostat':
+      await ilostat(args)
       break
 
     case 'research':
@@ -1061,6 +1104,7 @@ Start with file 1.
   pnpm bench trust    fetch                fetch and parse Joint EVS/WVS A165 trust results
   pnpm bench vdem     fetch                fetch and parse V-Dem v15 civil-society strength
   pnpm bench unctad   fetch                fetch and parse the pinned UNCTADstat export concentration index
+  pnpm bench ilostat  fetch                fetch ILOSTAT unemployment by duration, derive the long-term share, gate it
   pnpm bench research inventory           write the deterministic country-gap research inventory
   pnpm bench research scout               ask AI for bounded, unpublished research leads
   pnpm bench research critique --in FILE  red-team a scout run; still cannot approve publication

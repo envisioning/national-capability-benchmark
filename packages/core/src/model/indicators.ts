@@ -2,6 +2,10 @@ import { z } from 'zod'
 import { IndicatorDef } from './schema.js'
 import type { Dimension } from './dimensions.js'
 import {
+  ILOSTAT_LTU_ADAPTER_ID,
+  ILOSTAT_LTU_DATAFLOW,
+  ILOSTAT_LTU_PAGE_URL,
+  ILOSTAT_PUBLISHER,
   JOINT_EVS_WVS_PUBLISHER,
   JOINT_EVS_WVS_RESULTS_URL,
   UNCTAD_CONCENTRATION_DATASET,
@@ -726,9 +730,16 @@ const RAW: Raw[] = [
     unit: '% of unemployed',
     measurementClass: 'O',
     direction: 'lower_better',
-    source: { publisher: 'ILOSTAT', tier: 'international_organization', inspectable: true },
-    ingest: 'gap',
-    notes: 'Closer to reallocation speed than the headline rate: it asks whether people who lose work find new work. ILOSTAT publishes it; the World Bank API does not carry it.',
+    source: {
+      publisher: ILOSTAT_PUBLISHER,
+      series: ILOSTAT_LTU_DATAFLOW,
+      adapter: ILOSTAT_LTU_ADAPTER_ID,
+      url: ILOSTAT_LTU_PAGE_URL,
+      tier: 'international_organization',
+      inspectable: true,
+    },
+    ingest: 'adapter',
+    notes: 'Derived from ILOSTAT unemployment by duration: 12 months or more over the unemployed whose duration is stated, both sexes, age 15 and over, a labour force survey preferred where ILOSTAT holds more than one. Read it beside the unemployment rate, because a high share means two different things: slow reallocation, where people who lose work stay out of it (South Africa, Kenya, Nigeria), or a small residual pool in a tight market, where the few left unemployed are the hardest to place (Switzerland, Japan). Some national questionnaires cannot record a long search, so the adapter runs a plausibility gate on every country: it drops a year under 3%, every year of a survey whose median is under 3%, a one- or two-year spike of more than 15 points that the series returns from, and a latest year that jumps more than 15 points with no later year to confirm it, then emits the latest year that survives. Every dropped value is logged in the source memo. See D120.',
     wealthProxyPrior: 0.2,
   },
   {

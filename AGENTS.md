@@ -12,6 +12,7 @@ pnpm bench ingest      fetch World Bank series from 1990 into data/observations/
 pnpm bench trust fetch import the pinned Joint EVS/WVS A165 trust table into data/observations/joint-evs-wvs.json
 pnpm bench vdem fetch  import the pinned V-Dem civil-society series into data/observations/vdem-cy-core.json
 pnpm bench unctad fetch import the pinned UNCTADstat export concentration index into data/observations/unctad-concentration.json (needs bsdtar)
+pnpm bench ilostat fetch derive and gate the ILOSTAT long-term unemployment share into data/observations/ilostat-ltu.json
 pnpm bench score       normalise and score, write data/out/index.json, data/out/countries/*.json and table.csv
 pnpm bench delphi      run the LLM panel (add --mock to run offline)
 pnpm bench diagnose    correlations, redundancy, GDP-sensitivity test
@@ -82,8 +83,10 @@ port 3888. That entry starts Next directly and does not use the proxy.
 - `apps/web` — Next.js viewer. Reads `data/out/*.json` at request time.
 - `data/observations` — raw values with source and year. `worldbank.json` holds
   the World Bank series, `joint-evs-wvs.json` holds the pinned Trust adapter
-  output, `vdem-cy-core.json` holds the pinned V-Dem adapter output and
-  `unctad-concentration.json` holds the pinned UNCTADstat adapter output.
+  output, `vdem-cy-core.json` holds the pinned V-Dem adapter output,
+  `unctad-concentration.json` holds the pinned UNCTADstat adapter output and
+  `ilostat-ltu.json` holds the ILOSTAT long-term unemployment share, after
+  the plausibility gate D120 applies to every country.
   `revisions.json` is the append-only log of what each run restated,
   added or dropped, and `snapshots/` holds dated full copies written only on
   `--snapshot`.
@@ -497,7 +500,8 @@ Other traps found the hard way:
 - Trademarks are `IP.TMK.RSCT`, not `IP.TMK.RESD`.
 - Long-term unemployment (`SL.UEM.LTRM.ZS`) is listed in the catalogue under
   "WDI Database Archives", source 57, and the API refuses the code from that
-  source. It is not fetchable. The gap still needs an ILOSTAT adapter.
+  source. It is not fetchable. The ILOSTAT adapter fills the row instead
+  (D120).
 - Verify a new series against every country before adding it to the
   registry. A code that resolves for Brazil can be empty for Singapore.
 

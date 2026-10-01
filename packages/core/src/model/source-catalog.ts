@@ -38,3 +38,20 @@ export const UNCTAD_CONCENTRATION_YEAR = 2025
 /** UNCTADstat flow code for exports. Imports are `01`. */
 export const UNCTAD_EXPORTS_FLOW = '02'
 export const UNCTAD_LICENCE = 'CC BY 3.0 IGO'
+
+/**
+ * ILOSTAT unemployment by sex, age and duration (thousands), read through the
+ * ILO SDMX API. The long-term share is derived from it, see D120. ILOSTAT is a
+ * live database rather than a versioned release, so the dataflow version and
+ * the retrieval date together identify what was read. CC BY 4.0.
+ */
+export const ILOSTAT_PUBLISHER = 'ILOSTAT'
+export const ILOSTAT_LTU_DATAFLOW = 'DF_UNE_TUNE_SEX_AGE_DUR_NB'
+export const ILOSTAT_LTU_DATAFLOW_VERSION = '1.0'
+export const ILOSTAT_SDMX_DATA_URL = 'https://sdmx.ilo.org/rest/data'
+/** The dataflow's own SDMX description, which names it and lists its dimensions. */
+export const ILOSTAT_LTU_PAGE_URL =
+  'https://sdmx.ilo.org/rest/dataflow/ILO/DF_UNE_TUNE_SEX_AGE_DUR_NB/1.0'
+export const ILOSTAT_LTU_FROM_YEAR = 2010
+/** Stable id of the adapter that derives and gates the long-term share. */
+export const ILOSTAT_LTU_ADAPTER_ID = 'ilostat-une-tune-sex-age-dur-long-term-share'
