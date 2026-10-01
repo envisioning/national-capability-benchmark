@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-23T15:28:40.689Z",
-  "version": "6.1.2",
+  "generatedAt": "2026-10-01T09:09:03.697Z",
+  "version": "6.2.0",
   "countries": [
     {
       "country": "Brazil",
@@ -256,19 +256,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 56.6,
-          "observedIndicators": 4,
+          "score": 62.7,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.475,
+          "confidence": 0.712,
           "confidenceParts": {
-            "coverage": 0.5,
+            "coverage": 0.75,
             "recency": 1,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 56.6,
+          "blendedScore": 62.7,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -418,7 +418,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 3.561,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -691,19 +704,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 76.1,
-          "observedIndicators": 4,
+          "score": 81.4,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.475,
+          "confidence": 0.712,
           "confidenceParts": {
-            "coverage": 0.5,
+            "coverage": 0.75,
             "recency": 1,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 76.1,
+          "blendedScore": 81.4,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -881,7 +894,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 3.613,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -1126,19 +1152,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 90,
-          "observedIndicators": 4,
+          "score": 91.3,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.475,
+          "confidence": 0.712,
           "confidenceParts": {
-            "coverage": 0.5,
+            "coverage": 0.75,
             "recency": 1,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 90,
+          "blendedScore": 91.3,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -1316,7 +1342,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 2.223,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -1589,19 +1628,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 88.5,
-          "observedIndicators": 4,
+          "score": 78.8,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.475,
+          "confidence": 0.712,
           "confidenceParts": {
-            "coverage": 0.5,
+            "coverage": 0.75,
             "recency": 1,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 88.5,
+          "blendedScore": 78.8,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -1779,7 +1818,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 1.032,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -2024,19 +2076,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 79,
-          "observedIndicators": 4,
+          "score": 80.2,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.465,
+          "confidence": 0.703,
           "confidenceParts": {
-            "coverage": 0.5,
-            "recency": 0.979,
+            "coverage": 0.75,
+            "recency": 0.986,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 79,
+          "blendedScore": 80.2,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -2171,7 +2223,20 @@
           "blendedFrom": "none",
           "momentum": [],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 1.152,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -2460,19 +2525,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 82.1,
-          "observedIndicators": 4,
+          "score": 81.1,
+          "observedIndicators": 5,
           "belowCoverageFloor": false,
-          "confidence": 0.475,
+          "confidence": 0.594,
           "confidenceParts": {
-            "coverage": 0.5,
+            "coverage": 0.625,
             "recency": 1,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 82.1,
+          "blendedScore": 81.1,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -2636,7 +2701,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 3.284,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -2898,19 +2976,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 63.8,
-          "observedIndicators": 4,
+          "score": 71.5,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.475,
+          "confidence": 0.712,
           "confidenceParts": {
-            "coverage": 0.5,
+            "coverage": 0.75,
             "recency": 1,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 63.8,
+          "blendedScore": 71.5,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -3088,7 +3166,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 1.286,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -3347,19 +3438,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 38.6,
-          "observedIndicators": 4,
+          "score": 48.8,
+          "observedIndicators": 5,
           "belowCoverageFloor": false,
-          "confidence": 0.465,
+          "confidence": 0.584,
           "confidenceParts": {
-            "coverage": 0.5,
-            "recency": 0.979,
+            "coverage": 0.625,
+            "recency": 0.983,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 38.6,
+          "blendedScore": 48.8,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -3537,7 +3628,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 3.748,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -3769,19 +3873,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 58.9,
-          "observedIndicators": 4,
+          "score": 62.2,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.475,
+          "confidence": 0.712,
           "confidenceParts": {
-            "coverage": 0.5,
+            "coverage": 0.75,
             "recency": 1,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 58.9,
+          "blendedScore": 62.2,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -3959,7 +4063,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 1.898,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -4233,19 +4350,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 23.6,
-          "observedIndicators": 4,
+          "score": 30.2,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.465,
+          "confidence": 0.703,
           "confidenceParts": {
-            "coverage": 0.5,
-            "recency": 0.979,
+            "coverage": 0.75,
+            "recency": 0.986,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 23.6,
+          "blendedScore": 30.2,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -4423,7 +4540,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 2.097,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -4699,19 +4829,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 58.7,
-          "observedIndicators": 4,
+          "score": 64.2,
+          "observedIndicators": 5,
           "belowCoverageFloor": false,
-          "confidence": 0.475,
+          "confidence": 0.594,
           "confidenceParts": {
-            "coverage": 0.5,
+            "coverage": 0.625,
             "recency": 1,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 58.7,
+          "blendedScore": 64.2,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -4875,7 +5005,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 3.692,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -5177,19 +5320,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 50.6,
-          "observedIndicators": 4,
+          "score": 56.4,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.475,
+          "confidence": 0.712,
           "confidenceParts": {
-            "coverage": 0.5,
+            "coverage": 0.75,
             "recency": 1,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 50.6,
+          "blendedScore": 56.4,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -5367,7 +5510,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 3.654,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -5609,19 +5765,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 53.5,
-          "observedIndicators": 4,
+          "score": 58.2,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.475,
+          "confidence": 0.712,
           "confidenceParts": {
-            "coverage": 0.5,
+            "coverage": 0.75,
             "recency": 1,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 53.5,
+          "blendedScore": 58.2,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -5785,7 +5941,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 3.648,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -6029,19 +6198,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 59.3,
-          "observedIndicators": 4,
+          "score": 60.4,
+          "observedIndicators": 5,
           "belowCoverageFloor": false,
-          "confidence": 0.465,
+          "confidence": 0.584,
           "confidenceParts": {
-            "coverage": 0.5,
-            "recency": 0.979,
+            "coverage": 0.625,
+            "recency": 0.983,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 59.3,
+          "blendedScore": 60.4,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -6219,7 +6388,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 3.866,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -6479,19 +6661,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 68.5,
-          "observedIndicators": 4,
+          "score": 68.2,
+          "observedIndicators": 5,
           "belowCoverageFloor": false,
-          "confidence": 0.465,
+          "confidence": 0.584,
           "confidenceParts": {
-            "coverage": 0.5,
-            "recency": 0.979,
+            "coverage": 0.625,
+            "recency": 0.983,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 68.5,
+          "blendedScore": 68.2,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -6669,7 +6851,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 0.971,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -6914,19 +7109,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 54.4,
-          "observedIndicators": 4,
+          "score": 63.2,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.475,
+          "confidence": 0.712,
           "confidenceParts": {
-            "coverage": 0.5,
+            "coverage": 0.75,
             "recency": 1,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 54.4,
+          "blendedScore": 63.2,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -7104,7 +7299,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 1.685,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -7365,19 +7573,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 85.8,
-          "observedIndicators": 4,
+          "score": 84.7,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.475,
+          "confidence": 0.712,
           "confidenceParts": {
-            "coverage": 0.5,
+            "coverage": 0.75,
             "recency": 1,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 85.8,
+          "blendedScore": 84.7,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -7555,7 +7763,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 2.134,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -7787,19 +8008,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 75.9,
-          "observedIndicators": 4,
+          "score": 79.7,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.475,
+          "confidence": 0.712,
           "confidenceParts": {
-            "coverage": 0.5,
+            "coverage": 0.75,
             "recency": 1,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 75.9,
+          "blendedScore": 79.7,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -7991,7 +8212,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 3.417,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -8277,19 +8511,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 76.2,
-          "observedIndicators": 4,
+          "score": 77.8,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.475,
+          "confidence": 0.712,
           "confidenceParts": {
-            "coverage": 0.5,
+            "coverage": 0.75,
             "recency": 1,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 76.2,
+          "blendedScore": 77.8,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -8481,7 +8715,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 2.086,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -8757,19 +9004,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 66.7,
-          "observedIndicators": 4,
+          "score": 71.2,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.475,
+          "confidence": 0.712,
           "confidenceParts": {
-            "coverage": 0.5,
+            "coverage": 0.75,
             "recency": 1,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 66.7,
+          "blendedScore": 71.2,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -8947,7 +9194,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 2.45,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -9222,19 +9482,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 77,
-          "observedIndicators": 4,
+          "score": 77.1,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.475,
+          "confidence": 0.712,
           "confidenceParts": {
-            "coverage": 0.5,
+            "coverage": 0.75,
             "recency": 1,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 77,
+          "blendedScore": 77.1,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -9398,7 +9658,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 2.064,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -9689,19 +9962,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 70.9,
-          "observedIndicators": 4,
+          "score": 75.4,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.475,
+          "confidence": 0.712,
           "confidenceParts": {
-            "coverage": 0.5,
+            "coverage": 0.75,
             "recency": 1,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 70.9,
+          "blendedScore": 75.4,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -9879,7 +10152,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 3.977,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -10140,19 +10426,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 79.4,
-          "observedIndicators": 4,
+          "score": 82.4,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.475,
+          "confidence": 0.712,
           "confidenceParts": {
-            "coverage": 0.5,
+            "coverage": 0.75,
             "recency": 1,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 79.4,
+          "blendedScore": 82.4,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -10344,7 +10630,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 1.827,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -10604,19 +10903,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 73.7,
-          "observedIndicators": 4,
+          "score": 76.8,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.475,
+          "confidence": 0.712,
           "confidenceParts": {
-            "coverage": 0.5,
+            "coverage": 0.75,
             "recency": 1,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 73.7,
+          "blendedScore": 76.8,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -10794,7 +11093,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 1.184,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -11041,19 +11353,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 73,
-          "observedIndicators": 4,
+          "score": 71.7,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.475,
+          "confidence": 0.712,
           "confidenceParts": {
-            "coverage": 0.5,
+            "coverage": 0.75,
             "recency": 1,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 73,
+          "blendedScore": 71.7,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -11231,7 +11543,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 0.401,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -11475,19 +11800,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 80.5,
-          "observedIndicators": 4,
+          "score": 84.4,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.475,
+          "confidence": 0.712,
           "confidenceParts": {
-            "coverage": 0.5,
+            "coverage": 0.75,
             "recency": 1,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 80.5,
+          "blendedScore": 84.4,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -11651,7 +11976,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 1.954,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -11908,19 +12246,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 81.4,
-          "observedIndicators": 4,
+          "score": 78.7,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.475,
+          "confidence": 0.712,
           "confidenceParts": {
-            "coverage": 0.5,
+            "coverage": 0.75,
             "recency": 1,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 81.4,
+          "blendedScore": 78.7,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -12055,7 +12393,20 @@
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 1.299,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -12316,19 +12667,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 86.1,
-          "observedIndicators": 4,
+          "score": 81.6,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.465,
+          "confidence": 0.633,
           "confidenceParts": {
-            "coverage": 0.5,
-            "recency": 0.979,
+            "coverage": 0.75,
+            "recency": 0.889,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 86.1,
+          "blendedScore": 81.6,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -12463,7 +12814,20 @@
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 0.873,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -12765,19 +13129,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 81.4,
-          "observedIndicators": 4,
+          "score": 84.2,
+          "observedIndicators": 5,
           "belowCoverageFloor": false,
-          "confidence": 0.465,
+          "confidence": 0.584,
           "confidenceParts": {
-            "coverage": 0.5,
-            "recency": 0.979,
+            "coverage": 0.625,
+            "recency": 0.983,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 81.4,
+          "blendedScore": 84.2,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -12927,7 +13291,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 2.207,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -13184,19 +13561,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 56.1,
-          "observedIndicators": 4,
+          "score": 62.5,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.465,
+          "confidence": 0.693,
           "confidenceParts": {
-            "coverage": 0.5,
-            "recency": 0.979,
+            "coverage": 0.75,
+            "recency": 0.972,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 56.1,
+          "blendedScore": 62.5,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -13331,7 +13708,20 @@
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 2.896,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -13577,19 +13967,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 75.1,
-          "observedIndicators": 4,
+          "score": 78.4,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.465,
+          "confidence": 0.703,
           "confidenceParts": {
-            "coverage": 0.5,
-            "recency": 0.979,
+            "coverage": 0.75,
+            "recency": 0.986,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 75.1,
+          "blendedScore": 78.4,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -13710,7 +14100,20 @@
           "blendedFrom": "none",
           "momentum": [],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 1.485,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -13968,19 +14371,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 50.4,
-          "observedIndicators": 4,
+          "score": 51.7,
+          "observedIndicators": 5,
           "belowCoverageFloor": false,
-          "confidence": 0.465,
+          "confidence": 0.584,
           "confidenceParts": {
-            "coverage": 0.5,
-            "recency": 0.979,
+            "coverage": 0.625,
+            "recency": 0.983,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 50.4,
+          "blendedScore": 51.7,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -14143,7 +14546,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 2.708,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -14447,19 +14863,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 60,
-          "observedIndicators": 4,
+          "score": 67.7,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.465,
+          "confidence": 0.683,
           "confidenceParts": {
-            "coverage": 0.5,
-            "recency": 0.979,
+            "coverage": 0.75,
+            "recency": 0.958,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 60,
+          "blendedScore": 67.7,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -14637,7 +15053,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 3.643,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -14941,19 +15370,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 68.9,
-          "observedIndicators": 4,
+          "score": 78.1,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.465,
+          "confidence": 0.703,
           "confidenceParts": {
-            "coverage": 0.5,
-            "recency": 0.979,
+            "coverage": 0.75,
+            "recency": 0.986,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 68.9,
+          "blendedScore": 78.1,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -15131,7 +15560,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 3.082,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -15406,19 +15848,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 48.8,
-          "observedIndicators": 4,
+          "score": 61.1,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.475,
+          "confidence": 0.712,
           "confidenceParts": {
-            "coverage": 0.5,
+            "coverage": 0.75,
             "recency": 1,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 48.8,
+          "blendedScore": 61.1,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -15582,7 +16024,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 3.976,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -15869,19 +16324,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 73.7,
-          "observedIndicators": 4,
+          "score": 80.3,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.475,
+          "confidence": 0.712,
           "confidenceParts": {
-            "coverage": 0.5,
+            "coverage": 0.75,
             "recency": 1,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 73.7,
+          "blendedScore": 80.3,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -16059,7 +16514,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 2.276,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -16245,19 +16713,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 85.8,
-          "observedIndicators": 4,
+          "score": 76.1,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.465,
+          "confidence": 0.703,
           "confidenceParts": {
-            "coverage": 0.5,
-            "recency": 0.979,
+            "coverage": 0.75,
+            "recency": 0.986,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 85.8,
+          "blendedScore": 76.1,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -16392,7 +16860,20 @@
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 1.06,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -16606,19 +17087,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 59.5,
-          "observedIndicators": 4,
+          "score": 47.9,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.465,
+          "confidence": 0.703,
           "confidenceParts": {
-            "coverage": 0.5,
-            "recency": 0.979,
+            "coverage": 0.75,
+            "recency": 0.986,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 59.5,
+          "blendedScore": 47.9,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -16753,7 +17234,20 @@
           "blendedFrom": "none",
           "momentum": [],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 1.796,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -16994,19 +17488,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 35.9,
-          "observedIndicators": 4,
+          "score": 41.7,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.475,
+          "confidence": 0.683,
           "confidenceParts": {
-            "coverage": 0.5,
-            "recency": 1,
+            "coverage": 0.75,
+            "recency": 0.958,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 35.9,
+          "blendedScore": 41.7,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -17156,7 +17650,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 2.849,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -17402,19 +17909,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 30.4,
-          "observedIndicators": 4,
+          "score": 42.4,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.465,
+          "confidence": 0.703,
           "confidenceParts": {
-            "coverage": 0.5,
-            "recency": 0.979,
+            "coverage": 0.75,
+            "recency": 0.986,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 30.4,
+          "blendedScore": 42.4,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -17564,7 +18071,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 0.983,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -17762,19 +18282,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 43,
-          "observedIndicators": 4,
+          "score": 41.8,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.465,
+          "confidence": 0.596,
           "confidenceParts": {
-            "coverage": 0.5,
-            "recency": 0.979,
+            "coverage": 0.75,
+            "recency": 0.836,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 43,
+          "blendedScore": 41.8,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -17952,7 +18472,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 3.044,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -18194,19 +18727,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 67.2,
-          "observedIndicators": 4,
+          "score": 69.7,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.465,
+          "confidence": 0.703,
           "confidenceParts": {
-            "coverage": 0.5,
-            "recency": 0.979,
+            "coverage": 0.75,
+            "recency": 0.986,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 67.2,
+          "blendedScore": 69.7,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -18341,7 +18874,20 @@
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 3.789,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -18586,19 +19132,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 57.3,
-          "observedIndicators": 4,
+          "score": 62.8,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.455,
+          "confidence": 0.693,
           "confidenceParts": {
-            "coverage": 0.5,
-            "recency": 0.958,
+            "coverage": 0.75,
+            "recency": 0.972,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 57.3,
+          "blendedScore": 62.8,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -18762,7 +19308,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 1.666,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -18991,19 +19550,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 52.7,
-          "observedIndicators": 4,
+          "score": 61.2,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.465,
+          "confidence": 0.703,
           "confidenceParts": {
-            "coverage": 0.5,
-            "recency": 0.979,
+            "coverage": 0.75,
+            "recency": 0.986,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 52.7,
+          "blendedScore": 61.2,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -19153,7 +19712,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 2.866,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -19336,19 +19908,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 34.6,
-          "observedIndicators": 4,
+          "score": 37.2,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.465,
+          "confidence": 0.633,
           "confidenceParts": {
-            "coverage": 0.5,
-            "recency": 0.979,
+            "coverage": 0.75,
+            "recency": 0.889,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 34.6,
+          "blendedScore": 37.2,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -19438,7 +20010,20 @@
           "blendedFrom": "none",
           "momentum": [],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 3.789,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -19712,19 +20297,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 57.2,
-          "observedIndicators": 4,
+          "score": 67.5,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.455,
+          "confidence": 0.693,
           "confidenceParts": {
-            "coverage": 0.5,
-            "recency": 0.958,
+            "coverage": 0.75,
+            "recency": 0.972,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 57.2,
+          "blendedScore": 67.5,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -19874,7 +20459,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 1.323,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -20134,19 +20732,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 45.5,
-          "observedIndicators": 4,
+          "score": 56.3,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.465,
+          "confidence": 0.703,
           "confidenceParts": {
-            "coverage": 0.5,
-            "recency": 0.979,
+            "coverage": 0.75,
+            "recency": 0.986,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 45.5,
+          "blendedScore": 56.3,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -20310,7 +20908,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 2.685,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -20524,19 +21135,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 23.4,
-          "observedIndicators": 4,
+          "score": 38,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.465,
+          "confidence": 0.703,
           "confidenceParts": {
-            "coverage": 0.5,
-            "recency": 0.979,
+            "coverage": 0.75,
+            "recency": 0.986,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 23.4,
+          "blendedScore": 38,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -20670,7 +21281,20 @@
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 2.65,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -20917,19 +21541,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 54,
-          "observedIndicators": 4,
+          "score": 60.6,
+          "observedIndicators": 5,
           "belowCoverageFloor": false,
-          "confidence": 0.465,
+          "confidence": 0.584,
           "confidenceParts": {
-            "coverage": 0.5,
-            "recency": 0.979,
+            "coverage": 0.625,
+            "recency": 0.983,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 54,
+          "blendedScore": 60.6,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -21093,7 +21717,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 3.452,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -21319,19 +21956,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 41.9,
-          "observedIndicators": 4,
+          "score": 56.2,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.465,
+          "confidence": 0.596,
           "confidenceParts": {
-            "coverage": 0.5,
-            "recency": 0.979,
+            "coverage": 0.75,
+            "recency": 0.836,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 41.9,
+          "blendedScore": 56.2,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -21466,7 +22103,20 @@
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 3.961,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -21708,19 +22358,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 51.7,
-          "observedIndicators": 4,
+          "score": 62.5,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.465,
+          "confidence": 0.703,
           "confidenceParts": {
-            "coverage": 0.5,
-            "recency": 0.979,
+            "coverage": 0.75,
+            "recency": 0.986,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 51.7,
+          "blendedScore": 62.5,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -21898,7 +22548,20 @@
             }
           ],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 1.496,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -22151,19 +22814,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 42.6,
-          "observedIndicators": 4,
+          "score": 54.1,
+          "observedIndicators": 6,
           "belowCoverageFloor": false,
-          "confidence": 0.465,
+          "confidence": 0.596,
           "confidenceParts": {
-            "coverage": 0.5,
-            "recency": 0.979,
+            "coverage": 0.75,
+            "recency": 0.836,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 42.6,
+          "blendedScore": 54.1,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -22267,7 +22930,20 @@
           "blendedFrom": "none",
           "momentum": [],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 1.754,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     },
@@ -22463,19 +23139,19 @@
           "checks": []
         },
         "adaptability": {
-          "score": 27.3,
-          "observedIndicators": 4,
+          "score": 30.1,
+          "observedIndicators": 5,
           "belowCoverageFloor": false,
-          "confidence": 0.436,
+          "confidence": 0.554,
           "confidenceParts": {
-            "coverage": 0.5,
-            "recency": 0.917,
+            "coverage": 0.625,
+            "recency": 0.933,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 27.3,
+          "blendedScore": 30.1,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -22608,7 +23284,20 @@
           "blendedFrom": "none",
           "momentum": [],
           "indicators": [],
-          "checks": []
+          "checks": [
+            {
+              "checkId": "political_polarization",
+              "name": "Political polarization",
+              "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+              "unit": "index 0-4",
+              "direction": "lower_better",
+              "value": 2.759,
+              "year": 2024,
+              "source": "V-Dem (v2cacamps_osp)",
+              "sourceTier": "expert_panel",
+              "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            }
+          ]
         }
       }
     }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T08:21:33.356Z",
+  "generatedAt": "2026-10-01T09:09:06.197Z",
   "iso3": "HTI",
   "country": "Haiti",
   "dimensions": [
@@ -783,10 +783,10 @@
     },
     {
       "dimension": "adaptability",
-      "kind": "measure",
-      "score": 27.3,
-      "confidence": 0.436,
-      "band": "thin",
+      "kind": "raise",
+      "score": 30.1,
+      "confidence": 0.554,
+      "band": "usable",
       "trend": {
         "spanYears": 10,
         "delta": -2.6,
@@ -797,11 +797,10 @@
         "labor_force_participation",
         "unemployment_rate",
         "broadband_subscriptions",
-        "electricity_transmission_losses"
+        "electricity_transmission_losses",
+        "export_diversification"
       ],
       "gaps": [
-        "long_term_unemployment_share",
-        "export_diversification",
         "disaster_preparedness",
         "institutional_responsiveness"
       ],
@@ -810,20 +809,20 @@
         {
           "iso3": "NLD",
           "country": "Netherlands",
-          "score": 90,
-          "confidence": 0.475
+          "score": 91.3,
+          "confidence": 0.712
         },
         {
-          "iso3": "CHE",
-          "country": "Switzerland",
-          "score": 88.5,
-          "confidence": 0.475
+          "iso3": "DEU",
+          "country": "Germany",
+          "score": 84.7,
+          "confidence": 0.712
         },
         {
-          "iso3": "JPN",
-          "country": "Japan",
-          "score": 86.1,
-          "confidence": 0.465
+          "iso3": "CAN",
+          "country": "Canada",
+          "score": 84.4,
+          "confidence": 0.712
         }
       ],
       "evidenceElsewhere": [
@@ -1295,20 +1294,6 @@
           "country": "El Salvador",
           "indicatorId": "institutional_responsiveness",
           "title": "Bitcoin Law, and its 2025 rollback"
-        },
-        {
-          "id": "cri-ramp-up",
-          "iso3": "CRI",
-          "country": "Costa Rica",
-          "indicatorId": "export_diversification",
-          "title": "Ramp Up, PROCOMER's export-readiness programme"
-        },
-        {
-          "id": "fra-long-term-unemployment",
-          "iso3": "FRA",
-          "country": "France",
-          "indicatorId": "long_term_unemployment_share",
-          "title": "France's long-term unemployment decline"
         },
         {
           "id": "prt-cmd",
@@ -2041,5 +2026,5 @@
       "started": 2011
     }
   ],
-  "gapCount": 25
+  "gapCount": 23
 }

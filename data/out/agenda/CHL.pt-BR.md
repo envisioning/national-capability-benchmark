@@ -1,6 +1,6 @@
 # Agenda de capacidades: Chile
 
-*Gerado em 2026-09-25*
+*Gerado em 2026-10-01*
 
 A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a confiança ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | 42,9 | 0,26 (fraca) | sem base de tendência |
 | Aprendizagem | 53,5 | 0,54 (utilizável) | +6,8 em 10 anos, sobre 2 indicadores |
 | Experimentação | 46,7 | 0,39 (fraca) | +7,2 em 10 anos, sobre 2 indicadores |
-| Adaptação | 58,9 | 0,48 (utilizável) | +1,5 em 10 anos, sobre 4 indicadores |
+| Adaptação | 62,2 | 0,71 (boa) | +1,5 em 10 anos, sobre 4 indicadores |
 | Construção | 30,5 | 0,62 (utilizável) | -0,2 em 10 anos, sobre 4 indicadores |
 | Propósito compartilhado | 52,9 | 0,32 (fraca) | +5,5 em 10 anos, sobre 2 indicadores |
 
@@ -81,12 +81,12 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
 - Agência: 73,3, confiança utilizável
-- Adaptação: 58,9, confiança utilizável
+- Adaptação: 62,2, confiança boa
 - Aprendizagem: 53,5, confiança utilizável
 
 ## Agenda de medição
 
-25 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+23 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -105,8 +105,6 @@ Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 | Experimentação | Atividade de sandbox regulatório | Número e abrangência de sandboxes regulatórios e regimes de teste controlado em operação. |
 | Experimentação | Empresas nascidas de universidades | Empresas criadas para comercializar pesquisa universitária, por milhão de habitantes. |
 | Experimentação | Parcela empresarial do P&D | Parcela do dispêndio bruto em P&D executada por empresas. |
-| Adaptação | Parcela de desemprego de longa duração | Pessoas desempregadas há 12 meses ou mais, como parcela do desemprego total. |
-| Adaptação | Diversificação das exportações | Concentração inversa da pauta exportadora por produto. |
 | Adaptação | Preparação e recuperação de desastres | Capacidade demonstrada de preparação e recuperação diante de choques graves. |
 | Adaptação | Capacidade de resposta institucional | Velocidade com que regras e programas públicos mudam em resposta a novas condições. |
 | Construção | Entrega de grandes projetos | Desempenho de custo e prazo de grandes projetos públicos de infraestrutura. |

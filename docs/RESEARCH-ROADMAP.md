@@ -38,13 +38,15 @@ each dimension's correlation with log GDP per capita. Above 0.70 is a finding
 against the claim, to be read and published. It is not a target, and no row is
 added or dropped to move it.
 
-**Guardrail.** Confidence must not come to track wealth. Today it barely does
-(r = 0.34 across 51 countries; the 10 poorest average 0.40 and the 10 richest
-0.42). A source that only covers rich countries raises O1 and breaks this.
+**Guardrail.** Confidence must not come to track wealth. At 6.1.2 it barely
+did (r = 0.34 across 51 countries). At 6.2.0 it is r = 0.39: the ILOSTAT row's
+plausibility gate holds or ages more middle-income countries than rich ones.
+Watch it, and read the next source's effect on it first. A source that only
+covers rich countries raises O1 and breaks this.
 
 ### Where the objectives stand
 
-Dataset 6.1.2. Recompute from `data/out/diagnostics.json` and
+Dataset 6.2.0. Recompute from `data/out/diagnostics.json` and
 `data/out/index.json` after any rescore; never carry these figures forward by
 hand.
 
@@ -54,7 +56,7 @@ hand.
 | Experimentation | 0.23 | 2.6 | 0.62 | misses O1 |
 | Shared purpose | 0.26 | 1.9 | 0.46 | misses O1 |
 | Coordination | 0.36 | 2.8 | 0.56 | misses O1 |
-| Adaptability | 0.47 | 4.0 | 0.82 | tracks income |
+| Adaptability | 0.68 | 5.8 | 0.84 | tracks income |
 | Learning | 0.50 | 4.9 | 0.73 | tracks income |
 | Agency | 0.58 | 5.8 | 0.85 | tracks income |
 | Anticipation | 0.60 | 4.9 | 0.87 | tracks income |

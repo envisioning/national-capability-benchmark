@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-23T15:28:40.689Z",
-  "version": "6.1.2",
+  "generatedAt": "2026-10-01T09:09:03.697Z",
+  "version": "6.2.0",
   "country": {
     "country": "Chile",
     "iso3": "CHL",
@@ -3724,19 +3724,19 @@
         "checks": []
       },
       "adaptability": {
-        "score": 58.9,
-        "observedIndicators": 4,
+        "score": 62.2,
+        "observedIndicators": 6,
         "belowCoverageFloor": false,
-        "confidence": 0.475,
+        "confidence": 0.712,
         "confidenceParts": {
-          "coverage": 0.5,
+          "coverage": 0.75,
           "recency": 1,
           "sourceQuality": 0.95
         },
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 58.9,
+        "blendedScore": 62.2,
         "blendedFrom": "indicators",
         "momentum": [
           {
@@ -4505,16 +4505,23 @@
             "indicatorId": "long_term_unemployment_share",
             "name": "Long-term unemployment share",
             "measurementClass": "O",
-            "raw": null,
-            "transformed": null,
-            "normalized": null,
-            "year": null,
-            "source": "ILOSTAT",
-            "sourceTier": null,
+            "raw": 19.4,
+            "transformed": 19.4,
+            "normalized": 82.7,
+            "year": 2025,
+            "source": "ILOSTAT (DF_UNE_TUNE_SEX_AGE_DUR_NB)",
+            "sourceTier": "international_organization",
             "winsorized": false,
             "outOfFrame": false,
-            "series": [],
-            "status": "gap"
+            "series": [
+              {
+                "year": 2025,
+                "raw": 19.4,
+                "normalized": 82.7,
+                "tier": "international_organization"
+              }
+            ],
+            "status": "observed"
           },
           {
             "indicatorId": "broadband_subscriptions",
@@ -4912,16 +4919,23 @@
             "indicatorId": "export_diversification",
             "name": "Export diversification",
             "measurementClass": "C",
-            "raw": null,
-            "transformed": null,
-            "normalized": null,
-            "year": null,
-            "source": "UNCTAD",
-            "sourceTier": null,
+            "raw": 0.376,
+            "transformed": 0.376,
+            "normalized": 54.9,
+            "year": 2025,
+            "source": "UNCTAD (US.ConcentDiversIndices)",
+            "sourceTier": "international_organization",
             "winsorized": false,
             "outOfFrame": false,
-            "series": [],
-            "status": "gap"
+            "series": [
+              {
+                "year": 2025,
+                "raw": 0.376,
+                "normalized": 54.9,
+                "tier": "international_organization"
+              }
+            ],
+            "status": "observed"
           },
           {
             "indicatorId": "disaster_preparedness",
@@ -7132,7 +7146,20 @@
             "status": "gap"
           }
         ],
-        "checks": []
+        "checks": [
+          {
+            "checkId": "political_polarization",
+            "name": "Political polarization",
+            "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
+            "unit": "index 0-4",
+            "direction": "lower_better",
+            "value": 1.898,
+            "year": 2024,
+            "source": "V-Dem (v2cacamps_osp)",
+            "sourceTier": "expert_panel",
+            "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+          }
+        ]
       }
     }
   }

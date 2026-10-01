@@ -1,6 +1,6 @@
 # Agenda de capacidades: Haiti
 
-*Gerado em 2026-09-25*
+*Gerado em 2026-10-01*
 
 A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a confiança ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
@@ -14,13 +14,22 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | sem nota | 0,11 (muito fraca) | sem base de tendência |
 | Aprendizagem | 7,3 | 0,24 (muito fraca) | sem base de tendência |
 | Experimentação | 0,2 | 0,04 (muito fraca) | sem base de tendência |
-| Adaptação | 27,3 | 0,44 (fraca) | -2,6 em 10 anos, sobre 4 indicadores, 1 truncados na borda da régua |
+| Adaptação | 30,1 | 0,55 (utilizável) | -2,6 em 10 anos, sobre 4 indicadores, 1 truncados na borda da régua |
 | Construção | 34,4 | 0,49 (utilizável) | +3,6 em 10 anos, sobre 3 indicadores, 1 truncados na borda da régua |
 | Propósito compartilhado | sem nota | 0,02 (muito fraca) | sem base de tendência |
 
 ## Dimensões para elevar
 
 Estas são as notas mais baixas com evidência utilizável. A evidência fraca aparece abaixo.
+
+### Adaptação: 30,1, confiança utilizável
+
+Com que eficácia o sistema responde quando as circunstâncias mudam?
+
+- Baseada em 5 indicadores observados.
+- Maiores notas utilizáveis: Países Baixos 91,3, Alemanha 84,7, Canadá 84,4.
+- Entregas documentadas em outros países: Plano Real, the 1994 currency stabilisation (Brasil); Proalcool, the fuel substitution after the oil shock (Brasil); The Convertibility Plan, and its collapse (Argentina); Kurzarbeit in the 2008-2009 crisis (Alemanha); The 2001 stabilisation, and its unwinding (Turquia); Telebras, the telecom system that was dismantled (Brasil); Estonian Defence League, national defence rebuilt after independence (Estônia); Korea Internet and Security Agency, a consolidated digital authority (Coreia do Sul); Federal siren warning network, and its dismantling (Alemanha); Room for the River, flood safety delivered across the Rhine branches (Países Baixos); Childcare benefits administration, and the recovery after institutional failure (Países Baixos); National Police, one corps from twenty-five regional forces (Países Baixos); NL-Alert, a tested multi-channel emergency warning system (Países Baixos); DigiD Machtigen, delegated access to public services (Países Baixos); DigiNotar, a certificate breach that forced a trust-chain reset (Países Baixos); Programmatic Approach to Nitrogen, and the permitting reversal (Países Baixos); 27F reconstruction, a nationwide recovery programme after the 2010 earthquake (Chile); Cédula digital, an identity service upgraded for mobile use (Colômbia); Victims' reparations, a long-running administrative response to conflict (Colômbia); Fondo Adaptación, recovery and safer resettlement after La Niña (Colômbia); My Number Card, a national identity rail extended into services (Japão); Tōhoku reconstruction, a decade-long recovery programme (Japão); Juntos, a conditional-transfer system at national scale (Peru); Certified digital signature across public services (Costa Rica); REDCUDI childcare network and SINIRUBE referrals (Costa Rica); Dollarization as an emergency monetary redesign (Equador); 2016 earthquake national emergency coordination (Equador); 120 a los 65 social pension (Panamá); Canal water-and-transit response to the 2023–24 drought (Panamá); Bono Juana Azurduy maternal and child health transfer (Bolívia); Renta Dignidad non-contributory old-age pension (Bolívia); Tekoporã Mbarete family-support programme (Paraguai); SIFEN national electronic invoicing rollout (Paraguai); Asignación Universal por Hijo child benefit (Argentina); SUBE national electronic fare and subsidy rail (Argentina); PhilSys foundational national ID rollout (Filipinas); Pantawid Pamilyang Pilipino Program (4Ps) (Filipinas); Typhoon Yolanda shelter and recovery programme (Filipinas); Jaminan Kesehatan Nasional, a near-universal health-insurance pool (Indonésia); InaRISK national disaster-risk information platform (Indonésia); VNeID national electronic identity (Vietnã); Vietnam Social Security health-insurance expansion (Vietnã); Typhoon Yagi emergency restoration (Vietnã); MySejahtera and the national COVID-19 immunisation programme (Malásia); National flood-warning SMS system (Malásia); Universal Coverage Scheme and the 30-baht health system (Tailândia); National Digital ID framework (Tailândia); T-Alert national cell-broadcast warning system (Tailândia); Cl@ve shared digital identity (Espanha); La Palma volcanic-eruption recovery and monitoring (Espanha); mObywatel digital ID wallet (Polônia); Rodzina 500+ and 800+ child-benefit delivery (Polônia); Alert RCB national emergency SMS channel (Polônia); BankID federated electronic identity (Suécia); 1177 national health portal and helpline (Suécia); VMA multi-channel public warning system (Suécia); MyGovID single sign-on for public services (Irlanda); National COVID-19 vaccination delivery (Irlanda); National Asset Management Agency crisis workout (Irlanda); Met Éireann national weather-warning service (Irlanda); Salário mínimo and its permanent revaluation rule (Brasil); eNaira, a national rollout with an adoption gap (Nigéria); Productive Safety Net Programme for drought resilience (Etiópia); National 9-1-1 emergency-response system (República Dominicana); Sistema Nacional de Emergencias 911 (Honduras); National COVID-19 vaccination campaign (Cuba); Bitcoin Law, and its 2025 rollback (El Salvador); Chave Móvel Digital and Portugal's digital identity layer (Portugal); Empresa na Hora and the one-stop company registry (Portugal); Sistema de Gestão Integrada de Fogos Rurais (Portugal); Simplex and LabX, a standing simplification-and-experimentation loop (Portugal); Programa Nacional de Vacinação and seasonal immunisation (Portugal); STAYAWAY COVID, a contact-tracing app suspended after the emergency (Portugal); CoWIN national COVID-19 vaccination platform (Índia); Gauteng e-tolls, and their cancellation after public resistance (África do Sul); COFEPRIS digital regulatory procedures (México); Simulacro Nacional 2024, a nationwide emergency exercise (México); PROSPERA, and its replacement by a new scholarship authority (México); AFAD earthquake shelter and recovery operation (Turquia).
+- Lacunas declaradas: Preparação e recuperação de desastres, Capacidade de resposta institucional.
 
 ### Construção: 34,4, confiança utilizável
 
@@ -81,13 +90,6 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
 
-### Adaptação: confiança 0,44, fraca
-
-Com que eficácia o sistema responde quando as circunstâncias mudam?
-
-- Baseada em 4 indicadores observados.
-- Lacunas declaradas: Parcela de desemprego de longa duração, Diversificação das exportações, Preparação e recuperação de desastres, Capacidade de resposta institucional.
-
 ### Agência: confiança 0,44, fraca
 
 Quão capazes são pessoas e organizações de transformar uma intenção em ação?
@@ -97,7 +99,7 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 
 ## Agenda de medição
 
-25 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+23 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -116,8 +118,6 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 | Experimentação | Atividade de sandbox regulatório | Número e abrangência de sandboxes regulatórios e regimes de teste controlado em operação. |
 | Experimentação | Empresas nascidas de universidades | Empresas criadas para comercializar pesquisa universitária, por milhão de habitantes. |
 | Experimentação | Parcela empresarial do P&D | Parcela do dispêndio bruto em P&D executada por empresas. |
-| Adaptação | Parcela de desemprego de longa duração | Pessoas desempregadas há 12 meses ou mais, como parcela do desemprego total. |
-| Adaptação | Diversificação das exportações | Concentração inversa da pauta exportadora por produto. |
 | Adaptação | Preparação e recuperação de desastres | Capacidade demonstrada de preparação e recuperação diante de choques graves. |
 | Adaptação | Capacidade de resposta institucional | Velocidade com que regras e programas públicos mudam em resposta a novas condições. |
 | Construção | Entrega de grandes projetos | Desempenho de custo e prazo de grandes projetos públicos de infraestrutura. |
