@@ -134,6 +134,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 Documented deliveries linked to missing indicators. They do not affect scores or confidence.
 
 - **National COVID-19 vaccination campaign** (Adaptability). Cuba's national COVID-19 vaccination campaign had given at least one vaccine dose to 94% of the country's population by 31 December 2021, according to the Pan American Health Organization.
+- **Civil Defence hurricane evacuation system** (Adaptability). Cuba's Civil Defence system and the provincial and municipal Defence Councils it activates evacuated and protected more than 735,000 people across eastern Cuba ahead of Hurricane Melissa, which struck as a Category 3 storm on 29 October 2025, according to UN OCHA.
 
 ## Contribute
 

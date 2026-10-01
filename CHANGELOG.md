@@ -9,6 +9,17 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.24.1 — 2026-10-01
+
+- **25 documented deliveries for the 16 countries that had one.** Each of
+  them now has two to four. Ten of the new records document a loss, among
+  them Kenya's adult education centres, Canada's long-gun registry, China's
+  zero-COVID policy and Haiti's PetroCaribe projects. The flagships include
+  China's high-speed rail, the Barakah nuclear plant, Tel Aviv's Red Line
+  and Cuba's hurricane civil defence. Every number was read at an official
+  source and checked a second time by a separate reviewer. The capability
+  agenda is regenerated.
+
 ## App 1.24.0 — 2026-10-01
 
 - **The thesis tests what is left after income.** "Where the claim holds,

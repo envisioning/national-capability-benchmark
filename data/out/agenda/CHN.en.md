@@ -124,6 +124,8 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 Documented deliveries linked to missing indicators. They do not affect scores or confidence.
 
 - **National basic-research funding allocation** (Anticipation). China's National Bureau of Statistics, Ministry of Science and Technology and Ministry of Finance reported 225.91 billion yuan in basic-research expenditure in 2023, equal to 6.77% of national R&D spending.
+- **Dynamic zero-COVID containment, and its dismantling** (Adaptability). China's State Council joint prevention and control mechanism ran a national COVID-19 containment regime from January 2020, under which the mainland had reported 4,634 COVID-19 deaths when vaccination began on 15 December 2020; it dismantled the regime by circular on 7 December 2022, and the National Health Commission then reported 59,938 COVID-related deaths in medical institutions between 8 December 2022 and 12 January 2023.
+- **National high-speed rail network** (Building). China's railway authorities built a high-speed rail network that the National Railway Administration put at about 47,000 km in operation in December 2024, from a programme that began in 2003; a World Bank review of the 27 lines in operation at the end of 2013 found a weighted average approved unit cost of RMB 129m per km for 350 km/h lines, which it put at no more than two-thirds of costs elsewhere.
 
 ## Contribute
 

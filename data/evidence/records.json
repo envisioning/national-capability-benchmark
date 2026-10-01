@@ -8838,6 +8838,918 @@
         ],
         "travelled": "Gulf states and Australia built similar plants; where demand fell after a drought ended, as in several Australian cities, plants were mothballed and the fixed concession payments became the controversy."
       }
+    },
+    {
+      "id": "ken-adult-education",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "KEN",
+      "title": "Kenya's adult education centres, and their halving",
+      "claim": "Kenya's state adult education programme, run since the 1978 presidential literacy decree through adult education centres in every county, enrolled 330,340 learners in 2014 and 165,552 in 2025, after a low of 125,402 in 2023, according to the Kenya National Bureau of Statistics.",
+      "metric": {
+        "name": "Learners enrolled in adult education centres",
+        "value": 165552,
+        "unit": "learners",
+        "asOf": "2025"
+      },
+      "secondMetric": {
+        "name": "Learners enrolled in adult education centres at the 2014 peak of the published series",
+        "value": 330340,
+        "unit": "learners",
+        "asOf": "2014"
+      },
+      "started": 1978,
+      "status": "eroded",
+      "source": {
+        "publisher": "Kenya National Bureau of Statistics, Economic Survey 2026, Table 15.27 (source: State Department for Social Protection and Senior Citizens Affairs, Directorate of Adult Learning and Education)",
+        "url": "https://www.knbs.or.ke/wp-content/uploads/2026/04/2026-Economic-Survey.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The metric is a head count of learners in adult education centres, mostly basic literacy, not the share of adults in formal or non-formal education and training that the indicator defines: 165,552 is well under one percent of Kenya's adult population, and the count leaves out TVET, university, employer training and private courses entirely. The peak is only the highest year in the series KNBS publishes from 2010 onwards (252,553 in 2010, 330,340 in 2014). The 1980s literacy campaign almost certainly enrolled more, so the true loss from the programme's peak is understated, not overstated. The series is administrative and badly maintained. KNBS revised 2015 from 246,215 (Economic Survey 2016) to 306,228 (Economic Survey 2018). The 2025 figure is provisional. Several counties report identical numbers in consecutive years (Garissa 3,256 in all four years 2022 to 2025, and Samburu and Laikipia repeated), which points to carried-forward returns. One county, Nairobi, accounts for most of the 2025 rebound, rising from 13,194 to 34,506 in one year. Falling enrolment can partly reflect success, since younger cohorts went through universal primary schooling and need less remedial literacy, so the decline is evidence of lost provision only alongside the fact that the programme was reorganised across ministries and is now run by a social protection directorate. The 1978 start year is the presidential decree reported by the state news agency, not a documented first enrolment. The 2014 peak was itself revised: Economic Survey 2015 published 300,462 (provisional) and Economic Survey 2017 restated it as 330,340; against the earlier figure the fall to 2025 is about 45 percent rather than half.",
+      "pattern": {
+        "mechanism": "The presidency decreed a national literacy programme, and the education ministry, and later a social protection directorate, ran it through state-paid instructors in community adult education centres in every district. Enrolment fell by half over a decade as the function moved between ministries and county returns degraded.",
+        "preconditions": [
+          "A large adult population that had missed primary school",
+          "A ministry department with paid instructors at district level",
+          "A political mandate that framed literacy as a national campaign rather than a welfare service"
+        ]
+      }
+    },
+    {
+      "id": "ken-cma-sandbox",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "KEN",
+      "title": "Capital Markets Authority regulatory sandbox",
+      "claim": "Kenya's Capital Markets Authority opened a regulatory sandbox under a 2019 policy guidance note and by January 2024 had let 11 firms exit it after live testing, with new admissions continuing into January 2025.",
+      "metric": {
+        "name": "Firms that successfully exited the CMA regulatory sandbox",
+        "value": 11,
+        "unit": "firms",
+        "asOf": "2024-01"
+      },
+      "started": 2019,
+      "status": "operating",
+      "source": {
+        "publisher": "Capital Markets Authority of Kenya, press release 'CMA graduates Sycamore Capital Limited from the Regulatory Sandbox'",
+        "url": "https://www.cma.or.ke/cma-graduates-sycamore-capital-limited-from-the-regulatory-sandbox/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "This is one regulator's sandbox for capital markets products only. It says nothing about the Central Bank of Kenya, the Communications Authority or any other regulator, so it covers little of the breadth the indicator asks for. The count is the regulator's own, taken from a press release, and the CMA publishes no running register. The 11 exits are cumulative over almost five years, a small number that says nothing about what the exiting products did in the market. 'Successful exit' is the CMA's own description. The figure is from January 2024, and no later official total was found.",
+      "pattern": {
+        "mechanism": "The Capital Markets Authority issued a policy guidance note that let fintech firms and incumbents test capital markets products with real customers under relaxed rules, then used each exit as the moment to grant a licence or approval under the Capital Markets Act.",
+        "preconditions": [
+          "A regulator with statutory power to grant no-objections and tailored approvals",
+          "A domestic fintech sector already built on mobile money rails",
+          "Peer regulators abroad, through the Global Financial Innovation Network, to copy procedures from"
+        ]
+      }
+    },
+    {
+      "id": "ken-sgr",
+      "indicatorId": "large_project_delivery",
+      "iso3": "KEN",
+      "title": "Standard Gauge Railway, Mombasa to Naivasha",
+      "claim": "Kenya Railways began building the Standard Gauge Railway in financial year 2014/15, completed the 472 km Mombasa to Nairobi Phase I in 2017, and opened the 120 km Phase 2A to Naivasha in September 2019 against a September 2017 start and an 18-month plan, about six months late; the line hauled 7.33 million tonnes of freight in 2025.",
+      "metric": {
+        "name": "Planned construction period of SGR Phase 2A (Sept 2017 start, KSh 155.5 billion), against which the line opened in September 2019, about six months (a third) late",
+        "value": 18,
+        "unit": "months",
+        "asOf": "2017"
+      },
+      "secondMetric": {
+        "name": "Freight hauled on the SGR",
+        "value": 7332,
+        "unit": "thousand tonnes",
+        "asOf": "2025"
+      },
+      "started": 2014,
+      "status": "operating",
+      "source": {
+        "publisher": "Kenya National Bureau of Statistics, Economic Survey 2018",
+        "url": "https://www.knbs.or.ke/wp-content/uploads/2023/09/2018-Economic-Survey.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "No official source found publishes the outturn cost of either phase against its budget, so the record carries a cost plan (KSh 155.5 billion for Phase 2A) and no cost performance. That is the half of the construct that matters most for a Chinese-financed turnkey contract. The schedule overrun of about six months on Phase 2A, or a third of the 18-month plan, is computed: the plan is from KNBS, and the opening is from the Ministry of Roads and Transport Strategic Plan 2023-2027 draft ('completed Phase 2A ... and was launched for operation in September 2019', https://www.transport.go.ke/sites/default/files/DRAFT%20FINAL%20MINISTERIAL%20STRATEGIC%20PLAN%202023-27%20FEB%202024%20.pdf). Phase I's schedule against its plan cannot be checked from an official copy. The National Assembly's 2014 Public Investments Committee report giving a December 2016 completion date and a USD 3.804 billion contract price was found only on an NGO mirror. The parliamentary repository timed out, so neither figure is used. The railway was meant to run to Malaba and into Uganda, and the Naivasha to Malaba section remained unbuilt for years. The same ministry plan reports rail carrying 19 percent of port throughput in 2021 against a 50 percent target for 2030. Freight tonnage is published by KNBS from Kenya Railways returns. Debt service and fiscal cost are not shown at all.",
+      "pattern": {
+        "mechanism": "The Treasury and Kenya Railways contracted a Chinese state contractor on a design-build-supply basis with Exim Bank finance, which put construction risk and speed on the contractor and left financing, land acquisition and traffic risk with the state.",
+        "preconditions": [
+          "A bilateral lender willing to finance most of the cost against sovereign guarantees",
+          "A state able to acquire a 472 km corridor of land quickly",
+          "A port whose cargo the state could steer onto rail to fill the line"
+        ]
+      }
+    },
+    {
+      "id": "rwa-adult-literacy",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "RWA",
+      "title": "Rwanda's adult literacy centres, and their decline",
+      "claim": "Rwanda's Ministry of Education reports 93,548 learners in adult literacy centres in 2024/25, down from 152,015 in 2017.",
+      "metric": {
+        "name": "Learners in adult literacy centres",
+        "value": 93548,
+        "unit": "learners",
+        "asOf": "2024/25"
+      },
+      "secondMetric": {
+        "name": "Learners in adult literacy centres at the 2017 high of the five-year table",
+        "value": 152015,
+        "unit": "learners",
+        "asOf": "2017"
+      },
+      "started": 2003,
+      "status": "eroded",
+      "source": {
+        "publisher": "Rwanda Ministry of Education, 2024/2025 Education Statistical Yearbook (school census)",
+        "url": "https://www.mineduc.gov.rw/fileadmin/user_upload/Mineduc/Publications/REPORTS/Education_Statistics/Education_statistical_yearbook/Education_Statistical_Year_Book_2024-2025.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The start year is weak. 2003 is the sector policy that committed the state to adult literacy training, not a documented first enrolment, and adult literacy classes ran before it. A reviewer could fairly set the year elsewhere. The programme never came near its own targets: the 2003 policy implied about 500,000 learners a year. The '2017 peak' is only the high of one published five-year table, and earlier years were not checked. Delivery is mixed: the yearbooks blame part of the decline on NGOs and projects closing and on religious buildings ceasing to host centres. Some of the loss is therefore civil society withdrawing rather than the state, even though the ministry counts and partly funds all centres. The 2024/25 yearbook states the latest fall as 5.8 percent in one place and 5.7 percent in another. A head count of literacy learners is far narrower than the share of adults in any education or training that the indicator defines.",
+      "pattern": {
+        "mechanism": "The Ministry of Education set national literacy targets and counted learners through its school census, but relied on churches, NGOs and donor projects to host and staff most centres. When those partners withdrew, enrolment fell, and no state budget line replaced them.",
+        "preconditions": [
+          "A national school census that reaches non-formal centres",
+          "Religious and NGO networks willing to host classes in every sector",
+          "Public funding for instructors that would hold up when donor projects ended, which is the precondition that failed here"
+        ]
+      }
+    },
+    {
+      "id": "rwa-zipline",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "RWA",
+      "title": "Government of Rwanda and Zipline drone delivery network",
+      "claim": "From 2016 the Government of Rwanda contracted Zipline to fly blood and later other medical products to health facilities, and by 2024 the Rwanda Biomedical Centre reported deliveries to 624 sites across 27 districts and over 12,000 packages in a single month.",
+      "metric": {
+        "name": "Delivery sites served by drone",
+        "value": 624,
+        "unit": "sites across 27 districts",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Packages delivered in a single month",
+        "value": 12000,
+        "unit": "packages per month (lower bound)",
+        "asOf": "2024"
+      },
+      "started": 2016,
+      "status": "operating",
+      "source": {
+        "publisher": "Rwanda Biomedical Centre, Head of the Blood Transfusion Service, 'Revolutionizing Rwanda's Supply Chain: The Impact of UAVs (2016-2023)', presented at the ICAO Advanced Air Mobility Symposium 2024 and hosted by ICAO",
+        "url": "https://www.icao.int/sites/default/files/Meetings/AAM2024/Presentations/DAY1/1.1.B-Thomas-Muyombo.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The source is a slide deck by the public partner, presented at an aviation conference. It is not a statistical release, and its operating figures almost certainly come from Zipline, the private contractor, so the number is the two partners reporting on themselves. 'Today' is undated beyond the 2024 symposium, and 'over 12,000 packages in a single month' is a lower bound for an unnamed month, not an annual series. The site count mixes health facilities with farms and other drop points, and 27 districts is not all 30. The deck's outcome claims (90 percent less wastage, 99 percent less maternal mortality from blood shortage) are unreferenced on the slide and are not used here. The record shows scale, not value for money: contract prices, per-delivery cost to the health budget, and whether road logistics would have done as well are not shown. The collaboration is with one foreign firm under a service contract, which is a narrow form of the joint public-private delivery the indicator means.",
+      "pattern": {
+        "mechanism": "The Ministry of Health and the Rwanda Biomedical Centre bought a delivery service rather than drones: Zipline built and flew the network, the state paid per delivery, centralised the blood supply, and the civil aviation authority opened the airspace.",
+        "preconditions": [
+          "A centralised national blood service able to stock regional hubs",
+          "An aviation regulator willing to authorise beyond-visual-line-of-sight flights at national scale",
+          "Health facilities with a reliable ordering channel and a government that pays per delivery"
+        ],
+        "travelled": "Zipline took the contract model to Ghana, Nigeria, Kenya and Côte d'Ivoire. Its durability has depended on each health ministry's ability to keep paying fees once donor co-funding ends."
+      }
+    },
+    {
+      "id": "can-long-gun-registry",
+      "indicatorId": "large_project_delivery",
+      "iso3": "CAN",
+      "title": "Canadian long-gun registry, its information system overrun and its dismantling",
+      "claim": "Canada began registering all firearms under the 1995 Firearms Act from December 1998. The registry's first information system, CFIS I, had an initial estimate of $13 to 20 million and had cost $190 million by March 2005. Its successor CFIS II rose from $32 million to at least $87 million and was halted. In 2012 Parliament ended long-gun registration and ordered the destruction of about 7.5 million non-restricted registration records, which the RCMP deleted from CFIS in October 2012.",
+      "metric": {
+        "name": "Cost of the Canadian Firearms Information System (CFIS I), against an initial estimate of $13 to 20 million",
+        "value": 190000000,
+        "unit": "Canadian dollars",
+        "asOf": "2005-03"
+      },
+      "secondMetric": {
+        "name": "Non-restricted firearms registration records in CFIS when Parliament ordered their destruction",
+        "value": 7500000,
+        "unit": "registration records",
+        "asOf": "2012-04"
+      },
+      "started": 1998,
+      "status": "dismantled",
+      "source": {
+        "publisher": "House of Commons of Canada, Standing Committee on Public Accounts, Report 10 (39th Parliament, 1st Session), on Chapter 4 of the May 2006 Report of the Auditor General, Canadian Firearms Program",
+        "url": "https://www.ourcommons.ca/DocumentViewer/en/39-1/PACP/report-10/page-33",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The cost figure is a Commons committee's summary of the Auditor General's 2006 follow-up. The Auditor General's own 2002 and 2006 chapters no longer open at their published OAG URLs, so the record rests on Parliament's restatement of them. The $190 million covers CFIS I, the information system, and is not the cost of the whole programme. The often quoted figure of roughly $1 billion for the programme could not be verified at an official URL today and is not used. The baseline is a range of $13 to 20 million given at an early stage, so any overrun ratio, roughly ten times, depends on which end is chosen and on how far the scope of that early estimate matched the system that was built. The committee itself attributes part of the growth to things outside the project team's control: requirements kept changing, and Bill C-10 and its regulations were delayed by more than two years. The dismantling in 2012 was a political decision by a new parliamentary majority. It was not a collapse caused by the delivery, so the status records a policy reversal rather than a technical failure. Licensing and the registry of restricted and prohibited firearms kept running, Quebec residents' records were held back pending litigation, and public agencies still register. The 7.5 million records show the scale the registry reached and say nothing about their accuracy, which the 2006 audit questioned. Like can-phoenix, this is a public IT system rather than physical infrastructure.",
+      "pattern": {
+        "mechanism": "The Department of Justice, and later the Canada Firearms Centre, built a universal national registry through contracted IT development while the regulations it had to implement were still changing, and reported the rising cost to ministers before Parliament. In 2012 Parliament ended the long-gun part by statute and had the RCMP destroy its records.",
+        "preconditions": [
+          "Legislation and regulations settled before the system is specified, so requirements do not move during the build",
+          "Cost reporting to Parliament that covers the full programme, not only what is appropriated each year",
+          "A political settlement on registration durable enough to survive a change of government, or a design that does not depend on one"
+        ]
+      }
+    },
+    {
+      "id": "can-cpp-reform",
+      "indicatorId": "institutional_responsiveness",
+      "iso3": "CAN",
+      "title": "The 1997 Canada Pension Plan financing reform",
+      "claim": "In December 1993 the Chief Actuary projected that the pay-as-you-go contribution rate would reach 14.2% by 2030 and that the fund would run out by 2015. The federal and provincial governments agreed a reform package in 1997. It took effect on 1 January 1998, raised the combined contribution rate in steps to 9.9% by 2003, replaced pay-as-you-go financing with steady-state funding and invested net cash flows through the CPP Investment Board. The 2024 valuation puts the minimum sustaining rate at 9.19% from 2034, below the legislated 9.9%, with assets of $651 billion.",
+      "metric": {
+        "name": "Combined employee-employer base CPP contribution rate reached under the reform, legislated since 2003",
+        "value": 9.9,
+        "unit": "% of contributory earnings",
+        "asOf": "2003"
+      },
+      "secondMetric": {
+        "name": "Pay-as-you-go contribution rate projected for 2030 without reform (15th Actuarial Report, December 1993)",
+        "value": 14.2,
+        "unit": "% of contributory earnings",
+        "asOf": "1993-12"
+      },
+      "started": 1998,
+      "status": "operating",
+      "source": {
+        "publisher": "Office of the Chief Actuary, Office of the Superintendent of Financial Institutions, Actuarial Report (32nd) on the Canada Pension Plan (revised version), valuation as at 31 December 2024",
+        "url": "https://www.osfi-bsif.gc.ca/en/oca/actuarial-reports/actuarial-report-32nd-canada-pension-plan-revised-version",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The construct is speed, and this reform was not fast. Four years passed between the December 1993 warning and the amendments taking effect in January 1998, and the rate took until 2003 to reach 9.9%. Whether that counts as responsive depends on a comparison the record cannot supply: it shows a rule changed in time, before the projected 2015 exhaustion, and not that it changed quickly. The headline numbers are a legislated rate and a projection, not an observed outcome. The evidence that the reform held, a 9.19% minimum rate against 9.9%, is the Chief Actuary's model under his own assumptions. That office sits inside OSFI, so this is a federal body assessing a federal-provincial plan. The fix was paid for mostly by workers and employers through a contribution rate up about 70% from 1997, plus slower benefit growth, which a reader may count as a cost of the delay as much as a sign of capability. Quebec runs its own plan, so the CPP covers the rest of Canada. The amendment formula requires the agreement of provinces holding most of the population, and that slows any reform as well as stabilising it.",
+      "pattern": {
+        "mechanism": "The Chief Actuary's statutory triennial reports put a dated number on the funding gap. Federal and provincial finance ministers then negotiated one package that raised contributions, trimmed benefit growth and moved new money into market investment under an arm's-length board, and wrote into the statute that any future benefit increase must be fully funded.",
+        "preconditions": [
+          "An actuarial office whose projections both orders of government accept as the shared baseline",
+          "A joint amendment rule that forces federal and provincial governments into one negotiated package",
+          "Enough time before the projected exhaustion date to phase in a contribution rise"
+        ],
+        "travelled": "The 1997 package required any future benefit increase to be fully funded. The additional CPP in force since 1 January 2019 is fully funded, and the 32nd report sets its own minimum contribution rates on that basis."
+      }
+    },
+    {
+      "id": "isr-red-line",
+      "indicatorId": "large_project_delivery",
+      "iso3": "ISR",
+      "title": "Tel Aviv light rail Red Line",
+      "claim": "Israel's government approved the Red Line in December 2010 at an estimated NIS 10.7 billion, and NTA, the state-owned company delivering it, began the main construction works in 2015. By October 2021 the cost estimate had reached NIS 18.71 billion, about 75% above the original, and the completion date had been postponed six times, by about five years in total. The 24 km line opened in August 2023, and in December 2025 the State Comptroller put its construction cost at NIS 18.8 billion.",
+      "metric": {
+        "name": "Increase in the Red Line cost estimate over the December 2010 government estimate of NIS 10.7 billion",
+        "value": 75,
+        "unit": "% overrun",
+        "asOf": "2021-10"
+      },
+      "secondMetric": {
+        "name": "Cumulative postponement of the Red Line completion date across six postponements",
+        "value": 5,
+        "unit": "years",
+        "asOf": "2021-10"
+      },
+      "started": 2015,
+      "status": "operating",
+      "source": {
+        "publisher": "State Comptroller of Israel, The Progress of the Light Rail Project in the Tel Aviv Metropolitan Area, November 2022",
+        "url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2022/2022.11/EN/2022.11-208-Dan-Taktzir-EN.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The 75% overrun is the audit's figure for the October 2021 estimate and includes indexation. Net of price-index linkage and a VAT cut, the audit puts the real increase at about NIS 7.46 billion, or 69.7%. The audit was finished before the line opened, so the overrun is measured on an estimate rather than a final account. The December 2025 audit's NIS 18.8 billion construction cost comes from a security audit and is not a reconciled final cost. The five-year delay counts slippage to the then target of 2022. The line actually opened in August 2023, about six years after the original 2017 date, so the figure understates the final schedule slip. Most postponements came before main construction began in 2015, so a hostile reader would call them planning slippage rather than construction delay. The project is national in its funding, its government resolution and its state-owned delivery company, but it serves one metropolitan area, and one line is a single case and not a national delivery record. The audit's per-kilometre comparisons with other cities are not used here. Ridership is not established: the 300,000 passengers a day in the 2025 audit is NTA's forecast. The audit also found the framework agreement between NTA and the finance and transport ministries still unsigned more than 20 years after the company was founded.",
+      "pattern": {
+        "mechanism": "The government set the budget and target date by resolution in 2010 and handed delivery to NTA, a state-owned company. NTA revised the cost estimate at least eight times and moved the opening date six times, most of them before main construction began, and still brought the line into service in 2023.",
+        "preconditions": [
+          "A dedicated state delivery company with a signed framework agreement setting its accountability to the transport and finance ministries, which the audit found missing",
+          "Contingency budgets set by the transport projects procedure from the first estimate, rather than costs left out of early estimates",
+          "Land clearance and right of way secured before the main contracts are tendered"
+        ]
+      }
+    },
+    {
+      "id": "chn-dynamic-zero-covid",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "CHN",
+      "title": "Dynamic zero-COVID containment, and its dismantling",
+      "claim": "China's State Council joint prevention and control mechanism ran a national COVID-19 containment regime from January 2020, under which the mainland had reported 4,634 COVID-19 deaths when vaccination began on 15 December 2020; it dismantled the regime by circular on 7 December 2022, and the National Health Commission then reported 59,938 COVID-related deaths in medical institutions between 8 December 2022 and 12 January 2023.",
+      "metric": {
+        "name": "COVID-related deaths in medical institutions in the five weeks after the regime was dismantled",
+        "value": 59938,
+        "unit": "deaths",
+        "asOf": "2022-12-08 to 2023-01-12"
+      },
+      "secondMetric": {
+        "name": "Cumulative reported COVID-19 deaths under containment, at the start of vaccination",
+        "value": 4634,
+        "unit": "deaths",
+        "asOf": "2020-12-15"
+      },
+      "started": 2020,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Xinhua report of a National Health Commission press conference of the State Council joint COVID-19 prevention and control mechanism, published on the State Council portal (english.www.gov.cn)",
+        "url": "https://english.www.gov.cn/statecouncil/ministries/202301/15/content_WS63c34c70c6d0a757729e579d.html",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "Both numbers are the government's own and both are made under counting rules that understate deaths: the 59,938 covers only deaths inside medical institutions, and independent estimates put excess deaths far above the official count, so the official figure is a floor, not the toll. The two metrics cover different periods, populations at risk and counting rules (a cumulative count over 11 months against a five-week in-hospital count), so their ratio is not a mortality comparison. The SCIO text carrying 4,634 is an advocacy piece republished by the State Council Information Office, not a statistical release. The record does not show the costs of containment itself (lockdowns, lost output, mental-health and access-to-care harms), which were part of why it ended, nor that the dismantling followed Omicron's transmissibility rather than a planned exit. What it shows about preparedness is the exit gap: the State Council portal reported on 30 November 2022 that only 65.8 percent of people aged 80 and over had completed primary vaccination (english.www.gov.cn/statecouncil/ministries/202211/30/content_WS6386aabec6d0a757729e3d55.html), a week before the regime was lifted, and 90.1 percent of the reported deaths were aged 65 and above. The construct fit is contestable: the record evidences a national shock-containment capacity and its abrupt removal, not a standing disaster-recovery system. No official series of excess mortality for 2022-2023 has been published that would let the reversal be sized properly.",
+      "pattern": {
+        "mechanism": "The State Council joint prevention and control mechanism used mass testing, health codes and area lockdowns to hold infections near zero for nearly three years, then withdrew the whole apparatus by one circular within weeks, before raising vaccination coverage among the oldest residents. The capacity to suppress was built; the capacity to exit was not prepared in parallel.",
+        "preconditions": [
+          "A command structure able to impose testing, movement codes and lockdowns uniformly across provinces",
+          "A population and economy able to absorb repeated closures, which wore out by late 2022",
+          "An exit plan, above all high vaccination of the oldest cohorts and hospital surge capacity, which was missing when the regime was lifted"
+        ],
+        "travelled": "Other zero-COVID jurisdictions (New Zealand, Australia, Taiwan) exited after vaccinating their elderly first; the Chinese exit is the case where suppression ended before that precondition was met."
+      }
+    },
+    {
+      "id": "chn-high-speed-rail",
+      "indicatorId": "large_project_delivery",
+      "iso3": "CHN",
+      "title": "National high-speed rail network",
+      "claim": "China's railway authorities built a high-speed rail network that the National Railway Administration put at about 47,000 km in operation in December 2024, from a programme that began in 2003; a World Bank review of the 27 lines in operation at the end of 2013 found a weighted average approved unit cost of RMB 129m per km for 350 km/h lines, which it put at no more than two-thirds of costs elsewhere.",
+      "metric": {
+        "name": "High-speed rail track in operation",
+        "value": 47000,
+        "unit": "km (about)",
+        "asOf": "2024-12"
+      },
+      "secondMetric": {
+        "name": "Weighted average unit cost of 350 km/h lines, approved estimates, lines in operation at end 2013",
+        "value": 129,
+        "unit": "RMB million per km",
+        "asOf": "2013"
+      },
+      "started": 2003,
+      "status": "operating",
+      "source": {
+        "publisher": "Statement of the National Railway Administration of China reported by Xinhua, on the State Council portal (english.www.gov.cn)",
+        "url": "https://english.www.gov.cn/archive/statistics/202412/26/content_WS676d359cc6d0868f4e8ee49a.html",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "Neither number is the overrun this gap asks for. The World Bank unit cost is built from estimated cost at project approval, not out-turn cost, so it cannot show whether lines came in over or under budget; the note itself warns that the data exist only in aggregate, that expenditures fall in different years and may not be comparable, and that its inputs come from China Railway and former Ministry of Railways publications. It is a 2014 staff note in a working series, covering about 10,000 km built by 2013, not the 47,000 km now operating, and the World Bank lends to Chinese railway projects. The 47,000 km figure is a rounded administrative statement by the regulator, relayed by Xinhua on the State Council portal, not a statistical table. Neither source shows the financing side: the debt carried by China State Railway Group and its predecessor, the low traffic density on many later lines, or the 2011 Wenzhou collision and the corruption cases at the former Ministry of Railways. Low unit cost also reflects cheap labour and land acquisition terms that are not institutional choices other countries can copy. No schedule-performance figure was found at an official URL.",
+      "pattern": {
+        "mechanism": "The former Ministry of Railways and its successors standardised designs, viaduct and station types and procurement across a national programme, then built continuously for two decades, so each line reused the previous line's templates, supply chain and crews.",
+        "preconditions": [
+          "A single national rail authority with power to plan corridors, acquire land and finance lines through state-owned debt",
+          "A continuous build pipeline long enough for standard designs and a domestic supply chain to pay off",
+          "Tolerance for debt and for low-traffic lines whose cost is carried off the general budget"
+        ],
+        "travelled": "Standardisation and a continuous pipeline are what the World Bank note offers as transferable; other countries that build one line at a time keep the high unit costs the note compares against."
+      }
+    },
+    {
+      "id": "are-barakah",
+      "indicatorId": "large_project_delivery",
+      "iso3": "ARE",
+      "title": "Barakah Nuclear Energy Plant",
+      "claim": "The UAE, through the Emirates Nuclear Energy Corporation and under licences from the Federal Authority for Nuclear Regulation issued from 2010, built four APR-1400 reactors at Barakah that ENEC reported in September 2024 were all in commercial operation and providing up to 25 percent of the UAE's electricity; Unit 1 entered commercial operation on 6 April 2021, about four years after the 2017 date the regulator recorded in its 2012 construction licence review.",
+      "metric": {
+        "name": "Share of UAE electricity supplied by Barakah, all four units operating",
+        "value": 25,
+        "unit": "% of UAE electricity (up to, as reported)",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Unit 1 commercial operation delay against the 2012 licensing plan (computed: April 2021 against a planned 2017)",
+        "value": 4,
+        "unit": "years (about)",
+        "asOf": "2021"
+      },
+      "started": 2010,
+      "status": "operating",
+      "source": {
+        "publisher": "Abu Dhabi Government Media Office, release on Barakah Unit 4 commercial operation (statement of the Emirates Nuclear Energy Corporation)",
+        "url": "https://www.mediaoffice.abudhabi/en/energy/unit-4-of-abu-dhabis-barakah-nuclear-energy-plant-begins-commercial-operations/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The 25 percent is the operator reporting on itself, relayed by the Abu Dhabi government's media office, and it is phrased as \"up to\": it is a capacity claim, not a measured share of national generation in a given year, and no statistical series was opened to confirm it. The schedule figure is computed by us from two documents, a 2012 regulator statement that the first unit was planned for 2017 and the 2021 commercial-operation release; it is a slip of roughly four years for Unit 1 only, and the later units' original dates were not found at an official URL. The plant's construction cost, and any cost overrun, are not published in any source opened, so the cost half of the construct is missing. The reactors were designed and built by a KEPCO-led Korean consortium on the Shin-Kori 3 and 4 reference design, so the UAE's institutional contribution is commissioning, licensing, financing and operating, not engineering. ENEC is an Abu Dhabi entity and the plant sits in one emirate, though it supplies the national grid under federal regulation. The operator's own boast of \"a 40 per cent improvement in schedule\" from Unit 1 to Unit 4 measures operational readiness to commercial operation, not construction, and is not used here.",
+      "pattern": {
+        "mechanism": "The UAE federal government set a nuclear policy in 2008, created an independent regulator (FANR) and a single owner-developer (ENEC), and bought a proven reactor design with a turnkey contract, so the state managed one prime contractor against one reference plant rather than a first-of-a-kind design.",
+        "preconditions": [
+          "A sovereign balance sheet able to finance a multi-unit plant over a decade of construction and delay",
+          "A regulator built from scratch with foreign technical support, credible enough to hold the schedule back when licensing required it",
+          "A vendor with a recent reference plant and an intact domestic supply chain willing to export it"
+        ],
+        "travelled": "The turnkey, reference-plant model is what newcomer states such as Saudi Arabia and Poland cite; the four-year first-unit slip shows the regulator and operator readiness, not the construction, set the pace."
+      }
+    },
+    {
+      "id": "eth-ifae",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "ETH",
+      "title": "Integrated Functional Adult Education, and its erosion",
+      "claim": "Ethiopia's Ministry of Education rolled out Integrated Functional Adult Education nationally from 2010/11 and enrolled 6,903,065 adults in 2015/16, but its successor Adult Basic Education Program enrolled 1,392,635 adults in 2024/25, about a fifth of the peak.",
+      "metric": {
+        "name": "Adults enrolled in the Adult Basic Education Program",
+        "value": 1392635,
+        "unit": "adults",
+        "asOf": "2024/25"
+      },
+      "secondMetric": {
+        "name": "Adults enrolled in Integrated Functional Adult Education at the 2015/16 peak",
+        "value": 6903065,
+        "unit": "adults",
+        "asOf": "2015/16"
+      },
+      "started": 2010,
+      "status": "eroded",
+      "source": {
+        "publisher": "Federal Ministry of Education of Ethiopia, EMIS and ICT Executive Office, Education Statistics Annual Abstract 2024/25 (2017 E.C.)",
+        "url": "https://moe.gov.et/resources/annual-abstract/4",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The 2024/25 count excludes Amhara and Tigray, which reported nothing because of conflict, and Amhara alone held 43 percent of IFAE enrolment in 2015/16; removing Amhara and Tigray, both absent in 2024/25, from the 2015/16 peak still leaves 3,450,597 against 1,392,635 (2,038,631 with Education Light), a figure we computed from Table 6.2 of the 2015/16 abstract and the ministry does not publish. The two numbers are not one series: the two-year IFAE became a one-year Adult Basic Education programme, and the 2024/25 abstract reports a separate Education Light/Torch track of 645,996 adults, so total adult enrolment that year was 2,038,631. All figures are administrative enrolment reported by regional bureaus to the ministry, with no attendance, completion quality or literacy outcome attached, and enrolment is not the construct's share of adults in education and training. The 2024/25 abstract has no stable PDF URL: it downloads from a button on the ministry's annual abstract page, so a checker must download it there and read PDF pages 63 to 64, printed pages 54 to 55 (sections 5.2 and 5.3, Table 5.1). The 2015/16 figure comes from a separate abstract PDF. The 2024/25 abstract also reports that 13,015,641 adults completed or graduated from IFAL/ABE between 2016/17 and 2024/25, so a shrinking pool of illiterate adults is a competing explanation for part of the fall.",
+      "pattern": {
+        "mechanism": "The Ministry of Education built a national adult literacy programme run through regional education bureaus and community learning centres, then let enrolment fall by most of its peak as the programme was restructured and conflict removed whole regions from reporting.",
+        "preconditions": [
+          "Regional education bureaus and kebele-level centres able to recruit facilitators and enrol adults at scale",
+          "A national campaign target, here ESDP IV's goal to cut adult illiteracy, that kept enrolment a political priority",
+          "Peace and administrative reach across regions, which the Amhara and Tigray conflicts removed"
+        ],
+        "travelled": "Mass literacy campaigns travel as enrolment drives; the Ethiopian series shows the reach depends on keeping the delivery network funded and present after the campaign target lapses."
+      }
+    },
+    {
+      "id": "nga-ebola-response",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "NGA",
+      "title": "Nigeria's 2014 Ebola containment",
+      "claim": "After an infected traveller brought Ebola virus into Lagos on 20 July 2014, Nigeria's government set up an emergency operations centre with WHO country office support, traced contacts in Lagos and Port Harcourt, and held the outbreak to 19 cases and 7 deaths before WHO declared the country free of transmission on 20 October 2014.",
+      "metric": {
+        "name": "Ebola cases in the Nigerian outbreak",
+        "value": 19,
+        "unit": "cases",
+        "asOf": "2014-10-20"
+      },
+      "secondMetric": {
+        "name": "Ebola deaths in the Nigerian outbreak",
+        "value": 7,
+        "unit": "deaths",
+        "asOf": "2014-10-20"
+      },
+      "started": 2014,
+      "status": "concluded",
+      "source": {
+        "publisher": "World Health Organization, One year into the Ebola epidemic: Successful Ebola responses in Nigeria, Senegal and Mali (January 2015)",
+        "url": "https://www.who.int/news-room/spotlight/one-year-into-the-ebola-epidemic/successful-ebola-responses-in-nigeria-senegal-and-mali",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "This is one outbreak seeded by a single imported chain in two cities, so it shows a response to one shock and not a standing national capacity. The page is a WHO narrative, not a dataset, and WHO and partners supported the response, which also leaned on emergency-operations staff, GPS tools and infrastructure and technologies in place for polio eradication, as the WHO page puts it. Nothing here shows Nigeria's performance in later shocks such as Lassa fever, cholera, floods or COVID-19, and a counterfactual of how far the virus would have spread is not measured.",
+      "pattern": {
+        "mechanism": "The Federal Ministry of Health and Lagos State stood up an emergency operations centre within days of confirmation, repurposed the polio programme's staff and GPS tracking for contact tracing, and funded isolation and treatment centres quickly.",
+        "preconditions": [
+          "An existing surveillance and field workforce, here the polio eradication infrastructure, that could be redirected overnight",
+          "A domestic laboratory able to confirm the virus within days",
+          "Political authority to release emergency funds and coordinate federal and state agencies under one command"
+        ],
+        "travelled": "Nigeria's emergency operations centre model was formalised in the Nigeria Centre for Disease Control and cited by WHO as the preparedness standard for at-risk countries; the transfer depends on having a pre-existing field programme to repurpose."
+      }
+    },
+    {
+      "id": "nga-sec-sandbox",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "NGA",
+      "title": "SEC Nigeria Regulatory Incubation Program",
+      "claim": "Nigeria's Securities and Exchange Commission opened a one-year Regulatory Incubation sandbox in September 2023 and had admitted seven firms across cohorts 001/23 and 002/24 to test capital-market products, then cleared seven more entities into its Accelerated Regulatory Incubation Programme in July 2026.",
+      "metric": {
+        "name": "Firms admitted to the Regulatory Incubation sandbox across two cohorts",
+        "value": 7,
+        "unit": "firms",
+        "asOf": "2024-08-29"
+      },
+      "secondMetric": {
+        "name": "Entities cleared for the Accelerated Regulatory Incubation Programme in one announcement",
+        "value": 7,
+        "unit": "entities",
+        "asOf": "2026-07-02"
+      },
+      "started": 2023,
+      "status": "operating",
+      "source": {
+        "publisher": "Securities and Exchange Commission, Nigeria, FinPort Registered FinTech Operators directory",
+        "url": "https://sec.gov.ng/fintech-and-innovation-hub-finport/registered-fintech-operators/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The count of seven is ours, read off the directory table as retrieved on 2026-10-01, which carries no publication date and may not be current; the SEC publishes no summary statistic, application count, graduation rate or outcome for any participant. Three of the seven RI firms (Trovotech, Wrapped CBDC, Blockvault) reappear among the seven ARIP admissions of July 2026, so the two metrics overlap and must not be added, and an ARIP Approval-in-Principle is by the SEC's own wording not a final licence. This is one regulator's sandbox in one sector: the Central Bank of Nigeria's separate sandbox framework is not counted, and the record says nothing about whether testing changed any rule.",
+      "pattern": {
+        "mechanism": "The SEC created a time-limited sandbox with conditional rule waivers and a year-long test period, then added an accelerated track to pull digital-asset firms that were operating informally into supervised testing.",
+        "preconditions": [
+          "A regulator with statutory room to grant conditional waivers, here strengthened by the Investments and Securities Act 2025",
+          "A pipeline of fintech and digital-asset firms already serving Nigerian users outside the rules",
+          "Supervisory staff able to review participants and decide graduation or wind-down"
+        ],
+        "travelled": "Built on the FCA sandbox template; Nigeria's variant adds an accelerated track aimed at bringing crypto exchanges and tokenisation platforms already in the market under supervision, rather than only testing new products."
+      }
+    },
+    {
+      "id": "hnd-eeh-loss-reduction",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "HND",
+      "title": "Empresa Energía Honduras loss-reduction partnership, and its reversal",
+      "claim": "Honduras's state utility ENEE awarded Empresa Energía Honduras a public-private partnership contract in December 2015, with service starting in 2016, to run national distribution and cut technical and non-technical losses by 17%. Distribution losses fell from 33.38% to 27.11% by February 2018, rose to 35.37% by December 2020 and stood at 30.77% in December 2021. The state intervened the contract and took distribution back when it ended in August 2023.",
+      "metric": {
+        "name": "Electricity distribution losses, December 2021 (technical and non-technical)",
+        "value": 30.77,
+        "unit": "% of energy",
+        "asOf": "2021-12"
+      },
+      "secondMetric": {
+        "name": "Lowest distribution losses under the partnership (February 2018), the gain that was lost",
+        "value": 27.11,
+        "unit": "% of energy",
+        "asOf": "2018-02"
+      },
+      "started": 2016,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Secretaría de Energía de Honduras, Dirección General de Electricidad y Mercados, Informe Estadístico Anual del Subsector Eléctrico Nacional 2021 (Tabla 11, from ENEE Subgerencia de Planificación y Gestión Comercial)",
+        "url": "https://sen.hn/wp-content/uploads/2023/05/Informe-estadistico-anual-del-subsector-electrico-nacional.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The loss series is ENEE's own commercial accounting, republished by the Energy Secretariat under the government that intervened the contract and campaigned against it, so the source is not neutral. The table stops in December 2021. The 2022 and 2023 values, including the roughly 37 to 38 percent widely reported when the contract ended, appear only in press coverage, and this record does not carry them. The SEN text does not attribute the 2016 to 2018 fall to EEH by name. The 2020 rise coincides with COVID-19 lockdowns and hurricanes Eta and Iota, so not all of the reversal can be laid on the operator. The contract was intervened and then expired at the end of its term in August 2023. It was not cancelled outright, and 'dismantled' here means the partnership model ended and ENEE took distribution back, not that a court annulled it. The SAPP fact sheet has copy errors: a malformed start date, and a repayment source copied from an airport sheet ('COBROS POR SERVICIOS AEROPORTUARIOS'). The 17% target comes from SAPP's project description, not from the contract text. A loss percentage measures the outcome of the partnership and says nothing directly about how deep the collaboration was. It is evidence that a structured government-firm arrangement on a national goal was tried at national scale and failed, not a measure of collaboration.",
+      "pattern": {
+        "mechanism": "ENEE, through a Congress-approved PPP trust supervised by SAPP and an external supervisor, handed national distribution and loss recovery to a private operator paid from distribution revenue. When losses rose, the state intervened the contract and then let it lapse, moving loss recovery into its own Programa Nacional para la Reducción de Pérdidas.",
+        "preconditions": [
+          "A loss baseline and metering both parties accept, so the operator can be paid for points recovered rather than for presence",
+          "A regulator and supervisor able to enforce loss targets during the term, not only at expiry",
+          "Political tolerance for disconnecting non-paying users and prosecuting theft, which is where non-technical losses are recovered"
+        ],
+        "travelled": "Loss-reduction management contracts are a common utility reform. This case shows the first two years of gains disappearing once enforcement weakened, and a government that ended up reabsorbing the function it had contracted out."
+      }
+    },
+    {
+      "id": "hnd-palmerola",
+      "indicatorId": "large_project_delivery",
+      "iso3": "HND",
+      "title": "Aeropuerto Internacional de Palmerola",
+      "claim": "Honduras's Infrastructure Secretariat concessioned the Palmerola international airport to Palmerola International Airport S.A., with a USD 87.1 million reference investment. Works began on 5 December 2016 and operations on 11 December 2021, about 60 months after works began, against a 61-month contracted works period (start of operation is not necessarily completion of works).",
+      "metric": {
+        "name": "Months from start of works (2016-12-05) to start of operation (2021-12-11), computed",
+        "value": 60,
+        "unit": "months",
+        "asOf": "2021-12"
+      },
+      "secondMetric": {
+        "name": "Contracted works execution period",
+        "value": 61,
+        "unit": "months",
+        "asOf": "2016"
+      },
+      "started": 2016,
+      "status": "operating",
+      "source": {
+        "publisher": "Superintendencia de Alianza Público Privada (SAPP), Honduras, Palmerola concession fact sheet",
+        "url": "https://www.sapp.gob.hn/en/palmerola",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The schedule figure is ours, computed from two dates on the regulator's fact sheet: about 60 months against a 61-month contracted period. The sheet does not say whether the works period was amended, extended or suspended, or whether 'start of operation' means full completion. The only cost figure is a reference investment set at signature. No final cost, cost overrun or state contribution is published there, so this record shows schedule performance only and is silent on cost, which is half of what the indicator asks. The terminal was built at an existing air base with a runway, which makes it an easier build than a greenfield airport. SAPP is the concession's own regulator. Other SAPP sheets carry copy errors (the EEH sheet cites airport revenues), so treat field values with care. Passenger demand, the concession's financial health and whether the airport displaced Toncontín as intended are not shown.",
+      "pattern": {
+        "mechanism": "Honduras's Infrastructure Secretariat let a 34-and-a-half-year concession with a fixed works period, had Congress approve it and a trust carry it, and left SAPP and a supervising consortium to hold the concessionaire to the schedule.",
+        "preconditions": [
+          "A PPP law and a regulator able to publish and enforce contract milestones",
+          "An existing site and runway that removed most land acquisition and airside risk",
+          "Private bank financing that reached financial close (August 2018) before the main works"
+        ]
+      }
+    },
+    {
+      "id": "gtm-intecap",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "GTM",
+      "title": "Instituto Técnico de Capacitación y Productividad (INTECAP)",
+      "claim": "Guatemala's employer-levy-funded training institute INTECAP reported 490,280 participants in 26,387 vocational training events in 2025, 99.72% of its operating-plan target, through centres in all 22 departments.",
+      "metric": {
+        "name": "Participants in vocational training events (total formación profesional)",
+        "value": 490280,
+        "unit": "participants (event enrolments)",
+        "asOf": "2025"
+      },
+      "secondMetric": {
+        "name": "Vocational training events delivered",
+        "value": 26387,
+        "unit": "events",
+        "asOf": "2025"
+      },
+      "started": 1972,
+      "status": "operating",
+      "source": {
+        "publisher": "Instituto Técnico de Capacitación y Productividad (INTECAP), Resultados Finales de Estadísticas Operativas 2025 (G.E.DP-01)",
+        "url": "https://intecap.edu.gt/informacionpublica/pdf/planificacion/2026/GEDP01%20Resultados%20Finales%20de%20Estadisticas%20Operativas%202025.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "This is INTECAP reporting on itself against its own operating plan. Nobody audits the count. Participants are enrolments in events, not unique people: one worker who takes three courses counts three times, so the figure cannot be divided by the adult population to give a participation rate, which is what the indicator asks for. Most of the volume is short: seminars (202,359) and the ACTA line (218,147) make up about 86% of participants, while the long technical careers (CTO, CTM, CTMS) total about 13,400. Some programmes, such as FORJA and the mid-level technical careers, enrol young people, so not every participant is an adult learner. The text layer garbles the event columns of several national rows, though the total row reads cleanly. The figure covers one year only. No series is given here, so this record cannot say whether participation is rising or falling, and it says nothing about completion, certification or labour-market outcomes.",
+      "pattern": {
+        "mechanism": "Guatemala's Congress gave a joint state-employer institute a compulsory 1% payroll levy, collected by the social security institute, and the institute turned it into a national network of training centres and short courses for workers at every occupational level.",
+        "preconditions": [
+          "A formal payroll base large enough to fund training through a levy collected alongside social security contributions",
+          "Employer representation in governance, so firms accept the levy as their own training budget",
+          "Centres in every department, which reach formal workers and leave the large informal workforce mostly outside"
+        ],
+        "travelled": "It follows the Latin American levy-funded training model (SENAI, SENA, INA), and like them it reaches the formal sector far better than informal workers."
+      }
+    },
+    {
+      "id": "slv-insaforp",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "SLV",
+      "title": "INSAFORP tripartite training institute, and its dissolution",
+      "claim": "El Salvador ran its national vocational training system from 1993 through INSAFORP, an institute funded by a 1% employer payroll levy and governed by a tripartite council of four government, four employer and four worker representatives; a 2021 reform gave the President the choice of the employer seats, and Decree 893 of 14 November 2023 dissolved INSAFORP and handed its functions to INCAF, whose council holds only the institute's president and four ministries.",
+      "metric": {
+        "name": "Employer-sector seats on the governing council of the national training institute under the 2023 INCAF law",
+        "value": 0,
+        "unit": "seats",
+        "asOf": "2023-11-14"
+      },
+      "secondMetric": {
+        "name": "Employer-sector seats on the INSAFORP Consejo Directivo under the 1993 Ley de Formación Profesional (peak structure, as read from the recital of the 2021 reform)",
+        "value": 4,
+        "unit": "seats (of 12, four per sector)",
+        "asOf": "2021-06-03"
+      },
+      "started": 1993,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Legislative Assembly of El Salvador, Decreto N.° 893 (Ley del Instituto Nacional de Capacitación y Formación), as published by the Supreme Court's Centro de Documentación Judicial",
+        "url": "https://www.jurisprudencia.gob.sv/DocumentosBoveda/D/2/2020-2029/2023/12/FD709.PDF",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The metric is a count of seats read off the text of two laws, not a measured outcome: the value 0 is our reading of Art. 11 of Decree 893, which lists only the INCAF president and four ministries, and the peak of four employer seats comes from a recital in the 2021 reform, not from the 1993 law itself, which we did not open. The 1% levy rate in the claim is read from Art. 19 of Decree 893, which carries the levy over, and was not read from the 1993 text. Neither text shows how much the employer and worker seats shaped training decisions in practice, how many people INSAFORP trained, or whether training volume or quality fell under INCAF; no official participant series was retrieved, so this record documents the end of a governance arrangement, not a fall in delivery. Firms still fund the system: Art. 19 keeps the 1% employer payroll levy, although it reserves only 20% of it for INCAF's training and sends the remaining 80% elsewhere, so the levy-funded collaboration was reshaped rather than abolished in money terms. The collaboration was already eroded before dissolution: the 2021 reform let the President pick employer representatives from ternas built by the Labour Ministry, without requiring membership of employer associations. The Supreme Court documentation host returned intermittent HTTP 522 errors on the day of retrieval before serving both documents.",
+      "pattern": {
+        "mechanism": "El Salvador's Legislative Assembly, on the executive's initiative, first moved the choice of INSAFORP's employer representatives to the President (2021) and then dissolved the tripartite institute, replacing it with a ministry-run council while keeping the employer payroll levy (2023). The state kept the money flow from firms and removed the firms' and workers' seats at the table.",
+        "preconditions": [
+          "A training system financed by an employer payroll levy, so the state can keep the revenue while changing who governs it",
+          "A legislative majority aligned with the executive, able to pass an institutional replacement in a single session",
+          "Employer and worker organisations whose seats rested on ordinary statute rather than on constitutional or treaty protection"
+        ],
+        "travelled": "Levy-funded tripartite training bodies of the SENAI and INFOTEP family exist across Latin America; the Salvadoran case shows the arrangement is only as durable as the statute that seats the private sector, since the levy alone does not guarantee a voice."
+      }
+    },
+    {
+      "id": "slv-chaparral",
+      "indicatorId": "large_project_delivery",
+      "iso3": "SLV",
+      "title": "El Chaparral (3 de Febrero) hydroelectric plant",
+      "claim": "El Salvador's state hydro commission CEL financed the El Chaparral hydroelectric plant on the Torola River through a BCIE loan arranged in September 2008, with four planned years of construction, and inaugurated it as the 3 de Febrero plant on 19 October 2023 at an approximate cost of US$800 million; CEL gives the initial investment as US$207.8 million, so the final cost is about 3.8 times the initial figure, some 15 years after the 2008 loan.",
+      "metric": {
+        "name": "Approximate final cost of the 3 de Febrero (El Chaparral) hydroelectric plant, stated at inauguration",
+        "value": 800,
+        "unit": "US$ million",
+        "asOf": "2023-10-19"
+      },
+      "secondMetric": {
+        "name": "Initial investment of the El Chaparral project, as stated by CEL in 2022",
+        "value": 207.8,
+        "unit": "US$ million",
+        "asOf": "2022"
+      },
+      "started": 2008,
+      "status": "concluded",
+      "source": {
+        "publisher": "Comisión Ejecutiva Hidroeléctrica del Río Lempa (CEL), inauguration notice for the 3 de Febrero hydroelectric plant",
+        "url": "https://www.cel.gob.sv/mision-cumplida/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "Both cost figures come from the executing agency reporting on its own project, and both are stated loosely: the final figure is the President's \"costo aproximado\" quoted in a CEL news item, not an audited account, and CEL's own 2022 notice gave the final cost as \"more than $750 million\" while the President's speech gave the initial cost as $200 million rather than $207.8 million. The overrun ratio of about 3.8 is our computation from two different documents, and CEL gives the initial figure with no year: it appears to be the price for a design later replaced after technical failures, so part of the gap reflects a changed scope, not only cost escalation; no figure separates the two. The cost statements are politically framed, attributing the overrun to previous governments, and the government that completed the plant is the source. No Court of Accounts final audit was retrieved. The start year rests on the date of the first BCIE loan reported by the Assembly, not on a published construction start date, and the 15-year span is computed from that date to inauguration; the four-year planned duration comes only from the President's quoted speech. The figures say nothing about the plant's output, which is 65.8 MW of installed capacity per the Assembly page.",
+      "pattern": {
+        "mechanism": "CEL contracted a 65.8 MW dam, financed by BCIE loans the Assembly guaranteed, and when the original design failed it refinanced a redesign through two further BCIE loans and completed the plant under a later government. Successive administrations kept financing the asset rather than abandoning it, at the price of a cost multiple.",
+        "preconditions": [
+          "A state utility with borrowing capacity and access to a regional development bank willing to extend and enlarge loans",
+          "Geological and design studies whose adequacy is only tested once excavation begins",
+          "A legislature that keeps guaranteeing sovereign debt for a stalled project across changes of government"
+        ],
+        "travelled": "The case sits with other hydro and power projects in the corpus whose initial prices did not hold; it shows that an initial contract price transfers little risk when the state must pay for a redesign to finish the asset."
+      }
+    },
+    {
+      "id": "dom-infotep",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "DOM",
+      "title": "INFOTEP national technical and vocational training",
+      "claim": "The Dominican Republic's tripartite training institute INFOTEP, created by Law 116-80 in 1980, registered 1,027,791 participants in training actions nationwide in 2025 and 3,613,098 participants between August 2020 and August 2025.",
+      "metric": {
+        "name": "Participants in INFOTEP training actions nationwide",
+        "value": 1027791,
+        "unit": "participants",
+        "asOf": "2025"
+      },
+      "secondMetric": {
+        "name": "Participants trained by INFOTEP, August 2020 to August 2025",
+        "value": 3613098,
+        "unit": "participants",
+        "asOf": "2020-08 to 2025-08"
+      },
+      "started": 1980,
+      "status": "operating",
+      "source": {
+        "publisher": "Presidency of the Dominican Republic, reporting INFOTEP's Memoria Institucional 2025",
+        "url": "https://presidencia.gob.do/noticias/infotep-destaca-crecimiento-de-su-programa-de-formacion-virtual-en-el-dia-mundial-del",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The figures are INFOTEP's own administrative counts, relayed by the presidency's news service from the institute's annual report; the report itself was not opened, because infotep.gob.do refused scripted requests (HTTP 403). A participant is an enrolment in a training action, not a person: someone taking several short courses counts several times, so the number cannot be read as a share of adults trained and is not comparable with survey participation rates. The two figures are hard to reconcile: 3.6 million over five years averages about 720,000 a year, against more than one million in 2025 alone, and nothing on the pages explains the jump, whether a definition changed, or how much of it is short or virtual courses. The counts include young people who may not be adults in the survey sense, and they say nothing about course length, completion, certification rates, or labour-market outcomes. The pages are promotional and were published by the government that runs the institute.",
+      "pattern": {
+        "mechanism": "The Dominican state, employers and unions run INFOTEP jointly under Law 116-80, financed by an employer payroll contribution, and since 2020 the institute expanded its own centres and virtual offer to push enrolment past one million a year.",
+        "preconditions": [
+          "A compulsory employer training levy that gives the institute a revenue base independent of the annual budget contest",
+          "Tripartite governance that keeps employers invested in the course offer",
+          "A dense network of own and partner training centres, plus a virtual platform, to reach provinces outside Santo Domingo"
+        ],
+        "travelled": "INFOTEP belongs to the Latin American levy-funded training family with SENAI and SENA; El Salvador dissolved its counterpart, INSAFORP, in 2023, so the same model travelled and was then unwound next door."
+      }
+    },
+    {
+      "id": "ven-pai",
+      "indicatorId": "large_project_delivery",
+      "iso3": "VEN",
+      "title": "Programa Ampliado de Inmunizaciones, and its erosion",
+      "claim": "WHO and UNICEF estimated Venezuela's national DTP3 coverage among one-year-olds at 50 percent in 2025, down from 87 percent in 2015, and coverage has not returned above 66 percent in any year since 2017.",
+      "metric": {
+        "name": "Estimated DTP3 coverage among 1-year-olds",
+        "value": 50,
+        "unit": "% of 1-year-olds",
+        "asOf": "2025"
+      },
+      "secondMetric": {
+        "name": "Estimated DTP3 coverage at the 2015 peak",
+        "value": 87,
+        "unit": "% of 1-year-olds",
+        "asOf": "2015"
+      },
+      "started": 1980,
+      "status": "eroded",
+      "source": {
+        "publisher": "World Health Organization, Global Health Observatory: DTP3 immunization coverage among 1-year-olds (WUENIC)",
+        "url": "https://ghoapi.azureedge.net/api/WHS4_100?$filter=SpatialDim%20eq%20'VEN'",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "Construct fit is borrowed, not literal: DTP3 coverage is not the cost or schedule performance of an infrastructure project. It is filed here only on the bra-pni precedent, which EVIDENCE.md names as the reversal template (hti-immunization-erosion files the same kind of series under disaster_preparedness instead); a reviewer holding to the literal construct should reject it. The 87 percent peak is a single good year in a volatile series (50 in 2008, 87 in 2005 and 2015), and the WHO/UNICEF 2022-revision country profile (https://cdn.who.int/media/docs/default-source/country-profiles/immunization/2023-country-profiles/immunization_ven_2023.pdf) says the 2015 rise was 'due in part to a change in the population source', so part of the drop is a denominator artefact. Estimates rest on Venezuelan administrative reports with no nationally representative survey in the last five years; WHO/UNICEF graded recent years as having no accepted empirical data, and values are revised between rounds (2022 was 56 in the 2022 revision and 43 now). The same profile records national vaccine and syringe stockouts from 2016 to 2020, which locates the failure in supply rather than in the programme's design, but the series cannot separate economic collapse, emigration of health workers, sanctions-era procurement limits and denominator error. DTP3 is one antigen. PAHO separately documented that endemic measles transmission was re-established in Venezuela in 2018 and interrupted again in 2019 (https://journal.paho.org/en/articles/comprehensive-approach-achieving-reverification-measles-elimination-venezuela-2019-2023), which supports the erosion but is not part of this metric.",
+      "pattern": {
+        "mechanism": "Venezuela's health ministry ran a free national schedule through public clinics and held DTP3 near or above 80 percent for most of 2009 to 2016; when national procurement of vaccines and syringes failed during the economic collapse, the ministry kept the programme formally in place while coverage fell to around half of infants.",
+        "preconditions": [
+          "Hard-currency budgets and procurement able to keep vaccines and syringes in national stock",
+          "A clinic network staffed by vaccinators who stay through a crisis",
+          "Population denominators accurate enough that a fall in coverage is seen before an outbreak reveals it"
+        ],
+        "travelled": "Haiti shows the same erosion from stockouts and weak reporting; Venezuela adds that a fall can sit inside a denominator change for two years before an outbreak (measles in 2017 to 2019) makes it visible."
+      }
+    },
+    {
+      "id": "nic-sinapred",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "NIC",
+      "title": "SINAPRED evacuation for hurricanes Eta and Iota",
+      "claim": "Nicaragua's national disaster system, SINAPRED, evacuated 160,597 people and sheltered 59,964 ahead of hurricanes Eta and Iota in November 2020, when about 3 million people were exposed, and 21 lives were reported lost.",
+      "metric": {
+        "name": "People evacuated in Nicaragua for hurricanes Eta and Iota",
+        "value": 160597,
+        "unit": "people",
+        "asOf": "2020-11"
+      },
+      "secondMetric": {
+        "name": "Lives lost in Nicaragua to hurricanes Eta and Iota",
+        "value": 21,
+        "unit": "deaths",
+        "asOf": "2020-11"
+      },
+      "started": 2000,
+      "status": "operating",
+      "source": {
+        "publisher": "World Bank, Project Information Document, Nicaragua Hurricanes Eta and Iota Emergency Response Project (P175878), report PIDA31028",
+        "url": "https://documents1.worldbank.org/curated/en/542271615181513800/txt/Nicaragua-Hurricanes-Eta-and-Iota-Emergency-Response-Project.txt",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The World Bank document is an appraisal-stage project information note written days after landfall (dated 23 November 2020), and its evacuation, shelter and death figures are the Nicaraguan government's own preliminary counts relayed by the Bank, not an independent verification; the Nicaraguan government's casualty reporting has been disputed in other emergencies, notably COVID-19. The figures show people moved and lives reported lost, not how many people at risk were not reached, the conditions in shelters during a pandemic, or the speed and quality of recovery: the same document puts damage and losses at USD 738.6 million, about 6.2 percent of GDP. Low deaths also depend on where the storms struck (the sparsely populated North Caribbean Coast) and on forecast lead time from regional meteorological centres, so the count is not a clean measure of SINAPRED alone. The 1994-2013 average of 160 hydrometeorological deaths a year is a different set of hazards and is context, not a counterfactual. SINAPRED's own site did not open from here (connection timeout), so the government primary source could not be checked. One hurricane season is a single test.",
+      "pattern": {
+        "mechanism": "Nicaragua's government built a statutory disaster system under Law 337 that runs a national operations committee and a technical arm (INETER), and used it in 2020 to move about 160,000 people out of the path of two major hurricanes within two weeks.",
+        "preconditions": [
+          "A statutory chain of command from national committee to municipal and community brigades",
+          "Forecasting and early warning that give days of lead time before landfall",
+          "A centralised state able to order and enforce evacuation, which in Nicaragua's case comes with weak independent oversight of its reported results"
+        ],
+        "travelled": "The same sequence of statutory system, community brigades and pre-landfall evacuation underlies Cuba's hurricane record; where the state is less centralised, the evacuation step depends more on trust in warnings than on command."
+      }
+    },
+    {
+      "id": "hti-cholera-elimination",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "HTI",
+      "title": "National cholera elimination drive, and the return of cholera",
+      "claim": "After Haiti's Ministry of Public Health (MSPP) and water directorate DINEPA launched the National Plan for the Elimination of Cholera in 2013, the country reported no confirmed cholera case from January 2019 to January 2022, but transmission returned in October 2022 and the MSPP epidemiology directorate had reported 76,675 suspected cases in all 10 departments by 18 December 2023.",
+      "metric": {
+        "name": "Suspected cholera cases reported since the October 2022 re-emergence",
+        "value": 76675,
+        "unit": "suspected cases (cumulative)",
+        "asOf": "2023-12-18"
+      },
+      "secondMetric": {
+        "name": "Consecutive years with no confirmed cholera case before re-emergence",
+        "value": 3,
+        "unit": "years",
+        "asOf": "2019-01 to 2022-01"
+      },
+      "started": 2013,
+      "status": "eroded",
+      "source": {
+        "publisher": "Pan American Health Organization / WHO, Cholera Epidemic in Haiti and the Dominican Republic, Situation Report #20 (27 December 2023), citing MSPP/DELR",
+        "url": "https://iris.paho.org/server/api/core/bitstreams/f35c6be8-01c2-4e09-98df-b9b76625e50b/content",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The two numbers are in different units: a three-year run with zero confirmed cases is set against a cumulative count of suspected cases, so the record shows a loss of the elimination outcome, not a measured fall in a capability. Part of the apparent elimination may be under-detection; WHO reports national figures and does not audit them. Suspected-case counts depend on clinical definitions and reporting under gang violence that cut access to clinics and labs, so the 76,675 figure is likely an undercount and not comparable with the 2010 to 2019 series. The re-emergence was driven mainly by insecurity, displacement and the collapse of water supply, which the elimination plan's water and sanitation targets never fixed; it is weak evidence about the surveillance and rapid-response capacity itself. Much of the response (rapid response teams, oral vaccine, water investments) was financed and technically run with PAHO, UNICEF, CDC and NGOs, so attribution to Haitian institutions alone is partial. The started year, 2013, is the year the plan was announced and funding requested, since the PAHO page is a funding call, and not a dated start of delivery; control activities had run since the October 2010 outbreak. The secondMetric comes from a separate WHO page.",
+      "pattern": {
+        "mechanism": "Haiti's MSPP and DINEPA pursued elimination through case surveillance, case-area rapid response teams and targeted vaccination, with partner financing, and drove confirmed transmission to zero. When insecurity, displacement and water-system collapse returned in 2022, the response chain broke and cholera spread back to every department.",
+        "preconditions": [
+          "Laboratory-confirmed surveillance with field teams able to reach every reported case within days",
+          "Safe water and sanitation coverage that removes the transmission route, not only emergency treatment",
+          "Enough security and sustained financing to keep response teams and supplies moving after donor attention fades"
+        ],
+        "travelled": "Case-area targeted response has been copied in other cholera-endemic settings, and Haiti shows it can push transmission to zero without fixing the water system, which leaves the result reversible."
+      }
+    },
+    {
+      "id": "hti-petrocaribe",
+      "indicatorId": "large_project_delivery",
+      "iso3": "HTI",
+      "title": "PetroCaribe-financed public investment programme, and its audited failure",
+      "claim": "From September 2008 to September 2016, Haiti's Council of Ministers allocated PetroCaribe oil-credit revenue to 409 public projects, and the state fuel monetisation bureau BMPAD disbursed US$1,605,905,287.84 (92.4% of the revised budget), but the Superior Court of Auditors (CSCCA) found cost and schedule overruns across the audited works, including a Cap-Haïtien street rehabilitation that ran 18% over budget and took 21 months against an eight-month contract term.",
+      "metric": {
+        "name": "PetroCaribe project funds disbursed by BMPAD across 409 Council-of-Ministers projects",
+        "value": 1605905287.84,
+        "unit": "US dollars (cumulative, 92.4% of revised budget of US$1,738,691,909.70)",
+        "asOf": "2008-09 to 2016-09"
+      },
+      "secondMetric": {
+        "name": "Budget overrun on the audited Cap-Haïtien street rehabilitation, phase 1 (MTPTC)",
+        "value": 18,
+        "unit": "% over contract amount",
+        "asOf": "2010-03-18 start, completed in 21 months"
+      },
+      "started": 2008,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Cour Supérieure des Comptes et du Contentieux Administratif (CSCCA), Audit spécifique de gestion du fonds PetroCaribe, rapport 3 (August 2020)",
+        "url": "https://cscca.gouv.ht/uploads/documents/1748323257_petrocaribe_rapport_3_16_aout_2020.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The headline number is money disbursed, not works delivered: the CSCCA itself says missing reception certificates often stop it concluding whether a contract was finished or abandoned, and it documents abandoned works such as the Miragoâne market and bus station, stopped at 35.27% progress, a figure from report 1 (31 January 2019). The court publishes no aggregate cost or schedule overrun for the 409 projects. The 18% overrun is one audited road project picked as the cost figure, with no claim that it is typical; other audited projects show overruns of 9%, 10%, 33% and 54% against contract (reports 1 and 3), and some came in under budget. Report 1 gives the Cap-Haïtien contract an 8-month term but a contractual end date of 14 May 2011 (start 18 March 2010), so the schedule overrun is 21 months against 8 or against about 14 depending on which line of the court's own sheet is read. The audit covers a sample of projects across three reports of roughly 1,000 pages each, every figure has to be read out of a PDF, and contractors contested several findings in report 3's annex. The 'dismantled' status rests on the audit ledger: the last resolution is dated 28 September 2016 and Venezuelan PetroCaribe supply then collapsed; no single Haitian text formally closing the programme was located. Projects were executed in a post-earthquake state of emergency that suspended normal procurement rules, which the court says enabled direct awards.",
+      "pattern": {
+        "mechanism": "Successive Haitian governments turned Venezuelan oil credit into a parallel capital budget, approving projects by Council-of-Ministers resolution under emergency law and having ministries such as MTPTC and MPCE award contracts directly. Spending reached US$1.6 billion, but without needs analysis, cost estimates or contract supervision, many works overran, stalled or could not be verified, and the money stopped when the oil credit ended.",
+        "preconditions": [
+          "A budget channel that runs through normal appropriation and procurement rather than ministerial resolutions under emergency powers",
+          "Project preparation, costing and supervision capacity in line ministries before money is committed",
+          "An independent audit body able to follow disbursements to physical completion while projects are live, not years later"
+        ],
+        "travelled": "Resource-backed off-budget investment funds in other oil-credit recipients show the same pattern: rapid disbursement, weak preparation and audits that arrive after the financing has gone."
+      }
+    },
+    {
+      "id": "cub-civil-defence",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "CUB",
+      "title": "Civil Defence hurricane evacuation system",
+      "claim": "Cuba's Civil Defence system and the provincial and municipal Defence Councils it activates evacuated and protected more than 735,000 people across eastern Cuba ahead of Hurricane Melissa, which struck as a Category 3 storm on 29 October 2025, according to UN OCHA.",
+      "metric": {
+        "name": "People evacuated and protected before Hurricane Melissa's landfall",
+        "value": 735000,
+        "unit": "people (more than)",
+        "asOf": "2025-10-29"
+      },
+      "secondMetric": {
+        "name": "People still evacuated about two weeks after landfall",
+        "value": 53000,
+        "unit": "people",
+        "asOf": "2025-11-14"
+      },
+      "started": 1997,
+      "status": "operating",
+      "source": {
+        "publisher": "UN Office for the Coordination of Humanitarian Affairs (OCHA), Six things to know about Hurricane Melissa's impact on Cuba",
+        "url": "https://www.unocha.org/news/six-things-know-about-hurricane-melissas-impact-cuba",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The 735,000 figure is the Cuban authorities' count relayed by OCHA, not independently verified, and it counts people moved, not lives saved: no official source located today states the death toll avoided, and the claim does not assert one.The system is military-led and rests on compulsory mobilisation through a one-party state's local structures, which may not transfer. Preparation is the strong half; recovery is weak: two weeks after landfall 53,000 people remained evacuated, nearly 150,000 homes were affected and nearly 60 per cent of Santiago de Cuba province had no electricity. The started year is the decree that set the current system of measures; the Civil Defence itself dates from the 1960s, which no official page opened today states with a year. The page is a UN news story, not a dataset, and a single event is one observation.",
+      "pattern": {
+        "mechanism": "Cuba's Civil Defence, under the armed forces ministry, activates provincial and municipal Defence Councils on a meteorological alert, and they move residents of low-lying and fragile housing to shelters or relatives' homes and secure crops and assets before landfall. The phased alert system set in law lets local authorities order evacuation without waiting for national instruction.",
+        "preconditions": [
+          "A trusted national meteorological service whose forecasts trigger pre-agreed alert phases",
+          "Local government and mass organisations that know every household and can order and organise movement block by block",
+          "Annual drills and a population that expects to evacuate, so compliance is routine rather than negotiated"
+        ],
+        "travelled": "Caribbean and Central American governments have studied the model through UNDP and regional disaster agencies; the early-warning and phased-alert parts travel, while the compulsory, block-level mobilisation depends on Cuba's political organisation."
+      }
     }
   ]
 }

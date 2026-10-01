@@ -134,6 +134,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 Entregas documentadas ligadas a indicadores ausentes. Elas não afetam as notas nem a solidez da evidência.
 
 - **National COVID-19 vaccination campaign** (Adaptação). Cuba's national COVID-19 vaccination campaign had given at least one vaccine dose to 94% of the country's population by 31 December 2021, according to the Pan American Health Organization.
+- **Civil Defence hurricane evacuation system** (Adaptação). Cuba's Civil Defence system and the provincial and municipal Defence Councils it activates evacuated and protected more than 735,000 people across eastern Cuba ahead of Hurricane Melissa, which struck as a Category 3 storm on 29 October 2025, according to UN OCHA.
 
 ## Contribua
 
