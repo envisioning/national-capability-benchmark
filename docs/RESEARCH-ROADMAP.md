@@ -48,7 +48,7 @@ raises O1 and breaks this.
 
 ### Where the objectives stand
 
-Dataset 7.1.0. Recompute from `data/out/diagnostics.json` and
+Dataset 7.1.0 with D127 and D128 (Agency and Shared purpose rows). Recompute from `data/out/diagnostics.json` and
 `data/out/index.json` after any rescore; never carry these figures forward by
 hand.
 
@@ -56,10 +56,10 @@ hand.
 | --- | ---: | ---: | ---: | --- |
 | Trust | 0.31 | 2.6 | 0.57 (n 49) | misses O1 |
 | Experimentation | 0.23 | 2.6 | 0.62 | misses O1 |
-| Shared purpose | 0.26 | 1.9 | 0.46 | misses O1 |
+| Shared purpose | 0.34 | 2.6 | 0.20 (n 50) | misses O1 |
 | Coordination | 0.36 | 2.8 | 0.56 | misses O1 |
 | Learning | 0.50 | 3.9 | 0.75 | |
-| Agency | 0.38 | 2.9 | 0.64 | misses O1 |
+| Agency | 0.48 | 3.6 | 0.58 | |
 | Anticipation | 0.45 | 2.0 | 0.87 | tracks income |
 | Building | 0.55 | 3.9 | 0.43 | |
 | Adaptability | 0.64 | 4.8 | 0.74 | tracks income |
@@ -75,8 +75,9 @@ panel fell from 0.62 to 0.50 (46 countries, Trust left out for coverage).
 Two dimensions still track income above 0.70. Anticipation stays at 0.87 on
 its two capability rows, articles per head and statistical performance, which
 both track income themselves; that is a finding against the claim. Adaptability
-is 0.74. Agency and Learning now miss O1: the evidence on them was thinner than
-the stocks made it look, so the queue points there.
+is 0.74. Agency and Learning missed O1 at 7.0.0: the evidence on them was thinner
+than the stocks made it look. Agency crosses it on perceived control (D127),
+with the regime and response-style caveats in A15.
 
 ## The queue
 
