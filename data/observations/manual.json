@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T00:00:00.000Z",
+  "generatedAt": "2026-10-01T00:00:00.000Z",
   "observations": [
     {
       "indicatorId": "early_stage_entrepreneurial_activity",
@@ -90,16 +90,6 @@
       "sourceUrl": "https://www.gemconsortium.org/data/key-aps",
       "retrievedAt": "2026-08-26",
       "note": "GEM Adult Population Survey, TEA rate as published."
-    },
-    {
-      "indicatorId": "failure_tolerance",
-      "iso3": "SGP",
-      "value": 60.6,
-      "year": 2014,
-      "sourceTier": "academic_survey",
-      "sourceUrl": "https://www.gemconsortium.org/data/key-aps",
-      "retrievedAt": "2026-08-26",
-      "note": "100 minus the published GEM fear of failure rate of 39.40, which GEM measures among adults who see good opportunities."
     },
     {
       "indicatorId": "early_stage_entrepreneurial_activity",
@@ -320,6 +310,386 @@
       "sourceUrl": "https://www.gemconsortium.org/data/key-aps",
       "retrievedAt": "2026-08-26",
       "note": "100 minus the published GEM fear of failure rate of 44.10, which GEM measures among adults who see good opportunities."
+    },
+    {
+      "indicatorId": "early_stage_entrepreneurial_activity",
+      "iso3": "ARE",
+      "value": 20.4,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "GEM TEA rate as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A1 (continued), printed page 225 (PDF page 227), \"Total early-stage Entrepreneurial Activity (TEA)\" (score) column. Latest of the GEM data years 2022-2025 in which the country appears (2022, 2024, 2025). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page (D125)."
+    },
+    {
+      "indicatorId": "failure_tolerance",
+      "iso3": "ARE",
+      "value": 44.8,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "100 minus the published GEM fear of failure rate of 55.20, which GEM measures among adults who see good opportunities, as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A2 (continued), printed page 228 (PDF page 230), \"There are good opportunities, but I would not start a business for fear it might fail\" (% of adults seeing good opportunities) column. Latest of the GEM data years 2022-2025 in which the country appears (2022, 2024, 2025); only the 2019+ question is used (D125). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page."
+    },
+    {
+      "indicatorId": "early_stage_entrepreneurial_activity",
+      "iso3": "CAN",
+      "value": 27.4,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "GEM TEA rate as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A1, printed page 223 (PDF page 225), \"Total early-stage Entrepreneurial Activity (TEA)\" (score) column. Latest of the GEM data years 2022-2025 in which the country appears (2022, 2023, 2024, 2025). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page (D125)."
+    },
+    {
+      "indicatorId": "failure_tolerance",
+      "iso3": "CAN",
+      "value": 49.7,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "100 minus the published GEM fear of failure rate of 50.30, which GEM measures among adults who see good opportunities, as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A2, printed page 226 (PDF page 228), \"There are good opportunities, but I would not start a business for fear it might fail\" (% of adults seeing good opportunities) column. Latest of the GEM data years 2022-2025 in which the country appears (2022, 2023, 2024, 2025); only the 2019+ question is used (D125). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page."
+    },
+    {
+      "indicatorId": "early_stage_entrepreneurial_activity",
+      "iso3": "CHN",
+      "value": 5.4,
+      "year": 2024,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51621",
+      "retrievedAt": "2026-10-01",
+      "note": "GEM TEA rate as printed in GEM 2024/2025 Global Report (GEM 2024 Adult Population Survey), Table A3, printed page 222 (PDF page 224), \"Total early-stage Entrepreneurial Activity (TEA)\" (score) column. Latest of the GEM data years 2022-2025 in which the country appears (2022, 2023, 2024). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page (D125)."
+    },
+    {
+      "indicatorId": "failure_tolerance",
+      "iso3": "CHN",
+      "value": 37.8,
+      "year": 2024,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51621",
+      "retrievedAt": "2026-10-01",
+      "note": "100 minus the published GEM fear of failure rate of 62.20, which GEM measures among adults who see good opportunities, as printed in GEM 2024/2025 Global Report (GEM 2024 Adult Population Survey), Table A2, printed page 219 (PDF page 221), \"There are good opportunities, but I would not start a business for fear it might fail\" (% of adults seeing good opportunities) column. Latest of the GEM data years 2022-2025 in which the country appears (2022, 2023, 2024); only the 2019+ question is used (D125). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page."
+    },
+    {
+      "indicatorId": "early_stage_entrepreneurial_activity",
+      "iso3": "DEU",
+      "value": 13.0,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "GEM TEA rate as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A1, printed page 223 (PDF page 225), \"Total early-stage Entrepreneurial Activity (TEA)\" (score) column. Latest of the GEM data years 2022-2025 in which the country appears (2022, 2023, 2024, 2025). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page (D125)."
+    },
+    {
+      "indicatorId": "failure_tolerance",
+      "iso3": "DEU",
+      "value": 59.4,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "100 minus the published GEM fear of failure rate of 40.60, which GEM measures among adults who see good opportunities, as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A2, printed page 226 (PDF page 228), \"There are good opportunities, but I would not start a business for fear it might fail\" (% of adults seeing good opportunities) column. Latest of the GEM data years 2022-2025 in which the country appears (2022, 2023, 2024, 2025); only the 2019+ question is used (D125). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page."
+    },
+    {
+      "indicatorId": "early_stage_entrepreneurial_activity",
+      "iso3": "ECU",
+      "value": 29.6,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "GEM TEA rate as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A1, printed page 223 (PDF page 225), \"Total early-stage Entrepreneurial Activity (TEA)\" (score) column. Latest of the GEM data years 2022-2025 in which the country appears (2023, 2024, 2025). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page (D125)."
+    },
+    {
+      "indicatorId": "failure_tolerance",
+      "iso3": "ECU",
+      "value": 42.7,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "100 minus the published GEM fear of failure rate of 57.30, which GEM measures among adults who see good opportunities, as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A2, printed page 226 (PDF page 228), \"There are good opportunities, but I would not start a business for fear it might fail\" (% of adults seeing good opportunities) column. Latest of the GEM data years 2022-2025 in which the country appears (2023, 2024, 2025); only the 2019+ question is used (D125). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page."
+    },
+    {
+      "indicatorId": "early_stage_entrepreneurial_activity",
+      "iso3": "ESP",
+      "value": 7.8,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "GEM TEA rate as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A1 (continued), printed page 225 (PDF page 227), \"Total early-stage Entrepreneurial Activity (TEA)\" (score) column. Latest of the GEM data years 2022-2025 in which the country appears (2022, 2023, 2024, 2025). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page (D125)."
+    },
+    {
+      "indicatorId": "failure_tolerance",
+      "iso3": "ESP",
+      "value": 48.0,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "100 minus the published GEM fear of failure rate of 52.00, which GEM measures among adults who see good opportunities, as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A2 (continued), printed page 228 (PDF page 230), \"There are good opportunities, but I would not start a business for fear it might fail\" (% of adults seeing good opportunities) column. Latest of the GEM data years 2022-2025 in which the country appears (2022, 2023, 2024, 2025); only the 2019+ question is used (D125). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page."
+    },
+    {
+      "indicatorId": "early_stage_entrepreneurial_activity",
+      "iso3": "FIN",
+      "value": 6.1,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "GEM TEA rate as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A1, printed page 223 (PDF page 225), \"Total early-stage Entrepreneurial Activity (TEA)\" (score) column. Latest of the GEM data years 2022-2025 in which the country appears (2025). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page (D125)."
+    },
+    {
+      "indicatorId": "failure_tolerance",
+      "iso3": "FIN",
+      "value": 58.4,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "100 minus the published GEM fear of failure rate of 41.60, which GEM measures among adults who see good opportunities, as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A2, printed page 226 (PDF page 228), \"There are good opportunities, but I would not start a business for fear it might fail\" (% of adults seeing good opportunities) column. Latest of the GEM data years 2022-2025 in which the country appears (2025); only the 2019+ question is used (D125). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page."
+    },
+    {
+      "indicatorId": "early_stage_entrepreneurial_activity",
+      "iso3": "FRA",
+      "value": 11.6,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "GEM TEA rate as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A1, printed page 223 (PDF page 225), \"Total early-stage Entrepreneurial Activity (TEA)\" (score) column. Latest of the GEM data years 2022-2025 in which the country appears (2022, 2023, 2024, 2025). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page (D125)."
+    },
+    {
+      "indicatorId": "failure_tolerance",
+      "iso3": "FRA",
+      "value": 57.3,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "100 minus the published GEM fear of failure rate of 42.70, which GEM measures among adults who see good opportunities, as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A2, printed page 226 (PDF page 228), \"There are good opportunities, but I would not start a business for fear it might fail\" (% of adults seeing good opportunities) column. Latest of the GEM data years 2022-2025 in which the country appears (2022, 2023, 2024, 2025); only the 2019+ question is used (D125). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page."
+    },
+    {
+      "indicatorId": "early_stage_entrepreneurial_activity",
+      "iso3": "GBR",
+      "value": 21.9,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "GEM TEA rate as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A1 (continued), printed page 225 (PDF page 227), \"Total early-stage Entrepreneurial Activity (TEA)\" (score) column. Latest of the GEM data years 2022-2025 in which the country appears (2022, 2023, 2024, 2025). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page (D125)."
+    },
+    {
+      "indicatorId": "failure_tolerance",
+      "iso3": "GBR",
+      "value": 50.4,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "100 minus the published GEM fear of failure rate of 49.60, which GEM measures among adults who see good opportunities, as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A2 (continued), printed page 228 (PDF page 230), \"There are good opportunities, but I would not start a business for fear it might fail\" (% of adults seeing good opportunities) column. Latest of the GEM data years 2022-2025 in which the country appears (2022, 2023, 2024, 2025); only the 2019+ question is used (D125). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page."
+    },
+    {
+      "indicatorId": "early_stage_entrepreneurial_activity",
+      "iso3": "GTM",
+      "value": 25.4,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "GEM TEA rate as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A1, printed page 223 (PDF page 225), \"Total early-stage Entrepreneurial Activity (TEA)\" (score) column. Latest of the GEM data years 2022-2025 in which the country appears (2022, 2023, 2024, 2025). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page (D125)."
+    },
+    {
+      "indicatorId": "failure_tolerance",
+      "iso3": "GTM",
+      "value": 61.2,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "100 minus the published GEM fear of failure rate of 38.80, which GEM measures among adults who see good opportunities, as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A2, printed page 226 (PDF page 228), \"There are good opportunities, but I would not start a business for fear it might fail\" (% of adults seeing good opportunities) column. Latest of the GEM data years 2022-2025 in which the country appears (2022, 2023, 2024, 2025); only the 2019+ question is used (D125). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page."
+    },
+    {
+      "indicatorId": "early_stage_entrepreneurial_activity",
+      "iso3": "IDN",
+      "value": 8.1,
+      "year": 2022,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51147",
+      "retrievedAt": "2026-10-01",
+      "note": "GEM TEA rate as printed in GEM 2022/2023 Global Report (GEM 2022 Adult Population Survey), Table A2, printed page 224 (PDF page 226), \"Total early-stage Entrepreneurial Activity (TEA)\" (score) column. Latest of the GEM data years 2022-2025 in which the country appears (2022). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page (D125)."
+    },
+    {
+      "indicatorId": "failure_tolerance",
+      "iso3": "IDN",
+      "value": 63.2,
+      "year": 2022,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51147",
+      "retrievedAt": "2026-10-01",
+      "note": "100 minus the published GEM fear of failure rate of 36.80, which GEM measures among adults who see good opportunities, as printed in GEM 2022/2023 Global Report (GEM 2022 Adult Population Survey), Table A3, printed page 227 (PDF page 229), \"There are good opportunities, but I would not start a business for fear it might fail\" (% of adults seeing good opportunities) column. Latest of the GEM data years 2022-2025 in which the country appears (2022); only the 2019+ question is used (D125). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page."
+    },
+    {
+      "indicatorId": "early_stage_entrepreneurial_activity",
+      "iso3": "ISR",
+      "value": 8.9,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "GEM TEA rate as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A1, printed page 223 (PDF page 225), \"Total early-stage Entrepreneurial Activity (TEA)\" (score) column. Latest of the GEM data years 2022-2025 in which the country appears (2022, 2023, 2024, 2025). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page (D125)."
+    },
+    {
+      "indicatorId": "failure_tolerance",
+      "iso3": "ISR",
+      "value": 49.9,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "100 minus the published GEM fear of failure rate of 50.10, which GEM measures among adults who see good opportunities, as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A2, printed page 226 (PDF page 228), \"There are good opportunities, but I would not start a business for fear it might fail\" (% of adults seeing good opportunities) column. Latest of the GEM data years 2022-2025 in which the country appears (2022, 2023, 2024, 2025); only the 2019+ question is used (D125). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page."
+    },
+    {
+      "indicatorId": "early_stage_entrepreneurial_activity",
+      "iso3": "JPN",
+      "value": 6.4,
+      "year": 2022,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51147",
+      "retrievedAt": "2026-10-01",
+      "note": "GEM TEA rate as printed in GEM 2022/2023 Global Report (GEM 2022 Adult Population Survey), Table A2, printed page 224 (PDF page 226), \"Total early-stage Entrepreneurial Activity (TEA)\" (score) column. Latest of the GEM data years 2022-2025 in which the country appears (2022). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page (D125)."
+    },
+    {
+      "indicatorId": "failure_tolerance",
+      "iso3": "JPN",
+      "value": 49.1,
+      "year": 2022,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51147",
+      "retrievedAt": "2026-10-01",
+      "note": "100 minus the published GEM fear of failure rate of 50.90, which GEM measures among adults who see good opportunities, as printed in GEM 2022/2023 Global Report (GEM 2022 Adult Population Survey), Table A3, printed page 227 (PDF page 229), \"There are good opportunities, but I would not start a business for fear it might fail\" (% of adults seeing good opportunities) column. Latest of the GEM data years 2022-2025 in which the country appears (2022); only the 2019+ question is used (D125). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page."
+    },
+    {
+      "indicatorId": "early_stage_entrepreneurial_activity",
+      "iso3": "PAN",
+      "value": 31.3,
+      "year": 2023,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51377",
+      "retrievedAt": "2026-10-01",
+      "note": "GEM TEA rate as printed in GEM 2023/2024 Global Report (GEM 2023 Adult Population Survey), Table A2, printed page 212 (PDF page 214), \"Total early-stage Entrepreneurial Activity (TEA)\" (score) column. Latest of the GEM data years 2022-2025 in which the country appears (2022, 2023). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page (D125)."
+    },
+    {
+      "indicatorId": "failure_tolerance",
+      "iso3": "PAN",
+      "value": 58.6,
+      "year": 2023,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51377",
+      "retrievedAt": "2026-10-01",
+      "note": "100 minus the published GEM fear of failure rate of 41.40, which GEM measures among adults who see good opportunities, as printed in GEM 2023/2024 Global Report (GEM 2023 Adult Population Survey), Table A3 (continued), printed page 217 (PDF page 219), \"There are good opportunities, but I would not start a business for fear it might fail\" (% of adults seeing good opportunities) column. Latest of the GEM data years 2022-2025 in which the country appears (2022, 2023); only the 2019+ question is used (D125). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page."
+    },
+    {
+      "indicatorId": "early_stage_entrepreneurial_activity",
+      "iso3": "POL",
+      "value": 2.9,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "GEM TEA rate as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A1 (continued), printed page 225 (PDF page 227), \"Total early-stage Entrepreneurial Activity (TEA)\" (score) column. Latest of the GEM data years 2022-2025 in which the country appears (2022, 2023, 2024, 2025). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page (D125)."
+    },
+    {
+      "indicatorId": "failure_tolerance",
+      "iso3": "POL",
+      "value": 50.6,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "100 minus the published GEM fear of failure rate of 49.40, which GEM measures among adults who see good opportunities, as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A2 (continued), printed page 228 (PDF page 230), \"There are good opportunities, but I would not start a business for fear it might fail\" (% of adults seeing good opportunities) column. Latest of the GEM data years 2022-2025 in which the country appears (2022, 2023, 2024, 2025); only the 2019+ question is used (D125). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page."
+    },
+    {
+      "indicatorId": "early_stage_entrepreneurial_activity",
+      "iso3": "SLV",
+      "value": 23.9,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "GEM TEA rate as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A1, printed page 223 (PDF page 225), \"Total early-stage Entrepreneurial Activity (TEA)\" (score) column. Latest of the GEM data years 2022-2025 in which the country appears (2025). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page (D125)."
+    },
+    {
+      "indicatorId": "failure_tolerance",
+      "iso3": "SLV",
+      "value": 53.1,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "100 minus the published GEM fear of failure rate of 46.90, which GEM measures among adults who see good opportunities, as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A2, printed page 226 (PDF page 228), \"There are good opportunities, but I would not start a business for fear it might fail\" (% of adults seeing good opportunities) column. Latest of the GEM data years 2022-2025 in which the country appears (2025); only the 2019+ question is used (D125). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page."
+    },
+    {
+      "indicatorId": "early_stage_entrepreneurial_activity",
+      "iso3": "SWE",
+      "value": 9.6,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "GEM TEA rate as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A1 (continued), printed page 225 (PDF page 227), \"Total early-stage Entrepreneurial Activity (TEA)\" (score) column. Latest of the GEM data years 2022-2025 in which the country appears (2022, 2023, 2024, 2025). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page (D125)."
+    },
+    {
+      "indicatorId": "failure_tolerance",
+      "iso3": "SWE",
+      "value": 57.4,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "100 minus the published GEM fear of failure rate of 42.60, which GEM measures among adults who see good opportunities, as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A2 (continued), printed page 228 (PDF page 230), \"There are good opportunities, but I would not start a business for fear it might fail\" (% of adults seeing good opportunities) column. Latest of the GEM data years 2022-2025 in which the country appears (2022, 2023, 2024, 2025); only the 2019+ question is used (D125). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page."
+    },
+    {
+      "indicatorId": "early_stage_entrepreneurial_activity",
+      "iso3": "THA",
+      "value": 19.0,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "GEM TEA rate as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A1 (continued), printed page 225 (PDF page 227), \"Total early-stage Entrepreneurial Activity (TEA)\" (score) column. Latest of the GEM data years 2022-2025 in which the country appears (2023, 2024, 2025). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page (D125)."
+    },
+    {
+      "indicatorId": "failure_tolerance",
+      "iso3": "THA",
+      "value": 53.2,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "100 minus the published GEM fear of failure rate of 46.80, which GEM measures among adults who see good opportunities, as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A2 (continued), printed page 228 (PDF page 230), \"There are good opportunities, but I would not start a business for fear it might fail\" (% of adults seeing good opportunities) column. Latest of the GEM data years 2022-2025 in which the country appears (2023, 2024, 2025); only the 2019+ question is used (D125). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page."
+    },
+    {
+      "indicatorId": "early_stage_entrepreneurial_activity",
+      "iso3": "VEN",
+      "value": 7.7,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "GEM TEA rate as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A1 (continued), printed page 225 (PDF page 227), \"Total early-stage Entrepreneurial Activity (TEA)\" (score) column. Latest of the GEM data years 2022-2025 in which the country appears (2022, 2023, 2024, 2025). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page (D125)."
+    },
+    {
+      "indicatorId": "failure_tolerance",
+      "iso3": "VEN",
+      "value": 68.0,
+      "year": 2025,
+      "sourceTier": "academic_survey",
+      "sourceUrl": "https://www.gemconsortium.org/file/open?fileId=51858",
+      "retrievedAt": "2026-10-01",
+      "note": "100 minus the published GEM fear of failure rate of 32.00, which GEM measures among adults who see good opportunities, as printed in GEM 2025/2026 Global Report (GEM 2025 Adult Population Survey), Table A2 (continued), printed page 228 (PDF page 230), \"There are good opportunities, but I would not start a business for fear it might fail\" (% of adults seeing good opportunities) column. Latest of the GEM data years 2022-2025 in which the country appears (2022, 2023, 2024, 2025); only the 2019+ question is used (D125). Extracted with docs/research/experimentation/gem-extract.py and checked against the rendered page."
     }
   ]
 }
