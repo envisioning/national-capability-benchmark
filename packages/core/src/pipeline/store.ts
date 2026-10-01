@@ -24,7 +24,7 @@ async function readJson(path: string): Promise<unknown | null> {
 /** All observations from the registered source files. */
 export async function loadObservations(): Promise<Observation[]> {
   const out: Observation[] = []
-  for (const path of [FILES.worldBank, FILES.jointEvsWvs, FILES.vdem, FILES.manual]) {
+  for (const path of [FILES.worldBank, FILES.jointEvsWvs, FILES.vdem, FILES.unctad, FILES.manual]) {
     const raw = await readJson(path)
     if (!raw) continue
     const parsed = ObservationFile.safeParse(raw)

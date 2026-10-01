@@ -11,6 +11,7 @@ pnpm install
 pnpm bench ingest      fetch World Bank series from 1990 into data/observations/worldbank.json
 pnpm bench trust fetch import the pinned Joint EVS/WVS A165 trust table into data/observations/joint-evs-wvs.json
 pnpm bench vdem fetch  import the pinned V-Dem civil-society series into data/observations/vdem-cy-core.json
+pnpm bench unctad fetch import the pinned UNCTADstat export concentration index into data/observations/unctad-concentration.json (needs bsdtar)
 pnpm bench score       normalise and score, write data/out/index.json, data/out/countries/*.json and table.csv
 pnpm bench delphi      run the LLM panel (add --mock to run offline)
 pnpm bench diagnose    correlations, redundancy, GDP-sensitivity test
@@ -80,7 +81,8 @@ port 3888. That entry starts Next directly and does not use the proxy.
 - `apps/web` — Next.js viewer. Reads `data/out/*.json` at request time.
 - `data/observations` — raw values with source and year. `worldbank.json` holds
   the World Bank series, `joint-evs-wvs.json` holds the pinned Trust adapter
-  output and `vdem-cy-core.json` holds the pinned V-Dem adapter output.
+  output, `vdem-cy-core.json` holds the pinned V-Dem adapter output and
+  `unctad-concentration.json` holds the pinned UNCTADstat adapter output.
   `revisions.json` is the append-only log of what each run restated,
   added or dropped, and `snapshots/` holds dated full copies written only on
   `--snapshot`.
