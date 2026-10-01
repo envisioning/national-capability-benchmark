@@ -9,6 +9,21 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.19.0 — 2026-10-01
+
+- **Brazil's layer maps all nine capabilities.** `/brasil/mapa` lists the
+  nine in the model's order, each with Brazil's score, its confidence and
+  where the score sits against the median of the 10 income peers, and links
+  to one page per capability at `/brasil/mapa/<name>`, computed by the same
+  `buildCapabilityMap` as D130's Adaptability page. A capability with no
+  conditions (Coordination, Trust, Experimentation, Shared purpose) says so
+  and draws no conditions panel; thin confidence is stated beside the score.
+  Each page names the known artefacts that bear on its capability, by id,
+  from one table checked against the limits document. The layer's tab strip
+  gains one Mapa tab in place of the Adaptação tab, and `/brasil/adaptacao`
+  redirects to `/brasil/mapa/adaptacao`. The sitemap lists all ten pages.
+  See D133.
+
 ## Dataset 7.4.0 — 2026-10-01
 
 - **Trust scores court compliance (D131).** V-Dem's coding of how often the

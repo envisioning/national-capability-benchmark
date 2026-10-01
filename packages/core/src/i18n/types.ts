@@ -173,8 +173,6 @@ export type Lexicon = {
  * contract: no string here may say what a country should do. See D130.
  */
 export type CapabilityMapStrings = {
-  /** Tab label in a layer's nav. {dimension} */
-  navLabel: string
   /** {countryTopic} {dimension} */
   title: string
   /** {country} {dimension}: the page's metadata title. */
@@ -243,6 +241,55 @@ export type CapabilityMapStrings = {
   limitCorrelation: string
   /** Construct caveats per capability row id, each with the decisions it rests on. */
   rowCaveats: Record<string, { text: string; decisions: string[] }>
+  /**
+   * Hand-written facts about one country's row that the published output does
+   * not carry, keyed by iso3 and then row id. Keep this as short as possible:
+   * every entry is a sentence a re-ingest cannot correct, so each names the
+   * decision whose supersession would make it stale. See D133.
+   */
+  countryRowFacts: Record<string, Record<string, { text: string; decisions: string[] }>>
+  /** Said where a dimension has no conditions. {dimension} */
+  noConditions: string
+  /** Said where the dimension is below the coverage floor. {n} observed rows. */
+  floorNote: string
+  /** Said where confidence is thin. {band} */
+  thinNote: string
+  /** Lead-in to the dimension's own known artefacts, by id. {dimension} */
+  artefactsLine: string
+  /** Lead-in to the structural artefacts every score carries. */
+  artefactsStructural: string
+  /** Link text for one artefact. {id} */
+  artefactLink: string
+  /** {n}: peers with a value on one row. */
+  rowPeers: string
+  /** Link text back to the index of every map. */
+  indexLink: string
+  /** The index of every capability map in a layer. */
+  index: {
+    /** Tab label in a layer's nav. */
+    navLabel: string
+    /** {countryTopic} */
+    title: string
+    /** {country} */
+    metaTitle: string
+    /** {countryTopic} */
+    metaDescription: string
+    /** {countryTopic} {n} dimensions spelled {count} peers */
+    intro: string
+    /** {countryTopic} */
+    heading: string
+    colDimension: string
+    colPeerMedian: string
+    /** Position of the score against the peer median. */
+    above: string
+    below: string
+    level: string
+    /** No score or no peers: no comparison. */
+    none: string
+    /** {n} {count}: scored peers. */
+    peersScored: string
+    note: string
+  }
   /** Link text to the decision log entry that records this page. {id} */
   decisionLink: string
   /** Link text to the agenda of the same country. */

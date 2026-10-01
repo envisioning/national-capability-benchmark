@@ -1,4 +1,4 @@
-import { COUNTRIES, DIMENSIONS } from '@ncb/core'
+import { COUNTRIES, DIMENSIONS, MAP_DIMENSIONS } from '@ncb/core'
 import { loadIndex } from '@/lib/data'
 import { COUNTRY_LAYERS, INSTITUTION_MAPS } from '@/lib/layers'
 import { METHOD_PAGES } from '@/lib/nav'
@@ -9,6 +9,7 @@ import {
   agendaHref,
   capabilitiesHref,
   capabilityHref,
+  capabilityMapHref,
   objectionsHref,
   changelogHref,
   compareBaseHref,
@@ -61,6 +62,11 @@ export async function GET(): Promise<Response> {
     add(countryLayerHref(layer))
     for (const section of layer.sections) {
       if (section.slug) add(layerSectionHref(layer, section))
+    }
+    /* The map section's pages, one per capability, under its index. See D133. */
+    for (const dimension of MAP_DIMENSIONS) {
+      const href = capabilityMapHref(layer.iso3, dimension)
+      if (href) add(href)
     }
   }
   add(aboutHref)
