@@ -1,6 +1,6 @@
 import { INDICATORS, WB_PUBLISHER } from './indicators.js'
 import type { IndicatorDef, SourceTier } from './schema.js'
-import { JOINT_EVS_WVS_PUBLISHER, VDEM_PUBLISHER } from './source-catalog.js'
+import { JOINT_EVS_WVS_PUBLISHER, UNCTAD_PUBLISHER, VDEM_PUBLISHER } from './source-catalog.js'
 
 /**
  * Where the data comes from, described once for both the fetcher and the reader.
@@ -90,6 +90,7 @@ export const PUBLISHER_HOME: Record<string, string> = {
   'Global Entrepreneurship Monitor': 'https://www.gemconsortium.org',
   [JOINT_EVS_WVS_PUBLISHER]: 'https://www.worldvaluessurvey.org/WVSEVSjoint2017.jsp',
   [VDEM_PUBLISHER]: 'https://www.v-dem.net/data/the-v-dem-dataset/',
+  [UNCTAD_PUBLISHER]: 'https://unctadstat.unctad.org',
 }
 
 /** The official IBGE table used for the Brazil state-level Gini series. */

@@ -1,6 +1,6 @@
 # Capability agenda: Germany
 
-*Generated 2026-09-25*
+*Generated 2026-10-01*
 
 The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | not scored | 0.11 (very thin) | no trend |
 | Learning | 56.5 | 0.54 (usable) | +6.9 over 10 years using 2 indicators |
 | Experimentation | 72.5 | 0.18 (very thin) | +4.9 over 10 years using 2 indicators |
-| Adaptability | 85.8 | 0.48 (usable) | +5.2 over 10 years using 4 indicators |
+| Adaptability | 84.7 | 0.71 (good) | +5.2 over 10 years using 4 indicators |
 | Building | 64.4 | 0.62 (usable) | -1.6 over 10 years using 4 indicators |
 | Shared Purpose | 55.1 | 0.29 (thin) | -5.9 over 10 years using 2 indicators |
 
@@ -57,7 +57,7 @@ How effectively can independent actors organize around shared objectives?
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 85.8, confidence usable
+- Adaptability: 84.7, confidence good
 - Anticipation: 71.2, confidence usable
 - Building: 64.4, confidence usable
 - Agency: 63.8, confidence usable
@@ -65,7 +65,7 @@ These dimensions score at least 50 with usable evidence.
 
 ## Missing data
 
-25 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+23 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -84,8 +84,6 @@ These dimensions score at least 50 with usable evidence.
 | Experimentation | Regulatory sandbox activity | Number and breadth of live regulatory sandboxes and controlled trial regimes. |
 | Experimentation | University spinouts | Companies formed to commercialise university research, per million people. |
 | Experimentation | Business share of R&D | Share of gross R&D expenditure performed by business enterprises. |
-| Adaptability | Long-term unemployment share | Unemployed for 12 months or more, as a share of total unemployment. |
-| Adaptability | Export diversification | Inverse concentration of the export basket by product. |
 | Adaptability | Disaster preparedness and recovery | Demonstrated capacity to prepare for and recover from major shocks. |
 | Adaptability | Institutional responsiveness | Speed at which rules and public programmes are changed in response to new conditions. |
 | Building | Large project delivery | Cost and schedule performance of major public infrastructure projects. |

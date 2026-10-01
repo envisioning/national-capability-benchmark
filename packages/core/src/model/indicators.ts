@@ -2,9 +2,16 @@ import { z } from 'zod'
 import { IndicatorDef } from './schema.js'
 import type { Dimension } from './dimensions.js'
 import {
+  ILOSTAT_LTU_ADAPTER_ID,
+  ILOSTAT_LTU_DATAFLOW,
+  ILOSTAT_LTU_PAGE_URL,
+  ILOSTAT_PUBLISHER,
   JOINT_EVS_WVS_PUBLISHER,
   JOINT_EVS_WVS_RESULTS_URL,
-  VDEM_CY_CORE_V15_PAGE_URL,
+  UNCTAD_CONCENTRATION_DATASET,
+  UNCTAD_CONCENTRATION_PAGE_URL,
+  UNCTAD_PUBLISHER,
+  VDEM_CY_V15_PAGE_URL,
   VDEM_PUBLISHER,
 } from './source-catalog.js'
 
@@ -325,7 +332,7 @@ const RAW: Raw[] = [
     unit: 'index 0-1',
     measurementClass: 'C',
     direction: 'higher_better',
-    source: { publisher: VDEM_PUBLISHER, series: 'v2x_cspart', url: VDEM_CY_CORE_V15_PAGE_URL, tier: 'expert_panel', inspectable: true },
+    source: { publisher: VDEM_PUBLISHER, series: 'v2x_cspart', url: VDEM_CY_V15_PAGE_URL, tier: 'expert_panel', inspectable: true },
     ingest: 'adapter',
     notes: 'V-Dem civil society participation index, country-year release v15. It is expert-coded rather than administrative data, so it remains a perception-adjacent measure and its wealth correlation is reviewed in D83.',
     wealthProxyPrior: 0.15,
@@ -723,9 +730,16 @@ const RAW: Raw[] = [
     unit: '% of unemployed',
     measurementClass: 'O',
     direction: 'lower_better',
-    source: { publisher: 'ILOSTAT', tier: 'international_organization', inspectable: true },
-    ingest: 'gap',
-    notes: 'Closer to reallocation speed than the headline rate: it asks whether people who lose work find new work. ILOSTAT publishes it; the World Bank API does not carry it.',
+    source: {
+      publisher: ILOSTAT_PUBLISHER,
+      series: ILOSTAT_LTU_DATAFLOW,
+      adapter: ILOSTAT_LTU_ADAPTER_ID,
+      url: ILOSTAT_LTU_PAGE_URL,
+      tier: 'international_organization',
+      inspectable: true,
+    },
+    ingest: 'adapter',
+    notes: 'Derived from ILOSTAT unemployment by duration: 12 months or more over the unemployed whose duration is stated, both sexes, age 15 and over, a labour force survey preferred where ILOSTAT holds more than one. Read it beside the unemployment rate, because a high share means two different things: slow reallocation, where people who lose work stay out of it (South Africa, Kenya, Nigeria), or a small residual pool in a tight market, where the few left unemployed are the hardest to place (Switzerland, Japan). Some national questionnaires cannot record a long search, so the adapter runs a plausibility gate on every country: it drops a year under 3%, every year of a survey whose median is under 3%, a one- or two-year spike of more than 15 points that the series returns from, and a latest year that jumps more than 15 points with no later year to confirm it, then emits the latest year that survives. Every dropped value is logged in the source memo. See D120.',
     wealthProxyPrior: 0.2,
   },
   {
@@ -758,13 +772,21 @@ const RAW: Raw[] = [
     id: 'export_diversification',
     dimension: 'adaptability',
     name: 'Export diversification',
-    definition: 'Inverse concentration of the export basket by product.',
-    unit: 'index 0-1',
+    definition:
+      'Concentration of the merchandise export basket across products: the normalised Herfindahl-Hirschman index over SITC Rev.3 3-digit lines, 0 when exports are spread evenly and 1 when one product is everything.',
+    unit: 'index 0-1, lower = more diversified',
     measurementClass: 'C',
-    direction: 'higher_better',
-    source: { publisher: 'UNCTAD', tier: 'international_organization', inspectable: true },
-    ingest: 'gap',
-    notes: 'UNCTAD publishes the concentration index and it is computable. Another good candidate for the next adapter.',
+    direction: 'lower_better',
+    source: {
+      publisher: UNCTAD_PUBLISHER,
+      series: UNCTAD_CONCENTRATION_DATASET,
+      url: UNCTAD_CONCENTRATION_PAGE_URL,
+      tier: 'international_organization',
+      inspectable: true,
+    },
+    ingest: 'adapter',
+    notes:
+      'UNCTADstat Concentration Index for exports, stored as published. It reads a product mix, not the capacity to switch: Switzerland (gold and pharmaceuticals), Ireland (pharmaceuticals) and Singapore (re-exports) look concentrated because a few lines are worth a lot, not because they are fragile. Commodity exporters move with prices from year to year even when the basket does not change. Merchandise only, so a services-led export base reads as narrower than it is. Values UNCTAD marks Estimated, mirrored from partner data, say so in their observation note. See D119.',
     wealthProxyPrior: 0.3,
   },
   {
@@ -979,7 +1001,7 @@ const RAW: Raw[] = [
     direction: 'lower_better',
     source: { publisher: 'V-Dem', tier: 'expert_panel', inspectable: true },
     ingest: 'gap',
-    notes: 'V-Dem political polarisation is inspectable and would fill this. Pluralism is the target, so only hostile polarisation should count against a country.',
+    notes: 'V-Dem political polarization (v2cacamps) is published beside this dimension as a behavioral check and is not scored, because a regime with no organized opposition reads as calm (D121, A13). The gap stays open for a measure that can tell calm between competing camps from calm where no camp may compete. Pluralism is the target, so only hostile polarization should count against a country.',
     wealthProxyPrior: 0.05,
   },
   {

@@ -9,6 +9,28 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.16.0 — 2026-10-01
+
+- **Checks can come from any source.** The sources page gains a database or
+  release column for behavioural checks and prints the pinned file and
+  variable behind a check that does not come from the World Bank. The first
+  is political polarization from V-Dem. See D121.
+
+## Dataset 6.2.0 — 2026-10-01
+
+- **A row is chosen for what it measures (D118).** A candidate is decided on
+  its construct. Its correlation with income is published as a finding and
+  no longer passes or fails it. Dimension correlations with income are
+  reported, not targeted.
+- **Adaptability gains two observed rows.** Export concentration from
+  UNCTADstat covers 53 of 53 countries (D119). The long-term unemployment
+  share from ILOSTAT covers 44, behind a plausibility gate that drops
+  questionnaire artefacts by rule, not by country name (D120).
+- **Political polarization is published as a check, not scored.** V-Dem's
+  `v2cacamps` reads closed autocracies as calm, and low polarization under
+  repression is not shared purpose. It sits beside Shared purpose with that
+  reason (D121, A13).
+
 ## App 1.15.1 — 2026-09-24
 
 - **Reader copy says what each page holds.** Headings, ledes, the llms.txt

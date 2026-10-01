@@ -110,7 +110,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: 'Behavioral check',
     group: 'What sits beside the score',
     short: 'A published series shown next to a dimension and left out of it.',
-    full: 'Some series measure something real about a capability and still fail the tests this benchmark applies before a number is scored, usually because they mostly track national income. A check is fetched and published like an indicator and then excluded from the scale, the average, the indicator count and the confidence. The reason it is not scored travels with the number, so a reader can weigh the evidence without the benchmark asserting it.',
+    full: 'Some series measure something real about a capability and still fail the tests this benchmark applies before a number is scored, usually because they mostly track national income, or because the same reading means opposite things in different countries. A check is fetched and published like an indicator and then excluded from the scale, the average, the indicator count and the confidence. The reason it is not scored travels with the number, so a reader can weigh the evidence without the benchmark asserting it.',
     example: 'Bribery incidence asks whether a firm was itself asked for a bribe. It reads on trust and it also tracks income, so Trust publishes it beside the score and never inside it.',
   },
   {
@@ -200,6 +200,13 @@ export const GLOSSARY: GlossaryEntry[] = [
     group: 'How good the evidence is',
     short: 'Who published a number, ranked from national statistics office down to a model panel.',
     full: 'Every value carries a source type, such as a statistical agency, international organization, survey or model panel. The tier affects confidence, not the score, and shows when a line mixes sources.',
+  },
+  {
+    term: 'Plausibility gate',
+    group: 'How good the evidence is',
+    short: 'A rule an adapter applies to every country to drop values a survey could not have measured.',
+    full: 'Some national surveys ask their questions in a way that cannot record what the indicator asks for, and the published number then describes the questionnaire and says nothing about the country. A plausibility gate is a fixed rule, the same for every country and naming none, that drops such values before scoring. Each dropped value is logged with its country, year and reason, and the latest value that survives is the one scored.',
+    example: 'Long-term unemployment share drops any year under 3 percent, every year of a survey whose typical year is under 3 percent, and a one- or two-year spike of more than 15 points that the series comes back from. Korea and the Philippines report under 1 percent every year and are not scored on this row.',
   },
   {
     term: 'Ingest route',

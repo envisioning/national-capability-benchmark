@@ -25,6 +25,8 @@ export const FILES = {
   worldBank: resolve(OBSERVATIONS_DIR, 'worldbank.json'),
   jointEvsWvs: resolve(OBSERVATIONS_DIR, 'joint-evs-wvs.json'),
   vdem: resolve(OBSERVATIONS_DIR, 'vdem-cy-core.json'),
+  unctad: resolve(OBSERVATIONS_DIR, 'unctad-concentration.json'),
+  ilostat: resolve(OBSERVATIONS_DIR, 'ilostat-ltu.json'),
   manual: resolve(OBSERVATIONS_DIR, 'manual.json'),
   revisions: resolve(OBSERVATIONS_DIR, 'revisions.json'),
   delphiLatest: resolve(DELPHI_DIR, 'latest.json'),

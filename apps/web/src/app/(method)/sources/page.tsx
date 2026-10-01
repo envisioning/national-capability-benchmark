@@ -300,7 +300,7 @@ export default async function SourcesPage() {
       {CHECKS.length > 0 ? (
         <Section
           title={`${capitalize(countWord(CHECKS.length))} ${CHECKS.length === 1 ? 'series is' : 'series are'} fetched and never scored`}
-          hint="These are fetched in the same pass as the indicators and shown beside a capability. None of them enters a score or a confidence."
+          hint="These are fetched with the indicators and shown beside a capability. None of them enters a score or a confidence."
         >
           <p className="max-w-3xl text-lg leading-relaxed">
             Each capability page lists its{' '}
@@ -314,7 +314,7 @@ export default async function SourcesPage() {
                   <Th>Check</Th>
                   <Th>Capability</Th>
                   <Th>Series code</Th>
-                  <Th>Database</Th>
+                  <Th>Database or release</Th>
                 </tr>
               </thead>
               <tbody>
@@ -328,16 +328,19 @@ export default async function SourcesPage() {
                     </Td>
                     <Td dim>{check.source.series ?? 'no series code'}</Td>
                     <Td dim>
-                      {check.source.publisher === WB_PUBLISHER
+                      {check.ingest === 'worldbank'
                         ? WB_DATABASES[check.wbSourceId ?? WB_DEFAULT_DATABASE]?.name
-                        : ''}
+                        : (check.pinned?.dataset ?? '')}
                     </Td>
                   </tr>
                 ))}
               </tbody>
             </Table>
           </Scroller>
-          {CHECKS.filter((check) => check.source.publisher === WB_PUBLISHER && check.source.series).map(
+          {/* A World Bank check prints its API request. An adapter check has no
+            * request to print, so it prints the pinned file, the column and the
+            * year the adapter reads. See D116 and D121. */}
+          {CHECKS.filter((check) => check.ingest === 'worldbank' && check.source.series).map(
             (check) => (
               <div key={check.id} className="mt-6">
                 <p className="text-xs font-medium text-[var(--muted)]">The request for {check.name}</p>
@@ -353,6 +356,17 @@ export default async function SourcesPage() {
               </div>
             ),
           )}
+          {CHECKS.filter((check) => check.ingest === 'adapter' && check.pinned).map((check) => (
+            <div key={check.id} className="mt-6">
+              <p className="text-xs font-medium text-[var(--muted)]">
+                The file behind {check.name}. Download it, open {check.pinned?.file} and read
+                column {check.pinned?.variable} for {check.pinned?.year}.
+              </p>
+              <code className="mt-2 block overflow-x-auto whitespace-pre rounded bg-[var(--surface-sunken)] px-3 py-3 text-xs">
+                {check.pinned?.url}
+              </code>
+            </div>
+          ))}
         </Section>
       ) : null}
 

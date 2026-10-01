@@ -10,7 +10,9 @@ countries, nine dimensions, equal weights and no headline ranking.
 pnpm install
 pnpm bench ingest      fetch World Bank series from 1990 into data/observations/worldbank.json
 pnpm bench trust fetch import the pinned Joint EVS/WVS A165 trust table into data/observations/joint-evs-wvs.json
-pnpm bench vdem fetch  import the pinned V-Dem civil-society series into data/observations/vdem-cy-core.json
+pnpm bench vdem fetch  import the pinned V-Dem civil-society series and polarization check into data/observations/vdem-cy-core.json
+pnpm bench unctad fetch import the pinned UNCTADstat export concentration index into data/observations/unctad-concentration.json (needs bsdtar)
+pnpm bench ilostat fetch derive and gate the ILOSTAT long-term unemployment share into data/observations/ilostat-ltu.json
 pnpm bench score       normalise and score, write data/out/index.json, data/out/countries/*.json and table.csv
 pnpm bench delphi      run the LLM panel (add --mock to run offline)
 pnpm bench diagnose    correlations, redundancy, GDP-sensitivity test
@@ -67,11 +69,12 @@ port 3888. That entry starts Next directly and does not use the proxy.
   selection, cost, and how to hand-author a run.
 - `docs/EVIDENCE.md` — the inclusion rule for evidence records and how to
   author one. Read it before adding anything to `data/evidence`. See D33.
-- `docs/RESEARCH-ROADMAP.md` — the two research objectives and where each
-  dimension stands against them, the queue ordered by them, the desk triage
-  every candidate passes before values are fetched, and the source promotion
-  gates. Read it before extending the registry or adding a source adapter.
-  See D117.
+- `docs/RESEARCH-ROADMAP.md` — what the research serves, where each dimension
+  stands, the queue, the desk triage every candidate passes before values are
+  fetched, and the source promotion gates. Read it before extending the
+  registry or adding a source adapter. A row is chosen for what it measures,
+  and its income correlation is reported, never used to choose it. See D117
+  and D118.
 
 ## Layout
 
@@ -80,7 +83,10 @@ port 3888. That entry starts Next directly and does not use the proxy.
 - `apps/web` — Next.js viewer. Reads `data/out/*.json` at request time.
 - `data/observations` — raw values with source and year. `worldbank.json` holds
   the World Bank series, `joint-evs-wvs.json` holds the pinned Trust adapter
-  output and `vdem-cy-core.json` holds the pinned V-Dem adapter output.
+  output, `vdem-cy-core.json` holds the pinned V-Dem adapter output,
+  `unctad-concentration.json` holds the pinned UNCTADstat adapter output and
+  `ilostat-ltu.json` holds the ILOSTAT long-term unemployment share, after
+  the plausibility gate D120 applies to every country.
   `revisions.json` is the append-only log of what each run restated,
   added or dropped, and `snapshots/` holds dated full copies written only on
   `--snapshot`.
@@ -211,7 +217,11 @@ port 3888. That entry starts Next directly and does not use the proxy.
   builds the frame, the mean, the coverage floor or the confidence reads them.
   A check carries the reason it is not scored in its `notes`, which renders to
   the reader, and adding one needs a decision entry naming the test it failed.
-  A series that passes the tests is an indicator, not a check. See D60.
+  A series that passes the tests is an indicator, not a check. See D60. A
+  check from a source other than the World Bank is `ingest: 'adapter'`: its
+  adapter emits it under the prefix, the World Bank ingest skips it, and its
+  `pinned` field names the file, column and year that `/sources` prints in
+  place of an API request. See D121.
 - The wealth residual is never summed across dimensions. `ResidualFile` has no
   country-level field, `buildResidual` in
   `packages/core/src/pipeline/residual.ts` computes one fit per dimension, and
@@ -494,7 +504,8 @@ Other traps found the hard way:
 - Trademarks are `IP.TMK.RSCT`, not `IP.TMK.RESD`.
 - Long-term unemployment (`SL.UEM.LTRM.ZS`) is listed in the catalogue under
   "WDI Database Archives", source 57, and the API refuses the code from that
-  source. It is not fetchable. The gap still needs an ILOSTAT adapter.
+  source. It is not fetchable. The ILOSTAT adapter fills the row instead
+  (D120).
 - Verify a new series against every country before adding it to the
   registry. A code that resolves for Brazil can be empty for Singapore.
 

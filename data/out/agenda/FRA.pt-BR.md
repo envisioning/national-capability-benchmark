@@ -1,6 +1,6 @@
 # Agenda de capacidades: França
 
-*Gerado em 2026-09-25*
+*Gerado em 2026-10-01*
 
 A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a confiança ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | 56,2 | 0,26 (fraca) | sem base de tendência |
 | Aprendizagem | 61,2 | 0,54 (utilizável) | sem base de tendência |
 | Experimentação | 55,1 | 0,18 (muito fraca) | +1,6 em 10 anos, sobre 2 indicadores |
-| Adaptação | 75,9 | 0,48 (utilizável) | +9,1 em 10 anos, sobre 4 indicadores |
+| Adaptação | 79,7 | 0,71 (boa) | +9,1 em 10 anos, sobre 4 indicadores |
 | Construção | 53,1 | 0,62 (utilizável) | -5 em 10 anos, sobre 4 indicadores |
 | Propósito compartilhado | 80,7 | 0,3 (fraca) | -0,6 em 10 anos, sobre 2 indicadores |
 
@@ -57,7 +57,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 75,9, confiança utilizável
+- Adaptação: 79,7, confiança boa
 - Agência: 74,5, confiança utilizável
 - Antecipação: 61,3, confiança utilizável
 - Aprendizagem: 61,2, confiança utilizável
@@ -65,7 +65,7 @@ Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
 ## Agenda de medição
 
-25 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+23 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -84,8 +84,6 @@ Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 | Experimentação | Atividade de sandbox regulatório | Número e abrangência de sandboxes regulatórios e regimes de teste controlado em operação. |
 | Experimentação | Empresas nascidas de universidades | Empresas criadas para comercializar pesquisa universitária, por milhão de habitantes. |
 | Experimentação | Parcela empresarial do P&D | Parcela do dispêndio bruto em P&D executada por empresas. |
-| Adaptação | Parcela de desemprego de longa duração | Pessoas desempregadas há 12 meses ou mais, como parcela do desemprego total. |
-| Adaptação | Diversificação das exportações | Concentração inversa da pauta exportadora por produto. |
 | Adaptação | Preparação e recuperação de desastres | Capacidade demonstrada de preparação e recuperação diante de choques graves. |
 | Adaptação | Capacidade de resposta institucional | Velocidade com que regras e programas públicos mudam em resposta a novas condições. |
 | Construção | Entrega de grandes projetos | Desempenho de custo e prazo de grandes projetos públicos de infraestrutura. |

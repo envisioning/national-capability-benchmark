@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T15:28:42.448Z",
+  "generatedAt": "2026-10-01T09:09:05.391Z",
   "gdpSeries": "NY.GDP.PCAP.PP.KD",
   "dimensionVsGdp": [
     {
@@ -40,8 +40,8 @@
     },
     {
       "dimension": "adaptability",
-      "pearson": 0.818,
-      "spearman": 0.831,
+      "pearson": 0.839,
+      "spearman": 0.84,
       "n": 51
     },
     {
@@ -65,6 +65,12 @@
       "n": 52
     },
     {
+      "a": "agency",
+      "b": "adaptability",
+      "r": 0.802,
+      "n": 52
+    },
+    {
       "a": "anticipation",
       "b": "adaptability",
       "r": 0.788,
@@ -72,20 +78,14 @@
     },
     {
       "a": "agency",
-      "b": "adaptability",
-      "r": 0.769,
-      "n": 52
+      "b": "trust",
+      "r": 0.713,
+      "n": 37
     },
     {
       "a": "trust",
       "b": "adaptability",
-      "r": 0.744,
-      "n": 37
-    },
-    {
-      "a": "agency",
-      "b": "trust",
-      "r": 0.713,
+      "r": 0.702,
       "n": 37
     },
     {
@@ -113,6 +113,12 @@
       "n": 47
     },
     {
+      "a": "adaptability",
+      "b": "building",
+      "r": 0.657,
+      "n": 53
+    },
+    {
       "a": "anticipation",
       "b": "learning",
       "r": 0.644,
@@ -125,9 +131,9 @@
       "n": 52
     },
     {
-      "a": "adaptability",
-      "b": "building",
-      "r": 0.641,
+      "a": "learning",
+      "b": "adaptability",
+      "r": 0.64,
       "n": 53
     },
     {
@@ -143,22 +149,16 @@
       "n": 53
     },
     {
-      "a": "experimentation",
-      "b": "adaptability",
-      "r": 0.62,
-      "n": 52
-    },
-    {
       "a": "agency",
       "b": "learning",
       "r": 0.609,
       "n": 52
     },
     {
-      "a": "learning",
+      "a": "experimentation",
       "b": "adaptability",
-      "r": 0.604,
-      "n": 53
+      "r": 0.605,
+      "n": 52
     },
     {
       "a": "agency",
@@ -170,6 +170,12 @@
       "a": "agency",
       "b": "coordination",
       "r": 0.584,
+      "n": 52
+    },
+    {
+      "a": "coordination",
+      "b": "adaptability",
+      "r": 0.563,
       "n": 52
     },
     {
@@ -209,22 +215,16 @@
       "n": 47
     },
     {
-      "a": "coordination",
-      "b": "adaptability",
-      "r": 0.51,
-      "n": 52
+      "a": "adaptability",
+      "b": "shared_purpose",
+      "r": 0.499,
+      "n": 47
     },
     {
       "a": "coordination",
       "b": "building",
       "r": 0.496,
       "n": 52
-    },
-    {
-      "a": "adaptability",
-      "b": "shared_purpose",
-      "r": 0.493,
-      "n": 47
     },
     {
       "a": "agency",
@@ -462,6 +462,14 @@
       "flaggedAsWealthProxy": false
     },
     {
+      "indicatorId": "export_diversification",
+      "dimension": "adaptability",
+      "measurementClass": "C",
+      "r": 0.445,
+      "wealthProxyPrior": 0.3,
+      "flaggedAsWealthProxy": false
+    },
+    {
       "indicatorId": "new_business_density",
       "dimension": "agency",
       "measurementClass": "C",
@@ -482,6 +490,14 @@
       "dimension": "shared_purpose",
       "measurementClass": "O",
       "r": 0.383,
+      "wealthProxyPrior": 0.2,
+      "flaggedAsWealthProxy": false
+    },
+    {
+      "indicatorId": "long_term_unemployment_share",
+      "dimension": "adaptability",
+      "measurementClass": "O",
+      "r": 0.355,
       "wealthProxyPrior": 0.2,
       "flaggedAsWealthProxy": false
     },
@@ -596,18 +612,18 @@
       "delta": 0.169
     },
     {
-      "indicatorId": "broadband_subscriptions",
-      "dimension": "adaptability",
-      "dimensionR": 0.818,
-      "dimensionRWithout": 0.663,
-      "delta": 0.155
-    },
-    {
       "indicatorId": "human_capital_index",
       "dimension": "learning",
       "dimensionR": 0.731,
       "dimensionRWithout": 0.621,
       "delta": 0.111
+    },
+    {
+      "indicatorId": "broadband_subscriptions",
+      "dimension": "adaptability",
+      "dimensionR": 0.839,
+      "dimensionRWithout": 0.738,
+      "delta": 0.101
     },
     {
       "indicatorId": "tertiary_enrollment",
@@ -638,13 +654,6 @@
       "delta": 0.053
     },
     {
-      "indicatorId": "electricity_transmission_losses",
-      "dimension": "adaptability",
-      "dimensionR": 0.818,
-      "dimensionRWithout": 0.77,
-      "delta": 0.048
-    },
-    {
       "indicatorId": "civil_society_strength",
       "dimension": "coordination",
       "dimensionR": 0.563,
@@ -666,6 +675,13 @@
       "delta": 0.036
     },
     {
+      "indicatorId": "electricity_transmission_losses",
+      "dimension": "adaptability",
+      "dimensionR": 0.839,
+      "dimensionRWithout": 0.806,
+      "delta": 0.033
+    },
+    {
       "indicatorId": "statistical_performance",
       "dimension": "anticipation",
       "dimensionR": 0.873,
@@ -673,11 +689,25 @@
       "delta": 0.03
     },
     {
+      "indicatorId": "labor_force_participation",
+      "dimension": "adaptability",
+      "dimensionR": 0.839,
+      "dimensionRWithout": 0.821,
+      "delta": 0.018
+    },
+    {
       "indicatorId": "resident_patents_per_million",
       "dimension": "experimentation",
       "dimensionR": 0.565,
       "dimensionRWithout": 0.548,
       "delta": 0.017
+    },
+    {
+      "indicatorId": "export_diversification",
+      "dimension": "adaptability",
+      "dimensionR": 0.839,
+      "dimensionRWithout": 0.823,
+      "delta": 0.016
     },
     {
       "indicatorId": "failure_tolerance",
@@ -722,6 +752,13 @@
       "delta": -0.001
     },
     {
+      "indicatorId": "long_term_unemployment_share",
+      "dimension": "adaptability",
+      "dimensionR": 0.839,
+      "dimensionRWithout": 0.84,
+      "delta": -0.001
+    },
+    {
       "indicatorId": "domestic_credit_private",
       "dimension": "agency",
       "dimensionR": 0.851,
@@ -757,18 +794,11 @@
       "delta": -0.02
     },
     {
-      "indicatorId": "labor_force_participation",
-      "dimension": "adaptability",
-      "dimensionR": 0.818,
-      "dimensionRWithout": 0.838,
-      "delta": -0.02
-    },
-    {
       "indicatorId": "unemployment_rate",
       "dimension": "adaptability",
-      "dimensionR": 0.818,
-      "dimensionRWithout": 0.845,
-      "delta": -0.027
+      "dimensionR": 0.839,
+      "dimensionRWithout": 0.864,
+      "delta": -0.025
     },
     {
       "indicatorId": "education_expenditure_gdp",
@@ -959,18 +989,18 @@
     {
       "dimension": "adaptability",
       "indicatorsDefined": 8,
-      "indicatorsObserved": 4,
-      "gaps": 4,
+      "indicatorsObserved": 6,
+      "gaps": 2,
       "retired": 0,
-      "meanCoverage": 0.5,
-      "meanConfidence": 0.469,
+      "meanCoverage": 0.729,
+      "meanConfidence": 0.676,
       "classMix": {
         "C": 3,
         "I": 2,
         "O": 3,
         "P": 0
       },
-      "subjectivityShare": 0.5
+      "subjectivityShare": 0.25
     },
     {
       "dimension": "building",
@@ -1034,6 +1064,16 @@
       "r": -0.552,
       "dimensionR": -0.293,
       "dimensionN": 37
+    },
+    {
+      "checkId": "political_polarization",
+      "dimension": "shared_purpose",
+      "name": "Political polarization",
+      "countries": 53,
+      "latestYear": 2024,
+      "r": -0.335,
+      "dimensionR": -0.227,
+      "dimensionN": 47
     }
   ],
   "discriminationTrend": {
@@ -1570,6 +1610,38 @@
         "lowDiscrimination": false
       },
       {
+        "indicatorId": "long_term_unemployment_share",
+        "dimension": "adaptability",
+        "countries": 0,
+        "years": 0,
+        "firstYear": null,
+        "lastYear": null,
+        "firstSpread": null,
+        "lastSpread": null,
+        "changeShare": null,
+        "spearman": null,
+        "carriedForwardCells": 0,
+        "clampedCells": 0,
+        "fading": false,
+        "lowDiscrimination": false
+      },
+      {
+        "indicatorId": "export_diversification",
+        "dimension": "adaptability",
+        "countries": 0,
+        "years": 0,
+        "firstYear": null,
+        "lastYear": null,
+        "firstSpread": null,
+        "lastSpread": null,
+        "changeShare": null,
+        "spearman": null,
+        "carriedForwardCells": 0,
+        "clampedCells": 0,
+        "fading": false,
+        "lowDiscrimination": false
+      },
+      {
         "indicatorId": "high_tech_exports_share",
         "dimension": "building",
         "countries": 0,
@@ -1660,7 +1732,7 @@
       },
       {
         "dimension": "adaptability",
-        "meanAbsShift": 6.38
+        "meanAbsShift": 4.76
       },
       {
         "dimension": "building",
@@ -1675,37 +1747,37 @@
       {
         "iso3": "BRA",
         "country": "Brazil",
-        "meanAbsShift": 2.55
+        "meanAbsShift": 2.58
       },
       {
         "iso3": "USA",
         "country": "United States",
-        "meanAbsShift": 1.9
+        "meanAbsShift": 1.81
       },
       {
         "iso3": "NLD",
         "country": "Netherlands",
-        "meanAbsShift": 3.4
+        "meanAbsShift": 3.39
       },
       {
         "iso3": "CHE",
         "country": "Switzerland",
-        "meanAbsShift": 2.19
+        "meanAbsShift": 2.3
       },
       {
         "iso3": "SGP",
         "country": "Singapore",
-        "meanAbsShift": 6.01
+        "meanAbsShift": 5.64
       },
       {
         "iso3": "KOR",
         "country": "South Korea",
-        "meanAbsShift": 5.67
+        "meanAbsShift": 5.54
       },
       {
         "iso3": "EST",
         "country": "Estonia",
-        "meanAbsShift": 2.02
+        "meanAbsShift": 1.69
       },
       {
         "iso3": "IND",
@@ -1715,227 +1787,227 @@
       {
         "iso3": "CHL",
         "country": "Chile",
-        "meanAbsShift": 3.52
+        "meanAbsShift": 3.44
       },
       {
         "iso3": "ZAF",
         "country": "South Africa",
-        "meanAbsShift": 2.77
+        "meanAbsShift": 2.71
       },
       {
         "iso3": "MEX",
         "country": "Mexico",
-        "meanAbsShift": 1.9
+        "meanAbsShift": 1.92
       },
       {
         "iso3": "ARG",
         "country": "Argentina",
-        "meanAbsShift": 3.62
+        "meanAbsShift": 3.59
       },
       {
         "iso3": "COL",
         "country": "Colombia",
-        "meanAbsShift": 2.05
+        "meanAbsShift": 1.86
       },
       {
         "iso3": "PER",
         "country": "Peru",
-        "meanAbsShift": 3.49
+        "meanAbsShift": 3.16
       },
       {
         "iso3": "URY",
         "country": "Uruguay",
-        "meanAbsShift": 2.16
+        "meanAbsShift": 2.14
       },
       {
         "iso3": "CRI",
         "country": "Costa Rica",
-        "meanAbsShift": 2.46
+        "meanAbsShift": 2.57
       },
       {
         "iso3": "DEU",
         "country": "Germany",
-        "meanAbsShift": 4.67
+        "meanAbsShift": 4.56
       },
       {
         "iso3": "FRA",
         "country": "France",
-        "meanAbsShift": 3.06
+        "meanAbsShift": 2.58
       },
       {
         "iso3": "GBR",
         "country": "United Kingdom",
-        "meanAbsShift": 2.13
+        "meanAbsShift": 1.9
       },
       {
         "iso3": "ESP",
         "country": "Spain",
-        "meanAbsShift": 3.56
+        "meanAbsShift": 3.22
       },
       {
         "iso3": "PRT",
         "country": "Portugal",
-        "meanAbsShift": 3.05
+        "meanAbsShift": 2.79
       },
       {
         "iso3": "POL",
         "country": "Poland",
-        "meanAbsShift": 4.55
+        "meanAbsShift": 4.35
       },
       {
         "iso3": "SWE",
         "country": "Sweden",
-        "meanAbsShift": 2.53
+        "meanAbsShift": 2.39
       },
       {
         "iso3": "FIN",
         "country": "Finland",
-        "meanAbsShift": 2.75
+        "meanAbsShift": 2.79
       },
       {
         "iso3": "IRL",
         "country": "Ireland",
-        "meanAbsShift": 5.52
+        "meanAbsShift": 5.32
       },
       {
         "iso3": "CAN",
         "country": "Canada",
-        "meanAbsShift": 3.15
+        "meanAbsShift": 2.95
       },
       {
         "iso3": "AUS",
         "country": "Australia",
-        "meanAbsShift": 2.41
+        "meanAbsShift": 2.24
       },
       {
         "iso3": "JPN",
         "country": "Japan",
-        "meanAbsShift": 4.05
+        "meanAbsShift": 3.83
       },
       {
         "iso3": "CHN",
         "country": "China",
-        "meanAbsShift": 2.5
+        "meanAbsShift": 2.26
       },
       {
         "iso3": "IDN",
         "country": "Indonesia",
-        "meanAbsShift": 4.57
+        "meanAbsShift": 3.97
       },
       {
         "iso3": "VNM",
         "country": "Vietnam",
-        "meanAbsShift": 5.63
+        "meanAbsShift": 5.21
       },
       {
         "iso3": "PHL",
         "country": "Philippines",
-        "meanAbsShift": 3.7
+        "meanAbsShift": 3.38
       },
       {
         "iso3": "MYS",
         "country": "Malaysia",
-        "meanAbsShift": 4.45
+        "meanAbsShift": 4.11
       },
       {
         "iso3": "THA",
         "country": "Thailand",
-        "meanAbsShift": 4.81
+        "meanAbsShift": 4.39
       },
       {
         "iso3": "TUR",
         "country": "Turkey",
-        "meanAbsShift": 3.96
+        "meanAbsShift": 4.25
       },
       {
         "iso3": "ISR",
         "country": "Israel",
-        "meanAbsShift": 3.59
+        "meanAbsShift": 3.49
       },
       {
         "iso3": "ARE",
         "country": "United Arab Emirates",
-        "meanAbsShift": 4.17
+        "meanAbsShift": 4.27
       },
       {
         "iso3": "NGA",
         "country": "Nigeria",
-        "meanAbsShift": 4.3
+        "meanAbsShift": 2.81
       },
       {
         "iso3": "KEN",
         "country": "Kenya",
-        "meanAbsShift": 2.64
+        "meanAbsShift": 2.28
       },
       {
         "iso3": "RWA",
         "country": "Rwanda",
-        "meanAbsShift": 5.2
+        "meanAbsShift": 4.99
       },
       {
         "iso3": "ETH",
         "country": "Ethiopia",
-        "meanAbsShift": 3.1
+        "meanAbsShift": 2.38
       },
       {
         "iso3": "BOL",
         "country": "Bolivia",
-        "meanAbsShift": 3.93
+        "meanAbsShift": 3.28
       },
       {
         "iso3": "PRY",
         "country": "Paraguay",
-        "meanAbsShift": 3.66
+        "meanAbsShift": 3.23
       },
       {
         "iso3": "ECU",
         "country": "Ecuador",
-        "meanAbsShift": 3.29
+        "meanAbsShift": 3.21
       },
       {
         "iso3": "VEN",
         "country": "Venezuela",
-        "meanAbsShift": 5.14
+        "meanAbsShift": 5.07
       },
       {
         "iso3": "PAN",
         "country": "Panama",
-        "meanAbsShift": 1.96
+        "meanAbsShift": 1.86
       },
       {
         "iso3": "GTM",
         "country": "Guatemala",
-        "meanAbsShift": 4.2
+        "meanAbsShift": 3.89
       },
       {
         "iso3": "HND",
         "country": "Honduras",
-        "meanAbsShift": 3.76
+        "meanAbsShift": 3.91
       },
       {
         "iso3": "SLV",
         "country": "El Salvador",
-        "meanAbsShift": 2.24
+        "meanAbsShift": 2.13
       },
       {
         "iso3": "NIC",
         "country": "Nicaragua",
-        "meanAbsShift": 3.75
+        "meanAbsShift": 3.6
       },
       {
         "iso3": "DOM",
         "country": "Dominican Republic",
-        "meanAbsShift": 3.33
+        "meanAbsShift": 3.1
       },
       {
         "iso3": "CUB",
         "country": "Cuba",
-        "meanAbsShift": 5.85
+        "meanAbsShift": 5.2
       },
       {
         "iso3": "HTI",
         "country": "Haiti",
-        "meanAbsShift": 4.18
+        "meanAbsShift": 3.93
       }
     ],
     "rankChanges": [
@@ -1965,7 +2037,7 @@
       },
       {
         "dimension": "adaptability",
-        "changedPositions": 48
+        "changedPositions": 46
       },
       {
         "dimension": "building",
@@ -2148,22 +2220,6 @@
     },
     {
       "dimension": "adaptability",
-      "indicatorId": "long_term_unemployment_share",
-      "name": "Long-term unemployment share",
-      "publisher": "ILOSTAT",
-      "reason": "Closer to reallocation speed than the headline rate: it asks whether people who lose work find new work. ILOSTAT publishes it; the World Bank API does not carry it.",
-      "status": "gap"
-    },
-    {
-      "dimension": "adaptability",
-      "indicatorId": "export_diversification",
-      "name": "Export diversification",
-      "publisher": "UNCTAD",
-      "reason": "UNCTAD publishes the concentration index and it is computable. Another good candidate for the next adapter.",
-      "status": "gap"
-    },
-    {
-      "dimension": "adaptability",
       "indicatorId": "disaster_preparedness",
       "name": "Disaster preparedness and recovery",
       "publisher": "INFORM / UNDRR",
@@ -2231,7 +2287,7 @@
       "indicatorId": "political_polarization",
       "name": "Political polarisation",
       "publisher": "V-Dem",
-      "reason": "V-Dem political polarisation is inspectable and would fill this. Pluralism is the target, so only hostile polarisation should count against a country.",
+      "reason": "V-Dem political polarization (v2cacamps) is published beside this dimension as a behavioral check and is not scored, because a regime with no organized opposition reads as calm (D121, A13). The gap stays open for a measure that can tell calm between competing camps from calm where no camp may compete. Pluralism is the target, so only hostile polarization should count against a country.",
       "status": "gap"
     },
     {
@@ -2244,7 +2300,7 @@
     }
   ],
   "outOfFrame": {
-    "observedCells": 1772,
+    "observedCells": 1869,
     "clampedCells": 0,
     "share": 0,
     "perCountry": []

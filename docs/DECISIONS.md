@@ -5375,3 +5375,276 @@ claim, for example by pairing with another dimension in
 `duplicateDimensionCandidates` in `diagnostics.json`, which would show the objectives measure the wrong thing; or
 a triaged-out candidate that a later preflight shows would have cleared the
 half-frame screen, which would show the triage questions are too strict.
+
+---
+
+## D118 — A row is chosen for what it measures, and its income correlation is reported, not used to choose it
+
+*Recorded 2026-10-01. Supersedes the O2 target in D117, the wealth condition in
+D52's probe pass and the acceptance rule in D42. Keeps D42's diagnostic.*
+
+**Decision.** A candidate is accepted, held as a check, left as a gap or
+retired on its construct: what it observes, whether that is a capability or a
+stock that money buys, and whether it is behaviour, an outcome or a
+perception. The source memo states that argument, with its date, before any
+value is fetched. The correlation with log GDP per capita, the
+`wealthAttribution` delta and the dimension's correlation after the change are
+still computed, and every decision entry and handoff prints them. They are
+findings, and they no longer pass or fail a row.
+
+In practice:
+
+- `pnpm bench probe` reports a series that tracks log GDP at 0.70 or more as a
+  flag beside the verdict, not as a failure. Coverage, recency and spread still
+  fail a series.
+- O2 becomes a reported outcome. Each release prints every dimension's
+  correlation with income, and the research queue no longer aims at a
+  threshold. O1, the 0.40 confidence target, and the guardrail stay: neither
+  chooses rows by what they say about income.
+- The roadmap's wealth-link work becomes a construct audit. A diffusion stock
+  such as secure servers or broadband subscriptions is retired if it does not
+  observe the capability its dimension names, and kept if it does, whatever
+  its correlation.
+- Exclusions that rested on income alone are reopened for a construct review.
+  The `bribery_incidence` check (D60) is the first: it records experience, not
+  reputation, and D60 held it out only for its wealth contribution. D44's
+  retirement of `homicide_rate` gave construct reasons too and stands.
+- The next real use of the benchmark is a report on Brazil's adaptability, so
+  the queue serves Adaptability first. The frame does not change: every source
+  is still tested against all 53 countries, and Brazil has no special
+  treatment in the code.
+
+**Why.** `docs/WHY.md` calls the benchmark a test of whether capability is
+separate from wealth, and names the failure: the nine dimensions collapse into
+one factor that tracks GDP per head. If rows are admitted or dropped by what
+they do to that correlation, the test cannot fail, because any row that would
+make it fail is removed. D42 and D44 show the mechanism. `IC.FRM.CORR.ZS` was
+wired and reverted in one session because it moved Trust from 0.385 to 0.619,
+and D60 held out a behavioural bribery measure for the same reason. Both were
+reasonable steps under the rule as written. Repeated across the registry,
+though, the rule makes a low income correlation a product of the selection.
+Choosing by construct and letting the correlation land where it does turns the
+dimension correlations back into evidence. The wealth residual (D68) still
+shows what a dimension carries beyond income, and it does so honestly only if
+the rows were not chosen to make it large.
+
+**Cost.** Some dimension correlations will rise, and a dimension may cross 0.70
+and stay there. That is published as a finding against the claim. A construct
+argument is softer than a number and easier to dispute, so the memo states it
+before the values are seen. The rows chosen under the old screen are not
+re-admitted wholesale: each reopening is its own reviewed change, and that is
+slow. D117's triage keeps its ceiling, spread and cost questions, and its
+wealth question becomes the construct question above.
+
+**Overturned by.** An audit of rows decided after this entry showing that the
+construct arguments, written before the values, still drift toward rows that
+lower the income correlation. That would show the pre-commitment is not
+working. It would also be overturned by rows admitted under this rule that
+reviewers agree are levels of spending or adoption under another name, which
+would show the construct question is too loose to stand in for the number.
+
+---
+
+## D119 — Export concentration from UNCTADstat fills export diversification
+
+**Decision.** `export_diversification` moves from `gap` to `adapter`. The
+value is UNCTADstat's Concentration Index (`US.ConcentDiversIndices`, flow `02`,
+exports): a normalised Herfindahl-Hirschman index of the merchandise export
+basket across SITC Rev.3 3-digit products, 0 when exports are spread evenly
+and 1 when one product is everything. It is stored as published, so the row
+becomes `direction: 'lower_better'` with the unit "index 0-1, lower = more
+diversified", rather than being inverted in the adapter. The adapter fetches
+the keyless bulk 7z, extracts its one CSV with `bsdtar`, joins UN M49 codes to
+the registry, and emits the pinned year 2025 only. The file is pinned by the
+SHA-256 of the CSV (release stamped 2026-06-24), so a publisher refresh fails
+the fetch until someone re-pins it. UNCTAD's footnote travels in each
+observation note: 15 of the 53 values are marked `Estimated` (mirror data from
+partners). The Diversification Index in the same file is not used: it measures
+distance from the world basket, which is a resemblance, not a spread.
+
+**Why.** The row is accepted on its construct, decided before its wealth
+correlation was read. Adaptability asks whether a country can absorb a shock
+and reallocate. A basket spread across many products is the standing result of
+past reallocation and the exposure a single price or demand shock meets, which
+is the construct the registry already declared for this row. It is class `C`,
+an observed outcome of the economy's structure, and not a diffusion stock that
+money buys directly. The source covers all 53 countries at 2025 from one
+international publisher, so it adds evidence without favouring rich countries.
+
+Reported as findings, not tests. The row's own correlation with log GDP per
+capita is r = 0.445 (n 51; the stored HHI is direction-adjusted so a higher
+normalised score is more diversified). Its wealth-attribution delta is +0.021:
+with the row Adaptability sits at r = 0.839 (Spearman 0.837, n 51), without it
+0.818, so the row does not move Adaptability toward O2 and slightly away from
+it. It forms no redundant pair. Adaptability's mean confidence rises from 0.469
+to 0.588, observed rows from 4 to 5 for every country, and mean confidence
+against log GDP across all dimensions stays at r = 0.34, so the guardrail
+holds.
+
+**Cost.** The index reads a product mix, not the capacity to switch.
+Switzerland (0.364, gold and pharmaceuticals), Ireland (0.330,
+pharmaceuticals) and Singapore (0.271, re-exports) score as concentrated
+because a few lines are worth a lot, not because they are fragile. Commodity
+exporters such as Venezuela (0.762) and Nigeria (0.619) move with prices from
+year to year even when the basket does not. It is merchandise only, so
+services-led exporters read narrower than they are, and 3-digit SITC hides
+diversity inside a product line. The registry note says all of this. The
+history from 1995 is in the file and is not emitted, so the row has no trend
+and no discrimination trend yet. The fetch depends on `bsdtar` being on the
+path. The data is CC BY 3.0 IGO and must be cited as the UNCTAD Data Hub.
+
+**Overturned by.** A source that observes reallocation itself, such as entry
+into new export products or the speed a basket recovers after a price shock,
+at comparable coverage, which would answer the construct more directly and
+replace this row; or evidence that the high-value-line artefact moves more
+countries than the three named, which would make the row read wealth structure
+rather than exposure and return it to `gap`.
+
+---
+
+## D120 — Long-term unemployment is wired from ILOSTAT behind a plausibility gate
+
+**Decision.** `long_term_unemployment_share` (Adaptability) moves from `gap` to
+`adapter`. The adapter reads ILOSTAT's `DF_UNE_TUNE_SEX_AGE_DUR_NB` in one SDMX
+call and derives the share as unemployed 12 months or more over the unemployed
+with a stated duration, both sexes, age 15 and over, a labour force survey
+preferred where ILOSTAT holds more than one. Lower is better, raw percentage.
+Before emitting, it runs a plausibility gate on every country, naming none: it
+drops a country-year under 3%; every year of a survey whose median for that
+country is under 3%; a run of one or two observations that sits more than 15
+points beyond both neighbours when those neighbours agree within 15 points; and
+a latest value more than 15 points from the one before it, which waits for the
+next year to confirm it. A jump the next year keeps is a level shift and stays.
+It emits the latest surviving year and logs every dropped value with its
+country, year, value and reason. The run of 2026-10-01 emits 44 of 53
+countries, holds KOR, MEX, PER, PHL, SLV and URY with no surviving year, and
+drops 78 country-years; Brazil is 30.2% in 2025 from PNAD Contínua. The list is
+in `docs/research/adaptability/ILOSTAT-LONG-TERM-UNEMPLOYMENT.md`.
+
+**Why.** Construct first. The row observes whether people who lose work find
+new work, which is reallocation, the centre of Adaptability, and it is
+behaviour rather than a stock money buys. That is the reason it is accepted.
+Its two readings are recorded in the registry note: a high share is slow
+reallocation where the unemployment rate is also high (South Africa, Kenya,
+Nigeria) and a small residual pool where the rate is low (Switzerland, Japan),
+so it is read beside `unemployment_rate`. Some questionnaires cannot record a
+long search, and their published shares (under 1% in every year for Korea,
+the Philippines and Peru, and for Uruguay outside 2021 and 2022) describe the
+instrument. A rule applied to every
+country keeps the exclusion auditable and stops it from becoming a list of
+countries the benchmark disliked. The survey-median clause exists because a
+year-by-year floor alone let one year of an otherwise sub-3% questionnaire
+through (Mexico 2022 at 3.1, El Salvador 2021 at 4.6), and those would have
+taken the best cells in the frame. As a reported finding, not a test: the
+row's normalised score correlates with log GDP per capita at r = 0.355 (raw
+share -0.355, n 42), its wealth-attribution delta is 0.005, and on the local
+run Adaptability moves from r = 0.818 to 0.824 (n 51) while its mean
+confidence rises from 0.469 to 0.558.
+
+**Cost.** The thresholds, 3% and 15 points, are judgment. A real one-year
+excursion of more than 15 points is dropped as a spike, and a real level shift
+in the latest year is held back for one release, emitting the year before.
+The survey-median clause goes beyond the owner's two-clause rule and removes
+values that clear 3%. The gate cannot see a break with no spike: Ethiopia is
+emitted at 53.9 for 2013 because its only other year, 2021, falls under the
+floor. ILO's own unreliable flag is recorded in each note and not used. Four
+emitted countries come from household surveys rather than labour force
+surveys, Brazil among them, and Argentina's survey is urban only. ILOSTAT
+revises in place, so the retrieval date is the release identifier.
+
+**Overturned by.** A national statistics office or the ILO documenting that a
+held series is a valid measure of long-term unemployment, which would make the
+floor a rule that removes real values; a second source for the same countries,
+such as OECD or Eurostat, that disagrees with the gate's survivors by more
+than the gate's own 15-point tolerance; or a review of `unemployment_rate`
+beside this row showing the two readings cannot be separated in practice,
+which would make the row a check under D60 instead of an indicator.
+
+---
+
+## D121 — V-Dem polarization is published as a behavioural check, not scored
+
+*Recorded 2026-10-01. Extends D60 and D83. Supersedes the overturn clause of
+D116. Issue #22.*
+
+**Decision.** V-Dem's political polarization item is published beside Shared
+Purpose as a behavioural check under D60 and enters no score. The check is
+`political_polarization` in `checks.ts`, read from `v2cacamps_osp`, the
+measurement-model estimate on the codebook's 0 to 4 scale, where 0 means
+supporters of opposing camps generally meet in a friendly manner and 4 in a
+hostile one, direction `lower_better`, V-Dem v15 (2025-03-04), year 2024,
+tier `expert_panel`, CC BY-SA 4.0. It covers 53 of 53 countries.
+
+The registry gap `political_polarization` in `indicators.ts` stays a gap. The
+measurement Shared Purpose wants, hostility between camps that are free to
+exist, is still unmade, and this item is not it. The check shares the gap's id
+on purpose, and its observations sit under `__check__political_polarization`,
+so the two never meet in a frame. The branch `polarization-vdem` (commit
+1c0f6b5) that scored the item is not merged; its adapter work is.
+
+The item is not in the Core archive D83 pinned, so the V-Dem adapter now pins
+the Full+Others archive of the same release, `V-Dem-CY-FullOthers-v15_csv.zip`,
+streams its 400 MB CSV line by line and reads a table of variables, one per
+observation id. Its `v2x_cspart` values match Core's for all 53 countries, so
+civil-society strength does not restate. The observation file keeps its name,
+`vdem-cy-core.json`.
+
+Checks are no longer World Bank only. `CheckDef` gains `ingest`, `worldbank`
+by default or `adapter`, and `pinned`, which names the dataset, the archive
+URL, the file inside it, the column and the year. An adapter check must carry
+`pinned`, and `checks.ts` refuses one that does not. The World Bank ingest and
+`worldBankCheckSeries` skip adapter checks, the adapter emits them under
+`CHECK_PREFIX`, and the scorer, `behaviouralChecks`, the report and the
+capability and country pages read them unchanged. `/sources` prints the World
+Bank request for a World Bank check and the pinned archive URL, file, column
+and year for an adapter check.
+
+**Why.** The project judges a row by what it measures first and reports its
+income correlation beside it; the correlation is evidence, not the gate. On
+construct this item fails in a way no numeric screen sees. Scored on the
+branch, it passed every gate: 0.335 against log GDP per capita, 0.565 at most
+against any scored row, 53 of 53 countries, and it lifted Shared Purpose from
+47 to 52 published countries. But a low reading has two causes the number
+cannot separate. On V-Dem's own regime classification the 2024 values form a
+U: liberal democracies average 1.77 and closed autocracies 1.85, while
+electoral democracies and electoral autocracies average 2.80 and 2.98. Scored,
+the item raised the United Arab Emirates by 11.1 points and Rwanda by 11.5,
+and published Singapore and Vietnam on the strength of their calm. Low
+measured polarization under repression is not people seeing themselves in a
+common project. It is A5 inverted: there a perception composite penalised
+political uniformity, here an expert item rewards it, and the spec refuses
+both readings. A13 records it.
+
+The item is still worth showing. It is current, full-frame, inspectable and
+asks the right question of every country where camps may compete. A check is
+the D60 shape for a series that is real and disqualified, and the reason
+travels with the number.
+
+**Cost.** Shared Purpose stays at two rows, 47 published countries and mean
+confidence 0.260; the coverage the item would have bought is declined. No score
+moves: all 477 country-dimension cells are identical with the check present.
+D60 framed a check as a series kept out on income. This one is kept out on
+construct, and its wealth correlation, -0.335 on the published value in
+`behaviouralChecks`, is reported and is not the reason; the glossary entry and
+the diagnostics comment now say a check can fail either way. A published
+number outside the score will be quoted as a finding for the closed regimes it
+flatters, and the attached note is the only guard. The adapter downloads
+26 MB instead of 15 MB and depends on the Full+Others member name as well as
+on `unzip`. The dataset version does not move: no scored row, field or country
+changes, and `checks` is an existing field.
+
+**D116 amended.** D116's overturn clause named a check fetched from somewhere
+other than the World Bank, which the request builder could not print. This
+decision is that check. D116 stands as amended: `/sources` stays complete by
+printing each check's own call shape, the World Bank request where `ingest` is
+`worldbank` and the pinned file, column and year where it is `adapter`. D116's
+clause is superseded by this decision's.
+
+**Overturned by.** A V-Dem reading conditioned on competition existing at all,
+or a behavioural Shared Purpose row (civic participation, volunteering, voter
+turnout) that agrees with this item outside the closed regimes, either of which
+would let the item or a variant score and move it to `indicators.ts`; a V-Dem
+release that changes the question or drops coverage below half the frame; or
+evidence that readers take the check for a score, which under D60 would retire
+it. For `/sources`: a check whose source has neither an API request nor a
+pinned file to print, which would leave the page short of a call again.
