@@ -11,7 +11,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Antecipação | 64 | 0,46 (utilizável) | +13,5 em 10 anos, sobre 2 indicadores |
 | Agência | 37,8 | 0,56 (utilizável) | sem base de tendência |
 | Coordenação | 63,4 | 0,39 (fraca) | sem base de tendência |
-| Confiança | 76,9 | 0,37 (fraca) | sem base de tendência |
+| Confiança | 79,4 | 0,4 (fraca) | sem base de tendência |
 | Aprendizagem | 43,4 | 0,54 (utilizável) | sem base de tendência |
 | Experimentação | 67,2 | 0,24 (muito fraca) | -6,3 em 10 anos, sobre 3 indicadores |
 | Adaptação | 82,1 | 0,6 (utilizável) | +6,5 em 10 anos, sobre 3 indicadores |
@@ -59,14 +59,6 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e responsabilização.
 
-### Confiança: confiança 0,37, fraca
-
-Quanta cooperação é possível além das redes pessoais imediatas?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
-
 ### Coordenação: confiança 0,39, fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
@@ -74,6 +66,14 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
+
+### Confiança: confiança 0,4, fraca
+
+Quanta cooperação é possível além das redes pessoais imediatas?
+
+- Baseada em 4 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ## Dimensões para manter
 

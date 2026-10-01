@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-01T13:39:16.021Z",
-  "version": "7.3.0",
+  "generatedAt": "2026-10-01T13:52:30.041Z",
+  "version": "7.4.0",
   "country": {
     "country": "Switzerland",
     "iso3": "CHE",
@@ -1133,19 +1133,19 @@
         "conditions": []
       },
       "trust": {
-        "score": 83.2,
-        "observedIndicators": 3,
+        "score": 86.8,
+        "observedIndicators": 4,
         "belowCoverageFloor": false,
-        "confidence": 0.37,
+        "confidence": 0.396,
         "confidenceParts": {
-          "coverage": 0.5,
-          "recency": 0.806,
-          "sourceQuality": 0.917
+          "coverage": 0.571,
+          "recency": 0.854,
+          "sourceQuality": 0.813
         },
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 83.2,
+        "blendedScore": 86.8,
         "blendedFrom": "indicators",
         "momentum": [],
         "indicators": [
@@ -1315,6 +1315,28 @@
                 "raw": 0.327,
                 "normalized": 99,
                 "tier": "international_organization"
+              }
+            ],
+            "status": "observed"
+          },
+          {
+            "indicatorId": "court_compliance",
+            "name": "Government compliance with the courts",
+            "measurementClass": "O",
+            "raw": 3.693,
+            "transformed": 3.693,
+            "normalized": 97.5,
+            "year": 2024,
+            "source": "V-Dem (v2jucomp_osp)",
+            "sourceTier": "expert_panel",
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [
+              {
+                "year": 2024,
+                "raw": 3.693,
+                "normalized": 97.5,
+                "tier": "expert_panel"
               }
             ],
             "status": "observed"

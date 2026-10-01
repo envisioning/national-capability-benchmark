@@ -11,7 +11,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Anticipation | 84.8 | 0.46 (usable) | +17.5 over 10 years using 2 indicators |
 | Agency | 72.3 | 0.56 (usable) | no trend |
 | Coordination | 71 | 0.4 (thin) | no trend |
-| Trust | 81.8 | 0.36 (thin) | no trend |
+| Trust | 84.7 | 0.39 (thin) | no trend |
 | Learning | 67.7 | 0.45 (usable) | no trend |
 | Experimentation | 45.8 | 0.26 (thin) | +6.8 over 10 years using 3 indicators |
 | Adaptability | 84.9 | 0.67 (good) | +6.9 over 10 years using 3 indicators |
@@ -37,11 +37,11 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
 
-### Trust: confidence 0.36, thin
+### Trust: confidence 0.39, thin
 
 How much cooperation is possible beyond immediate personal networks?
 
-- Uses 3 observed indicators.
+- Uses 4 observed indicators.
 - Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 

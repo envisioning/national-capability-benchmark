@@ -9,6 +9,23 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## Dataset 7.4.0 — 2026-10-01
+
+- **Trust scores court compliance (D131).** V-Dem's coding of how often the
+  government complies with important court rulings it dislikes, 53 of 53. It
+  records what the state does when a court rules against it, which is what
+  "strangers cooperate on the strength of the rules" rests on. Trust now
+  scores 52 countries, mean confidence 0.31 to 0.35, and its correlation with
+  income rises from 0.57 to 0.67, reported as a finding. The row tracks regime
+  type closely (r 0.88 with V-Dem's electoral democracy index), and it pulls
+  down Trust where bribery under-reporting had lifted it: China 88.7 to 67.5,
+  Rwanda 78.9 to 63.9.
+- **The V-Dem sweep declines every other candidate.** Bribery and corruption
+  items read reputation, the construct D23 retired; deliberation and
+  common-good items read closed autocracies as good (A13); administration and
+  fiscal items are conditions. Coordination gains nothing from V-Dem. See
+  `docs/research/vdem-sweep/TRIAGE.md`.
+
 ## Dataset 7.3.0 — 2026-10-01
 
 - **Experimentation scores industrial design applications (D126).** Resident

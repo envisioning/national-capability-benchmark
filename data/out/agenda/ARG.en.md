@@ -11,7 +11,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Anticipation | 42.3 | 0.46 (usable) | +13.8 over 10 years using 2 indicators |
 | Agency | 51.4 | 0.56 (usable) | no trend |
 | Coordination | 64.3 | 0.37 (thin) | no trend |
-| Trust | 43.5 | 0.28 (thin) | no trend |
+| Trust | 49.1 | 0.33 (thin) | no trend |
 | Learning | 37.5 | 0.36 (thin) | no trend |
 | Experimentation | 19.6 | 0.43 (thin) | +1.3 over 10 years using 3 indicators |
 | Adaptability | 57 | 0.68 (good) | -1.4 over 10 years using 3 indicators |
@@ -45,11 +45,11 @@ How capable is the country of identifying and preparing for emerging change?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Trust: confidence 0.28, thin
+### Trust: confidence 0.33, thin
 
 How much cooperation is possible beyond immediate personal networks?
 
-- Uses 3 observed indicators.
+- Uses 4 observed indicators.
 - Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 

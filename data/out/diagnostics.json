@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T13:39:17.755Z",
+  "generatedAt": "2026-10-01T13:52:31.818Z",
   "gdpSeries": "NY.GDP.PCAP.PP.KD",
   "income": [
     {
@@ -279,9 +279,9 @@
     },
     {
       "dimension": "trust",
-      "pearson": 0.571,
-      "spearman": 0.644,
-      "n": 49
+      "pearson": 0.671,
+      "spearman": 0.72,
+      "n": 51
     },
     {
       "dimension": "learning",
@@ -329,15 +329,27 @@
     },
     {
       "a": "anticipation",
-      "b": "adaptability",
-      "r": 0.659,
+      "b": "trust",
+      "r": 0.735,
       "n": 52
     },
     {
       "a": "trust",
       "b": "learning",
-      "r": 0.63,
-      "n": 50
+      "r": 0.699,
+      "n": 52
+    },
+    {
+      "a": "anticipation",
+      "b": "adaptability",
+      "r": 0.659,
+      "n": 52
+    },
+    {
+      "a": "coordination",
+      "b": "trust",
+      "r": 0.602,
+      "n": 52
     },
     {
       "a": "learning",
@@ -358,22 +370,16 @@
       "n": 52
     },
     {
-      "a": "anticipation",
-      "b": "trust",
-      "r": 0.553,
-      "n": 50
-    },
-    {
-      "a": "trust",
-      "b": "experimentation",
-      "r": 0.549,
-      "n": 50
-    },
-    {
       "a": "adaptability",
       "b": "building",
       "r": 0.548,
       "n": 53
+    },
+    {
+      "a": "trust",
+      "b": "experimentation",
+      "r": 0.547,
+      "n": 52
     },
     {
       "a": "coordination",
@@ -420,8 +426,8 @@
     {
       "a": "agency",
       "b": "trust",
-      "r": 0.435,
-      "n": 50
+      "r": 0.447,
+      "n": 52
     },
     {
       "a": "coordination",
@@ -442,21 +448,27 @@
       "n": 52
     },
     {
-      "a": "trust",
-      "b": "building",
-      "r": 0.393,
-      "n": 50
-    },
-    {
       "a": "learning",
       "b": "building",
       "r": 0.391,
       "n": 53
     },
     {
+      "a": "trust",
+      "b": "adaptability",
+      "r": 0.391,
+      "n": 52
+    },
+    {
       "a": "anticipation",
       "b": "building",
       "r": 0.39,
+      "n": 52
+    },
+    {
+      "a": "trust",
+      "b": "building",
+      "r": 0.383,
       "n": 52
     },
     {
@@ -470,12 +482,6 @@
       "b": "shared_purpose",
       "r": 0.377,
       "n": 51
-    },
-    {
-      "a": "coordination",
-      "b": "trust",
-      "r": 0.369,
-      "n": 50
     },
     {
       "a": "coordination",
@@ -503,15 +509,9 @@
     },
     {
       "a": "trust",
-      "b": "adaptability",
-      "r": 0.332,
-      "n": 50
-    },
-    {
-      "a": "trust",
       "b": "shared_purpose",
-      "r": 0.181,
-      "n": 50
+      "r": 0.276,
+      "n": 51
     },
     {
       "a": "agency",
@@ -628,6 +628,14 @@
       "measurementClass": "C",
       "r": 0.551,
       "wealthProxyPrior": 0.3,
+      "flaggedAsWealthProxy": false
+    },
+    {
+      "indicatorId": "court_compliance",
+      "dimension": "trust",
+      "measurementClass": "O",
+      "r": 0.533,
+      "wealthProxyPrior": 0.4,
       "flaggedAsWealthProxy": false
     },
     {
@@ -829,11 +837,11 @@
       "delta": 0.17
     },
     {
-      "indicatorId": "bribery_incidence",
+      "indicatorId": "court_compliance",
       "dimension": "trust",
-      "dimensionR": 0.516,
-      "dimensionRWithout": 0.354,
-      "delta": 0.162
+      "dimensionR": 0.671,
+      "dimensionRWithout": 0.516,
+      "delta": 0.155
     },
     {
       "indicatorId": "business_start_days",
@@ -892,6 +900,13 @@
       "delta": 0.059
     },
     {
+      "indicatorId": "bribery_incidence",
+      "dimension": "trust",
+      "dimensionR": 0.671,
+      "dimensionRWithout": 0.618,
+      "delta": 0.053
+    },
+    {
       "indicatorId": "export_diversification",
       "dimension": "adaptability",
       "dimensionR": 0.738,
@@ -920,6 +935,13 @@
       "delta": 0.043
     },
     {
+      "indicatorId": "contract_enforcement_days",
+      "dimension": "trust",
+      "dimensionR": 0.671,
+      "dimensionRWithout": 0.635,
+      "delta": 0.036
+    },
+    {
       "indicatorId": "resident_trademarks_per_million",
       "dimension": "experimentation",
       "dimensionR": 0.571,
@@ -934,13 +956,6 @@
       "delta": 0.011
     },
     {
-      "indicatorId": "interpersonal_trust",
-      "dimension": "trust",
-      "dimensionR": 0.516,
-      "dimensionRWithout": 0.506,
-      "delta": 0.01
-    },
-    {
       "indicatorId": "resident_industrial_designs_per_million",
       "dimension": "experimentation",
       "dimensionR": 0.571,
@@ -952,6 +967,13 @@
       "dimension": "agency",
       "dimensionR": 0.579,
       "dimensionRWithout": 0.575,
+      "delta": 0.005
+    },
+    {
+      "indicatorId": "interpersonal_trust",
+      "dimension": "trust",
+      "dimensionR": 0.671,
+      "dimensionRWithout": 0.666,
       "delta": 0.005
     },
     {
@@ -981,13 +1003,6 @@
       "dimensionR": 0.749,
       "dimensionRWithout": 0.779,
       "delta": -0.03
-    },
-    {
-      "indicatorId": "contract_enforcement_days",
-      "dimension": "trust",
-      "dimensionR": 0.516,
-      "dimensionRWithout": 0.557,
-      "delta": -0.041
     },
     {
       "indicatorId": "budget_execution_fidelity",
@@ -1085,19 +1100,19 @@
     },
     {
       "dimension": "trust",
-      "indicatorsDefined": 9,
-      "indicatorsObserved": 3,
+      "indicatorsDefined": 10,
+      "indicatorsObserved": 4,
       "gaps": 3,
       "retired": 3,
-      "meanCoverage": 0.437,
-      "meanConfidence": 0.311,
+      "meanCoverage": 0.517,
+      "meanConfidence": 0.347,
       "classMix": {
         "C": 1,
         "I": 0,
-        "O": 3,
+        "O": 4,
         "P": 5
       },
-      "subjectivityShare": 0.778
+      "subjectivityShare": 0.7
     },
     {
       "dimension": "learning",
@@ -1186,8 +1201,8 @@
       "families": [
         {
           "family": "institutional",
-          "indicatorsDefined": 4,
-          "indicatorsObserved": 2
+          "indicatorsDefined": 5,
+          "indicatorsObserved": 3
         },
         {
           "family": "social",
@@ -1195,8 +1210,8 @@
           "indicatorsObserved": 1
         }
       ],
-      "countriesOnOneFamily": 13,
-      "countriesScored": 50
+      "countriesOnOneFamily": 15,
+      "countriesScored": 52
     }
   ],
   "behaviouralChecks": [
@@ -1669,6 +1684,22 @@
         "lowDiscrimination": false
       },
       {
+        "indicatorId": "court_compliance",
+        "dimension": "trust",
+        "countries": 0,
+        "years": 0,
+        "firstYear": null,
+        "lastYear": null,
+        "firstSpread": null,
+        "lastSpread": null,
+        "changeShare": null,
+        "spearman": null,
+        "carriedForwardCells": 0,
+        "clampedCells": 0,
+        "fading": false,
+        "lowDiscrimination": false
+      },
+      {
         "indicatorId": "interpersonal_trust",
         "dimension": "trust",
         "countries": 0,
@@ -2109,7 +2140,7 @@
       {
         "iso3": "ARE",
         "country": "United Arab Emirates",
-        "meanAbsShift": 0.74
+        "meanAbsShift": 0.65
       },
       {
         "iso3": "NGA",
@@ -2189,7 +2220,7 @@
       {
         "iso3": "HTI",
         "country": "Haiti",
-        "meanAbsShift": 0.52
+        "meanAbsShift": 0.44
       }
     ],
     "rankChanges": [
@@ -2458,7 +2489,7 @@
     }
   ],
   "outOfFrame": {
-    "observedCells": 1576,
+    "observedCells": 1629,
     "clampedCells": 0,
     "share": 0,
     "perCountry": []

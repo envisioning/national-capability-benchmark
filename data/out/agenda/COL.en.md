@@ -11,7 +11,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Anticipation | 44.8 | 0.46 (usable) | +11.9 over 10 years using 2 indicators |
 | Agency | 65.5 | 0.56 (usable) | no trend |
 | Coordination | 59.1 | 0.39 (thin) | no trend |
-| Trust | 34.8 | 0.36 (thin) | no trend |
+| Trust | 46.5 | 0.39 (thin) | no trend |
 | Learning | 35.1 | 0.52 (usable) | no trend |
 | Experimentation | 32.7 | 0.41 (thin) | +0.9 over 10 years using 3 indicators |
 | Adaptability | 62.9 | 0.68 (good) | +0.7 over 10 years using 3 indicators |
@@ -54,14 +54,6 @@ How capable is the country of identifying and preparing for emerging change?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Trust: confidence 0.36, thin
-
-How much cooperation is possible beyond immediate personal networks?
-
-- Uses 3 observed indicators.
-- Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
-
 ### Coordination: confidence 0.39, thin
 
 How effectively can independent actors organize around shared objectives?
@@ -69,6 +61,14 @@ How effectively can independent actors organize around shared objectives?
 - Uses 3 observed indicators.
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
+
+### Trust: confidence 0.39, thin
+
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 4 observed indicators.
+- Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
 ### Experimentation: confidence 0.41, thin
 

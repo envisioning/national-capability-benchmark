@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-01T13:39:16.021Z",
-  "version": "7.3.0",
+  "generatedAt": "2026-10-01T13:52:30.041Z",
+  "version": "7.4.0",
   "country": {
     "country": "Cuba",
     "iso3": "CUB",
@@ -587,13 +587,13 @@
       },
       "trust": {
         "score": null,
-        "observedIndicators": 0,
+        "observedIndicators": 1,
         "belowCoverageFloor": true,
-        "confidence": 0,
+        "confidence": 0.072,
         "confidenceParts": {
-          "coverage": 0,
-          "recency": 0,
-          "sourceQuality": 0
+          "coverage": 0.143,
+          "recency": 1,
+          "sourceQuality": 0.5
         },
         "delphiScore": null,
         "delphiIqr": null,
@@ -661,6 +661,28 @@
             "outOfFrame": false,
             "series": [],
             "status": "missing"
+          },
+          {
+            "indicatorId": "court_compliance",
+            "name": "Government compliance with the courts",
+            "measurementClass": "O",
+            "raw": 0.548,
+            "transformed": 0.548,
+            "normalized": 13,
+            "year": 2024,
+            "source": "V-Dem (v2jucomp_osp)",
+            "sourceTier": "expert_panel",
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [
+              {
+                "year": 2024,
+                "raw": 0.548,
+                "normalized": 13,
+                "tier": "expert_panel"
+              }
+            ],
+            "status": "observed"
           },
           {
             "indicatorId": "homicide_rate",

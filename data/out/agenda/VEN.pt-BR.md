@@ -11,7 +11,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Antecipação | 0,9 | 0,46 (utilizável) | -5,5 em 10 anos, sobre 2 indicadores |
 | Agência | 25,8 | 0,37 (fraca) | sem base de tendência |
 | Coordenação | 16,5 | 0,22 (muito fraca) | sem base de tendência |
-| Confiança | 47 | 0,23 (muito fraca) | sem base de tendência |
+| Confiança | 36,2 | 0,29 (fraca) | sem base de tendência |
 | Aprendizagem | 31,6 | 0,23 (muito fraca) | sem base de tendência |
 | Experimentação | 5,2 | 0,09 (muito fraca) | sem base de tendência |
 | Adaptação | 39,4 | 0,59 (utilizável) | +2,6 em 10 anos, sobre 3 indicadores, 1 truncados na borda da régua |
@@ -67,14 +67,6 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
-### Confiança: confiança 0,23, muito fraca
-
-Quanta cooperação é possível além das redes pessoais imediatas?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
-
 ### Aprendizagem: confiança 0,23, muito fraca
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
@@ -89,6 +81,14 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística.
+
+### Confiança: confiança 0,29, fraca
+
+Quanta cooperação é possível além das redes pessoais imediatas?
+
+- Baseada em 4 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ### Agência: confiança 0,37, fraca
 

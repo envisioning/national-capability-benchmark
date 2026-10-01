@@ -11,7 +11,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Antecipação | 76,6 | 0,46 (utilizável) | +17,8 em 10 anos, sobre 2 indicadores |
 | Agência | 61 | 0,54 (utilizável) | sem base de tendência |
 | Coordenação | 87,3 | 0,4 (fraca) | sem base de tendência |
-| Confiança | 78,3 | 0,37 (fraca) | sem base de tendência |
+| Confiança | 79,4 | 0,4 (fraca) | sem base de tendência |
 | Aprendizagem | 42,4 | 0,54 (utilizável) | sem base de tendência |
 | Experimentação | 77,7 | 0,43 (fraca) | +11,3 em 10 anos, sobre 3 indicadores, 1 truncados na borda da régua |
 | Adaptação | 76,9 | 0,54 (utilizável) | +5,2 em 10 anos, sobre 3 indicadores |
@@ -35,14 +35,6 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Confiança: confiança 0,37, fraca
-
-Quanta cooperação é possível além das redes pessoais imediatas?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
-
 ### Propósito compartilhado: confiança 0,4, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
@@ -50,6 +42,14 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e responsabilização.
+
+### Confiança: confiança 0,4, fraca
+
+Quanta cooperação é possível além das redes pessoais imediatas?
+
+- Baseada em 4 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ### Coordenação: confiança 0,4, fraca
 
