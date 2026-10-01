@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T13:52:31.818Z",
+  "generatedAt": "2026-10-01T14:11:58.441Z",
   "gdpSeries": "NY.GDP.PCAP.PP.KD",
   "income": [
     {
@@ -1234,6 +1234,16 @@
       "r": 0.053,
       "dimensionR": -0.052,
       "dimensionN": 50
+    },
+    {
+      "checkId": "institutional_trust",
+      "dimension": "trust",
+      "name": "Confidence in the courts",
+      "countries": 37,
+      "latestYear": 2022,
+      "r": -0.177,
+      "dimensionR": -0.056,
+      "dimensionN": 37
     }
   ],
   "conditions": [
@@ -2356,7 +2366,7 @@
       "indicatorId": "institutional_trust",
       "name": "Trust in public institutions",
       "publisher": "OECD Trust Survey / WVS",
-      "reason": "The OECD survey covers members only. Mixing it with WVS items for India and South Africa would break comparability.",
+      "reason": "The OECD survey covers members only. Mixing it with WVS items for India and South Africa would break comparability. The Joint EVS/WVS confidence battery (E069) reaches 37 countries from one release, and confidence in the courts (E069_17) is published beside Trust as a check under this id rather than scored: every item of the battery tested (courts, civil service, police, parliament and government) reads higher in the closed and electoral autocracies of the frame than in its democracies, which is deference as much as confidence (A13). The gap stays open for a measure that does not reward a court that cannot rule against the state. See D132.",
       "status": "gap"
     },
     {

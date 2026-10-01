@@ -1,6 +1,6 @@
 # National Capability Benchmark, prototype v0
 
-*Generated 2026-10-01T13:52:31.818Z*
+*Generated 2026-10-01T14:11:58.441Z*
 
 This run covers 53 countries and nine dimensions. Indicators carry equal weight within each dimension, and the benchmark has no headline ranking.
 
@@ -439,11 +439,13 @@ A behavioural check measures something real about a dimension and fails this pro
 | --- | --- | --- | --- | --- |
 | Political polarization | Shared Purpose | 53 | 2024 | -0.335 |
 | Voter turnout | Shared Purpose | 52 | 2024 | 0.053 |
+| Confidence in the courts | Trust | 37 | 2022 | -0.177 |
 
 The correlation is computed on the value as published, so its sign reads the way the unit does.
 
 - **Political polarization** (Shared Purpose, index 0-4): The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita.
 - **Voter turnout** (Shared Purpose, % of registered voters): Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen.
+- **Confidence in the courts** (Trust, % a great deal): Confidence in the courts is the public half of what this capability asks: whether people expect the rules to be enforced when a stranger breaks them. It is not scored because the survey answer reads two things the number cannot tell apart. Where courts are independent, confidence is a judgment of how they perform. Where they answer to the state, it is also deference, and saying otherwise to an interviewer has a cost. In this frame the pattern runs the wrong way. India, the Philippines and Indonesia, all electoral autocracies in the V-Dem 2024 classification, lead on the share saying a great deal, and Vietnam and China, the two closed autocracies surveyed, lead once quite a lot is counted too. The nine electoral autocracies average 23.5 percent saying a great deal and the two closed autocracies 28.1, against 14.0 for liberal and 7.9 for electoral democracies. Scored, it would rank highest the states whose courts are least able to rule against them. Income is not why it is left out: the share correlates about -0.18 with log GDP per capita. The value is the share saying a great deal; the share saying quite a lot is in the source note.
 
 ## Conditions sit beside each dimension
 
@@ -579,7 +581,7 @@ Weakest: Building (28.2), Learning (28), Experimentation (25.6).
 
 **Trust**
 
-- Trust in public institutions: The OECD survey covers members only. Mixing it with WVS items for India and South Africa would break comparability.
+- Trust in public institutions: The OECD survey covers members only. Mixing it with WVS items for India and South Africa would break comparability. The Joint EVS/WVS confidence battery (E069) reaches 37 countries from one release, and confidence in the courts (E069_17) is published beside Trust as a check under this id rather than scored: every item of the battery tested (courts, civil service, police, parliament and government) reads higher in the closed and electoral autocracies of the frame than in its democracies, which is deference as much as confidence (A13). The gap stays open for a measure that does not reward a court that cannot rule against the state. See D132.
 - Cooperation beyond the in-group: The distinction that makes this dimension worth measuring. Same licensing obstacle as generalised trust.
 - Court case clearance rate: Whether a court finishes what it starts, counted from case records rather than asked in a survey. D23 named it as the observable replacement for the two retired WGI composites and it has stayed unfilled since. CEPEJ publishes it for Council of Europe members and OECD for its own members, so no single publisher reaches this country set, and a harmonised series needs the project second source adapter. See D57.
 
