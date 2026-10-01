@@ -2,11 +2,11 @@
 
 *Gerado em 2026-10-01*
 
-A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a confiança ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
+A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
 ## Onde a África do Sul está
 
-| Dimensão | Nota | Confiança | Tendência |
+| Dimensão | Nota | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 44 | 0,46 (utilizável) | +5,2 em 10 anos, sobre 2 indicadores |
 | Agência | 51,4 | 0,41 (fraca) | sem base de tendência |
@@ -22,7 +22,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 
 Estas são as notas mais baixas com evidência utilizável. A evidência fraca aparece abaixo.
 
-### Aprendizagem: 25,4, confiança utilizável
+### Aprendizagem: 25,4, solidez utilizável
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
@@ -31,7 +31,7 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 - Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (Índia); MEB public lifelong-learning network (Turquia).
 - Lacunas declaradas: Participação de adultos em aprendizagem.
 
-### Construção: 25,5, confiança utilizável
+### Construção: 25,5, solidez utilizável
 
 Quão capaz é o país de transformar planos e conhecimento em sistemas que funcionam?
 
@@ -41,7 +41,7 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística.
 
-### Adaptação: 34,1, confiança boa
+### Adaptação: 34,1, solidez boa
 
 Com que eficácia o sistema responde quando as circunstâncias mudam?
 
@@ -50,7 +50,7 @@ Com que eficácia o sistema responde quando as circunstâncias mudam?
 - Entregas documentadas em outros países: Plano Real, the 1994 currency stabilisation (Brasil); Proalcool, the fuel substitution after the oil shock (Brasil); The Convertibility Plan, and its collapse (Argentina); Kurzarbeit in the 2008-2009 crisis (Alemanha); The 2001 stabilisation, and its unwinding (Turquia); Telebras, the telecom system that was dismantled (Brasil); Estonian Defence League, national defence rebuilt after independence (Estônia); Korea Internet and Security Agency, a consolidated digital authority (Coreia do Sul); Federal siren warning network, and its dismantling (Alemanha); Room for the River, flood safety delivered across the Rhine branches (Países Baixos); Childcare benefits administration, and the recovery after institutional failure (Países Baixos); National Police, one corps from twenty-five regional forces (Países Baixos); NL-Alert, a tested multi-channel emergency warning system (Países Baixos); DigiD Machtigen, delegated access to public services (Países Baixos); DigiNotar, a certificate breach that forced a trust-chain reset (Países Baixos); Programmatic Approach to Nitrogen, and the permitting reversal (Países Baixos); 27F reconstruction, a nationwide recovery programme after the 2010 earthquake (Chile); Cédula digital, an identity service upgraded for mobile use (Colômbia); Victims' reparations, a long-running administrative response to conflict (Colômbia); Fondo Adaptación, recovery and safer resettlement after La Niña (Colômbia); My Number Card, a national identity rail extended into services (Japão); Tōhoku reconstruction, a decade-long recovery programme (Japão); Juntos, a conditional-transfer system at national scale (Peru); Certified digital signature across public services (Costa Rica); REDCUDI childcare network and SINIRUBE referrals (Costa Rica); Dollarization as an emergency monetary redesign (Equador); 2016 earthquake national emergency coordination (Equador); 120 a los 65 social pension (Panamá); Canal water-and-transit response to the 2023–24 drought (Panamá); Bono Juana Azurduy maternal and child health transfer (Bolívia); Renta Dignidad non-contributory old-age pension (Bolívia); Tekoporã Mbarete family-support programme (Paraguai); SIFEN national electronic invoicing rollout (Paraguai); Asignación Universal por Hijo child benefit (Argentina); SUBE national electronic fare and subsidy rail (Argentina); PhilSys foundational national ID rollout (Filipinas); Pantawid Pamilyang Pilipino Program (4Ps) (Filipinas); Typhoon Yolanda shelter and recovery programme (Filipinas); Jaminan Kesehatan Nasional, a near-universal health-insurance pool (Indonésia); InaRISK national disaster-risk information platform (Indonésia); VNeID national electronic identity (Vietnã); Vietnam Social Security health-insurance expansion (Vietnã); Typhoon Yagi emergency restoration (Vietnã); MySejahtera and the national COVID-19 immunisation programme (Malásia); National flood-warning SMS system (Malásia); Universal Coverage Scheme and the 30-baht health system (Tailândia); National Digital ID framework (Tailândia); T-Alert national cell-broadcast warning system (Tailândia); Cl@ve shared digital identity (Espanha); La Palma volcanic-eruption recovery and monitoring (Espanha); mObywatel digital ID wallet (Polônia); Rodzina 500+ and 800+ child-benefit delivery (Polônia); Alert RCB national emergency SMS channel (Polônia); BankID federated electronic identity (Suécia); 1177 national health portal and helpline (Suécia); VMA multi-channel public warning system (Suécia); MyGovID single sign-on for public services (Irlanda); National COVID-19 vaccination delivery (Irlanda); National Asset Management Agency crisis workout (Irlanda); Met Éireann national weather-warning service (Irlanda); Salário mínimo and its permanent revaluation rule (Brasil); eNaira, a national rollout with an adoption gap (Nigéria); Productive Safety Net Programme for drought resilience (Etiópia); National 9-1-1 emergency-response system (República Dominicana); Sistema Nacional de Emergencias 911 (Honduras); National COVID-19 vaccination campaign (Cuba); Bitcoin Law, and its 2025 rollback (El Salvador); Routine immunization coverage, and its erosion (Haiti); Chave Móvel Digital and Portugal's digital identity layer (Portugal); Empresa na Hora and the one-stop company registry (Portugal); Sistema de Gestão Integrada de Fogos Rurais (Portugal); Simplex and LabX, a standing simplification-and-experimentation loop (Portugal); Programa Nacional de Vacinação and seasonal immunisation (Portugal); STAYAWAY COVID, a contact-tracing app suspended after the emergency (Portugal); CoWIN national COVID-19 vaccination platform (Índia); COFEPRIS digital regulatory procedures (México); Simulacro Nacional 2024, a nationwide emergency exercise (México); PROSPERA, and its replacement by a new scholarship authority (México); AFAD earthquake shelter and recovery operation (Turquia); Civil defence shelters (Finlândia); Public civil defence shelters, and their dismantling (Alemanha).
 - Lacunas declaradas: Preparação e recuperação de desastres, Capacidade de resposta institucional.
 
-### Antecipação: 44, confiança utilizável
+### Antecipação: 44, solidez utilizável
 
 Quão capaz é o país de identificar mudanças emergentes e se preparar para elas?
 
@@ -61,17 +61,17 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 
 ## Dimensões para medir primeiro
 
-A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
+A solidez da evidência está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Confiança: confiança 0,26, fraca
+### Confiança: solidez 0,26, fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
 
 - Baseada em 3 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Taxa de resolução de processos judiciais.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
-### Propósito compartilhado: confiança 0,29, fraca
+### Propósito compartilhado: solidez 0,29, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
@@ -79,7 +79,7 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e responsabilização.
 
-### Coordenação: confiança 0,39, fraca
+### Coordenação: solidez 0,39, fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
 
@@ -87,14 +87,14 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
-### Agência: confiança 0,41, fraca
+### Agência: solidez 0,41, fraca
 
 Quão capazes são pessoas e organizações de transformar uma intenção em ação?
 
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Habilidades digitais de adultos.
 
-### Experimentação: confiança 0,43, fraca
+### Experimentação: solidez 0,43, fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
@@ -103,7 +103,7 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 
 ## O que a África do Sul tem para trabalhar
 
-Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na nota, na confiança nem na tendência. Lidas contra a nota, mostram se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.
+Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na nota, na solidez da evidência nem na tendência. Lidas contra a nota, mostram se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.
 
 | Dimensão | Condição | Valor | Ano | Posição |
 | --- | --- | --- | --- | --- |
@@ -120,7 +120,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 ## Agenda de medição
 
-20 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+20 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -131,7 +131,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Coordenação | Colaboração público-privada | Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
 | Confiança | Cooperação além do próprio grupo | Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade. |
-| Confiança | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
+| Confiança | Taxa de resolução de processos judiciais | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Aprendizagem | Participação de adultos em aprendizagem | Parcela de adultos em educação e treinamento, formal ou não, nos últimos 12 meses. |
 | Experimentação | Investimento de capital de risco | Capital de risco investido como parcela do PIB. |
 | Experimentação | Atividade de sandbox regulatório | Número e abrangência de sandboxes regulatórios e regimes de teste controlado em operação. |
@@ -147,7 +147,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 ## O que os indicadores não veem sobre a África do Sul
 
-Entregas documentadas ligadas a indicadores ausentes. Elas não afetam as notas nem a confiança.
+Entregas documentadas ligadas a indicadores ausentes. Elas não afetam as notas nem a solidez da evidência.
 
 - **Grid power, and load shedding** (Construção). South Africa ran one of the world's cheapest reliable grids and extended it to most of the population after 1994, then under-invested and lost the surplus, reaching 335 days of load shedding in 2023 before recovering to 83 days in 2024.
 - **Labour Market Intelligence Programme and forward skills planning** (Antecipação). South Africa's Department of Higher Education and Training ran a Labour Market Intelligence Programme from 2012, published the fifth iteration of its national occupations-in-high-demand list by April 2024, and identified 138 occupations for the emerging hydrogen-economy value chain.

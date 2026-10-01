@@ -2,11 +2,11 @@
 
 *Gerado em 2026-10-01*
 
-A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a confiança ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
+A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
 ## Onde o Japão está
 
-| Dimensão | Nota | Confiança | Tendência |
+| Dimensão | Nota | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 64 | 0,46 (utilizável) | +13,5 em 10 anos, sobre 2 indicadores |
 | Agência | 37,8 | 0,56 (utilizável) | sem base de tendência |
@@ -22,7 +22,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 
 Estas são as notas mais baixas com evidência utilizável. A evidência fraca aparece abaixo.
 
-### Agência: 37,8, confiança utilizável
+### Agência: 37,8, solidez utilizável
 
 Quão capazes são pessoas e organizações de transformar uma intenção em ação?
 
@@ -31,7 +31,7 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 - Entregas documentadas em outros países: SIBRATEC, the documented innovation-centre network (Brasil); Singapore's national ICT-skills measurement and baseline (Singapura); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (Índia); Puntos México Conectado, national digital learning centres (México).
 - Lacunas declaradas: Habilidades digitais de adultos.
 
-### Aprendizagem: 43,4, confiança utilizável
+### Aprendizagem: 43,4, solidez utilizável
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
@@ -42,16 +42,16 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 ## Dimensões para medir primeiro
 
-A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
+A solidez da evidência está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Experimentação: confiança 0,24, muito fraca
+### Experimentação: solidez 0,24, muito fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
-### Propósito compartilhado: confiança 0,24, muito fraca
+### Propósito compartilhado: solidez 0,24, muito fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
@@ -59,7 +59,7 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e responsabilização.
 
-### Coordenação: confiança 0,39, fraca
+### Coordenação: solidez 0,39, fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
 
@@ -67,25 +67,25 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
-### Confiança: confiança 0,4, fraca
+### Confiança: solidez 0,4, fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
 
 - Baseada em 4 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Taxa de resolução de processos judiciais.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ## Dimensões para manter
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 82,1, confiança utilizável
-- Antecipação: 64, confiança utilizável
-- Construção: 54,8, confiança utilizável
+- Adaptação: 82,1, solidez utilizável
+- Antecipação: 64, solidez utilizável
+- Construção: 54,8, solidez utilizável
 
 ## O que o Japão tem para trabalhar
 
-Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na nota, na confiança nem na tendência. Lidas contra a nota, mostram se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.
+Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na nota, na solidez da evidência nem na tendência. Lidas contra a nota, mostram se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.
 
 | Dimensão | Condição | Valor | Ano | Posição |
 | --- | --- | --- | --- | --- |
@@ -102,7 +102,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 ## Agenda de medição
 
-20 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+20 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -113,7 +113,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Coordenação | Colaboração público-privada | Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
 | Confiança | Cooperação além do próprio grupo | Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade. |
-| Confiança | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
+| Confiança | Taxa de resolução de processos judiciais | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Aprendizagem | Participação de adultos em aprendizagem | Parcela de adultos em educação e treinamento, formal ou não, nos últimos 12 meses. |
 | Experimentação | Investimento de capital de risco | Capital de risco investido como parcela do PIB. |
 | Experimentação | Atividade de sandbox regulatório | Número e abrangência de sandboxes regulatórios e regimes de teste controlado em operação. |
@@ -129,7 +129,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 ## O que o Japão construiu e nenhum indicador conta
 
-Estas são mudanças institucionais documentadas em Japão que o framework registra como evidência. Elas aparecem ao lado da nota e não mudam a nota nem a confiança.
+Estas são mudanças institucionais documentadas em Japão que o framework registra como evidência. Elas aparecem ao lado da nota e não mudam a nota nem a solidez da evidência.
 
 - **My Number Card, a national identity rail extended into services** (Adaptação). By July 2024 Japan reported 93.08 million My Number Cards held, about 75% of the population; 73.71 million had valid health-insurance-card registrations in June 2024, while 566 businesses used the public-key identity infrastructure.
 - **GIGA School, one learning device per student** (Construção). Japan's MEXT GIGA School programme reached a one-device-per-student environment in 1,810 of 1,812 local school authorities (99.9%) by the end of fiscal 2022, with the remaining two scheduled to finish during fiscal 2023.

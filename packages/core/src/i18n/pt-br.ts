@@ -327,7 +327,7 @@ export const PT_BR: Lexicon = {
     below_middle: { label: 'abaixo do meio', meaning: 'Na metade inferior da régua.' },
     weak: {
       label: 'fraca',
-      meaning: 'Perto do piso da régua. Confira a confiança antes de tirar qualquer conclusão.',
+      meaning: 'Perto do piso da régua. Confira a solidez da evidência antes de tirar qualquer conclusão.',
     },
   },
   legendRange: '{a} a {b}',
@@ -339,12 +339,12 @@ export const PT_BR: Lexicon = {
     title: 'Agenda de capacidades: {country}',
     generated: 'Gerado em {date}',
     intro:
-      'A régua inclui {countries} países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a confiança ao lado. Leia {limits} antes de citar uma nota.',
+      'A régua inclui {countries} países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia {limits} antes de citar uma nota.',
     limitsLabel: 'os limites conhecidos dos dados',
     standingHeading: 'Onde {countryTopic} está',
     colDimension: 'Dimensão',
     colScore: 'Nota',
-    colConfidence: 'Confiança',
+    colConfidence: 'Solidez',
     colTrend: 'Tendência',
     historyHeading: 'Capacidade ao longo do tempo',
     historyIntro:
@@ -370,18 +370,18 @@ export const PT_BR: Lexicon = {
       '{delta} em {years} anos, sobre {n} indicadores, {c} truncados na borda da régua',
     noTrend: 'sem base de tendência',
     noScore: 'sem nota',
-    raiseItemHeading: '{dimension}: {score}, confiança {band}',
-    measureItemHeading: '{dimension}: confiança {confidence}, {band}',
+    raiseItemHeading: '{dimension}: {score}, solidez {band}',
+    measureItemHeading: '{dimension}: solidez {confidence}, {band}',
     raiseHeading: 'Dimensões para elevar',
     raiseIntro:
       'Estas são as notas mais baixas com evidência utilizável. A evidência fraca aparece abaixo.',
     measureHeading: 'Dimensões para medir primeiro',
     measureIntro:
-      'A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.',
+      'A solidez da evidência está abaixo da faixa utilizável. Primeiro, produza evidência.',
     holdHeading: 'Dimensões para manter',
     holdIntro:
       'Estas dimensões têm nota de pelo menos {threshold}, com evidência utilizável.',
-    holdItemLine: '{dimension}: {score}, confiança {band}',
+    holdItemLine: '{dimension}: {score}, solidez {band}',
     scoredOn: 'Baseada em {n} indicadores observados.',
     scoredOnOne: 'Baseada em um indicador observado.',
     gapsLine: 'Lacunas declaradas: {list}.',
@@ -390,25 +390,25 @@ export const PT_BR: Lexicon = {
     evidenceElsewhereLine: 'Entregas documentadas em outros países: {list}.',
     agendaHeading: 'Agenda de medição',
     agendaIntro:
-      '{n} indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.',
+      '{n} indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.',
     colIndicator: 'Indicador ausente',
     colAsks: 'O que ele pergunta',
     ownEvidenceHeading: 'O que os indicadores não veem sobre {countryTopic}',
     ownEvidenceIntro:
-      'Entregas documentadas ligadas a indicadores ausentes. Elas não afetam as notas nem a confiança.',
+      'Entregas documentadas ligadas a indicadores ausentes. Elas não afetam as notas nem a solidez da evidência.',
     brazilEvidenceHeading: 'O que o Brasil construiu e nenhum indicador conta',
     brazilEvidenceIntro:
       'Estas são mudanças institucionais documentadas no Brasil que o framework registra como evidência. Elas não recebem nota e aparecem ao lado das notas de capacidade como registro histórico.',
     institutionalHistoryHeading: 'O que {countryTopic} construiu e nenhum indicador conta',
     institutionalHistoryIntro:
-      'Estas são mudanças institucionais documentadas em {country} que o framework registra como evidência. Elas aparecem ao lado da nota e não mudam a nota nem a confiança.',
+      'Estas são mudanças institucionais documentadas em {country} que o framework registra como evidência. Elas aparecem ao lado da nota e não mudam a nota nem a solidez da evidência.',
     contributeHeading: 'Contribua',
     contributeBody:
       'Preencha uma lacuna, registre uma evidência ou conteste um indicador em {repo}. Os documentos explicam o método e suas decisões.',
     profileLink: 'Abra o perfil completo: indicadores, valores, anos e fontes',
     conditionsHeading: 'O que {countryTopic} tem para trabalhar',
     conditionsIntro:
-      'Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na nota, na confiança nem na tendência. Lidas contra a nota, mostram se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.',
+      'Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na nota, na solidez da evidência nem na tendência. Lidas contra a nota, mostram se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.',
     colCondition: 'Condição',
     colValue: 'Valor',
     colYear: 'Ano',
@@ -554,22 +554,22 @@ export const PT_BR: Lexicon = {
     title: 'Onde {countryTopic} está em {dimension}?',
     metaTitle: 'Mapa de {dimension}, {country}, NCB',
     metaDescription:
-      'Uma leitura de {dimension} para {countryTopic}: a nota e a confiança, os indicadores em que ela se apoia, as condições ao lado dela e a posição entre os países de renda mais próxima. Calculada a partir dos dados publicados.',
+      'Uma leitura de {dimension} para {countryTopic}: a nota e a solidez da evidência, os indicadores em que ela se apoia, as condições ao lado dela e a posição entre os países de renda mais próxima. Calculada a partir dos dados publicados.',
     dataset: 'Dados da versão {version}',
     intro:
       'Esta página lê uma capacidade a partir dos dados publicados e é recalculada a cada versão. Ela separa o que {countryTopic} faz, que forma a nota, do que o país tem, que fica ao lado da nota, e coloca o país entre os {count} países de renda mais próxima. O texto descreve os dados e não recomenda políticas.',
     scoreHeading: 'Em que a nota se apoia?',
     scoreIntro:
-      'A nota de {dimension} é a média, com pesos iguais, das posições de {n} indicadores numa régua de 0 a 100 que todos os países definem juntos. A confiança mede a evidência por trás da nota e aparece ao lado dela, como um segundo número.',
+      'A nota de {dimension} é a média, com pesos iguais, das posições de {n} indicadores numa régua de 0 a 100 que todos os países definem juntos. A solidez da evidência por trás da nota aparece ao lado dela, como um segundo número.',
     scoreLabel: 'Nota',
-    confidenceLabel: 'Confiança',
+    confidenceLabel: 'Solidez',
     bandLine: 'evidência {band}',
     rowsHeading: 'Indicadores observados',
     colPosition: 'Posição na régua',
     colPeerMedian: 'Mediana dos pares',
     rowSource: '{source}, {year}',
     noValue: 'sem valor',
-    gapsLine: 'Ainda sem base comparável, e por isso baixando a confiança: {list}.',
+    gapsLine: 'Ainda sem base comparável, e por isso baixando a solidez da evidência: {list}.',
     dimensionIncome:
       'A nota de {dimension} acompanha o PIB per capita com r = {r} entre {n} países.',
     conditionsIntro:
@@ -635,7 +635,7 @@ export const PT_BR: Lexicon = {
       'Nenhuma condição é publicada ao lado de {dimension} nesta versão, por isso a página mostra só os indicadores que formam a nota.',
     floorNote:
       'Sem nota nesta versão. Indicadores observados: {n}, abaixo do mínimo que o modelo exige para formar uma média.',
-    thinNote: 'A confiança está na faixa {band}, então a nota se apoia em pouca evidência.',
+    thinNote: 'A solidez da evidência está na faixa {band}, então a nota se apoia em pouca evidência.',
     artefactsLine:
       'Os artefatos conhecidos que tocam {dimension}, descritos em inglês na página de limites:',
     artefactsStructural: 'E os que valem para toda nota do benchmark:',
@@ -647,9 +647,9 @@ export const PT_BR: Lexicon = {
       title: 'Onde {countryTopic} está em cada capacidade?',
       metaTitle: 'Mapa de capacidades, {country}, NCB',
       metaDescription:
-        'Uma leitura de cada capacidade para {countryTopic}: a nota, a confiança e a posição diante da mediana dos países de renda mais próxima. Calculada a partir dos dados publicados.',
+        'Uma leitura de cada capacidade para {countryTopic}: a nota, a solidez da evidência e a posição diante da mediana dos países de renda mais próxima. Calculada a partir dos dados publicados.',
       intro:
-        'Esta página lê {n} capacidades para {countryTopic} a partir dos dados publicados e é recalculada a cada versão. Cada linha traz a nota e a confiança como dois números e compara a nota com a mediana dos {count} países de renda mais próxima. As linhas seguem a ordem do modelo, e cada uma abre o mapa daquela capacidade.',
+        'Esta página lê {n} capacidades para {countryTopic} a partir dos dados publicados e é recalculada a cada versão. Cada linha traz a nota e a solidez da evidência como dois números e compara a nota com a mediana dos {count} países de renda mais próxima. As linhas seguem a ordem do modelo, e cada uma abre o mapa daquela capacidade.',
       heading: 'Como cada capacidade se compara aos pares?',
       colDimension: 'Capacidade',
       colPeerMedian: 'Mediana dos pares',

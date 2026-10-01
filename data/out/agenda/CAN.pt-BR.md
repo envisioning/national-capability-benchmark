@@ -2,11 +2,11 @@
 
 *Gerado em 2026-10-01*
 
-A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a confiança ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
+A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
 ## Onde o Canadá está
 
-| Dimensão | Nota | Confiança | Tendência |
+| Dimensão | Nota | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 80,2 | 0,46 (utilizável) | +2,8 em 10 anos, sobre 2 indicadores |
 | Agência | 71,8 | 0,52 (utilizável) | sem base de tendência |
@@ -22,7 +22,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 
 Estas são as notas mais baixas com evidência utilizável. A evidência fraca aparece abaixo.
 
-### Construção: 30,5, confiança utilizável
+### Construção: 30,5, solidez utilizável
 
 Quão capaz é o país de transformar planos e conhecimento em sistemas que funcionam?
 
@@ -34,9 +34,9 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 
 ## Dimensões para medir primeiro
 
-A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
+A solidez da evidência está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Coordenação: confiança 0,23, muito fraca
+### Coordenação: solidez 0,23, muito fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
 
@@ -44,22 +44,22 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
-### Experimentação: confiança 0,24, muito fraca
+### Experimentação: solidez 0,24, muito fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
-### Confiança: confiança 0,4, fraca
+### Confiança: solidez 0,4, fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
 
 - Baseada em 4 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Taxa de resolução de processos judiciais.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
-### Propósito compartilhado: confiança 0,41, fraca
+### Propósito compartilhado: solidez 0,41, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
@@ -71,14 +71,14 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 83,9, confiança boa
-- Antecipação: 80,2, confiança utilizável
-- Agência: 71,8, confiança utilizável
-- Aprendizagem: 58,9, confiança utilizável
+- Adaptação: 83,9, solidez boa
+- Antecipação: 80,2, solidez utilizável
+- Agência: 71,8, solidez utilizável
+- Aprendizagem: 58,9, solidez utilizável
 
 ## O que o Canadá tem para trabalhar
 
-Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na nota, na confiança nem na tendência. Lidas contra a nota, mostram se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.
+Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na nota, na solidez da evidência nem na tendência. Lidas contra a nota, mostram se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.
 
 | Dimensão | Condição | Valor | Ano | Posição |
 | --- | --- | --- | --- | --- |
@@ -95,7 +95,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 ## Agenda de medição
 
-20 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+20 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -106,7 +106,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Coordenação | Colaboração público-privada | Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
 | Confiança | Cooperação além do próprio grupo | Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade. |
-| Confiança | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
+| Confiança | Taxa de resolução de processos judiciais | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Aprendizagem | Participação de adultos em aprendizagem | Parcela de adultos em educação e treinamento, formal ou não, nos últimos 12 meses. |
 | Experimentação | Investimento de capital de risco | Capital de risco investido como parcela do PIB. |
 | Experimentação | Atividade de sandbox regulatório | Número e abrangência de sandboxes regulatórios e regimes de teste controlado em operação. |
@@ -122,7 +122,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 ## O que os indicadores não veem sobre o Canadá
 
-Entregas documentadas ligadas a indicadores ausentes. Elas não afetam as notas nem a confiança.
+Entregas documentadas ligadas a indicadores ausentes. Elas não afetam as notas nem a solidez da evidência.
 
 - **Phoenix pay system, and its prolonged failure** (Construção). Canada rolled out the Phoenix federal pay system in 2016, then spent more than C$2.6 billion by April 2022 to support and stabilise it and correct pay-file errors, with a further roughly C$1 billion allocated through the 2024-25 fiscal year.
 
