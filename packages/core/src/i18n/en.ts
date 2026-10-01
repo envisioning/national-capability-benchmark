@@ -16,7 +16,9 @@ export const EN: Lexicon = {
   dimensions: DIMENSION_LABELS,
   questions: DIMENSION_QUESTIONS,
   countries: {},
-  countryArticles: {},
+  /* The names that take an article inside a sentence, so the map reads
+   * "Where does the United States stand" (D136). */
+  countryArticles: { USA: 'the', NLD: 'the', GBR: 'the', ARE: 'the', PHL: 'the', DOM: 'the' },
   indicators: {},
   indicatorDefinitions: {},
   units: {},
@@ -303,6 +305,8 @@ export const EN: Lexicon = {
       'Each sentence compares one position with one median. Why a difference exists, and what to do about it, lie outside this data.',
     noPeers:
       'This release does not publish country income, so the page cannot form the peer set.',
+    noIncome:
+      'The World Bank publishes no GDP per capita for {countryTopic}, so the page forms no peer set and draws no comparison.',
     limitsHeading: 'What this reading does not show',
     limitProxy:
       'A national score is a coarse proxy. A capability forms in firms, cities, networks and groups below the level of the country, and a national average only describes the conditions they work in.',
@@ -320,16 +324,17 @@ export const EN: Lexicon = {
         decisions: ['D119'],
       },
     },
-    /* Hand-written, because the published output carries no survey name (the
-     * pinned observation note does). Stale when D120 is superseded or the
-     * ILOSTAT series for Brazil changes survey. */
-    countryRowFacts: {
-      BRA: {
-        long_term_unemployment_share: {
-          text: 'For Brazil, the ILOSTAT series comes from PNAD Contínua, a household survey.',
-          decisions: ['D120'],
-        },
-      },
+    /* One template per kind of row fact. Which country has which fact is
+     * COUNTRY_ROW_FACTS in the model (D136). */
+    rowFacts: {
+      household_survey: 'For {countryTopic}, the ILOSTAT series comes from {survey}, a household survey.',
+      household_survey_unreliable:
+        'For {countryTopic}, the ILOSTAT series comes from a household survey, and the ILO flags the value unreliable.',
+      urban_survey_unreliable:
+        'For {countryTopic}, the ILOSTAT series comes from the {survey}, which covers urban areas only, and the ILO flags the value unreliable.',
+      flagged_unreliable: 'For {countryTopic}, the ILO flags the ILOSTAT value unreliable.',
+      gate_never_passed:
+        'For {countryTopic}, no year of the ILOSTAT series passes the plausibility gate, because the survey records under {floor}% in most or all years, so the row has no value.',
     },
     noConditions:
       'No condition is published beside {dimension} in this release, so the page shows only the indicators that make the score.',

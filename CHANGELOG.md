@@ -9,6 +9,32 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.22.0 — 2026-10-01
+
+- **Every country has a capability map in English.** `/country/<ISO3>/map`
+  lists the nine capabilities with the score and the confidence as two
+  numbers and the median of the 10 countries nearest in income, and
+  `/country/<ISO3>/map/<dimension>` reads one capability: the indicators the
+  score rests on, the conditions beside it and the country among its peers on
+  the field chart. It is the same computed reading as the Brazilian and
+  Spanish layers' maps, for all 53 countries, in the ground layer's English.
+  It is the Map tab in each country's pages, beside the agenda. On a country
+  with a layer, the header's language switch moves between the two maps on
+  the same capability. The sitemap lists the 530 new pages and `/llms.txt`
+  points at the pattern. See D136.
+- **Facts about one country's row come from one table.** The few things a
+  map says about one country's indicator that the published data does not
+  carry, such as the survey behind a long-term unemployment series or why
+  the row is empty, are now one table read by every language, held to the
+  pinned ILOSTAT release by a test. The ground-layer map shows them for every
+  country they are true of, 14 in all. The Brazilian and Spanish pages read
+  as before.
+- **English names that take an article get one.** The agenda and the map
+  write "the United States", "the Netherlands", "the United Kingdom", "the
+  United Arab Emirates", "the Philippines" and "the Dominican Republic"
+  inside a sentence. The six English agenda documents are re-rendered. No
+  score changes.
+
 ## App 1.21.0 — 2026-10-01
 
 - **The evidence corpus has a finish line (D135).** Every country is checked

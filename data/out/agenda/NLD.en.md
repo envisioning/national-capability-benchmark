@@ -4,7 +4,7 @@
 
 The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
-## Where Netherlands stands
+## Where the Netherlands stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
@@ -82,7 +82,7 @@ These dimensions score at least 50 with usable evidence.
 - Anticipation: 78.5, confidence usable
 - Learning: 71.4, confidence usable
 
-## What Netherlands has to work with
+## What the Netherlands has to work with
 
 Conditions describe what a country has to work with: infrastructure, access, money, people, enrolment and income itself. Each is published beside a capability and is not part of its score, its confidence or its trend. Read against the score, they show whether what a country has turns into what it does. The rank counts the countries with a value, best first.
 
@@ -126,7 +126,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 
-## What Netherlands built that no indicator counts
+## What the Netherlands built that no indicator counts
 
 These are documented institutional changes in Netherlands that the framework records as evidence. They appear beside the score and do not change it or its confidence.
 

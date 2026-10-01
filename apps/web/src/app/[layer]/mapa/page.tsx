@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { CapabilityMapIndex, capabilityMapIndexMetadata } from '@/components/layer/CapabilityMapIndex'
 import { layerBySlug, layerSection } from '@/lib/layers'
+import { layerMapReading } from '@/lib/map-reading'
 
 export const dynamic = 'force-dynamic'
 
@@ -20,11 +21,11 @@ function mapLayer(slug: string) {
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const layer = mapLayer((await params).layer)
-  return layer ? capabilityMapIndexMetadata(layer) : {}
+  return layer ? capabilityMapIndexMetadata(layerMapReading(layer)) : {}
 }
 
 export default async function LayerCapabilityMapIndexPage({ params }: Params) {
   const layer = mapLayer((await params).layer)
   if (!layer) notFound()
-  return <CapabilityMapIndex layer={layer} />
+  return <CapabilityMapIndex reading={layerMapReading(layer)} />
 }

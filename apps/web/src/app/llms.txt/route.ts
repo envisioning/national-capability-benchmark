@@ -11,6 +11,7 @@ import {
   LIMITS_DOC,
   DECISIONS_DOC,
   isScored,
+  MAP_PEER_COUNT,
   rawHref,
 } from '@ncb/core'
 import { loadIndex } from '@/lib/data'
@@ -23,6 +24,7 @@ import {
   compareBaseHref,
   contactHref,
   countriesHref,
+  countryMapHref,
   decisionsHref,
   delphiHref,
   diagnosticsHref,
@@ -155,6 +157,7 @@ export async function GET(request: Request): Promise<Response> {
     ...READING_PAGES.map(
       (entry) => `- [${entry.label}](${abs(origin, entry.href)}): ${PRIMARY_NOTES[entry.href] ?? ''}`,
     ),
+    `- [One country's capability map](${abs(origin, countryMapHref('BRA'))}): each capability's score and confidence against the median of the ${MAP_PEER_COUNT} countries nearest in income, descriptive only, with one page per capability at /country/BRA/map/<dimension>. Swap BRA for any ISO3 code.`,
     '',
     '## Method',
     '',

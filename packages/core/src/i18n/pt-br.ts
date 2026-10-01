@@ -603,6 +603,8 @@ export const PT_BR: Lexicon = {
       'Cada frase compara uma posição com uma mediana. A causa de uma diferença, e o que fazer com ela, ficam fora destes dados.',
     noPeers:
       'Esta versão dos dados não publica a renda dos países, por isso a página não forma o conjunto de pares.',
+    noIncome:
+      'O Banco Mundial não publica PIB per capita para {countryTopic}, então a página não forma um grupo de pares e não faz comparação.',
     limitsHeading: 'O que esta leitura não mostra',
     limitProxy:
       'A nota nacional é uma aproximação grosseira. Uma capacidade se forma em empresas, cidades, redes e grupos, abaixo do nível do país, e uma média nacional descreve apenas as condições em que eles trabalham.',
@@ -620,16 +622,17 @@ export const PT_BR: Lexicon = {
         decisions: ['D119'],
       },
     },
-    /* Hand-written, because the published output carries no survey name (the
-     * pinned observation note does). Stale when D120 is superseded or the
-     * ILOSTAT series for Brazil changes survey. */
-    countryRowFacts: {
-      BRA: {
-        long_term_unemployment_share: {
-          text: 'Para o Brasil, a série do ILOSTAT vem da PNAD Contínua, uma pesquisa domiciliar.',
-          decisions: ['D120'],
-        },
-      },
+    /* Um modelo por tipo de fato. Qual país tem qual fato é COUNTRY_ROW_FACTS
+     * no modelo (D136). */
+    rowFacts: {
+      household_survey: 'Para {countryTopic}, a série do ILOSTAT vem da {survey}, uma pesquisa domiciliar.',
+      household_survey_unreliable:
+        'Para {countryTopic}, a série do ILOSTAT vem de uma pesquisa domiciliar, e a OIT marca o valor como pouco confiável.',
+      urban_survey_unreliable:
+        'Para {countryTopic}, a série do ILOSTAT vem da {survey}, que cobre só aglomerados urbanos, e a OIT marca o valor como pouco confiável.',
+      flagged_unreliable: 'Para {countryTopic}, a OIT marca o valor do ILOSTAT como pouco confiável.',
+      gate_never_passed:
+        'Para {countryTopic}, nenhum ano da série do ILOSTAT passa pelo filtro de plausibilidade: a pesquisa registra menos de {floor}% na maioria dos anos, então a linha fica sem valor.',
     },
     noConditions:
       'Nenhuma condição é publicada ao lado de {dimension} nesta versão, por isso a página mostra só os indicadores que formam a nota.',

@@ -1,6 +1,7 @@
 import { Icon } from '@/components/Icon'
 import { EN, fill, indicatorDefinition, indicatorName, unitName } from '@ncb/core'
 import type { ConditionResult, Lexicon } from '@ncb/core'
+import { CONDITION_WORDS_EN } from '@/lib/words'
 
 /** A published value at the precision a reader can use: whole numbers from 100 up. */
 export function conditionValue(value: number, locale = 'en-US'): string {
@@ -19,14 +20,6 @@ export type ConditionListWords = {
   noValue: string
   /** {rank} {n} */
   rank: string
-}
-
-export const CONDITION_WORDS_EN: ConditionListWords = {
-  label: 'Conditions, not scored',
-  intro:
-    'What the country has to work with on this capability. The values are shown as the source published them and are not part of the score, the confidence or the trend. The rank counts the countries with a value, best first.',
-  noValue: 'No value for this country. {definition}',
-  rank: 'rank {rank} of {n}',
 }
 
 /**

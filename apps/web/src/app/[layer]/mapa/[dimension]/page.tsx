@@ -5,6 +5,7 @@ import {
   capabilityMapDimensionMetadata,
 } from '@/components/layer/CapabilityMapDimension'
 import { layerBySlug, layerSection } from '@/lib/layers'
+import { layerMapReading } from '@/lib/map-reading'
 
 export const dynamic = 'force-dynamic'
 
@@ -23,12 +24,12 @@ function mapLayer(slug: string) {
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { layer: slug, dimension } = await params
   const layer = mapLayer(slug)
-  return layer ? capabilityMapDimensionMetadata(layer, dimension) : {}
+  return layer ? capabilityMapDimensionMetadata(layerMapReading(layer), dimension) : {}
 }
 
 export default async function LayerCapabilityMapPage({ params }: Params) {
   const { layer: slug, dimension } = await params
   const layer = mapLayer(slug)
   if (!layer) notFound()
-  return <CapabilityMapDimension layer={layer} slug={dimension} />
+  return <CapabilityMapDimension reading={layerMapReading(layer)} slug={dimension} />
 }

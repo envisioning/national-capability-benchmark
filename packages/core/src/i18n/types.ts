@@ -1,4 +1,5 @@
 import type { Dimension } from '../model/dimensions.js'
+import type { RowFactKind } from '../model/row-facts.js'
 import type {
   InstitutionLegalNature,
   InstitutionLevel,
@@ -244,6 +245,8 @@ export type CapabilityMapStrings = {
   conditionsLevel: string
   readingNote: string
   noPeers: string
+  /** The release publishes income, but not for this country. {countryTopic} See D136. */
+  noIncome: string
   limitsHeading: string
   limitProxy: string
   limitPeers: string
@@ -251,12 +254,13 @@ export type CapabilityMapStrings = {
   /** Construct caveats per capability row id, each with the decisions it rests on. */
   rowCaveats: Record<string, { text: string; decisions: string[] }>
   /**
-   * Hand-written facts about one country's row that the published output does
-   * not carry, keyed by iso3 and then row id. Keep this as short as possible:
-   * every entry is a sentence a re-ingest cannot correct, so each names the
-   * decision whose supersession would make it stale. See D133.
+   * One template per kind of hand-written row fact, the only per-country
+   * sentences the map prints. Which country has which fact, and the survey it
+   * names, is `COUNTRY_ROW_FACTS` in the model, shared by every reading of a
+   * country; a lexicon translates the kind and never names a country here.
+   * {countryTopic} {survey} {floor}. See D136.
    */
-  countryRowFacts: Record<string, Record<string, { text: string; decisions: string[] }>>
+  rowFacts: Record<RowFactKind, string>
   /** Said where a dimension has no conditions. {dimension} */
   noConditions: string
   /** Said where the dimension is below the coverage floor. {n} observed rows. */

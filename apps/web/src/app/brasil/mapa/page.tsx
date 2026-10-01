@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import { CapabilityMapIndex, capabilityMapIndexMetadata } from '@/components/layer/CapabilityMapIndex'
 import { countryLayer } from '@/lib/layers'
+import { layerMapReading } from '@/lib/map-reading'
 
 export const dynamic = 'force-dynamic'
 
@@ -10,9 +11,9 @@ export const dynamic = 'force-dynamic'
  */
 const layer = countryLayer('BRA')
 
-export const metadata = layer ? capabilityMapIndexMetadata(layer) : {}
+export const metadata = layer ? capabilityMapIndexMetadata(layerMapReading(layer)) : {}
 
 export default function BrazilCapabilityMapIndexPage() {
   if (!layer) notFound()
-  return <CapabilityMapIndex layer={layer} />
+  return <CapabilityMapIndex reading={layerMapReading(layer)} />
 }

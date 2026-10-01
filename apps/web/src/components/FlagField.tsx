@@ -7,6 +7,7 @@ import { confidenceBand, fill } from '@ncb/core'
 import { FlagBubble, FlagBubbleLegend } from '@/components/FlagBubble'
 import { CHART_INK, CHART_MOTION, CHART_STROKE } from '@/components/chartTokens'
 import { Confidence, Delta, Flag, Score } from '@/components/ui'
+import { FIELD_WORDS_EN } from '@/lib/words'
 
 /* The radar is only needed after a country flag is pointed at. Keep it out of
    the field's initial bundle, especially for surfaces that do not provide a
@@ -104,22 +105,6 @@ export type FlagFieldWords = {
   legendNote: string
   solidRing: string
   brokenRing: string
-}
-
-export const FIELD_WORDS_EN: FlagFieldWords = {
-  score: 'Score',
-  confidence: 'Confidence',
-  trend: 'Trend',
-  highest: 'Highest',
-  lowest: 'Lowest',
-  noScore: 'no score',
-  clamped: 'Clamped at the edge of the frame, so the real position is further out.',
-  scoredOf: '{scored} of {total} capabilities scored.',
-  clickFlag: ' Click the flag for the full profile.',
-  aria: '{n} countries on a 0 to 100 scale. Median {median}.',
-  legendNote: 'The shaded band is the middle half of the field and the line inside it is the median.',
-  solidRing: 'Solid ring: usable or good evidence',
-  brokenRing: 'Broken ring: thin evidence, opening further as confidence falls',
 }
 
 const axisX = (v: number) => PAD + (Math.min(100, Math.max(0, v)) / 100) * (FIELD_WIDTH - PAD * 2)
