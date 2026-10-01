@@ -13,6 +13,7 @@ import type { CountryResult, Dimension } from '../model/index.js'
 import { ingestWorldBank, recordRevisions } from '../pipeline/ingest.js'
 import { fetchJointEvsWvsTrust } from '../pipeline/adapters/joint-evs-wvs.js'
 import { fetchVdemCivilSociety } from '../pipeline/adapters/vdem.js'
+import { fetchUnctadExportConcentration } from '../pipeline/adapters/unctad.js'
 import { probeSeries, registrySeries, searchCatalogue } from '../pipeline/probe.js'
 import type { ProbeRequest } from '../pipeline/probe.js'
 import {
@@ -416,6 +417,41 @@ async function vdem(args: Args): Promise<void> {
   )
 }
 
+async function unctad(args: Args): Promise<void> {
+  const action = args._[1] ?? 'fetch'
+  if (action !== 'fetch') {
+    throw new Error(`Unknown UNCTAD action "${action}". Use pnpm bench unctad fetch.`)
+  }
+  const retrievedAt = new Date().toISOString()
+  const result = await fetchUnctadExportConcentration({ retrievedAt })
+  let existing: unknown | null = null
+  try {
+    existing = JSON.parse(await readFile(FILES.unctad, 'utf8'))
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code !== 'ENOENT') {
+      throw new Error(`Cannot read existing UNCTAD observations: ${String(error)}`)
+    }
+  }
+  const parsedExisting = existing ? ObservationFile.safeParse(existing) : null
+  if (existing && !parsedExisting?.success) {
+    throw new Error(`Existing UNCTAD observations failed schema validation: ${FILES.unctad}`)
+  }
+  const before = parsedExisting?.success ? parsedExisting.data.observations : []
+  const previousRetrievedAt = parsedExisting?.success ? parsedExisting.data.generatedAt : null
+  await writeOut(FILES.unctad, `${JSON.stringify({ generatedAt: retrievedAt, observations: result.observations }, null, 2)}\n`)
+  const revisions = await recordRevisions(before, previousRetrievedAt, result.observations, retrievedAt)
+
+  console.log(`UNCTAD ${result.release}: ${result.observations.length}/${COUNTRY_ISO3.length} benchmark countries emitted`)
+  console.log(`  source coverage: ${result.availableCountries.length}/${COUNTRY_ISO3.length}`)
+  console.log(`  estimated (UNCTAD footnote): ${result.estimatedCountries.length} ${result.estimatedCountries.join(' ')}`)
+  if (result.heldCountries.length > 0) console.log(`  held, no pinned-year value: ${result.heldCountries.join(' ')}`)
+  if (result.unmappedLabels.length > 0) console.log(`  no M49 code: ${result.unmappedLabels.join(' ')}`)
+  console.log(`unctad data -> ${FILES.unctad}`)
+  console.log(
+    `revisions   -> ${revisions.changed} changed, ${revisions.added} added, ${revisions.removed} removed in ${FILES.revisions}`,
+  )
+}
+
 /**
  * Write the capability agenda: language-neutral JSON per country, plus one
  * rendered markdown per lexicon. The JSON is the ground layer, the markdown is
@@ -535,6 +571,10 @@ async function main() {
 
     case 'vdem':
       await vdem(args)
+      break
+
+    case 'unctad':
+      await unctad(args)
       break
 
     case 'research':
@@ -1020,6 +1060,7 @@ Start with file 1.
   pnpm bench institutions [--country BRA]  project the institution map into the explorer feed, one file per lexicon
   pnpm bench trust    fetch                fetch and parse Joint EVS/WVS A165 trust results
   pnpm bench vdem     fetch                fetch and parse V-Dem v15 civil-society strength
+  pnpm bench unctad   fetch                fetch and parse the pinned UNCTADstat export concentration index
   pnpm bench research inventory           write the deterministic country-gap research inventory
   pnpm bench research scout               ask AI for bounded, unpublished research leads
   pnpm bench research critique --in FILE  red-team a scout run; still cannot approve publication

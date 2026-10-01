@@ -4,6 +4,9 @@ import type { Dimension } from './dimensions.js'
 import {
   JOINT_EVS_WVS_PUBLISHER,
   JOINT_EVS_WVS_RESULTS_URL,
+  UNCTAD_CONCENTRATION_DATASET,
+  UNCTAD_CONCENTRATION_PAGE_URL,
+  UNCTAD_PUBLISHER,
   VDEM_CY_CORE_V15_PAGE_URL,
   VDEM_PUBLISHER,
 } from './source-catalog.js'
@@ -758,13 +761,21 @@ const RAW: Raw[] = [
     id: 'export_diversification',
     dimension: 'adaptability',
     name: 'Export diversification',
-    definition: 'Inverse concentration of the export basket by product.',
-    unit: 'index 0-1',
+    definition:
+      'Concentration of the merchandise export basket across products: the normalised Herfindahl-Hirschman index over SITC Rev.3 3-digit lines, 0 when exports are spread evenly and 1 when one product is everything.',
+    unit: 'index 0-1, lower = more diversified',
     measurementClass: 'C',
-    direction: 'higher_better',
-    source: { publisher: 'UNCTAD', tier: 'international_organization', inspectable: true },
-    ingest: 'gap',
-    notes: 'UNCTAD publishes the concentration index and it is computable. Another good candidate for the next adapter.',
+    direction: 'lower_better',
+    source: {
+      publisher: UNCTAD_PUBLISHER,
+      series: UNCTAD_CONCENTRATION_DATASET,
+      url: UNCTAD_CONCENTRATION_PAGE_URL,
+      tier: 'international_organization',
+      inspectable: true,
+    },
+    ingest: 'adapter',
+    notes:
+      'UNCTADstat Concentration Index for exports, stored as published. It reads a product mix, not the capacity to switch: Switzerland (gold and pharmaceuticals), Ireland (pharmaceuticals) and Singapore (re-exports) look concentrated because a few lines are worth a lot, not because they are fragile. Commodity exporters move with prices from year to year even when the basket does not change. Merchandise only, so a services-led export base reads as narrower than it is. Values UNCTAD marks Estimated, mirrored from partner data, say so in their observation note. See D119.',
     wealthProxyPrior: 0.3,
   },
   {

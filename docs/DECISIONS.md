@@ -5442,3 +5442,60 @@ lower the income correlation. That would show the pre-commitment is not
 working. It would also be overturned by rows admitted under this rule that
 reviewers agree are levels of spending or adoption under another name, which
 would show the construct question is too loose to stand in for the number.
+
+---
+
+## D119 — Export concentration from UNCTADstat fills export diversification
+
+**Decision.** `export_diversification` moves from `gap` to `adapter`. The
+value is UNCTADstat's Concentration Index (`US.ConcentDiversIndices`, flow `02`,
+exports): a normalised Herfindahl-Hirschman index of the merchandise export
+basket across SITC Rev.3 3-digit products, 0 when exports are spread evenly
+and 1 when one product is everything. It is stored as published, so the row
+becomes `direction: 'lower_better'` with the unit "index 0-1, lower = more
+diversified", rather than being inverted in the adapter. The adapter fetches
+the keyless bulk 7z, extracts its one CSV with `bsdtar`, joins UN M49 codes to
+the registry, and emits the pinned year 2025 only. The file is pinned by the
+SHA-256 of the CSV (release stamped 2026-06-24), so a publisher refresh fails
+the fetch until someone re-pins it. UNCTAD's footnote travels in each
+observation note: 15 of the 53 values are marked `Estimated` (mirror data from
+partners). The Diversification Index in the same file is not used: it measures
+distance from the world basket, which is a resemblance, not a spread.
+
+**Why.** The row is accepted on its construct, decided before its wealth
+correlation was read. Adaptability asks whether a country can absorb a shock
+and reallocate. A basket spread across many products is the standing result of
+past reallocation and the exposure a single price or demand shock meets, which
+is the construct the registry already declared for this row. It is class `C`,
+an observed outcome of the economy's structure, and not a diffusion stock that
+money buys directly. The source covers all 53 countries at 2025 from one
+international publisher, so it adds evidence without favouring rich countries.
+
+Reported as findings, not tests. The row's own correlation with log GDP per
+capita is r = 0.445 (n 51; the stored HHI is direction-adjusted so a higher
+normalised score is more diversified). Its wealth-attribution delta is +0.021:
+with the row Adaptability sits at r = 0.839 (Spearman 0.837, n 51), without it
+0.818, so the row does not move Adaptability toward O2 and slightly away from
+it. It forms no redundant pair. Adaptability's mean confidence rises from 0.469
+to 0.588, observed rows from 4 to 5 for every country, and mean confidence
+against log GDP across all dimensions stays at r = 0.34, so the guardrail
+holds.
+
+**Cost.** The index reads a product mix, not the capacity to switch.
+Switzerland (0.364, gold and pharmaceuticals), Ireland (0.330,
+pharmaceuticals) and Singapore (0.271, re-exports) score as concentrated
+because a few lines are worth a lot, not because they are fragile. Commodity
+exporters such as Venezuela (0.762) and Nigeria (0.619) move with prices from
+year to year even when the basket does not. It is merchandise only, so
+services-led exporters read narrower than they are, and 3-digit SITC hides
+diversity inside a product line. The registry note says all of this. The
+history from 1995 is in the file and is not emitted, so the row has no trend
+and no discrimination trend yet. The fetch depends on `bsdtar` being on the
+path. The data is CC BY 3.0 IGO and must be cited as the UNCTAD Data Hub.
+
+**Overturned by.** A source that observes reallocation itself, such as entry
+into new export products or the speed a basket recovers after a price shock,
+at comparable coverage, which would answer the construct more directly and
+replace this row; or evidence that the high-value-line artefact moves more
+countries than the three named, which would make the row read wealth structure
+rather than exposure and return it to `gap`.

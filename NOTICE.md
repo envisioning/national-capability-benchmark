@@ -17,6 +17,11 @@ originate with other bodies and reach us through the World Bank, including
 UNESCO Institute for Statistics, ILO, ITU and WIPO. The registry in
 `packages/core/src/model/indicators.ts` names the publisher for each indicator.
 
+`data/observations/unctad-concentration.json` holds the export Concentration
+Index from the UNCTAD Data Hub (UNCTADstat), published under Creative Commons
+Attribution 3.0 IGO. Its terms ask that the UNCTAD Data Hub be cited as the
+source, and every observation in the file says so.
+
 If you redistribute the data, keep the attribution.
 
 ## Derived dataset
