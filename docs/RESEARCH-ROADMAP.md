@@ -48,13 +48,13 @@ raises O1 and breaks this.
 
 ### Where the objectives stand
 
-Dataset 7.3.0. Recompute from `data/out/diagnostics.json` and
+Dataset 7.3.0 plus D131 (Trust row only; the version bump ships with it). Recompute from `data/out/diagnostics.json` and
 `data/out/index.json` after any rescore; never carry these figures forward by
 hand.
 
 | Dimension | Mean confidence | Observed rows (mean) | r with log GDP | Reading |
 | --- | ---: | ---: | ---: | --- |
-| Trust | 0.31 | 2.6 | 0.57 (n 49) | misses O1 |
+| Trust | 0.35 | 3.6 | 0.67 (n 51) | misses O1 |
 | Experimentation | 0.27 | 3.5 | 0.57 | misses O1 |
 | Shared purpose | 0.34 | 2.6 | 0.20 (n 50) | misses O1 |
 | Coordination | 0.36 | 2.8 | 0.56 | misses O1 |
@@ -91,38 +91,39 @@ passes triage runs to its gate. One that fails triage costs one paragraph.
 | Q2 | Adaptability: the remaining gaps | Adaptability | Desk triage for `disaster_preparedness` and `institutional_responsiveness`. `broadband_subscriptions` is a condition since D122 | One triage paragraph per gap |
 | Q3 | Construct audit of stock rows | Reported O2: Anticipation, Agency, Learning | Done for Tier A at 7.0.0: ten bought conditions moved to the conditions layer (`docs/research/CONDITIONS-AUDIT.md`, D122). Open: the six Tier B rows, each only once its dimension has a capability row to replace it, and replacements for the two borderline rows, `sci_articles_per_million` and `human_capital_index` | One decision per Tier B row; OpenAlex impact and a learning-outcome series as replacements |
 | Q4 | Reopen exclusions that rested on income alone | O1: Trust | `bribery_incidence` (check since D60) | Done: scored in Trust (D123), 50 / 53 |
-| Q5 | V-Dem sweep | O1: Trust, Coordination, Shared purpose | The pinned V-Dem adapter, 53 / 53. Polarization is published as a check (D121) | Triage table of codebook variables against each gap, construct first |
+| Q5 | V-Dem sweep | O1: Trust, Coordination, Shared purpose | The pinned V-Dem adapter, 53 / 53. Polarization is published as a check (D121) | Done: court compliance scored in Trust (D131); nothing for Coordination |
 | Q6 | EVS/WVS sweep beyond A165 | O1: Shared purpose, Trust | The Joint EVS/WVS adapter (TRUST-1) | Triage table of behavioural items (membership, volunteering, participation) |
 | Q7 | OpenAlex research impact | Learning | OpenAlex API, full frame. Memo on #23 recommends the share of works in the top 10% for their field, as a ratio to world | Wired as `research_citation_impact` (D124), 53 / 53 |
 | Q8 | IDEA voter turnout | O1: Shared purpose | IDEA open data, full frame | Triage note, including the compulsory-voting rule |
 | Q9 | Full Delphi rerun (TRUST-5) | Reading, not measurement | Needs `AI_GATEWAY_API_KEY` | After the dataset changes |
 
-**Q5 status (2026-10-01): started, no output yet.** The adapter now pins the
-Full+Others v15 archive (D121), which downloads from a cloud session and
-carries the Core variables too.
-A v16 release exists at the same URL pattern (`-v16_csv.zip`, March
-2026): pin it in a separate patch-level change, not inside the sweep. Starting
-hypotheses to triage, none tested:
+**Q5 status (2026-10-01): done, one row scored (D131).** The triage table
+is `docs/research/vdem-sweep/TRIAGE.md`: 21 codebook variables, construct
+first, then coverage, the A13 regime test, redundancy and r with log GDP.
 
-- `political_polarization` (Shared purpose) against `v2cacamps`: done. It is
-  published as a check, not scored, because closed autocracies read as calm
-  (D121, A13). The gap stays open.
-- A Trust institutional-performance row from government compliance with the
-  courts (`v2jucomp`, `v2juhccomp`) or impartial administration (`v2clrspct`).
-  These would be new rows, not existing gaps, so they need a decision.
-- Coordination from deliberation and state administration: `v2dlconslt`,
-  `v2stcritrecadm`.
-- CSO consultation and participation (`v2cscnsult`, `v2csprtcpt`) feed
-  `v2x_cspart`, which is already scored, so test them for redundancy first.
+- Trust gains `court_compliance` (institutional family) from `v2jucomp`,
+  government compliance with court decisions it disagrees with: one public act
+  of the state, not a reputation, and autocracies read low on it rather than
+  high. 53 of 53. Trust's mean confidence 0.311 to 0.347 (still under O1), r
+  with log GDP 0.571 to 0.671, scored countries 50 to 52. The guardrail holds
+  at 0.298.
+- Coordination gains nothing. Range of consultation (`v2dlconslt`) is a
+  deliberative-democracy item that fails A13 (closed autocracies above
+  electoral ones, Vietnam level with Uruguay); the state-apparatus items are
+  conditions; the CSO items feed `v2x_cspart`. No V-Dem variable observes
+  independent actors acting together.
+- Dead on construct: the corruption items (`v2exbribe`, `v2excrptps`,
+  `v2jucorrdc`: hidden acts, so reputation, and the corruption construct D23
+  retired), impartial administration (`v2clrspct`) and predictable enforcement
+  (`v2cltrnslw`), both characterisations of the WGI kind, and common-good
+  justification (`v2dlcommon`, Cuba second of 53).
+- `political_polarization` (D121) and `voter_turnout` (D129) stay checks.
 - Nothing in V-Dem answers `institutional_trust` (public confidence),
-  `volunteering_rate`, `national_belonging` or `government_foresight_capacity`.
+  `court_case_clearance`, `volunteering_rate`, `national_belonging`,
+  `government_foresight_capacity` or cross-agency delivery.
 
-Triage construct first (D118): write what each variable observes, and whether it
-is an expert perception of the same kind D23 retired, before reading its
-values. Then report, for each variable at 2024, coverage of the 53, spread, r
-with log GDP and r with the dimension's existing rows. The correlations are
-findings and decide nothing. The A13 test, whether closed autocracies score
-well for the wrong reason, applies to every V-Dem candidate. Write the table to `docs/research/vdem-sweep/TRIAGE.md`.
+A v16 release exists at the same URL pattern (`-v16_csv.zip`, March 2026): pin
+it in a separate patch-level change.
 
 Parked, with the reason:
 
@@ -131,7 +132,7 @@ Parked, with the reason:
 - **TRUST-2 court clearance**: rejected at the coverage screen, 13 of 53.
   Reopen only if a harmonised non-European series appears.
 - **Cross-agency delivery** (Coordination) and **large-project delivery**
-  (Building): no full-frame source family exists. Reopen if the V-Dem sweep finds one.
+  (Building): no full-frame source family exists, and the V-Dem sweep found none (D131).
 - **PISA or PIAAC** (Learning): coverage skips much of the frame and would feed
   the guardrail. Reopen only as part of the Q3 construct audit.
 - **OxCGRT response speed** (`institutional_responsiveness`): failed triage on

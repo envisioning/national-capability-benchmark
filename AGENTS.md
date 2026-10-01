@@ -10,7 +10,7 @@ countries, nine dimensions, equal weights and no headline ranking.
 pnpm install
 pnpm bench ingest      fetch World Bank series from 1990 into data/observations/worldbank.json
 pnpm bench evs fetch   import the pinned Joint EVS/WVS items (A165 trust, A173 perceived control, A080_01 charitable membership) into data/observations/joint-evs-wvs.json; `trust fetch` is an alias
-pnpm bench vdem fetch  import the pinned V-Dem civil-society series and polarization check into data/observations/vdem-cy-core.json
+pnpm bench vdem fetch  import the pinned V-Dem civil-society and court-compliance series and the polarization and turnout checks into data/observations/vdem-cy-core.json
 pnpm bench unctad fetch import the pinned UNCTADstat export concentration index into data/observations/unctad-concentration.json (needs bsdtar)
 pnpm bench ilostat fetch derive and gate the ILOSTAT long-term unemployment share into data/observations/ilostat-ltu.json
 pnpm bench openalex fetch count the OpenAlex top 10% cited share and pin requests and counts into data/observations/openalex-citation-impact.json (set OPENALEX_MAILTO; OPENALEX_API_KEY optional)

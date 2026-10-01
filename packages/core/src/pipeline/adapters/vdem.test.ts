@@ -3,17 +3,17 @@ import { CHECKS, CHECKS_BY_ID, INDICATORS, VDEM_PUBLISHER } from '../../model/in
 import { parseVdem, VDEM_CY_V15_VARIABLES } from './vdem.js'
 
 const csv = [
-  'country_name,country_text_id,country_id,year,v2x_cspart,v2cacamps_osp,v2eltrnout,v2elcomvot,v2x_regime',
-  '"Brazil",BRA,1,2018,0.9,3.2,79.7,2,2',
-  '"Brazil",BRA,1,2022,0.89,3.5,79.42,2,2',
-  '"Brazil",BRA,1,2023,0.88,3.4,,,2',
-  '"Brazil",BRA,1,2024,0.898,3.561,,,2',
-  '"United States",USA,2,2024,0.981,3.613,70.75,0,3',
-  '"United States",USA,2,2025,0.97,3.7,99,0,3',
-  '"Outside, example",ZZZ,3,2024,0.5,1,60,0,3',
-  '"Missing",NLD,4,2024,,,,,',
-  '"Out of scale",IRL,5,2020,1.2,0.5,62,0,3',
-  '"Out of scale",IRL,5,2024,1.2,0.401,104,0,3',
+  'country_name,country_text_id,country_id,year,v2x_cspart,v2cacamps_osp,v2eltrnout,v2elcomvot,v2x_regime,v2jucomp_osp',
+  '"Brazil",BRA,1,2018,0.9,3.2,79.7,2,2,3.5',
+  '"Brazil",BRA,1,2022,0.89,3.5,79.42,2,2,3.6',
+  '"Brazil",BRA,1,2023,0.88,3.4,,,2,3.7',
+  '"Brazil",BRA,1,2024,0.898,3.561,,,2,3.761',
+  '"United States",USA,2,2024,0.981,3.613,70.75,0,3,4.2',
+  '"United States",USA,2,2025,0.97,3.7,99,0,3,3.1',
+  '"Outside, example",ZZZ,3,2024,0.5,1,60,0,3,2',
+  '"Missing",NLD,4,2024,,,,,,',
+  '"Out of scale",IRL,5,2020,1.2,0.5,62,0,3,3',
+  '"Out of scale",IRL,5,2024,1.2,0.401,104,0,3,3.4',
 ].join('\n')
 
 const result = parseVdem(csv, '2026-08-31T00:00:00.000Z', 'fixture://vdem')
@@ -24,8 +24,9 @@ assert.deepEqual(result.coverageByIndicator, {
   civil_society_strength: 2,
   __check__political_polarization: 3,
   __check__voter_turnout: 2,
+  court_compliance: 2,
 })
-assert.equal(result.observations.length, 7)
+assert.equal(result.observations.length, 9)
 const civil = result.observations.filter((o) => o.indicatorId === 'civil_society_strength')
 assert.equal(civil[0]?.indicatorId, 'civil_society_strength')
 assert.equal(civil[0]?.iso3, 'BRA')
@@ -42,6 +43,18 @@ assert.deepEqual(
   ],
 )
 assert.ok(polarization[0]?.note?.startsWith('v2cacamps_osp;'))
+
+/* Court compliance reads the release year only, on the 0-4 scale: the
+ * United States' out-of-scale 4.2 is dropped, never clamped. See D131. */
+const compliance = result.observations.filter((o) => o.indicatorId === 'court_compliance')
+assert.deepEqual(
+  compliance.map((o) => [o.iso3, o.year, o.value]),
+  [
+    ['BRA', 2024, 3.761],
+    ['IRL', 2024, 3.4],
+  ],
+)
+assert.ok(compliance[0]?.note?.startsWith('v2jucomp_osp;'))
 
 /* Turnout is coded in election years only: the latest coded row up to the
  * release year is read and keeps its own year, a year past the release is
@@ -84,7 +97,8 @@ assert.ok(!INDICATORS.some((i) => i.id === 'voter_turnout' || i.source.series ==
 
 assert.throws(() => parseVdem('country_text_id,year,v2x_cspart\nBRA,2024,0.5'), /missing v2cacamps_osp/)
 assert.throws(
-  () => parseVdem('country_text_id,year,v2x_cspart,v2cacamps_osp,v2eltrnout,v2x_regime\nBRA,2024,0.5,1,70,2'),
+  () =>
+    parseVdem('country_text_id,year,v2x_cspart,v2cacamps_osp,v2eltrnout,v2x_regime,v2jucomp_osp\nBRA,2024,0.5,1,70,2,3'),
   /missing v2elcomvot/,
 )
 
