@@ -6951,5 +6951,40 @@ Every sentence on `/thesis` and `/diagnostics` that states one of these
 verdicts is a template chosen by the computed reading in
 `apps/web/src/lib/residual.ts`, never fixed prose.
 
+**Amendment to (b), before the first run on data.** The (b) rule above
+failed its own synthetic check, before it was run on the benchmark's
+scores. On 50 synthetic countries with a planted shape (each country leaning
+one way on four dimensions and the other way on five, by its own amount,
+independent of income) it read **alike**, because a median of root mean
+square distances shrinks when shapes vary along one direction, whatever the
+peers. It compared peers with random dealing when the question "do income
+peers share a shape?" compares peers with countries chosen without regard to
+income. Replaced, still before any run on data:
+
+- The peer distance is the **mean**, over countries, of the mean **squared**
+  shape distance to the 10 income peers, per dimension.
+- **alike** when that mean falls below the 5th percentile of the same mean
+  with every profile kept whole and the incomes dealt out at random (2000
+  draws, seed 20261004): income peers are more alike in shape than countries
+  picked without regard to income, so income still predicts the shape.
+- otherwise **differ** when the first-factor share of the **shape columns**
+  (the standardised residuals minus each country's own mean) exceeds the 95th
+  percentile of the same share with each residual column dealt out at random
+  before the shapes are taken (2000 draws, seed 20261003): shapes line up
+  along shared contrasts that random dealing does not produce, and since
+  peers are not more alike than anyone, countries at the same income spread
+  along them.
+- otherwise **noise**.
+- Published but not read: the peer distance against the random-dealing noise
+  floor, and the share of countries whose peer distance clears the 95th
+  percentile of their own noise floor (one in twenty by construction).
+
+The synthetic checks in `residual-structure.test.ts` now hold the rule to
+four cases: pure noise around income reads none and noise; a planted shape
+reads structure and differ; a level shared by all nine reads structure and
+noise, so the weaker claim reads mixed; a shape that income dictates through
+a curve a straight line cannot remove reads alike. The rest of the decision
+is unchanged.
+
 **Results.** *To be filled in after the first run, below this line, without
 editing the rules above.*
