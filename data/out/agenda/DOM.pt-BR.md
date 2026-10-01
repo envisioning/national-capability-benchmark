@@ -11,7 +11,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Antecipação | 33,9 | 0,46 (utilizável) | +11,2 em 10 anos, sobre 2 indicadores |
 | Agência | 50,4 | 0,32 (fraca) | sem base de tendência |
 | Coordenação | 69,9 | 0,37 (fraca) | sem base de tendência |
-| Confiança | 73,9 | 0,25 (fraca) | sem base de tendência |
+| Confiança | 70,1 | 0,3 (fraca) | sem base de tendência |
 | Aprendizagem | 29,7 | 0,56 (utilizável) | sem base de tendência |
 | Experimentação | 4,4 | 0,24 (muito fraca) | +0,1 em 10 anos, sobre 3 indicadores |
 | Adaptação | 70,5 | 0,67 (boa) | +8,7 em 10 anos, sobre 3 indicadores |
@@ -61,11 +61,11 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
-### Confiança: confiança 0,25, fraca
+### Confiança: confiança 0,3, fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
 
-- Baseada em 2 indicadores observados.
+- Baseada em 3 indicadores observados.
 - Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 

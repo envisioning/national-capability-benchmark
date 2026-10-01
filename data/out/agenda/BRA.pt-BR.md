@@ -11,7 +11,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Antecipação | 45,8 | 0,46 (utilizável) | +7,8 em 10 anos, sobre 2 indicadores |
 | Agência | 55,8 | 0,56 (utilizável) | sem base de tendência |
 | Coordenação | 86,4 | 0,37 (fraca) | sem base de tendência |
-| Confiança | 41,4 | 0,37 (fraca) | sem base de tendência |
+| Confiança | 55,9 | 0,4 (fraca) | sem base de tendência |
 | Aprendizagem | 28 | 0,54 (utilizável) | sem base de tendência |
 | Experimentação | 25,6 | 0,43 (fraca) | +5,2 em 10 anos, sobre 3 indicadores |
 | Adaptação | 65,4 | 0,68 (boa) | +13,1 em 10 anos, sobre 3 indicadores |
@@ -54,14 +54,6 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Confiança: confiança 0,37, fraca
-
-Quanta cooperação é possível além das redes pessoais imediatas?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
-
 ### Coordenação: confiança 0,37, fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
@@ -69,6 +61,14 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
+
+### Confiança: confiança 0,4, fraca
+
+Quanta cooperação é possível além das redes pessoais imediatas?
+
+- Baseada em 4 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ### Experimentação: confiança 0,43, fraca
 

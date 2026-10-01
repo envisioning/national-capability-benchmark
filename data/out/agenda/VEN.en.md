@@ -11,7 +11,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Anticipation | 0.9 | 0.46 (usable) | -5.5 over 10 years using 2 indicators |
 | Agency | 25.8 | 0.37 (thin) | no trend |
 | Coordination | 16.5 | 0.22 (very thin) | no trend |
-| Trust | 47 | 0.23 (very thin) | no trend |
+| Trust | 36.2 | 0.29 (thin) | no trend |
 | Learning | 31.6 | 0.23 (very thin) | no trend |
 | Experimentation | 5.2 | 0.09 (very thin) | no trend |
 | Adaptability | 39.4 | 0.59 (usable) | +2.6 over 10 years using 3 indicators, with 1 at the frame edge |
@@ -67,14 +67,6 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
-### Trust: confidence 0.23, very thin
-
-How much cooperation is possible beyond immediate personal networks?
-
-- Uses 3 observed indicators.
-- Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
-
 ### Learning: confidence 0.23, very thin
 
 How effectively does the country acquire, distribute, and update knowledge?
@@ -89,6 +81,14 @@ How capable is the country of turning plans and knowledge into functioning syste
 - Uses 3 observed indicators.
 - Missing indicators: Large project delivery, Firm scale-up rate.
 - Rejected datasets: Logistics infrastructure quality.
+
+### Trust: confidence 0.29, thin
+
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 4 observed indicators.
+- Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
 ### Agency: confidence 0.37, thin
 

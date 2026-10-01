@@ -11,7 +11,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Anticipation | 72.7 | 0.46 (usable) | +0.5 over 10 years using 2 indicators |
 | Agency | 83.4 | 0.37 (thin) | no trend |
 | Coordination | 99.5 | 0.23 (very thin) | no trend |
-| Trust | 73.6 | 0.37 (thin) | no trend |
+| Trust | 76.1 | 0.4 (thin) | no trend |
 | Learning | 45.5 | 0.47 (usable) | no trend |
 | Experimentation | 49.5 | 0.43 (thin) | +0.8 over 10 years using 3 indicators |
 | Adaptability | 81.8 | 0.68 (good) | +3.4 over 10 years using 3 indicators |
@@ -50,11 +50,11 @@ How able are individuals and organizations to turn an intention into action?
 - Uses 3 observed indicators.
 - Missing indicators: Adult digital skills.
 
-### Trust: confidence 0.37, thin
+### Trust: confidence 0.4, thin
 
 How much cooperation is possible beyond immediate personal networks?
 
-- Uses 3 observed indicators.
+- Uses 4 observed indicators.
 - Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 

@@ -11,7 +11,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Antecipação | 29,4 | 0,46 (utilizável) | +11,3 em 10 anos, sobre 2 indicadores |
 | Agência | 36,3 | 0,54 (utilizável) | sem base de tendência |
 | Coordenação | 68,4 | 0,39 (fraca) | sem base de tendência |
-| Confiança | 43,2 | 0,37 (fraca) | sem base de tendência |
+| Confiança | 44,3 | 0,4 (fraca) | sem base de tendência |
 | Aprendizagem | 57,2 | 0,41 (fraca) | sem base de tendência |
 | Experimentação | 2,2 | 0,24 (muito fraca) | +0,4 em 10 anos, sobre 3 indicadores |
 | Adaptação | 78,7 | 0,67 (boa) | +13,8 em 10 anos, sobre 3 indicadores |
@@ -69,14 +69,6 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e responsabilização.
 
-### Confiança: confiança 0,37, fraca
-
-Quanta cooperação é possível além das redes pessoais imediatas?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
-
 ### Coordenação: confiança 0,39, fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
@@ -84,6 +76,14 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
+
+### Confiança: confiança 0,4, fraca
+
+Quanta cooperação é possível além das redes pessoais imediatas?
+
+- Baseada em 4 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ### Aprendizagem: confiança 0,41, fraca
 

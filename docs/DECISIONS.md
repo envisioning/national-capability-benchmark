@@ -6268,3 +6268,96 @@ would make one of the two rows a check; evidence that subsidised or strategic
 filing, not attempts, sets the cross-country order; or a WIPO series that
 counts a country's residents at every office it files at (national, EUIPO,
 Hague), which would replace this one.
+
+---
+
+## D131 — Government compliance with the courts is scored in Trust; the rest of the V-Dem sweep is declined
+
+*Recorded 2026-10-01. Answers Q5 of the research roadmap. Extends D57, D118 and
+D121. One combined entry: one row wired, every other candidate declined. The
+triage table is `docs/research/vdem-sweep/TRIAGE.md`.*
+
+**Decision.** A new Trust row in the institutional family, `court_compliance`:
+V-Dem's compliance with judiciary (`v2jucomp`, codebook 3.8.1.11), "how often
+would you say the government complies with important decisions by other courts
+with which it disagrees?", read as `v2jucomp_osp`, the measurement-model
+estimate on the original 0 (never) to 4 (always) scale, from the Full+Others v15
+archive the adapter already pins, year 2024. 53 of 53 countries. Direction
+higher is better, class O, tier `expert_panel`. The adapter reads it as a
+fourth entry in its variable table under the `release_year` rule. It fills no
+existing gap: it is neither public confidence (`institutional_trust`) nor
+court throughput (`court_case_clearance`).
+
+Twenty other variables were triaged for Trust and Coordination and none is
+wired, as a score or as a check. Coordination gains nothing.
+
+**Why this one.** Trust's high end is strangers cooperating on the strength of
+the rules. A ruling a stranger obtains is worth something only if the state
+obeys the rulings it loses, so whether the rules bind the strongest party is
+the institutional precondition of the dimension. The variable is an expert
+code, the same kind of instrument as the WGI composites D23 retired, and it is
+even one of their inputs (through V-Dem's judicial constraints and liberal
+component indices, which the WGI rule of law estimate uses). What separates it
+is the object coded: one act whose instances are public, a court ruling against
+the government and the government's response, so a coder answers about a
+frequency that the record can check. The retired composites, and the V-Dem
+items this sweep declined in their place (`v2clrspct` impartial
+administration, `v2cltrnslw` predictable enforcement, `v2exbribe`,
+`v2excrptps` and `v2jucorrdc` bribery), ask for a characterisation of how
+clean or impartial a country's institutions are, or about hidden acts no coder
+observes: a reputation, whatever the method.
+
+The A13 test was written before the values were read: where courts never rule
+against the state there is nothing to disobey, and a closed regime could read
+well on silence. It does not happen. Closed autocracies average 0.72 on the
+0 to 4 scale and electoral autocracies 1.67, against 2.75 for electoral and
+3.53 for liberal democracies; China reads 0.21, the United Arab Emirates 0.59,
+Vietnam 1.25. Singapore (3.54, 12th of 53) is the one autocracy that reads
+high, and the registry note names it. Scored, the row moves Trust against the
+trap the dimension already carried through bribery reticence (D123): China
+falls from 88.7 to 67.5, Rwanda from 78.9 to 63.9, El Salvador from 69.8 to
+51.1.
+
+**Why not the others.** Coordination's best candidate, range of consultation
+(`v2dlconslt`), observes who is heard while policy is made, not whether
+independent actors then act together; it is a deliberative-democracy component
+and it fails A13 (closed autocracies 0.47 above electoral autocracies -0.32;
+Vietnam level with Uruguay). Merit appointment, bureaucratic pay and fiscal
+source are properties of the state apparatus, conditions under D122, and the
+model starts no expert-coded condition here. The CSO consultation and
+participation items feed `v2x_cspart` (r 0.90 and 0.88). Common-good
+justification puts Cuba second of 53. Compliance with the high court
+duplicates the row chosen (r 0.95). Each verdict is in the triage table.
+
+**Findings, reported and not used to decide.** The row's r with log GDP per
+capita is 0.533; its largest r with another Trust row is 0.36 (bribery
+incidence). On dataset 7.3.0 it moves Trust's r with log GDP from 0.571 (n 49)
+to 0.671 (n 51), a wealth-attribution delta of 0.155, close to bribery
+incidence's 0.162; Trust's mean confidence from 0.311 to 0.347, still under
+O1's 0.40; its scored countries from 50 to 52 (the United Arab Emirates and
+Haiti publish for the first time, both on the institutional family alone; Cuba
+stays below the floor); and Brazil's Trust from 41.4 to 55.9 at confidence
+0.396. The guardrail does not move: the mean confidence across dimensions
+correlates with log GDP per capita at 0.298 before and after, because the row
+covers every country.
+
+**Cost.** The row reads regime: r 0.88 with V-Dem's electoral democracy index.
+That follows from the construct, since in this frame the states that do not
+obey their courts are autocracies, but it means Trust now carries a democracy
+signal, and r 0.82 with the Coordination row `civil_society_strength` from the
+same source. Trust's income correlation rises by 0.10 toward the 0.70 line O2
+reports. Two countries publish Trust on one family, which D57 counts in
+`familyBalance` (15 countries now, 13 before). An expert code is still
+an expert code: the source tier is `expert_panel` and the note says to read it
+as a judgement of a public act. The dataset version is not bumped in this
+change; adding a scored row is a minor bump when it ships.
+
+**Overturned by.** Evidence that coders score compliance from a country's
+general reputation rather than from rulings and responses, for example a
+validation against documented non-compliance events that the code does not
+track, which would make it the reputation D23 retired and return it to a check
+or retire it; a closed regime reading high on silence in a later release, the
+A13 failure written down here; a harmonised court-performance series
+(clearance or enforcement) across the frame, which answers the institutional
+family more directly and would make this row a check beside it; or a redundancy
+reading at or above 0.85 with another Trust row.

@@ -3,8 +3,8 @@
   "name": "national-capability-benchmark",
   "title": "NCB, the National Capability Benchmark",
   "description": "A prototype that measures what a country can do, separately from how rich it is. Nine capability dimensions scored from public data, each with a separate confidence number.",
-  "version": "7.3.0",
-  "created": "2026-10-01T13:39:16.021Z",
+  "version": "7.4.0",
+  "created": "2026-10-01T13:52:30.041Z",
   "homepage": "https://github.com/envisioning/national-capability-benchmark",
   "licenses": [
     {
@@ -23,12 +23,12 @@
       "path": "https://www.worldvaluessurvey.org/WVSEVSjoint2017.jsp"
     },
     {
-      "title": "Global Entrepreneurship Monitor",
-      "path": "https://www.gemconsortium.org"
-    },
-    {
       "title": "V-Dem",
       "path": "https://www.v-dem.net/data/the-v-dem-dataset/"
+    },
+    {
+      "title": "Global Entrepreneurship Monitor",
+      "path": "https://www.gemconsortium.org"
     },
     {
       "title": "ILOSTAT",
@@ -135,6 +135,7 @@
         "indicators/civil_society_strength.json",
         "indicators/contract_enforcement_days.json",
         "indicators/bribery_incidence.json",
+        "indicators/court_compliance.json",
         "indicators/interpersonal_trust.json",
         "indicators/human_capital_index.json",
         "indicators/vocational_secondary_share.json",

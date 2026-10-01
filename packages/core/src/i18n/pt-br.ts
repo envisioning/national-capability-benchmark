@@ -170,6 +170,7 @@ export const PT_BR: Lexicon = {
     rule_of_law: 'Estado de direito',
     control_of_corruption: 'Controle da corrupção',
     contract_enforcement_days: 'Tempo para executar um contrato',
+    court_compliance: 'Cumprimento das decisões judiciais pelo governo',
     homicide_rate: 'Taxa de homicídio intencional',
     interpersonal_trust: 'Confiança interpessoal generalizada',
     institutional_trust: 'Confiança nas instituições públicas',
@@ -244,6 +245,8 @@ export const PT_BR: Lexicon = {
       'Autonomia, densidade e alcance participativo das organizações da sociedade civil.',
     public_private_collaboration:
       'Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais.',
+    court_compliance:
+      'Com que frequência o governo cumpre decisões importantes dos tribunais comuns e especializados das quais discorda.',
     interpersonal_trust:
       'Parcela que concorda que se pode confiar na maioria das pessoas.',
     institutional_trust:

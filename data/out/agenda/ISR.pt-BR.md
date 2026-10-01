@@ -11,7 +11,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Antecipação | 75 | 0,46 (utilizável) | +10,4 em 10 anos, sobre 2 indicadores |
 | Agência | 63,4 | 0,41 (fraca) | sem base de tendência |
 | Coordenação | 80,1 | 0,23 (muito fraca) | sem base de tendência |
-| Confiança | 25,4 | 0,25 (fraca) | sem base de tendência |
+| Confiança | 43,5 | 0,3 (fraca) | sem base de tendência |
 | Aprendizagem | 44,8 | 0,54 (utilizável) | sem base de tendência |
 | Experimentação | 22,2 | 0,24 (muito fraca) | -8,8 em 10 anos, sobre 3 indicadores |
 | Adaptação | 84,4 | 0,68 (boa) | +2,9 em 10 anos, sobre 3 indicadores |
@@ -60,14 +60,6 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
-### Confiança: confiança 0,25, fraca
-
-Quanta cooperação é possível além das redes pessoais imediatas?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
-
 ### Propósito compartilhado: confiança 0,29, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
@@ -75,6 +67,14 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e responsabilização.
+
+### Confiança: confiança 0,3, fraca
+
+Quanta cooperação é possível além das redes pessoais imediatas?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ### Agência: confiança 0,41, fraca
 

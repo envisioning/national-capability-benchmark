@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-01T13:39:16.021Z",
-  "version": "7.3.0",
+  "generatedAt": "2026-10-01T13:52:30.041Z",
+  "version": "7.4.0",
   "country": {
     "country": "Colombia",
     "iso3": "COL",
@@ -1133,19 +1133,19 @@
         "conditions": []
       },
       "trust": {
-        "score": 34.8,
-        "observedIndicators": 3,
+        "score": 46.5,
+        "observedIndicators": 4,
         "belowCoverageFloor": false,
-        "confidence": 0.357,
+        "confidence": 0.387,
         "confidenceParts": {
-          "coverage": 0.5,
-          "recency": 0.778,
-          "sourceQuality": 0.917
+          "coverage": 0.571,
+          "recency": 0.833,
+          "sourceQuality": 0.813
         },
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 34.8,
+        "blendedScore": 46.5,
         "blendedFrom": "indicators",
         "momentum": [],
         "indicators": [
@@ -1333,6 +1333,28 @@
                 "raw": 2.745,
                 "normalized": 91.7,
                 "tier": "international_organization"
+              }
+            ],
+            "status": "observed"
+          },
+          {
+            "indicatorId": "court_compliance",
+            "name": "Government compliance with the courts",
+            "measurementClass": "O",
+            "raw": 3.098,
+            "transformed": 3.098,
+            "normalized": 81.5,
+            "year": 2024,
+            "source": "V-Dem (v2jucomp_osp)",
+            "sourceTier": "expert_panel",
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [
+              {
+                "year": 2024,
+                "raw": 3.098,
+                "normalized": 81.5,
+                "tier": "expert_panel"
               }
             ],
             "status": "observed"

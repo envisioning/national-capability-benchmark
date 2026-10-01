@@ -11,7 +11,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Anticipation | 73.5 | 0.46 (usable) | +4.3 over 10 years using 2 indicators |
 | Agency | 51.9 | 0.41 (thin) | no trend |
 | Coordination | 88.7 | 0.39 (thin) | no trend |
-| Trust | 86.8 | 0.25 (thin) | no trend |
+| Trust | 86.1 | 0.3 (thin) | no trend |
 | Learning | 56.7 | 0.54 (usable) | no trend |
 | Experimentation | 81.7 | 0.24 (very thin) | +3.3 over 10 years using 3 indicators |
 | Adaptability | 83 | 0.68 (good) | +2.1 over 10 years using 3 indicators |
@@ -29,14 +29,6 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Uses 3 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
-### Trust: confidence 0.25, thin
-
-How much cooperation is possible beyond immediate personal networks?
-
-- Uses 2 observed indicators.
-- Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
-
 ### Shared Purpose: confidence 0.29, thin
 
 To what extent can people imagine themselves as participants in a common project?
@@ -44,6 +36,14 @@ To what extent can people imagine themselves as participants in a common project
 - Uses 2 observed indicators.
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
+
+### Trust: confidence 0.3, thin
+
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 3 observed indicators.
+- Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
 ### Coordination: confidence 0.39, thin
 

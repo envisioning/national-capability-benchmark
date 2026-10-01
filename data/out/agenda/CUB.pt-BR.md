@@ -11,7 +11,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Antecipação | sem nota | 0,22 (muito fraca) | sem base de tendência |
 | Agência | sem nota | 0 (muito fraca) | sem base de tendência |
 | Coordenação | sem nota | 0,1 (muito fraca) | sem base de tendência |
-| Confiança | sem nota | 0 (muito fraca) | sem base de tendência |
+| Confiança | sem nota | 0,07 (muito fraca) | sem base de tendência |
 | Aprendizagem | 21,5 | 0,24 (muito fraca) | sem base de tendência |
 | Experimentação | 1,1 | 0,24 (muito fraca) | -0,1 em 10 anos, sobre 3 indicadores |
 | Adaptação | 63,7 | 0,55 (utilizável) | -5,5 em 10 anos, sobre 3 indicadores |
@@ -29,14 +29,6 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 - Baseada em 0 indicadores observados.
 - Lacunas declaradas: Habilidades digitais de adultos.
 
-### Confiança: confiança 0, muito fraca
-
-Quanta cooperação é possível além das redes pessoais imediatas?
-
-- Baseada em 0 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
-
 ### Propósito compartilhado: confiança 0, muito fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
@@ -44,6 +36,14 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Baseada em 0 indicadores observados.
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e responsabilização.
+
+### Confiança: confiança 0,07, muito fraca
+
+Quanta cooperação é possível além das redes pessoais imediatas?
+
+- Baseada em um indicador observado.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ### Coordenação: confiança 0,1, muito fraca
 

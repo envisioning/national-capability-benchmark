@@ -11,7 +11,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Anticipation | 32.6 | 0.46 (usable) | +6 over 10 years using 2 indicators |
 | Agency | 46.2 | 0.41 (thin) | no trend |
 | Coordination | 68.8 | 0.39 (thin) | no trend |
-| Trust | 69.8 | 0.24 (very thin) | no trend |
+| Trust | 51.1 | 0.29 (thin) | no trend |
 | Learning | 27.4 | 0.52 (usable) | no trend |
 | Experimentation | 4.2 | 0.24 (very thin) | +0.9 over 10 years using 3 indicators |
 | Adaptability | 69.4 | 0.53 (usable) | +9.9 over 10 years using 3 indicators |
@@ -54,20 +54,20 @@ How capable is the country of identifying and preparing for emerging change?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Trust: confidence 0.24, very thin
-
-How much cooperation is possible beyond immediate personal networks?
-
-- Uses 2 observed indicators.
-- Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
-
 ### Experimentation: confidence 0.24, very thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
 - Uses 3 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
+
+### Trust: confidence 0.29, thin
+
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 3 observed indicators.
+- Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
 ### Shared Purpose: confidence 0.3, thin
 

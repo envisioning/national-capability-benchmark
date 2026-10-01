@@ -27,7 +27,8 @@ export const VDEM_ADAPTER_ID = 'v-dem-cy-full-v15'
  * An id under `CHECK_PREFIX` is a behavioural check from `checks.ts`: it is
  * stored beside the indicators and never enters a frame, a mean or a
  * confidence. Polarization and voter turnout are checks and not scored rows.
- * See D60, D121 and D129.
+ * See D60, D121 and D129. Compliance with the courts is a scored Trust row
+ * (D131).
  *
  * `years` says which country-year a variable is read from. `release_year`
  * reads the pinned release year and nothing else. `latest_election` exists
@@ -66,6 +67,16 @@ export const VDEM_CY_V15_VARIABLES = [
       'percent of registered voters who cast a vote in the national election, official results; where executive and legislative elections fall on one day V-Dem codes the executive turnout, and the country-year takes the maximum',
     years: 'latest_election',
     context: ['v2elcomvot', 'v2x_regime'],
+  },
+  {
+    variable: 'v2jucomp_osp',
+    indicatorId: 'court_compliance',
+    min: 0,
+    max: 4,
+    scaleNote:
+      'expert-coded frequency with which the government complies with important decisions of courts other than the high court that it disagrees with, on the original 0-4 response scale, 0 never and 4 always',
+    years: 'release_year',
+    context: [],
   },
 ] as const satisfies ReadonlyArray<{
   variable: string

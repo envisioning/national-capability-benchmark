@@ -11,7 +11,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Anticipation | 42.6 | 0.46 (usable) | +10.4 over 10 years using 2 indicators |
 | Agency | 28.8 | 0.56 (usable) | no trend |
 | Coordination | 74.8 | 0.33 (thin) | no trend |
-| Trust | 38.1 | 0.36 (thin) | no trend |
+| Trust | 45.9 | 0.39 (thin) | no trend |
 | Learning | 35 | 0.52 (usable) | no trend |
 | Experimentation | 2.5 | 0.24 (very thin) | 0 over 10 years using 3 indicators |
 | Adaptability | 61.1 | 0.53 (usable) | +0.5 over 10 years using 3 indicators |
@@ -68,11 +68,11 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
-### Trust: confidence 0.36, thin
+### Trust: confidence 0.39, thin
 
 How much cooperation is possible beyond immediate personal networks?
 
-- Uses 3 observed indicators.
+- Uses 4 observed indicators.
 - Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T13:39:18.581Z",
+  "generatedAt": "2026-10-01T13:52:32.615Z",
   "iso3": "PRY",
   "country": "Paraguay",
   "dimensions": [
@@ -534,13 +534,14 @@
     {
       "dimension": "trust",
       "kind": "measure",
-      "score": 58.5,
-      "confidence": 0.237,
-      "band": "very_thin",
+      "score": 62,
+      "confidence": 0.286,
+      "band": "thin",
       "trend": null,
       "scoredOn": [
         "contract_enforcement_days",
-        "bribery_incidence"
+        "bribery_incidence",
+        "court_compliance"
       ],
       "gaps": [
         "institutional_trust",

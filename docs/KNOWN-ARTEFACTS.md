@@ -401,6 +401,14 @@ inputs and does not publish the court clearance numerator and denominator the
 Trust gate requires. Revisit the next release instead of forcing a partial
 series into the frame.
 
+Trust's institutional family has a third observed row, government compliance
+with the courts (`court_compliance`, V-Dem `v2jucomp`, D131), 53 of 53. It is
+an expert code of a public act, and it reads regime: r 0.88 with V-Dem's
+electoral democracy index, and Singapore is the one autocracy that reads high,
+plausibly because its courts seldom rule against the state. With it Trust's
+mean confidence is 0.347 and its correlation with log GDP per capita 0.671 (n
+51), and 15 scored countries rest on the institutional family alone.
+
 V-Dem civil-society strength is now an adapter-backed Coordination row (D83),
 but its expert coding keeps confidence low and does not answer cross-agency
 delivery. Voter turnout, volunteering and civic participation are absent from

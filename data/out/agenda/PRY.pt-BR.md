@@ -11,7 +11,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Antecipação | 33,5 | 0,46 (utilizável) | +20 em 10 anos, sobre 2 indicadores |
 | Agência | 39,6 | 0,41 (fraca) | sem base de tendência |
 | Coordenação | 48,7 | 0,37 (fraca) | sem base de tendência |
-| Confiança | 58,5 | 0,24 (muito fraca) | sem base de tendência |
+| Confiança | 62 | 0,29 (fraca) | sem base de tendência |
 | Aprendizagem | 28,2 | 0,49 (utilizável) | sem base de tendência |
 | Experimentação | 12,3 | 0,24 (muito fraca) | -4,5 em 20 anos, sobre 3 indicadores |
 | Adaptação | 70,1 | 0,67 (boa) | -4,1 em 10 anos, sobre 3 indicadores |
@@ -54,20 +54,20 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Confiança: confiança 0,24, muito fraca
-
-Quanta cooperação é possível além das redes pessoais imediatas?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
-
 ### Experimentação: confiança 0,24, muito fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
+
+### Confiança: confiança 0,29, fraca
+
+Quanta cooperação é possível além das redes pessoais imediatas?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ### Propósito compartilhado: confiança 0,32, fraca
 
