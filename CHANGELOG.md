@@ -9,6 +9,31 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## Dataset 7.5.0 — 2026-10-01
+
+- **Confidence in the courts is published beside Trust as a check (D132).**
+  The Joint EVS/WVS share answering "a great deal" for the justice system,
+  37 countries. It is not scored: closed and electoral autocracies read far
+  higher than democracies on every confidence item tested (Vietnam and China
+  above 85% on "a great deal or quite a lot"), and it does not follow what
+  governments do with court rulings (r -0.13 with court compliance). The
+  `institutional_trust` gap stays open. No score or confidence changes.
+
+## App 1.19.0 — 2026-10-01
+
+- **Brazil's layer maps all nine capabilities.** `/brasil/mapa` lists the
+  nine in the model's order, each with Brazil's score, its confidence and
+  where the score sits against the median of the 10 income peers, and links
+  to one page per capability at `/brasil/mapa/<name>`, computed by the same
+  `buildCapabilityMap` as D130's Adaptability page. A capability with no
+  conditions (Coordination, Trust, Experimentation, Shared purpose) says so
+  and draws no conditions panel; thin confidence is stated beside the score.
+  Each page names the known artefacts that bear on its capability, by id,
+  from one table checked against the limits document. The layer's tab strip
+  gains one Mapa tab in place of the Adaptação tab, and `/brasil/adaptacao`
+  redirects to `/brasil/mapa/adaptacao`. The sitemap lists all ten pages.
+  See D133.
+
 ## Dataset 7.4.0 — 2026-10-01
 
 - **Trust scores court compliance (D131).** V-Dem's coding of how often the

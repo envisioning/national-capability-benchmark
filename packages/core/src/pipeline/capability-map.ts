@@ -1,5 +1,7 @@
 import {
   COUNTRY_NAMES,
+  DIMENSIONS,
+  artefactsFor,
   conditionsFor,
   indicatorsFor,
   isDeclaredGap,
@@ -33,15 +35,19 @@ import { median, round } from './stats.js'
  * country should do, and no field ranks the country among its peers. A
  * position against the peer median is the whole comparison. See D130.
  *
- * Pure, and parameterised by dimension, so a second capability reuses it by
- * adding its id to `MAP_DIMENSIONS` and nothing else.
+ * Pure, and parameterised by dimension. Every dimension is published since
+ * D133, through this one function: a dimension with no conditions has an
+ * empty `conditions` list and nothing else differs.
  */
 
 /** How many countries at the nearest income make the peer set. See D130. */
 export const MAP_PEER_COUNT = 10
 
-/** The dimensions a map is published for. Adding one is a decision entry. */
-export const MAP_DIMENSIONS: readonly Dimension[] = ['adaptability']
+/**
+ * The dimensions a map is published for: all nine since D133. Removing one is
+ * a decision entry.
+ */
+export const MAP_DIMENSIONS: readonly Dimension[] = DIMENSIONS
 
 /** Where a value sits against the peer median, at the published precision. */
 export type MapPosition = 'above' | 'below' | 'level'
@@ -128,6 +134,11 @@ export type CapabilityMap = {
   /** Declared gaps in this dimension, by id. They lower confidence. */
   gaps: string[]
   conditions: MapCondition[]
+  /**
+   * The known artefacts that bear on this capability for this country, by id:
+   * the dimension's own and the structural ones. From `ARTEFACT_SCOPES`.
+   */
+  artefacts: { specific: string[]; structural: string[] }
 }
 
 /** The country's indicator rows and every peer's, inside out. */
@@ -294,6 +305,7 @@ export function buildCapabilityMap(input: {
       .filter(isDeclaredGap)
       .map((d) => d.id),
     conditions,
+    artefacts: artefactsFor(dimension, iso3),
   }
 }
 
@@ -329,3 +341,21 @@ export const mapIndicatorIds = (dimension: Dimension): string[] =>
   indicatorsFor(dimension)
     .filter(isScored)
     .map((d) => d.id)
+
+/**
+ * The path segment a layer gives one capability's map: the lexicon's name for
+ * the dimension, lowercased, without accents, words joined by a hyphen.
+ * Adaptação becomes `adaptacao`, Propósito compartilhado
+ * `proposito-compartilhado`. The lexicon is the one place the name is
+ * declared, so the address follows it; renaming a dimension there moves its
+ * address, which the test beside this file pins. See D133.
+ */
+export function mapSlug(name: string): string {
+  return name
+    .normalize('NFD')
+    .replace(/\p{Diacritic}/gu, '')
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+}

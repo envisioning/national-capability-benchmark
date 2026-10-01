@@ -5,14 +5,24 @@
  * only. See D130.
  */
 import assert from 'node:assert/strict'
+import { readFileSync } from 'node:fs'
 import test from 'node:test'
-import { DIMENSIONS, conditionsFor, indicatorsFor, isScored } from '../model/index.js'
-import type { CountryResult, DimensionResult } from '../model/index.js'
+import { PT_BR } from '../i18n/index.js'
+import {
+  ARTEFACT_SCOPES,
+  DIMENSIONS,
+  artefactsFor,
+  conditionsFor,
+  indicatorsFor,
+  isScored,
+} from '../model/index.js'
+import type { CountryResult, Dimension, DimensionResult } from '../model/index.js'
 import {
   MAP_DIMENSIONS,
   buildCapabilityMap,
   incomePeers,
   mapIndicatorIds,
+  mapSlug,
   positionAgainst,
   readCapabilityMap,
 } from './capability-map.js'
@@ -99,9 +109,15 @@ function dimension(score: number | null, rows: Record<string, number | null>, co
   }
 }
 
-function country(iso3: string, score: number | null, rowValue: number, condition: number): CountryResult {
-  const rowIds = indicatorsFor(DIM).filter(isScored).map((d) => d.id)
-  const conditionIds = conditionsFor(DIM).map((d) => d.id)
+function country(
+  iso3: string,
+  score: number | null,
+  rowValue: number,
+  condition: number,
+  dim: Dimension = DIM,
+): CountryResult {
+  const rowIds = indicatorsFor(dim).filter(isScored).map((d) => d.id)
+  const conditionIds = conditionsFor(dim).map((d) => d.id)
   const rows = Object.fromEntries(rowIds.map((id) => [id, rowValue]))
   const conds = Object.fromEntries(conditionIds.map((id) => [id, condition]))
   const empty = dimension(null, {}, {})
@@ -109,7 +125,7 @@ function country(iso3: string, score: number | null, rowValue: number, condition
     country: iso3,
     iso3,
     dimensions: Object.fromEntries(
-      DIMENSIONS.map((d) => [d, d === DIM ? dimension(score, rows, conds) : empty]),
+      DIMENSIONS.map((d) => [d, d === dim ? dimension(score, rows, conds) : empty]),
     ) as CountryResult['dimensions'],
   }
 }
@@ -197,9 +213,67 @@ test('buildCapabilityMap places the subject against the peer medians', () => {
   assert.deepEqual(reading.conditionsMore, conditionsFor(DIM).map((d) => d.id))
 })
 
-test('the published map dimensions each have capability rows and a condition', () => {
-  for (const d of MAP_DIMENSIONS) {
-    assert.ok(mapIndicatorIds(d).length > 0, d)
-    assert.ok(conditionsFor(d).length > 0, d)
-  }
+test('every dimension is published and each has capability rows', () => {
+  assert.deepEqual([...MAP_DIMENSIONS], [...DIMENSIONS])
+  for (const d of MAP_DIMENSIONS) assert.ok(mapIndicatorIds(d).length > 0, d)
+})
+
+test('a dimension with no conditions maps with an empty conditions list', () => {
+  const bare = DIMENSIONS.find((d) => conditionsFor(d).length === 0)
+  assert.ok(bare, 'some dimension has no conditions today')
+  const countries = [country('BRA', 50, 50, 0, bare), country('AAA', 40, 40, 0, bare)]
+  const map = buildCapabilityMap({
+    iso3: 'BRA',
+    dimension: bare,
+    countries,
+    subject: countries[0]!,
+    indicatorFiles: [],
+    diagnostics: {
+      gdpSeries: 'NY.GDP.PCAP.PP.KD',
+      income: [
+        { iso3: 'BRA', gdpPerCapita: 20_000, year: 2025 },
+        { iso3: 'AAA', gdpPerCapita: 19_000, year: 2025 },
+      ],
+      dimensionVsGdp: [],
+      conditions: [],
+    },
+  })
+  assert.deepEqual(map.conditions, [])
+  assert.equal(map.scorePosition, 'above')
+  assert.deepEqual(readCapabilityMap(map).conditionsMore, [])
+})
+
+test('the artefact table and the known-artefacts document name the same ids', () => {
+  const doc = readFileSync(new URL('../../../../docs/KNOWN-ARTEFACTS.md', import.meta.url), 'utf8')
+  const headings = [...doc.matchAll(/^## (A\d+)\b/gm)].map((m) => m[1])
+  assert.deepEqual(
+    ARTEFACT_SCOPES.map((a) => a.id),
+    headings,
+  )
+})
+
+test('artefactsFor keeps a country-scoped artefact on its own country', () => {
+  assert.ok(artefactsFor('experimentation', 'IND').specific.includes('A2'))
+  assert.ok(!artefactsFor('experimentation', 'BRA').specific.includes('A2'))
+  assert.ok(artefactsFor('experimentation', 'BRA').specific.includes('A1'))
+  assert.deepEqual(artefactsFor('adaptability', 'BRA').structural, ['A8', 'A10'])
+})
+
+test('map slugs come from the lexicon names and are pinned', () => {
+  assert.deepEqual(
+    DIMENSIONS.map((d) => mapSlug(PT_BR.dimensions[d] ?? d)),
+    /* Published addresses under /brasil/mapa. A lexicon rename that moves one
+     * needs a redirect from the old address. */
+    [
+      'antecipacao',
+      'agencia',
+      'coordenacao',
+      'confianca',
+      'aprendizagem',
+      'experimentacao',
+      'adaptacao',
+      'construcao',
+      'proposito-compartilhado',
+    ],
+  )
 })

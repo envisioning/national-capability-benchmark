@@ -6433,3 +6433,90 @@ list-experiment or anonymity adjustment that removes the deference component
 in closed and electoral autocracies; or a confidence measure that tracks
 `court_compliance` (r at or above 0.5) rather than running against it, which
 would show it reads the institution and not the regime.
+
+---
+
+---
+
+## D133 — Brazil's layer publishes the capability map for all nine dimensions
+
+*Recorded 2026-10-01. Extends D130, which published Adaptability alone and
+named "a second dimension's map" as a test of the layout.*
+
+**Decision.** `MAP_DIMENSIONS` is every dimension. Each is computed by the
+same `buildCapabilityMap`, with no branch per dimension: a dimension with no
+conditions (Coordination, Trust, Experimentation and Shared purpose on
+dataset 7.4.0) returns an empty `conditions` list, and its page draws no
+conditions panel and says in one sentence that none is published. A score
+below the coverage floor renders through `DimensionScore` with the observed
+count, and thin confidence is read through `isThinEvidence`; no page holds a
+threshold.
+
+Navigation. Nine tabs do not fit the layer's band and the tree stops at four
+levels (D73, D80), so the layer has one `map` section, labelled Mapa, at
+`/brasil/mapa`. That page lists the nine in the model's order with the score,
+the confidence, the peer median and above, below or level, each linking to
+`/brasil/mapa/<segment>`. The pages under it are not nodes: the Mapa tab owns
+them by address prefix, so the band lights Mapa on each. The segment is
+`mapSlug` of the pt-BR lexicon's dimension name (Adaptação is `adaptacao`,
+Propósito compartilhado `proposito-compartilhado`), so the lexicon is the one
+place a name is declared; a test pins the nine segments, so a rename that
+would move a published address fails until a redirect is added.
+`/brasil/adaptacao` answers 301 to `/brasil/mapa/adaptacao`. The section id
+`map.<dimension>` of D130 is retired in favour of `map`.
+
+Artefacts. Each page names the known artefacts that bear on its dimension by
+id, linked to `/limits`. The join is one table, `ARTEFACT_SCOPES` in
+`packages/core/src/model/artefacts.ts`: an id, the dimensions it touches or
+`all` for a structural one (A8, A10), and an optional country scope, which
+keeps A2 (India) off Brazil's pages. A test reads the headings of
+`docs/KNOWN-ARTEFACTS.md` and fails when the table and the document disagree.
+The map carries the result as `artefacts`, so a page holds no id.
+
+Hand-written facts. D130's long-term unemployment caveat said Brazil's
+ILOSTAT value comes from PNAD Contínua, which the published output does not
+carry (the pinned observation note does). It is the only one. The construct
+caveat is now country-neutral and the Brazil sentence moved to
+`capabilityMap.countryRowFacts`, keyed by iso3 and row, with a comment naming
+D120 as the decision whose supersession makes it stale. No other
+hand-written fact about Brazil was added: every number on the nine pages is
+computed.
+
+On dataset 7.4.0, against the 10 income peers of D130 (every peer scored on
+every dimension), Brazil reads above the peer median on Anticipation (45.8
+against 42.7, confidence 0.455), Agency (55.8 against 53.9, 0.555),
+Coordination (86.4 against 68.6, 0.373, thin), Trust (55.9 against 53.2,
+0.396, thin) and Experimentation (25.6 against 14.4, 0.430, thin), and below
+it on Learning (28.0 against 35.8, 0.539), Adaptability (65.4 against 70.3,
+0.678), Building (28.2 against 40.1, 0.568) and Shared purpose (30.7 against
+44.3, 0.433, thin). No dimension is below the coverage floor. These are
+findings, recorded to date the release; the pages compute them.
+
+**Why.** The owner's framing for the phase is to use the instrument: thin
+dimensions are published findings to read and argue with. One map was a
+demonstration; nine is the instrument, and holding eight back would make
+Adaptability look like a chosen exhibit. D130 already made the function
+dimension-agnostic, so this is a navigation and copy change, not a model
+change. One section with an index keeps the four-level tree and gives the
+reader a single place where all nine sit side by side, in a fixed order that
+is not a ranking. Slugs from the lexicon avoid a second list of names; the
+pin keeps that from breaking links silently. Artefact ids in a table rather
+than in page prose mean a new artefact, or a dimension it touches, is one
+line and is checked against the document.
+
+**Cost.** Four of the nine pages read thin evidence, and Coordination's
+above-median reading rests on 0.373 confidence and three rows (A3, A9, A12):
+a reader can quote it as a finding. The pages say thin plainly and name the
+artefacts, which is the mitigation and not a fix. The index puts nine
+above-or-below words in one column, which invites counting them: five above
+and four below is not a verdict on Brazil, and the page says the capabilities
+do not add up. `Confiança` is both the Trust dimension and the confidence
+label in Portuguese, so the Trust page carries the same word twice in
+different senses. The artefact pages are English. The slug of a dimension
+now depends on lexicon copy.
+
+**Overturned by.** A reader reading the index as a scorecard (counting
+above and below as a result), which would drop the position column from the
+index and leave it on each page; a lexicon rename the redirect table cannot
+absorb; or a second country layer, which would move the map index to the
+ground layer as D130's clause already anticipates.

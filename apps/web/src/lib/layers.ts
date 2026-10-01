@@ -1,4 +1,4 @@
-import { PT_BR, fill } from '@ncb/core'
+import { LEXICONS, MAP_DIMENSIONS, PT_BR, mapSlug } from '@ncb/core'
 import type { Dimension, Lang } from '@ncb/core'
 
 /**
@@ -18,19 +18,16 @@ import type { Dimension, Lang } from '@ncb/core'
  */
 
 /**
- * A capability map: one capability read for the layer's country, among its
- * income peers. The id carries the dimension, so a second map is a second
- * entry and nothing else. See D130.
+ * The capability map: one section holding one page per capability, each read
+ * for the layer's country among its income peers. Nine pages will not fit a
+ * tab strip and the tree stops at four levels, so the section is one tab and
+ * its index lists the nine; a capability's page sits under it by address and
+ * lights the same tab. See D130 and D133.
  */
-export type MapSectionId = `map.${Dimension}`
+export type MapSectionId = 'map'
 
 /** The kinds of section a layer can hold. */
 export type LayerSectionId = 'agenda' | 'institutions' | 'local' | 'support' | MapSectionId
-
-/** The dimension a map section reads, or null for every other section. */
-export function mapSectionDimension(id: LayerSectionId): Dimension | null {
-  return id.startsWith('map.') ? (id.slice(4) as Dimension) : null
-}
 
 export type LayerSection = {
   id: LayerSectionId
@@ -73,11 +70,7 @@ export const COUNTRY_LAYERS: readonly CountryLayer[] = [
     overviewLabel: 'Visão geral',
     sections: [
       { id: 'agenda', label: 'Agenda', slug: 'agenda' },
-      {
-        id: 'map.adaptability',
-        label: fill(PT_BR.capabilityMap.navLabel, { dimension: PT_BR.dimensions.adaptability }),
-        slug: 'adaptacao',
-      },
+      { id: 'map', label: PT_BR.capabilityMap.index.navLabel, slug: 'mapa' },
       { id: 'institutions', label: 'Instituições', slug: 'instituicoes' },
       /* The subnational reading is still an English ground-layer page. The
        * layer links to it until it is written in Portuguese, at which point
@@ -118,6 +111,21 @@ export function servesLanguage(iso3: string, lang: Lang): boolean {
 /** One section of one layer, by id. */
 export function layerSection(layer: CountryLayer, id: LayerSectionId): LayerSection | null {
   return layer.sections.find((section) => section.id === id) ?? null
+}
+
+/**
+ * The path segment of one capability's map inside a layer: the layer
+ * lexicon's name for the dimension, through `mapSlug`. The lexicon is the one
+ * place the name is declared. See D133.
+ */
+export function mapDimensionSlug(layer: CountryLayer, dimension: Dimension): string {
+  return mapSlug(LEXICONS[layer.lang].dimensions[dimension] ?? dimension)
+}
+
+/** The published capability a map path segment names, or null. */
+export function mapDimensionBySlug(layer: CountryLayer, slug: string): Dimension | null {
+  const wanted = slug.toLowerCase()
+  return MAP_DIMENSIONS.find((d) => mapDimensionSlug(layer, d) === wanted) ?? null
 }
 
 /** The section a path segment names inside one layer. */
