@@ -9,14 +9,14 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 87,5 | 0,46 (utilizável) | +1,8 em 10 anos, sobre 2 indicadores |
-| Agência | 66,9 | 0,41 (fraca) | sem base de tendência |
+| Agência | 70,6 | 0,56 (utilizável) | sem base de tendência |
 | Coordenação | 82,9 | 0,39 (fraca) | sem base de tendência |
 | Confiança | 91,4 | 0,37 (fraca) | sem base de tendência |
 | Aprendizagem | 76,3 | 0,54 (utilizável) | sem base de tendência |
 | Experimentação | 38,8 | 0,18 (muito fraca) | +2,6 em 10 anos, sobre 2 indicadores |
 | Adaptação | 77,3 | 0,68 (boa) | +3,2 em 10 anos, sobre 3 indicadores |
 | Construção | 37,8 | 0,57 (utilizável) | -1,1 em 10 anos, sobre 3 indicadores |
-| Propósito compartilhado | 93,1 | 0,3 (fraca) | +7,6 em 10 anos, sobre 2 indicadores |
+| Propósito compartilhado | 73,6 | 0,42 (fraca) | +7,6 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para elevar
 
@@ -43,14 +43,6 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
-### Propósito compartilhado: confiança 0,3, fraca
-
-Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
-- Bases rejeitadas: Voz e responsabilização.
-
 ### Confiança: confiança 0,37, fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
@@ -67,12 +59,13 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
-### Agência: confiança 0,41, fraca
+### Propósito compartilhado: confiança 0,42, fraca
 
-Quão capazes são pessoas e organizações de transformar uma intenção em ação?
+Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
 - Baseada em 3 indicadores observados.
-- Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
+- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
+- Bases rejeitadas: Voz e responsabilização.
 
 ## Dimensões para manter
 
@@ -81,6 +74,7 @@ Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 - Antecipação: 87,5, confiança utilizável
 - Adaptação: 77,3, confiança boa
 - Aprendizagem: 76,3, confiança utilizável
+- Agência: 70,6, confiança utilizável
 
 ## O que a Finlândia tem para trabalhar
 
@@ -101,14 +95,13 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 ## Agenda de medição
 
-22 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+20 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
 | Antecipação | Capacidade governamental de prospecção | Existência, mandato e continuidade de uma função nacional de prospecção estratégica. |
 | Antecipação | Parcela de pesquisa de longo prazo | Parcela do dispêndio bruto em P&D classificada como pesquisa básica. |
 | Agência | Habilidades digitais de adultos | Parcela de adultos capazes de executar tarefas digitais padrão. |
-| Agência | Percepção de controle sobre a própria vida | Liberdade de escolha e controle sobre o rumo da própria vida, autodeclarados. |
 | Coordenação | Colaboração universidade-empresa | Intensidade da colaboração de pesquisa entre universidades e empresas. |
 | Coordenação | Colaboração público-privada | Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
@@ -126,7 +119,6 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Propósito compartilhado | Sentimento de pertencimento nacional | Orgulho e identificação com a comunidade nacional, autodeclarados. |
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
-| Propósito compartilhado | Participação cívica | Participação ativa em associações, sindicatos, partidos e organizações comunitárias. |
 
 ## O que os indicadores não veem sobre a Finlândia
 

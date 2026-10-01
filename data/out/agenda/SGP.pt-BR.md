@@ -9,26 +9,18 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 84,8 | 0,46 (utilizável) | +17,5 em 10 anos, sobre 2 indicadores |
-| Agência | 84,3 | 0,41 (fraca) | sem base de tendência |
+| Agência | 72,3 | 0,56 (utilizável) | sem base de tendência |
 | Coordenação | 71 | 0,4 (fraca) | sem base de tendência |
 | Confiança | 81,8 | 0,36 (fraca) | sem base de tendência |
 | Aprendizagem | 67,7 | 0,45 (utilizável) | sem base de tendência |
 | Experimentação | 46,6 | 0,21 (muito fraca) | +10,8 em 10 anos, sobre 2 indicadores |
 | Adaptação | 84,9 | 0,67 (boa) | +6,9 em 10 anos, sobre 3 indicadores |
 | Construção | 66,6 | 0,57 (utilizável) | +5 em 10 anos, sobre 3 indicadores |
-| Propósito compartilhado | sem nota | 0,16 (muito fraca) | sem base de tendência |
+| Propósito compartilhado | 37 | 0,28 (fraca) | sem base de tendência |
 
 ## Dimensões para medir primeiro
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
-
-### Propósito compartilhado: confiança 0,16, muito fraca
-
-Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
-
-- Baseada em um indicador observado.
-- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
-- Bases rejeitadas: Voz e responsabilização.
 
 ### Experimentação: confiança 0,21, muito fraca
 
@@ -36,6 +28,14 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 
 - Baseada em 4 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
+
+### Propósito compartilhado: confiança 0,28, fraca
+
+Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
+
+- Baseada em 2 indicadores observados.
+- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
+- Bases rejeitadas: Voz e responsabilização.
 
 ### Confiança: confiança 0,36, fraca
 
@@ -53,19 +53,13 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
-### Agência: confiança 0,41, fraca
-
-Quão capazes são pessoas e organizações de transformar uma intenção em ação?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
-
 ## Dimensões para manter
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 84,9, confiança boa
 - Antecipação: 84,8, confiança utilizável
+- Agência: 72,3, confiança utilizável
 - Aprendizagem: 67,7, confiança utilizável
 - Construção: 66,6, confiança utilizável
 
@@ -88,14 +82,13 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 ## Agenda de medição
 
-22 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+20 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
 | Antecipação | Capacidade governamental de prospecção | Existência, mandato e continuidade de uma função nacional de prospecção estratégica. |
 | Antecipação | Parcela de pesquisa de longo prazo | Parcela do dispêndio bruto em P&D classificada como pesquisa básica. |
 | Agência | Habilidades digitais de adultos | Parcela de adultos capazes de executar tarefas digitais padrão. |
-| Agência | Percepção de controle sobre a própria vida | Liberdade de escolha e controle sobre o rumo da própria vida, autodeclarados. |
 | Coordenação | Colaboração universidade-empresa | Intensidade da colaboração de pesquisa entre universidades e empresas. |
 | Coordenação | Colaboração público-privada | Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
@@ -113,7 +106,6 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Propósito compartilhado | Sentimento de pertencimento nacional | Orgulho e identificação com a comunidade nacional, autodeclarados. |
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
-| Propósito compartilhado | Participação cívica | Participação ativa em associações, sindicatos, partidos e organizações comunitárias. |
 
 ## O que Singapura construiu e nenhum indicador conta
 

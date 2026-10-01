@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T10:14:48.007Z",
+  "generatedAt": "2026-10-01T10:43:53.847Z",
   "gdpSeries": "NY.GDP.PCAP.PP.KD",
   "income": [
     {
@@ -267,8 +267,8 @@
     },
     {
       "dimension": "agency",
-      "pearson": 0.638,
-      "spearman": 0.653,
+      "pearson": 0.579,
+      "spearman": 0.589,
       "n": 51
     },
     {
@@ -309,9 +309,9 @@
     },
     {
       "dimension": "shared_purpose",
-      "pearson": 0.457,
-      "spearman": 0.477,
-      "n": 47
+      "pearson": 0.202,
+      "spearman": 0.216,
+      "n": 50
     }
   ],
   "dimensionPairs": [
@@ -334,24 +334,6 @@
       "n": 52
     },
     {
-      "a": "anticipation",
-      "b": "agency",
-      "r": 0.654,
-      "n": 52
-    },
-    {
-      "a": "anticipation",
-      "b": "shared_purpose",
-      "r": 0.65,
-      "n": 47
-    },
-    {
-      "a": "learning",
-      "b": "shared_purpose",
-      "r": 0.634,
-      "n": 47
-    },
-    {
       "a": "trust",
       "b": "learning",
       "r": 0.63,
@@ -364,9 +346,9 @@
       "n": 53
     },
     {
-      "a": "agency",
-      "b": "learning",
-      "r": 0.573,
+      "a": "anticipation",
+      "b": "agency",
+      "r": 0.588,
       "n": 52
     },
     {
@@ -377,8 +359,8 @@
     },
     {
       "a": "agency",
-      "b": "adaptability",
-      "r": 0.563,
+      "b": "learning",
+      "r": 0.559,
       "n": 52
     },
     {
@@ -419,21 +401,9 @@
     },
     {
       "a": "agency",
-      "b": "trust",
-      "r": 0.532,
-      "n": 50
-    },
-    {
-      "a": "agency",
-      "b": "experimentation",
-      "r": 0.519,
-      "n": 51
-    },
-    {
-      "a": "coordination",
-      "b": "shared_purpose",
-      "r": 0.511,
-      "n": 47
+      "b": "adaptability",
+      "r": 0.515,
+      "n": 52
     },
     {
       "a": "coordination",
@@ -442,10 +412,10 @@
       "n": 52
     },
     {
-      "a": "adaptability",
+      "a": "anticipation",
       "b": "shared_purpose",
-      "r": 0.456,
-      "n": 47
+      "r": 0.46,
+      "n": 51
     },
     {
       "a": "experimentation",
@@ -455,21 +425,21 @@
     },
     {
       "a": "agency",
-      "b": "shared_purpose",
-      "r": 0.441,
-      "n": 47
+      "b": "experimentation",
+      "r": 0.437,
+      "n": 51
     },
     {
       "a": "agency",
-      "b": "coordination",
-      "r": 0.434,
-      "n": 52
+      "b": "trust",
+      "r": 0.435,
+      "n": 50
     },
     {
-      "a": "trust",
+      "a": "coordination",
       "b": "shared_purpose",
-      "r": 0.417,
-      "n": 46
+      "r": 0.433,
+      "n": 51
     },
     {
       "a": "coordination",
@@ -496,6 +466,12 @@
       "n": 52
     },
     {
+      "a": "learning",
+      "b": "shared_purpose",
+      "r": 0.377,
+      "n": 51
+    },
+    {
       "a": "coordination",
       "b": "experimentation",
       "r": 0.373,
@@ -508,28 +484,52 @@
       "n": 50
     },
     {
+      "a": "agency",
+      "b": "coordination",
+      "r": 0.36,
+      "n": 52
+    },
+    {
+      "a": "agency",
+      "b": "shared_purpose",
+      "r": 0.349,
+      "n": 51
+    },
+    {
+      "a": "adaptability",
+      "b": "shared_purpose",
+      "r": 0.341,
+      "n": 51
+    },
+    {
       "a": "trust",
       "b": "adaptability",
       "r": 0.332,
       "n": 50
     },
     {
-      "a": "agency",
-      "b": "building",
-      "r": 0.298,
-      "n": 52
+      "a": "trust",
+      "b": "shared_purpose",
+      "r": 0.181,
+      "n": 50
     },
     {
-      "a": "experimentation",
-      "b": "shared_purpose",
-      "r": 0.169,
-      "n": 46
+      "a": "agency",
+      "b": "building",
+      "r": 0.164,
+      "n": 52
     },
     {
       "a": "building",
       "b": "shared_purpose",
-      "r": 0.159,
-      "n": 47
+      "r": 0.142,
+      "n": 51
+    },
+    {
+      "a": "experimentation",
+      "b": "shared_purpose",
+      "r": -0.065,
+      "n": 50
     }
   ],
   "duplicateDimensionCandidates": [],
@@ -703,6 +703,14 @@
       "flaggedAsWealthProxy": false
     },
     {
+      "indicatorId": "civic_participation",
+      "dimension": "shared_purpose",
+      "measurementClass": "C",
+      "r": -0.331,
+      "wealthProxyPrior": 0.1,
+      "flaggedAsWealthProxy": false
+    },
+    {
       "indicatorId": "early_stage_entrepreneurial_activity",
       "dimension": "experimentation",
       "measurementClass": "C",
@@ -767,6 +775,14 @@
       "flaggedAsWealthProxy": false
     },
     {
+      "indicatorId": "perceived_control",
+      "dimension": "agency",
+      "measurementClass": "P",
+      "r": -0.154,
+      "wealthProxyPrior": 0.2,
+      "flaggedAsWealthProxy": false
+    },
+    {
       "indicatorId": "electricity_connection_speed",
       "dimension": "building",
       "measurementClass": "C",
@@ -784,6 +800,13 @@
       "delta": 0.198
     },
     {
+      "indicatorId": "income_inequality",
+      "dimension": "shared_purpose",
+      "dimensionR": 0.214,
+      "dimensionRWithout": 0.032,
+      "delta": 0.181
+    },
+    {
       "indicatorId": "economic_complexity",
       "dimension": "building",
       "dimensionR": 0.434,
@@ -798,18 +821,18 @@
       "delta": 0.17
     },
     {
-      "indicatorId": "income_inequality",
-      "dimension": "shared_purpose",
-      "dimensionR": 0.386,
-      "dimensionRWithout": 0.217,
-      "delta": 0.169
-    },
-    {
       "indicatorId": "bribery_incidence",
       "dimension": "trust",
       "dimensionR": 0.516,
       "dimensionRWithout": 0.354,
       "delta": 0.162
+    },
+    {
+      "indicatorId": "business_start_days",
+      "dimension": "agency",
+      "dimensionR": 0.579,
+      "dimensionRWithout": 0.447,
+      "delta": 0.132
     },
     {
       "indicatorId": "sci_articles_per_million",
@@ -826,10 +849,10 @@
       "delta": 0.101
     },
     {
-      "indicatorId": "business_start_days",
+      "indicatorId": "business_start_procedures",
       "dimension": "agency",
-      "dimensionR": 0.638,
-      "dimensionRWithout": 0.546,
+      "dimensionR": 0.579,
+      "dimensionRWithout": 0.488,
       "delta": 0.092
     },
     {
@@ -854,13 +877,6 @@
       "delta": 0.078
     },
     {
-      "indicatorId": "business_start_procedures",
-      "dimension": "agency",
-      "dimensionR": 0.638,
-      "dimensionRWithout": 0.572,
-      "delta": 0.066
-    },
-    {
       "indicatorId": "high_tech_exports_share",
       "dimension": "building",
       "dimensionR": 0.434,
@@ -880,6 +896,13 @@
       "dimensionR": 0.738,
       "dimensionRWithout": 0.686,
       "delta": 0.051
+    },
+    {
+      "indicatorId": "tax_revenue_gdp",
+      "dimension": "shared_purpose",
+      "dimensionR": 0.214,
+      "dimensionRWithout": 0.166,
+      "delta": 0.047
     },
     {
       "indicatorId": "civil_society_strength",
@@ -910,11 +933,11 @@
       "delta": 0.01
     },
     {
-      "indicatorId": "tax_revenue_gdp",
-      "dimension": "shared_purpose",
-      "dimensionR": 0.386,
-      "dimensionRWithout": 0.383,
-      "delta": 0.003
+      "indicatorId": "new_business_density",
+      "dimension": "agency",
+      "dimensionR": 0.579,
+      "dimensionRWithout": 0.575,
+      "delta": 0.005
     },
     {
       "indicatorId": "long_term_unemployment_share",
@@ -943,13 +966,6 @@
       "dimensionR": 0.749,
       "dimensionRWithout": 0.779,
       "delta": -0.03
-    },
-    {
-      "indicatorId": "new_business_density",
-      "dimension": "agency",
-      "dimensionR": 0.638,
-      "dimensionRWithout": 0.675,
-      "delta": -0.037
     },
     {
       "indicatorId": "contract_enforcement_days",
@@ -985,6 +1001,20 @@
       "dimensionR": 0.434,
       "dimensionRWithout": 0.492,
       "delta": -0.058
+    },
+    {
+      "indicatorId": "perceived_control",
+      "dimension": "agency",
+      "dimensionR": 0.579,
+      "dimensionRWithout": 0.638,
+      "delta": -0.059
+    },
+    {
+      "indicatorId": "civic_participation",
+      "dimension": "shared_purpose",
+      "dimensionR": 0.214,
+      "dimensionRWithout": 0.386,
+      "delta": -0.172
     }
   ],
   "panelVsGdp": null,
@@ -1009,11 +1039,11 @@
     {
       "dimension": "agency",
       "indicatorsDefined": 5,
-      "indicatorsObserved": 3,
-      "gaps": 2,
+      "indicatorsObserved": 4,
+      "gaps": 1,
       "retired": 0,
-      "meanCoverage": 0.577,
-      "meanConfidence": 0.383,
+      "meanCoverage": 0.717,
+      "meanConfidence": 0.483,
       "classMix": {
         "C": 4,
         "I": 0,
@@ -1121,18 +1151,18 @@
     {
       "dimension": "shared_purpose",
       "indicatorsDefined": 7,
-      "indicatorsObserved": 2,
-      "gaps": 4,
+      "indicatorsObserved": 3,
+      "gaps": 3,
       "retired": 1,
-      "meanCoverage": 0.311,
-      "meanConfidence": 0.26,
+      "meanCoverage": 0.428,
+      "meanConfidence": 0.343,
       "classMix": {
         "C": 2,
         "I": 0,
         "O": 2,
         "P": 3
       },
-      "subjectivityShare": 0.714
+      "subjectivityShare": 0.571
     }
   ],
   "familyBalance": [
@@ -1162,8 +1192,18 @@
       "countries": 53,
       "latestYear": 2024,
       "r": -0.335,
-      "dimensionR": -0.227,
-      "dimensionN": 47
+      "dimensionR": -0.168,
+      "dimensionN": 51
+    },
+    {
+      "checkId": "voter_turnout",
+      "dimension": "shared_purpose",
+      "name": "Voter turnout",
+      "countries": 52,
+      "latestYear": 2024,
+      "r": 0.053,
+      "dimensionR": -0.052,
+      "dimensionN": 50
     }
   ],
   "conditions": [
@@ -1212,7 +1252,7 @@
       "latestYear": 2025,
       "r": 0.879,
       "n": 51,
-      "dimensionR": 0.456,
+      "dimensionR": 0.449,
       "dimensionN": 52
     },
     {
@@ -1224,7 +1264,7 @@
       "latestYear": 2024,
       "r": 0.79,
       "n": 51,
-      "dimensionR": 0.497,
+      "dimensionR": 0.415,
       "dimensionN": 52
     },
     {
@@ -1236,7 +1276,7 @@
       "latestYear": 2025,
       "r": 0.542,
       "n": 51,
-      "dimensionR": 0.495,
+      "dimensionR": 0.37,
       "dimensionN": 52
     },
     {
@@ -1534,6 +1574,22 @@
         "lowDiscrimination": false
       },
       {
+        "indicatorId": "perceived_control",
+        "dimension": "agency",
+        "countries": 0,
+        "years": 0,
+        "firstYear": null,
+        "lastYear": null,
+        "firstSpread": null,
+        "lastSpread": null,
+        "changeShare": null,
+        "spearman": null,
+        "carriedForwardCells": 0,
+        "clampedCells": 0,
+        "fading": false,
+        "lowDiscrimination": false
+      },
+      {
         "indicatorId": "time_to_export",
         "dimension": "coordination",
         "countries": 0,
@@ -1772,6 +1828,22 @@
         "clampedCells": 0,
         "fading": false,
         "lowDiscrimination": false
+      },
+      {
+        "indicatorId": "civic_participation",
+        "dimension": "shared_purpose",
+        "countries": 0,
+        "years": 0,
+        "firstYear": null,
+        "lastYear": null,
+        "firstSpread": null,
+        "lastSpread": null,
+        "changeShare": null,
+        "spearman": null,
+        "carriedForwardCells": 0,
+        "clampedCells": 0,
+        "fading": false,
+        "lowDiscrimination": false
       }
     ]
   },
@@ -1846,7 +1918,7 @@
       {
         "iso3": "SGP",
         "country": "Singapore",
-        "meanAbsShift": 1.54
+        "meanAbsShift": 1.35
       },
       {
         "iso3": "KOR",
@@ -1976,7 +2048,7 @@
       {
         "iso3": "VNM",
         "country": "Vietnam",
-        "meanAbsShift": 1.39
+        "meanAbsShift": 1.21
       },
       {
         "iso3": "PHL",
@@ -2011,7 +2083,7 @@
       {
         "iso3": "NGA",
         "country": "Nigeria",
-        "meanAbsShift": 0.91
+        "meanAbsShift": 0.8
       },
       {
         "iso3": "KEN",
@@ -2151,14 +2223,6 @@
       "name": "Adult digital skills",
       "publisher": "ITU",
       "reason": "ITU collects this but coverage across the country set is broken and the task lists differ by year.",
-      "status": "gap"
-    },
-    {
-      "dimension": "agency",
-      "indicatorId": "perceived_control",
-      "name": "Perceived control over life",
-      "publisher": "World Values Survey",
-      "reason": "WVS wave 7 covers most of these countries but fieldwork years differ by up to six years, and Singapore is thin.",
       "status": "gap"
     },
     {
@@ -2334,7 +2398,7 @@
       "indicatorId": "voice_and_accountability",
       "name": "Voice and accountability",
       "publisher": "World Bank",
-      "reason": "Retired 2026-08-26. Artefact A5: it measures the democratic channel while Shared Purpose asks whether people can see themselves in a common project. Singapore scored 20.9 while being one of the most effective collective actors in the set. Voter turnout, volunteering and civic participation are the observable replacements and all are declared gaps. See D23 and A5.",
+      "reason": "Retired 2026-08-26. Artefact A5: it measures the democratic channel while Shared Purpose asks whether people can see themselves in a common project. Singapore scored 20.9 while being one of the most effective collective actors in the set. Volunteering and civic participation are the observable replacements and are declared gaps; voter turnout is published beside Shared Purpose as a check, because it reads the same democratic channel and compulsory voting (D129). See D23 and A5.",
       "status": "retired"
     },
     {
@@ -2360,18 +2424,10 @@
       "publisher": "V-Dem",
       "reason": "V-Dem political polarization (v2cacamps) is published beside this dimension as a behavioral check and is not scored, because a regime with no organized opposition reads as calm (D121, A13). The gap stays open for a measure that can tell calm between competing camps from calm where no camp may compete. Pluralism is the target, so only hostile polarization should count against a country.",
       "status": "gap"
-    },
-    {
-      "dimension": "shared_purpose",
-      "indicatorId": "civic_participation",
-      "name": "Civic participation",
-      "publisher": "World Values Survey",
-      "reason": "Behavioural rather than attitudinal, so it is the item worth prioritising if only one survey measure can be harmonised.",
-      "status": "gap"
     }
   ],
   "outOfFrame": {
-    "observedCells": 1452,
+    "observedCells": 1526,
     "clampedCells": 0,
     "share": 0,
     "perCountry": []

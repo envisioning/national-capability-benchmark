@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T10:14:50.066Z",
+  "generatedAt": "2026-10-01T10:43:57.777Z",
   "iso3": "USA",
   "country": "United States",
   "dimensions": [
@@ -147,20 +147,39 @@
     {
       "dimension": "agency",
       "kind": "measure",
-      "score": 86.4,
-      "confidence": 0.222,
-      "band": "very_thin",
+      "score": 83.4,
+      "confidence": 0.367,
+      "band": "thin",
       "trend": null,
       "scoredOn": [
         "business_start_days",
-        "business_start_procedures"
-      ],
-      "gaps": [
-        "adult_digital_skills",
+        "business_start_procedures",
         "perceived_control"
       ],
+      "gaps": [
+        "adult_digital_skills"
+      ],
       "retired": [],
-      "exemplars": [],
+      "exemplars": [
+        {
+          "iso3": "AUS",
+          "country": "Australia",
+          "score": 86.1,
+          "confidence": 0.555
+        },
+        {
+          "iso3": "EST",
+          "country": "Estonia",
+          "score": 85.2,
+          "confidence": 0.555
+        },
+        {
+          "iso3": "CHN",
+          "country": "China",
+          "score": 72.5,
+          "confidence": 0.555
+        }
+      ],
       "evidenceElsewhere": [
         {
           "id": "bra-sibratec",
@@ -2016,8 +2035,8 @@
     {
       "dimension": "shared_purpose",
       "kind": "measure",
-      "score": 40.8,
-      "confidence": 0.316,
+      "score": 55.3,
+      "confidence": 0.433,
       "band": "thin",
       "trend": {
         "spanYears": 10,
@@ -2027,13 +2046,13 @@
       },
       "scoredOn": [
         "tax_revenue_gdp",
-        "income_inequality"
+        "income_inequality",
+        "civic_participation"
       ],
       "gaps": [
         "national_belonging",
         "volunteering_rate",
-        "political_polarization",
-        "civic_participation"
+        "political_polarization"
       ],
       "retired": [
         "voice_and_accountability"
@@ -2041,32 +2060,11 @@
       "exemplars": [],
       "evidenceElsewhere": [
         {
-          "id": "est-i-voting",
-          "iso3": "EST",
-          "country": "Estonia",
-          "indicatorId": "civic_participation",
-          "title": "Internet voting in national elections"
-        },
-        {
-          "id": "aus-compulsory-voting",
-          "iso3": "AUS",
-          "country": "Australia",
-          "indicatorId": "civic_participation",
-          "title": "Compulsory voting"
-        },
-        {
           "id": "rwa-umuganda",
           "iso3": "RWA",
           "country": "Rwanda",
           "indicatorId": "volunteering_rate",
           "title": "Umuganda community work"
-        },
-        {
-          "id": "bra-sus-conselhos",
-          "iso3": "BRA",
-          "country": "Brazil",
-          "indicatorId": "civic_participation",
-          "title": "SUS health councils, permanent public participation"
         },
         {
           "id": "deu-thw",
@@ -2081,13 +2079,6 @@
           "country": "Japan",
           "indicatorId": "volunteering_rate",
           "title": "Volunteer fire corps, and its membership erosion"
-        },
-        {
-          "id": "prt-opp",
-          "iso3": "PRT",
-          "country": "Portugal",
-          "indicatorId": "civic_participation",
-          "title": "Orçamento Participativo Portugal"
         }
       ],
       "institutionIds": [],
@@ -2112,5 +2103,5 @@
       "started": 1977
     }
   ],
-  "gapCount": 22
+  "gapCount": 20
 }

@@ -9,14 +9,14 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 28.9 | 0.46 (usable) | +11.5 over 10 years using 2 indicators |
-| Agency | 55.5 | 0.38 (thin) | no trend |
+| Agency | 50.7 | 0.52 (usable) | no trend |
 | Coordination | 35.7 | 0.41 (thin) | no trend |
 | Trust | 42.6 | 0.37 (thin) | no trend |
 | Learning | 19.1 | 0.47 (usable) | no trend |
 | Experimentation | 0.5 | 0.15 (very thin) | no trend |
 | Adaptability | 57.4 | 0.67 (good) | +4.6 over 10 years using 3 indicators |
 | Building | 20 | 0.57 (usable) | -0.3 over 10 years using 3 indicators |
-| Shared Purpose | not scored | 0.13 (very thin) | no trend |
+| Shared Purpose | 64.9 | 0.25 (thin) | no trend |
 
 ## What to raise
 
@@ -54,20 +54,20 @@ How capable is the country of identifying and preparing for emerging change?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Shared Purpose: confidence 0.13, very thin
-
-To what extent can people imagine themselves as participants in a common project?
-
-- Uses one observed indicator.
-- Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
-- Rejected datasets: Voice and accountability.
-
 ### Experimentation: confidence 0.15, very thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
 - Uses 2 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
+
+### Shared Purpose: confidence 0.25, thin
+
+To what extent can people imagine themselves as participants in a common project?
+
+- Uses 2 observed indicators.
+- Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
+- Rejected datasets: Voice and accountability.
 
 ### Trust: confidence 0.37, thin
 
@@ -76,13 +76,6 @@ How much cooperation is possible beyond immediate personal networks?
 - Uses 3 observed indicators.
 - Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
-
-### Agency: confidence 0.38, thin
-
-How able are individuals and organizations to turn an intention into action?
-
-- Uses 3 observed indicators.
-- Missing indicators: Adult digital skills, Perceived control over life.
 
 ### Coordination: confidence 0.41, thin
 
@@ -97,6 +90,7 @@ How effectively can independent actors organize around shared objectives?
 These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 57.4, confidence good
+- Agency: 50.7, confidence usable
 
 ## What Nigeria has to work with
 
@@ -117,14 +111,13 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 ## Missing data
 
-22 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+20 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
 | Anticipation | Government foresight capacity | Existence, mandate and continuity of a national strategic foresight function. |
 | Anticipation | Long-horizon research share | Share of gross R&D expenditure classified as basic research. |
 | Agency | Adult digital skills | Share of adults who can perform standard digital tasks. |
-| Agency | Perceived control over life | Self-reported freedom of choice and control over the course of one’s life. |
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
@@ -142,7 +135,6 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Shared Purpose | Sense of national belonging | Reported pride in and identification with the national community. |
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
-| Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
 
 ## What the indicators miss about Nigeria
 

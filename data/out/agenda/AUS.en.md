@@ -9,14 +9,14 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 86 | 0.46 (usable) | -0.4 over 10 years using 2 indicators |
-| Agency | 92.1 | 0.41 (thin) | no trend |
+| Agency | 86.1 | 0.56 (usable) | no trend |
 | Coordination | 86.7 | 0.4 (thin) | no trend |
 | Trust | 81 | 0.37 (thin) | no trend |
 | Learning | 71.4 | 0.54 (usable) | no trend |
 | Experimentation | 39 | 0.18 (very thin) | +1.1 over 10 years using 2 indicators |
 | Adaptability | 79.6 | 0.68 (good) | +6.4 over 10 years using 3 indicators |
 | Building | 34.4 | 0.57 (usable) | +1.6 over 10 years using 3 indicators |
-| Shared Purpose | 78.7 | 0.24 (very thin) | no trend |
+| Shared Purpose | 77.2 | 0.36 (thin) | no trend |
 
 ## What to raise
 
@@ -43,12 +43,12 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Uses 2 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
-### Shared Purpose: confidence 0.24, very thin
+### Shared Purpose: confidence 0.36, thin
 
 To what extent can people imagine themselves as participants in a common project?
 
-- Uses 2 observed indicators.
-- Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
+- Uses 3 observed indicators.
+- Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
 
 ### Trust: confidence 0.37, thin
@@ -67,17 +67,11 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
-### Agency: confidence 0.41, thin
-
-How able are individuals and organizations to turn an intention into action?
-
-- Uses 3 observed indicators.
-- Missing indicators: Adult digital skills, Perceived control over life.
-
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
+- Agency: 86.1, confidence usable
 - Anticipation: 86, confidence usable
 - Adaptability: 79.6, confidence good
 - Learning: 71.4, confidence usable
@@ -101,14 +95,13 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 ## Missing data
 
-22 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+20 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
 | Anticipation | Government foresight capacity | Existence, mandate and continuity of a national strategic foresight function. |
 | Anticipation | Long-horizon research share | Share of gross R&D expenditure classified as basic research. |
 | Agency | Adult digital skills | Share of adults who can perform standard digital tasks. |
-| Agency | Perceived control over life | Self-reported freedom of choice and control over the course of one’s life. |
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
@@ -126,7 +119,6 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Shared Purpose | Sense of national belonging | Reported pride in and identification with the national community. |
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
-| Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
 
 ## What the indicators miss about Australia
 

@@ -9,14 +9,14 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 42,3 | 0,46 (utilizável) | +13,8 em 10 anos, sobre 2 indicadores |
-| Agência | 42,8 | 0,41 (fraca) | sem base de tendência |
+| Agência | 51,4 | 0,56 (utilizável) | sem base de tendência |
 | Coordenação | 64,3 | 0,37 (fraca) | sem base de tendência |
 | Confiança | 43,5 | 0,28 (fraca) | sem base de tendência |
 | Aprendizagem | 37,5 | 0,36 (fraca) | sem base de tendência |
 | Experimentação | 21,5 | 0,39 (fraca) | +0,7 em 10 anos, sobre 2 indicadores |
 | Adaptação | 57 | 0,68 (boa) | -1,4 em 10 anos, sobre 3 indicadores |
 | Construção | 27,8 | 0,57 (utilizável) | -3,4 em 10 anos, sobre 3 indicadores |
-| Propósito compartilhado | 39,2 | 0,32 (fraca) | -3,3 em 10 anos, sobre 2 indicadores |
+| Propósito compartilhado | 33,7 | 0,43 (fraca) | -3,3 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para elevar
 
@@ -53,14 +53,6 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 - Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
-### Propósito compartilhado: confiança 0,32, fraca
-
-Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
-- Bases rejeitadas: Voz e responsabilização.
-
 ### Aprendizagem: confiança 0,36, fraca
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
@@ -83,18 +75,20 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Baseada em 4 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
-### Agência: confiança 0,41, fraca
+### Propósito compartilhado: confiança 0,43, fraca
 
-Quão capazes são pessoas e organizações de transformar uma intenção em ação?
+Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
 - Baseada em 3 indicadores observados.
-- Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
+- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
+- Bases rejeitadas: Voz e responsabilização.
 
 ## Dimensões para manter
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 57, confiança boa
+- Agência: 51,4, confiança utilizável
 
 ## O que a Argentina tem para trabalhar
 
@@ -115,14 +109,13 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 ## Agenda de medição
 
-22 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+20 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
 | Antecipação | Capacidade governamental de prospecção | Existência, mandato e continuidade de uma função nacional de prospecção estratégica. |
 | Antecipação | Parcela de pesquisa de longo prazo | Parcela do dispêndio bruto em P&D classificada como pesquisa básica. |
 | Agência | Habilidades digitais de adultos | Parcela de adultos capazes de executar tarefas digitais padrão. |
-| Agência | Percepção de controle sobre a própria vida | Liberdade de escolha e controle sobre o rumo da própria vida, autodeclarados. |
 | Coordenação | Colaboração universidade-empresa | Intensidade da colaboração de pesquisa entre universidades e empresas. |
 | Coordenação | Colaboração público-privada | Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
@@ -140,7 +133,6 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Propósito compartilhado | Sentimento de pertencimento nacional | Orgulho e identificação com a comunidade nacional, autodeclarados. |
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
-| Propósito compartilhado | Participação cívica | Participação ativa em associações, sindicatos, partidos e organizações comunitárias. |
 
 ## O que a Argentina construiu e nenhum indicador conta
 

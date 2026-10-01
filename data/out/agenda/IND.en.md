@@ -9,14 +9,14 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 35.5 | 0.46 (usable) | +9 over 10 years using 2 indicators |
-| Agency | 42.3 | 0.41 (thin) | no trend |
+| Agency | 45.4 | 0.56 (usable) | no trend |
 | Coordination | 73.9 | 0.41 (thin) | no trend |
 | Trust | 31.1 | 0.37 (thin) | no trend |
 | Learning | 15.3 | 0.56 (usable) | no trend |
 | Experimentation | 9.8 | 0.39 (thin) | +1.7 over 10 years using 2 indicators |
 | Adaptability | 59.5 | 0.53 (usable) | +12.2 over 10 years using 3 indicators, with 1 at the frame edge |
 | Building | 47.1 | 0.57 (usable) | +5.8 over 10 years using 3 indicators |
-| Shared Purpose | 61.8 | 0.26 (thin) | -2.2 over 10 years using 2 indicators |
+| Shared Purpose | 66.4 | 0.38 (thin) | -2.2 over 10 years using 2 indicators |
 
 ## What to raise
 
@@ -40,6 +40,15 @@ How capable is the country of identifying and preparing for emerging change?
 - Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (South Africa).
 - Missing indicators: Government foresight capacity, Long-horizon research share.
 
+### Agency: 45.4, confidence usable
+
+How able are individuals and organizations to turn an intention into action?
+
+- Uses 4 observed indicators.
+- Highest usable scores: Australia 86.1, Estonia 85.2, China 72.5.
+- Related deliveries in other countries: SIBRATEC, the documented innovation-centre network (Brazil); Singapore's national ICT-skills measurement and baseline (Singapore); e.escola, a national laptop-and-broadband push (Portugal); Puntos México Conectado, national digital learning centres (Mexico).
+- Missing indicators: Adult digital skills.
+
 ### Building: 47.1, confidence usable
 
 How capable is the country of turning plans and knowledge into functioning systems?
@@ -54,14 +63,6 @@ How capable is the country of turning plans and knowledge into functioning syste
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Shared Purpose: confidence 0.26, thin
-
-To what extent can people imagine themselves as participants in a common project?
-
-- Uses 2 observed indicators.
-- Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
-- Rejected datasets: Voice and accountability.
-
 ### Trust: confidence 0.37, thin
 
 How much cooperation is possible beyond immediate personal networks?
@@ -70,19 +71,20 @@ How much cooperation is possible beyond immediate personal networks?
 - Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
+### Shared Purpose: confidence 0.38, thin
+
+To what extent can people imagine themselves as participants in a common project?
+
+- Uses 3 observed indicators.
+- Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
+- Rejected datasets: Voice and accountability.
+
 ### Experimentation: confidence 0.39, thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
 - Uses 4 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
-
-### Agency: confidence 0.41, thin
-
-How able are individuals and organizations to turn an intention into action?
-
-- Uses 3 observed indicators.
-- Missing indicators: Adult digital skills, Perceived control over life.
 
 ### Coordination: confidence 0.41, thin
 
@@ -117,14 +119,13 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 ## Missing data
 
-22 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+20 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
 | Anticipation | Government foresight capacity | Existence, mandate and continuity of a national strategic foresight function. |
 | Anticipation | Long-horizon research share | Share of gross R&D expenditure classified as basic research. |
 | Agency | Adult digital skills | Share of adults who can perform standard digital tasks. |
-| Agency | Perceived control over life | Self-reported freedom of choice and control over the course of one’s life. |
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
@@ -142,7 +143,6 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Shared Purpose | Sense of national belonging | Reported pride in and identification with the national community. |
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
-| Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
 
 ## What the indicators miss about India
 
