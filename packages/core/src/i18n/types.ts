@@ -163,6 +163,92 @@ export type Lexicon = {
   radar: RadarStrings
   agenda: AgendaStrings
   institutions: InstitutionStrings
+  capabilityMap: CapabilityMapStrings
+}
+
+/**
+ * The words of the capability map, one country's reading of one capability
+ * among the countries at similar income. Placeholders name the dimension and
+ * the country, so a second capability reuses every string. Descriptive by
+ * contract: no string here may say what a country should do. See D130.
+ */
+export type CapabilityMapStrings = {
+  /** Tab label in a layer's nav. {dimension} */
+  navLabel: string
+  /** {countryTopic} {dimension} */
+  title: string
+  /** {country} {dimension}: the page's metadata title. */
+  metaTitle: string
+  /** {country} {dimension} */
+  metaDescription: string
+  /** {version}: the dataset the page was computed from, as a dateline. */
+  dataset: string
+  /** {country} {dimension} {count} */
+  intro: string
+  scoreHeading: string
+  /** {dimension} {n}: what the score is and what the rows are. */
+  scoreIntro: string
+  scoreLabel: string
+  confidenceLabel: string
+  /** {band}: the confidence band's name. */
+  bandLine: string
+  rowsHeading: string
+  colPosition: string
+  colPeerMedian: string
+  /** {source} {year} */
+  rowSource: string
+  noValue: string
+  /** {list}: declared gaps. */
+  gapsLine: string
+  /** {r} {n}: the dimension's own correlation with income. */
+  dimensionIncome: string
+  conditionsIntro: string
+  /** {r} {n} */
+  conditionIncome: string
+  /** {dimension} {r} {n} */
+  conditionScore: string
+  /** {value} {unit} {n} */
+  conditionPeerMedian: string
+  peersHeading: string
+  /** {count} {country} */
+  peerRule: string
+  /** {min} {max} {own} {year} */
+  peerRange: string
+  /** {n} {count}: peers with no score on the dimension. */
+  peersUnscored: string
+  colCountry: string
+  colIncome: string
+  colScore: string
+  /** {dimension} {count}: accessible name of the field chart. */
+  fieldAria: string
+  fieldNote: string
+  readingHeading: string
+  /** {country} {score} {median} {n} */
+  scoreAbove: string
+  scoreBelow: string
+  scoreLevel: string
+  /** {list} */
+  rowsAbove: string
+  rowsBelow: string
+  rowsLevel: string
+  /** {countryTopic} {list} */
+  conditionsMore: string
+  conditionsLess: string
+  conditionsLevel: string
+  readingNote: string
+  noPeers: string
+  limitsHeading: string
+  limitProxy: string
+  limitPeers: string
+  limitCorrelation: string
+  /** Construct caveats per capability row id, each with the decisions it rests on. */
+  rowCaveats: Record<string, { text: string; decisions: string[] }>
+  /** Link text to the decision log entry that records this page. {id} */
+  decisionLink: string
+  /** Link text to the agenda of the same country. */
+  agendaLink: string
+  /** Link text to the English capability page. {dimension} */
+  capabilityLink: string
 }
 
 /**

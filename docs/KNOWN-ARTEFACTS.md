@@ -173,6 +173,11 @@ V-Dem's polarization item brings the Singapore question back from the other
 side: a regime with no organised opposition reads as calm. It is published
 beside Shared Purpose as a behavioural check and not scored. See A13 and D121.
 
+Voter turnout, from the same pinned V-Dem file, is now published beside Shared
+Purpose as a behavioural check and not scored, because it reads this same
+democratic channel as well as compulsory voting and managed mobilisation. See
+D129.
+
 ---
 ## A6 — Doing Business indicators are frozen at 2019
 
@@ -462,22 +467,52 @@ row (civic participation, volunteering, voter turnout) that agrees with the
 item outside the closed regimes. Neither is wired, and the gap stays open.
 
 ---
-## A14 — Agency rests on two rows frozen at 2019
+## A14 — Half of Agency's scored rows are frozen at 2019
 
-**Severity: high.**
+**Severity: medium.**
 
-Agency is scored on three rows: new business density, and the time and the
-number of procedures to start a business. The second and third come from Doing
-Business and stopped in 2019 (A6). Internet users, account ownership and
-private credit sit beside the score as conditions (D122), so two thirds of the
-scored evidence is now a 2019 reading of registration rules.
+Agency is scored on four rows: new business density, perceived control over
+life (D127), and the time and the number of procedures to start a business.
+The last two come from Doing Business and stopped in 2019 (A6). Internet
+users, account ownership and private credit sit beside the score as
+conditions (D122). So half the scored evidence is a 2019 reading of
+registration rules, and the one current row that is not a business count is
+a perception (A15).
 
-Where new business density is missing, Agency is those two frozen rows and
-nothing else. That holds for the United States (86.4), Nicaragua (74.7) and
-Venezuela (0), each at confidence 0.22. The score then reads how hard it was to
-register a company in 2019, not what people do with the chance to act.
+Where new business density is missing, Agency is the two frozen rows and
+perceived control. That holds for the United States (83.4), Nicaragua (80.1)
+and Venezuela (25.8), each at confidence 0.37 on dataset 7.1.0 with D127.
 
-Read Agency through its confidence. The fix is capability rows that observe
-people acting, which the O1 triage sweep is looking for. Until they land, a
-large move in an Agency score between dataset 6 and 7 is the conditions
-leaving, not the country changing.
+Read Agency through its confidence. The fix is a behavioural row that observes
+people acting, which the O1 triage sweep did not find with frame coverage.
+
+---
+
+## A15 — Two survey rows read regime and question format
+
+**Severity: medium. Both rows are scored. See D127 and D128.**
+
+`perceived_control` (Agency, A173) is a perception, and a closed or electoral
+autocracy can read high on it. Vietnam reads 8.1 out of 10, third of 37, and
+Nicaragua 8.0, fifth, surveyed in 2019-20 after the 2018 crackdown; Venezuela
+reads 7.7. Response style on a 10-point scale moves the ordering too: Mexico,
+Uruguay and Colombia sit at 8.1 to 8.2 and Japan, on a mail survey, at 6.0.
+The row correlates with log GDP per capita at -0.15.
+
+`civic_participation` (Shared purpose, A080_01) harmonises two questions. EVS
+shows a list and asks which organisations the respondent belongs to; WVS reads
+each type aloud and counts active and inactive members. The eight EVS
+countries in the frame average 9.9% and the 29 WVS countries 19.4%. Among the
+ten countries surveyed by both, WVS reads higher in eight, by a median 1.9
+points. Estonia (1.5%, EVS) is the floor and Kenya (38.4%) and Indonesia
+(37.9%, both WVS) the top. Inside the EVS group the row tracks income at 0.83;
+across the frame it runs against income at -0.33.
+
+**What is published.** Both values, with the programme's question, the survey
+year and the valid-answer base in each observation's note. The release stamps
+every value 2022, though fieldwork ran from 2017 to 2023.
+
+**What remains.** Neither row is adjusted. A reader can take Vietnam's
+perceived control or the negative income correlation of either row as a
+finding; read them through this entry first. Pooled microdata with a format
+term, or a behavioural row with frame coverage, is the fix.

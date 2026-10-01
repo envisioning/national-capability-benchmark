@@ -23,7 +23,7 @@ pnpm dev
 pnpm bench all fetches World Bank observations from 1990, scores the countries,
 runs diagnostics, writes the report, and regenerates the capability agendas. To
 refresh the source-backed Trust and Coordination adapter rows as well, run
-`pnpm bench trust fetch` and `pnpm bench vdem fetch` before the scoring step.
+`pnpm bench evs fetch` and `pnpm bench vdem fetch` before the scoring step.
 
 The viewer runs at https://ncb.localhost through portless on port 3888. To run
 without the proxy, use either:
@@ -64,7 +64,7 @@ The CLI lives in packages/core and is available through pnpm bench.
 | Command | Purpose |
 | --- | --- |
 | pnpm bench ingest [--from 1990] [--snapshot] | Fetch World Bank history into data/observations and record restatements in revisions.json. |
-| pnpm bench trust fetch | Fetch and parse the pinned Joint EVS/WVS A165 trust table into the shared observation store. |
+| pnpm bench evs fetch | Fetch and parse the pinned Joint EVS/WVS results tables (A165 trust, A173 perceived control, A080_01 charitable membership) into the shared observation store. `trust fetch` is an alias. |
 | pnpm bench vdem fetch | Fetch and parse the pinned V-Dem v15 civil-society series into the shared observation store. |
 | pnpm bench score | Normalize and score the current observations, writing the published output. |
 | pnpm bench diagnose | Run correlations, redundancy checks and the GDP-sensitivity test. |
@@ -233,7 +233,7 @@ Package descriptor and JSON Schemas.
 | data/out/countries/{ISO3}.json | One country in full, including indicator rows and yearly series. |
 | data/out/indicators/{id}.json | One indicator across the country set. |
 | data/out/table.csv | Flat country by dimension table. |
-| data/out/diagnostics.json | Correlations, redundancy and GDP-sensitivity diagnostics. |
+| data/out/diagnostics.json | Correlations, redundancy and GDP-sensitivity diagnostics, plus the income each is read against. |
 | data/out/report.md | Human-readable findings report. |
 | CHANGELOG.md | Human-readable release history, rendered at `/changelog`. |
 | data/delphi/{runId}.json | Immutable record of one Delphi run and its provenance. |

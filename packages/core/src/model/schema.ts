@@ -177,8 +177,13 @@ export const CheckDef = z.object({
       file: z.string(),
       /** The column read from that file. */
       variable: z.string(),
-      /** The only year read. */
+      /**
+       * The year read. Under `latest_up_to` it is the ceiling: each country's
+       * newest coded row up to it is read, and the observation keeps that row's
+       * year. An election variable is coded in election years only. See D129.
+       */
       year: z.number().int(),
+      years: z.enum(['only', 'latest_up_to']).default('only'),
     })
     .optional(),
   /** Why it is beside the score rather than in it. Rendered to the reader. */

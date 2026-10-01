@@ -42,6 +42,11 @@ export const CHECK_PREFIX = '__check__'
 const NOTES_POLARIZATION =
   'The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita.'
 
+/* Rendered to readers, so American spelling and no dashes. The figures are from
+ * each country's latest election up to 2024; see D129, A5 and A13. */
+const NOTES_TURNOUT =
+  'Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen.'
+
 const RAW: Raw[] = [
   {
     /* Shares its id with the declared gap in indicators.ts on purpose: the gap
@@ -71,6 +76,35 @@ const RAW: Raw[] = [
       year: VDEM_CY_V15_YEAR,
     },
     notes: NOTES_POLARIZATION,
+  },
+  {
+    /* No declared gap carries this id: turnout is not a measurement Shared
+     * Purpose is waiting for, so there is nothing to share an id with. The
+     * observation id carries the check prefix, as for polarization. See D129. */
+    id: 'voter_turnout',
+    dimension: 'shared_purpose',
+    name: 'Voter turnout',
+    definition:
+      'Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.',
+    unit: '% of registered voters',
+    direction: 'higher_better',
+    ingest: 'adapter',
+    source: {
+      publisher: VDEM_PUBLISHER,
+      series: 'v2eltrnout',
+      url: VDEM_CY_V15_PAGE_URL,
+      tier: 'expert_panel',
+      inspectable: true,
+    },
+    pinned: {
+      dataset: `${VDEM_PUBLISHER} ${VDEM_CY_V15_DATASET} v${VDEM_CY_V15_RELEASE}`,
+      url: VDEM_CY_V15_URL,
+      file: VDEM_CY_V15_CSV,
+      variable: 'v2eltrnout',
+      year: VDEM_CY_V15_YEAR,
+      years: 'latest_up_to',
+    },
+    notes: NOTES_TURNOUT,
   },
 ]
 

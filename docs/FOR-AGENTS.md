@@ -64,7 +64,7 @@ both generated from the same Zod schemas the pipeline validates against.
 | `data/out/indicators/{id}.json` | One indicator across every country. The same data turned inside out. | You want one measure compared across the frame. |
 | `data/out/agenda/{ISO3}.json` | The computed capability agenda: which dimensions to raise, which to measure, which to hold. Language neutral. | You want the reading rather than the numbers. |
 | `data/out/agenda/{ISO3}.{lang}.md` | The same agenda rendered as prose, one file per lexicon. | You want the reading in a language. |
-| `data/out/diagnostics.json` | Correlations, redundancy and the GDP-sensitivity test. | You are checking whether the model earns its structure. |
+| `data/out/diagnostics.json` | Correlations, redundancy, the GDP-sensitivity test and each country's income (`income`, context only). | You are checking whether the model earns its structure. |
 | `data/out/table.csv` | The flat table. One row per country and dimension. | You want a spreadsheet. |
 | `data/out/schema/*.json` | JSON Schema for the index, a country file and an indicator file. | You are validating what you fetched. |
 

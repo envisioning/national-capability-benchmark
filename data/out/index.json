@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-01T09:54:05.645Z",
-  "version": "7.1.0",
+  "generatedAt": "2026-10-01T10:43:48.911Z",
+  "version": "7.2.0",
   "countries": [
     {
       "country": "Brazil",
@@ -85,19 +85,19 @@
           ]
         },
         "agency": {
-          "score": 51.6,
-          "observedIndicators": 3,
+          "score": 55.8,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.75,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 51.6,
+          "blendedScore": 55.8,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -418,19 +418,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 34.9,
-          "observedIndicators": 2,
+          "score": 30.7,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.316,
+          "confidence": 0.433,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 1,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.944,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 34.9,
+          "blendedScore": 30.7,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -461,6 +461,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 79.42,
+              "year": 2022,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -550,19 +562,19 @@
           ]
         },
         "agency": {
-          "score": 86.4,
-          "observedIndicators": 2,
+          "score": 83.4,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.222,
+          "confidence": 0.367,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.583,
-            "sourceQuality": 0.95
+            "coverage": 0.6,
+            "recency": 0.667,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 86.4,
+          "blendedScore": 83.4,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -883,19 +895,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 40.8,
-          "observedIndicators": 2,
+          "score": 55.3,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.316,
+          "confidence": 0.433,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 1,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.944,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 40.8,
+          "blendedScore": 55.3,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -968,6 +980,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 70.75,
+              "year": 2024,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -1432,6 +1456,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 77.74,
+              "year": 2023,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -1521,19 +1557,19 @@
           ]
         },
         "agency": {
-          "score": 58.8,
-          "observedIndicators": 3,
+          "score": 60,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.38,
+          "confidence": 0.524,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.667,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.708,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 58.8,
+          "blendedScore": 60,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -1854,19 +1890,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 52.2,
-          "observedIndicators": 2,
+          "score": 49.3,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.29,
+          "confidence": 0.408,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 0.917,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.889,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 52.2,
+          "blendedScore": 49.3,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -1925,6 +1961,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 46.64,
+              "year": 2023,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -2014,19 +2062,19 @@
           ]
         },
         "agency": {
-          "score": 84.3,
-          "observedIndicators": 3,
+          "score": 72.3,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.75,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 84.3,
+          "blendedScore": 72.3,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -2333,20 +2381,20 @@
           ]
         },
         "shared_purpose": {
-          "score": null,
-          "observedIndicators": 1,
-          "belowCoverageFloor": true,
-          "confidence": 0.159,
+          "score": 37,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
+          "confidence": 0.275,
           "confidenceParts": {
-            "coverage": 0.167,
-            "recency": 1,
-            "sourceQuality": 0.95
+            "coverage": 0.333,
+            "recency": 0.917,
+            "sourceQuality": 0.9
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": null,
-          "blendedFrom": "none",
+          "blendedScore": 37,
+          "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
           "checks": [
@@ -2361,6 +2409,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 93.55,
+              "year": 2023,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -2450,19 +2510,19 @@
           ]
         },
         "agency": {
-          "score": 66.1,
-          "observedIndicators": 3,
+          "score": 61,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.396,
+          "confidence": 0.539,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.694,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.729,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 66.1,
+          "blendedScore": 61,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -2783,19 +2843,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 61,
-          "observedIndicators": 2,
+          "score": 43.6,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.277,
+          "confidence": 0.395,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 0.875,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.861,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 61,
+          "blendedScore": 43.6,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -2840,6 +2900,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 66.97,
+              "year": 2024,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -2929,19 +3001,19 @@
           ]
         },
         "agency": {
-          "score": 96.9,
-          "observedIndicators": 3,
+          "score": 85.2,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.75,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 96.9,
+          "blendedScore": 85.2,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -3262,19 +3334,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 82.4,
-          "observedIndicators": 2,
+          "score": 55,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.303,
+          "confidence": 0.42,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 0.958,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.917,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 82.4,
+          "blendedScore": 55,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -3333,6 +3405,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 63.53,
+              "year": 2023,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -3422,19 +3506,19 @@
           ]
         },
         "agency": {
-          "score": 42.3,
-          "observedIndicators": 3,
+          "score": 45.4,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.75,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 42.3,
+          "blendedScore": 45.4,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -3755,19 +3839,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 61.8,
-          "observedIndicators": 2,
+          "score": 66.4,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.264,
+          "confidence": 0.382,
           "confidenceParts": {
-            "coverage": 0.333,
+            "coverage": 0.5,
             "recency": 0.833,
-            "sourceQuality": 0.95
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 61.8,
+          "blendedScore": 66.4,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -3826,6 +3910,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 65.79,
+              "year": 2024,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -3915,19 +4011,19 @@
           ]
         },
         "agency": {
-          "score": 71.6,
-          "observedIndicators": 3,
+          "score": 68.4,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.396,
+          "confidence": 0.539,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.694,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.729,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 71.6,
+          "blendedScore": 68.4,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -4234,19 +4330,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 52.9,
-          "observedIndicators": 2,
+          "score": 47.3,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.316,
+          "confidence": 0.433,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 1,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.944,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 52.9,
+          "blendedScore": 47.3,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -4305,6 +4401,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 84.87,
+              "year": 2023,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -4798,6 +4906,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 58.64,
+              "year": 2024,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -4887,19 +5007,19 @@
           ]
         },
         "agency": {
-          "score": 53,
-          "observedIndicators": 3,
+          "score": 64.8,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.75,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 53,
+          "blendedScore": 64.8,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -5220,19 +5340,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 47.1,
-          "observedIndicators": 2,
+          "score": 46.9,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.316,
+          "confidence": 0.433,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 1,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.944,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 47.1,
+          "blendedScore": 46.9,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -5277,6 +5397,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 60.54,
+              "year": 2024,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -5366,19 +5498,19 @@
           ]
         },
         "agency": {
-          "score": 42.8,
-          "observedIndicators": 3,
+          "score": 51.4,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.75,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 42.8,
+          "blendedScore": 51.4,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -5699,19 +5831,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 39.2,
-          "observedIndicators": 2,
+          "score": 33.7,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.316,
+          "confidence": 0.433,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 1,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.944,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 39.2,
+          "blendedScore": 33.7,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -5770,6 +5902,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 77.14,
+              "year": 2023,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -5859,19 +6003,19 @@
           ]
         },
         "agency": {
-          "score": 55.5,
-          "observedIndicators": 3,
+          "score": 65.5,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.75,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 55.5,
+          "blendedScore": 65.5,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -6192,19 +6336,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 27.4,
-          "observedIndicators": 2,
+          "score": 46.1,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.316,
+          "confidence": 0.433,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 1,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.944,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 27.4,
+          "blendedScore": 46.1,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -6249,6 +6393,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 58.1,
+              "year": 2022,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -6338,19 +6494,19 @@
           ]
         },
         "agency": {
-          "score": 48.1,
-          "observedIndicators": 3,
+          "score": 55.4,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.75,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 48.1,
+          "blendedScore": 55.4,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -6657,19 +6813,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 53.5,
-          "observedIndicators": 2,
+          "score": 39.8,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.277,
+          "confidence": 0.395,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 0.875,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.861,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 53.5,
+          "blendedScore": 39.8,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -6728,6 +6884,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 74.57,
+              "year": 2021,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -6817,19 +6985,19 @@
           ]
         },
         "agency": {
-          "score": 62.9,
-          "observedIndicators": 3,
+          "score": 72.2,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.75,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 62.9,
+          "blendedScore": 72.2,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -7121,19 +7289,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 57.3,
-          "observedIndicators": 2,
+          "score": 59.7,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.316,
+          "confidence": 0.433,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 1,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.944,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 57.3,
+          "blendedScore": 59.7,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -7192,6 +7360,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 89.52,
+              "year": 2024,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -7685,6 +7865,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 59.96,
+              "year": 2022,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -8178,6 +8370,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 76.57,
+              "year": 2021,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -8267,19 +8471,19 @@
           ]
         },
         "agency": {
-          "score": 69.9,
-          "observedIndicators": 3,
+          "score": 63.8,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.75,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 69.9,
+          "blendedScore": 63.8,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -8586,19 +8790,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 80.7,
-          "observedIndicators": 2,
+          "score": 59,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.303,
+          "confidence": 0.42,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 0.958,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.917,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 80.7,
+          "blendedScore": 59,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -8671,6 +8875,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 66.71,
+              "year": 2024,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -9178,6 +9394,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 59.76,
+              "year": 2024,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -9267,19 +9495,19 @@
           ]
         },
         "agency": {
-          "score": 56.2,
-          "observedIndicators": 3,
+          "score": 58.1,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.75,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 56.2,
+          "blendedScore": 58.1,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -9600,19 +9828,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 63.2,
-          "observedIndicators": 2,
+          "score": 48.1,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.303,
+          "confidence": 0.42,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 0.958,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.917,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 63.2,
+          "blendedScore": 48.1,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -9671,6 +9899,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 66.59,
+              "year": 2023,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -9760,19 +10000,19 @@
           ]
         },
         "agency": {
-          "score": 73,
-          "observedIndicators": 3,
+          "score": 67.2,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.75,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 73,
+          "blendedScore": 67.2,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -10093,19 +10333,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 76.3,
-          "observedIndicators": 2,
+          "score": 52,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.303,
+          "confidence": 0.42,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 0.958,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.917,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 76.3,
+          "blendedScore": 52,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -10150,6 +10390,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 59.9,
+              "year": 2024,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -10239,19 +10491,19 @@
           ]
         },
         "agency": {
-          "score": 43.1,
-          "observedIndicators": 3,
+          "score": 43.7,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.75,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 43.1,
+          "blendedScore": 43.7,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -10572,19 +10824,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 77.5,
-          "observedIndicators": 2,
+          "score": 54.6,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.29,
+          "confidence": 0.408,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 0.917,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.889,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 77.5,
+          "blendedScore": 54.6,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -10643,6 +10895,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 74.38,
+              "year": 2023,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -10732,19 +10996,19 @@
           ]
         },
         "agency": {
-          "score": 70.1,
-          "observedIndicators": 3,
+          "score": 70.7,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.75,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 70.1,
+          "blendedScore": 70.7,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -11051,19 +11315,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 93.4,
-          "observedIndicators": 2,
+          "score": 81.6,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.303,
+          "confidence": 0.42,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 0.958,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.917,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 93.4,
+          "blendedScore": 81.6,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -11136,6 +11400,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 84.21,
+              "year": 2022,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -11225,19 +11501,19 @@
           ]
         },
         "agency": {
-          "score": 66.9,
-          "observedIndicators": 3,
+          "score": 70.6,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.75,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 66.9,
+          "blendedScore": 70.6,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -11558,19 +11834,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 93.1,
-          "observedIndicators": 2,
+          "score": 73.6,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.303,
+          "confidence": 0.42,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 0.958,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.917,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 93.1,
+          "blendedScore": 73.6,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -11629,6 +11905,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 71.55,
+              "year": 2024,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -12093,6 +12381,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 59.7,
+              "year": 2024,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -12182,19 +12482,19 @@
           ]
         },
         "agency": {
-          "score": 74.5,
-          "observedIndicators": 3,
+          "score": 71.8,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.38,
+          "confidence": 0.524,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.667,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.708,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 74.5,
+          "blendedScore": 71.8,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -12501,19 +12801,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 64.2,
-          "observedIndicators": 2,
+          "score": 61.9,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.29,
+          "confidence": 0.408,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 0.917,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.889,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 64.2,
+          "blendedScore": 61.9,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -12572,6 +12872,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 62.25,
+              "year": 2021,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -12661,19 +12973,19 @@
           ]
         },
         "agency": {
-          "score": 92.1,
-          "observedIndicators": 3,
+          "score": 86.1,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.75,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 92.1,
+          "blendedScore": 86.1,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -12994,19 +13306,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 78.7,
-          "observedIndicators": 2,
+          "score": 77.2,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.237,
+          "confidence": 0.357,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 0.75,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.778,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 78.7,
+          "blendedScore": 77.2,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -13022,6 +13334,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 89.74,
+              "year": 2022,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -13111,19 +13435,19 @@
           ]
         },
         "agency": {
-          "score": 50.5,
-          "observedIndicators": 3,
+          "score": 37.8,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.75,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 50.5,
+          "blendedScore": 37.8,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -13430,19 +13754,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 58,
-          "observedIndicators": 2,
+          "score": 40.3,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.121,
+          "confidence": 0.244,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 0.383,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.533,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 58,
+          "blendedScore": 40.3,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -13458,6 +13782,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 53.8,
+              "year": 2024,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -13547,19 +13883,19 @@
           ]
         },
         "agency": {
-          "score": 81.4,
-          "observedIndicators": 3,
+          "score": 72.5,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.75,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 81.4,
+          "blendedScore": 72.5,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -13880,19 +14216,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 43.8,
-          "observedIndicators": 2,
+          "score": 30.3,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.29,
+          "confidence": 0.408,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 0.917,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.889,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 43.8,
+          "blendedScore": 30.3,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -13937,6 +14273,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": null,
+              "year": null,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": null,
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -14026,19 +14374,19 @@
           ]
         },
         "agency": {
-          "score": 44.2,
-          "observedIndicators": 3,
+          "score": 52.4,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.75,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 44.2,
+          "blendedScore": 52.4,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -14345,19 +14693,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 54.2,
-          "observedIndicators": 2,
+          "score": 69,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.174,
+          "confidence": 0.295,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 0.55,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.644,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 54.2,
+          "blendedScore": 69,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -14373,6 +14721,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 82.39,
+              "year": 2024,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -14462,19 +14822,19 @@
           ]
         },
         "agency": {
-          "score": 49.7,
-          "observedIndicators": 3,
+          "score": 61.1,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.75,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 49.7,
+          "blendedScore": 61.1,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -14781,20 +15141,20 @@
           ]
         },
         "shared_purpose": {
-          "score": null,
-          "observedIndicators": 1,
-          "belowCoverageFloor": true,
-          "confidence": 0.132,
+          "score": 42.4,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
+          "confidence": 0.25,
           "confidenceParts": {
-            "coverage": 0.167,
+            "coverage": 0.333,
             "recency": 0.833,
-            "sourceQuality": 0.95
+            "sourceQuality": 0.9
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": null,
-          "blendedFrom": "none",
+          "blendedScore": 42.4,
+          "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
           "checks": [
@@ -14809,6 +15169,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 95.6,
+              "year": 2021,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -14898,19 +15270,19 @@
           ]
         },
         "agency": {
-          "score": 27.8,
-          "observedIndicators": 3,
+          "score": 28.8,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.75,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 27.8,
+          "blendedScore": 28.8,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -15216,19 +15588,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 51.9,
-          "observedIndicators": 2,
+          "score": 54.9,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.303,
+          "confidence": 0.42,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 0.958,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.917,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 51.9,
+          "blendedScore": 54.9,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -15287,6 +15659,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 83.83,
+              "year": 2022,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -15376,19 +15760,19 @@
           ]
         },
         "agency": {
-          "score": 49.7,
-          "observedIndicators": 3,
+          "score": 50.9,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.75,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 49.7,
+          "blendedScore": 50.9,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -15709,19 +16093,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 45.9,
-          "observedIndicators": 2,
+          "score": 57.4,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.277,
+          "confidence": 0.395,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 0.875,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.861,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 45.9,
+          "blendedScore": 57.4,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -15780,6 +16164,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 73.89,
+              "year": 2022,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -15869,19 +16265,19 @@
           ]
         },
         "agency": {
-          "score": 61,
-          "observedIndicators": 3,
+          "score": 46.9,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.75,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 61,
+          "blendedScore": 46.9,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -16202,19 +16598,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 63.8,
-          "observedIndicators": 2,
+          "score": 69.5,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.316,
+          "confidence": 0.433,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 1,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.944,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 63.8,
+          "blendedScore": 69.5,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -16273,6 +16669,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 75.71,
+              "year": 2023,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -16362,19 +16770,19 @@
           ]
         },
         "agency": {
-          "score": 57,
-          "observedIndicators": 3,
+          "score": 50.7,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.75,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 57,
+          "blendedScore": 50.7,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -16681,19 +17089,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 50.4,
-          "observedIndicators": 2,
+          "score": 37.8,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.303,
+          "confidence": 0.42,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 0.958,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.917,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 50.4,
+          "blendedScore": 37.8,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -16738,6 +17146,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 87.04,
+              "year": 2023,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -17231,6 +17651,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 70.63,
+              "year": 2022,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -17667,6 +18099,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 34.81,
+              "year": 2019,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -17756,19 +18200,19 @@
           ]
         },
         "agency": {
-          "score": 55.5,
-          "observedIndicators": 3,
+          "score": 50.7,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.38,
+          "confidence": 0.524,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.667,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.708,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 55.5,
+          "blendedScore": 50.7,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -18060,20 +18504,20 @@
           ]
         },
         "shared_purpose": {
-          "score": null,
-          "observedIndicators": 1,
-          "belowCoverageFloor": true,
-          "confidence": 0.132,
+          "score": 64.9,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
+          "confidence": 0.25,
           "confidenceParts": {
-            "coverage": 0.167,
+            "coverage": 0.333,
             "recency": 0.833,
-            "sourceQuality": 0.95
+            "sourceQuality": 0.9
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": null,
-          "blendedFrom": "none",
+          "blendedScore": 64.9,
+          "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
           "checks": [
@@ -18088,6 +18532,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 26.71,
+              "year": 2023,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -18177,19 +18633,19 @@
           ]
         },
         "agency": {
-          "score": 46.9,
-          "observedIndicators": 3,
+          "score": 46.5,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.75,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 46.9,
+          "blendedScore": 46.5,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -18481,19 +18937,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 52.7,
-          "observedIndicators": 2,
+          "score": 68.5,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.277,
+          "confidence": 0.395,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 0.875,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.861,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 52.7,
+          "blendedScore": 68.5,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -18524,6 +18980,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 64.77,
+              "year": 2022,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -18975,6 +19443,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 98.2,
+              "year": 2024,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -19064,19 +19544,19 @@
           ]
         },
         "agency": {
-          "score": 32.3,
-          "observedIndicators": 3,
+          "score": 41.3,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.75,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 32.3,
+          "blendedScore": 41.3,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -19368,19 +19848,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 45.5,
-          "observedIndicators": 2,
+          "score": 46.6,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.277,
+          "confidence": 0.395,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 0.875,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.861,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 45.5,
+          "blendedScore": 46.6,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -19439,6 +19919,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 93.64,
+              "year": 2021,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -19528,19 +20020,19 @@
           ]
         },
         "agency": {
-          "score": 25.6,
-          "observedIndicators": 3,
+          "score": 36.3,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.396,
+          "confidence": 0.539,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.694,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.729,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 25.6,
+          "blendedScore": 36.3,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -19847,19 +20339,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 54.1,
-          "observedIndicators": 2,
+          "score": 49.5,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.174,
+          "confidence": 0.295,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 0.55,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.644,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 54.1,
+          "blendedScore": 49.5,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -19875,6 +20367,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 88.42,
+              "year": 2020,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -20340,6 +20844,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 62.86,
+              "year": 2023,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -20429,19 +20945,19 @@
           ]
         },
         "agency": {
-          "score": 23.7,
-          "observedIndicators": 3,
+          "score": 36,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.75,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 23.7,
+          "blendedScore": 36,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -20762,19 +21278,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 38.1,
-          "observedIndicators": 2,
+          "score": 39.9,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.29,
+          "confidence": 0.408,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 0.917,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.889,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 38.1,
+          "blendedScore": 39.9,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -20805,6 +21321,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 82.93,
+              "year": 2023,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -20894,19 +21422,19 @@
           ]
         },
         "agency": {
-          "score": 0,
-          "observedIndicators": 2,
+          "score": 25.8,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.222,
+          "confidence": 0.367,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.583,
-            "sourceQuality": 0.95
+            "coverage": 0.6,
+            "recency": 0.667,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 0,
+          "blendedScore": 25.8,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -21182,20 +21710,20 @@
           ]
         },
         "shared_purpose": {
-          "score": null,
-          "observedIndicators": 1,
-          "belowCoverageFloor": true,
-          "confidence": 0.016,
+          "score": 21.7,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
+          "confidence": 0.14,
           "confidenceParts": {
-            "coverage": 0.167,
-            "recency": 0.1,
-            "sourceQuality": 0.95
+            "coverage": 0.333,
+            "recency": 0.467,
+            "sourceQuality": 0.9
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": null,
-          "blendedFrom": "none",
+          "blendedScore": 21.7,
+          "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
           "checks": [
@@ -21210,6 +21738,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 59,
+              "year": 2024,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -21661,6 +22201,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 77.65,
+              "year": 2024,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -21750,19 +22302,19 @@
           ]
         },
         "agency": {
-          "score": 52.5,
-          "observedIndicators": 3,
+          "score": 59.8,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.75,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 52.5,
+          "blendedScore": 59.8,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -22054,19 +22606,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 36.6,
-          "observedIndicators": 2,
+          "score": 49.5,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.303,
+          "confidence": 0.42,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 0.958,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.917,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 36.6,
+          "blendedScore": 49.5,
           "blendedFrom": "indicators",
           "momentum": [
             {
@@ -22111,6 +22663,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 59.45,
+              "year": 2023,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -22532,6 +23096,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 69.09,
+              "year": 2021,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -22997,6 +23573,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 52.6,
+              "year": 2024,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -23086,19 +23674,19 @@
           ]
         },
         "agency": {
-          "score": 74.7,
-          "observedIndicators": 2,
+          "score": 80.1,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.222,
+          "confidence": 0.367,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.583,
-            "sourceQuality": 0.95
+            "coverage": 0.6,
+            "recency": 0.667,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 74.7,
+          "blendedScore": 80.1,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -23390,19 +23978,19 @@
           ]
         },
         "shared_purpose": {
-          "score": 50.8,
-          "observedIndicators": 2,
+          "score": 50.7,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.184,
+          "confidence": 0.306,
           "confidenceParts": {
-            "coverage": 0.333,
-            "recency": 0.583,
-            "sourceQuality": 0.95
+            "coverage": 0.5,
+            "recency": 0.667,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 50.8,
+          "blendedScore": 50.7,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -23418,6 +24006,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 66.24,
+              "year": 2021,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -23911,6 +24511,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 54.37,
+              "year": 2024,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -24345,6 +24957,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 75.87,
+              "year": 2023,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []
@@ -24765,6 +25389,18 @@
               "source": "V-Dem (v2cacamps_osp)",
               "sourceTier": "expert_panel",
               "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            },
+            {
+              "checkId": "voter_turnout",
+              "name": "Voter turnout",
+              "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+              "unit": "% of registered voters",
+              "direction": "higher_better",
+              "value": 18.11,
+              "year": 2016,
+              "source": "V-Dem (v2eltrnout)",
+              "sourceTier": "expert_panel",
+              "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
             }
           ],
           "conditions": []

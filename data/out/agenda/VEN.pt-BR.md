@@ -9,14 +9,14 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Dimensão | Nota | Confiança | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 0,9 | 0,46 (utilizável) | -5,5 em 10 anos, sobre 2 indicadores |
-| Agência | 0 | 0,22 (muito fraca) | sem base de tendência |
+| Agência | 25,8 | 0,37 (fraca) | sem base de tendência |
 | Coordenação | 16,5 | 0,22 (muito fraca) | sem base de tendência |
 | Confiança | 47 | 0,23 (muito fraca) | sem base de tendência |
 | Aprendizagem | 31,6 | 0,23 (muito fraca) | sem base de tendência |
 | Experimentação | 5,2 | 0,1 (muito fraca) | sem base de tendência |
 | Adaptação | 39,4 | 0,59 (utilizável) | +2,6 em 10 anos, sobre 3 indicadores, 1 truncados na borda da régua |
 | Construção | 0 | 0,27 (fraca) | sem base de tendência |
-| Propósito compartilhado | sem nota | 0,02 (muito fraca) | sem base de tendência |
+| Propósito compartilhado | 21,7 | 0,14 (muito fraca) | sem base de tendência |
 
 ## Dimensões para elevar
 
@@ -44,20 +44,20 @@ Com que eficácia o sistema responde quando as circunstâncias mudam?
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Propósito compartilhado: confiança 0,02, muito fraca
-
-Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
-
-- Baseada em um indicador observado.
-- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
-- Bases rejeitadas: Voz e responsabilização.
-
 ### Experimentação: confiança 0,1, muito fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
+
+### Propósito compartilhado: confiança 0,14, muito fraca
+
+Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
+
+- Baseada em 2 indicadores observados.
+- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
+- Bases rejeitadas: Voz e responsabilização.
 
 ### Coordenação: confiança 0,22, muito fraca
 
@@ -66,13 +66,6 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
-
-### Agência: confiança 0,22, muito fraca
-
-Quão capazes são pessoas e organizações de transformar uma intenção em ação?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
 
 ### Confiança: confiança 0,23, muito fraca
 
@@ -97,6 +90,13 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística.
 
+### Agência: confiança 0,37, fraca
+
+Quão capazes são pessoas e organizações de transformar uma intenção em ação?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Habilidades digitais de adultos.
+
 ## O que a Venezuela tem para trabalhar
 
 Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na nota, na confiança nem na tendência. Lidas contra a nota, mostram se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.
@@ -115,14 +115,13 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 ## Agenda de medição
 
-22 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+20 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
 | Antecipação | Capacidade governamental de prospecção | Existência, mandato e continuidade de uma função nacional de prospecção estratégica. |
 | Antecipação | Parcela de pesquisa de longo prazo | Parcela do dispêndio bruto em P&D classificada como pesquisa básica. |
 | Agência | Habilidades digitais de adultos | Parcela de adultos capazes de executar tarefas digitais padrão. |
-| Agência | Percepção de controle sobre a própria vida | Liberdade de escolha e controle sobre o rumo da própria vida, autodeclarados. |
 | Coordenação | Colaboração universidade-empresa | Intensidade da colaboração de pesquisa entre universidades e empresas. |
 | Coordenação | Colaboração público-privada | Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
@@ -140,7 +139,6 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Propósito compartilhado | Sentimento de pertencimento nacional | Orgulho e identificação com a comunidade nacional, autodeclarados. |
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
-| Propósito compartilhado | Participação cívica | Participação ativa em associações, sindicatos, partidos e organizações comunitárias. |
 
 ## O que os indicadores não veem sobre a Venezuela
 

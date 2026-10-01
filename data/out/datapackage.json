@@ -3,8 +3,8 @@
   "name": "national-capability-benchmark",
   "title": "NCB, the National Capability Benchmark",
   "description": "A prototype that measures what a country can do, separately from how rich it is. Nine capability dimensions scored from public data, each with a separate confidence number.",
-  "version": "7.1.0",
-  "created": "2026-10-01T09:54:05.645Z",
+  "version": "7.2.0",
+  "created": "2026-10-01T10:43:48.911Z",
   "homepage": "https://github.com/envisioning/national-capability-benchmark",
   "licenses": [
     {
@@ -19,6 +19,10 @@
       "path": "https://data.worldbank.org"
     },
     {
+      "title": "Joint EVS/WVS",
+      "path": "https://www.worldvaluessurvey.org/WVSEVSjoint2017.jsp"
+    },
+    {
       "title": "Global Entrepreneurship Monitor",
       "path": "https://www.gemconsortium.org"
     },
@@ -29,10 +33,6 @@
     {
       "title": "ILOSTAT",
       "path": "https://sdmx.ilo.org/rest/dataflow/ILO/DF_UNE_TUNE_SEX_AGE_DUR_NB/1.0"
-    },
-    {
-      "title": "Joint EVS/WVS",
-      "path": "https://www.worldvaluessurvey.org/WVSEVSjoint2017.jsp"
     },
     {
       "title": "OpenAlex",
@@ -129,6 +129,7 @@
         "indicators/new_business_density.json",
         "indicators/business_start_days.json",
         "indicators/business_start_procedures.json",
+        "indicators/perceived_control.json",
         "indicators/time_to_export.json",
         "indicators/budget_execution_fidelity.json",
         "indicators/civil_society_strength.json",
@@ -154,6 +155,7 @@
         "indicators/economic_complexity.json",
         "indicators/tax_revenue_gdp.json",
         "indicators/income_inequality.json",
+        "indicators/civic_participation.json",
         "indicators/rd_expenditure_gdp.json",
         "indicators/researchers_per_million.json",
         "indicators/secure_internet_servers.json",

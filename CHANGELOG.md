@@ -9,6 +9,42 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.18.0 — 2026-10-01
+
+- **Brazil's layer maps Adaptability.** `/brasil/adaptacao` reads Brazil's
+  Adaptability in Portuguese: the score and its confidence, the five rows it
+  rests on with their published values, the broadband condition beside it with
+  its correlation with income and with the score, and Brazil's place among its
+  10 income peers on the flag field. Every sentence compares a value with a
+  peer median, and the page recommends nothing. It is computed by
+  `buildCapabilityMap` from the published files and regenerates with every
+  release. The field chart and the conditions panel take Portuguese words, and
+  the glossary defines capability map and income peers. See D130.
+
+## Dataset 7.2.0 — 2026-10-01
+
+- **`diagnostics.json` gains `income`.** The latest GDP per capita (PPP,
+  constant international dollars) for each country, with its year, from the
+  series the wealth tests already read. It is context and enters no score. It
+  is published so the capability map's income peers are computed from the data
+  (D130).
+- **Agency scores perceived control (D127).** The Joint EVS/WVS mean answer
+  to how much freedom of choice and control people feel over their lives, 1 to
+  10, for 37 countries. It is a perception and labelled as one. Agency's mean
+  confidence rises from 0.38 to 0.48 and its correlation with income falls
+  from 0.64 to 0.58.
+- **Shared purpose scores charitable membership (D128).** The share
+  mentioning membership of a humanitarian or charitable organisation, the
+  same release and 37 countries. Shared purpose now scores 51 countries
+  instead of 47, mean confidence 0.26 to 0.34, and its correlation with
+  income falls from 0.46 to 0.20.
+- **Voter turnout is published beside Shared purpose as a check (D129).**
+  V-Dem's turnout of registered voters at each country's latest election, 52
+  of 53. Compulsory voting moves it by about 17 points and regime type barely
+  at all, and it reads the democratic channel A5 retired, so it is not scored.
+- **Confidence tracks income less.** Mean confidence against log GDP per
+  capita falls from 0.33 to 0.29.
+
 ## Dataset 7.1.0 — 2026-10-01
 
 - **Trust scores bribery incidence (D123).** The share of firms asked for a

@@ -9,14 +9,14 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 45.8 | 0.46 (usable) | +7.8 over 10 years using 2 indicators |
-| Agency | 51.6 | 0.41 (thin) | no trend |
+| Agency | 55.8 | 0.56 (usable) | no trend |
 | Coordination | 86.4 | 0.37 (thin) | no trend |
 | Trust | 41.4 | 0.37 (thin) | no trend |
 | Learning | 28 | 0.54 (usable) | no trend |
 | Experimentation | 30 | 0.39 (thin) | +6.9 over 10 years using 2 indicators |
 | Adaptability | 65.4 | 0.68 (good) | +13.1 over 10 years using 3 indicators |
 | Building | 28.2 | 0.57 (usable) | -2 over 10 years using 3 indicators |
-| Shared Purpose | 34.9 | 0.32 (thin) | +8.6 over 10 years using 2 indicators |
+| Shared Purpose | 30.7 | 0.43 (thin) | +8.6 over 10 years using 2 indicators |
 
 ## What to raise
 
@@ -54,14 +54,6 @@ How capable is the country of identifying and preparing for emerging change?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Shared Purpose: confidence 0.32, thin
-
-To what extent can people imagine themselves as participants in a common project?
-
-- Uses 2 observed indicators.
-- Missing indicators: Sense of national belonging, Volunteering, Political polarisation, Civic participation.
-- Rejected datasets: Voice and accountability.
-
 ### Trust: confidence 0.37, thin
 
 How much cooperation is possible beyond immediate personal networks?
@@ -85,18 +77,20 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Uses 4 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
-### Agency: confidence 0.41, thin
+### Shared Purpose: confidence 0.43, thin
 
-How able are individuals and organizations to turn an intention into action?
+To what extent can people imagine themselves as participants in a common project?
 
 - Uses 3 observed indicators.
-- Missing indicators: Adult digital skills, Perceived control over life.
+- Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
+- Rejected datasets: Voice and accountability.
 
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 65.4, confidence good
+- Agency: 55.8, confidence usable
 
 ## What Brazil has to work with
 
@@ -117,14 +111,13 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 ## Missing data
 
-22 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+20 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
 | Anticipation | Government foresight capacity | Existence, mandate and continuity of a national strategic foresight function. |
 | Anticipation | Long-horizon research share | Share of gross R&D expenditure classified as basic research. |
 | Agency | Adult digital skills | Share of adults who can perform standard digital tasks. |
-| Agency | Perceived control over life | Self-reported freedom of choice and control over the course of one’s life. |
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
@@ -142,7 +135,6 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Shared Purpose | Sense of national belonging | Reported pride in and identification with the national community. |
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
-| Shared Purpose | Civic participation | Active membership in associations, unions, parties and community organisations. |
 
 ## What Brazil built that no indicator counts
 

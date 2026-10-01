@@ -1,4 +1,5 @@
-import type { Lang } from '@ncb/core'
+import { PT_BR, fill } from '@ncb/core'
+import type { Dimension, Lang } from '@ncb/core'
 
 /**
  * Country layers.
@@ -16,8 +17,20 @@ import type { Lang } from '@ncb/core'
  * See D69.
  */
 
+/**
+ * A capability map: one capability read for the layer's country, among its
+ * income peers. The id carries the dimension, so a second map is a second
+ * entry and nothing else. See D130.
+ */
+export type MapSectionId = `map.${Dimension}`
+
 /** The kinds of section a layer can hold. */
-export type LayerSectionId = 'agenda' | 'institutions' | 'local' | 'support'
+export type LayerSectionId = 'agenda' | 'institutions' | 'local' | 'support' | MapSectionId
+
+/** The dimension a map section reads, or null for every other section. */
+export function mapSectionDimension(id: LayerSectionId): Dimension | null {
+  return id.startsWith('map.') ? (id.slice(4) as Dimension) : null
+}
 
 export type LayerSection = {
   id: LayerSectionId
@@ -60,6 +73,11 @@ export const COUNTRY_LAYERS: readonly CountryLayer[] = [
     overviewLabel: 'Visão geral',
     sections: [
       { id: 'agenda', label: 'Agenda', slug: 'agenda' },
+      {
+        id: 'map.adaptability',
+        label: fill(PT_BR.capabilityMap.navLabel, { dimension: PT_BR.dimensions.adaptability }),
+        slug: 'adaptacao',
+      },
       { id: 'institutions', label: 'Instituições', slug: 'instituicoes' },
       /* The subnational reading is still an English ground-layer page. The
        * layer links to it until it is written in Portuguese, at which point

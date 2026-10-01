@@ -5891,3 +5891,296 @@ coverage shown to bias the share by country income or region, which would
 make the row read indexing rather than research; or OpenAlex changing the
 percentile's pool or definition, which would need a new adapter version and a
 new entry.
+
+---
+
+## D127 — Perceived control is scored in Agency from the Joint EVS/WVS A173 mean
+
+*Recorded 2026-10-01. Extends D64's adapter under D117 and D118. D125 and D126
+are being written on other branches; this entry and D128 take the next numbers
+after them.*
+
+**Decision.** `perceived_control` (Agency) moves from `gap` to `adapter`. The
+value is the publisher-weighted mean, on the 1 to 10 scale, of A173, "how much
+freedom of choice and control you feel you have over the way your life turns
+out", from the same pinned Joint EVS/WVS 2017-2022 v5.0.0 results PDF as
+`interpersonal_trust`. Class `P`, `higher_better`, tier `academic_survey`,
+unit `mean 1-10`, publisher Joint EVS/WVS. The adapter now reads an item table,
+`JOINT_EVS_WVS_ITEMS`, the way `vdem.ts` reads variables; country mapping and
+D64's hold rule are shared, so Germany, the United Kingdom and the Netherlands
+are held. The A165 output is unchanged: the refetch restated no trust value or
+note. `pnpm bench evs fetch` runs the adapter, with `trust` kept as an alias.
+The memo is `docs/research/agency/EVS-WVS-ITEMS.md`.
+
+The statistic is the published mean because it is what the table prints. The
+table gives the full distribution, the valid-answer base, the mean and the
+standard deviation, and no top-box share. A share answering 7 to 10 would have
+to be summed from category percentages whose denominator includes don't know
+and no answer, which is a number the publisher does not publish.
+
+**Why.** Construct first, written in the memo before values were read in.
+Agency asks how able people are to turn an intention into action. A173 does
+not observe action; it observes the felt capacity to act, whether people
+believe what they decide changes what happens to them. That is the half of the
+question no current row reaches: Agency rested on new business density and two
+Doing Business rows frozen at 2019 (A14). It is a perception and is labelled
+as one, as `interpersonal_trust` is.
+
+Reported as findings, not tests (D118), from a local run on dataset 7.1.0: the
+row covers 37 of 53 countries, fieldwork 2017 (eight countries, the United
+States among them) to 2023 (India), every value stamped with the release year
+2022. Brazil is 7.5 (16th of 37, fieldwork 2018). The value correlates with log
+GDP per capita at r = -0.154 (n 36); its `wealthAttribution` delta is -0.059.
+Agency moves from r = 0.638 to 0.579 against log GDP, its mean confidence from
+0.383 to 0.483, which crosses O1, and it stays scored in 52 countries. The
+United States, Nicaragua and Venezuela, which were Agency on the two frozen
+rows alone, now carry a third. The guardrail, mean confidence against log GDP,
+falls from 0.333 to 0.286 (n 51), together with D128. No redundant pair forms;
+the row correlates with interpersonal trust at -0.14.
+
+**Cost.** Response style on a 10-point scale differs across cultures, so part
+of the ordering is how samples use a scale: Mexico, Uruguay and Colombia sit at
+8.1 to 8.2, Japan at 6.0 on a mail survey. A closed or electoral autocracy can
+read high, and two do: Vietnam is third at 8.1 and Nicaragua fifth at 8.0,
+surveyed in 2019-20 after the 2018 crackdown. That is the A13 pattern in a
+perception, recorded as artefact A15 and not corrected. The mean is printed to
+one decimal over a spread of 6.0 to 8.2, so ties are common. Fieldwork years
+differ by up to six years and the stamped year hides it; the note carries each
+country's survey year. Sixteen countries have no row, Costa Rica, Ireland,
+Israel and South Africa among them.
+
+**Overturned by.** Evidence that the cross-country ordering is mostly response
+style, for example anchoring-vignette or scale-use studies that reorder the
+frame when applied, which would make the row a measure of how samples answer
+10-point questions; a behavioural Agency row with frame coverage that
+contradicts it, which would make it a check under D60; or a release whose
+pooled microdata let the three held countries in, which needs a new entry for
+the pooling rule.
+
+---
+
+## D128 — Civic participation is scored in Shared purpose from charitable membership (A080_01)
+
+*Recorded 2026-10-01. Extends D64's adapter under D117 and D118, beside D127.*
+
+**Decision.** `civic_participation` (Shared purpose) moves from `gap` to
+`adapter`. The value is the publisher-weighted share of respondents who mention
+membership of a humanitarian or charitable organisation, A080_01, in the same
+pinned results PDF, read by the same item table and hold rule as D127. Class
+`C`, `higher_better`, unit `% mentioning`. The definition narrows from "active
+membership in associations, unions, parties and community organisations" to
+what the row measures. Religious membership (A065) is left out because it
+reads religiosity; an "any non-religious membership" count would match the old
+definition better, but the aggregate table does not publish it and the adapter
+does not use microdata.
+
+The joint file harmonises two questions. EVS 2017 shows a list and asks which
+organisations the respondent belongs to; WVS 7 reads each type aloud and asks
+whether the respondent is an active member, an inactive member or not a
+member. The codebook recodes both WVS member answers to 1, so the stored
+"Mentioned" column is belongs (EVS) or active or inactive member (WVS), over
+all respondents including don't know and no answer.
+
+**Why.** Construct first, written in the memo before values were read in.
+Shared purpose asks whether people can imagine themselves as participants in
+a common project. Joining an organisation whose purpose is to act for people
+outside one's own network is a reported behaviour, and of the ten membership
+items it is the closest to acting for strangers; unions and professional
+bodies read interest groups, sports and culture read leisure, and parties are
+the democratic channel A5 retired. Shared purpose had two scored rows and was
+the thinnest dimension after Trust.
+
+Reported as findings (D118), same run: 37 of 53 countries, fieldwork 2017 to
+2023. Brazil is 9.7% (25th of 37). The value correlates with log GDP per
+capita at r = -0.331 (n 36); the `wealthAttribution` delta is -0.172. Shared
+purpose moves from r = 0.457 (n 47) to 0.202 (n 50) against log GDP, its mean
+confidence from 0.260 to 0.343, still under O1, and it is scored in 51
+countries instead of 47: Nigeria, Vietnam, Singapore and Venezuela clear the
+coverage floor. Brazil's Shared purpose moves from 34.9 to 30.7. No redundant
+pair forms. The A13 fear did not materialise: China reads 2.7% and Vietnam
+9.4%, so state mass organisations, which are unions and youth and women's
+federations, do not inflate a charitable item. Cuba is not in the release.
+
+**Cost.** Question format. The eight EVS countries in the frame average 9.9%
+and the 29 WVS countries 19.4%; among the ten countries surveyed by both
+programmes the WVS share is higher in eight, by a median 1.9 points (Great
+Britain +16.0, Czechia -5.0), with fieldwork years also differing inside the
+pairs. Inside the EVS group the share tracks income at 0.83; across the frame
+it runs against it. Part of the spread is the format, and a reader should
+check that before reading the negative income correlation as evidence for
+the claim. Estonia's 1.5% is the floor and the value most exposed to it; Kenya
+(38.4%) and Indonesia (37.9%) top the row with inactive members counted.
+Membership is not activity. One item is narrower than the construct. The row
+is artefact A15 with D127.
+
+**Overturned by.** Microdata showing that the EVS-WVS difference holds within
+countries after fieldwork year is controlled, at a size that reorders the
+frame, which would hold the row until a format adjustment is documented; a
+harmonised "any non-religious membership" or volunteering series with frame
+coverage, which would replace the single item; or evidence that charitable
+membership in some countries is a condition of employment or state
+programmes, which would make it the A13 case after all.
+
+---
+
+## D129 — Voter turnout is published as a behavioural check beside Shared Purpose, not scored
+
+*Recorded 2026-10-01. Extends D60, D118 and D121. Answers Q8 of the O1 triage
+sweep.*
+
+**Decision.** V-Dem's election turnout is published beside Shared Purpose as
+a behavioural check under D60 and enters no score. The check is
+`voter_turnout` in `checks.ts`, read from `v2eltrnout` in the Full+Others
+archive the V-Dem adapter already pins (v15, 2025-03-04, CC BY-SA 4.0). The
+codebook (3.1.4.3) defines it as the percentage of all *registered* voters who
+cast a vote in the national election according to official results; it is not
+the voting-age-population reading, which is `v2elvaptrn`. Where executive and
+legislative elections fall on the same day V-Dem codes the executive turnout,
+and the country-year takes the maximum across that year's elections. Unit
+`% of registered voters`, direction `higher_better`, tier `expert_panel`. It
+covers 52 of 53 countries; China holds no national election V-Dem codes.
+
+V-Dem codes election variables in election years only, so the adapter's
+single-year design would leave most of the frame blank at 2024. Each entry in
+the adapter's variable table now names its year rule. `release_year` keeps the
+old behaviour for civil-society strength and polarization. `latest_election`
+reads each benchmark country's newest row up to 2024 that carries a value,
+emits it with that row's year, and never reaches back to an older election when
+the newest one is out of scale. Election years run 2016 (Haiti) to 2024: 18
+countries at 2024, 15 at 2023, 9 at 2022, 7 at 2021, one each at 2020, 2019
+(United Arab Emirates) and 2016. The observation note carries `v2elcomvot`
+(compulsory voting, codebook 3.1.2.3) and `v2x_regime` (Regimes of the World)
+for the same country-year, with their codebook labels, as context and never as
+values. `CheckDef.pinned` gains `years`, `only` by default or `latest_up_to`,
+and `/sources` prints "in each country's latest year with a value, up to 2024"
+for this check instead of "for 2024".
+
+No registry gap is added. Polarization shares its id with a declared gap
+because that gap names a measurement Shared Purpose still wants; turnout is not
+such a measurement, so the check stands alone. No scoring rule is added: the
+triage sweep's proposed rule (score where `v2x_regime` is 2 or 3 and
+`v2elcomvot` is 0 or 1) is recorded in the memo and not wired.
+
+**Why.** D118 chooses rows for what they measure. Turnout is a revealed act of
+taking part in a common decision, the most direct behaviour the benchmark can
+see for Shared Purpose, and that is why it is published. It is not scored
+because three things move it that are not whether people see themselves in a
+common project, and the number cannot tell them apart. It reads the democratic
+channel, which A5 retired voice and accountability for: a country without
+competitive elections reads low or high for reasons of regime. Compulsory
+voting turns it into a reading of the law: Brazil enforces it (code 2,
+sanctions enforced at minimal cost; 79.42% in 2022), and the eight countries
+that enforce sanctions average 82.6% against 65.4% for the 36 where voting is
+voluntary. And autocracies manage it, the A13 trap from the other side:
+Vietnam reads 95.6, Rwanda 98.2, Ethiopia 93.6 and Singapore 93.6, which is
+mobilisation, not participation. By regime at the election year the means are
+flat, 68.8 closed autocracies (n 3), 70.9 electoral autocracies (16), 67.5
+electoral democracies (15) and 69.6 liberal democracies (18): the series does
+not separate the regimes it should, which is the construct failure in one line.
+The sweep's rule would leave about 27 scorable countries and exclude Brazil,
+the benchmark's subject, so a scored row is declined.
+
+**Cost.** Shared Purpose stays at two rows, 47 published countries, mean
+confidence 0.260. No score moves: all 477 country-dimension cells, their
+confidences and every composite are identical with the check present; the only
+change in `index.json` is the new check row. Reported as a finding, not a
+reason: `behaviouralChecks` puts the published value at r = 0.053 against log
+GDP per capita (n 52) and 0.007 against the Shared Purpose score (n 46).
+Turnout is not a wealth proxy; it fails on construct alone, as polarization
+did. The latest-election rule mixes vintages up to eight years apart (Haiti
+2016), and a country-year maximum mixes presidential and parliamentary
+elections across countries; the year shown on every row is the only guard. The
+United Arab Emirates' 34.8% (2019) is turnout of a hand-picked electoral
+college, not of citizens. The adapter now fully parses every benchmark row up
+to 2024 instead of only the release year, which costs a few seconds. The
+dataset version does not move: no scored row, field or country changes.
+
+**Overturned by.** A scoring rule conditioned on regime and compulsion that
+the project adopts on construct, which would move the conditioned subset to
+`indicators.ts` as a row and leave the rest as this check; a turnout source
+that measures participation outside the electoral channel; a V-Dem release that
+changes `v2eltrnout`'s denominator or drops coverage below half the frame; or
+evidence that readers take the check for a score, which under D60 would retire
+it.
+
+---
+
+## D130 — Brazil's layer publishes a computed map of Adaptability among its income peers
+
+**Decision.** The Brazil layer gains `/brasil/adaptacao`, a Portuguese page
+that reads one capability for one country as a map: the score and its
+confidence as two numbers, each capability row the score rests on (value as
+published, year, position on the 0 to 100 frame, source), each condition
+beside it with its value, rank and the two correlations D122 already
+publishes (with log GDP per capita and with the dimension's score), and the
+country's place among its income peers. `buildCapabilityMap` in
+`packages/core/src/pipeline/capability-map.ts` computes all of it from the
+published files and nothing else; the page renders it through the lexicon
+(`Lexicon.capabilityMap`, English and Portuguese). Only Adaptability is
+published. The function takes the dimension as a parameter, the layer section
+id is `map.<dimension>`, and `MAP_DIMENSIONS` lists what is published, so a
+second capability is a registry line, a slug and a decision entry. The slug is
+`adaptacao` because the lexicon names the dimension Adaptação.
+
+The peer rule: the 10 countries nearest the subject in log10 GDP per capita
+(`NY.GDP.PCAP.PP.KD`, latest published year per country), ties broken by
+iso3, the subject never its own peer, a country with no income never a peer.
+The set is the same for every dimension. A peer median is taken over the
+peers that have the value; a peer with no score is listed and left out of the
+score median. Above, below or level is decided at the precision the value is
+printed at (one decimal for a 0 to 100 position, three for a condition's
+published value). For the set to be computed from published data, income has
+to be published: `diagnostics.json` gains `income`, the latest GDP per capita
+per country with its year, rounded to the dollar. That is a field added, so
+the dataset moves to 7.2.0 and no published number changes.
+
+The no-prescription rule: every sentence the page computes compares one value
+with one median, or states a correlation. No string in `capabilityMap` may say
+what a country should do, rank it among its peers, or explain why a gap
+exists. The reading lists rows above, below and level with the peer median and
+conditions the country has more or less of, by id, through
+`readCapabilityMap`; the words are the lexicon's. Splitting the agenda stays
+`splitAgenda`'s job (D39); this page does not sort anything into raise or
+hold, and the FlagField it draws is the one chart (D67), fed only the peers
+and the subject.
+
+On dataset 7.2.0 Brazil's peers are Colombia, Mexico, Thailand, Paraguay, the
+Dominican Republic, Peru, China, Vietnam, Indonesia and Argentina, at US$
+15,091 to 27,847 against Brazil's 20,025 (2025). Brazil's Adaptability is
+65.4 (confidence 0.68, good) against a peer median of 70.3. All five scored
+rows sit below the peer median; export diversification only just (83.0
+against 83.4). Fixed broadband, the one condition, is above it (24.1 against
+16.1 per 100 people) and correlates 0.85 with income and 0.67 with the score.
+
+**Why.** The owner's framing is that the page is the map toward adaptability,
+not a verdict on it. D122 made the map possible by separating what a country
+does from what it has; this page lays the two side by side for the reader the
+layer serves. WHY.md rules out a ranking, a target and policy advice, and
+says a national score is a coarse proxy, so the comparison is a median and
+the limits are on the page: the proxy, the peer rule's blindness to
+everything but income, correlation read across the whole set, and the row
+caveats of D119 and D120 (merchandise concentration is a product mix;
+long-term unemployment passes a gate, and Brazil's comes from PNAD Contínua,
+a household survey). A hand-picked peer list would be the comparison the
+author wanted; a fixed rule on the series the wealth tests already read is
+one a reader can recompute. Ten is enough for a median to mean something and
+few enough that the set stays near in income (a factor of about 1.4 either
+side for Brazil); a ±band was rejected because its count swings with where a
+country sits in the income distribution.
+
+**Cost.** Income is the only thing peers share: size, region, production
+structure and regime are outside the rule, and a GDP revision can swap a
+peer. The page is Brazil-only and Portuguese-only, so the comparison is not
+yet checkable on the ground layer for another country. Level is decided at
+printed precision, so 83.0 against 83.4 reads as below. The row caveats are
+static lexicon text and must be kept in step with D119 and D120 by hand.
+Publishing GDP per capita puts income one click from every score, which the
+project has so far kept inside correlations.
+
+**Overturned by.** A reader or reviewer showing that a sentence on the page is
+read as advice despite the rule, which would cut the reading section back to
+numbers; evidence that the peer set is unstable across releases (more than
+half the peers swapping on a routine re-ingest), which would move the rule to
+a wider set or a band; or a second dimension's map showing the layout does not
+carry it, which would move the page to the ground layer with the layer as one
+reading of it.

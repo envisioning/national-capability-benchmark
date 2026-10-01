@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-01T09:54:05.645Z",
-  "version": "7.1.0",
+  "generatedAt": "2026-10-01T10:43:48.911Z",
+  "version": "7.2.0",
   "country": {
     "country": "Mexico",
     "iso3": "MEX",
@@ -414,19 +414,19 @@
         ]
       },
       "agency": {
-        "score": 53,
-        "observedIndicators": 3,
+        "score": 64.8,
+        "observedIndicators": 4,
         "belowCoverageFloor": false,
-        "confidence": 0.412,
+        "confidence": 0.555,
         "confidenceParts": {
-          "coverage": 0.6,
-          "recency": 0.722,
-          "sourceQuality": 0.95
+          "coverage": 0.8,
+          "recency": 0.75,
+          "sourceQuality": 0.925
         },
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 53,
+        "blendedScore": 64.8,
         "blendedFrom": "indicators",
         "momentum": [],
         "indicators": [
@@ -695,16 +695,23 @@
             "indicatorId": "perceived_control",
             "name": "Perceived control over life",
             "measurementClass": "P",
-            "raw": null,
-            "transformed": null,
-            "normalized": null,
-            "year": null,
-            "source": "World Values Survey",
-            "sourceTier": null,
+            "raw": 8.2,
+            "transformed": 8.2,
+            "normalized": 100,
+            "year": 2022,
+            "source": "Joint EVS/WVS (A173)",
+            "sourceTier": "academic_survey",
             "winsorized": false,
             "outOfFrame": false,
-            "series": [],
-            "status": "gap"
+            "series": [
+              {
+                "year": 2022,
+                "raw": 8.2,
+                "normalized": 100,
+                "tier": "academic_survey"
+              }
+            ],
+            "status": "observed"
           }
         ],
         "checks": [],
@@ -4302,19 +4309,19 @@
         ]
       },
       "shared_purpose": {
-        "score": 47.1,
-        "observedIndicators": 2,
+        "score": 46.9,
+        "observedIndicators": 3,
         "belowCoverageFloor": false,
-        "confidence": 0.316,
+        "confidence": 0.433,
         "confidenceParts": {
-          "coverage": 0.333,
-          "recency": 1,
-          "sourceQuality": 0.95
+          "coverage": 0.5,
+          "recency": 0.944,
+          "sourceQuality": 0.917
         },
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 47.1,
+        "blendedScore": 46.9,
         "blendedFrom": "indicators",
         "momentum": [
           {
@@ -5001,16 +5008,23 @@
             "indicatorId": "civic_participation",
             "name": "Civic participation",
             "measurementClass": "C",
-            "raw": null,
-            "transformed": null,
-            "normalized": null,
-            "year": null,
-            "source": "World Values Survey",
-            "sourceTier": null,
+            "raw": 18.7,
+            "transformed": 18.7,
+            "normalized": 46.6,
+            "year": 2022,
+            "source": "Joint EVS/WVS (A080_01)",
+            "sourceTier": "academic_survey",
             "winsorized": false,
             "outOfFrame": false,
-            "series": [],
-            "status": "gap"
+            "series": [
+              {
+                "year": 2022,
+                "raw": 18.7,
+                "normalized": 46.6,
+                "tier": "academic_survey"
+              }
+            ],
+            "status": "observed"
           }
         ],
         "checks": [
@@ -5025,6 +5039,18 @@
             "source": "V-Dem (v2cacamps_osp)",
             "sourceTier": "expert_panel",
             "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+          },
+          {
+            "checkId": "voter_turnout",
+            "name": "Voter turnout",
+            "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+            "unit": "% of registered voters",
+            "direction": "higher_better",
+            "value": 60.54,
+            "year": 2024,
+            "source": "V-Dem (v2eltrnout)",
+            "sourceTier": "expert_panel",
+            "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
           }
         ],
         "conditions": []
