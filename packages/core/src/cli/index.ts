@@ -35,7 +35,7 @@ import { buildDataPackage, jsonSchemas } from '../pipeline/datapackage.js'
 import { flatTable, scoreAll } from '../pipeline/score.js'
 import { buildAgenda, renderAgenda } from '../pipeline/agenda.js'
 import { assertAgendaHistoryFloor, readAgendaHistoryDiscipline } from '../pipeline/agenda-history.js'
-import { LANGS, LEXICONS } from '../i18n/index.js'
+import { LANGS, LEXICONS, lexiconRenders } from '../i18n/index.js'
 import type { Lang } from '../i18n/index.js'
 import { runDiagnostics } from '../pipeline/diagnostics.js'
 import { buildReport } from '../pipeline/report.js'
@@ -572,18 +572,22 @@ async function agenda(args: Args, countries: CountryResult[]): Promise<void> {
     throw new Error(`Unknown lexicon "${langFlag}". Known: ${LANGS.join(', ')}`)
   }
   const generatedAt = new Date().toISOString()
+  let documents = 0
   for (const iso3 of targets) {
     const institutionNetwork = await loadInstitutionNetwork(iso3)
     const built = buildAgenda(countries, evidence, iso3, generatedAt, institutionNetwork)
     assertAgendaHistoryFloor(iso3, built.ownEvidence.length, discipline)
     await writeOut(agendaFile(iso3), `${JSON.stringify(built, null, 2)}\n`)
-    for (const lang of langs) {
+    /* A lexicon written for some layers renders only their countries: a
+     * document with no page behind it is not published (D69, D134). */
+    for (const lang of langs.filter((l) => lexiconRenders(l, iso3))) {
       const lex = LEXICONS[lang]
       await writeOut(agendaDoc(iso3, lang), renderAgenda(built, lex))
+      documents += 1
     }
   }
   console.log(
-    `agenda      -> ${targets.length} countries x ${langs.length} lexicons -> data/out/agenda`,
+    `agenda      -> ${targets.length} countries, ${documents} documents over ${langs.length} lexicons -> data/out/agenda`,
   )
 }
 

@@ -1,7 +1,7 @@
 import { readdir, readFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
 import { CHANGELOG_DOC, COUNTRIES, DIMENSIONS } from '@ncb/core'
-import type { CountryResult } from '@ncb/core'
+import type { CountryResult, Lang } from '@ncb/core'
 import { DATA_ROOT } from './data'
 
 const AGENDA_DIR = resolve(DATA_ROOT, 'out/agenda')
@@ -9,7 +9,7 @@ const CHANGELOG_PATH = resolve(DATA_ROOT, '..', CHANGELOG_DOC)
 
 export type AgendaFeedEntry = {
   iso3: string
-  lang: 'en' | 'pt-BR'
+  lang: Lang
   title: string
   summary: string
   updated: string
@@ -46,7 +46,7 @@ export async function loadAgendaFeedEntries(): Promise<AgendaFeedEntry[]> {
   const known = new Set<string>(COUNTRIES.map((country) => country.iso3))
   const files = names
     .map((name) => {
-      const match = /^(?<iso3>[A-Z]{3})\.(?<lang>en|pt-BR)\.md$/.exec(name)
+      const match = /^(?<iso3>[A-Z]{3})\.(?<lang>en|pt-BR|es)\.md$/.exec(name)
       const iso3 = match?.groups?.iso3
       const lang = match?.groups?.lang
       if (!iso3 || !lang || !known.has(iso3)) return null
@@ -63,7 +63,7 @@ export async function loadAgendaFeedEntries(): Promise<AgendaFeedEntry[]> {
     files.map(async ({ name, iso3, lang }) => {
       const markdown = await readFile(resolve(AGENDA_DIR, name), 'utf8')
       const heading = markdown.match(/^#\s+(.+)$/m)?.[1]?.trim()
-      const date = markdown.match(/^\*(?:Generated|Gerado)\s+(\d{4}-\d{2}-\d{2})\*$/m)?.[1]
+      const date = markdown.match(/^\*(?:Generated|Gerado|Generado el)\s+(\d{4}-\d{2}-\d{2})\*$/m)?.[1]
       const country = COUNTRIES.find((candidate) => candidate.iso3 === iso3)?.name ?? iso3
       return {
         iso3,

@@ -1,4 +1,4 @@
-import { LANGS } from '@ncb/core'
+import { LANGS, lexiconRenders } from '@ncb/core'
 import type { Lang } from '@ncb/core'
 import { loadInstitutionExplorer } from '@/lib/data'
 
@@ -44,7 +44,7 @@ export async function GET(
         error: 'No institution map for this country and language.',
         iso3: iso3.toUpperCase(),
         lang,
-        available: LANGS,
+        available: LANGS.filter((candidate) => lexiconRenders(candidate, iso3)),
       },
       404,
     )

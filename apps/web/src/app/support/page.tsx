@@ -146,17 +146,18 @@ export default function SupportPage() {
             are published beside the scores they argue with.
           </li>
           <li>
-            {COUNTRY_LAYERS.map((layer) => (
-              <Link
-                key={layer.slug}
-                href={countryLayerHref(layer)}
-                className="underline underline-offset-4"
-              >
-                {layer.label}
-              </Link>
+            {COUNTRY_LAYERS.map((layer, i) => (
+              <span key={layer.slug}>
+                {i === 0 ? null : i === COUNTRY_LAYERS.length - 1 ? ' and ' : ', '}
+                <Link href={countryLayerHref(layer)} className="underline underline-offset-4">
+                  {layer.label}
+                </Link>
+              </span>
             ))}{' '}
-            is the first country layer. Its structure works for any country whose institutions
-            want to build the same thing.
+            {COUNTRY_LAYERS.length === 1
+              ? 'is the first country layer. Its structure works'
+              : 'have country layers, each in its own language. The structure works'}{' '}
+            for any country whose institutions want to build the same thing.
           </li>
         </ul>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed">

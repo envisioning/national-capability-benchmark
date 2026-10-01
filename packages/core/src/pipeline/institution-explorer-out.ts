@@ -1,4 +1,4 @@
-import { LANGS, LEXICONS } from '../i18n/index.js'
+import { LANGS, LEXICONS, lexiconRenders } from '../i18n/index.js'
 import { localizeInstitutionNetwork } from '../i18n/institutions-pt-br.js'
 import type { Lang } from '../i18n/types.js'
 import { COUNTRY_NAMES } from '../model/countries.js'
@@ -26,7 +26,8 @@ export async function writeInstitutionExplorer(
   const written: string[] = []
   let feed: InstitutionExplorerFeed | null = null
 
-  for (const lang of langs) {
+  /* A lexicon written for other countries' layers has no page here. See D134. */
+  for (const lang of langs.filter((l) => lexiconRenders(l, network.iso3))) {
     const localized = localizeInstitutionNetwork(network, lang)
     feed = buildInstitutionExplorer(
       localized,

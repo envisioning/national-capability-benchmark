@@ -1,4 +1,4 @@
-import { LEXICONS, MAP_DIMENSIONS, PT_BR, mapSlug } from '@ncb/core'
+import { ES, LEXICONS, MAP_DIMENSIONS, PT_BR, mapSlug } from '@ncb/core'
 import type { Dimension, Lang } from '@ncb/core'
 
 /**
@@ -13,8 +13,10 @@ import type { Dimension, Lang } from '@ncb/core'
  * spread and the audience of one country.
  *
  * A layer exists only where that country-specific work is done, which is why
- * this registry is short. Brazil is the first and, today, the only one.
- * See D69.
+ * this registry is short. Brazil is the first, with its own pages under
+ * `/brasil`. Mexico, Colombia, Chile and Argentina read in Spanish, and hold
+ * the computed sections only: an overview, the agenda and the capability map,
+ * served by one `[layer]` route from this registry. See D69 and D134.
  */
 
 /**
@@ -60,6 +62,17 @@ export type CountryLayer = {
   sections: readonly LayerSection[]
 }
 
+/**
+ * The Spanish layers: the country and its slug, the country's own name for
+ * itself without accents, so the address types on any keyboard.
+ */
+const SPANISH_LAYERS: readonly (readonly [string, string])[] = [
+  ['MEX', 'mexico'],
+  ['COL', 'colombia'],
+  ['CHL', 'chile'],
+  ['ARG', 'argentina'],
+]
+
 export const COUNTRY_LAYERS: readonly CountryLayer[] = [
   {
     iso3: 'BRA',
@@ -79,7 +92,41 @@ export const COUNTRY_LAYERS: readonly CountryLayer[] = [
       { id: 'support', label: 'Apoie', slug: 'apoie' },
     ],
   },
+  ...SPANISH_LAYERS.map(
+    ([iso3, slug]): CountryLayer => ({
+      iso3,
+      slug,
+      label: ES.countries[iso3] ?? iso3,
+      readingLabel: 'En español',
+      lang: 'es',
+      overviewLabel: 'Resumen',
+      /* The computed sections only. No institution map is published for these
+       * countries (INSTITUTION_MAPS), no subnational reading exists, and the
+       * support page is Brazil's own funding venues, so none is declared. */
+      sections: [
+        { id: 'agenda', label: 'Agenda', slug: 'agenda' },
+        { id: 'map', label: ES.capabilityMap.index.navLabel, slug: 'mapa' },
+      ],
+    }),
+  ),
 ]
+
+/*
+ * A lexicon written for some layers renders documents for those countries
+ * only (`layerCountries`), and the agenda command reads that list, not this
+ * registry. The two must name the same countries, or a page would have no
+ * document behind it, or a document no page. Checked once, at load. See D134.
+ */
+for (const [lang, lex] of Object.entries(LEXICONS)) {
+  if (!lex.layerCountries) continue
+  const declared = COUNTRY_LAYERS.filter((layer) => layer.lang === lang).map((layer) => layer.iso3)
+  const listed = [...lex.layerCountries]
+  if (declared.sort().join() !== listed.sort().join()) {
+    throw new Error(
+      `Lexicon ${lang} renders ${listed.join(', ')} but the layers in it are ${declared.join(', ')}`,
+    )
+  }
+}
 
 /** The layer for one country, or null where the project has not written one. */
 export function countryLayer(iso3: string): CountryLayer | null {

@@ -20,7 +20,7 @@ import type { ConfidenceBandId } from '../pipeline/confidence.js'
  * lookup falls back to the registry's English name when a translation is
  * missing, so a partial lexicon renders complete pages from day one.
  */
-export type Lang = 'en' | 'pt-BR'
+export type Lang = 'en' | 'pt-BR' | 'es'
 
 export type AgendaStrings = {
   /** {country} */
@@ -136,6 +136,15 @@ export type Lexicon = {
   lang: Lang
   /** BCP 47 locale used for number formatting. */
   numberLocale: string
+  /**
+   * The countries this lexicon renders documents for: the countries whose
+   * layer is written in it. The agenda command and the institution feed skip
+   * every other country, so a language never becomes a second copy of the
+   * benchmark on disk either. Absent means every country, which is how
+   * English and, since before D69, Portuguese render. Keep it in step with
+   * `COUNTRY_LAYERS` in the viewer, which checks it at load. See D69 and D134.
+   */
+  layerCountries?: readonly string[]
   dimensions: Record<Dimension, string>
   questions: Record<Dimension, string>
   /** Country display names by iso3. Missing ids fall back to the registry name. */

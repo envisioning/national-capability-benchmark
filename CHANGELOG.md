@@ -9,6 +9,20 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.20.0 — 2026-10-01
+
+- **Mexico, Colombia, Chile and Argentina get Spanish layers.** `/mexico`,
+  `/colombia`, `/chile` and `/argentina` each hold an overview, the agenda and
+  the capability map with its nine pages, in Latin American Spanish, read from
+  the same files as the English pages. The overview is computed: the nine
+  scores with the solidez de la evidencia beside each, links to the map and
+  the agenda, and the known artefacts that bear on the country's capabilities.
+  The layers hold no institutions, states or support pages, because the
+  project has not done that work for these countries. Each country's English
+  profile offers its Spanish reading in the header, the sitemap lists every
+  new page, and the feed carries the four Spanish agendas. Brazil's pages are
+  unchanged. See D134.
+
 ## App 1.19.1 — 2026-10-01
 
 - **Portuguese copy names confidence "solidez da evidência".** In pt-BR,

@@ -1,3 +1,4 @@
+import type { Lang } from '@ncb/core'
 import type { FlagFieldWords } from '@/components/FlagField'
 import type { ConditionListWords } from '@/components/views/ConditionList'
 
@@ -47,6 +48,117 @@ export const PT_CONDITION_WORDS: ConditionListWords = {
     'O que o país tem para trabalhar nesta capacidade. Os valores aparecem como a fonte os publicou e não entram na nota, na solidez da evidência nem na tendência. A posição conta os países com valor, do melhor para o pior.',
   noValue: 'Sem valor para este país. {definition}',
   rank: '{rank}º de {n}',
+}
+
+const ES_COUNT_WORDS = ['ninguno', 'uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve']
+
+/** A count as Spanish prose: spelled out to nine, numerals from 10. */
+export const esCountWord = (n: number): string => ES_COUNT_WORDS[n] ?? String(n)
+
+/** The field chart's words in Spanish, for the Spanish layers. See D134. */
+export const ES_FIELD_WORDS: FlagFieldWords = {
+  score: 'Puntuación',
+  confidence: 'Solidez',
+  trend: 'Tendencia',
+  highest: 'Más alta',
+  lowest: 'Más baja',
+  noScore: 'sin puntuación',
+  clamped: 'Truncado en el borde de la escala, así que la posición real queda más allá.',
+  scoredOf: '{scored} de {total} capacidades con puntuación.',
+  clickFlag: ' Haga clic en la bandera para ver el perfil completo.',
+  aria: '{n} países en una escala de 0 a 100. Mediana {median}.',
+  legendNote: 'La franja sombreada es la mitad central del campo y la línea dentro de ella es la mediana.',
+  solidRing: 'Anillo continuo: evidencia utilizable o buena',
+  brokenRing: 'Anillo interrumpido: evidencia débil, más abierto cuanto menor es la solidez',
+}
+
+/** The conditions panel's words in Spanish, for the Spanish layers. See D134. */
+export const ES_CONDITION_WORDS: ConditionListWords = {
+  label: 'Condiciones, fuera de la puntuación',
+  intro:
+    'Lo que el país tiene para trabajar en esta capacidad. Los valores aparecen como la fuente los publicó y no entran en la puntuación, en la solidez ni en la tendencia. La posición cuenta los países con valor, del mejor al peor.',
+  noValue: 'Sin valor para este país. {definition}',
+  rank: '{rank}.º de {n}',
+}
+
+/**
+ * The words a layer page computes around its lexicon: a count, the field
+ * chart, the conditions panel and the empty state. One entry per layer
+ * language, so a map page reads one record and no `PT_` import. See D134.
+ */
+export type LayerWords = {
+  countWord: (n: number) => string
+  field: FlagFieldWords
+  conditions: ConditionListWords
+  /** Shown where the published files are missing. */
+  noData: string
+  /**
+   * The words of the layer's own overview and agenda pages, where the layer
+   * renders them through the shared `[layer]` route. Brazil's overview is a
+   * page of its own, so Portuguese has none.
+   */
+  pages?: LayerPageWords
+}
+
+export type LayerPageWords = {
+  /** {country} */
+  overviewMetaTitle: string
+  /** {country} */
+  overviewMetaDescription: string
+  /** {country} */
+  overviewTitle: string
+  /** {country} {count} {countries} */
+  overviewIntro: string
+  scoresHeading: string
+  /** {n}: dimensions with a score. */
+  scoresIntro: string
+  readingsHeading: string
+  mapLink: string
+  agendaLink: string
+  artefactsHeading: string
+  /** {country} */
+  artefactsIntro: string
+  artefactsStructural: string
+  /** {country} */
+  agendaMetaTitle: string
+  /** {country} */
+  agendaMetaDescription: string
+}
+
+export const LAYER_WORDS: Partial<Record<Lang, LayerWords>> = {
+  'pt-BR': {
+    countWord: ptCountWord,
+    field: PT_FIELD_WORDS,
+    conditions: PT_CONDITION_WORDS,
+    noData: 'Ainda não há dados gerados. Rode pnpm bench all na raiz do repositório e recarregue.',
+  },
+  es: {
+    countWord: esCountWord,
+    field: ES_FIELD_WORDS,
+    conditions: ES_CONDITION_WORDS,
+    noData: 'Todavía no hay datos generados. Ejecute pnpm bench all en la raíz del repositorio y recargue.',
+    pages: {
+      overviewMetaTitle: '{country}, nueve capacidades, NCB',
+      overviewMetaDescription:
+        'La lectura en español de {country} en el NCB: la puntuación y la solidez de la evidencia de cada capacidad, el mapa entre los países de ingreso más cercano y la agenda calculada.',
+      overviewTitle: '¿Qué puntuación tiene {country} en cada capacidad?',
+      overviewIntro:
+        'Esta lectura de {country} se calcula a partir de los datos publicados y se recalcula en cada versión. Cada capacidad recibe una puntuación de 0 a 100 en una escala que fijan los {countries} países juntos, y al lado lleva la solidez de la evidencia, un segundo número de 0 a 1. Las capacidades no se suman y no hay puntuación general.',
+      scoresHeading: 'Las nueve capacidades siguen el orden del modelo',
+      scoresIntro:
+        '{n} de las nueve tienen puntuación en esta versión. Cada nombre abre el mapa de esa capacidad.',
+      readingsHeading: '¿Dónde seguir leyendo?',
+      mapLink: 'El mapa de capacidades, frente a la mediana de los países de ingreso más cercano',
+      agendaLink: 'La agenda de capacidades, con fuentes, vacíos y entregas documentadas',
+      artefactsHeading: '¿Qué artefactos conocidos tocan estas puntuaciones?',
+      artefactsIntro:
+        'Un artefacto conocido es un lugar donde el modelo produce un número equivocado sobre el mundo. Estos son los que tocan las capacidades de {country}, con la página de límites en inglés.',
+      artefactsStructural: 'Valen para toda puntuación del benchmark',
+      agendaMetaTitle: 'Agenda de capacidades de {country}, NCB',
+      agendaMetaDescription:
+        'La agenda de capacidades de {country}, calculada a partir de los datos públicos: las puntuaciones, la solidez de la evidencia y los vacíos de medición.',
+    },
+  },
 }
 
 /** Portuguese labels used by the translated methodology pages. */

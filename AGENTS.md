@@ -314,7 +314,7 @@ port 3888. That entry starts Next directly and does not use the proxy.
   among its peers. `MAP_DIMENSIONS` is all nine, and every dimension goes
   through the same call: one without conditions has an empty `conditions` and
   its page says so. A layer reaches the maps through one `map` section, an
-  index at `/brasil/mapa` and one page per capability under it, because nine
+  index at `/<layer>/mapa` and one page per capability under it, because nine
   tabs do not fit the band and the tree stops at four levels. The segment is
   `mapSlug` of the layer lexicon's dimension name, pinned by a test, so a
   rename there moves an address and needs a redirect (`/brasil/adaptacao`
@@ -323,8 +323,9 @@ port 3888. That entry starts Next directly and does not use the proxy.
   with the headings of `docs/KNOWN-ARTEFACTS.md` by a test; a page names
   them by id and never lists them in copy. A fact about one country's row
   that the output does not carry goes in `capabilityMap.countryRowFacts`,
-  with a comment naming the decision that would make it stale. See D130 and
-  D133.
+  with a comment naming the decision that would make it stale. The Spanish
+  confidence word is "solidez", because "confianza" is Trust, and the
+  Spanish segments are pinned in `es.test.ts`. See D130, D133 and D134.
 - The institution map publishes no node-link diagram. `INSTITUTION_RELATION_FAMILY`
   in `packages/core/src/model/institutions.ts` is the only place a relation verb
   is sorted into a family, and `InstitutionsView` renders every family in the
@@ -399,8 +400,17 @@ port 3888. That entry starts Next directly and does not use the proxy.
   institutions and its subnational spread. `COUNTRY_LAYERS` in
   `apps/web/src/lib/layers.ts` is the only place a layer is declared, and the
   href helpers, the layer nav and the language gate in
-  `apps/web/src/lib/links.ts` all read it. Brazil is the only layer, at
-  `/brasil`, and its folder name is that registry entry's slug. Never add a
+  `apps/web/src/lib/links.ts` all read it. Brazil's layer is the static
+  folder `/brasil`, named for its registry slug. Mexico, Colombia, Chile and
+  Argentina read in Spanish through one dynamic `[layer]` route that serves
+  every registry entry without a folder: an overview computed from the
+  published files, the agenda and the map, and nothing hand-written about the
+  country. Add a layer as a registry entry, never as a copied folder. A
+  lexicon written for some layers names them in `layerCountries`; the agenda
+  command renders only those, and `layers.ts` checks the two lists agree at
+  load. The map pages of every layer render the shared components in
+  `apps/web/src/components/layer/` through `LAYER_WORDS` in `words.ts`. See
+  D134. Never add a
   language switch, never branch on `Accept-Language`, never honour a `?lang=`
   on a ground-layer page, and never put a layer in the primary nav: a layer
   serves one country's audience and is reached from that country's pages. A

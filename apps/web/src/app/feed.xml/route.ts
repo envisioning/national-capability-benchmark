@@ -1,4 +1,5 @@
 import { APP_VERSION, DATASET_VERSION } from '@ncb/core'
+import type { Lang } from '@ncb/core'
 import { loadIndex } from '@/lib/data'
 import { loadAgendaFeedEntries, loadChangelogFeedEntries } from '@/lib/distribution'
 import {
@@ -24,7 +25,7 @@ function xml(value: string): string {
  * rendered lexicon with no page behind it is not a published thing, so it does
  * not reach the feed. See D69.
  */
-function entryUrl(iso3: string, lang: 'en' | 'pt-BR'): string | null {
+function entryUrl(iso3: string, lang: Lang): string | null {
   const href = agendaHrefInLanguage(iso3, lang)
   return href ? absoluteHref(href) : null
 }
