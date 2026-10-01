@@ -503,7 +503,7 @@ const RAW: Raw[] = [
     direction: 'higher_better',
     source: { publisher: 'OECD Trust Survey / WVS', tier: 'academic_survey', inspectable: true },
     ingest: 'gap',
-    notes: 'The OECD survey covers members only. Mixing it with WVS items for India and South Africa would break comparability.',
+    notes: 'The OECD survey covers members only. Mixing it with WVS items for India and South Africa would break comparability. The Joint EVS/WVS confidence battery (E069) reaches 37 countries from one release, and confidence in the courts (E069_17) is published beside Trust as a check under this id rather than scored: every item of the battery tested (courts, civil service, police, parliament and government) reads higher in the closed and electoral autocracies of the frame than in its democracies, which is deference as much as confidence (A13). The gap stays open for a measure that does not reward a court that cannot rule against the state. See D132.',
     wealthProxyPrior: 0.2,
   },
   {

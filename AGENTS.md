@@ -9,7 +9,7 @@ countries, nine dimensions, equal weights and no headline ranking.
 ```
 pnpm install
 pnpm bench ingest      fetch World Bank series from 1990 into data/observations/worldbank.json
-pnpm bench evs fetch   import the pinned Joint EVS/WVS items (A165 trust, A173 perceived control, A080_01 charitable membership) into data/observations/joint-evs-wvs.json; `trust fetch` is an alias
+pnpm bench evs fetch   import the pinned Joint EVS/WVS items (A165 trust, A173 perceived control, A080_01 charitable membership, and the E069_17 court confidence check) into data/observations/joint-evs-wvs.json; `trust fetch` is an alias
 pnpm bench vdem fetch  import the pinned V-Dem civil-society and court-compliance series and the polarization and turnout checks into data/observations/vdem-cy-core.json
 pnpm bench unctad fetch import the pinned UNCTADstat export concentration index into data/observations/unctad-concentration.json (needs bsdtar)
 pnpm bench ilostat fetch derive and gate the ILOSTAT long-term unemployment share into data/observations/ilostat-ltu.json
@@ -311,9 +311,20 @@ port 3888. That entry starts Next directly and does not use the proxy.
   capita from `diagnostics.income`, never a list. Every sentence in
   `Lexicon.capabilityMap` compares a value with a median or states a
   correlation: no string says what a country should do, and none ranks it
-  among its peers. A layer reaches a map through a `map.<dimension>` section,
-  and `MAP_DIMENSIONS` lists the published ones; adding one is a decision
-  entry. Brazil's Adaptability map is `/brasil/adaptacao`. See D130.
+  among its peers. `MAP_DIMENSIONS` is all nine, and every dimension goes
+  through the same call: one without conditions has an empty `conditions` and
+  its page says so. A layer reaches the maps through one `map` section, an
+  index at `/brasil/mapa` and one page per capability under it, because nine
+  tabs do not fit the band and the tree stops at four levels. The segment is
+  `mapSlug` of the layer lexicon's dimension name, pinned by a test, so a
+  rename there moves an address and needs a redirect (`/brasil/adaptacao`
+  already has one). Which known artefact bears on which dimension is
+  `ARTEFACT_SCOPES` in `packages/core/src/model/artefacts.ts`, kept in step
+  with the headings of `docs/KNOWN-ARTEFACTS.md` by a test; a page names
+  them by id and never lists them in copy. A fact about one country's row
+  that the output does not carry goes in `capabilityMap.countryRowFacts`,
+  with a comment naming the decision that would make it stale. See D130 and
+  D133.
 - The institution map publishes no node-link diagram. `INSTITUTION_RELATION_FAMILY`
   in `packages/core/src/model/institutions.ts` is the only place a relation verb
   is sorted into a family, and `InstitutionsView` renders every family in the

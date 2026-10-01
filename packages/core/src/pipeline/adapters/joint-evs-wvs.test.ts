@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict'
-import { INDICATORS, JOINT_EVS_WVS_PUBLISHER } from '../../model/index.js'
+import { CHECKS, CHECK_PREFIX, INDICATORS, JOINT_EVS_WVS_PUBLISHER } from '../../model/index.js'
 import { JOINT_EVS_WVS_ITEMS, parseJointEvsWvs, parseJointEvsWvsFieldworkYears } from './joint-evs-wvs.js'
 
 /* Lines copied from `pdftotext -layout` of the pinned v5.0.0 results PDF,
@@ -91,6 +91,28 @@ Germany EVS               2,178            44.6            53.6                1
 Germany WVS               1,528            41.6            57.1                1.0                0.3             -
 Vietnam                   1,200            27.0            73.0                  -                  -             -
 TOTAL              (156,939)        24.8%           73.2%             1.4%                0.6%             0.1%
+
+E069_17- Confidence: Justice System/Courts
+
+                                                             Confidence: Justice System/Courts
+                         TOTAL                               Not very                                      Missing:
+                                  A great deal Quite a lot              None at all Don´t know No answer
+                                                              much                                          Other
+Brazil                    1,762         11.8         38.5        22.9         23.1         3.4       0.2          -
+Germany EVS               2,178         11.3         49.3        29.0          6.6         3.3       0.5          -
+Germany WVS               1,528         19.8         52.5        20.9          3.3         3.1       0.3          -
+India                     1,692         39.7         33.4        15.9          9.0         1.9         -          -
+
+                                                                                                                   Page 294 of 692
+                                                   Joint EVS/WVS 2017-2022 Dataset Results by Country                      2024-06-30
+                                                          Version 5-0-0 - Data weighted by 'gwght
+
+                                                             Confidence: Justice System/Courts
+                   TOTAL                               Not very                                      Missing:
+                            A great deal Quite a lot              None at all Don´t know No answer
+                                                        much                                          Other
+Vietnam                1,200         27.7         63.1         6.3          0.8          2.1        -          -
+TOTAL              (155,739)       14.1%        38.2%       29.7%        14.9%         2.5%     0.4%       0.1%
 `
 
 const years = parseJointEvsWvsFieldworkYears(text)
@@ -139,6 +161,34 @@ assert.match(
   /^A080_01; .*published share mentioned, .*; published sample size 1692; fieldwork 2023\./,
 )
 
+/* E069_17 is a check: it stores the published "a great deal" share under the
+ * check prefix, quotes the other published shares, and never sums them. D132. */
+const courtId = `${CHECK_PREFIX}institutional_trust`
+assert.deepEqual(values(courtId), [
+  ['BRA', 11.8],
+  ['IND', 39.7],
+  ['VNM', 27.7],
+])
+assert.equal(
+  result.observations.find((o) => o.indicatorId === courtId && o.iso3 === 'BRA')?.note,
+  "E069_17; Joint EVS/WVS v5.0.0 results table; publisher-weighted by gwght; published share answering a great deal of confidence in the justice system and courts, over all respondents including don't know and no answer; the other published shares are quite a lot 38.5, not very much 22.9, none at all 23.1, don't know 3.4, no answer 0.2; published sample size 1762; fieldwork 2018. Countries with separate EVS and WVS rows are held until pooled microdata are harmonised.",
+)
+assert.match(
+  result.observations.find((o) => o.indicatorId === courtId && o.iso3 === 'IND')?.note ?? '',
+  /no answer 0\.0; published sample size 1692; fieldwork 2023\./,
+  'an empty cell is printed as zero',
+)
+assert.deepEqual(result.coverageByIndicator[courtId]?.heldCountries, ['DEU'])
+assert.ok(!INDICATORS.some((i) => i.id === courtId), 'the court confidence row is never a scored indicator')
+
+/* The check the adapter emits is declared in checks.ts as an adapter check on this release. */
+const courtCheck = CHECKS.find((c) => c.id === 'institutional_trust')
+assert.equal(courtCheck?.ingest, 'adapter')
+assert.equal(courtCheck?.dimension, 'trust')
+assert.equal(courtCheck?.pinned?.variable, 'E069_17')
+assert.equal(courtCheck?.source.publisher, JOINT_EVS_WVS_PUBLISHER)
+assert.equal(INDICATORS.find((i) => i.id === 'institutional_trust')?.ingest, 'gap', 'the gap stays open')
+
 /* Countries with an EVS and a WVS row are held per item; one row alone is emitted. */
 assert.deepEqual(result.coverageByIndicator.perceived_control?.heldCountries, ['DEU'])
 assert.deepEqual(result.coverageByIndicator.civic_participation?.heldCountries, ['DEU'])
@@ -160,4 +210,4 @@ for (const def of wired) assert.equal(read.get(def.source.series ?? ''), def.id,
 
 assert.throws(() => parseJointEvsWvs(text.replace('A173- How much', 'A999- How much')), /do not contain A173/)
 
-console.log('Joint EVS/WVS adapter validated: A165 unchanged, A173 mean, A080_01 mentioned, per-item hold rule.')
+console.log('Joint EVS/WVS adapter validated: A165 unchanged, A173 mean, A080_01 mentioned, E069_17 check, per-item hold rule.')

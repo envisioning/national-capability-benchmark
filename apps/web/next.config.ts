@@ -24,6 +24,9 @@ const config: NextConfig = {
       { source: '/pt/limits', destination: '/limits', statusCode: 301 },
       { source: '/pt/decisions', destination: '/decisions', statusCode: 301 },
       { source: '/pt', destination: '/brasil', statusCode: 301 },
+      // Brazil's Adaptability map moved under the layer's map section when
+      // every capability got one (D133). The segment is the lexicon's name.
+      { source: '/brasil/adaptacao', destination: '/brasil/mapa/adaptacao', statusCode: 301 },
       // The objections page was /challenge until D76. Readers outside the
       // project read that as a competition rather than as an invitation.
       { source: '/challenge', destination: '/objections', statusCode: 301 },

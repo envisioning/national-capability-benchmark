@@ -1167,7 +1167,7 @@ Start with file 1.
   pnpm bench residual                     write the provisional wealth-residual fixture
   pnpm bench br-subnational [--year 2024]          fetch the registered Brazil subnational series
   pnpm bench institutions [--country BRA]  project the institution map into the explorer feed, one file per lexicon
-  pnpm bench evs      fetch                fetch the Joint EVS/WVS items: A165 trust, A173 control, A080_01 charitable membership (alias: trust)
+  pnpm bench evs      fetch                fetch the Joint EVS/WVS items: A165 trust, A173 control, A080_01 charitable membership, E069_17 court confidence check (alias: trust)
   pnpm bench vdem     fetch                fetch and parse V-Dem v15 civil society and the polarization and turnout checks
   pnpm bench unctad   fetch                fetch and parse the pinned UNCTADstat export concentration index
   pnpm bench ilostat  fetch                fetch ILOSTAT unemployment by duration, derive the long-term share, gate it

@@ -251,7 +251,6 @@ export const EN: Lexicon = {
     mapSummary: '{institutions} institutions, {relations} recorded relations',
   },
   capabilityMap: {
-    navLabel: '{dimension}',
     title: 'Where does {countryTopic} stand on {dimension}?',
     metaTitle: '{dimension} map, {country}, NCB',
     metaDescription:
@@ -306,20 +305,59 @@ export const EN: Lexicon = {
       'This release does not publish country income, so the page cannot form the peer set.',
     limitsHeading: 'What this reading does not show',
     limitProxy:
-      'A national score is a coarse proxy. Adaptation happens in firms, cities, networks and groups below the level of the country, and a national average only describes the conditions they work in.',
+      'A national score is a coarse proxy. A capability forms in firms, cities, networks and groups below the level of the country, and a national average only describes the conditions they work in.',
     limitPeers:
       'Peers share income and nothing else. Size, production structure, region and political regime are outside the rule, and a set of {count} countries can change with any revision to GDP.',
     limitCorrelation:
       'An r reads the whole set at once and says nothing about one country alone. A correlation does not show a cause either.',
     rowCaveats: {
       long_term_unemployment_share: {
-        text: 'Long-term unemployment comes from ILOSTAT, after a plausibility gate applied the same way to every country. Some scored countries use a household survey instead of a labor force survey, Brazil among them with PNAD Contínua. A high share reads two ways: slow reallocation where unemployment is also high, or a small residual pool where it is low.',
+        text: 'Long-term unemployment comes from ILOSTAT, after a plausibility gate applied the same way to every country. Some scored countries use a household survey instead of a labor force survey. A high share reads two ways: slow reallocation where unemployment is also high, or a small residual pool where it is low.',
         decisions: ['D120'],
       },
       export_diversification: {
         text: 'Export diversification reads the concentration of the merchandise basket UNCTAD publishes. How fast a country switches products is outside it, so are services, and countries selling a few high-value products read as concentrated.',
         decisions: ['D119'],
       },
+    },
+    /* Hand-written, because the published output carries no survey name (the
+     * pinned observation note does). Stale when D120 is superseded or the
+     * ILOSTAT series for Brazil changes survey. */
+    countryRowFacts: {
+      BRA: {
+        long_term_unemployment_share: {
+          text: 'For Brazil, the ILOSTAT series comes from PNAD Contínua, a household survey.',
+          decisions: ['D120'],
+        },
+      },
+    },
+    noConditions:
+      'No condition is published beside {dimension} in this release, so the page shows only the indicators that make the score.',
+    floorNote:
+      'No score in this release. Observed indicators: {n}, under the minimum the model needs to form a mean.',
+    thinNote: 'Confidence is in the {band} band, so the score rests on little evidence.',
+    artefactsLine: 'The known artefacts that bear on {dimension}, described on the limits page:',
+    artefactsStructural: 'And the ones every score in the benchmark carries:',
+    artefactLink: 'artefact {id}',
+    rowPeers: '{n} peers with a value',
+    indexLink: 'See every capability on the map',
+    index: {
+      navLabel: 'Map',
+      title: 'Where does {countryTopic} stand on each capability?',
+      metaTitle: 'Capability map, {country}, NCB',
+      metaDescription:
+        "{countryTopic}'s capabilities, each with the score, the confidence and the position against the median of the countries at the nearest income. Computed from the published data.",
+      intro:
+        'This page reads {n} capabilities of {countryTopic} from the published data and is recomputed with every release. Each row carries the score and the confidence as two numbers and compares the score with the median of the {count} countries at the nearest income. The rows follow the model order, and each opens the map of that capability.',
+      heading: 'How does each capability compare with the peers?',
+      colDimension: 'Capability',
+      colPeerMedian: 'Peer median',
+      above: 'above the peer median',
+      below: 'below the peer median',
+      level: 'at the peer median',
+      none: 'no comparison',
+      peersScored: '{n} of {count} peers scored',
+      note: 'Each row compares one score with one median. The capabilities do not add up, and the page forms no overall score.',
     },
     decisionLink: 'decision {id}',
     agendaLink: 'Open the capability agenda',

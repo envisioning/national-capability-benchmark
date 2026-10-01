@@ -4,18 +4,18 @@ import {
   DIMENSIONS,
   EVIDENCE_STATUS_LABELS,
   ISSUES_URL,
+  MAP_DIMENSIONS,
   docHref,
 } from '@ncb/core'
 import type { ContactTopic, ContributionWay, Dimension, EvidenceStatus, Lang } from '@ncb/core'
 import {
   countryLayer,
   layerSection,
-  mapSectionDimension,
+  mapDimensionSlug,
   servesLanguage,
   type CountryLayer,
   type LayerSection,
   type LayerSectionId,
-  type MapSectionId,
 } from '@/lib/layers'
 
 /**
@@ -58,27 +58,38 @@ export const countryLayerHref = (layer: CountryLayer): string => `/${layer.slug}
  */
 export function layerSectionHref(layer: CountryLayer, section: LayerSection): string {
   if (section.slug) return `${countryLayerHref(layer)}/${section.slug}`
-  /* A map without a page of its own in the layer points at the ground-layer
-   * page of the same capability, which holds every country on it. */
-  const dimension = mapSectionDimension(section.id)
-  if (dimension) return capabilityHref(dimension)
-  const ground: Record<Exclude<LayerSectionId, MapSectionId>, string> = {
+  const ground: Record<LayerSectionId, string> = {
     agenda: agendaHref(layer.iso3),
     institutions: institutionNetworkHref(layer.iso3),
     local: countryLocalHref(layer.iso3),
+    /* A map without a page of its own in the layer points at the ground-layer
+     * capabilities, which hold every country on each one. */
+    map: capabilitiesHref,
     support: supportHref,
   }
-  return ground[section.id as Exclude<LayerSectionId, MapSectionId>]
+  return ground[section.id]
 }
 
 /**
- * One country's capability map inside its layer, or null where the layer has
- * not published a map of that capability. See D130.
+ * One country's index of capability maps inside its layer, or null where the
+ * layer publishes none. See D133.
+ */
+export function capabilityMapIndexHref(iso3: string): string | null {
+  const layer = countryLayer(iso3)
+  const section = layer ? layerSection(layer, 'map') : null
+  return layer && section?.slug ? layerSectionHref(layer, section) : null
+}
+
+/**
+ * One country's map of one capability inside its layer, or null where the
+ * layer has not published it. The segment is the layer lexicon's name for
+ * the dimension. See D130 and D133.
  */
 export function capabilityMapHref(iso3: string, dimension: Dimension): string | null {
   const layer = countryLayer(iso3)
-  const section = layer ? layerSection(layer, `map.${dimension}`) : null
-  return layer && section ? layerSectionHref(layer, section) : null
+  const index = capabilityMapIndexHref(iso3)
+  if (!layer || !index || !MAP_DIMENSIONS.includes(dimension)) return null
+  return `${index}/${mapDimensionSlug(layer, dimension)}`
 }
 
 /**

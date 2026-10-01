@@ -171,6 +171,8 @@ export const PT_BR: Lexicon = {
     control_of_corruption: 'Controle da corrupção',
     contract_enforcement_days: 'Tempo para executar um contrato',
     court_compliance: 'Cumprimento das decisões judiciais pelo governo',
+    bribery_incidence: 'Incidência de suborno',
+    court_case_clearance: 'Taxa de resolução de processos judiciais',
     homicide_rate: 'Taxa de homicídio intencional',
     interpersonal_trust: 'Confiança interpessoal generalizada',
     institutional_trust: 'Confiança nas instituições públicas',
@@ -227,6 +229,27 @@ export const PT_BR: Lexicon = {
     '% of unemployed': '% dos desempregados',
     '% of output': '% da produção',
     'index 0-1, lower = more diversified': 'índice de 0 a 1, menor = mais diversificado',
+    'articles per million people': 'artigos por milhão de pessoas',
+    'index 0-100': 'índice de 0 a 100',
+    'per 1,000 aged 15-64': 'por mil pessoas de 15 a 64 anos',
+    days: 'dias',
+    count: 'número',
+    'mean 1-10': 'média de 1 a 10',
+    hours: 'horas',
+    'percentage points from approved budget': 'pontos percentuais de distância do orçamento aprovado',
+    'index 0-1': 'índice de 0 a 1',
+    '% of firms': '% das empresas',
+    'scale 0-4 (never to always)': 'escala de 0 a 4 (nunca a sempre)',
+    '% agreeing': '% que concordam',
+    '% of secondary': '% das matrículas no ensino secundário',
+    'ratio to world average': 'razão sobre a média mundial',
+    '% aged 18-64': '% das pessoas de 18 a 64 anos',
+    '% not deterred': '% sem medo de fracassar',
+    '% of manufactured exports': '% das exportações industriais',
+    'score 0-100': 'pontuação de 0 a 100',
+    index: 'índice',
+    'Gini 0-100': 'Gini de 0 a 100',
+    '% mentioning': '% que mencionam',
   },
   indicatorDefinitions: {
     budget_execution_fidelity:
@@ -528,7 +551,6 @@ export const PT_BR: Lexicon = {
     mapSummary: '{institutions} instituições, {relations} relações registradas',
   },
   capabilityMap: {
-    navLabel: '{dimension}',
     title: 'Onde {countryTopic} está em {dimension}?',
     metaTitle: 'Mapa de {dimension}, {country}, NCB',
     metaDescription:
@@ -583,20 +605,60 @@ export const PT_BR: Lexicon = {
       'Esta versão dos dados não publica a renda dos países, por isso a página não forma o conjunto de pares.',
     limitsHeading: 'O que esta leitura não mostra',
     limitProxy:
-      'A nota nacional é uma aproximação grosseira. A adaptação acontece em empresas, cidades, redes e grupos, abaixo do nível do país, e uma média nacional descreve apenas as condições em que eles trabalham.',
+      'A nota nacional é uma aproximação grosseira. Uma capacidade se forma em empresas, cidades, redes e grupos, abaixo do nível do país, e uma média nacional descreve apenas as condições em que eles trabalham.',
     limitPeers:
       'Os pares dividem a renda e mais nada. Tamanho, estrutura produtiva, região e regime político ficam fora da regra, e um conjunto de {count} países pode mudar com qualquer revisão do PIB.',
     limitCorrelation:
       'Um r lê o conjunto inteiro de uma vez e nada diz sobre um país isolado. Correlação também não mostra causa.',
     rowCaveats: {
       long_term_unemployment_share: {
-        text: 'O desemprego de longa duração vem do ILOSTAT, depois de um filtro de plausibilidade aplicado igualmente a todos os países. Alguns países pontuados usam pesquisa domiciliar em vez de pesquisa de força de trabalho, e o Brasil é um deles, com a PNAD Contínua. Uma parcela alta tem duas leituras: realocação lenta onde o desemprego também é alto, ou um grupo residual pequeno onde ele é baixo.',
+        text: 'O desemprego de longa duração vem do ILOSTAT, depois de um filtro de plausibilidade aplicado igualmente a todos os países. Alguns países pontuados usam pesquisa domiciliar em vez de pesquisa de força de trabalho. Uma parcela alta tem duas leituras: realocação lenta onde o desemprego também é alto, ou um grupo residual pequeno onde ele é baixo.',
         decisions: ['D120'],
       },
       export_diversification: {
         text: 'A diversificação das exportações lê a concentração da pauta de mercadorias publicada pela UNCTAD. A velocidade com que um país troca de produto fica fora dela, assim como os serviços, e países que vendem poucos produtos de alto valor aparecem como concentrados.',
         decisions: ['D119'],
       },
+    },
+    /* Hand-written, because the published output carries no survey name (the
+     * pinned observation note does). Stale when D120 is superseded or the
+     * ILOSTAT series for Brazil changes survey. */
+    countryRowFacts: {
+      BRA: {
+        long_term_unemployment_share: {
+          text: 'Para o Brasil, a série do ILOSTAT vem da PNAD Contínua, uma pesquisa domiciliar.',
+          decisions: ['D120'],
+        },
+      },
+    },
+    noConditions:
+      'Nenhuma condição é publicada ao lado de {dimension} nesta versão, por isso a página mostra só os indicadores que formam a nota.',
+    floorNote:
+      'Sem nota nesta versão. Indicadores observados: {n}, abaixo do mínimo que o modelo exige para formar uma média.',
+    thinNote: 'A confiança está na faixa {band}, então a nota se apoia em pouca evidência.',
+    artefactsLine:
+      'Os artefatos conhecidos que tocam {dimension}, descritos em inglês na página de limites:',
+    artefactsStructural: 'E os que valem para toda nota do benchmark:',
+    artefactLink: 'artefato {id}',
+    rowPeers: '{n} pares com valor',
+    indexLink: 'Veja todas as capacidades no mapa',
+    index: {
+      navLabel: 'Mapa',
+      title: 'Onde {countryTopic} está em cada capacidade?',
+      metaTitle: 'Mapa de capacidades, {country}, NCB',
+      metaDescription:
+        'Uma leitura de cada capacidade para {countryTopic}: a nota, a confiança e a posição diante da mediana dos países de renda mais próxima. Calculada a partir dos dados publicados.',
+      intro:
+        'Esta página lê {n} capacidades para {countryTopic} a partir dos dados publicados e é recalculada a cada versão. Cada linha traz a nota e a confiança como dois números e compara a nota com a mediana dos {count} países de renda mais próxima. As linhas seguem a ordem do modelo, e cada uma abre o mapa daquela capacidade.',
+      heading: 'Como cada capacidade se compara aos pares?',
+      colDimension: 'Capacidade',
+      colPeerMedian: 'Mediana dos pares',
+      above: 'acima da mediana dos pares',
+      below: 'abaixo da mediana dos pares',
+      level: 'na mediana dos pares',
+      none: 'sem comparação',
+      peersScored: '{n} de {count} pares com nota',
+      note: 'Cada linha compara uma nota com uma mediana. As capacidades não se somam, e a página não forma uma nota geral.',
     },
     decisionLink: 'decisão {id}',
     agendaLink: 'Abra a agenda de capacidades',

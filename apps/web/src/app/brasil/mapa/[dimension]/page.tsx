@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { notFound } from 'next/navigation'
 import {
   PT_BR,
   countryName,
@@ -8,10 +9,10 @@ import {
   fmt,
   fmtConf,
   indicatorName,
+  isThinEvidence,
   readCapabilityMap,
   unitName,
 } from '@ncb/core'
-import type { Dimension } from '@ncb/core'
 import { FlagField } from '@/components/FlagField'
 import type { FlagFieldPoint } from '@/components/FlagField'
 import { ConditionList, conditionValue } from '@/components/views/ConditionList'
@@ -27,9 +28,11 @@ import {
   Section,
 } from '@/components/ui'
 import { loadCapabilityMap } from '@/lib/capability-map'
-import { countryLayer, layerSection } from '@/lib/layers'
+import { countryLayer, layerSection, mapDimensionBySlug } from '@/lib/layers'
 import {
+  artefactHref,
   capabilityHref,
+  capabilityMapIndexHref,
   countryProfileHref,
   decisionHref,
   layerSectionHref,
@@ -48,22 +51,35 @@ export const dynamic = 'force-dynamic'
  * income and against the score. Laid side by side for one country and placed
  * among the countries at the nearest income, that split is a map. Every
  * number is computed by `buildCapabilityMap` in core from the published
- * files, and every sentence compares a value with a median. See D130.
+ * files, and every sentence compares a value with a median. One page serves
+ * every capability: the segment is the lexicon's name for the dimension, and
+ * a dimension with no conditions says so and draws no conditions panel. See
+ * D130 and D133.
  */
 const ISO3 = 'BRA'
-const DIMENSION: Dimension = 'adaptability'
-/** The decision that records this page, its peer rule and its no-advice rule. */
-const PAGE_DECISION = 'D130'
+/** The decisions that record this page, its peer rule and its no-advice rule. */
+const PAGE_DECISIONS = ['D130', 'D133'] as const
 
 const m = PT_BR.capabilityMap
 const lex = PT_BR
-const dimensionName = lex.dimensions[DIMENSION]
 const topic = countryTopic(lex, ISO3)
 const name = countryName(lex, ISO3)
 
-export const metadata: Metadata = {
-  title: fill(m.metaTitle, { dimension: dimensionName, country: name }),
-  description: fill(m.metaDescription, { dimension: dimensionName, countryTopic: topic }),
+type Params = { params: Promise<{ dimension: string }> }
+
+function dimensionFor(slug: string) {
+  const layer = countryLayer(ISO3)
+  return layer ? mapDimensionBySlug(layer, slug) : null
+}
+
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const dimension = dimensionFor((await params).dimension)
+  if (!dimension) return {}
+  const dimensionName = lex.dimensions[dimension] ?? dimension
+  return {
+    title: fill(m.metaTitle, { dimension: dimensionName, country: name }),
+    description: fill(m.metaDescription, { dimension: dimensionName, countryTopic: topic }),
+  }
 }
 
 const money = (n: number): string =>
@@ -73,9 +89,12 @@ const list = (items: string[]): string =>
   new Intl.ListFormat(lex.numberLocale, { style: 'long', type: 'conjunction' }).format(items)
 const lowerFirst = (s: string): string => s.charAt(0).toLowerCase() + s.slice(1)
 
-export default async function BrazilAdaptabilityMapPage() {
+export default async function BrazilCapabilityMapPage({ params }: Params) {
+  const dimension = dimensionFor((await params).dimension)
+  if (!dimension) notFound()
+  const dimensionName = lex.dimensions[dimension] ?? dimension
   const layer = countryLayer(ISO3)
-  const loaded = await loadCapabilityMap(ISO3, DIMENSION)
+  const loaded = await loadCapabilityMap(ISO3, dimension)
   if (!layer || !loaded) {
     return (
       <Empty hint="Ainda não há dados gerados. Rode pnpm bench all na raiz do repositório e recarregue." />
@@ -84,7 +103,7 @@ export default async function BrazilAdaptabilityMapPage() {
   const { map, subject, version } = loaded
   const reading = readCapabilityMap(map)
   const agendaSection = layerSection(layer, 'agenda')
-  const subjectConditions = subject.dimensions[DIMENSION]?.conditions ?? []
+  const subjectConditions = subject.dimensions[dimension]?.conditions ?? []
   const observed = map.rows.filter((row) => row.normalized !== null)
   const unscored = map.peers.length - map.peersScored
   const rowName = (id: string) => indicatorName(lex, id)
@@ -137,10 +156,33 @@ export default async function BrazilAdaptabilityMapPage() {
           fill(template, { countryTopic: topic, list: list(ids.map((id) => lowerFirst(rowName(id)))) }),
         )
 
+  /* A row's construct caveat, then any hand-written fact about this country's
+   * row that the published output does not carry. Both are lexicon text. */
+  const facts = m.countryRowFacts[ISO3] ?? {}
   const caveats = map.rows.flatMap((row) => {
-    const caveat = m.rowCaveats[row.id]
-    return caveat ? [{ id: row.id, ...caveat }] : []
+    const parts = [m.rowCaveats[row.id], facts[row.id]].filter(
+      (x): x is { text: string; decisions: string[] } => x !== undefined,
+    )
+    if (parts.length === 0) return []
+    return [
+      {
+        id: row.id,
+        text: parts.map((x) => x.text).join(' '),
+        decisions: [...new Set(parts.flatMap((x) => x.decisions))],
+      },
+    ]
   })
+  const thin = !map.belowCoverageFloor && isThinEvidence(map.confidence)
+  const artefactLinks = (ids: string[]) =>
+    ids.map((id, i) => (
+      <span key={id}>
+        {i === 0 ? ' ' : ', '}
+        <Link href={artefactHref(id)} className="underline underline-offset-4">
+          {fill(m.artefactLink, { id })}
+        </Link>
+      </span>
+    ))
+  const mapIndex = capabilityMapIndexHref(ISO3)
 
   return (
     <>
@@ -172,6 +214,16 @@ export default async function BrazilAdaptabilityMapPage() {
             </span>
           </span>
         </div>
+        {map.belowCoverageFloor ? (
+          <p className="mb-4 max-w-3xl text-lg leading-relaxed">
+            {fill(m.floorNote, { n: map.observedIndicators })}
+          </p>
+        ) : null}
+        {thin ? (
+          <p className="mb-4 max-w-3xl text-lg leading-relaxed">
+            {fill(m.thinNote, { band: lex.bands[map.band] })}
+          </p>
+        ) : null}
         <p className="mb-4 max-w-3xl text-lg leading-relaxed">
           {fill(m.scoreIntro, { dimension: dimensionName, n: ptCountWord(observed.length) })}
         </p>
@@ -214,6 +266,9 @@ export default async function BrazilAdaptabilityMapPage() {
               <span className="inline-flex items-center gap-2">
                 <span className="text-xs text-[var(--muted)]">{m.colPeerMedian}</span>
                 <Score value={row.peerMedian} size="sm" nullLabel={m.noValue} />
+                <span className="text-xs tabular-nums text-[var(--muted)]">
+                  {fill(m.rowPeers, { n: row.peersWithValue })}
+                </span>
               </span>
             </li>
           ))}
@@ -221,6 +276,11 @@ export default async function BrazilAdaptabilityMapPage() {
         {map.gaps.length > 0 ? (
           <p className="mt-4 max-w-3xl text-xs leading-relaxed text-[var(--muted)]">
             {fill(m.gapsLine, { list: list(map.gaps.map((id) => lowerFirst(rowName(id)))) })}
+          </p>
+        ) : null}
+        {map.conditions.length === 0 ? (
+          <p className="mt-8 max-w-3xl text-lg leading-relaxed">
+            {fill(m.noConditions, { dimension: dimensionName })}
           </p>
         ) : null}
       </Section>
@@ -361,6 +421,18 @@ export default async function BrazilAdaptabilityMapPage() {
               ))}
             </li>
           ))}
+          {map.artefacts.specific.length > 0 ? (
+            <li>
+              {fill(m.artefactsLine, { dimension: dimensionName })}
+              {artefactLinks(map.artefacts.specific)}.
+            </li>
+          ) : null}
+          {map.artefacts.structural.length > 0 ? (
+            <li>
+              {m.artefactsStructural}
+              {artefactLinks(map.artefacts.structural)}.
+            </li>
+          ) : null}
         </ul>
         <ul className="mt-8 space-y-2 text-lg">
           <li>
@@ -368,11 +440,20 @@ export default async function BrazilAdaptabilityMapPage() {
               {capitalize(lex.agenda.limitsLabel)}
             </Link>
           </li>
-          <li>
-            <Link href={decisionHref(PAGE_DECISION)} className="underline underline-offset-4">
-              {capitalize(fill(m.decisionLink, { id: PAGE_DECISION }))}
-            </Link>
-          </li>
+          {PAGE_DECISIONS.map((id) => (
+            <li key={id}>
+              <Link href={decisionHref(id)} className="underline underline-offset-4">
+                {capitalize(fill(m.decisionLink, { id }))}
+              </Link>
+            </li>
+          ))}
+          {mapIndex ? (
+            <li>
+              <Link href={mapIndex} className="underline underline-offset-4">
+                {m.indexLink}
+              </Link>
+            </li>
+          ) : null}
           {agendaSection ? (
             <li>
               <Link href={layerSectionHref(layer, agendaSection)} className="underline underline-offset-4">
@@ -381,7 +462,7 @@ export default async function BrazilAdaptabilityMapPage() {
             </li>
           ) : null}
           <li>
-            <Link href={capabilityHref(DIMENSION)} className="underline underline-offset-4">
+            <Link href={capabilityHref(dimension)} className="underline underline-offset-4">
               {fill(m.capabilityLink, { dimension: dimensionName })}
             </Link>
           </li>

@@ -1,5 +1,6 @@
 import { spawn } from 'node:child_process'
 import type { ChildProcessWithoutNullStreams } from 'node:child_process'
+import { CHECK_PREFIX } from '../../model/checks.js'
 import { COUNTRIES } from '../../model/countries.js'
 import {
   JOINT_EVS_WVS_PUBLISHER,
@@ -22,6 +23,8 @@ type PublishedRow = {
   value: number
   /** Valid answers behind a published mean, where the table prints one. */
   base?: number
+  /** Other published columns of the row, quoted in the note as printed. */
+  detail?: string
 }
 
 /**
@@ -50,12 +53,20 @@ type JointEvsWvsItem = {
 
 const toNumber = (text: string | undefined): number => Number(text?.replace(/,/g, ''))
 
+/** One published percentage cell. The publisher prints `-` for an empty cell. */
+const CELL = '(-|[0-9]+(?:\\.[0-9]+)?)'
+const cell = (text: string | undefined): string => (text === '-' ? '0.0' : (text ?? ''))
+
 /**
  * The items the adapter reads, each with the observation id it fills.
  *
  * A165 keeps the note D64 published, so a refetch records no revision for the
  * trust rows. The items added later name their statistic and fieldwork year in
  * the note. See D64, D127 and D128.
+ *
+ * E069_17 is a check, not an indicator: its id carries `CHECK_PREFIX`, so it
+ * enters no frame, mean or confidence. Confidence in the courts reads highest
+ * in the frame's closed and electoral autocracies (A13). See D132.
  */
 export const JOINT_EVS_WVS_ITEMS: readonly JointEvsWvsItem[] = [
   {
@@ -88,6 +99,21 @@ export const JOINT_EVS_WVS_ITEMS: readonly JointEvsWvsItem[] = [
     read: (m) => ({ sampleSize: toNumber(m[2]), value: Number(m[4]) }),
     statistic: () =>
       "published share mentioned, which is belongs in EVS and active or inactive member in WVS, over all respondents including don't know and no answer",
+  },
+  {
+    variable: 'E069_17',
+    indicatorId: `${CHECK_PREFIX}institutional_trust`,
+    heading: 'Confidence: Justice System/Courts',
+    end: '\nTOTAL',
+    // label, sample size, a great deal, quite a lot, not very much, none at all, don't know, no answer, missing
+    rowPattern: new RegExp(`^(.+?)\\s{2,}([\\d,]+)\\s+${CELL}\\s+${CELL}\\s+${CELL}\\s+${CELL}\\s+${CELL}\\s+${CELL}\\s+${CELL}\\s*$`, 'gm'),
+    read: (m) => ({
+      sampleSize: toNumber(m[2]),
+      value: Number(cell(m[3])),
+      detail: `quite a lot ${cell(m[4])}, not very much ${cell(m[5])}, none at all ${cell(m[6])}, don't know ${cell(m[7])}, no answer ${cell(m[8])}`,
+    }),
+    statistic: (row) =>
+      `published share answering a great deal of confidence in the justice system and courts, over all respondents including don't know and no answer; the other published shares are ${row.detail}`,
   },
 ]
 
@@ -186,9 +212,12 @@ export function parseJointEvsWvs(
     const rows: PublishedRow[] = []
     for (const match of section.matchAll(item.rowPattern)) {
       const label = match[1]?.trim()
-      const { sampleSize, value, base } = item.read(match)
+      const { sampleSize, value, base, detail } = item.read(match)
       if (!label || !Number.isFinite(sampleSize) || !Number.isFinite(value)) continue
-      rows.push(base === undefined ? { label, sampleSize, value } : { label, sampleSize, value, base })
+      const row: PublishedRow = { label, sampleSize, value }
+      if (base !== undefined) row.base = base
+      if (detail !== undefined) row.detail = detail
+      rows.push(row)
     }
     if (rows.length === 0) throw new Error(`Joint EVS/WVS ${item.variable} table has no country rows`)
 

@@ -6361,3 +6361,162 @@ A13 failure written down here; a harmonised court-performance series
 (clearance or enforcement) across the frame, which answers the institutional
 family more directly and would make this row a check beside it; or a redundancy
 reading at or above 0.85 with another Trust row.
+
+## D132 — Confidence in the courts is published as a check beside Trust; `institutional_trust` stays a gap
+
+*Recorded 2026-10-01. Extends D57, D60, D64, D118 and D121. The memo is
+`docs/research/trust/EVS-WVS-INSTITUTIONAL-TRUST.md`.*
+
+**Decision.** The Joint EVS/WVS adapter reads a fourth item from the same
+pinned results release (v5.0.0, weighted by `gwght`): E069_17, confidence in
+the justice system and courts. It is emitted as the behavioural check
+`__check__institutional_trust`, declared in `checks.ts` under the gap's own id
+with `ingest: 'adapter'` and a `pinned` entry naming `ZA7505_cdb_Tables.pdf`,
+as polarization shares its id with its gap (D121). The stored value is the
+published share answering "a great deal", over all respondents; the other
+published shares (quite a lot, not very much, none at all, don't know, no
+answer) and the fieldwork year are quoted in each observation's note. The
+same hold rule applies: Germany, Great Britain and the Netherlands have
+separate EVS and WVS rows and are held. 37 of 53 countries, fieldwork 2017 to
+2023. The `institutional_trust` row stays `ingest: 'gap'`. Nothing is scored.
+
+**Why this item.** The construct was written before any value was read.
+Courts answer the dimension most directly: a court is where a stranger goes
+when the rule is broken, so confidence in it is the respondent's estimate that
+the rule will be enforced. Civil service was the second choice. Government,
+parliament and parties were argued out because they read the incumbent and
+the electoral cycle of each fieldwork year, not whether the rules hold
+whoever governs; police was argued out because it carries crime exposure,
+which D44 showed travels with income. The table prints no mean and no "great
+deal plus quite a lot" column, so the one published number that reads
+confidence by itself is "a great deal"; the sum would be computed from two
+rounded columns, which D64's rule forbids.
+
+**Why a check and not a score.** The A13 test was run before deciding, on
+V-Dem v15's 2024 Regimes of the World (`v2x_regime`) read from the pinned
+archive. Share saying a great deal: closed autocracies 28.1 (China, Vietnam),
+electoral autocracies 23.5 (n 9), liberal democracies 14.0 (n 11), electoral
+democracies 7.9 (n 15). Counting quite a lot too: 88.3, 60.3, 60.9 and 36.2.
+India (39.7), the Philippines (33.0) and Indonesia (30.6) lead the published
+share; Vietnam and China lead the combined one. Every other item tested reads
+the same way, autocracies above democracies on both statistics: civil service
+(great deal 16.9 against 5.7), police (23.6 against 15.9), parliament (18.4
+against 4.2) and government (26.2 against 6.5). The item also does not track
+the institutional fact it would stand for: across the 37 countries it
+correlates -0.13 with V-Dem's government compliance with the courts
+(`court_compliance`, D131), the row that does score in this family. Scored, it
+would rank highest the states whose courts are least able to rule against
+them. That is A13's failure, and D60 says the honest form is a check.
+
+**Findings, reported and not used to decide.** The published share correlates
+-0.18 with log GDP per capita (n 36); the combined share would be 0.30.
+`behaviouralChecks` reports r -0.056 with the Trust score (n 37). Brazil reads
+11.8 percent a great deal (38.5 quite a lot), 19th of 37. Trust does not move:
+r with log GDP 0.671 (n 51), mean confidence 0.347, 52 countries scored,
+Brazil 55.9 at confidence 0.396, all as on dataset 7.4.0. The guardrail, the
+mean confidence across dimensions against log GDP per capita, stays 0.298. The
+A165, A173 and A080_01 observations are unchanged in value and note; only
+their retrieval stamp moves.
+
+**Cost.** Trust still misses O1's 0.40 confidence target and the institutional
+family still has no survey row: this change publishes evidence and closes
+nothing. A reader may take the check's high values for autocracies as a
+finding; the attached note is the only mitigation. Storing the "a great deal"
+share alone reads only the top category, which is a narrower and noisier
+statistic than the conventional two-category share; the alternative needed a
+computed value. No dataset version bump: a check adds no scored row.
+
+**Overturned by.** A release that publishes a valid-answer mean or a
+two-category share for the battery, with the regime pattern gone (autocracies
+no higher than democracies) when tested the same way; pooled microdata with a
+list-experiment or anonymity adjustment that removes the deference component
+in closed and electoral autocracies; or a confidence measure that tracks
+`court_compliance` (r at or above 0.5) rather than running against it, which
+would show it reads the institution and not the regime.
+
+---
+
+---
+
+## D133 — Brazil's layer publishes the capability map for all nine dimensions
+
+*Recorded 2026-10-01. Extends D130, which published Adaptability alone and
+named "a second dimension's map" as a test of the layout.*
+
+**Decision.** `MAP_DIMENSIONS` is every dimension. Each is computed by the
+same `buildCapabilityMap`, with no branch per dimension: a dimension with no
+conditions (Coordination, Trust, Experimentation and Shared purpose on
+dataset 7.4.0) returns an empty `conditions` list, and its page draws no
+conditions panel and says in one sentence that none is published. A score
+below the coverage floor renders through `DimensionScore` with the observed
+count, and thin confidence is read through `isThinEvidence`; no page holds a
+threshold.
+
+Navigation. Nine tabs do not fit the layer's band and the tree stops at four
+levels (D73, D80), so the layer has one `map` section, labelled Mapa, at
+`/brasil/mapa`. That page lists the nine in the model's order with the score,
+the confidence, the peer median and above, below or level, each linking to
+`/brasil/mapa/<segment>`. The pages under it are not nodes: the Mapa tab owns
+them by address prefix, so the band lights Mapa on each. The segment is
+`mapSlug` of the pt-BR lexicon's dimension name (Adaptação is `adaptacao`,
+Propósito compartilhado `proposito-compartilhado`), so the lexicon is the one
+place a name is declared; a test pins the nine segments, so a rename that
+would move a published address fails until a redirect is added.
+`/brasil/adaptacao` answers 301 to `/brasil/mapa/adaptacao`. The section id
+`map.<dimension>` of D130 is retired in favour of `map`.
+
+Artefacts. Each page names the known artefacts that bear on its dimension by
+id, linked to `/limits`. The join is one table, `ARTEFACT_SCOPES` in
+`packages/core/src/model/artefacts.ts`: an id, the dimensions it touches or
+`all` for a structural one (A8, A10), and an optional country scope, which
+keeps A2 (India) off Brazil's pages. A test reads the headings of
+`docs/KNOWN-ARTEFACTS.md` and fails when the table and the document disagree.
+The map carries the result as `artefacts`, so a page holds no id.
+
+Hand-written facts. D130's long-term unemployment caveat said Brazil's
+ILOSTAT value comes from PNAD Contínua, which the published output does not
+carry (the pinned observation note does). It is the only one. The construct
+caveat is now country-neutral and the Brazil sentence moved to
+`capabilityMap.countryRowFacts`, keyed by iso3 and row, with a comment naming
+D120 as the decision whose supersession makes it stale. No other
+hand-written fact about Brazil was added: every number on the nine pages is
+computed.
+
+On dataset 7.4.0, against the 10 income peers of D130 (every peer scored on
+every dimension), Brazil reads above the peer median on Anticipation (45.8
+against 42.7, confidence 0.455), Agency (55.8 against 53.9, 0.555),
+Coordination (86.4 against 68.6, 0.373, thin), Trust (55.9 against 53.2,
+0.396, thin) and Experimentation (25.6 against 14.4, 0.430, thin), and below
+it on Learning (28.0 against 35.8, 0.539), Adaptability (65.4 against 70.3,
+0.678), Building (28.2 against 40.1, 0.568) and Shared purpose (30.7 against
+44.3, 0.433, thin). No dimension is below the coverage floor. These are
+findings, recorded to date the release; the pages compute them.
+
+**Why.** The owner's framing for the phase is to use the instrument: thin
+dimensions are published findings to read and argue with. One map was a
+demonstration; nine is the instrument, and holding eight back would make
+Adaptability look like a chosen exhibit. D130 already made the function
+dimension-agnostic, so this is a navigation and copy change, not a model
+change. One section with an index keeps the four-level tree and gives the
+reader a single place where all nine sit side by side, in a fixed order that
+is not a ranking. Slugs from the lexicon avoid a second list of names; the
+pin keeps that from breaking links silently. Artefact ids in a table rather
+than in page prose mean a new artefact, or a dimension it touches, is one
+line and is checked against the document.
+
+**Cost.** Four of the nine pages read thin evidence, and Coordination's
+above-median reading rests on 0.373 confidence and three rows (A3, A9, A12):
+a reader can quote it as a finding. The pages say thin plainly and name the
+artefacts, which is the mitigation and not a fix. The index puts nine
+above-or-below words in one column, which invites counting them: five above
+and four below is not a verdict on Brazil, and the page says the capabilities
+do not add up. `Confiança` is both the Trust dimension and the confidence
+label in Portuguese, so the Trust page carries the same word twice in
+different senses. The artefact pages are English. The slug of a dimension
+now depends on lexicon copy.
+
+**Overturned by.** A reader reading the index as a scorecard (counting
+above and below as a result), which would drop the position column from the
+index and leave it on each page; a lexicon rename the redirect table cannot
+absorb; or a second country layer, which would move the map index to the
+ground layer as D130's clause already anticipates.
