@@ -8801,6 +8801,43 @@
         ],
         "travelled": "Themed cohorts are the RBI's variation on the UK model. The theme concentrates supervisory attention but caps volume, which is why the counts stay in single digits per cohort."
       }
+    },
+    {
+      "id": "isr-desalination",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "ISR",
+      "title": "Seawater desalination under private concessions",
+      "claim": "Israel's Water Authority contracted private operators to build and run large seawater desalination plants under long-term concessions, and by 2022 the five largest held concessions for about 596 million cubic metres a year and supplied 33 percent of the country's fresh water, with the state buying 540 million cubic metres from them that year for about NIS 1.5 billion.",
+      "metric": {
+        "name": "Share of fresh water supplied from desalination",
+        "value": 33,
+        "unit": "% of fresh water",
+        "asOf": "2022"
+      },
+      "secondMetric": {
+        "name": "Production capacity in the concessions of the five largest plants",
+        "value": 596.4,
+        "unit": "million cubic metres a year",
+        "asOf": "2022"
+      },
+      "started": 2007,
+      "status": "operating",
+      "source": {
+        "publisher": "State Comptroller of Israel, Regulation and Oversight of Seawater Desalination Facilities, November 2024",
+        "url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2024/2024.11-75A-PartB/EN/2024.11-75A-PartB-301-Hatpala-Taktzir-EN.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The source is an audit, and most of it is criticism: it finds that the Water Authority never completed the national desalination master plan a 2010 government resolution required, that the agreed penalties for poor water quality are too low to enforce anything, that 14 seawater contamination incidents halted production between 2007 and 2023, that three of the largest plants sit near one river mouth, and that no serious preparation had begun for the Palmachim concession expiring in 2029. A third of fresh water is the 2022 national share; desalination's share of drinking water is higher, but the audit does not state it. The started year is the first year the audit reports plants in operation; the first plant opened earlier. Capacity is a contractual figure, not output.",
+      "pattern": {
+        "mechanism": "The state kept the planning, the water purchase and the regulation, and let private consortia finance, build and operate each plant on a long-term concession with a guaranteed buyer, so capacity arrived on a tender schedule without the capital sitting on the budget.",
+        "preconditions": [
+          "A single national water authority and a national carrier able to take every plant's output",
+          "A coastline next to the demand and enough grid power for reverse osmosis",
+          "Water scarcity severe and lasting enough to sustain the political case across governments"
+        ],
+        "travelled": "Gulf states and Australia built similar plants; where demand fell after a drought ended, as in several Australian cities, plants were mothballed and the fixed concession payments became the controversy."
+      }
     }
   ]
 }

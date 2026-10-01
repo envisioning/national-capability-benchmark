@@ -138,6 +138,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 Entregas documentadas ligadas a indicadores ausentes. Elas não afetam as notas nem a solidez da evidência.
 
 - **Yozma, the venture capital catalyst** (Experimentação). Israel put 100 million dollars of public money into ten hybrid venture funds from 1993, with foreign partners and a buy-out option, and by 2002 the country had 131 venture funds with around 10 billion dollars under management.
+- **Seawater desalination under private concessions** (Coordenação). Israel's Water Authority contracted private operators to build and run large seawater desalination plants under long-term concessions, and by 2022 the five largest held concessions for about 596 million cubic metres a year and supplied 33 percent of the country's fresh water, with the state buying 540 million cubic metres from them that year for about NIS 1.5 billion.
 
 ## Contribua
 

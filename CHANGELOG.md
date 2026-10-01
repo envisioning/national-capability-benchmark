@@ -9,6 +9,13 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.23.1 — 2026-10-01
+
+- **Israel's desalination joins the documented deliveries.** Private
+  concessions supplied a third of the country's fresh water in 2022,
+  according to a State Comptroller audit that also records the weak
+  oversight behind it. The capability agenda is regenerated.
+
 ## App 1.23.0 — 2026-10-01
 
 - **The thesis shows whether the nine capabilities are one thing.** "Where
