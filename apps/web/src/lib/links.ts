@@ -71,6 +71,20 @@ export function layerSectionHref(layer: CountryLayer, section: LayerSection): st
 }
 
 /**
+ * One country's capability map in the ground layer: the nine capabilities,
+ * each against the median of its income peers, in English. Every country has
+ * one. See D136.
+ */
+export const countryMapHref = (iso3: string): string => `${countryProfileHref(iso3.toUpperCase())}/map`
+
+/**
+ * One country's map of one capability in the ground layer. The segment is the
+ * dimension id, the same one `/capabilities/<id>` uses. See D136.
+ */
+export const countryMapDimensionHref = (iso3: string, dimension: Dimension): string =>
+  `${countryMapHref(iso3)}/${dimension}`
+
+/**
  * One country's index of capability maps inside its layer, or null where the
  * layer publishes none. See D133.
  */

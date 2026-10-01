@@ -313,19 +313,28 @@ port 3888. That entry starts Next directly and does not use the proxy.
   correlation: no string says what a country should do, and none ranks it
   among its peers. `MAP_DIMENSIONS` is all nine, and every dimension goes
   through the same call: one without conditions has an empty `conditions` and
-  its page says so. A layer reaches the maps through one `map` section, an
-  index at `/<layer>/mapa` and one page per capability under it, because nine
-  tabs do not fit the band and the tree stops at four levels. The segment is
-  `mapSlug` of the layer lexicon's dimension name, pinned by a test, so a
-  rename there moves an address and needs a redirect (`/brasil/adaptacao`
-  already has one). Which known artefact bears on which dimension is
-  `ARTEFACT_SCOPES` in `packages/core/src/model/artefacts.ts`, kept in step
-  with the headings of `docs/KNOWN-ARTEFACTS.md` by a test; a page names
-  them by id and never lists them in copy. A fact about one country's row
-  that the output does not carry goes in `capabilityMap.countryRowFacts`,
-  with a comment naming the decision that would make it stale. The Spanish
-  confidence word is "solidez", because "confianza" is Trust, and the
-  Spanish segments are pinned in `es.test.ts`. See D130, D133 and D134.
+  its page says so. Every country has the map in the ground layer, in
+  English, at `/country/<ISO3>/map` (the Map tab of its English pages) and
+  `/country/<ISO3>/map/<dimension id>`; a layer reaches its own reading
+  through one `map` section, an index at `/<layer>/mapa` and one page per
+  capability under it, because nine tabs do not fit the band and the tree
+  stops at four levels. Both render `CapabilityMapIndex` and
+  `CapabilityMapDimension` through a `MapReading` from
+  `apps/web/src/lib/map-reading.ts`, never through a layer directly, and
+  `mapCounterparts` is the only place the two readings' addresses are paired.
+  A layer segment is `mapSlug` of the layer lexicon's dimension name, pinned
+  by a test, so a rename there moves an address and needs a redirect
+  (`/brasil/adaptacao` already has one). Which known artefact bears on which
+  dimension is `ARTEFACT_SCOPES` in `packages/core/src/model/artefacts.ts`,
+  kept in step with the headings of `docs/KNOWN-ARTEFACTS.md` by a test; a
+  page names them by id and never lists them in copy. A fact about one
+  country's row that the output does not carry is an entry in
+  `COUNTRY_ROW_FACTS` in `packages/core/src/model/row-facts.ts`, for every
+  country it is true of, and a lexicon holds one template per kind in
+  `capabilityMap.rowFacts`, never a sentence about a country; a test holds the
+  table to the pinned ILOSTAT file. The Spanish confidence word is "solidez",
+  because "confianza" is Trust, and the Spanish segments are pinned in
+  `es.test.ts`. See D130, D133, D134 and D136.
 - The institution map publishes no node-link diagram. `INSTITUTION_RELATION_FAMILY`
   in `packages/core/src/model/institutions.ts` is the only place a relation verb
   is sorted into a family, and `InstitutionsView` renders every family in the
@@ -408,9 +417,9 @@ port 3888. That entry starts Next directly and does not use the proxy.
   country. Add a layer as a registry entry, never as a copied folder. A
   lexicon written for some layers names them in `layerCountries`; the agenda
   command renders only those, and `layers.ts` checks the two lists agree at
-  load. The map pages of every layer render the shared components in
-  `apps/web/src/components/layer/` through `LAYER_WORDS` in `words.ts`. See
-  D134. Never add a
+  load. The map pages of every layer, and the ground layer's English map,
+  render the shared components in `apps/web/src/components/layer/` through
+  `mapWords` in `words.ts`. See D134 and D136. Never add a
   language switch, never branch on `Accept-Language`, never honour a `?lang=`
   on a ground-layer page, and never put a layer in the primary nav: a layer
   serves one country's audience and is reached from that country's pages. A

@@ -6676,3 +6676,115 @@ cell closed by a weak record looks the same as one closed by a strong one.
 at a high rate, which would show the notes are closing cells on thin
 searches and need a second researcher; or a comparable series for any
 column, which promotes the gap under D20 and removes the column.
+
+---
+
+## D136 — Every country gets the capability map in the ground layer, and the layers' maps become readings of it
+
+*Recorded 2026-10-01. Answers the overturn clauses of D130 ("would move the
+page to the ground layer with the layer as one reading of it") and D133 ("a
+second country layer, which would move the map index to the ground layer"),
+and the cost D134 recorded: five countries had a map and 48 did not. Replaces
+the per-lexicon `countryRowFacts` of D133 and D134.*
+
+**Decision.** The ground layer publishes the capability map for all 53
+countries, in English: `/country/<ISO3>/map`, the index of nine capabilities
+with the score and the confidence as two numbers and the position against the
+income-peer median, and `/country/<ISO3>/map/<dimension>`, one page per
+capability. The segment is the dimension id, the one `/capabilities/<id>`
+uses, so the English addresses depend on the registry and not on lexicon
+copy. Both pages render the same two components the layers render,
+`CapabilityMapIndex` and `CapabilityMapDimension`, through `EN`. What used to
+be a layer argument is now a `MapReading` (`apps/web/src/lib/map-reading.ts`):
+the iso3, the language, the addresses the pages link between and the
+decisions they cite. `groundMapReading` and `layerMapReading` build the two
+kinds, so a layer's map and the English one cannot diverge in structure and
+the layers' pages render as before.
+
+Navigation. The map is one page of the English reading, labelled Map, after
+Agenda, in the order a layer holds its sections. The nine capability pages are
+owned by the prefix, as `/brasil/mapa` owns its nine, so the tree stays at four
+levels: Countries, the country, the reading where a layer exists, then Map. On
+a map page of a country with a layer, the crumb that offers both readings
+points the other reading at the same page there (`mapCounterparts`), so
+switching language keeps the reader on the capability; elsewhere the crumb is
+unchanged. Peer flags on the field chart link to the peer's profile, as they
+do in the layers.
+
+Hand-written facts. The layers carried three sentences about one country's
+long-term unemployment row (Brazil's PNAD Contínua, Argentina's urban EPH and
+ILO flag, Mexico's empty row), each written per language. The ground layer
+shows such facts, so they move to one keyed table, `COUNTRY_ROW_FACTS` in
+`packages/core/src/model/row-facts.ts`, read by every reading: a country, a
+row, a kind, the survey's own name where the kind needs it, and the decisions
+it rests on. A lexicon holds one template per kind
+(`capabilityMap.rowFacts`), never a sentence per country; the gate's floor in
+the Mexican sentence is read from `LTU_GATE`. `buildCapabilityMap` carries the
+country's facts as `facts`. On a ground layer that reads every country, a fact
+shown for a country with a layer and withheld from another with the same fact
+would be a selection, so the table holds every country the pinned ILOSTAT
+release says it about: household surveys for Brazil, Honduras and Paraguay;
+a household survey the ILO flags unreliable for Kenya; an urban-only survey
+the ILO flags for Argentina; an ILO unreliable flag for the United Arab
+Emirates, Finland and France; and no year passing the D120 gate for South
+Korea, Mexico, Peru, the Philippines, El Salvador and Uruguay. 14 entries. A
+test reads `data/observations/ilostat-ltu.json` and fails when a survey or a
+flag in the file and the table disagree, and another pins the Portuguese and
+Spanish sentences as they were, so the layers' text is unchanged.
+
+Deriving these from the published data was considered and declined for now.
+`data/out` does not carry the observation note: the survey and the flag would
+need a new published field (a dataset minor, a rescore and a schema change),
+and the gate's held countries are in no observation at all, so the empty-row
+fact would also need the adapter to publish its drops, which means a re-fetch.
+
+Degradation, on dataset 7.5.0. Cuba and Venezuela have no GDP per capita in
+`diagnostics.income`, so their maps form no peer set: every position reads "no
+comparison", and the pages say in one sentence why (`capabilityMap.noIncome`,
+new in all three lexicons). Cuba is below the coverage floor on Anticipation,
+Agency, Coordination, Trust and Shared purpose, Haiti on Shared purpose; those
+pages render through `DimensionScore` with the observed count. Rwanda's and
+Ethiopia's medians on two dimensions rest on nine scored peers of 10. Every
+other map has 10 scored peers. Argentina is the one country below the peer
+median on all nine; no country is above on all nine.
+
+The English lexicon now gives six names an article inside a sentence ("the
+United States", "the Netherlands", "the United Kingdom", "the United Arab
+Emirates", "the Philippines", "the Dominican Republic"), which the map's
+headings need and the English agenda already lacked; the six English agenda
+documents are re-rendered. No published field is added, so the dataset stays
+7.5.0. App 1.22.0.
+
+**Why.** The owner's phase is to use the instrument, and the instrument was
+reachable only through five layers. D130 and D133 made the map a computed
+reading that needs no country work, and D134's overturn clause names exactly
+this move: the map belongs to the ground layer for every country, with the
+layers as readings of it. WHY.md asks whether capability is separable from
+wealth; a reading per country against the countries at the same income is the
+form of that question one country's reader can check, and it should be
+checkable for any of the 53, not for the five with a language of their own.
+The ground layer is English because it is the benchmark itself, not a
+translation of it (D69). Dimension ids rather than English slugs keep one
+address convention across `/capabilities` and the map. One fact table with
+templates is the smallest change that stops three languages carrying three
+copies of country prose that drift apart.
+
+**Cost.** 530 new pages, each a reading a reader can quote: nine above or
+below words per country, and for some countries (Argentina among them) a
+column that invites the scorecard reading D133 names. The index keeps the
+mitigations the layers have (no verdict colour, no counts, the note that the
+capabilities do not add up); it is not a fix. The fact table is still
+hand-kept: a re-fetch that moves a held country out of the gate is not caught
+by the test, only a moved survey or flag is. The map for Cuba and Venezuela is
+a table of scores without the comparison that defines the page. The crumb
+switch lands on the matching page only for the map; the agenda still switches
+to the other reading's front page. Five tabs on Brazil's English reading wrap
+to a second line at phone width.
+
+**Overturned by.** A reader treating the English index as a scorecard (a
+ranking of a country's capabilities or a count of above and below quoted as a
+result), which would drop the position column from every index, layers
+included; a published field carrying the survey and the gate's drops, which
+would retire `COUNTRY_ROW_FACTS` in favour of the data; or the fact table
+growing past one indicator, which would show the facts are a data problem and
+move them into the adapter's output.

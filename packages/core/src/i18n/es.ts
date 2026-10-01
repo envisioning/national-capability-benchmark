@@ -655,6 +655,8 @@ export const ES: Lexicon = {
       'Cada frase compara una posición con una mediana. La causa de una diferencia, y qué hacer con ella, quedan fuera de estos datos.',
     noPeers:
       'Esta versión de los datos no publica el ingreso de los países, por eso la página no forma el conjunto de pares.',
+    noIncome:
+      'El Banco Mundial no publica el PIB per cápita de {countryTopic}, así que la página no forma un grupo de pares ni hace comparaciones.',
     limitsHeading: 'Lo que esta lectura no muestra',
     limitProxy:
       'La puntuación nacional es una aproximación gruesa. Una capacidad se forma en empresas, ciudades, redes y grupos, por debajo del nivel del país, y un promedio nacional describe solo las condiciones en que trabajan.',
@@ -672,24 +674,17 @@ export const ES: Lexicon = {
         decisions: ['D119'],
       },
     },
-    /* Hand-written, because the published output carries no survey name and
-     * no reason a value is missing (the pinned observation file and the gate
-     * log in docs/research/adaptability/ILOSTAT-LONG-TERM-UNEMPLOYMENT.md
-     * do). Stale when D120 is superseded, when ILOSTAT changes the survey
-     * behind Argentina's series, or when a Mexican year clears the gate. */
-    countryRowFacts: {
-      ARG: {
-        long_term_unemployment_share: {
-          text: 'Para Argentina, la serie de ILOSTAT viene de la Encuesta Permanente de Hogares, que cubre solo aglomerados urbanos, y la OIT marca el valor como poco confiable.',
-          decisions: ['D120'],
-        },
-      },
-      MEX: {
-        long_term_unemployment_share: {
-          text: 'Para México, ningún año de la serie de ILOSTAT pasa el filtro de plausibilidad: la encuesta registra menos de 3% casi todos los años, así que la fila queda sin valor.',
-          decisions: ['D120'],
-        },
-      },
+    /* Una plantilla por tipo de hecho. Qué país tiene qué hecho es
+     * COUNTRY_ROW_FACTS en el modelo (D136). */
+    rowFacts: {
+      household_survey: 'Para {countryTopic}, la serie de ILOSTAT viene de la {survey}, una encuesta de hogares.',
+      household_survey_unreliable:
+        'Para {countryTopic}, la serie de ILOSTAT viene de una encuesta de hogares, y la OIT marca el valor como poco confiable.',
+      urban_survey_unreliable:
+        'Para {countryTopic}, la serie de ILOSTAT viene de la {survey}, que cubre solo aglomerados urbanos, y la OIT marca el valor como poco confiable.',
+      flagged_unreliable: 'Para {countryTopic}, la OIT marca el valor de ILOSTAT como poco confiable.',
+      gate_never_passed:
+        'Para {countryTopic}, ningún año de la serie de ILOSTAT pasa el filtro de plausibilidad: la encuesta registra menos de {floor}% casi todos los años, así que la fila queda sin valor.',
     },
     noConditions:
       'Ninguna condición se publica junto a {dimension} en esta versión, por eso la página muestra solo los indicadores que forman la puntuación.',

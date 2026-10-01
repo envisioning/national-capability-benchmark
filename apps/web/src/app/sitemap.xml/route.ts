@@ -19,6 +19,8 @@ import {
   gapsHref,
   institutionNetworkHref,
   countryLayerHref,
+  countryMapDimensionHref,
+  countryMapHref,
   countryProfileHref,
   digestHref,
   layerSectionHref,
@@ -79,6 +81,10 @@ export async function GET(): Promise<Response> {
   for (const country of COUNTRIES) {
     add(countryProfileHref(country.iso3))
     add(agendaHref(country.iso3))
+    /* The ground-layer map, an index and one page per capability, for every
+       country. See D136. */
+    add(countryMapHref(country.iso3))
+    for (const dimension of MAP_DIMENSIONS) add(countryMapDimensionHref(country.iso3, dimension))
   }
   add(digestHref(date), date)
 

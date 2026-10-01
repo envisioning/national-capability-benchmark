@@ -1,4 +1,4 @@
-import { COUNTRY_NAMES, DIMENSIONS, DIMENSION_LABELS } from '@ncb/core'
+import { COUNTRY_NAMES, DIMENSIONS, DIMENSION_LABELS, EN } from '@ncb/core'
 import { countryLayer, hasInstitutionMap, layerBySlug } from '@/lib/layers'
 import {
   aboutHref,
@@ -12,6 +12,7 @@ import {
   countriesHref,
   countryLayerHref,
   countryLocalHref,
+  countryMapHref,
   countryProfileHref,
   exploreHref,
   gapsHref,
@@ -22,6 +23,7 @@ import {
   supportHref,
   thesisHref,
 } from '@/lib/links'
+import { mapCounterparts } from '@/lib/map-reading'
 
 /**
  * The navigation tree.
@@ -164,8 +166,14 @@ export function pathCountry(pathname: string): string | null {
  * Two readings become a level of their own, so the crumb can offer both. One
  * reading is no choice at all, so it collapses and the country's pages sit
  * directly under the country. See D69.
+ *
+ * The map is one page of the English reading, beside the agenda in the order
+ * a layer holds them, and owns the nine capability pages under its address,
+ * as a layer's Mapa tab does. On a map page the crumb's other reading points
+ * at the same map page in that reading, so switching language keeps the
+ * reader on the capability they were reading. See D136.
  */
-export function countryNode(iso3: string): NavNode | null {
+export function countryNode(iso3: string, pathname = ''): NavNode | null {
   const code = iso3.toUpperCase()
   const name = COUNTRY_NAMES[code]
   if (!name) return null
@@ -174,6 +182,7 @@ export function countryNode(iso3: string): NavNode | null {
   const englishPages: NavNode[] = [
     { href: countryProfileHref(code), label: 'Profile', exact: true },
     { href: agendaHref(code), label: 'Agenda' },
+    { href: countryMapHref(code), label: EN.capabilityMap.index.navLabel },
     ...(hasInstitutionMap(code)
       ? [{ href: institutionNetworkHref(code), label: 'Institutions' }]
       : []),
@@ -188,12 +197,22 @@ export function countryNode(iso3: string): NavNode | null {
   }
   if (!layer) return { ...country, children: englishPages }
 
+  /* Only the reading the reader is not in moves: the current one keeps its
+   * own front page as its address, which is what lights it. */
+  const map = mapCounterparts(pathname)
+  const onMap = map?.iso3 === code ? map : null
+  const inEnglish = pathname.toLowerCase().startsWith(`${countryProfileHref(code).toLowerCase()}/`)
+
   return {
     ...country,
     children: [
-      { href: countryProfileHref(code), label: 'In English', children: englishPages },
       {
-        href: countryLayerHref(layer),
+        href: onMap && !inEnglish ? onMap.ground : countryProfileHref(code),
+        label: 'In English',
+        children: englishPages,
+      },
+      {
+        href: onMap && inEnglish ? onMap.layer : countryLayerHref(layer),
         label: layer.readingLabel,
         lang: layer.lang,
         children: [
@@ -234,7 +253,7 @@ export const NAV_TREE: NavNode[] = [
     resolveChildren: (pathname) => {
       const iso3 = pathCountry(pathname)
       if (!iso3) return COUNTRY_INDEX_PAGES
-      const node = countryNode(iso3)
+      const node = countryNode(iso3, pathname)
       return node ? [node] : COUNTRY_INDEX_PAGES
     },
     /* Opened from a country page, the resolved row is that one country, which

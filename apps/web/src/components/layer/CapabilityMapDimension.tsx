@@ -28,21 +28,14 @@ import {
   Section,
 } from '@/components/ui'
 import { loadCapabilityMap } from '@/lib/capability-map'
-import { layerSection, mapDimensionBySlug } from '@/lib/layers'
-import type { CountryLayer } from '@/lib/layers'
-import {
-  artefactHref,
-  capabilityHref,
-  capabilityMapIndexHref,
-  countryProfileHref,
-  decisionHref,
-  layerSectionHref,
-  limitsHref,
-} from '@/lib/links'
-import { LAYER_WORDS, capitalize } from '@/lib/words'
+import { MISSING_DATA_HINT } from '@/lib/data'
+import { artefactHref, capabilityHref, countryProfileHref, decisionHref, limitsHref } from '@/lib/links'
+import type { MapReading } from '@/lib/map-reading'
+import { capitalize, mapWords } from '@/lib/words'
 
 /**
- * One layer's map of one capability, in the layer's language.
+ * One country's map of one capability, in the reading's language: English in
+ * the ground layer, the layer's own language in a layer.
  *
  * Not a score page and not advice. Since D122 a dimension separates what a
  * country does (capability rows, scored) from what it has (conditions, beside
@@ -51,37 +44,36 @@ import { LAYER_WORDS, capitalize } from '@/lib/words'
  * among the countries at the nearest income, that split is a map. Every
  * number is computed by `buildCapabilityMap` in core from the published
  * files, and every sentence compares a value with a median. One component
- * serves every capability of every layer: the segment is the layer lexicon's
- * name for the dimension, and a dimension with no conditions says so and
- * draws no conditions panel. See D130, D133 and D134.
+ * serves every capability of every reading: the segment is the dimension id
+ * in the ground layer and the layer lexicon's name for it in a layer, and a
+ * dimension with no conditions says so and draws no conditions panel. The
+ * decisions each page cites come with the reading. See D130, D133, D134 and
+ * D136.
  */
-
-/** The decisions that record this page, its peer rule and its no-advice rule. */
-const PAGE_DECISIONS = ['D130', 'D133'] as const
 
 const lowerFirst = (s: string): string => s.charAt(0).toLowerCase() + s.slice(1)
 
-export function capabilityMapDimensionMetadata(layer: CountryLayer, slug: string): Metadata {
-  const dimension = mapDimensionBySlug(layer, slug)
+export function capabilityMapDimensionMetadata(reading: MapReading, slug: string): Metadata {
+  const dimension = reading.dimensionBySlug(slug)
   if (!dimension) return {}
-  const lex = LEXICONS[layer.lang]
+  const lex = LEXICONS[reading.lang]
   const dimensionName = lex.dimensions[dimension] ?? dimension
   return {
     title: fill(lex.capabilityMap.metaTitle, {
       dimension: dimensionName,
-      country: countryName(lex, layer.iso3),
+      country: countryName(lex, reading.iso3),
     }),
     description: fill(lex.capabilityMap.metaDescription, {
       dimension: dimensionName,
-      countryTopic: countryTopic(lex, layer.iso3),
+      countryTopic: countryTopic(lex, reading.iso3),
     }),
   }
 }
 
-export async function CapabilityMapDimension({ layer, slug }: { layer: CountryLayer; slug: string }) {
-  const ISO3 = layer.iso3
-  const lex = LEXICONS[layer.lang]
-  const words = LAYER_WORDS[layer.lang]
+export async function CapabilityMapDimension({ reading, slug }: { reading: MapReading; slug: string }) {
+  const ISO3 = reading.iso3
+  const lex = LEXICONS[reading.lang]
+  const words = mapWords(reading.lang)
   const m = lex.capabilityMap
   const topic = countryTopic(lex, ISO3)
   const name = countryName(lex, ISO3)
@@ -92,16 +84,15 @@ export async function CapabilityMapDimension({ layer, slug }: { layer: CountryLa
   const list = (items: string[]): string =>
     new Intl.ListFormat(lex.numberLocale, { style: 'long', type: 'conjunction' }).format(items)
 
-  const dimension = mapDimensionBySlug(layer, slug)
+  const dimension = reading.dimensionBySlug(slug)
   if (!dimension) notFound()
   const dimensionName = lex.dimensions[dimension] ?? dimension
   const loaded = await loadCapabilityMap(ISO3, dimension)
   if (!loaded || !words) {
-    return <Empty hint={words?.noData ?? ''} />
+    return <Empty hint={words?.noData ?? MISSING_DATA_HINT} />
   }
   const { map, subject, version } = loaded
-  const reading = readCapabilityMap(map)
-  const agendaSection = layerSection(layer, 'agenda')
+  const split = readCapabilityMap(map)
   const subjectConditions = subject.dimensions[dimension]?.conditions ?? []
   const observed = map.rows.filter((row) => row.normalized !== null)
   const unscored = map.peers.length - map.peersScored
@@ -156,10 +147,18 @@ export async function CapabilityMapDimension({ layer, slug }: { layer: CountryLa
         )
 
   /* A row's construct caveat, then any hand-written fact about this country's
-   * row that the published output does not carry. Both are lexicon text. */
-  const facts = m.countryRowFacts[ISO3] ?? {}
+   * row that the published output does not carry. The caveat is lexicon text;
+   * the fact is one entry of `COUNTRY_ROW_FACTS`, which the map carries,
+   * printed through the lexicon's template for its kind (D136). */
   const caveats = map.rows.flatMap((row) => {
-    const parts = [m.rowCaveats[row.id], facts[row.id]].filter(
+    const fact = map.facts.find((f) => f.indicatorId === row.id)
+    const factText = fact
+      ? {
+          text: fill(m.rowFacts[fact.kind], { countryTopic: topic, ...fact.values }),
+          decisions: fact.decisions,
+        }
+      : undefined
+    const parts = [m.rowCaveats[row.id], factText].filter(
       (x): x is { text: string; decisions: string[] } => x !== undefined,
     )
     if (parts.length === 0) return []
@@ -181,7 +180,6 @@ export async function CapabilityMapDimension({ layer, slug }: { layer: CountryLa
         </Link>
       </span>
     ))
-  const mapIndex = capabilityMapIndexHref(ISO3)
 
   return (
     <>
@@ -194,6 +192,9 @@ export async function CapabilityMapDimension({ layer, slug }: { layer: CountryLa
       <p className="mb-12 mt-6 max-w-3xl text-lg leading-relaxed">
         {fill(m.intro, { countryTopic: topic, count: map.peerRule.count })}
       </p>
+      {map.income === null && map.incomePublished ? (
+        <p className="-mt-8 mb-12 max-w-3xl text-lg leading-relaxed">{fill(m.noIncome, { countryTopic: topic })}</p>
+      ) : null}
 
       <Section title={m.scoreHeading}>
         <div className="mb-6 flex flex-wrap items-center gap-x-8 gap-y-3">
@@ -322,7 +323,11 @@ export async function CapabilityMapDimension({ layer, slug }: { layer: CountryLa
 
       <Section title={fill(m.peersHeading, { countryTopic: topic })}>
         {map.peers.length === 0 ? (
-          <p className="max-w-3xl text-lg leading-relaxed">{m.noPeers}</p>
+          <p className="max-w-3xl text-lg leading-relaxed">
+            {map.income === null && map.incomePublished
+              ? fill(m.noIncome, { countryTopic: topic })
+              : m.noPeers}
+          </p>
         ) : (
           <>
             <p className="max-w-3xl text-lg leading-relaxed">
@@ -381,9 +386,9 @@ export async function CapabilityMapDimension({ layer, slug }: { layer: CountryLa
           <div className="max-w-3xl space-y-4 text-lg leading-relaxed">
             {scoreSentence ? <p>{scoreSentence}</p> : null}
             {[
-              [m.rowsAbove, reading.rowsAbove],
-              [m.rowsBelow, reading.rowsBelow],
-              [m.rowsLevel, reading.rowsLevel],
+              [m.rowsAbove, split.rowsAbove],
+              [m.rowsBelow, split.rowsBelow],
+              [m.rowsLevel, split.rowsLevel],
             ].map(([template, ids]) =>
               (ids as string[]).length === 0 ? null : (
                 <p key={template as string}>
@@ -392,9 +397,9 @@ export async function CapabilityMapDimension({ layer, slug }: { layer: CountryLa
               ),
             )}
             {[
-              conditionLine(m.conditionsMore, reading.conditionsMore),
-              conditionLine(m.conditionsLess, reading.conditionsLess),
-              conditionLine(m.conditionsLevel, reading.conditionsLevel),
+              conditionLine(m.conditionsMore, split.conditionsMore),
+              conditionLine(m.conditionsLess, split.conditionsLess),
+              conditionLine(m.conditionsLevel, split.conditionsLevel),
             ].map((line, i) => (line ? <p key={i}>{line}</p> : null))}
             <p className="text-[var(--muted)]">{m.readingNote}</p>
           </div>
@@ -439,23 +444,21 @@ export async function CapabilityMapDimension({ layer, slug }: { layer: CountryLa
               {capitalize(lex.agenda.limitsLabel)}
             </Link>
           </li>
-          {PAGE_DECISIONS.map((id) => (
+          {reading.dimensionDecisions.map((id) => (
             <li key={id}>
               <Link href={decisionHref(id)} className="underline underline-offset-4">
                 {capitalize(fill(m.decisionLink, { id }))}
               </Link>
             </li>
           ))}
-          {mapIndex ? (
+          <li>
+            <Link href={reading.indexHref} className="underline underline-offset-4">
+              {m.indexLink}
+            </Link>
+          </li>
+          {reading.agendaHref ? (
             <li>
-              <Link href={mapIndex} className="underline underline-offset-4">
-                {m.indexLink}
-              </Link>
-            </li>
-          ) : null}
-          {agendaSection ? (
-            <li>
-              <Link href={layerSectionHref(layer, agendaSection)} className="underline underline-offset-4">
+              <Link href={reading.agendaHref} className="underline underline-offset-4">
                 {m.agendaLink}
               </Link>
             </li>

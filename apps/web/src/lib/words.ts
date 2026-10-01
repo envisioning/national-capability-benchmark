@@ -13,6 +13,37 @@ import type { ConditionListWords } from '@/components/views/ConditionList'
 
 const COUNT_WORDS = ['none', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
 
+/**
+ * The field chart's words in English. They live here rather than in the
+ * chart's own client module so a server page can read them: a value exported
+ * from a 'use client' file reaches a server component as a reference, not as
+ * the object. See D136.
+ */
+export const FIELD_WORDS_EN: FlagFieldWords = {
+  score: 'Score',
+  confidence: 'Confidence',
+  trend: 'Trend',
+  highest: 'Highest',
+  lowest: 'Lowest',
+  noScore: 'no score',
+  clamped: 'Clamped at the edge of the frame, so the real position is further out.',
+  scoredOf: '{scored} of {total} capabilities scored.',
+  clickFlag: ' Click the flag for the full profile.',
+  aria: '{n} countries on a 0 to 100 scale. Median {median}.',
+  legendNote: 'The shaded band is the middle half of the field and the line inside it is the median.',
+  solidRing: 'Solid ring: usable or good evidence',
+  brokenRing: 'Broken ring: thin evidence, opening further as confidence falls',
+}
+
+/** The conditions panel's words in English. */
+export const CONDITION_WORDS_EN: ConditionListWords = {
+  label: 'Conditions, not scored',
+  intro:
+    'What the country has to work with on this capability. The values are shown as the source published them and are not part of the score, the confidence or the trend. The rank counts the countries with a value, best first.',
+  noValue: 'No value for this country. {definition}',
+  rank: 'rank {rank} of {n}',
+}
+
 /** A count as prose: spelled out to nine, numerals from 10. */
 export const countWord = (n: number): string => COUNT_WORDS[n] ?? String(n)
 
@@ -90,8 +121,11 @@ export type LayerWords = {
   countWord: (n: number) => string
   field: FlagFieldWords
   conditions: ConditionListWords
-  /** Shown where the published files are missing. */
-  noData: string
+  /**
+   * Shown where the published files are missing. The ground layer leaves it
+   * out and reads the viewer's own English hint.
+   */
+  noData?: string
   /**
    * The words of the layer's own overview and agenda pages, where the layer
    * renders them through the shared `[layer]` route. Brazil's overview is a
@@ -160,6 +194,21 @@ export const LAYER_WORDS: Partial<Record<Lang, LayerWords>> = {
     },
   },
 }
+
+/**
+ * The words the ground layer's capability map computes around the English
+ * lexicon. The ground layer is not a layer, so it has no entry in
+ * `LAYER_WORDS`; the map components read either through `mapWords`. See D136.
+ */
+export const GROUND_MAP_WORDS: LayerWords = {
+  countWord,
+  field: FIELD_WORDS_EN,
+  conditions: CONDITION_WORDS_EN,
+}
+
+/** The map's words for one reading's language. */
+export const mapWords = (lang: Lang): LayerWords | undefined =>
+  lang === 'en' ? GROUND_MAP_WORDS : LAYER_WORDS[lang]
 
 /** Portuguese labels used by the translated methodology pages. */
 export const PT_METHOD = {

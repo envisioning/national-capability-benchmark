@@ -6,6 +6,7 @@ import {
   indicatorsFor,
   isDeclaredGap,
   isScored,
+  rowFactsFor,
 } from '../model/index.js'
 import type {
   CountryResult,
@@ -13,7 +14,9 @@ import type {
   Direction,
   IndicatorAcrossCountries,
   MeasurementClass,
+  RowFactKind,
 } from '../model/index.js'
+import { LTU_GATE } from './adapters/ilostat.js'
 import { confidenceBand } from './confidence.js'
 import type { ConfidenceBandId } from './confidence.js'
 import type { Diagnostics } from './diagnostics.js'
@@ -123,6 +126,8 @@ export type CapabilityMap = {
   dimensionIncomeR: number | null
   dimensionIncomeN: number
   income: IncomeRow | null
+  /** Whether the release publishes income for any country. False only on a file from before 7.2.0. */
+  incomePublished: boolean
   peerRule: { count: number; series: string }
   peers: MapPeer[]
   peerIncome: { min: number; max: number } | null
@@ -139,6 +144,21 @@ export type CapabilityMap = {
    * the dimension's own and the structural ones. From `ARTEFACT_SCOPES`.
    */
   artefacts: { specific: string[]; structural: string[] }
+  /**
+   * The hand-written facts about this country's rows that the published
+   * output does not carry, from `COUNTRY_ROW_FACTS`, with the values their
+   * templates fill: the survey's name and the plausibility gate's floor. Only
+   * rows of this dimension. See D136.
+   */
+  facts: MapRowFact[]
+}
+
+/** One hand-written fact about one of the subject's rows. */
+export type MapRowFact = {
+  indicatorId: string
+  kind: RowFactKind
+  values: Record<string, string | number>
+  decisions: string[]
 }
 
 /** The country's indicator rows and every peer's, inside out. */
@@ -288,6 +308,7 @@ export function buildCapabilityMap(input: {
     dimensionIncomeR: fit?.pearson ?? null,
     dimensionIncomeN: fit?.n ?? 0,
     income,
+    incomePublished: (diagnostics.income ?? []).length > 0,
     peerRule: { count, series: diagnostics.gdpSeries },
     peers,
     peerIncome:
@@ -306,6 +327,14 @@ export function buildCapabilityMap(input: {
       .map((d) => d.id),
     conditions,
     artefacts: artefactsFor(dimension, iso3),
+    facts: rowFactsFor(iso3)
+      .filter((fact) => rows.some((row) => row.id === fact.indicatorId))
+      .map((fact) => ({
+        indicatorId: fact.indicatorId,
+        kind: fact.kind,
+        values: { floor: LTU_GATE.floorPct, ...(fact.survey ? { survey: fact.survey } : {}) },
+        decisions: [...fact.decisions],
+      })),
   }
 }
 

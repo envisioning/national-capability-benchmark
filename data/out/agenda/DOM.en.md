@@ -4,7 +4,7 @@
 
 The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
-## Where Dominican Republic stands
+## Where the Dominican Republic stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
@@ -98,7 +98,7 @@ These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 70.5, confidence good
 
-## What Dominican Republic has to work with
+## What the Dominican Republic has to work with
 
 Conditions describe what a country has to work with: infrastructure, access, money, people, enrolment and income itself. Each is published beside a capability and is not part of its score, its confidence or its trend. Read against the score, they show whether what a country has turns into what it does. The rank counts the countries with a value, best first.
 
@@ -141,7 +141,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 
-## What the indicators miss about Dominican Republic
+## What the indicators miss about the Dominican Republic
 
 Documented deliveries linked to missing indicators. They do not affect scores or confidence.
 
