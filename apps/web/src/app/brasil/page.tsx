@@ -100,7 +100,7 @@ export default async function BrazilLayerPage() {
       <PageTitle>O que o Brasil é capaz de fazer?</PageTitle>
       <Headline>
         Nove dimensões de capacidade, medidas com dados públicos. A forma mostra o perfil do país;
-        não há ranking. Cada nota vem com seus indicadores e sua confiança.
+        não há ranking. Cada nota vem com seus indicadores e a solidez da evidência.
       </Headline>
       <p className="mb-10 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
         Riqueza e capacidade são propriedades diferentes. Países com a mesma renda podem ter perfis
@@ -165,7 +165,7 @@ export default async function BrazilLayerPage() {
               <ul className="mt-3 max-w-md space-y-1 text-xs leading-relaxed text-[var(--muted)]">
                 <li>
                   Aresta tracejada e vértice vazado marcam evidência fraca. O tracejado abre quando
-                  a confiança cai; a nota não muda.
+                  a solidez da evidência cai; a nota não muda.
                 </li>
                 <li>
                   A régua vai de 0 a 100. Uma nota 10 fica perto do piso; não é 10% da capacidade.
@@ -222,7 +222,7 @@ export default async function BrazilLayerPage() {
       {agenda ? (
         <Section
           title="As nove dimensões"
-          hint="Cada cartão mostra nota, confiança, tendência e estado da medição. Cheio = observado; vazio = lacuna; cortado = base rejeitada."
+          hint="Cada cartão mostra nota, solidez da evidência, tendência e estado da medição. Cheio = observado; vazio = lacuna; cortado = base rejeitada."
         >
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {agenda.dimensions.map((d) => (
@@ -435,8 +435,8 @@ export default async function BrazilLayerPage() {
       </Section>
 
       <Section
-        title="Nota e confiança ficam separadas"
-        hint="A nota mostra a posição na régua. A confiança mostra a evidência: cobertura, atualidade e qualidade da fonte. Os números ficam lado a lado e dados ausentes não são imputados."
+        title="Nota e solidez da evidência ficam separadas"
+        hint="A nota mostra a posição na régua. A solidez da evidência mostra cobertura, atualidade e qualidade da fonte. Os números ficam lado a lado e dados ausentes não são imputados."
       >
         <div className="max-w-3xl space-y-4 text-lg leading-relaxed">
           <p>
@@ -451,7 +451,7 @@ export default async function BrazilLayerPage() {
           {agenda ? (
             <p>
               {agenda.gapCount} indicadores pedidos ainda não têm base internacional comparável.
-              Cada lacuna reduz a confiança e entra na agenda de coleta.
+              Cada lacuna reduz a solidez da evidência e entra na agenda de coleta.
             </p>
           ) : null}
         </div>
@@ -532,7 +532,7 @@ export default async function BrazilLayerPage() {
         <div className="grid gap-5 lg:grid-cols-3">
           {[
             'Fortalecer o método. Revisão independente, melhor medição de Coordenação e Confiança e um painel de modelos com proveniência registrada.',
-            'Preencher lacunas. Parcerias com produtores de dados podem transformar a agenda em séries publicadas e elevar a confiança.',
+            'Preencher lacunas. Parcerias com produtores de dados podem transformar a agenda em séries publicadas e elevar a solidez da evidência.',
             'Medir intervenções. Repetir diagnóstico e medição para descobrir o que move uma capacidade.',
           ].map((text, i) => (
             <div key={i} className="rounded-xl border border-[var(--rule)] p-5">

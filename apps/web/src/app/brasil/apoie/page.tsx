@@ -160,7 +160,7 @@ export default function BrazilSupportPage() {
           </li>
           <li>
             <span className="font-medium">Um adaptador de fonte</span>: um publicador integrado e
-            mantido, o que eleva a confiança de todos os países de uma vez.
+            mantido, o que eleva a solidez da evidência de todos os países de uma vez.
           </li>
           <li>
             <span className="font-medium">O painel de especialistas</span>: uma rodada revisada sobre o

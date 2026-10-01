@@ -9,6 +9,17 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.19.1 — 2026-10-01
+
+- **Portuguese copy names confidence "solidez da evidência".** In pt-BR,
+  "Confiança" was both the Trust dimension and the label for the 0 to 1
+  evidence number, so the Trust map page used the word twice in two senses
+  (the cost D133 recorded). The evidence number is now "solidez da evidência",
+  shortened to "solidez" in table headers, chips and the agenda's item
+  headings, across the lexicon, the Portuguese glossary, the Brazil pages and
+  the rendered `.pt-BR` agendas. Trust keeps "Confiança". English copy is
+  unchanged. Copy change only; no score or confidence changes.
+
 ## Dataset 7.5.0 — 2026-10-01
 
 - **Confidence in the courts is published beside Trust as a check (D132).**

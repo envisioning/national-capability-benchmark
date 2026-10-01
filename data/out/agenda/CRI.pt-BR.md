@@ -2,11 +2,11 @@
 
 *Gerado em 2026-10-01*
 
-A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a confiança ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
+A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
 ## Onde a Costa Rica está
 
-| Dimensão | Nota | Confiança | Tendência |
+| Dimensão | Nota | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 50,9 | 0,46 (utilizável) | +12,5 em 10 anos, sobre 2 indicadores |
 | Agência | 48,3 | 0,41 (fraca) | sem base de tendência |
@@ -22,7 +22,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 
 Estas são as notas mais baixas com evidência utilizável. A evidência fraca aparece abaixo.
 
-### Aprendizagem: 40,3, confiança utilizável
+### Aprendizagem: 40,3, solidez utilizável
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
@@ -31,7 +31,7 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 - Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (Índia); SETAs and workplace-based learning delivery (África do Sul); MEB public lifelong-learning network (Turquia).
 - Lacunas declaradas: Participação de adultos em aprendizagem.
 
-### Construção: 41,8, confiança utilizável
+### Construção: 41,8, solidez utilizável
 
 Quão capaz é o país de transformar planos e conhecimento em sistemas que funcionam?
 
@@ -43,17 +43,17 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 
 ## Dimensões para medir primeiro
 
-A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
+A solidez da evidência está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Confiança: confiança 0,29, fraca
+### Confiança: solidez 0,29, fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
 
 - Baseada em 3 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Taxa de resolução de processos judiciais.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
-### Propósito compartilhado: confiança 0,32, fraca
+### Propósito compartilhado: solidez 0,32, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
@@ -61,7 +61,7 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e responsabilização.
 
-### Coordenação: confiança 0,37, fraca
+### Coordenação: solidez 0,37, fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
 
@@ -69,14 +69,14 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
-### Agência: confiança 0,41, fraca
+### Agência: solidez 0,41, fraca
 
 Quão capazes são pessoas e organizações de transformar uma intenção em ação?
 
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Habilidades digitais de adultos.
 
-### Experimentação: confiança 0,43, fraca
+### Experimentação: solidez 0,43, fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
@@ -87,12 +87,12 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 66,3, confiança boa
-- Antecipação: 50,9, confiança utilizável
+- Adaptação: 66,3, solidez boa
+- Antecipação: 50,9, solidez utilizável
 
 ## O que a Costa Rica tem para trabalhar
 
-Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na nota, na confiança nem na tendência. Lidas contra a nota, mostram se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.
+Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na nota, na solidez da evidência nem na tendência. Lidas contra a nota, mostram se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.
 
 | Dimensão | Condição | Valor | Ano | Posição |
 | --- | --- | --- | --- | --- |
@@ -109,7 +109,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 ## Agenda de medição
 
-20 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+20 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -120,7 +120,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Coordenação | Colaboração público-privada | Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
 | Confiança | Cooperação além do próprio grupo | Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade. |
-| Confiança | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
+| Confiança | Taxa de resolução de processos judiciais | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Aprendizagem | Participação de adultos em aprendizagem | Parcela de adultos em educação e treinamento, formal ou não, nos últimos 12 meses. |
 | Experimentação | Investimento de capital de risco | Capital de risco investido como parcela do PIB. |
 | Experimentação | Atividade de sandbox regulatório | Número e abrangência de sandboxes regulatórios e regimes de teste controlado em operação. |
@@ -136,7 +136,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 ## O que a Costa Rica construiu e nenhum indicador conta
 
-Estas são mudanças institucionais documentadas em Costa Rica que o framework registra como evidência. Elas aparecem ao lado da nota e não mudam a nota nem a confiança.
+Estas são mudanças institucionais documentadas em Costa Rica que o framework registra como evidência. Elas aparecem ao lado da nota e não mudam a nota nem a solidez da evidência.
 
 - **FONAFIFO Payment for Environmental Services** (Coordenação). Costa Rica's FONAFIFO Payment for Environmental Services programme paid contracts covering 208,089 hectares in 2024, disbursing ₡9.234 billion while using public, donor and market-linked finance to keep private land in forest uses.
 - **ICE and a mostly renewable national electricity system** (Construção). Costa Rica's integrated electricity system generated 89.4% of its electricity from renewable sources in 2024, while ICE reported electrical coverage reaching 98.7% of households despite one of the country's driest years on record.

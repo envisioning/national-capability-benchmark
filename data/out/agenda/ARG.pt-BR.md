@@ -2,11 +2,11 @@
 
 *Gerado em 2026-10-01*
 
-A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a confiança ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
+A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
 ## Onde a Argentina está
 
-| Dimensão | Nota | Confiança | Tendência |
+| Dimensão | Nota | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 42,3 | 0,46 (utilizável) | +13,8 em 10 anos, sobre 2 indicadores |
 | Agência | 51,4 | 0,56 (utilizável) | sem base de tendência |
@@ -22,7 +22,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 
 Estas são as notas mais baixas com evidência utilizável. A evidência fraca aparece abaixo.
 
-### Construção: 27,8, confiança utilizável
+### Construção: 27,8, solidez utilizável
 
 Quão capaz é o país de transformar planos e conhecimento em sistemas que funcionam?
 
@@ -32,7 +32,7 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística.
 
-### Antecipação: 42,3, confiança utilizável
+### Antecipação: 42,3, solidez utilizável
 
 Quão capaz é o país de identificar mudanças emergentes e se preparar para elas?
 
@@ -43,24 +43,24 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 
 ## Dimensões para medir primeiro
 
-A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
+A solidez da evidência está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Confiança: confiança 0,33, fraca
+### Confiança: solidez 0,33, fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
 
 - Baseada em 4 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
+- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Taxa de resolução de processos judiciais.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
-### Aprendizagem: confiança 0,36, fraca
+### Aprendizagem: solidez 0,36, fraca
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Baseada em 4 indicadores observados.
 - Lacunas declaradas: Participação de adultos em aprendizagem.
 
-### Coordenação: confiança 0,37, fraca
+### Coordenação: solidez 0,37, fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
 
@@ -68,14 +68,14 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
-### Experimentação: confiança 0,43, fraca
+### Experimentação: solidez 0,43, fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
 - Baseada em 5 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
-### Propósito compartilhado: confiança 0,43, fraca
+### Propósito compartilhado: solidez 0,43, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
@@ -87,12 +87,12 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 57, confiança boa
-- Agência: 51,4, confiança utilizável
+- Adaptação: 57, solidez boa
+- Agência: 51,4, solidez utilizável
 
 ## O que a Argentina tem para trabalhar
 
-Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na nota, na confiança nem na tendência. Lidas contra a nota, mostram se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.
+Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na nota, na solidez da evidência nem na tendência. Lidas contra a nota, mostram se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.
 
 | Dimensão | Condição | Valor | Ano | Posição |
 | --- | --- | --- | --- | --- |
@@ -109,7 +109,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 ## Agenda de medição
 
-20 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+20 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -120,7 +120,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Coordenação | Colaboração público-privada | Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
 | Confiança | Cooperação além do próprio grupo | Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade. |
-| Confiança | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
+| Confiança | Taxa de resolução de processos judiciais | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Aprendizagem | Participação de adultos em aprendizagem | Parcela de adultos em educação e treinamento, formal ou não, nos últimos 12 meses. |
 | Experimentação | Investimento de capital de risco | Capital de risco investido como parcela do PIB. |
 | Experimentação | Atividade de sandbox regulatório | Número e abrangência de sandboxes regulatórios e regimes de teste controlado em operação. |
@@ -136,7 +136,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 ## O que a Argentina construiu e nenhum indicador conta
 
-Estas são mudanças institucionais documentadas em Argentina que o framework registra como evidência. Elas aparecem ao lado da nota e não mudam a nota nem a confiança.
+Estas são mudanças institucionais documentadas em Argentina que o framework registra como evidência. Elas aparecem ao lado da nota e não mudam a nota nem a solidez da evidência.
 
 - **The Convertibility Plan, and its collapse** (Adaptação). Argentina ended hyperinflation by fixing the peso to the dollar by law in April 1991, taking annual inflation from 4,923 percent in 1989 to 3.9 percent in 1994, and the regime held until it collapsed in the 2001-2002 crisis.
 - **Asignación Universal por Hijo child benefit** (Adaptação). Argentina's Asignación Universal por Hijo (AUH) reached 4,083,987 children and adolescents in June 2024, with 2,324,716 adult titulars receiving the benefit through the national social-security administration and its health, vaccination and education conditions.
