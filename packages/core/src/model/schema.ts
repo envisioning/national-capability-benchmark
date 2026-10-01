@@ -142,8 +142,33 @@ export const CheckDef = z.object({
   unit: z.string(),
   direction: Direction,
   source: IndicatorSource,
+  /**
+   * How the series arrives. A `worldbank` check is requested on the indicator
+   * ingest pass. An `adapter` check is emitted by a source adapter under the
+   * check prefix and must name the pinned file it was read from. See D121.
+   */
+  ingest: z.enum(['worldbank', 'adapter']).default('worldbank'),
   /** World Bank API database id. Omit for World Development Indicators. */
   wbSourceId: z.number().int().optional(),
+  /**
+   * The pinned release an adapter check is read from: what `/sources` prints in
+   * place of a World Bank request, so a reader can repeat the fetch. Required
+   * when `ingest` is `adapter`.
+   */
+  pinned: z
+    .object({
+      /** The release named as a reader would cite it. */
+      dataset: z.string(),
+      /** The archive the adapter downloads. */
+      url: z.string().url(),
+      /** The file read inside the archive. */
+      file: z.string(),
+      /** The column read from that file. */
+      variable: z.string(),
+      /** The only year read. */
+      year: z.number().int(),
+    })
+    .optional(),
   /** Why it is beside the score rather than in it. Rendered to the reader. */
   notes: z.string(),
 })

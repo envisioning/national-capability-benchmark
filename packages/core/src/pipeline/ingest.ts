@@ -197,7 +197,7 @@ export async function ingestWorldBank(
   )
   const seriesToChecks = new Map<string, string[]>()
   for (const c of CHECKS) {
-    if (!c.source.series) continue
+    if (c.ingest !== 'worldbank' || !c.source.series) continue
     const list = seriesToChecks.get(c.source.series) ?? []
     list.push(`${CHECK_PREFIX}${c.id}`)
     seriesToChecks.set(c.source.series, list)

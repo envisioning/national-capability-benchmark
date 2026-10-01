@@ -12,7 +12,7 @@ import {
 import type { CountryResult, Dimension } from '../model/index.js'
 import { ingestWorldBank, recordRevisions } from '../pipeline/ingest.js'
 import { fetchJointEvsWvsTrust } from '../pipeline/adapters/joint-evs-wvs.js'
-import { fetchVdemCivilSociety } from '../pipeline/adapters/vdem.js'
+import { fetchVdem } from '../pipeline/adapters/vdem.js'
 import { fetchUnctadExportConcentration } from '../pipeline/adapters/unctad.js'
 import { fetchIlostatLongTermUnemployment } from '../pipeline/adapters/ilostat.js'
 import { probeSeries, registrySeries, searchCatalogue } from '../pipeline/probe.js'
@@ -392,7 +392,7 @@ async function vdem(args: Args): Promise<void> {
     throw new Error(`Unknown V-Dem action "${action}". Use pnpm bench vdem fetch.`)
   }
   const retrievedAt = new Date().toISOString()
-  const result = await fetchVdemCivilSociety({ retrievedAt })
+  const result = await fetchVdem({ retrievedAt })
   let existing: unknown | null = null
   try {
     existing = JSON.parse(await readFile(FILES.vdem, 'utf8'))
@@ -410,8 +410,13 @@ async function vdem(args: Args): Promise<void> {
   await writeOut(FILES.vdem, `${JSON.stringify({ generatedAt: retrievedAt, observations: result.observations }, null, 2)}\n`)
   const revisions = await recordRevisions(before, previousRetrievedAt, result.observations, retrievedAt)
 
-  console.log(`V-Dem ${result.release}: ${result.observations.length}/${COUNTRY_ISO3.length} benchmark countries emitted`)
+  console.log(
+    `V-Dem ${result.release}: ${result.observations.length} observations for ${result.emittedCountries.length}/${COUNTRY_ISO3.length} benchmark countries`,
+  )
   console.log(`  source coverage: ${result.availableCountries.length}/${COUNTRY_ISO3.length}`)
+  for (const [indicatorId, count] of Object.entries(result.coverageByIndicator)) {
+    console.log(`  ${indicatorId}: ${count}/${COUNTRY_ISO3.length}`)
+  }
   console.log(`vdem data   -> ${FILES.vdem}`)
   console.log(
     `revisions   -> ${revisions.changed} changed, ${revisions.added} added, ${revisions.removed} removed in ${FILES.revisions}`,
@@ -1102,7 +1107,7 @@ Start with file 1.
   pnpm bench br-subnational [--year 2024]          fetch the registered Brazil subnational series
   pnpm bench institutions [--country BRA]  project the institution map into the explorer feed, one file per lexicon
   pnpm bench trust    fetch                fetch and parse Joint EVS/WVS A165 trust results
-  pnpm bench vdem     fetch                fetch and parse V-Dem v15 civil-society strength
+  pnpm bench vdem     fetch                fetch and parse V-Dem v15 civil society and the polarization check
   pnpm bench unctad   fetch                fetch and parse the pinned UNCTADstat export concentration index
   pnpm bench ilostat  fetch                fetch ILOSTAT unemployment by duration, derive the long-term share, gate it
   pnpm bench research inventory           write the deterministic country-gap research inventory

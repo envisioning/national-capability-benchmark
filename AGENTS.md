@@ -10,7 +10,7 @@ countries, nine dimensions, equal weights and no headline ranking.
 pnpm install
 pnpm bench ingest      fetch World Bank series from 1990 into data/observations/worldbank.json
 pnpm bench trust fetch import the pinned Joint EVS/WVS A165 trust table into data/observations/joint-evs-wvs.json
-pnpm bench vdem fetch  import the pinned V-Dem civil-society series into data/observations/vdem-cy-core.json
+pnpm bench vdem fetch  import the pinned V-Dem civil-society series and polarization check into data/observations/vdem-cy-core.json
 pnpm bench unctad fetch import the pinned UNCTADstat export concentration index into data/observations/unctad-concentration.json (needs bsdtar)
 pnpm bench ilostat fetch derive and gate the ILOSTAT long-term unemployment share into data/observations/ilostat-ltu.json
 pnpm bench score       normalise and score, write data/out/index.json, data/out/countries/*.json and table.csv
@@ -217,7 +217,11 @@ port 3888. That entry starts Next directly and does not use the proxy.
   builds the frame, the mean, the coverage floor or the confidence reads them.
   A check carries the reason it is not scored in its `notes`, which renders to
   the reader, and adding one needs a decision entry naming the test it failed.
-  A series that passes the tests is an indicator, not a check. See D60.
+  A series that passes the tests is an indicator, not a check. See D60. A
+  check from a source other than the World Bank is `ingest: 'adapter'`: its
+  adapter emits it under the prefix, the World Bank ingest skips it, and its
+  `pinned` field names the file, column and year that `/sources` prints in
+  place of an API request. See D121.
 - The wealth residual is never summed across dimensions. `ResidualFile` has no
   country-level field, `buildResidual` in
   `packages/core/src/pipeline/residual.ts` computes one fit per dimension, and
