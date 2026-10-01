@@ -990,7 +990,7 @@ const RAW: Raw[] = [
     source: WB('GOV_WGI_VA.EST'),
     wbSourceId: 3,
     ingest: 'retired',
-    notes: 'Retired 2026-08-26. Artefact A5: it measures the democratic channel while Shared Purpose asks whether people can see themselves in a common project. Singapore scored 20.9 while being one of the most effective collective actors in the set. Voter turnout, volunteering and civic participation are the observable replacements and all are declared gaps. See D23 and A5.',
+    notes: 'Retired 2026-08-26. Artefact A5: it measures the democratic channel while Shared Purpose asks whether people can see themselves in a common project. Singapore scored 20.9 while being one of the most effective collective actors in the set. Volunteering and civic participation are the observable replacements and are declared gaps; voter turnout is published beside Shared Purpose as a check, because it reads the same democratic channel and compulsory voting (D129). See D23 and A5.',
     wealthProxyPrior: 0.35,
   },
   {
