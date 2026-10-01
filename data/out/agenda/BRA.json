@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T14:12:01.330Z",
+  "generatedAt": "2026-10-01T15:28:09.090Z",
   "iso3": "BRA",
   "country": "Brazil",
   "dimensions": [
@@ -1469,6 +1469,13 @@
           "country": "Portugal",
           "indicatorId": "regulatory_sandbox_activity",
           "title": "Zonas Livres Tecnológicas, regulator-supervised experimentation zones"
+        },
+        {
+          "id": "ind-rbi-sandbox",
+          "iso3": "IND",
+          "country": "India",
+          "indicatorId": "regulatory_sandbox_activity",
+          "title": "Reserve Bank of India regulatory sandbox"
         }
       ],
       "institutionIds": [
@@ -3125,6 +3132,14 @@
       "title": "Salário mínimo and its permanent revaluation rule",
       "claim": "Brazil's Congress and president established a permanent annual valorização do salário mínimo in Law 14.663/2023, setting the national floor at R$1,320 from May 2023 and linking later adjustments to INPC inflation plus real GDP growth from two years earlier.",
       "started": 2023
+    },
+    {
+      "id": "bra-bcb-sandbox",
+      "indicatorId": "regulatory_sandbox_activity",
+      "dimension": "experimentation",
+      "title": "Banco Central regulatory sandbox, first cycle",
+      "claim": "Brazil's central bank opened its regulatory sandbox to applications in February 2021, received 52 projects, admitted seven to test under relaxed rules from 6 December 2021, and ran the cycle for one year with one permitted extension.",
+      "started": 2021
     }
   ],
   "gapCount": 20

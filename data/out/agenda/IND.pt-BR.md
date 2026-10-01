@@ -154,6 +154,7 @@ Entregas documentadas ligadas a indicadores ausentes. Elas não afetam as notas 
 - **Unified Payments Interface, the bank-and-app network** (Coordenação). NPCI's UPI rail connected 731 live banks and settled 22,716.07 million transactions worth ₹28,92,138.67 crore in June 2026 through participating banks and payment apps.
 - **CoWIN national COVID-19 vaccination platform** (Adaptação). India used CoWIN to register and scale COVID-19 vaccination nationally, recording more than 2.2067 billion vaccinations and 1.1093 billion registrations by 21 November 2023.
 - **Delhi Commonwealth Games, and the cost-estimate escalation** (Construção). India and Delhi hosted the Commonwealth Games in October 2010, but the Comptroller and Auditor General recorded the total estimate rising from ₹1,200 crore in the May 2003 bid to ₹18,532.31 crore by October 2010.
+- **Reserve Bank of India regulatory sandbox** (Experimentação). The Reserve Bank of India ran four themed sandbox cohorts between 2020 and 2024, retail payments, cross-border payments, MSME lending and fraud prevention, admitting 28 entities to test and finding 13 products viable in the three cohorts whose exits it published, and keeps the cohorts open on tap.
 
 ## Contribua
 

@@ -165,6 +165,7 @@ These are documented institutional changes in Brazil that the framework records 
 - **SIBRATEC, the documented innovation-centre network** (Agency). The Ministry of Science and Technology implemented SIBRATEC as a national system of 56 research and development networks, including 14 innovation-centre networks, 20 technological-service networks and 22 extension networks organized across the states to support innovation in micro and small firms.
 - **SUS health councils, permanent public participation** (Shared Purpose). Since Law 8.142 established them in 1990, Brazil's SUS has required permanent, deliberative health councils at the national, state and municipal levels, with users holding 50 percent of seats and health workers and government or providers holding 25 percent each.
 - **Salário mínimo and its permanent revaluation rule** (Adaptability). Brazil's Congress and president established a permanent annual valorização do salário mínimo in Law 14.663/2023, setting the national floor at R$1,320 from May 2023 and linking later adjustments to INPC inflation plus real GDP growth from two years earlier.
+- **Banco Central regulatory sandbox, first cycle** (Experimentation). Brazil's central bank opened its regulatory sandbox to applications in February 2021, received 52 projects, admitted seven to test under relaxed rules from 6 December 2021, and ran the cycle for one year with one permitted extension.
 
 ## Contribute
 

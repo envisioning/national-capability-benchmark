@@ -9,6 +9,13 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.22.1 — 2026-10-01
+
+- **Two sandbox records.** Brazil's central bank admitted seven of 52
+  applicants to its first sandbox cycle. India's central bank admitted 28
+  entities across four themed cohorts and found 13 products viable in the
+  three whose exits it published. The capability agenda is regenerated.
+
 ## App 1.22.0 — 2026-10-01
 
 - **Every country has a capability map in English.** `/country/<ISO3>/map`

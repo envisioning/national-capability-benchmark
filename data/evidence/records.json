@@ -8727,6 +8727,80 @@
         ],
         "travelled": "Sweden and the Baltic states ran down civil defence in the same years and began rebuilding after 2014; Finland and Switzerland kept their building duty and are the comparators the German debate now cites."
       }
+    },
+    {
+      "id": "bra-bcb-sandbox",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "BRA",
+      "title": "Banco Central regulatory sandbox, first cycle",
+      "claim": "Brazil's central bank opened its regulatory sandbox to applications in February 2021, received 52 projects, admitted seven to test under relaxed rules from 6 December 2021, and ran the cycle for one year with one permitted extension.",
+      "metric": {
+        "name": "Projects admitted to the first cycle",
+        "value": 7,
+        "unit": "projects",
+        "asOf": "2022"
+      },
+      "secondMetric": {
+        "name": "Projects that applied to the first cycle",
+        "value": 52,
+        "unit": "projects",
+        "asOf": "2021"
+      },
+      "started": 2021,
+      "status": "concluded",
+      "source": {
+        "publisher": "Banco Central do Brasil, Relatório de Gestão do Sandbox Regulatório, 1º ciclo 2022",
+        "url": "https://www.bcb.gov.br/content/estabilidadefinanceira/sandboxdocs/relatorios_cesb/Relatorio_Gestao_Sandbox_Regulatorio_2022_REV3%20(003).pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The central bank is reporting on its own programme. Seven admissions out of 52 shows a selective regime, not a broad one: the report records that the bank found 24 projects not innovative enough or not needing any rule relief, judged five outside its remit, and disqualified 16 more. The report covers the first cycle only and says nothing about what the seven tests changed in regulation or which products reached the market. No second cycle appears in the bank's published sandbox documents as of the retrieval date, so the status is concluded on that absence, not on a closing statement. The securities regulator CVM runs a separate sandbox that this record does not count. The source is a PDF and the counts are on page 11.",
+      "pattern": {
+        "mechanism": "The National Monetary Council and the central bank set a joint sandbox rule in 2020, and a standing committee of seven department heads screened applications by cycle, admitting only projects that needed a specific rule relaxed to be tested.",
+        "preconditions": [
+          "A central bank that already runs the payment rails it is willing to test against, as Pix shows",
+          "A legal basis that lets the regulator waive its own rules for a limited period",
+          "Enough supervisory staff to take on a cycle of bespoke oversight"
+        ],
+        "travelled": "The design follows the UK model of time-bound cohorts. Brazil kept the cohort small and the entry test strict, which limits both the risk and the reach."
+      }
+    },
+    {
+      "id": "ind-rbi-sandbox",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "IND",
+      "title": "Reserve Bank of India regulatory sandbox",
+      "claim": "The Reserve Bank of India ran four themed sandbox cohorts between 2020 and 2024, retail payments, cross-border payments, MSME lending and fraud prevention, admitting 28 entities to test and finding 13 products viable in the three cohorts whose exits it published, and keeps the cohorts open on tap.",
+      "metric": {
+        "name": "Entities admitted to the test phase across four cohorts",
+        "value": 28,
+        "unit": "entities",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Products found viable in the first, second and fourth cohorts",
+        "value": 13,
+        "unit": "products",
+        "asOf": "2024"
+      },
+      "started": 2020,
+      "status": "operating",
+      "source": {
+        "publisher": "Reserve Bank of India, press release on the exit of the fourth Regulatory Sandbox cohort, 18 June 2024",
+        "url": "https://rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58117",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "Both numbers are computed from four RBI press releases, not stated in one: six entities admitted and six viable in the first cohort (13 September 2021), eight and four in the second (19 July 2022), eight admitted to the third (6 June 2022) and six admitted with three viable in the fourth (18 June 2024). The third cohort's exit result was not found, so the viable count leaves it out. The regulator is reporting on its own programme, and viable within the boundary conditions of a test is not adoption: the releases say only that regulated entities may consider the products. Twenty-eight entities over four years is small next to India's payments sector, so the record evidences that a working sandbox exists, not that it shaped the market.",
+      "pattern": {
+        "mechanism": "The RBI published an enabling framework in 2019 and ran the sandbox as themed cohorts, each opened on one policy problem, so the regulator chose the questions and firms competed to answer them; a closed cohort reopens on tap.",
+        "preconditions": [
+          "A central bank that sets policy for a fast-growing digital payments system it also oversees",
+          "Willingness to publish names of admitted entities and test outcomes",
+          "A pipeline of startups and incumbents with products held back by a specific rule"
+        ],
+        "travelled": "Themed cohorts are the RBI's variation on the UK model. The theme concentrates supervisory attention but caps volume, which is why the counts stay in single digits per cohort."
+      }
     }
   ]
 }
