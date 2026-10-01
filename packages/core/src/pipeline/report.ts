@@ -339,6 +339,65 @@ export function buildReport(
     out.push('')
   }
 
+  const rs = diag.residualStructure
+  if (rs) {
+    out.push('## What is left after income is tested in aggregate')
+    out.push('')
+    out.push(
+      `Four tests on the wealth residual (D68), over the ${rs.completeCases} countries with all nine residuals, read by rules fixed before the first run (D138). Only statistics over countries are published; no country's residual is.`,
+    )
+    out.push('')
+    const rows: Array<Array<string | number | null>> = []
+    if (rs.structure) {
+      const a = rs.structure
+      rows.push([
+        '(a) Residuals move together',
+        `first-factor share ${round(a.firstFactorShare * 100, 1)}%, chance ${round(a.chance.mean * 100, 1)}% (95th ${round(a.chance.p95 * 100, 1)}%), n ${a.countries}`,
+        a.reading,
+      ])
+    }
+    if (rs.peers) {
+      const b = rs.peers
+      rows.push([
+        '(b) Same income, different shape',
+        `peer distance ${b.observedMean} against ${b.incomeNull.mean} without regard to income (5th ${b.incomeNull.p5}); shape share ${round(b.shapeShare * 100, 1)}% against random 95th ${round(b.shapeNull.p95 * 100, 1)}%, n ${b.countries}`,
+        b.reading,
+      ])
+    }
+    const c = rs.stability.releases
+    if (c) {
+      const tested = c.perDimension.filter((d) => d.min !== null)
+      const worst = tested.reduce<(typeof tested)[number] | null>((w, d) => (w === null || (d.min as number) < (w.min as number) ? d : w), null)
+      rows.push([
+        '(c) Order holds between releases',
+        worst ? `lowest rank r ${worst.min} on ${DIMENSION_LABELS[worst.dimension]} (n ${worst.minCountries}), ${c.pairs} release pairs` : `${c.pairs} release pairs, none moved`,
+        c.reading,
+      ])
+    }
+    const loo = rs.stability.leaveOneOut
+    rows.push([
+      '(c) Order holds without one country',
+      `largest own-residual shift ${Math.max(...loo.perDimension.map((d) => d.maxResidualShiftSd))} residual SD`,
+      loo.reading,
+    ])
+    if (rs.incomeShare) {
+      const d = rs.incomeShare
+      rows.push([
+        '(d) Share of a profile that is income',
+        `mean ${round(d.mean * 100, 1)}%, median ${round(d.median * 100, 1)}%, n ${d.countries}`,
+        d.reading,
+      ])
+    }
+    out.push(table(['Test', 'Figures', 'Reading'], rows))
+    out.push('')
+    if (rs.weakClaim) {
+      out.push(
+        `Under D138, the weaker claim, that countries at the same income have different capability shapes, reads **${rs.weakClaim}** on this release.`,
+      )
+      out.push('')
+    }
+  }
+
   out.push('## Indicators are checked for income bias')
   out.push('')
   const wealthy = diag.indicatorVsGdp.filter((i) => i.flaggedAsWealthProxy)

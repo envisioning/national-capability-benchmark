@@ -1,0 +1,434 @@
+{
+  "$ref": "#/definitions/ResidualStructure",
+  "definitions": {
+    "ResidualStructure": {
+      "type": "object",
+      "properties": {
+        "completeCases": {
+          "type": "integer"
+        },
+        "excluded": {
+          "type": "integer"
+        },
+        "structure": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "countries": {
+                  "type": "integer"
+                },
+                "eigenvalues": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "firstFactorShare": {
+                  "type": "number"
+                },
+                "loadings": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "dimension": {
+                        "type": "string",
+                        "enum": [
+                          "anticipation",
+                          "agency",
+                          "coordination",
+                          "trust",
+                          "learning",
+                          "experimentation",
+                          "adaptability",
+                          "building",
+                          "shared_purpose"
+                        ]
+                      },
+                      "loading": {
+                        "type": "number"
+                      }
+                    },
+                    "required": [
+                      "dimension",
+                      "loading"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "chance": {
+                  "type": "object",
+                  "properties": {
+                    "draws": {
+                      "type": "integer"
+                    },
+                    "seed": {
+                      "type": "integer"
+                    },
+                    "mean": {
+                      "type": "number"
+                    },
+                    "p95": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "draws",
+                    "seed",
+                    "mean",
+                    "p95"
+                  ],
+                  "additionalProperties": false
+                },
+                "permutation": {
+                  "type": "object",
+                  "properties": {
+                    "draws": {
+                      "type": "integer"
+                    },
+                    "seed": {
+                      "type": "integer"
+                    },
+                    "mean": {
+                      "type": "number"
+                    },
+                    "p95": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "draws",
+                    "seed",
+                    "mean",
+                    "p95"
+                  ],
+                  "additionalProperties": false
+                },
+                "reading": {
+                  "type": "string",
+                  "enum": [
+                    "structure",
+                    "none"
+                  ]
+                }
+              },
+              "required": [
+                "countries",
+                "eigenvalues",
+                "firstFactorShare",
+                "loadings",
+                "chance",
+                "permutation",
+                "reading"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "peers": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "countries": {
+                  "type": "integer"
+                },
+                "peerCount": {
+                  "type": "integer"
+                },
+                "observedMean": {
+                  "type": "number"
+                },
+                "incomeNull": {
+                  "type": "object",
+                  "properties": {
+                    "draws": {
+                      "type": "integer"
+                    },
+                    "seed": {
+                      "type": "integer"
+                    },
+                    "mean": {
+                      "type": "number"
+                    },
+                    "p5": {
+                      "type": "number"
+                    },
+                    "p95": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "draws",
+                    "seed",
+                    "mean",
+                    "p5",
+                    "p95"
+                  ],
+                  "additionalProperties": false
+                },
+                "shapeShare": {
+                  "type": "number"
+                },
+                "shapeNull": {
+                  "$ref": "#/definitions/ResidualStructure/properties/peers/anyOf/0/properties/incomeNull"
+                },
+                "noiseFloor": {
+                  "$ref": "#/definitions/ResidualStructure/properties/peers/anyOf/0/properties/incomeNull"
+                },
+                "shareBeyond": {
+                  "type": "number"
+                },
+                "shareNull": {
+                  "type": "object",
+                  "properties": {
+                    "mean": {
+                      "type": "number"
+                    },
+                    "p95": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "mean",
+                    "p95"
+                  ],
+                  "additionalProperties": false
+                },
+                "reading": {
+                  "type": "string",
+                  "enum": [
+                    "alike",
+                    "differ",
+                    "noise"
+                  ]
+                }
+              },
+              "required": [
+                "countries",
+                "peerCount",
+                "observedMean",
+                "incomeNull",
+                "shapeShare",
+                "shapeNull",
+                "noiseFloor",
+                "shareBeyond",
+                "shareNull",
+                "reading"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "stability": {
+          "type": "object",
+          "properties": {
+            "releases": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "versions": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "pairs": {
+                      "type": "integer"
+                    },
+                    "perDimension": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "dimension": {
+                            "$ref": "#/definitions/ResidualStructure/properties/structure/anyOf/0/properties/loadings/items/properties/dimension"
+                          },
+                          "pairs": {
+                            "type": "integer"
+                          },
+                          "mean": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "min": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "minCountries": {
+                            "anyOf": [
+                              {
+                                "type": "integer"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        },
+                        "required": [
+                          "dimension",
+                          "pairs",
+                          "mean",
+                          "min",
+                          "minCountries"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "reading": {
+                      "type": "string",
+                      "enum": [
+                        "stable",
+                        "mixed",
+                        "churning",
+                        "untested"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "versions",
+                    "pairs",
+                    "perDimension",
+                    "reading"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "leaveOneOut": {
+              "type": "object",
+              "properties": {
+                "perDimension": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "dimension": {
+                        "$ref": "#/definitions/ResidualStructure/properties/structure/anyOf/0/properties/loadings/items/properties/dimension"
+                      },
+                      "n": {
+                        "type": "integer"
+                      },
+                      "maxSlopeShiftSe": {
+                        "type": "number"
+                      },
+                      "maxResidualShiftSd": {
+                        "type": "number"
+                      }
+                    },
+                    "required": [
+                      "dimension",
+                      "n",
+                      "maxSlopeShiftSe",
+                      "maxResidualShiftSd"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "reading": {
+                  "type": "string",
+                  "enum": [
+                    "robust",
+                    "fragile"
+                  ]
+                }
+              },
+              "required": [
+                "perDimension",
+                "reading"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "releases",
+            "leaveOneOut"
+          ],
+          "additionalProperties": false
+        },
+        "incomeShare": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "countries": {
+                  "type": "integer"
+                },
+                "mean": {
+                  "type": "number"
+                },
+                "median": {
+                  "type": "number"
+                },
+                "pooled": {
+                  "type": "number"
+                },
+                "reading": {
+                  "type": "string",
+                  "enum": [
+                    "most",
+                    "part",
+                    "little"
+                  ]
+                }
+              },
+              "required": [
+                "countries",
+                "mean",
+                "median",
+                "pooled",
+                "reading"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "weakClaim": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "holds",
+                "mixed",
+                "fails"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "completeCases",
+        "excluded",
+        "structure",
+        "peers",
+        "stability",
+        "incomeShare",
+        "weakClaim"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

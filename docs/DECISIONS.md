@@ -6986,5 +6986,63 @@ noise, so the weaker claim reads mixed; a shape that income dictates through
 a curve a straight line cannot remove reads alike. The rest of the decision
 is unchanged.
 
-**Results.** *To be filled in after the first run, below this line, without
-editing the rules above.*
+**Results.** *Written after the first run on data, dataset 7.7.0; the
+rules above were not edited after it.*
+
+50 complete cases (Cuba and Haiti lack a dimension, Venezuela an income
+figure).
+
+- (a) **structure.** The residuals' first factor carries 0.279 against a
+  chance level of 0.191 (95th 0.217); the permutation baseline agrees (0.190,
+  95th 0.215), so D137's Gaussian chance level holds within 0.002 here.
+  Loadings: Anticipation 0.84, Learning 0.70, Coordination 0.67, Trust 0.63,
+  Shared purpose 0.61, Agency 0.27, and near zero on Experimentation,
+  Adaptability and Building. What is left after income is not independent
+  noise: a country above its line on the institutional dimensions tends to be
+  above it on the others of that group.
+- (b) **differ.** Mean peer distance 1.559 against 1.538 with incomes dealt
+  at random (5th 1.464, 95th 1.605): income peers are no more alike in shape
+  than anyone. The shape columns' first-factor share is 0.264 against 0.204
+  under random dealing (95th 0.232). Descriptive: the peer distance sits below
+  the random-dealing floor (1.780, 5th 1.682), because part of what is left
+  is a shared level; 6% of countries clear their own 95th against 5% by
+  construction.
+- (c) **mixed** between releases: 22 releases, 19 consecutive pairs on the
+  same 53 countries, 23 dimension comparisons where a residual moved. Lowest
+  Spearman 0.718 on Trust (n 36), then Coordination 0.740 (n 44), Shared
+  purpose 0.759, Adaptability 0.777 and Agency 0.780; Building 0.984 and
+  Experimentation 0.912 hold. None below 0.5. **robust** without one
+  country: the largest own-residual shift is 0.249 residual SD (Agency), the
+  largest slope shift 0.66 standard errors (Trust). D68's leave-one-out
+  overturn condition is not met.
+- (d) **part.** Mean 0.306, median 0.443, pooled 0.392.
+
+The weaker claim reads **holds**. The strong claim reads, from D137, that
+what the nine share is mostly income.
+
+**Why.** D137 settled the strong claim against the benchmark for the shared
+factor. If the project is to keep saying a capability profile is worth
+reading, the claim it can still make has to be tested in public, with rules
+that could have said no. Fixing the rules first, and committing them, is
+what makes a "holds" mean something.
+
+**Cost.** (b) reads "differ" on a narrow margin (0.264 against 0.232) at 50
+countries, and A8 applies to every figure: a handful of countries could move
+it across the line. The (b) rule was amended once, after a synthetic check and
+before any run on data; the amendment and its reason are above. Standardising
+each residual by its spread gives a thin dimension the same weight as a well
+measured one. The release test reads past releases as published, so pairs
+where only one or two dimensions moved carry most of it, and the 0.8 and 0.5
+bands are judgment. Complete cases drop the least measured countries. The
+within-column nulls assume countries are exchangeable once income is out,
+which neighbours, regions and shared data sources violate. No test here can
+separate a real country-specific shape from measurement error that happens to
+be shared across a country's indicators, for example one national statistics
+office feeding several rows; only indicators from independent sources, or a
+measurement-noise model per row, could.
+
+**Overturned by.** A release where (b) reads alike or noise, which flips the
+weaker claim to fails or mixed on every surface without an edit; a churning
+release reading on any dimension; a measurement-noise floor built from
+indicator uncertainty that puts the shape share inside it; or a wider country
+set on which the margin in (b) can be estimated within a few hundredths.

@@ -9,6 +9,38 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.24.0 — 2026-10-01
+
+- **The thesis tests what is left after income.** "Where the claim holds,
+  and where it fails" now reads in three steps: what the nine capabilities
+  share (the one-factor test of D137, which looks like income), what is left
+  once income is taken out, and what that means for the strong claim
+  (capability separate from wealth) and the weaker one (countries at the same
+  income have different capability shapes). Every verdict is a template the
+  computed reading chooses, with the n beside it. On dataset 7.7.0 the
+  strong claim does not hold for the shared part and the weaker one holds on
+  50 countries, on a narrow margin the page states. The per-capability
+  wealth chart stays.
+- `/diagnostics` gains a section with all four tests, their nulls, the rule
+  that reads each and the release and leave-one-out table. The front page's
+  income module gains one sentence, and the glossary defines "capability
+  shape". No country's residual is published anywhere. See D138.
+
+## Dataset 7.7.0 — 2026-10-01
+
+- **New published field: `diagnostics.residualStructure` (D138).** Four
+  aggregate tests on the wealth residual over the countries with all nine
+  residuals: whether the residuals share a factor (against D137's chance level
+  and a permutation baseline), whether income peers differ in shape (against
+  incomes dealt at random and residuals dealt at random), whether each
+  dimension's residual order holds between consecutive releases (read from
+  git) and when one country is dropped, and how much of a country's profile
+  income accounts for. Each carries its reading under rules fixed before the
+  first run, and the weaker claim's verdict. Only statistics over countries:
+  `residual.json` is unchanged and remains the only file with per-country
+  residuals. `schema/residual-structure.schema.json` describes the field. No
+  score or confidence changes.
+
 ## App 1.23.1 — 2026-10-01
 
 - **Israel's desalination joins the documented deliveries.** Private

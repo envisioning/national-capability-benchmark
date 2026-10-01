@@ -8,6 +8,7 @@ import {
   CountryFile,
   FactorHistoryFile,
   FactorStructure,
+  ResidualStructure,
   IndexFile,
   IndicatorAcrossCountries,
   SubnationalFile,
@@ -35,6 +36,8 @@ export function jsonSchemas(): Record<string, object> {
      * of its own yet, so this one describes `factorStructure` alone. D137. */
     'factor-structure.schema.json': zodToJsonSchema(FactorStructure, 'FactorStructure'),
     'factor-history.schema.json': zodToJsonSchema(FactorHistoryFile, 'FactorHistoryFile'),
+    /* Likewise `residualStructure`, the aggregate tests on what is left after income. D138. */
+    'residual-structure.schema.json': zodToJsonSchema(ResidualStructure, 'ResidualStructure'),
   }
 }
 
@@ -110,7 +113,7 @@ export function buildDataPackage(indicatorIds: string[], generatedAt: string): o
         name: 'diagnostics',
         path: 'diagnostics.json',
         title:
-          'The tests the model has to pass. Its factorStructure field, whether the nine dimensions are one factor that tracks income, is described by schema/factor-structure.schema.json',
+          'The tests the model has to pass. Its factorStructure field, whether the nine dimensions are one factor that tracks income, is described by schema/factor-structure.schema.json, and its residualStructure field, the aggregate tests of what is left after income, by schema/residual-structure.schema.json',
         format: 'json',
         mediatype: 'application/json',
       },

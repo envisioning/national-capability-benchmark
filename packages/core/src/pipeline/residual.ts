@@ -16,7 +16,8 @@ import type {
   ResidualFile as ResidualFileType,
 } from '../model/index.js'
 import { logGdpByCountry } from './diagnostics.js'
-import { mean, pearson, rank, round } from './stats.js'
+import { MIN_COUNTRIES_FOR_FIT } from './residual-structure.js'
+import { linearFit, mean, pearson, rank, round } from './stats.js'
 import { FILES } from './paths.js'
 
 export const RESIDUAL_METHOD_VERSION = 'residual/0.1-exploratory' as const
@@ -28,8 +29,9 @@ export const RESIDUAL_METHOD_VERSION = 'residual/0.1-exploratory' as const
  */
 export const RESIDUAL_FIT_BANDS = { strong: 0.5, moderate: 0.25 } as const
 
-/** A fit under this many countries is not published, and neither are its residuals. */
-export const MIN_COUNTRIES_FOR_FIT = 20
+/* A fit under this many countries is not published, and neither are its
+ * residuals. Declared beside the aggregate tests, which read the same fits. */
+export { MIN_COUNTRIES_FOR_FIT }
 
 type Pair = { iso3: string; score: number; logGdp: number }
 
@@ -69,26 +71,11 @@ function fitDimension(
   if (pairs.length < MIN_COUNTRIES_FOR_FIT) return null
   const xs = pairs.map((p) => p.logGdp)
   const ys = pairs.map((p) => p.score)
-  const mx = mean(xs)
-  const my = mean(ys)
-  let sxy = 0
-  let sxx = 0
-  for (let i = 0; i < pairs.length; i++) {
-    const dx = (xs[i] as number) - mx
-    sxy += dx * ((ys[i] as number) - my)
-    sxx += dx * dx
-  }
-  if (sxx === 0) return null
-  const slope = sxy / sxx
-  const intercept = my - slope * mx
-
-  const residuals = pairs.map((p) => p.score - (intercept + slope * p.logGdp))
+  const line = linearFit(xs, ys)
+  if (!line) return null
+  const { slope, intercept, residuals, residualSd } = line
   const r = pearson(xs, ys)
   if (r === null) return null
-
-  /* Standard error of the estimate: the spread a reader compares a gap against. */
-  const sumSquares = residuals.reduce((a, e) => a + e * e, 0)
-  const residualSd = Math.sqrt(sumSquares / Math.max(pairs.length - 2, 1))
 
   /* How far the income line actually moves the order. When this is small the
    * residual re-states the score and ranks countries the same way. */

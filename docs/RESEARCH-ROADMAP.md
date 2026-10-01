@@ -78,6 +78,22 @@ like income. On the same rule the share was 0.604 at 6.2.0 and 0.498 at 7.0.0
 (both 33 complete cases), when the stocks left the scores. Every release's
 figure is in `data/out/factor-history.json`.
 
+What is left after income (D138), dataset 7.7.0, on the 50 countries with all
+nine residuals: the leftovers still move together (first-factor share 0.279
+against chance 0.191, 95th 0.217), loading mostly on Anticipation, Learning,
+Coordination, Trust and Shared purpose. Income peers are no more alike in shape
+than countries picked at random (mean peer distance 1.56 against 1.54, 5th
+percentile 1.46), and the shapes line up beyond random dealing (0.264 against a
+95th of 0.232), so under the pre-registered rule the weaker claim, different
+shapes at the same income, holds. The margin is narrow and peers differ less
+than random dealing would (1.56 against 1.78), because part of what is left is
+a level. Residual order between releases is mixed (lowest rank r 0.72 on Trust,
+n 36; none under 0.5), no single country moves its own residual by more than
+0.25 of the spread around its line, and income accounts for 44% of the typical
+country's distance from the average profile (mean 31%). The objective this
+serves is to widen the country set and deepen Trust and Coordination, the two
+dimensions whose leftovers moved most when indicators changed.
+
 Two dimensions still track income above 0.70. Anticipation stays at 0.87 on
 its two capability rows, articles per head and statistical performance, which
 both track income themselves; that is a finding against the claim. Adaptability

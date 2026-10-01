@@ -52,6 +52,7 @@ import {
 import { toHistogramProfile, widestSpread } from '@/lib/profile'
 import { readWealthTracking } from '@/lib/wealth'
 import { readFactorTest } from '@/lib/factor'
+import { readResidualStructure } from '@/lib/residual'
 import { capitalize, countWord } from '@/lib/words'
 
 export const dynamic = 'force-dynamic'
@@ -112,6 +113,7 @@ export default async function Page() {
 
   const wealth = diag ? readWealthTracking(diag) : null
   const factor = diag ? readFactorTest(diag) : null
+  const residual = diag ? readResidualStructure(diag) : null
   const lanes = diag ? buildIndicatorLanes(diag) : null
   const wiring = brazil.network
     ? buildInstitutionMatrix(brazil.network.nodes, brazil.network.edges)
@@ -220,6 +222,7 @@ export default async function Page() {
             {factor?.solution.income
               ? `Taken together, one shared factor carries ${factor.sharePct} of the variation across ${factor.solution.countries} countries and correlates ${Math.abs(factor.solution.income.r).toFixed(2)} with income. `
               : null}
+            {residual?.shortSentence ?? null}
             <Link href={thesisHref} className="underline underline-offset-4">
               The thesis
             </Link>{' '}

@@ -722,6 +722,130 @@ export const FactorHistoryFile = z.object({
 })
 export type FactorHistoryFile = z.infer<typeof FactorHistoryFile>
 
+/** A Monte Carlo null: how many draws, the seed that repeats them, and the figures read off them. */
+const NullSummary = z.object({
+  draws: z.number().int(),
+  seed: z.number().int(),
+  mean: z.number(),
+  p95: z.number(),
+})
+
+/** A Monte Carlo null read at both tails. */
+const NullSpread = z.object({
+  draws: z.number().int(),
+  seed: z.number().int(),
+  mean: z.number(),
+  p5: z.number(),
+  p95: z.number(),
+})
+
+/**
+ * What is left of the nine dimension scores after income, tested in aggregate
+ * on the wealth residual of D68. Every field is a statistic over countries:
+ * no country's residual, and no country's name, is in this shape, because
+ * per-country residuals stay offline under D65. The reading rules were fixed
+ * before the first run. See D138.
+ */
+export const ResidualStructure = z.object({
+  /** Countries with all nine residuals: a score on every dimension and an income figure. */
+  completeCases: z.number().int(),
+  /** Countries in the registry left out of the complete cases. */
+  excluded: z.number().int(),
+  /** (a) Whether the residuals still move together once income is taken out. */
+  structure: z
+    .object({
+      countries: z.number().int(),
+      eigenvalues: z.array(z.number()),
+      firstFactorShare: z.number(),
+      loadings: z.array(z.object({ dimension: DimensionEnum, loading: z.number() })),
+      /** The D137 chance level at one fewer country, because the fit spends a degree of freedom. */
+      chance: FactorChance,
+      /** Each residual column shuffled across countries on its own: the same distributions, nothing shared. */
+      permutation: NullSummary,
+      reading: z.enum(['structure', 'none']),
+    })
+    .nullable(),
+  /** (b) Whether countries at the same income have different shapes once income is taken out. */
+  peers: z
+    .object({
+      countries: z.number().int(),
+      peerCount: z.number().int(),
+      /**
+       * Mean over countries of the mean squared distance between a country's
+       * shape and its peers' shapes, per dimension, in squared residual
+       * standard deviations. A shape is the nine standardised residuals minus
+       * their own mean, so a country above its line everywhere has a level and
+       * no shape.
+       */
+      observedMean: z.number(),
+      /** The same mean with profiles kept whole and incomes dealt out at random: peers chosen without regard to income. Read at its 5th percentile. */
+      incomeNull: NullSpread,
+      /** First-factor share of the shape columns: how far shapes line up along shared contrasts. */
+      shapeShare: z.number(),
+      /** The same share with each residual column dealt out at random first: no country-specific shape. Read at its 95th percentile. */
+      shapeNull: NullSpread,
+      /** Descriptive, not read: the peer distance under that same random dealing. */
+      noiseFloor: NullSpread,
+      /** Descriptive, not read: share of countries whose peer distance exceeds the 95th percentile of their own noise floor. */
+      shareBeyond: z.number(),
+      /** The same share under the null: about 0.05 on average by construction. */
+      shareNull: z.object({ mean: z.number(), p95: z.number() }),
+      reading: z.enum(['alike', 'differ', 'noise']),
+    })
+    .nullable(),
+  /** (c) Whether the residual order holds still from release to release and when one country is dropped. */
+  stability: z.object({
+    /** Read from git on `bench diagnose`. Null without git history, in which case the committed figures are kept. */
+    releases: z
+      .object({
+        /** Releases read, oldest to newest. */
+        versions: z.array(z.string()),
+        /** Consecutive pairs with the same country set. */
+        pairs: z.number().int(),
+        /** Spearman of each dimension's residual order between consecutive releases that moved it. */
+        perDimension: z.array(
+          z.object({
+            dimension: DimensionEnum,
+            pairs: z.number().int(),
+            mean: z.number().nullable(),
+            min: z.number().nullable(),
+            /** Countries in the smallest pair compared. */
+            minCountries: z.number().int().nullable(),
+          }),
+        ),
+        reading: z.enum(['stable', 'mixed', 'churning', 'untested']),
+      })
+      .nullable(),
+    leaveOneOut: z.object({
+      perDimension: z.array(
+        z.object({
+          dimension: DimensionEnum,
+          n: z.number().int(),
+          /** Largest change in the slope when one country is dropped, in standard errors of the slope. */
+          maxSlopeShiftSe: z.number(),
+          /** Largest change in a dropped country's own residual, in residual standard deviations. */
+          maxResidualShiftSd: z.number(),
+        }),
+      ),
+      reading: z.enum(['robust', 'fragile']),
+    }),
+  }),
+  /** (d) How much of how far a country's profile sits from the average profile its income line accounts for. */
+  incomeShare: z
+    .object({
+      countries: z.number().int(),
+      mean: z.number(),
+      median: z.number(),
+      /** One minus all residual squares over all deviation squares, pooled across countries. */
+      pooled: z.number(),
+      reading: z.enum(['most', 'part', 'little']),
+    })
+    .nullable(),
+  /** The weaker claim, read from (a), (b) and (c) by the rule D138 fixed in advance. */
+  weakClaim: z.enum(['holds', 'mixed', 'fails']).nullable(),
+})
+export type ResidualStructure = z.infer<typeof ResidualStructure>
+
 /** One check's latest observed value for one country. Never scored. See D60. */
 export const CheckResult = z.object({
   checkId: z.string(),

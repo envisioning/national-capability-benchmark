@@ -191,3 +191,69 @@ export function firstFactorChance(
   shares.sort((a, b) => a - b)
   return { draws, seed, mean: mean(shares), p95: quantile(shares, 0.95) }
 }
+
+/**
+ * Ordinary least squares of `ys` on one regressor `xs`. Null when fewer than
+ * three points or the regressor is constant. `slopeSe` is the standard error
+ * of the slope and `residualSd` the standard error of the estimate, both on
+ * n - 2 degrees of freedom. `leverage[i]` is the hat value of point i, which
+ * gives its residual against the line fitted without it in closed form:
+ * residual / (1 - leverage). See D68 and D138.
+ */
+export function linearFit(
+  xs: number[],
+  ys: number[],
+): {
+  slope: number
+  intercept: number
+  residuals: number[]
+  leverage: number[]
+  residualSd: number
+  slopeSe: number
+} | null {
+  const n = Math.min(xs.length, ys.length)
+  if (n < 3) return null
+  const mx = mean(xs.slice(0, n))
+  const my = mean(ys.slice(0, n))
+  let sxy = 0
+  let sxx = 0
+  for (let i = 0; i < n; i++) {
+    const dx = (xs[i] as number) - mx
+    sxy += dx * ((ys[i] as number) - my)
+    sxx += dx * dx
+  }
+  if (sxx === 0) return null
+  const slope = sxy / sxx
+  const intercept = my - slope * mx
+  const residuals = Array.from({ length: n }, (_, i) => (ys[i] as number) - (intercept + slope * (xs[i] as number)))
+  const leverage = Array.from({ length: n }, (_, i) => 1 / n + ((xs[i] as number) - mx) ** 2 / sxx)
+  const sse = residuals.reduce((a, e) => a + e * e, 0)
+  const residualSd = Math.sqrt(sse / Math.max(n - 2, 1))
+  return { slope, intercept, residuals, leverage, residualSd, slopeSe: residualSd / Math.sqrt(sxx) }
+}
+
+/** Sample standard deviation, n - 1 in the denominator. NaN under two values. */
+export function sampleSd(xs: number[]): number {
+  if (xs.length < 2) return Number.NaN
+  const m = mean(xs)
+  return Math.sqrt(xs.reduce((a, x) => a + (x - m) ** 2, 0) / (xs.length - 1))
+}
+
+/** A shuffled copy, Fisher and Yates, driven by a seeded generator so a null repeats. */
+export function shuffled<T>(xs: readonly T[], random: () => number): T[] {
+  const out = [...xs]
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(random() * (i + 1))
+    const t = out[i] as T
+    out[i] = out[j] as T
+    out[j] = t
+  }
+  return out
+}
+
+/** The largest eigenvalue of the columns' correlation matrix over the number of columns. */
+export function firstFactorShareOf(columns: number[][]): number {
+  if (columns.length === 0) return Number.NaN
+  const { values } = symmetricEigen(correlationMatrix(columns))
+  return (values[0] ?? 0) / columns.length
+}
