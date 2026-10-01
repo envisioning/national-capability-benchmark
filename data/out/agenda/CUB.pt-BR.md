@@ -135,6 +135,8 @@ Entregas documentadas ligadas a indicadores ausentes. Elas não afetam as notas 
 
 - **National COVID-19 vaccination campaign** (Adaptação). Cuba's national COVID-19 vaccination campaign had given at least one vaccine dose to 94% of the country's population by 31 December 2021, according to the Pan American Health Organization.
 - **Civil Defence hurricane evacuation system** (Adaptação). Cuba's Civil Defence system and the provincial and municipal Defence Councils it activates evacuated and protected more than 735,000 people across eastern Cuba ahead of Hurricane Melissa, which struck as a Category 3 storm on 29 October 2025, according to UN OCHA.
+- **Tarea Ordenamiento's single exchange rate, and its fragmentation** (Adaptação). On 1 January 2021 Cuba's government replaced its dual-currency system with a single exchange rate of 24 pesos per dollar for the whole economy. By 1 October 2026 the Central Bank of Cuba published three official dollar rates, of 24, 120 and 689 pesos.
+- **Campaña Nacional de Alfabetización** (Aprendizagem). In 1961 Cuba's national literacy campaign mobilized volunteer teachers, student brigades and worker brigades to teach adults to read across the country. By 30 August 1961, 593,651 people were learning and 64,253 had already been made literate, and the government reported illiteracy reduced to 3.92 percent of the population when the campaign closed.
 
 ## Contribua
 

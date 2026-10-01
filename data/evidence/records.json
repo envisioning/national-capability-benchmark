@@ -9750,6 +9750,1108 @@
         ],
         "travelled": "Caribbean and Central American governments have studied the model through UNDP and regional disaster agencies; the early-warning and phased-alert parts travel, while the compulsory, block-level mobilisation depends on Cuba's political organisation."
       }
+    },
+    {
+      "id": "usa-acp",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "USA",
+      "title": "Affordable Connectivity Program, and its lapse",
+      "claim": "The Federal Communications Commission ran the Affordable Connectivity Program from 31 December 2021, paying monthly broadband discounts through voluntarily participating internet providers to more than 23 million enrolled households, and ended it on 1 June 2024 when the funding Congress had provided ran out.",
+      "metric": {
+        "name": "Households enrolled in the ACP when new enrolments stopped",
+        "value": 23,
+        "unit": "million households",
+        "asOf": "2024-02"
+      },
+      "started": 2021,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Federal Communications Commission, press release 'FCC brings Affordable Connectivity Program to a close' (DOC-402930A1)",
+        "url": "https://docs.fcc.gov/public/attachments/DOC-402930A1.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The 23 million figure is the regulator's own enrolment count, taken at the February 2024 freeze, and it reports sign-ups, not households that would otherwise have gone without broadband: the FCC's claim that 68 percent of ACP households had inconsistent or no connectivity before rests on a self-reported agency survey. The program was a voucher paid through private providers whose participation was voluntary, so a hostile reviewer would call it a subsidy channel rather than joint delivery; the public-private element is that providers carried enrolment, billing and the discount. It grew out of the pandemic-era Emergency Broadband Benefit, so the 2021 start understates how long the capability was built. It ended through a funding lapse rather than a repeal, and the FCC said it could resume if Congress appropriated money, so 'dismantled' records the end of delivery, not the destruction of the administrative machinery. The release is an agency press statement, not an audited statistical series, and the PDF is the script-readable copy; the fcc.gov program pages block automated requests.",
+      "pattern": {
+        "mechanism": "Congress funded a fixed pot, the FCC turned it into a monthly discount that private internet providers applied on their own bills, and enrolment climbed until the pot was exhausted; when Congress did not refill it, the FCC froze enrolment, cut the benefit to a partial discount and closed the program.",
+        "preconditions": [
+          "A national regulator able to certify eligibility against existing benefit rolls such as Lifeline and SNAP",
+          "Thousands of private providers willing to apply a federal discount on their own billing systems",
+          "A one-time appropriation with no automatic renewal, which made the program's life a matter of each budget fight"
+        ],
+        "travelled": "The design reused the Lifeline telephone subsidy's provider-reimbursement model at much larger scale; its end shows how a program financed by one appropriation, rather than by a standing fund, can be stopped by inaction."
+      }
+    },
+    {
+      "id": "usa-interstate",
+      "indicatorId": "large_project_delivery",
+      "iso3": "USA",
+      "title": "Interstate Highway System",
+      "claim": "Under the Federal-Aid Highway Act of 1956, the federal government and the states built the Interstate System. In nominal dollars, the estimated federal cost to complete it rose from $34 billion in the 1958 Interstate Cost Estimate to $114 billion in the final estimate of 1991.",
+      "metric": {
+        "name": "Estimated federal cost to complete the Interstate System, final (1991) Interstate Cost Estimate, nominal",
+        "value": 114,
+        "unit": "USD billion",
+        "asOf": "1991"
+      },
+      "secondMetric": {
+        "name": "Estimated federal cost to complete the Interstate System, first (1958) Interstate Cost Estimate, nominal",
+        "value": 34,
+        "unit": "USD billion",
+        "asOf": "1958"
+      },
+      "started": 1956,
+      "status": "concluded",
+      "source": {
+        "publisher": "US Federal Highway Administration, Highway History: How many Interstate programs were there?",
+        "url": "https://www.fhwa.dot.gov/highwayhistory/howmany.cfm",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "Both figures are in dollars not adjusted for inflation, so the 235 percent rise we compute from them, (114-34)/34, is not a real cost overrun. FHWA itself attributes the growth to inflation, mileage added by Congress in 1968 and later, 'more safety and more attention to the environment' in later programs and 'changes in the definition of completion', as well as to the Interstate Program 'evolving'. The page gives no real-terms figure, no schedule baseline and no per-mile comparison, so it cannot separate execution failure from scope change. The 1958 ICE was a cost-to-complete estimate used to apportion funds, not a contract budget. The source gives no schedule baseline; the final estimate came 35 years after the Act. The source says later Interstate Programs have not ended, so 'concluded' refers to the end of Interstate Construction apportionments under ISTEA. The figures are federal share only.",
+      "pattern": {
+        "mechanism": "Congress set a 90 percent federal match paid from a dedicated Highway Trust Fund fed by fuel taxes, and the Bureau of Public Roads (later FHWA) apportioned it to state highway departments by repeated cost-to-complete estimates, which let the states build to one national standard on a pay-as-you-go basis.",
+        "preconditions": [
+          "A dedicated user-tax revenue stream that kept construction off the general budget",
+          "State highway departments with existing engineering capacity to design and let contracts",
+          "A legislated national network map and design standard fixed before money flowed"
+        ],
+        "travelled": "The trust-fund-plus-match model was copied in transit and airport programs; it travels less well where fuel-tax revenue is small or where no subnational agencies can deliver."
+      }
+    },
+    {
+      "id": "usa-operation-warp-speed",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "USA",
+      "title": "Operation Warp Speed",
+      "claim": "Operation Warp Speed, an HHS and DOD partnership, financed private vaccine makers' development, at-risk manufacturing and advance purchases, including a $5.97 billion contract for 300 million Pfizer/BioNTech doses. Three of the vaccines it bought held FDA emergency use authorization by 1 March 2021, the first from 11 December 2020.",
+      "metric": {
+        "name": "OWS-purchased COVID-19 vaccines holding FDA emergency use authorization",
+        "value": 3,
+        "unit": "vaccines",
+        "asOf": "2021-03-01"
+      },
+      "secondMetric": {
+        "name": "OWS contract value for 300 million Pfizer/BioNTech doses",
+        "value": 5.97,
+        "unit": "USD billion",
+        "asOf": "2021-03-01"
+      },
+      "started": 2020,
+      "status": "concluded",
+      "source": {
+        "publisher": "Congressional Research Service, Insight IN11560 'Operation Warp Speed Contracts for COVID-19 Vaccines and Ancillary Vaccination Materials', version 7",
+        "url": "https://www.congress.gov/crs_external_products/IN/PDF/IN11560/IN11560.7.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The metric counts authorized products, not doses delivered or people vaccinated. It does not show what share of the speed came from federal money rather than private R&D already under way: Pfizer/BioNTech took no federal development funding and joined only through a purchase contract, as the CRS notes. The contract values are awards, not outlays, and CRS cites BARDA and DOD pages without auditing them; the GAO's audit of OWS sits on gao.gov, which blocks automated requests, so it is not the source here. The CRS Insight is a congressional research summary rather than a statistical series, and it does not state the May 2020 launch date, so 'started' is the year vaccine delivery began. Ancillary-supply shortages and distribution problems are flagged in the same document. The Biden administration said it planned to restructure and rename OWS, so 'concluded' marks the end of the vehicle, not of federal vaccine purchasing.",
+      "pattern": {
+        "mechanism": "HHS and DOD pooled BARDA's countermeasure contracting with defense logistics and paid private manufacturers to build production capacity while trials were still running, carrying the financial risk of failure so that doses existed the day authorization came.",
+        "preconditions": [
+          "A standing countermeasure agency (BARDA) with contracting authority and existing industry relationships",
+          "Domestic firms with mRNA and vaccine platforms already in development",
+          "Emergency appropriations large enough to fund parallel bets, some of which failed (Merck/IAVI)"
+        ],
+        "travelled": "Advance market commitments of this kind were proposed for global vaccine supply, but COVAX lacked the purchasing budget and manufacturing ties that made the US version fast."
+      }
+    },
+    {
+      "id": "cub-ordenamiento",
+      "indicatorId": "institutional_responsiveness",
+      "iso3": "CUB",
+      "title": "Tarea Ordenamiento's single exchange rate, and its fragmentation",
+      "claim": "On 1 January 2021 Cuba's government replaced its dual-currency system with a single exchange rate of 24 pesos per dollar for the whole economy. By 1 October 2026 the Central Bank of Cuba published three official dollar rates, of 24, 120 and 689 pesos.",
+      "metric": {
+        "name": "Central Bank of Cuba floating-segment (Segment III) USD rate",
+        "value": 689,
+        "unit": "CUP per USD",
+        "asOf": "2026-10-01"
+      },
+      "secondMetric": {
+        "name": "Single exchange rate set at monetary unification",
+        "value": 24,
+        "unit": "CUP per USD",
+        "asOf": "2021-01-01"
+      },
+      "started": 2021,
+      "status": "eroded",
+      "source": {
+        "publisher": "Banco Central de Cuba, exchange-rate API (tasas de cambio activas)",
+        "url": "https://api.bc.gob.cu/v1/tasas-de-cambio/activas",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The API fields are named tasaOficial, tasaPublica and tasaEspecial. We map them to Segments I, II and III because the bank's rate page shows the same 689.00 figure under its three-segment tabs. The API does not state that mapping, so it is our reading. The API history starts in December 2025, at 410 for the floating segment, so the official series does not document when the single rate first split. A 120-peso rate for individuals existed by 2025, but this record cannot date it from an official source. The unification's other half, withdrawing the convertible peso (CUC), stands and is not counted as lost. A hostile reviewer would say the record shows a monetary outcome, not the speed of rule-making. The case for filing it here is that the state held a fixed rate while the informal market moved away from it, then added segments instead of adjusting the one rate. The record does not show the informal rate, inflation or shortages. The Gaceta's website lists Decreto-Ley 17/2020 as 'Derogada' without saying what replaced it. The MEP page reprints a state-media article and sometimes fails to load.",
+      "pattern": {
+        "mechanism": "The Council of State unified the currency by decree on a fixed date at a fixed rate. When reserves and supply did not support 24 pesos per dollar, the Central Bank layered new official segments, a 120 rate for individuals and then a daily floating rate for exporters, on top of the old rate rather than moving it.",
+        "preconditions": [
+          "Hard-currency reserves able to defend a fixed rate, which Cuba lacked",
+          "A state wholesale sector whose prices and contracts were written at 24 and would be repriced by any move",
+          "A tolerated informal currency market that kept setting the price the official rate ignored"
+        ],
+        "travelled": "Venezuela and Argentina have run the same layered-rate sequence after a unification; in each, the new segments were added as exceptions before the old rate was abandoned."
+      }
+    },
+    {
+      "id": "cub-alfabetizacion",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "CUB",
+      "title": "Campaña Nacional de Alfabetización",
+      "claim": "In 1961 Cuba's national literacy campaign mobilized volunteer teachers, student brigades and worker brigades to teach adults to read across the country. By 30 August 1961, 593,651 people were learning and 64,253 had already been made literate, and the government reported illiteracy reduced to 3.92 percent of the population when the campaign closed.",
+      "metric": {
+        "name": "People enrolled and learning in the literacy campaign, reported at the IV National Literacy Meeting",
+        "value": 593651,
+        "unit": "people",
+        "asOf": "1961-08-30"
+      },
+      "secondMetric": {
+        "name": "Illiteracy rate reported after the campaign, share of total population",
+        "value": 3.92,
+        "unit": "% of population",
+        "asOf": "1961"
+      },
+      "started": 1961,
+      "status": "concluded",
+      "source": {
+        "publisher": "Ministerio de Educación de la República de Cuba, '¿Cómo surgieron las Brigadas de Alfabetización Patria o Muerte?'",
+        "url": "https://www.mined.gob.cu/como-surgieron-las-brigadas-de-alfabetizacion-patria-o-muerte/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "Both numbers come from commemorative articles on Cuban ministry websites, not from a statistical release. The MINED article says it was taken from the Communist Party's website, and both rest on the campaign's own 1961 records, which nobody independently audited. The 593,651 is a mid-campaign count from August 1961, not the final number taught, and the source gives no denominator of adults. A participation share therefore cannot be computed, and the literacy standard reached was basic, a letter written at the end of the course. The 3.92 percent is a government figure against the total population of the time, while the 23.5 percent baseline the MINED article cites is from the 1953 census, eight years earlier, so the two are not a like-for-like comparison. The campaign was a one-year mobilization, not a standing system, and the follow-on adult schooling it created (Superación Obrera y Campesina) is not measured here. The case is 65 years old and says nothing about adult learning participation in Cuba today.",
+      "pattern": {
+        "mechanism": "The revolutionary government closed secondary schools for part of 1961 and sent students, teachers and worker brigades to live with illiterate households, after a door-to-door census of illiterates run through mass organizations. It then built follow-on worker-peasant education so the new readers kept studying.",
+        "preconditions": [
+          "A census of who could not read, collected house by house through neighborhood and mass organizations",
+          "A state able to suspend schooling and mobilize about a quarter of a million volunteers under one command",
+          "A single primer and teacher manual that untrained volunteers could deliver"
+        ],
+        "travelled": "Cuba exported the method as 'Yo, sí puedo', a radio and video version used in about 30 countries; the exported form replaced the volunteer army with recorded lessons and local facilitators, because the mass mobilization did not travel."
+      }
+    },
+    {
+      "id": "che-covid-credits",
+      "indicatorId": "institutional_responsiveness",
+      "iso3": "CHE",
+      "title": "Covid-19 bridging credits",
+      "claim": "The Swiss Federal Council adopted an emergency ordinance on 25 March 2020 and, through 125 banks including PostFinance under federal guarantee, granted 137,870 Covid-19 credits worth CHF 16.9 billion between 26 March and 31 July 2020, with 76,034 applications submitted in the first eight days.",
+      "metric": {
+        "name": "Covid-19 credits granted in the 128-day application window",
+        "value": 137870,
+        "unit": "credits",
+        "asOf": "2020-07-31"
+      },
+      "secondMetric": {
+        "name": "Covid-19 credit applications submitted in the first eight days",
+        "value": 76034,
+        "unit": "credits",
+        "asOf": "2020-04-02"
+      },
+      "started": 2020,
+      "status": "concluded",
+      "source": {
+        "publisher": "Swiss Federal Council, Covid-19-Solidarbürgschaftskredite: Zwischenbericht (29 November 2023)",
+        "url": "https://www.newsd.admin.ch/newsd/message/attachments/84869.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The source is the Federal Council evaluating its own programme, and the figures come from the programme's own platform (covid19.easygov.swiss). The construct is the speed at which rules and programmes change; the metric counts credits granted, which measures uptake, and the speed is carried by the dates (ordinance prepared in 12 days, adopted 25 March, credits from 26 March) rather than by a timestamp series comparable across countries. The speed was bought by suspending the normal process: the ordinance rested on the Federal Council's emergency power under Art. 185(3) of the Constitution, and credits were granted on a one-sided self-declaration with only rudimentary checks. The same report puts the upper bound of abusive applications at 5.5 percent of credits if every pending proceeding ended in conviction, with 416 convictions (0.3 percent) by mid-June 2023, and 51 percent of the credit volume (CHF 8.6 billion) still outstanding then, so the final loss is not known; the 0.37 percent loss rate is as of mid-2023. Delivery ran through private banks, so the speed is shared credit between the state and the banking network, and the number does not show how many firms survived because of the credit. The PDF's own prose rounds the first-eight-day figure to 'rund 76 000 gewährten' credits, while the 76,034 is stated as applications submitted ('Anträge ... eingereicht'). The source is a 108-page PDF; the figures sit in the summary, Table 1 and section 3.3.",
+      "pattern": {
+        "mechanism": "The Federal Council wrote an emergency ordinance in 12 days that let firms self-declare eligibility for a bank loan of up to 10 percent of turnover, which recognised guarantee cooperatives backed 100 percent with federal money, so the banks' existing client relationships and digital channels did the distribution within hours of a request.",
+        "preconditions": [
+          "A constitutional emergency power that lets the executive legislate within days, with parliament ratifying afterwards",
+          "Existing guarantee cooperatives and a dense banking network that already knew every small firm's turnover",
+          "A one-form online application and acceptance of fraud risk, policed after payout rather than before"
+        ],
+        "travelled": "Germany, Austria, France and Italy ran state-guaranteed loan schemes at the same time; the Federal Council's own comparison credits the Swiss speed to the digital application step and the public-private set-up rather than to the size of the guarantee."
+      }
+    },
+    {
+      "id": "che-civil-protection-shelters",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "CHE",
+      "title": "Civil protection shelters",
+      "claim": "Under the shelter-building duty introduced with Switzerland's 1963 civil protection legislation, the Federal Office for Civil Protection reported about nine million shelter places in some 370,000 private and public shelters in 2023, a national coverage rate above 100 percent of the resident population.",
+      "metric": {
+        "name": "Shelter places in private and public shelters",
+        "value": 9000000,
+        "unit": "shelter places (rounded, about)",
+        "asOf": "2023-08-22"
+      },
+      "secondMetric": {
+        "name": "National shelter coverage rate",
+        "value": 100,
+        "unit": "% of permanent resident population (publisher states 'over 100')",
+        "asOf": "2023-08-22"
+      },
+      "started": 1963,
+      "status": "operating",
+      "source": {
+        "publisher": "Federal Office for Civil Protection (BABS), Informationen rund um die Schutzräume",
+        "url": "https://www.babs.admin.ch/de/informationen-rund-um-die-schutzraume",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The construct asks for demonstrated capacity to prepare for and recover from major shocks; shelters are preparation for armed conflict and have never been used for that purpose, so the record shows a stock built, not a capacity demonstrated. Both figures are rounded ('rund', 'ca.') on an information page, not a statistical table, and the page is from August 2023; the July 2026 page repeats the 370,000 shelters but not the place count, and describes the goal of one place per resident as 'nahezu erreicht', nearly reached rather than exceeded. 'Over 100 percent' is a national aggregate: the publisher itself says inner cities and peripheral regions still lack places and growing areas need more, so coverage where people live is lower than the headline. The basis is the permanent resident population, so tourists and short-stay residents are not counted. Most places are in private basements used for storage in peacetime and need preparation time before occupancy, and much of the stock dates from the Cold War. The 1963 start is the civil protection act; the separate building-measures act and the construction of the stock followed over decades, and the cost was borne largely by property owners rather than the state.",
+      "pattern": {
+        "mechanism": "Federal law obliges anyone building housing in a commune short of places to build, equip and maintain a shelter, or pay a replacement contribution (CHF 1,400 per place today) that communes spend on public shelters; cantons keep an assignment plan that allocates every resident a place.",
+        "preconditions": [
+          "Sixty years of building permits passing through one federal rule, so the stock accumulates with the housing stock",
+          "Communes and cantons with the registers to assign residents to places and update the plan",
+          "A political consensus, from the Cold War on, that civil defence is a cost property owners carry"
+        ],
+        "travelled": "Finland runs a similar duty and keeps it operating; Germany designated public shelters and then dropped them after 2007, which is the reversal this record should be read against."
+      }
+    },
+    {
+      "id": "ven-covid-vaccination",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "VEN",
+      "title": "COVID-19 vaccination campaign",
+      "claim": "Venezuela's health authorities reported to WHO that 22,157,232 people, 78 per 100 population, had received at least one COVID-19 vaccine dose by 29 December 2023, from a first dose given on 22 February 2021, with 14,287,370 (50 per 100) completing the primary series.",
+      "metric": {
+        "name": "People vaccinated with at least one COVID-19 vaccine dose",
+        "value": 22157232,
+        "unit": "people",
+        "asOf": "2023-12-29"
+      },
+      "secondMetric": {
+        "name": "People who completed the primary series (last dose)",
+        "value": 50,
+        "unit": "per 100 population",
+        "asOf": "2023-12-29"
+      },
+      "started": 2021,
+      "status": "concluded",
+      "source": {
+        "publisher": "World Health Organization, COVID-19 dashboard vaccination data (vaccination-data.csv)",
+        "url": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/vaccination-data.csv",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The figures are Venezuela's own reports to WHO (DATA_SOURCE 'REPORTING'), with no independent coverage survey behind them, from a government whose routine immunization data WHO and UNICEF grade as lacking accepted empirical support (see ven-pai). The per-100 rates divide by a population estimate that is highly uncertain after the emigration of millions of Venezuelans, so the 78 and 50 could be off in either direction. The 28-point gap between first dose and completed series, and boosters at 2 per 100, show a campaign that stalled after first doses; the record is a partial delivery, not full protection. The VACCINES_USED field is empty, so the record cannot show which products were used or whether each held WHO emergency use listing, and the source does not show where the doses came from, so the record evidences distribution only. Vaccination is a response to one shock, not proof of general preparedness, and the file was last updated in December 2023. The source is a CSV with no prose; the numbers are read from one row.",
+      "pattern": {
+        "mechanism": "Venezuela's health ministry ran a mass COVID-19 campaign through its public clinic network and mass vaccination points, and reached a majority of the reported population with a first dose within three years.",
+        "preconditions": [
+          "A public clinic and community network able to run mass vaccination points nationwide",
+          "Population registers good enough to count who received a second dose, which the drop-off suggests were weak",
+          "A supply of doses large enough for a national campaign, however obtained"
+        ],
+        "travelled": "Cuba (cub-covid-vaccination) ran a campaign on domestic vaccines with a much higher completion rate; the Venezuelan case shows the first-dose reach a centralised network can deliver and the follow-up it cannot."
+      }
+    },
+    {
+      "id": "aus-vet-fee-help",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "AUS",
+      "title": "VET FEE-HELP, and its abolition",
+      "claim": "Australia's VET FEE-HELP loan scheme, introduced in 2008 to fund higher-level vocational courses, grew from fewer than 3,500 loans in 2009 to 196,108 in 2015, and was abolished and replaced from 1 January 2017 by VET Student Loans, which reached 53,892 students in 2019.",
+      "metric": {
+        "name": "VET FEE-HELP loans at the scheme's peak",
+        "value": 196108,
+        "unit": "loans",
+        "asOf": "2015"
+      },
+      "secondMetric": {
+        "name": "VET Student Loans recipients under the replacement scheme",
+        "value": 53892,
+        "unit": "students",
+        "asOf": "2019"
+      },
+      "started": 2008,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Parliament of Australia, Parliamentary Library, The Higher Education Loan Program (HELP) and related loans: a chronology (Carol Ey, 23 March 2021)",
+        "url": "https://www.aph.gov.au/About_Parliament/Parliamentary_departments/Parliamentary_Library/Research/Chronologies/2020-21/HigherEducation",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "Loans are not learners: the count is loans issued, not adults who studied or completed, and the Library's own note says the 2017 onward figures count students while earlier years count loans or places, so the peak and the successor figure are not on the same unit and the fall cannot be read as a precise percentage. Much of the 2013 to 2015 growth was not learning at all: the Senate Education and Employment Committee's report on the replacement bills (https://www.aph.gov.au/Parliamentary_Business/Committees/Senate/Education_and_Employment/VETStudentLoans/Report/c02) records loan value rising from $26 million in 2009 to $2.9 billion in 2015 alongside 'unscrupulous behaviour by a small number of providers and poor student outcomes', so the peak overstates real adult participation and the reversal is partly a correction of fraud rather than a loss of capability. The loans cover only diploma-level and above vocational courses, a small slice of adult learning; the record says nothing about the national share of adults in training, which the ABS measures separately. The Auditor-General's audit of the scheme (ANAO report 31 of 2016-17) is the primary account of the failure, but the ANAO site did not open from here, so its figures are not used. The source is a secondary compilation by the Parliamentary Library from departmental annual reports, and 2016 figures are missing from it.",
+      "pattern": {
+        "mechanism": "The Commonwealth extended income-contingent loans to vocational diplomas and opened them to private providers with light entry controls; providers and brokers enrolled students at scale, Parliament then legislated the scheme's closure and replaced it with capped loans for approved courses and providers.",
+        "preconditions": [
+          "An income-contingent loan system administered through the tax office, so the state could finance study with no upfront fee",
+          "A contestable training market in which private providers drew public money per enrolment",
+          "Regulators (ASQA, ACCC, the department) whose powers and data lagged the growth of enrolments by several years"
+        ],
+        "travelled": "The same demand-driven, provider-paid design produced comparable mis-selling in the United States for-profit college sector and in England's Individual Learning Accounts, which were closed in 2001; each time the fix was to cap the loans and vet the providers, which shrinks reach along with fraud."
+      }
+    },
+    {
+      "id": "aus-jobkeeper",
+      "indicatorId": "institutional_responsiveness",
+      "iso3": "AUS",
+      "title": "JobKeeper Payment",
+      "claim": "Australia's Treasury designed, Parliament legislated and the tax office began paying the JobKeeper wage subsidy just over five weeks after its announcement on 30 March 2020, and in its first phase it supported on average around 925,000 businesses and 3.6 million individuals each month before ending on 28 March 2021.",
+      "metric": {
+        "name": "Time from announcement to first JobKeeper payments",
+        "value": 5,
+        "unit": "weeks (just over)",
+        "asOf": "2020-05"
+      },
+      "secondMetric": {
+        "name": "Individuals supported each month, first phase average",
+        "value": 3600000,
+        "unit": "individuals",
+        "asOf": "2020-09"
+      },
+      "started": 2020,
+      "status": "concluded",
+      "source": {
+        "publisher": "Australian Government, The Treasury, Insights from the first six months of JobKeeper",
+        "url": "https://treasury.gov.au/sites/default/files/2021-10/p2021-211978_0.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "Treasury is evaluating its own programme, and the five-week figure is a statement in prose, not a timestamped series. Speed was bought by routing payment through existing tax-office systems and a flat $1,500 fortnightly rate, which shipped known errors: the same report finds around $8.9 billion went to businesses whose turnover rose, and the 2023 Independent Evaluation of the JobKeeper Payment (https://treasury.gov.au/sites/default/files/2023-10/p2023-455038.pdf) records that around 2 million short-term casual and temporary-visa employees were excluded, that the first-phase cost estimate of $130 billion, which a reporting error had inflated, was revised down to $70 billion, and that JobKeeper was announced 'later than job retention schemes in comparable countries'. The total cost was $88.8 billion. One emergency response shows the state can change programmes quickly under extreme pressure; it does not show routine responsiveness of rules in normal times, which is what the indicator's construct mostly asks about. Coverage counts are monthly averages from tax-office payment data, not unique people.",
+      "pattern": {
+        "mechanism": "Treasury designed a flat-rate wage subsidy and the Australian Taxation Office paid it through the single-touch payroll and business registration systems it already ran, so Parliament could legislate eligibility and money reached employers within about five weeks.",
+        "preconditions": [
+          "A tax office already holding near-real-time payroll and turnover data for most employers",
+          "A Parliament able to pass emergency legislation within days with bipartisan support",
+          "Fiscal room to accept large deadweight in exchange for speed"
+        ],
+        "travelled": "Germany's Kurzarbeit, the UK furlough scheme and New Zealand's wage subsidy did the same job in the same months; the schemes that already existed in law, like Kurzarbeit, paid sooner, and the new ones depended on how much payroll data the tax authority already held."
+      }
+    },
+    {
+      "id": "fin-adult-education-allowance",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "FIN",
+      "title": "Adult education allowance (aikuiskoulutustuki), and its abolition",
+      "claim": "Finland paid an earnings-related adult education allowance from 2001 so that working adults could take leave to study, reaching 30,124 recipients in 2022 and 32,518 in 2023, until Parliament abolished it in May 2024 with a transition under which the allowance could be granted until 31 December 2025.",
+      "metric": {
+        "name": "Adult education allowance recipients in 2022, the year before the abolition decision",
+        "value": 30124,
+        "unit": "persons",
+        "asOf": "2022"
+      },
+      "secondMetric": {
+        "name": "Adult education allowance recipients in 2023, the last full year before the abolition took effect",
+        "value": 32518,
+        "unit": "persons",
+        "asOf": "2023"
+      },
+      "started": 2001,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Finnish Ministry of Finance, Budget Department, memorandum on abolishing the adult education allowance (26 February 2024)",
+        "url": "https://vm.fi/documents/10623/180963988/2024-02-26+Aikuiskoulutustuen+lakkauttaminen.pdf/369201c6-515d-9254-3452-3db739582156/2024-02-26+Aikuiskoulutustuen+lakkauttaminen.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The allowance financed study leave; it did not measure participation. About 30,000 recipients a year is a small slice of Finland's working-age population, so its abolition moves the indicator's construct (the share of adults in education or training) by at most a little over one percentage point of the workforce, and no survey figure here shows that participation actually fell. The ministry's own memo, written to cost the abolition, notes that about half of recipients already held a higher-education degree and that the benefit reduced labour supply by an estimated 9,400 to 10,500 person-years, so the case for the allowance as a learning-equity tool is contested in the source itself. The 2022 figure is from a Ministry of Finance memorandum, the 2023 figure from the Employment Fund (Työllisyysrahasto), a statutory fund run by the labour-market parties under Financial Supervisory Authority oversight, reporting on its own benefit; the 2023 number was read from an infographic in a PDF. The source does not print the full 2001-2025 recipient series: only 2020-2024 values are printed, in which 2023 is the highest. Applications surged in early 2024 ahead of the cut-off, so the last years overstate steady-state demand. The abolition was a fiscal decision announced in the 2023 government programme, so the record documents a capability ended by choice, not by collapse.",
+      "pattern": {
+        "mechanism": "Finland's tripartite system funded study leave for experienced workers out of unemployment-insurance contributions, administered by the Employment Fund; the Orpo government then abolished it to cut contributions and public spending, and Parliament passed the repeal in May 2024.",
+        "preconditions": [
+          "An earnings-related social insurance fund able to carry an education benefit alongside unemployment cover",
+          "Employer acceptance of statutory study leave, through tripartite bargaining",
+          "A political majority willing to keep paying for it when fiscal consolidation became the priority"
+        ],
+        "travelled": "Other Nordic states have study-leave income support. Finland's abolition shows how a contribution-funded benefit with no constituency outside its users can be dropped in one budget round."
+      }
+    },
+    {
+      "id": "fin-report-on-the-future",
+      "indicatorId": "government_foresight_capacity",
+      "iso3": "FIN",
+      "title": "Government Report on the Future and the parliamentary Committee for the Future",
+      "claim": "Every Finnish government since 1993 has submitted a Report on the Future to Parliament, answered by a standing Committee for the Future; Part I of the Orpo government's report, a 20-year scenario process prepared jointly by all ministries and informed by 40 dialogues on Finland's future, was submitted on 18 September 2025.",
+      "metric": {
+        "name": "Scenario horizon of Part I of the Government Report on the Future",
+        "value": 20,
+        "unit": "years ahead",
+        "asOf": "2025-09-18"
+      },
+      "secondMetric": {
+        "name": "Dialogues on Finland's future organised for the report",
+        "value": 40,
+        "unit": "dialogues",
+        "asOf": "2025"
+      },
+      "started": 1993,
+      "status": "operating",
+      "source": {
+        "publisher": "Finnish Government, Prime Minister's Office, Foresight and work on the future",
+        "url": "https://valtioneuvosto.fi/en/foresight-activities-and-work-on-the-future/government-report-on-the-future",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "Both numbers describe the process, not its effect: a 20-year horizon and 40 dialogues show the report was made, not that any decision changed because of it. The construct asks for existence, mandate and continuity, and the strongest evidence of continuity, one report every electoral term since 1993, is stated by the Prime Minister's Office as a practice; the source does not list each report, so the count of reports since 1993 is not given here. The figures are the government describing its own work. The parliament page states that the Committee for the Future is standing and was established in 1993, and it renders by script, so a reader without JavaScript sees an empty page although the text is in the delivered data. Finnish foresight is widely cited abroad, but praise is not evidence and is not used here.",
+      "pattern": {
+        "mechanism": "The Prime Minister's Office coordinates an interministerial foresight working group that drafts a scenario report once per electoral term, and Parliament's Committee for the Future answers it, so foresight is a recurring duty of both branches rather than a project.",
+        "preconditions": [
+          "Cross-party agreement in Parliament that long-range questions deserve a standing committee",
+          "A Prime Minister's Office strategy department with a secretariat to run the interministerial process",
+          "A consensus political culture in which coalition changes do not discard the previous government's institutions"
+        ],
+        "travelled": "Several parliaments have set up committees for the future modelled on Finland's; the retelling usually keeps the committee and drops the government's matching duty to report, which is the half that makes the dialogue run."
+      }
+    },
+    {
+      "id": "dom-quedate-en-casa",
+      "indicatorId": "institutional_responsiveness",
+      "iso3": "DOM",
+      "title": "Quédate en Casa emergency cash transfer",
+      "claim": "Announced on 25 March 2020 and paying from April, the Dominican government's Quédate en Casa transfer was built on the existing SIUBEN registry and PROSOLI payment system and, by the president's report to the Senate of 10 July 2020, reached more than 1.6 million households, 780,000 of them new to social assistance.",
+      "metric": {
+        "name": "Households benefiting from Quédate en Casa, as reported by the president to the Senate",
+        "value": 1600000,
+        "unit": "households (more than)",
+        "asOf": "2020-07-10"
+      },
+      "secondMetric": {
+        "name": "Households new to social assistance among Quédate en Casa beneficiaries",
+        "value": 780000,
+        "unit": "households",
+        "asOf": "2020-07-10"
+      },
+      "started": 2020,
+      "status": "concluded",
+      "source": {
+        "publisher": "World Bank, Social Protection Response to the COVID-19 Crisis in the Dominican Republic (January 2021)",
+        "url": "https://documents1.worldbank.org/curated/en/325041623999751171/pdf/Social-Protection-Response-to-the-COVID-19-Crisis-in-the-Dominican-Republic.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The headline count is the government's own figure, relayed by the World Bank, and the same footnote says different sources and timelines report different figures: the Vice-Presidency announced 899,354 existing PROSOLI households plus 600,646 temporary ones on 2 April 2020. The report was written in 2020 and its spending figures through December are projections. Speed came from infrastructure built long before: SIUBEN identified the households and PROSOLI and ADESS paid them, so the record shows a registry being used under pressure rather than a rule changed from nothing, and SIUBEN covered only about 60 percent of the population, which is why on-demand applications (about one million claims, 70,000 admitted, per the Vice-President) were needed. The programme was temporary by design and was extended by decree to December 2020 and then phased out; nothing here shows the responsiveness carried over to later shocks. Coverage is households paid, not poverty averted.",
+      "pattern": {
+        "mechanism": "The social policy cabinet (GCPS) chaired by the Vice-Presidency raised the transfer for 811,003 households already on PROSOLI and added new households classified as poor or vulnerable in SIUBEN, while ADESS partnered with banks and card networks and signed on more than 2,000 new retailers to pay them.",
+        "preconditions": [
+          "A proxy-means social registry (SIUBEN) with recent survey data to target new households without new fieldwork",
+          "A working electronic payment administrator (ADESS) and a retailer network that could be extended",
+          "Emergency fiscal room"
+        ],
+        "travelled": "Most Latin American governments scaled transfers through their social registries in 2020; the countries with registries covering a larger share of the population needed fewer on-demand fixes."
+      }
+    },
+    {
+      "id": "dom-punta-catalina",
+      "indicatorId": "large_project_delivery",
+      "iso3": "DOM",
+      "title": "Punta Catalina thermoelectric plant, and its cost overrun",
+      "claim": "The Dominican state electricity holding CDEEE awarded the Punta Catalina coal plant in November 2013 and agreed a final contract price of US$1,945.0 million after the award, including the unloading port; after construction delays and a March 2020 dispute settlement with the contractor, the value carried into the plant's 2022 public trust was US$2,340.54 million, about 20 percent above the contract price.",
+      "metric": {
+        "name": "Value of Punta Catalina stated in the 2022 public-trust contract, per the EPC contract and the March 2020 dispute settlement",
+        "value": 2340.54,
+        "unit": "US$ million",
+        "asOf": "2020-03-03"
+      },
+      "secondMetric": {
+        "name": "EPC contract price finally agreed after award, including the unloading port",
+        "value": 1945,
+        "unit": "US$ million",
+        "asOf": "2013"
+      },
+      "started": 2013,
+      "status": "operating",
+      "source": {
+        "publisher": "Presidency of the Dominican Republic, statement on the Punta Catalina public trust (15 January 2022)",
+        "url": "https://presidencia.gob.do/noticias/punta-catalina-se-mantendra-como-propiedad-del-estado",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The 20 percent overrun is computed here from two documents by different bodies, not published as a figure. The presidency itself calls the US$2,340.54 million a reference number, \"no es definitivo, ni como valor del activo ni como monto final de inversión\", pending a financial audit, so it is a floor on cost, not the final cost. The US$1,945.0 million comes from a commission appointed by the president who built the plant, hosted by the Consejo Económico y Social, whose chair led it; it was written in 2017 at about 70 percent completion. The same report records that CDEEE was paying milestones against the higher offered price of US$2,040.7 million, so the baseline itself is disputed. No schedule figure with a planned and actual date was found in an opened official source; the commission only puts the cost of delay at about US$25 million a month. The award followed a tender later investigated for Odebrecht bribery, which the overrun figure does not capture.",
+      "pattern": {
+        "mechanism": "The government declared a generation emergency by decree, had CDEEE tender a 2-unit coal plant as a single EPC contract with a foreign consortium, and financed milestone payments from the budget and export credit; when payments and works fell behind, it settled the disputes in 2020 at a higher value and later placed the plant in a public trust run by Banreservas' fiduciary.",
+        "preconditions": [
+          "An emergency decree that let one state company run the procurement outside normal planning",
+          "A single EPC contractor carrying design and construction risk, with milestone pricing open to dispute",
+          "An external audit body able to publish a final cost, which here came only years after commissioning"
+        ],
+        "travelled": "Large single-contractor energy builds tendered under emergency powers show the same sequence elsewhere in the region: a fixed headline price at award, delays tied to payment disputes, and a settlement that resets the price before any audit."
+      }
+    },
+    {
+      "id": "est-foresight-centre",
+      "indicatorId": "government_foresight_capacity",
+      "iso3": "EST",
+      "title": "Foresight Centre at the Riigikogu (Arenguseire Keskus)",
+      "claim": "Estonia's parliament set up a statutory Foresight Centre within the Chancellery of the Riigikogu under the Foresight Act of 2016. In 2025 the centre published four research-direction reports and 17 short reports, drawing on more than 30 researchers and experts.",
+      "metric": {
+        "name": "Research-direction reports published by the Foresight Centre",
+        "value": 4,
+        "unit": "reports",
+        "asOf": "2025"
+      },
+      "secondMetric": {
+        "name": "Short reports (lühiraportid) published by the Foresight Centre",
+        "value": 17,
+        "unit": "reports",
+        "asOf": "2025"
+      },
+      "started": 2016,
+      "status": "operating",
+      "source": {
+        "publisher": "Chancellery of the Riigikogu (Parliament of Estonia), 2025 activity report (2025. aasta tegevusaruanne), chapter VIII Arenguseire keskus",
+        "url": "https://www.riigikogu.ee/wp-content/uploads/2026/05/2025.-aasta-tegevusaruanne.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The two counts measure output, not influence. Nothing in the source shows that a scenario changed a budget, a law or a programme. The publisher is the Riigikogu Chancellery reporting on a unit it houses and services, so this is self-reporting with no external evaluation. The 34% spontaneous awareness figure in the same chapter comes from a Kantar Emor survey reported in the same chapter. Report counts are not comparable across countries or years: research directions vary in scope, and the 17 short reports run from agriculture competitiveness to private tutoring. The centre advises parliament, not the executive, so it says nothing about whether the government runs foresight inside ministries. It is small: in January 2025 the chair of the Economic Affairs Committee, Jaak Aab, said the committee would do its best to keep the centre's budget intact through spending cuts (Riigikogu press release, https://www.riigikogu.ee/pressiteated/majanduskomisjon-kinnitas-arenguseire-keskuse-2025-aasta-tegevuskava/), which shows continuity is not guaranteed. Continuity is real but rests on a redesign. The 2016 Act dissolved the Estonian Development Fund, which had housed the earlier foresight work, and the record does not show whether capacity was lost in that transfer. The Riigi Teataja page that carries the founding dates renders only with JavaScript.",
+      "pattern": {
+        "mechanism": "The Riigikogu legislated a foresight centre inside its own chancellery and gave it a separate budget line and a duty to report to the Economic Affairs Committee every year. Its five-member council, from which MPs and ministers are barred, is appointed by the Economic Affairs Committee, a business organisation the committee names, the President, the university rectors and the Academy of Sciences (§ 4(2)-(3)), which puts most of the council outside parliament.",
+        "preconditions": [
+          "A parliamentary committee willing to adopt the centre's yearly plan and defend its budget across governments",
+          "A pool of domestic researchers the centre can commission, since it buys most of its studies",
+          "An earlier foresight programme (the Development Fund) whose staff and practice could be moved rather than started from zero"
+        ],
+        "travelled": "Finland's Committee for the Future is the usual comparison. It is a standing committee of MPs, while Estonia's centre is a staffed analytical unit with an outside council. The Estonian form needs less political time but depends more on one budget line."
+      }
+    },
+    {
+      "id": "est-varude-keskus",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "EST",
+      "title": "Estonian Stockpiling Agency (Eesti Varude Keskus) national emergency stocks",
+      "claim": "After COVID-19 exposed supply gaps, Estonia set up a state stockpiling company in 2021 that holds food, healthcare, veterinary and fuel stocks. By the National Audit Office's January 2026 review, its food stocks covered 10% of the population for 30 days, against a government target of 14 days for the whole population, and just over 90% of the required pharmaceutical stock was in place.",
+      "metric": {
+        "name": "Food stocks: share of population covered for 30 days",
+        "value": 10,
+        "unit": "% of population (30 days)",
+        "asOf": "2026-01"
+      },
+      "secondMetric": {
+        "name": "Government target for food stocks: days of supply for the entire population",
+        "value": 14,
+        "unit": "days (entire population)",
+        "asOf": "2026-01"
+      },
+      "started": 2021,
+      "status": "operating",
+      "source": {
+        "publisher": "National Audit Office of Estonia (Riigikontroll), Effectiveness of the establishment and deployment of the stockpiles of the state, report to the Riigikogu, public summary",
+        "url": "https://www.riigikontroll.ee/sites/default/files/documents/2026-01/KA_80141_Effectiveness%20of%20the%20establishment%20and%20deployment%20of%20the%20stockpiles%20of%20the%20state_09.01.2026.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "This is evidence that capacity was built and also that it falls short. The audit itself says it could not judge whether the food stocks are sufficient. Our arithmetic, not the auditor's: 10% of the population for 30 days is about three person-days per head, roughly a fifth of the 14-day target. Only the summary is public, because the full report is restricted for five years, so the underlying volumes and methods cannot be checked. About two-thirds of the food stock is flour, and the contract partner holds half of that as grain, which is raw material. The stocks are delegated, held by contracted firms rather than the state. The agency set its own lower target, the ministries accepted it, and the government target has not been formally changed, so it is unclear which target the system answers to. Release has been rehearsed only for pharmaceuticals, which have been drawn three times. The release of food, veterinary products and protective equipment has not been agreed or practised: the veterinary release exercise was postponed from autumn 2025 to March 2026, food release is first to be practised in the Ilves 2026 national exercise, and some release guidance is due only by the end of 2027. Nothing here shows performance in a real shock. The status is operating rather than eroded because no peak was lost: the stock never reached its target. The founding year rests on the agency's own site and a 2020 ministry press release.",
+      "pattern": {
+        "mechanism": "The government turned its fuel-reserve agency (OSPA) into a single stockpiling company under the economy ministry and gave it food, medicines, protective equipment and veterinary stocks. Responsibility had been spread across ministries, which COVID-19 showed left the country buying supplies in the middle of an emergency.",
+        "preconditions": [
+          "An existing fuel-stock agency with procurement, rotation and storage contracts to extend",
+          "A domestic food market large enough to hold delegated stocks, which the agency says is the binding limit here",
+          "Ministries that agree in advance on who releases a stock and how it reaches people, which is the step still missing for food"
+        ],
+        "travelled": "The 2020 announcement names Finland's centralised security-of-supply model as the example. Estonia copied the single agency but not yet the scale, because its market is too small to hold Finnish-style delegated stocks."
+      }
+    },
+    {
+      "id": "gtm-bono-familia",
+      "indicatorId": "institutional_responsiveness",
+      "iso3": "GTM",
+      "title": "Bono Familia, the COVID-19 emergency cash transfer",
+      "claim": "Guatemala's Ministry of Social Development (MIDES) made the first Bono Familia payments in May 2020, two months after the pandemic emergency was declared. By December 2020 the programme had reached 2.7 million beneficiaries, 21 times the 128,036 beneficiaries of the regular Bono Social cash transfer in 2019.",
+      "metric": {
+        "name": "Bono Familia beneficiaries",
+        "value": 2700000,
+        "unit": "beneficiaries",
+        "asOf": "2020-12"
+      },
+      "secondMetric": {
+        "name": "Beneficiaries of the regular conditional cash transfer (Bono Social) before the shock",
+        "value": 128036,
+        "unit": "beneficiaries",
+        "asOf": "2019"
+      },
+      "started": 2020,
+      "status": "concluded",
+      "source": {
+        "publisher": "World Bank and UNICEF, Programa Bono Familia: Innovación y Lecciones Aprendidas para la Protección Social",
+        "url": "https://documents1.worldbank.org/curated/en/099040011012240970/pdf/P17626500e01ac0de0be110c7d9c9d9ce74.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The publishers are Guatemala's development partners (the World Bank lent to its 2020 crisis response) and this is a lessons-learned brochure, not an independent evaluation, and no Contraloría audit was consulted. Beneficiaries are registrations tied mostly to electricity meters, not verified unique people or households. Eligibility ran through electricity consumption, so households without power came in only through special cases capped at 10% (143,014 special cases). The 21-times figure compares a three-payment emergency transfer with a conditional programme of a different design, so it measures scale-up, not like-for-like coverage. The poverty effect is a World Bank simulation. The responsiveness did not last. The same document says cash transfer programmes shrank between 2012 and 2021, except in 2020. Bono Social reached only 152,702 households in 2018 at 0.05% of GDP, and the brochure lists open challenges in carrying the payment model into regular programmes. One episode of fast emergency scale-up does not show that rules and programmes in general change quickly.",
+      "pattern": {
+        "mechanism": "A law created a Q6 billion emergency fund and MIDES, which had no social registry, used electricity distributors' customer records to identify households, telecom operators to register and notify them, and banks' virtual accounts and ATMs to pay them. Its caseload grew 21 times in eight months.",
+        "preconditions": [
+          "Near-universal electricity metering, so a utility customer list could stand in for a social registry",
+          "A banking network willing to open virtual accounts at scale and pay out through ATMs and retail points",
+          "A congressional appropriation passed within weeks of the emergency declaration"
+        ],
+        "travelled": "Utility and telecom data used as a stand-in registry appeared across Latin America in 2020. The usual lesson is that the stand-in is retired after the shock and the regular programme returns to its small base; the brochure still calls for a national social registry, which suggests the stand-in was not institutionalised here."
+      }
+    },
+    {
+      "id": "fra-masques",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "FRA",
+      "title": "Strategic stock of pandemic masks, and its erosion",
+      "claim": "France's health ministry and its stockpile agency built a strategic pandemic stock of about 1.7 billion FFP2 and surgical masks by 2009, but by the start of the covid-19 crisis it held only about 100 million valid masks, according to the Senate commission of inquiry.",
+      "metric": {
+        "name": "Valid FFP2 and surgical masks in the strategic stock at the start of the covid-19 crisis",
+        "value": 100000000,
+        "unit": "masks",
+        "asOf": "2019-12"
+      },
+      "secondMetric": {
+        "name": "FFP2 and surgical masks in the strategic stock at the 2009 peak",
+        "value": 1700000000,
+        "unit": "masks",
+        "asOf": "2009"
+      },
+      "started": 2005,
+      "status": "eroded",
+      "source": {
+        "publisher": "Sénat, commission d'enquête pour l'évaluation des politiques publiques face aux pandémies, rapport n° 199 (2020-2021), Santé publique : pour un nouveau départ",
+        "url": "https://www.senat.fr/rap/r20-199-1/r20-199-17.html",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The status is the contestable part. The collapse from 2009 to 2019 is well documented, but the state rebuilt the stock during and after the crisis: Santé publique France's January 2024 inventory, quoted in a 2025 Senate bill, counts 2.1 billion masks, more than the 2009 figure. The case for 'eroded' rests on two things. About 706 million of those masks had already expired, which leaves roughly 1.39 billion in date, a subtraction we made and the source does not publish. The same text says every mask bought during the crisis expires in 2026. The 2009 figure is itself overstated as capability, because the 613 million surgical masks bought in 2005 and 2006 later failed a 2014 standard. Measured in conforming masks, today's stock may exceed the 2009 one, so a reviewer could fairly argue for 'operating'. The Cour des comptes chapter on mask stock management (RALFSS, May 2025) did not open from this machine, because the host refused the connection, so its figures are cited only through the Senate text. The Senate figures were compiled by the commission from Santé publique France data and are given in round numbers. Mask counts measure one input to pandemic readiness. They say nothing about distribution capacity, domestic production or the rest of the stock: drugs, gowns, gloves.",
+      "pattern": {
+        "mechanism": "The health ministry and EPRUS, later Santé publique France, built a national stock of nearly two billion masks after the H5N1 scare. The directorate-general for health then let expiring and non-conforming lots go without replacement. It ordered 613 million surgical masks destroyed in 2018 and did not renew them, so the stock was close to empty when covid-19 arrived.",
+        "preconditions": [
+          "A dedicated stockpile agency with a budget line that survives years without a crisis",
+          "A replacement schedule tied to expiry dates and to changes in product standards, not to annual budget pressure",
+          "Political ownership of a stock target, so that a quiet downgrade from 'stock' to 'need' is visible and has to be defended"
+        ],
+        "travelled": "Most OECD countries rebuilt their medical stockpiles after 2020. The French case shows that procurement is not the hard part. The hard part is keeping the stock in date, and now the crisis-era stock faces its own expiry in 2026."
+      }
+    },
+    {
+      "id": "fra-grand-paris-express",
+      "indicatorId": "large_project_delivery",
+      "iso3": "FRA",
+      "title": "Grand Paris Express",
+      "claim": "The Société du Grand Paris, the state's public builder, renamed Société des grands projets by the law of 27 December 2023, has been building the Grand Paris Express automatic metro since works began in June 2016. The project's estimated total cost rose from 22.6 billion euros in March 2013 to 36.1 billion euros from October 2021, about 60 percent above the 2013 estimate.",
+      "metric": {
+        "name": "Updated total cost estimate of the Grand Paris Express",
+        "value": 36.1,
+        "unit": "billion EUR",
+        "asOf": "2021-10"
+      },
+      "secondMetric": {
+        "name": "Cost estimate of the Grand Paris Express when the route was set",
+        "value": 22.6,
+        "unit": "billion EUR (2012 euros)",
+        "asOf": "2013-03"
+      },
+      "started": 2016,
+      "status": "operating",
+      "source": {
+        "publisher": "Sénat, commission des finances, rapport général sur le projet de loi de finances pour 2026, Écologie, développement et mobilité durables",
+        "url": "https://www.senat.fr/rap/l25-139-310-2/l25-139-310-27.html",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The 60 percent overrun is our calculation from two Senate figures. The 2013 baseline is stated in 2012 euros. The 2026 page does not state the price basis of the 36.1 billion figure, but the 2020 Senate report (r20-044) gives the preceding estimate as '35,6 milliards d'euros aux conditions économiques de 2012', which points to constant 2012 euros, so the overrun is mostly real rather than inflation. Both figures are estimates to completion and not an audited outturn, and the network is still unfinished. The Senate reports that in February 2025 the builder announced new delays to line 15 south and the first sections of lines 16 and 17, so the cost figure, unchanged since 2021, may rise again. The 36.1 billion excludes the further 3.5 billion euros, and 700 million more in 2024, that the builder pays toward other Île-de-France transport projects. The source does not quantify schedule slippage against the 2013 or 2018 timetables. The Cour des comptes reports on the project, the primary audit source, did not open from this machine, so the figures come from parliament's reading of the builder's answers to its questionnaires.",
+      "pattern": {
+        "mechanism": "The state created a dedicated public builder with its own earmarked taxes and the right to borrow on bond markets, so that a 200 km metro could be built in parallel rather than paid for line by line. The Senate notes this borrowing moved full delivery from 2075 to 2030, at the price of cost estimates that were revised upward as studies deepened and the Olympic deadline compressed the schedule.",
+        "preconditions": [
+          "A legal vehicle with earmarked revenue and borrowing power, kept off the annual budget",
+          "Enough in-house engineering staff to supervise thousands of contractors, which the Senate says was missing until after 2018",
+          "A political commitment to the whole network that survives changes of government, here confirmed in 2013 and again in 2018"
+        ],
+        "travelled": "The builder is now preparing France's regional express rail networks (SERM) using the same model. Those projects have no Olympic deadline and no Paris land values to borrow against."
+      }
+    },
+    {
+      "id": "fra-france-thd",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "FRA",
+      "title": "Plan France Très Haut Débit",
+      "claim": "Under the Plan France Très Haut Débit, defined by the government in February 2013, private operators and local-authority public initiative networks built fibre so that 43.1 million of France's 45.2 million premises, 95.3 percent, were connectable to fibre at the end of June 2026.",
+      "metric": {
+        "name": "Premises connectable to fibre to the home",
+        "value": 43100000,
+        "unit": "premises",
+        "asOf": "2026-06-30"
+      },
+      "secondMetric": {
+        "name": "Premises still to be made connectable in public initiative network zones",
+        "value": 970000,
+        "unit": "premises",
+        "asOf": "2026-06-30"
+      },
+      "started": 2013,
+      "status": "operating",
+      "source": {
+        "publisher": "Arcep, the French telecoms regulator, Marché du haut et du très haut débit fixe, results to end June 2026",
+        "url": "https://www.arcep.fr/actualites/actualites-et-communiques/detail/n/marche-du-haut-et-du-tres-haut-debit-fixe-100926.html",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The national coverage figure mixes the parts of the plan. In the very dense zones and the private-initiative zones (AMII and AMEL), private operators invested on their own account, so not every connectable premise is a product of joint delivery. Only the public initiative network zones are the clearly public-private part. Arcep's release gives what remains to be built there, 5 percent, but not the zone's total size. 'Connectable' means a line passes the premises, not that anyone subscribes or that the service is good. The 20 billion euro envelope and the roughly 3 billion euro state subsidy are 2013 announcements, not audited spending. The envelope was announced for the ten years from 2013, and 2.1 million premises were still not connectable in mid-2026. Arcep says more than a third of those are premises where a third party refused the works or the building is still under construction. The deployment figures are reported by operators to the regulator.",
+      "pattern": {
+        "mechanism": "The state split the territory: private operators made binding rollout commitments in profitable areas, which Arcep can enforce. In the rest, départements and regions tendered public initiative networks, built and run by private firms under concession and co-financed by a state subsidy fund.",
+        "preconditions": [
+          "A regulator able to turn operators' voluntary rollout commitments into enforceable obligations",
+          "Local authorities with the scale and borrowing capacity to tender département-wide networks, backed by a national subsidy window",
+          "Wholesale open-access rules so that networks built with public money carry every retail operator"
+        ],
+        "travelled": "Other European countries used gap-funding models under EU state-aid rules. The French design differs in giving the regulator enforcement power over private commitments, which is why the private zones could be left to the market without being abandoned."
+      }
+    },
+    {
+      "id": "eth-modjo-hawassa",
+      "indicatorId": "large_project_delivery",
+      "iso3": "ETH",
+      "title": "Modjo-Hawassa expressway, World Bank-financed Lot 3",
+      "claim": "The Ethiopian Roads Administration built the 57.4 km Batu/Zeway-Arsi Negele section (Lot 3) of the 202 km Modjo-Hawassa expressway under a project that became effective in 2015. The civil works were substantially complete by mid-2026, but only after cumulative extensions of 57 months to the project's closing date.",
+      "metric": {
+        "name": "Cumulative extension of the project closing date",
+        "value": 57,
+        "unit": "months",
+        "asOf": "2026-06"
+      },
+      "secondMetric": {
+        "name": "Expressway constructed on Lot 3 (asphalt concrete completed)",
+        "value": 57.4,
+        "unit": "km",
+        "asOf": "2026-02-25"
+      },
+      "started": 2015,
+      "status": "concluded",
+      "source": {
+        "publisher": "World Bank, Ethiopia Expressway Development Support Project (P148850), restructuring project paper, June 2026",
+        "url": "https://documents.worldbank.org/curated/en/099062626092518505/pdf/P148850-a349dda5-6ed1-44e7-a624-83476143119a.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "This is one 57 km road section, not a national programme, and the schedule figure is a slip in the World Bank financing's closing date, not a construction schedule measured against a contractual completion date. The 57 months run from the original 31 December 2021 closing to 30 September 2026, and part of that time came before Lot 3 works began: the paper says phase 2 started about two years after phase 1. The World Bank documents name cost overruns from material price inflation but give no figure, and the financing was partly cancelled (about 105 million dollars cumulatively by June 2026, including 9.31 million on the additional-financing credit) and topped up with 37 million in additional financing, so no cost-performance number can be drawn from them. The status 'concluded' is provisional. The road had been provisionally taken over by the roads authority, but the documents tie public opening to installing tolling and transport systems, which were moved to another project, and no source seen here confirms the section is open to traffic. Lots 1 and 2 have been open since September 2021, while Lot 4 is financed by China EXIM Bank and is not covered. All figures are the World Bank's own supervision reporting on a project it finances.",
+      "pattern": {
+        "mechanism": "The Ethiopian Roads Administration split a 202 km toll expressway into lots with different financiers: Bank-financed, government-financed and Chinese EXIM-financed. It carried the World Bank lot through material shortages, contract suspensions and repeated restructurings until the civil works were done.",
+        "preconditions": [
+          "A roads authority able to manage several international contracts and financiers on one corridor",
+          "Foreign-exchange and fiscal headroom to absorb price escalation",
+          "Land acquisition and compensation processes that do not stall works, which here still leave grievances before the courts"
+        ]
+      }
+    },
+    {
+      "id": "ury-linea-rivera",
+      "indicatorId": "large_project_delivery",
+      "iso3": "URY",
+      "title": "Línea Rivera rail rehabilitation, and its decay",
+      "claim": "Uruguay's transport ministry signed a FOCEM-funded contract in November 2013 to rehabilitate 422 km of the Pintado to Rivera line within 36 months, cut the scope to the 310 km between Paso de los Toros and Rivera in January 2017, took the last provisional handover in May 2019, and by June 2025 reported the line in a degraded state with freight limited to 10 to 25 km/h against its set maximum of 40 km/h and no freight carried in recent years.",
+      "metric": {
+        "name": "Lowest freight speed under the line's standing speed restrictions",
+        "value": 10,
+        "unit": "km/h",
+        "asOf": "2025-06"
+      },
+      "secondMetric": {
+        "name": "Maximum freight speed set for the rehabilitated Rivera line",
+        "value": 40,
+        "unit": "km/h",
+        "asOf": "2025-06"
+      },
+      "started": 2013,
+      "status": "eroded",
+      "source": {
+        "publisher": "Ministry of Transport and Public Works, reply to the Chamber of Representatives (Oficio 615/2025, technical report of the National Directorate of Rail Transport)",
+        "url": "https://documentos.diputados.gub.uy/docs/L50/Original/01333.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The source is a scanned ministerial reply to a parliamentary information request, so the quoted text comes from the PDF's OCR layer (it names the contractor \"CEU\" where the contracting firm was CFU), and checking it means reading the scan. The two speeds measure the asset's condition, not cost or schedule, which is what the construct asks for. The schedule slip is our computation: 36 months from a November 2013 signature against a last provisional handover in May 2019, about two and a half years late, and on a scope that had been cut from 422 to 310 km in January 2017, so a like-for-like slip cannot be stated. The final cost of the works was not found at an official URL: only the 2013 budget of US$75 million and a CND contract figure of 1,462 million pesos, which cannot be compared without exchange-rate and indexation assumptions, so no cost overrun is claimed. The 10 km/h figure is the bottom of a range of speed restrictions and does not apply along the whole line. The absence of freight reflects demand and operator choices as well as track condition, since the pulp traffic that justified the Ferrocarril Central runs south of Paso de los Toros. This is a different delivery from the 1988 to 1990 contraction recorded in ury-rail-network, but both concern AFE's network, and the record leans on the same ministry describing its own asset.",
+      "pattern": {
+        "mechanism": "The transport ministry used a regional cohesion fund to finance a capital rehabilitation, contracted a state-owned rail company to deliver it, and then let the maintenance contract lapse in 2021 without a successor, so the rebuilt track degraded within four years.",
+        "preconditions": [
+          "Grant capital for construction that carried no matching budget line for upkeep",
+          "A railway operator without freight demand on the corridor to justify ongoing maintenance",
+          "A competing national rail priority, the Ferrocarril Central, that pulled scope and attention away mid-contract"
+        ],
+        "travelled": "Donor-funded rehabilitations that lose their maintenance regime are a familiar pattern in regional infrastructure funds. Here the cut in scope to make way for the Ferrocarril Central shows a smaller project giving way to a larger one built on the same corridor."
+      }
+    },
+    {
+      "id": "ury-inefop",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "URY",
+      "title": "INEFOP, the tripartite national training institute",
+      "claim": "Uruguay's Instituto Nacional de Empleo y Formación Profesional, created by Law 18.406 in 2008 and governed by government, employers and workers, grew from 9,696 training, guidance and technical-assistance places in 2009 to 114,364 in 2019, and its director reported that more than 50,000 people took its training in 2023.",
+      "metric": {
+        "name": "People who took INEFOP training (more than)",
+        "value": 50000,
+        "unit": "people",
+        "asOf": "2023"
+      },
+      "secondMetric": {
+        "name": "INEFOP training, guidance and technical-assistance places, national total",
+        "value": 114364,
+        "unit": "places",
+        "asOf": "2019"
+      },
+      "started": 2009,
+      "status": "operating",
+      "source": {
+        "publisher": "Presidency of Uruguay, Comunicación Presidencial, statement of INEFOP's director general",
+        "url": "https://www.gub.uy/presidencia/comunicacion/noticias/50000-personas-accedieron-cursos-inefop-2023",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The 2023 figure is a rounded \"more than 50,000\" spoken by the institute's own director in an interview relayed by the presidency's press office, not a published statistical table. The 2019 figure counts places, not people: it includes guidance and technical assistance as well as courses, can count one person several times, and is read from data labels on a chart in a PDF. The two numbers are in different units and must not be read as a fall from 114,364 to 50,000, and the jump from 47,590 in 2016 to 112,183 in 2017 coincides with a change in the source behind the series, so the trend before and after 2017 is not continuous either. The same report also claims \"more than 120,000\" annual users, which does not match its own chart. Fifty thousand people is roughly 2 percent of Uruguay's adult population, so INEFOP is a national delivery channel but carries only a small part of adult participation in training, and neither number says whether anyone completed a course, learned anything or found work. Half of 2023 participants were unemployed and the reported age band is 20 to 35, so the reach is skewed young.",
+      "pattern": {
+        "mechanism": "Parliament placed the national labour-retraining fund in a non-state public body governed jointly by the government, employers and unions, which buys courses from training providers and steers them to the unemployed, to workers in firms and to people outside Montevideo.",
+        "preconditions": [
+          "A payroll-financed retraining fund that predates the institute and gives it its own budget",
+          "Employer and union confederations willing to co-govern a public body",
+          "A market of training providers the institute can contract instead of teaching itself"
+        ],
+        "travelled": "Tripartite training funds of this kind run across Latin America, from Guatemala's INTECAP to the Dominican Republic's INFOTEP. Uruguay's version is younger and buys training from providers instead of teaching through its own centres."
+      }
+    },
+    {
+      "id": "ury-anii-alianzas",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "URY",
+      "title": "ANII Alianzas para la Innovación",
+      "claim": "Uruguay's national research and innovation agency ANII began co-funding joint academia-firm projects through Alianzas para la Innovación in 2009 and had signed 29 such contracts, committing US$3.85 million and drawing US$1.71 million from firms, by 30 June 2016; in 2023 it approved 23 projects joining the productive sector and academia, matching the 2022 record.",
+      "metric": {
+        "name": "Alianzas para la Innovación contracts signed since 2009",
+        "value": 29,
+        "unit": "projects",
+        "asOf": "2016-06-30"
+      },
+      "secondMetric": {
+        "name": "Projects approved in the year involving the productive sector with academia",
+        "value": 23,
+        "unit": "projects",
+        "asOf": "2023"
+      },
+      "started": 2009,
+      "status": "operating",
+      "source": {
+        "publisher": "Agencia Nacional de Investigación e Innovación, Unidad de Evaluación y Monitoreo, evaluation of Alianzas para la Innovación and Redes Tecnológicas Sectoriales",
+        "url": "https://anii.org.uy/upcms/files/listado-documentos/documentos/informe-de-evaluacion-alianzas-para-la-innovacion-y-redes-tecnologicas-sectoriales.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The scale is small: 29 contracts in seven years and US$3.85 million committed is a national instrument, but a thin one, and it says little about how much Uruguayan universities and firms collaborate outside ANII funding. Both figures are the agency reporting on its own instruments, the first from its internal evaluation unit and the second from a year-end press note. The 2023 figure is not limited to Alianzas: it counts every approved project the agency describes as joining firms with academia, under its technology-transfer line, so the two metrics are not one series and no trend can be drawn between them. Signed contracts measure funding decisions, not completed research, patents, products or lasting relationships; the evaluation shows only 14 of the 29 finished by mid-2016. The evaluation report is undated on its cover and the date comes from its own tables.",
+      "pattern": {
+        "mechanism": "ANII, the state innovation agency, offered non-repayable co-funding only to projects where a firm brought a problem and money and a university or research institute brought the research team, with a firm employee placed inside that team.",
+        "preconditions": [
+          "A public research base, mainly the Universidad de la República, with researchers able to work on applied problems",
+          "Firms, often in primary production, with problems worth paying part of the cost to solve",
+          "A funding agency outside the ministries with its own evaluation unit and calls that recur every year"
+        ]
+      }
+    },
+    {
+      "id": "are-covid-vaccination",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "ARE",
+      "title": "National COVID-19 vaccination campaign",
+      "claim": "The UAE's health authorities ran a national COVID-19 vaccination campaign from late 2020 that WHO records as having given at least one dose to 9,991,089 people, a first-dose coverage of 100 per 100 people on WHO's capped measure, and 24,922,054 doses in total by 6 July 2022.",
+      "metric": {
+        "name": "Persons vaccinated with at least one COVID-19 vaccine dose",
+        "value": 9991089,
+        "unit": "people",
+        "asOf": "2022-07-06"
+      },
+      "secondMetric": {
+        "name": "Total COVID-19 vaccine doses administered",
+        "value": 24922054,
+        "unit": "doses",
+        "asOf": "2022-07-06"
+      },
+      "started": 2020,
+      "status": "concluded",
+      "source": {
+        "publisher": "World Health Organization, COVID-19 vaccination data (country-reported)",
+        "url": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/vaccination-data.csv",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The figures are the UAE's own reports to WHO, not an independent count, and the last update is July 2022. The per-100 share is capped at 100 by WHO and the UAE's population denominator is unusually uncertain because most residents are foreign nationals on visas, so a 100 percent first-dose coverage claim cannot be taken literally; the absolute counts are safer, and they may include doses given to short-stay visitors. The start-date evidence is the Abu Dhabi emirate's media office describing its own emirate, which also says vaccines reached frontline workers from September 2020, so 2020 is the start of use, not of a public national campaign on a fixed date; the federal health ministry's site did not open from here. Coverage is an output of a shock response. It does not show deaths averted, cold-chain performance, equity across nationalities and labour camps, or preparedness for the next shock.",
+      "pattern": {
+        "mechanism": "Federal and emirate health authorities registered vaccines early, supplied them free to citizens and residents through public and private clinics, drive-throughs and mass centres, and tied access to daily life to vaccination status through the AlHosn app.",
+        "preconditions": [
+          "A small, concentrated population with nearly universal digital identity and smartphone use",
+          "Fiscal room to buy doses early from several suppliers, including through a clinical-trial partnership",
+          "Authority to make vaccination status a condition of entry to workplaces and public venues"
+        ],
+        "travelled": "Fast campaigns in small, wealthy states such as Israel and the UAE were widely cited in 2021. The digital-pass part travelled more readily than the procurement part, which depended on early bilateral deals."
+      }
+    },
+    {
+      "id": "are-adgm-reglab",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "ARE",
+      "title": "ADGM RegLab, the first fintech sandbox in the region",
+      "claim": "The Financial Services Regulatory Authority of Abu Dhabi Global Market opened its RegLab fintech sandbox to applications on 2 November 2016 and by August 2019 had admitted 32 firms from 83 applications from 20 countries, of which two had graduated to the live market.",
+      "metric": {
+        "name": "Fintech firms admitted to the ADGM RegLab since May 2017",
+        "value": 32,
+        "unit": "firms",
+        "asOf": "2019-08-25"
+      },
+      "secondMetric": {
+        "name": "RegLab firms graduated and deployed into the marketplace",
+        "value": 2,
+        "unit": "firms",
+        "asOf": "2019-08-25"
+      },
+      "started": 2016,
+      "status": "operating",
+      "source": {
+        "publisher": "Abu Dhabi Global Market, Financial Services Regulatory Authority, announcement of the fourth RegLab cohort",
+        "url": "https://www.adgm.com/media/announcements/adgm-admits-4th-reglab-cohort",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The count is the regulator announcing its own programme in a press release, and it dates from August 2019: no later cumulative total was found at an ADGM URL, so the record says nothing about the sandbox's size today. ADGM is a financial free zone in Abu Dhabi with its own regulator, so this is one jurisdiction's sandbox, not a federal regime. The UAE government portal (https://u.ae/en/about-the-uae/digital-uae/regulatory-framework/regulatory-sandboxes-in-the-uae) lists at least five others, including the federal RegLab launched in January 2019 with the Dubai Future Foundation and the DFSA's Innovation Testing Licence, and no official count of firms across all of them exists. Admissions measure regulatory openness, not whether tested products reached customers safely: two graduates out of 32 admitted by 2019 is a thin outcome, and the release does not say how many firms left without a licence.",
+      "pattern": {
+        "mechanism": "The FSRA wrote a separate, time-limited authorisation category into its rulebook that let fintech firms test with real customers under tailored limits for up to two years, then admitted them in cohorts and moved the successful ones to full licences.",
+        "preconditions": [
+          "A financial free zone with its own common-law regulator able to change rules quickly",
+          "A federal state that tolerates several competing financial regulators and sandboxes",
+          "International fintech firms looking for a regional base"
+        ],
+        "travelled": "The design follows the UK FCA sandbox closely. In the UAE it was followed by the DFSA in Dubai and by the federal RegLab launched in January 2019 with the Dubai Future Foundation, so the country now runs several parallel sandboxes instead of one."
+      }
+    },
+    {
+      "id": "chl-franquicia-sence",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "CHL",
+      "title": "Franquicia Tributaria SENCE, and its erosion",
+      "claim": "Chile's SENCE training tax credit, running since 1976, financed 999,732 training participations and 653,939 unique trainees in 2024, down from 1,355,430 participations and 740,152 unique trainees in 2016, while public spending on it nearly doubled in nominal pesos; in July 2026 a Senate committee agreed to cut its ceiling from 1% to 0.7% of payroll.",
+      "metric": {
+        "name": "Training participations financed by the Franquicia Tributaria",
+        "value": 999732,
+        "unit": "participations (a person counted once per course)",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Training participations financed by the Franquicia Tributaria in 2016, the highest year in the evaluation's 2016-2024 table",
+        "value": 1355430,
+        "unit": "participations (a person counted once per course)",
+        "asOf": "2016"
+      },
+      "started": 1976,
+      "status": "eroded",
+      "source": {
+        "publisher": "Dirección de Presupuestos (DIPRES), Ministerio de Hacienda, Evaluación de impacto Franquicia Tributaria, informe final, September 2025",
+        "url": "https://www.dipres.gob.cl/597/articles-383685_informe_final.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The table opens in 2016, so 2016 is the highest year it shows, not a proven all-time peak; earlier SENCE yearbooks were not opened and the true peak may be higher or earlier. Participations count a person once per course, so the 26% fall in participations overstates the fall in people trained; unique trainees fell 12% (740,152 to 653,939). 2020 and 2021 are depressed by COVID and the series had recovered partly by 2023. Figures are SENCE administrative data republished by DIPRES, not a survey of adult participation, and the programme reaches mainly large firms: DIPRES finds about 88% of trainees come from large companies, so the numbers say little about adults in small firms, the self-employed or the unemployed. The same evaluation found no impact on employment or wages, so a hostile reader could call the shrinkage a correction of a low-value subsidy, not a lost capability. The July 2026 cut from 1% to 0.7% of payroll is a Senate committee agreement on the reconstruction bill; whether it was enacted was not verified, and the Executive's original bill eliminated the credit, which its later indicaciones replaced with a modification (Senado, 9 July 2026). Unique trainees peaked at 741,910 in 2018, not 2016.",
+      "pattern": {
+        "mechanism": "The state let firms deduct accredited training costs from corporate income tax up to 1% of payroll, with SENCE accrediting courses and intermediaries (OTIC) pooling funds. The volume of training then followed firms' tax appetite rather than a public target, and Hacienda moved to shrink it once DIPRES found no wage effect.",
+        "preconditions": [
+          "A corporate income tax base large enough for a payroll-linked deduction to matter to firms",
+          "An accreditation agency and intermediary bodies able to certify courses and liquidate claims",
+          "Administrative records that let a budget office evaluate impact and argue for cutting a tax expenditure"
+        ],
+        "travelled": "Payroll-levy and tax-credit training schemes are common across Latin America and Europe; the Chilean record shows the usual failure mode, where large firms capture most of the subsidy and low-skill workers in small firms stay out."
+      }
+    },
+    {
+      "id": "chl-concesiones",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "CHL",
+      "title": "Sistema de Concesiones de Obras Públicas",
+      "claim": "Chile's Ministry of Public Works has delivered public infrastructure through private concession contracts since 1993; in April 2026 its Concessions Directorate reported 81 contracts in force with US$29.615 billion of committed investment across motorways, airports, hospitals, prisons, a reservoir, a desalination plant and a cable car.",
+      "metric": {
+        "name": "Committed investment in concession contracts in force (materialised plus pending)",
+        "value": 29615,
+        "unit": "million US dollars",
+        "asOf": "2026-04"
+      },
+      "secondMetric": {
+        "name": "Concession contracts in force",
+        "value": 81,
+        "unit": "contracts",
+        "asOf": "2026-04"
+      },
+      "started": 1993,
+      "status": "operating",
+      "source": {
+        "publisher": "Ministerio de Obras Públicas, Dirección General de Concesiones, Cuenta Pública 2025",
+        "url": "https://concesiones.mop.gob.cl/uploads/sites/4/2026/04/CUENTA-PUBLICA-DGC-2025.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The figures are the Directorate's own slide figures, read from a presentation PDF, not audited accounts. Committed investment adds money already spent to money still to be spent, and 35 of the 81 contracts are still in construction, so the headline overstates infrastructure delivered. The number covers contracts in force only, not concessions that have ended, so it is not the system's cumulative output. It says nothing about value for money, renegotiations and supplementary agreements (a known weakness of the Chilean model that the slide does not quantify), contingent fiscal liabilities such as guaranteed minimum revenues, or who pays through tolls. Chile also keeps a large conventional public works budget, so concessions are one channel, not the whole of infrastructure delivery.",
+      "pattern": {
+        "mechanism": "The Ministry of Public Works tendered build-operate-transfer contracts under a dedicated concessions law, letting private consortia finance and run motorways and later airports, hospitals and prisons, recovered through tolls and state payments, while a dedicated directorate supervised the contracts.",
+        "preconditions": [
+          "A concessions law passed with cross-party support and a directorate inside the ministry to tender and supervise contracts",
+          "Domestic pension-fund and bank capital able to finance long-tenor infrastructure debt",
+          "Projects with user-fee revenue, motorways first, before moving to social infrastructure that needs state payments"
+        ],
+        "travelled": "Chile's concessions law was widely studied in Latin America (Colombia, Peru, Mexico); the retellings tend to leave out the renegotiation record, which is the part that decides whether a copy is cheaper than public procurement."
+      }
+    },
+    {
+      "id": "kor-employer-training",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "KOR",
+      "title": "Employer and in-work training under Employment Insurance, and its erosion",
+      "claim": "Korea's Employment Insurance-funded employer and in-work training reached 4,916 thousand training participations in 2018, then fell to 2,410 thousand in 2025 after the Ministry of Employment and Labor withdrew support for statutory common training in 2019, COVID closed classrooms in 2020 and a cap on outsourced remote training took effect in late 2023.",
+      "metric": {
+        "name": "Employer and in-work training participations (사업주 및 재직자훈련)",
+        "value": 2410,
+        "unit": "thousand participations",
+        "asOf": "2025"
+      },
+      "secondMetric": {
+        "name": "Employer and in-work training participations at the 2018 peak",
+        "value": 4916,
+        "unit": "thousand participations",
+        "asOf": "2018"
+      },
+      "started": 1999,
+      "status": "eroded",
+      "source": {
+        "publisher": "Ministry of Employment and Labor, e-나라지표 indicator 1500 (직업능력개발훈련 실시현황), updated 2026-05-18",
+        "url": "https://www.index.go.kr/unity/potal/main/EachDtlPageDetail.do?idx_cd=1500",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The count is person-courses (연인원), and the page itself warns that in-work training double-counts heavily, so a halving of participations is not a halving of adults trained. The counting basis changed in 2020 from fund payment date to course start date, so 2018 and 2025 are not measured identically. The aggregate bundles several programmes (employer training subsidy, the in-work Naeil Baeum card, national HRD consortia, work-study), so it is a programme family, not one delivery. Much of the fall is deliberate: the ministry stopped subsidising statutory compulsory courses in 2019 and capped low-quality outsourced remote training in 2023, so a hostile reviewer would read the decline as pruning of low-value box-ticking courses, and the same page shows unemployed and vulnerable-group training growing from 355 thousand in 2020 to 467 thousand in 2024. The series is administrative, not a survey of adult participation, and says nothing about training firms fund without the subsidy.",
+      "pattern": {
+        "mechanism": "The Ministry of Employment and Labor refunded employers from the Employment Insurance fund for training their staff, which drove volume up to a 2018 peak, then cut support for statutory and oversupplied courses and capped remote training to contain cost and quality problems, and participations halved.",
+        "preconditions": [
+          "An employment insurance fund with a levy earmarked for vocational development",
+          "A large market of accredited private training providers, including remote courses cheap enough to scale fast",
+          "A ministry willing to trade headline volume for tighter subsidy rules"
+        ],
+        "travelled": "Levy-refund training schemes in many OECD countries show the same arc: volume grows on cheap compliance and remote courses, then falls when the funder tightens eligibility; the volume series alone cannot tell lost capability from removed waste."
+      }
+    },
+    {
+      "id": "kor-ktx-gyeongbu",
+      "indicatorId": "large_project_delivery",
+      "iso3": "KOR",
+      "title": "Gyeongbu high-speed railway (KTX), and its cost and schedule overrun",
+      "claim": "Korea built the Seoul to Busan high-speed line planned in 1990 at 5,846.2 billion won for opening in early 1999; by 1993 the Ministry of Transportation re-estimated the cost at 12,174.3 billion won, the first phase opened in April 2004 and the whole line opened in 2010.",
+      "metric": {
+        "name": "1993 re-estimated project cost of the Gyeongbu high-speed railway",
+        "value": 12174.3,
+        "unit": "billion won",
+        "asOf": "1993"
+      },
+      "secondMetric": {
+        "name": "Original project cost in the 1990 basic plan (1989 prices)",
+        "value": 5846.2,
+        "unit": "billion won",
+        "asOf": "1990"
+      },
+      "started": 1992,
+      "status": "concluded",
+      "source": {
+        "publisher": "National Archives of Korea, 주요 정책기록 해설집 Ⅳ 교통 편, Chapter III railways (commentary on Ministry of Transportation record DA0762778)",
+        "url": "https://www.archives.go.kr/next/common/archivedata/render.do?filePath=2F757046696c652F70616c67616e2F32303137313232315f303030382e706466",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-01"
+      },
+      "limits": "The 108% increase is computed from two published figures, and it compares a 1993 re-estimate with the 1990 plan, not the final outturn with the plan; the price basis of the re-estimate is not stated, so part of the gap may be inflation. The final outturn cost was not taken from an opened source. The 1993 plan cut scope (underground Seoul, Daejeon and Daegu sections replaced with upgraded existing alignments) to save 1.43 trillion won, so the delivered line is not the planned one, and phase one ran on electrified conventional track south of Daegu. The archive commentary is written by an outside researcher; the figures are read from a scanned-document PDF. The record documents overrun on one megaproject, not Korea's general project delivery performance.",
+      "pattern": {
+        "mechanism": "The government committed to a TGV-based Seoul to Busan line on a rough estimate derived from conventional rail costs, discovered within a year of breaking ground that the cost had doubled, then cut scope, created a dedicated construction authority and passed a 1996 promotion act to keep the build going until it opened in stages.",
+        "preconditions": [
+          "A state able to keep financing a megaproject through a doubling of cost and the 1997 financial crisis",
+          "A dedicated construction authority and imported core technology (TGV) with a transfer agreement",
+          "A corridor dense enough that demand justified finishing the line despite the overrun"
+        ],
+        "travelled": "Later Korean lines (Honam, Suseo to Pyeongtaek) were built by the same authority with domestic rolling stock; the Gyeongbu record is the standard example of optimism bias in a first-of-a-kind national project."
+      }
     }
   ]
 }

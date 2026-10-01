@@ -113,6 +113,8 @@ Entregas documentadas ligadas a indicadores ausentes. Elas não afetam as notas 
 
 - **Dual-track vocational training** (Coordenação). Switzerland runs most upper-secondary education through firms: of 218,259 students enrolled in vocational education and training in 2020, 90.6 percent, 197,782, were apprentices trained inside companies under federal law.
 - **Gotthard Base Tunnel** (Construção). Switzerland built the 57 km Gotthard Base Tunnel under the voter-approved NEAT programme and opened it to commercial traffic on 11 December 2016, on the date set, at a final cost forecast of CHF 9.541 billion against a 1998 cost basis of CHF 6.323 billion, both in 1998 prices.
+- **Covid-19 bridging credits** (Adaptação). The Swiss Federal Council adopted an emergency ordinance on 25 March 2020 and, through 125 banks including PostFinance under federal guarantee, granted 137,870 Covid-19 credits worth CHF 16.9 billion between 26 March and 31 July 2020, with 76,034 applications submitted in the first eight days.
+- **Civil protection shelters** (Adaptação). Under the shelter-building duty introduced with Switzerland's 1963 civil protection legislation, the Federal Office for Civil Protection reported about nine million shelter places in some 370,000 private and public shelters in 2023, a national coverage rate above 100 percent of the resident population.
 
 ## Contribua
 

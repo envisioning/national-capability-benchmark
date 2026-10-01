@@ -9,6 +9,18 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.24.2 — 2026-10-01
+
+- **30 more documented deliveries, eight of them losses.** The new records
+  reach 16 more countries. Among the losses are the US Affordable
+  Connectivity Program, Cuba's currency unification, Australia's VET
+  FEE-HELP loans, France's pandemic mask stock and Montevideo's Rivera rail
+  line. Among the flagships are the Interstate Highway System, Operation
+  Warp Speed, the Swiss shelter system, Finland's Report on the Future,
+  Estonia's state stockpiles and Chile's infrastructure concessions. A
+  second reviewer checked every number at its official source. The
+  capability agenda is regenerated.
+
 ## App 1.24.1 — 2026-10-01
 
 - **25 documented deliveries for the 16 countries that had one.** Each of
