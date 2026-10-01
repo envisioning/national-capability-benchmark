@@ -1,6 +1,6 @@
 # National Capability Benchmark, prototype v0
 
-*Generated 2026-10-01T15:43:15.137Z*
+*Generated 2026-10-01T16:29:50.569Z*
 
 This run covers 53 countries and nine dimensions. Indicators carry equal weight within each dimension, and the benchmark has no headline ranking.
 
@@ -501,6 +501,20 @@ The first factor's country scores correlate 0.859 with log GDP per capita (n 50)
 Eigenvalues: 4.757, 1.208, 0.85, 0.738, 0.411, 0.392, 0.3, 0.208, 0.136.
 
 Left out for a missing dimension: CUB, HTI.
+
+## What is left after income is tested in aggregate
+
+Four tests on the wealth residual (D68), over the 50 countries with all nine residuals, read by rules fixed before the first run (D138). Only statistics over countries are published; no country's residual is.
+
+| Test | Figures | Reading |
+| --- | --- | --- |
+| (a) Residuals move together | first-factor share 27.9%, chance 19.1% (95th 21.7%), n 50 | structure |
+| (b) Same income, different shape | peer distance 1.559 against 1.538 without regard to income (5th 1.464); shape share 26.4% against random 95th 23.2%, n 50 | differ |
+| (c) Order holds between releases | lowest rank r 0.718 on Trust (n 36), 19 release pairs | mixed |
+| (c) Order holds without one country | largest own-residual shift 0.249 residual SD | robust |
+| (d) Share of a profile that is income | mean 30.6%, median 44.3%, n 50 | part |
+
+Under D138, the weaker claim, that countries at the same income have different capability shapes, reads **holds** on this release.
 
 ## Indicators are checked for income bias
 

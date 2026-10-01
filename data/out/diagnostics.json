@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T15:43:15.137Z",
+  "generatedAt": "2026-10-01T16:29:50.569Z",
   "gdpSeries": "NY.GDP.PCAP.PP.KD",
   "income": [
     {
@@ -630,6 +630,271 @@
       }
     },
     "nearFull": null
+  },
+  "residualStructure": {
+    "completeCases": 50,
+    "excluded": 3,
+    "structure": {
+      "countries": 50,
+      "eigenvalues": [
+        2.51,
+        1.578,
+        1.399,
+        1.169,
+        0.645,
+        0.568,
+        0.457,
+        0.391,
+        0.283
+      ],
+      "firstFactorShare": 0.279,
+      "loadings": [
+        {
+          "dimension": "anticipation",
+          "loading": 0.838
+        },
+        {
+          "dimension": "agency",
+          "loading": 0.269
+        },
+        {
+          "dimension": "coordination",
+          "loading": 0.674
+        },
+        {
+          "dimension": "trust",
+          "loading": 0.632
+        },
+        {
+          "dimension": "learning",
+          "loading": 0.702
+        },
+        {
+          "dimension": "experimentation",
+          "loading": 0.121
+        },
+        {
+          "dimension": "adaptability",
+          "loading": -0.031
+        },
+        {
+          "dimension": "building",
+          "loading": -0.055
+        },
+        {
+          "dimension": "shared_purpose",
+          "loading": 0.608
+        }
+      ],
+      "chance": {
+        "draws": 2000,
+        "seed": 20261001,
+        "mean": 0.191,
+        "p95": 0.217
+      },
+      "permutation": {
+        "draws": 2000,
+        "seed": 20261002,
+        "mean": 0.19,
+        "p95": 0.215
+      },
+      "reading": "structure"
+    },
+    "peers": {
+      "countries": 50,
+      "peerCount": 10,
+      "observedMean": 1.559,
+      "incomeNull": {
+        "draws": 2000,
+        "seed": 20261004,
+        "mean": 1.538,
+        "p5": 1.464,
+        "p95": 1.605
+      },
+      "shapeShare": 0.264,
+      "shapeNull": {
+        "draws": 2000,
+        "seed": 20261003,
+        "mean": 0.204,
+        "p5": 0.181,
+        "p95": 0.232
+      },
+      "noiseFloor": {
+        "draws": 2000,
+        "seed": 20261003,
+        "mean": 1.78,
+        "p5": 1.682,
+        "p95": 1.876
+      },
+      "shareBeyond": 0.06,
+      "shareNull": {
+        "mean": 0.05,
+        "p95": 0.1
+      },
+      "reading": "differ"
+    },
+    "stability": {
+      "releases": {
+        "versions": [
+          "1.0.0",
+          "1.1.0",
+          "2.0.0",
+          "3.0.0",
+          "4.0.0",
+          "4.1.0",
+          "4.3.0",
+          "4.4.0",
+          "4.5.0",
+          "5.1.0",
+          "6.1.0",
+          "6.1.1",
+          "6.1.2",
+          "6.2.0",
+          "7.0.0",
+          "7.1.0",
+          "7.2.0",
+          "7.3.0",
+          "7.4.0",
+          "7.5.0",
+          "7.6.0",
+          "7.7.0"
+        ],
+        "pairs": 19,
+        "perDimension": [
+          {
+            "dimension": "anticipation",
+            "pairs": 2,
+            "mean": 0.898,
+            "min": 0.822,
+            "minCountries": 51
+          },
+          {
+            "dimension": "agency",
+            "pairs": 3,
+            "mean": 0.86,
+            "min": 0.78,
+            "minCountries": 51
+          },
+          {
+            "dimension": "coordination",
+            "pairs": 1,
+            "mean": 0.74,
+            "min": 0.74,
+            "minCountries": 44
+          },
+          {
+            "dimension": "trust",
+            "pairs": 2,
+            "mean": 0.794,
+            "min": 0.718,
+            "minCountries": 36
+          },
+          {
+            "dimension": "learning",
+            "pairs": 4,
+            "mean": 0.924,
+            "min": 0.866,
+            "minCountries": 51
+          },
+          {
+            "dimension": "experimentation",
+            "pairs": 3,
+            "mean": 0.963,
+            "min": 0.912,
+            "minCountries": 50
+          },
+          {
+            "dimension": "adaptability",
+            "pairs": 3,
+            "mean": 0.88,
+            "min": 0.777,
+            "minCountries": 51
+          },
+          {
+            "dimension": "building",
+            "pairs": 2,
+            "mean": 0.989,
+            "min": 0.984,
+            "minCountries": 51
+          },
+          {
+            "dimension": "shared_purpose",
+            "pairs": 3,
+            "mean": 0.908,
+            "min": 0.759,
+            "minCountries": 47
+          }
+        ],
+        "reading": "mixed"
+      },
+      "leaveOneOut": {
+        "perDimension": [
+          {
+            "dimension": "anticipation",
+            "n": 51,
+            "maxSlopeShiftSe": 0.617,
+            "maxResidualShiftSd": 0.225
+          },
+          {
+            "dimension": "agency",
+            "n": 51,
+            "maxSlopeShiftSe": 0.653,
+            "maxResidualShiftSd": 0.249
+          },
+          {
+            "dimension": "coordination",
+            "n": 51,
+            "maxSlopeShiftSe": 0.582,
+            "maxResidualShiftSd": 0.222
+          },
+          {
+            "dimension": "trust",
+            "n": 51,
+            "maxSlopeShiftSe": 0.656,
+            "maxResidualShiftSd": 0.239
+          },
+          {
+            "dimension": "learning",
+            "n": 51,
+            "maxSlopeShiftSe": 0.342,
+            "maxResidualShiftSd": 0.125
+          },
+          {
+            "dimension": "experimentation",
+            "n": 51,
+            "maxSlopeShiftSe": 0.588,
+            "maxResidualShiftSd": 0.192
+          },
+          {
+            "dimension": "adaptability",
+            "n": 51,
+            "maxSlopeShiftSe": 0.464,
+            "maxResidualShiftSd": 0.185
+          },
+          {
+            "dimension": "building",
+            "n": 51,
+            "maxSlopeShiftSe": 0.577,
+            "maxResidualShiftSd": 0.23
+          },
+          {
+            "dimension": "shared_purpose",
+            "n": 50,
+            "maxSlopeShiftSe": 0.433,
+            "maxResidualShiftSd": 0.148
+          }
+        ],
+        "reading": "robust"
+      }
+    },
+    "incomeShare": {
+      "countries": 50,
+      "mean": 0.306,
+      "median": 0.443,
+      "pooled": 0.392,
+      "reading": "part"
+    },
+    "weakClaim": "holds"
   },
   "indicatorVsGdp": [
     {

@@ -484,7 +484,14 @@ port 3888. That entry starts Next directly and does not use the proxy.
   `FACTOR_INCOME_BANDS`, never with fixed prose. `bench diagnose` also writes
   `data/out/factor-history.json` from git, one row per committed dataset
   release; past rows come from the committed output and are never rescored.
-  See D137.
+  See D137. What is left after income is read the same way:
+  `readResidualStructure` in `apps/web/src/lib/residual.ts` turns
+  `diagnostics.residualStructure` into the sentences on the thesis, the
+  diagnostics and the front page, and each verdict is the reading
+  `residual-structure.ts` computed under rules D138 fixed before the first
+  run. The structure carries statistics over countries and never a country's
+  residual or name, because per-country residuals stay offline under D65.
+  Changing a reading rule is a new decision.
 - The World Bank fetch is described once, in
   `packages/core/src/model/sources.ts`: the API base, the database ids, the
   first year, the route labels and the request builder. `pipeline/ingest.ts`

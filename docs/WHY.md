@@ -90,7 +90,19 @@ the artefacts is how those ways get found.
 ## What would tell us this was the wrong idea
 
 - The nine dimensions collapse into one factor across a wide country set, with
-  no information beyond income per head.
+  no information beyond income per head. This is two tests now, and the
+  computed reading of both is on `/thesis`, with every figure, null and rule on
+  `/diagnostics`:
+  - **The strong claim**, that capability is separate from wealth, is the
+    one-factor test (D137). Today it reads that what the nine share is mostly
+    income.
+  - **The weaker claim**, that countries at the same income have different
+    capability shapes, is four aggregate tests on what is left after income
+    (D138): whether the leftovers move together, whether income peers differ in
+    shape beyond chance, whether the leftover order survives indicator changes
+    and the loss of any one country, and how much of a profile income accounts
+    for. Today it reads that the weaker claim holds, on a few dozen countries.
+    No country's leftover is published while D65 keeps that layer offline.
 - The dimensions hold up statistically, but country-level scores are too coarse
   to connect to action.
 - The evidence for softer dimensions never becomes inspectable, leaving
@@ -99,4 +111,5 @@ the artefacts is how those ways get found.
   performance and broader coverage. See A12.
 
 Each of these is a live risk today, and the first and third are visible in the
-current output.
+current output. Read the verdicts on `/thesis`, not here: they are computed
+every release and this page is not.

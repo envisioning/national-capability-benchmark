@@ -74,14 +74,22 @@ async function announcedDatasetVersions(): Promise<Set<string>> {
   )
 }
 
+/** One committed dataset release: the scores its index published and the income it read. */
+export type ReleaseSnapshot = {
+  version: string
+  commit: string
+  date: string
+  scores: Map<string, Partial<Record<Dimension, number | null>>>
+  logGdp: Map<string, number>
+}
+
 /**
- * Build the history. Returns null when git is not available, so a checkout
- * without history keeps the committed file instead of overwriting it with
- * one row.
+ * Every announced dataset release whose output was committed, newest commit
+ * per version, oldest version first. Null when git is not available. The
+ * factor history (D137) and the residual release test (D138) both read this,
+ * so they read the same releases.
  */
-export async function buildFactorHistory(
-  current: { version: string; date: string; factorStructure: FactorStructure },
-): Promise<FactorHistoryFile | null> {
+export async function readReleaseSnapshots(): Promise<ReleaseSnapshot[] | null> {
   let log: string
   try {
     log = git(['log', '--format=%H%x09%h%x09%ad', '--date=short', '--', INDEX_PATH])
@@ -89,8 +97,8 @@ export async function buildFactorHistory(
     return null
   }
   const announced = await announcedDatasetVersions()
-  const seen = new Set<string>([current.version])
-  const releases: FactorHistoryRelease[] = []
+  const seen = new Set<string>()
+  const out: ReleaseSnapshot[] = []
 
   /* Newest first, so the first commit seen for a version is the last one
    * that carried it: the numbers that release ended on. */
@@ -139,10 +147,28 @@ export async function buildFactorHistory(
         /* No income at that commit: the row publishes the share alone. */
       }
     }
-    const row = rowFor(version, short, date, factorStructureFor(scores, gdp))
+    out.push({ version, commit: short, date, scores, logGdp: gdp })
+  }
+  return out.sort((a, b) => compareVersions(a.version, b.version))
+}
+
+/**
+ * Build the history. Returns null when git is not available, so a checkout
+ * without history keeps the committed file instead of overwriting it with
+ * one row. Pass `snapshots` to reuse a read already made.
+ */
+export async function buildFactorHistory(
+  current: { version: string; date: string; factorStructure: FactorStructure },
+  snapshots?: ReleaseSnapshot[] | null,
+): Promise<FactorHistoryFile | null> {
+  const past = snapshots === undefined ? await readReleaseSnapshots() : snapshots
+  if (!past) return null
+  const releases: FactorHistoryRelease[] = []
+  for (const snap of past) {
+    if (snap.version === current.version) continue
+    const row = rowFor(snap.version, snap.commit, snap.date, factorStructureFor(snap.scores, snap.logGdp))
     if (row) releases.push(row)
   }
-
   const now = rowFor(current.version, null, current.date, current.factorStructure)
   if (now) releases.push(now)
   releases.sort((a, b) => compareVersions(a.version, b.version))

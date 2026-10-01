@@ -8,6 +8,7 @@ import { MISSING_DATA_HINT, loadDiagnostics, loadFactorHistory } from '@/lib/dat
 import { factorHistorySentence, readFactorTest } from '@/lib/factor'
 import { countryLayer } from '@/lib/layers'
 import {
+  artefactHref,
   countryLayerHref,
   countryProfileHref,
   decisionHref,
@@ -16,15 +17,16 @@ import {
   limitsHref,
   methodHref,
 } from '@/lib/links'
+import { readResidualStructure } from '@/lib/residual'
 import { readWealthTracking } from '@/lib/wealth'
-import { capitalize, countWord } from '@/lib/words'
+import { countWord } from '@/lib/words'
 
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'Thesis, NCB',
   description:
-    'Why national capability becomes the bottleneck as intelligence, agents and robotics change the conditions of action, and what would show the claim is wrong.',
+    'Why national capability becomes the bottleneck as intelligence, agents and robotics change the conditions of action, how much of it is income, and what is left beyond income.',
 }
 
 /** What the second layer would measure, if the evidence promotes it. */
@@ -60,6 +62,7 @@ export default async function ThesisPage() {
   const factor = readFactorTest(diag)
   const history = await loadFactorHistory()
   const historySentence = history ? factorHistorySentence(history) : null
+  const residual = readResidualStructure(diag)
   const brazil = countryLayer('BRA')
 
   return (
@@ -92,66 +95,33 @@ export default async function ThesisPage() {
 
       <Section
         title="Where the claim holds, and where it fails"
-        hint="If a country's ability to act is separate from its wealth, the nine capabilities will not simply follow income. Here is how far that holds in the current data."
+        hint="The claim comes in a strong and a weaker version. Each sentence below is computed from the current release and changes when the data does."
       >
         <div className="mb-8 max-w-3xl space-y-4 text-lg leading-relaxed">
           <p>
             Countries can be rich without being equally able to anticipate change, coordinate,
-            learn, experiment, adapt, build or hold a shared purpose. The benchmark tests whether
-            those capacities can be observed on their own. If the claim holds, two countries at
-            the same income have different capability shapes, and a country can raise a dimension
-            before it gets richer. If it fails, the dimensions track GDP per head and the
+            learn, experiment, adapt, build or hold a shared purpose. The benchmark tests that in two
+            strengths. The strong claim is that capability is separate from wealth, so the nine
+            capabilities do not simply follow income. The weaker claim is that countries at the
+            same income have different{' '}
+            <Link href={glossaryTermHref('Capability shape')} className="underline underline-offset-4">
+              capability shapes
+            </Link>
+            , so a country&apos;s profile says something its income does not. If both fail, the
             benchmark is an income table with extra steps.
           </p>
-          <p>
-            The answer today is split. {capitalize(countWord(wealth.separate.length))} of the nine
-            sit below the wealth-tracking line and {countWord(wealth.tracking.length)} sit at or
-            above it.
-          </p>
         </div>
 
-        <WealthTracking reading={wealth} />
-
-        <div className="mt-8 max-w-3xl space-y-4 text-lg leading-relaxed">
-          {wealth.weakest && wealth.strongest ? (
-            <p>
-              {wealth.weakest.label} moves least with income, at{' '}
-              {wealth.weakest.strength?.toFixed(2)}. {wealth.strongest.label} moves most, at{' '}
-              {wealth.strongest.strength?.toFixed(2)}, which is close enough to income that the
-              project treats it as a known failure and says so beside the number.
-            </p>
-          ) : null}
-          <p>
-            The{' '}
-            <Link href={diagnosticsHref} className="underline underline-offset-4">
-              diagnostics
-            </Link>{' '}
-            run this test on every release and also rescore the model with the wealth-correlated
-            indicators removed. The{' '}
-            <Link href={limitsHref} className="underline underline-offset-4">
-              limits
-            </Link>{' '}
-            record which dimensions lose every measured indicator after that removal. The{' '}
-            <Link href={methodHref} className="underline underline-offset-4">
-              method
-            </Link>{' '}
-            explains how a statistic becomes a score, and{' '}
-            <a href={docHref(WHY_DOC)} className="underline underline-offset-4">
-              {WHY_DOC}
-            </a>{' '}
-            states the full argument and the evidence that would disprove it.
-          </p>
-        </div>
         {factor ? (
-          <div className="mt-12">
+          <div>
             <h3 className="mb-4 text-xl font-medium tracking-tight">
               Are the nine really one thing?
             </h3>
             <div className="mb-8 max-w-3xl space-y-4 text-lg leading-relaxed">
               <p>
-                If the claim is wrong, the nine capabilities collapse into one factor that tracks
-                GDP per head. The diagnostics measure that directly: how much of the variation
-                across countries one{' '}
+                If the strong claim is wrong, the nine capabilities collapse into one factor that
+                tracks GDP per head. The diagnostics measure that directly: how much of the
+                variation across countries one{' '}
                 <Link href={glossaryTermHref('First factor')} className="underline underline-offset-4">
                   first factor
                 </Link>{' '}
@@ -178,6 +148,97 @@ export default async function ThesisPage() {
             ) : null}
           </div>
         ) : null}
+
+        <div className="mt-12 mb-8 max-w-3xl space-y-4 text-lg leading-relaxed">
+          <p>
+            Capability by capability, {countWord(wealth.separate.length)} of the nine sit below the
+            wealth-tracking line and {countWord(wealth.tracking.length)} sit at or above it.
+          </p>
+        </div>
+
+        <WealthTracking reading={wealth} />
+
+        {wealth.weakest && wealth.strongest ? (
+          <p className="mt-8 max-w-3xl text-lg leading-relaxed">
+            {wealth.weakest.label} moves least with income, at{' '}
+            {wealth.weakest.strength?.toFixed(2)}. {wealth.strongest.label} moves most, at{' '}
+            {wealth.strongest.strength?.toFixed(2)}, which is close enough to income that the
+            project treats it as a known failure and says so beside the number.
+          </p>
+        ) : null}
+
+        {residual ? (
+          <div className="mt-12">
+            <h3 className="mb-4 text-xl font-medium tracking-tight">What is left after income?</h3>
+            <div className="max-w-3xl space-y-4 text-lg leading-relaxed">
+              <p>
+                For every country and capability, the{' '}
+                <Link href={glossaryTermHref('Wealth residual')} className="underline underline-offset-4">
+                  wealth residual
+                </Link>{' '}
+                is the gap between its score and the score its income predicts. Four tests ask what
+                those leftovers hold, across the {residual.n} countries with all nine. Each prints
+                counts and averages over countries, and no country&apos;s leftover is published.
+              </p>
+              {residual.structureSentence ? <p>{residual.structureSentence}</p> : null}
+              {residual.peerSentence ? <p>{residual.peerSentence}</p> : null}
+              <p>
+                {residual.stabilitySentence ? `${residual.stabilitySentence} ` : null}
+                {residual.looSentence}
+              </p>
+              {residual.incomeShareSentence ? <p>{residual.incomeShareSentence}</p> : null}
+              <p>
+                The{' '}
+                <Link href={diagnosticsHref} className="underline underline-offset-4">
+                  diagnostics
+                </Link>{' '}
+                print every figure with its null and the rule that reads it, and{' '}
+                <Link href={decisionHref('D138')} className="underline underline-offset-4">
+                  decision D138
+                </Link>{' '}
+                records that the rules were fixed before the tests first ran.
+              </p>
+            </div>
+
+            <h3 className="mt-12 mb-4 text-xl font-medium tracking-tight">
+              What does that mean for the claim?
+            </h3>
+            <div className="max-w-3xl space-y-4 text-lg leading-relaxed">
+              {residual.strongClaimSentence ? <p>{residual.strongClaimSentence}</p> : null}
+              {residual.weakClaimSentence ? <p>{residual.weakClaimSentence}</p> : null}
+              <p>
+                All of it rests on {residual.n} countries with all nine capabilities scored. At
+                that size a handful of countries can move any of these numbers, so{' '}
+                <Link href={artefactHref('A8')} className="underline underline-offset-4">
+                  each one is a hint
+                </Link>{' '}
+                that a wider country set could overturn.
+              </p>
+            </div>
+          </div>
+        ) : null}
+
+        <div className="mt-8 max-w-3xl space-y-4 text-lg leading-relaxed">
+          <p>
+            The{' '}
+            <Link href={diagnosticsHref} className="underline underline-offset-4">
+              diagnostics
+            </Link>{' '}
+            also rescore the model with the wealth-correlated indicators removed. The{' '}
+            <Link href={limitsHref} className="underline underline-offset-4">
+              limits
+            </Link>{' '}
+            record which dimensions lose every measured indicator after that removal. The{' '}
+            <Link href={methodHref} className="underline underline-offset-4">
+              method
+            </Link>{' '}
+            explains how a statistic becomes a score, and{' '}
+            <a href={docHref(WHY_DOC)} className="underline underline-offset-4">
+              {WHY_DOC}
+            </a>{' '}
+            states the full argument and the evidence that would disprove it.
+          </p>
+        </div>
         <Note>
           A correlation with income is not proof that income causes the capability. It marks a
           dimension whose current indicators cannot separate the two. That is a data problem, and

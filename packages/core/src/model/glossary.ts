@@ -321,11 +321,18 @@ export const GLOSSARY: GlossaryEntry[] = [
     example: 'In dataset 7.6.0 the first factor carries 52.9% of the variation across 51 countries, against 18.9% expected by chance, and it correlates 0.86 with log GDP per head.',
   },
   {
+    term: 'Capability shape',
+    group: 'How good the evidence is',
+    short: 'Which of its nine capabilities a country is strong or weak on, once its income and its overall level are taken out.',
+    full: 'Take each capability score, subtract the score the country\'s income predicts, and divide by how widely those gaps spread, so every capability counts the same. What is left is nine numbers per country. Subtract their own average and the remainder is the shape: a country above its income line on everything has a level and no shape, and one above on some capabilities and below on others has a shape. The diagnostics ask whether countries at the same income have different shapes, and whether those shapes line up along patterns that numbers dealt out at random would not produce. Only counts and averages over countries are published. No country\'s shape is.',
+    example: 'A country that sits above its income line on Trust and Coordination and below it on Experimentation has a different shape from one of the same income that sits the other way round, even if the two are at the same overall level.',
+  },
+  {
     term: 'Wealth residual',
     group: 'What sits beside the score',
     short: 'The gap between a dimension score and the score a country\'s income predicts.',
     full: 'Richer countries score higher on most of these dimensions. The wealth residual removes that pattern from one dimension at a time: a line is fitted through every country\'s score against its income per head, and the residual is how far above or below its own line a country sits. It is published per dimension and never added up, because nine residuals averaged into one number is the single ranking this benchmark withholds. A residual is only as meaningful as the line behind it, so every residual carries the strength of its fit. Where the fit is weak, income explains little and the residual almost repeats the score. The layer is provisional: it is computed and inspectable, and no country page or score reads it.',
-    example: 'Brazil sits 18.3 points below the income line on Trust and 9.1 above it on Coordination, from the same two scores.',
+    example: 'Two countries with the same income can sit on opposite sides of the line on one capability: one above what its income predicts, the other below. Per-country residuals stay offline until the layer is promoted (D65).',
   },
   {
     term: 'Capability agenda',

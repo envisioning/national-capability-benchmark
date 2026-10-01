@@ -22,6 +22,7 @@ import type {
   MeasurementClass,
   Observation,
   Provenance,
+  ResidualStructure,
 } from '../model/index.js'
 import {
   correlationMatrix,
@@ -41,6 +42,7 @@ import {
   type ScoreOptions,
 } from './score.js'
 import { buildHistory, normalizedAt } from './trend.js'
+import { residualStructureFor } from './residual-structure.js'
 import type { Frame } from './normalize.js'
 
 export const CONTEXT_PREFIX = '__context__'
@@ -228,6 +230,14 @@ export type Diagnostics = {
    * benchmark's claim fails. See D137 and docs/WHY.md.
    */
   factorStructure: FactorStructure
+  /**
+   * What is left after income, tested in aggregate on the wealth residual:
+   * whether the residuals move together, whether countries at the same income
+   * have different shapes, whether the residual order holds still, and how
+   * much of a profile income accounts for. Statistics over countries only; no
+   * country's residual is in it (D65). Older files lack it. See D138.
+   */
+  residualStructure?: ResidualStructure
   indicatorVsGdp: Array<{
     indicatorId: string
     dimension: Dimension
@@ -778,15 +788,14 @@ export function runDiagnostics(
   }
   dimensionPairs.sort((x, y) => Math.abs(y.r ?? 0) - Math.abs(x.r ?? 0))
 
-  const factorStructure = factorStructureFor(
-    new Map(
-      countries.map((c) => [
-        c.iso3,
-        Object.fromEntries(DIMENSIONS.map((d) => [d, c.dimensions[d]?.score ?? null])),
-      ]),
-    ),
-    gdp,
+  const scoreRows = new Map(
+    countries.map((c) => [
+      c.iso3,
+      Object.fromEntries(DIMENSIONS.map((d) => [d, c.dimensions[d]?.score ?? null])),
+    ]),
   )
+  const factorStructure = factorStructureFor(scoreRows, gdp)
+  const residualStructure = residualStructureFor(scoreRows, gdp)
 
   const indicatorVsGdp = [...matrix.keys()].map((indicatorId) => {
     const def = INDICATORS_BY_ID[indicatorId]
@@ -1035,6 +1044,7 @@ export function runDiagnostics(
       .filter((p) => (p.r ?? 0) >= DIMENSION_OVERLAP_THRESHOLD)
       .map((p) => ({ ...p, r: p.r === null ? null : round(p.r, 3) })),
     factorStructure,
+    residualStructure,
     indicatorVsGdp,
     wealthAttribution,
     panelVsGdp: delphi ? panelVsGdpFor(delphi, countries, gdp) : null,

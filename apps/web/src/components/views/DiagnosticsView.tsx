@@ -3,6 +3,10 @@
 import {
   DIMENSION_LABELS,
   DIMENSION_OVERLAP_THRESHOLD,
+  RESIDUAL_INCOME_SHARE_BANDS,
+  RESIDUAL_LOO_FRAGILE_SD,
+  RESIDUAL_MOVED_POINTS,
+  RESIDUAL_STABILITY_BANDS,
   INDICATORS_BY_ID,
   REDUNDANCY_THRESHOLD,
   WEALTH_CORRELATION_THRESHOLD,
@@ -14,8 +18,10 @@ import { CapabilityLink } from '@/components/CapabilityLink'
 import { ClassBadge, Headline, Meta, PageTitle, PanelProvenanceNote, Section } from '@/components/ui'
 import type { Diagnostics } from '@ncb/core'
 import { capitalize, countWord } from '@/lib/words'
-import { exploreHref } from '@/lib/links'
+import { decisionHref, exploreHref } from '@/lib/links'
 import { readFactorTest } from '@/lib/factor'
+import { readResidualStructure } from '@/lib/residual'
+import type { ResidualReading } from '@/lib/residual'
 
 const name = (id: string) => INDICATORS_BY_ID[id]?.name ?? id
 const muted = (v: React.ReactNode) => <span className="text-[var(--muted)]">{v}</span>
@@ -34,6 +40,7 @@ export function DiagnosticsView({
   factorHistory: FactorHistoryRelease[]
 }) {
   const factor = readFactorTest(diag)
+  const residual = readResidualStructure(diag)
   const n = diag.dimensionVsGdp[0]?.n ?? 0
   const wealthTracking = diag.dimensionVsGdp.filter(
     (d) => d.pearson !== null && Math.abs(d.pearson) >= WEALTH_CORRELATION_THRESHOLD,
@@ -176,6 +183,8 @@ export function DiagnosticsView({
           ) : null}
         </Section>
       ) : null}
+
+      {residual ? <ResidualSection reading={residual} /> : null}
 
       <Section
         title={
@@ -711,5 +720,257 @@ function FactorTables({ solution, label }: { solution: FactorSolution; label: st
           : 'No country was left out.'}
       </p>
     </div>
+  )
+}
+
+const READINGS: Record<string, string> = {
+  structure: 'structure',
+  none: 'no structure',
+  differ: 'shapes differ',
+  alike: 'peers alike',
+  noise: 'noise',
+  stable: 'stable',
+  mixed: 'mixed',
+  churning: 'churning',
+  untested: 'untested',
+  robust: 'robust',
+  fragile: 'fragile',
+  most: 'most',
+  part: 'part',
+  little: 'little',
+}
+
+/**
+ * The four aggregate tests of what is left after income (D138). Every figure
+ * is a statistic over countries: the structure holds no country's residual,
+ * and this section prints none.
+ */
+function ResidualSection({ reading }: { reading: ResidualReading }) {
+  const { rs, n } = reading
+  const a = rs.structure
+  const b = rs.peers
+  const c = rs.stability.releases
+  const loo = rs.stability.leaveOneOut
+  const d = rs.incomeShare
+  const f2 = (x: number) => x.toFixed(2)
+  const p1 = (x: number) => `${(x * 100).toFixed(1)}%`
+  const title =
+    a?.reading === 'structure'
+      ? 'What is left after income still moves together'
+      : 'What is left after income looks like noise'
+
+  const peerRows = b
+    ? [
+        {
+          test: 'Peer distance against peers picked without regard to income',
+          observed: f2(b.observedMean),
+          baseline: `${f2(b.incomeNull.mean)} (5th ${f2(b.incomeNull.p5)}, 95th ${f2(b.incomeNull.p95)})`,
+          rule: 'below the 5th reads peers alike',
+        },
+        {
+          test: 'Shape pattern share against leftovers dealt out at random',
+          observed: p1(b.shapeShare),
+          baseline: `${p1(b.shapeNull.mean)} (95th ${p1(b.shapeNull.p95)})`,
+          rule: 'above the 95th reads shapes differ',
+        },
+        {
+          test: 'Peer distance against leftovers dealt out at random',
+          observed: f2(b.observedMean),
+          baseline: `${f2(b.noiseFloor.mean)} (5th ${f2(b.noiseFloor.p5)}, 95th ${f2(b.noiseFloor.p95)})`,
+          rule: 'descriptive, not read',
+        },
+        {
+          test: 'Countries beyond their own random 95th',
+          observed: p1(b.shareBeyond),
+          baseline: `${p1(b.shareNull.mean)} (95th ${p1(b.shareNull.p95)})`,
+          rule: 'descriptive, not read',
+        },
+      ]
+    : []
+
+  return (
+    <Section
+      title={title}
+      hint={`Four tests on the wealth residual over the ${n} countries with all nine capabilities and an income figure, with every rule fixed before the first run. Treat each as a hint at ${n} countries. No country's residual is published.`}
+    >
+      <div className="mb-6 max-w-3xl space-y-4 text-lg leading-relaxed">
+        {reading.strongClaimSentence ? <p>{reading.strongClaimSentence}</p> : null}
+        {reading.weakClaimSentence ? <p>{reading.weakClaimSentence}</p> : null}
+        <p className="text-xs leading-relaxed text-[var(--muted)]">
+          The weaker claim holds when shapes differ and the release test does not churn; it fails
+          when peers are alike, or when there is no structure and the shapes read as noise; it is
+          mixed otherwise. Rules and their order are in{' '}
+          <Link href={decisionHref('D138')} className="underline underline-offset-4">
+            D138
+          </Link>
+          .
+        </p>
+      </div>
+
+      {a ? (
+        <div className="mt-8">
+          <h3 className="mb-3 text-xl font-medium tracking-tight">
+            Does what is left move together? Reads {READINGS[a.reading]}
+          </h3>
+          {reading.structureSentence ? (
+            <p className="mb-4 max-w-3xl text-lg leading-relaxed">{reading.structureSentence}</p>
+          ) : null}
+          <DataTable
+            rows={a.loadings}
+            initialSort={{ key: 'loading', dir: 'desc' }}
+            caption={`Loadings of the residuals on their first factor, ${a.countries} countries`}
+            columns={[
+              {
+                key: 'dimension',
+                label: 'Dimension',
+                sort: (r) => DIMENSION_LABELS[r.dimension],
+                render: (r) => <CapabilityLink dimension={r.dimension} />,
+              },
+              {
+                key: 'loading',
+                label: 'Loading',
+                align: 'right',
+                sort: (r) => r.loading,
+                render: (r) => r.loading.toFixed(3),
+              },
+            ]}
+          />
+          <p className="mt-3 max-w-3xl text-xs leading-relaxed text-[var(--muted)]">
+            First-factor share {p1(a.firstFactorShare)}. Eigenvalues, largest first:{' '}
+            {a.eigenvalues.map((v) => v.toFixed(2)).join(', ')}. Chance at {a.countries - 1}{' '}
+            countries, one fewer because the income line uses one up: {p1(a.chance.mean)}, 95th{' '}
+            {p1(a.chance.p95)} ({a.chance.draws} draws, seed {a.chance.seed}). Each residual
+            column shuffled on its own: {p1(a.permutation.mean)}, 95th {p1(a.permutation.p95)} (
+            {a.permutation.draws} draws, seed {a.permutation.seed}). A share above the chance 95th
+            reads structure.
+          </p>
+        </div>
+      ) : null}
+
+      {b ? (
+        <div className="mt-10">
+          <h3 className="mb-3 text-xl font-medium tracking-tight">
+            Do countries at the same income share a shape? Reads {READINGS[b.reading]}
+          </h3>
+          {reading.peerSentence ? (
+            <p className="mb-4 max-w-3xl text-lg leading-relaxed">{reading.peerSentence}</p>
+          ) : null}
+          <DataTable
+            rows={peerRows}
+            caption={`Shapes against their ${b.peerCount} nearest income peers, ${b.countries} countries`}
+            columns={[
+              { key: 'test', label: 'Figure', render: (r) => r.test },
+              { key: 'observed', label: 'Observed', align: 'right', render: (r) => r.observed },
+              { key: 'baseline', label: 'Null', align: 'right', render: (r) => muted(r.baseline) },
+              { key: 'rule', label: 'Rule', render: (r) => muted(r.rule) },
+            ]}
+          />
+          <p className="mt-3 max-w-3xl text-xs leading-relaxed text-[var(--muted)]">
+            Each residual is divided by its spread so every capability counts the same, and a
+            shape is a country&apos;s nine values minus their own mean. Peer distance is the mean
+            squared gap between a country&apos;s shape and each of its peers&apos;, averaged over
+            countries. One null keeps every profile whole and deals the incomes out at random, so
+            peers become countries picked without regard to income. The other deals each
+            capability&apos;s residuals out across countries, which keeps their spread and breaks
+            any link between one country&apos;s nine. {b.incomeNull.draws} draws each, seeds{' '}
+            {b.shapeNull.seed} and {b.incomeNull.seed}.
+          </p>
+        </div>
+      ) : null}
+
+      <div className="mt-10">
+        <h3 className="mb-3 text-xl font-medium tracking-tight">
+          Does the order hold still? Reads {READINGS[c?.reading ?? 'untested']} between releases,{' '}
+          {READINGS[loo.reading]} without one country
+        </h3>
+        <p className="mb-4 max-w-3xl text-lg leading-relaxed">
+          {reading.stabilitySentence ? `${reading.stabilitySentence} ` : null}
+          {reading.looSentence}
+        </p>
+        <DataTable
+          rows={loo.perDimension.map((row) => ({
+            ...row,
+            release: c?.perDimension.find((x) => x.dimension === row.dimension) ?? null,
+          }))}
+          caption="Each capability's residual order between releases and without one country"
+          columns={[
+            {
+              key: 'dimension',
+              label: 'Dimension',
+              sort: (r) => DIMENSION_LABELS[r.dimension],
+              render: (r) => <CapabilityLink dimension={r.dimension} />,
+            },
+            {
+              key: 'pairs',
+              label: 'Release pairs',
+              align: 'right',
+              sort: (r) => r.release?.pairs ?? null,
+              render: (r) => muted(r.release?.pairs ?? 'no data'),
+            },
+            {
+              key: 'mean',
+              label: 'Mean rank r',
+              align: 'right',
+              sort: (r) => r.release?.mean ?? null,
+              render: (r) => (r.release?.mean !== null && r.release?.mean !== undefined ? f2(r.release.mean) : 'not tested'),
+            },
+            {
+              key: 'min',
+              label: 'Lowest rank r',
+              align: 'right',
+              sort: (r) => r.release?.min ?? null,
+              render: (r) =>
+                r.release?.min !== null && r.release?.min !== undefined
+                  ? `${f2(r.release.min)} (${r.release.minCountries})`
+                  : 'not tested',
+            },
+            {
+              key: 'slope',
+              label: 'Slope shift, SE',
+              align: 'right',
+              sort: (r) => r.maxSlopeShiftSe,
+              render: (r) => muted(f2(r.maxSlopeShiftSe)),
+            },
+            {
+              key: 'own',
+              label: 'Own shift, SD',
+              align: 'right',
+              sort: (r) => r.maxResidualShiftSd,
+              render: (r) => f2(r.maxResidualShiftSd),
+            },
+            { key: 'n', label: 'n', align: 'right', sort: (r) => r.n, render: (r) => muted(r.n) },
+          ]}
+        />
+        <p className="mt-3 max-w-3xl text-xs leading-relaxed text-[var(--muted)]">
+          Rank r is the Spearman correlation of a capability&apos;s residual order with the release
+          before, over the countries in both, counted only where a release kept the same countries
+          and moved some residual on that capability by {RESIDUAL_MOVED_POINTS} points or more.
+          {c ? ` Read across ${c.versions.length} dataset releases, ${c.pairs} pairs with the same countries.` : ''}{' '}
+          Every lowest value at {RESIDUAL_STABILITY_BANDS.stable} or more reads stable, any below{' '}
+          {RESIDUAL_STABILITY_BANDS.churning} reads churning. The shifts are the largest when any
+          one country is dropped and the line refitted: of the slope in its standard errors, and of
+          that country&apos;s own residual in the spread around the line, where more than{' '}
+          {RESIDUAL_LOO_FRAGILE_SD} reads fragile.
+        </p>
+      </div>
+
+      {d ? (
+        <div className="mt-10">
+          <h3 className="mb-3 text-xl font-medium tracking-tight">
+            How much of a profile is income? Reads {READINGS[d.reading]}
+          </h3>
+          {reading.incomeShareSentence ? (
+            <p className="max-w-3xl text-lg leading-relaxed">{reading.incomeShareSentence}</p>
+          ) : null}
+          <p className="mt-3 max-w-3xl text-xs leading-relaxed text-[var(--muted)]">
+            For each of {d.countries} countries, one minus its nine squared residuals over its nine
+            squared distances from each capability&apos;s average. Mean {p1(d.mean)}, median{' '}
+            {p1(d.median)}, pooled over all countries {p1(d.pooled)}. A mean of{' '}
+            {p1(RESIDUAL_INCOME_SHARE_BANDS.most)} or more reads most, {p1(RESIDUAL_INCOME_SHARE_BANDS.part)}{' '}
+            or more reads part.
+          </p>
+        </div>
+      ) : null}
+    </Section>
   )
 }

@@ -9,7 +9,7 @@ import {
   isDelphiRunForDataset,
   rawHref,
 } from '../model/index.js'
-import type { CountryResult, Dimension } from '../model/index.js'
+import type { CountryResult, Dimension, ResidualStructure } from '../model/index.js'
 import { ingestWorldBank, recordRevisions } from '../pipeline/ingest.js'
 import { fetchJointEvsWvs } from '../pipeline/adapters/joint-evs-wvs.js'
 import { fetchVdem } from '../pipeline/adapters/vdem.js'
@@ -37,8 +37,9 @@ import { buildAgenda, renderAgenda } from '../pipeline/agenda.js'
 import { assertAgendaHistoryFloor, readAgendaHistoryDiscipline } from '../pipeline/agenda-history.js'
 import { LANGS, LEXICONS, lexiconRenders } from '../i18n/index.js'
 import type { Lang } from '../i18n/index.js'
-import { runDiagnostics } from '../pipeline/diagnostics.js'
-import { buildFactorHistory } from '../pipeline/factor-history.js'
+import { logGdpByCountry, runDiagnostics } from '../pipeline/diagnostics.js'
+import { buildFactorHistory, readReleaseSnapshots } from '../pipeline/factor-history.js'
+import { residualReleaseStability, withReleaseStability } from '../pipeline/residual-structure.js'
 import { buildReport } from '../pipeline/report.js'
 import { writeVelocity } from '../pipeline/velocity.js'
 import { writeLeverage } from '../pipeline/leverage.js'
@@ -205,16 +206,50 @@ async function diagnose(args: Args) {
     minPanelistConfidence: num(args, 'min-panelist-confidence', 0),
   }
   const { countries, matrix } = scoreAll(observations, opts)
-  const diag = runDiagnostics(observations, countries, matrix, opts, GDP_PER_CAPITA_CODE, delphi)
+  const computed = runDiagnostics(observations, countries, matrix, opts, GDP_PER_CAPITA_CODE, delphi)
+  /* Both release tests read the committed releases from git, once. Without
+   * git the committed figures stay as they are. See D137 and D138. */
+  const snapshots = await readReleaseSnapshots()
+  let releaseStability: ResidualStructure['stability']['releases'] = null
+  if (snapshots) {
+    releaseStability = residualReleaseStability([
+      ...snapshots
+        .filter((s) => s.version !== DATASET_VERSION)
+        .map((s) => ({ version: s.version, scores: s.scores, logGdp: s.logGdp })),
+      {
+        version: DATASET_VERSION,
+        scores: new Map(
+          countries.map((c) => [
+            c.iso3,
+            Object.fromEntries(DIMENSIONS.map((d) => [d, c.dimensions[d]?.score ?? null])),
+          ]),
+        ),
+        logGdp: logGdpByCountry(observations, GDP_PER_CAPITA_CODE),
+      },
+    ])
+  } else {
+    try {
+      const committed = JSON.parse(await readFile(FILES.diagnostics, 'utf8')) as {
+        residualStructure?: ResidualStructure
+      }
+      releaseStability = committed.residualStructure?.stability.releases ?? null
+    } catch {
+      /* No committed diagnostics either. */
+    }
+  }
+  const diag = computed.residualStructure
+    ? { ...computed, residualStructure: withReleaseStability(computed.residualStructure, releaseStability) }
+    : computed
   await writeOut(FILES.diagnostics, `${JSON.stringify(diag, null, 2)}\n`)
   console.log(`diagnostics -> ${FILES.diagnostics}`)
-  /* The factor test at every committed release, read from git. Without git
-   * the committed file stays as it is. See D137. */
-  const history = await buildFactorHistory({
-    version: DATASET_VERSION,
-    date: diag.generatedAt.slice(0, 10),
-    factorStructure: diag.factorStructure,
-  })
+  const history = await buildFactorHistory(
+    {
+      version: DATASET_VERSION,
+      date: diag.generatedAt.slice(0, 10),
+      factorStructure: diag.factorStructure,
+    },
+    snapshots,
+  )
   if (history) {
     await writeOut(FILES.factorHistory, `${JSON.stringify(history, null, 2)}\n`)
     console.log(`factor history -> ${FILES.factorHistory} (${history.releases.length} releases)`)

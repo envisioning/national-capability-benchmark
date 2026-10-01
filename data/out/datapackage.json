@@ -3,8 +3,8 @@
   "name": "national-capability-benchmark",
   "title": "NCB, the National Capability Benchmark",
   "description": "A prototype that measures what a country can do, separately from how rich it is. Nine capability dimensions scored from public data, each with a separate confidence number.",
-  "version": "7.6.0",
-  "created": "2026-10-01T15:43:09.894Z",
+  "version": "7.7.0",
+  "created": "2026-10-01T16:29:43.577Z",
   "homepage": "https://github.com/envisioning/national-capability-benchmark",
   "licenses": [
     {
@@ -241,7 +241,7 @@
     {
       "name": "diagnostics",
       "path": "diagnostics.json",
-      "title": "The tests the model has to pass. Its factorStructure field, whether the nine dimensions are one factor that tracks income, is described by schema/factor-structure.schema.json",
+      "title": "The tests the model has to pass. Its factorStructure field, whether the nine dimensions are one factor that tracks income, is described by schema/factor-structure.schema.json, and its residualStructure field, the aggregate tests of what is left after income, by schema/residual-structure.schema.json",
       "format": "json",
       "mediatype": "application/json"
     },

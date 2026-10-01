@@ -6862,3 +6862,187 @@ a confidence interval; a parallel-analysis or permutation baseline built on
 the actual score distributions, if it moves the chance level by more than
 0.02; or an imputation rule adopted elsewhere in the model, which would make
 complete cases the odd one out.
+
+## D138 — What is left after income is tested in aggregate every release
+
+*Recorded 2026-10-01. Follows D137, which found that the shared factor of the
+nine dimensions looks like income. Respects D65 and D68: every number this
+decision publishes is an aggregate over countries, and no residual of any one
+country reaches a page, a feed or a published file it was not already in.
+The reading rules below were written and committed before any of the four
+tests was run on the data.*
+
+**Decision.** `diagnostics.residualStructure` publishes, on every
+`bench diagnose`, four tests on the wealth residual of D68: each dimension's
+score minus the score its income predicts, from the same per-dimension
+ordinary least squares on log10 GDP per capita over every country scored on
+that dimension (unrounded, `linearFit` in `pipeline/stats.ts`). Tests (a),
+(b) and (d) read the **complete cases**: countries with all nine residuals.
+Nothing is imputed. Each test is built so that it can fail, and pure noise
+around income reads as no structure.
+
+- **(a) Is there structure left after income?** The correlation matrix of
+  the nine residual columns over the complete cases, its eigenvalues and the
+  first factor's loadings. The first-factor share is read against the D137
+  chance level (`firstFactorChance`, 2000 draws, seed 20261001) at one fewer
+  country, because the income fit uses up a degree of freedom. A
+  within-dimension permutation baseline (each residual column shuffled across
+  countries on its own, 2000 draws, seed 20261002) is published beside it as
+  the check D137 named. *Reading:* a share above the chance 95th percentile
+  reads **structure** (what is left after income moves together, so it is not
+  independent noise around the income line); at or below it reads **none**.
+- **(b) Same income, different shape.** Each residual column is divided by
+  its standard deviation so every dimension counts the same. A country's
+  **shape** is its nine standardised residuals minus their own mean, so a
+  country above its income line everywhere has a level, not a shape. Its peer
+  distance is the mean, over its `MAP_PEER_COUNT` (10) nearest complete-case
+  countries in log GDP per capita (`incomePeers`), of the root mean square
+  difference between the two shapes. The null shuffles each standardised
+  residual column across countries (2000 draws, seed 20261003): every
+  dimension keeps its spread, every country keeps its income peers, and any
+  link between a country's nine residuals is broken. In plain words, it is
+  what peer distances look like if the residuals were dealt out at random,
+  with no country-specific shape. Published: the median observed peer
+  distance with the null median and its 5th and 95th percentiles, and the
+  share of countries whose peer distance exceeds the 95th percentile of their
+  own null, with that share's own null mean and 95th percentile. No country
+  is named. *Reading:* a median below the null 5th percentile reads
+  **alike** (income peers share a shape, so income predicts shape); otherwise
+  a share above its null 95th percentile reads **differ** (more countries sit
+  far from their peers than random dealing produces); otherwise **noise**
+  (peers differ by the amount chance gives).
+- **(c) Is it stable?** From git, the same releases `factor-history.json`
+  reads (D137), the residual of each dimension at each release from that
+  release's published scores and income. For every pair of consecutive
+  releases with the same country set, and for every dimension whose residuals
+  moved by at least 0.05 points for some country between the two, the
+  Spearman correlation of the residual order over the countries in both.
+  Published per dimension: pairs compared, mean and minimum. *Reading:*
+  every tested dimension's minimum at or above 0.8 reads **stable**; any
+  tested dimension's minimum below 0.5 reads **churning** (that dimension's
+  residual order follows indicator choice rather than countries, and the
+  pages say so); otherwise **mixed**; no moved pair reads **untested**.
+  Leave-one-out on the current release, per dimension: the largest change in
+  the slope when one country is dropped, in standard errors of the slope,
+  and the largest change in a dropped country's own residual (its residual
+  against the line fitted without it), in residual standard deviations.
+  *Reading:* any dimension above 1 residual standard deviation reads
+  **fragile**, the condition D68 named as making the full-set fit wrong;
+  otherwise **robust**.
+- **(d) How much of a profile is income?** For each complete-case country,
+  one minus the sum of its nine squared residuals over the sum of its nine
+  squared deviations from each dimension's mean: the share of how far its
+  profile sits from the average profile that its income line accounts for.
+  Published: the mean (the headline), the median and the pooled share. A
+  country's share can be negative when its income line points the wrong way.
+  *Reading:* a mean of 0.5 or more reads **most**; 0.25 or more reads
+  **part**; below reads **little**.
+
+**What the four mean for the claim.** The strong claim, that capability is
+separate from wealth, is read from D137's band alone. The weaker claim, that
+countries at the same income have different capability shapes, so a profile
+carries information beyond income, is read:
+
+- **holds** when (b) reads differ and (c) does not read churning;
+- **fails** when (b) reads alike, or when (a) reads none and (b) reads noise;
+- **mixed** otherwise.
+
+Every sentence on `/thesis` and `/diagnostics` that states one of these
+verdicts is a template chosen by the computed reading in
+`apps/web/src/lib/residual.ts`, never fixed prose.
+
+**Amendment to (b), before the first run on data.** The (b) rule above
+failed its own synthetic check, before it was run on the benchmark's
+scores. On 50 synthetic countries with a planted shape (each country leaning
+one way on four dimensions and the other way on five, by its own amount,
+independent of income) it read **alike**, because a median of root mean
+square distances shrinks when shapes vary along one direction, whatever the
+peers. It compared peers with random dealing when the question "do income
+peers share a shape?" compares peers with countries chosen without regard to
+income. Replaced, still before any run on data:
+
+- The peer distance is the **mean**, over countries, of the mean **squared**
+  shape distance to the 10 income peers, per dimension.
+- **alike** when that mean falls below the 5th percentile of the same mean
+  with every profile kept whole and the incomes dealt out at random (2000
+  draws, seed 20261004): income peers are more alike in shape than countries
+  picked without regard to income, so income still predicts the shape.
+- otherwise **differ** when the first-factor share of the **shape columns**
+  (the standardised residuals minus each country's own mean) exceeds the 95th
+  percentile of the same share with each residual column dealt out at random
+  before the shapes are taken (2000 draws, seed 20261003): shapes line up
+  along shared contrasts that random dealing does not produce, and since
+  peers are not more alike than anyone, countries at the same income spread
+  along them.
+- otherwise **noise**.
+- Published but not read: the peer distance against the random-dealing noise
+  floor, and the share of countries whose peer distance clears the 95th
+  percentile of their own noise floor (one in twenty by construction).
+
+The synthetic checks in `residual-structure.test.ts` now hold the rule to
+four cases: pure noise around income reads none and noise; a planted shape
+reads structure and differ; a level shared by all nine reads structure and
+noise, so the weaker claim reads mixed; a shape that income dictates through
+a curve a straight line cannot remove reads alike. The rest of the decision
+is unchanged.
+
+**Results.** *Written after the first run on data, dataset 7.7.0; the
+rules above were not edited after it.*
+
+50 complete cases (Cuba and Haiti lack a dimension, Venezuela an income
+figure).
+
+- (a) **structure.** The residuals' first factor carries 0.279 against a
+  chance level of 0.191 (95th 0.217); the permutation baseline agrees (0.190,
+  95th 0.215), so D137's Gaussian chance level holds within 0.002 here.
+  Loadings: Anticipation 0.84, Learning 0.70, Coordination 0.67, Trust 0.63,
+  Shared purpose 0.61, Agency 0.27, and near zero on Experimentation,
+  Adaptability and Building. What is left after income is not independent
+  noise: a country above its line on the institutional dimensions tends to be
+  above it on the others of that group.
+- (b) **differ.** Mean peer distance 1.559 against 1.538 with incomes dealt
+  at random (5th 1.464, 95th 1.605): income peers are no more alike in shape
+  than anyone. The shape columns' first-factor share is 0.264 against 0.204
+  under random dealing (95th 0.232). Descriptive: the peer distance sits below
+  the random-dealing floor (1.780, 5th 1.682), because part of what is left
+  is a shared level; 6% of countries clear their own 95th against 5% by
+  construction.
+- (c) **mixed** between releases: 22 releases, 19 consecutive pairs on the
+  same 53 countries, 23 dimension comparisons where a residual moved. Lowest
+  Spearman 0.718 on Trust (n 36), then Coordination 0.740 (n 44), Shared
+  purpose 0.759, Adaptability 0.777 and Agency 0.780; Building 0.984 and
+  Experimentation 0.912 hold. None below 0.5. **robust** without one
+  country: the largest own-residual shift is 0.249 residual SD (Agency), the
+  largest slope shift 0.66 standard errors (Trust). D68's leave-one-out
+  overturn condition is not met.
+- (d) **part.** Mean 0.306, median 0.443, pooled 0.392.
+
+The weaker claim reads **holds**. The strong claim reads, from D137, that
+what the nine share is mostly income.
+
+**Why.** D137 settled the strong claim against the benchmark for the shared
+factor. If the project is to keep saying a capability profile is worth
+reading, the claim it can still make has to be tested in public, with rules
+that could have said no. Fixing the rules first, and committing them, is
+what makes a "holds" mean something.
+
+**Cost.** (b) reads "differ" on a narrow margin (0.264 against 0.232) at 50
+countries, and A8 applies to every figure: a handful of countries could move
+it across the line. The (b) rule was amended once, after a synthetic check and
+before any run on data; the amendment and its reason are above. Standardising
+each residual by its spread gives a thin dimension the same weight as a well
+measured one. The release test reads past releases as published, so pairs
+where only one or two dimensions moved carry most of it, and the 0.8 and 0.5
+bands are judgment. Complete cases drop the least measured countries. The
+within-column nulls assume countries are exchangeable once income is out,
+which neighbours, regions and shared data sources violate. No test here can
+separate a real country-specific shape from measurement error that happens to
+be shared across a country's indicators, for example one national statistics
+office feeding several rows; only indicators from independent sources, or a
+measurement-noise model per row, could.
+
+**Overturned by.** A release where (b) reads alike or noise, which flips the
+weaker claim to fails or mixed on every surface without an edit; a churning
+release reading on any dimension; a measurement-noise floor built from
+indicator uncertainty that puts the shape share inside it; or a wider country
+set on which the margin in (b) can be estimated within a few hundredths.
