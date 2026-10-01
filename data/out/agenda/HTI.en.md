@@ -11,8 +11,8 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Anticipation | 0 | 0.46 (usable) | 0 over 10 years using 2 indicators, with 2 at the frame edge |
 | Agency | 14.8 | 0.24 (very thin) | no trend |
 | Coordination | 50.9 | 0.39 (thin) | no trend |
-| Trust | not scored | 0.11 (very thin) | no trend |
-| Learning | 10.6 | 0.15 (very thin) | no trend |
+| Trust | not scored | 0.09 (very thin) | no trend |
+| Learning | 22.7 | 0.28 (thin) | no trend |
 | Experimentation | 0.2 | 0.04 (very thin) | no trend |
 | Adaptability | 37.5 | 0.52 (usable) | -3.7 over 10 years using 3 indicators |
 | Building | 45.8 | 0.41 (thin) | +5.7 over 10 years using 2 indicators, with 1 at the frame edge |
@@ -59,7 +59,7 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Uses 2 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
-### Trust: confidence 0.11, very thin
+### Trust: confidence 0.09, very thin
 
 How much cooperation is possible beyond immediate personal networks?
 
@@ -67,19 +67,19 @@ How much cooperation is possible beyond immediate personal networks?
 - Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
-### Learning: confidence 0.15, very thin
-
-How effectively does the country acquire, distribute, and update knowledge?
-
-- Uses 2 observed indicators.
-- Missing indicators: Adult learning participation, Research citation impact.
-
 ### Agency: confidence 0.24, very thin
 
 How able are individuals and organizations to turn an intention into action?
 
 - Uses 3 observed indicators.
 - Missing indicators: Adult digital skills, Perceived control over life.
+
+### Learning: confidence 0.28, thin
+
+How effectively does the country acquire, distribute, and update knowledge?
+
+- Uses 3 observed indicators.
+- Missing indicators: Adult learning participation.
 
 ### Coordination: confidence 0.39, thin
 
@@ -114,7 +114,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 ## Missing data
 
-23 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+22 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -128,7 +128,6 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Trust | Cooperation beyond the in-group | Reported trust in people met for the first time and in people of another nationality. |
 | Trust | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Learning | Adult learning participation | Share of adults in formal or non-formal education and training in the last 12 months. |
-| Learning | Research citation impact | Field-normalised citation impact of national research output. |
 | Experimentation | Venture capital investment | Venture capital deployed as a share of GDP. |
 | Experimentation | Regulatory sandbox activity | Number and breadth of live regulatory sandboxes and controlled trial regimes. |
 | Experimentation | University spinouts | Companies formed to commercialise university research, per million people. |

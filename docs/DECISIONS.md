@@ -5774,3 +5774,120 @@ dimension altogether. Or a capability row for Anticipation, Agency or Learning
 whose arrival shows that the confidence lost here was a cost of the split
 rather than of thin evidence, which would reopen whether the move should have
 waited for replacements, as Tier B does.
+
+---
+
+## D123 — Bribery incidence is scored in Trust, because it observes whether the rules hold
+
+*Recorded 2026-10-01. Reopens the check D60 created, under D118. Supersedes D60's
+reason for holding it out; D60's mechanism for checks stands.*
+
+**Decision.** `bribery_incidence`, World Bank `IC.FRM.BRIB.ZS`, moves from
+`checks.ts` to the indicator registry as a scored row in Trust's institutional
+family, lower is better. It is the share of firms asked for at least one bribe
+across six public transactions: utilities, permits, licences and taxes.
+
+**Why.** Trust asks how much cooperation is possible beyond immediate personal
+networks, and its high end reads "strangers cooperate on the strength of the
+rules". This series observes whether the rules hold where a firm meets the
+state as a stranger. It records experience, not reputation: the respondent is
+asked whether it was itself asked, which is what separated it from the
+perception composites D23 retired. D60 judged it valid on that ground and held
+it out only because it carried income. D118 removes that reason. Its income
+correlation (about 0.66 alone when D60 measured it) is now published as a
+finding.
+
+It covers 50 of 53 countries, all but Argentina (2017), Nicaragua and Honduras
+(2016), South Africa (2020) and Venezuela (2010) at 2023 or later, because the
+Enterprise Surveys now run in high-income economies too. It gives Trust's
+institutional family a second observed row beside contract enforcement, which
+D57 asks for before Trust can be read.
+
+**Cost.** Respondent reticence. Firms in some systems do not report a bribe
+request to a survey, so a low value can mean clean transactions or a cautious
+answer. China reads 0.14% and Korea 0.02% while Vietnam, surveyed by the same
+programme, reads 31%. Where it bites, the pattern is the A13 trap in survey
+form, and it is recorded as an
+artefact rather than corrected, because the Enterprise Surveys' own reticence
+adjustment is not published per country. Venezuela's 2010 value is old and the
+recency term marks it down. Trust's correlation with income rises; the release
+prints by how much.
+
+**Overturned by.** Evidence that reticence, not experience, drives the
+cross-country ordering: for example the Enterprise Surveys' published
+reticence indicators placing the lowest-reporting countries among the most
+reticent. That would make the row a perception of risk rather than an
+observation, and it would return to a check with that reason.
+
+---
+
+## D124 — Research citation impact is wired from OpenAlex as a top 10% share
+
+*Recorded 2026-10-01. Issue #23. D122 and D123 are being written on other
+branches; this entry takes the next free number after them.*
+
+**Decision.** `research_citation_impact` (Learning) moves from `gap` to
+`adapter`. The value is the share of a country's articles and reviews,
+published 2019 to 2021 and stamped 2021, that OpenAlex places in the top 10%
+most cited for their subfield and publication year
+(`citation_normalized_percentile.is_in_top_10_percent`), divided by the same
+share across every work with an institution country. A work counts for every
+country any author's institution sits in (whole counting). Unit "ratio to
+world average", `higher_better`, class `O`, tier `academic_survey`. The
+definition is reworded from "field-normalised citation impact" to say this.
+
+The adapter `openalex-top10-share-v1` makes two grouped calls by
+`authorships.institutions.country_code` and two baseline counts, with
+`corpus=core` written into each request. It asserts that all 53 countries
+appear in both grouped results and counts any that does not with two
+per-country calls; on 2026-10-01 none was missing. OpenAlex has no version
+parameter, so the observation file carries the pin under `openalex`: every
+request, the retrieval date, the totals and each country's two counts. The
+values derive from those counts, a rescore never touches the network, and a
+refetch is the explicit `pnpm bench openalex fetch`, diffed into
+`revisions.json`. The `mailto` and any API key are sent and never stored.
+Brazil is 0.602 (62,795 of 606,599 works, 10.35% against 17.20%). The memo is
+`docs/research/learning/OPENALEX-CITATION-IMPACT.md`.
+
+**Why.** Construct first. Learning asks whether a country absorbs and produces
+knowledge. Whether the research it produces is used by others, relative to what
+is normal in that field, is an outcome of that, not a stock of spending,
+enrolment or researchers that money buys directly. A share is size
+independent, the field and year normalisation is OpenAlex's own, and a count of
+flags cannot be moved by one paper the way a mean FWCI can. The ratio to the
+affiliated world corrects a level OpenAlex sets against a pool dominated by
+unaffiliated, uncited works (affiliated works sit at 17%, not 10%); within one
+window it rescales every country alike and changes no score. Dataset 7.0.0
+(D122) moves Learning's stock rows to the conditions layer and leaves Learning
+thin, and this row measures the dimension rather than its inputs.
+
+Reported as findings, not tests, from a local run on dataset 6.2.0: the row's
+normalised score correlates with log GDP per capita at r = 0.588 (n 51), its
+wealth-attribution delta is 0.063, and Learning moves from r = 0.731 to 0.794
+(Spearman 0.733 to 0.813) while its mean confidence rises from 0.495 to 0.586.
+It forms no redundant pair; the closest rows are `interpersonal_trust` at
+0.799 and `sci_articles_per_million` at 0.796. The prior `wealthProxyPrior`
+moves from 0.3 to 0.6, which is what the issue memo measured.
+
+**Cost.** Whole counting lifts small countries whose researchers co-author
+with larger systems: counting only single-country works, Panama falls from
+21.25% to 3.14%, Kenya from 19.83% to 5.94% and Estonia from 32.89% to 18.26%.
+The domestic-only share is not published; it is the obvious behavioural check
+under D60 and is left as follow-up. 37% of articles and reviews with a
+percentile in the window carry no institution country, and missing affiliations
+thin small producers most; Haiti rests on 389 works and no floor is applied.
+Conference papers are out, which understates computing-heavy systems.
+The value drifts: OpenAlex recomputes citations, percentiles and affiliations
+continuously, and on the day of the fetch some counts moved within two minutes.
+A later fetch will restate every value, which `revisions.json` will show, and
+the number published is the number read on the stamped retrieval date. The
+data is CC0; the fetch costs four credits of the keyless $0.10 daily budget.
+
+**Overturned by.** A fractional-count or domestic-only reading, from the
+OpenAlex snapshot or the API, that reorders the frame enough to show whole
+counting is reading collaboration networks rather than use of a country's own
+research, which would swap the construct or make this row a check; affiliation
+coverage shown to bias the share by country income or region, which would
+make the row read indexing rather than research; or OpenAlex changing the
+percentile's pool or definition, which would need a new adapter version and a
+new entry.

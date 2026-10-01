@@ -2,7 +2,6 @@ import { z } from 'zod'
 import { CheckDef } from './schema.js'
 import type { Dimension } from './dimensions.js'
 import { WB_DEFAULT_DATABASE } from './sources.js'
-import { WB_PUBLISHER } from './indicators.js'
 import type { SeriesRequest } from './indicators.js'
 import {
   VDEM_CY_V15_CSV,
@@ -44,25 +43,6 @@ const NOTES_POLARIZATION =
   'The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita.'
 
 const RAW: Raw[] = [
-  {
-    id: 'bribery_incidence',
-    dimension: 'trust',
-    family: 'institutional',
-    name: 'Bribery incidence',
-    definition:
-      'Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.',
-    unit: '% of firms',
-    direction: 'lower_better',
-    source: {
-      publisher: WB_PUBLISHER,
-      series: 'IC.FRM.BRIB.ZS',
-      url: 'https://data.worldbank.org/indicator/IC.FRM.BRIB.ZS',
-      tier: 'international_organization',
-      inspectable: true,
-    },
-    notes:
-      'Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score.',
-  },
   {
     /* Shares its id with the declared gap in indicators.ts on purpose: the gap
      * is the measurement Shared Purpose still wants, and this is what the model

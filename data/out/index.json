@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-01T09:42:40.025Z",
-  "version": "7.0.0",
+  "generatedAt": "2026-10-01T09:54:05.645Z",
+  "version": "7.1.0",
   "countries": [
     {
       "country": "Brazil",
@@ -168,53 +168,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 26.9,
-          "observedIndicators": 2,
+          "score": 41.4,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.37,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.806,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 26.9,
+          "blendedScore": 41.4,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 9.832,
-              "year": 2025,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 30.2,
-          "observedIndicators": 3,
+          "score": 28,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.539,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.729,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 30.2,
+          "blendedScore": 28,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -647,53 +633,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 64.6,
-          "observedIndicators": 2,
+          "score": 73.6,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.37,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.806,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 64.6,
+          "blendedScore": 73.6,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 2.793,
-              "year": 2024,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 38.5,
-          "observedIndicators": 3,
+          "score": 45.5,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.336,
+          "confidence": 0.465,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.589,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.629,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 38.5,
+          "blendedScore": 45.5,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -1168,53 +1140,39 @@
           "conditions": []
         },
         "trust": {
-          "score": null,
-          "observedIndicators": 1,
-          "belowCoverageFloor": true,
-          "confidence": 0.111,
+          "score": 77.1,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
+          "confidence": 0.251,
           "confidenceParts": {
-            "coverage": 0.2,
-            "recency": 0.583,
+            "coverage": 0.333,
+            "recency": 0.792,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": null,
-          "blendedFrom": "none",
+          "blendedScore": 77.1,
+          "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 6.146,
-              "year": 2025,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 63.5,
-          "observedIndicators": 3,
+          "score": 71.4,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.539,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.729,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 63.5,
+          "blendedScore": 71.4,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -1646,53 +1604,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 75.3,
-          "observedIndicators": 2,
+          "score": 83.2,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.37,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.806,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 75.3,
+          "blendedScore": 83.2,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 0.327,
-              "year": 2025,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 68.6,
-          "observedIndicators": 3,
+          "score": 73.9,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.539,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.729,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 68.6,
+          "blendedScore": 73.9,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -2153,53 +2097,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 73.5,
-          "observedIndicators": 2,
+          "score": 81.8,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.357,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.778,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 73.5,
+          "blendedScore": 81.8,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 0.575,
-              "year": 2023,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 56.9,
-          "observedIndicators": 3,
+          "score": 67.7,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.32,
+          "confidence": 0.45,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.561,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.608,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 56.9,
+          "blendedScore": 67.7,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -2603,53 +2533,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 67.4,
-          "observedIndicators": 2,
+          "score": 78.3,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.37,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.806,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 67.4,
+          "blendedScore": 78.3,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 0.018,
-              "year": 2024,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 38.9,
-          "observedIndicators": 3,
+          "score": 42.4,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.539,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.729,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 38.9,
+          "blendedScore": 42.4,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -3096,53 +3012,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 61.8,
-          "observedIndicators": 2,
+          "score": 74.5,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.357,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.778,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 61.8,
+          "blendedScore": 74.5,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 0,
-              "year": 2023,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 55.8,
-          "observedIndicators": 3,
+          "score": 65.3,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.396,
+          "confidence": 0.524,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.694,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.708,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 55.8,
+          "blendedScore": 65.3,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -3603,53 +3505,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 9.9,
-          "observedIndicators": 2,
+          "score": 31.1,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.37,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.806,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 9.9,
+          "blendedScore": 31.1,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 8.743,
-              "year": 2025,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 9.2,
-          "observedIndicators": 3,
+          "score": 15.3,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.427,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
+            "coverage": 0.8,
             "recency": 0.75,
-            "sourceQuality": 0.95
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 9.2,
+          "blendedScore": 15.3,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -4110,53 +3998,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 42.9,
-          "observedIndicators": 2,
+          "score": 59.3,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.37,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.806,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 42.9,
+          "blendedScore": 59.3,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 2.644,
-              "year": 2025,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 37.5,
-          "observedIndicators": 3,
+          "score": 42,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.539,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.729,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 37.5,
+          "blendedScore": 42,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -4603,53 +4477,39 @@
           "conditions": []
         },
         "trust": {
-          "score": null,
-          "observedIndicators": 1,
-          "belowCoverageFloor": true,
-          "confidence": 0.111,
+          "score": 80.7,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
+          "confidence": 0.198,
           "confidenceParts": {
-            "coverage": 0.2,
-            "recency": 0.583,
+            "coverage": 0.333,
+            "recency": 0.625,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": null,
-          "blendedFrom": "none",
+          "blendedScore": 80.7,
+          "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 1.538,
-              "year": 2020,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 10.1,
-          "observedIndicators": 3,
+          "score": 25.4,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.348,
+          "confidence": 0.478,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.611,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.646,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 10.1,
+          "blendedScore": 25.4,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -5110,53 +4970,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 48,
-          "observedIndicators": 2,
+          "score": 49.5,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.357,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.778,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 48,
+          "blendedScore": 49.5,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 15.817,
-              "year": 2023,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 45.9,
-          "observedIndicators": 3,
+          "score": 41.7,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.396,
+          "confidence": 0.524,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.694,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.708,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 45.9,
+          "blendedScore": 41.7,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -5603,53 +5449,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 29.2,
-          "observedIndicators": 2,
+          "score": 43.5,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.28,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.611,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 29.2,
+          "blendedScore": 43.5,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 9.265,
-              "year": 2017,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 40.3,
-          "observedIndicators": 3,
+          "score": 37.5,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.225,
+          "confidence": 0.357,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.394,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.483,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 40.3,
+          "blendedScore": 37.5,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -6110,53 +5942,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 6.4,
-          "observedIndicators": 2,
+          "score": 34.8,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.357,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.778,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 6.4,
+          "blendedScore": 34.8,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 2.745,
-              "year": 2023,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 36.8,
-          "observedIndicators": 3,
+          "score": 35.1,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.396,
+          "confidence": 0.524,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.694,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.708,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 36.8,
+          "blendedScore": 35.1,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -6603,53 +6421,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 37.7,
-          "observedIndicators": 2,
+          "score": 50.9,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.357,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.778,
+            "sourceQuality": 0.917
+          },
+          "delphiScore": null,
+          "delphiIqr": null,
+          "delphiDissent": false,
+          "blendedScore": 50.9,
+          "blendedFrom": "indicators",
+          "momentum": [],
+          "indicators": [],
+          "checks": [],
+          "conditions": []
+        },
+        "learning": {
+          "score": 37.7,
+          "observedIndicators": 4,
+          "belowCoverageFloor": false,
+          "confidence": 0.539,
+          "confidenceParts": {
+            "coverage": 0.8,
+            "recency": 0.729,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
           "blendedScore": 37.7,
-          "blendedFrom": "indicators",
-          "momentum": [],
-          "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 7.597,
-              "year": 2023,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
-          "conditions": []
-        },
-        "learning": {
-          "score": 42.4,
-          "observedIndicators": 3,
-          "belowCoverageFloor": false,
-          "confidence": 0.412,
-          "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
-          },
-          "delphiScore": null,
-          "delphiIqr": null,
-          "delphiDissent": false,
-          "blendedScore": 42.4,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -7096,53 +6900,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 36.1,
-          "observedIndicators": 2,
+          "score": 56.1,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.37,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.806,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 36.1,
+          "blendedScore": 56.1,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 1.278,
-              "year": 2024,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 40.5,
-          "observedIndicators": 3,
+          "score": 38.9,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.539,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.729,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 40.5,
+          "blendedScore": 38.9,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -7574,53 +7364,39 @@
           "conditions": []
         },
         "trust": {
-          "score": null,
-          "observedIndicators": 1,
-          "belowCoverageFloor": true,
-          "confidence": 0.111,
+          "score": 64.7,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
+          "confidence": 0.237,
           "confidenceParts": {
-            "coverage": 0.2,
-            "recency": 0.583,
+            "coverage": 0.333,
+            "recency": 0.75,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": null,
-          "blendedFrom": "none",
+          "blendedScore": 64.7,
+          "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 5.595,
-              "year": 2023,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 45,
-          "observedIndicators": 3,
+          "score": 40.3,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.539,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.729,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 45,
+          "blendedScore": 40.3,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -8081,53 +7857,39 @@
           "conditions": []
         },
         "trust": {
-          "score": null,
-          "observedIndicators": 1,
-          "belowCoverageFloor": true,
-          "confidence": 0.111,
+          "score": 86.8,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
+          "confidence": 0.251,
           "confidenceParts": {
-            "coverage": 0.2,
-            "recency": 0.583,
+            "coverage": 0.333,
+            "recency": 0.792,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": null,
-          "blendedFrom": "none",
+          "blendedScore": 86.8,
+          "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 0.098,
-              "year": 2025,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 51.3,
-          "observedIndicators": 3,
+          "score": 56.7,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.539,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.729,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 51.3,
+          "blendedScore": 56.7,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -8588,53 +8350,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 56.2,
-          "observedIndicators": 2,
+          "score": 70,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.37,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.806,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 56.2,
+          "blendedScore": 70,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 0.742,
-              "year": 2025,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 60.2,
-          "observedIndicators": 3,
+          "score": 58.4,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.539,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.729,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 60.2,
+          "blendedScore": 58.4,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -9095,53 +8843,39 @@
           "conditions": []
         },
         "trust": {
-          "score": null,
-          "observedIndicators": 1,
-          "belowCoverageFloor": true,
-          "confidence": 0.111,
+          "score": 86.2,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
+          "confidence": 0.251,
           "confidenceParts": {
-            "coverage": 0.2,
-            "recency": 0.583,
+            "coverage": 0.333,
+            "recency": 0.792,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": null,
-          "blendedFrom": "none",
+          "blendedScore": 86.2,
+          "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 2.067,
-              "year": 2024,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 67.6,
-          "observedIndicators": 3,
+          "score": 72.3,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.539,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.729,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 67.6,
+          "blendedScore": 72.3,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -9616,53 +9350,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 65.2,
-          "observedIndicators": 2,
+          "score": 76.3,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.37,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.806,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 65.2,
+          "blendedScore": 76.3,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 0.433,
-              "year": 2024,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 64.3,
-          "observedIndicators": 3,
+          "score": 64.2,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.539,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.729,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 64.3,
+          "blendedScore": 64.2,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -10123,53 +9843,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 36.8,
-          "observedIndicators": 2,
+          "score": 50.2,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.357,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.778,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 36.8,
+          "blendedScore": 50.2,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 7.674,
-              "year": 2023,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 54.7,
-          "observedIndicators": 3,
+          "score": 55.8,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.396,
+          "confidence": 0.524,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.694,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.708,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 54.7,
+          "blendedScore": 55.8,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -10616,53 +10322,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 45.2,
-          "observedIndicators": 2,
+          "score": 55.4,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.37,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.806,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 45.2,
+          "blendedScore": 55.4,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 8.016,
-              "year": 2025,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 47.3,
-          "observedIndicators": 3,
+          "score": 45,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.539,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.729,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 47.3,
+          "blendedScore": 45,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -11123,53 +10815,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 83.2,
-          "observedIndicators": 2,
+          "score": 88.8,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.37,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.806,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 83.2,
+          "blendedScore": 88.8,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 0,
-              "year": 2024,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 59.1,
-          "observedIndicators": 3,
+          "score": 67.5,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.539,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.729,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 59.1,
+          "blendedScore": 67.5,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -11630,53 +11308,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 87.5,
-          "observedIndicators": 2,
+          "score": 91.4,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.37,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.806,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 87.5,
+          "blendedScore": 91.4,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 0.242,
-              "year": 2025,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 72.1,
-          "observedIndicators": 3,
+          "score": 76.3,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.539,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.729,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 72.1,
+          "blendedScore": 76.3,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -12137,53 +11801,39 @@
           "conditions": []
         },
         "trust": {
-          "score": null,
-          "observedIndicators": 1,
-          "belowCoverageFloor": true,
-          "confidence": 0.111,
+          "score": 80.7,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
+          "confidence": 0.251,
           "confidenceParts": {
-            "coverage": 0.2,
-            "recency": 0.583,
+            "coverage": 0.333,
+            "recency": 0.792,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": null,
-          "blendedFrom": "none",
+          "blendedScore": 80.7,
+          "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 0.252,
-              "year": 2024,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 67.7,
-          "observedIndicators": 3,
+          "score": 71.6,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.539,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.729,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 67.7,
+          "blendedScore": 71.6,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -12615,53 +12265,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 54,
-          "observedIndicators": 2,
+          "score": 63.5,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.37,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.806,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 54,
+          "blendedScore": 63.5,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 5.824,
-              "year": 2024,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 53.7,
-          "observedIndicators": 3,
+          "score": 58.9,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.539,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.729,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 53.7,
+          "blendedScore": 58.9,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -13108,53 +12744,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 75.2,
-          "observedIndicators": 2,
+          "score": 81,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.37,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.806,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 75.2,
+          "blendedScore": 81,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 2.507,
-              "year": 2025,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 65.4,
-          "observedIndicators": 3,
+          "score": 71.4,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.539,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.729,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 65.4,
+          "blendedScore": 71.4,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -13572,53 +13194,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 65.3,
-          "observedIndicators": 2,
+          "score": 76.9,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.37,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.806,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 65.3,
+          "blendedScore": 76.9,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 0,
-              "year": 2025,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 47.9,
-          "observedIndicators": 3,
+          "score": 43.4,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.539,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.729,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 47.9,
+          "blendedScore": 43.4,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -14022,53 +13630,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 83.2,
-          "observedIndicators": 2,
+          "score": 88.7,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.37,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.806,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 83.2,
+          "blendedScore": 88.7,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 0.143,
-              "year": 2024,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 61.6,
-          "observedIndicators": 3,
+          "score": 63.2,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.427,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
+            "coverage": 0.8,
             "recency": 0.75,
-            "sourceQuality": 0.95
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 61.6,
+          "blendedScore": 63.2,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -14515,53 +14109,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 41,
-          "observedIndicators": 2,
+          "score": 40.2,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.357,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.778,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 41,
+          "blendedScore": 40.2,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 20.343,
-              "year": 2023,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 24.2,
-          "observedIndicators": 3,
+          "score": 24.8,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.396,
+          "confidence": 0.524,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.694,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.708,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 24.2,
+          "blendedScore": 24.8,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -14965,53 +14545,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 59.1,
-          "observedIndicators": 2,
+          "score": 41.5,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.357,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.778,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 59.1,
+          "blendedScore": 41.5,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 31.074,
-              "year": 2023,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 26.7,
-          "observedIndicators": 3,
+          "score": 34.2,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.32,
+          "confidence": 0.45,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.561,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.608,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 26.7,
+          "blendedScore": 34.2,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -15415,53 +14981,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 19.7,
-          "observedIndicators": 2,
+          "score": 38.1,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.357,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.778,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 19.7,
+          "blendedScore": 38.1,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 8.334,
-              "year": 2023,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 32.3,
-          "observedIndicators": 3,
+          "score": 35,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.396,
+          "confidence": 0.524,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.694,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.708,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 32.3,
+          "blendedScore": 35,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -15907,53 +15459,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 51.8,
-          "observedIndicators": 2,
+          "score": 64.1,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.37,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.806,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 51.8,
+          "blendedScore": 64.1,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 3.804,
-              "year": 2024,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 36.4,
-          "observedIndicators": 3,
+          "score": 41.3,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.427,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
+            "coverage": 0.8,
             "recency": 0.75,
-            "sourceQuality": 0.95
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 36.4,
+          "blendedScore": 41.3,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -16414,53 +15952,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 59.2,
-          "observedIndicators": 2,
+          "score": 53.7,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.37,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.806,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 59.2,
+          "blendedScore": 53.7,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 19.024,
-              "year": 2025,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 32.2,
-          "observedIndicators": 3,
+          "score": 36.4,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.427,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
+            "coverage": 0.8,
             "recency": 0.75,
-            "sourceQuality": 0.95
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 32.2,
+          "blendedScore": 36.4,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -16921,53 +16445,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 39.7,
-          "observedIndicators": 2,
+          "score": 57.4,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.37,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.806,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 39.7,
+          "blendedScore": 57.4,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 2.431,
-              "year": 2024,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 35.8,
-          "observedIndicators": 3,
+          "score": 34.5,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.539,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.729,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 35.8,
+          "blendedScore": 34.5,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -17400,53 +16910,39 @@
           "conditions": []
         },
         "trust": {
-          "score": null,
-          "observedIndicators": 1,
-          "belowCoverageFloor": true,
-          "confidence": 0.111,
+          "score": 25.4,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
+          "confidence": 0.251,
           "confidenceParts": {
-            "coverage": 0.2,
-            "recency": 0.583,
+            "coverage": 0.333,
+            "recency": 0.792,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": null,
-          "blendedFrom": "none",
+          "blendedScore": 25.4,
+          "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 28.501,
-              "year": 2024,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 35.7,
-          "observedIndicators": 3,
+          "score": 44.8,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.539,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.729,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 35.7,
+          "blendedScore": 44.8,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -17910,9 +17406,9 @@
           "score": null,
           "observedIndicators": 1,
           "belowCoverageFloor": true,
-          "confidence": 0.111,
+          "confidence": 0.092,
           "confidenceParts": {
-            "coverage": 0.2,
+            "coverage": 0.167,
             "recency": 0.583,
             "sourceQuality": 0.95
           },
@@ -17923,37 +17419,23 @@
           "blendedFrom": "none",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": null,
-              "year": null,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": null,
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 31.3,
-          "observedIndicators": 2,
+          "score": 49.9,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.206,
+          "confidence": 0.336,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.542,
-            "sourceQuality": 0.95
+            "coverage": 0.6,
+            "recency": 0.611,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 31.3,
+          "blendedScore": 49.9,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -18357,53 +17839,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 47.7,
-          "observedIndicators": 2,
+          "score": 42.6,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.37,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.806,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 47.7,
+          "blendedScore": 42.6,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 22.395,
-              "year": 2025,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 18.2,
-          "observedIndicators": 3,
+          "score": 19.1,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.336,
+          "confidence": 0.465,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.589,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.629,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 18.2,
+          "blendedScore": 19.1,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -18792,53 +18260,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 42.4,
-          "observedIndicators": 2,
+          "score": 28.3,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.37,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.806,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 42.4,
+          "blendedScore": 28.3,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 33.194,
-              "year": 2025,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 26.7,
-          "observedIndicators": 3,
+          "score": 33,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.336,
+          "confidence": 0.465,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.589,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.629,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 26.7,
+          "blendedScore": 33,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -19242,53 +18696,39 @@
           "conditions": []
         },
         "trust": {
-          "score": null,
-          "observedIndicators": 1,
-          "belowCoverageFloor": true,
-          "confidence": 0.111,
+          "score": 78.9,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
+          "confidence": 0.237,
           "confidenceParts": {
-            "coverage": 0.2,
-            "recency": 0.583,
+            "coverage": 0.333,
+            "recency": 0.75,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": null,
-          "blendedFrom": "none",
+          "blendedScore": 78.9,
+          "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 12.32,
-              "year": 2023,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 18.5,
-          "observedIndicators": 3,
+          "score": 29.4,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.539,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.729,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 18.5,
+          "blendedScore": 29.4,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -19707,53 +19147,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 41.7,
-          "observedIndicators": 2,
+          "score": 43.4,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.37,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.806,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 41.7,
+          "blendedScore": 43.4,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 17.678,
-              "year": 2025,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 7.7,
-          "observedIndicators": 3,
+          "score": 19.7,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.364,
+          "confidence": 0.494,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.639,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.667,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 7.7,
+          "blendedScore": 19.7,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -20185,53 +19611,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 36.7,
-          "observedIndicators": 2,
+          "score": 43.2,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.37,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.806,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 36.7,
+          "blendedScore": 43.2,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 14.564,
-              "year": 2025,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 74.8,
-          "observedIndicators": 2,
+          "score": 57.2,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.285,
+          "confidence": 0.413,
           "confidenceParts": {
-            "coverage": 0.4,
+            "coverage": 0.6,
             "recency": 0.75,
-            "sourceQuality": 0.95
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 74.8,
+          "blendedScore": 57.2,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -20635,53 +20047,39 @@
           "conditions": []
         },
         "trust": {
-          "score": null,
-          "observedIndicators": 1,
-          "belowCoverageFloor": true,
-          "confidence": 0.111,
+          "score": 58.5,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
+          "confidence": 0.237,
           "confidenceParts": {
-            "coverage": 0.2,
-            "recency": 0.583,
+            "coverage": 0.333,
+            "recency": 0.75,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": null,
-          "blendedFrom": "none",
+          "blendedScore": 58.5,
+          "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 16.078,
-              "year": 2023,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 33.8,
-          "observedIndicators": 3,
+          "score": 28.2,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.364,
+          "confidence": 0.494,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.639,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.667,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 33.8,
+          "blendedScore": 28.2,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -21114,53 +20512,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 37.2,
-          "observedIndicators": 2,
+          "score": 43.7,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.37,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.806,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 37.2,
+          "blendedScore": 43.7,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 14.399,
-              "year": 2024,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 45.1,
-          "observedIndicators": 3,
+          "score": 39.4,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.412,
+          "confidence": 0.539,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.722,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.729,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 45.1,
+          "blendedScore": 39.4,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -21593,53 +20977,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 36.1,
-          "observedIndicators": 2,
+          "score": 47,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.232,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.506,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 36.1,
+          "blendedScore": 47,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 10.317,
-              "year": 2010,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 39,
-          "observedIndicators": 2,
+          "score": 31.6,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.098,
+          "confidence": 0.232,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.258,
-            "sourceQuality": 0.95
+            "coverage": 0.6,
+            "recency": 0.422,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 39,
+          "blendedScore": 31.6,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -22012,53 +21382,39 @@
           "conditions": []
         },
         "trust": {
-          "score": null,
-          "observedIndicators": 1,
-          "belowCoverageFloor": true,
-          "confidence": 0.111,
+          "score": 64.2,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
+          "confidence": 0.251,
           "confidenceParts": {
-            "coverage": 0.2,
-            "recency": 0.583,
+            "coverage": 0.333,
+            "recency": 0.792,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": null,
-          "blendedFrom": "none",
+          "blendedScore": 64.2,
+          "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 7.566,
-              "year": 2025,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 23.2,
-          "observedIndicators": 3,
+          "score": 31.5,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.396,
+          "confidence": 0.524,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.694,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.708,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 23.2,
+          "blendedScore": 31.5,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -22477,53 +21833,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 12.4,
-          "observedIndicators": 2,
+          "score": 34.5,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.37,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.806,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 12.4,
+          "blendedScore": 34.5,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 7.099,
-              "year": 2025,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 52,
-          "observedIndicators": 3,
+          "score": 45.5,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.427,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
+            "coverage": 0.8,
             "recency": 0.75,
-            "sourceQuality": 0.95
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 52,
+          "blendedScore": 45.5,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -22941,53 +22283,39 @@
           "conditions": []
         },
         "trust": {
-          "score": null,
-          "observedIndicators": 1,
-          "belowCoverageFloor": true,
-          "confidence": 0.111,
+          "score": 57.3,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
+          "confidence": 0.145,
           "confidenceParts": {
-            "coverage": 0.2,
-            "recency": 0.583,
+            "coverage": 0.333,
+            "recency": 0.458,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": null,
-          "blendedFrom": "none",
+          "blendedScore": 57.3,
+          "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 8.746,
-              "year": 2016,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 45.1,
-          "observedIndicators": 3,
+          "score": 38.2,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.301,
+          "confidence": 0.431,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.528,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.583,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 45.1,
+          "blendedScore": 38.2,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -23376,53 +22704,39 @@
           "conditions": []
         },
         "trust": {
-          "score": null,
-          "observedIndicators": 1,
-          "belowCoverageFloor": true,
-          "confidence": 0.111,
+          "score": 69.8,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
+          "confidence": 0.237,
           "confidenceParts": {
-            "coverage": 0.2,
-            "recency": 0.583,
+            "coverage": 0.333,
+            "recency": 0.75,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": null,
-          "blendedFrom": "none",
+          "blendedScore": 69.8,
+          "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 3.123,
-              "year": 2023,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 35.1,
-          "observedIndicators": 3,
+          "score": 27.4,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.396,
+          "confidence": 0.524,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.694,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.708,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 35.1,
+          "blendedScore": 27.4,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -23855,53 +23169,39 @@
           "conditions": []
         },
         "trust": {
-          "score": 37.3,
-          "observedIndicators": 2,
+          "score": 51.7,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.255,
+          "confidence": 0.267,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.708,
-            "sourceQuality": 0.9
+            "coverage": 0.5,
+            "recency": 0.583,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 37.3,
+          "blendedScore": 51.7,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 6.482,
-              "year": 2016,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 34,
-          "observedIndicators": 3,
+          "score": 28.5,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.209,
+          "confidence": 0.343,
           "confidenceParts": {
-            "coverage": 0.6,
-            "recency": 0.367,
-            "sourceQuality": 0.95
+            "coverage": 0.8,
+            "recency": 0.463,
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 34,
+          "blendedScore": 28.5,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -24290,53 +23590,39 @@
           "conditions": []
         },
         "trust": {
-          "score": null,
-          "observedIndicators": 1,
-          "belowCoverageFloor": true,
-          "confidence": 0.111,
+          "score": 73.9,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
+          "confidence": 0.251,
           "confidenceParts": {
-            "coverage": 0.2,
-            "recency": 0.583,
+            "coverage": 0.333,
+            "recency": 0.792,
             "sourceQuality": 0.95
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": null,
-          "blendedFrom": "none",
+          "blendedScore": 73.9,
+          "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": 6.313,
-              "year": 2025,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": "international_organization",
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 30.9,
-          "observedIndicators": 3,
+          "score": 29.7,
+          "observedIndicators": 4,
           "belowCoverageFloor": false,
-          "confidence": 0.427,
+          "confidence": 0.555,
           "confidenceParts": {
-            "coverage": 0.6,
+            "coverage": 0.8,
             "recency": 0.75,
-            "sourceQuality": 0.95
+            "sourceQuality": 0.925
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 30.9,
+          "blendedScore": 29.7,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
@@ -24798,38 +24084,24 @@
           "blendedFrom": "none",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": null,
-              "year": null,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": null,
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": null,
-          "observedIndicators": 1,
-          "belowCoverageFloor": true,
-          "confidence": 0.111,
+          "score": 21.5,
+          "observedIndicators": 2,
+          "belowCoverageFloor": false,
+          "confidence": 0.24,
           "confidenceParts": {
-            "coverage": 0.2,
-            "recency": 0.583,
-            "sourceQuality": 0.95
+            "coverage": 0.4,
+            "recency": 0.667,
+            "sourceQuality": 0.9
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": null,
-          "blendedFrom": "none",
+          "blendedScore": 21.5,
+          "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],
           "checks": [],
@@ -25248,9 +24520,9 @@
           "score": null,
           "observedIndicators": 1,
           "belowCoverageFloor": true,
-          "confidence": 0.111,
+          "confidence": 0.092,
           "confidenceParts": {
-            "coverage": 0.2,
+            "coverage": 0.167,
             "recency": 0.583,
             "sourceQuality": 0.95
           },
@@ -25261,37 +24533,23 @@
           "blendedFrom": "none",
           "momentum": [],
           "indicators": [],
-          "checks": [
-            {
-              "checkId": "bribery_incidence",
-              "name": "Bribery incidence",
-              "definition": "Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.",
-              "unit": "% of firms",
-              "direction": "lower_better",
-              "family": "institutional",
-              "value": null,
-              "year": null,
-              "source": "World Bank (IC.FRM.BRIB.ZS)",
-              "sourceTier": null,
-              "note": "Experience rather than reputation: the question asks whether the responding firm was itself asked, so it is not the perception composite D23 retired. It covers 50 of 53 countries and 45 of them at 2023 or later. It is not scored because it carries income. On a rank-normalised estimate it correlates with log GDP per capita at about 0.66 alone and takes the two-indicator Trust dimension to about 0.53, against 0.14 for contract enforcement days by itself, which is a larger wealth contribution than the one D44 retired an indicator over. Read it beside the score, not as the score."
-            }
-          ],
+          "checks": [],
           "conditions": []
         },
         "learning": {
-          "score": 10.6,
-          "observedIndicators": 2,
+          "score": 22.7,
+          "observedIndicators": 3,
           "belowCoverageFloor": false,
-          "confidence": 0.146,
+          "confidence": 0.278,
           "confidenceParts": {
-            "coverage": 0.4,
-            "recency": 0.383,
-            "sourceQuality": 0.95
+            "coverage": 0.6,
+            "recency": 0.506,
+            "sourceQuality": 0.917
           },
           "delphiScore": null,
           "delphiIqr": null,
           "delphiDissent": false,
-          "blendedScore": 10.6,
+          "blendedScore": 22.7,
           "blendedFrom": "indicators",
           "momentum": [],
           "indicators": [],

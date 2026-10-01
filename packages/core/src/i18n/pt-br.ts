@@ -248,7 +248,7 @@ export const PT_BR: Lexicon = {
     adult_learning_participation:
       'Parcela de adultos em educação e treinamento, formal ou não, nos últimos 12 meses.',
     research_citation_impact:
-      'Impacto de citação da produção científica nacional, normalizado por área.',
+      'Parcela dos artigos e revisões de um país entre os 10% mais citados da sua subárea e ano, como razão da mesma parcela entre todas as obras com país de afiliação.',
     venture_capital_gdp: 'Capital de risco investido como parcela do PIB.',
     regulatory_sandbox_activity:
       'Número e abrangência de sandboxes regulatórios e regimes de teste controlado em operação.',

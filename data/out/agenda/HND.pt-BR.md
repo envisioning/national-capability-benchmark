@@ -11,8 +11,8 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Antecipação | 25,2 | 0,46 (utilizável) | +6,2 em 10 anos, sobre 2 indicadores |
 | Agência | 25,8 | 0,41 (fraca) | sem base de tendência |
 | Coordenação | 69,9 | 0,37 (fraca) | sem base de tendência |
-| Confiança | sem nota | 0,11 (muito fraca) | sem base de tendência |
-| Aprendizagem | 45,1 | 0,3 (fraca) | sem base de tendência |
+| Confiança | 57,3 | 0,14 (muito fraca) | sem base de tendência |
+| Aprendizagem | 38,2 | 0,43 (fraca) | sem base de tendência |
 | Experimentação | 1,6 | 0,15 (muito fraca) | sem base de tendência |
 | Adaptação | 43,8 | 0,67 (boa) | -5 em 10 anos, sobre 3 indicadores |
 | Construção | 34,8 | 0,57 (utilizável) | -1,6 em 10 anos, sobre 3 indicadores |
@@ -54,11 +54,11 @@ Com que eficácia o sistema responde quando as circunstâncias mudam?
 
 A confiança está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Confiança: confiança 0,11, muito fraca
+### Confiança: confiança 0,14, muito fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
 
-- Baseada em um indicador observado.
+- Baseada em 2 indicadores observados.
 - Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Court case clearance rate.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
@@ -77,13 +77,6 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política, Participação cívica.
 - Bases rejeitadas: Voz e responsabilização.
 
-### Aprendizagem: confiança 0,3, fraca
-
-Com que eficácia o país adquire, distribui e atualiza conhecimento?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Participação de adultos em aprendizagem, Impacto de citação da pesquisa.
-
 ### Coordenação: confiança 0,37, fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
@@ -98,6 +91,13 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Habilidades digitais de adultos, Percepção de controle sobre a própria vida.
+
+### Aprendizagem: confiança 0,43, fraca
+
+Com que eficácia o país adquire, distribui e atualiza conhecimento?
+
+- Baseada em 4 indicadores observados.
+- Lacunas declaradas: Participação de adultos em aprendizagem.
 
 ## O que Honduras tem para trabalhar
 
@@ -118,7 +118,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 ## Agenda de medição
 
-23 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+22 indicadores pedidos não têm uma base comparável, e cada um reduz a confiança. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -132,7 +132,6 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Confiança | Cooperação além do próprio grupo | Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade. |
 | Confiança | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Aprendizagem | Participação de adultos em aprendizagem | Parcela de adultos em educação e treinamento, formal ou não, nos últimos 12 meses. |
-| Aprendizagem | Impacto de citação da pesquisa | Impacto de citação da produção científica nacional, normalizado por área. |
 | Experimentação | Investimento de capital de risco | Capital de risco investido como parcela do PIB. |
 | Experimentação | Atividade de sandbox regulatório | Número e abrangência de sandboxes regulatórios e regimes de teste controlado em operação. |
 | Experimentação | Empresas nascidas de universidades | Empresas criadas para comercializar pesquisa universitária, por milhão de habitantes. |

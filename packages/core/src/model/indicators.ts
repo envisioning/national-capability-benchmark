@@ -8,6 +8,10 @@ import {
   ILOSTAT_PUBLISHER,
   JOINT_EVS_WVS_PUBLISHER,
   JOINT_EVS_WVS_RESULTS_URL,
+  OPENALEX_PAGE_URL,
+  OPENALEX_PUBLISHER,
+  OPENALEX_TOP10_ADAPTER_ID,
+  OPENALEX_TOP10_FIELD,
   UNCTAD_CONCENTRATION_DATASET,
   UNCTAD_CONCENTRATION_PAGE_URL,
   UNCTAD_PUBLISHER,
@@ -415,6 +419,22 @@ const RAW: Raw[] = [
     wealthProxyPrior: 0.2,
   },
   {
+    id: 'bribery_incidence',
+    dimension: 'trust',
+    family: 'institutional',
+    name: 'Bribery incidence',
+    definition:
+      'Firms asked for at least one bribe payment across six public transactions covering utilities, permits, licences and taxes.',
+    unit: '% of firms',
+    measurementClass: 'O',
+    direction: 'lower_better',
+    source: WB('IC.FRM.BRIB.ZS'),
+    ingest: 'worldbank',
+    notes:
+      'Whether the rules hold where a firm meets the state as a stranger. Experience rather than reputation: the firm is asked whether it was itself asked, so it is not the perception composite D23 retired. World Bank Enterprise Surveys, which now run in high-income economies too. Respondent reticence is the known weakness: a firm may not report a request to a survey, so a low value can be a cautious answer. Held out as a check on income grounds under D60 and scored since D123.',
+    wealthProxyPrior: 0.5,
+  },
+  {
     id: 'homicide_rate',
     dimension: 'trust',
     name: 'Intentional homicide rate',
@@ -584,14 +604,23 @@ const RAW: Raw[] = [
     id: 'research_citation_impact',
     dimension: 'learning',
     name: 'Research citation impact',
-    definition: 'Field-normalised citation impact of national research output.',
+    definition:
+      "Share of a country's articles and reviews that are in the top 10% most cited for their subfield and year, as a ratio to the same share across all country-affiliated works.",
     unit: 'ratio to world average',
     measurementClass: 'O',
     direction: 'higher_better',
-    source: { publisher: 'OpenAlex', tier: 'academic_survey', inspectable: true },
-    ingest: 'gap',
-    notes: 'Computable from OpenAlex, which is open and inspectable. This is the highest-value gap to close next.',
-    wealthProxyPrior: 0.3,
+    source: {
+      publisher: OPENALEX_PUBLISHER,
+      series: OPENALEX_TOP10_FIELD,
+      adapter: OPENALEX_TOP10_ADAPTER_ID,
+      url: OPENALEX_PAGE_URL,
+      tier: 'academic_survey',
+      inspectable: true,
+    },
+    ingest: 'adapter',
+    notes:
+      "Asks whether the research a country produces is used by others, relative to its field. Counted from OpenAlex: articles and reviews published 2019 to 2021, stamped 2021, assigned to every country any author's institution sits in (whole counting), flagged when OpenAlex places them in the top 10% most cited for their subfield and year. The share is divided by the same share across all works with an institution country, so 1 is that average. Whole counting lifts small countries whose researchers co-author with larger systems: Panama, Kenya and Estonia fall sharply when only domestic work is counted. OpenAlex parses affiliations from publisher metadata and misses some, which thins counts for small producers (Haiti has 389 works in the window). OpenAlex recomputes citations and percentiles continuously and has no version parameter, so the adapter stores the requests, the retrieval date and the counts, and a later fetch drifts. CC0. See D124.",
+    wealthProxyPrior: 0.6,
   },
 
   /* -------------------------- 6. Experimentation -------------------------- */

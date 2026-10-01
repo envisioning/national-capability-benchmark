@@ -3,8 +3,8 @@
   "name": "national-capability-benchmark",
   "title": "NCB, the National Capability Benchmark",
   "description": "A prototype that measures what a country can do, separately from how rich it is. Nine capability dimensions scored from public data, each with a separate confidence number.",
-  "version": "7.0.0",
-  "created": "2026-10-01T09:42:40.025Z",
+  "version": "7.1.0",
+  "created": "2026-10-01T09:54:05.645Z",
   "homepage": "https://github.com/envisioning/national-capability-benchmark",
   "licenses": [
     {
@@ -33,6 +33,10 @@
     {
       "title": "Joint EVS/WVS",
       "path": "https://www.worldvaluessurvey.org/WVSEVSjoint2017.jsp"
+    },
+    {
+      "title": "OpenAlex",
+      "path": "https://help.openalex.org/data/works/citations/"
     },
     {
       "title": "UNCTAD",
@@ -129,10 +133,12 @@
         "indicators/budget_execution_fidelity.json",
         "indicators/civil_society_strength.json",
         "indicators/contract_enforcement_days.json",
+        "indicators/bribery_incidence.json",
         "indicators/interpersonal_trust.json",
         "indicators/human_capital_index.json",
         "indicators/vocational_secondary_share.json",
         "indicators/firm_training_incidence.json",
+        "indicators/research_citation_impact.json",
         "indicators/resident_patents_per_million.json",
         "indicators/resident_trademarks_per_million.json",
         "indicators/early_stage_entrepreneurial_activity.json",

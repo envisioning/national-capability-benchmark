@@ -11,8 +11,8 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Anticipation | 84.8 | 0.46 (usable) | +17.5 over 10 years using 2 indicators |
 | Agency | 84.3 | 0.41 (thin) | no trend |
 | Coordination | 71 | 0.4 (thin) | no trend |
-| Trust | 73.5 | 0.26 (thin) | no trend |
-| Learning | 56.9 | 0.32 (thin) | no trend |
+| Trust | 81.8 | 0.36 (thin) | no trend |
+| Learning | 67.7 | 0.45 (usable) | no trend |
 | Experimentation | 46.6 | 0.21 (very thin) | +10.8 over 10 years using 2 indicators |
 | Adaptability | 84.9 | 0.67 (good) | +6.9 over 10 years using 3 indicators |
 | Building | 66.6 | 0.57 (usable) | +5 over 10 years using 3 indicators |
@@ -37,20 +37,13 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Uses 4 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
 
-### Trust: confidence 0.26, thin
+### Trust: confidence 0.36, thin
 
 How much cooperation is possible beyond immediate personal networks?
 
-- Uses 2 observed indicators.
+- Uses 3 observed indicators.
 - Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
-
-### Learning: confidence 0.32, thin
-
-How effectively does the country acquire, distribute, and update knowledge?
-
-- Uses 3 observed indicators.
-- Missing indicators: Adult learning participation, Research citation impact.
 
 ### Coordination: confidence 0.4, thin
 
@@ -73,6 +66,7 @@ These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 84.9, confidence good
 - Anticipation: 84.8, confidence usable
+- Learning: 67.7, confidence usable
 - Building: 66.6, confidence usable
 
 ## What Singapore has to work with
@@ -94,7 +88,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 ## Missing data
 
-23 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+22 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -108,7 +102,6 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Trust | Cooperation beyond the in-group | Reported trust in people met for the first time and in people of another nationality. |
 | Trust | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Learning | Adult learning participation | Share of adults in formal or non-formal education and training in the last 12 months. |
-| Learning | Research citation impact | Field-normalised citation impact of national research output. |
 | Experimentation | Venture capital investment | Venture capital deployed as a share of GDP. |
 | Experimentation | Regulatory sandbox activity | Number and breadth of live regulatory sandboxes and controlled trial regimes. |
 | Experimentation | University spinouts | Companies formed to commercialise university research, per million people. |

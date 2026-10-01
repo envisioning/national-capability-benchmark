@@ -275,9 +275,8 @@ export type Diagnostics = {
    * Every behavioural check put through the wealth test.
    *
    * A check is published beside a dimension and never inside it, so this is the
-   * standing evidence for that decision rather than a one-off note. For a check
-   * kept out on income, such as bribery incidence, it is the test that kept it
-   * out. For one kept out on construct, such as political polarization, the
+   * standing evidence for that decision rather than a one-off note. Since D118
+   * a check is kept out on construct, such as political polarization, and the
    * correlation is reported and is not the reason. The correlation is computed
    * on the value as published, not on a direction-corrected one, so the sign
    * reads the way the unit does. See D60 and D121.
