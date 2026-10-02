@@ -44,7 +44,7 @@ pnpm bench prompt BRA IND --stance wealth_sceptic
 pnpm bench prompt --audit trust --stance bottom_up
 ```
 
-With no country codes, `pnpm bench prompt` prints all 53 countries in the
+With no country codes, `pnpm bench prompt` prints every country in the
 current dataset. Each country block is
 separated by `---`. The `--system` output is the rule set that governs every
 answer, and it binds you even though the per-country prompt does not repeat it.

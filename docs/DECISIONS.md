@@ -7914,3 +7914,204 @@ an argument that the stock, not the act, is the capability; evidence that a
 redefined row's candidate series reads income and nothing else once wired,
 which would make it a condition under D122; or an owner decision that a
 construct is no longer wanted, which retires the row under D151.
+
+---
+
+## D153 — The frame takes every country of a million people that is measurable in all nine dimensions
+
+*Recorded 2026-10-02. Dataset 9.0.0. Supersedes D99's closing of the
+country list at 53 and the per-country `reason` that D27, D51 and D99
+wrote for each addition. Extends D51's rule-based completion to the world.
+Re-baselines the guardrail beside O1 in D117. Applies D47: a major version.*
+
+**Choice.** The benchmark holds 125 countries: the 53 it held at 8.3.0 and
+every World Bank economy of at least one million people (`SP.POP.TOTL`,
+latest year) that reaches `MIN_INDICATORS_FOR_SCORE` observed rows in all
+nine dimensions on the 8.3.0 registry with the adapters already wired. That
+rule picked 72 countries in `docs/research/FRAME-EXPANSION.md` (set C), and
+the rescore confirms it: all 72 publish nine scores at 9.0.0. In
+population order they are Pakistan, Bangladesh, Russia, Egypt, the
+Democratic Republic of the Congo, Iran, Tanzania, Italy, Myanmar, Sudan,
+Uganda, Iraq, Angola, Ukraine, Morocco, Uzbekistan, Mozambique, Ghana,
+Madagascar, Côte d'Ivoire, Nepal, Mali, Burkina Faso, Malawi, Zambia, Sri
+Lanka, Kazakhstan, Romania, Zimbabwe, Guinea, Burundi, Tunisia, Belgium,
+Jordan, Czechia, Tajikistan, Papua New Guinea, Greece, Azerbaijan, Hungary,
+Austria, Belarus, Laos, Kyrgyzstan, Serbia, the Republic of the Congo,
+Bulgaria, Denmark, Lebanon, Norway, Slovakia, New Zealand, Georgia, Croatia,
+Mongolia, Bosnia and Herzegovina, Namibia, Armenia, Lithuania, Jamaica, the
+Gambia, Botswana, Lesotho, Moldova, Albania, Guinea-Bissau, Slovenia,
+Latvia, North Macedonia, Cyprus, Trinidad and Tobago and Mauritius.
+
+Out by the same rule: the 22 economies that clear eight dimensions (the
+seven OAPI members with no national IP office series, the Gulf monarchies
+with no Gini or tax ratio, and others), the 13 that clear seven or fewer,
+the 15 economies under a million that clear all nine (Iceland, Luxembourg,
+Malta, Montenegro and eleven others, most of them small islands), and
+Taiwan, which the World Bank API does not carry. The million line is the
+smallest country already in the frame (Estonia), the Growth Lab's own
+ranking floor, and the point below which each microstate would move the
+Tukey fences as much as India does; admitting them is a separate question
+with its own entry.
+
+At 125 the `reason` field cannot be a case per country, and a case chosen
+per country is the selection question D51 removed for Latin America. Every
+one of the 72 carries one shared sentence that states the rule, and the
+original 53 keep theirs.
+
+**What changed in the code.** `countries.ts` gains the 72 entries.
+`UNCTAD_M49` gains their M49 codes (all 125 resolve). The Joint EVS/WVS
+adapter gains two source aliases: the release prints Uzbekistan as
+"Uzbequistan" and cuts Bosnia and Herzegovina's label at the column edge
+to "Bosnia and"; the adapter test that once reported that cut label as
+unmapped now holds it to the alias. The Spanish lexicon names every
+country, as its test requires, and the Portuguese one names the 72 too.
+`COUNTRY_ROW_FACTS` gains the ILOSTAT facts the pinned file states for the
+new countries: the Democratic Republic of the Congo and Botswana read from
+household surveys (Botswana's flagged unreliable), and Belgium, Croatia,
+Jamaica, Myanmar and Uganda carry an unreliable flag. The scoring test's
+permutation fixture assumed a prime country count; 125 is not, so it now
+checks that each row's multiplier is coprime with the count.
+
+**The ingest.** Each source ran through its own command, so
+`revisions.json` logs every addition: World Bank 55,557 values added and 0
+restated, Joint EVS/WVS 174, V-Dem 288, UNCTAD 72, ILOSTAT long-term
+unemployment 66 and informal employment 59, Growth Lab Atlas 72, GitHub
+71. OpenAlex added 72 and restated 50 of the 53's values, by a mean of 0.010
+on a ratio near 1 and at most 0.088 (Thailand), because its counts move
+between reads and the API has no versions (D124). The gates ran on the new
+frame:
+
+- ILOSTAT's plausibility gate (D120) holds the same six countries it held
+  before (South Korea, Mexico, Peru, the Philippines, El Salvador, Uruguay),
+  and drops single years for seven new ones without emptying their rows:
+  Bulgaria 2025 and Iran 2018, Madagascar 2022 and Mali 2024 as unconfirmed
+  jumps, Egypt 2011, Georgia 2019 and Mauritius 2022 as spikes. Six new
+  countries have no ILOSTAT value at all: Uzbekistan, Guinea, Tajikistan,
+  Papua New Guinea, the Republic of the Congo, Trinidad and Tobago.
+- The GitHub access gate (D145) takes its median over the benchmark, so it
+  moved: median stock growth 26.9%, gate 6.7%. It holds China (minus 0.1%),
+  Cuba (2.8%) and, new, Belarus (6.2%). Iran is not held.
+- The D64 hold on countries with separate EVS and WVS rows now holds ten:
+  Armenia, Czechia, Romania, Russia, Serbia, Slovakia and Ukraine join
+  Germany, the United Kingdom and the Netherlands. The hold stays. The
+  survey memo shows that pooling them would raise the guardrail to about
+  0.60, which is a finding for the pooling question, not a reason in it.
+
+**The statistics, at the D137 and D138 precision.** At 8.3.0 the factor
+test ran on 51 complete cases and the residual tests on 50. At 9.0.0 they
+run on 123 and 122 (Cuba and Haiti stay out of the complete cases;
+Venezuela and Cuba have no income figure).
+
+| Reading | 8.3.0, 53 | 9.0.0, 125 |
+| --- | --- | --- |
+| D137 first-factor share | 0.496 (chance 95th 0.215) | 0.505 (chance 95th 0.175) |
+| D137 factor r with log GDP | 0.845, n 50 | 0.815, n 122 |
+| 95% interval of that r (Fisher) | 0.74 to 0.91 | 0.745 to 0.867 |
+| D138 (a) residual share | 0.286 (95th 0.217), structure | 0.308 (95th 0.175), structure |
+| D138 (b) shape share | 0.276 (95th 0.233), differ | 0.226 (95th 0.190), differ |
+| D138 (b) margin | 0.043 | 0.036 |
+| D138 (b) income-dealt peer distance | 1.523 (5th 1.471) | 1.396 (5th 1.389) |
+| D138 (c) release stability | mixed, 25 pairs | mixed, the same 25 pairs |
+| D138 leave-one-out | robust | robust |
+| D138 (d) income share of a profile | mean 0.323, part | mean 0.233, little |
+| Weaker claim | holds | holds |
+
+The interval on r is now about plus or minus 0.06, close to the 0.05 the
+memo predicted, and it still contains 0.8: the factor still reads as
+income, at "strong" by a margin smaller than its own uncertainty. D137's
+overturn clause asks for the bands to give way to an interval once r can be
+estimated within a few hundredths. This entry publishes the interval; the
+change to `readFactorTest` and the surfaces that print the band is a new
+reading rule and gets its own entry. The (b) margin narrowed from 0.043 to
+0.036, but its null threshold fell from 0.233 to 0.190 as the memo said a
+wider set would, so the reading rests on a tighter estimate: the memo's
+resampling put its standard error near 0.02 at this size, against 0.03 to
+0.035 at 50. (d) moves from "part" to "little": on the wider frame income
+accounts for under a quarter of the average country's distance from the
+average profile, though the pooled share is 0.411 against 0.399. (c)
+compares consecutive releases on the same country set, so 9.0.0 pairs with
+nothing and its history starts again with the next release on 125.
+
+Correlation of each dimension with log GDP per capita, 8.3.0 (n 51) to
+9.0.0 (n 123): Anticipation 0.872 to 0.863, Agency 0.579 to 0.466,
+Coordination 0.558 to 0.533, Trust 0.606 to 0.354, Learning 0.779 to 0.709,
+Experimentation 0.651 to 0.728, Adaptability 0.431 to 0.533, Building 0.434
+to 0.573, Shared purpose 0.202 to 0.259. No dimension pair passes the
+redundancy threshold. 0 of 3,721 observed current cells clamp.
+
+**The guardrail is re-baselined at 0.526.** Mean confidence across the nine
+dimensions correlates with log GDP per capita at r = 0.526 across the 123
+countries with an income figure (slope 0.046 confidence per tenfold
+income), against 0.272 across 51 at 8.3.0. The owner re-baselines rather
+than refusing the frame, for this reason: 0.27 was partly a product of
+which 53 were chosen. The original set reached the poor countries the
+Joint EVS/WVS release happened to survey (Ethiopia, Nigeria, Kenya,
+Bolivia, Nicaragua, Guatemala), so survey presence correlated 0.04 with
+income inside it and 0.37 in the wider set; across all 154 measurable
+countries of a million or more the figure is 0.41. Confidence does not
+depend on the frame, and the 53 read 0.272 inside the 9.0.0 output too:
+the rise is who is measured, not how. The survey memo
+(`docs/research/trust/SURVEY-COVERAGE-FOR-EXPANSION.md`) decomposes it:
+with no survey items anywhere the figure would be 0.460, so the survey gap
+explains about 0.07 of it, and the rest comes from the IP office rows, the
+ILOSTAT row and the other thin columns. The pending repair is Afrobarometer
+Round 8, whose trust item is the Joint release's word for word and would
+take the guardrail to about 0.509 and Trust back above 0.40; it waits on a
+written licence confirmation. From here the guardrail watches drift from
+0.526 inside the 125, which is what it was for: a source that only reaches
+rich countries raises it, and that rise is the warning.
+
+**O1.** Mean confidence, 8.3.0 to 9.0.0: Anticipation 0.451 to 0.453,
+Agency 0.483 to 0.470, Coordination 0.362 to 0.371, Trust 0.418 to 0.398,
+Learning 0.513 to 0.523, Experimentation 0.364 to 0.318, Adaptability 0.577
+to 0.580, Building 0.551 to 0.548, Shared purpose 0.343 to 0.319; across
+all nine 0.451 to 0.442. Trust drops under 0.40 by construction of the
+frame, because half its rows are survey items the new poorer countries
+lack, and joins Coordination, Experimentation and Shared purpose below the
+target. Experimentation falls furthest, because GEM stays at 16 (D125) and
+the national IP office rows thin out. The roadmap queue reads these
+figures from now on.
+
+**Evidence grid and foresight register.** D135 called the corpus complete
+when every grid cell is closed. The grid is now 1,000 cells, 424 of them
+closed and 576 open, all 576 in the new countries; the corpus is not
+complete again until they close, and the research inventory prints them as
+the queue. The foresight register (D148) was planned as nine batches for
+the 53; the 72 add about twelve more under the same runbook. Neither
+backlog blocks the release: an open cell lowers no score and no
+confidence.
+
+**Delphi.** No panel run is on this dataset. D139 already kept the 8.x
+session estimates off every comparison with 9.0.0 indicators. A full run
+over 125 countries prices at about $58 with the current four panelists.
+
+**The front-page field.** `FlagField` now draws up to 125 flags on one
+axis. Checked at this release on the front page and a capability page, at
+desktop and phone widths: the stacks fit the frame and no flag overlaps
+another, so the component is unchanged. On a phone each flag shrinks to
+about eight pixels, which reads as a distribution but is a small target to
+tap; a fix stays inside the D67 component, never a second distribution.
+
+**Cost.** Every published number from 8.3.0 is restated and is not
+comparable with 9.0.0. Of the 470 dimension cells scored in both, 462 moved,
+by a mean of 3.2 points; the largest moves are Experimentation for Israel
+(28.3 to 48.0), Sweden and the United Kingdom, which rise because the
+countries added below them widen the bottom of the IP office rows. Brazil
+moves on all nine dimensions, and its ranks restate against 125. The observation file grows
+from 17 to 40 MB, `data/out` from 20 to 42 MB, and `index.json`, which every
+list page reads whole, grows with it. The 72 arrive with no evidence
+records, no foresight coding and no panel estimate. The `velocity` and
+`leverage` sandbox fixtures were regenerated for the 125, the first time
+since 6.1.1, and on today's registry velocity finds a complete five-year
+series in at most four dimensions for any country, so it excludes all of
+them from its country-level read; that is the registry since 6.1.1, not
+the rebase.
+
+**Overturned by.** A rescore on a later release whose D137 interval on r
+or D138 (b) margin is no tighter than this one, which would mean the
+added countries are noisier than the 50 they joined and the precision
+argument failed; a source that measures Experimentation for the OAPI
+members or Shared purpose for the Gulf, which would bring the
+eight-dimension group under the rule and reopen it; or a guardrail that
+rises above 0.526 inside the 125 without a country being added, which is
+the drift the re-baselined figure exists to catch.

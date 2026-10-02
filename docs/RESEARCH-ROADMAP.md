@@ -28,7 +28,7 @@ exists to run.
 **What it serves next.** The next real use is a report on Brazil's
 adaptability, which maps what produces adaptability rather than scoring
 institutions. Adaptability is first in the queue. Every source is still tested
-against all 53 countries.
+against every country in the frame, 125 since D153.
 
 **O1. Informative.** Every dimension carries enough evidence to read. Target: mean
 confidence of at least 0.40 in every dimension.
@@ -38,36 +38,40 @@ each dimension's correlation with log GDP per capita. Above 0.70 is a finding
 against the claim, to be read and published. It is not a target, and no row is
 added or dropped to move it.
 
-**Guardrail.** Confidence must not come to track wealth. At 8.3.0 the mean
-confidence across dimensions correlates with log GDP per capita at r = 0.27
-across 51 countries (0.272: reopening `national_belonging` as a gap, D151,
-lowers Shared purpose confidence evenly across incomes; 0.274 at 8.2.0;
-0.286 at 8.1.0: the new export products
-row in Adaptability, D149, covers all 53 and gives the nine countries the
-ILOSTAT gate holds a third row; 0.289 at 8.0.0; 0.28 at 7.8.0, before the three Tier B rows became conditions and two
-gaps were retired). The bought conditions that left the scores (D122) were
-better covered in rich countries, and the ILOSTAT row's plausibility gate still
-holds or ages more middle-income countries than rich ones. Watch it, and read
-the next source's effect on it first. A source that only covers rich countries
-raises O1 and breaks this.
+**Guardrail.** Confidence must not come to track wealth. At 9.0.0 the mean
+confidence across dimensions correlates with log GDP per capita at r = 0.526
+across the 123 countries with an income figure, a slope of 0.046 confidence
+per tenfold income. That is the baseline D153 set when the frame widened to
+125: the 53 read 0.272 inside the same output, because confidence does not
+depend on the frame, and the rise is who is measured. The 53 reached the poor
+countries the Joint EVS/WVS release happened to survey, and the world does not
+(0.41 across all 154 measurable countries of a million people or more). The
+survey gap explains about 0.07 of the 0.526 (0.460 with no survey items
+anywhere, `docs/research/trust/SURVEY-COVERAGE-FOR-EXPANSION.md`); the rest is
+the IP office rows, the ILOSTAT row and the other thin columns. The pending
+repair is Afrobarometer Round 8's trust item, which would take it to about
+0.509 and waits on a licence confirmation. Lifting the D64 hold would raise it
+to about 0.60. Watch for drift from 0.526 inside the 125, and read the next
+source's effect on it first. A source that only covers rich countries raises
+O1 and breaks this.
 
 ### Where the objectives stand
 
-Dataset 8.3.0 (`national_belonging` reopened as a gap, D151; four stock-reading gaps redefined as behaviour, D152). Recompute from `data/out/diagnostics.json` and
+Dataset 9.0.0, 125 countries (D153). Recompute from `data/out/diagnostics.json` and
 `data/out/index.json` after any rescore; never carry these figures forward by
 hand.
 
 | Dimension | Mean confidence | Observed rows (mean) | r with log GDP | Reading |
 | --- | ---: | ---: | ---: | --- |
-| Trust | 0.42 | 4.3 | 0.61 | |
-| Experimentation | 0.36 | 4.5 | 0.65 | misses O1; 0.57 before the GitHub row (D145) |
-| Shared purpose | 0.34 | 2.6 | 0.20 (n 50) | misses O1; 0.41 at 8.0.0 to 8.2.0 came from a retirement D151 reversed |
-| Coordination | 0.36 | 2.8 | 0.56 | misses O1 |
-| Learning | 0.51 | 2.9 | 0.78 | tracks income |
-| Agency | 0.48 | 3.6 | 0.58 | |
-| Anticipation | 0.45 | 2.0 | 0.87 | tracks income |
-| Building | 0.55 | 3.9 | 0.43 | |
-| Adaptability | 0.58 | 3.8 | 0.43 | 0.46 before the new export products row (D149); nine countries without a long-term share (A16) |
+| Trust | 0.40 | 4.1 | 0.35 | misses O1 at 0.398; half its rows are survey items most added countries lack |
+| Experimentation | 0.32 | 4.0 | 0.73 | misses O1; tracks income; GEM covers 16 (D125) |
+| Shared purpose | 0.32 | 2.5 | 0.26 (n 122) | misses O1 |
+| Coordination | 0.37 | 2.9 | 0.53 | misses O1 |
+| Learning | 0.52 | 2.9 | 0.71 | tracks income |
+| Agency | 0.47 | 3.5 | 0.47 | |
+| Anticipation | 0.45 | 2.0 | 0.86 | tracks income |
+| Building | 0.55 | 3.9 | 0.57 | |
+| Adaptability | 0.58 | 3.9 | 0.53 | 15 countries without a long-term share (A16) |
 
 Ten bought conditions left the scores at 7.0.0 and are published beside their
 dimensions (D122): research spending, researchers and secure servers beside
@@ -78,40 +82,40 @@ B rows joined them (D141): the vocational share beside Learning, and labour
 force participation and transmission losses beside Adaptability. At 8.2.0
 informal employment joined Adaptability's conditions (D150).
 
-The one-factor test (D137), dataset 8.2.0: one shared factor carries 0.496 of
-the variance of the nine dimension scores over 51 complete cases, against
-0.189 by chance (95th percentile 0.215), and it correlates 0.845 with log GDP
-per capita (n 50), so income accounts for 0.71 of it. The shared factor looks
-like income. It was 0.498 at 8.1.0, 0.485 at 8.0.0 and 0.523 at 7.8.0. On the same rule the share was 0.604 at 6.2.0 and 0.498 at 7.0.0
-(both 33 complete cases), when the stocks left the scores. Every release's
-figure is in `data/out/factor-history.json`.
+The one-factor test (D137), dataset 9.0.0: one shared factor carries 0.505 of
+the variance of the nine dimension scores over 123 complete cases, against
+0.159 by chance (95th percentile 0.175), and it correlates 0.815 with log GDP
+per capita (n 122), so income accounts for 0.66 of it. The 95% interval on
+that r is 0.745 to 0.867: the shared factor looks like income, and the 0.8
+band it reads under sits inside its own uncertainty. D153 owes the entry that
+replaces the bands with this interval. Every release's figure, on the 53
+before 9.0.0, is in `data/out/factor-history.json`.
 
-What is left after income (D138), dataset 8.2.0, on the 50 countries with all
-nine residuals: the leftovers still move together (first-factor share 0.286
-against chance 0.191, 95th 0.217), loading mostly on Anticipation, Trust,
-Learning, Coordination and Shared purpose. Income peers are no more alike in
-shape than countries picked at random (mean peer distance 1.52 against 1.54,
-5th percentile 1.47), and the shapes line up beyond random dealing (0.276
-against a 95th of 0.233), so under the pre-registered rule the weaker claim,
-different shapes at the same income, holds. The margin is narrow and peers
-differ less than random dealing would (1.52 against 1.78), because part of
-what is left is a level. Residual order between releases is mixed (lowest rank
-r 0.72 on Trust, n 36; none under 0.5), no single country moves its own
-residual by more than 0.35 of the spread around its line (Adaptability), and
-income accounts for 45% of the typical country's distance from the average
-profile (mean 32%). No reading changed at 8.0.0, 8.1.0 or 8.2.0. The objective this
-serves is to widen the country set and deepen Trust and Coordination, the two
-dimensions whose leftovers moved most when indicators changed.
+What is left after income (D138), dataset 9.0.0, on the 122 countries with all
+nine residuals: the leftovers still move together (first-factor share 0.308
+against chance 0.160, 95th 0.175), loading mostly on Anticipation, Learning,
+Trust and Coordination. Income peers are about as alike in shape as countries
+picked at random (mean peer distance 1.40 against 1.43, 5th percentile 1.39),
+and the shapes line up beyond random dealing (0.226 against a 95th of 0.190, a
+margin of 0.036 with a standard error near 0.02 at this size), so under the
+pre-registered rule the weaker claim, different shapes at the same income,
+holds. Peers differ less than random dealing would (1.40 against 1.78),
+because part of what is left is a level. No single country moves its own
+residual by more than 0.11 of the spread around its line (Anticipation), and
+income accounts for 32% of the typical country's distance from the average
+profile (mean 23%, reading "little"). The release test compares releases on
+the same country set, so its reading (mixed, lowest rank r 0.72 on Trust) is
+the history of the 53 and restarts with the next release on 125. The objective
+this serves is to deepen Trust and Coordination, the two dimensions whose
+leftovers moved most when indicators changed.
 
-Two dimensions still track income above 0.70. Anticipation stays at 0.87 on
-its two capability rows, articles per head and statistical performance, which
-both track income themselves; that is a finding against the claim. Learning is
-0.78 on the Human Capital Index, firm training and citation impact.
-Adaptability fell to 0.46 when its two Tier B rows left (D141) and is 0.43
-with the new export products row (D149), which also lifted the nine countries
-that rested on two rows to three; they still have no long-term share (A16). Agency and Learning missed O1 at 7.0.0: the evidence on them was thinner
-than the stocks made it look. Agency crosses it on perceived control (D127),
-with the regime and response-style caveats in A15.
+Three dimensions track income above 0.70. Anticipation is 0.86 on its two
+capability rows, articles per head and statistical performance, which both
+track income themselves; that is a finding against the claim. Experimentation
+is 0.73 on the national IP office rows and new repositories, which the added
+low-income countries mostly lack or read near zero. Learning is 0.71 on the
+Human Capital Index, firm training and citation impact. Agency crosses O1 on
+perceived control (D127), with the regime and response-style caveats in A15.
 
 ## The queue
 
@@ -288,7 +292,7 @@ Before fetching a single value, answer four questions from the publisher's own
 documentation. One paragraph per candidate is enough, and a table when a sweep
 covers many.
 
-1. **Ceiling.** How many of the 53 does the publisher list, at the registry's
+1. **Ceiling.** How many of the frame's countries does the publisher list, at the registry's
    scope? Below 27 the candidate is dead. Below 40 it needs a reason.
 2. **Spread.** Will the values separate countries, or do they sit near a fixed
    point the way a clearance ratio sits near 100?
@@ -298,7 +302,7 @@ covers many.
    adoption or spending usually do not. Answer this in writing before seeing the
    value or its income correlation (D118).
 4. **Cost.** Is there an adapter, or a publisher that serves the whole frame in
-   one file? A row assembled from 53 national yearbooks is a harmonisation this
+   one file? A row assembled from 125 national yearbooks is a harmonisation this
    project would author, and the answer is no unless the gain is large.
 
 A candidate that fails a question stops there, with the paragraph filed in the
@@ -313,7 +317,7 @@ pnpm bench probe --search "search terms"
 pnpm bench probe --series SERIES[@DATABASE]
 ```
 
-The probe is a preflight. Its current screen is at least half of the 53-country
+The probe is a preflight. Its current screen is at least half of the
 frame, a latest value no older than eight years and at least three distinct
 values. A correlation with log GDP per capita of 0.70 or more is printed as a
 flag, not a failure (D118). A pass is necessary, not a promotion decision. Read what the series measures and run the full diagnostics
@@ -460,7 +464,7 @@ into one series because they share a label.
 
 **Acceptance gate:** the derived series has a named variable and codebook,
 documented weighting and missing-value treatment, a comparable reference period,
-coverage reported against all 53 countries, and no unexplained country-specific
+coverage reported against every country in the frame, and no unexplained country-specific
 recoding. Use the half-frame screen as the first coverage test. If it fails,
 keep the row as a gap and explain why.
 
@@ -494,7 +498,7 @@ country.
 
 The [OECD Trust Survey](https://www.oecd.org/en/publications/2024/07/oecd-survey-on-drivers-of-trust-in-public-institutions-2024-results_eeb36452.html)
 is a useful comparator for institutional trust, but its 2023 wave covers 30 OECD
-countries. It cannot by itself satisfy the current 53-country performance
+countries. It cannot by itself satisfy the full-frame performance
 measure gate.
 
 **Fallback:** a comparable institutional-performance series that observes
@@ -503,7 +507,7 @@ quality is not enough for this gate.
 
 **Acceptance gate:** the numerator, denominator, case scope and year are known
 for every country-year used; countries with incompatible court systems are
-flagged rather than silently pooled; coverage is reported for all 53 countries;
+flagged rather than silently pooled; coverage is reported for every country in the frame;
 and the series is recent enough to be useful. The series must add information
 to the existing 2019 contract-enforcement row rather than duplicate it.
 
@@ -628,7 +632,9 @@ Do not add countries while closing a source gap unless the user explicitly
 requests a frame expansion. Adding a country changes the normalization frame
 and requires a major version, a full re-ingest, a full rescore, refreshed
 diagnostics and a full Delphi rerun. The source research queue should first
-make the current 53-country frame more informative.
+make the current frame more informative. The one frame expansion so far
+by rule, to 125 countries, is D153; its feasibility memo is
+`docs/research/FRAME-EXPANSION.md`.
 
 ## Agent handoff template
 
@@ -640,7 +646,7 @@ Track: source-backed, evidence or Delphi
 Status: research, candidate, blocked, promoted or rejected
 Dataset and release:
 Indicator ids:
-Countries covered: n / 53
+Countries covered: n / 125
 Years covered:
 Source and license:
 Files changed:

@@ -78,7 +78,7 @@ from being advocacy.
 ## The country grid
 
 "Exhaustive" has one meaning here: every cell of a country-by-gap grid is
-closed. The rows are the 53 registry countries. The columns are the declared
+closed. The rows are the registry countries, 125 since D153. The columns are the declared
 gaps whose construct a delivery can evidence, held in
 `EVIDENCE_GRID_INDICATORS` in `packages/core/src/model/research.ts`: large
 project delivery, institutional responsiveness, disaster preparedness,

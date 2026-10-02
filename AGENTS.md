@@ -1,8 +1,8 @@
 # NCB, the National Capability Benchmark — agent notes
 
 Prototype benchmark of a country's capacity to anticipate change, coordinate
-action, learn, adapt and build under uncertainty. The current registry has 53
-countries, nine dimensions, equal weights and no headline ranking.
+action, learn, adapt and build under uncertainty. The current registry has 125
+countries (D153), nine dimensions, equal weights and no headline ranking.
 
 ## Commands
 
@@ -376,7 +376,7 @@ port 3888. That entry starts Next directly and does not use the proxy.
   institution is a fact about that country, so it lives in the country file;
   a relation between two global bodies lives in the ledger. `members` is the
   registry codes of the benchmarked countries that belong to the body, sourced
-  once there and never as 53 edges; a programme with no membership omits the
+  once there and never as one edge per member; a programme with no membership omits the
   field. `attachGlobalInstitutions` in
   `packages/core/src/pipeline/institutions.ts` is the only place a global node
   enters a country's network: it attaches every body the country's edges name
@@ -455,7 +455,7 @@ port 3888. That entry starts Next directly and does not use the proxy.
   not a page.** A new page joins the
   section that already answers its reader's question: `COUNTRY_INDEX_PAGES`,
   `METHOD_PAGES`, `PARTICIPATE_PAGES` or `ABOUT_PAGES`, all in the same file.
-  Countries resolves its row from the path because 53 countries will not fit in
+  Countries resolves its row from the path because 125 countries will not fit in
   a control, and before the path names one it offers the cross-country readings
   instead; Method, Participate, Capabilities and About list theirs. See D80.
   Both bands render above every layout that could
@@ -575,7 +575,7 @@ not an error status. `pnpm bench probe` reads that block and says the code is
 unknown, so a stalled request and a dead code never read the same.
 
 `IC.BRE.*`, B-READY, is the Doing Business successor and it is in World
-Development Indicators. It covered 12 of the 53 countries in the 2024 round, so
+Development Indicators. It covered 12 of the 53 countries in the frame at the 2024 round, so
 it is not wireable yet, and it is what replaces the 2019-frozen Doing Business
 rows when its coverage arrives.
 

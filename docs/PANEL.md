@@ -128,7 +128,7 @@ scope as the run command. It is a command rather than a documented figure
 because the evidence brief grows with the indicator registry, and round 2
 carries round 1 back. Both grow with the registry.
 
-Run `pnpm bench cost --max-coverage 1` for the current 53-country estimate
+Run `pnpm bench cost --max-coverage 1` for the current full-frame estimate
 before starting the full panel. Prices come from the gateway's public model
 list, which states the rate a run is billed at, so re-verify them there rather
 than on a vendor pricing page.
