@@ -7513,3 +7513,39 @@ for a reason that is not access, or an unheld country falling under it for a
 reason that is about capability, either of which would show the gate removes
 real values. Or GitHub changing what `repositories` counts or how it locates
 one, which needs a new adapter version and a new entry.
+
+## D146 — The foresight register is piloted before it is coded, and the pilot sends the codebook back for revision
+
+*Recorded 2026-10-02. Follows #68. Codebook 1.0 is `2cc0577`, committed before any coding.*
+
+**Decision.** `government_foresight_capacity` stays a declared gap. The
+project-coded register of government foresight functions was piloted on ten
+countries (HTI, VNM, ARE, NIC, SGP, NGA, BRA, GBR, EST, CHE), drawn across the
+four V-Dem regime classes and the income quartiles with a fixed seed and
+Brazil fixed, by two independent coders. Codebook 1.1 must settle the eight
+ambiguities the pilot found, then the same ten are recoded, before any
+decision to code the 53 or to score the row. Pilot:
+`docs/research/anticipation/FORESIGHT-REGISTER-PILOT.md` and
+`data/research/foresight-register-pilot.json`.
+
+**Why.** I1, established by a named act, reached Krippendorff alpha 0.79
+against the 0.80 threshold fixed before coding (0.69 on the six countries
+with a function). I4 never fired. Brazil's agreed score of 100 hid a
+disagreement over which bodies qualify. The survival rule, any change of the
+person holding executive power, did not reward closed regimes: closed
+autocracies average 11 and liberal democracies 100, regime rho 0.72, under the
+0.80 stop rule. The named-act rule leans towards states that legislate their
+foresight bodies, which scores Singapore 67 on documentation rather than
+function. Income r 0.69 (n 10) is printed and decided nothing.
+
+**Cost.** A second coding round before any row exists, so Anticipation keeps
+two scored rows that track income (r 0.872) at least that long. Both coders
+were one model, so their errors are correlated, and even a passing recode
+needs a human coder, or a 20 percent human second coding on the frame, before
+promotion.
+
+**Overturned by.** A recode under 1.1, with at least one human coder,
+reaching alpha of at least 0.80 on every item and on body-by-body decisions,
+with no ceiling and regime rho under 0.80, which supports coding the 53 at
+tier `expert_panel`. Regime rho at or above 0.80, or eight of ten at one
+score after revision, stops the register.

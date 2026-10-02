@@ -1,0 +1,1026 @@
+{
+  "generatedAt": "2026-10-02",
+  "status": "pilot, not scored, uncommitted pending review (#68)",
+  "codebook": "docs/research/anticipation/FORESIGHT-REGISTER-CODEBOOK.md",
+  "codebookVersion": "1.0",
+  "codebookCommit": "2cc057719068fa8812ceeeae8735b1f20d0f6b9d",
+  "codedAt": "2026-10-02",
+  "coders": "two independent instances of one language model, each given only the codebook and the country list",
+  "agreement": {
+    "I1": {
+      "alpha": 0.7912087912087912,
+      "pctAgree": 0.9,
+      "ci95": [
+        0.0,
+        1.0,
+        1988
+      ],
+      "disagree": [
+        "GBR"
+      ]
+    },
+    "I2": {
+      "alpha": 1.0,
+      "pctAgree": 1.0,
+      "ci95": [
+        1.0,
+        1.0,
+        1990
+      ],
+      "disagree": []
+    },
+    "I3": {
+      "alpha": 1.0,
+      "pctAgree": 1.0,
+      "ci95": [
+        1.0,
+        1.0,
+        1997
+      ],
+      "disagree": []
+    },
+    "I3r": {
+      "alpha": 1.0,
+      "pctAgree": 1.0,
+      "ci95": [
+        1.0,
+        1.0,
+        1997
+      ],
+      "disagree": []
+    },
+    "I4": {
+      "alpha": null,
+      "pctAgree": 1.0,
+      "ci95": null,
+      "disagree": []
+    },
+    "score": {
+      "alpha": 0.9733984219816897,
+      "pctAgree": 0.9,
+      "ci95": [
+        0.8880153130350226,
+        1.0,
+        1999
+      ],
+      "disagree": [
+        "GBR"
+      ]
+    }
+  },
+  "countries": [
+    {
+      "iso3": "HTI",
+      "regime2025": "closed autocracy",
+      "incomeQuartile": 1,
+      "gdpPerCapitaPpp": 2678,
+      "draw": "single-country cell",
+      "coderA": {
+        "I1": 0,
+        "I2": 0,
+        "I3": 0,
+        "I3reason": null,
+        "I4": 0,
+        "score": 0
+      },
+      "coderB": {
+        "I1": 0,
+        "I2": 0,
+        "I3": 0,
+        "I3reason": null,
+        "I4": 0,
+        "score": 0
+      },
+      "adjudicated": {
+        "I1": 0,
+        "I2": 0,
+        "I3": 0,
+        "I3reason": null,
+        "I4": 0,
+        "score": 0
+      },
+      "adjudication": "Agreed: no qualifying function found by either coder; score 0 is a coded value.",
+      "functions": [],
+      "sources": {
+        "I1": [],
+        "I2": [],
+        "I3": [],
+        "I4": []
+      },
+      "rejected": [
+        {
+          "name": "MPCE",
+          "failed": "3 (planning-body exception)",
+          "why": "Produces the Plan Stratégique de Développement d'Haïti 2030 and investment programmes; no named prospective function found."
+        }
+      ]
+    },
+    {
+      "iso3": "VNM",
+      "regime2025": "closed autocracy",
+      "incomeQuartile": 2,
+      "gdpPerCapitaPpp": 15457,
+      "draw": "drawn from CHN, VNM",
+      "coderA": {
+        "I1": 0,
+        "I2": 0,
+        "I3": 0,
+        "I3reason": null,
+        "I4": 0,
+        "score": 0
+      },
+      "coderB": {
+        "I1": 0,
+        "I2": 0,
+        "I3": 0,
+        "I3reason": null,
+        "I4": 0,
+        "score": 0
+      },
+      "adjudicated": {
+        "I1": 0,
+        "I2": 0,
+        "I3": 0,
+        "I3reason": null,
+        "I4": 0,
+        "score": 0
+      },
+      "adjudication": "Agreed: no qualifying function found by either coder; score 0 is a coded value.",
+      "functions": [],
+      "sources": {
+        "I1": [],
+        "I2": [],
+        "I3": [],
+        "I4": []
+      },
+      "rejected": [
+        {
+          "name": "Viện Chiến lược phát triển (Development Strategy Institute, MPI; merged 2025)",
+          "failed": "3 (planning-body exception)",
+          "why": "Mandate under QĐ 40/2018/QĐ-TTg is development strategy and planning research; it lists 'đánh giá triển vọng phát triển' (assessing development prospects) but no named foresight, futures or long-term scenario function. Low confidence."
+        },
+        {
+          "name": "Viện Chiến lược và Chính sách kinh tế - tài chính (MOF)",
+          "failed": "3 and 4",
+          "why": "Economic and financial forecasting and policy; not long-term futures across domains."
+        },
+        {
+          "name": "Trung tâm Thông tin và Dự báo kinh tế - xã hội quốc gia (NCIF)",
+          "failed": "3",
+          "why": "Short- and medium-term socio-economic forecasting."
+        },
+        {
+          "name": "NISTPASS (Viện Chiến lược và Chính sách khoa học và công nghệ)",
+          "failed": "4",
+          "why": "Science and technology policy only."
+        },
+        {
+          "name": "Viện Nghiên cứu lập pháp (Institute for Legislative Studies)",
+          "failed": "3",
+          "why": "No foresight or technology assessment mandate found."
+        },
+        {
+          "name": "Ban Kinh tế Trung ương",
+          "failed": "1",
+          "why": "Party organ, not of the state."
+        }
+      ]
+    },
+    {
+      "iso3": "ARE",
+      "regime2025": "closed autocracy",
+      "incomeQuartile": 4,
+      "gdpPerCapitaPpp": 69702,
+      "draw": "single-country cell",
+      "coderA": {
+        "I1": 0,
+        "I2": 1,
+        "I3": 0,
+        "I3reason": "no_change",
+        "I4": 0,
+        "score": 33
+      },
+      "coderB": {
+        "I1": 0,
+        "I2": 1,
+        "I3": 0,
+        "I3reason": "no_change",
+        "I4": 0,
+        "score": 33
+      },
+      "adjudicated": {
+        "I1": 0,
+        "I2": 1,
+        "I3": 0,
+        "I3reason": "no_change",
+        "I4": 0,
+        "score": 33
+      },
+      "adjudication": "Agreed 33. Coders differ on whether the Ministry of Cabinet Affairs still holds the future portfolio (A: merged 2020; B: operating, per moca.gov.ae). Adjudicated operating on B's primary page; no item changes. I1 is 0 for both functions because no decree could be read (uaelegislation.gov.ae returned 403 to both coders); I2 rests on a whitepaper co-developed with a consultancy; I3 no_change, the Prime Minister has held office since 2006.",
+      "functions": [
+        {
+          "name": "Ministry of Cabinet Affairs, Future Foresight portfolio (formerly Ministry of Cabinet Affairs and the Future, 2016-2020)",
+          "level": "executive",
+          "legalForm": "Federal ministry",
+          "status": "operating",
+          "established": {
+            "act": "No named act found; future portfolio added in the February 2016 cabinet restructuring",
+            "date": "2016"
+          },
+          "ended": null,
+          "meetsUnit": true,
+          "unitNote": "1: federal ministry. 2: standing. 3: own page: mandated with 'the portfolio of future of UAE', forecasting trends and future implications. 4: all sectors. The 2020 rename dropped 'the Future' from the title but the page shows the portfolio continued."
+        },
+        {
+          "name": "Government Development and the Future Office (UAE Government)",
+          "level": "executive",
+          "legalForm": "Federal government office led by the Minister of State for Government Development and the Future",
+          "status": "operating",
+          "established": {
+            "act": "No named act found; announced by the Prime Minister on 5 July 2020 in the new government structure",
+            "date": "2020-07-05"
+          },
+          "ended": null,
+          "meetsUnit": true,
+          "unitNote": "1 and 2 met. 3: about page: 'maximize the ability of government entities to foresee future trends'; low confidence that this is a foresight mandate rather than government modernisation. 4: whole of government."
+        }
+      ],
+      "sources": {
+        "I1": [
+          {
+            "url": "https://www.moca.gov.ae/en/area-of-focus/future-foresight",
+            "archived": "https://web.archive.org/web/20250820150808/https://www.moca.gov.ae/en/area-of-focus/future-foresight",
+            "retrievedAt": "2026-10-02",
+            "quote": "Ministry of Cabinet Affairs is mandated with the portfolio of future of UAE and developing a strategy that ensures all sectors' readiness for the future's variabilities."
+          },
+          {
+            "url": "https://gdf.gov.ae/en/brief",
+            "archived": "https://web.archive.org/web/20250617064302/https://gdf.gov.ae/en/brief",
+            "retrievedAt": "2026-10-02",
+            "quote": "the Office seeks to maximize the ability of government entities to foresee future trends, utilize them, and define the skills of tomorrow"
+          }
+        ],
+        "I2": [
+          {
+            "url": "https://gdf.gov.ae/en/publications/10-future-emerging-opportunities",
+            "archived": "https://web.archive.org/web/20250521215311/https://gdf.gov.ae/en/publications/10-future-emerging-opportunities",
+            "retrievedAt": "2026-10-02",
+            "quote": "12 November, 2023 The Government Development and the Future Office launched a new whitepaper entitled \"10 Future Emerging Opportunities, Government Leaders Should Be Ready For\""
+          }
+        ],
+        "I3": [
+          {
+            "url": "https://gdf.gov.ae/en/brief",
+            "archived": "https://web.archive.org/web/20250617064302/https://gdf.gov.ae/en/brief",
+            "retrievedAt": "2026-10-02",
+            "quote": "the Office seeks to maximize the ability of government entities to foresee future trends, utilize them, and define the skills of tomorrow"
+          }
+        ],
+        "I4": [
+          {
+            "url": "https://www.moca.gov.ae/en/area-of-focus/future-foresight",
+            "archived": "https://web.archive.org/web/20250820150808/https://www.moca.gov.ae/en/area-of-focus/future-foresight",
+            "retrievedAt": "2026-10-02",
+            "quote": "Ministry of Cabinet Affairs is mandated with the portfolio of future of UAE and developing a strategy that ensures all sectors' readiness for the future's variabilities."
+          }
+        ]
+      },
+      "rejected": [
+        {
+          "name": "Dubai Future Foundation",
+          "failed": "section 1 exclusions (sub-national)",
+          "why": "Emirate-level body of Dubai."
+        },
+        {
+          "name": "Emirates Center for Strategic Studies and Research",
+          "failed": "section 1 exclusions",
+          "why": "Think tank."
+        }
+      ]
+    },
+    {
+      "iso3": "NIC",
+      "regime2025": "electoral autocracy",
+      "incomeQuartile": 1,
+      "gdpPerCapitaPpp": 7933,
+      "draw": "drawn from ETH, IND, NIC, PHL, RWA, SLV",
+      "coderA": {
+        "I1": 0,
+        "I2": 0,
+        "I3": 0,
+        "I3reason": null,
+        "I4": 0,
+        "score": 0
+      },
+      "coderB": {
+        "I1": 0,
+        "I2": 0,
+        "I3": 0,
+        "I3reason": null,
+        "I4": 0,
+        "score": 0
+      },
+      "adjudicated": {
+        "I1": 0,
+        "I2": 0,
+        "I3": 0,
+        "I3reason": null,
+        "I4": 0,
+        "score": 0
+      },
+      "adjudication": "Agreed: no qualifying function found by either coder; score 0 is a coded value.",
+      "functions": [],
+      "sources": {
+        "I1": [],
+        "I2": [],
+        "I3": [],
+        "I4": []
+      },
+      "rejected": [
+        {
+          "name": "Dirección General de Planificación, SEPRES",
+          "failed": "3 (planning-body exception)",
+          "why": "Administers plan monitoring (SIGRUN) and the national development plan; no named prospective function."
+        }
+      ]
+    },
+    {
+      "iso3": "SGP",
+      "regime2025": "electoral autocracy",
+      "incomeQuartile": 4,
+      "gdpPerCapitaPpp": 139593,
+      "draw": "single-country cell",
+      "coderA": {
+        "I1": 0,
+        "I2": 1,
+        "I3": 1,
+        "I3reason": null,
+        "I4": 0,
+        "score": 67
+      },
+      "coderB": {
+        "I1": 0,
+        "I2": 1,
+        "I3": 1,
+        "I3reason": null,
+        "I4": 0,
+        "score": 67
+      },
+      "adjudicated": {
+        "I1": 0,
+        "I2": 1,
+        "I3": 1,
+        "I3reason": null,
+        "I4": 0,
+        "score": 67
+      },
+      "adjudication": "Agreed 67. Neither coder found a named act for the Centre for Strategic Futures (2009) or the Strategy Group (July 2015); I1 is 0 by rule, a validity cost discussed in the report.",
+      "functions": [
+        {
+          "name": "Centre for Strategic Futures (CSF), Strategy Group, Prime Minister's Office",
+          "level": "executive",
+          "legalForm": "Unit of the Strategy Group in the Prime Minister's Office",
+          "status": "operating",
+          "established": {
+            "act": "No named act found; established 2009, moved into Strategy Group 1 July 2015 by administrative reorganisation",
+            "date": "2009"
+          },
+          "ended": null,
+          "meetsUnit": true,
+          "unitNote": "1: unit of PMO. 2: standing since 2009. 3: own about page: 'pursue open-ended long-term futures research, and experiment with new foresight methodologies'. 4: whole-of-government."
+        }
+      ],
+      "sources": {
+        "I1": [
+          {
+            "url": "https://www.csf.gov.sg/who-we-are/",
+            "archived": "https://web.archive.org/web/20260914055254/https://www.csf.gov.sg/who-we-are/",
+            "retrievedAt": "2026-10-02",
+            "quote": "In 2009, the Centre for Strategic Futures (CSF) was established as a futures think tank ... On 1 July 2015, CSF became part of the new Strategy Group"
+          },
+          {
+            "url": "https://www.strategygroup.gov.sg/who-we-are/",
+            "archived": "https://web.archive.org/web/20260926200721/https://www.strategygroup.gov.sg/who-we-are/",
+            "retrievedAt": "2026-10-02",
+            "quote": "The Strategy Group in the Prime Minister's Office was set up in July 2015 to drive whole-of-government strategic planning"
+          }
+        ],
+        "I2": [
+          {
+            "url": "https://www.csf.gov.sg/media-centre/foresight-series/",
+            "archived": "https://web.archive.org/web/20260914055241/https://www.csf.gov.sg/media-centre/foresight-series/",
+            "retrievedAt": "2026-10-02",
+            "quote": "Foresight 2024 ... research into international megatrends and emerging issues ... 22 August 2024"
+          }
+        ],
+        "I3": [
+          {
+            "url": "https://www.pmo.gov.sg/newsroom/pm-lawrence-wong-at-the-swearing-in-ceremony-may-2024/",
+            "archived": "https://web.archive.org/web/20260818133429/https://www.pmo.gov.sg/newsroom/pm-lawrence-wong-at-the-swearing-in-ceremony-may-2024/",
+            "retrievedAt": "2026-10-02",
+            "quote": "PM Lawrence Wong at the Swearing-In Ceremony (May 2024)"
+          },
+          {
+            "url": "https://www.sgpc.gov.sg/api/file/getfile/Folio%206_Prime%20Ministers%20Office%20Strategy%20Group%20Addendum%20to%20the%20Presidents%20Address.pdf?path=%2Fsgpcmedia%2Fmedia_releases%2Fmddi-md%2Fpress_release%2FP-20250919-1%2Fattachment%2FFolio+6_Prime+Ministers+Office+Strategy+Group+Addendum+to+the+Presidents+Address.pdf",
+            "archived": null,
+            "retrievedAt": "2026-10-02",
+            "quote": "the Strategy Group will sharpen foresight and sense-making to better anticipate future challenges and opportunities and develop robust strategies in response."
+          },
+          {
+            "url": "https://www.csf.gov.sg/who-we-are/",
+            "archived": "https://web.archive.org/web/20260914055254/https://www.csf.gov.sg/who-we-are/",
+            "retrievedAt": "2026-10-02",
+            "quote": "In 2009, the Centre for Strategic Futures (CSF) was established as a futures think tank ... On 1 July 2015, CSF became part of the new Strategy Group"
+          }
+        ],
+        "I4": []
+      },
+      "rejected": [
+        {
+          "name": "Risk Assessment and Horizon Scanning (RAHS) programme, National Security Coordination Secretariat",
+          "failed": "4",
+          "why": "National security horizon scanning; sector-confined (security)."
+        }
+      ]
+    },
+    {
+      "iso3": "NGA",
+      "regime2025": "electoral democracy",
+      "incomeQuartile": 1,
+      "gdpPerCapitaPpp": 8145,
+      "draw": "drawn from BOL, GTM, HND, KEN, NGA, ZAF",
+      "coderA": {
+        "I1": 0,
+        "I2": 0,
+        "I3": 0,
+        "I3reason": null,
+        "I4": 0,
+        "score": 0
+      },
+      "coderB": {
+        "I1": 0,
+        "I2": 0,
+        "I3": 0,
+        "I3reason": null,
+        "I4": 0,
+        "score": 0
+      },
+      "adjudicated": {
+        "I1": 0,
+        "I2": 0,
+        "I3": 0,
+        "I3reason": null,
+        "I4": 0,
+        "score": 0
+      },
+      "adjudication": "Agreed: no qualifying function found by either coder; score 0 is a coded value.",
+      "functions": [],
+      "sources": {
+        "I1": [],
+        "I2": [],
+        "I3": [],
+        "I4": []
+      },
+      "rejected": [
+        {
+          "name": "Office for Strategic Preparedness and Resilience (OSPRE), Office of the Vice President",
+          "failed": "3",
+          "why": "Established by Presidential Executive Order 12; official site describes a national early warning and response centre for human security, no long-term futures mandate."
+        },
+        {
+          "name": "Anticipatory Governance and Foresight Capacity (AGFC) Programme, OVP",
+          "failed": "2 and section 1 exclusions",
+          "why": "A programme run with UNICEF; no standing body or act found."
+        },
+        {
+          "name": "Federal Ministry of Budget and Economic Planning",
+          "failed": "3 (planning-body exception)",
+          "why": "Produces Agenda 2050 and medium-term plans; no named foresight function found."
+        },
+        {
+          "name": "National Institute for Policy and Strategic Studies (NIPSS)",
+          "failed": "section 1 exclusions",
+          "why": "Policy training and research institute; no statute naming foresight read."
+        }
+      ]
+    },
+    {
+      "iso3": "BRA",
+      "regime2025": "electoral democracy",
+      "incomeQuartile": 2,
+      "gdpPerCapitaPpp": 20025,
+      "draw": "fixed by the owner",
+      "coderA": {
+        "I1": 1,
+        "I2": 1,
+        "I3": 1,
+        "I3reason": null,
+        "I4": 0,
+        "score": 100
+      },
+      "coderB": {
+        "I1": 1,
+        "I2": 1,
+        "I3": 1,
+        "I3reason": null,
+        "I4": 0,
+        "score": 100
+      },
+      "adjudicated": {
+        "I1": 1,
+        "I2": 1,
+        "I3": 1,
+        "I3reason": null,
+        "I4": 0,
+        "score": 100
+      },
+      "adjudication": "Item codes agreed (100), but the coders rested I3 on different bodies. Coder A accepted the Chamber of Deputies CEDES (Resolucao 26/2013) under the legislature technology-assessment clause and rejected Ipea as a think tank; coder B did the reverse. Adjudicated with B: CEDES art. 2 II (read by the adjudicator) mandates feasibility and impact studies of technologies, plans and policies, with no long-term or emerging-change wording, so condition 3 fails; Ipea is a federal public foundation (condition 1) whose statute, Decreto 11.194 of 8 Sep 2022, art. 3 III, names medium and long-term prospective studies (condition 3), and it operated after the 1 Jan 2023 change (condition met for I3). The MPO long-term planning undersecretariat (Decreto 11.353, art. 16) carries I1 and I2. SAE closed 1 Jan 2023 with the prospective mandate moved to MPO the same day, so I4 is 0. Score 100.",
+      "functions": [
+        {
+          "name": "Subsecretaria de Planejamento de Longo Prazo, Secretaria Nacional de Planejamento, Ministério do Planejamento e Orçamento (Undersecretariat for Long-Term Planning, MPO)",
+          "level": "executive",
+          "legalForm": "Unit of a federal ministry (created as Diretoria de Planejamento de Longo Prazo, renamed Subsecretaria by Decreto 11.869/2023)",
+          "status": "operating",
+          "established": {
+            "act": "Decreto nº 11.353 (Estrutura Regimental do MPO), art. 16",
+            "date": "2023-01-01"
+          },
+          "ended": null,
+          "meetsUnit": true,
+          "unitNote": "Planning body: counts under the section 1 exception because art. 16 names 'elaborar estudos prospectivos e análises de cenários'; condition 3 read on that function. 1, 2 and 4 met (national, cross-sector)."
+        },
+        {
+          "name": "Instituto de Pesquisa Econômica Aplicada (Ipea), Institute for Applied Economic Research",
+          "level": "statutory_body",
+          "legalForm": "Federal public foundation (fundação pública) linked to the MPO; statute approved by decree",
+          "status": "operating",
+          "established": {
+            "act": "Decreto nº 11.194 (Estatuto do IPEA), art. 3 III; in force 2022-10-07",
+            "date": "2022-09-08"
+          },
+          "ended": null,
+          "meetsUnit": true,
+          "unitNote": "Low confidence. A state research foundation could be read as a 'think tank' (excluded), but it is a public-law entity of the federal administration whose statute names 'estudos prospectivos de médio e longo prazo', the test section 1 applies to Sitra-like bodies. 4: economic, social and public-management scope."
+        },
+        {
+          "name": "Secretaria Especial de Assuntos Estratégicos da Presidência da República (SAE/PR)",
+          "level": "executive",
+          "legalForm": "Special secretariat of the Presidency",
+          "status": "closed",
+          "established": {
+            "act": "Structure last approved by Decreto nº 11.285 (2022-12-13); earlier SAE incarnations from 2008",
+            "date": "2022-12-13"
+          },
+          "ended": {
+            "act": "Decreto nº 11.365 (remaneja cargos da SAE/PR; revokes its structure provisions)",
+            "date": "2023-01-01",
+            "successor": "MPO Diretoria/Subsecretaria de Planejamento de Longo Prazo (Decreto nº 11.353, 2023-01-01), mandated for 'estudos prospectivos e análises de cenários'"
+          },
+          "meetsUnit": true,
+          "unitNote": "Decreto 11.285 gave SAE units the tasks 'elaborar estudos e análises de cenários' for long-term national planning across development, S&T, defence. Recorded for I4."
+        }
+      ],
+      "sources": {
+        "I1": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11353.htm",
+            "archived": "https://web.archive.org/web/20260415034344/https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/D11353.htm",
+            "retrievedAt": "2026-10-02",
+            "quote": "Art. 16. À Subsecretaria de Planejamento de Longo Prazo compete: I - coordenar a elaboração do planejamento nacional de longo prazo; II - elaborar estudos prospectivos e análises de cenários"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d11194.htm",
+            "archived": "https://web.archive.org/web/20251215131458/https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/D11194.htm",
+            "retrievedAt": "2026-10-02",
+            "quote": "DECRETO Nº 11.194, DE 8 DE SETEMBRO DE 2022 ... Art. 3º Compete ao IPEA: ... III - realizar estudos prospectivos de médio e longo prazo"
+          }
+        ],
+        "I2": [
+          {
+            "url": "https://www.gov.br/planejamento/pt-br/assuntos/planejamento/estrategia-2050-conteudo/Arquivos/eb2050-megatendencias-mundiais-e-incertezas-para-o-brasil-2050.pdf/@@display-file/file",
+            "archived": "https://web.archive.org/web/20260317130118/https://www.gov.br/planejamento/pt-br/assuntos/planejamento/estrategia-2050-conteudo/Arquivos/eb2050-megatendencias-mundiais-e-incertezas-para-o-brasil-2050.pdf",
+            "retrievedAt": "2026-10-02",
+            "quote": "Megatendências mundiais e incertezas para o Brasil 2050 / Ministério do Planejamento e Orçamento, Secretaria Nacional de Planejamento ... Brasília, março de 2025."
+          },
+          {
+            "url": "https://www.gov.br/planejamento/pt-br/assuntos/planejamento/estrategia-2050-conteudo/Arquivos/cenarios.pdf/@@display-file/file",
+            "archived": null,
+            "retrievedAt": "2026-10-02",
+            "quote": "Cenários: o Brasil que queremos em 2050 / Ministério do Planejamento e Orçamento, Secretaria Nacional de Planejamento ... SEPLAN/MPO, 2024."
+          }
+        ],
+        "I3": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d11194.htm",
+            "archived": "https://web.archive.org/web/20251215131458/https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/D11194.htm",
+            "retrievedAt": "2026-10-02",
+            "quote": "DECRETO Nº 11.194, DE 8 DE SETEMBRO DE 2022 ... Art. 3º Compete ao IPEA: ... III - realizar estudos prospectivos de médio e longo prazo"
+          },
+          {
+            "url": "https://www.gov.br/planejamento/pt-br/assuntos/planejamento/estrategia-2050-conteudo/Arquivos/eb2050-megatendencias-mundiais-e-incertezas-para-o-brasil-2050.pdf/@@display-file/file",
+            "archived": "https://web.archive.org/web/20260317130118/https://www.gov.br/planejamento/pt-br/assuntos/planejamento/estrategia-2050-conteudo/Arquivos/eb2050-megatendencias-mundiais-e-incertezas-para-o-brasil-2050.pdf",
+            "retrievedAt": "2026-10-02",
+            "quote": "Análise situacional e retrospectiva do desenvolvimento brasileiro, pela equipe do Instituto de Pesquisa Econômica Aplicada (Ipea), em março de 2024"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11353.htm",
+            "archived": "https://web.archive.org/web/20260415034344/https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/D11353.htm",
+            "retrievedAt": "2026-10-02",
+            "quote": "Art. 16. À Subsecretaria de Planejamento de Longo Prazo compete: I - coordenar a elaboração do planejamento nacional de longo prazo; II - elaborar estudos prospectivos e análises de cenários"
+          }
+        ],
+        "I4": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11365.htm",
+            "archived": "https://web.archive.org/web/20260608204910/http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11365.htm",
+            "retrievedAt": "2026-10-02",
+            "quote": "DECRETO Nº 11.365, DE 1º DE JANEIRO DE 2023 Remaneja cargos em comissão e funções confiança da Secretaria Especial de Assuntos Estratégicos da Presidência da República"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11353.htm",
+            "archived": "https://web.archive.org/web/20260415034344/https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/D11353.htm",
+            "retrievedAt": "2026-10-02",
+            "quote": "Art. 16. À Subsecretaria de Planejamento de Longo Prazo compete: I - coordenar a elaboração do planejamento nacional de longo prazo; II - elaborar estudos prospectivos e análises de cenários"
+          }
+        ]
+      },
+      "rejected": [
+        {
+          "name": "Centro de Estudos e Debates Estratégicos (CEDES), Câmara dos Deputados",
+          "failed": "3",
+          "why": "Resolução 26/2013 mandates policy studies and impact/risk analysis of technologies and policies, but names no exploration of the long-term future; low confidence, could be read as legislative technology assessment."
+        },
+        {
+          "name": "Centro de Gestão e Estudos Estratégicos (CGEE)",
+          "failed": "1 and 4",
+          "why": "Private non-profit social organisation under a management contract with MCTI; mandate is science, technology and innovation foresight."
+        },
+        {
+          "name": "Estratégia Brasil 2050",
+          "failed": "section 1 exclusions",
+          "why": "Long-term strategy document, not a body."
+        }
+      ]
+    },
+    {
+      "iso3": "GBR",
+      "regime2025": "electoral democracy",
+      "incomeQuartile": 3,
+      "gdpPerCapitaPpp": 53993,
+      "draw": "drawn from GBR, ISR, MYS, PAN, POL, PRT",
+      "coderA": {
+        "I1": 0,
+        "I2": 1,
+        "I3": 1,
+        "I3reason": null,
+        "I4": 0,
+        "score": 67
+      },
+      "coderB": {
+        "I1": 1,
+        "I2": 1,
+        "I3": 1,
+        "I3reason": null,
+        "I4": 0,
+        "score": 100
+      },
+      "adjudicated": {
+        "I1": 1,
+        "I2": 1,
+        "I3": 1,
+        "I3reason": null,
+        "I4": 0,
+        "score": 100
+      },
+      "adjudication": "Coders split on I1. Coder B found the primary act: the House of Commons resolution of 21 November 2000 approving the Information Committee report HC 659 on the future of POST (Hansard, verified by the adjudicator on 2026-10-02). A parliamentary resolution is a named act under I1. Coder A searched and found only secondary sources. A search miss, not a rule disagreement. Score 100.",
+      "functions": [
+        {
+          "name": "Parliamentary Office of Science and Technology (POST)",
+          "level": "legislature",
+          "legalForm": "Bicameral office of both Houses of Parliament",
+          "status": "operating",
+          "established": {
+            "act": "House of Commons resolution approving the Information Committee First Report 1999-2000, 'The Future of the Parliamentary Office of Science and Technology' (HC 659), permanent from April 2001",
+            "date": "2000-11-21"
+          },
+          "ended": null,
+          "meetsUnit": true,
+          "unitNote": "1: office of Parliament. 2: permanent since 2001. 3: official about page names horizon scanning 'to help parliament plan for the future' and briefings on emerging science. 4: legislative technology assessment, which section 1 counts explicitly."
+        },
+        {
+          "name": "Government Office for Science: Futures, Foresight and Horizon Scanning",
+          "level": "executive",
+          "legalForm": "Team within GO-Science (Department for Science, Innovation and Technology)",
+          "status": "operating",
+          "established": {
+            "act": "No named act found",
+            "date": "1994"
+          },
+          "ended": null,
+          "meetsUnit": true,
+          "unitNote": "Executive foresight team; meets 1-4 on its blog/official pages, but no founding act located and its products were not checked against I2 because POST already establishes I1 to I3. Founding year 1994 (Technology Foresight Programme) is from memory and not read from a primary source: low confidence."
+        }
+      ],
+      "sources": {
+        "I1": [
+          {
+            "url": "https://api.parliament.uk/historic-hansard/commons/2000/nov/21/parliamentary-office-of-science-and",
+            "archived": null,
+            "retrievedAt": "2026-10-02",
+            "quote": "Resolved, That this House approves the First Report from the Information Committee on the Future of the Parliamentary Office of Science and Technology (HC 659)."
+          },
+          {
+            "url": "https://www.parliament.uk/globalassets/documents/post/POST_evaluation2009_FINAL_080110.pdf",
+            "archived": "https://web.archive.org/web/20210926151108/https://www.parliament.uk/globalassets/documents/post/POST_evaluation2009_FINAL_080110.pdf",
+            "retrievedAt": "2026-10-02",
+            "quote": "After a further committee review and a debate in the House of Commons, it was made a permanent Office of both Houses in 2001."
+          }
+        ],
+        "I2": [
+          {
+            "url": "https://post.parliament.uk/type/horizon-scanning/",
+            "archived": "https://web.archive.org/web/20260727234906/https://post.parliament.uk/type/horizon-scanning/",
+            "retrievedAt": "2026-10-02",
+            "quote": "Horizon scanning Transport planning to harness emerging transport technologies Monday, 12 May, 2025"
+          },
+          {
+            "url": "https://post.parliament.uk/about-us/",
+            "archived": "https://web.archive.org/web/20260928104616/https://post.parliament.uk/about-us/",
+            "retrievedAt": "2026-10-02",
+            "quote": "Horizon scanning We organise horizon scanning activities to help parliament plan for the future."
+          }
+        ],
+        "I3": [
+          {
+            "url": "https://www.gov.uk/government/people/keir-starmer",
+            "archived": "https://web.archive.org/web/20260924055219/https://www.gov.uk/government/people/keir-starmer",
+            "retrievedAt": "2026-10-02",
+            "quote": "Sir Keir Starmer was Prime Minister from 5 July 2024 to 20 July 2026."
+          },
+          {
+            "url": "https://post.parliament.uk/type/horizon-scanning/",
+            "archived": "https://web.archive.org/web/20260727234906/https://post.parliament.uk/type/horizon-scanning/",
+            "retrievedAt": "2026-10-02",
+            "quote": "Horizon scanning Transport planning to harness emerging transport technologies Monday, 12 May, 2025"
+          }
+        ],
+        "I4": []
+      },
+      "rejected": [
+        {
+          "name": "Ministry of Defence DCDC Global Strategic Trends",
+          "failed": "4",
+          "why": "Defence-sector foresight."
+        },
+        {
+          "name": "Office for Budget Responsibility long-term fiscal projections",
+          "failed": "section 1 exclusions",
+          "why": "Fiscal council projections."
+        }
+      ]
+    },
+    {
+      "iso3": "EST",
+      "regime2025": "liberal democracy",
+      "incomeQuartile": 3,
+      "gdpPerCapitaPpp": 41604,
+      "draw": "drawn from CHL, ESP, EST, FRA, JPN, URY",
+      "coderA": {
+        "I1": 1,
+        "I2": 1,
+        "I3": 1,
+        "I3reason": null,
+        "I4": 0,
+        "score": 100
+      },
+      "coderB": {
+        "I1": 1,
+        "I2": 1,
+        "I3": 1,
+        "I3reason": null,
+        "I4": 0,
+        "score": 100
+      },
+      "adjudicated": {
+        "I1": 1,
+        "I2": 1,
+        "I3": 1,
+        "I3reason": null,
+        "I4": 0,
+        "score": 100
+      },
+      "adjudication": "Agreed 100. Coder B also recorded the Estonian Development Fund foresight activity, merged into the Foresight Centre under the 2016 Act; successor, so I4 0.",
+      "functions": [
+        {
+          "name": "Arenguseire Keskus (Foresight Centre at the Riigikogu)",
+          "level": "legislature",
+          "legalForm": "Unit formed under the Chancellery of the Riigikogu, independent in its duties, separate budget line (Foresight Act s.3)",
+          "status": "operating",
+          "established": {
+            "act": "Arenguseire seadus (Foresight Act), RT I, 28.06.2016",
+            "date": "2016-06-14"
+          },
+          "ended": null,
+          "meetsUnit": true,
+          "unitNote": "1: organ of the legislature's chancellery. 2: no end date in the Act. 3: Act s.2 defines foresight as identification of long-term developments and preparation of development scenarios. 4: society-wide, no sector limit."
+        },
+        {
+          "name": "Eesti Arengufond (Estonian Development Fund), foresight activity",
+          "level": "statutory_body",
+          "legalForm": "Statutory public body under the Estonian Development Fund Act; terminated and liquidated under chapter 3 of the Foresight Act",
+          "status": "merged",
+          "established": {
+            "act": "Eesti Arengufondi seadus (Estonian Development Fund Act)",
+            "date": "2007"
+          },
+          "ended": {
+            "act": "Foresight Act (passed 14.06.2016), chapter 3 'Termination of Estonian Development Fund'; Estonian Development Fund Act repealed (s.22)",
+            "date": "2016-06-14",
+            "successor": "Arenguseire Keskus (Foresight Centre), same Act"
+          },
+          "meetsUnit": true,
+          "unitNote": "Recorded for I4 only; its foresight function passed to the Foresight Centre by the same Act, so successor within 24 months. Exact liquidation completion date not read from source; the Act's passage date is used. Low confidence on whether the Fund's own statute named foresight (not read)."
+        }
+      ],
+      "sources": {
+        "I1": [
+          {
+            "url": "https://www.riigiteataja.ee/en/eli/509022018003/consolide",
+            "archived": "https://web.archive.org/web/20250808103748/https://www.riigiteataja.ee/en/eli/509022018003/consolide",
+            "retrievedAt": "2026-10-02",
+            "quote": "Foresight Act ... Passed 14.06.2016 ... Foresight is organised by the Foresight Centre (hereinafter the Centre), which is formed under the Chancellery of the Riigikogu."
+          }
+        ],
+        "I2": [
+          {
+            "url": "https://arenguseire.ee/en/reports/?type=90",
+            "archived": "https://web.archive.org/web/20260411012728/https://arenguseire.ee/en/reports/?type=90",
+            "retrievedAt": "2026-10-02",
+            "quote": "The Future of Accessibility of Local Public Services. Trends and Scenarios up to 2050 (04.06.2025)"
+          },
+          {
+            "url": "https://arenguseire.ee/en/reports/the-future-of-accessibility-of-local-public-services-trends-and-scenarios-up-to-2050/",
+            "archived": "https://web.archive.org/web/20260315145723/https://arenguseire.ee/en/reports/the-future-of-accessibility-of-local-public-services-trends-and-scenarios-up-to-2050/",
+            "retrievedAt": "2026-10-02",
+            "quote": "The Future of Accessibility of Local Public Services. Trends and Scenarios up to 2050"
+          },
+          {
+            "url": "https://arenguseire.ee/en/about/",
+            "archived": "https://web.archive.org/web/20260315150620/https://arenguseire.ee/en/about/",
+            "retrievedAt": "2026-10-02",
+            "quote": "its tasks include analysing long-term developments in the society, identifying new trends and development avenues, and drafting development scenarios."
+          }
+        ],
+        "I3": [
+          {
+            "url": "https://www.valitsus.ee/en/news/new-government-office-and-will-hold-sitting-thursday",
+            "archived": "https://web.archive.org/web/20260605232143/https://valitsus.ee/en/news/new-government-office-and-will-hold-sitting-thursday",
+            "retrievedAt": "2026-10-02",
+            "quote": "23.07.2024 ... The government of Prime Minister Kristen Michal has taken office and will hold its first sitting and cabinet meeting this Thursday"
+          },
+          {
+            "url": "https://arenguseire.ee/en/reports/?type=90",
+            "archived": "https://web.archive.org/web/20260411012728/https://arenguseire.ee/en/reports/?type=90",
+            "retrievedAt": "2026-10-02",
+            "quote": "The Future of Accessibility of Local Public Services. Trends and Scenarios up to 2050 (04.06.2025)"
+          }
+        ],
+        "I4": [
+          {
+            "url": "https://www.riigiteataja.ee/en/eli/509022018003/consolide",
+            "archived": "https://web.archive.org/web/20250808103748/https://www.riigiteataja.ee/en/eli/509022018003/consolide",
+            "retrievedAt": "2026-10-02",
+            "quote": "Foresight Act ... Passed 14.06.2016 ... Foresight is organised by the Foresight Centre (hereinafter the Centre), which is formed under the Chancellery of the Riigikogu."
+          }
+        ]
+      },
+      "rejected": [
+        {
+          "name": "Riigikantselei strateegiabüroo (Government Office Strategy Unit)",
+          "failed": "3",
+          "why": "Coordinates government action plan and strategy Estonia 2035; no named foresight function found on official pages searched."
+        }
+      ]
+    },
+    {
+      "iso3": "CHE",
+      "regime2025": "liberal democracy",
+      "incomeQuartile": 4,
+      "gdpPerCapitaPpp": 85732,
+      "draw": "drawn from AUS, CHE, DEU, FIN, IRL, KOR, NLD, SWE",
+      "coderA": {
+        "I1": 1,
+        "I2": 1,
+        "I3": 1,
+        "I3reason": null,
+        "I4": 0,
+        "score": 100
+      },
+      "coderB": {
+        "I1": 1,
+        "I2": 1,
+        "I3": 1,
+        "I3reason": null,
+        "I4": 0,
+        "score": 100
+      },
+      "adjudicated": {
+        "I1": 1,
+        "I2": 1,
+        "I3": 1,
+        "I3reason": null,
+        "I4": 0,
+        "score": 100
+      },
+      "adjudication": "Agreed 100. Both coders flagged that I3 has no rule for a collegial executive; every reading gives 1.",
+      "functions": [
+        {
+          "name": "Bundeskanzlei, Lage- und Umfeldanalyse / Perspektivstab der Bundesverwaltung (Federal Chancellery situation and environment analysis, Federal Administration Foresight Staff)",
+          "level": "executive",
+          "legalForm": "Function of the Federal Chancellery (staff office of the Federal Council) with an interdepartmental staff",
+          "status": "operating",
+          "established": {
+            "act": "Regierungs- und Verwaltungsorganisationsgesetz (RVOG, SR 172.010) Art. 32 lit. cter, inserted by Bundesgesetz of 28 Sept 2012, in force 1 Jan 2015",
+            "date": "2012-09-28"
+          },
+          "ended": null,
+          "meetsUnit": true,
+          "unitNote": "1: Federal Chancellery. 2: statutory task, no end date. 3: RVOG mandates a 'langfristige und kontinuierliche Lage- und Umfeldanalyse'; products are scenario reports (Perspektiven 2030, Perspektiven Schweiz 2040). 4: covers all federal policy."
+        }
+      ],
+      "sources": {
+        "I1": [
+          {
+            "url": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1997/2022_2022_2022/20191202/de/pdf-a/fedlex-data-admin-ch-eli-cc-1997-2022_2022_2022-20191202-de-pdf-a-2.pdf",
+            "archived": "https://web.archive.org/web/20240407022337/https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1997/2022_2022_2022/20191202/de/pdf-a/fedlex-data-admin-ch-eli-cc-1997-2022_2022_2022-20191202-de-pdf-a-2.pdf",
+            "retrievedAt": "2026-10-02",
+            "quote": "cter. sorgt für eine langfristige und kontinuierliche Lage- und Umfeldanalyse und erstattet dem Bundesrat laufend Bericht darüber; [Eingefügt durch BG vom 28. Sept. 2012]"
+          },
+          {
+            "url": "https://www.bk.admin.ch/bk/de/home/regierungsunterstuetzung/fuehrungsunterstuetzung/lage-und-umfeldanalyse.html",
+            "archived": "https://web.archive.org/web/20260413114046/https://www.bk.admin.ch/bk/de/home/regierungsunterstuetzung/fuehrungsunterstuetzung/lage-und-umfeldanalyse.html",
+            "retrievedAt": "2026-10-02",
+            "quote": "Die Bundeskanzlei sorgt für eine langfristige sowie kontinuierliche Lage- und Umfeldanalyse ... Perspektivstab der Bundesverwaltung"
+          }
+        ],
+        "I2": [
+          {
+            "url": "https://www.admin.ch/de/newnsb/BT5GtKA_-2zhrcGkzYm2l",
+            "archived": "https://web.archive.org/web/20260620065415/https://www.admin.ch/de/newnsb/BT5GtKA_-2zhrcGkzYm2l",
+            "retrievedAt": "2026-10-02",
+            "quote": "Bern, 19.06.2026 — Der Bundesrat hat am 19. Juni 2026 den Bericht «Perspektiven Schweiz 2040» zur Kenntnis genommen."
+          }
+        ],
+        "I3": [
+          {
+            "url": "https://www.parlament.ch/de/services/news/Seiten/2024/20241211132345273194158159026_bsd088.aspx",
+            "archived": "https://web.archive.org/web/20251203190336/https://www.parlament.ch/de/services/news/Seiten/2024/20241211132345273194158159026_bsd088.aspx",
+            "retrievedAt": "2026-10-02",
+            "quote": "Karin Keller-Sutter ist im Jahr 2025 Bundespräsidentin"
+          },
+          {
+            "url": "https://www.admin.ch/de/newnsb/BT5GtKA_-2zhrcGkzYm2l",
+            "archived": "https://web.archive.org/web/20260620065415/https://www.admin.ch/de/newnsb/BT5GtKA_-2zhrcGkzYm2l",
+            "retrievedAt": "2026-10-02",
+            "quote": "Bern, 19.06.2026 — Der Bundesrat hat am 19. Juni 2026 den Bericht «Perspektiven Schweiz 2040» zur Kenntnis genommen."
+          }
+        ],
+        "I4": []
+      },
+      "rejected": [
+        {
+          "name": "TA-SWISS (Stiftung für Technologiefolgen-Abschätzung)",
+          "failed": "1",
+          "why": "Centre of competence of the Swiss Academies of Arts and Sciences (an association), funded under federal research law; not an organ of the state or legislature. Low confidence."
+        },
+        {
+          "name": "Swiss Science Council foresight",
+          "failed": "4",
+          "why": "Science and research policy only."
+        }
+      ]
+    }
+  ],
+  "unitAgreement": {
+    "bodiesJudgedByBoth": 26,
+    "disagreements": 2,
+    "alphaNominal": 0.841,
+    "note": "Both on Brazil: CEDES and Ipea, judged in opposite directions; masked in the item codes."
+  },
+  "pattern": {
+    "meanScoreByRegime": {
+      "closed autocracy": 11.0,
+      "electoral autocracy": 33.5,
+      "electoral democracy": 66.7,
+      "liberal democracy": 100.0
+    },
+    "spearmanWithRegimeClass": 0.717,
+    "stopThreshold": 0.8,
+    "pearsonWithLogGdpPerCapita": 0.694,
+    "spearmanWithGdpPerCapita": 0.672,
+    "n": 10,
+    "incomeNote": "printed, decides nothing (D117, D118)",
+    "ceilingCheck": "4 of 10 at 0 and 4 of 10 at 100; stop rule is 8 of 10 at one value"
+  },
+  "verdict": "revise the codebook"
+}
