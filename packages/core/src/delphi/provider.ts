@@ -52,15 +52,15 @@ export class GatewayProvider implements PanelProvider {
     prompt: string,
     schema: S,
   ): Promise<z.infer<S>> {
-    const { generateObject } = await import('ai')
-    const { object } = await generateObject({
+    const { generateText, Output } = await import('ai')
+    const { output } = await generateText({
       model,
-      schema,
-      system: SYSTEM_RULES,
+      output: Output.object({ schema }),
+      instructions: SYSTEM_RULES,
       prompt,
       maxRetries: 2,
     })
-    return object as z.infer<S>
+    return output as z.infer<S>
   }
 
   cellScores(panelist: Panelist, prompt: string): Promise<CellScoreOutput> {
