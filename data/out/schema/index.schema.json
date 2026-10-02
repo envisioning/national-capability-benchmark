@@ -23,6 +23,20 @@
               },
               "dimensions": {
                 "type": "object",
+                "propertyNames": {
+                  "type": "string",
+                  "enum": [
+                    "anticipation",
+                    "agency",
+                    "coordination",
+                    "trust",
+                    "learning",
+                    "experimentation",
+                    "adaptability",
+                    "building",
+                    "shared_purpose"
+                  ]
+                },
                 "additionalProperties": {
                   "type": "object",
                   "properties": {
@@ -225,10 +239,11 @@
                             "type": "boolean"
                           },
                           "outOfFrame": {
-                            "type": "boolean",
-                            "default": false
+                            "default": false,
+                            "type": "boolean"
                           },
                           "series": {
+                            "default": [],
                             "type": "array",
                             "items": {
                               "type": "object",
@@ -243,7 +258,15 @@
                                   "type": "number"
                                 },
                                 "tier": {
-                                  "$ref": "#/definitions/IndexFile/properties/countries/items/properties/dimensions/additionalProperties/properties/indicators/items/properties/sourceTier/anyOf/0"
+                                  "type": "string",
+                                  "enum": [
+                                    "official_statistical",
+                                    "international_organization",
+                                    "academic_survey",
+                                    "composite_index",
+                                    "expert_panel",
+                                    "llm_delphi"
+                                  ]
                                 }
                               },
                               "required": [
@@ -253,8 +276,7 @@
                                 "tier"
                               ],
                               "additionalProperties": false
-                            },
-                            "default": []
+                            }
                           },
                           "status": {
                             "type": "string",
@@ -277,6 +299,8 @@
                           "source",
                           "sourceTier",
                           "winsorized",
+                          "outOfFrame",
+                          "series",
                           "status"
                         ],
                         "additionalProperties": false
@@ -316,13 +340,9 @@
                             ]
                           },
                           "year": {
-                            "anyOf": [
-                              {
-                                "type": "integer"
-                              },
-                              {
-                                "type": "null"
-                              }
+                            "type": [
+                              "integer",
+                              "null"
                             ]
                           },
                           "source": {
@@ -331,7 +351,15 @@
                           "sourceTier": {
                             "anyOf": [
                               {
-                                "$ref": "#/definitions/IndexFile/properties/countries/items/properties/dimensions/additionalProperties/properties/indicators/items/properties/sourceTier/anyOf/0"
+                                "type": "string",
+                                "enum": [
+                                  "official_statistical",
+                                  "international_organization",
+                                  "academic_survey",
+                                  "composite_index",
+                                  "expert_panel",
+                                  "llm_delphi"
+                                ]
                               },
                               {
                                 "type": "null"
@@ -375,7 +403,11 @@
                             "type": "string"
                           },
                           "direction": {
-                            "$ref": "#/definitions/IndexFile/properties/countries/items/properties/dimensions/additionalProperties/properties/checks/items/properties/direction"
+                            "type": "string",
+                            "enum": [
+                              "higher_better",
+                              "lower_better"
+                            ]
                           },
                           "value": {
                             "type": [
@@ -384,13 +416,9 @@
                             ]
                           },
                           "year": {
-                            "anyOf": [
-                              {
-                                "type": "integer"
-                              },
-                              {
-                                "type": "null"
-                              }
+                            "type": [
+                              "integer",
+                              "null"
                             ]
                           },
                           "source": {
@@ -399,7 +427,15 @@
                           "sourceTier": {
                             "anyOf": [
                               {
-                                "$ref": "#/definitions/IndexFile/properties/countries/items/properties/dimensions/additionalProperties/properties/indicators/items/properties/sourceTier/anyOf/0"
+                                "type": "string",
+                                "enum": [
+                                  "official_statistical",
+                                  "international_organization",
+                                  "academic_survey",
+                                  "composite_index",
+                                  "expert_panel",
+                                  "llm_delphi"
+                                ]
                               },
                               {
                                 "type": "null"
@@ -407,13 +443,9 @@
                             ]
                           },
                           "rank": {
-                            "anyOf": [
-                              {
-                                "type": "integer"
-                              },
-                              {
-                                "type": "null"
-                              }
+                            "type": [
+                              "integer",
+                              "null"
                             ]
                           },
                           "n": {
@@ -458,19 +490,6 @@
                     "conditions"
                   ],
                   "additionalProperties": false
-                },
-                "propertyNames": {
-                  "enum": [
-                    "anticipation",
-                    "agency",
-                    "coordination",
-                    "trust",
-                    "learning",
-                    "experimentation",
-                    "adaptability",
-                    "building",
-                    "shared_purpose"
-                  ]
                 }
               }
             },
