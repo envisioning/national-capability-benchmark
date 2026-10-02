@@ -60,7 +60,7 @@ const LTU = 'long_term_unemployment_share'
 
 /*
  * Every country the pinned ILOSTAT release says one of these things about,
- * not only the countries with a layer: the ground layer reads all 53, and a
+ * not only the countries with a layer: the ground layer reads every country, and a
  * fact shown for one country and withheld from another with the same fact
  * would be a selection. The survey and the flag are read from the `note` of
  * each observation in data/observations/ilostat-ltu.json, and a test holds
@@ -87,7 +87,15 @@ export const COUNTRY_ROW_FACTS: readonly CountryRowFact[] = [
     survey: 'Encuesta Permanente de Hogares Continua',
     decisions: ['D120'],
   },
+  {
+    iso3: 'COD',
+    indicatorId: LTU,
+    kind: 'household_survey',
+    survey: 'Questionnaire sur les Indicateurs de Base du Bien-être',
+    decisions: ['D120'],
+  },
   { iso3: 'KEN', indicatorId: LTU, kind: 'household_survey_unreliable', decisions: ['D120'] },
+  { iso3: 'BWA', indicatorId: LTU, kind: 'household_survey_unreliable', decisions: ['D120'] },
   {
     iso3: 'ARG',
     indicatorId: LTU,
@@ -98,6 +106,11 @@ export const COUNTRY_ROW_FACTS: readonly CountryRowFact[] = [
   { iso3: 'ARE', indicatorId: LTU, kind: 'flagged_unreliable', decisions: ['D120'] },
   { iso3: 'FIN', indicatorId: LTU, kind: 'flagged_unreliable', decisions: ['D120'] },
   { iso3: 'FRA', indicatorId: LTU, kind: 'flagged_unreliable', decisions: ['D120'] },
+  { iso3: 'BEL', indicatorId: LTU, kind: 'flagged_unreliable', decisions: ['D120'] },
+  { iso3: 'HRV', indicatorId: LTU, kind: 'flagged_unreliable', decisions: ['D120'] },
+  { iso3: 'JAM', indicatorId: LTU, kind: 'flagged_unreliable', decisions: ['D120'] },
+  { iso3: 'MMR', indicatorId: LTU, kind: 'flagged_unreliable', decisions: ['D120'] },
+  { iso3: 'UGA', indicatorId: LTU, kind: 'flagged_unreliable', decisions: ['D120'] },
   ...['KOR', 'MEX', 'PER', 'PHL', 'SLV', 'URY'].map(
     (iso3): CountryRowFact => ({ iso3, indicatorId: LTU, kind: 'gate_never_passed', decisions: ['D120'] }),
   ),

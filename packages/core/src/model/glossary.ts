@@ -227,7 +227,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     group: 'What is being measured',
     short: 'A product a country barely exported fifteen years ago and now exports more of than its share of world trade.',
     full: 'A country exports a product competitively when that product takes a larger share of its exports than it takes of world exports. A new export product is one the country exported at less than half that share in 2009-2011 and at least at that share in 2022-2024, with at least USD 1 million a year of sales at the end. Counting them shows an economy moving people and capital into lines it was not in. The rate divides the new products by the products the country was not exporting at the start, so a country that already exported almost everything is not rewarded for having little left to enter.',
-    example: 'Poland entered 53 of 638 products it had room to enter, a rate of 8.3 percent, the highest in the benchmark. Cuba entered 4 of 1,142.',
+    example: 'Poland entered 53 of 638 products it had room to enter, a rate of 8.3 percent, third in the benchmark after Uzbekistan and Bulgaria. Cuba entered 4 of 1,142.',
   },
   {
     term: 'Ingest route',
@@ -282,7 +282,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     group: 'What sits beside the score',
     short: 'The bodies no country owns, recorded once and reached from each country map by id.',
     full: 'A United Nations agency or a development bank belongs to no country, so it is not written into any country network. The ledger holds each such body once, with its source and the list of benchmarked countries that are members of it. A country network reaches the body through a sourced relation, such as a programme delivered together, and the body then appears in that country\'s map at the global level. Membership and relations never enter a score or a confidence.',
-    example: 'UNDP produces the Atlas of Human Development in Brazil with Ipea, so UNDP appears in Brazil\'s map, attached to the UN, with a note that the UN has all 53 benchmarked countries as members.',
+    example: 'UNDP produces the Atlas of Human Development in Brazil with Ipea, so UNDP appears in Brazil\'s map, attached to the UN, with a note that every benchmarked country is a UN member.',
   },
   {
     term: 'Momentum',

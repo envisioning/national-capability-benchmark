@@ -162,6 +162,10 @@ type Country = (typeof COUNTRIES)[number]
 /** Source labels that do not use the project's canonical country name. */
 const SOURCE_COUNTRY_ALIASES: Record<string, Country['iso3']> = {
   'Great Britain': 'GBR',
+  /* The release prints this row's label cut at the column edge. */
+  'Bosnia and': 'BIH',
+  /* The release's own spelling. */
+  Uzbequistan: 'UZB',
 }
 
 function sourceLabelToIso3(label: string): string | null {

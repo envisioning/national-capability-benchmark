@@ -203,7 +203,7 @@ export type InstitutionNode = z.infer<typeof InstitutionNode>
  * A body no country owns: the UN, a development bank, a standards body. It
  * lives once, in `data/institutions/global.json`, and a country map reaches it
  * by id in an edge. `members` is the registry codes of the benchmarked
- * countries that belong to it, sourced once here and never as 53 edges. A
+ * countries that belong to it, sourced once here and never as one edge per member. A
  * programme or a bank with no membership omits the field, which is different
  * from an empty list. See D107.
  */

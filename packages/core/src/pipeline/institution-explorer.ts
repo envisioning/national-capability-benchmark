@@ -236,7 +236,7 @@ function describe(
   )
 
   /* Membership is a fact about the body, held once in the ledger, so a
-   * country's feed states it beside the body rather than drawing 53 lines. */
+   * country's feed states it beside the body rather than drawing a line per member. */
   if (isGlobalInstitution(node) && node.members) {
     const count = fill(inst.memberCount, { n: node.members.length, total: COUNTRY_ISO3.length })
     const here = fill(

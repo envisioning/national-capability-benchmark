@@ -158,7 +158,7 @@ const RAW: Raw[] = [
     source: { publisher: 'none', tier: 'official_statistical', inspectable: false },
     ingest: 'gap',
     notes:
-      'Redefined 2026-10-02 (D152). The row asked for the share of R&D spending classed as basic research, which is the make-up of a spending stock, the construct D142 retired business R&D share for. OECD MSTI publishes that share for its members only, and UNESCO UIS no longer serves R&D by type of research (construct audit, 2026-10-02). The behaviour behind it is a funder committing to a horizon: a grant awarded for five years or more is a decision to wait for a result. Untried: no memo has triaged a grant register. National funders publish award lists one by one with their own durations, and commercial grant aggregators fail the inspectability rule. Wireable on a grant-level register with award and end dates, on one definition of a competitive public grant, for 27 or more of the frame.',
+      'Redefined 2026-10-02 (D152). The row asked for the share of R&D spending classed as basic research, which is the make-up of a spending stock, the construct D142 retired business R&D share for. OECD MSTI publishes that share for its members only, and UNESCO UIS no longer serves R&D by type of research (construct audit, 2026-10-02). The behaviour behind it is a funder committing to a horizon: a grant awarded for five years or more is a decision to wait for a result. Untried: no memo has triaged a grant register. National funders publish award lists one by one with their own durations, and commercial grant aggregators fail the inspectability rule. Wireable on a grant-level register with award and end dates, on one definition of a competitive public grant, for half the frame or more.',
     wealthProxyPrior: 0.3,
   },
 
@@ -261,7 +261,7 @@ const RAW: Raw[] = [
     source: { publisher: 'ITU / UNESCO UIS', series: 'SDG 4.4.1, ICT skills by type', tier: 'international_organization', inspectable: true },
     ingest: 'gap',
     notes:
-      'Redefined 2026-10-02 (D152). The row asked whether adults can perform standard digital tasks, which reads a skill level, the kind of stock D122 moved out of the scores with internet users. It now counts the act: a person who did the task. It is not the internet users condition beside it, which counts access. Candidate: ITU ICT skills by type (SDG 4.4.1) through the UNESCO UIS API, probed 2026-10-02. Sent a message with an attached file reaches 33 of 53, 25 at 2018 or later, with no United States, India or China and most of Africa and Central America missing; two other task items reach 31 and 16. The items are self-reported and the task list has changed between rounds. Wireable on one task observed for 27 or more of the frame at 2018 or later.',
+      'Redefined 2026-10-02 (D152). The row asked whether adults can perform standard digital tasks, which reads a skill level, the kind of stock D122 moved out of the scores with internet users. It now counts the act: a person who did the task. It is not the internet users condition beside it, which counts access. Candidate: ITU ICT skills by type (SDG 4.4.1) through the UNESCO UIS API, probed 2026-10-02. Sent a message with an attached file reaches 33 of the 53 countries then in the frame, 25 at 2018 or later, with no United States, India or China and most of Africa and Central America missing; two other task items reach 31 and 16. The items are self-reported and the task list has changed between rounds. Wireable on one task observed for half the frame or more at 2018 or later.',
     wealthProxyPrior: 0.4,
   },
   {
@@ -352,7 +352,7 @@ const RAW: Raw[] = [
     transform: 'distance_from_100',
     source: WB('GF.XPD.BUDG.ZS'),
     ingest: 'worldbank',
-    notes: 'Observable alignment between an approved public plan and what government spent. The API covers 45 of 53 countries, with a latest year between 2018 and 2024. Values above and below 100 both indicate deviation, so the transform measures absolute distance from the approved budget rather than rewarding overspending. See D55.',
+    notes: 'Observable alignment between an approved public plan and what government spent. The API covers 113 of 125 countries, with a latest year between 2016 and 2024. Values above and below 100 both indicate deviation, so the transform measures absolute distance from the approved budget rather than rewarding overspending. See D55.',
     wealthProxyPrior: 0.15,
   },
   {
@@ -753,7 +753,7 @@ const RAW: Raw[] = [
     source: { publisher: 'OECD / national VC associations', tier: 'international_organization', inspectable: true },
     ingest: 'gap',
     notes:
-      'Redefined 2026-10-02 (D152). The id keeps its first name so evidence records, links and published files still resolve. The row asked for venture capital deployed as a share of GDP, a level of financial depth of the kind private credit is (D122). A count of first rounds counts attempts started with outside risk money, which is what this capability asks about, and a large round counts once. Candidates, none wireable: the OECD SME and Entrepreneurship Financing scoreboard carried venture capital for 6 of the 16 countries the frame held on 2026-08-26, as amounts in national currency, latest year 2022, with Brazil, India, South Africa and Singapore absent (D21); national venture capital associations publish counts on their own definitions; commercial deal databases cover the world and are not inspectable (D10). Wireable on an inspectable deal count with one definition of a first round for 27 or more of the frame. Read A1 before treating this dimension as measured.',
+      'Redefined 2026-10-02 (D152). The id keeps its first name so evidence records, links and published files still resolve. The row asked for venture capital deployed as a share of GDP, a level of financial depth of the kind private credit is (D122). A count of first rounds counts attempts started with outside risk money, which is what this capability asks about, and a large round counts once. Candidates, none wireable: the OECD SME and Entrepreneurship Financing scoreboard carried venture capital for 6 of the 16 countries the frame held on 2026-08-26, as amounts in national currency, latest year 2022, with Brazil, India, South Africa and Singapore absent (D21); national venture capital associations publish counts on their own definitions; commercial deal databases cover the world and are not inspectable (D10). Wireable on an inspectable deal count with one definition of a first round for half the frame or more. Read A1 before treating this dimension as measured.',
     wealthProxyPrior: 0.6,
   },
   {
@@ -806,7 +806,7 @@ const RAW: Raw[] = [
     source: { publisher: 'national regulators', tier: 'official_statistical', inspectable: true },
     ingest: 'gap',
     notes:
-      'Redefined 2026-10-02 (D152). The row asked for the number and breadth of live sandboxes, which is a policy stock: a regime can exist with nobody in it. It now counts what passes through: firms a regulator let test under relaxed rules, and firms that came out, authorised, withdrawn or failed. Regulators publish cohort lists and exit reports one by one. The evidence corpus holds 22 records against this row, most of them counts of firms admitted or exited, each on the definition and window of its own regulator, and no register assembles them on one definition (O1 triage sweep, 2026-10-01). A realistic candidate for Envisioning to build from those lists. Wireable on a register that counts admissions and completions on one definition for 27 or more of the frame.',
+      'Redefined 2026-10-02 (D152). The row asked for the number and breadth of live sandboxes, which is a policy stock: a regime can exist with nobody in it. It now counts what passes through: firms a regulator let test under relaxed rules, and firms that came out, authorised, withdrawn or failed. Regulators publish cohort lists and exit reports one by one. The evidence corpus holds 22 records against this row, most of them counts of firms admitted or exited, each on the definition and window of its own regulator, and no register assembles them on one definition (O1 triage sweep, 2026-10-01). A realistic candidate for Envisioning to build from those lists. Wireable on a register that counts admissions and completions on one definition for half the frame or more.',
     wealthProxyPrior: 0.1,
   },
   {
@@ -832,7 +832,7 @@ const RAW: Raw[] = [
     direction: 'higher_better',
     source: { publisher: 'OECD MSTI / RICYT', tier: 'international_organization', inspectable: true },
     ingest: 'retired',
-    notes: 'Retired 2026-10-02. The only working source, OECD MSTI joined with RICYT for Latin America, covers 34 of 53 countries, but the row reads the make-up of a spending stock: who performs the R&D a country pays for. R&D spending itself is a condition since D122, and the share is high both where business research is large (Israel) and where total research is tiny and one firm dominates it (Thailand). State enterprises count as business, so China and Vietnam read their ownership model. UIS stopped publishing the series in 2023. Firms trying new things are read through patents, trademarks, designs and entrepreneurship instead. See D142.',
+    notes: 'Retired 2026-10-02. The only working source, OECD MSTI joined with RICYT for Latin America, covers 34 of the 53 countries then in the frame, but the row reads the make-up of a spending stock: who performs the R&D a country pays for. R&D spending itself is a condition since D122, and the share is high both where business research is large (Israel) and where total research is tiny and one firm dominates it (Thailand). State enterprises count as business, so China and Vietnam read their ownership model. UIS stopped publishing the series in 2023. Firms trying new things are read through patents, trademarks, designs and entrepreneurship instead. See D142.',
     wealthProxyPrior: 0.7,
   },
 
@@ -1169,7 +1169,7 @@ const RAW: Raw[] = [
     source: { publisher: JOINT_EVS_WVS_PUBLISHER, series: 'G006', url: JOINT_EVS_WVS_RESULTS_URL, tier: 'academic_survey', inspectable: true },
     ingest: 'gap',
     notes:
-      'A declared gap again since 2026-10-02 (D151, which supersedes the retirement in D143). The project still wants to know whether people count themselves members of the community whose common project this capability asks about, so the row stays even though no series can fill it. The only cross-national item aimed at it, national pride (G006) in the Joint EVS/WVS, is not wired: pride is not belonging, and it fails the regime test of artefact A13, with electoral autocracies at 75 percent very proud against 47 in liberal democracies. ISSP 2023 asks about closeness to the country in 16 countries. Wireable on an item that reads the same in every regime class, or on a behaviour of belonging, for 27 or more of the frame. High national pride must never be read as the capacity for collective action.',
+      'A declared gap again since 2026-10-02 (D151, which supersedes the retirement in D143). The project still wants to know whether people count themselves members of the community whose common project this capability asks about, so the row stays even though no series can fill it. The only cross-national item aimed at it, national pride (G006) in the Joint EVS/WVS, is not wired: pride is not belonging, and it fails the regime test of artefact A13, with electoral autocracies at 75 percent very proud against 47 in liberal democracies. ISSP 2023 asks about closeness to the country in 16 countries. Wireable on an item that reads the same in every regime class, or on a behaviour of belonging, for half the frame or more. High national pride must never be read as the capacity for collective action.',
     wealthProxyPrior: 0.05,
   },
   {

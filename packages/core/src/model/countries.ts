@@ -12,6 +12,13 @@
  *
  * See docs/DECISIONS.md D47, which supersedes D16.
  */
+/**
+ * The shared reason of every country the 9.0.0 frame completion added. The
+ * completion chose by rule, so the rule is what a reader is told. See D153.
+ */
+const COMPLETION_REASON =
+  'Added in the 9.0.0 completion, which takes every country of a million people or more that is measurable in all nine capabilities'
+
 export const COUNTRIES = [
   { iso3: 'BRA', iso2: 'BR', name: 'Brazil', reason: 'Primary reference case; large, diverse upper-middle-income democracy' },
   { iso3: 'USA', iso2: 'US', name: 'United States', reason: 'High innovation and agency; large-scale institutional complexity' },
@@ -70,6 +77,84 @@ export const COUNTRIES = [
   { iso3: 'DOM', iso2: 'DO', name: 'Dominican Republic', reason: 'Fast-growing tourism and services economy with weak public delivery' },
   { iso3: 'CUB', iso2: 'CU', name: 'Cuba', reason: 'State-run system outside most international statistical programs, so coverage is thin by design' },
   { iso3: 'HTI', iso2: 'HT', name: 'Haiti', reason: 'State breakdown case; shows what the frame floor looks like' },
+  /* The frame completion, added together in the 9.0.0 rebase by one rule:
+   * every World Bank economy of at least one million people that reaches
+   * MIN_INDICATORS_FOR_SCORE in all nine dimensions on the 8.3.0 registry.
+   * The rule is the reason, so every entry carries the same one rather than
+   * a case sentence per country. Ordered by population, largest first. See
+   * D153 and docs/research/FRAME-EXPANSION.md. */
+  { iso3: 'PAK', iso2: 'PK', name: 'Pakistan', reason: COMPLETION_REASON },
+  { iso3: 'BGD', iso2: 'BD', name: 'Bangladesh', reason: COMPLETION_REASON },
+  { iso3: 'RUS', iso2: 'RU', name: 'Russia', reason: COMPLETION_REASON },
+  { iso3: 'EGY', iso2: 'EG', name: 'Egypt', reason: COMPLETION_REASON },
+  { iso3: 'COD', iso2: 'CD', name: 'Democratic Republic of the Congo', reason: COMPLETION_REASON },
+  { iso3: 'IRN', iso2: 'IR', name: 'Iran', reason: COMPLETION_REASON },
+  { iso3: 'TZA', iso2: 'TZ', name: 'Tanzania', reason: COMPLETION_REASON },
+  { iso3: 'ITA', iso2: 'IT', name: 'Italy', reason: COMPLETION_REASON },
+  { iso3: 'MMR', iso2: 'MM', name: 'Myanmar', reason: COMPLETION_REASON },
+  { iso3: 'SDN', iso2: 'SD', name: 'Sudan', reason: COMPLETION_REASON },
+  { iso3: 'UGA', iso2: 'UG', name: 'Uganda', reason: COMPLETION_REASON },
+  { iso3: 'IRQ', iso2: 'IQ', name: 'Iraq', reason: COMPLETION_REASON },
+  { iso3: 'AGO', iso2: 'AO', name: 'Angola', reason: COMPLETION_REASON },
+  { iso3: 'UKR', iso2: 'UA', name: 'Ukraine', reason: COMPLETION_REASON },
+  { iso3: 'MAR', iso2: 'MA', name: 'Morocco', reason: COMPLETION_REASON },
+  { iso3: 'UZB', iso2: 'UZ', name: 'Uzbekistan', reason: COMPLETION_REASON },
+  { iso3: 'MOZ', iso2: 'MZ', name: 'Mozambique', reason: COMPLETION_REASON },
+  { iso3: 'GHA', iso2: 'GH', name: 'Ghana', reason: COMPLETION_REASON },
+  { iso3: 'MDG', iso2: 'MG', name: 'Madagascar', reason: COMPLETION_REASON },
+  { iso3: 'CIV', iso2: 'CI', name: 'Côte d\'Ivoire', reason: COMPLETION_REASON },
+  { iso3: 'NPL', iso2: 'NP', name: 'Nepal', reason: COMPLETION_REASON },
+  { iso3: 'MLI', iso2: 'ML', name: 'Mali', reason: COMPLETION_REASON },
+  { iso3: 'BFA', iso2: 'BF', name: 'Burkina Faso', reason: COMPLETION_REASON },
+  { iso3: 'MWI', iso2: 'MW', name: 'Malawi', reason: COMPLETION_REASON },
+  { iso3: 'ZMB', iso2: 'ZM', name: 'Zambia', reason: COMPLETION_REASON },
+  { iso3: 'LKA', iso2: 'LK', name: 'Sri Lanka', reason: COMPLETION_REASON },
+  { iso3: 'KAZ', iso2: 'KZ', name: 'Kazakhstan', reason: COMPLETION_REASON },
+  { iso3: 'ROU', iso2: 'RO', name: 'Romania', reason: COMPLETION_REASON },
+  { iso3: 'ZWE', iso2: 'ZW', name: 'Zimbabwe', reason: COMPLETION_REASON },
+  { iso3: 'GIN', iso2: 'GN', name: 'Guinea', reason: COMPLETION_REASON },
+  { iso3: 'BDI', iso2: 'BI', name: 'Burundi', reason: COMPLETION_REASON },
+  { iso3: 'TUN', iso2: 'TN', name: 'Tunisia', reason: COMPLETION_REASON },
+  { iso3: 'BEL', iso2: 'BE', name: 'Belgium', reason: COMPLETION_REASON },
+  { iso3: 'JOR', iso2: 'JO', name: 'Jordan', reason: COMPLETION_REASON },
+  { iso3: 'CZE', iso2: 'CZ', name: 'Czechia', reason: COMPLETION_REASON },
+  { iso3: 'TJK', iso2: 'TJ', name: 'Tajikistan', reason: COMPLETION_REASON },
+  { iso3: 'PNG', iso2: 'PG', name: 'Papua New Guinea', reason: COMPLETION_REASON },
+  { iso3: 'GRC', iso2: 'GR', name: 'Greece', reason: COMPLETION_REASON },
+  { iso3: 'AZE', iso2: 'AZ', name: 'Azerbaijan', reason: COMPLETION_REASON },
+  { iso3: 'HUN', iso2: 'HU', name: 'Hungary', reason: COMPLETION_REASON },
+  { iso3: 'AUT', iso2: 'AT', name: 'Austria', reason: COMPLETION_REASON },
+  { iso3: 'BLR', iso2: 'BY', name: 'Belarus', reason: COMPLETION_REASON },
+  { iso3: 'LAO', iso2: 'LA', name: 'Laos', reason: COMPLETION_REASON },
+  { iso3: 'KGZ', iso2: 'KG', name: 'Kyrgyzstan', reason: COMPLETION_REASON },
+  { iso3: 'SRB', iso2: 'RS', name: 'Serbia', reason: COMPLETION_REASON },
+  { iso3: 'COG', iso2: 'CG', name: 'Republic of the Congo', reason: COMPLETION_REASON },
+  { iso3: 'BGR', iso2: 'BG', name: 'Bulgaria', reason: COMPLETION_REASON },
+  { iso3: 'DNK', iso2: 'DK', name: 'Denmark', reason: COMPLETION_REASON },
+  { iso3: 'LBN', iso2: 'LB', name: 'Lebanon', reason: COMPLETION_REASON },
+  { iso3: 'NOR', iso2: 'NO', name: 'Norway', reason: COMPLETION_REASON },
+  { iso3: 'SVK', iso2: 'SK', name: 'Slovakia', reason: COMPLETION_REASON },
+  { iso3: 'NZL', iso2: 'NZ', name: 'New Zealand', reason: COMPLETION_REASON },
+  { iso3: 'GEO', iso2: 'GE', name: 'Georgia', reason: COMPLETION_REASON },
+  { iso3: 'HRV', iso2: 'HR', name: 'Croatia', reason: COMPLETION_REASON },
+  { iso3: 'MNG', iso2: 'MN', name: 'Mongolia', reason: COMPLETION_REASON },
+  { iso3: 'BIH', iso2: 'BA', name: 'Bosnia and Herzegovina', reason: COMPLETION_REASON },
+  { iso3: 'NAM', iso2: 'NA', name: 'Namibia', reason: COMPLETION_REASON },
+  { iso3: 'ARM', iso2: 'AM', name: 'Armenia', reason: COMPLETION_REASON },
+  { iso3: 'LTU', iso2: 'LT', name: 'Lithuania', reason: COMPLETION_REASON },
+  { iso3: 'JAM', iso2: 'JM', name: 'Jamaica', reason: COMPLETION_REASON },
+  { iso3: 'GMB', iso2: 'GM', name: 'Gambia', reason: COMPLETION_REASON },
+  { iso3: 'BWA', iso2: 'BW', name: 'Botswana', reason: COMPLETION_REASON },
+  { iso3: 'LSO', iso2: 'LS', name: 'Lesotho', reason: COMPLETION_REASON },
+  { iso3: 'MDA', iso2: 'MD', name: 'Moldova', reason: COMPLETION_REASON },
+  { iso3: 'ALB', iso2: 'AL', name: 'Albania', reason: COMPLETION_REASON },
+  { iso3: 'GNB', iso2: 'GW', name: 'Guinea-Bissau', reason: COMPLETION_REASON },
+  { iso3: 'SVN', iso2: 'SI', name: 'Slovenia', reason: COMPLETION_REASON },
+  { iso3: 'LVA', iso2: 'LV', name: 'Latvia', reason: COMPLETION_REASON },
+  { iso3: 'MKD', iso2: 'MK', name: 'North Macedonia', reason: COMPLETION_REASON },
+  { iso3: 'CYP', iso2: 'CY', name: 'Cyprus', reason: COMPLETION_REASON },
+  { iso3: 'TTO', iso2: 'TT', name: 'Trinidad and Tobago', reason: COMPLETION_REASON },
+  { iso3: 'MUS', iso2: 'MU', name: 'Mauritius', reason: COMPLETION_REASON },
 ] as const
 
 export type CountryIso3 = (typeof COUNTRIES)[number]['iso3']

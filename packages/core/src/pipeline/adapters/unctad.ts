@@ -30,15 +30,27 @@ export const UNCTAD_EXPORT_CONCENTRATION_ADAPTER_ID = 'unctadstat-export-concent
  * test fails if a benchmark country has no code here.
  */
 export const UNCTAD_M49: Readonly<Record<string, string>> = {
-  ARE: '784', ARG: '032', AUS: '036', BOL: '068', BRA: '076', CAN: '124',
-  CHE: '756', CHL: '152', CHN: '156', COL: '170', CRI: '188', CUB: '192',
-  DEU: '276', DOM: '214', ECU: '218', ESP: '724', EST: '233', ETH: '231',
-  FIN: '246', FRA: '250', GBR: '826', GTM: '320', HND: '340', HTI: '332',
-  IDN: '360', IND: '356', IRL: '372', ISR: '376', JPN: '392', KEN: '404',
-  KOR: '410', MEX: '484', MYS: '458', NGA: '566', NIC: '558', NLD: '528',
-  PAN: '591', PER: '604', PHL: '608', POL: '616', PRT: '620', PRY: '600',
-  RWA: '646', SGP: '702', SLV: '222', SWE: '752', THA: '764', TUR: '792',
-  URY: '858', USA: '840', VEN: '862', VNM: '704', ZAF: '710',
+  AGO: '024', ALB: '008', ARE: '784', ARG: '032', ARM: '051', AUS: '036',
+  AUT: '040', AZE: '031', BDI: '108', BEL: '056', BFA: '854', BGD: '050',
+  BGR: '100', BIH: '070', BLR: '112', BOL: '068', BRA: '076', BWA: '072',
+  CAN: '124', CHE: '756', CHL: '152', CHN: '156', CIV: '384', COD: '180',
+  COG: '178', COL: '170', CRI: '188', CUB: '192', CYP: '196', CZE: '203',
+  DEU: '276', DNK: '208', DOM: '214', ECU: '218', EGY: '818', ESP: '724',
+  EST: '233', ETH: '231', FIN: '246', FRA: '250', GBR: '826', GEO: '268',
+  GHA: '288', GIN: '324', GMB: '270', GNB: '624', GRC: '300', GTM: '320',
+  HND: '340', HRV: '191', HTI: '332', HUN: '348', IDN: '360', IND: '356',
+  IRL: '372', IRN: '364', IRQ: '368', ISR: '376', ITA: '380', JAM: '388',
+  JOR: '400', JPN: '392', KAZ: '398', KEN: '404', KGZ: '417', KOR: '410',
+  LAO: '418', LBN: '422', LKA: '144', LSO: '426', LTU: '440', LVA: '428',
+  MAR: '504', MDA: '498', MDG: '450', MEX: '484', MKD: '807', MLI: '466',
+  MMR: '104', MNG: '496', MOZ: '508', MUS: '480', MWI: '454', MYS: '458',
+  NAM: '516', NGA: '566', NIC: '558', NLD: '528', NOR: '578', NPL: '524',
+  NZL: '554', PAK: '586', PAN: '591', PER: '604', PHL: '608', PNG: '598',
+  POL: '616', PRT: '620', PRY: '600', ROU: '642', RUS: '643', RWA: '646',
+  SDN: '729', SGP: '702', SLV: '222', SRB: '688', SVK: '703', SVN: '705',
+  SWE: '752', THA: '764', TJK: '762', TTO: '780', TUN: '788', TUR: '792',
+  TZA: '834', UGA: '800', UKR: '804', URY: '858', USA: '840', UZB: '860',
+  VEN: '862', VNM: '704', ZAF: '710', ZMB: '894', ZWE: '716',
 }
 
 const REQUIRED = ['Year', 'Economy', 'Flow', 'Concentration Index', 'Concentration Index Footnote']

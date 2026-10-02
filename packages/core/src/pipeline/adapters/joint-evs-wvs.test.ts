@@ -166,6 +166,7 @@ assert.equal(
 
 /* A173 stores the published mean, read across the page break, never a sum of categories. */
 assert.deepEqual(values('perceived_control'), [
+  ['BIH', 7.8],
   ['BRA', 7.5],
   ['IND', 7.2],
   ['NLD', 7.1],
@@ -252,7 +253,10 @@ assert.deepEqual(result.coverageByIndicator.perceived_control?.fieldworkYears, {
   IND: 2023,
   VNM: 2020,
 })
-assert.ok(result.unmappedLabels.includes('Bosnia and'), 'a wrapped label is reported, not guessed')
+/* The release cuts this label at the column edge. Since Bosnia and Herzegovina
+ * joined the registry at 9.0.0 the cut label is an explicit alias, never a
+ * prefix match. */
+assert.ok(!result.unmappedLabels.includes('Bosnia and'), 'the wrapped label maps through its alias')
 assert.ok(!result.observations.some((o) => o.indicatorId === 'perceived_control' && o.value === 7.2 && o.iso3 === 'DEU'))
 
 /* Every registry row this adapter fills is one it reads, under the id the registry stores. */

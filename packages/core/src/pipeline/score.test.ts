@@ -53,12 +53,16 @@ for (const d of learningScored) {
   assert.equal(d.transform, 'none', `${d.id} must be untransformed for this fixture`)
   assert.equal(d.direction, 'higher_better', `${d.id} must be higher_better for this fixture`)
 }
-assert.ok(N >= 10 && isPrime(N), 'the permutation fixture assumes a prime country count')
-
-function isPrime(n: number): boolean {
-  for (let k = 2; k * k <= n; k++) if (n % k === 0) return false
-  return n > 1
-}
+/*
+ * `(i * m) % N` runs through every residue exactly when m and N share no
+ * factor, so each row's multiplier must be coprime with the country count.
+ * A prime count satisfied this trivially; 125 is 5 cubed, so it is checked.
+ */
+const gcd = (a: number, b: number): number => (b === 0 ? a : gcd(b, a % b))
+assert.ok(N >= 10, 'the permutation fixture needs at least ten countries')
+learningScored.forEach((_, j) =>
+  assert.equal(gcd((j + 1) * 7, N), 1, `row ${j}'s multiplier must be coprime with the country count`),
+)
 
 /*
  * Country i's value on scored row j is a permutation of 0..N-1, different for
