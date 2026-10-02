@@ -396,15 +396,33 @@ export function parseIlostatInformalEmployment(
   }
 }
 
+/**
+ * One SDMX request, retried twice on a refusal or a server error. The ILO
+ * endpoint answers an occasional 403 to a request that succeeds a second
+ * later, and a fetch that fails on that leaves the observation file stale.
+ */
+async function fetchIlostat(sourceUrl: string): Promise<Response> {
+  let status = 0
+  for (let attempt = 0; attempt < 3; attempt++) {
+    if (attempt > 0) await new Promise((done) => setTimeout(done, 2000 * attempt))
+    const response = await fetch(sourceUrl, {
+      // The ILO endpoint answers 500 "languageTag1" to the `Accept-Language: *`
+      // that Node's fetch sends by default, so a concrete tag is required.
+      headers: { Accept: 'application/vnd.sdmx.data+csv;version=1.0.0', 'Accept-Language': 'en' },
+    })
+    if (response.ok) return response
+    status = response.status
+    if (status !== 403 && status !== 429 && status < 500) break
+  }
+  throw new Error(`ILOSTAT: HTTP ${status}`)
+}
+
 /** Fetch the informal employment rate for every benchmark country in one SDMX call. */
 export async function fetchIlostatInformalEmployment(
   opts: { sourceUrl?: string; retrievedAt?: string } = {},
 ): Promise<SourceAdapterResult> {
   const sourceUrl = opts.sourceUrl ?? ilostatInformalUrl(COUNTRIES.map((country) => country.iso3))
-  const response = await fetch(sourceUrl, {
-    headers: { Accept: 'application/vnd.sdmx.data+csv;version=1.0.0', 'Accept-Language': 'en' },
-  })
-  if (!response.ok) throw new Error(`ILOSTAT: HTTP ${response.status}`)
+  const response = await fetchIlostat(sourceUrl)
   return parseIlostatInformalEmployment(await response.text(), opts.retrievedAt ?? new Date().toISOString(), sourceUrl)
 }
 
@@ -413,12 +431,7 @@ export async function fetchIlostatLongTermUnemployment(
   opts: { sourceUrl?: string; retrievedAt?: string } = {},
 ): Promise<IlostatLtuResult> {
   const sourceUrl = opts.sourceUrl ?? ilostatLtuUrl(COUNTRIES.map((country) => country.iso3))
-  const response = await fetch(sourceUrl, {
-    // The ILO endpoint answers 500 "languageTag1" to the `Accept-Language: *`
-    // that Node's fetch sends by default, so a concrete tag is required.
-    headers: { Accept: 'application/vnd.sdmx.data+csv;version=1.0.0', 'Accept-Language': 'en' },
-  })
-  if (!response.ok) throw new Error(`ILOSTAT: HTTP ${response.status}`)
+  const response = await fetchIlostat(sourceUrl)
   const csv = await response.text()
   return parseIlostatLongTermUnemployment(csv, opts.retrievedAt ?? new Date().toISOString(), sourceUrl)
 }
