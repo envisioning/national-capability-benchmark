@@ -9,6 +9,9 @@ const config: NextConfig = {
   // Set NEXT_DIST_DIR to build into a different directory and leave the dev
   // server alone.
   distDir: process.env.NEXT_DIST_DIR ?? '.next',
+  // Next 16 writes AGENTS.md and CLAUDE.md into apps/web when `next dev` runs
+  // under a coding agent. The repository's own AGENTS.md is the one agents read.
+  agentRules: false,
   // The Portuguese edition was a mirror of the whole benchmark. It is now one
   // country layer, so every address it held lands either in that layer or back
   // in the English ground layer. See D67.
