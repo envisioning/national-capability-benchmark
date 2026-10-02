@@ -9,6 +9,23 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.25.1 — 2026-10-02
+
+- **The limits page now reads the 125-country frame.** Every known failure
+  on it is checked against dataset 9.0.0, with ranks out of 125 and the
+  country lists that apply now.
+- **Trust's lower link to income is explained.** It fell from 0.606 to 0.354
+  because the poorer countries added lack the two survey rows, not because
+  Trust came apart from income. On the same rows everywhere it would be 0.579.
+- Experimentation now names the countries that file patents and trademarks
+  at a regional office, where the national counts are thin or decades old.
+- The Adaptability limit covers 15 countries without a long-term
+  unemployment share, and the Coordination limit names ten states that
+  coordinate through the executive. Both show on those countries' map pages.
+- Across the 125, closed regimes do not read calm on polarization as a
+  group, so that limit now names the single autocracies among the calmest
+  countries.
+
 ## Dataset 9.0.0 — 2026-10-02
 
 - **The benchmark now covers 125 countries.** It adds 72 to the 53 it had:

@@ -38,19 +38,28 @@ export const ARTEFACT_SCOPES: readonly ArtefactScope[] = [
   { id: 'A6', dimensions: ['agency', 'coordination', 'trust', 'building'] },
   { id: 'A7', dimensions: ['learning'] },
   { id: 'A8', dimensions: 'all' },
-  { id: 'A9', dimensions: ['coordination'] },
+  /* The executive-led states whose civil-society row pulls Coordination down
+   * against operational rows above 80 (the A9 table). */
+  {
+    id: 'A9',
+    dimensions: ['coordination'],
+    countries: ['SGP', 'CHN', 'ARE', 'RWA', 'LAO', 'TJK', 'BLR', 'AZE', 'EGY', 'RUS'],
+  },
   { id: 'A10', dimensions: 'all' },
   { id: 'A11', dimensions: ['building'] },
   { id: 'A12', dimensions: ['coordination', 'trust', 'shared_purpose'] },
   { id: 'A13', dimensions: ['shared_purpose'] },
   { id: 'A14', dimensions: ['agency'] },
   { id: 'A15', dimensions: ['agency', 'shared_purpose'] },
-  /* The nine countries whose Adaptability has no long-term unemployment
-   * share to check the unemployment rate (D141, D149). */
+  /* The 15 countries whose Adaptability has no long-term unemployment share
+   * to check the unemployment rate (D141, D149, D153). */
   {
     id: 'A16',
     dimensions: ['adaptability'],
-    countries: ['KOR', 'IND', 'MEX', 'PER', 'URY', 'CHN', 'PHL', 'SLV', 'HTI'],
+    countries: [
+      'KOR', 'IND', 'MEX', 'PER', 'URY', 'CHN', 'PHL', 'SLV', 'HTI',
+      'UZB', 'GIN', 'TJK', 'PNG', 'COG', 'TTO',
+    ],
   },
 ]
 

@@ -182,10 +182,11 @@ think.
 The ones that will bite an automated reader first:
 
 - **A1** — Experimentation is not measured. It is inferred from patents.
-- **A3** — Coordination and Trust remain weakly separable from wealth, and the
-  first source-backed Trust release is still thin.
-- **A9** — Coordination reads far too low for small, competent states.
-- **A10** — The frame is wide and it is not the world.
+- **A3** — Trust's low correlation with income comes from which countries the
+  survey reaches, and Coordination still tracks income.
+- **A9** — Coordination reads executive-led states low.
+- **A10** — The frame is every measurable country of a million people, and it
+  is not the world.
 - **A11** — Building measures industrial output and reads as delivery capacity.
 - **A12** — Coordination and Trust are scored on thin evidence.
 
