@@ -17157,6 +17157,1003 @@
           "Transmission lines built in step with generation"
         ]
       }
+    },
+    {
+      "id": "moz-beira-railway-concession",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "MOZ",
+      "title": "Beira railways concession, and its termination",
+      "claim": "Mozambique's government concessioned the Sena and Machipanda railways for 25 years in 2004 to a joint company in which the state rail enterprise CFM held 49 percent; the Sena line reopened to Moatize more than two years late, carried 266,000 tonnes against a target of one million, and the government terminated the concession on 7 December 2011.",
+      "metric": {
+        "name": "Freight carried on the Sena line by the end of the project",
+        "value": 266000,
+        "unit": "metric tons",
+        "asOf": "2011"
+      },
+      "secondMetric": {
+        "name": "Target freight on the Sena line by the end of the project",
+        "value": 1000000,
+        "unit": "metric tons per annum",
+        "asOf": "2009"
+      },
+      "started": 2004,
+      "status": "dismantled",
+      "source": {
+        "publisher": "World Bank, Implementation Completion and Results Report, Beira Railway Project (P082618)",
+        "url": "https://documents.worldbank.org/curated/en/199071468323987742/pdf/NonAsciiFileName0.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The source is the World Bank's own completion report on a project it financed, so the lender is grading a failure it shares, and the independent review of that report found its cost tables mutually inconsistent: the text claims a cost overrun of more than US$50 million while the annex shows actual cost below appraisal, which is why no cost figure is used here. The ICR also dates the termination both to September and to December 2011. The 266,000 tonnes is coal moved in the months after the line opened in August 2011, against a target set for 2009, so it measures lateness as much as capacity. The concession covered two lines in the centre of the country, not the national network. The termination ended the partnership but not the asset: CFM kept operating the rehabilitated Sena line, and later coal traffic on it is not in this record. Blame is contested: the report faults the concession design, the state's 49 percent stake and ineffectual Bank supervision as well as the private operator.",
+      "pattern": {
+        "mechanism": "The government of Mozambique, through CFM, handed rehabilitation and operation of two state railways to a private concessionaire in a 51 to 49 joint company, financed largely by an IDA credit, and took the lines back when rehabilitation ran late and traffic did not materialise.",
+        "preconditions": [
+          "A state rail enterprise able to supervise a concessionaire, which a 49 percent shareholding in the same company undercut",
+          "A traffic forecast tied to coal mines whose own concessions were being negotiated in parallel by another ministry",
+          "A dispute mechanism or independent arbiter, which the concession lacked"
+        ]
+      }
+    },
+    {
+      "id": "moz-ingc",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "MOZ",
+      "title": "Instituto Nacional de Gestao de Calamidades (INGC)",
+      "claim": "Mozambique's National Disaster Management Institute, created in 1999 after a new national disaster policy, evacuated around 150,000 people with two days of warning in the 2007 floods, and by 2011 had ten days of warning for an event of similar scale and spent under US$1 million on evacuation, against about US$5 million in 2007.",
+      "metric": {
+        "name": "People evacuated by INGC ahead of the 2007 floods",
+        "value": 150000,
+        "unit": "people",
+        "asOf": "2007"
+      },
+      "secondMetric": {
+        "name": "Advance warning INGC had before a 2011 flood event similar in scale to 2007/2008",
+        "value": 10,
+        "unit": "days",
+        "asOf": "2011"
+      },
+      "started": 1999,
+      "status": "operating",
+      "source": {
+        "publisher": "World Bank, Global Facility for Disaster Reduction and Recovery, Recovery from Recurrent Floods 2000-2013: Mozambique, Recovery Framework Case Study",
+        "url": "https://documents.worldbank.org/curated/en/917531493730542294/pdf/WP-PUBLIC-rfcs-2014-mozambique.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "Every figure here is a round number in a GFDRR case study, a conference version that says it aims to learn from country experience rather than evaluate it and carries a disclaimer on accuracy; the evacuation counts and costs are INGC's own, with no underlying series published. 'Similar in scale' is the case study's judgement, not a measured comparison of hazards. The same document's comparison of the 2000 and 2013 floods (700 and 117 deaths) does not show a falling death rate once divided by the population affected (4.5 million and 478,892, our computation), and its own text gives 30 direct deaths for 2013, so mortality is not used as the metric. The record says nothing about the cyclone seasons after 2014. Much of the system was built with donor money.",
+      "pattern": {
+        "mechanism": "The government replaced a relief department with a standing disaster agency, INGC, gave it a national emergency operations centre and a civil protection unit, and paired forecasting with district and community risk committees that carry warnings to people who then move.",
+        "preconditions": [
+          "A flood catastrophe in 2000 that made preparedness a political priority",
+          "Hydrological and meteorological forecasting with enough lead time to act on",
+          "Donor funding and an annual contingency budget line for evacuation"
+        ]
+      }
+    },
+    {
+      "id": "rou-a1-motorway",
+      "indicatorId": "large_project_delivery",
+      "iso3": "ROU",
+      "title": "A1 motorway, Bucharest to Nadlac",
+      "claim": "Romania's national road administration has built the 582 km A1 motorway in sections, and construction of the sections the auditors timed began in 2009, and in November 2025 the European Court of Auditors found its latest cost estimate 11 percent below the original estimate in real terms, while one EU co-funded section had run 79 months, or 263 percent of its planned time, late.",
+      "metric": {
+        "name": "Change in the A1 motorway's latest cost estimate against the original estimate, 2019 prices",
+        "value": -11,
+        "unit": "% change",
+        "asOf": "2025-11"
+      },
+      "secondMetric": {
+        "name": "Longest delay on an EU co-funded A1 motorway action against its planned completion",
+        "value": 79,
+        "unit": "months",
+        "asOf": "2020"
+      },
+      "started": 2009,
+      "status": "operating",
+      "source": {
+        "publisher": "European Court of Auditors, Special report 02/2026, EU transport infrastructure (update of special report 10/2020)",
+        "url": "https://www.eca.europa.eu/ECAPublications/SR-2026-02/SR-2026-02_EN.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The cost figure is the auditors' aggregate of many sections planned and priced in different years, reindexed to 2019 values from an original estimate whose own date the auditors do not give, and it excludes the Bucharest-Pitesti section; the 2020 report warned that the unfinished Pitesti-Sibiu and Deva-Lugoj stretches left the figures subject to significant change. A real-terms fall can come from cheaper design, deferred scope or optimistic pricing of unbuilt sections, and the report does not say which. The auditors did not compute a schedule delay for the A1 as a whole because its timeline varies by section, and the 2020 report took 2030 as the original opening date only because the TEN-T regulation sets it, so the motorway's schedule performance cannot be read from the cost row. The 2026 update was a desk review of figures supplied by the Commission, national authorities and project promoters, with no site visits. The 79 months is one EU co-funded action, not the whole road, and it compares the Lugoj-Deva lots 2-4 action's planned end of May 2016 with an end date of December 2022 that was still a forecast in 2020. The 2020 report also found €3.7 million of EU co-funding wasted, a finished Lugoj-Deva stretch left unused and 800 metres of built motorway demolished, and one building permit needed for every 7 km.",
+      "pattern": {
+        "mechanism": "Romania's national road company split a 582 km corridor into many small procurement lots and financed most of them with EU cohesion and connecting-Europe funds, which kept unit prices visible and auditable but multiplied permits and interfaces.",
+        "preconditions": [
+          "EU co-financing with audit and use-it-or-lose-it deadlines that discipline cost reporting",
+          "A national road agency able to tender and supervise dozens of separate lots",
+          "A permitting regime that, here, required a building permit every 7 km and slowed delivery"
+        ]
+      }
+    },
+    {
+      "id": "gha-nflp",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "GHA",
+      "title": "National Functional Literacy Programme, and its erosion",
+      "claim": "Ghana's Non-Formal Education Division enrolled 312,907 adults in a single National Functional Literacy Programme batch in 2003-2005, and after donor funding ended in 2006 the government-funded batches shrank to 14,029 learners in the 2014-2016 batch.",
+      "metric": {
+        "name": "Learners enrolled in NFLP local-language Batch 19 (2014/16)",
+        "value": 14029,
+        "unit": "learners enrolled per batch",
+        "asOf": "2014-2016"
+      },
+      "secondMetric": {
+        "name": "Learners enrolled in NFLP Batch 9 (Feb 2003/2005), the largest single batch",
+        "value": 312907,
+        "unit": "learners enrolled per batch",
+        "asOf": "2003-2005"
+      },
+      "started": 1992,
+      "status": "eroded",
+      "source": {
+        "publisher": "Ministry of Education, Ghana, Education Sector Performance Report 2018 (hosted by the National Development Planning Commission)",
+        "url": "https://www.ndpc.gov.gh/media/Ministry_of_Education_APR_2018.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The two numbers come from two different Ministry of Education reports, and both are administrative enrolment counts reported upward by district supervisors; the 2013 report says monitoring visits to verify figures had not been possible since 2010 for lack of funds, and the 2018 report restates Batch 18 at 44,730 where the 2013 report had 51,257, so the series is revised without explanation. A batch runs about 21 months and batches overlap (Batch 10 ran November 2003 to 2005 alongside Batch 9), so a per-batch count is not a 12-month participation rate, and the peak-year total across overlapping batches was higher than the single batch quoted. The programme teaches basic literacy, which is one narrow slice of the adult learning the indicator asks about, and even the peak batch was a few percent of Ghana's adults. The 2003-2005 peak was financed mostly by an IDA credit: US$33.86 million of US$44.94 million in project costs (World Bank ICR535, IDA-3246, P000974), so the erosion partly measures a donor exit rather than a domestic choice. The 2018 report also shows a separate Basic English Literacy track (17,647 learners in 2016/18) that partly offsets the fall. The record carries no figure after the 2014-2016 batch.",
+      "pattern": {
+        "mechanism": "The Ministry of Education's Non-Formal Education Division ran 21-month local-language literacy classes in every region through volunteer facilitators, scaled them with an IDA credit to about 200,000 to 300,000 enrolments per batch, and then carried the programme on a government budget line that funded a fraction of that after 2006.",
+        "preconditions": [
+          "A volunteer facilitator network and primers in 15 Ghanaian languages",
+          "External credit financing most of the cost at peak",
+          "A domestic budget line large enough to replace the donor share, which is what did not happen"
+        ]
+      }
+    },
+    {
+      "id": "gha-sankofa-gas",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "GHA",
+      "title": "Sankofa Gas Project (Offshore Cape Three Points)",
+      "claim": "Ghana structured the Sankofa offshore gas development as a public-private deal in which Eni and Vitol invested and the state oil company GNPC bought the gas under take-or-pay terms backed by an IDA payment guarantee, mobilising US$4,653 million of private capital and bringing first gas to power plants in 2018.",
+      "metric": {
+        "name": "Private sector capital mobilized for the Sankofa gas field development",
+        "value": 4653,
+        "unit": "US$ million",
+        "asOf": "2018"
+      },
+      "secondMetric": {
+        "name": "Average daily gas off-take in 2019, against take-or-pay volume of 170 mmscfd",
+        "value": 90,
+        "unit": "million standard cubic feet per day",
+        "asOf": "2019"
+      },
+      "started": 2018,
+      "status": "operating",
+      "source": {
+        "publisher": "World Bank, Implementation Completion and Results Report ICR 147538-GH, Ghana Sankofa Gas Project (P152670)",
+        "url": "https://documents1.worldbank.org/curated/en/601881593704591424/pdf/Ghana-Sankofa-Gas-Project.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The capital was private and the build was done by the Eni-Vitol consortium; Ghana's institutional move was the deal structure and the offtake, and that side performed worst. GNPC could not pay: arrears reached US$192 million by March 2020 and the sponsors drew US$191.6 million on the letter of credit backed by the IDA guarantee, so the public half of the partnership needed a World Bank backstop within two years of first gas. Off-take in 2018 and 2019 was a fraction of the 170 mmscfd the state contracted to take or pay for, because the pipeline interconnector to the eastern market was late and demand in the west was too small, which means Ghana paid for gas it did not use. The source is the World Bank's own completion report on its own guarantee, written in 2020, and its figures are not published as a machine-readable series; the source stops in mid-2020. One deal, however large, says little about the frequency of public-private delivery the indicator asks for.",
+      "pattern": {
+        "mechanism": "The Government of Ghana and GNPC contracted to buy domestic gas from a privately financed offshore field on take-or-pay terms, and the World Bank guaranteed those payments so that private sponsors and banks would commit capital to a sub-Saharan gas project.",
+        "preconditions": [
+          "A proven offshore gas discovery and an international operator willing to develop it",
+          "A multilateral guarantee to cover the sovereign's payment risk",
+          "A power sector able to pay for the gas, which Ghana's state utilities could not do on time"
+        ]
+      }
+    },
+    {
+      "id": "gha-bog-sandbox",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "GHA",
+      "title": "Bank of Ghana Regulatory Sandbox",
+      "claim": "The Bank of Ghana, which launched a regulatory and innovation sandbox pilot in 2021, admitted six firms into its Regulatory Sandbox for one year in January 2026 to test the exchange, custody, administration and issuance of virtual assets.",
+      "metric": {
+        "name": "Entities admitted into the Bank of Ghana Regulatory Sandbox (virtual assets cohort)",
+        "value": 6,
+        "unit": "firms",
+        "asOf": "2026-01"
+      },
+      "started": 2026,
+      "status": "operating",
+      "source": {
+        "publisher": "Bank of Ghana, press release 'List of participants - Regulatory Sandbox', 22 January 2026",
+        "url": "https://www.bog.gov.gh/wp-content/uploads/2026/01/PRESS-RELEASE-LIST-OF-PARTICIPANTS-REGULATORY-SANDBOX-220126.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The metric is a count of six firms in one cohort, taken from a press release rather than a statistical series; divided by Ghana's population it is well under one firm per million people. It counts admissions only, not completions or exits. The 2021 launch was a pilot run with EMTECH Service LLC, not a documented admission, so the start year is the first documented admission, 2026. The indicator sums every regulator in the country, and this record covers the Bank of Ghana only. A sandbox at this scale is evidence that the instrument exists and is used, not that it operates at national scale in the sense of a mass programme.",
+      "pattern": {
+        "mechanism": "The Bank of Ghana's FinTech and Innovation Office admits named firms for a fixed one-year test under supervision, using each cohort to validate rules it has not yet issued, here for virtual assets.",
+        "preconditions": [
+          "A central bank FinTech office with staff to supervise individual tests",
+          "A legal basis to grant time-limited, conditional permission outside existing licences",
+          "A pending regulatory question concrete enough to define a cohort around"
+        ]
+      }
+    },
+    {
+      "id": "kaz-south-west-roads",
+      "indicatorId": "large_project_delivery",
+      "iso3": "KAZ",
+      "title": "South-West Roads: Western Europe-Western China corridor (CAREC 1b and 6b)",
+      "claim": "Kazakhstan's Committee for Roads upgraded 1,281 km of the Western Europe-Western China corridor and connecting roads under a US$2.5 billion programme between 2009 and 2024, for an actual cost of US$2,468.6 million against US$2,500 million appraised, but over 15 years against a planned four and a half.",
+      "metric": {
+        "name": "Implementation duration, actual (planned at appraisal: 4.5 years)",
+        "value": 15,
+        "unit": "years",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Actual total project cost (appraised: US$2,500 million)",
+        "value": 2468.6,
+        "unit": "US$ million",
+        "asOf": "2024"
+      },
+      "started": 2009,
+      "status": "concluded",
+      "source": {
+        "publisher": "World Bank, Implementation Completion and Results Report ICR00317, South-West Roads Project (P099270)",
+        "url": "https://documents1.worldbank.org/curated/en/099101625183047396/pdf/BOSIB-47f1e508-434e-4c8c-81c1-da4107cf248d.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The cost line looks on budget only because the scope was moved to fit the money: bid prices came in low and the tenge depreciated, and the savings bought 219 km of extra road, so the total says nothing about cost per km against plan. The schedule figure is the honest one, and it is poor: the closing date was extended four times, the first three to absorb added scope and the last for COVID-19 and the termination of several civil works contracts, and a 42 km Otar-Uzynagash section was still unfinished at closing after two contractors were terminated for non-performance. The source is the lender's own completion report; the World Bank financed 85 percent of the cost, so this is a borrowed-money build supervised by the lender, though executed and repaid by Kazakhstan. Traffic came in about a third below forecast. It is one corridor programme, not a portfolio, so it cannot stand for Kazakhstan's average project performance.",
+      "pattern": {
+        "mechanism": "Kazakhstan's Committee for Roads borrowed from the World Bank to rebuild its stretch of the Western Europe-Western China corridor to dual carriageway, procured it in large international civil works packages, and used the savings from low bids to extend the scope across three oblasts.",
+        "preconditions": [
+          "Sovereign borrowing capacity backed by oil revenue",
+          "A road agency able to run international competitive bidding under lender rules",
+          "A corridor with transit demand that neighbours and lenders also wanted built"
+        ]
+      }
+    },
+    {
+      "id": "kaz-aifc-fintech-lab",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "KAZ",
+      "title": "AFSA FinTech Lab at the Astana International Financial Centre",
+      "claim": "The Astana Financial Services Authority granted five FinTech Lab sandbox licences in 2022, saw the first participant graduate to a full licence that year, and had 18 licensed firms in its sandbox at the end of 2022.",
+      "metric": {
+        "name": "FinTech Lab licences granted (firms admitted to the sandbox) in 2022",
+        "value": 5,
+        "unit": "firms",
+        "asOf": "2022"
+      },
+      "secondMetric": {
+        "name": "Licensed companies in the FinTech Lab at end of year",
+        "value": 18,
+        "unit": "firms",
+        "asOf": "2022"
+      },
+      "started": 2018,
+      "status": "operating",
+      "source": {
+        "publisher": "Astana Financial Services Authority, 2022 Annual Report",
+        "url": "https://afsa.aifc.kz/wp-content/uploads/2024/10/180423_Annual-Report_AFSA-2022-003.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The regulator is reporting on itself in an annual report, and the counts stop at 2022. Admissions plus completions in 2022 come to six firms, which is well under one per million people. AFSA regulates only the Astana International Financial Centre, a special jurisdiction under English-style common law, so the sandbox sits outside Kazakhstan's ordinary financial regulation; the indicator sums every regulator in the country, and the National Bank and the Agency for Regulation and Development of Financial Markets are not counted here. Many participants are crypto exchanges drawn by the AIFC regime, and eight licences were withdrawn in the same year five were granted, so the counts measure churn as much as successful testing. The start year is inferred from 'fifth year' rather than stated.",
+      "pattern": {
+        "mechanism": "The Astana Financial Services Authority grants individual, time-limited FinTech Lab licences with requirements tailored to each firm, and graduates a firm to full authorisation when its test succeeds.",
+        "preconditions": [
+          "A financial centre with its own regulator and rulebook separate from the national one",
+          "Demand from foreign fintech and crypto firms for a regional base",
+          "Supervisory staff able to write firm-specific requirements"
+        ]
+      }
+    },
+    {
+      "id": "tun-rfr",
+      "indicatorId": "large_project_delivery",
+      "iso3": "TUN",
+      "title": "Reseau Ferroviaire Rapide de Tunis, lines D and E, and its overruns",
+      "claim": "Tunisia's transport ministry and the Societe du RFR built the first two lines of the Tunis rapid rail network, about 18 km plus 28 trains, financed from December 2010; the EIB's approximate total cost for the same scheme rose from EUR 550 million at the 2009 appraisal to EUR 653 million at the 2017 appraisal, Line E opened in March 2023 and Line D on 25 January 2025, against a 2015 project study that scheduled construction of the Line E viaduct for 2014 to 2017.",
+      "metric": {
+        "name": "Approximate total cost of RFR lines D and E (EIB appraisal, operation 2015-0288)",
+        "value": 653,
+        "unit": "million EUR",
+        "asOf": "2017"
+      },
+      "secondMetric": {
+        "name": "Approximate total cost of RFR lines D and E (EIB appraisal, operation 2009-0154)",
+        "value": 550,
+        "unit": "million EUR",
+        "asOf": "2009"
+      },
+      "started": 2010,
+      "status": "operating",
+      "source": {
+        "publisher": "European Investment Bank, project summary sheet 20150288 (RESEAU FERROVIAIRE RAPIDE II)",
+        "url": "https://www.eib.org/en/projects/all/20150288",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The cost figures are the EIB's approximate appraisal totals, not an audited out-turn: the 18.7 percent rise from 550 to 653 million EUR is our computation across two appraisals whose scope wording differs slightly (the 2017 sheet names a maintenance facility and 28 trains, the 2010 sheet only rolling stock), and in January 2025 the French Treasury still quoted a total of 550 million EUR including rolling stock, so the publishers do not agree on the out-turn. The cost is in euros and says nothing about dinar costs after the currency's depreciation. The record has no official original line-opening date: the only official schedule is a 2015 impact study placing the Line E viaduct's construction in 2014 to 2017, so the roughly six-year slip to the March 2023 Line E opening is a comparison of one structure's plan against the line's opening, not a published overrun. The EIB suspended disbursements in 2016 over construction companies' failures to implement safeguards (ESDS 18 July 2017), and works at Bardo were halted by the municipality until an administrative court annulled the stop on 29 December 2023 (EIB register 236943929), so part of the delay is litigation rather than delivery. About 60 percent of financing came from foreign lenders and French and Korean firms supplied engineering and trains. This is a city network, not a national programme, and it records poor delivery rather than good: it is evidence of the construct's weak end.",
+      "pattern": {
+        "mechanism": "The Ministry of Transport created a dedicated project company, the Societe du RFR, assembled a 40 percent state and 60 percent multi-donor financing package, and built the first two lines through civil works contracts while SNCFT took the operating role; when the Bardo municipality stopped the works, the company went to the administrative court and the cabinet chose a design variant in December 2023.",
+        "preconditions": [
+          "Concessional lenders (EIB, AFD, KfW, EU) willing to stay in for more than a decade and to suspend and restart disbursement rather than exit",
+          "A rail right of way partly owned by SNCFT, so most of the route did not need fresh land",
+          "An administrative court able to overrule a municipality that blocked works on a national project"
+        ],
+        "travelled": "The same multi-lender package financed Line A in 2013 and is meant to carry the remaining lines of the planned 85 km network; the Tunis case is usually retold as a delay story, and the part that drops out is that the lines did open."
+      }
+    },
+    {
+      "id": "tun-bct-sandbox",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "TUN",
+      "title": "Banque Centrale de Tunisie regulatory sandbox, first cohort",
+      "claim": "The Banque Centrale de Tunisie launched a regulatory sandbox in January 2020, admitted four fintech solutions to its first cohort in September 2020, ran tests with real customers and partner banks for 13 months, notified exit in September 2022, and drafted a circular on digital enrolment and remote bank account opening from the results (BCT Rapport annuel 2022).",
+      "metric": {
+        "name": "Fintech solutions admitted to the first cohort of the BCT regulatory sandbox",
+        "value": 4,
+        "unit": "solutions",
+        "asOf": "2020-09"
+      },
+      "started": 2020,
+      "status": "concluded",
+      "source": {
+        "publisher": "Banque Centrale de Tunisie, Rapport annuel 2020 (June 2021)",
+        "url": "https://www.bct.gov.tn/bct/siteprod/documents/RA_2020_fr.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The count is the regulator's own report of its own programme. The number does not say how many of the four completed, only that exit plans were validated. Only one regulator is covered; capital markets and insurance regulators are not. Four solutions in one cohort over 2020 to 2022 is about 0.33 admissions per million people (our computation against the World Bank's 2020 population of 11,974,057), and the record shows one cohort only.",
+      "pattern": {
+        "mechanism": "The central bank set up a fintech committee, published an access guide, selected four solutions against its own strategic priorities, exempted them from specified rules for a bounded test with partner banks, and then wrote the tested remote-onboarding practice into a banking circular.",
+        "preconditions": [
+          "A central bank with rule-making power over the banks the fintechs had to test through",
+          "Partner banks willing to embed outside firms in a protected test environment",
+          "A strategic plan that named innovation as an objective, so staff time was allocated to it"
+        ],
+        "travelled": "The design follows the cohort model of the UK FCA and Bahrain's central bank; what did not travel was the cadence, since Tunisia ran one cohort and stopped."
+      }
+    },
+    {
+      "id": "mdg-fid-crisis-response",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "MDG",
+      "title": "FID crisis response transfers, including Fiavota",
+      "claim": "Madagascar's Fonds d'Intervention pour le Developpement turned its safety net project into a shock-response channel from December 2016, delivering crisis-response unconditional cash transfers to 622,961 people and crisis cash-for-work to 155,649 people after droughts in the South and the 2022 cyclones, by the project's close in October 2024.",
+      "metric": {
+        "name": "People who benefited from crisis response unconditional cash transfers",
+        "value": 622961,
+        "unit": "people",
+        "asOf": "2024-10"
+      },
+      "secondMetric": {
+        "name": "People who benefited from cash-for-work under the crisis response mechanism",
+        "value": 155649,
+        "unit": "people",
+        "asOf": "2024-10"
+      },
+      "started": 2016,
+      "status": "concluded",
+      "source": {
+        "publisher": "World Bank Independent Evaluation Group, ICR Review ICRR0024665, MG-Social Safety Net Project (P149323)",
+        "url": "https://documents1.worldbank.org/curated/en/099012126083534439/pdf/P149323-566f4959-8979-4b05-85c2-699b2a95baf2.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The figures are cumulative over 2016 to 2024 and come from the World Bank's own evaluation of a project it financed, which draws on the implementing agency's reporting; they count people reached, not whether households recovered, and say nothing about speed of delivery after each shock. Almost all the money was IDA credit and grants (US$305.9 million actual), so the record shows the state's agency delivering donor-financed transfers, not domestic fiscal capacity to respond. Targets were set and raised repeatedly in emergency conditions, and IEG notes that some reach targets were not scaled up as financing grew (its remark about targets set quickly and with limited clarity concerns the emergency nutrition targets), so exceeding them is weak evidence. The response was reactive, reallocating funds after each shock rather than drawing on a pre-arranged trigger, which is recovery more than preparedness. Security problems in the South forced FID to sign an agreement with the police to deliver cash. The project closed in October 2024, so the status is concluded.",
+      "pattern": {
+        "mechanism": "FID, a government agency with field staff and a beneficiary registry from the regular safety net, repeatedly restructured the project to redirect funds to drought and cyclone victims, paying unconditional transfers and cash-for-work through the channels it already ran.",
+        "preconditions": [
+          "An implementing agency with a targeting method and payment channels already operating before the shock",
+          "A financier willing to restructure a project within weeks rather than design a new one",
+          "Enough security in affected districts to move cash, here secured by an agreement with the police"
+        ]
+      }
+    },
+    {
+      "id": "lka-southern-expressway",
+      "indicatorId": "large_project_delivery",
+      "iso3": "LKA",
+      "title": "Southern Expressway (Southern Transport Development Project)",
+      "claim": "Sri Lanka's Road Development Authority built the country's first access-controlled expressway, about 126 km from Kottawa to Godagama. Sections I to III opened on 26 November 2011 and section IV on 15 March 2014. The project took 13 years against a planned six. Its total cost rose from US$295.9 million at the 1999 appraisal to US$906.5 million at completion in 2014, partly because it was widened from two to four lanes.",
+      "metric": {
+        "name": "Actual total project cost at completion",
+        "value": 906.5,
+        "unit": "US$ million",
+        "asOf": "2014"
+      },
+      "secondMetric": {
+        "name": "Total project cost estimated at the 1999 appraisal (two-lane design)",
+        "value": 295.9,
+        "unit": "US$ million",
+        "asOf": "1999"
+      },
+      "started": 2003,
+      "status": "concluded",
+      "source": {
+        "publisher": "Asian Development Bank, Completion Report, Sri Lanka: Southern Transport Development Project (Project 26522, Loans 1711 and 2413), August 2014",
+        "url": "https://www.adb.org/sites/default/files/project-documents/26522-023-pcr.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The cost growth is not a like-for-like overrun. In 2008 the scope was widened from a two-lane road to four lanes, and against the 2008 re-appraisal of $757.7 million the overrun is about 20 percent, not about 206 percent. Both ratios are our computation from the report's figures. The cost table is sourced to the borrower's own completion report (Government of Sri Lanka, 2011), and ADB, as lender, judges a project it financed. The PCR's cost-by-financier table puts China Exim at $159.48 million within the $906.47 million total, so the section it financed is included. The schedule figure (13 years against six) runs from the 1999 approval and includes four years of design and land acquisition before construction.",
+      "pattern": {
+        "mechanism": "The Road Development Authority ran one project management unit for an expressway financed in sections by ADB, JICA, the Nordic Development Fund and later China Exim. When prices rose and the design changed, it went back to the lenders for a supplementary loan instead of cutting the scope.",
+        "preconditions": [
+          "Several concessional lenders willing to finance one corridor in parallel and to top up after a cost overrun",
+          "Land acquisition and resettlement capacity, whose absence caused most of the early delay",
+          "A design finalized before contract award, which this project lacked and which ADB names as its main lesson"
+        ],
+        "travelled": "The same Road Development Authority model was reused for the Colombo-Katunayake Expressway (2013), the Outer Circular Highway and the Southern Expressway extension to Hambantota (2020), mostly with Chinese loans instead of multilateral ones."
+      }
+    },
+    {
+      "id": "civ-alphabetisation",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "CIV",
+      "title": "Centres d'alphabétisation, and their erosion",
+      "claim": "Côte d'Ivoire's education ministry ran a national network of literacy centres. It counted 75,275 learners in 2,828 centres in 2015-16 and 53,311 learners in 2,707 centres in 2024-25, a fall of about 29 percent in learners over the decade.",
+      "metric": {
+        "name": "Learners enrolled in literacy centres, all levels, 2024-2025 school year",
+        "value": 53311,
+        "unit": "learners",
+        "asOf": "2024-2025"
+      },
+      "secondMetric": {
+        "name": "Learners enrolled in literacy centres, all levels, 2015-2016 school year, the highest of the years checked",
+        "value": 75275,
+        "unit": "learners",
+        "asOf": "2015-2016"
+      },
+      "started": 1996,
+      "status": "eroded",
+      "source": {
+        "publisher": "Ministère de l'Education Nationale et de l'Alphabétisation, Direction des Stratégies, de la Planification et des Statistiques (DESPS), Statistiques scolaires de poche 2024-2025",
+        "url": "https://mena-desps.org/static/docs/statistics/poche/poche_20242025.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The numbers are enrolments in literacy centres, not a participation rate. At about 53,000 learners against an adult population in the millions, the network reaches well under 1 percent of adults. So it shows little about adult learning participation at national scale. The erosion is measured between two of the ministry's pocket yearbooks. The yearbooks give 2015-16 (75,275), 2016-17 (57,299), 2017-18 (59,111), 2022-23 (55,405), 2023-24 (52,554) and 2024-25 (53,311). 2015-16 is the highest of these years, not a confirmed all-time peak. Most of the fall happened in one year, 2015-16 to 2016-17, which could be a change in coverage or method rather than in delivery. The yearbooks do not explain it. The centres include those run by NGOs, religious bodies and communities as well as the state, and the yearbook does not split them by operator. The age chart in 2024-25 shows some learners under 15. The figures are administrative counts collected through the ministry's own IEPP and DRENA offices. The publisher's domain (mena-desps.org) is the DESPS statistics site, not a gouv.ci address. The start year is when the service that runs the network was created, not when the first literacy class was held.",
+      "pattern": {
+        "mechanism": "The education ministry ran adult literacy through a dedicated service and a network of centres staffed by volunteer or low-paid animateurs. That network contracted by about a quarter in the decade after 2015 while primary enrolment expanded.",
+        "preconditions": [
+          "A standing budget line for animateurs and materials, which a volunteer-based network lacks",
+          "Partner NGOs and donors whose project cycles keep centres open, so closures follow funding cycles",
+          "Demand from adults who can take time out of informal work, which literacy alone rarely pays for"
+        ]
+      }
+    },
+    {
+      "id": "civ-hkb-bridge",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "CIV",
+      "title": "Henri Konan Bédié toll bridge",
+      "claim": "The Ivorian government let a third Abidjan lagoon crossing as a toll-bridge concession to SOCOPRIM, the project company formed in 1997, whose investors include Bouygues Travaux Publics, after a 1996 tender. It funded initial works from October 2011 after the conflict. Private equity and loans, insured by MIGA guarantees of $145 million, built the 1.5 km bridge and 6.7 km road at a cost of about $282 million, and the bridge opened on 16 December 2014.",
+      "metric": {
+        "name": "Approximate construction cost of the bridge",
+        "value": 282,
+        "unit": "US$ million",
+        "asOf": "2014"
+      },
+      "secondMetric": {
+        "name": "MIGA guarantees covering the private investment",
+        "value": 145,
+        "unit": "US$ million",
+        "asOf": "2015"
+      },
+      "started": 2011,
+      "status": "operating",
+      "source": {
+        "publisher": "World Bank Group (MIGA / IFC), Public-Private Partnerships Briefs: Côte d'Ivoire Toll Bridge, April 2015",
+        "url": "https://documents1.worldbank.org/curated/en/309721468190135440/pdf/96885-P3Briefs-IFC-00008527-CotedIvoireTollBridge-Box391454B-PULBIC-Colltitle-PPP-BRIEF.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The source is a two-page promotional brief from the World Bank Group, whose agency MIGA guaranteed the deal. It is an interested party describing its own transaction. The cost is given as approximate, with no baseline budget, so the record shows no cost or schedule performance against plan. The 100,000 vehicles a day is a forecast ('will use'), not observed traffic. No toll revenue, traffic or state guarantee and payment figures are published here, so the fiscal risk the state kept (minimum revenue guarantees, its own up-front works) is not visible. The brief is from 2015. This is one PPP. It does not show how often or at what scale Côte d'Ivoire delivers national objectives jointly with the private sector, which is the construct, and the 18 years from tender to opening were spent mostly in conflict, not in delivery.",
+      "pattern": {
+        "mechanism": "The government kept a 1990s concession alive through a decade of conflict and then restarted it in 2011, funding the first works itself. A political-risk guarantee from MIGA let a French contractor and development lenders put equity and debt into a toll bridge in a post-conflict country.",
+        "preconditions": [
+          "A concessionaire and sponsor willing to hold a dormant contract through 15 years of instability",
+          "Multilateral political-risk cover that lenders accept as a substitute for sovereign creditworthiness",
+          "Urban traffic dense enough to carry tolls, which only Abidjan offers in the country"
+        ]
+      }
+    },
+    {
+      "id": "npl-melamchi",
+      "indicatorId": "large_project_delivery",
+      "iso3": "NPL",
+      "title": "Melamchi Water Supply Project, and its erosion after the 2021 flood",
+      "claim": "Nepal's government built the Melamchi River diversion tunnel and headworks to pipe an additional 170 million litres a day into the Kathmandu Valley, closing the project in June 2021, more than 14 years after its original March 2007 closing date; the 2021 flood then damaged the headworks, and water has since been diverted for about eight months a year.",
+      "metric": {
+        "name": "Delay of project closing beyond the originally planned closing date (March 2007 planned, June 2021 actual)",
+        "value": 14,
+        "unit": "years",
+        "asOf": "2021-06"
+      },
+      "secondMetric": {
+        "name": "Months per year Melamchi water could be diverted after the 2021 flood damaged the headworks",
+        "value": 8,
+        "unit": "months per year",
+        "asOf": "2025-08"
+      },
+      "started": 2001,
+      "status": "eroded",
+      "source": {
+        "publisher": "Asian Development Bank, Independent Evaluation Department, Validation Report PVR-1165 (Melamchi Water Supply Project and Kathmandu Valley Water Services Sector Development Program)",
+        "url": "https://www.adb.org/sites/default/files/Evaluation%20Document/1108106/files/PVR%20L1820-NEP%20Water%20Supply%20SDP_0.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The 14 years is the gap between two loan closing dates, which is a lender's administrative milestone, not a measured completion date for the tunnel; the source gives no physical completion schedule against a baseline. The cost figure is not usable as an overrun: appraisal was $464 million and completion $345.3 million, but the 2008 scope change and the exit of the World Bank, NORAD and Sida mean the two totals price different projects, and ADB says separately that a 2014 additional loan covered tunnel cost overruns without stating the overrun in percent. The erosion is stated in words and one current number: the source publishes no figure for the year-round flow before the 2021 flood, so the secondMetric holds the post-flood level, not a measured peak. The flood is an exogenous shock, though ADB attributes the vulnerability to design that did not fit the terrain. The validation rests on the project completion report written by the lender and the executing agency, and ADB was itself a party to the project's design. The delay mixes national causes (slow decisions, leadership turnover, poor contractor management) with contractor failure, the cancelled and re-bid contracts of nonperforming contractors.",
+      "pattern": {
+        "mechanism": "The Ministry of Physical Planning and Works and later the Ministry of Water Supply, with ADB as lead financier, tied a trans-basin water diversion to a reform of Kathmandu's water utility in a single loan. The infrastructure was delivered and the institutional reforms largely were not.",
+        "preconditions": [
+          "Concessional finance from several lenders willing to stay through repeated contractor failure and the exit of three co-financiers",
+          "An executing agency able to cancel and re-tender a failed tunnel contract in mountainous, flood-prone terrain",
+          "A utility (KUKL) whose tariff and water-levy reforms the project assumed but could not compel"
+        ],
+        "travelled": "ADB's own lesson is that bundling a major physical build with a governance overhaul in one operation was over-ambitious; the remaining reforms were moved into separate pipeline programmes."
+      }
+    },
+    {
+      "id": "npl-ehrp",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "NPL",
+      "title": "Earthquake housing reconstruction programme (National Reconstruction Authority)",
+      "claim": "After the April 2015 Gorkha earthquake, Nepal's National Reconstruction Authority ran an owner-driven housing grant programme that, by 23 September 2021, had paid the third and final tranche of the reconstruction grant to 704,341 of 866,207 eligible households across 32 districts, with the World Bank-financed share revised to 309,335 houses.",
+      "metric": {
+        "name": "Eligible beneficiary households that had received the third tranche of the housing reconstruction grant",
+        "value": 704341,
+        "unit": "households",
+        "asOf": "2021-09-23"
+      },
+      "secondMetric": {
+        "name": "Houses whose safer reconstruction was supported by the IDA-financed Earthquake Housing Reconstruction Project, final revised count",
+        "value": 309335,
+        "unit": "houses",
+        "asOf": "2023-05"
+      },
+      "started": 2016,
+      "status": "concluded",
+      "source": {
+        "publisher": "World Bank, Implementation Status and Results Report, Earthquake Housing Reconstruction Project (P155969), Sequence No. 13",
+        "url": "https://documents1.worldbank.org/curated/en/269561636518091269/pdf/Disclosable-Version-of-the-ISR-Earthquake-Housing-Reconstruction-Project-P155969-Sequence-No-13.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "A grant tranche is a payment, not a finished house: in the programme's rules the third tranche is released on completion of construction up to the roof band, so 704,341 counts households verified to that stage, not occupied, completed homes. The figures are reported by the government agencies to the lender and published by the lender, which financed about $700 million of the programme and rates its own operation; the 309,335 count was itself revised in 2023 after the project clarified that its reported total had included 3,766 houses financed by a trust fund grant (TF0A4783). About 162,000 eligible households had not received the final tranche at the reporting date, and the World Bank's ICR for the MDTF Funding for Earthquake Housing Reconstruction project (P162067, TF0A4783) notes the average rebuilding cost was about three times the NPR 300,000 grant, and one third of households used loans to close the gap. The number shows recovery after one shock; it says nothing about preparedness before the next one, and the NRA was a temporary body dissolved in December 2021, with its residual work passed to the National Disaster Risk Reduction and Management Authority. The record documents the national programme's scale through a single donor's monitoring report; there is no independent national statistical series behind it.",
+      "pattern": {
+        "mechanism": "Parliament created a time-limited National Reconstruction Authority that enrolled every damaged household, paid a flat grant in three tranches, and released each tranche only after engineers verified that the house met a seismic building code, so the payment schedule enforced the standard.",
+        "preconditions": [
+          "A damage census that enumerated eligible households district by district before money flowed",
+          "Concessional and pooled donor finance large enough to fund a uniform grant for most of the caseload",
+          "Enough trained masons and inspecting engineers in remote districts to verify construction stage by stage"
+        ],
+        "travelled": "The tranche-on-verification model is the owner-driven reconstruction approach also used after the 2005 Pakistan earthquake; Nepal's version is distinguished by its scale and by tying each tranche to a code-compliance inspection."
+      }
+    },
+    {
+      "id": "zwe-harare-beitbridge",
+      "indicatorId": "large_project_delivery",
+      "iso3": "ZWE",
+      "title": "Harare-Masvingo-Beitbridge highway rehabilitation, behind schedule",
+      "claim": "Zimbabwe's government, funding the works from the budget, set out in its 2021 Budget to finish upgrading the roughly 580 km Harare-Beitbridge highway by 2022; it had opened 355 km to traffic by October 2022, and in July 2025 the Finance Ministry still reported 88 km outstanding, more than two and a half years past the 2022 target.",
+      "metric": {
+        "name": "Kilometres of the Harare-Masvingo-Beitbridge highway still outstanding, against a 2022 completion target",
+        "value": 88,
+        "unit": "km",
+        "asOf": "2025-07"
+      },
+      "secondMetric": {
+        "name": "Kilometres of the 580 km Harare-Beitbridge highway opened to traffic",
+        "value": 355,
+        "unit": "km",
+        "asOf": "2022-10"
+      },
+      "started": 2020,
+      "status": "operating",
+      "source": {
+        "publisher": "Ministry of Finance, Economic Development and Investment Promotion of Zimbabwe, 2025 Mid-Term Budget and Economic Review",
+        "url": "https://zimtreasury.co.zw/wp-content/uploads/2026/08/2025-Mid-Term-Budget-and-Economic-Review.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "This is a schedule record with no cost figure: the ministry publishes allocations in a currency that was redenominated twice in the period (ZWL to ZiG) and gives no baseline budget for the whole road, so no cost overrun can be computed. The schedule slip of more than two and a half years (end of 2022 to July 2025) is our arithmetic from targets and progress the same ministry wrote in successive budget documents. It is not an audited figure, and the ministry itself kept moving the target (2022, then 2023, then 2025). The documents give the road's length as 560 km in 2020 and 580 km from 2022 onward without explaining the change. Kilometres 'opened to traffic' are self-reported and say nothing about pavement quality. The start year is that of the earliest official progress note, July 2020. Delivery used several local contractors under a national emergency programme, so this is evidence about a fiscally funded, multi-contractor build, not a single tender.",
+      "pattern": {
+        "mechanism": "The Ministry of Transport split the corridor into sections and paid local contractors from the national budget, opening the road section by section as money arrived.",
+        "preconditions": [
+          "Budget space for a large capital programme during high inflation and currency redenomination",
+          "Domestic contractors able to build trunk-road sections to regional standards",
+          "A political commitment to a flagship corridor strong enough to survive successive missed targets"
+        ]
+      }
+    },
+    {
+      "id": "zwe-beitbridge-border",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "ZWE",
+      "title": "Beitbridge Border Post modernisation (Zimborders build-operate-transfer concession)",
+      "claim": "Zimbabwe's government contracted the Zimborders consortium under a build-operate-transfer concession to rebuild the Beitbridge Border Post with a US$300 million investment; works began in March 2019 and the President commissioned the modernised post in September 2022.",
+      "metric": {
+        "name": "Investment in the Beitbridge Border Post upgrade",
+        "value": 300,
+        "unit": "US$ million",
+        "asOf": "2021-02"
+      },
+      "started": 2019,
+      "status": "operating",
+      "source": {
+        "publisher": "Zimbabwe Revenue Authority (ZIMRA), news release 'Beitbridge Border upgrade takes shape'",
+        "url": "https://www.zimra.co.zw/news/2129-beitbridge-border-upgrade-takes-shape",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The US$300 million is a headline project value stated in a revenue authority news release during construction, not an audited outturn, and the release itself credits 'the government' with the investment, which blurs how much the concessionaire financed. The concession's term, tariff and risk allocation are not given in the official sources behind this record. One concession, however large, says little about the frequency of public-private delivery, which is half of what the indicator asks; the Treasury's own text shows the model only 'being considered' for other border posts. The record has no official series on clearance times or traffic before and after, so it shows that the facility was built and commissioned, not that it performs better.",
+      "pattern": {
+        "mechanism": "The Ministry of Finance concessioned the rebuild of the country's busiest port of entry to a private consortium under build-operate-transfer, so the consortium financed construction and recovers it from user fees before handing the facility back.",
+        "preconditions": [
+          "A border post whose traffic volume can repay private capital through user fees",
+          "A government willing to cede fee revenue for a fixed concession term",
+          "Financial closure achievable despite sovereign arrears that cut the state off from most concessional lenders"
+        ]
+      }
+    },
+    {
+      "id": "zmb-solar-milling-plants",
+      "indicatorId": "large_project_delivery",
+      "iso3": "ZMB",
+      "title": "Solar powered milling plants contract, and its erosion",
+      "claim": "Zambia's government contracted Shandong Dejian Group for a fixed-price US$200 million national programme of solar powered milling plants, financed in 2016 and due 24 months after the March 2016 deposit. The Auditor General found it still incomplete at 31 March 2022, 38 months after the scheduled completion date, and found 555 of the completed plants non-functional at audit in January 2024.",
+      "metric": {
+        "name": "Solar powered milling plants found non-functional at audit",
+        "value": 555,
+        "unit": "plants",
+        "asOf": "January 2024"
+      },
+      "secondMetric": {
+        "name": "Units contracted (1,553 solar powered milling plants plus 30 solar powered rice mills)",
+        "value": 1583,
+        "unit": "units",
+        "asOf": "2016"
+      },
+      "started": 2016,
+      "status": "eroded",
+      "source": {
+        "publisher": "Office of the Auditor General of Zambia, Special Audit Report of the Auditor General on Public Debt for the period 1 January 2006 to 31 December 2022, section 7.6.4",
+        "url": "https://www.ago.gov.zm/wp-content/uploads/2025/03/Special-Report-of-the-Auditor-General-on-Public-Debt-from-2006-to-2022.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The Auditor General never publishes the peak number of working plants. The secondMetric is the contracted count, not the peak installed or working count. The 555 non-functional plants are counted among the 1,553 milling plants, about 36 percent; that share is our inference. The audit inspected selected sites, so the 555 figure may rest partly on progress reports rather than visits to every plant. The report is internally inconsistent: the loan paragraph describes 1,000 plants for US$200 million, while the finding counts 1,583 contracted units. It also dates the deposit (March 2016) before the China Development Bank loan (July 2016). The section gives no final cost and no completion date, so neither a cost overrun nor a final schedule overrun can be computed. 38 months is the delay at 31 March 2022 against the revised January 2019 date; against the original 6 March 2018 date it is about 49 months. The plants are distributed small units rather than a single structure, which makes the record a weaker fit for major public infrastructure. The Zambia Co-operative Federation, the implementing agent, is a federation and not a ministry. The audit also found K15.5 million in lease fees that were never paid into the Treasury. Nothing here shows how many households used the mills, or whether the non-functional plants were later repaired.",
+      "pattern": {
+        "mechanism": "The Ministry of Finance borrowed from China Development Bank to buy a turnkey national programme of off-grid milling plants from one Chinese contractor, and appointed the Zambia Co-operative Federation to run them through local co-operatives. No public body was funded to maintain the equipment, so delivery slipped for years and a third of the completed plants stopped working.",
+        "preconditions": [
+          "A maintenance and spare-parts budget for battery-based equipment spread across rural districts",
+          "An implementing agent with the technical staff to accept, commission and service the plants",
+          "Contract management able to enforce the fixed-price completion clause against the supplier"
+        ]
+      }
+    },
+    {
+      "id": "zmb-drought-ect",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "ZMB",
+      "title": "Drought Emergency Cash Transfer through the Social Cash Transfer",
+      "claim": "After the President declared the 2024 El Niño drought a national disaster, Zambia's Ministry of Community Development and Social Services enumerated households in all 116 districts within four to eight weeks. From May 2024 to April 2025 it paid a drought emergency cash transfer to 1,631,007 households in 84 districts through the Social Cash Transfer, and paid a nationally funded price-shock transfer to 632,664 households in the other 32 districts.",
+      "metric": {
+        "name": "Households supported by the drought emergency cash transfer (D-ECT) in 84 drought-affected districts",
+        "value": 1631007,
+        "unit": "households",
+        "asOf": "May 2024 to April 2025"
+      },
+      "secondMetric": {
+        "name": "Households paid the government-funded indirect price shock emergency cash transfer in the remaining 32 districts",
+        "value": 632664,
+        "unit": "households",
+        "asOf": "May 2024 to April 2025"
+      },
+      "started": 2024,
+      "status": "concluded",
+      "source": {
+        "publisher": "World Bank, Implementation Completion and Results Report, Zambia Scaling-up Shock Responsive Social Protection Project (P179095)",
+        "url": "https://documents.worldbank.org/curated/en/099062926100526324/pdf/BOSIB-0b7ed402-8770-4fc4-81ce-a7b09d266f7e.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The source is the World Bank's own completion report on a project it financed, written with the implementing ministry, and the household counts are programme administrative data, not an independent survey. The 1.63 million drought transfers were financed by IDA grants and a donor trust fund. Only the 632,664 price-shock transfers were paid from national funds, so the record shows government delivery capacity more than government financing. Payment timeliness fell to 17 percent in the first half of 2025, at the height of the drought, and averaged 29 percent over the project against a 90 percent target. Households counted as supported were not necessarily paid on time. The consumption and coping effects the report cites come from evaluations it says should be interpreted cautiously. The report's own footnote 51 puts enumeration at about eight weeks, against four weeks in the main text. The report dates the disaster declaration to 28 February 2024 in one place and 29 February in another. The record shows a response after a shock was declared. It does not show forecasting or contingent financing in place before the drought, and the report says the government began strengthening disaster risk financing, with contingent financing instruments, only from 2024, after the drought. The transfer ended in April 2025 and the caseload returned to its pre-drought level, so nothing here shows recovery outcomes.",
+      "pattern": {
+        "mechanism": "Once the drought was declared, the Cabinet chose the existing Social Cash Transfer instead of a parallel humanitarian pipeline to deliver emergency aid. The Ministry of Community Development and Social Services then used enumerators already on retainer in every district and a simplified proxy-means test to enrol drought-hit households in weeks and pay them through the same digital rails.",
+        "preconditions": [
+          "A national cash transfer already running in all 116 districts, with a beneficiary information system and digital payments",
+          "Enumerators kept on retainer and a targeting questionnaire that could be adapted in weeks",
+          "Donor crisis financing available at short notice to fund the expansion while the treasury was in debt restructuring"
+        ]
+      }
+    },
+    {
+      "id": "mli-pemu-kabala",
+      "indicatorId": "large_project_delivery",
+      "iso3": "MLI",
+      "title": "Urban Water Supply Project (PEMU), part of the Kabala programme for Bamako",
+      "claim": "Mali's water assets company SOMAPEP-SA built the reservoirs, transmission mains and 1,016 km of distribution networks that brought water services to 803,000 people in Bamako and six other towns, alongside the Kabala treatment plant that came into service in June 2019. Of the US$130 million approved, US$119.6 million was spent, and the project closed in December 2022 against an original closing date of December 2018.",
+      "metric": {
+        "name": "Actual project cost disbursed at closing",
+        "value": 119.57,
+        "unit": "million US$",
+        "asOf": "31 Dec 2022"
+      },
+      "secondMetric": {
+        "name": "Approved project cost, original 2013 credit plus 2016 additional financing",
+        "value": 130,
+        "unit": "million US$",
+        "asOf": "2016"
+      },
+      "started": 2014,
+      "status": "concluded",
+      "source": {
+        "publisher": "World Bank, Implementation Completion and Results Report, Mali Urban Water Supply Project (P122826)",
+        "url": "https://documents.worldbank.org/curated/en/099100223150530293/pdf/BOSIB-b5250195-981b-487c-9b4f-02ce820732a2.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The source is the World Bank's self-evaluation of its own credit. Spending US$119.6 million of an approved US$130 million is not a cost underrun against a fixed scope. The approved amount grew from US$80 million to US$130 million in 2016, when six towns were added. The report says savings were used to raise targets, and it publishes no unit cost or contract-level overrun. The four-year schedule slip, from a December 2018 to a December 2022 closing, is our reading of the key dates. Three of those years were added with the 2016 scope expansion and one year in 2021 for COVID-19 and the disbursement suspensions that followed the 2020 and 2021 coups, so most of the slip was planned. Targets outside Bamako were not met because distribution networks were finished late. The Kabala treatment plant itself was financed by AFD, the EU and the EIB, and its cost and schedule are not in this record. The project was designed to make the urban water sector financially sustainable, and that objective failed: tariffs were frozen for eight years, and the indicator was removed in 2021. The project was IDA-financed throughout. The national contribution was implementation by SOMAPEP-SA and SOMAGEP-SA, not money.",
+      "pattern": {
+        "mechanism": "Mali's government split urban water into an asset-holding company (SOMAPEP-SA) that builds and a utility (SOMAGEP-SA) that operates, under a regulator (CREE). SOMAPEP-SA then used an IDA credit to build the transmission and distribution side of an eleven-donor Kabala programme, while other donors financed the treatment plant.",
+        "preconditions": [
+          "A standing asset company and utility able to procure and supervise works through two coups and a pandemic",
+          "Donor co-financing coordinated through one programme, so the plant and the networks were built in step",
+          "Tariffs set high enough to keep the system running, which Mali did not do"
+        ]
+      }
+    },
+    {
+      "id": "bfa-fonaenf-alpha",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "BFA",
+      "title": "Adult literacy centres financed through FONAENF, and their erosion",
+      "claim": "Burkina Faso's adult literacy and non-formal education centres, financed through FONAENF and run by contracted operators under the faire-faire strategy, enrolled 178,021 adult learners in 2015. Enrolment fell to 113,721 in 2018 and 86,405 in 2021, when 1,885 adult centres opened against 3,094 in 2018.",
+      "metric": {
+        "name": "Young people and adults enrolled in non-formal education centres (apprenants jeunes et adultes)",
+        "value": 86405,
+        "unit": "learners",
+        "asOf": "2021"
+      },
+      "secondMetric": {
+        "name": "Adults enrolled in non-formal education centres at the 2015 high point of the 2015 to 2019 series (ENF des adultes)",
+        "value": 178021,
+        "unit": "learners",
+        "asOf": "2015"
+      },
+      "started": 2002,
+      "status": "eroded",
+      "source": {
+        "publisher": "Ministère de l'Education nationale, de l'Alphabétisation et de la Promotion des Langues nationales (MENAPLN), Burkina Faso, Rapport de suivi annuel 2021 du Programme de développement stratégique de l'éducation de base (PDSEB), version provisoire, May 2022, from DGESS annuaires statistiques de l'ENF, hosted by the Global Partnership for Education",
+        "url": "https://assets.globalpartnership.org/s3fs-public/document/file/2022-10-burkina-faso-rapport-mise-%C5%93uvre-pse.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The figures are counts of people enrolled in literacy and non-formal education centres, not the share of adults that the gap asks for. The ministry publishes no participation rate, and on any plausible adult population the 2021 count is around one percent of adults or less, so even the 2015 level was a small programme against the construct. The 2021 figure comes from a ministry monitoring report marked 'version provisoire' (provisional), and the copy used is hosted by the Global Partnership for Education, a funder of the plan. The 2015 figure comes from a different ministry document, the SNDENF 2021-2025, and the copy used is on a third-party site (mojaafrica.net), not a government domain. The two documents do not fully agree: the SNDENF prints 2016 adult enrolment as 86,001 in one table and 88,770 in the next. 2015 is the high point of the published 2015 to 2019 series and may not be the programme's true peak, and the series is volatile: it dropped by half in 2016 and partly recovered in 2018, which shows enrolment following each year's funding, not a steady decline. The 2021 figure is up from a 2020 low of 81,350, and the ministry credits the rise to a slight increase in budget programme 060. The 2021 level matches 2016 (86,001), so the decline is from the 2015 and 2018 highs, not a steady fall. The centre counts in Tableau V-4 are for 'jeunes et adultes' centres. 'Jeunes et adultes' covers learners aged 15 and over, and the adolescent centres are counted separately and excluded here. The counts are compiled from forms filled in by the operators the fund pays, so the people delivering the programme are reporting their own enrolment. The ministry attributes the fall to reduced budget allocations, and its own reports say the security crisis since 2016 closed many education facilities, but the series cannot separate the two causes. The record has no figure after 2021, so it cannot say whether the decline continued after the 2022 coups.",
+      "pattern": {
+        "mechanism": "The ministry created FONAENF in 2002 to pool state and donor money and pay NGOs and associations to run literacy centres under the faire-faire strategy, so the state finances and supervises while operators deliver. Because each year's allocation decides how many centres open, cuts in the budget line and the spread of insecurity reduced the number of centres and learners almost immediately.",
+        "preconditions": [
+          "A pooled fund with donor co-financing and a pipeline of contracted local operators in every region",
+          "An annual budget allocation large enough to open thousands of centres each campaign",
+          "Enough security in rural areas for centres to open and learners to attend, which the country lost after 2016"
+        ]
+      }
+    },
+    {
+      "id": "bfa-ziga",
+      "indicatorId": "large_project_delivery",
+      "iso3": "BFA",
+      "title": "Ouagadougou Water Supply Project (Ziga)",
+      "claim": "Between 2001 and 2007, ONEA, Burkina Faso's national water utility, delivered the Ziga project through a dedicated project unit. The project built the Ziga earth dam and its transmission main to Ouagadougou, plus 56,000 subsidised connections and 400 standpipes. Eleven external financiers and the government paid US$269.37 million, 131 percent of the US$205.88 million estimated at appraisal, and the project closed on its original date of 31 December 2007.",
+      "metric": {
+        "name": "Actual total financing of the Ouagadougou Water Supply Project, all financiers",
+        "value": 269.37,
+        "unit": "million US$",
+        "asOf": "2007-12-31"
+      },
+      "secondMetric": {
+        "name": "Total financing estimated at appraisal",
+        "value": 205.88,
+        "unit": "million US$",
+        "asOf": "2000-07"
+      },
+      "started": 2001,
+      "status": "concluded",
+      "source": {
+        "publisher": "World Bank, Implementation Completion and Results Report, Burkina Faso Ouagadougou Water Supply Project (P000306), ICR705, April 2008",
+        "url": "https://documents1.worldbank.org/curated/en/252711468228915233/pdf/ICR7050ICR0P0003060Box334091B01PUBLIC1.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The 31 percent overrun is in US dollars, and much of it is exchange rate. The ICR's own note puts the dollar at 640 CFA francs at appraisal and 506 at closing. Converted at those two rates, the appraisal total of about CFAF 132 to 134 billion and the actual total of about CFAF 136 billion are within a few percent of each other. Spending happened between the two dates, so neither conversion is exact, and the ICR prints both 640 and 650 for the appraisal rate. The real cost overrun in local currency is therefore unknown and probably small, and the dollar figure overstates it. The schedule figure only covers the 2001 to 2007 financing window. The project was conceived in the early 1990s and launched in 1994, so on-time closing says nothing about the decade of preparation before it. The ICR is the World Bank grading an operation it financed and supervised, and it relies on the borrower's reporting. The people-served figure is an estimate the ICR computes at 10 people per connection and 120 per standpipe, not a count. Donors provided almost all of the money, and the borrower's share was about US$8.8 million, so the record shows execution by ONEA, not national financing. The data are from 2007 and say nothing about Burkina Faso's delivery of large projects since then.",
+      "pattern": {
+        "mechanism": "The government gave ONEA a mandate by decree in 1996 to set up a dedicated Ziga project unit. That unit ran one investment programme for eleven external financiers and the government, with joint annual supervision meetings, while the government adjusted tariffs and paid its own water bills so the utility stayed solvent.",
+        "preconditions": [
+          "A national utility already financially sound enough to borrow and to recover costs through tariffs",
+          "Donor coordination under one project unit and one supervision committee rather than parallel projects",
+          "Political backing for tariff adjustments and for the state paying its own utility bills"
+        ],
+        "travelled": "The ONEA model, a public utility under a performance contract with its own project units, became a West African reference case for urban water reform. Later Burkina Faso programmes extended it to sanitation and secondary towns."
+      }
+    },
+    {
+      "id": "gin-ebola-2021",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "GIN",
+      "title": "Guinea's 2021 Ebola outbreak response",
+      "claim": "Guinea's Ministry of Health announced an Ebola outbreak in N'Zérékoré Prefecture on 14 February 2021 and declared it over on 19 June 2021. It activated national and district emergency committees, vaccinated 10,873 people and followed 1,031 of 1,110 contacts daily, and held the outbreak to 23 confirmed and probable cases and 12 deaths, five years after the 2014 to 2016 West African epidemic.",
+      "metric": {
+        "name": "Ebola cases in the 2021 outbreak, confirmed and probable",
+        "value": 23,
+        "unit": "cases",
+        "asOf": "2021-06-19"
+      },
+      "secondMetric": {
+        "name": "People vaccinated against Ebola in the response, including 885 contacts and 2,779 frontline workers",
+        "value": 10873,
+        "unit": "people",
+        "asOf": "2021-05-27"
+      },
+      "started": 2021,
+      "status": "concluded",
+      "source": {
+        "publisher": "World Health Organization, Disease Outbreak News, Ebola virus disease - Guinea (DON328), 19 June 2021",
+        "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2021-DON328",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "This is one outbreak in one prefecture, so it shows a response to one shock and not a standing national capacity, and a single outcome cannot separate preparedness from luck. Detection was slow: WHO reports the index case, a health worker, fell ill on 15 January and died on 28 January after visiting two health facilities and a traditional practitioner. She was buried without safe burial practices, and the outbreak was announced only on 14 February. Five cases were health workers, which points to infection-control failures. A second cluster of community deaths surfaced in late March after more than three weeks with no cases. One confirmed case was lost to follow-up from 1 April until 18 June, and 79 of the 1,110 contacts were not followed daily. WHO notes that only nine (39%) of the 23 cases were known contacts at detection, and that the alert system reported a suboptimal number of alerts. The response was not purely national: WHO reports the MoH acted together with WHO and other partners, and their contribution cannot be separated from that of the national institutions. The figures are WHO restating Ministry of Health reports, so the government is reporting on its own response. The page gives no figures for the 2014 to 2016 epidemic, so the record makes no quantitative comparison with it.",
+      "pattern": {
+        "mechanism": "Guinea's Ministry of Health activated national and district emergency management committees within days of the announcement. It deployed case-search, contact-tracing, burial and community-engagement teams, set up PCR testing in N'Zérékoré, and ran ring vaccination of contacts and frontline workers with WHO and partner support. It declared the outbreak over after the 42-day count.",
+        "preconditions": [
+          "Response structures, trained staff and community networks left in place from the 2014 to 2016 epidemic",
+          "A licensed Ebola vaccine and therapeutics that partners could ship within days",
+          "A laboratory able to confirm cases near the outbreak, here a PCR capacity stood up in N'Zérékoré"
+        ],
+        "travelled": "The ring-vaccination and emergency-committee model from the 2018 to 2020 eastern DRC response, applied in a country that had lived through the 2014 to 2016 epidemic."
+      }
+    },
+    {
+      "id": "bdi-intercafe",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "BDI",
+      "title": "Private-led coffee sector governance through InterCafe, and its dismantling",
+      "claim": "Burundi had run its coffee value chain through a public regulator, ARFIC, beside private-led bodies: InterCafe, whose members were producers, millers, roasters and exporters, and the growers' consortium CNAC with about 109,000 members. The government named all three as joint implementing agencies of the Coffee Sector Competitiveness Project. In January 2020 it replaced them by decree with ODECA, an office under state control. The project closed early in 2021, and 44 percent of the grant was cancelled.",
+      "metric": {
+        "name": "Share of the IDA Coffee Sector Competitiveness grant cancelled after the government returned the coffee sector to state control",
+        "value": 44,
+        "unit": "% of grant funding",
+        "asOf": "2021"
+      },
+      "secondMetric": {
+        "name": "Individual members of CNAC, the national coffee growers' consortium, one of the three private-led implementing bodies",
+        "value": 109000,
+        "unit": "members",
+        "asOf": "project appraisal (c. 2016)"
+      },
+      "started": 2005,
+      "status": "dismantled",
+      "source": {
+        "publisher": "World Bank, Implementation Completion and Results Report ICR00004849, Burundi Coffee Sector Competitiveness Project (P151869), March 2022",
+        "url": "https://documents1.worldbank.org/curated/en/282531649959012797/pdf/Burundi-Coffee-Sector-Competitiveness-Project.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The only source is the lender's own completion report, and it is written from the side that lost the argument: the World Bank calls the 2020 decision unilateral and made without advance warning. The 44 percent is the share of one donor project cancelled. It measures what the dismantling cost that project, not how much public-private delivery Burundi lost. The ICR publishes no series on the scale of the private-led arrangement, such as the private share of washing stations, InterCafe's budget or the volumes it governed. The 109,000 CNAC members is a membership count at appraisal, not a delivery figure. The liberalisation began under structural adjustment in the 1980s and was pushed by donors (IFC advised on the third phase), so how far the arrangement was Burundi's own institutional choice is contestable. The 2005 start year rests on a decree the ICR names as the one that reformed the sector. The ICR does not say in which year InterCafe itself was created. Nothing here shows whether coffee output, quality or grower prices fell after ODECA took over. The ICR reports the share of AA/A/FW+ grade coffee rising from 59 to 66 percent, 70 percent of the incremental target. No data exists for the second quality indicator, the specialty share of exports, because ARFIC was removed and ODECA provided none.",
+      "pattern": {
+        "mechanism": "Over two decades the Government of Burundi handed coffee sector governance to an independent public regulator alongside a private interprofessional association and a growers' consortium, and wrote them into a donor project as co-implementers. In January 2020 it took the value chain back by presidential decree under a new state office, without consulting the partners.",
+        "preconditions": [
+          "Private and cooperative operators organised enough to run washing stations, sector data and an interprofessional body",
+          "A state willing to share control of the main export crop, a commitment that here rested on donor conditionality more than on domestic consensus",
+          "Legal footing that can survive a change of government, which a decree-based arrangement did not have"
+        ]
+      }
+    },
+    {
+      "id": "bdi-jiji-mulembwe",
+      "indicatorId": "large_project_delivery",
+      "iso3": "BDI",
+      "title": "Jiji and Mulembwe hydropower project",
+      "claim": "The Government of Burundi, through REGIDESO and a World Bank project unit, built the 49.5 MW Jiji (32.5 MW) and Mulembwe (17 MW) run-of-river plants with their transmission lines and substations. The project was approved in 2014 at US$270.3 million with an original closing date of December 2019. Construction began only in February 2020, after the 2015 political crisis. The World Bank put the estimated cost at US$319.1 million in November 2024. Jiji was inaugurated in June 2025 and Mulembwe in June 2026.",
+      "metric": {
+        "name": "Estimated total cost of the Jiji and Mulembwe Hydropower Project, all financiers",
+        "value": 319.1,
+        "unit": "million USD",
+        "asOf": "November 2024"
+      },
+      "secondMetric": {
+        "name": "Appraised total cost at Board approval",
+        "value": 270.3,
+        "unit": "million USD",
+        "asOf": "April 2014"
+      },
+      "started": 2020,
+      "status": "concluded",
+      "source": {
+        "publisher": "World Bank, Project Paper for Additional Financing, Burundi Jiji and Mulembwe Hydropower Project (P133610), December 2024",
+        "url": "https://documents1.worldbank.org/curated/en/099121924051513336/pdf/P133610162624d031b00012e5bfbbc2613.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The cost figure is the World Bank's estimate in November 2024, before either plant was commissioned. At that date it reported a financing gap of US$41.7 million still to close. The 18 percent is the Bank's own ratio in its cost table, set against the 2014 appraisal. It excludes a further estimated US$19 million lost to currency depreciation on the 2014 pledges. The schedule slip is not published as a figure. The original closing date of 31 December 2019 against inauguration in June 2025 (Jiji) and June 2026 (Mulembwe) is our reading of a 6.5-year slip. Much of it comes from the 2015 to 2020 political crisis, which delayed hiring the owner's engineer to 2017 and the contractor's mobilisation to 2020, so it is not purely an execution failure. The project was financed and supervised by IDA, the EU, the EIB and the AfDB. Delivery was shared, and the Bank reports weak contract management in the project unit. Completion rests on press releases: the Presidency's June 2025 release for Jiji, and the EIB's June 2026 release for Mulembwe. Neither release shows that the plants deliver the planned 235 GWh a year.",
+      "pattern": {
+        "mechanism": "Burundi bundled two run-of-river plants, transmission and utility reform into one donor-pooled project under a World Bank-supervised implementation unit. It held the scheme together through a political crisis and two additional financings until both plants were commissioned.",
+        "preconditions": [
+          "Concessional co-financiers willing to top up a stalled grant rather than cancel it",
+          "An owner's engineer and contractors able to work in a fragile state with fuel and foreign-exchange shortages",
+          "A utility (REGIDESO) able to absorb and operate new generation capacity"
+        ]
+      }
+    },
+    {
+      "id": "mwi-shock-responsive-sctp",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "MWI",
+      "title": "Shock-responsive social cash transfers and the Cat DDO",
+      "claim": "From 2019 the Government of Malawi identified every household it registered for shock-responsive cash transfers through its Unified Beneficiary Registry. It expanded the Social Cash Transfer Programme to give drought and COVID-19 aid to more than 300,000 rural households, and it drew US$30 million of pre-arranged contingent financing on 10 April 2020, three weeks after declaring a state of disaster.",
+      "metric": {
+        "name": "Rural households given drought and COVID-19 aid through shock-responsive expansions of the Social Cash Transfer Programme, identified through the Unified Beneficiary Registry",
+        "value": 300000,
+        "unit": "households (more than)",
+        "asOf": "2019 to 2023"
+      },
+      "secondMetric": {
+        "name": "Catastrophe Deferred Drawdown Option disbursed after the COVID-19 state of disaster",
+        "value": 30,
+        "unit": "million USD",
+        "asOf": "10 April 2020"
+      },
+      "started": 2019,
+      "status": "operating",
+      "source": {
+        "publisher": "World Bank, Implementation Completion and Results Report ICR00006189, Malawi Disaster Risk Management Development Policy Financing with Cat DDO (P165056), June 2023",
+        "url": "https://documents1.worldbank.org/curated/en/099061223093517892/pdf/BOSIB0329390ec04a0abc30701c9ad51e46.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The source is the lender's self-evaluation of its own policy operation, and the 300,000 is a floor ('more than') summed over about four years and two kinds of shock. It is not a per-event count and has no denominator of affected households. The money behind the transfers was largely external: a World Bank project's contingency window, ARC sovereign drought insurance whose premiums donors financed in full (ICR Annex), and IDA's Cat DDO. The evidence is that the national system routed aid, not that Malawi financed it. The Cat DDO was triggered by a pandemic, not a natural hazard, and its US$30 million was budget support with no traceable link to households. The ICR says fewer than 10 percent of the households receiving transfers were registered before the protocols. It rates the operation moderately satisfactory and reports that resilient transport standards were never developed. The source is dated June 2023; the operation itself closed in 2022. Cyclone Freddy (February and March 2023) and the 2024 El Nino drought fell after the operation closed and are not assessed. 'Operating' assumes the registry and the scale-up mechanism are still in use, which this source does not confirm beyond 2023.",
+      "pattern": {
+        "mechanism": "Malawi's Ministry of Finance and its social protection agencies built one registry of rural households and set protocols that every shock-response transfer must use it. They paired the registry with financing pre-arranged before a disaster (a contingent credit line, a project contingency window and sovereign drought insurance), so cash could reach households without a new appeal each time.",
+        "preconditions": [
+          "A census-style household registry covering most of the rural population and kept current",
+          "Contingent financing agreed before the shock, which here depended on concessional lenders and an insurance pool",
+          "A legal trigger, a declared state of disaster under the 1991 Disaster Preparedness and Relief Act, that releases the funds"
+        ]
+      }
+    },
+    {
+      "id": "mwi-nalp",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "MWI",
+      "title": "National Adult Literacy Programme",
+      "claim": "Malawi's Ministry of Gender, Community Development and Social Welfare has run the National Adult Literacy Programme since 1986 through volunteer-taught community classes. Enrolment in Adult Literacy and Education reached 171,434 learners in the 2024/25 financial year, against about 82,000 participants in 2006.",
+      "metric": {
+        "name": "Learners enrolled in Adult Literacy and Education",
+        "value": 171434,
+        "unit": "learners",
+        "asOf": "2024/25 financial year"
+      },
+      "secondMetric": {
+        "name": "Adult literacy participants, public and NGO classes combined",
+        "value": 82312,
+        "unit": "learners",
+        "asOf": "2006"
+      },
+      "started": 1986,
+      "status": "operating",
+      "source": {
+        "publisher": "Malawi Government, Ministry of Finance and Economic Affairs, Annual Economic Report 2025 (Budget Document No. 2), section 15.2.2.1",
+        "url": "https://www.finance.gov.mw/documents/uploads/2026-01/Annual%20Economic%20Report%202025.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The gap asks for a share of adults, and this is a count of learners in one literacy programme. Against Malawi's adult population, roughly 10 million people aged 15 and over, it is under 2 percent. That ratio is our rough computation and is not published. The figure is the ministry's administrative report, carried without method in a budget document. It does not say whether NGO and faith-based classes are included. The series is inconsistent: the Annual Economic Report 2024 gives the same 158,048 as learners who 'graduated' in 2023/24, and the 2025 report uses it as the previous year's enrolment. The 2006 comparison comes from a different ministry, the department's earlier home, and counts public and NGO participants together, so the two numbers may not measure the same thing. Literacy classes are one narrow kind of non-formal adult education. They say nothing about vocational, workplace or tertiary adult learning. The 2008 report records that the programme aimed to reach 2 million of 4.6 million illiterate adults by 2000 but had reached about 860,000 by 2006. It also records 'magnitude of failure', volunteer instructors whose minimum qualification is primary school grade 8, and inadequate funding. The 2025 report names the National Strategy on Adult Literacy and Lifelong Learning, not NALP, so treating the 2024/25 enrolment as the same programme begun in 1986 is our reading. Enrolment says nothing about completion or literacy gained.",
+      "pattern": {
+        "mechanism": "The ministry responsible for community development runs adult literacy as a standing national programme. It organises classes of about 25 learners through district community development officers and volunteer instructors that communities choose, and NGOs and churches run parallel classes under the same policy.",
+        "preconditions": [
+          "A field network of district community development staff to open and supervise classes in every district",
+          "Volunteers with at least primary schooling willing to teach for little or no pay",
+          "A recurrent budget line, however small, that survives changes of ministry"
+        ]
+      }
     }
   ]
 }

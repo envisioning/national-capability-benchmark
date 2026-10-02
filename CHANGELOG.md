@@ -9,6 +9,19 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.25.3 — 2026-10-02
+
+- **The first documented deliveries for 16 more of the new countries.** 28
+  records reach Mozambique, Romania, Ghana, Kazakhstan, Madagascar,
+  Tunisia, Côte d'Ivoire, Sri Lanka, Nepal, Zimbabwe, Mali, Zambia,
+  Burkina Faso, Guinea, Malawi and Burundi. Seven document a loss, among
+  them the Beira railways concession, Nepal's Melamchi water supply,
+  Zambia's solar milling plants and Burundi's coffee sector partnership.
+  The flagships include Mozambique's disaster agency, Romania's A1
+  motorway, Sri Lanka's Southern Expressway and Ghana's Sankofa gas
+  project. A second reviewer checked every number at its official source.
+  The capability agenda is regenerated.
+
 ## App 1.25.2 — 2026-10-02
 
 - **The first documented deliveries for 14 of the new countries.** 28
