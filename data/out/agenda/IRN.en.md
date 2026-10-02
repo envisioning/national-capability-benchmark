@@ -142,6 +142,13 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 
+## What the indicators miss about Iran
+
+Documented deliveries linked to missing indicators. They do not affect scores or confidence.
+
+- **Targeted Subsidy Reform cash transfer, and its erosion** (Adaptability). Iran's government replaced universal fuel and bread subsidies with a universal cash transfer of 455,000 rials (about US$40) per person per month from late 2010, then left the transfer unindexed, so that by 2019 its purchasing power had fallen to less than US$6 per person before a top-up was added in late 2019.
+- **Earthquake Emergency Recovery after the 2002 Changureh-Avaj earthquake** (Adaptability). After the April 2002 earthquake in Kermanshah and the June 2002 earthquake in Qazvin, Zanjan and Hamedan, Iran's Ministry of Interior project unit and the Housing Foundation repaired or rebuilt about 24,000 damaged houses to seismic standards by June 2009, using government funds and a US$180 million World Bank loan, of which US$174.9 million was disbursed.
+
 ## Contribute
 
 Fill a gap, file evidence or challenge an indicator at https://github.com/envisioning/national-capability-benchmark. The docs explain the method and decisions.

@@ -103,6 +103,14 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 
+## O que os indicadores não veem sobre Itália
+
+Entregas documentadas ligadas a indicadores ausentes. Elas não afetam as notas nem a solidez da evidência.
+
+- **Italy's FinTech regulatory sandbox, and its contraction** (Experimentação). Italy's FinTech sandbox, run by the Bank of Italy, Consob and IVASS under the MEF's FinTech Committee, admitted 16 projects from its first application window (November 2021 to January 2022) but only 3 from its second (November to December 2023), after applications fell by about 80.7 percent.
+- **MOSE, the Venice lagoon flood barrier** (Construção). Works on MOSE, Italy's system of 78 mobile gates at Venice's three lagoon inlets, began in 2003. All the gates were first raised on 10 July 2020, and 6,689.07 million euros had been appropriated by mid-2022 with the works about 95 percent complete and still unfinished past their planned 2021 completion.
+- **Fondo nuove competenze** (Aprendizagem). Italy's Fondo nuove competenze, set up in 2020 and run by the national labour policy agency ANPAL through two notices, was created to pay for working hours employers turned into training under union agreements, and by the end of 2021 it had covered almost 30 million hours of training for almost 270,000 workers, about 110 hours each.
+
 ## Contribua
 
 Preencha uma lacuna, registre uma evidência ou conteste um indicador em https://github.com/envisioning/national-capability-benchmark. Os documentos explicam o método e suas decisões.

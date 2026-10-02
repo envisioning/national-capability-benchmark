@@ -142,6 +142,13 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 
+## O que os indicadores não veem sobre Irã
+
+Entregas documentadas ligadas a indicadores ausentes. Elas não afetam as notas nem a solidez da evidência.
+
+- **Targeted Subsidy Reform cash transfer, and its erosion** (Adaptação). Iran's government replaced universal fuel and bread subsidies with a universal cash transfer of 455,000 rials (about US$40) per person per month from late 2010, then left the transfer unindexed, so that by 2019 its purchasing power had fallen to less than US$6 per person before a top-up was added in late 2019.
+- **Earthquake Emergency Recovery after the 2002 Changureh-Avaj earthquake** (Adaptação). After the April 2002 earthquake in Kermanshah and the June 2002 earthquake in Qazvin, Zanjan and Hamedan, Iran's Ministry of Interior project unit and the Housing Foundation repaired or rebuilt about 24,000 damaged houses to seismic standards by June 2009, using government funds and a US$180 million World Bank loan, of which US$174.9 million was disbursed.
+
 ## Contribua
 
 Preencha uma lacuna, registre uma evidência ou conteste um indicador em https://github.com/envisioning/national-capability-benchmark. Os documentos explicam o método e suas decisões.

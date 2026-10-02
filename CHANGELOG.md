@@ -9,6 +9,19 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.25.2 — 2026-10-02
+
+- **The first documented deliveries for 14 of the new countries.** 28
+  records reach Pakistan, Italy, Bangladesh, Ukraine, Morocco, Russia,
+  Egypt, Uzbekistan, the DR Congo, Iraq, Iran, Angola, Tanzania and Uganda.
+  Seven document a loss, among them Pakistan's Neelum-Jhelum hydropower
+  plant, Italy's fintech sandbox, Iran's targeted subsidies and adult
+  literacy programmes in Bangladesh, Tanzania and Uganda. The flagships
+  include the Padma Bridge, MOSE, Noor Ouarzazate, Julius Nyerere
+  hydropower and Ukraine's eRecovery. Nothing for Myanmar or Sudan passed
+  the inclusion rule. A second reviewer checked every number at its
+  official source. The capability agenda is regenerated.
+
 ## App 1.25.1 — 2026-10-02
 
 - **The limits page now reads the 125-country frame.** Every known failure

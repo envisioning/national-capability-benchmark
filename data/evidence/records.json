@@ -16147,6 +16147,1016 @@
         ],
         "travelled": "Viability-gap BOT on a national trunk road shows how far a state will go before it simply pays for the road itself: here, once public money was available and the schedule was political, the partnership share went to zero."
       }
+    },
+    {
+      "id": "pak-neelum-jhelum",
+      "indicatorId": "large_project_delivery",
+      "iso3": "PAK",
+      "title": "Neelum-Jhelum Hydropower Project, and its shutdown",
+      "claim": "WAPDA's subsidiary NJHPC's 969 MW Neelum-Jhelum project, under construction from January 2008 and substantially completed in 2018, had cost Rs 423,446 million by June 2023 against Rs 84,502 million in the 2002 revised PC-I, nine years late; it peaked at 4,940.67 GWh in 2020 and was forced into complete shutdown by a head race tunnel failure on 2 April 2024 (the auditor counts 1,797.704 million units lost in FY2023-24), after an earlier tail race tunnel collapse in July 2022.",
+      "metric": {
+        "name": "Cost overrun against the 1st revised PC-I (2002), actual expenditure to June 2023",
+        "value": 338944,
+        "unit": "Rs million",
+        "asOf": "2023-06"
+      },
+      "secondMetric": {
+        "name": "Peak annual generation, before the 2022 and 2024 tunnel collapses",
+        "value": 4940.67,
+        "unit": "GWh",
+        "asOf": "2020"
+      },
+      "started": 2008,
+      "status": "eroded",
+      "source": {
+        "publisher": "Auditor-General of Pakistan, Performance Audit Report on Neelum Jhelum Hydropower Project, audit year 2022-23",
+        "url": "https://agp.gov.pk/SiteImage/Policy/PAR%20on%20NJHPP%20AY%202022-23.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "This is a delivery that ran backwards twice: badly over cost and schedule while it was being built, then lost its output after it was finished. The overrun is measured against the 2002 revision, which is the auditor's choice of baseline; against the 1989 original (Rs 15,012 million) it would be far larger, and against the 2018 fourth revision (Rs 506,808 million) the project came in under. Part of the rupee overrun is exchange-rate depreciation and interest during construction, which a cost-performance reading should not charge entirely to delivery. The plant never reached its design output of 5,150 GWh even at its 2020 peak, partly because India's upstream Kishanganga project and a higher environmental flow reduced water, which management cites and the auditor rejects. The overrun percentage (about 400 percent) is our computation from two published figures, and the Rs 338,944 million is the auditor's own subtraction. The 2024 shutdown is documented in a second AGP report; the expected restart date circulating in the press is not from this source and is not claimed here. Management disputes several findings and never convened the Departmental Accounts Committee, so the report records the auditor's view without a settled reply.",
+      "pattern": {
+        "mechanism": "WAPDA started tunnelling in difficult Himalayan geology before design issues were settled, and the planning ministry re-approved the cost four times rather than stopping or re-scoping the project, so the bill rose with each revision and the tunnels later failed where weak rock had been flagged.",
+        "preconditions": [
+          "A state utility able to borrow and add a consumer surcharge to keep financing a project as costs rose",
+          "A project appraisal system that approves revised PC-Is after the fact instead of gating on final design",
+          "A strategic water-rights deadline with India that pushed construction to start before geology and design were resolved"
+        ]
+      }
+    },
+    {
+      "id": "pak-tarbela-t4",
+      "indicatorId": "large_project_delivery",
+      "iso3": "PAK",
+      "title": "Tarbela Fourth Extension Hydropower Project",
+      "claim": "WAPDA built a 1,410 MW powerhouse on Tarbela Dam's fourth tunnel, effective April 2012 and commissioned in 2018; the World Bank recorded it as completed on time and below its estimated cost, with a capital cost expected at US$749 million.",
+      "metric": {
+        "name": "Expected capital cost of T4HP, physical works and supervision excluding interest during construction",
+        "value": 749,
+        "unit": "US$ million",
+        "asOf": "2019-09"
+      },
+      "secondMetric": {
+        "name": "Electricity generated since commissioning",
+        "value": 21000,
+        "unit": "GWh",
+        "asOf": "2023-09"
+      },
+      "started": 2012,
+      "status": "concluded",
+      "source": {
+        "publisher": "World Bank, Tarbela Fourth Extension Hydropower Project (P115893) restructuring paper RES40334",
+        "url": "https://documents1.worldbank.org/curated/en/752641582892477822/pdf/Disclosable-Restructuring-Paper-Tarbela-Fourth-Extension-Hydropower-Project-P115893.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The lender is grading its own project: 'on time and in less than estimated cost' is the World Bank's sentence in a restructuring paper, not an audit, and the paper gives no baseline figure, so the size of the saving cannot be checked from this source. The cost is an expectation in 2019, before every work was closed; the intakes for tunnels 3 and 4 were still being finished, and the loan closing date moved from 2018 to 2024 because the same project was extended to build T5HP. That fifth extension, financed under the same project number, is rated Moderately Satisfactory in the 2023 ISR and was due for completion in 2025; T4's record is not the record of the whole project. The World Bank financed about 90 percent of the civil and electro-mechanical works, so the case shows WAPDA delivering under a lender's procurement and supervision regime, which is a precondition rather than proof of domestic capability. Building a powerhouse on an existing dam and tunnel is much less risky than a greenfield dam, which is part of why it came in on budget.",
+      "pattern": {
+        "mechanism": "WAPDA added generating capacity to an existing dam's spare tunnel under World Bank procurement and supervision, so the geological and resettlement risks that sink greenfield hydropower were mostly absent.",
+        "preconditions": [
+          "An existing large dam with an unused tunnel and an operator that had run it for decades",
+          "Concessional finance with lender-imposed procurement, supervision and an independent panel of experts",
+          "A power deficit large enough that the plant was dispatched at once"
+        ],
+        "travelled": "Pakistan and the World Bank repeated the model at the same dam with the fifth extension (T5HP)."
+      }
+    },
+    {
+      "id": "pak-ehsaas-emergency-cash",
+      "indicatorId": "institutional_responsiveness",
+      "iso3": "PAK",
+      "title": "Ehsaas Emergency Cash",
+      "claim": "Pakistan's government launched Ehsaas Emergency Cash in early April 2020 on BISP's existing payment and registry systems and had paid US$464 million to 6.4 million beneficiaries by 30 April 2020, reaching 15 million beneficiaries in all.",
+      "metric": {
+        "name": "Beneficiaries paid emergency cash by 30 April 2020, within about four weeks of launch",
+        "value": 6.4,
+        "unit": "million beneficiaries",
+        "asOf": "2020-04-30"
+      },
+      "secondMetric": {
+        "name": "Beneficiaries given temporary income support through Ehsaas in 2020",
+        "value": 15,
+        "unit": "million beneficiaries",
+        "asOf": "2020"
+      },
+      "started": 2020,
+      "status": "concluded",
+      "source": {
+        "publisher": "World Bank, COVID-19 G2Px country brief: Pakistan",
+        "url": "https://thedocs.worldbank.org/en/doc/760541593464535534-0090022020/original/WorldBankG2PxCOVID19PakistanBrief.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "Both figures are government-reported disbursement counts passed through World Bank documents, not independent verification that the money reached eligible families; the brief does not report inclusion or exclusion errors. The two World Bank documents disagree on the launch month (early April in the brief, March in the PAD) and do not reconcile the 15 million with the 12 million originally targeted. The transfer was one-off and small, about US$71 per family, so it shows speed of reconfiguration, not depth of protection. The speed rested on assets built over a decade (the BISP payment network and the national socio-economic registry), so the record evidences a programme being changed fast, which is the construct, but credits the 2020 government with infrastructure its predecessors built. The 'four weeks' is our reading of the brief's dates, not a published duration.",
+      "pattern": {
+        "mechanism": "The federal government raised the eligibility cutoff on an existing proxy-means-test registry, added an SMS application channel, and pushed one-off payments through BISP's contracted payment providers, so a new caseload was paid without building a new delivery system.",
+        "preconditions": [
+          "A national socio-economic registry covering most households, with a proxy means score that could be re-cut",
+          "A biometric-verified payment network already contracted for a standing cash transfer",
+          "National ID and mobile coverage high enough for SMS self-registration"
+        ]
+      }
+    },
+    {
+      "id": "ita-fintech-sandbox",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "ITA",
+      "title": "Italy's FinTech regulatory sandbox, and its contraction",
+      "claim": "Italy's FinTech sandbox, run by the Bank of Italy, Consob and IVASS under the MEF's FinTech Committee, admitted 16 projects from its first application window (November 2021 to January 2022) but only 3 from its second (November to December 2023), after applications fell by about 80.7 percent.",
+      "metric": {
+        "name": "Projects admitted to the sandbox from the second application window (2 by IVASS, 1 by the Bank of Italy, 0 by Consob)",
+        "value": 3,
+        "unit": "projects admitted",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Projects admitted from the first application window, the peak (13 by the Bank of Italy, 3 by IVASS)",
+        "value": 16,
+        "unit": "projects admitted",
+        "asOf": "2022"
+      },
+      "started": 2021,
+      "status": "eroded",
+      "source": {
+        "publisher": "Ministry of Economy and Finance (Department of the Treasury), Relazione sulle attivita del Comitato FinTech 2023-2024",
+        "url": "https://www.dt.mef.gov.it/modules/documenti_it/sistema_bancario/Relazione-Comitato-FinTech_2023_2024.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The counts are projects, not firms: the IVASS projects in the second window involved several firms each (for example ITAS Mutua with ANIA, Autovia and Connexa InsTech), while the one Bank of Italy project was a single FinTech operator, so the indicator's firms-per-million figure would need a firm count the report does not give. Per million people the sandbox admitted roughly 0.27 projects from the first window and 0.05 from the second; those ratios are our computation with a population the source does not state. The sandbox runs in windows rather than continuously, so the two numbers are two cohorts, not two years. The MEF attributes the fall to an admission process that operators and the supervisors themselves found burdensome and to the Bank of Italy's informal channels (Canale Fintech, Milano Hub) absorbing demand, so part of the decline is innovation dialogue moving outside the sandbox, which the indicator would not see. The Bank of Italy's sandbox page shows both cohorts as concluded and lists no window after 2023 as of retrieval; a new window or a redesigned regime would change the status. The report is the MEF reporting on a regime it chairs, and the MEF itself judges the sandbox experience 'soddisfacente' while calling for procedural simplification.",
+      "pattern": {
+        "mechanism": "The MEF's FinTech Committee opened timed application windows in which each supervisor admitted projects to tests of six months, extendable to at most 18 months, with tailored conditions, and demand fell once operators learned how heavy admission was and found lighter informal channels at the Bank of Italy.",
+        "preconditions": [
+          "A statutory sandbox shared across three supervisors with separate admission procedures",
+          "Lighter informal innovation channels at the central bank competing for the same applicants",
+          "Short, infrequent application windows that make the sandbox slow relative to product cycles"
+        ]
+      }
+    },
+    {
+      "id": "ita-mose",
+      "indicatorId": "large_project_delivery",
+      "iso3": "ITA",
+      "title": "MOSE, the Venice lagoon flood barrier",
+      "claim": "Works on MOSE, Italy's system of 78 mobile gates at Venice's three lagoon inlets, began in 2003. All the gates were first raised on 10 July 2020, and 6,689.07 million euros had been appropriated by mid-2022 with the works about 95 percent complete and still unfinished past their planned 2021 completion.",
+      "metric": {
+        "name": "Total funds appropriated for MOSE by the end of the first half of 2022",
+        "value": 6689.07,
+        "unit": "EUR million",
+        "asOf": "2022-06"
+      },
+      "secondMetric": {
+        "name": "Share of the infrastructure completed at 17 June 2022, against a completion planned for 2021",
+        "value": 95,
+        "unit": "% complete",
+        "asOf": "2022-06-17"
+      },
+      "started": 2003,
+      "status": "operating",
+      "source": {
+        "publisher": "Corte dei conti, Sezione centrale di controllo sulla gestione delle Amministrazioni dello Stato, deliberazione 92/2024/G (follow-up to deliberazione 35/2023/G)",
+        "url": "https://www.corteconti.it/Download?id=a122f2f4-7a9d-4197-8697-d78fb7c74b65",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "This is a delivery record with a bad cost and schedule history, not a success story: the barrier works, but late and expensive. The source gives total appropriations, not a baseline estimate, so a percentage overrun cannot be computed from it; the Court's report names a 'progressive increase in costs' without a starting figure here, and the original estimate quoted in the press is not used. Appropriated funds are not spending, and the total includes related works (Piano Europa, decarbonisation, San Marco basilica defences). The 95 percent completion figure is from June 2022 and the 2021 completion date had already passed; the record does not say when, or whether, the works were finished after that. The Court lists well-known judicial proceedings, a progressive increase in costs, technical difficulties, environmental questions and Covid-19 among the complexities of the build. The Court reports the gates have repeatedly protected the city, but the source gives no count of closures, so the record does not claim one.",
+      "pattern": {
+        "mechanism": "The state handed design and construction of the lagoon barrier to a single concessionaire consortium under a special law for Venice, and when delays and judicial proceedings stalled it, it appointed extraordinary commissioners to finish and operate the gates provisionally.",
+        "preconditions": [
+          "A special legal regime and dedicated national funding for Venice dating from the 1980s",
+          "A single-concessionaire model that concentrated design, construction and control in one body",
+          "A visible, recurring flood threat that kept funding flowing through repeated delays"
+        ]
+      }
+    },
+    {
+      "id": "ita-fondo-nuove-competenze",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "ITA",
+      "title": "Fondo nuove competenze",
+      "claim": "Italy's Fondo nuove competenze, set up in 2020 and run by the national labour policy agency ANPAL through two notices, was created to pay for working hours employers turned into training under union agreements, and by the end of 2021 it had covered almost 30 million hours of training for almost 270,000 workers, about 110 hours each.",
+      "metric": {
+        "name": "Workers trained under the first notice of the Fondo nuove competenze, per ANPAL's thematic review of 30 December 2021",
+        "value": 270000,
+        "unit": "workers",
+        "asOf": "2021-12"
+      },
+      "secondMetric": {
+        "name": "Working hours converted to training",
+        "value": 30,
+        "unit": "million hours",
+        "asOf": "2021-12"
+      },
+      "started": 2020,
+      "status": "operating",
+      "source": {
+        "publisher": "ANPAL, Agenzia Nazionale Politiche Attive del Lavoro (archive maintained by the Ministry of Labour and Social Policies)",
+        "url": "https://storicoanpal.politicheattive.lavoro.gov.it/fondo-nuove-competenze1.html",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The figures come from ANPAL's own thematic review of December 2021, an interim count for the first notice; the final total for that edition is not on this page, and larger figures circulating elsewhere were not verified. The page is an archive: ANPAL was abolished and the fund passed to the Ministry of Labour, and the page says further funding is planned under the Programma nazionale Giovani, donne e lavoro. About 270,000 workers is under one percent of Italian adults (our rough computation), so this is a national programme that barely moves the participation share the indicator asks for. It is a wage subsidy as much as a training programme: the fund reimburses hours employers took out of production, and in 2020 to 2021 that also kept people employed during COVID restrictions. Training content and hours are certified by employers and union agreements, and ANPAL notes that the regions assessing training plans relied widely on tacit approval (silenzio-assenso), so quality control was light.",
+      "pattern": {
+        "mechanism": "ANPAL paid employers for working hours converted into training, but only where a collective agreement with the unions set out the cut in hours and the skills plan, which turned a COVID income measure into a negotiated training programme.",
+        "preconditions": [
+          "A collective bargaining system able to sign thousands of firm-level agreements quickly",
+          "European Social Fund money to co-finance the wage cost",
+          "Regional bodies able to assess and certify training plans, even if mostly by tacit approval"
+        ]
+      }
+    },
+    {
+      "id": "bgd-adult-literacy",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "BGD",
+      "title": "National adult literacy projects of the Bureau of Non-Formal Education, and their erosion",
+      "claim": "Bangladesh's Bureau of Non-Formal Education ran national adult literacy projects that reached 9.23 million learners aged 11 to 45 under the Total Literacy Movement project of 1997 to 2003, then 4.46 million aged 15 to 45 under the Basic Literacy Project (64 districts) of 2014 to 2022. Its only programme for learners above school age the bureau lists after June 2022 is a pre-vocational course that reached 4,198 people aged 14 to 24 in 2025-26.",
+      "metric": {
+        "name": "Learners reached, Basic Literacy Project (64 districts), Feb 2014 to Jun 2022",
+        "value": 4459000,
+        "unit": "learners (published as 44.59 lakh)",
+        "asOf": "2014-02/2022-06"
+      },
+      "secondMetric": {
+        "name": "Peak: learners reached, Non-Formal Education Project-4 (Total Literacy Movement), Apr 1997 to Jun 2003",
+        "value": 9225000,
+        "unit": "learners (published as 92.25 lakh)",
+        "asOf": "1997-04/2003-06"
+      },
+      "started": 1991,
+      "status": "eroded",
+      "source": {
+        "publisher": "Bureau of Non-Formal Education, Ministry of Primary and Mass Education, Government of Bangladesh: implemented projects table",
+        "url": "https://bnfe.gov.bd/pages/projects/6922d980dbfbab28ce04d4d8",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "These are the implementing bureau's own counts of learners it reports as reached. The page does not say how a learner was counted or whether literacy was tested. The numbers cover multi-year project windows and not the last 12 months, which is what the indicator asks. Spread over each window they are small against the adult population: roughly 0.5 million a year for 2014 to 2022 and 1.5 million a year for 1997 to 2003, both converted from lakh by us. The peak is itself a shortfall: the 1997 to 2003 project reached 92.25 lakh against a target of 228.89 lakh, about 40 percent. A hostile reviewer would say most of the fall reflects fewer illiterate adults to reach, since primary enrolment rose over the period, and not lost capacity. Nothing here measures that need, so the erosion is in delivery scale and not in a participation rate. The projects run as separate time-bound windows with gaps between them, so calling them one delivery is our reading. Both age bands include non-adults: the 1997 to 2003 project counted learners from age 11 and the 2014 to 2022 project from age 15, so part of each count is children and adolescents. The 2025-26 figure is a different course for ages 14 to 24 and is not a like-for-like successor. Basic Literacy Project teaching was contracted to NGOs. The page is a Bengali table on a government portal, and the values are read off its rows.",
+      "pattern": {
+        "mechanism": "The Bureau of Non-Formal Education used development-budget projects to fund literacy courses, delivered by district administrations or contracted NGOs, in every district. When a project window closed, delivery stopped until the next project was approved, and after 2022 no adult-scale successor followed.",
+        "preconditions": [
+          "A standing bureau with a district presence to plan and monitor courses",
+          "Development-budget approval for each time-bound project, often with donor co-finance",
+          "NGOs or district administrations able to run community learning centres at scale"
+        ],
+        "travelled": "Time-bound literacy campaigns financed project by project were common across South Asia in the 1990s. The pattern they share is the one here: large one-off reach, then a gap when the project closes."
+      }
+    },
+    {
+      "id": "bgd-cpp",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "BGD",
+      "title": "Cyclone Preparedness Programme",
+      "claim": "Before Cyclone Remal made landfall on 26 May 2024, Bangladesh's government-run cyclone early warning and evacuation system moved about 0.8 million people into 9,424 evacuation shelters across 19 districts. The UN-coordinated response plan records 16 deaths among 4.6 million people affected.",
+      "metric": {
+        "name": "People pre-emptively evacuated to shelters ahead of Cyclone Remal landfall",
+        "value": 800000,
+        "unit": "people",
+        "asOf": "2024-05"
+      },
+      "secondMetric": {
+        "name": "Lives lost in Cyclone Remal (government assessment as reported in the plan)",
+        "value": 16,
+        "unit": "deaths",
+        "asOf": "2024-05"
+      },
+      "started": 1973,
+      "status": "operating",
+      "source": {
+        "publisher": "UN Resident Coordinator's Office and Humanitarian Coordination Task Team, Bangladesh: Cyclone Remal Humanitarian Response Plan (June to December 2024)",
+        "url": "https://bangladesh.un.org/sites/default/files/2024-06/BGD-TCRemal-HRP-FINAL%209June2024_0.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The evacuation and death figures are the government's own preliminary counts, repeated in a UN appeal document whose job is to raise funds. They are not an independent audit. The figures cover one cyclone, and Remal's death toll depended on its track, timing and surge as well as on preparedness. The plan credits the Cyclone Preparedness Programme with helping develop the warnings, but it does not attribute the evacuation to it alone: district administrations, shelters built under other programmes and anticipatory-action partners all took part. The plan states no baseline, so the record shows one storm's outcome and not a trend. The same document records 4.6 million people affected and 173,866 houses damaged or destroyed, so the system protected lives far more than it protected housing and livelihoods. The construct also covers recovery, which this number does not show. The figure sits inside a PDF.",
+      "pattern": {
+        "mechanism": "The government took over the cost of a Red Crescent volunteer warning network in 1973 and ran it jointly with the Bangladesh Red Crescent Society. Village volunteers relay meteorological department signals door to door and move people into shelters before landfall.",
+        "preconditions": [
+          "A meteorological service able to issue track forecasts days ahead of landfall",
+          "A shelter stock within walking distance of exposed coastal villages",
+          "A volunteer corps, trained and equipped, kept active in years without a major storm"
+        ],
+        "travelled": "The volunteer-relay model shaped community early warning in Odisha and Myanmar. Copies tend to keep the sirens and drop the standing volunteer corps, which is the part that turns a warning into an evacuation."
+      }
+    },
+    {
+      "id": "bgd-padma-bridge",
+      "indicatorId": "large_project_delivery",
+      "iso3": "BGD",
+      "title": "Padma Multipurpose Bridge",
+      "claim": "Bangladesh's Bridge Authority completed the 6.15 km Padma road-rail bridge with government funds. It opened to traffic on 26 June 2022 at a reported actual cost of Tk 30,770 crore, six and a half years after the 31 December 2015 completion date in the 2010 Asian Development Bank appraisal, which had costed the project at $2,915 million.",
+      "metric": {
+        "name": "Actual project cost reported by the Bangladesh Bridge Authority",
+        "value": 30770.14,
+        "unit": "Tk crore (published as 3,077,013.55 lakh taka)",
+        "asOf": "2024-06"
+      },
+      "secondMetric": {
+        "name": "Appraised total project cost and completion date, ADB Report and Recommendation of the President (completion 31 Dec 2015)",
+        "value": 2915,
+        "unit": "US$ million, August 2010 prices",
+        "asOf": "2010-11"
+      },
+      "started": 2009,
+      "status": "concluded",
+      "source": {
+        "publisher": "Bangladesh Bridge Authority, Bridges Division, Ministry of Road Transport and Bridges: Padma Bridge project page",
+        "url": "https://bba.gov.bd/pages/static-pages/6922dc9a933eb65569e113a0",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "Neither source publishes an overrun percentage. Converting the ADB appraisal at the RRP's own rate of Tk 70.11 per dollar gives about Tk 20,440 crore, so the actual cost is about 51 percent higher. That figure is our computation, and it mixes a 2010 dollar estimate with a taka outturn after more than a decade of taka depreciation and inflation, so much of the gap is currency and price level, not overrun. The ADB estimate includes $99 million of financing charges and appraised a co-financed project. The bridge was built with government funds, as the Bridge Authority page states, after that financing structure changed, so the two figures do not describe the same contract package. Against the government's own revised estimates on the same page, the outturn is about 5 percent below the Tk 32,306 crore figure and about 2 percent above the Tk 30,193 crore figure, which is why the cost record depends on which baseline is chosen. The Bridge Authority page is itself inconsistent: it lists two different estimates under the third revised project document. The schedule slip is clearer: an appraised completion of December 2015 against road opening in June 2022 and project closure in June 2024. The started year is the project start the Bridge Authority states, before main construction contracts were let.",
+      "pattern": {
+        "mechanism": "After its external co-financing package changed, the government kept the Bridge Authority as executing agency and paid for the bridge from its own budget. The Authority revised the project document as costs rose and opened the road deck in 2022, with rail running on the lower deck since.",
+        "preconditions": [
+          "A fiscal position able to absorb a multi-billion-dollar project without concessional lenders",
+          "A specialised bridge authority with a design and supervision record from the earlier Jamuna Bridge",
+          "Political commitment strong enough to carry repeated cost and schedule revisions"
+        ],
+        "travelled": "Self-financing a flagship after donors withdraw is rare. Where it has been tried, the usual result is the one here: the asset was delivered, and its cost and schedule were judged against shifting baselines."
+      }
+    },
+    {
+      "id": "ukr-erecovery",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "UKR",
+      "title": "eRecovery (єВідновлення) housing compensation programme",
+      "claim": "Ukraine's government, through the Ministry for Development and the Diia digital platform, paid war-damage housing compensation to 231,681 families totalling UAH 119.1 billion by 10 July 2026. Of these, more than 153,000 families received repair payments, and more than 74,000 received certificates to buy replacement housing for homes that were destroyed.",
+      "metric": {
+        "name": "Families that received eRecovery compensation, cumulative",
+        "value": 231681,
+        "unit": "families",
+        "asOf": "2026-07-10"
+      },
+      "secondMetric": {
+        "name": "Total eRecovery compensation paid, cumulative",
+        "value": 119.1,
+        "unit": "UAH billion",
+        "asOf": "2026-07-10"
+      },
+      "started": 2023,
+      "status": "operating",
+      "source": {
+        "publisher": "Ministry for Development of Communities and Territories of Ukraine (Ministry for Recovery): eRecovery programme results",
+        "url": "https://mindev.gov.ua/news/rezultaty-roboty-prohramy-ievidnovlennia-stanom-na-ranok-10-lypnia-2026",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "These are the ministry's own running totals, published as press releases and not as a statistical series, and nothing independent audits them. The page shows recovery for households whose claims were accepted, not the share of all damaged housing compensated. For destroyed homes, more than 161,000 applications produced certificates for about 74,000 families, and only about 33,000 had bought a home, so most of the destroyed-housing caseload is unresolved. The page ties the repair payments to the World Bank HOPE project and the own-plot rebuilding payments to the Council of Europe Development Bank HOME project, and does not say who funds the certificates for destroyed homes, so how much of the delivery rests on external money is not shown here. The record evidences recovery after a war shock and says nothing about preparedness before one. Amounts are nominal hryvnias. The figure is the ministry's results update of 10 July 2026.",
+      "pattern": {
+        "mechanism": "The Rada created a statutory right to compensation for war-damaged housing. The ministry and the Ministry of Digital Transformation then ran claims, damage inspection and payment through the Diia app and the state register of damaged property, paying repair grants to bank accounts and issuing purchase certificates for destroyed homes.",
+        "preconditions": [
+          "A national digital identity and services app that most households already used",
+          "Property and damage registers that could be linked to verify claims",
+          "External concessional finance willing to fund payouts through government systems during a war"
+        ]
+      }
+    },
+    {
+      "id": "ukr-brave1",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "UKR",
+      "title": "Brave1 defence technology cluster",
+      "claim": "Ukraine's government set up the Brave1 cluster in 2023 under the Ministry of Digital Transformation. By September 2026 it had awarded more than 1,000 non-repayable grants worth UAH 6.2 billion to private defence-technology developers, whose products it tests with the armed forces and moves toward serial production.",
+      "metric": {
+        "name": "Defence technology development funded by Brave1 since 2023",
+        "value": 6.2,
+        "unit": "UAH billion",
+        "asOf": "2026-09"
+      },
+      "secondMetric": {
+        "name": "Grants awarded to Ukrainian defence developers since 2023",
+        "value": 1000,
+        "unit": "grants (published as more than 1,000)",
+        "asOf": "2026-09"
+      },
+      "started": 2023,
+      "status": "operating",
+      "source": {
+        "publisher": "Brave1 defence innovation cluster (state institution under the Ministry of Digital Transformation of Ukraine): news release",
+        "url": "https://brave1.gov.ua/en/news/1000-grants-brave1",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The source is the cluster reporting on itself in a news release, with a minister's quote. Neither the 6.2 billion nor the grant count is broken down by year or audited. The figures measure money and grants going out, not what was delivered: they do not show how many funded products reached serial production or the front. The impact claims on the page, a 1.7-point gain in technology readiness and 79 percent of firms saying they had no alternative, come from a survey of defence-tech manufacturers in a study by the BRDO Office for Effective Regulation and are self-reported. Grants are one-way subsidies, so the record evidences public funding of private developers plus joint testing, which is a thin reading of joint delivery. The standard grant programme accounts for UAH 2.3 billion of the total; most of the rest, UAH 3.7 billion, went to 34 competition projects for missiles, air defence and autonomy, so the money is concentrated in a few large awards. Wartime urgency and secrecy limit what can be verified.",
+      "pattern": {
+        "mechanism": "The Ministry of Digital Transformation, with the Ministry of Defence and the General Staff, set up a state cluster. It registers private developers, funds them through tiered grants, arranges battlefield testing and military feedback, and steers money toward priority areas the military defines.",
+        "preconditions": [
+          "An acute, shared national objective that private firms and the state both accept",
+          "A large pool of small engineering and software firms able to iterate quickly",
+          "A military willing to test immature products and return field data to developers"
+        ]
+      }
+    },
+    {
+      "id": "mar-noor-ouarzazate",
+      "indicatorId": "large_project_delivery",
+      "iso3": "MAR",
+      "title": "Noor-Ouarzazate solar complex",
+      "claim": "Morocco's solar agency MASEN had the Noor-Ouarzazate I, II and III concentrated solar plants (510 MW) built, grid-connected and fully operational by October 2018, at a completed capital cost of US$1,962 million, about 7 percent below the appraisal estimate of US$2,093 million. Noor II and III then generated an average of 739 GWh a year in 2019 to 2023, against the 1,144 GWh expected at appraisal.",
+      "metric": {
+        "name": "Completed capital cost of the Noor-Ouarzazate complex (appraisal estimate US$2,093 million)",
+        "value": 1962,
+        "unit": "US$ million",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Average annual generation of Noor-Ouarzazate II and III, against 1,144 GWh expected at appraisal",
+        "value": 739,
+        "unit": "GWh per year",
+        "asOf": "2019-2023"
+      },
+      "started": 2014,
+      "status": "operating",
+      "source": {
+        "publisher": "World Bank, Implementation Completion and Results Report ICR00043, Morocco Noor Solar Power Project (P131256, P164288), March 2025",
+        "url": "https://documents1.worldbank.org/curated/en/099032625151032430/pdf/BOSIB-873d2796-726f-4fe0-8dc2-23633ecfe6b1.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The lender graded its own project here. The World Bank financed it, and the report rates the outcome 'Moderately Unsatisfactory', with efficacy and efficiency both 'Modest'. The cost figure is the Bank's economic-analysis number for the Ouarzazate plants. A footnote says it nets a 14 percent saving at Noor I against an overrun at Noor III. On schedule the report gives no figure, only that Noor II and III were built 'with a delay of just a few months'. Cost was on budget, but output was not. Generation ran about 35 percent below the appraisal expectation. Noor II missed its peak-hour share, at 32 percent against a 41 percent target. The Noor III tower plant had two prolonged outages caused by cracks in its molten salt tank: September 2021 to December 2022, and April 2024 to at least October 2024, when the report says it was still offline. The second phase financed under the same operation, Noor-Midelt, had not started construction by the June 2024 closing date. The project therefore delivered 510 MW against a 1,310 MW target. The economic rate of return was negative without carbon benefits. Generation-mix forecasts did not materialise either: coal's share rose to almost 70 percent by 2020. The capital came largely from concessional international lenders, with about US$4.1 billion disbursed from all financiers. A copy of this design would need that finance. All figures are read from a 40-page PDF.",
+      "pattern": {
+        "mechanism": "MASEN, the state agency set up for the Moroccan Solar Plan, tendered the plants to private developers under power purchase agreements and sat between them and the national utility ONEE. A World Bank-financed cost mitigation mechanism covered the gap between the solar tariff and what the utility paid.",
+        "preconditions": [
+          "Concessional finance pooled from the World Bank, KfW, AfDB, EIB, the EU and AFD, coordinated by one national agency",
+          "A state buyer willing to absorb a tariff above the cost of grid power for the life of the contracts",
+          "A site with high direct irradiation where the state delivered land, access, water and grid evacuation before the developers arrived"
+        ],
+        "travelled": "Morocco tried the same structure at Noor-Midelt. Construction had not started by June 2024, and Noor-Midelt II was redesigned as photovoltaic plus battery storage, because PV and battery costs fell while CSP costs did not."
+      }
+    },
+    {
+      "id": "mar-fsec",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "MAR",
+      "title": "Catastrophe insurance regime and the Solidarity Fund against Catastrophic Events (FSEC)",
+      "claim": "Morocco's dual catastrophe insurance regime under Law 110-14 took effect in January 2020. It offered private cover to close to 9 million insured people and set up the FSEC, financed by a parafiscal levy, for the uninsured. After the September 2023 Al Haouz earthquake, the government deployed the FSEC for the first time, and it mobilised US$300 million to compensate uninsured victims.",
+      "metric": {
+        "name": "Compensation funding mobilised by the FSEC for uninsured victims of the Al Haouz earthquake (US$25 million from reserves plus US$275 million from sovereign reinsurance)",
+        "value": 300,
+        "unit": "US$ million",
+        "asOf": "2023"
+      },
+      "secondMetric": {
+        "name": "People insured against bodily injury in catastrophic events under the private scheme",
+        "value": 9,
+        "unit": "million people",
+        "asOf": "2022"
+      },
+      "started": 2020,
+      "status": "operating",
+      "source": {
+        "publisher": "World Bank, Implementation Completion and Results Report ICR00006503, Morocco Disaster Risk Management Development Policy Loan with a Catastrophe Deferred Drawdown Option (P168580), June 2024",
+        "url": "https://documents1.worldbank.org/curated/en/099061424160586881/pdf/BOSIB1b0738bcf0c91923d1942fe9bd1c73.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "Both sources are the World Bank reporting on reforms it financed: an FSEC programme-for-results loan and a Cat DDO whose prior actions were these reforms. The US$300 million is money mobilised, not money paid to households. The ICR says the compensation process was still under way in June 2024 and gives no count of victims compensated. Nothing here shows what share of the earthquake's losses the regime covered. The 9 million and 6 million figures are coverage estimates from a 2022 results brief, not counts of policies or payouts. The regime's one real test is a single earthquake. One of the Cat DDO's own result indicators was missed by a wide margin: Interior ministry officials trained on victim registration stood at 7.4 percent against a 90 percent target. The audit of the FSEC's internal controls had not been completed. The two World Bank documents disagree on the law's date: the ICR says Law 110-14 was promulgated in 2016, while the brief says it was adopted in 2018. Started is therefore the year the regime took effect. The headline figures are read from a 45-page PDF and a web page.",
+      "pattern": {
+        "mechanism": "The Ministry of Interior and the Ministry of Economy and Finance legislated a two-tier regime. Private insurers carry catastrophe cover for people who already hold policies. A public fund, paid for by a parafiscal levy and backed by sovereign reinsurance, gives basic compensation to the uninsured once the government declares an event a catastrophe.",
+        "preconditions": [
+          "An insurance market with a policy base wide enough to carry catastrophe cover, and a levy base to fund the public tier",
+          "An Interior ministry able to declare a catastrophe and register uninsured victims through local agents and an online portal",
+          "International reinsurance capacity and World Bank technical and financial backing for the design"
+        ]
+      }
+    },
+    {
+      "id": "rus-resolution-218",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "RUS",
+      "title": "Government Resolution 218 complex projects for high-tech production",
+      "claim": "Under Government Resolution 218 of 9 April 2010, Russia's Ministry of Science and Higher Education subsidised 41 joint firm-university complex projects in their R&D stage in 2024, from the 14th and 15th selection rounds. Federal funding was 2.708 billion rubles, and firms put in 4.14 billion rubles of their own (156 percent of the budget funds). The ministry reports 161 technologies developed and handed over to production by January 2025.",
+      "metric": {
+        "name": "Complex projects receiving state support in the year (14th and 15th selection rounds)",
+        "value": 41,
+        "unit": "projects",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Extrabudgetary funds raised from participating firms (156% of budget funds)",
+        "value": 4.14,
+        "unit": "billion rubles",
+        "asOf": "2024"
+      },
+      "started": 2010,
+      "status": "operating",
+      "source": {
+        "publisher": "Ministry of Science and Higher Education of the Russian Federation, report on the ministry's results for 2024 (June 2025)",
+        "url": "https://minobrnauki.gov.ru/upload/2025/07/%D0%94%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The ministry is reporting on its own programme in its own annual report, and none of it is audited. The figures are counts of subsidised projects and money, not a measure of how much research firms and universities do together. The 156 percent co-funding largely reflects the rule itself, which requires each firm to match the subsidy at least one for one. The report's cumulative total of 133 projects cannot be reconciled, from this document, with 15 selection rounds since 2010, so the programme's scale over time is unclear. Whether output or new projects per year have grown or shrunk is not shown. The '161 technologies transferred' figure is self-defined and does not show sales. The terms of the scheme and the 2010 to 2020 funding total come from the operator's site, which a private contractor runs. That site says that from 2025 the projects run inside a departmental project of the state programme for scientific and technological development. That reorganisation could change the scheme, and this record does not track it. The figures are read from a 3 MB Russian-language PDF. The figures say nothing about the effect of post-2022 sanctions on the firms involved.",
+      "pattern": {
+        "mechanism": "The Russian government subsidises the manufacturer rather than the university. A firm wins a competitive subsidy to commission R&D from a Russian university or state research institute, co-funds it at least one for one, and must build the production line and sell the product from its own resources.",
+        "preconditions": [
+          "Manufacturers with enough capital to match the subsidy and build production",
+          "Universities and state institutes with applied R&D capacity that firms are willing to contract",
+          "A federal budget line sustained across 15 selection rounds since 2010"
+        ]
+      }
+    },
+    {
+      "id": "egy-takaful-karama",
+      "indicatorId": "institutional_responsiveness",
+      "iso3": "EGY",
+      "title": "Takaful and Karama cash transfer programme",
+      "claim": "Egypt's Ministry of Social Solidarity launched the Takaful and Karama cash transfers in early 2015 and expanded coverage from an initial 1.5 million to 4.675 million households (about 17 million people) by project close in 2024, revising the eligibility threshold and adding top-ups in response to COVID-19 and later inflation, while the cash transfer budget rose from EGP 3.5 billion in 2015 to EGP 41 billion in 2024.",
+      "metric": {
+        "name": "Households receiving Takaful and Karama cash transfers",
+        "value": 4.675,
+        "unit": "million households",
+        "asOf": "2023-12"
+      },
+      "secondMetric": {
+        "name": "Budget allocation for cash transfers in 2024 (from EGP 3.5 billion in 2015)",
+        "value": 41,
+        "unit": "EGP billion, nominal",
+        "asOf": "2024"
+      },
+      "started": 2015,
+      "status": "operating",
+      "source": {
+        "publisher": "World Bank, Implementation Completion and Results Report, Strengthening Social Safety Net Project (P155558)",
+        "url": "https://documents1.worldbank.org/curated/en/099060624125531275/pdf/BOSIB169cd52710ff1abfc17842717d1e22.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The construct is the speed of rule and programme change, and the headline number is coverage, which is scale rather than speed. The ICR describes the COVID-19 response (a revised proxy-means-test threshold, wider coverage, Meeza cards, top-ups) in prose without dates or a count of households added by the revision, so how fast the rules moved is not measured here. The 4.675 million includes legacy Daman social pension beneficiaries absorbed into the programme by consolidation, so part of the growth is relabelling rather than new reach. The budget figure is nominal Egyptian pounds across years of high inflation and two large devaluations, so the 12-fold rise overstates the real increase. Coverage still reaches only about 28 percent of the poorest quintile. The source is the World Bank's own completion report on a project it financed with US$900 million, read from a PDF, and the counts are administrative figures reported by the ministry.",
+      "pattern": {
+        "mechanism": "The Ministry of Social Solidarity built a proxy-means-tested registry and a cash transfer programme with World Bank financing, then used the registry's threshold and benefit levels as the levers it moved when COVID-19, inflation and devaluation hit.",
+        "preconditions": [
+          "A national social registry, which reached 11.3 million registered households, to retarget against",
+          "A payment rail through post offices and later Meeza cards that could absorb more beneficiaries without a new system",
+          "Fiscal room created by the 2014 energy subsidy reform, which the programme was launched to offset"
+        ]
+      }
+    },
+    {
+      "id": "egy-renewable-fit",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "EGY",
+      "title": "Renewable energy feed-in tariff programme and Benban",
+      "claim": "Egypt's Ministry of Electricity and Renewable Energy took private sector-owned renewable generation from 0 MW in October 2015 to 1,500 MW at financial closure by the end of FY2017/18 under its feed-in tariff programme, with about US$2 billion of private investment, much of it in the Benban solar park.",
+      "metric": {
+        "name": "Private sector-owned renewable energy capacity reaching financial closure",
+        "value": 1500,
+        "unit": "MW",
+        "asOf": "FY2017/18 (reported at June 2019)"
+      },
+      "started": 2015,
+      "status": "concluded",
+      "source": {
+        "publisher": "World Bank, Implementation Completion and Results Report, Egypt First, Second and Third Fiscal Consolidation, Sustainable Energy and Competitiveness Programmatic DPF",
+        "url": "https://documents1.worldbank.org/curated/en/857651602606636925/pdf/Egypt-First-Second-and-Third-Fiscal-Consolidation-Sustainable-Energy-and-Competitiveness-Programmatic-Development-Policy-Financing.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The indicator was softened mid-programme: DPF1 asked for 1,500 MW commissioned, and DPF2 redefined it as 1,500 MW at financial closure, so the number shows contracts financed, not plants generating, and the ICR's statement that Benban was then the world's fourth-largest solar plant sits in a footnote that says it 'promises' capacity. Most developers and lenders were foreign, and the deal flow leaned on IFC debt (US$653 million) and MIGA risk insurance (US$210 million), so how much of the collaboration was the Egyptian state's own capacity and how much was World Bank Group de-risking cannot be separated. The figure does not show the tariff cost carried by the state offtaker, or that the feed-in tariff was later replaced by other procurement. The source is the World Bank's own evaluation of operations whose results framework included this indicator, and the number is read from a PDF results table.",
+      "pattern": {
+        "mechanism": "The Ministry of Electricity and Renewable Energy legislated a renewable energy law in 2014, set a feed-in tariff by cabinet decree, licensed private developers through the regulator and allocated land in one desert park, Benban, so many small IPPs could share grid connection and permitting.",
+        "preconditions": [
+          "A power deficit (5,540 MW in FY15) that made new private capacity politically urgent",
+          "A state offtaker whose payment risk international guarantors were willing to cover",
+          "Desert land under state control with high irradiation, allocated as one park"
+        ]
+      }
+    },
+    {
+      "id": "uzb-pap-angren",
+      "indicatorId": "large_project_delivery",
+      "iso3": "UZB",
+      "title": "Pap-Angren railway and Kamchik tunnel",
+      "claim": "Uzbekistan's government and its state railway UTY began building the 124 km Pap-Angren line with a 19 km tunnel in mid-2013 and finished the works within nine months of the World Bank loan's 2015 effectiveness, with the main infrastructure costing US$1,475.68 million against an estimate of US$1,438.75 million, about 2.6 percent over, and benefits flowing about 18 months earlier than appraisal assumed.",
+      "metric": {
+        "name": "Actual cost of railway main infrastructure (line and tunnel)",
+        "value": 1475.68,
+        "unit": "US$ million",
+        "asOf": "2020 (project close)"
+      },
+      "secondMetric": {
+        "name": "Original estimated cost of railway main infrastructure",
+        "value": 1438.75,
+        "unit": "US$ million",
+        "asOf": "2015 (appraisal)"
+      },
+      "started": 2013,
+      "status": "concluded",
+      "source": {
+        "publisher": "World Bank, Implementation Completion and Results Report, Pap-Angren Railway Project (P146328)",
+        "url": "https://documents1.worldbank.org/curated/en/750211612480146600/pdf/Uzbekistan-Pap-Angren-Railway-Project.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The overrun of 2.6 percent is our computation from two figures in the ICR's cost table. The baseline is weak: construction ran simultaneously with detailed design and cost estimation, and by the Bank's appraisal in late 2014 the works were already very advanced, so the estimate was set when much of the cost was known, which flatters the overrun. The ICR gives no planned and actual completion dates for the line itself, only that works finished within nine months of loan effectiveness and benefits began about 18 months early. The 19 km tunnel was built by China Rail and Tunnel Company with China Exim Bank financing, so not all of the delivery was Uzbek institutional capacity, though the rail line was built by UTY's own workforce. The World Bank's own components went badly: the signaling contract was cancelled for misprocurement, US$72.87 million of the loan was cancelled, resettlement compliance was downgraded to moderately unsatisfactory, and UTY declined a second user survey. Passenger demand came in lower than projected. The source is the World Bank evaluating a project it part-financed (about 12 percent of cost), read from a PDF.",
+      "pattern": {
+        "mechanism": "The Cabinet of Ministers decreed the line and put it on a fast track, with the state railway UTY building the track with its own crews and equipment while design proceeded, and a Chinese contractor driving the tunnel in parallel.",
+        "preconditions": [
+          "A state railway that had already built 640 km of new line with its own workforce",
+          "Central authority able to order design and construction to run at once, and to compel the railway to share data",
+          "Concessional tunnel financing from China Exim Bank"
+        ]
+      }
+    },
+    {
+      "id": "uzb-renewable-ipp",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "UZB",
+      "title": "Competitive renewable IPP programme, from Navoi Scaling Solar",
+      "claim": "Uzbekistan's government signed its first competitively tendered solar PPP in November 2019 at US¢2.679 per kWh, the 100 MW Navoi plant began commercial operation in December 2021, and by January 2024 operational solar PV capacity in the country stood at 1,497 MW, with agreements for a further 5,677 MW of solar and 5,100 MW of wind by 2030.",
+      "metric": {
+        "name": "Total operational solar PV generation capacity in Uzbekistan",
+        "value": 1497,
+        "unit": "MW",
+        "asOf": "2024-01"
+      },
+      "secondMetric": {
+        "name": "Winning fixed offtake tariff in the first competitive solar PPP (Navoi, 25 years)",
+        "value": 2.679,
+        "unit": "US cents per kWh",
+        "asOf": "2019"
+      },
+      "started": 2019,
+      "status": "operating",
+      "source": {
+        "publisher": "World Bank, Implementation Completion and Results Report, Uzbekistan Navoi Scaling Solar IPP Project (P170598)",
+        "url": "https://documents1.worldbank.org/curated/en/099100424105533434/pdf/BOSIB1bf67304e0ae1b40d15eec36f6d9dd.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The 1,497 MW is all operational solar, and the ICR's own table of operating projects includes 400 MW from Gezhouba procured non-competitively, so not every megawatt came through the competitive PPP route. One foreign developer, Masdar, holds most of the competitive capacity listed (Navoi, Scaling Solar 2, Sherobod), so the collaboration is concentrated. Most deals carry World Bank Group, ADB or EBRD payment guarantees, so the state and multilateral lenders carry offtake risk and the number cannot separate Uzbek institutional capacity from multilateral de-risking. Capacity is nameplate, not generation, and solar remains a small share of a system of roughly 14 GW of mostly gas-fired plant. The 5,677 MW and 5,100 MW are agreements, not delivery. The source is the World Bank evaluating its own guarantee operation.",
+      "pattern": {
+        "mechanism": "The government, through the energy ministry and a new PPP agency, ran a World Bank Group Scaling Solar tender with standard contracts and a sovereign support agreement, and used the record low tariff it produced to raise its renewable target and repeat the tender model.",
+        "preconditions": [
+          "A PPP law and a PPP agency created in 2019 to sign and manage the contracts",
+          "Multilateral payment guarantees covering a state offtaker with below-cost-recovery tariffs",
+          "An electricity tariff reform commitment that made long-term offtake credible to bidders"
+        ]
+      }
+    },
+    {
+      "id": "cod-pro-routes",
+      "indicatorId": "large_project_delivery",
+      "iso3": "COD",
+      "title": "Pro-Routes high-priority road reopening and maintenance",
+      "claim": "Between October 2008 and June 2020 the Ministry of Infrastructure's Cellule Infrastructure reopened 2,752 of a targeted 2,762 km of high-priority earth roads across five provinces and maintained 3,335 km, finishing 3.6 percent over the financing-agreement total and 28 months behind the combined original schedule.",
+      "metric": {
+        "name": "Total project cost at closure against the values in the financing agreements (parent project plus two additional financings)",
+        "value": 3.6,
+        "unit": "% overrun",
+        "asOf": "2020"
+      },
+      "secondMetric": {
+        "name": "Implementation delay against the combined original timeline of the three financings (113 months planned, about 141 actual)",
+        "value": 28,
+        "unit": "months",
+        "asOf": "2020"
+      },
+      "started": 2008,
+      "status": "concluded",
+      "source": {
+        "publisher": "World Bank, Implementation Completion and Results Report, High Priority Reopening and Maintenance Project (P101745)",
+        "url": "https://documents1.worldbank.org/curated/en/527491637597854751/pdf/Congo-Democratic-Republic-of-High-Priority-Reopening-and-Maintenance-Project.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The source is the World Bank's own completion report on a project it financed, and the PDF has to be read (table 3 and paragraph 50, pages 19-20). IDA carried 61.6 percent of the money and DFID, through World Bank-administered trust funds, 24.2 percent; the government's own Road Maintenance Fund put in 14.2 percent, so the delivery is Congolese institutions spending donor money under Bank supervision. The 3.6 percent total overrun is measured against financing agreements that were enlarged twice, so it does not compare with the 2008 appraisal cost (US$123 million for 1,800 km); the road works came in 22.6 percent under budget while institution building ran 1,656 percent and the environmental and social programme 235 percent over. The 28-month delay includes a 12-month suspension of disbursements in 2017-18 for non-compliance with environmental and social obligations, including gender-based violence, after an Inspection Panel investigation. The roads are low-standard reopened earth roads, about one fifth of the 15,800 km priority network; the ICR says ten kilometres are unaccounted for, rates M&E quality Modest, and says road-sector management and the maintenance fund's allocation remain opaque. Nothing in the report shows whether the roads stayed open after June 2020.",
+      "pattern": {
+        "mechanism": "The Ministry of Infrastructure's project unit (Cellule Infrastructure) bought the cheapest passable standard, spot-improved earth roads, through output-based contracts and the Office des Routes, so that mileage, not finish quality, set the pace and kept civil works inside budget.",
+        "preconditions": [
+          "Concessional donor finance covering most of the cost and a donor willing to extend the closing date four times",
+          "A road maintenance fund created in 2009 to keep reopened sections passable",
+          "Enough security on the selected corridors for contractors to work"
+        ]
+      }
+    },
+    {
+      "id": "irq-eodp",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "IRQ",
+      "title": "Emergency Operation for Development, reconstruction of areas affected by terroristic operations",
+      "claim": "From September 2015 Iraqi ministries, governorates and the Reconstruction Fund for Areas Affected by Terroristic Operations used two World Bank loans totalling US$750 million (IBRD-85200, US$350 million, and IBRD-87930, US$400 million), of which US$610 million was disbursed by 30 November 2024, to rebuild water, power, roads, bridges and railway in five governorates, reaching 5 million direct beneficiaries by March 2024, with the first loan's closing date pushed six years past the original June 2020.",
+      "metric": {
+        "name": "Direct project beneficiaries",
+        "value": 5000000,
+        "unit": "people",
+        "asOf": "2024-03"
+      },
+      "secondMetric": {
+        "name": "Extension of the first loan's closing date beyond the original (30 June 2020 to 30 June 2026), computed",
+        "value": 72,
+        "unit": "months",
+        "asOf": "2025-01"
+      },
+      "started": 2015,
+      "status": "operating",
+      "source": {
+        "publisher": "World Bank, Implementation Status and Results Report, Emergency Operation for Development (P155732), sequence 19, archived 12 January 2025",
+        "url": "https://documents1.worldbank.org/curated/en/099011225100518701/text/P155732-dafab44d-bb7c-4f26-a424-3a79c8931324.txt",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The figures come from a World Bank supervision report on its own loan, compiled from implementing agencies' reporting; procurement and M&E are rated Moderately Unsatisfactory in the same report, and the beneficiary count is a 'direct beneficiaries' definition that counts everyone in a served area, so it can overlap across water, power and road indicators. The project is still open, so nothing here is a completion figure, and the 72-month extension is our computation from the table, not a published delay figure. The shock is war, not a natural hazard, and the record evidences recovery, not preparation. The money is World Bank lending the government must repay, implemented by Iraqi agencies under Bank supervision, and the US$68 million repurposed to railway works in 2024 shows the scope moved with time. It covers five governorates, not the country, and the report gives no measure of whether rebuilt services were kept running after handover.",
+      "pattern": {
+        "mechanism": "The federal government channelled World Bank loans through line ministries, governorates and a dedicated reconstruction fund, rebuilding basic services in retaken cities sub-project by sub-project rather than through one master plan.",
+        "preconditions": [
+          "Military recovery of the territory before any rebuilding could start",
+          "Sovereign borrowing capacity and an international lender willing to extend the closing date repeatedly",
+          "A reconstruction fund and planning ministry able to register and approve hundreds of sub-projects"
+        ]
+      }
+    },
+    {
+      "id": "irn-targeted-subsidies",
+      "indicatorId": "institutional_responsiveness",
+      "iso3": "IRN",
+      "title": "Targeted Subsidy Reform cash transfer, and its erosion",
+      "claim": "Iran's government replaced universal fuel and bread subsidies with a universal cash transfer of 455,000 rials (about US$40) per person per month from late 2010, then left the transfer unindexed, so that by 2019 its purchasing power had fallen to less than US$6 per person before a top-up was added in late 2019.",
+      "metric": {
+        "name": "Purchasing power of the per-person cash transfer, 2019 (published as 'less than')",
+        "value": 6,
+        "unit": "US$ per person (upper bound)",
+        "asOf": "2019"
+      },
+      "secondMetric": {
+        "name": "Cash transfer per person per month at launch",
+        "value": 40,
+        "unit": "US$ per person per month (about 455,000 rials)",
+        "asOf": "2010"
+      },
+      "started": 2010,
+      "status": "eroded",
+      "source": {
+        "publisher": "World Bank, Poverty Global Practice, Middle East and North Africa: Islamic Republic of Iran poverty diagnostic (November 2023)",
+        "url": "https://documents1.worldbank.org/curated/en/099110623175541902/pdf/P1777150fa1dcd02108b55086af5f3268f5.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The World Bank restates every figure here from secondary sources (Salehi-Isfahani et al. 2015, Enami and Lustig 2018, UNICEF 2019). It does not compute them, and no Iranian official series is cited. The two dollar figures are not comparable: US$40 converts at the 2010 rate, the 2019 figure is undated within the year and published only as 'less than US$6', and the rial's collapse after 2018 inflates the fall in dollar terms. The 'nearly in half' real decline from 2012 to 2016 is the cleaner measure, but it is published as prose and not as a number. The reversal is partial. The transfer still reached about 90 percent of households, and the government added a top-up in late 2019 and COVID-19 payments in 2020. The construct asks how fast rules change. This record shows a fast rule change in 2010 followed by about nine years in which the transfer was not changed as inflation rose. It is evidence of the second half, not a measure of speed. The figures are read from a PDF.",
+      "pattern": {
+        "mechanism": "The Iranian government raised domestic energy and bread prices in one move and paid the savings back as a flat universal cash transfer. It then left the transfer nominal, so inflation dissolved the benefit while energy prices drifted back toward subsidy.",
+        "preconditions": [
+          "A national population and household register able to pay nearly every resident within months",
+          "Large implicit energy subsidies whose removal freed fiscal room for a transfer",
+          "A fiscal position, later hit by sanctions and inflation, that made indexing the transfer unaffordable"
+        ],
+        "travelled": "Cited by the World Bank as a model for Angola's 2023 fuel subsidy reform (Policy Research Working Paper 10939). The retellings stress the 2010 compensation and rarely the later erosion."
+      }
+    },
+    {
+      "id": "irn-eerp-2002",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "IRN",
+      "title": "Earthquake Emergency Recovery after the 2002 Changureh-Avaj earthquake",
+      "claim": "After the April 2002 earthquake in Kermanshah and the June 2002 earthquake in Qazvin, Zanjan and Hamedan, Iran's Ministry of Interior project unit and the Housing Foundation repaired or rebuilt about 24,000 damaged houses to seismic standards by June 2009, using government funds and a US$180 million World Bank loan, of which US$174.9 million was disbursed.",
+      "metric": {
+        "name": "Damaged housing units repaired and reconstructed in compliance with seismic standards",
+        "value": 24000,
+        "unit": "housing units",
+        "asOf": "2009-06-30"
+      },
+      "secondMetric": {
+        "name": "Houses damaged by the June 2002 earthquakes",
+        "value": 40727,
+        "unit": "houses",
+        "asOf": "2002"
+      },
+      "started": 2002,
+      "status": "concluded",
+      "source": {
+        "publisher": "World Bank, Implementation Completion and Results Report ICR00001192, Earthquake Emergency Recovery Project (P080802, Loan IBRD-46970)",
+        "url": "https://documents1.worldbank.org/curated/en/388991468037749464/pdf/ICR11920P0808010disclosure091241101.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The figure is self-reported by the Bank and the borrower's project unit in a completion report, and no independent audit of the houses is cited. The report contradicts itself: the results table gives 24,000 actual against a 24,200 target, the narrative says around 24,200, and a footnote gives an appraisal estimate of 29,232. The project financed materials (steel, cement and equipment) for reconstruction rather than building every house, so the count is of houses it supplied. About 59 percent of the 40,727 damaged houses are covered. The response was regional, in four provinces. It was not national, and it is not the Bam 2003 reconstruction that Iranians would name first. Schedule slipped: the loan closing moved from June 2007 to June 2009, and the indicator was achieved six months after its target date. The disaster insurance component was dropped from Bank financing at the government's request. The evidence of preparedness is limited to seismic-code training for 350 staff against a target of 200 and a public awareness campaign, with no later test against a subsequent earthquake. The figures are read from a PDF.",
+      "pattern": {
+        "mechanism": "Iran's Ministry of Interior set up a project unit and handed housing reconstruction to the Housing Foundation, which tied reconstruction materials to compliance with seismic codes and trained local engineers and masons to enforce them.",
+        "preconditions": [
+          "A standing national housing body (the Housing Foundation) with rural reach and a reconstruction mandate",
+          "Government funds already committed before external finance arrived",
+          "Access to multilateral lending, which later sanctions closed off"
+        ],
+        "travelled": "The Housing Foundation reused the model of owner-driven rebuilding to code after Bam in 2003, with a World Bank loan approved in 2004."
+      }
+    },
+    {
+      "id": "ago-fuel-subsidy-reform",
+      "indicatorId": "institutional_responsiveness",
+      "iso3": "AGO",
+      "title": "Fuel subsidy removal, and its erosion",
+      "claim": "Angola's government removed gasoline and diesel subsidies by raising retail prices at the end of 2015, but subsidies returned as costs rose, reaching 3.7 percent of GDP in 2023 from 1.5 percent in 2019. A second reform raised gasoline prices 87.5 percent in June 2023, but the kwanza's depreciation took the gasoline subsidy from 39 percent of the market price in June back to 65 percent by October 2023.",
+      "metric": {
+        "name": "Gasoline subsidy as a share of the market price, after depreciation",
+        "value": 65,
+        "unit": "% of market price",
+        "asOf": "2023-10"
+      },
+      "secondMetric": {
+        "name": "Gasoline subsidy as a share of the market price, after the June 2023 price rise",
+        "value": 39,
+        "unit": "% of market price",
+        "asOf": "2023-06"
+      },
+      "started": 2015,
+      "status": "eroded",
+      "source": {
+        "publisher": "World Bank, Policy Research Working Paper 10939, Fuel Subsidy Reforms: Lessons from the Literature and Assessing the Price Shock for Different Sectors through an Input-Output Table in the Case of Angola (October 2024)",
+        "url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/1c21cce0-4a8f-48f3-b204-86fc30610d9f/content",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "This is a World Bank working paper, which disclaims representing the Bank's view. Every subsidy share is the authors' own estimate from IGAPE and INE data, not a published government series. No figure is given for the 2015 removal itself: the source only says subsidies were removed and then reemerged. The 2019 to 2023 rise is in part an oil price and exchange rate effect, so it measures exposure as much as inaction. The October 2023 figure reflects a 40 percent depreciation in May and June 2023, which no price rule could have tracked. The government did act again: the gasoline rise in June 2023, a 1 June 2023 decree setting out a multiphase reform, and a diesel rise from 135 to 200 kwanzas in April 2024. Between the two steps retail prices remained constant until May 2023, and the June 2023 decree was the first since 2016. The figures are read from a PDF.",
+      "pattern": {
+        "mechanism": "Angola's government raised administered fuel prices in discrete steps, in 2015 and again from June 2023, while leaving them fixed in kwanza between steps. Each devaluation or oil price rise then rebuilt the subsidy the step had removed.",
+        "preconditions": [
+          "Administered retail fuel prices set by decree with no automatic adjustment",
+          "A currency exposed to oil price shocks and sharp devaluation",
+          "Fuel subsidies acting as the de facto social spending before a cash transfer (Kwenda) could reach the poor"
+        ],
+        "travelled": "The 2023 reform drew on the 2010 Iranian and Indonesian lessons cited in the same paper: compensate before raising prices. Kwenda was meant to be that compensation, but the same paper says it has failed to reach enough people."
+      }
+    },
+    {
+      "id": "ago-lobito-concession",
+      "indicatorId": "public_private_collaboration",
+      "iso3": "AGO",
+      "title": "Lobito Corridor rail concession",
+      "claim": "Angola's Ministry of Transport signed a 30-year concession with Lobito Atlantic Railway, in which Mota-Engil holds equity, on 4 November 2022 to rehabilitate, operate and maintain about 1,300 km of the Benguela line from Lobito to Luau and the Lobito mineral terminal. By September 2026 the concessionaire was operating the corridor with about 945 workers, 529 of them transferred from state rail and port operators.",
+      "metric": {
+        "name": "Rail infrastructure operated, maintained and modernised under the concession",
+        "value": 1300,
+        "unit": "km",
+        "asOf": "2026-09-10"
+      },
+      "secondMetric": {
+        "name": "Workers employed by the concessionaire, of whom 529 transferred from state-owned operators",
+        "value": 945,
+        "unit": "workers",
+        "asOf": "2026-09-10"
+      },
+      "started": 2022,
+      "status": "operating",
+      "source": {
+        "publisher": "Multilateral Investment Guarantee Agency (World Bank Group), press release of 10 September 2026",
+        "url": "https://www.miga.org/press-release/miga-mota-engil-partner-support-modernization-angolas-railway-system-creating-jobs",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "Neither figure measures delivery. 1,300 km is the length of an asset handed over, and the press release does not say what was rehabilitated, what freight moved or what the concessionaire invested. The publisher is a guarantor promoting its own transaction, and the April 2024 summary that dates the contract was written by the concessionaire. 2022 is the contract date, and the source does not say when operations passed to the concessionaire. The concession is four years into 30, so it shows that the state handed over operations, not that the partnership delivered. Passenger service stays with the state operator. The corridor is driven by DRC and Zambian copper exports and by US and EU strategic finance, so the national objective it serves is as much foreign as Angolan. It is one contract, and the construct asks for the frequency and scale of public-private delivery across the country.",
+      "pattern": {
+        "mechanism": "Angola's Ministry of Transport tendered the freight operation of a state railway to a private consortium for 30 years, keeping passenger service public and moving state rail and port staff into the concession company.",
+        "preconditions": [
+          "Mineral traffic from the DRC and Zambia large enough to attract a commodity trader as operator",
+          "Political risk cover and development finance (MIGA, DFC, AfDB) to make a 30-year private commitment bankable"
+        ]
+      }
+    },
+    {
+      "id": "uga-fal",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "UGA",
+      "title": "Functional Adult Literacy programme, and its decline",
+      "claim": "Uganda's Ministry of Gender, Labour and Social Development enrolled 434,664 adult learners in its government-funded Functional Adult Literacy programme in 2004, and enrolment fell to 88,533 by 2007.",
+      "metric": {
+        "name": "Learners enrolled in government-funded Functional Adult Literacy (FAL)",
+        "value": 88533,
+        "unit": "learners",
+        "asOf": "2007"
+      },
+      "secondMetric": {
+        "name": "Learners enrolled in government-funded FAL in 2004, the high of the 1997-2007 table",
+        "value": 434664,
+        "unit": "learners",
+        "asOf": "2004"
+      },
+      "started": 1992,
+      "status": "eroded",
+      "source": {
+        "publisher": "Republic of Uganda, Ministry of Gender, Labour and Social Development, national report on adult learning and education for CONFINTEA VI, hosted by the UNESCO Institute for Lifelong Learning",
+        "url": "https://uil.unesco.org/fileadmin/multimedia/uil/confintea/pdf/National_Reports/Africa/Africa/Uganda.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The series stops in 2007. The report is a 2008 ministry submission to UNESCO, and no later official FAL enrolment series was found or checked. Whether it recovered later, under this or another name, is not shown, so the eroded status describes 2004 to 2007 and nothing after. 2004 is the high of one eleven-year table, and the jump from about 149,000 in 2001 to 358,000 in 2002 suggests a one-off funding push rather than a stable peak. The table's printed total (2,090,340) does not match the 2,091,340 in the text above it. The figures are the ministry's own administrative counts, taken from a PDF, with no independent check. A count of literacy learners is much narrower than the indicator's construct, the share of all adults in any education or training. The report's national figures show 43% of adults had some primary schooling, so not every enrolee was starting from zero. It also says FAL relied on UNICEF, UNESCO and DVV funding that stopped around 1999, so part of the swing may come from donor funding rather than from state delivery. The same report's release table shows government FAL releases of Shs 3.61bn a year in 2002/03-2004/05 and 3.08bn in 2005/06-2006/07, a cut of about 15% against a fall in enrolment of about 80%, so the cause of the decline is not shown. Elsewhere the report dates the government's re-launch budget to 1991. The start year is a re-launch: there was adult literacy work before 1992, and FAL began as a pilot in eight districts.",
+      "pattern": {
+        "mechanism": "The Ministry of Gender, Labour and Social Development ran adult literacy classes through district community development officers and volunteer instructors. Enrolment fell after 2004 while government releases fell only from Shs 3.61bn to 3.08bn a year, so the source does not explain the fall.",
+        "preconditions": [
+          "District community development staff in every local government",
+          "Volunteer instructors willing to teach for little or no pay",
+          "A protected budget line that outlasts donor and poverty-fund cycles"
+        ]
+      }
+    },
+    {
+      "id": "uga-karuma",
+      "indicatorId": "large_project_delivery",
+      "iso3": "UGA",
+      "title": "Karuma Hydropower Project",
+      "claim": "Uganda began building the 600 MW Karuma hydropower station in August 2013 against a 60-month plan. By the end of June 2023 the Auditor General reported it 54 months late at 99.9 percent physical progress, and UEGCL records commercial operation from 12 June 2024.",
+      "metric": {
+        "name": "Schedule overrun of Karuma HPP at the end of FY2022/23 (actual duration 114 months against a 60-month plan)",
+        "value": 54,
+        "unit": "months",
+        "asOf": "2023-06"
+      },
+      "secondMetric": {
+        "name": "Planned construction duration of Karuma HPP",
+        "value": 60,
+        "unit": "months",
+        "asOf": "2013"
+      },
+      "started": 2013,
+      "status": "concluded",
+      "source": {
+        "publisher": "Office of the Auditor General of Uganda, Report of the Auditor General to Parliament for the Financial Year ended 30th June 2023",
+        "url": "https://www.oag.go.ug/storage/megareports/AGPRT@CON2023.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The record carries schedule performance only. No official baseline-against-outturn cost figure was found: UEGCL's page states a project cost of US$1.398 billion with no original budget beside it, so cost overrun is unknown. The Auditor General names USD 30 million of interest claims on delayed payments, which is one cost of the delay and not the overrun. The 54-month figure is measured at June 2023, when the plant was not yet in commercial operation. Commercial operation on 12 June 2024 implies a total overrun near 66 months, more than double the plan, but that figure is our computation from two sources. The 60-month plan is the Auditor General's statement of the plan, and the contract itself was not checked. The same report finds that the community development projects promised with the dam were largely unfunded (UGX 3 billion of 38.3 billion received) and that resettlement lagged, so the delivery is incomplete beyond the powerhouse. The record says nothing about how the plant has performed since commissioning.",
+      "pattern": {
+        "mechanism": "The Ministry of Energy and Mineral Development and UEGCL let the dam as a single turnkey EPC contract to a foreign state contractor, financed mostly by an export-credit loan. That handed design and construction to the contractor, and land, resettlement and transmission stayed with Ugandan agencies, where much of the delay arose.",
+        "preconditions": [
+          "An export-credit lender willing to finance most of the cost against a sovereign guarantee",
+          "A state land acquisition and resettlement process able to keep pace with an EPC contractor, which it did not",
+          "Transmission lines built in step to evacuate the power"
+        ]
+      }
+    },
+    {
+      "id": "tza-icbae",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "TZA",
+      "title": "Integrated Community-Based Adult Education (MEMKWA), and its decline",
+      "claim": "Tanzania's Ministry of Education ran Integrated Community-Based Adult Education in all 25 mainland regions from 1993. Enrolment peaked at 1,900,255 learners in 2005 and fell to 786,602 by 2014.",
+      "metric": {
+        "name": "Learners enrolled in ICBAE learning centres",
+        "value": 786602,
+        "unit": "learners",
+        "asOf": "2014"
+      },
+      "secondMetric": {
+        "name": "Learners enrolled in ICBAE learning centres at the 2005 high of the 2000-2014 table",
+        "value": 1900255,
+        "unit": "learners",
+        "asOf": "2005"
+      },
+      "started": 1993,
+      "status": "eroded",
+      "source": {
+        "publisher": "UNESCO Institute for Lifelong Learning, LitBase effective practices database: Integrated Community-Based Adult Education (ICBAE), United Republic of Tanzania",
+        "url": "https://www.uil.unesco.org/en/litbase/integrated-community-based-adult-education-icbae-united-republic-tanzania",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The table exists only as an image on the UNESCO page, so the numbers were read off a picture and a machine cannot check them. UNESCO's page is a case-study write-up that presents the programme as good practice, and the figures are ministry figures republished without a stated source. The ministry's own 2008 CONFINTEA report prints 1,900,225 for 2004/05, but its male and female columns sum to UNESCO's 1,900,255, so the difference is a ministry arithmetic slip; the ministry's 1999/2000 and 2000/2001 rows reappear as UNESCO's 2000 and 2001, so UNESCO's year labels may be the second year of a school year. The ministry labels its table 'participation in literacy programmes', so UNESCO may have attached the ICBAE name to all adult literacy participation. The series has gaps (2002 to 2004 are missing) and ends in 2014, and later years were not checked, so the eroded status describes 2005 to 2014 only. 2014 ticked up from 734,950 in 2013, and the fall is not monotonic. A count of literacy learners is far narrower than the indicator's construct, the share of all adults in any education or training. The programme had no standardized tests, so the count says nothing about what learners gained.",
+      "pattern": {
+        "mechanism": "The Ministry of Education ran literacy circles of up to 30 learners in primary school buildings in the evenings, staffed by facilitators and coordinated through local government. Enrolment fell by more than half within a decade as funding and facilitator support thinned.",
+        "preconditions": [
+          "A primary school in every village to host evening classes",
+          "A local government coordinator for adult education in each ward and district",
+          "Recurrent funding for facilitators that survives the end of a campaign, which is what eroded"
+        ],
+        "travelled": "Tanzania's 1970s mass literacy campaign is the earlier, larger version of the same move. The literacy gains it is credited with were also reported to slip back in the 1980s and 1990s."
+      }
+    },
+    {
+      "id": "tza-jnhpp",
+      "indicatorId": "large_project_delivery",
+      "iso3": "TZA",
+      "title": "Julius Nyerere Hydropower Project",
+      "claim": "TANESCO contracted the 2,115 MW Julius Nyerere hydropower dam on the Rufiji in December 2018 for TZS 6.56 trillion over 42 months to June 2022. The contractor completed it on 31 March 2025, and claims settled in the contractor's favour raised the cost to TZS 7.44 trillion.",
+      "metric": {
+        "name": "Adjusted cost of the Julius Nyerere Hydropower Project after USD 400 million of contractor claims",
+        "value": 7.44,
+        "unit": "trillion TZS",
+        "asOf": "2024/25"
+      },
+      "secondMetric": {
+        "name": "Original EPC contract price of the Julius Nyerere Hydropower Project",
+        "value": 6.56,
+        "unit": "trillion TZS",
+        "asOf": "2018"
+      },
+      "started": 2018,
+      "status": "concluded",
+      "source": {
+        "publisher": "National Audit Office of Tanzania, Controller and Auditor General, Annual General Audit Report on Public Authorities and Other Bodies for FY 2024/25 (Ripoti Kuu ya Mwaka ya Ukaguzi ya Mashirika ya Umma kwa Mwaka wa Fedha 2024-25)",
+        "url": "https://www.nao.go.tz/uploads/Ripoti_Kuu_ya_Mwaka_ya_Ukaguzi_ya_Mashirika_ya_Umma_kwa_Mwaka_wa_Fedha_2024-25.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The sources are Swahili PDFs. The quotes are from extracted text with spacing artifacts removed, and the English in the claim is our translation. Neither overrun is published as a percentage. The cost overrun of about 13.4 percent (6.56 to 7.44 trillion) and the schedule overrun of about 33.5 months against a 42-month plan (roughly 80 percent) are our computations from the Auditor General's dates and figures. The cost figure counts only the USD 400 million of claims the dispute board awarded. Price adjustment, financing costs, transmission, resettlement and supervision are not shown, so the true overrun is likely larger. The Auditor General adds that the contractor was granted two ex-gratia extensions to 14 January 2024, that TZS 327.03 billion of liquidated damages had not been deducted by November 2025, and that the contractor was released from TZS 262.34 billion of community projects. At completion, three of nine turbines had not been tested because the reservoir was too low, and the full-capacity test was not done on time because TANESCO lacked transmission capacity. Completion of the civil contract therefore does not mean the plant delivers 2,115 MW. The record says nothing about the dam's environmental cost in the Selous (Nyerere) protected area.",
+      "pattern": {
+        "mechanism": "The government had TANESCO let the whole dam as one EPC contract to an Egyptian joint venture and financed it from the domestic budget rather than concessional loans. That kept the project moving and kept it in national hands, but left contract management and the transmission build with TANESCO, where the audited losses arose.",
+        "preconditions": [
+          "A treasury able to fund a multi-trillion-shilling project from domestic revenue over several budget years",
+          "A utility with the contract-management capacity to enforce delay damages and resist claims, which the Auditor General found lacking",
+          "Transmission lines built in step with generation"
+        ]
+      }
     }
   ]
 }
