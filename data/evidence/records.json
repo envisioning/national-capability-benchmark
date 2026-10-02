@@ -26105,6 +26105,548 @@
         ],
         "travelled": "NAMFISA plans to re-establish the sandbox under the Financial Institutions and Markets Act (FIMA) once it commences; the Bank of Namibia runs a parallel framework for banking and payments with no published participant count."
       }
+    },
+    {
+      "id": "bel-strategic-mask-stock",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "BEL",
+      "title": "Federal strategic stock of protective masks, and its dismantling",
+      "claim": "The Federal Public Service Public Health held a strategic stock of masks for pandemic influenza in military warehouses in Namur from 2006, sized at 32 million surgical masks when the Bioethics Committee reviewed the pandemic plan in 2009. It destroyed the expired masks in operations in late 2015 and late 2018 without replacing them, so Belgium entered the COVID-19 crisis in early 2020 with no strategic mask stock.",
+      "metric": {
+        "name": "Federal strategic stock of masks at the start of the COVID-19 crisis",
+        "value": 0,
+        "unit": "masks",
+        "asOf": "early 2020"
+      },
+      "secondMetric": {
+        "name": "Strategic stock of surgical masks referred to in the 2009 review of the pandemic plan",
+        "value": 32000000,
+        "unit": "surgical masks",
+        "asOf": "2009"
+      },
+      "started": 2006,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Chambre des représentants de Belgique, Rapport de la Commission spéciale COVID-19, DOC 55 1394/002, 13 September 2021",
+        "url": "https://www.dekamer.be/flwb/pdf/55/1394/55K1394002.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The zero is not a counted figure. It is our reading of the committee's prose statement that no strategic mask stock existed when the crisis began. The 32 million is the stock named in the 2009 bioethics advice and the plan's target; the report never gives an audited count of masks actually held in any year. Some of the stock was probably unusable before it was destroyed: the report records that the Namur warehouses lost their heating in 2012 and the masks stayed in unheated storage. The dates of destruction (late 2015 and late 2018) come from a chronology entry built from hearing testimony, which the committee marks as contradicted by other witnesses, not from a finding of its own. Responsibility for the decision not to replace the stock is disputed in the report itself between the former health minister and the experts heard. A mask stock is one narrow input to pandemic preparedness. It says nothing about the pandemic plan, testing, hospital surge capacity or the later rebuilding of a stock.",
+      "pattern": {
+        "mechanism": "From 2006 the federal health administration stored a national reserve of masks under its pandemic plan, then destroyed expired stock in 2015 and 2018 without a replacement contract, so the reserve ran down to nothing between two pandemics.",
+        "preconditions": [
+          "A pandemic plan that names a stock size but no owner for rotating and replacing it",
+          "Storage borrowed from another department (Defence), with conditions that degraded the stock"
+        ]
+      }
+    },
+    {
+      "id": "bel-be-alert",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "BEL",
+      "title": "BE-Alert",
+      "claim": "The National Crisis Centre of the Federal Public Service Interior has run BE-Alert, the national system that lets municipalities and provinces alert the population by SMS, including location-based SMS, and information screens, since 2017. By 1 September 2025, 537 of 565 municipalities, covering 95 percent of Belgian territory, were affiliated, 1,369,659 citizen addresses were registered, and the system had been used 273 times in 2025.",
+      "metric": {
+        "name": "Municipalities affiliated to BE-Alert",
+        "value": 537,
+        "unit": "municipalities of 565",
+        "asOf": "September 2025"
+      },
+      "secondMetric": {
+        "name": "Citizen addresses registered in BE-Alert",
+        "value": 1369659,
+        "unit": "addresses",
+        "asOf": "1 September 2025"
+      },
+      "started": 2017,
+      "status": "operating",
+      "source": {
+        "publisher": "Centre de Crise National, SPF Intérieur, 'Toutes les communes flamandes sont affiliées à BE-Alert', 16 September 2025",
+        "url": "https://centredecrise.be/fr/newsroom/toutes-les-communes-flamandes-sont-affiliees-be-alert",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "This is the crisis centre's own news release, not a statistic or an audit. Affiliation means a municipality can send alerts, not that it does so well or in time: the release gives no measure of how fast or how accurately any alert reached people in a real emergency. The 273 uses in 2025 mix real alerts, vigilance messages and tests, and the release does not split them. One person can register up to five addresses, so the count is not people. Location-based SMS reaches unregistered phones, but this page gives no reach figure for it. Coverage took eight years to reach 95 percent of territory, and 28 Walloon municipalities were still outside it in 2025. The page says nothing about the July 2021 floods in Wallonia, the largest recent test of national warning, so it cannot show that the system works when a major shock arrives. A warning channel is one part of preparedness and says nothing about recovery.",
+      "pattern": {
+        "mechanism": "The federal crisis centre built one national alerting platform and offered it to municipalities and provinces, which keep the legal power to warn. It added channels over time (registered SMS, location-based SMS, screens) and runs an annual national test.",
+        "preconditions": [
+          "Emergency-planning powers held by mayors and governors, so a federal tool needs local uptake to work",
+          "Mobile operators obliged or willing to send location-based messages",
+          "A federal budget for a platform that municipalities can join voluntarily"
+        ]
+      }
+    },
+    {
+      "id": "tjk-rogun",
+      "indicatorId": "large_project_delivery",
+      "iso3": "TJK",
+      "title": "Rogun hydropower plant",
+      "claim": "The Government of Tajikistan resumed construction of the Soviet-era Rogun hydropower plant in 2007 from the state budget, signed the main dam contract in 2016 and commissioned two temporary units (400 MW) in 2018 and 2019. It invested about US$3.3 billion in 2007 to 2022, and in November 2024 the World Bank put the cost to complete the plant at US$6.29 billion, with construction completion moved to 2033 and full reservoir impoundment not before 2039, 63 years after construction first began in 1976.",
+      "metric": {
+        "name": "Estimated cost to complete the Rogun HPP programme",
+        "value": 6.29,
+        "unit": "billion USD",
+        "asOf": "November 2024"
+      },
+      "secondMetric": {
+        "name": "Government of Tajikistan investment in Rogun HPP, 2007 to 2022",
+        "value": 3.3,
+        "unit": "billion USD (about)",
+        "asOf": "2007-2022"
+      },
+      "started": 2007,
+      "status": "operating",
+      "source": {
+        "publisher": "World Bank, Project Appraisal Document PAD00208, Sustainable Financing for Rogun Hydropower Project (P181029), 19 November 2024",
+        "url": "https://documents1.worldbank.org/curated/en/099112024121021960/pdf/BOSIB-401c31c2-2fe4-4029-881c-d65e28bfc04d.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "No cost overrun can be computed: the appraisal document gives no original budget or baseline completion date to set the US$6.29 billion against, so the gap's unit (percent overrun) is not met. The US$6.29 billion is a forward estimate of remaining cost with contingencies, not an outturn, and adding it to the US$3.3 billion already spent is our arithmetic, not the Bank's. The schedule slip is our reading of milestone dates: construction began in 1976, the Soviet works stopped in 1992, and completion is now 2033 with impoundment in 2039. The Bank itself expects 'some further delays' to the March 2024 milestones. It attributes slow progress to financing shortfalls. The source is the lender's appraisal for its own grant, written to justify financing. The project is now financed by ten development partners, so delivery after 2024 is shared rather than purely Tajik. Spending close to 39 percent of GDP and a US$500 million Eurobond left the country at high risk of debt distress. 'Operating' means two temporary units run, not that the 3,780 MW plant is built.",
+      "pattern": {
+        "mechanism": "The Tajik government restarted a stalled Soviet megaproject from its own budget and a Eurobond, brought two temporary turbines online early to earn revenue during construction, then used World Bank-backed safety and environmental studies to draw in a donor financing package for the rest.",
+        "preconditions": [
+          "A site with Soviet-era works, surveys and tunnels already in place",
+          "A state willing to divert a large share of GDP to one project for over a decade",
+          "Riparian water agreements and an independent dam-safety review credible enough for international lenders"
+        ]
+      }
+    },
+    {
+      "id": "jor-syrian-work-permits",
+      "indicatorId": "institutional_responsiveness",
+      "iso3": "JOR",
+      "title": "Work permits for Syrian refugees under the Jordan Compact, and the end of the fee waiver",
+      "claim": "After the February 2016 London conference, Jordan's Ministry of Labour opened formal work permits to Syrian refugees and waived their fees. Annual permits issued rose from 36,788 in 2016 to a peak of 90,152 in 2023. In July 2024 the waiver was not extended for flexible or employer-sponsored permits, and issuance fell to 54,586 in 2024.",
+      "metric": {
+        "name": "Work permits issued to Syrian refugees in Jordan",
+        "value": 54586,
+        "unit": "permits per year",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Work permits issued to Syrian refugees in Jordan at the 2023 peak",
+        "value": 90152,
+        "unit": "permits per year",
+        "asOf": "2023"
+      },
+      "started": 2016,
+      "status": "eroded",
+      "source": {
+        "publisher": "UNHCR Jordan, Economic Inclusion of Syrian Refugees factsheet (June 2025), from Ministry of Labour data",
+        "url": "https://data.unhcr.org/en/documents/download/117693",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The construct is how fast rules and programmes change when conditions change, but a permit count measures uptake. The speed of the 2016 rule change is shown only by the timeline and the 2016 bar. The annual figures are chart labels in a one-page UNHCR factsheet, and the factsheet credits them to the Ministry of Labour. They count permits, not people: renewals, short-term and retroactive permits are all counted, so 340,000 cumulative permits overstates the number of refugees who ever held one. The World Bank and UNHCR copies disagree slightly (45,000 against 47,762 for 2019). The waiver ended in July 2024, so 2024 is only half a post-change year. The 2025 figure (35,702 to July) is partial and is not annualised here. Fall in permits is not fall in work: refugees may have moved back into informal jobs, and the series cannot show that.",
+      "pattern": {
+        "mechanism": "Jordan's Ministry of Labour turned a donor compact into labour-law changes: it waived permit fees, created flexible permits not tied to one employer, and let cooperatives and trade unions act as sponsors. When the donor-funded waiver lapsed in July 2024, it charged Syrians full foreign-worker fees, and issuance fell by about 40 percent.",
+        "preconditions": [
+          "Concessional financing tied to the refugee response that paid for the waived fees",
+          "A labour ministry able to issue and track permits at volume, with intermediaries such as agricultural cooperatives and unions",
+          "Domestic tolerance for refugee labour in sectors open to foreigners, which is what came under fiscal and political pressure later"
+        ],
+        "travelled": "Ethiopia's 2019 refugee proclamation and Turkey's 2016 work-permit regulation followed the same compact logic. Both kept permit numbers low relative to their refugee populations."
+      }
+    },
+    {
+      "id": "dnk-supersygehuse",
+      "indicatorId": "large_project_delivery",
+      "iso3": "DNK",
+      "title": "Kvalitetsfonden hospital building programme (supersygehuse), and its overruns",
+      "claim": "Denmark set up Kvalitetsfonden in 2007 to fund a new hospital structure. Through it the regions are building or rebuilding 16 hospitals with a combined investment frame of about DKK 57 billion (2023 prices). Rigsrevisionen reported in November 2023 that the programme's largest overrun, Nyt Hospital Nordsjælland, had its budget raised by DKK 2.3 billion, or 44 percent, and was expected six years later than planned.",
+      "metric": {
+        "name": "Budget increase over the grant frame, Nyt Hospital Nordsjælland (largest overrun in the programme)",
+        "value": 44,
+        "unit": "% overrun",
+        "asOf": "2023"
+      },
+      "secondMetric": {
+        "name": "Schedule delay, Nyt Hospital Nordsjælland, expected completion end of 2026 against plan",
+        "value": 6,
+        "unit": "years",
+        "asOf": "2023"
+      },
+      "started": 2007,
+      "status": "operating",
+      "source": {
+        "publisher": "Rigsrevisionen (National Audit Office of Denmark), Beretning 4/2023 om byggeriet af Nyt Hospital Nordsjælland, November 2023",
+        "url": "https://cdn.rigsrevisionen.dk/rigsrevisionen/Media/638348655365916991/SR0423.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The headline 44 percent belongs to one project, the worst in the programme, so it is not the programme's cost performance. The report gives no programme-wide overrun in its text. Figure 2 of the same report lists original and latest budgets in 2009 prices for 15 of the 16 projects, leaving out Nyt Hospital Bispebjerg, whose budget had not been published. Summed by hand, the 15 come to about DKK 43.9 billion against frames of DKK 39.2 billion, roughly 12 percent over. That is our calculation from chart labels, not a published figure. Several projects held their frame partly by cutting scope through savings catalogues, which Rigsrevisionen criticised in Beretning 11/2019 and its follow-ups. A frame that holds after cuts is not a delivery on time and on specification. 2007 is the year the fund was set up. Grants were confirmed project by project afterwards (2013 for Nordsjælland), so construction started years after 2007. The programme is unfinished: Rigsrevisionen's January 2025 follow-up still counted seven projects under construction, six of them under heightened ministry supervision, so final outturns are not known. The figure is a budget forecast in 2023 prices and is reported as a region's estimate, not an audited final account.",
+      "pattern": {
+        "mechanism": "Parliament created a state fund that gave each region a fixed, inflation-indexed grant frame per hospital and made the regions carry any overrun. The health ministry supervised changes against the grant conditions, and Rigsrevisionen audited the projects repeatedly while they were being built.",
+        "preconditions": [
+          "A 2007 structural reform that created five regions large enough to act as client for a multi-billion-krone building",
+          "A national decision to concentrate acute care in fewer, larger hospitals, which fixed the scope in advance",
+          "An audit office and a parliamentary audit committee that report on projects while they are still under construction"
+        ],
+        "travelled": "Norway's hospital trusts and the Netherlands' hospital rebuild programmes used fixed regional frames in a similar way. In the Danish case the largest single-site projects still ran over."
+      }
+    },
+    {
+      "id": "cze-d1-modernizace",
+      "indicatorId": "large_project_delivery",
+      "iso3": "CZE",
+      "title": "Modernizace dálnice D1 (D1 motorway modernisation, Mirošovice to Kývalka)",
+      "claim": "Czechia's Road and Motorway Directorate (ŘSD) rebuilt 160.8 km of the D1 motorway between Mirošovice and Kývalka in 20 sections from April 2013, reopening the last sections in October 2021, three years later than the 2012 schedule, with costs projected at CZK 29.844 billion including the Šmejkalka bridge against CZK 28.208 billion planned.",
+      "metric": {
+        "name": "Slip in reopening the whole modernised motorway, measured against the 2012 schedule",
+        "value": 3,
+        "unit": "years",
+        "asOf": "August 2021 schedule update, audited to November 2022"
+      },
+      "secondMetric": {
+        "name": "Projected total cost including the Šmejkalka bridge, against CZK 28.208 billion in the 2012 investment plan",
+        "value": 29.844,
+        "unit": "CZK billion, including VAT, nominal",
+        "asOf": "31 May 2022"
+      },
+      "started": 2013,
+      "status": "operating",
+      "source": {
+        "publisher": "Nejvyšší kontrolní úřad (Supreme Audit Office of the Czech Republic), audit conclusion 21/37 on the D1 motorway modernisation",
+        "url": "https://www.nku.cz/assets/kon-zavery/k21037.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The cost figure looks good only because of the baseline it is compared with. The 2012 plan of CZK 28.208 billion was never approved: the audit office says the Ministry of Transport rejected the summary investment plan and approved 20 separate section projects, with no binding overall budget or schedule. The roughly 6 percent overrun is our computation from two published totals, in nominal crowns, with no inflation adjustment. The final cost is unknown. The audit office says the figure is not final, several sections had not been financially settled, and the Šmejkalka bridge cost is a forecast for work planned from 2022 to 2026. Against an earlier baseline the project looks worse. The audit office's 2017 release (audit 16/06) gave the expected total as CZK 20.5 billion and found unit costs up 73 percent, from CZK 74 to 128 million per km, between the 2013 sections and those begun in 2015 and 2016. The three-year slip is measured to the August 2021 schedule, which ŘSD revised 73 times. In November 2022 eight sections still lacked final approval, and nine bridges and three overpasses were in poor or very poor condition. The audit says the modernisation is not complete, so a later finish date would lengthen the slip. This is a rebuild of an existing motorway kept open to traffic, not a new build. The audit looked closely at only five sections, worth CZK 6.792 billion, and a cyber attack on ŘSD's systems limited what auditors could see. The figures are ŘSD's own, reviewed by the auditor, not independently measured.",
+      "pattern": {
+        "mechanism": "The Road and Motorway Directorate rebuilt the country's main Prague to Brno motorway section by section with traffic still running. The Ministry of Transport approved 20 separate section projects instead of one programme budget, and EU cohesion funds paid CZK 14.0 billion of the cost.",
+        "preconditions": [
+          "EU Operational Programme Transport co-financing for two budget periods, which paid half the cost",
+          "A road agency able to tender and supervise many concurrent section contracts, and a ministry that never set a binding overall schedule or budget",
+          "A permit appeal process that averaged 444 days per contested section, which set the pace more than construction did"
+        ]
+      }
+    },
+    {
+      "id": "png-lae-tidal-basin",
+      "indicatorId": "large_project_delivery",
+      "iso3": "PNG",
+      "title": "Lae Port Development Project (Lae Tidal Basin, phase 1)",
+      "claim": "Papua New Guinea's Independent Public Business Corporation, using ADB and OPEC Fund loans, built the first phase of the Lae tidal basin, a new berth and container terminal at the port of Lae, between April 2012 and December 2014. It was about four years later than planned and cost $310.4 million, against a $154 million project at the 2007 approval.",
+      "metric": {
+        "name": "Total project cost at completion",
+        "value": 310.4,
+        "unit": "USD million",
+        "asOf": "Project completion report 2017, validated December 2017"
+      },
+      "secondMetric": {
+        "name": "Delay in completing the civil works against the appraisal schedule",
+        "value": 4,
+        "unit": "years, approximately",
+        "asOf": "December 2014 completion, validated December 2017"
+      },
+      "started": 2012,
+      "status": "concluded",
+      "source": {
+        "publisher": "Asian Development Bank, Independent Evaluation Department, Validation Report: Papua New Guinea, Lae Port Development Project (PVR-540), December 2017",
+        "url": "https://www.adb.org/sites/default/files/evaluation-document/387626/files/pvr-540.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The headline 7 percent overrun is against a 2011 revised estimate that had already absorbed $137.4 million of design changes found by later geotechnical work. Against the $154 million package approved in 2007 the increase is about 100 percent. That is our computation and is not like for like, because the scope grew. The validation reports civil works costs up 116 percent and involuntary resettlement costs up 3,590 percent against appraisal. Figures are nominal US dollars. The evaluator is the lender's own evaluation department, validating a completion report the lender wrote. It rated the project less than successful overall, less than effective, less than efficient and less than likely sustainable. The validation attributes the four-year delay to the combination of post-approval design changes and resettlement: 482 settler households on government marshland and a landing site used by three Labu villages, for which a supplementary resettlement plan acceptable to the affected communities had to be prepared. The contractors were foreign: a Korean design-build consultant and China Harbour Engineering. The national institutions' role was procurement, finance and resettlement. A post-completion audit found siltation back to 11 m below chart datum, from the dredged 14 m, at the basin's western entrance. The source says it appeared to have stabilised and does not report lost berth capacity. We have not treated it as an eroded delivery, but a reviewer could. The validation finds handling capacity of 2.0 million revenue tons a year, above the 1.4 million target, so the cost and delay bought a working asset. One project says nothing about PNG's record on other major works.",
+      "pattern": {
+        "mechanism": "The government had its state enterprise holding company, IPBC, borrow concessionally from ADB and the OPEC Fund. IPBC procured a single design-and-build contract for reclamation, berth and terminal, and the Morobe Provincial Administration ran the livelihood programme for displaced settlers and the Labu community.",
+        "preconditions": [
+          "Multilateral lenders willing to add $89 million of financing in 2011 when geotechnical findings broke the original design",
+          "A resettlement plan acceptable to settler households on government land and to the Labu villages",
+          "A state port company with tariff revenue to service the debt, which the validation doubted"
+        ]
+      }
+    },
+    {
+      "id": "grc-motorway-concessions",
+      "indicatorId": "large_project_delivery",
+      "iso3": "GRC",
+      "title": "Second-wave motorway concessions (Central E-65, Olympia Odos, Moreas), and their reset",
+      "claim": "Greece procured 744 km of motorway as three PPP concessions that commenced in 2008; after works were suspended in 2011 and the contracts were renegotiated in 2013 and 2015, the European Court of Auditors found the three projects delayed by four years on average, their combined cost per km up 36 percent, from 9.1 to 12.4 million euro, and the planned road length cut to 486 km.",
+      "metric": {
+        "name": "Increase in total project cost per km across the three audited motorway concessions, initial plan to post-reset",
+        "value": 36,
+        "unit": "% overrun (cost per km)",
+        "asOf": "Post-reset position as audited in 2017, published March 2018"
+      },
+      "secondMetric": {
+        "name": "Average construction delay of the three motorways against their initial completion dates",
+        "value": 4,
+        "unit": "years",
+        "asOf": "Estimated/actual completion dates as audited, 2016-2017"
+      },
+      "started": 2008,
+      "status": "concluded",
+      "source": {
+        "publisher": "European Court of Auditors, Special Report 09/2018, Public Private Partnerships in the EU: Widespread shortcomings and limited benefits (paragraphs 34(d), 37-40, Tables 2 and 3)",
+        "url": "https://www.eca.europa.eu/Lists/ECADocuments/SR18_09/SR_PPP_EN.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "This is a record of poor cost and schedule performance, not of good delivery, and it is filed because the gap asks for exactly that figure. The 36 percent is a cost per km, and it mixes two movements: the absolute cost of the Central motorway fell (2,375 to 1,594 million euro) while its length was cut by 55 percent, and Olympia's length was cut by 45 percent, so per-km cost rises partly because fixed and financial costs were spread over fewer kilometres. It is not a like-for-like overrun on a fixed scope. Table 3 of the report shows the combined total project cost of the three concessions falling from 6,743 million euro (2,375 + 2,825 + 1,543) to 6,004 million euro (1,594 + 2,619 + 1,791) as length fell from 744 to 486 km, so the 36 percent per-km increase coincides with an absolute cost about 11 percent lower on a 35 percent smaller scope. The ECA computed the figures from information provided by the Greek authorities and audited only three of the five second-wave concessions (Aegean and Nea Odos are not covered). The completion dates in Table 2 are labelled estimated/actual as of the audit, so the four-year average includes forecasts for the Central and Olympia sections due in August 2017. The ECA attributes much of the cost to the 2009 financial crisis, under which traffic fell around 50 percent below the lenders' worst case, and to the public partner's poor preparation (archaeology, environmental permits, expropriation): the record cannot separate those causes. The deferred northern and southern sections of E-65 and the deferred Olympia stretches were taken out of these contracts; whatever was built later under other contracts is not in this number. The report is from 2018. The ECA also records that Greece's PPP route procured 744 km in three tenders where the earlier 82 km of Olympia took up to 20 years and 31 procurements, which is the strongest point in the programme's favour.",
+      "pattern": {
+        "mechanism": "The Greek state bundled several hundred kilometres of motorway into three design-build-finance-operate concessions, transferred traffic risk to the concessionaires, and paid toll-backed private finance plus EU co-financing; when traffic collapsed the state renegotiated, deferred sections and paid about 1.2 billion euro more rather than stop the works.",
+        "preconditions": [
+          "Access to EU cohesion co-financing large enough to fill a renegotiated financing gap",
+          "A parliament willing to ratify concession contracts in the absence of a general concession law",
+          "Contracts signed before archaeology, permits and land expropriation were settled, which is what turned the crisis into public liability"
+        ],
+        "travelled": "Spain's A-1 and C-25 concessions, audited in the same report, were renegotiated soon after signature at a public cost of about 300 million euro, a smaller version of the same pattern."
+      }
+    },
+    {
+      "id": "aut-bildungskarenz",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "AUT",
+      "title": "Bildungskarenz with Weiterbildungsgeld, and its abolition",
+      "claim": "Austria's Public Employment Service (AMS) paid Weiterbildungsgeld from 1998 to employees taking up to a year of educational leave, an average of about 14,000 recipients in 2021 at a cost that rose from 236 million euros in 2019 to 646 million in 2024, until the Nationalrat ended the benefit on 31 March 2025 in a budget consolidation law.",
+      "metric": {
+        "name": "Average Weiterbildungsgeld recipients on educational leave",
+        "value": 14000,
+        "unit": "persons (annual average)",
+        "asOf": "2021"
+      },
+      "secondMetric": {
+        "name": "Total spending on Bildungskarenz in its last full year before abolition",
+        "value": 646,
+        "unit": "million EUR",
+        "asOf": "2024"
+      },
+      "started": 1998,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Rechnungshof Österreich (Austrian Court of Audit), report Bildungskarenz, Reihe Bund 2023/11",
+        "url": "https://www.rechnungshof.gv.at/rh/home/home/2023_11_Bildungskarenz.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The recipient count is an annual average of people on leave at once, not a share of adults who trained in a year, so it cannot be set against the indicator's unit. The Court of Audit found the training requirements so weak that the leave could fund low-value courses or plain time out of work, and that uptake skewed toward people already highly educated, so the programme's peak is partly a peak in subsidised leave rather than in learning. The 2024 spending figure is the parliament's summary of the government's justification, it includes social insurance contributions, and it is a cost, not a participation number. Abolition is not the end of state support for training leave: a successor Weiterbildungszeit with a Weiterbildungsbeihilfe capped at 150 million euros a year took effect in January 2026 with stricter eligibility (PK0907, 16 October 2025), so a reviewer could call this erosion rather than dismantling. The record documents that the benefit ended by decision; it does not show that adult learning participation in Austria fell as a result.",
+      "pattern": {
+        "mechanism": "The federal government let employees suspend their contract for training and had the AMS pay an unemployment-benefit-level allowance out of the unemployment insurance fund; parliament then cut the allowance outright when costs tripled and evaluations found weak employment effects.",
+        "preconditions": [
+          "An unemployment insurance fund large enough to carry a training benefit without a separate appropriation",
+          "Labour law that lets an employee suspend a contract by agreement and return to the job",
+          "Loose eligibility on course content, which drove both growth and the case for abolition"
+        ],
+        "travelled": "The successor scheme keeps the leave but caps the budget at 150 million euros a year, tightens eligibility and makes higher-earning employees' employers co-fund the allowance, which is the targeting the Court of Audit asked for in 2023."
+      }
+    },
+    {
+      "id": "aze-third-highway",
+      "indicatorId": "large_project_delivery",
+      "iso3": "AZE",
+      "title": "Third Highway Project: M4 Baku-Shamakhi and M3 Yenikend-Shorsulu motorways",
+      "claim": "Azerbaijan's road administration upgraded 94 km of the M4 Baku-Shamakhi highway to a four-lane road and built 48 km of new M3 motorway under the World Bank-financed Third Highway Project, at US$2.47 million per km against US$2.96 million estimated at appraisal, with the loan closing in March 2021 instead of March 2015.",
+      "metric": {
+        "name": "Actual cost per km of the upgraded M4 Baku-Shamakhi highway (appraisal estimate US$2.96 million per km)",
+        "value": 2.47,
+        "unit": "US$ million per km",
+        "asOf": "2021"
+      },
+      "secondMetric": {
+        "name": "Slip of the actual loan closing date against the original closing date",
+        "value": 72,
+        "unit": "months",
+        "asOf": "2021-03"
+      },
+      "started": 2010,
+      "status": "concluded",
+      "source": {
+        "publisher": "World Bank, Implementation Completion and Results Report ICR00005553, Azerbaijan Third Highway Project (P118023)",
+        "url": "https://documents1.worldbank.org/curated/en/623531639762117938/pdf/Azerbaijan-Third-Highway-Project.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The completion report is the lender's own evaluation of its loan, drafted with the borrower's data. The cost saving is not mainly efficiency: the report says the lower dollar outcome is mainly attributable to the manat losing more than half its value in 2015 to 2017 while works contracts were priced in local currency, so in local terms the project may have overrun. The 72-month slip is computed here from the two closing dates; the scope also changed twice (the M3 section added, part of the M4 dropped in a landslide zone), and the report concedes the final extension may have been avoidable, so not all of it is construction delay. The efficiency rating is only Modest. It is one corridor of 142 km, with a lender supervising procurement, so it is weak evidence about Azerbaijan's road programme outside donor projects.",
+      "pattern": {
+        "mechanism": "The road administration borrowed from the World Bank for a defined corridor, accepted the lender's procurement and engineering review, held to the original alignment instead of the ministry's costlier viaduct proposal, and reused savings by adding a motorway section through restructuring.",
+        "preconditions": [
+          "Access to multilateral lending with appraisal estimates that create a published baseline",
+          "A road agency able to procure and supervise several works contracts at once",
+          "Works contracts in local currency, which turned a devaluation into a dollar saving"
+        ]
+      }
+    },
+    {
+      "id": "aze-cbar-sandbox",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "AZE",
+      "title": "Central Bank of Azerbaijan regulatory sandbox",
+      "claim": "The Central Bank of the Republic of Azerbaijan began testing its first regulatory sandbox participant in December 2024 and admitted three more whose testing began in 2026, out of 14 applicants.",
+      "metric": {
+        "name": "Firms whose sandbox testing began in 2026, counted from the registry",
+        "value": 3,
+        "unit": "firms",
+        "asOf": "2026"
+      },
+      "secondMetric": {
+        "name": "Applicants to the sandbox since launch",
+        "value": 14,
+        "unit": "applicants (cumulative)",
+        "asOf": "2026-10"
+      },
+      "started": 2024,
+      "status": "operating",
+      "source": {
+        "publisher": "Central Bank of the Republic of Azerbaijan, Regulatory Sandbox Registry",
+        "url": "https://sandbox.cbar.az/en/registry",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The year count of three is computed from testing start dates in the registry; the central bank publishes only undated cumulative counters (14 applicants, 4 participants), so the series has no official annual figure and earlier years cannot be reconstructed if entries are removed. The registry's completed projects section shows no entries although the first test was scheduled to end in February 2026 and is still listed as current, so firms completing the regime, half of what the indicator asks for, cannot be counted. Only one regulator is covered. A sandbox of four firms is not a national flagship in the sense of a programme policymakers name first; it is filed because it evidences this gap's construct literally.",
+      "pattern": {
+        "mechanism": "The central bank wrote rules on a special regulation regime that exempt participants from licensing, opened cohort application windows, and admitted a handful of banks and crypto firms to test products with capped users under its supervision.",
+        "preconditions": [
+          "A central bank that is also the integrated financial regulator, so one body can grant the exemption",
+          "Demand for products the existing licence categories do not cover, here Islamic finance and crypto exchange"
+        ]
+      }
+    },
+    {
+      "id": "hun-danube-flood-2013",
+      "indicatorId": "disaster_preparedness",
+      "iso3": "HUN",
+      "title": "Defence against the June 2013 Danube flood",
+      "claim": "During the June 2013 Danube flood, which crested at a record 891 cm in Budapest, the government declared an emergency and Hungary's national disaster management directorate ran six days of intensive defence along 807.4 km of levees; of 206,000 people the flood directly endangered, 1,570 had to be evacuated.",
+      "metric": {
+        "name": "People directly endangered by the flood",
+        "value": 206000,
+        "unit": "people",
+        "asOf": "2013-06"
+      },
+      "secondMetric": {
+        "name": "People evacuated",
+        "value": 1570,
+        "unit": "people",
+        "asOf": "2013-06"
+      },
+      "started": 2013,
+      "status": "concluded",
+      "source": {
+        "publisher": "Belügyminisztérium Országos Katasztrófavédelmi Főigazgatóság (Ministry of Interior, National Directorate General for Disaster Management)",
+        "url": "https://www.katasztrofavedelem.hu/417/arviz-2013/2269/az-arviz-szamokban",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The source is the agency that ran the defence, writing about itself six days after the crest, so it is self-reporting with no independent verification. The page gives no count of deaths, injuries or damage cost, and no recovery figure, so it evidences the preparing and defending half of the construct and not the recovering half. A low evacuation count could reflect where the river happened to break out (47,285 hectares, mostly forest and farmland, were flooded) as much as the defence. Much of the protection is a stock of levees rather than a 2013 move, and 36,780 civilian volunteers, 19,515 civil guards and 8,306 soldiers took part, so the outcome is not the directorate's alone. This is one event; it says nothing about the capacity against other hazards such as the 2010 Ajka red sludge spill. The 206,000 is a rounded figure.",
+      "pattern": {
+        "mechanism": "The government declared an emergency by river section, and the national disaster management directorate, unified under the interior ministry, took over command of the defence from mayors in 81 settlements and drew soldiers, police, students, public-works employees and volunteers onto the levees.",
+        "preconditions": [
+          "A national levee system built and maintained over generations by the water directorates",
+          "A single disaster management body with legal power to take command from local authorities in an emergency",
+          "Upstream gauge readings that gave days of warning before the crest reached Budapest"
+        ]
+      }
+    },
+    {
+      "id": "bgr-belene",
+      "indicatorId": "large_project_delivery",
+      "iso3": "BGR",
+      "title": "Belene nuclear power plant, and its cancellation",
+      "claim": "Bulgaria's state utility NEK ordered long-lead reactor equipment for the Belene nuclear plant from Atomstroyexport in 2008. The project was cancelled before any unit was completed, and on 6 December 2016 the Ministry of Energy transferred 601,617,133 euros to NEK so it could pay the damages awarded against it in ICC arbitration case 18086/GZ/MHM.",
+      "metric": {
+        "name": "State financial assistance transferred to NEK to pay the Belene arbitration award to Atomstroyexport",
+        "value": 601617133,
+        "unit": "EUR",
+        "asOf": "2016-12-06"
+      },
+      "secondMetric": {
+        "name": "Costs incurred on the Belene construction to date, as stated by the Minister of Energy",
+        "value": 1400000000,
+        "unit": "BGN",
+        "asOf": "2016"
+      },
+      "started": 2008,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Ministry of Energy of the Republic of Bulgaria, press release of 6 December 2016",
+        "url": "https://me.government.bg/news/me-predostavi-na-nek-sredstvata-za-zaplashtane-na-zadaljeniyata-po-arbitrajnoto-reshenie-za-belene-2362.html",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "Belene never produced electricity, so this record documents a delivery that failed before it operated, not a capability that eroded. The headline number is a termination cost, the arbitration damages for equipment ordered in 2008, and not a cost overrun against a budget: the record carries no official baseline budget or schedule for the 2008 phase. The 1.4 billion leva of costs incurred comes from a minister speaking in a television interview. The ministry republished the transcript without a printed date; the 2016 year is inferred from the special assistance law the interview discusses. It is not an audited figure. The project was decided in April 2005, cancelled in March 2012, and revived by a National Assembly decision of 7 June 2018 and a Council of Ministers decision of 29 June 2018. Later decisions on the site and the equipment are not covered by these sources. The 601.6 million euros was advanced to NEK as repayable assistance, not a grant, so the final fiscal loss is not shown here. The later disposal or reuse of the equipment the payment bought is not covered.",
+      "pattern": {
+        "mechanism": "NEK, the state utility, ordered long-lead reactor equipment from a single foreign vendor in 2008 before financing or a final contract price was settled. The government cancelled the project in 2012, the Ministry of Energy advanced NEK repayable assistance in 2016 to pay the vendor's arbitration claim, and the project was revived in 2018.",
+        "preconditions": [
+          "A state utility allowed to commit to equipment orders before the project's financing was closed",
+          "Political control of the decision that changed with each government",
+          "A single-vendor contract enforceable in international arbitration"
+        ]
+      }
+    },
+    {
+      "id": "blr-belaes",
+      "indicatorId": "large_project_delivery",
+      "iso3": "BLR",
+      "title": "Belarusian nuclear power plant (BelAES), delivered behind schedule",
+      "claim": "Belarus started building its first nuclear power plant at Ostrovets in November 2013, a two-unit WWER-1200 plant totalling 2,400 MW. Its regulator's 2019 report scheduled unit 1 for 2019 and unit 2 for 2020. Unit 1 was commissioned in 2021 and unit 2 in October 2023, three years after the 2019 schedule.",
+      "metric": {
+        "name": "Year power unit No. 2 entered commercial operation",
+        "value": 2023,
+        "unit": "year",
+        "asOf": "2023-10"
+      },
+      "secondMetric": {
+        "name": "Year power unit No. 2 was scheduled for commissioning in the 2019 national report",
+        "value": 2020,
+        "unit": "year",
+        "asOf": "2019"
+      },
+      "started": 2013,
+      "status": "operating",
+      "source": {
+        "publisher": "Gosatomnadzor, Ministry for Emergency Situations of the Republic of Belarus, National Report on the implementation of the Convention on Nuclear Safety (2025)",
+        "url": "https://gosatomnadzor.mchs.gov.by/upload/iblock/1a7/s6o4ziga6cctf0syl92u074ovahjzgi9/CNS-Belarus-National-Report-2025-en.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "This is a schedule figure only. The record carries no official budget or final cost for the plant, so cost performance is unknown. The slip is measured against a schedule that the 2019 report itself calls 'updated'. This record uses the 2019 schedule because it is the one stated in an official source. The schedule is given in years, not months, so the three-year slip for unit 2 is approximate. The 2019 schedule speaks of commissioning while the 2023 figure is the start of commercial operation, so the two milestones may not be identical. Both figures come from the Belarusian regulator reporting on its own country's flagship project. The plant was built turnkey on a Russian design, financed from the republican budget and a Russian state export credit, as the 2019 national report states. The delivery is therefore only partly attributable to Belarusian institutions: they decided, licensed, supervised, financed and now operate it. The source does not show capacity factors or outages after commissioning.",
+      "pattern": {
+        "mechanism": "The Belarusian state chose a single foreign state vendor to build a reference design turnkey, and built up a domestic regulator and operator in parallel under a sequence of IAEA review missions, accepting slippage on the vendor's schedule.",
+        "preconditions": [
+          "A strategic partner state willing to supply design, construction and credit together",
+          "A centralised state able to hold a decade-long build through political and diplomatic opposition",
+          "A reference plant of the same design already being built abroad (Leningrad NPP-2)"
+        ]
+      }
+    },
+    {
+      "id": "kgz-bishkek-osh-road",
+      "indicatorId": "large_project_delivery",
+      "iso3": "KGZ",
+      "title": "Bishkek-Osh road rehabilitation, third phase",
+      "claim": "The Kyrgyz Ministry of Transport and Communications completed the third and final phase of the Bishkek-Osh road rehabilitation in July 2007, bringing the rehabilitated length of the only internal surface connection between Bishkek and Osh to 463 km, with a 31.7 percent cost overrun on base cost items and civil works finished 33 months after the October 2004 appraisal schedule.",
+      "metric": {
+        "name": "Cost overrun on base cost items, Third Road Rehabilitation Project",
+        "value": 31.7,
+        "unit": "% overrun",
+        "asOf": "2007"
+      },
+      "secondMetric": {
+        "name": "Civil works completion delay (appraisal schedule October 2004, actual July 2007)",
+        "value": 33,
+        "unit": "months",
+        "asOf": "2007-07"
+      },
+      "started": 2002,
+      "status": "concluded",
+      "source": {
+        "publisher": "Asian Development Bank, Independent Evaluation Department, Validation Report PCV: KGZ 2009-40, Third Road Rehabilitation Project (Loan 1853)",
+        "url": "https://www.adb.org/sites/default/files/evaluation-document/35635/files/in331-09.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The record covers phase three only: 120 km of the Bishkek-Osh road and 125 km of secondary roads, not the two earlier phases. The 31.7 percent is on base cost items and is driven by the secondary roads and an added bridge ($7.6 million of the $13.6 million); main-road civil works ran 11.6 percent over per km, and total project cost rose from $50.0 million to $57.1 million, about 14 percent, because contingencies and currency gains absorbed part of the overrun. The 33 months is computed from two dates in the text, and 22 of the delay months came before construction, in loan effectiveness and bidding against a 7-month plan; one civil works contract was terminated and the supervision consultant was sanctioned. The road was 80 percent financed by an ADB concessional loan, and the validation is ADB's evaluation office reviewing ADB's own completion report; it rated the project 'less effective' pending a later performance evaluation that this record does not carry. Traffic grew about 4 percent a year against a forecast of 6 to 7, accidents rose in number and severity after the works, and the road maintenance funding covenants were not met until 2007, so nothing here shows the condition of the road today.",
+      "pattern": {
+        "mechanism": "The Kyrgyz government, through the Ministry of Transport and Communications and a project implementation unit staffed by local consultants experienced on the earlier phases, rehabilitated its only north-south trunk road in phases over a decade, financing each phase with an ADB concessional loan and a counterpart share.",
+        "preconditions": [
+          "A concessional lender willing to finance the same corridor three times in succession",
+          "An implementation unit staffed by local consultants experienced on the earlier phases",
+          "Counterpart and maintenance funding from a small budget, which arrived late and only after the works ended"
+        ]
+      }
     }
   ]
 }

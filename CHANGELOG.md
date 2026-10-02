@@ -9,6 +9,16 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.25.5 — 2026-10-02
+
+- **15 more documented deliveries for the new countries.** Four document a
+  loss: Belgium's strategic mask stock, Jordan's work permits for Syrian
+  refugees, Austria's Bildungskarenz and Bulgaria's Belene nuclear plant.
+  The flagships include Rogun, BelAES, Denmark's hospital building
+  programme, Czechia's D1 modernisation and Belgium's BE-Alert. A second
+  reviewer checked every number at its official source. The capability
+  agenda is regenerated.
+
 ## App 1.25.4 — 2026-10-02
 
 - **220 more documented deliveries for the countries that joined the
