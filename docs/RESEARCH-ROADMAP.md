@@ -38,9 +38,11 @@ each dimension's correlation with log GDP per capita. Above 0.70 is a finding
 against the claim, to be read and published. It is not a target, and no row is
 added or dropped to move it.
 
-**Guardrail.** Confidence must not come to track wealth. At 8.2.0 the mean
+**Guardrail.** Confidence must not come to track wealth. At 8.3.0 the mean
 confidence across dimensions correlates with log GDP per capita at r = 0.27
-across 51 countries (0.274, against 0.286 at 8.1.0: the new export products
+across 51 countries (0.272: reopening `national_belonging` as a gap, D151,
+lowers Shared purpose confidence evenly across incomes; 0.274 at 8.2.0;
+0.286 at 8.1.0: the new export products
 row in Adaptability, D149, covers all 53 and gives the nine countries the
 ILOSTAT gate holds a third row; 0.289 at 8.0.0; 0.28 at 7.8.0, before the three Tier B rows became conditions and two
 gaps were retired). The bought conditions that left the scores (D122) were
@@ -51,7 +53,7 @@ raises O1 and breaks this.
 
 ### Where the objectives stand
 
-Dataset 8.2.0 (new export products in Adaptability, D149; informal employment beside it as a condition, D150). Recompute from `data/out/diagnostics.json` and
+Dataset 8.3.0 (`national_belonging` reopened as a gap, D151; four stock-reading gaps redefined as behaviour, D152). Recompute from `data/out/diagnostics.json` and
 `data/out/index.json` after any rescore; never carry these figures forward by
 hand.
 
@@ -59,7 +61,7 @@ hand.
 | --- | ---: | ---: | ---: | --- |
 | Trust | 0.42 | 4.3 | 0.61 | |
 | Experimentation | 0.36 | 4.5 | 0.65 | misses O1; 0.57 before the GitHub row (D145) |
-| Shared purpose | 0.41 | 2.6 | 0.20 (n 50) | clears O1 on a retirement, not an observation (D143) |
+| Shared purpose | 0.34 | 2.6 | 0.20 (n 50) | misses O1; 0.41 at 8.0.0 to 8.2.0 came from a retirement D151 reversed |
 | Coordination | 0.36 | 2.8 | 0.56 | misses O1 |
 | Learning | 0.51 | 2.9 | 0.78 | tracks income |
 | Agency | 0.48 | 3.6 | 0.58 | |

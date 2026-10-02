@@ -11,7 +11,7 @@ panelist each, carry no dataset version and were scored against older frames,
 so a gap between one of them and a current score is not a finding (see A9).
 
 Every entry is on dataset 8.0.0 except where it names another run. A1 and
-A13 are checked on 8.1.0 and A16 on 8.2.0; A13's regime groups come from the
+A13 are checked on 8.1.0, A16 on 8.2.0 and A5 on 8.3.0; A13's regime groups come from the
 V-Dem v16 file, which neither release changes. A3 also
 quotes the 16-country run that last scored the WGI rows, and A4 the ten-country
 one. A12 quotes one figure D131 measured on V-Dem v15. A6 holds no dataset
@@ -26,12 +26,14 @@ on is not the scale in use.
 Five of ten indicators are observed for most countries: resident patents,
 trademarks and industrial designs per head (D126), new public software
 repositories per head (D145), and, for the 16 countries GEM covered first,
-early-stage entrepreneurial activity and fear of failure. Venture capital,
-regulatory sandboxes and university spinouts are still gaps. Business R&D
+early-stage entrepreneurial activity and fear of failure. Venture deals,
+firms through regulatory sandboxes and university spinouts are still gaps
+(since D152 the first two count deals and firms, where they used to read
+money and regimes). Business R&D
 share is retired: its only working source reads the make-up of a spending
 stock, and state enterprises count as business (D142). Mean confidence is
-0.364 on dataset 8.1.0, second lowest of the nine after Coordination and
-under the 0.40 objective. 35 countries are scored on the three filing rows
+0.364 on dataset 8.1.0 and unchanged on 8.3.0, third lowest of the nine after
+Shared Purpose and Coordination, and under the 0.40 objective. 35 countries are scored on the three filing rows
 and the repository row, and two on the filing rows alone: China and Cuba,
 which the repository row's access gate holds out. GEM's later reports reach
 40 of the 53, but the extension is held because the 14 countries GEM skips
@@ -63,9 +65,11 @@ its mean absolute distance from the 8.1.0 Experimentation scores is 13.0 points
 across its 16 countries, seventh of the nine dimensions, and its rank agreement
 with them is a Spearman 0.70, fourth lowest.
 
-**Fix.** A venture capital series is still missing. The only inspectable
-aggregate, the OECD SME and Entrepreneurship Financing scoreboard, covers 6 of
-the 16 original countries and omits Brazil, India, South Africa and Singapore.
+**Fix.** A venture deal count is still missing: first rounds per million
+people, counted by deal and not by amount (D152). The only inspectable
+aggregate, the OECD SME and Entrepreneurship Financing scoreboard, carries
+amounts rather than deals for 6 of the 16 original countries and omits Brazil,
+India, South Africa and Singapore.
 GEM has not surveyed 14 of the countries since at
 least 2019, so its coverage cannot grow evenly from the published reports.
 
@@ -182,16 +186,16 @@ effective collective actors in the set.
 The spec is explicit that political uniformity is not a capability, so the fix is
 not simply to raise Singapore.
 
-Voice and accountability is retired. On dataset 8.0.0 Shared Purpose rests on
+Voice and accountability is retired. On dataset 8.3.0 Shared Purpose rests on
 three rows, tax revenue, income inequality and EVS/WVS civic participation
-(D128, read through A15), at mean confidence 0.411, and it publishes a score
-for 51 of 53 countries. Its correlation with log GDP per capita is 0.202 (n
-50), the lowest of the nine dimensions. Singapore scores 37.0 on the two rows
-it has. Volunteering is still a gap. National belonging is retired: its only
-cross-national item, national pride, is not the capacity and fails the regime
-test A13 describes (D143). Part of the confidence comes from that retirement
-and not from an observation, so read it beside the three rows. No panel figure is
-quoted here, for the reason A9 gives.
+(D128, read through A15), at mean confidence 0.343, under the 0.40 objective,
+and it publishes a score for 51 of 53 countries. Its correlation with log GDP
+per capita is 0.202 (n 50), the lowest of the nine dimensions. Singapore scores
+37.0 on the two rows it has. Volunteering, national belonging and
+polarization are gaps. National belonging has no usable series: its only
+cross-national item, national pride, is not belonging and fails the regime
+test A13 describes, so it is not wired, and the gap counts against confidence
+(D151). No panel figure is quoted here, for the reason A9 gives.
 
 V-Dem's polarization item brings the Singapore question back from the other
 side: a regime with no organised opposition can read as calm, as the United

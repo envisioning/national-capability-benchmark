@@ -16,7 +16,7 @@ La comparación incluye 53 países. Cada dimensión recibe una puntuación de 0 
 | Experimentación | 31 | 0.51 (utilizable) | +0.9 en 10 años, sobre 3 indicadores |
 | Adaptación | 52.2 | 0.62 (utilizable) | sin base de tendencia |
 | Ejecución | 27.2 | 0.57 (utilizable) | -3.1 en 10 años, sobre 3 indicadores |
-| Propósito compartido | 46.1 | 0.52 (utilizable) | -3.1 en 10 años, sobre 2 indicadores |
+| Propósito compartido | 46.1 | 0.43 (débil) | -3.1 en 10 años, sobre 2 indicadores |
 
 ## Puntuaciones bajas con evidencia utilizable
 
@@ -39,7 +39,7 @@ Estas son las puntuaciones más bajas con evidencia utilizable. Las dimensiones 
 - Basada en 6 indicadores observados.
 - Puntuaciones utilizables más altas: Corea del Sur 70.3, Suiza 57.6, Estados Unidos 48.1.
 - Entregas documentadas en otros países: The FCA regulatory sandbox (Reino Unido); Yozma, the venture capital catalyst (Israel); Korean regulatory-sandbox system across eight sectors (Corea del Sur); MAS FinTech Regulatory Sandbox variants (Singapur); British Patient Capital, a public venture-capital catalyst (Reino Unido); ICURe, from university research to spinouts (Reino Unido); Portugal Ventures, a public venture-capital bridge (Portugal); Rede Nacional de Test Beds for company experimentation (Portugal); Zonas Livres Tecnológicas, regulator-supervised experimentation zones (Portugal); Banco Central regulatory sandbox, first cycle (Brasil); Reserve Bank of India regulatory sandbox (India); Capital Markets Authority regulatory sandbox (Kenia); SEC Nigeria Regulatory Incubation Program (Nigeria); ADGM RegLab, the first fintech sandbox in the region (Emiratos Árabes Unidos); OJK regulatory sandbox for financial-sector technological innovation (Indonesia); Bank Negara Malaysia Fintech Regulatory Sandbox (Malasia); Bank of Thailand regulatory sandbox (Tailandia); Sandbox financiero (Ley 7/2020), and the fall in applications (España); IFWG Regulatory Sandbox (Sudáfrica); Project-based regulatory sandbox (new technology demonstration scheme) (Japón); CFPB Compliance Assistance Sandbox, rescinded in 2022 and withdrawn again in 2025 (Estados Unidos); CSA Regulatory Sandbox, succeeded by the Financial Innovation Hub (Canadá); ASIC enhanced regulatory sandbox (Australia); SINTEG-Verordnung, the energy-transition experimentation clause (Alemania); Experimenten Elektriciteitswet 2015-2018, and its erosion (Países Bajos); Bac à sable réglementaire in the energy sector (Francia).
-- Vacíos declarados: Inversión de capital de riesgo, Actividad de sandbox regulatorio, Empresas surgidas de universidades.
+- Vacíos declarados: Operaciones de capital de riesgo, Empresas en sandboxes regulatorios, Empresas surgidas de universidades.
 - Bases descartadas: Proporción empresarial de la I+D.
 
 ### Confianza: 39.1, solidez utilizable
@@ -68,17 +68,7 @@ Estas son las puntuaciones más bajas con evidencia utilizable. Las dimensiones 
 - Basada en 2 indicadores observados.
 - Puntuaciones utilizables más altas: Suiza 96.3, Suecia 90, Finlandia 87.5.
 - Entregas documentadas en otros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Bajos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapur); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japón); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (Sudáfrica); Government Report on the Future and the parliamentary Committee for the Future (Finlandia); Foresight Centre at the Riigikogu (Arenguseire Keskus) (Estonia); Office of Technology Assessment, defunded and closed in 1995 (Estados Unidos); Rządowe Centrum Studiów Strategicznych, liquidated in 2006 (Polonia); Office of Technology Assessment at the German Bundestag (TAB) (Alemania); National Assembly Futures Institute (Corea del Sur); Federal Chancellery situation and environment analysis (Perspektivstab) (Suiza); Senate foresight delegation (Délégation sénatoriale à la prospective) (Francia); Senate Commission on Future Challenges, Science, Technology and Innovation (Chile); Policy Horizons Canada, the federal foresight unit, and its 2024 disruption scan (Canadá); Framtidskommissionen, the Prime Minister's time-limited future commission (Suecia).
-- Vacíos declarados: Capacidad gubernamental de prospectiva, Proporción de investigación de largo plazo.
-
-### Propósito compartido: 46.1, solidez utilizable
-
-¿Hasta qué punto las personas logran verse como parte de un proyecto común?
-
-- Basada en 3 indicadores observados.
-- Puntuaciones utilizables más altas: Suecia 81.6, Finlandia 73.6, Tailandia 69.5.
-- Entregas documentadas en otros países: Umuganda community work (Ruanda); THW, volunteer civil protection as a federal institution (Alemania); Volunteer fire corps, and its membership erosion (Japón); Federal funding gaps and the 2019 shutdown (Estados Unidos).
-- Vacíos declarados: Voluntariado, Polarización política.
-- Bases descartadas: Voz y rendición de cuentas, Sentido de pertenencia nacional.
+- Vacíos declarados: Capacidad gubernamental de prospectiva, Compromisos de investigación de largo plazo.
 
 ## Dimensiones con evidencia débil
 
@@ -91,6 +81,14 @@ La solidez de la evidencia está por debajo de la franja utilizable, así que la
 - Basada en 3 indicadores observados.
 - Vacíos declarados: Colaboración universidad-empresa, Colaboración público-privada.
 - Bases descartadas: Efectividad del gobierno, Calidad regulatoria, Desempeño logístico.
+
+### Propósito compartido: solidez 0.43, débil
+
+¿Hasta qué punto las personas logran verse como parte de un proyecto común?
+
+- Basada en 3 indicadores observados.
+- Vacíos declarados: Sentido de pertenencia nacional, Voluntariado, Polarización política.
+- Bases descartadas: Voz y rendición de cuentas.
 
 ## Puntuaciones altas con evidencia utilizable
 
@@ -122,25 +120,26 @@ Las condiciones describen lo que un país tiene para trabajar: infraestructura, 
 
 ## ¿Qué falta medir?
 
-17 indicadores solicitados no tienen una base comparable, y cada uno baja la solidez. Un vacío se convierte en indicador con puntuación cuando una serie comparable cubre al menos dos países.
+18 indicadores solicitados no tienen una base comparable, y cada uno baja la solidez. Un vacío se convierte en indicador con puntuación cuando una serie comparable cubre al menos dos países.
 
 | Dimensión | Indicador ausente | Qué pregunta |
 | --- | --- | --- |
 | Anticipación | Capacidad gubernamental de prospectiva | Existencia, mandato y continuidad de una función nacional de prospectiva estratégica. |
-| Anticipación | Proporción de investigación de largo plazo | Proporción del gasto bruto en I+D clasificada como investigación básica. |
-| Iniciativa | Habilidades digitales de adultos | Proporción de adultos capaces de realizar tareas digitales estándar. |
+| Anticipación | Compromisos de investigación de largo plazo | Subvenciones públicas de investigación nuevas, adjudicadas por concurso, con una duración de cinco años o más, como proporción de todas las subvenciones públicas por concurso adjudicadas en el año. |
+| Iniciativa | Adultos que realizan tareas digitales | Proporción de adultos que realizaron una tarea digital determinada en los últimos tres meses, como enviar un mensaje con un archivo adjunto, mover un archivo entre dispositivos o usar una fórmula en una hoja de cálculo, contada tarea por tarea y nunca como nivel de habilidad. |
 | Coordinación | Colaboración universidad-empresa | Intensidad de la colaboración en investigación entre universidades y empresas. |
 | Coordinación | Colaboración público-privada | Frecuencia y escala de la ejecución conjunta, por gobierno y empresas, de objetivos nacionales. |
 | Confianza | Confianza en las instituciones públicas | Confianza en el gobierno nacional, los tribunales y el servicio público. |
 | Confianza | Tasa de resolución de casos judiciales | Casos civiles y comerciales resueltos en un año como proporción de los casos presentados en ese mismo año. |
 | Aprendizaje | Participación de adultos en aprendizaje | Proporción de adultos en educación o capacitación, formal o no, en los últimos 12 meses. |
-| Experimentación | Inversión de capital de riesgo | Capital de riesgo invertido como proporción del PIB. |
-| Experimentación | Actividad de sandbox regulatorio | Número y alcance de los sandboxes regulatorios y regímenes de prueba controlada en operación. |
+| Experimentación | Operaciones de capital de riesgo | Primeras rondas de capital de riesgo cerradas en el año por empresas con sede en el país, por millón de personas, contadas por operación y nunca por monto. |
+| Experimentación | Empresas en sandboxes regulatorios | Empresas admitidas en un sandbox regulatorio o régimen de prueba controlada en el año, y empresas que lo concluyeron, por millón de personas, sumadas entre todos los reguladores del país. |
 | Experimentación | Empresas surgidas de universidades | Empresas creadas para comercializar investigación universitaria, por millón de habitantes. |
 | Adaptación | Preparación y recuperación ante desastres | Capacidad demostrada de preparación y recuperación ante choques graves. |
 | Adaptación | Capacidad de respuesta institucional | Velocidad con que las reglas y los programas públicos cambian en respuesta a condiciones nuevas. |
 | Ejecución | Ejecución de grandes proyectos | Desempeño en costo y plazo de los grandes proyectos públicos de infraestructura. |
 | Ejecución | Empresas jóvenes que ganan escala | Proporción de empresas jóvenes que alcanzan niveles relevantes de empleo o facturación. |
+| Propósito compartido | Sentido de pertenencia nacional | Identificación y apego a la comunidad nacional, según declaran las personas, distintos del orgullo por la nación. |
 | Propósito compartido | Voluntariado | Proporción de adultos que dedicaron tiempo voluntario a una organización en el último mes. |
 | Propósito compartido | Polarización política | Grado en que las diferencias políticas se alinean en una sola división hostil. |
 

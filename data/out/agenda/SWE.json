@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T15:44:11.142Z",
+  "generatedAt": "2026-10-02T18:05:12.354Z",
   "iso3": "SWE",
   "country": "Sweden",
   "dimensions": [
@@ -3465,10 +3465,10 @@
     },
     {
       "dimension": "shared_purpose",
-      "kind": "hold",
+      "kind": "measure",
       "score": 81.6,
-      "confidence": 0.505,
-      "band": "usable",
+      "confidence": 0.42,
+      "band": "thin",
       "trend": {
         "spanYears": 10,
         "delta": 0.5,
@@ -3481,33 +3481,14 @@
         "civic_participation"
       ],
       "gaps": [
+        "national_belonging",
         "volunteering_rate",
         "political_polarization"
       ],
       "retired": [
-        "voice_and_accountability",
-        "national_belonging"
+        "voice_and_accountability"
       ],
-      "exemplars": [
-        {
-          "iso3": "FIN",
-          "country": "Finland",
-          "score": 73.6,
-          "confidence": 0.505
-        },
-        {
-          "iso3": "THA",
-          "country": "Thailand",
-          "score": 69.5,
-          "confidence": 0.519
-        },
-        {
-          "iso3": "KEN",
-          "country": "Kenya",
-          "score": 68.5,
-          "confidence": 0.474
-        }
-      ],
+      "exemplars": [],
       "evidenceElsewhere": [
         {
           "id": "rwa-umuganda",
@@ -3632,5 +3613,5 @@
       "started": 2011
     }
   ],
-  "gapCount": 17
+  "gapCount": 18
 }

@@ -149,14 +149,16 @@ const RAW: Raw[] = [
   {
     id: 'basic_research_share',
     dimension: 'anticipation',
-    name: 'Long-horizon research share',
-    definition: 'Share of gross R&D expenditure classified as basic research.',
-    unit: '% of R&D',
-    measurementClass: 'I',
+    name: 'Long-horizon research commitments',
+    definition:
+      'New competitively awarded public research grants that run for five years or longer, as a share of all new competitive public research grants awarded in the year.',
+    unit: '% of new grants',
+    measurementClass: 'C',
     direction: 'higher_better',
-    source: { publisher: 'OECD MSTI', tier: 'international_organization', inspectable: true },
+    source: { publisher: 'none', tier: 'official_statistical', inspectable: false },
     ingest: 'gap',
-    notes: 'Published by OECD for members only. Missing for India, South Africa, Brazil in comparable form.',
+    notes:
+      'Redefined 2026-10-02 (D152). The row asked for the share of R&D spending classed as basic research, which is the make-up of a spending stock, the construct D142 retired business R&D share for. OECD MSTI publishes that share for its members only, and UNESCO UIS no longer serves R&D by type of research (construct audit, 2026-10-02). The behaviour behind it is a funder committing to a horizon: a grant awarded for five years or more is a decision to wait for a result. Untried: no memo has triaged a grant register. National funders publish award lists one by one with their own durations, and commercial grant aggregators fail the inspectability rule. Wireable on a grant-level register with award and end dates, on one definition of a competitive public grant, for 27 or more of the frame.',
     wealthProxyPrior: 0.3,
   },
 
@@ -250,14 +252,16 @@ const RAW: Raw[] = [
   {
     id: 'adult_digital_skills',
     dimension: 'agency',
-    name: 'Adult digital skills',
-    definition: 'Share of adults who can perform standard digital tasks.',
+    name: 'Adults doing digital tasks',
+    definition:
+      'Share of adults who carried out a named digital task in the last three months, such as sending a message with an attached file, moving a file between devices or using a spreadsheet formula, counted one task at a time and never as a skill level.',
     unit: '% of adults',
     measurementClass: 'C',
     direction: 'higher_better',
-    source: { publisher: 'ITU', tier: 'international_organization', inspectable: true },
+    source: { publisher: 'ITU / UNESCO UIS', series: 'SDG 4.4.1, ICT skills by type', tier: 'international_organization', inspectable: true },
     ingest: 'gap',
-    notes: 'ITU collects this but coverage across the country set is broken and the task lists differ by year.',
+    notes:
+      'Redefined 2026-10-02 (D152). The row asked whether adults can perform standard digital tasks, which reads a skill level, the kind of stock D122 moved out of the scores with internet users. It now counts the act: a person who did the task. It is not the internet users condition beside it, which counts access. Candidate: ITU ICT skills by type (SDG 4.4.1) through the UNESCO UIS API, probed 2026-10-02. Sent a message with an attached file reaches 33 of 53, 25 at 2018 or later, with no United States, India or China and most of Africa and Central America missing; two other task items reach 31 and 16. The items are self-reported and the task list has changed between rounds. Wireable on one task observed for 27 or more of the frame at 2018 or later.',
     wealthProxyPrior: 0.4,
   },
   {
@@ -740,14 +744,16 @@ const RAW: Raw[] = [
   {
     id: 'venture_capital_gdp',
     dimension: 'experimentation',
-    name: 'Venture capital investment',
-    definition: 'Venture capital deployed as a share of GDP.',
-    unit: '% of GDP',
+    name: 'Venture deals',
+    definition:
+      'First venture capital rounds closed by companies based in the country in the year, per million people, counted by deal and never by amount.',
+    unit: 'per million people',
     measurementClass: 'C',
     direction: 'higher_better',
     source: { publisher: 'OECD / national VC associations', tier: 'international_organization', inspectable: true },
     ingest: 'gap',
-    notes: 'Still a gap after a direct check on 2026-08-26. The OECD SME and Entrepreneurship Financing scoreboard is the only inspectable aggregate and it carries venture capital for 6 of the 16 countries the frame held at that check, in national currency rather than as a share of GDP, latest year 2022. Brazil, India, South Africa and Singapore are all absent, so wiring it would score the rich half of the set and lower coverage for the rest. Commercial databases cover the world and are not inspectable. Read A1 before treating this dimension as measured.',
+    notes:
+      'Redefined 2026-10-02 (D152). The id keeps its first name so evidence records, links and published files still resolve. The row asked for venture capital deployed as a share of GDP, a level of financial depth of the kind private credit is (D122). A count of first rounds counts attempts started with outside risk money, which is what this capability asks about, and a large round counts once. Candidates, none wireable: the OECD SME and Entrepreneurship Financing scoreboard carried venture capital for 6 of the 16 countries the frame held on 2026-08-26, as amounts in national currency, latest year 2022, with Brazil, India, South Africa and Singapore absent (D21); national venture capital associations publish counts on their own definitions; commercial deal databases cover the world and are not inspectable (D10). Wireable on an inspectable deal count with one definition of a first round for 27 or more of the frame. Read A1 before treating this dimension as measured.',
     wealthProxyPrior: 0.6,
   },
   {
@@ -791,14 +797,16 @@ const RAW: Raw[] = [
   {
     id: 'regulatory_sandbox_activity',
     dimension: 'experimentation',
-    name: 'Regulatory sandbox activity',
-    definition: 'Number and breadth of live regulatory sandboxes and controlled trial regimes.',
-    unit: 'count',
+    name: 'Firms through regulatory sandboxes',
+    definition:
+      'Firms admitted to, and firms completing, a regulatory sandbox or controlled trial regime in the year, per million people, summed across every regulator in the country.',
+    unit: 'firms per million people',
     measurementClass: 'C',
     direction: 'higher_better',
-    source: { publisher: 'none', tier: 'expert_panel', inspectable: false },
+    source: { publisher: 'national regulators', tier: 'official_statistical', inspectable: true },
     ingest: 'gap',
-    notes: 'Countable from primary sources but nobody maintains a comparable register. A realistic candidate for Envisioning to build.',
+    notes:
+      'Redefined 2026-10-02 (D152). The row asked for the number and breadth of live sandboxes, which is a policy stock: a regime can exist with nobody in it. It now counts what passes through: firms a regulator let test under relaxed rules, and firms that came out, authorised, withdrawn or failed. Regulators publish cohort lists and exit reports one by one. The evidence corpus holds 22 records against this row, most of them counts of firms admitted or exited, each on the definition and window of its own regulator, and no register assembles them on one definition (O1 triage sweep, 2026-10-01). A realistic candidate for Envisioning to build from those lists. Wireable on a register that counts admissions and completions on one definition for 27 or more of the frame.',
     wealthProxyPrior: 0.1,
   },
   {
@@ -1154,13 +1162,14 @@ const RAW: Raw[] = [
     id: 'national_belonging',
     dimension: 'shared_purpose',
     name: 'Sense of national belonging',
-    definition: 'Reported pride in and identification with the national community.',
+    definition: 'Reported identification with and attachment to the national community, as distinct from pride in the nation.',
     unit: '% expressing belonging',
     measurementClass: 'P',
     direction: 'higher_better',
     source: { publisher: JOINT_EVS_WVS_PUBLISHER, series: 'G006', url: JOINT_EVS_WVS_RESULTS_URL, tier: 'academic_survey', inspectable: true },
-    ingest: 'retired',
-    notes: 'Retired 2026-10-02. The only cross-national item aimed at it is national pride (G006) in the Joint EVS/WVS, and pride is not the capacity for collective action this capability asks about. It also fails the regime test of artefact A13: electoral autocracies read 75 percent very proud against 47 in liberal democracies, so scored it would lift those regimes for a uniformity the benchmark does not count as shared purpose. Civic participation and tax revenue stay as the readings of people acting together. See D143.',
+    ingest: 'gap',
+    notes:
+      'A declared gap again since 2026-10-02 (D151, which supersedes the retirement in D143). The project still wants to know whether people count themselves members of the community whose common project this capability asks about, so the row stays even though no series can fill it. The only cross-national item aimed at it, national pride (G006) in the Joint EVS/WVS, is not wired: pride is not belonging, and it fails the regime test of artefact A13, with electoral autocracies at 75 percent very proud against 47 in liberal democracies. ISSP 2023 asks about closeness to the country in 16 countries. Wireable on an item that reads the same in every regime class, or on a behaviour of belonging, for 27 or more of the frame. High national pride must never be read as the capacity for collective action.',
     wealthProxyPrior: 0.05,
   },
   {

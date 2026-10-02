@@ -121,14 +121,14 @@ export const ES: Lexicon = {
     statistical_performance: 'Desempeño estadístico',
     secure_internet_servers: 'Servidores de internet seguros',
     government_foresight_capacity: 'Capacidad gubernamental de prospectiva',
-    basic_research_share: 'Proporción de investigación de largo plazo',
+    basic_research_share: 'Compromisos de investigación de largo plazo',
     new_business_density: 'Densidad de empresas nuevas',
     business_start_days: 'Tiempo para abrir una empresa',
     business_start_procedures: 'Trámites para abrir una empresa',
     internet_users: 'Personas que usan internet',
     account_ownership: 'Titularidad de cuentas financieras',
     domestic_credit_private: 'Crédito al sector privado',
-    adult_digital_skills: 'Habilidades digitales de adultos',
+    adult_digital_skills: 'Adultos que realizan tareas digitales',
     perceived_control: 'Control percibido sobre la propia vida',
     government_effectiveness: 'Efectividad del gobierno',
     regulatory_quality: 'Calidad regulatoria',
@@ -159,10 +159,10 @@ export const ES: Lexicon = {
     resident_trademarks_per_million: 'Solicitudes de marca de residentes',
     resident_industrial_designs_per_million: 'Solicitudes de diseño industrial de residentes',
     new_repositories_per_million: 'Nuevos repositorios públicos de software',
-    venture_capital_gdp: 'Inversión de capital de riesgo',
+    venture_capital_gdp: 'Operaciones de capital de riesgo',
     early_stage_entrepreneurial_activity: 'Actividad emprendedora en etapa inicial',
     failure_tolerance: 'Tolerancia al fracaso emprendedor',
-    regulatory_sandbox_activity: 'Actividad de sandbox regulatorio',
+    regulatory_sandbox_activity: 'Empresas en sandboxes regulatorios',
     university_spinouts: 'Empresas surgidas de universidades',
     business_rd_share: 'Proporción empresarial de la I+D',
     labor_force_participation: 'Participación en la fuerza laboral',
@@ -227,6 +227,8 @@ export const ES: Lexicon = {
     'Gini 0-100': 'Gini de 0 a 100',
     '% mentioning': '% que lo menciona',
     '% of R&D': '% de la I+D',
+    '% of new grants': '% de las subvenciones nuevas',
+    'firms per million people': 'empresas por millón de personas',
     '% of adults': '% de los adultos',
     'z-score -2.5 to 2.5': 'puntuación z de -2.5 a 2.5',
     'index 1-5': 'índice de 1 a 5',
@@ -314,8 +316,10 @@ export const ES: Lexicon = {
       'Distancia entre el gasto primario del gobierno y el presupuesto original aprobado.',
     government_foresight_capacity:
       'Existencia, mandato y continuidad de una función nacional de prospectiva estratégica.',
-    basic_research_share: 'Proporción del gasto bruto en I+D clasificada como investigación básica.',
-    adult_digital_skills: 'Proporción de adultos capaces de realizar tareas digitales estándar.',
+    basic_research_share:
+      'Subvenciones públicas de investigación nuevas, adjudicadas por concurso, con una duración de cinco años o más, como proporción de todas las subvenciones públicas por concurso adjudicadas en el año.',
+    adult_digital_skills:
+      'Proporción de adultos que realizaron una tarea digital determinada en los últimos tres meses, como enviar un mensaje con un archivo adjunto, mover un archivo entre dispositivos o usar una fórmula en una hoja de cálculo, contada tarea por tarea y nunca como nivel de habilidad.',
     perceived_control:
       'Libertad de elección y control sobre el rumbo de la propia vida, según declaran las personas.',
     university_industry_collaboration:
@@ -334,9 +338,10 @@ export const ES: Lexicon = {
       'Proporción de adultos en educación o capacitación, formal o no, en los últimos 12 meses.',
     research_citation_impact:
       'Proporción de los artículos y revisiones de un país entre el 10% más citado de su subárea y año, como razón de la misma proporción entre todas las obras con país de afiliación.',
-    venture_capital_gdp: 'Capital de riesgo invertido como proporción del PIB.',
+    venture_capital_gdp:
+      'Primeras rondas de capital de riesgo cerradas en el año por empresas con sede en el país, por millón de personas, contadas por operación y nunca por monto.',
     regulatory_sandbox_activity:
-      'Número y alcance de los sandboxes regulatorios y regímenes de prueba controlada en operación.',
+      'Empresas admitidas en un sandbox regulatorio o régimen de prueba controlada en el año, y empresas que lo concluyeron, por millón de personas, sumadas entre todos los reguladores del país.',
     university_spinouts:
       'Empresas creadas para comercializar investigación universitaria, por millón de habitantes.',
     business_rd_share: 'Proporción del gasto bruto en I+D ejecutada por empresas.',
@@ -356,7 +361,7 @@ export const ES: Lexicon = {
     firm_scale_up_rate:
       'Proporción de empresas jóvenes que alcanzan niveles relevantes de empleo o facturación.',
     national_belonging:
-      'Orgullo e identificación con la comunidad nacional, según declaran las personas.',
+      'Identificación y apego a la comunidad nacional, según declaran las personas, distintos del orgullo por la nación.',
     volunteering_rate:
       'Proporción de adultos que dedicaron tiempo voluntario a una organización en el último mes.',
     political_polarization:

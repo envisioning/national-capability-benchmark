@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-02T15:43:55.606Z",
-  "version": "8.2.0",
+  "generatedAt": "2026-10-02T18:04:59.050Z",
+  "version": "8.3.0",
   "country": {
     "country": "South Africa",
     "iso3": "ZAF",
@@ -353,13 +353,13 @@
           },
           {
             "indicatorId": "basic_research_share",
-            "name": "Long-horizon research share",
-            "measurementClass": "I",
+            "name": "Long-horizon research commitments",
+            "measurementClass": "C",
             "raw": null,
             "transformed": null,
             "normalized": null,
             "year": null,
-            "source": "OECD MSTI",
+            "source": "none",
             "sourceTier": null,
             "winsorized": false,
             "outOfFrame": false,
@@ -798,13 +798,13 @@
           },
           {
             "indicatorId": "adult_digital_skills",
-            "name": "Adult digital skills",
+            "name": "Adults doing digital tasks",
             "measurementClass": "C",
             "raw": null,
             "transformed": null,
             "normalized": null,
             "year": null,
-            "source": "ITU",
+            "source": "ITU / UNESCO UIS (SDG 4.4.1, ICT skills by type)",
             "sourceTier": null,
             "winsorized": false,
             "outOfFrame": false,
@@ -2470,7 +2470,7 @@
           },
           {
             "indicatorId": "venture_capital_gdp",
-            "name": "Venture capital investment",
+            "name": "Venture deals",
             "measurementClass": "C",
             "raw": null,
             "transformed": null,
@@ -2529,13 +2529,13 @@
           },
           {
             "indicatorId": "regulatory_sandbox_activity",
-            "name": "Regulatory sandbox activity",
+            "name": "Firms through regulatory sandboxes",
             "measurementClass": "C",
             "raw": null,
             "transformed": null,
             "normalized": null,
             "year": null,
-            "source": "none",
+            "source": "national regulators",
             "sourceTier": null,
             "winsorized": false,
             "outOfFrame": false,
@@ -3864,9 +3864,9 @@
         "score": 48,
         "observedIndicators": 2,
         "belowCoverageFloor": false,
-        "confidence": 0.348,
+        "confidence": 0.29,
         "confidenceParts": {
-          "coverage": 0.4,
+          "coverage": 0.333,
           "recency": 0.917,
           "sourceQuality": 0.95
         },
@@ -4567,7 +4567,7 @@
             "winsorized": false,
             "outOfFrame": false,
             "series": [],
-            "status": "retired"
+            "status": "gap"
           },
           {
             "indicatorId": "volunteering_rate",

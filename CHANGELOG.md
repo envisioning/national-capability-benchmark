@@ -9,6 +9,37 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## Dataset 8.3.0 — 2026-10-02
+
+- **National belonging is back on the list of things Shared purpose asks
+  for** (D151). It was dropped at 8.0.0 because the only survey item aimed
+  at it, national pride, reads highest in electoral autocracies. That item is
+  still not used, and pride is no longer part of the definition, but the
+  question of whether people count themselves part of the national community
+  stays open as a gap, the same way trust in institutions and polarization
+  already did.
+- **Shared purpose confidence falls from 0.41 to 0.34**, below the 0.40
+  target again. Nothing was lost: the dimension rests on the same three rows
+  it had before 8.0.0, and the higher figure came from dropping a question
+  while no new data arrived. In 28 countries Shared purpose moves from
+  usable to thin evidence, so their agendas now list it under measure
+  instead of raise. China's leading item becomes Anticipation, and
+  Switzerland and South Korea have no raise item left. No score moves.
+- **Four gaps now ask for something people or institutions do** (D152).
+  Venture capital becomes first venture deals per million people, counted by
+  deal instead of by amount. Adult digital skills becomes the share of adults
+  who did a named digital task in the last three months. Regulatory sandbox
+  activity becomes firms admitted to and completing a sandbox per million
+  people. Long-horizon research becomes the share of new public research
+  grants that run five years or longer. All four are still gaps, so no
+  confidence or score moves. Their ids are unchanged.
+- The rule behind both changes: a question the benchmark still wants
+  answered stays a gap when the only data aimed at it fails, and a row is
+  retired only when the question itself is dropped or was never about a
+  capability. The glossary entries for gap and retired indicator say so.
+- Same 53 countries and the same scores as 8.2.0. The guardrail, mean
+  confidence against income, moves from 0.274 to 0.272.
+
 ## Dataset 8.2.0 — 2026-10-02
 
 - **Adaptability gains a row: new export products** (D149). It counts the

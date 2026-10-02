@@ -150,14 +150,14 @@ export const PT_BR: Lexicon = {
     statistical_performance: 'Desempenho estatístico',
     secure_internet_servers: 'Servidores seguros de internet',
     government_foresight_capacity: 'Capacidade governamental de prospecção',
-    basic_research_share: 'Parcela de pesquisa de longo prazo',
+    basic_research_share: 'Compromissos de pesquisa de longo prazo',
     new_business_density: 'Densidade de novas empresas',
     business_start_days: 'Tempo para abrir uma empresa',
     business_start_procedures: 'Procedimentos para abrir uma empresa',
     internet_users: 'Pessoas que usam a internet',
     account_ownership: 'Titularidade de conta financeira',
     domestic_credit_private: 'Crédito ao setor privado',
-    adult_digital_skills: 'Habilidades digitais de adultos',
+    adult_digital_skills: 'Adultos que realizam tarefas digitais',
     perceived_control: 'Percepção de controle sobre a própria vida',
     government_effectiveness: 'Efetividade do governo',
     regulatory_quality: 'Qualidade regulatória',
@@ -188,10 +188,10 @@ export const PT_BR: Lexicon = {
     resident_trademarks_per_million: 'Pedidos de marca de residentes',
     resident_industrial_designs_per_million: 'Pedidos de desenho industrial de residentes',
     new_repositories_per_million: 'Novos repositórios públicos de software',
-    venture_capital_gdp: 'Investimento de capital de risco',
+    venture_capital_gdp: 'Operações de capital de risco',
     early_stage_entrepreneurial_activity: 'Atividade empreendedora em estágio inicial',
     failure_tolerance: 'Tolerância ao fracasso empreendedor',
-    regulatory_sandbox_activity: 'Atividade de sandbox regulatório',
+    regulatory_sandbox_activity: 'Empresas em sandboxes regulatórios',
     university_spinouts: 'Empresas nascidas de universidades',
     business_rd_share: 'Parcela empresarial do P&D',
     labor_force_participation: 'Participação na força de trabalho',
@@ -255,6 +255,8 @@ export const PT_BR: Lexicon = {
     index: 'índice',
     'Gini 0-100': 'Gini de 0 a 100',
     '% mentioning': '% que mencionam',
+    '% of new grants': '% dos novos auxílios',
+    'firms per million people': 'empresas por milhão de pessoas',
   },
   indicatorDefinitions: {
     budget_execution_fidelity:
@@ -262,9 +264,9 @@ export const PT_BR: Lexicon = {
     government_foresight_capacity:
       'Existência, mandato e continuidade de uma função nacional de prospecção estratégica.',
     basic_research_share:
-      'Parcela do dispêndio bruto em P&D classificada como pesquisa básica.',
+      'Novos auxílios públicos de pesquisa concedidos por concurso com duração de cinco anos ou mais, como parcela de todos os auxílios públicos por concurso concedidos no ano.',
     adult_digital_skills:
-      'Parcela de adultos capazes de executar tarefas digitais padrão.',
+      'Parcela de adultos que realizaram uma tarefa digital determinada nos últimos três meses, como enviar uma mensagem com arquivo anexo, mover um arquivo entre dispositivos ou usar uma fórmula em planilha, contada tarefa por tarefa e nunca como nível de habilidade.',
     perceived_control:
       'Liberdade de escolha e controle sobre o rumo da própria vida, autodeclarados.',
     university_industry_collaboration:
@@ -287,9 +289,10 @@ export const PT_BR: Lexicon = {
       'Parcela dos artigos e revisões de um país entre os 10% mais citados da sua subárea e ano, como razão da mesma parcela entre todas as obras com país de afiliação.',
     new_repositories_per_million:
       'Crescimento em um ano dos repositórios públicos do GitHub localizados no país, por milhão de habitantes.',
-    venture_capital_gdp: 'Capital de risco investido como parcela do PIB.',
+    venture_capital_gdp:
+      'Primeiras rodadas de capital de risco fechadas no ano por empresas sediadas no país, por milhão de pessoas, contadas por operação e nunca por valor.',
     regulatory_sandbox_activity:
-      'Número e abrangência de sandboxes regulatórios e regimes de teste controlado em operação.',
+      'Empresas admitidas em um sandbox regulatório ou regime de teste controlado no ano, e empresas que o concluíram, por milhão de pessoas, somadas entre todos os reguladores do país.',
     university_spinouts:
       'Empresas criadas para comercializar pesquisa universitária, por milhão de habitantes.',
     business_rd_share:
@@ -311,7 +314,7 @@ export const PT_BR: Lexicon = {
     firm_scale_up_rate:
       'Parcela de empresas jovens que atingem patamares relevantes de emprego ou faturamento.',
     national_belonging:
-      'Orgulho e identificação com a comunidade nacional, autodeclarados.',
+      'Identificação e vínculo com a comunidade nacional, autodeclarados, distintos do orgulho pela nação.',
     volunteering_rate:
       'Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês.',
     political_polarization:

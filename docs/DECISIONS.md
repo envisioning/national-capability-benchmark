@@ -7767,3 +7767,150 @@ informality reliably slows or speeds reallocation after a shock across
 countries, which would make it an indicator on its own entry. Or a
 harmonised series that closes the EU-SILC gap and the ten missing countries,
 which would make the rank comparable enough to read across income groups.
+
+---
+
+## D151 — A construct still wanted stays a gap when its only series fails a construct test; national belonging is reopened
+
+*Recorded 2026-10-02. Amends D100. Supersedes D143. Leaves D121 and D132
+standing. Owner decision of 2026-10-02. Memo: `docs/research/GAP-AUDIT.md`,
+classes (b) and the notes on D121, D132 and D143. Dataset 8.3.0.*
+
+**Decision.** D100's description of a retirement gains a rule. A row is
+retired when the project no longer wants its construct measured, or when the
+row's definition is not a capability: a row defined as one rejected dataset
+(the WGI and LPI rows of D23), or as the make-up of a spending stock
+(`business_rd_share`, D142). A construct the benchmark still wants stays a
+declared gap when the only series aimed at it is inspected and fails A13 or
+another construct test. The failed series is recorded in the row's note and,
+where it is worth showing, published as a check under D60, and the row stays
+in the coverage denominator.
+
+Under that rule `institutional_trust` (D132) and `political_polarization`
+(D121) stay declared gaps, unchanged, with their checks beside them. And
+`national_belonging` moves from `ingest: 'retired'` back to `ingest: 'gap'`.
+Its definition drops pride: it now reads reported identification with and
+attachment to the national community, as distinct from pride in the nation.
+Its note names G006 as the inspected item that is not wired and ISSP 2023 as
+the 16-country lead. The rows retired under D23, D44 and D142 are not
+reopened by this entry; a challenge to any of them is a new decision.
+
+**Why.** The audit found three rows tested the same way, each with one
+cross-national series that reads the definition and fails A13 because closed
+or electoral autocracies read best. D143 retired its row and D121 and D132
+kept theirs, and D100 as written sided with D143. The owner's position is the
+one D121 and D132 took: the benchmark wants as many relevant constructs read
+as it can get, and a construct is not abandoned because the first instrument
+aimed at it flatters uniformity. D143 gave a reason of its own, that pride is
+not a capability. That holds for pride, and the reopened definition no longer
+asks for it. Whether people count themselves members of the community whose
+common project Shared purpose asks about is still wanted, and nobody can
+measure it comparably yet, which is what a gap says.
+
+The rule also closes the hole D100's overturn clause warned about. A
+retirement now records a judgement on the construct, not on the first proxy
+tried. Without the rule, any construct could leave the denominator by trying
+one bad series, and the confidence of the dimensions that most need
+measurement would rise for the attempt.
+
+**Cost.** Shared purpose's denominator rises from five rows to six. Its mean
+confidence falls from 0.411 to 0.343, under O1's 0.40 again, with no
+observation lost. That is the honest state: Shared purpose rests on three
+scored rows, the same three it had at 7.8.0, and the confidence 8.0.0 to 8.2.0
+published came from a retirement and not from evidence (A5 said so). 28
+countries' Shared purpose confidence falls from usable to thin and two from
+thin to very thin, so their agendas move the dimension from raise to measure;
+China's leading item changes from Shared purpose to Anticipation, and
+Switzerland and South Korea are left with no raise item. No score moves. The
+guardrail moves from 0.274 to 0.272. Three dimensions now miss O1:
+Coordination, Experimentation and Shared purpose. The bump is minor, because
+a registry row changes status and no country or published field changes,
+as D100's own restatement was.
+
+**Overturned by.** Evidence that readers take a declared gap with a failed
+series beside it as a measurement the project made, which would argue for a
+third status between gap and retired; or an owner decision that a specific
+construct is no longer wanted, which retires that row under this rule. For
+`national_belonging`: an item on belonging that reads the same in every
+regime class, or a behaviour of belonging, for 27 or more of the frame,
+would make it an indicator candidate.
+
+---
+
+## D152 — Four gaps that read a stock are redefined as behaviour and stay declared gaps
+
+*Recorded 2026-10-02. Extends D118 and D122; under D151. Owner decision of
+2026-10-02. Memo: `docs/research/GAP-AUDIT.md`, class (c). Dataset 8.3.0.*
+
+**Decision.** The four gaps the construct audit classed as not a capability
+keep their ids and their dimensions and stay `ingest: 'gap'`, under new
+definitions that name an act a series could be tested against.
+
+- `basic_research_share` (Anticipation), now "Long-horizon research
+  commitments": new competitively awarded public research grants that run
+  five years or longer, as a share of all new competitive public grants
+  awarded in the year. Unit `% of new grants`, class C. It was the share of
+  R&D spending classed as basic research, the make-up of a spending stock that
+  D142 retired `business_rd_share` for. No grant register has been triaged.
+- `venture_capital_gdp` (Experimentation), now "Venture deals": first venture
+  capital rounds closed by companies based in the country in the year, per
+  million people, counted by deal and never by amount. Unit `per million
+  people`, class C. It was venture capital deployed as a share of GDP, a level
+  of financial depth of the kind `domestic_credit_private` is (D122).
+  Candidates: the OECD SME and Entrepreneurship Financing scoreboard (6 of the
+  16 countries checked under D21, amounts not deals), national association
+  counts on their own definitions, and commercial deal databases that fail
+  D10.
+- `adult_digital_skills` (Agency), now "Adults doing digital tasks": the share
+  of adults who carried out a named digital task in the last three months,
+  counted one task at a time and never as a skill level. Unit `% of adults`,
+  class C. It was the share who can perform standard tasks, a skill level of
+  the kind D122 moved out with `internet_users`. Candidate: ITU ICT skills by
+  type (SDG 4.4.1) through the UIS API, probed 2026-10-02 at 33 of 53 for
+  attaching a file, 25 at 2018 or later.
+- `regulatory_sandbox_activity` (Experimentation), now "Firms through
+  regulatory sandboxes": firms admitted to, and firms completing, a regulatory
+  sandbox or controlled trial regime in the year, per million people, summed
+  across regulators. Unit `firms per million people`, class C. It was the
+  number and breadth of live sandboxes, a policy stock. Candidate: the cohort
+  lists regulators publish one by one; the evidence corpus holds 22 records
+  against the row, most of them admission or exit counts on each regulator's
+  own definition. It stays an evidence grid column (D135).
+
+Each note names the bar a series must clear: one definition, 27 or more of
+the frame. The es and pt-BR lexicons carry the new names and definitions,
+and two new units.
+
+**Why.** D151 keeps a construct in the denominator while the project wants
+it. A row whose definition reads a stock is not a construct the project
+wants scored (D122 moved ten such rows out), so the audit's choice was
+between a condition, a retirement and a redefinition. The owner chose the
+redefinition: each row points at a capability the dimension lacks, and the
+stock wording was the first available proxy written into the definition, not
+the thing wanted. A first round counts an attempt with outside money where an
+amount counts the money; a grant length is a funder deciding to wait; a task
+done is an act where a skill is a level; a firm through a sandbox is a trial
+run where a regime is a permission. Each new definition is narrow enough that
+a candidate series can be held against it and fail.
+
+The ids stay. `venture_capital_gdp` no longer describes its row, but evidence
+records, `/indicators#venture_capital_gdp`, `data/out/indicators/` and any
+pinned consumer read the id, and renaming it would remove a published id,
+which D37 makes a major version. Its note says the id keeps its first name.
+
+**Cost.** No confidence moves: each row was a gap and stays one, so the
+denominators of Anticipation, Agency and Experimentation are unchanged, as
+are all scores. The audit's alternative, retiring or moving the four rows,
+would have raised those three dimensions' confidence with no observation (the
+audit printed Anticipation 0.451 to 0.601, Agency 0.483 to 0.604 and
+Experimentation 0.364 to 0.468), and this decision declines that. Rows now
+ask for series that mostly do not exist: the grant and sandbox rows are
+registers Envisioning would have to build, and the venture row has no
+inspectable full-frame source. A1's fix now asks for a deal count rather than
+an amount.
+
+**Overturned by.** A source that reads the old definition at full frame and
+an argument that the stock, not the act, is the capability; evidence that a
+redefined row's candidate series reads income and nothing else once wired,
+which would make it a condition under D122; or an owner decision that a
+construct is no longer wanted, which retires the row under D151.

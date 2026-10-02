@@ -16,7 +16,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Experimentation | 19.2 | 0.53 (usable) | +1.3 over 10 years using 3 indicators |
 | Adaptability | 52.8 | 0.62 (usable) | no trend |
 | Building | 27.8 | 0.57 (usable) | -3.4 over 10 years using 3 indicators |
-| Shared Purpose | 33.7 | 0.52 (usable) | -3.3 over 10 years using 2 indicators |
+| Shared Purpose | 33.7 | 0.43 (thin) | -3.3 over 10 years using 2 indicators |
 
 ## What to raise
 
@@ -29,7 +29,7 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Uses 6 observed indicators.
 - Highest usable scores: South Korea 70.3, Switzerland 57.6, United States 48.1.
 - Related deliveries in other countries: The FCA regulatory sandbox (United Kingdom); Yozma, the venture capital catalyst (Israel); Korean regulatory-sandbox system across eight sectors (South Korea); MAS FinTech Regulatory Sandbox variants (Singapore); British Patient Capital, a public venture-capital catalyst (United Kingdom); ICURe, from university research to spinouts (United Kingdom); Portugal Ventures, a public venture-capital bridge (Portugal); Rede Nacional de Test Beds for company experimentation (Portugal); Zonas Livres Tecnológicas, regulator-supervised experimentation zones (Portugal); Banco Central regulatory sandbox, first cycle (Brazil); Reserve Bank of India regulatory sandbox (India); Capital Markets Authority regulatory sandbox (Kenya); SEC Nigeria Regulatory Incubation Program (Nigeria); ADGM RegLab, the first fintech sandbox in the region (United Arab Emirates); OJK regulatory sandbox for financial-sector technological innovation (Indonesia); Bank Negara Malaysia Fintech Regulatory Sandbox (Malaysia); Bank of Thailand regulatory sandbox (Thailand); Sandbox financiero (Ley 7/2020), and the fall in applications (Spain); IFWG Regulatory Sandbox (South Africa); Project-based regulatory sandbox (new technology demonstration scheme) (Japan); CFPB Compliance Assistance Sandbox, rescinded in 2022 and withdrawn again in 2025 (United States); CSA Regulatory Sandbox, succeeded by the Financial Innovation Hub (Canada); ASIC enhanced regulatory sandbox (Australia); SINTEG-Verordnung, the energy-transition experimentation clause (Germany); Experimenten Elektriciteitswet 2015-2018, and its erosion (Netherlands); Bac à sable réglementaire in the energy sector (France).
-- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
+- Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
 - Rejected datasets: Business share of R&D.
 
 ### Building: 27.8, confidence usable
@@ -42,16 +42,6 @@ How capable is the country of turning plans and knowledge into functioning syste
 - Missing indicators: Large project delivery, Firm scale-up rate.
 - Rejected datasets: Logistics infrastructure quality.
 
-### Shared Purpose: 33.7, confidence usable
-
-To what extent can people imagine themselves as participants in a common project?
-
-- Uses 3 observed indicators.
-- Highest usable scores: Sweden 81.6, Finland 73.6, Thailand 69.5.
-- Related deliveries in other countries: Umuganda community work (Rwanda); THW, volunteer civil protection as a federal institution (Germany); Volunteer fire corps, and its membership erosion (Japan); Federal funding gaps and the 2019 shutdown (United States).
-- Missing indicators: Volunteering, Political polarisation.
-- Rejected datasets: Voice and accountability, Sense of national belonging.
-
 ### Anticipation: 42.3, confidence usable
 
 How capable is the country of identifying and preparing for emerging change?
@@ -59,7 +49,7 @@ How capable is the country of identifying and preparing for emerging change?
 - Uses 2 observed indicators.
 - Highest usable scores: Switzerland 96.3, Sweden 90, Finland 87.5.
 - Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (South Africa); Government Report on the Future and the parliamentary Committee for the Future (Finland); Foresight Centre at the Riigikogu (Arenguseire Keskus) (Estonia); Office of Technology Assessment, defunded and closed in 1995 (United States); Rządowe Centrum Studiów Strategicznych, liquidated in 2006 (Poland); Office of Technology Assessment at the German Bundestag (TAB) (Germany); National Assembly Futures Institute (South Korea); Federal Chancellery situation and environment analysis (Perspektivstab) (Switzerland); Senate foresight delegation (Délégation sénatoriale à la prospective) (France); Senate Commission on Future Challenges, Science, Technology and Innovation (Chile); Policy Horizons Canada, the federal foresight unit, and its 2024 disruption scan (Canada); Framtidskommissionen, the Prime Minister's time-limited future commission (Sweden).
-- Missing indicators: Government foresight capacity, Long-horizon research share.
+- Missing indicators: Government foresight capacity, Long-horizon research commitments.
 
 ## What to measure first
 
@@ -87,6 +77,14 @@ How much cooperation is possible beyond immediate personal networks?
 - Uses 5 observed indicators.
 - Missing indicators: Trust in public institutions, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
+
+### Shared Purpose: confidence 0.43, thin
+
+To what extent can people imagine themselves as participants in a common project?
+
+- Uses 3 observed indicators.
+- Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
+- Rejected datasets: Voice and accountability.
 
 ## What to keep watching
 
@@ -118,25 +116,26 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 ## Missing data
 
-17 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+18 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
 | Anticipation | Government foresight capacity | Existence, mandate and continuity of a national strategic foresight function. |
-| Anticipation | Long-horizon research share | Share of gross R&D expenditure classified as basic research. |
-| Agency | Adult digital skills | Share of adults who can perform standard digital tasks. |
+| Anticipation | Long-horizon research commitments | New competitively awarded public research grants that run for five years or longer, as a share of all new competitive public research grants awarded in the year. |
+| Agency | Adults doing digital tasks | Share of adults who carried out a named digital task in the last three months, such as sending a message with an attached file, moving a file between devices or using a spreadsheet formula, counted one task at a time and never as a skill level. |
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
 | Trust | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Learning | Adult learning participation | Share of adults in formal or non-formal education and training in the last 12 months. |
-| Experimentation | Venture capital investment | Venture capital deployed as a share of GDP. |
-| Experimentation | Regulatory sandbox activity | Number and breadth of live regulatory sandboxes and controlled trial regimes. |
+| Experimentation | Venture deals | First venture capital rounds closed by companies based in the country in the year, per million people, counted by deal and never by amount. |
+| Experimentation | Firms through regulatory sandboxes | Firms admitted to, and firms completing, a regulatory sandbox or controlled trial regime in the year, per million people, summed across every regulator in the country. |
 | Experimentation | University spinouts | Companies formed to commercialise university research, per million people. |
 | Adaptability | Disaster preparedness and recovery | Demonstrated capacity to prepare for and recover from major shocks. |
 | Adaptability | Institutional responsiveness | Speed at which rules and public programmes are changed in response to new conditions. |
 | Building | Large project delivery | Cost and schedule performance of major public infrastructure projects. |
 | Building | Firm scale-up rate | Share of young firms reaching significant employment or turnover thresholds. |
+| Shared Purpose | Sense of national belonging | Reported identification with and attachment to the national community, as distinct from pride in the nation. |
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 

@@ -16,7 +16,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Experimentação | 6,3 | 0,33 (fraca) | -1,9 em 10 anos, sobre 3 indicadores |
 | Adaptação | 69,8 | 0,62 (utilizável) | sem base de tendência |
 | Construção | 27 | 0,57 (utilizável) | -1 em 10 anos, sobre 3 indicadores |
-| Propósito compartilhado | 20,4 | 0,38 (fraca) | -4,2 em 10 anos, sobre 2 indicadores |
+| Propósito compartilhado | 20,4 | 0,32 (fraca) | -4,2 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para elevar
 
@@ -48,7 +48,7 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 - Baseada em 2 indicadores observados.
 - Maiores notas utilizáveis: Suíça 96,3, Suécia 90, Finlândia 87,5.
 - Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japão); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (África do Sul); Government Report on the Future and the parliamentary Committee for the Future (Finlândia); Foresight Centre at the Riigikogu (Arenguseire Keskus) (Estônia); Office of Technology Assessment, defunded and closed in 1995 (Estados Unidos); Rządowe Centrum Studiów Strategicznych, liquidated in 2006 (Polônia); Office of Technology Assessment at the German Bundestag (TAB) (Alemanha); National Assembly Futures Institute (Coreia do Sul); Federal Chancellery situation and environment analysis (Perspektivstab) (Suíça); Senate foresight delegation (Délégation sénatoriale à la prospective) (França); Senate Commission on Future Challenges, Science, Technology and Innovation (Chile); Policy Horizons Canada, the federal foresight unit, and its 2024 disruption scan (Canadá); Framtidskommissionen, the Prime Minister's time-limited future commission (Suécia).
-- Lacunas declaradas: Capacidade governamental de prospecção, Parcela de pesquisa de longo prazo.
+- Lacunas declaradas: Capacidade governamental de prospecção, Compromissos de pesquisa de longo prazo.
 
 ## Dimensões para medir primeiro
 
@@ -62,12 +62,20 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 - Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
+### Propósito compartilhado: solidez 0,32, fraca
+
+Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
+
+- Baseada em 2 indicadores observados.
+- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
+- Bases rejeitadas: Voz e responsabilização.
+
 ### Experimentação: solidez 0,33, fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
 - Baseada em 4 indicadores observados.
-- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades.
+- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas nascidas de universidades.
 - Bases rejeitadas: Parcela empresarial do P&D.
 
 ### Coordenação: solidez 0,37, fraca
@@ -83,15 +91,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 Quão capazes são pessoas e organizações de transformar uma intenção em ação?
 
 - Baseada em 3 indicadores observados.
-- Lacunas declaradas: Habilidades digitais de adultos.
-
-### Propósito compartilhado: solidez 0,38, fraca
-
-Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Voluntariado, Polarização política.
-- Bases rejeitadas: Voz e responsabilização, Sentimento de pertencimento nacional.
+- Lacunas declaradas: Adultos que realizam tarefas digitais.
 
 ## Dimensões para manter
 
@@ -122,25 +122,26 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 ## Agenda de medição
 
-17 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+18 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
 | Antecipação | Capacidade governamental de prospecção | Existência, mandato e continuidade de uma função nacional de prospecção estratégica. |
-| Antecipação | Parcela de pesquisa de longo prazo | Parcela do dispêndio bruto em P&D classificada como pesquisa básica. |
-| Agência | Habilidades digitais de adultos | Parcela de adultos capazes de executar tarefas digitais padrão. |
+| Antecipação | Compromissos de pesquisa de longo prazo | Novos auxílios públicos de pesquisa concedidos por concurso com duração de cinco anos ou mais, como parcela de todos os auxílios públicos por concurso concedidos no ano. |
+| Agência | Adultos que realizam tarefas digitais | Parcela de adultos que realizaram uma tarefa digital determinada nos últimos três meses, como enviar uma mensagem com arquivo anexo, mover um arquivo entre dispositivos ou usar uma fórmula em planilha, contada tarefa por tarefa e nunca como nível de habilidade. |
 | Coordenação | Colaboração universidade-empresa | Intensidade da colaboração de pesquisa entre universidades e empresas. |
 | Coordenação | Colaboração público-privada | Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
 | Confiança | Taxa de resolução de processos judiciais | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Aprendizagem | Participação de adultos em aprendizagem | Parcela de adultos em educação e treinamento, formal ou não, nos últimos 12 meses. |
-| Experimentação | Investimento de capital de risco | Capital de risco investido como parcela do PIB. |
-| Experimentação | Atividade de sandbox regulatório | Número e abrangência de sandboxes regulatórios e regimes de teste controlado em operação. |
+| Experimentação | Operações de capital de risco | Primeiras rodadas de capital de risco fechadas no ano por empresas sediadas no país, por milhão de pessoas, contadas por operação e nunca por valor. |
+| Experimentação | Empresas em sandboxes regulatórios | Empresas admitidas em um sandbox regulatório ou regime de teste controlado no ano, e empresas que o concluíram, por milhão de pessoas, somadas entre todos os reguladores do país. |
 | Experimentação | Empresas nascidas de universidades | Empresas criadas para comercializar pesquisa universitária, por milhão de habitantes. |
 | Adaptação | Preparação e recuperação de desastres | Capacidade demonstrada de preparação e recuperação diante de choques graves. |
 | Adaptação | Capacidade de resposta institucional | Velocidade com que regras e programas públicos mudam em resposta a novas condições. |
 | Construção | Entrega de grandes projetos | Desempenho de custo e prazo de grandes projetos públicos de infraestrutura. |
 | Construção | Empresas jovens que ganham escala | Parcela de empresas jovens que atingem patamares relevantes de emprego ou faturamento. |
+| Propósito compartilhado | Sentimento de pertencimento nacional | Identificação e vínculo com a comunidade nacional, autodeclarados, distintos do orgulho pela nação. |
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 

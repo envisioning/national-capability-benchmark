@@ -16,7 +16,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Experimentação | 34,7 | 0,53 (utilizável) | +4,5 em 10 anos, sobre 3 indicadores |
 | Adaptação | 50,3 | 0,62 (utilizável) | sem base de tendência |
 | Construção | 32,3 | 0,57 (utilizável) | -1 em 10 anos, sobre 3 indicadores |
-| Propósito compartilhado | 47,3 | 0,52 (utilizável) | +5,5 em 10 anos, sobre 2 indicadores |
+| Propósito compartilhado | 47,3 | 0,43 (fraca) | +5,5 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para elevar
 
@@ -39,18 +39,8 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Baseada em 6 indicadores observados.
 - Maiores notas utilizáveis: Coreia do Sul 70,3, Suíça 57,6, Estados Unidos 48,1.
 - Entregas documentadas em outros países: The FCA regulatory sandbox (Reino Unido); Yozma, the venture capital catalyst (Israel); Korean regulatory-sandbox system across eight sectors (Coreia do Sul); MAS FinTech Regulatory Sandbox variants (Singapura); British Patient Capital, a public venture-capital catalyst (Reino Unido); ICURe, from university research to spinouts (Reino Unido); Portugal Ventures, a public venture-capital bridge (Portugal); Rede Nacional de Test Beds for company experimentation (Portugal); Zonas Livres Tecnológicas, regulator-supervised experimentation zones (Portugal); Banco Central regulatory sandbox, first cycle (Brasil); Reserve Bank of India regulatory sandbox (Índia); Capital Markets Authority regulatory sandbox (Quênia); SEC Nigeria Regulatory Incubation Program (Nigéria); ADGM RegLab, the first fintech sandbox in the region (Emirados Árabes Unidos); OJK regulatory sandbox for financial-sector technological innovation (Indonésia); Bank Negara Malaysia Fintech Regulatory Sandbox (Malásia); Bank of Thailand regulatory sandbox (Tailândia); Sandbox financiero (Ley 7/2020), and the fall in applications (Espanha); IFWG Regulatory Sandbox (África do Sul); Project-based regulatory sandbox (new technology demonstration scheme) (Japão); CFPB Compliance Assistance Sandbox, rescinded in 2022 and withdrawn again in 2025 (Estados Unidos); CSA Regulatory Sandbox, succeeded by the Financial Innovation Hub (Canadá); ASIC enhanced regulatory sandbox (Austrália); SINTEG-Verordnung, the energy-transition experimentation clause (Alemanha); Experimenten Elektriciteitswet 2015-2018, and its erosion (Países Baixos); Bac à sable réglementaire in the energy sector (França).
-- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades.
+- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas nascidas de universidades.
 - Bases rejeitadas: Parcela empresarial do P&D.
-
-### Propósito compartilhado: 47,3, solidez utilizável
-
-Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
-
-- Baseada em 3 indicadores observados.
-- Maiores notas utilizáveis: Suécia 81,6, Finlândia 73,6, Tailândia 69,5.
-- Entregas documentadas em outros países: Umuganda community work (Ruanda); THW, volunteer civil protection as a federal institution (Alemanha); Volunteer fire corps, and its membership erosion (Japão); Federal funding gaps and the 2019 shutdown (Estados Unidos).
-- Lacunas declaradas: Voluntariado, Polarização política.
-- Bases rejeitadas: Voz e responsabilização, Sentimento de pertencimento nacional.
 
 ### Aprendizagem: 49,9, solidez utilizável
 
@@ -72,6 +62,14 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
+
+### Propósito compartilhado: solidez 0,43, fraca
+
+Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
+- Bases rejeitadas: Voz e responsabilização.
 
 ## Dimensões para manter
 
@@ -105,25 +103,26 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 ## Agenda de medição
 
-17 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+18 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
 | Antecipação | Capacidade governamental de prospecção | Existência, mandato e continuidade de uma função nacional de prospecção estratégica. |
-| Antecipação | Parcela de pesquisa de longo prazo | Parcela do dispêndio bruto em P&D classificada como pesquisa básica. |
-| Agência | Habilidades digitais de adultos | Parcela de adultos capazes de executar tarefas digitais padrão. |
+| Antecipação | Compromissos de pesquisa de longo prazo | Novos auxílios públicos de pesquisa concedidos por concurso com duração de cinco anos ou mais, como parcela de todos os auxílios públicos por concurso concedidos no ano. |
+| Agência | Adultos que realizam tarefas digitais | Parcela de adultos que realizaram uma tarefa digital determinada nos últimos três meses, como enviar uma mensagem com arquivo anexo, mover um arquivo entre dispositivos ou usar uma fórmula em planilha, contada tarefa por tarefa e nunca como nível de habilidade. |
 | Coordenação | Colaboração universidade-empresa | Intensidade da colaboração de pesquisa entre universidades e empresas. |
 | Coordenação | Colaboração público-privada | Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
 | Confiança | Taxa de resolução de processos judiciais | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Aprendizagem | Participação de adultos em aprendizagem | Parcela de adultos em educação e treinamento, formal ou não, nos últimos 12 meses. |
-| Experimentação | Investimento de capital de risco | Capital de risco investido como parcela do PIB. |
-| Experimentação | Atividade de sandbox regulatório | Número e abrangência de sandboxes regulatórios e regimes de teste controlado em operação. |
+| Experimentação | Operações de capital de risco | Primeiras rodadas de capital de risco fechadas no ano por empresas sediadas no país, por milhão de pessoas, contadas por operação e nunca por valor. |
+| Experimentação | Empresas em sandboxes regulatórios | Empresas admitidas em um sandbox regulatório ou regime de teste controlado no ano, e empresas que o concluíram, por milhão de pessoas, somadas entre todos os reguladores do país. |
 | Experimentação | Empresas nascidas de universidades | Empresas criadas para comercializar pesquisa universitária, por milhão de habitantes. |
 | Adaptação | Preparação e recuperação de desastres | Capacidade demonstrada de preparação e recuperação diante de choques graves. |
 | Adaptação | Capacidade de resposta institucional | Velocidade com que regras e programas públicos mudam em resposta a novas condições. |
 | Construção | Entrega de grandes projetos | Desempenho de custo e prazo de grandes projetos públicos de infraestrutura. |
 | Construção | Empresas jovens que ganham escala | Parcela de empresas jovens que atingem patamares relevantes de emprego ou faturamento. |
+| Propósito compartilhado | Sentimento de pertencimento nacional | Identificação e vínculo com a comunidade nacional, autodeclarados, distintos do orgulho pela nação. |
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 

@@ -5,6 +5,11 @@ Status: desk audit, 2026-10-02. Dataset 8.2.0 (`data/out/index.json` at
 or the changelog has moved. This memo classifies; every change it proposes is
 a decision for the owner.
 
+Owner decisions, 2026-10-02, dataset 8.3.0: the (b) rows stay gaps and
+`national_belonging` is reopened as one (D151); the four (c) rows are
+redefined as behaviour and stay gaps (D152). Items 1 to 6 of the list at the
+end are closed by those entries; item 7 is still open.
+
 Track: source-backed measurement, under D23, D100, D117 and D118.
 
 ## The question

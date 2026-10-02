@@ -1,6 +1,6 @@
 # National Capability Benchmark, prototype v0
 
-*Generated 2026-10-02T15:44:04.789Z*
+*Generated 2026-10-02T18:05:07.115Z*
 
 This run covers 53 countries and nine dimensions. Indicators carry equal weight within each dimension, and the benchmark has no headline ranking.
 
@@ -69,57 +69,57 @@ Confidence is reported beside the score. Each cell shows the value and its band.
 
 | Country | Anticipation | Agency | Coordination | Trust | Learning | Experimentation | Adaptability | Building | Shared Purpose |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Brazil | 0.46 usable | 0.56 usable | 0.37 thin | 0.50 usable | 0.55 usable | 0.53 usable | 0.62 usable | 0.57 usable | 0.52 usable |
-| United States | 0.46 usable | 0.37 thin | 0.23 very thin | 0.50 usable | 0.55 usable | 0.53 usable | 0.62 usable | 0.53 usable | 0.52 usable |
-| Netherlands | 0.46 usable | 0.38 thin | 0.39 thin | 0.29 thin | 0.55 usable | 0.36 thin | 0.62 usable | 0.57 usable | 0.33 thin |
-| Switzerland | 0.46 usable | 0.52 usable | 0.35 thin | 0.50 usable | 0.55 usable | 0.53 usable | 0.62 usable | 0.57 usable | 0.49 usable |
-| Singapore | 0.46 usable | 0.56 usable | 0.40 thin | 0.49 usable | 0.54 usable | 0.36 thin | 0.62 usable | 0.57 usable | 0.33 thin |
-| South Korea | 0.46 usable | 0.54 usable | 0.40 thin | 0.50 usable | 0.55 usable | 0.53 usable | 0.46 usable | 0.57 usable | 0.47 usable |
-| Estonia | 0.46 usable | 0.56 usable | 0.37 thin | 0.49 usable | 0.54 usable | 0.53 usable | 0.62 usable | 0.57 usable | 0.51 usable |
-| India | 0.46 usable | 0.56 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.53 usable | 0.46 usable | 0.57 usable | 0.46 usable |
-| Chile | 0.46 usable | 0.54 usable | 0.39 thin | 0.50 usable | 0.55 usable | 0.53 usable | 0.62 usable | 0.57 usable | 0.52 usable |
-| South Africa | 0.46 usable | 0.41 thin | 0.39 thin | 0.26 thin | 0.48 usable | 0.53 usable | 0.62 usable | 0.57 usable | 0.35 thin |
-| Mexico | 0.46 usable | 0.56 usable | 0.37 thin | 0.49 usable | 0.54 usable | 0.53 usable | 0.46 usable | 0.57 usable | 0.52 usable |
-| Argentina | 0.46 usable | 0.56 usable | 0.37 thin | 0.43 thin | 0.42 thin | 0.53 usable | 0.62 usable | 0.57 usable | 0.52 usable |
-| Colombia | 0.46 usable | 0.56 usable | 0.39 thin | 0.49 usable | 0.54 usable | 0.51 usable | 0.62 usable | 0.57 usable | 0.52 usable |
-| Peru | 0.46 usable | 0.56 usable | 0.39 thin | 0.49 usable | 0.54 usable | 0.53 usable | 0.46 usable | 0.57 usable | 0.47 usable |
-| Uruguay | 0.46 usable | 0.56 usable | 0.37 thin | 0.50 usable | 0.55 usable | 0.44 thin | 0.46 usable | 0.57 usable | 0.52 usable |
-| Costa Rica | 0.46 usable | 0.41 thin | 0.37 thin | 0.29 thin | 0.54 usable | 0.53 usable | 0.62 usable | 0.57 usable | 0.38 thin |
-| Germany | 0.46 usable | 0.41 thin | 0.39 thin | 0.29 thin | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.35 thin |
-| France | 0.46 usable | 0.56 usable | 0.39 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.51 usable |
-| United Kingdom | 0.46 usable | 0.41 thin | 0.23 very thin | 0.29 thin | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.33 thin |
-| Spain | 0.46 usable | 0.56 usable | 0.39 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.51 usable |
-| Portugal | 0.46 usable | 0.56 usable | 0.39 thin | 0.49 usable | 0.54 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.51 usable |
-| Poland | 0.46 usable | 0.56 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.49 usable |
-| Sweden | 0.46 usable | 0.56 usable | 0.23 very thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.51 usable |
-| Finland | 0.46 usable | 0.56 usable | 0.39 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.51 usable |
-| Ireland | 0.46 usable | 0.41 thin | 0.39 thin | 0.29 thin | 0.55 usable | 0.25 thin | 0.62 usable | 0.57 usable | 0.36 thin |
-| Canada | 0.46 usable | 0.52 usable | 0.23 very thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.54 usable | 0.49 usable |
-| Australia | 0.46 usable | 0.56 usable | 0.40 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.43 thin |
-| Japan | 0.46 usable | 0.56 usable | 0.39 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.53 usable | 0.57 usable | 0.29 thin |
-| China | 0.46 usable | 0.56 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.24 very thin | 0.46 usable | 0.57 usable | 0.49 usable |
-| Indonesia | 0.46 usable | 0.56 usable | 0.41 thin | 0.49 usable | 0.54 usable | 0.33 thin | 0.60 usable | 0.57 usable | 0.35 thin |
-| Vietnam | 0.46 usable | 0.56 usable | 0.40 thin | 0.49 usable | 0.54 usable | 0.33 thin | 0.62 usable | 0.55 usable | 0.30 thin |
-| Philippines | 0.46 usable | 0.56 usable | 0.33 thin | 0.49 usable | 0.54 usable | 0.33 thin | 0.46 usable | 0.57 usable | 0.51 usable |
-| Malaysia | 0.46 usable | 0.56 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.59 usable | 0.57 usable | 0.47 usable |
-| Thailand | 0.46 usable | 0.56 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.52 usable |
-| Turkey | 0.46 usable | 0.56 usable | 0.39 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.51 usable |
-| Israel | 0.46 usable | 0.41 thin | 0.23 very thin | 0.29 thin | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.35 thin |
-| United Arab Emirates | 0.46 usable | 0.35 thin | 0.23 very thin | 0.16 very thin | 0.32 thin | 0.33 thin | 0.62 usable | 0.55 usable | 0.28 thin |
-| Nigeria | 0.46 usable | 0.52 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.30 thin | 0.62 usable | 0.57 usable | 0.30 thin |
-| Kenya | 0.46 usable | 0.56 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.58 usable | 0.57 usable | 0.47 usable |
-| Rwanda | 0.46 usable | 0.41 thin | 0.41 thin | 0.29 thin | 0.54 usable | 0.33 thin | 0.62 usable | 0.54 usable | 0.35 thin |
-| Ethiopia | 0.46 usable | 0.56 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.26 thin | 0.48 usable | 0.55 usable | 0.47 usable |
-| Bolivia | 0.46 usable | 0.54 usable | 0.39 thin | 0.50 usable | 0.39 thin | 0.33 thin | 0.62 usable | 0.57 usable | 0.35 thin |
-| Paraguay | 0.46 usable | 0.41 thin | 0.37 thin | 0.29 thin | 0.54 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.38 thin |
-| Ecuador | 0.46 usable | 0.56 usable | 0.39 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.49 usable |
-| Venezuela | 0.46 usable | 0.37 thin | 0.22 very thin | 0.39 thin | 0.19 very thin | 0.19 very thin | 0.53 usable | 0.27 thin | 0.17 very thin |
-| Panama | 0.46 usable | 0.38 thin | 0.37 thin | 0.29 thin | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.38 thin |
-| Guatemala | 0.46 usable | 0.56 usable | 0.37 thin | 0.50 usable | 0.55 usable | 0.27 thin | 0.62 usable | 0.57 usable | 0.51 usable |
-| Honduras | 0.46 usable | 0.41 thin | 0.37 thin | 0.22 very thin | 0.40 thin | 0.28 thin | 0.62 usable | 0.57 usable | 0.32 thin |
-| El Salvador | 0.46 usable | 0.41 thin | 0.39 thin | 0.29 thin | 0.54 usable | 0.33 thin | 0.46 usable | 0.57 usable | 0.36 thin |
-| Nicaragua | 0.46 usable | 0.37 thin | 0.37 thin | 0.42 thin | 0.40 thin | 0.14 very thin | 0.48 usable | 0.57 usable | 0.37 thin |
-| Dominican Republic | 0.46 usable | 0.32 thin | 0.37 thin | 0.29 thin | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.38 thin |
+| Brazil | 0.46 usable | 0.56 usable | 0.37 thin | 0.50 usable | 0.55 usable | 0.53 usable | 0.62 usable | 0.57 usable | 0.43 thin |
+| United States | 0.46 usable | 0.37 thin | 0.23 very thin | 0.50 usable | 0.55 usable | 0.53 usable | 0.62 usable | 0.53 usable | 0.43 thin |
+| Netherlands | 0.46 usable | 0.38 thin | 0.39 thin | 0.29 thin | 0.55 usable | 0.36 thin | 0.62 usable | 0.57 usable | 0.28 thin |
+| Switzerland | 0.46 usable | 0.52 usable | 0.35 thin | 0.50 usable | 0.55 usable | 0.53 usable | 0.62 usable | 0.57 usable | 0.41 thin |
+| Singapore | 0.46 usable | 0.56 usable | 0.40 thin | 0.49 usable | 0.54 usable | 0.36 thin | 0.62 usable | 0.57 usable | 0.28 thin |
+| South Korea | 0.46 usable | 0.54 usable | 0.40 thin | 0.50 usable | 0.55 usable | 0.53 usable | 0.46 usable | 0.57 usable | 0.40 thin |
+| Estonia | 0.46 usable | 0.56 usable | 0.37 thin | 0.49 usable | 0.54 usable | 0.53 usable | 0.62 usable | 0.57 usable | 0.42 thin |
+| India | 0.46 usable | 0.56 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.53 usable | 0.46 usable | 0.57 usable | 0.38 thin |
+| Chile | 0.46 usable | 0.54 usable | 0.39 thin | 0.50 usable | 0.55 usable | 0.53 usable | 0.62 usable | 0.57 usable | 0.43 thin |
+| South Africa | 0.46 usable | 0.41 thin | 0.39 thin | 0.26 thin | 0.48 usable | 0.53 usable | 0.62 usable | 0.57 usable | 0.29 thin |
+| Mexico | 0.46 usable | 0.56 usable | 0.37 thin | 0.49 usable | 0.54 usable | 0.53 usable | 0.46 usable | 0.57 usable | 0.43 thin |
+| Argentina | 0.46 usable | 0.56 usable | 0.37 thin | 0.43 thin | 0.42 thin | 0.53 usable | 0.62 usable | 0.57 usable | 0.43 thin |
+| Colombia | 0.46 usable | 0.56 usable | 0.39 thin | 0.49 usable | 0.54 usable | 0.51 usable | 0.62 usable | 0.57 usable | 0.43 thin |
+| Peru | 0.46 usable | 0.56 usable | 0.39 thin | 0.49 usable | 0.54 usable | 0.53 usable | 0.46 usable | 0.57 usable | 0.40 thin |
+| Uruguay | 0.46 usable | 0.56 usable | 0.37 thin | 0.50 usable | 0.55 usable | 0.44 thin | 0.46 usable | 0.57 usable | 0.43 thin |
+| Costa Rica | 0.46 usable | 0.41 thin | 0.37 thin | 0.29 thin | 0.54 usable | 0.53 usable | 0.62 usable | 0.57 usable | 0.32 thin |
+| Germany | 0.46 usable | 0.41 thin | 0.39 thin | 0.29 thin | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.29 thin |
+| France | 0.46 usable | 0.56 usable | 0.39 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.42 thin |
+| United Kingdom | 0.46 usable | 0.41 thin | 0.23 very thin | 0.29 thin | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.28 thin |
+| Spain | 0.46 usable | 0.56 usable | 0.39 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.42 thin |
+| Portugal | 0.46 usable | 0.56 usable | 0.39 thin | 0.49 usable | 0.54 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.42 thin |
+| Poland | 0.46 usable | 0.56 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.41 thin |
+| Sweden | 0.46 usable | 0.56 usable | 0.23 very thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.42 thin |
+| Finland | 0.46 usable | 0.56 usable | 0.39 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.42 thin |
+| Ireland | 0.46 usable | 0.41 thin | 0.39 thin | 0.29 thin | 0.55 usable | 0.25 thin | 0.62 usable | 0.57 usable | 0.30 thin |
+| Canada | 0.46 usable | 0.52 usable | 0.23 very thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.54 usable | 0.41 thin |
+| Australia | 0.46 usable | 0.56 usable | 0.40 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.36 thin |
+| Japan | 0.46 usable | 0.56 usable | 0.39 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.53 usable | 0.57 usable | 0.24 very thin |
+| China | 0.46 usable | 0.56 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.24 very thin | 0.46 usable | 0.57 usable | 0.41 thin |
+| Indonesia | 0.46 usable | 0.56 usable | 0.41 thin | 0.49 usable | 0.54 usable | 0.33 thin | 0.60 usable | 0.57 usable | 0.29 thin |
+| Vietnam | 0.46 usable | 0.56 usable | 0.40 thin | 0.49 usable | 0.54 usable | 0.33 thin | 0.62 usable | 0.55 usable | 0.25 thin |
+| Philippines | 0.46 usable | 0.56 usable | 0.33 thin | 0.49 usable | 0.54 usable | 0.33 thin | 0.46 usable | 0.57 usable | 0.42 thin |
+| Malaysia | 0.46 usable | 0.56 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.59 usable | 0.57 usable | 0.40 thin |
+| Thailand | 0.46 usable | 0.56 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.43 thin |
+| Turkey | 0.46 usable | 0.56 usable | 0.39 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.42 thin |
+| Israel | 0.46 usable | 0.41 thin | 0.23 very thin | 0.29 thin | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.29 thin |
+| United Arab Emirates | 0.46 usable | 0.35 thin | 0.23 very thin | 0.16 very thin | 0.32 thin | 0.33 thin | 0.62 usable | 0.55 usable | 0.24 very thin |
+| Nigeria | 0.46 usable | 0.52 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.30 thin | 0.62 usable | 0.57 usable | 0.25 thin |
+| Kenya | 0.46 usable | 0.56 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.58 usable | 0.57 usable | 0.40 thin |
+| Rwanda | 0.46 usable | 0.41 thin | 0.41 thin | 0.29 thin | 0.54 usable | 0.33 thin | 0.62 usable | 0.54 usable | 0.29 thin |
+| Ethiopia | 0.46 usable | 0.56 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.26 thin | 0.48 usable | 0.55 usable | 0.40 thin |
+| Bolivia | 0.46 usable | 0.54 usable | 0.39 thin | 0.50 usable | 0.39 thin | 0.33 thin | 0.62 usable | 0.57 usable | 0.29 thin |
+| Paraguay | 0.46 usable | 0.41 thin | 0.37 thin | 0.29 thin | 0.54 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.32 thin |
+| Ecuador | 0.46 usable | 0.56 usable | 0.39 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.41 thin |
+| Venezuela | 0.46 usable | 0.37 thin | 0.22 very thin | 0.39 thin | 0.19 very thin | 0.19 very thin | 0.53 usable | 0.27 thin | 0.14 very thin |
+| Panama | 0.46 usable | 0.38 thin | 0.37 thin | 0.29 thin | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.32 thin |
+| Guatemala | 0.46 usable | 0.56 usable | 0.37 thin | 0.50 usable | 0.55 usable | 0.27 thin | 0.62 usable | 0.57 usable | 0.42 thin |
+| Honduras | 0.46 usable | 0.41 thin | 0.37 thin | 0.22 very thin | 0.40 thin | 0.28 thin | 0.62 usable | 0.57 usable | 0.26 thin |
+| El Salvador | 0.46 usable | 0.41 thin | 0.39 thin | 0.29 thin | 0.54 usable | 0.33 thin | 0.46 usable | 0.57 usable | 0.30 thin |
+| Nicaragua | 0.46 usable | 0.37 thin | 0.37 thin | 0.42 thin | 0.40 thin | 0.14 very thin | 0.48 usable | 0.57 usable | 0.31 thin |
+| Dominican Republic | 0.46 usable | 0.32 thin | 0.37 thin | 0.29 thin | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.32 thin |
 | Cuba | 0.22 very thin | 0.00 very thin | 0.10 very thin | 0.07 very thin | 0.16 very thin | 0.24 very thin | 0.48 usable | 0.29 thin | 0.00 very thin |
 | Haiti | 0.46 usable | 0.24 very thin | 0.39 thin | 0.16 very thin | 0.32 thin | 0.14 very thin | 0.46 usable | 0.41 thin | 0.02 very thin |
 
@@ -401,17 +401,17 @@ Confidence bands:
 | Agency | 5 | 4 | 1 | 0.717 | 0.483 | 0.4 |
 | Anticipation | 4 | 2 | 2 | 0.495 | 0.451 | 0.5 |
 | Trust | 10 | 5 | 2 | 0.617 | 0.418 | 0.7 |
-| Shared Purpose | 7 | 3 | 2 | 0.513 | 0.411 | 0.571 |
 | Experimentation | 10 | 6 | 3 | 0.497 | 0.364 | 0.5 |
 | Coordination | 8 | 3 | 2 | 0.566 | 0.362 | 0.625 |
+| Shared Purpose | 7 | 3 | 3 | 0.428 | 0.343 | 0.571 |
 
-Strongest evidence: Adaptability, Building, Learning. Weakest evidence: Shared Purpose, Experimentation, Coordination.
+Strongest evidence: Adaptability, Building, Learning. Weakest evidence: Experimentation, Coordination, Shared Purpose.
 
 ## Some dimensions have little direct evidence
 
 - **Trust**: 70% of its indicators are perception proxies or have no data at all (2 of 10 unmeasured).
 - **Coordination**: 63% of its indicators are perception proxies or have no data at all (2 of 8 unmeasured).
-- **Shared Purpose**: 57% of its indicators are perception proxies or have no data at all (2 of 7 unmeasured).
+- **Shared Purpose**: 57% of its indicators are perception proxies or have no data at all (3 of 7 unmeasured).
 - **Anticipation**: 50% of its indicators are perception proxies or have no data at all (2 of 4 unmeasured).
 - **Experimentation**: 50% of its indicators are perception proxies or have no data at all (3 of 10 unmeasured).
 
@@ -513,7 +513,7 @@ Four tests on the wealth residual (D68), over the 50 countries with all nine res
 | --- | --- | --- |
 | (a) Residuals move together | first-factor share 28.6%, chance 19.1% (95th 21.7%), n 50 | structure |
 | (b) Same income, different shape | peer distance 1.523 against 1.544 without regard to income (5th 1.471); shape share 27.6% against random 95th 23.3%, n 50 | differ |
-| (c) Order holds between releases | lowest rank r 0.718 on Trust (n 36), 24 release pairs | mixed |
+| (c) Order holds between releases | lowest rank r 0.718 on Trust (n 36), 25 release pairs | mixed |
 | (c) Order holds without one country | largest own-residual shift 0.351 residual SD | robust |
 | (d) Share of a profile that is income | mean 32.3%, median 45.2%, n 50 | part |
 
@@ -608,11 +608,11 @@ Weakest: Shared Purpose (30.7), Building (28.2), Experimentation (25.6).
 **Anticipation**
 
 - Government foresight capacity: No comparable international dataset. OECD and UN work is descriptive, not scored. Envisioning would have to build this.
-- Long-horizon research share: Published by OECD for members only. Missing for India, South Africa, Brazil in comparable form.
+- Long-horizon research commitments: Redefined 2026-10-02 (D152). The row asked for the share of R&D spending classed as basic research, which is the make-up of a spending stock, the construct D142 retired business R&D share for. OECD MSTI publishes that share for its members only, and UNESCO UIS no longer serves R&D by type of research (construct audit, 2026-10-02). The behaviour behind it is a funder committing to a horizon: a grant awarded for five years or more is a decision to wait for a result. Untried: no memo has triaged a grant register. National funders publish award lists one by one with their own durations, and commercial grant aggregators fail the inspectability rule. Wireable on a grant-level register with award and end dates, on one definition of a competitive public grant, for 27 or more of the frame.
 
 **Agency**
 
-- Adult digital skills: ITU collects this but coverage across the country set is broken and the task lists differ by year.
+- Adults doing digital tasks: Redefined 2026-10-02 (D152). The row asked whether adults can perform standard digital tasks, which reads a skill level, the kind of stock D122 moved out of the scores with internet users. It now counts the act: a person who did the task. It is not the internet users condition beside it, which counts access. Candidate: ITU ICT skills by type (SDG 4.4.1) through the UNESCO UIS API, probed 2026-10-02. Sent a message with an attached file reaches 33 of 53, 25 at 2018 or later, with no United States, India or China and most of Africa and Central America missing; two other task items reach 31 and 16. The items are self-reported and the task list has changed between rounds. Wireable on one task observed for 27 or more of the frame at 2018 or later.
 
 **Coordination**
 
@@ -630,8 +630,8 @@ Weakest: Shared Purpose (30.7), Building (28.2), Experimentation (25.6).
 
 **Experimentation**
 
-- Venture capital investment: Still a gap after a direct check on 2026-08-26. The OECD SME and Entrepreneurship Financing scoreboard is the only inspectable aggregate and it carries venture capital for 6 of the 16 countries the frame held at that check, in national currency rather than as a share of GDP, latest year 2022. Brazil, India, South Africa and Singapore are all absent, so wiring it would score the rich half of the set and lower coverage for the rest. Commercial databases cover the world and are not inspectable. Read A1 before treating this dimension as measured.
-- Regulatory sandbox activity: Countable from primary sources but nobody maintains a comparable register. A realistic candidate for Envisioning to build.
+- Venture deals: Redefined 2026-10-02 (D152). The id keeps its first name so evidence records, links and published files still resolve. The row asked for venture capital deployed as a share of GDP, a level of financial depth of the kind private credit is (D122). A count of first rounds counts attempts started with outside risk money, which is what this capability asks about, and a large round counts once. Candidates, none wireable: the OECD SME and Entrepreneurship Financing scoreboard carried venture capital for 6 of the 16 countries the frame held on 2026-08-26, as amounts in national currency, latest year 2022, with Brazil, India, South Africa and Singapore absent (D21); national venture capital associations publish counts on their own definitions; commercial deal databases cover the world and are not inspectable (D10). Wireable on an inspectable deal count with one definition of a first round for 27 or more of the frame. Read A1 before treating this dimension as measured.
+- Firms through regulatory sandboxes: Redefined 2026-10-02 (D152). The row asked for the number and breadth of live sandboxes, which is a policy stock: a regime can exist with nobody in it. It now counts what passes through: firms a regulator let test under relaxed rules, and firms that came out, authorised, withdrawn or failed. Regulators publish cohort lists and exit reports one by one. The evidence corpus holds 22 records against this row, most of them counts of firms admitted or exited, each on the definition and window of its own regulator, and no register assembles them on one definition (O1 triage sweep, 2026-10-01). A realistic candidate for Envisioning to build from those lists. Wireable on a register that counts admissions and completions on one definition for 27 or more of the frame.
 - University spinouts: Reported nationally with incompatible definitions of what counts as a spinout.
 
 **Adaptability**
@@ -646,6 +646,7 @@ Weakest: Shared Purpose (30.7), Building (28.2), Experimentation (25.6).
 
 **Shared Purpose**
 
+- Sense of national belonging: A declared gap again since 2026-10-02 (D151, which supersedes the retirement in D143). The project still wants to know whether people count themselves members of the community whose common project this capability asks about, so the row stays even though no series can fill it. The only cross-national item aimed at it, national pride (G006) in the Joint EVS/WVS, is not wired: pride is not belonging, and it fails the regime test of artefact A13, with electoral autocracies at 75 percent very proud against 47 in liberal democracies. ISSP 2023 asks about closeness to the country in 16 countries. Wireable on an item that reads the same in every regime class, or on a behaviour of belonging, for 27 or more of the frame. High national pride must never be read as the capacity for collective action.
 - Volunteering: CAF publishes country figures but the underlying Gallup microdata is proprietary, so it fails the inspectability rule.
 - Political polarisation: V-Dem political polarization (v2cacamps) is published beside this dimension as a behavioral check and is not scored, because a regime with no organized opposition reads as calm (D121, A13). The gap stays open for a measure that can tell calm between competing camps from calm where no camp may compete. Pluralism is the target, so only hostile polarization should count against a country.
 
@@ -676,7 +677,6 @@ These rows remain in the registry and lower confidence like gaps. The project re
 **Shared Purpose**
 
 - Voice and accountability: Retired 2026-08-26. Artefact A5: it measures the democratic channel while Shared Purpose asks whether people can see themselves in a common project. Singapore scored 20.9 while being one of the most effective collective actors in the set. Volunteering and civic participation are the observable replacements and are declared gaps; voter turnout is published beside Shared Purpose as a check, because it reads the same democratic channel and compulsory voting (D129). See D23 and A5.
-- Sense of national belonging: Retired 2026-10-02. The only cross-national item aimed at it is national pride (G006) in the Joint EVS/WVS, and pride is not the capacity for collective action this capability asks about. It also fails the regime test of artefact A13: electoral autocracies read 75 percent very proud against 47 in liberal democracies, so scored it would lift those regimes for a uniformity the benchmark does not count as shared purpose. Civic participation and tax revenue stay as the readings of people acting together. See D143.
 
 ## Assumptions to challenge
 

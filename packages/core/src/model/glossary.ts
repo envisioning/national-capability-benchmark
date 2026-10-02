@@ -240,14 +240,14 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: 'Gap',
     group: 'What is missing',
     short: 'An indicator the model asks for that no comparable dataset covers.',
-    full: 'A gap stays in the registry, lowers confidence and appears in the collection agenda. Removing it would make the numbers look better without adding evidence.',
+    full: 'A gap stays in the registry, lowers confidence and appears in the collection agenda. Removing it would make the numbers look better without adding evidence. A row stays a gap when the only series aimed at it was inspected and failed a test, such as reading highest in the most closed regimes, as long as the project still wants the thing it asks about measured.',
     example: 'Cost and schedule performance of major public projects is a gap. It is probably the single best measure of execution and no comparable international dataset exists.',
   },
   {
     term: 'Retired indicator',
     group: 'What is missing',
-    short: 'A dataset this project rejected, with the reason recorded.',
-    full: 'A retired indicator stays in the registry, is not fetched or scored, and lowers coverage like a gap. The reason remains available for challenge.',
+    short: 'A row this project no longer asks for, with the reason recorded.',
+    full: 'A row is retired when the project no longer wants its construct measured, or when its definition is not a capability, for example a row defined as one rejected dataset or as the make-up of a spending total. A retired indicator stays in the registry and is not fetched or scored. Unlike a gap it does not lower confidence, because it is not a measurement anyone is still trying to make. The reason remains available for challenge.',
   },
   {
     term: 'Evidence record',
