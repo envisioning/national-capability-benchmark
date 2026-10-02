@@ -15,7 +15,17 @@ export function radarPoint(index: number, value: number, geometry: RadarGeometry
   const center = geometry.size / 2
   const angle = radarAngle(index)
   const radius = (value / 100) * geometry.radius
-  return [center + radius * Math.cos(angle), center + radius * Math.sin(angle)]
+  return [snap(center + radius * Math.cos(angle)), snap(center + radius * Math.sin(angle))]
+}
+
+/**
+ * A coordinate rounded to a thousandth of a unit. Node and the browser can
+ * disagree in the last bits of `Math.cos`, and a server-rendered path that
+ * differs from the client's by one ulp is a hydration mismatch. A thousandth
+ * of a 260 unit field is far below a pixel.
+ */
+export function snap(n: number): number {
+  return Math.round(n * 1000) / 1000
 }
 
 /** The measured vertices in their canonical axis order. Missing axes stay empty. */

@@ -7,7 +7,7 @@ import { DIMENSION_ICON, Icon, iconMarkup } from '@/components/Icon'
 import { CHART_INK, CHART_MOTION, CHART_STROKE } from '@/components/chartTokens'
 import { evidenceOpenness, isThinConfidence } from '@/lib/evidence'
 import { Confidence, Score } from '@/components/ui'
-import { radarAngle, radarPoint } from '@/components/radarGeometry'
+import { radarAngle, radarPoint, snap } from '@/components/radarGeometry'
 import { ContestedBadge } from '@/components/ChallengeDialog'
 
 export type RadarSeries = {
@@ -61,10 +61,10 @@ function wedgePath(index: number, radius: number): string {
   const half = Math.PI / DIMENSIONS.length
   const a0 = radarAngle(index) - half
   const a1 = radarAngle(index) + half
-  const x0 = CENTER + radius * Math.cos(a0)
-  const y0 = CENTER + radius * Math.sin(a0)
-  const x1 = CENTER + radius * Math.cos(a1)
-  const y1 = CENTER + radius * Math.sin(a1)
+  const x0 = snap(CENTER + radius * Math.cos(a0))
+  const y0 = snap(CENTER + radius * Math.sin(a0))
+  const x1 = snap(CENTER + radius * Math.cos(a1))
+  const y1 = snap(CENTER + radius * Math.sin(a1))
   return `M ${CENTER} ${CENTER} L ${x0} ${y0} A ${radius} ${radius} 0 0 1 ${x1} ${y1} Z`
 }
 
