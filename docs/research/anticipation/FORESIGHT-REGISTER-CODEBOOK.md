@@ -1,5 +1,8 @@
 # Foresight register codebook
 
+Version **1.1**, fixed 2026-10-02 before the round 2 recode. Changes from 1.0
+and the reason for each are listed under "Changelog" at the foot of the file.
+
 The coding rule for a project-authored register that would fill
 `government_foresight_capacity` ("existence, mandate and continuity of a
 national strategic foresight function"). Recommendation 1 of
@@ -7,9 +10,12 @@ national strategic foresight function"). Recommendation 1 of
 issue #68 on 2026-10-02: ten countries, this rule fixed before any country is
 coded, two independent coders, nothing scored until the pilot is reviewed.
 
-Fixed: 2026-10-02, committed before the first coding. A change to anything in
-this file after coding starts is a new version of the codebook, recorded at
-the foot of the file with the reason, and every country is recoded under it.
+Version 1.0 was fixed on 2026-10-02 and committed before the first coding.
+Version 1.1 settles the eight ambiguities the pilot found
+(`FORESIGHT-REGISTER-PILOT.md`) and the owner's ruling on I1, and is committed
+before the recode. A change to anything in this file after coding starts is
+a new version of the codebook, recorded at the foot of the file with the
+reason, and every country is recoded under it.
 No item is reweighted, redefined or dropped after the codes are seen, to move
 a correlation (D118).
 
@@ -27,7 +33,13 @@ national state that meets all four conditions:
    national legislature (a committee, office or institute of parliament). A
    body set up by the state but run by a contractor counts when the state
    holds the mandate and the contract (the German Bundestag's TAB is the
-   example).
+   example). A **public-law body** counts as of the state whatever its legal
+   name (foundation, autarchy, institute, agency) when all three hold: an
+   act or decree of the national state created it; it is attached to and
+   supervised by a ministry, the centre of government or the legislature;
+   and the state appoints its head. A private-law foundation, a company, a
+   university or a university centre is not of the state, even when public
+   money or a public mandate funds it.
 2. **Standing.** It exists without an end date. A commission, task force or
    project with a sunset clause or a single deliverable is not standing.
 3. **Mandated for foresight.** A written mandate (the founding act, an
@@ -36,6 +48,23 @@ national state that meets all four conditions:
    long-term future: alternative futures, scenarios, megatrends, horizon
    scanning, emerging change, or long-range technology assessment, with a
    horizon of at least ten years or no stated horizon.
+   - **Impact assessment is not technology assessment.** A mandate to assess
+     the impact, feasibility or cost of laws, policies, plans or
+     technologies in general meets condition 3 only when it also names new
+     or emerging technologies or scientific developments, or the long-term
+     future, as its object. Ex-ante regulatory impact assessment, policy
+     evaluation and studies commissioned case by case do not meet it on
+     their own.
+   - **The named function is read from its term.** The terms that name a
+     foresight function are: foresight, strategic foresight, futures or
+     futures studies, prospective (French), prospectiva or prospectivo
+     (Spanish, Portuguese), Vorausschau or Zukunftsforschung, long-term
+     scenarios, alternative futures, megatrends, horizon scanning, and their
+     direct equivalents in the official language. "Prospects", "outlook",
+     "perspectives", "forecast", "projections", "development orientation"
+     and "vision" do not name one: they describe the expected path of one
+     plan or economy, not an exploration of alternatives. The coder records
+     the original term and its gloss.
 4. **Not confined to one sector.** The mandate reaches across policy domains.
    A body whose foresight mandate covers one sector only (defence, energy,
    climate, agriculture, health, labour market, or science and technology
@@ -48,10 +77,11 @@ national state that meets all four conditions:
 - A planning office or ministry whose product is the national development
   plan, a five-year plan, or a multi-year investment plan. A plan is a
   commitment about the next plan period, not an exploration of futures. A
-  planning body counts only when condition 3 is met by a named function
-  ("prospective", "prospectiva", "foresight", "futures", "long-term
-  scenarios") in its act or organisational regulation, and condition 3 is
-  then read on that function, not on the plan.
+  planning body counts only when condition 3 is met by a named function,
+  one of the terms listed under condition 3, in its act, organisational
+  regulation or official page, and condition 3 is then read on that
+  function, not on the plan. "Development prospects" in a planning
+  institute's mandate is not a named function.
 - A long-term vision document (Vision 2030, 2045, 2050), however long its
   horizon, unless a standing body that meets 1 to 4 produced it and keeps
   producing.
@@ -59,32 +89,48 @@ national state that meets all four conditions:
   debt offices, including their long-term projections. These project one
   variable under stated assumptions; they are not foresight functions.
 - Universities, think tanks, foundations, NGOs, consultancies, and donor or
-  UN projects, even when government funds or hosts them. A body that is a
-  foundation or company in law but is created by statute and answers to
-  parliament (Finland's Sitra) counts only when its statute names foresight
-  as a function; coders record the legal form either way.
+  UN projects, even when government funds or hosts them. A public-law body
+  that meets condition 1 (Finland's Sitra, created by statute and answering
+  to parliament, is one) counts only when its act or statute names
+  foresight as a function under condition 3; coders record the legal form
+  either way.
 - A single event, workshop, training or exercise.
 - Sub-national bodies.
 
-A country may have more than one GFF. Coders list every one they find and
-code the country from them as section 2 says.
+A country may have more than one GFF. Coders list every candidate body they
+examine, whether it meets the unit or not, with the per-body codes section 5
+asks for, and code the country from the bodies that meet it as section 2
+says. The country item is 1 when any operating GFF carries it.
 
 ## 2. The items
 
 Each item is coded at the country level, from the GFFs the coder listed. Each
 item is `1`, `0`, or for I3 only, a `0` with the reason `no_change`.
 
-### I1. Established by a named, dated act
+### I1. Established on the official record, with a date
 
-`1` when at least one GFF that is operating on the coding date was
-established, or given its foresight mandate, by a named act with a date: a
-law, decree, executive order, cabinet or council decision, parliamentary
-resolution or change to standing orders, or an organisational regulation
-issued under one. The coder records the act's name, number where it has one,
-and date (at least the year; the day where the act carries it).
+`1` when at least one GFF that is operating on the coding date has an
+**official record that dates its creation**, or the grant of its foresight
+mandate. An official record is any of:
 
-`0` when no operating GFF exists, or when the only operating GFF exists by
-administrative practice with no act that can be named and dated.
+- a published act: a law, decree, executive order, cabinet or council
+  decision, parliamentary resolution, change to standing orders, or an
+  organisational regulation issued under one;
+- an official government or legislature page (an official URL as I2
+  defines it) that states when the body was established or received the
+  mandate, such as "set up in the Prime Minister's Office in 2009", or an
+  official announcement of the cabinet restructure that created it.
+
+The item reads the function, not the paperwork: it asks whether the state
+has put on its own record that it created this body, and when. A cabinet
+restructure announced on an official page without a published decree meets
+it, and so does a resolution of a House of the legislature. News, encyclopaedias, international organisations and academic papers
+do not, though they may lead to a record that does. The coder records the
+record's name or URL, its number where it has one, and the date it gives
+(at least the year).
+
+`0` when no operating GFF exists, or when no official record of the state
+dates any operating GFF's creation or mandate.
 
 ### I2. A forward-looking product in the last three years
 
@@ -101,6 +147,18 @@ product. An official URL is on a domain the state or the legislature
 controls (for example `gov.sg`, `riigikogu.ee`, `bundestag.de`,
 `gov.br`), or the GFF's own domain when its official pages state that it is
 the GFF's site.
+
+- **Horizon.** The product's stated horizon is at least ten years after its
+  publication date, or it states no horizon and is one of the forms above.
+  A product whose stated horizon is under ten years (a five-year horizon
+  scan, a three-year outlook) does not count. This is the same ten years
+  condition 3 asks of a mandate, so a body and its products are read on
+  one definition of the long term.
+- **Authorship.** The GFF is named on the product, or on the official page
+  that publishes it, as author, co-author or issuing body. Co-authorship
+  with a consultancy, a university or an international organisation does
+  not disqualify it. A product written by a third party and credited to the
+  GFF only as commissioner, funder, sponsor or host does not count.
 
 `0` otherwise, including when a product exists only on a third-party site.
 
@@ -119,16 +177,30 @@ The effective chief executive is the person who holds executive power:
 - in a one-party state, the leader of the ruling party (China and Vietnam:
   the general secretary; Cuba: the first secretary);
 - in a federation of monarchies (the United Arab Emirates), the prime
-  minister.
+  minister;
+- in a **collegial executive**, where a council holds executive power
+  jointly and its chair rotates, the council. A change of the effective
+  chief executive occurs on the date by which a majority of the members who
+  sat on the council when the GFF was established have left it. The rotating presidency is not a change, because
+  the chair holds no executive power the other members lack.
+
+The rule for a collegial executive follows from the construct, not from the
+case: the test is whether the function outlived those who could have made
+it, and in a collegial executive no single person could; a majority could.
 
 **Any change of the person counts**: an election, a party succession, a
 resignation, a death, a coup. A change of ruling party or coalition is not
 required. An acting or interim holder of less than six months does not count.
 
 `0` with reason `no_change` when no change of the effective chief executive
-has occurred since the GFF was established. `0` with reason
-`did_not_survive` when the GFF ended at or within two years after a change.
-`0` with no reason when no operating GFF exists.
+has occurred since the GFF was established. Where a body was founded in one
+form and received its foresight mandate later, "established" means the
+earliest date on the official record at which the body held a foresight
+mandate; a statute reissued in the same terms does not reset it. The coder
+says which date was used.
+
+`0` with reason `did_not_survive` when the GFF ended at or within two years
+after a change. `0` with no reason when no operating GFF exists.
 
 **How closed and non-alternating regimes are read (the A13 risk).** Three
 readings were considered:
@@ -156,13 +228,23 @@ regime class so the reading can be checked against A13.
 ### I4. Closed or merged, with date
 
 Recorded for every GFF the coder finds, operating or not, established at any
-time since 1990. For each GFF that ended, the coder records the date, the act
-that ended it, and whether a successor took its foresight mandate within 24
-months (named, with its act).
+time since 1990. For each GFF that ended, the coder records the date, the
+official record that ended it, and whether a successor took its foresight
+mandate within 24 months (named, with its record).
 
 `1` when a GFF ended **between 2016-10-02 and 2026-10-02** with no successor
 within 24 months. `0` otherwise, including mergers whose successor carries
 the foresight mandate.
+
+**Successor.** A successor is a body that meets section 1, in the same branch
+as the closed GFF, and whose foresight mandate is on the official record
+(I1's definition) within 24 months after the end. The branch is the
+executive (with the statutory and public-law bodies the executive
+supervises) or the legislature (with the bodies that answer to it). No act
+naming the transfer is needed: a body that receives the mandate on the same
+day the GFF closes, by a restructure on the record, is a successor. A body
+in the other branch is not a successor, because a closure in the executive
+is not undone by a legislature that kept its own office.
 
 ## 3. Score from items
 
@@ -173,7 +255,7 @@ score = round(100 * (I1 + I2 + I3) / 3) - 20 * I4, floored at 0
 Possible values: 0, 33, 67, 100, and 13, 47, 80 where a closure applies.
 
 - The three items are equal because none is privileged by the construct:
-  existence by act is mandate, a product is operation, survival is
+  existence on the record is mandate, a product is operation, survival is
   continuity, and the gap's definition names all three.
 - I4 is a deduction, not an item in the mean, because a closure is a dated
   reversal and the absence of a closure is not evidence of anything. The
@@ -199,12 +281,14 @@ the gap's registry row already declares.
   Wikipedia, news and search snippets are leads: they may point to a primary
   source, and never carry an item alone.
 - **Every `1` cites at least one source**, with: the URL, a Wayback Machine
-  snapshot URL (`https://web.archive.org/web/<timestamp>/<url>`) where one
-  exists or can be found, the retrieval date, and a quotation of at most 25
+  snapshot URL (`https://web.archive.org/web/<timestamp>/<url>`), the retrieval date, and a quotation of at most 25
   words from the page that carries the item (the act's name and date, the
-  product's title and date, the post-change evidence). Where no snapshot
-  exists, the coder records `archived: null` and says so; the reviewer
-  requests one before promotion.
+  product's title and date, the post-change evidence). A snapshot is
+  required: where none exists the coder requests one through
+  `https://web.archive.org/save/<url>`. Where the archive refuses or rate
+  limits the request, the coder records `archived: null` with the reason
+  (`rate_limited`, `blocked`, `save_failed`), and the reviewer requests one
+  before promotion.
 - **Every `0` records what was searched**: the query terms, the domains, and
   each candidate body rejected with the section 1 condition or the item it
   failed. A `0` without a search record is not a code.
@@ -233,7 +317,7 @@ One JSON file per coder:
 ```json
 {
   "coder": "a",
-  "codebookVersion": "1.0",
+  "codebookVersion": "1.1",
   "codedAt": "2026-10-02",
   "countries": [
     {
@@ -247,7 +331,13 @@ One JSON file per coder:
           "established": { "act": "name and number", "date": "YYYY-MM-DD or YYYY" },
           "ended": { "act": "name", "date": "YYYY-MM-DD", "successor": "name or null" },
           "meetsUnit": true,
-          "unitNote": "why it meets or fails section 1, naming the condition"
+          "unitNote": "why it meets or fails section 1, naming the condition",
+          "body": {
+            "record": 1,
+            "product": 1,
+            "survived": "1 | no_change | did_not_survive",
+            "closedNoSuccessor": 0
+          }
         }
       ],
       "items": {
@@ -264,7 +354,16 @@ One JSON file per coder:
 }
 ```
 
-A source is `{ "url": "", "archived": "", "retrievedAt": "2026-10-02", "quote": "" }`.
+A source is `{ "url": "", "archived": "", "retrievedAt": "2026-10-02", "quote": "" }`,
+with `archivedNote` giving the reason when `archived` is null.
+
+`functions` holds **every candidate body the coder examined**, those that
+meet the unit (`meetsUnit: true`) and those that fail it (`false`, with the
+condition in `unitNote`). `body` is coded only for bodies that meet the
+unit: each field is the item of section 2 read on that body alone. The
+country items are the maximum over operating bodies for I1 to I3, and I4
+over every body. `rejected` is kept for names the coder dismissed without
+examination (a body named in a lead that does not exist).
 
 ## 6. Pilot sample: the draw rule
 
@@ -300,6 +399,19 @@ Neither sees the other's output, the evidence corpus, or the triage memo.
 - **Statistic.** Krippendorff's alpha, nominal, per item (I1, I2, I3, I4)
   over the ten countries; and alpha, interval, on the score. I3's reason code
   is compared as a three-way nominal (`1`, `no_change`, other `0`) as well.
+- **Body by body.** Item agreement can hide a disagreement over which bodies
+  carry the items, as happened in round 1. The adjudicator matches the two
+  coders' candidate bodies into one list per country, by identity: the same
+  organisation under the same or a successor name, matched on name, branch
+  and founding record, and publishes the matching table. A body either coder
+  lists is a unit. Its value for each coder is `1` when that coder found it
+  meets section 1, and `0` when the coder rejected it **or did not list
+  it**, because a body a coder missed is a body that coder did not count.
+  The statistic is Krippendorff's alpha, nominal, over every matched body,
+  with percent agreement and a bootstrap over countries printed beside it.
+  As a second reading, on the bodies both coders found to meet the unit,
+  alpha is computed for each of the four body codes. The body alpha is held
+  to the same 0.80 threshold as the items.
 - **Threshold.** The register is usable when **alpha is at least 0.80 on
   every item and on the score**. Between 0.667 and 0.80 on any item, the
   codebook is revised at the point the disagreements trace to, and the pilot
@@ -312,10 +424,16 @@ Neither sees the other's output, the evidence corpus, or the triage memo.
   prints a bootstrap interval over countries, and a pass at ten is a reason
   to code the frame, not proof of reliability on 53. The full frame is
   recoded by a second coder on a random 20 percent before promotion.
-- **Coders.** In this pilot both coders are instances of one language model
-  given the same file. Their errors are correlated (same training, same
-  search tool), so agreement between them overstates what two human coders
-  would reach. The report says so.
+- **Coders.** In round 1 both coders were instances of one language model.
+  In round 2 the two coders are language models of different families, each
+  given only this file and the country list, which reduces but does not
+  remove correlated error (same search tools, same open web). The report
+  says so. Before any score is published, a person checks a sample of about
+  20 percent of the coded bodies, drawn with a fixed seed and stratified so
+  every regime class appears, against their sources (owner ruling,
+  2026-10-02). A check that overturns a body's unit decision or any of its
+  codes is reported with the sample's error rate, and the verdict waits on
+  it.
 
 ## 8. Stop rules and verdict
 
@@ -330,11 +448,94 @@ Decided before coding. After adjudication of disagreements:
   printed either way.
 - **Income.** r with log GDP per capita is printed and decides nothing (D117,
   D118).
-- **Verdict.** *Go to 53* when every alpha is at least 0.80 and no stop rule
-  fires. *Revise the codebook* when an alpha falls between 0.667 and 0.80 or a
+- **Verdict.** *Go to 53* when every alpha, item and body by body, is at
+  least 0.80 and no stop rule fires; the coding of the 53 then starts after
+  the human spot-check passes. *Revise the codebook* when an alpha falls between 0.667 and 0.80 or a
   disagreement traces to a rule this file leaves ambiguous. *Stop* when a stop
   rule fires or an alpha is below 0.667 after one revision.
 
 ## Versions
 
 - 1.0, 2026-10-02. Fixed before coding.
+- 1.1, 2026-10-02. Fixed before the round 2 recode. See the changelog below.
+
+## Changelog
+
+### 1.1, 2026-10-02
+
+Every change below was decided on the construct, before the round 2 coding,
+from the eight ambiguities the round 1 pilot reported and the owner's ruling
+of 2026-10-02. The rules name no pilot country as an example, so that the
+recode tests the rules and not the round 1 adjudications. None was chosen for its effect on the regime correlation or
+on any country's score. The stop rules and thresholds of sections 7 and 8
+are unchanged.
+
+1. **I1 reads an official record, not only an act** (owner ruling, and
+   pilot ambiguity 4). Renamed "Established on the official record, with a
+   date". Any official record of the state that dates the body's creation or
+   mandate meets it: a published act, decree or resolution, or an official
+   government or legislature page that dates it. Why: the item is meant to
+   read whether the state has committed to the function on its own record.
+   Under 1.0 it read whether the state publishes its administrative
+   decisions as acts, which is a habit of legal culture, and a body created
+   by an announced restructure is no less created.
+2. **Collegial executives** (ambiguity 1). For I3, a council that holds
+   executive power jointly is the chief executive, and a change occurs when
+   a majority of the members at the GFF's founding have left. The rotating
+   chair is not a change. Why: the test is whether the function outlived
+   those who could have made it, and in a council no single person could.
+3. **Legislative impact mandates** (ambiguity 2). A general impact,
+   feasibility or evaluation mandate meets condition 3 only when it names
+   emerging technologies or the long-term future. Why: condition 3 is about
+   exploring the long-term future, and ex-ante assessment of a given bill or
+   policy is evaluation, not exploration.
+4. **Public-law research foundations** (ambiguity 3). A body created by act
+   of the state, supervised by a ministry, the centre of government or the
+   legislature, and headed by a state appointee is of the state whatever its
+   legal name. Universities, private-law foundations and companies are not.
+   Why: condition 1 asks whether the state owns the function, which the
+   legal label does not decide; 1.0's treatment of Sitra already implied it.
+5. **Unpublished restructures** (ambiguity 4). Settled by change 1: an
+   official page announcing or dating the restructure is an official record;
+   a restructure known only from news is not.
+6. **Consultancy co-authorship** (ambiguity 5). A product counts when the
+   GFF is named as author, co-author or issuing body; co-authors do not
+   disqualify it. A product credited to the GFF only as commissioner,
+   funder, sponsor or host does not count. Why: I2 reads whether the body
+   operates, and a body that co-writes a product operates; one that only
+   pays for a product shows a budget, not operation.
+7. **Minimum product horizon** (ambiguity 6). A product's stated horizon
+   must be at least ten years after publication, or unstated. Why: the same
+   ten years condition 3 requires of a mandate, so a body and its products
+   are read on one definition of the long term.
+8. **Same-day transfers** (ambiguity 7). A successor is a body in the same
+   branch whose foresight mandate is on the official record within 24
+   months of the closure; no act naming the transfer is needed. Why: I4
+   reads a reversal, and a mandate moved to another body the same day is a
+   reorganisation. The branch condition stops a legislature's office from
+   cancelling an executive's closure.
+9. **"Prospects" wording in planning mandates** (ambiguity 8). The terms
+   that name a foresight function are listed under condition 3; "prospects",
+   "outlook", "forecast", "projections" and "vision" are not among them.
+   Why: they describe the expected path of a plan, not alternative futures,
+   which is the distinction the planning-body exclusion already drew.
+10. **Body-by-body agreement** (pilot recommendation 4). Coders list every
+    candidate body with per-body codes (section 5), and section 7 defines a
+    body-level alpha over matched bodies, with a missed body counted as not
+    qualifying, held to the 0.80 threshold. Why: in round 1 one country's
+    agreed score hid a split over which bodies qualify.
+11. **Coders and the human check** (owner ruling). Round 2 uses two coders
+    of different model families, and a person spot-checks about 20 percent
+    of the coded bodies before anything is scored. Why: model-on-model
+    agreement is correlated, and the spot-check is the owner's chosen
+    substitute for a full human coder at this stage.
+12. **Archived snapshots are required** (section 4). Coders request a
+    Wayback snapshot where none exists and record the reason when the
+    archive refuses. Why: round 1 left several sources without one.
+13. **Mandate date for I3** (found while drafting change 4, no pilot split).
+    Where a body received its foresight mandate after it was founded, I3
+    counts from the earliest date on the record at which it held that
+    mandate, and a reissued statute does not reset it. Why: the item reads
+    whether the foresight function outlived a change, not the building it
+    sits in, and 1.0 left the start date undefined for an older body, such
+    as a public-law institute, whose mandate came later.
