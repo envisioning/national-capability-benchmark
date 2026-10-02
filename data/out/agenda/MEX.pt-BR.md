@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | 37,1 | 0,49 (utilizável) | sem base de tendência |
 | Aprendizagem | 41,1 | 0,54 (utilizável) | sem base de tendência |
 | Experimentação | 23,8 | 0,53 (utilizável) | +0,6 em 10 anos, sobre 3 indicadores |
-| Adaptação | 88 | 0,38 (fraca) | sem base de tendência |
+| Adaptação | 64,3 | 0,46 (utilizável) | sem base de tendência |
 | Construção | 43 | 0,57 (utilizável) | +0,6 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 46,9 | 0,52 (utilizável) | +10,7 em 10 anos, sobre 2 indicadores |
 
@@ -83,18 +83,12 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
-### Adaptação: solidez 0,38, fraca
-
-Com que eficácia o sistema responde quando as circunstâncias mudam?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Preparação e recuperação de desastres, Capacidade de resposta institucional.
-
 ## Dimensões para manter
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
 - Agência: 64,8, solidez utilizável
+- Adaptação: 64,3, solidez utilizável
 - Antecipação: 51,2, solidez utilizável
 
 ## O que o México tem para trabalhar
@@ -115,6 +109,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Adaptação | Participação na força de trabalho | 66,3 % das pessoas com 15 anos ou mais | 2025 | 41º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 21,7 por 100 pessoas | 2024 | 29º de 53 |
 | Adaptação | Perdas na transmissão de eletricidade | 11,1 % da produção | 2024 | 35º de 53 |
+| Adaptação | Emprego informal | 56,9 % do emprego | 2025 | 25º de 43 |
 | Construção | Produto por trabalhador | 48.140,6 US$ PPC constantes de 2021 | 2025 | 30º de 51 |
 
 ## Agenda de medição

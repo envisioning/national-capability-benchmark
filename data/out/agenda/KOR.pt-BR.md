@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | 67,6 | 0,5 (utilizável) | sem base de tendência |
 | Aprendizagem | 51,6 | 0,55 (utilizável) | sem base de tendência |
 | Experimentação | 70,3 | 0,53 (utilizável) | +11,3 em 10 anos, sobre 3 indicadores, 1 truncados na borda da régua |
-| Adaptação | 83,4 | 0,38 (fraca) | sem base de tendência |
+| Adaptação | 72,7 | 0,46 (utilizável) | sem base de tendência |
 | Construção | 69,8 | 0,57 (utilizável) | +2,8 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 43,6 | 0,47 (utilizável) | +4 em 10 anos, sobre 2 indicadores |
 
@@ -36,13 +36,6 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 
 A solidez da evidência está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Adaptação: solidez 0,38, fraca
-
-Com que eficácia o sistema responde quando as circunstâncias mudam?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Preparação e recuperação de desastres, Capacidade de resposta institucional.
-
 ### Coordenação: solidez 0,4, fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
@@ -56,6 +49,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
 - Antecipação: 76,6, solidez utilizável
+- Adaptação: 72,7, solidez utilizável
 - Experimentação: 70,3, solidez utilizável
 - Construção: 69,8, solidez utilizável
 - Confiança: 67,6, solidez utilizável
@@ -80,6 +74,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Adaptação | Participação na força de trabalho | 71,2 % das pessoas com 15 anos ou mais | 2025 | 29º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 47,8 por 100 pessoas | 2024 | 2º de 53 |
 | Adaptação | Perdas na transmissão de eletricidade | 3,3 % da produção | 2024 | 2º de 53 |
+| Adaptação | Emprego informal | 29,1 % do emprego | 2019 | 16º de 43 |
 | Construção | Produto por trabalhador | 99.046 US$ PPC constantes de 2021 | 2025 | 16º de 51 |
 
 ## Agenda de medição

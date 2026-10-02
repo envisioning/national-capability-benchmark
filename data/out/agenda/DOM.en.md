@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | 71.7 | 0.3 (thin) | no trend |
 | Learning | 34.5 | 0.55 (usable) | no trend |
 | Experimentation | 5.4 | 0.33 (thin) | +0.1 over 10 years using 3 indicators |
-| Adaptability | 81.6 | 0.57 (usable) | no trend |
+| Adaptability | 72.6 | 0.62 (usable) | no trend |
 | Building | 30.7 | 0.57 (usable) | +1.4 over 10 years using 3 indicators |
 | Shared Purpose | 53.1 | 0.38 (thin) | +14.8 over 10 years using 2 indicators |
 
@@ -97,7 +97,7 @@ To what extent can people imagine themselves as participants in a common project
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 81.6, confidence usable
+- Adaptability: 72.6, confidence usable
 
 ## What the Dominican Republic has to work with
 
@@ -116,6 +116,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Labour force participation | 69.7 % aged 15+ | 2025 | 36 of 53 |
 | Adaptability | Fixed broadband subscriptions | 11.2 per 100 people | 2024 | 40 of 53 |
 | Adaptability | Electricity transmission losses | 12.8 % of output | 2023 | 39 of 53 |
+| Adaptability | Informal employment | 53.5 % of employment | 2025 | 22 of 43 |
 | Building | Output per worker | 54,042.5 constant 2021 PPP $ | 2025 | 28 of 51 |
 
 ## Missing data

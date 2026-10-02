@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | 46,1 | 0,16 (muito fraca) | sem base de tendência |
 | Aprendizagem | 73,6 | 0,32 (fraca) | sem base de tendência |
 | Experimentação | 14,6 | 0,33 (fraca) | +0,7 em 10 anos, sobre 3 indicadores |
-| Adaptação | 68,7 | 0,57 (utilizável) | sem base de tendência |
+| Adaptação | 72 | 0,62 (utilizável) | sem base de tendência |
 | Construção | 37,6 | 0,55 (utilizável) | +5 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 48,4 | 0,28 (fraca) | sem base de tendência |
 
@@ -95,7 +95,7 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 68,7, solidez utilizável
+- Adaptação: 72, solidez utilizável
 
 ## O que os Emirados Árabes Unidos tem para trabalhar
 
@@ -115,6 +115,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Adaptação | Participação na força de trabalho | 79,6 % das pessoas com 15 anos ou mais | 2025 | 11º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 40,8 por 100 pessoas | 2024 | 10º de 53 |
 | Adaptação | Perdas na transmissão de eletricidade | 4,3 % da produção | 2023 | 8º de 53 |
+| Adaptação | Emprego informal | 4 % do emprego | 2025 | 9º de 43 |
 | Construção | Produto por trabalhador | 108.203,1 US$ PPC constantes de 2021 | 2024 | 14º de 51 |
 
 ## Agenda de medição

@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | 67.6 | 0.5 (usable) | no trend |
 | Learning | 51.6 | 0.55 (usable) | no trend |
 | Experimentation | 70.3 | 0.53 (usable) | +11.3 over 10 years using 3 indicators, with 1 at the frame edge |
-| Adaptability | 83.4 | 0.38 (thin) | no trend |
+| Adaptability | 72.7 | 0.46 (usable) | no trend |
 | Building | 69.8 | 0.57 (usable) | +2.8 over 10 years using 3 indicators |
 | Shared Purpose | 43.6 | 0.47 (usable) | +4 over 10 years using 2 indicators |
 
@@ -36,13 +36,6 @@ To what extent can people imagine themselves as participants in a common project
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Adaptability: confidence 0.38, thin
-
-How effectively can the system respond when circumstances change?
-
-- Uses 2 observed indicators.
-- Missing indicators: Disaster preparedness and recovery, Institutional responsiveness.
-
 ### Coordination: confidence 0.4, thin
 
 How effectively can independent actors organize around shared objectives?
@@ -56,6 +49,7 @@ How effectively can independent actors organize around shared objectives?
 These dimensions score at least 50 with usable evidence.
 
 - Anticipation: 76.6, confidence usable
+- Adaptability: 72.7, confidence usable
 - Experimentation: 70.3, confidence usable
 - Building: 69.8, confidence usable
 - Trust: 67.6, confidence usable
@@ -80,6 +74,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Labour force participation | 71.2 % aged 15+ | 2025 | 29 of 53 |
 | Adaptability | Fixed broadband subscriptions | 47.8 per 100 people | 2024 | 2 of 53 |
 | Adaptability | Electricity transmission losses | 3.3 % of output | 2024 | 2 of 53 |
+| Adaptability | Informal employment | 29.1 % of employment | 2019 | 16 of 43 |
 | Building | Output per worker | 99,046 constant 2021 PPP $ | 2025 | 16 of 51 |
 
 ## Missing data

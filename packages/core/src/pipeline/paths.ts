@@ -27,6 +27,8 @@ export const FILES = {
   vdem: resolve(OBSERVATIONS_DIR, 'vdem-cy-core.json'),
   unctad: resolve(OBSERVATIONS_DIR, 'unctad-concentration.json'),
   ilostat: resolve(OBSERVATIONS_DIR, 'ilostat-ltu.json'),
+  ilostatInformal: resolve(OBSERVATIONS_DIR, 'ilostat-informality.json'),
+  atlas: resolve(OBSERVATIONS_DIR, 'atlas-new-export-products.json'),
   openalex: resolve(OBSERVATIONS_DIR, 'openalex-citation-impact.json'),
   github: resolve(OBSERVATIONS_DIR, 'github-innovation-graph.json'),
   manual: resolve(OBSERVATIONS_DIR, 'manual.json'),

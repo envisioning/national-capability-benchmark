@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T15:28:40.422Z",
+  "generatedAt": "2026-10-02T15:44:11.142Z",
   "iso3": "NGA",
   "country": "Nigeria",
   "dimensions": [
@@ -1633,14 +1633,15 @@
     {
       "dimension": "adaptability",
       "kind": "raise",
-      "score": 45.5,
-      "confidence": 0.57,
+      "score": 36.8,
+      "confidence": 0.617,
       "band": "usable",
       "trend": null,
       "scoredOn": [
         "unemployment_rate",
         "long_term_unemployment_share",
-        "export_diversification"
+        "export_diversification",
+        "new_export_products_rate"
       ],
       "gaps": [
         "disaster_preparedness",
@@ -1649,22 +1650,22 @@
       "retired": [],
       "exemplars": [
         {
+          "iso3": "POL",
+          "country": "Poland",
+          "score": 89.2,
+          "confidence": 0.617
+        },
+        {
+          "iso3": "VNM",
+          "country": "Vietnam",
+          "score": 88.2,
+          "confidence": 0.617
+        },
+        {
           "iso3": "THA",
           "country": "Thailand",
-          "score": 97.6,
-          "confidence": 0.57
-        },
-        {
-          "iso3": "ISR",
-          "country": "Israel",
-          "score": 90.6,
-          "confidence": 0.57
-        },
-        {
-          "iso3": "NLD",
-          "country": "Netherlands",
-          "score": 90.3,
-          "confidence": 0.57
+          "score": 88,
+          "confidence": 0.617
         }
       ],
       "evidenceElsewhere": [
@@ -2646,6 +2647,14 @@
           "year": 2023,
           "rank": 40,
           "n": 53
+        },
+        {
+          "id": "informal_employment_share",
+          "value": 93.1,
+          "unit": "% of employment",
+          "year": 2024,
+          "rank": 43,
+          "n": 43
         }
       ]
     },

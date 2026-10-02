@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | 44,3 | 0,5 (utilizável) | sem base de tendência |
 | Aprendizagem | 33,8 | 0,55 (utilizável) | sem base de tendência |
 | Experimentação | 50,7 | 0,33 (fraca) | +12,3 em 10 anos, sobre 3 indicadores |
-| Adaptação | 76,2 | 0,57 (utilizável) | sem base de tendência |
+| Adaptação | 79,4 | 0,62 (utilizável) | sem base de tendência |
 | Construção | 43 | 0,57 (utilizável) | +2,7 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 37,8 | 0,51 (utilizável) | -4,5 em 10 anos, sobre 2 indicadores |
 
@@ -94,7 +94,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 76,2, solidez utilizável
+- Adaptação: 79,4, solidez utilizável
 - Agência: 50,7, solidez utilizável
 
 ## O que a Turquia tem para trabalhar
@@ -115,6 +115,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Adaptação | Participação na força de trabalho | 60,8 % das pessoas com 15 anos ou mais | 2025 | 49º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 23,4 por 100 pessoas | 2024 | 27º de 53 |
 | Adaptação | Perdas na transmissão de eletricidade | 8,3 % da produção | 2024 | 25º de 53 |
+| Adaptação | Emprego informal | 26,6 % do emprego | 2025 | 15º de 43 |
 | Construção | Produto por trabalhador | 94.942 US$ PPC constantes de 2021 | 2025 | 18º de 51 |
 
 ## Agenda de medição

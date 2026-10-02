@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | 39.1 | 0.49 (usable) | no trend |
 | Learning | 42.9 | 0.54 (usable) | no trend |
 | Experimentation | 31 | 0.51 (usable) | +0.9 over 10 years using 3 indicators |
-| Adaptability | 64.6 | 0.57 (usable) | no trend |
+| Adaptability | 52.2 | 0.62 (usable) | no trend |
 | Building | 27.2 | 0.57 (usable) | -3.1 over 10 years using 3 indicators |
 | Shared Purpose | 46.1 | 0.52 (usable) | -3.1 over 10 years using 2 indicators |
 
@@ -97,7 +97,7 @@ How effectively can independent actors organize around shared objectives?
 These dimensions score at least 50 with usable evidence.
 
 - Agency: 65.5, confidence usable
-- Adaptability: 64.6, confidence usable
+- Adaptability: 52.2, confidence usable
 
 ## What Colombia has to work with
 
@@ -117,6 +117,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Labour force participation | 69.1 % aged 15+ | 2025 | 37 of 53 |
 | Adaptability | Fixed broadband subscriptions | 17.2 per 100 people | 2024 | 32 of 53 |
 | Adaptability | Electricity transmission losses | 7.8 % of output | 2024 | 23 of 53 |
+| Adaptability | Informal employment | 56 % of employment | 2025 | 24 of 43 |
 | Building | Output per worker | 40,368.8 constant 2021 PPP $ | 2025 | 33 of 51 |
 
 ## Missing data

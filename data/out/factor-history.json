@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T14:32:38.001Z",
+  "generatedAt": "2026-10-02T15:44:10.049Z",
   "releases": [
     {
       "version": "1.0.0",
@@ -737,7 +737,7 @@
     },
     {
       "version": "8.1.0",
-      "commit": null,
+      "commit": "222ca5a",
       "date": "2026-10-02",
       "basis": "complete",
       "dimensions": [
@@ -762,6 +762,36 @@
       "income": {
         "r": 0.847,
         "rSquared": 0.717,
+        "n": 50
+      }
+    },
+    {
+      "version": "8.2.0",
+      "commit": null,
+      "date": "2026-10-02",
+      "basis": "complete",
+      "dimensions": [
+        "anticipation",
+        "agency",
+        "coordination",
+        "trust",
+        "learning",
+        "experimentation",
+        "adaptability",
+        "building",
+        "shared_purpose"
+      ],
+      "countries": 51,
+      "firstFactorShare": 0.496,
+      "chance": {
+        "draws": 2000,
+        "seed": 20261001,
+        "mean": 0.189,
+        "p95": 0.215
+      },
+      "income": {
+        "r": 0.845,
+        "rSquared": 0.715,
         "n": 50
       }
     }

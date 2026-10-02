@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | 35,7 | 0,5 (utilizável) | sem base de tendência |
 | Aprendizagem | 45,1 | 0,55 (utilizável) | sem base de tendência |
 | Experimentação | 7,5 | 0,33 (fraca) | +1 em 10 anos, sobre 3 indicadores |
-| Adaptação | 80,9 | 0,57 (utilizável) | sem base de tendência |
+| Adaptação | 62,4 | 0,62 (utilizável) | sem base de tendência |
 | Construção | 31,5 | 0,57 (utilizável) | -0,9 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 39,9 | 0,49 (utilizável) | -4,3 em 10 anos, sobre 2 indicadores |
 
@@ -103,7 +103,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 80,9, solidez utilizável
+- Adaptação: 62,4, solidez utilizável
 
 ## O que o Equador tem para trabalhar
 
@@ -123,6 +123,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Adaptação | Participação na força de trabalho | 68 % das pessoas com 15 anos ou mais | 2025 | 39º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 17,2 por 100 pessoas | 2024 | 31º de 53 |
 | Adaptação | Perdas na transmissão de eletricidade | 17 % da produção | 2023 | 44º de 53 |
+| Adaptação | Emprego informal | 68,5 % do emprego | 2025 | 31º de 43 |
 | Construção | Produto por trabalhador | 30.171,4 US$ PPC constantes de 2021 | 2025 | 39º de 51 |
 
 ## Agenda de medição

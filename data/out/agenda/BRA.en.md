@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | 49.3 | 0.5 (usable) | no trend |
 | Learning | 35 | 0.55 (usable) | no trend |
 | Experimentation | 25.6 | 0.53 (usable) | +5.2 over 10 years using 3 indicators |
-| Adaptability | 73.7 | 0.57 (usable) | no trend |
+| Adaptability | 61.4 | 0.62 (usable) | no trend |
 | Building | 28.2 | 0.57 (usable) | -2 over 10 years using 3 indicators |
 | Shared Purpose | 30.7 | 0.52 (usable) | +8.6 over 10 years using 2 indicators |
 
@@ -96,7 +96,7 @@ How effectively can independent actors organize around shared objectives?
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 73.7, confidence usable
+- Adaptability: 61.4, confidence usable
 - Agency: 55.8, confidence usable
 
 ## What Brazil has to work with
@@ -117,6 +117,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Labour force participation | 71 % aged 15+ | 2025 | 30 of 53 |
 | Adaptability | Fixed broadband subscriptions | 24.1 per 100 people | 2024 | 24 of 53 |
 | Adaptability | Electricity transmission losses | 15 % of output | 2024 | 43 of 53 |
+| Adaptability | Informal employment | 35.6 % of employment | 2025 | 19 of 43 |
 | Building | Output per worker | 41,840 constant 2021 PPP $ | 2025 | 32 of 51 |
 
 ## Missing data

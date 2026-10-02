@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | 44.3 | 0.5 (usable) | no trend |
 | Learning | 33.8 | 0.55 (usable) | no trend |
 | Experimentation | 50.7 | 0.33 (thin) | +12.3 over 10 years using 3 indicators |
-| Adaptability | 76.2 | 0.57 (usable) | no trend |
+| Adaptability | 79.4 | 0.62 (usable) | no trend |
 | Building | 43 | 0.57 (usable) | +2.7 over 10 years using 3 indicators |
 | Shared Purpose | 37.8 | 0.51 (usable) | -4.5 over 10 years using 2 indicators |
 
@@ -94,7 +94,7 @@ How effectively can independent actors organize around shared objectives?
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 76.2, confidence usable
+- Adaptability: 79.4, confidence usable
 - Agency: 50.7, confidence usable
 
 ## What Turkey has to work with
@@ -115,6 +115,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Labour force participation | 60.8 % aged 15+ | 2025 | 49 of 53 |
 | Adaptability | Fixed broadband subscriptions | 23.4 per 100 people | 2024 | 27 of 53 |
 | Adaptability | Electricity transmission losses | 8.3 % of output | 2024 | 25 of 53 |
+| Adaptability | Informal employment | 26.6 % of employment | 2025 | 15 of 43 |
 | Building | Output per worker | 94,942 constant 2021 PPP $ | 2025 | 18 of 51 |
 
 ## Missing data

@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | 90,3 | 0,5 (utilizável) | sem base de tendência |
 | Aprendizagem | 79,1 | 0,55 (utilizável) | sem base de tendência |
 | Experimentação | 28,3 | 0,33 (fraca) | -8,2 em 10 anos, sobre 3 indicadores |
-| Adaptação | 77,7 | 0,57 (utilizável) | sem base de tendência |
+| Adaptação | 66,9 | 0,62 (utilizável) | sem base de tendência |
 | Construção | 39,9 | 0,57 (utilizável) | -1,7 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 81,6 | 0,51 (utilizável) | +0,5 em 10 anos, sobre 2 indicadores, 1 truncados na borda da régua |
 
@@ -60,8 +60,8 @@ Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 - Antecipação: 90, solidez utilizável
 - Propósito compartilhado: 81,6, solidez utilizável
 - Aprendizagem: 79,1, solidez utilizável
-- Adaptação: 77,7, solidez utilizável
 - Agência: 70,7, solidez utilizável
+- Adaptação: 66,9, solidez utilizável
 
 ## O que a Suécia tem para trabalhar
 
@@ -81,6 +81,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Adaptação | Participação na força de trabalho | 83,9 % das pessoas com 15 anos ou mais | 2025 | 3º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 40,6 por 100 pessoas | 2024 | 11º de 53 |
 | Adaptação | Perdas na transmissão de eletricidade | 5,5 % da produção | 2024 | 14º de 53 |
+| Adaptação | Emprego informal | 3,2 % do emprego | 2025 | 4º de 43 |
 | Construção | Produto por trabalhador | 128.980,3 US$ PPC constantes de 2021 | 2025 | 6º de 51 |
 
 ## Agenda de medição

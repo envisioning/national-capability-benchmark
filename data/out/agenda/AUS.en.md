@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | 79.8 | 0.5 (usable) | no trend |
 | Learning | 80.1 | 0.55 (usable) | no trend |
 | Experimentation | 37.3 | 0.33 (thin) | -1.7 over 10 years using 3 indicators |
-| Adaptability | 76.2 | 0.57 (usable) | no trend |
+| Adaptability | 59.5 | 0.62 (usable) | no trend |
 | Building | 34.4 | 0.57 (usable) | +1.6 over 10 years using 3 indicators |
 | Shared Purpose | 77.2 | 0.43 (thin) | no trend |
 
@@ -68,7 +68,7 @@ These dimensions score at least 50 with usable evidence.
 - Anticipation: 86, confidence usable
 - Learning: 80.1, confidence usable
 - Trust: 79.8, confidence usable
-- Adaptability: 76.2, confidence usable
+- Adaptability: 59.5, confidence usable
 
 ## What Australia has to work with
 

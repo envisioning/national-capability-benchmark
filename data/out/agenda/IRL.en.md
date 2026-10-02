@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | 83.9 | 0.3 (thin) | no trend |
 | Learning | 81.6 | 0.55 (usable) | no trend |
 | Experimentation | 19.7 | 0.25 (thin) | -1.9 over 10 years using 2 indicators |
-| Adaptability | 72.3 | 0.57 (usable) | no trend |
+| Adaptability | 57.1 | 0.62 (usable) | no trend |
 | Building | 69.2 | 0.57 (usable) | +13.7 over 10 years using 3 indicators |
 | Shared Purpose | 76.5 | 0.36 (thin) | +5.3 over 10 years using 2 indicators |
 
@@ -67,8 +67,8 @@ These dimensions score at least 50 with usable evidence.
 
 - Learning: 81.6, confidence usable
 - Anticipation: 77.6, confidence usable
-- Adaptability: 72.3, confidence usable
 - Building: 69.2, confidence usable
+- Adaptability: 57.1, confidence usable
 
 ## What Ireland has to work with
 
@@ -88,6 +88,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Labour force participation | 77.2 % aged 15+ | 2025 | 16 of 53 |
 | Adaptability | Fixed broadband subscriptions | 32.3 per 100 people | 2024 | 19 of 53 |
 | Adaptability | Electricity transmission losses | 8.2 % of output | 2024 | 24 of 53 |
+| Adaptability | Informal employment | 3.4 % of employment | 2025 | 5 of 43 |
 | Building | Output per worker | 259,304.4 constant 2021 PPP $ | 2025 | 1 of 51 |
 
 ## Missing data

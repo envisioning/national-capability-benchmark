@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict'
-import { parseIlostatLongTermUnemployment, plausibilityGate } from './ilostat.js'
+import { parseIlostatInformalEmployment, parseIlostatLongTermUnemployment, plausibilityGate } from './ilostat.js'
 import type { LtuPoint } from './ilostat.js'
 
 const LFS = 'LFS - Labour Force Survey'
@@ -178,4 +178,35 @@ assert.match(chl.note ?? '', /survey: LFS - Encuesta Nacional de Empleo/)
 assert.match(chl.note ?? '', /duration not stated: 20% of unemployed/)
 assert.match(chl.note ?? '', /flagged unreliable by ILO/)
 
-console.log('ILOSTAT adapter validated: share derivation, survey preference and the plausibility gate.')
+/* Informal employment, SDG 8.3.1: whole economy, both sexes, latest year, survey preference. */
+const INF_HEADER = 'DATAFLOW,REF_AREA,FREQ,MEASURE,SEX,ECO,TIME_PERIOD,OBS_VALUE,OBS_STATUS,UNIT_MEASURE_TYPE,UNIT_MEASURE,UNIT_MULT,SOURCE'
+const inf = (iso3: string, eco: string, year: number, value: number | string, source: string, sex = 'SEX_T', status = '') =>
+  `ILO:DF_SDG_0831_SEX_ECO_RT(1.0),${iso3},A,SDG_0831_RT,${sex},${eco},${year},${value},${status},RT,PT,0,"${source}"`
+const informal = parseIlostatInformalEmployment(
+  [
+    INF_HEADER,
+    inf('IND', 'ECO_SECTOR_TOTAL', 2023, 87.21, 'LFS - Periodic Labour Force Survey'),
+    inf('IND', 'ECO_SECTOR_TOTAL', 2024, 86.0, 'LFS - Periodic Labour Force Survey'),
+    inf('IND', 'ECO_SECTOR_AGR', 2024, 99, 'LFS - Periodic Labour Force Survey'),
+    inf('IND', 'ECO_SECTOR_TOTAL', 2024, 70, 'LFS - Periodic Labour Force Survey', 'SEX_F'),
+    inf('FRA', 'ECO_SECTOR_TOTAL', 2024, 4.04, 'HIES - EU Statistics on Income and Living Conditions'),
+    inf('MEX', 'ECO_SECTOR_TOTAL', 2025, 50, 'HS - Some household survey'),
+    inf('MEX', 'ECO_SECTOR_TOTAL', 2025, 56.94, 'LFS - Encuesta Nacional de Ocupación y Empleo'),
+    inf('ZZZ', 'ECO_SECTOR_TOTAL', 2025, 10, 'LFS - x'),
+    inf('USA', 'ECO_SECTOR_TOTAL', 2025, '', 'LFS - x'),
+  ].join('\n'),
+  '2026-10-02T00:00:00.000Z',
+)
+assert.equal(informal.adapterId, 'ilostat-sdg-0831-informal-employment-v1')
+assert.deepEqual(informal.emittedCountries, ['FRA', 'IND', 'MEX'])
+assert.deepEqual(informal.unmappedLabels, ['ZZZ'])
+const ind = informal.observations.find((o) => o.iso3 === 'IND')!
+assert.equal(ind.indicatorId, 'informal_employment_share')
+assert.equal(ind.year, 2024)
+assert.equal(ind.value, 86)
+assert.match(ind.sourceUrl ?? '', /\/IND\.A\.\.SEX_T\.ECO_SECTOR_TOTAL\?startPeriod=2010$/)
+assert.equal(informal.observations.find((o) => o.iso3 === 'MEX')!.value, 56.9)
+assert.match(informal.observations.find((o) => o.iso3 === 'FRA')!.note ?? '', /proxy definition/)
+assert.doesNotMatch(ind.note ?? '', /proxy definition/)
+
+console.log('ILOSTAT adapter validated: share derivation, survey preference, the plausibility gate and informal employment.')

@@ -12,7 +12,8 @@ pnpm bench ingest      fetch World Bank series from 1990 into data/observations/
 pnpm bench evs fetch   import the pinned Joint EVS/WVS items (A165 trust, A173 perceived control, A080_01 charitable membership, and the E069_17 court confidence check) into data/observations/joint-evs-wvs.json; `trust fetch` is an alias
 pnpm bench vdem fetch  import the pinned V-Dem civil-society and court-compliance series and the polarization and turnout checks into data/observations/vdem-cy-core.json
 pnpm bench unctad fetch import the pinned UNCTADstat export concentration index into data/observations/unctad-concentration.json (needs bsdtar)
-pnpm bench ilostat fetch derive and gate the ILOSTAT long-term unemployment share into data/observations/ilostat-ltu.json
+pnpm bench ilostat fetch derive and gate the ILOSTAT long-term unemployment share into data/observations/ilostat-ltu.json, and read the informal employment rate (a condition) into data/observations/ilostat-informality.json; --only ltu|informality runs one
+pnpm bench atlas fetch  count new export products from the pinned Growth Lab HS92 4-digit file (about 450 MB, checksum-checked) into data/observations/atlas-new-export-products.json, with the pin and every count under `atlas`
 pnpm bench openalex fetch count the OpenAlex top 10% cited share and pin requests and counts into data/observations/openalex-citation-impact.json (set OPENALEX_MAILTO; OPENALEX_API_KEY optional)
 pnpm bench score       normalise and score, write data/out/index.json, data/out/countries/*.json and table.csv
 pnpm bench delphi      run the LLM panel (add --mock to run offline)
@@ -92,6 +93,11 @@ port 3888. That entry starts Next directly and does not use the proxy.
   impact and, under `openalex`, the pin: every request, the retrieval date
   and the counts the values derive from, because the API has no versions
   (D124).
+  `ilostat-informality.json` holds ILOSTAT's informal employment rate, a
+  condition beside Adaptability (D150). `atlas-new-export-products.json`
+  holds the new export products rate and, under `atlas`, the pin: the
+  Dataverse version, file id and checksums, the rule, and every country's
+  counts and new product codes (D149).
   `revisions.json` is the append-only log of what each run restated,
   added or dropped, and `snapshots/` holds dated full copies written only on
   `--snapshot`.

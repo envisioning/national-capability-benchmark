@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | 55,8 | 0,5 (utilizável) | sem base de tendência |
 | Aprendizagem | 74,8 | 0,55 (utilizável) | sem base de tendência |
 | Experimentação | 100 | 0,24 (muito fraca) | +20,4 em 10 anos, sobre 3 indicadores |
-| Adaptação | 87 | 0,38 (fraca) | sem base de tendência |
+| Adaptação | 80,2 | 0,46 (utilizável) | sem base de tendência |
 | Construção | 77 | 0,57 (utilizável) | -5 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 30,3 | 0,49 (utilizável) | +0,7 em 10 anos, sobre 2 indicadores |
 
@@ -53,13 +53,6 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades.
 - Bases rejeitadas: Parcela empresarial do P&D.
 
-### Adaptação: solidez 0,38, fraca
-
-Com que eficácia o sistema responde quando as circunstâncias mudam?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Preparação e recuperação de desastres, Capacidade de resposta institucional.
-
 ### Coordenação: solidez 0,41, fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
@@ -72,6 +65,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
+- Adaptação: 80,2, solidez utilizável
 - Construção: 77, solidez utilizável
 - Aprendizagem: 74,8, solidez utilizável
 - Agência: 72,5, solidez utilizável

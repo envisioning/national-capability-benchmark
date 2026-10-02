@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | 66,5 | 0,3 (fraca) | sem base de tendência |
 | Aprendizagem | 33,2 | 0,55 (utilizável) | sem base de tendência |
 | Experimentação | 6,3 | 0,33 (fraca) | -1,9 em 10 anos, sobre 3 indicadores |
-| Adaptação | 78 | 0,57 (utilizável) | sem base de tendência |
+| Adaptação | 69,8 | 0,62 (utilizável) | sem base de tendência |
 | Construção | 27 | 0,57 (utilizável) | -1 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 20,4 | 0,38 (fraca) | -4,2 em 10 anos, sobre 2 indicadores |
 
@@ -97,7 +97,7 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 78, solidez utilizável
+- Adaptação: 69,8, solidez utilizável
 
 ## O que o Panamá tem para trabalhar
 
@@ -117,6 +117,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Adaptação | Participação na força de trabalho | 71,9 % das pessoas com 15 anos ou mais | 2025 | 28º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 18,1 por 100 pessoas | 2023 | 30º de 53 |
 | Adaptação | Perdas na transmissão de eletricidade | 6,6 % da produção | 2023 | 17º de 53 |
+| Adaptação | Emprego informal | 55,7 % do emprego | 2025 | 23º de 43 |
 | Construção | Produto por trabalhador | 81.808,3 US$ PPC constantes de 2021 | 2025 | 22º de 51 |
 
 ## Agenda de medição

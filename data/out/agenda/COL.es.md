@@ -14,7 +14,7 @@ La comparación incluye 53 países. Cada dimensión recibe una puntuación de 0 
 | Confianza | 39.1 | 0.49 (utilizable) | sin base de tendencia |
 | Aprendizaje | 42.9 | 0.54 (utilizable) | sin base de tendencia |
 | Experimentación | 31 | 0.51 (utilizable) | +0.9 en 10 años, sobre 3 indicadores |
-| Adaptación | 64.6 | 0.57 (utilizable) | sin base de tendencia |
+| Adaptación | 52.2 | 0.62 (utilizable) | sin base de tendencia |
 | Ejecución | 27.2 | 0.57 (utilizable) | -3.1 en 10 años, sobre 3 indicadores |
 | Propósito compartido | 46.1 | 0.52 (utilizable) | -3.1 en 10 años, sobre 2 indicadores |
 
@@ -97,7 +97,7 @@ La solidez de la evidencia está por debajo de la franja utilizable, así que la
 Estas dimensiones tienen una puntuación de al menos 50, con evidencia utilizable.
 
 - Iniciativa: 65.5, solidez utilizable
-- Adaptación: 64.6, solidez utilizable
+- Adaptación: 52.2, solidez utilizable
 
 ## ¿Con qué cuenta Colombia?
 
@@ -117,6 +117,7 @@ Las condiciones describen lo que un país tiene para trabajar: infraestructura, 
 | Adaptación | Participación en la fuerza laboral | 69.1 % de las personas de 15 años o más | 2025 | 37.º de 53 |
 | Adaptación | Suscripciones de banda ancha fija | 17.2 por cada 100 personas | 2024 | 32.º de 53 |
 | Adaptación | Pérdidas en la transmisión de electricidad | 7.8 % de la producción | 2024 | 23.º de 53 |
+| Adaptación | Empleo informal | 56 % del empleo | 2025 | 24.º de 43 |
 | Ejecución | Producto por trabajador | 40,368.8 US$ PPA constantes de 2021 | 2025 | 33.º de 51 |
 
 ## ¿Qué falta medir?

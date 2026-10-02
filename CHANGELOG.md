@@ -9,6 +9,37 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## Dataset 8.2.0 — 2026-10-02
+
+- **Adaptability gains a row: new export products** (D149). It counts the
+  goods a country barely exported in 2009-2011 and exported competitively in
+  2022-2024, out of the goods it had room to enter, from Harvard's Growth Lab
+  trade data at a fixed release. Entering new lines is an economy moving
+  people and money into things it was not making. Poland leads at 8.3%;
+  Brazil entered 20 of 872, 2.3%, 34th of 53.
+- **The nine countries that rested on two rows now have three.** South
+  Korea, India, Mexico, Peru, Uruguay, China, the Philippines, El Salvador
+  and Haiti still have no long-term unemployment figure, but their
+  Adaptability confidence rises from 0.38 to 0.46. Mexico falls from 88.0 to
+  64.3 (6th to 28th) and El Salvador from 86.5 to 62.6 (8th to 32nd); India
+  rises from 10th to 4th and China stays 7th. A16 is restated: the
+  unemployment rate in those nine still has nothing beside it in the score
+  that tells a fluid market from one where nobody can afford to stay
+  unemployed.
+- Every Adaptability score moves, because the new row is a quarter of each.
+  The United States falls from 88.4 to 71.6 and Brazil from 73.7 to 61.4
+  (35th to 37th); the United Arab Emirates rises from 68.7 to 72.0. Mean
+  confidence rises from 0.52 to 0.58 and the correlation with log GDP per
+  capita falls from 0.46 to 0.43. No other capability moves.
+- **Informal employment is published beside Adaptability, not scored**
+  (D150). The ILO's share of work with no contract or social protection reads
+  87% in India, 71% in Peru, 64% in El Salvador and 57% in Mexico, which is
+  why a low unemployment rate there is not a fluid market. 43 of 53
+  countries have a value.
+- The shared factor across the nine scores carries 0.50 of their variance,
+  unchanged to two places. Same 53 countries; 8.1.0 Adaptability scores are
+  not comparable with these.
+
 ## App 1.24.11 — 2026-10-02
 
 - **The evidence grid is complete.** Every country now has a record or a

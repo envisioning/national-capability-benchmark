@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | 43,3 | 0,49 (utilizável) | sem base de tendência |
 | Aprendizagem | 41,6 | 0,54 (utilizável) | sem base de tendência |
 | Experimentação | 4,8 | 0,33 (fraca) | 0 em 10 anos, sobre 3 indicadores |
-| Adaptação | 74,5 | 0,38 (fraca) | sem base de tendência |
+| Adaptação | 69,9 | 0,46 (utilizável) | sem base de tendência |
 | Construção | 60,2 | 0,57 (utilizável) | -5,7 em 10 anos, sobre 2 indicadores |
 | Propósito compartilhado | 54,9 | 0,51 (utilizável) | +11,5 em 10 anos, sobre 2 indicadores |
 
@@ -79,17 +79,11 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades.
 - Bases rejeitadas: Parcela empresarial do P&D.
 
-### Adaptação: solidez 0,38, fraca
-
-Com que eficácia o sistema responde quando as circunstâncias mudam?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Preparação e recuperação de desastres, Capacidade de resposta institucional.
-
 ## Dimensões para manter
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
+- Adaptação: 69,9, solidez utilizável
 - Construção: 60,2, solidez utilizável
 - Propósito compartilhado: 54,9, solidez utilizável
 

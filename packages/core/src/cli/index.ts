@@ -15,7 +15,9 @@ import { ingestWorldBank, recordRevisions } from '../pipeline/ingest.js'
 import { fetchJointEvsWvs } from '../pipeline/adapters/joint-evs-wvs.js'
 import { fetchVdem } from '../pipeline/adapters/vdem.js'
 import { fetchUnctadExportConcentration } from '../pipeline/adapters/unctad.js'
-import { fetchIlostatLongTermUnemployment } from '../pipeline/adapters/ilostat.js'
+import { fetchIlostatInformalEmployment, fetchIlostatLongTermUnemployment } from '../pipeline/adapters/ilostat.js'
+import { fetchAtlasNewExportProducts } from '../pipeline/adapters/atlas.js'
+import type { Observation } from '../model/index.js'
 import { fetchOpenAlexCitationImpact } from '../pipeline/adapters/openalex.js'
 import { fetchGithubNewRepositories } from '../pipeline/adapters/github.js'
 import { probeSeries, registrySeries, searchCatalogue } from '../pipeline/probe.js'
@@ -534,11 +536,75 @@ async function unctad(args: Args): Promise<void> {
   )
 }
 
+/**
+ * Write one adapter's observation file, with any pin beside the observations,
+ * and log what the run restated against the file it replaces (D25).
+ */
+async function writeAdapterFile(
+  path: string,
+  label: string,
+  observations: Observation[],
+  retrievedAt: string,
+  extra: Record<string, unknown> = {},
+): Promise<void> {
+  let existing: unknown | null = null
+  try {
+    existing = JSON.parse(await readFile(path, 'utf8'))
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code !== 'ENOENT') {
+      throw new Error(`Cannot read existing ${label} observations: ${String(error)}`)
+    }
+  }
+  const parsedExisting = existing ? ObservationFile.safeParse(existing) : null
+  if (existing && !parsedExisting?.success) {
+    throw new Error(`Existing ${label} observations failed schema validation: ${path}`)
+  }
+  const before = parsedExisting?.success ? parsedExisting.data.observations : []
+  const previousRetrievedAt = parsedExisting?.success ? parsedExisting.data.generatedAt : null
+  await writeOut(path, `${JSON.stringify({ generatedAt: retrievedAt, observations, ...extra }, null, 2)}\n`)
+  const revisions = await recordRevisions(before, previousRetrievedAt, observations, retrievedAt)
+  console.log(`${label} data -> ${path}`)
+  console.log(
+    `revisions   -> ${revisions.changed} changed, ${revisions.added} added, ${revisions.removed} removed in ${FILES.revisions}`,
+  )
+}
+
+async function ilostatInformal(): Promise<void> {
+  const retrievedAt = new Date().toISOString()
+  const result = await fetchIlostatInformalEmployment({ retrievedAt })
+  console.log(`ILOSTAT ${result.release}: ${result.observations.length}/${COUNTRY_ISO3.length} benchmark countries emitted`)
+  const missing = COUNTRY_ISO3.filter((iso3) => !result.emittedCountries.includes(iso3))
+  if (missing.length > 0) console.log(`  no value: ${missing.join(' ')}`)
+  await writeAdapterFile(FILES.ilostatInformal, 'ILOSTAT informality', result.observations, retrievedAt)
+}
+
+async function atlas(args: Args): Promise<void> {
+  const action = args._[1] ?? 'fetch'
+  if (action !== 'fetch') {
+    throw new Error(`Unknown Atlas action "${action}". Use pnpm bench atlas fetch.`)
+  }
+  const retrievedAt = new Date().toISOString()
+  const result = await fetchAtlasNewExportProducts({ retrievedAt })
+  const { pin } = result
+  console.log(`Atlas ${result.release}: ${result.observations.length}/${COUNTRY_ISO3.length} benchmark countries emitted`)
+  console.log(`  md5 ${pin.md5} matches the pin; ${pin.productUniverse} four-digit products in the windows`)
+  if (result.heldCountries.length > 0) console.log(`  held, no product to enter: ${result.heldCountries.join(' ')}`)
+  if (result.unmappedLabels.length > 0) console.log(`  not in the file: ${result.unmappedLabels.join(' ')}`)
+  /* The pin travels in the same file: release, checksums, the rule and every count the values derive from. */
+  await writeAdapterFile(FILES.atlas, 'Atlas', result.observations, retrievedAt, { atlas: pin })
+}
+
 async function ilostat(args: Args): Promise<void> {
   const action = args._[1] ?? 'fetch'
   if (action !== 'fetch') {
-    throw new Error(`Unknown ILOSTAT action "${action}". Use pnpm bench ilostat fetch.`)
+    throw new Error(`Unknown ILOSTAT action "${action}". Use pnpm bench ilostat fetch [--only ltu|informality].`)
   }
+  const only = str(args, 'only', 'all')
+  if (!['all', 'ltu', 'informality'].includes(only)) {
+    throw new Error(`Unknown ILOSTAT series "${only}". Use --only ltu or --only informality.`)
+  }
+  if (only !== 'ltu') await ilostatInformal()
+  if (only === 'informality') return
   const retrievedAt = new Date().toISOString()
   const result = await fetchIlostatLongTermUnemployment({ retrievedAt })
   let existing: unknown | null = null
@@ -797,6 +863,9 @@ async function main() {
       break
     case 'ilostat':
       await ilostat(args)
+      break
+    case 'atlas':
+      await atlas(args)
       break
     case 'openalex':
       await openalex(args)
@@ -1291,7 +1360,8 @@ Start with file 1.
   pnpm bench evs      fetch                fetch the Joint EVS/WVS items: A165 trust, A173 control, A080_01 charitable membership, G007_34_B trust in strangers, E069_17 court confidence check (alias: trust)
   pnpm bench vdem     fetch                fetch and parse V-Dem v16 civil society, court compliance and the polarization and turnout checks
   pnpm bench unctad   fetch                fetch and parse the pinned UNCTADstat export concentration index
-  pnpm bench ilostat  fetch                fetch ILOSTAT unemployment by duration, derive the long-term share, gate it
+  pnpm bench ilostat  fetch [--only ltu|informality]  ILOSTAT: long-term unemployment share behind its gate, and the informal employment rate (a condition)
+  pnpm bench atlas    fetch                new export products rate from the pinned Growth Lab HS92 4-digit file (about 450 MB)
   pnpm bench openalex fetch [--mailto a@b] count the OpenAlex top 10% cited share, pin counts and requests
   pnpm bench github   fetch [--commit sha|latest]  new public repositories from the pinned GitHub Innovation Graph CSV, access gate applied
   pnpm bench research inventory           write the deterministic country-gap research inventory

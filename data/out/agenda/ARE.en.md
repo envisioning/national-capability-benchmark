@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | 46.1 | 0.16 (very thin) | no trend |
 | Learning | 73.6 | 0.32 (thin) | no trend |
 | Experimentation | 14.6 | 0.33 (thin) | +0.7 over 10 years using 3 indicators |
-| Adaptability | 68.7 | 0.57 (usable) | no trend |
+| Adaptability | 72 | 0.62 (usable) | no trend |
 | Building | 37.6 | 0.55 (usable) | +5 over 10 years using 3 indicators |
 | Shared Purpose | 48.4 | 0.28 (thin) | no trend |
 
@@ -95,7 +95,7 @@ How able are individuals and organizations to turn an intention into action?
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 68.7, confidence usable
+- Adaptability: 72, confidence usable
 
 ## What the United Arab Emirates has to work with
 
@@ -115,6 +115,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Labour force participation | 79.6 % aged 15+ | 2025 | 11 of 53 |
 | Adaptability | Fixed broadband subscriptions | 40.8 per 100 people | 2024 | 10 of 53 |
 | Adaptability | Electricity transmission losses | 4.3 % of output | 2023 | 8 of 53 |
+| Adaptability | Informal employment | 4 % of employment | 2025 | 9 of 43 |
 | Building | Output per worker | 108,203.1 constant 2021 PPP $ | 2024 | 14 of 51 |
 
 ## Missing data

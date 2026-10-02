@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | not scored | 0.07 (very thin) | no trend |
 | Learning | not scored | 0.16 (very thin) | no trend |
 | Experimentation | 1.1 | 0.24 (very thin) | -0.1 over 10 years using 3 indicators |
-| Adaptability | 82.9 | 0.4 (thin) | no trend |
+| Adaptability | 62.2 | 0.48 (usable) | no trend |
 | Building | 21.8 | 0.29 (thin) | -27.1 over 10 years using 2 indicators |
 | Shared Purpose | not scored | 0 (very thin) | no trend |
 
@@ -83,12 +83,11 @@ How capable is the country of turning plans and knowledge into functioning syste
 - Missing indicators: Large project delivery, Firm scale-up rate.
 - Rejected datasets: Logistics infrastructure quality.
 
-### Adaptability: confidence 0.4, thin
+## What to keep watching
 
-How effectively can the system respond when circumstances change?
+These dimensions score at least 50 with usable evidence.
 
-- Uses 3 observed indicators.
-- Missing indicators: Disaster preparedness and recovery, Institutional responsiveness.
+- Adaptability: 62.2, confidence usable
 
 ## What Cuba has to work with
 

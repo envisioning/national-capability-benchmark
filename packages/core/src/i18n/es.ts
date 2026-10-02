@@ -171,6 +171,8 @@ export const ES: Lexicon = {
     broadband_subscriptions: 'Suscripciones de banda ancha fija',
     electricity_transmission_losses: 'Pérdidas en la transmisión de electricidad',
     export_diversification: 'Diversificación de las exportaciones',
+    new_export_products_rate: 'Nuevos productos de exportación',
+    informal_employment_share: 'Empleo informal',
     disaster_preparedness: 'Preparación y recuperación ante desastres',
     institutional_responsiveness: 'Capacidad de respuesta institucional',
     manufacturing_value_added: 'Valor agregado manufacturero',
@@ -199,6 +201,8 @@ export const ES: Lexicon = {
     'constant 2021 PPP $': 'US$ PPA constantes de 2021',
     '% of labour force': '% de la fuerza laboral',
     '% of unemployed': '% de los desempleados',
+    '% of products not exported competitively at the start': '% de los productos que no se exportaban de forma competitiva al inicio',
+    '% of employment': '% del empleo',
     '% of output': '% de la producción',
     'index 0-1, lower = more diversified': 'índice de 0 a 1, menor = más diversificado',
     'articles per million people': 'artículos por millón de personas',
@@ -340,6 +344,9 @@ export const ES: Lexicon = {
     long_term_unemployment_share:
       'Personas desempleadas durante 12 meses o más, como proporción del desempleo total.',
     export_diversification: 'Concentración inversa de la canasta exportadora por producto.',
+    new_export_products_rate:
+      'Proporción de los productos que un país no exportaba de forma competitiva en 2009-2011 y sí exportaba en 2022-2024.',
+    informal_employment_share: 'Empleo informal como proporción del empleo total, indicador ODS 8.3.1.',
     disaster_preparedness:
       'Capacidad demostrada de preparación y recuperación ante choques graves.',
     institutional_responsiveness:
@@ -675,6 +682,10 @@ export const ES: Lexicon = {
       export_diversification: {
         text: 'La diversificación de las exportaciones lee la concentración de la canasta de mercancías que publica la UNCTAD. Quedan fuera la velocidad con que un país cambia de producto y los servicios, y los países que venden pocos productos de alto valor aparecen como concentrados.',
         decisions: ['D119'],
+      },
+      new_export_products_rate: {
+        text: 'Los nuevos productos de exportación cuentan las líneas de mercancías en las que un país entró en quince años, según el Growth Lab de Harvard. Son exportaciones brutas, así que los centros de reexportación cuentan lo que pasa por ellos; un país que no informa su comercio se lee en los registros de sus socios. Una ventana tan larga se mueve poco de una versión a otra.',
+        decisions: ['D149'],
       },
     },
     /* Una plantilla por tipo de hecho. Qué país tiene qué hecho es

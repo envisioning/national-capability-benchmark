@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | 58.7 | 0.5 (usable) | no trend |
 | Learning | 49.9 | 0.55 (usable) | no trend |
 | Experimentation | 34.7 | 0.53 (usable) | +4.5 over 10 years using 3 indicators |
-| Adaptability | 64.1 | 0.57 (usable) | no trend |
+| Adaptability | 50.3 | 0.62 (usable) | no trend |
 | Building | 32.3 | 0.57 (usable) | -1 over 10 years using 3 indicators |
 | Shared Purpose | 47.3 | 0.52 (usable) | +5.5 over 10 years using 2 indicators |
 
@@ -78,9 +78,9 @@ How effectively can independent actors organize around shared objectives?
 These dimensions score at least 50 with usable evidence.
 
 - Agency: 68.4, confidence usable
-- Adaptability: 64.1, confidence usable
 - Trust: 58.7, confidence usable
 - Anticipation: 55.5, confidence usable
+- Adaptability: 50.3, confidence usable
 
 ## What Chile has to work with
 
@@ -100,6 +100,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Labour force participation | 70.9 % aged 15+ | 2025 | 31 of 53 |
 | Adaptability | Fixed broadband subscriptions | 23.7 per 100 people | 2024 | 25 of 53 |
 | Adaptability | Electricity transmission losses | 5.9 % of output | 2024 | 15 of 53 |
+| Adaptability | Informal employment | 26.4 % of employment | 2025 | 14 of 43 |
 | Building | Output per worker | 65,210.8 constant 2021 PPP $ | 2025 | 25 of 51 |
 
 ## Missing data

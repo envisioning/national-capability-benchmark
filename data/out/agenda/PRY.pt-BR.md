@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | 58,8 | 0,29 (fraca) | sem base de tendência |
 | Aprendizagem | 29,3 | 0,54 (utilizável) | sem base de tendência |
 | Experimentação | 10,7 | 0,33 (fraca) | -4,5 em 20 anos, sobre 3 indicadores |
-| Adaptação | 75,2 | 0,57 (utilizável) | sem base de tendência |
+| Adaptação | 62,5 | 0,62 (utilizável) | sem base de tendência |
 | Construção | 37,1 | 0,57 (utilizável) | +2 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 37,7 | 0,38 (fraca) | +9,7 em 10 anos, sobre 2 indicadores |
 
@@ -97,7 +97,7 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 75,2, solidez utilizável
+- Adaptação: 62,5, solidez utilizável
 
 ## O que o Paraguai tem para trabalhar
 
@@ -117,6 +117,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Adaptação | Participação na força de trabalho | 73,9 % das pessoas com 15 anos ou mais | 2025 | 26º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 12,9 por 100 pessoas | 2023 | 36º de 53 |
 | Adaptação | Perdas na transmissão de eletricidade | 11,9 % da produção | 2023 | 37º de 53 |
+| Adaptação | Emprego informal | 64,5 % do emprego | 2025 | 29º de 43 |
 | Construção | Produto por trabalhador | 36.003,6 US$ PPC constantes de 2021 | 2025 | 35º de 51 |
 
 ## Agenda de medição

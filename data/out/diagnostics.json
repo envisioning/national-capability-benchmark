@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T14:32:31.398Z",
+  "generatedAt": "2026-10-02T15:44:04.789Z",
   "gdpSeries": "NY.GDP.PCAP.PP.KD",
   "income": [
     {
@@ -297,8 +297,8 @@
     },
     {
       "dimension": "adaptability",
-      "pearson": 0.456,
-      "spearman": 0.278,
+      "pearson": 0.431,
+      "spearman": 0.325,
       "n": 51
     },
     {
@@ -394,16 +394,16 @@
       "n": 52
     },
     {
+      "a": "adaptability",
+      "b": "building",
+      "r": 0.462,
+      "n": 53
+    },
+    {
       "a": "anticipation",
       "b": "shared_purpose",
       "r": 0.46,
       "n": 51
-    },
-    {
-      "a": "adaptability",
-      "b": "building",
-      "r": 0.45,
-      "n": 53
     },
     {
       "a": "coordination",
@@ -442,9 +442,15 @@
       "n": 52
     },
     {
+      "a": "coordination",
+      "b": "adaptability",
+      "r": 0.358,
+      "n": 52
+    },
+    {
       "a": "anticipation",
       "b": "adaptability",
-      "r": 0.376,
+      "r": 0.356,
       "n": 52
     },
     {
@@ -460,12 +466,6 @@
       "n": 51
     },
     {
-      "a": "coordination",
-      "b": "adaptability",
-      "r": 0.351,
-      "n": 52
-    },
-    {
       "a": "agency",
       "b": "shared_purpose",
       "r": 0.349,
@@ -478,12 +478,6 @@
       "n": 51
     },
     {
-      "a": "agency",
-      "b": "adaptability",
-      "r": 0.326,
-      "n": 52
-    },
-    {
       "a": "trust",
       "b": "building",
       "r": 0.313,
@@ -492,19 +486,25 @@
     {
       "a": "experimentation",
       "b": "adaptability",
-      "r": 0.283,
+      "r": 0.282,
       "n": 53
+    },
+    {
+      "a": "agency",
+      "b": "adaptability",
+      "r": 0.28,
+      "n": 52
     },
     {
       "a": "learning",
       "b": "adaptability",
-      "r": 0.275,
+      "r": 0.261,
       "n": 52
     },
     {
       "a": "adaptability",
       "b": "shared_purpose",
-      "r": 0.199,
+      "r": 0.172,
       "n": 51
     },
     {
@@ -522,7 +522,7 @@
     {
       "a": "trust",
       "b": "adaptability",
-      "r": 0.047,
+      "r": 0.052,
       "n": 52
     },
     {
@@ -569,17 +569,17 @@
         }
       ],
       "eigenvalues": [
-        4.479,
-        1.296,
-        1.047,
-        0.772,
-        0.429,
-        0.333,
-        0.287,
-        0.226,
+        4.463,
+        1.306,
+        1.048,
+        0.75,
+        0.441,
+        0.34,
+        0.294,
+        0.229,
         0.13
       ],
-      "firstFactorShare": 0.498,
+      "firstFactorShare": 0.496,
       "loadings": [
         {
           "dimension": "anticipation",
@@ -587,15 +587,15 @@
         },
         {
           "dimension": "agency",
-          "loading": 0.653
+          "loading": 0.649
         },
         {
           "dimension": "coordination",
-          "loading": 0.773
+          "loading": 0.776
         },
         {
           "dimension": "trust",
-          "loading": 0.763
+          "loading": 0.767
         },
         {
           "dimension": "learning",
@@ -607,20 +607,20 @@
         },
         {
           "dimension": "adaptability",
-          "loading": 0.424
+          "loading": 0.4
         },
         {
           "dimension": "building",
-          "loading": 0.618
+          "loading": 0.616
         },
         {
           "dimension": "shared_purpose",
-          "loading": 0.489
+          "loading": 0.487
         }
       ],
       "income": {
-        "r": 0.847,
-        "rSquared": 0.717,
+        "r": 0.845,
+        "rSquared": 0.715,
         "n": 50
       },
       "chance": {
@@ -638,17 +638,17 @@
     "structure": {
       "countries": 50,
       "eigenvalues": [
-        2.581,
-        1.633,
-        1.343,
-        1.209,
-        0.649,
-        0.535,
-        0.468,
-        0.332,
+        2.572,
+        1.643,
+        1.362,
+        1.159,
+        0.65,
+        0.54,
+        0.483,
+        0.342,
         0.249
       ],
-      "firstFactorShare": 0.287,
+      "firstFactorShare": 0.286,
       "loadings": [
         {
           "dimension": "anticipation",
@@ -656,35 +656,35 @@
         },
         {
           "dimension": "agency",
-          "loading": 0.349
+          "loading": 0.358
         },
         {
           "dimension": "coordination",
-          "loading": 0.627
+          "loading": 0.626
         },
         {
           "dimension": "trust",
-          "loading": 0.685
+          "loading": 0.677
         },
         {
           "dimension": "learning",
-          "loading": 0.667
+          "loading": 0.671
         },
         {
           "dimension": "experimentation",
-          "loading": 0.172
+          "loading": 0.175
         },
         {
           "dimension": "adaptability",
-          "loading": -0.284
+          "loading": -0.255
         },
         {
           "dimension": "building",
-          "loading": -0.128
+          "loading": -0.121
         },
         {
           "dimension": "shared_purpose",
-          "loading": 0.588
+          "loading": 0.596
         }
       ],
       "chance": {
@@ -697,22 +697,22 @@
         "draws": 2000,
         "seed": 20261002,
         "mean": 0.19,
-        "p95": 0.216
+        "p95": 0.215
       },
       "reading": "structure"
     },
     "peers": {
       "countries": 50,
       "peerCount": 10,
-      "observedMean": 1.534,
+      "observedMean": 1.523,
       "incomeNull": {
         "draws": 2000,
         "seed": 20261004,
-        "mean": 1.546,
-        "p5": 1.469,
-        "p95": 1.617
+        "mean": 1.544,
+        "p5": 1.471,
+        "p95": 1.615
       },
-      "shapeShare": 0.278,
+      "shapeShare": 0.276,
       "shapeNull": {
         "draws": 2000,
         "seed": 20261003,
@@ -724,13 +724,13 @@
         "draws": 2000,
         "seed": 20261003,
         "mean": 1.779,
-        "p5": 1.683,
-        "p95": 1.877
+        "p5": 1.684,
+        "p95": 1.872
       },
-      "shareBeyond": 0.06,
+      "shareBeyond": 0.04,
       "shareNull": {
         "mean": 0.05,
-        "p95": 0.08
+        "p95": 0.1
       },
       "reading": "differ"
     },
@@ -762,9 +762,10 @@
           "7.7.1",
           "7.8.0",
           "8.0.0",
-          "8.1.0"
+          "8.1.0",
+          "8.2.0"
         ],
-        "pairs": 23,
+        "pairs": 24,
         "perDimension": [
           {
             "dimension": "anticipation",
@@ -810,8 +811,8 @@
           },
           {
             "dimension": "adaptability",
-            "pairs": 4,
-            "mean": 0.842,
+            "pairs": 5,
+            "mean": 0.837,
             "min": 0.729,
             "minCountries": 51
           },
@@ -873,8 +874,8 @@
           {
             "dimension": "adaptability",
             "n": 51,
-            "maxSlopeShiftSe": 0.927,
-            "maxResidualShiftSd": 0.37
+            "maxSlopeShiftSe": 0.878,
+            "maxResidualShiftSd": 0.351
           },
           {
             "dimension": "building",
@@ -894,9 +895,9 @@
     },
     "incomeShare": {
       "countries": 50,
-      "mean": 0.312,
-      "median": 0.455,
-      "pooled": 0.401,
+      "mean": 0.323,
+      "median": 0.452,
+      "pooled": 0.399,
       "reading": "part"
     },
     "weakClaim": "holds"
@@ -1127,6 +1128,14 @@
       "flaggedAsWealthProxy": false
     },
     {
+      "indicatorId": "new_export_products_rate",
+      "dimension": "adaptability",
+      "measurementClass": "O",
+      "r": 0.18,
+      "wealthProxyPrior": 0.2,
+      "flaggedAsWealthProxy": false
+    },
+    {
       "indicatorId": "manufacturing_value_added",
       "dimension": "building",
       "measurementClass": "O",
@@ -1204,13 +1213,6 @@
       "delta": 0.164
     },
     {
-      "indicatorId": "export_diversification",
-      "dimension": "adaptability",
-      "dimensionR": 0.456,
-      "dimensionRWithout": 0.322,
-      "delta": 0.134
-    },
-    {
       "indicatorId": "business_start_days",
       "dimension": "agency",
       "dimensionR": 0.579,
@@ -1232,6 +1234,13 @@
       "delta": 0.092
     },
     {
+      "indicatorId": "long_term_unemployment_share",
+      "dimension": "adaptability",
+      "dimensionR": 0.431,
+      "dimensionRWithout": 0.346,
+      "delta": 0.086
+    },
+    {
       "indicatorId": "new_repositories_per_million",
       "dimension": "experimentation",
       "dimensionR": 0.651,
@@ -1244,6 +1253,13 @@
       "dimensionR": 0.872,
       "dimensionRWithout": 0.794,
       "delta": 0.078
+    },
+    {
+      "indicatorId": "export_diversification",
+      "dimension": "adaptability",
+      "dimensionR": 0.431,
+      "dimensionRWithout": 0.364,
+      "delta": 0.067
     },
     {
       "indicatorId": "high_tech_exports_share",
@@ -1265,13 +1281,6 @@
       "dimensionR": 0.214,
       "dimensionRWithout": 0.166,
       "delta": 0.047
-    },
-    {
-      "indicatorId": "long_term_unemployment_share",
-      "dimension": "adaptability",
-      "dimensionR": 0.456,
-      "dimensionRWithout": 0.411,
-      "delta": 0.045
     },
     {
       "indicatorId": "civil_society_strength",
@@ -1330,6 +1339,13 @@
       "delta": -0.004
     },
     {
+      "indicatorId": "unemployment_rate",
+      "dimension": "adaptability",
+      "dimensionR": 0.431,
+      "dimensionRWithout": 0.438,
+      "delta": -0.007
+    },
+    {
       "indicatorId": "resident_industrial_designs_per_million",
       "dimension": "experimentation",
       "dimensionR": 0.651,
@@ -1344,18 +1360,18 @@
       "delta": -0.018
     },
     {
+      "indicatorId": "new_export_products_rate",
+      "dimension": "adaptability",
+      "dimensionR": 0.431,
+      "dimensionRWithout": 0.456,
+      "delta": -0.025
+    },
+    {
       "indicatorId": "firm_training_incidence",
       "dimension": "learning",
       "dimensionR": 0.779,
       "dimensionRWithout": 0.813,
       "delta": -0.035
-    },
-    {
-      "indicatorId": "unemployment_rate",
-      "dimension": "adaptability",
-      "dimensionR": 0.456,
-      "dimensionRWithout": 0.493,
-      "delta": -0.037
     },
     {
       "indicatorId": "manufacturing_value_added",
@@ -1501,19 +1517,19 @@
     },
     {
       "dimension": "adaptability",
-      "indicatorsDefined": 5,
-      "indicatorsObserved": 3,
+      "indicatorsDefined": 6,
+      "indicatorsObserved": 4,
       "gaps": 2,
       "retired": 0,
-      "meanCoverage": 0.566,
-      "meanConfidence": 0.522,
+      "meanCoverage": 0.639,
+      "meanConfidence": 0.577,
       "classMix": {
         "C": 3,
         "I": 0,
-        "O": 2,
+        "O": 3,
         "P": 0
       },
-      "subjectivityShare": 0.4
+      "subjectivityShare": 0.333
     },
     {
       "dimension": "building",
@@ -1727,7 +1743,7 @@
       "latestYear": 2025,
       "r": 0.575,
       "n": 51,
-      "dimensionR": 0.23,
+      "dimensionR": 0.193,
       "dimensionN": 53
     },
     {
@@ -1739,7 +1755,7 @@
       "latestYear": 2024,
       "r": 0.845,
       "n": 51,
-      "dimensionR": 0.364,
+      "dimensionR": 0.367,
       "dimensionN": 53
     },
     {
@@ -1751,8 +1767,20 @@
       "latestYear": 2024,
       "r": 0.69,
       "n": 51,
-      "dimensionR": 0.362,
+      "dimensionR": 0.366,
       "dimensionN": 53
+    },
+    {
+      "indicatorId": "informal_employment_share",
+      "dimension": "adaptability",
+      "name": "Informal employment",
+      "measurementClass": "I",
+      "countries": 43,
+      "latestYear": 2025,
+      "r": 0.899,
+      "n": 42,
+      "dimensionR": 0.296,
+      "dimensionN": 43
     },
     {
       "indicatorId": "labour_productivity",
@@ -2222,6 +2250,22 @@
       },
       {
         "indicatorId": "export_diversification",
+        "dimension": "adaptability",
+        "countries": 0,
+        "years": 0,
+        "firstYear": null,
+        "lastYear": null,
+        "firstSpread": null,
+        "lastSpread": null,
+        "changeShare": null,
+        "spearman": null,
+        "carriedForwardCells": 0,
+        "clampedCells": 0,
+        "fading": false,
+        "lowDiscrimination": false
+      },
+      {
+        "indicatorId": "new_export_products_rate",
         "dimension": "adaptability",
         "countries": 0,
         "years": 0,
@@ -2875,7 +2919,7 @@
     }
   ],
   "outOfFrame": {
-    "observedCells": 1558,
+    "observedCells": 1611,
     "clampedCells": 0,
     "share": 0,
     "perCountry": []

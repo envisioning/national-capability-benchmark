@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | 37,9 | 0,49 (utilizável) | sem base de tendência |
 | Aprendizagem | 22,9 | 0,54 (utilizável) | sem base de tendência |
 | Experimentação | 5,1 | 0,33 (fraca) | +0,8 em 10 anos, sobre 3 indicadores |
-| Adaptação | 79,1 | 0,55 (utilizável) | sem base de tendência |
+| Adaptação | 72,7 | 0,6 (utilizável) | sem base de tendência |
 | Construção | 46,1 | 0,57 (utilizável) | -0,5 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 69 | 0,35 (fraca) | sem base de tendência |
 
@@ -92,7 +92,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 79,1, solidez utilizável
+- Adaptação: 72,7, solidez utilizável
 - Agência: 52,4, solidez utilizável
 
 ## O que a Indonésia tem para trabalhar
@@ -113,6 +113,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Adaptação | Participação na força de trabalho | 70,1 % das pessoas com 15 anos ou mais | 2025 | 34º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 4,9 por 100 pessoas | 2024 | 45º de 53 |
 | Adaptação | Perdas na transmissão de eletricidade | 6,5 % da produção | 2023 | 16º de 53 |
+| Adaptação | Emprego informal | 80,9 % do emprego | 2023 | 35º de 43 |
 | Construção | Produto por trabalhador | 30.291,8 US$ PPC constantes de 2021 | 2025 | 38º de 51 |
 
 ## Agenda de medição

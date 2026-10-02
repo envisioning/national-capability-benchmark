@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | 35.7 | 0.5 (usable) | no trend |
 | Learning | 45.1 | 0.55 (usable) | no trend |
 | Experimentation | 7.5 | 0.33 (thin) | +1 over 10 years using 3 indicators |
-| Adaptability | 80.9 | 0.57 (usable) | no trend |
+| Adaptability | 62.4 | 0.62 (usable) | no trend |
 | Building | 31.5 | 0.57 (usable) | -0.9 over 10 years using 3 indicators |
 | Shared Purpose | 39.9 | 0.49 (usable) | -4.3 over 10 years using 2 indicators |
 
@@ -103,7 +103,7 @@ How effectively can independent actors organize around shared objectives?
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 80.9, confidence usable
+- Adaptability: 62.4, confidence usable
 
 ## What Ecuador has to work with
 
@@ -123,6 +123,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Labour force participation | 68 % aged 15+ | 2025 | 39 of 53 |
 | Adaptability | Fixed broadband subscriptions | 17.2 per 100 people | 2024 | 31 of 53 |
 | Adaptability | Electricity transmission losses | 17 % of output | 2023 | 44 of 53 |
+| Adaptability | Informal employment | 68.5 % of employment | 2025 | 31 of 43 |
 | Building | Output per worker | 30,171.4 constant 2021 PPP $ | 2025 | 39 of 51 |
 
 ## Missing data

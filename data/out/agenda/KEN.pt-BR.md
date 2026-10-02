@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | 34,7 | 0,5 (utilizável) | sem base de tendência |
 | Aprendizagem | 43,8 | 0,55 (utilizável) | sem base de tendência |
 | Experimentação | 5 | 0,33 (fraca) | 0 em 10 anos, sobre 2 indicadores |
-| Adaptação | 60,2 | 0,52 (utilizável) | sem base de tendência |
+| Adaptação | 53,2 | 0,58 (utilizável) | sem base de tendência |
 | Construção | 21,1 | 0,57 (utilizável) | -4,6 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 68,5 | 0,47 (utilizável) | +2,2 em 10 anos, sobre 2 indicadores |
 
@@ -94,7 +94,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
 - Propósito compartilhado: 68,5, solidez utilizável
-- Adaptação: 60,2, solidez utilizável
+- Adaptação: 53,2, solidez utilizável
 
 ## O que o Quênia tem para trabalhar
 
@@ -114,6 +114,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Adaptação | Participação na força de trabalho | 68 % das pessoas com 15 anos ou mais | 2025 | 40º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 3 por 100 pessoas | 2024 | 49º de 53 |
 | Adaptação | Perdas na transmissão de eletricidade | 25,8 % da produção | 2024 | 52º de 53 |
+| Adaptação | Emprego informal | 86,5 % do emprego | 2019 | 39º de 43 |
 | Construção | Produto por trabalhador | 14.762,6 US$ PPC constantes de 2021 | 2025 | 48º de 51 |
 
 ## Agenda de medição

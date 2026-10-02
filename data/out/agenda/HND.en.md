@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | 65.2 | 0.22 (very thin) | no trend |
 | Learning | 33.2 | 0.4 (thin) | no trend |
 | Experimentation | 1.6 | 0.28 (thin) | no trend |
-| Adaptability | 70.5 | 0.57 (usable) | no trend |
+| Adaptability | 60.7 | 0.62 (usable) | no trend |
 | Building | 34.8 | 0.57 (usable) | -1.6 over 10 years using 3 indicators |
 | Shared Purpose | 42.2 | 0.32 (thin) | no trend |
 
@@ -95,7 +95,7 @@ How able are individuals and organizations to turn an intention into action?
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 70.5, confidence usable
+- Adaptability: 60.7, confidence usable
 
 ## What Honduras has to work with
 
@@ -115,6 +115,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Labour force participation | 58.7 % aged 15+ | 2025 | 52 of 53 |
 | Adaptability | Fixed broadband subscriptions | 4.6 per 100 people | 2024 | 46 of 53 |
 | Adaptability | Electricity transmission losses | 33.8 % of output | 2023 | 53 of 53 |
+| Adaptability | Informal employment | 82.6 % of employment | 2017 | 37 of 43 |
 | Building | Output per worker | 17,936.5 constant 2021 PPP $ | 2025 | 45 of 51 |
 
 ## Missing data

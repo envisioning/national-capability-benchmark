@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | 76,1 | 0,29 (fraca) | sem base de tendência |
 | Aprendizagem | 40,9 | 0,54 (utilizável) | sem base de tendência |
 | Experimentação | 20,6 | 0,53 (utilizável) | +1,6 em 10 anos, sobre 3 indicadores |
-| Adaptação | 76 | 0,57 (utilizável) | sem base de tendência |
+| Adaptação | 64 | 0,62 (utilizável) | sem base de tendência |
 | Construção | 41,8 | 0,57 (utilizável) | +4,5 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 39,5 | 0,38 (fraca) | +5,4 em 10 anos, sobre 2 indicadores |
 
@@ -90,7 +90,7 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 76, solidez utilizável
+- Adaptação: 64, solidez utilizável
 - Antecipação: 50,9, solidez utilizável
 
 ## O que a Costa Rica tem para trabalhar
@@ -111,6 +111,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Adaptação | Participação na força de trabalho | 65,3 % das pessoas com 15 anos ou mais | 2025 | 44º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 23,3 por 100 pessoas | 2024 | 28º de 53 |
 | Adaptação | Perdas na transmissão de eletricidade | 9,1 % da produção | 2024 | 28º de 53 |
+| Adaptação | Emprego informal | 36,1 % do emprego | 2025 | 20º de 43 |
 | Construção | Produto por trabalhador | 64.822,5 US$ PPC constantes de 2021 | 2025 | 26º de 51 |
 
 ## Agenda de medição

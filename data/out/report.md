@@ -1,6 +1,6 @@
 # National Capability Benchmark, prototype v0
 
-*Generated 2026-10-02T14:32:31.398Z*
+*Generated 2026-10-02T15:44:04.789Z*
 
 This run covers 53 countries and nine dimensions. Indicators carry equal weight within each dimension, and the benchmark has no headline ranking.
 
@@ -11,117 +11,117 @@ All 53 countries set the comparison frame and are measured against it. Adding a 
 
 | Country | Anticipation | Agency | Coordination | Trust | Learning | Experimentation | Adaptability | Building | Shared Purpose |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Brazil | 45.8 | 55.8 | 85.3 | 49.3 | 35 | 25.6 | 73.7 | 28.2 | 30.7 |
-| United States | 72.7 | 83.4 | 98.6 | 69.3 | 60.7 | 48.1 | 88.4 | 58.2 | 55.3 |
-| Netherlands | 78.5 | 66.9 | 92.9 | 81.4 | 75.8 | 40.2 | 90.3 | 44.4 | 96 |
-| Switzerland | 96.3 | 60 | 98.5 | 82.8 | 79.4 | 57.6 | 65.3 | 57.6 | 49.3 |
-| Singapore | 84.8 | 72.3 | 72.1 | 70.8 | 84.2 | 54.8 | 84.8 | 66.6 | 37 |
-| South Korea | 76.6 | 61 | 87 | 67.6 | 51.6 | 70.3 | 83.4 | 69.8 | 43.6 |
-| Estonia | 72 | 85.2 | 93 | 71.9 | 75.3 | 36.8 | 77.4 | 31.1 | 55 |
-| India | 35.5 | 45.4 | 77.8 | 40.1 | 19.7 | 9.9 | 85.4 | 47.1 | 66.4 |
-| Chile | 55.5 | 68.4 | 79.9 | 58.7 | 49.9 | 34.7 | 64.1 | 32.3 | 47.3 |
-| South Africa | 44 | 51.4 | 71.5 | 81 | 30.1 | 14.5 | 28.9 | 25.5 | 48 |
-| Mexico | 51.2 | 64.8 | 71.3 | 37.1 | 41.1 | 23.8 | 88 | 43 | 46.9 |
-| Argentina | 42.3 | 51.4 | 61 | 46.5 | 41.5 | 19.2 | 66.9 | 27.8 | 33.7 |
-| Colombia | 44.8 | 65.5 | 60.8 | 39.1 | 42.9 | 31 | 64.6 | 27.2 | 46.1 |
-| Peru | 43.1 | 55.4 | 72.9 | 44.6 | 49.2 | 16.1 | 70.4 | 30.2 | 39.8 |
-| Uruguay | 44.6 | 72.2 | 73.9 | 56.8 | 39.4 | 27.3 | 64.8 | 32.6 | 59.7 |
-| Costa Rica | 50.9 | 48.3 | 88.6 | 76.1 | 40.9 | 20.6 | 76 | 41.8 | 39.5 |
-| Germany | 73.5 | 51.9 | 89.6 | 86 | 65.6 | 68.2 | 83 | 68.9 | 55.1 |
-| France | 64 | 63.8 | 92.9 | 69.2 | 68.7 | 58 | 79 | 54.4 | 59 |
-| United Kingdom | 74 | 90.5 | 87.7 | 88.6 | 79.8 | 52.9 | 80 | 48.1 | 87.4 |
+| Brazil | 45.8 | 55.8 | 85.3 | 49.3 | 35 | 25.6 | 61.4 | 28.2 | 30.7 |
+| United States | 72.7 | 83.4 | 98.6 | 69.3 | 60.7 | 48.1 | 71.6 | 58.2 | 55.3 |
+| Netherlands | 78.5 | 66.9 | 92.9 | 81.4 | 75.8 | 40.2 | 81.9 | 44.4 | 96 |
+| Switzerland | 96.3 | 60 | 98.5 | 82.8 | 79.4 | 57.6 | 51.2 | 57.6 | 49.3 |
+| Singapore | 84.8 | 72.3 | 72.1 | 70.8 | 84.2 | 54.8 | 71.3 | 66.6 | 37 |
+| South Korea | 76.6 | 61 | 87 | 67.6 | 51.6 | 70.3 | 72.7 | 69.8 | 43.6 |
+| Estonia | 72 | 85.2 | 93 | 71.9 | 75.3 | 36.8 | 79.1 | 31.1 | 55 |
+| India | 35.5 | 45.4 | 77.8 | 40.1 | 19.7 | 9.9 | 83.3 | 47.1 | 66.4 |
+| Chile | 55.5 | 68.4 | 79.9 | 58.7 | 49.9 | 34.7 | 50.3 | 32.3 | 47.3 |
+| South Africa | 44 | 51.4 | 71.5 | 81 | 30.1 | 14.5 | 32.3 | 25.5 | 48 |
+| Mexico | 51.2 | 64.8 | 71.3 | 37.1 | 41.1 | 23.8 | 64.3 | 43 | 46.9 |
+| Argentina | 42.3 | 51.4 | 61 | 46.5 | 41.5 | 19.2 | 52.8 | 27.8 | 33.7 |
+| Colombia | 44.8 | 65.5 | 60.8 | 39.1 | 42.9 | 31 | 52.2 | 27.2 | 46.1 |
+| Peru | 43.1 | 55.4 | 72.9 | 44.6 | 49.2 | 16.1 | 50.7 | 30.2 | 39.8 |
+| Uruguay | 44.6 | 72.2 | 73.9 | 56.8 | 39.4 | 27.3 | 46.3 | 32.6 | 59.7 |
+| Costa Rica | 50.9 | 48.3 | 88.6 | 76.1 | 40.9 | 20.6 | 64 | 41.8 | 39.5 |
+| Germany | 73.5 | 51.9 | 89.6 | 86 | 65.6 | 68.2 | 72.4 | 68.9 | 55.1 |
+| France | 64 | 63.8 | 92.9 | 69.2 | 68.7 | 58 | 70.3 | 54.4 | 59 |
+| United Kingdom | 74 | 90.5 | 87.7 | 88.6 | 79.8 | 52.9 | 68.4 | 48.1 | 87.4 |
 | Spain | 73.5 | 58.1 | 89.8 | 75.7 | 75.8 | 36.3 | 69.1 | 34.9 | 48.1 |
-| Portugal | 81.8 | 67.2 | 87.4 | 56.3 | 62 | 32.2 | 75 | 34.2 | 52 |
-| Poland | 65.6 | 43.7 | 87.4 | 54.4 | 45.4 | 21.5 | 85.6 | 35.4 | 54.6 |
-| Sweden | 90 | 70.7 | 97.2 | 90.3 | 79.1 | 28.3 | 77.7 | 39.9 | 81.6 |
-| Finland | 87.5 | 70.6 | 82.3 | 90.7 | 76.8 | 37.9 | 72.7 | 37.8 | 73.6 |
-| Ireland | 77.6 | 69.1 | 88.6 | 83.9 | 81.6 | 19.7 | 72.3 | 69.2 | 76.5 |
-| Canada | 80.2 | 71.8 | 97.1 | 66.2 | 76.1 | 24.9 | 83.6 | 30.5 | 61.9 |
-| Australia | 86 | 86.1 | 90.5 | 79.8 | 80.1 | 37.3 | 76.2 | 34.4 | 77.2 |
-| Japan | 64 | 37.8 | 63.5 | 64.3 | 51.9 | 56.8 | 78.7 | 54.8 | 40.3 |
-| China | 31 | 72.5 | 65.6 | 55.8 | 74.8 | 100 | 87 | 77 | 30.3 |
-| Indonesia | 43.1 | 52.4 | 78.1 | 37.9 | 22.9 | 5.1 | 79.1 | 46.1 | 69 |
-| Vietnam | 28.5 | 61.1 | 75.6 | 36.2 | 42.6 | 10.4 | 88.6 | 65.7 | 42.4 |
-| Philippines | 42.6 | 28.8 | 74.4 | 43.3 | 41.6 | 4.8 | 74.5 | 60.2 | 54.9 |
-| Malaysia | 56 | 50.9 | 83.5 | 56.7 | 49.6 | 7.8 | 83.3 | 68.2 | 57.4 |
-| Thailand | 47.5 | 46.9 | 76.4 | 52.3 | 42.7 | 10.8 | 97.6 | 57.1 | 69.5 |
-| Turkey | 49.3 | 50.7 | 62.3 | 44.3 | 33.8 | 50.7 | 76.2 | 43 | 37.8 |
-| Israel | 75 | 63.4 | 79.2 | 43.4 | 49.4 | 28.3 | 90.6 | 38.9 | 70.4 |
-| United Arab Emirates | 49.7 | 69.1 | 52 | 46.1 | 73.6 | 14.6 | 68.7 | 37.6 | 48.4 |
-| Nigeria | 28.9 | 50.7 | 33.7 | 39.1 | 21.9 | 1.8 | 45.5 | 20 | 64.9 |
-| Kenya | 32.8 | 46.5 | 75.2 | 34.7 | 43.8 | 5 | 60.2 | 21.1 | 68.5 |
-| Rwanda | 31.9 | 63.7 | 61.1 | 64 | 32.6 | 2.9 | 58.1 | 31.3 | 49.3 |
-| Ethiopia | 22.3 | 41.3 | 76.2 | 45.6 | 22.6 | 0.1 | 54.9 | 19.3 | 46.6 |
-| Bolivia | 29.4 | 36.3 | 70.3 | 35.1 | 35.9 | 4.6 | 79 | 35.8 | 49.5 |
-| Paraguay | 33.5 | 39.6 | 48.6 | 58.8 | 29.3 | 10.7 | 75.2 | 37.1 | 37.7 |
-| Ecuador | 41.9 | 36 | 69.4 | 35.7 | 45.1 | 7.5 | 80.9 | 31.5 | 39.9 |
-| Venezuela | 0.9 | 25.8 | 16.2 | 31.1 | 43.2 | 4.2 | 53.3 | 0 | 21.7 |
-| Panama | 37.3 | 65.2 | 71.6 | 66.5 | 33.2 | 6.3 | 78 | 27 | 20.4 |
-| Guatemala | 37.7 | 59.8 | 55.5 | 42.5 | 45.5 | 2.4 | 81.8 | 33.6 | 49.5 |
-| Honduras | 25.2 | 25.8 | 69.9 | 65.2 | 33.2 | 1.6 | 70.5 | 34.8 | 42.2 |
-| El Salvador | 32.6 | 46.2 | 69.5 | 51.3 | 27.3 | 6.7 | 86.5 | 30.3 | 65 |
-| Nicaragua | 15.9 | 80.1 | 22.9 | 31.9 | 37.2 | 1.4 | 81.9 | 29.5 | 50.7 |
-| Dominican Republic | 33.9 | 50.4 | 68.6 | 71.7 | 34.5 | 5.4 | 81.6 | 30.7 | 53.1 |
-| Cuba | no data | no data | no data | no data | no data | 1.1 | 82.9 | 21.8 | no data |
-| Haiti | 0 | 14.8 | 57.3 | 48.2 | 31.7 | 0.2 | 31.6 | 45.8 | no data |
+| Portugal | 81.8 | 67.2 | 87.4 | 56.3 | 62 | 32.2 | 73 | 34.2 | 52 |
+| Poland | 65.6 | 43.7 | 87.4 | 54.4 | 45.4 | 21.5 | 89.2 | 35.4 | 54.6 |
+| Sweden | 90 | 70.7 | 97.2 | 90.3 | 79.1 | 28.3 | 66.9 | 39.9 | 81.6 |
+| Finland | 87.5 | 70.6 | 82.3 | 90.7 | 76.8 | 37.9 | 61.9 | 37.8 | 73.6 |
+| Ireland | 77.6 | 69.1 | 88.6 | 83.9 | 81.6 | 19.7 | 57.1 | 69.2 | 76.5 |
+| Canada | 80.2 | 71.8 | 97.1 | 66.2 | 76.1 | 24.9 | 71.5 | 30.5 | 61.9 |
+| Australia | 86 | 86.1 | 90.5 | 79.8 | 80.1 | 37.3 | 59.5 | 34.4 | 77.2 |
+| Japan | 64 | 37.8 | 63.5 | 64.3 | 51.9 | 56.8 | 63.1 | 54.8 | 40.3 |
+| China | 31 | 72.5 | 65.6 | 55.8 | 74.8 | 100 | 80.2 | 77 | 30.3 |
+| Indonesia | 43.1 | 52.4 | 78.1 | 37.9 | 22.9 | 5.1 | 72.7 | 46.1 | 69 |
+| Vietnam | 28.5 | 61.1 | 75.6 | 36.2 | 42.6 | 10.4 | 88.2 | 65.7 | 42.4 |
+| Philippines | 42.6 | 28.8 | 74.4 | 43.3 | 41.6 | 4.8 | 69.9 | 60.2 | 54.9 |
+| Malaysia | 56 | 50.9 | 83.5 | 56.7 | 49.6 | 7.8 | 77.5 | 68.2 | 57.4 |
+| Thailand | 47.5 | 46.9 | 76.4 | 52.3 | 42.7 | 10.8 | 88 | 57.1 | 69.5 |
+| Turkey | 49.3 | 50.7 | 62.3 | 44.3 | 33.8 | 50.7 | 79.4 | 43 | 37.8 |
+| Israel | 75 | 63.4 | 79.2 | 43.4 | 49.4 | 28.3 | 80.4 | 38.9 | 70.4 |
+| United Arab Emirates | 49.7 | 69.1 | 52 | 46.1 | 73.6 | 14.6 | 72 | 37.6 | 48.4 |
+| Nigeria | 28.9 | 50.7 | 33.7 | 39.1 | 21.9 | 1.8 | 36.8 | 20 | 64.9 |
+| Kenya | 32.8 | 46.5 | 75.2 | 34.7 | 43.8 | 5 | 53.2 | 21.1 | 68.5 |
+| Rwanda | 31.9 | 63.7 | 61.1 | 64 | 32.6 | 2.9 | 51.4 | 31.3 | 49.3 |
+| Ethiopia | 22.3 | 41.3 | 76.2 | 45.6 | 22.6 | 0.1 | 47.5 | 19.3 | 46.6 |
+| Bolivia | 29.4 | 36.3 | 70.3 | 35.1 | 35.9 | 4.6 | 62.7 | 35.8 | 49.5 |
+| Paraguay | 33.5 | 39.6 | 48.6 | 58.8 | 29.3 | 10.7 | 62.5 | 37.1 | 37.7 |
+| Ecuador | 41.9 | 36 | 69.4 | 35.7 | 45.1 | 7.5 | 62.4 | 31.5 | 39.9 |
+| Venezuela | 0.9 | 25.8 | 16.2 | 31.1 | 43.2 | 4.2 | 44.4 | 0 | 21.7 |
+| Panama | 37.3 | 65.2 | 71.6 | 66.5 | 33.2 | 6.3 | 69.8 | 27 | 20.4 |
+| Guatemala | 37.7 | 59.8 | 55.5 | 42.5 | 45.5 | 2.4 | 70.4 | 33.6 | 49.5 |
+| Honduras | 25.2 | 25.8 | 69.9 | 65.2 | 33.2 | 1.6 | 60.7 | 34.8 | 42.2 |
+| El Salvador | 32.6 | 46.2 | 69.5 | 51.3 | 27.3 | 6.7 | 62.6 | 30.3 | 65 |
+| Nicaragua | 15.9 | 80.1 | 22.9 | 31.9 | 37.2 | 1.4 | 66.2 | 29.5 | 50.7 |
+| Dominican Republic | 33.9 | 50.4 | 68.6 | 71.7 | 34.5 | 5.4 | 72.6 | 30.7 | 53.1 |
+| Cuba | no data | no data | no data | no data | no data | 1.1 | 62.2 | 21.8 | no data |
+| Haiti | 0 | 14.8 | 57.3 | 48.2 | 31.7 | 0.2 | 22.5 | 45.8 | no data |
 
 Confidence is reported beside the score. Each cell shows the value and its band.
 
 | Country | Anticipation | Agency | Coordination | Trust | Learning | Experimentation | Adaptability | Building | Shared Purpose |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Brazil | 0.46 usable | 0.56 usable | 0.37 thin | 0.50 usable | 0.55 usable | 0.53 usable | 0.57 usable | 0.57 usable | 0.52 usable |
-| United States | 0.46 usable | 0.37 thin | 0.23 very thin | 0.50 usable | 0.55 usable | 0.53 usable | 0.57 usable | 0.53 usable | 0.52 usable |
-| Netherlands | 0.46 usable | 0.38 thin | 0.39 thin | 0.29 thin | 0.55 usable | 0.36 thin | 0.57 usable | 0.57 usable | 0.33 thin |
-| Switzerland | 0.46 usable | 0.52 usable | 0.35 thin | 0.50 usable | 0.55 usable | 0.53 usable | 0.57 usable | 0.57 usable | 0.49 usable |
-| Singapore | 0.46 usable | 0.56 usable | 0.40 thin | 0.49 usable | 0.54 usable | 0.36 thin | 0.57 usable | 0.57 usable | 0.33 thin |
-| South Korea | 0.46 usable | 0.54 usable | 0.40 thin | 0.50 usable | 0.55 usable | 0.53 usable | 0.38 thin | 0.57 usable | 0.47 usable |
-| Estonia | 0.46 usable | 0.56 usable | 0.37 thin | 0.49 usable | 0.54 usable | 0.53 usable | 0.57 usable | 0.57 usable | 0.51 usable |
-| India | 0.46 usable | 0.56 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.53 usable | 0.38 thin | 0.57 usable | 0.46 usable |
-| Chile | 0.46 usable | 0.54 usable | 0.39 thin | 0.50 usable | 0.55 usable | 0.53 usable | 0.57 usable | 0.57 usable | 0.52 usable |
-| South Africa | 0.46 usable | 0.41 thin | 0.39 thin | 0.26 thin | 0.48 usable | 0.53 usable | 0.57 usable | 0.57 usable | 0.35 thin |
-| Mexico | 0.46 usable | 0.56 usable | 0.37 thin | 0.49 usable | 0.54 usable | 0.53 usable | 0.38 thin | 0.57 usable | 0.52 usable |
-| Argentina | 0.46 usable | 0.56 usable | 0.37 thin | 0.43 thin | 0.42 thin | 0.53 usable | 0.57 usable | 0.57 usable | 0.52 usable |
-| Colombia | 0.46 usable | 0.56 usable | 0.39 thin | 0.49 usable | 0.54 usable | 0.51 usable | 0.57 usable | 0.57 usable | 0.52 usable |
-| Peru | 0.46 usable | 0.56 usable | 0.39 thin | 0.49 usable | 0.54 usable | 0.53 usable | 0.38 thin | 0.57 usable | 0.47 usable |
-| Uruguay | 0.46 usable | 0.56 usable | 0.37 thin | 0.50 usable | 0.55 usable | 0.44 thin | 0.38 thin | 0.57 usable | 0.52 usable |
-| Costa Rica | 0.46 usable | 0.41 thin | 0.37 thin | 0.29 thin | 0.54 usable | 0.53 usable | 0.57 usable | 0.57 usable | 0.38 thin |
-| Germany | 0.46 usable | 0.41 thin | 0.39 thin | 0.29 thin | 0.55 usable | 0.33 thin | 0.57 usable | 0.57 usable | 0.35 thin |
-| France | 0.46 usable | 0.56 usable | 0.39 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.57 usable | 0.57 usable | 0.51 usable |
-| United Kingdom | 0.46 usable | 0.41 thin | 0.23 very thin | 0.29 thin | 0.55 usable | 0.33 thin | 0.57 usable | 0.57 usable | 0.33 thin |
-| Spain | 0.46 usable | 0.56 usable | 0.39 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.57 usable | 0.57 usable | 0.51 usable |
-| Portugal | 0.46 usable | 0.56 usable | 0.39 thin | 0.49 usable | 0.54 usable | 0.33 thin | 0.57 usable | 0.57 usable | 0.51 usable |
-| Poland | 0.46 usable | 0.56 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.57 usable | 0.57 usable | 0.49 usable |
-| Sweden | 0.46 usable | 0.56 usable | 0.23 very thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.57 usable | 0.57 usable | 0.51 usable |
-| Finland | 0.46 usable | 0.56 usable | 0.39 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.57 usable | 0.57 usable | 0.51 usable |
-| Ireland | 0.46 usable | 0.41 thin | 0.39 thin | 0.29 thin | 0.55 usable | 0.25 thin | 0.57 usable | 0.57 usable | 0.36 thin |
-| Canada | 0.46 usable | 0.52 usable | 0.23 very thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.57 usable | 0.54 usable | 0.49 usable |
-| Australia | 0.46 usable | 0.56 usable | 0.40 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.57 usable | 0.57 usable | 0.43 thin |
-| Japan | 0.46 usable | 0.56 usable | 0.39 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.46 usable | 0.57 usable | 0.29 thin |
-| China | 0.46 usable | 0.56 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.24 very thin | 0.38 thin | 0.57 usable | 0.49 usable |
-| Indonesia | 0.46 usable | 0.56 usable | 0.41 thin | 0.49 usable | 0.54 usable | 0.33 thin | 0.55 usable | 0.57 usable | 0.35 thin |
-| Vietnam | 0.46 usable | 0.56 usable | 0.40 thin | 0.49 usable | 0.54 usable | 0.33 thin | 0.57 usable | 0.55 usable | 0.30 thin |
-| Philippines | 0.46 usable | 0.56 usable | 0.33 thin | 0.49 usable | 0.54 usable | 0.33 thin | 0.38 thin | 0.57 usable | 0.51 usable |
-| Malaysia | 0.46 usable | 0.56 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.54 usable | 0.57 usable | 0.47 usable |
-| Thailand | 0.46 usable | 0.56 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.57 usable | 0.57 usable | 0.52 usable |
-| Turkey | 0.46 usable | 0.56 usable | 0.39 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.57 usable | 0.57 usable | 0.51 usable |
-| Israel | 0.46 usable | 0.41 thin | 0.23 very thin | 0.29 thin | 0.55 usable | 0.33 thin | 0.57 usable | 0.57 usable | 0.35 thin |
-| United Arab Emirates | 0.46 usable | 0.35 thin | 0.23 very thin | 0.16 very thin | 0.32 thin | 0.33 thin | 0.57 usable | 0.55 usable | 0.28 thin |
-| Nigeria | 0.46 usable | 0.52 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.30 thin | 0.57 usable | 0.57 usable | 0.30 thin |
-| Kenya | 0.46 usable | 0.56 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.52 usable | 0.57 usable | 0.47 usable |
-| Rwanda | 0.46 usable | 0.41 thin | 0.41 thin | 0.29 thin | 0.54 usable | 0.33 thin | 0.57 usable | 0.54 usable | 0.35 thin |
-| Ethiopia | 0.46 usable | 0.56 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.26 thin | 0.40 thin | 0.55 usable | 0.47 usable |
-| Bolivia | 0.46 usable | 0.54 usable | 0.39 thin | 0.50 usable | 0.39 thin | 0.33 thin | 0.57 usable | 0.57 usable | 0.35 thin |
-| Paraguay | 0.46 usable | 0.41 thin | 0.37 thin | 0.29 thin | 0.54 usable | 0.33 thin | 0.57 usable | 0.57 usable | 0.38 thin |
-| Ecuador | 0.46 usable | 0.56 usable | 0.39 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.57 usable | 0.57 usable | 0.49 usable |
-| Venezuela | 0.46 usable | 0.37 thin | 0.22 very thin | 0.39 thin | 0.19 very thin | 0.19 very thin | 0.46 usable | 0.27 thin | 0.17 very thin |
-| Panama | 0.46 usable | 0.38 thin | 0.37 thin | 0.29 thin | 0.55 usable | 0.33 thin | 0.57 usable | 0.57 usable | 0.38 thin |
-| Guatemala | 0.46 usable | 0.56 usable | 0.37 thin | 0.50 usable | 0.55 usable | 0.27 thin | 0.57 usable | 0.57 usable | 0.51 usable |
-| Honduras | 0.46 usable | 0.41 thin | 0.37 thin | 0.22 very thin | 0.40 thin | 0.28 thin | 0.57 usable | 0.57 usable | 0.32 thin |
-| El Salvador | 0.46 usable | 0.41 thin | 0.39 thin | 0.29 thin | 0.54 usable | 0.33 thin | 0.38 thin | 0.57 usable | 0.36 thin |
-| Nicaragua | 0.46 usable | 0.37 thin | 0.37 thin | 0.42 thin | 0.40 thin | 0.14 very thin | 0.40 thin | 0.57 usable | 0.37 thin |
-| Dominican Republic | 0.46 usable | 0.32 thin | 0.37 thin | 0.29 thin | 0.55 usable | 0.33 thin | 0.57 usable | 0.57 usable | 0.38 thin |
-| Cuba | 0.22 very thin | 0.00 very thin | 0.10 very thin | 0.07 very thin | 0.16 very thin | 0.24 very thin | 0.40 thin | 0.29 thin | 0.00 very thin |
-| Haiti | 0.46 usable | 0.24 very thin | 0.39 thin | 0.16 very thin | 0.32 thin | 0.14 very thin | 0.38 thin | 0.41 thin | 0.02 very thin |
+| Brazil | 0.46 usable | 0.56 usable | 0.37 thin | 0.50 usable | 0.55 usable | 0.53 usable | 0.62 usable | 0.57 usable | 0.52 usable |
+| United States | 0.46 usable | 0.37 thin | 0.23 very thin | 0.50 usable | 0.55 usable | 0.53 usable | 0.62 usable | 0.53 usable | 0.52 usable |
+| Netherlands | 0.46 usable | 0.38 thin | 0.39 thin | 0.29 thin | 0.55 usable | 0.36 thin | 0.62 usable | 0.57 usable | 0.33 thin |
+| Switzerland | 0.46 usable | 0.52 usable | 0.35 thin | 0.50 usable | 0.55 usable | 0.53 usable | 0.62 usable | 0.57 usable | 0.49 usable |
+| Singapore | 0.46 usable | 0.56 usable | 0.40 thin | 0.49 usable | 0.54 usable | 0.36 thin | 0.62 usable | 0.57 usable | 0.33 thin |
+| South Korea | 0.46 usable | 0.54 usable | 0.40 thin | 0.50 usable | 0.55 usable | 0.53 usable | 0.46 usable | 0.57 usable | 0.47 usable |
+| Estonia | 0.46 usable | 0.56 usable | 0.37 thin | 0.49 usable | 0.54 usable | 0.53 usable | 0.62 usable | 0.57 usable | 0.51 usable |
+| India | 0.46 usable | 0.56 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.53 usable | 0.46 usable | 0.57 usable | 0.46 usable |
+| Chile | 0.46 usable | 0.54 usable | 0.39 thin | 0.50 usable | 0.55 usable | 0.53 usable | 0.62 usable | 0.57 usable | 0.52 usable |
+| South Africa | 0.46 usable | 0.41 thin | 0.39 thin | 0.26 thin | 0.48 usable | 0.53 usable | 0.62 usable | 0.57 usable | 0.35 thin |
+| Mexico | 0.46 usable | 0.56 usable | 0.37 thin | 0.49 usable | 0.54 usable | 0.53 usable | 0.46 usable | 0.57 usable | 0.52 usable |
+| Argentina | 0.46 usable | 0.56 usable | 0.37 thin | 0.43 thin | 0.42 thin | 0.53 usable | 0.62 usable | 0.57 usable | 0.52 usable |
+| Colombia | 0.46 usable | 0.56 usable | 0.39 thin | 0.49 usable | 0.54 usable | 0.51 usable | 0.62 usable | 0.57 usable | 0.52 usable |
+| Peru | 0.46 usable | 0.56 usable | 0.39 thin | 0.49 usable | 0.54 usable | 0.53 usable | 0.46 usable | 0.57 usable | 0.47 usable |
+| Uruguay | 0.46 usable | 0.56 usable | 0.37 thin | 0.50 usable | 0.55 usable | 0.44 thin | 0.46 usable | 0.57 usable | 0.52 usable |
+| Costa Rica | 0.46 usable | 0.41 thin | 0.37 thin | 0.29 thin | 0.54 usable | 0.53 usable | 0.62 usable | 0.57 usable | 0.38 thin |
+| Germany | 0.46 usable | 0.41 thin | 0.39 thin | 0.29 thin | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.35 thin |
+| France | 0.46 usable | 0.56 usable | 0.39 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.51 usable |
+| United Kingdom | 0.46 usable | 0.41 thin | 0.23 very thin | 0.29 thin | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.33 thin |
+| Spain | 0.46 usable | 0.56 usable | 0.39 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.51 usable |
+| Portugal | 0.46 usable | 0.56 usable | 0.39 thin | 0.49 usable | 0.54 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.51 usable |
+| Poland | 0.46 usable | 0.56 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.49 usable |
+| Sweden | 0.46 usable | 0.56 usable | 0.23 very thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.51 usable |
+| Finland | 0.46 usable | 0.56 usable | 0.39 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.51 usable |
+| Ireland | 0.46 usable | 0.41 thin | 0.39 thin | 0.29 thin | 0.55 usable | 0.25 thin | 0.62 usable | 0.57 usable | 0.36 thin |
+| Canada | 0.46 usable | 0.52 usable | 0.23 very thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.54 usable | 0.49 usable |
+| Australia | 0.46 usable | 0.56 usable | 0.40 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.43 thin |
+| Japan | 0.46 usable | 0.56 usable | 0.39 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.53 usable | 0.57 usable | 0.29 thin |
+| China | 0.46 usable | 0.56 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.24 very thin | 0.46 usable | 0.57 usable | 0.49 usable |
+| Indonesia | 0.46 usable | 0.56 usable | 0.41 thin | 0.49 usable | 0.54 usable | 0.33 thin | 0.60 usable | 0.57 usable | 0.35 thin |
+| Vietnam | 0.46 usable | 0.56 usable | 0.40 thin | 0.49 usable | 0.54 usable | 0.33 thin | 0.62 usable | 0.55 usable | 0.30 thin |
+| Philippines | 0.46 usable | 0.56 usable | 0.33 thin | 0.49 usable | 0.54 usable | 0.33 thin | 0.46 usable | 0.57 usable | 0.51 usable |
+| Malaysia | 0.46 usable | 0.56 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.59 usable | 0.57 usable | 0.47 usable |
+| Thailand | 0.46 usable | 0.56 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.52 usable |
+| Turkey | 0.46 usable | 0.56 usable | 0.39 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.51 usable |
+| Israel | 0.46 usable | 0.41 thin | 0.23 very thin | 0.29 thin | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.35 thin |
+| United Arab Emirates | 0.46 usable | 0.35 thin | 0.23 very thin | 0.16 very thin | 0.32 thin | 0.33 thin | 0.62 usable | 0.55 usable | 0.28 thin |
+| Nigeria | 0.46 usable | 0.52 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.30 thin | 0.62 usable | 0.57 usable | 0.30 thin |
+| Kenya | 0.46 usable | 0.56 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.58 usable | 0.57 usable | 0.47 usable |
+| Rwanda | 0.46 usable | 0.41 thin | 0.41 thin | 0.29 thin | 0.54 usable | 0.33 thin | 0.62 usable | 0.54 usable | 0.35 thin |
+| Ethiopia | 0.46 usable | 0.56 usable | 0.41 thin | 0.50 usable | 0.55 usable | 0.26 thin | 0.48 usable | 0.55 usable | 0.47 usable |
+| Bolivia | 0.46 usable | 0.54 usable | 0.39 thin | 0.50 usable | 0.39 thin | 0.33 thin | 0.62 usable | 0.57 usable | 0.35 thin |
+| Paraguay | 0.46 usable | 0.41 thin | 0.37 thin | 0.29 thin | 0.54 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.38 thin |
+| Ecuador | 0.46 usable | 0.56 usable | 0.39 thin | 0.50 usable | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.49 usable |
+| Venezuela | 0.46 usable | 0.37 thin | 0.22 very thin | 0.39 thin | 0.19 very thin | 0.19 very thin | 0.53 usable | 0.27 thin | 0.17 very thin |
+| Panama | 0.46 usable | 0.38 thin | 0.37 thin | 0.29 thin | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.38 thin |
+| Guatemala | 0.46 usable | 0.56 usable | 0.37 thin | 0.50 usable | 0.55 usable | 0.27 thin | 0.62 usable | 0.57 usable | 0.51 usable |
+| Honduras | 0.46 usable | 0.41 thin | 0.37 thin | 0.22 very thin | 0.40 thin | 0.28 thin | 0.62 usable | 0.57 usable | 0.32 thin |
+| El Salvador | 0.46 usable | 0.41 thin | 0.39 thin | 0.29 thin | 0.54 usable | 0.33 thin | 0.46 usable | 0.57 usable | 0.36 thin |
+| Nicaragua | 0.46 usable | 0.37 thin | 0.37 thin | 0.42 thin | 0.40 thin | 0.14 very thin | 0.48 usable | 0.57 usable | 0.37 thin |
+| Dominican Republic | 0.46 usable | 0.32 thin | 0.37 thin | 0.29 thin | 0.55 usable | 0.33 thin | 0.62 usable | 0.57 usable | 0.38 thin |
+| Cuba | 0.22 very thin | 0.00 very thin | 0.10 very thin | 0.07 very thin | 0.16 very thin | 0.24 very thin | 0.48 usable | 0.29 thin | 0.00 very thin |
+| Haiti | 0.46 usable | 0.24 very thin | 0.39 thin | 0.16 very thin | 0.32 thin | 0.14 very thin | 0.46 usable | 0.41 thin | 0.02 very thin |
 
 ## Trends use the same frame
 
@@ -382,7 +382,7 @@ Trends use the current frame and only indicators observed at both ends. The bask
 
 Read the median first. Global adoption can lift every country, so a positive change does not necessarily mean catching up. A country gains ground when it beats the median. Short and long spans use different baskets, which shows how far the data reaches.
 
-The strongest evidence base in this run is 0.57, in the usable band. No country and dimension pair reaches the good band.
+The strongest evidence base in this run is 0.62, in the usable band. No country and dimension pair reaches the good band.
 
 Confidence bands:
 
@@ -395,8 +395,8 @@ Confidence bands:
 
 | Dimension | Indicators | Observed | Gaps | Mean coverage | Mean confidence | Subjectivity share |
 | --- | --- | --- | --- | --- | --- | --- |
+| Adaptability | 6 | 4 | 2 | 0.639 | 0.577 | 0.333 |
 | Building | 7 | 4 | 2 | 0.654 | 0.551 | 0.429 |
-| Adaptability | 5 | 3 | 2 | 0.566 | 0.522 | 0.4 |
 | Learning | 4 | 3 | 1 | 0.722 | 0.513 | 0.25 |
 | Agency | 5 | 4 | 1 | 0.717 | 0.483 | 0.4 |
 | Anticipation | 4 | 2 | 2 | 0.495 | 0.451 | 0.5 |
@@ -405,7 +405,7 @@ Confidence bands:
 | Experimentation | 10 | 6 | 3 | 0.497 | 0.364 | 0.5 |
 | Coordination | 8 | 3 | 2 | 0.566 | 0.362 | 0.625 |
 
-Strongest evidence: Building, Adaptability, Learning. Weakest evidence: Shared Purpose, Experimentation, Coordination.
+Strongest evidence: Adaptability, Building, Learning. Weakest evidence: Shared Purpose, Experimentation, Coordination.
 
 ## Some dimensions have little direct evidence
 
@@ -461,9 +461,10 @@ A condition records what a country has to work with: a stock of infrastructure, 
 | Tertiary enrolment | Learning | 52 | 2025 | 0.806 (n 50) | 0.633 (n 51) |
 | Public education expenditure | Learning | 53 | 2025 | 0.351 (n 51) | 0.359 (n 52) |
 | Vocational share of secondary | Learning | 53 | 2019 | 0.260 (n 51) | 0.279 (n 52) |
-| Labour force participation | Adaptability | 53 | 2025 | 0.575 (n 51) | 0.230 (n 53) |
-| Fixed broadband subscriptions | Adaptability | 53 | 2024 | 0.845 (n 51) | 0.364 (n 53) |
-| Electricity transmission losses | Adaptability | 53 | 2024 | 0.690 (n 51) | 0.362 (n 53) |
+| Labour force participation | Adaptability | 53 | 2025 | 0.575 (n 51) | 0.193 (n 53) |
+| Fixed broadband subscriptions | Adaptability | 53 | 2024 | 0.845 (n 51) | 0.367 (n 53) |
+| Electricity transmission losses | Adaptability | 53 | 2024 | 0.690 (n 51) | 0.366 (n 53) |
+| Informal employment | Adaptability | 43 | 2025 | 0.899 (n 42) | 0.296 (n 43) |
 | Output per worker | Building | 51 | 2025 | 0.892 (n 51) | 0.461 (n 51) |
 
 Both correlations read the value after the registry transform, so secure servers are read logged.
@@ -478,29 +479,29 @@ Both correlations read the value after the registry transform, so secure servers
 | Trust | 0.606 | 0.682 | 51 |
 | Agency | 0.579 | 0.589 | 51 |
 | Coordination | 0.558 | 0.623 | 51 |
-| Adaptability | 0.456 | 0.278 | 51 |
 | Building | 0.434 | 0.457 | 51 |
+| Adaptability | 0.431 | 0.325 | 51 |
 | Shared Purpose | 0.202 | 0.216 | 50 |
 
 ## The dimensions are checked for one shared factor
 
-Over the 51 countries with all nine dimensions scored, the first principal component of the dimension correlation matrix carries 49.8% of the variance. The same number of independent dimensions at the same size would give 18.9% on average and 21.5% at the 95th percentile (2000 draws, seed 20261001).
+Over the 51 countries with all nine dimensions scored, the first principal component of the dimension correlation matrix carries 49.6% of the variance. The same number of independent dimensions at the same size would give 18.9% on average and 21.5% at the 95th percentile (2000 draws, seed 20261001).
 
-The first factor's country scores correlate 0.847 with log GDP per capita (n 50), so income accounts for 72% of it. The shared factor looks like income.
+The first factor's country scores correlate 0.845 with log GDP per capita (n 50), so income accounts for 72% of it. The shared factor looks like income.
 
 | Dimension | Loading on the first factor |
 | --- | --- |
 | Anticipation | 0.911 |
-| Agency | 0.653 |
-| Coordination | 0.773 |
-| Trust | 0.763 |
+| Agency | 0.649 |
+| Coordination | 0.776 |
+| Trust | 0.767 |
 | Learning | 0.846 |
 | Experimentation | 0.727 |
-| Adaptability | 0.424 |
-| Building | 0.618 |
-| Shared Purpose | 0.489 |
+| Adaptability | 0.4 |
+| Building | 0.616 |
+| Shared Purpose | 0.487 |
 
-Eigenvalues: 4.479, 1.296, 1.047, 0.772, 0.429, 0.333, 0.287, 0.226, 0.13.
+Eigenvalues: 4.463, 1.306, 1.048, 0.75, 0.441, 0.34, 0.294, 0.229, 0.13.
 
 Left out for a missing dimension: CUB, HTI.
 
@@ -510,11 +511,11 @@ Four tests on the wealth residual (D68), over the 50 countries with all nine res
 
 | Test | Figures | Reading |
 | --- | --- | --- |
-| (a) Residuals move together | first-factor share 28.7%, chance 19.1% (95th 21.7%), n 50 | structure |
-| (b) Same income, different shape | peer distance 1.534 against 1.546 without regard to income (5th 1.469); shape share 27.8% against random 95th 23.3%, n 50 | differ |
-| (c) Order holds between releases | lowest rank r 0.718 on Trust (n 36), 23 release pairs | mixed |
-| (c) Order holds without one country | largest own-residual shift 0.37 residual SD | robust |
-| (d) Share of a profile that is income | mean 31.2%, median 45.5%, n 50 | part |
+| (a) Residuals move together | first-factor share 28.6%, chance 19.1% (95th 21.7%), n 50 | structure |
+| (b) Same income, different shape | peer distance 1.523 against 1.544 without regard to income (5th 1.471); shape share 27.6% against random 95th 23.3%, n 50 | differ |
+| (c) Order holds between releases | lowest rank r 0.718 on Trust (n 36), 24 release pairs | mixed |
+| (c) Order holds without one country | largest own-residual shift 0.351 residual SD | robust |
+| (d) Share of a profile that is income | mean 32.3%, median 45.2%, n 50 | part |
 
 Under D138, the weaker claim, that countries at the same income have different capability shapes, reads **holds** on this release.
 
@@ -547,7 +548,7 @@ Anticipation lose every measured indicator in this test and cannot be scored wit
 
 ## Some historical values fall outside the frame
 
-0 of 1558 observed cells (0%) sit outside the frame and clamp to 0 or 100. A current value cannot fall outside a frame its own country helped build, so a clamp here comes from a value the published frame did not see.
+0 of 1611 observed cells (0%) sit outside the frame and clamp to 0 or 100. A current value cannot fall outside a frame its own country helped build, so a clamp here comes from a value the published frame did not see.
 
 ## Some indicators separate countries less than they did
 
@@ -555,7 +556,7 @@ Every other test here reads the latest year. This one asks whether an indicator 
 
 Two rules carry over from the trend layer. Historical values are scored against the frame built from every country's current values, so a change in spread is a change in the countries and not a change in the scale. And the spread is computed on the countries observed at both ends of the window, so an indicator that gained coverage does not read as one that gained variance. That panel is printed beside every row.
 
-11 of 33 scored indicators reach back far enough to test. The other 22 either start after 2006 or stop before 2021, which is its own finding about what the registry can watch over time.
+11 of 34 scored indicators reach back far enough to test. The other 23 either start after 2006 or stop before 2021, which is its own finding about what the registry can watch over time.
 
 | Indicator | Dimension | Countries | Years | Spread 2006 | Spread 2026 | Change | Trend |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -592,13 +593,13 @@ No dimension pair reaches 0.9. At this sample size, the nine dimensions carry di
 | Trust | 82.8 | 70.8 | 71.9 |
 | Learning | 79.4 | 84.2 | 75.3 |
 | Experimentation | 57.6 | 54.8 | 36.8 |
-| Adaptability | 65.3 | 84.8 | 77.4 |
+| Adaptability | 51.2 | 71.3 | 79.1 |
 | Building | 57.6 | 66.6 | 31.1 |
 | Shared Purpose | 49.3 | 37 | 55 |
 
 ## Brazil is the first case
 
-Strongest: Coordination (85.3), Adaptability (73.7), Agency (55.8).
+Strongest: Coordination (85.3), Adaptability (61.4), Agency (55.8).
 
 Weakest: Shared Purpose (30.7), Building (28.2), Experimentation (25.6).
 

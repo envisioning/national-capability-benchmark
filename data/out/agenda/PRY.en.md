@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | 58.8 | 0.29 (thin) | no trend |
 | Learning | 29.3 | 0.54 (usable) | no trend |
 | Experimentation | 10.7 | 0.33 (thin) | -4.5 over 20 years using 3 indicators |
-| Adaptability | 75.2 | 0.57 (usable) | no trend |
+| Adaptability | 62.5 | 0.62 (usable) | no trend |
 | Building | 37.1 | 0.57 (usable) | +2 over 10 years using 3 indicators |
 | Shared Purpose | 37.7 | 0.38 (thin) | +9.7 over 10 years using 2 indicators |
 
@@ -97,7 +97,7 @@ How able are individuals and organizations to turn an intention into action?
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 75.2, confidence usable
+- Adaptability: 62.5, confidence usable
 
 ## What Paraguay has to work with
 
@@ -117,6 +117,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Labour force participation | 73.9 % aged 15+ | 2025 | 26 of 53 |
 | Adaptability | Fixed broadband subscriptions | 12.9 per 100 people | 2023 | 36 of 53 |
 | Adaptability | Electricity transmission losses | 11.9 % of output | 2023 | 37 of 53 |
+| Adaptability | Informal employment | 64.5 % of employment | 2025 | 29 of 43 |
 | Building | Output per worker | 36,003.6 constant 2021 PPP $ | 2025 | 35 of 51 |
 
 ## Missing data

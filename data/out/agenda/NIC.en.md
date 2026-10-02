@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | 31.9 | 0.42 (thin) | no trend |
 | Learning | 37.2 | 0.4 (thin) | no trend |
 | Experimentation | 1.4 | 0.14 (very thin) | no trend |
-| Adaptability | 81.9 | 0.4 (thin) | no trend |
+| Adaptability | 66.2 | 0.48 (usable) | no trend |
 | Building | 29.5 | 0.57 (usable) | -1.6 over 10 years using 3 indicators |
 | Shared Purpose | 50.7 | 0.37 (thin) | no trend |
 
@@ -76,13 +76,6 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
-### Adaptability: confidence 0.4, thin
-
-How effectively can the system respond when circumstances change?
-
-- Uses 3 observed indicators.
-- Missing indicators: Disaster preparedness and recovery, Institutional responsiveness.
-
 ### Learning: confidence 0.4, thin
 
 How effectively does the country acquire, distribute, and update knowledge?
@@ -97,6 +90,12 @@ How much cooperation is possible beyond immediate personal networks?
 - Uses 5 observed indicators.
 - Missing indicators: Trust in public institutions, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
+
+## What to keep watching
+
+These dimensions score at least 50 with usable evidence.
+
+- Adaptability: 66.2, confidence usable
 
 ## What Nicaragua has to work with
 
@@ -116,6 +115,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Labour force participation | 69 % aged 15+ | 2025 | 38 of 53 |
 | Adaptability | Fixed broadband subscriptions | 5.8 per 100 people | 2024 | 42 of 53 |
 | Adaptability | Electricity transmission losses | 21.5 % of output | 2023 | 50 of 53 |
+| Adaptability | Informal employment | 81.8 % of employment | 2012 | 36 of 43 |
 | Building | Output per worker | 17,638 constant 2021 PPP $ | 2025 | 46 of 51 |
 
 ## Missing data

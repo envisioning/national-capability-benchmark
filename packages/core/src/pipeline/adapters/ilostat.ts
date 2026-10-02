@@ -1,5 +1,9 @@
 import {
   COUNTRIES,
+  ILOSTAT_INFORMAL_ADAPTER_ID,
+  ILOSTAT_INFORMAL_DATAFLOW,
+  ILOSTAT_INFORMAL_DATAFLOW_VERSION,
+  ILOSTAT_INFORMAL_FROM_YEAR,
   ILOSTAT_LTU_ADAPTER_ID,
   ILOSTAT_LTU_DATAFLOW,
   ILOSTAT_LTU_DATAFLOW_VERSION,
@@ -303,6 +307,105 @@ export function parseIlostatLongTermUnemployment(
     release: `${ILOSTAT_LTU_DATAFLOW} ${ILOSTAT_LTU_DATAFLOW_VERSION}, read ${retrievedAt.slice(0, 10)}`,
     dropped,
   }
+}
+
+/* --------------------- Informal employment (SDG 8.3.1) --------------------- */
+
+/** ILOSTAT's code for the whole economy in the informality dataflow. */
+const ECO_TOTAL = 'ECO_SECTOR_TOTAL'
+
+/** The SDMX request for the informal employment rate. */
+export function ilostatInformalUrl(iso3s: readonly string[], fromYear = ILOSTAT_INFORMAL_FROM_YEAR): string {
+  return `${ILOSTAT_SDMX_DATA_URL}/ILO,${ILOSTAT_INFORMAL_DATAFLOW},${ILOSTAT_INFORMAL_DATAFLOW_VERSION}/${iso3s.join('+')}.A..${SEX_TOTAL}.${ECO_TOTAL}?startPeriod=${fromYear}`
+}
+
+/**
+ * Parse the informal employment rate, SDG 8.3.1: informal employment as a
+ * share of total employment, both sexes, every economic activity. Where
+ * ILOSTAT holds more than one survey for a year, the survey preference of the
+ * long-term share applies. The latest year is emitted as published; there is
+ * no gate, because the row is a condition and is never scored (D150). An
+ * income survey used as a proxy (EU-SILC) says so in the note.
+ */
+export function parseIlostatInformalEmployment(
+  csv: string,
+  retrievedAt = new Date().toISOString(),
+  sourceUrl = ilostatInformalUrl(COUNTRIES.map((country) => country.iso3)),
+): SourceAdapterResult {
+  const benchmark: Set<string> = new Set(COUNTRIES.map((country) => country.iso3))
+  const rows = parseCsv(csv, ['REF_AREA', 'SEX', 'ECO', 'TIME_PERIOD', 'OBS_VALUE', 'SOURCE'], 'ILOSTAT')
+  type Point = { year: number; value: number; source: string; status: string }
+  const latest = new Map<string, Point>()
+  const unmapped = new Set<string>()
+  for (const row of rows) {
+    if (row.SEX !== SEX_TOTAL || row.ECO !== ECO_TOTAL) continue
+    const iso3 = row.REF_AREA ?? ''
+    if (!benchmark.has(iso3)) {
+      unmapped.add(iso3)
+      continue
+    }
+    const raw = (row.OBS_VALUE ?? '').trim()
+    const year = Number(row.TIME_PERIOD)
+    const value = Number(raw)
+    if (raw === '' || !Number.isInteger(year) || !Number.isFinite(value) || value < 0 || value > 100) continue
+    const point: Point = { year, value, source: row.SOURCE ?? '', status: row.OBS_STATUS ?? '' }
+    const held = latest.get(iso3)
+    if (
+      !held ||
+      year > held.year ||
+      (year === held.year &&
+        (sourceRank(point.source) < sourceRank(held.source) ||
+          (sourceRank(point.source) === sourceRank(held.source) && point.source < held.source)))
+    ) {
+      latest.set(iso3, point)
+    }
+  }
+
+  const observations: Observation[] = [...latest.entries()].map(([iso3, point]) => ({
+    indicatorId: 'informal_employment_share',
+    iso3,
+    geometry: 'national' as const,
+    reconciliation: 'context_only' as const,
+    value: round1(point.value),
+    year: point.year,
+    sourceTier: 'international_organization' as const,
+    sourceUrl: ilostatInformalUrl([iso3]),
+    retrievedAt,
+    note: [
+      `${ILOSTAT_PUBLISHER} ${ILOSTAT_INFORMAL_DATAFLOW} (SDG 8.3.1): ${SEX_TOTAL}, ${ECO_TOTAL}`,
+      `survey: ${point.source}`,
+      ...(/EU-SILC|Statistics on Income and Living Conditions/.test(point.source)
+        ? ['an income survey with a proxy definition of informality, not comparable with labour force survey values']
+        : []),
+      ...(point.status ? [`status: ${STATUS_LABEL[point.status] ?? point.status}`] : []),
+      'a condition, never scored (D150)',
+      'CC BY 4.0.',
+    ].join('; '),
+  }))
+  observations.sort((a, b) => a.iso3.localeCompare(b.iso3))
+  const emitted = observations.map((observation) => observation.iso3)
+  return {
+    adapterId: ILOSTAT_INFORMAL_ADAPTER_ID,
+    observations,
+    availableCountries: [...emitted],
+    emittedCountries: emitted,
+    heldCountries: [],
+    unmappedLabels: [...unmapped].sort(),
+    sourceUrl,
+    release: `${ILOSTAT_INFORMAL_DATAFLOW} ${ILOSTAT_INFORMAL_DATAFLOW_VERSION}, read ${retrievedAt.slice(0, 10)}`,
+  }
+}
+
+/** Fetch the informal employment rate for every benchmark country in one SDMX call. */
+export async function fetchIlostatInformalEmployment(
+  opts: { sourceUrl?: string; retrievedAt?: string } = {},
+): Promise<SourceAdapterResult> {
+  const sourceUrl = opts.sourceUrl ?? ilostatInformalUrl(COUNTRIES.map((country) => country.iso3))
+  const response = await fetch(sourceUrl, {
+    headers: { Accept: 'application/vnd.sdmx.data+csv;version=1.0.0', 'Accept-Language': 'en' },
+  })
+  if (!response.ok) throw new Error(`ILOSTAT: HTTP ${response.status}`)
+  return parseIlostatInformalEmployment(await response.text(), opts.retrievedAt ?? new Date().toISOString(), sourceUrl)
 }
 
 /** Fetch every benchmark country in one SDMX call and parse it. */

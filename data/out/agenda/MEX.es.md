@@ -14,7 +14,7 @@ La comparación incluye 53 países. Cada dimensión recibe una puntuación de 0 
 | Confianza | 37.1 | 0.49 (utilizable) | sin base de tendencia |
 | Aprendizaje | 41.1 | 0.54 (utilizable) | sin base de tendencia |
 | Experimentación | 23.8 | 0.53 (utilizable) | +0.6 en 10 años, sobre 3 indicadores |
-| Adaptación | 88 | 0.38 (débil) | sin base de tendencia |
+| Adaptación | 64.3 | 0.46 (utilizable) | sin base de tendencia |
 | Ejecución | 43 | 0.57 (utilizable) | +0.6 en 10 años, sobre 3 indicadores |
 | Propósito compartido | 46.9 | 0.52 (utilizable) | +10.7 en 10 años, sobre 2 indicadores |
 
@@ -83,18 +83,12 @@ La solidez de la evidencia está por debajo de la franja utilizable, así que la
 - Vacíos declarados: Colaboración universidad-empresa, Colaboración público-privada.
 - Bases descartadas: Efectividad del gobierno, Calidad regulatoria, Desempeño logístico.
 
-### Adaptación: solidez 0.38, débil
-
-¿Con qué eficacia responde el sistema cuando cambian las circunstancias?
-
-- Basada en 2 indicadores observados.
-- Vacíos declarados: Preparación y recuperación ante desastres, Capacidad de respuesta institucional.
-
 ## Puntuaciones altas con evidencia utilizable
 
 Estas dimensiones tienen una puntuación de al menos 50, con evidencia utilizable.
 
 - Iniciativa: 64.8, solidez utilizable
+- Adaptación: 64.3, solidez utilizable
 - Anticipación: 51.2, solidez utilizable
 
 ## ¿Con qué cuenta México?
@@ -115,6 +109,7 @@ Las condiciones describen lo que un país tiene para trabajar: infraestructura, 
 | Adaptación | Participación en la fuerza laboral | 66.3 % de las personas de 15 años o más | 2025 | 41.º de 53 |
 | Adaptación | Suscripciones de banda ancha fija | 21.7 por cada 100 personas | 2024 | 29.º de 53 |
 | Adaptación | Pérdidas en la transmisión de electricidad | 11.1 % de la producción | 2024 | 35.º de 53 |
+| Adaptación | Empleo informal | 56.9 % del empleo | 2025 | 25.º de 43 |
 | Ejecución | Producto por trabajador | 48,140.6 US$ PPA constantes de 2021 | 2025 | 30.º de 51 |
 
 ## ¿Qué falta medir?

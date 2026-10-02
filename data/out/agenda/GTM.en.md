@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | 42.5 | 0.5 (usable) | no trend |
 | Learning | 45.5 | 0.55 (usable) | no trend |
 | Experimentation | 2.4 | 0.27 (thin) | -2 over 10 years using 2 indicators |
-| Adaptability | 81.8 | 0.57 (usable) | no trend |
+| Adaptability | 70.4 | 0.62 (usable) | no trend |
 | Building | 33.6 | 0.57 (usable) | -1.2 over 10 years using 3 indicators |
 | Shared Purpose | 49.5 | 0.51 (usable) | +7.7 over 10 years using 2 indicators |
 
@@ -94,7 +94,7 @@ How effectively can independent actors organize around shared objectives?
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 81.8, confidence usable
+- Adaptability: 70.4, confidence usable
 - Agency: 59.8, confidence usable
 
 ## What Guatemala has to work with
@@ -115,6 +115,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Labour force participation | 61.8 % aged 15+ | 2025 | 48 of 53 |
 | Adaptability | Fixed broadband subscriptions | 5.3 per 100 people | 2024 | 44 of 53 |
 | Adaptability | Electricity transmission losses | 12.4 % of output | 2023 | 38 of 53 |
+| Adaptability | Informal employment | 73.5 % of employment | 2025 | 33 of 43 |
 | Building | Output per worker | 32,425.4 constant 2021 PPP $ | 2025 | 36 of 51 |
 
 ## Missing data

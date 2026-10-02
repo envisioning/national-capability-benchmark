@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | 36,2 | 0,49 (utilizável) | sem base de tendência |
 | Aprendizagem | 42,6 | 0,54 (utilizável) | sem base de tendência |
 | Experimentação | 10,4 | 0,33 (fraca) | +1,1 em 10 anos, sobre 3 indicadores |
-| Adaptação | 88,6 | 0,57 (utilizável) | sem base de tendência |
+| Adaptação | 88,2 | 0,62 (utilizável) | sem base de tendência |
 | Construção | 65,7 | 0,55 (utilizável) | +10,1 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 42,4 | 0,3 (fraca) | sem base de tendência |
 
@@ -82,7 +82,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 88,6, solidez utilizável
+- Adaptação: 88,2, solidez utilizável
 - Construção: 65,7, solidez utilizável
 - Agência: 61,1, solidez utilizável
 
@@ -104,6 +104,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Adaptação | Participação na força de trabalho | 78,4 % das pessoas com 15 anos ou mais | 2025 | 13º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 23,7 por 100 pessoas | 2024 | 26º de 53 |
 | Adaptação | Perdas na transmissão de eletricidade | 6,6 % da produção | 2023 | 18º de 53 |
+| Adaptação | Emprego informal | 67 % do emprego | 2024 | 30º de 43 |
 | Construção | Produto por trabalhador | 27.957,3 US$ PPC constantes de 2021 | 2025 | 40º de 51 |
 
 ## Agenda de medição

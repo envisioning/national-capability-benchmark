@@ -7610,3 +7610,160 @@ bodies, or any body decision that changes a country item. Or, on the 53:
 alpha under 0.80 on any item or on body-by-body decisions in a 20 percent
 second coding, regime rho at or above 0.80, or 43 or more of the 53 at one
 score.
+
+## D149 — New export products are scored in Adaptability from the Growth Lab's Atlas trade data
+
+*Recorded 2026-10-02. Under D117 and D118, in the pattern of D119 and D124.
+Fixes A16 in part. Memo: `docs/research/adaptability/A16-FIXES.md`,
+recommendation 1 and the preflight of 2026-10-02. Dataset 8.2.0.*
+
+**Decision.** `new_export_products_rate` joins Adaptability as a scored row:
+class `O`, `higher_better`, tier `academic_survey`, unit "% of products not
+exported competitively at the start". A product is new when its revealed
+comparative advantage averaged under 0.5 over 2009-2011 and at least 1 over
+2022-2024, with mean exports of at least USD 1 million a year over 2022-2024.
+The rate is new products over the products under 0.5 at the start, stamped
+2024. The source is the Harvard Growth Lab's Atlas of Economic Complexity,
+International Trade Data (HS, 92), `doi:10.7910/DVN/T4CHWJ` version 18.0
+(2026-04-22, CC0), file `hs92_country_product_year_4.csv`. The adapter
+`atlas-hs92-new-export-products-v1` runs as `pnpm bench atlas fetch`,
+downloads the file by its Dataverse id, refuses it unless its MD5 and SHA-256
+match the pin in `model/source-catalog.ts`, and reads only the two windows.
+Only four-digit codes are products, so the unspecified `XXXX` line is never
+one. The observation file carries the pin under `atlas`: release, checksums,
+the rule, the product universe (1,242) and, for every country, the products
+it had room to enter, the new ones by code, and how many of them it exports
+more of than it imports. Glossary: "New export product".
+
+**Preflight.** The owner made wiring conditional on two traps. Entrepot hubs:
+the file has gross exports only, so the test was a net exporter variant (a
+new product counts only where exports exceed imports). It orders the frame at
+Spearman 0.93 against the published rate; the hubs keep 0.56 to 0.69 of their
+new products against a frame median of 0.75, and so do open economies inside
+value chains (Poland 0.60, Portugal 0.50, El Salvador 0.40); no hub's rank
+moves more than the frame's median move of four places. The row is scored on
+gross exports and the net count travels in the pin. Sanctioned trade: Cuba
+and Venezuela, and Haiti, which is not sanctioned, did not report to UN
+Comtrade in one or both windows and are read from partner reports. A
+sanctions regime is a shock an economy reallocates under, so their values are
+a reading, not an artefact; a gate keyed to sanctions would need a list and
+one keyed to reporting would catch Haiti. 19 of Venezuela's 21 new products
+grew in absolute value; across the frame 6 of 1,381 crossed the line only
+because a basket shrank. Both are scored, with no gate.
+
+**Why.** Construct first, written before values were read. Adaptability asks
+whether an economy can absorb a shock and reallocate, and entry into new
+export lines is reallocation observed: capital and workers moving into
+products the country was not making. It is behaviour, not a stock money buys,
+and counting over the room left does not reward a basket that was already
+broad. It covers all 53 countries at 2024 from one release, its order is
+stable across windows (Spearman 0.92 to 0.94), and it is the only candidate
+in the memo that gives the nine countries the ILOSTAT gate holds a third row
+on evidence about reallocation rather than slack.
+
+Reported as findings, not tests, on 8.2.0 against 8.1.0. The row's
+normalised value correlates with log GDP per capita at 0.18 (n 51); its
+wealth-attribution delta is -0.025. No redundant pair forms; its overlap with
+export concentration is 0.54 normalised.
+
+| Adaptability | 8.1.0 | 8.2.0 |
+| --- | ---: | ---: |
+| Mean confidence | 0.522 | 0.577 |
+| Bottom quarter confidence | 0.390 | 0.469 |
+| Observed rows (mean) | 2.83 | 3.83 |
+| Scored countries | 53 | 53 |
+| r with log GDP (n 51) | 0.456 | 0.431 |
+| Spearman with log GDP | 0.278 | 0.325 |
+
+The nine of A16 move from two rows to three and from confidence 0.380 to
+0.459: India 85.4 (10th) to 83.3 (4th), China 87.0 (7th) to 80.2 (7th),
+South Korea 83.4 (13th) to 72.7 (12th), the Philippines 74.5 (34th) to 69.9
+(22nd), Mexico 88.0 (6th) to 64.3 (28th), El Salvador 86.5 (8th) to 62.6
+(32nd), Peru 70.4 (39th) to 50.7 (46th), Uruguay 64.8 (44th) to 46.3 (49th),
+Haiti 31.6 (52nd) to 22.5 (53rd). Every Adaptability score moves, because a
+quarter of each is now the new row (rank Spearman 0.80 between releases):
+the United States 88.4 (5th) to 71.6 (17th), Cuba 82.9 to 62.2, Ecuador 80.9
+to 62.4, the United Arab Emirates 68.7 (41st) to 72.0 (16th); Brazil 73.7
+(35th) to 61.4 (37th). The top ten becomes Poland, Vietnam, Thailand, India,
+the Netherlands, Israel, China, Turkey, Estonia and Malaysia. No other
+dimension's score or confidence moves.
+
+The guardrail, mean confidence across dimensions against log GDP per capita,
+moves from 0.286 to 0.274 (n 51). The shared factor (D137) carries 0.496 of
+the variance, from 0.498, and correlates 0.845 with income, from 0.847;
+Adaptability's loading moves from 0.424 to 0.400. Under D138 no reading
+changes: the residuals still share structure (0.286 against a 95th of
+0.217), peers still differ, release order stays mixed, leave-one-out is
+robust, income is part of the distance and the weaker claim holds;
+Adaptability's residual loading moves from -0.284 to -0.255.
+
+D119's overturning clause said a source observing entry into new export
+products would replace export concentration. This entry keeps both, and
+supersedes that half of the clause: concentration reads the exposure a single
+price shock meets, entry reads the move away from it, and the two overlap at
+0.54, well under a duplicate.
+
+**Cost.** Merchandise only, so services exporters (the United States, the
+United Kingdom, India's software) are read on goods. Exports are gross, so a
+hub counts what passes through it, inside the noise the preflight measured
+but not zero. A resource find counts as entry when it crosses the line. The
+thresholds (0.5, 1, USD 1 million, three-year means, fifteen years) are
+judgment fixed in the memo before wiring. The window is slow, so the row
+moves little between releases and has no trend. The publisher is an
+academic group, for which `academic_survey` is the nearest tier. Three
+countries rest on partner reports. The fetch downloads 452 MB. A16 is
+restated, not closed: the nine still have no long-term share.
+
+**Overturned by.** A domestic-exports series (re-exports removed) at frame
+coverage that reorders the hubs by more than the frame's typical move, which
+would make the gross rate a hub artefact and call for that series or a gate.
+Evidence that entry counts track resource finds or a shrinking basket more
+than reallocation, for instance a window in which most new products are
+minerals or crossed the line on a falling total. Or a new release of the
+file that changes the definition of RCA or the reconciliation, which needs a
+new pin and a revision run.
+
+## D150 — Informal employment is published beside Adaptability as a condition
+
+*Recorded 2026-10-02. Extends D122 and D141. Memo:
+`docs/research/adaptability/A16-FIXES.md`, recommendation 2. Dataset 8.2.0.*
+
+**Decision.** `informal_employment_share` joins the registry with
+`role: 'condition'` beside Adaptability: informal employment as a share of
+total employment, ILOSTAT SDG indicator 8.3.1 (`DF_SDG_0831_SEX_ECO_RT`),
+both sexes, whole economy, the latest year since 2010, a labour force survey
+preferred where ILOSTAT holds more than one for a year. It is read by the
+ILOSTAT adapter through the SDMX endpoint D120 uses, as
+`pnpm bench ilostat fetch --only informality`, into
+`data/observations/ilostat-informality.json`, and published with its value,
+year and rank among the countries that have it, never on the 0 to 100 scale.
+Direction is `lower_better`, which orders the rank and claims nothing about
+Adaptability. The World Bank API does not carry the series at comparable
+coverage: `pnpm bench probe` finds non-agricultural informality in the Gender
+Statistics database at 24 of 53 and the Jobs database's own measure at 29 of
+53, latest 2021.
+
+**Why.** Construct. The share of work with no contract, registration or
+social protection describes the labour market a country reallocates
+through, not the reallocation. It is the context A16 asks for beside a low
+unemployment rate: India 87.2%, Peru 70.5%, El Salvador 63.6% and Mexico
+56.9%. It fails the indicator test on direction: informal work is both the
+slack that absorbs a shock and the precarity that keeps a worker from moving
+up. That is what D122 makes a condition, as D141 did for labour force
+participation. It changes no score or confidence. As a finding, it
+correlates with log GDP per capita at 0.90 in its ranked direction (n 42) and
+with the Adaptability score at 0.30 (n 43).
+
+**Cost.** 43 of 53. ILOSTAT has no value for the United States, Canada,
+Australia, Japan, Singapore, Israel, Malaysia, China, the Philippines and
+Cuba, two of them among the nine A16 names. Some values are old (Haiti and
+Nicaragua 2012, South Korea 2019). Comparability is weak: European values
+come from EU-SILC, an income survey with a proxy definition, which the
+observation note says. ILOSTAT revises in place, so the retrieval date is the
+release identifier. In this frame the condition is very nearly income.
+
+**Overturned by.** A defensible direction, for instance evidence that
+informality reliably slows or speeds reallocation after a shock across
+countries, which would make it an indicator on its own entry. Or a
+harmonised series that closes the EU-SILC gap and the ten missing countries,
+which would make the rank comparable enough to read across income groups.

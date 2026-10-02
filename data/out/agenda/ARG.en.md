@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | 46.5 | 0.43 (thin) | no trend |
 | Learning | 41.5 | 0.42 (thin) | no trend |
 | Experimentation | 19.2 | 0.53 (usable) | +1.3 over 10 years using 3 indicators |
-| Adaptability | 66.9 | 0.57 (usable) | no trend |
+| Adaptability | 52.8 | 0.62 (usable) | no trend |
 | Building | 27.8 | 0.57 (usable) | -3.4 over 10 years using 3 indicators |
 | Shared Purpose | 33.7 | 0.52 (usable) | -3.3 over 10 years using 2 indicators |
 
@@ -92,7 +92,7 @@ How much cooperation is possible beyond immediate personal networks?
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 66.9, confidence usable
+- Adaptability: 52.8, confidence usable
 - Agency: 51.4, confidence usable
 
 ## What Argentina has to work with
@@ -113,6 +113,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Labour force participation | 70.7 % aged 15+ | 2025 | 33 of 53 |
 | Adaptability | Fixed broadband subscriptions | 26.1 per 100 people | 2024 | 22 of 53 |
 | Adaptability | Electricity transmission losses | 21.8 % of output | 2024 | 51 of 53 |
+| Adaptability | Informal employment | 52.8 % of employment | 2025 | 21 of 43 |
 | Building | Output per worker | 61,326.3 constant 2021 PPP $ | 2025 | 27 of 51 |
 
 ## Missing data

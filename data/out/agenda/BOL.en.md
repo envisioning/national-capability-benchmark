@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | 35.1 | 0.5 (usable) | no trend |
 | Learning | 35.9 | 0.39 (thin) | no trend |
 | Experimentation | 4.6 | 0.33 (thin) | +0.4 over 10 years using 3 indicators |
-| Adaptability | 79 | 0.57 (usable) | no trend |
+| Adaptability | 62.7 | 0.62 (usable) | no trend |
 | Building | 35.8 | 0.57 (usable) | +4.4 over 10 years using 3 indicators |
 | Shared Purpose | 49.5 | 0.35 (thin) | no trend |
 
@@ -99,7 +99,7 @@ How effectively does the country acquire, distribute, and update knowledge?
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 79, confidence usable
+- Adaptability: 62.7, confidence usable
 
 ## What Bolivia has to work with
 
@@ -118,6 +118,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Labour force participation | 80.5 % aged 15+ | 2025 | 8 of 53 |
 | Adaptability | Fixed broadband subscriptions | 12.1 per 100 people | 2024 | 38 of 53 |
 | Adaptability | Electricity transmission losses | 8.9 % of output | 2023 | 27 of 53 |
+| Adaptability | Informal employment | 85.6 % of employment | 2025 | 38 of 43 |
 | Building | Output per worker | 20,434.6 constant 2021 PPP $ | 2025 | 44 of 51 |
 
 ## Missing data

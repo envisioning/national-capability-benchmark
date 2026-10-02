@@ -342,3 +342,97 @@ exit and sectoral reallocation (no source, or no sign). If recommendation 1
 fails its preflight, D141's alternative is what is left: nine countries lose
 an Adaptability score, 44 keep one, and that is a decision and a major
 version.
+
+## Preflight of recommendation 1, 2026-10-02
+
+Owner decision of 2026-10-02: preflight the new export products rate and wire
+it if it passes; if it fails, hold Adaptability below three observed rows
+instead. Written before any registry row, adapter or observation changed.
+
+**What was read.** The pinned file itself, not the GraphQL endpoint:
+`hs92_country_product_year_4.csv` from `doi:10.7910/DVN/T4CHWJ`, version
+18.0 (released 2026-04-22, CC0 1.0), Dataverse file id 13685110, 451,749,132
+bytes, MD5 `5d87b2ac45517bf4e0e50600140672e5` as Dataverse publishes it,
+SHA-256 `06c77ef4c9e3a3afe9aaac6d053e11209275d09eb91f82de7b2a54d37f9c25e2`.
+1,243 HS92 4-digit codes. Definition as above: mean RCA under 0.5 over
+2009-2011, mean RCA of 1 or more and mean exports of at least USD 1 million
+over 2022-2024, over the products under 0.5 at the start; a product absent
+from a year counts as zero exports and zero RCA. The file reproduces the
+GraphQL figures to within one product per country (Brazil 20 of 873 against
+21 of 878; Poland 8.29 against 8.23; Cuba 0.35 against 0.36). Rank order
+is unchanged.
+
+### Trap 1: entrepot hubs
+
+The file carries gross exports only. The Growth Lab reconciles exporter and
+importer reports (working paper 251, 2025) and does not publish a
+domestic-exports series, so a re-export cannot be removed directly. The file
+does carry imports of the same product, which allows the standard proxy: a
+new product counts only where the country exports more of it than it imports
+over 2022-2024 (net exporter). A pure re-export fails that test, because
+what passes through is imported first.
+
+| | Gross (as published) | Net exporter variant | Rank move | Share of new products kept |
+| --- | --- | --- | ---: | ---: |
+| United Arab Emirates | 6.97, 5th | 4.30, 6th | -1 | 0.62 |
+| Netherlands | 4.87, 13th | 2.73, 17th | -4 | 0.56 |
+| Panama (Colón free zone) | 3.96, 18th | 2.42, 19th | -1 | 0.61 |
+| Singapore | 2.81, 29th | 1.95, 26th | +3 | 0.69 |
+| Frame | | | median 4, 90th percentile 10 | median 0.75, quartiles 0.58 to 0.84 |
+
+The two variants order the frame at Spearman 0.93. The hubs lose a share of
+their new products close to the lower quartile of the frame, and so do open
+economies inside value chains that are not hubs: Poland keeps 0.60,
+Portugal 0.50, Israel 0.50, the Dominican Republic 0.42, El Salvador 0.40.
+The net exporter test removes two-way trade in general, processing and
+assembly as much as re-export, so it is not a re-export filter and it would
+mark down maquila entry, which is reallocation. No hub moves by more than the
+frame's own typical rank move, and Belgium and Hong Kong, the largest
+entrepots, are not in the frame.
+
+**Verdict on trap 1: passes.** Re-exports do not move the hubs by more than
+the variant moves everyone. The row is wired on gross exports as the
+publisher writes them, and the adapter publishes the net exporter count
+beside each value in the pin, so the variant stays readable. The registry
+note names the hubs' reading.
+
+### Trap 2: sanctioned trade
+
+UN Comtrade's data availability endpoint (read 2026-10-02) shows Cuba did not
+report in 2009-2011 and reported only 2022 of the end window; Venezuela
+reported the start window and not the end window; Haiti reported neither.
+All three are read in those years from partner reports through the Growth
+Lab's reconciliation. Every other benchmark country reported in both windows.
+
+Construct first. Adaptability asks whether an economy reallocates after a
+shock. A sanctions regime is a shock and a constraint, of the same kind as a
+commodity collapse or a lost market: an economy that enters no new lines
+under it has not reallocated, and that is a true reading, not a measurement
+artefact. A gate keyed to sanctions would need a list, which D120 and D145
+rule out, and a gate keyed to reporting status would catch Haiti, which is
+not sanctioned. So the question is only whether the mirror data misreads
+them, and it does not, by the evidence in the file:
+
+- **Cuba** 0.35 (4 of 1,143), last in both variants. Its new lines are nickel
+  and zinc ores and mattes that partners record, and its mirrored exports
+  fell from USD 2.4 billion to 1.4 billion. A missing partner could hide a
+  new line only if that line were sold solely to non-reporters.
+- **Venezuela** 1.76 (21 of 1,196), 37th; 1.59 and 31st net of imports.
+  Total mirrored exports fell from USD 49.8 billion to 15.2 billion, which
+  raises every remaining line's RCA mechanically. Of its 21 new products, 19
+  also grew in absolute value (iron scrap from 7.5 to 369 million, crustaceans
+  from 20 to 198 million); two crossed the line only because the basket
+  shrank. Across the frame, 6 of 1,381 new products fell in value, two of
+  them Venezuela's, so the effect is under noise everywhere.
+
+**Verdict on trap 2: scored, no gate.** Both countries are read as the
+file reads them; the registry note says their values rest on partner
+reports.
+
+### Verdict
+
+**Passes. Wire recommendation 1** on gross exports, tier `academic_survey`,
+2024, all 53 countries. The owner made D141's alternative (no Adaptability
+score below three observed rows) the fallback for a failed preflight, so it
+is not adopted here; with the new row no country is under three observed
+Adaptability rows, so it would change nothing today.

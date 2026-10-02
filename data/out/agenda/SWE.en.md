@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | 90.3 | 0.5 (usable) | no trend |
 | Learning | 79.1 | 0.55 (usable) | no trend |
 | Experimentation | 28.3 | 0.33 (thin) | -8.2 over 10 years using 3 indicators |
-| Adaptability | 77.7 | 0.57 (usable) | no trend |
+| Adaptability | 66.9 | 0.62 (usable) | no trend |
 | Building | 39.9 | 0.57 (usable) | -1.7 over 10 years using 3 indicators |
 | Shared Purpose | 81.6 | 0.51 (usable) | +0.5 over 10 years using 2 indicators, with 1 at the frame edge |
 
@@ -60,8 +60,8 @@ These dimensions score at least 50 with usable evidence.
 - Anticipation: 90, confidence usable
 - Shared Purpose: 81.6, confidence usable
 - Learning: 79.1, confidence usable
-- Adaptability: 77.7, confidence usable
 - Agency: 70.7, confidence usable
+- Adaptability: 66.9, confidence usable
 
 ## What Sweden has to work with
 
@@ -81,6 +81,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Labour force participation | 83.9 % aged 15+ | 2025 | 3 of 53 |
 | Adaptability | Fixed broadband subscriptions | 40.6 per 100 people | 2024 | 11 of 53 |
 | Adaptability | Electricity transmission losses | 5.5 % of output | 2024 | 14 of 53 |
+| Adaptability | Informal employment | 3.2 % of employment | 2025 | 4 of 43 |
 | Building | Output per worker | 128,980.3 constant 2021 PPP $ | 2025 | 6 of 51 |
 
 ## Missing data

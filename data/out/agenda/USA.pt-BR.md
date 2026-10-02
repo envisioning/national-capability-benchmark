@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | 69,3 | 0,5 (utilizável) | sem base de tendência |
 | Aprendizagem | 60,7 | 0,55 (utilizável) | sem base de tendência |
 | Experimentação | 48,1 | 0,53 (utilizável) | +0,8 em 10 anos, sobre 3 indicadores |
-| Adaptação | 88,4 | 0,57 (utilizável) | sem base de tendência |
+| Adaptação | 71,6 | 0,62 (utilizável) | sem base de tendência |
 | Construção | 58,2 | 0,53 (utilizável) | +0,5 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 55,3 | 0,52 (utilizável) | -1,1 em 10 anos, sobre 2 indicadores |
 
@@ -55,8 +55,8 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 88,4, solidez utilizável
 - Antecipação: 72,7, solidez utilizável
+- Adaptação: 71,6, solidez utilizável
 - Confiança: 69,3, solidez utilizável
 - Aprendizagem: 60,7, solidez utilizável
 - Construção: 58,2, solidez utilizável

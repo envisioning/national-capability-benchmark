@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | 90,7 | 0,5 (utilizável) | sem base de tendência |
 | Aprendizagem | 76,8 | 0,55 (utilizável) | sem base de tendência |
 | Experimentação | 37,9 | 0,33 (fraca) | -2,1 em 10 anos, sobre 3 indicadores |
-| Adaptação | 72,7 | 0,57 (utilizável) | sem base de tendência |
+| Adaptação | 61,9 | 0,62 (utilizável) | sem base de tendência |
 | Construção | 37,8 | 0,57 (utilizável) | -1,1 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 73,6 | 0,51 (utilizável) | +7,6 em 10 anos, sobre 2 indicadores |
 
@@ -60,8 +60,8 @@ Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 - Antecipação: 87,5, solidez utilizável
 - Aprendizagem: 76,8, solidez utilizável
 - Propósito compartilhado: 73,6, solidez utilizável
-- Adaptação: 72,7, solidez utilizável
 - Agência: 70,6, solidez utilizável
+- Adaptação: 61,9, solidez utilizável
 
 ## O que a Finlândia tem para trabalhar
 
@@ -81,6 +81,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Adaptação | Participação na força de trabalho | 79,4 % das pessoas com 15 anos ou mais | 2025 | 12º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 36,5 por 100 pessoas | 2024 | 16º de 53 |
 | Adaptação | Perdas na transmissão de eletricidade | 3,7 % da produção | 2024 | 4º de 53 |
+| Adaptação | Emprego informal | 1,5 % do emprego | 2025 | 2º de 43 |
 | Construção | Produto por trabalhador | 120.400 US$ PPC constantes de 2021 | 2025 | 9º de 51 |
 
 ## Agenda de medição

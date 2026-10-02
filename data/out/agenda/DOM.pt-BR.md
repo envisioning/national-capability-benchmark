@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | 71,7 | 0,3 (fraca) | sem base de tendência |
 | Aprendizagem | 34,5 | 0,55 (utilizável) | sem base de tendência |
 | Experimentação | 5,4 | 0,33 (fraca) | +0,1 em 10 anos, sobre 3 indicadores |
-| Adaptação | 81,6 | 0,57 (utilizável) | sem base de tendência |
+| Adaptação | 72,6 | 0,62 (utilizável) | sem base de tendência |
 | Construção | 30,7 | 0,57 (utilizável) | +1,4 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 53,1 | 0,38 (fraca) | +14,8 em 10 anos, sobre 2 indicadores |
 
@@ -97,7 +97,7 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 81,6, solidez utilizável
+- Adaptação: 72,6, solidez utilizável
 
 ## O que a República Dominicana tem para trabalhar
 
@@ -116,6 +116,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Adaptação | Participação na força de trabalho | 69,7 % das pessoas com 15 anos ou mais | 2025 | 36º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 11,2 por 100 pessoas | 2024 | 40º de 53 |
 | Adaptação | Perdas na transmissão de eletricidade | 12,8 % da produção | 2023 | 39º de 53 |
+| Adaptação | Emprego informal | 53,5 % do emprego | 2025 | 22º de 43 |
 | Construção | Produto por trabalhador | 54.042,5 US$ PPC constantes de 2021 | 2025 | 28º de 51 |
 
 ## Agenda de medição

@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | 88,6 | 0,3 (fraca) | sem base de tendência |
 | Aprendizagem | 79,8 | 0,55 (utilizável) | sem base de tendência |
 | Experimentação | 52,9 | 0,33 (fraca) | +20,5 em 10 anos, sobre 3 indicadores |
-| Adaptação | 80 | 0,57 (utilizável) | sem base de tendência |
+| Adaptação | 68,4 | 0,62 (utilizável) | sem base de tendência |
 | Construção | 48,1 | 0,57 (utilizável) | +0,1 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 87,4 | 0,33 (fraca) | +4,2 em 10 anos, sobre 2 indicadores |
 
@@ -79,9 +79,9 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 80, solidez utilizável
 - Aprendizagem: 79,8, solidez utilizável
 - Antecipação: 74, solidez utilizável
+- Adaptação: 68,4, solidez utilizável
 
 ## O que o Reino Unido tem para trabalhar
 
@@ -101,6 +101,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Adaptação | Participação na força de trabalho | 76,7 % das pessoas com 15 anos ou mais | 2025 | 19º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 42,2 por 100 pessoas | 2024 | 9º de 53 |
 | Adaptação | Perdas na transmissão de eletricidade | 9,9 % da produção | 2024 | 32º de 53 |
+| Adaptação | Emprego informal | 19,8 % do emprego | 2018 | 13º de 43 |
 | Construção | Produto por trabalhador | 111.234,5 US$ PPC constantes de 2021 | 2025 | 12º de 51 |
 
 ## Agenda de medição

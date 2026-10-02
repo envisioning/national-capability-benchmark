@@ -14,7 +14,7 @@ La comparación incluye 53 países. Cada dimensión recibe una puntuación de 0 
 | Confianza | 58.7 | 0.5 (utilizable) | sin base de tendencia |
 | Aprendizaje | 49.9 | 0.55 (utilizable) | sin base de tendencia |
 | Experimentación | 34.7 | 0.53 (utilizable) | +4.5 en 10 años, sobre 3 indicadores |
-| Adaptación | 64.1 | 0.57 (utilizable) | sin base de tendencia |
+| Adaptación | 50.3 | 0.62 (utilizable) | sin base de tendencia |
 | Ejecución | 32.3 | 0.57 (utilizable) | -1 en 10 años, sobre 3 indicadores |
 | Propósito compartido | 47.3 | 0.52 (utilizable) | +5.5 en 10 años, sobre 2 indicadores |
 
@@ -78,9 +78,9 @@ La solidez de la evidencia está por debajo de la franja utilizable, así que la
 Estas dimensiones tienen una puntuación de al menos 50, con evidencia utilizable.
 
 - Iniciativa: 68.4, solidez utilizable
-- Adaptación: 64.1, solidez utilizable
 - Confianza: 58.7, solidez utilizable
 - Anticipación: 55.5, solidez utilizable
+- Adaptación: 50.3, solidez utilizable
 
 ## ¿Con qué cuenta Chile?
 
@@ -100,6 +100,7 @@ Las condiciones describen lo que un país tiene para trabajar: infraestructura, 
 | Adaptación | Participación en la fuerza laboral | 70.9 % de las personas de 15 años o más | 2025 | 31.º de 53 |
 | Adaptación | Suscripciones de banda ancha fija | 23.7 por cada 100 personas | 2024 | 25.º de 53 |
 | Adaptación | Pérdidas en la transmisión de electricidad | 5.9 % de la producción | 2024 | 15.º de 53 |
+| Adaptación | Empleo informal | 26.4 % del empleo | 2025 | 14.º de 43 |
 | Ejecución | Producto por trabajador | 65,210.8 US$ PPA constantes de 2021 | 2025 | 25.º de 51 |
 
 ## ¿Qué falta medir?

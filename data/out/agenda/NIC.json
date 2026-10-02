@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T15:28:40.422Z",
+  "generatedAt": "2026-10-02T15:44:11.142Z",
   "iso3": "NIC",
   "country": "Nicaragua",
   "dimensions": [
@@ -1652,15 +1652,16 @@
     },
     {
       "dimension": "adaptability",
-      "kind": "measure",
-      "score": 81.9,
-      "confidence": 0.399,
-      "band": "thin",
+      "kind": "hold",
+      "score": 66.2,
+      "confidence": 0.478,
+      "band": "usable",
       "trend": null,
       "scoredOn": [
         "unemployment_rate",
         "long_term_unemployment_share",
-        "export_diversification"
+        "export_diversification",
+        "new_export_products_rate"
       ],
       "gaps": [
         "disaster_preparedness",
@@ -1669,22 +1670,22 @@
       "retired": [],
       "exemplars": [
         {
+          "iso3": "POL",
+          "country": "Poland",
+          "score": 89.2,
+          "confidence": 0.617
+        },
+        {
+          "iso3": "VNM",
+          "country": "Vietnam",
+          "score": 88.2,
+          "confidence": 0.617
+        },
+        {
           "iso3": "THA",
           "country": "Thailand",
-          "score": 97.6,
-          "confidence": 0.57
-        },
-        {
-          "iso3": "ISR",
-          "country": "Israel",
-          "score": 90.6,
-          "confidence": 0.57
-        },
-        {
-          "iso3": "NLD",
-          "country": "Netherlands",
-          "score": 90.3,
-          "confidence": 0.57
+          "score": 88,
+          "confidence": 0.617
         }
       ],
       "evidenceElsewhere": [
@@ -2673,6 +2674,14 @@
           "year": 2023,
           "rank": 50,
           "n": 53
+        },
+        {
+          "id": "informal_employment_share",
+          "value": 81.8,
+          "unit": "% of employment",
+          "year": 2012,
+          "rank": 36,
+          "n": 43
         }
       ]
     },

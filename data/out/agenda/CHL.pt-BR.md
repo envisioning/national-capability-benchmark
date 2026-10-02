@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | 58,7 | 0,5 (utilizável) | sem base de tendência |
 | Aprendizagem | 49,9 | 0,55 (utilizável) | sem base de tendência |
 | Experimentação | 34,7 | 0,53 (utilizável) | +4,5 em 10 anos, sobre 3 indicadores |
-| Adaptação | 64,1 | 0,57 (utilizável) | sem base de tendência |
+| Adaptação | 50,3 | 0,62 (utilizável) | sem base de tendência |
 | Construção | 32,3 | 0,57 (utilizável) | -1 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 47,3 | 0,52 (utilizável) | +5,5 em 10 anos, sobre 2 indicadores |
 
@@ -78,9 +78,9 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
 - Agência: 68,4, solidez utilizável
-- Adaptação: 64,1, solidez utilizável
 - Confiança: 58,7, solidez utilizável
 - Antecipação: 55,5, solidez utilizável
+- Adaptação: 50,3, solidez utilizável
 
 ## O que o Chile tem para trabalhar
 
@@ -100,6 +100,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Adaptação | Participação na força de trabalho | 70,9 % das pessoas com 15 anos ou mais | 2025 | 31º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 23,7 por 100 pessoas | 2024 | 25º de 53 |
 | Adaptação | Perdas na transmissão de eletricidade | 5,9 % da produção | 2024 | 15º de 53 |
+| Adaptação | Emprego informal | 26,4 % do emprego | 2025 | 14º de 43 |
 | Construção | Produto por trabalhador | 65.210,8 US$ PPC constantes de 2021 | 2025 | 25º de 51 |
 
 ## Agenda de medição

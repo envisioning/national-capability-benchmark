@@ -1,6 +1,8 @@
 import { INDICATORS, WB_PUBLISHER } from './indicators.js'
 import type { IndicatorDef, SourceTier } from './schema.js'
 import {
+  ATLAS_HOME_URL,
+  ATLAS_PUBLISHER,
   GITHUB_IG_HOME_URL,
   GITHUB_IG_PUBLISHER,
   JOINT_EVS_WVS_PUBLISHER,
@@ -110,6 +112,7 @@ export const PUBLISHER_HOME: Record<string, string> = {
   [VDEM_PUBLISHER]: 'https://www.v-dem.net/data/the-v-dem-dataset/',
   [UNCTAD_PUBLISHER]: 'https://unctadstat.unctad.org',
   [GITHUB_IG_PUBLISHER]: GITHUB_IG_HOME_URL,
+  [ATLAS_PUBLISHER]: ATLAS_HOME_URL,
 }
 
 /** The official IBGE table used for the Brazil state-level Gini series. */

@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | 46,5 | 0,43 (fraca) | sem base de tendência |
 | Aprendizagem | 41,5 | 0,42 (fraca) | sem base de tendência |
 | Experimentação | 19,2 | 0,53 (utilizável) | +1,3 em 10 anos, sobre 3 indicadores |
-| Adaptação | 66,9 | 0,57 (utilizável) | sem base de tendência |
+| Adaptação | 52,8 | 0,62 (utilizável) | sem base de tendência |
 | Construção | 27,8 | 0,57 (utilizável) | -3,4 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 33,7 | 0,52 (utilizável) | -3,3 em 10 anos, sobre 2 indicadores |
 
@@ -92,7 +92,7 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 66,9, solidez utilizável
+- Adaptação: 52,8, solidez utilizável
 - Agência: 51,4, solidez utilizável
 
 ## O que a Argentina tem para trabalhar
@@ -113,6 +113,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Adaptação | Participação na força de trabalho | 70,7 % das pessoas com 15 anos ou mais | 2025 | 33º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 26,1 por 100 pessoas | 2024 | 22º de 53 |
 | Adaptação | Perdas na transmissão de eletricidade | 21,8 % da produção | 2024 | 51º de 53 |
+| Adaptação | Emprego informal | 52,8 % do emprego | 2025 | 21º de 43 |
 | Construção | Produto por trabalhador | 61.326,3 US$ PPC constantes de 2021 | 2025 | 27º de 51 |
 
 ## Agenda de medição

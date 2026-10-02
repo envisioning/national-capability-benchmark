@@ -14,7 +14,7 @@ La comparación incluye 53 países. Cada dimensión recibe una puntuación de 0 
 | Confianza | 46.5 | 0.43 (débil) | sin base de tendencia |
 | Aprendizaje | 41.5 | 0.42 (débil) | sin base de tendencia |
 | Experimentación | 19.2 | 0.53 (utilizable) | +1.3 en 10 años, sobre 3 indicadores |
-| Adaptación | 66.9 | 0.57 (utilizable) | sin base de tendencia |
+| Adaptación | 52.8 | 0.62 (utilizable) | sin base de tendencia |
 | Ejecución | 27.8 | 0.57 (utilizable) | -3.4 en 10 años, sobre 3 indicadores |
 | Propósito compartido | 33.7 | 0.52 (utilizable) | -3.3 en 10 años, sobre 2 indicadores |
 
@@ -92,7 +92,7 @@ La solidez de la evidencia está por debajo de la franja utilizable, así que la
 
 Estas dimensiones tienen una puntuación de al menos 50, con evidencia utilizable.
 
-- Adaptación: 66.9, solidez utilizable
+- Adaptación: 52.8, solidez utilizable
 - Iniciativa: 51.4, solidez utilizable
 
 ## ¿Con qué cuenta Argentina?
@@ -113,6 +113,7 @@ Las condiciones describen lo que un país tiene para trabajar: infraestructura, 
 | Adaptación | Participación en la fuerza laboral | 70.7 % de las personas de 15 años o más | 2025 | 33.º de 53 |
 | Adaptación | Suscripciones de banda ancha fija | 26.1 por cada 100 personas | 2024 | 22.º de 53 |
 | Adaptación | Pérdidas en la transmisión de electricidad | 21.8 % de la producción | 2024 | 51.º de 53 |
+| Adaptación | Empleo informal | 52.8 % del empleo | 2025 | 21.º de 43 |
 | Ejecución | Producto por trabajador | 61,326.3 US$ PPA constantes de 2021 | 2025 | 27.º de 51 |
 
 ## ¿Qué falta medir?

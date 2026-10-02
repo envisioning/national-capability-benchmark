@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | 40.1 | 0.5 (usable) | no trend |
 | Learning | 19.7 | 0.55 (usable) | no trend |
 | Experimentation | 9.9 | 0.53 (usable) | +2 over 10 years using 3 indicators |
-| Adaptability | 85.4 | 0.38 (thin) | no trend |
+| Adaptability | 83.3 | 0.46 (usable) | no trend |
 | Building | 47.1 | 0.57 (usable) | +5.8 over 10 years using 3 indicators |
 | Shared Purpose | 66.4 | 0.46 (usable) | -2.2 over 10 years using 2 indicators |
 
@@ -83,13 +83,6 @@ How capable is the country of turning plans and knowledge into functioning syste
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Adaptability: confidence 0.38, thin
-
-How effectively can the system respond when circumstances change?
-
-- Uses 2 observed indicators.
-- Missing indicators: Disaster preparedness and recovery, Institutional responsiveness.
-
 ### Coordination: confidence 0.41, thin
 
 How effectively can independent actors organize around shared objectives?
@@ -102,6 +95,7 @@ How effectively can independent actors organize around shared objectives?
 
 These dimensions score at least 50 with usable evidence.
 
+- Adaptability: 83.3, confidence usable
 - Shared Purpose: 66.4, confidence usable
 
 ## What India has to work with
@@ -122,6 +116,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Labour force participation | 59.1 % aged 15+ | 2025 | 51 of 53 |
 | Adaptability | Fixed broadband subscriptions | 3.2 per 100 people | 2024 | 47 of 53 |
 | Adaptability | Electricity transmission losses | 14.2 % of output | 2023 | 41 of 53 |
+| Adaptability | Informal employment | 87.2 % of employment | 2025 | 40 of 43 |
 | Building | Output per worker | 24,842.1 constant 2021 PPP $ | 2025 | 42 of 51 |
 
 ## Missing data

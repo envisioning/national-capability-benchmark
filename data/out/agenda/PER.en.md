@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | 44.6 | 0.49 (usable) | no trend |
 | Learning | 49.2 | 0.54 (usable) | no trend |
 | Experimentation | 16.1 | 0.53 (usable) | +1.2 over 10 years using 3 indicators |
-| Adaptability | 70.4 | 0.38 (thin) | no trend |
+| Adaptability | 50.7 | 0.46 (usable) | no trend |
 | Building | 30.2 | 0.57 (usable) | -0.9 over 10 years using 3 indicators |
 | Shared Purpose | 39.8 | 0.47 (usable) | +10.1 over 10 years using 2 indicators |
 
@@ -84,13 +84,6 @@ How effectively does the country acquire, distribute, and update knowledge?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Adaptability: confidence 0.38, thin
-
-How effectively can the system respond when circumstances change?
-
-- Uses 2 observed indicators.
-- Missing indicators: Disaster preparedness and recovery, Institutional responsiveness.
-
 ### Coordination: confidence 0.39, thin
 
 How effectively can independent actors organize around shared objectives?
@@ -104,6 +97,7 @@ How effectively can independent actors organize around shared objectives?
 These dimensions score at least 50 with usable evidence.
 
 - Agency: 55.4, confidence usable
+- Adaptability: 50.7, confidence usable
 
 ## What Peru has to work with
 
@@ -122,6 +116,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Labour force participation | 77 % aged 15+ | 2025 | 17 of 53 |
 | Adaptability | Fixed broadband subscriptions | 11.7 per 100 people | 2024 | 39 of 53 |
 | Adaptability | Electricity transmission losses | 11.3 % of output | 2023 | 36 of 53 |
+| Adaptability | Informal employment | 70.5 % of employment | 2025 | 32 of 43 |
 | Building | Output per worker | 30,451 constant 2021 PPP $ | 2025 | 37 of 51 |
 
 ## Missing data

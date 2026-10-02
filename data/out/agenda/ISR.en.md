@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | 43.4 | 0.3 (thin) | no trend |
 | Learning | 49.4 | 0.55 (usable) | no trend |
 | Experimentation | 28.3 | 0.33 (thin) | -8.8 over 10 years using 3 indicators |
-| Adaptability | 90.6 | 0.57 (usable) | no trend |
+| Adaptability | 80.4 | 0.62 (usable) | no trend |
 | Building | 38.9 | 0.57 (usable) | +7.5 over 10 years using 3 indicators |
 | Shared Purpose | 70.4 | 0.35 (thin) | +1.5 over 10 years using 2 indicators |
 
@@ -88,7 +88,7 @@ How able are individuals and organizations to turn an intention into action?
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 90.6, confidence usable
+- Adaptability: 80.4, confidence usable
 - Anticipation: 75, confidence usable
 
 ## What Israel has to work with

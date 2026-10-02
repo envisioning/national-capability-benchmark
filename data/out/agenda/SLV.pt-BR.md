@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | 51,3 | 0,29 (fraca) | sem base de tendência |
 | Aprendizagem | 27,3 | 0,54 (utilizável) | sem base de tendência |
 | Experimentação | 6,7 | 0,33 (fraca) | +0,9 em 10 anos, sobre 3 indicadores |
-| Adaptação | 86,5 | 0,38 (fraca) | sem base de tendência |
+| Adaptação | 62,6 | 0,46 (utilizável) | sem base de tendência |
 | Construção | 30,3 | 0,57 (utilizável) | -3,4 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 65 | 0,36 (fraca) | +8,7 em 10 anos, sobre 2 indicadores |
 
@@ -78,13 +78,6 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e responsabilização, Sentimento de pertencimento nacional.
 
-### Adaptação: solidez 0,38, fraca
-
-Com que eficácia o sistema responde quando as circunstâncias mudam?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Preparação e recuperação de desastres, Capacidade de resposta institucional.
-
 ### Coordenação: solidez 0,39, fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
@@ -99,6 +92,12 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Habilidades digitais de adultos.
+
+## Dimensões para manter
+
+Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
+
+- Adaptação: 62,6, solidez utilizável
 
 ## O que El Salvador tem para trabalhar
 
@@ -118,6 +117,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Adaptação | Participação na força de trabalho | 66,2 % das pessoas com 15 anos ou mais | 2025 | 42º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 12,5 por 100 pessoas | 2024 | 37º de 53 |
 | Adaptação | Perdas na transmissão de eletricidade | 9,8 % da produção | 2023 | 31º de 53 |
+| Adaptação | Emprego informal | 63,6 % do emprego | 2025 | 28º de 43 |
 | Construção | Produto por trabalhador | 26.535 US$ PPC constantes de 2021 | 2025 | 41º de 51 |
 
 ## Agenda de medição

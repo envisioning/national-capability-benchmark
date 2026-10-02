@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | 51.3 | 0.29 (thin) | no trend |
 | Learning | 27.3 | 0.54 (usable) | no trend |
 | Experimentation | 6.7 | 0.33 (thin) | +0.9 over 10 years using 3 indicators |
-| Adaptability | 86.5 | 0.38 (thin) | no trend |
+| Adaptability | 62.6 | 0.46 (usable) | no trend |
 | Building | 30.3 | 0.57 (usable) | -3.4 over 10 years using 3 indicators |
 | Shared Purpose | 65 | 0.36 (thin) | +8.7 over 10 years using 2 indicators |
 
@@ -78,13 +78,6 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability, Sense of national belonging.
 
-### Adaptability: confidence 0.38, thin
-
-How effectively can the system respond when circumstances change?
-
-- Uses 2 observed indicators.
-- Missing indicators: Disaster preparedness and recovery, Institutional responsiveness.
-
 ### Coordination: confidence 0.39, thin
 
 How effectively can independent actors organize around shared objectives?
@@ -99,6 +92,12 @@ How able are individuals and organizations to turn an intention into action?
 
 - Uses 3 observed indicators.
 - Missing indicators: Adult digital skills.
+
+## What to keep watching
+
+These dimensions score at least 50 with usable evidence.
+
+- Adaptability: 62.6, confidence usable
 
 ## What El Salvador has to work with
 
@@ -118,6 +117,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Labour force participation | 66.2 % aged 15+ | 2025 | 42 of 53 |
 | Adaptability | Fixed broadband subscriptions | 12.5 per 100 people | 2024 | 37 of 53 |
 | Adaptability | Electricity transmission losses | 9.8 % of output | 2023 | 31 of 53 |
+| Adaptability | Informal employment | 63.6 % of employment | 2025 | 28 of 43 |
 | Building | Output per worker | 26,535 constant 2021 PPP $ | 2025 | 41 of 51 |
 
 ## Missing data

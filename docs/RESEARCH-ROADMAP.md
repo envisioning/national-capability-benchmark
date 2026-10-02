@@ -38,11 +38,11 @@ each dimension's correlation with log GDP per capita. Above 0.70 is a finding
 against the claim, to be read and published. It is not a target, and no row is
 added or dropped to move it.
 
-**Guardrail.** Confidence must not come to track wealth. At 8.1.0 the mean
-confidence across dimensions correlates with log GDP per capita at r = 0.29
-across 51 countries (0.286, against 0.289 at 8.0.0: the GitHub row in
-Experimentation, D145, adds evidence across incomes and holds two countries
-out; 0.28 at 7.8.0, before the three Tier B rows became conditions and two
+**Guardrail.** Confidence must not come to track wealth. At 8.2.0 the mean
+confidence across dimensions correlates with log GDP per capita at r = 0.27
+across 51 countries (0.274, against 0.286 at 8.1.0: the new export products
+row in Adaptability, D149, covers all 53 and gives the nine countries the
+ILOSTAT gate holds a third row; 0.289 at 8.0.0; 0.28 at 7.8.0, before the three Tier B rows became conditions and two
 gaps were retired). The bought conditions that left the scores (D122) were
 better covered in rich countries, and the ILOSTAT row's plausibility gate still
 holds or ages more middle-income countries than rich ones. Watch it, and read
@@ -51,7 +51,7 @@ raises O1 and breaks this.
 
 ### Where the objectives stand
 
-Dataset 8.1.0 (new public repositories in Experimentation, D145). Recompute from `data/out/diagnostics.json` and
+Dataset 8.2.0 (new export products in Adaptability, D149; informal employment beside it as a condition, D150). Recompute from `data/out/diagnostics.json` and
 `data/out/index.json` after any rescore; never carry these figures forward by
 hand.
 
@@ -65,7 +65,7 @@ hand.
 | Agency | 0.48 | 3.6 | 0.58 | |
 | Anticipation | 0.45 | 2.0 | 0.87 | tracks income |
 | Building | 0.55 | 3.9 | 0.43 | |
-| Adaptability | 0.52 | 2.8 | 0.46 | nine countries on two rows |
+| Adaptability | 0.58 | 3.8 | 0.43 | 0.46 before the new export products row (D149); nine countries without a long-term share (A16) |
 
 Ten bought conditions left the scores at 7.0.0 and are published beside their
 dimensions (D122): research spending, researchers and secure servers beside
@@ -73,30 +73,31 @@ Anticipation, internet users, account ownership and private credit beside
 Agency, tertiary enrolment and education spending beside Learning, broadband
 beside Adaptability and output per worker beside Building. At 8.0.0 three Tier
 B rows joined them (D141): the vocational share beside Learning, and labour
-force participation and transmission losses beside Adaptability.
+force participation and transmission losses beside Adaptability. At 8.2.0
+informal employment joined Adaptability's conditions (D150).
 
-The one-factor test (D137), dataset 8.1.0: one shared factor carries 0.498 of
+The one-factor test (D137), dataset 8.2.0: one shared factor carries 0.496 of
 the variance of the nine dimension scores over 51 complete cases, against
-0.189 by chance (95th percentile 0.215), and it correlates 0.847 with log GDP
-per capita (n 50), so income accounts for 0.72 of it. The shared factor looks
-like income. It was 0.485 at 8.0.0 and 0.523 at 7.8.0. On the same rule the share was 0.604 at 6.2.0 and 0.498 at 7.0.0
+0.189 by chance (95th percentile 0.215), and it correlates 0.845 with log GDP
+per capita (n 50), so income accounts for 0.71 of it. The shared factor looks
+like income. It was 0.498 at 8.1.0, 0.485 at 8.0.0 and 0.523 at 7.8.0. On the same rule the share was 0.604 at 6.2.0 and 0.498 at 7.0.0
 (both 33 complete cases), when the stocks left the scores. Every release's
 figure is in `data/out/factor-history.json`.
 
-What is left after income (D138), dataset 8.1.0, on the 50 countries with all
-nine residuals: the leftovers still move together (first-factor share 0.287
+What is left after income (D138), dataset 8.2.0, on the 50 countries with all
+nine residuals: the leftovers still move together (first-factor share 0.286
 against chance 0.191, 95th 0.217), loading mostly on Anticipation, Trust,
 Learning, Coordination and Shared purpose. Income peers are no more alike in
-shape than countries picked at random (mean peer distance 1.53 against 1.55,
-5th percentile 1.47), and the shapes line up beyond random dealing (0.278
+shape than countries picked at random (mean peer distance 1.52 against 1.54,
+5th percentile 1.47), and the shapes line up beyond random dealing (0.276
 against a 95th of 0.233), so under the pre-registered rule the weaker claim,
 different shapes at the same income, holds. The margin is narrow and peers
-differ less than random dealing would (1.53 against 1.78), because part of
+differ less than random dealing would (1.52 against 1.78), because part of
 what is left is a level. Residual order between releases is mixed (lowest rank
 r 0.72 on Trust, n 36; none under 0.5), no single country moves its own
-residual by more than 0.37 of the spread around its line (Adaptability), and
-income accounts for 46% of the typical country's distance from the average
-profile (mean 31%). No reading changed at 8.0.0 or 8.1.0. The objective this
+residual by more than 0.35 of the spread around its line (Adaptability), and
+income accounts for 45% of the typical country's distance from the average
+profile (mean 32%). No reading changed at 8.0.0, 8.1.0 or 8.2.0. The objective this
 serves is to widen the country set and deepen Trust and Coordination, the two
 dimensions whose leftovers moved most when indicators changed.
 
@@ -104,8 +105,9 @@ Two dimensions still track income above 0.70. Anticipation stays at 0.87 on
 its two capability rows, articles per head and statistical performance, which
 both track income themselves; that is a finding against the claim. Learning is
 0.78 on the Human Capital Index, firm training and citation impact.
-Adaptability fell to 0.46 when its two Tier B rows left, and rests on two rows
-in nine countries (D141). Agency and Learning missed O1 at 7.0.0: the evidence on them was thinner
+Adaptability fell to 0.46 when its two Tier B rows left (D141) and is 0.43
+with the new export products row (D149), which also lifted the nine countries
+that rested on two rows to three; they still have no long-term share (A16). Agency and Learning missed O1 at 7.0.0: the evidence on them was thinner
 than the stocks made it look. Agency crosses it on perceived control (D127),
 with the regime and response-style caveats in A15.
 
@@ -117,7 +119,7 @@ passes triage runs to its gate. One that fails triage costs one paragraph.
 
 | # | Work package | Moves | Route | First output |
 | --- | --- | --- | --- | --- |
-| Q1 | Adaptability: wire the researched gaps | O1 and the report: Adaptability | UNCTAD export concentration (#24, D119) and ILOSTAT long-term unemployment with a plausibility gate (#26, D120) | Adapters, decision entries, one minor release |
+| Q1 | Adaptability: wire the researched gaps | O1 and the report: Adaptability | UNCTAD export concentration (#24, D119) and ILOSTAT long-term unemployment with a plausibility gate (#26, D120); for A16, the Growth Lab new export products rate and ILOSTAT informal employment | Done: both wired (D119, D120); new export products scored, 53 / 53 (D149); informal employment a condition, 43 / 53 (D150) |
 | Q2 | Adaptability: the remaining gaps | Adaptability | Desk triage for `disaster_preparedness` and `institutional_responsiveness`. `broadband_subscriptions` is a condition since D122 | One triage paragraph per gap |
 | Q3 | Construct audit of stock rows | Reported O2: Anticipation, Agency, Learning | Done for Tier A at 7.0.0 (D122) and for three Tier B rows at 8.0.0 (D141): the vocational share, labour force participation and transmission losses are conditions. Open: business start days and procedures (Agency) and income inequality (Shared purpose), each only once its dimension has a capability row to replace it, and replacements for the two borderline rows, `sci_articles_per_million` and `human_capital_index` | One decision per remaining Tier B row; a learning-outcome series |
 | Q4 | Reopen exclusions that rested on income alone | O1: Trust | `bribery_incidence` (check since D60) | Done: scored in Trust (D123), 50 / 53 |

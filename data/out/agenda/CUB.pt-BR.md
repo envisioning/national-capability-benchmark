@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | sem nota | 0,07 (muito fraca) | sem base de tendência |
 | Aprendizagem | sem nota | 0,16 (muito fraca) | sem base de tendência |
 | Experimentação | 1,1 | 0,24 (muito fraca) | -0,1 em 10 anos, sobre 3 indicadores |
-| Adaptação | 82,9 | 0,4 (fraca) | sem base de tendência |
+| Adaptação | 62,2 | 0,48 (utilizável) | sem base de tendência |
 | Construção | 21,8 | 0,29 (fraca) | -27,1 em 10 anos, sobre 2 indicadores |
 | Propósito compartilhado | sem nota | 0 (muito fraca) | sem base de tendência |
 
@@ -83,12 +83,11 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística.
 
-### Adaptação: solidez 0,4, fraca
+## Dimensões para manter
 
-Com que eficácia o sistema responde quando as circunstâncias mudam?
+Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Preparação e recuperação de desastres, Capacidade de resposta institucional.
+- Adaptação: 62,2, solidez utilizável
 
 ## O que Cuba tem para trabalhar
 

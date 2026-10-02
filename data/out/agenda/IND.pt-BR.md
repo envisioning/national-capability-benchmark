@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | 40,1 | 0,5 (utilizável) | sem base de tendência |
 | Aprendizagem | 19,7 | 0,55 (utilizável) | sem base de tendência |
 | Experimentação | 9,9 | 0,53 (utilizável) | +2 em 10 anos, sobre 3 indicadores |
-| Adaptação | 85,4 | 0,38 (fraca) | sem base de tendência |
+| Adaptação | 83,3 | 0,46 (utilizável) | sem base de tendência |
 | Construção | 47,1 | 0,57 (utilizável) | +5,8 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 66,4 | 0,46 (utilizável) | -2,2 em 10 anos, sobre 2 indicadores |
 
@@ -83,13 +83,6 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 
 A solidez da evidência está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Adaptação: solidez 0,38, fraca
-
-Com que eficácia o sistema responde quando as circunstâncias mudam?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Preparação e recuperação de desastres, Capacidade de resposta institucional.
-
 ### Coordenação: solidez 0,41, fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
@@ -102,6 +95,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
+- Adaptação: 83,3, solidez utilizável
 - Propósito compartilhado: 66,4, solidez utilizável
 
 ## O que a Índia tem para trabalhar
@@ -122,6 +116,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Adaptação | Participação na força de trabalho | 59,1 % das pessoas com 15 anos ou mais | 2025 | 51º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 3,2 por 100 pessoas | 2024 | 47º de 53 |
 | Adaptação | Perdas na transmissão de eletricidade | 14,2 % da produção | 2023 | 41º de 53 |
+| Adaptação | Emprego informal | 87,2 % do emprego | 2025 | 40º de 43 |
 | Construção | Produto por trabalhador | 24.842,1 US$ PPC constantes de 2021 | 2025 | 42º de 51 |
 
 ## Agenda de medição

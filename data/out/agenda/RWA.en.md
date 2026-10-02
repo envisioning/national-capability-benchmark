@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | 64 | 0.29 (thin) | no trend |
 | Learning | 32.6 | 0.54 (usable) | no trend |
 | Experimentation | 2.9 | 0.33 (thin) | +0.2 over 10 years using 3 indicators |
-| Adaptability | 58.1 | 0.57 (usable) | no trend |
+| Adaptability | 51.4 | 0.62 (usable) | no trend |
 | Building | 31.3 | 0.54 (usable) | -3.3 over 10 years using 3 indicators, with 1 at the frame edge |
 | Shared Purpose | 49.3 | 0.35 (thin) | +4.6 over 10 years using 2 indicators |
 
@@ -97,7 +97,7 @@ How effectively can independent actors organize around shared objectives?
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 58.1, confidence usable
+- Adaptability: 51.4, confidence usable
 
 ## What Rwanda has to work with
 
@@ -117,6 +117,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Labour force participation | 66.1 % aged 15+ | 2025 | 43 of 53 |
 | Adaptability | Fixed broadband subscriptions | 0.6 per 100 people | 2024 | 50 of 53 |
 | Adaptability | Electricity transmission losses | 18.3 % of output | 2023 | 45 of 53 |
+| Adaptability | Informal employment | 90.1 % of employment | 2025 | 41 of 43 |
 | Building | Output per worker | 10,010.4 constant 2021 PPP $ | 2025 | 49 of 51 |
 
 ## Missing data

@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | 44,6 | 0,49 (utilizável) | sem base de tendência |
 | Aprendizagem | 49,2 | 0,54 (utilizável) | sem base de tendência |
 | Experimentação | 16,1 | 0,53 (utilizável) | +1,2 em 10 anos, sobre 3 indicadores |
-| Adaptação | 70,4 | 0,38 (fraca) | sem base de tendência |
+| Adaptação | 50,7 | 0,46 (utilizável) | sem base de tendência |
 | Construção | 30,2 | 0,57 (utilizável) | -0,9 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 39,8 | 0,47 (utilizável) | +10,1 em 10 anos, sobre 2 indicadores |
 
@@ -84,13 +84,6 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 A solidez da evidência está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Adaptação: solidez 0,38, fraca
-
-Com que eficácia o sistema responde quando as circunstâncias mudam?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Preparação e recuperação de desastres, Capacidade de resposta institucional.
-
 ### Coordenação: solidez 0,39, fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
@@ -104,6 +97,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
 - Agência: 55,4, solidez utilizável
+- Adaptação: 50,7, solidez utilizável
 
 ## O que o Peru tem para trabalhar
 
@@ -122,6 +116,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Adaptação | Participação na força de trabalho | 77 % das pessoas com 15 anos ou mais | 2025 | 17º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 11,7 por 100 pessoas | 2024 | 39º de 53 |
 | Adaptação | Perdas na transmissão de eletricidade | 11,3 % da produção | 2023 | 36º de 53 |
+| Adaptação | Emprego informal | 70,5 % do emprego | 2025 | 32º de 43 |
 | Construção | Produto por trabalhador | 30.451 US$ PPC constantes de 2021 | 2025 | 37º de 51 |
 
 ## Agenda de medição

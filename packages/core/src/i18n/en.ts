@@ -323,6 +323,10 @@ export const EN: Lexicon = {
         text: 'Export diversification reads the concentration of the merchandise basket UNCTAD publishes. How fast a country switches products is outside it, so are services, and countries selling a few high-value products read as concentrated.',
         decisions: ['D119'],
       },
+      new_export_products_rate: {
+        text: "New export products counts the merchandise lines a country entered over fifteen years, from Harvard's Growth Lab. Exports are gross, so a re-export hub counts what passes through it, and a country that does not report its trade is read from its partners' records. A window this long moves little from one release to the next.",
+        decisions: ['D149'],
+      },
     },
     /* One template per kind of row fact. Which country has which fact is
      * COUNTRY_ROW_FACTS in the model (D136). */

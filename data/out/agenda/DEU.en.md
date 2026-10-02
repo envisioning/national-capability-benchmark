@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | 86 | 0.3 (thin) | no trend |
 | Learning | 65.6 | 0.55 (usable) | no trend |
 | Experimentation | 68.2 | 0.33 (thin) | +3.3 over 10 years using 3 indicators |
-| Adaptability | 83 | 0.57 (usable) | no trend |
+| Adaptability | 72.4 | 0.62 (usable) | no trend |
 | Building | 68.9 | 0.57 (usable) | -2.8 over 10 years using 3 indicators |
 | Shared Purpose | 55.1 | 0.35 (thin) | -5.9 over 10 years using 2 indicators |
 
@@ -65,8 +65,8 @@ How able are individuals and organizations to turn an intention into action?
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 83, confidence usable
 - Anticipation: 73.5, confidence usable
+- Adaptability: 72.4, confidence usable
 - Building: 68.9, confidence usable
 - Learning: 65.6, confidence usable
 
@@ -88,6 +88,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Labour force participation | 80 % aged 15+ | 2025 | 10 of 53 |
 | Adaptability | Fixed broadband subscriptions | 45.6 per 100 people | 2024 | 5 of 53 |
 | Adaptability | Electricity transmission losses | 5.1 % of output | 2024 | 12 of 53 |
+| Adaptability | Informal employment | 3.9 % of employment | 2022 | 8 of 43 |
 | Building | Output per worker | 125,086.3 constant 2021 PPP $ | 2025 | 8 of 51 |
 
 ## Missing data

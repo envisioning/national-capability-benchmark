@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | 90.7 | 0.5 (usable) | no trend |
 | Learning | 76.8 | 0.55 (usable) | no trend |
 | Experimentation | 37.9 | 0.33 (thin) | -2.1 over 10 years using 3 indicators |
-| Adaptability | 72.7 | 0.57 (usable) | no trend |
+| Adaptability | 61.9 | 0.62 (usable) | no trend |
 | Building | 37.8 | 0.57 (usable) | -1.1 over 10 years using 3 indicators |
 | Shared Purpose | 73.6 | 0.51 (usable) | +7.6 over 10 years using 2 indicators |
 
@@ -60,8 +60,8 @@ These dimensions score at least 50 with usable evidence.
 - Anticipation: 87.5, confidence usable
 - Learning: 76.8, confidence usable
 - Shared Purpose: 73.6, confidence usable
-- Adaptability: 72.7, confidence usable
 - Agency: 70.6, confidence usable
+- Adaptability: 61.9, confidence usable
 
 ## What Finland has to work with
 
@@ -81,6 +81,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Labour force participation | 79.4 % aged 15+ | 2025 | 12 of 53 |
 | Adaptability | Fixed broadband subscriptions | 36.5 per 100 people | 2024 | 16 of 53 |
 | Adaptability | Electricity transmission losses | 3.7 % of output | 2024 | 4 of 53 |
+| Adaptability | Informal employment | 1.5 % of employment | 2025 | 2 of 43 |
 | Building | Output per worker | 120,400 constant 2021 PPP $ | 2025 | 9 of 51 |
 
 ## Missing data

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-02T14:31:40.456Z",
-  "version": "8.1.0",
+  "generatedAt": "2026-10-02T15:43:55.606Z",
+  "version": "8.2.0",
   "country": {
     "country": "Israel",
     "iso3": "ISR",
@@ -2599,19 +2599,19 @@
         "conditions": []
       },
       "adaptability": {
-        "score": 90.6,
-        "observedIndicators": 3,
+        "score": 80.4,
+        "observedIndicators": 4,
         "belowCoverageFloor": false,
-        "confidence": 0.57,
+        "confidence": 0.617,
         "confidenceParts": {
-          "coverage": 0.6,
+          "coverage": 0.667,
           "recency": 1,
-          "sourceQuality": 0.95
+          "sourceQuality": 0.925
         },
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 90.6,
+        "blendedScore": 80.4,
         "blendedFrom": "indicators",
         "momentum": [],
         "indicators": [
@@ -2886,6 +2886,28 @@
             "status": "observed"
           },
           {
+            "indicatorId": "new_export_products_rate",
+            "name": "New export products",
+            "measurementClass": "O",
+            "raw": 4.33,
+            "transformed": 4.33,
+            "normalized": 50,
+            "year": 2024,
+            "source": "Harvard Growth Lab (hs92_country_product_year_4.csv (doi:10.7910/DVN/T4CHWJ))",
+            "sourceTier": "academic_survey",
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [
+              {
+                "year": 2024,
+                "raw": 4.33,
+                "normalized": 50,
+                "tier": "academic_survey"
+              }
+            ],
+            "status": "observed"
+          },
+          {
             "indicatorId": "disaster_preparedness",
             "name": "Disaster preparedness and recovery",
             "measurementClass": "C",
@@ -2959,6 +2981,20 @@
             "rank": 6,
             "n": 53,
             "note": "A condition, not scored: the state of the grid, and whether its operator can bill what it delivers, is infrastructure a country has to change with, not a record of it changing (D141). Read it beside broadband, the other installed network beside Adaptability."
+          },
+          {
+            "indicatorId": "informal_employment_share",
+            "name": "Informal employment",
+            "definition": "Informal employment as a share of total employment, SDG indicator 8.3.1.",
+            "unit": "% of employment",
+            "direction": "lower_better",
+            "value": null,
+            "year": null,
+            "source": "ILOSTAT (DF_SDG_0831_SEX_ECO_RT)",
+            "sourceTier": null,
+            "rank": null,
+            "n": 43,
+            "note": "A condition, not scored: how much work carries no contract, registration or social protection describes the labor market a country reallocates through, not it reallocating (D150). Read it beside the unemployment rate: where most work is informal, a person who loses a job takes any work within weeks, so a low rate is not a fluid market. Its direction for Adaptability cannot be defended, since informal work is both the slack that absorbs a shock and the precarity that keeps a worker from moving up, so the rank orders values and is not a verdict. Comparability is weak: the European values come from an income survey (EU-SILC) with a proxy definition, and the rest from labor force or household surveys processed by the ILO. ILOSTAT has no value for the United States, Canada, Australia, Japan, Singapore, Israel, Malaysia, China, the Philippines or Cuba, and some values are old (Haiti and Nicaragua 2012)."
           }
         ]
       },

@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | 37.1 | 0.49 (usable) | no trend |
 | Learning | 41.1 | 0.54 (usable) | no trend |
 | Experimentation | 23.8 | 0.53 (usable) | +0.6 over 10 years using 3 indicators |
-| Adaptability | 88 | 0.38 (thin) | no trend |
+| Adaptability | 64.3 | 0.46 (usable) | no trend |
 | Building | 43 | 0.57 (usable) | +0.6 over 10 years using 3 indicators |
 | Shared Purpose | 46.9 | 0.52 (usable) | +10.7 over 10 years using 2 indicators |
 
@@ -83,18 +83,12 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
-### Adaptability: confidence 0.38, thin
-
-How effectively can the system respond when circumstances change?
-
-- Uses 2 observed indicators.
-- Missing indicators: Disaster preparedness and recovery, Institutional responsiveness.
-
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
 - Agency: 64.8, confidence usable
+- Adaptability: 64.3, confidence usable
 - Anticipation: 51.2, confidence usable
 
 ## What Mexico has to work with
@@ -115,6 +109,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Labour force participation | 66.3 % aged 15+ | 2025 | 41 of 53 |
 | Adaptability | Fixed broadband subscriptions | 21.7 per 100 people | 2024 | 29 of 53 |
 | Adaptability | Electricity transmission losses | 11.1 % of output | 2024 | 35 of 53 |
+| Adaptability | Informal employment | 56.9 % of employment | 2025 | 25 of 43 |
 | Building | Output per worker | 48,140.6 constant 2021 PPP $ | 2025 | 30 of 51 |
 
 ## Missing data

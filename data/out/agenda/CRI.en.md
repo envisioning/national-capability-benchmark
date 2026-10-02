@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | 76.1 | 0.29 (thin) | no trend |
 | Learning | 40.9 | 0.54 (usable) | no trend |
 | Experimentation | 20.6 | 0.53 (usable) | +1.6 over 10 years using 3 indicators |
-| Adaptability | 76 | 0.57 (usable) | no trend |
+| Adaptability | 64 | 0.62 (usable) | no trend |
 | Building | 41.8 | 0.57 (usable) | +4.5 over 10 years using 3 indicators |
 | Shared Purpose | 39.5 | 0.38 (thin) | +5.4 over 10 years using 2 indicators |
 
@@ -90,7 +90,7 @@ How able are individuals and organizations to turn an intention into action?
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 76, confidence usable
+- Adaptability: 64, confidence usable
 - Anticipation: 50.9, confidence usable
 
 ## What Costa Rica has to work with
@@ -111,6 +111,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Labour force participation | 65.3 % aged 15+ | 2025 | 44 of 53 |
 | Adaptability | Fixed broadband subscriptions | 23.3 per 100 people | 2024 | 28 of 53 |
 | Adaptability | Electricity transmission losses | 9.1 % of output | 2024 | 28 of 53 |
+| Adaptability | Informal employment | 36.1 % of employment | 2025 | 20 of 43 |
 | Building | Output per worker | 64,822.5 constant 2021 PPP $ | 2025 | 26 of 51 |
 
 ## Missing data

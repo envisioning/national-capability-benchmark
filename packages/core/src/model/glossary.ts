@@ -223,6 +223,13 @@ export const GLOSSARY: GlossaryEntry[] = [
     example: 'New public software repositories holds any country whose repository count grew by less than a quarter of the median growth across the benchmark. In the 2026 file the median was 24.6 percent, and China (down 0.1 percent) and Cuba (up 2.8 percent) were held.',
   },
   {
+    term: 'New export product',
+    group: 'What is being measured',
+    short: 'A product a country barely exported fifteen years ago and now exports more of than its share of world trade.',
+    full: 'A country exports a product competitively when that product takes a larger share of its exports than it takes of world exports. A new export product is one the country exported at less than half that share in 2009-2011 and at least at that share in 2022-2024, with at least USD 1 million a year of sales at the end. Counting them shows an economy moving people and capital into lines it was not in. The rate divides the new products by the products the country was not exporting at the start, so a country that already exported almost everything is not rewarded for having little left to enter.',
+    example: 'Poland entered 53 of 638 products it had room to enter, a rate of 8.3 percent, the highest in the benchmark. Cuba entered 4 of 1,142.',
+  },
+  {
     term: 'Ingest route',
     group: 'How a number is made',
     short: 'How a value gets into the dataset: from an API, a published table, or nowhere yet.',

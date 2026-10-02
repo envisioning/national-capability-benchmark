@@ -2,10 +2,18 @@ import { z } from 'zod'
 import { IndicatorDef } from './schema.js'
 import type { Dimension } from './dimensions.js'
 import {
+  ATLAS_DOI,
+  ATLAS_FILE,
+  ATLAS_NEW_PRODUCTS_ADAPTER_ID,
+  ATLAS_PAGE_URL,
+  ATLAS_PUBLISHER,
   GITHUB_IG_ADAPTER_ID,
   GITHUB_IG_PATH,
   GITHUB_IG_PINNED_URL,
   GITHUB_IG_PUBLISHER,
+  ILOSTAT_INFORMAL_ADAPTER_ID,
+  ILOSTAT_INFORMAL_DATAFLOW,
+  ILOSTAT_INFORMAL_PAGE_URL,
   ILOSTAT_LTU_ADAPTER_ID,
   ILOSTAT_LTU_DATAFLOW,
   ILOSTAT_LTU_PAGE_URL,
@@ -919,6 +927,50 @@ const RAW: Raw[] = [
     notes:
       'UNCTADstat Concentration Index for exports, stored as published. It reads a product mix, not the capacity to switch: Switzerland (gold and pharmaceuticals), Ireland (pharmaceuticals) and Singapore (re-exports) look concentrated because a few lines are worth a lot, not because they are fragile. Commodity exporters move with prices from year to year even when the basket does not change. Merchandise only, so a services-led export base reads as narrower than it is. Values UNCTAD marks Estimated, mirrored from partner data, say so in their observation note. See D119.',
     wealthProxyPrior: 0.3,
+  },
+  {
+    id: 'new_export_products_rate',
+    dimension: 'adaptability',
+    name: 'New export products',
+    definition:
+      'Share of the products a country did not export competitively in 2009-2011 that it exported competitively in 2022-2024.',
+    unit: '% of products not exported competitively at the start',
+    measurementClass: 'O',
+    direction: 'higher_better',
+    source: {
+      publisher: ATLAS_PUBLISHER,
+      series: `${ATLAS_FILE} (${ATLAS_DOI})`,
+      adapter: ATLAS_NEW_PRODUCTS_ADAPTER_ID,
+      url: ATLAS_PAGE_URL,
+      tier: 'academic_survey',
+      inspectable: true,
+    },
+    ingest: 'adapter',
+    notes:
+      "Entry into new export lines is an economy moving capital and workers into products it was not making, which is reallocation observed rather than inferred. From the Growth Lab's Atlas of Economic Complexity, HS 1992 at four digits, pinned at version 18.0 on Harvard Dataverse. A product is new when its revealed comparative advantage averaged under 0.5 over 2009-2011 and at least 1 over 2022-2024, with at least USD 1 million a year of exports at the end; the rate divides new products by the products the country had room to enter, so a basket that was already broad is not rewarded. Merchandise only, so services exporters are read on goods. Exports are gross: the United Arab Emirates, the Netherlands, Panama and Singapore re-export, and the preflight found their values move no more than other open economies' when re-exports are tested, so they are scored; the count of new products each country exports more of than it imports travels in the pin. Cuba, Venezuela and Haiti did not report to UN Comtrade in one or both windows and are read from partner reports. A resource find counts as entry when it crosses the line. Fifteen years is a slow window, so the row moves little between releases. CC0. See D149.",
+    wealthProxyPrior: 0.2,
+  },
+  {
+    id: 'informal_employment_share',
+    dimension: 'adaptability',
+    name: 'Informal employment',
+    definition: 'Informal employment as a share of total employment, SDG indicator 8.3.1.',
+    unit: '% of employment',
+    measurementClass: 'I',
+    direction: 'lower_better',
+    source: {
+      publisher: ILOSTAT_PUBLISHER,
+      series: ILOSTAT_INFORMAL_DATAFLOW,
+      adapter: ILOSTAT_INFORMAL_ADAPTER_ID,
+      url: ILOSTAT_INFORMAL_PAGE_URL,
+      tier: 'international_organization',
+      inspectable: true,
+    },
+    ingest: 'adapter',
+    role: 'condition',
+    notes:
+      'A condition, not scored: how much work carries no contract, registration or social protection describes the labor market a country reallocates through, not it reallocating (D150). Read it beside the unemployment rate: where most work is informal, a person who loses a job takes any work within weeks, so a low rate is not a fluid market. Its direction for Adaptability cannot be defended, since informal work is both the slack that absorbs a shock and the precarity that keeps a worker from moving up, so the rank orders values and is not a verdict. Comparability is weak: the European values come from an income survey (EU-SILC) with a proxy definition, and the rest from labor force or household surveys processed by the ILO. ILOSTAT has no value for the United States, Canada, Australia, Japan, Singapore, Israel, Malaysia, China, the Philippines or Cuba, and some values are old (Haiti and Nicaragua 2012).',
+    wealthProxyPrior: 0.9,
   },
   {
     id: 'disaster_preparedness',

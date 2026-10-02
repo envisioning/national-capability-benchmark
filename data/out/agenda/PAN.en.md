@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | 66.5 | 0.3 (thin) | no trend |
 | Learning | 33.2 | 0.55 (usable) | no trend |
 | Experimentation | 6.3 | 0.33 (thin) | -1.9 over 10 years using 3 indicators |
-| Adaptability | 78 | 0.57 (usable) | no trend |
+| Adaptability | 69.8 | 0.62 (usable) | no trend |
 | Building | 27 | 0.57 (usable) | -1 over 10 years using 3 indicators |
 | Shared Purpose | 20.4 | 0.38 (thin) | -4.2 over 10 years using 2 indicators |
 
@@ -97,7 +97,7 @@ To what extent can people imagine themselves as participants in a common project
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 78, confidence usable
+- Adaptability: 69.8, confidence usable
 
 ## What Panama has to work with
 
@@ -117,6 +117,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Adaptability | Labour force participation | 71.9 % aged 15+ | 2025 | 28 of 53 |
 | Adaptability | Fixed broadband subscriptions | 18.1 per 100 people | 2023 | 30 of 53 |
 | Adaptability | Electricity transmission losses | 6.6 % of output | 2023 | 17 of 53 |
+| Adaptability | Informal employment | 55.7 % of employment | 2025 | 23 of 43 |
 | Building | Output per worker | 81,808.3 constant 2021 PPP $ | 2025 | 22 of 51 |
 
 ## Missing data

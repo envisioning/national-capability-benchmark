@@ -110,3 +110,58 @@ export const GITHUB_IG_HOME_URL = 'https://innovationgraph.github.com'
 export const GITHUB_IG_PINNED_URL = `https://github.com/${GITHUB_IG_REPOSITORY}/blob/${GITHUB_IG_COMMIT}/${GITHUB_IG_PATH}`
 /** Stable id of the adapter that differences the repository stock and gates it. */
 export const GITHUB_IG_ADAPTER_ID = 'github-innovation-graph-new-repos-v1'
+
+/**
+ * ILOSTAT informal employment rate, SDG indicator 8.3.1, read through the same
+ * SDMX endpoint as the long-term share. Published beside Adaptability as a
+ * condition, never scored. See D150.
+ */
+export const ILOSTAT_INFORMAL_DATAFLOW = 'DF_SDG_0831_SEX_ECO_RT'
+export const ILOSTAT_INFORMAL_DATAFLOW_VERSION = '1.0'
+export const ILOSTAT_INFORMAL_PAGE_URL =
+  'https://sdmx.ilo.org/rest/dataflow/ILO/DF_SDG_0831_SEX_ECO_RT/1.0'
+export const ILOSTAT_INFORMAL_FROM_YEAR = 2010
+/** Stable id of the adapter that reads the informal employment rate. */
+export const ILOSTAT_INFORMAL_ADAPTER_ID = 'ilostat-sdg-0831-informal-employment-v1'
+
+/**
+ * Harvard Growth Lab, Atlas of Economic Complexity, international trade data
+ * in HS 1992 at four digits, read for the new export products rate. See D149.
+ * Dataverse versions are immutable and a file id belongs to one version, so
+ * the pin is the version, the file id and the checksum Dataverse publishes; a
+ * mismatch fails the fetch until the new release is reviewed and re-pinned
+ * here. CC0.
+ */
+export const ATLAS_PUBLISHER = 'Harvard Growth Lab'
+export const ATLAS_DATASET = 'Atlas of Economic Complexity, International Trade Data (HS, 92)'
+export const ATLAS_DOI = 'doi:10.7910/DVN/T4CHWJ'
+export const ATLAS_VERSION = '18.0'
+/** The date Dataverse released the pinned version. */
+export const ATLAS_RELEASED = '2026-04-22'
+export const ATLAS_FILE = 'hs92_country_product_year_4.csv'
+export const ATLAS_FILE_ID = 13685110
+export const ATLAS_FILE_BYTES = 451_749_132
+/** The checksum Dataverse publishes for the file. */
+export const ATLAS_FILE_MD5 = '5d87b2ac45517bf4e0e50600140672e5'
+export const ATLAS_FILE_SHA256 = '06c77ef4c9e3a3afe9aaac6d053e11209275d09eb91f82de7b2a54d37f9c25e2'
+export const ATLAS_FILE_URL = `https://dataverse.harvard.edu/api/access/datafile/${ATLAS_FILE_ID}`
+/** The pinned version's landing page, which `/sources` prints as the row's link. */
+export const ATLAS_PAGE_URL = `https://dataverse.harvard.edu/dataset.xhtml?persistentId=${ATLAS_DOI}&version=${ATLAS_VERSION}`
+export const ATLAS_HOME_URL = 'https://atlas.hks.harvard.edu'
+export const ATLAS_LICENCE = 'CC0 1.0'
+/** Stable id of the adapter that counts new export products. */
+export const ATLAS_NEW_PRODUCTS_ADAPTER_ID = 'atlas-hs92-new-export-products-v1'
+/**
+ * The definition, fixed in the A16 preflight before the row was wired: a
+ * product is new when its mean RCA over the start window is under `absentRca`
+ * and its mean RCA over the end window is at least `presentRca`, with mean
+ * exports over the end window of at least `minExportsUsd`. The rate is new
+ * products over the products under `absentRca` at the start, in percent.
+ */
+export const ATLAS_NEW_PRODUCTS_RULE = {
+  start: { from: 2009, to: 2011 },
+  end: { from: 2022, to: 2024 },
+  absentRca: 0.5,
+  presentRca: 1,
+  minExportsUsd: 1_000_000,
+} as const

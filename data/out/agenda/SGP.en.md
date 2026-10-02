@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | 70.8 | 0.49 (usable) | no trend |
 | Learning | 84.2 | 0.54 (usable) | no trend |
 | Experimentation | 54.8 | 0.36 (thin) | +6.8 over 10 years using 3 indicators |
-| Adaptability | 84.8 | 0.57 (usable) | no trend |
+| Adaptability | 71.3 | 0.62 (usable) | no trend |
 | Building | 66.6 | 0.57 (usable) | +5 over 10 years using 3 indicators |
 | Shared Purpose | 37 | 0.33 (thin) | no trend |
 
@@ -51,9 +51,9 @@ How effectively can independent actors organize around shared objectives?
 These dimensions score at least 50 with usable evidence.
 
 - Anticipation: 84.8, confidence usable
-- Adaptability: 84.8, confidence usable
 - Learning: 84.2, confidence usable
 - Agency: 72.3, confidence usable
+- Adaptability: 71.3, confidence usable
 - Trust: 70.8, confidence usable
 - Building: 66.6, confidence usable
 

@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | 79,8 | 0,5 (utilizável) | sem base de tendência |
 | Aprendizagem | 80,1 | 0,55 (utilizável) | sem base de tendência |
 | Experimentação | 37,3 | 0,33 (fraca) | -1,7 em 10 anos, sobre 3 indicadores |
-| Adaptação | 76,2 | 0,57 (utilizável) | sem base de tendência |
+| Adaptação | 59,5 | 0,62 (utilizável) | sem base de tendência |
 | Construção | 34,4 | 0,57 (utilizável) | +1,6 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 77,2 | 0,43 (fraca) | sem base de tendência |
 
@@ -68,7 +68,7 @@ Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 - Antecipação: 86, solidez utilizável
 - Aprendizagem: 80,1, solidez utilizável
 - Confiança: 79,8, solidez utilizável
-- Adaptação: 76,2, solidez utilizável
+- Adaptação: 59,5, solidez utilizável
 
 ## O que a Austrália tem para trabalhar
 

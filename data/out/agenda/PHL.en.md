@@ -14,7 +14,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Trust | 43.3 | 0.49 (usable) | no trend |
 | Learning | 41.6 | 0.54 (usable) | no trend |
 | Experimentation | 4.8 | 0.33 (thin) | 0 over 10 years using 3 indicators |
-| Adaptability | 74.5 | 0.38 (thin) | no trend |
+| Adaptability | 69.9 | 0.46 (usable) | no trend |
 | Building | 60.2 | 0.57 (usable) | -5.7 over 10 years using 2 indicators |
 | Shared Purpose | 54.9 | 0.51 (usable) | +11.5 over 10 years using 2 indicators |
 
@@ -79,17 +79,11 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
 - Rejected datasets: Business share of R&D.
 
-### Adaptability: confidence 0.38, thin
-
-How effectively can the system respond when circumstances change?
-
-- Uses 2 observed indicators.
-- Missing indicators: Disaster preparedness and recovery, Institutional responsiveness.
-
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
+- Adaptability: 69.9, confidence usable
 - Building: 60.2, confidence usable
 - Shared Purpose: 54.9, confidence usable
 

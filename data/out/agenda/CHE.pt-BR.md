@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | 82,8 | 0,5 (utilizável) | sem base de tendência |
 | Aprendizagem | 79,4 | 0,55 (utilizável) | sem base de tendência |
 | Experimentação | 57,6 | 0,53 (utilizável) | +1,2 em 10 anos, sobre 3 indicadores |
-| Adaptação | 65,3 | 0,57 (utilizável) | sem base de tendência |
+| Adaptação | 51,2 | 0,62 (utilizável) | sem base de tendência |
 | Construção | 57,6 | 0,57 (utilizável) | +1,3 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 49,3 | 0,49 (utilizável) | -1 em 10 anos, sobre 2 indicadores |
 
@@ -51,10 +51,10 @@ Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 - Antecipação: 96,3, solidez utilizável
 - Confiança: 82,8, solidez utilizável
 - Aprendizagem: 79,4, solidez utilizável
-- Adaptação: 65,3, solidez utilizável
 - Agência: 60, solidez utilizável
 - Experimentação: 57,6, solidez utilizável
 - Construção: 57,6, solidez utilizável
+- Adaptação: 51,2, solidez utilizável
 
 ## O que a Suíça tem para trabalhar
 
@@ -74,6 +74,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Adaptação | Participação na força de trabalho | 84 % das pessoas com 15 anos ou mais | 2025 | 2º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 47 por 100 pessoas | 2024 | 4º de 53 |
 | Adaptação | Perdas na transmissão de eletricidade | 5 % da produção | 2024 | 11º de 53 |
+| Adaptação | Emprego informal | 1,1 % do emprego | 2024 | 1º de 43 |
 | Construção | Produto por trabalhador | 158.634,2 US$ PPC constantes de 2021 | 2025 | 3º de 51 |
 
 ## Agenda de medição

@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | 31,9 | 0,42 (fraca) | sem base de tendência |
 | Aprendizagem | 37,2 | 0,4 (fraca) | sem base de tendência |
 | Experimentação | 1,4 | 0,14 (muito fraca) | sem base de tendência |
-| Adaptação | 81,9 | 0,4 (fraca) | sem base de tendência |
+| Adaptação | 66,2 | 0,48 (utilizável) | sem base de tendência |
 | Construção | 29,5 | 0,57 (utilizável) | -1,6 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 50,7 | 0,37 (fraca) | sem base de tendência |
 
@@ -76,13 +76,6 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
-### Adaptação: solidez 0,4, fraca
-
-Com que eficácia o sistema responde quando as circunstâncias mudam?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Preparação e recuperação de desastres, Capacidade de resposta institucional.
-
 ### Aprendizagem: solidez 0,4, fraca
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
@@ -97,6 +90,12 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 - Baseada em 5 indicadores observados.
 - Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
+
+## Dimensões para manter
+
+Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
+
+- Adaptação: 66,2, solidez utilizável
 
 ## O que a Nicarágua tem para trabalhar
 
@@ -116,6 +115,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Adaptação | Participação na força de trabalho | 69 % das pessoas com 15 anos ou mais | 2025 | 38º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 5,8 por 100 pessoas | 2024 | 42º de 53 |
 | Adaptação | Perdas na transmissão de eletricidade | 21,5 % da produção | 2023 | 50º de 53 |
+| Adaptação | Emprego informal | 81,8 % do emprego | 2012 | 36º de 43 |
 | Construção | Produto por trabalhador | 17.638 US$ PPC constantes de 2021 | 2025 | 46º de 51 |
 
 ## Agenda de medição

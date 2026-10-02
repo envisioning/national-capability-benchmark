@@ -14,7 +14,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Confiança | 65,2 | 0,22 (muito fraca) | sem base de tendência |
 | Aprendizagem | 33,2 | 0,4 (fraca) | sem base de tendência |
 | Experimentação | 1,6 | 0,28 (fraca) | sem base de tendência |
-| Adaptação | 70,5 | 0,57 (utilizável) | sem base de tendência |
+| Adaptação | 60,7 | 0,62 (utilizável) | sem base de tendência |
 | Construção | 34,8 | 0,57 (utilizável) | -1,6 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 42,2 | 0,32 (fraca) | sem base de tendência |
 
@@ -95,7 +95,7 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 70,5, solidez utilizável
+- Adaptação: 60,7, solidez utilizável
 
 ## O que Honduras tem para trabalhar
 
@@ -115,6 +115,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Adaptação | Participação na força de trabalho | 58,7 % das pessoas com 15 anos ou mais | 2025 | 52º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 4,6 por 100 pessoas | 2024 | 46º de 53 |
 | Adaptação | Perdas na transmissão de eletricidade | 33,8 % da produção | 2023 | 53º de 53 |
+| Adaptação | Emprego informal | 82,6 % do emprego | 2017 | 37º de 43 |
 | Construção | Produto por trabalhador | 17.936,5 US$ PPC constantes de 2021 | 2025 | 45º de 51 |
 
 ## Agenda de medição
