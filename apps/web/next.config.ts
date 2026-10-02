@@ -102,6 +102,8 @@ const config: NextConfig = {
       'CHANGELOG.md',
       'docs/KNOWN-ARTEFACTS.md',
       'docs/DECISIONS.md',
+      // The static TTFs the OG cards read through process.cwd().
+      'src/app/fonts/*.ttf',
     ],
   },
 }

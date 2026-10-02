@@ -15,7 +15,10 @@ const COLORS = {
   rule: '#525252',
 } as const
 
-const OG_RADAR: RadarGeometry = { size: 430, radius: 172 }
+/* Sized so the eyebrow, the title and the radar fit between the header and the
+ * footer rule. At 430 the centred block overflowed and rode up over the
+ * wordmark's subtitle. */
+const OG_RADAR: RadarGeometry = { size: 300, radius: 120 }
 
 /**
  * The server-only geometry entry point for OG cards.
@@ -35,21 +38,28 @@ export function radarToSvgPath(
   return points.length < 2 ? '' : `M ${points.map(([x, y]) => `${x} ${y}`).join(' L ')} Z`
 }
 
+const OG_FONT_DIR = resolve(process.cwd(), 'src/app/fonts')
+
+/* Satori reads TTF, OTF and WOFF but neither the WOFF2 web fonts the pages use
+ * nor a variable font, so the cards read static instances kept beside them:
+ * Inter 400 and 700 and Envisioning Octa 400, all OFL, copied from the
+ * envisioning.com OG set. Inter comes first because Satori's default is the
+ * first font. Octa sets the wordmark and nothing else. */
+const OG_FONT_FILES = [
+  { file: 'Inter-Regular.ttf', name: 'Inter', weight: 400 },
+  { file: 'Inter-Bold.ttf', name: 'Inter', weight: 700 },
+  { file: 'EnvisioningOcta-Regular.ttf', name: 'Octa', weight: 400 },
+] as const
+
 export async function loadOgFonts() {
-  /* Satori's bundled font parser accepts TTF but not the WOFF2 web fonts used
-   * by the page. Reuse the Latin font shipped inside Next so build-time image
-   * generation stays dependency-free and works on Vercel as well as locally.
-   * Next 16 ships Geist in place of Noto Sans. */
-  const font = await readFile(
-    resolve(
-      process.cwd(),
-      'node_modules/next/dist/compiled/@vercel/og/Geist-Regular.ttf',
-    ),
+  return Promise.all(
+    OG_FONT_FILES.map(async ({ file, name, weight }) => ({
+      name,
+      data: await readFile(resolve(OG_FONT_DIR, file)),
+      weight,
+      style: 'normal' as const,
+    })),
   )
-  return [
-    { name: 'Inter', data: font, weight: 400 as const, style: 'normal' as const },
-    { name: 'Octa', data: font, weight: 500 as const, style: 'normal' as const },
-  ]
 }
 
 export function OgFrame({
@@ -74,15 +84,15 @@ export function OgFrame({
         fontFamily: 'Inter',
       }}
     >
-      <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
+      <div style={{ display: 'flex', alignItems: 'flex-start', flexShrink: 0, justifyContent: 'space-between' }}>
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <div
             style={{
               color: COLORS.accent,
               fontFamily: 'Octa',
               fontSize: 48,
-              lineHeight: 0.9,
-              fontWeight: 500,
+              lineHeight: 1,
+              fontWeight: 400,
             }}
           >
             NCB
@@ -94,17 +104,17 @@ export function OgFrame({
         <div style={{ color: COLORS.muted, display: 'flex', fontSize: 20 }}>Envisioning</div>
       </div>
 
-      <div style={{ display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'center' }}>
+      <div style={{ display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'center', minHeight: 0, padding: '16px 0' }}>
         <div style={{ color: COLORS.accent, display: 'flex', fontSize: 18, letterSpacing: 1.2, textTransform: 'uppercase' }}>
           {eyebrow}
         </div>
-        <div style={{ display: 'flex', fontFamily: 'Octa', fontSize: 54, fontWeight: 300, lineHeight: 1.05, marginTop: 14 }}>
+        <div style={{ display: 'flex', fontSize: 54, fontWeight: 400, lineHeight: 1.05, marginTop: 14 }}>
           {title}
         </div>
         {children}
       </div>
 
-      <div style={{ borderTop: `1px solid ${COLORS.rule}`, color: COLORS.muted, display: 'flex', fontSize: 16, paddingTop: 16 }}>
+      <div style={{ borderTop: `1px solid ${COLORS.rule}`, color: COLORS.muted, display: 'flex', flexShrink: 0, fontSize: 16, paddingTop: 16 }}>
         Nine capabilities from public data, each with the confidence behind it
       </div>
     </div>
