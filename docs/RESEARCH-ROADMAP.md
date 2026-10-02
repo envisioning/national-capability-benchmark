@@ -119,6 +119,33 @@ passes triage runs to its gate. One that fails triage costs one paragraph.
 | Q8 | IDEA voter turnout | O1: Shared purpose | IDEA open data, full frame | Triage note, including the compulsory-voting rule |
 | Q9 | Full Delphi rerun (TRUST-5) | Reading, not measurement | Needs `AI_GATEWAY_API_KEY` | After the dataset changes |
 
+**Q2 status (2026-10-02): triaged, nothing scored.** Memo:
+`docs/research/adaptability/DISASTER-PREPAREDNESS.md`. Eleven sources; ten
+fail before values (self-assessments such as Sendai E-1 and SPAR, retired
+perception indices plus stocks such as INFORM and ND-GAIN, hazard-driven
+outcomes such as EM-DAT, coverage or recency). The survivor is the World Risk
+Poll item "received a warning before the disaster", restricted to weather
+events: 46 of 53 at a base of 30, stable between waves (Spearman 0.78), r with
+log GDP 0.44. It fails A13 (closed autocracies read highest), so the proposal
+is a check, `__check__disaster_warning_reach`, and the gap stays declared.
+`institutional_responsiveness`: no source other than OxCGRT exists.
+
+**Q6 status (2026-10-02): triaged, one item to wire.** Memo:
+`docs/research/shared-purpose/EVS-WVS-BEHAVIOURAL-ITEMS.md`. Trust in people
+met for the first time (G007_34_B) fills `willingness_to_cooperate_strangers`,
+37 of 53, scored as the share trusting completely or somewhat (decided
+2026-10-02). Petitions (E025) rejected on A5. The release has no volunteering
+item, and national pride fails A13 for `national_belonging`.
+
+**Experimentation (2026-10-02).** Memo:
+`docs/research/experimentation/O1-CANDIDATES.md`. A full-coverage row adds
+about 0.06 to mean confidence, and O1 needs 0.13. GitHub Innovation Graph new
+repositories per million is the strongest candidate (53 of 53, China and Cuba
+gated); with the GEM extension D125 held, the two together reach 0.402. Both
+wait on a decision. `business_rd_share`: RICYT fills Latin America (34 of 53
+with OECD MSTI), but the row is the make-up of a spending stock. B-READY
+(#37): 13 of 53 in the API, 26 in the 2025 package, gate 27.
+
 **Q5 status (2026-10-01): done, one row scored (D131).** The triage table
 is `docs/research/vdem-sweep/TRIAGE.md`: 21 codebook variables, construct
 first, then coverage, the A13 regime test, redundancy and r with log GDP.
