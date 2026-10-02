@@ -7572,3 +7572,41 @@ reversal, so the quota is unaffected.
 
 **Overturned by.** `business_rd_share` returning as a gap or a scored row,
 which would make both records admissible again.
+
+## D148 — The foresight register goes to the 53 under agent coding and a human spot-check
+
+*Recorded 2026-10-02. Follows D146 and #68. Codebook 1.1 is `92ff79e`, committed before recoding; round 2 is `c371654`.*
+
+**Decision.** Coding of `government_foresight_capacity` proceeds to the 53
+countries once a person has checked the sample in
+`docs/research/anticipation/FORESIGHT-REGISTER-SPOTCHECK.md` and it passes.
+The row stays a declared gap and is not scored until a further decision
+promotes it at tier `expert_panel`. Before the 53 are coded, codebook 1.2
+settles whether a parent body is coded separately when its foresight unit
+outlives it. This supersedes D146's requirement of at least one human coder:
+two agent coders of different model families code, and a person checks a
+seeded, regime-stratified 20 percent of bodies before anything is scored
+(owner ruling, 2026-10-02).
+
+**Why.** Under codebook 1.1, which applies the owner's ruling that I1 accepts
+any official record dating a body's creation, two fresh coders agreed on every
+item in all ten pilot countries: alpha 1.00 on I1 to I3 and on the score. I4
+is 0 throughout, a floor. Body-by-body alpha is 0.83 on the measure fixed in
+1.1, and the three split bodies are closed bodies that change no item. Regime
+rho fell from 0.72 to 0.64, under the 0.80 stop rule, and no ceiling fired
+(five at 100, four at 0). Income r 0.83 (n 10) is printed and decides nothing.
+
+**Cost.** Both coders are one vendor's models, so their errors stay
+correlated, and a 20 percent spot-check is weaker than a human second coder.
+Body alpha is 0.79 on the bodies both coders judged, under the threshold on
+round 1's measure. I4 has never fired, so its reliability is unmeasured. On
+the ten, I1 and I2 move together and the score is close to binary: if the 53
+confirm that, the row reads whether a qualifying body exists, with survival on
+top, and at r 0.83 on the pilot it will not lower Anticipation's income
+correlation.
+
+**Overturned by.** A spot-check that overturns two or more of the 11 sampled
+bodies, or any body decision that changes a country item. Or, on the 53:
+alpha under 0.80 on any item or on body-by-body decisions in a 20 percent
+second coding, regime rho at or above 0.80, or 43 or more of the 53 at one
+score.
