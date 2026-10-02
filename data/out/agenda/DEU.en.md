@@ -128,6 +128,7 @@ These are documented institutional changes in Germany that the framework records
 - **Aufstiegs-BAföG, upgrading training support** (Learning). Federal and state governments paid grants and loans to 186,100 people taking vocational upgrading courses such as master craftsman or certified educator in 2025, 3.8 times the 49,300 supported in 1997, with 1.1 billion euros approved.
 - **Office of Technology Assessment at the German Bundestag (TAB)** (Anticipation). Since 1990 the German Bundestag has kept an Office of Technology Assessment, run under contract by the Karlsruhe Institute of Technology, whose tasks include horizon scanning of scientific and technological trends at early stages; by 2026 it reported more than 200 projects and over 400 publications.
 - **SINTEG-Verordnung, the energy-transition experimentation clause** (Experimentation). Germany's federal government ran a time-limited regulatory experimentation clause for the SINTEG smart-energy showcases from June 2017 to June 2022, under which the Federal Network Agency received 49 notifications of experiments but only two claims for compensation of regulatory costs.
+- **Dual vocational training (duale Ausbildung), and its contraction** (Coordination). Germany's dual training system, in which firms employ apprentices under contracts registered by the chambers while state vocational schools teach them, recorded 475,950 new training contracts in the year to 30 September 2025, down from 569,379 in 2011, while 54,372 offered places stayed unfilled.
 
 ## Contribute
 

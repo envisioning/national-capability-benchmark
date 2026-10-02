@@ -9,6 +9,19 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.24.9 — 2026-10-02
+
+- **64 more documented deliveries, 15 of them losses.** Every country now
+  has a record or a searched note for every delivery gap but one, adult
+  learning in Ecuador. The losses include the UK's private finance
+  initiative, the US child tax credit expansion, Germany's dual
+  apprenticeships, Australia's Inland Rail and Brazil's adult education
+  enrolment. Policy Horizons Canada and Sweden's commission on the future
+  replace two notes that had closed those countries' foresight cells by
+  mistake. Five older records whose sources had moved now point at the new
+  address or an archived copy. A second reviewer opened every source and
+  checked every number. The capability agenda is regenerated.
+
 ## Dataset 8.1.0 — 2026-10-02
 
 - **Experimentation gains a row: new public software repositories per

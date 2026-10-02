@@ -232,28 +232,6 @@
       ]
     },
     {
-      "iso3": "SWE",
-      "indicatorId": "government_foresight_capacity",
-      "checkedAt": "2026-10-02",
-      "searched": [
-        "OECD Observatory of Public Sector Innovation and OECD strategic foresight country material",
-        "Centre-of-government or planning ministry foresight unit and its own reports",
-        "Parliamentary futures committees and technology assessment offices"
-      ],
-      "candidates": [
-        {
-          "name": "Framtidskommissionen",
-          "failed": "publisher_metric",
-          "why": "Rejected in an earlier pass of this column and not retried."
-        },
-        {
-          "name": "Prime Minister's Office, Secretariat for Strategic Development, strategic foresight function",
-          "failed": "publisher_metric",
-          "why": "The government.se page returned 403 to automated retrieval on 2026-10-02 and no dated figure could be read; the search summary shows a function, not an output or mandate figure."
-        }
-      ]
-    },
-    {
       "iso3": "IRL",
       "indicatorId": "government_foresight_capacity",
       "checkedAt": "2026-10-02",
@@ -267,28 +245,6 @@
           "name": "Department of the Taoiseach strategic foresight capacity",
           "failed": "delivered",
           "why": "The OECD OPSI policy brief Towards a strategic foresight system in Ireland (2021) is advice on building a system, and the Department's strategy statements commit to developing capacity; no operating national foresight unit with an output figure was found."
-        }
-      ]
-    },
-    {
-      "iso3": "CAN",
-      "indicatorId": "government_foresight_capacity",
-      "checkedAt": "2026-10-02",
-      "searched": [
-        "OECD Observatory of Public Sector Innovation and OECD strategic foresight country material",
-        "Centre-of-government or planning ministry foresight unit and its own reports",
-        "Parliamentary futures committees and technology assessment offices"
-      ],
-      "candidates": [
-        {
-          "name": "Policy Horizons Canada",
-          "failed": "publisher_metric",
-          "why": "Rejected in an earlier pass of this column and not retried."
-        },
-        {
-          "name": "Science Council of Canada, dissolved 1993",
-          "failed": "publisher_metric",
-          "why": "A possible reversal: the Science Council of Canada Act was repealed in 1993. The Library and Archives Canada fonds record that would carry its mandate and output returned a bot challenge on 2026-10-02, and the repeal date alone does not carry a figure for the function."
         }
       ]
     },
@@ -445,23 +401,6 @@
       "candidates": [
         {
           "name": "Knesset Commission for Future Generations",
-          "failed": "publisher_metric",
-          "why": "Rejected in an earlier pass of this column and not retried."
-        }
-      ]
-    },
-    {
-      "iso3": "ARE",
-      "indicatorId": "government_foresight_capacity",
-      "checkedAt": "2026-10-02",
-      "searched": [
-        "OECD Observatory of Public Sector Innovation and OECD strategic foresight country material",
-        "Centre-of-government or planning ministry foresight unit and its own reports",
-        "Parliamentary futures committees and technology assessment offices"
-      ],
-      "candidates": [
-        {
-          "name": "Ministry of Cabinet Affairs and the Future",
           "failed": "publisher_metric",
           "why": "Rejected in an earlier pass of this column and not retried."
         }
@@ -1663,6 +1602,577 @@
       ],
       "candidates": [],
       "note": "No national science or innovation agency programme for university-firm collaboration exists to test."
+    },
+    {
+      "iso3": "IND",
+      "indicatorId": "university_industry_collaboration",
+      "checkedAt": "2026-10-02",
+      "searched": [
+        "(1) national science/innovation agency university-firm collaborative grant programme and its annual report",
+        "(2) ministry of science/higher education statistics on joint projects or contracts",
+        "(3) OECD/World Bank/IDB evaluations of a named national programme",
+        "PIB releases and Lok Sabha/Rajya Sabha replies on Uchhatar Avishkar Yojana (UAY) and IMPRINT",
+        "ANRF (ex-SERB) IMPRINT-2 programme page (anrfonline.in/ANRF/IMPRINT2C)",
+        "BIRAC Contract Research Scheme page (birac.nic.in/desc_new.php?id=218)",
+        "Lead list from the batch brief (IMPRINT, DST TDB, BIRAC)"
+      ],
+      "candidates": [
+        {
+          "name": "Uchhatar Avishkar Yojana (UAY), Ministry of Education industry-sponsored research with 25 percent industry share",
+          "failed": "delivered",
+          "why": "The only official figures are approvals in a 2017 PIB release: 87 Phase I projects (Rs 265.59 crore) and 65 Phase II projects (Rs 139.48 crore) approved with MHRD, ministry and industry funding at 50:25:25. No official count of projects completed or industry money actually received was found, and no official record of the scheme after 2018 was found to show whether it ended or was merged."
+        },
+        {
+          "name": "IMPRINT and IMPRINT-2 (Ministry of Education with DST/SERB, now ANRF)",
+          "failed": "publisher_metric",
+          "why": "ANRF's page gives only selections, 125 projects chosen from 2145 proposals under IMPRINT IIA/B, and its call page says a new call 'will be notified soon'. Industry support is mandatory in IMPRINT-2, but no official count of industry partners or completed projects was found; a 2023 PIB release mentions only about 60 projects shown at an exhibition."
+        },
+        {
+          "name": "BIRAC Contract Research Scheme (academia develops, industry validates)",
+          "failed": "delivered",
+          "why": "BIRAC reports 17 projects approved for funding and 13 contracts signed across seven calls. That is a pilot-scale scheme, not a national delivery."
+        },
+        {
+          "name": "DST Technology Development Board",
+          "failed": "declared_gap",
+          "why": "It finances firms commercialising technology. University collaboration is not a condition, so it evidences business finance rather than university-firm research collaboration."
+        }
+      ],
+      "note": "India has a long list of academia-industry schemes, but the official figures found are sanction or selection counts with no delivered totals. A Ministry of Education or ANRF report counting completed UAY or IMPRINT projects with the industry contributions actually received would reopen this cell."
+    },
+    {
+      "iso3": "RWA",
+      "indicatorId": "large_project_delivery",
+      "checkedAt": "2026-10-02",
+      "searched": [
+        "(1) supreme audit institution reports on major public infrastructure projects",
+        "(2) ministry/agency project progress and cost reports",
+        "(3) World Bank/IDB/AfDB implementation completion reports and evaluations",
+        "Office of the Auditor General of State Finances, 2025 annual report announcement (oag.gov.rw, 6 May 2026)",
+        "MININFRA and RTDA news pages on the Huye-Kitabi road and the October 2025 road inaugurations",
+        "World Bank ICRs for Rwanda: Renewable Energy Fund (P160699, 2025) and Land Husbandry, Water Harvesting and Hillside Irrigation (P114931, 2018)",
+        "Earlier batch rejections listed in issue47 (Kigali Convention Centre, Nyabarongo II, AG portfolio of delayed contracts)"
+      ],
+      "candidates": [
+        {
+          "name": "Bugesera International Airport",
+          "failed": "publisher_metric",
+          "why": "Under construction since 2017 with completion now put at 2027 to 2028; the escalation from about US$1.3 billion to about US$2 billion is reported only in the press, and no MINECOFIN, MININFRA or audit document carrying a baseline and revised cost or date was found. It would also fail delivery until it opens."
+        },
+        {
+          "name": "Huye-Kitabi road rehabilitation (53 km, RTDA with China Road and Bridge Corporation)",
+          "failed": "publisher_metric",
+          "why": "MININFRA gives the contract cost (RwF 29,788,197,622), the April 2017 start and about 100 percent physical progress by September 2020, and RTDA records its inauguration in October 2025, but neither page states a planned duration or a revised cost, so no cost or schedule performance figure exists to file."
+        },
+        {
+          "name": "Auditor General annual report for the year to June 2025",
+          "failed": "publisher_metric",
+          "why": "The OAG announcement names delays in commencement of financed projects and stalled construction works but gives no project-level cost or schedule figures; the portfolio total in an earlier report was already rejected as not one delivery."
+        },
+        {
+          "name": "World Bank Renewable Energy Fund (P160699) and Land Husbandry (P114931) completion reports",
+          "failed": "declared_gap",
+          "why": "An off-grid credit line and a watershed agriculture project; neither is a major public infrastructure build, so their cost and closing-date figures do not evidence this construct."
+        },
+        {
+          "name": "Rusizi Port",
+          "failed": "delivered",
+          "why": "MININFRA reported it at 97.5 percent complete in August 2026; not yet delivered."
+        },
+        {
+          "name": "Reversal search for Rwanda",
+          "failed": "publisher_metric",
+          "why": "No abandoned, halted or cut-back national project with an official cost or schedule figure was found; Bugesera's escalation is the nearest lead and rests on press reports."
+        }
+      ],
+      "note": "Rwanda's official infrastructure pages report contract sums and completion events but not planned-against-actual cost or time, and the audit office publishes summaries without project figures. A record needs either an OAG performance audit of a named project or a development bank completion report on a Rwandan capital build."
+    },
+    {
+      "iso3": "CUB",
+      "indicatorId": "large_project_delivery",
+      "checkedAt": "2026-10-02",
+      "searched": [
+        "(1) supreme audit institution reports on major public infrastructure projects",
+        "(2) ministry/agency project progress and cost reports",
+        "(3) World Bank/IDB/AfDB implementation completion reports and evaluations (Cuba is not a member of the World Bank or the IDB, so this list yields nothing)",
+        "Mesa Redonda (Televisión Cubana) and Cubadebate reports on the trasvases with INRH and ESI-DIP Trasvases officials, 2017 and 2020",
+        "Earlier batch rejections listed in issue47 (Juraguá nuclear plant, Zona Especial de Desarrollo Mariel)",
+        "ZED Mariel container terminal page and ONEI Anuario Estadístico de Cuba 2025, chapter 12, both opened on 2026-10-02"
+      ],
+      "candidates": [
+        {
+          "name": "Trasvase Este-Oeste water transfer (INRH, ESI-DIP Trasvases)",
+          "failed": "declared_gap",
+          "why": "State TV (Mesa Redonda, 21 January 2020) quotes the ESI-DIP Trasvases director: two of six stages finished and 4,179 ha under irrigation, against a 120,000 ha plan in an unattributed table. That is an outcome against a whole-scheme plan, not cost or schedule performance of the finished stages, which is what the indicator asks for. The only cost figure (second stage, 501.3 million pesos against almost 550 million, finished 2012) is a reporter's paraphrase in Cubadebate (27 April 2017) that a photo caption on the same page attributes to a different phase."
+        },
+        {
+          "name": "Mariel container terminal (ZED Mariel)",
+          "failed": "publisher_metric",
+          "why": "The official page states capacity only (822,000 TEU, potential 3 million), with no cost, schedule or throughput figure and no reference period."
+        },
+        {
+          "name": "Juraguá nuclear power plant",
+          "failed": "publisher_metric",
+          "why": "Rejected in an earlier batch for want of an official figure; no new source was found in this pass."
+        },
+        {
+          "name": "ONEI statistical yearbook 2025, chapter 12 (construction and investment)",
+          "failed": "publisher_metric",
+          "why": "Aggregate tables only, nothing on cost or schedule of a named project."
+        },
+        {
+          "name": "Reversal search for Cuba",
+          "failed": "publisher_metric",
+          "why": "No named project with an official cost or schedule figure was found to have run backwards. ONEI table 12.1 shows housing completions falling from 20,232 in 2022 to 5,493 in 2025, but housing completions were ruled outside this column in an earlier batch (declared_gap)."
+        }
+      ],
+      "note": "Cuba publishes project progress through state media rather than through audit or statistical documents, and it is outside the World Bank and IDB, so no completion report exists either. The Trasvase Este-Oeste becomes recordable if a stage-level cost or schedule figure with a reference period surfaces from INRH, ONEI or the Contraloría."
+    },
+    {
+      "iso3": "ARE",
+      "indicatorId": "adult_learning_participation",
+      "checkedAt": "2026-10-02",
+      "searched": [
+        "(1) ministry of education adult / second-chance education enrolment statistics",
+        "(2) public employment or training agency trainee counts",
+        "(3) UNESCO GRALE and OECD country notes naming a national programme",
+        "Bayanat UAE open data portal, Ministry of Education datasets read in full through the portal API (bayanat.ae/api/DatasetResources/GetDatasetResource): Students-ADE by Zone-Gender-NatCat 2012-2013, 2013-2014, 2015-2016; Students-ADE by Zone-Gender 2016-2017; Students-CE by Zone-Gender 2017-2018; 'Adult Education' centres, teachers and administration by emirate 2014/15 to 2016/17",
+        "u.ae government portal page on adult education (updated 6 August 2025)",
+        "issue 47 prior rejection: Abu Dhabi and Dubai adult education centres"
+      ],
+      "candidates": [
+        {
+          "name": "Ministry of Education adult education centres, students by zone (candidate erosion)",
+          "failed": "honest_limits",
+          "why": "The full files now open through the Bayanat API and give national totals of 15,884 students in 2012/13, 13,998 in 2013/14 and 10,261 in 2015/16, then 25,965 in 2016/17 in a file with a different layout (no nationality split) and 16,468 'continuous education' students in 2017/18 after a renaming. The unexplained jump in 2016/17 and the change of category mean the series cannot be read as one trend, so neither an erosion nor a stable scale survives an honest limits paragraph. The separate 'Adult Education' table shows centres falling from 76 to 68 and teachers from 886 to 493 between 2014/15 and 2016/17, which is capacity, not participation. Nothing is published after 2017/18; the u.ae page confirms the service still exists but gives no count, so the current status cannot be stated."
+        },
+        {
+          "name": "Abu Dhabi and Dubai adult education centres",
+          "failed": "publisher_metric",
+          "why": "As in issue 47: no official annual participant count with a reference period at an openable URL."
+        }
+      ],
+      "note": "The UAE published adult education enrolment by zone only until 2017/18, in files whose layout and category change between years, so its national adult education service has no comparable series a record could carry."
+    },
+    {
+      "iso3": "SLV",
+      "indicatorId": "adult_learning_participation",
+      "checkedAt": "2026-10-02",
+      "searched": [
+        "(1) ministry of education adult / second-chance education enrolment statistics",
+        "(2) public employment or training agency trainee counts",
+        "(3) UNESCO GRALE and OECD country notes naming a national programme",
+        "MINEDUCYT Estadísticas Educativas: SIGES enrolment by school, grade and sex, 2024 and 2025 (xlsx)",
+        "MINEDUCYT Logros y Memorias de Labores (2018-2019 to 2021-2022)",
+        "presidencia.gob.sv tag modalidades-flexibles"
+      ],
+      "candidates": [
+        {
+          "name": "Programa Modalidades Flexibles (over-age secondary completion for young people and adults)",
+          "failed": "publisher_metric",
+          "why": "The only figure found on an official page is a 2019 target of 41,717 young people and adults in 453 sites (mined.gob.sv, 22 October 2019), which is a goal, not delivered enrolment; the SIGES enrolment files do not separate flexible-modality students from ordinary grade 7 to bachillerato enrolment, and the ministry's memorias de labores could not be downloaded (the download manager returned an HTML page)."
+        },
+        {
+          "name": "Adult basic education levels (1er to 3er Nivel de Educación de Adultos) in the 2025 SIGES enrolment file",
+          "failed": "delivered",
+          "why": "Summing the three adult-level columns of MINEDUCYT's 2025 enrolment file gives 1,690 students nationally (500, 424 and 766), too small to evidence national-scale adult learning delivery."
+        },
+        {
+          "name": "INSAFORP vocational training",
+          "failed": "declared_gap",
+          "why": "Already in the corpus as slv-insaforp under public_private_collaboration; one programme, one record."
+        },
+        {
+          "name": "Plan Nacional de Alfabetización",
+          "failed": "publisher_metric",
+          "why": "As in issue 47: no official annual enrolment series found, figures only in press."
+        }
+      ],
+      "note": "El Salvador's adult second-chance provision exists, but its enrolment is not published separately from school enrolment on any page that opened."
+    },
+    {
+      "iso3": "NIC",
+      "indicatorId": "adult_learning_participation",
+      "checkedAt": "2026-10-02",
+      "searched": [
+        "(1) ministry of education adult / second-chance education enrolment statistics",
+        "(2) public employment or training agency trainee counts",
+        "(3) UNESCO GRALE and OECD country notes naming a national programme",
+        "MINED Nicaragua pages: Educación de Jóvenes y Adultos en Nicaragua; Secundaria de Jóvenes y Adultos; matrícula 2026 news",
+        "issue 47 prior rejections: Yo sí puedo, INATEC, UALN"
+      ],
+      "candidates": [
+        {
+          "name": "MINED Educación de Jóvenes y Adultos (literacy, primary and secondary for adults)",
+          "failed": "publisher_metric",
+          "why": "The ministry's programme page gives only historical illiteracy rates (12.9 percent in the 1980s, 4.1 percent claimed for June 2009) and a 2005 baseline of 604,851 illiterate people, no enrolment or graduate count with a reference period; news items give total school enrolment for all modalities (over 1.8 million in 2024) without the adult share."
+        },
+        {
+          "name": "INATEC free technical and vocational training",
+          "failed": "publisher_metric",
+          "why": "As in issue 47; no new official count found."
+        },
+        {
+          "name": "Yo sí puedo literacy campaign (2007-2009)",
+          "failed": "honest_limits",
+          "why": "As in issue 47: the 4.1 percent illiteracy claim is the government's own and UIS literacy data via the World Bank (78 percent in 2005, 87 percent in 2014) do not support it."
+        }
+      ],
+      "note": "Nicaragua's education ministry publishes adult education as narrative and campaign milestones, not as enrolment statistics."
+    },
+    {
+      "iso3": "VEN",
+      "indicatorId": "adult_learning_participation",
+      "checkedAt": "2026-10-02",
+      "searched": [
+        "(1) ministry of education adult / second-chance education enrolment statistics",
+        "(2) public employment or training agency trainee counts",
+        "(3) UNESCO GRALE and OECD country notes naming a national programme",
+        "INCES (Instituto Nacional de Capacitación y Educación Socialista) news site, old and migrated URLs, and its search",
+        "Internet Archive Wayback Machine copy (20 May 2026) of inces.gob.ve/index.php/2024/12/06/inces-supero-con-creces-todas-sus-metas-2024/, read in full",
+        "issue 47 prior rejections: Misión Ribas, Misión Sucre, Misión Robinson"
+      ],
+      "candidates": [
+        {
+          "name": "INCES national training institute, 2024 results",
+          "failed": "publisher_metric",
+          "why": "The archived INCES article of 6 December 2024 survives on the Wayback Machine and says the institute trained 'más de 1.900.000 personas' in 2024, but the figure is one rounded sentence attributed to a director in a news piece about a regional management meeting: there is no table, no definition of who counts as trained, and the publisher has taken the page down (the live URL returns 404). The same article reports 79,620 young people placed in firms by the Trujillo office alone against 3,063 new apprentices in Miranda, which suggests the counts mix enrolments, events and targets. A prose-only figure with no publisher table does not meet the rule, and the surviving 2023 items are targets rather than deliveries."
+        },
+        {
+          "name": "Misión Ribas and Misión Sucre",
+          "failed": "publisher_metric",
+          "why": "As in issue 47; no new official series found."
+        },
+        {
+          "name": "Misión Robinson literacy campaign",
+          "failed": "honest_limits",
+          "why": "As in issue 47: the 2005 illiteracy-free declaration was the government's own and was not certified by UNESCO."
+        }
+      ],
+      "note": "Venezuela stopped publishing most education statistics, and the training institute's only recent national figure is a rounded sentence in a news article it has since removed."
+    },
+    {
+      "iso3": "HTI",
+      "indicatorId": "institutional_responsiveness",
+      "checkedAt": "2026-10-02",
+      "searched": [
+        "(1) official records of a rule or programme changed in response to a shock (crisis response schemes, emergency legislation, reform timestamps)",
+        "(2) programme statistics showing speed of rollout after the change",
+        "(3) IMF/World Bank/OECD reviews of the response",
+        "World Bank documents API for Haiti social protection (Adaptive Social Protection for Increased Resilience Project P174111, PAD of February 2021)",
+        "Ministère des Affaires Sociales et du Travail and FAES statements as reported by HaitiLibre (1 July 2020)"
+      ],
+      "candidates": [
+        {
+          "name": "Government COVID-19 cash transfer through MonCash (FAES/MAST, from April 2020)",
+          "failed": "publisher_metric",
+          "why": "The World Bank PAD for P174111 (paragraph 14) records the announcement of HTG 3,000 for 1.5 million households and its operational problems (missing phone numbers, exclusion of households without phones, weak monitoring) but no delivered count. The only delivered figure found, 146,149 people by 1 July 2020, is a press report of ministry statements (HaitiLibre); no ministry, FAES or international-organization page carries it. Read as a reversal it would be a promise not delivered rather than a loss of a delivered capability."
+        },
+        {
+          "name": "Kore Pep food kits and community restaurants (FAES, 2020)",
+          "failed": "publisher_metric",
+          "why": "Nearly 500,000 food kits and 69,000 meals appear only in the same press report of ministry statements; no official or international-organization series was found."
+        },
+        {
+          "name": "Emergency cash through the Municipal Development and Urban Resilience project CERC (about 38,000 households)",
+          "failed": "institutional",
+          "why": "Delivered through WFP with World Bank finance (PAD paragraph 14), and small; it evidences a donor channel rather than Haitian institutions changing a programme."
+        },
+        {
+          "name": "Kore Lavi and Ti Manman Cheri transfers",
+          "failed": "institutional",
+          "why": "Kore Lavi was USAID-funded and stopped in October 2019, before the shock; the PAD says information on Ti Manman Cheri's scope and effectiveness is largely lacking. Neither shows a rule or programme changed in response to new conditions."
+        }
+      ],
+      "note": "Haiti's documented emergency responses since 2020 were either announced at a scale never confirmed by a publisher or delivered by donors and WFP. Escalating insecurity since 2021 makes later official programme statistics scarcer still."
+    },
+    {
+      "iso3": "NIC",
+      "indicatorId": "institutional_responsiveness",
+      "checkedAt": "2026-10-02",
+      "searched": [
+        "(1) official records of a rule or programme changed in response to a shock (crisis response schemes, emergency legislation, reform timestamps)",
+        "(2) programme statistics showing speed of rollout after the change",
+        "(3) IMF/World Bank/OECD reviews of the response",
+        "IMF Country Report 24/18, Nicaragua 2023 Article IV (paragraph 5, footnote 19 and Annex I, Fiscal Performance During Multiple Recent Shocks)",
+        "IMF COVID-19 country fiscal measures database and policy tracker"
+      ],
+      "candidates": [
+        {
+          "name": "2019 tax reform and 2019 INSS pension reform after the 2018 crisis",
+          "failed": "publisher_metric",
+          "why": "IMF CR 24/18 credits the 2019 tax reform with higher tax buoyancy only in narrative and a chart (paragraph 5; Annex I, paragraph 4) and states that some announced pension reforms were never implemented (footnote 19). No figure isolates what the reforms delivered or how fast, and the IMF URL refuses scripted requests (read via a fetch tool)."
+        },
+        {
+          "name": "INSS reform decree of April 2018, revoked days later after protests",
+          "failed": "delivered",
+          "why": "A decree withdrawn before it operated, amid a violent crackdown; it records a political retreat, not a delivered change with a publisher metric."
+        },
+        {
+          "name": "COVID-19 household support, 2020",
+          "failed": "delivered",
+          "why": "No national emergency transfer or relief programme was found. The IMF describes COVID-19 social spending as under-executed (paragraph 5), and the November 2020 IMF RCF/RFI disbursement is external finance, not a domestic programme change."
+        }
+      ],
+      "note": "Nicaragua's government did not adopt a pandemic emergency programme, and its post-2018 fiscal adjustments are documented only as aggregate revenue trends."
+    },
+    {
+      "iso3": "VEN",
+      "indicatorId": "institutional_responsiveness",
+      "checkedAt": "2026-10-02",
+      "searched": [
+        "(1) official records of a rule or programme changed in response to a shock (crisis response schemes, emergency legislation, reform timestamps)",
+        "(2) programme statistics showing speed of rollout after the change",
+        "(3) IMF/World Bank/OECD reviews of the response",
+        "Ministerio del Poder Popular del Despacho de la Presidencia news on Sistema Patria bonuses (11 November 2020)",
+        "Press and Sistema Patria social-media announcements of the Bono Quedate en Casa (2020)"
+      ],
+      "candidates": [
+        {
+          "name": "Bono Quedate en Casa and other Sistema Patria COVID-19 bonuses (2020)",
+          "failed": "publisher_metric",
+          "why": "The presidency page of 11 November 2020 gives benefit amounts per household size but no beneficiary count; the counts that circulate come from Sistema Patria social-media posts and press, and registration figures (around 18 million) are disputed and are not payments."
+        },
+        {
+          "name": "CLAP subsidised food boxes (from 2016)",
+          "failed": "publisher_metric",
+          "why": "No official, auditable national distribution series with a reference period was found; household figures appear in speeches and press only."
+        },
+        {
+          "name": "2018 Programa de Recuperacion Economica and the bolivar soberano redenomination",
+          "failed": "honest_limits",
+          "why": "A rule change in response to hyperinflation, but the redenomination did not stop it, and an honest limits paragraph (a currency relabelling with no fiscal or monetary anchor) destroys any claim of responsive delivery."
+        }
+      ],
+      "note": "Venezuela's emergency transfers run through Sistema Patria, which publishes amounts and dates but not beneficiary counts on any official page found."
+    },
+    {
+      "iso3": "PAN",
+      "indicatorId": "public_private_collaboration",
+      "checkedAt": "2026-10-02",
+      "searched": [
+        "(1) national PPP unit / concessions agency portfolio reports",
+        "(2) government programme reports for jointly delivered public-private initiatives (payments, digital ID, training, broadband)",
+        "(3) World Bank PPI/IDB/OECD evaluations naming a national programme",
+        "Ente Rector del Régimen APP, Radar APP and project pages (enterector.gob.pa/radar-app-regimen-app-panama/)",
+        "Ente Rector annual report on APP contract execution, fiscal 2025 (enterector.gob.pa, Informe-Anual-Contratos-APP-2025.pdf)",
+        "Agencia Panamá Pacífico home page (app.gob.pa)",
+        "Empresa Nacional de Autopista, Informe ENA 2014-2019 (ena.com.pa)"
+      ],
+      "candidates": [
+        {
+          "name": "Régimen de Asociación Público-Privada under Law 93 of 2019 (Carretera Panamericana Este and Oeste contracts)",
+          "failed": "delivered",
+          "why": "The Radar APP lists two contracts in execution and none completed. The Ente Rector's annual report for 2025 gives the Panamericana Este contract (246.2 km, order to proceed 10 April 2024) a physical works progress of 5.14 percent at December 2025; the Panamericana Oeste contract (192 km) only formed its trust in 2026. Nothing has been delivered at scale yet."
+        },
+        {
+          "name": "Área Económica Especial Panamá Pacífico (agency plus master developer)",
+          "failed": "publisher_metric",
+          "why": "The agency's home page gives '+410' companies, '+10,000' direct jobs and '+$700M' investment 'hasta la fecha', with no reference period or annual series. It is also a special economic zone, the kind of investment-promotion regime earlier batches rejected as declared_gap (NIC free trade zones, ETH industrial parks)."
+        },
+        {
+          "name": "Corredor Norte and Corredor Sur toll-road concessions, bought back by the state through ENA in 2011 (candidate reversal)",
+          "failed": "publisher_metric",
+          "why": "ENA's 2014-2019 report states that its mission was to acquire the concession companies and gives lengths (19.8 km and 22.5 km), but no purchase price, contract dates or performance of the private phase; the buyback amounts appear only in press and trade press. About 40 km of urban toll road is also not a national programme."
+        }
+      ],
+      "note": "Earlier batches rejected PAN Metro Line 3 and Ciudad de la Salud under other columns; neither is a public-private collaboration case."
+    },
+    {
+      "iso3": "ETH",
+      "indicatorId": "public_private_collaboration",
+      "checkedAt": "2026-10-02",
+      "searched": [
+        "(1) national PPP unit / concessions agency portfolio reports",
+        "(2) government programme reports for jointly delivered public-private initiatives (payments, digital ID, training, broadband)",
+        "(3) World Bank PPI/IDB/OECD evaluations naming a national programme",
+        "Ministry of Finance PPP programme page and PPP Directorate General project list (mofed.gov.et/programmes-projects/ppp/)",
+        "World Bank PPP country profile for Ethiopia (ppp.worldbank.org, returned 403 to script)",
+        "Ethiopia Commodity Exchange website (ecx.com.et, connection refused)"
+      ],
+      "candidates": [
+        {
+          "name": "National PPP programme under Proclamation 1076/2018 (PPP Directorate General)",
+          "failed": "delivered",
+          "why": "The Ministry of Finance page lists a pipeline of eight solar plants, three expressway sections and six hydropower projects with approximate costs only and no project in operation; the Corbetti and Tulu Moye geothermal PPAs signed in 2015 are reported as never reaching financial close."
+        },
+        {
+          "name": "Ethiopia Commodity Exchange (state exchange with private members)",
+          "failed": "publisher_metric",
+          "why": "ECX's website refused connections on 2026-10-02; annual volumes (214,000 tons and Birr 50.27 billion in 2024/25) were found only in press. The exchange is also state-owned and closer to a public marketplace than to joint delivery."
+        },
+        {
+          "name": "Telebirr mobile money",
+          "failed": "declared_gap",
+          "why": "Telebirr is a product of state-owned Ethio Telecom. It is a public enterprise service, not a public-private collaboration."
+        }
+      ],
+      "note": "Industrial parks (IPDC) were already rejected as declared_gap in an earlier batch and were not re-proposed."
+    },
+    {
+      "iso3": "HTI",
+      "indicatorId": "public_private_collaboration",
+      "checkedAt": "2026-10-02",
+      "searched": [
+        "(1) national PPP unit / concessions agency portfolio reports",
+        "(2) government programme reports for jointly delivered public-private initiatives (payments, digital ID, training, broadband)",
+        "(3) World Bank PPI/IDB/OECD evaluations naming a national programme",
+        "Unité Technique d'Exécution (UTE) Caracol pages, as surfaced by search",
+        "IDB project pages on the Caracol Industrial Park, as surfaced by search",
+        "Lead list from the batch brief for this cell"
+      ],
+      "candidates": [
+        {
+          "name": "Caracol Industrial Park (Haitian state, IDB, US government and Sae-A)",
+          "failed": "declared_gap",
+          "why": "A government-built export park leased to a garment anchor tenant is investment promotion, the reading earlier batches applied to ETH industrial parks and NIC free trade zones. It is also donor-financed (IDB and US funds), so it would fail the institutional test as well, and no official source opened gives an employment series."
+        },
+        {
+          "name": "Haiti PPP law (2017) and its unit",
+          "failed": "delivered",
+          "why": "No PPP contract signed under the law and operating at national scale was found."
+        },
+        {
+          "name": "Natcom (Viettel and the Haitian state) telecom joint venture",
+          "failed": "publisher_metric",
+          "why": "No official or international-organization source with subscriber or coverage figures and a reference period was found; figures circulate only through the operator and the press."
+        }
+      ],
+      "note": "Haiti's collapse of state capacity since 2021 leaves no documented national public-private delivery this protocol can carry."
+    },
+    {
+      "iso3": "NIC",
+      "indicatorId": "public_private_collaboration",
+      "checkedAt": "2026-10-02",
+      "searched": [
+        "(1) national PPP unit / concessions agency portfolio reports",
+        "(2) government programme reports for jointly delivered public-private initiatives (payments, digital ID, training, broadband)",
+        "(3) World Bank PPI/IDB/OECD evaluations naming a national programme",
+        "La Gaceta, Diario Oficial, and the Asamblea Nacional news site, as surfaced by search",
+        "CEPAL Plataforma Urbana entry for Law 935 of 2016",
+        "Lead list from the batch brief and earlier batch rejections (issue 47)"
+      ],
+      "candidates": [
+        {
+          "name": "Public-private partnership framework, Law 935 of 2016",
+          "failed": "delivered",
+          "why": "Rejected in an earlier batch; this search found no project delivered under the law either."
+        },
+        {
+          "name": "Government, COSEP and labour 'dialogue and consensus' model, ended 2018 and COSEP dissolved 2023 (candidate reversal)",
+          "failed": "publisher_metric",
+          "why": "Rejected in an earlier batch for want of a published figure; no new number was found. The dissolution is an act, and a count of cancelled chambers would not measure the scale of the collaboration that was lost."
+        },
+        {
+          "name": "Law 1219 of 2024 on 'Alianzas de Asociación' for non-profits",
+          "failed": "declared_gap",
+          "why": "It forces NGOs to run programmes in partnership with state bodies. That is control of civil society, not public-private collaboration with firms."
+        },
+        {
+          "name": "Free trade zones (zonas francas)",
+          "failed": "declared_gap",
+          "why": "Rejected in an earlier batch as an investment-promotion regime; not re-proposed."
+        }
+      ]
+    },
+    {
+      "iso3": "CUB",
+      "indicatorId": "public_private_collaboration",
+      "checkedAt": "2026-10-02",
+      "searched": [
+        "(1) national PPP unit / concessions agency portfolio reports",
+        "(2) government programme reports for jointly delivered public-private initiatives (payments, digital ID, training, broadband)",
+        "(3) World Bank PPI/IDB/OECD evaluations naming a national programme",
+        "Ministerio de Economía y Planificación (mep.gob.cu) pages on new economic actors, as surfaced by search",
+        "Lead list from the batch brief and earlier batch rejections (issue 47)"
+      ],
+      "candidates": [
+        {
+          "name": "Private mipymes authorised since September 2021",
+          "failed": "declared_gap",
+          "why": "MEP reports about 11,000 to 12,700 approved private micro, small and medium firms. Their legalisation is a liberalisation of private enterprise, not joint public-private delivery of a national objective; linkages with state firms have no published metric."
+        },
+        {
+          "name": "Zona Especial de Desarrollo Mariel",
+          "failed": "declared_gap",
+          "why": "Rejected in an earlier batch as an investment-promotion regime; not re-proposed."
+        },
+        {
+          "name": "Joint ventures with foreign capital under Law 118 of 2014",
+          "failed": "publisher_metric",
+          "why": "No official series of operating joint ventures with a reference period was found, and foreign direct investment is closer to investment promotion than to collaboration with domestic firms on a shared goal."
+        }
+      ]
+    },
+    {
+      "iso3": "VEN",
+      "indicatorId": "public_private_collaboration",
+      "checkedAt": "2026-10-02",
+      "searched": [
+        "(1) national PPP unit / concessions agency portfolio reports",
+        "(2) government programme reports for jointly delivered public-private initiatives (payments, digital ID, training, broadband)",
+        "(3) World Bank PPI/IDB/OECD evaluations naming a national programme",
+        "Banco Central de Venezuela payment-channel statistics (bcv.org.ve/sistemas-de-pago/aspectos-legales/canales-y-servicios-de-pago, file estadisticas_canales_y_servicios_de_pago.xls)",
+        "BCV official notice recognising payment systems (aviso_oficial_sistemas_pago.pdf)",
+        "Lead list from the batch brief and earlier batch rejections (issue 47)"
+      ],
+      "candidates": [
+        {
+          "name": "Pago Móvil interbank mobile payments",
+          "failed": "institutional",
+          "why": "The BCV series is real and large: summing its monthly rows gives 5.39 billion Pago Móvil operations in 2025, 38 percent of all banking-channel transactions, up from 50 million in 2018. But no official document opened shows the BCV designing or mandating the scheme; its visible role is statistics and fee caps (Gaceta 41.247, September 2017, known only through press). Adoption was driven by the collapse of cash under hyperinflation, which is a condition that happened to the country, not an institutional move."
+        },
+        {
+          "name": "PDVSA empresas mixtas (oil joint ventures) and the end of the Apertura Petrolera associations (candidate reversal)",
+          "failed": "declared_gap",
+          "why": "The measurable outcome is oil output, which an earlier batch already ruled is not a declared gap construct. PDVSA has published no joint-venture production series since about 2016, so it would also fail publisher_metric."
+        }
+      ]
+    },
+    {
+      "iso3": "ARE",
+      "indicatorId": "government_foresight_capacity",
+      "checkedAt": "2026-10-02",
+      "searched": [
+        "OECD Observatory of Public Sector Innovation and OECD strategic foresight country material",
+        "Centre-of-government or planning ministry foresight unit and its own reports",
+        "Parliamentary futures committees and technology assessment offices",
+        "UAE Cabinet structure PDFs on u.ae (2017-2020 and 5 July 2020)",
+        "Government Development and the Future Office pages (gdf.gov.ae), read in a browser"
+      ],
+      "candidates": [
+        {
+          "name": "Ministry of Cabinet Affairs and the Future, future mandate said to be dropped in 2020 (reversal lead)",
+          "failed": "delivered",
+          "why": "The premise is false at source: the 5 July 2020 Cabinet structure on u.ae still lists a Minister of Cabinet Affairs and the Future and adds a Minister of State for Government Development and the Future, so there is no dismantling to record, and the ministry publishes no dated foresight output figure."
+        },
+        {
+          "name": "UAE Future Network (Government Development and the Future Office): more than 150 government leaders from 91 entities",
+          "failed": "declared_gap",
+          "why": "The undated page describes future design, innovation projects and partnerships and never foresight; the membership count cannot be separated from innovation work, so it does not evidence the foresight construct and shows no delivered foresight output."
+        },
+        {
+          "name": "Future Foresight Strategy and the Ministry of Cabinet Affairs foresight platform (2017)",
+          "failed": "delivered",
+          "why": "A strategy and a platform launch, with no figure for a delivered output and reference period."
+        },
+        {
+          "name": "Hosting the WEF Annual Meeting of the Global Future Councils (2016)",
+          "failed": "institutional",
+          "why": "A World Economic Forum event the government hosted, not a UAE institution's foresight function."
+        },
+        {
+          "name": "Future Foresight Training Programme graduates (about 120)",
+          "failed": "publisher_metric",
+          "why": "The figure appears only in press, never at an official publisher with a reference period."
+        },
+        {
+          "name": "Future Fit Seal and Future 100",
+          "failed": "publisher_metric",
+          "why": "Awards and lists, which the inclusion rule disqualifies as a metric."
+        }
+      ],
+      "note": "Re-checked on 2026-10-02 after the batch-5 note rested on a reversal premise that the Cabinet structure contradicts. Dubai Future Foundation is emirate-level and was not considered."
     }
   ]
 }
