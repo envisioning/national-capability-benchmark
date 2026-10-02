@@ -8,12 +8,12 @@
           "type": "string"
         },
         "role": {
+          "default": "capability",
           "type": "string",
           "enum": [
             "capability",
             "condition"
-          ],
-          "default": "capability"
+          ]
         },
         "values": {
           "type": "array",
@@ -70,6 +70,7 @@
       },
       "required": [
         "indicatorId",
+        "role",
         "values"
       ],
       "additionalProperties": false

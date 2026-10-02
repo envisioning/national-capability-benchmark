@@ -1,4 +1,4 @@
-import { zodToJsonSchema } from 'zod-to-json-schema'
+import { z } from 'zod'
 import {
   COUNTRY_ISO3,
   DATASET_VERSION,
@@ -24,20 +24,39 @@ import {
  * See docs/DECISIONS.md D37.
  */
 
+/**
+ * One shape as a draft-07 JSON Schema, wrapped under `definitions` with a root
+ * `$ref`: the layout the files carried when zod-to-json-schema wrote them, so a
+ * reader that resolved `#/definitions/<Name>` keeps working. Zod 4 writes the
+ * body. Its `int()` is a safe integer and the generator states those bounds on
+ * every integer; they are dropped because they say nothing a reader needs.
+ */
+function namedJsonSchema(schema: z.ZodType, name: string): object {
+  const { $schema, ...body } = z.toJSONSchema(schema, {
+    target: 'draft-7',
+    override: ({ jsonSchema }) => {
+      if (jsonSchema.type !== 'integer') return
+      if (jsonSchema.minimum === Number.MIN_SAFE_INTEGER) delete jsonSchema.minimum
+      if (jsonSchema.maximum === Number.MAX_SAFE_INTEGER) delete jsonSchema.maximum
+    },
+  })
+  return { $ref: `#/definitions/${name}`, definitions: { [name]: body }, $schema }
+}
+
 /** JSON Schema per published shape, keyed by file name under data/out/schema. */
 export function jsonSchemas(): Record<string, object> {
   return {
-    'index.schema.json': zodToJsonSchema(IndexFile, 'IndexFile'),
-    'country.schema.json': zodToJsonSchema(CountryFile, 'CountryFile'),
-    'indicator.schema.json': zodToJsonSchema(IndicatorAcrossCountries, 'IndicatorAcrossCountries'),
-    'subnational.schema.json': zodToJsonSchema(SubnationalFile, 'SubnationalFile'),
-    'subnational-index.schema.json': zodToJsonSchema(SubnationalIndexFile, 'SubnationalIndexFile'),
+    'index.schema.json': namedJsonSchema(IndexFile, 'IndexFile'),
+    'country.schema.json': namedJsonSchema(CountryFile, 'CountryFile'),
+    'indicator.schema.json': namedJsonSchema(IndicatorAcrossCountries, 'IndicatorAcrossCountries'),
+    'subnational.schema.json': namedJsonSchema(SubnationalFile, 'SubnationalFile'),
+    'subnational-index.schema.json': namedJsonSchema(SubnationalIndexFile, 'SubnationalIndexFile'),
     /* The factor test is one field of diagnostics.json, which has no schema
      * of its own yet, so this one describes `factorStructure` alone. D137. */
-    'factor-structure.schema.json': zodToJsonSchema(FactorStructure, 'FactorStructure'),
-    'factor-history.schema.json': zodToJsonSchema(FactorHistoryFile, 'FactorHistoryFile'),
+    'factor-structure.schema.json': namedJsonSchema(FactorStructure, 'FactorStructure'),
+    'factor-history.schema.json': namedJsonSchema(FactorHistoryFile, 'FactorHistoryFile'),
     /* Likewise `residualStructure`, the aggregate tests on what is left after income. D138. */
-    'residual-structure.schema.json': zodToJsonSchema(ResidualStructure, 'ResidualStructure'),
+    'residual-structure.schema.json': namedJsonSchema(ResidualStructure, 'ResidualStructure'),
   }
 }
 

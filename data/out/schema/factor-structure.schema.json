@@ -48,7 +48,18 @@
                       "missing": {
                         "type": "array",
                         "items": {
-                          "$ref": "#/definitions/FactorStructure/properties/complete/anyOf/0/properties/dimensions/items"
+                          "type": "string",
+                          "enum": [
+                            "anticipation",
+                            "agency",
+                            "coordination",
+                            "trust",
+                            "learning",
+                            "experimentation",
+                            "adaptability",
+                            "building",
+                            "shared_purpose"
+                          ]
                         }
                       }
                     },
@@ -74,7 +85,18 @@
                     "type": "object",
                     "properties": {
                       "dimension": {
-                        "$ref": "#/definitions/FactorStructure/properties/complete/anyOf/0/properties/dimensions/items"
+                        "type": "string",
+                        "enum": [
+                          "anticipation",
+                          "agency",
+                          "coordination",
+                          "trust",
+                          "learning",
+                          "experimentation",
+                          "adaptability",
+                          "building",
+                          "shared_purpose"
+                        ]
                       },
                       "loading": {
                         "type": "number"
@@ -159,7 +181,165 @@
         "nearFull": {
           "anyOf": [
             {
-              "$ref": "#/definitions/FactorStructure/properties/complete/anyOf/0"
+              "type": "object",
+              "properties": {
+                "dimensions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "anticipation",
+                      "agency",
+                      "coordination",
+                      "trust",
+                      "learning",
+                      "experimentation",
+                      "adaptability",
+                      "building",
+                      "shared_purpose"
+                    ]
+                  }
+                },
+                "countries": {
+                  "type": "integer"
+                },
+                "dropped": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "iso3": {
+                        "type": "string",
+                        "minLength": 3,
+                        "maxLength": 3
+                      },
+                      "missing": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "enum": [
+                            "anticipation",
+                            "agency",
+                            "coordination",
+                            "trust",
+                            "learning",
+                            "experimentation",
+                            "adaptability",
+                            "building",
+                            "shared_purpose"
+                          ]
+                        }
+                      }
+                    },
+                    "required": [
+                      "iso3",
+                      "missing"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "eigenvalues": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "firstFactorShare": {
+                  "type": "number"
+                },
+                "loadings": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "dimension": {
+                        "type": "string",
+                        "enum": [
+                          "anticipation",
+                          "agency",
+                          "coordination",
+                          "trust",
+                          "learning",
+                          "experimentation",
+                          "adaptability",
+                          "building",
+                          "shared_purpose"
+                        ]
+                      },
+                      "loading": {
+                        "type": "number"
+                      }
+                    },
+                    "required": [
+                      "dimension",
+                      "loading"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "income": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "r": {
+                          "type": "number"
+                        },
+                        "rSquared": {
+                          "type": "number"
+                        },
+                        "n": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "r",
+                        "rSquared",
+                        "n"
+                      ],
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "chance": {
+                  "type": "object",
+                  "properties": {
+                    "draws": {
+                      "type": "integer"
+                    },
+                    "seed": {
+                      "type": "integer"
+                    },
+                    "mean": {
+                      "type": "number"
+                    },
+                    "p95": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "draws",
+                    "seed",
+                    "mean",
+                    "p95"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "dimensions",
+                "countries",
+                "dropped",
+                "eigenvalues",
+                "firstFactorShare",
+                "loadings",
+                "income",
+                "chance"
+              ],
+              "additionalProperties": false
             },
             {
               "type": "null"
