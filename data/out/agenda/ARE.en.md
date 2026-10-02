@@ -13,7 +13,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Coordination | 52 | 0.23 (very thin) | no trend |
 | Trust | 46.1 | 0.16 (very thin) | no trend |
 | Learning | 73.6 | 0.32 (thin) | no trend |
-| Experimentation | 5.2 | 0.27 (thin) | +0.7 over 10 years using 3 indicators |
+| Experimentation | 14.6 | 0.33 (thin) | +0.7 over 10 years using 3 indicators |
 | Adaptability | 68.7 | 0.57 (usable) | no trend |
 | Building | 37.6 | 0.55 (usable) | +5 over 10 years using 3 indicators |
 | Shared Purpose | 48.4 | 0.28 (thin) | no trend |
@@ -61,14 +61,6 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
-### Experimentation: confidence 0.27, thin
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 3 observed indicators.
-- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
-- Rejected datasets: Business share of R&D.
-
 ### Shared Purpose: confidence 0.28, thin
 
 To what extent can people imagine themselves as participants in a common project?
@@ -83,6 +75,14 @@ How effectively does the country acquire, distribute, and update knowledge?
 
 - Uses 2 observed indicators.
 - Missing indicators: Adult learning participation.
+
+### Experimentation: confidence 0.33, thin
+
+How easily can new approaches be attempted, tested, abandoned, and improved?
+
+- Uses 4 observed indicators.
+- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
+- Rejected datasets: Business share of R&D.
 
 ### Agency: confidence 0.35, thin
 

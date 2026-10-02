@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T14:17:50.661Z",
+  "generatedAt": "2026-10-02T14:32:31.398Z",
   "gdpSeries": "NY.GDP.PCAP.PP.KD",
   "income": [
     {
@@ -291,8 +291,8 @@
     },
     {
       "dimension": "experimentation",
-      "pearson": 0.572,
-      "spearman": 0.726,
+      "pearson": 0.651,
+      "spearman": 0.801,
       "n": 51
     },
     {
@@ -334,6 +334,12 @@
       "n": 52
     },
     {
+      "a": "learning",
+      "b": "experimentation",
+      "r": 0.642,
+      "n": 52
+    },
+    {
       "a": "trust",
       "b": "learning",
       "r": 0.636,
@@ -353,6 +359,12 @@
     },
     {
       "a": "anticipation",
+      "b": "experimentation",
+      "r": 0.608,
+      "n": 52
+    },
+    {
+      "a": "anticipation",
       "b": "agency",
       "r": 0.588,
       "n": 52
@@ -360,25 +372,25 @@
     {
       "a": "experimentation",
       "b": "building",
-      "r": 0.535,
+      "r": 0.571,
       "n": 53
-    },
-    {
-      "a": "learning",
-      "b": "experimentation",
-      "r": 0.528,
-      "n": 52
-    },
-    {
-      "a": "anticipation",
-      "b": "experimentation",
-      "r": 0.527,
-      "n": 52
     },
     {
       "a": "coordination",
       "b": "learning",
       "r": 0.502,
+      "n": 52
+    },
+    {
+      "a": "trust",
+      "b": "experimentation",
+      "r": 0.495,
+      "n": 52
+    },
+    {
+      "a": "agency",
+      "b": "experimentation",
+      "r": 0.467,
       "n": 52
     },
     {
@@ -394,9 +406,9 @@
       "n": 53
     },
     {
-      "a": "trust",
+      "a": "coordination",
       "b": "experimentation",
-      "r": 0.444,
+      "r": 0.422,
       "n": 52
     },
     {
@@ -430,21 +442,9 @@
       "n": 52
     },
     {
-      "a": "agency",
-      "b": "experimentation",
-      "r": 0.381,
-      "n": 52
-    },
-    {
       "a": "anticipation",
       "b": "adaptability",
       "r": 0.376,
-      "n": 52
-    },
-    {
-      "a": "coordination",
-      "b": "experimentation",
-      "r": 0.369,
       "n": 52
     },
     {
@@ -490,16 +490,16 @@
       "n": 52
     },
     {
+      "a": "experimentation",
+      "b": "adaptability",
+      "r": 0.283,
+      "n": 53
+    },
+    {
       "a": "learning",
       "b": "adaptability",
       "r": 0.275,
       "n": 52
-    },
-    {
-      "a": "experimentation",
-      "b": "adaptability",
-      "r": 0.242,
-      "n": 53
     },
     {
       "a": "adaptability",
@@ -520,16 +520,16 @@
       "n": 51
     },
     {
-      "a": "experimentation",
-      "b": "shared_purpose",
-      "r": -0.058,
-      "n": 51
-    },
-    {
       "a": "trust",
       "b": "adaptability",
       "r": 0.047,
       "n": 52
+    },
+    {
+      "a": "experimentation",
+      "b": "shared_purpose",
+      "r": 0.01,
+      "n": 51
     }
   ],
   "duplicateDimensionCandidates": [],
@@ -569,41 +569,41 @@
         }
       ],
       "eigenvalues": [
-        4.361,
-        1.316,
-        1.085,
-        0.769,
-        0.43,
-        0.35,
-        0.306,
-        0.255,
-        0.128
+        4.479,
+        1.296,
+        1.047,
+        0.772,
+        0.429,
+        0.333,
+        0.287,
+        0.226,
+        0.13
       ],
-      "firstFactorShare": 0.485,
+      "firstFactorShare": 0.498,
       "loadings": [
         {
           "dimension": "anticipation",
-          "loading": 0.912
+          "loading": 0.911
         },
         {
           "dimension": "agency",
-          "loading": 0.648
+          "loading": 0.653
         },
         {
           "dimension": "coordination",
-          "loading": 0.779
+          "loading": 0.773
         },
         {
           "dimension": "trust",
-          "loading": 0.767
+          "loading": 0.763
         },
         {
           "dimension": "learning",
-          "loading": 0.838
+          "loading": 0.846
         },
         {
           "dimension": "experimentation",
-          "loading": 0.639
+          "loading": 0.727
         },
         {
           "dimension": "adaptability",
@@ -611,16 +611,16 @@
         },
         {
           "dimension": "building",
-          "loading": 0.617
+          "loading": 0.618
         },
         {
           "dimension": "shared_purpose",
-          "loading": 0.493
+          "loading": 0.489
         }
       ],
       "income": {
-        "r": 0.845,
-        "rSquared": 0.714,
+        "r": 0.847,
+        "rSquared": 0.717,
         "n": 50
       },
       "chance": {
@@ -638,25 +638,25 @@
     "structure": {
       "countries": 50,
       "eigenvalues": [
-        2.567,
-        1.603,
-        1.307,
-        1.236,
-        0.657,
-        0.543,
-        0.501,
-        0.339,
-        0.247
+        2.581,
+        1.633,
+        1.343,
+        1.209,
+        0.649,
+        0.535,
+        0.468,
+        0.332,
+        0.249
       ],
-      "firstFactorShare": 0.285,
+      "firstFactorShare": 0.287,
       "loadings": [
         {
           "dimension": "anticipation",
-          "loading": 0.828
+          "loading": 0.824
         },
         {
           "dimension": "agency",
-          "loading": 0.342
+          "loading": 0.349
         },
         {
           "dimension": "coordination",
@@ -664,27 +664,27 @@
         },
         {
           "dimension": "trust",
-          "loading": 0.683
+          "loading": 0.685
         },
         {
           "dimension": "learning",
-          "loading": 0.65
+          "loading": 0.667
         },
         {
           "dimension": "experimentation",
-          "loading": 0.053
+          "loading": 0.172
         },
         {
           "dimension": "adaptability",
-          "loading": -0.294
+          "loading": -0.284
         },
         {
           "dimension": "building",
-          "loading": -0.163
+          "loading": -0.128
         },
         {
           "dimension": "shared_purpose",
-          "loading": 0.606
+          "loading": 0.588
         }
       ],
       "chance": {
@@ -697,40 +697,40 @@
         "draws": 2000,
         "seed": 20261002,
         "mean": 0.19,
-        "p95": 0.215
+        "p95": 0.216
       },
       "reading": "structure"
     },
     "peers": {
       "countries": 50,
       "peerCount": 10,
-      "observedMean": 1.547,
+      "observedMean": 1.534,
       "incomeNull": {
         "draws": 2000,
         "seed": 20261004,
-        "mean": 1.562,
-        "p5": 1.488,
-        "p95": 1.631
+        "mean": 1.546,
+        "p5": 1.469,
+        "p95": 1.617
       },
-      "shapeShare": 0.28,
+      "shapeShare": 0.278,
       "shapeNull": {
         "draws": 2000,
         "seed": 20261003,
-        "mean": 0.203,
+        "mean": 0.204,
         "p5": 0.18,
-        "p95": 0.232
+        "p95": 0.233
       },
       "noiseFloor": {
         "draws": 2000,
         "seed": 20261003,
         "mean": 1.779,
-        "p5": 1.685,
-        "p95": 1.876
+        "p5": 1.683,
+        "p95": 1.877
       },
       "shareBeyond": 0.06,
       "shareNull": {
         "mean": 0.05,
-        "p95": 0.1
+        "p95": 0.08
       },
       "reading": "differ"
     },
@@ -761,9 +761,10 @@
           "7.7.0",
           "7.7.1",
           "7.8.0",
-          "8.0.0"
+          "8.0.0",
+          "8.1.0"
         ],
-        "pairs": 22,
+        "pairs": 23,
         "perDimension": [
           {
             "dimension": "anticipation",
@@ -802,8 +803,8 @@
           },
           {
             "dimension": "experimentation",
-            "pairs": 3,
-            "mean": 0.963,
+            "pairs": 4,
+            "mean": 0.959,
             "min": 0.912,
             "minCountries": 50
           },
@@ -866,8 +867,8 @@
           {
             "dimension": "experimentation",
             "n": 51,
-            "maxSlopeShiftSe": 0.588,
-            "maxResidualShiftSd": 0.192
+            "maxSlopeShiftSe": 0.492,
+            "maxResidualShiftSd": 0.161
           },
           {
             "dimension": "adaptability",
@@ -893,9 +894,9 @@
     },
     "incomeShare": {
       "countries": 50,
-      "mean": 0.302,
-      "median": 0.429,
-      "pooled": 0.38,
+      "mean": 0.312,
+      "median": 0.455,
+      "pooled": 0.401,
       "reading": "part"
     },
     "weakClaim": "holds"
@@ -923,6 +924,14 @@
       "measurementClass": "C",
       "r": 0.765,
       "wealthProxyPrior": 0.25,
+      "flaggedAsWealthProxy": true
+    },
+    {
+      "indicatorId": "new_repositories_per_million",
+      "dimension": "experimentation",
+      "measurementClass": "O",
+      "r": 0.701,
+      "wealthProxyPrior": 0.7,
       "flaggedAsWealthProxy": true
     },
     {
@@ -1223,6 +1232,13 @@
       "delta": 0.092
     },
     {
+      "indicatorId": "new_repositories_per_million",
+      "dimension": "experimentation",
+      "dimensionR": 0.651,
+      "dimensionRWithout": 0.571,
+      "delta": 0.08
+    },
+    {
       "indicatorId": "statistical_performance",
       "dimension": "anticipation",
       "dimensionR": 0.872,
@@ -1258,13 +1274,6 @@
       "delta": 0.045
     },
     {
-      "indicatorId": "resident_patents_per_million",
-      "dimension": "experimentation",
-      "dimensionR": 0.571,
-      "dimensionRWithout": 0.528,
-      "delta": 0.043
-    },
-    {
       "indicatorId": "civil_society_strength",
       "dimension": "coordination",
       "dimensionR": 0.558,
@@ -1286,27 +1295,6 @@
       "delta": 0.036
     },
     {
-      "indicatorId": "resident_trademarks_per_million",
-      "dimension": "experimentation",
-      "dimensionR": 0.571,
-      "dimensionRWithout": 0.556,
-      "delta": 0.015
-    },
-    {
-      "indicatorId": "failure_tolerance",
-      "dimension": "experimentation",
-      "dimensionR": 0.571,
-      "dimensionRWithout": 0.561,
-      "delta": 0.011
-    },
-    {
-      "indicatorId": "resident_industrial_designs_per_million",
-      "dimension": "experimentation",
-      "dimensionR": 0.571,
-      "dimensionRWithout": 0.565,
-      "delta": 0.007
-    },
-    {
       "indicatorId": "new_business_density",
       "dimension": "agency",
       "dimensionR": 0.579,
@@ -1314,10 +1302,38 @@
       "delta": 0.005
     },
     {
+      "indicatorId": "resident_trademarks_per_million",
+      "dimension": "experimentation",
+      "dimensionR": 0.651,
+      "dimensionRWithout": 0.65,
+      "delta": 0.002
+    },
+    {
+      "indicatorId": "failure_tolerance",
+      "dimension": "experimentation",
+      "dimensionR": 0.651,
+      "dimensionRWithout": 0.652,
+      "delta": -0.001
+    },
+    {
+      "indicatorId": "resident_patents_per_million",
+      "dimension": "experimentation",
+      "dimensionR": 0.651,
+      "dimensionRWithout": 0.654,
+      "delta": -0.002
+    },
+    {
       "indicatorId": "early_stage_entrepreneurial_activity",
       "dimension": "experimentation",
-      "dimensionR": 0.571,
-      "dimensionRWithout": 0.582,
+      "dimensionR": 0.651,
+      "dimensionRWithout": 0.655,
+      "delta": -0.004
+    },
+    {
+      "indicatorId": "resident_industrial_designs_per_million",
+      "dimension": "experimentation",
+      "dimensionR": 0.651,
+      "dimensionRWithout": 0.662,
       "delta": -0.01
     },
     {
@@ -1469,19 +1485,19 @@
     },
     {
       "dimension": "experimentation",
-      "indicatorsDefined": 9,
-      "indicatorsObserved": 5,
+      "indicatorsDefined": 10,
+      "indicatorsObserved": 6,
       "gaps": 3,
       "retired": 1,
-      "meanCoverage": 0.439,
-      "meanConfidence": 0.305,
+      "meanCoverage": 0.497,
+      "meanConfidence": 0.364,
       "classMix": {
         "C": 4,
         "I": 1,
-        "O": 3,
+        "O": 4,
         "P": 1
       },
-      "subjectivityShare": 0.556
+      "subjectivityShare": 0.5
     },
     {
       "dimension": "adaptability",
@@ -2141,6 +2157,22 @@
         "lowDiscrimination": false
       },
       {
+        "indicatorId": "new_repositories_per_million",
+        "dimension": "experimentation",
+        "countries": 0,
+        "years": 0,
+        "firstYear": null,
+        "lastYear": null,
+        "firstSpread": null,
+        "lastSpread": null,
+        "changeShare": null,
+        "spearman": null,
+        "carriedForwardCells": 0,
+        "clampedCells": 0,
+        "fading": false,
+        "lowDiscrimination": false
+      },
+      {
         "indicatorId": "early_stage_entrepreneurial_activity",
         "dimension": "experimentation",
         "countries": 0,
@@ -2274,7 +2306,8 @@
     "excluded": [
       "human_capital_index",
       "sci_articles_per_million",
-      "statistical_performance"
+      "statistical_performance",
+      "new_repositories_per_million"
     ],
     "dimensionsEmptied": [
       "anticipation"
@@ -2302,7 +2335,7 @@
       },
       {
         "dimension": "experimentation",
-        "meanAbsShift": 0
+        "meanAbsShift": 3.78
       },
       {
         "dimension": "adaptability",
@@ -2326,137 +2359,137 @@
       {
         "iso3": "USA",
         "country": "United States",
-        "meanAbsShift": 0.31
+        "meanAbsShift": 0.49
       },
       {
         "iso3": "NLD",
         "country": "Netherlands",
-        "meanAbsShift": 0.45
+        "meanAbsShift": 1.96
       },
       {
         "iso3": "CHE",
         "country": "Switzerland",
-        "meanAbsShift": 0.19
+        "meanAbsShift": 0.56
       },
       {
         "iso3": "SGP",
         "country": "Singapore",
-        "meanAbsShift": 0.99
+        "meanAbsShift": 2.11
       },
       {
         "iso3": "KOR",
         "country": "South Korea",
-        "meanAbsShift": 2.05
+        "meanAbsShift": 2.98
       },
       {
         "iso3": "EST",
         "country": "Estonia",
-        "meanAbsShift": 0.31
+        "meanAbsShift": 1.65
       },
       {
         "iso3": "IND",
         "country": "India",
-        "meanAbsShift": 0.38
+        "meanAbsShift": 0.51
       },
       {
         "iso3": "CHL",
         "country": "Chile",
-        "meanAbsShift": 0.39
+        "meanAbsShift": 0.74
       },
       {
         "iso3": "ZAF",
         "country": "South Africa",
-        "meanAbsShift": 1.09
+        "meanAbsShift": 1.26
       },
       {
         "iso3": "MEX",
         "country": "Mexico",
-        "meanAbsShift": 0.46
+        "meanAbsShift": 0.85
       },
       {
         "iso3": "ARG",
         "country": "Argentina",
-        "meanAbsShift": 0.31
+        "meanAbsShift": 0.36
       },
       {
         "iso3": "COL",
         "country": "Colombia",
-        "meanAbsShift": 0.25
+        "meanAbsShift": 0.46
       },
       {
         "iso3": "PER",
         "country": "Peru",
-        "meanAbsShift": 0.13
+        "meanAbsShift": 0.16
       },
       {
         "iso3": "URY",
         "country": "Uruguay",
-        "meanAbsShift": 0.41
+        "meanAbsShift": 0.57
       },
       {
         "iso3": "CRI",
         "country": "Costa Rica",
-        "meanAbsShift": 0.67
+        "meanAbsShift": 0.69
       },
       {
         "iso3": "DEU",
         "country": "Germany",
-        "meanAbsShift": 0.61
+        "meanAbsShift": 2.3
       },
       {
         "iso3": "FRA",
         "country": "France",
-        "meanAbsShift": 0.55
+        "meanAbsShift": 2.06
       },
       {
         "iso3": "GBR",
         "country": "United Kingdom",
-        "meanAbsShift": 0.1
+        "meanAbsShift": 1.26
       },
       {
         "iso3": "ESP",
         "country": "Spain",
-        "meanAbsShift": 0.31
+        "meanAbsShift": 0.83
       },
       {
         "iso3": "PRT",
         "country": "Portugal",
-        "meanAbsShift": 1.05
+        "meanAbsShift": 1.08
       },
       {
         "iso3": "POL",
         "country": "Poland",
-        "meanAbsShift": 1.89
+        "meanAbsShift": 2
       },
       {
         "iso3": "SWE",
         "country": "Sweden",
-        "meanAbsShift": 0.29
+        "meanAbsShift": 0.76
       },
       {
         "iso3": "FIN",
         "country": "Finland",
-        "meanAbsShift": 0.45
+        "meanAbsShift": 1.54
       },
       {
         "iso3": "IRL",
         "country": "Ireland",
-        "meanAbsShift": 0.1
+        "meanAbsShift": 1.96
       },
       {
         "iso3": "CAN",
         "country": "Canada",
-        "meanAbsShift": 0.51
+        "meanAbsShift": 1.29
       },
       {
         "iso3": "AUS",
         "country": "Australia",
-        "meanAbsShift": 0.08
+        "meanAbsShift": 0.15
       },
       {
         "iso3": "JPN",
         "country": "Japan",
-        "meanAbsShift": 2.11
+        "meanAbsShift": 3.41
       },
       {
         "iso3": "CHN",
@@ -2466,112 +2499,112 @@
       {
         "iso3": "IDN",
         "country": "Indonesia",
-        "meanAbsShift": 0.74
+        "meanAbsShift": 0.97
       },
       {
         "iso3": "VNM",
         "country": "Vietnam",
-        "meanAbsShift": 1.31
+        "meanAbsShift": 1.71
       },
       {
         "iso3": "PHL",
         "country": "Philippines",
-        "meanAbsShift": 0.72
+        "meanAbsShift": 1.01
       },
       {
         "iso3": "MYS",
         "country": "Malaysia",
-        "meanAbsShift": 0.09
+        "meanAbsShift": 0.27
       },
       {
         "iso3": "THA",
         "country": "Thailand",
-        "meanAbsShift": 0.34
+        "meanAbsShift": 0.35
       },
       {
         "iso3": "TUR",
         "country": "Turkey",
-        "meanAbsShift": 1.36
+        "meanAbsShift": 3.02
       },
       {
         "iso3": "ISR",
         "country": "Israel",
-        "meanAbsShift": 1.41
+        "meanAbsShift": 2.17
       },
       {
         "iso3": "ARE",
         "country": "United Arab Emirates",
-        "meanAbsShift": 0
+        "meanAbsShift": 1.34
       },
       {
         "iso3": "NGA",
         "country": "Nigeria",
-        "meanAbsShift": 1.36
+        "meanAbsShift": 1.49
       },
       {
         "iso3": "KEN",
         "country": "Kenya",
-        "meanAbsShift": 0.49
+        "meanAbsShift": 1
       },
       {
         "iso3": "RWA",
         "country": "Rwanda",
-        "meanAbsShift": 1.8
+        "meanAbsShift": 2.13
       },
       {
         "iso3": "ETH",
         "country": "Ethiopia",
-        "meanAbsShift": 1.15
+        "meanAbsShift": 1.16
       },
       {
         "iso3": "BOL",
         "country": "Bolivia",
-        "meanAbsShift": 0
+        "meanAbsShift": 0.3
       },
       {
         "iso3": "PRY",
         "country": "Paraguay",
-        "meanAbsShift": 0.2
+        "meanAbsShift": 0.4
       },
       {
         "iso3": "ECU",
         "country": "Ecuador",
-        "meanAbsShift": 0
+        "meanAbsShift": 0.38
       },
       {
         "iso3": "VEN",
         "country": "Venezuela",
-        "meanAbsShift": 0
+        "meanAbsShift": 0.13
       },
       {
         "iso3": "PAN",
         "country": "Panama",
-        "meanAbsShift": 0.38
+        "meanAbsShift": 0.41
       },
       {
         "iso3": "GTM",
         "country": "Guatemala",
-        "meanAbsShift": 1.64
+        "meanAbsShift": 1.8
       },
       {
         "iso3": "HND",
         "country": "Honduras",
-        "meanAbsShift": 0.61
+        "meanAbsShift": 0.67
       },
       {
         "iso3": "SLV",
         "country": "El Salvador",
-        "meanAbsShift": 0.52
+        "meanAbsShift": 0.84
       },
       {
         "iso3": "NIC",
         "country": "Nicaragua",
-        "meanAbsShift": 0.55
+        "meanAbsShift": 0.62
       },
       {
         "iso3": "DOM",
         "country": "Dominican Republic",
-        "meanAbsShift": 0.45
+        "meanAbsShift": 0.58
       },
       {
         "iso3": "CUB",
@@ -2607,7 +2640,7 @@
       },
       {
         "dimension": "experimentation",
-        "changedPositions": 0
+        "changedPositions": 47
       },
       {
         "dimension": "adaptability",
@@ -2842,7 +2875,7 @@
     }
   ],
   "outOfFrame": {
-    "observedCells": 1507,
+    "observedCells": 1558,
     "clampedCells": 0,
     "share": 0,
     "perCountry": []

@@ -13,7 +13,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Coordenação | 92,9 | 0,39 (fraca) | sem base de tendência |
 | Confiança | 81,4 | 0,3 (fraca) | sem base de tendência |
 | Aprendizagem | 75,8 | 0,55 (utilizável) | sem base de tendência |
-| Experimentação | 28,1 | 0,3 (fraca) | sem base de tendência |
+| Experimentação | 40,2 | 0,36 (fraca) | sem base de tendência |
 | Adaptação | 90,3 | 0,57 (utilizável) | sem base de tendência |
 | Construção | 44,4 | 0,57 (utilizável) | -0,5 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 96 | 0,33 (fraca) | +9,9 em 10 anos, sobre 2 indicadores |
@@ -44,14 +44,6 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 - Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
-### Experimentação: solidez 0,3, fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades.
-- Bases rejeitadas: Parcela empresarial do P&D.
-
 ### Propósito compartilhado: solidez 0,33, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
@@ -59,6 +51,14 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e responsabilização, Sentimento de pertencimento nacional.
+
+### Experimentação: solidez 0,36, fraca
+
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
+
+- Baseada em 4 indicadores observados.
+- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades.
+- Bases rejeitadas: Parcela empresarial do P&D.
 
 ### Agência: solidez 0,38, fraca
 

@@ -13,7 +13,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Coordination | 69.9 | 0.37 (thin) | no trend |
 | Trust | 65.2 | 0.22 (very thin) | no trend |
 | Learning | 33.2 | 0.4 (thin) | no trend |
-| Experimentation | 1.1 | 0.21 (very thin) | no trend |
+| Experimentation | 1.6 | 0.28 (thin) | no trend |
 | Adaptability | 70.5 | 0.57 (usable) | no trend |
 | Building | 34.8 | 0.57 (usable) | -1.6 over 10 years using 3 indicators |
 | Shared Purpose | 42.2 | 0.32 (thin) | no trend |
@@ -45,14 +45,6 @@ How capable is the country of turning plans and knowledge into functioning syste
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Experimentation: confidence 0.21, very thin
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 3 observed indicators.
-- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
-- Rejected datasets: Business share of R&D.
-
 ### Trust: confidence 0.22, very thin
 
 How much cooperation is possible beyond immediate personal networks?
@@ -60,6 +52,14 @@ How much cooperation is possible beyond immediate personal networks?
 - Uses 3 observed indicators.
 - Missing indicators: Trust in public institutions, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
+
+### Experimentation: confidence 0.28, thin
+
+How easily can new approaches be attempted, tested, abandoned, and improved?
+
+- Uses 4 observed indicators.
+- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
+- Rejected datasets: Business share of R&D.
 
 ### Shared Purpose: confidence 0.32, thin
 

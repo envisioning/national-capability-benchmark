@@ -187,6 +187,7 @@ export const PT_BR: Lexicon = {
     resident_patents_per_million: 'Pedidos de patente de residentes',
     resident_trademarks_per_million: 'Pedidos de marca de residentes',
     resident_industrial_designs_per_million: 'Pedidos de desenho industrial de residentes',
+    new_repositories_per_million: 'Novos repositórios públicos de software',
     venture_capital_gdp: 'Investimento de capital de risco',
     early_stage_entrepreneurial_activity: 'Atividade empreendedora em estágio inicial',
     failure_tolerance: 'Tolerância ao fracasso empreendedor',
@@ -280,6 +281,8 @@ export const PT_BR: Lexicon = {
       'Parcela de adultos em educação e treinamento, formal ou não, nos últimos 12 meses.',
     research_citation_impact:
       'Parcela dos artigos e revisões de um país entre os 10% mais citados da sua subárea e ano, como razão da mesma parcela entre todas as obras com país de afiliação.',
+    new_repositories_per_million:
+      'Crescimento em um ano dos repositórios públicos do GitHub localizados no país, por milhão de habitantes.',
     venture_capital_gdp: 'Capital de risco investido como parcela do PIB.',
     regulatory_sandbox_activity:
       'Número e abrangência de sandboxes regulatórios e regimes de teste controlado em operação.',

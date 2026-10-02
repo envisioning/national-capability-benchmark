@@ -1,5 +1,6 @@
 import {
   COUNTRY_ISO3,
+  GITHUB_IG_COMMIT,
   DATASET_VERSION,
   DIMENSIONS,
   GDP_PER_CAPITA_CODE,
@@ -16,6 +17,7 @@ import { fetchVdem } from '../pipeline/adapters/vdem.js'
 import { fetchUnctadExportConcentration } from '../pipeline/adapters/unctad.js'
 import { fetchIlostatLongTermUnemployment } from '../pipeline/adapters/ilostat.js'
 import { fetchOpenAlexCitationImpact } from '../pipeline/adapters/openalex.js'
+import { fetchGithubNewRepositories } from '../pipeline/adapters/github.js'
 import { probeSeries, registrySeries, searchCatalogue } from '../pipeline/probe.js'
 import type { ProbeRequest } from '../pipeline/probe.js'
 import {
@@ -621,6 +623,49 @@ async function openalex(args: Args): Promise<void> {
   )
 }
 
+async function github(args: Args): Promise<void> {
+  const action = args._[1] ?? 'fetch'
+  if (action !== 'fetch') {
+    throw new Error(`Unknown GitHub action "${action}". Use pnpm bench github fetch [--commit <sha>|latest].`)
+  }
+  const retrievedAt = new Date().toISOString()
+  const commit = str(args, 'commit', GITHUB_IG_COMMIT)
+  const result = await fetchGithubNewRepositories({ commit, retrievedAt })
+  let existing: unknown | null = null
+  try {
+    existing = JSON.parse(await readFile(FILES.github, 'utf8'))
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code !== 'ENOENT') {
+      throw new Error(`Cannot read existing GitHub observations: ${String(error)}`)
+    }
+  }
+  const parsedExisting = existing ? ObservationFile.safeParse(existing) : null
+  if (existing && !parsedExisting?.success) {
+    throw new Error(`Existing GitHub observations failed schema validation: ${FILES.github}`)
+  }
+  const before = parsedExisting?.success ? parsedExisting.data.observations : []
+  const previousRetrievedAt = parsedExisting?.success ? parsedExisting.data.generatedAt : null
+  /* The pin and the gate travel in the same file: commit, path, window, every Q1 stock and each held country's reason. */
+  await writeOut(
+    FILES.github,
+    `${JSON.stringify({ generatedAt: retrievedAt, observations: result.observations, github: result.pin, held: result.held }, null, 2)}\n`,
+  )
+  const revisions = await recordRevisions(before, previousRetrievedAt, result.observations, retrievedAt)
+
+  const { pin } = result
+  console.log(`GitHub ${result.release}: ${result.observations.length}/${COUNTRY_ISO3.length} benchmark countries emitted`)
+  console.log(`  latest quarter in file ${pin.latestQuarter}; window ${pin.window.from} Q1 to ${pin.window.to} Q1`)
+  console.log(`  gate: stock growth under ${pin.gate.thresholdPct}% (a quarter of the median ${pin.gate.medianGrowthPct}%) is held`)
+  for (const held of result.held) console.log(`  held ${held.iso3}: ${held.detail}`)
+  const missing = COUNTRY_ISO3.filter((iso3) => !result.availableCountries.includes(iso3))
+  if (missing.length > 0) console.log(`  not in the file for both quarters: ${missing.join(' ')}`)
+  if (commit === 'latest') console.log(`  resolved latest commit ${pin.commit}; bump GITHUB_IG_COMMIT to pin it`)
+  console.log(`github data -> ${FILES.github}`)
+  console.log(
+    `revisions   -> ${revisions.changed} changed, ${revisions.added} added, ${revisions.removed} removed in ${FILES.revisions}`,
+  )
+}
+
 /**
  * Write the capability agenda: language-neutral JSON per country, plus one
  * rendered markdown per lexicon. The JSON is the ground layer, the markdown is
@@ -755,6 +800,9 @@ async function main() {
       break
     case 'openalex':
       await openalex(args)
+      break
+    case 'github':
+      await github(args)
       break
 
     case 'research':
@@ -1245,6 +1293,7 @@ Start with file 1.
   pnpm bench unctad   fetch                fetch and parse the pinned UNCTADstat export concentration index
   pnpm bench ilostat  fetch                fetch ILOSTAT unemployment by duration, derive the long-term share, gate it
   pnpm bench openalex fetch [--mailto a@b] count the OpenAlex top 10% cited share, pin counts and requests
+  pnpm bench github   fetch [--commit sha|latest]  new public repositories from the pinned GitHub Innovation Graph CSV, access gate applied
   pnpm bench research inventory           write the deterministic country-gap research inventory
   pnpm bench research scout               ask AI for bounded, unpublished research leads
   pnpm bench research critique --in FILE  red-team a scout run; still cannot approve publication

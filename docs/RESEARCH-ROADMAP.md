@@ -38,10 +38,12 @@ each dimension's correlation with log GDP per capita. Above 0.70 is a finding
 against the claim, to be read and published. It is not a target, and no row is
 added or dropped to move it.
 
-**Guardrail.** Confidence must not come to track wealth. At 8.0.0 the mean
+**Guardrail.** Confidence must not come to track wealth. At 8.1.0 the mean
 confidence across dimensions correlates with log GDP per capita at r = 0.29
-across 51 countries (0.28 at 7.8.0, before the three Tier B rows became
-conditions and two gaps were retired). The bought conditions that left the scores (D122) were
+across 51 countries (0.286, against 0.289 at 8.0.0: the GitHub row in
+Experimentation, D145, adds evidence across incomes and holds two countries
+out; 0.28 at 7.8.0, before the three Tier B rows became conditions and two
+gaps were retired). The bought conditions that left the scores (D122) were
 better covered in rich countries, and the ILOSTAT row's plausibility gate still
 holds or ages more middle-income countries than rich ones. Watch it, and read
 the next source's effect on it first. A source that only covers rich countries
@@ -49,14 +51,14 @@ raises O1 and breaks this.
 
 ### Where the objectives stand
 
-Dataset 8.0.0 (three Tier B rows to conditions, two gaps retired, customs check). Recompute from `data/out/diagnostics.json` and
+Dataset 8.1.0 (new public repositories in Experimentation, D145). Recompute from `data/out/diagnostics.json` and
 `data/out/index.json` after any rescore; never carry these figures forward by
 hand.
 
 | Dimension | Mean confidence | Observed rows (mean) | r with log GDP | Reading |
 | --- | ---: | ---: | ---: | --- |
 | Trust | 0.42 | 4.3 | 0.61 | |
-| Experimentation | 0.31 | 3.5 | 0.57 | misses O1 |
+| Experimentation | 0.36 | 4.5 | 0.65 | misses O1; 0.57 before the GitHub row (D145) |
 | Shared purpose | 0.41 | 2.6 | 0.20 (n 50) | clears O1 on a retirement, not an observation (D143) |
 | Coordination | 0.36 | 2.8 | 0.56 | misses O1 |
 | Learning | 0.51 | 2.9 | 0.78 | tracks income |
@@ -73,28 +75,28 @@ beside Adaptability and output per worker beside Building. At 8.0.0 three Tier
 B rows joined them (D141): the vocational share beside Learning, and labour
 force participation and transmission losses beside Adaptability.
 
-The one-factor test (D137), dataset 8.0.0: one shared factor carries 0.485 of
+The one-factor test (D137), dataset 8.1.0: one shared factor carries 0.498 of
 the variance of the nine dimension scores over 51 complete cases, against
-0.189 by chance (95th percentile 0.215), and it correlates 0.845 with log GDP
-per capita (n 50), so income accounts for 0.71 of it. The shared factor looks
-like income. It was 0.523 at 7.8.0. On the same rule the share was 0.604 at 6.2.0 and 0.498 at 7.0.0
+0.189 by chance (95th percentile 0.215), and it correlates 0.847 with log GDP
+per capita (n 50), so income accounts for 0.72 of it. The shared factor looks
+like income. It was 0.485 at 8.0.0 and 0.523 at 7.8.0. On the same rule the share was 0.604 at 6.2.0 and 0.498 at 7.0.0
 (both 33 complete cases), when the stocks left the scores. Every release's
 figure is in `data/out/factor-history.json`.
 
-What is left after income (D138), dataset 8.0.0, on the 50 countries with all
-nine residuals: the leftovers still move together (first-factor share 0.285
+What is left after income (D138), dataset 8.1.0, on the 50 countries with all
+nine residuals: the leftovers still move together (first-factor share 0.287
 against chance 0.191, 95th 0.217), loading mostly on Anticipation, Trust,
 Learning, Coordination and Shared purpose. Income peers are no more alike in
-shape than countries picked at random (mean peer distance 1.55 against 1.56,
-5th percentile 1.49), and the shapes line up beyond random dealing (0.280
-against a 95th of 0.232), so under the pre-registered rule the weaker claim,
+shape than countries picked at random (mean peer distance 1.53 against 1.55,
+5th percentile 1.47), and the shapes line up beyond random dealing (0.278
+against a 95th of 0.233), so under the pre-registered rule the weaker claim,
 different shapes at the same income, holds. The margin is narrow and peers
-differ less than random dealing would (1.55 against 1.78), because part of
+differ less than random dealing would (1.53 against 1.78), because part of
 what is left is a level. Residual order between releases is mixed (lowest rank
 r 0.72 on Trust, n 36; none under 0.5), no single country moves its own
 residual by more than 0.37 of the spread around its line (Adaptability), and
-income accounts for 43% of the typical country's distance from the average
-profile (mean 30%). No reading changed at 8.0.0. The objective this
+income accounts for 46% of the typical country's distance from the average
+profile (mean 31%). No reading changed at 8.0.0 or 8.1.0. The objective this
 serves is to widen the country set and deepen Trust and Coordination, the two
 dimensions whose leftovers moved most when indicators changed.
 
@@ -148,9 +150,10 @@ item, and national pride fails A13 for `national_belonging`.
 **Experimentation (2026-10-02).** Memo:
 `docs/research/experimentation/O1-CANDIDATES.md`. A full-coverage row adds
 about 0.06 to mean confidence, and O1 needs 0.13. GitHub Innovation Graph new
-repositories per million is the strongest candidate (53 of 53, China and Cuba
-gated); with the GEM extension D125 held, the two together reach 0.402. Both
-wait on a decision. `business_rd_share` is retired (D142): RICYT fills Latin
+repositories per million is scored at 8.1.0 (D145, issue #65): 51 of 53,
+China and Cuba held by the access gate. Mean confidence 0.305 to 0.364, r with
+log GDP 0.572 to 0.651, the guardrail 0.289 to 0.286. The GEM extension stays
+held (D125), so O1 is still missed; the next candidate is B-READY insolvency. `business_rd_share` is retired (D142): RICYT fills Latin
 America (34 of 53 with OECD MSTI), but the row is the make-up of a spending
 stock. B-READY
 (#37): 13 of 53 in the API, 26 in the 2025 package, gate 27.

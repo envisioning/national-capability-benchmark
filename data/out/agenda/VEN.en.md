@@ -13,7 +13,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Coordination | 16.2 | 0.22 (very thin) | no trend |
 | Trust | 31.1 | 0.39 (thin) | no trend |
 | Learning | 43.2 | 0.19 (very thin) | no trend |
-| Experimentation | 5.2 | 0.1 (very thin) | no trend |
+| Experimentation | 4.2 | 0.19 (very thin) | no trend |
 | Adaptability | 53.3 | 0.46 (usable) | no trend |
 | Building | 0 | 0.27 (thin) | no trend |
 | Shared Purpose | 21.7 | 0.17 (very thin) | no trend |
@@ -35,14 +35,6 @@ How capable is the country of identifying and preparing for emerging change?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Experimentation: confidence 0.1, very thin
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 2 observed indicators.
-- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
-- Rejected datasets: Business share of R&D.
-
 ### Shared Purpose: confidence 0.17, very thin
 
 To what extent can people imagine themselves as participants in a common project?
@@ -50,6 +42,14 @@ To what extent can people imagine themselves as participants in a common project
 - Uses 2 observed indicators.
 - Missing indicators: Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability, Sense of national belonging.
+
+### Experimentation: confidence 0.19, very thin
+
+How easily can new approaches be attempted, tested, abandoned, and improved?
+
+- Uses 3 observed indicators.
+- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
+- Rejected datasets: Business share of R&D.
 
 ### Learning: confidence 0.19, very thin
 

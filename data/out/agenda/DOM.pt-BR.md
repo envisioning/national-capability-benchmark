@@ -13,7 +13,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Coordenação | 68,6 | 0,37 (fraca) | sem base de tendência |
 | Confiança | 71,7 | 0,3 (fraca) | sem base de tendência |
 | Aprendizagem | 34,5 | 0,55 (utilizável) | sem base de tendência |
-| Experimentação | 4,4 | 0,27 (fraca) | +0,1 em 10 anos, sobre 3 indicadores |
+| Experimentação | 5,4 | 0,33 (fraca) | +0,1 em 10 anos, sobre 3 indicadores |
 | Adaptação | 81,6 | 0,57 (utilizável) | sem base de tendência |
 | Construção | 30,7 | 0,57 (utilizável) | +1,4 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 53,1 | 0,38 (fraca) | +14,8 em 10 anos, sobre 2 indicadores |
@@ -54,14 +54,6 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 A solidez da evidência está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Experimentação: solidez 0,27, fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades.
-- Bases rejeitadas: Parcela empresarial do P&D.
-
 ### Confiança: solidez 0,3, fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
@@ -76,6 +68,14 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Habilidades digitais de adultos.
+
+### Experimentação: solidez 0,33, fraca
+
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
+
+- Baseada em 4 indicadores observados.
+- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades.
+- Bases rejeitadas: Parcela empresarial do P&D.
 
 ### Coordenação: solidez 0,37, fraca
 

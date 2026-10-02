@@ -13,7 +13,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Coordination | 73.9 | 0.37 (thin) | no trend |
 | Trust | 56.8 | 0.5 (usable) | no trend |
 | Learning | 39.4 | 0.55 (usable) | no trend |
-| Experimentation | 28.6 | 0.39 (thin) | no trend |
+| Experimentation | 27.3 | 0.44 (thin) | no trend |
 | Adaptability | 64.8 | 0.38 (thin) | no trend |
 | Building | 32.6 | 0.57 (usable) | -1.5 over 10 years using 3 indicators |
 | Shared Purpose | 59.7 | 0.52 (usable) | -7.8 over 10 years using 2 indicators |
@@ -69,11 +69,11 @@ How effectively can the system respond when circumstances change?
 - Uses 2 observed indicators.
 - Missing indicators: Disaster preparedness and recovery, Institutional responsiveness.
 
-### Experimentation: confidence 0.39, thin
+### Experimentation: confidence 0.44, thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
-- Uses 5 observed indicators.
+- Uses 6 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
 - Rejected datasets: Business share of R&D.
 

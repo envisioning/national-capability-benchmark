@@ -13,7 +13,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Coordination | 87.7 | 0.23 (very thin) | no trend |
 | Trust | 88.6 | 0.3 (thin) | no trend |
 | Learning | 79.8 | 0.55 (usable) | no trend |
-| Experimentation | 62.2 | 0.27 (thin) | +20.5 over 10 years using 3 indicators |
+| Experimentation | 52.9 | 0.33 (thin) | +20.5 over 10 years using 3 indicators |
 | Adaptability | 80 | 0.57 (usable) | no trend |
 | Building | 48.1 | 0.57 (usable) | +0.1 over 10 years using 3 indicators |
 | Shared Purpose | 87.4 | 0.33 (thin) | +4.2 over 10 years using 2 indicators |
@@ -44,14 +44,6 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
-### Experimentation: confidence 0.27, thin
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 3 observed indicators.
-- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
-- Rejected datasets: Business share of R&D.
-
 ### Trust: confidence 0.3, thin
 
 How much cooperation is possible beyond immediate personal networks?
@@ -67,6 +59,14 @@ To what extent can people imagine themselves as participants in a common project
 - Uses 2 observed indicators.
 - Missing indicators: Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability, Sense of national belonging.
+
+### Experimentation: confidence 0.33, thin
+
+How easily can new approaches be attempted, tested, abandoned, and improved?
+
+- Uses 4 observed indicators.
+- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
+- Rejected datasets: Business share of R&D.
 
 ### Agency: confidence 0.41, thin
 

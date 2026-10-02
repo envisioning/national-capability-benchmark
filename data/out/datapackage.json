@@ -3,8 +3,8 @@
   "name": "national-capability-benchmark",
   "title": "NCB, the National Capability Benchmark",
   "description": "A prototype that measures what a country can do, separately from how rich it is. Nine capability dimensions scored from public data, each with a separate confidence number.",
-  "version": "8.0.0",
-  "created": "2026-10-02T14:17:43.187Z",
+  "version": "8.1.0",
+  "created": "2026-10-02T14:31:40.456Z",
   "homepage": "https://github.com/envisioning/national-capability-benchmark",
   "licenses": [
     {
@@ -29,6 +29,10 @@
     {
       "title": "Global Entrepreneurship Monitor",
       "path": "https://www.gemconsortium.org"
+    },
+    {
+      "title": "GitHub Innovation Graph",
+      "path": "https://innovationgraph.github.com"
     },
     {
       "title": "ILOSTAT",
@@ -144,6 +148,7 @@
         "indicators/resident_patents_per_million.json",
         "indicators/resident_trademarks_per_million.json",
         "indicators/resident_industrial_designs_per_million.json",
+        "indicators/new_repositories_per_million.json",
         "indicators/early_stage_entrepreneurial_activity.json",
         "indicators/failure_tolerance.json",
         "indicators/unemployment_rate.json",

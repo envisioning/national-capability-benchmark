@@ -13,7 +13,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Coordenação | 57,3 | 0,39 (fraca) | sem base de tendência |
 | Confiança | 48,2 | 0,16 (muito fraca) | sem base de tendência |
 | Aprendizagem | 31,7 | 0,32 (fraca) | sem base de tendência |
-| Experimentação | 0,2 | 0,04 (muito fraca) | sem base de tendência |
+| Experimentação | 0,2 | 0,14 (muito fraca) | sem base de tendência |
 | Adaptação | 31,6 | 0,38 (fraca) | sem base de tendência |
 | Construção | 45,8 | 0,41 (fraca) | +5,7 em 10 anos, sobre 2 indicadores, 1 truncados na borda da régua |
 | Propósito compartilhado | sem nota | 0,02 (muito fraca) | sem base de tendência |
@@ -43,11 +43,11 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Lacunas declaradas: Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e responsabilização, Sentimento de pertencimento nacional.
 
-### Experimentação: solidez 0,04, muito fraca
+### Experimentação: solidez 0,14, muito fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
-- Baseada em 2 indicadores observados.
+- Baseada em 3 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades.
 - Bases rejeitadas: Parcela empresarial do P&D.
 

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-02T14:17:43.187Z",
-  "version": "8.0.0",
+  "generatedAt": "2026-10-02T14:31:40.456Z",
+  "version": "8.1.0",
   "country": {
     "country": "Netherlands",
     "iso3": "NLD",
@@ -1526,19 +1526,19 @@
         ]
       },
       "experimentation": {
-        "score": 28.1,
-        "observedIndicators": 3,
+        "score": 40.2,
+        "observedIndicators": 4,
         "belowCoverageFloor": false,
-        "confidence": 0.304,
+        "confidence": 0.364,
         "confidenceParts": {
-          "coverage": 0.375,
-          "recency": 0.917,
-          "sourceQuality": 0.883
+          "coverage": 0.444,
+          "recency": 0.938,
+          "sourceQuality": 0.875
         },
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 28.1,
+        "blendedScore": 40.2,
         "blendedFrom": "indicators",
         "momentum": [],
         "indicators": [
@@ -1839,6 +1839,21 @@
             "outOfFrame": false,
             "series": [],
             "status": "missing"
+          },
+          {
+            "indicatorId": "new_repositories_per_million",
+            "name": "New public software repositories",
+            "measurementClass": "O",
+            "raw": 956255,
+            "transformed": 52867.89,
+            "normalized": 76.8,
+            "year": 2026,
+            "source": "GitHub Innovation Graph (data/repositories.csv)",
+            "sourceTier": "academic_survey",
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [],
+            "status": "observed"
           },
           {
             "indicatorId": "venture_capital_gdp",

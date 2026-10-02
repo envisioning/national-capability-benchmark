@@ -1,6 +1,12 @@
 import { INDICATORS, WB_PUBLISHER } from './indicators.js'
 import type { IndicatorDef, SourceTier } from './schema.js'
-import { JOINT_EVS_WVS_PUBLISHER, UNCTAD_PUBLISHER, VDEM_PUBLISHER } from './source-catalog.js'
+import {
+  GITHUB_IG_HOME_URL,
+  GITHUB_IG_PUBLISHER,
+  JOINT_EVS_WVS_PUBLISHER,
+  UNCTAD_PUBLISHER,
+  VDEM_PUBLISHER,
+} from './source-catalog.js'
 
 /**
  * Where the data comes from, described once for both the fetcher and the reader.
@@ -103,6 +109,7 @@ export const PUBLISHER_HOME: Record<string, string> = {
   [JOINT_EVS_WVS_PUBLISHER]: 'https://www.worldvaluessurvey.org/WVSEVSjoint2017.jsp',
   [VDEM_PUBLISHER]: 'https://www.v-dem.net/data/the-v-dem-dataset/',
   [UNCTAD_PUBLISHER]: 'https://unctadstat.unctad.org',
+  [GITHUB_IG_PUBLISHER]: GITHUB_IG_HOME_URL,
 }
 
 /** The official IBGE table used for the Brazil state-level Gini series. */

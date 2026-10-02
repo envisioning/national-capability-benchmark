@@ -7413,3 +7413,103 @@ more countries pass at 30 firms on the real base; or a second round on the
 reopened, prefer the all-agency measure, which asks about every border
 agency and needs a pinned adapter from the Enterprise Surveys portal.
 Retired instead if readers treat the check as a score, as D60 provides.
+
+---
+
+## D145 — New public repositories are scored in Experimentation from the GitHub Innovation Graph behind an access gate
+
+*Recorded 2026-10-02. Under D117 and D118, in the pattern of D120 and D124.
+Issue #65. Dataset 8.1.0. Memo: `docs/research/experimentation/O1-CANDIDATES.md`,
+candidate 1 and recommendation 1. D125 stays held: no GEM extension.*
+
+**Decision.** `new_repositories_per_million` joins Experimentation as a scored
+row: class `O`, `higher_better`, tier `academic_survey`, transform
+`per_million_population` over `SP.POP.TOTL`, unit "per million people". The
+value is the change in GitHub's count of public repositories located in the
+country from the latest first quarter a year earlier to the latest first
+quarter, read from `data/repositories.csv` in `github/innovationgraph` (CC0).
+The adapter `github-innovation-graph-new-repos-v1` runs as `pnpm bench github
+fetch`, emits the count, and leaves the division by population to the scorer,
+as the patent, trademark and design rows do. The publisher restates its files
+in place every quarter and keeps old versions only in git, so the pin is the
+commit: `GITHUB_IG_COMMIT` in `model/source-catalog.ts`, here `054c7dbc`
+("release q1 2026 data", 2026-07-07), which `/sources` prints as the row's
+link. The observation file carries the pin under `github`: repository, full
+SHA, path, retrieval date, latest quarter in the file, the window, the gate's
+parameters, and every benchmark country's first-quarter stock since 2020, so a
+rescore never touches the network. `--commit latest` names the newest commit;
+moving the pin is an edit to the constant and a revision run.
+
+Before emitting, an access gate runs on every country and names none. A
+country whose stock grew by less than a quarter of the median benchmark
+country's growth over the same window is held: it gets no value, never a zero,
+and the file records its growth, the threshold and its year-on-year changes
+under `held`. On the 2026 Q1 file the median is 24.6% and the threshold 6.2%.
+China (down 0.1%, the stock fell in four of six yearly windows) and Cuba (up
+2.8%) are held; the next lowest is the United Kingdom at 12.9%. 51 of 53
+countries are scored on the row. Brazil adds 3,925,512 repositories, 18,446
+per million, 17th of 51, normalized 25.5. Glossary: "Access gate".
+
+**Why.** Construct first, written in the memo before values were read in.
+Experimentation asks whether a country makes many cheap attempts and abandons
+them freely. A public repository costs nothing to start, needs no fee or
+lawyer, and is kept whether or not it is abandoned; a yearly count per head is
+the closest open measure of that, of the same kind as trademarks and designs
+per million. It is behaviour, the change in a year; the level, developers or
+repositories per million, is platform adoption and was rejected in the memo.
+It covers every benchmark country at a current date, and its rank order is
+stable year to year (Spearman 0.97 to 0.98).
+
+The gate is a rule because the exclusion has to be auditable, as D120's is.
+The stock is net of deletions and relocations, so a stock that stalls while
+the platform grows by at least 12.9% everywhere else records where developers
+can or do host code, not how many projects they start: China's developers
+work behind network filtering and on domestic platforms, and Cuba's access to
+the platform has been constrained by US trade controls. GitHub's own
+trade-controls page now lists its services as generally available in Cuba, so
+a sanctions citation alone would not hold the row out; the stalled stock is
+the evidence, and a rule on it applies to any country that stalls next.
+
+Reported as findings, not tests (D118), on dataset 8.1.0 against 8.0.0. The
+row's normalized value correlates with log GDP per capita at r = 0.701 (log10
+of the per-million value 0.815, n 50), and its wealth-attribution delta is
+0.080. Experimentation's correlation with log GDP moves from 0.572 to 0.651
+(Spearman 0.726 to 0.801, n 51), a finding against the claim in this
+dimension. Its mean confidence moves from 0.305 to 0.364, still under O1, and
+the bottom quarter from 0.192 to 0.253; 53 countries are scored either way.
+The guardrail, mean confidence against log GDP per capita, moves from 0.289
+to 0.286 (n 51). The shared factor's share moves from 0.485 to 0.498 and its
+correlation with income from 0.845 to 0.847. Under D138 no reading changes:
+the residuals still share structure (0.287 against a 95th of 0.217), peers
+still differ, release order stays mixed, income is still part of the
+distance and the weaker claim holds; Experimentation's residual loading rises
+from 0.05 to 0.17. No redundant pair forms. No other dimension's score or
+confidence moves.
+
+**Cost.** One platform and public work only: GitLab, Bitbucket, Gitee and
+private repositories are invisible, and the publisher is a firm reporting on
+its own platform, for which no source tier fits; `academic_survey` is the
+nearest. Location is the members' modal IP location, so VPN users are
+misplaced and Singapore's 260,665 per million is partly a hub; the upper
+Tukey fence caps it at 100, with Estonia next at 89.8. Coursework,
+bootcamps and tutorials create repositories and may lift countries with large
+student cohorts. The quarter-of-median threshold is judgment, and the gate
+reads only the latest window, so a country whose count resumes growing is
+scored as soon as one window clears. Held countries carry an unmeasured scored
+row: China's and Cuba's Experimentation confidence falls from 0.267 to 0.237,
+and their scores rest on the other rows (China 100, Cuba 1.1, unchanged). The
+largest score moves are Ireland +14.9, Germany -13.5, Turkey -13.3, the
+Netherlands +12.1 and France -12.1; Brazil's score does not move (25.6). The
+value is stamped with the closing first quarter's year and divided by the
+latest population, which is one year older.
+
+**Overturned by.** Evidence that new repositories track platform adoption
+rather than attempts, for example a within-country series in which the count
+follows developer sign-ups and not new projects, which would make the row a
+behavioural check under D60. A second code-hosting source with frame coverage
+that reorders the frame, which would show the row reads one platform's share
+of the market. A held country whose count resumes growing past the threshold
+for a reason that is not access, or an unheld country falling under it for a
+reason that is about capability, either of which would show the gate removes
+real values. Or GitHub changing what `repositories` counts or how it locates
+one, which needs a new adapter version and a new entry.

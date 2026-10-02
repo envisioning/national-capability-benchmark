@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-02T14:17:43.187Z",
-  "version": "8.0.0",
+  "generatedAt": "2026-10-02T14:31:40.456Z",
+  "version": "8.1.0",
   "country": {
     "country": "Haiti",
     "iso3": "HTI",
@@ -1525,13 +1525,13 @@
       },
       "experimentation": {
         "score": 0.2,
-        "observedIndicators": 2,
+        "observedIndicators": 3,
         "belowCoverageFloor": false,
-        "confidence": 0.04,
+        "confidence": 0.136,
         "confidenceParts": {
-          "coverage": 0.25,
-          "recency": 0.167,
-          "sourceQuality": 0.95
+          "coverage": 0.333,
+          "recency": 0.444,
+          "sourceQuality": 0.917
         },
         "delphiScore": null,
         "delphiIqr": null,
@@ -1736,6 +1736,21 @@
             "outOfFrame": false,
             "series": [],
             "status": "missing"
+          },
+          {
+            "indicatorId": "new_repositories_per_million",
+            "name": "New public software repositories",
+            "measurementClass": "O",
+            "raw": 16771,
+            "transformed": 1408.606,
+            "normalized": 0.1,
+            "year": 2026,
+            "source": "GitHub Innovation Graph (data/repositories.csv)",
+            "sourceTier": "academic_survey",
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [],
+            "status": "observed"
           },
           {
             "indicatorId": "venture_capital_gdp",

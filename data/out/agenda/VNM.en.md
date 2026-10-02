@@ -13,7 +13,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Coordination | 75.6 | 0.4 (thin) | no trend |
 | Trust | 36.2 | 0.49 (usable) | no trend |
 | Learning | 42.6 | 0.54 (usable) | no trend |
-| Experimentation | 7.2 | 0.27 (thin) | +1.1 over 10 years using 3 indicators |
+| Experimentation | 10.4 | 0.33 (thin) | +1.1 over 10 years using 3 indicators |
 | Adaptability | 88.6 | 0.57 (usable) | no trend |
 | Building | 65.7 | 0.55 (usable) | +10.1 over 10 years using 3 indicators |
 | Shared Purpose | 42.4 | 0.3 (thin) | no trend |
@@ -54,14 +54,6 @@ How effectively does the country acquire, distribute, and update knowledge?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Experimentation: confidence 0.27, thin
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 3 observed indicators.
-- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
-- Rejected datasets: Business share of R&D.
-
 ### Shared Purpose: confidence 0.3, thin
 
 To what extent can people imagine themselves as participants in a common project?
@@ -69,6 +61,14 @@ To what extent can people imagine themselves as participants in a common project
 - Uses 2 observed indicators.
 - Missing indicators: Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability, Sense of national belonging.
+
+### Experimentation: confidence 0.33, thin
+
+How easily can new approaches be attempted, tested, abandoned, and improved?
+
+- Uses 4 observed indicators.
+- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
+- Rejected datasets: Business share of R&D.
 
 ### Coordination: confidence 0.4, thin
 

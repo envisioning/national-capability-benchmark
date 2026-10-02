@@ -13,7 +13,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Coordination | 61.1 | 0.41 (thin) | no trend |
 | Trust | 64 | 0.29 (thin) | no trend |
 | Learning | 32.6 | 0.54 (usable) | no trend |
-| Experimentation | 0.3 | 0.27 (thin) | +0.2 over 10 years using 3 indicators |
+| Experimentation | 2.9 | 0.33 (thin) | +0.2 over 10 years using 3 indicators |
 | Adaptability | 58.1 | 0.57 (usable) | no trend |
 | Building | 31.3 | 0.54 (usable) | -3.3 over 10 years using 3 indicators, with 1 at the frame edge |
 | Shared Purpose | 49.3 | 0.35 (thin) | +4.6 over 10 years using 2 indicators |
@@ -54,14 +54,6 @@ How effectively does the country acquire, distribute, and update knowledge?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Experimentation: confidence 0.27, thin
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 3 observed indicators.
-- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
-- Rejected datasets: Business share of R&D.
-
 ### Trust: confidence 0.29, thin
 
 How much cooperation is possible beyond immediate personal networks?
@@ -69,6 +61,14 @@ How much cooperation is possible beyond immediate personal networks?
 - Uses 3 observed indicators.
 - Missing indicators: Trust in public institutions, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
+
+### Experimentation: confidence 0.33, thin
+
+How easily can new approaches be attempted, tested, abandoned, and improved?
+
+- Uses 4 observed indicators.
+- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
+- Rejected datasets: Business share of R&D.
 
 ### Shared Purpose: confidence 0.35, thin
 

@@ -13,7 +13,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Coordination | 69.4 | 0.39 (thin) | no trend |
 | Trust | 35.7 | 0.5 (usable) | no trend |
 | Learning | 45.1 | 0.55 (usable) | no trend |
-| Experimentation | 4.5 | 0.27 (thin) | +1 over 10 years using 3 indicators |
+| Experimentation | 7.5 | 0.33 (thin) | +1 over 10 years using 3 indicators |
 | Adaptability | 80.9 | 0.57 (usable) | no trend |
 | Building | 31.5 | 0.57 (usable) | -0.9 over 10 years using 3 indicators |
 | Shared Purpose | 39.9 | 0.49 (usable) | -4.3 over 10 years using 2 indicators |
@@ -83,11 +83,11 @@ How effectively does the country acquire, distribute, and update knowledge?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Experimentation: confidence 0.27, thin
+### Experimentation: confidence 0.33, thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
-- Uses 3 observed indicators.
+- Uses 4 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
 - Rejected datasets: Business share of R&D.
 

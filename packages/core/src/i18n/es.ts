@@ -158,6 +158,7 @@ export const ES: Lexicon = {
     resident_patents_per_million: 'Solicitudes de patente de residentes',
     resident_trademarks_per_million: 'Solicitudes de marca de residentes',
     resident_industrial_designs_per_million: 'Solicitudes de diseño industrial de residentes',
+    new_repositories_per_million: 'Nuevos repositorios públicos de software',
     venture_capital_gdp: 'Inversión de capital de riesgo',
     early_stage_entrepreneurial_activity: 'Actividad emprendedora en etapa inicial',
     failure_tolerance: 'Tolerancia al fracaso emprendedor',
@@ -281,6 +282,8 @@ export const ES: Lexicon = {
     resident_trademarks_per_million: 'Solicitudes directas de marca de residentes, por millón de personas.',
     resident_industrial_designs_per_million:
       'Solicitudes de diseño industrial presentadas por residentes en su oficina nacional, por millón de personas.',
+    new_repositories_per_million:
+      'Crecimiento en un año de los repositorios públicos de GitHub ubicados en el país, por millón de personas.',
     early_stage_entrepreneurial_activity:
       'Adultos que inician o dirigen una empresa de menos de 42 meses.',
     failure_tolerance:

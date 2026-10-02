@@ -13,7 +13,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Coordination | 98.5 | 0.35 (thin) | no trend |
 | Trust | 82.8 | 0.5 (usable) | no trend |
 | Learning | 79.4 | 0.55 (usable) | no trend |
-| Experimentation | 60.6 | 0.48 (usable) | +1.2 over 10 years using 3 indicators |
+| Experimentation | 57.6 | 0.53 (usable) | +1.2 over 10 years using 3 indicators |
 | Adaptability | 65.3 | 0.57 (usable) | no trend |
 | Building | 57.6 | 0.57 (usable) | +1.3 over 10 years using 3 indicators |
 | Shared Purpose | 49.3 | 0.49 (usable) | -1 over 10 years using 2 indicators |
@@ -52,8 +52,8 @@ These dimensions score at least 50 with usable evidence.
 - Trust: 82.8, confidence usable
 - Learning: 79.4, confidence usable
 - Adaptability: 65.3, confidence usable
-- Experimentation: 60.6, confidence usable
 - Agency: 60, confidence usable
+- Experimentation: 57.6, confidence usable
 - Building: 57.6, confidence usable
 
 ## What Switzerland has to work with

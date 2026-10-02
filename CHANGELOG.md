@@ -9,6 +9,29 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## Dataset 8.1.0 — 2026-10-02
+
+- **Experimentation gains a row: new public software repositories per
+  million people** (D145). It counts how many public projects people in a
+  country started on GitHub in the year to the first quarter of 2026, from
+  the GitHub Innovation Graph at a fixed commit. A new repository costs
+  nothing to start and is kept when it is abandoned, which is the many cheap
+  attempts the dimension asks about. Brazil adds 18,446 per million, 17th of
+  51.
+- **China and Cuba have no value on the row.** Their repository counts
+  barely grew (down 0.1% and up 2.8%) while the median country's grew 24.6%,
+  which reads access to the platform. A published rule holds any country
+  under a quarter of the median growth, and a held country is never scored
+  at zero.
+- Experimentation's mean confidence rises from 0.31 to 0.36, still under
+  0.40, and its correlation with log GDP per capita rises from 0.57 to 0.65.
+  Ireland rises from 4.8 to 19.7 and the Netherlands from 28.1 to 40.2;
+  Germany falls from 81.7 to 68.2 and Turkey from 64.0 to 50.7. Brazil stays
+  at 25.6. No other capability moves.
+- The one shared factor across the nine scores carries 0.50 of their
+  variance, up from 0.49. Same 53 countries; 8.0.0 scores in other
+  capabilities are unchanged.
+
 ## Dataset 8.0.0 — 2026-10-02
 
 - **Scores restate in Learning and Adaptability, and 7.x numbers are not

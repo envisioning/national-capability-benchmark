@@ -216,6 +216,13 @@ export const GLOSSARY: GlossaryEntry[] = [
     example: 'Long-term unemployment share drops any year under 3 percent, every year of a survey whose typical year is under 3 percent, and a one- or two-year spike of more than 15 points that the series comes back from. Korea and the Philippines report under 1 percent every year and are not scored on this row.',
   },
   {
+    term: 'Access gate',
+    group: 'How good the evidence is',
+    short: 'A rule that holds a country whose count on a platform stalls while the platform grows everywhere else.',
+    full: 'A count taken from one platform reads what people do there only where they can and do use it. Where a country blocks the platform, has its own, or is cut off from it, the count stays flat while it grows in every other country, and a low value would describe access instead of the country. An access gate is a fixed rule, the same for every country and naming none, that holds such a country out of the row. A held country has no value on that row, which lowers its coverage. It is never scored at zero, and the reason is published with the numbers behind it.',
+    example: 'New public software repositories holds any country whose repository count grew by less than a quarter of the median growth across the benchmark. In the 2026 file the median was 24.6 percent, and China (down 0.1 percent) and Cuba (up 2.8 percent) were held.',
+  },
+  {
     term: 'Ingest route',
     group: 'How a number is made',
     short: 'How a value gets into the dataset: from an API, a published table, or nowhere yet.',

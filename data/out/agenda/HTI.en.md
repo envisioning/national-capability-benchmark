@@ -13,7 +13,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Coordination | 57.3 | 0.39 (thin) | no trend |
 | Trust | 48.2 | 0.16 (very thin) | no trend |
 | Learning | 31.7 | 0.32 (thin) | no trend |
-| Experimentation | 0.2 | 0.04 (very thin) | no trend |
+| Experimentation | 0.2 | 0.14 (very thin) | no trend |
 | Adaptability | 31.6 | 0.38 (thin) | no trend |
 | Building | 45.8 | 0.41 (thin) | +5.7 over 10 years using 2 indicators, with 1 at the frame edge |
 | Shared Purpose | not scored | 0.02 (very thin) | no trend |
@@ -43,11 +43,11 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability, Sense of national belonging.
 
-### Experimentation: confidence 0.04, very thin
+### Experimentation: confidence 0.14, very thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
-- Uses 2 observed indicators.
+- Uses 3 observed indicators.
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
 - Rejected datasets: Business share of R&D.
 

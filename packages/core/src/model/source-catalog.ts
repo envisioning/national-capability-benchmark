@@ -91,3 +91,22 @@ export const OPENALEX_CORPUS = 'core'
 export const OPENALEX_LICENCE = 'CC0 1.0'
 /** Stable id of the adapter that counts the top 10% share. */
 export const OPENALEX_TOP10_ADAPTER_ID = 'openalex-top10-share-v1'
+
+/**
+ * GitHub Innovation Graph, read for new public repositories. See D145. The
+ * publisher restates its CSVs in place every quarter and keeps old versions
+ * only in git, so the pin is the commit: the adapter reads the file at that
+ * SHA and `pnpm bench github fetch --commit latest` names the newest one.
+ * Bump the SHA here, with a revision run, to move the release. CC0.
+ */
+export const GITHUB_IG_PUBLISHER = 'GitHub Innovation Graph'
+export const GITHUB_IG_REPOSITORY = 'github/innovationgraph'
+export const GITHUB_IG_PATH = 'data/repositories.csv'
+/** "release q1 2026 data", committed 2026-07-07. */
+export const GITHUB_IG_COMMIT = '054c7dbc527518fa2ecfd316efe2aa01f3986c39'
+export const GITHUB_IG_LICENCE = 'CC0 1.0'
+export const GITHUB_IG_HOME_URL = 'https://innovationgraph.github.com'
+/** The pinned file as a reader opens it, which is what `/sources` prints. */
+export const GITHUB_IG_PINNED_URL = `https://github.com/${GITHUB_IG_REPOSITORY}/blob/${GITHUB_IG_COMMIT}/${GITHUB_IG_PATH}`
+/** Stable id of the adapter that differences the repository stock and gates it. */
+export const GITHUB_IG_ADAPTER_ID = 'github-innovation-graph-new-repos-v1'

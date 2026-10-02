@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-02T14:17:43.187Z",
-  "version": "8.0.0",
+  "generatedAt": "2026-10-02T14:31:40.456Z",
+  "version": "8.1.0",
   "country": {
     "country": "Colombia",
     "iso3": "COL",
@@ -1661,19 +1661,19 @@
         ]
       },
       "experimentation": {
-        "score": 32.7,
-        "observedIndicators": 5,
+        "score": 31,
+        "observedIndicators": 6,
         "belowCoverageFloor": false,
-        "confidence": 0.465,
+        "confidence": 0.508,
         "confidenceParts": {
-          "coverage": 0.625,
-          "recency": 0.817,
-          "sourceQuality": 0.91
+          "coverage": 0.667,
+          "recency": 0.847,
+          "sourceQuality": 0.9
         },
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 32.7,
+        "blendedScore": 31,
         "blendedFrom": "indicators",
         "momentum": [
           {
@@ -2448,6 +2448,21 @@
                 "tier": "international_organization"
               }
             ],
+            "status": "observed"
+          },
+          {
+            "indicatorId": "new_repositories_per_million",
+            "name": "New public software repositories",
+            "measurementClass": "O",
+            "raw": 864357,
+            "transformed": 16178.694,
+            "normalized": 22.1,
+            "year": 2026,
+            "source": "GitHub Innovation Graph (data/repositories.csv)",
+            "sourceTier": "academic_survey",
+            "winsorized": false,
+            "outOfFrame": false,
+            "series": [],
             "status": "observed"
           },
           {

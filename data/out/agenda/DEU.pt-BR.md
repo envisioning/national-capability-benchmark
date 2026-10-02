@@ -13,7 +13,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Coordenação | 89,6 | 0,39 (fraca) | sem base de tendência |
 | Confiança | 86 | 0,3 (fraca) | sem base de tendência |
 | Aprendizagem | 65,6 | 0,55 (utilizável) | sem base de tendência |
-| Experimentação | 81,7 | 0,27 (fraca) | +3,3 em 10 anos, sobre 3 indicadores |
+| Experimentação | 68,2 | 0,33 (fraca) | +3,3 em 10 anos, sobre 3 indicadores |
 | Adaptação | 83 | 0,57 (utilizável) | sem base de tendência |
 | Construção | 68,9 | 0,57 (utilizável) | -2,8 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 55,1 | 0,35 (fraca) | -5,9 em 10 anos, sobre 2 indicadores |
@@ -22,14 +22,6 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 
 A solidez da evidência está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Experimentação: solidez 0,27, fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades.
-- Bases rejeitadas: Parcela empresarial do P&D.
-
 ### Confiança: solidez 0,3, fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
@@ -37,6 +29,14 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
+
+### Experimentação: solidez 0,33, fraca
+
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
+
+- Baseada em 4 indicadores observados.
+- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades.
+- Bases rejeitadas: Parcela empresarial do P&D.
 
 ### Propósito compartilhado: solidez 0,35, fraca
 

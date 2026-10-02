@@ -13,7 +13,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Coordenação | 60,8 | 0,39 (fraca) | sem base de tendência |
 | Confiança | 39,1 | 0,49 (utilizável) | sem base de tendência |
 | Aprendizagem | 42,9 | 0,54 (utilizável) | sem base de tendência |
-| Experimentação | 32,7 | 0,47 (utilizável) | +0,9 em 10 anos, sobre 3 indicadores |
+| Experimentação | 31 | 0,51 (utilizável) | +0,9 em 10 anos, sobre 3 indicadores |
 | Adaptação | 64,6 | 0,57 (utilizável) | sem base de tendência |
 | Construção | 27,2 | 0,57 (utilizável) | -3,1 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 46,1 | 0,52 (utilizável) | -3,1 em 10 anos, sobre 2 indicadores |
@@ -32,12 +32,12 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística.
 
-### Experimentação: 32,7, solidez utilizável
+### Experimentação: 31, solidez utilizável
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
-- Baseada em 5 indicadores observados.
-- Maiores notas utilizáveis: Coreia do Sul 77,7, Suíça 60,6, Estados Unidos 49,5.
+- Baseada em 6 indicadores observados.
+- Maiores notas utilizáveis: Coreia do Sul 70,3, Suíça 57,6, Estados Unidos 48,1.
 - Entregas documentadas em outros países: The FCA regulatory sandbox (Reino Unido); Yozma, the venture capital catalyst (Israel); Korean regulatory-sandbox system across eight sectors (Coreia do Sul); MAS FinTech Regulatory Sandbox variants (Singapura); British Patient Capital, a public venture-capital catalyst (Reino Unido); ICURe, from university research to spinouts (Reino Unido); Portugal Ventures, a public venture-capital bridge (Portugal); Rede Nacional de Test Beds for company experimentation (Portugal); Zonas Livres Tecnológicas, regulator-supervised experimentation zones (Portugal); Banco Central regulatory sandbox, first cycle (Brasil); Reserve Bank of India regulatory sandbox (Índia); Capital Markets Authority regulatory sandbox (Quênia); SEC Nigeria Regulatory Incubation Program (Nigéria); ADGM RegLab, the first fintech sandbox in the region (Emirados Árabes Unidos); OJK regulatory sandbox for financial-sector technological innovation (Indonésia); Bank Negara Malaysia Fintech Regulatory Sandbox (Malásia); Bank of Thailand regulatory sandbox (Tailândia); Sandbox financiero (Ley 7/2020), and the fall in applications (Espanha); IFWG Regulatory Sandbox (África do Sul); Project-based regulatory sandbox (new technology demonstration scheme) (Japão); CFPB Compliance Assistance Sandbox, rescinded in 2022 and withdrawn again in 2025 (Estados Unidos); CSA Regulatory Sandbox, succeeded by the Financial Innovation Hub (Canadá); ASIC enhanced regulatory sandbox (Austrália); SINTEG-Verordnung, the energy-transition experimentation clause (Alemanha); Experimenten Elektriciteitswet 2015-2018, and its erosion (Países Baixos); Bac à sable réglementaire in the energy sector (França).
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades.
 - Bases rejeitadas: Parcela empresarial do P&D.

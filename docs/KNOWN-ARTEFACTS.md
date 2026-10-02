@@ -10,7 +10,8 @@ from the published output. The in-session panel runs in `data/delphi` are one
 panelist each, carry no dataset version and were scored against older frames,
 so a gap between one of them and a current score is not a finding (see A9).
 
-Every entry is on dataset 8.0.0 except where it names another run. A3 also
+Every entry is on dataset 8.0.0 except where it names another run. A1 is
+checked on 8.1.0. A3 also
 quotes the 16-country run that last scored the WGI rows, and A4 the ten-country
 one. A12 quotes one figure D131 measured on V-Dem v15. A6 holds no dataset
 figures. Where a figure predates the current frame, the scale it was measured
@@ -21,35 +22,45 @@ on is not the scale in use.
 
 **Severity: medium.**
 
-Four of nine indicators are observed for most countries: resident patents,
-trademarks and industrial designs per head (D126), and, for the 16 countries
-GEM covered first, early-stage entrepreneurial activity and fear of failure.
-Venture capital, regulatory sandboxes and university spinouts are still gaps.
-Business R&D share is retired: its only working source reads the make-up of a
-spending stock, and state enterprises count as business (D142). Mean
-confidence is 0.305 on dataset 8.0.0, the lowest of the nine dimensions. 37 countries are scored on patents, trademarks and
-designs alone. GEM's later reports reach 40 of the 53, but the extension is
-held because the 14 countries GEM skips are mostly lower-income and the gain
-would sit where income already is (D125). See D21.
+Five of ten indicators are observed for most countries: resident patents,
+trademarks and industrial designs per head (D126), new public software
+repositories per head (D145), and, for the 16 countries GEM covered first,
+early-stage entrepreneurial activity and fear of failure. Venture capital,
+regulatory sandboxes and university spinouts are still gaps. Business R&D
+share is retired: its only working source reads the make-up of a spending
+stock, and state enterprises count as business (D142). Mean confidence is
+0.364 on dataset 8.1.0, second lowest of the nine after Coordination and
+under the 0.40 objective. 35 countries are scored on the three filing rows
+and the repository row, and two on the filing rows alone: China and Cuba,
+which the repository row's access gate holds out. GEM's later reports reach
+40 of the 53, but the extension is held because the 14 countries GEM skips
+are mostly lower-income and the gain would sit where income already is
+(D125). See D21.
 
 Resident patents and resident trademarks per head measure formalised, completed,
 defensible invention, which is close to the opposite of the many-cheap-
-experiments construct the dimension is supposed to capture.
+experiments construct the dimension is supposed to capture. The repository
+row is the one cheap attempt the dimension observes, and it sees one platform:
+public GitHub work, located by IP address, so VPN users are misplaced and
+Singapore reads high partly as a regional hub. It tracks income (r 0.70 on the
+normalized row), and Experimentation's correlation with log GDP per capita is
+0.65.
 
-On dataset 8.0.0 the Netherlands scores 28.1. That is not a finding about
+On dataset 8.1.0 the Netherlands scores 40.2. That is not a finding about
 Dutch innovation: its trademark and design rows are missing, venture capital is
-a gap, and the score rests on resident patents and the two GEM rows. Uruguay
-scores 28.6, having legalised and regulated a national cannabis market and run
-a fintech sandbox. Argentina scores 19.6, having produced more technology firms
-of scale per head than anywhere else in the region.
+a gap, and the score rests on resident patents, the two GEM rows and new
+repositories. Uruguay scores 27.3, having legalised and regulated a national
+cannabis market and run a fintech sandbox. Argentina scores 19.2, having
+produced more technology firms of scale per head than anywhere else in the
+region.
 
 No panel figure is quoted here. The run `data/delphi/latest.json` points at,
 a one-panelist in-session run, carries no dataset version
-and was scored against an older frame, so its distance from an 8.0.0 score
+and was scored against an older frame, so its distance from an 8.1.0 score
 measures the change of ruler as much as the country (see A9). As context only:
-its mean absolute distance from the 8.0.0 Experimentation scores is 15.4 points
-across its 16 countries, sixth of the nine dimensions, and its rank agreement
-with them is a Spearman 0.55, third lowest.
+its mean absolute distance from the 8.1.0 Experimentation scores is 13.0 points
+across its 16 countries, seventh of the nine dimensions, and its rank agreement
+with them is a Spearman 0.70, fourth lowest.
 
 **Fix.** A venture capital series is still missing. The only inspectable
 aggregate, the OECD SME and Entrepreneurship Financing scoreboard, covers 6 of

@@ -2,6 +2,10 @@ import { z } from 'zod'
 import { IndicatorDef } from './schema.js'
 import type { Dimension } from './dimensions.js'
 import {
+  GITHUB_IG_ADAPTER_ID,
+  GITHUB_IG_PATH,
+  GITHUB_IG_PINNED_URL,
+  GITHUB_IG_PUBLISHER,
   ILOSTAT_LTU_ADAPTER_ID,
   ILOSTAT_LTU_DATAFLOW,
   ILOSTAT_LTU_PAGE_URL,
@@ -700,6 +704,30 @@ const RAW: Raw[] = [
     ingest: 'worldbank',
     notes: 'A filed design is a registered attempt at a new product form: cheaper and more frequent than a patent, so it reads as many small experiments (D126). Three traps. China subsidised design filings, as it did patents, so its count runs ahead of the attempts behind it. EU applicants increasingly file at the EUIPO rather than nationally, and resident counts at a national office miss those filings, so EU members read low. The Netherlands has no series because designs there go to the Benelux office. Read it beside resident trademarks, which it partly duplicates.',
     wealthProxyPrior: 0.3,
+  },
+  {
+    id: 'new_repositories_per_million',
+    dimension: 'experimentation',
+    name: 'New public software repositories',
+    definition:
+      'Growth over one year in the public GitHub repositories located in the country, per million people.',
+    unit: 'per million people',
+    measurementClass: 'O',
+    direction: 'higher_better',
+    transform: 'per_million_population',
+    denominatorSeries: 'SP.POP.TOTL',
+    source: {
+      publisher: GITHUB_IG_PUBLISHER,
+      series: GITHUB_IG_PATH,
+      adapter: GITHUB_IG_ADAPTER_ID,
+      url: GITHUB_IG_PINNED_URL,
+      tier: 'academic_survey',
+      inspectable: true,
+    },
+    ingest: 'adapter',
+    notes:
+      "A public repository is a software project someone started. It costs nothing, needs no fee or lawyer, and the platform keeps it whether or not it is abandoned, so new repositories per head are the closest open count of many cheap attempts. The value is the change in GitHub's count of public repositories located in the country from the first quarter of one year to the first quarter of the next (2025 to 2026), net of deletions and relocations, read from the GitHub Innovation Graph at a pinned commit. Only public work on one platform is visible: GitLab, Bitbucket, Gitee and private repositories are not. Location is the most common IP location of a repository's members, so VPN users are misplaced and Singapore reads high partly as a regional hub. Coursework and tutorials create repositories too. A country whose count grows by less than a quarter of the median growth is held by an access gate and never scored at zero: in the 2026 file that is China, where the count fell, and Cuba. The publisher is a platform reporting on itself, and no source tier fits it. CC0. See D145.",
+    wealthProxyPrior: 0.7,
   },
   {
     id: 'venture_capital_gdp',

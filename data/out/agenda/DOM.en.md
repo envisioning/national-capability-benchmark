@@ -13,7 +13,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Coordination | 68.6 | 0.37 (thin) | no trend |
 | Trust | 71.7 | 0.3 (thin) | no trend |
 | Learning | 34.5 | 0.55 (usable) | no trend |
-| Experimentation | 4.4 | 0.27 (thin) | +0.1 over 10 years using 3 indicators |
+| Experimentation | 5.4 | 0.33 (thin) | +0.1 over 10 years using 3 indicators |
 | Adaptability | 81.6 | 0.57 (usable) | no trend |
 | Building | 30.7 | 0.57 (usable) | +1.4 over 10 years using 3 indicators |
 | Shared Purpose | 53.1 | 0.38 (thin) | +14.8 over 10 years using 2 indicators |
@@ -54,14 +54,6 @@ How effectively does the country acquire, distribute, and update knowledge?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Experimentation: confidence 0.27, thin
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 3 observed indicators.
-- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
-- Rejected datasets: Business share of R&D.
-
 ### Trust: confidence 0.3, thin
 
 How much cooperation is possible beyond immediate personal networks?
@@ -76,6 +68,14 @@ How able are individuals and organizations to turn an intention into action?
 
 - Uses 3 observed indicators.
 - Missing indicators: Adult digital skills.
+
+### Experimentation: confidence 0.33, thin
+
+How easily can new approaches be attempted, tested, abandoned, and improved?
+
+- Uses 4 observed indicators.
+- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
+- Rejected datasets: Business share of R&D.
 
 ### Coordination: confidence 0.37, thin
 

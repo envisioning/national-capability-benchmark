@@ -13,7 +13,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Coordenação | 65,6 | 0,41 (fraca) | sem base de tendência |
 | Confiança | 55,8 | 0,5 (utilizável) | sem base de tendência |
 | Aprendizagem | 74,8 | 0,55 (utilizável) | sem base de tendência |
-| Experimentação | 100 | 0,27 (fraca) | +20,4 em 10 anos, sobre 3 indicadores |
+| Experimentação | 100 | 0,24 (muito fraca) | +20,4 em 10 anos, sobre 3 indicadores |
 | Adaptação | 87 | 0,38 (fraca) | sem base de tendência |
 | Construção | 77 | 0,57 (utilizável) | -5 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 30,3 | 0,49 (utilizável) | +0,7 em 10 anos, sobre 2 indicadores |
@@ -45,7 +45,7 @@ Quão capaz é o país de identificar mudanças emergentes e se preparar para el
 
 A solidez da evidência está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Experimentação: solidez 0,27, fraca
+### Experimentação: solidez 0,24, muito fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 

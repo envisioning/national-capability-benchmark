@@ -13,7 +13,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Coordenação | 75,6 | 0,4 (fraca) | sem base de tendência |
 | Confiança | 36,2 | 0,49 (utilizável) | sem base de tendência |
 | Aprendizagem | 42,6 | 0,54 (utilizável) | sem base de tendência |
-| Experimentação | 7,2 | 0,27 (fraca) | +1,1 em 10 anos, sobre 3 indicadores |
+| Experimentação | 10,4 | 0,33 (fraca) | +1,1 em 10 anos, sobre 3 indicadores |
 | Adaptação | 88,6 | 0,57 (utilizável) | sem base de tendência |
 | Construção | 65,7 | 0,55 (utilizável) | +10,1 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 42,4 | 0,3 (fraca) | sem base de tendência |
@@ -54,14 +54,6 @@ Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 A solidez da evidência está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Experimentação: solidez 0,27, fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades.
-- Bases rejeitadas: Parcela empresarial do P&D.
-
 ### Propósito compartilhado: solidez 0,3, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
@@ -69,6 +61,14 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 - Baseada em 2 indicadores observados.
 - Lacunas declaradas: Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e responsabilização, Sentimento de pertencimento nacional.
+
+### Experimentação: solidez 0,33, fraca
+
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
+
+- Baseada em 4 indicadores observados.
+- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades.
+- Bases rejeitadas: Parcela empresarial do P&D.
 
 ### Coordenação: solidez 0,4, fraca
 

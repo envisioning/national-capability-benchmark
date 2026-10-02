@@ -13,7 +13,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Coordenação | 74,4 | 0,33 (fraca) | sem base de tendência |
 | Confiança | 43,3 | 0,49 (utilizável) | sem base de tendência |
 | Aprendizagem | 41,6 | 0,54 (utilizável) | sem base de tendência |
-| Experimentação | 2,5 | 0,27 (fraca) | 0 em 10 anos, sobre 3 indicadores |
+| Experimentação | 4,8 | 0,33 (fraca) | 0 em 10 anos, sobre 3 indicadores |
 | Adaptação | 74,5 | 0,38 (fraca) | sem base de tendência |
 | Construção | 60,2 | 0,57 (utilizável) | -5,7 em 10 anos, sobre 2 indicadores |
 | Propósito compartilhado | 54,9 | 0,51 (utilizável) | +11,5 em 10 anos, sobre 2 indicadores |
@@ -63,14 +63,6 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 
 A solidez da evidência está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Experimentação: solidez 0,27, fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades.
-- Bases rejeitadas: Parcela empresarial do P&D.
-
 ### Coordenação: solidez 0,33, fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
@@ -78,6 +70,14 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
+
+### Experimentação: solidez 0,33, fraca
+
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
+
+- Baseada em 4 indicadores observados.
+- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades.
+- Bases rejeitadas: Parcela empresarial do P&D.
 
 ### Adaptação: solidez 0,38, fraca
 

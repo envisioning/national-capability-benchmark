@@ -13,7 +13,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Coordenação | 97,1 | 0,23 (muito fraca) | sem base de tendência |
 | Confiança | 66,2 | 0,5 (utilizável) | sem base de tendência |
 | Aprendizagem | 76,1 | 0,55 (utilizável) | sem base de tendência |
-| Experimentação | 18,7 | 0,27 (fraca) | -4,5 em 10 anos, sobre 3 indicadores |
+| Experimentação | 24,9 | 0,33 (fraca) | -4,5 em 10 anos, sobre 3 indicadores |
 | Adaptação | 83,6 | 0,57 (utilizável) | sem base de tendência |
 | Construção | 30,5 | 0,54 (utilizável) | -1,2 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 61,9 | 0,49 (utilizável) | +4,4 em 10 anos, sobre 2 indicadores |
@@ -44,11 +44,11 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
-### Experimentação: solidez 0,27, fraca
+### Experimentação: solidez 0,33, fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
-- Baseada em 3 indicadores observados.
+- Baseada em 4 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades.
 - Bases rejeitadas: Parcela empresarial do P&D.
 

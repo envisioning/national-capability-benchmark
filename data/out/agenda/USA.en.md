@@ -13,7 +13,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Coordination | 98.6 | 0.23 (very thin) | no trend |
 | Trust | 69.3 | 0.5 (usable) | no trend |
 | Learning | 60.7 | 0.55 (usable) | no trend |
-| Experimentation | 49.5 | 0.48 (usable) | +0.8 over 10 years using 3 indicators |
+| Experimentation | 48.1 | 0.53 (usable) | +0.8 over 10 years using 3 indicators |
 | Adaptability | 88.4 | 0.57 (usable) | no trend |
 | Building | 58.2 | 0.53 (usable) | +0.5 over 10 years using 3 indicators |
 | Shared Purpose | 55.3 | 0.52 (usable) | -1.1 over 10 years using 2 indicators |
@@ -22,12 +22,12 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 
 These are the lowest scores with usable evidence. Thin evidence appears below.
 
-### Experimentation: 49.5, confidence usable
+### Experimentation: 48.1, confidence usable
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
-- Uses 5 observed indicators.
-- Highest usable scores: South Korea 77.7, Switzerland 60.6, Chile 37.5.
+- Uses 6 observed indicators.
+- Highest usable scores: South Korea 70.3, Switzerland 57.6, Estonia 36.8.
 - Related deliveries in other countries: The FCA regulatory sandbox (United Kingdom); Yozma, the venture capital catalyst (Israel); Korean regulatory-sandbox system across eight sectors (South Korea); MAS FinTech Regulatory Sandbox variants (Singapore); British Patient Capital, a public venture-capital catalyst (United Kingdom); ICURe, from university research to spinouts (United Kingdom); Portugal Ventures, a public venture-capital bridge (Portugal); Rede Nacional de Test Beds for company experimentation (Portugal); Zonas Livres Tecnológicas, regulator-supervised experimentation zones (Portugal); Banco Central regulatory sandbox, first cycle (Brazil); Reserve Bank of India regulatory sandbox (India); Capital Markets Authority regulatory sandbox (Kenya); SEC Nigeria Regulatory Incubation Program (Nigeria); ADGM RegLab, the first fintech sandbox in the region (United Arab Emirates); OJK regulatory sandbox for financial-sector technological innovation (Indonesia); Bank Negara Malaysia Fintech Regulatory Sandbox (Malaysia); Bank of Thailand regulatory sandbox (Thailand); Sandbox financiero (Ley 7/2020), and the fall in applications (Spain); IFWG Regulatory Sandbox (South Africa); Project-based regulatory sandbox (new technology demonstration scheme) (Japan); CSA Regulatory Sandbox, succeeded by the Financial Innovation Hub (Canada); ASIC enhanced regulatory sandbox (Australia); SINTEG-Verordnung, the energy-transition experimentation clause (Germany); Experimenten Elektriciteitswet 2015-2018, and its erosion (Netherlands); Bac à sable réglementaire in the energy sector (France).
 - Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
 - Rejected datasets: Business share of R&D.

@@ -13,7 +13,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Coordination | 74.4 | 0.33 (thin) | no trend |
 | Trust | 43.3 | 0.49 (usable) | no trend |
 | Learning | 41.6 | 0.54 (usable) | no trend |
-| Experimentation | 2.5 | 0.27 (thin) | 0 over 10 years using 3 indicators |
+| Experimentation | 4.8 | 0.33 (thin) | 0 over 10 years using 3 indicators |
 | Adaptability | 74.5 | 0.38 (thin) | no trend |
 | Building | 60.2 | 0.57 (usable) | -5.7 over 10 years using 2 indicators |
 | Shared Purpose | 54.9 | 0.51 (usable) | +11.5 over 10 years using 2 indicators |
@@ -63,14 +63,6 @@ How much cooperation is possible beyond immediate personal networks?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Experimentation: confidence 0.27, thin
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 3 observed indicators.
-- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
-- Rejected datasets: Business share of R&D.
-
 ### Coordination: confidence 0.33, thin
 
 How effectively can independent actors organize around shared objectives?
@@ -78,6 +70,14 @@ How effectively can independent actors organize around shared objectives?
 - Uses 3 observed indicators.
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
+
+### Experimentation: confidence 0.33, thin
+
+How easily can new approaches be attempted, tested, abandoned, and improved?
+
+- Uses 4 observed indicators.
+- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
+- Rejected datasets: Business share of R&D.
 
 ### Adaptability: confidence 0.38, thin
 

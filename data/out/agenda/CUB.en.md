@@ -13,7 +13,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Coordination | not scored | 0.1 (very thin) | no trend |
 | Trust | not scored | 0.07 (very thin) | no trend |
 | Learning | not scored | 0.16 (very thin) | no trend |
-| Experimentation | 1.1 | 0.27 (thin) | -0.1 over 10 years using 3 indicators |
+| Experimentation | 1.1 | 0.24 (very thin) | -0.1 over 10 years using 3 indicators |
 | Adaptability | 82.9 | 0.4 (thin) | no trend |
 | Building | 21.8 | 0.29 (thin) | -27.1 over 10 years using 2 indicators |
 | Shared Purpose | not scored | 0 (very thin) | no trend |
@@ -67,7 +67,7 @@ How capable is the country of identifying and preparing for emerging change?
 - Uses one observed indicator.
 - Missing indicators: Government foresight capacity, Long-horizon research share.
 
-### Experimentation: confidence 0.27, thin
+### Experimentation: confidence 0.24, very thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 

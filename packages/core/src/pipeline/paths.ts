@@ -28,6 +28,7 @@ export const FILES = {
   unctad: resolve(OBSERVATIONS_DIR, 'unctad-concentration.json'),
   ilostat: resolve(OBSERVATIONS_DIR, 'ilostat-ltu.json'),
   openalex: resolve(OBSERVATIONS_DIR, 'openalex-citation-impact.json'),
+  github: resolve(OBSERVATIONS_DIR, 'github-innovation-graph.json'),
   manual: resolve(OBSERVATIONS_DIR, 'manual.json'),
   revisions: resolve(OBSERVATIONS_DIR, 'revisions.json'),
   delphiLatest: resolve(DELPHI_DIR, 'latest.json'),

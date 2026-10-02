@@ -13,7 +13,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Coordenação | 98,5 | 0,35 (fraca) | sem base de tendência |
 | Confiança | 82,8 | 0,5 (utilizável) | sem base de tendência |
 | Aprendizagem | 79,4 | 0,55 (utilizável) | sem base de tendência |
-| Experimentação | 60,6 | 0,48 (utilizável) | +1,2 em 10 anos, sobre 3 indicadores |
+| Experimentação | 57,6 | 0,53 (utilizável) | +1,2 em 10 anos, sobre 3 indicadores |
 | Adaptação | 65,3 | 0,57 (utilizável) | sem base de tendência |
 | Construção | 57,6 | 0,57 (utilizável) | +1,3 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 49,3 | 0,49 (utilizável) | -1 em 10 anos, sobre 2 indicadores |
@@ -52,8 +52,8 @@ Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 - Confiança: 82,8, solidez utilizável
 - Aprendizagem: 79,4, solidez utilizável
 - Adaptação: 65,3, solidez utilizável
-- Experimentação: 60,6, solidez utilizável
 - Agência: 60, solidez utilizável
+- Experimentação: 57,6, solidez utilizável
 - Construção: 57,6, solidez utilizável
 
 ## O que a Suíça tem para trabalhar
