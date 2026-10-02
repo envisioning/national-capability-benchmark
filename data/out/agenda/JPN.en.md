@@ -2,32 +2,32 @@
 
 *Generated 2026-10-02*
 
-The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
+The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
 ## Where Japan stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 64 | 0.46 (usable) | +13.5 over 10 years using 2 indicators |
-| Agency | 37.8 | 0.56 (usable) | no trend |
-| Coordination | 63.5 | 0.39 (thin) | no trend |
-| Trust | 64.3 | 0.5 (usable) | no trend |
-| Learning | 51.9 | 0.55 (usable) | no trend |
-| Experimentation | 56.8 | 0.33 (thin) | -6.3 over 10 years using 3 indicators |
-| Adaptability | 63.1 | 0.53 (usable) | no trend |
-| Building | 54.8 | 0.57 (usable) | -2.6 over 10 years using 3 indicators |
-| Shared Purpose | 40.3 | 0.24 (very thin) | no trend |
+| Anticipation | 62.2 | 0.46 (usable) | +13.2 over 10 years using 2 indicators |
+| Agency | 38.6 | 0.56 (usable) | no trend |
+| Coordination | 69.4 | 0.39 (thin) | no trend |
+| Trust | 64.4 | 0.5 (usable) | no trend |
+| Learning | 52.4 | 0.55 (usable) | no trend |
+| Experimentation | 61.5 | 0.33 (thin) | -6.9 over 10 years using 3 indicators |
+| Adaptability | 66.4 | 0.53 (usable) | no trend |
+| Building | 64.2 | 0.57 (usable) | -1.2 over 10 years using 3 indicators |
+| Shared Purpose | 37.8 | 0.24 (very thin) | no trend |
 
 ## What to raise
 
 These are the lowest scores with usable evidence. Thin evidence appears below.
 
-### Agency: 37.8, confidence usable
+### Agency: 38.6, confidence usable
 
 How able are individuals and organizations to turn an intention into action?
 
 - Uses 4 observed indicators.
-- Highest usable scores: Australia 86.1, Estonia 85.2, China 72.5.
+- Highest usable scores: New Zealand 92.2, Australia 89.2, Estonia 84.3.
 - Related deliveries in other countries: Singapore's national ICT-skills measurement and baseline (Singapore); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (India); Puntos México Conectado, national digital learning centres (Mexico).
 - Missing indicators: Adults doing digital tasks.
 
@@ -63,11 +63,11 @@ How effectively can independent actors organize around shared objectives?
 
 These dimensions score at least 50 with usable evidence.
 
-- Trust: 64.3, confidence usable
-- Anticipation: 64, confidence usable
-- Adaptability: 63.1, confidence usable
-- Building: 54.8, confidence usable
-- Learning: 51.9, confidence usable
+- Adaptability: 66.4, confidence usable
+- Trust: 64.4, confidence usable
+- Building: 64.2, confidence usable
+- Anticipation: 62.2, confidence usable
+- Learning: 52.4, confidence usable
 
 ## What Japan has to work with
 
@@ -75,19 +75,19 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 | Dimension | Condition | Value | Year | Rank |
 | --- | --- | --- | --- | --- |
-| Anticipation | R&D expenditure | 3.4 % of GDP | 2023 | 5 of 51 |
-| Anticipation | Researchers in R&D | 5,608.6 per million people | 2023 | 11 of 50 |
-| Anticipation | Secure internet servers | 32,928.8 per million people | 2024 | 15 of 53 |
-| Agency | Individuals using the internet | 85.5 % of population | 2024 | 29 of 53 |
-| Agency | Financial account ownership | 98.5 % aged 15+ | 2024 | 7 of 52 |
-| Agency | Credit to the private sector | 187.4 % of GDP | 2025 | 3 of 52 |
-| Learning | Tertiary enrolment | 64.5 % gross | 2023 | 27 of 52 |
-| Learning | Public education expenditure | 3.3 % of GDP | 2021 | 40 of 53 |
-| Learning | Vocational share of secondary | 11.4 % of secondary | 2018 | 33 of 53 |
-| Adaptability | Labour force participation | 82.3 % aged 15+ | 2025 | 5 of 53 |
-| Adaptability | Fixed broadband subscriptions | 38.6 per 100 people | 2023 | 14 of 53 |
-| Adaptability | Electricity transmission losses | 4.9 % of output | 2024 | 10 of 53 |
-| Building | Output per worker | 87,888.3 constant 2021 PPP $ | 2025 | 20 of 51 |
+| Anticipation | R&D expenditure | 3.4 % of GDP | 2023 | 5 of 118 |
+| Anticipation | Researchers in R&D | 5,608.6 per million people | 2023 | 16 of 114 |
+| Anticipation | Secure internet servers | 32,928.8 per million people | 2024 | 26 of 125 |
+| Agency | Individuals using the internet | 85.5 % of population | 2024 | 57 of 125 |
+| Agency | Financial account ownership | 98.5 % aged 15+ | 2024 | 12 of 122 |
+| Agency | Credit to the private sector | 187.4 % of GDP | 2025 | 3 of 124 |
+| Learning | Tertiary enrolment | 64.5 % gross | 2023 | 48 of 124 |
+| Learning | Public education expenditure | 3.3 % of GDP | 2021 | 85 of 125 |
+| Learning | Vocational share of secondary | 11.4 % of secondary | 2018 | 62 of 125 |
+| Adaptability | Labour force participation | 82.3 % aged 15+ | 2025 | 8 of 125 |
+| Adaptability | Fixed broadband subscriptions | 38.6 per 100 people | 2023 | 19 of 125 |
+| Adaptability | Electricity transmission losses | 4.9 % of output | 2024 | 17 of 117 |
+| Building | Output per worker | 87,888.3 constant 2021 PPP $ | 2025 | 32 of 123 |
 
 ## Missing data
 

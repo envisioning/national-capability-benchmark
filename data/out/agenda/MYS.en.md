@@ -2,34 +2,21 @@
 
 *Generated 2026-10-02*
 
-The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
+The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
 ## Where Malaysia stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 56 | 0.46 (usable) | +23.9 over 10 years using 2 indicators |
-| Agency | 50.9 | 0.56 (usable) | no trend |
-| Coordination | 83.5 | 0.41 (thin) | no trend |
-| Trust | 56.7 | 0.5 (usable) | no trend |
-| Learning | 49.6 | 0.55 (usable) | no trend |
-| Experimentation | 7.8 | 0.33 (thin) | -2 over 10 years using 3 indicators |
-| Adaptability | 77.5 | 0.59 (usable) | no trend |
-| Building | 68.2 | 0.57 (usable) | +5.8 over 10 years using 3 indicators |
-| Shared Purpose | 57.4 | 0.4 (thin) | -1.4 over 10 years using 2 indicators |
-
-## What to raise
-
-These are the lowest scores with usable evidence. Thin evidence appears below.
-
-### Learning: 49.6, confidence usable
-
-How effectively does the country acquire, distribute, and update knowledge?
-
-- Uses 3 observed indicators.
-- Highest usable scores: Singapore 84.2, Ireland 81.6, Australia 80.1.
-- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); Kartu Prakerja, a national lifelong-learning delivery system (Indonesia); Compte personnel de formation (France); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (India); SETAs and workplace-based learning delivery (South Africa); MEB public lifelong-learning network (Turkey); Kenya's adult education centres, and their halving (Kenya); Rwanda's adult literacy centres, and their decline (Rwanda); Integrated Functional Adult Education, and its erosion (Ethiopia); Instituto Técnico de Capacitación y Productividad (INTECAP) (Guatemala); INFOTEP national technical and vocational training (Dominican Republic); Campaña Nacional de Alfabetización (Cuba); VET FEE-HELP, and its abolition (Australia); Adult education allowance (aikuiskoulutustuki), and its abolition (Finland); INEFOP, the tripartite national training institute (Uruguay); Franquicia Tributaria SENCE, and its erosion (Chile); Employer and in-work training under Employment Insurance, and its erosion (South Korea); TESDA technical-vocational training at national scale (Philippines); INADEH national vocational training (Panama); Yo, sí puedo national literacy campaign and post-literacy programme (Bolivia); Project 1956 vocational training for rural workers (Vietnam); Bildungsprämie training voucher, and its end (Germany); Aufstiegs-BAföG, upgrading training support (Germany); Formación programada por las empresas (FUNDAE training credit) (Spain); Community Education and Training colleges, and their erosion (South Africa); SENA complementary training (formación complementaria) (Colombia); Vocational skills upgrading action, 2019-2021 (China); INA national vocational training, and its contraction (Costa Rica); Kunskapslyftet adult education initiative (Sweden); Springboard+ upskilling programme (Ireland); State-administered adult education under the Adult Education and Family Literacy Act, and its erosion (United States); STAP-budget training grant, abolished in 2024 (Netherlands); INEA adult basic education (Mexico); Hello Training, public vocational training (Japan); Educação de Jovens e Adultos (EJA), and its erosion (Brazil); Government-funded adult further education in England, and its erosion (United Kingdom); Educación Básica Alternativa (EBA), and its erosion (Peru); Upper secondary education for adults in non-stationary study (Estonia); Department of Skill Development skill-upgrading training (Thailand); Adult literacy education under the National Commission for Mass Literacy, Adult and Non-Formal Education (Nigeria); Skills Development under the Labour Market Development Agreements, and its 2024-25 funding cut (Canada); Instituto Nacional de Formación Profesional (INFOP) (Honduras); Ministry of Labour Vocational Training Division adult courses (Israel); Educación Permanente para personas jóvenes y adultas (MEC) (Paraguay); National literacy campaigns, 2010-2015 (Haiti); County and city general secondary schools for adults (licea ogólnokształcące dla dorosłych) (Poland).
-- Missing indicators: Adult learning participation.
+| Anticipation | 54.4 | 0.46 (usable) | +23.2 over 10 years using 2 indicators |
+| Agency | 51.9 | 0.56 (usable) | no trend |
+| Coordination | 86.1 | 0.41 (thin) | no trend |
+| Trust | 58.2 | 0.5 (usable) | no trend |
+| Learning | 50.9 | 0.55 (usable) | no trend |
+| Experimentation | 11.8 | 0.33 (thin) | -3.6 over 10 years using 3 indicators |
+| Adaptability | 77.9 | 0.59 (usable) | no trend |
+| Building | 74.3 | 0.57 (usable) | +6.2 over 10 years using 3 indicators |
+| Shared Purpose | 55.7 | 0.4 (thin) | -1 over 10 years using 2 indicators |
 
 ## What to measure first
 
@@ -63,11 +50,12 @@ How effectively can independent actors organize around shared objectives?
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 77.5, confidence usable
-- Building: 68.2, confidence usable
-- Trust: 56.7, confidence usable
-- Anticipation: 56, confidence usable
-- Agency: 50.9, confidence usable
+- Adaptability: 77.9, confidence usable
+- Building: 74.3, confidence usable
+- Trust: 58.2, confidence usable
+- Anticipation: 54.4, confidence usable
+- Agency: 51.9, confidence usable
+- Learning: 50.9, confidence usable
 
 ## What Malaysia has to work with
 
@@ -75,19 +63,19 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 | Dimension | Condition | Value | Year | Rank |
 | --- | --- | --- | --- | --- |
-| Anticipation | R&D expenditure | 1 % of GDP | 2022 | 24 of 51 |
-| Anticipation | Researchers in R&D | 1,218.3 per million people | 2022 | 25 of 50 |
-| Anticipation | Secure internet servers | 7,475.5 per million people | 2024 | 23 of 53 |
-| Agency | Individuals using the internet | 98 % of population | 2024 | 2 of 53 |
-| Agency | Financial account ownership | 88.7 % aged 15+ | 2024 | 23 of 52 |
-| Agency | Credit to the private sector | 117.9 % of GDP | 2025 | 12 of 52 |
-| Learning | Tertiary enrolment | 38.5 % gross | 2024 | 39 of 52 |
-| Learning | Public education expenditure | 3.5 % of GDP | 2023 | 39 of 53 |
-| Learning | Vocational share of secondary | 10.3 % of secondary | 2019 | 35 of 53 |
-| Adaptability | Labour force participation | 70.7 % aged 15+ | 2025 | 32 of 53 |
-| Adaptability | Fixed broadband subscriptions | 13.5 per 100 people | 2024 | 34 of 53 |
-| Adaptability | Electricity transmission losses | 6.9 % of output | 2023 | 21 of 53 |
-| Building | Output per worker | 70,821.2 constant 2021 PPP $ | 2025 | 23 of 51 |
+| Anticipation | R&D expenditure | 1 % of GDP | 2022 | 38 of 118 |
+| Anticipation | Researchers in R&D | 1,218.3 per million people | 2022 | 48 of 114 |
+| Anticipation | Secure internet servers | 7,475.5 per million people | 2024 | 45 of 125 |
+| Agency | Individuals using the internet | 98 % of population | 2024 | 4 of 125 |
+| Agency | Financial account ownership | 88.7 % aged 15+ | 2024 | 38 of 122 |
+| Agency | Credit to the private sector | 117.9 % of GDP | 2025 | 15 of 124 |
+| Learning | Tertiary enrolment | 38.5 % gross | 2024 | 75 of 124 |
+| Learning | Public education expenditure | 3.5 % of GDP | 2023 | 81 of 125 |
+| Learning | Vocational share of secondary | 10.3 % of secondary | 2019 | 66 of 125 |
+| Adaptability | Labour force participation | 70.7 % aged 15+ | 2025 | 63 of 125 |
+| Adaptability | Fixed broadband subscriptions | 13.5 per 100 people | 2024 | 70 of 125 |
+| Adaptability | Electricity transmission losses | 6.9 % of output | 2023 | 40 of 117 |
+| Building | Output per worker | 70,821.2 constant 2021 PPP $ | 2025 | 42 of 123 |
 
 ## Missing data
 

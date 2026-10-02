@@ -2,34 +2,21 @@
 
 *Gerado em 2026-10-02*
 
-A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
+A régua inclui 125 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
 ## Onde a Malásia está
 
 | Dimensão | Nota | Solidez | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 56 | 0,46 (utilizável) | +23,9 em 10 anos, sobre 2 indicadores |
-| Agência | 50,9 | 0,56 (utilizável) | sem base de tendência |
-| Coordenação | 83,5 | 0,41 (fraca) | sem base de tendência |
-| Confiança | 56,7 | 0,5 (utilizável) | sem base de tendência |
-| Aprendizagem | 49,6 | 0,55 (utilizável) | sem base de tendência |
-| Experimentação | 7,8 | 0,33 (fraca) | -2 em 10 anos, sobre 3 indicadores |
-| Adaptação | 77,5 | 0,59 (utilizável) | sem base de tendência |
-| Construção | 68,2 | 0,57 (utilizável) | +5,8 em 10 anos, sobre 3 indicadores |
-| Propósito compartilhado | 57,4 | 0,4 (fraca) | -1,4 em 10 anos, sobre 2 indicadores |
-
-## Dimensões para elevar
-
-Estas são as notas mais baixas com evidência utilizável. A evidência fraca aparece abaixo.
-
-### Aprendizagem: 49,6, solidez utilizável
-
-Com que eficácia o país adquire, distribui e atualiza conhecimento?
-
-- Baseada em 3 indicadores observados.
-- Maiores notas utilizáveis: Singapura 84,2, Irlanda 81,6, Austrália 80,1.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (Índia); SETAs and workplace-based learning delivery (África do Sul); MEB public lifelong-learning network (Turquia); Kenya's adult education centres, and their halving (Quênia); Rwanda's adult literacy centres, and their decline (Ruanda); Integrated Functional Adult Education, and its erosion (Etiópia); Instituto Técnico de Capacitación y Productividad (INTECAP) (Guatemala); INFOTEP national technical and vocational training (República Dominicana); Campaña Nacional de Alfabetización (Cuba); VET FEE-HELP, and its abolition (Austrália); Adult education allowance (aikuiskoulutustuki), and its abolition (Finlândia); INEFOP, the tripartite national training institute (Uruguai); Franquicia Tributaria SENCE, and its erosion (Chile); Employer and in-work training under Employment Insurance, and its erosion (Coreia do Sul); TESDA technical-vocational training at national scale (Filipinas); INADEH national vocational training (Panamá); Yo, sí puedo national literacy campaign and post-literacy programme (Bolívia); Project 1956 vocational training for rural workers (Vietnã); Bildungsprämie training voucher, and its end (Alemanha); Aufstiegs-BAföG, upgrading training support (Alemanha); Formación programada por las empresas (FUNDAE training credit) (Espanha); Community Education and Training colleges, and their erosion (África do Sul); SENA complementary training (formación complementaria) (Colômbia); Vocational skills upgrading action, 2019-2021 (China); INA national vocational training, and its contraction (Costa Rica); Kunskapslyftet adult education initiative (Suécia); Springboard+ upskilling programme (Irlanda); State-administered adult education under the Adult Education and Family Literacy Act, and its erosion (Estados Unidos); STAP-budget training grant, abolished in 2024 (Países Baixos); INEA adult basic education (México); Hello Training, public vocational training (Japão); Educação de Jovens e Adultos (EJA), and its erosion (Brasil); Government-funded adult further education in England, and its erosion (Reino Unido); Educación Básica Alternativa (EBA), and its erosion (Peru); Upper secondary education for adults in non-stationary study (Estônia); Department of Skill Development skill-upgrading training (Tailândia); Adult literacy education under the National Commission for Mass Literacy, Adult and Non-Formal Education (Nigéria); Skills Development under the Labour Market Development Agreements, and its 2024-25 funding cut (Canadá); Instituto Nacional de Formación Profesional (INFOP) (Honduras); Ministry of Labour Vocational Training Division adult courses (Israel); Educación Permanente para personas jóvenes y adultas (MEC) (Paraguai); National literacy campaigns, 2010-2015 (Haiti); County and city general secondary schools for adults (licea ogólnokształcące dla dorosłych) (Polônia).
-- Lacunas declaradas: Participação de adultos em aprendizagem.
+| Antecipação | 54,4 | 0,46 (utilizável) | +23,2 em 10 anos, sobre 2 indicadores |
+| Agência | 51,9 | 0,56 (utilizável) | sem base de tendência |
+| Coordenação | 86,1 | 0,41 (fraca) | sem base de tendência |
+| Confiança | 58,2 | 0,5 (utilizável) | sem base de tendência |
+| Aprendizagem | 50,9 | 0,55 (utilizável) | sem base de tendência |
+| Experimentação | 11,8 | 0,33 (fraca) | -3,6 em 10 anos, sobre 3 indicadores |
+| Adaptação | 77,9 | 0,59 (utilizável) | sem base de tendência |
+| Construção | 74,3 | 0,57 (utilizável) | +6,2 em 10 anos, sobre 3 indicadores |
+| Propósito compartilhado | 55,7 | 0,4 (fraca) | -1 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para medir primeiro
 
@@ -63,11 +50,12 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 77,5, solidez utilizável
-- Construção: 68,2, solidez utilizável
-- Confiança: 56,7, solidez utilizável
-- Antecipação: 56, solidez utilizável
-- Agência: 50,9, solidez utilizável
+- Adaptação: 77,9, solidez utilizável
+- Construção: 74,3, solidez utilizável
+- Confiança: 58,2, solidez utilizável
+- Antecipação: 54,4, solidez utilizável
+- Agência: 51,9, solidez utilizável
+- Aprendizagem: 50,9, solidez utilizável
 
 ## O que a Malásia tem para trabalhar
 
@@ -75,19 +63,19 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 | Dimensão | Condição | Valor | Ano | Posição |
 | --- | --- | --- | --- | --- |
-| Antecipação | Dispêndio em P&D | 1 % do PIB | 2022 | 24º de 51 |
-| Antecipação | Pesquisadores em P&D | 1.218,3 por milhão de pessoas | 2022 | 25º de 50 |
-| Antecipação | Servidores seguros de internet | 7.475,5 por milhão de pessoas | 2024 | 23º de 53 |
-| Agência | Pessoas que usam a internet | 98 % da população | 2024 | 2º de 53 |
-| Agência | Titularidade de conta financeira | 88,7 % das pessoas com 15 anos ou mais | 2024 | 23º de 52 |
-| Agência | Crédito ao setor privado | 117,9 % do PIB | 2025 | 12º de 52 |
-| Aprendizagem | Matrícula no ensino superior | 38,5 % (taxa bruta) | 2024 | 39º de 52 |
-| Aprendizagem | Dispêndio público em educação | 3,5 % do PIB | 2023 | 39º de 53 |
-| Aprendizagem | Parcela técnica do ensino médio | 10,3 % das matrículas no ensino secundário | 2019 | 35º de 53 |
-| Adaptação | Participação na força de trabalho | 70,7 % das pessoas com 15 anos ou mais | 2025 | 32º de 53 |
-| Adaptação | Assinaturas de banda larga fixa | 13,5 por 100 pessoas | 2024 | 34º de 53 |
-| Adaptação | Perdas na transmissão de eletricidade | 6,9 % da produção | 2023 | 21º de 53 |
-| Construção | Produto por trabalhador | 70.821,2 US$ PPC constantes de 2021 | 2025 | 23º de 51 |
+| Antecipação | Dispêndio em P&D | 1 % do PIB | 2022 | 38º de 118 |
+| Antecipação | Pesquisadores em P&D | 1.218,3 por milhão de pessoas | 2022 | 48º de 114 |
+| Antecipação | Servidores seguros de internet | 7.475,5 por milhão de pessoas | 2024 | 45º de 125 |
+| Agência | Pessoas que usam a internet | 98 % da população | 2024 | 4º de 125 |
+| Agência | Titularidade de conta financeira | 88,7 % das pessoas com 15 anos ou mais | 2024 | 38º de 122 |
+| Agência | Crédito ao setor privado | 117,9 % do PIB | 2025 | 15º de 124 |
+| Aprendizagem | Matrícula no ensino superior | 38,5 % (taxa bruta) | 2024 | 75º de 124 |
+| Aprendizagem | Dispêndio público em educação | 3,5 % do PIB | 2023 | 81º de 125 |
+| Aprendizagem | Parcela técnica do ensino médio | 10,3 % das matrículas no ensino secundário | 2019 | 66º de 125 |
+| Adaptação | Participação na força de trabalho | 70,7 % das pessoas com 15 anos ou mais | 2025 | 63º de 125 |
+| Adaptação | Assinaturas de banda larga fixa | 13,5 por 100 pessoas | 2024 | 70º de 125 |
+| Adaptação | Perdas na transmissão de eletricidade | 6,9 % da produção | 2023 | 40º de 117 |
+| Construção | Produto por trabalhador | 70.821,2 US$ PPC constantes de 2021 | 2025 | 42º de 123 |
 
 ## Agenda de medição
 

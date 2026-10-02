@@ -2,7 +2,7 @@
 
 *Generated 2026-10-02*
 
-The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
+The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
 ## Where Cuba stands
 
@@ -13,9 +13,9 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Coordination | not scored | 0.1 (very thin) | no trend |
 | Trust | not scored | 0.07 (very thin) | no trend |
 | Learning | not scored | 0.16 (very thin) | no trend |
-| Experimentation | 1.1 | 0.24 (very thin) | -0.1 over 10 years using 3 indicators |
-| Adaptability | 62.2 | 0.48 (usable) | no trend |
-| Building | 21.8 | 0.29 (thin) | -27.1 over 10 years using 2 indicators |
+| Experimentation | 1.5 | 0.24 (very thin) | -0.3 over 10 years using 3 indicators |
+| Adaptability | 64.6 | 0.48 (usable) | no trend |
+| Building | 22.1 | 0.29 (thin) | -27 over 10 years using 2 indicators |
 | Shared Purpose | not scored | 0 (very thin) | no trend |
 
 ## What to measure first
@@ -87,7 +87,7 @@ How capable is the country of turning plans and knowledge into functioning syste
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 62.2, confidence usable
+- Adaptability: 64.6, confidence usable
 
 ## What Cuba has to work with
 
@@ -95,16 +95,16 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 | Dimension | Condition | Value | Year | Rank |
 | --- | --- | --- | --- | --- |
-| Anticipation | R&D expenditure | 0.4 % of GDP | 2024 | 32 of 51 |
-| Anticipation | Researchers in R&D | 2,171.3 per million people | 2024 | 21 of 50 |
-| Anticipation | Secure internet servers | 192.5 per million people | 2024 | 43 of 53 |
-| Agency | Individuals using the internet | 70.5 % of population | 2024 | 42 of 53 |
-| Learning | Tertiary enrolment | 43.1 % gross | 2024 | 38 of 52 |
-| Learning | Public education expenditure | 8.4 % of GDP | 2022 | 1 of 53 |
-| Learning | Vocational share of secondary | 27.4 % of secondary | 2019 | 11 of 53 |
-| Adaptability | Labour force participation | 63.8 % aged 15+ | 2025 | 46 of 53 |
-| Adaptability | Fixed broadband subscriptions | 3.1 per 100 people | 2024 | 48 of 53 |
-| Adaptability | Electricity transmission losses | 18.7 % of output | 2023 | 46 of 53 |
+| Anticipation | R&D expenditure | 0.4 % of GDP | 2024 | 60 of 118 |
+| Anticipation | Researchers in R&D | 2,171.3 per million people | 2024 | 39 of 114 |
+| Anticipation | Secure internet servers | 192.5 per million people | 2024 | 88 of 125 |
+| Agency | Individuals using the internet | 70.5 % of population | 2024 | 85 of 125 |
+| Learning | Tertiary enrolment | 43.1 % gross | 2024 | 73 of 124 |
+| Learning | Public education expenditure | 8.4 % of GDP | 2022 | 2 of 125 |
+| Learning | Vocational share of secondary | 27.4 % of secondary | 2019 | 25 of 125 |
+| Adaptability | Labour force participation | 63.8 % aged 15+ | 2025 | 92 of 125 |
+| Adaptability | Fixed broadband subscriptions | 3.1 per 100 people | 2024 | 94 of 125 |
+| Adaptability | Electricity transmission losses | 18.7 % of output | 2023 | 101 of 117 |
 
 ## Missing data
 

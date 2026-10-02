@@ -9,6 +9,50 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## Dataset 9.0.0 — 2026-10-02
+
+- **The benchmark now covers 125 countries.** It adds 72 to the 53 it had:
+  every country of a million people or more that has enough published data
+  to score all nine capabilities (D153). Among them are Italy, Belgium,
+  Austria, the Nordic countries not yet in it, most of Central and Eastern
+  Europe, Russia, Ukraine, Pakistan, Bangladesh, Egypt, Iran, Iraq and 22
+  countries in Africa south of the Sahara. All 72 publish nine scores.
+- **Every score restates, and 8.3.0 numbers are not comparable with these.**
+  Each indicator's scale is set by every country in the benchmark, so adding
+  countries moves it for everyone. Of the 470 scores the 53 had in both
+  releases, 462 moved, by 3.2 points on average. The largest rises are in
+  Experimentation for Israel (28.3 to 48.0), Sweden and the United Kingdom,
+  because the countries added below them widen the bottom of the patent and
+  trademark scales. Ranks are now out of 125.
+- **Brazil:** Anticipation 44.6 (51st of 124), Agency 58.0 (54th),
+  Coordination 89.1 (21st), Trust 53.4 (73rd), Learning 36.6 (73rd),
+  Experimentation 28.7 (38th of 125), Adaptability 64.5 (62nd), Building
+  38.3 (43rd) and Shared purpose 30.6 (118th of 123).
+- **Trust drops below the 0.40 confidence target, at 0.398.** Half its rows
+  come from one survey release that reaches few of the poorer countries
+  added, so their Trust scores rest on court and contract rows alone.
+  Experimentation falls from 0.364 to 0.318 and Shared purpose from 0.343
+  to 0.319. Nothing was lost for the 53: their confidence is unchanged.
+- **How much the capabilities follow income has shifted.** Trust's
+  correlation with income falls from 0.61 to 0.35 and Agency's from 0.58 to
+  0.47. Experimentation rises from 0.65 to 0.73, Building from 0.43 to 0.57
+  and Adaptability from 0.43 to 0.53. The one shared factor behind the nine
+  carries half their variation, and it correlates 0.815 with income, with a
+  95% interval of 0.745 to 0.867. Countries at the same income still have
+  different capability shapes, by the rule fixed before the first test, and
+  income now accounts for less of the typical country's profile than it
+  did on 53.
+- **Confidence now tracks income more: 0.526, against 0.272.** The original
+  53 happened to include the poor countries one large survey reached; the
+  world's data is thinner where incomes are lower. The 0.526 is the new
+  baseline the project watches, and a source that raises it inside these
+  125 countries is the warning sign.
+- The new countries arrive without evidence records, foresight coding or
+  panel estimates. Their 576 evidence cells are open and listed as the
+  research queue. Belarus joins China and Cuba among the countries whose
+  GitHub figure is held, because its count of public projects barely grew
+  while the platform grew elsewhere.
+
 ## Dataset 8.3.0 — 2026-10-02
 
 - **National belonging is back on the list of things Shared purpose asks
@@ -70,6 +114,16 @@ and may skip versions that were never committed.
 - The shared factor across the nine scores carries 0.50 of their variance,
   unchanged to two places. Same 53 countries; 8.1.0 Adaptability scores are
   not comparable with these.
+
+## App 1.25.0 — 2026-10-02
+
+- **72 new country pages**, each with its nine scores, its agenda and its
+  capability map, and all of them in the country list, the comparison picker,
+  the front-page field and the sitemap.
+- The Spanish and Brazilian layers name every country in their own language
+  where they mention one.
+- Indicator notes that quoted a coverage count from the old 53 now say so, or
+  give the count on 125.
 
 ## App 1.24.11 — 2026-10-02
 

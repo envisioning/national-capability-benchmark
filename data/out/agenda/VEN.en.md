@@ -2,21 +2,21 @@
 
 *Generated 2026-10-02*
 
-The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
+The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
 ## Where Venezuela stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 0.9 | 0.46 (usable) | -5.5 over 10 years using 2 indicators |
-| Agency | 25.8 | 0.37 (thin) | no trend |
-| Coordination | 16.2 | 0.22 (very thin) | no trend |
-| Trust | 31.1 | 0.39 (thin) | no trend |
+| Anticipation | 0.9 | 0.46 (usable) | -5.4 over 10 years using 2 indicators |
+| Agency | 26.1 | 0.37 (thin) | no trend |
+| Coordination | 16.7 | 0.22 (very thin) | no trend |
+| Trust | 35 | 0.39 (thin) | no trend |
 | Learning | 43.2 | 0.19 (very thin) | no trend |
-| Experimentation | 4.2 | 0.19 (very thin) | no trend |
-| Adaptability | 44.4 | 0.53 (usable) | no trend |
-| Building | 0 | 0.27 (thin) | no trend |
-| Shared Purpose | 21.7 | 0.14 (very thin) | no trend |
+| Experimentation | 5.8 | 0.19 (very thin) | no trend |
+| Adaptability | 48.7 | 0.53 (usable) | no trend |
+| Building | 5.9 | 0.27 (thin) | no trend |
+| Shared Purpose | 26.5 | 0.14 (very thin) | no trend |
 
 ## What to raise
 
@@ -27,16 +27,16 @@ These are the lowest scores with usable evidence. Thin evidence appears below.
 How capable is the country of identifying and preparing for emerging change?
 
 - Uses 2 observed indicators.
-- Highest usable scores: Switzerland 96.3, Sweden 90, Finland 87.5.
+- Highest usable scores: Denmark 98.1, Norway 97.2, Switzerland 93.4.
 - Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (South Africa); Government Report on the Future and the parliamentary Committee for the Future (Finland); Foresight Centre at the Riigikogu (Arenguseire Keskus) (Estonia); Office of Technology Assessment, defunded and closed in 1995 (United States); Rządowe Centrum Studiów Strategicznych, liquidated in 2006 (Poland); Office of Technology Assessment at the German Bundestag (TAB) (Germany); National Assembly Futures Institute (South Korea); Federal Chancellery situation and environment analysis (Perspektivstab) (Switzerland); Senate foresight delegation (Délégation sénatoriale à la prospective) (France); Senate Commission on Future Challenges, Science, Technology and Innovation (Chile); Policy Horizons Canada, the federal foresight unit, and its 2024 disruption scan (Canada); Framtidskommissionen, the Prime Minister's time-limited future commission (Sweden).
 - Missing indicators: Government foresight capacity, Long-horizon research commitments.
 
-### Adaptability: 44.4, confidence usable
+### Adaptability: 48.7, confidence usable
 
 How effectively can the system respond when circumstances change?
 
 - Uses 4 observed indicators.
-- Highest usable scores: Poland 89.2, Vietnam 88.2, Thailand 88.
+- Highest usable scores: Poland 89.5, Vietnam 88.1, Thailand 87.6.
 - Related deliveries in other countries: Plano Real, the 1994 currency stabilisation (Brazil); Proalcool, the fuel substitution after the oil shock (Brazil); The Convertibility Plan, and its collapse (Argentina); Kurzarbeit in the 2008-2009 crisis (Germany); The 2001 stabilisation, and its unwinding (Turkey); Telebras, the telecom system that was dismantled (Brazil); Estonian Defence League, national defence rebuilt after independence (Estonia); Korea Internet and Security Agency, a consolidated digital authority (South Korea); Federal siren warning network, and its dismantling (Germany); Room for the River, flood safety delivered across the Rhine branches (Netherlands); Childcare benefits administration, and the recovery after institutional failure (Netherlands); National Police, one corps from twenty-five regional forces (Netherlands); NL-Alert, a tested multi-channel emergency warning system (Netherlands); DigiD Machtigen, delegated access to public services (Netherlands); DigiNotar, a certificate breach that forced a trust-chain reset (Netherlands); Programmatic Approach to Nitrogen, and the permitting reversal (Netherlands); 27F reconstruction, a nationwide recovery programme after the 2010 earthquake (Chile); Cédula digital, an identity service upgraded for mobile use (Colombia); Victims' reparations, a long-running administrative response to conflict (Colombia); Fondo Adaptación, recovery and safer resettlement after La Niña (Colombia); My Number Card, a national identity rail extended into services (Japan); Tōhoku reconstruction, a decade-long recovery programme (Japan); Juntos, a conditional-transfer system at national scale (Peru); Certified digital signature across public services (Costa Rica); REDCUDI childcare network and SINIRUBE referrals (Costa Rica); Dollarization as an emergency monetary redesign (Ecuador); 2016 earthquake national emergency coordination (Ecuador); 120 a los 65 social pension (Panama); Canal water-and-transit response to the 2023–24 drought (Panama); Bono Juana Azurduy maternal and child health transfer (Bolivia); Renta Dignidad non-contributory old-age pension (Bolivia); Tekoporã Mbarete family-support programme (Paraguay); SIFEN national electronic invoicing rollout (Paraguay); Asignación Universal por Hijo child benefit (Argentina); SUBE national electronic fare and subsidy rail (Argentina); PhilSys foundational national ID rollout (Philippines); Pantawid Pamilyang Pilipino Program (4Ps) (Philippines); Typhoon Yolanda shelter and recovery programme (Philippines); Jaminan Kesehatan Nasional, a near-universal health-insurance pool (Indonesia); InaRISK national disaster-risk information platform (Indonesia); VNeID national electronic identity (Vietnam); Vietnam Social Security health-insurance expansion (Vietnam); Typhoon Yagi emergency restoration (Vietnam); MySejahtera and the national COVID-19 immunisation programme (Malaysia); National flood-warning SMS system (Malaysia); Universal Coverage Scheme and the 30-baht health system (Thailand); National Digital ID framework (Thailand); T-Alert national cell-broadcast warning system (Thailand); Cl@ve shared digital identity (Spain); La Palma volcanic-eruption recovery and monitoring (Spain); mObywatel digital ID wallet (Poland); Rodzina 500+ and 800+ child-benefit delivery (Poland); Alert RCB national emergency SMS channel (Poland); BankID federated electronic identity (Sweden); 1177 national health portal and helpline (Sweden); VMA multi-channel public warning system (Sweden); MyGovID single sign-on for public services (Ireland); National COVID-19 vaccination delivery (Ireland); National Asset Management Agency crisis workout (Ireland); Met Éireann national weather-warning service (Ireland); Salário mínimo and its permanent revaluation rule (Brazil); eNaira, a national rollout with an adoption gap (Nigeria); Productive Safety Net Programme for drought resilience (Ethiopia); National 9-1-1 emergency-response system (Dominican Republic); Sistema Nacional de Emergencias 911 (Honduras); National COVID-19 vaccination campaign (Cuba); Bitcoin Law, and its 2025 rollback (El Salvador); Routine immunization coverage, and its erosion (Haiti); Chave Móvel Digital and Portugal's digital identity layer (Portugal); Empresa na Hora and the one-stop company registry (Portugal); Sistema de Gestão Integrada de Fogos Rurais (Portugal); Simplex and LabX, a standing simplification-and-experimentation loop (Portugal); Programa Nacional de Vacinação and seasonal immunisation (Portugal); STAYAWAY COVID, a contact-tracing app suspended after the emergency (Portugal); CoWIN national COVID-19 vaccination platform (India); Gauteng e-tolls, and their cancellation after public resistance (South Africa); COFEPRIS digital regulatory procedures (Mexico); Simulacro Nacional 2024, a nationwide emergency exercise (Mexico); PROSPERA, and its replacement by a new scholarship authority (Mexico); AFAD earthquake shelter and recovery operation (Turkey); Civil defence shelters (Finland); Public civil defence shelters, and their dismantling (Germany); The 1997 Canada Pension Plan financing reform (Canada); Dynamic zero-COVID containment, and its dismantling (China); Nigeria's 2014 Ebola containment (Nigeria); SINAPRED evacuation for hurricanes Eta and Iota (Nicaragua); National cholera elimination drive, and the return of cholera (Haiti); Civil Defence hurricane evacuation system (Cuba); Tarea Ordenamiento's single exchange rate, and its fragmentation (Cuba); Covid-19 bridging credits (Switzerland); Civil protection shelters (Switzerland); JobKeeper Payment (Australia); Quédate en Casa emergency cash transfer (Dominican Republic); Estonian Stockpiling Agency (Eesti Varude Keskus) national emergency stocks (Estonia); Bono Familia, the COVID-19 emergency cash transfer (Guatemala); Strategic stock of pandemic masks, and its erosion (France); National COVID-19 vaccination campaign (United Arab Emirates); Plan Panamá Solidario, Vale Digital (Panama); Public disaster warning network of the Department of Disaster Prevention and Mitigation, and its erosion (Thailand); SINARAME national weather radar network (Argentina); Rwanda's 2024 Marburg outbreak response (Rwanda); Jobs Support Scheme and the four 2020 Budgets (Singapore); PUB drainage programme and the shrinking of flood-prone land (Singapore); Catastrophe risk insurance through CCRIF (Nicaragua); National COVID-19 vaccination campaign (Israel); National Social Safety Nets Project and the COVID-19 Rapid Response Register (Nigeria); State medical emergency stockpiles, and their dismantling (Sweden); COVID-19 Vaccine Taskforce and national vaccination rollout (United Kingdom); FONDEN, the natural disaster fund, and its abolition (Mexico); DASK compulsory earthquake insurance (Turkey); Disaster Recovery Funding Arrangements (Australia); Disaster Financial Assistance Arrangements (Canada); National Flood Insurance Program coverage, and its erosion (United States); KMA earthquake early warning service (South Korea); South African Weather Service radar network, and its erosion (South Africa); Hunger Safety Net Programme, a shock-responsive cash transfer for drought (Kenya); Auxílio Reconstrução, the federal cash grant after the 2024 Rio Grande do Sul floods (Brazil); Hurricane Otto priority reconstruction works (Costa Rica); Contingent disaster credit with a Catastrophe Deferred Drawdown Option (Guatemala); National COVID-19 vaccination campaign (Peru); Secretaría de Emergencia Nacional response to the 2019 floods (Paraguay); National COVID-19 vaccination campaign (El Salvador); Coronavirus Job Retention Scheme (United Kingdom); Activité partielle in the 2020 crisis (France); Expanded Child Tax Credit of 2021, and its lapse (United States); Pradhan Mantri Garib Kalyan Anna Yojana, the free foodgrain response to COVID-19 (India); Targeted Economic Support Scheme (TESS) (United Arab Emirates); Phased exemption of enterprise social insurance contributions, 2020 (China); Business Finland disruption funding, 2020 (Finland); Partial and flexible unemployment subsidy, 2020-2021 (Uruguay); Ingreso Familiar de Emergencia, the COVID-19 household transfer (Chile); Central Bank of Kenya emergency loan restructuring measures (Kenya); Conditional cash transfer shock response, and its suspension after 2022 (Honduras); Food relief from the national reserve during the July 2021 lockdown (Rwanda); Bank of Israel COVID-19 small-business credit programme (Israel); Plan Nacional de Relocalizaciones, moving households out of flood-prone land (Uruguay); Floating the birr, July 2024 (Ethiopia); COVID-19 vaccination campaign (Bolivia).
 - Missing indicators: Disaster preparedness and recovery, Institutional responsiveness.
 
@@ -104,19 +104,19 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 | Dimension | Condition | Value | Year | Rank |
 | --- | --- | --- | --- | --- |
-| Anticipation | R&D expenditure | 0.3 % of GDP | 2014 | 37 of 51 |
-| Anticipation | Researchers in R&D | 180 per million people | 2023 | 40 of 50 |
-| Anticipation | Secure internet servers | 246.7 per million people | 2024 | 42 of 53 |
-| Agency | Individuals using the internet | 76.7 % of population | 2024 | 39 of 53 |
-| Agency | Financial account ownership | 87.3 % aged 15+ | 2024 | 24 of 52 |
-| Agency | Credit to the private sector | 27.5 % of GDP | 2013 | 46 of 52 |
-| Learning | Tertiary enrolment | 78.3 % gross | 2009 | 15 of 52 |
-| Learning | Public education expenditure | 6.9 % of GDP | 2009 | 4 of 53 |
-| Learning | Vocational share of secondary | 5.4 % of secondary | 2017 | 44 of 53 |
-| Adaptability | Labour force participation | 56.6 % aged 15+ | 2025 | 53 of 53 |
-| Adaptability | Fixed broadband subscriptions | 12.9 per 100 people | 2024 | 35 of 53 |
-| Adaptability | Electricity transmission losses | 21.4 % of output | 2023 | 49 of 53 |
-| Adaptability | Informal employment | 58.3 % of employment | 2017 | 26 of 43 |
+| Anticipation | R&D expenditure | 0.3 % of GDP | 2014 | 71 of 118 |
+| Anticipation | Researchers in R&D | 180 per million people | 2023 | 80 of 114 |
+| Anticipation | Secure internet servers | 246.7 per million people | 2024 | 86 of 125 |
+| Agency | Individuals using the internet | 76.7 % of population | 2024 | 78 of 125 |
+| Agency | Financial account ownership | 87.3 % aged 15+ | 2024 | 41 of 122 |
+| Agency | Credit to the private sector | 27.5 % of GDP | 2013 | 89 of 124 |
+| Learning | Tertiary enrolment | 78.3 % gross | 2009 | 27 of 124 |
+| Learning | Public education expenditure | 6.9 % of GDP | 2009 | 6 of 125 |
+| Learning | Vocational share of secondary | 5.4 % of secondary | 2017 | 90 of 125 |
+| Adaptability | Labour force participation | 56.6 % aged 15+ | 2025 | 110 of 125 |
+| Adaptability | Fixed broadband subscriptions | 12.9 per 100 people | 2024 | 71 of 125 |
+| Adaptability | Electricity transmission losses | 21.4 % of output | 2023 | 107 of 117 |
+| Adaptability | Informal employment | 58.3 % of employment | 2017 | 55 of 102 |
 
 ## Missing data
 

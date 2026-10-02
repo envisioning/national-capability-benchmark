@@ -2,21 +2,21 @@
 
 *Gerado em 2026-10-02*
 
-A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
+A régua inclui 125 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
 ## Onde a Coreia do Sul está
 
 | Dimensão | Nota | Solidez | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 76,6 | 0,46 (utilizável) | +17,8 em 10 anos, sobre 2 indicadores |
-| Agência | 61 | 0,54 (utilizável) | sem base de tendência |
-| Coordenação | 87 | 0,4 (fraca) | sem base de tendência |
-| Confiança | 67,6 | 0,5 (utilizável) | sem base de tendência |
-| Aprendizagem | 51,6 | 0,55 (utilizável) | sem base de tendência |
-| Experimentação | 70,3 | 0,53 (utilizável) | +11,3 em 10 anos, sobre 3 indicadores, 1 truncados na borda da régua |
-| Adaptação | 72,7 | 0,46 (utilizável) | sem base de tendência |
-| Construção | 69,8 | 0,57 (utilizável) | +2,8 em 10 anos, sobre 3 indicadores |
-| Propósito compartilhado | 43,6 | 0,4 (fraca) | +4 em 10 anos, sobre 2 indicadores |
+| Antecipação | 74,4 | 0,46 (utilizável) | +17,4 em 10 anos, sobre 2 indicadores |
+| Agência | 61,4 | 0,54 (utilizável) | sem base de tendência |
+| Coordenação | 88,8 | 0,4 (fraca) | sem base de tendência |
+| Confiança | 67,5 | 0,5 (utilizável) | sem base de tendência |
+| Aprendizagem | 52,1 | 0,55 (utilizável) | sem base de tendência |
+| Experimentação | 72,7 | 0,53 (utilizável) | +12,1 em 10 anos, sobre 3 indicadores, 1 truncados na borda da régua |
+| Adaptação | 73 | 0,46 (utilizável) | sem base de tendência |
+| Construção | 85,1 | 0,57 (utilizável) | +3,1 em 10 anos, sobre 3 indicadores |
+| Propósito compartilhado | 40,6 | 0,4 (fraca) | +3,3 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para medir primeiro
 
@@ -42,13 +42,13 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Antecipação: 76,6, solidez utilizável
-- Adaptação: 72,7, solidez utilizável
-- Experimentação: 70,3, solidez utilizável
-- Construção: 69,8, solidez utilizável
-- Confiança: 67,6, solidez utilizável
-- Agência: 61, solidez utilizável
-- Aprendizagem: 51,6, solidez utilizável
+- Construção: 85,1, solidez utilizável
+- Antecipação: 74,4, solidez utilizável
+- Adaptação: 73, solidez utilizável
+- Experimentação: 72,7, solidez utilizável
+- Confiança: 67,5, solidez utilizável
+- Agência: 61,4, solidez utilizável
+- Aprendizagem: 52,1, solidez utilizável
 
 ## O que a Coreia do Sul tem para trabalhar
 
@@ -56,20 +56,20 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 | Dimensão | Condição | Valor | Ano | Posição |
 | --- | --- | --- | --- | --- |
-| Antecipação | Dispêndio em P&D | 4,9 % do PIB | 2023 | 2º de 51 |
-| Antecipação | Pesquisadores em P&D | 9.471,8 por milhão de pessoas | 2023 | 1º de 50 |
-| Antecipação | Servidores seguros de internet | 11.902,4 por milhão de pessoas | 2024 | 21º de 53 |
-| Agência | Pessoas que usam a internet | 97,9 % da população | 2024 | 3º de 53 |
-| Agência | Titularidade de conta financeira | 96,9 % das pessoas com 15 anos ou mais | 2024 | 16º de 52 |
-| Agência | Crédito ao setor privado | 160,3 % do PIB | 2024 | 5º de 52 |
-| Aprendizagem | Matrícula no ensino superior | 111,9 % (taxa bruta) | 2024 | 1º de 52 |
-| Aprendizagem | Dispêndio público em educação | 5,4 % do PIB | 2022 | 11º de 53 |
-| Aprendizagem | Parcela técnica do ensino médio | 9,4 % das matrículas no ensino secundário | 2018 | 38º de 53 |
-| Adaptação | Participação na força de trabalho | 71,2 % das pessoas com 15 anos ou mais | 2025 | 29º de 53 |
-| Adaptação | Assinaturas de banda larga fixa | 47,8 por 100 pessoas | 2024 | 2º de 53 |
-| Adaptação | Perdas na transmissão de eletricidade | 3,3 % da produção | 2024 | 2º de 53 |
-| Adaptação | Emprego informal | 29,1 % do emprego | 2019 | 16º de 43 |
-| Construção | Produto por trabalhador | 99.046 US$ PPC constantes de 2021 | 2025 | 16º de 51 |
+| Antecipação | Dispêndio em P&D | 4,9 % do PIB | 2023 | 2º de 118 |
+| Antecipação | Pesquisadores em P&D | 9.471,8 por milhão de pessoas | 2023 | 1º de 114 |
+| Antecipação | Servidores seguros de internet | 11.902,4 por milhão de pessoas | 2024 | 42º de 125 |
+| Agência | Pessoas que usam a internet | 97,9 % da população | 2024 | 5º de 125 |
+| Agência | Titularidade de conta financeira | 96,9 % das pessoas com 15 anos ou mais | 2024 | 24º de 122 |
+| Agência | Crédito ao setor privado | 160,3 % do PIB | 2024 | 5º de 124 |
+| Aprendizagem | Matrícula no ensino superior | 111,9 % (taxa bruta) | 2024 | 3º de 124 |
+| Aprendizagem | Dispêndio público em educação | 5,4 % do PIB | 2022 | 25º de 125 |
+| Aprendizagem | Parcela técnica do ensino médio | 9,4 % das matrículas no ensino secundário | 2018 | 74º de 125 |
+| Adaptação | Participação na força de trabalho | 71,2 % das pessoas com 15 anos ou mais | 2025 | 56º de 125 |
+| Adaptação | Assinaturas de banda larga fixa | 47,8 por 100 pessoas | 2024 | 2º de 125 |
+| Adaptação | Perdas na transmissão de eletricidade | 3,3 % da produção | 2024 | 3º de 117 |
+| Adaptação | Emprego informal | 29,1 % do emprego | 2019 | 37º de 102 |
+| Construção | Produto por trabalhador | 99.046 US$ PPC constantes de 2021 | 2025 | 24º de 123 |
 
 ## Agenda de medição
 

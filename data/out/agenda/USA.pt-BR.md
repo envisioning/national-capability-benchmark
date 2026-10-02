@@ -2,35 +2,21 @@
 
 *Gerado em 2026-10-02*
 
-A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
+A régua inclui 125 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
 ## Onde os Estados Unidos está
 
 | Dimensão | Nota | Solidez | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 72,7 | 0,46 (utilizável) | +0,5 em 10 anos, sobre 2 indicadores |
-| Agência | 83,4 | 0,37 (fraca) | sem base de tendência |
-| Coordenação | 98,6 | 0,23 (muito fraca) | sem base de tendência |
-| Confiança | 69,3 | 0,5 (utilizável) | sem base de tendência |
-| Aprendizagem | 60,7 | 0,55 (utilizável) | sem base de tendência |
-| Experimentação | 48,1 | 0,53 (utilizável) | +0,8 em 10 anos, sobre 3 indicadores |
-| Adaptação | 71,6 | 0,62 (utilizável) | sem base de tendência |
-| Construção | 58,2 | 0,53 (utilizável) | +0,5 em 10 anos, sobre 3 indicadores |
-| Propósito compartilhado | 55,3 | 0,43 (fraca) | -1,1 em 10 anos, sobre 2 indicadores |
-
-## Dimensões para elevar
-
-Estas são as notas mais baixas com evidência utilizável. A evidência fraca aparece abaixo.
-
-### Experimentação: 48,1, solidez utilizável
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- Baseada em 6 indicadores observados.
-- Maiores notas utilizáveis: Coreia do Sul 70,3, Suíça 57,6, Estônia 36,8.
-- Entregas documentadas em outros países: The FCA regulatory sandbox (Reino Unido); Yozma, the venture capital catalyst (Israel); Korean regulatory-sandbox system across eight sectors (Coreia do Sul); MAS FinTech Regulatory Sandbox variants (Singapura); British Patient Capital, a public venture-capital catalyst (Reino Unido); ICURe, from university research to spinouts (Reino Unido); Portugal Ventures, a public venture-capital bridge (Portugal); Rede Nacional de Test Beds for company experimentation (Portugal); Zonas Livres Tecnológicas, regulator-supervised experimentation zones (Portugal); Banco Central regulatory sandbox, first cycle (Brasil); Reserve Bank of India regulatory sandbox (Índia); Capital Markets Authority regulatory sandbox (Quênia); SEC Nigeria Regulatory Incubation Program (Nigéria); ADGM RegLab, the first fintech sandbox in the region (Emirados Árabes Unidos); OJK regulatory sandbox for financial-sector technological innovation (Indonésia); Bank Negara Malaysia Fintech Regulatory Sandbox (Malásia); Bank of Thailand regulatory sandbox (Tailândia); Sandbox financiero (Ley 7/2020), and the fall in applications (Espanha); IFWG Regulatory Sandbox (África do Sul); Project-based regulatory sandbox (new technology demonstration scheme) (Japão); CSA Regulatory Sandbox, succeeded by the Financial Innovation Hub (Canadá); ASIC enhanced regulatory sandbox (Austrália); SINTEG-Verordnung, the energy-transition experimentation clause (Alemanha); Experimenten Elektriciteitswet 2015-2018, and its erosion (Países Baixos); Bac à sable réglementaire in the energy sector (França).
-- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas nascidas de universidades.
-- Bases rejeitadas: Parcela empresarial do P&D.
+| Antecipação | 70,6 | 0,46 (utilizável) | +0,5 em 10 anos, sobre 2 indicadores |
+| Agência | 82,1 | 0,37 (fraca) | sem base de tendência |
+| Coordenação | 98,8 | 0,23 (muito fraca) | sem base de tendência |
+| Confiança | 69,9 | 0,5 (utilizável) | sem base de tendência |
+| Aprendizagem | 61,6 | 0,55 (utilizável) | sem base de tendência |
+| Experimentação | 50,6 | 0,53 (utilizável) | +0,7 em 10 anos, sobre 3 indicadores |
+| Adaptação | 72,8 | 0,62 (utilizável) | sem base de tendência |
+| Construção | 59,9 | 0,53 (utilizável) | +0,4 em 10 anos, sobre 3 indicadores |
+| Propósito compartilhado | 54,3 | 0,43 (fraca) | -0,8 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para medir primeiro
 
@@ -63,11 +49,12 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Antecipação: 72,7, solidez utilizável
-- Adaptação: 71,6, solidez utilizável
-- Confiança: 69,3, solidez utilizável
-- Aprendizagem: 60,7, solidez utilizável
-- Construção: 58,2, solidez utilizável
+- Adaptação: 72,8, solidez utilizável
+- Antecipação: 70,6, solidez utilizável
+- Confiança: 69,9, solidez utilizável
+- Aprendizagem: 61,6, solidez utilizável
+- Construção: 59,9, solidez utilizável
+- Experimentação: 50,6, solidez utilizável
 
 ## O que os Estados Unidos tem para trabalhar
 
@@ -75,19 +62,19 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 | Dimensão | Condição | Valor | Ano | Posição |
 | --- | --- | --- | --- | --- |
-| Antecipação | Dispêndio em P&D | 3,4 % do PIB | 2023 | 4º de 51 |
-| Antecipação | Pesquisadores em P&D | 4.937,5 por milhão de pessoas | 2022 | 13º de 50 |
-| Antecipação | Servidores seguros de internet | 196.616,1 por milhão de pessoas | 2024 | 3º de 53 |
-| Agência | Pessoas que usam a internet | 94,7 % da população | 2024 | 12º de 53 |
-| Agência | Titularidade de conta financeira | 97 % das pessoas com 15 anos ou mais | 2024 | 15º de 52 |
-| Agência | Crédito ao setor privado | 201,3 % do PIB | 2025 | 1º de 52 |
-| Aprendizagem | Matrícula no ensino superior | 79,4 % (taxa bruta) | 2022 | 14º de 52 |
-| Aprendizagem | Dispêndio público em educação | 5,4 % do PIB | 2021 | 10º de 53 |
-| Aprendizagem | Parcela técnica do ensino médio | 0 % das matrículas no ensino secundário | 1996 | 53º de 53 |
-| Adaptação | Participação na força de trabalho | 73,7 % das pessoas com 15 anos ou mais | 2025 | 27º de 53 |
-| Adaptação | Assinaturas de banda larga fixa | 38,9 por 100 pessoas | 2024 | 13º de 53 |
-| Adaptação | Perdas na transmissão de eletricidade | 5,3 % da produção | 2024 | 13º de 53 |
-| Construção | Produto por trabalhador | 156.983,2 US$ PPC constantes de 2021 | 2025 | 4º de 51 |
+| Antecipação | Dispêndio em P&D | 3,4 % do PIB | 2023 | 4º de 118 |
+| Antecipação | Pesquisadores em P&D | 4.937,5 por milhão de pessoas | 2022 | 20º de 114 |
+| Antecipação | Servidores seguros de internet | 196.616,1 por milhão de pessoas | 2024 | 5º de 125 |
+| Agência | Pessoas que usam a internet | 94,7 % da população | 2024 | 16º de 125 |
+| Agência | Titularidade de conta financeira | 97 % das pessoas com 15 anos ou mais | 2024 | 23º de 122 |
+| Agência | Crédito ao setor privado | 201,3 % do PIB | 2025 | 1º de 124 |
+| Aprendizagem | Matrícula no ensino superior | 79,4 % (taxa bruta) | 2022 | 25º de 124 |
+| Aprendizagem | Dispêndio público em educação | 5,4 % do PIB | 2021 | 24º de 125 |
+| Aprendizagem | Parcela técnica do ensino médio | 0 % das matrículas no ensino secundário | 1996 | 123º de 125 |
+| Adaptação | Participação na força de trabalho | 73,7 % das pessoas com 15 anos ou mais | 2025 | 51º de 125 |
+| Adaptação | Assinaturas de banda larga fixa | 38,9 por 100 pessoas | 2024 | 18º de 125 |
+| Adaptação | Perdas na transmissão de eletricidade | 5,3 % da produção | 2024 | 23º de 117 |
+| Construção | Produto por trabalhador | 156.983,2 US$ PPC constantes de 2021 | 2025 | 5º de 123 |
 
 ## Agenda de medição
 

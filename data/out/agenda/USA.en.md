@@ -2,35 +2,21 @@
 
 *Generated 2026-10-02*
 
-The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
+The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
 ## Where the United States stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 72.7 | 0.46 (usable) | +0.5 over 10 years using 2 indicators |
-| Agency | 83.4 | 0.37 (thin) | no trend |
-| Coordination | 98.6 | 0.23 (very thin) | no trend |
-| Trust | 69.3 | 0.5 (usable) | no trend |
-| Learning | 60.7 | 0.55 (usable) | no trend |
-| Experimentation | 48.1 | 0.53 (usable) | +0.8 over 10 years using 3 indicators |
-| Adaptability | 71.6 | 0.62 (usable) | no trend |
-| Building | 58.2 | 0.53 (usable) | +0.5 over 10 years using 3 indicators |
-| Shared Purpose | 55.3 | 0.43 (thin) | -1.1 over 10 years using 2 indicators |
-
-## What to raise
-
-These are the lowest scores with usable evidence. Thin evidence appears below.
-
-### Experimentation: 48.1, confidence usable
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 6 observed indicators.
-- Highest usable scores: South Korea 70.3, Switzerland 57.6, Estonia 36.8.
-- Related deliveries in other countries: The FCA regulatory sandbox (United Kingdom); Yozma, the venture capital catalyst (Israel); Korean regulatory-sandbox system across eight sectors (South Korea); MAS FinTech Regulatory Sandbox variants (Singapore); British Patient Capital, a public venture-capital catalyst (United Kingdom); ICURe, from university research to spinouts (United Kingdom); Portugal Ventures, a public venture-capital bridge (Portugal); Rede Nacional de Test Beds for company experimentation (Portugal); Zonas Livres Tecnológicas, regulator-supervised experimentation zones (Portugal); Banco Central regulatory sandbox, first cycle (Brazil); Reserve Bank of India regulatory sandbox (India); Capital Markets Authority regulatory sandbox (Kenya); SEC Nigeria Regulatory Incubation Program (Nigeria); ADGM RegLab, the first fintech sandbox in the region (United Arab Emirates); OJK regulatory sandbox for financial-sector technological innovation (Indonesia); Bank Negara Malaysia Fintech Regulatory Sandbox (Malaysia); Bank of Thailand regulatory sandbox (Thailand); Sandbox financiero (Ley 7/2020), and the fall in applications (Spain); IFWG Regulatory Sandbox (South Africa); Project-based regulatory sandbox (new technology demonstration scheme) (Japan); CSA Regulatory Sandbox, succeeded by the Financial Innovation Hub (Canada); ASIC enhanced regulatory sandbox (Australia); SINTEG-Verordnung, the energy-transition experimentation clause (Germany); Experimenten Elektriciteitswet 2015-2018, and its erosion (Netherlands); Bac à sable réglementaire in the energy sector (France).
-- Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
-- Rejected datasets: Business share of R&D.
+| Anticipation | 70.6 | 0.46 (usable) | +0.5 over 10 years using 2 indicators |
+| Agency | 82.1 | 0.37 (thin) | no trend |
+| Coordination | 98.8 | 0.23 (very thin) | no trend |
+| Trust | 69.9 | 0.5 (usable) | no trend |
+| Learning | 61.6 | 0.55 (usable) | no trend |
+| Experimentation | 50.6 | 0.53 (usable) | +0.7 over 10 years using 3 indicators |
+| Adaptability | 72.8 | 0.62 (usable) | no trend |
+| Building | 59.9 | 0.53 (usable) | +0.4 over 10 years using 3 indicators |
+| Shared Purpose | 54.3 | 0.43 (thin) | -0.8 over 10 years using 2 indicators |
 
 ## What to measure first
 
@@ -63,11 +49,12 @@ To what extent can people imagine themselves as participants in a common project
 
 These dimensions score at least 50 with usable evidence.
 
-- Anticipation: 72.7, confidence usable
-- Adaptability: 71.6, confidence usable
-- Trust: 69.3, confidence usable
-- Learning: 60.7, confidence usable
-- Building: 58.2, confidence usable
+- Adaptability: 72.8, confidence usable
+- Anticipation: 70.6, confidence usable
+- Trust: 69.9, confidence usable
+- Learning: 61.6, confidence usable
+- Building: 59.9, confidence usable
+- Experimentation: 50.6, confidence usable
 
 ## What the United States has to work with
 
@@ -75,19 +62,19 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 | Dimension | Condition | Value | Year | Rank |
 | --- | --- | --- | --- | --- |
-| Anticipation | R&D expenditure | 3.4 % of GDP | 2023 | 4 of 51 |
-| Anticipation | Researchers in R&D | 4,937.5 per million people | 2022 | 13 of 50 |
-| Anticipation | Secure internet servers | 196,616.1 per million people | 2024 | 3 of 53 |
-| Agency | Individuals using the internet | 94.7 % of population | 2024 | 12 of 53 |
-| Agency | Financial account ownership | 97 % aged 15+ | 2024 | 15 of 52 |
-| Agency | Credit to the private sector | 201.3 % of GDP | 2025 | 1 of 52 |
-| Learning | Tertiary enrolment | 79.4 % gross | 2022 | 14 of 52 |
-| Learning | Public education expenditure | 5.4 % of GDP | 2021 | 10 of 53 |
-| Learning | Vocational share of secondary | 0 % of secondary | 1996 | 53 of 53 |
-| Adaptability | Labour force participation | 73.7 % aged 15+ | 2025 | 27 of 53 |
-| Adaptability | Fixed broadband subscriptions | 38.9 per 100 people | 2024 | 13 of 53 |
-| Adaptability | Electricity transmission losses | 5.3 % of output | 2024 | 13 of 53 |
-| Building | Output per worker | 156,983.2 constant 2021 PPP $ | 2025 | 4 of 51 |
+| Anticipation | R&D expenditure | 3.4 % of GDP | 2023 | 4 of 118 |
+| Anticipation | Researchers in R&D | 4,937.5 per million people | 2022 | 20 of 114 |
+| Anticipation | Secure internet servers | 196,616.1 per million people | 2024 | 5 of 125 |
+| Agency | Individuals using the internet | 94.7 % of population | 2024 | 16 of 125 |
+| Agency | Financial account ownership | 97 % aged 15+ | 2024 | 23 of 122 |
+| Agency | Credit to the private sector | 201.3 % of GDP | 2025 | 1 of 124 |
+| Learning | Tertiary enrolment | 79.4 % gross | 2022 | 25 of 124 |
+| Learning | Public education expenditure | 5.4 % of GDP | 2021 | 24 of 125 |
+| Learning | Vocational share of secondary | 0 % of secondary | 1996 | 123 of 125 |
+| Adaptability | Labour force participation | 73.7 % aged 15+ | 2025 | 51 of 125 |
+| Adaptability | Fixed broadband subscriptions | 38.9 per 100 people | 2024 | 18 of 125 |
+| Adaptability | Electricity transmission losses | 5.3 % of output | 2024 | 23 of 117 |
+| Building | Output per worker | 156,983.2 constant 2021 PPP $ | 2025 | 5 of 123 |
 
 ## Missing data
 

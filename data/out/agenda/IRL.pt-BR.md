@@ -2,21 +2,21 @@
 
 *Gerado em 2026-10-02*
 
-A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
+A régua inclui 125 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
 ## Onde a Irlanda está
 
 | Dimensão | Nota | Solidez | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 77,6 | 0,46 (utilizável) | +6 em 10 anos, sobre 2 indicadores |
-| Agência | 69,1 | 0,41 (fraca) | sem base de tendência |
-| Coordenação | 88,6 | 0,39 (fraca) | sem base de tendência |
-| Confiança | 83,9 | 0,3 (fraca) | sem base de tendência |
-| Aprendizagem | 81,6 | 0,55 (utilizável) | sem base de tendência |
-| Experimentação | 19,7 | 0,25 (fraca) | -1,9 em 10 anos, sobre 2 indicadores |
-| Adaptação | 57,1 | 0,62 (utilizável) | sem base de tendência |
-| Construção | 69,2 | 0,57 (utilizável) | +13,7 em 10 anos, sobre 3 indicadores |
-| Propósito compartilhado | 76,5 | 0,3 (fraca) | +5,3 em 10 anos, sobre 2 indicadores |
+| Antecipação | 75,3 | 0,46 (utilizável) | +5,8 em 10 anos, sobre 2 indicadores |
+| Agência | 70,3 | 0,41 (fraca) | sem base de tendência |
+| Coordenação | 91,4 | 0,39 (fraca) | sem base de tendência |
+| Confiança | 86,2 | 0,3 (fraca) | sem base de tendência |
+| Aprendizagem | 82 | 0,55 (utilizável) | sem base de tendência |
+| Experimentação | 25,6 | 0,25 (fraca) | -2,7 em 10 anos, sobre 2 indicadores |
+| Adaptação | 60,4 | 0,62 (utilizável) | sem base de tendência |
+| Construção | 80,3 | 0,57 (utilizável) | +15,3 em 10 anos, sobre 3 indicadores |
+| Propósito compartilhado | 67,5 | 0,3 (fraca) | +4,4 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para medir primeiro
 
@@ -65,10 +65,10 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Aprendizagem: 81,6, solidez utilizável
-- Antecipação: 77,6, solidez utilizável
-- Construção: 69,2, solidez utilizável
-- Adaptação: 57,1, solidez utilizável
+- Aprendizagem: 82, solidez utilizável
+- Construção: 80,3, solidez utilizável
+- Antecipação: 75,3, solidez utilizável
+- Adaptação: 60,4, solidez utilizável
 
 ## O que a Irlanda tem para trabalhar
 
@@ -76,20 +76,20 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 | Dimensão | Condição | Valor | Ano | Posição |
 | --- | --- | --- | --- | --- |
-| Antecipação | Dispêndio em P&D | 1,6 % do PIB | 2023 | 18º de 51 |
-| Antecipação | Pesquisadores em P&D | 5.752,8 por milhão de pessoas | 2023 | 9º de 50 |
-| Antecipação | Servidores seguros de internet | 121.467,8 por milhão de pessoas | 2024 | 8º de 53 |
-| Agência | Pessoas que usam a internet | 97,2 % da população | 2024 | 5º de 53 |
-| Agência | Titularidade de conta financeira | 98,3 % das pessoas com 15 anos ou mais | 2024 | 12º de 52 |
-| Agência | Crédito ao setor privado | 23,8 % do PIB | 2024 | 47º de 52 |
-| Aprendizagem | Matrícula no ensino superior | 77,6 % (taxa bruta) | 2022 | 17º de 52 |
-| Aprendizagem | Dispêndio público em educação | 2,9 % do PIB | 2021 | 44º de 53 |
-| Aprendizagem | Parcela técnica do ensino médio | 26,6 % das matrículas no ensino secundário | 2018 | 12º de 53 |
-| Adaptação | Participação na força de trabalho | 77,2 % das pessoas com 15 anos ou mais | 2025 | 16º de 53 |
-| Adaptação | Assinaturas de banda larga fixa | 32,3 por 100 pessoas | 2024 | 19º de 53 |
-| Adaptação | Perdas na transmissão de eletricidade | 8,2 % da produção | 2024 | 24º de 53 |
-| Adaptação | Emprego informal | 3,4 % do emprego | 2025 | 5º de 43 |
-| Construção | Produto por trabalhador | 259.304,4 US$ PPC constantes de 2021 | 2025 | 1º de 51 |
+| Antecipação | Dispêndio em P&D | 1,6 % do PIB | 2023 | 24º de 118 |
+| Antecipação | Pesquisadores em P&D | 5.752,8 por milhão de pessoas | 2023 | 13º de 114 |
+| Antecipação | Servidores seguros de internet | 121.467,8 por milhão de pessoas | 2024 | 10º de 125 |
+| Agência | Pessoas que usam a internet | 97,2 % da população | 2024 | 7º de 125 |
+| Agência | Titularidade de conta financeira | 98,3 % das pessoas com 15 anos ou mais | 2024 | 17º de 122 |
+| Agência | Crédito ao setor privado | 23,8 % do PIB | 2024 | 93º de 124 |
+| Aprendizagem | Matrícula no ensino superior | 77,6 % (taxa bruta) | 2022 | 29º de 124 |
+| Aprendizagem | Dispêndio público em educação | 2,9 % do PIB | 2021 | 98º de 125 |
+| Aprendizagem | Parcela técnica do ensino médio | 26,6 % das matrículas no ensino secundário | 2018 | 26º de 125 |
+| Adaptação | Participação na força de trabalho | 77,2 % das pessoas com 15 anos ou mais | 2025 | 30º de 125 |
+| Adaptação | Assinaturas de banda larga fixa | 32,3 por 100 pessoas | 2024 | 34º de 125 |
+| Adaptação | Perdas na transmissão de eletricidade | 8,2 % da produção | 2024 | 50º de 117 |
+| Adaptação | Emprego informal | 3,4 % do emprego | 2025 | 13º de 102 |
+| Construção | Produto por trabalhador | 259.304,4 US$ PPC constantes de 2021 | 2025 | 1º de 123 |
 
 ## Agenda de medição
 

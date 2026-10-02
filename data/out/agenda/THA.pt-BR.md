@@ -2,52 +2,52 @@
 
 *Gerado em 2026-10-02*
 
-A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
+A régua inclui 125 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
 ## Onde a Tailândia está
 
 | Dimensão | Nota | Solidez | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 47,5 | 0,46 (utilizável) | +8,8 em 10 anos, sobre 2 indicadores |
-| Agência | 46,9 | 0,56 (utilizável) | sem base de tendência |
-| Coordenação | 76,4 | 0,41 (fraca) | sem base de tendência |
-| Confiança | 52,3 | 0,5 (utilizável) | sem base de tendência |
-| Aprendizagem | 42,7 | 0,55 (utilizável) | sem base de tendência |
-| Experimentação | 10,8 | 0,33 (fraca) | +0,5 em 10 anos, sobre 3 indicadores |
-| Adaptação | 88 | 0,62 (utilizável) | sem base de tendência |
-| Construção | 57,1 | 0,57 (utilizável) | -0,7 em 10 anos, sobre 3 indicadores |
-| Propósito compartilhado | 69,5 | 0,43 (fraca) | +4,1 em 10 anos, sobre 2 indicadores |
+| Antecipação | 46,2 | 0,46 (utilizável) | +8,6 em 10 anos, sobre 2 indicadores |
+| Agência | 47,2 | 0,56 (utilizável) | sem base de tendência |
+| Coordenação | 80,3 | 0,41 (fraca) | sem base de tendência |
+| Confiança | 56,6 | 0,5 (utilizável) | sem base de tendência |
+| Aprendizagem | 42,4 | 0,55 (utilizável) | sem base de tendência |
+| Experimentação | 14 | 0,33 (fraca) | +0,1 em 10 anos, sobre 3 indicadores |
+| Adaptação | 87,6 | 0,62 (utilizável) | sem base de tendência |
+| Construção | 64,9 | 0,57 (utilizável) | -0,2 em 10 anos, sobre 3 indicadores |
+| Propósito compartilhado | 65,4 | 0,43 (fraca) | +3,5 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para elevar
 
 Estas são as notas mais baixas com evidência utilizável. A evidência fraca aparece abaixo.
 
-### Aprendizagem: 42,7, solidez utilizável
+### Aprendizagem: 42,4, solidez utilizável
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
 - Baseada em 3 indicadores observados.
-- Maiores notas utilizáveis: Singapura 84,2, Irlanda 81,6, Austrália 80,1.
+- Maiores notas utilizáveis: Singapura 84,2, Noruega 83,4, Nova Zelândia 83.
 - Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (Índia); SETAs and workplace-based learning delivery (África do Sul); MEB public lifelong-learning network (Turquia); Kenya's adult education centres, and their halving (Quênia); Rwanda's adult literacy centres, and their decline (Ruanda); Integrated Functional Adult Education, and its erosion (Etiópia); Instituto Técnico de Capacitación y Productividad (INTECAP) (Guatemala); INFOTEP national technical and vocational training (República Dominicana); Campaña Nacional de Alfabetización (Cuba); VET FEE-HELP, and its abolition (Austrália); Adult education allowance (aikuiskoulutustuki), and its abolition (Finlândia); INEFOP, the tripartite national training institute (Uruguai); Franquicia Tributaria SENCE, and its erosion (Chile); Employer and in-work training under Employment Insurance, and its erosion (Coreia do Sul); TESDA technical-vocational training at national scale (Filipinas); INADEH national vocational training (Panamá); Yo, sí puedo national literacy campaign and post-literacy programme (Bolívia); Project 1956 vocational training for rural workers (Vietnã); Bildungsprämie training voucher, and its end (Alemanha); Aufstiegs-BAföG, upgrading training support (Alemanha); Formación programada por las empresas (FUNDAE training credit) (Espanha); Community Education and Training colleges, and their erosion (África do Sul); SENA complementary training (formación complementaria) (Colômbia); Vocational skills upgrading action, 2019-2021 (China); INA national vocational training, and its contraction (Costa Rica); Kunskapslyftet adult education initiative (Suécia); Springboard+ upskilling programme (Irlanda); State-administered adult education under the Adult Education and Family Literacy Act, and its erosion (Estados Unidos); STAP-budget training grant, abolished in 2024 (Países Baixos); INEA adult basic education (México); Hello Training, public vocational training (Japão); Educação de Jovens e Adultos (EJA), and its erosion (Brasil); Government-funded adult further education in England, and its erosion (Reino Unido); Educación Básica Alternativa (EBA), and its erosion (Peru); Upper secondary education for adults in non-stationary study (Estônia); Adult literacy education under the National Commission for Mass Literacy, Adult and Non-Formal Education (Nigéria); Skills Development under the Labour Market Development Agreements, and its 2024-25 funding cut (Canadá); Instituto Nacional de Formación Profesional (INFOP) (Honduras); Ministry of Labour Vocational Training Division adult courses (Israel); Educación Permanente para personas jóvenes y adultas (MEC) (Paraguai); National literacy campaigns, 2010-2015 (Haiti); County and city general secondary schools for adults (licea ogólnokształcące dla dorosłych) (Polônia); Kolej Komuniti part-time and lifelong-learning (Pembelajaran Sepanjang Hayat) courses (Malásia).
 - Lacunas declaradas: Participação de adultos em aprendizagem.
 
-### Agência: 46,9, solidez utilizável
-
-Quão capazes são pessoas e organizações de transformar uma intenção em ação?
-
-- Baseada em 4 indicadores observados.
-- Maiores notas utilizáveis: Austrália 86,1, Estônia 85,2, China 72,5.
-- Entregas documentadas em outros países: Singapore's national ICT-skills measurement and baseline (Singapura); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (Índia); Puntos México Conectado, national digital learning centres (México).
-- Lacunas declaradas: Adultos que realizam tarefas digitais.
-
-### Antecipação: 47,5, solidez utilizável
+### Antecipação: 46,2, solidez utilizável
 
 Quão capaz é o país de identificar mudanças emergentes e se preparar para elas?
 
 - Baseada em 2 indicadores observados.
-- Maiores notas utilizáveis: Suíça 96,3, Suécia 90, Finlândia 87,5.
+- Maiores notas utilizáveis: Dinamarca 98,1, Noruega 97,2, Suíça 93,4.
 - Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japão); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (África do Sul); Government Report on the Future and the parliamentary Committee for the Future (Finlândia); Foresight Centre at the Riigikogu (Arenguseire Keskus) (Estônia); Office of Technology Assessment, defunded and closed in 1995 (Estados Unidos); Rządowe Centrum Studiów Strategicznych, liquidated in 2006 (Polônia); Office of Technology Assessment at the German Bundestag (TAB) (Alemanha); National Assembly Futures Institute (Coreia do Sul); Federal Chancellery situation and environment analysis (Perspektivstab) (Suíça); Senate foresight delegation (Délégation sénatoriale à la prospective) (França); Senate Commission on Future Challenges, Science, Technology and Innovation (Chile); Policy Horizons Canada, the federal foresight unit, and its 2024 disruption scan (Canadá); Framtidskommissionen, the Prime Minister's time-limited future commission (Suécia).
 - Lacunas declaradas: Capacidade governamental de prospecção, Compromissos de pesquisa de longo prazo.
+
+### Agência: 47,2, solidez utilizável
+
+Quão capazes são pessoas e organizações de transformar uma intenção em ação?
+
+- Baseada em 4 indicadores observados.
+- Maiores notas utilizáveis: Nova Zelândia 92,2, Austrália 89,2, Estônia 84,3.
+- Entregas documentadas em outros países: Singapore's national ICT-skills measurement and baseline (Singapura); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (Índia); Puntos México Conectado, national digital learning centres (México).
+- Lacunas declaradas: Adultos que realizam tarefas digitais.
 
 ## Dimensões para medir primeiro
 
@@ -81,9 +81,9 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 88, solidez utilizável
-- Construção: 57,1, solidez utilizável
-- Confiança: 52,3, solidez utilizável
+- Adaptação: 87,6, solidez utilizável
+- Construção: 64,9, solidez utilizável
+- Confiança: 56,6, solidez utilizável
 
 ## O que a Tailândia tem para trabalhar
 
@@ -91,20 +91,20 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 | Dimensão | Condição | Valor | Ano | Posição |
 | --- | --- | --- | --- | --- |
-| Antecipação | Dispêndio em P&D | 0,9 % do PIB | 2023 | 25º de 51 |
-| Antecipação | Pesquisadores em P&D | 1.592 por milhão de pessoas | 2023 | 23º de 50 |
-| Antecipação | Servidores seguros de internet | 3.150 por milhão de pessoas | 2024 | 29º de 53 |
-| Agência | Pessoas que usam a internet | 90,9 % da população | 2024 | 21º de 53 |
-| Agência | Titularidade de conta financeira | 91,8 % das pessoas com 15 anos ou mais | 2024 | 17º de 52 |
-| Agência | Crédito ao setor privado | 143,1 % do PIB | 2025 | 6º de 52 |
-| Aprendizagem | Matrícula no ensino superior | 49,1 % (taxa bruta) | 2025 | 34º de 52 |
-| Aprendizagem | Dispêndio público em educação | 2,5 % do PIB | 2023 | 47º de 53 |
-| Aprendizagem | Parcela técnica do ensino médio | 11,2 % das matrículas no ensino secundário | 2019 | 34º de 53 |
-| Adaptação | Participação na força de trabalho | 75,8 % das pessoas com 15 anos ou mais | 2025 | 20º de 53 |
-| Adaptação | Assinaturas de banda larga fixa | 14,9 por 100 pessoas | 2024 | 33º de 53 |
-| Adaptação | Perdas na transmissão de eletricidade | 7,2 % da produção | 2023 | 22º de 53 |
-| Adaptação | Emprego informal | 63,2 % do emprego | 2024 | 27º de 43 |
-| Construção | Produto por trabalhador | 39.617,4 US$ PPC constantes de 2021 | 2025 | 34º de 51 |
+| Antecipação | Dispêndio em P&D | 0,9 % do PIB | 2023 | 41º de 118 |
+| Antecipação | Pesquisadores em P&D | 1.592 por milhão de pessoas | 2023 | 45º de 114 |
+| Antecipação | Servidores seguros de internet | 3.150 por milhão de pessoas | 2024 | 55º de 125 |
+| Agência | Pessoas que usam a internet | 90,9 % da população | 2024 | 36º de 125 |
+| Agência | Titularidade de conta financeira | 91,8 % das pessoas com 15 anos ou mais | 2024 | 30º de 122 |
+| Agência | Crédito ao setor privado | 143,1 % do PIB | 2025 | 8º de 124 |
+| Aprendizagem | Matrícula no ensino superior | 49,1 % (taxa bruta) | 2025 | 66º de 124 |
+| Aprendizagem | Dispêndio público em educação | 2,5 % do PIB | 2023 | 106º de 125 |
+| Aprendizagem | Parcela técnica do ensino médio | 11,2 % das matrículas no ensino secundário | 2019 | 63º de 125 |
+| Adaptação | Participação na força de trabalho | 75,8 % das pessoas com 15 anos ou mais | 2025 | 40º de 125 |
+| Adaptação | Assinaturas de banda larga fixa | 14,9 por 100 pessoas | 2024 | 69º de 125 |
+| Adaptação | Perdas na transmissão de eletricidade | 7,2 % da produção | 2023 | 43º de 117 |
+| Adaptação | Emprego informal | 63,2 % do emprego | 2024 | 57º de 102 |
+| Construção | Produto por trabalhador | 39.617,4 US$ PPC constantes de 2021 | 2025 | 73º de 123 |
 
 ## Agenda de medição
 

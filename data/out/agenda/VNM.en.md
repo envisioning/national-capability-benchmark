@@ -2,51 +2,51 @@
 
 *Generated 2026-10-02*
 
-The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
+The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
 ## Where Vietnam stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 28.5 | 0.46 (usable) | +14.1 over 10 years using 2 indicators |
-| Agency | 61.1 | 0.56 (usable) | no trend |
-| Coordination | 75.6 | 0.4 (thin) | no trend |
-| Trust | 36.2 | 0.49 (usable) | no trend |
-| Learning | 42.6 | 0.54 (usable) | no trend |
-| Experimentation | 10.4 | 0.33 (thin) | +1.1 over 10 years using 3 indicators |
-| Adaptability | 88.2 | 0.62 (usable) | no trend |
-| Building | 65.7 | 0.55 (usable) | +10.1 over 10 years using 3 indicators |
-| Shared Purpose | 42.4 | 0.25 (thin) | no trend |
+| Anticipation | 27.7 | 0.46 (usable) | +13.6 over 10 years using 2 indicators |
+| Agency | 61.6 | 0.56 (usable) | no trend |
+| Coordination | 80.2 | 0.4 (thin) | no trend |
+| Trust | 42.9 | 0.49 (usable) | no trend |
+| Learning | 43.6 | 0.54 (usable) | no trend |
+| Experimentation | 13.4 | 0.33 (thin) | +1.8 over 10 years using 3 indicators |
+| Adaptability | 88.1 | 0.62 (usable) | no trend |
+| Building | 75.9 | 0.55 (usable) | +15.8 over 10 years using 3 indicators |
+| Shared Purpose | 44.3 | 0.25 (thin) | no trend |
 
 ## What to raise
 
 These are the lowest scores with usable evidence. Thin evidence appears below.
 
-### Anticipation: 28.5, confidence usable
+### Anticipation: 27.7, confidence usable
 
 How capable is the country of identifying and preparing for emerging change?
 
 - Uses 2 observed indicators.
-- Highest usable scores: Switzerland 96.3, Sweden 90, Finland 87.5.
+- Highest usable scores: Denmark 98.1, Norway 97.2, Switzerland 93.4.
 - Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (South Africa); Government Report on the Future and the parliamentary Committee for the Future (Finland); Foresight Centre at the Riigikogu (Arenguseire Keskus) (Estonia); Office of Technology Assessment, defunded and closed in 1995 (United States); Rządowe Centrum Studiów Strategicznych, liquidated in 2006 (Poland); Office of Technology Assessment at the German Bundestag (TAB) (Germany); National Assembly Futures Institute (South Korea); Federal Chancellery situation and environment analysis (Perspektivstab) (Switzerland); Senate foresight delegation (Délégation sénatoriale à la prospective) (France); Senate Commission on Future Challenges, Science, Technology and Innovation (Chile); Policy Horizons Canada, the federal foresight unit, and its 2024 disruption scan (Canada); Framtidskommissionen, the Prime Minister's time-limited future commission (Sweden).
 - Missing indicators: Government foresight capacity, Long-horizon research commitments.
 
-### Trust: 36.2, confidence usable
+### Trust: 42.9, confidence usable
 
 How much cooperation is possible beyond immediate personal networks?
 
 - Uses 5 observed indicators.
-- Highest usable scores: Finland 90.7, Sweden 90.3, Switzerland 82.8.
+- Highest usable scores: Denmark 94.1, Norway 91.3, Finland 89.7.
 - Related deliveries in other countries: Cadastro Único, the unified social registry (Brazil); Portal da Transparência, the federal open-books system (Brazil); MyData, citizen-directed data portability (South Korea); Singapore Courts' case-clearance discipline (Singapore); Civil-court clearance and the CEPEJ monitoring series (Portugal).
 - Missing indicators: Trust in public institutions, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
-### Learning: 42.6, confidence usable
+### Learning: 43.6, confidence usable
 
 How effectively does the country acquire, distribute, and update knowledge?
 
 - Uses 3 observed indicators.
-- Highest usable scores: Singapore 84.2, Ireland 81.6, Australia 80.1.
+- Highest usable scores: Singapore 84.2, Norway 83.4, New Zealand 83.
 - Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); Kartu Prakerja, a national lifelong-learning delivery system (Indonesia); Compte personnel de formation (France); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (India); SETAs and workplace-based learning delivery (South Africa); MEB public lifelong-learning network (Turkey); Kenya's adult education centres, and their halving (Kenya); Rwanda's adult literacy centres, and their decline (Rwanda); Integrated Functional Adult Education, and its erosion (Ethiopia); Instituto Técnico de Capacitación y Productividad (INTECAP) (Guatemala); INFOTEP national technical and vocational training (Dominican Republic); Campaña Nacional de Alfabetización (Cuba); VET FEE-HELP, and its abolition (Australia); Adult education allowance (aikuiskoulutustuki), and its abolition (Finland); INEFOP, the tripartite national training institute (Uruguay); Franquicia Tributaria SENCE, and its erosion (Chile); Employer and in-work training under Employment Insurance, and its erosion (South Korea); TESDA technical-vocational training at national scale (Philippines); INADEH national vocational training (Panama); Yo, sí puedo national literacy campaign and post-literacy programme (Bolivia); Bildungsprämie training voucher, and its end (Germany); Aufstiegs-BAföG, upgrading training support (Germany); Formación programada por las empresas (FUNDAE training credit) (Spain); Community Education and Training colleges, and their erosion (South Africa); SENA complementary training (formación complementaria) (Colombia); Vocational skills upgrading action, 2019-2021 (China); INA national vocational training, and its contraction (Costa Rica); Kunskapslyftet adult education initiative (Sweden); Springboard+ upskilling programme (Ireland); State-administered adult education under the Adult Education and Family Literacy Act, and its erosion (United States); STAP-budget training grant, abolished in 2024 (Netherlands); INEA adult basic education (Mexico); Hello Training, public vocational training (Japan); Educação de Jovens e Adultos (EJA), and its erosion (Brazil); Government-funded adult further education in England, and its erosion (United Kingdom); Educación Básica Alternativa (EBA), and its erosion (Peru); Upper secondary education for adults in non-stationary study (Estonia); Department of Skill Development skill-upgrading training (Thailand); Adult literacy education under the National Commission for Mass Literacy, Adult and Non-Formal Education (Nigeria); Skills Development under the Labour Market Development Agreements, and its 2024-25 funding cut (Canada); Instituto Nacional de Formación Profesional (INFOP) (Honduras); Ministry of Labour Vocational Training Division adult courses (Israel); Educación Permanente para personas jóvenes y adultas (MEC) (Paraguay); National literacy campaigns, 2010-2015 (Haiti); County and city general secondary schools for adults (licea ogólnokształcące dla dorosłych) (Poland); Kolej Komuniti part-time and lifelong-learning (Pembelajaran Sepanjang Hayat) courses (Malaysia).
 - Missing indicators: Adult learning participation.
 
@@ -82,9 +82,9 @@ How effectively can independent actors organize around shared objectives?
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 88.2, confidence usable
-- Building: 65.7, confidence usable
-- Agency: 61.1, confidence usable
+- Adaptability: 88.1, confidence usable
+- Building: 75.9, confidence usable
+- Agency: 61.6, confidence usable
 
 ## What Vietnam has to work with
 
@@ -92,20 +92,20 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 | Dimension | Condition | Value | Year | Rank |
 | --- | --- | --- | --- | --- |
-| Anticipation | R&D expenditure | 0.4 % of GDP | 2023 | 34 of 51 |
-| Anticipation | Researchers in R&D | 836.1 per million people | 2023 | 28 of 50 |
-| Anticipation | Secure internet servers | 5,733.7 per million people | 2024 | 25 of 53 |
-| Agency | Individuals using the internet | 84.2 % of population | 2024 | 31 of 53 |
-| Agency | Financial account ownership | 70.6 % aged 15+ | 2024 | 34 of 52 |
-| Agency | Credit to the private sector | 125 % of GDP | 2022 | 10 of 52 |
-| Learning | Tertiary enrolment | 37.6 % gross | 2024 | 41 of 52 |
-| Learning | Public education expenditure | 2.9 % of GDP | 2022 | 45 of 53 |
-| Learning | Vocational share of secondary | 5.8 % of secondary | 1990 | 43 of 53 |
-| Adaptability | Labour force participation | 78.4 % aged 15+ | 2025 | 13 of 53 |
-| Adaptability | Fixed broadband subscriptions | 23.7 per 100 people | 2024 | 26 of 53 |
-| Adaptability | Electricity transmission losses | 6.6 % of output | 2023 | 18 of 53 |
-| Adaptability | Informal employment | 67 % of employment | 2024 | 30 of 43 |
-| Building | Output per worker | 27,957.3 constant 2021 PPP $ | 2025 | 40 of 51 |
+| Anticipation | R&D expenditure | 0.4 % of GDP | 2023 | 63 of 118 |
+| Anticipation | Researchers in R&D | 836.1 per million people | 2023 | 56 of 114 |
+| Anticipation | Secure internet servers | 5,733.7 per million people | 2024 | 49 of 125 |
+| Agency | Individuals using the internet | 84.2 % of population | 2024 | 61 of 125 |
+| Agency | Financial account ownership | 70.6 % aged 15+ | 2024 | 71 of 122 |
+| Agency | Credit to the private sector | 125 % of GDP | 2022 | 12 of 124 |
+| Learning | Tertiary enrolment | 37.6 % gross | 2024 | 79 of 124 |
+| Learning | Public education expenditure | 2.9 % of GDP | 2022 | 99 of 125 |
+| Learning | Vocational share of secondary | 5.8 % of secondary | 1990 | 88 of 125 |
+| Adaptability | Labour force participation | 78.4 % aged 15+ | 2025 | 24 of 125 |
+| Adaptability | Fixed broadband subscriptions | 23.7 per 100 people | 2024 | 54 of 125 |
+| Adaptability | Electricity transmission losses | 6.6 % of output | 2023 | 34 of 117 |
+| Adaptability | Informal employment | 67 % of employment | 2024 | 62 of 102 |
+| Building | Output per worker | 27,957.3 constant 2021 PPP $ | 2025 | 83 of 123 |
 
 ## Missing data
 

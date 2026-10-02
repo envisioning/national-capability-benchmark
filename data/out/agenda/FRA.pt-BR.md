@@ -2,21 +2,21 @@
 
 *Gerado em 2026-10-02*
 
-A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
+A régua inclui 125 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
 ## Onde a França está
 
 | Dimensão | Nota | Solidez | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 64 | 0,46 (utilizável) | +0,3 em 10 anos, sobre 2 indicadores |
-| Agência | 63,8 | 0,56 (utilizável) | sem base de tendência |
-| Coordenação | 92,9 | 0,39 (fraca) | sem base de tendência |
-| Confiança | 69,2 | 0,5 (utilizável) | sem base de tendência |
-| Aprendizagem | 68,7 | 0,55 (utilizável) | sem base de tendência |
-| Experimentação | 58 | 0,33 (fraca) | +1,1 em 10 anos, sobre 3 indicadores |
-| Adaptação | 70,3 | 0,62 (utilizável) | sem base de tendência |
-| Construção | 54,4 | 0,57 (utilizável) | -7,1 em 10 anos, sobre 3 indicadores |
-| Propósito compartilhado | 59 | 0,42 (fraca) | -0,6 em 10 anos, sobre 2 indicadores |
+| Antecipação | 62,2 | 0,46 (utilizável) | +0,3 em 10 anos, sobre 2 indicadores |
+| Agência | 64,9 | 0,56 (utilizável) | sem base de tendência |
+| Coordenação | 93,5 | 0,39 (fraca) | sem base de tendência |
+| Confiança | 69,8 | 0,5 (utilizável) | sem base de tendência |
+| Aprendizagem | 69,5 | 0,55 (utilizável) | sem base de tendência |
+| Experimentação | 74,9 | 0,33 (fraca) | +2,6 em 10 anos, sobre 3 indicadores |
+| Adaptação | 72 | 0,62 (utilizável) | sem base de tendência |
+| Construção | 62,6 | 0,57 (utilizável) | -3,3 em 10 anos, sobre 3 indicadores |
+| Propósito compartilhado | 52,9 | 0,42 (fraca) | -0,4 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para medir primeiro
 
@@ -50,12 +50,12 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 70,3, solidez utilizável
-- Confiança: 69,2, solidez utilizável
-- Aprendizagem: 68,7, solidez utilizável
-- Antecipação: 64, solidez utilizável
-- Agência: 63,8, solidez utilizável
-- Construção: 54,4, solidez utilizável
+- Adaptação: 72, solidez utilizável
+- Confiança: 69,8, solidez utilizável
+- Aprendizagem: 69,5, solidez utilizável
+- Agência: 64,9, solidez utilizável
+- Construção: 62,6, solidez utilizável
+- Antecipação: 62,2, solidez utilizável
 
 ## O que a França tem para trabalhar
 
@@ -63,20 +63,20 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 | Dimensão | Condição | Valor | Ano | Posição |
 | --- | --- | --- | --- | --- |
-| Antecipação | Dispêndio em P&D | 2,2 % do PIB | 2023 | 12º de 51 |
-| Antecipação | Pesquisadores em P&D | 5.368,6 por milhão de pessoas | 2023 | 12º de 50 |
-| Antecipação | Servidores seguros de internet | 57.274,6 por milhão de pessoas | 2024 | 10º de 53 |
-| Agência | Pessoas que usam a internet | 88,7 % da população | 2024 | 24º de 53 |
-| Agência | Titularidade de conta financeira | 99,2 % das pessoas com 15 anos ou mais | 2024 | 3º de 52 |
-| Agência | Crédito ao setor privado | 107,6 % do PIB | 2024 | 14º de 52 |
-| Aprendizagem | Matrícula no ensino superior | 71,5 % (taxa bruta) | 2024 | 22º de 52 |
-| Aprendizagem | Dispêndio público em educação | 5,3 % do PIB | 2022 | 12º de 53 |
-| Aprendizagem | Parcela técnica do ensino médio | 17,6 % das matrículas no ensino secundário | 2018 | 25º de 53 |
-| Adaptação | Participação na força de trabalho | 74 % das pessoas com 15 anos ou mais | 2025 | 25º de 53 |
-| Adaptação | Assinaturas de banda larga fixa | 48,9 por 100 pessoas | 2024 | 1º de 53 |
-| Adaptação | Perdas na transmissão de eletricidade | 6,6 % da produção | 2024 | 19º de 53 |
-| Adaptação | Emprego informal | 3,4 % do emprego | 2025 | 5º de 43 |
-| Construção | Produto por trabalhador | 128.587,1 US$ PPC constantes de 2021 | 2025 | 7º de 51 |
+| Antecipação | Dispêndio em P&D | 2,2 % do PIB | 2023 | 15º de 118 |
+| Antecipação | Pesquisadores em P&D | 5.368,6 por milhão de pessoas | 2023 | 18º de 114 |
+| Antecipação | Servidores seguros de internet | 57.274,6 por milhão de pessoas | 2024 | 15º de 125 |
+| Agência | Pessoas que usam a internet | 88,7 % da população | 2024 | 47º de 125 |
+| Agência | Titularidade de conta financeira | 99,2 % das pessoas com 15 anos ou mais | 2024 | 4º de 122 |
+| Agência | Crédito ao setor privado | 107,6 % do PIB | 2024 | 17º de 124 |
+| Aprendizagem | Matrícula no ensino superior | 71,5 % (taxa bruta) | 2024 | 38º de 124 |
+| Aprendizagem | Dispêndio público em educação | 5,3 % do PIB | 2022 | 27º de 125 |
+| Aprendizagem | Parcela técnica do ensino médio | 17,6 % das matrículas no ensino secundário | 2018 | 44º de 125 |
+| Adaptação | Participação na força de trabalho | 74 % das pessoas com 15 anos ou mais | 2025 | 48º de 125 |
+| Adaptação | Assinaturas de banda larga fixa | 48,9 por 100 pessoas | 2024 | 1º de 125 |
+| Adaptação | Perdas na transmissão de eletricidade | 6,6 % da produção | 2024 | 35º de 117 |
+| Adaptação | Emprego informal | 3,4 % do emprego | 2025 | 13º de 102 |
+| Construção | Produto por trabalhador | 128.587,1 US$ PPC constantes de 2021 | 2025 | 12º de 123 |
 
 ## Agenda de medição
 

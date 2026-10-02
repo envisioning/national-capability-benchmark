@@ -2,21 +2,21 @@
 
 *Generated 2026-10-02*
 
-The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
+The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
 ## Where South Korea stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 76.6 | 0.46 (usable) | +17.8 over 10 years using 2 indicators |
-| Agency | 61 | 0.54 (usable) | no trend |
-| Coordination | 87 | 0.4 (thin) | no trend |
-| Trust | 67.6 | 0.5 (usable) | no trend |
-| Learning | 51.6 | 0.55 (usable) | no trend |
-| Experimentation | 70.3 | 0.53 (usable) | +11.3 over 10 years using 3 indicators, with 1 at the frame edge |
-| Adaptability | 72.7 | 0.46 (usable) | no trend |
-| Building | 69.8 | 0.57 (usable) | +2.8 over 10 years using 3 indicators |
-| Shared Purpose | 43.6 | 0.4 (thin) | +4 over 10 years using 2 indicators |
+| Anticipation | 74.4 | 0.46 (usable) | +17.4 over 10 years using 2 indicators |
+| Agency | 61.4 | 0.54 (usable) | no trend |
+| Coordination | 88.8 | 0.4 (thin) | no trend |
+| Trust | 67.5 | 0.5 (usable) | no trend |
+| Learning | 52.1 | 0.55 (usable) | no trend |
+| Experimentation | 72.7 | 0.53 (usable) | +12.1 over 10 years using 3 indicators, with 1 at the frame edge |
+| Adaptability | 73 | 0.46 (usable) | no trend |
+| Building | 85.1 | 0.57 (usable) | +3.1 over 10 years using 3 indicators |
+| Shared Purpose | 40.6 | 0.4 (thin) | +3.3 over 10 years using 2 indicators |
 
 ## What to measure first
 
@@ -42,13 +42,13 @@ How effectively can independent actors organize around shared objectives?
 
 These dimensions score at least 50 with usable evidence.
 
-- Anticipation: 76.6, confidence usable
-- Adaptability: 72.7, confidence usable
-- Experimentation: 70.3, confidence usable
-- Building: 69.8, confidence usable
-- Trust: 67.6, confidence usable
-- Agency: 61, confidence usable
-- Learning: 51.6, confidence usable
+- Building: 85.1, confidence usable
+- Anticipation: 74.4, confidence usable
+- Adaptability: 73, confidence usable
+- Experimentation: 72.7, confidence usable
+- Trust: 67.5, confidence usable
+- Agency: 61.4, confidence usable
+- Learning: 52.1, confidence usable
 
 ## What South Korea has to work with
 
@@ -56,20 +56,20 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 | Dimension | Condition | Value | Year | Rank |
 | --- | --- | --- | --- | --- |
-| Anticipation | R&D expenditure | 4.9 % of GDP | 2023 | 2 of 51 |
-| Anticipation | Researchers in R&D | 9,471.8 per million people | 2023 | 1 of 50 |
-| Anticipation | Secure internet servers | 11,902.4 per million people | 2024 | 21 of 53 |
-| Agency | Individuals using the internet | 97.9 % of population | 2024 | 3 of 53 |
-| Agency | Financial account ownership | 96.9 % aged 15+ | 2024 | 16 of 52 |
-| Agency | Credit to the private sector | 160.3 % of GDP | 2024 | 5 of 52 |
-| Learning | Tertiary enrolment | 111.9 % gross | 2024 | 1 of 52 |
-| Learning | Public education expenditure | 5.4 % of GDP | 2022 | 11 of 53 |
-| Learning | Vocational share of secondary | 9.4 % of secondary | 2018 | 38 of 53 |
-| Adaptability | Labour force participation | 71.2 % aged 15+ | 2025 | 29 of 53 |
-| Adaptability | Fixed broadband subscriptions | 47.8 per 100 people | 2024 | 2 of 53 |
-| Adaptability | Electricity transmission losses | 3.3 % of output | 2024 | 2 of 53 |
-| Adaptability | Informal employment | 29.1 % of employment | 2019 | 16 of 43 |
-| Building | Output per worker | 99,046 constant 2021 PPP $ | 2025 | 16 of 51 |
+| Anticipation | R&D expenditure | 4.9 % of GDP | 2023 | 2 of 118 |
+| Anticipation | Researchers in R&D | 9,471.8 per million people | 2023 | 1 of 114 |
+| Anticipation | Secure internet servers | 11,902.4 per million people | 2024 | 42 of 125 |
+| Agency | Individuals using the internet | 97.9 % of population | 2024 | 5 of 125 |
+| Agency | Financial account ownership | 96.9 % aged 15+ | 2024 | 24 of 122 |
+| Agency | Credit to the private sector | 160.3 % of GDP | 2024 | 5 of 124 |
+| Learning | Tertiary enrolment | 111.9 % gross | 2024 | 3 of 124 |
+| Learning | Public education expenditure | 5.4 % of GDP | 2022 | 25 of 125 |
+| Learning | Vocational share of secondary | 9.4 % of secondary | 2018 | 74 of 125 |
+| Adaptability | Labour force participation | 71.2 % aged 15+ | 2025 | 56 of 125 |
+| Adaptability | Fixed broadband subscriptions | 47.8 per 100 people | 2024 | 2 of 125 |
+| Adaptability | Electricity transmission losses | 3.3 % of output | 2024 | 3 of 117 |
+| Adaptability | Informal employment | 29.1 % of employment | 2019 | 37 of 102 |
+| Building | Output per worker | 99,046 constant 2021 PPP $ | 2025 | 24 of 123 |
 
 ## Missing data
 

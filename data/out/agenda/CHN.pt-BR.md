@@ -2,32 +2,32 @@
 
 *Gerado em 2026-10-02*
 
-A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
+A régua inclui 125 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
 ## Onde a China está
 
 | Dimensão | Nota | Solidez | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 31 | 0,46 (utilizável) | +11,1 em 10 anos, sobre 2 indicadores |
-| Agência | 72,5 | 0,56 (utilizável) | sem base de tendência |
-| Coordenação | 65,6 | 0,41 (fraca) | sem base de tendência |
-| Confiança | 55,8 | 0,5 (utilizável) | sem base de tendência |
-| Aprendizagem | 74,8 | 0,55 (utilizável) | sem base de tendência |
-| Experimentação | 100 | 0,24 (muito fraca) | +20,4 em 10 anos, sobre 3 indicadores |
-| Adaptação | 80,2 | 0,46 (utilizável) | sem base de tendência |
-| Construção | 77 | 0,57 (utilizável) | -5 em 10 anos, sobre 3 indicadores |
-| Propósito compartilhado | 30,3 | 0,41 (fraca) | +0,7 em 10 anos, sobre 2 indicadores |
+| Antecipação | 30,1 | 0,46 (utilizável) | +10,7 em 10 anos, sobre 2 indicadores |
+| Agência | 76,2 | 0,56 (utilizável) | sem base de tendência |
+| Coordenação | 67,9 | 0,41 (fraca) | sem base de tendência |
+| Confiança | 55,3 | 0,5 (utilizável) | sem base de tendência |
+| Aprendizagem | 76 | 0,55 (utilizável) | sem base de tendência |
+| Experimentação | 100 | 0,24 (muito fraca) | +19,4 em 10 anos, sobre 3 indicadores |
+| Adaptação | 79,6 | 0,46 (utilizável) | sem base de tendência |
+| Construção | 77,5 | 0,57 (utilizável) | -4,9 em 10 anos, sobre 3 indicadores |
+| Propósito compartilhado | 29,9 | 0,41 (fraca) | +0,8 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para elevar
 
 Estas são as notas mais baixas com evidência utilizável. A evidência fraca aparece abaixo.
 
-### Antecipação: 31, solidez utilizável
+### Antecipação: 30,1, solidez utilizável
 
 Quão capaz é o país de identificar mudanças emergentes e se preparar para elas?
 
 - Baseada em 2 indicadores observados.
-- Maiores notas utilizáveis: Suíça 96,3, Suécia 90, Finlândia 87,5.
+- Maiores notas utilizáveis: Dinamarca 98,1, Noruega 97,2, Suíça 93,4.
 - Entregas documentadas em outros países: Embrapa, a fifty-year bet on tropical agriculture (Brasil); The Delta Programme and its fund (Países Baixos); Lei de Informática, a sectoral industrial policy (Brasil); CGEE, the strategic studies center (Brasil); Centre for Strategic Futures, foresight inside government (Singapura); Legally binding carbon budgets (Reino Unido); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japão); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (África do Sul); Government Report on the Future and the parliamentary Committee for the Future (Finlândia); Foresight Centre at the Riigikogu (Arenguseire Keskus) (Estônia); Office of Technology Assessment, defunded and closed in 1995 (Estados Unidos); Rządowe Centrum Studiów Strategicznych, liquidated in 2006 (Polônia); Office of Technology Assessment at the German Bundestag (TAB) (Alemanha); National Assembly Futures Institute (Coreia do Sul); Federal Chancellery situation and environment analysis (Perspektivstab) (Suíça); Senate foresight delegation (Délégation sénatoriale à la prospective) (França); Senate Commission on Future Challenges, Science, Technology and Innovation (Chile); Policy Horizons Canada, the federal foresight unit, and its 2024 disruption scan (Canadá); Framtidskommissionen, the Prime Minister's time-limited future commission (Suécia).
 - Lacunas declaradas: Capacidade governamental de prospecção, Compromissos de pesquisa de longo prazo.
 
@@ -63,11 +63,11 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 80,2, solidez utilizável
-- Construção: 77, solidez utilizável
-- Aprendizagem: 74,8, solidez utilizável
-- Agência: 72,5, solidez utilizável
-- Confiança: 55,8, solidez utilizável
+- Adaptação: 79,6, solidez utilizável
+- Construção: 77,5, solidez utilizável
+- Agência: 76,2, solidez utilizável
+- Aprendizagem: 76, solidez utilizável
+- Confiança: 55,3, solidez utilizável
 
 ## O que a China tem para trabalhar
 
@@ -75,19 +75,19 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 | Dimensão | Condição | Valor | Ano | Posição |
 | --- | --- | --- | --- | --- |
-| Antecipação | Dispêndio em P&D | 2,6 % do PIB | 2023 | 10º de 51 |
-| Antecipação | Pesquisadores em P&D | 2.107,3 por milhão de pessoas | 2023 | 22º de 50 |
-| Antecipação | Servidores seguros de internet | 1.413,3 por milhão de pessoas | 2024 | 33º de 53 |
-| Agência | Pessoas que usam a internet | 91,6 % da população | 2025 | 19º de 53 |
-| Agência | Titularidade de conta financeira | 89,4 % das pessoas com 15 anos ou mais | 2024 | 20º de 52 |
-| Agência | Crédito ao setor privado | 194,3 % do PIB | 2024 | 2º de 52 |
-| Aprendizagem | Matrícula no ensino superior | 76,9 % (taxa bruta) | 2024 | 18º de 52 |
-| Aprendizagem | Dispêndio público em educação | 3,9 % do PIB | 2023 | 34º de 53 |
-| Aprendizagem | Parcela técnica do ensino médio | 18,1 % das matrículas no ensino secundário | 2019 | 23º de 53 |
-| Adaptação | Participação na força de trabalho | 74 % das pessoas com 15 anos ou mais | 2025 | 24º de 53 |
-| Adaptação | Assinaturas de banda larga fixa | 47,2 por 100 pessoas | 2024 | 3º de 53 |
-| Adaptação | Perdas na transmissão de eletricidade | 3,4 % da produção | 2023 | 3º de 53 |
-| Construção | Produto por trabalhador | 48.125,8 US$ PPC constantes de 2021 | 2025 | 31º de 51 |
+| Antecipação | Dispêndio em P&D | 2,6 % do PIB | 2023 | 13º de 118 |
+| Antecipação | Pesquisadores em P&D | 2.107,3 por milhão de pessoas | 2023 | 40º de 114 |
+| Antecipação | Servidores seguros de internet | 1.413,3 por milhão de pessoas | 2024 | 64º de 125 |
+| Agência | Pessoas que usam a internet | 91,6 % da população | 2025 | 32º de 125 |
+| Agência | Titularidade de conta financeira | 89,4 % das pessoas com 15 anos ou mais | 2024 | 35º de 122 |
+| Agência | Crédito ao setor privado | 194,3 % do PIB | 2024 | 2º de 124 |
+| Aprendizagem | Matrícula no ensino superior | 76,9 % (taxa bruta) | 2024 | 31º de 124 |
+| Aprendizagem | Dispêndio público em educação | 3,9 % do PIB | 2023 | 70º de 125 |
+| Aprendizagem | Parcela técnica do ensino médio | 18,1 % das matrículas no ensino secundário | 2019 | 42º de 125 |
+| Adaptação | Participação na força de trabalho | 74 % das pessoas com 15 anos ou mais | 2025 | 47º de 125 |
+| Adaptação | Assinaturas de banda larga fixa | 47,2 por 100 pessoas | 2024 | 3º de 125 |
+| Adaptação | Perdas na transmissão de eletricidade | 3,4 % da produção | 2023 | 4º de 117 |
+| Construção | Produto por trabalhador | 48.125,8 US$ PPC constantes de 2021 | 2025 | 62º de 123 |
 
 ## Agenda de medição
 

@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-10-02T18:05:12.354Z",
+  "generatedAt": "2026-10-02T18:42:24.339Z",
   "iso3": "ECU",
   "country": "Ecuador",
   "dimensions": [
     {
       "dimension": "anticipation",
       "kind": "raise",
-      "score": 41.9,
+      "score": 40.8,
       "confidence": 0.455,
       "band": "usable",
       "trend": {
         "spanYears": 10,
-        "delta": 11.3,
+        "delta": 11,
         "basket": 2,
         "clamped": 0
       },
@@ -26,21 +26,21 @@
       "retired": [],
       "exemplars": [
         {
+          "iso3": "DNK",
+          "country": "Denmark",
+          "score": 98.1,
+          "confidence": 0.455
+        },
+        {
+          "iso3": "NOR",
+          "country": "Norway",
+          "score": 97.2,
+          "confidence": 0.455
+        },
+        {
           "iso3": "CHE",
           "country": "Switzerland",
-          "score": 96.3,
-          "confidence": 0.455
-        },
-        {
-          "iso3": "SWE",
-          "country": "Sweden",
-          "score": 90,
-          "confidence": 0.455
-        },
-        {
-          "iso3": "FIN",
-          "country": "Finland",
-          "score": 87.5,
+          "score": 93.4,
           "confidence": 0.455
         }
       ],
@@ -200,31 +200,31 @@
           "value": 0.438,
           "unit": "% of GDP",
           "year": 2014,
-          "rank": 32,
-          "n": 51
+          "rank": 60,
+          "n": 118
         },
         {
           "id": "researchers_per_million",
           "value": 400.261,
           "unit": "per million people",
           "year": 2014,
-          "rank": 33,
-          "n": 50
+          "rank": 72,
+          "n": 114
         },
         {
           "id": "secure_internet_servers",
           "value": 490.861,
           "unit": "per million people",
           "year": 2024,
-          "rank": 39,
-          "n": 53
+          "rank": 77,
+          "n": 125
         }
       ]
     },
     {
       "dimension": "agency",
       "kind": "raise",
-      "score": 36,
+      "score": 39.3,
       "confidence": 0.555,
       "band": "usable",
       "trend": null,
@@ -240,21 +240,21 @@
       "retired": [],
       "exemplars": [
         {
+          "iso3": "NZL",
+          "country": "New Zealand",
+          "score": 92.2,
+          "confidence": 0.555
+        },
+        {
           "iso3": "AUS",
           "country": "Australia",
-          "score": 86.1,
+          "score": 89.2,
           "confidence": 0.555
         },
         {
           "iso3": "EST",
           "country": "Estonia",
-          "score": 85.2,
-          "confidence": 0.555
-        },
-        {
-          "iso3": "CHN",
-          "country": "China",
-          "score": 72.5,
+          "score": 84.3,
           "confidence": 0.555
         }
       ],
@@ -295,31 +295,31 @@
           "value": 77.173,
           "unit": "% of population",
           "year": 2024,
-          "rank": 38,
-          "n": 53
+          "rank": 77,
+          "n": 125
         },
         {
           "id": "account_ownership",
           "value": 64.505,
           "unit": "% aged 15+",
           "year": 2024,
-          "rank": 36,
-          "n": 52
+          "rank": 73,
+          "n": 122
         },
         {
           "id": "domestic_credit_private",
           "value": 58.874,
           "unit": "% of GDP",
           "year": 2025,
-          "rank": 29,
-          "n": 52
+          "rank": 43,
+          "n": 124
         }
       ]
     },
     {
       "dimension": "coordination",
       "kind": "measure",
-      "score": 69.4,
+      "score": 76.8,
       "confidence": 0.387,
       "band": "thin",
       "trend": null,
@@ -913,7 +913,7 @@
     {
       "dimension": "trust",
       "kind": "raise",
-      "score": 35.7,
+      "score": 40.2,
       "confidence": 0.498,
       "band": "usable",
       "trend": null,
@@ -935,21 +935,21 @@
       ],
       "exemplars": [
         {
+          "iso3": "DNK",
+          "country": "Denmark",
+          "score": 94.1,
+          "confidence": 0.498
+        },
+        {
+          "iso3": "NOR",
+          "country": "Norway",
+          "score": 91.3,
+          "confidence": 0.498
+        },
+        {
           "iso3": "FIN",
           "country": "Finland",
-          "score": 90.7,
-          "confidence": 0.498
-        },
-        {
-          "iso3": "SWE",
-          "country": "Sweden",
-          "score": 90.3,
-          "confidence": 0.498
-        },
-        {
-          "iso3": "CHE",
-          "country": "Switzerland",
-          "score": 82.8,
+          "score": 89.7,
           "confidence": 0.498
         }
       ],
@@ -996,7 +996,7 @@
     {
       "dimension": "learning",
       "kind": "raise",
-      "score": 45.1,
+      "score": 46.5,
       "confidence": 0.554,
       "band": "usable",
       "trend": null,
@@ -1017,16 +1017,16 @@
           "confidence": 0.535
         },
         {
-          "iso3": "IRL",
-          "country": "Ireland",
-          "score": 81.6,
+          "iso3": "NOR",
+          "country": "Norway",
+          "score": 83.4,
           "confidence": 0.554
         },
         {
-          "iso3": "AUS",
-          "country": "Australia",
-          "score": 80.1,
-          "confidence": 0.554
+          "iso3": "NZL",
+          "country": "New Zealand",
+          "score": 83,
+          "confidence": 0.535
         }
       ],
       "evidenceElsewhere": [
@@ -1388,31 +1388,31 @@
           "value": 67.885,
           "unit": "% gross",
           "year": 2023,
-          "rank": 25,
-          "n": 52
+          "rank": 45,
+          "n": 124
         },
         {
           "id": "education_expenditure_gdp",
           "value": 3.691,
           "unit": "% of GDP",
           "year": 2024,
-          "rank": 37,
-          "n": 53
+          "rank": 75,
+          "n": 125
         },
         {
           "id": "vocational_secondary_share",
           "value": 14.264,
           "unit": "% of secondary",
           "year": 2018,
-          "rank": 29,
-          "n": 53
+          "rank": 52,
+          "n": 125
         }
       ]
     },
     {
       "dimension": "experimentation",
       "kind": "measure",
-      "score": 7.5,
+      "score": 9.2,
       "confidence": 0.334,
       "band": "thin",
       "trend": {
@@ -1439,19 +1439,19 @@
         {
           "iso3": "KOR",
           "country": "South Korea",
-          "score": 70.3,
+          "score": 72.7,
           "confidence": 0.525
         },
         {
           "iso3": "CHE",
           "country": "Switzerland",
-          "score": 57.6,
+          "score": 69.8,
           "confidence": 0.525
         },
         {
           "iso3": "USA",
           "country": "United States",
-          "score": 48.1,
+          "score": 50.6,
           "confidence": 0.525
         }
       ],
@@ -1645,7 +1645,7 @@
     {
       "dimension": "adaptability",
       "kind": "hold",
-      "score": 62.4,
+      "score": 64.7,
       "confidence": 0.617,
       "band": "usable",
       "trend": null,
@@ -1664,19 +1664,19 @@
         {
           "iso3": "POL",
           "country": "Poland",
-          "score": 89.2,
+          "score": 89.5,
           "confidence": 0.617
         },
         {
           "iso3": "VNM",
           "country": "Vietnam",
-          "score": 88.2,
+          "score": 88.1,
           "confidence": 0.617
         },
         {
           "iso3": "THA",
           "country": "Thailand",
-          "score": 88,
+          "score": 87.6,
           "confidence": 0.617
         }
       ],
@@ -2648,39 +2648,39 @@
           "value": 68.045,
           "unit": "% aged 15+",
           "year": 2025,
-          "rank": 39,
-          "n": 53
+          "rank": 78,
+          "n": 125
         },
         {
           "id": "broadband_subscriptions",
           "value": 17.246,
           "unit": "per 100 people",
           "year": 2024,
-          "rank": 31,
-          "n": 53
+          "rank": 63,
+          "n": 125
         },
         {
           "id": "electricity_transmission_losses",
           "value": 16.996,
           "unit": "% of output",
           "year": 2023,
-          "rank": 44,
-          "n": 53
+          "rank": 94,
+          "n": 117
         },
         {
           "id": "informal_employment_share",
           "value": 68.5,
           "unit": "% of employment",
           "year": 2025,
-          "rank": 31,
-          "n": 43
+          "rank": 64,
+          "n": 102
         }
       ]
     },
     {
       "dimension": "building",
       "kind": "raise",
-      "score": 31.5,
+      "score": 33.4,
       "confidence": 0.568,
       "band": "usable",
       "trend": {
@@ -2704,21 +2704,21 @@
       ],
       "exemplars": [
         {
-          "iso3": "CHN",
-          "country": "China",
-          "score": 77,
-          "confidence": 0.568
-        },
-        {
           "iso3": "KOR",
           "country": "South Korea",
-          "score": 69.8,
+          "score": 85.1,
           "confidence": 0.568
         },
         {
           "iso3": "IRL",
           "country": "Ireland",
-          "score": 69.2,
+          "score": 80.3,
+          "confidence": 0.568
+        },
+        {
+          "iso3": "CHN",
+          "country": "China",
+          "score": 77.5,
           "confidence": 0.568
         }
       ],
@@ -3494,20 +3494,20 @@
           "value": 30171.402,
           "unit": "constant 2021 PPP $",
           "year": 2025,
-          "rank": 39,
-          "n": 51
+          "rank": 81,
+          "n": 123
         }
       ]
     },
     {
       "dimension": "shared_purpose",
       "kind": "measure",
-      "score": 39.9,
+      "score": 39.3,
       "confidence": 0.408,
       "band": "thin",
       "trend": {
         "spanYears": 10,
-        "delta": -4.3,
+        "delta": -3.4,
         "basket": 2,
         "clamped": 0
       },

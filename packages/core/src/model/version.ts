@@ -13,7 +13,7 @@
  * prototype as a research object, and the provisional research layers remain
  * under review; that does not make the surrounding application a 0.x release.
  */
-export const APP_VERSION = '1.24.11'
+export const APP_VERSION = '1.25.0'
 
 /**
  * The dataset version, semantic. Stamped into `data/out/index.json`, every
@@ -33,4 +33,4 @@ export const APP_VERSION = '1.24.11'
  * The number versions the contract, not the method. Methodological maturity is
  * tracked in docs/KNOWN-ARTEFACTS.md and is a different thing.
  */
-export const DATASET_VERSION = '8.3.0'
+export const DATASET_VERSION = '9.0.0'

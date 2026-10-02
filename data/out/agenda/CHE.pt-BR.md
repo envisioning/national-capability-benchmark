@@ -2,21 +2,21 @@
 
 *Gerado em 2026-10-02*
 
-A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
+A régua inclui 125 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
 ## Onde a Suíça está
 
 | Dimensão | Nota | Solidez | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 96,3 | 0,46 (utilizável) | +4 em 10 anos, sobre 2 indicadores, 1 truncados na borda da régua |
-| Agência | 60 | 0,52 (utilizável) | sem base de tendência |
-| Coordenação | 98,5 | 0,35 (fraca) | sem base de tendência |
-| Confiança | 82,8 | 0,5 (utilizável) | sem base de tendência |
-| Aprendizagem | 79,4 | 0,55 (utilizável) | sem base de tendência |
-| Experimentação | 57,6 | 0,53 (utilizável) | +1,2 em 10 anos, sobre 3 indicadores |
-| Adaptação | 51,2 | 0,62 (utilizável) | sem base de tendência |
-| Construção | 57,6 | 0,57 (utilizável) | +1,3 em 10 anos, sobre 3 indicadores |
-| Propósito compartilhado | 49,3 | 0,41 (fraca) | -1 em 10 anos, sobre 2 indicadores |
+| Antecipação | 93,4 | 0,46 (utilizável) | +2,2 em 10 anos, sobre 2 indicadores, 1 truncados na borda da régua |
+| Agência | 60,5 | 0,52 (utilizável) | sem base de tendência |
+| Coordenação | 98,7 | 0,35 (fraca) | sem base de tendência |
+| Confiança | 82,6 | 0,5 (utilizável) | sem base de tendência |
+| Aprendizagem | 80 | 0,55 (utilizável) | sem base de tendência |
+| Experimentação | 69,8 | 0,53 (utilizável) | +0,3 em 10 anos, sobre 3 indicadores |
+| Adaptação | 55,6 | 0,62 (utilizável) | sem base de tendência |
+| Construção | 73 | 0,57 (utilizável) | +0,9 em 10 anos, sobre 3 indicadores |
+| Propósito compartilhado | 47,4 | 0,41 (fraca) | -0,9 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para medir primeiro
 
@@ -42,13 +42,13 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Antecipação: 96,3, solidez utilizável
-- Confiança: 82,8, solidez utilizável
-- Aprendizagem: 79,4, solidez utilizável
-- Agência: 60, solidez utilizável
-- Experimentação: 57,6, solidez utilizável
-- Construção: 57,6, solidez utilizável
-- Adaptação: 51,2, solidez utilizável
+- Antecipação: 93,4, solidez utilizável
+- Confiança: 82,6, solidez utilizável
+- Aprendizagem: 80, solidez utilizável
+- Construção: 73, solidez utilizável
+- Experimentação: 69,8, solidez utilizável
+- Agência: 60,5, solidez utilizável
+- Adaptação: 55,6, solidez utilizável
 
 ## O que a Suíça tem para trabalhar
 
@@ -56,20 +56,20 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 | Dimensão | Condição | Valor | Ano | Posição |
 | --- | --- | --- | --- | --- |
-| Antecipação | Dispêndio em P&D | 3,2 % do PIB | 2023 | 6º de 51 |
-| Antecipação | Pesquisadores em P&D | 6.108 por milhão de pessoas | 2023 | 6º de 50 |
-| Antecipação | Servidores seguros de internet | 167.357,6 por milhão de pessoas | 2024 | 5º de 53 |
-| Agência | Pessoas que usam a internet | 97,3 % da população | 2025 | 4º de 53 |
-| Agência | Titularidade de conta financeira | 98,4 % das pessoas com 15 anos ou mais | 2024 | 8º de 52 |
-| Agência | Crédito ao setor privado | 167,8 % do PIB | 2016 | 4º de 52 |
-| Aprendizagem | Matrícula no ensino superior | 73,5 % (taxa bruta) | 2024 | 21º de 52 |
-| Aprendizagem | Dispêndio público em educação | 4,9 % do PIB | 2022 | 21º de 53 |
-| Aprendizagem | Parcela técnica do ensino médio | 36,9 % das matrículas no ensino secundário | 2018 | 4º de 53 |
-| Adaptação | Participação na força de trabalho | 84 % das pessoas com 15 anos ou mais | 2025 | 2º de 53 |
-| Adaptação | Assinaturas de banda larga fixa | 47 por 100 pessoas | 2024 | 4º de 53 |
-| Adaptação | Perdas na transmissão de eletricidade | 5 % da produção | 2024 | 11º de 53 |
-| Adaptação | Emprego informal | 1,1 % do emprego | 2024 | 1º de 43 |
-| Construção | Produto por trabalhador | 158.634,2 US$ PPC constantes de 2021 | 2025 | 3º de 51 |
+| Antecipação | Dispêndio em P&D | 3,2 % do PIB | 2023 | 8º de 118 |
+| Antecipação | Pesquisadores em P&D | 6.108 por milhão de pessoas | 2023 | 9º de 114 |
+| Antecipação | Servidores seguros de internet | 167.357,6 por milhão de pessoas | 2024 | 7º de 125 |
+| Agência | Pessoas que usam a internet | 97,3 % da população | 2025 | 6º de 125 |
+| Agência | Titularidade de conta financeira | 98,4 % das pessoas com 15 anos ou mais | 2024 | 13º de 122 |
+| Agência | Crédito ao setor privado | 167,8 % do PIB | 2016 | 4º de 124 |
+| Aprendizagem | Matrícula no ensino superior | 73,5 % (taxa bruta) | 2024 | 37º de 124 |
+| Aprendizagem | Dispêndio público em educação | 4,9 % do PIB | 2022 | 43º de 125 |
+| Aprendizagem | Parcela técnica do ensino médio | 36,9 % das matrículas no ensino secundário | 2018 | 8º de 125 |
+| Adaptação | Participação na força de trabalho | 84 % das pessoas com 15 anos ou mais | 2025 | 4º de 125 |
+| Adaptação | Assinaturas de banda larga fixa | 47 por 100 pessoas | 2024 | 4º de 125 |
+| Adaptação | Perdas na transmissão de eletricidade | 5 % da produção | 2024 | 19º de 117 |
+| Adaptação | Emprego informal | 1,1 % do emprego | 2024 | 2º de 102 |
+| Construção | Produto por trabalhador | 158.634,2 US$ PPC constantes de 2021 | 2025 | 4º de 123 |
 
 ## Agenda de medição
 

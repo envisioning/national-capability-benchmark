@@ -2,7 +2,7 @@
 
 *Gerado em 2026-10-02*
 
-A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
+A régua inclui 125 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
 ## Onde Cuba está
 
@@ -13,9 +13,9 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Coordenação | sem nota | 0,1 (muito fraca) | sem base de tendência |
 | Confiança | sem nota | 0,07 (muito fraca) | sem base de tendência |
 | Aprendizagem | sem nota | 0,16 (muito fraca) | sem base de tendência |
-| Experimentação | 1,1 | 0,24 (muito fraca) | -0,1 em 10 anos, sobre 3 indicadores |
-| Adaptação | 62,2 | 0,48 (utilizável) | sem base de tendência |
-| Construção | 21,8 | 0,29 (fraca) | -27,1 em 10 anos, sobre 2 indicadores |
+| Experimentação | 1,5 | 0,24 (muito fraca) | -0,3 em 10 anos, sobre 3 indicadores |
+| Adaptação | 64,6 | 0,48 (utilizável) | sem base de tendência |
+| Construção | 22,1 | 0,29 (fraca) | -27 em 10 anos, sobre 2 indicadores |
 | Propósito compartilhado | sem nota | 0 (muito fraca) | sem base de tendência |
 
 ## Dimensões para medir primeiro
@@ -87,7 +87,7 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 62,2, solidez utilizável
+- Adaptação: 64,6, solidez utilizável
 
 ## O que Cuba tem para trabalhar
 
@@ -95,16 +95,16 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 | Dimensão | Condição | Valor | Ano | Posição |
 | --- | --- | --- | --- | --- |
-| Antecipação | Dispêndio em P&D | 0,4 % do PIB | 2024 | 32º de 51 |
-| Antecipação | Pesquisadores em P&D | 2.171,3 por milhão de pessoas | 2024 | 21º de 50 |
-| Antecipação | Servidores seguros de internet | 192,5 por milhão de pessoas | 2024 | 43º de 53 |
-| Agência | Pessoas que usam a internet | 70,5 % da população | 2024 | 42º de 53 |
-| Aprendizagem | Matrícula no ensino superior | 43,1 % (taxa bruta) | 2024 | 38º de 52 |
-| Aprendizagem | Dispêndio público em educação | 8,4 % do PIB | 2022 | 1º de 53 |
-| Aprendizagem | Parcela técnica do ensino médio | 27,4 % das matrículas no ensino secundário | 2019 | 11º de 53 |
-| Adaptação | Participação na força de trabalho | 63,8 % das pessoas com 15 anos ou mais | 2025 | 46º de 53 |
-| Adaptação | Assinaturas de banda larga fixa | 3,1 por 100 pessoas | 2024 | 48º de 53 |
-| Adaptação | Perdas na transmissão de eletricidade | 18,7 % da produção | 2023 | 46º de 53 |
+| Antecipação | Dispêndio em P&D | 0,4 % do PIB | 2024 | 60º de 118 |
+| Antecipação | Pesquisadores em P&D | 2.171,3 por milhão de pessoas | 2024 | 39º de 114 |
+| Antecipação | Servidores seguros de internet | 192,5 por milhão de pessoas | 2024 | 88º de 125 |
+| Agência | Pessoas que usam a internet | 70,5 % da população | 2024 | 85º de 125 |
+| Aprendizagem | Matrícula no ensino superior | 43,1 % (taxa bruta) | 2024 | 73º de 124 |
+| Aprendizagem | Dispêndio público em educação | 8,4 % do PIB | 2022 | 2º de 125 |
+| Aprendizagem | Parcela técnica do ensino médio | 27,4 % das matrículas no ensino secundário | 2019 | 25º de 125 |
+| Adaptação | Participação na força de trabalho | 63,8 % das pessoas com 15 anos ou mais | 2025 | 92º de 125 |
+| Adaptação | Assinaturas de banda larga fixa | 3,1 por 100 pessoas | 2024 | 94º de 125 |
+| Adaptação | Perdas na transmissão de eletricidade | 18,7 % da produção | 2023 | 101º de 117 |
 
 ## Agenda de medição
 

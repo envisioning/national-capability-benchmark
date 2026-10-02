@@ -2,32 +2,32 @@
 
 *Generated 2026-10-02*
 
-The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
+The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
 ## Where China stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 31 | 0.46 (usable) | +11.1 over 10 years using 2 indicators |
-| Agency | 72.5 | 0.56 (usable) | no trend |
-| Coordination | 65.6 | 0.41 (thin) | no trend |
-| Trust | 55.8 | 0.5 (usable) | no trend |
-| Learning | 74.8 | 0.55 (usable) | no trend |
-| Experimentation | 100 | 0.24 (very thin) | +20.4 over 10 years using 3 indicators |
-| Adaptability | 80.2 | 0.46 (usable) | no trend |
-| Building | 77 | 0.57 (usable) | -5 over 10 years using 3 indicators |
-| Shared Purpose | 30.3 | 0.41 (thin) | +0.7 over 10 years using 2 indicators |
+| Anticipation | 30.1 | 0.46 (usable) | +10.7 over 10 years using 2 indicators |
+| Agency | 76.2 | 0.56 (usable) | no trend |
+| Coordination | 67.9 | 0.41 (thin) | no trend |
+| Trust | 55.3 | 0.5 (usable) | no trend |
+| Learning | 76 | 0.55 (usable) | no trend |
+| Experimentation | 100 | 0.24 (very thin) | +19.4 over 10 years using 3 indicators |
+| Adaptability | 79.6 | 0.46 (usable) | no trend |
+| Building | 77.5 | 0.57 (usable) | -4.9 over 10 years using 3 indicators |
+| Shared Purpose | 29.9 | 0.41 (thin) | +0.8 over 10 years using 2 indicators |
 
 ## What to raise
 
 These are the lowest scores with usable evidence. Thin evidence appears below.
 
-### Anticipation: 31, confidence usable
+### Anticipation: 30.1, confidence usable
 
 How capable is the country of identifying and preparing for emerging change?
 
 - Uses 2 observed indicators.
-- Highest usable scores: Switzerland 96.3, Sweden 90, Finland 87.5.
+- Highest usable scores: Denmark 98.1, Norway 97.2, Switzerland 93.4.
 - Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (South Africa); Government Report on the Future and the parliamentary Committee for the Future (Finland); Foresight Centre at the Riigikogu (Arenguseire Keskus) (Estonia); Office of Technology Assessment, defunded and closed in 1995 (United States); Rządowe Centrum Studiów Strategicznych, liquidated in 2006 (Poland); Office of Technology Assessment at the German Bundestag (TAB) (Germany); National Assembly Futures Institute (South Korea); Federal Chancellery situation and environment analysis (Perspektivstab) (Switzerland); Senate foresight delegation (Délégation sénatoriale à la prospective) (France); Senate Commission on Future Challenges, Science, Technology and Innovation (Chile); Policy Horizons Canada, the federal foresight unit, and its 2024 disruption scan (Canada); Framtidskommissionen, the Prime Minister's time-limited future commission (Sweden).
 - Missing indicators: Government foresight capacity, Long-horizon research commitments.
 
@@ -63,11 +63,11 @@ How effectively can independent actors organize around shared objectives?
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 80.2, confidence usable
-- Building: 77, confidence usable
-- Learning: 74.8, confidence usable
-- Agency: 72.5, confidence usable
-- Trust: 55.8, confidence usable
+- Adaptability: 79.6, confidence usable
+- Building: 77.5, confidence usable
+- Agency: 76.2, confidence usable
+- Learning: 76, confidence usable
+- Trust: 55.3, confidence usable
 
 ## What China has to work with
 
@@ -75,19 +75,19 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 | Dimension | Condition | Value | Year | Rank |
 | --- | --- | --- | --- | --- |
-| Anticipation | R&D expenditure | 2.6 % of GDP | 2023 | 10 of 51 |
-| Anticipation | Researchers in R&D | 2,107.3 per million people | 2023 | 22 of 50 |
-| Anticipation | Secure internet servers | 1,413.3 per million people | 2024 | 33 of 53 |
-| Agency | Individuals using the internet | 91.6 % of population | 2025 | 19 of 53 |
-| Agency | Financial account ownership | 89.4 % aged 15+ | 2024 | 20 of 52 |
-| Agency | Credit to the private sector | 194.3 % of GDP | 2024 | 2 of 52 |
-| Learning | Tertiary enrolment | 76.9 % gross | 2024 | 18 of 52 |
-| Learning | Public education expenditure | 3.9 % of GDP | 2023 | 34 of 53 |
-| Learning | Vocational share of secondary | 18.1 % of secondary | 2019 | 23 of 53 |
-| Adaptability | Labour force participation | 74 % aged 15+ | 2025 | 24 of 53 |
-| Adaptability | Fixed broadband subscriptions | 47.2 per 100 people | 2024 | 3 of 53 |
-| Adaptability | Electricity transmission losses | 3.4 % of output | 2023 | 3 of 53 |
-| Building | Output per worker | 48,125.8 constant 2021 PPP $ | 2025 | 31 of 51 |
+| Anticipation | R&D expenditure | 2.6 % of GDP | 2023 | 13 of 118 |
+| Anticipation | Researchers in R&D | 2,107.3 per million people | 2023 | 40 of 114 |
+| Anticipation | Secure internet servers | 1,413.3 per million people | 2024 | 64 of 125 |
+| Agency | Individuals using the internet | 91.6 % of population | 2025 | 32 of 125 |
+| Agency | Financial account ownership | 89.4 % aged 15+ | 2024 | 35 of 122 |
+| Agency | Credit to the private sector | 194.3 % of GDP | 2024 | 2 of 124 |
+| Learning | Tertiary enrolment | 76.9 % gross | 2024 | 31 of 124 |
+| Learning | Public education expenditure | 3.9 % of GDP | 2023 | 70 of 125 |
+| Learning | Vocational share of secondary | 18.1 % of secondary | 2019 | 42 of 125 |
+| Adaptability | Labour force participation | 74 % aged 15+ | 2025 | 47 of 125 |
+| Adaptability | Fixed broadband subscriptions | 47.2 per 100 people | 2024 | 3 of 125 |
+| Adaptability | Electricity transmission losses | 3.4 % of output | 2023 | 4 of 117 |
+| Building | Output per worker | 48,125.8 constant 2021 PPP $ | 2025 | 62 of 123 |
 
 ## Missing data
 

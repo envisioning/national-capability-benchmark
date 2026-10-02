@@ -2,32 +2,32 @@
 
 *Generated 2026-10-02*
 
-The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
+The frame includes 125 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
 ## Where Canada stands
 
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
-| Anticipation | 80.2 | 0.46 (usable) | +2.8 over 10 years using 2 indicators |
+| Anticipation | 77.8 | 0.46 (usable) | +2.7 over 10 years using 2 indicators |
 | Agency | 71.8 | 0.52 (usable) | no trend |
-| Coordination | 97.1 | 0.23 (very thin) | no trend |
-| Trust | 66.2 | 0.5 (usable) | no trend |
-| Learning | 76.1 | 0.55 (usable) | no trend |
-| Experimentation | 24.9 | 0.33 (thin) | -4.5 over 10 years using 3 indicators |
-| Adaptability | 71.5 | 0.62 (usable) | no trend |
-| Building | 30.5 | 0.54 (usable) | -1.2 over 10 years using 3 indicators |
-| Shared Purpose | 61.9 | 0.41 (thin) | +4.4 over 10 years using 2 indicators |
+| Coordination | 97.3 | 0.23 (very thin) | no trend |
+| Trust | 68.3 | 0.5 (usable) | no trend |
+| Learning | 76.5 | 0.55 (usable) | no trend |
+| Experimentation | 39.6 | 0.33 (thin) | -4.8 over 10 years using 3 indicators |
+| Adaptability | 72.4 | 0.62 (usable) | no trend |
+| Building | 45.4 | 0.54 (usable) | -3.9 over 10 years using 3 indicators |
+| Shared Purpose | 58 | 0.41 (thin) | +3.5 over 10 years using 2 indicators |
 
 ## What to raise
 
 These are the lowest scores with usable evidence. Thin evidence appears below.
 
-### Building: 30.5, confidence usable
+### Building: 45.4, confidence usable
 
 How capable is the country of turning plans and knowledge into functioning systems?
 
 - Uses 4 observed indicators.
-- Highest usable scores: China 77, South Korea 69.8, Ireland 69.2.
+- Highest usable scores: South Korea 85.1, Ireland 80.3, China 77.5.
 - Related deliveries in other countries: Pix instant payment system (Brazil); GOV.BR federal identity and service platform (Brazil); X-Road national data exchange layer (Estonia); Pradhan Mantri Jan Dhan Yojana bank accounts (India); Electricity supply rebuilt on renewable sources (Uruguay); Plan Ceibal, one connected laptop per child (Uruguay); Sistema Unico de Saude, universal public health system (Brazil); Programa Nacional de Imunizacoes, and its erosion (Brazil); Luz para Todos, rural electrification (Brazil); Bolsa Familia and the single registry behind it (Brazil); Fully electronic national elections (Brazil); Deepwater and pre-salt oil production (Brazil); Seguro Popular, and its abolition (Mexico); Sure Start children's centres, and their erosion (United Kingdom); Grid power, and load shedding (South Africa); Measles elimination, and its erosion (United States); BNDES, the national development bank (Brazil); Casa da Moeda do Brasil, the national mint (Brazil); Housing and Development Board, public housing at scale (Singapore); AFE passenger rail and network contraction (Uruguay); Flamanville 3 EPR, and the erosion of nuclear new-build delivery (France); Groningen gas system, and its closure after induced earthquakes (Netherlands); DigiD, a shared digital identity rail for public services (Netherlands); Delta Works, a 43-year national flood-defence programme (Netherlands); Betuweroute, a freight railway that missed its operating promise (Netherlands); MijnOverheid, a shared citizen mailbox and data portal (Netherlands); Fyra V250, a high-speed service withdrawn after a failed launch (Netherlands); OVpay, nationwide contactless transit payments (Netherlands); Omgevingswet and the Digital Environment System (Netherlands); Transantiago, an integrated transport reform with rising subsidy dependence (Chile); 4G road concessions, a national infrastructure portfolio (Colombia); Reficar, a refinery modernization with a fiscal-liability finding (Colombia); GIGA School, one learning device per student (Japan); Monju, a fast-breeder programme ended before commercial operation (Japan); Invierte.pe, a national multi-year investment-management system (Peru); Reconstrucción con Cambios, a delayed recovery portfolio (Peru); ICE and a mostly renewable national electricity system (Costa Rica); CCSS universal health-insurance reach (Costa Rica); Metro de Quito, a cross-administration urban rail delivery (Ecuador); Panama Canal expansion and self-financing operations (Panama); Metro de Panamá network operations (Panama); Mi Teleférico urban cable-car network (Bolivia); Industrial lithium carbonate plant below design capacity (Bolivia); Itaipú binational hydropower operations (Paraguay); Metrobús, an unfinished bus rapid transit project (Paraguay); ARSAT-3 satellite programme suspended before launch (Argentina); DPWH national infrastructure delivery and transparency portal (Philippines); Bataan Nuclear Power Plant, a mothballed megaproject (Philippines); Trans-Sumatra toll-road programme, still short of its planned network (Indonesia); National expressway build-out in 2024 (Vietnam); Cat Linh–Ha Dong metro, a delayed and over-budget delivery (Vietnam); MRT Putrajaya Line (Malaysia); Kuala Lumpur–Singapore high-speed rail, terminated before construction (Malaysia); Hopewell elevated road-and-rail concession, and its termination (Thailand); AVE high-speed rail network (Spain); Castor underground gas storage, and its closure (Spain); Ostrołęka C coal block, and its abandonment (Poland); Nya Karolinska Solna public–private hospital project (Sweden); Barsebäck nuclear plant closure and decommissioning (Sweden); New Children's Hospital cost escalation (Ireland); Rural electrification and near-universal grid coverage (Nicaragua); Gran Misión Vivienda Venezuela's five-million-home milestone (Venezuela); Plano de Recuperação e Resiliência delivery governance (Portugal); Lisbon–Madrid high-speed rail concession, formally abandoned (Portugal); Delhi Commonwealth Games, and the cost-estimate escalation (India); MeerKAT radio telescope, a delivered national research facility (South Africa); CFE Telecomunicaciones e Internet para Todos (Mexico); New International Airport of Mexico, and its cancellation (Mexico); Marmaray, the Bosphorus rail crossing (Turkey); FATİH education technology infrastructure (Turkey); YEKA RES-1 renewable tender, and its cancellation (Turkey); Gotthard Base Tunnel (Switzerland); Standard Gauge Railway, Mombasa to Naivasha (Kenya); Tel Aviv light rail Red Line (Israel); National high-speed rail network (China); Barakah Nuclear Energy Plant (United Arab Emirates); Aeropuerto Internacional de Palmerola (Honduras); El Chaparral (3 de Febrero) hydroelectric plant (El Salvador); Programa Ampliado de Inmunizaciones, and its erosion (Venezuela); PetroCaribe-financed public investment programme, and its audited failure (Haiti); Interstate Highway System (United States); Programa Nacional de la Vivienda, and its collapse (Cuba); Punta Catalina thermoelectric plant, and its cost overrun (Dominican Republic); Grand Paris Express (France); Modjo-Hawassa expressway, World Bank-financed Lot 3 (Ethiopia); Línea Rivera rail rehabilitation, and its decay (Uruguay); Gyeongbu high-speed railway (KTX), and its cost and schedule overrun (South Korea); Gasoducto Sur Peruano, a terminated pipeline concession (Peru); Talara refinery modernisation, delivered late and over cost (Peru); Program 35.000 MW power generation programme, and its schedule slip (Indonesia); El Mutún steel complex, inaugurated in 2025 and found never to have operated (Bolivia); Quang Trach to Pho Noi 500kV circuit-3 transmission line (Vietnam); Coca Codo Sinclair hydroelectric plant (Ecuador); Puente Héroes del Chaco, Asunción to Chaco'i bridge (Paraguay); Floating LNG import terminals of 2022 (Germany); Atucha II nuclear plant, and its 33-year build (Argentina); Vistula Spit shipping canal (Przekop Mierzei Wiślanej) (Poland); Israel Railways electrification and the Jerusalem express line, and their delays (Israel); Hokuriku Shinkansen Kanazawa to Tsuruga extension, and its overrun (Japan); Botniabanan coastal railway (Sweden); High Speed Two, and the cancellation of Phase 2 (United Kingdom); Crossrail, the Elizabeth line (United Kingdom); Dedicated Freight Corridors, Eastern and Western (India); Olmeca refinery at Dos Bocas (Mexico); Inland Rail, and its consolidation at Parkes (Australia); Kehärata airport rail loop, and its cost overrun (Finland); Chixoy hydroelectric project, and its cost and time overrun (Guatemala); Abuja-Kaduna-Zaria-Kano dual carriageway, and the termination of its 2017 contract (Nigeria).
 - Missing indicators: Large project delivery, Firm scale-up rate.
 - Rejected datasets: Logistics infrastructure quality.
@@ -64,11 +64,11 @@ To what extent can people imagine themselves as participants in a common project
 
 These dimensions score at least 50 with usable evidence.
 
-- Anticipation: 80.2, confidence usable
-- Learning: 76.1, confidence usable
+- Anticipation: 77.8, confidence usable
+- Learning: 76.5, confidence usable
+- Adaptability: 72.4, confidence usable
 - Agency: 71.8, confidence usable
-- Adaptability: 71.5, confidence usable
-- Trust: 66.2, confidence usable
+- Trust: 68.3, confidence usable
 
 ## What Canada has to work with
 
@@ -76,19 +76,19 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 | Dimension | Condition | Value | Year | Rank |
 | --- | --- | --- | --- | --- |
-| Anticipation | R&D expenditure | 1.8 % of GDP | 2024 | 16 of 51 |
-| Anticipation | Researchers in R&D | 5,624.3 per million people | 2022 | 10 of 50 |
-| Anticipation | Secure internet servers | 39,738 per million people | 2024 | 14 of 53 |
-| Agency | Individuals using the internet | 94.4 % of population | 2024 | 14 of 53 |
-| Agency | Financial account ownership | 98.4 % aged 15+ | 2024 | 9 of 52 |
-| Agency | Credit to the private sector | 124.1 % of GDP | 2008 | 11 of 52 |
-| Learning | Tertiary enrolment | 76.3 % gross | 2023 | 20 of 52 |
-| Learning | Public education expenditure | 4.8 % of GDP | 2022 | 22 of 53 |
-| Learning | Vocational share of secondary | 4.6 % of secondary | 2018 | 45 of 53 |
-| Adaptability | Labour force participation | 80 % aged 15+ | 2025 | 9 of 53 |
-| Adaptability | Fixed broadband subscriptions | 42.5 per 100 people | 2024 | 8 of 53 |
-| Adaptability | Electricity transmission losses | 4.2 % of output | 2024 | 7 of 53 |
-| Building | Output per worker | 113,563.3 constant 2021 PPP $ | 2025 | 11 of 51 |
+| Anticipation | R&D expenditure | 1.8 % of GDP | 2024 | 22 of 118 |
+| Anticipation | Researchers in R&D | 5,624.3 per million people | 2022 | 14 of 114 |
+| Anticipation | Secure internet servers | 39,738 per million people | 2024 | 23 of 125 |
+| Agency | Individuals using the internet | 94.4 % of population | 2024 | 19 of 125 |
+| Agency | Financial account ownership | 98.4 % aged 15+ | 2024 | 14 of 122 |
+| Agency | Credit to the private sector | 124.1 % of GDP | 2008 | 14 of 124 |
+| Learning | Tertiary enrolment | 76.3 % gross | 2023 | 33 of 124 |
+| Learning | Public education expenditure | 4.8 % of GDP | 2022 | 44 of 125 |
+| Learning | Vocational share of secondary | 4.6 % of secondary | 2018 | 93 of 125 |
+| Adaptability | Labour force participation | 80 % aged 15+ | 2025 | 15 of 125 |
+| Adaptability | Fixed broadband subscriptions | 42.5 per 100 people | 2024 | 12 of 125 |
+| Adaptability | Electricity transmission losses | 4.2 % of output | 2024 | 10 of 117 |
+| Building | Output per worker | 113,563.3 constant 2021 PPP $ | 2025 | 16 of 123 |
 
 ## Missing data
 
