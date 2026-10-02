@@ -1,7 +1,9 @@
 # Conditions audit: which scored rows observe capability, and which describe its conditions
 
-Status: Tier A adopted in dataset 7.0.0 (D122), 2026-10-01. Tier B and the two
-borderline rows are held. The figures below are the scratch rescore of 6.2.0
+Status: Tier A adopted in dataset 7.0.0 (D122), 2026-10-01. Three Tier B rows,
+the vocational share, labour force participation and transmission losses,
+adopted in dataset 8.0.0 (D141), 2026-10-02. The other three Tier B rows and
+the two borderline rows are held. The figures below are the scratch rescore of 6.2.0
 that the decision was made on.
 
 ## Why

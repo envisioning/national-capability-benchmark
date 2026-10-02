@@ -12,11 +12,11 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Agência | 80,1 | 0,37 (fraca) | sem base de tendência |
 | Coordenação | 22,9 | 0,37 (fraca) | sem base de tendência |
 | Confiança | 31,9 | 0,42 (fraca) | sem base de tendência |
-| Aprendizagem | 28,5 | 0,34 (fraca) | sem base de tendência |
+| Aprendizagem | 37,2 | 0,4 (fraca) | sem base de tendência |
 | Experimentação | 0,8 | 0,04 (muito fraca) | sem base de tendência |
-| Adaptação | 65,1 | 0,55 (utilizável) | +0,9 em 10 anos, sobre 3 indicadores |
+| Adaptação | 81,9 | 0,4 (fraca) | sem base de tendência |
 | Construção | 29,5 | 0,57 (utilizável) | -1,6 em 10 anos, sobre 3 indicadores |
-| Propósito compartilhado | 50,7 | 0,31 (fraca) | sem base de tendência |
+| Propósito compartilhado | 50,7 | 0,37 (fraca) | sem base de tendência |
 
 ## Dimensões para elevar
 
@@ -50,22 +50,8 @@ A solidez da evidência está abaixo da faixa utilizável. Primeiro, produza evi
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
 - Baseada em 3 indicadores observados.
-- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
-
-### Propósito compartilhado: solidez 0,31, fraca
-
-Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
-- Bases rejeitadas: Voz e responsabilização.
-
-### Aprendizagem: solidez 0,34, fraca
-
-Com que eficácia o país adquire, distribui e atualiza conhecimento?
-
-- Baseada em 4 indicadores observados.
-- Lacunas declaradas: Participação de adultos em aprendizagem.
+- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades.
+- Bases rejeitadas: Parcela empresarial do P&D.
 
 ### Agência: solidez 0,37, fraca
 
@@ -73,6 +59,14 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Habilidades digitais de adultos.
+
+### Propósito compartilhado: solidez 0,37, fraca
+
+Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Voluntariado, Polarização política.
+- Bases rejeitadas: Voz e responsabilização, Sentimento de pertencimento nacional.
 
 ### Coordenação: solidez 0,37, fraca
 
@@ -82,6 +76,20 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
+### Adaptação: solidez 0,4, fraca
+
+Com que eficácia o sistema responde quando as circunstâncias mudam?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Preparação e recuperação de desastres, Capacidade de resposta institucional.
+
+### Aprendizagem: solidez 0,4, fraca
+
+Com que eficácia o país adquire, distribui e atualiza conhecimento?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Participação de adultos em aprendizagem.
+
 ### Confiança: solidez 0,42, fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
@@ -89,12 +97,6 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 - Baseada em 5 indicadores observados.
 - Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
-
-## Dimensões para manter
-
-Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
-
-- Adaptação: 65,1, solidez utilizável
 
 ## O que a Nicarágua tem para trabalhar
 
@@ -110,12 +112,15 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Agência | Crédito ao setor privado | 32,3 % do PIB | 2024 | 43º de 52 |
 | Aprendizagem | Matrícula no ensino superior | 30,4 % (taxa bruta) | 2023 | 44º de 52 |
 | Aprendizagem | Dispêndio público em educação | 2,9 % do PIB | 2023 | 46º de 53 |
+| Aprendizagem | Parcela técnica do ensino médio | 1,5 % das matrículas no ensino secundário | 2010 | 50º de 53 |
+| Adaptação | Participação na força de trabalho | 69 % das pessoas com 15 anos ou mais | 2025 | 38º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 5,8 por 100 pessoas | 2024 | 42º de 53 |
+| Adaptação | Perdas na transmissão de eletricidade | 21,5 % da produção | 2023 | 50º de 53 |
 | Construção | Produto por trabalhador | 17.638 US$ PPC constantes de 2021 | 2025 | 46º de 51 |
 
 ## Agenda de medição
 
-19 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+17 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -130,12 +135,10 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Experimentação | Investimento de capital de risco | Capital de risco investido como parcela do PIB. |
 | Experimentação | Atividade de sandbox regulatório | Número e abrangência de sandboxes regulatórios e regimes de teste controlado em operação. |
 | Experimentação | Empresas nascidas de universidades | Empresas criadas para comercializar pesquisa universitária, por milhão de habitantes. |
-| Experimentação | Parcela empresarial do P&D | Parcela do dispêndio bruto em P&D executada por empresas. |
 | Adaptação | Preparação e recuperação de desastres | Capacidade demonstrada de preparação e recuperação diante de choques graves. |
 | Adaptação | Capacidade de resposta institucional | Velocidade com que regras e programas públicos mudam em resposta a novas condições. |
 | Construção | Entrega de grandes projetos | Desempenho de custo e prazo de grandes projetos públicos de infraestrutura. |
 | Construção | Empresas jovens que ganham escala | Parcela de empresas jovens que atingem patamares relevantes de emprego ou faturamento. |
-| Propósito compartilhado | Sentimento de pertencimento nacional | Orgulho e identificação com a comunidade nacional, autodeclarados. |
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 

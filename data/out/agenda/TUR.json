@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T13:21:42.509Z",
+  "generatedAt": "2026-10-02T14:25:26.095Z",
   "iso3": "TUR",
   "country": "Turkey",
   "dimensions": [
@@ -849,13 +849,12 @@
     {
       "dimension": "learning",
       "kind": "raise",
-      "score": 34.5,
-      "confidence": 0.539,
+      "score": 33.8,
+      "confidence": 0.554,
       "band": "usable",
       "trend": null,
       "scoredOn": [
         "human_capital_index",
-        "vocational_secondary_share",
         "firm_training_incidence",
         "research_citation_impact"
       ],
@@ -865,22 +864,22 @@
       "retired": [],
       "exemplars": [
         {
-          "iso3": "FIN",
-          "country": "Finland",
-          "score": 76.3,
-          "confidence": 0.539
+          "iso3": "SGP",
+          "country": "Singapore",
+          "score": 84.2,
+          "confidence": 0.535
         },
         {
-          "iso3": "CHE",
-          "country": "Switzerland",
-          "score": 73.9,
-          "confidence": 0.539
+          "iso3": "IRL",
+          "country": "Ireland",
+          "score": 81.6,
+          "confidence": 0.554
         },
         {
-          "iso3": "GBR",
-          "country": "United Kingdom",
-          "score": 72.3,
-          "confidence": 0.539
+          "iso3": "AUS",
+          "country": "Australia",
+          "score": 80.1,
+          "confidence": 0.554
         }
       ],
       "evidenceElsewhere": [
@@ -1154,6 +1153,14 @@
           "year": 2022,
           "rank": 42,
           "n": 53
+        },
+        {
+          "id": "vocational_secondary_share",
+          "value": 23.182,
+          "unit": "% of secondary",
+          "year": 2018,
+          "rank": 16,
+          "n": 53
         }
       ]
     },
@@ -1161,8 +1168,8 @@
       "dimension": "experimentation",
       "kind": "measure",
       "score": 64,
-      "confidence": 0.237,
-      "band": "very_thin",
+      "confidence": 0.267,
+      "band": "thin",
       "trend": {
         "spanYears": 10,
         "delta": 12.3,
@@ -1177,11 +1184,31 @@
       "gaps": [
         "venture_capital_gdp",
         "regulatory_sandbox_activity",
-        "university_spinouts",
+        "university_spinouts"
+      ],
+      "retired": [
         "business_rd_share"
       ],
-      "retired": [],
-      "exemplars": [],
+      "exemplars": [
+        {
+          "iso3": "KOR",
+          "country": "South Korea",
+          "score": 77.7,
+          "confidence": 0.483
+        },
+        {
+          "iso3": "CHE",
+          "country": "Switzerland",
+          "score": 60.6,
+          "confidence": 0.483
+        },
+        {
+          "iso3": "USA",
+          "country": "United States",
+          "score": 49.5,
+          "confidence": 0.483
+        }
+      ],
       "evidenceElsewhere": [
         {
           "id": "gbr-fca-sandbox",
@@ -1196,13 +1223,6 @@
           "country": "Israel",
           "indicatorId": "venture_capital_gdp",
           "title": "Yozma, the venture capital catalyst"
-        },
-        {
-          "id": "bra-embrapii",
-          "iso3": "BRA",
-          "country": "Brazil",
-          "indicatorId": "business_rd_share",
-          "title": "EMBRAPII, industry-led applied research"
         },
         {
           "id": "kor-regulatory-sandbox",
@@ -1233,25 +1253,11 @@
           "title": "ICURe, from university research to spinouts"
         },
         {
-          "id": "gbr-business-rd-share",
-          "iso3": "GBR",
-          "country": "United Kingdom",
-          "indicatorId": "business_rd_share",
-          "title": "Business-funded R&D as the UK's dominant research sector"
-        },
-        {
           "id": "prt-portugal-ventures",
           "iso3": "PRT",
           "country": "Portugal",
           "indicatorId": "venture_capital_gdp",
           "title": "Portugal Ventures, a public venture-capital bridge"
-        },
-        {
-          "id": "prt-sifide",
-          "iso3": "PRT",
-          "country": "Portugal",
-          "indicatorId": "business_rd_share",
-          "title": "SIFIDE, Portugal's business R&D tax incentive"
         },
         {
           "id": "prt-test-beds",
@@ -1393,20 +1399,13 @@
     {
       "dimension": "adaptability",
       "kind": "hold",
-      "score": 63.8,
-      "confidence": 0.678,
-      "band": "good",
-      "trend": {
-        "spanYears": 10,
-        "delta": 13.8,
-        "basket": 3,
-        "clamped": 1
-      },
+      "score": 76.2,
+      "confidence": 0.57,
+      "band": "usable",
+      "trend": null,
       "scoredOn": [
-        "labor_force_participation",
         "unemployment_rate",
         "long_term_unemployment_share",
-        "electricity_transmission_losses",
         "export_diversification"
       ],
       "gaps": [
@@ -1416,22 +1415,22 @@
       "retired": [],
       "exemplars": [
         {
-          "iso3": "NLD",
-          "country": "Netherlands",
-          "score": 92,
-          "confidence": 0.678
-        },
-        {
           "iso3": "THA",
           "country": "Thailand",
-          "score": 87.6,
-          "confidence": 0.667
+          "score": 97.6,
+          "confidence": 0.57
         },
         {
-          "iso3": "SGP",
-          "country": "Singapore",
-          "score": 84.9,
-          "confidence": 0.667
+          "iso3": "ISR",
+          "country": "Israel",
+          "score": 90.6,
+          "confidence": 0.57
+        },
+        {
+          "iso3": "NLD",
+          "country": "Netherlands",
+          "score": 90.3,
+          "confidence": 0.57
         }
       ],
       "evidenceElsewhere": [
@@ -2195,11 +2194,27 @@
       "institutionIds": [],
       "conditions": [
         {
+          "id": "labor_force_participation",
+          "value": 60.764,
+          "unit": "% aged 15+",
+          "year": 2025,
+          "rank": 49,
+          "n": 53
+        },
+        {
           "id": "broadband_subscriptions",
           "value": 23.432,
           "unit": "per 100 people",
           "year": 2024,
           "rank": 27,
+          "n": 53
+        },
+        {
+          "id": "electricity_transmission_losses",
+          "value": 8.273,
+          "unit": "% of output",
+          "year": 2024,
+          "rank": 25,
           "n": 53
         }
       ]
@@ -2986,10 +3001,10 @@
     },
     {
       "dimension": "shared_purpose",
-      "kind": "measure",
+      "kind": "raise",
       "score": 37.8,
-      "confidence": 0.42,
-      "band": "thin",
+      "confidence": 0.505,
+      "band": "usable",
       "trend": {
         "spanYears": 10,
         "delta": -4.5,
@@ -3002,14 +3017,33 @@
         "civic_participation"
       ],
       "gaps": [
-        "national_belonging",
         "volunteering_rate",
         "political_polarization"
       ],
       "retired": [
-        "voice_and_accountability"
+        "voice_and_accountability",
+        "national_belonging"
       ],
-      "exemplars": [],
+      "exemplars": [
+        {
+          "iso3": "SWE",
+          "country": "Sweden",
+          "score": 81.6,
+          "confidence": 0.505
+        },
+        {
+          "iso3": "FIN",
+          "country": "Finland",
+          "score": 73.6,
+          "confidence": 0.505
+        },
+        {
+          "iso3": "THA",
+          "country": "Thailand",
+          "score": 69.5,
+          "confidence": 0.519
+        }
+      ],
       "evidenceElsewhere": [
         {
           "id": "rwa-umuganda",
@@ -3126,5 +3160,5 @@
       "started": 2000
     }
   ],
-  "gapCount": 19
+  "gapCount": 17
 }

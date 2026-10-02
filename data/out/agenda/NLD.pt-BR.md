@@ -12,11 +12,11 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Agência | 66,9 | 0,38 (fraca) | sem base de tendência |
 | Coordenação | 92,9 | 0,39 (fraca) | sem base de tendência |
 | Confiança | 81,4 | 0,3 (fraca) | sem base de tendência |
-| Aprendizagem | 71,4 | 0,54 (utilizável) | sem base de tendência |
-| Experimentação | 28,1 | 0,27 (fraca) | sem base de tendência |
-| Adaptação | 92 | 0,68 (boa) | +8,8 em 10 anos, sobre 3 indicadores |
+| Aprendizagem | 75,8 | 0,55 (utilizável) | sem base de tendência |
+| Experimentação | 28,1 | 0,3 (fraca) | sem base de tendência |
+| Adaptação | 90,3 | 0,57 (utilizável) | sem base de tendência |
 | Construção | 44,4 | 0,57 (utilizável) | -0,5 em 10 anos, sobre 3 indicadores |
-| Propósito compartilhado | 96 | 0,28 (fraca) | +9,9 em 10 anos, sobre 2 indicadores |
+| Propósito compartilhado | 96 | 0,33 (fraca) | +9,9 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para elevar
 
@@ -36,21 +36,6 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 
 A solidez da evidência está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Experimentação: solidez 0,27, fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
-
-### Propósito compartilhado: solidez 0,28, fraca
-
-Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
-- Bases rejeitadas: Voz e responsabilização.
-
 ### Confiança: solidez 0,3, fraca
 
 Quanta cooperação é possível além das redes pessoais imediatas?
@@ -58,6 +43,22 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
+
+### Experimentação: solidez 0,3, fraca
+
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
+
+- Baseada em 3 indicadores observados.
+- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades.
+- Bases rejeitadas: Parcela empresarial do P&D.
+
+### Propósito compartilhado: solidez 0,33, fraca
+
+Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
+
+- Baseada em 2 indicadores observados.
+- Lacunas declaradas: Voluntariado, Polarização política.
+- Bases rejeitadas: Voz e responsabilização, Sentimento de pertencimento nacional.
 
 ### Agência: solidez 0,38, fraca
 
@@ -78,9 +79,9 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 92, solidez boa
+- Adaptação: 90,3, solidez utilizável
 - Antecipação: 78,5, solidez utilizável
-- Aprendizagem: 71,4, solidez utilizável
+- Aprendizagem: 75,8, solidez utilizável
 
 ## O que os Países Baixos tem para trabalhar
 
@@ -96,12 +97,15 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Agência | Crédito ao setor privado | 82,3 % do PIB | 2024 | 19º de 52 |
 | Aprendizagem | Matrícula no ensino superior | 86,6 % (taxa bruta) | 2023 | 9º de 52 |
 | Aprendizagem | Dispêndio público em educação | 5,2 % do PIB | 2022 | 17º de 53 |
+| Aprendizagem | Parcela técnica do ensino médio | 37,4 % das matrículas no ensino secundário | 2018 | 3º de 53 |
+| Adaptação | Participação na força de trabalho | 85,6 % das pessoas com 15 anos ou mais | 2025 | 1º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 43 por 100 pessoas | 2024 | 7º de 53 |
+| Adaptação | Perdas na transmissão de eletricidade | 3,8 % da produção | 2024 | 5º de 53 |
 | Construção | Produto por trabalhador | 129.804,6 US$ PPC constantes de 2021 | 2025 | 5º de 51 |
 
 ## Agenda de medição
 
-19 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+17 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -116,12 +120,10 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Experimentação | Investimento de capital de risco | Capital de risco investido como parcela do PIB. |
 | Experimentação | Atividade de sandbox regulatório | Número e abrangência de sandboxes regulatórios e regimes de teste controlado em operação. |
 | Experimentação | Empresas nascidas de universidades | Empresas criadas para comercializar pesquisa universitária, por milhão de habitantes. |
-| Experimentação | Parcela empresarial do P&D | Parcela do dispêndio bruto em P&D executada por empresas. |
 | Adaptação | Preparação e recuperação de desastres | Capacidade demonstrada de preparação e recuperação diante de choques graves. |
 | Adaptação | Capacidade de resposta institucional | Velocidade com que regras e programas públicos mudam em resposta a novas condições. |
 | Construção | Entrega de grandes projetos | Desempenho de custo e prazo de grandes projetos públicos de infraestrutura. |
 | Construção | Empresas jovens que ganham escala | Parcela de empresas jovens que atingem patamares relevantes de emprego ou faturamento. |
-| Propósito compartilhado | Sentimento de pertencimento nacional | Orgulho e identificação com a comunidade nacional, autodeclarados. |
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 

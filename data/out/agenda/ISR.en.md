@@ -12,11 +12,11 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Agency | 63.4 | 0.41 (thin) | no trend |
 | Coordination | 79.2 | 0.23 (very thin) | no trend |
 | Trust | 43.4 | 0.3 (thin) | no trend |
-| Learning | 44.8 | 0.54 (usable) | no trend |
-| Experimentation | 22.2 | 0.24 (very thin) | -8.8 over 10 years using 3 indicators |
-| Adaptability | 84.4 | 0.68 (good) | +2.9 over 10 years using 3 indicators |
+| Learning | 49.4 | 0.55 (usable) | no trend |
+| Experimentation | 22.2 | 0.27 (thin) | -8.8 over 10 years using 3 indicators |
+| Adaptability | 90.6 | 0.57 (usable) | no trend |
 | Building | 38.9 | 0.57 (usable) | +7.5 over 10 years using 3 indicators |
-| Shared Purpose | 70.4 | 0.29 (thin) | +1.5 over 10 years using 2 indicators |
+| Shared Purpose | 70.4 | 0.35 (thin) | +1.5 over 10 years using 2 indicators |
 
 ## What to raise
 
@@ -32,12 +32,12 @@ How capable is the country of turning plans and knowledge into functioning syste
 - Missing indicators: Large project delivery, Firm scale-up rate.
 - Rejected datasets: Logistics infrastructure quality.
 
-### Learning: 44.8, confidence usable
+### Learning: 49.4, confidence usable
 
 How effectively does the country acquire, distribute, and update knowledge?
 
-- Uses 4 observed indicators.
-- Highest usable scores: Finland 76.3, Switzerland 73.9, United Kingdom 72.3.
+- Uses 3 observed indicators.
+- Highest usable scores: Singapore 84.2, Ireland 81.6, Australia 80.1.
 - Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); Kartu Prakerja, a national lifelong-learning delivery system (Indonesia); Compte personnel de formation (France); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (India); SETAs and workplace-based learning delivery (South Africa); MEB public lifelong-learning network (Turkey); Kenya's adult education centres, and their halving (Kenya); Rwanda's adult literacy centres, and their decline (Rwanda); Integrated Functional Adult Education, and its erosion (Ethiopia); Instituto Técnico de Capacitación y Productividad (INTECAP) (Guatemala); INFOTEP national technical and vocational training (Dominican Republic); Campaña Nacional de Alfabetización (Cuba); VET FEE-HELP, and its abolition (Australia); Adult education allowance (aikuiskoulutustuki), and its abolition (Finland); INEFOP, the tripartite national training institute (Uruguay); Franquicia Tributaria SENCE, and its erosion (Chile); Employer and in-work training under Employment Insurance, and its erosion (South Korea); TESDA technical-vocational training at national scale (Philippines); INADEH national vocational training (Panama); Yo, sí puedo national literacy campaign and post-literacy programme (Bolivia); Project 1956 vocational training for rural workers (Vietnam); Bildungsprämie training voucher, and its end (Germany); Aufstiegs-BAföG, upgrading training support (Germany); Formación programada por las empresas (FUNDAE training credit) (Spain); Community Education and Training colleges, and their erosion (South Africa); SENA complementary training (formación complementaria) (Colombia); Vocational skills upgrading action, 2019-2021 (China); INA national vocational training, and its contraction (Costa Rica); Kunskapslyftet adult education initiative (Sweden); Springboard+ upskilling programme (Ireland); State-administered adult education under the Adult Education and Family Literacy Act, and its erosion (United States); STAP-budget training grant, abolished in 2024 (Netherlands); INEA adult basic education (Mexico); Hello Training, public vocational training (Japan).
 - Missing indicators: Adult learning participation.
 
@@ -53,20 +53,13 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
-### Experimentation: confidence 0.24, very thin
+### Experimentation: confidence 0.27, thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
 - Uses 3 observed indicators.
-- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
-
-### Shared Purpose: confidence 0.29, thin
-
-To what extent can people imagine themselves as participants in a common project?
-
-- Uses 2 observed indicators.
-- Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
-- Rejected datasets: Voice and accountability.
+- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
+- Rejected datasets: Business share of R&D.
 
 ### Trust: confidence 0.3, thin
 
@@ -75,6 +68,14 @@ How much cooperation is possible beyond immediate personal networks?
 - Uses 3 observed indicators.
 - Missing indicators: Trust in public institutions, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
+
+### Shared Purpose: confidence 0.35, thin
+
+To what extent can people imagine themselves as participants in a common project?
+
+- Uses 2 observed indicators.
+- Missing indicators: Volunteering, Political polarisation.
+- Rejected datasets: Voice and accountability, Sense of national belonging.
 
 ### Agency: confidence 0.41, thin
 
@@ -87,7 +88,7 @@ How able are individuals and organizations to turn an intention into action?
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 84.4, confidence good
+- Adaptability: 90.6, confidence usable
 - Anticipation: 75, confidence usable
 
 ## What Israel has to work with
@@ -103,12 +104,15 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Agency | Credit to the private sector | 72.5 % of GDP | 2025 | 25 of 52 |
 | Learning | Tertiary enrolment | 56.3 % gross | 2024 | 31 of 52 |
 | Learning | Public education expenditure | 5.9 % of GDP | 2022 | 7 of 53 |
+| Learning | Vocational share of secondary | 19.9 % of secondary | 2018 | 19 of 53 |
+| Adaptability | Labour force participation | 74.4 % aged 15+ | 2025 | 23 of 53 |
 | Adaptability | Fixed broadband subscriptions | 29.2 per 100 people | 2024 | 20 of 53 |
+| Adaptability | Electricity transmission losses | 3.9 % of output | 2024 | 6 of 53 |
 | Building | Output per worker | 104,694.9 constant 2021 PPP $ | 2025 | 15 of 51 |
 
 ## Missing data
 
-19 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+17 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -123,12 +127,10 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Experimentation | Venture capital investment | Venture capital deployed as a share of GDP. |
 | Experimentation | Regulatory sandbox activity | Number and breadth of live regulatory sandboxes and controlled trial regimes. |
 | Experimentation | University spinouts | Companies formed to commercialise university research, per million people. |
-| Experimentation | Business share of R&D | Share of gross R&D expenditure performed by business enterprises. |
 | Adaptability | Disaster preparedness and recovery | Demonstrated capacity to prepare for and recover from major shocks. |
 | Adaptability | Institutional responsiveness | Speed at which rules and public programmes are changed in response to new conditions. |
 | Building | Large project delivery | Cost and schedule performance of major public infrastructure projects. |
 | Building | Firm scale-up rate | Share of young firms reaching significant employment or turnover thresholds. |
-| Shared Purpose | Sense of national belonging | Reported pride in and identification with the national community. |
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 

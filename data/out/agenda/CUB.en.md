@@ -12,9 +12,9 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Agency | not scored | 0 (very thin) | no trend |
 | Coordination | not scored | 0.1 (very thin) | no trend |
 | Trust | not scored | 0.07 (very thin) | no trend |
-| Learning | 21.5 | 0.24 (very thin) | no trend |
-| Experimentation | 1.1 | 0.24 (very thin) | -0.1 over 10 years using 3 indicators |
-| Adaptability | 63.7 | 0.55 (usable) | -5.5 over 10 years using 3 indicators |
+| Learning | not scored | 0.16 (very thin) | no trend |
+| Experimentation | 1.1 | 0.27 (thin) | -0.1 over 10 years using 3 indicators |
+| Adaptability | 82.9 | 0.4 (thin) | no trend |
 | Building | 21.8 | 0.29 (thin) | -27.1 over 10 years using 2 indicators |
 | Shared Purpose | not scored | 0 (very thin) | no trend |
 
@@ -34,8 +34,8 @@ How able are individuals and organizations to turn an intention into action?
 To what extent can people imagine themselves as participants in a common project?
 
 - Uses 0 observed indicators.
-- Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
-- Rejected datasets: Voice and accountability.
+- Missing indicators: Volunteering, Political polarisation.
+- Rejected datasets: Voice and accountability, Sense of national belonging.
 
 ### Trust: confidence 0.07, very thin
 
@@ -53,6 +53,13 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
+### Learning: confidence 0.16, very thin
+
+How effectively does the country acquire, distribute, and update knowledge?
+
+- Uses one observed indicator.
+- Missing indicators: Adult learning participation.
+
 ### Anticipation: confidence 0.22, very thin
 
 How capable is the country of identifying and preparing for emerging change?
@@ -60,19 +67,13 @@ How capable is the country of identifying and preparing for emerging change?
 - Uses one observed indicator.
 - Missing indicators: Government foresight capacity, Long-horizon research share.
 
-### Experimentation: confidence 0.24, very thin
+### Experimentation: confidence 0.27, thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
 - Uses 3 observed indicators.
-- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
-
-### Learning: confidence 0.24, very thin
-
-How effectively does the country acquire, distribute, and update knowledge?
-
-- Uses 2 observed indicators.
-- Missing indicators: Adult learning participation.
+- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
+- Rejected datasets: Business share of R&D.
 
 ### Building: confidence 0.29, thin
 
@@ -82,11 +83,12 @@ How capable is the country of turning plans and knowledge into functioning syste
 - Missing indicators: Large project delivery, Firm scale-up rate.
 - Rejected datasets: Logistics infrastructure quality.
 
-## What to keep watching
+### Adaptability: confidence 0.4, thin
 
-These dimensions score at least 50 with usable evidence.
+How effectively can the system respond when circumstances change?
 
-- Adaptability: 63.7, confidence usable
+- Uses 3 observed indicators.
+- Missing indicators: Disaster preparedness and recovery, Institutional responsiveness.
 
 ## What Cuba has to work with
 
@@ -100,11 +102,14 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Agency | Individuals using the internet | 70.5 % of population | 2024 | 42 of 53 |
 | Learning | Tertiary enrolment | 43.1 % gross | 2024 | 38 of 52 |
 | Learning | Public education expenditure | 8.4 % of GDP | 2022 | 1 of 53 |
+| Learning | Vocational share of secondary | 27.4 % of secondary | 2019 | 11 of 53 |
+| Adaptability | Labour force participation | 63.8 % aged 15+ | 2025 | 46 of 53 |
 | Adaptability | Fixed broadband subscriptions | 3.1 per 100 people | 2024 | 48 of 53 |
+| Adaptability | Electricity transmission losses | 18.7 % of output | 2023 | 46 of 53 |
 
 ## Missing data
 
-19 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+17 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -119,12 +124,10 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Experimentation | Venture capital investment | Venture capital deployed as a share of GDP. |
 | Experimentation | Regulatory sandbox activity | Number and breadth of live regulatory sandboxes and controlled trial regimes. |
 | Experimentation | University spinouts | Companies formed to commercialise university research, per million people. |
-| Experimentation | Business share of R&D | Share of gross R&D expenditure performed by business enterprises. |
 | Adaptability | Disaster preparedness and recovery | Demonstrated capacity to prepare for and recover from major shocks. |
 | Adaptability | Institutional responsiveness | Speed at which rules and public programmes are changed in response to new conditions. |
 | Building | Large project delivery | Cost and schedule performance of major public infrastructure projects. |
 | Building | Firm scale-up rate | Share of young firms reaching significant employment or turnover thresholds. |
-| Shared Purpose | Sense of national belonging | Reported pride in and identification with the national community. |
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 

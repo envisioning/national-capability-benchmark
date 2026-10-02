@@ -12,24 +12,25 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Agência | 51,4 | 0,41 (fraca) | sem base de tendência |
 | Coordenação | 71,5 | 0,39 (fraca) | sem base de tendência |
 | Confiança | 81 | 0,26 (fraca) | sem base de tendência |
-| Aprendizagem | 25,4 | 0,48 (utilizável) | sem base de tendência |
-| Experimentação | 15,9 | 0,43 (fraca) | +0,2 em 10 anos, sobre 3 indicadores |
-| Adaptação | 34,1 | 0,67 (boa) | +0,4 em 10 anos, sobre 3 indicadores |
+| Aprendizagem | 30,1 | 0,48 (utilizável) | sem base de tendência |
+| Experimentação | 15,9 | 0,48 (utilizável) | +0,2 em 10 anos, sobre 3 indicadores |
+| Adaptação | 28,9 | 0,57 (utilizável) | sem base de tendência |
 | Construção | 25,5 | 0,57 (utilizável) | -1,2 em 10 anos, sobre 3 indicadores |
-| Propósito compartilhado | 48 | 0,29 (fraca) | +2,5 em 10 anos, sobre 2 indicadores, 1 truncados na borda da régua |
+| Propósito compartilhado | 48 | 0,35 (fraca) | +2,5 em 10 anos, sobre 2 indicadores, 1 truncados na borda da régua |
 
 ## Dimensões para elevar
 
 Estas são as notas mais baixas com evidência utilizável. A evidência fraca aparece abaixo.
 
-### Aprendizagem: 25,4, solidez utilizável
+### Experimentação: 15,9, solidez utilizável
 
-Com que eficácia o país adquire, distribui e atualiza conhecimento?
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
-- Baseada em 4 indicadores observados.
-- Maiores notas utilizáveis: Finlândia 76,3, Suíça 73,9, Reino Unido 72,3.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (Índia); MEB public lifelong-learning network (Turquia); Kenya's adult education centres, and their halving (Quênia); Rwanda's adult literacy centres, and their decline (Ruanda); Integrated Functional Adult Education, and its erosion (Etiópia); Instituto Técnico de Capacitación y Productividad (INTECAP) (Guatemala); INFOTEP national technical and vocational training (República Dominicana); Campaña Nacional de Alfabetización (Cuba); VET FEE-HELP, and its abolition (Austrália); Adult education allowance (aikuiskoulutustuki), and its abolition (Finlândia); INEFOP, the tripartite national training institute (Uruguai); Franquicia Tributaria SENCE, and its erosion (Chile); Employer and in-work training under Employment Insurance, and its erosion (Coreia do Sul); TESDA technical-vocational training at national scale (Filipinas); INADEH national vocational training (Panamá); Yo, sí puedo national literacy campaign and post-literacy programme (Bolívia); Project 1956 vocational training for rural workers (Vietnã); Bildungsprämie training voucher, and its end (Alemanha); Aufstiegs-BAföG, upgrading training support (Alemanha); Formación programada por las empresas (FUNDAE training credit) (Espanha); SENA complementary training (formación complementaria) (Colômbia); Vocational skills upgrading action, 2019-2021 (China); INA national vocational training, and its contraction (Costa Rica); Kunskapslyftet adult education initiative (Suécia); Springboard+ upskilling programme (Irlanda); State-administered adult education under the Adult Education and Family Literacy Act, and its erosion (Estados Unidos); STAP-budget training grant, abolished in 2024 (Países Baixos); INEA adult basic education (México); Hello Training, public vocational training (Japão).
-- Lacunas declaradas: Participação de adultos em aprendizagem.
+- Baseada em 5 indicadores observados.
+- Maiores notas utilizáveis: Coreia do Sul 77,7, Suíça 60,6, Estados Unidos 49,5.
+- Entregas documentadas em outros países: The FCA regulatory sandbox (Reino Unido); Yozma, the venture capital catalyst (Israel); Korean regulatory-sandbox system across eight sectors (Coreia do Sul); MAS FinTech Regulatory Sandbox variants (Singapura); British Patient Capital, a public venture-capital catalyst (Reino Unido); ICURe, from university research to spinouts (Reino Unido); Portugal Ventures, a public venture-capital bridge (Portugal); Rede Nacional de Test Beds for company experimentation (Portugal); Zonas Livres Tecnológicas, regulator-supervised experimentation zones (Portugal); Banco Central regulatory sandbox, first cycle (Brasil); Reserve Bank of India regulatory sandbox (Índia); Capital Markets Authority regulatory sandbox (Quênia); SEC Nigeria Regulatory Incubation Program (Nigéria); ADGM RegLab, the first fintech sandbox in the region (Emirados Árabes Unidos); OJK regulatory sandbox for financial-sector technological innovation (Indonésia); Bank Negara Malaysia Fintech Regulatory Sandbox (Malásia); Bank of Thailand regulatory sandbox (Tailândia); Sandbox financiero (Ley 7/2020), and the fall in applications (Espanha); Project-based regulatory sandbox (new technology demonstration scheme) (Japão); CFPB Compliance Assistance Sandbox, rescinded in 2022 and withdrawn again in 2025 (Estados Unidos); CSA Regulatory Sandbox, succeeded by the Financial Innovation Hub (Canadá); ASIC enhanced regulatory sandbox (Austrália); SINTEG-Verordnung, the energy-transition experimentation clause (Alemanha); Experimenten Elektriciteitswet 2015-2018, and its erosion (Países Baixos); Bac à sable réglementaire in the energy sector (França).
+- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades.
+- Bases rejeitadas: Parcela empresarial do P&D.
 
 ### Construção: 25,5, solidez utilizável
 
@@ -41,14 +42,23 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística.
 
-### Adaptação: 34,1, solidez boa
+### Adaptação: 28,9, solidez utilizável
 
 Com que eficácia o sistema responde quando as circunstâncias mudam?
 
-- Baseada em 5 indicadores observados.
-- Maiores notas utilizáveis: Países Baixos 92, Tailândia 87,6, Singapura 84,9.
+- Baseada em 3 indicadores observados.
+- Maiores notas utilizáveis: Tailândia 97,6, Israel 90,6, Países Baixos 90,3.
 - Entregas documentadas em outros países: Plano Real, the 1994 currency stabilisation (Brasil); Proalcool, the fuel substitution after the oil shock (Brasil); The Convertibility Plan, and its collapse (Argentina); Kurzarbeit in the 2008-2009 crisis (Alemanha); The 2001 stabilisation, and its unwinding (Turquia); Telebras, the telecom system that was dismantled (Brasil); Estonian Defence League, national defence rebuilt after independence (Estônia); Korea Internet and Security Agency, a consolidated digital authority (Coreia do Sul); Federal siren warning network, and its dismantling (Alemanha); Room for the River, flood safety delivered across the Rhine branches (Países Baixos); Childcare benefits administration, and the recovery after institutional failure (Países Baixos); National Police, one corps from twenty-five regional forces (Países Baixos); NL-Alert, a tested multi-channel emergency warning system (Países Baixos); DigiD Machtigen, delegated access to public services (Países Baixos); DigiNotar, a certificate breach that forced a trust-chain reset (Países Baixos); Programmatic Approach to Nitrogen, and the permitting reversal (Países Baixos); 27F reconstruction, a nationwide recovery programme after the 2010 earthquake (Chile); Cédula digital, an identity service upgraded for mobile use (Colômbia); Victims' reparations, a long-running administrative response to conflict (Colômbia); Fondo Adaptación, recovery and safer resettlement after La Niña (Colômbia); My Number Card, a national identity rail extended into services (Japão); Tōhoku reconstruction, a decade-long recovery programme (Japão); Juntos, a conditional-transfer system at national scale (Peru); Certified digital signature across public services (Costa Rica); REDCUDI childcare network and SINIRUBE referrals (Costa Rica); Dollarization as an emergency monetary redesign (Equador); 2016 earthquake national emergency coordination (Equador); 120 a los 65 social pension (Panamá); Canal water-and-transit response to the 2023–24 drought (Panamá); Bono Juana Azurduy maternal and child health transfer (Bolívia); Renta Dignidad non-contributory old-age pension (Bolívia); Tekoporã Mbarete family-support programme (Paraguai); SIFEN national electronic invoicing rollout (Paraguai); Asignación Universal por Hijo child benefit (Argentina); SUBE national electronic fare and subsidy rail (Argentina); PhilSys foundational national ID rollout (Filipinas); Pantawid Pamilyang Pilipino Program (4Ps) (Filipinas); Typhoon Yolanda shelter and recovery programme (Filipinas); Jaminan Kesehatan Nasional, a near-universal health-insurance pool (Indonésia); InaRISK national disaster-risk information platform (Indonésia); VNeID national electronic identity (Vietnã); Vietnam Social Security health-insurance expansion (Vietnã); Typhoon Yagi emergency restoration (Vietnã); MySejahtera and the national COVID-19 immunisation programme (Malásia); National flood-warning SMS system (Malásia); Universal Coverage Scheme and the 30-baht health system (Tailândia); National Digital ID framework (Tailândia); T-Alert national cell-broadcast warning system (Tailândia); Cl@ve shared digital identity (Espanha); La Palma volcanic-eruption recovery and monitoring (Espanha); mObywatel digital ID wallet (Polônia); Rodzina 500+ and 800+ child-benefit delivery (Polônia); Alert RCB national emergency SMS channel (Polônia); BankID federated electronic identity (Suécia); 1177 national health portal and helpline (Suécia); VMA multi-channel public warning system (Suécia); MyGovID single sign-on for public services (Irlanda); National COVID-19 vaccination delivery (Irlanda); National Asset Management Agency crisis workout (Irlanda); Met Éireann national weather-warning service (Irlanda); Salário mínimo and its permanent revaluation rule (Brasil); eNaira, a national rollout with an adoption gap (Nigéria); Productive Safety Net Programme for drought resilience (Etiópia); National 9-1-1 emergency-response system (República Dominicana); Sistema Nacional de Emergencias 911 (Honduras); National COVID-19 vaccination campaign (Cuba); Bitcoin Law, and its 2025 rollback (El Salvador); Routine immunization coverage, and its erosion (Haiti); Chave Móvel Digital and Portugal's digital identity layer (Portugal); Empresa na Hora and the one-stop company registry (Portugal); Sistema de Gestão Integrada de Fogos Rurais (Portugal); Simplex and LabX, a standing simplification-and-experimentation loop (Portugal); Programa Nacional de Vacinação and seasonal immunisation (Portugal); STAYAWAY COVID, a contact-tracing app suspended after the emergency (Portugal); CoWIN national COVID-19 vaccination platform (Índia); COFEPRIS digital regulatory procedures (México); Simulacro Nacional 2024, a nationwide emergency exercise (México); PROSPERA, and its replacement by a new scholarship authority (México); AFAD earthquake shelter and recovery operation (Turquia); Civil defence shelters (Finlândia); Public civil defence shelters, and their dismantling (Alemanha); The 1997 Canada Pension Plan financing reform (Canadá); Dynamic zero-COVID containment, and its dismantling (China); Nigeria's 2014 Ebola containment (Nigéria); SINAPRED evacuation for hurricanes Eta and Iota (Nicarágua); National cholera elimination drive, and the return of cholera (Haiti); Civil Defence hurricane evacuation system (Cuba); Tarea Ordenamiento's single exchange rate, and its fragmentation (Cuba); Covid-19 bridging credits (Suíça); Civil protection shelters (Suíça); COVID-19 vaccination campaign (Venezuela); JobKeeper Payment (Austrália); Quédate en Casa emergency cash transfer (República Dominicana); Estonian Stockpiling Agency (Eesti Varude Keskus) national emergency stocks (Estônia); Bono Familia, the COVID-19 emergency cash transfer (Guatemala); Strategic stock of pandemic masks, and its erosion (França); National COVID-19 vaccination campaign (Emirados Árabes Unidos); Plan Panamá Solidario, Vale Digital (Panamá); Public disaster warning network of the Department of Disaster Prevention and Mitigation, and its erosion (Tailândia); SINARAME national weather radar network (Argentina); Rwanda's 2024 Marburg outbreak response (Ruanda); Jobs Support Scheme and the four 2020 Budgets (Singapura); PUB drainage programme and the shrinking of flood-prone land (Singapura); Catastrophe risk insurance through CCRIF (Nicarágua); National COVID-19 vaccination campaign (Israel); National Social Safety Nets Project and the COVID-19 Rapid Response Register (Nigéria); State medical emergency stockpiles, and their dismantling (Suécia); COVID-19 Vaccine Taskforce and national vaccination rollout (Reino Unido); FONDEN, the natural disaster fund, and its abolition (México); DASK compulsory earthquake insurance (Turquia).
 - Lacunas declaradas: Preparação e recuperação de desastres, Capacidade de resposta institucional.
+
+### Aprendizagem: 30,1, solidez utilizável
+
+Com que eficácia o país adquire, distribui e atualiza conhecimento?
+
+- Baseada em 3 indicadores observados.
+- Maiores notas utilizáveis: Singapura 84,2, Irlanda 81,6, Austrália 80,1.
+- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (Índia); MEB public lifelong-learning network (Turquia); Kenya's adult education centres, and their halving (Quênia); Rwanda's adult literacy centres, and their decline (Ruanda); Integrated Functional Adult Education, and its erosion (Etiópia); Instituto Técnico de Capacitación y Productividad (INTECAP) (Guatemala); INFOTEP national technical and vocational training (República Dominicana); Campaña Nacional de Alfabetización (Cuba); VET FEE-HELP, and its abolition (Austrália); Adult education allowance (aikuiskoulutustuki), and its abolition (Finlândia); INEFOP, the tripartite national training institute (Uruguai); Franquicia Tributaria SENCE, and its erosion (Chile); Employer and in-work training under Employment Insurance, and its erosion (Coreia do Sul); TESDA technical-vocational training at national scale (Filipinas); INADEH national vocational training (Panamá); Yo, sí puedo national literacy campaign and post-literacy programme (Bolívia); Project 1956 vocational training for rural workers (Vietnã); Bildungsprämie training voucher, and its end (Alemanha); Aufstiegs-BAföG, upgrading training support (Alemanha); Formación programada por las empresas (FUNDAE training credit) (Espanha); SENA complementary training (formación complementaria) (Colômbia); Vocational skills upgrading action, 2019-2021 (China); INA national vocational training, and its contraction (Costa Rica); Kunskapslyftet adult education initiative (Suécia); Springboard+ upskilling programme (Irlanda); State-administered adult education under the Adult Education and Family Literacy Act, and its erosion (Estados Unidos); STAP-budget training grant, abolished in 2024 (Países Baixos); INEA adult basic education (México); Hello Training, public vocational training (Japão).
+- Lacunas declaradas: Participação de adultos em aprendizagem.
 
 ### Antecipação: 44, solidez utilizável
 
@@ -71,13 +81,13 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 - Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
-### Propósito compartilhado: solidez 0,29, fraca
+### Propósito compartilhado: solidez 0,35, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
 - Baseada em 2 indicadores observados.
-- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
-- Bases rejeitadas: Voz e responsabilização.
+- Lacunas declaradas: Voluntariado, Polarização política.
+- Bases rejeitadas: Voz e responsabilização, Sentimento de pertencimento nacional.
 
 ### Coordenação: solidez 0,39, fraca
 
@@ -94,13 +104,6 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Habilidades digitais de adultos.
 
-### Experimentação: solidez 0,43, fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- Baseada em 5 indicadores observados.
-- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
-
 ## O que a África do Sul tem para trabalhar
 
 Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na nota, na solidez da evidência nem na tendência. Lidas contra a nota, mostram se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.
@@ -115,12 +118,15 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Agência | Crédito ao setor privado | 89,4 % do PIB | 2024 | 18º de 52 |
 | Aprendizagem | Matrícula no ensino superior | 23,5 % (taxa bruta) | 2023 | 46º de 52 |
 | Aprendizagem | Dispêndio público em educação | 6 % do PIB | 2024 | 6º de 53 |
+| Aprendizagem | Parcela técnica do ensino médio | 7,2 % das matrículas no ensino secundário | 2018 | 40º de 53 |
+| Adaptação | Participação na força de trabalho | 60,6 % das pessoas com 15 anos ou mais | 2025 | 50º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 5,3 por 100 pessoas | 2024 | 43º de 53 |
+| Adaptação | Perdas na transmissão de eletricidade | 10,2 % da produção | 2023 | 34º de 53 |
 | Construção | Produto por trabalhador | 48.694,1 US$ PPC constantes de 2021 | 2025 | 29º de 51 |
 
 ## Agenda de medição
 
-19 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+17 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -135,12 +141,10 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Experimentação | Investimento de capital de risco | Capital de risco investido como parcela do PIB. |
 | Experimentação | Atividade de sandbox regulatório | Número e abrangência de sandboxes regulatórios e regimes de teste controlado em operação. |
 | Experimentação | Empresas nascidas de universidades | Empresas criadas para comercializar pesquisa universitária, por milhão de habitantes. |
-| Experimentação | Parcela empresarial do P&D | Parcela do dispêndio bruto em P&D executada por empresas. |
 | Adaptação | Preparação e recuperação de desastres | Capacidade demonstrada de preparação e recuperação diante de choques graves. |
 | Adaptação | Capacidade de resposta institucional | Velocidade com que regras e programas públicos mudam em resposta a novas condições. |
 | Construção | Entrega de grandes projetos | Desempenho de custo e prazo de grandes projetos públicos de infraestrutura. |
 | Construção | Empresas jovens que ganham escala | Parcela de empresas jovens que atingem patamares relevantes de emprego ou faturamento. |
-| Propósito compartilhado | Sentimento de pertencimento nacional | Orgulho e identificação com a comunidade nacional, autodeclarados. |
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 

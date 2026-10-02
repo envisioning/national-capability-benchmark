@@ -12,24 +12,15 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Agency | 50.4 | 0.32 (thin) | no trend |
 | Coordination | 68.6 | 0.37 (thin) | no trend |
 | Trust | 71.7 | 0.3 (thin) | no trend |
-| Learning | 29.7 | 0.56 (usable) | no trend |
-| Experimentation | 4.4 | 0.24 (very thin) | +0.1 over 10 years using 3 indicators |
-| Adaptability | 70.5 | 0.67 (good) | +8.7 over 10 years using 3 indicators |
+| Learning | 34.5 | 0.55 (usable) | no trend |
+| Experimentation | 4.4 | 0.27 (thin) | +0.1 over 10 years using 3 indicators |
+| Adaptability | 81.6 | 0.57 (usable) | no trend |
 | Building | 30.7 | 0.57 (usable) | +1.4 over 10 years using 3 indicators |
-| Shared Purpose | 53.1 | 0.32 (thin) | +14.8 over 10 years using 2 indicators |
+| Shared Purpose | 53.1 | 0.38 (thin) | +14.8 over 10 years using 2 indicators |
 
 ## What to raise
 
 These are the lowest scores with usable evidence. Thin evidence appears below.
-
-### Learning: 29.7, confidence usable
-
-How effectively does the country acquire, distribute, and update knowledge?
-
-- Uses 4 observed indicators.
-- Highest usable scores: Finland 76.3, Switzerland 73.9, United Kingdom 72.3.
-- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); Kartu Prakerja, a national lifelong-learning delivery system (Indonesia); Compte personnel de formation (France); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (India); SETAs and workplace-based learning delivery (South Africa); MEB public lifelong-learning network (Turkey); Kenya's adult education centres, and their halving (Kenya); Rwanda's adult literacy centres, and their decline (Rwanda); Integrated Functional Adult Education, and its erosion (Ethiopia); Instituto Técnico de Capacitación y Productividad (INTECAP) (Guatemala); Campaña Nacional de Alfabetización (Cuba); VET FEE-HELP, and its abolition (Australia); Adult education allowance (aikuiskoulutustuki), and its abolition (Finland); INEFOP, the tripartite national training institute (Uruguay); Franquicia Tributaria SENCE, and its erosion (Chile); Employer and in-work training under Employment Insurance, and its erosion (South Korea); TESDA technical-vocational training at national scale (Philippines); INADEH national vocational training (Panama); Yo, sí puedo national literacy campaign and post-literacy programme (Bolivia); Project 1956 vocational training for rural workers (Vietnam); Bildungsprämie training voucher, and its end (Germany); Aufstiegs-BAföG, upgrading training support (Germany); Formación programada por las empresas (FUNDAE training credit) (Spain); Community Education and Training colleges, and their erosion (South Africa); SENA complementary training (formación complementaria) (Colombia); Vocational skills upgrading action, 2019-2021 (China); INA national vocational training, and its contraction (Costa Rica); Kunskapslyftet adult education initiative (Sweden); Springboard+ upskilling programme (Ireland); State-administered adult education under the Adult Education and Family Literacy Act, and its erosion (United States); STAP-budget training grant, abolished in 2024 (Netherlands); INEA adult basic education (Mexico); Hello Training, public vocational training (Japan).
-- Missing indicators: Adult learning participation.
 
 ### Building: 30.7, confidence usable
 
@@ -50,16 +41,26 @@ How capable is the country of identifying and preparing for emerging change?
 - Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (South Africa); Government Report on the Future and the parliamentary Committee for the Future (Finland); Foresight Centre at the Riigikogu (Arenguseire Keskus) (Estonia); Office of Technology Assessment, defunded and closed in 1995 (United States); Rządowe Centrum Studiów Strategicznych, liquidated in 2006 (Poland); Office of Technology Assessment at the German Bundestag (TAB) (Germany); National Assembly Futures Institute (South Korea); Federal Chancellery situation and environment analysis (Perspektivstab) (Switzerland); Senate foresight delegation (Délégation sénatoriale à la prospective) (France); Senate Commission on Future Challenges, Science, Technology and Innovation (Chile).
 - Missing indicators: Government foresight capacity, Long-horizon research share.
 
+### Learning: 34.5, confidence usable
+
+How effectively does the country acquire, distribute, and update knowledge?
+
+- Uses 3 observed indicators.
+- Highest usable scores: Singapore 84.2, Ireland 81.6, Australia 80.1.
+- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); Kartu Prakerja, a national lifelong-learning delivery system (Indonesia); Compte personnel de formation (France); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (India); SETAs and workplace-based learning delivery (South Africa); MEB public lifelong-learning network (Turkey); Kenya's adult education centres, and their halving (Kenya); Rwanda's adult literacy centres, and their decline (Rwanda); Integrated Functional Adult Education, and its erosion (Ethiopia); Instituto Técnico de Capacitación y Productividad (INTECAP) (Guatemala); Campaña Nacional de Alfabetización (Cuba); VET FEE-HELP, and its abolition (Australia); Adult education allowance (aikuiskoulutustuki), and its abolition (Finland); INEFOP, the tripartite national training institute (Uruguay); Franquicia Tributaria SENCE, and its erosion (Chile); Employer and in-work training under Employment Insurance, and its erosion (South Korea); TESDA technical-vocational training at national scale (Philippines); INADEH national vocational training (Panama); Yo, sí puedo national literacy campaign and post-literacy programme (Bolivia); Project 1956 vocational training for rural workers (Vietnam); Bildungsprämie training voucher, and its end (Germany); Aufstiegs-BAföG, upgrading training support (Germany); Formación programada por las empresas (FUNDAE training credit) (Spain); Community Education and Training colleges, and their erosion (South Africa); SENA complementary training (formación complementaria) (Colombia); Vocational skills upgrading action, 2019-2021 (China); INA national vocational training, and its contraction (Costa Rica); Kunskapslyftet adult education initiative (Sweden); Springboard+ upskilling programme (Ireland); State-administered adult education under the Adult Education and Family Literacy Act, and its erosion (United States); STAP-budget training grant, abolished in 2024 (Netherlands); INEA adult basic education (Mexico); Hello Training, public vocational training (Japan).
+- Missing indicators: Adult learning participation.
+
 ## What to measure first
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Experimentation: confidence 0.24, very thin
+### Experimentation: confidence 0.27, thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
 - Uses 3 observed indicators.
-- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
+- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
+- Rejected datasets: Business share of R&D.
 
 ### Trust: confidence 0.3, thin
 
@@ -68,14 +69,6 @@ How much cooperation is possible beyond immediate personal networks?
 - Uses 3 observed indicators.
 - Missing indicators: Trust in public institutions, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
-
-### Shared Purpose: confidence 0.32, thin
-
-To what extent can people imagine themselves as participants in a common project?
-
-- Uses 2 observed indicators.
-- Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
-- Rejected datasets: Voice and accountability.
 
 ### Agency: confidence 0.32, thin
 
@@ -92,11 +85,19 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
+### Shared Purpose: confidence 0.38, thin
+
+To what extent can people imagine themselves as participants in a common project?
+
+- Uses 2 observed indicators.
+- Missing indicators: Volunteering, Political polarisation.
+- Rejected datasets: Voice and accountability, Sense of national belonging.
+
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 70.5, confidence good
+- Adaptability: 81.6, confidence usable
 
 ## What the Dominican Republic has to work with
 
@@ -111,12 +112,15 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Agency | Credit to the private sector | 32.8 % of GDP | 2025 | 42 of 52 |
 | Learning | Tertiary enrolment | 57.7 % gross | 2024 | 30 of 52 |
 | Learning | Public education expenditure | 3.8 % of GDP | 2023 | 36 of 53 |
+| Learning | Vocational share of secondary | 9.8 % of secondary | 2019 | 36 of 53 |
+| Adaptability | Labour force participation | 69.7 % aged 15+ | 2025 | 36 of 53 |
 | Adaptability | Fixed broadband subscriptions | 11.2 per 100 people | 2024 | 40 of 53 |
+| Adaptability | Electricity transmission losses | 12.8 % of output | 2023 | 39 of 53 |
 | Building | Output per worker | 54,042.5 constant 2021 PPP $ | 2025 | 28 of 51 |
 
 ## Missing data
 
-19 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+17 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -131,12 +135,10 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Experimentation | Venture capital investment | Venture capital deployed as a share of GDP. |
 | Experimentation | Regulatory sandbox activity | Number and breadth of live regulatory sandboxes and controlled trial regimes. |
 | Experimentation | University spinouts | Companies formed to commercialise university research, per million people. |
-| Experimentation | Business share of R&D | Share of gross R&D expenditure performed by business enterprises. |
 | Adaptability | Disaster preparedness and recovery | Demonstrated capacity to prepare for and recover from major shocks. |
 | Adaptability | Institutional responsiveness | Speed at which rules and public programmes are changed in response to new conditions. |
 | Building | Large project delivery | Cost and schedule performance of major public infrastructure projects. |
 | Building | Firm scale-up rate | Share of young firms reaching significant employment or turnover thresholds. |
-| Shared Purpose | Sense of national belonging | Reported pride in and identification with the national community. |
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 

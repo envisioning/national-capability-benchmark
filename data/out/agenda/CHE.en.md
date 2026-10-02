@@ -12,11 +12,25 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Agency | 60 | 0.52 (usable) | no trend |
 | Coordination | 98.5 | 0.35 (thin) | no trend |
 | Trust | 82.8 | 0.5 (usable) | no trend |
-| Learning | 73.9 | 0.54 (usable) | no trend |
-| Experimentation | 60.6 | 0.43 (thin) | +1.2 over 10 years using 3 indicators |
-| Adaptability | 75.3 | 0.68 (good) | +2.3 over 10 years using 3 indicators |
+| Learning | 79.4 | 0.55 (usable) | no trend |
+| Experimentation | 60.6 | 0.48 (usable) | +1.2 over 10 years using 3 indicators |
+| Adaptability | 65.3 | 0.57 (usable) | no trend |
 | Building | 57.6 | 0.57 (usable) | +1.3 over 10 years using 3 indicators |
-| Shared Purpose | 49.3 | 0.41 (thin) | -1 over 10 years using 2 indicators |
+| Shared Purpose | 49.3 | 0.49 (usable) | -1 over 10 years using 2 indicators |
+
+## What to raise
+
+These are the lowest scores with usable evidence. Thin evidence appears below.
+
+### Shared Purpose: 49.3, confidence usable
+
+To what extent can people imagine themselves as participants in a common project?
+
+- Uses 3 observed indicators.
+- Highest usable scores: Sweden 81.6, Finland 73.6, Thailand 69.5.
+- Related deliveries in other countries: Umuganda community work (Rwanda); THW, volunteer civil protection as a federal institution (Germany); Volunteer fire corps, and its membership erosion (Japan); Federal funding gaps and the 2019 shutdown (United States).
+- Missing indicators: Volunteering, Political polarisation.
+- Rejected datasets: Voice and accountability, Sense of national belonging.
 
 ## What to measure first
 
@@ -30,29 +44,15 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
-### Shared Purpose: confidence 0.41, thin
-
-To what extent can people imagine themselves as participants in a common project?
-
-- Uses 3 observed indicators.
-- Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
-- Rejected datasets: Voice and accountability.
-
-### Experimentation: confidence 0.43, thin
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 5 observed indicators.
-- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
-
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
 - Anticipation: 96.3, confidence usable
 - Trust: 82.8, confidence usable
-- Adaptability: 75.3, confidence good
-- Learning: 73.9, confidence usable
+- Learning: 79.4, confidence usable
+- Adaptability: 65.3, confidence usable
+- Experimentation: 60.6, confidence usable
 - Agency: 60, confidence usable
 - Building: 57.6, confidence usable
 
@@ -70,12 +70,15 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Agency | Credit to the private sector | 167.8 % of GDP | 2016 | 4 of 52 |
 | Learning | Tertiary enrolment | 73.5 % gross | 2024 | 21 of 52 |
 | Learning | Public education expenditure | 4.9 % of GDP | 2022 | 21 of 53 |
+| Learning | Vocational share of secondary | 36.9 % of secondary | 2018 | 4 of 53 |
+| Adaptability | Labour force participation | 84 % aged 15+ | 2025 | 2 of 53 |
 | Adaptability | Fixed broadband subscriptions | 47 per 100 people | 2024 | 4 of 53 |
+| Adaptability | Electricity transmission losses | 5 % of output | 2024 | 11 of 53 |
 | Building | Output per worker | 158,634.2 constant 2021 PPP $ | 2025 | 3 of 51 |
 
 ## Missing data
 
-19 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+17 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -90,12 +93,10 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Experimentation | Venture capital investment | Venture capital deployed as a share of GDP. |
 | Experimentation | Regulatory sandbox activity | Number and breadth of live regulatory sandboxes and controlled trial regimes. |
 | Experimentation | University spinouts | Companies formed to commercialise university research, per million people. |
-| Experimentation | Business share of R&D | Share of gross R&D expenditure performed by business enterprises. |
 | Adaptability | Disaster preparedness and recovery | Demonstrated capacity to prepare for and recover from major shocks. |
 | Adaptability | Institutional responsiveness | Speed at which rules and public programmes are changed in response to new conditions. |
 | Building | Large project delivery | Cost and schedule performance of major public infrastructure projects. |
 | Building | Firm scale-up rate | Share of young firms reaching significant employment or turnover thresholds. |
-| Shared Purpose | Sense of national belonging | Reported pride in and identification with the national community. |
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 

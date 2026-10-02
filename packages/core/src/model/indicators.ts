@@ -601,7 +601,9 @@ const RAW: Raw[] = [
     direction: 'higher_better',
     source: WB('SE.SEC.ENRL.VO.ZS'),
     ingest: 'worldbank',
-    notes: 'Higher is not unambiguously better. It marks a route into skilled work that does not run through university.',
+    role: 'condition',
+    notes:
+      'A condition, not scored: the share of secondary pupils on a vocational track describes how a school system is built, not what anyone learns in it, and higher is not unambiguously better (D141). It marks a route into skilled work that does not run through university. Learning reads research citation impact, firm training and the human capital index instead.',
     wealthProxyPrior: 0.1,
   },
   {
@@ -784,10 +786,10 @@ const RAW: Raw[] = [
     unit: '% of R&D',
     measurementClass: 'I',
     direction: 'higher_better',
-    source: { publisher: 'UNESCO UIS', tier: 'international_organization', inspectable: true },
-    ingest: 'gap',
-    notes: 'UIS stopped publishing R&D expenditure by sector of performance in March 2023. Its frozen 2021 archive covers 45 of 53 countries with almost nothing after 2019, and OECD MSTI covers 27, without Brazil or India. Combined, the series tracks log GDP per capita at about 0.72, over the 0.70 screen. Checked 2026-09-23; see issue 25.',
-    wealthProxyPrior: 0.4,
+    source: { publisher: 'OECD MSTI / RICYT', tier: 'international_organization', inspectable: true },
+    ingest: 'retired',
+    notes: 'Retired 2026-10-02. The only working source, OECD MSTI joined with RICYT for Latin America, covers 34 of 53 countries, but the row reads the make-up of a spending stock: who performs the R&D a country pays for. R&D spending itself is a condition since D122, and the share is high both where business research is large (Israel) and where total research is tiny and one firm dominates it (Thailand). State enterprises count as business, so China and Vietnam read their ownership model. UIS stopped publishing the series in 2023. Firms trying new things are read through patents, trademarks, designs and entrepreneurship instead. See D142.',
+    wealthProxyPrior: 0.7,
   },
 
   /* --------------------------- 7. Adaptability --------------------------- */
@@ -801,7 +803,9 @@ const RAW: Raw[] = [
     direction: 'higher_better',
     source: WB('SL.TLF.ACTI.ZS'),
     ingest: 'worldbank',
-    notes: 'How much of the population can be reallocated at all. Cultural participation norms confound it, especially for India.',
+    role: 'condition',
+    notes:
+      'A condition, not scored: how much of the population is in the labor force at all is what a country has to reallocate, a level set by norms, schooling and age, not a record of it reallocating (D141). Participation norms confound it, especially for India. Adaptability reads reallocation through long-term unemployment and export diversification instead.',
     wealthProxyPrior: 0.15,
   },
   {
@@ -862,7 +866,9 @@ const RAW: Raw[] = [
     direction: 'lower_better',
     source: WB('EG.ELC.LOSS.ZS'),
     ingest: 'worldbank',
-    notes: 'Hard evidence of infrastructure condition and of whether the operator can bill what it delivers.',
+    role: 'condition',
+    notes:
+      'A condition, not scored: the state of the grid, and whether its operator can bill what it delivers, is infrastructure a country has to change with, not a record of it changing (D141). Read it beside broadband, the other installed network beside Adaptability.',
     wealthProxyPrior: 0.4,
   },
   {
@@ -896,7 +902,7 @@ const RAW: Raw[] = [
     direction: 'higher_better',
     source: { publisher: 'INFORM / UNDRR', tier: 'composite_index', inspectable: true },
     ingest: 'gap',
-    notes: 'INFORM is largely a hazard-exposure index, so using it here would measure geography rather than capability.',
+    notes: 'No source observes a country preparing for or recovering from a real shock. INFORM publishes its lack of coping capacity apart from hazard and exposure, but that dimension averages government self-assessments and governance perception indices with stocks such as roads, phones and physicians, which is the perception layer D23 retired plus conditions money buys (D122). Sendai and WHO reporting are governments grading themselves. A warning-reach survey item is a check candidate. See the disaster preparedness memo.',
     wealthProxyPrior: 0.3,
   },
   {
@@ -1072,9 +1078,9 @@ const RAW: Raw[] = [
     unit: '% expressing belonging',
     measurementClass: 'P',
     direction: 'higher_better',
-    source: { publisher: 'World Values Survey', tier: 'academic_survey', inspectable: true },
-    ingest: 'gap',
-    notes: 'Culturally loaded. High national pride is not the same as capacity for collective action and must not be read as such.',
+    source: { publisher: JOINT_EVS_WVS_PUBLISHER, series: 'G006', url: JOINT_EVS_WVS_RESULTS_URL, tier: 'academic_survey', inspectable: true },
+    ingest: 'retired',
+    notes: 'Retired 2026-10-02. The only cross-national item aimed at it is national pride (G006) in the Joint EVS/WVS, and pride is not the capacity for collective action this capability asks about. It also fails the regime test of artefact A13: electoral autocracies read 75 percent very proud against 47 in liberal democracies, so scored it would lift those regimes for a uniformity the benchmark does not count as shared purpose. Civic participation and tax revenue stay as the readings of people acting together. See D143.',
     wealthProxyPrior: 0.05,
   },
   {

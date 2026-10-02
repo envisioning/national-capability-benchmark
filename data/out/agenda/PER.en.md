@@ -12,15 +12,25 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Agency | 55.4 | 0.56 (usable) | no trend |
 | Coordination | 72.9 | 0.39 (thin) | no trend |
 | Trust | 44.6 | 0.49 (usable) | no trend |
-| Learning | 37.7 | 0.54 (usable) | no trend |
-| Experimentation | 16.4 | 0.43 (thin) | +1.2 over 10 years using 3 indicators |
-| Adaptability | 69.6 | 0.53 (usable) | -5.8 over 10 years using 3 indicators |
+| Learning | 49.2 | 0.54 (usable) | no trend |
+| Experimentation | 16.4 | 0.48 (usable) | +1.2 over 10 years using 3 indicators |
+| Adaptability | 70.4 | 0.38 (thin) | no trend |
 | Building | 30.2 | 0.57 (usable) | -0.9 over 10 years using 3 indicators |
-| Shared Purpose | 39.8 | 0.4 (thin) | +10.1 over 10 years using 2 indicators |
+| Shared Purpose | 39.8 | 0.47 (usable) | +10.1 over 10 years using 2 indicators |
 
 ## What to raise
 
 These are the lowest scores with usable evidence. Thin evidence appears below.
+
+### Experimentation: 16.4, confidence usable
+
+How easily can new approaches be attempted, tested, abandoned, and improved?
+
+- Uses 5 observed indicators.
+- Highest usable scores: South Korea 77.7, Switzerland 60.6, United States 49.5.
+- Related deliveries in other countries: The FCA regulatory sandbox (United Kingdom); Yozma, the venture capital catalyst (Israel); Korean regulatory-sandbox system across eight sectors (South Korea); MAS FinTech Regulatory Sandbox variants (Singapore); British Patient Capital, a public venture-capital catalyst (United Kingdom); ICURe, from university research to spinouts (United Kingdom); Portugal Ventures, a public venture-capital bridge (Portugal); Rede Nacional de Test Beds for company experimentation (Portugal); Zonas Livres Tecnológicas, regulator-supervised experimentation zones (Portugal); Banco Central regulatory sandbox, first cycle (Brazil); Reserve Bank of India regulatory sandbox (India); Capital Markets Authority regulatory sandbox (Kenya); SEC Nigeria Regulatory Incubation Program (Nigeria); ADGM RegLab, the first fintech sandbox in the region (United Arab Emirates); OJK regulatory sandbox for financial-sector technological innovation (Indonesia); Bank Negara Malaysia Fintech Regulatory Sandbox (Malaysia); Bank of Thailand regulatory sandbox (Thailand); Sandbox financiero (Ley 7/2020), and the fall in applications (Spain); IFWG Regulatory Sandbox (South Africa); Project-based regulatory sandbox (new technology demonstration scheme) (Japan); CFPB Compliance Assistance Sandbox, rescinded in 2022 and withdrawn again in 2025 (United States); CSA Regulatory Sandbox, succeeded by the Financial Innovation Hub (Canada); ASIC enhanced regulatory sandbox (Australia); SINTEG-Verordnung, the energy-transition experimentation clause (Germany); Experimenten Elektriciteitswet 2015-2018, and its erosion (Netherlands); Bac à sable réglementaire in the energy sector (France).
+- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
+- Rejected datasets: Business share of R&D.
 
 ### Building: 30.2, confidence usable
 
@@ -32,14 +42,15 @@ How capable is the country of turning plans and knowledge into functioning syste
 - Missing indicators: Large project delivery, Firm scale-up rate.
 - Rejected datasets: Logistics infrastructure quality.
 
-### Learning: 37.7, confidence usable
+### Shared Purpose: 39.8, confidence usable
 
-How effectively does the country acquire, distribute, and update knowledge?
+To what extent can people imagine themselves as participants in a common project?
 
-- Uses 4 observed indicators.
-- Highest usable scores: Finland 76.3, Switzerland 73.9, United Kingdom 72.3.
-- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); Kartu Prakerja, a national lifelong-learning delivery system (Indonesia); Compte personnel de formation (France); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (India); SETAs and workplace-based learning delivery (South Africa); MEB public lifelong-learning network (Turkey); Kenya's adult education centres, and their halving (Kenya); Rwanda's adult literacy centres, and their decline (Rwanda); Integrated Functional Adult Education, and its erosion (Ethiopia); Instituto Técnico de Capacitación y Productividad (INTECAP) (Guatemala); INFOTEP national technical and vocational training (Dominican Republic); Campaña Nacional de Alfabetización (Cuba); VET FEE-HELP, and its abolition (Australia); Adult education allowance (aikuiskoulutustuki), and its abolition (Finland); INEFOP, the tripartite national training institute (Uruguay); Franquicia Tributaria SENCE, and its erosion (Chile); Employer and in-work training under Employment Insurance, and its erosion (South Korea); TESDA technical-vocational training at national scale (Philippines); INADEH national vocational training (Panama); Yo, sí puedo national literacy campaign and post-literacy programme (Bolivia); Project 1956 vocational training for rural workers (Vietnam); Bildungsprämie training voucher, and its end (Germany); Aufstiegs-BAföG, upgrading training support (Germany); Formación programada por las empresas (FUNDAE training credit) (Spain); Community Education and Training colleges, and their erosion (South Africa); SENA complementary training (formación complementaria) (Colombia); Vocational skills upgrading action, 2019-2021 (China); INA national vocational training, and its contraction (Costa Rica); Kunskapslyftet adult education initiative (Sweden); Springboard+ upskilling programme (Ireland); State-administered adult education under the Adult Education and Family Literacy Act, and its erosion (United States); STAP-budget training grant, abolished in 2024 (Netherlands); INEA adult basic education (Mexico); Hello Training, public vocational training (Japan).
-- Missing indicators: Adult learning participation.
+- Uses 3 observed indicators.
+- Highest usable scores: Sweden 81.6, Finland 73.6, Thailand 69.5.
+- Related deliveries in other countries: Umuganda community work (Rwanda); THW, volunteer civil protection as a federal institution (Germany); Volunteer fire corps, and its membership erosion (Japan); Federal funding gaps and the 2019 shutdown (United States).
+- Missing indicators: Volunteering, Political polarisation.
+- Rejected datasets: Voice and accountability, Sense of national belonging.
 
 ### Anticipation: 43.1, confidence usable
 
@@ -60,9 +71,25 @@ How much cooperation is possible beyond immediate personal networks?
 - Missing indicators: Trust in public institutions, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
+### Learning: 49.2, confidence usable
+
+How effectively does the country acquire, distribute, and update knowledge?
+
+- Uses 3 observed indicators.
+- Highest usable scores: Singapore 84.2, Ireland 81.6, Australia 80.1.
+- Related deliveries in other countries: SkillsFuture Credit (Singapore); The public library system (Finland); Kartu Prakerja, a national lifelong-learning delivery system (Indonesia); Compte personnel de formation (France); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (India); SETAs and workplace-based learning delivery (South Africa); MEB public lifelong-learning network (Turkey); Kenya's adult education centres, and their halving (Kenya); Rwanda's adult literacy centres, and their decline (Rwanda); Integrated Functional Adult Education, and its erosion (Ethiopia); Instituto Técnico de Capacitación y Productividad (INTECAP) (Guatemala); INFOTEP national technical and vocational training (Dominican Republic); Campaña Nacional de Alfabetización (Cuba); VET FEE-HELP, and its abolition (Australia); Adult education allowance (aikuiskoulutustuki), and its abolition (Finland); INEFOP, the tripartite national training institute (Uruguay); Franquicia Tributaria SENCE, and its erosion (Chile); Employer and in-work training under Employment Insurance, and its erosion (South Korea); TESDA technical-vocational training at national scale (Philippines); INADEH national vocational training (Panama); Yo, sí puedo national literacy campaign and post-literacy programme (Bolivia); Project 1956 vocational training for rural workers (Vietnam); Bildungsprämie training voucher, and its end (Germany); Aufstiegs-BAföG, upgrading training support (Germany); Formación programada por las empresas (FUNDAE training credit) (Spain); Community Education and Training colleges, and their erosion (South Africa); SENA complementary training (formación complementaria) (Colombia); Vocational skills upgrading action, 2019-2021 (China); INA national vocational training, and its contraction (Costa Rica); Kunskapslyftet adult education initiative (Sweden); Springboard+ upskilling programme (Ireland); State-administered adult education under the Adult Education and Family Literacy Act, and its erosion (United States); STAP-budget training grant, abolished in 2024 (Netherlands); INEA adult basic education (Mexico); Hello Training, public vocational training (Japan).
+- Missing indicators: Adult learning participation.
+
 ## What to measure first
 
 The evidence is too thin to manage these dimensions confidently.
+
+### Adaptability: confidence 0.38, thin
+
+How effectively can the system respond when circumstances change?
+
+- Uses 2 observed indicators.
+- Missing indicators: Disaster preparedness and recovery, Institutional responsiveness.
 
 ### Coordination: confidence 0.39, thin
 
@@ -72,26 +99,10 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
-### Shared Purpose: confidence 0.4, thin
-
-To what extent can people imagine themselves as participants in a common project?
-
-- Uses 3 observed indicators.
-- Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
-- Rejected datasets: Voice and accountability.
-
-### Experimentation: confidence 0.43, thin
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 5 observed indicators.
-- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
-
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 69.6, confidence usable
 - Agency: 55.4, confidence usable
 
 ## What Peru has to work with
@@ -107,12 +118,15 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Agency | Credit to the private sector | 39.6 % of GDP | 2024 | 37 of 52 |
 | Learning | Tertiary enrolment | 71.2 % gross | 2017 | 23 of 52 |
 | Learning | Public education expenditure | 4.4 % of GDP | 2024 | 28 of 53 |
+| Learning | Vocational share of secondary | 2.1 % of secondary | 2019 | 48 of 53 |
+| Adaptability | Labour force participation | 77 % aged 15+ | 2025 | 17 of 53 |
 | Adaptability | Fixed broadband subscriptions | 11.7 per 100 people | 2024 | 39 of 53 |
+| Adaptability | Electricity transmission losses | 11.3 % of output | 2023 | 36 of 53 |
 | Building | Output per worker | 30,451 constant 2021 PPP $ | 2025 | 37 of 51 |
 
 ## Missing data
 
-19 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+17 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -127,12 +141,10 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Experimentation | Venture capital investment | Venture capital deployed as a share of GDP. |
 | Experimentation | Regulatory sandbox activity | Number and breadth of live regulatory sandboxes and controlled trial regimes. |
 | Experimentation | University spinouts | Companies formed to commercialise university research, per million people. |
-| Experimentation | Business share of R&D | Share of gross R&D expenditure performed by business enterprises. |
 | Adaptability | Disaster preparedness and recovery | Demonstrated capacity to prepare for and recover from major shocks. |
 | Adaptability | Institutional responsiveness | Speed at which rules and public programmes are changed in response to new conditions. |
 | Building | Large project delivery | Cost and schedule performance of major public infrastructure projects. |
 | Building | Firm scale-up rate | Share of young firms reaching significant employment or turnover thresholds. |
-| Shared Purpose | Sense of national belonging | Reported pride in and identification with the national community. |
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 

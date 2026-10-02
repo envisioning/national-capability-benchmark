@@ -9,6 +9,36 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## Dataset 8.0.0 — 2026-10-02
+
+- **Scores restate in Learning and Adaptability, and 7.x numbers are not
+  comparable.** Three rows that record what a country has, not what it does,
+  leave the scores and are published beside them as conditions: the
+  vocational share of secondary school (Learning), and labor force
+  participation and electricity transmission losses (Adaptability) (D141).
+- **Adaptability now reads unemployment, long-term unemployment and export
+  breadth.** Its correlation with income falls from 0.74 to 0.46 and its
+  mean confidence from 0.64 to 0.52. Countries with low unemployment and broad
+  exports rise: India from 59.5 to 85.4, Mexico from 69.2 to 88.0, Honduras
+  from 43.8 to 70.5. Switzerland falls from 75.3 to 65.3. Nine countries,
+  India and Mexico among them, read it on two rows. Brazil reads 73.7.
+- **Learning now reads the Human Capital Index, firm training and citation
+  impact.** Singapore leads at 84.2, the United Arab Emirates rises from 49.9
+  to 73.6 and Bolivia falls from 57.2 to 35.9. Brazil reads 35.0. Cuba no
+  longer has enough rows for a Learning score.
+- **Two declared gaps are retired.** Business share of R&D (D142) reads how a
+  country's research spending is split, and counts state enterprises as
+  business. National belonging (D143) could only be read through national
+  pride, which runs highest in electoral autocracies. Neither moves a score.
+  Both raise their dimension's confidence without a new observation:
+  Experimentation from 0.27 to 0.31, Shared purpose from 0.34 to 0.41.
+- **Customs clearance time is shown beside Coordination and not scored**
+  (D144). Firms report how many days their exports took at customs, in 50
+  countries. The number of firms behind each figure is not published, and the
+  survey changed its question in 2024.
+- The one shared factor across the nine scores now carries 0.49 of their
+  variance, down from 0.52. Same 53 countries.
+
 ## App 1.24.8 — 2026-10-02
 
 - **Known limits brought to dataset 7.8.0.** The Trust entries now cover

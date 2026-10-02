@@ -110,8 +110,8 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: 'Behavioral check',
     group: 'What sits beside the score',
     short: 'A published series shown next to a dimension and left out of it.',
-    full: 'Some series measure something real about a capability and still fail the tests this benchmark applies before a number is scored, usually because they mostly track national income, or because the same reading means opposite things in different countries. A check is fetched and published like an indicator and then excluded from the scale, the average, the indicator count and the confidence. The reason it is not scored travels with the number, so a reader can weigh the evidence without the benchmark asserting it.',
-    example: 'Bribery incidence asks whether a firm was itself asked for a bribe. It reads on trust and it also tracks income, so Trust publishes it beside the score and never inside it.',
+    full: 'Some series measure something real about a capability and still fail the tests this benchmark applies before a number is scored, because they mostly track national income, because the same reading means opposite things in different countries, or because the sample behind each figure cannot be checked or the survey question changed between rounds. A check is fetched and published like an indicator and then excluded from the scale, the average, the indicator count and the confidence. The reason it is not scored travels with the number, so a reader can weigh the evidence without the benchmark asserting it.',
+    example: 'Customs clearance time asks exporting firms how many days their goods took at the border. It reads on coordination, but the survey changed its question in 2024 and the number of firms behind each figure is not published, so Coordination shows it beside the score and never inside it.',
   },
   {
     term: 'Condition',

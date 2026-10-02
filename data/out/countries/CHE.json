@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-02T13:21:30.631Z",
-  "version": "7.8.0",
+  "generatedAt": "2026-10-02T14:17:43.187Z",
+  "version": "8.0.0",
   "country": {
     "country": "Switzerland",
     "iso3": "CHE",
@@ -1129,7 +1129,20 @@
             "status": "gap"
           }
         ],
-        "checks": [],
+        "checks": [
+          {
+            "checkId": "customs_clearance_time",
+            "name": "Customs clearance time for exports",
+            "definition": "Average number of days to clear direct exports through customs, as reported by manufacturing firms that export directly, in the World Bank Enterprise Surveys.",
+            "unit": "days",
+            "direction": "lower_better",
+            "value": 3.656,
+            "year": 2025,
+            "source": "World Bank (IC.CUS.DURS.EX)",
+            "sourceTier": "international_organization",
+            "note": "Days a manufacturer that exports directly says its goods took to clear customs, from the World Bank Enterprise Surveys. It is the time the border took on firms' own shipments, current where the Doing Business border time this capability scores is frozen at 2019. It is not scored for two reasons. The number of firms behind each country's figure is published only in the survey microdata, and on a proxy from the published tables 37 of 53 countries clear 30 exporting firms; Mexico, the Philippines, Israel and nine others may not. And the question changed: surveys fielded from 2024 also ask how long release took across all border agencies, and drop an answer where customs alone took longer, so a country surveyed on both sides of the change can move severalfold with nothing at its border changing. India reads 17.3 days in 2022 and 2.5 in 2025, on more than 9,000 firms each time. No country in the frame has two surveys on the new questionnaire yet. Income is not why it is left out: it barely tracks log GDP per capita."
+          }
+        ],
         "conditions": []
       },
       "trust": {
@@ -1449,19 +1462,19 @@
         "conditions": []
       },
       "learning": {
-        "score": 73.9,
-        "observedIndicators": 4,
+        "score": 79.4,
+        "observedIndicators": 3,
         "belowCoverageFloor": false,
-        "confidence": 0.539,
+        "confidence": 0.554,
         "confidenceParts": {
-          "coverage": 0.8,
-          "recency": 0.729,
-          "sourceQuality": 0.925
+          "coverage": 0.75,
+          "recency": 0.806,
+          "sourceQuality": 0.917
         },
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 73.9,
+        "blendedScore": 79.4,
         "blendedFrom": "indicators",
         "momentum": [],
         "indicators": [
@@ -1500,256 +1513,6 @@
                 "year": 2020,
                 "raw": 0.756,
                 "normalized": 76.3,
-                "tier": "international_organization"
-              }
-            ],
-            "status": "observed"
-          },
-          {
-            "indicatorId": "vocational_secondary_share",
-            "name": "Vocational share of secondary",
-            "measurementClass": "I",
-            "raw": 36.878,
-            "transformed": 36.878,
-            "normalized": 57.7,
-            "year": 2018,
-            "source": "World Bank (SE.SEC.ENRL.VO.ZS)",
-            "sourceTier": "international_organization",
-            "winsorized": false,
-            "outOfFrame": false,
-            "series": [
-              {
-                "year": 1978,
-                "raw": 33.453,
-                "normalized": 52.3,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1979,
-                "raw": 33.779,
-                "normalized": 52.8,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1980,
-                "raw": 34.506,
-                "normalized": 54,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1981,
-                "raw": 35.402,
-                "normalized": 55.4,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1982,
-                "raw": 36.281,
-                "normalized": 56.8,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1983,
-                "raw": 37.153,
-                "normalized": 58.1,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1984,
-                "raw": 38.062,
-                "normalized": 59.5,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1985,
-                "raw": 39.038,
-                "normalized": 61.1,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1986,
-                "raw": 39.749,
-                "normalized": 62.2,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1987,
-                "raw": 40.437,
-                "normalized": 63.3,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1988,
-                "raw": 41.218,
-                "normalized": 64.5,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1989,
-                "raw": 41.608,
-                "normalized": 65.1,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1990,
-                "raw": 41.409,
-                "normalized": 64.8,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1991,
-                "raw": 40.437,
-                "normalized": 63.3,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1992,
-                "raw": 38.888,
-                "normalized": 60.8,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1993,
-                "raw": 33.819,
-                "normalized": 52.9,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1994,
-                "raw": 32.63,
-                "normalized": 51.1,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1995,
-                "raw": 32.319,
-                "normalized": 50.6,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1996,
-                "raw": 32.432,
-                "normalized": 50.7,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1998,
-                "raw": 31.909,
-                "normalized": 49.9,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1999,
-                "raw": 32.304,
-                "normalized": 50.5,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2000,
-                "raw": 32.669,
-                "normalized": 51.1,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2001,
-                "raw": 32.542,
-                "normalized": 50.9,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2002,
-                "raw": 31.78,
-                "normalized": 49.7,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2003,
-                "raw": 31.553,
-                "normalized": 49.4,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2004,
-                "raw": 31.218,
-                "normalized": 48.8,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2005,
-                "raw": 31.24,
-                "normalized": 48.9,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2006,
-                "raw": 31.135,
-                "normalized": 48.7,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2007,
-                "raw": 32.164,
-                "normalized": 50.3,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2008,
-                "raw": 32.861,
-                "normalized": 51.4,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2009,
-                "raw": 33.785,
-                "normalized": 52.9,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2010,
-                "raw": 34.539,
-                "normalized": 54,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2011,
-                "raw": 34.24,
-                "normalized": 53.6,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2012,
-                "raw": 34.652,
-                "normalized": 54.2,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2013,
-                "raw": 37.357,
-                "normalized": 58.4,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2015,
-                "raw": 37.514,
-                "normalized": 58.7,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2016,
-                "raw": 37.456,
-                "normalized": 58.6,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2017,
-                "raw": 37.176,
-                "normalized": 58.2,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2018,
-                "raw": 36.878,
-                "normalized": 57.7,
                 "tier": "international_organization"
               }
             ],
@@ -1844,6 +1607,20 @@
             "rank": 21,
             "n": 53,
             "note": "A condition, not scored: public spending on education is a pure input, and learning is what the dimension asks about (D122)."
+          },
+          {
+            "indicatorId": "vocational_secondary_share",
+            "name": "Vocational share of secondary",
+            "definition": "Vocational pupils as a share of total secondary enrolment.",
+            "unit": "% of secondary",
+            "direction": "higher_better",
+            "value": 36.878,
+            "year": 2018,
+            "source": "World Bank (SE.SEC.ENRL.VO.ZS)",
+            "sourceTier": "international_organization",
+            "rank": 4,
+            "n": 53,
+            "note": "A condition, not scored: the share of secondary pupils on a vocational track describes how a school system is built, not what anyone learns in it, and higher is not unambiguously better (D141). It marks a route into skilled work that does not run through university. Learning reads research citation impact, firm training and the human capital index instead."
           }
         ]
       },
@@ -1851,9 +1628,9 @@
         "score": 60.6,
         "observedIndicators": 5,
         "belowCoverageFloor": false,
-        "confidence": 0.43,
+        "confidence": 0.483,
         "confidenceParts": {
-          "coverage": 0.556,
+          "coverage": 0.625,
           "recency": 0.85,
           "sourceQuality": 0.91
         },
@@ -2626,567 +2403,34 @@
             "transformed": null,
             "normalized": null,
             "year": null,
-            "source": "UNESCO UIS",
+            "source": "OECD MSTI / RICYT",
             "sourceTier": null,
             "winsorized": false,
             "outOfFrame": false,
             "series": [],
-            "status": "gap"
+            "status": "retired"
           }
         ],
         "checks": [],
         "conditions": []
       },
       "adaptability": {
-        "score": 75.3,
-        "observedIndicators": 5,
+        "score": 65.3,
+        "observedIndicators": 3,
         "belowCoverageFloor": false,
-        "confidence": 0.678,
+        "confidence": 0.57,
         "confidenceParts": {
-          "coverage": 0.714,
+          "coverage": 0.6,
           "recency": 1,
           "sourceQuality": 0.95
         },
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 75.3,
+        "blendedScore": 65.3,
         "blendedFrom": "indicators",
-        "momentum": [
-          {
-            "baseYear": 2016,
-            "currentYear": 2026,
-            "baseScore": 83.6,
-            "currentScore": 85.9,
-            "delta": 2.3,
-            "matchedIndicators": 3,
-            "basket": [
-              "labor_force_participation",
-              "unemployment_rate",
-              "electricity_transmission_losses"
-            ],
-            "clamped": 0,
-            "series": [
-              {
-                "year": 2016,
-                "score": 83.6
-              },
-              {
-                "year": 2017,
-                "score": 83.8
-              },
-              {
-                "year": 2018,
-                "score": 85.3
-              },
-              {
-                "year": 2019,
-                "score": 86.5
-              },
-              {
-                "year": 2020,
-                "score": 85.5
-              },
-              {
-                "year": 2021,
-                "score": 84.2
-              },
-              {
-                "year": 2022,
-                "score": 85.5
-              },
-              {
-                "year": 2023,
-                "score": 87.1
-              },
-              {
-                "year": 2024,
-                "score": 86.9
-              },
-              {
-                "year": 2025,
-                "score": 85.9
-              },
-              {
-                "year": 2026,
-                "score": 85.9
-              }
-            ]
-          },
-          {
-            "baseYear": 2006,
-            "currentYear": 2026,
-            "baseScore": 82.8,
-            "currentScore": 85.9,
-            "delta": 3.1,
-            "matchedIndicators": 3,
-            "basket": [
-              "labor_force_participation",
-              "unemployment_rate",
-              "electricity_transmission_losses"
-            ],
-            "clamped": 0,
-            "series": [
-              {
-                "year": 2006,
-                "score": 82.8
-              },
-              {
-                "year": 2007,
-                "score": 84.2
-              },
-              {
-                "year": 2008,
-                "score": 85.6
-              },
-              {
-                "year": 2009,
-                "score": 84.5
-              },
-              {
-                "year": 2010,
-                "score": 81.5
-              },
-              {
-                "year": 2011,
-                "score": 82.6
-              },
-              {
-                "year": 2012,
-                "score": 83.1
-              },
-              {
-                "year": 2013,
-                "score": 82.7
-              },
-              {
-                "year": 2014,
-                "score": 83.2
-              },
-              {
-                "year": 2015,
-                "score": 83.5
-              },
-              {
-                "year": 2016,
-                "score": 83.6
-              },
-              {
-                "year": 2017,
-                "score": 83.8
-              },
-              {
-                "year": 2018,
-                "score": 85.3
-              },
-              {
-                "year": 2019,
-                "score": 86.5
-              },
-              {
-                "year": 2020,
-                "score": 85.5
-              },
-              {
-                "year": 2021,
-                "score": 84.2
-              },
-              {
-                "year": 2022,
-                "score": 85.5
-              },
-              {
-                "year": 2023,
-                "score": 87.1
-              },
-              {
-                "year": 2024,
-                "score": 86.9
-              },
-              {
-                "year": 2025,
-                "score": 85.9
-              },
-              {
-                "year": 2026,
-                "score": 85.9
-              }
-            ]
-          },
-          {
-            "baseYear": 1996,
-            "currentYear": 2026,
-            "baseScore": 81.1,
-            "currentScore": 85.9,
-            "delta": 4.8,
-            "matchedIndicators": 3,
-            "basket": [
-              "labor_force_participation",
-              "unemployment_rate",
-              "electricity_transmission_losses"
-            ],
-            "clamped": 0,
-            "series": [
-              {
-                "year": 1996,
-                "score": 81.1
-              },
-              {
-                "year": 1997,
-                "score": 81.1
-              },
-              {
-                "year": 1998,
-                "score": 83.1
-              },
-              {
-                "year": 1999,
-                "score": 83.7
-              },
-              {
-                "year": 2000,
-                "score": 84.9
-              },
-              {
-                "year": 2001,
-                "score": 86.3
-              },
-              {
-                "year": 2002,
-                "score": 85.1
-              },
-              {
-                "year": 2003,
-                "score": 83
-              },
-              {
-                "year": 2004,
-                "score": 81.9
-              },
-              {
-                "year": 2005,
-                "score": 81
-              },
-              {
-                "year": 2006,
-                "score": 82.8
-              },
-              {
-                "year": 2007,
-                "score": 84.2
-              },
-              {
-                "year": 2008,
-                "score": 85.6
-              },
-              {
-                "year": 2009,
-                "score": 84.5
-              },
-              {
-                "year": 2010,
-                "score": 81.5
-              },
-              {
-                "year": 2011,
-                "score": 82.6
-              },
-              {
-                "year": 2012,
-                "score": 83.1
-              },
-              {
-                "year": 2013,
-                "score": 82.7
-              },
-              {
-                "year": 2014,
-                "score": 83.2
-              },
-              {
-                "year": 2015,
-                "score": 83.5
-              },
-              {
-                "year": 2016,
-                "score": 83.6
-              },
-              {
-                "year": 2017,
-                "score": 83.8
-              },
-              {
-                "year": 2018,
-                "score": 85.3
-              },
-              {
-                "year": 2019,
-                "score": 86.5
-              },
-              {
-                "year": 2020,
-                "score": 85.5
-              },
-              {
-                "year": 2021,
-                "score": 84.2
-              },
-              {
-                "year": 2022,
-                "score": 85.5
-              },
-              {
-                "year": 2023,
-                "score": 87.1
-              },
-              {
-                "year": 2024,
-                "score": 86.9
-              },
-              {
-                "year": 2025,
-                "score": 85.9
-              },
-              {
-                "year": 2026,
-                "score": 85.9
-              }
-            ]
-          }
-        ],
+        "momentum": [],
         "indicators": [
-          {
-            "indicatorId": "labor_force_participation",
-            "name": "Labour force participation",
-            "measurementClass": "I",
-            "raw": 84.038,
-            "transformed": 84.038,
-            "normalized": 94.6,
-            "year": 2025,
-            "source": "World Bank (SL.TLF.ACTI.ZS)",
-            "sourceTier": "international_organization",
-            "winsorized": false,
-            "outOfFrame": false,
-            "series": [
-              {
-                "year": 1990,
-                "raw": 76.236,
-                "normalized": 67.7,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1991,
-                "raw": 76.434,
-                "normalized": 68.4,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1992,
-                "raw": 76.755,
-                "normalized": 69.5,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1993,
-                "raw": 77.169,
-                "normalized": 70.9,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1994,
-                "raw": 76.107,
-                "normalized": 67.2,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1995,
-                "raw": 76.508,
-                "normalized": 68.6,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1996,
-                "raw": 80.013,
-                "normalized": 80.7,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1997,
-                "raw": 80.217,
-                "normalized": 81.4,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1998,
-                "raw": 81.004,
-                "normalized": 84.2,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1999,
-                "raw": 80.874,
-                "normalized": 83.7,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2000,
-                "raw": 80.466,
-                "normalized": 82.3,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2001,
-                "raw": 81.177,
-                "normalized": 84.8,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2002,
-                "raw": 81.273,
-                "normalized": 85.1,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2003,
-                "raw": 81.302,
-                "normalized": 85.2,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2004,
-                "raw": 80.933,
-                "normalized": 83.9,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2005,
-                "raw": 80.823,
-                "normalized": 83.5,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2006,
-                "raw": 81.231,
-                "normalized": 84.9,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2007,
-                "raw": 81.62,
-                "normalized": 86.3,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2008,
-                "raw": 82.325,
-                "normalized": 88.7,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2009,
-                "raw": 82.492,
-                "normalized": 89.3,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2010,
-                "raw": 81.316,
-                "normalized": 85.2,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2011,
-                "raw": 82.039,
-                "normalized": 87.7,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2012,
-                "raw": 82.281,
-                "normalized": 88.6,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2013,
-                "raw": 82.398,
-                "normalized": 89,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2014,
-                "raw": 82.896,
-                "normalized": 90.7,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2015,
-                "raw": 83.286,
-                "normalized": 92,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2016,
-                "raw": 83.867,
-                "normalized": 94,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2017,
-                "raw": 83.953,
-                "normalized": 94.3,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2018,
-                "raw": 84.181,
-                "normalized": 95.1,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2019,
-                "raw": 84.292,
-                "normalized": 95.5,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2020,
-                "raw": 84.088,
-                "normalized": 94.8,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2021,
-                "raw": 83.967,
-                "normalized": 94.4,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2022,
-                "raw": 83.628,
-                "normalized": 93.2,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2023,
-                "raw": 84.15,
-                "normalized": 95,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2024,
-                "raw": 84.072,
-                "normalized": 94.8,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2025,
-                "raw": 84.038,
-                "normalized": 94.6,
-                "tier": "international_organization"
-              }
-            ],
-            "status": "observed"
-          },
           {
             "indicatorId": "unemployment_rate",
             "name": "Unemployment rate",
@@ -3436,232 +2680,6 @@
             "status": "observed"
           },
           {
-            "indicatorId": "electricity_transmission_losses",
-            "name": "Electricity transmission losses",
-            "measurementClass": "O",
-            "raw": 5.013,
-            "transformed": 5.013,
-            "normalized": 85.8,
-            "year": 2024,
-            "source": "World Bank (EG.ELC.LOSS.ZS)",
-            "sourceTier": "international_organization",
-            "winsorized": false,
-            "outOfFrame": false,
-            "series": [
-              {
-                "year": 1990,
-                "raw": 7.245,
-                "normalized": 79.1,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1991,
-                "raw": 7.159,
-                "normalized": 79.4,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1992,
-                "raw": 7.216,
-                "normalized": 79.2,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1993,
-                "raw": 6.972,
-                "normalized": 79.9,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1994,
-                "raw": 6.666,
-                "normalized": 80.8,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1995,
-                "raw": 7.117,
-                "normalized": 79.5,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1996,
-                "raw": 7.429,
-                "normalized": 78.6,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1997,
-                "raw": 6.808,
-                "normalized": 80.4,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1998,
-                "raw": 6.808,
-                "normalized": 80.4,
-                "tier": "international_organization"
-              },
-              {
-                "year": 1999,
-                "raw": 6.933,
-                "normalized": 80.1,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2000,
-                "raw": 6.057,
-                "normalized": 82.7,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2001,
-                "raw": 5.792,
-                "normalized": 83.5,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2002,
-                "raw": 6.209,
-                "normalized": 82.2,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2003,
-                "raw": 6.216,
-                "normalized": 82.2,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2004,
-                "raw": 6.473,
-                "normalized": 81.4,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2005,
-                "raw": 7.088,
-                "normalized": 79.6,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2006,
-                "raw": 6.544,
-                "normalized": 81.2,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2007,
-                "raw": 6.213,
-                "normalized": 82.2,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2008,
-                "raw": 6.216,
-                "normalized": 82.2,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2009,
-                "raw": 6.116,
-                "normalized": 82.5,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2010,
-                "raw": 6.444,
-                "normalized": 81.5,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2011,
-                "raw": 6.931,
-                "normalized": 80.1,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2012,
-                "raw": 6.551,
-                "normalized": 81.2,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2013,
-                "raw": 6.647,
-                "normalized": 80.9,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2014,
-                "raw": 6.514,
-                "normalized": 81.3,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2015,
-                "raw": 6.708,
-                "normalized": 80.7,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2016,
-                "raw": 7.062,
-                "normalized": 79.7,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2017,
-                "raw": 7.225,
-                "normalized": 79.2,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2018,
-                "raw": 6.126,
-                "normalized": 82.5,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2019,
-                "raw": 5.666,
-                "normalized": 83.8,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2020,
-                "raw": 5.604,
-                "normalized": 84,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2021,
-                "raw": 6.391,
-                "normalized": 81.7,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2022,
-                "raw": 6.328,
-                "normalized": 81.9,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2023,
-                "raw": 5.503,
-                "normalized": 84.3,
-                "tier": "international_organization"
-              },
-              {
-                "year": 2024,
-                "raw": 5.013,
-                "normalized": 85.8,
-                "tier": "international_organization"
-              }
-            ],
-            "status": "observed"
-          },
-          {
             "indicatorId": "export_diversification",
             "name": "Export diversification",
             "measurementClass": "C",
@@ -3717,6 +2735,20 @@
         "checks": [],
         "conditions": [
           {
+            "indicatorId": "labor_force_participation",
+            "name": "Labour force participation",
+            "definition": "Share of the working-age population in the labour force.",
+            "unit": "% aged 15+",
+            "direction": "higher_better",
+            "value": 84.038,
+            "year": 2025,
+            "source": "World Bank (SL.TLF.ACTI.ZS)",
+            "sourceTier": "international_organization",
+            "rank": 2,
+            "n": 53,
+            "note": "A condition, not scored: how much of the population is in the labor force at all is what a country has to reallocate, a level set by norms, schooling and age, not a record of it reallocating (D141). Participation norms confound it, especially for India. Adaptability reads reallocation through long-term unemployment and export diversification instead."
+          },
+          {
             "indicatorId": "broadband_subscriptions",
             "name": "Fixed broadband subscriptions",
             "definition": "Fixed broadband subscriptions per 100 people.",
@@ -3729,6 +2761,20 @@
             "rank": 4,
             "n": 53,
             "note": "A condition, not scored: installed infrastructure is what a country has to change with, not a record of it changing (D122). Penalizes mobile-first countries such as India and South Africa."
+          },
+          {
+            "indicatorId": "electricity_transmission_losses",
+            "name": "Electricity transmission losses",
+            "definition": "Power lost in transmission and distribution, including unbilled use.",
+            "unit": "% of output",
+            "direction": "lower_better",
+            "value": 5.013,
+            "year": 2024,
+            "source": "World Bank (EG.ELC.LOSS.ZS)",
+            "sourceTier": "international_organization",
+            "rank": 11,
+            "n": 53,
+            "note": "A condition, not scored: the state of the grid, and whether its operator can bill what it delivers, is infrastructure a country has to change with, not a record of it changing (D141). Read it beside broadband, the other installed network beside Adaptability."
           }
         ]
       },
@@ -4440,9 +3486,9 @@
         "score": 49.3,
         "observedIndicators": 3,
         "belowCoverageFloor": false,
-        "confidence": 0.408,
+        "confidence": 0.489,
         "confidenceParts": {
-          "coverage": 0.5,
+          "coverage": 0.6,
           "recency": 0.889,
           "sourceQuality": 0.917
         },
@@ -5248,12 +4294,12 @@
             "transformed": null,
             "normalized": null,
             "year": null,
-            "source": "World Values Survey",
+            "source": "Joint EVS/WVS (G006)",
             "sourceTier": null,
             "winsorized": false,
             "outOfFrame": false,
             "series": [],
-            "status": "gap"
+            "status": "retired"
           },
           {
             "indicatorId": "volunteering_rate",

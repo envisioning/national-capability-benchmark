@@ -12,11 +12,11 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Agência | 71,8 | 0,52 (utilizável) | sem base de tendência |
 | Coordenação | 97,1 | 0,23 (muito fraca) | sem base de tendência |
 | Confiança | 66,2 | 0,5 (utilizável) | sem base de tendência |
-| Aprendizagem | 58,9 | 0,54 (utilizável) | sem base de tendência |
-| Experimentação | 18,7 | 0,24 (muito fraca) | -4,5 em 10 anos, sobre 3 indicadores |
-| Adaptação | 83,9 | 0,68 (boa) | +3 em 10 anos, sobre 3 indicadores |
+| Aprendizagem | 76,1 | 0,55 (utilizável) | sem base de tendência |
+| Experimentação | 18,7 | 0,27 (fraca) | -4,5 em 10 anos, sobre 3 indicadores |
+| Adaptação | 83,6 | 0,57 (utilizável) | sem base de tendência |
 | Construção | 30,5 | 0,54 (utilizável) | -1,2 em 10 anos, sobre 3 indicadores |
-| Propósito compartilhado | 61,9 | 0,41 (fraca) | +4,4 em 10 anos, sobre 2 indicadores |
+| Propósito compartilhado | 61,9 | 0,49 (utilizável) | +4,4 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para elevar
 
@@ -44,30 +44,24 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
-### Experimentação: solidez 0,24, muito fraca
+### Experimentação: solidez 0,27, fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
 - Baseada em 3 indicadores observados.
-- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
-
-### Propósito compartilhado: solidez 0,41, fraca
-
-Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
-- Bases rejeitadas: Voz e responsabilização.
+- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades.
+- Bases rejeitadas: Parcela empresarial do P&D.
 
 ## Dimensões para manter
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 83,9, solidez boa
+- Adaptação: 83,6, solidez utilizável
 - Antecipação: 80,2, solidez utilizável
+- Aprendizagem: 76,1, solidez utilizável
 - Agência: 71,8, solidez utilizável
 - Confiança: 66,2, solidez utilizável
-- Aprendizagem: 58,9, solidez utilizável
+- Propósito compartilhado: 61,9, solidez utilizável
 
 ## O que o Canadá tem para trabalhar
 
@@ -83,12 +77,15 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Agência | Crédito ao setor privado | 124,1 % do PIB | 2008 | 11º de 52 |
 | Aprendizagem | Matrícula no ensino superior | 76,3 % (taxa bruta) | 2023 | 20º de 52 |
 | Aprendizagem | Dispêndio público em educação | 4,8 % do PIB | 2022 | 22º de 53 |
+| Aprendizagem | Parcela técnica do ensino médio | 4,6 % das matrículas no ensino secundário | 2018 | 45º de 53 |
+| Adaptação | Participação na força de trabalho | 80 % das pessoas com 15 anos ou mais | 2025 | 9º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 42,5 por 100 pessoas | 2024 | 8º de 53 |
+| Adaptação | Perdas na transmissão de eletricidade | 4,2 % da produção | 2024 | 7º de 53 |
 | Construção | Produto por trabalhador | 113.563,3 US$ PPC constantes de 2021 | 2025 | 11º de 51 |
 
 ## Agenda de medição
 
-19 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+17 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -103,12 +100,10 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Experimentação | Investimento de capital de risco | Capital de risco investido como parcela do PIB. |
 | Experimentação | Atividade de sandbox regulatório | Número e abrangência de sandboxes regulatórios e regimes de teste controlado em operação. |
 | Experimentação | Empresas nascidas de universidades | Empresas criadas para comercializar pesquisa universitária, por milhão de habitantes. |
-| Experimentação | Parcela empresarial do P&D | Parcela do dispêndio bruto em P&D executada por empresas. |
 | Adaptação | Preparação e recuperação de desastres | Capacidade demonstrada de preparação e recuperação diante de choques graves. |
 | Adaptação | Capacidade de resposta institucional | Velocidade com que regras e programas públicos mudam em resposta a novas condições. |
 | Construção | Entrega de grandes projetos | Desempenho de custo e prazo de grandes projetos públicos de infraestrutura. |
 | Construção | Empresas jovens que ganham escala | Parcela de empresas jovens que atingem patamares relevantes de emprego ou faturamento. |
-| Propósito compartilhado | Sentimento de pertencimento nacional | Orgulho e identificação com a comunidade nacional, autodeclarados. |
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 

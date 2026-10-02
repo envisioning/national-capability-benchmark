@@ -12,11 +12,11 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Agência | 36,3 | 0,54 (utilizável) | sem base de tendência |
 | Coordenação | 70,3 | 0,39 (fraca) | sem base de tendência |
 | Confiança | 35,1 | 0,5 (utilizável) | sem base de tendência |
-| Aprendizagem | 57,2 | 0,41 (fraca) | sem base de tendência |
-| Experimentação | 2,2 | 0,24 (muito fraca) | +0,4 em 10 anos, sobre 3 indicadores |
-| Adaptação | 78,7 | 0,67 (boa) | +13,8 em 10 anos, sobre 3 indicadores |
+| Aprendizagem | 35,9 | 0,39 (fraca) | sem base de tendência |
+| Experimentação | 2,2 | 0,27 (fraca) | +0,4 em 10 anos, sobre 3 indicadores |
+| Adaptação | 79 | 0,57 (utilizável) | sem base de tendência |
 | Construção | 35,8 | 0,57 (utilizável) | +4,4 em 10 anos, sobre 3 indicadores |
-| Propósito compartilhado | 49,5 | 0,3 (fraca) | sem base de tendência |
+| Propósito compartilhado | 49,5 | 0,35 (fraca) | sem base de tendência |
 
 ## Dimensões para elevar
 
@@ -64,20 +64,21 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 
 A solidez da evidência está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Experimentação: solidez 0,24, muito fraca
+### Experimentação: solidez 0,27, fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
 - Baseada em 3 indicadores observados.
-- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
+- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades.
+- Bases rejeitadas: Parcela empresarial do P&D.
 
-### Propósito compartilhado: solidez 0,3, fraca
+### Propósito compartilhado: solidez 0,35, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
 - Baseada em 3 indicadores observados.
-- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
-- Bases rejeitadas: Voz e responsabilização.
+- Lacunas declaradas: Voluntariado, Polarização política.
+- Bases rejeitadas: Voz e responsabilização, Sentimento de pertencimento nacional.
 
 ### Coordenação: solidez 0,39, fraca
 
@@ -87,18 +88,18 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
-### Aprendizagem: solidez 0,41, fraca
+### Aprendizagem: solidez 0,39, fraca
 
 Com que eficácia o país adquire, distribui e atualiza conhecimento?
 
-- Baseada em 3 indicadores observados.
+- Baseada em 2 indicadores observados.
 - Lacunas declaradas: Participação de adultos em aprendizagem.
 
 ## Dimensões para manter
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 78,7, solidez boa
+- Adaptação: 79, solidez utilizável
 
 ## O que a Bolívia tem para trabalhar
 
@@ -113,12 +114,15 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Agência | Titularidade de conta financeira | 56,8 % das pessoas com 15 anos ou mais | 2024 | 42º de 52 |
 | Agência | Crédito ao setor privado | 51,8 % do PIB | 2025 | 32º de 52 |
 | Aprendizagem | Dispêndio público em educação | 7,5 % do PIB | 2024 | 2º de 53 |
+| Aprendizagem | Parcela técnica do ensino médio | 63,9 % das matrículas no ensino secundário | 2018 | 1º de 53 |
+| Adaptação | Participação na força de trabalho | 80,5 % das pessoas com 15 anos ou mais | 2025 | 8º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 12,1 por 100 pessoas | 2024 | 38º de 53 |
+| Adaptação | Perdas na transmissão de eletricidade | 8,9 % da produção | 2023 | 27º de 53 |
 | Construção | Produto por trabalhador | 20.434,6 US$ PPC constantes de 2021 | 2025 | 44º de 51 |
 
 ## Agenda de medição
 
-19 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+17 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -133,12 +137,10 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Experimentação | Investimento de capital de risco | Capital de risco investido como parcela do PIB. |
 | Experimentação | Atividade de sandbox regulatório | Número e abrangência de sandboxes regulatórios e regimes de teste controlado em operação. |
 | Experimentação | Empresas nascidas de universidades | Empresas criadas para comercializar pesquisa universitária, por milhão de habitantes. |
-| Experimentação | Parcela empresarial do P&D | Parcela do dispêndio bruto em P&D executada por empresas. |
 | Adaptação | Preparação e recuperação de desastres | Capacidade demonstrada de preparação e recuperação diante de choques graves. |
 | Adaptação | Capacidade de resposta institucional | Velocidade com que regras e programas públicos mudam em resposta a novas condições. |
 | Construção | Entrega de grandes projetos | Desempenho de custo e prazo de grandes projetos públicos de infraestrutura. |
 | Construção | Empresas jovens que ganham escala | Parcela de empresas jovens que atingem patamares relevantes de emprego ou faturamento. |
-| Propósito compartilhado | Sentimento de pertencimento nacional | Orgulho e identificação com a comunidade nacional, autodeclarados. |
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 

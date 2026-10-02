@@ -12,11 +12,11 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Agency | 69.1 | 0.35 (thin) | no trend |
 | Coordination | 52 | 0.23 (very thin) | no trend |
 | Trust | 46.1 | 0.16 (very thin) | no trend |
-| Learning | 49.9 | 0.34 (thin) | no trend |
-| Experimentation | 5.2 | 0.24 (very thin) | +0.7 over 10 years using 3 indicators |
-| Adaptability | 74.7 | 0.67 (good) | +0.9 over 10 years using 3 indicators |
+| Learning | 73.6 | 0.32 (thin) | no trend |
+| Experimentation | 5.2 | 0.27 (thin) | +0.7 over 10 years using 3 indicators |
+| Adaptability | 68.7 | 0.57 (usable) | no trend |
 | Building | 37.6 | 0.55 (usable) | +5 over 10 years using 3 indicators |
-| Shared Purpose | 48.4 | 0.24 (very thin) | no trend |
+| Shared Purpose | 48.4 | 0.28 (thin) | no trend |
 
 ## What to raise
 
@@ -61,26 +61,27 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
-### Experimentation: confidence 0.24, very thin
+### Experimentation: confidence 0.27, thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
 - Uses 3 observed indicators.
-- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
+- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
+- Rejected datasets: Business share of R&D.
 
-### Shared Purpose: confidence 0.24, very thin
+### Shared Purpose: confidence 0.28, thin
 
 To what extent can people imagine themselves as participants in a common project?
 
 - Uses 2 observed indicators.
-- Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
-- Rejected datasets: Voice and accountability.
+- Missing indicators: Volunteering, Political polarisation.
+- Rejected datasets: Voice and accountability, Sense of national belonging.
 
-### Learning: confidence 0.34, thin
+### Learning: confidence 0.32, thin
 
 How effectively does the country acquire, distribute, and update knowledge?
 
-- Uses 3 observed indicators.
+- Uses 2 observed indicators.
 - Missing indicators: Adult learning participation.
 
 ### Agency: confidence 0.35, thin
@@ -94,7 +95,7 @@ How able are individuals and organizations to turn an intention into action?
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 74.7, confidence good
+- Adaptability: 68.7, confidence usable
 
 ## What the United Arab Emirates has to work with
 
@@ -110,12 +111,15 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Agency | Credit to the private sector | 65.5 % of GDP | 2022 | 26 of 52 |
 | Learning | Tertiary enrolment | 63.7 % gross | 2024 | 28 of 52 |
 | Learning | Public education expenditure | 3.9 % of GDP | 2021 | 35 of 53 |
+| Learning | Vocational share of secondary | 1.6 % of secondary | 2017 | 49 of 53 |
+| Adaptability | Labour force participation | 79.6 % aged 15+ | 2025 | 11 of 53 |
 | Adaptability | Fixed broadband subscriptions | 40.8 per 100 people | 2024 | 10 of 53 |
+| Adaptability | Electricity transmission losses | 4.3 % of output | 2023 | 8 of 53 |
 | Building | Output per worker | 108,203.1 constant 2021 PPP $ | 2024 | 14 of 51 |
 
 ## Missing data
 
-19 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+17 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -130,12 +134,10 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Experimentation | Venture capital investment | Venture capital deployed as a share of GDP. |
 | Experimentation | Regulatory sandbox activity | Number and breadth of live regulatory sandboxes and controlled trial regimes. |
 | Experimentation | University spinouts | Companies formed to commercialise university research, per million people. |
-| Experimentation | Business share of R&D | Share of gross R&D expenditure performed by business enterprises. |
 | Adaptability | Disaster preparedness and recovery | Demonstrated capacity to prepare for and recover from major shocks. |
 | Adaptability | Institutional responsiveness | Speed at which rules and public programmes are changed in response to new conditions. |
 | Building | Large project delivery | Cost and schedule performance of major public infrastructure projects. |
 | Building | Firm scale-up rate | Share of young firms reaching significant employment or turnover thresholds. |
-| Shared Purpose | Sense of national belonging | Reported pride in and identification with the national community. |
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 

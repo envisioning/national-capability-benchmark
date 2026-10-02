@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { CheckDef } from './schema.js'
 import type { Dimension } from './dimensions.js'
 import { WB_DEFAULT_DATABASE } from './sources.js'
-import type { SeriesRequest } from './indicators.js'
+import { WB_PUBLISHER, type SeriesRequest } from './indicators.js'
 import {
   JOINT_EVS_WVS_PUBLISHER,
   JOINT_EVS_WVS_RELEASE_YEAR,
@@ -56,6 +56,11 @@ const NOTES_TURNOUT =
  * V-Dem's 2025 Regimes of the World (v16); see D132 and A13. */
 const NOTES_COURT_CONFIDENCE =
   'Confidence in the courts is the public half of what this capability asks: whether people expect the rules to be enforced when a stranger breaks them. It is not scored because the survey answer reads two things the number cannot tell apart. Where courts are independent, confidence is a judgment of how they perform. Where they answer to the state, it is also deference, and saying otherwise to an interviewer has a cost. In this frame the pattern runs the wrong way. India, the Philippines and Indonesia, all electoral autocracies in the V-Dem 2025 classification, lead on the share saying a great deal, and Vietnam and China, the two closed autocracies surveyed, lead once quite a lot is counted too. The ten electoral autocracies average 21.8 percent saying a great deal and the two closed autocracies 28.1, against 13.6 for liberal and 8.4 for electoral democracies. Scored, it would rank highest the states whose courts are least able to rule against them. Income is not why it is left out: the share correlates about -0.18 with log GDP per capita. The value is the share saying a great deal; the share saying quite a lot is in the source note.'
+
+/* Rendered to readers, so American spelling and no dashes. The base proxy and
+ * the questionnaire break are in the Coordination O1 memo's preflight; see D144. */
+const NOTES_CUSTOMS_CLEARANCE =
+  'Days a manufacturer that exports directly says its goods took to clear customs, from the World Bank Enterprise Surveys. It is the time the border took on firms\' own shipments, current where the Doing Business border time this capability scores is frozen at 2019. It is not scored for two reasons. The number of firms behind each country\'s figure is published only in the survey microdata, and on a proxy from the published tables 37 of 53 countries clear 30 exporting firms; Mexico, the Philippines, Israel and nine others may not. And the question changed: surveys fielded from 2024 also ask how long release took across all border agencies, and drop an answer where customs alone took longer, so a country surveyed on both sides of the change can move severalfold with nothing at its border changing. India reads 17.3 days in 2022 and 2.5 in 2025, on more than 9,000 firms each time. No country in the frame has two surveys on the new questionnaire yet. Income is not why it is left out: it barely tracks log GDP per capita.'
 
 const RAW: Raw[] = [
   {
@@ -146,6 +151,28 @@ const RAW: Raw[] = [
       year: JOINT_EVS_WVS_RELEASE_YEAR,
     },
     notes: NOTES_COURT_CONFIDENCE,
+  },
+  {
+    /* No declared gap carries this id. It sits beside `time_to_export`, the
+     * Doing Business border row frozen at 2019, and reads the same border from
+     * firms' own shipments. World Bank ingest, World Development Indicators. A
+     * microdata base of 30 firms in 40 or more countries, or a second round on
+     * the 2024 questionnaire, reopens it as an indicator. See D144. */
+    id: 'customs_clearance_time',
+    dimension: 'coordination',
+    name: 'Customs clearance time for exports',
+    definition:
+      'Average number of days to clear direct exports through customs, as reported by manufacturing firms that export directly, in the World Bank Enterprise Surveys.',
+    unit: 'days',
+    direction: 'lower_better',
+    source: {
+      publisher: WB_PUBLISHER,
+      series: 'IC.CUS.DURS.EX',
+      url: 'https://data.worldbank.org/indicator/IC.CUS.DURS.EX',
+      tier: 'international_organization',
+      inspectable: true,
+    },
+    notes: NOTES_CUSTOMS_CLEARANCE,
   },
 ]
 

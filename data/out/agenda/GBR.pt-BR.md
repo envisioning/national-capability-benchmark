@@ -12,11 +12,11 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Agência | 90,5 | 0,41 (fraca) | sem base de tendência |
 | Coordenação | 87,7 | 0,23 (muito fraca) | sem base de tendência |
 | Confiança | 88,6 | 0,3 (fraca) | sem base de tendência |
-| Aprendizagem | 72,3 | 0,54 (utilizável) | sem base de tendência |
-| Experimentação | 62,2 | 0,24 (muito fraca) | +20,5 em 10 anos, sobre 3 indicadores |
-| Adaptação | 76,1 | 0,68 (boa) | -1,9 em 10 anos, sobre 3 indicadores |
+| Aprendizagem | 79,8 | 0,55 (utilizável) | sem base de tendência |
+| Experimentação | 62,2 | 0,27 (fraca) | +20,5 em 10 anos, sobre 3 indicadores |
+| Adaptação | 80 | 0,57 (utilizável) | sem base de tendência |
 | Construção | 48,1 | 0,57 (utilizável) | +0,1 em 10 anos, sobre 3 indicadores |
-| Propósito compartilhado | 87,4 | 0,28 (fraca) | +4,2 em 10 anos, sobre 2 indicadores |
+| Propósito compartilhado | 87,4 | 0,33 (fraca) | +4,2 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para elevar
 
@@ -44,20 +44,13 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
-### Experimentação: solidez 0,24, muito fraca
+### Experimentação: solidez 0,27, fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
 - Baseada em 3 indicadores observados.
-- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
-
-### Propósito compartilhado: solidez 0,28, fraca
-
-Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
-
-- Baseada em 2 indicadores observados.
-- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
-- Bases rejeitadas: Voz e responsabilização.
+- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades.
+- Bases rejeitadas: Parcela empresarial do P&D.
 
 ### Confiança: solidez 0,3, fraca
 
@@ -66,6 +59,14 @@ Quanta cooperação é possível além das redes pessoais imediatas?
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
+
+### Propósito compartilhado: solidez 0,33, fraca
+
+Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
+
+- Baseada em 2 indicadores observados.
+- Lacunas declaradas: Voluntariado, Polarização política.
+- Bases rejeitadas: Voz e responsabilização, Sentimento de pertencimento nacional.
 
 ### Agência: solidez 0,41, fraca
 
@@ -78,9 +79,9 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 76,1, solidez boa
+- Adaptação: 80, solidez utilizável
+- Aprendizagem: 79,8, solidez utilizável
 - Antecipação: 74, solidez utilizável
-- Aprendizagem: 72,3, solidez utilizável
 
 ## O que o Reino Unido tem para trabalhar
 
@@ -96,12 +97,15 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Agência | Crédito ao setor privado | 112,4 % do PIB | 2024 | 13º de 52 |
 | Aprendizagem | Matrícula no ensino superior | 80,4 % (taxa bruta) | 2023 | 12º de 52 |
 | Aprendizagem | Dispêndio público em educação | 5,9 % do PIB | 2021 | 8º de 53 |
+| Aprendizagem | Parcela técnica do ensino médio | 31,8 % das matrículas no ensino secundário | 2018 | 6º de 53 |
+| Adaptação | Participação na força de trabalho | 76,7 % das pessoas com 15 anos ou mais | 2025 | 19º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 42,2 por 100 pessoas | 2024 | 9º de 53 |
+| Adaptação | Perdas na transmissão de eletricidade | 9,9 % da produção | 2024 | 32º de 53 |
 | Construção | Produto por trabalhador | 111.234,5 US$ PPC constantes de 2021 | 2025 | 12º de 51 |
 
 ## Agenda de medição
 
-19 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+17 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -116,12 +120,10 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Experimentação | Investimento de capital de risco | Capital de risco investido como parcela do PIB. |
 | Experimentação | Atividade de sandbox regulatório | Número e abrangência de sandboxes regulatórios e regimes de teste controlado em operação. |
 | Experimentação | Empresas nascidas de universidades | Empresas criadas para comercializar pesquisa universitária, por milhão de habitantes. |
-| Experimentação | Parcela empresarial do P&D | Parcela do dispêndio bruto em P&D executada por empresas. |
 | Adaptação | Preparação e recuperação de desastres | Capacidade demonstrada de preparação e recuperação diante de choques graves. |
 | Adaptação | Capacidade de resposta institucional | Velocidade com que regras e programas públicos mudam em resposta a novas condições. |
 | Construção | Entrega de grandes projetos | Desempenho de custo e prazo de grandes projetos públicos de infraestrutura. |
 | Construção | Empresas jovens que ganham escala | Parcela de empresas jovens que atingem patamares relevantes de emprego ou faturamento. |
-| Propósito compartilhado | Sentimento de pertencimento nacional | Orgulho e identificação com a comunidade nacional, autodeclarados. |
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 

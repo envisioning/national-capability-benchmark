@@ -12,24 +12,25 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Agência | 83,4 | 0,37 (fraca) | sem base de tendência |
 | Coordenação | 98,6 | 0,23 (muito fraca) | sem base de tendência |
 | Confiança | 69,3 | 0,5 (utilizável) | sem base de tendência |
-| Aprendizagem | 45,5 | 0,47 (utilizável) | sem base de tendência |
-| Experimentação | 49,5 | 0,43 (fraca) | +0,8 em 10 anos, sobre 3 indicadores |
-| Adaptação | 81,8 | 0,68 (boa) | +3,4 em 10 anos, sobre 3 indicadores |
+| Aprendizagem | 60,7 | 0,55 (utilizável) | sem base de tendência |
+| Experimentação | 49,5 | 0,48 (utilizável) | +0,8 em 10 anos, sobre 3 indicadores |
+| Adaptação | 88,4 | 0,57 (utilizável) | sem base de tendência |
 | Construção | 58,2 | 0,53 (utilizável) | +0,5 em 10 anos, sobre 3 indicadores |
-| Propósito compartilhado | 55,3 | 0,43 (fraca) | -1,1 em 10 anos, sobre 2 indicadores |
+| Propósito compartilhado | 55,3 | 0,52 (utilizável) | -1,1 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para elevar
 
 Estas são as notas mais baixas com evidência utilizável. A evidência fraca aparece abaixo.
 
-### Aprendizagem: 45,5, solidez utilizável
+### Experimentação: 49,5, solidez utilizável
 
-Com que eficácia o país adquire, distribui e atualiza conhecimento?
+Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
-- Baseada em 4 indicadores observados.
-- Maiores notas utilizáveis: Finlândia 76,3, Suíça 73,9, Reino Unido 72,3.
-- Entregas documentadas em outros países: SkillsFuture Credit (Singapura); The public library system (Finlândia); Kartu Prakerja, a national lifelong-learning delivery system (Indonésia); Compte personnel de formation (França); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (Índia); SETAs and workplace-based learning delivery (África do Sul); MEB public lifelong-learning network (Turquia); Kenya's adult education centres, and their halving (Quênia); Rwanda's adult literacy centres, and their decline (Ruanda); Integrated Functional Adult Education, and its erosion (Etiópia); Instituto Técnico de Capacitación y Productividad (INTECAP) (Guatemala); INFOTEP national technical and vocational training (República Dominicana); Campaña Nacional de Alfabetización (Cuba); VET FEE-HELP, and its abolition (Austrália); Adult education allowance (aikuiskoulutustuki), and its abolition (Finlândia); INEFOP, the tripartite national training institute (Uruguai); Franquicia Tributaria SENCE, and its erosion (Chile); Employer and in-work training under Employment Insurance, and its erosion (Coreia do Sul); TESDA technical-vocational training at national scale (Filipinas); INADEH national vocational training (Panamá); Yo, sí puedo national literacy campaign and post-literacy programme (Bolívia); Project 1956 vocational training for rural workers (Vietnã); Bildungsprämie training voucher, and its end (Alemanha); Aufstiegs-BAföG, upgrading training support (Alemanha); Formación programada por las empresas (FUNDAE training credit) (Espanha); Community Education and Training colleges, and their erosion (África do Sul); SENA complementary training (formación complementaria) (Colômbia); Vocational skills upgrading action, 2019-2021 (China); INA national vocational training, and its contraction (Costa Rica); Kunskapslyftet adult education initiative (Suécia); Springboard+ upskilling programme (Irlanda); STAP-budget training grant, abolished in 2024 (Países Baixos); INEA adult basic education (México); Hello Training, public vocational training (Japão).
-- Lacunas declaradas: Participação de adultos em aprendizagem.
+- Baseada em 5 indicadores observados.
+- Maiores notas utilizáveis: Coreia do Sul 77,7, Suíça 60,6, Chile 37,5.
+- Entregas documentadas em outros países: The FCA regulatory sandbox (Reino Unido); Yozma, the venture capital catalyst (Israel); Korean regulatory-sandbox system across eight sectors (Coreia do Sul); MAS FinTech Regulatory Sandbox variants (Singapura); British Patient Capital, a public venture-capital catalyst (Reino Unido); ICURe, from university research to spinouts (Reino Unido); Portugal Ventures, a public venture-capital bridge (Portugal); Rede Nacional de Test Beds for company experimentation (Portugal); Zonas Livres Tecnológicas, regulator-supervised experimentation zones (Portugal); Banco Central regulatory sandbox, first cycle (Brasil); Reserve Bank of India regulatory sandbox (Índia); Capital Markets Authority regulatory sandbox (Quênia); SEC Nigeria Regulatory Incubation Program (Nigéria); ADGM RegLab, the first fintech sandbox in the region (Emirados Árabes Unidos); OJK regulatory sandbox for financial-sector technological innovation (Indonésia); Bank Negara Malaysia Fintech Regulatory Sandbox (Malásia); Bank of Thailand regulatory sandbox (Tailândia); Sandbox financiero (Ley 7/2020), and the fall in applications (Espanha); IFWG Regulatory Sandbox (África do Sul); Project-based regulatory sandbox (new technology demonstration scheme) (Japão); CSA Regulatory Sandbox, succeeded by the Financial Innovation Hub (Canadá); ASIC enhanced regulatory sandbox (Austrália); SINTEG-Verordnung, the energy-transition experimentation clause (Alemanha); Experimenten Elektriciteitswet 2015-2018, and its erosion (Países Baixos); Bac à sable réglementaire in the energy sector (França).
+- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades.
+- Bases rejeitadas: Parcela empresarial do P&D.
 
 ## Dimensões para medir primeiro
 
@@ -50,29 +51,16 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Habilidades digitais de adultos.
 
-### Experimentação: solidez 0,43, fraca
-
-Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
-
-- Baseada em 5 indicadores observados.
-- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
-
-### Propósito compartilhado: solidez 0,43, fraca
-
-Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
-- Bases rejeitadas: Voz e responsabilização.
-
 ## Dimensões para manter
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 81,8, solidez boa
+- Adaptação: 88,4, solidez utilizável
 - Antecipação: 72,7, solidez utilizável
 - Confiança: 69,3, solidez utilizável
+- Aprendizagem: 60,7, solidez utilizável
 - Construção: 58,2, solidez utilizável
+- Propósito compartilhado: 55,3, solidez utilizável
 
 ## O que os Estados Unidos tem para trabalhar
 
@@ -88,12 +76,15 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Agência | Crédito ao setor privado | 201,3 % do PIB | 2025 | 1º de 52 |
 | Aprendizagem | Matrícula no ensino superior | 79,4 % (taxa bruta) | 2022 | 14º de 52 |
 | Aprendizagem | Dispêndio público em educação | 5,4 % do PIB | 2021 | 10º de 53 |
+| Aprendizagem | Parcela técnica do ensino médio | 0 % das matrículas no ensino secundário | 1996 | 53º de 53 |
+| Adaptação | Participação na força de trabalho | 73,7 % das pessoas com 15 anos ou mais | 2025 | 27º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 38,9 por 100 pessoas | 2024 | 13º de 53 |
+| Adaptação | Perdas na transmissão de eletricidade | 5,3 % da produção | 2024 | 13º de 53 |
 | Construção | Produto por trabalhador | 156.983,2 US$ PPC constantes de 2021 | 2025 | 4º de 51 |
 
 ## Agenda de medição
 
-19 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+17 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -108,12 +99,10 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Experimentação | Investimento de capital de risco | Capital de risco investido como parcela do PIB. |
 | Experimentação | Atividade de sandbox regulatório | Número e abrangência de sandboxes regulatórios e regimes de teste controlado em operação. |
 | Experimentação | Empresas nascidas de universidades | Empresas criadas para comercializar pesquisa universitária, por milhão de habitantes. |
-| Experimentação | Parcela empresarial do P&D | Parcela do dispêndio bruto em P&D executada por empresas. |
 | Adaptação | Preparação e recuperação de desastres | Capacidade demonstrada de preparação e recuperação diante de choques graves. |
 | Adaptação | Capacidade de resposta institucional | Velocidade com que regras e programas públicos mudam em resposta a novas condições. |
 | Construção | Entrega de grandes projetos | Desempenho de custo e prazo de grandes projetos públicos de infraestrutura. |
 | Construção | Empresas jovens que ganham escala | Parcela de empresas jovens que atingem patamares relevantes de emprego ou faturamento. |
-| Propósito compartilhado | Sentimento de pertencimento nacional | Orgulho e identificação com a comunidade nacional, autodeclarados. |
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 

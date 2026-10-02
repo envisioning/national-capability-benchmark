@@ -12,11 +12,11 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Agency | 66.9 | 0.38 (thin) | no trend |
 | Coordination | 92.9 | 0.39 (thin) | no trend |
 | Trust | 81.4 | 0.3 (thin) | no trend |
-| Learning | 71.4 | 0.54 (usable) | no trend |
-| Experimentation | 28.1 | 0.27 (thin) | no trend |
-| Adaptability | 92 | 0.68 (good) | +8.8 over 10 years using 3 indicators |
+| Learning | 75.8 | 0.55 (usable) | no trend |
+| Experimentation | 28.1 | 0.3 (thin) | no trend |
+| Adaptability | 90.3 | 0.57 (usable) | no trend |
 | Building | 44.4 | 0.57 (usable) | -0.5 over 10 years using 3 indicators |
-| Shared Purpose | 96 | 0.28 (thin) | +9.9 over 10 years using 2 indicators |
+| Shared Purpose | 96 | 0.33 (thin) | +9.9 over 10 years using 2 indicators |
 
 ## What to raise
 
@@ -36,21 +36,6 @@ How capable is the country of turning plans and knowledge into functioning syste
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Experimentation: confidence 0.27, thin
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 3 observed indicators.
-- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
-
-### Shared Purpose: confidence 0.28, thin
-
-To what extent can people imagine themselves as participants in a common project?
-
-- Uses 2 observed indicators.
-- Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
-- Rejected datasets: Voice and accountability.
-
 ### Trust: confidence 0.3, thin
 
 How much cooperation is possible beyond immediate personal networks?
@@ -58,6 +43,22 @@ How much cooperation is possible beyond immediate personal networks?
 - Uses 3 observed indicators.
 - Missing indicators: Trust in public institutions, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
+
+### Experimentation: confidence 0.3, thin
+
+How easily can new approaches be attempted, tested, abandoned, and improved?
+
+- Uses 3 observed indicators.
+- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
+- Rejected datasets: Business share of R&D.
+
+### Shared Purpose: confidence 0.33, thin
+
+To what extent can people imagine themselves as participants in a common project?
+
+- Uses 2 observed indicators.
+- Missing indicators: Volunteering, Political polarisation.
+- Rejected datasets: Voice and accountability, Sense of national belonging.
 
 ### Agency: confidence 0.38, thin
 
@@ -78,9 +79,9 @@ How effectively can independent actors organize around shared objectives?
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 92, confidence good
+- Adaptability: 90.3, confidence usable
 - Anticipation: 78.5, confidence usable
-- Learning: 71.4, confidence usable
+- Learning: 75.8, confidence usable
 
 ## What the Netherlands has to work with
 
@@ -96,12 +97,15 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Agency | Credit to the private sector | 82.3 % of GDP | 2024 | 19 of 52 |
 | Learning | Tertiary enrolment | 86.6 % gross | 2023 | 9 of 52 |
 | Learning | Public education expenditure | 5.2 % of GDP | 2022 | 17 of 53 |
+| Learning | Vocational share of secondary | 37.4 % of secondary | 2018 | 3 of 53 |
+| Adaptability | Labour force participation | 85.6 % aged 15+ | 2025 | 1 of 53 |
 | Adaptability | Fixed broadband subscriptions | 43 per 100 people | 2024 | 7 of 53 |
+| Adaptability | Electricity transmission losses | 3.8 % of output | 2024 | 5 of 53 |
 | Building | Output per worker | 129,804.6 constant 2021 PPP $ | 2025 | 5 of 51 |
 
 ## Missing data
 
-19 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+17 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -116,12 +120,10 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Experimentation | Venture capital investment | Venture capital deployed as a share of GDP. |
 | Experimentation | Regulatory sandbox activity | Number and breadth of live regulatory sandboxes and controlled trial regimes. |
 | Experimentation | University spinouts | Companies formed to commercialise university research, per million people. |
-| Experimentation | Business share of R&D | Share of gross R&D expenditure performed by business enterprises. |
 | Adaptability | Disaster preparedness and recovery | Demonstrated capacity to prepare for and recover from major shocks. |
 | Adaptability | Institutional responsiveness | Speed at which rules and public programmes are changed in response to new conditions. |
 | Building | Large project delivery | Cost and schedule performance of major public infrastructure projects. |
 | Building | Firm scale-up rate | Share of young firms reaching significant employment or turnover thresholds. |
-| Shared Purpose | Sense of national belonging | Reported pride in and identification with the national community. |
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 

@@ -12,22 +12,23 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Agency | 63.8 | 0.56 (usable) | no trend |
 | Coordination | 92.9 | 0.39 (thin) | no trend |
 | Trust | 69.2 | 0.5 (usable) | no trend |
-| Learning | 58.4 | 0.54 (usable) | no trend |
-| Experimentation | 70.1 | 0.24 (very thin) | +1.1 over 10 years using 3 indicators |
-| Adaptability | 75.6 | 0.68 (good) | +7.8 over 10 years using 3 indicators |
+| Learning | 68.7 | 0.55 (usable) | no trend |
+| Experimentation | 70.1 | 0.27 (thin) | +1.1 over 10 years using 3 indicators |
+| Adaptability | 79 | 0.57 (usable) | no trend |
 | Building | 54.4 | 0.57 (usable) | -7.1 over 10 years using 3 indicators |
-| Shared Purpose | 59 | 0.42 (thin) | -0.6 over 10 years using 2 indicators |
+| Shared Purpose | 59 | 0.51 (usable) | -0.6 over 10 years using 2 indicators |
 
 ## What to measure first
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Experimentation: confidence 0.24, very thin
+### Experimentation: confidence 0.27, thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
 
 - Uses 3 observed indicators.
-- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
+- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
+- Rejected datasets: Business share of R&D.
 
 ### Coordination: confidence 0.39, thin
 
@@ -37,23 +38,16 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
-### Shared Purpose: confidence 0.42, thin
-
-To what extent can people imagine themselves as participants in a common project?
-
-- Uses 3 observed indicators.
-- Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
-- Rejected datasets: Voice and accountability.
-
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 75.6, confidence good
+- Adaptability: 79, confidence usable
 - Trust: 69.2, confidence usable
+- Learning: 68.7, confidence usable
 - Anticipation: 64, confidence usable
 - Agency: 63.8, confidence usable
-- Learning: 58.4, confidence usable
+- Shared Purpose: 59, confidence usable
 - Building: 54.4, confidence usable
 
 ## What France has to work with
@@ -70,12 +64,15 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Agency | Credit to the private sector | 107.6 % of GDP | 2024 | 14 of 52 |
 | Learning | Tertiary enrolment | 71.5 % gross | 2024 | 22 of 52 |
 | Learning | Public education expenditure | 5.3 % of GDP | 2022 | 12 of 53 |
+| Learning | Vocational share of secondary | 17.6 % of secondary | 2018 | 25 of 53 |
+| Adaptability | Labour force participation | 74 % aged 15+ | 2025 | 25 of 53 |
 | Adaptability | Fixed broadband subscriptions | 48.9 per 100 people | 2024 | 1 of 53 |
+| Adaptability | Electricity transmission losses | 6.6 % of output | 2024 | 19 of 53 |
 | Building | Output per worker | 128,587.1 constant 2021 PPP $ | 2025 | 7 of 51 |
 
 ## Missing data
 
-19 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+17 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -90,12 +87,10 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Experimentation | Venture capital investment | Venture capital deployed as a share of GDP. |
 | Experimentation | Regulatory sandbox activity | Number and breadth of live regulatory sandboxes and controlled trial regimes. |
 | Experimentation | University spinouts | Companies formed to commercialise university research, per million people. |
-| Experimentation | Business share of R&D | Share of gross R&D expenditure performed by business enterprises. |
 | Adaptability | Disaster preparedness and recovery | Demonstrated capacity to prepare for and recover from major shocks. |
 | Adaptability | Institutional responsiveness | Speed at which rules and public programmes are changed in response to new conditions. |
 | Building | Large project delivery | Cost and schedule performance of major public infrastructure projects. |
 | Building | Firm scale-up rate | Share of young firms reaching significant employment or turnover thresholds. |
-| Shared Purpose | Sense of national belonging | Reported pride in and identification with the national community. |
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 

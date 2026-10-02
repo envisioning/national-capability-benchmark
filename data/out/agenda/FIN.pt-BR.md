@@ -12,11 +12,11 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Agência | 70,6 | 0,56 (utilizável) | sem base de tendência |
 | Coordenação | 82,3 | 0,39 (fraca) | sem base de tendência |
 | Confiança | 90,7 | 0,5 (utilizável) | sem base de tendência |
-| Aprendizagem | 76,3 | 0,54 (utilizável) | sem base de tendência |
-| Experimentação | 29,2 | 0,24 (muito fraca) | -2,1 em 10 anos, sobre 3 indicadores |
-| Adaptação | 77,3 | 0,68 (boa) | +3,2 em 10 anos, sobre 3 indicadores |
+| Aprendizagem | 76,8 | 0,55 (utilizável) | sem base de tendência |
+| Experimentação | 29,2 | 0,27 (fraca) | -2,1 em 10 anos, sobre 3 indicadores |
+| Adaptação | 72,7 | 0,57 (utilizável) | sem base de tendência |
 | Construção | 37,8 | 0,57 (utilizável) | -1,1 em 10 anos, sobre 3 indicadores |
-| Propósito compartilhado | 73,6 | 0,42 (fraca) | +7,6 em 10 anos, sobre 2 indicadores |
+| Propósito compartilhado | 73,6 | 0,51 (utilizável) | +7,6 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para elevar
 
@@ -36,12 +36,13 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 
 A solidez da evidência está abaixo da faixa utilizável. Primeiro, produza evidência.
 
-### Experimentação: solidez 0,24, muito fraca
+### Experimentação: solidez 0,27, fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
 - Baseada em 3 indicadores observados.
-- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
+- Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades.
+- Bases rejeitadas: Parcela empresarial do P&D.
 
 ### Coordenação: solidez 0,39, fraca
 
@@ -51,22 +52,15 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
 
-### Propósito compartilhado: solidez 0,42, fraca
-
-Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
-
-- Baseada em 3 indicadores observados.
-- Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
-- Bases rejeitadas: Voz e responsabilização.
-
 ## Dimensões para manter
 
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
 - Confiança: 90,7, solidez utilizável
 - Antecipação: 87,5, solidez utilizável
-- Adaptação: 77,3, solidez boa
-- Aprendizagem: 76,3, solidez utilizável
+- Aprendizagem: 76,8, solidez utilizável
+- Propósito compartilhado: 73,6, solidez utilizável
+- Adaptação: 72,7, solidez utilizável
 - Agência: 70,6, solidez utilizável
 
 ## O que a Finlândia tem para trabalhar
@@ -83,12 +77,15 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Agência | Crédito ao setor privado | 92 % do PIB | 2024 | 17º de 52 |
 | Aprendizagem | Matrícula no ensino superior | 110,3 % (taxa bruta) | 2024 | 2º de 52 |
 | Aprendizagem | Dispêndio público em educação | 6,4 % do PIB | 2022 | 5º de 53 |
+| Aprendizagem | Parcela técnica do ensino médio | 47,8 % das matrículas no ensino secundário | 2018 | 2º de 53 |
+| Adaptação | Participação na força de trabalho | 79,4 % das pessoas com 15 anos ou mais | 2025 | 12º de 53 |
 | Adaptação | Assinaturas de banda larga fixa | 36,5 por 100 pessoas | 2024 | 16º de 53 |
+| Adaptação | Perdas na transmissão de eletricidade | 3,7 % da produção | 2024 | 4º de 53 |
 | Construção | Produto por trabalhador | 120.400 US$ PPC constantes de 2021 | 2025 | 9º de 51 |
 
 ## Agenda de medição
 
-19 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+17 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -103,12 +100,10 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Experimentação | Investimento de capital de risco | Capital de risco investido como parcela do PIB. |
 | Experimentação | Atividade de sandbox regulatório | Número e abrangência de sandboxes regulatórios e regimes de teste controlado em operação. |
 | Experimentação | Empresas nascidas de universidades | Empresas criadas para comercializar pesquisa universitária, por milhão de habitantes. |
-| Experimentação | Parcela empresarial do P&D | Parcela do dispêndio bruto em P&D executada por empresas. |
 | Adaptação | Preparação e recuperação de desastres | Capacidade demonstrada de preparação e recuperação diante de choques graves. |
 | Adaptação | Capacidade de resposta institucional | Velocidade com que regras e programas públicos mudam em resposta a novas condições. |
 | Construção | Entrega de grandes projetos | Desempenho de custo e prazo de grandes projetos públicos de infraestrutura. |
 | Construção | Empresas jovens que ganham escala | Parcela de empresas jovens que atingem patamares relevantes de emprego ou faturamento. |
-| Propósito compartilhado | Sentimento de pertencimento nacional | Orgulho e identificação com a comunidade nacional, autodeclarados. |
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 

@@ -7154,3 +7154,262 @@ release, which would replace the sum and close the exception; microdata
 showing the EVS-WVS difference reorders the frame once fieldwork year is
 controlled; or a fieldwork review showing the Ethiopia sample, or any other
 outlier, is not national, which would hold that country's value.
+
+---
+
+## D141 — Vocational share, labour force participation and transmission losses move to the conditions layer
+
+*Recorded 2026-10-02. Extends D122 to three of its six Tier B rows. Issue
+#68. Dataset 8.0.0. Memo: `docs/research/CONDITIONS-AUDIT.md` and the Q3
+section of `docs/research/anticipation/O1-CANDIDATES.md`.*
+
+**Decision.** Three scored rows take `role: 'condition'` and are published
+beside their dimension under D122, unscored: `vocational_secondary_share`
+beside Learning, and `labor_force_participation` and
+`electricity_transmission_losses` beside Adaptability. Each keeps its World
+Bank route, is fetched on every ingest and is published with its value, year
+and rank among the countries that have it. D122 let a Tier B row move only
+on its own decision and only once its dimension had a capability row to take
+its place. This entry is that decision for the three, one paragraph each,
+and the replacements are already scored.
+
+**Vocational share of secondary enrolment (Learning).** The share of
+secondary pupils on a vocational track describes how a school system is
+built, not what anyone learns in it, and the registry's own note said higher
+is not unambiguously better. It was the row that pulled Korea and Japan down
+in A7. Its latest year is 2019. Learning now reads the Human Capital Index,
+firm training and research citation impact (D124), which is the capability
+row D122 asked for. As a condition it correlates with log GDP per capita at
+0.26 (n 51) and with the new Learning score at 0.28 (n 52).
+
+**Labour force participation (Adaptability).** How much of the
+working-age population is in the labour force is a level set by norms,
+schooling and age structure. Its note called it "how much of the population
+can be reallocated at all", which is a description of what the economy has
+to move, not of it moving, and participation norms confounded it for India
+in particular. Adaptability reads reallocation through long-term
+unemployment (D120) and the breadth of the export basket (D119), beside the
+unemployment rate. As a condition it correlates with log GDP per capita at
+0.575 (n 51) and with the new Adaptability score at 0.23 (n 53).
+
+**Electricity transmission losses (Adaptability).** The state of the grid,
+and whether the operator can bill what it delivers, is infrastructure a
+country has to change with, which is the reason D122 gave for moving
+broadband. It now sits beside broadband in the same layer. It correlates with
+log GDP per capita at 0.69 (n 51) and with the new Adaptability score at
+0.36 (n 53).
+
+**Why.** Construct, under D118. Each row records what a country has, not
+what it does, and each dimension now has scored rows that observe the
+capability itself. The correlations below are printed as findings and
+decided nothing.
+
+Measured on the 8.0.0 run against 7.8.0, same observations:
+
+| Dimension | Mean confidence | Observed rows (mean) | Scored countries | r log GDP (n 51) |
+| --- | --- | --- | --- | --- |
+| Learning | 0.496 → 0.513 | 3.89 → 2.89 | 53 → 52 | 0.749 → 0.779 |
+| Adaptability | 0.638 → 0.522 | 4.83 → 2.83 | 53 → 53 | 0.738 → 0.456 |
+
+Learning's confidence rises although it loses a row, because the row it
+loses was observed at 2019 and the coverage denominator shrinks with it.
+Cuba falls to one observed Learning row and publishes no Learning score.
+Learning moves most at the top: Singapore 67.7 to 84.2 (seventh to first of
+52), the United Arab Emirates 49.9 to 73.6, Canada 58.9 to 76.1 and the
+United States 45.5 to 60.7; Bolivia falls 57.2 to 35.9 (14th to 38th) and
+Honduras 38.2 to 33.2. Brazil moves from 28.0 to 35.0, 45th to 39th.
+Adaptability moves most where unemployment is low and exports are broad:
+India 59.5 to 85.4 (44th to tenth), Mexico 69.2 to 88.0 (32nd to sixth), El
+Salvador 69.4 to 86.5, Cuba 63.7 to 82.9 and Honduras 43.8 to 70.5;
+Switzerland falls 75.3 to 65.3 (20th to 43rd), the United Arab Emirates 74.7
+to 68.7 and Nigeria 57.4 to 45.5. Brazil moves from 65.4 to 73.7, 36th to
+35th. Across the release, with D142 and D143, the one-factor share (D137)
+falls from 0.523 to 0.485 and its correlation with income from 0.854 to
+0.845; Adaptability's loading falls from 0.742 to 0.424. The guardrail,
+mean confidence across dimensions against log GDP per capita, moves from
+0.278 to 0.289 (n 51). Every D138 reading is unchanged: structure, peers
+differ, stability mixed, leave-one-out robust, income explains part, the
+weak claim holds.
+
+**Cost.** Adaptability's confidence falls by 0.12 and its correlation with
+income by 0.28, and the second is not a gain to claim: the rows that left
+carried income, and what remains is thinner. Nine countries read
+Adaptability on two rows, the unemployment rate and export concentration,
+because the ILOSTAT gate holds or lacks their long-term unemployment: South
+Korea, India, Mexico, Peru, Uruguay, China, the Philippines, El Salvador and
+Haiti. Four of them, Mexico, China, El Salvador and India, are in the top
+ten. The unemployment rate's own note calls it blunt, since low unemployment
+can mean a rigid labour market as easily as a fluid one, and on two rows it
+is half the score. The Brazil adaptability report reads Adaptability without
+the grid and the participation level in the score; both remain on the page
+as conditions. Published scores move in two dimensions, so this is a major
+version under D37 and 7.x numbers are not comparable.
+
+**Overturned by.** A use measure showing that one of the three tracks a
+capability rather than a stock, such as grid losses moving with reform
+episodes the Adaptability rows also see, which would return that row to the
+score by its own decision; or evidence that the unemployment rate on two rows
+orders countries by labour-market rigidity rather than reallocation, which
+would make the two-row Adaptability scores a known artefact and argue for
+holding them until long-term unemployment covers them.
+
+---
+
+## D142 — Business share of R&D is retired: the only working source reads the make-up of a spending stock
+
+*Recorded 2026-10-02. Under D100 and D118. Issue #25. Dataset 8.0.0. Memo:
+`docs/research/experimentation/O1-CANDIDATES.md`, candidate 6.*
+
+**Decision.** `business_rd_share` (Experimentation) moves from `gap` to
+`ingest: 'retired'`. It stays in the registry and on every country's
+indicator list with `status: 'retired'`, its note names the evidence, and it
+leaves the coverage denominator under D100. Its source field now names the
+dataset that was inspected, OECD MSTI with RICYT, in place of UNESCO UIS,
+which stopped publishing the series in March 2023.
+
+**Why.** Construct first. Under D100 a gap says nobody publishes a
+comparable series and a retirement says a series exists, was inspected and
+measures the wrong thing. This row now fits the second. RICYT's open API
+serves R&D by sector of performance for Latin America, Brazil included, and
+with OECD MSTI the splice reaches 34 of 53 countries, 33 of them at 2019 or
+later. What it reads is the share of a country's R&D spending that business
+performs: the composition of a spending stock. D122 already moved R&D
+spending itself out of the scores as a condition, and the share of that
+stock is a description of the same thing. It is high where business research
+is large (Israel 94) and where total research is tiny and one firm dominates
+it (Thailand 80 and Vietnam 73 in the UIS archive). State enterprises count
+as business, so China and Vietnam read their ownership model, not firms
+experimenting. The splice's correlation with log GDP per capita, 0.742 (n
+34), and with R&D intensity, about 0.75, are printed as findings; the
+retirement does not rest on them, and it does not rest on Experimentation's
+O1 shortfall.
+
+Experimentation's denominator falls from nine rows to eight. Its mean
+confidence moves from 0.271 to 0.305 with no new observation, and no score
+moves. That rise is what D100 does by design, and it is not why the row is
+retired: AGENTS.md is explicit that gaps are not removed to make numbers
+look better. Experimentation still misses O1.
+
+**Cost.** The benchmark no longer asks for a series it once named as the
+next best candidate for Experimentation in A1, and a reader who wants the
+corporate side of research has to read the R&D spending condition beside
+Anticipation. A version of the share restricted to private enterprises, if a
+publisher ever separates them, would be a different series and would need a
+new row.
+
+**Overturned by.** A publisher that separates state from private enterprise
+in R&D by sector of performance across at least half the frame, which would
+remove the ownership confound and reopen the row as a gap; or an argument
+that the composition of R&D spending observes firms experimenting rather
+than what a country spends, which would make it a condition beside
+Anticipation's R&D spending instead.
+
+---
+
+## D143 — National belonging is retired: the only cross-national item reads pride and fails the regime test
+
+*Recorded 2026-10-02. Under D100 and D118. Issue #67. Dataset 8.0.0. Memos:
+`docs/research/shared-purpose/O1-CANDIDATES.md`, candidate 2, and
+`docs/research/shared-purpose/EVS-WVS-BEHAVIOURAL-ITEMS.md`.*
+
+**Decision.** `national_belonging` (Shared purpose) moves from `gap` to
+`ingest: 'retired'`. It stays in the registry and on every country's
+indicator list with `status: 'retired'`, with the evidence in its note, and
+it leaves the coverage denominator under D100. Its source field names the
+item inspected, G006 in the Joint EVS/WVS.
+
+**Why.** Construct first. The row asked for reported pride in and
+identification with the national community, and its own note said high
+national pride is not the capacity for collective action and must not be
+read as such. The Joint EVS/WVS sweep read G006, national pride, the only
+cross-national item aimed at it, and it fails A13: electoral autocracies read
+75% very proud against 47% in liberal democracies, so scored it would lift
+the regimes that cultivate uniformity, which is the failure D121 kept
+polarization out of the score for. The other candidate found, ISSP 2023's
+closeness-to-country item, is also a perception and covers 16 countries.
+Under D100 that is a series inspected and rejected, not a measurement nobody
+can make.
+
+Shared purpose's denominator falls from six rows to five. Its mean
+confidence moves from 0.343 to 0.411 with no new observation, which clears
+O1 on the arithmetic of D100 rather than on evidence. That effect is not the
+reason. The case rests on construct: the project does not believe pride is
+a capability a behaviour could one day observe under this name, and the
+observable acts of a shared project, civic participation (D128), tax revenue
+and, as a gap, volunteering, stay. No score moves.
+
+**Cost.** Shared purpose now reads O1 as met while it rests on the same
+three rows it had at 7.8.0, and a reader comparing confidence across
+releases will see a rise with nothing behind it. A5 says so. The registry no
+longer names identification with a national community as part of the
+dimension, and a reader who thinks it belongs there has to argue it as a new
+row with a behavioural construct.
+
+**Overturned by.** A cross-national item on belonging that is behavioural or
+that reads the same in every regime class, for example one that sorts
+liberal democracies and autocracies alike, which would reopen the row as a
+gap with that item as its candidate; or evidence that `volunteering_rate` and
+civic participation cannot carry the dimension without it.
+
+---
+
+## D144 — Customs clearance time is published beside Coordination as a behavioural check
+
+*Recorded 2026-10-02. Under D60 and D118. Issue #66. Dataset 8.0.0. Memo:
+`docs/research/coordination/O1-CANDIDATES.md`, recommendation 1 and its
+preflight.*
+
+**Decision.** World Bank `IC.CUS.DURS.EX`, the average days to clear direct
+exports through customs reported by manufacturing firms that export
+directly, in the Enterprise Surveys, is published beside Coordination as
+`customs_clearance_time` in `checks.ts`, `lower_better`, unit days, `ingest:
+'worldbank'` from World Development Indicators (source 2). It is observed
+under `__check__customs_clearance_time` and enters no frame, mean, coverage
+count or confidence. The 8.0.0 ingest added 151 country-years and restated
+nothing. It covers 50 of 53 countries (no survey for the United Arab
+Emirates, Cuba or Haiti), latest 2025.
+
+**Why.** On construct it passes: firms report the time the border took on
+their own shipments, which is the cooperation of agencies Coordination asks
+about and the current successor to the Doing Business border time frozen at
+2019. It passes the A13 regime test as well (China, Vietnam and Singapore sit
+in the middle of the frame). It fails two other tests, and those are the
+reasons it is a check:
+
+1. **The sample base cannot be verified.** The number of firms behind each
+   country's mean, and its standard error, are published only in the
+   microdata, behind a registration. On a proxy from the published tables,
+   firms surveyed times the weighted share exporting directly, 37 of 53
+   countries reach 30 firms. The 12 held, ten of them in Latin America, are
+   Panama, Nicaragua, Rwanda, Mexico, Honduras, Israel, Ecuador, Uruguay, the
+   Dominican Republic, Bolivia, the Philippines and Paraguay. The proxy itself
+   cannot settle the cases near 30, so the recommendation's own gate, 40
+   countries, is neither met nor refuted.
+2. **The questionnaire broke in 2024.** Rounds fielded from 2024 add an
+   all-agency release question, and since July 2025 the publisher drops every
+   answer where customs time exceeds it. A country surveyed on both sides
+   moves for reasons that are not its border: India 17.3 days in 2022 to 2.5
+   in 2025 on more than 9,000 firms each round, France 10.4 to 2.2. No
+   benchmark country has two rounds on the new questionnaire, so stability
+   within one design cannot be tested.
+
+Its income correlation is printed and is not a reason: -0.12 on the
+published value against log GDP per capita (n 50), -0.28 against the
+Coordination score, from `behaviouralChecks`. No Coordination score,
+confidence or count moves.
+
+**Cost.** D60's mechanism now holds a check kept out on sample and
+comparability grounds, alongside the income and construct reasons D60 and
+D121 used; the glossary entry says so. A published value outside the score
+will be quoted as a finding, including the twelve held countries and the
+cross-questionnaire moves, and the attached note is the only guard. The
+World Bank API lags the Enterprise Surveys portal, so the check can show an
+older round than the portal (Argentina 2017 against a 2026 portal round).
+
+**Overturned by.** Reopened as an indicator question when either holds:
+someone with microdata access reads the per-country item base, and 40 or
+more countries pass at 30 firms on the real base; or a second round on the
+2024 questionnaire lets stability be tested within one design. If it is
+reopened, prefer the all-agency measure, which asks about every border
+agency and needs a pinned adapter from the Enterprise Surveys portal.
+Retired instead if readers treat the check as a score, as D60 provides.

@@ -12,11 +12,11 @@ La comparación incluye 53 países. Cada dimensión recibe una puntuación de 0 
 | Iniciativa | 68.4 | 0.54 (utilizable) | sin base de tendencia |
 | Coordinación | 79.9 | 0.39 (débil) | sin base de tendencia |
 | Confianza | 58.7 | 0.5 (utilizable) | sin base de tendencia |
-| Aprendizaje | 42 | 0.54 (utilizable) | sin base de tendencia |
-| Experimentación | 37.5 | 0.43 (débil) | +4.5 en 10 años, sobre 3 indicadores |
-| Adaptación | 64.9 | 0.68 (buena) | -3.4 en 10 años, sobre 3 indicadores |
+| Aprendizaje | 49.9 | 0.55 (utilizable) | sin base de tendencia |
+| Experimentación | 37.5 | 0.48 (utilizable) | +4.5 en 10 años, sobre 3 indicadores |
+| Adaptación | 64.1 | 0.57 (utilizable) | sin base de tendencia |
 | Ejecución | 32.3 | 0.57 (utilizable) | -1 en 10 años, sobre 3 indicadores |
-| Propósito compartido | 47.3 | 0.43 (débil) | +5.5 en 10 años, sobre 2 indicadores |
+| Propósito compartido | 47.3 | 0.52 (utilizable) | +5.5 en 10 años, sobre 2 indicadores |
 
 ## Puntuaciones bajas con evidencia utilizable
 
@@ -32,12 +32,32 @@ Estas son las puntuaciones más bajas con evidencia utilizable. Las dimensiones 
 - Vacíos declarados: Ejecución de grandes proyectos, Empresas jóvenes que ganan escala.
 - Bases descartadas: Calidad de la infraestructura logística.
 
-### Aprendizaje: 42, solidez utilizable
+### Experimentación: 37.5, solidez utilizable
+
+¿Con qué facilidad se pueden intentar, probar, abandonar y mejorar enfoques nuevos?
+
+- Basada en 5 indicadores observados.
+- Puntuaciones utilizables más altas: Corea del Sur 77.7, Suiza 60.6, Estados Unidos 49.5.
+- Entregas documentadas en otros países: The FCA regulatory sandbox (Reino Unido); Yozma, the venture capital catalyst (Israel); Korean regulatory-sandbox system across eight sectors (Corea del Sur); MAS FinTech Regulatory Sandbox variants (Singapur); British Patient Capital, a public venture-capital catalyst (Reino Unido); ICURe, from university research to spinouts (Reino Unido); Portugal Ventures, a public venture-capital bridge (Portugal); Rede Nacional de Test Beds for company experimentation (Portugal); Zonas Livres Tecnológicas, regulator-supervised experimentation zones (Portugal); Banco Central regulatory sandbox, first cycle (Brasil); Reserve Bank of India regulatory sandbox (India); Capital Markets Authority regulatory sandbox (Kenia); SEC Nigeria Regulatory Incubation Program (Nigeria); ADGM RegLab, the first fintech sandbox in the region (Emiratos Árabes Unidos); OJK regulatory sandbox for financial-sector technological innovation (Indonesia); Bank Negara Malaysia Fintech Regulatory Sandbox (Malasia); Bank of Thailand regulatory sandbox (Tailandia); Sandbox financiero (Ley 7/2020), and the fall in applications (España); IFWG Regulatory Sandbox (Sudáfrica); Project-based regulatory sandbox (new technology demonstration scheme) (Japón); CFPB Compliance Assistance Sandbox, rescinded in 2022 and withdrawn again in 2025 (Estados Unidos); CSA Regulatory Sandbox, succeeded by the Financial Innovation Hub (Canadá); ASIC enhanced regulatory sandbox (Australia); SINTEG-Verordnung, the energy-transition experimentation clause (Alemania); Experimenten Elektriciteitswet 2015-2018, and its erosion (Países Bajos); Bac à sable réglementaire in the energy sector (Francia).
+- Vacíos declarados: Inversión de capital de riesgo, Actividad de sandbox regulatorio, Empresas surgidas de universidades.
+- Bases descartadas: Proporción empresarial de la I+D.
+
+### Propósito compartido: 47.3, solidez utilizable
+
+¿Hasta qué punto las personas logran verse como parte de un proyecto común?
+
+- Basada en 3 indicadores observados.
+- Puntuaciones utilizables más altas: Suecia 81.6, Finlandia 73.6, Tailandia 69.5.
+- Entregas documentadas en otros países: Umuganda community work (Ruanda); THW, volunteer civil protection as a federal institution (Alemania); Volunteer fire corps, and its membership erosion (Japón); Federal funding gaps and the 2019 shutdown (Estados Unidos).
+- Vacíos declarados: Voluntariado, Polarización política.
+- Bases descartadas: Voz y rendición de cuentas, Sentido de pertenencia nacional.
+
+### Aprendizaje: 49.9, solidez utilizable
 
 ¿Con qué eficacia adquiere, distribuye y actualiza conocimiento el país?
 
-- Basada en 4 indicadores observados.
-- Puntuaciones utilizables más altas: Finlandia 76.3, Suiza 73.9, Reino Unido 72.3.
+- Basada en 3 indicadores observados.
+- Puntuaciones utilizables más altas: Singapur 84.2, Irlanda 81.6, Australia 80.1.
 - Entregas documentadas en otros países: SkillsFuture Credit (Singapur); The public library system (Finlandia); Kartu Prakerja, a national lifelong-learning delivery system (Indonesia); Compte personnel de formation (Francia); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (India); SETAs and workplace-based learning delivery (Sudáfrica); MEB public lifelong-learning network (Turquía); Kenya's adult education centres, and their halving (Kenia); Rwanda's adult literacy centres, and their decline (Ruanda); Integrated Functional Adult Education, and its erosion (Etiopía); Instituto Técnico de Capacitación y Productividad (INTECAP) (Guatemala); INFOTEP national technical and vocational training (República Dominicana); Campaña Nacional de Alfabetización (Cuba); VET FEE-HELP, and its abolition (Australia); Adult education allowance (aikuiskoulutustuki), and its abolition (Finlandia); INEFOP, the tripartite national training institute (Uruguay); Employer and in-work training under Employment Insurance, and its erosion (Corea del Sur); TESDA technical-vocational training at national scale (Filipinas); INADEH national vocational training (Panamá); Yo, sí puedo national literacy campaign and post-literacy programme (Bolivia); Project 1956 vocational training for rural workers (Vietnam); Bildungsprämie training voucher, and its end (Alemania); Aufstiegs-BAföG, upgrading training support (Alemania); Formación programada por las empresas (FUNDAE training credit) (España); Community Education and Training colleges, and their erosion (Sudáfrica); SENA complementary training (formación complementaria) (Colombia); Vocational skills upgrading action, 2019-2021 (China); INA national vocational training, and its contraction (Costa Rica); Kunskapslyftet adult education initiative (Suecia); Springboard+ upskilling programme (Irlanda); State-administered adult education under the Adult Education and Family Literacy Act, and its erosion (Estados Unidos); STAP-budget training grant, abolished in 2024 (Países Bajos); INEA adult basic education (México); Hello Training, public vocational training (Japón).
 - Vacíos declarados: Participación de adultos en aprendizaje.
 
@@ -53,27 +73,12 @@ La solidez de la evidencia está por debajo de la franja utilizable, así que la
 - Vacíos declarados: Colaboración universidad-empresa, Colaboración público-privada.
 - Bases descartadas: Efectividad del gobierno, Calidad regulatoria, Desempeño logístico.
 
-### Experimentación: solidez 0.43, débil
-
-¿Con qué facilidad se pueden intentar, probar, abandonar y mejorar enfoques nuevos?
-
-- Basada en 5 indicadores observados.
-- Vacíos declarados: Inversión de capital de riesgo, Actividad de sandbox regulatorio, Empresas surgidas de universidades, Proporción empresarial de la I+D.
-
-### Propósito compartido: solidez 0.43, débil
-
-¿Hasta qué punto las personas logran verse como parte de un proyecto común?
-
-- Basada en 3 indicadores observados.
-- Vacíos declarados: Sentido de pertenencia nacional, Voluntariado, Polarización política.
-- Bases descartadas: Voz y rendición de cuentas.
-
 ## Puntuaciones altas con evidencia utilizable
 
 Estas dimensiones tienen una puntuación de al menos 50, con evidencia utilizable.
 
 - Iniciativa: 68.4, solidez utilizable
-- Adaptación: 64.9, solidez buena
+- Adaptación: 64.1, solidez utilizable
 - Confianza: 58.7, solidez utilizable
 - Anticipación: 55.5, solidez utilizable
 
@@ -91,12 +96,15 @@ Las condiciones describen lo que un país tiene para trabajar: infraestructura, 
 | Iniciativa | Crédito al sector privado | 102.1 % del PIB | 2025 | 15.º de 52 |
 | Aprendizaje | Matrícula en educación superior | 110.2 % (tasa bruta) | 2024 | 3.º de 52 |
 | Aprendizaje | Gasto público en educación | 4.9 % del PIB | 2022 | 20.º de 53 |
+| Aprendizaje | Proporción técnica de la educación secundaria | 11.6 % de la matrícula secundaria | 2018 | 31.º de 53 |
+| Adaptación | Participación en la fuerza laboral | 70.9 % de las personas de 15 años o más | 2025 | 31.º de 53 |
 | Adaptación | Suscripciones de banda ancha fija | 23.7 por cada 100 personas | 2024 | 25.º de 53 |
+| Adaptación | Pérdidas en la transmisión de electricidad | 5.9 % de la producción | 2024 | 15.º de 53 |
 | Ejecución | Producto por trabajador | 65,210.8 US$ PPA constantes de 2021 | 2025 | 25.º de 51 |
 
 ## ¿Qué falta medir?
 
-19 indicadores solicitados no tienen una base comparable, y cada uno baja la solidez. Un vacío se convierte en indicador con puntuación cuando una serie comparable cubre al menos dos países.
+17 indicadores solicitados no tienen una base comparable, y cada uno baja la solidez. Un vacío se convierte en indicador con puntuación cuando una serie comparable cubre al menos dos países.
 
 | Dimensión | Indicador ausente | Qué pregunta |
 | --- | --- | --- |
@@ -111,12 +119,10 @@ Las condiciones describen lo que un país tiene para trabajar: infraestructura, 
 | Experimentación | Inversión de capital de riesgo | Capital de riesgo invertido como proporción del PIB. |
 | Experimentación | Actividad de sandbox regulatorio | Número y alcance de los sandboxes regulatorios y regímenes de prueba controlada en operación. |
 | Experimentación | Empresas surgidas de universidades | Empresas creadas para comercializar investigación universitaria, por millón de habitantes. |
-| Experimentación | Proporción empresarial de la I+D | Proporción del gasto bruto en I+D ejecutada por empresas. |
 | Adaptación | Preparación y recuperación ante desastres | Capacidad demostrada de preparación y recuperación ante choques graves. |
 | Adaptación | Capacidad de respuesta institucional | Velocidad con que las reglas y los programas públicos cambian en respuesta a condiciones nuevas. |
 | Ejecución | Ejecución de grandes proyectos | Desempeño en costo y plazo de los grandes proyectos públicos de infraestructura. |
 | Ejecución | Empresas jóvenes que ganan escala | Proporción de empresas jóvenes que alcanzan niveles relevantes de empleo o facturación. |
-| Propósito compartido | Sentido de pertenencia nacional | Orgullo e identificación con la comunidad nacional, según declaran las personas. |
 | Propósito compartido | Voluntariado | Proporción de adultos que dedicaron tiempo voluntario a una organización en el último mes. |
 | Propósito compartido | Polarización política | Grado en que las diferencias políticas se alinean en una sola división hostil. |
 

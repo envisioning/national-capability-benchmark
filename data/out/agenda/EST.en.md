@@ -12,15 +12,25 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Agency | 85.2 | 0.56 (usable) | no trend |
 | Coordination | 93 | 0.37 (thin) | no trend |
 | Trust | 71.9 | 0.49 (usable) | no trend |
-| Learning | 65.3 | 0.52 (usable) | no trend |
-| Experimentation | 26.1 | 0.43 (thin) | +2.3 over 10 years using 3 indicators |
-| Adaptability | 71.4 | 0.68 (good) | -12.4 over 10 years using 3 indicators |
+| Learning | 75.3 | 0.54 (usable) | no trend |
+| Experimentation | 26.1 | 0.48 (usable) | +2.3 over 10 years using 3 indicators |
+| Adaptability | 77.4 | 0.57 (usable) | no trend |
 | Building | 31.1 | 0.57 (usable) | -4.8 over 10 years using 3 indicators |
-| Shared Purpose | 55 | 0.42 (thin) | +2.7 over 10 years using 2 indicators |
+| Shared Purpose | 55 | 0.51 (usable) | +2.7 over 10 years using 2 indicators |
 
 ## What to raise
 
 These are the lowest scores with usable evidence. Thin evidence appears below.
+
+### Experimentation: 26.1, confidence usable
+
+How easily can new approaches be attempted, tested, abandoned, and improved?
+
+- Uses 5 observed indicators.
+- Highest usable scores: South Korea 77.7, Switzerland 60.6, United States 49.5.
+- Related deliveries in other countries: The FCA regulatory sandbox (United Kingdom); Yozma, the venture capital catalyst (Israel); Korean regulatory-sandbox system across eight sectors (South Korea); MAS FinTech Regulatory Sandbox variants (Singapore); British Patient Capital, a public venture-capital catalyst (United Kingdom); ICURe, from university research to spinouts (United Kingdom); Portugal Ventures, a public venture-capital bridge (Portugal); Rede Nacional de Test Beds for company experimentation (Portugal); Zonas Livres Tecnológicas, regulator-supervised experimentation zones (Portugal); Banco Central regulatory sandbox, first cycle (Brazil); Reserve Bank of India regulatory sandbox (India); Capital Markets Authority regulatory sandbox (Kenya); SEC Nigeria Regulatory Incubation Program (Nigeria); ADGM RegLab, the first fintech sandbox in the region (United Arab Emirates); OJK regulatory sandbox for financial-sector technological innovation (Indonesia); Bank Negara Malaysia Fintech Regulatory Sandbox (Malaysia); Bank of Thailand regulatory sandbox (Thailand); Sandbox financiero (Ley 7/2020), and the fall in applications (Spain); IFWG Regulatory Sandbox (South Africa); Project-based regulatory sandbox (new technology demonstration scheme) (Japan); CFPB Compliance Assistance Sandbox, rescinded in 2022 and withdrawn again in 2025 (United States); CSA Regulatory Sandbox, succeeded by the Financial Innovation Hub (Canada); ASIC enhanced regulatory sandbox (Australia); SINTEG-Verordnung, the energy-transition experimentation clause (Germany); Experimenten Elektriciteitswet 2015-2018, and its erosion (Netherlands); Bac à sable réglementaire in the energy sector (France).
+- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts.
+- Rejected datasets: Business share of R&D.
 
 ### Building: 31.1, confidence usable
 
@@ -44,30 +54,16 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
-### Shared Purpose: confidence 0.42, thin
-
-To what extent can people imagine themselves as participants in a common project?
-
-- Uses 3 observed indicators.
-- Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
-- Rejected datasets: Voice and accountability.
-
-### Experimentation: confidence 0.43, thin
-
-How easily can new approaches be attempted, tested, abandoned, and improved?
-
-- Uses 5 observed indicators.
-- Missing indicators: Venture capital investment, Regulatory sandbox activity, University spinouts, Business share of R&D.
-
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
 - Agency: 85.2, confidence usable
+- Adaptability: 77.4, confidence usable
+- Learning: 75.3, confidence usable
 - Anticipation: 72, confidence usable
 - Trust: 71.9, confidence usable
-- Adaptability: 71.4, confidence good
-- Learning: 65.3, confidence usable
+- Shared Purpose: 55, confidence usable
 
 ## What Estonia has to work with
 
@@ -83,12 +79,15 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Agency | Credit to the private sector | 60.5 % of GDP | 2024 | 28 of 52 |
 | Learning | Tertiary enrolment | 65.7 % gross | 2024 | 26 of 52 |
 | Learning | Public education expenditure | 5.2 % of GDP | 2022 | 16 of 53 |
+| Learning | Vocational share of secondary | 22.6 % of secondary | 2018 | 17 of 53 |
+| Adaptability | Labour force participation | 81.1 % aged 15+ | 2025 | 6 of 53 |
 | Adaptability | Fixed broadband subscriptions | 35.4 per 100 people | 2024 | 17 of 53 |
+| Adaptability | Electricity transmission losses | 20.3 % of output | 2024 | 47 of 53 |
 | Building | Output per worker | 82,213.2 constant 2021 PPP $ | 2025 | 21 of 51 |
 
 ## Missing data
 
-19 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+17 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -103,12 +102,10 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Experimentation | Venture capital investment | Venture capital deployed as a share of GDP. |
 | Experimentation | Regulatory sandbox activity | Number and breadth of live regulatory sandboxes and controlled trial regimes. |
 | Experimentation | University spinouts | Companies formed to commercialise university research, per million people. |
-| Experimentation | Business share of R&D | Share of gross R&D expenditure performed by business enterprises. |
 | Adaptability | Disaster preparedness and recovery | Demonstrated capacity to prepare for and recover from major shocks. |
 | Adaptability | Institutional responsiveness | Speed at which rules and public programmes are changed in response to new conditions. |
 | Building | Large project delivery | Cost and schedule performance of major public infrastructure projects. |
 | Building | Firm scale-up rate | Share of young firms reaching significant employment or turnover thresholds. |
-| Shared Purpose | Sense of national belonging | Reported pride in and identification with the national community. |
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 
