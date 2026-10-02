@@ -1,5 +1,10 @@
 # What could lift Experimentation to O1
 
+**Status (2026-10-02, Dataset 8.1.0).** GitHub new public repositories are
+wired as `new_repositories_per_million` (D145). GEM is held (D125), and
+`business_rd_share` is retired (D142). Experimentation's mean confidence is
+0.364, still under the 0.40 target.
+
 Task: Experimentation has the lowest mean confidence of the nine dimensions
 (0.271 on dataset 7.7.0, target 0.40). Find what could lift it, starting from
 the GEM memo (`GEM-AND-DESIGNS.md`), then triage every other candidate at the

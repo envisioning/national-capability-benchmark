@@ -9,6 +9,21 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.24.10 — 2026-10-02
+
+- **A new known limit, A16: Adaptability rests on two rows in nine
+  countries.** South Korea, India, Mexico, Peru, Uruguay, China, the
+  Philippines, El Salvador and Haiti have no long-term unemployment figure,
+  so their Adaptability score is the unemployment rate and export
+  concentration alone. Mexico, China, El Salvador and India sit in the top
+  ten on that basis. A low unemployment rate can mean people cannot afford
+  to stay out of work, and on two rows nothing checks it. The capability map
+  names A16 on those nine countries' Adaptability pages.
+- A13 now quotes Shared Purpose's current correlation with income, 0.202.
+- Country pages no longer log a radar mismatch in the browser console. The
+  chart's coordinates are rounded the same way on the server and in the
+  browser.
+
 ## App 1.24.9 — 2026-10-02
 
 - **64 more documented deliveries, 15 of them losses.** Every country now

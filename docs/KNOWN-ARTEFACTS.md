@@ -10,8 +10,9 @@ from the published output. The in-session panel runs in `data/delphi` are one
 panelist each, carry no dataset version and were scored against older frames,
 so a gap between one of them and a current score is not a finding (see A9).
 
-Every entry is on dataset 8.0.0 except where it names another run. A1 is
-checked on 8.1.0. A3 also
+Every entry is on dataset 8.0.0 except where it names another run. A1, A13
+and A16 are checked on 8.1.0; A13's regime groups come from the V-Dem v16
+file, which 8.1.0 does not change. A3 also
 quotes the 16-country run that last scored the WGI rows, and A4 the ten-country
 one. A12 quotes one figure D131 measured on V-Dem v15. A6 holds no dataset
 figures. Where a figure predates the current frame, the scale it was measured
@@ -538,7 +539,7 @@ autocracies and neither calm. The same release codes Rwanda 0.96 and Singapore
 its regime class. A latest-year expert code of this item can swing that far,
 and a reader comparing two countries on it is partly comparing coding years.
 
-Scored as a third Shared Purpose row against the 8.0.0 frame, it would raise
+Scored as a third Shared Purpose row against the 8.1.0 frame, it would raise
 the United Arab Emirates by 11.1 points, Singapore by 7.7 and China by 4.8, and
 let Haiti publish a Shared Purpose score for the first time, at 35.9, on one
 World Bank row and this one. Rwanda would fall 4.2 and Vietnam 3.3. The largest
@@ -551,8 +552,8 @@ capability, and low measured hostility under repression is not shared purpose.
 The numeric gates do not catch it. The scored row passes the wealth screen at
 0.408 against log GDP per capita and the redundancy screen at 0.512 at most
 (interpersonal trust, n = 37), though adding it would raise Shared Purpose's
-own correlation with income from 0.214 to 0.406. The decision stands on
-construct and not on correlation.
+own correlation with income from 0.202 (n = 50) to 0.406 (n = 51, with
+Haiti). The decision stands on construct and not on correlation.
 
 **What is published.** The value sits on every country page under Shared
 Purpose as a check, not scored, with this reason attached, and the capability
@@ -619,3 +620,64 @@ every value 2022, though fieldwork ran from 2017 to 2023.
 perceived control or the negative income correlation of either row as a
 finding; read them through this entry first. Pooled microdata with a format
 term, or a behavioural row with frame coverage, is the fix.
+
+---
+
+## A16 — Adaptability rests on two rows in nine countries
+
+**Severity: medium.**
+
+The figures in this entry are from dataset 8.1.0.
+
+Adaptability scores three rows: the unemployment rate, the long-term
+unemployment share (D120) and export concentration (D119). Nine countries have
+no long-term share. ILOSTAT publishes none for India, China and Haiti, and the
+plausibility gate holds every year it publishes for South Korea, Mexico, Peru,
+the Philippines, El Salvador and Uruguay. Those nine are scored on the other
+two rows, which is the coverage floor, and the unemployment rate is half of
+each score (D141).
+
+| Country | Adaptability | Unemployment rate | Export concentration |
+| --- | ---: | ---: | ---: |
+| Mexico | 88.0, 6th | 2.7%, 8th | 0.154, 21st |
+| China | 87.0, 7th | 4.6%, 25th | 0.093, 10th |
+| El Salvador | 86.5, 8th | 3.3%, 15th | 0.150, 19th |
+| India | 85.4, 10th | 4.2%, 24th | 0.130, 15th |
+| South Korea | 83.4, 13th | 2.7%, 9th | 0.219, 28th |
+| Philippines | 74.5, 34th | 2.2%, 5th | 0.361, 46th |
+| Peru | 70.4, 39th | 5.1%, 33rd | 0.306, 44th |
+| Uruguay | 64.8, 44th | 7.5%, 41st | 0.292, 40th |
+| Haiti | 31.6, 52nd | 14.9%, 52nd | 0.471, 51st |
+
+Ranks are of 53: lowest unemployment first, broadest export basket first.
+Four of the nine, Mexico, China, El Salvador and India, are in the top ten.
+All nine carry Adaptability confidence 0.38; the other 44 run from 0.399 to
+0.57, mean 0.551. The confidence gap is the only mark a reader gets.
+
+**What the two rows read.** The unemployment rate counts people with no work
+who are looking for it. Where there is little unemployment insurance and a
+large informal sector, a person who loses a job takes any work within weeks,
+so the rate is low because unemployment cannot be afforded, not because
+workers move into better jobs. The row's own note says low unemployment can
+mean a rigid market as easily as a fluid one, and it tracks log GDP per
+capita at only 0.155. The long-term share is the row that tells the two
+apart, and it fails for the same reason: Mexico's survey reads 1.1% to 2.3%
+of the unemployed out of work for a year in most years since 2010, the
+Philippines 0.2% to 0.6% and South Korea 0.2% to 0.8%. On three rows a low
+rate is checked: Ethiopia (3.3%) and Nigeria (3.1%) carry long-term shares of
+53.9% and 56.1% and rank 49th and 51st. On two rows nothing checks it.
+India's rate is also measured on a narrow labour force: its participation,
+published beside the score as a condition, is 59.1%, 51st of 53. Export
+concentration reads a product mix and not the capacity to switch (D119), and
+China, India and Mexico have broad baskets for reasons of scale and
+supply-chain position.
+
+**Fix.** A long-term share for the nine: a labour force survey that records
+the length of a search, passed through the same gate. The two declared gaps
+would add rows for every country, but neither has a source:
+`disaster_preparedness` triaged to one check candidate, the World Risk Poll
+warning item, and `institutional_responsiveness` failed triage on OxCGRT. An
+informality measure beside the unemployment rate, such as ILOSTAT's informal
+employment share, is untested against the frame. Until one of these lands,
+D141's overturning clause names the alternative: hold Adaptability below three
+rows, which is a decision and a major version.

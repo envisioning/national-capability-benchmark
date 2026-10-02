@@ -45,6 +45,13 @@ export const ARTEFACT_SCOPES: readonly ArtefactScope[] = [
   { id: 'A13', dimensions: ['shared_purpose'] },
   { id: 'A14', dimensions: ['agency'] },
   { id: 'A15', dimensions: ['agency', 'shared_purpose'] },
+  /* The nine countries whose Adaptability rests on two rows, with no
+   * long-term unemployment share (D141). */
+  {
+    id: 'A16',
+    dimensions: ['adaptability'],
+    countries: ['KOR', 'IND', 'MEX', 'PER', 'URY', 'CHN', 'PHL', 'SLV', 'HTI'],
+  },
 ]
 
 /**
