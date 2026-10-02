@@ -1,7 +1,8 @@
 # Foresight register codebook
 
-Version **1.1**, fixed 2026-10-02 before the round 2 recode. Changes from 1.0
-and the reason for each are listed under "Changelog" at the foot of the file.
+Version **1.2**, fixed 2026-10-02 before the 53 are coded. Changes from
+earlier versions and the reason for each are listed under "Changelog" at the
+foot of the file.
 
 The coding rule for a project-authored register that would fill
 `government_foresight_capacity` ("existence, mandate and continuity of a
@@ -13,7 +14,10 @@ coded, two independent coders, nothing scored until the pilot is reviewed.
 Version 1.0 was fixed on 2026-10-02 and committed before the first coding.
 Version 1.1 settles the eight ambiguities the pilot found
 (`FORESIGHT-REGISTER-PILOT.md`) and the owner's ruling on I1, and is committed
-before the recode. A change to anything in this file after coding starts is
+before the recode. Version 1.2 settles how a parent body and a foresight unit
+inside it are coded, and how I4 is carried while it is unvalidated, and is
+committed before the 53 are coded. A change to anything in this file after
+coding starts is
 a new version of the codebook, recorded at the foot of the file with the
 reason, and every country is recoded under it.
 No item is reweighted, redefined or dropped after the codes are seen, to move
@@ -101,6 +105,47 @@ A country may have more than one GFF. Coders list every candidate body they
 examine, whether it meets the unit or not, with the per-body codes section 5
 asks for, and code the country from the bodies that meet it as section 2
 says. The country item is 1 when any operating GFF carries it.
+
+**Parent bodies and the units inside them.** Every body is judged on its own
+mandate, and a body's mandate is not read from a unit inside it, nor a unit's
+from the body that houses it.
+
+- A **unit** (a centre, office or team) inside a larger body is a candidate
+  of its own. It is a GFF when its own mandate meets section 1: it is of the
+  state as part of its parent, so condition 1 holds, and conditions 2 to 4
+  are read on what the record says the unit does.
+- A **parent** is a GFF of its own only when the parent's own mandate (its
+  act, organisational regulation or official page) names a foresight
+  function under condition 3 and meets condition 4. Housing a foresight unit
+  does not make a parent a GFF. A head of government's office, a cabinet
+  office or a ministry whose own mandate names no foresight function is not
+  listed as a GFF; the coder names it in the unit's `unitNote` as the
+  unit's home.
+- When both meet section 1, **both are listed and coded**, each with its own
+  dates, status and body codes. A parent that closes, merges or is renamed
+  while its unit continues is recorded as ended on the date the record gives,
+  and the continuing unit is read as its successor under I4 when it meets
+  the successor test there. Coding both cannot count anything twice, because
+  the country items are the maximum over bodies.
+- A **closed predecessor** is listed like any other candidate. I4 asks for
+  every GFF established since 1990, operating or not, and that includes a
+  parent or predecessor whose foresight unit or successor still operates.
+  A coder who treats such a body as the lineage of a body still operating,
+  and does not list it, has missed a body.
+- **Dates stay with the body.** A unit's establishment date is the earliest
+  date on the record at which the unit itself held a foresight mandate, never
+  its parent's or predecessor's. I3 is read on each body's own dates, so a
+  successor does not inherit its predecessor's survival.
+
+Why, on the construct: the unit of this register is a body the state has
+mandated for foresight, and the mandate is what the state put on its record
+for that body. Reading a parent's mandate from its unit would make every
+office that houses a futures team a foresight body; reading a unit's
+history from its parent would let a body claim a survival it has not shown,
+because a mandate moved into a new body is a new decision by whoever moved
+it, and that person can still end it. A reorganisation is not a reversal,
+which I4's successor rule already provides, so a lineage costs nothing on
+I4 and earns nothing on I3.
 
 ## 2. The items
 
@@ -236,6 +281,18 @@ mandate within 24 months (named, with its record).
 within 24 months. `0` otherwise, including mergers whose successor carries
 the foresight mandate.
 
+**While I4 is unvalidated.** In the pilot I4 was 0 for every country from
+every coder, so its reliability has not been measured. It stays in the score
+formula unchanged when the 53 are coded, and is coded, adjudicated and
+reported like the other items. Its agreement on the 20 percent second coding
+of the 53 is reported on its own (section 7), with the number of countries
+where either coder coded it 1. If I4 is 1 in **no** country of the 53 after
+adjudication, it has added nothing to any score, and whether to drop it is
+put to a decision entry before the register is promoted. It is not dropped
+by this file, and not after the codes are seen without that entry (D118).
+If it is 1 in one or more countries, it stays, and the report says on how
+many countries its agreement rests.
+
 **Successor.** A successor is a body that meets section 1, in the same branch
 as the closed GFF, and whose foresight mandate is on the official record
 (I1's definition) within 24 months after the end. The branch is the
@@ -317,7 +374,7 @@ One JSON file per coder:
 ```json
 {
   "coder": "a",
-  "codebookVersion": "1.1",
+  "codebookVersion": "1.2",
   "codedAt": "2026-10-02",
   "countries": [
     {
@@ -458,9 +515,37 @@ Decided before coding. After adjudication of disagreements:
 
 - 1.0, 2026-10-02. Fixed before coding.
 - 1.1, 2026-10-02. Fixed before the round 2 recode. See the changelog below.
+- 1.2, 2026-10-02. Fixed before the 53 are coded. See the changelog below.
 
 ## Changelog
 
+### 1.2, 2026-10-02
+
+Fixed before any of the 53 is coded, from the two points the round 2 pilot
+left open (`FORESIGHT-REGISTER-PILOT.md`, round 2 verdict, and D148). Both
+were decided on the construct, and neither rule names a country. No rule the
+round 2 spot-check tests was changed: section 1's four conditions, I1 to I4
+and their windows, the successor test, the score, the evidence rules and the
+thresholds and stop rules of sections 7 and 8 read as in 1.1. The 53 include
+the ten pilot countries, which are recoded under 1.2 with the rest.
+
+1. **Parent bodies and their units** (section 1). Every body is judged on
+   its own mandate. A unit inside a larger body is a candidate of its own; a
+   parent is a GFF only when its own mandate names a foresight function;
+   when both qualify both are listed and coded, a parent that ends while its
+   unit continues is recorded as ended, and the unit is read as its
+   successor under I4's test. Closed predecessors are listed, because I4
+   asks for every GFF since 1990. Dates stay with the body, so I3 is never
+   inherited. Why: the register's unit is a body the state mandated, and a
+   mandate moved to a new body is a new decision that its maker can still
+   reverse. In round 2 one coder treated a closed parent as its unit's
+   lineage and did not list it, which 1.1 left open; no item depended on it.
+2. **I4 while unvalidated** (section 2, I4). I4 stays in the formula, is
+   coded and reported on its own in the second coding, and is put to a
+   decision entry if it is 1 in no country of the 53. Why: in both pilot
+   rounds it was 0 everywhere, so its reliability is unmeasured, and an item
+   that never fires adds nothing to any score; but dropping an item after
+   the codes are seen is what D118 forbids without a decision.
 ### 1.1, 2026-10-02
 
 Every change below was decided on the construct, before the round 2 coding,
