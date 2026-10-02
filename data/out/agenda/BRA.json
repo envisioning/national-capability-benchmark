@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T13:16:40.004Z",
+  "generatedAt": "2026-10-02T13:21:42.509Z",
   "iso3": "BRA",
   "country": "Brazil",
   "dimensions": [
@@ -1113,20 +1113,20 @@
     },
     {
       "dimension": "trust",
-      "kind": "measure",
-      "score": 55.9,
-      "confidence": 0.396,
-      "band": "thin",
+      "kind": "raise",
+      "score": 49.3,
+      "confidence": 0.498,
+      "band": "usable",
       "trend": null,
       "scoredOn": [
         "contract_enforcement_days",
         "bribery_incidence",
         "court_compliance",
-        "interpersonal_trust"
+        "interpersonal_trust",
+        "willingness_to_cooperate_strangers"
       ],
       "gaps": [
         "institutional_trust",
-        "willingness_to_cooperate_strangers",
         "court_case_clearance"
       ],
       "retired": [
@@ -1134,7 +1134,26 @@
         "control_of_corruption",
         "homicide_rate"
       ],
-      "exemplars": [],
+      "exemplars": [
+        {
+          "iso3": "FIN",
+          "country": "Finland",
+          "score": 90.7,
+          "confidence": 0.498
+        },
+        {
+          "iso3": "SWE",
+          "country": "Sweden",
+          "score": 90.3,
+          "confidence": 0.498
+        },
+        {
+          "iso3": "CHE",
+          "country": "Switzerland",
+          "score": 82.8,
+          "confidence": 0.498
+        }
+      ],
       "evidenceElsewhere": [
         {
           "id": "kor-mydata",
@@ -4122,5 +4141,5 @@
       "started": 2021
     }
   ],
-  "gapCount": 20
+  "gapCount": 19
 }

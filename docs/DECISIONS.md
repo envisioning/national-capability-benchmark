@@ -7073,3 +7073,84 @@ it now rests on the indicator rows alone and was retitled.
 
 **Overturned by.** A reviewed gateway panel scored against the current dataset
 version (#33), which makes the comparison readable again.
+
+---
+
+## D140 — Trust in strangers is scored in Trust as the share trusting a first-time acquaintance completely or somewhat (G007_34_B)
+
+*Recorded 2026-10-02. Extends D64's adapter under D117 and D118, beside D127
+and D128. Closes #63. Answers Q6 of the O1 triage sweep.*
+
+**Decision.** `willingness_to_cooperate_strangers` (Trust, social family)
+moves from `gap` to `adapter`. It is read from G007_34_B, "trust: people you
+meet for the first time", in the same pinned Joint EVS/WVS results PDF
+(release 5.0.0), by the same item table, country mapping and hold rule as
+D127 and D128. Class `P`, `higher_better`, unit `% expressing trust`. The
+definition narrows from "trust in people met for the first time and in people
+of another nationality" to the first-time item alone. G007_36_B (another
+nationality) is not averaged in: one item per row, as D128 did for
+membership, and it reads attitudes to foreigners as much as trust.
+
+The value is the sum of two published columns, trust completely plus trust
+somewhat, over all respondents including don't know and no answer. This is a
+narrow exception to the adapter's rule that a stored value is a number the
+publisher prints. It applies to this item only. The note on every
+observation quotes both addends and every other published share, so the sum
+can be checked against the table by hand.
+
+**Why.** Construct first, in
+`docs/research/shared-purpose/EVS-WVS-BEHAVIOURAL-ITEMS.md`, written before
+values were read. Trust asks how far cooperation reaches beyond a person's
+own network. A165 asks about "most people", which a respondent can fill with
+their own circle; this item names the stranger. EVS 2017 and WVS 7 ask it in
+one wording on one four-point scale, and inside the dual-programme pairs the
+WVS share is a median 2.2 points higher, against a 66 point spread.
+
+Why the sum. The scale has four points and the trust and distrust halves
+split at its natural midpoint, so the cut is not chosen the way a 7 to 10 cut
+on a ten-point scale would be. Both columns share one denominator, so the sum
+is exact to the rounding of the printed figures, within about 0.1. That is
+what separates it from the A173 refusal, where the publisher printed a mean
+and a top-box share would have been a chosen cut on a ten-point scale. The
+single printed column "trust completely" has no usable spread (0.1 to 9.5).
+The other printed column, "do not trust at all", would keep the rule but
+reads closer to A165 (r -0.79 against 0.66 for the sum) and flips the
+registry's unit and direction. The sum matches the unit the registry
+declared.
+
+Reported as findings (D118), same run: 37 of 53 countries, fieldwork 2017 to
+2023, range 7.8 (Ecuador) to 73.9 (Sweden); Brazil 22.7, 22nd of 37. The row
+correlates with log GDP per capita at r = 0.34 (n 36), with A165 at 0.66,
+under the 0.85 redundancy flag, and no redundant pair forms. Autocracies do
+not inflate it: closed 22.2, electoral autocracies 23.7, electoral
+democracies 21.5, liberal democracies 40.4. Trust's mean confidence moves from
+0.347 to 0.418, which clears O1, its observed rows from 3.6 to 4.3, and its
+r with log GDP from 0.675 to 0.606 (n 51). Scored countries stay at 52,
+because no country is added. The social family now has both its rows
+observed. The guardrail, mean confidence across dimensions against log GDP
+per capita, moves from 0.298 to 0.278 (n 51). The one-factor share (D137)
+moves from 0.531 to 0.523, its correlation with income from 0.858 to 0.854,
+and Trust's loading from 0.804 to 0.760. Every D138 reading is unchanged:
+structure, peers differ, stability mixed, leave-one-out robust, income
+explains part, the weak claim holds. The largest Trust moves are falls where
+"most people" read high and a stranger reads low: Japan 79.4 to 64.3,
+Singapore 84.6 to 70.8, South Korea 80.8 to 67.6, China 67.6 to 55.8 (20th to
+28th of 52) and Malaysia 68.2 to 56.7. Ethiopia rises 41.9 to 45.6 (46th to
+36th) and Sweden 87.9 to 90.3. Brazil moves from 55.9 to 49.3.
+
+**Cost.** The rule that a stored value is printed by the publisher now has an
+exception, and an exception invites a second. A summed value carries the
+rounding of two cells instead of one. It is a perception, class `P`, the same
+class and source as A165, so the social family is still two survey items from
+one release and no behaviour. The 13 countries outside the release and the
+three held (DEU, GBR, NLD) keep three Trust rows where the 37 now have five,
+so Trust's confidence gap between them widens. Ethiopia's 47.8 (fifth of 37,
+fieldwork 2020) is the value to check first. The EVS countries in the frame
+are all European and average twice the WVS ones, which is region and cannot
+be separated from format in the aggregate table.
+
+**Overturned by.** A published single column or mean for G007_34_B in a later
+release, which would replace the sum and close the exception; microdata
+showing the EVS-WVS difference reorders the frame once fieldwork year is
+controlled; or a fieldwork review showing the Ethiopia sample, or any other
+outlier, is not national, which would hold that country's value.

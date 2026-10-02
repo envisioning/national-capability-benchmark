@@ -275,7 +275,7 @@ export const PT_BR: Lexicon = {
     institutional_trust:
       'Confiança no governo nacional, nos tribunais e no serviço público.',
     willingness_to_cooperate_strangers:
-      'Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade.',
+      'Parcela de adultos que confia completamente ou um pouco nas pessoas que encontra pela primeira vez.',
     adult_learning_participation:
       'Parcela de adultos em educação e treinamento, formal ou não, nos últimos 12 meses.',
     research_citation_impact:

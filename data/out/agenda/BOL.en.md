@@ -11,7 +11,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Anticipation | 29.4 | 0.46 (usable) | +11.3 over 10 years using 2 indicators |
 | Agency | 36.3 | 0.54 (usable) | no trend |
 | Coordination | 70.3 | 0.39 (thin) | no trend |
-| Trust | 42.8 | 0.4 (thin) | no trend |
+| Trust | 35.1 | 0.5 (usable) | no trend |
 | Learning | 57.2 | 0.41 (thin) | no trend |
 | Experimentation | 2.2 | 0.24 (very thin) | +0.4 over 10 years using 3 indicators |
 | Adaptability | 78.7 | 0.67 (good) | +13.8 over 10 years using 3 indicators |
@@ -30,6 +30,16 @@ How capable is the country of identifying and preparing for emerging change?
 - Highest usable scores: Switzerland 96.3, Sweden 90, Finland 87.5.
 - Related deliveries in other countries: Embrapa, a fifty-year bet on tropical agriculture (Brazil); The Delta Programme and its fund (Netherlands); Lei de Informática, a sectoral industrial policy (Brazil); CGEE, the strategic studies center (Brazil); Centre for Strategic Futures, foresight inside government (Singapore); Legally binding carbon budgets (United Kingdom); Fukushima decommissioning roadmap, a 30–40-year risk-reduction horizon (Japan); National basic-research funding allocation (China); PLANAPP and REPLAN, a centre-of-government foresight network (Portugal); Labour Market Intelligence Programme and forward skills planning (South Africa); Government Report on the Future and the parliamentary Committee for the Future (Finland); Foresight Centre at the Riigikogu (Arenguseire Keskus) (Estonia); Office of Technology Assessment, defunded and closed in 1995 (United States); Rządowe Centrum Studiów Strategicznych, liquidated in 2006 (Poland); Office of Technology Assessment at the German Bundestag (TAB) (Germany); National Assembly Futures Institute (South Korea); Federal Chancellery situation and environment analysis (Perspektivstab) (Switzerland); Senate foresight delegation (Délégation sénatoriale à la prospective) (France); Senate Commission on Future Challenges, Science, Technology and Innovation (Chile).
 - Missing indicators: Government foresight capacity, Long-horizon research share.
+
+### Trust: 35.1, confidence usable
+
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 5 observed indicators.
+- Highest usable scores: Finland 90.7, Sweden 90.3, Switzerland 82.8.
+- Related deliveries in other countries: Cadastro Único, the unified social registry (Brazil); Portal da Transparência, the federal open-books system (Brazil); MyData, citizen-directed data portability (South Korea); Singapore Courts' case-clearance discipline (Singapore); Civil-court clearance and the CEPEJ monitoring series (Portugal).
+- Missing indicators: Trust in public institutions, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
 ### Building: 35.8, confidence usable
 
@@ -77,14 +87,6 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
-### Trust: confidence 0.4, thin
-
-How much cooperation is possible beyond immediate personal networks?
-
-- Uses 4 observed indicators.
-- Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
-
 ### Learning: confidence 0.41, thin
 
 How effectively does the country acquire, distribute, and update knowledge?
@@ -116,7 +118,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 ## Missing data
 
-20 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+19 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -126,7 +128,6 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
-| Trust | Cooperation beyond the in-group | Reported trust in people met for the first time and in people of another nationality. |
 | Trust | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Learning | Adult learning participation | Share of adults in formal or non-formal education and training in the last 12 months. |
 | Experimentation | Venture capital investment | Venture capital deployed as a share of GDP. |

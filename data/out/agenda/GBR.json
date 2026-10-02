@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T13:16:40.004Z",
+  "generatedAt": "2026-10-02T13:21:42.509Z",
   "iso3": "GBR",
   "country": "United Kingdom",
   "dimensions": [
@@ -782,7 +782,6 @@
       ],
       "gaps": [
         "institutional_trust",
-        "willingness_to_cooperate_strangers",
         "court_case_clearance"
       ],
       "retired": [
@@ -790,7 +789,26 @@
         "control_of_corruption",
         "homicide_rate"
       ],
-      "exemplars": [],
+      "exemplars": [
+        {
+          "iso3": "FIN",
+          "country": "Finland",
+          "score": 90.7,
+          "confidence": 0.498
+        },
+        {
+          "iso3": "SWE",
+          "country": "Sweden",
+          "score": 90.3,
+          "confidence": 0.498
+        },
+        {
+          "iso3": "CHE",
+          "country": "Switzerland",
+          "score": 82.8,
+          "confidence": 0.498
+        }
+      ],
       "evidenceElsewhere": [
         {
           "id": "bra-cadunico",
@@ -3103,5 +3121,5 @@
       "started": 2020
     }
   ],
-  "gapCount": 20
+  "gapCount": 19
 }

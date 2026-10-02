@@ -11,7 +11,7 @@ La comparación incluye 53 países. Cada dimensión recibe una puntuación de 0 
 | Anticipación | 42.3 | 0.46 (utilizable) | +13.8 en 10 años, sobre 2 indicadores |
 | Iniciativa | 51.4 | 0.56 (utilizable) | sin base de tendencia |
 | Coordinación | 61 | 0.37 (débil) | sin base de tendencia |
-| Confianza | 49.2 | 0.33 (débil) | sin base de tendencia |
+| Confianza | 46.5 | 0.43 (débil) | sin base de tendencia |
 | Aprendizaje | 37.5 | 0.36 (débil) | sin base de tendencia |
 | Experimentación | 19.6 | 0.43 (débil) | +1.3 en 10 años, sobre 3 indicadores |
 | Adaptación | 57 | 0.68 (buena) | -1.4 en 10 años, sobre 3 indicadores |
@@ -45,14 +45,6 @@ Estas son las puntuaciones más bajas con evidencia utilizable. Las dimensiones 
 
 La solidez de la evidencia está por debajo de la franja utilizable, así que la puntuación se apoya en poca evidencia.
 
-### Confianza: solidez 0.33, débil
-
-¿Cuánta cooperación es posible más allá de las redes personales inmediatas?
-
-- Basada en 4 indicadores observados.
-- Vacíos declarados: Confianza en las instituciones públicas, Cooperación más allá del propio grupo, Tasa de resolución de casos judiciales.
-- Bases descartadas: Estado de derecho, Control de la corrupción, Tasa de homicidios intencionales.
-
 ### Aprendizaje: solidez 0.36, débil
 
 ¿Con qué eficacia adquiere, distribuye y actualiza conocimiento el país?
@@ -67,6 +59,14 @@ La solidez de la evidencia está por debajo de la franja utilizable, así que la
 - Basada en 3 indicadores observados.
 - Vacíos declarados: Colaboración universidad-empresa, Colaboración público-privada.
 - Bases descartadas: Efectividad del gobierno, Calidad regulatoria, Desempeño logístico.
+
+### Confianza: solidez 0.43, débil
+
+¿Cuánta cooperación es posible más allá de las redes personales inmediatas?
+
+- Basada en 5 indicadores observados.
+- Vacíos declarados: Confianza en las instituciones públicas, Tasa de resolución de casos judiciales.
+- Bases descartadas: Estado de derecho, Control de la corrupción, Tasa de homicidios intencionales.
 
 ### Experimentación: solidez 0.43, débil
 
@@ -109,7 +109,7 @@ Las condiciones describen lo que un país tiene para trabajar: infraestructura, 
 
 ## ¿Qué falta medir?
 
-20 indicadores solicitados no tienen una base comparable, y cada uno baja la solidez. Un vacío se convierte en indicador con puntuación cuando una serie comparable cubre al menos dos países.
+19 indicadores solicitados no tienen una base comparable, y cada uno baja la solidez. Un vacío se convierte en indicador con puntuación cuando una serie comparable cubre al menos dos países.
 
 | Dimensión | Indicador ausente | Qué pregunta |
 | --- | --- | --- |
@@ -119,7 +119,6 @@ Las condiciones describen lo que un país tiene para trabajar: infraestructura, 
 | Coordinación | Colaboración universidad-empresa | Intensidad de la colaboración en investigación entre universidades y empresas. |
 | Coordinación | Colaboración público-privada | Frecuencia y escala de la ejecución conjunta, por gobierno y empresas, de objetivos nacionales. |
 | Confianza | Confianza en las instituciones públicas | Confianza en el gobierno nacional, los tribunales y el servicio público. |
-| Confianza | Cooperación más allá del propio grupo | Confianza declarada en personas que se conocen por primera vez y en personas de otra nacionalidad. |
 | Confianza | Tasa de resolución de casos judiciales | Casos civiles y comerciales resueltos en un año como proporción de los casos presentados en ese mismo año. |
 | Aprendizaje | Participación de adultos en aprendizaje | Proporción de adultos en educación o capacitación, formal o no, en los últimos 12 meses. |
 | Experimentación | Inversión de capital de riesgo | Capital de riesgo invertido como proporción del PIB. |

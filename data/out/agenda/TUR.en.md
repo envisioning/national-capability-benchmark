@@ -11,7 +11,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Anticipation | 49.3 | 0.46 (usable) | +9.4 over 10 years using 2 indicators |
 | Agency | 50.7 | 0.56 (usable) | no trend |
 | Coordination | 62.3 | 0.39 (thin) | no trend |
-| Trust | 48.8 | 0.4 (thin) | no trend |
+| Trust | 44.3 | 0.5 (usable) | no trend |
 | Learning | 34.5 | 0.54 (usable) | no trend |
 | Experimentation | 64 | 0.24 (very thin) | +12.3 over 10 years using 3 indicators |
 | Adaptability | 63.8 | 0.68 (good) | +13.8 over 10 years using 3 indicators, with 1 at the frame edge |
@@ -41,6 +41,16 @@ How capable is the country of turning plans and knowledge into functioning syste
 - Missing indicators: Large project delivery, Firm scale-up rate.
 - Rejected datasets: Logistics infrastructure quality.
 
+### Trust: 44.3, confidence usable
+
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 5 observed indicators.
+- Highest usable scores: Finland 90.7, Sweden 90.3, Switzerland 82.8.
+- Related deliveries in other countries: Cadastro Único, the unified social registry (Brazil); Portal da Transparência, the federal open-books system (Brazil); MyData, citizen-directed data portability (South Korea); Singapore Courts' case-clearance discipline (Singapore); Civil-court clearance and the CEPEJ monitoring series (Portugal).
+- Missing indicators: Trust in public institutions, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
+
 ### Anticipation: 49.3, confidence usable
 
 How capable is the country of identifying and preparing for emerging change?
@@ -68,14 +78,6 @@ How effectively can independent actors organize around shared objectives?
 - Uses 3 observed indicators.
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
-
-### Trust: confidence 0.4, thin
-
-How much cooperation is possible beyond immediate personal networks?
-
-- Uses 4 observed indicators.
-- Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
 ### Shared Purpose: confidence 0.42, thin
 
@@ -111,7 +113,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 ## Missing data
 
-20 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+19 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -121,7 +123,6 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
-| Trust | Cooperation beyond the in-group | Reported trust in people met for the first time and in people of another nationality. |
 | Trust | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Learning | Adult learning participation | Share of adults in formal or non-formal education and training in the last 12 months. |
 | Experimentation | Venture capital investment | Venture capital deployed as a share of GDP. |

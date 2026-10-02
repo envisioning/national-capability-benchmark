@@ -34,8 +34,10 @@ type PublishedRow = {
  * mapping and the same hold rule for countries with separate EVS and WVS rows
  * (D64). What differs is the table layout, so each item names where its table
  * starts and stops, which line is a country row and which published column is
- * the value. Nothing is computed from the category percentages: the value is
- * a number the publisher prints.
+ * the value. The value is a number the publisher prints, with one exception:
+ * G007_34_B stores the sum of two published columns, trust completely and
+ * trust somewhat, which share one denominator, so the sum is exact to the
+ * rounding of the printed figures. No other item may sum categories. See D140.
  */
 type JointEvsWvsItem = {
   variable: string
@@ -57,6 +59,10 @@ const toNumber = (text: string | undefined): number => Number(text?.replace(/,/g
 const CELL = '(-|[0-9]+(?:\\.[0-9]+)?)'
 const cell = (text: string | undefined): string => (text === '-' ? '0.0' : (text ?? ''))
 
+/** Two printed shares added and held at the printed resolution, so 1.1 + 38.3 stores 39.4. */
+const sumCells = (a: string | undefined, b: string | undefined): number =>
+  Math.round((Number(cell(a)) + Number(cell(b))) * 10) / 10
+
 /**
  * The items the adapter reads, each with the observation id it fills.
  *
@@ -67,6 +73,11 @@ const cell = (text: string | undefined): string => (text === '-' ? '0.0' : (text
  * E069_17 is a check, not an indicator: its id carries `CHECK_PREFIX`, so it
  * enters no frame, mean or confidence. Confidence in the courts reads highest
  * in the frame's closed and electoral autocracies (A13). See D132.
+ *
+ * G007_34_B is the share trusting a person met for the first time completely
+ * or somewhat, the one summed value the adapter stores. The note quotes both
+ * addends and every other published share, so the sum can be checked against
+ * the table by hand. See D140.
  */
 export const JOINT_EVS_WVS_ITEMS: readonly JointEvsWvsItem[] = [
   {
@@ -114,6 +125,21 @@ export const JOINT_EVS_WVS_ITEMS: readonly JointEvsWvsItem[] = [
     }),
     statistic: (row) =>
       `published share answering a great deal of confidence in the justice system and courts, over all respondents including don't know and no answer; the other published shares are ${row.detail}`,
+  },
+  {
+    variable: 'G007_34_B',
+    indicatorId: 'willingness_to_cooperate_strangers',
+    heading: 'Trust: People you meet for the first time (B)',
+    end: '\nTOTAL',
+    // label, sample size, trust completely, trust somewhat, do not trust very much, do not trust at all, don't know, no answer, missing
+    rowPattern: new RegExp(`^(.+?)\\s{2,}([\\d,]+)\\s+${CELL}\\s+${CELL}\\s+${CELL}\\s+${CELL}\\s+${CELL}\\s+${CELL}\\s+${CELL}\\s*$`, 'gm'),
+    read: (m) => ({
+      sampleSize: toNumber(m[2]),
+      value: sumCells(m[3], m[4]),
+      detail: `trust completely ${cell(m[3])} plus trust somewhat ${cell(m[4])}; the other published shares are do not trust very much ${cell(m[5])}, do not trust at all ${cell(m[6])}, don't know ${cell(m[7])}, no answer ${cell(m[8])}`,
+    }),
+    statistic: (row) =>
+      `sum of the two published shares trusting people met for the first time, over all respondents including don't know and no answer (D140): ${row.detail}`,
   },
 ]
 

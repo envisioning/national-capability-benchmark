@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-02T13:13:33.081Z",
-  "version": "7.7.1",
+  "generatedAt": "2026-10-02T13:21:30.631Z",
+  "version": "7.8.0",
   "country": {
     "country": "France",
     "iso3": "FRA",
@@ -1121,19 +1121,19 @@
         "conditions": []
       },
       "trust": {
-        "score": 76.5,
-        "observedIndicators": 4,
+        "score": 69.2,
+        "observedIndicators": 5,
         "belowCoverageFloor": false,
-        "confidence": 0.396,
+        "confidence": 0.498,
         "confidenceParts": {
-          "coverage": 0.571,
-          "recency": 0.854,
-          "sourceQuality": 0.813
+          "coverage": 0.714,
+          "recency": 0.85,
+          "sourceQuality": 0.82
         },
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 76.5,
+        "blendedScore": 69.2,
         "blendedFrom": "indicators",
         "momentum": [],
         "indicators": [
@@ -1391,16 +1391,23 @@
             "indicatorId": "willingness_to_cooperate_strangers",
             "name": "Cooperation beyond the in-group",
             "measurementClass": "P",
-            "raw": null,
-            "transformed": null,
-            "normalized": null,
-            "year": null,
-            "source": "World Values Survey",
-            "sourceTier": null,
+            "raw": 34.3,
+            "transformed": 34.3,
+            "normalized": 40.1,
+            "year": 2022,
+            "source": "Joint EVS/WVS (G007_34_B)",
+            "sourceTier": "academic_survey",
             "winsorized": false,
             "outOfFrame": false,
-            "series": [],
-            "status": "gap"
+            "series": [
+              {
+                "year": 2022,
+                "raw": 34.3,
+                "normalized": 40.1,
+                "tier": "academic_survey"
+              }
+            ],
+            "status": "observed"
           },
           {
             "indicatorId": "court_case_clearance",

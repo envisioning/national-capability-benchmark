@@ -11,7 +11,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Anticipation | 22.3 | 0.46 (usable) | +10.5 over 10 years using 2 indicators |
 | Agency | 41.3 | 0.56 (usable) | no trend |
 | Coordination | 76.2 | 0.41 (thin) | no trend |
-| Trust | 41.9 | 0.4 (thin) | no trend |
+| Trust | 45.6 | 0.5 (usable) | no trend |
 | Learning | 19.7 | 0.49 (usable) | no trend |
 | Experimentation | 0.2 | 0.16 (very thin) | no trend |
 | Adaptability | 49.9 | 0.55 (usable) | -10.6 over 10 years using 3 indicators |
@@ -59,6 +59,16 @@ How able are individuals and organizations to turn an intention into action?
 - Related deliveries in other countries: SIBRATEC, the documented innovation-centre network (Brazil); Singapore's national ICT-skills measurement and baseline (Singapore); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (India); Puntos México Conectado, national digital learning centres (Mexico).
 - Missing indicators: Adult digital skills.
 
+### Trust: 45.6, confidence usable
+
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 5 observed indicators.
+- Highest usable scores: Finland 90.7, Sweden 90.3, Switzerland 82.8.
+- Related deliveries in other countries: Cadastro Único, the unified social registry (Brazil); Portal da Transparência, the federal open-books system (Brazil); MyData, citizen-directed data portability (South Korea); Singapore Courts' case-clearance discipline (Singapore); Civil-court clearance and the CEPEJ monitoring series (Portugal).
+- Missing indicators: Trust in public institutions, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
+
 ### Adaptability: 49.9, confidence usable
 
 How effectively can the system respond when circumstances change?
@@ -87,14 +97,6 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
 
-### Trust: confidence 0.4, thin
-
-How much cooperation is possible beyond immediate personal networks?
-
-- Uses 4 observed indicators.
-- Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
-
 ### Coordination: confidence 0.41, thin
 
 How effectively can independent actors organize around shared objectives?
@@ -122,7 +124,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 ## Missing data
 
-20 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+19 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -132,7 +134,6 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
-| Trust | Cooperation beyond the in-group | Reported trust in people met for the first time and in people of another nationality. |
 | Trust | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Learning | Adult learning participation | Share of adults in formal or non-formal education and training in the last 12 months. |
 | Experimentation | Venture capital investment | Venture capital deployed as a share of GDP. |

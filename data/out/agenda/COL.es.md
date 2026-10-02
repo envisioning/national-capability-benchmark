@@ -11,7 +11,7 @@ La comparación incluye 53 países. Cada dimensión recibe una puntuación de 0 
 | Anticipación | 44.8 | 0.46 (utilizable) | +11.9 en 10 años, sobre 2 indicadores |
 | Iniciativa | 65.5 | 0.56 (utilizable) | sin base de tendencia |
 | Coordinación | 60.8 | 0.39 (débil) | sin base de tendencia |
-| Confianza | 46.4 | 0.39 (débil) | sin base de tendencia |
+| Confianza | 39.1 | 0.49 (utilizable) | sin base de tendencia |
 | Aprendizaje | 35.1 | 0.52 (utilizable) | sin base de tendencia |
 | Experimentación | 32.7 | 0.41 (débil) | +0.9 en 10 años, sobre 3 indicadores |
 | Adaptación | 62.9 | 0.68 (buena) | +0.7 en 10 años, sobre 3 indicadores |
@@ -41,6 +41,16 @@ Estas son las puntuaciones más bajas con evidencia utilizable. Las dimensiones 
 - Entregas documentadas en otros países: SkillsFuture Credit (Singapur); The public library system (Finlandia); Kartu Prakerja, a national lifelong-learning delivery system (Indonesia); Compte personnel de formation (Francia); Programa Qualifica and Portugal's adult-learning network (Portugal); Novas Oportunidades, and the qualification-policy interruption (Portugal); SWAYAM national online-course platform (India); SETAs and workplace-based learning delivery (Sudáfrica); MEB public lifelong-learning network (Turquía); Kenya's adult education centres, and their halving (Kenia); Rwanda's adult literacy centres, and their decline (Ruanda); Integrated Functional Adult Education, and its erosion (Etiopía); Instituto Técnico de Capacitación y Productividad (INTECAP) (Guatemala); INFOTEP national technical and vocational training (República Dominicana); Campaña Nacional de Alfabetización (Cuba); VET FEE-HELP, and its abolition (Australia); Adult education allowance (aikuiskoulutustuki), and its abolition (Finlandia); INEFOP, the tripartite national training institute (Uruguay); Franquicia Tributaria SENCE, and its erosion (Chile); Employer and in-work training under Employment Insurance, and its erosion (Corea del Sur); TESDA technical-vocational training at national scale (Filipinas); INADEH national vocational training (Panamá); Yo, sí puedo national literacy campaign and post-literacy programme (Bolivia); Project 1956 vocational training for rural workers (Vietnam); Bildungsprämie training voucher, and its end (Alemania); Aufstiegs-BAföG, upgrading training support (Alemania); Formación programada por las empresas (FUNDAE training credit) (España); Community Education and Training colleges, and their erosion (Sudáfrica); Vocational skills upgrading action, 2019-2021 (China); INA national vocational training, and its contraction (Costa Rica); Kunskapslyftet adult education initiative (Suecia); Springboard+ upskilling programme (Irlanda); State-administered adult education under the Adult Education and Family Literacy Act, and its erosion (Estados Unidos); STAP-budget training grant, abolished in 2024 (Países Bajos); INEA adult basic education (México); Hello Training, public vocational training (Japón).
 - Vacíos declarados: Participación de adultos en aprendizaje.
 
+### Confianza: 39.1, solidez utilizable
+
+¿Cuánta cooperación es posible más allá de las redes personales inmediatas?
+
+- Basada en 5 indicadores observados.
+- Puntuaciones utilizables más altas: Finlandia 90.7, Suecia 90.3, Suiza 82.8.
+- Entregas documentadas en otros países: Cadastro Único, the unified social registry (Brasil); Portal da Transparência, the federal open-books system (Brasil); MyData, citizen-directed data portability (Corea del Sur); Singapore Courts' case-clearance discipline (Singapur); Civil-court clearance and the CEPEJ monitoring series (Portugal).
+- Vacíos declarados: Confianza en las instituciones públicas, Tasa de resolución de casos judiciales.
+- Bases descartadas: Estado de derecho, Control de la corrupción, Tasa de homicidios intencionales.
+
 ### Anticipación: 44.8, solidez utilizable
 
 ¿Qué tan capaz es el país de identificar cambios emergentes y prepararse para ellos?
@@ -61,14 +71,6 @@ La solidez de la evidencia está por debajo de la franja utilizable, así que la
 - Basada en 3 indicadores observados.
 - Vacíos declarados: Colaboración universidad-empresa, Colaboración público-privada.
 - Bases descartadas: Efectividad del gobierno, Calidad regulatoria, Desempeño logístico.
-
-### Confianza: solidez 0.39, débil
-
-¿Cuánta cooperación es posible más allá de las redes personales inmediatas?
-
-- Basada en 4 indicadores observados.
-- Vacíos declarados: Confianza en las instituciones públicas, Cooperación más allá del propio grupo, Tasa de resolución de casos judiciales.
-- Bases descartadas: Estado de derecho, Control de la corrupción, Tasa de homicidios intencionales.
 
 ### Experimentación: solidez 0.41, débil
 
@@ -111,7 +113,7 @@ Las condiciones describen lo que un país tiene para trabajar: infraestructura, 
 
 ## ¿Qué falta medir?
 
-20 indicadores solicitados no tienen una base comparable, y cada uno baja la solidez. Un vacío se convierte en indicador con puntuación cuando una serie comparable cubre al menos dos países.
+19 indicadores solicitados no tienen una base comparable, y cada uno baja la solidez. Un vacío se convierte en indicador con puntuación cuando una serie comparable cubre al menos dos países.
 
 | Dimensión | Indicador ausente | Qué pregunta |
 | --- | --- | --- |
@@ -121,7 +123,6 @@ Las condiciones describen lo que un país tiene para trabajar: infraestructura, 
 | Coordinación | Colaboración universidad-empresa | Intensidad de la colaboración en investigación entre universidades y empresas. |
 | Coordinación | Colaboración público-privada | Frecuencia y escala de la ejecución conjunta, por gobierno y empresas, de objetivos nacionales. |
 | Confianza | Confianza en las instituciones públicas | Confianza en el gobierno nacional, los tribunales y el servicio público. |
-| Confianza | Cooperación más allá del propio grupo | Confianza declarada en personas que se conocen por primera vez y en personas de otra nacionalidad. |
 | Confianza | Tasa de resolución de casos judiciales | Casos civiles y comerciales resueltos en un año como proporción de los casos presentados en ese mismo año. |
 | Aprendizaje | Participación de adultos en aprendizaje | Proporción de adultos en educación o capacitación, formal o no, en los últimos 12 meses. |
 | Experimentación | Inversión de capital de riesgo | Capital de riesgo invertido como proporción del PIB. |

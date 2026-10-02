@@ -38,9 +38,9 @@ each dimension's correlation with log GDP per capita. Above 0.70 is a finding
 against the claim, to be read and published. It is not a target, and no row is
 added or dropped to move it.
 
-**Guardrail.** Confidence must not come to track wealth. At 7.7.1 the mean
-confidence across dimensions correlates with log GDP per capita at r = 0.30
-across 51 countries. The bought conditions that left the scores (D122) were
+**Guardrail.** Confidence must not come to track wealth. At 7.8.0 the mean
+confidence across dimensions correlates with log GDP per capita at r = 0.28
+across 51 countries (0.30 at 7.7.1, before trust in strangers). The bought conditions that left the scores (D122) were
 better covered in rich countries, and the ILOSTAT row's plausibility gate still
 holds or ages more middle-income countries than rich ones. Watch it, and read
 the next source's effect on it first. A source that only covers rich countries
@@ -48,13 +48,13 @@ raises O1 and breaks this.
 
 ### Where the objectives stand
 
-Dataset 7.7.1 (V-Dem v16). Recompute from `data/out/diagnostics.json` and
+Dataset 7.8.0 (V-Dem v16, trust in strangers). Recompute from `data/out/diagnostics.json` and
 `data/out/index.json` after any rescore; never carry these figures forward by
 hand.
 
 | Dimension | Mean confidence | Observed rows (mean) | r with log GDP | Reading |
 | --- | ---: | ---: | ---: | --- |
-| Trust | 0.35 | 3.6 | 0.68 | misses O1 |
+| Trust | 0.42 | 4.3 | 0.61 | |
 | Experimentation | 0.27 | 3.5 | 0.57 | misses O1 |
 | Shared purpose | 0.34 | 2.6 | 0.20 (n 50) | misses O1 |
 | Coordination | 0.36 | 2.8 | 0.56 | misses O1 |
@@ -114,7 +114,7 @@ passes triage runs to its gate. One that fails triage costs one paragraph.
 | Q3 | Construct audit of stock rows | Reported O2: Anticipation, Agency, Learning | Done for Tier A at 7.0.0: ten bought conditions moved to the conditions layer (`docs/research/CONDITIONS-AUDIT.md`, D122). Open: the six Tier B rows, each only once its dimension has a capability row to replace it, and replacements for the two borderline rows, `sci_articles_per_million` and `human_capital_index` | One decision per Tier B row; OpenAlex impact and a learning-outcome series as replacements |
 | Q4 | Reopen exclusions that rested on income alone | O1: Trust | `bribery_incidence` (check since D60) | Done: scored in Trust (D123), 50 / 53 |
 | Q5 | V-Dem sweep | O1: Trust, Coordination, Shared purpose | The pinned V-Dem adapter, 53 / 53. Polarization is published as a check (D121) | Done: court compliance scored in Trust (D131); nothing for Coordination |
-| Q6 | EVS/WVS sweep beyond A165 | O1: Shared purpose, Trust | The Joint EVS/WVS adapter (TRUST-1) | Triage table of behavioural items (membership, volunteering, participation) |
+| Q6 | EVS/WVS sweep beyond A165 | O1: Shared purpose, Trust | The Joint EVS/WVS adapter (TRUST-1) | Done: trust in strangers scored in Trust (D140), 37 / 53 |
 | Q7 | OpenAlex research impact | Learning | OpenAlex API, full frame. Memo on #23 recommends the share of works in the top 10% for their field, as a ratio to world | Wired as `research_citation_impact` (D124), 53 / 53 |
 | Q8 | IDEA voter turnout | O1: Shared purpose | IDEA open data, full frame | Triage note, including the compulsory-voting rule |
 | Q9 | Full Delphi rerun (TRUST-5) | Reading, not measurement | Needs `AI_GATEWAY_API_KEY` | After the dataset changes |
@@ -130,11 +130,13 @@ log GDP 0.44. It fails A13 (closed autocracies read highest), so the proposal
 is a check, `__check__disaster_warning_reach`, and the gap stays declared.
 `institutional_responsiveness`: no source other than OxCGRT exists.
 
-**Q6 status (2026-10-02): triaged, one item to wire.** Memo:
+**Q6 status (2026-10-02): done, one row scored (D140, dataset 7.8.0).** Memo:
 `docs/research/shared-purpose/EVS-WVS-BEHAVIOURAL-ITEMS.md`. Trust in people
 met for the first time (G007_34_B) fills `willingness_to_cooperate_strangers`,
-37 of 53, scored as the share trusting completely or somewhat (decided
-2026-10-02). Petitions (E025) rejected on A5. The release has no volunteering
+37 of 53, scored as the share trusting completely or somewhat. Trust's mean
+confidence 0.347 to 0.418, which clears O1; r with log GDP 0.675 to 0.606;
+scored countries 52 either way. The guardrail moves from 0.298 to 0.278. The
+D137 factor share moves from 0.531 to 0.523, and no D138 reading changes. Petitions (E025) rejected on A5. The release has no volunteering
 item, and national pride fails A13 for `national_belonging`.
 
 **Experimentation (2026-10-02).** Memo:

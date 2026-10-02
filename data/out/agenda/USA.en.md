@@ -11,7 +11,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Anticipation | 72.7 | 0.46 (usable) | +0.5 over 10 years using 2 indicators |
 | Agency | 83.4 | 0.37 (thin) | no trend |
 | Coordination | 98.6 | 0.23 (very thin) | no trend |
-| Trust | 74.6 | 0.4 (thin) | no trend |
+| Trust | 69.3 | 0.5 (usable) | no trend |
 | Learning | 45.5 | 0.47 (usable) | no trend |
 | Experimentation | 49.5 | 0.43 (thin) | +0.8 over 10 years using 3 indicators |
 | Adaptability | 81.8 | 0.68 (good) | +3.4 over 10 years using 3 indicators |
@@ -50,14 +50,6 @@ How able are individuals and organizations to turn an intention into action?
 - Uses 3 observed indicators.
 - Missing indicators: Adult digital skills.
 
-### Trust: confidence 0.4, thin
-
-How much cooperation is possible beyond immediate personal networks?
-
-- Uses 4 observed indicators.
-- Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
-
 ### Experimentation: confidence 0.43, thin
 
 How easily can new approaches be attempted, tested, abandoned, and improved?
@@ -79,6 +71,7 @@ These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 81.8, confidence good
 - Anticipation: 72.7, confidence usable
+- Trust: 69.3, confidence usable
 - Building: 58.2, confidence usable
 
 ## What the United States has to work with
@@ -100,7 +93,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 ## Missing data
 
-20 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+19 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -110,7 +103,6 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
-| Trust | Cooperation beyond the in-group | Reported trust in people met for the first time and in people of another nationality. |
 | Trust | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Learning | Adult learning participation | Share of adults in formal or non-formal education and training in the last 12 months. |
 | Experimentation | Venture capital investment | Venture capital deployed as a share of GDP. |

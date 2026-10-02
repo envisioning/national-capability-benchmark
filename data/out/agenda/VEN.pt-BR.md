@@ -11,7 +11,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Antecipação | 0,9 | 0,46 (utilizável) | -5,5 em 10 anos, sobre 2 indicadores |
 | Agência | 25,8 | 0,37 (fraca) | sem base de tendência |
 | Coordenação | 16,2 | 0,22 (muito fraca) | sem base de tendência |
-| Confiança | 36,2 | 0,29 (fraca) | sem base de tendência |
+| Confiança | 31,1 | 0,39 (fraca) | sem base de tendência |
 | Aprendizagem | 31,6 | 0,23 (muito fraca) | sem base de tendência |
 | Experimentação | 5,2 | 0,09 (muito fraca) | sem base de tendência |
 | Adaptação | 39,4 | 0,59 (utilizável) | +2,6 em 10 anos, sobre 3 indicadores, 1 truncados na borda da régua |
@@ -82,20 +82,20 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística.
 
-### Confiança: solidez 0,29, fraca
-
-Quanta cooperação é possível além das redes pessoais imediatas?
-
-- Baseada em 4 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Taxa de resolução de processos judiciais.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
-
 ### Agência: solidez 0,37, fraca
 
 Quão capazes são pessoas e organizações de transformar uma intenção em ação?
 
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Habilidades digitais de adultos.
+
+### Confiança: solidez 0,39, fraca
+
+Quanta cooperação é possível além das redes pessoais imediatas?
+
+- Baseada em 5 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ## O que a Venezuela tem para trabalhar
 
@@ -115,7 +115,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 ## Agenda de medição
 
-20 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+19 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -125,7 +125,6 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Coordenação | Colaboração universidade-empresa | Intensidade da colaboração de pesquisa entre universidades e empresas. |
 | Coordenação | Colaboração público-privada | Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
-| Confiança | Cooperação além do próprio grupo | Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade. |
 | Confiança | Taxa de resolução de processos judiciais | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Aprendizagem | Participação de adultos em aprendizagem | Parcela de adultos em educação e treinamento, formal ou não, nos últimos 12 meses. |
 | Experimentação | Investimento de capital de risco | Capital de risco investido como parcela do PIB. |

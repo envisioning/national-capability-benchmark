@@ -11,7 +11,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Antecipação | 51,2 | 0,46 (utilizável) | +10,9 em 10 anos, sobre 2 indicadores |
 | Agência | 64,8 | 0,56 (utilizável) | sem base de tendência |
 | Coordenação | 71,3 | 0,37 (fraca) | sem base de tendência |
-| Confiança | 44,4 | 0,39 (fraca) | sem base de tendência |
+| Confiança | 37,1 | 0,49 (utilizável) | sem base de tendência |
 | Aprendizagem | 41,7 | 0,52 (utilizável) | sem base de tendência |
 | Experimentação | 26,9 | 0,43 (fraca) | +0,6 em 10 anos, sobre 3 indicadores |
 | Adaptação | 69,2 | 0,54 (utilizável) | +6,4 em 10 anos, sobre 3 indicadores |
@@ -21,6 +21,16 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 ## Dimensões para elevar
 
 Estas são as notas mais baixas com evidência utilizável. A evidência fraca aparece abaixo.
+
+### Confiança: 37,1, solidez utilizável
+
+Quanta cooperação é possível além das redes pessoais imediatas?
+
+- Baseada em 5 indicadores observados.
+- Maiores notas utilizáveis: Finlândia 90,7, Suécia 90,3, Suíça 82,8.
+- Entregas documentadas em outros países: Cadastro Único, the unified social registry (Brasil); Portal da Transparência, the federal open-books system (Brasil); MyData, citizen-directed data portability (Coreia do Sul); Singapore Courts' case-clearance discipline (Singapura); Civil-court clearance and the CEPEJ monitoring series (Portugal).
+- Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ### Aprendizagem: 41,7, solidez utilizável
 
@@ -52,14 +62,6 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
-
-### Confiança: solidez 0,39, fraca
-
-Quanta cooperação é possível além das redes pessoais imediatas?
-
-- Baseada em 4 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Taxa de resolução de processos judiciais.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ### Experimentação: solidez 0,43, fraca
 
@@ -103,7 +105,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 ## Agenda de medição
 
-20 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+19 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -113,7 +115,6 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Coordenação | Colaboração universidade-empresa | Intensidade da colaboração de pesquisa entre universidades e empresas. |
 | Coordenação | Colaboração público-privada | Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
-| Confiança | Cooperação além do próprio grupo | Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade. |
 | Confiança | Taxa de resolução de processos judiciais | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Aprendizagem | Participação de adultos em aprendizagem | Parcela de adultos em educação e treinamento, formal ou não, nos últimos 12 meses. |
 | Experimentação | Investimento de capital de risco | Capital de risco investido como parcela do PIB. |

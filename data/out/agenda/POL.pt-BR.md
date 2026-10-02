@@ -11,7 +11,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Antecipação | 65,6 | 0,46 (utilizável) | +8,4 em 10 anos, sobre 2 indicadores |
 | Agência | 43,7 | 0,56 (utilizável) | sem base de tendência |
 | Coordenação | 87,4 | 0,41 (fraca) | sem base de tendência |
-| Confiança | 61,2 | 0,4 (fraca) | sem base de tendência |
+| Confiança | 54,4 | 0,5 (utilizável) | sem base de tendência |
 | Aprendizagem | 45 | 0,54 (utilizável) | sem base de tendência |
 | Experimentação | 20,6 | 0,24 (muito fraca) | -2,6 em 10 anos, sobre 2 indicadores |
 | Adaptação | 80,1 | 0,68 (boa) | +11,2 em 10 anos, sobre 3 indicadores |
@@ -61,14 +61,6 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Investimento de capital de risco, Atividade de sandbox regulatório, Empresas nascidas de universidades, Parcela empresarial do P&D.
 
-### Confiança: solidez 0,4, fraca
-
-Quanta cooperação é possível além das redes pessoais imediatas?
-
-- Baseada em 4 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Taxa de resolução de processos judiciais.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
-
 ### Propósito compartilhado: solidez 0,41, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
@@ -91,6 +83,7 @@ Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 80,1, solidez boa
 - Antecipação: 65,6, solidez utilizável
+- Confiança: 54,4, solidez utilizável
 
 ## O que a Polônia tem para trabalhar
 
@@ -111,7 +104,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 ## Agenda de medição
 
-20 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+19 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -121,7 +114,6 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Coordenação | Colaboração universidade-empresa | Intensidade da colaboração de pesquisa entre universidades e empresas. |
 | Coordenação | Colaboração público-privada | Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
-| Confiança | Cooperação além do próprio grupo | Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade. |
 | Confiança | Taxa de resolução de processos judiciais | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Aprendizagem | Participação de adultos em aprendizagem | Parcela de adultos em educação e treinamento, formal ou não, nos últimos 12 meses. |
 | Experimentação | Investimento de capital de risco | Capital de risco investido como parcela do PIB. |

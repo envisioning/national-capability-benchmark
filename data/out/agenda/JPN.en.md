@@ -11,7 +11,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Anticipation | 64 | 0.46 (usable) | +13.5 over 10 years using 2 indicators |
 | Agency | 37.8 | 0.56 (usable) | no trend |
 | Coordination | 63.5 | 0.39 (thin) | no trend |
-| Trust | 79.4 | 0.4 (thin) | no trend |
+| Trust | 64.3 | 0.5 (usable) | no trend |
 | Learning | 43.4 | 0.54 (usable) | no trend |
 | Experimentation | 67.2 | 0.24 (very thin) | -6.3 over 10 years using 3 indicators |
 | Adaptability | 82.1 | 0.6 (usable) | +6.5 over 10 years using 3 indicators |
@@ -67,19 +67,12 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
-### Trust: confidence 0.4, thin
-
-How much cooperation is possible beyond immediate personal networks?
-
-- Uses 4 observed indicators.
-- Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
-
 ## What to keep watching
 
 These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 82.1, confidence usable
+- Trust: 64.3, confidence usable
 - Anticipation: 64, confidence usable
 - Building: 54.8, confidence usable
 
@@ -102,7 +95,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 ## Missing data
 
-20 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+19 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -112,7 +105,6 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
-| Trust | Cooperation beyond the in-group | Reported trust in people met for the first time and in people of another nationality. |
 | Trust | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Learning | Adult learning participation | Share of adults in formal or non-formal education and training in the last 12 months. |
 | Experimentation | Venture capital investment | Venture capital deployed as a share of GDP. |

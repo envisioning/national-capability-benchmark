@@ -9,6 +9,21 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## Dataset 7.8.0 — 2026-10-02
+
+- **Trust now reads trust in strangers.** A new Trust row measures the share
+  of adults who trust people they meet for the first time completely or
+  somewhat, from the same Joint EVS/WVS release as generalised trust, in 37
+  countries. It ranges from 7.8 in Ecuador to 73.9 in Sweden, and Brazil
+  reads 22.7. Countries where people trust "most people" but not a stranger
+  fall: Japan from 79.4 to 64.3 on Trust, Singapore from 84.6 to 70.8, South
+  Korea from 80.8 to 67.6 and China from 67.6 to 55.8. Ethiopia rises from
+  41.9 to 45.6. Trust's mean confidence goes from 0.35 to 0.42 and its
+  correlation with income from 0.675 to 0.606. The value adds two published
+  columns, which is the one place the benchmark sums a survey's categories
+  (D140). Germany, the United Kingdom and the Netherlands are held, as for
+  generalised trust. Same 53 countries.
+
 ## App 1.24.7 — 2026-10-02
 
 - **The polarization limit is restated on V-Dem's 2026 release.** Closed

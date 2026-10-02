@@ -11,7 +11,7 @@ La comparación incluye 53 países. Cada dimensión recibe una puntuación de 0 
 | Anticipación | 51.2 | 0.46 (utilizable) | +10.9 en 10 años, sobre 2 indicadores |
 | Iniciativa | 64.8 | 0.56 (utilizable) | sin base de tendencia |
 | Coordinación | 71.3 | 0.37 (débil) | sin base de tendencia |
-| Confianza | 44.4 | 0.39 (débil) | sin base de tendencia |
+| Confianza | 37.1 | 0.49 (utilizable) | sin base de tendencia |
 | Aprendizaje | 41.7 | 0.52 (utilizable) | sin base de tendencia |
 | Experimentación | 26.9 | 0.43 (débil) | +0.6 en 10 años, sobre 3 indicadores |
 | Adaptación | 69.2 | 0.54 (utilizable) | +6.4 en 10 años, sobre 3 indicadores |
@@ -21,6 +21,16 @@ La comparación incluye 53 países. Cada dimensión recibe una puntuación de 0 
 ## Puntuaciones bajas con evidencia utilizable
 
 Estas son las puntuaciones más bajas con evidencia utilizable. Las dimensiones con evidencia débil aparecen más abajo.
+
+### Confianza: 37.1, solidez utilizable
+
+¿Cuánta cooperación es posible más allá de las redes personales inmediatas?
+
+- Basada en 5 indicadores observados.
+- Puntuaciones utilizables más altas: Finlandia 90.7, Suecia 90.3, Suiza 82.8.
+- Entregas documentadas en otros países: Cadastro Único, the unified social registry (Brasil); Portal da Transparência, the federal open-books system (Brasil); MyData, citizen-directed data portability (Corea del Sur); Singapore Courts' case-clearance discipline (Singapur); Civil-court clearance and the CEPEJ monitoring series (Portugal).
+- Vacíos declarados: Confianza en las instituciones públicas, Tasa de resolución de casos judiciales.
+- Bases descartadas: Estado de derecho, Control de la corrupción, Tasa de homicidios intencionales.
 
 ### Aprendizaje: 41.7, solidez utilizable
 
@@ -52,14 +62,6 @@ La solidez de la evidencia está por debajo de la franja utilizable, así que la
 - Basada en 3 indicadores observados.
 - Vacíos declarados: Colaboración universidad-empresa, Colaboración público-privada.
 - Bases descartadas: Efectividad del gobierno, Calidad regulatoria, Desempeño logístico.
-
-### Confianza: solidez 0.39, débil
-
-¿Cuánta cooperación es posible más allá de las redes personales inmediatas?
-
-- Basada en 4 indicadores observados.
-- Vacíos declarados: Confianza en las instituciones públicas, Cooperación más allá del propio grupo, Tasa de resolución de casos judiciales.
-- Bases descartadas: Estado de derecho, Control de la corrupción, Tasa de homicidios intencionales.
 
 ### Experimentación: solidez 0.43, débil
 
@@ -103,7 +105,7 @@ Las condiciones describen lo que un país tiene para trabajar: infraestructura, 
 
 ## ¿Qué falta medir?
 
-20 indicadores solicitados no tienen una base comparable, y cada uno baja la solidez. Un vacío se convierte en indicador con puntuación cuando una serie comparable cubre al menos dos países.
+19 indicadores solicitados no tienen una base comparable, y cada uno baja la solidez. Un vacío se convierte en indicador con puntuación cuando una serie comparable cubre al menos dos países.
 
 | Dimensión | Indicador ausente | Qué pregunta |
 | --- | --- | --- |
@@ -113,7 +115,6 @@ Las condiciones describen lo que un país tiene para trabajar: infraestructura, 
 | Coordinación | Colaboración universidad-empresa | Intensidad de la colaboración en investigación entre universidades y empresas. |
 | Coordinación | Colaboración público-privada | Frecuencia y escala de la ejecución conjunta, por gobierno y empresas, de objetivos nacionales. |
 | Confianza | Confianza en las instituciones públicas | Confianza en el gobierno nacional, los tribunales y el servicio público. |
-| Confianza | Cooperación más allá del propio grupo | Confianza declarada en personas que se conocen por primera vez y en personas de otra nacionalidad. |
 | Confianza | Tasa de resolución de casos judiciales | Casos civiles y comerciales resueltos en un año como proporción de los casos presentados en ese mismo año. |
 | Aprendizaje | Participación de adultos en aprendizaje | Proporción de adultos en educación o capacitación, formal o no, en los últimos 12 meses. |
 | Experimentación | Inversión de capital de riesgo | Capital de riesgo invertido como proporción del PIB. |

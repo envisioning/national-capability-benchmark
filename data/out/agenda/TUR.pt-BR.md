@@ -11,7 +11,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Antecipação | 49,3 | 0,46 (utilizável) | +9,4 em 10 anos, sobre 2 indicadores |
 | Agência | 50,7 | 0,56 (utilizável) | sem base de tendência |
 | Coordenação | 62,3 | 0,39 (fraca) | sem base de tendência |
-| Confiança | 48,8 | 0,4 (fraca) | sem base de tendência |
+| Confiança | 44,3 | 0,5 (utilizável) | sem base de tendência |
 | Aprendizagem | 34,5 | 0,54 (utilizável) | sem base de tendência |
 | Experimentação | 64 | 0,24 (muito fraca) | +12,3 em 10 anos, sobre 3 indicadores |
 | Adaptação | 63,8 | 0,68 (boa) | +13,8 em 10 anos, sobre 3 indicadores, 1 truncados na borda da régua |
@@ -41,6 +41,16 @@ Quão capaz é o país de transformar planos e conhecimento em sistemas que func
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística.
 
+### Confiança: 44,3, solidez utilizável
+
+Quanta cooperação é possível além das redes pessoais imediatas?
+
+- Baseada em 5 indicadores observados.
+- Maiores notas utilizáveis: Finlândia 90,7, Suécia 90,3, Suíça 82,8.
+- Entregas documentadas em outros países: Cadastro Único, the unified social registry (Brasil); Portal da Transparência, the federal open-books system (Brasil); MyData, citizen-directed data portability (Coreia do Sul); Singapore Courts' case-clearance discipline (Singapura); Civil-court clearance and the CEPEJ monitoring series (Portugal).
+- Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
+
 ### Antecipação: 49,3, solidez utilizável
 
 Quão capaz é o país de identificar mudanças emergentes e se preparar para elas?
@@ -68,14 +78,6 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Baseada em 3 indicadores observados.
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
-
-### Confiança: solidez 0,4, fraca
-
-Quanta cooperação é possível além das redes pessoais imediatas?
-
-- Baseada em 4 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Cooperação além do próprio grupo, Taxa de resolução de processos judiciais.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
 
 ### Propósito compartilhado: solidez 0,42, fraca
 
@@ -111,7 +113,7 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 
 ## Agenda de medição
 
-20 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+19 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
 
 | Dimensão | Indicador ausente | O que ele pergunta |
 | --- | --- | --- |
@@ -121,7 +123,6 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Coordenação | Colaboração universidade-empresa | Intensidade da colaboração de pesquisa entre universidades e empresas. |
 | Coordenação | Colaboração público-privada | Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
-| Confiança | Cooperação além do próprio grupo | Confiança declarada em pessoas encontradas pela primeira vez e em pessoas de outra nacionalidade. |
 | Confiança | Taxa de resolução de processos judiciais | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Aprendizagem | Participação de adultos em aprendizagem | Parcela de adultos em educação e treinamento, formal ou não, nos últimos 12 meses. |
 | Experimentação | Investimento de capital de risco | Capital de risco investido como parcela do PIB. |

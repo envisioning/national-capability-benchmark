@@ -11,7 +11,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Anticipation | 76.6 | 0.46 (usable) | +17.8 over 10 years using 2 indicators |
 | Agency | 61 | 0.54 (usable) | no trend |
 | Coordination | 87 | 0.4 (thin) | no trend |
-| Trust | 80.8 | 0.4 (thin) | no trend |
+| Trust | 67.6 | 0.5 (usable) | no trend |
 | Learning | 42.4 | 0.54 (usable) | no trend |
 | Experimentation | 77.7 | 0.43 (thin) | +11.3 over 10 years using 3 indicators, with 1 at the frame edge |
 | Adaptability | 76.9 | 0.54 (usable) | +5.2 over 10 years using 3 indicators |
@@ -43,14 +43,6 @@ To what extent can people imagine themselves as participants in a common project
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
 
-### Trust: confidence 0.4, thin
-
-How much cooperation is possible beyond immediate personal networks?
-
-- Uses 4 observed indicators.
-- Missing indicators: Trust in public institutions, Cooperation beyond the in-group, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
-
 ### Coordination: confidence 0.4, thin
 
 How effectively can independent actors organize around shared objectives?
@@ -73,6 +65,7 @@ These dimensions score at least 50 with usable evidence.
 - Adaptability: 76.9, confidence usable
 - Anticipation: 76.6, confidence usable
 - Building: 69.8, confidence usable
+- Trust: 67.6, confidence usable
 - Agency: 61, confidence usable
 
 ## What South Korea has to work with
@@ -94,7 +87,7 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 
 ## Missing data
 
-20 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
+19 requested indicators have no comparable dataset, and each one lowers confidence. A gap can become an indicator when a comparable series covers at least two countries.
 
 | Dimension | Missing indicator | What it asks |
 | --- | --- | --- |
@@ -104,7 +97,6 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Coordination | University-industry collaboration | Intensity of research collaboration between universities and firms. |
 | Coordination | Public-private collaboration | Frequency and scale of joint public-private delivery of national objectives. |
 | Trust | Trust in public institutions | Confidence in national government, courts and civil service. |
-| Trust | Cooperation beyond the in-group | Reported trust in people met for the first time and in people of another nationality. |
 | Trust | Court case clearance rate | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
 | Learning | Adult learning participation | Share of adults in formal or non-formal education and training in the last 12 months. |
 | Experimentation | Venture capital investment | Venture capital deployed as a share of GDP. |

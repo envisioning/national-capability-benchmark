@@ -322,7 +322,7 @@ export const ES: Lexicon = {
     interpersonal_trust: 'Proporción que está de acuerdo en que se puede confiar en la mayoría de las personas.',
     institutional_trust: 'Confianza en el gobierno nacional, los tribunales y el servicio público.',
     willingness_to_cooperate_strangers:
-      'Confianza declarada en personas que se conocen por primera vez y en personas de otra nacionalidad.',
+      'Proporción de adultos que confía completamente o algo en las personas que conoce por primera vez.',
     adult_learning_participation:
       'Proporción de adultos en educación o capacitación, formal o no, en los últimos 12 meses.',
     research_citation_impact:
