@@ -7551,7 +7551,7 @@
       },
       "secondMetric": {
         "name": "Approved investment across the agendas",
-        "value": 5278338665.70,
+        "value": 5278338665.7,
         "unit": "EUR",
         "asOf": "2026-08-17"
       },
@@ -12949,6 +12949,917 @@
           "A property registry able to identify eligible dwellings",
           "Access to international reinsurance at actuarially priced rates"
         ]
+      }
+    },
+    {
+      "id": "fin-shok",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "FIN",
+      "title": "Strategic Centres for Science, Technology and Innovation (SHOKs), terminated in 2015",
+      "claim": "Finland ran six Strategic Centres for Science, Technology and Innovation from 2008, company-form consortia of firms, universities and research institutes funded about 60 percent by Tekes, with funding of EUR 88 million in 2014; the Sipilä government's austerity programme ended the earmarked funding at the end of 2015 and the programme was closed, with the last Tekes-funded projects wound down between 2016 and 2018.",
+      "metric": {
+        "name": "SHOK funding for industry-academia knowledge transfer",
+        "value": 88000000,
+        "unit": "euros",
+        "asOf": "2014"
+      },
+      "secondMetric": {
+        "name": "SHOK companies operating before termination",
+        "value": 6,
+        "unit": "centres",
+        "asOf": "2014"
+      },
+      "started": 2008,
+      "status": "dismantled",
+      "source": {
+        "publisher": "OECD STIP Compass, Knowledge Transfer and Policies project: Case study on the policy mix for science-industry knowledge transfer in Finland (Halme et al., 4Front and Gaia Consulting with Business Finland), Box 1",
+        "url": "https://stip.oecd.org/assets/TKKT/CaseStudies/2.pdf",
+        "tier": "international_organization",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The figure is inside a PDF (page 12, Box 1). The case study is hosted by the OECD as a country contribution to its knowledge-transfer project, but it was written by Finnish consultants with a Business Finland co-author, so it is the funder's side of the story rather than an OECD assessment. The EUR 88 million is one year's funding and the source does not say whether it is Tekes money alone or the full public and private budget; the same box says Tekes covered on average 60 percent. Funding is an input: the source carries no count of joint projects, firms or outcomes. The end was a budget decision, not a judgement that the centres failed: the same document says two of the six SHOKs (DIMECC and CLIC) continued as open innovation companies owned by firms, universities and institutes, and that ecosystem funding moved to Business Finland's Growth Engine instrument, so collaboration capacity was partly redeployed rather than wholly lost. The 2013 external evaluation the case study cites (Licence to SHOK?) was openly critical of the programme's governance and its limited commercial and scientific impact. The same PDF dates the programme's start to 2006-2007 in Box 4 and to 2008 in Box 1; started follows Box 1.",
+      "pattern": {
+        "mechanism": "The state made long-term, multi-year research programmes conditional on firms, universities and institutes owning a joint company and co-writing its research strategy, with the innovation agency paying the majority share. The structure held collaboration together only while the earmarked public share kept flowing.",
+        "preconditions": [
+          "An innovation agency with a large applied-research budget to earmark for a decade",
+          "Lead firms in each cluster willing to co-own a company with universities and pay roughly 40 percent",
+          "A political consensus on the earmark, since the model had no independent revenue when it was withdrawn"
+        ],
+        "travelled": "The SHOKs borrowed from the competence-centre model used in Sweden and Austria. The Finnish lesson is that a dedicated earmark is quick to cut in an austerity round, while centres that had built their own membership base, like DIMECC, survived the cut."
+      }
+    },
+    {
+      "id": "che-innosuisse-innovation-projects",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "CHE",
+      "title": "Innosuisse innovation projects with implementation partners",
+      "claim": "Innosuisse, the Swiss federal innovation agency, recorded CHF 113.95 million of contributions in 2025 to innovation projects in which a Swiss research institution works with a company or other implementation partner that bears 40 to 60 percent of the project cost, and held CHF 144.3 million of further commitments to such projects at the end of the year.",
+      "metric": {
+        "name": "Contributions to innovation projects with implementation partner",
+        "value": 113950000,
+        "unit": "Swiss francs",
+        "asOf": "2025"
+      },
+      "secondMetric": {
+        "name": "Commitments to innovation projects with implementation partner outstanding at year end",
+        "value": 144311000,
+        "unit": "Swiss francs",
+        "asOf": "2025-12-31"
+      },
+      "started": 2018,
+      "status": "operating",
+      "source": {
+        "publisher": "Innosuisse, Swiss Innovation Agency, Geschäftsbericht 2025 (annual report and financial statements), notes 17 and 22",
+        "url": "https://www.innosuisse.admin.ch/dam/en/sd-web/5objKMgnZPQR/Innosuisse_Gesch%C3%A4ftsbericht_2025_DE.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The figures are inside a PDF, in the financial statements (PDF page 32, printed page 29, note 17; and PDF page 36, printed page 33, note 22), in thousands of francs. This is the agency reporting on its own spending. The money is the public share paid to research partners: it does not include the firms' own 40 to 60 percent or their cash contributions, so it understates the joint effort, and the accounts give no count of projects or firms. Research partners include universities, universities of applied sciences and non-university research bodies, and implementation partners can be administrations and non-profits as well as firms, so not every franc is university-firm collaboration. Spending measures input, not whether projects produced products. Started is 2018, the year the current agency took over the instrument from its predecessor; neither cited source states that date, and the instrument is older.",
+      "pattern": {
+        "mechanism": "The federal agency pays only the research institution's side of a project, and only when a partner in the economy bears a large share of the cost and contributes cash, so public money follows demonstrated private demand for academic expertise.",
+        "preconditions": [
+          "Universities of applied sciences with a mandate for applied research and staff used to firm-facing projects",
+          "A dense base of SMEs able to co-fund 40 to 60 percent of a project",
+          "A stable federal budget line and an agency with independent project selection"
+        ],
+        "travelled": "The co-funding rule resembles Fraunhofer's income-linked base grant in effect, but works project by project. Austria's and Finland's agencies use similar rules; the Swiss version depends heavily on the universities of applied sciences, which have no close equivalent in many systems."
+      }
+    },
+    {
+      "id": "fra-cifre",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "FRA",
+      "title": "Cifre industrial doctorates",
+      "claim": "France's research ministry has funded Cifre industrial doctorates since 1981, paying an employer 42,000 euros over three years to hire a doctoral candidate whose thesis research is run in partnership with an academic laboratory; ANRT, which operates the scheme for the ministry, accepted 1,700 new Cifre in 2025 across 1,029 distinct employers.",
+      "metric": {
+        "name": "New Cifre industrial doctorates accepted",
+        "value": 1700,
+        "unit": "doctoral contracts",
+        "asOf": "2025"
+      },
+      "secondMetric": {
+        "name": "Distinct beneficiary employers",
+        "value": 1029,
+        "unit": "organisations",
+        "asOf": "2025"
+      },
+      "started": 1981,
+      "status": "operating",
+      "source": {
+        "publisher": "Association nationale de la recherche et de la technologie (ANRT), operator of the Cifre scheme for the Ministry of Higher Education and Research, Rapport d'activité 2025",
+        "url": "https://www.anrt.asso.fr/sites/default/files/2026-05/ANRT_Rapport_activite_2025.pdf",
+        "tier": "academic_survey",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The figures are inside a PDF (PDF pages 17 and 19, printed pages 15 and 17). ANRT is an association that runs the scheme on the ministry's behalf, so this is the programme reporting on itself; the ministry's own page was not reachable to cross-check. Employers include local authorities and associations (13 percent in 2025) as well as firms, so not every contract is university-industry collaboration. The count is of new contracts, not completed theses or research outputs. 2025 was below the scheme's own target: the same report says the ministry expected growth from 1,850 to 1,950 new Cifre and that 1,700 fell 13 percent short, with large firms' demand down 19 percent, so the 2025 figure is a dip against the 2024 level rather than a peak.",
+      "pattern": {
+        "mechanism": "The state subsidises a firm to employ a doctoral candidate whose thesis is supervised by an academic laboratory, and requires a collaboration contract between employer and lab, so each grant creates a person who works in both and a formal research agreement between them.",
+        "preconditions": [
+          "Doctoral schools willing to supervise theses whose questions come from employers",
+          "A research tax credit that covers much of the employer's remaining cost",
+          "A trusted intermediary that vets proposals and contracts quickly"
+        ],
+        "travelled": "Denmark's Industrial PhD, Spain's Doctorados Industriales and Poland's Doktorat wdrożeniowy follow the same idea. The French scheme's scale comes from four decades of continuity and its interaction with the research tax credit."
+      }
+    },
+    {
+      "id": "swe-kompetenscentrum",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "SWE",
+      "title": "Competence Centres Programme (Kompetenscentrumprogrammet) 1995 to 2005",
+      "claim": "Sweden's NUTEK, and later Vinnova and the Swedish Energy Agency, ran a ten-year programme from 1995 that built 28 competence centres at eight universities, each founded on a three-party contract between a university, a group of firms and the agency; more than 300 companies joined as contracting parties and industry put in 1.7 billion kronor between 1995 and 2005.",
+      "metric": {
+        "name": "Companies participating as contracting parties",
+        "value": 300,
+        "unit": "companies (more than)",
+        "asOf": "1995-2005"
+      },
+      "secondMetric": {
+        "name": "Industry contribution to centre research",
+        "value": 1700000000,
+        "unit": "Swedish kronor",
+        "asOf": "1995-2005"
+      },
+      "started": 1995,
+      "status": "concluded",
+      "source": {
+        "publisher": "Vinnova (Swedish Governmental Agency for Innovation Systems), VINNOVA Analys VA 2011:07, Effektanalys av starka forsknings- och innovationssystem",
+        "url": "https://www.vinnova.se/contentassets/1da6d02e699f4f54973b4f76bbce1ba8/va-11-07.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The figures are inside a PDF (PDF page 41, printed page 39). The report is published by Vinnova but written by evaluation consultants (Faugert & Co and Technopolis), and Vinnova notes that its analysis series does not necessarily state the agency's position; it in turn cites Vinnova's own 2006 summary. Roughly 70 percent of the industry contribution was in kind, so the 1.7 billion kronor is mostly valued staff time and equipment, not cash. The company count is of contracting parties over ten years, not firms active at any one time, and about 50 firms were counted in more than one centre. The programme ended as planned and was succeeded by VINN Excellence Centres, so its end is not a reversal; this record says nothing about the current centres.",
+      "pattern": {
+        "mechanism": "Each centre was a contract among a university, a group of firms and the state agency, with matched funding from all three, boards with a non-academic majority and chair, and staged three-year funding that depended on international evaluation, which kept firms engaged in the whole research agenda instead of single projects.",
+        "preconditions": [
+          "Research-intensive firms prepared to commit staff and money for up to ten years",
+          "Universities willing to cede board control to non-academics",
+          "An agency able to run staged evaluations and withdraw funding from weak centres"
+        ],
+        "travelled": "The source notes that Austria, Hungary and Estonia started similar programmes inspired by the Swedish one; Finland's SHOKs and Austria's COMET centres are later relatives."
+      }
+    },
+    {
+      "id": "esp-doctorados-industriales",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "ESP",
+      "title": "Doctorados Industriales (State Research Agency industrial doctorates)",
+      "claim": "Spain's State Research Agency funds four-year contracts for doctoral candidates employed in firms and other entities to write a thesis on an industrial research or experimental development project; in the 2024-2 call, resolved in October 2025, it awarded 65 grants worth 7.6 million euros.",
+      "metric": {
+        "name": "Industrial doctorate grants awarded, call DIN 2024-2",
+        "value": 65,
+        "unit": "grants",
+        "asOf": "2025-10"
+      },
+      "secondMetric": {
+        "name": "Funding awarded, call DIN 2024-2",
+        "value": 7600000,
+        "unit": "euros",
+        "asOf": "2025-10"
+      },
+      "started": 2014,
+      "status": "operating",
+      "source": {
+        "publisher": "Agencia Estatal de Investigación (State Research Agency), news release on the award resolution for Doctorados Industriales DIN 2024-2, 24 October 2025",
+        "url": "https://www.aei.gob.es/en/news/agencia-estatal-investigacion-publica-resolucion-concesion-ayudas-convocatoria-doctorados",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The figure is one call's awards, not the stock of industrial doctorates in progress; The 2024 round was split into two calls and only the second is counted here, so the figure understates a year's awards. It is small next to France's Cifre. The release does not mention universities at all: the university side is implied by the doctoral thesis, not shown. It does not count the firms, and beneficiaries include 'other entities' as well as companies. Awards are funding decisions: the release does not say how many contracts were signed or theses completed. The start year (2014, the first call under the 2013-2016 State Plan) is not stated on the cited page. The release says funding doubled in 2024 and held in 2025, so the current scale is recent.",
+      "pattern": {
+        "mechanism": "The state co-funds a firm's employment of a doctoral candidate for four years on condition that the thesis is built on the firm's own research or development project, tying a university doctoral programme to a company problem through one person.",
+        "preconditions": [
+          "Universities that accept company-based thesis topics and co-supervision",
+          "Firms with an R&D project long enough to carry a thesis",
+          "A national agency running regular competitive calls"
+        ],
+        "travelled": "The design follows France's Cifre and Denmark's Industrial PhD. Catalonia and Galicia run regional versions alongside the national one."
+      }
+    },
+    {
+      "id": "usa-ota",
+      "indicatorId": "government_foresight_capacity",
+      "iso3": "USA",
+      "title": "Office of Technology Assessment, defunded and closed in 1995",
+      "claim": "Congress gave the Office of Technology Assessment, created under the Technology Assessment Act of 1972, the statutory function to provide early indications of the probable impacts of technology; it appropriated $21,970,000 for the office with a cap of 143 staff for fiscal year 1995, then appropriated $3,615,000 for fiscal year 1996 to carry out its orderly closure, with no more than 17 employees paid except for severance.",
+      "metric": {
+        "name": "Appropriation for the orderly closure of the Office of Technology Assessment",
+        "value": 3615000,
+        "unit": "US dollars",
+        "asOf": "FY1996"
+      },
+      "secondMetric": {
+        "name": "Appropriation for Office of Technology Assessment salaries and expenses, the last operating year",
+        "value": 21970000,
+        "unit": "US dollars",
+        "asOf": "FY1995"
+      },
+      "started": 1972,
+      "status": "dismantled",
+      "source": {
+        "publisher": "US Government Publishing Office, Public Law 104-53, Legislative Branch Appropriations Act, 1996 (109 Stat. 514)",
+        "url": "https://www.govinfo.gov/content/pkg/PLAW-104publ53/html/PLAW-104publ53.htm",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "Technology assessment is adjacent to strategic foresight, not the same thing: the office studied technologies on request from congressional committees rather than running whole-of-government scenarios. It is filed here because its statute, 2 U.S.C. 472(c), states an anticipatory function, to provide early indications of the probable beneficial and adverse impacts of the applications of technology (govinfo, US Code 2023 edition, https://www.govinfo.gov/content/pkg/USCODE-2023-title2/html/USCODE-2023-title2-chap15-sec472.htm). Both figures are appropriations, not spending or output: they show the money Congress gave, not what the office produced, and the 143 and 17 figures are statutory staff caps, not headcounts. The FY1995 figure comes from a different source, Public Law 103-283 in the Statutes at Large (108 Stat. 1423), inside a PDF on page 11 of the file (https://www.govinfo.gov/content/pkg/STATUTE-108/pdf/STATUTE-108-Pg1423.pdf). The authorising statute was not repealed and still appears in the US Code, so the office was ended by withdrawing funds rather than by abolishing its legal basis; it could be refunded without new legislation. The 1996 act also carried $2,500,000 of FY1995 funds forward to September 1996, so the FY1996 closure figure is not the whole of the wind-down money. Started is the year of the authorising Act, not the year the office first reported.",
+      "pattern": {
+        "mechanism": "Congress built its own analytic office, governed by a bipartisan board of members, to give legislators early warning on technology choices, and later closed it through the appropriations bill rather than by repeal, cutting its funding by roughly five sixths in one year and capping staff for the wind-down.",
+        "preconditions": [
+          "A legislature with its own budget for in-house analytic agencies",
+          "Bipartisan support strong enough to protect a small agency through spending rounds, which failed here",
+          "A statutory mandate that survives defunding, so the function can be revived without new law"
+        ],
+        "travelled": "European parliaments built technology assessment offices on the model, including the German Bundestag's TAB, which cites the US office as its model; the US original closed while the copies continued."
+      }
+    },
+    {
+      "id": "pol-rcss",
+      "indicatorId": "government_foresight_capacity",
+      "iso3": "POL",
+      "title": "Rządowe Centrum Studiów Strategicznych, liquidated in 2006",
+      "claim": "Poland's Government Centre for Strategic Studies, attached to the Prime Minister, with tasks of strategic programming and forecasting of economic and social development set in article 14k of the Act of 8 August 1996 on the Council of Ministers, was liquidated as of 31 March 2006 by the Act of 17 February 2006, in the year its budget had been planned at PLN 10,016 thousand.",
+      "metric": {
+        "name": "Planned 2006 expenditure in budget part 47, Government Centre for Strategic Studies",
+        "value": 10016,
+        "unit": "thousand zloty",
+        "asOf": "2006 (draft budget)"
+      },
+      "started": 1996,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Sejm of the Republic of Poland, government bill on the liquidation of the Government Centre for Strategic Studies (print 172, 5th term), regulatory impact assessment",
+        "url": "https://orka.sejm.gov.pl/proc5.nsf/projekty/172_p.htm",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The figure is planned spending in the government's draft 2006 budget, quoted in the bill's regulatory impact assessment, not an outturn, and the same assessment expected savings of about half of it. The bill proposed liquidation on 28 February 2006; the act as passed (Dz.U. 2006 nr 45 poz. 319, ISAP, https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20060450319, PDF) set 31 March 2006, and the claim uses the enacted date. The centre's statutory work was forecasting and long-term strategic programming, which sits closer to development planning than to scenario-based foresight. Its tasks did not vanish: the act moved impact assessment, foreign policy concepts and analyses ordered by the Prime Minister to the Chancellery of the Prime Minister, and the bill moved strategy and forecasting to the minister for regional development, so what ended is a dedicated unit with its own budget line, not every forward-looking task. Started is 1996, the year of the Act on the Council of Ministers whose article 14k held the centre's tasks; neither source gives the centre's founding date or first year of operation.",
+      "pattern": {
+        "mechanism": "Parliament gave a strategic studies centre attached to the Prime Minister its own statutory tasks and budget part, then a new government folded it into the Prime Minister's Chancellery and a line ministry as part of an administrative savings programme.",
+        "preconditions": [
+          "A statute giving the unit its own budget part, which made it visible as a line to cut",
+          "A government programme of administrative consolidation that counted a separate agency as overhead",
+          "Receiving ministries willing to absorb the tasks, which let the unit be closed without a visible gap"
+        ]
+      }
+    },
+    {
+      "id": "deu-tab",
+      "indicatorId": "government_foresight_capacity",
+      "iso3": "DEU",
+      "title": "Office of Technology Assessment at the German Bundestag (TAB)",
+      "claim": "Since 1990 the German Bundestag has kept an Office of Technology Assessment, run under contract by the Karlsruhe Institute of Technology, whose tasks include horizon scanning of scientific and technological trends at early stages; by 2026 it reported more than 200 projects and over 400 publications.",
+      "metric": {
+        "name": "Projects carried out by TAB since 1990 (lower bound, as stated)",
+        "value": 200,
+        "unit": "projects",
+        "asOf": "2026-10-02"
+      },
+      "secondMetric": {
+        "name": "Publications of TAB results since 1990 (lower bound, as stated)",
+        "value": 400,
+        "unit": "publications",
+        "asOf": "2026-10-02"
+      },
+      "started": 1990,
+      "status": "operating",
+      "source": {
+        "publisher": "Office of Technology Assessment at the German Bundestag (TAB), About us",
+        "url": "https://www.tab-beim-bundestag.de/english/about-us.php",
+        "tier": "academic_survey",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "Technology assessment is adjacent to strategic foresight: most TAB projects assess specific technologies on request from the Bundestag committee for research and technology assessment. It is filed here because the same page lists horizon scanning, the observation of trends in early stages of development, among its tasks and describes its aim as forward-looking analysis, and the site carries a separate foresight section. Both figures are cumulative lower bounds (more than 200, over 400) with no date stated, so asOf is the retrieval date. TAB reports on itself, and it is operated by a university research institute (ITAS at KIT) under a contract with the Bundestag rather than by parliamentary staff, so continuity depends on contract renewal. The counts show output, not influence on legislation, and they serve parliament, not the federal executive.",
+      "pattern": {
+        "mechanism": "The Bundestag contracts a university technology assessment institute to run a dedicated office for parliament, steered by its research committee, which picks topics and approves reports before publication.",
+        "preconditions": [
+          "A national research institute with an established technology assessment group able to host the office",
+          "A standing committee willing to act as steering client across electoral terms",
+          "A contract model that lets parliament buy analytic capacity without creating a civil service unit"
+        ],
+        "travelled": "The office names the US Congress's OTA as its model; Germany kept the parliamentary office when the US closed its own in 1995, but placed it with a contractor rather than inside parliament."
+      }
+    },
+    {
+      "id": "kor-nafi",
+      "indicatorId": "government_foresight_capacity",
+      "iso3": "KOR",
+      "title": "National Assembly Futures Institute",
+      "claim": "Korea's National Assembly enacted the National Assembly Future Institute Act on 12 December 2017 and opened the institute on 28 May 2018 with a statutory duty to predict and analyse changes in the future environment and derive mid to long term national development strategies; its English-language research report archive listed 203 reports in 2026.",
+      "metric": {
+        "name": "Research reports listed in the institute's English-language report archive",
+        "value": 203,
+        "unit": "reports",
+        "asOf": "2026-10-02"
+      },
+      "started": 2018,
+      "status": "operating",
+      "source": {
+        "publisher": "National Assembly Futures Institute, Archive, Research Reports",
+        "url": "https://nafi.re.kr/home/eng/board.do?menuPos=19",
+        "tier": "academic_survey",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The institute reports on itself. The count is a running total shown on an archive board (\"Total 203\"), not a dated annual figure, so asOf is the retrieval date, and it covers the English-language listing only; the Korean site organises reports differently and may hold more. The newest report in the English listing is dated 30 December 2024, so the count shows nothing published in English since then. A report count measures output, not whether any law or budget changed. The institute serves the National Assembly, not the executive, so it says nothing about foresight inside ministries. The founding dates and the Article 1 purpose come from the institute's own History and Vision pages (https://nafi.re.kr/home/eng/contents.do?menuPos=10 and menuPos=11), not from the statute text itself.",
+      "pattern": {
+        "mechanism": "The National Assembly legislated a futures research institute attached to the National Assembly and gave it a statutory mandate for long-range national strategy, so parliament holds its own foresight capacity independent of the government of the day.",
+        "preconditions": [
+          "Cross-party support for a statute rather than a Speaker's initiative that could lapse",
+          "A parliamentary research ecosystem (budget office, research service, library) to house it beside",
+          "A domestic research community the institute can recruit from"
+        ]
+      }
+    },
+    {
+      "id": "che-perspektivstab",
+      "indicatorId": "government_foresight_capacity",
+      "iso3": "CHE",
+      "title": "Federal Chancellery situation and environment analysis (Perspektivstab)",
+      "claim": "Switzerland's Federal Chancellery runs a long-term, continuous situation and environment analysis for the Federal Council that looks 10 to 15 years ahead; it produced Herausforderungen in 2007 with expertise from 30 federal offices, Perspektiven 2025 in 2011, Perspektiven 2030 in 2014, the Schweiz 2030 and Schweiz 2035 reports and the scenario report Perspektiven Schweiz 2040, which feed the Federal Council's legislature planning.",
+      "metric": {
+        "name": "Reports in the Chancellery situation and environment analysis series named on the page",
+        "value": 6,
+        "unit": "reports",
+        "asOf": "2026-10-02"
+      },
+      "secondMetric": {
+        "name": "Federal offices whose expertise fed the 2007 report Herausforderungen",
+        "value": 30,
+        "unit": "federal offices",
+        "asOf": "2007"
+      },
+      "started": 2007,
+      "status": "operating",
+      "source": {
+        "publisher": "Swiss Federal Chancellery, Lage- und Umfeldanalyse",
+        "url": "https://www.bk.admin.ch/de/lage-und-umfeldanalyse",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The report count is ours, made from the six titles the page names (Herausforderungen, Perspektiven 2025, Perspektiven 2030, Schweiz 2030, Schweiz 2035, Perspektiven Schweiz 2040). Both numbers describe the process, not its effect: six reports and 30 contributing offices show the analysis was made, not that a decision changed because of it. The Chancellery describes its own work and states that the reports serve as a basis for legislature planning; the source does not show how. The page gives publication years only up to 2014 and does not date Schweiz 2030, Schweiz 2035 or Perspektiven Schweiz 2040, so the series after 2014 is shown as existing, not as dated. Started is the year of the earliest report the page names, not the founding of the Perspektivstab, which the page does not date. The 30 offices figure belongs to the 2007 report only. The Chancellery is the Federal Council's staff office, so this is a staff function, not a minister's unit.",
+      "pattern": {
+        "mechanism": "The Federal Chancellery, as staff office of the Federal Council, pools experts from across the federal offices into a standing interdepartmental staff that writes a futures report timed to each legislature planning cycle.",
+        "preconditions": [
+          "A collegial executive whose four-year legislature planning gives the report a fixed customer and date",
+          "A neutral staff office above the departments that can convene them without belonging to one",
+          "Federal offices willing to lend analysts to a cross-cutting exercise"
+        ]
+      }
+    },
+    {
+      "id": "fra-senat-prospective",
+      "indicatorId": "government_foresight_capacity",
+      "iso3": "FRA",
+      "title": "Senate foresight delegation (Délégation sénatoriale à la prospective)",
+      "claim": "The Bureau of the French Senate created a foresight delegation in April 2009, succeeding the planning delegation set up by the 1982 planning reform law, with a mandate to study changes in society and the economy and to build scenarios; it has 36 senators appointed in proportion to the political groups and adopted reports in every year from 2010 to 2022 listed on its page.",
+      "metric": {
+        "name": "Members of the Senate foresight delegation",
+        "value": 36,
+        "unit": "senators",
+        "asOf": "2026-10-02"
+      },
+      "started": 2009,
+      "status": "operating",
+      "source": {
+        "publisher": "Sénat (France), Présentation de la délégation à la prospective",
+        "url": "https://www.senat.fr/travaux-parlementaires/office-et-delegations/delegation-a-la-prospective/presentation-de-la-delegation-a-la-prospective.html",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "Membership measures size, not influence: 36 senators on a delegation say nothing about whether a report changed a law, and the delegation has no legislative power by design. It informs the Senate only; the National Assembly has no equivalent, as the page itself says, and the figure says nothing about foresight in the executive. The page's report list stops at 2022, although the delegation's main page shows a report dated June 2026, so the list is incomplete and no report count is given here. After the 2026 Senate renewal the main page states the delegations will be reconstituted, so the current membership is pending. It is filed against the foresight construct because its rules instruct it to draw up scenarios of change, which is foresight practice rather than technology assessment (France's technology assessment office, OPECST, is a separate body).",
+      "pattern": {
+        "mechanism": "A chamber's governing bureau turned an existing planning delegation into a standing foresight body of members with free choice of topics and a duty to write scenarios, which keeps it outside the legislative calendar.",
+        "preconditions": [
+          "An earlier planning delegation whose seat and staff could be repurposed",
+          "A chamber with longer terms and partial renewal, which suits long-horizon work",
+          "Freedom from bill work, which lets members choose topics without committee pressure"
+        ],
+        "travelled": "The page names Finland's and Lithuania's committees for the future as the only European parliamentary equivalents; the French version is a delegation of senators served by Senate staff rather than a research institute."
+      }
+    },
+    {
+      "id": "chl-comision-futuro",
+      "indicatorId": "government_foresight_capacity",
+      "iso3": "CHL",
+      "title": "Senate Commission on Future Challenges, Science, Technology and Innovation",
+      "claim": "Chile's Senate created the Commission on Future Challenges, Science, Technology and Innovation in April 2012, modelled on Finland's Committee for the Future, with the Academy of Sciences, National Prize winners and university rectors as permanent members; by July 2024 more than 700 scientists had worked in more than 20 of its expert tables.",
+      "metric": {
+        "name": "Scientists who worked in the commission's expert tables (lower bound, as stated)",
+        "value": 700,
+        "unit": "scientists",
+        "asOf": "2024-07-02"
+      },
+      "secondMetric": {
+        "name": "Expert tables convened by the commission (lower bound, as stated)",
+        "value": 20,
+        "unit": "expert tables",
+        "asOf": "2024-07-02"
+      },
+      "started": 2012,
+      "status": "operating",
+      "source": {
+        "publisher": "Biblioteca del Congreso Nacional de Chile, Serie Minutas Nº 62-24, Comisión Desafíos del Futuro, Ciencia, Tecnología e Innovación del Senado, antecedentes de trabajo legislativo",
+        "url": "https://obtienearchivo.bcn.cl/obtienearchivo?id=repositorio/10221/36278/1/Minuta_62_24_trabajo_legislativo_de_la_Comision_Futuro.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "Both figures are lower bounds (más de) and sit inside a four-page PDF, on page 3. They count participation, not influence: the same note lists five bills in the commission's legislative work, four members' motions and one government bill, all still in their first or second constitutional stage in July 2024, including two to create a national strategic foresight agency (Boletín 16.061-07) and a new foresight institution (Boletín 16.441-19). That means Chile had a parliamentary foresight committee but, as of the note's date, no statutory executive foresight body, and this record does not claim one. The commission is a standing Senate committee; the note does not count its sessions or reports. The figures are compiled by the Congress library at a director's request and are not independently audited. The Senate's own committee page (https://www.senado.cl/actividad-legislativa/comisiones/941) still lists the commission in 2026.",
+      "pattern": {
+        "mechanism": "A Senate committee co-opts the national science establishment as permanent members and runs expert tables that turn scientific frontiers into draft strategies and bills, giving parliament a standing futures agenda without a research staff of its own.",
+        "preconditions": [
+          "A science academy and university rectors willing to sit with legislators",
+          "A senator who chaired it for a decade, which gave it continuity",
+          "A public outreach event, Congreso Futuro, that keeps the agenda visible"
+        ],
+        "travelled": "It was modelled on Finland's Committee for the Future; Chile kept the committee and replaced the Finnish government's duty to report with expert tables drawn from academia."
+      }
+    },
+    {
+      "id": "usa-cfpb-sandbox",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "USA",
+      "title": "CFPB Compliance Assistance Sandbox, rescinded in 2022 and withdrawn again in 2025",
+      "claim": "The Consumer Financial Protection Bureau opened a national Compliance Assistance Sandbox in September 2019, issued two sandbox approval orders in December 2020, terminated one of them in June 2022 and rescinded the policy with effect from 30 September 2022; a reissued version of January 2025 was withdrawn in May 2025.",
+      "metric": {
+        "name": "Compliance Assistance Sandbox approval orders listed as granted",
+        "value": 2,
+        "unit": "approval orders",
+        "asOf": "2020-12"
+      },
+      "started": 2019,
+      "status": "dismantled",
+      "source": {
+        "publisher": "Consumer Financial Protection Bureau, Innovation: granted applications",
+        "url": "https://www.consumerfinance.gov/rules-policy/innovation/granted-applications/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The count of two is ours, made by counting the approval orders the CFPB lists as granted (Payactiv and Synchrony Bank); the page also lists one template (Build Commonwealth) and separate No-Action Letters and Trial Disclosure waivers, which are not counted here. The rescission and the 2025 withdrawal are read from Federal Register notices on govinfo.gov (87 FR 58439, 90 FR 1974 and 90 FR 20086), not from the cited page. The CFPB page is blocked to some automated clients. Two approvals over three years is evidence that the federal consumer-finance sandbox barely operated before it was ended, not that it failed on its merits: the Bureau's stated reasons were that the policies did not advance consumer-beneficial innovation and failed to meet standards for transparency and stakeholder participation. State sandboxes (Arizona, Utah and others) are subnational and are not counted.",
+      "pattern": {
+        "mechanism": "A federal consumer-finance regulator offered firms a statutory safe harbour and a written approval that a described product complied with named laws, in exchange for sharing data during the test. A later leadership judged that the policies did not advance innovation and lacked transparency, let the information-collection authority lapse and rescinded the policy.",
+        "preconditions": [
+          "Statutory safe-harbour provisions the agency could invoke for good-faith reliance on its approval",
+          "Leadership continuity across administrations, which this sandbox did not have",
+          "Guardrails stopping a firm from marketing an approval as an endorsement"
+        ],
+        "travelled": "Sandboxes that rest on an agency policy statement rather than a statute can be switched off by the next director; the CFPB's was rescinded, reissued and withdrawn within three years."
+      }
+    },
+    {
+      "id": "can-csa-sandbox",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "CAN",
+      "title": "CSA Regulatory Sandbox, succeeded by the Financial Innovation Hub",
+      "claim": "Canada's provincial securities regulators, acting jointly as the Canadian Securities Administrators, authorised 13 firms through the CSA Regulatory Sandbox between 2016 and 2021, before it was succeeded by the CSA Financial Innovation Hub and its decision list stopped being updated in December 2023.",
+      "metric": {
+        "name": "Firms listed as authorised in the former CSA Regulatory Sandbox",
+        "value": 13,
+        "unit": "firms",
+        "asOf": "2023-12-18"
+      },
+      "started": 2016,
+      "status": "concluded",
+      "source": {
+        "publisher": "Canadian Securities Administrators, Former CSA Regulatory Sandbox decisions",
+        "url": "https://www.securities-administrators.ca/csa-activities/csa-finhub/decisions/",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The 13 is ours, counted from the firms the page lists under 'Former CSA Regulatory Sandbox'; the crypto trading platform decisions on the same page belong to a separate pre-registration process and are not counted. Most authorisations were crypto funds and token offerings from 2017 to 2019, and the page says nothing about outcomes. The sandbox was succeeded by the CSA Financial Innovation Hub, whose page lists research, workshops and 'testing environments' among possible activities, so the testing function may not be wholly gone; what ended is the named regime and its public register, which is why the record is concluded rather than dismantled. The earliest listed decision (AngelList, October 2016) predates the sandbox's 2017 start and is listed under it by the CSA. The site sits behind a JavaScript challenge that blocks simple scripted fetches.",
+      "pattern": {
+        "mechanism": "Thirteen provincial and territorial securities regulators agreed to process fintech registrations and exemptive relief faster and on a time-limited basis through a shared sandbox, then folded it into a broader innovation hub once crypto platforms moved to their own registration track.",
+        "preconditions": [
+          "A passport-style system letting one principal regulator's decision apply across provinces",
+          "A wave of novel business models (crypto funds, token offerings) that did not fit existing categories",
+          "Regulators willing to publish each decision so the sandbox could be audited"
+        ],
+        "travelled": "Canada shows a sandbox absorbed once its main user group gets a dedicated rulebook: the crypto platforms that filled it moved to a pre-registration undertaking regime."
+      }
+    },
+    {
+      "id": "aus-asic-ers",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "AUS",
+      "title": "ASIC enhanced regulatory sandbox",
+      "claim": "Australia's government introduced the enhanced regulatory sandbox on 1 September 2020, letting firms test financial services and credit activities for up to 24 months without a licence, and ASIC's register lists 23 users, four current and 19 past.",
+      "metric": {
+        "name": "Entities listed as current or past users of the enhanced regulatory sandbox exemption",
+        "value": 23,
+        "unit": "entities",
+        "asOf": "2026-10-02"
+      },
+      "started": 2020,
+      "status": "operating",
+      "source": {
+        "publisher": "Australian Securities and Investments Commission, Enhanced regulatory sandbox (ERS)",
+        "url": "https://www.asic.gov.au/for-business-and-companies/innovation-hub/enhanced-regulatory-sandbox-ers",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The 23 is ours, counted from the two expandable lists ('Current users' 4, 'Past users' 19) on the day of retrieval; the page carries no headline total or reference date, and the lists change as exemptions start and lapse. Users notify ASIC rather than being selected, so the count measures take-up of an exemption, not supervised trials, and the page does not say how many past users went on to obtain a licence or simply stopped. Twenty-three users in six years is small for Australia's financial sector. ASIC's earlier sandbox, which the ERS superseded, is not counted.",
+      "pattern": {
+        "mechanism": "Parliament and Treasury put a licensing exemption into regulation, so an eligible firm can notify ASIC and start testing within set client and exposure limits, rather than applying for case-by-case relief.",
+        "preconditions": [
+          "A statutory power to exempt from the licensing regime by regulation",
+          "Hard caps on clients and exposure so a notification regime stays safe without vetting",
+          "A public register so customers can check that a firm is a sandbox user"
+        ],
+        "travelled": "Australia moved from a regulator-run sandbox to a legislated notification exemption; low take-up suggests automatic entry does not by itself create demand."
+      }
+    },
+    {
+      "id": "deu-sinteg-v",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "DEU",
+      "title": "SINTEG-Verordnung, the energy-transition experimentation clause",
+      "claim": "Germany's federal government ran a time-limited regulatory experimentation clause for the SINTEG smart-energy showcases from June 2017 to June 2022, under which the Federal Network Agency received 49 notifications of experiments but only two claims for compensation of regulatory costs.",
+      "metric": {
+        "name": "Notifications to the Bundesnetzagentur under § 3 SINTEG-V",
+        "value": 49,
+        "unit": "notifications",
+        "asOf": "2017-06/2022-06"
+      },
+      "secondMetric": {
+        "name": "Applications for compensation of economic disadvantages under the clause",
+        "value": 2,
+        "unit": "applications",
+        "asOf": "2017-2022"
+      },
+      "started": 2017,
+      "status": "concluded",
+      "source": {
+        "publisher": "Bundesregierung (BMWK), Erfahrungen mit der SINTEG-Verordnung, Bericht nach § 13 SINTEG-V",
+        "url": "https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Downloads/E/erfahrungsbericht-zur-sinteg-verordnung.pdf?__blob=publicationFile&v=4",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "Both figures are inside a PDF (pages 4 and 5). The clause was open only to participants in the five funded SINTEG showcases, not to every firm in the country. A notification is an announcement of intent, not a completed trial, and the government's own report says use of the compensation mechanism fell well short of expectations because participants had to bear losses first and faced high administrative cost. The regulation expired by design in 2022. Because its core was ex post compensation, the report says the general legal framework applied essentially unchanged to participants, apart from the § 5 derogation for flexibility platforms.",
+      "pattern": {
+        "mechanism": "The federal government wrote a time-boxed ordinance letting showcase participants trial flexible grid use and be compensated afterwards for network charges and levies they would otherwise have lost, with the network regulator verifying each claim.",
+        "preconditions": [
+          "A large funded demonstration programme to supply the experimenters",
+          "A regulator able to verify claims against network operators",
+          "State-aid clearance from the European Commission for the compensation"
+        ],
+        "travelled": "The lesson in the report is that ex post compensation with audited claims deters use, so a clause must waive rules up front to be taken up."
+      }
+    },
+    {
+      "id": "nld-experimenten-elektriciteitswet",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "NLD",
+      "title": "Experimenten Elektriciteitswet 2015-2018, and its erosion",
+      "claim": "The Dutch economy ministry let energy cooperatives and owners' associations deviate from the Electricity Act 1998 through 19 exemptions granted in four rounds between 2015 and 2018, then closed the scheme to new entrants; by 2024 only 10 of the experiments were operational.",
+      "metric": {
+        "name": "Experiments operational under the exemption scheme",
+        "value": 10,
+        "unit": "experiments",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Exemptions granted 2015 to 2018 (peak)",
+        "value": 19,
+        "unit": "exemptions",
+        "asOf": "2018"
+      },
+      "started": 2015,
+      "status": "eroded",
+      "source": {
+        "publisher": "Rijksdienst voor Ondernemend Nederland, Tussentijdse evaluatie Besluit experimenten decentrale duurzame elektriciteitsopwekking (January 2025)",
+        "url": "https://www.rvo.nl/sites/default/files/2025-03/Tussentijdse-evaluatie-Besluit-experimenten-decentrale-duurzame-elektriciteitsopwekking.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "Both figures are inside a PDF (section 3, page labelled 4 of 12, PDF page 5). Nineteen is the total ever granted, used as the peak because no entry was possible after 2018. It counts exemptions and the 10 counts operating experiments, so the gap mixes projects that never started with ones that stopped; the sources do not show 19 operating at once. The only same-unit loss they document is from 19 exemptions granted to 15 still held. RVO's scheme page gives a third figure, 15 current exemption holders, which counts exemptions still held rather than experiments running. The minister closed the scheme on the advice of the Raad van State pending the new Energiewet (in force 1 January 2026), so part of the fall is a planned run-down rather than failure. The experiments are small local grids, and the report itself says their number and size limit what can be concluded.",
+      "pattern": {
+        "mechanism": "The ministry used a decree under the Electricity Act to let local cooperatives run their own project grids and supply members for up to ten years, testing whether the full act needed to apply to local renewable generation.",
+        "preconditions": [
+          "An enabling article in the Electricity Act permitting time-limited derogations",
+          "Energy cooperatives able to carry grid-operator duties",
+          "An agency (RVO) to vet applications and monitor results"
+        ],
+        "travelled": "The Dutch case shows a sandbox closed to entry while a successor law was drafted; experiments outside the new law's scope must either fit it or end when their exemption expires."
+      }
+    },
+    {
+      "id": "fra-cre-bac-a-sable",
+      "indicatorId": "regulatory_sandbox_activity",
+      "iso3": "FRA",
+      "title": "Bac à sable réglementaire in the energy sector",
+      "claim": "Under the 2019 energy and climate law, France's energy regulator CRE and the energy directorate DGEC granted temporary derogations from network access rules to 30 projects, 25 by CRE and 5 by DGEC, of which six were running and reporting indicators in May 2025 and two had been generalised into regulation in 2024.",
+      "metric": {
+        "name": "Projects granted derogations under the energy regulatory sandbox",
+        "value": 30,
+        "unit": "projects",
+        "asOf": "2025-05-27"
+      },
+      "started": 2020,
+      "status": "operating",
+      "source": {
+        "publisher": "Commission de régulation de l'énergie, Rapport n°2025-03 sur l'avancement des projets bénéficiant de dérogations",
+        "url": "https://www.cre.fr/fileadmin/Documents/Rapports_et_etudes/2025/Rapport_2025-03_REX_Bac_a_sable_2024.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The figure is inside a PDF (page 3). A derogation granted is not a trial run: the same report says only six of the 30 were in progress and producing indicators, and 14 further requests were awaiting a decision, mostly at DGEC. Progress data come from project holders and network operators. The sandbox covers network access and use in electricity and gas only, so it says nothing about experimentation elsewhere in French regulation.",
+      "pattern": {
+        "mechanism": "Parliament gave the energy regulator and the ministry a power to grant time-limited derogations from network access conditions, first through application windows and since November 2022 on a rolling basis, with annual public progress reports.",
+        "preconditions": [
+          "A statutory derogation power covering named titles of the energy code",
+          "An independent regulator able to assess projects and publish follow-up",
+          "Network operators willing to host and measure non-standard arrangements"
+        ],
+        "travelled": "Two experiments (Enedis Reflex and an EDF project) were generalised by regulation in 2024, the route from sandbox to rule that many sandboxes lack."
+      }
+    },
+    {
+      "id": "usa-adult-education",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "USA",
+      "title": "State-administered adult education under the Adult Education and Family Literacy Act, and its erosion",
+      "claim": "Federally funded, state-administered adult basic, adult secondary and English language programmes served 2,629,643 participants in fiscal year 2000, and by fiscal year 2021 served 770,179, after a fall through every year the table shows up to fiscal year 2020 (627,728) and a partial rebound in 2021.",
+      "metric": {
+        "name": "Participants in state-administered adult basic, adult secondary and English language acquisition programmes",
+        "value": 770179,
+        "unit": "participants",
+        "asOf": "FY2021"
+      },
+      "secondMetric": {
+        "name": "Participants in the same programmes in fiscal year 2000, the highest year the table shows",
+        "value": 2629643,
+        "unit": "participants",
+        "asOf": "FY2000"
+      },
+      "started": 1966,
+      "status": "eroded",
+      "source": {
+        "publisher": "U.S. Department of Education, National Center for Education Statistics, Digest of Education Statistics 2022, table 507.20 (from the OCTAE National Reporting System)",
+        "url": "https://nces.ed.gov/programs/digest/d22/tables/dt22_507.20.asp",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The table starts in fiscal year 2000, so the second metric is the highest year it shows, not a proven all-time peak. FY2021 is a pandemic year and a partial rebound from FY2020's 627,728; FY2019, before the pandemic, already stood at 948,934, so most of the fall predates it. The fall is computed from two published table cells (about 71 percent), and part of it may reflect tighter participant definitions and federal performance reporting rather than lost provision; the table carries no note on definitional changes. The count covers only programmes reporting to the federal National Reporting System, not community college, employer or private adult learning, so it is not a national adult participation rate. Funding is shared between federal and state governments and the record does not attribute the decline to a single decision.",
+      "pattern": {
+        "mechanism": "The federal government funds states by formula to run adult basic education, high school equivalency preparation and English classes through local providers, and requires every state to report participants and outcomes into one national reporting system.",
+        "preconditions": [
+          "A federal formula grant with a state match that keeps every state in the system",
+          "A national reporting system that defines a participant the same way across states",
+          "Local providers, from school districts to community colleges, willing to run low-margin classes"
+        ],
+        "travelled": "Formula-funded adult basic education is common across OECD countries; the American series shows how a stable statute can still deliver a shrinking service when appropriations flatten and accountability rules raise the bar for who counts."
+      }
+    },
+    {
+      "id": "nld-stap-budget",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "NLD",
+      "title": "STAP-budget training grant, abolished in 2024",
+      "claim": "The Dutch employee insurance agency UWV paid individual training grants of up to 1,000 euros from 2022, approved more than 214,000 applications in five rounds that year, and stopped the scheme on 1 January 2024.",
+      "metric": {
+        "name": "STAP-budget applications approved in 2022",
+        "value": 214000,
+        "unit": "approved applications (more than, 'ruim')",
+        "asOf": "2022"
+      },
+      "started": 2022,
+      "status": "dismantled",
+      "source": {
+        "publisher": "UWV (Uitvoeringsinstituut Werknemersverzekeringen), press release on the first 2023 STAP round",
+        "url": "https://www.uwv.nl/nl/persberichten/ruim-40000-aanvragen-voor-eerste-ronde-stap-budget-in-2023",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The figure is the executing agency reporting on its own scheme, counts approved applications rather than courses completed, and is a lower bound ('ruim 214.000'); the same release puts people with a grant at more than 200,000. Approval is not participation: the release does not say how many approved grants were used, and the record does not show whether the courses improved anyone's position in the labour market. The end date comes from a second UWV page (https://www.uwv.nl/nl/stap-budget), not from the source page. Against a Dutch labour force of roughly ten million, one year of grants is around two percent of workers, so the scheme never moved the national participation share by itself. UWV's page gives no reason for the end, and the 2023 release reports that the cabinet had to tighten the scheme against misuse; the record documents the loss of this channel, not a collapse of Dutch adult learning, which other instruments still fund.",
+      "pattern": {
+        "mechanism": "The state replaced a tax deduction for training costs with a first-come grant that any worker or jobseeker could claim once a year from UWV, paid directly to a registered training provider, in fixed application windows with a capped budget.",
+        "preconditions": [
+          "A national register of eligible training providers and courses",
+          "An agency with an online portal and identity check able to process tens of thousands of claims in hours",
+          "A fixed annual budget, which made demand visible as queues and exhausted windows"
+        ],
+        "travelled": "Individual training budgets also run in France (CPF) and Singapore (SkillsFuture Credit). The Dutch version shows the failure mode of open first-come windows: budgets ran out within hours, and the scheme was ended after two years."
+      }
+    },
+    {
+      "id": "mex-inea",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "MEX",
+      "title": "INEA adult basic education",
+      "claim": "Mexico's Instituto Nacional para la Educación de los Adultos certified 651,473 young people and adults as having completed a level of literacy, primary or secondary education in 2024, with 352,600 learners in its services at the close of the year.",
+      "metric": {
+        "name": "People who completed a level (literacy, primary or secondary) with INEA",
+        "value": 651473,
+        "unit": "people",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "Learners in INEA services at the close of the year",
+        "value": 352600,
+        "unit": "learners ('352.6 mil')",
+        "asOf": "2024-12"
+      },
+      "started": 1981,
+      "status": "operating",
+      "source": {
+        "publisher": "Instituto Nacional para la Educación de los Adultos, Programa Institucional 2025-2030, published in the Diario Oficial de la Federación",
+        "url": "https://sidof.segob.gob.mx/notas/docFuente/5777999",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The figures are INEA reporting on itself from its own tracking system (SASA). A completed level is a credential, often obtained by examination after self-study, and says nothing about how much was learned; one person can complete more than one level in a year. Against 27.5 million people aged 15 and over who, by the same document, have not finished basic education, a year's completions are about two percent of the backlog. The same document's indicator series shows completions fell sharply in 2019 and 2020 and rebounded from 2021, and it notes a fall in people served in 2024; chaining those published rates back from the 538,741 completions the document gives for 2023 puts 2019 at about 680,000 and 2018 at about 853,000, so 2024 is below both, by about 4 and 24 percent (our computation, from rounded rates).",
+      "pattern": {
+        "mechanism": "A federal institute and state adult education institutes run a semi-open model in which volunteers with a small stipend tutor adults in community spaces, and learners sit module examinations when ready, so a credential can be earned without a classroom timetable.",
+        "preconditions": [
+          "A modular curriculum and an examination system recognised as equivalent to school certificates",
+          "A large network of subsidised volunteer tutors and community learning spaces",
+          "Federal and state co-financing, since delivery runs through state institutes"
+        ],
+        "travelled": "The semi-open, examination-at-will model resembles Brazil's ENCCEJA and Spain's adult graduation tests. The Mexican case shows the dependence on volunteer tutors, whose numbers rise and fall with the stipend budget."
+      }
+    },
+    {
+      "id": "jpn-hello-training",
+      "indicatorId": "adult_learning_participation",
+      "iso3": "JPN",
+      "title": "Hello Training, public vocational training",
+      "claim": "Japan's national and prefectural governments trained 225,176 people through public vocational training in fiscal year 2023, 95,752 of them jobseekers and 114,552 people in work, and a further 44,699 through job-seeker support training.",
+      "metric": {
+        "name": "Trainees in public vocational training (national and prefectural)",
+        "value": 225176,
+        "unit": "trainees",
+        "asOf": "FY2023"
+      },
+      "secondMetric": {
+        "name": "Trainees in job-seeker support training",
+        "value": 44699,
+        "unit": "trainees",
+        "asOf": "FY2023"
+      },
+      "started": 1958,
+      "status": "operating",
+      "source": {
+        "publisher": "Ministry of Health, Labour and Welfare, policy evaluation sheet for policy goal VI-1-1 (public vocational training)",
+        "url": "https://www.mhlw.go.jp/content/11601000/001411846.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The figures sit in a table on page 10 of a PDF. The 225,176 total includes 14,872 school-leaver trainees who are mostly young people entering work, not adults returning to learning. Against a labour force of roughly 69 million, public training reaches well under one percent of workers a year; most adult learning in Japan is employer-provided and is not counted here. Trainee counts say nothing about the quality of training beyond the employment rates the same table reports for jobseeker courses.",
+      "pattern": {
+        "mechanism": "The national government, through polytechnic centres run by its employment support agency, and the prefectures run free vocational courses for jobseekers and fee-based upskilling for employees, contract much of the jobseeker training to accredited private providers, and route trainees through Hello Work offices.",
+        "preconditions": [
+          "A national network of public vocational schools and polytechnic centres",
+          "Unemployment insurance and a training allowance so jobseekers can afford to attend",
+          "Employment offices that refer trainees and track whether they find work"
+        ],
+        "travelled": "Korea's employer training system and Germany's Federal Employment Agency vouchers do similar work. The Japanese model is distinctive for keeping a large public provider of its own beside contracted private training."
+      }
+    },
+    {
+      "id": "phl-cradle",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "PHL",
+      "title": "CRADLE, DOST's collaborative R&D grant for academe and companies",
+      "claim": "From 2017 the Department of Science and Technology's CRADLE programme funded 82 projects in which a university or research institute did R&D on a problem set by a Filipino company, worth 373.6 million pesos and involving 36 HEIs or RDIs and 83 companies by early 2022.",
+      "metric": {
+        "name": "CRADLE projects funded since 2017",
+        "value": 82,
+        "unit": "projects",
+        "asOf": "2022"
+      },
+      "secondMetric": {
+        "name": "Value of CRADLE projects funded since 2017",
+        "value": 373600000,
+        "unit": "Philippine pesos",
+        "asOf": "2022"
+      },
+      "started": 2017,
+      "status": "operating",
+      "source": {
+        "publisher": "Department of Science and Technology (DOST), Science for Change Program, CRADLE call for proposals for CY 2023 funding",
+        "url": "https://s4cp.dost.gov.ph/wp-content/uploads/2022/03/CRADLE-CFP-for-CY-2023-funding.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The figures are DOST's own, stated in a call for proposals rather than an audited annual report, and they are cumulative from 2017 to the date of the call (March 2022), so no single year can be read off them. The number sits inside a PDF, on page 1. A funded project is an input: the document does not say how many were completed, how many technologies the partner companies adopted, or what the companies paid as their required counterpart of at least 20 percent. 82 projects over five years is small against the size of the Philippine economy, and the partner pool includes public research institutes as well as universities. No newer official count was found: the operating status rests on DOST's undated S4CP programme page, which still describes CRADLE as being implemented, so the 2022 figures may understate the programme's current size.",
+      "pattern": {
+        "mechanism": "DOST pays for an R&D project only when a Filipino company names the problem, commits counterpart funding and agrees to adopt the result, and a university or research institute does the research.",
+        "preconditions": [
+          "University and RDI researchers able to work on applied industrial problems",
+          "Companies willing to co-fund and commit to adopting the result",
+          "A public grant line, here the Science for Change Program, that can contract with both sides"
+        ],
+        "travelled": "The design is close to Turkey's TÜBİTAK 1505 and Malaysia's PPRN: the firm states the problem and shares the cost. DOST later added an industry-led variant, iCRADLE, for larger consortia."
+      }
+    },
+    {
+      "id": "mys-pprn",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "MYS",
+      "title": "Public-Private Research Network (PPRN) matching grants",
+      "claim": "Malaysia's Ministry of Higher Education approved 680 Public-Private Research Network projects involving 634 companies by the end of 2022, with a total allocation of RM27.7 million, and 469 of them had closed as successfully completed.",
+      "metric": {
+        "name": "PPRN projects approved, cumulative",
+        "value": 680,
+        "unit": "projects",
+        "asOf": "2022"
+      },
+      "secondMetric": {
+        "name": "Companies involved in approved PPRN projects, cumulative",
+        "value": 634,
+        "unit": "companies",
+        "asOf": "2022"
+      },
+      "started": 2015,
+      "status": "operating",
+      "source": {
+        "publisher": "Ministry of Higher Education Malaysia (KPT), Deputy Minister's speech at the PPRN 2.0 briefing and exhibition, 22 February 2023",
+        "url": "https://www.mohe.gov.my/en/broadcast/teks-ucapan-yb-timbalan-menteri/program-taklimat-dan-pameran-public-private-research-network-2-0",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The figures come from a ministerial speech published on the ministry's site, not from an annual report or audit, and the page is in Malay with no English translation. They are cumulative since the programme began, so they do not show the annual rate. The projects are small: RM27.7 million across 680 projects is roughly RM41,000 of public money each, and the speech describes them as demand-driven projects to raise company productivity rather than joint research of the kind the indicator's survey item imagines. The productivity gain the speech quotes comes from a 2019 study by the Malaysia Productivity Corporation that is not cited here. The page writes the amount as 'RM 27,797,149.25 juta', a typo for RM27.8 million, and the record uses the rounded RM27.7 million the same sentence gives. The start year is not stated in the speech, which places PPRN under the 2015-2025 higher education blueprint.",
+      "pattern": {
+        "mechanism": "The ministry matches a company's own contribution, on a sliding scale by company size, to pay a university or public research institute researcher to solve a problem the company brings, and pays the researcher's fee only after the project is certified complete.",
+        "preconditions": [
+          "University researchers allowed and rewarded to do consultancy-style projects for firms",
+          "A register of viable SMEs and agencies such as SME Corp that can vouch for them",
+          "A small grant line run centrally with a single online application system"
+        ],
+        "travelled": "PPRN 2.0 widened the original scheme after 2021. The same firm-states-the-problem design appears in the Philippines' CRADLE and Turkey's TÜBİTAK 1505."
+      }
+    },
+    {
+      "id": "zaf-technology-stations",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "ZAF",
+      "title": "TIA Technology Stations Programme, and its erosion",
+      "claim": "South Africa's Technology Innovation Agency runs a network of university-based Technology Stations that gave 2,907 small firms science, engineering and technology services in 2024/25, against 3,167 at the five-year high in 2021/22, while the programme's budget fell from R105.9 million in 2020 to R93.98 million in 2025 and only 80 percent of the stations were operational.",
+      "metric": {
+        "name": "SMMEs accessing SET services through the Technology Stations network",
+        "value": 2907,
+        "unit": "SMMEs",
+        "asOf": "2024/25"
+      },
+      "secondMetric": {
+        "name": "SMMEs accessing SET services through the Technology Stations network, five-year peak",
+        "value": 3167,
+        "unit": "SMMEs",
+        "asOf": "2021/22"
+      },
+      "started": 2001,
+      "status": "eroded",
+      "source": {
+        "publisher": "Technology Innovation Agency (TIA), Annual Report 2024/25",
+        "url": "https://www.tia.org.za/wp-content/uploads/2025/10/TIA-2024_25-Annual-Report-approved-2.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The numbers sit inside a 188-page PDF, in the outcome table on PDF page 41 (printed page 39), and the budget figures in the Outcome 3 narrative on PDF page 42. The peak is the highest of the five years TIA reports, not a long-run maximum, and the fall from it is about 8 percent, which is computed here. The yearly count is noisy (1,990, 3,167, 2,671, 3,114, 2,907), and 2024/25 sits above two of the five years, so the erosion rests on what TIA reports about capacity: the budget cut, a fifth of the stations not functioning and no new high-end equipment, rather than on the count alone; the budget cut is in nominal rand and larger in real terms. A count of firms served measures university-to-firm technical service, testing and prototyping, which is a thinner form of research collaboration than joint projects: the same report says 73 percent of station equipment time goes to firms. The agency also reports a separate SMME figure (3,775) across all its programmes; this record uses only the Technology Stations line. A 2022 National Treasury spending review recommended moving the programme out of TIA altogether. The start year is taken from the programme's establishment under the former Department of Science and Technology and is not stated in the cited report.",
+      "pattern": {
+        "mechanism": "The state funds equipped technology stations inside universities, mostly universities of technology, whose staff and students sell subsidised testing, prototyping and process improvement to small firms that could not afford the equipment.",
+        "preconditions": [
+          "Universities of technology with engineering staff and laboratory space",
+          "Steady operating and capital budgets, since stations with ageing equipment stop functioning",
+          "Small manufacturers close enough to a station to use it"
+        ],
+        "travelled": "The model resembles Canada's college applied research centres and Germany's Steinbeis transfer centres. Here the erosion came from flat budgets and no new capital equipment rather than from a decision to close it."
+      }
+    },
+    {
+      "id": "chl-corfo-consorcios",
+      "indicatorId": "university_industry_collaboration",
+      "iso3": "CHL",
+      "title": "CORFO Programas y Consorcios Tecnológicos",
+      "claim": "Chile's development agency CORFO had 49 technology programmes and consortia in execution during 2024, 38 technology programmes and 11 technology consortia, the consortia joining firms with universities and technology centres in multi-year R&D portfolios, after awarding six new consortia in 2023 with 1,500 million pesos of co-financing each.",
+      "metric": {
+        "name": "Technology programmes and consortia in execution",
+        "value": 49,
+        "unit": "programmes and consortia",
+        "asOf": "2024"
+      },
+      "secondMetric": {
+        "name": "New technology consortia funded in the 2023 call",
+        "value": 6,
+        "unit": "consortia",
+        "asOf": "2023"
+      },
+      "started": 2004,
+      "status": "operating",
+      "source": {
+        "publisher": "Corporación de Fomento de la Producción (CORFO), Dirección de Programas y Consorcios Tecnológicos, results presentation at the VI Encuentro de Programas y Consorcios Tecnológicos, January 2025",
+        "url": "https://saowcsblobassets.blob.core.windows.net/assets/PG/1476720615650/PCT2025/Resultados%20y%20desaf%C3%ADos_%20%20Programas%20y%20Consorcios%20Tecnol%C3%B3gicos%20(Macarena%20Aljaro).pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The count is CORFO's own, from a slide deck hosted on CORFO's asset store, not an audited report, and it is a stock of initiatives in execution, including six new and ten finished in the year, not a flow of research output. The figure sits inside a PDF (page 13, footnote; the 38 and 11 split on page 9). Not every technology programme is led by a university: several of the 38 programmes are executed by a single company with no university partner named in the deck, so only the 11 consortia are collaborative by design and the 49 overstates university-firm collaboration. The second metric comes from a separate Ministry of Economy press release of 12 December 2023 announcing the 2023 awards, which is an award notice rather than evidence of delivery. The deck also gives figures for participating firms and private co-funding whose layout in the PDF does not make clear which label each number belongs to, so they are not used. The instrument began as the 2004 Consorcios Tecnológicos Empresariales and has been redesigned since; that start year is not stated in either cited source.",
+      "pattern": {
+        "mechanism": "CORFO co-finances long-lived consortia and programmes, for up to six years per award, at about 30 percent of cost for new consortia, inside a stated horizon of more than ten years, in which firms in one sector and universities or technology centres share a portfolio of R&D projects and the intellectual property they produce.",
+        "preconditions": [
+          "Export sectors such as fruit, wine and aquaculture with firms that face shared technical problems",
+          "Universities with applied research groups in those sectors",
+          "An agency able to commit funding over a horizon longer than a political term"
+        ],
+        "travelled": "Chile's first-generation consortia of 2004 drew on Australia's Cooperative Research Centres; several, such as Biofrutales, still run."
       }
     }
   ]

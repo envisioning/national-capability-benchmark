@@ -128,6 +128,7 @@ Documented deliveries linked to missing indicators. They do not affect scores or
 - **Cooperative Research Centres programme** (Coordination). Australia's Department of Industry reported that its Cooperative Research Centres portfolio facilitated 304 businesses establishing research-focused collaborations in 2023–24, across 114 CRC and 190 CRC Projects partners, above the year's target of 248.
 - **VET FEE-HELP, and its abolition** (Learning). Australia's VET FEE-HELP loan scheme, introduced in 2008 to fund higher-level vocational courses, grew from fewer than 3,500 loans in 2009 to 196,108 in 2015, and was abolished and replaced from 1 January 2017 by VET Student Loans, which reached 53,892 students in 2019.
 - **JobKeeper Payment** (Adaptability). Australia's Treasury designed, Parliament legislated and the tax office began paying the JobKeeper wage subsidy just over five weeks after its announcement on 30 March 2020, and in its first phase it supported on average around 925,000 businesses and 3.6 million individuals each month before ending on 28 March 2021.
+- **ASIC enhanced regulatory sandbox** (Experimentation). Australia's government introduced the enhanced regulatory sandbox on 1 September 2020, letting firms test financial services and credit activities for up to 24 months without a licence, and ASIC's register lists 23 users, four current and 19 past.
 
 ## Contribute
 

@@ -9,6 +9,20 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.24.6 — 2026-10-02
+
+- **26 more documented deliveries, eight of them losses.** Foresight units
+  and regulatory sandboxes are now covered in every country: each either has
+  a record or a note saying what was checked and why nothing qualified. The
+  losses include the US Office of Technology Assessment, Finland's SHOK
+  research clusters, Poland's government strategy centre, the US consumer
+  finance sandbox and the Dutch STAP training budget. The flagships include
+  France's CIFRE industrial doctorates, Switzerland's Innosuisse projects,
+  Germany's parliamentary technology assessment office and Mexico's adult
+  literacy institute. A second reviewer checked every number at its
+  official source and dropped two records. The capability agenda is
+  regenerated.
+
 ## App 1.24.5 — 2026-10-02
 
 - **Known limits restated on the current dataset.** Coordination no longer

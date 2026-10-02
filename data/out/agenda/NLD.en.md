@@ -151,6 +151,8 @@ These are documented institutional changes in Netherlands that the framework rec
 - **OVpay, nationwide contactless transit payments** (Building). Translink and the Dutch public-transport operators rolled out OVpay nationwide in 2023, embedding bank-card and mobile check-in across the country; in 2024 the system processed 390 million travel transactions, 15 percent of all transit transactions.
 - **Omgevingswet and the Digital Environment System** (Building). On 1 January 2024 the Netherlands put the Omgevingswet and its Digital Environment System into operation, joining municipalities, provinces, water boards and the national government behind one Omgevingsloket for rules, maps and permit applications.
 - **Programmatic Approach to Nitrogen, and the permitting reversal** (Adaptability). The Netherlands operated the Programmatic Approach to Nitrogen (PAS) from July 2015 until the Council of State invalidated its legal basis in May 2019; by the end of 2023, 2,557 affected PAS reporters had sought permits and only 115 had a recorded solution.
+- **Experimenten Elektriciteitswet 2015-2018, and its erosion** (Experimentation). The Dutch economy ministry let energy cooperatives and owners' associations deviate from the Electricity Act 1998 through 19 exemptions granted in four rounds between 2015 and 2018, then closed the scheme to new entrants; by 2024 only 10 of the experiments were operational.
+- **STAP-budget training grant, abolished in 2024** (Learning). The Dutch employee insurance agency UWV paid individual training grants of up to 1,000 euros from 2022, approved more than 214,000 applications in five rounds that year, and stopped the scheme on 1 January 2024.
 
 ## Contribute
 
