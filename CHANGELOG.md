@@ -9,6 +9,16 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.25.4 — 2026-10-02
+
+- **220 more documented deliveries for the countries that joined the
+  frame, 24 of them losses, and 48 searched notes.** 746 of the 1,000
+  country and gap cells now carry a record or a note. Among the losses are
+  ended rail and water concessions in Tanzania, Zambia, Guinea and
+  Mozambique, and Denmark's technology board. A second reviewer opened every
+  source and checked every number, corrected 107 records and dropped 18.
+  The capability agenda is regenerated.
+
 ## App 1.25.3 — 2026-10-02
 
 - **The first documented deliveries for 16 more of the new countries.** 28

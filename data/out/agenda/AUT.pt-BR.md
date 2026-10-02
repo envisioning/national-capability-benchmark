@@ -115,6 +115,16 @@ Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso,
 | Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 
+## O que os indicadores não veem sobre Áustria
+
+Entregas documentadas ligadas a indicadores ausentes. Elas não afetam as notas nem a solidez da evidência.
+
+- **FMA Regulatory Sandbox** (Experimentação). Austria's Financial Market Authority admitted eight FinTechs to its Regulatory Sandbox between its launch on 1 September 2020 and January 2023, five seeking authorisation as European crowdfunding service providers and three offering crypto-asset or securities services, and one participant had obtained a licence for a digital trading platform by the start of 2022.
+- **AMS training measures (Schulungen) for jobseekers** (Aprendizagem). Austria's Public Employment Service (AMS) had on average 76,496 people a day enrolled in its training measures in 2025, up 1.3 percent on 2024, against an annual average of 65,126 in 2015.
+- **COMET, Competence Centers for Excellent Technologies** (Coordenação). Austria's COMET programme, run by the FFG for the federal ministries and co-funded by the Länder, had approved 81 competence centres and K-projects with eligible costs of 1,669.80 million euros by 30 March 2017, in which about 450 scientific partners and about 1,000 company partners cooperated, according to the Court of Audit.
+- **COVID-19-Kurzarbeit, 2020 to 2021** (Adaptação). Austria's social partners drafted a COVID-19 short-time work model on 13 and 14 March 2020, the AMS adopted its directive on 18 March and the ministers approved it on 19 March, three days after the first lockdown began, and in 2020 113,771 firms with 1.25 million employees used the scheme, against 508 firms in 2009.
+- **Koralmbahn Graz to Klagenfurt, opened seven years after its contracted completion date** (Construção). Austria's federal rail infrastructure company ÖBB-Infrastruktur AG forecast the Koralmbahn's total cost at 6.139 billion euros at the end of 2023, 282.4 million euros or 5 percent above the 2012 baseline, but missed both the 2018 completion date in the 2004 Koralmbahn contract and the 2023 opening date in the 2012 to 2017 framework plan, according to the Court of Audit, and the line entered passenger service on 14 December 2025.
+
 ## Contribua
 
 Preencha uma lacuna, registre uma evidência ou conteste um indicador em https://github.com/envisioning/national-capability-benchmark. Os documentos explicam o método e suas decisões.

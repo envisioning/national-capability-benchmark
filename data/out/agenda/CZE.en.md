@@ -116,6 +116,15 @@ Conditions describe what a country has to work with: infrastructure, access, mon
 | Shared Purpose | Volunteering | Share of adults who volunteered time to an organisation in the last month. |
 | Shared Purpose | Political polarisation | Degree to which political differences run along a single hostile divide. |
 
+## What the indicators miss about Czechia
+
+Documented deliveries linked to missing indicators. They do not affect scores or confidence.
+
+- **Centra kompetence, the Technology Agency's competence centres programme 2012 to 2019** (Coordination). The Technology Agency of the Czech Republic funded 34 competence centres under its Centra kompetence programme from 2012, joining 334 participants, 115 research organisations, 118 SMEs and 101 large firms, against a planned 31 centres and 248 participants.
+- **D4 Příbram to Písek motorway, the first Czech transport PPP** (Coordination). The Czech Ministry of Transport procured the completion of the D4 motorway between Příbram and Písek as the country's first transport public-private partnership, and the concessionaire Via Salis opened 32 km of new motorway and 16 km of modernised sections on 17 December 2024 after 43 months of construction, as the ministry had announced in June 2021, with the state paying an availability payment until 2049.
+- **Antivirus job retention programme, 2020 to 2022** (Adaptability). The Czech government approved the Antivirus employment support programme on 31 March 2020, with costs eligible from 12 March, and the Labour Office paid CZK 51.2 billion through it from 2020 to 2022 to almost 71,000 employers for 1.2 million employees.
+- **Motorway construction by the Road and Motorway Directorate, and its unit cost** (Building). The Czech Supreme Audit Office reported in June 2026 that 41 motorway sections totalling more than 300 km were opened to traffic between 2020 and 2024, after years with almost none (no kilometre in 2014, four in 2018), but that the average cost the state paid per kilometre of motorway opened rose from nearly CZK 275 million in 2020 to CZK 505 million in 2024, an increase of nearly 84 percent.
+
 ## Contribute
 
 Fill a gap, file evidence or challenge an indicator at https://github.com/envisioning/national-capability-benchmark. The docs explain the method and decisions.
