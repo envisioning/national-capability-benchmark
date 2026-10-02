@@ -85,6 +85,18 @@ export function worldBankSeriesUrl(opts: {
  * link on that row and the wrong one for the publisher as a whole. Both the
  * sources page and the data package name the publisher, so both want this.
  */
+/**
+ * The ISO3 code of one World Bank API row. Most databases fill
+ * `countryiso3code`; some (Global Findex, source 28) leave it empty and put
+ * the ISO3 code in `country.id`, so a reader that keys on the first field
+ * alone sees no data at all.
+ */
+export function worldBankRowIso3(row: { countryiso3code?: string; country?: { id?: string } }): string | null {
+  if (row.countryiso3code) return row.countryiso3code
+  const id = row.country?.id
+  return id && /^[A-Z]{3}$/.test(id) ? id : null
+}
+
 export const PUBLISHER_HOME: Record<string, string> = {
   [WB_PUBLISHER]: 'https://data.worldbank.org',
   'Global Entrepreneurship Monitor': 'https://www.gemconsortium.org',

@@ -224,3 +224,184 @@ at one border, observed by its users. It is the nearest observable this sweep
 found, and it is a different thing from a measure of agencies delivering one
 objective together. `public_private_collaboration` gets no candidate.
 `university_industry_collaboration` gets one, and it fails.
+
+## Preflight: customs clearance time (2026-10-02)
+
+Recommendation 1 asked for the number of direct exporters behind each
+country's mean and the standard error of that mean, with a country held below
+30 firms. This section reports what could be read without registration and
+what could not.
+
+### What the publisher serves
+
+- **The per-country item base and standard error are not published.** The
+  Enterprise Surveys portal's indicator service
+  (`https://extdataportal.worldbank.org/api/esapi/GetEconomyIndicatorData/economyid/{id}/topicid/10/year/{year}`)
+  returns the country, region and global point estimates only. The economy list
+  (`GetAllEconomiesSubGroups`) gives the total firms surveyed per round. The
+  exact base and standard error need the microdata, and the portal sends
+  microdata requests to a sign-in page (`login.enterprisesurveys.org`). That is
+  a registration a person has to make. It was not made here.
+- **`IC.CUS.DURS.EX` is manufacturing only.** The Enterprise Surveys indicator
+  descriptions (tr1, page 133) mark it with an asterisk, "computed using data
+  from manufacturing firms only". The base is the manufacturing firms that
+  exported directly, which is smaller than the exporter count.
+- **The question changed with B-READY.** Rounds fielded from 2024 add D.33
+  after the customs question: the days for exported goods to be released by
+  all border control agencies, from pre-arrival procedures to final release.
+  On 21 July 2025 the publisher dropped every case where customs time (D.4)
+  exceeds the all-agency time (D.33). That correction can only bite in rounds
+  that asked D.33, so a long customs answer survives in an older round and is
+  removed in a newer one. On 22 September 2025 a "less than a day" answer with
+  unknown hours was set to 1 day. The portal now also serves the all-agency
+  mean (`bready_tr18_u`) and, in the indicator descriptions, a median
+  (`tr18`). Neither is in the World Bank API.
+- **The World Bank API lags the portal.** The portal holds a 2026 round for
+  Argentina (3.1 days); WDI still serves 2017 (6.5).
+
+### Base proxy and pass count
+
+The proxy is the firms surveyed in the latest round times the weighted share
+of firms exporting directly at least 10% of sales (`tr16`). It is not the item
+base. It counts services firms the item excludes, which pushes it up. It
+weights the share to the population while the sample over-represents large
+firms, who export more, which pushes it down. A proxy near 30 could fall on
+either side of the true base. India shows the gap: 10,479 firms surveyed and a
+weighted exporter share of 1.0% give a proxy of 105.
+
+**37 of 53 pass at a proxy of 30 or more.** Held below 30: PAN 10, NIC 10,
+RWA 14, MEX 16, HND 19, ISR 20, ECU 20, URY 22, DOM 24, BOL 25, PHL 28, PRY 28.
+VEN has no round since 2010. ARE, CUB and HTI have no survey. Every passing
+country's latest round is 2020 or later (ZAF 2020; the rest 2023 to 2026).
+
+| ISO3 | Latest round | Firms surveyed | Exporting ≥10% (weighted %) | Base proxy | Customs days (tr1) | All agencies, mean days (tr18_u) | Status |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| DEU | 2025 | 1963 | 20.7 | 406 | 2.8 | 3.5 | pass |
+| ESP | 2024 | 1431 | 21.9 | 313 | 4.3 | 4.5 | pass |
+| NLD | 2025 | 672 | 40.1 | 269 | 2.4 | 3.2 | pass |
+| KEN | 2025 | 1024 | 17.2 | 176 | 5.8 | 10.6 | pass |
+| GBR | 2024 | 1003 | 15.6 | 156 | 5.5 | 7.9 | pass |
+| IDN | 2023 | 2955 | 4.7 | 139 | 6.6 | 6.2 | pass |
+| FRA | 2025 | 1014 | 13.6 | 138 | 2.2 | 3.4 | pass |
+| PRT | 2023 | 1007 | 13.5 | 136 | 7.7 | 11 | pass |
+| CAN | 2024 | 1015 | 12.3 | 125 | 3.3 | 4.7 | pass |
+| SWE | 2024 | 600 | 19.2 | 115 | 3.5 | 3.4 | pass |
+| FIN | 2025 | 602 | 18.2 | 110 | 1.6 | 1.1 | pass |
+| IND | 2025 | 10479 | 1 | 105 | 2.5 | 7.3 | pass |
+| EST | 2023 | 351 | 29.6 | 104 | 3 | 3 | pass |
+| MYS | 2024 | 979 | 10.6 | 104 | 12.8 | 15.3 | pass |
+| CHE | 2025 | 579 | 17.6 | 102 | 3.7 | 5.6 | pass |
+| SLV | 2023 | 729 | 13.3 | 97 | 3.2 | 3.7 | pass |
+| USA | 2024 | 2589 | 3.7 | 96 | 8.2 | 12.9 | pass |
+| POL | 2025 | 1725 | 5.2 | 90 | 3.3 | 4.8 | pass |
+| CHN | 2024 | 2189 | 4.1 | 90 | 3.1 | 3.9 | pass |
+| TUR | 2024 | 1416 | 5.6 | 79 | 10.9 | 9.7 | pass |
+| ZAF | 2020 | 1097 | 7.1 | 78 | 8.2 | n/a | pass |
+| KOR | 2024 | 1518 | 4.9 | 74 | 15.4 | 17.7 | pass |
+| SGP | 2023 | 623 | 11.1 | 69 | 4.1 | 6 | pass |
+| JPN | 2025 | 2168 | 3 | 65 | 10.1 | 6.1 | pass |
+| PER | 2023 | 987 | 6.3 | 62 | 5.4 | 7 | pass |
+| IRL | 2024 | 609 | 9.6 | 58 | 2.4 | 5.7 | pass |
+| VNM | 2023 | 1028 | 5.4 | 56 | 4 | 7.3 | pass |
+| CHL | 2025 | 1000 | 5.2 | 52 | 3.7 | 9.1 | pass |
+| THA | 2025 | 813 | 6.1 | 50 | 2.6 | 4.9 | pass |
+| ETH | 2025 | 1011 | 4.8 | 49 | 4.2 | 11 | pass |
+| COL | 2023 | 919 | 4.9 | 45 | 7 | 15 | pass |
+| ARG | 2026 | 797 | 5.4 | 43 | 3.1 | 5.2 | pass |
+| NGA | 2025 | 1043 | 3.9 | 41 | 4.4 | 8.4 | pass |
+| CRI | 2023 | 357 | 11 | 39 | 4.2 | 7.6 | pass |
+| AUS | 2025 | 512 | 7.4 | 38 | 5.1 | 6.2 | pass |
+| GTM | 2025 | 183 | 20.6 | 38 | 1.2 | 5 | pass |
+| BRA | 2025 | 1531 | 2.1 | 32 | 8.9 | 14.7 | pass |
+| PHL | 2023 | 1002 | 2.8 | 28 | 27.5 | 20 | held |
+| PRY | 2023 | 378 | 7.3 | 28 | 16.4 | 25.2 | held |
+| BOL | 2025 | 610 | 4.1 | 25 | 4.9 | 7.4 | held |
+| DOM | 2025 | 345 | 6.9 | 24 | 3.5 | 15.8 | held |
+| URY | 2024 | 360 | 6 | 22 | 2.9 | 5.7 | held |
+| ISR | 2024 | 388 | 5.1 | 20 | 10.1 | 8.6 | held |
+| ECU | 2024 | 345 | 5.8 | 20 | 7.9 | 11.3 | held |
+| HND | 2016 | 332 | 5.8 | 19 | 3.8 | n/a | held |
+| MEX | 2023 | 1322 | 1.2 | 16 | 20.5 | 30.5 | held |
+| RWA | 2023 | 358 | 4 | 14 | 7.3 | 17.5 | held |
+| PAN | 2025 | 282 | 3.5 | 10 | 8.4 | 5.2 | held |
+| NIC | 2016 | 333 | 2.9 | 10 | 5.2 | n/a | held |
+| VEN | 2010 | 320 | n/a | n/a | n/a | n/a | held |
+### The swings: design, not sample size
+
+Every large swing in the earlier stability test crosses the B-READY boundary
+from a pre-2024 round to a 2024 or 2025 round. None of them comes from a small
+sample:
+
+- **India**, 17.3 days (2022) to 2.5 (2025). Imports moved the same way, from
+  31.5 to 3.2, and the weighted exporter share from 8.5% to 1.0%. Both
+  samples exceed 9,000 firms. A ninefold change on both sides of trade at once
+  is a change in the instrument or the sampled exporters, not in India's
+  border.
+- **France**, 10.4 (2021) to 2.2 (2025), imports 12.3 to 2.7. The 2021 round
+  asked about fiscal 2020, so pandemic disruption and the first months of
+  post-Brexit controls fall in it. Finland (6.4 to 1.6), Spain (7.0 to 4.3) and
+  Germany (4.1 to 2.8) fell between the same two waves. A whole wave moving
+  together, with the D.4 > D.33 exclusion acting only on the newer one, is a
+  survey-design break.
+- **Korea**, 7.2 (2005) to 15.4 (2024). The two rounds are 19 years and two
+  questionnaires apart, and the portal no longer serves the 2005 round. The
+  2024 value is not a single-item accident: in the same survey Korean firms
+  report 17.7 days for all agencies and 12.5 for imports, and the base proxy is
+  74. It still contradicts the administrative record of clearance in hours, so
+  the likeliest reading is that respondents counted port dwell, not that the
+  sample was small. Japan (10.1 customs, 6.1 all agencies, base 65) raises the
+  same question.
+- Türkiye (2.6 to 10.9) and Malaysia (4.6 to 12.8) went the other way across
+  the same boundary.
+
+Within one survey the country signal is consistent: customs days against
+all-agency days, same respondents, r 0.80 (n 46); import customs against
+import all-agency days, r 0.83 (n 49). The values hold together within a round
+and do not carry across the design change. Stability within the B-READY design
+cannot be tested yet, because no benchmark country has two B-READY rounds.
+
+### Effect if only the passing countries are kept
+
+Same simulation as above (`confidenceFor`, current year 2026, 7.8.0 cells,
+portal years):
+
+| | Mean confidence | r(Coordination confidence, log GDP) | Row r with log GDP |
+| --- | ---: | ---: | ---: |
+| 7.8.0 | 0.362 | -0.37 (51) | |
+| Customs row, 37 passing countries, denominator 6 | 0.406 | 0.09 (51) | -0.02 (37) |
+| Customs row, all 46 at 2018 or later, denominator 6 | 0.435 | -0.05 (51) | 0.12 (49) |
+| All-agency mean (tr18_u), 36 passing with a value | n/a | n/a | 0.23 (36) |
+
+With only the passing countries the row clears O1 by 0.006. Ten of the twelve
+held countries are in Latin America and the other two are Israel and Rwanda,
+so the hold takes cells from middle-income countries. It turns Coordination's
+confidence from leaning toward poorer countries to leaning slightly toward
+richer ones. In the passing set the A9 reading holds: CHN 10th, VNM 18th,
+SGP 19th of 37.
+
+### Verdict: check, not indicator
+
+The recommendation set its own gate: wire the row as an indicator if 40 or
+more countries remain after the hold. 37 remain, on a proxy that cannot settle
+the cases near 30. The two pieces of evidence that would decide it, the item
+base and the standard error, sit behind the microdata registration. The swings
+that prompted the preflight are a survey-design break at the B-READY boundary,
+not small samples. That clears the item of the noise charge and opens a
+comparability charge instead: no benchmark country has two rounds under one
+design.
+
+Publish `customs_clearance_time` as a check beside Coordination under D60, with
+a decision entry naming the test it failed: its base cannot be verified
+without microdata, and 37 of 53 pass the proxy. Do not score it. Reopen when:
+
+1. someone registers for the microdata and reads the per-country item base
+   and standard error. If 40 or more countries pass on the real base, reopen
+   the indicator question; or
+2. a second B-READY round lets stability be tested within one design.
+
+If it is reopened, prefer the all-agency measure from D.33 over customs alone.
+It asks about all border agencies, which is the construct the registry note for
+`time_to_export` names ("several agencies acting together"), and it covers
+manufacturers and wholesalers.
+It is served only by the Enterprise Surveys portal, which has no versioning, so
+it would need an adapter with a pin, the way D124 pins OpenAlex.

@@ -5,6 +5,7 @@ import {
   WB_API_BASE,
   WB_DEFAULT_DATABASE,
   worldBankSeriesUrl,
+  worldBankRowIso3,
 } from '../model/index.js'
 import { WEALTH_CORRELATION_THRESHOLD } from './diagnostics.js'
 import { median, pearson, round, spearman } from './stats.js'
@@ -59,7 +60,7 @@ export type ProbeResult = {
   error: string | null
 }
 
-type WbRow = { countryiso3code: string; date: string; value: number | null }
+type WbRow = { countryiso3code: string; country?: { id?: string }; date: string; value: number | null }
 
 /**
  * The API answered, and said it has no such series.
@@ -145,11 +146,12 @@ async function fetchLatest(
   const rows = Array.isArray(body[1]) ? (body[1] as WbRow[]) : []
   const latest = new Map<string, { value: number; year: number }>()
   for (const row of rows) {
-    if (row.value === null || !row.countryiso3code) continue
+    const iso3 = worldBankRowIso3(row)
+    if (row.value === null || !iso3) continue
     const year = Number(row.date)
     if (!Number.isFinite(year)) continue
-    const held = latest.get(row.countryiso3code)
-    if (!held || year > held.year) latest.set(row.countryiso3code, { value: row.value, year })
+    const held = latest.get(iso3)
+    if (!held || year > held.year) latest.set(iso3, { value: row.value, year })
   }
   return latest
 }

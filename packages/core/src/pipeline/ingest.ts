@@ -12,6 +12,7 @@ import {
   worldBankCheckSeries,
   worldBankSeries,
   worldBankSeriesUrl,
+  worldBankRowIso3,
 } from '../model/index.js'
 import { ObservationFile, RevisionFile } from '../model/index.js'
 import type { Observation, Revision, RevisionRun } from '../model/index.js'
@@ -22,6 +23,7 @@ const COUNTRY_PATH = COUNTRY_ISO3.join(';')
 
 type WbRow = {
   countryiso3code: string
+  country?: { id?: string }
   date: string
   value: number | null
 }
@@ -45,7 +47,10 @@ async function fetchSeries(
   if (!Array.isArray(body) || body.length < 2 || !Array.isArray(body[1])) {
     throw new Error(`${series}: the API returned no data block`)
   }
-  return (body[1] as WbRow[]).filter((r) => r.value !== null && r.countryiso3code)
+  return (body[1] as WbRow[]).flatMap((r) => {
+    const iso3 = worldBankRowIso3(r)
+    return r.value !== null && iso3 ? [{ ...r, countryiso3code: iso3 }] : []
+  })
 }
 
 /**
