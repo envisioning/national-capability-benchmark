@@ -9,6 +9,17 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.24.5 — 2026-10-02
+
+- **Known limits restated on the current dataset.** Coordination no longer
+  reads small states low: Uruguay scores 73.9 and Costa Rica 88.6, and the
+  score is unrelated to population. What remains is narrower, and A9 now
+  says so: the civil society row pulls down states that coordinate through
+  the executive, Singapore most of all. Every other entry is refreshed to
+  7.7.1 or names the run its figures come from. No limit quotes the old
+  one-panelist estimates any more, because they were scored on a different
+  frame (D139). A7 is now about Korea and Japan reading low on Learning.
+
 ## Dataset 7.7.1 — 2026-10-02
 
 - **V-Dem moves to release 16 (March 2026).** Court compliance and civil

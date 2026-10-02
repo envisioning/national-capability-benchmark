@@ -7046,3 +7046,30 @@ weaker claim to fails or mixed on every surface without an edit; a churning
 release reading on any dimension; a measurement-noise floor built from
 indicator uncertainty that puts the shape share inside it; or a wider country
 set on which the margin in (b) can be estimated within a few hundredths.
+
+## D139 — A panel figure is compared with the indicators only on the dataset it was scored on
+
+*Recorded 2026-10-02. Resolves #41.*
+
+**Decision.** No artefact, page or report compares a Delphi run with indicator
+scores unless the run's `datasetVersion` matches the current dataset.
+Until then the run is a research note, which is what `isDelphiRunForDataset`
+already enforces in scoring: dataset 7.7.1 publishes no `delphiScore` in any
+cell. `docs/KNOWN-ARTEFACTS.md` quotes no panel figure, and A1, A2, A5, A7 and
+A9 lose the panel evidence they used to cite.
+
+**Why.** The run `data/delphi/latest.json` points at is the 2026-08-26
+in-session run: one panelist, 16 countries, no dataset version, scored
+against a frame that still held the perception rows D23 retired. Its
+estimates were anchored on those scores, so on Coordination its upward
+corrections (Uruguay 18.8 to 45, Brazil 15.5 to 35, Colombia 4.3 to 18) read
+as downward gaps against today's scores, and the 35.6 point mean gap #41 asked
+about measures the change of ruler. Rank agreement, which the anchor does not
+move, is 0.70 on Coordination, mid-pack of the nine.
+
+**Cost.** The artefacts lose an independent second opinion until a reviewed
+panel exists, and A7 had no other evidence for Korea and Estonia reading low:
+it now rests on the indicator rows alone and was retitled.
+
+**Overturned by.** A reviewed gateway panel scored against the current dataset
+version (#33), which makes the comparison readable again.

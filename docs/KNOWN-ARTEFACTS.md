@@ -5,13 +5,17 @@ than informative about it. These are not bugs in the code: the pipeline is doing
 what it was told. They are failures of measurement, and anyone building on this
 needs to know them before quoting a score.
 
-Evidence for each is either a diagnostic in `data/out/diagnostics.json` or the
-in-session panel run in `data/delphi/in-session-round1.json`, which scored 144
-of the 477 country-dimension cells against the same evidence briefs.
+Evidence for each is a diagnostic in `data/out/diagnostics.json` or a figure
+from the published output. The in-session panel runs in `data/delphi` are one
+panelist each, carry no dataset version and were scored against older frames,
+so a gap between one of them and a current score is not a finding (see A9).
 
-Numbers here are from dataset 6.1.0 unless a figure names the run it comes from.
-Where a figure predates the current frame it says so, because the scale it was
-measured on is not the scale in use.
+Every entry is on dataset 7.7.1 except where it names another run. A3 also
+quotes the 16-country run that last scored the WGI rows, and A4 the ten-country
+one. A13 carries V-Dem v15 values from dataset 6.1.2: the v16 re-ingest moves
+them (Rwanda's polarization reads 2.67 for 2025), so that entry needs restating
+against the new release. A6 holds no dataset figures. Where a figure predates
+the current frame, the scale it was measured on is not the scale in use.
 
 ---
 ## A1 — Experimentation is not measured, it is inferred from patents
@@ -22,7 +26,7 @@ Four of nine indicators are observed for most countries: resident patents,
 trademarks and industrial designs per head (D126), and, for the 16 countries
 GEM covered first, early-stage entrepreneurial activity and fear of failure.
 Venture capital, regulatory sandboxes, university spinouts and business R&D
-share are still gaps. Mean confidence is 0.271 on dataset 7.3.0, the lowest of
+share are still gaps. Mean confidence is 0.271 on dataset 7.7.1, the lowest of
 the nine dimensions. 37 countries are scored on patents, trademarks and
 designs alone. GEM's later reports reach 40 of the 53, but the extension is
 held because the 14 countries GEM skips are mostly lower-income and the gain
@@ -32,24 +36,20 @@ Resident patents and resident trademarks per head measure formalised, completed,
 defensible invention, which is close to the opposite of the many-cheap-
 experiments construct the dimension is supposed to capture.
 
-The panel and the indicators disagree here more than on any dimension except
-Coordination. The four largest departures across the 16 countries the panel
-covers:
+On dataset 7.7.1 the Netherlands scores 28.1. That is not a finding about
+Dutch innovation: its trademark and design rows are missing, venture capital is
+a gap, and the score rests on resident patents and the two GEM rows. Uruguay
+scores 28.6, having legalised and regulated a national cannabis market and run
+a fintech sandbox. Argentina scores 19.6, having produced more technology firms
+of scale per head than anywhere else in the region.
 
-| Country | Indicators | Panel | Gap |
-| --- | ---: | ---: | ---: |
-| United States | 48.6 | 95 | +46.4 |
-| Estonia | 28.2 | 70 | +41.8 |
-| Netherlands | 31.0 | 65 | +34.0 |
-| India | 10.5 | 40 | +29.5 |
-
-The panel column is the in-session run of 2026-08-26 (`data/delphi/latest.json`);
-the indicator column is the current dataset. The Netherlands' 31.0 is not a
-finding about Dutch innovation. It is the absence of venture-capital data and of
-a national design series. Uruguay scores 23.7, having legalised and regulated a
-national cannabis market and run a fintech sandbox. Argentina scores 17.0, having
-produced more technology firms of scale per head than anywhere else in the
-region.
+No panel figure is quoted here. The run `data/delphi/latest.json` points at,
+a one-panelist in-session run, carries no dataset version
+and was scored against an older frame, so its distance from a 7.7.1 score
+measures the change of ruler as much as the country (see A9). As context only:
+its mean absolute distance from the 7.7.1 Experimentation scores is 15.4 points
+across its 16 countries, fifth of the nine dimensions, and its rank agreement
+with them is a Spearman 0.55, second lowest.
 
 **Fix.** A venture capital series is still missing. The only inspectable
 aggregate, the OECD SME and Entrepreneurship Financing scoreboard, covers 6 of
@@ -64,13 +64,13 @@ least 2019, so its coverage cannot grow evenly from the published reports.
 
 **Severity: medium.**
 
-India scores 9.8 on Experimentation (dataset 7.0.0). It comes from dividing
-absolute counts by 1.4 billion people. The arithmetic is correct and the result
-is not informative: it says India files few patents per head, which was never
-the question. The panel put India at 40 there, a gap of 30.2 points.
-Anticipation reads 35.5 on articles per head and statistical performance, against
-the panel's 25; the per-head stocks of researchers and research spending are
-conditions beside it and do not enter it (D122).
+India scores 8.8 on Experimentation on dataset 7.7.1, 32nd of 53. It comes
+from dividing absolute counts by 1.4 billion people. The arithmetic is correct
+and the result is not informative: it says India files few patents per head,
+which was never the question. Anticipation reads 35.5, 38th of 52, on articles
+per head and statistical performance; the per-head stocks of researchers and
+research spending are conditions beside it and do not enter it (D122). No
+panel figure is quoted here, for the reason A9 gives.
 
 **Fix.** Per-capita is right for most indicators and wrong where capability is
 concentrated in institutions rather than spread across a population. Consider a
@@ -83,14 +83,16 @@ indicators, reported separately.
 
 **Severity: high. The first source-backed Trust release is still thin.**
 
-The current figures are from dataset 6.1.0. Coordination publishes a score for
-52 of 53 countries, based on border time, budget execution and V-Dem's
-expert-coded civil-society index. Trust publishes a
-score for 37 of 53 countries, based on the Joint EVS/WVS A165 social-trust
-measure and the 2019-frozen contract-enforcement measure. Trust's dimension
-correlation with log GDP per capita is 0.611 (Spearman 0.684, n=36), so the
-release is usable as a research baseline but not a clean claim of wealth-free
-trust. D23 retired the WGI perception composites and D44 retired homicide.
+The figures in this entry are from dataset 7.7.1 unless they name the
+16-country run. Coordination publishes a score for 52 of 53 countries, from
+border time, budget execution and V-Dem's expert-coded civil-society index.
+Trust publishes for 52 of 53, from four rows: contract enforcement days, frozen
+at 2019; bribery incidence (D123); government compliance with the courts
+(V-Dem, D131); and the Joint EVS/WVS A165 social-trust item, which covers 37.
+Trust correlates with log GDP per capita at 0.675 (Spearman 0.726, n 51) and
+Coordination at 0.558 (Spearman 0.623, n 51), so both are usable as research
+baselines but not as clean claims of wealth-free capability. D23 retired the
+WGI perception composites and D44 retired homicide.
 
 Both dimensions once leaned on the Worldwide Governance Indicators, which are expert
 and firm perception composites that track income closely by construction. On the
@@ -112,21 +114,20 @@ indicators in it are retired, so it cannot be recomputed on the current frame:
 | Trust | Contract enforcement days | +0.61 | C | yes |
 
 The pattern to read is the class column. Every indicator that failed the old
-test was class P and every indicator that survived was class C. The current
-Trust release adds a class P social measure from a named academic survey to the
-class C contract measure. The social measure alone correlates with log GDP per
-capita at 0.657 in the current alignment, so it is a watch item rather than a
-verdict. Coordination now has a 2024 V-Dem civil-society index beside the
-World Bank budget-execution and older border-time rows; the new index's own
-correlation is 0.398, but all three remain a partial operational proxy rather
-than a direct test of cross-agency delivery.
+test was class P and every indicator that survived was class C. On 7.7.1
+Trust's rows correlate with log GDP per capita at 0.657 for the A165 social
+measure, 0.552 for bribery incidence, 0.535 for court compliance and 0.166 for
+contract enforcement days. The social measure is a watch item rather than a
+verdict. Coordination's rows sit at 0.551 for border time, 0.388 for V-Dem
+civil-society strength and 0.224 for budget execution, and all three remain a
+partial operational proxy rather than a direct test of cross-agency delivery.
 
 **Fix.** These dimensions need observable, behavioural indicators that are not
 WGI and not frozen at 2019. V-Dem and budget execution are useful additions for
 Coordination, but they do not show whether agencies delivered the same
 objective. Trust needs pooled EVS/WVS rows, a recent court-throughput or case
 clearance series, and broader institutional-performance evidence. See also A9,
-which is the same problem seen from a small competent state, and D20, where
+which is the same problem seen from an executive-led state, and D20, where
 documented cross-agency delivery is being collected as evidence.
 
 **Overturned by.** Behavioural indicators that cover the country set and show
@@ -157,21 +158,20 @@ the reason on each.
 **Severity: closed. The indicator is retired. See D23.**
 
 `GOV_WGI_VA.EST` measures the democratic channel for participation. Shared Purpose
-asks whether people can see themselves in a common project. Singapore scores 20.9
-while being one of the most effective collective actors in the set. The panel put
-it at 55, splitting the difference between very high collective-action capacity
-and genuinely limited pluralism.
+asks whether people can see themselves in a common project. When the row was
+last scored, before D23, Singapore read 20.9 while being one of the most
+effective collective actors in the set.
 
 The spec is explicit that political uniformity is not a capability, so the fix is
 not simply to raise Singapore.
 
-Voice and accountability is retired, so Singapore's 20.9 is gone. Shared Purpose
-now rests on two indicators, tax revenue and income inequality, at mean
-confidence 0.260, and it publishes a score for 47 of 53 countries. Its
-correlation with log GDP per capita is 0.457 (n=47), the lowest of the nine
-dimensions. The behavioural measures it needs are civic participation and
-volunteering, both still gaps, plus voter turnout, which is published by
-International IDEA and would have to be entered by hand.
+Voice and accountability is retired. On dataset 7.7.1 Shared Purpose rests on
+three rows, tax revenue, income inequality and EVS/WVS civic participation
+(D128, read through A15), at mean confidence 0.343, and it publishes a score
+for 51 of 53 countries. Its correlation with log GDP per capita is 0.202 (n
+50), the lowest of the nine dimensions. Singapore scores 37.0 on the two rows
+it has. National belonging and volunteering are still gaps. No panel figure is
+quoted here, for the reason A9 gives.
 
 V-Dem's polarization item brings the Singapore question back from the other
 side: a regime with no organised opposition reads as calm. It is published
@@ -199,20 +199,26 @@ countries in its 2024 round. The migration waits on coverage and not on the
 publisher. See A12.
 
 ---
-## A7 — Learning understates Korea, Estonia and Singapore
+## A7 — Learning understates Korea and Japan
 
 **Severity: medium.**
 
-Learning is scored on three rows: the Human Capital Index, whose last full round
-is 2020, the vocational share of secondary enrolment, which is a structure of
-the school system and stale in many countries, and the share of firms offering
-formal training. Enrolment and public education spending are conditions beside
-the score (D122). None of the three scored rows observes what adults can do,
-so countries with exceptional measured outcomes do not get credit for them.
+Learning is scored on four rows: the Human Capital Index, whose last full
+round is 2020; the vocational share of secondary enrolment, which is a
+structure of the school system and stale in many countries; the share of firms
+offering formal training; and research citation impact (D124). Enrolment and
+public education spending are conditions beside the score (D122). None of the
+four scored rows observes what adults can do, so countries with exceptional
+measured outcomes do not get full credit for them.
 
-Against the panel, on dataset 7.0.0, Korea is 46.1 points low, Estonia 29.2 and
-Singapore 28.1. The error runs the other way for Mexico, 15.9 points high, and
-Peru, 14.4. Brazil reads 30.2, 4.8 below the panel.
+On dataset 7.7.1 Korea scores 42.4, 23rd of 53, and Japan 43.4, 22nd, although
+their Human Capital Index rows are third and second of 50. The vocational share
+pulls them down: Korea reads 14.7 and Japan 17.9 on that row, against 74.8 for
+Finland, which leads the dimension at 76.3. The row rewards a school system
+with a vocational track, which is a design choice and not a learning outcome.
+Estonia (65.3, ninth) and Singapore (67.7, seventh) do not read low on 7.7.1;
+citation impact puts them at 93.9 and 100. No panel figure is quoted here, for
+the reason A9 gives.
 
 **Fix.** A learning-outcomes series (PISA or PIAAC) would resolve most of this.
 It is a gap because coverage across the country set is uneven, not because the
@@ -228,8 +234,8 @@ Every correlation in `diagnostics.json` is computed on the 53 countries loaded.
 Fifty-three points is enough to reverse a finding and not enough to establish one.
 Two dimension pairs sat at 0.94 on the 16-country run and read as
 near-duplicates. At 53 no dimension pair passes the redundancy threshold at all,
-and on dataset 7.6.0 the highest is Anticipation with Learning at 0.79 (n 52).
-Pairs separating is not the same as the nine being separate: on dataset 7.6.0
+and on dataset 7.7.1 the highest is Anticipation with Learning at 0.79 (n 52).
+Pairs separating is not the same as the nine being separate: on dataset 7.7.1
 one shared factor carries 0.53 of the variance over the 51 countries with all
 nine scored, well above the 0.19 chance gives at that size, and that factor
 correlates 0.86 with log GDP per capita (n 50). The one-factor test (D137) is
@@ -243,33 +249,68 @@ substantially larger, and never quote one without its n.
 
 ---
 
-## A9 — Coordination reads far too low for small, competent states
+## A9 — Coordination reads Singapore and other executive-led states low
 
-**Severity: medium. No score carries it today, and it will return with the first
-replacement indicator.**
+**Severity: low. The size failure is absent from the 7.7.1 scores; one row
+moves states that coordinate through the executive down by about a third.**
 
-Coordination now publishes a thin score for most countries, but the artefact is
-still active because the measurement error is a property of the indicator type,
-not of one run.
+The figures in this entry are from dataset 7.7.1.
 
-On the perception layer D23 retired, and on the frame in use then, Uruguay
-scored 18.8 on Coordination. In the same decade it delivered Plan Ceibal, a
-national digital government stack, and the first nationally regulated cannabis
-market in the world, each of which required several institutions to move
-together and hold position for years. Costa Rica showed the same pattern more
-mildly at 33.7, against a national choice in
-1949 to abolish the army and redirect the money into health and education that
-has now held for three generations.
+Coordination publishes a score for 52 of 53 countries. Cuba sits below the
+coverage floor on one row. Three rows feed it: border time to export (Doing
+Business, 52 countries, frozen at 2018 or 2019), budget execution fidelity
+(`GF.XPD.BUDG.ZS`, 45 countries, 2018 to 2024) and V-Dem civil-society
+strength (`v2x_cspart`, 53 countries, 2024). 45 countries are scored on all
+three and seven on two. Confidence runs from 0.100 to 0.413, mean 0.362, and
+the score correlates with log GDP per capita at 0.558 (n 51).
 
-Those scores came from the Worldwide Governance Indicators and the Logistics
-Performance Index. Both are surveys weighted toward how a country looks to
-international business, and a small country with a small port does not look like
-much through that lens whatever its state can actually organise.
+The entry was opened for a different failure, and that one is gone. On the
+perception layer D23 retired, Uruguay scored 18.8 and Costa Rica 33.7, because
+the Worldwide Governance Indicators and the Logistics Performance Index read a
+small country with a small port as a weak one. On the rows in use now Uruguay
+scores 73.9 and Costa Rica 88.6 against a frame median of 75.4, the 12 least
+populous countries in the frame have a median of 76.6, and the score's
+correlation with log population is 0.01 (n 52).
 
-**Fix.** The same fix as A3. Coordination needs observable evidence of
-institutions acting together, not perception surveys of business conditions.
-Delivery records for cross-agency national programmes would be the direct
-measure, and they are a declared gap.
+What is left falls on a narrower set of states. With equal row weights,
+civil-society strength is a third of the score, and it measures whether society
+organises independently of the state. A state that coordinates through its own
+agencies reads on that row as one that does not coordinate:
+
+| Country | Score | Border time and budget execution, mean | Civil-society strength |
+| --- | ---: | ---: | ---: |
+| Singapore | 72.1 | 90.1 | 35.9 |
+| China | 65.6 | 91.4 | 14.1 |
+| United Arab Emirates | 52.0 | 83.8 (border time only) | 20.2 |
+| Rwanda | 61.1 | 74.3 | 34.8 |
+
+Singapore is the case the entry was written for, a small state with whole-of-
+government coordination as its organising principle, and it sits below the
+frame median. The row does not read autocracy alone: El Salvador reads 35.4 on
+it against 86.5 on its other two rows, and Mexico 44.7 against 84.6. Part
+of the reading is defensible, since D83 admits the row for the coordination a
+state does with society. The part that is wrong is reading its absence as an
+absence of coordination among institutions.
+
+**The panel gap is not evidence here.** The in-session run that
+`data/delphi/latest.json` points at sits 35.7 points from the 7.7.1
+Coordination score on average across its 16 countries, below it in 15, the
+largest gap of the nine dimensions. That comparison measures the ruler, not the
+countries. The run has one panelist, so `isPanel` is false; its provenance is
+`in_session`, so `isEvidential` passes; and it carries no dataset version, so
+the scorer attaches it to no cell and 7.7.1 publishes no `delphiScore` at all.
+Its Coordination cells were anchored on the retired perception scores: the
+rationales mark Uruguay up from 18.8 to 45, Brazil from 15.5 to 35 and
+Colombia from 4.3 to 18. Against today's scores every one of those upward
+corrections reads as a downward one. The rank agreement, which does not depend
+on the anchor, is a Spearman 0.68 on Coordination, in the middle of the nine
+(0.45 to 0.89).
+
+**Fix.** Cross-agency delivery records, a declared gap, would measure the
+construct directly and would let civil-society strength sit in a family of
+its own beside them, the way D57 splits Trust. A reviewed gateway panel on the
+7.7.1 frame would make the panel comparison readable again. Until one exists,
+no panel figure belongs in this entry.
 
 ---
 ## A10 — The frame is 53 countries wide, and they are not the world
@@ -289,10 +330,10 @@ the endpoints it touches and restates every number. That is done as an announced
 rebase with a major version bump, and 5.1.0 numbers do not compare with 6.0.0
 ones. Anything quoting a score has to quote the version with it.
 
-**Clamping has moved to history.** No observed cell clamps: 0 of 1,772, because a
-current value cannot fall outside a frame its own country helped build. The
-`outOfFrame` flag now fires only where a historical value sits outside the
-current frame, which is 99 of 819 momentum baskets. A trend carrying a clamped
+**Clamping has moved to history.** No observed cell clamps: on dataset 7.7.1, 0
+of 1,629, because a current value cannot fall outside a frame its own country
+helped build. The `outOfFrame` flag fires only where a historical value sits
+outside the current frame, which is 24 of 455 momentum baskets. A trend carrying a clamped
 basket member is part distance-to-the-clamp rather than movement in the country,
 and every surface that prints a trend prints that count.
 
@@ -309,7 +350,7 @@ beside them as a condition (D122). All four describe industrial output. Nothing
 in the measured set can see a national programme that was specified, funded and
 delivered.
 
-On dataset 7.0.0 Brazil scores 28.2 at confidence 0.568, its second best
+On dataset 7.7.1 Brazil scores 28.2 at confidence 0.568, its second best
 evidenced dimension after Adaptability. The score is a correct statement about Brazilian industrial output
 and it is read as a statement about Brazilian delivery capacity, which is a
 different construct. In the same decade Brazil built and ran Pix, which settled
@@ -322,8 +363,8 @@ The two indicators that would carry the delivery construct,
 **Fix.** Two parts, one done and one open. Documented deliveries are now
 recorded in `data/evidence/records.json` against the gap they bear on, outside
 the score, so the cases are written down with sources and limits instead of
-being argued in prose. Two hundred and nineteen records cover 53 countries and
-bear on 21 different gaps. Brazil's 25 run from Casa da Moeda in 1694 to the
+being argued in prose. Three hundred and sixty-two records cover 53 countries
+and bear on 21 different gaps. Brazil's 26 run from Casa da Moeda in 1694 to the
 minimum-wage revaluation rule in 2023.
 See D20.
 The open part is a comparable delivery series across the country set, without
@@ -338,33 +379,31 @@ here, and the benchmark currently has no way to say so.
 
 **Severity: high. Trust is partly measured and Coordination remains narrow.**
 
-The figures in this entry are from dataset 6.1.0.
+The figures in this entry are from dataset 7.7.1.
 
 | Dimension | Observed indicators | Confidence | What is left | Publishes a score |
 | --- | ---: | ---: | --- | --- |
-| Coordination | 3 of 5 for 45 countries | 0.100 to 0.413, mean 0.362 | Border time from 2019, budget execution from 2018 to 2024 and V-Dem civil-society strength at 2024 | 52 of 53 |
-| Trust | 2 of 5 for 37 countries | 0.000 to 0.255, mean 0.209 | Joint EVS/WVS A165 plus contract enforcement days from 2019; court clearance remains a gap | 37 of 53 |
-| Shared Purpose | 2 of 6 for 47 countries | 0.000 to 0.316, mean 0.260 | Tax revenue, income inequality | 47 of 53 |
+| Coordination | 3 of 5 for 45 countries | 0.100 to 0.413, mean 0.362 | Border time from 2019, budget execution from 2018 to 2024 and V-Dem civil-society strength at 2025 | 52 of 53 |
+| Trust | 4 of 7 for 37 countries | 0.072 to 0.396, mean 0.347 | Contract enforcement days from 2019, bribery incidence from 2010 to 2025, V-Dem court compliance at 2025 and EVS/WVS A165 at 2022; court clearance, institutional trust and cooperation with strangers remain gaps | 52 of 53 |
+| Shared Purpose | 3 of 6 for 33 countries | 0.000 to 0.433, mean 0.343 | Tax revenue, income inequality, EVS/WVS civic participation | 51 of 53 |
 
-Coordination's score now carries a third row from V-Dem's expert-coded civil
-society participation index. It remains a narrow operational proxy: budget
-alignment, border processing and civil-society judgements do not show whether
-several institutions delivered a shared national objective. Trust now prints a
-provisional score where both rows are observed, but country-level confidence
-ranges from 0.000 to 0.255 and its mean is 0.209.
-Sixteen countries remain below the coverage floor. Shared Purpose sits on the
-floor, two observed rows where a score needs two, and prints, drawn dashed with
-a marked axis and a confidence band that says do not quote it alone. That is a
-mitigation and not a fix.
+Coordination remains a narrow operational proxy: budget alignment, border
+processing and civil-society judgements do not show whether several
+institutions delivered a shared national objective (A9). Trust prints for 52
+of 53, but country-level confidence runs from 0.072 to 0.396. Cuba is below
+the floor on both. Shared Purpose has a third row in 33 countries; the 18 on
+two rows sit on the floor and print, drawn dashed with a marked axis and a
+confidence band that says do not quote it alone. Cuba and Haiti publish no
+Shared Purpose score. That is a mitigation and not a fix.
 
 **Trust still has a narrow family balance.** D57 splits the dimension into a
 social family, which asks whether people rely on strangers, and an institutional
 family, which asks whether they rely on courts, government and the civil
-service. The current social family has one observed row in 37 countries. The
-institutional family has one observed row in 52, while court performance and
-institutional trust remain gaps. `familyBalance` publishes this coverage, so a
-reader can see that the structural test is met only by the social plus stale
-contract pair.
+service. The social family has one observed row, A165, in 37 countries. The
+institutional family has three: contract enforcement days, bribery incidence
+and court compliance. 15 of the 52 scored countries rest on the institutional
+family alone, and court case clearance and institutional trust remain gaps.
+`familyBalance` publishes this coverage.
 
 **Fix.** Pool the held EVS/WVS country rows with respondent-level weights when
 the license permits, then land court throughput and case clearance, cross-agency
@@ -384,16 +423,12 @@ cluster covers only 10 of 53. Of the two Enterprise Survey corruption series,
 `IC.FRM.CORR.ZS` asks a firm what it believes firms similar to itself pay, so it
 records belief and is ineligible, while `IC.FRM.BRIB.ZS` asks whether the
 responding firm was itself asked for a bribe across six public transactions. The
-second covers 50 of 53, 45 of them at 2023 or later, and D60 wires it as a
-behavioural check: fetched, published beside Trust and excluded from the frame,
-the mean, the coverage floor and the confidence. It is not admissible as the
-score, because on the 52-country frame D60 was written against it put the
-two-indicator dimension at about 0.53 against log GDP per capita where contract
-enforcement days alone sat at about 0.14, a larger
-wealth contribution than the one D44 retired an indicator over. Trust now has a
-source-backed score from the Joint EVS/WVS adapter, but still needs court data
-and a broader social and institutional comparison. The remaining shortlist is
-OECD Government at a Glance and a harmonized court or audit source.
+second covers 50 of 53, 45 of them at 2023 or later, and D123 scores it in
+Trust's institutional family. Its correlation with log GDP per capita is 0.552.
+It carries the reticence risk D123 records: China reads 0.14% and Korea 0.02%
+while Vietnam, surveyed by the same programme, reads 31%. Trust still needs
+court data and a broader social comparison. The remaining shortlist is OECD
+Government at a Glance and a harmonized court or audit source.
 
 **B-READY is what the frozen rows become.** `IC.BRE.*` replaces Doing Business
 inside World Development Indicators. The API's 2024 dispute-resolution rows
@@ -405,23 +440,20 @@ inputs and does not publish the court clearance numerator and denominator the
 Trust gate requires. Revisit the next release instead of forcing a partial
 series into the frame.
 
-Trust's institutional family has a third observed row, government compliance
-with the courts (`court_compliance`, V-Dem `v2jucomp`, D131), 53 of 53. It is
-an expert code of a public act, and it reads regime: r 0.88 with V-Dem's
-electoral democracy index, and Singapore is the one autocracy that reads high,
-plausibly because its courts seldom rule against the state. With it Trust's
-mean confidence is 0.347 and its correlation with log GDP per capita 0.671 (n
-51), and 15 scored countries rest on the institutional family alone.
+Government compliance with the courts (`court_compliance`, V-Dem `v2jucomp`,
+D131) covers 53 of 53. It is an expert code of a public act, and it reads
+regime: D131 measured r 0.88 with V-Dem's electoral democracy index on the v15
+release, and Singapore is the one autocracy that reads high, plausibly because
+its courts seldom rule against the state.
 
 V-Dem civil-society strength is now an adapter-backed Coordination row (D83),
 but its expert coding keeps confidence low and does not answer cross-agency
 delivery. Voter turnout, volunteering and civic participation are absent from
 the catalogue under any database id, and the interpersonal and institutional
-trust items were never World Bank series. The Joint EVS/WVS adapter now supplies
-the first social row; Trust still needs an adapter for court clearance and
+trust items were never World Bank series. The Joint EVS/WVS adapter supplies
+the social row; Trust still needs an adapter for court clearance and
 Coordination needs one for delivery beyond the V-Dem and budget rows.
-The shortlist is ILOSTAT, IDEA voter turnout, and OECD government at a glance
-for court clearance. `ingest: 'manual'` remains available for sources with no
+The shortlist for court clearance is OECD Government at a Glance. `ingest: 'manual'` remains available for sources with no
 usable API.
 
 The one indicator added to fix contamination was the contamination: D42 showed
@@ -433,8 +465,9 @@ This artefact remains open while the dimensions rely on narrow proxies. For
 Trust, D57 sets the stricter condition: one harmonised social measure and one
 comparable institutional-performance measure, because two indicators from the
 same family would clear the floor without answering the dimension. The current
-release meets that structure with A165 and contract enforcement, but court
-performance, broader coverage and the wealth and redundancy review remain open.
+release meets that structure with A165 and three institutional rows, but court
+throughput, broader social coverage and the wealth and redundancy review remain
+open.
 The budget series opens the Coordination door; it does not close its measurement
 problem.
 
@@ -497,7 +530,7 @@ a perception (A15).
 
 Where new business density is missing, Agency is the two frozen rows and
 perceived control. That holds for the United States (83.4), Nicaragua (80.1)
-and Venezuela (25.8), each at confidence 0.37 on dataset 7.1.0 with D127.
+and Venezuela (25.8), each at confidence 0.37 on dataset 7.7.1.
 
 Read Agency through its confidence. The fix is a behavioural row that observes
 people acting, which the O1 triage sweep did not find with frame coverage.
@@ -507,6 +540,8 @@ people acting, which the O1 triage sweep did not find with frame coverage.
 ## A15 — Two survey rows read regime and question format
 
 **Severity: medium. Both rows are scored. See D127 and D128.**
+
+The figures in this entry are from dataset 7.7.1.
 
 `perceived_control` (Agency, A173) is a perception, and a closed or electoral
 autocracy can read high on it. Vietnam reads 8.1 out of 10, third of 37, and
