@@ -9,6 +9,18 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.24.11 — 2026-10-02
+
+- **The evidence grid is complete.** Every country now has a record or a
+  searched note for every delivery gap. Ecuador's adult learning cell
+  closes on a note: the national school register counts whole institutions,
+  so a fall in adult enrolment cannot be told apart from adults moving into
+  ordinary schools. Cuba's housing programme is now a documented loss,
+  from 20,232 homes in 2022 to 5,493 in 2025, filed like Venezuela's and
+  Singapore's housing programmes. Two Brazilian records move to
+  university and industry collaboration, and two records filed against the
+  retired business research row leave the corpus (D147).
+
 ## App 1.24.10 — 2026-10-02
 
 - **A new known limit, A16: Adaptability rests on two rows in nine

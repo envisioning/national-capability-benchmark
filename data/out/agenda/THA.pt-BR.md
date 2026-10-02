@@ -37,7 +37,7 @@ Quão capazes são pessoas e organizações de transformar uma intenção em aç
 
 - Baseada em 4 indicadores observados.
 - Maiores notas utilizáveis: Austrália 86,1, Estônia 85,2, China 72,5.
-- Entregas documentadas em outros países: SIBRATEC, the documented innovation-centre network (Brasil); Singapore's national ICT-skills measurement and baseline (Singapura); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (Índia); Puntos México Conectado, national digital learning centres (México).
+- Entregas documentadas em outros países: Singapore's national ICT-skills measurement and baseline (Singapura); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (Índia); Puntos México Conectado, national digital learning centres (México).
 - Lacunas declaradas: Habilidades digitais de adultos.
 
 ### Antecipação: 47,5, solidez utilizável

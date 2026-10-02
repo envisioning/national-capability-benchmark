@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T14:40:59.422Z",
+  "generatedAt": "2026-10-02T15:28:40.422Z",
   "iso3": "CUB",
   "country": "Cuba",
   "dimensions": [
@@ -249,13 +249,6 @@
       ],
       "evidenceElsewhere": [
         {
-          "id": "bra-sibratec",
-          "iso3": "BRA",
-          "country": "Brazil",
-          "indicatorId": "adult_digital_skills",
-          "title": "SIBRATEC, the documented innovation-centre network"
-        },
-        {
           "id": "sgp-digital-skills",
           "iso3": "SGP",
           "country": "Singapore",
@@ -360,6 +353,20 @@
           "country": "Brazil",
           "indicatorId": "public_private_collaboration",
           "title": "Itaipu Binacional, the treaty-built power system"
+        },
+        {
+          "id": "bra-embrapii",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "university_industry_collaboration",
+          "title": "EMBRAPII, industry-led applied research"
+        },
+        {
+          "id": "bra-sibratec",
+          "iso3": "BRA",
+          "country": "Brazil",
+          "indicatorId": "university_industry_collaboration",
+          "title": "SIBRATEC, the national technology networks"
         },
         {
           "id": "kor-epb",
@@ -3570,6 +3577,14 @@
       "title": "Campaña Nacional de Alfabetización",
       "claim": "In 1961 Cuba's national literacy campaign mobilized volunteer teachers, student brigades and worker brigades to teach adults to read across the country. By 30 August 1961, 593,651 people were learning and 64,253 had already been made literate, and the government reported illiteracy reduced to 3.92 percent of the population when the campaign closed.",
       "started": 1961
+    },
+    {
+      "id": "cub-programa-vivienda",
+      "indicatorId": "large_project_delivery",
+      "dimension": "building",
+      "title": "Programa Nacional de la Vivienda, and its collapse",
+      "claim": "Cuba's national housing programme, run by the Ministry of Construction under the housing policy presented in 2018 to close a deficit of 929,695 homes in ten years, completed 20,232 homes in 2022 and 5,493 in 2025, of which the state built 1,791.",
+      "started": 2019
     }
   ],
   "gapCount": 17

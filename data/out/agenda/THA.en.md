@@ -37,7 +37,7 @@ How able are individuals and organizations to turn an intention into action?
 
 - Uses 4 observed indicators.
 - Highest usable scores: Australia 86.1, Estonia 85.2, China 72.5.
-- Related deliveries in other countries: SIBRATEC, the documented innovation-centre network (Brazil); Singapore's national ICT-skills measurement and baseline (Singapore); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (India); Puntos México Conectado, national digital learning centres (Mexico).
+- Related deliveries in other countries: Singapore's national ICT-skills measurement and baseline (Singapore); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (India); Puntos México Conectado, national digital learning centres (Mexico).
 - Missing indicators: Adult digital skills.
 
 ### Anticipation: 47.5, confidence usable

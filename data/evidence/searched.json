@@ -1688,47 +1688,6 @@
       "note": "Rwanda's official infrastructure pages report contract sums and completion events but not planned-against-actual cost or time, and the audit office publishes summaries without project figures. A record needs either an OAG performance audit of a named project or a development bank completion report on a Rwandan capital build."
     },
     {
-      "iso3": "CUB",
-      "indicatorId": "large_project_delivery",
-      "checkedAt": "2026-10-02",
-      "searched": [
-        "(1) supreme audit institution reports on major public infrastructure projects",
-        "(2) ministry/agency project progress and cost reports",
-        "(3) World Bank/IDB/AfDB implementation completion reports and evaluations (Cuba is not a member of the World Bank or the IDB, so this list yields nothing)",
-        "Mesa Redonda (Televisión Cubana) and Cubadebate reports on the trasvases with INRH and ESI-DIP Trasvases officials, 2017 and 2020",
-        "Earlier batch rejections listed in issue47 (Juraguá nuclear plant, Zona Especial de Desarrollo Mariel)",
-        "ZED Mariel container terminal page and ONEI Anuario Estadístico de Cuba 2025, chapter 12, both opened on 2026-10-02"
-      ],
-      "candidates": [
-        {
-          "name": "Trasvase Este-Oeste water transfer (INRH, ESI-DIP Trasvases)",
-          "failed": "declared_gap",
-          "why": "State TV (Mesa Redonda, 21 January 2020) quotes the ESI-DIP Trasvases director: two of six stages finished and 4,179 ha under irrigation, against a 120,000 ha plan in an unattributed table. That is an outcome against a whole-scheme plan, not cost or schedule performance of the finished stages, which is what the indicator asks for. The only cost figure (second stage, 501.3 million pesos against almost 550 million, finished 2012) is a reporter's paraphrase in Cubadebate (27 April 2017) that a photo caption on the same page attributes to a different phase."
-        },
-        {
-          "name": "Mariel container terminal (ZED Mariel)",
-          "failed": "publisher_metric",
-          "why": "The official page states capacity only (822,000 TEU, potential 3 million), with no cost, schedule or throughput figure and no reference period."
-        },
-        {
-          "name": "Juraguá nuclear power plant",
-          "failed": "publisher_metric",
-          "why": "Rejected in an earlier batch for want of an official figure; no new source was found in this pass."
-        },
-        {
-          "name": "ONEI statistical yearbook 2025, chapter 12 (construction and investment)",
-          "failed": "publisher_metric",
-          "why": "Aggregate tables only, nothing on cost or schedule of a named project."
-        },
-        {
-          "name": "Reversal search for Cuba",
-          "failed": "publisher_metric",
-          "why": "No named project with an official cost or schedule figure was found to have run backwards. ONEI table 12.1 shows housing completions falling from 20,232 in 2022 to 5,493 in 2025, but housing completions were ruled outside this column in an earlier batch (declared_gap)."
-        }
-      ],
-      "note": "Cuba publishes project progress through state media rather than through audit or statistical documents, and it is outside the World Bank and IDB, so no completion report exists either. The Trasvase Este-Oeste becomes recordable if a stage-level cost or schedule figure with a reference period surfaces from INRH, ONEI or the Contraloría."
-    },
-    {
       "iso3": "ARE",
       "indicatorId": "adult_learning_participation",
       "checkedAt": "2026-10-02",
@@ -2173,6 +2132,38 @@
         }
       ],
       "note": "Re-checked on 2026-10-02 after the batch-5 note rested on a reversal premise that the Cabinet structure contradicts. Dubai Future Foundation is emirate-level and was not considered."
+    },
+    {
+      "iso3": "ECU",
+      "indicatorId": "adult_learning_participation",
+      "checkedAt": "2026-10-02",
+      "searched": [
+        "(1) ministry of education adult / second-chance education enrolment statistics",
+        "(2) public employment or training agency trainee counts",
+        "(3) UNESCO GRALE and OECD country notes naming a national programme",
+        "MINEDUC AMIE historical administrative register, end-of-year file 2009-2010 to 2023-2024 (Registro-Administrativo-Historico_2009-2024-Fin.xlsx) and its data dictionary, read in full from Internet Archive copies (educacion.gob.ec refused connections and datosabiertos.gob.ec answered 403 on 2026-10-02)",
+        "MINEDUC EBJA project enrolment form for extraordinary offers, EBJA-IMP-001-2019 (Internet Archive copy)",
+        "SECAP rendición de cuentas pages, 2014 to 2025 (secap.gob.ec)",
+        "Earlier batch leads in issue 47: Todos ABC literacy campaign, SECAP single-year training counts"
+      ],
+      "candidates": [
+        {
+          "name": "MINEDUC youth and adult schooling (Popular Permanente institutions, EBJA) in the AMIE register, candidate erosion",
+          "failed": "honest_limits",
+          "why": "The register classifies whole institutions, not offers or students: its Tipo_Educacion field puts each school in Educación Ordinaria, Especial or Popular Permanente, and it carries no age or offer split. Summed from the file, students in Popular Permanente institutions fell from 216,895 in 2011-2012 to 41,655 in 2023-2024, and in fiscal ones from 82,114 to 6,269, while those institutions fell from 2,089 to 328. Over the same years the ministry consolidated its school network (ordinary institutions fell from 22,672 in 2011-2012 to 15,655 in 2023-2024) and its 2019 enrolment form for the youth and adult schooling project (EBJA-IMP-001-2019, alphabetisation to an intensive bachillerato, for applicants aged 15 or more with at least three years of educational lag) assigns each applicant to the nearest educational institution, so adult learners placed in an ordinary institution are counted under Educación Ordinaria, so the fall cannot be separated from reclassification. An erosion record would claim more than the series shows, and the series cannot show the stable scale of a delivery either."
+        },
+        {
+          "name": "SECAP vocational training counts",
+          "failed": "publisher_metric",
+          "why": "This pass found no training series on the rendición de cuentas pages for 2014 to 2025, which carry process graphics. The yearly counts an earlier batch found come from separate annual reports, and no SECAP page states one definition (trained, certified or enrolled) across them, so there is no one publisher metric comparable across years."
+        },
+        {
+          "name": "Todos ABC literacy and schooling campaign",
+          "failed": "publisher_metric",
+          "why": "Rejected in an earlier batch: no official participant count with a reference period at an openable URL; not retried."
+        }
+      ],
+      "note": "Ecuador's adult schooling is counted only inside a register that classifies institutions rather than learners, and its training agency publishes no comparable series, so no national adult learning delivery can be carried as a record."
     }
   ]
 }

@@ -7549,3 +7549,26 @@ reaching alpha of at least 0.80 on every item and on body-by-body decisions,
 with no ceiling and regime rho under 0.80, which supports coding the 53 at
 tier `expert_panel`. Regime rho at or above 0.80, or eight of ten at one
 score after revision, stops the register.
+
+## D147 — Two evidence records leave the corpus with the row they were filed against
+
+*Recorded 2026-10-02. Follows D142, which retired `business_rd_share`.*
+
+**Decision.** `gbr-business-rd-share` and `prt-sifide` are deleted from
+`data/evidence/records.json`. Both were filed against `business_rd_share`,
+and no declared gap fits them: the first is the retired statistic itself, the
+second an R&D tax incentive. They remain in git. `bra-embrapii` and
+`bra-sibratec` are refiled under `university_industry_collaboration`, whose
+construct they fit. `bench validate` now warns on any record filed against a
+retired row, which is how these went unnoticed for one release.
+
+**Why.** A retired row is a measurement the project declined to make (D100),
+so a record filed against it stands against nothing. EVIDENCE.md requires
+deleted ids to be named in a decision entry so the corpus history stays
+auditable.
+
+**Cost.** Two delivered cases leave the published corpus. Neither was a
+reversal, so the quota is unaffected.
+
+**Overturned by.** `business_rd_share` returning as a gap or a scored row,
+which would make both records admissible again.

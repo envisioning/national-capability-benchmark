@@ -386,6 +386,12 @@ export async function validateEvidence(path = FILES.evidence): Promise<Problem[]
         severity: 'warning',
         problem: `${record.id}: ${record.indicatorId} is measured, so the record adds nothing the published value does not already carry`,
       })
+    } else if (def.ingest === 'retired') {
+      problems.push({
+        file,
+        severity: 'warning',
+        problem: `${record.id}: ${record.indicatorId} is retired, so the record has no gap to stand against; refile it or name it in a decision entry`,
+      })
     }
 
     if (!record.pattern) {

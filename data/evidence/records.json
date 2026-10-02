@@ -1396,10 +1396,10 @@
     },
     {
       "id": "bra-embrapii",
-      "indicatorId": "business_rd_share",
+      "indicatorId": "university_industry_collaboration",
       "iso3": "BRA",
       "title": "EMBRAPII, industry-led applied research",
-      "claim": "Created in 2013, EMBRAPII connects companies to public and private research units through shared-risk funding, and it contracted a record 811 new industrial research projects in 2025.",
+      "claim": "Created in 2013, EMBRAPII funds industrial research that companies contract with accredited public and private research units, and it contracted a record 811 new projects in 2025, 25.35% more than in 2024.",
       "metric": {
         "name": "New projects contracted in the year",
         "value": 811,
@@ -1409,12 +1409,12 @@
       "started": 2013,
       "status": "operating",
       "source": {
-        "publisher": "EMBRAPII, 2025 results",
-        "url": "https://embrapii.org.br/embrapii-em-2025/",
+        "publisher": "EMBRAPII, Embrapii em 2025: veja como foi nossa atuação (published 3 February 2026), archived copy",
+        "url": "https://web.archive.org/web/20260422215228/https://embrapii.org.br/embrapii-em-2025/",
         "tier": "official_statistical",
-        "retrievedAt": "2026-08-29"
+        "retrievedAt": "2026-10-02"
       },
-      "limits": "Project counts show the throughput of a funding network, not the commercial value, technical success or additionality of the research. EMBRAPII's own results report the programme's activity, and projects vary widely in scale and maturity.",
+      "limits": "Project counts show the throughput of a funding network, not the commercial value, technical success or additionality of the research. EMBRAPII is a social organisation under a management contract with four federal ministries, and the figure is its own report of its activity, drawn from its Power BI panel on 3 February 2026. Its 90 accredited units are research institutions of several kinds, university units among them, and the page does not say how many of the 811 projects ran in a university, so the record evidences firm-research-unit collaboration of which university collaboration is a part, not all of it. Projects vary widely in scale and maturity. The live page answered 'Conteúdo temporariamente indisponível' (HTTP 503) on 2 October 2026, so the source is the Internet Archive copy of 22 April 2026, which carries the 811 figure.",
       "pattern": {
         "mechanism": "Public funding follows an industry's defined technical problem into a research unit, sharing early risk while leaving the company and researchers responsible for solving a concrete challenge.",
         "preconditions": [
@@ -1426,10 +1426,10 @@
     },
     {
       "id": "bra-sibratec",
-      "indicatorId": "adult_digital_skills",
+      "indicatorId": "university_industry_collaboration",
       "iso3": "BRA",
-      "title": "SIBRATEC, the documented innovation-centre network",
-      "claim": "The Ministry of Science and Technology implemented SIBRATEC as a national system of 56 research and development networks, including 14 innovation-centre networks, 20 technological-service networks and 22 extension networks organized across the states to support innovation in micro and small firms.",
+      "title": "SIBRATEC, the national technology networks",
+      "claim": "To foster university-firm interaction, the Federal Government set up SIBRATEC, coordinated by the Ministry of Science and Technology with FINEP, BNDES and INMETRO taking part, as a national system of 56 research and development networks by 2010: 14 innovation-centre networks, 20 technological-service networks and 22 state-level extension networks.",
       "metric": {
         "name": "SIBRATEC national R&D networks reported",
         "value": 56,
@@ -1439,12 +1439,12 @@
       "started": 2007,
       "status": "concluded",
       "source": {
-        "publisher": "Ministry of Science and Technology, Plan of Action in Science, Technology and Innovation 2007-2010 results report",
-        "url": "https://repositorio.mctic.gov.br/bitstream/mctic/5059/1/2010_plano_acao_ciencia_tecnologia_inovacao_principais_resultados_avancos_2007_2010.pdf",
+        "publisher": "Ministry of Science and Technology, Plano de Ação em Ciência, Tecnologia e Inovação 2007-2010: principais resultados e avanços (Programa 5.1, SIBRATEC), archived copy",
+        "url": "https://web.archive.org/web/20250429234017/https://repositorio.mctic.gov.br/bitstream/mctic/5059/1/2010_plano_acao_ciencia_tecnologia_inovacao_principais_resultados_avancos_2007_2010.pdf",
         "tier": "official_statistical",
-        "retrievedAt": "2026-08-30"
+        "retrievedAt": "2026-10-02"
       },
-      "limits": "The network count records an institutional architecture, not the share of adults who acquired digital skills, improved productivity or gained lasting agency. The report is an official programme account and does not independently evaluate firm-level outcomes. It is the sourced correction to the requested RECINE label: the claimed 2004-2008 RECINE programme and its 28 centres could not be verified.",
+      "limits": "The network count records an institutional architecture, not how many firms worked with a university, how much research was done jointly or what it produced. The report states the purpose (university-firm interaction) and the network count, but the networks also include technology institutes and metrology laboratories, and the extension networks support small firms with technical services rather than joint research. It is the ministry's own account of its plan and does not evaluate outcomes. The started year is the first year of the 2007-2010 action plan under which SIBRATEC was implemented; the report gives no creation date. The report says nothing about the networks after 2010, so the concluded status records the end of this delivery period, not the programme's fate. The ministry repository did not answer on 2 October 2026, so the source is the Internet Archive copy of 29 April 2025; the passage is on page 74.",
       "pattern": {
         "mechanism": "The ministry linked research groups, technology centres and state-level extension networks so firms could reach technical support outside universities and turn a production problem into a shared R&D project.",
         "preconditions": [
@@ -6835,43 +6835,6 @@
       }
     },
     {
-      "id": "gbr-business-rd-share",
-      "indicatorId": "business_rd_share",
-      "iso3": "GBR",
-      "title": "Business-funded R&D as the UK's dominant research sector",
-      "claim": "The Office for National Statistics reported that UK businesses performed £50.0 billion of R&D in 2023, 69% of the country's £72.6 billion gross domestic R&D total.",
-      "metric": {
-        "name": "Business share of UK-performed R&D",
-        "value": 69,
-        "unit": "% of R&D",
-        "asOf": "2023"
-      },
-      "secondMetric": {
-        "name": "Business-performed R&D expenditure",
-        "value": 50000000000,
-        "unit": "GBP",
-        "asOf": "2023"
-      },
-      "started": 1981,
-      "status": "operating",
-      "source": {
-        "publisher": "UK Office for National Statistics, Gross domestic expenditure on research and development: UK 2023",
-        "url": "https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/bulletins/ukgrossdomesticexpenditureonresearchanddevelopment/latest",
-        "tier": "official_statistical",
-        "retrievedAt": "2026-08-31"
-      },
-      "limits": "The 69% share is a national R&D composition measure, not evidence that business research is basic, additional, productive or evenly distributed across firms and regions. ONS changed the business-survey methods for 2022, so the long historical series needs care; the figures measure R&D performed in UK organisations regardless of the ultimate owner's country.",
-      "pattern": {
-        "mechanism": "The UK combines a large private R&D base with public research funding and tax support, leaving firms as the main performers of national R&D while universities and government supply complementary research and talent. The sector mix gives commercial problems a route into the research system, but it also makes the national portfolio sensitive to corporate concentration and cycles.",
-        "preconditions": [
-          "Firms with the cash flow, engineering talent and appropriable returns needed to sustain R&D beyond a single grant",
-          "Universities and public laboratories that train researchers and can collaborate with or supply firms",
-          "Stable measurement, intellectual-property rules and public co-funding that make long-horizon private research investable"
-        ],
-        "travelled": "A business-led R&D mix travels when private firms have reasons to keep investing and public institutions fill the basic-research and talent gaps; a high share alone can also reflect a few concentrated corporate laboratories."
-      }
-    },
-    {
       "id": "sgp-digital-skills",
       "indicatorId": "adult_digital_skills",
       "iso3": "SGP",
@@ -7560,43 +7523,6 @@
           "Milestones, procurement and payment controls that keep public support conditional on joint delivery"
         ],
         "travelled": "Consortium programmes travel when public money buys a shared delivery obligation rather than a collection of grants; a call without a lead firm, research partner and milestone gate rarely creates durable collaboration."
-      }
-    },
-    {
-      "id": "prt-sifide",
-      "indicatorId": "business_rd_share",
-      "iso3": "PRT",
-      "title": "SIFIDE, Portugal's business R&D tax incentive",
-      "claim": "Portugal's ANI reports that SIFIDE, created in 1997, offers a 32.5% base corporate-tax deduction for eligible business R&D spending, plus a 50% incremental deduction up to €1.5 million, making practical recovery of up to 82.5% possible.",
-      "metric": {
-        "name": "Base SIFIDE deduction rate",
-        "value": 32.5,
-        "unit": "% of eligible R&D expense",
-        "asOf": "2026-04-12"
-      },
-      "secondMetric": {
-        "name": "Maximum practical recovery described by ANI",
-        "value": 82.5,
-        "unit": "% of R&D investment",
-        "asOf": "2026-04-12"
-      },
-      "started": 1997,
-      "status": "operating",
-      "source": {
-        "publisher": "Agência Nacional de Inovação, SIFIDE overview",
-        "url": "https://ani.pt/sifide-sistema-de-incentivos-fiscais-a-ied-empresarial/",
-        "tier": "official_statistical",
-        "retrievedAt": "2026-09-02"
-      },
-      "limits": "The deduction rates evidence a long-running incentive mechanism, not the share of national R&D performed by business, additionality, research quality or commercial success. The 82.5% figure is ANI's practical maximum combining base and incremental rules; firms may receive less, and eligibility, tax position and the €1.5 million incremental cap constrain actual claims. The agency that administers the instrument also describes its benefits.",
-      "pattern": {
-        "mechanism": "Portugal lowers the after-tax cost of company R&D through a recurring, ANI-certified corporate-tax credit, with an incremental allowance for firms that increase spending and a separate recognition route for entities judged able to conduct R&D.",
-        "preconditions": [
-          "A tax administration and innovation agency able to define and audit eligible R&D expenditure",
-          "Companies with enough taxable profit and record-keeping capacity to claim a multi-year credit",
-          "A review process that can distinguish experimental development from routine product or process work"
-        ],
-        "travelled": "R&D tax credits travel when eligibility is auditable and additionality is tested; a generous headline rate without review can subsidise work firms would have done anyway."
       }
     },
     {
@@ -9916,6 +9842,42 @@
           "A single primer and teacher manual that untrained volunteers could deliver"
         ],
         "travelled": "Cuba exported the method as 'Yo, sí puedo', a radio and video version used in about 30 countries; the exported form replaced the volunteer army with recorded lessons and local facilitators, because the mass mobilization did not travel."
+      }
+    },
+    {
+      "id": "cub-programa-vivienda",
+      "indicatorId": "large_project_delivery",
+      "iso3": "CUB",
+      "title": "Programa Nacional de la Vivienda, and its collapse",
+      "claim": "Cuba's national housing programme, run by the Ministry of Construction under the housing policy presented in 2018 to close a deficit of 929,695 homes in ten years, completed 20,232 homes in 2022 and 5,493 in 2025, of which the state built 1,791.",
+      "metric": {
+        "name": "Homes completed in the year, state and self-build",
+        "value": 5493,
+        "unit": "homes",
+        "asOf": "2025"
+      },
+      "secondMetric": {
+        "name": "Homes completed in 2022",
+        "value": 20232,
+        "unit": "homes",
+        "asOf": "2022"
+      },
+      "started": 2019,
+      "status": "eroded",
+      "source": {
+        "publisher": "Oficina Nacional de Estadística e Información (ONEI), Construcción en Cuba. Indicadores seleccionados, enero-diciembre 2025, tables 5 and 6 (source SIEC, Ministerio de la Construcción), archived copy",
+        "url": "https://web.archive.org/web/20260819051322/https://www.onei.gob.cu/sites/default/files/publicaciones/2026-05/construccion-en-cuba-indicadores-seleccionados-2025.pdf",
+        "tier": "official_statistical",
+        "retrievedAt": "2026-10-02"
+      },
+      "limits": "The count is of homes finished, not of the housing deficit, quality, cost or who received them. Two thirds of the 2025 total (3,702 of 5,493) is self-build by households ('población', 'esfuerzo propio'), which the programme subsidises and counts toward its plan but does not build, and the state-built part fell from 2,756 in 2024 to 1,791. The 2022 figure is from the 2024 edition of the same ONEI publication (https://web.archive.org/web/20260621201114/https://www.onei.gob.cu/sites/default/files/publicaciones/2025-05/construccion-en-cuba-indicadores-seleccionados-2024_0.pdf, table 5), which gives 32,874 for 2020, 18,645 for 2021, 20,232 for 2022, 16,065 for 2023 and 7,427 for 2024. In the 2025 edition's table 5, headed 2021 to 2025, the province rows sum to 18,645, 20,232, 16,065, 7,427 and 5,493, but the national total row is shifted one year back in its first three columns (32,874, 18,645, 20,232) and drops 16,065, so the national row is wrong there and the provinces are right; Granma (27 February 2024) independently reports 16,065 homes for 2023, 65 percent of the plan, from the ministry's annual review. 2022 is not the peak: 2020 was higher, and the series before 2020 is not in these editions. The 2018 policy and the 929,695 deficit are from Cubadebate's report of the policy's presentation (21 November 2018), state media rather than a statistical release, and the started year is the first full year under that policy. The collapse coincides with the 2021 to 2025 economic crisis, the loss of construction materials (ONEI reports corrugated steel bar output down 80 percent in 2025) and 40,191 stalled self-build homes, so the record documents a delivery capacity that ran backwards without separating the programme's management from the economy around it. onei.gob.cu refused connections on 2 October 2026, so both editions are Internet Archive copies; the PDF text layer uses a shifted font encoding and the tables were read after decoding it.",
+      "pattern": {
+        "mechanism": "The Ministry of Construction sets an annual national housing plan, builds part of it through state enterprises and counts the rest through subsidised self-build by households, with municipal governments responsible for local materials.",
+        "preconditions": [
+          "A domestic supply of cement, steel and blocks that the state controls and can allocate",
+          "Budget room for state construction and household subsidies",
+          "Municipal materials production able to supply self-builders when national supply fails"
+        ]
       }
     },
     {
