@@ -9,6 +9,14 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.24.8 — 2026-10-02
+
+- **Known limits brought to dataset 7.8.0.** The Trust entries now cover
+  the two survey items side by side. China, Japan, South Korea, Singapore
+  and Malaysia say most people can be trusted but few trust a stranger, and
+  their Trust scores fall on the new row. Court compliance is now the row
+  that carries most of Trust's tie to income.
+
 ## Dataset 7.8.0 — 2026-10-02
 
 - **Trust now reads trust in strangers.** A new Trust row measures the share
