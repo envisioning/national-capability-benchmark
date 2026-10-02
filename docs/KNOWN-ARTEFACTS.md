@@ -12,9 +12,7 @@ so a gap between one of them and a current score is not a finding (see A9).
 
 Every entry is on dataset 7.7.1 except where it names another run. A3 also
 quotes the 16-country run that last scored the WGI rows, and A4 the ten-country
-one. A13 carries V-Dem v15 values from dataset 6.1.2: the v16 re-ingest moves
-them (Rwanda's polarization reads 2.67 for 2025), so that entry needs restating
-against the new release. A6 holds no dataset figures. Where a figure predates
+one. A6 holds no dataset figures. Where a figure predates
 the current frame, the scale it was measured on is not the scale in use.
 
 ---
@@ -174,7 +172,8 @@ it has. National belonging and volunteering are still gaps. No panel figure is
 quoted here, for the reason A9 gives.
 
 V-Dem's polarization item brings the Singapore question back from the other
-side: a regime with no organised opposition reads as calm. It is published
+side: a regime with no organised opposition can read as calm, as the United
+Arab Emirates does. It is published
 beside Shared Purpose as a behavioural check and not scored. See A13 and D121.
 
 Voter turnout, from the same pinned V-Dem file, is now published beside Shared
@@ -483,31 +482,46 @@ manner, on a 0 to 4 scale. The question counts hostility and not disagreement,
 which is what the registry gap asks for. It cannot tell a society where camps
 meet in friendship from one where no opposition camp is allowed to exist.
 
-The 2024 values sort by V-Dem's own regime classification into a U. The 16
-liberal democracies in the frame average 1.77 and the five closed autocracies
-1.85, while the 11 electoral autocracies average 2.98 and the 21 electoral
-democracies 2.80. The United Arab Emirates reads 1.06, Rwanda 0.98 and
-Singapore 1.15, beside Ireland at 0.40 and Japan at 0.87. Across the frame the
-calm reading correlates with V-Dem's electoral democracy index at only 0.23.
+The 2025 values in V-Dem v16 do not sort cleanly by regime. Grouped by V-Dem's
+own classification (`v2x_regime`), the 15 liberal democracies in the frame
+average 1.67 and the five closed autocracies 2.18, while the 21 electoral
+democracies average 2.78 and the 12 electoral autocracies 3.25. Closed
+autocracies read calmer than both middle groups, so the U survives, but its
+closed end sits half a point above the liberal democracies and the five spread
+from 1.07 to 3.06. Across the frame the calm reading correlates with the
+electoral democracy index (`v2x_polyarchy`) at 0.36 (n = 53).
 
-Scored as a third Shared Purpose row (branch `polarization-vdem`, commit
-1c0f6b5), it would have raised the United Arab Emirates by 11.1 points and
-Rwanda by 11.5, and let Singapore and Vietnam publish a Shared Purpose score
-for the first time, at 63.8 and 66.5, on the strength of their calm. That is A5
-inverted. A5 retired a perception composite that penalised political
-uniformity; this item rewards it. Political uniformity is not a capability, and
-low measured hostility under repression is not shared purpose.
+The failure is now carried by two countries and not by a group. The United Arab
+Emirates reads 1.07, the seventh calmest of the 53, beside Ireland at 0.41,
+Japan at 0.86 and Finland at 1.27, and Cuba reads 1.75, at the liberal
+democracy mean. Rwanda reads 2.67 and Singapore 1.83, both electoral
+autocracies and neither calm. The same release codes Rwanda 0.96 and Singapore
+1.27 for 2024, so a single year moved Rwanda by 1.7 points with no change in
+its regime class. A latest-year expert code of this item can swing that far,
+and a reader comparing two countries on it is partly comparing coding years.
 
-The numeric gates did not catch it. The scored row passed the wealth screen
-(0.335 against log GDP per capita) and the redundancy screen (0.565 at most),
-which is why the decision was taken on construct and not on correlation.
+Scored as a third Shared Purpose row against the 7.7.1 frame, it would raise
+the United Arab Emirates by 11.1 points, Singapore by 7.7 and China by 4.8, and
+let Haiti publish a Shared Purpose score for the first time, at 35.9, on one
+World Bank row and this one. Rwanda would fall 4.2 and Vietnam 3.3. The largest
+gains go to calm democracies, Panama by 18.0, Paraguay by 13.3 and Japan by
+11.8, which is the reading the item is meant to give. The United Arab Emirates
+gain is A5 inverted: A5 retired a perception composite that penalised
+political uniformity, and this item rewards it. Political uniformity is not a
+capability, and low measured hostility under repression is not shared purpose.
+
+The numeric gates do not catch it. The scored row passes the wealth screen at
+0.408 against log GDP per capita and the redundancy screen at 0.512 at most
+(interpersonal trust, n = 37), though adding it would raise Shared Purpose's
+own correlation with income from 0.214 to 0.406. The decision stands on
+construct and not on correlation.
 
 **What is published.** The value sits on every country page under Shared
 Purpose as a check, not scored, with this reason attached, and the capability
-page lists it. On dataset 6.1.2, `behaviouralChecks` in `diagnostics.json`
-reports its correlation on the published value as -0.335 against log GDP per
-capita and -0.227 against the Shared Purpose score (n = 47). No Shared Purpose
-score, confidence or coverage count moves.
+page lists it. `behaviouralChecks` in `diagnostics.json` reports its
+correlation on the published value as -0.408 against log GDP per capita
+(n = 53) and -0.217 against the Shared Purpose score (n = 51). No Shared
+Purpose score, confidence or coverage count moves.
 
 **What remains.** A reader can still take a low value for a closed regime as a
 finding; the attached reason is the only mitigation. The fix that would let it

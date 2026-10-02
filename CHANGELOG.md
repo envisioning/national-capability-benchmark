@@ -9,6 +9,15 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.24.7 — 2026-10-02
+
+- **The polarization limit is restated on V-Dem's 2026 release.** Closed
+  autocracies still read calmer than electoral regimes, though no longer
+  level with the liberal democracies. The United Arab Emirates and Cuba now
+  carry the pattern, while Rwanda and Singapore no longer read calm. Scored,
+  the item would still lift the Emirates by 11 points on Shared purpose,
+  so it stays a check.
+
 ## App 1.24.6 — 2026-10-02
 
 - **26 more documented deliveries, eight of them losses.** Foresight units
