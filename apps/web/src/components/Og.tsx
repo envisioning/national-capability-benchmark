@@ -38,11 +38,12 @@ export function radarToSvgPath(
 export async function loadOgFonts() {
   /* Satori's bundled font parser accepts TTF but not the WOFF2 web fonts used
    * by the page. Reuse the Latin font shipped inside Next so build-time image
-   * generation stays dependency-free and works on Vercel as well as locally. */
+   * generation stays dependency-free and works on Vercel as well as locally.
+   * Next 16 ships Geist in place of Noto Sans. */
   const font = await readFile(
     resolve(
       process.cwd(),
-      'node_modules/next/dist/compiled/@vercel/og/noto-sans-v27-latin-regular.ttf',
+      'node_modules/next/dist/compiled/@vercel/og/Geist-Regular.ttf',
     ),
   )
   return [

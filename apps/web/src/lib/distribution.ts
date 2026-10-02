@@ -79,7 +79,10 @@ export async function loadAgendaFeedEntries(): Promise<AgendaFeedEntry[]> {
 /** Read the one human-curated changelog source used by the viewer and feed. */
 export async function loadChangelog(): Promise<string | null> {
   try {
-    return await readFile(CHANGELOG_PATH, 'utf8')
+    /* The path leaves the data root, so Turbopack would trace the whole
+     * repository into the server bundle. outputFileTracingIncludes already
+     * ships CHANGELOG.md, so the call opts out of the static trace. */
+    return await readFile(/* turbopackIgnore: true */ CHANGELOG_PATH, 'utf8')
   } catch {
     return null
   }
