@@ -1,6 +1,6 @@
 # Capability agenda: Honduras
 
-*Generated 2026-10-01*
+*Generated 2026-10-02*
 
 The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -11,7 +11,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Anticipation | 25.2 | 0.46 (usable) | +6.2 over 10 years using 2 indicators |
 | Agency | 25.8 | 0.41 (thin) | no trend |
 | Coordination | 69.9 | 0.37 (thin) | no trend |
-| Trust | 65.3 | 0.22 (very thin) | no trend |
+| Trust | 65.2 | 0.22 (very thin) | no trend |
 | Learning | 38.2 | 0.43 (thin) | no trend |
 | Experimentation | 1.1 | 0.18 (very thin) | no trend |
 | Adaptability | 43.8 | 0.67 (good) | -5 over 10 years using 3 indicators |

@@ -1,6 +1,6 @@
 # Capability agenda: Chile
 
-*Generated 2026-10-01*
+*Generated 2026-10-02*
 
 The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | --- | --- | --- | --- |
 | Anticipation | 55.5 | 0.46 (usable) | +10.6 over 10 years using 2 indicators |
 | Agency | 68.4 | 0.54 (usable) | no trend |
-| Coordination | 82.4 | 0.39 (thin) | no trend |
-| Trust | 66.7 | 0.4 (thin) | no trend |
+| Coordination | 79.9 | 0.39 (thin) | no trend |
+| Trust | 66.6 | 0.4 (thin) | no trend |
 | Learning | 42 | 0.54 (usable) | no trend |
 | Experimentation | 37.5 | 0.43 (thin) | +4.5 over 10 years using 3 indicators |
 | Adaptability | 64.9 | 0.68 (good) | -3.4 over 10 years using 3 indicators |

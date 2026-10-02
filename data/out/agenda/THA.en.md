@@ -1,6 +1,6 @@
 # Capability agenda: Thailand
 
-*Generated 2026-10-01*
+*Generated 2026-10-02*
 
 The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,7 +10,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | --- | --- | --- | --- |
 | Anticipation | 47.5 | 0.46 (usable) | +8.8 over 10 years using 2 indicators |
 | Agency | 46.9 | 0.56 (usable) | no trend |
-| Coordination | 78.5 | 0.41 (thin) | no trend |
+| Coordination | 76.4 | 0.41 (thin) | no trend |
 | Trust | 58.2 | 0.4 (thin) | no trend |
 | Learning | 36.4 | 0.56 (usable) | no trend |
 | Experimentation | 10.9 | 0.24 (very thin) | +0.5 over 10 years using 3 indicators |

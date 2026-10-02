@@ -33,4 +33,4 @@ export const APP_VERSION = '1.24.4'
  * The number versions the contract, not the method. Methodological maturity is
  * tracked in docs/KNOWN-ARTEFACTS.md and is a different thing.
  */
-export const DATASET_VERSION = '7.7.0'
+export const DATASET_VERSION = '7.7.1'

@@ -1,6 +1,6 @@
 # Agenda de capacidades: Malásia
 
-*Gerado em 2026-10-01*
+*Gerado em 2026-10-02*
 
 A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
@@ -10,8 +10,8 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | --- | --- | --- | --- |
 | Antecipação | 56 | 0,46 (utilizável) | +23,9 em 10 anos, sobre 2 indicadores |
 | Agência | 50,9 | 0,56 (utilizável) | sem base de tendência |
-| Coordenação | 84,2 | 0,41 (fraca) | sem base de tendência |
-| Confiança | 67,2 | 0,4 (fraca) | sem base de tendência |
+| Coordenação | 83,5 | 0,41 (fraca) | sem base de tendência |
+| Confiança | 68,2 | 0,4 (fraca) | sem base de tendência |
 | Aprendizagem | 41,3 | 0,56 (utilizável) | sem base de tendência |
 | Experimentação | 6,3 | 0,24 (muito fraca) | -2 em 10 anos, sobre 3 indicadores |
 | Adaptação | 75,7 | 0,64 (utilizável) | +2,1 em 10 anos, sobre 3 indicadores |

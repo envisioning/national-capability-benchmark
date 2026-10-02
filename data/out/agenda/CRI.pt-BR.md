@@ -1,6 +1,6 @@
 # Agenda de capacidades: Costa Rica
 
-*Gerado em 2026-10-01*
+*Gerado em 2026-10-02*
 
 A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
@@ -10,8 +10,8 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | --- | --- | --- | --- |
 | Antecipação | 50,9 | 0,46 (utilizável) | +12,5 em 10 anos, sobre 2 indicadores |
 | Agência | 48,3 | 0,41 (fraca) | sem base de tendência |
-| Coordenação | 88,4 | 0,37 (fraca) | sem base de tendência |
-| Confiança | 76,3 | 0,29 (fraca) | sem base de tendência |
+| Coordenação | 88,6 | 0,37 (fraca) | sem base de tendência |
+| Confiança | 76,1 | 0,29 (fraca) | sem base de tendência |
 | Aprendizagem | 40,3 | 0,54 (utilizável) | sem base de tendência |
 | Experimentação | 20,5 | 0,43 (fraca) | +1,6 em 10 anos, sobre 3 indicadores |
 | Adaptação | 66,3 | 0,68 (boa) | +3,1 em 10 anos, sobre 3 indicadores |

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-01T16:29:43.577Z",
-  "version": "7.7.0",
+  "generatedAt": "2026-10-02T13:13:33.081Z",
+  "version": "7.7.1",
   "country": {
     "country": "Peru",
     "iso3": "PER",
@@ -881,7 +881,7 @@
         ]
       },
       "coordination": {
-        "score": 69.3,
+        "score": 72.9,
         "observedIndicators": 3,
         "belowCoverageFloor": false,
         "confidence": 0.387,
@@ -893,7 +893,7 @@
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 69.3,
+        "blendedScore": 72.9,
         "blendedFrom": "indicators",
         "momentum": [],
         "indicators": [
@@ -1137,19 +1137,19 @@
             "indicatorId": "civil_society_strength",
             "name": "Civil society strength",
             "measurementClass": "C",
-            "raw": 0.615,
-            "transformed": 0.615,
-            "normalized": 58.6,
-            "year": 2024,
+            "raw": 0.706,
+            "transformed": 0.706,
+            "normalized": 69.2,
+            "year": 2025,
             "source": "V-Dem (v2x_cspart)",
             "sourceTier": "expert_panel",
             "winsorized": false,
             "outOfFrame": false,
             "series": [
               {
-                "year": 2024,
-                "raw": 0.615,
-                "normalized": 58.6,
+                "year": 2025,
+                "raw": 0.706,
+                "normalized": 69.2,
                 "tier": "expert_panel"
               }
             ],
@@ -1175,7 +1175,7 @@
         "conditions": []
       },
       "trust": {
-        "score": 57.3,
+        "score": 55.3,
         "observedIndicators": 4,
         "belowCoverageFloor": false,
         "confidence": 0.387,
@@ -1187,7 +1187,7 @@
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 57.3,
+        "blendedScore": 55.3,
         "blendedFrom": "indicators",
         "momentum": [],
         "indicators": [
@@ -1383,19 +1383,19 @@
             "indicatorId": "court_compliance",
             "name": "Government compliance with the courts",
             "measurementClass": "O",
-            "raw": 2.911,
-            "transformed": 2.911,
-            "normalized": 76.5,
-            "year": 2024,
+            "raw": 2.63,
+            "transformed": 2.63,
+            "normalized": 68.6,
+            "year": 2025,
             "source": "V-Dem (v2jucomp_osp)",
             "sourceTier": "expert_panel",
             "winsorized": false,
             "outOfFrame": false,
             "series": [
               {
-                "year": 2024,
-                "raw": 2.911,
-                "normalized": 76.5,
+                "year": 2025,
+                "raw": 2.63,
+                "normalized": 68.6,
                 "tier": "expert_panel"
               }
             ],
@@ -1496,7 +1496,7 @@
             "year": 2022,
             "source": "Joint EVS/WVS (E069_17)",
             "sourceTier": "academic_survey",
-            "note": "Confidence in the courts is the public half of what this capability asks: whether people expect the rules to be enforced when a stranger breaks them. It is not scored because the survey answer reads two things the number cannot tell apart. Where courts are independent, confidence is a judgment of how they perform. Where they answer to the state, it is also deference, and saying otherwise to an interviewer has a cost. In this frame the pattern runs the wrong way. India, the Philippines and Indonesia, all electoral autocracies in the V-Dem 2024 classification, lead on the share saying a great deal, and Vietnam and China, the two closed autocracies surveyed, lead once quite a lot is counted too. The nine electoral autocracies average 23.5 percent saying a great deal and the two closed autocracies 28.1, against 14.0 for liberal and 7.9 for electoral democracies. Scored, it would rank highest the states whose courts are least able to rule against them. Income is not why it is left out: the share correlates about -0.18 with log GDP per capita. The value is the share saying a great deal; the share saying quite a lot is in the source note."
+            "note": "Confidence in the courts is the public half of what this capability asks: whether people expect the rules to be enforced when a stranger breaks them. It is not scored because the survey answer reads two things the number cannot tell apart. Where courts are independent, confidence is a judgment of how they perform. Where they answer to the state, it is also deference, and saying otherwise to an interviewer has a cost. In this frame the pattern runs the wrong way. India, the Philippines and Indonesia, all electoral autocracies in the V-Dem 2025 classification, lead on the share saying a great deal, and Vietnam and China, the two closed autocracies surveyed, lead once quite a lot is counted too. The ten electoral autocracies average 21.8 percent saying a great deal and the two closed autocracies 28.1, against 13.6 for liberal and 8.4 for electoral democracies. Scored, it would rank highest the states whose courts are least able to rule against them. Income is not why it is left out: the share correlates about -0.18 with log GDP per capita. The value is the share saying a great deal; the share saying quite a lot is in the source note."
           }
         ],
         "conditions": []
@@ -5515,23 +5515,23 @@
             "definition": "Whether supporters of opposing political camps generally meet in a friendly or a hostile manner, rated by V-Dem country experts from 0, friendly, to 4, hostile.",
             "unit": "index 0-4",
             "direction": "lower_better",
-            "value": 3.866,
-            "year": 2024,
+            "value": 3.87,
+            "year": 2025,
             "source": "V-Dem (v2cacamps_osp)",
             "sourceTier": "expert_panel",
-            "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita."
+            "note": "The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2025 the five closed autocracies in the frame average 2.18 and the liberal democracies 1.67, while electoral democracies and electoral autocracies sit near 2.8 and 3.3. Scored, the reading would have lifted the United Arab Emirates about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.41 against log GDP per capita."
           },
           {
             "checkId": "voter_turnout",
             "name": "Voter turnout",
-            "definition": "Share of registered voters who cast a vote in the latest national election up to 2024, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
+            "definition": "Share of registered voters who cast a vote in the latest national election up to 2025, according to official results, as coded by V-Dem from IDEA, IPU and IFES sources. Where executive and legislative elections fall on the same day, the executive turnout is coded.",
             "unit": "% of registered voters",
             "direction": "higher_better",
             "value": 74.57,
             "year": 2021,
             "source": "V-Dem (v2eltrnout)",
             "sourceTier": "expert_panel",
-            "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
+            "note": "Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 92.8, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen."
           }
         ],
         "conditions": []

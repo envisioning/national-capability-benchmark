@@ -1,6 +1,6 @@
 # Capability agenda: Haiti
 
-*Generated 2026-10-01*
+*Generated 2026-10-02*
 
 The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | --- | --- | --- | --- |
 | Anticipation | 0 | 0.46 (usable) | 0 over 10 years using 2 indicators, with 2 at the frame edge |
 | Agency | 14.8 | 0.24 (very thin) | no trend |
-| Coordination | 50.9 | 0.39 (thin) | no trend |
-| Trust | 48.3 | 0.16 (very thin) | no trend |
+| Coordination | 57.3 | 0.39 (thin) | no trend |
+| Trust | 48.2 | 0.16 (very thin) | no trend |
 | Learning | 22.7 | 0.28 (thin) | no trend |
 | Experimentation | 0.2 | 0.04 (very thin) | no trend |
 | Adaptability | 37.5 | 0.52 (usable) | -3.7 over 10 years using 3 indicators |

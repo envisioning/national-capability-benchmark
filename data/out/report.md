@@ -1,6 +1,6 @@
 # National Capability Benchmark, prototype v0
 
-*Generated 2026-10-01T16:29:50.569Z*
+*Generated 2026-10-02T13:13:40.323Z*
 
 This run covers 53 countries and nine dimensions. Indicators carry equal weight within each dimension, and the benchmark has no headline ranking.
 
@@ -11,59 +11,59 @@ All 53 countries set the comparison frame and are measured against it. Adding a 
 
 | Country | Anticipation | Agency | Coordination | Trust | Learning | Experimentation | Adaptability | Building | Shared Purpose |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Brazil | 45.8 | 55.8 | 86.4 | 55.9 | 28 | 25.6 | 65.4 | 28.2 | 30.7 |
-| United States | 72.7 | 83.4 | 99.5 | 76.1 | 45.5 | 49.5 | 81.8 | 58.2 | 55.3 |
-| Netherlands | 78.5 | 66.9 | 96 | 81.4 | 71.4 | 28.1 | 92 | 44.4 | 96 |
-| Switzerland | 96.3 | 60 | 98.3 | 86.8 | 73.9 | 60.6 | 75.3 | 57.6 | 49.3 |
-| Singapore | 84.8 | 72.3 | 71 | 84.7 | 67.7 | 45.8 | 84.9 | 66.6 | 37 |
-| South Korea | 76.6 | 61 | 87.3 | 79.4 | 42.4 | 77.7 | 76.9 | 69.8 | 43.6 |
-| Estonia | 72 | 85.2 | 93 | 79.9 | 65.3 | 26.1 | 71.4 | 31.1 | 55 |
-| India | 35.5 | 45.4 | 73.9 | 40.4 | 15.3 | 8.8 | 59.5 | 47.1 | 66.4 |
-| Chile | 55.5 | 68.4 | 82.4 | 66.7 | 42 | 37.5 | 64.9 | 32.3 | 47.3 |
-| South Africa | 44 | 51.4 | 71.6 | 84.4 | 25.4 | 15.9 | 34.1 | 25.5 | 48 |
-| Mexico | 51.2 | 64.8 | 67.8 | 44.5 | 41.7 | 26.9 | 69.2 | 43 | 46.9 |
-| Argentina | 42.3 | 51.4 | 64.3 | 49.1 | 37.5 | 19.6 | 57 | 27.8 | 33.7 |
-| Colombia | 44.8 | 65.5 | 59.1 | 46.5 | 35.1 | 32.7 | 62.9 | 27.2 | 46.1 |
-| Peru | 43.1 | 55.4 | 69.3 | 57.3 | 37.7 | 16.4 | 69.6 | 30.2 | 39.8 |
-| Uruguay | 44.6 | 72.2 | 73.9 | 65.6 | 38.9 | 28.6 | 68.4 | 32.6 | 59.7 |
-| Costa Rica | 50.9 | 48.3 | 88.4 | 76.3 | 40.3 | 20.5 | 66.3 | 41.8 | 39.5 |
-| Germany | 73.5 | 51.9 | 88.7 | 86.1 | 56.7 | 81.7 | 83 | 68.9 | 55.1 |
-| France | 64 | 63.8 | 93.9 | 76.2 | 58.4 | 70.1 | 75.6 | 54.4 | 59 |
-| United Kingdom | 74 | 90.5 | 88.2 | 88.7 | 72.3 | 62.2 | 76.1 | 48.1 | 87.4 |
-| Spain | 73.5 | 58.1 | 89.3 | 81.3 | 64.2 | 40.4 | 69.4 | 34.9 | 48.1 |
-| Portugal | 81.8 | 67.2 | 91.6 | 60 | 55.8 | 32 | 74 | 34.2 | 52 |
-| Poland | 65.6 | 43.7 | 86.8 | 62.7 | 45 | 20.6 | 80.1 | 35.4 | 54.6 |
-| Sweden | 90 | 70.7 | 97.2 | 90.7 | 67.5 | 24.5 | 82.3 | 39.9 | 81.6 |
-| Finland | 87.5 | 70.6 | 82.9 | 93.6 | 76.3 | 29.2 | 77.3 | 37.8 | 73.6 |
-| Ireland | 77.6 | 69.1 | 88.8 | 84 | 71.6 | 4.8 | 72.9 | 69.2 | 76.5 |
-| Canada | 80.2 | 71.8 | 95.7 | 67.1 | 58.9 | 18.7 | 83.9 | 30.5 | 61.9 |
-| Australia | 86 | 86.1 | 86.7 | 84.7 | 71.4 | 37.9 | 79.6 | 34.4 | 77.2 |
-| Japan | 64 | 37.8 | 63.4 | 79.4 | 43.4 | 67.2 | 82.1 | 54.8 | 40.3 |
-| China | 31 | 72.5 | 65.8 | 67.5 | 63.2 | 100 | 81.1 | 77 | 30.3 |
-| Indonesia | 43.1 | 52.4 | 81.1 | 45.9 | 24.8 | 3.2 | 73.1 | 46.1 | 69 |
-| Vietnam | 28.5 | 61.1 | 75.8 | 39.1 | 34.2 | 7.2 | 84.4 | 65.7 | 42.4 |
-| Philippines | 42.6 | 28.8 | 74.8 | 45.9 | 35 | 2.5 | 61.1 | 60.2 | 54.9 |
-| Malaysia | 56 | 50.9 | 84.2 | 67.2 | 41.3 | 6.3 | 75.7 | 68.2 | 57.4 |
-| Thailand | 47.5 | 46.9 | 78.5 | 58.2 | 36.4 | 10.9 | 87.6 | 57.1 | 69.5 |
-| Turkey | 49.3 | 50.7 | 63.7 | 48.2 | 34.5 | 64 | 63.8 | 43 | 37.8 |
-| Israel | 75 | 63.4 | 80.1 | 43.5 | 44.8 | 22.2 | 84.4 | 38.9 | 70.4 |
-| United Arab Emirates | 49.7 | 69.1 | 51.2 | 46.2 | 49.9 | 5.2 | 74.7 | 37.6 | 48.4 |
-| Nigeria | 28.9 | 50.7 | 35.7 | 42 | 19.1 | 0.8 | 57.4 | 20 | 64.9 |
-| Kenya | 32.8 | 46.5 | 80.7 | 37.8 | 33 | 0.9 | 48.8 | 21.1 | 68.5 |
-| Rwanda | 31.9 | 63.7 | 61 | 63.9 | 29.4 | 0.3 | 50.7 | 31.3 | 49.3 |
-| Ethiopia | 22.3 | 41.3 | 76.2 | 42.1 | 19.7 | 0.2 | 49.9 | 19.3 | 46.6 |
-| Bolivia | 29.4 | 36.3 | 68.4 | 44.3 | 57.2 | 2.2 | 78.7 | 35.8 | 49.5 |
-| Paraguay | 33.5 | 39.6 | 48.7 | 62 | 28.2 | 12.3 | 70.1 | 37.1 | 37.7 |
-| Ecuador | 41.9 | 36 | 70.7 | 44.7 | 39.4 | 4.5 | 66.4 | 31.5 | 39.9 |
-| Venezuela | 0.9 | 25.8 | 16.5 | 36.2 | 31.6 | 5.2 | 39.4 | 0 | 21.7 |
-| Panama | 37.3 | 65.2 | 71.2 | 67.9 | 31.5 | 6 | 73.6 | 27 | 20.4 |
-| Guatemala | 37.7 | 59.8 | 53.2 | 47.3 | 45.5 | 1.1 | 65.4 | 33.6 | 49.5 |
-| Honduras | 25.2 | 25.8 | 69.9 | 65.3 | 38.2 | 1.1 | 43.8 | 34.8 | 42.2 |
-| El Salvador | 32.6 | 46.2 | 68.8 | 51.1 | 27.4 | 4.2 | 69.4 | 30.3 | 65 |
-| Nicaragua | 15.9 | 80.1 | 23.1 | 38.8 | 28.5 | 0.8 | 65.1 | 29.5 | 50.7 |
-| Dominican Republic | 33.9 | 50.4 | 69.9 | 70.1 | 29.7 | 4.4 | 70.5 | 30.7 | 53.1 |
+| Brazil | 45.8 | 55.8 | 85.3 | 55.9 | 28 | 25.6 | 65.4 | 28.2 | 30.7 |
+| United States | 72.7 | 83.4 | 98.6 | 74.6 | 45.5 | 49.5 | 81.8 | 58.2 | 55.3 |
+| Netherlands | 78.5 | 66.9 | 92.9 | 81.4 | 71.4 | 28.1 | 92 | 44.4 | 96 |
+| Switzerland | 96.3 | 60 | 98.5 | 86.7 | 73.9 | 60.6 | 75.3 | 57.6 | 49.3 |
+| Singapore | 84.8 | 72.3 | 72.1 | 84.6 | 67.7 | 45.8 | 84.9 | 66.6 | 37 |
+| South Korea | 76.6 | 61 | 87 | 80.8 | 42.4 | 77.7 | 76.9 | 69.8 | 43.6 |
+| Estonia | 72 | 85.2 | 93 | 79.8 | 65.3 | 26.1 | 71.4 | 31.1 | 55 |
+| India | 35.5 | 45.4 | 77.8 | 40.4 | 15.3 | 8.8 | 59.5 | 47.1 | 66.4 |
+| Chile | 55.5 | 68.4 | 79.9 | 66.6 | 42 | 37.5 | 64.9 | 32.3 | 47.3 |
+| South Africa | 44 | 51.4 | 71.5 | 81 | 25.4 | 15.9 | 34.1 | 25.5 | 48 |
+| Mexico | 51.2 | 64.8 | 71.3 | 44.4 | 41.7 | 26.9 | 69.2 | 43 | 46.9 |
+| Argentina | 42.3 | 51.4 | 61 | 49.2 | 37.5 | 19.6 | 57 | 27.8 | 33.7 |
+| Colombia | 44.8 | 65.5 | 60.8 | 46.4 | 35.1 | 32.7 | 62.9 | 27.2 | 46.1 |
+| Peru | 43.1 | 55.4 | 72.9 | 55.3 | 37.7 | 16.4 | 69.6 | 30.2 | 39.8 |
+| Uruguay | 44.6 | 72.2 | 73.9 | 65.4 | 38.9 | 28.6 | 68.4 | 32.6 | 59.7 |
+| Costa Rica | 50.9 | 48.3 | 88.6 | 76.1 | 40.3 | 20.5 | 66.3 | 41.8 | 39.5 |
+| Germany | 73.5 | 51.9 | 89.6 | 86 | 56.7 | 81.7 | 83 | 68.9 | 55.1 |
+| France | 64 | 63.8 | 92.9 | 76.5 | 58.4 | 70.1 | 75.6 | 54.4 | 59 |
+| United Kingdom | 74 | 90.5 | 87.7 | 88.6 | 72.3 | 62.2 | 76.1 | 48.1 | 87.4 |
+| Spain | 73.5 | 58.1 | 89.8 | 81.1 | 64.2 | 40.4 | 69.4 | 34.9 | 48.1 |
+| Portugal | 81.8 | 67.2 | 87.4 | 60 | 55.8 | 32 | 74 | 34.2 | 52 |
+| Poland | 65.6 | 43.7 | 87.4 | 61.2 | 45 | 20.6 | 80.1 | 35.4 | 54.6 |
+| Sweden | 90 | 70.7 | 97.2 | 87.9 | 67.5 | 24.5 | 82.3 | 39.9 | 81.6 |
+| Finland | 87.5 | 70.6 | 82.3 | 93.6 | 76.3 | 29.2 | 77.3 | 37.8 | 73.6 |
+| Ireland | 77.6 | 69.1 | 88.6 | 83.9 | 71.6 | 4.8 | 72.9 | 69.2 | 76.5 |
+| Canada | 80.2 | 71.8 | 97.1 | 67 | 58.9 | 18.7 | 83.9 | 30.5 | 61.9 |
+| Australia | 86 | 86.1 | 90.5 | 84.7 | 71.4 | 37.9 | 79.6 | 34.4 | 77.2 |
+| Japan | 64 | 37.8 | 63.5 | 79.4 | 43.4 | 67.2 | 82.1 | 54.8 | 40.3 |
+| China | 31 | 72.5 | 65.6 | 67.6 | 63.2 | 100 | 81.1 | 77 | 30.3 |
+| Indonesia | 43.1 | 52.4 | 78.1 | 46.9 | 24.8 | 3.2 | 73.1 | 46.1 | 69 |
+| Vietnam | 28.5 | 61.1 | 75.6 | 36.5 | 34.2 | 7.2 | 84.4 | 65.7 | 42.4 |
+| Philippines | 42.6 | 28.8 | 74.4 | 46.9 | 35 | 2.5 | 61.1 | 60.2 | 54.9 |
+| Malaysia | 56 | 50.9 | 83.5 | 68.2 | 41.3 | 6.3 | 75.7 | 68.2 | 57.4 |
+| Thailand | 47.5 | 46.9 | 76.4 | 58.2 | 36.4 | 10.9 | 87.6 | 57.1 | 69.5 |
+| Turkey | 49.3 | 50.7 | 62.3 | 48.8 | 34.5 | 64 | 63.8 | 43 | 37.8 |
+| Israel | 75 | 63.4 | 79.2 | 43.4 | 44.8 | 22.2 | 84.4 | 38.9 | 70.4 |
+| United Arab Emirates | 49.7 | 69.1 | 52 | 46.1 | 49.9 | 5.2 | 74.7 | 37.6 | 48.4 |
+| Nigeria | 28.9 | 50.7 | 33.7 | 41.7 | 19.1 | 0.8 | 57.4 | 20 | 64.9 |
+| Kenya | 32.8 | 46.5 | 75.2 | 36.8 | 33 | 0.9 | 48.8 | 21.1 | 68.5 |
+| Rwanda | 31.9 | 63.7 | 61.1 | 64 | 29.4 | 0.3 | 50.7 | 31.3 | 49.3 |
+| Ethiopia | 22.3 | 41.3 | 76.2 | 41.9 | 19.7 | 0.2 | 49.9 | 19.3 | 46.6 |
+| Bolivia | 29.4 | 36.3 | 70.3 | 42.8 | 57.2 | 2.2 | 78.7 | 35.8 | 49.5 |
+| Paraguay | 33.5 | 39.6 | 48.6 | 58.8 | 28.2 | 12.3 | 70.1 | 37.1 | 37.7 |
+| Ecuador | 41.9 | 36 | 69.4 | 44.7 | 39.4 | 4.5 | 66.4 | 31.5 | 39.9 |
+| Venezuela | 0.9 | 25.8 | 16.2 | 36.2 | 31.6 | 5.2 | 39.4 | 0 | 21.7 |
+| Panama | 37.3 | 65.2 | 71.6 | 66.5 | 31.5 | 6 | 73.6 | 27 | 20.4 |
+| Guatemala | 37.7 | 59.8 | 55.5 | 49.1 | 45.5 | 1.1 | 65.4 | 33.6 | 49.5 |
+| Honduras | 25.2 | 25.8 | 69.9 | 65.2 | 38.2 | 1.1 | 43.8 | 34.8 | 42.2 |
+| El Salvador | 32.6 | 46.2 | 69.5 | 51.3 | 27.4 | 4.2 | 69.4 | 30.3 | 65 |
+| Nicaragua | 15.9 | 80.1 | 22.9 | 38.8 | 28.5 | 0.8 | 65.1 | 29.5 | 50.7 |
+| Dominican Republic | 33.9 | 50.4 | 68.6 | 71.7 | 29.7 | 4.4 | 70.5 | 30.7 | 53.1 |
 | Cuba | no data | no data | no data | no data | 21.5 | 1.1 | 63.7 | 21.8 | no data |
-| Haiti | 0 | 14.8 | 50.9 | 48.3 | 22.7 | 0.2 | 37.5 | 45.8 | no data |
+| Haiti | 0 | 14.8 | 57.3 | 48.2 | 22.7 | 0.2 | 37.5 | 45.8 | no data |
 
 Confidence is reported beside the score. Each cell shows the value and its band.
 
@@ -437,15 +437,15 @@ A behavioural check measures something real about a dimension and fails this pro
 
 | Check | Dimension | Countries | Latest | r vs log GDP per capita |
 | --- | --- | --- | --- | --- |
-| Political polarization | Shared Purpose | 53 | 2024 | -0.335 |
-| Voter turnout | Shared Purpose | 52 | 2024 | 0.053 |
+| Political polarization | Shared Purpose | 53 | 2025 | -0.408 |
+| Voter turnout | Shared Purpose | 52 | 2025 | 0.047 |
 | Confidence in the courts | Trust | 37 | 2022 | -0.177 |
 
 The correlation is computed on the value as published, so its sign reads the way the unit does.
 
-- **Political polarization** (Shared Purpose, index 0-4): The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2024 the five closed autocracies in the frame average 1.85 and the liberal democracies 1.77, while electoral democracies and electoral autocracies sit near 2.8 and 3.0. Scored, the reading would have lifted the United Arab Emirates and Rwanda about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.34 against log GDP per capita.
-- **Voter turnout** (Shared Purpose, % of registered voters): Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 93.6, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen.
-- **Confidence in the courts** (Trust, % a great deal): Confidence in the courts is the public half of what this capability asks: whether people expect the rules to be enforced when a stranger breaks them. It is not scored because the survey answer reads two things the number cannot tell apart. Where courts are independent, confidence is a judgment of how they perform. Where they answer to the state, it is also deference, and saying otherwise to an interviewer has a cost. In this frame the pattern runs the wrong way. India, the Philippines and Indonesia, all electoral autocracies in the V-Dem 2024 classification, lead on the share saying a great deal, and Vietnam and China, the two closed autocracies surveyed, lead once quite a lot is counted too. The nine electoral autocracies average 23.5 percent saying a great deal and the two closed autocracies 28.1, against 14.0 for liberal and 7.9 for electoral democracies. Scored, it would rank highest the states whose courts are least able to rule against them. Income is not why it is left out: the share correlates about -0.18 with log GDP per capita. The value is the share saying a great deal; the share saying quite a lot is in the source note.
+- **Political polarization** (Shared Purpose, index 0-4): The question counts hostility and leaves disagreement alone, which is what pluralism asks for. It is not scored because a low reading has two causes the number cannot tell apart. Where camps compete openly, a calm reading means people who disagree still meet as fellow citizens. Where no opposition may organize, it means there is no camp left to be hostile to. In 2025 the five closed autocracies in the frame average 2.18 and the liberal democracies 1.67, while electoral democracies and electoral autocracies sit near 2.8 and 3.3. Scored, the reading would have lifted the United Arab Emirates about 11 points on this capability for a uniformity the benchmark does not count as shared purpose. Income is not why it is left out: richer countries read only somewhat calmer, at about -0.41 against log GDP per capita.
+- **Voter turnout** (Shared Purpose, % of registered voters): Turnout is the one act in which a whole population takes part in a common decision, so it is the closest behavioral reading of shared purpose the benchmark has. It is not scored for three reasons the number cannot separate. It reads the democratic channel, which is why voice and accountability was retired from this capability (A5): a country with no competitive elections cannot score well for reasons unrelated to whether its people see themselves in a common project. Compulsory voting turns it into a reading of the law: Brazil enforces it, and the eight countries that enforce sanctions average 83 percent against 65 where voting is voluntary. And closed and electoral autocracies manage it: Vietnam reads 95.6, Rwanda 98.2 and Singapore 92.8, which is mobilization, not participation (A13). The year shown is the latest national election, because elections are coded only in the year they happen.
+- **Confidence in the courts** (Trust, % a great deal): Confidence in the courts is the public half of what this capability asks: whether people expect the rules to be enforced when a stranger breaks them. It is not scored because the survey answer reads two things the number cannot tell apart. Where courts are independent, confidence is a judgment of how they perform. Where they answer to the state, it is also deference, and saying otherwise to an interviewer has a cost. In this frame the pattern runs the wrong way. India, the Philippines and Indonesia, all electoral autocracies in the V-Dem 2025 classification, lead on the share saying a great deal, and Vietnam and China, the two closed autocracies surveyed, lead once quite a lot is counted too. The ten electoral autocracies average 21.8 percent saying a great deal and the two closed autocracies 28.1, against 13.6 for liberal and 8.4 for electoral democracies. Scored, it would rank highest the states whose courts are least able to rule against them. Income is not why it is left out: the share correlates about -0.18 with log GDP per capita. The value is the share saying a great deal; the share saying quite a lot is in the source note.
 
 ## Conditions sit beside each dimension
 
@@ -473,32 +473,32 @@ Both correlations read the value after the registry transform, so secure servers
 | Anticipation | 0.872 | 0.892 | 51 |
 | Learning | 0.749 | 0.801 | 51 |
 | Adaptability | 0.738 | 0.714 | 51 |
-| Trust | 0.671 | 0.72 | 51 |
+| Trust | 0.675 | 0.726 | 51 |
 | Agency | 0.579 | 0.589 | 51 |
 | Experimentation | 0.572 | 0.726 | 51 |
-| Coordination | 0.563 | 0.618 | 51 |
+| Coordination | 0.558 | 0.623 | 51 |
 | Building | 0.434 | 0.457 | 51 |
 | Shared Purpose | 0.202 | 0.216 | 50 |
 
 ## The dimensions are checked for one shared factor
 
-Over the 51 countries with all nine dimensions scored, the first principal component of the dimension correlation matrix carries 52.9% of the variance. The same number of independent dimensions at the same size would give 18.9% on average and 21.5% at the 95th percentile (2000 draws, seed 20261001).
+Over the 51 countries with all nine dimensions scored, the first principal component of the dimension correlation matrix carries 53.1% of the variance. The same number of independent dimensions at the same size would give 18.9% on average and 21.5% at the 95th percentile (2000 draws, seed 20261001).
 
-The first factor's country scores correlate 0.859 with log GDP per capita (n 50), so income accounts for 74% of it. The shared factor looks like income.
+The first factor's country scores correlate 0.858 with log GDP per capita (n 50), so income accounts for 74% of it. The shared factor looks like income.
 
 | Dimension | Loading on the first factor |
 | --- | --- |
 | Anticipation | 0.914 |
 | Agency | 0.635 |
-| Coordination | 0.758 |
-| Trust | 0.798 |
+| Coordination | 0.767 |
+| Trust | 0.804 |
 | Learning | 0.846 |
-| Experimentation | 0.646 |
-| Adaptability | 0.745 |
-| Building | 0.621 |
-| Shared Purpose | 0.483 |
+| Experimentation | 0.647 |
+| Adaptability | 0.746 |
+| Building | 0.623 |
+| Shared Purpose | 0.481 |
 
-Eigenvalues: 4.757, 1.208, 0.85, 0.738, 0.411, 0.392, 0.3, 0.208, 0.136.
+Eigenvalues: 4.781, 1.205, 0.845, 0.727, 0.41, 0.396, 0.296, 0.204, 0.135.
 
 Left out for a missing dimension: CUB, HTI.
 
@@ -508,11 +508,11 @@ Four tests on the wealth residual (D68), over the 50 countries with all nine res
 
 | Test | Figures | Reading |
 | --- | --- | --- |
-| (a) Residuals move together | first-factor share 27.9%, chance 19.1% (95th 21.7%), n 50 | structure |
-| (b) Same income, different shape | peer distance 1.559 against 1.538 without regard to income (5th 1.464); shape share 26.4% against random 95th 23.2%, n 50 | differ |
-| (c) Order holds between releases | lowest rank r 0.718 on Trust (n 36), 19 release pairs | mixed |
+| (a) Residuals move together | first-factor share 28.1%, chance 19.1% (95th 21.7%), n 50 | structure |
+| (b) Same income, different shape | peer distance 1.553 against 1.533 without regard to income (5th 1.46); shape share 26.4% against random 95th 23.3%, n 50 | differ |
+| (c) Order holds between releases | lowest rank r 0.718 on Trust (n 36), 20 release pairs | mixed |
 | (c) Order holds without one country | largest own-residual shift 0.249 residual SD | robust |
-| (d) Share of a profile that is income | mean 30.6%, median 44.3%, n 50 | part |
+| (d) Share of a profile that is income | mean 30.7%, median 44.5%, n 50 | part |
 
 Under D138, the weaker claim, that countries at the same income have different capability shapes, reads **holds** on this release.
 
@@ -585,8 +585,8 @@ No dimension pair reaches 0.9. At this sample size, the nine dimensions carry di
 | --- | --- | --- | --- |
 | Anticipation | 96.3 | 84.8 | 72 |
 | Agency | 60 | 72.3 | 85.2 |
-| Coordination | 98.3 | 71 | 93 |
-| Trust | 86.8 | 84.7 | 79.9 |
+| Coordination | 98.5 | 72.1 | 93 |
+| Trust | 86.7 | 84.6 | 79.8 |
 | Learning | 73.9 | 67.7 | 65.3 |
 | Experimentation | 60.6 | 45.8 | 26.1 |
 | Adaptability | 75.3 | 84.9 | 71.4 |
@@ -595,7 +595,7 @@ No dimension pair reaches 0.9. At this sample size, the nine dimensions carry di
 
 ## Brazil is the first case
 
-Strongest: Coordination (86.4), Adaptability (65.4), Trust (55.9).
+Strongest: Coordination (85.3), Adaptability (65.4), Trust (55.9).
 
 Weakest: Building (28.2), Learning (28), Experimentation (25.6).
 

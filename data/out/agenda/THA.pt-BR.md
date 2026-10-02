@@ -1,6 +1,6 @@
 # Agenda de capacidades: Tailândia
 
-*Gerado em 2026-10-01*
+*Gerado em 2026-10-02*
 
 A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
@@ -10,7 +10,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | --- | --- | --- | --- |
 | Antecipação | 47,5 | 0,46 (utilizável) | +8,8 em 10 anos, sobre 2 indicadores |
 | Agência | 46,9 | 0,56 (utilizável) | sem base de tendência |
-| Coordenação | 78,5 | 0,41 (fraca) | sem base de tendência |
+| Coordenação | 76,4 | 0,41 (fraca) | sem base de tendência |
 | Confiança | 58,2 | 0,4 (fraca) | sem base de tendência |
 | Aprendizagem | 36,4 | 0,56 (utilizável) | sem base de tendência |
 | Experimentação | 10,9 | 0,24 (muito fraca) | +0,5 em 10 anos, sobre 3 indicadores |

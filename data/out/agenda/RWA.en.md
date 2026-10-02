@@ -1,6 +1,6 @@
 # Capability agenda: Rwanda
 
-*Generated 2026-10-01*
+*Generated 2026-10-02*
 
 The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | --- | --- | --- | --- |
 | Anticipation | 31.9 | 0.46 (usable) | +16.9 over 10 years using 2 indicators |
 | Agency | 63.7 | 0.41 (thin) | no trend |
-| Coordination | 61 | 0.41 (thin) | no trend |
-| Trust | 63.9 | 0.29 (thin) | no trend |
+| Coordination | 61.1 | 0.41 (thin) | no trend |
+| Trust | 64 | 0.29 (thin) | no trend |
 | Learning | 29.4 | 0.54 (usable) | no trend |
 | Experimentation | 0.3 | 0.24 (very thin) | +0.2 over 10 years using 3 indicators |
 | Adaptability | 50.7 | 0.67 (good) | +10.3 over 10 years using 3 indicators |

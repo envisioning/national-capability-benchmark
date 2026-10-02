@@ -1,6 +1,6 @@
 # Agenda de capacidades: Haiti
 
-*Gerado em 2026-10-01*
+*Gerado em 2026-10-02*
 
 A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
@@ -10,8 +10,8 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | --- | --- | --- | --- |
 | Antecipação | 0 | 0,46 (utilizável) | 0 em 10 anos, sobre 2 indicadores, 2 truncados na borda da régua |
 | Agência | 14,8 | 0,24 (muito fraca) | sem base de tendência |
-| Coordenação | 50,9 | 0,39 (fraca) | sem base de tendência |
-| Confiança | 48,3 | 0,16 (muito fraca) | sem base de tendência |
+| Coordenação | 57,3 | 0,39 (fraca) | sem base de tendência |
+| Confiança | 48,2 | 0,16 (muito fraca) | sem base de tendência |
 | Aprendizagem | 22,7 | 0,28 (fraca) | sem base de tendência |
 | Experimentação | 0,2 | 0,04 (muito fraca) | sem base de tendência |
 | Adaptação | 37,5 | 0,52 (utilizável) | -3,7 em 10 anos, sobre 3 indicadores |

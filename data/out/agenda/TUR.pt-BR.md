@@ -1,6 +1,6 @@
 # Agenda de capacidades: Turquia
 
-*Gerado em 2026-10-01*
+*Gerado em 2026-10-02*
 
 A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
@@ -10,8 +10,8 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | --- | --- | --- | --- |
 | Antecipação | 49,3 | 0,46 (utilizável) | +9,4 em 10 anos, sobre 2 indicadores |
 | Agência | 50,7 | 0,56 (utilizável) | sem base de tendência |
-| Coordenação | 63,7 | 0,39 (fraca) | sem base de tendência |
-| Confiança | 48,2 | 0,4 (fraca) | sem base de tendência |
+| Coordenação | 62,3 | 0,39 (fraca) | sem base de tendência |
+| Confiança | 48,8 | 0,4 (fraca) | sem base de tendência |
 | Aprendizagem | 34,5 | 0,54 (utilizável) | sem base de tendência |
 | Experimentação | 64 | 0,24 (muito fraca) | +12,3 em 10 anos, sobre 3 indicadores |
 | Adaptação | 63,8 | 0,68 (boa) | +13,8 em 10 anos, sobre 3 indicadores, 1 truncados na borda da régua |

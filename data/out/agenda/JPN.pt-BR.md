@@ -1,6 +1,6 @@
 # Agenda de capacidades: Japão
 
-*Gerado em 2026-10-01*
+*Gerado em 2026-10-02*
 
 A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
@@ -10,7 +10,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | --- | --- | --- | --- |
 | Antecipação | 64 | 0,46 (utilizável) | +13,5 em 10 anos, sobre 2 indicadores |
 | Agência | 37,8 | 0,56 (utilizável) | sem base de tendência |
-| Coordenação | 63,4 | 0,39 (fraca) | sem base de tendência |
+| Coordenação | 63,5 | 0,39 (fraca) | sem base de tendência |
 | Confiança | 79,4 | 0,4 (fraca) | sem base de tendência |
 | Aprendizagem | 43,4 | 0,54 (utilizável) | sem base de tendência |
 | Experimentação | 67,2 | 0,24 (muito fraca) | -6,3 em 10 anos, sobre 3 indicadores |

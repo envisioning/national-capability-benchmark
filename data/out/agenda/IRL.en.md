@@ -1,6 +1,6 @@
 # Capability agenda: Ireland
 
-*Generated 2026-10-01*
+*Generated 2026-10-02*
 
 The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | --- | --- | --- | --- |
 | Anticipation | 77.6 | 0.46 (usable) | +6 over 10 years using 2 indicators |
 | Agency | 69.1 | 0.41 (thin) | no trend |
-| Coordination | 88.8 | 0.39 (thin) | no trend |
-| Trust | 84 | 0.3 (thin) | no trend |
+| Coordination | 88.6 | 0.39 (thin) | no trend |
+| Trust | 83.9 | 0.3 (thin) | no trend |
 | Learning | 71.6 | 0.54 (usable) | no trend |
 | Experimentation | 4.8 | 0.16 (very thin) | -1.9 over 10 years using 2 indicators |
 | Adaptability | 72.9 | 0.68 (good) | +11 over 10 years using 3 indicators |

@@ -1,6 +1,6 @@
 # Agenda de capacidades: Coreia do Sul
 
-*Gerado em 2026-10-01*
+*Gerado em 2026-10-02*
 
 A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
@@ -10,8 +10,8 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | --- | --- | --- | --- |
 | Antecipação | 76,6 | 0,46 (utilizável) | +17,8 em 10 anos, sobre 2 indicadores |
 | Agência | 61 | 0,54 (utilizável) | sem base de tendência |
-| Coordenação | 87,3 | 0,4 (fraca) | sem base de tendência |
-| Confiança | 79,4 | 0,4 (fraca) | sem base de tendência |
+| Coordenação | 87 | 0,4 (fraca) | sem base de tendência |
+| Confiança | 80,8 | 0,4 (fraca) | sem base de tendência |
 | Aprendizagem | 42,4 | 0,54 (utilizável) | sem base de tendência |
 | Experimentação | 77,7 | 0,43 (fraca) | +11,3 em 10 anos, sobre 3 indicadores, 1 truncados na borda da régua |
 | Adaptação | 76,9 | 0,54 (utilizável) | +5,2 em 10 anos, sobre 3 indicadores |

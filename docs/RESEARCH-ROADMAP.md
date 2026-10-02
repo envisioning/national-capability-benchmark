@@ -38,7 +38,7 @@ each dimension's correlation with log GDP per capita. Above 0.70 is a finding
 against the claim, to be read and published. It is not a target, and no row is
 added or dropped to move it.
 
-**Guardrail.** Confidence must not come to track wealth. At 7.4.0 the mean
+**Guardrail.** Confidence must not come to track wealth. At 7.7.1 the mean
 confidence across dimensions correlates with log GDP per capita at r = 0.30
 across 51 countries. The bought conditions that left the scores (D122) were
 better covered in rich countries, and the ILOSTAT row's plausibility gate still
@@ -48,13 +48,13 @@ raises O1 and breaks this.
 
 ### Where the objectives stand
 
-Dataset 7.4.0. Recompute from `data/out/diagnostics.json` and
+Dataset 7.7.1 (V-Dem v16). Recompute from `data/out/diagnostics.json` and
 `data/out/index.json` after any rescore; never carry these figures forward by
 hand.
 
 | Dimension | Mean confidence | Observed rows (mean) | r with log GDP | Reading |
 | --- | ---: | ---: | ---: | --- |
-| Trust | 0.35 | 3.6 | 0.67 (n 51) | misses O1 |
+| Trust | 0.35 | 3.6 | 0.68 | misses O1 |
 | Experimentation | 0.27 | 3.5 | 0.57 | misses O1 |
 | Shared purpose | 0.34 | 2.6 | 0.20 (n 50) | misses O1 |
 | Coordination | 0.36 | 2.8 | 0.56 | misses O1 |
@@ -144,8 +144,8 @@ first, then coverage, the A13 regime test, redundancy and r with log GDP.
   `court_case_clearance`, `volunteering_rate`, `national_belonging`,
   `government_foresight_capacity` or cross-agency delivery.
 
-A v16 release exists at the same URL pattern (`-v16_csv.zip`, March 2026): pin
-it in a separate patch-level change.
+V-Dem is pinned to v16 (March 2026, 2025 values) since dataset 7.7.1. A13
+still quotes v15 polarization figures and needs restating.
 
 Parked, with the reason:
 

@@ -1,6 +1,6 @@
 # Agenda de capacidades: Emirados Árabes Unidos
 
-*Gerado em 2026-10-01*
+*Gerado em 2026-10-02*
 
 A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
@@ -10,8 +10,8 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | --- | --- | --- | --- |
 | Antecipação | 49,7 | 0,46 (utilizável) | +36,7 em 10 anos, sobre 2 indicadores |
 | Agência | 69,1 | 0,35 (fraca) | sem base de tendência |
-| Coordenação | 51,2 | 0,23 (muito fraca) | sem base de tendência |
-| Confiança | 46,2 | 0,16 (muito fraca) | sem base de tendência |
+| Coordenação | 52 | 0,23 (muito fraca) | sem base de tendência |
+| Confiança | 46,1 | 0,16 (muito fraca) | sem base de tendência |
 | Aprendizagem | 49,9 | 0,34 (fraca) | sem base de tendência |
 | Experimentação | 5,2 | 0,24 (muito fraca) | +0,7 em 10 anos, sobre 3 indicadores |
 | Adaptação | 74,7 | 0,67 (boa) | +0,9 em 10 anos, sobre 3 indicadores |

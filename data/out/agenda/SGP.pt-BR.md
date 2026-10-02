@@ -1,6 +1,6 @@
 # Agenda de capacidades: Singapura
 
-*Gerado em 2026-10-01*
+*Gerado em 2026-10-02*
 
 A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
@@ -10,8 +10,8 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | --- | --- | --- | --- |
 | Antecipação | 84,8 | 0,46 (utilizável) | +17,5 em 10 anos, sobre 2 indicadores |
 | Agência | 72,3 | 0,56 (utilizável) | sem base de tendência |
-| Coordenação | 71 | 0,4 (fraca) | sem base de tendência |
-| Confiança | 84,7 | 0,39 (fraca) | sem base de tendência |
+| Coordenação | 72,1 | 0,4 (fraca) | sem base de tendência |
+| Confiança | 84,6 | 0,39 (fraca) | sem base de tendência |
 | Aprendizagem | 67,7 | 0,45 (utilizável) | sem base de tendência |
 | Experimentação | 45,8 | 0,26 (fraca) | +6,8 em 10 anos, sobre 3 indicadores |
 | Adaptação | 84,9 | 0,67 (boa) | +6,9 em 10 anos, sobre 3 indicadores |

@@ -1,6 +1,6 @@
 # Agenda de capacidades: Honduras
 
-*Gerado em 2026-10-01*
+*Gerado em 2026-10-02*
 
 A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
@@ -11,7 +11,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Antecipação | 25,2 | 0,46 (utilizável) | +6,2 em 10 anos, sobre 2 indicadores |
 | Agência | 25,8 | 0,41 (fraca) | sem base de tendência |
 | Coordenação | 69,9 | 0,37 (fraca) | sem base de tendência |
-| Confiança | 65,3 | 0,22 (muito fraca) | sem base de tendência |
+| Confiança | 65,2 | 0,22 (muito fraca) | sem base de tendência |
 | Aprendizagem | 38,2 | 0,43 (fraca) | sem base de tendência |
 | Experimentação | 1,1 | 0,18 (muito fraca) | sem base de tendência |
 | Adaptação | 43,8 | 0,67 (boa) | -5 em 10 anos, sobre 3 indicadores |

@@ -1,6 +1,6 @@
 # Agenda de capacidades: Colombia
 
-*Generado el 2026-10-01*
+*Generado el 2026-10-02*
 
 La comparación incluye 53 países. Cada dimensión recibe una puntuación de 0 a 100, sin clasificación general, y cada puntuación muestra a su lado la solidez de la evidencia. Antes de citar una puntuación, lea [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md).
 
@@ -10,8 +10,8 @@ La comparación incluye 53 países. Cada dimensión recibe una puntuación de 0 
 | --- | --- | --- | --- |
 | Anticipación | 44.8 | 0.46 (utilizable) | +11.9 en 10 años, sobre 2 indicadores |
 | Iniciativa | 65.5 | 0.56 (utilizable) | sin base de tendencia |
-| Coordinación | 59.1 | 0.39 (débil) | sin base de tendencia |
-| Confianza | 46.5 | 0.39 (débil) | sin base de tendencia |
+| Coordinación | 60.8 | 0.39 (débil) | sin base de tendencia |
+| Confianza | 46.4 | 0.39 (débil) | sin base de tendencia |
 | Aprendizaje | 35.1 | 0.52 (utilizable) | sin base de tendencia |
 | Experimentación | 32.7 | 0.41 (débil) | +0.9 en 10 años, sobre 3 indicadores |
 | Adaptación | 62.9 | 0.68 (buena) | +0.7 en 10 años, sobre 3 indicadores |

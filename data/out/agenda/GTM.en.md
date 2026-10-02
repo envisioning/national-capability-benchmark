@@ -1,6 +1,6 @@
 # Capability agenda: Guatemala
 
-*Generated 2026-10-01*
+*Generated 2026-10-02*
 
 The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | --- | --- | --- | --- |
 | Anticipation | 37.7 | 0.46 (usable) | +19 over 10 years using 2 indicators |
 | Agency | 59.8 | 0.56 (usable) | no trend |
-| Coordination | 53.2 | 0.37 (thin) | no trend |
-| Trust | 47.3 | 0.4 (thin) | no trend |
+| Coordination | 55.5 | 0.37 (thin) | no trend |
+| Trust | 49.1 | 0.4 (thin) | no trend |
 | Learning | 45.5 | 0.56 (usable) | no trend |
 | Experimentation | 1.1 | 0.17 (very thin) | -2 over 10 years using 2 indicators |
 | Adaptability | 65.4 | 0.67 (good) | -1.7 over 10 years using 3 indicators |

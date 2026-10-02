@@ -1,6 +1,6 @@
 # Capability agenda: Nigeria
 
-*Generated 2026-10-01*
+*Generated 2026-10-02*
 
 The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | --- | --- | --- | --- |
 | Anticipation | 28.9 | 0.46 (usable) | +11.5 over 10 years using 2 indicators |
 | Agency | 50.7 | 0.52 (usable) | no trend |
-| Coordination | 35.7 | 0.41 (thin) | no trend |
-| Trust | 42 | 0.4 (thin) | no trend |
+| Coordination | 33.7 | 0.41 (thin) | no trend |
+| Trust | 41.7 | 0.4 (thin) | no trend |
 | Learning | 19.1 | 0.47 (usable) | no trend |
 | Experimentation | 0.8 | 0.2 (very thin) | no trend |
 | Adaptability | 57.4 | 0.67 (good) | +4.6 over 10 years using 3 indicators |

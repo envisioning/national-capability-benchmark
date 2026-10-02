@@ -1,6 +1,6 @@
 # Agenda de capacidades: Chile
 
-*Generado el 2026-10-01*
+*Generado el 2026-10-02*
 
 La comparación incluye 53 países. Cada dimensión recibe una puntuación de 0 a 100, sin clasificación general, y cada puntuación muestra a su lado la solidez de la evidencia. Antes de citar una puntuación, lea [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md).
 
@@ -10,8 +10,8 @@ La comparación incluye 53 países. Cada dimensión recibe una puntuación de 0 
 | --- | --- | --- | --- |
 | Anticipación | 55.5 | 0.46 (utilizable) | +10.6 en 10 años, sobre 2 indicadores |
 | Iniciativa | 68.4 | 0.54 (utilizable) | sin base de tendencia |
-| Coordinación | 82.4 | 0.39 (débil) | sin base de tendencia |
-| Confianza | 66.7 | 0.4 (débil) | sin base de tendencia |
+| Coordinación | 79.9 | 0.39 (débil) | sin base de tendencia |
+| Confianza | 66.6 | 0.4 (débil) | sin base de tendencia |
 | Aprendizaje | 42 | 0.54 (utilizable) | sin base de tendencia |
 | Experimentación | 37.5 | 0.43 (débil) | +4.5 en 10 años, sobre 3 indicadores |
 | Adaptación | 64.9 | 0.68 (buena) | -3.4 en 10 años, sobre 3 indicadores |

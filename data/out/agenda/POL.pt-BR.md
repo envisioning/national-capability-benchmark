@@ -1,6 +1,6 @@
 # Agenda de capacidades: Polônia
 
-*Gerado em 2026-10-01*
+*Gerado em 2026-10-02*
 
 A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
@@ -10,8 +10,8 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | --- | --- | --- | --- |
 | Antecipação | 65,6 | 0,46 (utilizável) | +8,4 em 10 anos, sobre 2 indicadores |
 | Agência | 43,7 | 0,56 (utilizável) | sem base de tendência |
-| Coordenação | 86,8 | 0,41 (fraca) | sem base de tendência |
-| Confiança | 62,7 | 0,4 (fraca) | sem base de tendência |
+| Coordenação | 87,4 | 0,41 (fraca) | sem base de tendência |
+| Confiança | 61,2 | 0,4 (fraca) | sem base de tendência |
 | Aprendizagem | 45 | 0,54 (utilizável) | sem base de tendência |
 | Experimentação | 20,6 | 0,24 (muito fraca) | -2,6 em 10 anos, sobre 2 indicadores |
 | Adaptação | 80,1 | 0,68 (boa) | +11,2 em 10 anos, sobre 3 indicadores |

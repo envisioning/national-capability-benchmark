@@ -1,6 +1,6 @@
 # Capability agenda: South Korea
 
-*Generated 2026-10-01*
+*Generated 2026-10-02*
 
 The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | --- | --- | --- | --- |
 | Anticipation | 76.6 | 0.46 (usable) | +17.8 over 10 years using 2 indicators |
 | Agency | 61 | 0.54 (usable) | no trend |
-| Coordination | 87.3 | 0.4 (thin) | no trend |
-| Trust | 79.4 | 0.4 (thin) | no trend |
+| Coordination | 87 | 0.4 (thin) | no trend |
+| Trust | 80.8 | 0.4 (thin) | no trend |
 | Learning | 42.4 | 0.54 (usable) | no trend |
 | Experimentation | 77.7 | 0.43 (thin) | +11.3 over 10 years using 3 indicators, with 1 at the frame edge |
 | Adaptability | 76.9 | 0.54 (usable) | +5.2 over 10 years using 3 indicators |

@@ -1,6 +1,6 @@
 # Capability agenda: Kenya
 
-*Generated 2026-10-01*
+*Generated 2026-10-02*
 
 The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | --- | --- | --- | --- |
 | Anticipation | 32.8 | 0.46 (usable) | +16.5 over 10 years using 2 indicators |
 | Agency | 46.5 | 0.56 (usable) | no trend |
-| Coordination | 80.7 | 0.41 (thin) | no trend |
-| Trust | 37.8 | 0.4 (thin) | no trend |
+| Coordination | 75.2 | 0.41 (thin) | no trend |
+| Trust | 36.8 | 0.4 (thin) | no trend |
 | Learning | 33 | 0.47 (usable) | no trend |
 | Experimentation | 0.9 | 0.23 (very thin) | 0 over 10 years using 2 indicators |
 | Adaptability | 48.8 | 0.64 (usable) | -19.1 over 10 years using 3 indicators |

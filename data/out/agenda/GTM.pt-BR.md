@@ -1,6 +1,6 @@
 # Agenda de capacidades: Guatemala
 
-*Gerado em 2026-10-01*
+*Gerado em 2026-10-02*
 
 A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
@@ -10,8 +10,8 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | --- | --- | --- | --- |
 | Antecipação | 37,7 | 0,46 (utilizável) | +19 em 10 anos, sobre 2 indicadores |
 | Agência | 59,8 | 0,56 (utilizável) | sem base de tendência |
-| Coordenação | 53,2 | 0,37 (fraca) | sem base de tendência |
-| Confiança | 47,3 | 0,4 (fraca) | sem base de tendência |
+| Coordenação | 55,5 | 0,37 (fraca) | sem base de tendência |
+| Confiança | 49,1 | 0,4 (fraca) | sem base de tendência |
 | Aprendizagem | 45,5 | 0,56 (utilizável) | sem base de tendência |
 | Experimentação | 1,1 | 0,17 (muito fraca) | -2 em 10 anos, sobre 2 indicadores |
 | Adaptação | 65,4 | 0,67 (boa) | -1,7 em 10 anos, sobre 3 indicadores |

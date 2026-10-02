@@ -1,6 +1,6 @@
 # Agenda de capacidades: Israel
 
-*Gerado em 2026-10-01*
+*Gerado em 2026-10-02*
 
 A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
@@ -10,8 +10,8 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | --- | --- | --- | --- |
 | Antecipação | 75 | 0,46 (utilizável) | +10,4 em 10 anos, sobre 2 indicadores |
 | Agência | 63,4 | 0,41 (fraca) | sem base de tendência |
-| Coordenação | 80,1 | 0,23 (muito fraca) | sem base de tendência |
-| Confiança | 43,5 | 0,3 (fraca) | sem base de tendência |
+| Coordenação | 79,2 | 0,23 (muito fraca) | sem base de tendência |
+| Confiança | 43,4 | 0,3 (fraca) | sem base de tendência |
 | Aprendizagem | 44,8 | 0,54 (utilizável) | sem base de tendência |
 | Experimentação | 22,2 | 0,24 (muito fraca) | -8,8 em 10 anos, sobre 3 indicadores |
 | Adaptação | 84,4 | 0,68 (boa) | +2,9 em 10 anos, sobre 3 indicadores |

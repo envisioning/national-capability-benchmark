@@ -17,15 +17,16 @@ export const JOINT_EVS_WVS_RELEASE_YEAR = 2022
  * `v2x_cspart` values for the benchmark countries. See D121.
  */
 export const VDEM_PUBLISHER = 'V-Dem'
-export const VDEM_CY_V15_PAGE_URL =
-  'https://www.v-dem.net/data/the-v-dem-dataset/country-year-v-dem-fullothers-v15/'
-export const VDEM_CY_V15_URL =
-  'https://www.v-dem.net/media/datasets/V-Dem-CY-FullOthers-v15_csv.zip'
+export const VDEM_CY_PAGE_URL =
+  'https://www.v-dem.net/data/the-v-dem-dataset/country-year-v-dem-fullothers-v16/'
+export const VDEM_CY_URL =
+  'https://www.v-dem.net/media/datasets/V-Dem-CY-FullOthers-v16_csv.zip'
 /** The CSV member inside the pinned archive. */
-export const VDEM_CY_V15_CSV = 'V-Dem-CY-Full+Others-v15.csv'
-export const VDEM_CY_V15_DATASET = 'Country-Year Full+Others'
-export const VDEM_CY_V15_RELEASE = '15 (2025-03-04)'
-export const VDEM_CY_V15_YEAR = 2024
+export const VDEM_CY_CSV = 'V-Dem-CY-Full+Others-v16.csv'
+export const VDEM_CY_DATASET = 'Country-Year Full+Others'
+/** Version and the date stamped on the CSV member inside the archive. */
+export const VDEM_CY_RELEASE = '16 (2026-03-10)'
+export const VDEM_CY_YEAR = 2025
 
 /**
  * UNCTADstat's merchandise concentration and diversification indices, used for

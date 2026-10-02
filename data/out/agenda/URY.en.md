@@ -1,6 +1,6 @@
 # Capability agenda: Uruguay
 
-*Generated 2026-10-01*
+*Generated 2026-10-02*
 
 The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -11,7 +11,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | Anticipation | 44.6 | 0.46 (usable) | +14.9 over 10 years using 2 indicators |
 | Agency | 72.2 | 0.56 (usable) | no trend |
 | Coordination | 73.9 | 0.37 (thin) | no trend |
-| Trust | 65.6 | 0.4 (thin) | no trend |
+| Trust | 65.4 | 0.4 (thin) | no trend |
 | Learning | 38.9 | 0.54 (usable) | no trend |
 | Experimentation | 28.6 | 0.35 (thin) | no trend |
 | Adaptability | 68.4 | 0.53 (usable) | +4.4 over 10 years using 3 indicators |

@@ -1,6 +1,6 @@
 # Agenda de capacidades: Índia
 
-*Gerado em 2026-10-01*
+*Gerado em 2026-10-02*
 
 A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
@@ -10,7 +10,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | --- | --- | --- | --- |
 | Antecipação | 35,5 | 0,46 (utilizável) | +9 em 10 anos, sobre 2 indicadores |
 | Agência | 45,4 | 0,56 (utilizável) | sem base de tendência |
-| Coordenação | 73,9 | 0,41 (fraca) | sem base de tendência |
+| Coordenação | 77,8 | 0,41 (fraca) | sem base de tendência |
 | Confiança | 40,4 | 0,4 (fraca) | sem base de tendência |
 | Aprendizagem | 15,3 | 0,56 (utilizável) | sem base de tendência |
 | Experimentação | 8,8 | 0,43 (fraca) | +2 em 10 anos, sobre 3 indicadores |

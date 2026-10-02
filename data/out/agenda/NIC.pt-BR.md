@@ -1,6 +1,6 @@
 # Agenda de capacidades: Nicarágua
 
-*Gerado em 2026-10-01*
+*Gerado em 2026-10-02*
 
 A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
@@ -10,7 +10,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | --- | --- | --- | --- |
 | Antecipação | 15,9 | 0,46 (utilizável) | +7,1 em 10 anos, sobre 2 indicadores |
 | Agência | 80,1 | 0,37 (fraca) | sem base de tendência |
-| Coordenação | 23,1 | 0,37 (fraca) | sem base de tendência |
+| Coordenação | 22,9 | 0,37 (fraca) | sem base de tendência |
 | Confiança | 38,8 | 0,32 (fraca) | sem base de tendência |
 | Aprendizagem | 28,5 | 0,34 (fraca) | sem base de tendência |
 | Experimentação | 0,8 | 0,04 (muito fraca) | sem base de tendência |

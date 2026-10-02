@@ -15,7 +15,7 @@ import {
   UNCTAD_CONCENTRATION_DATASET,
   UNCTAD_CONCENTRATION_PAGE_URL,
   UNCTAD_PUBLISHER,
-  VDEM_CY_V15_PAGE_URL,
+  VDEM_CY_PAGE_URL,
   VDEM_PUBLISHER,
 } from './source-catalog.js'
 
@@ -360,9 +360,9 @@ const RAW: Raw[] = [
     unit: 'index 0-1',
     measurementClass: 'C',
     direction: 'higher_better',
-    source: { publisher: VDEM_PUBLISHER, series: 'v2x_cspart', url: VDEM_CY_V15_PAGE_URL, tier: 'expert_panel', inspectable: true },
+    source: { publisher: VDEM_PUBLISHER, series: 'v2x_cspart', url: VDEM_CY_PAGE_URL, tier: 'expert_panel', inspectable: true },
     ingest: 'adapter',
-    notes: 'V-Dem civil society participation index, country-year release v15. It is expert-coded rather than administrative data, so it remains a perception-adjacent measure and its wealth correlation is reviewed in D83.',
+    notes: 'V-Dem civil society participation index, country-year release v16, 2025. It is expert-coded rather than administrative data, so it remains a perception-adjacent measure and its wealth correlation is reviewed in D83.',
     wealthProxyPrior: 0.15,
   },
   {
@@ -451,10 +451,10 @@ const RAW: Raw[] = [
     unit: 'scale 0-4 (never to always)',
     measurementClass: 'O',
     direction: 'higher_better',
-    source: { publisher: VDEM_PUBLISHER, series: 'v2jucomp_osp', url: VDEM_CY_V15_PAGE_URL, tier: 'expert_panel', inspectable: true },
+    source: { publisher: VDEM_PUBLISHER, series: 'v2jucomp_osp', url: VDEM_CY_PAGE_URL, tier: 'expert_panel', inspectable: true },
     ingest: 'adapter',
     notes:
-      'Whether the rules bind the strongest party: a stranger can rely on a ruling only if the state obeys the ones it loses. V-Dem v15 compliance with judiciary (v2jucomp), the measurement-model estimate on the original 0 to 4 scale, 2024. It is expert-coded, so read it as a judgement, but of one public act (a ruling and the government\'s response are both on the record), not of a country\'s reputation for clean rules, which is what separated it from the WGI composites D23 retired. It is one of five inputs to V-Dem\'s judicial constraints index, which feeds the WGI rule of law estimate through the liberal component, so it is not independent of what D23 retired. It reads democracy closely (r 0.88 with the electoral democracy index): closed and electoral autocracies read low, not high, but a state whose courts seldom rule against it can read high on few contested rulings, which is the likeliest reading of Singapore. See D131.',
+      'Whether the rules bind the strongest party: a stranger can rely on a ruling only if the state obeys the ones it loses. V-Dem v16 compliance with judiciary (v2jucomp), the measurement-model estimate on the original 0 to 4 scale, 2025. It is expert-coded, so read it as a judgement, but of one public act (a ruling and the government\'s response are both on the record), not of a country\'s reputation for clean rules, which is what separated it from the WGI composites D23 retired. It is one of five inputs to V-Dem\'s judicial constraints index, which feeds the WGI rule of law estimate through the liberal component, so it is not independent of what D23 retired. It reads democracy closely (r 0.88 with the electoral democracy index): closed and electoral autocracies read low, not high, but a state whose courts seldom rule against it can read high on few contested rulings, which is the likeliest reading of Singapore. See D131.',
     wealthProxyPrior: 0.4,
   },
   {

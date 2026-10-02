@@ -1,6 +1,6 @@
 # Capability agenda: Costa Rica
 
-*Generated 2026-10-01*
+*Generated 2026-10-02*
 
 The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | --- | --- | --- | --- |
 | Anticipation | 50.9 | 0.46 (usable) | +12.5 over 10 years using 2 indicators |
 | Agency | 48.3 | 0.41 (thin) | no trend |
-| Coordination | 88.4 | 0.37 (thin) | no trend |
-| Trust | 76.3 | 0.29 (thin) | no trend |
+| Coordination | 88.6 | 0.37 (thin) | no trend |
+| Trust | 76.1 | 0.29 (thin) | no trend |
 | Learning | 40.3 | 0.54 (usable) | no trend |
 | Experimentation | 20.5 | 0.43 (thin) | +1.6 over 10 years using 3 indicators |
 | Adaptability | 66.3 | 0.68 (good) | +3.1 over 10 years using 3 indicators |

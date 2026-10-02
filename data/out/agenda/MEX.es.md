@@ -1,6 +1,6 @@
 # Agenda de capacidades: México
 
-*Generado el 2026-10-01*
+*Generado el 2026-10-02*
 
 La comparación incluye 53 países. Cada dimensión recibe una puntuación de 0 a 100, sin clasificación general, y cada puntuación muestra a su lado la solidez de la evidencia. Antes de citar una puntuación, lea [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md).
 
@@ -10,8 +10,8 @@ La comparación incluye 53 países. Cada dimensión recibe una puntuación de 0 
 | --- | --- | --- | --- |
 | Anticipación | 51.2 | 0.46 (utilizable) | +10.9 en 10 años, sobre 2 indicadores |
 | Iniciativa | 64.8 | 0.56 (utilizable) | sin base de tendencia |
-| Coordinación | 67.8 | 0.37 (débil) | sin base de tendencia |
-| Confianza | 44.5 | 0.39 (débil) | sin base de tendencia |
+| Coordinación | 71.3 | 0.37 (débil) | sin base de tendencia |
+| Confianza | 44.4 | 0.39 (débil) | sin base de tendencia |
 | Aprendizaje | 41.7 | 0.52 (utilizable) | sin base de tendencia |
 | Experimentación | 26.9 | 0.43 (débil) | +0.6 en 10 años, sobre 3 indicadores |
 | Adaptación | 69.2 | 0.54 (utilizable) | +6.4 en 10 años, sobre 3 indicadores |

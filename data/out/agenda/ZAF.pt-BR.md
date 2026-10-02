@@ -1,6 +1,6 @@
 # Agenda de capacidades: África do Sul
 
-*Gerado em 2026-10-01*
+*Gerado em 2026-10-02*
 
 A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
@@ -10,8 +10,8 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | --- | --- | --- | --- |
 | Antecipação | 44 | 0,46 (utilizável) | +5,2 em 10 anos, sobre 2 indicadores |
 | Agência | 51,4 | 0,41 (fraca) | sem base de tendência |
-| Coordenação | 71,6 | 0,39 (fraca) | sem base de tendência |
-| Confiança | 84,4 | 0,26 (fraca) | sem base de tendência |
+| Coordenação | 71,5 | 0,39 (fraca) | sem base de tendência |
+| Confiança | 81 | 0,26 (fraca) | sem base de tendência |
 | Aprendizagem | 25,4 | 0,48 (utilizável) | sem base de tendência |
 | Experimentação | 15,9 | 0,43 (fraca) | +0,2 em 10 anos, sobre 3 indicadores |
 | Adaptação | 34,1 | 0,67 (boa) | +0,4 em 10 anos, sobre 3 indicadores |

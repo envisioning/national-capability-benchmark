@@ -1,6 +1,6 @@
 # Capability agenda: Germany
 
-*Generated 2026-10-01*
+*Generated 2026-10-02*
 
 The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | --- | --- | --- | --- |
 | Anticipation | 73.5 | 0.46 (usable) | +4.3 over 10 years using 2 indicators |
 | Agency | 51.9 | 0.41 (thin) | no trend |
-| Coordination | 88.7 | 0.39 (thin) | no trend |
-| Trust | 86.1 | 0.3 (thin) | no trend |
+| Coordination | 89.6 | 0.39 (thin) | no trend |
+| Trust | 86 | 0.3 (thin) | no trend |
 | Learning | 56.7 | 0.54 (usable) | no trend |
 | Experimentation | 81.7 | 0.24 (very thin) | +3.3 over 10 years using 3 indicators |
 | Adaptability | 83 | 0.68 (good) | +2.1 over 10 years using 3 indicators |

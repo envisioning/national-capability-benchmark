@@ -1,6 +1,6 @@
 # Agenda de capacidades: El Salvador
 
-*Gerado em 2026-10-01*
+*Gerado em 2026-10-02*
 
 A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
@@ -10,8 +10,8 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | --- | --- | --- | --- |
 | Antecipação | 32,6 | 0,46 (utilizável) | +6 em 10 anos, sobre 2 indicadores |
 | Agência | 46,2 | 0,41 (fraca) | sem base de tendência |
-| Coordenação | 68,8 | 0,39 (fraca) | sem base de tendência |
-| Confiança | 51,1 | 0,29 (fraca) | sem base de tendência |
+| Coordenação | 69,5 | 0,39 (fraca) | sem base de tendência |
+| Confiança | 51,3 | 0,29 (fraca) | sem base de tendência |
 | Aprendizagem | 27,4 | 0,52 (utilizável) | sem base de tendência |
 | Experimentação | 4,2 | 0,24 (muito fraca) | +0,9 em 10 anos, sobre 3 indicadores |
 | Adaptação | 69,4 | 0,53 (utilizável) | +9,9 em 10 anos, sobre 3 indicadores |

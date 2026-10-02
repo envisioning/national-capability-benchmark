@@ -1,6 +1,6 @@
 # Capability agenda: Portugal
 
-*Generated 2026-10-01*
+*Generated 2026-10-02*
 
 The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,7 +10,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | --- | --- | --- | --- |
 | Anticipation | 81.8 | 0.46 (usable) | +11.2 over 10 years using 2 indicators |
 | Agency | 67.2 | 0.56 (usable) | no trend |
-| Coordination | 91.6 | 0.39 (thin) | no trend |
+| Coordination | 87.4 | 0.39 (thin) | no trend |
 | Trust | 60 | 0.39 (thin) | no trend |
 | Learning | 55.8 | 0.52 (usable) | no trend |
 | Experimentation | 32 | 0.24 (very thin) | -11.2 over 10 years using 3 indicators |

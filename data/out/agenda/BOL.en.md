@@ -1,6 +1,6 @@
 # Capability agenda: Bolivia
 
-*Generated 2026-10-01*
+*Generated 2026-10-02*
 
 The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | --- | --- | --- | --- |
 | Anticipation | 29.4 | 0.46 (usable) | +11.3 over 10 years using 2 indicators |
 | Agency | 36.3 | 0.54 (usable) | no trend |
-| Coordination | 68.4 | 0.39 (thin) | no trend |
-| Trust | 44.3 | 0.4 (thin) | no trend |
+| Coordination | 70.3 | 0.39 (thin) | no trend |
+| Trust | 42.8 | 0.4 (thin) | no trend |
 | Learning | 57.2 | 0.41 (thin) | no trend |
 | Experimentation | 2.2 | 0.24 (very thin) | +0.4 over 10 years using 3 indicators |
 | Adaptability | 78.7 | 0.67 (good) | +13.8 over 10 years using 3 indicators |

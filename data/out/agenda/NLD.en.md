@@ -1,6 +1,6 @@
 # Capability agenda: Netherlands
 
-*Generated 2026-10-01*
+*Generated 2026-10-02*
 
 The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,7 +10,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | --- | --- | --- | --- |
 | Anticipation | 78.5 | 0.46 (usable) | +9.3 over 10 years using 2 indicators |
 | Agency | 66.9 | 0.38 (thin) | no trend |
-| Coordination | 96 | 0.39 (thin) | no trend |
+| Coordination | 92.9 | 0.39 (thin) | no trend |
 | Trust | 81.4 | 0.3 (thin) | no trend |
 | Learning | 71.4 | 0.54 (usable) | no trend |
 | Experimentation | 28.1 | 0.27 (thin) | no trend |

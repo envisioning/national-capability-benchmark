@@ -1,6 +1,6 @@
 # Capability agenda: Poland
 
-*Generated 2026-10-01*
+*Generated 2026-10-02*
 
 The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | --- | --- | --- | --- |
 | Anticipation | 65.6 | 0.46 (usable) | +8.4 over 10 years using 2 indicators |
 | Agency | 43.7 | 0.56 (usable) | no trend |
-| Coordination | 86.8 | 0.41 (thin) | no trend |
-| Trust | 62.7 | 0.4 (thin) | no trend |
+| Coordination | 87.4 | 0.41 (thin) | no trend |
+| Trust | 61.2 | 0.4 (thin) | no trend |
 | Learning | 45 | 0.54 (usable) | no trend |
 | Experimentation | 20.6 | 0.24 (very thin) | -2.6 over 10 years using 2 indicators |
 | Adaptability | 80.1 | 0.68 (good) | +11.2 over 10 years using 3 indicators |

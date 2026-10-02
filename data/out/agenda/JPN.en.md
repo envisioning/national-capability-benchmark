@@ -1,6 +1,6 @@
 # Capability agenda: Japan
 
-*Generated 2026-10-01*
+*Generated 2026-10-02*
 
 The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,7 +10,7 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | --- | --- | --- | --- |
 | Anticipation | 64 | 0.46 (usable) | +13.5 over 10 years using 2 indicators |
 | Agency | 37.8 | 0.56 (usable) | no trend |
-| Coordination | 63.4 | 0.39 (thin) | no trend |
+| Coordination | 63.5 | 0.39 (thin) | no trend |
 | Trust | 79.4 | 0.4 (thin) | no trend |
 | Learning | 43.4 | 0.54 (usable) | no trend |
 | Experimentation | 67.2 | 0.24 (very thin) | -6.3 over 10 years using 3 indicators |

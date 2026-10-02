@@ -1,6 +1,6 @@
 # Capability agenda: Israel
 
-*Generated 2026-10-01*
+*Generated 2026-10-02*
 
 The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | --- | --- | --- | --- |
 | Anticipation | 75 | 0.46 (usable) | +10.4 over 10 years using 2 indicators |
 | Agency | 63.4 | 0.41 (thin) | no trend |
-| Coordination | 80.1 | 0.23 (very thin) | no trend |
-| Trust | 43.5 | 0.3 (thin) | no trend |
+| Coordination | 79.2 | 0.23 (very thin) | no trend |
+| Trust | 43.4 | 0.3 (thin) | no trend |
 | Learning | 44.8 | 0.54 (usable) | no trend |
 | Experimentation | 22.2 | 0.24 (very thin) | -8.8 over 10 years using 3 indicators |
 | Adaptability | 84.4 | 0.68 (good) | +2.9 over 10 years using 3 indicators |

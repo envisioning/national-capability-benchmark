@@ -1,6 +1,6 @@
 # Capability agenda: United Kingdom
 
-*Generated 2026-10-01*
+*Generated 2026-10-02*
 
 The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | --- | --- | --- | --- |
 | Anticipation | 74 | 0.46 (usable) | +3.4 over 10 years using 2 indicators |
 | Agency | 90.5 | 0.41 (thin) | no trend |
-| Coordination | 88.2 | 0.23 (very thin) | no trend |
-| Trust | 88.7 | 0.3 (thin) | no trend |
+| Coordination | 87.7 | 0.23 (very thin) | no trend |
+| Trust | 88.6 | 0.3 (thin) | no trend |
 | Learning | 72.3 | 0.54 (usable) | no trend |
 | Experimentation | 62.2 | 0.24 (very thin) | +20.5 over 10 years using 3 indicators |
 | Adaptability | 76.1 | 0.68 (good) | -1.9 over 10 years using 3 indicators |

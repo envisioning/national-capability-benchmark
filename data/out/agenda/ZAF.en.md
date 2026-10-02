@@ -1,6 +1,6 @@
 # Capability agenda: South Africa
 
-*Generated 2026-10-01*
+*Generated 2026-10-02*
 
 The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | --- | --- | --- | --- |
 | Anticipation | 44 | 0.46 (usable) | +5.2 over 10 years using 2 indicators |
 | Agency | 51.4 | 0.41 (thin) | no trend |
-| Coordination | 71.6 | 0.39 (thin) | no trend |
-| Trust | 84.4 | 0.26 (thin) | no trend |
+| Coordination | 71.5 | 0.39 (thin) | no trend |
+| Trust | 81 | 0.26 (thin) | no trend |
 | Learning | 25.4 | 0.48 (usable) | no trend |
 | Experimentation | 15.9 | 0.43 (thin) | +0.2 over 10 years using 3 indicators |
 | Adaptability | 34.1 | 0.67 (good) | +0.4 over 10 years using 3 indicators |

@@ -1,6 +1,6 @@
 # Capability agenda: Dominican Republic
 
-*Generated 2026-10-01*
+*Generated 2026-10-02*
 
 The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | --- | --- | --- | --- |
 | Anticipation | 33.9 | 0.46 (usable) | +11.2 over 10 years using 2 indicators |
 | Agency | 50.4 | 0.32 (thin) | no trend |
-| Coordination | 69.9 | 0.37 (thin) | no trend |
-| Trust | 70.1 | 0.3 (thin) | no trend |
+| Coordination | 68.6 | 0.37 (thin) | no trend |
+| Trust | 71.7 | 0.3 (thin) | no trend |
 | Learning | 29.7 | 0.56 (usable) | no trend |
 | Experimentation | 4.4 | 0.24 (very thin) | +0.1 over 10 years using 3 indicators |
 | Adaptability | 70.5 | 0.67 (good) | +8.7 over 10 years using 3 indicators |

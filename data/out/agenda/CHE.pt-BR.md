@@ -1,6 +1,6 @@
 # Agenda de capacidades: Suíça
 
-*Gerado em 2026-10-01*
+*Gerado em 2026-10-02*
 
 A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
@@ -10,8 +10,8 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | --- | --- | --- | --- |
 | Antecipação | 96,3 | 0,46 (utilizável) | +4 em 10 anos, sobre 2 indicadores, 1 truncados na borda da régua |
 | Agência | 60 | 0,52 (utilizável) | sem base de tendência |
-| Coordenação | 98,3 | 0,35 (fraca) | sem base de tendência |
-| Confiança | 86,8 | 0,4 (fraca) | sem base de tendência |
+| Coordenação | 98,5 | 0,35 (fraca) | sem base de tendência |
+| Confiança | 86,7 | 0,4 (fraca) | sem base de tendência |
 | Aprendizagem | 73,9 | 0,54 (utilizável) | sem base de tendência |
 | Experimentação | 60,6 | 0,43 (fraca) | +1,2 em 10 anos, sobre 3 indicadores |
 | Adaptação | 75,3 | 0,68 (boa) | +2,3 em 10 anos, sobre 3 indicadores |

@@ -1,6 +1,6 @@
 # Agenda de capacidades: Etiópia
 
-*Gerado em 2026-10-01*
+*Gerado em 2026-10-02*
 
 A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
@@ -11,7 +11,7 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | Antecipação | 22,3 | 0,46 (utilizável) | +10,5 em 10 anos, sobre 2 indicadores |
 | Agência | 41,3 | 0,56 (utilizável) | sem base de tendência |
 | Coordenação | 76,2 | 0,41 (fraca) | sem base de tendência |
-| Confiança | 42,1 | 0,4 (fraca) | sem base de tendência |
+| Confiança | 41,9 | 0,4 (fraca) | sem base de tendência |
 | Aprendizagem | 19,7 | 0,49 (utilizável) | sem base de tendência |
 | Experimentação | 0,2 | 0,16 (muito fraca) | sem base de tendência |
 | Adaptação | 49,9 | 0,55 (utilizável) | -10,6 em 10 anos, sobre 3 indicadores |

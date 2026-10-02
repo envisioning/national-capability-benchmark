@@ -6,18 +6,18 @@ import { createInterface } from 'node:readline'
 import {
   CHECK_PREFIX,
   COUNTRIES,
-  VDEM_CY_V15_CSV,
-  VDEM_CY_V15_DATASET,
-  VDEM_CY_V15_RELEASE,
-  VDEM_CY_V15_URL,
-  VDEM_CY_V15_YEAR,
+  VDEM_CY_CSV,
+  VDEM_CY_DATASET,
+  VDEM_CY_RELEASE,
+  VDEM_CY_URL,
+  VDEM_CY_YEAR,
   VDEM_PUBLISHER,
 } from '../../model/index.js'
 import type { Observation } from '../../model/schema.js'
 import type { SourceAdapterResult } from './types.js'
 
 /** Stable adapter id stored in source notes and handoffs. */
-export const VDEM_ADAPTER_ID = 'v-dem-cy-full-v15'
+export const VDEM_ADAPTER_ID = 'v-dem-cy-full-v16'
 
 /**
  * The V-Dem variables the adapter reads, each with the observation id it fills
@@ -39,7 +39,7 @@ export const VDEM_ADAPTER_ID = 'v-dem-cy-full-v15'
  * latest one is unreadable. `context` names variables read from that same
  * country-year and written into the observation note, never as values.
  */
-export const VDEM_CY_V15_VARIABLES = [
+export const VDEM_CY_VARIABLES = [
   {
     variable: 'v2x_cspart',
     indicatorId: 'civil_society_strength',
@@ -190,10 +190,10 @@ class VdemAccumulator {
     context: number[][]
   } | null = null
   private readonly benchmark: Set<string> = new Set(COUNTRIES.map((country) => country.iso3))
-  private readonly anyLatest = VDEM_CY_V15_VARIABLES.some((spec) => spec.years === 'latest_election')
+  private readonly anyLatest = VDEM_CY_VARIABLES.some((spec) => spec.years === 'latest_election')
   /** Per latest-election variable, the newest coded row per country so far. */
   private readonly latest: Array<Map<string, { year: number; raw: string; context: string[] }>> =
-    VDEM_CY_V15_VARIABLES.map(() => new Map())
+    VDEM_CY_VARIABLES.map(() => new Map())
   readonly observations: Observation[] = []
 
   constructor(
@@ -216,8 +216,8 @@ class VdemAccumulator {
         iso3,
         year,
         prefix: Math.max(iso3, year) + 1,
-        variables: VDEM_CY_V15_VARIABLES.map((spec) => find(spec.variable)),
-        context: VDEM_CY_V15_VARIABLES.map((spec) => spec.context.map((name) => find(name))),
+        variables: VDEM_CY_VARIABLES.map((spec) => find(spec.variable)),
+        context: VDEM_CY_VARIABLES.map((spec) => spec.context.map((name) => find(name))),
       }
       return
     }
@@ -226,10 +226,10 @@ class VdemAccumulator {
     const head = parseCsvPrefix(line, index.prefix)
     const iso3 = head[index.iso3] ?? ''
     const year = Number(head[index.year])
-    if (!this.benchmark.has(iso3) || !Number.isInteger(year) || year > VDEM_CY_V15_YEAR) return
-    if (year !== VDEM_CY_V15_YEAR && !this.anyLatest) return
+    if (!this.benchmark.has(iso3) || !Number.isInteger(year) || year > VDEM_CY_YEAR) return
+    if (year !== VDEM_CY_YEAR && !this.anyLatest) return
     const values = parseCsvLine(line)
-    VDEM_CY_V15_VARIABLES.forEach((spec, i) => {
+    VDEM_CY_VARIABLES.forEach((spec, i) => {
       const rawValue = values[index.variables[i]!] ?? ''
       if (spec.years === 'latest_election') {
         if (rawValue.trim() === '') return
@@ -242,13 +242,13 @@ class VdemAccumulator {
         })
         return
       }
-      if (year !== VDEM_CY_V15_YEAR) return
-      this.emit(spec, iso3, rawValue, VDEM_CY_V15_YEAR, [])
+      if (year !== VDEM_CY_YEAR) return
+      this.emit(spec, iso3, rawValue, VDEM_CY_YEAR, [])
     })
   }
 
   private emit(
-    spec: (typeof VDEM_CY_V15_VARIABLES)[number],
+    spec: (typeof VDEM_CY_VARIABLES)[number],
     iso3: string,
     rawValue: string,
     year: number,
@@ -258,7 +258,7 @@ class VdemAccumulator {
     const value = Number(rawValue)
     if (!Number.isFinite(value) || value < spec.min || value > spec.max) return
     const yearNote =
-      spec.years === 'latest_election' ? ` election year ${year}, the latest coded up to ${VDEM_CY_V15_YEAR};` : ''
+      spec.years === 'latest_election' ? ` election year ${year}, the latest coded up to ${VDEM_CY_YEAR};` : ''
     const contextText = context.length ? ` ${context.join('; ')};` : ''
     this.observations.push({
       indicatorId: spec.indicatorId,
@@ -270,7 +270,7 @@ class VdemAccumulator {
       sourceTier: 'expert_panel',
       sourceUrl: this.sourceUrl,
       retrievedAt: this.retrievedAt,
-      note: `${spec.variable}; ${VDEM_PUBLISHER} ${VDEM_CY_V15_DATASET} v${VDEM_CY_V15_RELEASE}; ${spec.scaleNote};${yearNote}${contextText} CC BY-SA 4.0.`,
+      note: `${spec.variable}; ${VDEM_PUBLISHER} ${VDEM_CY_DATASET} v${VDEM_CY_RELEASE}; ${spec.scaleNote};${yearNote}${contextText} CC BY-SA 4.0.`,
     })
   }
 
@@ -278,7 +278,7 @@ class VdemAccumulator {
     if (!this.headers) throw new Error('V-Dem CSV has no header row')
     /* The newest coded election is the reading; an out-of-scale value there
      * drops the country rather than reaching back to an older election. */
-    VDEM_CY_V15_VARIABLES.forEach((spec, i) => {
+    VDEM_CY_VARIABLES.forEach((spec, i) => {
       for (const [iso3, row] of this.latest[i]!) this.emit(spec, iso3, row.raw, row.year, row.context)
     })
     const observations = [...this.observations].sort(
@@ -286,7 +286,7 @@ class VdemAccumulator {
     )
     const countries = [...new Set(observations.map((o) => o.iso3))].sort()
     const coverageByIndicator = Object.fromEntries(
-      VDEM_CY_V15_VARIABLES.map((spec) => [
+      VDEM_CY_VARIABLES.map((spec) => [
         spec.indicatorId,
         observations.filter((o) => o.indicatorId === spec.indicatorId).length,
       ]),
@@ -299,7 +299,7 @@ class VdemAccumulator {
       heldCountries: [],
       unmappedLabels: [],
       sourceUrl: this.sourceUrl,
-      release: VDEM_CY_V15_RELEASE,
+      release: VDEM_CY_RELEASE,
       coverageByIndicator,
     }
   }
@@ -315,7 +315,7 @@ class VdemAccumulator {
 export function parseVdem(
   csv: string,
   retrievedAt = new Date().toISOString(),
-  sourceUrl = VDEM_CY_V15_URL,
+  sourceUrl = VDEM_CY_URL,
 ): VdemResult {
   const accumulator = new VdemAccumulator(retrievedAt, sourceUrl)
   for (const line of csv.split(/\r?\n/)) accumulator.push(line)
@@ -328,7 +328,7 @@ async function parseZip(zip: Uint8Array, retrievedAt: string, sourceUrl: string)
   const archive = join(directory, 'release.zip')
   await writeFile(archive, zip)
   try {
-    const child = spawn('unzip', ['-p', archive, VDEM_CY_V15_CSV])
+    const child = spawn('unzip', ['-p', archive, VDEM_CY_CSV])
     const stderr: Buffer[] = []
     child.stderr.on('data', (chunk: Buffer) => stderr.push(chunk))
     const exited = new Promise<number | null>((resolve, reject) => {
@@ -353,7 +353,7 @@ async function parseZip(zip: Uint8Array, retrievedAt: string, sourceUrl: string)
 export async function fetchVdem(
   opts: { sourceUrl?: string; retrievedAt?: string } = {},
 ): Promise<VdemResult> {
-  const sourceUrl = opts.sourceUrl ?? VDEM_CY_V15_URL
+  const sourceUrl = opts.sourceUrl ?? VDEM_CY_URL
   const response = await fetch(sourceUrl)
   if (!response.ok) throw new Error(`V-Dem: HTTP ${response.status}`)
   return parseZip(

@@ -9,6 +9,18 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## Dataset 7.7.1 — 2026-10-02
+
+- **V-Dem moves to release 16 (March 2026).** Court compliance and civil
+  society strength now read 2025 values, and the polarization and turnout
+  checks follow. V-Dem re-estimated its whole series for this release, so
+  2024 values restate as well as gaining a year: 52 of 53 court compliance
+  values and 51 of 53 civil society values moved. Trust's correlation with
+  income goes from 0.671 to 0.675 and Coordination's from 0.563 to 0.558;
+  mean confidence is unchanged in both. The largest country moves are South
+  Africa down 3.4 on Trust and Haiti up 6.4 on Coordination. Same registry,
+  same 53 countries.
+
 ## App 1.24.4 — 2026-10-01
 
 - **31 more documented deliveries, nine of them losses.** Every country now

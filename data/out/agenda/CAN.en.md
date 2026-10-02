@@ -1,6 +1,6 @@
 # Capability agenda: Canada
 
-*Generated 2026-10-01*
+*Generated 2026-10-02*
 
 The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | --- | --- | --- | --- |
 | Anticipation | 80.2 | 0.46 (usable) | +2.8 over 10 years using 2 indicators |
 | Agency | 71.8 | 0.52 (usable) | no trend |
-| Coordination | 95.7 | 0.23 (very thin) | no trend |
-| Trust | 67.1 | 0.4 (thin) | no trend |
+| Coordination | 97.1 | 0.23 (very thin) | no trend |
+| Trust | 67 | 0.4 (thin) | no trend |
 | Learning | 58.9 | 0.54 (usable) | no trend |
 | Experimentation | 18.7 | 0.24 (very thin) | -4.5 over 10 years using 3 indicators |
 | Adaptability | 83.9 | 0.68 (good) | +3 over 10 years using 3 indicators |

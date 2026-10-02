@@ -1,6 +1,6 @@
 # Capability agenda: United Arab Emirates
 
-*Generated 2026-10-01*
+*Generated 2026-10-02*
 
 The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | --- | --- | --- | --- |
 | Anticipation | 49.7 | 0.46 (usable) | +36.7 over 10 years using 2 indicators |
 | Agency | 69.1 | 0.35 (thin) | no trend |
-| Coordination | 51.2 | 0.23 (very thin) | no trend |
-| Trust | 46.2 | 0.16 (very thin) | no trend |
+| Coordination | 52 | 0.23 (very thin) | no trend |
+| Trust | 46.1 | 0.16 (very thin) | no trend |
 | Learning | 49.9 | 0.34 (thin) | no trend |
 | Experimentation | 5.2 | 0.24 (very thin) | +0.7 over 10 years using 3 indicators |
 | Adaptability | 74.7 | 0.67 (good) | +0.9 over 10 years using 3 indicators |

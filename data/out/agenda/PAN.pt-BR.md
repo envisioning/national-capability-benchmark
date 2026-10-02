@@ -1,6 +1,6 @@
 # Agenda de capacidades: Panamá
 
-*Gerado em 2026-10-01*
+*Gerado em 2026-10-02*
 
 A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 
@@ -10,8 +10,8 @@ A régua inclui 53 países. Cada dimensão recebe uma nota de 0 a 100, sem ranki
 | --- | --- | --- | --- |
 | Antecipação | 37,3 | 0,46 (utilizável) | +21,6 em 10 anos, sobre 2 indicadores |
 | Agência | 65,2 | 0,38 (fraca) | sem base de tendência |
-| Coordenação | 71,2 | 0,37 (fraca) | sem base de tendência |
-| Confiança | 67,9 | 0,3 (fraca) | sem base de tendência |
+| Coordenação | 71,6 | 0,37 (fraca) | sem base de tendência |
+| Confiança | 66,5 | 0,3 (fraca) | sem base de tendência |
 | Aprendizagem | 31,5 | 0,52 (utilizável) | sem base de tendência |
 | Experimentação | 6 | 0,24 (muito fraca) | -1,9 em 10 anos, sobre 3 indicadores |
 | Adaptação | 73,6 | 0,67 (boa) | +2,1 em 10 anos, sobre 3 indicadores |

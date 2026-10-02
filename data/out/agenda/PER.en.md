@@ -1,6 +1,6 @@
 # Capability agenda: Peru
 
-*Generated 2026-10-01*
+*Generated 2026-10-02*
 
 The frame includes 53 countries. Each dimension is scored from 0 to 100, with no overall ranking, and each score shows its confidence beside it. Read [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) before you quote a score.
 
@@ -10,8 +10,8 @@ The frame includes 53 countries. Each dimension is scored from 0 to 100, with no
 | --- | --- | --- | --- |
 | Anticipation | 43.1 | 0.46 (usable) | +20.1 over 10 years using 2 indicators |
 | Agency | 55.4 | 0.56 (usable) | no trend |
-| Coordination | 69.3 | 0.39 (thin) | no trend |
-| Trust | 57.3 | 0.39 (thin) | no trend |
+| Coordination | 72.9 | 0.39 (thin) | no trend |
+| Trust | 55.3 | 0.39 (thin) | no trend |
 | Learning | 37.7 | 0.54 (usable) | no trend |
 | Experimentation | 16.4 | 0.43 (thin) | +1.2 over 10 years using 3 indicators |
 | Adaptability | 69.6 | 0.53 (usable) | -5.8 over 10 years using 3 indicators |
