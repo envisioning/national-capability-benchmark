@@ -9,6 +9,31 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.26.0 — 2026-10-03
+
+- **Brazil's layer opens on what the test supports.** The Portuguese front
+  page no longer says wealth and capability are different properties. It
+  says what the current release shows: what the nine capabilities share
+  follows income, and countries at similar income have different capability
+  shapes, by a narrow margin. Every number is computed from the release, and
+  the full verdict is now on the page in Portuguese.
+- **The layer describes and does not advise.** The agenda groups capabilities
+  by what they hold, lowest scores, thin evidence, highest scores, instead of
+  "raise", "measure first" and "keep". The participation page asks for use,
+  an outside review of the method, open data and a seminar venue, and no
+  longer lists funding programmes: the project is self-funded. Its invitation
+  to review the method now leads somewhere.
+- **The Portuguese pages speak Portuguese around them too.** The page
+  language, the header, the footer, search and the objection form are in
+  Portuguese on Brazil's layer. Brazil's 29 documented deliveries, every
+  indicator description and the names of international bodies are now
+  translated, and a score is a "pontuação" throughout. The Spanish layers now
+  declare Spanish as the page language. Claude reviewed all the Portuguese
+  copy; no native speaker has yet. Decision D158 sets out the choices.
+- **Map sentences no longer read backwards.** Where a lower value is better,
+  as with power lost in transmission, the map now says so after comparing a
+  country with its peers, in Portuguese and in English.
+
 ## App 1.25.9 — 2026-10-03
 
 - **Known limit A17 now describes what is left.** Venezuela's manufacturing

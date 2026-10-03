@@ -1,3 +1,4 @@
+import { EVIDENCE_PT_BR } from './evidence-pt-br.js'
 import type { Lexicon } from './types.js'
 
 /**
@@ -7,6 +8,10 @@ import type { Lexicon } from './types.js'
  *
  * Terminology follows the Envisioning national capability strategy where the
  * two overlap, so the benchmark and the strategy speak the same Portuguese.
+ * A score is "pontuação" and never "nota", which reads as a school grade; the
+ * confidence number is "solidez da evidência", because "Confiança" is the
+ * Trust dimension. The test beside this file holds both. The copy was
+ * reviewed for Brazilian usage by Claude, not by a native speaker (D158).
  */
 export const PT_BR: Lexicon = {
   lang: 'pt-BR',
@@ -24,12 +29,12 @@ export const PT_BR: Lexicon = {
   },
   questions: {
     anticipation:
-      'Quão capaz é o país de identificar mudanças emergentes e se preparar para elas?',
+      'Em que medida o país consegue identificar mudanças emergentes e se preparar para elas?',
     agency:
-      'Quão capazes são pessoas e organizações de transformar uma intenção em ação?',
+      'Em que medida pessoas e organizações conseguem transformar intenção em ação?',
     coordination:
       'Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?',
-    trust: 'Quanta cooperação é possível além das redes pessoais imediatas?',
+    trust: 'Quanta cooperação é possível para além do círculo pessoal mais próximo?',
     learning:
       'Com que eficácia o país adquire, distribui e atualiza conhecimento?',
     experimentation:
@@ -37,7 +42,7 @@ export const PT_BR: Lexicon = {
     adaptability:
       'Com que eficácia o sistema responde quando as circunstâncias mudam?',
     building:
-      'Quão capaz é o país de transformar planos e conhecimento em sistemas que funcionam?',
+      'Em que medida o país consegue transformar planos e conhecimento em sistemas que funcionam?',
     shared_purpose:
       'Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?',
   },
@@ -64,6 +69,7 @@ export const PT_BR: Lexicon = {
     URY: 'Uruguai',
     CRI: 'Costa Rica',
     PER: 'Peru',
+    PRT: 'Portugal',
     ZAF: 'África do Sul',
     NGA: 'Nigéria',
     KEN: 'Quênia',
@@ -214,28 +220,90 @@ export const PT_BR: Lexicon = {
     NIC: 'a',
     DOM: 'a',
     HTI: 'o',
+    PAK: 'o',
+    BGD: 'o',
+    RUS: 'a',
+    EGY: 'o',
+    COD: 'a',
+    IRN: 'o',
+    TZA: 'a',
+    ITA: 'a',
+    MMR: 'o',
+    SDN: 'o',
+    IRQ: 'o',
+    UKR: 'a',
+    MAR: 'o',
+    UZB: 'o',
+    CIV: 'a',
+    NPL: 'o',
+    MLI: 'o',
+    MWI: 'o',
+    ZMB: 'a',
+    LKA: 'o',
+    KAZ: 'o',
+    ROU: 'a',
+    ZWE: 'o',
+    GIN: 'a',
+    BDI: 'o',
+    TUN: 'a',
+    BEL: 'a',
+    JOR: 'a',
+    CZE: 'a',
+    TJK: 'o',
+    PNG: 'a',
+    GRC: 'a',
+    AZE: 'o',
+    HUN: 'a',
+    AUT: 'a',
+    LAO: 'o',
+    KGZ: 'o',
+    SRB: 'a',
+    COG: 'a',
+    BGR: 'a',
+    DNK: 'a',
+    LBN: 'o',
+    NOR: 'a',
+    SVK: 'a',
+    NZL: 'a',
+    GEO: 'a',
+    HRV: 'a',
+    MNG: 'a',
+    BIH: 'a',
+    NAM: 'a',
+    ARM: 'a',
+    LTU: 'a',
+    JAM: 'a',
+    GMB: 'a',
+    BWA: 'o',
+    LSO: 'o',
+    MDA: 'a',
+    ALB: 'a',
+    GNB: 'a',
+    SVN: 'a',
+    LVA: 'a',
+    MKD: 'a',
   },
   indicators: {
     rd_expenditure_gdp: 'Dispêndio em P&D',
     researchers_per_million: 'Pesquisadores em P&D',
     sci_articles_per_million: 'Artigos científicos',
     statistical_performance: 'Desempenho estatístico',
-    secure_internet_servers: 'Servidores seguros de internet',
+    secure_internet_servers: 'Servidores de internet seguros',
     government_foresight_capacity: 'Capacidade governamental de prospecção',
     basic_research_share: 'Compromissos de pesquisa de longo prazo',
     new_business_density: 'Densidade de novas empresas',
     business_start_days: 'Tempo para abrir uma empresa',
     business_start_procedures: 'Procedimentos para abrir uma empresa',
     internet_users: 'Pessoas que usam a internet',
-    account_ownership: 'Titularidade de conta financeira',
+    account_ownership: 'Adultos com conta financeira',
     domestic_credit_private: 'Crédito ao setor privado',
     adult_digital_skills: 'Adultos que realizam tarefas digitais',
     perceived_control: 'Percepção de controle sobre a própria vida',
-    government_effectiveness: 'Efetividade do governo',
+    government_effectiveness: 'Efetividade governamental',
     regulatory_quality: 'Qualidade regulatória',
     logistics_performance: 'Desempenho logístico',
     time_to_export: 'Tempo de exportação na fronteira',
-    budget_execution_fidelity: 'Fidelidade à execução orçamentária',
+    budget_execution_fidelity: 'Aderência da execução ao orçamento',
     university_industry_collaboration: 'Colaboração universidade-empresa',
     civil_society_strength: 'Força da sociedade civil',
     public_private_collaboration: 'Colaboração público-privada',
@@ -245,15 +313,15 @@ export const PT_BR: Lexicon = {
     court_compliance: 'Cumprimento das decisões judiciais pelo governo',
     bribery_incidence: 'Incidência de suborno',
     court_case_clearance: 'Taxa de resolução de processos judiciais',
-    homicide_rate: 'Taxa de homicídio intencional',
+    homicide_rate: 'Taxa de homicídios dolosos',
     interpersonal_trust: 'Confiança interpessoal generalizada',
     institutional_trust: 'Confiança nas instituições públicas',
     willingness_to_cooperate_strangers: 'Cooperação além do próprio grupo',
     human_capital_index: 'Índice de Capital Humano',
     tertiary_enrollment: 'Matrícula no ensino superior',
     education_expenditure_gdp: 'Dispêndio público em educação',
-    vocational_secondary_share: 'Parcela técnica do ensino médio',
-    firm_training_incidence: 'Empresas com treinamento formal',
+    vocational_secondary_share: 'Educação profissional no ensino secundário',
+    firm_training_incidence: 'Empresas que oferecem capacitação formal',
     adult_learning_participation: 'Participação de adultos em aprendizagem',
     research_citation_impact: 'Impacto de citação da pesquisa',
     resident_patents_per_million: 'Pedidos de patente de residentes',
@@ -264,11 +332,11 @@ export const PT_BR: Lexicon = {
     early_stage_entrepreneurial_activity: 'Atividade empreendedora em estágio inicial',
     failure_tolerance: 'Tolerância ao fracasso empreendedor',
     regulatory_sandbox_activity: 'Empresas em sandboxes regulatórios',
-    university_spinouts: 'Empresas nascidas de universidades',
+    university_spinouts: 'Empresas derivadas de pesquisa universitária',
     business_rd_share: 'Parcela empresarial do P&D',
     labor_force_participation: 'Participação na força de trabalho',
     unemployment_rate: 'Taxa de desemprego',
-    long_term_unemployment_share: 'Parcela de desemprego de longa duração',
+    long_term_unemployment_share: 'Desemprego de longa duração',
     broadband_subscriptions: 'Assinaturas de banda larga fixa',
     electricity_transmission_losses: 'Perdas na transmissão de eletricidade',
     export_diversification: 'Diversificação das exportações',
@@ -276,15 +344,15 @@ export const PT_BR: Lexicon = {
     informal_employment_share: 'Emprego informal',
     disaster_preparedness: 'Preparação e recuperação de desastres',
     institutional_responsiveness: 'Capacidade de resposta institucional',
-    manufacturing_value_added: 'Valor adicionado da indústria',
+    manufacturing_value_added: 'Valor adicionado da indústria de transformação',
     high_tech_exports_share: 'Exportações de alta tecnologia',
-    labour_productivity: 'Produto por trabalhador',
+    labour_productivity: 'Produto por pessoa ocupada',
     logistics_infrastructure: 'Qualidade da infraestrutura logística',
     electricity_connection_speed: 'Tempo de conexão à rede elétrica',
     economic_complexity: 'Aptidão econômica',
     large_project_delivery: 'Entrega de grandes projetos',
     firm_scale_up_rate: 'Empresas jovens que ganham escala',
-    voice_and_accountability: 'Voz e responsabilização',
+    voice_and_accountability: 'Voz e prestação de contas',
     tax_revenue_gdp: 'Receita tributária',
     income_inequality: 'Desigualdade de renda',
     national_belonging: 'Sentimento de pertencimento nacional',
@@ -299,7 +367,7 @@ export const PT_BR: Lexicon = {
     '% aged 15+': '% das pessoas com 15 anos ou mais',
     '% gross': '% (taxa bruta)',
     'per 100 people': 'por 100 pessoas',
-    'constant 2021 PPP $': 'US$ PPC constantes de 2021',
+    'constant 2021 PPP $': 'dólares PPC constantes de 2021',
     '% of labour force': '% da força de trabalho',
     '% of unemployed': '% dos desempregados',
     '% of products not exported competitively at the start': '% dos produtos não exportados de forma competitiva no início',
@@ -313,13 +381,13 @@ export const PT_BR: Lexicon = {
     count: 'número',
     'mean 1-10': 'média de 1 a 10',
     hours: 'horas',
-    'percentage points from approved budget': 'pontos percentuais de distância do orçamento aprovado',
+    'percentage points from approved budget': 'pontos percentuais de desvio em relação ao orçamento aprovado',
     'index 0-1': 'índice de 0 a 1',
     '% of firms': '% das empresas',
     'scale 0-4 (never to always)': 'escala de 0 a 4 (nunca a sempre)',
     '% agreeing': '% que concordam',
     '% of secondary': '% das matrículas no ensino secundário',
-    'ratio to world average': 'razão sobre a média mundial',
+    'ratio to world average': 'razão em relação à média mundial',
     '% aged 18-64': '% das pessoas de 18 a 64 anos',
     '% not deterred': '% sem medo de fracassar',
     '% of manufactured exports': '% das exportações industriais',
@@ -329,66 +397,148 @@ export const PT_BR: Lexicon = {
     '% mentioning': '% que mencionam',
     '% of new grants': '% dos novos auxílios',
     'firms per million people': 'empresas por milhão de pessoas',
+    '% of adults': '% dos adultos',
+    'z-score -2.5 to 2.5': 'escore z de -2,5 a 2,5',
+    'index 1-5': 'índice de 1 a 5',
+    'per 100,000 people': 'por 100 mil pessoas',
+    '% expressing confidence': '% que declaram confiar',
+    '% expressing trust': '% que declaram confiar',
+    '% of incoming cases': '% dos processos novos',
+    '% of R&D': '% do P&D',
+    '% overrun': '% de estouro de custo ou prazo',
+    '% expressing belonging': '% que declaram pertencimento',
+    'index 0-4': 'índice de 0 a 4',
   },
   indicatorDefinitions: {
-    budget_execution_fidelity:
-      'Distância entre a despesa primária do governo e o orçamento original aprovado.',
+    rd_expenditure_gdp: 'Dispêndio interno bruto em pesquisa e desenvolvimento, como parcela do PIB.',
+    researchers_per_million: 'Pesquisadores em equivalência de tempo integral, por milhão de pessoas.',
+    sci_articles_per_million:
+      'Artigos científicos e técnicos publicados em periódicos, por milhão de pessoas.',
+    statistical_performance:
+      'Pontuação geral do sistema estatístico nacional nos Indicadores de Desempenho Estatístico do Banco Mundial.',
+    secure_internet_servers:
+      'Servidores que usam criptografia em transações pela internet, por milhão de pessoas.',
     government_foresight_capacity:
       'Existência, mandato e continuidade de uma função nacional de prospecção estratégica.',
     basic_research_share:
       'Novos auxílios públicos de pesquisa concedidos por concurso com duração de cinco anos ou mais, como parcela de todos os auxílios públicos por concurso concedidos no ano.',
+    new_business_density:
+      'Novas sociedades de responsabilidade limitada registradas por mil pessoas em idade ativa.',
+    business_start_days: 'Dias corridos para cumprir os procedimentos de registro de uma empresa.',
+    business_start_procedures:
+      'Número de procedimentos oficiais distintos para registrar uma empresa.',
+    internet_users: 'Parcela da população que usou a internet nos últimos três meses.',
+    account_ownership:
+      'Adultos com conta em banco ou em instituição de pagamento por celular.',
+    domestic_credit_private:
+      'Crédito interno concedido ao setor privado por instituições financeiras, como parcela do PIB.',
     adult_digital_skills:
       'Parcela de adultos que realizaram uma tarefa digital determinada nos últimos três meses, como enviar uma mensagem com arquivo anexo, mover um arquivo entre dispositivos ou usar uma fórmula em planilha, contada tarefa por tarefa e nunca como nível de habilidade.',
     perceived_control:
-      'Liberdade de escolha e controle sobre o rumo da própria vida, autodeclarados.',
+      'Liberdade de escolha e controle sobre o rumo da própria vida, segundo os próprios entrevistados.',
+    government_effectiveness:
+      'Estimativa dos Indicadores Mundiais de Governança para a qualidade dos serviços públicos e da execução de políticas.',
+    regulatory_quality:
+      'Estimativa dos Indicadores Mundiais de Governança para a capacidade de formular e aplicar boa regulação.',
+    logistics_performance:
+      'Pontuação geral do Índice de Desempenho Logístico, a partir de uma pesquisa com operadores internacionais de carga.',
+    time_to_export:
+      'Horas para cumprir as exigências aduaneiras e de fronteira de uma remessa padrão de exportação.',
+    budget_execution_fidelity:
+      'Desvio entre a despesa primária executada pelo governo e o orçamento originalmente aprovado.',
     university_industry_collaboration:
-      'Intensidade da colaboração de pesquisa entre universidades e empresas.',
+      'Intensidade da colaboração em pesquisa entre universidades e empresas.',
     civil_society_strength:
       'Autonomia, densidade e alcance participativo das organizações da sociedade civil.',
     public_private_collaboration:
-      'Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais.',
+      'Frequência e escala da execução conjunta, por governo e empresas, de objetivos nacionais.',
+    rule_of_law:
+      'Estimativa dos Indicadores Mundiais de Governança para a confiança nas regras da sociedade e o respeito a elas.',
+    control_of_corruption:
+      'Estimativa dos Indicadores Mundiais de Governança para o uso do poder público em benefício privado.',
+    contract_enforcement_days:
+      'Dias corridos entre o ajuizamento de uma cobrança comercial e o pagamento.',
+    bribery_incidence:
+      'Empresas das quais se pediu ao menos um suborno em seis transações com o poder público, entre ligações de serviços, licenças, alvarás e tributos.',
     court_compliance:
-      'Com que frequência o governo cumpre decisões importantes dos tribunais comuns e especializados das quais discorda.',
+      'Com que frequência o governo cumpre decisões importantes de tribunais comuns e especializados das quais discorda.',
+    homicide_rate: 'Homicídios dolosos por 100 mil pessoas.',
     interpersonal_trust:
-      'Parcela que concorda que se pode confiar na maioria das pessoas.',
-    institutional_trust:
-      'Confiança no governo nacional, nos tribunais e no serviço público.',
+      'Parcela dos entrevistados que concorda que se pode confiar na maioria das pessoas.',
+    institutional_trust: 'Confiança no governo nacional, nos tribunais e no serviço público.',
     willingness_to_cooperate_strangers:
       'Parcela de adultos que confia completamente ou um pouco nas pessoas que encontra pela primeira vez.',
+    court_case_clearance:
+      'Processos cíveis e comerciais encerrados em um ano, como parcela dos processos ajuizados no mesmo ano.',
+    human_capital_index:
+      'Produtividade esperada de uma criança nascida hoje em relação à que teria com saúde plena e educação completa.',
+    tertiary_enrollment: 'Taxa bruta de matrícula no ensino superior.',
+    education_expenditure_gdp: 'Gasto público em educação, como parcela do PIB.',
+    vocational_secondary_share:
+      'Alunos da educação profissional, como parcela das matrículas totais no ensino secundário.',
+    firm_training_incidence:
+      'Parcela das empresas que oferecem capacitação formal a seus empregados permanentes.',
     adult_learning_participation:
-      'Parcela de adultos em educação e treinamento, formal ou não, nos últimos 12 meses.',
+      'Parcela de adultos em educação ou capacitação, formal ou não, nos últimos 12 meses.',
     research_citation_impact:
-      'Parcela dos artigos e revisões de um país entre os 10% mais citados da sua subárea e ano, como razão da mesma parcela entre todas as obras com país de afiliação.',
+      'Parcela dos artigos e revisões de um país entre os 10% mais citados da sua subárea e do seu ano, dividida pela mesma parcela calculada sobre todas as publicações com país de afiliação.',
+    resident_patents_per_million: 'Pedidos de patente depositados por residentes, por milhão de pessoas.',
+    resident_trademarks_per_million:
+      'Pedidos diretos de registro de marca feitos por residentes, por milhão de pessoas.',
+    resident_industrial_designs_per_million:
+      'Pedidos de registro de desenho industrial feitos por residentes no escritório nacional, por milhão de pessoas.',
     new_repositories_per_million:
-      'Crescimento em um ano dos repositórios públicos do GitHub localizados no país, por milhão de habitantes.',
+      'Crescimento em um ano dos repositórios públicos do GitHub localizados no país, por milhão de pessoas.',
     venture_capital_gdp:
       'Primeiras rodadas de capital de risco fechadas no ano por empresas sediadas no país, por milhão de pessoas, contadas por operação e nunca por valor.',
+    early_stage_entrepreneurial_activity:
+      'Adultos que estão abrindo ou dirigindo um negócio com menos de 42 meses de existência.',
+    failure_tolerance:
+      'Parcela de adultos que veem boas oportunidades e dizem que o medo de fracassar não os impediria de abrir um negócio.',
     regulatory_sandbox_activity:
-      'Empresas admitidas em um sandbox regulatório ou regime de teste controlado no ano, e empresas que o concluíram, por milhão de pessoas, somadas entre todos os reguladores do país.',
+      'Empresas admitidas no ano em um sandbox regulatório ou regime de teste controlado, e empresas que o concluíram, por milhão de pessoas, somadas entre todos os reguladores do país.',
     university_spinouts:
-      'Empresas criadas para comercializar pesquisa universitária, por milhão de habitantes.',
-    business_rd_share:
-      'Parcela do dispêndio bruto em P&D executada por empresas.',
-    broadband_subscriptions: 'Assinaturas de banda larga fixa por 100 pessoas.',
+      'Empresas criadas para levar ao mercado pesquisa feita em universidades, por milhão de pessoas.',
+    business_rd_share: 'Parcela do dispêndio bruto em P&D executada por empresas.',
+    labor_force_participation: 'Parcela da população em idade ativa que está na força de trabalho.',
+    unemployment_rate:
+      'Desempregados como parcela da força de trabalho, segundo a estimativa modelada da OIT.',
     long_term_unemployment_share:
-      'Pessoas desempregadas há 12 meses ou mais, como parcela do desemprego total.',
-    export_diversification:
-      'Concentração inversa da pauta exportadora por produto.',
+      'Pessoas desempregadas há 12 meses ou mais, como parcela do total de desempregados.',
+    broadband_subscriptions: 'Assinaturas de banda larga fixa por 100 pessoas.',
+    electricity_transmission_losses:
+      'Energia perdida na transmissão e na distribuição, incluindo o consumo não faturado. Quanto menor, melhor.',
+    export_diversification: 'Concentração inversa da pauta exportadora por produto.',
     new_export_products_rate:
-      'Parcela dos produtos que um país não exportava de forma competitiva em 2009-2011 e passou a exportar em 2022-2024.',
-    informal_employment_share: 'Emprego informal como parcela do emprego total, indicador ODS 8.3.1.',
+      'Parcela dos produtos que um país não exportava de forma competitiva em 2009-2011 e passou a exportar de forma competitiva em 2022-2024.',
+    informal_employment_share:
+      'Emprego informal como parcela do emprego total, indicador 8.3.1 dos Objetivos de Desenvolvimento Sustentável. Quanto menor, melhor.',
     disaster_preparedness:
-      'Capacidade demonstrada de preparação e recuperação diante de choques graves.',
+      'Capacidade demonstrada de se preparar para choques graves e de se recuperar deles.',
     institutional_responsiveness:
       'Velocidade com que regras e programas públicos mudam em resposta a novas condições.',
+    manufacturing_value_added: 'Valor adicionado da indústria de transformação, como parcela do PIB.',
+    high_tech_exports_share:
+      'Exportações de alta tecnologia, como parcela das exportações de produtos industriais.',
+    labour_productivity: 'PIB por pessoa ocupada, em paridade de poder de compra constante.',
+    logistics_infrastructure:
+      'Subíndice do Índice de Desempenho Logístico para a qualidade da infraestrutura de comércio e transporte.',
+    electricity_connection_speed:
+      'Pontuação do Doing Business para os dias que uma empresa espera por uma ligação elétrica definitiva.',
+    economic_complexity:
+      'Sofisticação da pauta exportadora, ajustada pela diversidade e pela raridade dos produtos.',
     large_project_delivery:
       'Desempenho de custo e prazo de grandes projetos públicos de infraestrutura.',
     firm_scale_up_rate:
       'Parcela de empresas jovens que atingem patamares relevantes de emprego ou faturamento.',
+    voice_and_accountability:
+      'Estimativa dos Indicadores Mundiais de Governança para a capacidade dos cidadãos de participar da escolha do governo.',
+    tax_revenue_gdp: 'Receita tributária do governo central, como parcela do PIB.',
+    income_inequality: 'Índice de Gini da renda disponível.',
     national_belonging:
-      'Identificação e vínculo com a comunidade nacional, autodeclarados, distintos do orgulho pela nação.',
+      'Identificação e vínculo com a comunidade nacional, declarados pelos entrevistados, distintos do orgulho pela nação.',
     volunteering_rate:
-      'Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês.',
+      'Parcela de adultos que dedicaram tempo como voluntários a alguma organização no último mês.',
     political_polarization:
       'Grau em que as diferenças políticas se alinham em uma única divisão hostil.',
     civic_participation:
@@ -401,18 +551,18 @@ export const PT_BR: Lexicon = {
     very_thin: 'muito fraca',
   },
   bandMeanings: {
-    good: 'Maioria dos indicadores observada, recente, de fontes oficiais ou intergovernamentais.',
+    good: 'A maioria dos indicadores foi observada, é recente e vem de fontes oficiais ou intergovernamentais.',
     usable: 'Evidência suficiente para comparar países, com lacunas conhecidas.',
-    thin: 'Minoria dos indicadores, ou evidência antiga o bastante para ter mudado. Leia com cuidado.',
-    very_thin: 'A nota se apoia em um ou dois indicadores. Não a cite isoladamente.',
+    thin: 'Só uma minoria dos indicadores foi observada, ou a evidência é antiga o bastante para a situação ter mudado. Leia com cautela.',
+    very_thin: 'A pontuação se apoia em um ou dois indicadores. Não a cite isoladamente.',
   },
   scoreBands: {
-    strong: { label: 'forte', meaning: 'Perto do topo da régua nesta dimensão.' },
-    above_middle: { label: 'acima do meio', meaning: 'Na metade superior da régua.' },
-    below_middle: { label: 'abaixo do meio', meaning: 'Na metade inferior da régua.' },
+    strong: { label: 'alta', meaning: 'Perto do topo da escala nesta dimensão.' },
+    above_middle: { label: 'acima do meio', meaning: 'Na metade superior da escala.' },
+    below_middle: { label: 'abaixo do meio', meaning: 'Na metade inferior da escala.' },
     weak: {
-      label: 'fraca',
-      meaning: 'Perto do piso da régua. Confira a solidez da evidência antes de tirar qualquer conclusão.',
+      label: 'baixa',
+      meaning: 'Perto do piso da escala. Confira a solidez da evidência antes de tirar qualquer conclusão.',
     },
   },
   legendRange: '{a} a {b}',
@@ -422,78 +572,79 @@ export const PT_BR: Lexicon = {
   },
   agenda: {
     title: 'Agenda de capacidades: {country}',
-    generated: 'Gerado em {date}',
+    generated: 'Gerada em {date}',
     intro:
-      'A régua inclui {countries} países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia {limits} antes de citar uma nota.',
+      'A escala reúne {countries} países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia {limits} antes de citar uma pontuação.',
     limitsLabel: 'os limites conhecidos dos dados',
     standingHeading: 'Onde {countryTopic} está',
     colDimension: 'Dimensão',
-    colScore: 'Nota',
+    colScore: 'Pontuação',
     colConfidence: 'Solidez',
     colTrend: 'Tendência',
     historyHeading: 'Capacidade ao longo do tempo',
     historyIntro:
-      'Escolha uma dimensão para ver como a evidência comparável do {country} mudou ao longo do tempo. A escala vertical é a régua comparativa atual de 0 a 100.',
+      'Escolha uma dimensão para ver como a evidência comparável deste país mudou ao longo do tempo. O eixo vertical é a escala comparativa atual, de 0 a 100.',
     historyDimension: 'Dimensão',
     historyPeriod: 'Período',
-    historyAxis: 'Posição da capacidade na régua atual',
+    historyAxis: 'Posição da capacidade na escala atual',
     historyAxisRange: '0 a 100',
     historyYears: 'anos',
-    historyNoHistory: 'Nenhuma dimensão tem evidência histórica comparável suficiente ainda.',
-    historyNoSpan: 'Não há histórico comparável disponível para este período.',
-    historyReadout: '{from} a {to} ({delta}) em {years} anos, sobre {n} indicadores',
+    historyNoHistory: 'Nenhuma dimensão tem, por enquanto, evidência histórica comparável suficiente.',
+    historyNoSpan: 'Não há histórico comparável para este período.',
+    historyReadout: 'De {from} para {to} ({delta}) em {years} anos, com base em {n} indicadores',
     historyReadoutClamped:
-      '{from} a {to} ({delta}) em {years} anos, sobre {n} indicadores; {c} tocaram a borda da régua',
+      'De {from} para {to} ({delta}) em {years} anos, com base em {n} indicadores; {c} chegaram à borda da escala',
     historyCaveat:
-      'Os valores históricos usam a régua atual de 0 a 100 e um conjunto pareado de indicadores. Eles mostram movimento na evidência disponível, não uma nota geral de desenvolvimento. Os itens datados da agenda aparecem em uma linha do tempo separada e não alteram a nota. Uma linha ausente significa que a evidência não sustenta uma tendência comparável para aquela dimensão.',
+      'Os valores históricos usam a escala atual de 0 a 100 e um conjunto pareado de indicadores. Eles mostram o movimento da evidência disponível, e não uma pontuação geral de desenvolvimento. Os itens datados da agenda aparecem numa linha do tempo separada e não alteram a pontuação. Quando falta uma linha, a evidência não sustenta uma tendência comparável naquela dimensão.',
     historyChartAria: 'Histórico de {dimension} de {baseYear} a {currentYear}',
     historyAgendaItems: 'Itens da agenda nesta linha do tempo',
     historyEventTimelineAria: 'Itens da agenda de {dimension} de {baseYear} a {currentYear}',
     historyEventAria: '{title}, item da agenda iniciado em {year}',
-    trendCell: '{delta} em {years} anos, sobre {n} indicadores',
+    trendCell: '{delta} em {years} anos, com base em {n} indicadores',
     trendCellClamped:
-      '{delta} em {years} anos, sobre {n} indicadores, {c} truncados na borda da régua',
-    noTrend: 'sem base de tendência',
-    noScore: 'sem nota',
+      '{delta} em {years} anos, com base em {n} indicadores, {c} limitados à borda da escala',
+    noTrend: 'sem tendência comparável',
+    noScore: 'sem pontuação',
     raiseItemHeading: '{dimension}: {score}, solidez {band}',
     measureItemHeading: '{dimension}: solidez {confidence}, {band}',
-    raiseHeading: 'Dimensões para elevar',
+    raiseHeading: 'Dimensões com as pontuações mais baixas',
     raiseIntro:
-      'Estas são as notas mais baixas com evidência utilizável. A evidência fraca aparece abaixo.',
-    measureHeading: 'Dimensões para medir primeiro',
+      'São as pontuações mais baixas entre as dimensões com evidência utilizável. As dimensões com evidência fraca aparecem na seção seguinte.',
+    measureHeading: 'Dimensões com evidência fraca',
     measureIntro:
-      'A solidez da evidência está abaixo da faixa utilizável. Primeiro, produza evidência.',
-    holdHeading: 'Dimensões para manter',
+      'A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.',
+    holdHeading: 'Dimensões com as pontuações mais altas',
     holdIntro:
-      'Estas dimensões têm nota de pelo menos {threshold}, com evidência utilizável.',
+      'Estas dimensões têm pontuação de pelo menos {threshold}, com evidência utilizável.',
     holdItemLine: '{dimension}: {score}, solidez {band}',
-    scoredOn: 'Baseada em {n} indicadores observados.',
-    scoredOnOne: 'Baseada em um indicador observado.',
+    scoredOn: 'A pontuação se apoia em {n} indicadores observados.',
+    scoredOnOne: 'A pontuação se apoia em um indicador observado.',
     gapsLine: 'Lacunas declaradas: {list}.',
     retiredLine: 'Bases rejeitadas: {list}.',
-    exemplarsLine: 'Maiores notas utilizáveis: {list}.',
-    evidenceElsewhereLine: 'Entregas documentadas em outros países: {list}.',
+    exemplarsLine: 'No topo da escala, entre as pontuações com evidência utilizável: {list}.',
+    evidenceElsewhereLine:
+      'Registros de evidência desta dimensão em outros países, com êxitos e retrocessos, que não entram em nenhuma pontuação: {list}.',
     agendaHeading: 'Agenda de medição',
     agendaIntro:
-      '{n} indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.',
+      '{n} indicadores previstos no modelo ainda não têm base comparável, e cada um reduz a solidez da evidência. Uma lacuna passa a entrar na pontuação quando uma série comparável cobre pelo menos dois países.',
     colIndicator: 'Indicador ausente',
-    colAsks: 'O que ele pergunta',
-    ownEvidenceHeading: 'O que os indicadores não veem sobre {countryTopic}',
+    colAsks: 'O que ele mediria',
+    ownEvidenceHeading: 'O que os indicadores não captam sobre {countryTopic}',
     ownEvidenceIntro:
-      'Entregas documentadas ligadas a indicadores ausentes. Elas não afetam as notas nem a solidez da evidência.',
-    brazilEvidenceHeading: 'O que o Brasil construiu e nenhum indicador conta',
+      'Entregas documentadas ligadas a indicadores ausentes. Elas não alteram as pontuações nem a solidez da evidência.',
+    brazilEvidenceHeading: 'O que o Brasil construiu e nenhum indicador capta',
     brazilEvidenceIntro:
-      'Estas são mudanças institucionais documentadas no Brasil que o framework registra como evidência. Elas não recebem nota e aparecem ao lado das notas de capacidade como registro histórico.',
-    institutionalHistoryHeading: 'O que {countryTopic} construiu e nenhum indicador conta',
+      'São mudanças institucionais documentadas no Brasil, registradas como evidência, entre construções e retrocessos. Não recebem pontuação e aparecem ao lado das pontuações de capacidade como registro histórico.',
+    institutionalHistoryHeading: 'O que {countryTopic} construiu e nenhum indicador capta',
     institutionalHistoryIntro:
-      'Estas são mudanças institucionais documentadas em {country} que o framework registra como evidência. Elas aparecem ao lado da nota e não mudam a nota nem a solidez da evidência.',
+      'São mudanças institucionais documentadas neste país, registradas como evidência, entre construções e retrocessos. Aparecem ao lado da pontuação e não alteram a pontuação nem a solidez da evidência.',
     contributeHeading: 'Contribua',
     contributeBody:
-      'Preencha uma lacuna, registre uma evidência ou conteste um indicador em {repo}. Os documentos explicam o método e suas decisões.',
-    profileLink: 'Abra o perfil completo: indicadores, valores, anos e fontes',
-    conditionsHeading: 'O que {countryTopic} tem para trabalhar',
+      'Para preencher uma lacuna, registrar uma evidência ou contestar um indicador, use {repo}. Os documentos do repositório explicam o método e as decisões por trás dele.',
+    profileLink: 'Abra o perfil completo, em inglês: indicadores, valores, anos e fontes',
+    conditionsHeading: 'Com o que {countryTopic} conta',
     conditionsIntro:
-      'Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na nota, na solidez da evidência nem na tendência. Lidas contra a nota, mostram se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.',
+      'As condições descrevem com o que um país conta: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na pontuação, na solidez da evidência nem na tendência. Lidas ao lado da pontuação, permitem ver se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.',
     colCondition: 'Condição',
     colValue: 'Valor',
     colYear: 'Ano',
@@ -519,7 +670,7 @@ export const PT_BR: Lexicon = {
       data_digital: 'Dados e infraestrutura digital',
       regulation: 'Regulação',
       public_security_defense: 'Segurança pública e defesa',
-      territorial_delivery: 'Entrega territorial',
+      territorial_delivery: 'Execução territorial',
     },
     natures: {
       constitutional_body: 'Órgão constitucional',
@@ -537,7 +688,7 @@ export const PT_BR: Lexicon = {
       legislates: 'legisla',
       adjudicates: 'julga conflitos',
       checks_constitutionality: 'controla a constitucionalidade',
-      prosecutes: 'promove a ação pública',
+      prosecutes: 'promove a ação penal pública',
       represents_state: 'representa juridicamente o Estado',
       defends_rights: 'defende direitos',
       checks: 'controla atos públicos',
@@ -551,7 +702,7 @@ export const PT_BR: Lexicon = {
       researches: 'faz pesquisa',
       trains: 'forma pessoas',
       operates_infrastructure: 'opera infraestrutura',
-      delivers_services: 'entrega serviços',
+      delivers_services: 'presta serviços',
       investigates: 'investiga',
       protects: 'protege',
       intelligence: 'produz inteligência',
@@ -579,7 +730,7 @@ export const PT_BR: Lexicon = {
         outgoing: 'opera infraestrutura para',
         incoming: 'usa infraestrutura operada por',
       },
-      delivers_with: { outgoing: 'entrega junto com', incoming: 'entrega junto com' },
+      delivers_with: { outgoing: 'executa junto com', incoming: 'executa junto com' },
     },
     families: {
       constitutes: {
@@ -595,16 +746,16 @@ export const PT_BR: Lexicon = {
     },
     findHeading: 'Encontrar uma instituição',
     findName: 'Nome ou função',
-    findNamePlaceholder: 'BNDES, justiça, pesquisa...',
+    findNamePlaceholder: 'BNDES, justiça, pesquisa…',
     findLevel: 'Esfera',
     findSystem: 'Sistema',
     findJurisdiction: 'Jurisdição',
     nationalJurisdiction: 'União',
     globalJurisdiction: 'Global',
     globalJurisdictionNote:
-      'Organismos internacionais que nenhum país controla sozinho, registrados no livro global.',
+      'Organismos internacionais que nenhum país controla sozinho, mantidos num cadastro próprio.',
     membersHeading: 'Participação',
-    memberCount: '{n} dos {total} países do benchmark são membros',
+    memberCount: '{n} dos {total} países do NCB são membros',
     memberHere: '{country} é membro.',
     notMemberHere: '{country} não é membro.',
     anyLevel: 'Todas',
@@ -639,75 +790,77 @@ export const PT_BR: Lexicon = {
     title: 'Onde {countryTopic} está em {dimension}?',
     metaTitle: 'Mapa de {dimension}, {country}, NCB',
     metaDescription:
-      'Uma leitura de {dimension} para {countryTopic}: a nota e a solidez da evidência, os indicadores em que ela se apoia, as condições ao lado dela e a posição entre os países de renda mais próxima. Calculada a partir dos dados publicados.',
+      'Uma leitura de {dimension} para {countryTopic}: a pontuação e a solidez da evidência, os indicadores em que ela se apoia, as condições ao lado dela e a posição entre os países de renda mais próxima. Calculada a partir dos dados publicados.',
     dataset: 'Dados da versão {version}',
     intro:
-      'Esta página lê uma capacidade a partir dos dados publicados e é recalculada a cada versão. Ela separa o que {countryTopic} faz, que forma a nota, do que o país tem, que fica ao lado da nota, e coloca o país entre os {count} países de renda mais próxima. O texto descreve os dados e não recomenda políticas.',
-    scoreHeading: 'Em que a nota se apoia?',
+      'Esta página lê uma capacidade a partir dos dados publicados e é recalculada a cada versão. Ela separa o que {countryTopic} faz, que forma a pontuação, daquilo com que o país conta, que fica ao lado da pontuação, e situa o país entre os {count} países de renda mais próxima. O texto descreve os dados e não recomenda políticas.',
+    scoreHeading: 'Em que a pontuação se apoia?',
     scoreIntro:
-      'A nota de {dimension} é a média, com pesos iguais, das posições de {n} indicadores numa régua de 0 a 100 que todos os países definem juntos. A solidez da evidência por trás da nota aparece ao lado dela, como um segundo número.',
-    scoreLabel: 'Nota',
+      'A pontuação de {dimension} é a média, com pesos iguais, das posições de {n} indicadores numa escala de 0 a 100 definida por todos os países em conjunto. A solidez da evidência por trás da pontuação aparece ao lado dela, como um segundo número.',
+    scoreLabel: 'Pontuação',
     confidenceLabel: 'Solidez',
     bandLine: 'evidência {band}',
     rowsHeading: 'Indicadores observados',
-    colPosition: 'Posição na régua',
+    colPosition: 'Posição na escala',
     colPeerMedian: 'Mediana dos pares',
     rowSource: '{source}, {year}',
     noValue: 'sem valor',
-    gapsLine: 'Ainda sem base comparável, e por isso baixando a solidez da evidência: {list}.',
+    gapsLine: 'Ainda sem base comparável, o que reduz a solidez da evidência: {list}.',
     dimensionIncome:
-      'A nota de {dimension} acompanha o PIB per capita com r = {r} entre {n} países.',
+      'A correlação entre a pontuação de {dimension} e o PIB per capita é r = {r}, em {n} países.',
     conditionsIntro:
-      'Ao lado de cada condição, dois r leem todos os países juntos, um contra a renda e outro contra a nota da capacidade. Quando o r com a renda é bem maior que o r com a nota, ter a condição anda mais com ser rico do que com a capacidade medida.',
+      'Ao lado de cada condição há dois coeficientes de correlação, calculados sobre todos os países: um com a renda e outro com a pontuação da capacidade. Quando o r com a renda é bem maior que o r com a pontuação, a condição acompanha mais a riqueza do país do que a capacidade medida.',
     conditionIncome: 'r com a renda: {r} ({n} países)',
-    conditionScore: 'r com a nota de {dimension}: {r} ({n} países)',
+    conditionScore: 'r com a pontuação de {dimension}: {r} ({n} países)',
     conditionPeerMedian: 'Mediana dos pares: {value} {unit} ({n} pares com valor)',
     peersHeading: 'Onde {countryTopic} fica entre os pares?',
     peerRule:
-      'Os pares são os {count} países de renda mais próxima. A renda é o PIB per capita em paridade de poder de compra, em dólares internacionais constantes, no último ano publicado pelo Banco Mundial, e a distância é medida em escala logarítmica, onde metade e o dobro ficam à mesma distância. Nenhum país é escolhido à mão, e o conjunto muda quando os dados mudam.',
-    peerRange: 'Nesta versão, a renda dos pares vai de {min} a {max}, e {countryTopic} tem {own} ({year}).',
-    peersUnscored: '{n} dos {count} pares não têm nota nesta capacidade e ficam fora da mediana.',
+      'Os pares são os {count} países de renda mais próxima. A renda é o PIB per capita em paridade de poder de compra, em dólares internacionais constantes, no último ano publicado pelo Banco Mundial, e a distância é medida em escala logarítmica, em que a metade e o dobro ficam à mesma distância. Nenhum país é escolhido a dedo, e o conjunto muda quando os dados mudam.',
+    peerRange: 'Nesta versão, a renda dos pares vai de {min} a {max}; {countryTopic} tem {own} ({year}).',
+    peersUnscored: '{n} dos {count} pares não têm pontuação nesta capacidade e ficam fora da mediana.',
     colCountry: 'País',
     colIncome: 'PIB per capita, PPC',
-    colScore: 'Nota',
-    fieldAria: '{count} países de renda parecida numa régua de 0 a 100 em {dimension}.',
-    fieldNote: 'A faixa sombreada é a metade central do conjunto e a linha dentro dela é a mediana.',
+    colScore: 'Pontuação',
+    fieldAria: '{count} países de renda parecida numa escala de 0 a 100 em {dimension}.',
+    fieldNote: 'A faixa sombreada é a metade central do conjunto, e a linha dentro dela é a mediana.',
     readingHeading: 'O que separa {countryTopic} dos pares?',
     scoreAbove:
-      '{countryTopic} tem nota {score} em {dimension}, acima da mediana dos {n} pares com nota, que é {median}.',
+      '{countryTopic} tem pontuação {score} em {dimension}, acima da mediana dos {n} pares com pontuação, que é {median}.',
     scoreBelow:
-      '{countryTopic} tem nota {score} em {dimension}, abaixo da mediana dos {n} pares com nota, que é {median}.',
-    scoreLevel: '{countryTopic} tem nota {score} em {dimension}, igual à mediana dos {n} pares com nota.',
-    rowsAbove: 'Acima da mediana dos pares: {list}.',
-    rowsBelow: 'Abaixo da mediana dos pares: {list}.',
-    rowsLevel: 'Na mediana dos pares: {list}.',
-    conditionsMore: '{countryTopic} tem mais do que a mediana dos pares em {list}.',
-    conditionsLess: '{countryTopic} tem menos do que a mediana dos pares em {list}.',
-    conditionsLevel: '{countryTopic} está na mediana dos pares em {list}.',
+      '{countryTopic} tem pontuação {score} em {dimension}, abaixo da mediana dos {n} pares com pontuação, que é {median}.',
+    scoreLevel:
+      '{countryTopic} tem pontuação {score} em {dimension}, igual à mediana dos {n} pares com pontuação.',
+    rowsAbove: 'Indicadores com posição na escala acima da mediana dos pares: {list}.',
+    rowsBelow: 'Indicadores com posição na escala abaixo da mediana dos pares: {list}.',
+    rowsLevel: 'Indicadores na mediana dos pares: {list}.',
+    conditionsMore: '{countryTopic} tem valor acima da mediana dos pares em {list}.',
+    conditionsLess: '{countryTopic} tem valor abaixo da mediana dos pares em {list}.',
+    conditionsLevel: '{countryTopic} fica na mediana dos pares em {list}.',
+    conditionsLowerBetter: 'Em {list}, um valor menor é melhor.',
     readingNote:
-      'Cada frase compara uma posição com uma mediana. A causa de uma diferença, e o que fazer com ela, ficam fora destes dados.',
+      'Cada frase compara uma posição com uma mediana. A causa de uma diferença, e o que fazer a respeito, ficam fora destes dados.',
     noPeers:
       'Esta versão dos dados não publica a renda dos países, por isso a página não forma o conjunto de pares.',
     noIncome:
-      'O Banco Mundial não publica PIB per capita para {countryTopic}, então a página não forma um grupo de pares e não faz comparação.',
+      'O Banco Mundial não publica PIB per capita para {countryTopic}, por isso a página não forma um grupo de pares nem faz comparação.',
     limitsHeading: 'O que esta leitura não mostra',
     limitProxy:
-      'A nota nacional é uma aproximação grosseira. Uma capacidade se forma em empresas, cidades, redes e grupos, abaixo do nível do país, e uma média nacional descreve apenas as condições em que eles trabalham.',
+      'A pontuação nacional é uma aproximação grosseira. Uma capacidade se forma em empresas, cidades, redes e grupos, abaixo do nível do país, e uma média nacional descreve apenas as condições em que eles atuam.',
     limitPeers:
-      'Os pares dividem a renda e mais nada. Tamanho, estrutura produtiva, região e regime político ficam fora da regra, e um conjunto de {count} países pode mudar com qualquer revisão do PIB.',
+      'Os pares têm em comum a renda e nada mais. Tamanho, estrutura produtiva, região e regime político ficam fora da regra, e um conjunto de {count} países pode mudar com qualquer revisão do PIB.',
     limitCorrelation:
-      'Um r lê o conjunto inteiro de uma vez e nada diz sobre um país isolado. Correlação também não mostra causa.',
+      'Um r descreve o conjunto inteiro de uma vez e nada diz sobre um país isolado. Correlação também não indica causa.',
     rowCaveats: {
       long_term_unemployment_share: {
-        text: 'O desemprego de longa duração vem do ILOSTAT, depois de um filtro de plausibilidade aplicado igualmente a todos os países. Alguns países pontuados usam pesquisa domiciliar em vez de pesquisa de força de trabalho. Uma parcela alta tem duas leituras: realocação lenta onde o desemprego também é alto, ou um grupo residual pequeno onde ele é baixo.',
+        text: 'O desemprego de longa duração vem do ILOSTAT, depois de um filtro de plausibilidade aplicado do mesmo modo a todos os países. Alguns países com pontuação usam uma pesquisa domiciliar em vez de uma pesquisa da força de trabalho. Uma parcela alta admite duas leituras: realocação lenta, onde o desemprego também é alto, ou um pequeno grupo residual, onde ele é baixo.',
         decisions: ['D120'],
       },
       export_diversification: {
-        text: 'A diversificação das exportações lê a concentração da pauta de mercadorias publicada pela UNCTAD. A velocidade com que um país troca de produto fica fora dela, assim como os serviços, e países que vendem poucos produtos de alto valor aparecem como concentrados.',
+        text: 'A diversificação das exportações lê a concentração da pauta de mercadorias publicada pela UNCTAD. A velocidade com que um país troca de produtos fica de fora, assim como os serviços, e países que vendem poucos produtos de alto valor aparecem como concentrados.',
         decisions: ['D119'],
       },
       new_export_products_rate: {
-        text: 'Os novos produtos de exportação contam as linhas de mercadorias em que um país entrou em quinze anos, segundo o Growth Lab de Harvard. São exportações brutas, então os centros de reexportação contam o que passa por eles; um país que não informa seu comércio é lido nos registros dos parceiros. Uma janela tão longa muda pouco de uma versão para outra.',
+        text: 'Os novos produtos de exportação contam as linhas de mercadorias em que um país passou a exportar de forma competitiva em quinze anos, segundo os dados de comércio do Growth Lab. São exportações brutas, então os centros de reexportação contam o que passa por eles, e um país que não informa seu comércio é lido nos registros dos parceiros. Uma janela tão longa muda pouco de uma versão para outra.',
         decisions: ['D149'],
       },
     },
@@ -724,13 +877,14 @@ export const PT_BR: Lexicon = {
         'Para {countryTopic}, nenhum ano da série do ILOSTAT passa pelo filtro de plausibilidade: a pesquisa registra menos de {floor}% na maioria dos anos, então a linha fica sem valor.',
     },
     noConditions:
-      'Nenhuma condição é publicada ao lado de {dimension} nesta versão, por isso a página mostra só os indicadores que formam a nota.',
+      'Nenhuma condição é publicada ao lado de {dimension} nesta versão, por isso a página mostra só os indicadores que formam a pontuação.',
     floorNote:
-      'Sem nota nesta versão. Indicadores observados: {n}, abaixo do mínimo que o modelo exige para formar uma média.',
-    thinNote: 'A solidez da evidência está na faixa {band}, então a nota se apoia em pouca evidência.',
+      'Sem pontuação nesta versão. Indicadores observados: {n}, abaixo do mínimo que o modelo exige para formar uma média.',
+    thinNote:
+      'A solidez da evidência está na faixa {band}, então a pontuação se apoia em pouca evidência.',
     artefactsLine:
-      'Os artefatos conhecidos que tocam {dimension}, descritos em inglês na página de limites:',
-    artefactsStructural: 'E os que valem para toda nota do benchmark:',
+      'Os artefatos conhecidos que afetam {dimension}, descritos em inglês na página de limites:',
+    artefactsStructural: 'E os que valem para toda pontuação do NCB:',
     artefactLink: 'artefato {id}',
     rowPeers: '{n} pares com valor',
     indexLink: 'Veja todas as capacidades no mapa',
@@ -739,21 +893,22 @@ export const PT_BR: Lexicon = {
       title: 'Onde {countryTopic} está em cada capacidade?',
       metaTitle: 'Mapa de capacidades, {country}, NCB',
       metaDescription:
-        'Uma leitura de cada capacidade para {countryTopic}: a nota, a solidez da evidência e a posição diante da mediana dos países de renda mais próxima. Calculada a partir dos dados publicados.',
+        'Uma leitura de cada capacidade para {countryTopic}: a pontuação, a solidez da evidência e a posição diante da mediana dos países de renda mais próxima. Calculada a partir dos dados publicados.',
       intro:
-        'Esta página lê {n} capacidades para {countryTopic} a partir dos dados publicados e é recalculada a cada versão. Cada linha traz a nota e a solidez da evidência como dois números e compara a nota com a mediana dos {count} países de renda mais próxima. As linhas seguem a ordem do modelo, e cada uma abre o mapa daquela capacidade.',
-      heading: 'Como cada capacidade se compara aos pares?',
+        'Esta página lê {n} capacidades para {countryTopic} a partir dos dados publicados e é recalculada a cada versão. Cada linha traz a pontuação e a solidez da evidência como dois números e compara a pontuação com a mediana dos {count} países de renda mais próxima. As linhas seguem a ordem do modelo, e cada uma abre o mapa daquela capacidade.',
+      heading: 'Como cada capacidade se compara à dos pares?',
       colDimension: 'Capacidade',
       colPeerMedian: 'Mediana dos pares',
       above: 'acima da mediana dos pares',
       below: 'abaixo da mediana dos pares',
       level: 'na mediana dos pares',
       none: 'sem comparação',
-      peersScored: '{n} de {count} pares com nota',
-      note: 'Cada linha compara uma nota com uma mediana. As capacidades não se somam, e a página não forma uma nota geral.',
+      peersScored: '{n} de {count} pares com pontuação',
+      note: 'Cada linha compara uma pontuação com uma mediana. As capacidades não se somam, e a página não forma uma pontuação geral.',
     },
     decisionLink: 'decisão {id}',
     agendaLink: 'Abra a agenda de capacidades',
     capabilityLink: 'Veja {dimension} em todos os países, em inglês',
   },
+  evidence: EVIDENCE_PT_BR,
 }

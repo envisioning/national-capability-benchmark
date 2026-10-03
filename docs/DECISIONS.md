@@ -8497,3 +8497,135 @@ which removes the flag from that row; a published 0 on an unflagged row
 shown to be a placeholder, which adds it; or a source-side fix (the World
 Bank printing Venezuela's series as missing), which leaves the rule in
 place with nothing to drop.
+
+---
+
+## D158 — Brazil's layer opens on what the claim test supports, speaks Portuguese around its pages, and asks for no money
+
+*Recorded 2026-10-03. Answers #89. Extends D69, D71, D130, D133, D137 and
+D138. The Portuguese copy review in it is Claude's, not a native
+speaker's.*
+
+**Decision.** Brazil's layer is about to be shown to a Brazilian economics
+institute and a development bank. It changes in seven ways.
+
+1. **The opening states what the test supports, computed.** `/brasil` no
+   longer opens on "Riqueza e capacidade são propriedades diferentes", which
+   is the strong claim `/thesis` reads as failing for what the nine
+   capabilities share. `readVerdictPtBr` in `apps/web/src/lib/verdict-pt.ts`
+   reads `diagnostics.factorStructure` and `diagnostics.residualStructure`
+   and picks every sentence by the readings D137 and D138 already compute:
+   the factor's income band, the weaker claim's verdict, and the same
+   narrow-margin threshold `residual.ts` uses (now exported, not copied). No
+   rule is restated and no number is typed. The opening links to a
+   Portuguese verdict section on the same page (`/brasil#teste`, built by
+   `layerVerdictHref`), which states the claim in its two strengths and the
+   computed share, income correlation, both verdicts and the income share of
+   a profile, then links to `/thesis` and `/diagnostics` in English. On
+   dataset 9.1.0 it reads: one shared factor carries 50.4% of the variation
+   over 123 countries (chance 15.9%, 95th 17.5%), correlates 0.815 with log
+   GDP per capita over 122, so the strong claim does not hold for the shared
+   part; the weaker claim holds, narrowly (shape share 22.7% against 19.0%).
+2. **The layer describes and never prescribes (D130).** The agenda's groups
+   are named for what they hold: "Dimensões com as pontuações mais baixas",
+   "Dimensões com evidência fraca", "Dimensões com as pontuações mais altas",
+   and the front page labels them with `RAISE_BELOW`, not "Elevar",
+   "Medir antes de gerir" and "Manter". The top-scorer line says it lists the
+   top of the scale, and the evidence-elsewhere line says the records are
+   successes and setbacks outside every score, so neither sits under a low
+   score as a model to copy. `splitAgenda` and the order are unchanged (D39).
+   A test in `pt-br.test.ts` rejects "elevar" and "deve" in the lexicon.
+3. **`/brasil/apoie` asks for no money.** The project is self-funded (owner,
+   2026-10-03). The page drops the funding section and every funding window
+   it named (Finep, CNPq, the state research foundations, BNDES, IDB, the
+   World Bank, CAF and private foundations), and the link to the ground
+   layer's support page, which lists funded pieces. It asks for four things:
+   use, an outside review of the method (anchor `#revisao`, built by
+   `layerReviewHref`), open data and a venue for a seminar. No institution is
+   named in an ask; the data sources a Brazilian series comes from (IBGE,
+   Ipea, Tesouro, CGU) stay. The tab is labelled Participe; the address keeps
+   its slug, so nothing redirects. "A revisão independente está aberta" on
+   the front page now links to that review ask, and "procura parceiros
+   institucionais" with its link to envisioning.com is gone.
+4. **The page's language is the document's.** The root layout's `<html>` is
+   `LangHtml`, a client component that reads the path on the server render:
+   a layer's slug gives the layer's language, anything else English. The
+   Spanish layers get `es` from the same rule. The skip link, the wordmark's
+   name, the header sections, crumbs and tabs, the footer, the search palette
+   and the objection dialog read `chromeWords(pathLang(path))` from
+   `apps/web/src/lib/chrome.ts`, with names of countries, capabilities and
+   indicators from the layer's lexicon. Portuguese has chrome words; Spanish
+   has none yet and keeps the English chrome whole, so no header mixes two
+   languages. This is not a language switch (D69): nothing a page says
+   changes, only the words around it, and only under a layer's slug. The
+   contact form stays English: a Portuguese form would be a second inbox, or a
+   `?lang=` on a ground-layer page, and D71 and D69 forbid both. The layer
+   says once that a reader may write in Portuguese.
+5. **The lexicon reads as Brazilian Portuguese.** Claude reviewed every
+   string in `pt-br.ts`, the Portuguese words in `words.ts`, the institution
+   summaries and the hand-written copy under `apps/web/src/app/brasil`, as a
+   Brazilian economist would read them. A score is a **pontuação**, never a
+   "nota", which reads as a school grade and makes the instrument a report
+   card; the confidence number is **solidez** (da evidência), because
+   **Confiança** is Trust; both are pinned by a test. Calques go ("Quão capaz
+   é...", "framework", "o que o país tem para trabalhar"), "ranking" becomes
+   "classificação", a row is placed "na escala". Every indicator now has a
+   Portuguese definition and every unit a Portuguese rendering, which is what
+   left the map's condition descriptions in English; a test holds the lexicon
+   complete over the registry. Global bodies take their Brazilian names
+   (ONU, PNUD, Banco Mundial, FMI, OCDE, OMC, OMS, OIT), state summaries take
+   the right preposition ("no Acre", "na Bahia", "em São Paulo"), and São
+   Paulo's four state bodies no longer fall back to English. Two agenda
+   strings wrote "do {country}" and "em {country}", wrong for most of the
+   125 countries the Portuguese documents cover; both now name no country,
+   and 62 countries gain the article prose needs.
+6. **Brazil's evidence records read in Portuguese.** `Lexicon.evidence` maps
+   a record id to a title and a claim, falling back to the record's English
+   through `evidenceTitle` and `evidenceClaim`. `evidence-pt-br.ts` holds all
+   29 records filed against Brazil. The record stays the sourced English
+   ground layer (D20, D31); a test fails when a Brazil record has no entry,
+   or when an entry's figures differ from the record's in any digit, written
+   the Brazilian way. The records about other countries listed under a
+   dimension stay English.
+7. **No map sentence reads backwards.** A condition is compared in published
+   units, so "o Brasil tem mais do que a mediana dos pares em perdas na
+   transmissão" said more of a bad thing as if it were more of a good one.
+   `readCapabilityMap` now also returns `conditionsLowerBetter`, the
+   conditions just compared where a lower value is better, and a lexicon
+   with the optional `conditionsLowerBetter` string says so after the
+   comparison ("Em perdas na transmissão de eletricidade, um valor menor é
+   melhor."). Portuguese and English carry it; Spanish, whose condition
+   sentences D156 already rewrote as "registra un valor mayor", does not yet.
+   Row sentences now say a row's *position on the scale* is above the peer
+   median, in Portuguese and in English, which is the change D156 made in
+   Spanish and listed as owed in English.
+
+No university is named in the layer's copy: the new-export-products caveat
+named Harvard in Portuguese and English and now names the Growth Lab's
+trade data. Spanish still names it and is the Spanish review's to change.
+
+**Why.** The layer goes before readers who will check the opening against
+the thesis, read a recommendation into "elevar", and read a funding window
+as a request for money from them. Each fix makes a page say only what the
+data and the decisions say. Recording the review as Claude's keeps the
+D130 and D134 overturn clauses honest: no Brazilian has read this copy yet.
+
+**Cost.** No native speaker has reviewed the Portuguese. A model's
+Portuguese is fluent and generic; it will miss what reads as foreign to a
+reader in Brasília or Rio, and the term choices (pontuação, solidez,
+Agência, Adaptação) are judgment. The chrome now depends on the path, so a
+second chrome language is a table, and a page served outside a layer's slug
+in its language would get English chrome. The contact form, the method,
+limits, decisions, objections and subnational pages, and every evidence
+record not about Brazil, stay English inside a Portuguese reading. The
+evidence translations are hand-written copies of sourced claims: the digit
+test catches a changed figure, not a changed meaning. Dropping the funding
+section removes the only place the layer said what a sponsor would buy; the
+ground layer's `/support` still lists funded pieces and is not changed here.
+
+**Overturned by.** A Brazilian reader, ideally an economist, finding a term
+or a sentence wrong, which replaces this review with theirs; a reader of
+the opening taking it for the strong claim, which would cut it back to the
+verdict section's link alone; the owner reopening outside funding, which
+restores an ask without naming windows; or a Portuguese contact form
+accepted by a decision that supersedes D71's one inbox.

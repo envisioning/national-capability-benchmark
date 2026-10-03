@@ -57,26 +57,26 @@ export const ptCountWord = (n: number): string => PT_COUNT_WORDS[n] ?? String(n)
 
 /** The field chart's words in Portuguese, for the Brazil layer. See D130. */
 export const PT_FIELD_WORDS: FlagFieldWords = {
-  score: 'Nota',
+  score: 'Pontuação',
   confidence: 'Solidez',
   trend: 'Tendência',
   highest: 'Maior',
   lowest: 'Menor',
-  noScore: 'sem nota',
-  clamped: 'Truncado na borda da régua, então a posição real fica além dela.',
-  scoredOf: '{scored} de {total} capacidades com nota.',
+  noScore: 'sem pontuação',
+  clamped: 'Limitado à borda da escala; a posição real fica além dela.',
+  scoredOf: '{scored} de {total} capacidades com pontuação.',
   clickFlag: ' Clique na bandeira para ver o perfil completo.',
-  aria: '{n} países numa régua de 0 a 100. Mediana {median}.',
-  legendNote: 'A faixa sombreada é a metade central do campo e a linha dentro dela é a mediana.',
+  aria: '{n} países numa escala de 0 a 100. Mediana {median}.',
+  legendNote: 'A faixa sombreada é a metade central do campo, e a linha dentro dela é a mediana.',
   solidRing: 'Anel contínuo: evidência utilizável ou boa',
   brokenRing: 'Anel interrompido: evidência fraca, mais aberto quanto menor a solidez',
 }
 
 /** The conditions panel's words in Portuguese, for the Brazil layer. See D130. */
 export const PT_CONDITION_WORDS: ConditionListWords = {
-  label: 'Condições, fora da nota',
+  label: 'Condições, fora da pontuação',
   intro:
-    'O que o país tem para trabalhar nesta capacidade. Os valores aparecem como a fonte os publicou e não entram na nota, na solidez da evidência nem na tendência. A posição conta os países com valor, do melhor para o pior.',
+    'Com o que o país conta nesta capacidade. Os valores aparecem como a fonte os publicou e não entram na pontuação, na solidez da evidência nem na tendência. A posição conta os países com valor, do melhor para o pior.',
   noValue: 'Sem valor para este país. {definition}',
   rank: '{rank}º de {n}',
 }

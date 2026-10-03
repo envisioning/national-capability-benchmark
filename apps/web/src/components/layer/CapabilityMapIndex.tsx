@@ -113,15 +113,15 @@ export async function CapabilityMapIndex({ reading }: { reading: MapReading }) {
                 </div>
                 <span className="inline-flex items-center gap-2">
                   <span className="text-xs text-[var(--muted)]">{m.scoreLabel}</span>
-                  <DimensionScore dim={map} size="sm" notMeasured={lex.agenda.noScore} />
+                  <DimensionScore dim={map} size="sm" notMeasured={lex.agenda.noScore} locale={lex.numberLocale} />
                 </span>
                 <span className="inline-flex items-center gap-2">
                   <span className="text-xs text-[var(--muted)]">{m.confidenceLabel}</span>
-                  <Confidence value={map.confidence} />
+                  <Confidence value={map.confidence} locale={lex.numberLocale} />
                 </span>
                 <span className="inline-flex items-center gap-2">
                   <span className="text-xs text-[var(--muted)]">{x.colPeerMedian}</span>
-                  <Score value={map.peerScoreMedian} size="sm" nullLabel={m.noValue} />
+                  <Score value={map.peerScoreMedian} size="sm" nullLabel={m.noValue} locale={lex.numberLocale} />
                 </span>
               </li>
             )

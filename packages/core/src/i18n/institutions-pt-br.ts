@@ -125,69 +125,104 @@ const GLOBAL_SUMMARIES: Record<string, string> = {
   'global.ilo': 'Agência tripartite das Nações Unidas com 187 Estados-membros; fixa normas internacionais do trabalho e produz estatísticas do trabalho.',
 }
 
-const STATE_LABELS_PT_BR: Record<string, string> = {
-  'BR-AC': 'Acre',
-  'BR-AL': 'Alagoas',
-  'BR-AP': 'Amapá',
-  'BR-AM': 'Amazonas',
-  'BR-BA': 'Bahia',
-  'BR-CE': 'Ceará',
-  'BR-DF': 'Distrito Federal',
-  'BR-ES': 'Espírito Santo',
-  'BR-GO': 'Goiás',
-  'BR-MA': 'Maranhão',
-  'BR-MT': 'Mato Grosso',
-  'BR-MS': 'Mato Grosso do Sul',
-  'BR-MG': 'Minas Gerais',
-  'BR-PA': 'Pará',
-  'BR-PB': 'Paraíba',
-  'BR-PR': 'Paraná',
-  'BR-PE': 'Pernambuco',
-  'BR-PI': 'Piauí',
-  'BR-RJ': 'Rio de Janeiro',
-  'BR-RN': 'Rio Grande do Norte',
-  'BR-RS': 'Rio Grande do Sul',
-  'BR-RO': 'Rondônia',
-  'BR-RR': 'Roraima',
-  'BR-SC': 'Santa Catarina',
-  'BR-SE': 'Sergipe',
-  'BR-TO': 'Tocantins',
+/**
+ * The global bodies' names in Portuguese, as a Brazilian reader knows them:
+ * ONU, PNUD, Banco Mundial. The ledger keeps the English names.
+ */
+const GLOBAL_NAMES: Record<string, { officialName: string; shortName: string }> = {
+  'global.un': { officialName: 'Organização das Nações Unidas', shortName: 'ONU' },
+  'global.undp': {
+    officialName: 'Programa das Nações Unidas para o Desenvolvimento',
+    shortName: 'PNUD',
+  },
+  'global.world_bank': { officialName: 'Grupo Banco Mundial', shortName: 'Banco Mundial' },
+  'global.imf': { officialName: 'Fundo Monetário Internacional', shortName: 'FMI' },
+  'global.oecd': {
+    officialName: 'Organização para a Cooperação e Desenvolvimento Econômico',
+    shortName: 'OCDE',
+  },
+  'global.wto': { officialName: 'Organização Mundial do Comércio', shortName: 'OMC' },
+  'global.who': { officialName: 'Organização Mundial da Saúde', shortName: 'OMS' },
+  'global.ilo': { officialName: 'Organização Internacional do Trabalho', shortName: 'OIT' },
+}
+
+/**
+ * Each state with the forms a sentence needs: "em São Paulo" but "no Acre",
+ * "de Goiás" but "da Bahia". A state name takes an article or not by usage,
+ * so the contractions are written out rather than derived.
+ */
+const STATES_PT_BR: Record<string, { name: string; em: string; de: string }> = {
+  'BR-AC': { name: 'Acre', em: 'no Acre', de: 'do Acre' },
+  'BR-AL': { name: 'Alagoas', em: 'em Alagoas', de: 'de Alagoas' },
+  'BR-AP': { name: 'Amapá', em: 'no Amapá', de: 'do Amapá' },
+  'BR-AM': { name: 'Amazonas', em: 'no Amazonas', de: 'do Amazonas' },
+  'BR-BA': { name: 'Bahia', em: 'na Bahia', de: 'da Bahia' },
+  'BR-CE': { name: 'Ceará', em: 'no Ceará', de: 'do Ceará' },
+  'BR-DF': { name: 'Distrito Federal', em: 'no Distrito Federal', de: 'do Distrito Federal' },
+  'BR-ES': { name: 'Espírito Santo', em: 'no Espírito Santo', de: 'do Espírito Santo' },
+  'BR-GO': { name: 'Goiás', em: 'em Goiás', de: 'de Goiás' },
+  'BR-MA': { name: 'Maranhão', em: 'no Maranhão', de: 'do Maranhão' },
+  'BR-MT': { name: 'Mato Grosso', em: 'em Mato Grosso', de: 'de Mato Grosso' },
+  'BR-MS': { name: 'Mato Grosso do Sul', em: 'em Mato Grosso do Sul', de: 'de Mato Grosso do Sul' },
+  'BR-MG': { name: 'Minas Gerais', em: 'em Minas Gerais', de: 'de Minas Gerais' },
+  'BR-PA': { name: 'Pará', em: 'no Pará', de: 'do Pará' },
+  'BR-PB': { name: 'Paraíba', em: 'na Paraíba', de: 'da Paraíba' },
+  'BR-PR': { name: 'Paraná', em: 'no Paraná', de: 'do Paraná' },
+  'BR-PE': { name: 'Pernambuco', em: 'em Pernambuco', de: 'de Pernambuco' },
+  'BR-PI': { name: 'Piauí', em: 'no Piauí', de: 'do Piauí' },
+  'BR-RJ': { name: 'Rio de Janeiro', em: 'no Rio de Janeiro', de: 'do Rio de Janeiro' },
+  'BR-RN': { name: 'Rio Grande do Norte', em: 'no Rio Grande do Norte', de: 'do Rio Grande do Norte' },
+  'BR-RS': { name: 'Rio Grande do Sul', em: 'no Rio Grande do Sul', de: 'do Rio Grande do Sul' },
+  'BR-RO': { name: 'Rondônia', em: 'em Rondônia', de: 'de Rondônia' },
+  'BR-RR': { name: 'Roraima', em: 'em Roraima', de: 'de Roraima' },
+  'BR-SC': { name: 'Santa Catarina', em: 'em Santa Catarina', de: 'de Santa Catarina' },
+  'BR-SP': { name: 'São Paulo', em: 'em São Paulo', de: 'de São Paulo' },
+  'BR-SE': { name: 'Sergipe', em: 'em Sergipe', de: 'de Sergipe' },
+  'BR-TO': { name: 'Tocantins', em: 'no Tocantins', de: 'do Tocantins' },
 }
 
 function stateSummary(node: InstitutionNetwork['nodes'][number]): string | undefined {
-  const state = STATE_LABELS_PT_BR[node.jurisdictionCode]
+  const state = STATES_PT_BR[node.jurisdictionCode]
   if (!state) return undefined
   if (node.id.endsWith('.government')) {
-    return `Dirige o Poder Executivo e coordena políticas públicas e serviços em ${state}.`
+    return `Dirige o Poder Executivo e coordena políticas públicas e serviços ${state.em}.`
   }
   if (node.id.endsWith('.legislature')) {
-    return `Representa a população de ${state}, legisla e fiscaliza o Executivo estadual.`
+    return `Representa a população ${state.de}, legisla e fiscaliza o Executivo estadual.`
   }
   if (node.id.endsWith('.court')) {
-    return `Julga conflitos e protege direitos na jurisdição de ${state}.`
+    return `Julga conflitos e protege direitos na jurisdição ${state.de}.`
   }
   if (node.id.endsWith('.tce')) {
-    return `Audita contas públicas e gastos dentro da jurisdição de ${state}.`
+    return `Audita contas públicas e gastos na jurisdição ${state.de}.`
   }
   if (node.id.endsWith('.prosecution')) {
-    return `Defende a ordem jurídica e os interesses sociais em ${state}.`
+    return `Defende a ordem jurídica e os interesses sociais ${state.em}.`
   }
   if (node.id.endsWith('.cge')) {
-    return `Coordena controle interno, integridade e auditoria no Executivo de ${state}.`
+    return `Coordena controle interno, integridade e auditoria no Executivo ${state.de}.`
   }
   if (node.id.endsWith('.civil_police')) {
-    return `Investiga crimes e exerce a polícia judiciária no estado de ${state}.`
+    return `Investiga crimes e exerce a polícia judiciária ${state.em}.`
   }
   if (node.id.endsWith('.military_police')) {
-    return `Faz o policiamento ostensivo e preserva a segurança pública em ${state}.`
+    return `Faz o policiamento ostensivo e preserva a segurança pública ${state.em}.`
   }
   if (node.id.endsWith('.fire')) {
-    return `Atua em prevenção, resposta a incêndios e defesa civil em ${state}.`
+    return `Atua em prevenção, combate a incêndios, resgate e defesa civil ${state.em}.`
   }
   if (node.id.endsWith('.defensoria')) {
-    return `Presta assistência jurídica integral e defende direitos em ${state}.`
+    return `Presta assistência jurídica integral e gratuita e defende direitos ${state.em}.`
   }
   return undefined
+}
+
+/** A global body's name in Portuguese, where the ledger holds it in English. */
+function globalNames<T extends { id: string; officialName: string; shortName?: string | null }>(
+  node: T,
+): T {
+  const names = GLOBAL_NAMES[node.id]
+  return names ? { ...node, ...names } : node
 }
 
 export function localizeInstitutionNetworkPtBr(
@@ -198,7 +233,7 @@ export function localizeInstitutionNetworkPtBr(
     scope:
       'Primeiro recorte da infraestrutura institucional brasileira: instituições previstas na Constituição, órgãos de controle e organizações que concentram financiamento, dados, formação, ciência, tecnologia e capacidade de entrega. São Paulo é o primeiro piloto subnacional.',
     nodes: network.nodes.map((node) => ({
-      ...node,
+      ...globalNames(node),
       summary:
         GLOBAL_SUMMARIES[node.id] ?? SUMMARIES[node.id] ?? stateSummary(node) ?? node.summary,
     })),
@@ -222,7 +257,7 @@ export function localizeInstitutionNetwork(
     return {
       ...network,
       nodes: network.nodes.map((node) => ({
-        ...node,
+        ...globalNames(node),
         summary: GLOBAL_SUMMARIES[node.id] ?? node.summary,
       })),
     }

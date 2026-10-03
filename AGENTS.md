@@ -340,7 +340,11 @@ port 3888. That entry starts Next directly and does not use the proxy.
   `capabilityMap.rowFacts`, never a sentence about a country; a test holds the
   table to the pinned ILOSTAT file. The Spanish confidence word is "solidez",
   because "confianza" is Trust, and the Spanish segments are pinned in
-  `es.test.ts`. See D130, D133, D134 and D136.
+  `es.test.ts`. In Portuguese a score is "pontuação", never "nota", and the
+  confidence word is "solidez", pinned in `pt-br.test.ts`. A condition is
+  compared in published units, so `readCapabilityMap` also names the
+  compared conditions where lower is better and the lexicon says so. See
+  D130, D133, D134, D136 and D158.
 - The institution map publishes no node-link diagram. `INSTITUTION_RELATION_FAMILY`
   in `packages/core/src/model/institutions.ts` is the only place a relation verb
   is sorted into a family, and `InstitutionsView` renders every family in the
@@ -430,7 +434,12 @@ port 3888. That entry starts Next directly and does not use the proxy.
   on a ground-layer page, and never put a layer in the primary nav: a layer
   serves one country's audience and is reached from that country's pages. A
   lexicon that renders a country with no page behind it is not published, so
-  it does not reach the feed or the sitemap either. See D69.
+  it does not reach the feed or the sitemap either. See D69. The words
+  around a layer page, the document's `lang`, the header, the footer, the
+  search palette and the objection dialog, read the layer's language from
+  the path through `pathLang` and `chromeWords` in
+  `apps/web/src/lib/chrome.ts`; a language with no chrome words keeps the
+  English chrome whole, and the contact form stays English (D71). See D158.
 - The viewer has one inbox. `/contact` is the only page that carries a form for
   writing to the project, `/api/contact` is the only route that sends one, and
   every invitation to get in touch links there with a topic in the query string.

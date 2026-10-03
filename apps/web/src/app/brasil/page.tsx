@@ -5,6 +5,7 @@ import {
   INDICATORS,
   LATAM_ISO3,
   PT_BR,
+  RAISE_BELOW,
   REPO_URL,
   countryName,
   countryTopic,
@@ -30,26 +31,31 @@ import {
   Section,
 } from '@/components/ui'
 import { loadAgenda } from '@/lib/agenda'
-import { loadEvidence, loadIndex } from '@/lib/data'
+import { loadDiagnostics, loadEvidence, loadIndex } from '@/lib/data'
 import { countryLayer, layerSection } from '@/lib/layers'
 import {
   countriesHref,
   countryProfileHref,
   decisionsHref,
+  diagnosticsHref,
   glossaryHref,
+  layerReviewHref,
   layerSectionHref,
+  layerVerdictHref,
   limitsHref,
   methodHref,
+  thesisHref,
 } from '@/lib/links'
 import { toProfile } from '@/lib/profile'
+import { readVerdictPtBr } from '@/lib/verdict-pt'
 import { conditionValue } from '@/components/views/ConditionList'
 
 export const dynamic = 'force-dynamic'
 
 export const metadata = {
-  title: 'Brasil, o que o país é capaz de fazer',
+  title: 'O que o Brasil é capaz de fazer, NCB',
   description:
-    'A camada brasileira do NCB: nove dimensões de capacidade nacional, as instituições que entregam política pública e a agenda que a evidência sustenta.',
+    'A leitura brasileira do NCB: nove capacidades nacionais medidas com dados públicos, cada uma com a solidez da evidência ao lado, as instituições que executam políticas públicas e a agenda calculada a partir dos dados.',
 }
 
 /**
@@ -62,6 +68,12 @@ export const metadata = {
  * not the benchmark in Portuguese. Every number is read from the same JSON the
  * ground layer reads, and the deep method pages stay in English on purpose, so
  * a claim made here can always be checked against its source. See D69.
+ *
+ * It opens on what the claim test supports, computed from the release the way
+ * `/thesis` computes it, and the verdict sits on this page in Portuguese. It
+ * describes and never prescribes: the agenda's three groups are named for
+ * what they hold, not for what to do with them. See D130, D137, D138 and
+ * D158.
  */
 export default async function BrazilLayerPage() {
   const layer = countryLayer('BRA')
@@ -77,10 +89,13 @@ export default async function BrazilLayerPage() {
   const evidence = await loadEvidence()
   const brazilEvidence = agenda?.ownEvidence.length ?? 0
   const scoredCount = INDICATORS.filter(isScored).length
+  const diag = await loadDiagnostics()
+  const verdict = diag ? readVerdictPtBr(diag) : null
 
   const agendaSection = layerSection(layer, 'agenda')
   const institutionsSection = layerSection(layer, 'institutions')
   const localSection = layerSection(layer, 'local')
+  const supportSection = layerSection(layer, 'support')
 
   const s = PT_BR.agenda
   const trendLine = (d: CountryAgenda['dimensions'][number]): string =>
@@ -93,32 +108,43 @@ export default async function BrazilLayerPage() {
         })
       : s.noTrend
 
-  const kindLabel = { raise: 'Elevar', measure: 'Medir antes de gerir', hold: 'Manter' } as const
+  /* What each group holds, never what to do with it (D130). The threshold is
+   * the agenda's own. */
+  const kindLabel = {
+    raise: `Abaixo de ${RAISE_BELOW}, com evidência utilizável`,
+    measure: 'Evidência fraca',
+    hold: `${RAISE_BELOW} ou mais, com evidência utilizável`,
+  } as const
 
   return (
     <>
       <PageTitle>O que o Brasil é capaz de fazer?</PageTitle>
       <Headline>
-        Nove dimensões de capacidade, medidas com dados públicos. A forma mostra o perfil do país;
-        não há ranking. Cada nota vem com seus indicadores e a solidez da evidência.
+        Nove capacidades medidas com dados públicos. Cada pontuação vem com os indicadores em que
+        se apoia e com a solidez da evidência ao lado, e não há classificação geral.
       </Headline>
-      <p className="mb-10 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-        Riqueza e capacidade são propriedades diferentes. Países com a mesma renda podem ter perfis
-        opostos. A forma mostra onde uma intervenção pode ajudar.
-      </p>
+      {verdict?.opening ? (
+        <p className="mb-10 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
+          {verdict.opening}{' '}
+          <Link href={layerVerdictHref(layer)} className="underline underline-offset-4">
+            Veja o resultado do teste
+          </Link>
+          .
+        </p>
+      ) : null}
       <p className="-mt-6 mb-10 max-w-3xl text-lg leading-relaxed">
-        Esta é a leitura brasileira do benchmark. Ela reúne o que o projeto apurou sobre o Brasil:
-        a forma nacional, a agenda calculada, o mapa das instituições que entregam política pública
-        e a variação entre os estados. O benchmark comparativo, com {total} países na mesma régua,
-        continua em inglês e é a fonte de cada número desta página. O código e os dados são
-        abertos.{' '}
+        Esta é a leitura brasileira do NCB. Ela reúne o que o projeto apurou sobre o Brasil: o
+        perfil nacional, a agenda calculada, o mapa das instituições que executam políticas públicas
+        e a variação entre os estados. A comparação internacional, com {total} países na mesma
+        escala, está em inglês e é a fonte de cada número desta página. O código e os dados são
+        abertos e estão{' '}
         <a
           href={REPO_URL}
           target="_blank"
           rel="noreferrer"
           className="underline underline-offset-4"
         >
-          Abra o repositório no GitHub
+          no repositório do GitHub
         </a>
         .
       </p>
@@ -127,9 +153,9 @@ export default async function BrazilLayerPage() {
           would be a headline number, and there is none on purpose. */}
       <div className="mb-16 grid grid-cols-2 gap-3 sm:grid-cols-5">
         {[
-          { n: total, label: 'países na mesma régua' },
-          { n: DIMENSIONS.length, label: 'dimensões de capacidade' },
-          { n: scoredCount, label: 'indicadores com nota' },
+          { n: total, label: 'países na mesma escala' },
+          { n: DIMENSIONS.length, label: 'capacidades' },
+          { n: scoredCount, label: 'indicadores com pontuação' },
           ...(agenda ? [{ n: agenda.gapCount, label: 'lacunas declaradas' }] : []),
           { n: evidence.length, label: 'registros de evidência' },
         ].map((t) => (
@@ -142,7 +168,7 @@ export default async function BrazilLayerPage() {
 
       <Section
         title="O Brasil é o primeiro caso de campo"
-        hint={`Os ${total} países usam as mesmas dimensões, os mesmos indicadores e a mesma régua. O Brasil é o único que também tem uma camada própria.`}
+        hint={`Os ${total} países usam as mesmas capacidades, os mesmos indicadores e a mesma escala. O Brasil é o único que também tem uma camada própria.`}
       >
         <div className="grid gap-10 lg:grid-cols-2">
           {brazil ? (
@@ -164,12 +190,12 @@ export default async function BrazilLayerPage() {
               </div>
               <ul className="mt-3 max-w-md space-y-1 text-xs leading-relaxed text-[var(--muted)]">
                 <li>
-                  Aresta tracejada e vértice vazado marcam evidência fraca. O tracejado abre quando
-                  a solidez da evidência cai; a nota não muda.
+                  Aresta tracejada e vértice vazado indicam evidência fraca. O tracejado se abre à
+                  medida que a solidez da evidência cai; a pontuação não muda.
                 </li>
                 <li>
-                  A régua vai de 0 a 100. Uma nota 10 fica perto do piso; não é 10% da capacidade.
-                  Eixos sem nota ficam vazios.
+                  A escala vai de 0 a 100. Uma pontuação 10 fica perto do piso e não significa 10%
+                  da capacidade. Eixos sem pontuação ficam vazios.
                 </li>
               </ul>
             </div>
@@ -178,7 +204,8 @@ export default async function BrazilLayerPage() {
           {split && agenda ? (
             <div className="max-w-xl space-y-6">
               <p className="text-lg leading-relaxed">
-                A agenda do Brasil, recalculada a cada rodada:
+                A agenda do Brasil, recalculada a cada versão dos dados, agrupa as capacidades
+                assim:
               </p>
               {(['raise', 'measure', 'hold'] as const).map((kind) =>
                 split[kind].length > 0 ? (
@@ -197,7 +224,7 @@ export default async function BrazilLayerPage() {
                 ) : null,
               )}
               <p className="text-lg leading-relaxed">
-                A agenda explica cada linha, com fontes, lacunas e entregas documentadas.
+                A agenda detalha cada capacidade, com fontes, lacunas e entregas documentadas.
               </p>
               {agendaSection ? (
                 <p>
@@ -219,10 +246,36 @@ export default async function BrazilLayerPage() {
         </div>
       </Section>
 
+      {/* The claim test, computed from the release the way /thesis computes
+          it, in Portuguese. The opening above links here. See D158. */}
+      {verdict ? (
+        <Section id="teste" title="Quanto disto é renda?">
+          <div className="max-w-3xl space-y-4 text-lg leading-relaxed">
+            <p>{verdict.claim}</p>
+            <p>{verdict.shareSentence}</p>
+            {verdict.incomeSentence ? <p>{verdict.incomeSentence}</p> : null}
+            {verdict.strongSentence ? <p>{verdict.strongSentence}</p> : null}
+            {verdict.weakSentence ? <p>{verdict.weakSentence}</p> : null}
+            {verdict.profileSentence ? <p>{verdict.profileSentence}</p> : null}
+            <p className="text-[var(--muted)]">
+              O argumento completo, com o histórico do teste a cada versão, está na{' '}
+              <Link href={thesisHref} className="underline underline-offset-4">
+                tese
+              </Link>
+              , e cada número, regra e hipótese nula está nos{' '}
+              <Link href={diagnosticsHref} className="underline underline-offset-4">
+                diagnósticos
+              </Link>
+              , as duas páginas em inglês.
+            </p>
+          </div>
+        </Section>
+      ) : null}
+
       {agenda ? (
         <Section
-          title="As nove dimensões"
-          hint="Cada cartão mostra nota, solidez da evidência, tendência e estado da medição. Cheio = observado; vazio = lacuna; cortado = base rejeitada."
+          title="As nove capacidades"
+          hint="Cada cartão mostra a pontuação, a solidez da evidência, a tendência e o estado da medição. Quadrado cheio: indicador observado; vazio: lacuna; riscado: base rejeitada."
         >
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {agenda.dimensions.map((d) => (
@@ -236,13 +289,13 @@ export default async function BrazilLayerPage() {
                   <h3 className="text-xl font-medium tracking-tight">
                     {PT_BR.dimensions[d.dimension]}
                   </h3>
-                  <Score value={d.score} size="sm" nullLabel={s.noScore} />
+                  <Score value={d.score} size="sm" nullLabel={s.noScore} locale={PT_BR.numberLocale} />
                 </div>
                 <p className="mt-2 text-xs leading-relaxed text-[var(--muted)]">
                   {PT_BR.questions[d.dimension]}
                 </p>
                 <div className="mt-4 flex flex-col gap-2">
-                  <Confidence value={d.confidence} />
+                  <Confidence value={d.confidence} locale={PT_BR.numberLocale} />
                   <span className="inline-flex items-center gap-1.5 text-xs text-[var(--muted)]">
                     <Icon
                       name={
@@ -319,7 +372,7 @@ export default async function BrazilLayerPage() {
                     <h3 className="text-xl font-medium tracking-tight">
                       {PT_BR.dimensions[d.dimension]}
                     </h3>
-                    <Score value={d.score} size="sm" nullLabel={s.noScore} />
+                    <Score value={d.score} size="sm" nullLabel={s.noScore} locale={PT_BR.numberLocale} />
                   </div>
                   <ul className="mt-4 space-y-3">
                     {d.conditions.map((c) => (
@@ -357,8 +410,8 @@ export default async function BrazilLayerPage() {
       ) : null}
 
       <Section
-        title="A nota nacional é só a primeira camada"
-        hint="O Brasil tem vários centros de ação. A camada reúne o que a comparação internacional não alcança."
+        title="A pontuação nacional é só a primeira camada"
+        hint="O Brasil tem vários centros de ação. A camada brasileira reúne o que a comparação internacional não alcança."
       >
         <div className="grid gap-5 sm:grid-cols-2">
           {institutionsSection ? (
@@ -368,9 +421,9 @@ export default async function BrazilLayerPage() {
             >
               <h3 className="text-xl font-medium tracking-tight">Instituições</h3>
               <p className="mt-2 text-lg leading-relaxed text-[var(--muted)]">
-                Quem autoriza, financia, regula, controla, aprende e entrega. O mapa explica
-                funções e vínculos, com fonte em cada relação. Ele não mede desempenho e não altera
-                nenhuma nota.
+                Quem autoriza, financia, regula, controla, produz conhecimento e executa. O mapa
+                explica funções e vínculos, com fonte em cada relação. Ele não mede desempenho e
+                não altera nenhuma pontuação.
               </p>
             </Link>
           ) : null}
@@ -379,11 +432,13 @@ export default async function BrazilLayerPage() {
               href={layerSectionHref(layer, localSection)}
               className="rounded-xl border border-[var(--rule)] p-5 transition-all duration-200 hover:border-[var(--foreground)]"
             >
-              <h3 className="text-xl font-medium tracking-tight">{localSection.label}</h3>
+              <h3 className="text-xl font-medium tracking-tight">
+                {localSection.label}, em inglês
+              </h3>
               <p className="mt-2 text-lg leading-relaxed text-[var(--muted)]">
                 Um agregado federal responde à pergunta comparativa e esconde a variação entre as
-                unidades que entregam a política. A leitura subnacional mostra essa faixa, com a
-                fonte e a regra de reconciliação à vista. Esta página ainda está em inglês.
+                unidades que executam a política. A leitura subnacional mostra essa faixa, com a
+                fonte e a regra de conciliação à vista. Ela ainda não tem versão em português.
               </p>
             </Link>
           ) : null}
@@ -391,8 +446,8 @@ export default async function BrazilLayerPage() {
       </Section>
 
       <Section
-        title="A América Latina usa a mesma régua"
-        hint={`Os ${LATAM_ISO3.length} países usam os mesmos indicadores e a mesma régua. Perfis diferentes mostram o que a renda não explica. Eixos vazios mostram dados ausentes. Abra uma forma para ver o perfil, no benchmark comparativo, em inglês.`}
+        title="A América Latina está na mesma escala"
+        hint={`Os ${LATAM_ISO3.length} países usam os mesmos indicadores e a mesma escala. Eixos vazios indicam dados ausentes. Cada perfil abre a página do país na comparação internacional, em inglês.`}
       >
         <DimensionLegend names={PT_BR.dimensions} />
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -435,14 +490,14 @@ export default async function BrazilLayerPage() {
       </Section>
 
       <Section
-        title="Nota e solidez da evidência ficam separadas"
-        hint="A nota mostra a posição na régua. A solidez da evidência mostra cobertura, atualidade e qualidade da fonte. Os números ficam lado a lado e dados ausentes não são imputados."
+        title="Pontuação e solidez da evidência ficam separadas"
+        hint="A pontuação mostra a posição na escala. A solidez da evidência mostra cobertura, atualidade e qualidade das fontes. Os dois números ficam lado a lado, e dados ausentes não são imputados."
       >
         <div className="max-w-3xl space-y-4 text-lg leading-relaxed">
           <p>
-            Coordenação e Confiança, centrais à tese, são hoje as dimensões mais difíceis de medir
-            com dados internacionais comparáveis. Parte do que existe se correlaciona com renda. O
-            benchmark registra essa fraqueza na{' '}
+            Coordenação e Confiança, centrais na tese, são hoje as capacidades mais difíceis de
+            medir com dados internacionais comparáveis, e parte do que existe se correlaciona com a
+            renda. O NCB registra essa fraqueza na{' '}
             <Link href={limitsHref} className="underline underline-offset-4">
               página de limites conhecidos
             </Link>
@@ -450,8 +505,8 @@ export default async function BrazilLayerPage() {
           </p>
           {agenda ? (
             <p>
-              {agenda.gapCount} indicadores pedidos ainda não têm base internacional comparável.
-              Cada lacuna reduz a solidez da evidência e entra na agenda de coleta.
+              {agenda.gapCount} indicadores previstos no modelo ainda não têm base internacional
+              comparável. Cada lacuna reduz a solidez da evidência e entra na agenda de coleta.
             </p>
           ) : null}
         </div>
@@ -459,7 +514,7 @@ export default async function BrazilLayerPage() {
 
       <Section
         title="A camada brasileira não muda nenhum número"
-        hint="O projeto não publica uma segunda cópia do benchmark em português. Ids, registro de indicadores, JSON, método e decisões permanecem em inglês, e esta camada lê exatamente esses arquivos."
+        hint="O projeto não publica uma segunda cópia do NCB em português. Identificadores, registro de indicadores, arquivos de dados, método e decisões permanecem em inglês, e esta camada lê exatamente esses arquivos."
       >
         <div className="max-w-3xl space-y-4 text-lg leading-relaxed">
           <p>
@@ -467,73 +522,81 @@ export default async function BrazilLayerPage() {
             <Link href={methodHref} className="underline underline-offset-4">
               método
             </Link>{' '}
-            explica como uma estatística vira nota. O{' '}
+            explica como uma estatística vira pontuação. O{' '}
             <Link href={glossaryHref} className="underline underline-offset-4">
               glossário
             </Link>{' '}
             define os termos destas páginas. O{' '}
             <Link href={decisionsHref} className="underline underline-offset-4">
-              log de decisões
+              registro de decisões
             </Link>{' '}
-            registra as escolhas metodológicas e o que as derrubaria. Os{' '}
+            guarda cada escolha metodológica e o que a derrubaria, e os{' '}
             <Link href={limitsHref} className="underline underline-offset-4">
               limites conhecidos
             </Link>{' '}
-            mostram onde o benchmark falha. Tudo em inglês, aberto e datado.
+            mostram onde o NCB erra. Todas essas páginas estão em inglês, abertas e datadas.
           </p>
           <p>
             Os{' '}
             <Link href={countriesHref} className="underline underline-offset-4">
               {total} países medidos
             </Link>{' '}
-            e suas agendas ficam no benchmark comparativo. Cada um tem a mesma leitura calculada da
-            mesma régua.
+            e as agendas de cada um estão na comparação internacional, todos lidos da mesma escala.
           </p>
         </div>
       </Section>
 
       <Section
         title="O próximo teste é o uso"
-        hint="Escolas de governo, institutos de pesquisa, bancos, agências de fomento e órgãos de estatística já podem usar o instrumento."
+        hint="Quem pesquisa, ensina ou decide política pública já pode usar o instrumento e dizer onde ele falha."
       >
         <ul className="max-w-3xl list-disc space-y-4 pl-5 text-lg leading-relaxed">
           <li>
-            Ler o diagnóstico. A agenda mostra o que elevar, medir primeiro e manter, com as fontes
-            à vista.
+            Ler o diagnóstico. A agenda mostra as capacidades com as pontuações mais baixas, as de
+            evidência fraca e as de pontuação mais alta, com as fontes à vista.
           </li>
           <li>
-            Testar o método. O log registra cada escolha e o que a derrubaria; os diagnósticos
-            testam a sensibilidade à renda. A revisão independente está aberta.
+            Testar o método. O registro de decisões guarda cada escolha e o que a derrubaria, e os
+            diagnósticos testam a sensibilidade à renda.{' '}
+            <Link href={layerReviewHref(layer)} className="underline underline-offset-4">
+              A revisão independente está aberta
+            </Link>
+            .
           </li>
           <li>
-            Preencher uma lacuna. Uma série comparável para pelo menos dois países pode virar um
-            indicador com nota.
+            Preencher uma lacuna. Uma série comparável que cubra pelo menos dois países pode virar
+            um indicador com pontuação.
           </li>
           <li>
             Registrar evidência. Entregas que os indicadores não alcançam entram como registros
-            nomeados. Hoje são {evidence.length}, {brazilEvidence} sobre o Brasil. Elas mantêm
-            visível o que o país já fez.
+            nomeados. Hoje são {evidence.length}, {brazilEvidence} sobre o Brasil, e eles mantêm à
+            vista o que o país já fez.
           </li>
         </ul>
-        <p className="mt-6 max-w-3xl text-lg leading-relaxed">
-          A Envisioning mantém o projeto e procura parceiros institucionais para a próxima etapa. A
-          conversa começa em{' '}
-          <a href="https://envisioning.com" className="underline underline-offset-4" rel="noopener">
-            envisioning.com
-          </a>
-          .
-        </p>
+        {supportSection ? (
+          <p className="mt-6 max-w-3xl text-lg leading-relaxed">
+            A Envisioning mantém o projeto com recursos próprios. As formas de participar, do uso à
+            revisão externa e à abertura de dados, estão em{' '}
+            <Link
+              href={layerSectionHref(layer, supportSection)}
+              className="underline underline-offset-4"
+            >
+              {supportSection.label}
+            </Link>
+            .
+          </p>
+        ) : null}
       </Section>
 
       <Section
         title="O próximo trabalho"
-        hint={`O protótipo está publicado${data.version ? ` na versão ${data.version}` : ''}, com ${total} países. Agora precisa ficar seguro para citação.`}
+        hint={`O protótipo está publicado${data.version ? `, na versão ${data.version} dos dados,` : ''} com ${total} países. O próximo passo é torná-lo seguro para citação.`}
       >
         <div className="grid gap-5 lg:grid-cols-3">
           {[
             'Fortalecer o método. Revisão independente, melhor medição de Coordenação e Confiança e um painel de modelos com proveniência registrada.',
-            'Preencher lacunas. Parcerias com produtores de dados podem transformar a agenda em séries publicadas e elevar a solidez da evidência.',
-            'Medir intervenções. Repetir diagnóstico e medição para descobrir o que move uma capacidade.',
+            'Preencher lacunas. Parcerias com produtores de dados podem transformar a agenda de coleta em séries publicadas e aumentar a solidez da evidência.',
+            'Medir intervenções. Repetir o diagnóstico ao longo do tempo para saber o que move uma capacidade.',
           ].map((text, i) => (
             <div key={i} className="rounded-xl border border-[var(--rule)] p-5">
               <div className="text-3xl font-light text-[var(--muted)]">{i + 1}</div>

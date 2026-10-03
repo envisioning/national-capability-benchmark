@@ -1,124 +1,124 @@
 # Agenda de capacidades: Reino Unido
 
-*Gerado em 2026-10-03*
+*Gerada em 2026-10-03*
 
-A régua inclui 125 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
+A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
 ## Onde o Reino Unido está
 
-| Dimensão | Nota | Solidez | Tendência |
+| Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 71,8 | 0,46 (utilizável) | +3,3 em 10 anos, sobre 2 indicadores |
-| Agência | 92,7 | 0,41 (fraca) | sem base de tendência |
-| Coordenação | 90,5 | 0,23 (muito fraca) | sem base de tendência |
-| Confiança | 90,5 | 0,3 (fraca) | sem base de tendência |
-| Aprendizagem | 80,3 | 0,55 (utilizável) | sem base de tendência |
-| Experimentação | 71,2 | 0,33 (fraca) | +22,1 em 10 anos, sobre 3 indicadores |
-| Adaptação | 70,5 | 0,62 (utilizável) | sem base de tendência |
-| Construção | 62,8 | 0,57 (utilizável) | +0,3 em 10 anos, sobre 3 indicadores |
-| Propósito compartilhado | 75,6 | 0,28 (fraca) | +3,3 em 10 anos, sobre 2 indicadores |
+| Antecipação | 71,8 | 0,46 (utilizável) | +3,3 em 10 anos, com base em 2 indicadores |
+| Agência | 92,7 | 0,41 (fraca) | sem tendência comparável |
+| Coordenação | 90,5 | 0,23 (muito fraca) | sem tendência comparável |
+| Confiança | 90,5 | 0,3 (fraca) | sem tendência comparável |
+| Aprendizagem | 80,3 | 0,55 (utilizável) | sem tendência comparável |
+| Experimentação | 71,2 | 0,33 (fraca) | +22,1 em 10 anos, com base em 3 indicadores |
+| Adaptação | 70,5 | 0,62 (utilizável) | sem tendência comparável |
+| Construção | 62,8 | 0,57 (utilizável) | +0,3 em 10 anos, com base em 3 indicadores |
+| Propósito compartilhado | 75,6 | 0,28 (fraca) | +3,3 em 10 anos, com base em 2 indicadores |
 
-## Dimensões para medir primeiro
+## Dimensões com evidência fraca
 
-A solidez da evidência está abaixo da faixa utilizável. Primeiro, produza evidência.
+A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
 
 ### Coordenação: solidez 0,23, muito fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
 
-- Baseada em 2 indicadores observados.
+- A pontuação se apoia em 2 indicadores observados.
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
+- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico.
 
 ### Propósito compartilhado: solidez 0,28, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
-- Baseada em 2 indicadores observados.
+- A pontuação se apoia em 2 indicadores observados.
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
-- Bases rejeitadas: Voz e responsabilização.
+- Bases rejeitadas: Voz e prestação de contas.
 
 ### Confiança: solidez 0,3, fraca
 
-Quanta cooperação é possível além das redes pessoais imediatas?
+Quanta cooperação é possível para além do círculo pessoal mais próximo?
 
-- Baseada em 3 indicadores observados.
+- A pontuação se apoia em 3 indicadores observados.
 - Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídio intencional.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídios dolosos.
 
 ### Experimentação: solidez 0,33, fraca
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
-- Baseada em 4 indicadores observados.
-- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas nascidas de universidades.
+- A pontuação se apoia em 4 indicadores observados.
+- Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
 - Bases rejeitadas: Parcela empresarial do P&D.
 
 ### Agência: solidez 0,41, fraca
 
-Quão capazes são pessoas e organizações de transformar uma intenção em ação?
+Em que medida pessoas e organizações conseguem transformar intenção em ação?
 
-- Baseada em 3 indicadores observados.
+- A pontuação se apoia em 3 indicadores observados.
 - Lacunas declaradas: Adultos que realizam tarefas digitais.
 
-## Dimensões para manter
+## Dimensões com as pontuações mais altas
 
-Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
+Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Aprendizagem: 80,3, solidez utilizável
 - Antecipação: 71,8, solidez utilizável
 - Adaptação: 70,5, solidez utilizável
 - Construção: 62,8, solidez utilizável
 
-## O que o Reino Unido tem para trabalhar
+## Com o que o Reino Unido conta
 
-Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na nota, na solidez da evidência nem na tendência. Lidas contra a nota, mostram se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.
+As condições descrevem com o que um país conta: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na pontuação, na solidez da evidência nem na tendência. Lidas ao lado da pontuação, permitem ver se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.
 
 | Dimensão | Condição | Valor | Ano | Posição |
 | --- | --- | --- | --- | --- |
 | Antecipação | Dispêndio em P&D | 2,7 % do PIB | 2023 | 12º de 118 |
 | Antecipação | Pesquisadores em P&D | 4.472,7 por milhão de pessoas | 2017 | 25º de 114 |
-| Antecipação | Servidores seguros de internet | 68.394,9 por milhão de pessoas | 2024 | 14º de 125 |
+| Antecipação | Servidores de internet seguros | 68.394,9 por milhão de pessoas | 2024 | 14º de 125 |
 | Agência | Pessoas que usam a internet | 95,5 % da população | 2024 | 15º de 125 |
-| Agência | Titularidade de conta financeira | 99,3 % das pessoas com 15 anos ou mais | 2024 | 3º de 122 |
+| Agência | Adultos com conta financeira | 99,3 % das pessoas com 15 anos ou mais | 2024 | 3º de 122 |
 | Agência | Crédito ao setor privado | 112,4 % do PIB | 2024 | 16º de 124 |
 | Aprendizagem | Matrícula no ensino superior | 80,4 % (taxa bruta) | 2023 | 22º de 124 |
 | Aprendizagem | Dispêndio público em educação | 5,9 % do PIB | 2021 | 18º de 125 |
-| Aprendizagem | Parcela técnica do ensino médio | 31,8 % das matrículas no ensino secundário | 2018 | 16º de 125 |
+| Aprendizagem | Educação profissional no ensino secundário | 31,8 % das matrículas no ensino secundário | 2018 | 16º de 125 |
 | Adaptação | Participação na força de trabalho | 76,7 % das pessoas com 15 anos ou mais | 2025 | 35º de 125 |
 | Adaptação | Assinaturas de banda larga fixa | 42,2 por 100 pessoas | 2024 | 13º de 125 |
 | Adaptação | Perdas na transmissão de eletricidade | 9,9 % da produção | 2024 | 66º de 117 |
 | Adaptação | Emprego informal | 19,8 % do emprego | 2018 | 33º de 102 |
-| Construção | Produto por trabalhador | 111.234,5 US$ PPC constantes de 2021 | 2025 | 17º de 123 |
+| Construção | Produto por pessoa ocupada | 111.234,5 US$ PPC constantes de 2021 | 2025 | 17º de 123 |
 
 ## Agenda de medição
 
-18 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+18 indicadores previstos no modelo ainda não têm base comparável, e cada um reduz a solidez da evidência. Uma lacuna passa a entrar na pontuação quando uma série comparável cobre pelo menos dois países.
 
-| Dimensão | Indicador ausente | O que ele pergunta |
+| Dimensão | Indicador ausente | O que ele mediria |
 | --- | --- | --- |
 | Antecipação | Capacidade governamental de prospecção | Existência, mandato e continuidade de uma função nacional de prospecção estratégica. |
 | Antecipação | Compromissos de pesquisa de longo prazo | Novos auxílios públicos de pesquisa concedidos por concurso com duração de cinco anos ou mais, como parcela de todos os auxílios públicos por concurso concedidos no ano. |
 | Agência | Adultos que realizam tarefas digitais | Parcela de adultos que realizaram uma tarefa digital determinada nos últimos três meses, como enviar uma mensagem com arquivo anexo, mover um arquivo entre dispositivos ou usar uma fórmula em planilha, contada tarefa por tarefa e nunca como nível de habilidade. |
-| Coordenação | Colaboração universidade-empresa | Intensidade da colaboração de pesquisa entre universidades e empresas. |
-| Coordenação | Colaboração público-privada | Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais. |
+| Coordenação | Colaboração universidade-empresa | Intensidade da colaboração em pesquisa entre universidades e empresas. |
+| Coordenação | Colaboração público-privada | Frequência e escala da execução conjunta, por governo e empresas, de objetivos nacionais. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
-| Confiança | Taxa de resolução de processos judiciais | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
-| Aprendizagem | Participação de adultos em aprendizagem | Parcela de adultos em educação e treinamento, formal ou não, nos últimos 12 meses. |
+| Confiança | Taxa de resolução de processos judiciais | Processos cíveis e comerciais encerrados em um ano, como parcela dos processos ajuizados no mesmo ano. |
+| Aprendizagem | Participação de adultos em aprendizagem | Parcela de adultos em educação ou capacitação, formal ou não, nos últimos 12 meses. |
 | Experimentação | Operações de capital de risco | Primeiras rodadas de capital de risco fechadas no ano por empresas sediadas no país, por milhão de pessoas, contadas por operação e nunca por valor. |
-| Experimentação | Empresas em sandboxes regulatórios | Empresas admitidas em um sandbox regulatório ou regime de teste controlado no ano, e empresas que o concluíram, por milhão de pessoas, somadas entre todos os reguladores do país. |
-| Experimentação | Empresas nascidas de universidades | Empresas criadas para comercializar pesquisa universitária, por milhão de habitantes. |
-| Adaptação | Preparação e recuperação de desastres | Capacidade demonstrada de preparação e recuperação diante de choques graves. |
+| Experimentação | Empresas em sandboxes regulatórios | Empresas admitidas no ano em um sandbox regulatório ou regime de teste controlado, e empresas que o concluíram, por milhão de pessoas, somadas entre todos os reguladores do país. |
+| Experimentação | Empresas derivadas de pesquisa universitária | Empresas criadas para levar ao mercado pesquisa feita em universidades, por milhão de pessoas. |
+| Adaptação | Preparação e recuperação de desastres | Capacidade demonstrada de se preparar para choques graves e de se recuperar deles. |
 | Adaptação | Capacidade de resposta institucional | Velocidade com que regras e programas públicos mudam em resposta a novas condições. |
 | Construção | Entrega de grandes projetos | Desempenho de custo e prazo de grandes projetos públicos de infraestrutura. |
 | Construção | Empresas jovens que ganham escala | Parcela de empresas jovens que atingem patamares relevantes de emprego ou faturamento. |
-| Propósito compartilhado | Sentimento de pertencimento nacional | Identificação e vínculo com a comunidade nacional, autodeclarados, distintos do orgulho pela nação. |
-| Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
+| Propósito compartilhado | Sentimento de pertencimento nacional | Identificação e vínculo com a comunidade nacional, declarados pelos entrevistados, distintos do orgulho pela nação. |
+| Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo como voluntários a alguma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 
-## O que o Reino Unido construiu e nenhum indicador conta
+## O que o Reino Unido construiu e nenhum indicador capta
 
-Estas são mudanças institucionais documentadas em Reino Unido que o framework registra como evidência. Elas aparecem ao lado da nota e não mudam a nota nem a solidez da evidência.
+São mudanças institucionais documentadas neste país, registradas como evidência, entre construções e retrocessos. Aparecem ao lado da pontuação e não alteram a pontuação nem a solidez da evidência.
 
 - **Sure Start children's centres, and their erosion** (Construção). England built a national network of early-childhood centres reaching 3,632 sites by August 2009, then closed or hollowed out a large part of it after funding was cut, with the official count at 3,123 by October 2017 and independent estimates near 1,000 closures.
 - **The FCA regulatory sandbox** (Experimentação). The United Kingdom's financial regulator built the first regulatory sandbox in 2016, and by the end of 2022 had accepted 168 firms and products to test with real customers under supervision.
@@ -135,4 +135,4 @@ Estas são mudanças institucionais documentadas em Reino Unido que o framework 
 
 ## Contribua
 
-Preencha uma lacuna, registre uma evidência ou conteste um indicador em https://github.com/envisioning/national-capability-benchmark. Os documentos explicam o método e suas decisões.
+Para preencher uma lacuna, registrar uma evidência ou contestar um indicador, use https://github.com/envisioning/national-capability-benchmark. Os documentos do repositório explicam o método e as decisões por trás dele.

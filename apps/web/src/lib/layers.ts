@@ -89,7 +89,9 @@ export const COUNTRY_LAYERS: readonly CountryLayer[] = [
        * layer links to it until it is written in Portuguese, at which point
        * this slug becomes 'estados' and nothing else changes. */
       { id: 'local', label: 'Estados', slug: null },
-      { id: 'support', label: 'Apoie', slug: 'apoie' },
+      /* Labelled Participe since D158, when the page stopped asking for
+       * funding; the address keeps its slug. */
+      { id: 'support', label: 'Participe', slug: 'apoie' },
     ],
   },
   ...SPANISH_LAYERS.map(
@@ -102,7 +104,7 @@ export const COUNTRY_LAYERS: readonly CountryLayer[] = [
       overviewLabel: 'Resumen',
       /* The computed sections only. No institution map is published for these
        * countries (INSTITUTION_MAPS), no subnational reading exists, and the
-       * support page is Brazil's own funding venues, so none is declared. */
+       * participation page is written for Brazil, so none is declared. */
       sections: [
         { id: 'agenda', label: 'Agenda', slug: 'agenda' },
         { id: 'map', label: ES.capabilityMap.index.navLabel, slug: 'mapa' },

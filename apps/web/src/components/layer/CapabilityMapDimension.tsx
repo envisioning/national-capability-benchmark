@@ -202,13 +202,13 @@ export async function CapabilityMapDimension({ reading, slug }: { reading: MapRe
             <span className="text-xs uppercase tracking-[0.05em] text-[var(--muted)]">
               {m.scoreLabel}
             </span>
-            <DimensionScore dim={map} size="lg" notMeasured={lex.agenda.noScore} />
+            <DimensionScore dim={map} size="lg" notMeasured={lex.agenda.noScore} locale={lex.numberLocale} />
           </span>
           <span className="inline-flex items-center gap-3">
             <span className="text-xs uppercase tracking-[0.05em] text-[var(--muted)]">
               {m.confidenceLabel}
             </span>
-            <Confidence value={map.confidence} size="md" />
+            <Confidence value={map.confidence} size="md" locale={lex.numberLocale} />
             <span className="text-xs text-[var(--muted)]">
               {fill(m.bandLine, { band: lex.bands[map.band] })}
             </span>
@@ -261,11 +261,11 @@ export async function CapabilityMapDimension({ reading, slug }: { reading: MapRe
               </div>
               <span className="inline-flex items-center gap-2">
                 <span className="text-xs text-[var(--muted)]">{m.colPosition}</span>
-                <Score value={row.normalized} size="sm" nullLabel={m.noValue} />
+                <Score value={row.normalized} size="sm" nullLabel={m.noValue} locale={lex.numberLocale} />
               </span>
               <span className="inline-flex items-center gap-2">
                 <span className="text-xs text-[var(--muted)]">{m.colPeerMedian}</span>
-                <Score value={row.peerMedian} size="sm" nullLabel={m.noValue} />
+                <Score value={row.peerMedian} size="sm" nullLabel={m.noValue} locale={lex.numberLocale} />
                 <span className="text-xs tabular-nums text-[var(--muted)]">
                   {fill(m.rowPeers, { n: row.peersWithValue })}
                 </span>
@@ -372,7 +372,7 @@ export async function CapabilityMapDimension({ reading, slug }: { reading: MapRe
                     <span className="tabular-nums text-[var(--muted)]">
                       {money(peer.gdpPerCapita)}, {peer.year}
                     </span>
-                    <Score value={peer.score} size="sm" nullLabel={lex.agenda.noScore} />
+                    <Score value={peer.score} size="sm" nullLabel={lex.agenda.noScore} locale={lex.numberLocale} />
                   </span>
                 </li>
               ))}
@@ -400,6 +400,11 @@ export async function CapabilityMapDimension({ reading, slug }: { reading: MapRe
               conditionLine(m.conditionsMore, split.conditionsMore),
               conditionLine(m.conditionsLess, split.conditionsLess),
               conditionLine(m.conditionsLevel, split.conditionsLevel),
+              /* A condition is compared in published units, so more of one
+               * where less is better would read backwards without this. */
+              m.conditionsLowerBetter
+                ? conditionLine(m.conditionsLowerBetter, split.conditionsLowerBetter)
+                : null,
             ].map((line, i) => (line ? <p key={i}>{line}</p> : null))}
             <p className="text-[var(--muted)]">{m.readingNote}</p>
           </div>

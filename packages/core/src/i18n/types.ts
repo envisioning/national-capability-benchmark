@@ -174,6 +174,12 @@ export type Lexicon = {
   agenda: AgendaStrings
   institutions: InstitutionStrings
   capabilityMap: CapabilityMapStrings
+  /**
+   * Evidence records in this language, by record id: the title and the claim.
+   * The record itself stays English in `data/evidence`; a missing id falls
+   * back to it. A layer lexicon carries the records about its own country.
+   */
+  evidence?: Record<string, { title: string; claim: string }>
 }
 
 /**
@@ -243,6 +249,12 @@ export type CapabilityMapStrings = {
   conditionsMore: string
   conditionsLess: string
   conditionsLevel: string
+  /**
+   * {list}: the conditions just listed where a lower value is better, so a
+   * sentence that says a country has more of one is not read as more of a
+   * good thing. Optional: a lexicon without it prints the comparison alone.
+   */
+  conditionsLowerBetter?: string
   readingNote: string
   noPeers: string
   /** The release publishes income, but not for this country. {countryTopic} See D136. */

@@ -350,18 +350,31 @@ export function readCapabilityMap(map: CapabilityMap): {
   conditionsMore: string[]
   conditionsLess: string[]
   conditionsLevel: string[]
+  /**
+   * The conditions above that read the other way: a lower value is better.
+   * A condition is compared in published units, so "more than the peer
+   * median" of transmission losses is more losses. The page says which ones
+   * after the comparison, so the sentence is never read backwards.
+   */
+  conditionsLowerBetter: string[]
 } {
   const ids = <T extends { id: string; position: MapPosition | null }>(
     xs: T[],
     p: MapPosition,
   ): string[] => xs.filter((x) => x.position === p).map((x) => x.id)
   return {
+    /* A row's position is on the 0 to 100 frame, where higher is always
+     * better, so above the median is better whichever way the raw value
+     * runs. */
     rowsAbove: ids(map.rows, 'above'),
     rowsBelow: ids(map.rows, 'below'),
     rowsLevel: ids(map.rows, 'level'),
     conditionsMore: ids(map.conditions, 'above'),
     conditionsLess: ids(map.conditions, 'below'),
     conditionsLevel: ids(map.conditions, 'level'),
+    conditionsLowerBetter: map.conditions
+      .filter((c) => c.position !== null && c.direction === 'lower_better')
+      .map((c) => c.id),
   }
 }
 

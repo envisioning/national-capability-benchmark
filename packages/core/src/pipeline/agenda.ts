@@ -408,6 +408,14 @@ export const unitName = (lex: Lexicon, unit: string): string => lex.units?.[unit
 export const indicatorDefinition = (lex: Lexicon, id: string): string =>
   lex.indicatorDefinitions[id] ?? INDICATORS_BY_ID[id]?.definition ?? ''
 
+/** An evidence record's title through the lexicon, falling back to the record's English. */
+export const evidenceTitle = (lex: Lexicon, id: string, english: string): string =>
+  lex.evidence?.[id]?.title ?? english
+
+/** An evidence record's claim through the lexicon, falling back to the record's English. */
+export const evidenceClaim = (lex: Lexicon, id: string, english: string): string =>
+  lex.evidence?.[id]?.claim ?? english
+
 function trendCell(lex: Lexicon, trend: AgendaTrend | null): string {
   if (!trend) return lex.agenda.noTrend
   return fill(trend.clamped > 0 ? lex.agenda.trendCellClamped : lex.agenda.trendCell, {
@@ -492,7 +500,7 @@ export function renderAgenda(agenda: CountryAgenda, lex: Lexicon): string {
         lines.push(
           fill(s.evidenceElsewhereLine, {
             list: d.evidenceElsewhere
-              .map((e) => `${e.title} (${countryName(lex, e.iso3)})`)
+              .map((e) => `${evidenceTitle(lex, e.id, e.title)} (${countryName(lex, e.iso3)})`)
               .join('; '),
           }),
         )
@@ -639,7 +647,10 @@ export function renderAgenda(agenda: CountryAgenda, lex: Lexicon): string {
     out.push('')
     out.push(
       agenda.ownEvidence
-        .map((r) => `- **${r.title}** (${lex.dimensions[r.dimension]}). ${r.claim}`)
+        .map(
+          (r) =>
+            `- **${evidenceTitle(lex, r.id, r.title)}** (${lex.dimensions[r.dimension]}). ${evidenceClaim(lex, r.id, r.claim)}`,
+        )
         .join('\n'),
     )
     out.push('')

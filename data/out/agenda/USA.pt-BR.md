@@ -1,53 +1,53 @@
 # Agenda de capacidades: Estados Unidos
 
-*Gerado em 2026-10-03*
+*Gerada em 2026-10-03*
 
-A régua inclui 125 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
+A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, sem classificação geral, e cada pontuação traz ao lado a solidez da evidência. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma pontuação.
 
 ## Onde os Estados Unidos está
 
-| Dimensão | Nota | Solidez | Tendência |
+| Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
-| Antecipação | 70,6 | 0,46 (utilizável) | +0,5 em 10 anos, sobre 2 indicadores |
-| Agência | 82,1 | 0,37 (fraca) | sem base de tendência |
-| Coordenação | 98,8 | 0,23 (muito fraca) | sem base de tendência |
-| Confiança | 69,9 | 0,5 (utilizável) | sem base de tendência |
-| Aprendizagem | 61,6 | 0,55 (utilizável) | sem base de tendência |
-| Experimentação | 50,6 | 0,53 (utilizável) | +0,7 em 10 anos, sobre 3 indicadores |
-| Adaptação | 72,8 | 0,62 (utilizável) | sem base de tendência |
-| Construção | 59,2 | 0,53 (utilizável) | +0,4 em 10 anos, sobre 3 indicadores |
-| Propósito compartilhado | 54,3 | 0,43 (fraca) | -0,8 em 10 anos, sobre 2 indicadores |
+| Antecipação | 70,6 | 0,46 (utilizável) | +0,5 em 10 anos, com base em 2 indicadores |
+| Agência | 82,1 | 0,37 (fraca) | sem tendência comparável |
+| Coordenação | 98,8 | 0,23 (muito fraca) | sem tendência comparável |
+| Confiança | 69,9 | 0,5 (utilizável) | sem tendência comparável |
+| Aprendizagem | 61,6 | 0,55 (utilizável) | sem tendência comparável |
+| Experimentação | 50,6 | 0,53 (utilizável) | +0,7 em 10 anos, com base em 3 indicadores |
+| Adaptação | 72,8 | 0,62 (utilizável) | sem tendência comparável |
+| Construção | 59,2 | 0,53 (utilizável) | +0,4 em 10 anos, com base em 3 indicadores |
+| Propósito compartilhado | 54,3 | 0,43 (fraca) | -0,8 em 10 anos, com base em 2 indicadores |
 
-## Dimensões para medir primeiro
+## Dimensões com evidência fraca
 
-A solidez da evidência está abaixo da faixa utilizável. Primeiro, produza evidência.
+A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
 
 ### Coordenação: solidez 0,23, muito fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
 
-- Baseada em 2 indicadores observados.
+- A pontuação se apoia em 2 indicadores observados.
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
-- Bases rejeitadas: Efetividade do governo, Qualidade regulatória, Desempenho logístico.
+- Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico.
 
 ### Agência: solidez 0,37, fraca
 
-Quão capazes são pessoas e organizações de transformar uma intenção em ação?
+Em que medida pessoas e organizações conseguem transformar intenção em ação?
 
-- Baseada em 3 indicadores observados.
+- A pontuação se apoia em 3 indicadores observados.
 - Lacunas declaradas: Adultos que realizam tarefas digitais.
 
 ### Propósito compartilhado: solidez 0,43, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
-- Baseada em 3 indicadores observados.
+- A pontuação se apoia em 3 indicadores observados.
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
-- Bases rejeitadas: Voz e responsabilização.
+- Bases rejeitadas: Voz e prestação de contas.
 
-## Dimensões para manter
+## Dimensões com as pontuações mais altas
 
-Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
+Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 72,8, solidez utilizável
 - Antecipação: 70,6, solidez utilizável
@@ -56,54 +56,54 @@ Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 - Construção: 59,2, solidez utilizável
 - Experimentação: 50,6, solidez utilizável
 
-## O que os Estados Unidos tem para trabalhar
+## Com o que os Estados Unidos conta
 
-Condições descrevem o que um país tem para trabalhar: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na nota, na solidez da evidência nem na tendência. Lidas contra a nota, mostram se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.
+As condições descrevem com o que um país conta: infraestrutura, acesso, dinheiro, pessoas, matrículas e a própria renda. Cada uma aparece ao lado de uma capacidade e não entra na pontuação, na solidez da evidência nem na tendência. Lidas ao lado da pontuação, permitem ver se o que o país tem se converte no que ele faz. A posição conta os países com valor, do melhor para o pior.
 
 | Dimensão | Condição | Valor | Ano | Posição |
 | --- | --- | --- | --- | --- |
 | Antecipação | Dispêndio em P&D | 3,4 % do PIB | 2023 | 4º de 118 |
 | Antecipação | Pesquisadores em P&D | 4.937,5 por milhão de pessoas | 2022 | 20º de 114 |
-| Antecipação | Servidores seguros de internet | 196.616,1 por milhão de pessoas | 2024 | 5º de 125 |
+| Antecipação | Servidores de internet seguros | 196.616,1 por milhão de pessoas | 2024 | 5º de 125 |
 | Agência | Pessoas que usam a internet | 94,7 % da população | 2024 | 16º de 125 |
-| Agência | Titularidade de conta financeira | 97 % das pessoas com 15 anos ou mais | 2024 | 23º de 122 |
+| Agência | Adultos com conta financeira | 97 % das pessoas com 15 anos ou mais | 2024 | 23º de 122 |
 | Agência | Crédito ao setor privado | 201,3 % do PIB | 2025 | 1º de 124 |
 | Aprendizagem | Matrícula no ensino superior | 79,4 % (taxa bruta) | 2022 | 25º de 124 |
 | Aprendizagem | Dispêndio público em educação | 5,4 % do PIB | 2021 | 24º de 125 |
-| Aprendizagem | Parcela técnica do ensino médio | 0 % das matrículas no ensino secundário | 1996 | 123º de 125 |
+| Aprendizagem | Educação profissional no ensino secundário | 0 % das matrículas no ensino secundário | 1996 | 123º de 125 |
 | Adaptação | Participação na força de trabalho | 73,7 % das pessoas com 15 anos ou mais | 2025 | 51º de 125 |
 | Adaptação | Assinaturas de banda larga fixa | 38,9 por 100 pessoas | 2024 | 18º de 125 |
 | Adaptação | Perdas na transmissão de eletricidade | 5,3 % da produção | 2024 | 23º de 117 |
-| Construção | Produto por trabalhador | 156.983,2 US$ PPC constantes de 2021 | 2025 | 5º de 123 |
+| Construção | Produto por pessoa ocupada | 156.983,2 US$ PPC constantes de 2021 | 2025 | 5º de 123 |
 
 ## Agenda de medição
 
-18 indicadores pedidos não têm uma base comparável, e cada um reduz a solidez da evidência. Uma lacuna vira indicador pontuável quando uma série comparável cobre pelo menos dois países.
+18 indicadores previstos no modelo ainda não têm base comparável, e cada um reduz a solidez da evidência. Uma lacuna passa a entrar na pontuação quando uma série comparável cobre pelo menos dois países.
 
-| Dimensão | Indicador ausente | O que ele pergunta |
+| Dimensão | Indicador ausente | O que ele mediria |
 | --- | --- | --- |
 | Antecipação | Capacidade governamental de prospecção | Existência, mandato e continuidade de uma função nacional de prospecção estratégica. |
 | Antecipação | Compromissos de pesquisa de longo prazo | Novos auxílios públicos de pesquisa concedidos por concurso com duração de cinco anos ou mais, como parcela de todos os auxílios públicos por concurso concedidos no ano. |
 | Agência | Adultos que realizam tarefas digitais | Parcela de adultos que realizaram uma tarefa digital determinada nos últimos três meses, como enviar uma mensagem com arquivo anexo, mover um arquivo entre dispositivos ou usar uma fórmula em planilha, contada tarefa por tarefa e nunca como nível de habilidade. |
-| Coordenação | Colaboração universidade-empresa | Intensidade da colaboração de pesquisa entre universidades e empresas. |
-| Coordenação | Colaboração público-privada | Frequência e escala da entrega conjunta, por governo e empresas, de objetivos nacionais. |
+| Coordenação | Colaboração universidade-empresa | Intensidade da colaboração em pesquisa entre universidades e empresas. |
+| Coordenação | Colaboração público-privada | Frequência e escala da execução conjunta, por governo e empresas, de objetivos nacionais. |
 | Confiança | Confiança nas instituições públicas | Confiança no governo nacional, nos tribunais e no serviço público. |
-| Confiança | Taxa de resolução de processos judiciais | Civil and commercial cases resolved in a year as a share of cases filed in the same year. |
-| Aprendizagem | Participação de adultos em aprendizagem | Parcela de adultos em educação e treinamento, formal ou não, nos últimos 12 meses. |
+| Confiança | Taxa de resolução de processos judiciais | Processos cíveis e comerciais encerrados em um ano, como parcela dos processos ajuizados no mesmo ano. |
+| Aprendizagem | Participação de adultos em aprendizagem | Parcela de adultos em educação ou capacitação, formal ou não, nos últimos 12 meses. |
 | Experimentação | Operações de capital de risco | Primeiras rodadas de capital de risco fechadas no ano por empresas sediadas no país, por milhão de pessoas, contadas por operação e nunca por valor. |
-| Experimentação | Empresas em sandboxes regulatórios | Empresas admitidas em um sandbox regulatório ou regime de teste controlado no ano, e empresas que o concluíram, por milhão de pessoas, somadas entre todos os reguladores do país. |
-| Experimentação | Empresas nascidas de universidades | Empresas criadas para comercializar pesquisa universitária, por milhão de habitantes. |
-| Adaptação | Preparação e recuperação de desastres | Capacidade demonstrada de preparação e recuperação diante de choques graves. |
+| Experimentação | Empresas em sandboxes regulatórios | Empresas admitidas no ano em um sandbox regulatório ou regime de teste controlado, e empresas que o concluíram, por milhão de pessoas, somadas entre todos os reguladores do país. |
+| Experimentação | Empresas derivadas de pesquisa universitária | Empresas criadas para levar ao mercado pesquisa feita em universidades, por milhão de pessoas. |
+| Adaptação | Preparação e recuperação de desastres | Capacidade demonstrada de se preparar para choques graves e de se recuperar deles. |
 | Adaptação | Capacidade de resposta institucional | Velocidade com que regras e programas públicos mudam em resposta a novas condições. |
 | Construção | Entrega de grandes projetos | Desempenho de custo e prazo de grandes projetos públicos de infraestrutura. |
 | Construção | Empresas jovens que ganham escala | Parcela de empresas jovens que atingem patamares relevantes de emprego ou faturamento. |
-| Propósito compartilhado | Sentimento de pertencimento nacional | Identificação e vínculo com a comunidade nacional, autodeclarados, distintos do orgulho pela nação. |
-| Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo voluntário a uma organização no último mês. |
+| Propósito compartilhado | Sentimento de pertencimento nacional | Identificação e vínculo com a comunidade nacional, declarados pelos entrevistados, distintos do orgulho pela nação. |
+| Propósito compartilhado | Voluntariado | Parcela de adultos que dedicaram tempo como voluntários a alguma organização no último mês. |
 | Propósito compartilhado | Polarização política | Grau em que as diferenças políticas se alinham em uma única divisão hostil. |
 
-## O que os indicadores não veem sobre os Estados Unidos
+## O que os indicadores não captam sobre os Estados Unidos
 
-Entregas documentadas ligadas a indicadores ausentes. Elas não afetam as notas nem a solidez da evidência.
+Entregas documentadas ligadas a indicadores ausentes. Elas não alteram as pontuações nem a solidez da evidência.
 
 - **Measles elimination, and its erosion** (Construção). The United States eliminated endemic measles transmission by 2000 through school-entry vaccination requirements, and falling coverage brought 2,777 confirmed cases by August 2026, the most since 1991, against 285 in all of 2024.
 - **Federal funding gaps and the 2019 shutdown** (Propósito compartilhado). The Congressional Research Service records 20 federal funding-gap shutdowns with at least one full day between FY1977 and FY2019, including the 35-day partial shutdown from 21 December 2018 to 25 January 2019, the longest in the period it surveys.
@@ -119,4 +119,4 @@ Entregas documentadas ligadas a indicadores ausentes. Elas não afetam as notas 
 
 ## Contribua
 
-Preencha uma lacuna, registre uma evidência ou conteste um indicador em https://github.com/envisioning/national-capability-benchmark. Os documentos explicam o método e suas decisões.
+Para preencher uma lacuna, registrar uma evidência ou contestar um indicador, use https://github.com/envisioning/national-capability-benchmark. Os documentos do repositório explicam o método e as decisões por trás dele.

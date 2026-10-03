@@ -11,9 +11,9 @@ export const dynamic = 'force-dynamic'
 export const metadata: Metadata = {
   title: 'Agenda de capacidades do Brasil, NCB',
   description:
-    'O que a evidência diz que o Brasil deve elevar, medir antes de gerir ou manter, calculado a partir dos dados públicos.',
+    'A agenda de capacidades do Brasil, calculada a partir dos dados públicos: as pontuações, a solidez da evidência, as lacunas de medição e as entregas documentadas.',
   openGraph: {
-    images: [{ url: ogAgendaHref('BRA'), width: 1200, height: 630, alt: 'Capability agenda for Brazil' }],
+    images: [{ url: ogAgendaHref('BRA'), width: 1200, height: 630, alt: 'Agenda de capacidades do Brasil' }],
   },
   twitter: { card: 'summary_large_image', images: [ogAgendaHref('BRA')] },
 }

@@ -295,12 +295,13 @@ export const EN: Lexicon = {
     scoreBelow:
       '{countryTopic} scores {score} on {dimension}, below the median of the {n} scored peers, which is {median}.',
     scoreLevel: '{countryTopic} scores {score} on {dimension}, level with the median of the {n} scored peers.',
-    rowsAbove: 'Above the peer median: {list}.',
-    rowsBelow: 'Below the peer median: {list}.',
+    rowsAbove: 'Indicators placed above the peer median on the scale: {list}.',
+    rowsBelow: 'Indicators placed below the peer median on the scale: {list}.',
     rowsLevel: 'At the peer median: {list}.',
     conditionsMore: '{countryTopic} has more than the peer median of {list}.',
     conditionsLess: '{countryTopic} has less than the peer median of {list}.',
     conditionsLevel: '{countryTopic} sits at the peer median on {list}.',
+    conditionsLowerBetter: 'On {list}, a lower value is better.',
     readingNote:
       'Each sentence compares one position with one median. Why a difference exists, and what to do about it, lie outside this data.',
     noPeers:
@@ -324,7 +325,7 @@ export const EN: Lexicon = {
         decisions: ['D119'],
       },
       new_export_products_rate: {
-        text: "New export products counts the merchandise lines a country entered over fifteen years, from Harvard's Growth Lab. Exports are gross, so a re-export hub counts what passes through it, and a country that does not report its trade is read from its partners' records. A window this long moves little from one release to the next.",
+        text: "New export products counts the merchandise lines a country entered over fifteen years, from the Growth Lab's trade data. Exports are gross, so a re-export hub counts what passes through it, and a country that does not report its trade is read from its partners' records. A window this long moves little from one release to the next.",
         decisions: ['D149'],
       },
     },
