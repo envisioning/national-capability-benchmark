@@ -116,16 +116,19 @@ export function Section({
   title,
   hint,
   icon,
+  id,
   children,
 }: {
   title: React.ReactNode
   hint?: string
   /** Optional mark for the concept this section covers. Never the only cue. */
   icon?: React.ReactNode
+  /** An anchor, where another page links to this section. */
+  id?: string
   children: React.ReactNode
 }) {
   return (
-    <section className="mb-16">
+    <section id={id} className="mb-16 scroll-mt-32">
       <h2 className="flex items-center gap-3 text-2xl font-light leading-tight sm:text-3xl">
         {icon ? <span className="text-[var(--muted)]">{icon}</span> : null}
         {title}
@@ -189,10 +192,21 @@ export function Td({
  * `DataTable` owns the `<td>`, and a component that emits one as well produces
  * `<td><td>`, which fails hydration and silently kills sorting on the table.
  */
+/**
+ * A number at fixed decimals in a reader's locale: 44,6 on a Portuguese page,
+ * 44.6 everywhere else. Without a locale it is the plain `toFixed` the ground
+ * layer has always printed. See D158.
+ */
+export const fixedIn = (value: number, digits: number, locale?: string): string =>
+  locale
+    ? value.toLocaleString(locale, { minimumFractionDigits: digits, maximumFractionDigits: digits })
+    : value.toFixed(digits)
+
 export function Score({
   value,
   size = 'md',
   nullLabel = 'no data',
+  locale,
 }: {
   value: number | null
   /**
@@ -203,6 +217,8 @@ export function Score({
   size?: 'lg' | 'md' | 'sm'
   /** What a missing value reads as. A language page passes its lexicon's word. */
   nullLabel?: string
+  /** The number format of a language page: its lexicon's `numberLocale`. */
+  locale?: string | undefined
 }) {
   if (value === null || Number.isNaN(value)) {
     return <span className="text-[var(--muted)]">{nullLabel}</span>
@@ -222,7 +238,7 @@ export function Score({
         color: `var(--score-${band.id}-ink)`,
       }}
     >
-      {value.toFixed(1)}
+      {fixedIn(value, 1, locale)}
     </span>
   )
 }
@@ -240,11 +256,14 @@ export function DimensionScore({
   dim,
   size = 'md',
   notMeasured,
+  locale,
 }: {
   dim: { score: number | null; belowCoverageFloor?: boolean; observedIndicators?: number } | null
   size?: 'lg' | 'md' | 'sm'
   /** What a withheld score reads as on a page written in another language. */
   notMeasured?: string
+  /** The number format of a page written in another language. */
+  locale?: string | undefined
 }) {
   if (dim?.belowCoverageFloor) {
     if (notMeasured) return <span className="text-xs text-[var(--muted)]">{notMeasured}</span>
@@ -263,6 +282,7 @@ export function DimensionScore({
     <Score
       value={dim?.score ?? null}
       size={size}
+      locale={locale}
       {...(notMeasured ? { nullLabel: notMeasured } : {})}
     />
   )
@@ -319,9 +339,12 @@ export function ScoreLegend({
 export function Confidence({
   value,
   size = 'sm',
+  locale,
 }: {
   value: number | null
   size?: 'sm' | 'md'
+  /** The number format of a language page: its lexicon's `numberLocale`. */
+  locale?: string | undefined
 }) {
   /* A missing confidence must never draw as an empty chip: 0.00 and "we do not
    * know" are different claims. Score makes the same distinction. */
@@ -341,7 +364,7 @@ export function Confidence({
         color: `var(--band-${band.id}-ink)`,
       }}
     >
-      {value.toFixed(2)}
+      {fixedIn(value, 2, locale)}
     </span>
   )
 }
@@ -366,8 +389,13 @@ export function ConfidenceLegend({
         {[...CONFIDENCE_BANDS].reverse().map((b, i, all) => {
           const next = all[i + 1]
           const range = next
-            ? fill(lex.legendRange, { a: b.min.toFixed(2), b: next.min.toFixed(2) })
-            : fill(lex.legendRangeTop, { a: b.min.toFixed(2) })
+            ? fill(lex.legendRange, {
+                a: fixedIn(b.min, 2, lex.lang === 'en' ? undefined : lex.numberLocale),
+                b: fixedIn(next.min, 2, lex.lang === 'en' ? undefined : lex.numberLocale),
+              })
+            : fill(lex.legendRangeTop, {
+                a: fixedIn(b.min, 2, lex.lang === 'en' ? undefined : lex.numberLocale),
+              })
           return (
             <li key={b.id} className="rounded-lg border border-[var(--rule-soft)] p-3">
               <div className="flex items-center gap-2">

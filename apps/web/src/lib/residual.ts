@@ -46,7 +46,7 @@ export type ResidualReading = {
  * page says the margin is narrow. Descriptive only: it never changes a
  * verdict, which is the rule D138 fixed.
  */
-const NARROW_MARGIN = 0.05
+export const NARROW_MARGIN = 0.05
 
 const pct = (x: number) => `${(x * 100).toFixed(1)}%`
 const two = (x: number) => x.toFixed(2)

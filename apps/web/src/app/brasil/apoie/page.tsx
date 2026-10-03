@@ -3,30 +3,33 @@ import { CONTRIBUTING_DOC, EVIDENCE_DOC, ISSUES_URL, REPO_URL, docHref } from '@
 import { Headline, Note, PageTitle, Section } from '@/components/ui'
 import { countryLayer, layerSection } from '@/lib/layers'
 import {
-  objectionsHref,
-  contactHref,
+  contactTopicHref,
   countryProfileHref,
+  decisionsHref,
   layerSectionHref,
+  layerVerdictHref,
   limitsHref,
-  supportHref,
+  objectionsHref,
 } from '@/lib/links'
 
 export const dynamic = 'force-dynamic'
 
 export const metadata = {
-  title: 'Apoie o NCB, camada Brasil',
+  title: 'Como participar, NCB Brasil',
   description:
-    'Como uma instituição brasileira pode sustentar o benchmark: usar, contribuir com dados e financiar uma parte nomeada do trabalho.',
+    'Como uma instituição brasileira pode participar do NCB: usar o instrumento, revisar o método de fora, abrir dados e receber um debate sobre os resultados.',
 }
 
 /**
- * Brazil's reading of the support page.
+ * Brazil's reading of taking part.
  *
- * Same three ways as the ground layer, written for a Brazilian institutional
- * reader and naming the funding venues that exist in Brazil. It is not a
- * translation: the ground page names research grants in general and this one
- * names the windows a Brazilian institution actually holds. Both end at the
- * same contact page, because the project has one inbox. See D71.
+ * The project is self-funded, so this page asks for no money and names no
+ * funding window (owner, 2026-10-03). It asks for four things a Brazilian
+ * institution can give: use, an outside review of the method, open data and
+ * a venue for a seminar. No institution is named in an ask; the data sources
+ * named are where Brazilian series come from. Every invitation to write ends
+ * at the one contact page, because the project has one inbox. See D71 and
+ * D158.
  */
 export default function BrazilSupportPage() {
   const layer = countryLayer('BRA')
@@ -35,20 +38,19 @@ export default function BrazilSupportPage() {
 
   return (
     <>
-      <PageTitle>Apoie o benchmark</PageTitle>
+      <PageTitle>Como participar</PageTitle>
       <Headline>
-        O benchmark é aberto e gratuito. O que ele ainda precisa é de uso, evidência e tempo. Uma
-        instituição brasileira pode dar os três.
+        O NCB é aberto e gratuito, e a Envisioning o mantém com recursos próprios. Do que ele
+        precisa agora é de uso, de revisão externa, de dados abertos e de espaço para debate.
       </Headline>
 
       <Note>
-        Nada nesta página é condição para usar o benchmark. Os dados e o código são abertos, e a
-        camada brasileira continua publicada tenha ela financiamento ou não.
+        Nada nesta página é condição para usar o NCB. Os dados e o código são abertos.
       </Note>
 
       <Section
-        title="Use e diga onde falhou"
-        hint="Uma medida que ninguém aplica continua sendo hipótese. O mais útil é colocar o benchmark contra uma decisão que sua instituição já está tomando."
+        title="Use o NCB e diga onde ele falha"
+        hint="Uma medida que ninguém aplica continua sendo hipótese. O mais útil é confrontar o NCB com uma questão que sua instituição já está examinando."
       >
         <ul className="max-w-3xl space-y-4 text-lg leading-relaxed">
           <li>
@@ -63,44 +65,85 @@ export default function BrazilSupportPage() {
             ) : (
               'agenda do Brasil'
             )}
-            : o que elevar, o que medir antes de gerir e o que manter.
+            : as capacidades com as pontuações mais baixas, as de evidência fraca e as de
+            pontuação mais alta, cada uma com suas fontes.
           </li>
           <li>
             Leia{' '}
             <Link href={limitsHref} className="underline underline-offset-4">
               os limites conhecidos
             </Link>{' '}
-            antes de citar qualquer nota. Algumas notas dizem mais sobre a lacuna de dados do que
-            sobre o país, e o projeto avisa quais são.
+            antes de citar qualquer pontuação. Algumas pontuações dizem mais sobre a falta de dados
+            do que sobre o país, e o projeto indica quais são.
           </li>
           <li>
-            Discorde de uma nota específica na{' '}
+            Discorde de uma pontuação específica na{' '}
             <Link href={objectionsHref} className="underline underline-offset-4">
-              página de contestação
+              página de contestações
             </Link>
-            . A objeção fica publicada ao lado do número que ela contesta.
+            , em inglês. A objeção fica publicada ao lado do número que ela contesta.
           </li>
         </ul>
       </Section>
 
       <Section
-        title="Contribua com dados e evidência"
+        id="revisao"
+        title="Revise o método de fora"
+        hint="O método foi escrito e testado dentro do projeto. Ele precisa de quem o leia sem ter participado dele."
+      >
+        <ul className="max-w-3xl space-y-4 text-lg leading-relaxed">
+          <li>
+            O teste de renda é o ponto que mais pede um olhar externo: quanto as nove capacidades
+            têm em comum, quanto disso acompanha a renda e o que sobra depois dela.{' '}
+            {layer ? (
+              <Link href={layerVerdictHref(layer)} className="underline underline-offset-4">
+                O resultado da versão atual
+              </Link>
+            ) : (
+              'O resultado da versão atual'
+            )}{' '}
+            está na página inicial da camada.
+          </li>
+          <li>
+            A leitura do que sobra depois da renda, país por país, fica fora do ar até que uma
+            decisão a publique, e essa decisão depende de uma revisão externa do método.
+          </li>
+          <li>
+            O{' '}
+            <Link href={decisionsHref} className="underline underline-offset-4">
+              registro de decisões
+            </Link>
+            , em inglês, guarda cada escolha, o custo dela e o que a derrubaria. Uma revisão pode
+            partir de qualquer entrada.
+          </li>
+          <li>
+            Para propor uma revisão,{' '}
+            <Link href={contactTopicHref('research')} className="underline underline-offset-4">
+              escreva para o projeto
+            </Link>
+            . O formulário está em inglês, e você pode escrever em português.
+          </li>
+        </ul>
+      </Section>
+
+      <Section
+        title="Abra dados e evidência"
         hint="Cada lacuna declarada no registro é um item de coleta. Fechar uma vale mais do que qualquer comentário."
       >
         <ul className="max-w-3xl space-y-4 text-lg leading-relaxed">
           <li>
             Séries nacionais do IBGE, do Ipea, do Ipeadata, do Tesouro, da CGU e dos ministérios
             entram como observações de origem nacional, com o tipo de fonte registrado em cada
-            ponto.{' '}
+            ponto. O{' '}
             <a href={docHref(CONTRIBUTING_DOC)} className="underline underline-offset-4">
-              O CONTRIBUTING.md
-            </a>{' '}
-            explica o que uma proposta precisa carregar.
+              guia de contribuição
+            </a>
+            , em inglês, explica o que uma proposta precisa trazer.
           </li>
           <li>
             Uma entrega documentada de política pública, com publicador identificado, vira registro
-            de evidência. Esses registros nunca entram na nota. São o que permite ler uma
-            capacidade que ainda não tem conjunto de dados.{' '}
+            de evidência. Esses registros nunca entram na pontuação. São eles que permitem ler uma
+            capacidade que ainda não tem base de dados.{' '}
             <a href={docHref(EVIDENCE_DOC)} className="underline underline-offset-4">
               A regra de inclusão
             </a>{' '}
@@ -118,8 +161,8 @@ export default function BrazilSupportPage() {
             ) : (
               'mapa de instituições'
             )}{' '}
-            cresce por contribuição. Se sua organização entrega política pública e não está ali,
-            ela deveria estar.
+            cresce por contribuição. Uma organização que executa política pública e não aparece
+            nele pode ser incluída a partir de uma fonte.
           </li>
           <li>
             Correções e erros vão para{' '}
@@ -129,7 +172,7 @@ export default function BrazilSupportPage() {
               rel="noreferrer"
               className="underline underline-offset-4"
             >
-              o rastreador de issues
+              a lista de pendências do repositório
             </a>
             , e o código está{' '}
             <a
@@ -140,65 +183,46 @@ export default function BrazilSupportPage() {
             >
               no GitHub
             </a>
+            . Para oferecer uma série ou uma base,{' '}
+            <Link href={contactTopicHref('data')} className="underline underline-offset-4">
+              escreva para o projeto
+            </Link>
             .
           </li>
         </ul>
       </Section>
 
       <Section
-        title="Financie uma parte nomeada"
-        hint="O trabalho é modular de propósito. Um financiador banca uma peça com escopo e entrega definidos."
+        title="Sedie um debate sobre os resultados"
+        hint="Uma medida como esta é posta à prova quando é discutida por quem conhece os dados."
       >
-        <ul className="max-w-3xl space-y-4 text-lg leading-relaxed">
-          <li>
-            <span className="font-medium">Uma capacidade</span>: uma dimensão, seus indicadores, suas
-            lacunas fechadas e seu corpo de evidência construído.
-          </li>
-          <li>
-            <span className="font-medium">A camada brasileira</span>: a leitura do país em português,
-            com o mapa institucional e a variação entre os estados mantidos atualizados.
-          </li>
-          <li>
-            <span className="font-medium">Um adaptador de fonte</span>: um publicador integrado e
-            mantido, o que eleva a solidez da evidência de todos os países de uma vez.
-          </li>
-          <li>
-            <span className="font-medium">O painel de especialistas</span>: uma rodada revisada sobre o
-            conjunto completo de países, que é o que transforma estimativa de sessão em evidência.
-          </li>
-        </ul>
-        <p className="mt-6 max-w-3xl text-lg leading-relaxed">
-          Peças desse tamanho cabem nas janelas que já existem no Brasil: chamadas da Finep e do
-          CNPq, editais das fundações estaduais de amparo à pesquisa, fundos e programas do BNDES,
-          cooperação técnica com BID, Banco Mundial e CAF, e editais de fundações privadas que
-          financiam capacidade estatal. Escolas de governo e institutos de pesquisa aplicada podem
-          entrar como parceiros executores em vez de financiadores.
+        <p className="max-w-3xl text-lg leading-relaxed">
+          Se sua instituição pode sediar um seminário, uma oficina com equipes técnicas ou uma
+          mesa de discussão sobre o método e os resultados do Brasil,{' '}
+          <Link href={contactTopicHref('research')} className="underline underline-offset-4">
+            escreva para o projeto
+          </Link>
+          . A apresentação cobre o teste de renda, o mapa de capacidades diante dos pares de renda
+          e os limites dos dados.
         </p>
       </Section>
 
-      <Section
-        title="Continue a conversa"
-        hint="O benchmark melhora por discordância, não por concordância."
-      >
+      <Section title="Continue a conversa">
         <p className="max-w-3xl text-lg leading-relaxed">
           Se nada acima serve ainda, conversar já é útil. Conte o que sua instituição mede, o que
-          ela não consegue medir e qual decisão você gostaria que isto informasse.{' '}
-          <Link href={`${contactHref}?topic=support`} className="underline underline-offset-4">
-            Uma mensagem chega a uma pessoa
+          ela não consegue medir e que questão você gostaria que estes dados ajudassem a
+          examinar.{' '}
+          <Link href={contactTopicHref('general')} className="underline underline-offset-4">
+            Escreva para o projeto
           </Link>
-          . O formulário está em inglês, mas você pode escrever em português e a resposta vem em
-          português.
+          . O formulário está em inglês, e você pode escrever em português.
         </p>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed">
           O{' '}
           <Link href={countryProfileHref('BRA')} className="underline underline-offset-4">
             perfil comparativo do Brasil
           </Link>{' '}
-          e{' '}
-          <Link href={supportHref} className="underline underline-offset-4">
-            a página de apoio do projeto
-          </Link>{' '}
-          continuam em inglês, que é a camada onde cada número desta página pode ser conferido.
+          continua em inglês, e é nele que cada número desta camada pode ser conferido.
         </p>
       </Section>
     </>

@@ -6,7 +6,7 @@ import type { Dimension, Lexicon } from '@ncb/core'
 import { DIMENSION_ICON, Icon, iconMarkup } from '@/components/Icon'
 import { CHART_INK, CHART_MOTION, CHART_STROKE } from '@/components/chartTokens'
 import { evidenceOpenness, isThinConfidence } from '@/lib/evidence'
-import { Confidence, Score } from '@/components/ui'
+import { Confidence, Score, fixedIn } from '@/components/ui'
 import { radarAngle, radarPoint, snap } from '@/components/radarGeometry'
 import { ContestedBadge } from '@/components/ChallengeDialog'
 
@@ -203,6 +203,8 @@ export function Radar({
   const at = (i: number, value: number) => radarPoint(i, value, { size: SIZE, radius: g.radius })
   const nameOf = (d: Dimension) => shortLabel(lex.dimensions[d] ?? DIMENSION_LABELS[d])
   const noDataLabel = lex.agenda.noScore
+  /* A language page prints its own decimals; English keeps toFixed. */
+  const locale = lex.lang === 'en' ? undefined : lex.numberLocale
   const rings = [25, 50, 75, 100]
 
   /**
@@ -254,7 +256,7 @@ export function Radar({
             c === null || c === undefined
               ? ''
               : `, ${lex.agenda.colConfidence.toLowerCase()} ${lex.bands[confidenceBand(c).id]}`
-          return `${nameOf(d)} ${v === null ? noDataLabel : v.toFixed(1)}${conf}`
+          return `${nameOf(d)} ${v === null ? noDataLabel : fixedIn(v, 1, locale)}${conf}`
         }).join(', '),
     )
     .join('. ')
@@ -615,6 +617,7 @@ function RadarReadout({
   contestedCounts?: Record<string, number>
 }) {
   const d = DIMENSIONS[index] as Dimension
+  const locale = lex.lang === 'en' ? undefined : lex.numberLocale
   const focal = series[0] as RadarSeries
   const confidence = focal.confidences?.[index] ?? null
   const value = valueAt(focal, index)
@@ -639,6 +642,7 @@ function RadarReadout({
               value={valueAt(s, index)}
               size={si === 0 ? 'lg' : 'md'}
               nullLabel={noDataLabel}
+              locale={locale}
             />
             {si === 0 && value !== null ? <ContestedBadge count={contestedCount} /> : null}
           </span>
@@ -653,7 +657,7 @@ function RadarReadout({
           <span>{noDataLabel}</span>
         ) : (
           <>
-            <Confidence value={confidence} />
+            <Confidence value={confidence} locale={locale} />
             <span>{lex.bands[confidenceBand(confidence).id]}</span>
           </>
         )}

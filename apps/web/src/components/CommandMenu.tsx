@@ -9,11 +9,23 @@ import {
   DIMENSION_LABELS,
   DIMENSION_QUESTIONS,
   INDICATORS,
+  countryName,
+  indicatorName,
 } from '@ncb/core'
+import type { Lang } from '@ncb/core'
+import { useChrome } from '@/components/Chrome'
 import { DIMENSION_ICON, Icon, type IconName } from '@/components/Icon'
 import { Flag } from '@/components/ui'
+import { chromeLexicon, navLabel } from '@/lib/chrome'
+import { COUNTRY_LAYERS } from '@/lib/layers'
 import { METHOD_PAGES, PARTICIPATE_PAGES, READING_PAGES } from '@/lib/nav'
-import { capabilityHref, countryProfileHref, indicatorHref } from '@/lib/links'
+import {
+  capabilityHref,
+  countryLayerHref,
+  countryProfileHref,
+  indicatorHref,
+  layerSectionHref,
+} from '@/lib/links'
 
 type SearchItem = {
   href: string
@@ -42,41 +54,76 @@ function uniqueByHref(items: SearchItem[]): SearchItem[] {
 
 /**
  * The palette reads the same page registries as the navigation and the same
- * country/indicator registries as the benchmark. It is intentionally built at
- * module load: these are static definitions, so opening the palette never
- * causes a data request or a render-time walk of the whole site.
+ * country/indicator registries as the benchmark. The items are static
+ * definitions, so they are built once per language and kept: opening the
+ * palette never causes a data request or a render-time walk of the whole
+ * site. On a layer page the labels are the layer's language and the layer's
+ * own pages come first; the English names stay in the keywords, so a search
+ * in either language finds the same row. See D158.
  */
-const SEARCH_ITEMS = uniqueByHref([
-  ...[...READING_PAGES, ...METHOD_PAGES, ...PARTICIPATE_PAGES].map((page) => ({
-    href: page.href,
-    label: page.label,
-    group: 'Pages' as const,
-    icon: 'compass' as const,
-    keywords: page.href,
-  })),
-  ...COUNTRIES.map((country) => ({
-    href: countryProfileHref(country.iso3),
-    label: country.name,
-    group: 'Countries' as const,
-    icon: 'flag' as const,
-    iso3: country.iso3,
-    keywords: country.iso3 + ' ' + country.reason,
-  })),
-  ...DIMENSIONS.map((dimension) => ({
-    href: capabilityHref(dimension),
-    label: DIMENSION_LABELS[dimension],
-    group: 'Capabilities' as const,
-    icon: DIMENSION_ICON[dimension],
-    keywords: dimension + ' ' + DIMENSION_QUESTIONS[dimension],
-  })),
-  ...INDICATORS.map((indicator) => ({
-    href: indicatorHref(indicator.id),
-    label: indicator.name,
-    group: 'Indicators' as const,
-    icon: 'ruler' as const,
-    keywords: indicator.id + ' ' + indicator.dimension + ' ' + indicator.definition,
-  })),
-])
+const SEARCH_ITEMS = new Map<Lang, SearchItem[]>()
+
+function searchItems(lang: Lang): SearchItem[] {
+  const cached = SEARCH_ITEMS.get(lang)
+  if (cached) return cached
+  const lex = chromeLexicon(lang)
+  const layerPages: SearchItem[] = lex
+    ? COUNTRY_LAYERS.filter((layer) => layer.lang === lang).flatMap((layer) => [
+        {
+          href: countryLayerHref(layer),
+          label: `${layer.label}: ${layer.overviewLabel}`,
+          group: 'Pages' as const,
+          icon: 'compass' as const,
+          keywords: layer.slug,
+        },
+        ...layer.sections
+          .filter((section) => section.slug !== null)
+          .map((section) => ({
+            href: layerSectionHref(layer, section),
+            label: `${layer.label}: ${section.label}`,
+            group: 'Pages' as const,
+            icon: 'compass' as const,
+            keywords: `${layer.slug} ${section.slug}`,
+          })),
+      ])
+    : []
+  const items = uniqueByHref([
+    ...layerPages,
+    ...[...READING_PAGES, ...METHOD_PAGES, ...PARTICIPATE_PAGES].map((page) => ({
+      href: page.href,
+      label: navLabel(page, lang),
+      group: 'Pages' as const,
+      icon: 'compass' as const,
+      keywords: `${page.href} ${page.label}`,
+    })),
+    ...COUNTRIES.map((country) => ({
+      href: countryProfileHref(country.iso3),
+      label: lex ? countryName(lex, country.iso3) : country.name,
+      group: 'Countries' as const,
+      icon: 'flag' as const,
+      iso3: country.iso3,
+      keywords: `${country.iso3} ${country.name} ${country.reason}`,
+    })),
+    ...DIMENSIONS.map((dimension) => ({
+      href: capabilityHref(dimension),
+      label: lex ? lex.dimensions[dimension] : DIMENSION_LABELS[dimension],
+      group: 'Capabilities' as const,
+      icon: DIMENSION_ICON[dimension],
+      keywords: `${dimension} ${DIMENSION_LABELS[dimension]} ${DIMENSION_QUESTIONS[dimension]}${
+        lex ? ` ${lex.questions[dimension]}` : ''
+      }`,
+    })),
+    ...INDICATORS.map((indicator) => ({
+      href: indicatorHref(indicator.id),
+      label: lex ? indicatorName(lex, indicator.id) : indicator.name,
+      group: 'Indicators' as const,
+      icon: 'ruler' as const,
+      keywords: `${indicator.id} ${indicator.name} ${indicator.dimension} ${indicator.definition}`,
+    })),
+  ])
+  SEARCH_ITEMS.set(lang, items)
+  return items
+}
 
 function itemMatches(item: SearchItem, query: string): boolean {
   if (!query) return true
@@ -105,6 +152,8 @@ function SearchItemIcon({ item }: { item: SearchItem }) {
 /** A site-wide command palette, available from the header or ⌘K/Ctrl+K. */
 export function CommandMenu({ onOpen }: { onOpen?: () => void }) {
   const router = useRouter()
+  const { lang, words } = useChrome()
+  const w = words.search
   const dialog = useRef<HTMLDialogElement>(null)
   const input = useRef<HTMLInputElement>(null)
   const [open, setOpen] = useState(false)
@@ -112,10 +161,11 @@ export function CommandMenu({ onOpen }: { onOpen?: () => void }) {
   const [selectedIndex, setSelectedIndex] = useState(0)
 
   const results = useMemo(() => {
-    return SEARCH_ITEMS.filter((item) => itemMatches(item, query))
+    return searchItems(lang)
+      .filter((item) => itemMatches(item, query))
       .sort((left, right) => itemRank(left, query) - itemRank(right, query))
       .slice(0, MAX_RESULTS)
-  }, [query])
+  }, [query, lang])
 
   useEffect(() => {
     const node = dialog.current
@@ -171,13 +221,13 @@ export function CommandMenu({ onOpen }: { onOpen?: () => void }) {
     <>
       <button
         type="button"
-        aria-label="Search the benchmark"
+        aria-label={w.aria}
         aria-keyshortcuts="Meta+K Control+K"
         onClick={openPalette}
         className="inline-flex h-9 items-center gap-2 rounded-md px-2.5 text-xs font-medium text-[var(--muted)] transition-colors duration-200 hover:bg-[var(--surface-sunken)] hover:text-[var(--foreground)] sm:px-3"
       >
         <Icon name="search" size={15} />
-        <span className="hidden sm:inline">Search</span>
+        <span className="hidden sm:inline">{w.button}</span>
         <kbd className="hidden rounded border border-[var(--rule)] px-1.5 py-0.5 font-mono text-[10px] leading-none sm:inline">
           ⌘K
         </kbd>
@@ -185,7 +235,7 @@ export function CommandMenu({ onOpen }: { onOpen?: () => void }) {
 
       <dialog
         ref={dialog}
-        aria-label="Search the benchmark"
+        aria-label={w.aria}
         onClose={closePalette}
         onClick={(event) => {
           if (event.target === dialog.current) closePalette()
@@ -215,8 +265,8 @@ export function CommandMenu({ onOpen }: { onOpen?: () => void }) {
                   closePalette()
                 }
               }}
-              placeholder="Search pages, countries, capabilities, indicators..."
-              aria-label="Search pages, countries, capabilities and indicators"
+              placeholder={w.placeholder}
+              aria-label={w.inputAria}
               aria-controls="site-search-results"
               aria-autocomplete="list"
               className="min-w-0 flex-1 bg-transparent text-base outline-none placeholder:text-[var(--muted)]"
@@ -229,7 +279,7 @@ export function CommandMenu({ onOpen }: { onOpen?: () => void }) {
 
         <div id="site-search-results" className="max-h-[min(60vh,28rem)] overflow-y-auto p-2">
           {results.length > 0 ? (
-            <ul role="listbox" aria-label="Search results" className="space-y-0.5">
+            <ul role="listbox" aria-label={w.resultsAria} className="space-y-0.5">
               {results.map((item, index) => (
                 <li key={item.href}>
                   <Link
@@ -248,22 +298,22 @@ export function CommandMenu({ onOpen }: { onOpen?: () => void }) {
                       <SearchItemIcon item={item} />
                     </span>
                     <span className="min-w-0 flex-1 truncate">{item.label}</span>
-                    <span className="shrink-0 text-xs text-[var(--muted)]">{item.group}</span>
+                    <span className="shrink-0 text-xs text-[var(--muted)]">{w.groups[item.group]}</span>
                   </Link>
                 </li>
               ))}
             </ul>
           ) : (
             <p className="px-3 py-8 text-center text-xs text-[var(--muted)]">
-              No matching pages, countries, capabilities or indicators.
+              {w.empty}
             </p>
           )}
         </div>
 
         <div className="flex items-center justify-between border-t border-[var(--rule)] px-3 py-2 text-[10px] text-[var(--muted)]">
-          <span>Navigate with ↑ ↓</span>
-          <span>Enter to open</span>
-          <span>Esc to close</span>
+          <span>{w.navigate}</span>
+          <span>{w.open}</span>
+          <span>{w.close}</span>
         </div>
       </dialog>
     </>

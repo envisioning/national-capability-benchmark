@@ -50,6 +50,24 @@ export const hasLocalDestination = (iso3: string): boolean => {
 export const countryLayerHref = (layer: CountryLayer): string => `/${layer.slug}`
 
 /**
+ * The claim test's verdict on a layer's front page, in the layer's language.
+ * The opening links here, so the anchor is part of the address. See D158.
+ */
+export const layerVerdictHref = (layer: CountryLayer): string => `${countryLayerHref(layer)}#teste`
+
+/**
+ * The ask for an outside review of the method, on a layer's participation
+ * page. Where a layer has no such page, the ground layer's contact form on
+ * the research topic. See D158.
+ */
+export function layerReviewHref(layer: CountryLayer): string {
+  const support = layer.sections.find((section) => section.id === 'support')
+  return support?.slug
+    ? `${countryLayerHref(layer)}/${support.slug}#revisao`
+    : contactTopicHref('research')
+}
+
+/**
  * One section of one layer.
  *
  * A section with a slug lives inside the layer. A section without one is still

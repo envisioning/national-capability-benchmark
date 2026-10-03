@@ -8,6 +8,8 @@ import {
   REPO_URL,
   countryName,
   countryTopic,
+  evidenceClaim,
+  evidenceTitle,
   fill,
   fmt,
   fmtConf,
@@ -125,7 +127,7 @@ export function AgendaView({
   const historyEvents = agenda.ownEvidence.map((item) => ({
     id: item.id,
     dimension: item.dimension,
-    title: item.title,
+    title: evidenceTitle(lex, item.id, item.title),
     year: item.started,
   }))
 
@@ -186,10 +188,10 @@ export function AgendaView({
                     </CapabilityLink>
                   </Td>
                   <Td align="right">
-                    <Score value={d.score} size="sm" nullLabel={s.noScore} />
+                    <Score value={d.score} size="sm" nullLabel={s.noScore} locale={lex.numberLocale} />
                   </Td>
                   <Td>
-                    <Confidence value={d.confidence} />
+                    <Confidence value={d.confidence} locale={lex.numberLocale} />
                   </Td>
                   <Td dim>{trendText(d)}</Td>
                 </tr>
@@ -263,7 +265,7 @@ export function AgendaView({
                     list: joinNodes(
                       d.evidenceElsewhere.map((e) => (
                         <>
-                          {evidenceLink(e.id, e.title)} ({countryLink(e.iso3)})
+                          {evidenceLink(e.id, evidenceTitle(lex, e.id, e.title))} ({countryLink(e.iso3)})
                         </>
                       )),
                       '; ',
@@ -289,8 +291,9 @@ export function AgendaView({
                   dimension={d.dimension}
                   name={lex.dimensions[d.dimension]}
                   question={lex.questions[d.dimension]}
-                  score={<Score value={d.score} size="sm" nullLabel={s.noScore} />}
+                  score={<Score value={d.score} size="sm" nullLabel={s.noScore} locale={lex.numberLocale} />}
                   confidence={d.confidence}
+                  locale={lex.numberLocale}
                   rows={rows}
                 />
               )
@@ -329,6 +332,7 @@ export function AgendaView({
                   name={lex.dimensions[d.dimension]}
                   question={lex.questions[d.dimension]}
                   confidence={d.confidence}
+                  locale={lex.numberLocale}
                   rows={rows}
                 />
               )
@@ -365,10 +369,10 @@ export function AgendaView({
                       </CapabilityLink>
                     </Td>
                     <Td align="right">
-                      <Score value={d.score} size="sm" nullLabel={s.noScore} />
+                      <Score value={d.score} size="sm" nullLabel={s.noScore} locale={lex.numberLocale} />
                     </Td>
                     <Td align="right">
-                      <Confidence value={d.confidence} />
+                      <Confidence value={d.confidence} locale={lex.numberLocale} />
                     </Td>
                   </tr>
                 ))}
@@ -432,11 +436,11 @@ export function AgendaView({
           <ul className="max-w-3xl list-disc space-y-3 pl-5 text-lg leading-relaxed">
             {agenda.ownEvidence.map((r) => (
               <li key={r.id}>
-                <span className="font-medium">{evidenceLink(r.id, r.title)}</span>{' '}
+                <span className="font-medium">{evidenceLink(r.id, evidenceTitle(lex, r.id, r.title))}</span>{' '}
                 <span className="text-xs text-[var(--muted)]">
                   ({lex.dimensions[r.dimension]})
                 </span>
-                <p className="text-[var(--muted)]">{r.claim}</p>
+                <p className="text-[var(--muted)]">{evidenceClaim(lex, r.id, r.claim)}</p>
               </li>
             ))}
           </ul>
@@ -474,6 +478,7 @@ function AgendaCard({
   question,
   score,
   confidence,
+  locale,
   rows,
 }: {
   dimension: Dimension
@@ -481,6 +486,7 @@ function AgendaCard({
   question: string
   score?: React.ReactNode
   confidence: number
+  locale: string
   rows: React.ReactNode[]
 }) {
   return (
@@ -491,7 +497,7 @@ function AgendaCard({
           <CapabilityLink dimension={dimension}>{name}</CapabilityLink>
         </h3>
         {score}
-        <Confidence value={confidence} />
+        <Confidence value={confidence} locale={locale} />
       </div>
       <p className="mt-2 text-lg leading-relaxed text-[var(--muted)]">{question}</p>
       <div className="mt-4 divide-y divide-[var(--rule-soft)] border-t border-[var(--rule-soft)]">

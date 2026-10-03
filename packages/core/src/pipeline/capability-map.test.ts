@@ -211,6 +211,16 @@ test('buildCapabilityMap places the subject against the peer medians', () => {
   assert.deepEqual(reading.rowsAbove, ids)
   assert.deepEqual(reading.rowsBelow, [])
   assert.deepEqual(reading.conditionsMore, conditionsFor(DIM).map((d) => d.id))
+  /* More transmission losses than the peers is more of a bad thing, and the
+   * reading says which conditions run that way so no sentence reads
+   * backwards. */
+  assert.deepEqual(
+    reading.conditionsLowerBetter,
+    conditionsFor(DIM)
+      .filter((d) => d.direction === 'lower_better')
+      .map((d) => d.id),
+  )
+  assert.ok(reading.conditionsLowerBetter.includes('electricity_transmission_losses'))
 })
 
 test('every dimension is published and each has capability rows', () => {

@@ -6,7 +6,10 @@ import { useCallback, useEffect, useId, useRef, useState } from 'react'
 import { DIMENSION_ICON, Icon } from '@/components/Icon'
 import { Flag } from '@/components/ui'
 import { ChallengeDialog } from '@/components/ChallengeDialog'
+import { useChrome } from '@/components/Chrome'
 import { CommandMenu } from '@/components/CommandMenu'
+import { fill } from '@ncb/core'
+import { navLabel } from '@/lib/chrome'
 import { drawsOwnChrome } from '@/lib/links'
 import {
   FOOTER_NAV_GROUPS,
@@ -230,6 +233,7 @@ export function ScrollAwareHeader({ children }: { children: React.ReactNode }) {
  * D73.
  */
 function Crumb({ nodes, active }: { nodes: NavNode[]; active: NavNode | null }) {
+  const { lang } = useChrome()
   const selecting = nodes.length > 1
   return (
     <span className="inline-flex items-center gap-1.5">
@@ -250,7 +254,7 @@ function Crumb({ nodes, active }: { nodes: NavNode[]; active: NavNode | null }) 
               className={`inline-flex items-center gap-1.5 ${style}`}
             >
               {node.iso3 ? <Flag iso3={node.iso3} /> : null}
-              {node.label}
+              {navLabel(node, lang)}
             </Link>
           </span>
         )
@@ -267,6 +271,7 @@ function capabilityIcon(node: NavNode) {
 }
 
 function MenuItem({ node, current, mobile }: { node: NavNode; current: boolean; mobile?: boolean }) {
+  const { lang } = useChrome()
   const icon = capabilityIcon(node)
   return (
     <Link
@@ -280,7 +285,7 @@ function MenuItem({ node, current, mobile }: { node: NavNode; current: boolean; 
     >
       {icon ? <Icon name={icon} size={14} className="shrink-0" /> : null}
       {node.iso3 ? <Flag iso3={node.iso3} /> : null}
-      {node.label}
+      {navLabel(node, lang)}
     </Link>
   )
 }
@@ -312,6 +317,7 @@ function SectionMenu({
   current: boolean
 }) {
   const pathname = usePathname()
+  const { lang } = useChrome()
   const [open, setOpen] = useState(false)
   /* Which item the keyboard asked for, held until the panel exists to hold it. */
   const [pendingFocus, setPendingFocus] = useState<number | null>(null)
@@ -365,7 +371,8 @@ function SectionMenu({
     return () => document.removeEventListener('keydown', onKeyDown)
   }, [open])
 
-  const label = current ? <span className={SECTION_MARK}>{node.label}</span> : node.label
+  const text = navLabel(node, lang)
+  const label = current ? <span className={SECTION_MARK}>{text}</span> : text
 
   if (entries.length === 0) {
     return (
@@ -422,7 +429,7 @@ function SectionMenu({
             ref={panel}
             id={panelId}
             role="menu"
-            aria-label={node.label}
+            aria-label={text}
             onKeyDown={(event) => {
               const items = Array.from(
                 panel.current?.querySelectorAll<HTMLAnchorElement>('[role="menuitem"]') ?? [],
@@ -459,8 +466,9 @@ function SectionMenu({
 
 /** The section parents, and what each of them opens. */
 function SectionLinks({ sections }: { sections: NavRow }) {
+  const { words } = useChrome()
   return (
-    <nav aria-label="Sections" className="flex flex-wrap items-center justify-end gap-1">
+    <nav aria-label={words.sectionsAria} className="flex flex-wrap items-center justify-end gap-1">
       {sections.entries.map((node) => (
         <SectionMenu
           key={node.href}
@@ -483,10 +491,11 @@ function SectionLinks({ sections }: { sections: NavRow }) {
  */
 function MobileSections({ sections }: { sections: NavRow }) {
   const pathname = usePathname()
+  const { lang, words } = useChrome()
   const [openHref, setOpenHref] = useState<string | null>(sections.active?.href ?? null)
 
   return (
-    <nav aria-label="Mobile sections" className="flex flex-col gap-1">
+    <nav aria-label={words.mobileSectionsAria} className="flex flex-col gap-1">
       {sections.entries.map((node) => {
         const entries = sectionMenuEntries(node, pathname)
         const open = openHref === node.href
@@ -499,12 +508,12 @@ function MobileSections({ sections }: { sections: NavRow }) {
                 aria-current={node === sections.active ? 'page' : undefined}
                 className={node === sections.active ? SECTION_MOBILE_CURRENT : SECTION_MOBILE_LINK}
               >
-                {node.label}
+                {navLabel(node, lang)}
               </Link>
               {entries.length > 0 ? (
                 <button
                   type="button"
-                  aria-label={`${node.label} pages`}
+                  aria-label={fill(words.sectionPages, { label: navLabel(node, lang) })}
                   aria-expanded={open}
                   aria-controls={panelId}
                   onClick={() => setOpenHref(open ? null : node.href)}
@@ -522,7 +531,7 @@ function MobileSections({ sections }: { sections: NavRow }) {
               <div
                 id={panelId}
                 role="menu"
-                aria-label={node.label}
+                aria-label={navLabel(node, lang)}
                 className="mb-1 ml-3 flex flex-col border-l border-[var(--rule)] pl-2"
               >
                 {entries.map((entry) => (
@@ -552,6 +561,7 @@ function MobileSections({ sections }: { sections: NavRow }) {
  */
 export function HeaderNav() {
   const pathname = usePathname()
+  const { words } = useChrome()
   const rows = navRows(pathname)
   const [menuOpen, setMenuOpen] = useState(false)
   const closeMobileMenu = useCallback(() => setMenuOpen(false), [])
@@ -573,7 +583,7 @@ export function HeaderNav() {
         <ChallengeDialog />
         <button
           type="button"
-          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-label={menuOpen ? words.closeMenu : words.openMenu}
           aria-expanded={menuOpen}
           aria-controls="site-nav-mobile"
           onClick={() => setMenuOpen((open) => !open)}
@@ -609,6 +619,7 @@ export function HeaderNav() {
  */
 export function SectionTabs() {
   const pathname = usePathname()
+  const { lang, words } = useChrome()
   const rows = navRows(pathname)
   if (rows.length < 2) return null
   const tabs = rows[rows.length - 1]
@@ -622,7 +633,7 @@ export function SectionTabs() {
     <div className="w-full">
       <div className="m-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-1 px-6 pb-2 sm:px-12 sm:pb-2.5">
         {trail.length > 0 ? (
-          <nav aria-label="Breadcrumb" className="flex min-w-0 flex-1 pt-1 sm:pt-0">
+          <nav aria-label={words.breadcrumbAria} className="flex min-w-0 flex-1 pt-1 sm:pt-0">
             <ol className="flex flex-wrap items-center gap-x-2 gap-y-1">
               {trail.map((row, index) => (
                 <li key={row.parent?.href ?? 'root'} className="flex items-center gap-x-2">
@@ -641,7 +652,10 @@ export function SectionTabs() {
           </nav>
         ) : null}
 
-        <nav aria-label={tabs.parent?.label ?? 'Pages'} className="ml-auto text-right">
+        <nav
+          aria-label={tabs.parent ? navLabel(tabs.parent, lang) : words.pagesAria}
+          className="ml-auto text-right"
+        >
           {/* The page set stays at the right edge from md up. On narrow screens
               the surrounding flex row wraps naturally below the context. */}
           <ul className="-mb-px flex flex-wrap gap-x-6 pt-1 md:justify-end">
@@ -656,7 +670,7 @@ export function SectionTabs() {
                     className={node === tabs.active ? TAB_CURRENT : TAB}
                   >
                     {icon ? <Icon name={icon} size={14} className="shrink-0" /> : null}
-                    {node.label}
+                    {navLabel(node, lang)}
                   </Link>
                 </li>
               )
@@ -671,9 +685,10 @@ export function SectionTabs() {
 /** Footer navigation: the same tree, grouped in columns. */
 export function FooterNav() {
   const pathname = usePathname()
+  const { lang, words } = useChrome()
 
   return (
-    <nav aria-label="Site" className="mt-10">
+    <nav aria-label={words.siteAria} className="mt-10">
       {/* The columns are the sections, so how many there are and how long each
           one is are both facts about the tree. A group too long to read as one
           list takes two columns and splits inside them; the rule is the length
@@ -685,7 +700,7 @@ export function FooterNav() {
           return (
             <div key={group.label} className={long ? 'sm:col-span-2' : undefined}>
               <h2 className="text-xs font-medium uppercase tracking-[0.05em] text-[var(--muted)]">
-                {group.label}
+                {words.nav[group.label] ?? group.label}
               </h2>
               <ul className={long ? 'mt-4 grid grid-cols-2 gap-x-6 gap-y-2' : 'mt-4 space-y-2'}>
                 {group.items.map((node) => {
@@ -701,7 +716,7 @@ export function FooterNav() {
                             : 'text-xs font-medium text-[var(--muted)] transition-all duration-200 hover:text-[var(--foreground)]'
                         }
                       >
-                        {node.label}
+                        {navLabel(node, lang)}
                       </Link>
                     </li>
                   )
