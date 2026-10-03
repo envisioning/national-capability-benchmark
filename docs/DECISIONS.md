@@ -8115,3 +8115,135 @@ members or Shared purpose for the Gulf, which would bring the
 eight-dimension group under the rule and reopen it; or a guardrail that
 rises above 0.526 inside the 125 without a country being added, which is
 the drift the re-baselined figure exists to catch.
+
+---
+
+## D154 — Open data and model knowledge only: no gated sources, and an in-session multi-vendor panel is a panel
+
+*Recorded 2026-10-03. Owner ruling of 2026-10-03. Extends D10. Supersedes
+the gated reopening routes in D64 and D144, the licence-confirmation step
+D153 named for the guardrail repair, the rule in `docs/PANEL.md` that a
+gateway run must replace an in-session run before publication, the
+four-vendor requirement for in-session runs (D13), and D148's human
+spot-check. Closes #73, #66 and #38.*
+
+**Choice.** The project works from two inputs: open data, and what language
+models know about the world. It makes no registrations, licence requests,
+accounts or emails to data owners.
+
+(a) **Open data only.** A source enters the benchmark only if its data and
+the values the project derives from it can be downloaded without an account
+and republished under the project's licence (CC BY 4.0 for `data/out`) on
+the publisher's terms as published. A term that is silent on redistribution
+fails the test: the project does not write to ask. This extends D10, which
+asked whether a source can be inspected, with a second question, whether it
+can be taken and republished without asking anyone. Every source wired at
+dataset 9.0.0 was admitted with a licence note in its memo; one found to
+fail the test is reviewed under this entry in its own change, never kept
+silently. This closes:
+
+- **Afrobarometer Round 8 Q83** as a fill-only second source for A165 (#73).
+  The data are free and under copyright, citation required, and the terms
+  say nothing on redistribution, so the written confirmation D153 waited on
+  will not be sought. Latinobarómetro forbids republishing and stays out on
+  the same rule; Arab Barometer (registration) and Asian Barometer
+  (application per dataset) were already of no use to set C and are now out
+  on access too.
+- **Enterprise Surveys microdata** (#66). The per-country firm base for
+  customs clearance sits behind `login.enterprisesurveys.org`. D144's first
+  reopening route, reading the real base from the microdata, is closed.
+  `customs_clearance_time` stays a check beside Coordination. D144's second
+  route stays open because it needs only published values: a second round
+  on the 2024 questionnaire, read from the World Bank API or a portal table
+  that downloads without an account.
+- **GESIS/EVS respondent-level pooling** (#38, TRUST-1 pooling). The pooled
+  weights need the registered GESIS microdata download. The D64 hold stays
+  on all ten countries with separate EVS and WVS rows: Germany, the United
+  Kingdom, the Netherlands, Armenia, Czechia, Romania, Russia, Serbia,
+  Slovakia and Ukraine. D64's "pooled-microdata treatment" overturn route is
+  closed; a pooling rule that works from the published release tables alone
+  would still qualify.
+- **Gallup World Poll**, which D10 already excluded. `volunteering_rate`,
+  whose definition Gallup's item matches word for word, stays a declared gap.
+
+(b) **Model knowledge is the interpretation layer.** An in-session panel is
+a panel for publication when it has at least three panelists drawn from at
+least two model vendors, each panelist runs in a separate context with one
+fixed stance from `packages/core/src/delphi/panel.ts`, and every panelist
+scores from the same evidence brief printed by `pnpm bench prompt` for the
+current dataset. Its provenance is `in_session` and is never relabelled
+`gateway`: `gateway` still means real API calls through the AI Gateway
+(D14). `isPanel` already accepts such a run, because it counts three or more
+panel entries on an evidential provenance; what the schema cannot check,
+context separation and vendor mix, is recorded in the run's `note` and
+`panel` entries (`docs/PANEL.md`). The invariant does not move: a panel
+estimate never enters `score`. It reaches the output only as `delphiScore`
+and `delphiIqr`, and through `blendedScore`'s existing fallback when a
+dimension has no observed indicator, recorded in `blendedFrom`. D139 still
+applies: the run must carry the current `datasetVersion` before any surface
+compares it with the indicators. A multi-vendor gateway run remains the
+stronger instrument, with four vendors, two rounds dispatched by code and
+failed calls counted, and should be preferred whenever an
+`AI_GATEWAY_API_KEY` exists. The two vendors available in session today are
+Anthropic (Claude, through separate subagents) and OpenAI (through the codex
+CLI).
+
+(c) **The foresight register's spot-check is done by a third model family.**
+D148 asked a person to check a seeded, regime-stratified 20 percent of
+bodies before the 53 are coded. That check is now done by a model family
+not used to code: OpenAI through the codex CLI, against the same checklist
+in `docs/research/anticipation/FORESIGHT-REGISTER-SPOTCHECK.md` (confirmed,
+overturned or cannot verify, per body, from the cited sources or their
+archived copies). D148's thresholds and overturn clause are unchanged: two
+or more of the 11 sampled bodies overturned, or any body decision that
+changes a country item, stops the coding.
+
+**Why.** A source that needs an account or a permission is one the next
+maintainer cannot reproduce without the same account or the same letter, and
+one whose derived values the project cannot be sure it may publish. Waiting
+on those has parked three repairs for weeks with no date. Model knowledge is
+available now, in session, from more than one vendor; the panel layer was
+built to hold it beside the indicators rather than in them, so admitting it
+changes no score.
+
+**Cost.** Stated with the numbers the closed routes would have moved.
+
+- **Trust stays under O1 at 0.398.** Afrobarometer would have taken it to
+  0.410 on set C (`docs/research/trust/SURVEY-COVERAGE-FOR-EXPANSION.md`),
+  with Latinobarómetro 0.415. Seventeen set C countries keep no A165 value:
+  Angola, Burkina Faso, Botswana, Côte d'Ivoire, Ghana, Guinea, the Gambia,
+  Lesotho, Mali, Mozambique, Mauritius, Malawi, Namibia, Sudan, Tanzania,
+  Uganda and Zambia.
+- **The guardrail stays at about 0.526** (0.529 on the memo's set C
+  calculation). Afrobarometer would have moved it to about 0.509 and taken
+  survey presence off the income gradient (0.37 to 0.03). Of the 0.526,
+  about 0.07 is the survey gap (0.460 with no survey items anywhere), and
+  that part now has no repair in view.
+- **Ten countries keep no survey value in Trust, Agency or Shared purpose**
+  under the D64 hold. Pooling would have raised Trust to 0.414 but the
+  guardrail to 0.599, so this cost is coverage, not wealth separation.
+- **Coordination stays at 0.371 against O1's 0.40.** The customs row, kept
+  to the 37 countries passing on the proxy base, would have cleared O1 by
+  0.006 at 7.8.0 (0.406, `docs/research/coordination/O1-CANDIDATES.md`);
+  all 46 at 2018 or later would have given 0.435. Neither is now reachable
+  through the microdata.
+- **An in-session panel has fewer independent errors than a gateway run.**
+  With two vendors and four stances, each vendor takes two stances, so half
+  the pairs in the IQR share a model's training data; D13's reason for one
+  model per vendor holds and is paid here. Rounds are dispatched by an agent,
+  not code, so a missed panelist is a reviewer's catch, not a counted failed
+  call.
+- **The foresight spot-check loses its human.** Three model families now
+  touch the register (the coders' and the checker's), and none is a person;
+  an error all three share passes.
+
+**Overturned by.** A source that fails the access test publishing open
+terms, which readmits it under this rule with no further step (Afrobarometer
+stating redistribution terms that cover derived country shares is the one
+worth watching). An owner ruling that accepts one gated source by name. For
+(b): an in-session panel whose stance-by-vendor spread shows that the two
+stances on one vendor agree more with each other than with the other
+vendor's on the same stance, by more than the panel's own median IQR, which
+would mean the panel is measuring vendors rather than countries and needs a
+third vendor before publication. For (c): a later human or gateway check
+that overturns a body the codex check confirmed.

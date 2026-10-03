@@ -17,6 +17,14 @@ through one objective and one reported outcome. Every task names what it
 moves, and every handoff reports the move. D117 set this rule and D118 changed
 what O2 is.
 
+**Open data only (D154).** A source enters only if its data and the values
+derived from it download without an account and can be republished under the
+project's licence on the publisher's terms as published. Terms silent on
+redistribution fail. No registrations, licence requests, accounts or emails
+to data owners: a source that needs one is closed, not parked. Model
+knowledge enters through the Delphi layer only, beside the score and never in
+it.
+
 **Rows are chosen for what they measure (D118).** A candidate is decided on its
 construct: what it observes, whether that is a capability or a stock that
 money buys, and whether it is behaviour, an outcome or a perception. Write that
@@ -48,10 +56,10 @@ countries the Joint EVS/WVS release happened to survey, and the world does not
 (0.41 across all 154 measurable countries of a million people or more). The
 survey gap explains about 0.07 of the 0.526 (0.460 with no survey items
 anywhere, `docs/research/trust/SURVEY-COVERAGE-FOR-EXPANSION.md`); the rest is
-the IP office rows, the ILOSTAT row and the other thin columns. The pending
-repair is Afrobarometer Round 8's trust item, which would take it to about
-0.509 and waits on a licence confirmation. Lifting the D64 hold would raise it
-to about 0.60. Watch for drift from 0.526 inside the 125, and read the next
+the IP office rows, the ILOSTAT row and the other thin columns. The survey
+part has no repair in view: Afrobarometer Round 8's trust item would have
+taken it to about 0.509, and pooling the D64 dual rows would have raised it to
+about 0.60, and both are closed under the open-data rule (D154). Watch for drift from 0.526 inside the 125, and read the next
 source's effect on it first. A source that only covers rich countries raises
 O1 and breaks this.
 
@@ -133,7 +141,7 @@ passes triage runs to its gate. One that fails triage costs one paragraph.
 | Q6 | EVS/WVS sweep beyond A165 | O1: Shared purpose, Trust | The Joint EVS/WVS adapter (TRUST-1) | Done: trust in strangers scored in Trust (D140), 37 / 53 |
 | Q7 | OpenAlex research impact | Learning | OpenAlex API, full frame. Memo on #23 recommends the share of works in the top 10% for their field, as a ratio to world | Wired as `research_citation_impact` (D124), 53 / 53 |
 | Q8 | IDEA voter turnout | O1: Shared purpose | IDEA open data, full frame | Triage note, including the compulsory-voting rule |
-| Q9 | Full Delphi rerun (TRUST-5) | Reading, not measurement | Needs `AI_GATEWAY_API_KEY` | After the dataset changes |
+| Q9 | Full Delphi rerun (TRUST-5, #33) | Reading, not measurement | In-session multi-vendor panel under D154 (Claude subagents and the codex CLI); a gateway run if `AI_GATEWAY_API_KEY` exists | A reviewed run on dataset 9.0.0 |
 
 **Q2 status (2026-10-02): triaged, nothing scored.** Memo:
 `docs/research/adaptability/DISASTER-PREPAREDNESS.md`. Eleven sources; ten
@@ -194,10 +202,22 @@ first, then coverage, the A13 regime test, redundancy and r with log GDP.
 V-Dem is pinned to v16 (March 2026, 2025 values) since dataset 7.7.1. A13
 still quotes v15 polarization figures and needs restating.
 
-Parked, with the reason:
+Closed under the open-data rule (D154), not parked:
 
-- **TRUST-1 pooling** (DEU, GBR, NLD): needs a GESIS account; every `gesis.org`
-  host answered 403 from a cloud session.
+- **TRUST-1 pooling** of the ten D64 dual-row countries (#38): needs the
+  registered GESIS microdata download. The hold stays. A pooling rule that
+  works from the published release tables alone would still qualify.
+- **Afrobarometer Round 8 Q83** for A165 (#73): copyrighted and silent on
+  redistribution. Trust stays at 0.398 and the guardrail at about 0.526.
+  Latinobarómetro (forbids republishing), Arab Barometer (registration) and
+  Asian Barometer (application) are out on the same rule.
+- **Enterprise Surveys microdata** for the customs firm base (#66): behind a
+  sign-in. `customs_clearance_time` stays a check (D144); a second round on
+  the 2024 questionnaire, read from published values, can still reopen it.
+- **Gallup World Poll** for `volunteering_rate`: licensed (D10). The row stays
+  a declared gap.
+
+Parked, with the reason:
 - **TRUST-2 court clearance**: rejected at the coverage screen, 13 of 53.
   Reopen only if a harmonised non-European series appears.
 - **Cross-agency delivery** (Coordination) and **large-project delivery**
@@ -281,7 +301,9 @@ Write a short source memo before implementation. It must state:
 - the proposed publisher, dataset and series or variable identifiers;
 - the unit, direction, reference period and expected transform;
 - the countries and years covered, including exclusions;
-- the license and whether the underlying data can be inspected;
+- the license, whether the underlying data can be inspected, and whether the
+  data and derived values download without an account and can be republished
+  as published (D154; a source that fails stops here);
 - known survey, sampling, denominator and definitional problems;
 - whether the source is a candidate for scoring, a behavioural check, or an
   evidence record only.
@@ -449,9 +471,9 @@ the release year 2022, and does not copy respondent-level microdata. It
 currently recognizes 40 benchmark countries and emits 37 unique country rows.
 Germany, Great Britain and the Netherlands have separate EVS and WVS rows and
 are held until pooled microdata weights can be harmonised reproducibly.
-Pooling them needs the registered GESIS microdata download. On 2026-10-01
-every `gesis.org` host answered 403 from a cloud session, so the pooling rule
-must be written from a machine with a GESIS account.
+Pooling them needs the registered GESIS microdata download, which the
+open-data rule closes (D154), so the hold stands unless a pooling rule can be
+written from the published release tables alone.
 
 The research memo must keep access, licensing, country coverage, fieldwork
 years, variable identifiers, response coding, weights, missing-value codes and
@@ -554,9 +576,12 @@ those missing measurements.
 
 ### TRUST-5: rerun interpretation after release
 
-After the source-backed Trust release is committed, run a cost preflight and a
-full multi-model gateway Delphi against the new dataset version. Activate only
-after review:
+After the source-backed Trust release is committed, run a full panel against
+the new dataset version. Without a gateway key that is an in-session panel of
+at least three panelists from at least two vendors, each in its own context
+(D154; the steps are in `docs/PANEL.md`). With a key, run a cost preflight and
+a multi-model gateway run, the stronger instrument. Activate only after
+review:
 
 ```bash
 pnpm bench cost --max-coverage 1

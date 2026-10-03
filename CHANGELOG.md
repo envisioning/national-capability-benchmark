@@ -9,6 +9,22 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.25.6 — 2026-10-03
+
+- **The benchmark now uses open data only.** A source joins only if anyone
+  can download it without an account and republish what is derived from it.
+  Three repairs that needed a registration or a permission are closed:
+  Afrobarometer's trust question for 17 African countries, the firm counts
+  behind the customs clearance check, and the pooled survey rows for the ten
+  countries whose survey values are held. Trust keeps a mean confidence of
+  0.398, under the 0.40 target, and the link between confidence and income
+  stays at 0.526. Decision D154 sets out the cost.
+- **A panel of models from two vendors can now be published.** Three or more
+  model panelists, each with a fixed stance and working on its own, scoring
+  from the same evidence, count as a panel. Their estimates sit beside the
+  scores and never change them. No panel has been run on the current dataset
+  yet.
+
 ## App 1.25.5 — 2026-10-02
 
 - **15 more documented deliveries for the new countries.** Four document a

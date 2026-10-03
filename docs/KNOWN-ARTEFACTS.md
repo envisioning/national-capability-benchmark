@@ -183,8 +183,7 @@ operational proxy rather than a direct test of cross-agency delivery.
 WGI and not frozen at 2019. V-Dem and budget execution are useful additions for
 Coordination, but they do not show whether agencies delivered the same
 objective. Trust's social family is two perception items from one survey
-release and no behaviour. Trust needs pooled EVS/WVS rows, a recent
-court-throughput or case
+release and no behaviour. Trust needs a recent court-throughput or case
 clearance series, and broader institutional-performance evidence. See also A9,
 which is the same problem seen from an executive-led state, and D20, where
 documented cross-agency delivery is being collected as evidence.
@@ -384,8 +383,9 @@ the indicators.
 
 **Fix.** Cross-agency delivery records, a declared gap, would measure the
 construct directly and would let civil-society strength sit in a family of
-its own beside them, the way D57 splits Trust. A reviewed gateway panel on the
-9.0.0 frame would make the panel comparison readable again. Until one exists,
+its own beside them, the way D57 splits Trust. A reviewed panel on the 9.0.0
+frame, from the gateway or in session under D154, would make the panel
+comparison readable again. Until one exists,
 no panel figure belongs in this entry.
 
 ---
@@ -521,13 +521,14 @@ A165 alone as a statement about a respondent's own network, and read China's
 Trust score through its court compliance (4.5 of 100) as much as through
 either survey row.
 
-**Fix.** Pool the held EVS/WVS country rows with respondent-level weights when
-the license permits, then land court throughput and case clearance, cross-agency
+**Fix.** Land court throughput and case clearance, cross-agency
 delivery records, institutional trust, and behavioural measures of corruption
 experience. The V-Dem row is a partial Coordination repair, not a replacement
 for delivery records. The generative panel can
 interpret the dimensions while those data are missing, but its values stay
-beside the indicator score and never become observations.
+beside the indicator score and never become observations. The ten countries
+D64 holds have no open route to a survey value: pooling their rows needs the
+registered microdata download, which D154 excludes.
 
 **What the World Bank can and cannot supply.** `GF.XPD.BUDG.ZS`, primary
 government expenditure as a proportion of the original approved budget, covers
@@ -719,8 +720,10 @@ every value 2022, though fieldwork ran from 2017 to 2023.
 
 **What remains.** Neither row is adjusted. A reader can take Vietnam's
 perceived control or the income correlation of either row as a
-finding; read them through this entry first. Pooled microdata with a format
-term, or a behavioural row with frame coverage, is the fix.
+finding; read them through this entry first. A behavioural row with frame
+coverage is the fix. A format term needs pooled respondent-level microdata,
+which sits behind a registration the open-data rule excludes (D154), so none
+is in view.
 
 ---
 

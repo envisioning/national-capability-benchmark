@@ -29,10 +29,11 @@ The four stances are defined in `packages/core/src/delphi/panel.ts`:
 | Wealth sceptic | Is this capability, or is it money? |
 | Execution realist | What has this country actually built or changed? |
 
-Models come from `NCB_PANEL` and are dealt to stances round-robin. **Supply four
-distinct vendors.** With four stances and three models one vendor takes two
+Models come from `NCB_PANEL` and are dealt to stances round-robin. **On the
+gateway, supply four distinct vendors.** With four stances and three models one vendor takes two
 stances, the panel loses a quarter of its independence, and nothing in the run
 file says so. The default is now four: Anthropic, OpenAI, Google and Mistral.
+An in-session run under D154 may use two vendors, and its `note` says so.
 
 Check every id against the gateway's own list before a run. It is public, needs
 no key, and carries the price each model is billed at:
@@ -72,7 +73,7 @@ Every run file declares `provenance`. It is **stored, never inferred** (D14).
 | Value | Meaning | Quotable as evidence |
 | --- | --- | --- |
 | `gateway` | Real multi-vendor LLM panel | Yes |
-| `in_session` | An agent or person scoring inside a working session, often N=1 | With the caveat below |
+| `in_session` | Panelists scored inside a working session, by agents in separate contexts or by a person | Yes when it meets D154's panel test below; otherwise a research note |
 | `human` | Human expert panel | Yes |
 | `mock` | Deterministic offline stand-in | **No** |
 
@@ -82,9 +83,21 @@ present a `mock` run as evidence, and both warn when a run has fewer than three
 panelists.
 
 **A run with one panelist is not a panel.** The median is one opinion and the
-IQR is zero. An in-session run can be useful for finding artefacts, but a real
-gateway run must replace it before publication. The model name does not make an
-in-session estimate equivalent to a multi-vendor panel.
+IQR is zero. Such a run can be useful for finding artefacts and is a research
+note, never published as a panel.
+
+**An in-session run is a panel for publication when it passes D154's test.**
+At least three panelists, drawn from at least two model vendors, each in a
+separate context with one fixed stance, all scoring from the same evidence
+brief that `pnpm bench prompt` prints for the current dataset. Its provenance
+stays `in_session` and is never relabelled `gateway`. This supersedes the
+earlier rule that a gateway run must replace every in-session run before
+publication. A multi-vendor gateway run is still the stronger instrument (four
+vendors, rounds dispatched by code, failed calls counted) and should be
+preferred whenever `AI_GATEWAY_API_KEY` exists. `isPanel` counts panel entries
+and cannot see context separation or vendor mix, so the run file has to state
+both (see "Running it in session" below). D139 still applies: a run compares
+with the indicators only when its `datasetVersion` is the current one.
 
 ## Running it
 
@@ -98,6 +111,41 @@ pnpm bench score && pnpm bench report
 ```
 
 Without a key the CLI falls back to the mock provider and says so.
+
+### Running it in session (D154)
+
+With no gateway key, the panel runs inside a working session. The vendors
+available today are Anthropic, through Claude Code subagents, and OpenAI,
+through the codex CLI (`codex exec`). With two vendors and four stances, each
+vendor takes two stances, and no vendor takes a stance the other already
+holds in the same round.
+
+1. Score the current dataset and print each panelist's prompt from the
+   pipeline: `pnpm bench prompt --system` for the rules and `pnpm bench prompt
+   --stance <id>` for the country blocks. Never paraphrase a prompt.
+2. Start one context per panelist: one subagent per Claude stance, one `codex
+   exec` per OpenAI stance. A panelist sees its system rules, its stance and
+   the evidence brief, and nothing another panelist wrote. One context never
+   writes two panel entries. Each returns round-1 cells in the
+   `DelphiRunFile` cell shape (`docs/PANELIST-BRIEF.md`).
+3. For round 2, the orchestrating session anonymises the merged round-1 cells
+   with `anonymiseRound` and builds each panelist's prompt with
+   `round2CellPrompt`, both in `packages/core/src/delphi/prompts.ts`, then
+   sends them to fresh contexts, one per panelist, on the same vendor and
+   stance as round 1. The CLI does not print round-2 prompts yet.
+4. Merge into one run file in `data/delphi/<runId>.json` with `provenance:
+   "in_session"`, the current `datasetVersion` and `countrySet`, and one
+   `panel` entry per panelist naming its stance and its model as the vendor
+   reports it, plus the route, for example `gpt-5.x (codex CLI, in-session)`.
+   The `note` states the vendors, that each panelist ran in its own context,
+   the round count, any panelist or cell that failed and was not rerun, and
+   that the run is an interpretation layer whose estimates never enter
+   `score`.
+5. `pnpm bench validate`, read the cell-round counts it reports, then
+   `pnpm bench score` and review before `--activate` copies it to
+   `latest.json`. A cell short of the declared panel narrows the IQR and reads
+   as agreement, so rerun the missing panelist rather than activating around
+   it.
 
 **Nothing activates itself.** `--activate` is required for every run, including
 a full-frame one. Until you pass it, `latest.json` keeps pointing at the

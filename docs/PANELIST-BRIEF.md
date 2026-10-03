@@ -112,20 +112,18 @@ surface in the viewer would render that spread as if it were cross-vendor
 disagreement. One agent, one panel entry, one file. Independence is the thing
 being measured, and it is the one thing this schema cannot check for you.
 
-Merging separate single-panelist files into one run is a human step, done only
-when the files were produced in separate sessions by different models.
+Merging separate single-panelist files into one run is done by the session
+that orchestrates the panel, and only when each file was produced in its own
+context. Under D154 a merged in-session run of three or more panelists from at
+least two vendors is a panel for publication; `docs/PANEL.md` says how it is
+run and recorded.
 
 ## Current state
 
-The current dataset is version 6.1.0 with 53 countries and 477
-country-dimension cells. The repository contains three in-session,
-one-panelist artifacts. `data/delphi/latest.json` points to an old Claude
-round-1 artifact from 2026-08-26 with 144 cell estimates and no
-`datasetVersion` or country-set metadata. The two later stance files are
-anchored to dataset 4.0.0. None is a current panel for 6.1.0, and none should
-be presented as publishable multi-model evidence.
-
-Round 2 and indicator judgements still need to be run for the current dataset.
-Generate prompts from the live pipeline after scoring 6.1.0. A reviewed gateway
-run should use at least three independent panelists and cover the intended
-country set before it replaces `latest.json`.
+No panel run is on the current dataset. `data/delphi/latest.json` points to an
+old one-panelist Claude round-1 artifact from 2026-08-26 with no
+`datasetVersion`, and the other in-session files are one panelist each and
+anchored to older frames. None is a current panel, and D139 keeps them off any
+comparison with the indicators. The next run is an in-session multi-vendor
+panel under D154 (issue #33), or a gateway run if a key exists, covering the
+full current country set.

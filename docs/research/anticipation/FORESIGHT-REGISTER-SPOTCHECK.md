@@ -1,8 +1,9 @@
 # Foresight register spot-check: round 2
 
-A person checks this sample before any foresight register score is used, and
+This sample is checked before any foresight register score is used, and
 before coding of the 53 starts (owner ruling of 2026-10-02, codebook 1.1
-section 7). The pilot report is `FORESIGHT-REGISTER-PILOT.md`, round 2.
+section 7). Under D154 the checker is a model family not used to code:
+OpenAI through the codex CLI, working through the same questions below. The pilot report is `FORESIGHT-REGISTER-PILOT.md`, round 2.
 
 ## How the sample was drawn
 
