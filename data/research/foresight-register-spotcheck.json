@@ -1,0 +1,161 @@
+{
+  "model": "claude-sonnet-5-5",
+  "checkedAt": "2026-10-03",
+  "bodies": [
+    {
+      "n": "1",
+      "body": "ARE: Ministry of Cabinet Affairs, future foresight portfolio",
+      "result": "Overturned",
+      "checklist": [
+        {"item": "Official page gives the foresight mandate in words", "holds": true, "source": "https://www.moca.gov.ae/en/area-of-focus/future-foresight", "note": "Page reads: 'mandated with the portfolio of future of UAE and developing a strategy that ensures all sectors' readiness for the future's variabilities'. Names future foresight and scenario planning."},
+        {"item": "Official page dates the 2016 creation of the future portfolio", "holds": null, "source": "https://uaecabinet.ae/en/news/ministers-of-the-future-government-take-the-oath-before-the-uae-prime-minister", "note": "uaecabinet.ae returned 403 and the MoCA about page only gives 2006. Only a search digest of uaecabinet.ae pages says Future Foresight was added to the portfolio in the February 2016 reshuffle. Not read on the page itself; no snapshot obtainable (Wayback blocked here)."},
+        {"item": "PM in office since 2006, so no change since 2016 (no_change)", "holds": true, "source": "https://www.moca.gov.ae/en/about/about-moca", "note": "Sheikh Mohammed bin Rashid has been PM since January 2006; no change of effective chief executive since 2016. Not contradicted by anything found."},
+        {"item": "No ministry-authored forward-looking product dated 2023-10-02 or later on an official URL (product 0)", "holds": false, "source": "https://www.moca.gov.ae/en/media/news/government-development-and-the-future-office-launches-10-future-emerging-opportunities-report", "note": "moca.gov.ae news item dated 11 Nov 2023: the Government Development and the Future Office (UAE Ministry of Cabinet Affairs / Prime Minister's Office) launches whitepaper '10 Future Emerging Opportunities, Government Leaders Should Be Ready For', horizon 'next decade', co-developed with Future Today Institute (co-authorship allowed). Published on gdf.gov.ae/en/publications/10-future-emerging-opportunities (403 to my fetcher). It is a trends report inside the window with a ten-year horizon. Caveat: I could not open the PDF, and whether the Office is the Ministry's own unit rather than a separate PMO body is read from the news item, which names both."}
+      ],
+      "overturnedCode": "product",
+      "changesCountryItem": true,
+      "note": "A trends report from the Government Development and the Future Office dated 2023-11-11 on moca.gov.ae and gdf.gov.ae looks like a qualifying product, so product 1. This body is the only ARE GFF, so ARE I2 would move 0 to 1 and the score from 33 to 67 (if I1 and I3 are as coded). Confidence moderate: the document itself was not readable."
+    },
+    {
+      "n": "2",
+      "body": "ARE: Federal National Council",
+      "result": "Confirmed",
+      "checklist": [
+        {"item": "Standing committees include no futures or technology assessment committee", "holds": true, "source": "https://www.almajles.gov.ae/AboutTheFNC/UndertheFNC/Pages/FNCCommittees.aspx", "note": "Official page (read via search digest, direct fetch refused) lists eight committees: constitutional, defence/interior/foreign, financial/economic/industrial, technology/energy/mineral resources, education/culture/youth/media, health/environment, social/labour, heads of committees. None is futures or TA; the technology one is a sectoral portfolio."},
+        {"item": "If a Future Committee existed, note dates (I4)", "holds": true, "source": "https://www.thenationalnews.com/uae/fnc-to-set-up-uae-human-rights-committee-1.438794", "note": "Search for a FNC 'Future Committee' found nothing on an official site; no standing body to date, so no I4 effect."}
+      ],
+      "overturnedCode": null,
+      "changesCountryItem": false,
+      "note": "Rejection stands under conditions 3 and 4. The committee list rests on a digest of the official page, not a direct read."
+    },
+    {
+      "n": "3",
+      "body": "ARE: Dubai Future Foundation",
+      "result": "Confirmed",
+      "checklist": [
+        {"item": "Created by the Emirate of Dubai, not by federal law", "holds": true, "source": "https://www.dubaifuture.gov.ae/", "note": "Search results describe it as a Dubai government entity launched by the Ruler of Dubai in 2016, under Dubai Law No. 19 of 2015 as amended by Law No. 6 of 2016. The dubaifuture.ae about page does not name the law, and I did not open the Dubai legislation portal, so the law numbers are from a secondary snippet."}
+      ],
+      "overturnedCode": null,
+      "changesCountryItem": false,
+      "note": "Emirate-level body, so sub-national and excluded. The law numbers are unconfirmed on a primary page."
+    },
+    {
+      "n": "4",
+      "body": "SGP: Centre for Strategic Futures",
+      "result": "Confirmed",
+      "checklist": [
+        {"item": "Who-we-are page dates the centre to 2009", "holds": true, "source": "https://www.csf.gov.sg/who-we-are/", "note": "'the Centre for Strategic Futures (CSF) was established as a futures think tank within SPO' in 2009."},
+        {"item": "Foresight 2024 authored by CSF, dated on or after 2023-10-02, mainly long-term future, no horizon under ten years", "holds": true, "source": "https://www.csf.gov.sg/media-centre/foresight-series/", "note": "Series page dates Foresight 2024 to 22 August 2024; the PDF (file.go.gov.sg/csfforesight2024.pdf) is the 'Fifteenth Anniversary Issue' of CSF's megatrends and emerging-issues series, with research essays on futures (e.g. 2035, 2040 scenarios, 30-year urban trends) and no horizon under ten years. It does mix reflections with research, so low-moderate confidence on 'main subject'."},
+        {"item": "Something dated six months or more after the May 2024 handover shows the centre operating (survived 1)", "holds": true, "source": "https://www.csf.gov.sg/media-centre/thinking-about-tomorrow/", "note": "CSF page 'Thinking About Tomorrow: A Handbook for Strategic Foresight' dated 24 Feb 2026, authored by CSF; archived who-we-are copy is dated Sept 2026. Handbook is a methods item so it supports survival only, not I2."}
+      ],
+      "overturnedCode": null,
+      "changesCountryItem": false,
+      "note": "All codes stand. Product 1 rests on Foresight 2024 only, which is the weakest part."
+    },
+    {
+      "n": "5",
+      "body": "SGP: Committee on the Future Economy",
+      "result": "Confirmed",
+      "checklist": [
+        {"item": "Set up for one report (2017), no standing mandate", "holds": true, "source": "https://www.mti.gov.sg/Resources/publications/Report-of-the-Committee-on-the-Future-Economy", "note": "MTI: CFE convened January 2016 and concluded February 2017 with its report; economy-only. Fails conditions 2 and 4."}
+      ],
+      "overturnedCode": null,
+      "changesCountryItem": false,
+      "note": "Rejection stands."
+    },
+    {
+      "n": "6",
+      "body": "BRA: Ipea, Instituto de Pesquisa Econômica Aplicada",
+      "result": "Overturned",
+      "checklist": [
+        {"item": "Ipea meets condition 1 as a public-law body", "holds": true, "source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/D11194.htm", "note": "Art. 1: 'fundação pública' instituted under art. 190 of Decreto-Lei 200/1967, 'vinculado ao Ministério da Economia'. Art. 5: head 'indicado pelo Ministro de Estado da Economia e nomeado na forma prevista na legislação'. The decree's later ministry is Planning and Budget; not re-read."},
+        {"item": "'Estudos prospectivos de médio e longo prazo' is a named foresight function", "holds": true, "source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/D11194.htm", "note": "Art. 3 III (not art. 2): 'realizar estudos prospectivos de médio e longo prazo'. 'Prospectivo' is on the term list and no horizon under ten years is set. Ipea's page also describes prospective studies as megatrends and scenarios. Cross-domain (economic and social research)."},
+        {"item": "Prospective-studies competence predates the 2023-01-01 presidential change", "holds": true, "source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/D11194.htm", "note": "Decreto 11.194 is dated 8 Sept 2022. Ipea still operates and publishes after July 2023 (2025 report below)."},
+        {"item": "No Ipea-authored product of 10 years or more on an official URL since 2023-10-02", "holds": false, "source": "https://www.gov.br/planejamento/pt-br/assuntos/planejamento/estrategia-2050-conteudo/Arquivos/macroeconomia_revisado_finalizado.pdf/@@download/file", "note": "'Estudo Estratégico de Análise Macroeconômica', 1st ed., Brasília 2025, on gov.br/planejamento, coordinated by Claudio Amitrano and Monica Pessoa and elaborated by five named authors, all marked IPEA, issued under the Ministry of Planning's technical sheet. Search digest says it builds three alternative exploratory scenarios for 2025-2050. That is a scenario set with a 25-year horizon on a gov.br domain, with Ipea staff as authors. Weaknesses: Ipea is named through staff affiliation, and the MPO is the issuing body; I did not read the scenario chapters closely."}
+      ],
+      "overturnedCode": "product",
+      "changesCountryItem": true,
+      "note": "The 2025 Brasil 2050 macroeconomic study reads as a scenario set by Ipea authors, so product 1 for Ipea. Unit, record and survived stand. Brazil's I2 changes only if no other Brazilian GFF already carries it; the checklist says Ipea carries Brazil's I3 alone, so if I2 was 0 for Brazil it flips to 1 (score up 33 points). If the planning ministry's own foresight unit already carries I2, no country item changes."
+    },
+    {
+      "n": "7",
+      "body": "NGA: Office of the Vice President, foresight programme (OSPRE)",
+      "result": "Confirmed",
+      "checklist": [
+        {"item": "No federal page creates a standing foresight office", "holds": true, "source": "https://statehouse.gov.ng/presidency/office-of-the-vice-president/", "note": "OSPRE is described as the national early-warning and response centre created by Executive Order in the VP's office; the only foresight item found is UNICEF's 'Nigeria 2050 Child Foresight Analysis', a project. No gov.ng page names a standing foresight office. ospre.gov.ng did not resolve; statehouse.gov.ng pages were seen only as search results. Absence claim."}
+      ],
+      "overturnedCode": null,
+      "changesCountryItem": false,
+      "note": "Rejection stands (not a standing foresight mandate; early warning is a security function). Based on an absence search."
+    },
+    {
+      "n": "8",
+      "body": "NGA: NACETEM",
+      "result": "Confirmed",
+      "checklist": [
+        {"item": "Mandate confined to technology management and science and innovation policy", "holds": true, "source": "https://nacetem.gov.ng", "note": "Official site returned no text. Secondary descriptions say NACETEM, an agency of the Federal Ministry of Science and Technology (est. 1992), is mandated to train STI-management manpower and do policy research in science, technology and innovation. Fails condition 4 either way."}
+      ],
+      "overturnedCode": null,
+      "changesCountryItem": false,
+      "note": "Stands, but the mandate wording was not read on the official page."
+    },
+    {
+      "n": "9",
+      "body": "GBR: Development, Concepts and Doctrine Centre",
+      "result": "Confirmed",
+      "checklist": [
+        {"item": "Mandate is to inform defence; breadth of product does not widen it", "holds": true, "source": "https://www.gov.uk/government/organisations/development-concepts-and-doctrine-centre", "note": "That gov.uk page now returns 404. Search results describe DCDC as the MOD's internal think tank; Global Strategic Trends is a context for MOD planners 'and wider government'. DCDC was reorganised into Defence Futures in July 2024 (per search), so the body's status has changed. Condition 4 as written reads the mandate, which is defence."}
+      ],
+      "overturnedCode": null,
+      "changesCountryItem": false,
+      "note": "Rejection stands. Note the July 2024 reorganisation if the body is ever recoded."
+    },
+    {
+      "n": "10",
+      "body": "EST: Eesti Arengufond (Estonian Development Fund)",
+      "result": "Overturned",
+      "checklist": [
+        {"item": "The act names foresight (arenguseire) as a task", "holds": true, "source": "https://www.riigiteataja.ee/akt/13238017", "note": "Riigi Teataja renders only in a browser and my fetch returned an empty shell. Riigi Teataja listings and the Foresight Act text (riigiteataja.ee/en/akt/514072016002) say the Fund's development monitoring covered long-term developments in science, technology, economy, environment and society, and its tasks passed to the Foresight Centre in 2016. Arenguseire.ee: 'toetada ... investeerimistegevuse, arenguseire- ja kasvuprogrammide kaudu'. Act text itself not read."},
+        {"item": "Foresight mandate reaches across domains, not economy alone (condition 4)", "holds": true, "source": "https://arenguseire.ee/eesti-arengufondi-raportid/", "note": "The Fund's stated purpose is the economy, but the development monitoring task is multi-domain per the digest above. Low confidence; the act text was not read."},
+        {"item": "Act's date (record 1 if a primary page dates it)", "holds": true, "source": "https://www.riigiteataja.ee/akt/13238017", "note": "Riigi Teataja index data (via search) gives adoption 15.11.2006, in force 01.12.2006. A body whose creating act is dated on the gazette meets the I1 definition, so record should be 1, not 0. I saw the date only in a search digest of that gazette page."}
+      ],
+      "overturnedCode": "record",
+      "changesCountryItem": false,
+      "note": "Record should be 1 on the Riigi Teataja date (15 Nov 2006); unit decision and other codes look right (survived: ended 29 Jun 2016, over two years after the March 2014 PM change). Closed 2016, so I1 (operating bodies only) and I4 (window starts 2016-10-02) are unaffected; the successor Foresight Centre is a separate body not in this check."
+    },
+    {
+      "n": "11",
+      "body": "CHE: FDFA Policy Planning",
+      "result": "Confirmed",
+      "checklist": [
+        {"item": "Forward-looking mandate confined to foreign policy", "holds": true, "source": "https://www.bk.admin.ch/de/perspektiven-schweiz-2040", "note": "Federal Chancellery page: 'Die Abteilung Policy Planning des EDA wirkt im Bereich der Analyse und Antizipation von internationalen Trends sowie geopolitischen Entwicklungen' feeding the foreign policy strategy. Foreign policy only, fails condition 4."}
+      ],
+      "overturnedCode": null,
+      "changesCountryItem": false,
+      "note": "Rejection stands."
+    },
+    {
+      "n": "+SPO",
+      "body": "SGP: Scenario Planning Office, later Strategic Policy Office (1995 to 2015)",
+      "result": "Confirmed",
+      "checklist": [
+        {"item": "It was a body of its own, not a name for CSF", "holds": true, "source": "https://www.csf.gov.sg/who-we-are/", "note": "'In 1995, the Government set up the Scenario Planning Office in the Prime Minister's Office'; renamed Strategic Policy Office in 2003; CSF 'established ... within SPO' in 2009; in 2015 CSF 'became part of the new Strategy Group'. SPO is a distinct body that CSF sat inside, with its own 1995 date, and it ended 2015 before the I4 window with a same-branch successor."}
+      ],
+      "overturnedCode": null,
+      "changesCountryItem": false,
+      "note": "Distinct body, codes stand. Its mandate wording is thin on the page (scenarios, whole-of-government) but meets the long-term scenarios term."
+    },
+    {
+      "n": "+SAE",
+      "body": "BRA: Secretaria Especial de Assuntos Estratégicos (SAE/PR), 2019 to 2022 form",
+      "result": "Confirmed",
+      "checklist": [
+        {"item": "Scenario wording is in the structure in force at closure, not only in revoked articles", "holds": true, "source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/D11285.htm", "note": "Decreto 10.374/2020 was revoked by Decreto 11.285 (13 Dec 2022, in force 28 Dec 2022), which re-issued the SAE structure, then art. 15 to 25 were revoked by Decreto 11.365 (1 Jan 2023). The 11.285 text keeps 'realizar estudos e análises de cenários que contribuam para a formulação do planejamento nacional de longo prazo' in the directorate's competence. So the wording was in force at closure. The adjudicator cited 10.374/10.817, not 11.285."},
+        {"item": "Same-day successor reading under I4", "holds": true, "source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11353.htm", "note": "Decreto 11.353 of 1 Jan 2023 gives the Ministry of Planning and Budget 'coordenar a elaboração do planejamento governamental de longo prazo e de estudos prospectivos' and 'elaborar estudos prospectivos e análises de cenários'. It enters into force on 24 Jan 2023, not 1 Jan, but that is well inside 24 months. Same branch (executive), so I4 is 0."}
+      ],
+      "overturnedCode": null,
+      "changesCountryItem": false,
+      "note": "Unit, record, survived (did_not_survive, closed at the Jan 2023 presidential change) and I4 stand. The citation to 11.285 should replace 10.374 as the in-force structure."
+    }
+  ]
+}

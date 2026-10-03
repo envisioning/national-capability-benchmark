@@ -248,20 +248,101 @@ Drawn in the sample, item 10.
 
 ## Result
 
+Checked 2026-10-03 by an agent checker, not a person, under the owner's
+ruling of 2026-10-03 that a single-vendor check is acceptable (D154 as
+amended). The checker was `claude-sonnet-5-5`, a fresh subagent given only
+this file's sample (without this table) and codebook 1.2, with live web
+search. Its raw output is `data/research/foresight-register-spotcheck.json`.
+A first attempt with an OpenAI model through the Codex CLI stopped before
+any verdict: the Codex workspace ran out of credits.
+
 | # | Body | Result | Note |
 | ---: | --- | --- | --- |
-| 1 | ARE Ministry of Cabinet Affairs | | |
-| 2 | ARE Federal National Council | | |
-| 3 | ARE Dubai Future Foundation | | |
-| 4 | SGP Centre for Strategic Futures | | |
-| 5 | SGP Committee on the Future Economy | | |
-| 6 | BRA Ipea | | |
-| 7 | NGA Vice President's foresight programme | | |
-| 8 | NGA NACETEM | | |
-| 9 | GBR DCDC | | |
-| 10 | EST Development Fund | | |
-| 11 | CHE EDA Policy Planning | | |
-| + | SGP Scenario Planning Office | | |
-| + | BRA SAE/PR | | |
+| 1 | ARE Ministry of Cabinet Affairs | Overturned (product) | The checker found "10 Future Emerging Opportunities", 11 November 2023, horizon the next decade, on moca.gov.ae, and coded product 1. The page names the Government Development and the Future Office as author, which the round 2 table holds as a separate GFF (`ARE.gdfo`, product 1). The overturn reads a unit's product as its parent's: a point codebook 1.2 leaves open (see below). No country item changes: ARE's I2 is already 1 through `ARE.gdfo`. The checker flagged a change because the checklist did not show `ARE.gdfo`. |
+| 2 | ARE Federal National Council | Confirmed | Read from a digest of the committee page, not the page itself. |
+| 3 | ARE Dubai Future Foundation | Confirmed | Emirate level. The founding law's number is not confirmed on a primary page. |
+| 4 | SGP Centre for Strategic Futures | Confirmed | Product rests on Foresight 2024 alone. |
+| 5 | SGP Committee on the Future Economy | Confirmed | |
+| 6 | BRA Ipea | Overturned (product) | "Estudo Estratégico de Análise Macroeconômica" (Brasília 2025, gov.br/planejamento) builds exploratory scenarios to 2050. The Ministry of Planning and Budget issues it; its two coordinators and five authors are all marked "IPEA". The checker read that as Ipea authorship. Whether staff affiliation names a body as author is a point codebook 1.2 leaves open (see below). No country item changes: Brazil's I2 is already 1 through `BRA.seplan`. |
+| 7 | NGA Vice President's foresight programme | Confirmed | Rests on a search for absence. |
+| 8 | NGA NACETEM | Confirmed | Mandate wording not read on the official page. |
+| 9 | GBR DCDC | Confirmed | |
+| 10 | EST Development Fund | Overturned (record) | The checker coded record 1 on the act's date, 15 November 2006. It saw the date only in a search digest of Riigi Teataja, which renders only in a browser. Section 4 holds a search snippet to be a lead, so the overturn does not meet the codebook's own evidence rule. The adjudicated 0 was coded for the same reason: neither the coders nor the checker read the page. No country item changes: the body closed in 2016. |
+| 11 | CHE EDA Policy Planning | Confirmed | |
+| + | SGP Scenario Planning Office | Confirmed | |
+| + | BRA SAE/PR | Confirmed | The structure in force at closure is Decreto 11.285/2022 with the same scenario wording, not 10.374 as amended. Decreto 11.353 takes effect on 2023-01-24, inside the 24 months, so the successor reading stands. |
 
-Checked by: ______ on ______. Error rate over the 11 sampled: __ of 11.
+Checked by: `claude-sonnet-5-5` (agent checker, Anthropic) on 2026-10-03.
+Error rate over the 11 sampled: 3 of 11 (27 percent). Without number 10, whose overturn rests on a search snippet, it is 2 of 11 (18 percent).
+
+## Verdict: the check fails D148
+
+D148 is overturned by a spot-check that overturns two or more of the 11
+sampled bodies, or by any body decision that changes a country item. The
+checker overturned three, and two even after setting aside the one that breaks
+the evidence rule. Read against the adjudicated body table, none of the
+three changes a country item. The first condition fires, so the check fails.
+Coding of the 125 does not start (runbook section 0), and the next step is a
+decision entry.
+
+The check is same-vendor. The pilot coders were Claude Sonnet and Opus, and
+so is the checker. The check therefore measures how stable the adjudication
+is when a fresh context reads it. It does not test errors shared by one
+vendor's models with the same search tools. A different vendor would have
+found as much or more.
+
+### Where the overturns trace
+
+Two of the three trace to rules codebook 1.2 leaves open. One traces to
+evidence access. Neither of the first two is a misreading of a source.
+
+1. **Whose product is a unit's product** (number 1). Section 1 judges every
+   body on its own *mandate* and says a parent's mandate is not read from a
+   unit inside it. I2 names the author through "the GFF is named on the
+   product". Nothing says whether a product by a unit or office counts for
+   the ministry that houses it. The pilot coders read it as the unit's
+   only. The checker read it as the parent's too.
+2. **Whether staff affiliation names a body as author** (number 6). I2 counts
+   a GFF "named on the product, or on the official page that publishes it,
+   as author, co-author or issuing body". A product issued by one body,
+   with every author marked as staff of another, satisfies one reading and
+   fails the other.
+3. **Gazettes that render only in a browser** (number 10). Section 4 codes a
+   date 0 when it cannot be seen on a primary page. A coder or checker
+   whose fetcher cannot render the gazette cannot see the date, whatever
+   the act says. This is a tooling gap, not a rule gap. It decides an
+   item wherever a national legal database is script-rendered.
+
+### Proposed codebook change (1.3)
+
+Decided on the construct, naming no country, and committed before any
+recode:
+
+- **I2, authorship between bodies.** "A product counts for the body named
+  on it, or on the page that publishes it, as an institution: author,
+  co-author or issuing body. A product of a unit counts for the unit and not
+  for the body that houses it, and a parent's product does not count for its
+  unit, the same rule section 1 applies to mandates. Individual authors'
+  affiliations do not name a body: a product issued by one body and written
+  by staff of another counts for the issuing body, and for the other only
+  when it is named as an institution." Why: I2 reads whether a body
+  operates. The record of operation is what the state publishes under a
+  body's name, and an affiliation line records employment, not issuance.
+  Because the country item is the maximum over bodies, the rule moves an
+  item only where the unit itself fails the unit test. That is where the
+  attribution matters.
+- **Section 4, rendering.** "A primary page that does not render to the
+  coder's fetcher is read through a browser-rendered fetch or an archived
+  copy before any item it carries is coded 0. Where neither is possible,
+  the item codes 0 with `confidence: "low"` and the note
+  `unrendered: <url>`, and the adjudicator renders the page before the
+  code stands. A search snippet stays a lead." Why: a 0 that says the date
+  could not be read measures the coder's tools, not the state's record.
+- **Spot-check checklist.** The checklist shows every GFF the adjudication
+  holds for the body's country, with each one's body codes. Then a checker
+  can tell whether an overturn changes a country item. Number 1 was flagged
+  as one because the list left out `ARE.gdfo`.
+
+The three changes need a decision entry superseding D148's go. They also
+need a recode of the ten pilot countries under 1.3, and a fresh spot-check
+drawn under the same rule with a new seed, before coding the 125.
