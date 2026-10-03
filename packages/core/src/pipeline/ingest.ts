@@ -15,7 +15,13 @@ import {
   worldBankRowIso3,
 } from '../model/index.js'
 import { ObservationFile, RevisionFile } from '../model/index.js'
-import type { Observation, Revision, RevisionRun } from '../model/index.js'
+import type {
+  IndicatorDef,
+  IngestDrop,
+  Observation,
+  Revision,
+  RevisionRun,
+} from '../model/index.js'
 import { CONTEXT_PREFIX, DENOMINATOR_PREFIX } from './diagnostics.js'
 import { FILES, SNAPSHOT_DIR } from './paths.js'
 
@@ -143,13 +149,65 @@ export function diffObservations(
   return { revisions, changed, added, removed }
 }
 
+/**
+ * Drop the values the registry says a publisher cannot mean.
+ *
+ * A row flagged `zeroIsMissing` measures something a functioning economy
+ * cannot have none of, so an exact 0 on it is a placeholder for a missing
+ * value. Storing it would score it and, as the row's lowest value, set its 0
+ * endpoint for every country. The rule reads the flag on the row and names no
+ * country. Only national registry rows are tested: denominators, context
+ * series and checks keep whatever the publisher prints. See D157.
+ */
+export function applyIngestRules(
+  observations: Observation[],
+  defs: readonly IndicatorDef[] = INDICATORS,
+): { kept: Observation[]; dropped: IngestDrop[] } {
+  const byId = new Map(defs.map((d) => [d.id, d]))
+  const kept: Observation[] = []
+  const dropped: IngestDrop[] = []
+  for (const o of observations) {
+    const def = byId.get(o.indicatorId)
+    if (def?.zeroIsMissing && o.value === 0) {
+      dropped.push({
+        indicatorId: o.indicatorId,
+        iso3: o.iso3,
+        year: o.year,
+        value: o.value,
+        series: def.source.series ?? o.indicatorId,
+        reason: 'zero_is_missing',
+      })
+      continue
+    }
+    kept.push(o)
+  }
+  return { kept, dropped }
+}
+
+/**
+ * A cell that left because a rule dropped it says so, so the log never reads
+ * the rule as the publisher withdrawing the value.
+ */
+export function tagDroppedRevisions(revisions: Revision[], dropped: IngestDrop[]): Revision[] {
+  const droppedKeys = new Map(
+    dropped.map((d) => [cellKey({ ...d, geometry: 'national' }), d.reason]),
+  )
+  return revisions.map((r) => {
+    const reason = r.to === null ? droppedKeys.get(cellKey(r)) : undefined
+    return reason ? { ...r, reason } : r
+  })
+}
+
 export async function recordRevisions(
   before: Observation[],
   previousRetrievedAt: string | null,
   after: Observation[],
   retrievedAt: string,
+  dropped: IngestDrop[] = [],
 ): Promise<RevisionRun> {
-  const { revisions, changed, added, removed } = diffObservations(before, after)
+  const diff = diffObservations(before, after)
+  const { changed, added, removed } = diff
+  const revisions = tagDroppedRevisions(diff.revisions, dropped)
   const listed = revisions.slice(0, REVISION_CAP)
   const run: RevisionRun = {
     retrievedAt,
@@ -161,6 +219,7 @@ export async function recordRevisions(
     removed,
     revisions: listed,
     omitted: revisions.length - listed.length,
+    ...(dropped.length > 0 ? { dropped } : {}),
   }
 
   const raw = await readJson(FILES.revisions)
@@ -208,7 +267,7 @@ export async function ingestWorldBank(
     seriesToChecks.set(c.source.series, list)
   }
 
-  const observations: Observation[] = []
+  let observations: Observation[] = []
   const report: IngestReport[] = []
 
   for (const req of requests) {
@@ -277,6 +336,11 @@ export async function ingestWorldBank(
     observations.push(...before.filter((o) => failedTargets.has(o.indicatorId)))
   }
 
+  /* After the carry-forward, so a value carried from an older file passes the
+   * same rule as a fresh one. */
+  const { kept, dropped } = applyIngestRules(observations)
+  observations = kept
+
   const body = `${JSON.stringify({ generatedAt: retrievedAt, observations }, null, 2)}\n`
   await mkdir(dirname(FILES.worldBank), { recursive: true })
   await writeFile(FILES.worldBank, body)
@@ -288,6 +352,12 @@ export async function ingestWorldBank(
     await writeFile(resolve(SNAPSHOT_DIR, `worldbank-${retrievedAt.slice(0, 10)}.json`), body)
   }
 
-  const revisions = await recordRevisions(before, previousRetrievedAt, observations, retrievedAt)
+  const revisions = await recordRevisions(
+    before,
+    previousRetrievedAt,
+    observations,
+    retrievedAt,
+    dropped,
+  )
   return { observations, report, revisions }
 }

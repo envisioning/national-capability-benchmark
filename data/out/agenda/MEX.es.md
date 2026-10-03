@@ -15,7 +15,7 @@ La comparación incluye 125 países. Cada dimensión recibe una puntuación de 0
 | Aprendizaje | 42.5 | 0.54 (utilizable) | sin base de tendencia |
 | Experimentación | 25.3 | 0.53 (utilizable) | +0.4 en 10 años, con 3 indicadores |
 | Adaptación | 65.4 | 0.46 (utilizable) | sin base de tendencia |
-| Ejecución | 55.2 | 0.57 (utilizable) | +2.5 en 10 años, con 3 indicadores |
+| Ejecución | 54.8 | 0.57 (utilizable) | +2.5 en 10 años, con 3 indicadores |
 | Propósito compartido | 45.2 | 0.43 (débil) | +8.6 en 10 años, con 2 indicadores |
 
 ## Puntuaciones bajas con evidencia utilizable
@@ -86,7 +86,7 @@ Estas dimensiones tienen una puntuación de al menos 50, con evidencia utilizabl
 
 - Adaptación: 65.4, evidencia utilizable
 - Iniciativa: 64.3, evidencia utilizable
-- Ejecución: 55.2, evidencia utilizable
+- Ejecución: 54.8, evidencia utilizable
 
 ## ¿Con qué cuenta México?
 

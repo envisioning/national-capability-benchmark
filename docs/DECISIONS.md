@@ -8375,3 +8375,125 @@ economics, finding a term or a sentence wrong, which replaces this review
 with theirs; or a reader of the map taking a "posición en la escala"
 sentence for the raw value, which would need the row's direction printed
 beside it.
+
+---
+
+## D157 — A World Bank zero is dropped where the row cannot be zero
+
+*Recorded 2026-10-03. Resolves A17 as filed; dataset 9.1.0. Extends D25.*
+
+**Decision.** A registry row may carry `zeroIsMissing: true`. The World Bank
+ingest drops a published value of exactly 0 on such a row before writing
+`data/observations/worldbank.json`, and lists each drop in that run's entry
+in `data/observations/revisions.json` under `dropped`, with the country,
+year, value, series and the reason `zero_is_missing`. The diff entry for a
+cell that left the file this way carries the same `reason`, so the log never
+reads the rule as the publisher withdrawing a value. The flag is set on a
+row from what it measures: a construct a functioning economy of a million
+people cannot have none of, so an exact 0 can only mean the publisher has
+no number. It never names a country, and only an exact 0 is dropped; a value
+of 0.004 is a measurement. The rule applies after the carry-forward of a
+failed series, so an older file's value passes it too. Denominators, the
+income context series and checks keep whatever the publisher prints. The
+pure step is `applyIngestRules` in `packages/core/src/pipeline/ingest.ts`,
+tested in `ingest.test.ts`.
+
+The audit read every World Bank row that is scored or a condition, 34
+rows, against every year and all 125 countries in the file of 2026-10-02.
+Thirteen rows hold an exact 0 somewhere.
+
+Flagged, with zeros in the file (61 values dropped):
+
+- `manufacturing_value_added` (% of GDP): Venezuela 1991 to 2011 (21),
+  Brazil 1960 to 1978 (19), the Democratic Republic of the Congo 1991 (1).
+  A manufacturing sector does not vanish for 21 years after reading 14%.
+- `sci_articles_per_million` (a count, divided by population): Serbia 1996
+  to 2006 (11), the years the articles were counted under Serbia and
+  Montenegro. A country with universities publishes some articles.
+- `electricity_transmission_losses` (% of output): Botswana 1990 to 1997
+  (8). A grid that carries power loses some of it.
+- `education_expenditure_gdp` (% of GDP): Türkiye 1998 (1). A state with
+  public schools spends on them.
+
+Flagged, with no zero today, because the construct rules one out:
+`rd_expenditure_gdp`, `researchers_per_million`, `new_business_density`,
+`business_start_days`, `business_start_procedures`, `account_ownership`,
+`domestic_credit_private`, `contract_enforcement_days`,
+`human_capital_index` (a product of terms that are each above zero),
+`labor_force_participation`, `unemployment_rate`, `labour_productivity`,
+`tax_revenue_gdp` and `income_inequality`. Eighteen rows carry the flag.
+
+Not flagged, with zeros kept, because 0 is a value the construct allows:
+
+- `internet_users` (% of population): 118 zeros, nearly all 1990, before
+  the internet reached most of these countries; Burundi, Nepal and Sudan
+  into the mid 1990s.
+- `time_to_export` (Doing Business border compliance hours): 78 zeros, 13
+  EU members 2014 to 2019. Inside the customs union there is no border
+  compliance, and Doing Business records that as 0.
+- `vocational_secondary_share` (% of secondary): 145 zeros, among them the
+  United States and Canada for decades, which had no separately classified
+  vocational track.
+- `bribery_incidence` (% of firms): 7 zeros (Estonia, Sweden, Japan,
+  Lithuania). No surveyed firm reporting a bribe request is a result.
+- `broadband_subscriptions` (per 100 people): 9 zeros, early years in the
+  Democratic Republic of the Congo, Haiti and Lebanon, below the
+  publisher's precision.
+- `secure_internet_servers` (per million): Congo 2010 and Cuba 2011 to
+  2012. A country can host none.
+- `tertiary_enrollment` (% gross): Botswana 1970 to 1971, before its
+  university admitted its own students.
+- `high_tech_exports_share` (% of manufactured exports): The Gambia 2014 to
+  2016. A small exporter can ship none.
+- `electricity_connection_speed` (Doing Business distance to frontier,
+  0 to 100): 56 zeros. The worst performer in the sample scores 0 by
+  construction.
+
+The other rows with no zero today stay unflagged because 0 is possible:
+`statistical_performance` and `economic_complexity` are indices whose floor
+is a valid reading, `budget_execution_fidelity` reads 0 for a budget
+executed as approved, `firm_training_incidence` is a share of firms, and the
+three resident filing counts (patents, trademarks, industrial designs) can
+be 0 where no resident files.
+
+**Why.** A17. The publisher prints Venezuela's manufacturing value added as
+0 for 1991 to 2011, the zero was scored as Venezuela's latest value, and as
+the row's lowest it set the 0 endpoint for every country (D47). The
+pipeline imputes nothing, and dropping the value is not imputing: the
+publisher has no number, and a placeholder read as one is the worse
+error. A flag on the row keeps the rule a statement about a construct a
+reader can check, as D120's gate is, and stops it becoming a list of
+countries whose numbers the project disliked. Logging every drop on every
+run keeps the rule visible after the first diff (D25).
+
+Dropping the zeros lets the scorer take Venezuela's latest real value,
+14.2% in 1990, under the same latest-value rule every row uses; it reads at
+the recency floor, so Venezuela's Building confidence is unchanged at
+0.266. Venezuela's Building goes from 5.9 (125th of 125) to 19.1 (118th).
+The row's 0 endpoint moves to Lebanon's 1.4% (2021), which normalises to 0
+instead of 4.2. 123 current normalised manufacturing values move, every
+country's but Ireland's, which sets 100, and 123 Building scores move, all
+but Venezuela's down, by at most 1.4 points (Cuba). Building's correlation
+with income goes from 0.573 to 0.572, and Building's trend restates for
+120 countries because its history is scored on the same frame. No other
+row moved, and the re-ingest restated nothing else.
+
+The release is dataset 9.1.0, minor under D37: the registry gains a field
+and the revision log gains `dropped` and `reason`, no country is added and
+no published field is removed, so the frame is not rebased in D47's sense.
+Scores restate, as they do on any re-ingest, and the changelog says so.
+
+**Cost.** The judgment is per row and made once: a row added later needs
+the same audit, and a reviewer may disagree with a flag on a row with no
+zero today, where the flag changes nothing until one appears. A real 0 on
+a flagged row, if a publisher ever prints one, is dropped. Venezuela's row
+now reads a 36-year-old value: the scorer takes the latest observation
+whatever its age, which A17 now records. The Brazil, Congo, Serbia,
+Botswana and Türkiye zeros were historical, so they leave the yearly series
+and the trend and touch no current score.
+
+**Overturned by.** A publisher documenting a true zero on a flagged row,
+which removes the flag from that row; a published 0 on an unflagged row
+shown to be a placeholder, which adds it; or a source-side fix (the World
+Bank printing Venezuela's series as missing), which leaves the rule in
+place with nothing to drop.

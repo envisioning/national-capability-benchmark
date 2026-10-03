@@ -15,7 +15,7 @@ A régua inclui 125 países. Cada dimensão recebe uma nota de 0 a 100, sem rank
 | Aprendizagem | 42,7 | 0,54 (utilizável) | sem base de tendência |
 | Experimentação | 6,5 | 0,33 (fraca) | +0,1 em 10 anos, sobre 3 indicadores |
 | Adaptação | 70,5 | 0,46 (utilizável) | sem base de tendência |
-| Construção | 62,9 | 0,57 (utilizável) | -4,8 em 10 anos, sobre 2 indicadores |
+| Construção | 62,4 | 0,57 (utilizável) | -5,1 em 10 anos, sobre 2 indicadores |
 | Propósito compartilhado | 52,4 | 0,42 (fraca) | +9,4 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para elevar
@@ -92,7 +92,7 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 70,5, solidez utilizável
-- Construção: 62,9, solidez utilizável
+- Construção: 62,4, solidez utilizável
 
 ## O que as Filipinas tem para trabalhar
 

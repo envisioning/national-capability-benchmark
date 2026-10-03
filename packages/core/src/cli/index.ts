@@ -797,6 +797,13 @@ async function main() {
           console.log(`  ${r.iso3} ${r.year} ${r.indicatorId.padEnd(30)} ${r.from} -> ${r.to}`)
         }
       }
+      if (revisions.dropped?.length) {
+        const byRow = new Map<string, number>()
+        for (const d of revisions.dropped) byRow.set(d.indicatorId, (byRow.get(d.indicatorId) ?? 0) + 1)
+        console.log(
+          `Ingest rules dropped ${revisions.dropped.length} published value(s) (D157): ${[...byRow].map(([id, n]) => `${id} ${n}`).join(', ')}.`,
+        )
+      }
       break
     }
 

@@ -9,6 +9,38 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.25.9 — 2026-10-03
+
+- **Known limit A17 now describes what is left.** Venezuela's manufacturing
+  row no longer reads the publisher's zero. It reads 1990, the last year
+  before the zeros, and the limit says how old that is.
+- **The glossary defines a placeholder zero.**
+
+## Dataset 9.1.0 — 2026-10-03
+
+- **A published 0 is dropped where the row cannot be 0.** Eighteen rows,
+  among them manufacturing value added, public education spending and
+  electricity transmission losses, measure something every working economy
+  has some of. On those rows a World Bank value of exactly 0 is a missing
+  number, so the ingest now drops it and lists each drop with its reason in
+  the revision log. Rows where 0 is a real result keep their zeros: border
+  time inside the EU, internet use in 1990, the share of firms asked for a
+  bribe. Decision D157 lists every row and why.
+- **61 values were dropped**, all of them on four rows: Venezuela's
+  manufacturing share for 1991 to 2011, Brazil's for 1960 to 1978 and the
+  Democratic Republic of the Congo's for 1991; Serbia's scientific articles
+  for 1996 to 2006; Botswana's transmission losses for 1990 to 1997; and Türkiye's
+  education spending for 1998.
+- **Building scores restate.** Venezuela's zero was the bottom of the
+  manufacturing scale for every country. Lebanon's 1.4% now sets it, so
+  122 other countries' manufacturing values and Building scores move down,
+  Building by 1.4 points or less. Venezuela's Building goes from 5.9 to 19.1 (125th to
+  118th of 125), because its manufacturing row now reads 14.2% from 1990.
+  Building's trend restates with them, and nothing else moved.
+- **Revision log runs gain a `dropped` list**, and a revision a rule caused
+  carries a `reason`. The registry gains a `zeroIsMissing` flag. Same 125
+  countries.
+
 ## App 1.25.8 — 2026-10-03
 
 - **A panel from one model vendor can now be published.** Three or more

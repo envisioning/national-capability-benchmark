@@ -788,33 +788,29 @@ gate-held countries (see the A16 fixes memo), so for them this waits on a
 survey change. The two declared gaps would add rows for every country, but
 neither has a source.
 
-## A17 — Venezuela's manufacturing row reads a published zero
+## A17 — Venezuela's manufacturing row reads 1990
 
 **Severity: low.**
 
-The figures in this entry are from dataset 9.0.1.
+The figures in this entry are from dataset 9.1.0.
 
 The World Bank publishes manufacturing value added (`NV.IND.MANF.ZS`) for
 Venezuela as exactly 0% of GDP for every year from 1991 to 2011, its last
-year, after values between 14% and 20% through 1990. A manufacturing sector
-does not fall to nothing in one year and stay there for 21; the zero is a
-placeholder for a value the publisher does not have, not a measurement. The
-pipeline reads what the publisher prints and imputes nothing, so the zero is
-scored.
+year. The zero is a placeholder, and the ingest drops it under D157, so
+Venezuela's latest value on the row is 14.2% from 1990. The scorer takes the
+latest observation whatever its age, so Building reads a manufacturing
+share 36 years old. It counts at the recency floor in confidence, which is
+0.266 for Venezuela's Building, and fully in the score, 19.1 and 118th of
+125. Whether Venezuela's manufacturing share today is near 14% nobody in
+the frame's sources says; the World Bank prints nothing after 2011 that is
+not a zero.
 
-It does two things. Venezuela's Building score, 5.9 and 125th of 125, takes
-a 0 on that row; scored on its other two rows it would read 8.9, still in the
-bottom two. And the zero is the frame's lowest value, so it sets the 0
-endpoint for every country: the next lowest, Lebanon at 1.4%, normalises to
-4.2 instead of 0. The shift is under five points at the bottom of the row
-and shrinks toward the top, where Ireland sets 100.
+Venezuela is the extreme case of a wider pattern: Mali's resident patents
+read 1981 and Gambia's tax revenue 1990. Those rows have a real value from
+those years; Venezuela's has a real value only from the year before the
+publisher stopped measuring.
 
-The same publisher zero appears in older years elsewhere: Brazil's series
-reads 0 from 1960 to 1978 and the Democratic Republic of the Congo's in
-1991. Neither is a current value, so neither reaches a score; both reach the
-yearly series and the trend.
-
-**Fix.** An ingest rule, recorded as a decision, that drops a World Bank
-zero on a series whose construct cannot be zero, logged as a dropped value in
-`data/observations/revisions.json` like any other restatement. It moves the
-row's frame endpoint, so it ships as its own dataset release.
+**Fix.** A national source for Venezuela's manufacturing value added,
+published and comparable, or a maximum age past which a value is not
+scored. The second is a frame-wide rule that would move every row where a
+country's latest value is old, so it needs its own decision.

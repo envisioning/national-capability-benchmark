@@ -15,7 +15,7 @@ A régua inclui 125 países. Cada dimensão recebe uma nota de 0 a 100, sem rank
 | Aprendizagem | 35 | 0,55 (utilizável) | sem base de tendência |
 | Experimentação | 62,7 | 0,33 (fraca) | +15,4 em 10 anos, sobre 3 indicadores |
 | Adaptação | 80,3 | 0,62 (utilizável) | sem base de tendência |
-| Construção | 52,7 | 0,57 (utilizável) | +5 em 10 anos, sobre 3 indicadores |
+| Construção | 52,2 | 0,57 (utilizável) | +5 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 35,7 | 0,42 (fraca) | -3,6 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para elevar
@@ -83,7 +83,7 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 80,3, solidez utilizável
-- Construção: 52,7, solidez utilizável
+- Construção: 52,2, solidez utilizável
 - Agência: 51, solidez utilizável
 
 ## O que a Turquia tem para trabalhar

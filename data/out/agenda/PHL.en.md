@@ -15,7 +15,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 42.7 | 0.54 (usable) | no trend |
 | Experimentation | 6.5 | 0.33 (thin) | +0.1 over 10 years using 3 indicators |
 | Adaptability | 70.5 | 0.46 (usable) | no trend |
-| Building | 62.9 | 0.57 (usable) | -4.8 over 10 years using 2 indicators |
+| Building | 62.4 | 0.57 (usable) | -5.1 over 10 years using 2 indicators |
 | Shared Purpose | 52.4 | 0.42 (thin) | +9.4 over 10 years using 2 indicators |
 
 ## What to raise
@@ -92,7 +92,7 @@ To what extent can people imagine themselves as participants in a common project
 These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 70.5, confidence usable
-- Building: 62.9, confidence usable
+- Building: 62.4, confidence usable
 
 ## What the Philippines has to work with
 

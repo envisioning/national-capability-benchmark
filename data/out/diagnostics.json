@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T07:41:34.434Z",
+  "generatedAt": "2026-10-03T07:49:36.705Z",
   "gdpSeries": "NY.GDP.PCAP.PP.KD",
   "income": [
     {
@@ -663,8 +663,8 @@
     },
     {
       "dimension": "building",
-      "pearson": 0.573,
-      "spearman": 0.626,
+      "pearson": 0.572,
+      "spearman": 0.623,
       "n": 123
     },
     {
@@ -720,7 +720,7 @@
     {
       "a": "anticipation",
       "b": "building",
-      "r": 0.543,
+      "r": 0.534,
       "n": 124
     },
     {
@@ -744,7 +744,7 @@
     {
       "a": "learning",
       "b": "building",
-      "r": 0.495,
+      "r": 0.498,
       "n": 124
     },
     {
@@ -756,7 +756,7 @@
     {
       "a": "adaptability",
       "b": "building",
-      "r": 0.479,
+      "r": 0.48,
       "n": 125
     },
     {
@@ -809,12 +809,6 @@
     },
     {
       "a": "coordination",
-      "b": "building",
-      "r": 0.374,
-      "n": 124
-    },
-    {
-      "a": "coordination",
       "b": "shared_purpose",
       "r": 0.37,
       "n": 123
@@ -844,6 +838,12 @@
       "n": 123
     },
     {
+      "a": "coordination",
+      "b": "building",
+      "r": 0.348,
+      "n": 124
+    },
+    {
       "a": "learning",
       "b": "shared_purpose",
       "r": 0.314,
@@ -864,7 +864,7 @@
     {
       "a": "trust",
       "b": "building",
-      "r": 0.218,
+      "r": 0.208,
       "n": 124
     },
     {
@@ -876,13 +876,13 @@
     {
       "a": "agency",
       "b": "building",
-      "r": 0.194,
+      "r": 0.18,
       "n": 124
     },
     {
       "a": "building",
       "b": "shared_purpose",
-      "r": 0.126,
+      "r": 0.113,
       "n": 123
     },
     {
@@ -929,17 +929,17 @@
         }
       ],
       "eigenvalues": [
-        4.546,
-        1.213,
+        4.533,
+        1.233,
         0.846,
-        0.711,
-        0.485,
+        0.709,
+        0.491,
         0.398,
-        0.381,
-        0.261,
+        0.367,
+        0.262,
         0.16
       ],
-      "firstFactorShare": 0.505,
+      "firstFactorShare": 0.504,
       "loadings": [
         {
           "dimension": "anticipation",
@@ -947,11 +947,11 @@
         },
         {
           "dimension": "agency",
-          "loading": 0.625
+          "loading": 0.624
         },
         {
           "dimension": "coordination",
-          "loading": 0.735
+          "loading": 0.732
         },
         {
           "dimension": "trust",
@@ -959,23 +959,23 @@
         },
         {
           "dimension": "learning",
-          "loading": 0.831
+          "loading": 0.833
         },
         {
           "dimension": "experimentation",
-          "loading": 0.809
+          "loading": 0.81
         },
         {
           "dimension": "adaptability",
-          "loading": 0.588
+          "loading": 0.589
         },
         {
           "dimension": "building",
-          "loading": 0.664
+          "loading": 0.654
         },
         {
           "dimension": "shared_purpose",
-          "loading": 0.507
+          "loading": 0.506
         }
       ],
       "income": {
@@ -998,12 +998,12 @@
     "structure": {
       "countries": 122,
       "eigenvalues": [
-        2.77,
-        1.49,
-        1.14,
+        2.769,
+        1.492,
+        1.139,
         0.977,
         0.625,
-        0.594,
+        0.595,
         0.547,
         0.48,
         0.375
@@ -1016,7 +1016,7 @@
         },
         {
           "dimension": "agency",
-          "loading": 0.483
+          "loading": 0.484
         },
         {
           "dimension": "coordination",
@@ -1032,7 +1032,7 @@
         },
         {
           "dimension": "experimentation",
-          "loading": 0.504
+          "loading": 0.503
         },
         {
           "dimension": "adaptability",
@@ -1040,7 +1040,7 @@
         },
         {
           "dimension": "building",
-          "loading": 0.204
+          "loading": 0.199
         },
         {
           "dimension": "shared_purpose",
@@ -1069,10 +1069,10 @@
         "draws": 2000,
         "seed": 20261004,
         "mean": 1.43,
-        "p5": 1.389,
+        "p5": 1.39,
         "p95": 1.469
       },
-      "shapeShare": 0.226,
+      "shapeShare": 0.227,
       "shapeNull": {
         "draws": 2000,
         "seed": 20261003,
@@ -1085,7 +1085,7 @@
         "seed": 20261003,
         "mean": 1.778,
         "p5": 1.715,
-        "p95": 1.84
+        "p95": 1.839
       },
       "shareBeyond": 0.025,
       "shareNull": {
@@ -1126,9 +1126,10 @@
           "8.2.0",
           "8.3.0",
           "9.0.0",
-          "9.0.1"
+          "9.0.1",
+          "9.1.0"
         ],
-        "pairs": 26,
+        "pairs": 27,
         "perDimension": [
           {
             "dimension": "anticipation",
@@ -1181,8 +1182,8 @@
           },
           {
             "dimension": "building",
-            "pairs": 2,
-            "mean": 0.989,
+            "pairs": 3,
+            "mean": 0.992,
             "min": 0.984,
             "minCountries": 51
           },
@@ -1243,8 +1244,8 @@
           {
             "dimension": "building",
             "n": 123,
-            "maxSlopeShiftSe": 0.345,
-            "maxResidualShiftSd": 0.074
+            "maxSlopeShiftSe": 0.35,
+            "maxResidualShiftSd": 0.075
           },
           {
             "dimension": "shared_purpose",
@@ -1260,7 +1261,7 @@
       "countries": 122,
       "mean": 0.233,
       "median": 0.322,
-      "pooled": 0.411,
+      "pooled": 0.41,
       "reading": "little"
     },
     "weakClaim": "holds"
@@ -1585,9 +1586,9 @@
     {
       "indicatorId": "economic_complexity",
       "dimension": "building",
-      "dimensionR": 0.573,
+      "dimensionR": 0.572,
       "dimensionRWithout": 0.443,
-      "delta": 0.13
+      "delta": 0.129
     },
     {
       "indicatorId": "statistical_performance",
@@ -1627,8 +1628,8 @@
     {
       "indicatorId": "high_tech_exports_share",
       "dimension": "building",
-      "dimensionR": 0.573,
-      "dimensionRWithout": 0.511,
+      "dimensionR": 0.572,
+      "dimensionRWithout": 0.51,
       "delta": 0.062
     },
     {
@@ -1697,9 +1698,9 @@
     {
       "indicatorId": "electricity_connection_speed",
       "dimension": "building",
-      "dimensionR": 0.573,
-      "dimensionRWithout": 0.582,
-      "delta": -0.009
+      "dimensionR": 0.572,
+      "dimensionRWithout": 0.58,
+      "delta": -0.008
     },
     {
       "indicatorId": "perceived_control",
@@ -1732,7 +1733,7 @@
     {
       "indicatorId": "manufacturing_value_added",
       "dimension": "building",
-      "dimensionR": 0.573,
+      "dimensionR": 0.572,
       "dimensionRWithout": 0.601,
       "delta": -0.028
     },
@@ -1779,114 +1780,7 @@
       "delta": -0.171
     }
   ],
-  "panelVsGdp": {
-    "runId": "2026-10-03T07-39-51-747Z-in_session",
-    "provenance": "in_session",
-    "panelists": 3,
-    "evidential": true,
-    "hasDistribution": true,
-    "perDimension": [
-      {
-        "dimension": "anticipation",
-        "panelR": 0.859,
-        "panelSpearman": 0.893,
-        "panelN": 123,
-        "indicatorR": 0.863,
-        "indicatorN": 123,
-        "delta": -0.004,
-        "flaggedAsWealthProxy": true,
-        "backfillCandidate": false
-      },
-      {
-        "dimension": "agency",
-        "panelR": null,
-        "panelSpearman": null,
-        "panelN": 1,
-        "indicatorR": null,
-        "indicatorN": 1,
-        "delta": null,
-        "flaggedAsWealthProxy": false,
-        "backfillCandidate": false
-      },
-      {
-        "dimension": "coordination",
-        "panelR": 0.87,
-        "panelSpearman": 0.689,
-        "panelN": 10,
-        "indicatorR": 0.696,
-        "indicatorN": 10,
-        "delta": 0.174,
-        "flaggedAsWealthProxy": true,
-        "backfillCandidate": false
-      },
-      {
-        "dimension": "trust",
-        "panelR": 0.682,
-        "panelSpearman": 0.643,
-        "panelN": 52,
-        "indicatorR": 0.418,
-        "indicatorN": 52,
-        "delta": 0.264,
-        "flaggedAsWealthProxy": false,
-        "backfillCandidate": false
-      },
-      {
-        "dimension": "learning",
-        "panelR": 0.997,
-        "panelSpearman": 1,
-        "panelN": 5,
-        "indicatorR": 0.764,
-        "indicatorN": 5,
-        "delta": 0.233,
-        "flaggedAsWealthProxy": true,
-        "backfillCandidate": false
-      },
-      {
-        "dimension": "experimentation",
-        "panelR": 0.777,
-        "panelSpearman": 0.86,
-        "panelN": 108,
-        "indicatorR": 0.704,
-        "indicatorN": 108,
-        "delta": 0.073,
-        "flaggedAsWealthProxy": true,
-        "backfillCandidate": false
-      },
-      {
-        "dimension": "adaptability",
-        "panelR": 0.739,
-        "panelSpearman": 0.666,
-        "panelN": 15,
-        "indicatorR": 0.519,
-        "indicatorN": 15,
-        "delta": 0.22,
-        "flaggedAsWealthProxy": true,
-        "backfillCandidate": false
-      },
-      {
-        "dimension": "building",
-        "panelR": 0.706,
-        "panelSpearman": 0.8,
-        "panelN": 4,
-        "indicatorR": -0.75,
-        "indicatorN": 4,
-        "delta": -0.044,
-        "flaggedAsWealthProxy": true,
-        "backfillCandidate": false
-      },
-      {
-        "dimension": "shared_purpose",
-        "panelR": 0.635,
-        "panelSpearman": 0.661,
-        "panelN": 123,
-        "indicatorR": 0.259,
-        "indicatorN": 122,
-        "delta": 0.376,
-        "flaggedAsWealthProxy": false,
-        "backfillCandidate": false
-      }
-    ]
-  },
+  "panelVsGdp": null,
   "redundantIndicatorPairs": [],
   "measurability": [
     {
@@ -2261,7 +2155,7 @@
       "latestYear": 2025,
       "r": 0.877,
       "n": 123,
-      "dimensionR": 0.598,
+      "dimensionR": 0.597,
       "dimensionN": 123
     }
   ],
@@ -2309,8 +2203,8 @@
         "years": 21,
         "firstYear": 2006,
         "lastYear": 2026,
-        "firstSpread": 22.92,
-        "lastSpread": 19.29,
+        "firstSpread": 24.03,
+        "lastSpread": 20.23,
         "changeShare": -0.158,
         "spearman": -0.608,
         "carriedForwardCells": 145,
@@ -2417,16 +2311,16 @@
       {
         "indicatorId": "sci_articles_per_million",
         "dimension": "anticipation",
-        "countries": 125,
+        "countries": 124,
         "years": 21,
         "firstYear": 2006,
         "lastYear": 2026,
-        "firstSpread": 18.01,
-        "lastSpread": 32.27,
-        "changeShare": 0.792,
-        "spearman": 0.972,
-        "carriedForwardCells": 375,
-        "clampedCells": 67,
+        "firstSpread": 18.77,
+        "lastSpread": 32.63,
+        "changeShare": 0.738,
+        "spearman": 0.976,
+        "carriedForwardCells": 372,
+        "clampedCells": 66,
         "fading": false,
         "lowDiscrimination": false
       },

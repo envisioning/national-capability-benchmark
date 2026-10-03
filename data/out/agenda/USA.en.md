@@ -15,7 +15,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 61.6 | 0.55 (usable) | no trend |
 | Experimentation | 50.6 | 0.53 (usable) | +0.7 over 10 years using 3 indicators |
 | Adaptability | 72.8 | 0.62 (usable) | no trend |
-| Building | 59.9 | 0.53 (usable) | +0.4 over 10 years using 3 indicators |
+| Building | 59.2 | 0.53 (usable) | +0.4 over 10 years using 3 indicators |
 | Shared Purpose | 54.3 | 0.43 (thin) | -0.8 over 10 years using 2 indicators |
 
 ## What to measure first
@@ -53,7 +53,7 @@ These dimensions score at least 50 with usable evidence.
 - Anticipation: 70.6, confidence usable
 - Trust: 69.9, confidence usable
 - Learning: 61.6, confidence usable
-- Building: 59.9, confidence usable
+- Building: 59.2, confidence usable
 - Experimentation: 50.6, confidence usable
 
 ## What the United States has to work with

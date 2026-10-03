@@ -15,7 +15,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 42.4 | 0.55 (usable) | no trend |
 | Experimentation | 14 | 0.33 (thin) | +0.1 over 10 years using 3 indicators |
 | Adaptability | 87.6 | 0.62 (usable) | no trend |
-| Building | 64.9 | 0.57 (usable) | -0.2 over 10 years using 3 indicators |
+| Building | 64.7 | 0.57 (usable) | -0.4 over 10 years using 3 indicators |
 | Shared Purpose | 65.4 | 0.43 (thin) | +3.5 over 10 years using 2 indicators |
 
 ## What to raise
@@ -82,7 +82,7 @@ To what extent can people imagine themselves as participants in a common project
 These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 87.6, confidence usable
-- Building: 64.9, confidence usable
+- Building: 64.7, confidence usable
 - Trust: 56.6, confidence usable
 
 ## What Thailand has to work with

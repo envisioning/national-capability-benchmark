@@ -15,7 +15,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 24.5 | 0.54 (usable) | no trend |
 | Experimentation | 6.9 | 0.33 (thin) | +1 over 10 years using 3 indicators |
 | Adaptability | 75.1 | 0.6 (usable) | no trend |
-| Building | 55.4 | 0.57 (usable) | +0.3 over 10 years using 3 indicators |
+| Building | 55 | 0.57 (usable) | +0.2 over 10 years using 3 indicators |
 | Shared Purpose | 66.2 | 0.3 (thin) | no trend |
 
 ## What to raise
@@ -83,7 +83,7 @@ How effectively can independent actors organize around shared objectives?
 These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 75.1, confidence usable
-- Building: 55.4, confidence usable
+- Building: 55, confidence usable
 - Agency: 52.8, confidence usable
 
 ## What Indonesia has to work with

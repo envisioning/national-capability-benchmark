@@ -15,7 +15,7 @@ A régua inclui 125 países. Cada dimensão recebe uma nota de 0 a 100, sem rank
 | Aprendizagem | 42,5 | 0,54 (utilizável) | sem base de tendência |
 | Experimentação | 25,3 | 0,53 (utilizável) | +0,4 em 10 anos, sobre 3 indicadores |
 | Adaptação | 65,4 | 0,46 (utilizável) | sem base de tendência |
-| Construção | 55,2 | 0,57 (utilizável) | +2,5 em 10 anos, sobre 3 indicadores |
+| Construção | 54,8 | 0,57 (utilizável) | +2,5 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 45,2 | 0,43 (fraca) | +8,6 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para elevar
@@ -86,7 +86,7 @@ Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 65,4, solidez utilizável
 - Agência: 64,3, solidez utilizável
-- Construção: 55,2, solidez utilizável
+- Construção: 54,8, solidez utilizável
 
 ## O que o México tem para trabalhar
 

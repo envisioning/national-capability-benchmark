@@ -396,6 +396,13 @@ export const GLOSSARY: GlossaryEntry[] = [
     short: 'The append-only record of what each ingest restated, added or dropped.',
     full: 'Each ingest compares its data with the previous file and appends restated, added or dropped values. The log records when a published number changes.',
   },
+  {
+    term: 'Placeholder zero',
+    group: 'What sits beside the score',
+    short: 'A published 0 on a row that cannot be 0, dropped at ingest as a missing value.',
+    full: 'Some rows measure something every working economy has some of, such as manufacturing or public spending on education. On those rows a value of exactly 0 means the publisher has no number, so the ingest drops it and records the drop with its reason in the revision log. Rows where 0 is a real result, such as the share of firms asked for a bribe, keep their zeros.',
+    example: 'The World Bank prints Venezuela’s manufacturing value added as 0% of GDP from 1991 to 2011. Those values are dropped, so the row reads 1990.',
+  },
 ]
 
 export const GLOSSARY_BY_TERM: Record<string, GlossaryEntry> = Object.fromEntries(

@@ -15,7 +15,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 76.2 | 0.55 (usable) | no trend |
 | Experimentation | 56 | 0.36 (thin) | no trend |
 | Adaptability | 82.1 | 0.62 (usable) | no trend |
-| Building | 57.9 | 0.57 (usable) | -0.5 over 10 years using 3 indicators |
+| Building | 57.2 | 0.57 (usable) | -0.5 over 10 years using 3 indicators |
 | Shared Purpose | 82.7 | 0.28 (thin) | +7.7 over 10 years using 2 indicators |
 
 ## What to measure first
@@ -68,7 +68,7 @@ These dimensions score at least 50 with usable evidence.
 - Adaptability: 82.1, confidence usable
 - Learning: 76.2, confidence usable
 - Anticipation: 76.1, confidence usable
-- Building: 57.9, confidence usable
+- Building: 57.2, confidence usable
 
 ## What the Netherlands has to work with
 

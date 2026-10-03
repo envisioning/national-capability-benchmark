@@ -131,6 +131,14 @@ export const IndicatorDef = z.object({
   notes: z.string(),
   /** Prior suspicion that this mostly measures wealth. 0 = none, 1 = certain. Delphi revises it. */
   wealthProxyPrior: z.number().min(0).max(1),
+  /**
+   * The construct cannot be zero for a functioning economy, so a published
+   * value of exactly 0 is a placeholder for a missing one. The World Bank
+   * ingest drops it and logs the drop with its reason in revisions.json. Set
+   * on the row from what it measures, never from which countries print a
+   * zero: a share that can legitimately be 0 keeps its zeros. See D157.
+   */
+  zeroIsMissing: z.boolean().optional(),
 })
 export type IndicatorDef = z.infer<typeof IndicatorDef>
 
@@ -281,6 +289,14 @@ export const ObservationFile = z.object({
 })
 
 /**
+ * Why an ingest rule dropped a published value.
+ * - zero_is_missing: the publisher printed exactly 0 on a row whose registry
+ *   definition carries `zeroIsMissing`. See D157.
+ */
+export const IngestDropReason = z.enum(['zero_is_missing'])
+export type IngestDropReason = z.infer<typeof IngestDropReason>
+
+/**
  * One value that changed between two ingest runs.
  *
  * A published statistic is not fixed. Agencies restate, rebase and revise, and
@@ -299,8 +315,28 @@ export const Revision = z.object({
   from: z.number().nullable(),
   /** Null when the run dropped a year the publisher no longer carries. */
   to: z.number().nullable(),
+  /**
+   * Set when the value left because an ingest rule dropped it rather than
+   * because the publisher stopped carrying it. See `IngestDrop`.
+   */
+  reason: IngestDropReason.optional(),
 })
 export type Revision = z.infer<typeof Revision>
+
+/**
+ * A value the publisher printed and the ingest declined to store. Listed on
+ * every run that drops it, so the rule stays visible after the first diff has
+ * recorded the cell leaving the file.
+ */
+export const IngestDrop = z.object({
+  indicatorId: z.string(),
+  iso3: z.string().length(3),
+  year: z.number().int(),
+  value: z.number(),
+  series: z.string(),
+  reason: IngestDropReason,
+})
+export type IngestDrop = z.infer<typeof IngestDrop>
 
 export const RevisionRun = z.object({
   /** When the ingest ran. */
@@ -316,6 +352,11 @@ export const RevisionRun = z.object({
   revisions: z.array(Revision),
   /** Set when the list above was capped, with the number left out. */
   omitted: z.number().int().default(0),
+  /**
+   * Every published value an ingest rule dropped on this run, with the reason.
+   * Absent on a run that dropped nothing and on every run before D157.
+   */
+  dropped: z.array(IngestDrop).optional(),
 })
 export type RevisionRun = z.infer<typeof RevisionRun>
 

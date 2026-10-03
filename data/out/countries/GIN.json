@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-03T07:41:19.277Z",
-  "version": "9.0.1",
+  "generatedAt": "2026-10-03T07:49:21.233Z",
+  "version": "9.1.0",
   "country": {
     "country": "Guinea",
     "iso3": "GIN",
@@ -15,8 +15,8 @@
           "recency": 0.958,
           "sourceQuality": 0.95
         },
-        "delphiScore": 11,
-        "delphiIqr": 1,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
         "blendedScore": 10.1,
         "blendedFrom": "indicators",
@@ -1070,8 +1070,8 @@
           "recency": 0.861,
           "sourceQuality": 0.8
         },
-        "delphiScore": 35,
-        "delphiIqr": 2,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
         "blendedScore": 68.1,
         "blendedFrom": "indicators",
@@ -1553,8 +1553,8 @@
           "recency": 0.55,
           "sourceQuality": 0.9
         },
-        "delphiScore": 5,
-        "delphiIqr": 3.5,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
         "blendedScore": 0.3,
         "blendedFrom": "indicators",
@@ -1743,8 +1743,8 @@
           "recency": 1,
           "sourceQuality": 0.917
         },
-        "delphiScore": 25,
-        "delphiIqr": 2,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
         "blendedScore": 39.6,
         "blendedFrom": "indicators",
@@ -2127,7 +2127,7 @@
         ]
       },
       "building": {
-        "score": 29.2,
+        "score": 28.6,
         "observedIndicators": 4,
         "belowCoverageFloor": false,
         "confidence": 0.436,
@@ -2139,15 +2139,15 @@
         "delphiScore": null,
         "delphiIqr": null,
         "delphiDissent": false,
-        "blendedScore": 29.2,
+        "blendedScore": 28.6,
         "blendedFrom": "indicators",
         "momentum": [
           {
             "baseYear": 2016,
             "currentYear": 2026,
-            "baseScore": 16.2,
-            "currentScore": 18.9,
-            "delta": 2.7,
+            "baseScore": 14.8,
+            "currentScore": 17.6,
+            "delta": 2.8,
             "matchedIndicators": 2,
             "basket": [
               "manufacturing_value_added",
@@ -2157,47 +2157,47 @@
             "series": [
               {
                 "year": 2016,
-                "score": 16.2
-              },
-              {
-                "year": 2017,
                 "score": 14.8
               },
               {
+                "year": 2017,
+                "score": 13.4
+              },
+              {
                 "year": 2018,
-                "score": 17.9
+                "score": 16.5
               },
               {
                 "year": 2019,
-                "score": 15.4
+                "score": 13.9
               },
               {
                 "year": 2020,
-                "score": 14.2
+                "score": 12.7
               },
               {
                 "year": 2021,
-                "score": 16.9
+                "score": 15.5
               },
               {
                 "year": 2022,
-                "score": 18.9
+                "score": 17.6
               },
               {
                 "year": 2023,
-                "score": 18.9
+                "score": 17.6
               },
               {
                 "year": 2024,
-                "score": 18.9
+                "score": 17.6
               },
               {
                 "year": 2025,
-                "score": 18.9
+                "score": 17.6
               },
               {
                 "year": 2026,
-                "score": 18.9
+                "score": 17.6
               }
             ]
           }
@@ -2209,7 +2209,7 @@
             "measurementClass": "O",
             "raw": 12.745,
             "transformed": 12.745,
-            "normalized": 37.6,
+            "normalized": 35,
             "year": 2022,
             "source": "World Bank (NV.IND.MANF.ZS)",
             "sourceTier": "international_organization",
@@ -2219,211 +2219,211 @@
               {
                 "year": 1988,
                 "raw": 3.077,
-                "normalized": 9.1,
+                "normalized": 5.1,
                 "tier": "international_organization"
               },
               {
                 "year": 1989,
                 "raw": 3.05,
-                "normalized": 9,
+                "normalized": 5,
                 "tier": "international_organization"
               },
               {
                 "year": 1990,
                 "raw": 3.244,
-                "normalized": 9.6,
+                "normalized": 5.6,
                 "tier": "international_organization"
               },
               {
                 "year": 1991,
                 "raw": 2.684,
-                "normalized": 7.9,
+                "normalized": 3.9,
                 "tier": "international_organization"
               },
               {
                 "year": 1992,
                 "raw": 3.086,
-                "normalized": 9.1,
+                "normalized": 5.1,
                 "tier": "international_organization"
               },
               {
                 "year": 1993,
                 "raw": 3.158,
-                "normalized": 9.3,
+                "normalized": 5.4,
                 "tier": "international_organization"
               },
               {
                 "year": 1994,
                 "raw": 3.094,
-                "normalized": 9.1,
+                "normalized": 5.2,
                 "tier": "international_organization"
               },
               {
                 "year": 1995,
                 "raw": 2.629,
-                "normalized": 7.7,
+                "normalized": 3.7,
                 "tier": "international_organization"
               },
               {
                 "year": 1996,
                 "raw": 2.533,
-                "normalized": 7.5,
+                "normalized": 3.4,
                 "tier": "international_organization"
               },
               {
                 "year": 1997,
                 "raw": 2.377,
-                "normalized": 7,
+                "normalized": 2.9,
                 "tier": "international_organization"
               },
               {
                 "year": 1998,
                 "raw": 2.516,
-                "normalized": 7.4,
+                "normalized": 3.4,
                 "tier": "international_organization"
               },
               {
                 "year": 1999,
                 "raw": 2.637,
-                "normalized": 7.8,
+                "normalized": 3.7,
                 "tier": "international_organization"
               },
               {
                 "year": 2000,
                 "raw": 2.589,
-                "normalized": 7.6,
+                "normalized": 3.6,
                 "tier": "international_organization"
               },
               {
                 "year": 2001,
                 "raw": 2.59,
-                "normalized": 7.6,
+                "normalized": 3.6,
                 "tier": "international_organization"
               },
               {
                 "year": 2002,
                 "raw": 2.597,
-                "normalized": 7.7,
+                "normalized": 3.6,
                 "tier": "international_organization"
               },
               {
                 "year": 2003,
                 "raw": 4.066,
-                "normalized": 12,
+                "normalized": 8.2,
                 "tier": "international_organization"
               },
               {
                 "year": 2004,
                 "raw": 3.886,
-                "normalized": 11.5,
+                "normalized": 7.6,
                 "tier": "international_organization"
               },
               {
                 "year": 2005,
                 "raw": 4.173,
-                "normalized": 12.3,
+                "normalized": 8.5,
                 "tier": "international_organization"
               },
               {
                 "year": 2006,
                 "raw": 11.381,
-                "normalized": 33.5,
+                "normalized": 30.8,
                 "tier": "international_organization"
               },
               {
                 "year": 2007,
                 "raw": 11.438,
-                "normalized": 33.7,
+                "normalized": 30.9,
                 "tier": "international_organization"
               },
               {
                 "year": 2008,
                 "raw": 12.672,
-                "normalized": 37.4,
+                "normalized": 34.8,
                 "tier": "international_organization"
               },
               {
                 "year": 2009,
                 "raw": 12.564,
-                "normalized": 37,
+                "normalized": 34.4,
                 "tier": "international_organization"
               },
               {
                 "year": 2010,
                 "raw": 10.633,
-                "normalized": 31.3,
+                "normalized": 28.5,
                 "tier": "international_organization"
               },
               {
                 "year": 2011,
                 "raw": 10.471,
-                "normalized": 30.9,
+                "normalized": 28,
                 "tier": "international_organization"
               },
               {
                 "year": 2012,
                 "raw": 10.53,
-                "normalized": 31,
+                "normalized": 28.1,
                 "tier": "international_organization"
               },
               {
                 "year": 2013,
                 "raw": 10.801,
-                "normalized": 31.8,
+                "normalized": 29,
                 "tier": "international_organization"
               },
               {
                 "year": 2014,
                 "raw": 11.082,
-                "normalized": 32.7,
+                "normalized": 29.8,
                 "tier": "international_organization"
               },
               {
                 "year": 2015,
                 "raw": 12.119,
-                "normalized": 35.7,
+                "normalized": 33,
                 "tier": "international_organization"
               },
               {
                 "year": 2016,
                 "raw": 10.927,
-                "normalized": 32.2,
+                "normalized": 29.4,
                 "tier": "international_organization"
               },
               {
                 "year": 2017,
                 "raw": 10.022,
-                "normalized": 29.5,
+                "normalized": 26.6,
                 "tier": "international_organization"
               },
               {
                 "year": 2018,
                 "raw": 12.073,
-                "normalized": 35.6,
+                "normalized": 32.9,
                 "tier": "international_organization"
               },
               {
                 "year": 2019,
                 "raw": 10.4,
-                "normalized": 30.7,
+                "normalized": 27.7,
                 "tier": "international_organization"
               },
               {
                 "year": 2020,
                 "raw": 9.566,
-                "normalized": 28.2,
+                "normalized": 25.2,
                 "tier": "international_organization"
               },
               {
                 "year": 2021,
                 "raw": 11.423,
-                "normalized": 33.7,
+                "normalized": 30.9,
                 "tier": "international_organization"
               },
               {
                 "year": 2022,
                 "raw": 12.745,
-                "normalized": 37.6,
+                "normalized": 35,
                 "tier": "international_organization"
               }
             ],
@@ -2749,8 +2749,8 @@
           "recency": 0.3,
           "sourceQuality": 0.95
         },
-        "delphiScore": 26,
-        "delphiIqr": 2.5,
+        "delphiScore": null,
+        "delphiIqr": null,
         "delphiDissent": false,
         "blendedScore": 51.5,
         "blendedFrom": "indicators",

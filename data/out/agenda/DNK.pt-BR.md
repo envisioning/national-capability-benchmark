@@ -15,7 +15,7 @@ A régua inclui 125 países. Cada dimensão recebe uma nota de 0 a 100, sem rank
 | Aprendizagem | 66 | 0,55 (utilizável) | sem base de tendência |
 | Experimentação | 42,3 | 0,33 (fraca) | -2,6 em 10 anos, sobre 3 indicadores |
 | Adaptação | 79,3 | 0,62 (utilizável) | sem base de tendência |
-| Construção | 53,3 | 0,57 (utilizável) | +6,1 em 10 anos, sobre 3 indicadores |
+| Construção | 52,8 | 0,57 (utilizável) | +6,3 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 75 | 0,42 (fraca) | -2,6 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para medir primeiro
@@ -55,7 +55,7 @@ Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 - Adaptação: 79,3, solidez utilizável
 - Agência: 72,8, solidez utilizável
 - Aprendizagem: 66, solidez utilizável
-- Construção: 53,3, solidez utilizável
+- Construção: 52,8, solidez utilizável
 
 ## O que Dinamarca tem para trabalhar
 

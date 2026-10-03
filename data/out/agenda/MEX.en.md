@@ -15,7 +15,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 42.5 | 0.54 (usable) | no trend |
 | Experimentation | 25.3 | 0.53 (usable) | +0.4 over 10 years using 3 indicators |
 | Adaptability | 65.4 | 0.46 (usable) | no trend |
-| Building | 55.2 | 0.57 (usable) | +2.5 over 10 years using 3 indicators |
+| Building | 54.8 | 0.57 (usable) | +2.5 over 10 years using 3 indicators |
 | Shared Purpose | 45.2 | 0.43 (thin) | +8.6 over 10 years using 2 indicators |
 
 ## What to raise
@@ -86,7 +86,7 @@ These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 65.4, confidence usable
 - Agency: 64.3, confidence usable
-- Building: 55.2, confidence usable
+- Building: 54.8, confidence usable
 
 ## What Mexico has to work with
 

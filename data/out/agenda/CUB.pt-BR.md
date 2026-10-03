@@ -15,7 +15,7 @@ A régua inclui 125 países. Cada dimensão recebe uma nota de 0 a 100, sem rank
 | Aprendizagem | sem nota | 0,16 (muito fraca) | sem base de tendência |
 | Experimentação | 1,5 | 0,24 (muito fraca) | -0,3 em 10 anos, sobre 3 indicadores |
 | Adaptação | 64,6 | 0,48 (utilizável) | sem base de tendência |
-| Construção | 22,1 | 0,29 (fraca) | -27 em 10 anos, sobre 2 indicadores |
+| Construção | 20,7 | 0,29 (fraca) | -27,2 em 10 anos, sobre 2 indicadores |
 | Propósito compartilhado | sem nota | 0 (muito fraca) | sem base de tendência |
 
 ## Dimensões para medir primeiro

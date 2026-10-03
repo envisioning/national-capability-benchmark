@@ -15,7 +15,7 @@ A régua inclui 125 países. Cada dimensão recebe uma nota de 0 a 100, sem rank
 | Aprendizagem | 61,6 | 0,55 (utilizável) | sem base de tendência |
 | Experimentação | 50,6 | 0,53 (utilizável) | +0,7 em 10 anos, sobre 3 indicadores |
 | Adaptação | 72,8 | 0,62 (utilizável) | sem base de tendência |
-| Construção | 59,9 | 0,53 (utilizável) | +0,4 em 10 anos, sobre 3 indicadores |
+| Construção | 59,2 | 0,53 (utilizável) | +0,4 em 10 anos, sobre 3 indicadores |
 | Propósito compartilhado | 54,3 | 0,43 (fraca) | -0,8 em 10 anos, sobre 2 indicadores |
 
 ## Dimensões para medir primeiro
@@ -53,7 +53,7 @@ Estas dimensões têm nota de pelo menos 50, com evidência utilizável.
 - Antecipação: 70,6, solidez utilizável
 - Confiança: 69,9, solidez utilizável
 - Aprendizagem: 61,6, solidez utilizável
-- Construção: 59,9, solidez utilizável
+- Construção: 59,2, solidez utilizável
 - Experimentação: 50,6, solidez utilizável
 
 ## O que os Estados Unidos tem para trabalhar

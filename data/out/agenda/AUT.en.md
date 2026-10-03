@@ -15,7 +15,7 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 63.9 | 0.55 (usable) | no trend |
 | Experimentation | 44.2 | 0.33 (thin) | -0.1 over 10 years using 3 indicators |
 | Adaptability | 76 | 0.62 (usable) | no trend |
-| Building | 54.4 | 0.57 (usable) | -1.3 over 10 years using 3 indicators |
+| Building | 53.8 | 0.57 (usable) | -1.5 over 10 years using 3 indicators |
 | Shared Purpose | 57.7 | 0.42 (thin) | -0.6 over 10 years using 2 indicators |
 
 ## What to raise
@@ -67,7 +67,7 @@ These dimensions score at least 50 with usable evidence.
 - Trust: 74.8, confidence usable
 - Anticipation: 74.6, confidence usable
 - Learning: 63.9, confidence usable
-- Building: 54.4, confidence usable
+- Building: 53.8, confidence usable
 
 ## What Austria has to work with
 
