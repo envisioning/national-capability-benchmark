@@ -15,8 +15,8 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Aprendizagem | 17,7 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 0,3 | 0,11 (muito fraca) | sem tendência comparável |
 | Adaptação | 39,6 | 0,46 (utilizável) | sem tendência comparável |
-| Construção | 28,6 | 0,44 (fraca) | +2,8 em 10 anos, com base em 2 indicadores |
-| Propósito compartilhado | 51,5 | 0,1 (muito fraca) | sem tendência comparável |
+| Construção | 28,6 | 0,44 (fraca) | +2,9 em 10 anos, com base em 2 indicadores |
+| Propósito compartilhado | sem pontuação | 0,08 (muito fraca) | sem tendência comparável |
 
 ## Dimensões com as pontuações mais baixas
 
@@ -53,11 +53,11 @@ Com que eficácia o sistema responde quando as circunstâncias mudam?
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
 
-### Propósito compartilhado: solidez 0,1, muito fraca
+### Propósito compartilhado: solidez 0,08, muito fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
-- A pontuação se apoia em 2 indicadores observados.
+- A pontuação se apoia em um indicador observado.
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e prestação de contas.
 
@@ -115,7 +115,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Aprendizagem | Educação profissional no ensino secundário | 3,7 % das matrículas no ensino secundário | 2014 | 99º de 125 |
 | Adaptação | Participação na força de trabalho | 53,6 % das pessoas com 15 anos ou mais | 2025 | 113º de 125 |
 | Adaptação | Assinaturas de banda larga fixa | 0 por 100 pessoas | 2022 | 125º de 125 |
-| Construção | Produto por pessoa ocupada | 14.216 US$ PPC constantes de 2021 | 2025 | 105º de 123 |
+| Construção | Produto por pessoa ocupada | 14.216 dólares PPC constantes de 2021 | 2025 | 105º de 123 |
 
 ## Agenda de medição
 

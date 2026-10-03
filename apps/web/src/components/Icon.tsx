@@ -55,6 +55,7 @@ export type IconName =
   | 'telescope'
   | 'languages'
   | 'calendar'
+  | 'clock'
 
 const PATHS: Record<IconName, string> = {
   'archive': `<rect width='20' height='5' x='2' y='3' rx='1' /> <path d='M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8' /> <path d='M10 12h4' />`,
@@ -78,6 +79,7 @@ const PATHS: Record<IconName, string> = {
   'chevron-up': `<path d='m6 15 6-6 6 6' />`,
   'menu': `<path d='M4 6h16' /> <path d='M4 12h16' /> <path d='M4 18h16' />`,
   'languages': `<path d='m5 8 6 6' /> <path d='m4 14 6-6 2-3' /> <path d='M2 5h12' /> <path d='M7 2h1' /> <path d='m22 22-5-10-5 10' /> <path d='M14 18h6' />`,
+  'clock': `<path d='M12 6v6l4 2' /> <circle cx='12' cy='12' r='10' />`,
   'calendar': `<path d='M8 2v4' /> <path d='M16 2v4' /> <rect width='18' height='18' x='3' y='4' rx='2' /> <path d='M3 10h18' />`,
   'minus': `<path d='M5 12h14' />`,
   'package': `<path d='M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z' /> <path d='M12 22V12' /> <path d='m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7' /> <path d='m7.5 4.27 9 5.15' />`,
@@ -156,6 +158,8 @@ export const STATUS_ICON = {
   gap: 'circle-dashed',
   retired: 'archive',
   condition: 'package',
+  /* A value too old to count (D159). */
+  stale: 'clock',
 } as const satisfies Record<string, IconName>
 
 export const TIER_ICON = {

@@ -9,6 +9,41 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.26.1 — 2026-10-03
+
+- **A row set aside as too old says so.** On a country page and on each
+  capability map, a row whose latest value is more than 15 years old shows
+  that value, its year and that it does not count. Conditions and behavioral
+  checks that old show their age.
+- **Known limits A1, A14, A16 and A17 are restated** for the age limit, and
+  the glossary defines it.
+
+## Dataset 9.2.0 — 2026-10-03
+
+- **A value more than 15 years old no longer counts.** In this release the
+  oldest year that counts is 2011. An older latest value is left out of the
+  score, the scale and coverage, and the row shows it with its year. It stays
+  in the row's history. Conditions and behavioral checks keep old values and
+  mark them. Decision D159 sets out the rule and its cost.
+- **25 rows are set aside in 21 countries**, 11 of them on Shared purpose
+  and six on Experimentation.
+- **Nine scores are withdrawn in eight countries**, which now have one row
+  each: Experimentation for Burkina Faso, the Republic of the Congo and Mali;
+  Shared purpose for Guinea, The Gambia, Papua New Guinea, Trinidad and
+  Tobago and Venezuela; Learning for Venezuela.
+- **178 scores move.** The largest are Azerbaijan's Shared purpose (46.7 to
+  23.9), Malawi's Agency (37.7 to 56.6), Indonesia's and Iran's Shared purpose
+  (66.2 to 84.3 and 55.0 to 72.8) and Venezuela's Building (19.1 to 8.9),
+  which no longer reads a 1990 manufacturing share.
+- **What income explains barely changes.** Agency's correlation with income
+  goes from 0.466 to 0.445 and Experimentation's from 0.728 to 0.719. The
+  first factor's share goes from 0.504 to 0.494, now on 115 countries with
+  all nine scores, and every reading of what is left after income holds.
+- **Indicator rows gain `staleExcluded`**, and conditions and checks gain
+  `stale`. Same 125 countries and the same observations as 9.1.0.
+- **Model panel estimates are still not shown**, because the panel run is
+  for dataset 9.0.1.
+
 ## App 1.26.0 — 2026-10-03
 
 - **Brazil's layer opens on what the test supports.** The Portuguese front
@@ -65,6 +100,8 @@ and may skip versions that were never committed.
 - **Revision log runs gain a `dropped` list**, and a revision a rule caused
   carries a `reason`. The registry gains a `zeroIsMissing` flag. Same 125
   countries.
+- **Model panel estimates are no longer shown.** The panel run was made on
+  dataset 9.0.1, and a run is shown only beside the dataset it was made on.
 
 ## App 1.25.8 — 2026-10-03
 

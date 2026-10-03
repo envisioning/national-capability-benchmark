@@ -9,11 +9,11 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 62,2 | 0,46 (utilizável) | +0,3 em 10 anos, com base em 2 indicadores |
-| Agência | 64,9 | 0,56 (utilizável) | sem tendência comparável |
+| Agência | 65 | 0,56 (utilizável) | sem tendência comparável |
 | Coordenação | 93,5 | 0,39 (fraca) | sem tendência comparável |
 | Confiança | 69,8 | 0,5 (utilizável) | sem tendência comparável |
 | Aprendizagem | 69,5 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 74,9 | 0,33 (fraca) | +2,6 em 10 anos, com base em 3 indicadores |
+| Experimentação | 74,7 | 0,33 (fraca) | +2,6 em 10 anos, com base em 3 indicadores |
 | Adaptação | 72 | 0,62 (utilizável) | sem tendência comparável |
 | Construção | 61,9 | 0,57 (utilizável) | -3,3 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 52,9 | 0,42 (fraca) | -0,4 em 10 anos, com base em 2 indicadores |
@@ -53,7 +53,7 @@ Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 - Adaptação: 72, solidez utilizável
 - Confiança: 69,8, solidez utilizável
 - Aprendizagem: 69,5, solidez utilizável
-- Agência: 64,9, solidez utilizável
+- Agência: 65, solidez utilizável
 - Antecipação: 62,2, solidez utilizável
 - Construção: 61,9, solidez utilizável
 
@@ -76,7 +76,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Adaptação | Assinaturas de banda larga fixa | 48,9 por 100 pessoas | 2024 | 1º de 125 |
 | Adaptação | Perdas na transmissão de eletricidade | 6,6 % da produção | 2024 | 35º de 117 |
 | Adaptação | Emprego informal | 3,4 % do emprego | 2025 | 13º de 102 |
-| Construção | Produto por pessoa ocupada | 128.587,1 US$ PPC constantes de 2021 | 2025 | 12º de 123 |
+| Construção | Produto por pessoa ocupada | 128.587,1 dólares PPC constantes de 2021 | 2025 | 12º de 123 |
 
 ## Agenda de medição
 

@@ -13,9 +13,9 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | 78,7 | 0,33 (fraca) | sem tendência comparável |
 | Confiança | 47,5 | 0,49 (utilizável) | sem tendência comparável |
 | Aprendizagem | 42,7 | 0,54 (utilizável) | sem tendência comparável |
-| Experimentação | 6,5 | 0,33 (fraca) | +0,1 em 10 anos, com base em 3 indicadores |
+| Experimentação | 6,4 | 0,33 (fraca) | +0,2 em 10 anos, com base em 3 indicadores |
 | Adaptação | 70,5 | 0,46 (utilizável) | sem tendência comparável |
-| Construção | 62,4 | 0,57 (utilizável) | -5,1 em 10 anos, com base em 2 indicadores |
+| Construção | 62,4 | 0,57 (utilizável) | -5,2 em 10 anos, com base em 2 indicadores |
 | Propósito compartilhado | 52,4 | 0,42 (fraca) | +9,4 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com as pontuações mais baixas
@@ -27,7 +27,7 @@ São as pontuações mais baixas entre as dimensões com evidência utilizável.
 Em que medida pessoas e organizações conseguem transformar intenção em ação?
 
 - A pontuação se apoia em 4 indicadores observados.
-- No topo da escala, entre as pontuações com evidência utilizável: Nova Zelândia 92,2, Austrália 89,2, Estônia 84,3.
+- No topo da escala, entre as pontuações com evidência utilizável: Nova Zelândia 92,3, Austrália 89,2, Estônia 84,3.
 - Registros de evidência desta dimensão em outros países, com êxitos e retrocessos, que não entram em nenhuma pontuação: Singapore's national ICT-skills measurement and baseline (Singapura); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (Índia); Puntos México Conectado, national digital learning centres (México).
 - Lacunas declaradas: Adultos que realizam tarefas digitais.
 
@@ -112,7 +112,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Adaptação | Participação na força de trabalho | 63,7 % das pessoas com 15 anos ou mais | 2025 | 93º de 125 |
 | Adaptação | Assinaturas de banda larga fixa | 7,1 por 100 pessoas | 2024 | 86º de 125 |
 | Adaptação | Perdas na transmissão de eletricidade | 10 % da produção | 2023 | 67º de 117 |
-| Construção | Produto por pessoa ocupada | 24.593,1 US$ PPC constantes de 2021 | 2025 | 86º de 123 |
+| Construção | Produto por pessoa ocupada | 24.593,1 dólares PPC constantes de 2021 | 2025 | 86º de 123 |
 
 ## Agenda de medição
 

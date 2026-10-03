@@ -52,17 +52,18 @@ export const ARTEFACT_SCOPES: readonly ArtefactScope[] = [
   { id: 'A14', dimensions: ['agency'] },
   { id: 'A15', dimensions: ['agency', 'shared_purpose'] },
   /* The 15 countries whose Adaptability has no long-term unemployment share
-   * to check the unemployment rate (D141, D149, D153). */
+   * to check the unemployment rate (D141, D149, D153), and Cuba, whose 2010
+   * share is too old to count (D159). */
   {
     id: 'A16',
     dimensions: ['adaptability'],
     countries: [
       'KOR', 'IND', 'MEX', 'PER', 'URY', 'CHN', 'PHL', 'SLV', 'HTI',
-      'UZB', 'GIN', 'TJK', 'PNG', 'COG', 'TTO',
+      'UZB', 'GIN', 'TJK', 'PNG', 'COG', 'TTO', 'CUB',
     ],
   },
-  /* Venezuela's manufacturing value added reads 1990, the last year before
-   * the publisher's zeros, which D157 drops. */
+  /* Venezuela's manufacturing value added has no value: the publisher's
+   * zeros are dropped (D157) and 1990 is too old to count (D159). */
   { id: 'A17', dimensions: ['building'], countries: ['VEN'] },
 ]
 

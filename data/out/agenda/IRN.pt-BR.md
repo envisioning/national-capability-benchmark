@@ -13,10 +13,10 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | 35,3 | 0,23 (muito fraca) | sem tendência comparável |
 | Confiança | 39,5 | 0,37 (fraca) | sem tendência comparável |
 | Aprendizagem | 37 | 0,32 (fraca) | sem tendência comparável |
-| Experimentação | 56,6 | 0,33 (fraca) | +2,8 em 10 anos, com base em 3 indicadores |
+| Experimentação | 55,2 | 0,33 (fraca) | +0,7 em 10 anos, com base em 3 indicadores |
 | Adaptação | 72,4 | 0,53 (utilizável) | sem tendência comparável |
-| Construção | 44,9 | 0,38 (fraca) | +10,7 em 10 anos, com base em 2 indicadores |
-| Propósito compartilhado | 55 | 0,28 (fraca) | sem tendência comparável |
+| Construção | 45 | 0,38 (fraca) | +10,8 em 10 anos, com base em 2 indicadores |
+| Propósito compartilhado | 72,8 | 0,26 (fraca) | sem tendência comparável |
 
 ## Dimensões com as pontuações mais baixas
 
@@ -27,7 +27,7 @@ São as pontuações mais baixas entre as dimensões com evidência utilizável.
 Em que medida pessoas e organizações conseguem transformar intenção em ação?
 
 - A pontuação se apoia em 4 indicadores observados.
-- No topo da escala, entre as pontuações com evidência utilizável: Nova Zelândia 92,2, Austrália 89,2, Estônia 84,3.
+- No topo da escala, entre as pontuações com evidência utilizável: Nova Zelândia 92,3, Austrália 89,2, Estônia 84,3.
 - Registros de evidência desta dimensão em outros países, com êxitos e retrocessos, que não entram em nenhuma pontuação: Singapore's national ICT-skills measurement and baseline (Singapura); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (Índia); Puntos México Conectado, national digital learning centres (México).
 - Lacunas declaradas: Adultos que realizam tarefas digitais.
 
@@ -52,11 +52,11 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico.
 
-### Propósito compartilhado: solidez 0,28, fraca
+### Propósito compartilhado: solidez 0,26, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
-- A pontuação se apoia em 3 indicadores observados.
+- A pontuação se apoia em 2 indicadores observados.
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e prestação de contas.
 
@@ -115,7 +115,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Adaptação | Participação na força de trabalho | 45 % das pessoas com 15 anos ou mais | 2025 | 120º de 125 |
 | Adaptação | Assinaturas de banda larga fixa | 12,1 por 100 pessoas | 2024 | 75º de 125 |
 | Adaptação | Perdas na transmissão de eletricidade | 10 % da produção | 2023 | 68º de 117 |
-| Construção | Produto por pessoa ocupada | 57.467,8 US$ PPC constantes de 2021 | 2025 | 53º de 123 |
+| Construção | Produto por pessoa ocupada | 57.467,8 dólares PPC constantes de 2021 | 2025 | 53º de 123 |
 
 ## Agenda de medição
 

@@ -13,9 +13,9 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | 81,6 | 0,4 (fraca) | sem tendência comparável |
 | Confiança | 67,1 | 0,3 (fraca) | sem tendência comparável |
 | Aprendizagem | 40 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 13,6 | 0,33 (fraca) | -1,7 em 10 anos, com base em 3 indicadores |
+| Experimentação | 13,3 | 0,33 (fraca) | -1,5 em 10 anos, com base em 3 indicadores |
 | Adaptação | 69,8 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 25,3 | 0,43 (fraca) | -6,9 em 10 anos, com base em 2 indicadores |
+| Construção | 31,4 | 0,41 (fraca) | -7 em 10 anos, com base em 2 indicadores |
 | Propósito compartilhado | 70,7 | 0,28 (fraca) | +10,6 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com as pontuações mais baixas
@@ -67,20 +67,20 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico.
 
+### Construção: solidez 0,41, fraca
+
+Em que medida o país consegue transformar planos e conhecimento em sistemas que funcionam?
+
+- A pontuação se apoia em 3 indicadores observados.
+- Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
+- Bases rejeitadas: Qualidade da infraestrutura logística.
+
 ### Agência: solidez 0,41, fraca
 
 Em que medida pessoas e organizações conseguem transformar intenção em ação?
 
 - A pontuação se apoia em 3 indicadores observados.
 - Lacunas declaradas: Adultos que realizam tarefas digitais.
-
-### Construção: solidez 0,43, fraca
-
-Em que medida o país consegue transformar planos e conhecimento em sistemas que funcionam?
-
-- A pontuação se apoia em 4 indicadores observados.
-- Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
-- Bases rejeitadas: Qualidade da infraestrutura logística.
 
 ## Dimensões com as pontuações mais altas
 
@@ -108,7 +108,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Adaptação | Assinaturas de banda larga fixa | 33,4 por 100 pessoas | 2024 | 32º de 125 |
 | Adaptação | Perdas na transmissão de eletricidade | 10,3 % da produção | 2023 | 72º de 117 |
 | Adaptação | Emprego informal | 17,1 % do emprego | 2025 | 31º de 102 |
-| Construção | Produto por pessoa ocupada | 58.609,3 US$ PPC constantes de 2021 | 2025 | 51º de 123 |
+| Construção | Produto por pessoa ocupada | 58.609,3 dólares PPC constantes de 2021 | 2025 | 51º de 123 |
 
 ## Agenda de medição
 

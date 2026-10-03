@@ -13,9 +13,9 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Coordination | 63.6 | 0.4 (thin) | no trend |
 | Trust | 30 | 0.48 (usable) | no trend |
 | Learning | 17.6 | 0.52 (usable) | no trend |
-| Experimentation | 3.3 | 0.3 (thin) | no trend |
+| Experimentation | 3.1 | 0.3 (thin) | no trend |
 | Adaptability | 25.4 | 0.58 (usable) | no trend |
-| Building | 31.4 | 0.41 (thin) | +2.8 over 10 years using 2 indicators |
+| Building | 31.5 | 0.41 (thin) | +2.9 over 10 years using 2 indicators |
 | Shared Purpose | 50.1 | 0.36 (thin) | no trend |
 
 ## What to raise
@@ -64,7 +64,7 @@ How much cooperation is possible beyond immediate personal networks?
 How able are individuals and organizations to turn an intention into action?
 
 - Uses 4 observed indicators.
-- Highest usable scores: New Zealand 92.2, Australia 89.2, Estonia 84.3.
+- Highest usable scores: New Zealand 92.3, Australia 89.2, Estonia 84.3.
 - Related deliveries in other countries: Singapore's national ICT-skills measurement and baseline (Singapore); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (India); Puntos México Conectado, national digital learning centres (Mexico).
 - Missing indicators: Adults doing digital tasks.
 

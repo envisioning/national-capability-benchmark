@@ -15,8 +15,8 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 24.5 | 0.54 (usable) | no trend |
 | Experimentation | 6.9 | 0.33 (thin) | +1 over 10 years using 3 indicators |
 | Adaptability | 75.1 | 0.6 (usable) | no trend |
-| Building | 55 | 0.57 (usable) | +0.2 over 10 years using 3 indicators |
-| Shared Purpose | 66.2 | 0.3 (thin) | no trend |
+| Building | 55.1 | 0.57 (usable) | +0.2 over 10 years using 3 indicators |
+| Shared Purpose | 84.3 | 0.28 (thin) | no trend |
 
 ## What to raise
 
@@ -54,11 +54,11 @@ How much cooperation is possible beyond immediate personal networks?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Shared Purpose: confidence 0.3, thin
+### Shared Purpose: confidence 0.28, thin
 
 To what extent can people imagine themselves as participants in a common project?
 
-- Uses 3 observed indicators.
+- Uses 2 observed indicators.
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
 
@@ -83,7 +83,7 @@ How effectively can independent actors organize around shared objectives?
 These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 75.1, confidence usable
-- Building: 55, confidence usable
+- Building: 55.1, confidence usable
 - Agency: 52.8, confidence usable
 
 ## What Indonesia has to work with

@@ -9,13 +9,13 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 71,4 | 0,46 (utilizável) | +4,3 em 10 anos, com base em 2 indicadores |
-| Agência | 51,4 | 0,41 (fraca) | sem tendência comparável |
+| Agência | 51,5 | 0,41 (fraca) | sem tendência comparável |
 | Coordenação | 92,8 | 0,39 (fraca) | sem tendência comparável |
 | Confiança | 87,5 | 0,3 (fraca) | sem tendência comparável |
 | Aprendizagem | 66,2 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 70,8 | 0,33 (fraca) | +3,5 em 10 anos, com base em 3 indicadores |
+| Experimentação | 70,7 | 0,33 (fraca) | +3,5 em 10 anos, com base em 3 indicadores |
 | Adaptação | 74,3 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 68,8 | 0,57 (utilizável) | -2,9 em 10 anos, com base em 3 indicadores |
+| Construção | 68,8 | 0,57 (utilizável) | -3 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 50,7 | 0,29 (fraca) | -4,8 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com evidência fraca
@@ -89,7 +89,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Adaptação | Assinaturas de banda larga fixa | 45,6 por 100 pessoas | 2024 | 5º de 125 |
 | Adaptação | Perdas na transmissão de eletricidade | 5,1 % da produção | 2024 | 21º de 117 |
 | Adaptação | Emprego informal | 3,9 % do emprego | 2022 | 17º de 102 |
-| Construção | Produto por pessoa ocupada | 125.086,3 US$ PPC constantes de 2021 | 2025 | 13º de 123 |
+| Construção | Produto por pessoa ocupada | 125.086,3 dólares PPC constantes de 2021 | 2025 | 13º de 123 |
 
 ## Agenda de medição
 

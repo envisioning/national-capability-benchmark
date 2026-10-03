@@ -9,13 +9,13 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 0 | 0,46 (utilizável) | 0 em 10 anos, com base em 2 indicadores, 1 limitados à borda da escala |
-| Agência | 14 | 0,24 (muito fraca) | sem tendência comparável |
+| Agência | 21,1 | 0,22 (muito fraca) | sem tendência comparável |
 | Coordenação | 63,1 | 0,39 (fraca) | sem tendência comparável |
 | Confiança | 50,6 | 0,16 (muito fraca) | sem tendência comparável |
 | Aprendizagem | 35,5 | 0,32 (fraca) | sem tendência comparável |
 | Experimentação | 0,9 | 0,14 (muito fraca) | sem tendência comparável |
 | Adaptação | 27,2 | 0,46 (utilizável) | sem tendência comparável |
-| Construção | 46,6 | 0,41 (fraca) | +5,9 em 10 anos, com base em 2 indicadores |
+| Construção | 46,8 | 0,41 (fraca) | +6 em 10 anos, com base em 2 indicadores |
 | Propósito compartilhado | sem pontuação | 0,02 (muito fraca) | sem tendência comparável |
 
 ## Dimensões com as pontuações mais baixas
@@ -68,11 +68,11 @@ Quanta cooperação é possível para além do círculo pessoal mais próximo?
 - Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
 - Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídios dolosos.
 
-### Agência: solidez 0,24, muito fraca
+### Agência: solidez 0,22, muito fraca
 
 Em que medida pessoas e organizações conseguem transformar intenção em ação?
 
-- A pontuação se apoia em 3 indicadores observados.
+- A pontuação se apoia em 2 indicadores observados.
 - Lacunas declaradas: Adultos que realizam tarefas digitais.
 
 ### Aprendizagem: solidez 0,32, fraca
@@ -115,7 +115,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Adaptação | Assinaturas de banda larga fixa | 0,3 por 100 pessoas | 2022 | 114º de 125 |
 | Adaptação | Perdas na transmissão de eletricidade | 14,7 % da produção | 2022 | 89º de 117 |
 | Adaptação | Emprego informal | 91,6 % do emprego | 2012 | 89º de 102 |
-| Construção | Produto por pessoa ocupada | 7.115,3 US$ PPC constantes de 2021 | 2025 | 116º de 123 |
+| Construção | Produto por pessoa ocupada | 7.115,3 dólares PPC constantes de 2021 | 2025 | 116º de 123 |
 
 ## Agenda de medição
 

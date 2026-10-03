@@ -13,9 +13,9 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Coordination | 80.2 | 0.39 (thin) | no trend |
 | Trust | 85.2 | 0.3 (thin) | no trend |
 | Learning | 76.3 | 0.55 (usable) | no trend |
-| Experimentation | 30.4 | 0.33 (thin) | -9.3 over 10 years using 3 indicators |
+| Experimentation | 29.8 | 0.33 (thin) | -8.9 over 10 years using 3 indicators |
 | Adaptability | 75.5 | 0.62 (usable) | no trend |
-| Building | 53.5 | 0.57 (usable) | -0.5 over 10 years using 3 indicators |
+| Building | 53.6 | 0.57 (usable) | -0.6 over 10 years using 3 indicators |
 | Shared Purpose | 73.2 | 0.3 (thin) | -1.9 over 10 years using 2 indicators |
 
 ## What to measure first
@@ -68,7 +68,7 @@ These dimensions score at least 50 with usable evidence.
 - Learning: 76.3, confidence usable
 - Adaptability: 75.5, confidence usable
 - Anticipation: 67.3, confidence usable
-- Building: 53.5, confidence usable
+- Building: 53.6, confidence usable
 
 ## What Czechia has to work with
 

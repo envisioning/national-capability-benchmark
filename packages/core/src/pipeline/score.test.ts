@@ -6,7 +6,8 @@
  * Covered: the frame over every country (D47), history clamping (D22), missing
  * values dropped and never imputed, the coverage floor (D45), retired rows out
  * of the coverage denominator (D100), conditions published beside a dimension
- * and never scored (D122), and the Delphi fallback (D63).
+ * and never scored (D122), the Delphi fallback (D63), and values too old to
+ * score set aside (D159).
  */
 import assert from 'node:assert/strict'
 import test from 'node:test'
@@ -19,6 +20,7 @@ import {
   isScored,
 } from '../model/index.js'
 import type { ConditionResult, Dimension, DimensionResult, IndicatorDef, Observation } from '../model/index.js'
+import { MAX_SCORED_VALUE_AGE, isTooOldToScore } from './confidence.js'
 import { MIN_INDICATORS_FOR_SCORE, buildFrames, recencyWeight, scoreAll } from './score.js'
 import { buildHistory, normalizedAt } from './trend.js'
 import { mean, round } from './stats.js'
@@ -425,4 +427,71 @@ test('a mock run or a run for another dataset is never used', () => {
     assert.equal(r.noData.blendedScore, null)
     assert.equal(r.noData.blendedFrom, 'none')
   }
+})
+
+test('a value older than the age limit is set aside, never scored (D159)', () => {
+  assert.equal(MAX_SCORED_VALUE_AGE, 15)
+  assert.equal(isTooOldToScore(2011, 2026), false, '2011 is the oldest year counted in 2026')
+  assert.equal(isTooOldToScore(2010, 2026), true)
+
+  const oldYear = CURRENT_YEAR - MAX_SCORED_VALUE_AGE - 1
+  const first = learningScored[0] as IndicatorDef
+  // Country 0 holds the row's minimum, 0, and holds it only in an old year.
+  assert.equal(value(0, 0), 0)
+  const observations = learningObservations((i, j) => i === 0 && j === 0)
+  observations.push(obs(first.id, iso(0), 0, oldYear))
+  const fresh = learningObservations()
+
+  // The old value is off the ruler: the frame's 0 endpoint is the next lowest.
+  const frame = buildFrames(observations, baseOpts).get(first.id)
+  assert.ok(frame)
+  assert.equal(frame.min, 1)
+
+  // Trends on, so the yearly series is built.
+  const r = learningFor(observations, iso(0), { momentumSpans: [10] })
+  const base = learningFor(fresh, iso(0))
+  const row = r.indicators.find((x) => x.indicatorId === first.id)
+  assert.ok(row)
+  assert.equal(row.status, 'missing')
+  assert.equal(row.normalized, null)
+  assert.equal(row.year, null)
+  assert.deepEqual(row.staleExcluded, { year: oldYear, raw: 0 })
+  // History stays published for the trend layer.
+  assert.deepEqual(
+    row.series.map((p) => p.year),
+    [oldYear],
+  )
+  assert.equal(r.observedIndicators, base.observedIndicators - 1)
+  assert.ok(r.confidenceParts.coverage < base.confidenceParts.coverage)
+  // A value inside the limit is a cell like any other.
+  const inside = learningFor(fresh, iso(1))
+  assert.ok(inside.indicators.every((x) => x.staleExcluded === null))
+})
+
+test('old values can take a dimension under the coverage floor (D159 with D45)', () => {
+  const oldYear = CURRENT_YEAR - MAX_SCORED_VALUE_AGE - 1
+  const keep = MIN_INDICATORS_FOR_SCORE - 1
+  const observations = learningObservations((i, j) => i === 0 && j >= keep)
+  learningScored.forEach((d, j) => {
+    if (j >= keep) observations.push(obs(d.id, iso(0), value(0, j), oldYear))
+  })
+  const r = learningFor(observations, iso(0))
+  assert.equal(r.observedIndicators, keep)
+  assert.equal(r.belowCoverageFloor, true)
+  assert.equal(r.score, null)
+})
+
+test('an old condition keeps its value and rank and is marked (D159)', () => {
+  const condition = conditionsFor(LEARNING)[0] as IndicatorDef
+  const oldYear = CURRENT_YEAR - MAX_SCORED_VALUE_AGE - 1
+  const observations = [...learningObservations(), obs(condition.id, iso(0), 5, oldYear)]
+  observations.push(obs(condition.id, iso(1), 3))
+  const r = learningFor(observations, iso(0))
+  const row = r.conditions.find((c) => c.indicatorId === condition.id)
+  assert.ok(row)
+  assert.equal(row.value, 5)
+  assert.equal(row.rank, 1)
+  assert.equal(row.stale, true)
+  const other = learningFor(observations, iso(1)).conditions.find((c) => c.indicatorId === condition.id)
+  assert.equal(other?.stale, false)
 })

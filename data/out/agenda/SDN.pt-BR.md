@@ -13,9 +13,9 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | 34 | 0,39 (fraca) | sem tendência comparável |
 | Confiança | 47,3 | 0,2 (muito fraca) | sem tendência comparável |
 | Aprendizagem | 14,5 | 0,36 (fraca) | sem tendência comparável |
-| Experimentação | 1,1 | 0,31 (fraca) | sem tendência comparável |
+| Experimentação | 1 | 0,31 (fraca) | sem tendência comparável |
 | Adaptação | 35,7 | 0,57 (utilizável) | sem tendência comparável |
-| Construção | 23,3 | 0,35 (fraca) | sem tendência comparável |
+| Construção | 27,2 | 0,33 (fraca) | sem tendência comparável |
 | Propósito compartilhado | 45 | 0,08 (muito fraca) | sem tendência comparável |
 
 ## Dimensões com as pontuações mais baixas
@@ -75,11 +75,11 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
 - Bases rejeitadas: Parcela empresarial do P&D.
 
-### Construção: solidez 0,35, fraca
+### Construção: solidez 0,33, fraca
 
 Em que medida o país consegue transformar planos e conhecimento em sistemas que funcionam?
 
-- A pontuação se apoia em 4 indicadores observados.
+- A pontuação se apoia em 3 indicadores observados.
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística.
 
@@ -116,7 +116,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Adaptação | Assinaturas de banda larga fixa | 0,1 por 100 pessoas | 2022 | 122º de 125 |
 | Adaptação | Perdas na transmissão de eletricidade | 27,1 % da produção | 2023 | 113º de 117 |
 | Adaptação | Emprego informal | 94,2 % do emprego | 2022 | 94º de 102 |
-| Construção | Produto por pessoa ocupada | 15.276,6 US$ PPC constantes de 2021 | 2022 | 102º de 123 |
+| Construção | Produto por pessoa ocupada | 15.276,6 dólares PPC constantes de 2021 | 2022 | 102º de 123 |
 
 ## Agenda de medição
 

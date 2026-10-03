@@ -1,5 +1,5 @@
 import { Icon } from '@/components/Icon'
-import { EN, fill, indicatorDefinition, indicatorName, unitName } from '@ncb/core'
+import { EN, MAX_SCORED_VALUE_AGE, fill, indicatorDefinition, indicatorName, unitName } from '@ncb/core'
 import type { ConditionResult, Lexicon } from '@ncb/core'
 import { CONDITION_WORDS_EN } from '@/lib/words'
 
@@ -20,6 +20,8 @@ export type ConditionListWords = {
   noValue: string
   /** {rank} {n} */
   rank: string
+  /** {year} {age}: said under a value older than an indicator may be and still count. See D159. */
+  stale: string
 }
 
 /**
@@ -90,6 +92,12 @@ export function ConditionList({
                   . {definition}
                 </p>
               )}
+              {c.stale && c.year !== null ? (
+                <p className="mt-1 inline-flex items-center gap-1.5 text-xs text-[var(--muted)]">
+                  <Icon name="clock" size={13} />
+                  {fill(words.stale, { year: c.year, age: MAX_SCORED_VALUE_AGE })}
+                </p>
+              ) : null}
               {english ? (
                 <p className="mt-1 max-w-3xl text-xs leading-relaxed text-[var(--muted)]">{c.note}</p>
               ) : null}

@@ -13,9 +13,9 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | 98,7 | 0,35 (fraca) | sem tendência comparável |
 | Confiança | 82,6 | 0,5 (utilizável) | sem tendência comparável |
 | Aprendizagem | 80 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 69,8 | 0,53 (utilizável) | +0,3 em 10 anos, com base em 3 indicadores |
+| Experimentação | 68,6 | 0,53 (utilizável) | -2,2 em 10 anos, com base em 3 indicadores |
 | Adaptação | 55,6 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 72,6 | 0,57 (utilizável) | +0,9 em 10 anos, com base em 3 indicadores |
+| Construção | 72,7 | 0,57 (utilizável) | +0,9 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 47,4 | 0,41 (fraca) | -0,9 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com evidência fraca
@@ -45,8 +45,8 @@ Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 - Antecipação: 93,4, solidez utilizável
 - Confiança: 82,6, solidez utilizável
 - Aprendizagem: 80, solidez utilizável
-- Construção: 72,6, solidez utilizável
-- Experimentação: 69,8, solidez utilizável
+- Construção: 72,7, solidez utilizável
+- Experimentação: 68,6, solidez utilizável
 - Agência: 60,5, solidez utilizável
 - Adaptação: 55,6, solidez utilizável
 
@@ -69,7 +69,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Adaptação | Assinaturas de banda larga fixa | 47 por 100 pessoas | 2024 | 4º de 125 |
 | Adaptação | Perdas na transmissão de eletricidade | 5 % da produção | 2024 | 19º de 117 |
 | Adaptação | Emprego informal | 1,1 % do emprego | 2024 | 2º de 102 |
-| Construção | Produto por pessoa ocupada | 158.634,2 US$ PPC constantes de 2021 | 2025 | 4º de 123 |
+| Construção | Produto por pessoa ocupada | 158.634,2 dólares PPC constantes de 2021 | 2025 | 4º de 123 |
 
 ## Agenda de medição
 

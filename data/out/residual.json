@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T07:49:44.229Z",
+  "generatedAt": "2026-10-03T08:09:41.738Z",
   "methodVersion": "residual/0.1-exploratory",
   "gdpSeries": "NY.GDP.PCAP.PP.KD",
   "fits": [
@@ -16,14 +16,14 @@
     },
     {
       "dimension": "agency",
-      "slope": 13.56,
-      "intercept": -0.86,
-      "pearson": 0.466,
-      "rSquared": 0.217,
+      "slope": 12.71,
+      "intercept": 2.94,
+      "pearson": 0.445,
+      "rSquared": 0.198,
       "n": 123,
-      "residualSd": 12.48,
+      "residualSd": 12.4,
       "fitStrength": "weak",
-      "meanAbsRankShift": 15.5
+      "meanAbsRankShift": 14.7
     },
     {
       "dimension": "coordination",
@@ -60,14 +60,14 @@
     },
     {
       "dimension": "experimentation",
-      "slope": 32.96,
-      "intercept": -117.69,
-      "pearson": 0.728,
-      "rSquared": 0.53,
-      "n": 123,
-      "residualSd": 15.05,
+      "slope": 32.68,
+      "intercept": -116.82,
+      "pearson": 0.719,
+      "rSquared": 0.516,
+      "n": 120,
+      "residualSd": 15.13,
       "fitStrength": "strong",
-      "meanAbsRankShift": 30.9
+      "meanAbsRankShift": 29.2
     },
     {
       "dimension": "adaptability",
@@ -82,25 +82,25 @@
     },
     {
       "dimension": "building",
-      "slope": 18.91,
-      "intercept": -42.98,
-      "pearson": 0.572,
-      "rSquared": 0.327,
+      "slope": 18.83,
+      "intercept": -42.54,
+      "pearson": 0.571,
+      "rSquared": 0.326,
       "n": 123,
-      "residualSd": 13.14,
+      "residualSd": 13.13,
       "fitStrength": "moderate",
-      "meanAbsRankShift": 22.7
+      "meanAbsRankShift": 22.6
     },
     {
       "dimension": "shared_purpose",
-      "slope": 6.92,
-      "intercept": 22.34,
-      "pearson": 0.259,
-      "rSquared": 0.067,
-      "n": 122,
-      "residualSd": 12.43,
+      "slope": 7.24,
+      "intercept": 20.93,
+      "pearson": 0.25,
+      "rSquared": 0.063,
+      "n": 118,
+      "residualSd": 13.38,
       "fitStrength": "weak",
-      "meanAbsRankShift": 8.4
+      "meanAbsRankShift": 7.7
     }
   ],
   "countries": {
@@ -113,8 +113,8 @@
       },
       "agency": {
         "score": 58,
-        "predicted": 57.4,
-        "residual": 0.6,
+        "predicted": 57.6,
+        "residual": 0.4,
         "outOfScale": false
       },
       "coordination": {
@@ -136,9 +136,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 28.7,
-        "predicted": 24.1,
-        "residual": 4.6,
+        "score": 28.5,
+        "predicted": 23.7,
+        "residual": 4.8,
         "outOfScale": false
       },
       "adaptability": {
@@ -148,9 +148,9 @@
         "outOfScale": false
       },
       "building": {
-        "score": 37.6,
-        "predicted": 38.3,
-        "residual": -0.7,
+        "score": 37.7,
+        "predicted": 38.5,
+        "residual": -0.8,
         "outOfScale": false
       },
       "shared_purpose": {
@@ -169,8 +169,8 @@
       },
       "agency": {
         "score": 82.1,
-        "predicted": 65.4,
-        "residual": 16.7,
+        "predicted": 65.1,
+        "residual": 17,
         "outOfScale": false
       },
       "coordination": {
@@ -193,8 +193,8 @@
       },
       "experimentation": {
         "score": 50.6,
-        "predicted": 43.3,
-        "residual": 7.3,
+        "predicted": 42.8,
+        "residual": 7.8,
         "outOfScale": false
       },
       "adaptability": {
@@ -205,14 +205,14 @@
       },
       "building": {
         "score": 59.2,
-        "predicted": 49.4,
-        "residual": 9.8,
+        "predicted": 49.5,
+        "residual": 9.7,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 54.3,
-        "predicted": 56.1,
-        "residual": -1.8,
+        "predicted": 56.3,
+        "residual": -2,
         "outOfScale": false
       }
     },
@@ -225,8 +225,8 @@
       },
       "agency": {
         "score": 66.2,
-        "predicted": 64.9,
-        "residual": 1.3,
+        "predicted": 64.6,
+        "residual": 1.6,
         "outOfScale": false
       },
       "coordination": {
@@ -248,9 +248,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 56,
-        "predicted": 42.3,
-        "residual": 13.7,
+        "score": 54.6,
+        "predicted": 41.8,
+        "residual": 12.8,
         "outOfScale": false
       },
       "adaptability": {
@@ -261,14 +261,14 @@
       },
       "building": {
         "score": 57.2,
-        "predicted": 48.8,
-        "residual": 8.4,
+        "predicted": 48.9,
+        "residual": 8.3,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 82.7,
-        "predicted": 55.9,
-        "residual": 26.8,
+        "predicted": 56.1,
+        "residual": 26.6,
         "outOfScale": false
       }
     },
@@ -281,8 +281,8 @@
       },
       "agency": {
         "score": 60.5,
-        "predicted": 66,
-        "residual": -5.5,
+        "predicted": 65.7,
+        "residual": -5.2,
         "outOfScale": false
       },
       "coordination": {
@@ -304,9 +304,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 69.8,
-        "predicted": 44.9,
-        "residual": 24.9,
+        "score": 68.6,
+        "predicted": 44.4,
+        "residual": 24.2,
         "outOfScale": false
       },
       "adaptability": {
@@ -316,15 +316,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 72.6,
-        "predicted": 50.3,
+        "score": 72.7,
+        "predicted": 50.4,
         "residual": 22.3,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 47.4,
-        "predicted": 56.5,
-        "residual": -9.1,
+        "predicted": 56.7,
+        "residual": -9.3,
         "outOfScale": false
       }
     },
@@ -336,9 +336,9 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 74.4,
-        "predicted": 68.9,
-        "residual": 5.5,
+        "score": 74.5,
+        "predicted": 68.3,
+        "residual": 6.2,
         "outOfScale": false
       },
       "coordination": {
@@ -361,8 +361,8 @@
       },
       "experimentation": {
         "score": 60.5,
-        "predicted": 51.9,
-        "residual": 8.6,
+        "predicted": 51.3,
+        "residual": 9.2,
         "outOfScale": false
       },
       "adaptability": {
@@ -372,15 +372,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 74.9,
-        "predicted": 54.3,
+        "score": 75,
+        "predicted": 54.4,
         "residual": 20.6,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 32.3,
-        "predicted": 57.9,
-        "residual": -25.6,
+        "predicted": 58.2,
+        "residual": -25.9,
         "outOfScale": false
       }
     },
@@ -393,8 +393,8 @@
       },
       "agency": {
         "score": 61.4,
-        "predicted": 63.5,
-        "residual": -2.1,
+        "predicted": 63.3,
+        "residual": -1.9,
         "outOfScale": false
       },
       "coordination": {
@@ -416,9 +416,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 72.7,
-        "predicted": 38.7,
-        "residual": 34,
+        "score": 72.6,
+        "predicted": 38.3,
+        "residual": 34.3,
         "outOfScale": false
       },
       "adaptability": {
@@ -428,15 +428,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 84.9,
-        "predicted": 46.7,
-        "residual": 38.2,
+        "score": 85.1,
+        "predicted": 46.8,
+        "residual": 38.3,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 40.6,
-        "predicted": 55.2,
-        "residual": -14.6,
+        "predicted": 55.3,
+        "residual": -14.7,
         "outOfScale": false
       }
     },
@@ -449,8 +449,8 @@
       },
       "agency": {
         "score": 84.3,
-        "predicted": 61.8,
-        "residual": 22.5,
+        "predicted": 61.7,
+        "residual": 22.6,
         "outOfScale": false
       },
       "coordination": {
@@ -472,9 +472,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 40.4,
-        "predicted": 34.5,
-        "residual": 5.9,
+        "score": 40.2,
+        "predicted": 34.1,
+        "residual": 6.1,
         "outOfScale": false
       },
       "adaptability": {
@@ -485,14 +485,14 @@
       },
       "building": {
         "score": 32.9,
-        "predicted": 44.3,
-        "residual": -11.4,
+        "predicted": 44.5,
+        "residual": -11.6,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 48.8,
-        "predicted": 54.3,
-        "residual": -5.5,
+        "predicted": 54.4,
+        "residual": -5.6,
         "outOfScale": false
       }
     },
@@ -505,8 +505,8 @@
       },
       "agency": {
         "score": 46,
-        "predicted": 53.4,
-        "residual": -7.4,
+        "predicted": 53.8,
+        "residual": -7.8,
         "outOfScale": false
       },
       "coordination": {
@@ -528,9 +528,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 12.2,
-        "predicted": 14.2,
-        "residual": -2,
+        "score": 12,
+        "predicted": 13.9,
+        "residual": -1.9,
         "outOfScale": false
       },
       "adaptability": {
@@ -541,14 +541,14 @@
       },
       "building": {
         "score": 62.1,
-        "predicted": 32.7,
-        "residual": 29.4,
+        "predicted": 32.8,
+        "residual": 29.3,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 63.2,
-        "predicted": 50,
-        "residual": 13.2,
+        "predicted": 49.9,
+        "residual": 13.3,
         "outOfScale": false
       }
     },
@@ -584,9 +584,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 37.6,
-        "predicted": 30.3,
-        "residual": 7.3,
+        "score": 37.4,
+        "predicted": 29.9,
+        "residual": 7.5,
         "outOfScale": false
       },
       "adaptability": {
@@ -597,14 +597,14 @@
       },
       "building": {
         "score": 33.6,
-        "predicted": 41.9,
-        "residual": -8.3,
+        "predicted": 42,
+        "residual": -8.4,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 44.7,
-        "predicted": 53.4,
-        "residual": -8.7,
+        "predicted": 53.5,
+        "residual": -8.8,
         "outOfScale": false
       }
     },
@@ -616,9 +616,9 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 57.7,
-        "predicted": 55.2,
-        "residual": 2.5,
+        "score": 57.8,
+        "predicted": 55.5,
+        "residual": 2.3,
         "outOfScale": false
       },
       "coordination": {
@@ -640,9 +640,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 17.2,
-        "predicted": 18.5,
-        "residual": -1.3,
+        "score": 17,
+        "predicted": 18.2,
+        "residual": -1.2,
         "outOfScale": false
       },
       "adaptability": {
@@ -652,8 +652,8 @@
         "outOfScale": false
       },
       "building": {
-        "score": 29.3,
-        "predicted": 35.2,
+        "score": 29.4,
+        "predicted": 35.3,
         "residual": -5.9,
         "outOfScale": false
       },
@@ -673,8 +673,8 @@
       },
       "agency": {
         "score": 64.3,
-        "predicted": 58,
-        "residual": 6.3,
+        "predicted": 58.1,
+        "residual": 6.2,
         "outOfScale": false
       },
       "coordination": {
@@ -696,9 +696,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 25.3,
-        "predicted": 25.4,
-        "residual": -0.1,
+        "score": 25.2,
+        "predicted": 25,
+        "residual": 0.2,
         "outOfScale": false
       },
       "adaptability": {
@@ -708,8 +708,8 @@
         "outOfScale": false
       },
       "building": {
-        "score": 54.8,
-        "predicted": 39.1,
+        "score": 54.9,
+        "predicted": 39.2,
         "residual": 15.7,
         "outOfScale": false
       },
@@ -752,9 +752,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 21.3,
-        "predicted": 28.8,
-        "residual": -7.5,
+        "score": 21.2,
+        "predicted": 28.4,
+        "residual": -7.2,
         "outOfScale": false
       },
       "adaptability": {
@@ -764,9 +764,9 @@
         "outOfScale": false
       },
       "building": {
-        "score": 31,
-        "predicted": 41,
-        "residual": -10,
+        "score": 31.1,
+        "predicted": 41.2,
+        "residual": -10.1,
         "outOfScale": false
       },
       "shared_purpose": {
@@ -785,8 +785,8 @@
       },
       "agency": {
         "score": 65.5,
-        "predicted": 57.1,
-        "residual": 8.4,
+        "predicted": 57.3,
+        "residual": 8.2,
         "outOfScale": false
       },
       "coordination": {
@@ -808,9 +808,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 32.8,
-        "predicted": 23.1,
-        "residual": 9.7,
+        "score": 32.7,
+        "predicted": 22.8,
+        "residual": 9.9,
         "outOfScale": false
       },
       "adaptability": {
@@ -820,8 +820,8 @@
         "outOfScale": false
       },
       "building": {
-        "score": 29.1,
-        "predicted": 37.8,
+        "score": 29.2,
+        "predicted": 37.9,
         "residual": -8.7,
         "outOfScale": false
       },
@@ -840,9 +840,9 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 57.5,
-        "predicted": 56.2,
-        "residual": 1.3,
+        "score": 57.6,
+        "predicted": 56.4,
+        "residual": 1.2,
         "outOfScale": false
       },
       "coordination": {
@@ -865,8 +865,8 @@
       },
       "experimentation": {
         "score": 17.3,
-        "predicted": 20.9,
-        "residual": -3.6,
+        "predicted": 20.6,
+        "residual": -3.3,
         "outOfScale": false
       },
       "adaptability": {
@@ -876,9 +876,9 @@
         "outOfScale": false
       },
       "building": {
-        "score": 32,
-        "predicted": 36.5,
-        "residual": -4.5,
+        "score": 32.1,
+        "predicted": 36.7,
+        "residual": -4.6,
         "outOfScale": false
       },
       "shared_purpose": {
@@ -896,9 +896,9 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 71.9,
+        "score": 72,
         "predicted": 60.3,
-        "residual": 11.6,
+        "residual": 11.7,
         "outOfScale": false
       },
       "coordination": {
@@ -920,9 +920,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 29.2,
-        "predicted": 31.1,
-        "residual": -1.9,
+        "score": 29.1,
+        "predicted": 30.7,
+        "residual": -1.6,
         "outOfScale": false
       },
       "adaptability": {
@@ -932,8 +932,8 @@
         "outOfScale": false
       },
       "building": {
-        "score": 33.2,
-        "predicted": 42.4,
+        "score": 33.3,
+        "predicted": 42.5,
         "residual": -9.2,
         "outOfScale": false
       },
@@ -952,8 +952,8 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 51.3,
-        "predicted": 59.5,
+        "score": 51.4,
+        "predicted": 59.6,
         "residual": -8.2,
         "outOfScale": false
       },
@@ -976,9 +976,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 22.2,
-        "predicted": 29.1,
-        "residual": -6.9,
+        "score": 22.1,
+        "predicted": 28.7,
+        "residual": -6.6,
         "outOfScale": false
       },
       "adaptability": {
@@ -988,8 +988,8 @@
         "outOfScale": false
       },
       "building": {
-        "score": 42.3,
-        "predicted": 41.2,
+        "score": 42.4,
+        "predicted": 41.3,
         "residual": 1.1,
         "outOfScale": false
       },
@@ -1008,9 +1008,9 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 51.4,
-        "predicted": 64.2,
-        "residual": -12.8,
+        "score": 51.5,
+        "predicted": 63.9,
+        "residual": -12.4,
         "outOfScale": false
       },
       "coordination": {
@@ -1032,9 +1032,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 70.8,
-        "predicted": 40.4,
-        "residual": 30.4,
+        "score": 70.7,
+        "predicted": 40,
+        "residual": 30.7,
         "outOfScale": false
       },
       "adaptability": {
@@ -1045,14 +1045,14 @@
       },
       "building": {
         "score": 68.8,
-        "predicted": 47.7,
-        "residual": 21.1,
+        "predicted": 47.8,
+        "residual": 21,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 50.7,
-        "predicted": 55.5,
-        "residual": -4.8,
+        "predicted": 55.7,
+        "residual": -5,
         "outOfScale": false
       }
     },
@@ -1064,9 +1064,9 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 64.9,
-        "predicted": 63.4,
-        "residual": 1.5,
+        "score": 65,
+        "predicted": 63.2,
+        "residual": 1.8,
         "outOfScale": false
       },
       "coordination": {
@@ -1088,9 +1088,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 74.9,
-        "predicted": 38.6,
-        "residual": 36.3,
+        "score": 74.7,
+        "predicted": 38.1,
+        "residual": 36.6,
         "outOfScale": false
       },
       "adaptability": {
@@ -1101,14 +1101,14 @@
       },
       "building": {
         "score": 61.9,
-        "predicted": 46.7,
-        "residual": 15.2,
+        "predicted": 46.8,
+        "residual": 15.1,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 52.9,
-        "predicted": 55.1,
-        "residual": -2.2,
+        "predicted": 55.3,
+        "residual": -2.4,
         "outOfScale": false
       }
     },
@@ -1121,8 +1121,8 @@
       },
       "agency": {
         "score": 92.7,
-        "predicted": 63.3,
-        "residual": 29.4,
+        "predicted": 63.1,
+        "residual": 29.6,
         "outOfScale": false
       },
       "coordination": {
@@ -1144,9 +1144,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 71.2,
-        "predicted": 38.3,
-        "residual": 32.9,
+        "score": 70.2,
+        "predicted": 37.8,
+        "residual": 32.4,
         "outOfScale": false
       },
       "adaptability": {
@@ -1157,14 +1157,14 @@
       },
       "building": {
         "score": 62.8,
-        "predicted": 46.5,
-        "residual": 16.3,
+        "predicted": 46.6,
+        "residual": 16.2,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 75.6,
-        "predicted": 55.1,
-        "residual": 20.5,
+        "predicted": 55.2,
+        "residual": 20.4,
         "outOfScale": false
       }
     },
@@ -1177,8 +1177,8 @@
       },
       "agency": {
         "score": 59,
-        "predicted": 62.8,
-        "residual": -3.8,
+        "predicted": 62.6,
+        "residual": -3.6,
         "outOfScale": false
       },
       "coordination": {
@@ -1200,9 +1200,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 42.8,
-        "predicted": 37,
-        "residual": 5.8,
+        "score": 42.4,
+        "predicted": 36.5,
+        "residual": 5.9,
         "outOfScale": false
       },
       "adaptability": {
@@ -1213,14 +1213,14 @@
       },
       "building": {
         "score": 49.8,
-        "predicted": 45.7,
-        "residual": 4.1,
+        "predicted": 45.8,
+        "residual": 4,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 44.6,
-        "predicted": 54.8,
-        "residual": -10.2,
+        "predicted": 54.9,
+        "residual": -10.3,
         "outOfScale": false
       }
     },
@@ -1233,8 +1233,8 @@
       },
       "agency": {
         "score": 69.7,
-        "predicted": 61.9,
-        "residual": 7.8,
+        "predicted": 61.8,
+        "residual": 7.9,
         "outOfScale": false
       },
       "coordination": {
@@ -1256,9 +1256,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 43,
-        "predicted": 34.9,
-        "residual": 8.1,
+        "score": 42.2,
+        "predicted": 34.4,
+        "residual": 7.8,
         "outOfScale": false
       },
       "adaptability": {
@@ -1268,15 +1268,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 41.9,
-        "predicted": 44.5,
+        "score": 42,
+        "predicted": 44.6,
         "residual": -2.6,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 46.6,
-        "predicted": 54.4,
-        "residual": -7.8,
+        "predicted": 54.5,
+        "residual": -7.9,
         "outOfScale": false
       }
     },
@@ -1288,9 +1288,9 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 46.1,
-        "predicted": 62.5,
-        "residual": -16.4,
+        "score": 46.2,
+        "predicted": 62.3,
+        "residual": -16.1,
         "outOfScale": false
       },
       "coordination": {
@@ -1312,9 +1312,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 33.7,
-        "predicted": 36.3,
-        "residual": -2.6,
+        "score": 32.5,
+        "predicted": 35.8,
+        "residual": -3.3,
         "outOfScale": false
       },
       "adaptability": {
@@ -1324,15 +1324,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 47.5,
-        "predicted": 45.3,
+        "score": 47.6,
+        "predicted": 45.4,
         "residual": 2.2,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 49.3,
-        "predicted": 54.7,
-        "residual": -5.4,
+        "predicted": 54.8,
+        "residual": -5.5,
         "outOfScale": false
       }
     },
@@ -1344,9 +1344,9 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 71.8,
-        "predicted": 64.2,
-        "residual": 7.6,
+        "score": 71.9,
+        "predicted": 64,
+        "residual": 7.9,
         "outOfScale": false
       },
       "coordination": {
@@ -1368,9 +1368,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 47.2,
-        "predicted": 40.6,
-        "residual": 6.6,
+        "score": 46.4,
+        "predicted": 40.1,
+        "residual": 6.3,
         "outOfScale": false
       },
       "adaptability": {
@@ -1381,14 +1381,14 @@
       },
       "building": {
         "score": 45.1,
-        "predicted": 47.8,
-        "residual": -2.7,
+        "predicted": 47.9,
+        "residual": -2.8,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 73.3,
-        "predicted": 55.6,
-        "residual": 17.7,
+        "predicted": 55.7,
+        "residual": 17.6,
         "outOfScale": false
       }
     },
@@ -1400,9 +1400,9 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 71.6,
-        "predicted": 63.5,
-        "residual": 8.1,
+        "score": 71.7,
+        "predicted": 63.3,
+        "residual": 8.4,
         "outOfScale": false
       },
       "coordination": {
@@ -1425,8 +1425,8 @@
       },
       "experimentation": {
         "score": 51.6,
-        "predicted": 38.7,
-        "residual": 12.9,
+        "predicted": 38.3,
+        "residual": 13.3,
         "outOfScale": false
       },
       "adaptability": {
@@ -1437,14 +1437,14 @@
       },
       "building": {
         "score": 41,
-        "predicted": 46.7,
-        "residual": -5.7,
+        "predicted": 46.8,
+        "residual": -5.8,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 65.6,
-        "predicted": 55.2,
-        "residual": 10.4,
+        "predicted": 55.3,
+        "residual": 10.3,
         "outOfScale": false
       }
     },
@@ -1457,8 +1457,8 @@
       },
       "agency": {
         "score": 70.3,
-        "predicted": 68.5,
-        "residual": 1.8,
+        "predicted": 68,
+        "residual": 2.3,
         "outOfScale": false
       },
       "coordination": {
@@ -1480,9 +1480,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 25.6,
-        "predicted": 51,
-        "residual": -25.4,
+        "score": 25.4,
+        "predicted": 50.4,
+        "residual": -25,
         "outOfScale": false
       },
       "adaptability": {
@@ -1493,14 +1493,14 @@
       },
       "building": {
         "score": 80.3,
-        "predicted": 53.8,
-        "residual": 26.5,
+        "predicted": 53.9,
+        "residual": 26.4,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 67.5,
-        "predicted": 57.7,
-        "residual": 9.8,
+        "predicted": 58,
+        "residual": 9.5,
         "outOfScale": false
       }
     },
@@ -1512,9 +1512,9 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 71.8,
-        "predicted": 63.7,
-        "residual": 8.1,
+        "score": 71.9,
+        "predicted": 63.5,
+        "residual": 8.4,
         "outOfScale": false
       },
       "coordination": {
@@ -1536,9 +1536,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 39.6,
-        "predicted": 39.3,
-        "residual": 0.3,
+        "score": 38.1,
+        "predicted": 38.8,
+        "residual": -0.7,
         "outOfScale": false
       },
       "adaptability": {
@@ -1548,15 +1548,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 44.6,
-        "predicted": 47.1,
+        "score": 44.7,
+        "predicted": 47.2,
         "residual": -2.5,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 58,
-        "predicted": 55.3,
-        "residual": 2.7,
+        "predicted": 55.4,
+        "residual": 2.6,
         "outOfScale": false
       }
     },
@@ -1569,8 +1569,8 @@
       },
       "agency": {
         "score": 89.2,
-        "predicted": 63.9,
-        "residual": 25.3,
+        "predicted": 63.7,
+        "residual": 25.5,
         "outOfScale": false
       },
       "coordination": {
@@ -1592,9 +1592,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 52.6,
-        "predicted": 39.8,
-        "residual": 12.8,
+        "score": 51.2,
+        "predicted": 39.4,
+        "residual": 11.8,
         "outOfScale": false
       },
       "adaptability": {
@@ -1605,14 +1605,14 @@
       },
       "building": {
         "score": 39.5,
-        "predicted": 47.4,
-        "residual": -7.9,
+        "predicted": 47.5,
+        "residual": -8,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 70.8,
-        "predicted": 55.4,
-        "residual": 15.4,
+        "predicted": 55.6,
+        "residual": 15.2,
         "outOfScale": false
       }
     },
@@ -1625,8 +1625,8 @@
       },
       "agency": {
         "score": 38.6,
-        "predicted": 62.6,
-        "residual": -24,
+        "predicted": 62.5,
+        "residual": -23.9,
         "outOfScale": false
       },
       "coordination": {
@@ -1648,9 +1648,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 61.5,
-        "predicted": 36.7,
-        "residual": 24.8,
+        "score": 61.6,
+        "predicted": 36.2,
+        "residual": 25.4,
         "outOfScale": false
       },
       "adaptability": {
@@ -1660,15 +1660,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 63.8,
-        "predicted": 45.6,
+        "score": 63.9,
+        "predicted": 45.7,
         "residual": 18.2,
         "outOfScale": false
       },
       "shared_purpose": {
-        "score": 37.8,
-        "predicted": 54.7,
-        "residual": -16.9,
+        "score": 41.7,
+        "predicted": 54.9,
+        "residual": -13.2,
         "outOfScale": false
       }
     },
@@ -1680,8 +1680,8 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 76.2,
-        "predicted": 58.8,
+        "score": 76.3,
+        "predicted": 58.9,
         "residual": 17.4,
         "outOfScale": false
       },
@@ -1705,8 +1705,8 @@
       },
       "experimentation": {
         "score": 100,
-        "predicted": 27.3,
-        "residual": 72.7,
+        "predicted": 26.9,
+        "residual": 73.1,
         "outOfScale": false
       },
       "adaptability": {
@@ -1716,9 +1716,9 @@
         "outOfScale": false
       },
       "building": {
-        "score": 77.2,
-        "predicted": 40.2,
-        "residual": 37,
+        "score": 77.4,
+        "predicted": 40.3,
+        "residual": 37.1,
         "outOfScale": false
       },
       "shared_purpose": {
@@ -1737,8 +1737,8 @@
       },
       "agency": {
         "score": 52.8,
-        "predicted": 55.8,
-        "residual": -3,
+        "predicted": 56.1,
+        "residual": -3.3,
         "outOfScale": false
       },
       "coordination": {
@@ -1761,8 +1761,8 @@
       },
       "experimentation": {
         "score": 6.9,
-        "predicted": 20,
-        "residual": -13.1,
+        "predicted": 19.7,
+        "residual": -12.8,
         "outOfScale": false
       },
       "adaptability": {
@@ -1772,15 +1772,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 55,
-        "predicted": 36,
-        "residual": 19,
+        "score": 55.1,
+        "predicted": 36.2,
+        "residual": 18.9,
         "outOfScale": false
       },
       "shared_purpose": {
-        "score": 66.2,
+        "score": 84.3,
         "predicted": 51.2,
-        "residual": 15,
+        "residual": 33.1,
         "outOfScale": false
       }
     },
@@ -1793,8 +1793,8 @@
       },
       "agency": {
         "score": 61.6,
-        "predicted": 55.9,
-        "residual": 5.7,
+        "predicted": 56.2,
+        "residual": 5.4,
         "outOfScale": false
       },
       "coordination": {
@@ -1816,9 +1816,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 13.4,
-        "predicted": 20.4,
-        "residual": -7,
+        "score": 13.3,
+        "predicted": 20.1,
+        "residual": -6.8,
         "outOfScale": false
       },
       "adaptability": {
@@ -1828,9 +1828,9 @@
         "outOfScale": false
       },
       "building": {
-        "score": 75.7,
-        "predicted": 36.2,
-        "residual": 39.5,
+        "score": 75.8,
+        "predicted": 36.4,
+        "residual": 39.4,
         "outOfScale": false
       },
       "shared_purpose": {
@@ -1849,8 +1849,8 @@
       },
       "agency": {
         "score": 31.2,
-        "predicted": 53.8,
-        "residual": -22.6,
+        "predicted": 54.2,
+        "residual": -23,
         "outOfScale": false
       },
       "coordination": {
@@ -1872,9 +1872,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 6.5,
-        "predicted": 15.2,
-        "residual": -8.7,
+        "score": 6.4,
+        "predicted": 14.9,
+        "residual": -8.5,
         "outOfScale": false
       },
       "adaptability": {
@@ -1885,14 +1885,14 @@
       },
       "building": {
         "score": 62.4,
-        "predicted": 33.2,
-        "residual": 29.2,
+        "predicted": 33.4,
+        "residual": 29,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 52.4,
-        "predicted": 50.2,
-        "residual": 2.2,
+        "predicted": 50.1,
+        "residual": 2.3,
         "outOfScale": false
       }
     },
@@ -1904,9 +1904,9 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 51.9,
+        "score": 52,
         "predicted": 60.8,
-        "residual": -8.9,
+        "residual": -8.8,
         "outOfScale": false
       },
       "coordination": {
@@ -1928,9 +1928,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 11.8,
-        "predicted": 32.2,
-        "residual": -20.4,
+        "score": 11.4,
+        "predicted": 31.9,
+        "residual": -20.5,
         "outOfScale": false
       },
       "adaptability": {
@@ -1940,15 +1940,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 74,
-        "predicted": 43,
+        "score": 74.1,
+        "predicted": 43.1,
         "residual": 31,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 55.7,
-        "predicted": 53.8,
-        "residual": 1.9,
+        "predicted": 53.9,
+        "residual": 1.8,
         "outOfScale": false
       }
     },
@@ -1961,8 +1961,8 @@
       },
       "agency": {
         "score": 47.2,
-        "predicted": 58.1,
-        "residual": -10.9,
+        "predicted": 58.2,
+        "residual": -11,
         "outOfScale": false
       },
       "coordination": {
@@ -1984,9 +1984,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 14,
-        "predicted": 25.7,
-        "residual": -11.7,
+        "score": 13.8,
+        "predicted": 25.4,
+        "residual": -11.6,
         "outOfScale": false
       },
       "adaptability": {
@@ -1996,8 +1996,8 @@
         "outOfScale": false
       },
       "building": {
-        "score": 64.7,
-        "predicted": 39.3,
+        "score": 64.8,
+        "predicted": 39.4,
         "residual": 25.4,
         "outOfScale": false
       },
@@ -2016,9 +2016,9 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 51,
+        "score": 51.1,
         "predicted": 61.1,
-        "residual": -10.1,
+        "residual": -10,
         "outOfScale": false
       },
       "coordination": {
@@ -2040,9 +2040,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 62.7,
-        "predicted": 33,
-        "residual": 29.7,
+        "score": 61.4,
+        "predicted": 32.6,
+        "residual": 28.8,
         "outOfScale": false
       },
       "adaptability": {
@@ -2052,9 +2052,9 @@
         "outOfScale": false
       },
       "building": {
-        "score": 52.2,
-        "predicted": 43.4,
-        "residual": 8.8,
+        "score": 52.3,
+        "predicted": 43.6,
+        "residual": 8.7,
         "outOfScale": false
       },
       "shared_purpose": {
@@ -2072,9 +2072,9 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 63.2,
-        "predicted": 62.6,
-        "residual": 0.6,
+        "score": 63.3,
+        "predicted": 62.5,
+        "residual": 0.8,
         "outOfScale": false
       },
       "coordination": {
@@ -2096,9 +2096,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 48,
-        "predicted": 36.6,
-        "residual": 11.4,
+        "score": 46,
+        "predicted": 36.2,
+        "residual": 9.8,
         "outOfScale": false
       },
       "adaptability": {
@@ -2109,14 +2109,14 @@
       },
       "building": {
         "score": 42.5,
-        "predicted": 45.6,
-        "residual": -3.1,
+        "predicted": 45.7,
+        "residual": -3.2,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 62,
-        "predicted": 54.7,
-        "residual": 7.3,
+        "predicted": 54.9,
+        "residual": 7.1,
         "outOfScale": false
       }
     },
@@ -2128,9 +2128,9 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 67.9,
-        "predicted": 64.8,
-        "residual": 3.1,
+        "score": 68,
+        "predicted": 64.5,
+        "residual": 3.5,
         "outOfScale": false
       },
       "coordination": {
@@ -2152,9 +2152,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 18.1,
-        "predicted": 41.9,
-        "residual": -23.8,
+        "score": 18,
+        "predicted": 41.4,
+        "residual": -23.4,
         "outOfScale": false
       },
       "adaptability": {
@@ -2165,14 +2165,14 @@
       },
       "building": {
         "score": 40.6,
-        "predicted": 48.6,
-        "residual": -8,
+        "predicted": 48.7,
+        "residual": -8.1,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 46.3,
-        "predicted": 55.8,
-        "residual": -9.5,
+        "predicted": 56,
+        "residual": -9.7,
         "outOfScale": false
       }
     },
@@ -2185,8 +2185,8 @@
       },
       "agency": {
         "score": 50.8,
-        "predicted": 52.2,
-        "residual": -1.4,
+        "predicted": 52.7,
+        "residual": -1.9,
         "outOfScale": false
       },
       "coordination": {
@@ -2209,8 +2209,8 @@
       },
       "experimentation": {
         "score": 2.8,
-        "predicted": 11.2,
-        "residual": -8.4,
+        "predicted": 11,
+        "residual": -8.2,
         "outOfScale": false
       },
       "adaptability": {
@@ -2221,14 +2221,14 @@
       },
       "building": {
         "score": 21.8,
-        "predicted": 31,
-        "residual": -9.2,
+        "predicted": 31.1,
+        "residual": -9.3,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 65.6,
-        "predicted": 49.4,
-        "residual": 16.2,
+        "predicted": 49.3,
+        "residual": 16.3,
         "outOfScale": false
       }
     },
@@ -2241,8 +2241,8 @@
       },
       "agency": {
         "score": 47.9,
-        "predicted": 50.3,
-        "residual": -2.4,
+        "predicted": 51,
+        "residual": -3.1,
         "outOfScale": false
       },
       "coordination": {
@@ -2264,9 +2264,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 6.7,
-        "predicted": 6.8,
-        "residual": -0.1,
+        "score": 6.6,
+        "predicted": 6.6,
+        "residual": 0,
         "outOfScale": false
       },
       "adaptability": {
@@ -2277,14 +2277,14 @@
       },
       "building": {
         "score": 22.7,
-        "predicted": 28.4,
-        "residual": -5.7,
+        "predicted": 28.6,
+        "residual": -5.9,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 65.6,
-        "predicted": 48.5,
-        "residual": 17.1,
+        "predicted": 48.3,
+        "residual": 17.3,
         "outOfScale": false
       }
     },
@@ -2297,8 +2297,8 @@
       },
       "agency": {
         "score": 62.9,
-        "predicted": 47.3,
-        "residual": 15.6,
+        "predicted": 48.1,
+        "residual": 14.8,
         "outOfScale": false
       },
       "coordination": {
@@ -2321,8 +2321,8 @@
       },
       "experimentation": {
         "score": 4,
-        "predicted": -0.7,
-        "residual": 4.7,
+        "predicted": -0.8,
+        "residual": 4.8,
         "outOfScale": true
       },
       "adaptability": {
@@ -2333,14 +2333,14 @@
       },
       "building": {
         "score": 31,
-        "predicted": 24.2,
-        "residual": 6.8,
+        "predicted": 24.3,
+        "residual": 6.7,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 45.8,
-        "predicted": 46.9,
-        "residual": -1.1,
+        "predicted": 46.7,
+        "residual": -0.9,
         "outOfScale": false
       }
     },
@@ -2353,8 +2353,8 @@
       },
       "agency": {
         "score": 43.1,
-        "predicted": 46.5,
-        "residual": -3.4,
+        "predicted": 47.3,
+        "residual": -4.2,
         "outOfScale": false
       },
       "coordination": {
@@ -2377,8 +2377,8 @@
       },
       "experimentation": {
         "score": 0.7,
-        "predicted": -2.7,
-        "residual": 3.4,
+        "predicted": -2.8,
+        "residual": 3.5,
         "outOfScale": true
       },
       "adaptability": {
@@ -2389,14 +2389,14 @@
       },
       "building": {
         "score": 20.5,
-        "predicted": 23,
-        "residual": -2.5,
+        "predicted": 23.2,
+        "residual": -2.7,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 45.8,
-        "predicted": 46.5,
-        "residual": -0.7,
+        "predicted": 46.2,
+        "residual": -0.4,
         "outOfScale": false
       }
     },
@@ -2409,8 +2409,8 @@
       },
       "agency": {
         "score": 38.7,
-        "predicted": 53.9,
-        "residual": -15.2,
+        "predicted": 54.3,
+        "residual": -15.6,
         "outOfScale": false
       },
       "coordination": {
@@ -2433,8 +2433,8 @@
       },
       "experimentation": {
         "score": 5.9,
-        "predicted": 15.5,
-        "residual": -9.6,
+        "predicted": 15.2,
+        "residual": -9.3,
         "outOfScale": false
       },
       "adaptability": {
@@ -2444,15 +2444,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 36,
-        "predicted": 33.4,
-        "residual": 2.6,
+        "score": 36.1,
+        "predicted": 33.6,
+        "residual": 2.5,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 46.8,
-        "predicted": 50.3,
-        "residual": -3.5,
+        "predicted": 50.2,
+        "residual": -3.4,
         "outOfScale": false
       }
     },
@@ -2465,8 +2465,8 @@
       },
       "agency": {
         "score": 41.9,
-        "predicted": 56.6,
-        "residual": -14.7,
+        "predicted": 56.8,
+        "residual": -14.9,
         "outOfScale": false
       },
       "coordination": {
@@ -2489,8 +2489,8 @@
       },
       "experimentation": {
         "score": 12.3,
-        "predicted": 21.9,
-        "residual": -9.6,
+        "predicted": 21.6,
+        "residual": -9.3,
         "outOfScale": false
       },
       "adaptability": {
@@ -2500,8 +2500,8 @@
         "outOfScale": false
       },
       "building": {
-        "score": 38.3,
-        "predicted": 37.1,
+        "score": 38.4,
+        "predicted": 37.2,
         "residual": 1.2,
         "outOfScale": false
       },
@@ -2521,8 +2521,8 @@
       },
       "agency": {
         "score": 39.3,
-        "predicted": 55.5,
-        "residual": -16.2,
+        "predicted": 55.8,
+        "residual": -16.5,
         "outOfScale": false
       },
       "coordination": {
@@ -2545,8 +2545,8 @@
       },
       "experimentation": {
         "score": 9.2,
-        "predicted": 19.3,
-        "residual": -10.1,
+        "predicted": 19,
+        "residual": -9.8,
         "outOfScale": false
       },
       "adaptability": {
@@ -2556,15 +2556,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 32.7,
-        "predicted": 35.6,
+        "score": 32.8,
+        "predicted": 35.7,
         "residual": -2.9,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 39.3,
-        "predicted": 51.1,
-        "residual": -11.8,
+        "predicted": 51,
+        "residual": -11.7,
         "outOfScale": false
       }
     },
@@ -2611,9 +2611,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 8.2,
-        "predicted": 33.1,
-        "residual": -24.9,
+        "score": 8.1,
+        "predicted": 32.7,
+        "residual": -24.6,
         "outOfScale": false
       },
       "adaptability": {
@@ -2624,14 +2624,14 @@
       },
       "building": {
         "score": 27.1,
-        "predicted": 43.5,
-        "residual": -16.4,
+        "predicted": 43.6,
+        "residual": -16.5,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 22.7,
-        "predicted": 54,
-        "residual": -31.3,
+        "predicted": 54.1,
+        "residual": -31.4,
         "outOfScale": false
       }
     },
@@ -2644,8 +2644,8 @@
       },
       "agency": {
         "score": 59.9,
-        "predicted": 54.9,
-        "residual": 5,
+        "predicted": 55.2,
+        "residual": 4.7,
         "outOfScale": false
       },
       "coordination": {
@@ -2667,9 +2667,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 3.4,
-        "predicted": 17.9,
-        "residual": -14.5,
+        "score": 3.5,
+        "predicted": 17.6,
+        "residual": -14.1,
         "outOfScale": false
       },
       "adaptability": {
@@ -2680,14 +2680,14 @@
       },
       "building": {
         "score": 34.3,
-        "predicted": 34.8,
-        "residual": -0.5,
+        "predicted": 34.9,
+        "residual": -0.6,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 49,
-        "predicted": 50.8,
-        "residual": -1.8,
+        "predicted": 50.7,
+        "residual": -1.7,
         "outOfScale": false
       }
     },
@@ -2700,8 +2700,8 @@
       },
       "agency": {
         "score": 28.7,
-        "predicted": 51,
-        "residual": -22.3,
+        "predicted": 51.6,
+        "residual": -22.9,
         "outOfScale": false
       },
       "coordination": {
@@ -2724,8 +2724,8 @@
       },
       "experimentation": {
         "score": 2.4,
-        "predicted": 8.5,
-        "residual": -6.1,
+        "predicted": 8.3,
+        "residual": -5.9,
         "outOfScale": false
       },
       "adaptability": {
@@ -2735,15 +2735,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 35.2,
-        "predicted": 29.4,
+        "score": 35.3,
+        "predicted": 29.5,
         "residual": 5.8,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 39.7,
-        "predicted": 48.8,
-        "residual": -9.1,
+        "predicted": 48.7,
+        "residual": -9,
         "outOfScale": false
       }
     },
@@ -2756,8 +2756,8 @@
       },
       "agency": {
         "score": 46.6,
-        "predicted": 54.5,
-        "residual": -7.9,
+        "predicted": 54.8,
+        "residual": -8.2,
         "outOfScale": false
       },
       "coordination": {
@@ -2780,8 +2780,8 @@
       },
       "experimentation": {
         "score": 8.2,
-        "predicted": 16.8,
-        "residual": -8.6,
+        "predicted": 16.5,
+        "residual": -8.3,
         "outOfScale": false
       },
       "adaptability": {
@@ -2791,15 +2791,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 31.2,
-        "predicted": 34.2,
+        "score": 31.3,
+        "predicted": 34.3,
         "residual": -3,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 57.7,
-        "predicted": 50.6,
-        "residual": 7.1,
+        "predicted": 50.5,
+        "residual": 7.2,
         "outOfScale": false
       }
     },
@@ -2812,8 +2812,8 @@
       },
       "agency": {
         "score": 79.8,
-        "predicted": 52,
-        "residual": 27.8,
+        "predicted": 52.5,
+        "residual": 27.3,
         "outOfScale": false
       },
       "coordination": {
@@ -2836,8 +2836,8 @@
       },
       "experimentation": {
         "score": 2.1,
-        "predicted": 10.8,
-        "residual": -8.7,
+        "predicted": 10.6,
+        "residual": -8.5,
         "outOfScale": false
       },
       "adaptability": {
@@ -2848,14 +2848,14 @@
       },
       "building": {
         "score": 30.1,
-        "predicted": 30.7,
-        "residual": -0.6,
+        "predicted": 30.9,
+        "residual": -0.8,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 48.1,
-        "predicted": 49.3,
-        "residual": -1.2,
+        "predicted": 49.2,
+        "residual": -1.1,
         "outOfScale": false
       }
     },
@@ -2868,8 +2868,8 @@
       },
       "agency": {
         "score": 50.7,
-        "predicted": 58.6,
-        "residual": -7.9,
+        "predicted": 58.7,
+        "residual": -8,
         "outOfScale": false
       },
       "coordination": {
@@ -2892,8 +2892,8 @@
       },
       "experimentation": {
         "score": 6.7,
-        "predicted": 27,
-        "residual": -20.3,
+        "predicted": 26.6,
+        "residual": -19.9,
         "outOfScale": false
       },
       "adaptability": {
@@ -2903,8 +2903,8 @@
         "outOfScale": false
       },
       "building": {
-        "score": 31.7,
-        "predicted": 40,
+        "score": 31.8,
+        "predicted": 40.1,
         "residual": -8.3,
         "outOfScale": false
       },
@@ -2934,9 +2934,9 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 14,
-        "predicted": 45.6,
-        "residual": -31.6,
+        "score": 21.1,
+        "predicted": 46.5,
+        "residual": -25.4,
         "outOfScale": false
       },
       "coordination": {
@@ -2959,8 +2959,8 @@
       },
       "experimentation": {
         "score": 0.9,
-        "predicted": -4.7,
-        "residual": 5.6,
+        "predicted": -4.8,
+        "residual": 5.7,
         "outOfScale": true
       },
       "adaptability": {
@@ -2970,8 +2970,8 @@
         "outOfScale": false
       },
       "building": {
-        "score": 46.6,
-        "predicted": 21.8,
+        "score": 46.8,
+        "predicted": 22,
         "residual": 24.8,
         "outOfScale": false
       },
@@ -2986,8 +2986,8 @@
       },
       "agency": {
         "score": 58.4,
-        "predicted": 50,
-        "residual": 8.4,
+        "predicted": 50.6,
+        "residual": 7.8,
         "outOfScale": false
       },
       "coordination": {
@@ -3010,8 +3010,8 @@
       },
       "experimentation": {
         "score": 3.6,
-        "predicted": 5.9,
-        "residual": -2.3,
+        "predicted": 5.7,
+        "residual": -2.1,
         "outOfScale": false
       },
       "adaptability": {
@@ -3022,14 +3022,14 @@
       },
       "building": {
         "score": 26.9,
-        "predicted": 27.9,
-        "residual": -1,
+        "predicted": 28.1,
+        "residual": -1.2,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 61.7,
-        "predicted": 48.3,
-        "residual": 13.4,
+        "predicted": 48.1,
+        "residual": 13.6,
         "outOfScale": false
       }
     },
@@ -3042,8 +3042,8 @@
       },
       "agency": {
         "score": 47.5,
-        "predicted": 52.5,
-        "residual": -5,
+        "predicted": 53,
+        "residual": -5.5,
         "outOfScale": false
       },
       "coordination": {
@@ -3066,8 +3066,8 @@
       },
       "experimentation": {
         "score": 3.6,
-        "predicted": 12.1,
-        "residual": -8.5,
+        "predicted": 11.9,
+        "residual": -8.3,
         "outOfScale": false
       },
       "adaptability": {
@@ -3077,15 +3077,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 32.8,
-        "predicted": 31.5,
+        "score": 32.9,
+        "predicted": 31.6,
         "residual": 1.3,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 37.2,
-        "predicted": 49.6,
-        "residual": -12.4,
+        "predicted": 49.5,
+        "residual": -12.3,
         "outOfScale": false
       }
     },
@@ -3097,9 +3097,9 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 60.7,
-        "predicted": 61.9,
-        "residual": -1.2,
+        "score": 60.8,
+        "predicted": 61.8,
+        "residual": -1,
         "outOfScale": false
       },
       "coordination": {
@@ -3121,9 +3121,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 37.4,
-        "predicted": 34.8,
-        "residual": 2.6,
+        "score": 35.6,
+        "predicted": 34.4,
+        "residual": 1.2,
         "outOfScale": false
       },
       "adaptability": {
@@ -3134,14 +3134,14 @@
       },
       "building": {
         "score": 43,
-        "predicted": 44.5,
-        "residual": -1.5,
+        "predicted": 44.6,
+        "residual": -1.6,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 51.7,
-        "predicted": 54.3,
-        "residual": -2.6,
+        "predicted": 54.4,
+        "residual": -2.7,
         "outOfScale": false
       }
     },
@@ -3154,8 +3154,8 @@
       },
       "agency": {
         "score": 47.2,
-        "predicted": 56.6,
-        "residual": -9.4,
+        "predicted": 56.8,
+        "residual": -9.6,
         "outOfScale": false
       },
       "coordination": {
@@ -3177,9 +3177,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 7.8,
-        "predicted": 21.9,
-        "residual": -14.1,
+        "score": 7.7,
+        "predicted": 21.6,
+        "residual": -13.9,
         "outOfScale": false
       },
       "adaptability": {
@@ -3189,15 +3189,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 35.3,
-        "predicted": 37.1,
-        "residual": -1.8,
+        "score": 35.4,
+        "predicted": 37.3,
+        "residual": -1.9,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 44.5,
-        "predicted": 51.7,
-        "residual": -7.2,
+        "predicted": 51.6,
+        "residual": -7.1,
         "outOfScale": false
       }
     },
@@ -3210,8 +3210,8 @@
       },
       "agency": {
         "score": 58.2,
-        "predicted": 42.7,
-        "residual": 15.5,
+        "predicted": 43.8,
+        "residual": 14.4,
         "outOfScale": false
       },
       "coordination": {
@@ -3234,8 +3234,8 @@
       },
       "experimentation": {
         "score": 0.2,
-        "predicted": -11.7,
-        "residual": 11.9,
+        "predicted": -11.8,
+        "residual": 12,
         "outOfScale": true
       },
       "adaptability": {
@@ -3246,14 +3246,14 @@
       },
       "building": {
         "score": 27.8,
-        "predicted": 17.8,
-        "residual": 10,
+        "predicted": 18,
+        "residual": 9.8,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 34.8,
-        "predicted": 44.6,
-        "residual": -9.8,
+        "predicted": 44.2,
+        "residual": -9.4,
         "outOfScale": false
       }
     },
@@ -3266,8 +3266,8 @@
       },
       "agency": {
         "score": 24.8,
-        "predicted": 56.4,
-        "residual": -31.6,
+        "predicted": 56.7,
+        "residual": -31.9,
         "outOfScale": false
       },
       "coordination": {
@@ -3289,9 +3289,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 56.6,
-        "predicted": 21.6,
-        "residual": 35,
+        "score": 55.2,
+        "predicted": 21.3,
+        "residual": 33.9,
         "outOfScale": false
       },
       "adaptability": {
@@ -3301,15 +3301,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 44.9,
-        "predicted": 36.9,
-        "residual": 8,
+        "score": 45,
+        "predicted": 37.1,
+        "residual": 7.9,
         "outOfScale": false
       },
       "shared_purpose": {
-        "score": 55,
-        "predicted": 51.6,
-        "residual": 3.4,
+        "score": 72.8,
+        "predicted": 51.5,
+        "residual": 21.3,
         "outOfScale": false
       }
     },
@@ -3322,8 +3322,8 @@
       },
       "agency": {
         "score": 36.4,
-        "predicted": 47.7,
-        "residual": -11.3,
+        "predicted": 48.5,
+        "residual": -12.1,
         "outOfScale": false
       },
       "coordination": {
@@ -3346,8 +3346,8 @@
       },
       "experimentation": {
         "score": 0.6,
-        "predicted": 0.4,
-        "residual": 0.2,
+        "predicted": 0.2,
+        "residual": 0.4,
         "outOfScale": false
       },
       "adaptability": {
@@ -3358,14 +3358,14 @@
       },
       "building": {
         "score": 22.4,
-        "predicted": 24.7,
-        "residual": -2.3,
+        "predicted": 24.9,
+        "residual": -2.5,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 43.7,
-        "predicted": 47.1,
-        "residual": -3.4,
+        "predicted": 46.9,
+        "residual": -3.2,
         "outOfScale": false
       }
     },
@@ -3378,8 +3378,8 @@
       },
       "agency": {
         "score": 55.5,
-        "predicted": 63.2,
-        "residual": -7.7,
+        "predicted": 63.1,
+        "residual": -7.6,
         "outOfScale": false
       },
       "coordination": {
@@ -3402,8 +3402,8 @@
       },
       "experimentation": {
         "score": 61.5,
-        "predicted": 38.2,
-        "residual": 23.3,
+        "predicted": 37.7,
+        "residual": 23.8,
         "outOfScale": false
       },
       "adaptability": {
@@ -3413,15 +3413,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 59.3,
-        "predicted": 46.4,
+        "score": 59.4,
+        "predicted": 46.5,
         "residual": 12.9,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 51.5,
-        "predicted": 55.1,
-        "residual": -3.6,
+        "predicted": 55.2,
+        "residual": -3.7,
         "outOfScale": false
       }
     },
@@ -3434,8 +3434,8 @@
       },
       "agency": {
         "score": 50.1,
-        "predicted": 49.4,
-        "residual": 0.7,
+        "predicted": 50.1,
+        "residual": 0,
         "outOfScale": false
       },
       "coordination": {
@@ -3458,8 +3458,8 @@
       },
       "experimentation": {
         "score": 1.2,
-        "predicted": 4.6,
-        "residual": -3.4,
+        "predicted": 4.4,
+        "residual": -3.2,
         "outOfScale": false
       },
       "adaptability": {
@@ -3469,15 +3469,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 40.8,
-        "predicted": 27.2,
+        "score": 40.9,
+        "predicted": 27.3,
         "residual": 13.6,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 60.2,
-        "predicted": 48,
-        "residual": 12.2,
+        "predicted": 47.8,
+        "residual": 12.4,
         "outOfScale": false
       }
     },
@@ -3490,8 +3490,8 @@
       },
       "agency": {
         "score": 53.6,
-        "predicted": 43.5,
-        "residual": 10.1,
+        "predicted": 44.5,
+        "residual": 9.1,
         "outOfScale": false
       },
       "coordination": {
@@ -3513,8 +3513,8 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 1.1,
-        "predicted": -9.8,
+        "score": 1,
+        "predicted": -9.9,
         "residual": 10.9,
         "outOfScale": true
       },
@@ -3525,15 +3525,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 23.3,
-        "predicted": 18.9,
-        "residual": 4.4,
+        "score": 27.2,
+        "predicted": 19.1,
+        "residual": 8.1,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 45,
-        "predicted": 45,
-        "residual": 0,
+        "predicted": 44.6,
+        "residual": 0.4,
         "outOfScale": false
       }
     },
@@ -3546,8 +3546,8 @@
       },
       "agency": {
         "score": 35.7,
-        "predicted": 46.2,
-        "residual": -10.5,
+        "predicted": 47.1,
+        "residual": -11.4,
         "outOfScale": false
       },
       "coordination": {
@@ -3570,8 +3570,8 @@
       },
       "experimentation": {
         "score": 1.2,
-        "predicted": -3.2,
-        "residual": 4.4,
+        "predicted": -3.3,
+        "residual": 4.5,
         "outOfScale": true
       },
       "adaptability": {
@@ -3582,14 +3582,14 @@
       },
       "building": {
         "score": 30.8,
-        "predicted": 22.7,
-        "residual": 8.1,
+        "predicted": 22.9,
+        "residual": 7.9,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 40.5,
-        "predicted": 46.4,
-        "residual": -5.9,
+        "predicted": 46.1,
+        "residual": -5.6,
         "outOfScale": false
       }
     },
@@ -3602,8 +3602,8 @@
       },
       "agency": {
         "score": 41,
-        "predicted": 54.5,
-        "residual": -13.5,
+        "predicted": 54.9,
+        "residual": -13.9,
         "outOfScale": false
       },
       "coordination": {
@@ -3625,9 +3625,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 3.3,
-        "predicted": 17,
-        "residual": -13.7,
+        "score": 3.1,
+        "predicted": 16.7,
+        "residual": -13.6,
         "outOfScale": false
       },
       "adaptability": {
@@ -3637,15 +3637,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 31.4,
-        "predicted": 34.3,
+        "score": 31.5,
+        "predicted": 34.4,
         "residual": -2.9,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 50.1,
-        "predicted": 50.6,
-        "residual": -0.5,
+        "predicted": 50.5,
+        "residual": -0.4,
         "outOfScale": false
       }
     },
@@ -3658,8 +3658,8 @@
       },
       "agency": {
         "score": 39.3,
-        "predicted": 52.6,
-        "residual": -13.3,
+        "predicted": 53.1,
+        "residual": -13.8,
         "outOfScale": false
       },
       "coordination": {
@@ -3682,8 +3682,8 @@
       },
       "experimentation": {
         "score": 0.8,
-        "predicted": 12.2,
-        "residual": -11.4,
+        "predicted": 12,
+        "residual": -11.2,
         "outOfScale": false
       },
       "adaptability": {
@@ -3693,15 +3693,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 27.4,
-        "predicted": 31.6,
+        "score": 27.5,
+        "predicted": 31.7,
         "residual": -4.2,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 21,
-        "predicted": 49.6,
-        "residual": -28.6,
+        "predicted": 49.5,
+        "residual": -28.5,
         "outOfScale": false
       }
     },
@@ -3714,8 +3714,8 @@
       },
       "agency": {
         "score": 57.9,
-        "predicted": 56.2,
-        "residual": 1.7,
+        "predicted": 56.4,
+        "residual": 1.5,
         "outOfScale": false
       },
       "coordination": {
@@ -3737,9 +3737,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 24.8,
-        "predicted": 21,
-        "residual": 3.8,
+        "score": 24.4,
+        "predicted": 20.7,
+        "residual": 3.7,
         "outOfScale": false
       },
       "adaptability": {
@@ -3750,14 +3750,14 @@
       },
       "building": {
         "score": 10.3,
-        "predicted": 36.6,
-        "residual": -26.3,
+        "predicted": 36.7,
+        "residual": -26.4,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 76.7,
-        "predicted": 51.5,
-        "residual": 25.2,
+        "predicted": 51.4,
+        "residual": 25.3,
         "outOfScale": false
       }
     },
@@ -3770,8 +3770,8 @@
       },
       "agency": {
         "score": 56.3,
-        "predicted": 53.1,
-        "residual": 3.2,
+        "predicted": 53.5,
+        "residual": 2.8,
         "outOfScale": false
       },
       "coordination": {
@@ -3793,9 +3793,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 16.8,
-        "predicted": 13.4,
-        "residual": 3.4,
+        "score": 16.7,
+        "predicted": 13.2,
+        "residual": 3.5,
         "outOfScale": false
       },
       "adaptability": {
@@ -3806,14 +3806,14 @@
       },
       "building": {
         "score": 37.9,
-        "predicted": 32.2,
-        "residual": 5.7,
+        "predicted": 32.4,
+        "residual": 5.5,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 60.6,
-        "predicted": 49.9,
-        "residual": 10.7,
+        "predicted": 49.7,
+        "residual": 10.9,
         "outOfScale": false
       }
     },
@@ -3826,8 +3826,8 @@
       },
       "agency": {
         "score": 65.5,
-        "predicted": 54.2,
-        "residual": 11.3,
+        "predicted": 54.6,
+        "residual": 10.9,
         "outOfScale": false
       },
       "coordination": {
@@ -3849,9 +3849,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 7.5,
-        "predicted": 16.3,
-        "residual": -8.8,
+        "score": 7.4,
+        "predicted": 16,
+        "residual": -8.6,
         "outOfScale": false
       },
       "adaptability": {
@@ -3861,15 +3861,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 34,
-        "predicted": 33.9,
+        "score": 34.1,
+        "predicted": 34,
         "residual": 0.1,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 47.3,
-        "predicted": 50.5,
-        "residual": -3.2,
+        "predicted": 50.4,
+        "residual": -3.1,
         "outOfScale": false
       }
     },
@@ -3882,8 +3882,8 @@
       },
       "agency": {
         "score": 42.9,
-        "predicted": 42,
-        "residual": 0.9,
+        "predicted": 43.1,
+        "residual": -0.2,
         "outOfScale": false
       },
       "coordination": {
@@ -3918,14 +3918,14 @@
       },
       "building": {
         "score": 27.9,
-        "predicted": 16.8,
-        "residual": 11.1,
+        "predicted": 17,
+        "residual": 10.9,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 43.9,
-        "predicted": 44.2,
-        "residual": -0.3,
+        "predicted": 43.8,
+        "residual": 0.1,
         "outOfScale": false
       }
     },
@@ -3938,8 +3938,8 @@
       },
       "agency": {
         "score": 50.5,
-        "predicted": 51.6,
-        "residual": -1.1,
+        "predicted": 52.1,
+        "residual": -1.6,
         "outOfScale": false
       },
       "coordination": {
@@ -3962,8 +3962,8 @@
       },
       "experimentation": {
         "score": 5.3,
-        "predicted": 9.7,
-        "residual": -4.4,
+        "predicted": 9.5,
+        "residual": -4.2,
         "outOfScale": false
       },
       "adaptability": {
@@ -3974,14 +3974,14 @@
       },
       "building": {
         "score": 29,
-        "predicted": 30.1,
-        "residual": -1.1,
+        "predicted": 30.3,
+        "residual": -1.3,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 39,
-        "predicted": 49.1,
-        "residual": -10.1,
+        "predicted": 48.9,
+        "residual": -9.9,
         "outOfScale": false
       }
     },
@@ -3994,8 +3994,8 @@
       },
       "agency": {
         "score": 56,
-        "predicted": 42.8,
-        "residual": 13.2,
+        "predicted": 43.9,
+        "residual": 12.1,
         "outOfScale": false
       },
       "coordination": {
@@ -4030,14 +4030,14 @@
       },
       "building": {
         "score": 9.7,
-        "predicted": 17.9,
-        "residual": -8.2,
+        "predicted": 18.1,
+        "residual": -8.4,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 46.4,
-        "predicted": 44.6,
-        "residual": 1.8,
+        "predicted": 44.3,
+        "residual": 2.1,
         "outOfScale": false
       }
     },
@@ -4049,9 +4049,9 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 74.1,
-        "predicted": 51.3,
-        "residual": 22.8,
+        "score": 74.2,
+        "predicted": 51.8,
+        "residual": 22.4,
         "outOfScale": false
       },
       "coordination": {
@@ -4074,8 +4074,8 @@
       },
       "experimentation": {
         "score": 1.5,
-        "predicted": 9.1,
-        "residual": -7.6,
+        "predicted": 8.9,
+        "residual": -7.4,
         "outOfScale": false
       },
       "adaptability": {
@@ -4085,15 +4085,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 32.1,
-        "predicted": 29.7,
-        "residual": 2.4,
+        "score": 32.2,
+        "predicted": 29.9,
+        "residual": 2.3,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 51.5,
-        "predicted": 48.9,
-        "residual": 2.6,
+        "predicted": 48.8,
+        "residual": 2.7,
         "outOfScale": false
       }
     },
@@ -4106,8 +4106,8 @@
       },
       "agency": {
         "score": 45.8,
-        "predicted": 49.6,
-        "residual": -3.8,
+        "predicted": 50.3,
+        "residual": -4.5,
         "outOfScale": false
       },
       "coordination": {
@@ -4130,8 +4130,8 @@
       },
       "experimentation": {
         "score": 5.2,
-        "predicted": 5,
-        "residual": 0.2,
+        "predicted": 4.8,
+        "residual": 0.4,
         "outOfScale": false
       },
       "adaptability": {
@@ -4142,14 +4142,14 @@
       },
       "building": {
         "score": 24.9,
-        "predicted": 27.4,
-        "residual": -2.5,
+        "predicted": 27.6,
+        "residual": -2.7,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 60.3,
-        "predicted": 48.1,
-        "residual": 12.2,
+        "predicted": 47.9,
+        "residual": 12.4,
         "outOfScale": false
       }
     },
@@ -4162,8 +4162,8 @@
       },
       "agency": {
         "score": 54.7,
-        "predicted": 46.3,
-        "residual": 8.4,
+        "predicted": 47.1,
+        "residual": 7.6,
         "outOfScale": false
       },
       "coordination": {
@@ -4184,12 +4184,7 @@
         "residual": -0.2,
         "outOfScale": false
       },
-      "experimentation": {
-        "score": 0.1,
-        "predicted": -3.1,
-        "residual": 3.2,
-        "outOfScale": true
-      },
+      "experimentation": null,
       "adaptability": {
         "score": 26.9,
         "predicted": 47.7,
@@ -4198,14 +4193,14 @@
       },
       "building": {
         "score": 20.8,
-        "predicted": 22.7,
-        "residual": -1.9,
+        "predicted": 22.9,
+        "residual": -2.1,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 49.4,
-        "predicted": 46.4,
-        "residual": 3,
+        "predicted": 46.1,
+        "residual": 3.3,
         "outOfScale": false
       }
     },
@@ -4218,8 +4213,8 @@
       },
       "agency": {
         "score": 58.2,
-        "predicted": 45.5,
-        "residual": 12.7,
+        "predicted": 46.4,
+        "residual": 11.8,
         "outOfScale": false
       },
       "coordination": {
@@ -4240,12 +4235,7 @@
         "residual": -1.4,
         "outOfScale": false
       },
-      "experimentation": {
-        "score": 0.3,
-        "predicted": -5,
-        "residual": 5.3,
-        "outOfScale": true
-      },
+      "experimentation": null,
       "adaptability": {
         "score": 33.8,
         "predicted": 46.6,
@@ -4254,14 +4244,14 @@
       },
       "building": {
         "score": 13.3,
-        "predicted": 21.7,
-        "residual": -8.4,
+        "predicted": 21.9,
+        "residual": -8.6,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 56.7,
-        "predicted": 46,
-        "residual": 10.7,
+        "predicted": 45.7,
+        "residual": 11,
         "outOfScale": false
       }
     },
@@ -4273,9 +4263,9 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 37.7,
-        "predicted": 42.7,
-        "residual": -5,
+        "score": 56.6,
+        "predicted": 43.7,
+        "residual": 12.9,
         "outOfScale": false
       },
       "coordination": {
@@ -4309,15 +4299,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 21.2,
-        "predicted": 17.7,
-        "residual": 3.5,
+        "score": 21.3,
+        "predicted": 17.9,
+        "residual": 3.4,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 50.7,
-        "predicted": 44.5,
-        "residual": 6.2,
+        "predicted": 44.2,
+        "residual": 6.5,
         "outOfScale": false
       }
     },
@@ -4330,8 +4320,8 @@
       },
       "agency": {
         "score": 54.8,
-        "predicted": 47.6,
-        "residual": 7.2,
+        "predicted": 48.4,
+        "residual": 6.4,
         "outOfScale": false
       },
       "coordination": {
@@ -4354,9 +4344,9 @@
       },
       "experimentation": {
         "score": 1,
-        "predicted": 0.1,
-        "residual": 0.9,
-        "outOfScale": false
+        "predicted": -0.1,
+        "residual": 1.1,
+        "outOfScale": true
       },
       "adaptability": {
         "score": 40,
@@ -4366,14 +4356,14 @@
       },
       "building": {
         "score": 20.7,
-        "predicted": 24.6,
-        "residual": -3.9,
+        "predicted": 24.8,
+        "residual": -4.1,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 36.9,
-        "predicted": 47.1,
-        "residual": -10.2,
+        "predicted": 46.8,
+        "residual": -9.9,
         "outOfScale": false
       }
     },
@@ -4386,8 +4376,8 @@
       },
       "agency": {
         "score": 54.5,
-        "predicted": 55.6,
-        "residual": -1.1,
+        "predicted": 55.9,
+        "residual": -1.4,
         "outOfScale": false
       },
       "coordination": {
@@ -4409,9 +4399,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 11.7,
-        "predicted": 19.5,
-        "residual": -7.8,
+        "score": 11.5,
+        "predicted": 19.2,
+        "residual": -7.7,
         "outOfScale": false
       },
       "adaptability": {
@@ -4421,9 +4411,9 @@
         "outOfScale": false
       },
       "building": {
-        "score": 29.8,
-        "predicted": 35.7,
-        "residual": -5.9,
+        "score": 29.9,
+        "predicted": 35.9,
+        "residual": -6,
         "outOfScale": false
       },
       "shared_purpose": {
@@ -4442,8 +4432,8 @@
       },
       "agency": {
         "score": 57.7,
-        "predicted": 61.2,
-        "residual": -3.5,
+        "predicted": 61.1,
+        "residual": -3.4,
         "outOfScale": false
       },
       "coordination": {
@@ -4465,9 +4455,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 14.5,
-        "predicted": 33.2,
-        "residual": -18.7,
+        "score": 14,
+        "predicted": 32.8,
+        "residual": -18.8,
         "outOfScale": false
       },
       "adaptability": {
@@ -4478,14 +4468,14 @@
       },
       "building": {
         "score": 46.4,
-        "predicted": 43.6,
-        "residual": 2.8,
+        "predicted": 43.7,
+        "residual": 2.7,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 46.4,
-        "predicted": 54,
-        "residual": -7.6,
+        "predicted": 54.1,
+        "residual": -7.7,
         "outOfScale": false
       }
     },
@@ -4497,9 +4487,9 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 62,
+        "score": 62.1,
         "predicted": 61.6,
-        "residual": 0.4,
+        "residual": 0.5,
         "outOfScale": false
       },
       "coordination": {
@@ -4521,9 +4511,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 18.6,
-        "predicted": 34.3,
-        "residual": -15.7,
+        "score": 18.1,
+        "predicted": 33.9,
+        "residual": -15.8,
         "outOfScale": false
       },
       "adaptability": {
@@ -4533,15 +4523,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 26.5,
-        "predicted": 44.2,
+        "score": 26.6,
+        "predicted": 44.3,
         "residual": -17.7,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 63.9,
-        "predicted": 54.2,
-        "residual": 9.7,
+        "predicted": 54.3,
+        "residual": 9.6,
         "outOfScale": false
       }
     },
@@ -4554,8 +4544,8 @@
       },
       "agency": {
         "score": 48.5,
-        "predicted": 49.9,
-        "residual": -1.4,
+        "predicted": 50.5,
+        "residual": -2,
         "outOfScale": false
       },
       "coordination": {
@@ -4578,8 +4568,8 @@
       },
       "experimentation": {
         "score": 1.2,
-        "predicted": 5.6,
-        "residual": -4.4,
+        "predicted": 5.5,
+        "residual": -4.3,
         "outOfScale": false
       },
       "adaptability": {
@@ -4589,15 +4579,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 27.1,
-        "predicted": 27.8,
+        "score": 27.2,
+        "predicted": 27.9,
         "residual": -0.7,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 35.7,
-        "predicted": 48.2,
-        "residual": -12.5,
+        "predicted": 48,
+        "residual": -12.3,
         "outOfScale": false
       }
     },
@@ -4610,8 +4600,8 @@
       },
       "agency": {
         "score": 51.7,
-        "predicted": 48.3,
-        "residual": 3.4,
+        "predicted": 49,
+        "residual": 2.7,
         "outOfScale": false
       },
       "coordination": {
@@ -4634,8 +4624,8 @@
       },
       "experimentation": {
         "score": 0.3,
-        "predicted": 1.8,
-        "residual": -1.5,
+        "predicted": 1.6,
+        "residual": -1.3,
         "outOfScale": false
       },
       "adaptability": {
@@ -4646,16 +4636,11 @@
       },
       "building": {
         "score": 28.6,
-        "predicted": 25.6,
-        "residual": 3,
+        "predicted": 25.7,
+        "residual": 2.9,
         "outOfScale": false
       },
-      "shared_purpose": {
-        "score": 51.5,
-        "predicted": 47.4,
-        "residual": 4.1,
-        "outOfScale": false
-      }
+      "shared_purpose": null
     },
     "BDI": {
       "anticipation": {
@@ -4666,8 +4651,8 @@
       },
       "agency": {
         "score": 60.9,
-        "predicted": 40.2,
-        "residual": 20.7,
+        "predicted": 41.4,
+        "residual": 19.5,
         "outOfScale": false
       },
       "coordination": {
@@ -4701,15 +4686,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 19.3,
-        "predicted": 14.3,
-        "residual": 5,
+        "score": 19.4,
+        "predicted": 14.5,
+        "residual": 4.9,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 47.9,
-        "predicted": 43.3,
-        "residual": 4.6,
+        "predicted": 42.9,
+        "residual": 5,
         "outOfScale": false
       }
     },
@@ -4722,8 +4707,8 @@
       },
       "agency": {
         "score": 49.9,
-        "predicted": 54.9,
-        "residual": -5,
+        "predicted": 55.2,
+        "residual": -5.3,
         "outOfScale": false
       },
       "coordination": {
@@ -4745,9 +4730,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 15,
-        "predicted": 17.9,
-        "residual": -2.9,
+        "score": 14.8,
+        "predicted": 17.6,
+        "residual": -2.8,
         "outOfScale": false
       },
       "adaptability": {
@@ -4758,14 +4743,14 @@
       },
       "building": {
         "score": 34.4,
-        "predicted": 34.8,
-        "residual": -0.4,
+        "predicted": 34.9,
+        "residual": -0.5,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 50.5,
-        "predicted": 50.8,
-        "residual": -0.3,
+        "predicted": 50.7,
+        "residual": -0.2,
         "outOfScale": false
       }
     },
@@ -4778,8 +4763,8 @@
       },
       "agency": {
         "score": 67.3,
-        "predicted": 64.2,
-        "residual": 3.1,
+        "predicted": 64,
+        "residual": 3.3,
         "outOfScale": false
       },
       "coordination": {
@@ -4801,9 +4786,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 34.3,
-        "predicted": 40.6,
-        "residual": -6.3,
+        "score": 32.6,
+        "predicted": 40.1,
+        "residual": -7.5,
         "outOfScale": false
       },
       "adaptability": {
@@ -4813,15 +4798,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 46.9,
-        "predicted": 47.8,
+        "score": 47,
+        "predicted": 47.9,
         "residual": -0.9,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 77.8,
-        "predicted": 55.6,
-        "residual": 22.2,
+        "predicted": 55.7,
+        "residual": 22.1,
         "outOfScale": false
       }
     },
@@ -4834,8 +4819,8 @@
       },
       "agency": {
         "score": 54.9,
-        "predicted": 53.8,
-        "residual": 1.1,
+        "predicted": 54.2,
+        "residual": 0.7,
         "outOfScale": false
       },
       "coordination": {
@@ -4858,8 +4843,8 @@
       },
       "experimentation": {
         "score": 5.7,
-        "predicted": 15.2,
-        "residual": -9.5,
+        "predicted": 15,
+        "residual": -9.3,
         "outOfScale": false
       },
       "adaptability": {
@@ -4869,15 +4854,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 34.6,
-        "predicted": 33.3,
+        "score": 34.7,
+        "predicted": 33.4,
         "residual": 1.3,
         "outOfScale": false
       },
       "shared_purpose": {
-        "score": 44.8,
-        "predicted": 50.2,
-        "residual": -5.4,
+        "score": 31.3,
+        "predicted": 50.1,
+        "residual": -18.8,
         "outOfScale": false
       }
     },
@@ -4890,8 +4875,8 @@
       },
       "agency": {
         "score": 48.5,
-        "predicted": 62.8,
-        "residual": -14.3,
+        "predicted": 62.6,
+        "residual": -14.1,
         "outOfScale": false
       },
       "coordination": {
@@ -4913,9 +4898,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 30.4,
-        "predicted": 37,
-        "residual": -6.6,
+        "score": 29.8,
+        "predicted": 36.5,
+        "residual": -6.7,
         "outOfScale": false
       },
       "adaptability": {
@@ -4925,15 +4910,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 53.5,
-        "predicted": 45.7,
+        "score": 53.6,
+        "predicted": 45.8,
         "residual": 7.8,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 73.2,
-        "predicted": 54.8,
-        "residual": 18.4,
+        "predicted": 54.9,
+        "residual": 18.3,
         "outOfScale": false
       }
     },
@@ -4946,8 +4931,8 @@
       },
       "agency": {
         "score": 62.4,
-        "predicted": 49.4,
-        "residual": 13,
+        "predicted": 50,
+        "residual": 12.4,
         "outOfScale": false
       },
       "coordination": {
@@ -4970,8 +4955,8 @@
       },
       "experimentation": {
         "score": 0.9,
-        "predicted": 4.4,
-        "residual": -3.5,
+        "predicted": 4.2,
+        "residual": -3.3,
         "outOfScale": false
       },
       "adaptability": {
@@ -4981,15 +4966,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 31.7,
-        "predicted": 27,
-        "residual": 4.7,
+        "score": 31.8,
+        "predicted": 27.2,
+        "residual": 4.6,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 49.2,
-        "predicted": 48,
-        "residual": 1.2,
+        "predicted": 47.8,
+        "residual": 1.4,
         "outOfScale": false
       }
     },
@@ -5002,8 +4987,8 @@
       },
       "agency": {
         "score": 38.6,
-        "predicted": 48.6,
-        "residual": -10,
+        "predicted": 49.3,
+        "residual": -10.7,
         "outOfScale": false
       },
       "coordination": {
@@ -5026,8 +5011,8 @@
       },
       "experimentation": {
         "score": 0.2,
-        "predicted": 2.6,
-        "residual": -2.4,
+        "predicted": 2.4,
+        "residual": -2.2,
         "outOfScale": false
       },
       "adaptability": {
@@ -5038,16 +5023,11 @@
       },
       "building": {
         "score": 24.2,
-        "predicted": 26,
-        "residual": -1.8,
+        "predicted": 26.2,
+        "residual": -2,
         "outOfScale": false
       },
-      "shared_purpose": {
-        "score": 45.8,
-        "predicted": 47.6,
-        "residual": -1.8,
-        "outOfScale": false
-      }
+      "shared_purpose": null
     },
     "GRC": {
       "anticipation": {
@@ -5058,8 +5038,8 @@
       },
       "agency": {
         "score": 50.5,
-        "predicted": 61.3,
-        "residual": -10.8,
+        "predicted": 61.2,
+        "residual": -10.7,
         "outOfScale": false
       },
       "coordination": {
@@ -5081,9 +5061,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 23.6,
-        "predicted": 33.3,
-        "residual": -9.7,
+        "score": 23,
+        "predicted": 32.9,
+        "residual": -9.9,
         "outOfScale": false
       },
       "adaptability": {
@@ -5094,14 +5074,14 @@
       },
       "building": {
         "score": 36.2,
-        "predicted": 43.6,
-        "residual": -7.4,
+        "predicted": 43.8,
+        "residual": -7.6,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 53.1,
-        "predicted": 54,
-        "residual": -0.9,
+        "predicted": 54.1,
+        "residual": -1,
         "outOfScale": false
       }
     },
@@ -5114,8 +5094,8 @@
       },
       "agency": {
         "score": 54.4,
-        "predicted": 58.1,
-        "residual": -3.7,
+        "predicted": 58.2,
+        "residual": -3.8,
         "outOfScale": false
       },
       "coordination": {
@@ -5137,9 +5117,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 8.9,
-        "predicted": 25.6,
-        "residual": -16.7,
+        "score": 8.7,
+        "predicted": 25.3,
+        "residual": -16.6,
         "outOfScale": false
       },
       "adaptability": {
@@ -5150,14 +5130,14 @@
       },
       "building": {
         "score": 27.7,
-        "predicted": 39.2,
-        "residual": -11.5,
+        "predicted": 39.4,
+        "residual": -11.7,
         "outOfScale": false
       },
       "shared_purpose": {
-        "score": 46.7,
+        "score": 23.9,
         "predicted": 52.4,
-        "residual": -5.7,
+        "residual": -28.5,
         "outOfScale": false
       }
     },
@@ -5170,8 +5150,8 @@
       },
       "agency": {
         "score": 58.3,
-        "predicted": 61.7,
-        "residual": -3.4,
+        "predicted": 61.6,
+        "residual": -3.3,
         "outOfScale": false
       },
       "coordination": {
@@ -5193,9 +5173,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 26.8,
-        "predicted": 34.4,
-        "residual": -7.6,
+        "score": 26.2,
+        "predicted": 34,
+        "residual": -7.8,
         "outOfScale": false
       },
       "adaptability": {
@@ -5206,14 +5186,14 @@
       },
       "building": {
         "score": 25.2,
-        "predicted": 44.3,
-        "residual": -19.1,
+        "predicted": 44.4,
+        "residual": -19.2,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 51.8,
-        "predicted": 54.3,
-        "residual": -2.5,
+        "predicted": 54.4,
+        "residual": -2.6,
         "outOfScale": false
       }
     },
@@ -5226,8 +5206,8 @@
       },
       "agency": {
         "score": 48.5,
-        "predicted": 64.3,
-        "residual": -15.8,
+        "predicted": 64,
+        "residual": -15.5,
         "outOfScale": false
       },
       "coordination": {
@@ -5250,8 +5230,8 @@
       },
       "experimentation": {
         "score": 44.2,
-        "predicted": 40.7,
-        "residual": 3.5,
+        "predicted": 40.2,
+        "residual": 4,
         "outOfScale": false
       },
       "adaptability": {
@@ -5261,15 +5241,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 53.8,
-        "predicted": 47.9,
+        "score": 53.9,
+        "predicted": 48,
         "residual": 5.9,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 57.7,
-        "predicted": 55.6,
-        "residual": 2.1,
+        "predicted": 55.7,
+        "residual": 2,
         "outOfScale": false
       }
     },
@@ -5305,9 +5285,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 13.5,
-        "predicted": 29.7,
-        "residual": -16.2,
+        "score": 13,
+        "predicted": 29.3,
+        "residual": -16.3,
         "outOfScale": false
       },
       "adaptability": {
@@ -5317,8 +5297,8 @@
         "outOfScale": false
       },
       "building": {
-        "score": 34,
-        "predicted": 41.6,
+        "score": 34.1,
+        "predicted": 41.7,
         "residual": -7.6,
         "outOfScale": false
       },
@@ -5338,8 +5318,8 @@
       },
       "agency": {
         "score": 22.1,
-        "predicted": 52.7,
-        "residual": -30.6,
+        "predicted": 53.1,
+        "residual": -31,
         "outOfScale": false
       },
       "coordination": {
@@ -5362,8 +5342,8 @@
       },
       "experimentation": {
         "score": 0.9,
-        "predicted": 12.4,
-        "residual": -11.5,
+        "predicted": 12.2,
+        "residual": -11.3,
         "outOfScale": false
       },
       "adaptability": {
@@ -5374,14 +5354,14 @@
       },
       "building": {
         "score": 26.7,
-        "predicted": 31.7,
-        "residual": -5,
+        "predicted": 31.8,
+        "residual": -5.1,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 51,
-        "predicted": 49.7,
-        "residual": 1.3,
+        "predicted": 49.5,
+        "residual": 1.5,
         "outOfScale": false
       }
     },
@@ -5394,8 +5374,8 @@
       },
       "agency": {
         "score": 63.9,
-        "predicted": 52,
-        "residual": 11.9,
+        "predicted": 52.5,
+        "residual": 11.4,
         "outOfScale": false
       },
       "coordination": {
@@ -5417,9 +5397,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 6.2,
-        "predicted": 10.7,
-        "residual": -4.5,
+        "score": 6.1,
+        "predicted": 10.5,
+        "residual": -4.4,
         "outOfScale": false
       },
       "adaptability": {
@@ -5429,15 +5409,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 28.8,
-        "predicted": 30.7,
+        "score": 28.9,
+        "predicted": 30.8,
         "residual": -1.9,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 56.2,
-        "predicted": 49.3,
-        "residual": 6.9,
+        "predicted": 49.2,
+        "residual": 7,
         "outOfScale": false
       }
     },
@@ -5450,8 +5430,8 @@
       },
       "agency": {
         "score": 56.7,
-        "predicted": 59.3,
-        "residual": -2.6,
+        "predicted": 59.4,
+        "residual": -2.7,
         "outOfScale": false
       },
       "coordination": {
@@ -5473,9 +5453,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 13.6,
-        "predicted": 28.7,
-        "residual": -15.1,
+        "score": 13.3,
+        "predicted": 28.3,
+        "residual": -15,
         "outOfScale": false
       },
       "adaptability": {
@@ -5485,9 +5465,9 @@
         "outOfScale": false
       },
       "building": {
-        "score": 25.3,
-        "predicted": 41,
-        "residual": -15.7,
+        "score": 31.4,
+        "predicted": 41.1,
+        "residual": -9.7,
         "outOfScale": false
       },
       "shared_purpose": {
@@ -5506,8 +5486,8 @@
       },
       "agency": {
         "score": 27,
-        "predicted": 50.5,
-        "residual": -23.5,
+        "predicted": 51.1,
+        "residual": -24.1,
         "outOfScale": false
       },
       "coordination": {
@@ -5528,12 +5508,7 @@
         "residual": -5,
         "outOfScale": false
       },
-      "experimentation": {
-        "score": 2,
-        "predicted": 7.3,
-        "residual": -5.3,
-        "outOfScale": false
-      },
+      "experimentation": null,
       "adaptability": {
         "score": 10.5,
         "predicted": 53.3,
@@ -5541,15 +5516,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 22.5,
-        "predicted": 28.7,
-        "residual": -6.2,
+        "score": 22.6,
+        "predicted": 28.9,
+        "residual": -6.3,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 22.9,
-        "predicted": 48.6,
-        "residual": -25.7,
+        "predicted": 48.4,
+        "residual": -25.5,
         "outOfScale": false
       }
     },
@@ -5561,9 +5536,9 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 53.7,
+        "score": 53.8,
         "predicted": 60.8,
-        "residual": -7.1,
+        "residual": -7,
         "outOfScale": false
       },
       "coordination": {
@@ -5585,9 +5560,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 26.9,
-        "predicted": 32.2,
-        "residual": -5.3,
+        "score": 26.6,
+        "predicted": 31.8,
+        "residual": -5.2,
         "outOfScale": false
       },
       "adaptability": {
@@ -5598,14 +5573,14 @@
       },
       "building": {
         "score": 11,
-        "predicted": 43,
-        "residual": -32,
+        "predicted": 43.1,
+        "residual": -32.1,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 40.3,
-        "predicted": 53.8,
-        "residual": -13.5,
+        "predicted": 53.9,
+        "residual": -13.6,
         "outOfScale": false
       }
     },
@@ -5618,8 +5593,8 @@
       },
       "agency": {
         "score": 72.8,
-        "predicted": 65,
-        "residual": 7.8,
+        "predicted": 64.7,
+        "residual": 8.1,
         "outOfScale": false
       },
       "coordination": {
@@ -5642,8 +5617,8 @@
       },
       "experimentation": {
         "score": 42.3,
-        "predicted": 42.5,
-        "residual": -0.2,
+        "predicted": 42,
+        "residual": 0.3,
         "outOfScale": false
       },
       "adaptability": {
@@ -5653,15 +5628,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 52.8,
-        "predicted": 48.9,
+        "score": 52.9,
+        "predicted": 49,
         "residual": 3.9,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 75,
-        "predicted": 56,
-        "residual": 19,
+        "predicted": 56.1,
+        "residual": 18.9,
         "outOfScale": false
       }
     },
@@ -5674,8 +5649,8 @@
       },
       "agency": {
         "score": 47.1,
-        "predicted": 53.6,
-        "residual": -6.5,
+        "predicted": 54,
+        "residual": -6.9,
         "outOfScale": false
       },
       "coordination": {
@@ -5697,8 +5672,8 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 11,
-        "predicted": 14.8,
+        "score": 10.7,
+        "predicted": 14.5,
         "residual": -3.8,
         "outOfScale": false
       },
@@ -5710,8 +5685,8 @@
       },
       "building": {
         "score": 18.9,
-        "predicted": 33,
-        "residual": -14.1,
+        "predicted": 33.2,
+        "residual": -14.3,
         "outOfScale": false
       },
       "shared_purpose": {
@@ -5730,8 +5705,8 @@
       },
       "agency": {
         "score": 76,
-        "predicted": 66.6,
-        "residual": 9.4,
+        "predicted": 66.2,
+        "residual": 9.8,
         "outOfScale": false
       },
       "coordination": {
@@ -5753,9 +5728,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 55,
-        "predicted": 46.4,
-        "residual": 8.6,
+        "score": 54.3,
+        "predicted": 45.9,
+        "residual": 8.4,
         "outOfScale": false
       },
       "adaptability": {
@@ -5766,14 +5741,14 @@
       },
       "building": {
         "score": 36.8,
-        "predicted": 51.1,
-        "residual": -14.3,
+        "predicted": 51.2,
+        "residual": -14.4,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 69.6,
-        "predicted": 56.8,
-        "residual": 12.8,
+        "predicted": 57,
+        "residual": 12.6,
         "outOfScale": false
       }
     },
@@ -5785,9 +5760,9 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 56.1,
-        "predicted": 61.6,
-        "residual": -5.5,
+        "score": 56.2,
+        "predicted": 61.5,
+        "residual": -5.3,
         "outOfScale": false
       },
       "coordination": {
@@ -5809,8 +5784,8 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 21.6,
-        "predicted": 34.2,
+        "score": 21.2,
+        "predicted": 33.8,
         "residual": -12.6,
         "outOfScale": false
       },
@@ -5821,15 +5796,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 36.2,
-        "predicted": 44.2,
+        "score": 36.3,
+        "predicted": 44.3,
         "residual": -8,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 76.6,
-        "predicted": 54.2,
-        "residual": 22.4,
+        "predicted": 54.3,
+        "residual": 22.3,
         "outOfScale": false
       }
     },
@@ -5841,9 +5816,9 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 92.2,
-        "predicted": 62.6,
-        "residual": 29.6,
+        "score": 92.3,
+        "predicted": 62.5,
+        "residual": 29.8,
         "outOfScale": false
       },
       "coordination": {
@@ -5865,9 +5840,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 44.6,
-        "predicted": 36.6,
-        "residual": 8,
+        "score": 43.8,
+        "predicted": 36.2,
+        "residual": 7.6,
         "outOfScale": false
       },
       "adaptability": {
@@ -5878,14 +5853,14 @@
       },
       "building": {
         "score": 34.6,
-        "predicted": 45.6,
-        "residual": -11,
+        "predicted": 45.7,
+        "residual": -11.1,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 82,
-        "predicted": 54.7,
-        "residual": 27.3,
+        "predicted": 54.9,
+        "residual": 27.1,
         "outOfScale": false
       }
     },
@@ -5897,8 +5872,8 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 65.9,
-        "predicted": 58.8,
+        "score": 66,
+        "predicted": 58.9,
         "residual": 7.1,
         "outOfScale": false
       },
@@ -5921,8 +5896,8 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 18.6,
-        "predicted": 27.3,
+        "score": 18.3,
+        "predicted": 27,
         "residual": -8.7,
         "outOfScale": false
       },
@@ -5933,8 +5908,8 @@
         "outOfScale": false
       },
       "building": {
-        "score": 26,
-        "predicted": 40.2,
+        "score": 26.1,
+        "predicted": 40.3,
         "residual": -14.2,
         "outOfScale": false
       },
@@ -5954,8 +5929,8 @@
       },
       "agency": {
         "score": 72.7,
-        "predicted": 62.1,
-        "residual": 10.6,
+        "predicted": 62,
+        "residual": 10.7,
         "outOfScale": false
       },
       "coordination": {
@@ -5977,9 +5952,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 20.7,
-        "predicted": 35.4,
-        "residual": -14.7,
+        "score": 20.5,
+        "predicted": 35,
+        "residual": -14.5,
         "outOfScale": false
       },
       "adaptability": {
@@ -5989,15 +5964,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 32.7,
-        "predicted": 44.8,
+        "score": 32.8,
+        "predicted": 44.9,
         "residual": -12.1,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 55.5,
-        "predicted": 54.5,
-        "residual": 1,
+        "predicted": 54.6,
+        "residual": 0.9,
         "outOfScale": false
       }
     },
@@ -6010,8 +5985,8 @@
       },
       "agency": {
         "score": 53.5,
-        "predicted": 56.7,
-        "residual": -3.2,
+        "predicted": 57,
+        "residual": -3.5,
         "outOfScale": false
       },
       "coordination": {
@@ -6033,9 +6008,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 55.6,
-        "predicted": 22.4,
-        "residual": 33.2,
+        "score": 55.1,
+        "predicted": 22,
+        "residual": 33.1,
         "outOfScale": false
       },
       "adaptability": {
@@ -6046,8 +6021,8 @@
       },
       "building": {
         "score": 31.2,
-        "predicted": 37.4,
-        "residual": -6.2,
+        "predicted": 37.5,
+        "residual": -6.3,
         "outOfScale": false
       },
       "shared_purpose": {
@@ -6066,8 +6041,8 @@
       },
       "agency": {
         "score": 32.1,
-        "predicted": 57.8,
-        "residual": -25.7,
+        "predicted": 57.9,
+        "residual": -25.8,
         "outOfScale": false
       },
       "coordination": {
@@ -6089,9 +6064,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 8.5,
-        "predicted": 24.9,
-        "residual": -16.4,
+        "score": 8.3,
+        "predicted": 24.5,
+        "residual": -16.2,
         "outOfScale": false
       },
       "adaptability": {
@@ -6101,8 +6076,8 @@
         "outOfScale": false
       },
       "building": {
-        "score": 30.7,
-        "predicted": 38.8,
+        "score": 30.8,
+        "predicted": 38.9,
         "residual": -8.1,
         "outOfScale": false
       },
@@ -6122,8 +6097,8 @@
       },
       "agency": {
         "score": 36.5,
-        "predicted": 53.5,
-        "residual": -17,
+        "predicted": 53.9,
+        "residual": -17.4,
         "outOfScale": false
       },
       "coordination": {
@@ -6145,9 +6120,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 3.2,
-        "predicted": 14.5,
-        "residual": -11.3,
+        "score": 3.1,
+        "predicted": 14.2,
+        "residual": -11.1,
         "outOfScale": false
       },
       "adaptability": {
@@ -6157,15 +6132,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 29.7,
-        "predicted": 32.8,
-        "residual": -3.1,
+        "score": 29.8,
+        "predicted": 33,
+        "residual": -3.2,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 47.8,
-        "predicted": 50.1,
-        "residual": -2.3,
+        "predicted": 50,
+        "residual": -2.2,
         "outOfScale": false
       }
     },
@@ -6177,8 +6152,8 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 69,
-        "predicted": 57.8,
+        "score": 69.1,
+        "predicted": 57.9,
         "residual": 11.2,
         "outOfScale": false
       },
@@ -6201,9 +6176,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 17.4,
-        "predicted": 24.8,
-        "residual": -7.4,
+        "score": 17.3,
+        "predicted": 24.5,
+        "residual": -7.2,
         "outOfScale": false
       },
       "adaptability": {
@@ -6214,8 +6189,8 @@
       },
       "building": {
         "score": 36.4,
-        "predicted": 38.8,
-        "residual": -2.4,
+        "predicted": 38.9,
+        "residual": -2.5,
         "outOfScale": false
       },
       "shared_purpose": {
@@ -6234,8 +6209,8 @@
       },
       "agency": {
         "score": 63.4,
-        "predicted": 62.7,
-        "residual": 0.7,
+        "predicted": 62.5,
+        "residual": 0.9,
         "outOfScale": false
       },
       "coordination": {
@@ -6257,8 +6232,8 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 29.7,
-        "predicted": 36.8,
+        "score": 29.3,
+        "predicted": 36.4,
         "residual": -7.1,
         "outOfScale": false
       },
@@ -6269,15 +6244,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 36.3,
-        "predicted": 45.7,
+        "score": 36.4,
+        "predicted": 45.8,
         "residual": -9.4,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 44.2,
-        "predicted": 54.8,
-        "residual": -10.6,
+        "predicted": 54.9,
+        "residual": -10.7,
         "outOfScale": false
       }
     },
@@ -6289,9 +6264,9 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 68.4,
-        "predicted": 54.1,
-        "residual": 14.3,
+        "score": 68.5,
+        "predicted": 54.5,
+        "residual": 14,
         "outOfScale": false
       },
       "coordination": {
@@ -6314,8 +6289,8 @@
       },
       "experimentation": {
         "score": 10.6,
-        "predicted": 15.9,
-        "residual": -5.3,
+        "predicted": 15.7,
+        "residual": -5.1,
         "outOfScale": false
       },
       "adaptability": {
@@ -6326,14 +6301,14 @@
       },
       "building": {
         "score": 22.6,
-        "predicted": 33.7,
-        "residual": -11.1,
+        "predicted": 33.8,
+        "residual": -11.2,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 60.3,
-        "predicted": 50.4,
-        "residual": 9.9,
+        "predicted": 50.3,
+        "residual": 10,
         "outOfScale": false
       }
     },
@@ -6346,8 +6321,8 @@
       },
       "agency": {
         "score": 56.6,
-        "predicted": 46.6,
-        "residual": 10,
+        "predicted": 47.4,
+        "residual": 9.2,
         "outOfScale": false
       },
       "coordination": {
@@ -6370,8 +6345,8 @@
       },
       "experimentation": {
         "score": 1.2,
-        "predicted": -2.3,
-        "residual": 3.5,
+        "predicted": -2.4,
+        "residual": 3.6,
         "outOfScale": true
       },
       "adaptability": {
@@ -6382,16 +6357,11 @@
       },
       "building": {
         "score": 17.3,
-        "predicted": 23.2,
-        "residual": -5.9,
+        "predicted": 23.4,
+        "residual": -6.1,
         "outOfScale": false
       },
-      "shared_purpose": {
-        "score": 54,
-        "predicted": 46.6,
-        "residual": 7.4,
-        "outOfScale": false
-      }
+      "shared_purpose": null
     },
     "BWA": {
       "anticipation": {
@@ -6401,9 +6371,9 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 53.7,
-        "predicted": 56.7,
-        "residual": -3,
+        "score": 53.8,
+        "predicted": 56.9,
+        "residual": -3.1,
         "outOfScale": false
       },
       "coordination": {
@@ -6426,8 +6396,8 @@
       },
       "experimentation": {
         "score": 4.1,
-        "predicted": 22.3,
-        "residual": -18.2,
+        "predicted": 22,
+        "residual": -17.9,
         "outOfScale": false
       },
       "adaptability": {
@@ -6438,8 +6408,8 @@
       },
       "building": {
         "score": 22.1,
-        "predicted": 37.3,
-        "residual": -15.2,
+        "predicted": 37.5,
+        "residual": -15.4,
         "outOfScale": false
       },
       "shared_purpose": {
@@ -6458,8 +6428,8 @@
       },
       "agency": {
         "score": 53.2,
-        "predicted": 45.7,
-        "residual": 7.5,
+        "predicted": 46.6,
+        "residual": 6.6,
         "outOfScale": false
       },
       "coordination": {
@@ -6482,8 +6452,8 @@
       },
       "experimentation": {
         "score": 2.7,
-        "predicted": -4.5,
-        "residual": 7.2,
+        "predicted": -4.6,
+        "residual": 7.3,
         "outOfScale": true
       },
       "adaptability": {
@@ -6493,15 +6463,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 22.8,
-        "predicted": 22,
+        "score": 22.9,
+        "predicted": 22.1,
         "residual": 0.8,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 70.1,
-        "predicted": 46.1,
-        "residual": 24,
+        "predicted": 45.8,
+        "residual": 24.3,
         "outOfScale": false
       }
     },
@@ -6514,8 +6484,8 @@
       },
       "agency": {
         "score": 70.5,
-        "predicted": 56.5,
-        "residual": 14,
+        "predicted": 56.7,
+        "residual": 13.8,
         "outOfScale": false
       },
       "coordination": {
@@ -6537,9 +6507,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 48.4,
-        "predicted": 21.8,
-        "residual": 26.6,
+        "score": 48,
+        "predicted": 21.5,
+        "residual": 26.5,
         "outOfScale": false
       },
       "adaptability": {
@@ -6550,8 +6520,8 @@
       },
       "building": {
         "score": 23.5,
-        "predicted": 37,
-        "residual": -13.5,
+        "predicted": 37.2,
+        "residual": -13.7,
         "outOfScale": false
       },
       "shared_purpose": {
@@ -6570,8 +6540,8 @@
       },
       "agency": {
         "score": 56.2,
-        "predicted": 58.2,
-        "residual": -2,
+        "predicted": 58.3,
+        "residual": -2.1,
         "outOfScale": false
       },
       "coordination": {
@@ -6593,9 +6563,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 14.4,
-        "predicted": 25.9,
-        "residual": -11.5,
+        "score": 14.3,
+        "predicted": 25.5,
+        "residual": -11.2,
         "outOfScale": false
       },
       "adaptability": {
@@ -6606,8 +6576,8 @@
       },
       "building": {
         "score": 23.6,
-        "predicted": 39.4,
-        "residual": -15.8,
+        "predicted": 39.5,
+        "residual": -15.9,
         "outOfScale": false
       },
       "shared_purpose": {
@@ -6626,8 +6596,8 @@
       },
       "agency": {
         "score": 51.4,
-        "predicted": 45.9,
-        "residual": 5.5,
+        "predicted": 46.8,
+        "residual": 4.6,
         "outOfScale": false
       },
       "coordination": {
@@ -6650,8 +6620,8 @@
       },
       "experimentation": {
         "score": 0.7,
-        "predicted": -4,
-        "residual": 4.7,
+        "predicted": -4.1,
+        "residual": 4.8,
         "outOfScale": true
       },
       "adaptability": {
@@ -6662,14 +6632,14 @@
       },
       "building": {
         "score": 7.9,
-        "predicted": 22.2,
-        "residual": -14.3,
+        "predicted": 22.4,
+        "residual": -14.5,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 47.4,
-        "predicted": 46.2,
-        "residual": 1.2,
+        "predicted": 45.9,
+        "residual": 1.5,
         "outOfScale": false
       }
     },
@@ -6682,8 +6652,8 @@
       },
       "agency": {
         "score": 66.6,
-        "predicted": 62.7,
-        "residual": 3.9,
+        "predicted": 62.6,
+        "residual": 4,
         "outOfScale": false
       },
       "coordination": {
@@ -6705,9 +6675,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 30.7,
-        "predicted": 36.9,
-        "residual": -6.2,
+        "score": 29.3,
+        "predicted": 36.5,
+        "residual": -7.2,
         "outOfScale": false
       },
       "adaptability": {
@@ -6717,15 +6687,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 41.8,
-        "predicted": 45.7,
+        "score": 41.9,
+        "predicted": 45.8,
         "residual": -3.9,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 71.2,
-        "predicted": 54.8,
-        "residual": 16.4,
+        "predicted": 54.9,
+        "residual": 16.3,
         "outOfScale": false
       }
     },
@@ -6737,9 +6707,9 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 61.6,
+        "score": 61.7,
         "predicted": 61.3,
-        "residual": 0.3,
+        "residual": 0.4,
         "outOfScale": false
       },
       "coordination": {
@@ -6761,9 +6731,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 44,
-        "predicted": 33.5,
-        "residual": 10.5,
+        "score": 43.2,
+        "predicted": 33.1,
+        "residual": 10.1,
         "outOfScale": false
       },
       "adaptability": {
@@ -6773,15 +6743,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 30,
-        "predicted": 43.8,
+        "score": 30.1,
+        "predicted": 43.9,
         "residual": -13.8,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 43.1,
-        "predicted": 54.1,
-        "residual": -11,
+        "predicted": 54.2,
+        "residual": -11.1,
         "outOfScale": false
       }
     },
@@ -6794,8 +6764,8 @@
       },
       "agency": {
         "score": 61.5,
-        "predicted": 58.8,
-        "residual": 2.7,
+        "predicted": 58.9,
+        "residual": 2.6,
         "outOfScale": false
       },
       "coordination": {
@@ -6817,9 +6787,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 18,
-        "predicted": 27.3,
-        "residual": -9.3,
+        "score": 17.7,
+        "predicted": 26.9,
+        "residual": -9.2,
         "outOfScale": false
       },
       "adaptability": {
@@ -6829,8 +6799,8 @@
         "outOfScale": false
       },
       "building": {
-        "score": 29.3,
-        "predicted": 40.2,
+        "score": 29.4,
+        "predicted": 40.3,
         "residual": -10.9,
         "outOfScale": false
       },
@@ -6850,8 +6820,8 @@
       },
       "agency": {
         "score": 55.3,
-        "predicted": 63.3,
-        "residual": -8,
+        "predicted": 63.1,
+        "residual": -7.8,
         "outOfScale": false
       },
       "coordination": {
@@ -6874,8 +6844,8 @@
       },
       "experimentation": {
         "score": 21.4,
-        "predicted": 38.3,
-        "residual": -16.9,
+        "predicted": 37.8,
+        "residual": -16.4,
         "outOfScale": false
       },
       "adaptability": {
@@ -6885,15 +6855,15 @@
         "outOfScale": false
       },
       "building": {
-        "score": 22.3,
-        "predicted": 46.5,
+        "score": 22.4,
+        "predicted": 46.6,
         "residual": -24.2,
         "outOfScale": false
       },
       "shared_purpose": {
         "score": 62,
-        "predicted": 55.1,
-        "residual": 6.9,
+        "predicted": 55.2,
+        "residual": 6.8,
         "outOfScale": false
       }
     },
@@ -6905,9 +6875,9 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 59.4,
+        "score": 59.5,
         "predicted": 60.2,
-        "residual": -0.8,
+        "residual": -0.7,
         "outOfScale": false
       },
       "coordination": {
@@ -6930,8 +6900,8 @@
       },
       "experimentation": {
         "score": 9.9,
-        "predicted": 30.6,
-        "residual": -20.7,
+        "predicted": 30.3,
+        "residual": -20.4,
         "outOfScale": false
       },
       "adaptability": {
@@ -6942,16 +6912,11 @@
       },
       "building": {
         "score": 30.6,
-        "predicted": 42.1,
-        "residual": -11.5,
+        "predicted": 42.2,
+        "residual": -11.6,
         "outOfScale": false
       },
-      "shared_purpose": {
-        "score": 49.9,
-        "predicted": 53.5,
-        "residual": -3.6,
-        "outOfScale": false
-      }
+      "shared_purpose": null
     },
     "MUS": {
       "anticipation": {
@@ -6961,9 +6926,9 @@
         "outOfScale": false
       },
       "agency": {
-        "score": 85.6,
+        "score": 85.7,
         "predicted": 59.6,
-        "residual": 26,
+        "residual": 26.1,
         "outOfScale": false
       },
       "coordination": {
@@ -6985,9 +6950,9 @@
         "outOfScale": false
       },
       "experimentation": {
-        "score": 17.4,
-        "predicted": 29.3,
-        "residual": -11.9,
+        "score": 17.3,
+        "predicted": 28.9,
+        "residual": -11.6,
         "outOfScale": false
       },
       "adaptability": {
@@ -6997,8 +6962,8 @@
         "outOfScale": false
       },
       "building": {
-        "score": 27.9,
-        "predicted": 41.3,
+        "score": 28,
+        "predicted": 41.4,
         "residual": -13.4,
         "outOfScale": false
       },

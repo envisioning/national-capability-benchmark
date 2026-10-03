@@ -711,6 +711,7 @@ export const ES: Lexicon = {
     colPeerMedian: 'Mediana de los pares',
     rowSource: '{source}, {year}',
     noValue: 'sin valor',
+    rowStale: 'El valor más reciente es de {year}, con más de {age} años, y por eso no entra en la puntuación.',
     gapsLine: 'Todavía sin base comparable, y por eso bajan la solidez: {list}.',
     dimensionIncome:
       'La puntuación de {dimension} tiene una correlación de r = {r} con el PIB per cápita en {n} países.',

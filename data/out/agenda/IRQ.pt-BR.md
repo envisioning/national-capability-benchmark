@@ -13,9 +13,9 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | 63,6 | 0,4 (fraca) | sem tendência comparável |
 | Confiança | 30 | 0,48 (utilizável) | sem tendência comparável |
 | Aprendizagem | 17,6 | 0,52 (utilizável) | sem tendência comparável |
-| Experimentação | 3,3 | 0,3 (fraca) | sem tendência comparável |
+| Experimentação | 3,1 | 0,3 (fraca) | sem tendência comparável |
 | Adaptação | 25,4 | 0,58 (utilizável) | sem tendência comparável |
-| Construção | 31,4 | 0,41 (fraca) | +2,8 em 10 anos, com base em 2 indicadores |
+| Construção | 31,5 | 0,41 (fraca) | +2,9 em 10 anos, com base em 2 indicadores |
 | Propósito compartilhado | 50,1 | 0,36 (fraca) | sem tendência comparável |
 
 ## Dimensões com as pontuações mais baixas
@@ -64,7 +64,7 @@ Quanta cooperação é possível para além do círculo pessoal mais próximo?
 Em que medida pessoas e organizações conseguem transformar intenção em ação?
 
 - A pontuação se apoia em 4 indicadores observados.
-- No topo da escala, entre as pontuações com evidência utilizável: Nova Zelândia 92,2, Austrália 89,2, Estônia 84,3.
+- No topo da escala, entre as pontuações com evidência utilizável: Nova Zelândia 92,3, Austrália 89,2, Estônia 84,3.
 - Registros de evidência desta dimensão em outros países, com êxitos e retrocessos, que não entram em nenhuma pontuação: Singapore's national ICT-skills measurement and baseline (Singapura); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (Índia); Puntos México Conectado, national digital learning centres (México).
 - Lacunas declaradas: Adultos que realizam tarefas digitais.
 
@@ -123,7 +123,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Adaptação | Assinaturas de banda larga fixa | 17,6 por 100 pessoas | 2024 | 62º de 125 |
 | Adaptação | Perdas na transmissão de eletricidade | 61,8 % da produção | 2023 | 117º de 117 |
 | Adaptação | Emprego informal | 67,6 % do emprego | 2021 | 63º de 102 |
-| Construção | Produto por pessoa ocupada | 54.291,3 US$ PPC constantes de 2021 | 2025 | 56º de 123 |
+| Construção | Produto por pessoa ocupada | 54.291,3 dólares PPC constantes de 2021 | 2025 | 56º de 123 |
 
 ## Agenda de medição
 

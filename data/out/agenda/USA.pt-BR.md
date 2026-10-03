@@ -74,7 +74,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Adaptação | Participação na força de trabalho | 73,7 % das pessoas com 15 anos ou mais | 2025 | 51º de 125 |
 | Adaptação | Assinaturas de banda larga fixa | 38,9 por 100 pessoas | 2024 | 18º de 125 |
 | Adaptação | Perdas na transmissão de eletricidade | 5,3 % da produção | 2024 | 23º de 117 |
-| Construção | Produto por pessoa ocupada | 156.983,2 US$ PPC constantes de 2021 | 2025 | 5º de 123 |
+| Construção | Produto por pessoa ocupada | 156.983,2 dólares PPC constantes de 2021 | 2025 | 5º de 123 |
 
 ## Agenda de medição
 

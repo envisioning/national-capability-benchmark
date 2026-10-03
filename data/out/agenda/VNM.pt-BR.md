@@ -13,9 +13,9 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | 80,2 | 0,4 (fraca) | sem tendência comparável |
 | Confiança | 42,9 | 0,49 (utilizável) | sem tendência comparável |
 | Aprendizagem | 43,6 | 0,54 (utilizável) | sem tendência comparável |
-| Experimentação | 13,4 | 0,33 (fraca) | +1,8 em 10 anos, com base em 3 indicadores |
+| Experimentação | 13,3 | 0,33 (fraca) | +1,7 em 10 anos, com base em 3 indicadores |
 | Adaptação | 88,1 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 75,7 | 0,55 (utilizável) | +15,9 em 10 anos, com base em 3 indicadores |
+| Construção | 75,8 | 0,55 (utilizável) | +16 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 44,3 | 0,25 (fraca) | sem tendência comparável |
 
 ## Dimensões com as pontuações mais baixas
@@ -83,7 +83,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 88,1, solidez utilizável
-- Construção: 75,7, solidez utilizável
+- Construção: 75,8, solidez utilizável
 - Agência: 61,6, solidez utilizável
 
 ## Com o que o Vietnã conta
@@ -105,7 +105,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Adaptação | Assinaturas de banda larga fixa | 23,7 por 100 pessoas | 2024 | 54º de 125 |
 | Adaptação | Perdas na transmissão de eletricidade | 6,6 % da produção | 2023 | 34º de 117 |
 | Adaptação | Emprego informal | 67 % do emprego | 2024 | 62º de 102 |
-| Construção | Produto por pessoa ocupada | 27.957,3 US$ PPC constantes de 2021 | 2025 | 83º de 123 |
+| Construção | Produto por pessoa ocupada | 27.957,3 dólares PPC constantes de 2021 | 2025 | 83º de 123 |
 
 ## Agenda de medição
 

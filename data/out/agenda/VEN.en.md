@@ -11,12 +11,12 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Anticipation | 0.9 | 0.46 (usable) | -5.4 over 10 years using 2 indicators |
 | Agency | 26.1 | 0.37 (thin) | no trend |
 | Coordination | 16.7 | 0.22 (very thin) | no trend |
-| Trust | 35 | 0.39 (thin) | no trend |
-| Learning | 43.2 | 0.19 (very thin) | no trend |
-| Experimentation | 5.8 | 0.19 (very thin) | no trend |
+| Trust | 23.8 | 0.37 (thin) | no trend |
+| Learning | not scored | 0.16 (very thin) | no trend |
+| Experimentation | 5.7 | 0.19 (very thin) | no trend |
 | Adaptability | 48.7 | 0.53 (usable) | no trend |
-| Building | 19.1 | 0.27 (thin) | no trend |
-| Shared Purpose | 26.5 | 0.14 (very thin) | no trend |
+| Building | 8.9 | 0.25 (thin) | no trend |
+| Shared Purpose | not scored | 0.12 (very thin) | no trend |
 
 ## What to raise
 
@@ -44,13 +44,20 @@ How effectively can the system respond when circumstances change?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Shared Purpose: confidence 0.14, very thin
+### Shared Purpose: confidence 0.12, very thin
 
 To what extent can people imagine themselves as participants in a common project?
 
-- Uses 2 observed indicators.
+- Uses one observed indicator.
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
+
+### Learning: confidence 0.16, very thin
+
+How effectively does the country acquire, distribute, and update knowledge?
+
+- Uses one observed indicator.
+- Missing indicators: Adult learning participation.
 
 ### Experimentation: confidence 0.19, very thin
 
@@ -60,13 +67,6 @@ How easily can new approaches be attempted, tested, abandoned, and improved?
 - Missing indicators: Venture deals, Firms through regulatory sandboxes, University spinouts.
 - Rejected datasets: Business share of R&D.
 
-### Learning: confidence 0.19, very thin
-
-How effectively does the country acquire, distribute, and update knowledge?
-
-- Uses 2 observed indicators.
-- Missing indicators: Adult learning participation.
-
 ### Coordination: confidence 0.22, very thin
 
 How effectively can independent actors organize around shared objectives?
@@ -75,13 +75,21 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
-### Building: confidence 0.27, thin
+### Building: confidence 0.25, thin
 
 How capable is the country of turning plans and knowledge into functioning systems?
 
-- Uses 3 observed indicators.
+- Uses 2 observed indicators.
 - Missing indicators: Large project delivery, Firm scale-up rate.
 - Rejected datasets: Logistics infrastructure quality.
+
+### Trust: confidence 0.37, thin
+
+How much cooperation is possible beyond immediate personal networks?
+
+- Uses 4 observed indicators.
+- Missing indicators: Trust in public institutions, Court case clearance rate.
+- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
 ### Agency: confidence 0.37, thin
 
@@ -89,14 +97,6 @@ How able are individuals and organizations to turn an intention into action?
 
 - Uses 3 observed indicators.
 - Missing indicators: Adults doing digital tasks.
-
-### Trust: confidence 0.39, thin
-
-How much cooperation is possible beyond immediate personal networks?
-
-- Uses 5 observed indicators.
-- Missing indicators: Trust in public institutions, Court case clearance rate.
-- Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
 ## What Venezuela has to work with
 

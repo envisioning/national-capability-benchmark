@@ -159,6 +159,12 @@ publisher. Keep the two apart. See D20 and D31.
 value in the publisher's units. `normalized` is a 0 to 100 position inside this
 frame. A value outside the frame clamps and sets `outOfFrame` on the cell.
 
+**Do not quote a set-aside value as the country's reading.** A row whose
+latest value is more than 15 years older than the release reads `missing`,
+with that value and its year in `staleExcluded`. It is not in the score, the
+frame or the coverage. A condition or check that old carries `stale: true`
+and keeps its value. See D159.
+
 **Do not read a condition as part of a score.** Each `DimensionResult` carries
 `conditions`: what the country has to work with on that dimension, such as
 broadband lines, bank accounts, research spending or output per worker. A

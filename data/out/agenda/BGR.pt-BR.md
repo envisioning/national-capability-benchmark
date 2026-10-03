@@ -9,11 +9,11 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 55,4 | 0,46 (utilizável) | +15,9 em 10 anos, com base em 2 indicadores |
-| Agência | 53,7 | 0,56 (utilizável) | sem tendência comparável |
+| Agência | 53,8 | 0,56 (utilizável) | sem tendência comparável |
 | Coordenação | 85 | 0,41 (fraca) | sem tendência comparável |
 | Confiança | 61,2 | 0,49 (utilizável) | sem tendência comparável |
 | Aprendizagem | 32,6 | 0,54 (utilizável) | sem tendência comparável |
-| Experimentação | 26,9 | 0,33 (fraca) | -8,6 em 10 anos, com base em 3 indicadores |
+| Experimentação | 26,6 | 0,33 (fraca) | -8,4 em 10 anos, com base em 3 indicadores |
 | Adaptação | 80,6 | 0,62 (utilizável) | sem tendência comparável |
 | Construção | 11 | 0,41 (fraca) | +5 em 10 anos, com base em 2 indicadores |
 | Propósito compartilhado | 40,3 | 0,42 (fraca) | +2,1 em 10 anos, com base em 2 indicadores |
@@ -74,7 +74,7 @@ Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 - Adaptação: 80,6, solidez utilizável
 - Confiança: 61,2, solidez utilizável
 - Antecipação: 55,4, solidez utilizável
-- Agência: 53,7, solidez utilizável
+- Agência: 53,8, solidez utilizável
 
 ## Com o que a Bulgária conta
 
@@ -95,7 +95,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Adaptação | Assinaturas de banda larga fixa | 37 por 100 pessoas | 2023 | 23º de 125 |
 | Adaptação | Perdas na transmissão de eletricidade | 5,9 % da produção | 2023 | 28º de 117 |
 | Adaptação | Emprego informal | 3,6 % do emprego | 2025 | 15º de 102 |
-| Construção | Produto por pessoa ocupada | 76.237,3 US$ PPC constantes de 2021 | 2025 | 40º de 123 |
+| Construção | Produto por pessoa ocupada | 76.237,3 dólares PPC constantes de 2021 | 2025 | 40º de 123 |
 
 ## Agenda de medição
 

@@ -13,9 +13,9 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Coordination | 78.7 | 0.33 (thin) | no trend |
 | Trust | 47.5 | 0.49 (usable) | no trend |
 | Learning | 42.7 | 0.54 (usable) | no trend |
-| Experimentation | 6.5 | 0.33 (thin) | +0.1 over 10 years using 3 indicators |
+| Experimentation | 6.4 | 0.33 (thin) | +0.2 over 10 years using 3 indicators |
 | Adaptability | 70.5 | 0.46 (usable) | no trend |
-| Building | 62.4 | 0.57 (usable) | -5.1 over 10 years using 2 indicators |
+| Building | 62.4 | 0.57 (usable) | -5.2 over 10 years using 2 indicators |
 | Shared Purpose | 52.4 | 0.42 (thin) | +9.4 over 10 years using 2 indicators |
 
 ## What to raise
@@ -27,7 +27,7 @@ These are the lowest scores with usable evidence. Thin evidence appears below.
 How able are individuals and organizations to turn an intention into action?
 
 - Uses 4 observed indicators.
-- Highest usable scores: New Zealand 92.2, Australia 89.2, Estonia 84.3.
+- Highest usable scores: New Zealand 92.3, Australia 89.2, Estonia 84.3.
 - Related deliveries in other countries: Singapore's national ICT-skills measurement and baseline (Singapore); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (India); Puntos México Conectado, national digital learning centres (Mexico).
 - Missing indicators: Adults doing digital tasks.
 

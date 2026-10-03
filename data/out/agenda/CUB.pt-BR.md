@@ -13,9 +13,9 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | sem pontuação | 0,1 (muito fraca) | sem tendência comparável |
 | Confiança | sem pontuação | 0,07 (muito fraca) | sem tendência comparável |
 | Aprendizagem | sem pontuação | 0,16 (muito fraca) | sem tendência comparável |
-| Experimentação | 1,5 | 0,24 (muito fraca) | -0,3 em 10 anos, com base em 3 indicadores |
-| Adaptação | 64,6 | 0,48 (utilizável) | sem tendência comparável |
-| Construção | 20,7 | 0,29 (fraca) | -27,2 em 10 anos, com base em 2 indicadores |
+| Experimentação | 1,5 | 0,24 (muito fraca) | -0,2 em 10 anos, com base em 3 indicadores |
+| Adaptação | 55,8 | 0,46 (utilizável) | sem tendência comparável |
+| Construção | 20,8 | 0,29 (fraca) | -27,2 em 10 anos, com base em 2 indicadores |
 | Propósito compartilhado | sem pontuação | 0 (muito fraca) | sem tendência comparável |
 
 ## Dimensões com evidência fraca
@@ -87,7 +87,7 @@ Em que medida o país consegue transformar planos e conhecimento em sistemas que
 
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
-- Adaptação: 64,6, solidez utilizável
+- Adaptação: 55,8, solidez utilizável
 
 ## Com o que Cuba conta
 

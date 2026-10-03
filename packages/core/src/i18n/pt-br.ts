@@ -805,6 +805,7 @@ export const PT_BR: Lexicon = {
     colPeerMedian: 'Mediana dos pares',
     rowSource: '{source}, {year}',
     noValue: 'sem valor',
+    rowStale: 'O valor mais recente é de {year}, com mais de {age} anos, e por isso não entra na pontuação.',
     gapsLine: 'Ainda sem base comparável, o que reduz a solidez da evidência: {list}.',
     dimensionIncome:
       'A correlação entre a pontuação de {dimension} e o PIB per capita é r = {r}, em {n} países.',

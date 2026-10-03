@@ -1,3 +1,4 @@
+import { MAX_SCORED_VALUE_AGE } from '../pipeline/confidence.js'
 import type { MeasurementClass } from './schema.js'
 
 /**
@@ -195,6 +196,13 @@ export const GLOSSARY: GlossaryEntry[] = [
     group: 'How good the evidence is',
     short: 'The three parts of confidence.',
     full: 'Coverage is the share of indicators with a value. Recency declines after two grace years over a twelve-year window. Source quality is the average source tier. The three multiply.',
+  },
+  {
+    term: 'Age limit',
+    group: 'How good the evidence is',
+    short: `A value more than ${MAX_SCORED_VALUE_AGE} years older than the release does not count.`,
+    full: `When a country’s latest value on a row is more than ${MAX_SCORED_VALUE_AGE} years older than the year the dataset was made, the row is treated as having no value: it is left out of the score, out of the scale every country is placed on, and out of coverage. The value still shows on the row with its year, and in the row’s history. Conditions and behavioral checks are never scored, so they keep an old value and say how old it is.`,
+    example: `In a 2026 release the oldest year that counts is ${2026 - MAX_SCORED_VALUE_AGE}. Mali’s only patent figure is from 1981, so the row is set aside.`,
   },
   {
     term: 'Confidence band',

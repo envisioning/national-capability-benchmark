@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import {
   LEXICONS,
+  MAX_SCORED_VALUE_AGE,
   countryName,
   countryTopic,
   fill,
@@ -14,6 +15,7 @@ import {
   unitName,
 } from '@ncb/core'
 import { FlagField } from '@/components/FlagField'
+import { Icon, STATUS_ICON } from '@/components/Icon'
 import type { FlagFieldPoint } from '@/components/FlagField'
 import { ConditionList, conditionValue } from '@/components/views/ConditionList'
 import {
@@ -256,6 +258,12 @@ export async function CapabilityMapDimension({ reading, slug }: { reading: MapRe
                 {row.year === null ? null : (
                   <p className="mt-1 text-xs text-[var(--muted)]">
                     {fill(m.rowSource, { source: row.source, year: row.year })}
+                  </p>
+                )}
+                {row.staleYear === null ? null : (
+                  <p className="mt-1 inline-flex items-start gap-1.5 text-xs leading-relaxed text-[var(--muted)]">
+                    <Icon name={STATUS_ICON.stale} size={13} className="mt-0.5 shrink-0" />
+                    {fill(m.rowStale, { year: row.staleYear, age: MAX_SCORED_VALUE_AGE })}
                   </p>
                 )}
               </div>

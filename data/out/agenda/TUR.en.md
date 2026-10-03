@@ -9,13 +9,13 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 47.9 | 0.46 (usable) | +9.1 over 10 years using 2 indicators |
-| Agency | 51 | 0.56 (usable) | no trend |
+| Agency | 51.1 | 0.56 (usable) | no trend |
 | Coordination | 65.7 | 0.39 (thin) | no trend |
 | Trust | 46.2 | 0.5 (usable) | no trend |
 | Learning | 35 | 0.55 (usable) | no trend |
-| Experimentation | 62.7 | 0.33 (thin) | +15.4 over 10 years using 3 indicators |
+| Experimentation | 61.4 | 0.33 (thin) | +15.1 over 10 years using 3 indicators |
 | Adaptability | 80.3 | 0.62 (usable) | no trend |
-| Building | 52.2 | 0.57 (usable) | +5 over 10 years using 3 indicators |
+| Building | 52.3 | 0.57 (usable) | +5 over 10 years using 3 indicators |
 | Shared Purpose | 35.7 | 0.42 (thin) | -3.6 over 10 years using 2 indicators |
 
 ## What to raise
@@ -83,8 +83,8 @@ To what extent can people imagine themselves as participants in a common project
 These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 80.3, confidence usable
-- Building: 52.2, confidence usable
-- Agency: 51, confidence usable
+- Building: 52.3, confidence usable
+- Agency: 51.1, confidence usable
 
 ## What Turkey has to work with
 

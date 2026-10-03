@@ -1,4 +1,4 @@
-import { INDICATORS_BY_ID } from '@ncb/core'
+import { INDICATORS_BY_ID, MAX_SCORED_VALUE_AGE } from '@ncb/core'
 import type { DimensionResult, EvidenceRecord } from '@ncb/core'
 import { RecencyTick } from '@/components/RecencyTick'
 import { IndicatorPeek } from '@/components/views/IndicatorPeek'
@@ -54,12 +54,15 @@ function IndicatorCard({
   evidenceCount: number
 }) {
   const def = INDICATORS_BY_ID[row.indicatorId]
+  const stale = row.staleExcluded
   const status =
     row.status === 'gap'
       ? gapLabel(evidenceCount)
       : row.status === 'retired'
         ? 'retired, see notes'
-        : row.status
+        : stale
+          ? `set aside, older than ${MAX_SCORED_VALUE_AGE} years`
+          : row.status
 
   return (
     <article
@@ -78,7 +81,7 @@ function IndicatorCard({
         </h3>
         <ClassBadge value={row.measurementClass} />
         <span className="inline-flex items-center gap-1.5 text-xs text-[var(--muted)]">
-          <Icon name={STATUS_ICON[row.status]} size={13} />
+          <Icon name={stale ? STATUS_ICON.stale : STATUS_ICON[row.status]} size={13} />
           {status}
         </span>
       </div>
@@ -119,6 +122,17 @@ function IndicatorCard({
           )}
         </Fact>
       </dl>
+
+      {stale ? (
+        <p className="mx-4 mb-4 flex gap-2 rounded-md border border-[var(--rule-soft)] bg-[var(--surface-sunken)] p-3 text-xs leading-relaxed text-[var(--muted)] sm:mx-5 sm:mb-5">
+          <Icon name={STATUS_ICON.stale} size={13} className="mt-0.5 shrink-0" />
+          <span>
+            The latest value, <span className="tabular-nums">{stale.raw.toLocaleString('en-US')}</span>{' '}
+            {def?.unit ?? ''} in {stale.year}, is more than {MAX_SCORED_VALUE_AGE} years old. It
+            does not count toward the score, the scale or the coverage, and it stays in the history.
+          </span>
+        </p>
+      ) : null}
 
       {row.status !== 'observed' && def?.notes ? (
         <p className="mx-4 mb-4 flex gap-2 rounded-md border border-[var(--rule-soft)] bg-[var(--surface-sunken)] p-3 text-xs leading-relaxed text-[var(--muted)] sm:mx-5 sm:mb-5">

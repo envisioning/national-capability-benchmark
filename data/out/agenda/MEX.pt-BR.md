@@ -13,21 +13,21 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | 74,3 | 0,37 (fraca) | sem tendência comparável |
 | Confiança | 41,2 | 0,49 (utilizável) | sem tendência comparável |
 | Aprendizagem | 42,5 | 0,54 (utilizável) | sem tendência comparável |
-| Experimentação | 25,3 | 0,53 (utilizável) | +0,4 em 10 anos, com base em 3 indicadores |
+| Experimentação | 25,2 | 0,53 (utilizável) | +0,4 em 10 anos, com base em 3 indicadores |
 | Adaptação | 65,4 | 0,46 (utilizável) | sem tendência comparável |
-| Construção | 54,8 | 0,57 (utilizável) | +2,5 em 10 anos, com base em 3 indicadores |
+| Construção | 54,9 | 0,57 (utilizável) | +2,5 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 45,2 | 0,43 (fraca) | +8,6 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com as pontuações mais baixas
 
 São as pontuações mais baixas entre as dimensões com evidência utilizável. As dimensões com evidência fraca aparecem na seção seguinte.
 
-### Experimentação: 25,3, solidez utilizável
+### Experimentação: 25,2, solidez utilizável
 
 Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e melhoradas?
 
 - A pontuação se apoia em 6 indicadores observados.
-- No topo da escala, entre as pontuações com evidência utilizável: Coreia do Sul 72,7, Suíça 69,8, Estados Unidos 50,6.
+- No topo da escala, entre as pontuações com evidência utilizável: Coreia do Sul 72,6, Suíça 68,6, Estados Unidos 50,6.
 - Registros de evidência desta dimensão em outros países, com êxitos e retrocessos, que não entram em nenhuma pontuação: The FCA regulatory sandbox (Reino Unido); Yozma, the venture capital catalyst (Israel); Korean regulatory-sandbox system across eight sectors (Coreia do Sul); MAS FinTech Regulatory Sandbox variants (Singapura); British Patient Capital, a public venture-capital catalyst (Reino Unido); ICURe, from university research to spinouts (Reino Unido); Portugal Ventures, a public venture-capital bridge (Portugal); Rede Nacional de Test Beds for company experimentation (Portugal); Zonas Livres Tecnológicas, regulator-supervised experimentation zones (Portugal); Sandbox regulatório do Banco Central, primeiro ciclo (Brasil); Reserve Bank of India regulatory sandbox (Índia); Capital Markets Authority regulatory sandbox (Quênia); SEC Nigeria Regulatory Incubation Program (Nigéria); ADGM RegLab, the first fintech sandbox in the region (Emirados Árabes Unidos); OJK regulatory sandbox for financial-sector technological innovation (Indonésia); Bank Negara Malaysia Fintech Regulatory Sandbox (Malásia); Bank of Thailand regulatory sandbox (Tailândia); Sandbox financiero (Ley 7/2020), and the fall in applications (Espanha); IFWG Regulatory Sandbox (África do Sul); Project-based regulatory sandbox (new technology demonstration scheme) (Japão); CFPB Compliance Assistance Sandbox, rescinded in 2022 and withdrawn again in 2025 (Estados Unidos); CSA Regulatory Sandbox, succeeded by the Financial Innovation Hub (Canadá); ASIC enhanced regulatory sandbox (Austrália); SINTEG-Verordnung, the energy-transition experimentation clause (Alemanha); Experimenten Elektriciteitswet 2015-2018, and its erosion (Países Baixos); Bac à sable réglementaire in the energy sector (França); Italy's FinTech regulatory sandbox, and its contraction (Itália); Bank of Ghana Regulatory Sandbox (Gana); AFSA FinTech Lab at the Astana International Financial Centre (Cazaquistão); Banque Centrale de Tunisie regulatory sandbox, first cohort (Tunísia); Sandbox Regulatório do Banco de Moçambique (Moçambique); Regulatory Sandbox Licence of the Economic Development Board (Maurício); Bank of Uganda regulatory sandbox (Uganda); Regulatory Sandbox Framework for Capital Markets, first cohort (Zâmbia); Securities and Exchange Commission of Zimbabwe regulatory sandbox (Zimbábue); FMA Regulatory Sandbox (Áustria); Regulatorisk sandkasse for AI (Datatilsynet and Digitaliseringsstyrelsen) (Dinamarca); Datatilsynet's regulatory sandbox for privacy-friendly innovation (Noruega); Bank of Lithuania regulatory sandbox, with one test in seven years (Lituânia); Narodna banka Slovenska regulatory sandbox (Eslováquia); Sandbox for AI and blockchain products, Ministry of Digital Transformation and Ukrainian Startup Fund (Ucrânia); Bank of Russia regulatory sandbox (regulativnaya pesochnitsa) (Rússia); JoRegBox, the Central Bank of Jordan regulatory sandbox (Jordânia); Special regulatory regimes (spetsialnye regulyativnye rezhimy) of the National Bank of the Kyrgyz Republic (Quirguistão); SECP Regulatory Sandbox, four cohorts and an open window (Paquistão); Bank of Jamaica FinTech Regulatory Sandbox (Jamaica); Financial Regulatory Commission sandbox regulatory environment (Mongólia); NAMFISA Regulatory Sandbox, microlending cohort (Namíbia); Central Bank of Azerbaijan regulatory sandbox (Azerbaijão).
 - Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
 - Bases rejeitadas: Parcela empresarial do P&D.
@@ -86,7 +86,7 @@ Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 65,4, solidez utilizável
 - Agência: 64,3, solidez utilizável
-- Construção: 54,8, solidez utilizável
+- Construção: 54,9, solidez utilizável
 
 ## Com o que o México conta
 
@@ -107,7 +107,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Adaptação | Assinaturas de banda larga fixa | 21,7 por 100 pessoas | 2024 | 58º de 125 |
 | Adaptação | Perdas na transmissão de eletricidade | 11,1 % da produção | 2024 | 75º de 117 |
 | Adaptação | Emprego informal | 56,9 % do emprego | 2025 | 53º de 102 |
-| Construção | Produto por pessoa ocupada | 48.140,6 US$ PPC constantes de 2021 | 2025 | 61º de 123 |
+| Construção | Produto por pessoa ocupada | 48.140,6 dólares PPC constantes de 2021 | 2025 | 61º de 123 |
 
 ## Agenda de medição
 

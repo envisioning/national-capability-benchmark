@@ -15,7 +15,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Aprendizagem | 41,4 | 0,39 (fraca) | sem tendência comparável |
 | Experimentação | 0,7 | 0,12 (muito fraca) | sem tendência comparável |
 | Adaptação | 42 | 0,59 (utilizável) | sem tendência comparável |
-| Construção | 7,9 | 0,45 (fraca) | -0,1 em 10 anos, com base em 2 indicadores |
+| Construção | 7,9 | 0,45 (fraca) | 0 em 10 anos, com base em 2 indicadores |
 | Propósito compartilhado | 47,4 | 0,28 (fraca) | sem tendência comparável |
 
 ## Dimensões com as pontuações mais baixas
@@ -113,7 +113,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Adaptação | Participação na força de trabalho | 65,8 % das pessoas com 15 anos ou mais | 2025 | 88º de 125 |
 | Adaptação | Assinaturas de banda larga fixa | 0,4 por 100 pessoas | 2024 | 111º de 125 |
 | Adaptação | Emprego informal | 94,2 % do emprego | 2022 | 94º de 102 |
-| Construção | Produto por pessoa ocupada | 7.233,2 US$ PPC constantes de 2021 | 2025 | 115º de 123 |
+| Construção | Produto por pessoa ocupada | 7.233,2 dólares PPC constantes de 2021 | 2025 | 115º de 123 |
 
 ## Agenda de medição
 

@@ -212,6 +212,8 @@ export type CapabilityMapStrings = {
   /** {source} {year} */
   rowSource: string
   noValue: string
+  /** {year} {age}: under a row whose latest value is too old to count. See D159. */
+  rowStale: string
   /** {list}: declared gaps. */
   gapsLine: string
   /** {r} {n}: the dimension's own correlation with income. */

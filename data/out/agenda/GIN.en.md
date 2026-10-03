@@ -15,8 +15,8 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Learning | 17.7 | 0.55 (usable) | no trend |
 | Experimentation | 0.3 | 0.11 (very thin) | no trend |
 | Adaptability | 39.6 | 0.46 (usable) | no trend |
-| Building | 28.6 | 0.44 (thin) | +2.8 over 10 years using 2 indicators |
-| Shared Purpose | 51.5 | 0.1 (very thin) | no trend |
+| Building | 28.6 | 0.44 (thin) | +2.9 over 10 years using 2 indicators |
+| Shared Purpose | not scored | 0.08 (very thin) | no trend |
 
 ## What to raise
 
@@ -53,11 +53,11 @@ How effectively can the system respond when circumstances change?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Shared Purpose: confidence 0.1, very thin
+### Shared Purpose: confidence 0.08, very thin
 
 To what extent can people imagine themselves as participants in a common project?
 
-- Uses 2 observed indicators.
+- Uses one observed indicator.
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
 

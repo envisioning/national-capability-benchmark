@@ -13,9 +13,9 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | 91,6 | 0,39 (fraca) | sem tendência comparável |
 | Confiança | 74,8 | 0,5 (utilizável) | sem tendência comparável |
 | Aprendizagem | 63,9 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 44,2 | 0,33 (fraca) | -0,1 em 10 anos, com base em 3 indicadores |
+| Experimentação | 44,2 | 0,33 (fraca) | -0,2 em 10 anos, com base em 3 indicadores |
 | Adaptação | 76 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 53,8 | 0,57 (utilizável) | -1,5 em 10 anos, com base em 3 indicadores |
+| Construção | 53,9 | 0,57 (utilizável) | -1,5 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 57,7 | 0,42 (fraca) | -0,6 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com as pontuações mais baixas
@@ -27,7 +27,7 @@ São as pontuações mais baixas entre as dimensões com evidência utilizável.
 Em que medida pessoas e organizações conseguem transformar intenção em ação?
 
 - A pontuação se apoia em 4 indicadores observados.
-- No topo da escala, entre as pontuações com evidência utilizável: Nova Zelândia 92,2, Austrália 89,2, Estônia 84,3.
+- No topo da escala, entre as pontuações com evidência utilizável: Nova Zelândia 92,3, Austrália 89,2, Estônia 84,3.
 - Registros de evidência desta dimensão em outros países, com êxitos e retrocessos, que não entram em nenhuma pontuação: Singapore's national ICT-skills measurement and baseline (Singapura); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (Índia); Puntos México Conectado, national digital learning centres (México).
 - Lacunas declaradas: Adultos que realizam tarefas digitais.
 
@@ -67,7 +67,7 @@ Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 - Confiança: 74,8, solidez utilizável
 - Antecipação: 74,6, solidez utilizável
 - Aprendizagem: 63,9, solidez utilizável
-- Construção: 53,8, solidez utilizável
+- Construção: 53,9, solidez utilizável
 
 ## Com o que a Áustria conta
 
@@ -88,7 +88,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Adaptação | Assinaturas de banda larga fixa | 30,1 por 100 pessoas | 2024 | 37º de 125 |
 | Adaptação | Perdas na transmissão de eletricidade | 3,8 % da produção | 2024 | 8º de 117 |
 | Adaptação | Emprego informal | 5,5 % do emprego | 2025 | 22º de 102 |
-| Construção | Produto por pessoa ocupada | 131.259 US$ PPC constantes de 2021 | 2025 | 9º de 123 |
+| Construção | Produto por pessoa ocupada | 131.259 dólares PPC constantes de 2021 | 2025 | 9º de 123 |
 
 ## Agenda de medição
 

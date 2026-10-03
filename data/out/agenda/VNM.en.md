@@ -13,9 +13,9 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Coordination | 80.2 | 0.4 (thin) | no trend |
 | Trust | 42.9 | 0.49 (usable) | no trend |
 | Learning | 43.6 | 0.54 (usable) | no trend |
-| Experimentation | 13.4 | 0.33 (thin) | +1.8 over 10 years using 3 indicators |
+| Experimentation | 13.3 | 0.33 (thin) | +1.7 over 10 years using 3 indicators |
 | Adaptability | 88.1 | 0.62 (usable) | no trend |
-| Building | 75.7 | 0.55 (usable) | +15.9 over 10 years using 3 indicators |
+| Building | 75.8 | 0.55 (usable) | +16 over 10 years using 3 indicators |
 | Shared Purpose | 44.3 | 0.25 (thin) | no trend |
 
 ## What to raise
@@ -83,7 +83,7 @@ How effectively can independent actors organize around shared objectives?
 These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 88.1, confidence usable
-- Building: 75.7, confidence usable
+- Building: 75.8, confidence usable
 - Agency: 61.6, confidence usable
 
 ## What Vietnam has to work with

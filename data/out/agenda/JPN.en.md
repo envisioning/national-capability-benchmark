@@ -13,10 +13,10 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Coordination | 69.4 | 0.39 (thin) | no trend |
 | Trust | 64.4 | 0.5 (usable) | no trend |
 | Learning | 52.4 | 0.55 (usable) | no trend |
-| Experimentation | 61.5 | 0.33 (thin) | -6.9 over 10 years using 3 indicators |
+| Experimentation | 61.6 | 0.33 (thin) | -7 over 10 years using 3 indicators |
 | Adaptability | 66.4 | 0.53 (usable) | no trend |
-| Building | 63.8 | 0.57 (usable) | -1.3 over 10 years using 3 indicators |
-| Shared Purpose | 37.8 | 0.24 (very thin) | no trend |
+| Building | 63.9 | 0.57 (usable) | -1.3 over 10 years using 3 indicators |
+| Shared Purpose | 41.7 | 0.23 (very thin) | no trend |
 
 ## What to raise
 
@@ -27,7 +27,7 @@ These are the lowest scores with usable evidence. Thin evidence appears below.
 How able are individuals and organizations to turn an intention into action?
 
 - Uses 4 observed indicators.
-- Highest usable scores: New Zealand 92.2, Australia 89.2, Estonia 84.3.
+- Highest usable scores: New Zealand 92.3, Australia 89.2, Estonia 84.3.
 - Related deliveries in other countries: Singapore's national ICT-skills measurement and baseline (Singapore); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (India); Puntos México Conectado, national digital learning centres (Mexico).
 - Missing indicators: Adults doing digital tasks.
 
@@ -35,11 +35,11 @@ How able are individuals and organizations to turn an intention into action?
 
 The evidence is too thin to manage these dimensions confidently.
 
-### Shared Purpose: confidence 0.24, very thin
+### Shared Purpose: confidence 0.23, very thin
 
 To what extent can people imagine themselves as participants in a common project?
 
-- Uses 3 observed indicators.
+- Uses 2 observed indicators.
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
 
@@ -65,7 +65,7 @@ These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 66.4, confidence usable
 - Trust: 64.4, confidence usable
-- Building: 63.8, confidence usable
+- Building: 63.9, confidence usable
 - Anticipation: 62.2, confidence usable
 - Learning: 52.4, confidence usable
 

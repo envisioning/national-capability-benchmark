@@ -82,6 +82,8 @@ export type MapRow = {
   /** Position on the dimension's 0 to 100 frame, higher always better. */
   normalized: number | null
   year: number | null
+  /** Year of a latest value set aside as too old to score, else null. See D159. */
+  staleYear: number | null
   source: string
   /** Median normalized value among the peers that have the row. */
   peerMedian: number | null
@@ -257,6 +259,7 @@ export function buildCapabilityMap(input: {
         raw: own?.raw ?? null,
         normalized,
         year: own?.year ?? null,
+        staleYear: own?.staleExcluded?.year ?? null,
         source: own?.source ?? def.source.publisher,
         peerMedian: peerMedian === null ? null : round(peerMedian, 1),
         peersWithValue: peerValues.length,

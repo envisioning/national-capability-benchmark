@@ -264,6 +264,30 @@
                               "gap",
                               "retired"
                             ]
+                          },
+                          "staleExcluded": {
+                            "anyOf": [
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "year": {
+                                    "type": "integer"
+                                  },
+                                  "raw": {
+                                    "type": "number"
+                                  }
+                                },
+                                "required": [
+                                  "year",
+                                  "raw"
+                                ],
+                                "additionalProperties": false
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ],
+                            "default": null
                           }
                         },
                         "required": [
@@ -337,6 +361,10 @@
                                 "type": "null"
                               }
                             ]
+                          },
+                          "stale": {
+                            "type": "boolean",
+                            "default": false
                           },
                           "note": {
                             "type": "string"
@@ -418,6 +446,10 @@
                           },
                           "n": {
                             "type": "integer"
+                          },
+                          "stale": {
+                            "type": "boolean",
+                            "default": false
                           },
                           "note": {
                             "type": "string"

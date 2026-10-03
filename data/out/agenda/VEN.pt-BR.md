@@ -11,12 +11,12 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Antecipação | 0,9 | 0,46 (utilizável) | -5,4 em 10 anos, com base em 2 indicadores |
 | Agência | 26,1 | 0,37 (fraca) | sem tendência comparável |
 | Coordenação | 16,7 | 0,22 (muito fraca) | sem tendência comparável |
-| Confiança | 35 | 0,39 (fraca) | sem tendência comparável |
-| Aprendizagem | 43,2 | 0,19 (muito fraca) | sem tendência comparável |
-| Experimentação | 5,8 | 0,19 (muito fraca) | sem tendência comparável |
+| Confiança | 23,8 | 0,37 (fraca) | sem tendência comparável |
+| Aprendizagem | sem pontuação | 0,16 (muito fraca) | sem tendência comparável |
+| Experimentação | 5,7 | 0,19 (muito fraca) | sem tendência comparável |
 | Adaptação | 48,7 | 0,53 (utilizável) | sem tendência comparável |
-| Construção | 19,1 | 0,27 (fraca) | sem tendência comparável |
-| Propósito compartilhado | 26,5 | 0,14 (muito fraca) | sem tendência comparável |
+| Construção | 8,9 | 0,25 (fraca) | sem tendência comparável |
+| Propósito compartilhado | sem pontuação | 0,12 (muito fraca) | sem tendência comparável |
 
 ## Dimensões com as pontuações mais baixas
 
@@ -44,13 +44,20 @@ Com que eficácia o sistema responde quando as circunstâncias mudam?
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
 
-### Propósito compartilhado: solidez 0,14, muito fraca
+### Propósito compartilhado: solidez 0,12, muito fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
-- A pontuação se apoia em 2 indicadores observados.
+- A pontuação se apoia em um indicador observado.
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e prestação de contas.
+
+### Aprendizagem: solidez 0,16, muito fraca
+
+Com que eficácia o país adquire, distribui e atualiza conhecimento?
+
+- A pontuação se apoia em um indicador observado.
+- Lacunas declaradas: Participação de adultos em aprendizagem.
 
 ### Experimentação: solidez 0,19, muito fraca
 
@@ -60,13 +67,6 @@ Com que facilidade novas abordagens podem ser tentadas, testadas, abandonadas e 
 - Lacunas declaradas: Operações de capital de risco, Empresas em sandboxes regulatórios, Empresas derivadas de pesquisa universitária.
 - Bases rejeitadas: Parcela empresarial do P&D.
 
-### Aprendizagem: solidez 0,19, muito fraca
-
-Com que eficácia o país adquire, distribui e atualiza conhecimento?
-
-- A pontuação se apoia em 2 indicadores observados.
-- Lacunas declaradas: Participação de adultos em aprendizagem.
-
 ### Coordenação: solidez 0,22, muito fraca
 
 Com que eficácia atores independentes conseguem se organizar em torno de objetivos comuns?
@@ -75,13 +75,21 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 - Lacunas declaradas: Colaboração universidade-empresa, Colaboração público-privada.
 - Bases rejeitadas: Efetividade governamental, Qualidade regulatória, Desempenho logístico.
 
-### Construção: solidez 0,27, fraca
+### Construção: solidez 0,25, fraca
 
 Em que medida o país consegue transformar planos e conhecimento em sistemas que funcionam?
 
-- A pontuação se apoia em 3 indicadores observados.
+- A pontuação se apoia em 2 indicadores observados.
 - Lacunas declaradas: Entrega de grandes projetos, Empresas jovens que ganham escala.
 - Bases rejeitadas: Qualidade da infraestrutura logística.
+
+### Confiança: solidez 0,37, fraca
+
+Quanta cooperação é possível para além do círculo pessoal mais próximo?
+
+- A pontuação se apoia em 4 indicadores observados.
+- Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
+- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídios dolosos.
 
 ### Agência: solidez 0,37, fraca
 
@@ -89,14 +97,6 @@ Em que medida pessoas e organizações conseguem transformar intenção em açã
 
 - A pontuação se apoia em 3 indicadores observados.
 - Lacunas declaradas: Adultos que realizam tarefas digitais.
-
-### Confiança: solidez 0,39, fraca
-
-Quanta cooperação é possível para além do círculo pessoal mais próximo?
-
-- A pontuação se apoia em 5 indicadores observados.
-- Lacunas declaradas: Confiança nas instituições públicas, Taxa de resolução de processos judiciais.
-- Bases rejeitadas: Estado de direito, Controle da corrupção, Taxa de homicídios dolosos.
 
 ## Com o que a Venezuela conta
 

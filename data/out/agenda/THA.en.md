@@ -13,9 +13,9 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Coordination | 80.3 | 0.41 (thin) | no trend |
 | Trust | 56.6 | 0.5 (usable) | no trend |
 | Learning | 42.4 | 0.55 (usable) | no trend |
-| Experimentation | 14 | 0.33 (thin) | +0.1 over 10 years using 3 indicators |
+| Experimentation | 13.8 | 0.33 (thin) | +0.2 over 10 years using 3 indicators |
 | Adaptability | 87.6 | 0.62 (usable) | no trend |
-| Building | 64.7 | 0.57 (usable) | -0.4 over 10 years using 3 indicators |
+| Building | 64.8 | 0.57 (usable) | -0.4 over 10 years using 3 indicators |
 | Shared Purpose | 65.4 | 0.43 (thin) | +3.5 over 10 years using 2 indicators |
 
 ## What to raise
@@ -45,7 +45,7 @@ How capable is the country of identifying and preparing for emerging change?
 How able are individuals and organizations to turn an intention into action?
 
 - Uses 4 observed indicators.
-- Highest usable scores: New Zealand 92.2, Australia 89.2, Estonia 84.3.
+- Highest usable scores: New Zealand 92.3, Australia 89.2, Estonia 84.3.
 - Related deliveries in other countries: Singapore's national ICT-skills measurement and baseline (Singapore); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (India); Puntos México Conectado, national digital learning centres (Mexico).
 - Missing indicators: Adults doing digital tasks.
 
@@ -82,7 +82,7 @@ To what extent can people imagine themselves as participants in a common project
 These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 87.6, confidence usable
-- Building: 64.7, confidence usable
+- Building: 64.8, confidence usable
 - Trust: 56.6, confidence usable
 
 ## What Thailand has to work with

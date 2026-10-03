@@ -9,13 +9,13 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 54.4 | 0.46 (usable) | +23.2 over 10 years using 2 indicators |
-| Agency | 51.9 | 0.56 (usable) | no trend |
+| Agency | 52 | 0.56 (usable) | no trend |
 | Coordination | 86.1 | 0.41 (thin) | no trend |
 | Trust | 58.2 | 0.5 (usable) | no trend |
 | Learning | 50.9 | 0.55 (usable) | no trend |
-| Experimentation | 11.8 | 0.33 (thin) | -3.6 over 10 years using 3 indicators |
+| Experimentation | 11.4 | 0.33 (thin) | -3.4 over 10 years using 3 indicators |
 | Adaptability | 77.9 | 0.59 (usable) | no trend |
-| Building | 74 | 0.57 (usable) | +6.2 over 10 years using 3 indicators |
+| Building | 74.1 | 0.57 (usable) | +6.2 over 10 years using 3 indicators |
 | Shared Purpose | 55.7 | 0.4 (thin) | -1 over 10 years using 2 indicators |
 
 ## What to measure first
@@ -51,10 +51,10 @@ How effectively can independent actors organize around shared objectives?
 These dimensions score at least 50 with usable evidence.
 
 - Adaptability: 77.9, confidence usable
-- Building: 74, confidence usable
+- Building: 74.1, confidence usable
 - Trust: 58.2, confidence usable
 - Anticipation: 54.4, confidence usable
-- Agency: 51.9, confidence usable
+- Agency: 52, confidence usable
 - Learning: 50.9, confidence usable
 
 ## What Malaysia has to work with

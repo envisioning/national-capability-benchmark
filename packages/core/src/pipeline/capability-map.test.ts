@@ -90,6 +90,7 @@ function dimension(score: number | null, rows: Record<string, number | null>, co
       outOfFrame: false,
       series: [],
       status: normalized === null ? 'gap' : 'observed',
+      staleExcluded: null,
     })) as DimensionResult['indicators'],
     checks: [],
     conditions: Object.entries(conditions).map(([indicatorId, value]) => ({
@@ -104,6 +105,7 @@ function dimension(score: number | null, rows: Record<string, number | null>, co
       sourceTier: value === null ? null : 'international_organization',
       rank: null,
       n: 3,
+      stale: false,
       note: '',
     })),
   }

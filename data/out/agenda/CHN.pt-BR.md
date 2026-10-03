@@ -9,13 +9,13 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 30,1 | 0,46 (utilizável) | +10,7 em 10 anos, com base em 2 indicadores |
-| Agência | 76,2 | 0,56 (utilizável) | sem tendência comparável |
+| Agência | 76,3 | 0,56 (utilizável) | sem tendência comparável |
 | Coordenação | 67,9 | 0,41 (fraca) | sem tendência comparável |
 | Confiança | 55,3 | 0,5 (utilizável) | sem tendência comparável |
 | Aprendizagem | 76 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 100 | 0,24 (muito fraca) | +19,4 em 10 anos, com base em 3 indicadores |
+| Experimentação | 100 | 0,24 (muito fraca) | +19,5 em 10 anos, com base em 3 indicadores |
 | Adaptação | 79,6 | 0,46 (utilizável) | sem tendência comparável |
-| Construção | 77,2 | 0,57 (utilizável) | -5 em 10 anos, com base em 3 indicadores |
+| Construção | 77,4 | 0,57 (utilizável) | -5,1 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 29,9 | 0,41 (fraca) | +0,8 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com as pontuações mais baixas
@@ -64,8 +64,8 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 79,6, solidez utilizável
-- Construção: 77,2, solidez utilizável
-- Agência: 76,2, solidez utilizável
+- Construção: 77,4, solidez utilizável
+- Agência: 76,3, solidez utilizável
 - Aprendizagem: 76, solidez utilizável
 - Confiança: 55,3, solidez utilizável
 
@@ -87,7 +87,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Adaptação | Participação na força de trabalho | 74 % das pessoas com 15 anos ou mais | 2025 | 47º de 125 |
 | Adaptação | Assinaturas de banda larga fixa | 47,2 por 100 pessoas | 2024 | 3º de 125 |
 | Adaptação | Perdas na transmissão de eletricidade | 3,4 % da produção | 2023 | 4º de 117 |
-| Construção | Produto por pessoa ocupada | 48.125,8 US$ PPC constantes de 2021 | 2025 | 62º de 123 |
+| Construção | Produto por pessoa ocupada | 48.125,8 dólares PPC constantes de 2021 | 2025 | 62º de 123 |
 
 ## Agenda de medição
 

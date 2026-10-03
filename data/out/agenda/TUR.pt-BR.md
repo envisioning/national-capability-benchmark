@@ -9,13 +9,13 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 47,9 | 0,46 (utilizável) | +9,1 em 10 anos, com base em 2 indicadores |
-| Agência | 51 | 0,56 (utilizável) | sem tendência comparável |
+| Agência | 51,1 | 0,56 (utilizável) | sem tendência comparável |
 | Coordenação | 65,7 | 0,39 (fraca) | sem tendência comparável |
 | Confiança | 46,2 | 0,5 (utilizável) | sem tendência comparável |
 | Aprendizagem | 35 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 62,7 | 0,33 (fraca) | +15,4 em 10 anos, com base em 3 indicadores |
+| Experimentação | 61,4 | 0,33 (fraca) | +15,1 em 10 anos, com base em 3 indicadores |
 | Adaptação | 80,3 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 52,2 | 0,57 (utilizável) | +5 em 10 anos, com base em 3 indicadores |
+| Construção | 52,3 | 0,57 (utilizável) | +5 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 35,7 | 0,42 (fraca) | -3,6 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com as pontuações mais baixas
@@ -83,8 +83,8 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 80,3, solidez utilizável
-- Construção: 52,2, solidez utilizável
-- Agência: 51, solidez utilizável
+- Construção: 52,3, solidez utilizável
+- Agência: 51,1, solidez utilizável
 
 ## Com o que a Turquia conta
 
@@ -105,7 +105,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Adaptação | Assinaturas de banda larga fixa | 23,4 por 100 pessoas | 2024 | 55º de 125 |
 | Adaptação | Perdas na transmissão de eletricidade | 8,3 % da produção | 2024 | 51º de 117 |
 | Adaptação | Emprego informal | 26,6 % do emprego | 2025 | 36º de 102 |
-| Construção | Produto por pessoa ocupada | 94.942 US$ PPC constantes de 2021 | 2025 | 28º de 123 |
+| Construção | Produto por pessoa ocupada | 94.942 dólares PPC constantes de 2021 | 2025 | 28º de 123 |
 
 ## Agenda de medição
 

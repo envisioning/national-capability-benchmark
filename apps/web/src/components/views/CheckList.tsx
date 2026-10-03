@@ -1,4 +1,5 @@
 import { Icon } from '@/components/Icon'
+import { MAX_SCORED_VALUE_AGE } from '@ncb/core'
 import type { CheckResult } from '@ncb/core'
 
 /**
@@ -37,6 +38,12 @@ export function CheckList({ checks }: { checks: CheckResult[] }) {
               {c.direction === 'lower_better' ? 'lower is better' : 'higher is better'}.{' '}
               {c.definition}
             </p>
+            {c.stale ? (
+              <p className="mt-1 inline-flex items-center gap-1.5 text-xs text-[var(--muted)]">
+                <Icon name="clock" size={13} />
+                The value is from {c.year}, more than {MAX_SCORED_VALUE_AGE} years old.
+              </p>
+            ) : null}
             <p className="mt-1 max-w-3xl text-xs leading-relaxed text-[var(--muted)]">{c.note}</p>
           </li>
         ))}

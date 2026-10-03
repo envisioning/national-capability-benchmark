@@ -8629,3 +8629,132 @@ the opening taking it for the strong claim, which would cut it back to the
 verdict section's link alone; the owner reopening outside funding, which
 restores an ask without naming windows; or a Portuguese contact form
 accepted by a decision that supersedes D71's one inbox.
+
+---
+
+## D159 — A value more than 15 years old does not count toward a score
+
+*Recorded 2026-10-03. Owner's decision; dataset 9.2.0. Amends D22 and D45 in
+how a cell is observed; extends D47 in what sets the frame.*
+
+**Decision.** A cell whose latest value is more than `MAX_SCORED_VALUE_AGE`
+(15) years before the reference year is treated as missing for the score, the
+frame and coverage. The reference year is the `currentYear` the scoring run
+is given, which the CLI sets to the calendar year the dataset is generated:
+in a 2026 release the oldest year counted is 2011, and 2010 is set aside.
+The constant and the test, `isTooOldToScore`, live in
+`packages/core/src/pipeline/confidence.ts` beside the confidence bands; the
+rule names no country and reads only the year.
+
+How it meets the rest of the model:
+
+- **Score and coverage floor (D45).** A set-aside cell is not observed. It
+  leaves the mean and `observedIndicators`, so a dimension that falls below
+  `MIN_INDICATORS_FOR_SCORE` publishes no score. The Delphi fallback (D63)
+  still needs zero observed rows, so a dimension left on one row reads
+  `none`.
+- **Confidence.** Coverage falls, because the row stays in the denominator
+  as an unobserved one. Recency and source quality average only observed
+  cells, so a set-aside value leaves them; a value at 13 to 15 years already
+  sat on the 0.1 recency floor, so the age limit is where that floor stops
+  counting at all.
+- **Frame (D47).** A set-aside value is not on the ruler: it sets no Tukey
+  fence and no endpoint. Every country is still scored against the frame,
+  which is now every country's latest value inside the limit.
+- **Trend (D22, D24).** Momentum already reads each end with a five-year
+  maximum age, so the limit does not change what a trend reads; it moves only
+  through the frame. Each row's yearly `series` stays published in full,
+  set-aside years included, normalised against the current frame, so an old
+  value may clamp there.
+- **The row says so.** The indicator row reads `missing` with
+  `staleExcluded: { year, raw }`, and the viewer prints the year and why it
+  does not count on the country page and on the capability map, through
+  `Lexicon.capabilityMap.rowStale` in every lexicon. The per-indicator files
+  under `data/out/indicators/` list only scored cells, so a set-aside value
+  is absent there as it is from the frame.
+- **Conditions and checks are kept and marked.** Neither is scored, so the
+  limit has nothing to remove them from. A condition is what a country has to
+  work with and a check sits beside the score; an old value is still the
+  publisher's value, and the reader decides what a 1990 enrolment rate says.
+  Each carries `stale: true` and the viewer prints its age. A condition keeps
+  its rank among the countries with a value.
+
+Measured against dataset 9.1.0, with no re-ingest (the observation file is
+unchanged):
+
+- **25 scored cells are set aside:** Shared purpose 11, Experimentation 6,
+  Building 3, Agency 2, Adaptability 1, Trust 1, Learning 1. 45 condition
+  values and three check values are marked.
+- **Nine scores are withdrawn in eight countries**, each now on one row:
+  Experimentation for Burkina Faso, the Republic of the Congo and Mali;
+  Shared purpose for Guinea, The Gambia, Papua New Guinea, Trinidad and
+  Tobago and Venezuela; Learning for Venezuela. Scored countries:
+  Experimentation 125 to 122, Shared purpose 123 to 118, Learning 124 to 123.
+- **Mean confidence:** Experimentation 0.318 to 0.317, Shared purpose 0.319
+  to 0.317; the other seven unchanged.
+- **Correlation with log GDP per capita:** Agency 0.466 to 0.445,
+  Experimentation 0.728 to 0.719 (n 123 to 120), Building 0.572 to 0.571,
+  Shared purpose 0.259 to 0.250 (n 122 to 118); the other five unchanged.
+- **The guardrail** (mean confidence against log GDP, D117) moves from 0.526
+  to 0.527 (n 123).
+- **D137:** the first factor's share goes from 0.504 to 0.494, on 115
+  complete countries instead of 123, and its correlation with income from
+  0.815 to 0.814.
+- **D138:** every verdict holds. The residual structure share is 0.309
+  (0.308), on 115 complete cases (122); peers still differ, the release
+  check still reads mixed, leave-one-out still robust, the income share still
+  little, and the weak claim holds.
+- **178 dimension scores move**, 393 normalised cells with them. The largest:
+  Azerbaijan's Shared purpose 46.7 to 23.9 (its 2005 Gini set aside);
+  Malawi's Agency 37.7 to 56.6 and Haiti's 14.0 to 21.1 (new business
+  density from 2009 and 2010 set aside, leaving the two 2019 Doing Business
+  rows, A14); Indonesia's Shared purpose 66.2 to 84.3 and Iran's 55.0 to
+  72.8 (tax revenue from 2009); Jordan's Shared purpose 44.8 to 31.3;
+  Venezuela's Trust 35.0 to 23.8; Cuba's Adaptability 64.6 to 55.8 (its 2010
+  long-term unemployment share, so Cuba joins A16).
+- **The three cases that prompted it.** Venezuela's manufacturing share,
+  14.2% in 1990, is set aside, so its Building goes from 19.1 (118th) to 8.9
+  (124th) on two rows (A17). Mali's one patent filing in 1981 is set aside,
+  so its Experimentation, 0.1, is withdrawn. The Gambia's 1990 tax revenue is
+  set aside, so its Shared purpose, 54.0, is withdrawn.
+
+The Doing Business rows frozen at 2019 (A6, A14) are inside the limit until
+the 2034 release, so the rule does not touch them now.
+
+The release is dataset 9.2.0, minor under D37: fields are added
+(`staleExcluded` on an indicator row, `stale` on a condition and a check),
+no country is added and no field is removed, so the frame is not rebased in
+D47's sense even though which values set it changes. Scores, coverage and
+confidence restate, and the changelog says which.
+
+The panel run in `data/delphi/latest.json` is for dataset 9.0.1, and
+`isDelphiRunForDataset` requires an exact match, so since 9.1.0 no panel
+estimate is published beside a score. That is unchanged here and is not
+this decision's doing; it needs either a run on the current dataset or a
+decision on how far a run may carry across a minor release.
+
+**Why.** A value scored at any age said the same thing as a current one in
+the score, and only the recency part of confidence knew the difference. A
+1981 patent count, a 1990 tax ratio and a 2005 Gini describe a different
+country. Fifteen years keeps every Doing Business row (2019) and every
+survey round of the last decade and a half, and drops what no reader would
+quote as current. A cut on the year alone is a rule a reader can recompute
+from the published files and stops the choice becoming a list of countries.
+
+**Cost.** Coverage falls where publishers stopped, which is mostly in poor
+countries: of the eight countries that lose a score, six are low or
+lower-middle income. The guardrail barely moves, because each loses one
+cell, but the factor test and the residual structure now run on 115
+complete countries instead of 122 and 123. A country with one old value on
+a row that a newer source would fill reads empty until that source exists,
+where before it read something. The limit is a hard edge: a value from 2011
+counts fully in a 2026 release and a value from 2010 does not, and every
+year the line moves forward one year, so a re-score without a re-ingest
+restates when the calendar year turns.
+
+**Overturned by.** Evidence that a set-aside value describes the country as
+well as a current one on some row (a slow-moving construct with a stable
+series), which would set a per-row limit in the registry rather than raise
+this one; or a reader of a withdrawn score showing the old value told them
+something the empty dimension does not, which would publish the old value
+on a separate, unscored line.

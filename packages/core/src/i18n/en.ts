@@ -271,6 +271,7 @@ export const EN: Lexicon = {
     colPeerMedian: 'Peer median',
     rowSource: '{source}, {year}',
     noValue: 'no value',
+    rowStale: 'The latest value is from {year}, more than {age} years old, so it does not count toward the score.',
     gapsLine: 'No comparable source yet, so lowering confidence: {list}.',
     dimensionIncome:
       'The {dimension} score tracks GDP per capita at r = {r} across {n} countries.',

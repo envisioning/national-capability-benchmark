@@ -85,3 +85,22 @@ export function isThinEvidence(value: number): boolean {
   const id = confidenceBand(value).id
   return id === 'thin' || id === 'very_thin'
 }
+
+/**
+ * How old a value may be, in years before the reference year, and still count.
+ *
+ * The reference year is the `currentYear` a scoring run is given (see
+ * `scoreAll` in score.ts), which the
+ * CLI sets to the year the dataset is generated. A cell whose latest value is
+ * more than this many years older is treated as missing for the score, the
+ * frame and coverage: in 2026 the oldest year counted is 2011. The value stays
+ * published in the row's yearly series and is named on the row as set aside,
+ * so a reader sees what was there and why it does not count. Conditions and
+ * checks are never scored, so they keep an old value and mark it. See D159.
+ */
+export const MAX_SCORED_VALUE_AGE = 15
+
+/** True when a value from `year` is too old to count in a run at `referenceYear`. */
+export function isTooOldToScore(year: number, referenceYear: number): boolean {
+  return referenceYear - year > MAX_SCORED_VALUE_AGE
+}

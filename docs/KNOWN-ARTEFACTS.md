@@ -71,9 +71,12 @@ The filing rows count filings at a national office, so a country whose
 residents file at a regional office reads thin or stale. The Netherlands and
 Belgium file trademarks and designs at the Benelux office. Six members of
 OAPI, the regional office for francophone Africa, are in the frame, and the
-national series they do have are old: Mali's patent row is one filing in
-1981, the Republic of the Congo's is from 1988 and Côte d'Ivoire's from 2012.
-Mali scores 0.1, 124th of 125, partly on a filing count 45 years out of date.
+national series they do have are old. A value more than 15 years old does
+not count (D159), so on dataset 9.2.0 Mali's patent row (one filing in
+1981), the Republic of the Congo's (1988) and Burkina Faso's patent and
+design rows (2010) are set aside, and each of the three keeps one scored row
+and publishes no Experimentation score. Côte d'Ivoire's patent row is from
+2012 and still counts, at the recency floor.
 At the other end China scores 100, first of 125, on the three filing rows
 alone: each sits at the top of its frame, the filings were subsidised (D126),
 and the repository row that would temper them is held by the access gate.
@@ -674,10 +677,16 @@ registration rules, and the one current row that is not a business count is
 a perception (A15).
 
 Where new business density is missing, Agency is the two frozen rows and
-perceived control. On dataset 9.0.0 that holds for the United States (82.1),
+perceived control. On dataset 9.2.0 that holds for the United States (82.1),
 Nicaragua (79.8), Lebanon (47.1) and Venezuela (26.1), each at confidence
 0.367. Sudan has neither new business density nor perceived control, so its
-53.6 is the two 2019 rows alone, at confidence 0.222.
+53.6 is the two 2019 rows alone, at confidence 0.222. Haiti and Malawi are in
+the same position: their new business density is from 2010 and 2009, older
+than D159 lets a value count, so their 21.1 and 56.6 are the two 2019 rows
+alone, at confidence 0.222.
+
+The Doing Business rows themselves are inside D159's 15 years until the
+2034 release, so the rule does not touch them yet.
 
 Read Agency through its confidence. The fix is a behavioural row that observes
 people acting, which the O1 triage sweep did not find with frame coverage.
@@ -727,7 +736,7 @@ is in view.
 
 ---
 
-## A16 — Adaptability reads low unemployment unchecked in 15 countries
+## A16 — Adaptability reads low unemployment unchecked in 16 countries
 
 **Severity: low.**
 
@@ -739,7 +748,10 @@ products (D149). 15 countries have no long-term share. ILOSTAT publishes none
 for India, China, Haiti, Uzbekistan, Guinea, Tajikistan, Papua New Guinea, the
 Republic of the Congo and Trinidad and Tobago, and the plausibility gate holds
 every year it publishes for South Korea, Mexico, Peru, the Philippines, El
-Salvador and Uruguay. Those 15 are scored on the other three rows, so the
+Salvador and Uruguay. On dataset 9.2.0 Cuba joins them: its only share is
+from 2010, which D159 sets aside, and it reads 55.8 (84th) on a 1.7%
+unemployment rate (7th lowest) and new export products ranked 123rd. Those
+16 are scored on the other three rows, so the
 unemployment rate is a third of each score with nothing beside it that tells
 a fluid labour market from one where nobody can afford to stay unemployed.
 
@@ -763,15 +775,15 @@ a fluid labour market from one where nobody can afford to stay unemployed.
 
 Ranks are of 125: lowest unemployment first, most new products first.
 Informal employment is a condition beside the score (D150) and is not ranked
-here. All 15 carry Adaptability confidence 0.459; the other 110 run from
-0.478 to 0.617, mean 0.597.
+here. On dataset 9.2.0 all 16 carry Adaptability confidence 0.459; the
+other 109 run from 0.478 to 0.617, mean 0.598.
 
 **What is wrong.** In India, Mexico, El Salvador, Tajikistan and Peru most
 work is informal, and a person who loses a job there takes any work within
 weeks, so the unemployment rate reads low because unemployment cannot be
 afforded. On four rows that low rate is checked by the long-term share:
 Ethiopia (3.3%), Nigeria (3.1%) and Burundi (0.9%) carry long-term shares of
-53.9%, 56.1% and 95.5% and rank 92nd, 107th and 114th. For the 15, the check
+53.9%, 56.1% and 95.5% and rank 92nd, 107th and 114th. For the 16, the check
 is the new export products row, which observes reallocation rather than
 slack, and the informality figure printed beside the score, which a reader
 has to put together with the rate. India's fifth place rests on a low rate and
@@ -781,36 +793,31 @@ the frame and a rate in the middle of it. China, Uzbekistan, the Philippines,
 Trinidad and Tobago, Papua New Guinea, Guinea and the Republic of the Congo
 have no informality value either.
 
-**Fix.** A long-term share for the 15: a labour force survey that records
+**Fix.** A long-term share for the 16: a labour force survey that records
 the length of a search, passed through the same gate. ILOSTAT's duration
 tables give the same questionnaire signature at every band for six of the
 gate-held countries (see the A16 fixes memo), so for them this waits on a
 survey change. The two declared gaps would add rows for every country, but
 neither has a source.
 
-## A17 — Venezuela's manufacturing row reads 1990
+## A17 — Venezuela's Building has no manufacturing row
 
 **Severity: low.**
 
-The figures in this entry are from dataset 9.1.0.
+The figures in this entry are from dataset 9.2.0.
 
-The World Bank publishes manufacturing value added (`NV.IND.MANF.ZS`) for
-Venezuela as exactly 0% of GDP for every year from 1991 to 2011, its last
-year. The zero is a placeholder, and the ingest drops it under D157, so
-Venezuela's latest value on the row is 14.2% from 1990. The scorer takes the
-latest observation whatever its age, so Building reads a manufacturing
-share 36 years old. It counts at the recency floor in confidence, which is
-0.266 for Venezuela's Building, and fully in the score, 19.1 and 118th of
-125. Whether Venezuela's manufacturing share today is near 14% nobody in
-the frame's sources says; the World Bank prints nothing after 2011 that is
-not a zero.
+The World Bank publishes Venezuela's manufacturing value added
+(`NV.IND.MANF.ZS`) as exactly 0% of GDP for every year from 1991 to 2011,
+its last year. The ingest drops those zeros as placeholders (D157), and the
+one value before them, 14.2% in 1990, is more than 15 years old and does not
+count (D159). So the row a reader would most expect to describe a
+petro-state's industrial base is empty, and Venezuela's Building, 8.9 and
+124th of 125 at confidence 0.251, rests on two rows: the 2019 Doing Business
+electricity connection score (A6) and economic fitness.
 
-Venezuela is the extreme case of a wider pattern: Mali's resident patents
-read 1981 and Gambia's tax revenue 1990. Those rows have a real value from
-those years; Venezuela's has a real value only from the year before the
-publisher stopped measuring.
+Nothing in the frame's sources says what Venezuela's manufacturing share is
+today. The score reads low on the two rows it has, and the coverage part of
+its confidence says how much is missing.
 
-**Fix.** A national source for Venezuela's manufacturing value added,
-published and comparable, or a maximum age past which a value is not
-scored. The second is a frame-wide rule that would move every row where a
-country's latest value is old, so it needs its own decision.
+**Fix.** A national or regional source for Venezuela's manufacturing value
+added, published and comparable with the World Bank series.

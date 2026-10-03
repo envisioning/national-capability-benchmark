@@ -15,7 +15,7 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Aprendizagem | 66 | 0,55 (utilizável) | sem tendência comparável |
 | Experimentação | 42,3 | 0,33 (fraca) | -2,6 em 10 anos, com base em 3 indicadores |
 | Adaptação | 79,3 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 52,8 | 0,57 (utilizável) | +6,3 em 10 anos, com base em 3 indicadores |
+| Construção | 52,9 | 0,57 (utilizável) | +6,4 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 75 | 0,42 (fraca) | -2,6 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com evidência fraca
@@ -55,7 +55,7 @@ Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 - Adaptação: 79,3, solidez utilizável
 - Agência: 72,8, solidez utilizável
 - Aprendizagem: 66, solidez utilizável
-- Construção: 52,8, solidez utilizável
+- Construção: 52,9, solidez utilizável
 
 ## Com o que a Dinamarca conta
 
@@ -76,7 +76,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Adaptação | Assinaturas de banda larga fixa | 43,4 por 100 pessoas | 2024 | 10º de 125 |
 | Adaptação | Perdas na transmissão de eletricidade | 6,2 % da produção | 2024 | 30º de 117 |
 | Adaptação | Emprego informal | 2,2 % do emprego | 2025 | 4º de 102 |
-| Construção | Produto por pessoa ocupada | 140.396,5 US$ PPC constantes de 2021 | 2025 | 7º de 123 |
+| Construção | Produto por pessoa ocupada | 140.396,5 dólares PPC constantes de 2021 | 2025 | 7º de 123 |
 
 ## Agenda de medição
 

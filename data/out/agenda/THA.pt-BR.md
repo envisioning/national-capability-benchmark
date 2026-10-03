@@ -13,9 +13,9 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | 80,3 | 0,41 (fraca) | sem tendência comparável |
 | Confiança | 56,6 | 0,5 (utilizável) | sem tendência comparável |
 | Aprendizagem | 42,4 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 14 | 0,33 (fraca) | +0,1 em 10 anos, com base em 3 indicadores |
+| Experimentação | 13,8 | 0,33 (fraca) | +0,2 em 10 anos, com base em 3 indicadores |
 | Adaptação | 87,6 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 64,7 | 0,57 (utilizável) | -0,4 em 10 anos, com base em 3 indicadores |
+| Construção | 64,8 | 0,57 (utilizável) | -0,4 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 65,4 | 0,43 (fraca) | +3,5 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com as pontuações mais baixas
@@ -45,7 +45,7 @@ Em que medida o país consegue identificar mudanças emergentes e se preparar pa
 Em que medida pessoas e organizações conseguem transformar intenção em ação?
 
 - A pontuação se apoia em 4 indicadores observados.
-- No topo da escala, entre as pontuações com evidência utilizável: Nova Zelândia 92,2, Austrália 89,2, Estônia 84,3.
+- No topo da escala, entre as pontuações com evidência utilizável: Nova Zelândia 92,3, Austrália 89,2, Estônia 84,3.
 - Registros de evidência desta dimensão em outros países, com êxitos e retrocessos, que não entram em nenhuma pontuação: Singapore's national ICT-skills measurement and baseline (Singapura); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (Índia); Puntos México Conectado, national digital learning centres (México).
 - Lacunas declaradas: Adultos que realizam tarefas digitais.
 
@@ -82,7 +82,7 @@ Até que ponto as pessoas conseguem se ver como participantes de um projeto comu
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 87,6, solidez utilizável
-- Construção: 64,7, solidez utilizável
+- Construção: 64,8, solidez utilizável
 - Confiança: 56,6, solidez utilizável
 
 ## Com o que a Tailândia conta
@@ -104,7 +104,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Adaptação | Assinaturas de banda larga fixa | 14,9 por 100 pessoas | 2024 | 69º de 125 |
 | Adaptação | Perdas na transmissão de eletricidade | 7,2 % da produção | 2023 | 43º de 117 |
 | Adaptação | Emprego informal | 63,2 % do emprego | 2024 | 57º de 102 |
-| Construção | Produto por pessoa ocupada | 39.617,4 US$ PPC constantes de 2021 | 2025 | 73º de 123 |
+| Construção | Produto por pessoa ocupada | 39.617,4 dólares PPC constantes de 2021 | 2025 | 73º de 123 |
 
 ## Agenda de medição
 

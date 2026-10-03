@@ -30,6 +30,7 @@ import type {
   Observation,
   SourceTier,
 } from '../model/index.js'
+import { isTooOldToScore } from './confidence.js'
 import { applyTransform, buildFrame, scoreAgainstFrame } from './normalize.js'
 import { buildHistory, indicatorSeries, momentumFor } from './trend.js'
 import type { Frame } from './normalize.js'
@@ -45,6 +46,9 @@ import { iqr, mean, median, round } from './stats.js'
  * rather than see a number standing in for it. See D45.
  */
 export const MIN_INDICATORS_FOR_SCORE = 2
+
+/** A latest value set aside by `MAX_SCORED_VALUE_AGE`: what it was and its year. */
+export type StaleValue = { year: number; raw: number }
 
 export type Cell = {
   indicatorId: string
@@ -141,7 +145,11 @@ export function buildFrames(
   for (const def of INDICATORS) {
     if (!isScored(def)) continue
     if (opts.exclude?.has(def.id)) continue
-    const rows = transformedRows(def, byKey)
+    /* A value too old to score is not on the ruler either: it never sets a
+     * fence or an endpoint. See D159. */
+    const rows = transformedRows(def, byKey).filter(
+      (r) => !isTooOldToScore(r.obs.year, opts.currentYear),
+    )
     const frame = buildFrame(
       rows.map((r) => r.transformed),
       opts.winsorK ?? 3,
@@ -164,7 +172,9 @@ export function buildMatrix(
     if (!isScored(def)) continue
     if (opts.exclude?.has(def.id)) continue
 
-    const rows = transformedRows(def, byKey)
+    const rows = transformedRows(def, byKey).filter(
+      (r) => !isTooOldToScore(r.obs.year, opts.currentYear),
+    )
     const frame = frames.get(def.id)
     if (!frame) continue
 
@@ -188,10 +198,37 @@ export function buildMatrix(
   return matrix
 }
 
+/**
+ * indicatorId -> iso3 -> the latest value `MAX_SCORED_VALUE_AGE` set aside.
+ *
+ * Only a value that would otherwise have been scored is listed: a scored row,
+ * a transform that resolves, and no newer value. See D159.
+ */
+export function staleValues(
+  observations: Observation[],
+  opts: ScoreOptions,
+): Map<string, Map<string, StaleValue>> {
+  const byKey = latest(observations)
+  const out = new Map<string, Map<string, StaleValue>>()
+  for (const def of INDICATORS) {
+    if (!isScored(def)) continue
+    if (opts.exclude?.has(def.id)) continue
+    const inner = new Map<string, StaleValue>()
+    for (const r of transformedRows(def, byKey)) {
+      if (isTooOldToScore(r.obs.year, opts.currentYear)) {
+        inner.set(r.iso3, { year: r.obs.year, raw: r.obs.value })
+      }
+    }
+    if (inner.size > 0) out.set(def.id, inner)
+  }
+  return out
+}
+
 function indicatorRow(
   def: IndicatorDef,
   cell: Cell | undefined,
   series: IndicatorResult['series'],
+  stale: StaleValue | undefined,
 ): IndicatorResult {
   const status =
     def.ingest === 'gap'
@@ -215,6 +252,7 @@ function indicatorRow(
     outOfFrame: cell ? cell.outOfFrame : false,
     series,
     status,
+    staleExcluded: !cell && stale ? { year: stale.year, raw: round(stale.raw, 3) } : null,
   }
 }
 
@@ -300,6 +338,7 @@ function checkRows(
   values: Map<string, Map<string, CheckValue>>,
   dimension: Dimension,
   iso3: string,
+  referenceYear: number,
 ): CheckResult[] {
   return checksFor(dimension).map((c) => {
     const v = values.get(c.id)?.get(iso3)
@@ -314,6 +353,7 @@ function checkRows(
       year: v ? v.year : null,
       source: c.source.publisher + (c.source.series ? ` (${c.source.series})` : ''),
       sourceTier: v ? v.sourceTier : null,
+      stale: v ? isTooOldToScore(v.year, referenceYear) : false,
       note: c.notes,
     }
   })
@@ -369,6 +409,7 @@ function conditionRows(
   values: Map<string, ConditionColumn>,
   dimension: Dimension,
   iso3: string,
+  referenceYear: number,
 ): ConditionResult[] {
   return conditionsFor(dimension).map((def) => {
     const column = values.get(def.id)
@@ -385,6 +426,7 @@ function conditionRows(
       sourceTier: v ? v.sourceTier : null,
       rank: v ? v.rank : null,
       n: column?.n ?? 0,
+      stale: v ? isTooOldToScore(v.year, referenceYear) : false,
       note: def.notes,
     }
   })
@@ -414,6 +456,7 @@ export function scoreAll(observations: Observation[], opts: ScoreOptions): Score
   const history = spans.length > 0 ? buildHistory(observations) : null
   const checks = checkValues(observations)
   const conditions = conditionValues(observations)
+  const stale = staleValues(observations, opts)
 
   const countries: CountryResult[] = COUNTRIES.map((country) => {
     const dimensions = {} as Record<Dimension, DimensionResult>
@@ -472,10 +515,11 @@ export function scoreAll(observations: Observation[], opts: ScoreOptions): Score
             d,
             cells[i],
             history && frames ? indicatorSeries(history, frames.get(d.id), d, country.iso3) : [],
+            stale.get(d.id)?.get(country.iso3),
           ),
         ),
-        checks: checkRows(checks, dimension, country.iso3),
-        conditions: conditionRows(conditions, dimension, country.iso3),
+        checks: checkRows(checks, dimension, country.iso3, opts.currentYear),
+        conditions: conditionRows(conditions, dimension, country.iso3, opts.currentYear),
       }
     }
 

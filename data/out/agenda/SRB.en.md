@@ -13,9 +13,9 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Coordination | 81.6 | 0.4 (thin) | no trend |
 | Trust | 67.1 | 0.3 (thin) | no trend |
 | Learning | 40 | 0.55 (usable) | no trend |
-| Experimentation | 13.6 | 0.33 (thin) | -1.7 over 10 years using 3 indicators |
+| Experimentation | 13.3 | 0.33 (thin) | -1.5 over 10 years using 3 indicators |
 | Adaptability | 69.8 | 0.62 (usable) | no trend |
-| Building | 25.3 | 0.43 (thin) | -6.9 over 10 years using 2 indicators |
+| Building | 31.4 | 0.41 (thin) | -7 over 10 years using 2 indicators |
 | Shared Purpose | 70.7 | 0.28 (thin) | +10.6 over 10 years using 2 indicators |
 
 ## What to raise
@@ -67,20 +67,20 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
+### Building: confidence 0.41, thin
+
+How capable is the country of turning plans and knowledge into functioning systems?
+
+- Uses 3 observed indicators.
+- Missing indicators: Large project delivery, Firm scale-up rate.
+- Rejected datasets: Logistics infrastructure quality.
+
 ### Agency: confidence 0.41, thin
 
 How able are individuals and organizations to turn an intention into action?
 
 - Uses 3 observed indicators.
 - Missing indicators: Adults doing digital tasks.
-
-### Building: confidence 0.43, thin
-
-How capable is the country of turning plans and knowledge into functioning systems?
-
-- Uses 4 observed indicators.
-- Missing indicators: Large project delivery, Firm scale-up rate.
-- Rejected datasets: Logistics infrastructure quality.
 
 ## What to keep watching
 

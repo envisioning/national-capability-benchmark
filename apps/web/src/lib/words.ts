@@ -42,6 +42,7 @@ export const CONDITION_WORDS_EN: ConditionListWords = {
     'What the country has to work with on this capability. The values are shown as the source published them and are not part of the score, the confidence or the trend. The rank counts the countries with a value, best first.',
   noValue: 'No value for this country. {definition}',
   rank: 'rank {rank} of {n}',
+  stale: 'The value is from {year}, more than {age} years old.',
 }
 
 /** A count as prose: spelled out to nine, numerals from 10. */
@@ -79,6 +80,7 @@ export const PT_CONDITION_WORDS: ConditionListWords = {
     'Com o que o país conta nesta capacidade. Os valores aparecem como a fonte os publicou e não entram na pontuação, na solidez da evidência nem na tendência. A posição conta os países com valor, do melhor para o pior.',
   noValue: 'Sem valor para este país. {definition}',
   rank: '{rank}º de {n}',
+  stale: 'O valor é de {year}, com mais de {age} anos.',
 }
 
 const ES_COUNT_WORDS = ['ninguno', 'uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve']
@@ -110,6 +112,7 @@ export const ES_CONDITION_WORDS: ConditionListWords = {
     'Lo que el país tiene para trabajar en esta capacidad. Los valores aparecen como la fuente los publicó y no entran en la puntuación, en la solidez ni en la tendencia. La posición cuenta los países con valor, del mejor al peor.',
   noValue: 'Sin valor para este país. {definition}',
   rank: '{rank}.º de {n}',
+  stale: 'El valor es de {year}, con más de {age} años.',
 }
 
 /**

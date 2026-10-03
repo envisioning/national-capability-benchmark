@@ -15,8 +15,8 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Aprendizagem | 24,5 | 0,54 (utilizável) | sem tendência comparável |
 | Experimentação | 6,9 | 0,33 (fraca) | +1 em 10 anos, com base em 3 indicadores |
 | Adaptação | 75,1 | 0,6 (utilizável) | sem tendência comparável |
-| Construção | 55 | 0,57 (utilizável) | +0,2 em 10 anos, com base em 3 indicadores |
-| Propósito compartilhado | 66,2 | 0,3 (fraca) | sem tendência comparável |
+| Construção | 55,1 | 0,57 (utilizável) | +0,2 em 10 anos, com base em 3 indicadores |
+| Propósito compartilhado | 84,3 | 0,28 (fraca) | sem tendência comparável |
 
 ## Dimensões com as pontuações mais baixas
 
@@ -54,11 +54,11 @@ Quanta cooperação é possível para além do círculo pessoal mais próximo?
 
 A solidez da evidência está abaixo da faixa utilizável, de modo que a pontuação diz pouco sobre o país enquanto faltarem dados.
 
-### Propósito compartilhado: solidez 0,3, fraca
+### Propósito compartilhado: solidez 0,28, fraca
 
 Até que ponto as pessoas conseguem se ver como participantes de um projeto comum?
 
-- A pontuação se apoia em 3 indicadores observados.
+- A pontuação se apoia em 2 indicadores observados.
 - Lacunas declaradas: Sentimento de pertencimento nacional, Voluntariado, Polarização política.
 - Bases rejeitadas: Voz e prestação de contas.
 
@@ -83,7 +83,7 @@ Com que eficácia atores independentes conseguem se organizar em torno de objeti
 Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Adaptação: 75,1, solidez utilizável
-- Construção: 55, solidez utilizável
+- Construção: 55,1, solidez utilizável
 - Agência: 52,8, solidez utilizável
 
 ## Com o que a Indonésia conta
@@ -105,7 +105,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Adaptação | Assinaturas de banda larga fixa | 4,9 por 100 pessoas | 2024 | 91º de 125 |
 | Adaptação | Perdas na transmissão de eletricidade | 6,5 % da produção | 2023 | 32º de 117 |
 | Adaptação | Emprego informal | 80,9 % do emprego | 2023 | 72º de 102 |
-| Construção | Produto por pessoa ocupada | 30.291,8 US$ PPC constantes de 2021 | 2025 | 80º de 123 |
+| Construção | Produto por pessoa ocupada | 30.291,8 dólares PPC constantes de 2021 | 2025 | 80º de 123 |
 
 ## Agenda de medição
 

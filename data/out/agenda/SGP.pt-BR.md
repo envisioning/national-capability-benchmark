@@ -9,13 +9,13 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Dimensão | Pontuação | Solidez | Tendência |
 | --- | --- | --- | --- |
 | Antecipação | 82,2 | 0,46 (utilizável) | +17 em 10 anos, com base em 2 indicadores |
-| Agência | 74,4 | 0,56 (utilizável) | sem tendência comparável |
+| Agência | 74,5 | 0,56 (utilizável) | sem tendência comparável |
 | Coordenação | 74 | 0,4 (fraca) | sem tendência comparável |
 | Confiança | 70,4 | 0,49 (utilizável) | sem tendência comparável |
 | Aprendizagem | 84,2 | 0,54 (utilizável) | sem tendência comparável |
 | Experimentação | 60,5 | 0,36 (fraca) | +3,6 em 10 anos, com base em 3 indicadores |
 | Adaptação | 72,6 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 74,9 | 0,57 (utilizável) | +6,4 em 10 anos, com base em 3 indicadores |
+| Construção | 75 | 0,57 (utilizável) | +6,4 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 32,3 | 0,28 (fraca) | sem tendência comparável |
 
 ## Dimensões com evidência fraca
@@ -52,8 +52,8 @@ Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 
 - Aprendizagem: 84,2, solidez utilizável
 - Antecipação: 82,2, solidez utilizável
-- Construção: 74,9, solidez utilizável
-- Agência: 74,4, solidez utilizável
+- Construção: 75, solidez utilizável
+- Agência: 74,5, solidez utilizável
 - Adaptação: 72,6, solidez utilizável
 - Confiança: 70,4, solidez utilizável
 
@@ -75,7 +75,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Adaptação | Participação na força de trabalho | 77 % das pessoas com 15 anos ou mais | 2025 | 33º de 125 |
 | Adaptação | Assinaturas de banda larga fixa | 27,8 por 100 pessoas | 2024 | 45º de 125 |
 | Adaptação | Perdas na transmissão de eletricidade | 0,2 % da produção | 2023 | 1º de 117 |
-| Construção | Produto por pessoa ocupada | 233.454,4 US$ PPC constantes de 2021 | 2025 | 2º de 123 |
+| Construção | Produto por pessoa ocupada | 233.454,4 dólares PPC constantes de 2021 | 2025 | 2º de 123 |
 
 ## Agenda de medição
 

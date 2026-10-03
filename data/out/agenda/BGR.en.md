@@ -9,11 +9,11 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 55.4 | 0.46 (usable) | +15.9 over 10 years using 2 indicators |
-| Agency | 53.7 | 0.56 (usable) | no trend |
+| Agency | 53.8 | 0.56 (usable) | no trend |
 | Coordination | 85 | 0.41 (thin) | no trend |
 | Trust | 61.2 | 0.49 (usable) | no trend |
 | Learning | 32.6 | 0.54 (usable) | no trend |
-| Experimentation | 26.9 | 0.33 (thin) | -8.6 over 10 years using 3 indicators |
+| Experimentation | 26.6 | 0.33 (thin) | -8.4 over 10 years using 3 indicators |
 | Adaptability | 80.6 | 0.62 (usable) | no trend |
 | Building | 11 | 0.41 (thin) | +5 over 10 years using 2 indicators |
 | Shared Purpose | 40.3 | 0.42 (thin) | +2.1 over 10 years using 2 indicators |
@@ -74,7 +74,7 @@ These dimensions score at least 50 with usable evidence.
 - Adaptability: 80.6, confidence usable
 - Trust: 61.2, confidence usable
 - Anticipation: 55.4, confidence usable
-- Agency: 53.7, confidence usable
+- Agency: 53.8, confidence usable
 
 ## What Bulgaria has to work with
 

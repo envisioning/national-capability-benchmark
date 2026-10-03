@@ -9,13 +9,13 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Dimension | Score | Confidence | Trend |
 | --- | --- | --- | --- |
 | Anticipation | 0 | 0.46 (usable) | 0 over 10 years using 2 indicators, with 1 at the frame edge |
-| Agency | 14 | 0.24 (very thin) | no trend |
+| Agency | 21.1 | 0.22 (very thin) | no trend |
 | Coordination | 63.1 | 0.39 (thin) | no trend |
 | Trust | 50.6 | 0.16 (very thin) | no trend |
 | Learning | 35.5 | 0.32 (thin) | no trend |
 | Experimentation | 0.9 | 0.14 (very thin) | no trend |
 | Adaptability | 27.2 | 0.46 (usable) | no trend |
-| Building | 46.6 | 0.41 (thin) | +5.9 over 10 years using 2 indicators |
+| Building | 46.8 | 0.41 (thin) | +6 over 10 years using 2 indicators |
 | Shared Purpose | not scored | 0.02 (very thin) | no trend |
 
 ## What to raise
@@ -68,11 +68,11 @@ How much cooperation is possible beyond immediate personal networks?
 - Missing indicators: Trust in public institutions, Court case clearance rate.
 - Rejected datasets: Rule of law, Control of corruption, Intentional homicide rate.
 
-### Agency: confidence 0.24, very thin
+### Agency: confidence 0.22, very thin
 
 How able are individuals and organizations to turn an intention into action?
 
-- Uses 3 observed indicators.
+- Uses 2 observed indicators.
 - Missing indicators: Adults doing digital tasks.
 
 ### Learning: confidence 0.32, thin

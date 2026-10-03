@@ -13,9 +13,9 @@ A escala reúne 125 países. Cada dimensão recebe uma pontuação de 0 a 100, s
 | Coordenação | 80,2 | 0,39 (fraca) | sem tendência comparável |
 | Confiança | 85,2 | 0,3 (fraca) | sem tendência comparável |
 | Aprendizagem | 76,3 | 0,55 (utilizável) | sem tendência comparável |
-| Experimentação | 30,4 | 0,33 (fraca) | -9,3 em 10 anos, com base em 3 indicadores |
+| Experimentação | 29,8 | 0,33 (fraca) | -8,9 em 10 anos, com base em 3 indicadores |
 | Adaptação | 75,5 | 0,62 (utilizável) | sem tendência comparável |
-| Construção | 53,5 | 0,57 (utilizável) | -0,5 em 10 anos, com base em 3 indicadores |
+| Construção | 53,6 | 0,57 (utilizável) | -0,6 em 10 anos, com base em 3 indicadores |
 | Propósito compartilhado | 73,2 | 0,3 (fraca) | -1,9 em 10 anos, com base em 2 indicadores |
 
 ## Dimensões com evidência fraca
@@ -68,7 +68,7 @@ Estas dimensões têm pontuação de pelo menos 50, com evidência utilizável.
 - Aprendizagem: 76,3, solidez utilizável
 - Adaptação: 75,5, solidez utilizável
 - Antecipação: 67,3, solidez utilizável
-- Construção: 53,5, solidez utilizável
+- Construção: 53,6, solidez utilizável
 
 ## Com o que a Tchéquia conta
 
@@ -89,7 +89,7 @@ As condições descrevem com o que um país conta: infraestrutura, acesso, dinhe
 | Adaptação | Assinaturas de banda larga fixa | 38,9 por 100 pessoas | 2024 | 17º de 125 |
 | Adaptação | Perdas na transmissão de eletricidade | 4,3 % da produção | 2024 | 12º de 117 |
 | Adaptação | Emprego informal | 3,3 % do emprego | 2025 | 11º de 102 |
-| Construção | Produto por pessoa ocupada | 98.998,4 US$ PPC constantes de 2021 | 2025 | 25º de 123 |
+| Construção | Produto por pessoa ocupada | 98.998,4 dólares PPC constantes de 2021 | 2025 | 25º de 123 |
 
 ## Agenda de medição
 

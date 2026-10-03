@@ -13,10 +13,10 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Coordination | 35.3 | 0.23 (very thin) | no trend |
 | Trust | 39.5 | 0.37 (thin) | no trend |
 | Learning | 37 | 0.32 (thin) | no trend |
-| Experimentation | 56.6 | 0.33 (thin) | +2.8 over 10 years using 3 indicators |
+| Experimentation | 55.2 | 0.33 (thin) | +0.7 over 10 years using 3 indicators |
 | Adaptability | 72.4 | 0.53 (usable) | no trend |
-| Building | 44.9 | 0.38 (thin) | +10.7 over 10 years using 2 indicators |
-| Shared Purpose | 55 | 0.28 (thin) | no trend |
+| Building | 45 | 0.38 (thin) | +10.8 over 10 years using 2 indicators |
+| Shared Purpose | 72.8 | 0.26 (thin) | no trend |
 
 ## What to raise
 
@@ -27,7 +27,7 @@ These are the lowest scores with usable evidence. Thin evidence appears below.
 How able are individuals and organizations to turn an intention into action?
 
 - Uses 4 observed indicators.
-- Highest usable scores: New Zealand 92.2, Australia 89.2, Estonia 84.3.
+- Highest usable scores: New Zealand 92.3, Australia 89.2, Estonia 84.3.
 - Related deliveries in other countries: Singapore's national ICT-skills measurement and baseline (Singapore); e.escola, a national laptop-and-broadband push (Portugal); Pradhan Mantri Gramin Digital Saksharta Abhiyan (India); Puntos México Conectado, national digital learning centres (Mexico).
 - Missing indicators: Adults doing digital tasks.
 
@@ -52,11 +52,11 @@ How effectively can independent actors organize around shared objectives?
 - Missing indicators: University-industry collaboration, Public-private collaboration.
 - Rejected datasets: Government effectiveness, Regulatory quality, Logistics performance.
 
-### Shared Purpose: confidence 0.28, thin
+### Shared Purpose: confidence 0.26, thin
 
 To what extent can people imagine themselves as participants in a common project?
 
-- Uses 3 observed indicators.
+- Uses 2 observed indicators.
 - Missing indicators: Sense of national belonging, Volunteering, Political polarisation.
 - Rejected datasets: Voice and accountability.
 

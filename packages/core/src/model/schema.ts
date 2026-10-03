@@ -518,6 +518,16 @@ export const IndicatorResult = z.object({
     )
     .default([]),
   status: z.enum(['observed', 'missing', 'gap', 'retired']),
+  /**
+   * The latest value, set aside because it is more than
+   * `MAX_SCORED_VALUE_AGE` years older than the reference year. The row then
+   * reads `missing`: it enters no score, frame or coverage count. The value
+   * and its year stay here and in `series`. Null on every other row. See D159.
+   */
+  staleExcluded: z
+    .object({ year: z.number().int(), raw: z.number() })
+    .nullable()
+    .default(null),
 })
 export type IndicatorResult = z.infer<typeof IndicatorResult>
 
@@ -900,6 +910,12 @@ export const CheckResult = z.object({
   year: z.number().int().nullable(),
   source: z.string(),
   sourceTier: SourceTier.nullable(),
+  /**
+   * The value is older than an indicator may be and still count
+   * (`MAX_SCORED_VALUE_AGE`). A check is never scored, so it stays; the flag
+   * says how old it is against the same line. See D159.
+   */
+  stale: z.boolean().default(false),
   /** Why the number is beside the score. Carried into the file so a consumer reading only JSON still gets it. */
   note: z.string(),
 })
@@ -932,6 +948,12 @@ export const ConditionResult = z.object({
   rank: z.number().int().nullable(),
   /** Countries with a value, the denominator of `rank`. */
   n: z.number().int(),
+  /**
+   * The value is older than an indicator may be and still count
+   * (`MAX_SCORED_VALUE_AGE`). A condition is context and never scored, so it
+   * keeps its value and rank and carries this flag. See D159.
+   */
+  stale: z.boolean().default(false),
   /** Why the row is a condition. Carried into the file so a consumer reading only JSON still gets it. */
   note: z.string(),
 })

@@ -13,9 +13,9 @@ The frame includes 125 countries. Each dimension is scored from 0 to 100, with n
 | Coordination | not scored | 0.1 (very thin) | no trend |
 | Trust | not scored | 0.07 (very thin) | no trend |
 | Learning | not scored | 0.16 (very thin) | no trend |
-| Experimentation | 1.5 | 0.24 (very thin) | -0.3 over 10 years using 3 indicators |
-| Adaptability | 64.6 | 0.48 (usable) | no trend |
-| Building | 20.7 | 0.29 (thin) | -27.2 over 10 years using 2 indicators |
+| Experimentation | 1.5 | 0.24 (very thin) | -0.2 over 10 years using 3 indicators |
+| Adaptability | 55.8 | 0.46 (usable) | no trend |
+| Building | 20.8 | 0.29 (thin) | -27.2 over 10 years using 2 indicators |
 | Shared Purpose | not scored | 0 (very thin) | no trend |
 
 ## What to measure first
@@ -87,7 +87,7 @@ How capable is the country of turning plans and knowledge into functioning syste
 
 These dimensions score at least 50 with usable evidence.
 
-- Adaptability: 64.6, confidence usable
+- Adaptability: 55.8, confidence usable
 
 ## What Cuba has to work with
 
