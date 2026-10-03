@@ -34,15 +34,15 @@ export class GatewayResearchProvider implements ResearchProvider {
   constructor(private readonly model: string) {}
 
   private async call<S extends z.ZodType>(modelSchema: S, prompt: string): Promise<z.infer<S>> {
-    const { generateObject } = await import('ai')
-    const { object } = await generateObject({
+    const { generateText, Output } = await import('ai')
+    const { output } = await generateText({
       model: this.model,
-      schema: modelSchema,
-      system: RESEARCH_SYSTEM_RULES,
+      output: Output.object({ schema: modelSchema }),
+      instructions: RESEARCH_SYSTEM_RULES,
       prompt,
       maxRetries: 2,
     })
-    return object as z.infer<S>
+    return output as z.infer<S>
   }
 
   async scout(prompt: string): Promise<ResearchScoutOutputType> {

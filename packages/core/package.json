@@ -21,7 +21,7 @@
     "test": "find src -name '*.test.ts' -print0 | sort -z | xargs -0 -n1 tsx"
   },
   "dependencies": {
-    "ai": "^5.0.0",
+    "ai": "^7.0.127",
     "zod": "^3.25.76",
     "zod-to-json-schema": "^3.25.2"
   },
