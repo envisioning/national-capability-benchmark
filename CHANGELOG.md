@@ -9,6 +9,39 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.25.8 — 2026-10-03
+
+- **A panel from one model vendor can now be published.** Three or more
+  panelists, each with its own stance and working on its own, may all come
+  from one vendor. Their spread then reads the stance and not the vendor, and
+  a run with a second vendor replaces it when one can be made. Decision D155
+  sets out the cost.
+- **A new known limit, A17.** The World Bank prints Venezuela's
+  manufacturing value added as 0% of GDP for every year from 1991 to 2011.
+  The zero is scored and sets the bottom of that row's scale for every
+  country.
+
+## Dataset 9.0.1 — 2026-10-03
+
+- **Model panel estimates now sit beside 455 scores.** Three Claude
+  panelists, Opus 5.5 twice and Sonnet 5.5 once, each holding one stance,
+  scored every capability where published data cover half the rows or fewer,
+  in all 125 countries, over two rounds. Their median and spread are
+  published next to the score and never change it.
+- **The panel reads Trust lower than the indicators.** On the 52 countries
+  with a Trust score it sits 20.5 points below on average while ranking them
+  in nearly the same order (rank correlation 0.83). On Shared purpose the
+  order differs more (0.51). On Anticipation and Experimentation the panel
+  stays within eight points and keeps the order (0.95 and 0.93).
+- **No cell shows dissent.** The widest spread between panelists is 8
+  points. With one vendor that spread is a lower bound on the uncertainty.
+- **Scores, confidence and ranks are unchanged from 9.0.0.** Cuba's Agency
+  and Shared purpose, which have no observed row, now show the panel's
+  estimate as their fallback reading.
+- **The panel prompt now prints per-head rows per head.** It used to show a
+  national total under a per-million unit, and a rejected row as an empty
+  value.
+
 ## App 1.25.7 — 2026-10-03
 
 - **The Spanish pages for Mexico, Colombia, Chile and Argentina read more

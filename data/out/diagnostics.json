@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T18:42:18.577Z",
+  "generatedAt": "2026-10-03T07:41:34.434Z",
   "gdpSeries": "NY.GDP.PCAP.PP.KD",
   "income": [
     {
@@ -1125,9 +1125,10 @@
           "8.1.0",
           "8.2.0",
           "8.3.0",
-          "9.0.0"
+          "9.0.0",
+          "9.0.1"
         ],
-        "pairs": 25,
+        "pairs": 26,
         "perDimension": [
           {
             "dimension": "anticipation",
@@ -1778,7 +1779,114 @@
       "delta": -0.171
     }
   ],
-  "panelVsGdp": null,
+  "panelVsGdp": {
+    "runId": "2026-10-03T07-39-51-747Z-in_session",
+    "provenance": "in_session",
+    "panelists": 3,
+    "evidential": true,
+    "hasDistribution": true,
+    "perDimension": [
+      {
+        "dimension": "anticipation",
+        "panelR": 0.859,
+        "panelSpearman": 0.893,
+        "panelN": 123,
+        "indicatorR": 0.863,
+        "indicatorN": 123,
+        "delta": -0.004,
+        "flaggedAsWealthProxy": true,
+        "backfillCandidate": false
+      },
+      {
+        "dimension": "agency",
+        "panelR": null,
+        "panelSpearman": null,
+        "panelN": 1,
+        "indicatorR": null,
+        "indicatorN": 1,
+        "delta": null,
+        "flaggedAsWealthProxy": false,
+        "backfillCandidate": false
+      },
+      {
+        "dimension": "coordination",
+        "panelR": 0.87,
+        "panelSpearman": 0.689,
+        "panelN": 10,
+        "indicatorR": 0.696,
+        "indicatorN": 10,
+        "delta": 0.174,
+        "flaggedAsWealthProxy": true,
+        "backfillCandidate": false
+      },
+      {
+        "dimension": "trust",
+        "panelR": 0.682,
+        "panelSpearman": 0.643,
+        "panelN": 52,
+        "indicatorR": 0.418,
+        "indicatorN": 52,
+        "delta": 0.264,
+        "flaggedAsWealthProxy": false,
+        "backfillCandidate": false
+      },
+      {
+        "dimension": "learning",
+        "panelR": 0.997,
+        "panelSpearman": 1,
+        "panelN": 5,
+        "indicatorR": 0.764,
+        "indicatorN": 5,
+        "delta": 0.233,
+        "flaggedAsWealthProxy": true,
+        "backfillCandidate": false
+      },
+      {
+        "dimension": "experimentation",
+        "panelR": 0.777,
+        "panelSpearman": 0.86,
+        "panelN": 108,
+        "indicatorR": 0.704,
+        "indicatorN": 108,
+        "delta": 0.073,
+        "flaggedAsWealthProxy": true,
+        "backfillCandidate": false
+      },
+      {
+        "dimension": "adaptability",
+        "panelR": 0.739,
+        "panelSpearman": 0.666,
+        "panelN": 15,
+        "indicatorR": 0.519,
+        "indicatorN": 15,
+        "delta": 0.22,
+        "flaggedAsWealthProxy": true,
+        "backfillCandidate": false
+      },
+      {
+        "dimension": "building",
+        "panelR": 0.706,
+        "panelSpearman": 0.8,
+        "panelN": 4,
+        "indicatorR": -0.75,
+        "indicatorN": 4,
+        "delta": -0.044,
+        "flaggedAsWealthProxy": true,
+        "backfillCandidate": false
+      },
+      {
+        "dimension": "shared_purpose",
+        "panelR": 0.635,
+        "panelSpearman": 0.661,
+        "panelN": 123,
+        "indicatorR": 0.259,
+        "indicatorN": 122,
+        "delta": 0.376,
+        "flaggedAsWealthProxy": false,
+        "backfillCandidate": false
+      }
+    ]
+  },
   "redundantIndicatorPairs": [],
   "measurability": [
     {

@@ -1,6 +1,6 @@
 # Agenda de capacidades: Suíça
 
-*Gerado em 2026-10-02*
+*Gerado em 2026-10-03*
 
 A régua inclui 125 países. Cada dimensão recebe uma nota de 0 a 100, sem ranking geral, e cada nota mostra a solidez da evidência ao lado. Leia [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md) antes de citar uma nota.
 

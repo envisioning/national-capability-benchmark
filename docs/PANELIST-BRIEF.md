@@ -114,16 +114,20 @@ being measured, and it is the one thing this schema cannot check for you.
 
 Merging separate single-panelist files into one run is done by the session
 that orchestrates the panel, and only when each file was produced in its own
-context. Under D154 a merged in-session run of three or more panelists from at
-least two vendors is a panel for publication; `docs/PANEL.md` says how it is
+context. Under D154, as D155 amends it, a merged in-session run of three or more
+panelists with distinct stances, each in its own context, is a panel for
+publication, from one vendor or several; `docs/PANEL.md` says how it is
 run and recorded.
 
 ## Current state
 
-No panel run is on the current dataset. `data/delphi/latest.json` points to an
-old one-panelist Claude round-1 artifact from 2026-08-26 with no
-`datasetVersion`, and the other in-session files are one panelist each and
-anchored to older frames. None is a current panel, and D139 keeps them off any
-comparison with the indicators. The next run is an in-session multi-vendor
-panel under D154 (issue #33), or a gateway run if a key exists, covering the
-full current country set.
+The active run, `data/delphi/2026-10-03T07-39-51-747Z-in_session.json`, is
+a one-vendor in-session panel under D155 for dataset 9.0.1: Claude Opus 5.5
+on the institutionalist and bottom-up stances and Claude Sonnet 5.5 on the
+wealth sceptic, two rounds and the indicator audit, prompt version 3, over the
+455 cells at or below half source coverage in all 125 countries. Its IQRs are
+narrow (median 1.5 points, none above 8), which is what one model family
+agreeing with itself looks like as much as agreement about the countries. A
+run that adds an OpenAI panelist through the codex CLI, or a gateway run,
+supersedes it. The older in-session files are one panelist each, anchored to
+older frames, and stay research notes.

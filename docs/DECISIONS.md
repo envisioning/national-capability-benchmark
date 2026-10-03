@@ -8250,6 +8250,51 @@ that overturns a body the codex check confirmed.
 
 ---
 
+## D155 — An in-session panel may come from one vendor
+
+*Recorded 2026-10-03. Owner ruling of 2026-10-03. Amends D154(b). Extends
+D13 and D14.*
+
+**Choice.** An in-session panel is a panel for publication when it has at
+least three panelists, each in a separate context with a distinct fixed
+stance from `packages/core/src/delphi/panel.ts`, all scoring from the same
+evidence brief for the current dataset, even when every panelist comes from
+one model vendor. D154(b)'s requirement of at least two vendors is dropped.
+Everything else in D154(b) holds: provenance stays `in_session` and is never
+relabelled `gateway`, the run's `note` and `panel` entries name the models,
+the route and the context separation, a panel estimate never enters `score`,
+and D139 still gates any comparison with the indicators on the current
+`datasetVersion`. One model may take two stances only in two separate
+contexts. A smaller model is not added to widen the panel (D13).
+
+A multi-vendor in-session run, or a gateway run, supersedes a one-vendor run
+as soon as one can be made: it replaces it as the active run on the same
+dataset version without a further decision.
+
+**Why.** The only second vendor available in session, OpenAI through the
+codex CLI, ran out of workspace credits during the first D154 run, after 18
+of 125 countries. The two Claude models were available and had already
+answered round 1. Waiting on a second vendor would leave dataset 9.0.0
+without any panel reading beside its 455 thin-coverage cells, which is the
+gap D154 set out to close.
+
+**Cost.** The panel's disagreement now measures stance, not vendor. Models
+from one family share training data, and so share blind spots: a country
+every Claude model misreads is misread by the median and hidden by a narrow
+IQR, which then reads as agreement. D13's reason for one model per vendor is
+paid in full here. The IQR of a one-vendor panel is a floor on real
+uncertainty, never an estimate of it, and D154's overturn test, which needs
+two vendors on one stance, cannot be run on it.
+
+**Overturned by.** A multi-vendor run on the same dataset that disagrees
+with the one-vendor run's median by more than the one-vendor run's own
+median IQR on more than a quarter of cells, which would show the shared
+blind spot is large enough that a one-vendor panel should not publish. Or
+any gateway or multi-vendor run becoming available, which supersedes the
+run (not the rule).
+
+---
+
 ## D156 — The Spanish copy is reviewed by Claude, the chosen terms stay, and four wordings change
 
 *Recorded 2026-10-03. Answers #86. Extends D134; changes no address.*

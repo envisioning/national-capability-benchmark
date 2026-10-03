@@ -10,7 +10,7 @@ import type { CountryResult, Dimension, IndicatorDef, IndicatorResult } from '..
 import type { Panelist } from './panel.js'
 
 /** Bump when the evidence or scoring instructions sent to a panel change. */
-export const DELPHI_PROMPT_VERSION = '2'
+export const DELPHI_PROMPT_VERSION = '3'
 
 export const SYSTEM_RULES = `You are a panelist on a Delphi study building the Envisioning National Capability Benchmark.
 
@@ -23,15 +23,43 @@ Rules you must follow:
 - Say what you do not know. A wide confidence interval is a legitimate answer and is more useful to us than false precision.
 - Reason from the evidence given plus what you reliably know. Do not invent statistics or cite figures you cannot support.`
 
+/**
+ * The value a panelist reads, in the registry's unit. The registry unit names
+ * the transformed value, so a per-head or distance row prints the published
+ * figure beside the value the benchmark scores, never the published figure
+ * under the transformed unit. A winsorized row's transformed value is the
+ * frame fence, so it is printed as such. `log10` only compresses the scale and
+ * keeps the unit, so it prints the published value alone.
+ */
+function valueText(def: IndicatorDef, row: IndicatorResult): string {
+  const published = `${row.raw}`
+  if (def.transform === 'none' || def.transform === 'log10' || row.transformed === null) {
+    return `${published} ${def.unit}`
+  }
+  const read = row.winsorized
+    ? `${row.transformed} ${def.unit} (the frame fence; the value itself lies beyond it)`
+    : `${row.transformed} ${def.unit}`
+  const what =
+    def.transform === 'per_million_population'
+      ? 'published as a national total'
+      : def.transform === 'distance_from_100'
+        ? 'published as a percentage'
+        : 'published as'
+  return `${read}, ${what} ${published}`
+}
+
 function indicatorLine(def: IndicatorDef, row: IndicatorResult | undefined): string {
   const cls = `${def.measurementClass} (${MEASUREMENT_CLASS_LABELS[def.measurementClass]})`
+  if (def.ingest === 'retired' || row?.status === 'retired') {
+    return `- ${def.name} [${cls}] — NOT SCORED. A dataset exists and the benchmark declined to use it. ${def.notes}`
+  }
   if (!row || row.status === 'gap') {
     return `- ${def.name} [${cls}] — NO DATA. ${def.notes}`
   }
-  if (row.status === 'missing') {
+  if (row.status === 'missing' || row.raw === null || row.normalized === null) {
     return `- ${def.name} [${cls}] — missing for this country. Source: ${row.source}.`
   }
-  return `- ${def.name} [${cls}] — raw ${row.raw} ${def.unit} (${row.year}), normalised ${row.normalized}/100 across the benchmark countries. Source: ${row.source}.${row.winsorized ? ' Value was winsorized.' : ''}`
+  return `- ${def.name} [${cls}] — ${valueText(def, row)} (${row.year}), normalised ${row.normalized}/100 across the benchmark countries. Source: ${row.source}.${row.winsorized ? ' Value was winsorized.' : ''}`
 }
 
 export function evidenceBrief(

@@ -33,7 +33,7 @@ Models come from `NCB_PANEL` and are dealt to stances round-robin. **On the
 gateway, supply four distinct vendors.** With four stances and three models one vendor takes two
 stances, the panel loses a quarter of its independence, and nothing in the run
 file says so. The default is now four: Anthropic, OpenAI, Google and Mistral.
-An in-session run under D154 may use two vendors, and its `note` says so.
+An in-session run under D154 and D155 may use one or two vendors, and its `note` says so.
 
 Check every id against the gateway's own list before a run. It is public, needs
 no key, and carries the price each model is billed at:
@@ -73,7 +73,7 @@ Every run file declares `provenance`. It is **stored, never inferred** (D14).
 | Value | Meaning | Quotable as evidence |
 | --- | --- | --- |
 | `gateway` | Real multi-vendor LLM panel | Yes |
-| `in_session` | Panelists scored inside a working session, by agents in separate contexts or by a person | Yes when it meets D154's panel test below; otherwise a research note |
+| `in_session` | Panelists scored inside a working session, by agents in separate contexts or by a person | Yes when it meets the D154 and D155 panel test below; otherwise a research note |
 | `human` | Human expert panel | Yes |
 | `mock` | Deterministic offline stand-in | **No** |
 
@@ -86,9 +86,9 @@ panelists.
 IQR is zero. Such a run can be useful for finding artefacts and is a research
 note, never published as a panel.
 
-**An in-session run is a panel for publication when it passes D154's test.**
-At least three panelists, drawn from at least two model vendors, each in a
-separate context with one fixed stance, all scoring from the same evidence
+**An in-session run is a panel for publication when it passes D154's test,
+as D155 amends it.** At least three panelists, each in a separate context
+with a distinct fixed stance, all scoring from the same evidence
 brief that `pnpm bench prompt` prints for the current dataset. Its provenance
 stays `in_session` and is never relabelled `gateway`. This supersedes the
 earlier rule that a gateway run must replace every in-session run before
@@ -96,7 +96,14 @@ publication. A multi-vendor gateway run is still the stronger instrument (four
 vendors, rounds dispatched by code, failed calls counted) and should be
 preferred whenever `AI_GATEWAY_API_KEY` exists. `isPanel` counts panel entries
 and cannot see context separation or vendor mix, so the run file has to state
-both (see "Running it in session" below). D139 still applies: a run compares
+both (see "Running it in session" below).
+
+Under D155 the panelists may all come from one vendor, and one model may take
+two stances in two separate contexts. The cost is stated there: one model
+family shares its blind spots, so the panel's spread measures stance and not
+vendor, and its IQR is a floor on the real uncertainty. A multi-vendor
+in-session run or a gateway run on the same dataset supersedes a one-vendor
+run as soon as one can be made. D139 still applies: a run compares
 with the indicators only when its `datasetVersion` is the current one.
 
 ## Running it
@@ -112,13 +119,15 @@ pnpm bench score && pnpm bench report
 
 Without a key the CLI falls back to the mock provider and says so.
 
-### Running it in session (D154)
+### Running it in session (D154, D155)
 
 With no gateway key, the panel runs inside a working session. The vendors
 available today are Anthropic, through Claude Code subagents, and OpenAI,
 through the codex CLI (`codex exec`). With two vendors and four stances, each
 vendor takes two stances, and no vendor takes a stance the other already
-holds in the same round.
+holds in the same round. When only one vendor is available (D155), its
+models take the stances, one context per stance, and a smaller model is
+never added to make up the count (D13).
 
 1. Score the current dataset and print each panelist's prompt from the
    pipeline: `pnpm bench prompt --system` for the rules and `pnpm bench prompt

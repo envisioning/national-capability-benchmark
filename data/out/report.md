@@ -1,6 +1,6 @@
 # National Capability Benchmark, prototype v0
 
-*Generated 2026-10-02T18:42:18.577Z*
+*Generated 2026-10-03T07:41:34.434Z*
 
 This run covers 125 countries and nine dimensions. Indicators carry equal weight within each dimension, and the benchmark has no headline ranking.
 
@@ -945,7 +945,7 @@ Four tests on the wealth residual (D68), over the 122 countries with all nine re
 | --- | --- | --- |
 | (a) Residuals move together | first-factor share 30.8%, chance 16% (95th 17.5%), n 122 | structure |
 | (b) Same income, different shape | peer distance 1.396 against 1.43 without regard to income (5th 1.389); shape share 22.6% against random 95th 19%, n 122 | differ |
-| (c) Order holds between releases | lowest rank r 0.718 on Trust (n 36), 25 release pairs | mixed |
+| (c) Order holds between releases | lowest rank r 0.718 on Trust (n 36), 26 release pairs | mixed |
 | (c) Order holds without one country | largest own-residual shift 0.108 residual SD | robust |
 | (d) Share of a profile that is income | mean 23.3%, median 32.2%, n 122 | little |
 
@@ -1109,6 +1109,114 @@ These rows remain in the registry and lower confidence like gaps. The project re
 **Shared Purpose**
 
 - Voice and accountability: Retired 2026-08-26. Artefact A5: it measures the democratic channel while Shared Purpose asks whether people can see themselves in a common project. Singapore scored 20.9 while being one of the most effective collective actors in the set. Volunteering and civic participation are the observable replacements and are declared gaps; voter turnout is published beside Shared Purpose as a check, because it reads the same democratic channel and compulsory voting (D129). See D23 and A5.
+
+## A panel scored the same cells
+
+Run 2026-10-03T07-39-51-747Z-in_session, provenance `in_session`, 2 round(s), panel: Institutionalist (claude-opus-5-5), Bottom-up analyst (claude-opus-5-5), Wealth sceptic (claude-sonnet-5-5).
+
+> In-session one-vendor panel under D154(b) as amended by D155, run on 2026-10-03 by a Claude Code orchestrating session (Claude Opus 5.5). Three panelists, each stance a separate set of contexts: institutionalist on claude-opus-5-5, bottom_up on claude-opus-5-5, wealth_sceptic on claude-sonnet-5-5, all Anthropic, each through Claude Code subagents. Each panelist answered in batches of 25 countries, one fresh context per batch and per round, so no context held two stances and none saw another panelist's text except the anonymised round-1 summary the round-2 prompt carries. Two rounds plus the indicator audit, at the code default scope (maxCoverage 0.5): 455 country-dimension cells across all 125 countries. Prompts are byte-identical to a gateway run's, built by pnpm bench delphi --in-session with prompt version 3; the system rules were given as a file each panelist read first. Every batch confirmed it read every prompt in full and wrote every answer by hand. No call failed and none was rerun into this file; an earlier attempt on prompt version 2 was discarded because panelists condensed prompts. One vendor means the spread measures stance, not vendor, and shared model-family blind spots are hidden by a narrow IQR (D155). An OpenAI panelist through the codex CLI (gpt-5.6-sol) can be added as a follow-up multi-vendor run, which supersedes this one under D155. Estimates are an interpretation layer beside the indicators and never enter score.
+
+Convergence: 431 of 455 cells narrowed between rounds.
+
+### Panel disagreement remains visible
+
+No cell has an interquartile range above 25 points.
+
+### Where the panel and indicators differ most
+
+| Country | Dimension | Indicator score | Panel median | Difference |
+| --- | --- | --- | --- | --- |
+| Mali | Trust | 77.3 | 32 | -45.3 |
+| Papua New Guinea | Trust | 72.1 | 29 | -43.1 |
+| Lesotho | Shared Purpose | 70.1 | 30 | -40.1 |
+| Haiti | Building | 47.1 | 8 | -39.1 |
+| Haiti | Trust | 50.6 | 14 | -36.6 |
+| Honduras | Trust | 71.6 | 36 | -35.6 |
+| Sudan | Agency | 53.6 | 18 | -35.6 |
+| Jamaica | Trust | 84.9 | 50 | -34.9 |
+| Lesotho | Trust | 78.7 | 45 | -33.7 |
+| Nigeria | Shared Purpose | 65.6 | 32 | -33.6 |
+| Guinea | Trust | 68.1 | 35 | -33.1 |
+| South Africa | Trust | 83.5 | 51 | -32.5 |
+| China | Experimentation | 100 | 68 | -32 |
+| Sudan | Shared Purpose | 45 | 14 | -31 |
+| Pakistan | Shared Purpose | 61.7 | 31 | -30.7 |
+| Moldova | Shared Purpose | 71.5 | 41 | -30.5 |
+| Myanmar | Shared Purpose | 60.2 | 30 | -30.2 |
+| Romania | Trust | 81.6 | 52 | -29.6 |
+| Bosnia and Herzegovina | Shared Purpose | 49.5 | 20 | -29.5 |
+| Paraguay | Trust | 66.3 | 38 | -28.3 |
+
+### The panel takes the same income test
+
+A panel is not independent evidence: it reads the same published record as the indicators. An unmeasured dimension can return a panel number that restates income per head. Here the panel column is correlated with log GDP per capita, with the same-country indicator score beside it. Every dimension of the panel column except Agency, Trust and Shared Purpose reaches 0.7 or above.
+
+| Dimension | Panel r vs log GDP pc | Spearman | Indicator r, same countries | Difference | Panel n | Indicator n |
+| --- | --- | --- | --- | --- | --- | --- |
+| Learning | 0.997 | 1 | 0.764 | 0.233 | 5 | 5 |
+| Coordination | 0.87 | 0.689 | 0.696 | 0.174 | 10 | 10 |
+| Anticipation | 0.859 | 0.893 | 0.863 | -0.004 | 123 | 123 |
+| Experimentation | 0.777 | 0.86 | 0.704 | 0.073 | 108 | 108 |
+| Adaptability | 0.739 | 0.666 | 0.519 | 0.22 | 15 | 15 |
+| Building | 0.706 | 0.8 | -0.75 | -0.044 | 4 | 4 |
+| Trust | 0.682 | 0.643 | 0.418 | 0.264 | 52 | 52 |
+| Shared Purpose | 0.635 | 0.661 | 0.259 | 0.376 | 123 | 122 |
+| Agency | no data | no data | no data | no data | 1 | 1 |
+
+### Indicators the panel rates weakest
+
+| Indicator | Registry class | Panel class | Construct validity | Wealth proxy risk | Prior |
+| --- | --- | --- | --- | --- | --- |
+| Intentional homicide rate | O | O | 0.22 | 0.68 | 0.35 |
+| Business share of R&D | I | I | 0.22 | 0.57 | 0.7 |
+| Unemployment rate | O | O | 0.23 | 0.28 | 0.25 |
+| Voice and accountability | P | P | 0.27 | 0.75 | 0.35 |
+| Scientific articles | O | I (reclassified) | 0.3 | 0.78 | 0.4 |
+| High-technology exports | O | O | 0.3 | 0.45 | 0.4 |
+| Income inequality | O | I (reclassified) | 0.3 | 0.35 | 0.2 |
+| Regulatory quality | P | P | 0.32 | 0.92 | 0.6 |
+| Logistics performance | P | P | 0.32 | 0.77 | 0.5 |
+| Export diversification | C | O (reclassified) | 0.32 | 0.53 | 0.3 |
+| Manufacturing value added | O | O | 0.32 | 0.28 | 0.2 |
+| Logistics infrastructure quality | P | P | 0.32 | 0.8 | 0.5 |
+| Tax revenue | O | O | 0.33 | 0.63 | 0.3 |
+| Adults doing digital tasks | C | O (reclassified) | 0.35 | 0.77 | 0.4 |
+| Trust in public institutions | P | P | 0.35 | 0.4 | 0.2 |
+| Resident patent applications | O | O | 0.35 | 0.73 | 0.45 |
+| Resident industrial design applications | O | O | 0.37 | 0.57 | 0.3 |
+| University spinouts | C | O (reclassified) | 0.37 | 0.67 | 0.35 |
+| Procedures to start a business | C | I (reclassified) | 0.38 | 0.35 | 0.15 |
+| Control of corruption | P | P | 0.38 | 0.87 | 0.55 |
+
+### Evidence the panel requested
+
+| Evidence | Mentions | Dimensions |
+| --- | --- | --- |
+| government foresight capacity dataset | 75 | 1 |
+| volunteering rates from open microdata | 53 | 1 |
+| government foresight capacity register | 50 | 1 |
+| first-round venture deal counts | 47 | 1 |
+| early-stage entrepreneurial activity from gem | 35 | 1 |
+| hostile polarisation measure | 34 | 1 |
+| gem tea and fear of failure rates | 31 | 1 |
+| volunteering microdata | 30 | 1 |
+| court case clearance rates | 28 | 1 |
+| early-stage entrepreneurial activity (gem) | 27 | 1 |
+| court case clearance rate | 26 | 1 |
+| venture first-round counts | 25 | 1 |
+| government foresight capacity record | 24 | 1 |
+| hostile polarisation measure separating camps from calm | 23 | 1 |
+| multi-year public research grant register | 22 | 1 |
+| grant register with multi-year award durations | 21 | 1 |
+| grant register with multi-year commitments | 21 | 1 |
+| hostile-polarisation measure | 21 | 1 |
+| v-dem polarization check value for 2023-2025 | 20 | 1 |
+| gem entrepreneurship rate | 20 | 1 |
+| hostile polarization measure | 20 | 1 |
+| long-horizon public research grant register | 19 | 1 |
+| grant register with award durations | 19 | 1 |
+| belonging item that reads the same across regimes | 18 | 1 |
+| grant register with multi-year awards | 17 | 1 |
 
 ## Assumptions to challenge
 

@@ -61,6 +61,9 @@ export const ARTEFACT_SCOPES: readonly ArtefactScope[] = [
       'UZB', 'GIN', 'TJK', 'PNG', 'COG', 'TTO',
     ],
   },
+  /* A publisher zero on manufacturing value added, scored for Venezuela and
+   * setting the row's 0 endpoint for every country. */
+  { id: 'A17', dimensions: ['building'], countries: ['VEN'] },
 ]
 
 /**

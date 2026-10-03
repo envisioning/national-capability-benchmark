@@ -787,3 +787,34 @@ tables give the same questionnaire signature at every band for six of the
 gate-held countries (see the A16 fixes memo), so for them this waits on a
 survey change. The two declared gaps would add rows for every country, but
 neither has a source.
+
+## A17 — Venezuela's manufacturing row reads a published zero
+
+**Severity: low.**
+
+The figures in this entry are from dataset 9.0.1.
+
+The World Bank publishes manufacturing value added (`NV.IND.MANF.ZS`) for
+Venezuela as exactly 0% of GDP for every year from 1991 to 2011, its last
+year, after values between 14% and 20% through 1990. A manufacturing sector
+does not fall to nothing in one year and stay there for 21; the zero is a
+placeholder for a value the publisher does not have, not a measurement. The
+pipeline reads what the publisher prints and imputes nothing, so the zero is
+scored.
+
+It does two things. Venezuela's Building score, 5.9 and 125th of 125, takes
+a 0 on that row; scored on its other two rows it would read 8.9, still in the
+bottom two. And the zero is the frame's lowest value, so it sets the 0
+endpoint for every country: the next lowest, Lebanon at 1.4%, normalises to
+4.2 instead of 0. The shift is under five points at the bottom of the row
+and shrinks toward the top, where Ireland sets 100.
+
+The same publisher zero appears in older years elsewhere: Brazil's series
+reads 0 from 1960 to 1978 and the Democratic Republic of the Congo's in
+1991. Neither is a current value, so neither reaches a score; both reach the
+yearly series and the trend.
+
+**Fix.** An ingest rule, recorded as a decision, that drops a World Bank
+zero on a series whose construct cannot be zero, logged as a dropped value in
+`data/observations/revisions.json` like any other restatement. It moves the
+row's frame endpoint, so it ships as its own dataset release.

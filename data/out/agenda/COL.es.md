@@ -1,6 +1,6 @@
 # Agenda de capacidades: Colombia
 
-*Generado el 2026-10-02*
+*Generado el 2026-10-03*
 
 La comparación incluye 125 países. Cada dimensión recibe una puntuación de 0 a 100, sin clasificación general, y cada puntuación muestra a su lado la solidez de la evidencia. Antes de citar una puntuación, lea [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md).
 
