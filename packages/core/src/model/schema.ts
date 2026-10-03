@@ -521,7 +521,7 @@ export type VelocityCell = z.infer<typeof VelocityCell>
 export const VelocityFile = z.object({
   generatedAt: z.string(),
   methodVersion: z.literal('velocity/0.1-exploratory'),
-  countries: z.record(z.string().length(3), z.record(DimensionEnum, VelocityCell.nullable())),
+  countries: z.record(z.string().length(3), z.partialRecord(DimensionEnum, VelocityCell.nullable())),
   exclusions: z.array(
     z.object({
       iso3: z.string().length(3),
@@ -552,7 +552,7 @@ export type LeverageCell = z.infer<typeof LeverageCell>
 export const LeverageFile = z.object({
   generatedAt: z.string(),
   methodVersion: z.literal('leverage/0.1-exploratory'),
-  countries: z.record(z.string().length(3), z.record(LeverageDimensionEnum, LeverageCell)),
+  countries: z.record(z.string().length(3), z.partialRecord(LeverageDimensionEnum, LeverageCell)),
 })
 export type LeverageFile = z.infer<typeof LeverageFile>
 
@@ -613,7 +613,7 @@ export const ResidualFile = z.object({
   /** The World Bank context series the fit reads. Never scored. */
   gdpSeries: z.string(),
   fits: z.array(ResidualFit),
-  countries: z.record(z.string().length(3), z.record(DimensionEnum, ResidualCell.nullable())),
+  countries: z.record(z.string().length(3), z.partialRecord(DimensionEnum, ResidualCell.nullable())),
   exclusions: z.array(
     z.object({
       iso3: z.string().length(3),
@@ -951,7 +951,10 @@ export type DimensionResult = z.infer<typeof DimensionResult>
 export const CountryResult = z.object({
   country: z.string(),
   iso3: z.string(),
-  dimensions: z.record(DimensionEnum, DimensionResult),
+  /* Partial, as every enum-keyed record here: Zod 4 made `z.record` with an
+   * enum key exhaustive, and Zod 3, which these shapes were written against,
+   * accepted a missing key. */
+  dimensions: z.partialRecord(DimensionEnum, DimensionResult),
 })
 export type CountryResult = z.infer<typeof CountryResult>
 

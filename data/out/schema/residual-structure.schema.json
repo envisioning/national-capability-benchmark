@@ -175,10 +175,60 @@
                   "type": "number"
                 },
                 "shapeNull": {
-                  "$ref": "#/definitions/ResidualStructure/properties/peers/anyOf/0/properties/incomeNull"
+                  "type": "object",
+                  "properties": {
+                    "draws": {
+                      "type": "integer"
+                    },
+                    "seed": {
+                      "type": "integer"
+                    },
+                    "mean": {
+                      "type": "number"
+                    },
+                    "p5": {
+                      "type": "number"
+                    },
+                    "p95": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "draws",
+                    "seed",
+                    "mean",
+                    "p5",
+                    "p95"
+                  ],
+                  "additionalProperties": false
                 },
                 "noiseFloor": {
-                  "$ref": "#/definitions/ResidualStructure/properties/peers/anyOf/0/properties/incomeNull"
+                  "type": "object",
+                  "properties": {
+                    "draws": {
+                      "type": "integer"
+                    },
+                    "seed": {
+                      "type": "integer"
+                    },
+                    "mean": {
+                      "type": "number"
+                    },
+                    "p5": {
+                      "type": "number"
+                    },
+                    "p95": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "draws",
+                    "seed",
+                    "mean",
+                    "p5",
+                    "p95"
+                  ],
+                  "additionalProperties": false
                 },
                 "shareBeyond": {
                   "type": "number"
@@ -250,7 +300,18 @@
                         "type": "object",
                         "properties": {
                           "dimension": {
-                            "$ref": "#/definitions/ResidualStructure/properties/structure/anyOf/0/properties/loadings/items/properties/dimension"
+                            "type": "string",
+                            "enum": [
+                              "anticipation",
+                              "agency",
+                              "coordination",
+                              "trust",
+                              "learning",
+                              "experimentation",
+                              "adaptability",
+                              "building",
+                              "shared_purpose"
+                            ]
                           },
                           "pairs": {
                             "type": "integer"
@@ -268,13 +329,9 @@
                             ]
                           },
                           "minCountries": {
-                            "anyOf": [
-                              {
-                                "type": "integer"
-                              },
-                              {
-                                "type": "null"
-                              }
+                            "type": [
+                              "integer",
+                              "null"
                             ]
                           }
                         },
@@ -320,7 +377,18 @@
                     "type": "object",
                     "properties": {
                       "dimension": {
-                        "$ref": "#/definitions/ResidualStructure/properties/structure/anyOf/0/properties/loadings/items/properties/dimension"
+                        "type": "string",
+                        "enum": [
+                          "anticipation",
+                          "agency",
+                          "coordination",
+                          "trust",
+                          "learning",
+                          "experimentation",
+                          "adaptability",
+                          "building",
+                          "shared_purpose"
+                        ]
                       },
                       "n": {
                         "type": "integer"
