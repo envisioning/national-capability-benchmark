@@ -1,6 +1,6 @@
 # Foresight register codebook
 
-Version **1.2**, fixed 2026-10-02 before the 53 are coded. Changes from
+Version **1.3**, fixed 2026-10-03 before the pilot recode under it and before the frame is coded. Changes from
 earlier versions and the reason for each are listed under "Changelog" at the
 foot of the file.
 
@@ -16,7 +16,11 @@ Version 1.1 settles the eight ambiguities the pilot found
 (`FORESIGHT-REGISTER-PILOT.md`) and the owner's ruling on I1, and is committed
 before the recode. Version 1.2 settles how a parent body and a foresight unit
 inside it are coded, and how I4 is carried while it is unvalidated, and is
-committed before the 53 are coded. A change to anything in this file after
+committed before the 53 are coded. Version 1.3 settles whose product a
+product is, and how a primary page that does not render is read, after the
+round 2 spot-check overturned three of 11 sampled bodies on those points
+(`FORESIGHT-REGISTER-SPOTCHECK.md`); it is committed before the ten are
+recoded under it. A change to anything in this file after
 coding starts is
 a new version of the codebook, recorded at the foot of the file with the
 reason, and every country is recoded under it.
@@ -199,11 +203,23 @@ the GFF's site.
   scan, a three-year outlook) does not count. This is the same ten years
   condition 3 asks of a mandate, so a body and its products are read on
   one definition of the long term.
-- **Authorship.** The GFF is named on the product, or on the official page
-  that publishes it, as author, co-author or issuing body. Co-authorship
-  with a consultancy, a university or an international organisation does
-  not disqualify it. A product written by a third party and credited to the
-  GFF only as commissioner, funder, sponsor or host does not count.
+- **Authorship.** A product counts for the body named on it, or on the
+  official page that publishes it, **as an institution**: author,
+  co-author or issuing body. Co-authorship with a consultancy, a university
+  or an international organisation does not disqualify it. A product
+  written by a third party and credited to the GFF only as commissioner,
+  funder, sponsor or host does not count.
+  - **Between bodies of the state.** A product of a unit counts for that
+    unit and not for the body that houses it, and a parent's product does
+    not count for a unit inside it: the rule section 1 applies to
+    mandates. Each body's `product` code reads only the products issued in
+    its own name.
+  - **Affiliation is not authorship.** The affiliation printed beside an
+    individual author's name records employment, not issuance. A product
+    issued by one body and written by staff of another counts for the
+    issuing body, and for the other only when the product or its page
+    names that body as an institution (as author, co-author or issuing
+    body, or in a credit line or logo block naming it).
 
 `0` otherwise, including when a product exists only on a third-party site.
 
@@ -357,6 +373,15 @@ the gap's registry row already declares.
   scanning, megatrends, scenarios, technology assessment, long term, and
   their translations (prospectiva, prospective, Zukunft, Vorausschau,
   toekomst, framtid, tulevaisuus, 미래, 未来, tương lai, and so on).
+- **A page that does not render is read before it is coded 0.** A primary
+  page that does not render to the coder's fetcher (a legal database or
+  gazette that builds its text in the browser, a page that answers 403 to
+  a script) is read through a browser-rendered fetch or an archived copy
+  (`https://web.archive.org/web/<timestamp>/<url>`) before any item it
+  would carry is coded 0. Where neither is possible, the item codes 0 with
+  `confidence: "low"` and a note beginning `unrendered: <url>`, and the
+  adjudicator renders the page before the code stands. A search-engine
+  snippet of the page stays a lead and never carries an item.
 - **Dates are read from the source**, never from memory. If a date cannot be
   seen on a primary page, the item it supports codes `0` and the note says
   why.
@@ -374,7 +399,7 @@ One JSON file per coder:
 ```json
 {
   "coder": "a",
-  "codebookVersion": "1.2",
+  "codebookVersion": "1.3",
   "codedAt": "2026-10-02",
   "countries": [
     {
@@ -491,6 +516,10 @@ Neither sees the other's output, the evidence corpus, or the triage memo.
   2026-10-02). A check that overturns a body's unit decision or any of its
   codes is reported with the sample's error rate, and the verdict waits on
   it.
+  The check's checklist names, for each sampled body, every body the
+  adjudication holds as a GFF in that body's country, with each one's body
+  codes and the country items, so that the checker can tell whether an
+  overturn changes a country item.
 
 ## 8. Stop rules and verdict
 
@@ -516,8 +545,37 @@ Decided before coding. After adjudication of disagreements:
 - 1.0, 2026-10-02. Fixed before coding.
 - 1.1, 2026-10-02. Fixed before the round 2 recode. See the changelog below.
 - 1.2, 2026-10-02. Fixed before the 53 are coded. See the changelog below.
+- 1.3, 2026-10-03. Fixed before the pilot recode under it. See the changelog below.
 
 ## Changelog
+
+### 1.3, 2026-10-03
+
+Fixed after the round 2 spot-check (`FORESIGHT-REGISTER-SPOTCHECK.md`)
+overturned three of the 11 sampled bodies, which fails D148's rule, and
+before the ten pilot countries are recoded under it. Each change was decided
+on the construct and names no country. Section 1, the items' definitions
+and windows, the score, the thresholds and the stop rules read as in 1.2.
+
+1. **Product credit goes to the named issuing body only** (section 2, I2).
+   A unit's product is the unit's and not its parent's, and the reverse.
+   Why: section 1 already judges each body on its own mandate; I2 reads
+   whether a body operates, and the record of operation is what the state
+   publishes under that body's name. One overturn read an office's report
+   as the product of the ministry that houses it. The country item is the
+   maximum over bodies, so this moves an item only where the issuing unit
+   fails the unit test.
+2. **An affiliation line is not authorship** (section 2, I2). Why: it
+   records where an author is employed, not which body issued the product.
+   One overturn read a ministry's study as the product of the institute
+   that employs its authors.
+3. **Unrendered pages are rendered before a 0** (section 4). Why: a 0 that
+   says a date could not be read measures the coder's tools, not the
+   state's record. One overturn and the adjudicated code it overturned both
+   rested on a gazette page neither had read, one through a search snippet.
+4. **The spot-check checklist shows the country's other bodies** (section
+   7). Why: one overturn was reported as changing a country item because
+   the checklist did not show the other body that already carried it.
 
 ### 1.2, 2026-10-02
 
