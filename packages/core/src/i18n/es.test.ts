@@ -75,6 +75,14 @@ test('Spanish copy keeps the house rules', () => {
   }
   /* One word for the score. */
   assert.ok(!all.some((s) => /\bnota\b/i.test(s)), 'nota used for the score')
+  /* A documented delivery is a "caso documentado", and the project is "la
+   * comparación" in reader copy, never the English word. See D156. */
+  assert.ok(!all.some((s) => /entregas? documentad/i.test(s)), 'entrega documentada')
+  assert.ok(!all.some((s) => /\bbenchmark\b/i.test(s)), 'benchmark in Spanish copy')
+  /* A row is compared by its position on the scale, so a rate where higher is
+   * worse never reads as sitting above or below a median. See D156. */
+  const m = ES.capabilityMap
+  for (const s of [m.rowsAbove, m.rowsBelow, m.rowsLevel]) assert.match(s, /^Posición en la escala /)
 })
 
 test('a layer lexicon renders only its layer countries', () => {
