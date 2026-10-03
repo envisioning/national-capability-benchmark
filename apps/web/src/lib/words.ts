@@ -174,23 +174,23 @@ export const LAYER_WORDS: Partial<Record<Lang, LayerWords>> = {
     pages: {
       overviewMetaTitle: '{country}, nueve capacidades, NCB',
       overviewMetaDescription:
-        'La lectura en español de {country} en el NCB: la puntuación y la solidez de la evidencia de cada capacidad, el mapa entre los países de ingreso más cercano y la agenda calculada.',
-      overviewTitle: '¿Qué puntuación tiene {country} en cada capacidad?',
+        'La lectura en español de {country} en el NCB: la puntuación y la solidez de la evidencia de cada capacidad, el mapa entre los países de ingreso más parecido y la agenda calculada.',
+      overviewTitle: '¿Qué puntuación obtiene {country} en cada capacidad?',
       overviewIntro:
         'Esta lectura de {country} se calcula a partir de los datos publicados y se recalcula en cada versión. Cada capacidad recibe una puntuación de 0 a 100 en una escala que fijan los {countries} países juntos, y al lado lleva la solidez de la evidencia, un segundo número de 0 a 1. Las capacidades no se suman y no hay puntuación general.',
       scoresHeading: 'Las nueve capacidades siguen el orden del modelo',
       scoresIntro:
         '{n} de las nueve tienen puntuación en esta versión. Cada nombre abre el mapa de esa capacidad.',
       readingsHeading: '¿Dónde seguir leyendo?',
-      mapLink: 'El mapa de capacidades, frente a la mediana de los países de ingreso más cercano',
-      agendaLink: 'La agenda de capacidades, con fuentes, vacíos y entregas documentadas',
+      mapLink: 'El mapa de capacidades, frente a la mediana de los países de ingreso más parecido',
+      agendaLink: 'La agenda de capacidades, con fuentes, vacíos y casos documentados',
       artefactsHeading: '¿Qué artefactos conocidos tocan estas puntuaciones?',
       artefactsIntro:
-        'Un artefacto conocido es un lugar donde el modelo produce un número equivocado sobre el mundo. Estos son los que tocan las capacidades de {country}, con la página de límites en inglés.',
-      artefactsStructural: 'Valen para toda puntuación del benchmark',
+        'Un artefacto conocido es un lugar donde el modelo produce un número equivocado sobre el mundo. Estos son los que tocan las capacidades de {country}, descritos en inglés en la página de límites.',
+      artefactsStructural: 'Valen para toda puntuación de la comparación',
       agendaMetaTitle: 'Agenda de capacidades de {country}, NCB',
       agendaMetaDescription:
-        'La agenda de capacidades de {country}, calculada a partir de los datos públicos: las puntuaciones, la solidez de la evidencia y los vacíos de medición.',
+        'La agenda de capacidades de {country}, calculada a partir de los datos publicados: las puntuaciones, la solidez de la evidencia y los vacíos de medición.',
     },
   },
 }

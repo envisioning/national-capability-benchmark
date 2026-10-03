@@ -8247,3 +8247,86 @@ vendor's on the same stance, by more than the panel's own median IQR, which
 would mean the panel is measuring vendors rather than countries and needs a
 third vendor before publication. For (c): a later human or gateway check
 that overturns a body the codex check confirmed.
+
+---
+
+## D156 — The Spanish copy is reviewed by Claude, the chosen terms stay, and four wordings change
+
+*Recorded 2026-10-03. Answers #86. Extends D134; changes no address.*
+
+**Decision.** The owner asked Claude to do the review #86 asked a native
+speaker for, and there is no human reviewer. Claude read every string in
+`packages/core/src/i18n/es.ts` and the Spanish words in
+`apps/web/src/lib/words.ts` that the `[layer]` route renders, as an
+economist from the region would: neutral Latin American Spanish, accents
+and opening marks, no anglicism where a standard term exists, one word per
+thing, no advice. 66 strings change. The four terms D134 chose stay:
+
+- **Iniciativa** (Agency). "Agencia" in Sen's sense is known to development
+  economists but reads as an organisation to everyone else, and no term
+  serves both readers better.
+- **Ejecución** (Building). "Capacidad de ejecución" is the region's
+  standard phrase for a state that turns plans into working systems. It
+  meets "ejecución presupuestaria" in public finance, so the Coordination row
+  that read "Fidelidad en la ejecución presupuestaria" is renamed
+  "Cumplimiento del presupuesto aprobado", which is also not a calque.
+- **Propósito compartido** (Shared purpose), standard and plain.
+- **Solidez de la evidencia** / **solidez** (confidence) and **puntuación**
+  (score). "Puntaje" is commoner in Chile, Argentina and Colombia, but
+  "puntuación" is understood in all four and is the standard form.
+
+The map slugs do not move, so no redirect is added and the pinned test in
+`es.test.ts` is unchanged.
+
+What does change, beyond wording:
+
+- **A documented delivery is a "caso documentado".** "Entrega documentada"
+  read as something handed over, and the two other candidates are taken:
+  "iniciativa" is Agency and "ejecución" is Building. Several records are
+  losses or abolitions, which "caso" holds and "logro" would not.
+- **A map row is read by its position on the scale.** The map compares each
+  row's 0 to 100 position with the peer median, and the sentence "Por encima
+  de la mediana de los pares: tasa de homicidios intencionales" read as more
+  homicides when it meant fewer. The three row sentences now open with
+  "Posición en la escala", and the score intro says once that the scale
+  points the way of the capability, so a high position on a row where a
+  higher value means less capability is a low value. Conditions are
+  compared in published units, so their sentences now say "registra un
+  valor mayor que la mediana", which is literally true of informality or
+  transmission losses.
+- **The agenda's reference lines say what they list.** Under a low score,
+  "Puntuaciones utilizables más altas" sat beside the country's number like
+  a model to follow. It now reads "Puntuaciones más altas en esta dimensión,
+  entre las que tienen evidencia utilizable", and "Entregas documentadas en
+  otros países" reads "Casos documentados en otros países". The lines and
+  their place in the document are `splitAgenda`'s and do not change (D39).
+- **"Benchmark" leaves reader copy**, replaced by "la comparación", the word
+  the agenda intro already used. "Sandbox" stays only in parentheses after
+  "espacio controlado de prueba", the term regulators in the region use.
+
+Smaller changes: "¿Qué tan...?" becomes "¿En qué medida...?", which reads
+neutral in the Southern Cone; "sobre {n} indicadores" becomes "con {n}
+indicadores"; "contra" becomes "frente a"; the score bands read "media
+alta" and "media baja"; research grants are "proyectos con financiamiento
+público concursable" rather than "subvenciones"; "por millón de habitantes"
+joins "por millón de personas". `es.test.ts` now pins "caso documentado",
+the absence of "benchmark", and the row sentences.
+
+**Why.** #86 asked for a native review before the layers are shown to
+institutions in the region, and the owner chose a model review instead of
+waiting for a person. Recording it as Claude's keeps that visible: the
+D134 overturn clause asks for a Spanish reader, and this is not one.
+
+**Cost.** No native speaker has read the copy. A model's Spanish is
+fluent and generic: it will miss what sounds foreign to a reader in
+Bogotá or Buenos Aires, and it cannot tell which institutional terms an
+audience in one country uses. Evidence record titles and summaries stay in
+English inside the Spanish agenda, because they are data, not lexicon. The
+ground layer's English map has the same backwards row sentence ("Above the
+peer median: intentional homicide rate") and is not changed here.
+
+**Overturned by.** A native Spanish reader, ideally in development
+economics, finding a term or a sentence wrong, which replaces this review
+with theirs; or a reader of the map taking a "posición en la escala"
+sentence for the raw value, which would need the row's direction printed
+beside it.
