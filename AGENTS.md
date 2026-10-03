@@ -659,7 +659,9 @@ agents never pick the same name. That build rewrites two files to point at
 whichever directory it used, so check both afterwards and revert the churn
 before committing: `apps/web/tsconfig.json` gains a types path, and
 `apps/web/next-env.d.ts` repoints its route-types reference. Both must name
-`.next` on `main`, because that is where a normal build writes.
+`.next` on `main`, because that is where a normal build writes. `next dev`
+repoints `next-env.d.ts` too, to `.next/dev/types`; the committed form is the
+build's, `./.next/types/routes.d.ts` and `./.next/types/root-params.d.ts`.
 
 Two `next build` runs at once destroy each other, which is why that directory
 name carries a PID. A fixed name collides: the second agent writes into the
