@@ -64,6 +64,7 @@ import {
 } from '../pipeline/store.js'
 import { STANCES, buildPanel, modelsFromEnv } from '../delphi/panel.js'
 import { GatewayProvider, MockProvider } from '../delphi/provider.js'
+import { InSessionProvider } from '../delphi/in-session.js'
 import { runDelphi } from '../delphi/run.js'
 import { estimateCost } from '../delphi/cost.js'
 import {
@@ -908,14 +909,21 @@ async function main() {
 
       const models = str(args, 'models', '').split(',').map((s) => s.trim()).filter(Boolean)
       const panel = buildPanel(models.length ? models : modelsFromEnv(), num(args, 'stances', 4))
-      const useMock = bool(args, 'mock') || !process.env['AI_GATEWAY_API_KEY']
+      /* --in-session <dir>: separate working sessions answer the prompts this
+       * command writes, byte for byte the gateway's. See InSessionProvider and D154. */
+      const inSessionDir = str(args, 'in-session', '')
+      const inSession = inSessionDir ? new InSessionProvider(resolve(inSessionDir)) : null
+      if (inSession) await InSessionProvider.writeContract(resolve(inSessionDir))
+      const useMock = !inSession && (bool(args, 'mock') || !process.env['AI_GATEWAY_API_KEY'])
 
       if (useMock && !bool(args, 'mock')) {
         console.log('AI_GATEWAY_API_KEY is not set. Falling back to the deterministic mock panel.')
       }
-      const provider = useMock
-        ? new MockProvider(new Map(countries.map((c) => [c.iso3, c])))
-        : new GatewayProvider()
+      const provider = inSession
+        ? inSession
+        : useMock
+          ? new MockProvider(new Map(countries.map((c) => [c.iso3, c])))
+          : new GatewayProvider()
 
       console.log(`Panel (${provider.name}):`)
       for (const p of panel) console.log(`  ${p.stance.label.padEnd(20)} ${useMock ? 'mock' : p.model}`)
@@ -936,6 +944,17 @@ async function main() {
         concurrency: num(args, 'concurrency', 4),
         onProgress: (m) => console.log(`  ${m}`),
       })
+
+      if (inSession && inSession.dumped.size > 0) {
+        for (const [round, n] of [...inSession.dumped.entries()].sort()) {
+          console.log(`${n} prompt(s) awaiting answers for ${round === 0 ? 'the indicator audit' : `round ${round}`}`)
+        }
+        console.log(`prompts     -> ${resolve(inSessionDir, 'prompts')}`)
+        console.log('No run written. Answer the prompts, then rerun the same command.')
+        break
+      }
+      const note = str(args, 'note', '')
+      if (note) run.note = note
 
       /* Activation is always explicit. A full-frame run used to activate itself,
        * which put an unreviewed panel behind every Delphi surface the moment it
@@ -1349,6 +1368,7 @@ Start with file 1.
   pnpm bench ingest    [--from 1960] [--snapshot]  fetch World Bank series into data/observations
   pnpm bench score                        normalize, score, write index.json, one file per country, table.csv
   pnpm bench delphi    [--mock] [--rounds 2] [--countries BRA,IND] [--models a,b]
+                       [--in-session <dir>] [--note text]  write the prompts for separate sessions to answer, then assemble the run
                        [--max-coverage 0.5] [--no-judge] [--concurrency 4] [--activate]
                        0.5 reviews thin dimensions; use 1 for all nine dimensions
   pnpm bench diagnose                     correlations, redundancy, GDP-sensitivity test

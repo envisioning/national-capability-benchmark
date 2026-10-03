@@ -132,7 +132,18 @@ holds in the same round.
    with `anonymiseRound` and builds each panelist's prompt with
    `round2CellPrompt`, both in `packages/core/src/delphi/prompts.ts`, then
    sends them to fresh contexts, one per panelist, on the same vendor and
-   stance as round 1. The CLI does not print round-2 prompts yet.
+   stance as round 1.
+
+`pnpm bench delphi --in-session <dir> --models a,b,c --stances 3` does steps
+1, 3 and 4 with the gateway's own loop. It writes every prompt a gateway run
+would send, byte for byte, to `<dir>/prompts/` (round 1, the indicator audit,
+the system rules and the two answer schemas), and saves nothing while an
+answer is missing. Each panelist writes JSON to `<dir>/answers/`, in the
+layout `packages/core/src/delphi/in-session.ts` describes. Rerun the same
+command: once round 1 is complete it writes the round-2 prompts from the
+merged round-1 cells, and once every answer is in it writes the run file with
+provenance `in_session`. Pass `--note` for the run's note. The prompts carry
+the stance but not the system rules, so a panelist reads `system.txt` first.
 4. Merge into one run file in `data/delphi/<runId>.json` with `provenance:
    "in_session"`, the current `datasetVersion` and `countrySet`, and one
    `panel` entry per panelist naming its stance and its model as the vendor
