@@ -11,7 +11,6 @@ import {
   conditionsFor,
   CONDITIONS,
   countedForCoverage,
-  isDelphiRunForDataset,
   isEvidential,
   indicatorsFor,
   isScored,
@@ -30,6 +29,8 @@ import type {
   Observation,
   SourceTier,
 } from '../model/index.js'
+import { applyDelphiRun } from '../delphi/apply.js'
+import type { AppliedDelphi } from '../delphi/apply.js'
 import { isTooOldToScore } from './confidence.js'
 import { applyTransform, buildFrame, scoreAgainstFrame } from './normalize.js'
 import { buildHistory, indicatorSeries, momentumFor } from './trend.js'
@@ -435,18 +436,28 @@ function conditionRows(
 export type ScoreOutput = {
   countries: CountryResult[]
   matrix: Matrix
+  /** What `applyDelphiRun` kept of the run passed in. Null when no evidential run was passed. See D160. */
+  delphi: AppliedDelphi | null
 }
 
 export function scoreAll(observations: Observation[], opts: ScoreOptions): ScoreOutput {
   const allFrames = buildFrames(observations, opts)
   const matrix = buildMatrix(observations, opts, allFrames)
   const minPanelistConfidence = opts.minPanelistConfidence ?? 0
-  const usableDelphiRun =
-    opts.delphiRun &&
-    isEvidential(opts.delphiRun.provenance) &&
-    (!opts.datasetVersion || isDelphiRunForDataset(opts.delphiRun, opts.datasetVersion))
-      ? opts.delphiRun
-      : undefined
+  /* Which of the run's estimates apply to this dataset is decided cell by cell
+   * from the evidence brief each one was made on, so the briefs are built from
+   * a first scoring that leaves the panel out. The panel never enters a score,
+   * so that pass and this one agree on every brief. See D160. */
+  let applied: AppliedDelphi | null = null
+  if (opts.delphiRun && isEvidential(opts.delphiRun.provenance)) {
+    if (opts.datasetVersion) {
+      const base = scoreAll(observations, { ...opts, delphiRun: undefined, momentumSpans: [] })
+      applied = applyDelphiRun(opts.delphiRun, base.countries, opts.datasetVersion)
+    } else {
+      applied = { run: opts.delphiRun, refusal: null }
+    }
+  }
+  const usableDelphiRun = applied?.run ?? undefined
   const spans = opts.momentumSpans ?? [
     ...new Set(
       [10, 20, 30, 50, opts.currentYear - INGEST_FROM_YEAR].filter((span) => span > 0),
@@ -526,7 +537,7 @@ export function scoreAll(observations: Observation[], opts: ScoreOptions): Score
     return { country: country.name, iso3: country.iso3, dimensions }
   })
 
-  return { countries, matrix }
+  return { countries, matrix, delphi: applied }
 }
 
 /** The flat table the spec asks for, ready for a radar chart. */

@@ -639,6 +639,30 @@ export function buildReport(
       out.push('')
     }
 
+    const application = delphi.application
+    if (application?.mode === 'carried') {
+      out.push(
+        `Carried from dataset ${application.sourceDatasetVersion ?? 'unknown'} onto ${application.datasetVersion}: ${application.carried} of ${application.cells} cells kept because the evidence brief each was made on is unchanged; ${application.dropped.length} dropped. ${application.judgementsCarried} of ${application.judgementsCarried + application.judgementsDropped} indicator judgements kept. See D160.`,
+      )
+      out.push('')
+      if (application.dropped.length > 0) {
+        const byDimension = DIMENSIONS.map((d) => {
+          const rows = application.dropped.filter((x) => x.dimension === d)
+          return [
+            DIMENSION_LABELS[d],
+            rows.length,
+            rows.filter((x) => x.reason === 'no_hash').length,
+            rows
+              .map((x) => x.iso3)
+              .sort()
+              .join(' '),
+          ]
+        }).filter((r) => (r[1] as number) > 0)
+        out.push(table(['Dimension', 'Dropped', 'No stored hash', 'Countries'], byDimension))
+        out.push('')
+      }
+    }
+
     const cells = cellConsensus(delphi)
     const finalRound = Math.max(...cells.map((c) => c.round), 0)
     const finals = cells.filter((c) => c.round === finalRound)

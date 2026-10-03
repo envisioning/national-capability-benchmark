@@ -15,6 +15,7 @@ import {
 } from '../model/index.js'
 import type {
   CountryResult,
+  DelphiApplication,
   DelphiRunFile,
   Dimension,
   FactorSolution,
@@ -308,6 +309,12 @@ export type Diagnostics = {
       backfillCandidate: boolean
     }>
   } | null
+  /**
+   * What happened to the panel run on this dataset version: how many of its
+   * cells apply, and each cell that was dropped and why. Null when no run
+   * applies. Older files lack the field. See D160.
+   */
+  delphiApplication?: DelphiApplication | null
   measurability: Array<{
     dimension: Dimension
     indicatorsDefined: number
@@ -957,6 +964,7 @@ export function runDiagnostics(
     ...opts,
     exclude: new Set(excluded),
     momentumSpans: [],
+    delphiRun: undefined,
   })
 
   const perDimensionMeanAbsShift = DIMENSIONS.map((dimension) => {
@@ -1048,6 +1056,7 @@ export function runDiagnostics(
     indicatorVsGdp,
     wealthAttribution,
     panelVsGdp: delphi ? panelVsGdpFor(delphi, countries, gdp) : null,
+    delphiApplication: delphi?.application ?? null,
     redundantIndicatorPairs,
     measurability,
     familyBalance,

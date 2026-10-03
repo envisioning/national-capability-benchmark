@@ -301,6 +301,16 @@ port 3888. That entry starts Next directly and does not use the proxy.
   `isDeclaredGap(def)` beside it.
   Retiring an indicator needs a decision entry naming the evidence. See D23 and
   D100.
+- **A panel estimate carries across a release only where the evidence it read
+  is unchanged.** `applyDelphiRun` in `packages/core/src/delphi/apply.ts` is
+  the only place that decides: same dataset version applies everything; same
+  major and prompt version applies a cell only if its stored `briefHash`
+  equals `cellBriefHash` of the brief the current dataset builds; a different
+  major never carries, and neither does a run without hashes. `bench score`
+  writes the result to `data/out/delphi-applied.json` with an `application`
+  record listing every dropped cell, and the viewer reads that file, never
+  `data/delphi/latest.json`. Never gate a run on `datasetVersion` alone. See
+  D160.
 - Delphi provenance is stored on the run file, never inferred from a model
   string. Branch on `isEvidential(run.provenance)` and `isPanel(run)`, both
   exported from `@ncb/core`. A `mock` run must never be presented as evidence,

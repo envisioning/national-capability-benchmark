@@ -107,7 +107,7 @@ frame-relative. `strong` means strong inside this set of countries, not strong
 in the world.
 
 When `delphiScore` or `blendedFrom: "delphi"` is present, read
-`data/delphi/latest.json` as well. The run records its provenance, model and
+`data/out/delphi-applied.json` as well, the run restricted to the estimates that apply to this dataset. The run records its provenance, model and
 stance, dataset version, country set, prompt version and scope. A panel estimate
 without that context is incomplete.
 

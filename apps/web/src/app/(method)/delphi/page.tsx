@@ -84,6 +84,12 @@ export default async function DelphiPage() {
           <DefineLink term="Provenance">{PROVENANCE_LABELS[run.provenance]}</DefineLink>
         </Meta>
         {run.datasetVersion ? <Meta>dataset {run.datasetVersion}</Meta> : null}
+        {run.application?.mode === 'carried' ? (
+          <Meta>
+            {run.application.carried} of {run.application.cells} cells carried to{' '}
+            {run.application.datasetVersion}
+          </Meta>
+        ) : null}
         {run.scope ? <Meta>{run.scope} run</Meta> : null}
         {run.maxCoverage !== undefined ? <Meta>coverage ≤ {run.maxCoverage}</Meta> : null}
       </p>

@@ -47,6 +47,8 @@ export const FILES = {
   /** The factor test at every committed dataset release, read from git on `bench diagnose`. See D137. */
   factorHistory: resolve(OUT_DIR, 'factor-history.json'),
   report: resolve(OUT_DIR, 'report.md'),
+  /** The Delphi run restricted to the estimates that apply to this dataset (D160). */
+  delphiApplied: resolve(OUT_DIR, 'delphi-applied.json'),
   velocity: resolve(OUT_DIR, 'velocity.json'),
   leverage: resolve(OUT_DIR, 'leverage.json'),
   residual: resolve(OUT_DIR, 'residual.json'),

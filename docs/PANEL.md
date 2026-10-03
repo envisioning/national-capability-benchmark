@@ -103,8 +103,33 @@ two stances in two separate contexts. The cost is stated there: one model
 family shares its blind spots, so the panel's spread measures stance and not
 vendor, and its IQR is a floor on the real uncertainty. A multi-vendor
 in-session run or a gateway run on the same dataset supersedes a one-vendor
-run as soon as one can be made. D139 still applies: a run compares
-with the indicators only when its `datasetVersion` is the current one.
+run as soon as one can be made. D139 applies as D160 amends it: a run
+compares with the indicators only where it applies to the current dataset.
+
+### When a run applies to a later dataset
+
+`bench score` decides, cell by cell, which estimates of the active run apply
+to the current dataset, through `applyDelphiRun`, and writes the result to
+`data/out/delphi-applied.json`. The viewer, the report and the diagnostics
+read that file, never `latest.json`.
+
+- Same dataset version: every estimate applies.
+- Same major version and same prompt version: an estimate applies only if its
+  `briefHash` equals the hash of the brief the current dataset builds for that
+  country and dimension. The hash is the SHA-256 of `dimensionBrief` in
+  `packages/core/src/delphi/prompts.ts`: the dimension's heading, question,
+  coverage line and indicator lines, and nothing run-specific. Both rounds of
+  a cell go together. Indicator judgements carry on the same terms through
+  `auditHash`.
+- A different major version or prompt version never carries, and a run
+  written without hashes never carries across versions.
+- Every dropped cell is listed in `application.dropped` with its reason, in
+  `diagnostics.delphiApplication` and in the report.
+
+`runDelphi` writes both hashes on every new run. For an older run, rebuild the
+briefs from the published data of the dataset it was run on (a git worktree at
+that release) and write the hashes into the run file; compare a sample of the
+staged prompts byte for byte first. See D160.
 
 ## Running it
 

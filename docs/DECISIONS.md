@@ -8758,3 +8758,88 @@ series), which would set a per-row limit in the registry rather than raise
 this one; or a reader of a withdrawn score showing the old value told them
 something the empty dimension does not, which would publish the old value
 on a separate, unscored line.
+
+## D160 — A panel estimate carries across a release of the same major version only where the evidence it read is unchanged
+
+*Recorded 2026-10-03. Owner's decision; dataset 9.3.0. Supersedes the
+exact-match clause of D139 (`isDelphiRunForDataset` requiring the run's
+`datasetVersion` to equal the current one); D153 and the rest of D139
+stand.*
+
+**Decision.** A panel run applies to a dataset in two ways.
+
+- **Same dataset version:** every estimate applies, as before.
+- **Same major version and same prompt version:** each estimate applies only
+  if the evidence brief the current dataset builds for its country and
+  dimension hashes to the `briefHash` stored with the estimate. A cell whose
+  brief moved is dropped, and so are both of its rounds. A run with no stored
+  hashes carries nothing across versions: nothing says what its panelists
+  read, so it stays a research note until it is rerun.
+- **A different major version never carries.** A major version rebases the
+  frame (D47), the same sentence can sit on a different ruler, and D139 and
+  D153 hold that no estimate crosses one. A different prompt version never
+  carries either.
+
+What is hashed. `dimensionBrief` in `packages/core/src/delphi/prompts.ts` is
+the block of the evidence brief that carries one dimension: its heading, its
+question, the coverage line (coverage, mean age weight and the
+indicator-derived score) and one line per indicator, each with the value as
+printed, the year, the normalised value and the source. `cellBriefHash` is
+the SHA-256 of that text. The country header, the stance, the round, the
+round-1 summary and the scoring instructions are left out: they say nothing
+about the evidence, and the cell key already names the country. The same text
+is the substring of both the round 1 and the round 2 prompt, which a test
+holds. Indicator judgements are matched the same way: `indicatorAuditHash`
+covers a dimension's name, question and audit rows, stored as `auditHash`, so
+a judgement carries only while the rows it judged are unchanged.
+
+Because the brief prints the normalised value and the indicator-derived
+score, a hash changes when the frame moves under an unchanged value. That is
+intended: the panelist read a number on a ruler, and the ruler moved.
+
+How it is applied. `applyDelphiRun` (`packages/core/src/delphi/apply.ts`) is
+the only place the decision is made. `scoreAll` scores once without the run
+to build the briefs, applies it, and reads `delphiScore`, `delphiIqr` and the
+`blendedScore` fallback from what applies. `bench score` writes the applied
+run, with an `application` record (cells held, cells carried, each dropped
+cell and why, judgements kept and dropped) to
+`data/out/delphi-applied.json`, and the viewer reads that file and never
+`data/delphi/latest.json`, which stays the run as produced. The record reaches
+`diagnostics.delphiApplication` and the report. The hash and the record are
+optional fields, so runs written before this decision still validate.
+`runDelphi` stores the hashes on every new run. The 9.0.1 run's hashes were
+backfilled by rebuilding its briefs from the 9.0.1 published files at commit
+15dbad08; the 375 round-1 prompts staged for that run came out byte for byte
+the same as the ones rebuilt there.
+
+Result on 9.3.0: 348 of the 455 cells carry, and 107 are dropped. Eighteen
+dropped because the cell's own row was set aside by D159 (Shared purpose 11,
+Experimentation 5, Building 1, Learning 1). Eighty-eight because a row the
+panelist read keeps its value and sits at a different normalised value on the
+moved frame: 84 Experimentation cells on resident patents, trademarks and
+industrial designs per million (the D159 set-asides in Burkina Faso, the
+Republic of the Congo, Mali, Ethiopia and Guatemala move those scales), and
+four Building cells on manufacturing value added (D157 drops Venezuela's
+placeholder zeros and D159 sets aside its 1990 value and Sudan's 2009 one).
+One, China on Experimentation, changed only in its recency weight.
+
+**Why.** The exact-match rule was right for a frame rebase and wrong for a
+release that restates a handful of rows: since 9.1.0 the whole panel was
+withdrawn, 455 cells, because 107 of them had read evidence that changed. The
+panel is an interpretation beside the indicators, and what it is shown is the
+brief. A cell that read the same brief is the same judgement, and a hash of
+the brief is a test that can be recomputed from the published files.
+
+**Cost.** A carried estimate was made on a release that is not the current
+one, and the viewer's run line says which. A hash is exact, so a one-point
+move of a normalised value drops a cell whose judgement a panelist would not
+have changed; the rule prefers dropping to guessing. A frame move that
+changes few values still empties a dimension of panel estimates, as
+Experimentation shows. Backfilled hashes rest on the published 9.0.1 files
+matching what the panelists saw, which the byte comparison confirms for round
+1 and not for round 2, whose briefs come from the same code.
+
+**Overturned by.** A carried estimate that a rerun of the same panel on the
+current brief moves by more than the panel's own IQR, in cells whose hash
+matched, which would mean the brief hash leaves out something the panelists
+read; or a run on the current dataset, which supersedes the carry.

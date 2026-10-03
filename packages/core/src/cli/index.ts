@@ -7,10 +7,10 @@ import {
   INDICATORS,
   INGEST_FROM_YEAR,
   ObservationFile,
-  isDelphiRunForDataset,
   rawHref,
 } from '../model/index.js'
-import type { CountryResult, Dimension, ResidualStructure } from '../model/index.js'
+import type { CountryResult, DelphiRunFile, Dimension, ResidualStructure } from '../model/index.js'
+import type { AppliedDelphi } from '../delphi/apply.js'
 import { ingestWorldBank, recordRevisions } from '../pipeline/ingest.js'
 import { fetchJointEvsWvs } from '../pipeline/adapters/joint-evs-wvs.js'
 import { fetchVdem } from '../pipeline/adapters/vdem.js'
@@ -34,7 +34,7 @@ import {
   indicatorFile,
 } from '../pipeline/paths.js'
 import { resolve } from 'node:path'
-import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises'
+import { mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises'
 import { buildDataPackage, jsonSchemas } from '../pipeline/datapackage.js'
 import { flatTable, scoreAll } from '../pipeline/score.js'
 import { buildAgenda, renderAgenda } from '../pipeline/agenda.js'
@@ -147,18 +147,41 @@ const bool = (a: Args, k: string): boolean => a.flags.get(k) === true || a.flags
 
 const CURRENT_YEAR = new Date().getFullYear()
 
+/**
+ * Write the run restricted to what applies to this dataset, which is what the
+ * viewer reads, or remove a stale file when nothing applies. See D160.
+ */
+async function writeAppliedDelphi(
+  loaded: DelphiRunFile | null,
+  applied: AppliedDelphi | null,
+): Promise<void> {
+  if (!applied?.run?.application) {
+    await rm(FILES.delphiApplied, { force: true })
+    if (loaded) {
+      console.log(`delphi      -> run ${loaded.runId} does not apply to ${DATASET_VERSION} (${applied?.refusal ?? 'not evidential'})`)
+    }
+    return
+  }
+  await writeOut(FILES.delphiApplied, `${JSON.stringify(applied.run, null, 2)}\n`)
+  const a = applied.run.application
+  console.log(
+    `delphi      -> ${a.carried} of ${a.cells} cells from ${loaded?.runId} apply to ${a.datasetVersion} (${a.mode}); ${a.dropped.length} dropped`,
+  )
+}
+
 async function score(args: Args): Promise<CountryResult[]> {
   const observations = await loadObservations()
   if (observations.length === 0) {
     throw new Error('No observations. Run `pnpm bench ingest` first.')
   }
   const delphi = await loadDelphi()
-  const { countries } = scoreAll(observations, {
+  const { countries, delphi: applied } = scoreAll(observations, {
     currentYear: CURRENT_YEAR,
     datasetVersion: DATASET_VERSION,
     delphiRun: delphi ?? undefined,
     minPanelistConfidence: num(args, 'min-panelist-confidence', 0),
   })
+  await writeAppliedDelphi(delphi, applied)
 
   const generatedAt = new Date().toISOString()
   const version = DATASET_VERSION
@@ -200,17 +223,14 @@ async function score(args: Args): Promise<CountryResult[]> {
 async function diagnose(args: Args) {
   const observations = await loadObservations()
   const loadedDelphi = await loadDelphi()
-  const delphi =
-    loadedDelphi && isDelphiRunForDataset(loadedDelphi, DATASET_VERSION)
-      ? loadedDelphi
-      : null
   const opts = {
     currentYear: CURRENT_YEAR,
     datasetVersion: DATASET_VERSION,
-    delphiRun: delphi ?? undefined,
+    delphiRun: loadedDelphi ?? undefined,
     minPanelistConfidence: num(args, 'min-panelist-confidence', 0),
   }
-  const { countries, matrix } = scoreAll(observations, opts)
+  const { countries, matrix, delphi: applied } = scoreAll(observations, opts)
+  const delphi = applied?.run ?? null
   const computed = runDiagnostics(observations, countries, matrix, opts, GDP_PER_CAPITA_CODE, delphi)
   /* Both release tests read the committed releases from git, once. Without
    * git the committed figures stay as they are. See D137 and D138. */
@@ -888,11 +908,7 @@ async function main() {
 
     case 'agenda': {
       const observations = await loadObservations()
-      const loadedDelphi = await loadDelphi()
-      const delphi =
-        loadedDelphi && isDelphiRunForDataset(loadedDelphi, DATASET_VERSION)
-          ? loadedDelphi
-          : null
+      const delphi = await loadDelphi()
       const { countries } = scoreAll(observations, {
         currentYear: CURRENT_YEAR,
         datasetVersion: DATASET_VERSION,

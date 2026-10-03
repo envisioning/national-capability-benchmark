@@ -58,7 +58,7 @@ export const DATA_ROOT = ((): string => {
 const PATHS = {
   index: resolve(DATA_ROOT, 'out/index.json'),
   diagnostics: resolve(DATA_ROOT, 'out/diagnostics.json'),
-  delphiLatest: resolve(DATA_ROOT, 'delphi/latest.json'),
+  delphiApplied: resolve(DATA_ROOT, 'out/delphi-applied.json'),
   evidence: resolve(DATA_ROOT, 'evidence/records.json'),
   disputes: resolve(DATA_ROOT, 'disputes'),
   country: (iso3: string) => resolve(DATA_ROOT, 'out/countries', `${iso3.toUpperCase()}.json`),
@@ -134,8 +134,13 @@ export async function loadFactorHistory(): Promise<FactorHistoryFileSchema | nul
   return parsed.success ? parsed.data : null
 }
 
+/**
+ * The active Delphi run restricted to the estimates that apply to the current
+ * dataset, as `bench score` wrote it. Never `data/delphi/latest.json`: that is
+ * the run as produced, on a dataset that may not be this one. See D160.
+ */
 export async function loadDelphiRun(): Promise<DelphiRunFile | null> {
-  const raw = await readJson<unknown>(PATHS.delphiLatest)
+  const raw = await readJson<unknown>(PATHS.delphiApplied)
   const parsed = DelphiRunFileSchema.safeParse(raw)
   return parsed.success ? parsed.data : null
 }

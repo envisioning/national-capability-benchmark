@@ -382,6 +382,13 @@ export const DelphiCellEstimate = z.object({
   rationale: z.string(),
   /** What the panelist would need in order to be sure. Feeds the data-gap report. */
   missingEvidence: z.array(z.string()).default([]),
+  /**
+   * SHA-256 of the evidence the panelist read for this country and dimension
+   * (`dimensionBrief`). A later dataset keeps the estimate only if the brief it
+   * would build now hashes to the same value. Absent on runs written before
+   * D160, and such a run never carries across a version. See D160.
+   */
+  briefHash: z.string().regex(/^[0-9a-f]{64}$/).optional(),
 })
 export type DelphiCellEstimate = z.infer<typeof DelphiCellEstimate>
 
@@ -399,6 +406,8 @@ export const DelphiIndicatorJudgement = z.object({
   /** Ids of indicators this one is judged to duplicate. */
   redundantWith: z.array(z.string()).default([]),
   rationale: z.string(),
+  /** SHA-256 of the audit rows of the indicator's dimension (`indicatorAuditHash`). See D160. */
+  auditHash: z.string().regex(/^[0-9a-f]{64}$/).optional(),
 })
 export type DelphiIndicatorJudgement = z.infer<typeof DelphiIndicatorJudgement>
 
@@ -420,12 +429,19 @@ export function isEvidential(provenance: Provenance): boolean {
   return provenance !== 'mock'
 }
 
-/** A panel estimate is usable for published output only on its source frame. */
+/**
+ * Whether a run file may be read for this dataset at all: it was produced on
+ * exactly this version, or it is the applied file `bench score` wrote for it
+ * (see `applyDelphiRun`, D160). Whether a given estimate in it still holds is
+ * decided cell by cell, never by this function.
+ */
 export function isDelphiRunForDataset(
-  run: { datasetVersion?: string | undefined },
+  run: { datasetVersion?: string | undefined; application?: { datasetVersion: string } | undefined },
   datasetVersion: string,
 ): boolean {
-  return run.datasetVersion === datasetVersion
+  return run.application
+    ? run.application.datasetVersion === datasetVersion
+    : run.datasetVersion === datasetVersion
 }
 
 /** The provenance kinds in plain language, for any surface that names one. */
@@ -447,6 +463,36 @@ export function isPanel(run: { provenance: Provenance; panel: unknown[] }): bool
  * surface that computes or explains dissent reads this constant. See D12.
  */
 export const DISSENT_IQR = 25
+
+/**
+ * What `applyDelphiRun` did with a run on one dataset version. It is written
+ * only on the applied file (`data/out/delphi-applied.json`), never on a run in
+ * `data/delphi`. A dropped cell is listed, not hidden. See D160.
+ */
+export const DelphiApplication = z.object({
+  /** The dataset the estimates now apply to. */
+  datasetVersion: z.string(),
+  /** The dataset the run was produced on. */
+  sourceDatasetVersion: z.string().nullable(),
+  /** `exact`: same version, every cell applies. `carried`: same major, cells matched by brief hash. */
+  mode: z.enum(['exact', 'carried']),
+  /** Country-dimension cells the run holds. */
+  cells: z.number().int(),
+  /** Cells that apply on this dataset. */
+  carried: z.number().int(),
+  dropped: z.array(
+    z.object({
+      iso3: z.string().length(3),
+      dimension: DimensionEnum,
+      /** `brief_changed`: the evidence differs. `no_hash`: the run stored no hash to compare. */
+      reason: z.enum(['brief_changed', 'no_hash']),
+    }),
+  ),
+  /** Indicator audit judgements kept and dropped, matched the same way on the audit rows. */
+  judgementsCarried: z.number().int(),
+  judgementsDropped: z.number().int(),
+})
+export type DelphiApplication = z.infer<typeof DelphiApplication>
 
 export const DelphiRunFile = z.object({
   runId: z.string(),
@@ -478,6 +524,8 @@ export const DelphiRunFile = z.object({
   failedCalls: z.number().int().optional(),
   cellEstimates: z.array(DelphiCellEstimate),
   indicatorJudgements: z.array(DelphiIndicatorJudgement),
+  /** Present only on the applied file, never in `data/delphi`. See D160. */
+  application: DelphiApplication.optional(),
 })
 export type DelphiRunFile = z.infer<typeof DelphiRunFile>
 

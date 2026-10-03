@@ -8,6 +8,7 @@ import {
 } from '../model/index.js'
 import type { CountryResult, Dimension, IndicatorDef, IndicatorResult } from '../model/index.js'
 import type { Panelist } from './panel.js'
+import { sha256Hex } from './sha256.js'
 
 /** Bump when the evidence or scoring instructions sent to a panel change. */
 export const DELPHI_PROMPT_VERSION = '3'
@@ -62,24 +63,38 @@ function indicatorLine(def: IndicatorDef, row: IndicatorResult | undefined): str
   return `- ${def.name} [${cls}] — ${valueText(def, row)} (${row.year}), normalised ${row.normalized}/100 across the benchmark countries. Source: ${row.source}.${row.winsorized ? ' Value was winsorized.' : ''}`
 }
 
+/**
+ * The block of the evidence brief that carries one dimension: its heading, the
+ * question, the coverage line and one line per indicator. This text, and
+ * nothing around it, is what a cell's brief hash covers (D160). The country
+ * header, the stance, the round and the instructions are left out because they
+ * say nothing about the evidence, and the country is already the cell's key.
+ */
+export function dimensionBrief(result: CountryResult, dimension: Dimension): string {
+  const dim = result.dimensions[dimension]
+  if (!dim) return ''
+  const defs = indicatorsFor(dimension)
+  const lines = defs.map((def, i) => indicatorLine(def, dim.indicators[i])).join('\n')
+  const derived =
+    dim.score === null
+      ? 'no indicator-derived score (no usable data)'
+      : `indicator-derived score ${dim.score}/100`
+  return `## ${DIMENSION_LABELS[dimension]}
+Question: ${DIMENSION_QUESTIONS[dimension]}
+Evidence coverage: ${Math.round(dim.confidenceParts.coverage * 100)}% of defined indicators, mean evidence age weight ${dim.confidenceParts.recency}, ${derived}.
+${lines}`
+}
+
+/** SHA-256 of `dimensionBrief`, stored on each cell estimate as `briefHash`. */
+export function cellBriefHash(result: CountryResult, dimension: Dimension): string {
+  return sha256Hex(dimensionBrief(result, dimension))
+}
+
 export function evidenceBrief(
   result: CountryResult,
   selectedDimensions: readonly Dimension[] = DIMENSIONS,
 ): string {
-  const blocks = selectedDimensions.map((dimension) => {
-    const dim = result.dimensions[dimension]
-    if (!dim) return ''
-    const defs = indicatorsFor(dimension)
-    const lines = defs.map((def, i) => indicatorLine(def, dim.indicators[i])).join('\n')
-    const derived =
-      dim.score === null
-        ? 'no indicator-derived score (no usable data)'
-        : `indicator-derived score ${dim.score}/100`
-    return `## ${DIMENSION_LABELS[dimension]}
-Question: ${DIMENSION_QUESTIONS[dimension]}
-Evidence coverage: ${Math.round(dim.confidenceParts.coverage * 100)}% of defined indicators, mean evidence age weight ${dim.confidenceParts.recency}, ${derived}.
-${lines}`
-  })
+  const blocks = selectedDimensions.map((dimension) => dimensionBrief(result, dimension))
   return `# Evidence brief: ${COUNTRY_NAMES[result.iso3] ?? result.country} (${result.iso3})\n\n${blocks.join('\n\n')}`
 }
 
@@ -117,9 +132,9 @@ This is round 2. Read what the rest of the panel argued. Revise any score where 
 Do not converge for the sake of converging. A stable disagreement that you can defend is a finding, and we record it.`
 }
 
-export function indicatorJudgementPrompt(panelist: Panelist, dimension: Dimension): string {
-  const defs = indicatorsFor(dimension)
-  const rows = defs
+/** The indicator rows of one dimension's audit prompt: the part a judgement is about. */
+export function indicatorAuditRows(dimension: Dimension): string {
+  return indicatorsFor(dimension)
     .map(
       (d) =>
         `- id: ${d.id}
@@ -132,6 +147,17 @@ export function indicatorJudgementPrompt(panelist: Panelist, dimension: Dimensio
   our note: ${d.notes}`,
     )
     .join('\n')
+}
+
+/** SHA-256 of the dimension's name, question and `indicatorAuditRows`, stored on each indicator judgement as `auditHash`. */
+export function indicatorAuditHash(dimension: Dimension): string {
+  return sha256Hex(
+    `${DIMENSION_LABELS[dimension]}\n${DIMENSION_QUESTIONS[dimension]}\n${indicatorAuditRows(dimension)}`,
+  )
+}
+
+export function indicatorJudgementPrompt(panelist: Panelist, dimension: Dimension): string {
+  const rows = indicatorAuditRows(dimension)
 
   return `${panelist.stance.prompt}
 

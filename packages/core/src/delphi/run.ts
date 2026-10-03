@@ -10,6 +10,8 @@ import type { Panelist } from './panel.js'
 import type { PanelProvider } from './provider.js'
 import {
   anonymiseRound,
+  cellBriefHash,
+  indicatorAuditHash,
   DELPHI_PROMPT_VERSION,
   indicatorJudgementPrompt,
   round1CellPrompt,
@@ -151,6 +153,7 @@ export async function runDelphi(
           selfConfidence: row.selfConfidence,
           rationale: row.rationale,
           missingEvidence: row.missingEvidence,
+          briefHash: cellBriefHash(job.result, dimension),
         })
       }
     })
@@ -183,6 +186,7 @@ export async function runDelphi(
           wealthProxyRisk: row.wealthProxyRisk,
           redundantWith: row.redundantWith,
           rationale: row.rationale,
+          auditHash: indicatorAuditHash(job.dimension),
         })
       }
     })

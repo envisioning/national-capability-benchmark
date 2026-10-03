@@ -9,6 +9,28 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.27.0 — 2026-10-03
+
+- **Panel estimates are back beside the scores.** 348 of the 455 panel
+  cells scored on dataset 9.0.1 apply to dataset 9.3.0, because the evidence
+  each was made on is unchanged. The 107 whose evidence moved are dropped and
+  listed in the report and the diagnostics. The panel page says how many cells
+  were carried. Decision D160 sets out the rule.
+
+## Dataset 9.3.0 — 2026-10-03
+
+- **A panel estimate now carries across a release of the same major version
+  when its evidence is unchanged.** Each panel estimate stores a hash of the
+  evidence brief it was made on (`briefHash`, and `auditHash` on an indicator
+  judgement), and an estimate applies only if the current brief hashes the
+  same. Nothing carries across a major version. Fields are added and none is
+  removed, so no score moves. `diagnostics.delphiApplication` records what
+  carried and what was dropped, and `data/out/delphi-applied.json` holds the
+  estimates that apply. Decision D160.
+- **348 of 455 cells carry from the 9.0.1 run.** The 107 dropped are 90
+  Experimentation, 11 Shared purpose, five Building and one Learning, from the
+  rows D157 and D159 changed and the frame moves they caused.
+
 ## App 1.26.1 — 2026-10-03
 
 - **A row set aside as too old says so.** On a country page and on each
