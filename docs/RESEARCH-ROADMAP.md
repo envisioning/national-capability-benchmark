@@ -652,6 +652,22 @@ result as a gap or evidence-only source and retain the Coordination gap.
 reallocation or current-budget execution before adding a second registry entry
 or adapter.
 
+### CARRIERS-0: who organises the people the state does not reach
+
+**Goal:** observe the organisations outside the state that hold capability
+where the state does not reach, starting with the growth of evangelical
+churches in Brazil, without scoring religion or ranking traditions.
+
+**Status:** research. Brief written, no source tested. D169 fixes how
+religious traditions and bodies enter the institution layer.
+
+**Read:** D169; `docs/research/carriers/BRIEF.md`.
+
+**Open:** CARRIERS-4 (evidence records) can start now. CARRIERS-1, the Brazil
+municipal panel from CNPJ legal nature 322-0, CNES, Censo Escolar, Censo SUAS
+and TSE, needs a decision on municipal geometry first, because D66 and D89
+cover states only.
+
 ## Country-set changes are a separate project
 
 Do not add countries while closing a source gap unless the user explicitly

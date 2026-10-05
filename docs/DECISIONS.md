@@ -9266,3 +9266,120 @@ willing to cite the gate after the pilot result, which would leave a
 procurement instrument with no procurement; or a public test of the same two
 constructs in Portuguese, from a named publisher, that institutions already
 cite.
+
+## D169 — A religious tradition is a tag and a presence, never a node
+
+*Recorded 2026-10-05. Extends D107 and the inclusion rules in
+`docs/INSTITUTIONS.md`. Shape only: the schema, the ledger entries and the
+presence data follow in later changes, each against this record.*
+
+**Decision.** Religion enters the institution layer in three parts, and only
+the third is drawn.
+
+1. **Tradition is a tag.** Any node, national or global, may carry an
+   optional `tradition` field. It is a classification beside `system` and
+   `legalNature`, not a replacement for either. The values come from an
+   existing two-level taxonomy (Pew or the World Religion Database), for
+   example `christianity.pentecostal`, `islam.shia`,
+   `african_diasporic.candomble`, `spiritism`, `indigenous`. The project does
+   not invent the taxonomy.
+2. **Presence is data about a country.** For each benchmarked country, the
+   share of the population in each tradition, from the census where one asks
+   and from Pew or the World Religion Database where it does not. Where open
+   registries exist, organisation density joins it, such as Brazil's CNPJ
+   legal nature 322-0, "Organização Religiosa". Every tradition above a set
+   share in any benchmarked country gets a presence row. Presence lives in
+   `data/observations` with source and year, like every other observation.
+3. **Organisations are nodes, at the level where they act.** A religious body
+   enters only under the existing inclusion rules. A body no country owns goes
+   in the global ledger: the Holy See, the World Council of Churches, the
+   Ecumenical Patriarchate, the Bahá'í Universal House of Justice, the Muslim
+   World League, and the faith-based delivery networks such as Caritas
+   Internationalis, Islamic Relief and the Aga Khan Development Network. A
+   transnational body with a home country, such as IURD in Brazil or RCCG in
+   Nigeria, is a node in its home country's file, and other countries reach it
+   by edge. National bodies such as CNBB, Nahdlatul Ulama or the Santas Casas
+   live in their country file.
+
+The schema gains three things. The optional `tradition` field on
+`InstitutionNodeBase`. One legal nature, `religious_organization`, for a
+religious body outside the state. One system, `community_life`, for bodies
+whose function no current system holds. That system is not faith-specific:
+unions and cooperatives can use it later. A religious body that is part of the
+state keeps the legal nature it already has: Turkey's Diyanet is
+`direct_administration` with tradition `islam.sunni`.
+
+`members` is not reused. On the UN it means a state joined. A church's
+presence in a country is a different fact, and it is recorded by the edge from
+the national body (CNBB `linked_to` the Holy See), which carries its own
+source.
+
+The network sidebar gains `tradition` as a facet (D111).
+
+**Rules.**
+
+- Traditions are never compared, ranked or scored.
+- Presence never enters a capability score or its confidence. Neither does a
+  religious node, the same as every node (D20, `docs/INSTITUTIONS.md`).
+- Size of following alone does not admit a body. The inclusion rules decide.
+- No edge without a verb. A relation that the current verbs cannot name stays
+  out until one can, by its own decision.
+
+**What it allows.** One diagnostic reading, in `bench diagnose` and never in a
+score: presence against each dimension score, across countries and across
+Brazilian states, with the wealth residual (D68) as the control. Religiosity
+falls as income rises, so an uncontrolled correlation between a tradition and
+Adaptability is a GDP correlation (A3). Every result is a hint, not a finding
+(A8).
+
+The reading answers "where a tradition is present, how does the country
+score". It does not answer "is a traditional society less adaptive".
+Denominational share is not traditionalism: Pentecostalism combines high
+religiosity with organisations that open, split and close faster than almost
+any other sector. Traditional against secular values is a separate measure,
+the WVS values axis, and it is not part of this decision.
+
+**Why.** A tradition has no address, no source page and no edges, and the
+institutions doc says the node is the institution. If only organised bodies
+were drawn, the graph would favour hierarchy: the Catholic, LDS and Bahá'í
+bodies would appear, and Islam, Hinduism, Pentecostalism, Candomblé, Vodou and
+Indigenous traditions would be nearly absent. That is wrong about the world.
+Presence carries the decentralised traditions at their real size, and the tag
+lets one field cover a ministry, a church and a charity without classifying a
+state body as a private one.
+
+Religious bodies hold capability the benchmark already asks about: delivery
+where the state is thin (Pastoral da Criança, the Santas Casas inside SUS),
+coordination in disasters, trust inside a membership, and in Brazilian
+Pentecostalism, a high rate of institutional experiment. A map without them
+understates where capability sits in many of the 53 countries.
+
+**Cost.** A third classification on every node, and a taxonomy owned outside
+the project that changes when its owner revises it. Presence data from Pew and
+the World Religion Database is modelled, not counted, for countries without a
+census question, and the census years differ. Presence by share hides
+intensity: a nominal majority and a practising minority look the same. The
+CNPJ series misses churches that never register, and many small Pentecostal
+churches do not.
+
+The global ledger will still look more hierarchical than the world. Presence
+corrects the count, not the drawing.
+
+Classification is contested. A tradition label can be disputed by the people
+it names, and some bodies (state-supervised religious associations in China
+and Vietnam) sit between state and religion. Each such node needs a source for
+its tag, and the summary must say what is contested.
+
+**Open.** Whether constitutional tax immunity is `funds` or a fact in the node
+summary: it is an exemption, not a standing funding role. Which verb, if any,
+names a parliamentary religious caucus. Whether the Holy See needs its own
+legal nature as a sovereign entity. Whether the Pew Government Restrictions and
+Social Hostilities indexes enter Agency or Trust as indicators, which is a
+separate decision about scoring.
+
+**Overturned by.** A tradition that the presence layer cannot represent
+without a node, which would mean traditions need an address after all. Or
+readers treating presence rows as a ranking of faiths, which would mean the
+layer comes off the reader surfaces and stays in diagnostics. Or a second
+country map where the religious bodies do not fit the inclusion rules without
+special cases, which would mean they need their own rule.
