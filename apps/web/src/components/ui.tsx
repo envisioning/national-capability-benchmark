@@ -699,8 +699,11 @@ export function FrameNote() {
  */
 export function Delta({
   value,
+  locale,
 }: {
   value: number | null
+  /** Number formatting for a page in another language; English when absent. */
+  locale?: string | undefined
 }) {
   if (value === null) return <span className="text-[var(--muted)]">no trend</span>
   const flat = Math.abs(value) < 0.05
@@ -711,7 +714,7 @@ export function Delta({
         size={13}
         className="text-[var(--muted)]"
       />
-      {flat ? '0.0' : `${value > 0 ? '+' : ''}${value.toFixed(1)}`}
+      {flat ? fixedIn(0, 1, locale) : `${value > 0 ? '+' : ''}${fixedIn(value, 1, locale)}`}
     </span>
   )
 }

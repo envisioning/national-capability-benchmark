@@ -1,9 +1,13 @@
+import { EVIDENCE_ES } from './evidence-es.js'
 import type { Lexicon } from './types.js'
 
 /**
  * Latin American Spanish lexicon, neutral rather than national: one Spanish
- * reading for the Mexico, Colombia, Chile and Argentina layers. Translate the
- * vocabulary, keep the ids, change nothing about the numbers.
+ * reading for the 17 Latin American layers. It is the base Spanish: Spain
+ * reads through `es-es.ts`, a thin override of this file, because the larger
+ * speaker community sets the base and the former metropole reads through
+ * the difference. Translate the vocabulary, keep the ids, change nothing
+ * about the numbers.
  *
  * Terms fixed once here, because a page that says the same thing two ways
  * reads as two things:
@@ -28,12 +32,37 @@ import type { Lexicon } from './types.js'
  */
 export const ES: Lexicon = {
   lang: 'es',
+  htmlLang: 'es-419',
   /* Latin American Spanish number formatting: a point for decimals. */
   numberLocale: 'es-419',
+  /* "de el Perú" is "del Perú" and "a el Perú" is "al Perú". "El Salvador"
+   * carries its article in its name, capitalised, and never contracts. */
+  contractions: [
+    ['\\bde el\\b', 'del'],
+    ['\\ba el\\b', 'al'],
+  ],
   /* The countries whose Spanish pages are published, which is the countries
    * with a Spanish layer in apps/web/src/lib/layers.ts. A test keeps the two
    * in step. See D69 and D134. */
-  layerCountries: ['MEX', 'COL', 'CHL', 'ARG'],
+  layerCountries: [
+    'MEX',
+    'COL',
+    'CHL',
+    'ARG',
+    'PER',
+    'ECU',
+    'BOL',
+    'VEN',
+    'PRY',
+    'URY',
+    'CRI',
+    'PAN',
+    'GTM',
+    'HND',
+    'SLV',
+    'NIC',
+    'DOM',
+  ],
   dimensions: {
     anticipation: 'Anticipación',
     agency: 'Iniciativa',
@@ -189,9 +218,16 @@ export const ES: Lexicon = {
     TTO: 'Trinidad y Tobago',
     MUS: 'Mauricio',
   },
-  /* Spanish names the four layer countries without an article, and they are
-   * the only countries the pages put in subject position. */
-  countryArticles: {},
+  /* The article prose puts before a layer country. "La República
+   * Dominicana" takes one always, and "el Perú" is the form the country uses
+   * in its own official writing. El Salvador carries its article in its name
+   * (`countries`), so it has none here and never contracts ("de El
+   * Salvador"). Ecuador, Uruguay, Paraguay and the rest read without one, as
+   * current usage across the region does. Every template that puts a country
+   * in prose reads `{countryTopic}` and is filled through `fillLex`, which
+   * contracts "de el" and "a el" and capitalises a sentence that opens on
+   * the country. */
+  countryArticles: { PER: 'el', DOM: 'la' },
   indicators: {
     rd_expenditure_gdp: 'Gasto en I+D',
     researchers_per_million: 'Investigadores en I+D',
@@ -487,7 +523,7 @@ export const ES: Lexicon = {
     colTrend: 'Tendencia',
     historyHeading: '¿Cómo cambió cada capacidad con el tiempo?',
     historyIntro:
-      'Elija una dimensión para ver cómo cambió con el tiempo la evidencia comparable de {country}. La escala vertical es la escala comparativa actual de 0 a 100.',
+      'Elija una dimensión para ver cómo cambió con el tiempo la evidencia comparable de {countryTopic}. La escala vertical es la escala comparativa actual de 0 a 100.',
     historyDimension: 'Dimensión',
     historyPeriod: 'Período',
     historyAxis: 'Posición de la capacidad en la escala actual',
@@ -540,7 +576,7 @@ export const ES: Lexicon = {
       'Son cambios institucionales documentados en Brasil que el marco registra como evidencia. No reciben puntuación y aparecen junto a las puntuaciones de capacidad como registro histórico.',
     institutionalHistoryHeading: 'Lo que {countryTopic} construyó y ningún indicador cuenta',
     institutionalHistoryIntro:
-      'Son cambios institucionales documentados en {country} que el marco registra como evidencia. Aparecen junto a la puntuación y no cambian la puntuación ni la solidez.',
+      'Son cambios institucionales documentados en {countryTopic} que el marco registra como evidencia. Aparecen junto a la puntuación y no cambian la puntuación ni la solidez.',
     contributeHeading: 'Cómo contribuir',
     contributeBody:
       'En {repo} se puede cubrir un vacío, registrar evidencia o cuestionar un indicador. Los documentos explican el método y sus decisiones.',
@@ -745,6 +781,7 @@ export const ES: Lexicon = {
     conditionsMore: '{countryTopic} registra un valor mayor que la mediana de los pares en {list}.',
     conditionsLess: '{countryTopic} registra un valor menor que la mediana de los pares en {list}.',
     conditionsLevel: '{countryTopic} registra un valor igual a la mediana de los pares en {list}.',
+    conditionsLowerBetter: 'En {list}, un valor menor es mejor.',
     readingNote:
       'Cada frase compara una posición con una mediana. La causa de una diferencia, y qué hacer con ella, quedan fuera de estos datos.',
     noPeers:
@@ -768,7 +805,7 @@ export const ES: Lexicon = {
         decisions: ['D119'],
       },
       new_export_products_rate: {
-        text: 'Los nuevos productos de exportación cuentan las líneas de mercancías en las que un país entró en quince años, según el Growth Lab de Harvard. Son exportaciones brutas, así que los centros de reexportación cuentan lo que pasa por ellos; un país que no informa su comercio se lee en los registros de sus socios. Una ventana tan larga se mueve poco de una versión a otra.',
+        text: 'Los nuevos productos de exportación cuentan las líneas de mercancías en las que un país entró en quince años, según los datos de comercio del Growth Lab. Son exportaciones brutas, así que los centros de reexportación cuentan lo que pasa por ellos; un país que no informa su comercio se lee en los registros de sus socios. Una ventana tan larga se mueve poco de una versión a otra.',
         decisions: ['D149'],
       },
     },
@@ -817,5 +854,52 @@ export const ES: Lexicon = {
     decisionLink: 'decisión {id}',
     agendaLink: 'Abrir la agenda de capacidades',
     capabilityLink: 'Ver {dimension} en todos los países, en inglés',
+    checks: {
+      label: 'Series de contraste, fuera de la puntuación',
+      intro:
+        'Cada número se publica junto a la puntuación y queda fuera de ella: no entra en la escala, el promedio, el conteo de indicadores ni la solidez de la evidencia.',
+      lowerBetter: 'un valor menor es mejor',
+      higherBetter: 'un valor mayor es mejor',
+      source: '{source}, {year}',
+      byId: {
+        political_polarization: {
+          name: 'Polarización política',
+          definition:
+            'Si los simpatizantes de campos políticos opuestos suelen tratarse de manera amistosa u hostil, según la calificación de los expertos de país de V-Dem, de 0, amistosa, a 4, hostil.',
+          unit: 'índice de 0 a 4',
+          reason:
+            'No entra en la puntuación porque una lectura baja tiene dos causas que el número no separa. Donde los campos compiten abiertamente, la calma significa que quienes discrepan se tratan como conciudadanos; donde no se permite organizar una oposición, significa que no queda un campo al cual oponerse.',
+          decision: 'D121',
+        },
+        voter_turnout: {
+          name: 'Participación electoral',
+          definition:
+            'Proporción de los electores inscritos que votaron en la última elección nacional hasta 2025, según los resultados oficiales que V-Dem codifica a partir de IDEA, la UIP e IFES.',
+          unit: '% de los electores inscritos',
+          reason:
+            'No entra en la puntuación por tres razones que el número no separa: lee el canal democrático, el voto obligatorio la convierte en una lectura de la ley, y las autocracias también logran una participación alta, que es movilización y no participación.',
+          decision: 'D129',
+        },
+        institutional_trust: {
+          name: 'Confianza en los tribunales',
+          definition:
+            'Proporción de las personas encuestadas que dicen tener mucha confianza en el sistema de justicia y los tribunales, entre cuatro respuestas (mucha, bastante, poca y ninguna), en la ronda 2017 a 2022 de la encuesta conjunta EVS/WVS.',
+          unit: '% que responde mucha',
+          reason:
+            'No entra en la puntuación porque la respuesta lee dos cosas que el número no separa. Donde los tribunales son independientes, la confianza en ellos juzga cómo funcionan; donde responden al Estado, también es deferencia, y decir otra cosa a un encuestador tiene un costo. En esta comparación, las autocracias registran valores más altos que las democracias.',
+          decision: 'D132',
+        },
+        customs_clearance_time: {
+          name: 'Tiempo de despacho aduanero de las exportaciones',
+          definition:
+            'Promedio de días para despachar en aduana las exportaciones directas, según las empresas manufactureras que exportan directamente, en las Encuestas de Empresas del Banco Mundial.',
+          unit: 'días',
+          reason:
+            'No entra en la puntuación por dos razones. El número de empresas detrás de cada cifra se publica solo en los microdatos y en varios países puede ser pequeño, y la pregunta cambió en 2024, así que un país encuestado antes y después del cambio puede moverse mucho sin que nada cambie en su frontera.',
+          decision: 'D144',
+        },
+      },
+    },
   },
+  evidence: EVIDENCE_ES,
 }

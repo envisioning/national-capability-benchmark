@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { LEXICONS, MAP_DIMENSIONS, countryName, countryTopic, fill, isThinEvidence } from '@ncb/core'
+import { LEXICONS, MAP_DIMENSIONS, countryName, countryTopic, fillLex, isThinEvidence } from '@ncb/core'
 import type { CapabilityMap } from '@ncb/core'
 import {
   Confidence,
@@ -31,11 +31,12 @@ import { capitalize, mapWords } from '@/lib/words'
  * each through its own lexicon and addresses. See D133, D134 and D136.
  */
 export function capabilityMapIndexMetadata(reading: MapReading): Metadata {
-  const x = LEXICONS[reading.lang].capabilityMap.index
+  const lex = LEXICONS[reading.lang]
+  const x = lex.capabilityMap.index
   return {
-    title: fill(x.metaTitle, { country: countryName(LEXICONS[reading.lang], reading.iso3) }),
+    title: fillLex(lex, x.metaTitle, { country: countryName(LEXICONS[reading.lang], reading.iso3) }),
     description: capitalize(
-      fill(x.metaDescription, {
+      fillLex(lex, x.metaDescription, {
         countryTopic: countryTopic(LEXICONS[reading.lang], reading.iso3),
       }),
     ),
@@ -67,17 +68,17 @@ export async function CapabilityMapIndex({ reading }: { reading: MapReading }) {
 
   return (
     <>
-      <PageTitle>{fill(x.title, { countryTopic: topic })}</PageTitle>
+      <PageTitle>{fillLex(lex, x.title, { countryTopic: topic })}</PageTitle>
       {version ? (
         <div className="mt-4 flex flex-wrap gap-2">
-          <Meta icon="file-clock">{fill(m.dataset, { version })}</Meta>
+          <Meta icon="file-clock">{fillLex(lex, m.dataset, { version })}</Meta>
         </div>
       ) : null}
       <p className="mb-12 mt-6 max-w-3xl text-lg leading-relaxed">
-        {fill(x.intro, { countryTopic: topic, n: countWord(maps.length), count: peerCount })}
+        {fillLex(lex, x.intro, { countryTopic: topic, n: countWord(maps.length), count: peerCount })}
       </p>
       {maps[0] && maps[0].income === null && maps[0].incomePublished ? (
-        <p className="-mt-8 mb-12 max-w-3xl text-lg leading-relaxed">{fill(m.noIncome, { countryTopic: topic })}</p>
+        <p className="-mt-8 mb-12 max-w-3xl text-lg leading-relaxed">{fillLex(lex, m.noIncome, { countryTopic: topic })}</p>
       ) : null}
 
       <Section title={x.heading}>
@@ -99,15 +100,15 @@ export async function CapabilityMapIndex({ reading }: { reading: MapReading }) {
                     {capitalize(position(map))}
                     {map.peerScoreMedian === null
                       ? null
-                      : `, ${fill(x.peersScored, { n: map.peersScored, count: map.peers.length })}`}
+                      : `, ${fillLex(lex, x.peersScored, { n: map.peersScored, count: map.peers.length })}`}
                   </p>
                   {map.belowCoverageFloor ? (
                     <p className="mt-1 text-xs text-[var(--muted)]">
-                      {fill(m.floorNote, { n: map.observedIndicators })}
+                      {fillLex(lex, m.floorNote, { n: map.observedIndicators })}
                     </p>
                   ) : thin ? (
                     <p className="mt-1 text-xs text-[var(--muted)]">
-                      {fill(m.thinNote, { band: lex.bands[map.band] })}
+                      {fillLex(lex, m.thinNote, { band: lex.bands[map.band] })}
                     </p>
                   ) : null}
                 </div>
@@ -131,7 +132,7 @@ export async function CapabilityMapIndex({ reading }: { reading: MapReading }) {
         {reading.indexDecisions.map((id) => (
           <p key={id} className="mt-6 text-lg">
             <Link href={decisionHref(id)} className="underline underline-offset-4">
-              {capitalize(fill(m.decisionLink, { id }))}
+              {capitalize(fillLex(lex, m.decisionLink, { id }))}
             </Link>
           </p>
         ))}

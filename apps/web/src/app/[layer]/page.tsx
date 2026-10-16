@@ -6,7 +6,8 @@ import {
   LEXICONS,
   MAP_DIMENSIONS,
   countryName,
-  fill,
+  countryTopic,
+  fillLex,
   isThinEvidence,
 } from '@ncb/core'
 import type { Dimension } from '@ncb/core'
@@ -58,10 +59,11 @@ function overviewLayer(slug: string) {
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const found = overviewLayer((await params).layer)
   if (!found) return {}
-  const country = countryName(LEXICONS[found.layer.lang], found.layer.iso3)
+  const lex = LEXICONS[found.layer.lang]
+  const names = { country: countryName(lex, found.layer.iso3), countryTopic: countryTopic(lex, found.layer.iso3) }
   return {
-    title: fill(found.pages.overviewMetaTitle, { country }),
-    description: fill(found.pages.overviewMetaDescription, { country }),
+    title: fillLex(lex, found.pages.overviewMetaTitle, names),
+    description: fillLex(lex, found.pages.overviewMetaDescription, names),
   }
 }
 
@@ -73,6 +75,7 @@ export default async function LayerOverviewPage({ params }: Params) {
   const words = LAYER_WORDS[layer.lang]
   const m = lex.capabilityMap
   const name = countryName(lex, layer.iso3)
+  const topic = countryTopic(lex, layer.iso3)
 
   const loaded = await loadCapabilityMaps(layer.iso3, MAP_DIMENSIONS)
   if (!loaded) return <Empty hint={words?.noData ?? ''} />
@@ -92,27 +95,27 @@ export default async function LayerOverviewPage({ params }: Params) {
   const structural = maps[0]?.artefacts.structural ?? []
   const artefactLink = (id: string, first = false) => (
     <Link href={artefactHref(id)} className="underline underline-offset-4">
-      {first ? capitalize(fill(m.artefactLink, { id })) : fill(m.artefactLink, { id })}
+      {first ? capitalize(fillLex(lex, m.artefactLink, { id })) : fillLex(lex, m.artefactLink, { id })}
     </Link>
   )
 
   return (
     <>
       <PageTitle>
-        <CountryLabel iso3={layer.iso3} name={fill(pages.overviewTitle, { country: name })} />
+        <CountryLabel iso3={layer.iso3} name={fillLex(lex, pages.overviewTitle, { country: name, countryTopic: topic })} />
       </PageTitle>
       {version ? (
         <div className="mt-4 flex flex-wrap gap-2">
-          <Meta icon="file-clock">{fill(m.dataset, { version })}</Meta>
+          <Meta icon="file-clock">{fillLex(lex, m.dataset, { version })}</Meta>
         </div>
       ) : null}
       <p className="mb-12 mt-6 max-w-3xl text-lg leading-relaxed">
-        {fill(pages.overviewIntro, { country: name, countries: COUNTRY_ISO3.length })}
+        {fillLex(lex, pages.overviewIntro, { country: name, countryTopic: topic, countries: COUNTRY_ISO3.length })}
       </p>
 
       <Section
         title={pages.scoresHeading}
-        hint={capitalize(fill(pages.scoresIntro, { n: words?.countWord(scored) ?? scored }))}
+        hint={capitalize(fillLex(lex, pages.scoresIntro, { n: words?.countWord(scored) ?? scored }))}
       >
         <ul className="divide-y divide-[var(--rule)] border-y border-[var(--rule)]">
           {maps.map((map) => {
@@ -144,11 +147,11 @@ export default async function LayerOverviewPage({ params }: Params) {
                   </p>
                   {map.belowCoverageFloor ? (
                     <p className="mt-1 text-xs text-[var(--muted)]">
-                      {fill(m.floorNote, { n: map.observedIndicators })}
+                      {fillLex(lex, m.floorNote, { n: map.observedIndicators })}
                     </p>
                   ) : thin ? (
                     <p className="mt-1 text-xs text-[var(--muted)]">
-                      {fill(m.thinNote, { band: lex.bands[map.band] })}
+                      {fillLex(lex, m.thinNote, { band: lex.bands[map.band] })}
                     </p>
                   ) : null}
                 </div>
@@ -160,7 +163,7 @@ export default async function LayerOverviewPage({ params }: Params) {
                   <span className="text-xs text-[var(--muted)]">{m.confidenceLabel}</span>
                   <Confidence value={map.confidence} />
                   <span className="text-xs text-[var(--muted)]">
-                    {fill(m.bandLine, { band: lex.bands[map.band] })}
+                    {fillLex(lex, m.bandLine, { band: lex.bands[map.band] })}
                   </span>
                 </span>
               </li>
@@ -199,7 +202,7 @@ export default async function LayerOverviewPage({ params }: Params) {
 
       <Section
         title={pages.artefactsHeading}
-        hint={fill(pages.artefactsIntro, { country: name })}
+        hint={fillLex(lex, pages.artefactsIntro, { country: name, countryTopic: topic })}
       >
         <ul className="max-w-3xl space-y-3 text-lg leading-relaxed">
           {specific.map((id) => (
@@ -222,7 +225,7 @@ export default async function LayerOverviewPage({ params }: Params) {
         </ul>
         <p className="mt-6 text-lg">
           <Link href={decisionHref(PAGE_DECISION)} className="underline underline-offset-4">
-            {capitalize(fill(m.decisionLink, { id: PAGE_DECISION }))}
+            {capitalize(fillLex(lex, m.decisionLink, { id: PAGE_DECISION }))}
           </Link>
         </p>
       </Section>

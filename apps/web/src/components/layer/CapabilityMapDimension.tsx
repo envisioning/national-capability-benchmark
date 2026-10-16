@@ -6,7 +6,7 @@ import {
   MAX_SCORED_VALUE_AGE,
   countryName,
   countryTopic,
-  fill,
+  fillLex,
   fmt,
   fmtConf,
   indicatorName,
@@ -61,11 +61,11 @@ export function capabilityMapDimensionMetadata(reading: MapReading, slug: string
   const lex = LEXICONS[reading.lang]
   const dimensionName = lex.dimensions[dimension] ?? dimension
   return {
-    title: fill(lex.capabilityMap.metaTitle, {
+    title: fillLex(lex, lex.capabilityMap.metaTitle, {
       dimension: dimensionName,
       country: countryName(lex, reading.iso3),
     }),
-    description: fill(lex.capabilityMap.metaDescription, {
+    description: fillLex(lex, lex.capabilityMap.metaDescription, {
       dimension: dimensionName,
       countryTopic: countryTopic(lex, reading.iso3),
     }),
@@ -125,7 +125,7 @@ export async function CapabilityMapDimension({ reading, slug }: { reading: MapRe
     map.score === null || map.peerScoreMedian === null || map.scorePosition === null
       ? null
       : capitalize(
-          fill(
+          fillLex(lex, 
             map.scorePosition === 'above'
               ? m.scoreAbove
               : map.scorePosition === 'below'
@@ -145,7 +145,7 @@ export async function CapabilityMapDimension({ reading, slug }: { reading: MapRe
     ids.length === 0
       ? null
       : capitalize(
-          fill(template, { countryTopic: topic, list: list(ids.map((id) => lowerFirst(rowName(id)))) }),
+          fillLex(lex, template, { countryTopic: topic, list: list(ids.map((id) => lowerFirst(rowName(id)))) }),
         )
 
   /* A row's construct caveat, then any hand-written fact about this country's
@@ -156,7 +156,7 @@ export async function CapabilityMapDimension({ reading, slug }: { reading: MapRe
     const fact = map.facts.find((f) => f.indicatorId === row.id)
     const factText = fact
       ? {
-          text: fill(m.rowFacts[fact.kind], { countryTopic: topic, ...fact.values }),
+          text: fillLex(lex, m.rowFacts[fact.kind], { countryTopic: topic, ...fact.values }),
           decisions: fact.decisions,
         }
       : undefined
@@ -178,24 +178,24 @@ export async function CapabilityMapDimension({ reading, slug }: { reading: MapRe
       <span key={id}>
         {i === 0 ? ' ' : ', '}
         <Link href={artefactHref(id)} className="underline underline-offset-4">
-          {fill(m.artefactLink, { id })}
+          {fillLex(lex, m.artefactLink, { id })}
         </Link>
       </span>
     ))
 
   return (
     <>
-      <PageTitle>{fill(m.title, { countryTopic: topic, dimension: dimensionName })}</PageTitle>
+      <PageTitle>{fillLex(lex, m.title, { countryTopic: topic, dimension: dimensionName })}</PageTitle>
       {version ? (
         <div className="mt-4 flex flex-wrap gap-2">
-          <Meta icon="file-clock">{fill(m.dataset, { version })}</Meta>
+          <Meta icon="file-clock">{fillLex(lex, m.dataset, { version })}</Meta>
         </div>
       ) : null}
       <p className="mb-12 mt-6 max-w-3xl text-lg leading-relaxed">
-        {fill(m.intro, { countryTopic: topic, count: map.peerRule.count })}
+        {fillLex(lex, m.intro, { countryTopic: topic, count: map.peerRule.count })}
       </p>
       {map.income === null && map.incomePublished ? (
-        <p className="-mt-8 mb-12 max-w-3xl text-lg leading-relaxed">{fill(m.noIncome, { countryTopic: topic })}</p>
+        <p className="-mt-8 mb-12 max-w-3xl text-lg leading-relaxed">{fillLex(lex, m.noIncome, { countryTopic: topic })}</p>
       ) : null}
 
       <Section title={m.scoreHeading}>
@@ -212,26 +212,26 @@ export async function CapabilityMapDimension({ reading, slug }: { reading: MapRe
             </span>
             <Confidence value={map.confidence} size="md" locale={lex.numberLocale} />
             <span className="text-xs text-[var(--muted)]">
-              {fill(m.bandLine, { band: lex.bands[map.band] })}
+              {fillLex(lex, m.bandLine, { band: lex.bands[map.band] })}
             </span>
           </span>
         </div>
         {map.belowCoverageFloor ? (
           <p className="mb-4 max-w-3xl text-lg leading-relaxed">
-            {fill(m.floorNote, { n: map.observedIndicators })}
+            {fillLex(lex, m.floorNote, { n: map.observedIndicators })}
           </p>
         ) : null}
         {thin ? (
           <p className="mb-4 max-w-3xl text-lg leading-relaxed">
-            {fill(m.thinNote, { band: lex.bands[map.band] })}
+            {fillLex(lex, m.thinNote, { band: lex.bands[map.band] })}
           </p>
         ) : null}
         <p className="mb-4 max-w-3xl text-lg leading-relaxed">
-          {fill(m.scoreIntro, { dimension: dimensionName, n: countWord(observed.length) })}
+          {fillLex(lex, m.scoreIntro, { dimension: dimensionName, n: countWord(observed.length) })}
         </p>
         {map.dimensionIncomeR === null ? null : (
           <p className="mb-8 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-            {fill(m.dimensionIncome, {
+            {fillLex(lex, m.dimensionIncome, {
               dimension: dimensionName,
               r: r(map.dimensionIncomeR),
               n: map.dimensionIncomeN,
@@ -257,13 +257,13 @@ export async function CapabilityMapDimension({ reading, slug }: { reading: MapRe
                 </p>
                 {row.year === null ? null : (
                   <p className="mt-1 text-xs text-[var(--muted)]">
-                    {fill(m.rowSource, { source: row.source, year: row.year })}
+                    {fillLex(lex, m.rowSource, { source: row.source, year: row.year })}
                   </p>
                 )}
                 {row.staleYear === null ? null : (
                   <p className="mt-1 inline-flex items-start gap-1.5 text-xs leading-relaxed text-[var(--muted)]">
                     <Icon name={STATUS_ICON.stale} size={13} className="mt-0.5 shrink-0" />
-                    {fill(m.rowStale, { year: row.staleYear, age: MAX_SCORED_VALUE_AGE })}
+                    {fillLex(lex, m.rowStale, { year: row.staleYear, age: MAX_SCORED_VALUE_AGE })}
                   </p>
                 )}
               </div>
@@ -275,7 +275,7 @@ export async function CapabilityMapDimension({ reading, slug }: { reading: MapRe
                 <span className="text-xs text-[var(--muted)]">{m.colPeerMedian}</span>
                 <Score value={row.peerMedian} size="sm" nullLabel={m.noValue} locale={lex.numberLocale} />
                 <span className="text-xs tabular-nums text-[var(--muted)]">
-                  {fill(m.rowPeers, { n: row.peersWithValue })}
+                  {fillLex(lex, m.rowPeers, { n: row.peersWithValue })}
                 </span>
               </span>
             </li>
@@ -283,18 +283,18 @@ export async function CapabilityMapDimension({ reading, slug }: { reading: MapRe
         </ul>
         {map.gaps.length > 0 ? (
           <p className="mt-4 max-w-3xl text-xs leading-relaxed text-[var(--muted)]">
-            {fill(m.gapsLine, { list: list(map.gaps.map((id) => lowerFirst(rowName(id)))) })}
+            {fillLex(lex, m.gapsLine, { list: list(map.gaps.map((id) => lowerFirst(rowName(id)))) })}
           </p>
         ) : null}
         {map.conditions.length === 0 ? (
           <p className="mt-8 max-w-3xl text-lg leading-relaxed">
-            {fill(m.noConditions, { dimension: dimensionName })}
+            {fillLex(lex, m.noConditions, { dimension: dimensionName })}
           </p>
         ) : null}
       </Section>
 
       {subjectConditions.length > 0 ? (
-        <Section title={fill(lex.agenda.conditionsHeading, { countryTopic: topic })}>
+        <Section title={fillLex(lex, lex.agenda.conditionsHeading, { countryTopic: topic })}>
           <p className="max-w-3xl text-lg leading-relaxed">{m.conditionsIntro}</p>
           <ConditionList
             conditions={subjectConditions}
@@ -305,9 +305,9 @@ export async function CapabilityMapDimension({ reading, slug }: { reading: MapRe
               if (!row) return null
               return (
                 <ul className="mt-2 space-y-1 text-xs leading-relaxed text-[var(--muted)]">
-                  <li>{fill(m.conditionIncome, { r: r(row.incomeR), n: row.incomeN })}</li>
+                  <li>{fillLex(lex, m.conditionIncome, { r: r(row.incomeR), n: row.incomeN })}</li>
                   <li>
-                    {fill(m.conditionScore, {
+                    {fillLex(lex, m.conditionScore, {
                       dimension: dimensionName,
                       r: r(row.scoreR),
                       n: row.scoreN,
@@ -315,7 +315,7 @@ export async function CapabilityMapDimension({ reading, slug }: { reading: MapRe
                   </li>
                   {row.peerMedian === null ? null : (
                     <li>
-                      {fill(m.conditionPeerMedian, {
+                      {fillLex(lex, m.conditionPeerMedian, {
                         value: conditionValue(row.peerMedian, lex.numberLocale),
                         unit: unitName(lex, row.unit),
                         n: row.peersWithValue,
@@ -329,21 +329,21 @@ export async function CapabilityMapDimension({ reading, slug }: { reading: MapRe
         </Section>
       ) : null}
 
-      <Section title={fill(m.peersHeading, { countryTopic: topic })}>
+      <Section title={fillLex(lex, m.peersHeading, { countryTopic: topic })}>
         {map.peers.length === 0 ? (
           <p className="max-w-3xl text-lg leading-relaxed">
             {map.income === null && map.incomePublished
-              ? fill(m.noIncome, { countryTopic: topic })
+              ? fillLex(lex, m.noIncome, { countryTopic: topic })
               : m.noPeers}
           </p>
         ) : (
           <>
             <p className="max-w-3xl text-lg leading-relaxed">
-              {fill(m.peerRule, { count: map.peerRule.count })}
+              {fillLex(lex, m.peerRule, { count: map.peerRule.count })}
             </p>
             {map.peerIncome && map.income ? (
               <p className="mt-4 max-w-3xl text-lg leading-relaxed">
-                {fill(m.peerRange, {
+                {fillLex(lex, m.peerRange, {
                   min: money(map.peerIncome.min),
                   max: money(map.peerIncome.max),
                   own: money(map.income.gdpPerCapita),
@@ -354,14 +354,14 @@ export async function CapabilityMapDimension({ reading, slug }: { reading: MapRe
             ) : null}
             {unscored > 0 ? (
               <p className="mt-4 max-w-3xl text-lg leading-relaxed">
-                {capitalize(fill(m.peersUnscored, { n: countWord(unscored), count: map.peers.length }))}
+                {capitalize(fillLex(lex, m.peersUnscored, { n: countWord(unscored), count: map.peers.length }))}
               </p>
             ) : null}
             <div className="mt-8">
               <FlagField
                 points={points}
                 words={{ ...words.field, legendNote: m.fieldNote }}
-                ariaLabel={fill(m.fieldAria, {
+                ariaLabel={fillLex(lex, m.fieldAria, {
                   count: map.peers.length + 1,
                   dimension: dimensionName,
                 })}
@@ -390,7 +390,7 @@ export async function CapabilityMapDimension({ reading, slug }: { reading: MapRe
       </Section>
 
       {map.peers.length > 0 ? (
-        <Section title={fill(m.readingHeading, { countryTopic: topic })}>
+        <Section title={fillLex(lex, m.readingHeading, { countryTopic: topic })}>
           <div className="max-w-3xl space-y-4 text-lg leading-relaxed">
             {scoreSentence ? <p>{scoreSentence}</p> : null}
             {[
@@ -400,7 +400,7 @@ export async function CapabilityMapDimension({ reading, slug }: { reading: MapRe
             ].map(([template, ids]) =>
               (ids as string[]).length === 0 ? null : (
                 <p key={template as string}>
-                  {fill(template as string, { list: list((ids as string[]).map((id) => lowerFirst(rowName(id)))) })}
+                  {fillLex(lex, template as string, { list: list((ids as string[]).map((id) => lowerFirst(rowName(id)))) })}
                 </p>
               ),
             )}
@@ -422,7 +422,7 @@ export async function CapabilityMapDimension({ reading, slug }: { reading: MapRe
       <Section title={m.limitsHeading}>
         <ul className="max-w-3xl list-disc space-y-4 pl-5 text-lg leading-relaxed">
           <li>{m.limitProxy}</li>
-          <li>{fill(m.limitPeers, { count: map.peerRule.count })}</li>
+          <li>{fillLex(lex, m.limitPeers, { count: map.peerRule.count })}</li>
           <li>{m.limitCorrelation}</li>
           {caveats.map((caveat) => (
             <li key={caveat.id}>
@@ -431,7 +431,7 @@ export async function CapabilityMapDimension({ reading, slug }: { reading: MapRe
                 <span key={id}>
                   {i === 0 ? '(' : ', '}
                   <Link href={decisionHref(id)} className="underline underline-offset-4">
-                    {fill(m.decisionLink, { id })}
+                    {fillLex(lex, m.decisionLink, { id })}
                   </Link>
                   {i === caveat.decisions.length - 1 ? ')' : ''}
                 </span>
@@ -440,7 +440,7 @@ export async function CapabilityMapDimension({ reading, slug }: { reading: MapRe
           ))}
           {map.artefacts.specific.length > 0 ? (
             <li>
-              {fill(m.artefactsLine, { dimension: dimensionName })}
+              {fillLex(lex, m.artefactsLine, { dimension: dimensionName })}
               {artefactLinks(map.artefacts.specific)}.
             </li>
           ) : null}
@@ -460,7 +460,7 @@ export async function CapabilityMapDimension({ reading, slug }: { reading: MapRe
           {reading.dimensionDecisions.map((id) => (
             <li key={id}>
               <Link href={decisionHref(id)} className="underline underline-offset-4">
-                {capitalize(fill(m.decisionLink, { id }))}
+                {capitalize(fillLex(lex, m.decisionLink, { id }))}
               </Link>
             </li>
           ))}
@@ -478,7 +478,7 @@ export async function CapabilityMapDimension({ reading, slug }: { reading: MapRe
           ) : null}
           <li>
             <Link href={capabilityHref(dimension)} className="underline underline-offset-4">
-              {fill(m.capabilityLink, { dimension: dimensionName })}
+              {fillLex(lex, m.capabilityLink, { dimension: dimensionName })}
             </Link>
           </li>
         </ul>

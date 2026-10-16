@@ -22,7 +22,7 @@ import { CONFIDENCE_BANDS, confidenceBand } from './confidence.js'
 import type { ConfidenceBandId } from './confidence.js'
 import { primaryMomentum } from './trend.js'
 import { mdTable } from './report.js'
-import { fill } from '../i18n/index.js'
+import { fill, fillLex } from '../i18n/index.js'
 import type { Lexicon } from '../i18n/index.js'
 import { round } from './stats.js'
 import { institutionIdsForDimension } from './institutions.js'
@@ -449,7 +449,7 @@ export function renderAgenda(agenda: CountryAgenda, lex: Lexicon): string {
   )
   out.push('')
 
-  out.push(`## ${fill(s.standingHeading, { countryTopic: topic })}`)
+  out.push(`## ${fillLex(lex, s.standingHeading, { countryTopic: topic })}`)
   out.push('')
   out.push(
     mdTable(
@@ -597,7 +597,7 @@ export function renderAgenda(agenda: CountryAgenda, lex: Lexicon): string {
       ]),
   )
   if (conditionRows.length > 0) {
-    out.push(`## ${fill(s.conditionsHeading, { countryTopic: topic })}`)
+    out.push(`## ${fillLex(lex, s.conditionsHeading, { countryTopic: topic })}`)
     out.push('')
     out.push(s.conditionsIntro)
     out.push('')
@@ -632,12 +632,12 @@ export function renderAgenda(agenda: CountryAgenda, lex: Lexicon): string {
     const hasInstitutionalHistory =
       isAgendaHistoryCountry(agenda.iso3) && agenda.ownEvidence.length >= AGENDA_HISTORY_MIN_ENTRIES
     const evidenceHeading = hasInstitutionalHistory
-      ? fill(s.institutionalHistoryHeading, { countryTopic: topic })
+      ? fillLex(lex, s.institutionalHistoryHeading, { countryTopic: topic })
       : agenda.iso3 === 'BRA'
         ? s.brazilEvidenceHeading
-        : fill(s.ownEvidenceHeading, { countryTopic: topic })
+        : fillLex(lex, s.ownEvidenceHeading, { countryTopic: topic })
     const evidenceIntro = hasInstitutionalHistory
-      ? fill(s.institutionalHistoryIntro, { country: name })
+      ? fillLex(lex, s.institutionalHistoryIntro, { country: name, countryTopic: topic })
       : agenda.iso3 === 'BRA'
         ? s.brazilEvidenceIntro
         : s.ownEvidenceIntro

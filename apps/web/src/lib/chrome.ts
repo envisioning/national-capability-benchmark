@@ -247,9 +247,110 @@ const CHROME_WORDS_PT_BR: ChromeWords = {
   },
 }
 
+/**
+ * The chrome in Spanish, for every Spanish layer: the Latin American base
+ * and Spain's es-ES reading share it, because none of these words differ
+ * between the two. The pages these links reach are English, as the ground
+ * layer is. See D158 and D162.
+ */
+const CHROME_WORDS_ES: ChromeWords = {
+  skipToContent: 'Ir al contenido',
+  home: 'NCB, página de inicio',
+  sectionsAria: 'Secciones',
+  breadcrumbAria: 'Ruta de navegación',
+  pagesAria: 'Páginas',
+  siteAria: 'Mapa del sitio',
+  mobileSectionsAria: 'Secciones',
+  openMenu: 'Abrir menú',
+  closeMenu: 'Cerrar menú',
+  sectionPages: 'Páginas de {label}',
+  nav: {
+    Countries: 'Países',
+    Capabilities: 'Capacidades',
+    Method: 'Método',
+    Participate: 'Participar',
+    About: 'Acerca de',
+    'All countries': 'Todos los países',
+    Compare: 'Comparar',
+    Agendas: 'Agendas',
+    Overview: 'Resumen',
+    Indicators: 'Indicadores',
+    Explore: 'Explorar',
+    Sources: 'Fuentes',
+    Diagnostics: 'Diagnósticos',
+    'Delphi panel': 'Panel Delphi',
+    Patterns: 'Patrones',
+    Limits: 'Límites',
+    Decisions: 'Decisiones',
+    Glossary: 'Glosario',
+    'Ways to help': 'Cómo ayudar',
+    'Open gaps': 'Vacíos abiertos',
+    Objections: 'Objeciones',
+    Contact: 'Contacto',
+    Thesis: 'Tesis',
+    Changelog: 'Historial de versiones',
+    Profile: 'Perfil',
+    Agenda: 'Agenda',
+    Map: 'Mapa',
+    Institutions: 'Instituciones',
+    'Local reading': 'Lectura local',
+  },
+  search: {
+    button: 'Buscar',
+    aria: 'Buscar en el NCB',
+    placeholder: 'Buscar páginas, países, capacidades, indicadores…',
+    inputAria: 'Buscar páginas, países, capacidades e indicadores',
+    resultsAria: 'Resultados de la búsqueda',
+    empty: 'No se encontró ninguna página, país, capacidad ni indicador.',
+    navigate: 'Navegue con ↑ ↓',
+    open: 'Enter para abrir',
+    close: 'Esc para cerrar',
+    groups: {
+      Pages: 'Páginas',
+      Countries: 'Países',
+      Capabilities: 'Capacidades',
+      Indicators: 'Indicadores',
+    },
+  },
+  challenge: {
+    button: 'Objetar',
+    title: 'Objetar una puntuación',
+    intro: 'Elija una puntuación y dé al NCB un motivo concreto para revisarla.',
+    close: 'Cerrar',
+    country: 'País',
+    capability: 'Capacidad',
+    attaches:
+      'Al enviar, el formulario adjunta la puntuación y la solidez de la evidencia actuales del país y la capacidad elegidos.',
+    argument: 'Su argumento',
+    argumentPlaceholder: '¿Qué evidencia o razonamiento muestra que esta puntuación lee mal al país?',
+    sourceUrl: 'Enlace a la fuente',
+    optional: '(opcional)',
+    publicNote:
+      'Las objeciones son públicas, aparecen en inglés en la página de objeciones y empiezan pendientes de revisión. Un mantenedor puede añadir una respuesta firmada después de examinarlas.',
+    cancel: 'Cancelar',
+    submit: 'Enviar objeción',
+    submitting: 'Enviando…',
+    failed: 'No se pudo enviar la objeción.',
+  },
+  footer: {
+    tagline:
+      'El NCB mide si un país puede anticipar cambios, coordinarse ante ellos y construir lo que decide construir.',
+    sub: 'Nueve capacidades medidas con datos públicos, cada una con la solidez de su evidencia al lado.',
+    poweredBefore: 'Desarrollado por ',
+    poweredAfter: ', instituto de investigación y consultoría en tecnología.',
+    projectAria: 'Información sobre el proyecto y la licencia',
+    app: 'Sitio',
+    dataset: 'Datos',
+    changelog: 'Historial de versiones',
+    license: 'Licencia',
+  },
+}
+
 const CHROME_WORDS: Partial<Record<Lang, ChromeWords>> = {
   en: CHROME_WORDS_EN,
   'pt-BR': CHROME_WORDS_PT_BR,
+  es: CHROME_WORDS_ES,
+  'es-ES': CHROME_WORDS_ES,
 }
 
 /** The chrome's words for one language, English where a language has none. */

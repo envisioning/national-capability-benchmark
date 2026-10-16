@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { confidenceBand, fill } from '@ncb/core'
 import { FlagBubble, FlagBubbleLegend } from '@/components/FlagBubble'
 import { CHART_INK, CHART_MOTION, CHART_STROKE } from '@/components/chartTokens'
-import { Confidence, Delta, Flag, Score } from '@/components/ui'
+import { Confidence, Delta, Flag, Score, fixedIn } from '@/components/ui'
 import { FIELD_WORDS_EN } from '@/lib/words'
 
 /* The radar is only needed after a country flag is pointed at. Keep it out of
@@ -105,6 +105,8 @@ export type FlagFieldWords = {
   legendNote: string
   solidRing: string
   brokenRing: string
+  /** Number formatting for a page in another language; English when absent. */
+  locale?: string
 }
 
 const axisX = (v: number) => PAD + (Math.min(100, Math.max(0, v)) / 100) * (FIELD_WIDTH - PAD * 2)
@@ -196,7 +198,7 @@ function CountryCard({
         className={`${point.radar ? '' : 'mt-3 border-t border-[var(--rule)] pt-3'} flex items-center justify-between gap-3`}
       >
         <span className="text-xs text-[var(--muted)]">{words.score}</span>
-        <Score value={point.value} size="md" />
+        <Score value={point.value} size="md" locale={words.locale} />
       </div>
       {point.detail ? (
         <p className="mt-2 text-right text-xs text-[var(--muted)]">{point.detail}</p>
@@ -204,20 +206,20 @@ function CountryCard({
       {band ? (
         <div className="mt-2 flex items-center justify-between gap-3 text-xs">
           <span className="text-[var(--muted)]">{words.confidence}</span>
-          <Confidence value={point.confidence ?? null} />
+          <Confidence value={point.confidence ?? null} locale={words.locale} />
         </div>
       ) : null}
       {point.delta !== undefined ? (
         <div className="mt-2 flex items-center justify-between gap-3 text-xs">
           <span className="text-[var(--muted)]">{words.trend}</span>
-          <Delta value={point.delta} />
+          <Delta value={point.delta} locale={words.locale} />
         </div>
       ) : null}
 
       {point.shape ? (
         <dl className="mt-3 space-y-1 border-t border-[var(--rule)] pt-3 text-xs">
-          <Row label={words.highest} entry={point.shape.highest} noScore={words.noScore} />
-          <Row label={words.lowest} entry={point.shape.lowest} noScore={words.noScore} />
+          <Row label={words.highest} entry={point.shape.highest} noScore={words.noScore} locale={words.locale} />
+          <Row label={words.lowest} entry={point.shape.lowest} noScore={words.noScore} locale={words.locale} />
         </dl>
       ) : null}
 
@@ -284,10 +286,12 @@ function Row({
   label,
   entry,
   noScore,
+  locale,
 }: {
   label: string
   entry: { label: string; value: number } | null
   noScore: string
+  locale?: string | undefined
 }) {
   return (
     <div className="flex items-center justify-between gap-3">
@@ -296,7 +300,7 @@ function Row({
         {entry ? (
           <>
             <span>{entry.label}</span>
-            <Score value={entry.value} size="sm" />
+            <Score value={entry.value} size="sm" locale={locale} />
           </>
         ) : (
           <span className="text-[var(--muted)]">{noScore}</span>
@@ -348,7 +352,7 @@ export function FlagField({
           role="img"
           aria-label={
             ariaLabel ??
-            fill(words.aria, { n: field.placed.length, median: field.median.toFixed(1) })
+            fill(words.aria, { n: field.placed.length, median: fixedIn(field.median, 1, words.locale) })
           }
           onMouseLeave={() => setHovered(null)}
         >
@@ -427,7 +431,7 @@ export function FlagField({
             const shown = placed !== undefined
             const shared = {
               'aria-label': `${point.label}, ${
-                shown ? placed.value.toFixed(1) : words.noScore
+                shown ? fixedIn(placed.value, 1, words.locale) : words.noScore
               }${point.detail ? `, ${point.detail}` : ''}`,
               'aria-hidden': shown ? undefined : true,
               tabIndex: shown && point.href ? undefined : -1,
@@ -512,7 +516,7 @@ export function FlagField({
         {[...field.placed]
           .sort((a, b) => b.value - a.value)
           .map((p) => (
-            <li key={p.key}>{`${p.label}: ${p.value.toFixed(1)}`}</li>
+            <li key={p.key}>{`${p.label}: ${fixedIn(p.value, 1, words.locale)}`}</li>
           ))}
       </ul>
     </div>

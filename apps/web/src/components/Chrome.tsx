@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { REPO_URL } from '@ncb/core'
+import { LEXICONS, REPO_URL } from '@ncb/core'
 import type { Lang } from '@ncb/core'
 import { chromeWords, pathLang, type ChromeWords } from '@/lib/chrome'
 import { changelogHref } from '@/lib/links'
@@ -23,7 +23,7 @@ export function useChrome(): { lang: Lang; words: ChromeWords } {
 export function LangHtml({ className, children }: { className: string; children: React.ReactNode }) {
   const { lang } = useChrome()
   return (
-    <html lang={lang} className={className}>
+    <html lang={LEXICONS[lang].htmlLang} className={className}>
       {children}
     </html>
   )

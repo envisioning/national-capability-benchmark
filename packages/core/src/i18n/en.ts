@@ -12,6 +12,7 @@ import type { Lexicon } from './types.js'
  */
 export const EN: Lexicon = {
   lang: 'en',
+  htmlLang: 'en',
   numberLocale: 'en-US',
   dimensions: DIMENSION_LABELS,
   questions: DIMENSION_QUESTIONS,

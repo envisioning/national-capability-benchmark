@@ -8890,3 +8890,63 @@ country keeps another record or note in the columns concerned.
 decisions, which would make the four civic records admissible again; or
 `research_citation_impact`, `export_diversification` or
 `long_term_unemployment_share` returning to a gap.
+
+## D162 — Every Spanish-speaking country in the frame gets a layer, and Spain reads through the Latin American base
+
+*Recorded 2026-10-16. Extends D134 and answers the Spanish half of issue #85
+and issue #84. The owner chose a Spain layer and the rules below on
+2026-10-03.*
+
+**Decision.** The 13 Spanish-speaking Latin American countries D153 added get
+the layer D134 gave Mexico, Colombia, Chile and Argentina: Peru, Ecuador,
+Bolivia, Venezuela, Paraguay, Uruguay, Costa Rica, Panama, Guatemala,
+Honduras, El Salvador, Nicaragua and the Dominican Republic. Each slug is the
+country's own name without accents (`/peru`, `/el-salvador`,
+`/republica-dominicana`). Spain gets a layer at `/espana`. Each holds the
+three computed sections D134 set and nothing else.
+
+Rules for a language spoken on both sides of a colonial history:
+
+1. **The larger speaker community sets the base.** `es.ts`, written for
+   es-419, is the base Spanish. Spain reads through `es-es.ts`, a thin
+   override built with `withOverride`, which holds the decimal comma, the
+   layer country and the strings a reader in Spain writes differently
+   ("renta", "paro", "coste"). The override is an orthography and a set of
+   word choices. It is never the standard the base is measured against.
+2. **Peers stay rule-based.** No page puts a former colony beside its former
+   metropole unless the income rule does, and no sentence reads a country as
+   behind Spain.
+3. **Names in each country's own form**, slugs without accents.
+
+Mechanism. `Lexicon` gains `htmlLang` (the tag `<html lang>` carries, `es-419`
+for the base), `base` and `contractions`. `fillLex` fills a template, then
+contracts "de el" and "a el", then capitalises a sentence that opens on the
+country, so "el Perú" and "la República Dominicana" read correctly in every
+position. El Salvador carries its article in its name and never contracts.
+The Spanish layers now have the chrome Brazil's got in D158, the Spanish
+agendas have Spanish evidence titles (`evidence-es.ts`, `evidence-es-es.ts`),
+and the map pages name each behavioural check and why it is not scored. The
+flag field prints numbers in the layer's locale.
+
+Cuba stays without a layer: three of nine dimensions are scored. Venezuela
+has seven of nine since D159 and gets its layer. The two empty axes show as
+unscored, as D45 requires.
+
+The Portuguese half of #85 (Portugal, Angola, Mozambique and Guinea-Bissau
+through a pt-PT override, released together) is not in this change. Under
+rule 1 Portugal may not ship ahead of the lusophone African countries, so
+nothing Portuguese ships until all four are ready.
+
+**Why.** D134 chose four countries to test the layer. The test held, and a
+layer for some Spanish-speaking countries and not others has no reason a
+reader could see. A Spain layer written as the base would make the former
+metropole the default the other 17 deviate from.
+
+**Cost.** 14 more layers to keep in step with the lexicon. Every new
+template must use `{countryTopic}` and `fillLex`, or an article goes missing.
+The copy was reviewed by Claude, not by a native speaker of each variety.
+
+**Overturned by.** A native reviewer showing that the es-419 base misreads a
+country's usage in a way an override cannot fix, which would call for a
+per-country override; or a Spanish layer that its country's readers do not
+use, which would argue for withdrawing the computed layers.

@@ -21,7 +21,7 @@ import type { ConfidenceBandId } from '../pipeline/confidence.js'
  * lookup falls back to the registry's English name when a translation is
  * missing, so a partial lexicon renders complete pages from day one.
  */
-export type Lang = 'en' | 'pt-BR' | 'es'
+export type Lang = 'en' | 'pt-BR' | 'es' | 'es-ES'
 
 export type AgendaStrings = {
   /** {country} */
@@ -135,8 +135,29 @@ export type AgendaStrings = {
 
 export type Lexicon = {
   lang: Lang
+  /**
+   * The BCP 47 tag a page written in this lexicon declares in `<html lang>`.
+   * `es` is Latin American Spanish, so its documents say `es-419`.
+   */
+  htmlLang: string
+  /**
+   * The lexicon this one is a regional override of, when it is one: es-ES
+   * reads through es (es-419). The override holds
+   * number formatting and only the strings that differ; everything else is
+   * the base's. The larger speaker community sets the base. See
+   * `withOverride` and the Spanish layers decision.
+   */
+  base?: Lang
   /** BCP 47 locale used for number formatting. */
   numberLocale: string
+  /**
+   * Article contractions a filled sentence needs, as [pattern, replacement]
+   * pairs read as case-sensitive regular expressions: Spanish writes "del
+   * Perú" and "al Perú", never "de el" or "a el", and leaves "de El
+   * Salvador" alone because the article is part of the name. Applied by
+   * `fillLex` after the placeholders are filled. Absent means none.
+   */
+  contractions?: readonly (readonly [string, string])[]
   /**
    * The countries this lexicon renders documents for: the countries whose
    * layer is written in it. The agenda command and the institution feed skip
@@ -323,6 +344,22 @@ export type CapabilityMapStrings = {
   agendaLink: string
   /** Link text to the English capability page. {dimension} */
   capabilityLink: string
+  /**
+   * The behavioural checks published beside the dimension, in this language.
+   * The English lexicon leaves it out and the page prints each check's own
+   * published name, definition and note. A layer lexicon names each check and
+   * says in a sentence or two why it is not scored, with the decision that
+   * says so. See D60 and the Spanish layers decision.
+   */
+  checks?: {
+    label: string
+    intro: string
+    lowerBetter: string
+    higherBetter: string
+    /** {source} {year} */
+    source: string
+    byId: Record<string, { name: string; definition: string; unit: string; reason: string; decision: string }>
+  }
 }
 
 /**
@@ -340,6 +377,28 @@ export function fill(template: string, values: Record<string, string | number>):
   return template.replace(/\{(\w+)\}/g, (m, key: string) =>
     key in values ? String(values[key]) : m,
   )
+}
+
+/**
+ * Fill a template through one lexicon: the placeholders, then the article
+ * contractions the language needs ("de el Perú" becomes "del Perú"), then a
+ * capital where the template opens on the country with its article ("el
+ * Perú obtiene" becomes "El Perú obtiene"). For a lexicon with no
+ * contractions it is `fill`. Use it wherever a template carries
+ * `{countryTopic}` or `{country}`.
+ */
+export function fillLex(
+  lex: Pick<Lexicon, 'contractions'>,
+  template: string,
+  values: Record<string, string | number>,
+): string {
+  let out = fill(template, values)
+  for (const [pattern, replacement] of lex.contractions ?? []) {
+    out = out.replace(new RegExp(pattern, 'g'), replacement)
+  }
+  return /^[¿¡]?\{countryTopic\}/.test(template)
+    ? out.replace(/^([¿¡]?)(\p{Ll})/u, (_m, mark: string, c: string) => mark + c.toUpperCase())
+    : out
 }
 
 /**

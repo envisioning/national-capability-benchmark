@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { LEXICONS, countryName, fill } from '@ncb/core'
+import { LEXICONS, countryName, countryTopic, fillLex } from '@ncb/core'
 import { AgendaView } from '@/components/views/AgendaView'
 import { loadAgenda } from '@/lib/agenda'
 import { loadCountry } from '@/lib/data'
@@ -27,10 +27,11 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const found = agendaLayer((await params).layer)
   if (!found) return {}
   const { layer, pages } = found
-  const country = countryName(LEXICONS[layer.lang], layer.iso3)
+  const lex = LEXICONS[layer.lang]
+  const names = { country: countryName(lex, layer.iso3), countryTopic: countryTopic(lex, layer.iso3) }
   return {
-    title: fill(pages.agendaMetaTitle, { country }),
-    description: fill(pages.agendaMetaDescription, { country }),
+    title: fillLex(lex, pages.agendaMetaTitle, names),
+    description: fillLex(lex, pages.agendaMetaDescription, names),
     openGraph: {
       images: [
         {

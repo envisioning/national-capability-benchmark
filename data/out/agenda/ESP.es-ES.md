@@ -1,0 +1,134 @@
+# Agenda de capacidades: España
+
+*Generado el 2026-10-16*
+
+La comparación incluye 125 países. Cada dimensión recibe una puntuación de 0 a 100, sin clasificación general, y cada puntuación muestra a su lado la solidez de la evidencia. Antes de citar una puntuación, lea [docs/KNOWN-ARTEFACTS.md](https://github.com/envisioning/national-capability-benchmark/blob/main/docs/KNOWN-ARTEFACTS.md).
+
+## ¿Dónde se ubica España?
+
+| Dimensión | Puntuación | Solidez | Tendencia |
+| --- | --- | --- | --- |
+| Anticipación | 71,4 | 0,46 (utilizable) | +6,3 en 10 años, con 2 indicadores |
+| Iniciativa | 59 | 0,56 (utilizable) | sin base de tendencia |
+| Coordinación | 91,1 | 0,39 (débil) | sin base de tendencia |
+| Confianza | 75,9 | 0,5 (utilizable) | sin base de tendencia |
+| Aprendizaje | 76,6 | 0,55 (utilizable) | sin base de tendencia |
+| Experimentación | 42,4 | 0,33 (débil) | -6,7 en 10 años, con 3 indicadores |
+| Adaptación | 71,3 | 0,62 (utilizable) | sin base de tendencia |
+| Ejecución | 49,8 | 0,57 (utilizable) | +4,4 en 10 años, con 3 indicadores |
+| Propósito compartido | 44,6 | 0,42 (débil) | +5,2 en 10 años, con 2 indicadores |
+
+## Puntuaciones bajas con evidencia utilizable
+
+Estas son las puntuaciones más bajas con evidencia utilizable. Las dimensiones con evidencia débil aparecen más abajo.
+
+### Ejecución: 49,8, evidencia utilizable
+
+¿En qué medida es capaz el país de convertir planes y conocimiento en sistemas que funcionan?
+
+- Basada en 4 indicadores observados.
+- Puntuaciones más altas en esta dimensión, entre las que tienen evidencia utilizable: Corea del Sur 85,1, Irlanda 80,3, China 77,4.
+- Casos documentados en otros países: Pix instant payment system (Brasil); GOV.BR federal identity and service platform (Brasil); X-Road national data exchange layer (Estonia); Pradhan Mantri Jan Dhan Yojana bank accounts (India); Suministro eléctrico reconstruido sobre fuentes renovables (Uruguay); Plan Ceibal, una computadora conectada por niño (Uruguay); Sistema Unico de Saude, universal public health system (Brasil); Programa Nacional de Imunizacoes, and its erosion (Brasil); Luz para Todos, rural electrification (Brasil); Bolsa Familia and the single registry behind it (Brasil); Fully electronic national elections (Brasil); Deepwater and pre-salt oil production (Brasil); Seguro Popular y su eliminación (México); Sure Start children's centres, and their erosion (Reino Unido); Grid power, and load shedding (Sudáfrica); Measles elimination, and its erosion (Estados Unidos); BNDES, the national development bank (Brasil); Casa da Moeda do Brasil, the national mint (Brasil); Housing and Development Board, public housing at scale (Singapur); Trenes de pasajeros de AFE y contracción de la red (Uruguay); Flamanville 3 EPR, and the erosion of nuclear new-build delivery (Francia); Phoenix pay system, and its prolonged failure (Canadá); Groningen gas system, and its closure after induced earthquakes (Países Bajos); DigiD, a shared digital identity rail for public services (Países Bajos); Delta Works, a 43-year national flood-defence programme (Países Bajos); Betuweroute, a freight railway that missed its operating promise (Países Bajos); MijnOverheid, a shared citizen mailbox and data portal (Países Bajos); Fyra V250, a high-speed service withdrawn after a failed launch (Países Bajos); OVpay, nationwide contactless transit payments (Países Bajos); Omgevingswet and the Digital Environment System (Países Bajos); Transantiago, una reforma de transporte integrado con creciente dependencia del subsidio (Chile); Concesiones viales 4G, un portafolio nacional de infraestructura (Colombia); Reficar, una modernización de refinería con fallo de responsabilidad fiscal (Colombia); GIGA School, one learning device per student (Japón); Monju, a fast-breeder programme ended before commercial operation (Japón); Invierte.pe, un sistema nacional de programación multianual y gestión de inversiones (Perú); Reconstrucción con Cambios, un portafolio de recuperación con retrasos (Perú); El ICE y un sistema eléctrico nacional mayoritariamente renovable (Costa Rica); Alcance universal del seguro de salud de la CCSS (Costa Rica); Metro de Quito, una obra de transporte ferroviario urbano a lo largo de varias administraciones (Ecuador); Ampliación del Canal de Panamá y operación autofinanciada (Panamá); Operación de la red del Metro de Panamá (Panamá); Mi Teleférico, red urbana de transporte por cable (Bolivia); Planta industrial de carbonato de litio por debajo de su capacidad de diseño (Bolivia); Operación de la central hidroeléctrica binacional Itaipú (Paraguay); Metrobús, un proyecto de autobús de tránsito rápido inconcluso (Paraguay); ARSAT-3, un programa satelital suspendido antes del lanzamiento (Argentina); DPWH national infrastructure delivery and transparency portal (Filipinas); Bataan Nuclear Power Plant, a mothballed megaproject (Filipinas); Trans-Sumatra toll-road programme, still short of its planned network (Indonesia); National expressway build-out in 2024 (Vietnam); Cat Linh–Ha Dong metro, a delayed and over-budget delivery (Vietnam); MRT Putrajaya Line (Malasia); Kuala Lumpur–Singapore high-speed rail, terminated before construction (Malasia); Hopewell elevated road-and-rail concession, and its termination (Tailandia); Ostrołęka C coal block, and its abandonment (Polonia); Nya Karolinska Solna public–private hospital project (Suecia); Barsebäck nuclear plant closure and decommissioning (Suecia); New Children's Hospital cost escalation (Irlanda); Electrificación rural y cobertura eléctrica casi universal (Nicaragua); Gran Misión Vivienda Venezuela y el hito de los cinco millones de viviendas (Venezuela); Plano de Recuperação e Resiliência delivery governance (Portugal); Lisbon–Madrid high-speed rail concession, formally abandoned (Portugal); Delhi Commonwealth Games, and the cost-estimate escalation (India); MeerKAT radio telescope, a delivered national research facility (Sudáfrica); CFE Telecomunicaciones e Internet para Todos (México); Nuevo Aeropuerto Internacional de México y su cancelación (México); Marmaray, the Bosphorus rail crossing (Turquía); FATİH education technology infrastructure (Turquía); YEKA RES-1 renewable tender, and its cancellation (Turquía); Gotthard Base Tunnel (Suiza); Standard Gauge Railway, Mombasa to Naivasha (Kenia); Canadian long-gun registry, its information system overrun and its dismantling (Canadá); Tel Aviv light rail Red Line (Israel); National high-speed rail network (China); Barakah Nuclear Energy Plant (Emiratos Árabes Unidos); Aeropuerto Internacional de Palmerola (Honduras); Central hidroeléctrica El Chaparral (3 de Febrero) (El Salvador); Programa Ampliado de Inmunizaciones y su deterioro (Venezuela); PetroCaribe-financed public investment programme, and its audited failure (Haití); Interstate Highway System (Estados Unidos); Programa Nacional de la Vivienda, and its collapse (Cuba); Central termoeléctrica Punta Catalina y su sobrecosto (República Dominicana); Grand Paris Express (Francia); Modjo-Hawassa expressway, World Bank-financed Lot 3 (Etiopía); Rehabilitación ferroviaria de la Línea Rivera y su deterioro (Uruguay); Gyeongbu high-speed railway (KTX), and its cost and schedule overrun (Corea del Sur); Gasoducto Sur Peruano, una concesión de gasoducto terminada (Perú); Modernización de la refinería de Talara, entregada con retraso y sobrecostos (Perú); Program 35.000 MW power generation programme, and its schedule slip (Indonesia); Complejo siderúrgico El Mutún, inaugurado en 2025 y que según se constató nunca operó (Bolivia); Quang Trach to Pho Noi 500kV circuit-3 transmission line (Vietnam); Central hidroeléctrica Coca Codo Sinclair (Ecuador); Puente Héroes del Chaco, de Asunción a Chaco'i (Paraguay); Floating LNG import terminals of 2022 (Alemania); Central nuclear Atucha II y sus 33 años de construcción (Argentina); Vistula Spit shipping canal (Przekop Mierzei Wiślanej) (Polonia); Israel Railways electrification and the Jerusalem express line, and their delays (Israel); Samuel De Champlain Bridge corridor (Canadá); Hokuriku Shinkansen Kanazawa to Tsuruga extension, and its overrun (Japón); Botniabanan coastal railway (Suecia); High Speed Two, and the cancellation of Phase 2 (Reino Unido); Crossrail, the Elizabeth line (Reino Unido); Dedicated Freight Corridors, Eastern and Western (India); Refinería Olmeca en Dos Bocas (México); Inland Rail, and its consolidation at Parkes (Australia); Kehärata airport rail loop, and its cost overrun (Finlandia); Proyecto hidroeléctrico Chixoy, con sobrecostos y retrasos (Guatemala); Abuja-Kaduna-Zaria-Kano dual carriageway, and the termination of its 2017 contract (Nigeria); Neelum-Jhelum Hydropower Project, and its shutdown (Pakistán); Tarbela Fourth Extension Hydropower Project (Pakistán); MOSE, the Venice lagoon flood barrier (Italia); Padma Multipurpose Bridge (Bangladés); Noor-Ouarzazate solar complex (Marruecos); Pap-Angren railway and Kamchik tunnel (Uzbekistán); Pro-Routes high-priority road reopening and maintenance (República Democrática del Congo); Karuma Hydropower Project (Uganda); Julius Nyerere Hydropower Project (Tanzania); A1 motorway, Bucharest to Nadlac (Rumanía); South-West Roads: Western Europe-Western China corridor (CAREC 1b and 6b) (Kazajistán); Reseau Ferroviaire Rapide de Tunis, lines D and E, and its overruns (Túnez); Southern Expressway (Southern Transport Development Project) (Sri Lanka); Melamchi Water Supply Project, and its erosion after the 2021 flood (Nepal); Harare-Masvingo-Beitbridge highway rehabilitation, behind schedule (Zimbabue); Solar powered milling plants contract, and its erosion (Zambia); Urban Water Supply Project (PEMU), part of the Kabala programme for Bamako (Malí); Ouagadougou Water Supply Project (Ziga) (Burkina Faso); Jiji and Mulembwe hydropower project (Burundi); Transport Infrastructure Investment Project (national roads, ports and the Northern Railway) (Madagascar); Energy Sector Support Project (substations and distribution lines) (Malaui); Morupule B coal power station, and its underperformance (Botsuana); Metolong Dam and Water Supply Programme (Lesoto); B6 Belle Rive to Quartier Militaire road upgrade (Mauricio); Rahad Irrigation Project, and its cost and time overrun (Sudán); Accra bus rapid transit under the Ghana Urban Transport Project, and its cancellation (Ghana); Yabayo-Gagnoa road under the Fourth Highway Project, and its cost and time overrun (Costa de Marfil); Fourth Highway Project: paving of the Mamou-Kankan and Dubreka-Kolaboui roads (Guinea); Realignment of the Congo-Ocean Railway through the Mayombe, and its overruns (República del Congo); Banjul Rehabilitation Project (roads, drainage and sewage), and its delay (Gambia); Bissau Port Project, delivered two and a half years late (Guinea-Bisáu); Šoštanj thermal power plant unit 6 (TEŠ 6), and its cost overrun (Eslovenia); Rail Baltica in Latvia, and its cost and schedule overrun (Letonia); Koralmbahn Graz to Klagenfurt, opened seven years after its contracted completion date (Austria); Fehmarn Belt fixed link, and its cost and schedule overrun (Dinamarca); Motorway construction by the Road and Motorway Directorate, and its unit cost (Chequia); Pelješac Bridge, the first stage of the road connection to South Dalmatia (Croacia); Decommissioning of the Bohunice V1 nuclear power plant, and its four-year slip (Eslovaquia); Decommissioning of the Ignalina nuclear power plant, and its delays (Lituania); Corridor X motorway sections (E-75 and E-80) (Serbia); Road Sector Development Project on the M-03 and M-12, and its cut scope (Ucrania); M6 Minsk to Grodno transit corridor upgrade (Bielorrusia); Federation Road Sector Modernization Project, and its shrunken rehabilitation scope (Bosnia y Herzegovina); Local Roads Improvement Project, and its halved scope (Moldavia); Regional and Local Roads Connectivity Project (Albania); Kicevo to Ohrid motorway, and its cost and time overrun (Macedonia del Norte); Budapest metro line 4, first section, and its cost and time overrun (Hungría); Road Infrastructure Rehabilitation Project, and its cut after the 2009 budget squeeze (Bulgaria); Ain Sokhna supercritical power plant (Egipto); Hartha power station units 2 and 3 rehabilitation, and its halt (Irak); Greater Beirut Water Supply Project (Awali to Beirut conveyor), and its unfinished delivery (Líbano); Amman Development Corridor (Amman Ring Road phase 1), and its overrun (Jordania); East-West Highway Corridor Improvement Project (Rikoti Pass sections) (Georgia); North-South Road Corridor Investment Program, Tranche 1 (Armenia); Second National Water Supply and Sanitation Project (rayon centres), and its downsizing (Azerbaiyán); National Road Rehabilitation (Osh-Batken-Isfana) Project (Kirguistán); Tehran Sewerage Project (first phase: interceptors, trunk main and southern treatment plant) (Irán); Central Ring Road around Moscow (TsKAD), audited by the Accounts Chamber (Rusia); Road Maintenance and Rehabilitation Project (Papúa Nueva Guinea); Road No. 13 South upgrading under the Third Highway Improvement Project (Laos); Second Energy Sector Project, distribution rehabilitation and the 10 MWp western solar plant (Mongolia); City Rail Link, Auckland, and its cost and time overrun (Nueva Zelanda); Rogun hydropower plant (Tayikistán); Kvalitetsfonden hospital building programme (supersygehuse), and its overruns (Dinamarca); Modernizace dálnice D1 (D1 motorway modernisation, Mirošovice to Kývalka) (Chequia); Lae Port Development Project (Lae Tidal Basin, phase 1) (Papúa Nueva Guinea); Second-wave motorway concessions (Central E-65, Olympia Odos, Moreas), and their reset (Grecia); Third Highway Project: M4 Baku-Shamakhi and M3 Yenikend-Shorsulu motorways (Azerbaiyán); Belene nuclear power plant, and its cancellation (Bulgaria); Belarusian nuclear power plant (BelAES), delivered behind schedule (Bielorrusia); Bishkek-Osh road rehabilitation, third phase (Kirguistán).
+- Vacíos declarados: Ejecución de grandes proyectos, Empresas jóvenes que ganan escala.
+- Series descartadas: Calidad de la infraestructura logística.
+
+## Dimensiones con evidencia débil
+
+La solidez de la evidencia está por debajo de la franja utilizable, así que la puntuación se apoya en poca evidencia.
+
+### Experimentación: solidez 0,33, evidencia débil
+
+¿Con qué facilidad se pueden intentar, probar, abandonar y mejorar enfoques nuevos?
+
+- Basada en 4 indicadores observados.
+- Vacíos declarados: Operaciones de capital de riesgo, Empresas en espacios controlados de prueba, Empresas surgidas de universidades.
+- Series descartadas: I+D ejecutada por empresas.
+
+### Coordinación: solidez 0,39, evidencia débil
+
+¿Con qué eficacia logran organizarse actores independientes en torno a objetivos comunes?
+
+- Basada en 3 indicadores observados.
+- Vacíos declarados: Colaboración universidad-empresa, Colaboración público-privada.
+- Series descartadas: Efectividad del gobierno, Calidad regulatoria, Desempeño logístico.
+
+### Propósito compartido: solidez 0,42, evidencia débil
+
+¿Hasta qué punto las personas logran verse como parte de un proyecto común?
+
+- Basada en 3 indicadores observados.
+- Vacíos declarados: Sentido de pertenencia nacional, Voluntariado, Polarización política.
+- Series descartadas: Voz y rendición de cuentas.
+
+## Puntuaciones altas con evidencia utilizable
+
+Estas dimensiones tienen una puntuación de al menos 50, con evidencia utilizable.
+
+- Aprendizaje: 76,6, evidencia utilizable
+- Confianza: 75,9, evidencia utilizable
+- Anticipación: 71,4, evidencia utilizable
+- Adaptación: 71,3, evidencia utilizable
+- Iniciativa: 59, evidencia utilizable
+
+## ¿Con qué cuenta España?
+
+Las condiciones describen lo que un país tiene para trabajar: infraestructura, acceso, dinero, personas, matrícula y la propia renta. Cada una aparece junto a una capacidad y no entra en la puntuación, en la solidez ni en la tendencia. Leídas frente a la puntuación, muestran si lo que el país tiene se convierte en lo que hace. La posición cuenta los países con valor, del mejor al peor.
+
+| Dimensión | Condición | Valor | Año | Posición |
+| --- | --- | --- | --- | --- |
+| Anticipación | Gasto en I+D | 1,5 % del PIB | 2023 | 29.º de 118 |
+| Anticipación | Investigadores en I+D | 3653,8 por millón de personas | 2023 | 28.º de 114 |
+| Anticipación | Servidores de internet seguros | 29.986,4 por millón de personas | 2024 | 28.º de 125 |
+| Iniciativa | Personas que usan internet | 95,8 % de la población | 2024 | 12.º de 125 |
+| Iniciativa | Titularidad de cuentas financieras | 98,4 % de las personas de 15 años o más | 2024 | 15.º de 122 |
+| Iniciativa | Crédito al sector privado | 74,2 % del PIB | 2024 | 31.º de 124 |
+| Aprendizaje | Matrícula en educación superior | 93,8 % (tasa bruta) | 2024 | 11.º de 124 |
+| Aprendizaje | Gasto público en educación | 4,6 % del PIB | 2022 | 49.º de 125 |
+| Aprendizaje | Matrícula técnica en secundaria | 18,8 % de la matrícula secundaria | 2018 | 41.º de 125 |
+| Adaptación | Tasa de actividad | 75 % de las personas de 15 años o más | 2025 | 42.º de 125 |
+| Adaptación | Suscripciones de banda ancha fija | 39,2 por cada 100 personas | 2024 | 16.º de 125 |
+| Adaptación | Pérdidas en la transmisión de electricidad | 8,3 % de la producción | 2024 | 52.º de 117 |
+| Adaptación | Empleo informal | 3,8 % del empleo | 2025 | 16.º de 102 |
+| Ejecución | Producto por trabajador | 109.693,1 US$ PPA constantes de 2021 | 2025 | 18.º de 123 |
+
+## ¿Qué falta medir?
+
+18 indicadores previstos en el modelo no tienen una serie comparable, y cada uno baja la solidez. Un vacío se convierte en indicador con puntuación cuando una serie comparable cubre al menos dos países.
+
+| Dimensión | Indicador ausente | Qué mediría |
+| --- | --- | --- |
+| Anticipación | Capacidad gubernamental de prospectiva | Existencia, mandato y continuidad de una función nacional de prospectiva estratégica. |
+| Anticipación | Compromisos de investigación de largo plazo | Proyectos de investigación nuevos con financiación pública competitiva y una duración de cinco años o más, como proporción de todos los proyectos con financiación pública competitiva concedidos en el año. |
+| Iniciativa | Adultos que realizan tareas digitales | Proporción de adultos que realizaron una tarea digital determinada en los últimos tres meses, como enviar un mensaje con un archivo adjunto, mover un archivo entre dispositivos o usar una fórmula en una hoja de cálculo, contada tarea por tarea y nunca como nivel de habilidad. |
+| Coordinación | Colaboración universidad-empresa | Intensidad de la colaboración en investigación entre universidades y empresas. |
+| Coordinación | Colaboración público-privada | Frecuencia y escala con que el gobierno y las empresas ejecutan juntos objetivos nacionales. |
+| Confianza | Confianza en las instituciones públicas | Confianza en el gobierno nacional, los tribunales y el servicio público. |
+| Confianza | Tasa de resolución de casos judiciales | Casos civiles y comerciales resueltos en un año como proporción de los casos presentados en ese mismo año. |
+| Aprendizaje | Participación de adultos en aprendizaje | Proporción de adultos en educación o formación, reglada o no, en los últimos 12 meses. |
+| Experimentación | Operaciones de capital de riesgo | Primeras rondas de capital de riesgo cerradas en el año por empresas con sede en el país, por millón de personas, contadas por operación y nunca por monto. |
+| Experimentación | Empresas en espacios controlados de prueba | Empresas admitidas en el año en un espacio controlado de prueba (sandbox regulatorio), y empresas que lo concluyeron, por millón de personas, sumadas entre todos los reguladores del país. |
+| Experimentación | Empresas surgidas de universidades | Empresas creadas para comercializar investigación universitaria, por millón de personas. |
+| Adaptación | Preparación y recuperación ante desastres | Capacidad demostrada de preparación y recuperación ante choques graves. |
+| Adaptación | Capacidad de respuesta institucional | Velocidad con que las reglas y los programas públicos cambian en respuesta a condiciones nuevas. |
+| Ejecución | Ejecución de grandes proyectos | Desempeño en coste y plazo de los grandes proyectos públicos de infraestructura. |
+| Ejecución | Empresas jóvenes que ganan escala | Proporción de empresas jóvenes que alcanzan niveles relevantes de empleo o facturación. |
+| Propósito compartido | Sentido de pertenencia nacional | Identificación y apego a la comunidad nacional, según declaran las personas, distintos del orgullo nacional. |
+| Propósito compartido | Voluntariado | Proporción de adultos que dedicaron tiempo voluntario a una organización en el último mes. |
+| Propósito compartido | Polarización política | Grado en que las diferencias políticas se alinean en una sola división hostil. |
+
+## Lo que España construyó y ningún indicador cuenta
+
+Son cambios institucionales documentados en España que el marco registra como evidencia. Aparecen junto a la puntuación y no cambian la puntuación ni la solidez.
+
+- **Cl@ve, identidad digital compartida** (Adaptación). España creó Cl@ve como plataforma común del sector público para la identificación, la autenticación y la firma electrónica; la Agencia Tributaria informó de 20,867 millones de identificadores de contribuyentes registrados en Cl@ve Móvil a 31 de diciembre de 2024, de los cuales 12,323 millones correspondían a ciudadanos activos en la aplicación.
+- **Kit Digital, programa de digitalización de pymes** (Coordinación). El programa Kit Digital de Red.es recurrió a ayudas públicas, representantes voluntarios y agentes digitalizadores privados para ayudar a las pequeñas empresas a adoptar software y servicios en línea; a 3 de agosto de 2026, el programa informó de 1.566.846 proyectos de transformación ejecutados por 10.727 agentes, el 96 por ciento de ellos pymes del sector TIC.
+- **Red ferroviaria de alta velocidad AVE** (Ejecución). España amplió la alta velocidad ferroviaria desde la primera línea Madrid-Sevilla, en 1992, hasta más de 4000 kilómetros de vía de alta velocidad en 2024; el Ministerio de Transportes informó de que el servicio llegaba al 70 por ciento de la población.
+- **Recuperación y vigilancia tras la erupción volcánica de La Palma** (Adaptación). Tras el inicio de la erupción de Cumbre Vieja el 19 de septiembre de 2021, España coordinó una comisión de reconstrucción entre el Estado, Canarias y el Cabildo insular; en febrero de 2024, el Estado informó de 929 millones de euros movilizados y 650 dispositivos de medición de CO2 instalados, lo que permitió a más de 220 familias regresar con seguridad a sus viviendas en las zonas afectadas.
+- **Almacenamiento subterráneo de gas Castor y su cierre** (Ejecución). España extinguió la concesión del almacenamiento subterráneo de gas Castor en octubre de 2014, después de que varios episodios sísmicos paralizaran su funcionamiento; el Estado traspasó la administración a Enagás y el decreto reconoció una indemnización de 1350,729 millones de euros a la antigua concesionaria, cuya recuperación se estructuró a 30 años.
+- **Sandbox financiero (Ley 7/2020) y la caída de solicitudes** (Experimentación). El Tesoro Público gestiona desde 2021 un espacio controlado de pruebas para el sistema financiero al amparo de la Ley 7/2020. Su primera cohorte recibió 66 solicitudes, 12 de las cuales pasaron a la fase de pruebas. En 2025 la demanda había caído a dos solicitudes entre la novena y la décima cohorte, una de las cuales obtuvo una evaluación favorable, y el Gobierno aprobó un anteproyecto de ley (Anteproyecto, 17 de diciembre de 2024) que sustituye las cohortes cerradas por la admisión continua durante todo el año y reduce la evaluación previa a 45 días hábiles.
+- **Formación programada por las empresas (crédito de formación de FUNDAE)** (Aprendizaje). España financia la formación organizada por las empresas mediante bonificaciones en las cotizaciones a la Seguridad Social por formación profesional, gestionadas por la fundación estatal FUNDAE. En 2024, 347.442 empresas formaron a 3.378.343 trabajadores, el 22,7 por ciento de los asalariados del sector privado, en 5.824.016 participaciones.
+- **Doctorados Industriales (doctorados industriales de la Agencia Estatal de Investigación)** (Coordinación). La Agencia Estatal de Investigación financia contratos de cuatro años para doctorandos empleados en empresas y otras entidades que elaboren una tesis sobre un proyecto de investigación industrial o de desarrollo experimental; en la convocatoria 2024-2, resuelta en octubre de 2025, concedió 65 ayudas por un importe de 7,6 millones de euros.
+
+## Cómo contribuir
+
+En https://github.com/envisioning/national-capability-benchmark se puede cubrir un vacío, registrar evidencia o cuestionar un indicador. Los documentos explican el método y sus decisiones.

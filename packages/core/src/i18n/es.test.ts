@@ -86,9 +86,12 @@ test('Spanish copy keeps the house rules', () => {
 })
 
 test('a layer lexicon renders only its layer countries', () => {
-  for (const iso3 of ['MEX', 'COL', 'CHL', 'ARG']) assert.ok(lexiconRenders('es', iso3))
+  for (const iso3 of ['MEX', 'COL', 'CHL', 'ARG', 'PER', 'DOM']) assert.ok(lexiconRenders('es', iso3))
   assert.ok(!lexiconRenders('es', 'BRA'))
-  assert.ok(!lexiconRenders('es', 'PER'))
+  assert.ok(!lexiconRenders('es', 'ESP'))
+  assert.ok(!lexiconRenders('es', 'CUB'))
+  assert.ok(lexiconRenders('es-ES', 'ESP'))
+  assert.ok(!lexiconRenders('es-ES', 'MEX'))
   assert.ok(lexiconRenders('en', 'PER'))
   assert.ok(lexiconRenders('pt-BR', 'BRA'))
 })

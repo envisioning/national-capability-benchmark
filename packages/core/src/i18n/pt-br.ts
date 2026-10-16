@@ -15,6 +15,7 @@ import type { Lexicon } from './types.js'
  */
 export const PT_BR: Lexicon = {
   lang: 'pt-BR',
+  htmlLang: 'pt-BR',
   numberLocale: 'pt-BR',
   dimensions: {
     anticipation: 'Antecipação',

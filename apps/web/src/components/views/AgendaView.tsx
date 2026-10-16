@@ -11,6 +11,7 @@ import {
   evidenceClaim,
   evidenceTitle,
   fill,
+  fillLex,
   fmt,
   fmtConf,
   indicatorDefinition,
@@ -164,7 +165,7 @@ export function AgendaView({
         </Link>
       </p>
 
-      <Section title={fill(s.standingHeading, { countryTopic: topic })}>
+      <Section title={fillLex(lex, s.standingHeading, { countryTopic: topic })}>
         <Scroller>
           <Table>
             <thead>
@@ -207,7 +208,7 @@ export function AgendaView({
 
       <Section
         title={s.historyHeading}
-        hint={fill(s.historyIntro, { country: name })}
+        hint={fillLex(lex, s.historyIntro, { country: name, countryTopic: topic })}
       >
         <AgendaHistoryChart
           key={agenda.iso3}
@@ -417,7 +418,8 @@ export function AgendaView({
 
       {agenda.ownEvidence.length > 0 ? (
         <Section
-          title={fill(
+          title={fillLex(
+            lex,
             hasInstitutionalHistory
               ? s.institutionalHistoryHeading
               : agenda.iso3 === 'BRA'
@@ -427,7 +429,7 @@ export function AgendaView({
           )}
           hint={
             hasInstitutionalHistory
-              ? fill(s.institutionalHistoryIntro, { country: name })
+              ? fillLex(lex, s.institutionalHistoryIntro, { country: name, countryTopic: topic })
               : agenda.iso3 === 'BRA'
                 ? s.brazilEvidenceIntro
                 : s.ownEvidenceIntro

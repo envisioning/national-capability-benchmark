@@ -9,6 +9,21 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.28.0 — 2026-10-16
+
+- **Spanish readings now cover 17 Latin American countries and Spain.**
+  Peru, Ecuador, Bolivia, Venezuela, Paraguay, Uruguay, Costa Rica, Panama,
+  Guatemala, Honduras, El Salvador, Nicaragua and the Dominican Republic join
+  Mexico, Colombia, Chile and Argentina. Each has an overview, a capability
+  agenda and a capability map. Spain's reading, at /espana, uses the same
+  Latin American Spanish and changes only the words a reader in Spain writes
+  differently, plus the decimal comma. Cuba has no reading yet, because only
+  three of its nine capabilities are scored. Decision D162.
+- **The header, footer, search and objection form on a Spanish page are in
+  Spanish.** Evidence titles in the Spanish agendas are translated, and the
+  charts on every layer page print decimals the way the page's language
+  writes them.
+
 ## App 1.27.1 — 2026-10-16
 
 - **Seven evidence records leave the corpus and one moves.** They were filed

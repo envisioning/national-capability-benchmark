@@ -1,11 +1,12 @@
+import { LEXICONS } from '@ncb/core'
 import { notFound } from 'next/navigation'
 import { layerBySlug } from '@/lib/layers'
 
 export const dynamic = 'force-dynamic'
 
 /**
- * Every country layer that has no folder of its own: Mexico, Colombia, Chile
- * and Argentina today. The segment is the layer's slug in `COUNTRY_LAYERS`,
+ * Every country layer that has no folder of its own: the Spanish layers
+ * today, 17 in Latin America and Spain (D134, D162). The segment is the layer's slug in `COUNTRY_LAYERS`,
  * so a layer is added in the registry and never by copying a folder. Brazil
  * keeps `/brasil`, a static folder that wins over this segment, because its
  * overview, institutions and support pages are its own. Any other first
@@ -22,5 +23,5 @@ export default async function CountryLayerLayout({
   const layer = layerBySlug((await params).layer)
   if (!layer) notFound()
 
-  return <div lang={layer.lang}>{children}</div>
+  return <div lang={LEXICONS[layer.lang].htmlLang}>{children}</div>
 }

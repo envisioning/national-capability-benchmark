@@ -1,3 +1,4 @@
+import { LEXICONS } from '@ncb/core'
 import type { Lang } from '@ncb/core'
 import type { FlagFieldWords } from '@/components/FlagField'
 import type { ConditionListWords } from '@/components/views/ConditionList'
@@ -71,6 +72,7 @@ export const PT_FIELD_WORDS: FlagFieldWords = {
   legendNote: 'A faixa sombreada é a metade central do campo, e a linha dentro dela é a mediana.',
   solidRing: 'Anel contínuo: evidência utilizável ou boa',
   brokenRing: 'Anel interrompido: evidência fraca, mais aberto quanto menor a solidez',
+  locale: LEXICONS['pt-BR'].numberLocale,
 }
 
 /** The conditions panel's words in Portuguese, for the Brazil layer. See D130. */
@@ -103,6 +105,7 @@ export const ES_FIELD_WORDS: FlagFieldWords = {
   legendNote: 'La franja sombreada es la mitad central del campo y la línea dentro de ella es la mediana.',
   solidRing: 'Anillo continuo: evidencia utilizable o buena',
   brokenRing: 'Anillo interrumpido: evidencia débil, más abierto cuanto menor es la solidez',
+  locale: LEXICONS.es.numberLocale,
 }
 
 /** The conditions panel's words in Spanish, for the Spanish layers. See D134. */
@@ -162,6 +165,34 @@ export type LayerPageWords = {
   agendaMetaDescription: string
 }
 
+const ES_LAYER_WORDS: LayerWords = {
+  countWord: esCountWord,
+  field: ES_FIELD_WORDS,
+  conditions: ES_CONDITION_WORDS,
+  noData: 'Todavía no hay datos generados. Ejecute pnpm bench all en la raíz del repositorio y recargue.',
+  pages: {
+    overviewMetaTitle: '{country}, nueve capacidades, NCB',
+    overviewMetaDescription:
+      'La lectura en español de {countryTopic} en el NCB: la puntuación y la solidez de la evidencia de cada capacidad, el mapa entre los países de ingreso más parecido y la agenda calculada.',
+    overviewTitle: '¿Qué puntuación obtiene {countryTopic} en cada capacidad?',
+    overviewIntro:
+      'Esta lectura de {countryTopic} se calcula a partir de los datos publicados y se recalcula en cada versión. Cada capacidad recibe una puntuación de 0 a 100 en una escala que fijan los {countries} países juntos, y al lado lleva la solidez de la evidencia, un segundo número de 0 a 1. Las capacidades no se suman y no hay puntuación general.',
+    scoresHeading: 'Las nueve capacidades siguen el orden del modelo',
+    scoresIntro:
+      '{n} de las nueve tienen puntuación en esta versión. Cada nombre abre el mapa de esa capacidad.',
+    readingsHeading: '¿Dónde seguir leyendo?',
+    mapLink: 'El mapa de capacidades, frente a la mediana de los países de ingreso más parecido',
+    agendaLink: 'La agenda de capacidades, con fuentes, vacíos y casos documentados',
+    artefactsHeading: '¿Qué artefactos conocidos tocan estas puntuaciones?',
+    artefactsIntro:
+      'Un artefacto conocido es un lugar donde el modelo produce un número equivocado sobre el mundo. Estos son los que tocan las capacidades de {countryTopic}, descritos en inglés en la página de límites.',
+    artefactsStructural: 'Valen para toda puntuación de la comparación',
+    agendaMetaTitle: 'Agenda de capacidades de {countryTopic}, NCB',
+    agendaMetaDescription:
+      'La agenda de capacidades de {countryTopic}, calculada a partir de los datos publicados: las puntuaciones, la solidez de la evidencia y los vacíos de medición.',
+  },
+}
+
 export const LAYER_WORDS: Partial<Record<Lang, LayerWords>> = {
   'pt-BR': {
     countWord: ptCountWord,
@@ -169,32 +200,12 @@ export const LAYER_WORDS: Partial<Record<Lang, LayerWords>> = {
     conditions: PT_CONDITION_WORDS,
     noData: 'Ainda não há dados gerados. Rode pnpm bench all na raiz do repositório e recarregue.',
   },
-  es: {
-    countWord: esCountWord,
-    field: ES_FIELD_WORDS,
-    conditions: ES_CONDITION_WORDS,
-    noData: 'Todavía no hay datos generados. Ejecute pnpm bench all en la raíz del repositorio y recargue.',
-    pages: {
-      overviewMetaTitle: '{country}, nueve capacidades, NCB',
-      overviewMetaDescription:
-        'La lectura en español de {country} en el NCB: la puntuación y la solidez de la evidencia de cada capacidad, el mapa entre los países de ingreso más parecido y la agenda calculada.',
-      overviewTitle: '¿Qué puntuación obtiene {country} en cada capacidad?',
-      overviewIntro:
-        'Esta lectura de {country} se calcula a partir de los datos publicados y se recalcula en cada versión. Cada capacidad recibe una puntuación de 0 a 100 en una escala que fijan los {countries} países juntos, y al lado lleva la solidez de la evidencia, un segundo número de 0 a 1. Las capacidades no se suman y no hay puntuación general.',
-      scoresHeading: 'Las nueve capacidades siguen el orden del modelo',
-      scoresIntro:
-        '{n} de las nueve tienen puntuación en esta versión. Cada nombre abre el mapa de esa capacidad.',
-      readingsHeading: '¿Dónde seguir leyendo?',
-      mapLink: 'El mapa de capacidades, frente a la mediana de los países de ingreso más parecido',
-      agendaLink: 'La agenda de capacidades, con fuentes, vacíos y casos documentados',
-      artefactsHeading: '¿Qué artefactos conocidos tocan estas puntuaciones?',
-      artefactsIntro:
-        'Un artefacto conocido es un lugar donde el modelo produce un número equivocado sobre el mundo. Estos son los que tocan las capacidades de {country}, descritos en inglés en la página de límites.',
-      artefactsStructural: 'Valen para toda puntuación de la comparación',
-      agendaMetaTitle: 'Agenda de capacidades de {country}, NCB',
-      agendaMetaDescription:
-        'La agenda de capacidades de {country}, calculada a partir de los datos publicados: las puntuaciones, la solidez de la evidencia y los vacíos de medición.',
-    },
+  es: ES_LAYER_WORDS,
+  /* Spain's reading uses the Spanish page words: none of them is a term the
+   * es-ES override changes. Only the decimal comma differs. */
+  'es-ES': {
+    ...ES_LAYER_WORDS,
+    field: { ...ES_FIELD_WORDS, locale: LEXICONS['es-ES'].numberLocale },
   },
 }
 

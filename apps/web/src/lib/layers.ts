@@ -14,9 +14,9 @@ import type { Dimension, Lang } from '@ncb/core'
  *
  * A layer exists only where that country-specific work is done, which is why
  * this registry is short. Brazil is the first, with its own pages under
- * `/brasil`. Mexico, Colombia, Chile and Argentina read in Spanish, and hold
- * the computed sections only: an overview, the agenda and the capability map,
- * served by one `[layer]` route from this registry. See D69 and D134.
+ * `/brasil`. The Spanish layers, 17 in Latin America and Spain, hold the
+ * computed sections only: an overview, the agenda and the capability map,
+ * served by one `[layer]` route from this registry. See D69, D134 and D162.
  */
 
 /**
@@ -66,11 +66,26 @@ export type CountryLayer = {
  * The Spanish layers: the country and its slug, the country's own name for
  * itself without accents, so the address types on any keyboard.
  */
-const SPANISH_LAYERS: readonly (readonly [string, string])[] = [
-  ['MEX', 'mexico'],
-  ['COL', 'colombia'],
-  ['CHL', 'chile'],
-  ['ARG', 'argentina'],
+const SPANISH_LAYERS: readonly (readonly [string, string, 'es' | 'es-ES'])[] = [
+  ['MEX', 'mexico', 'es'],
+  ['COL', 'colombia', 'es'],
+  ['CHL', 'chile', 'es'],
+  ['ARG', 'argentina', 'es'],
+  ['PER', 'peru', 'es'],
+  ['ECU', 'ecuador', 'es'],
+  ['BOL', 'bolivia', 'es'],
+  ['VEN', 'venezuela', 'es'],
+  ['PRY', 'paraguay', 'es'],
+  ['URY', 'uruguay', 'es'],
+  ['CRI', 'costa-rica', 'es'],
+  ['PAN', 'panama', 'es'],
+  ['GTM', 'guatemala', 'es'],
+  ['HND', 'honduras', 'es'],
+  ['SLV', 'el-salvador', 'es'],
+  ['NIC', 'nicaragua', 'es'],
+  ['DOM', 'republica-dominicana', 'es'],
+  /* Spain reads through es-ES, a thin override of the Latin American base. */
+  ['ESP', 'espana', 'es-ES'],
 ]
 
 export const COUNTRY_LAYERS: readonly CountryLayer[] = [
@@ -95,12 +110,12 @@ export const COUNTRY_LAYERS: readonly CountryLayer[] = [
     ],
   },
   ...SPANISH_LAYERS.map(
-    ([iso3, slug]): CountryLayer => ({
+    ([iso3, slug, lang]): CountryLayer => ({
       iso3,
       slug,
-      label: ES.countries[iso3] ?? iso3,
+      label: LEXICONS[lang].countries[iso3] ?? iso3,
       readingLabel: 'En español',
-      lang: 'es',
+      lang,
       overviewLabel: 'Resumen',
       /* The computed sections only. No institution map is published for these
        * countries (INSTITUTION_MAPS), no subnational reading exists, and the
