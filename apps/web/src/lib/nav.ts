@@ -22,6 +22,7 @@ import {
   objectionsHref,
   supportHref,
   thesisHref,
+  briefHref,
 } from '@/lib/links'
 import { mapCounterparts } from '@/lib/map-reading'
 
@@ -121,6 +122,7 @@ export const COUNTRY_INDEX_PAGES: NavNode[] = [
 export const ABOUT_PAGES: NavNode[] = [
   { href: aboutHref, label: 'Overview', exact: true },
   { href: thesisHref, label: 'Thesis' },
+  { href: briefHref, label: 'Brief' },
   { href: changelogHref, label: 'Changelog', exact: true },
 ]
 

@@ -389,6 +389,18 @@ export async function loadSubnationalIndicator(
  * internal document (the limits page). Resolved beside DATA_ROOT, so the same
  * candidates logic covers laptop and server layouts.
  */
+/**
+ * The two-page brief in one language, as `pnpm bench brief` wrote it from the
+ * release files. The page renders the file and computes nothing. See D163.
+ */
+export async function loadBrief(lang: 'en' | 'pt-BR'): Promise<string | null> {
+  try {
+    return await readFile(resolve(DATA_ROOT, 'out/brief', `brief.${lang}.md`), 'utf8')
+  } catch {
+    return null
+  }
+}
+
 export async function loadDoc(name: string): Promise<string | null> {
   try {
     return await readFile(resolve(DATA_ROOT, '../docs', name), 'utf8')

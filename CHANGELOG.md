@@ -9,6 +9,14 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.29.0 — 2026-10-16
+
+- **The benchmark now has a two-page brief.** It states the claim, what the
+  current release reads on it, what the instrument is and what it needs, and
+  it prints on two A4 pages. The English one is at /brief and the Portuguese
+  one at /brasil/resumo. Every number in it comes from the published files,
+  so it changes with each release. Decision D163.
+
 ## App 1.28.0 — 2026-10-16
 
 - **Spanish readings now cover 17 Latin American countries and Spain.**

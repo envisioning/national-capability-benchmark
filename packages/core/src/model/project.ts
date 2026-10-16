@@ -8,6 +8,17 @@
 
 export const REPO_URL = 'https://github.com/envisioning/national-capability-benchmark'
 
+/**
+ * Where the viewer is published. A rendered document that leaves the site,
+ * such as the brief, links its pages from here; the viewer reads it through
+ * `siteOrigin` in `apps/web/src/lib/links.ts`, which an environment variable
+ * may override. See D163.
+ */
+export const SITE_ORIGIN = 'https://ncb.envisioning.com'
+
+/** The published output directory, browsable without a checkout. */
+export const DATA_OUT_URL = `${REPO_URL}/tree/main/data/out`
+
 /** The default branch a documentation link points at. */
 const REPO_BRANCH = 'main'
 

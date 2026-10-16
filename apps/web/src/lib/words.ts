@@ -1,4 +1,4 @@
-import { LEXICONS } from '@ncb/core'
+import { LEXICONS, countWord, ptCountWord } from '@ncb/core'
 import type { Lang } from '@ncb/core'
 import type { FlagFieldWords } from '@/components/FlagField'
 import type { ConditionListWords } from '@/components/views/ConditionList'
@@ -11,8 +11,6 @@ import type { ConditionListWords } from '@/components/views/ConditionList'
  * number: counts up to nine are spelled out, and a sentence starts with a
  * capital. Both live here so every page spells the same number the same way.
  */
-
-const COUNT_WORDS = ['none', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
 
 /**
  * The field chart's words in English. They live here rather than in the
@@ -46,16 +44,13 @@ export const CONDITION_WORDS_EN: ConditionListWords = {
   stale: 'The value is from {year}, more than {age} years old.',
 }
 
-/** A count as prose: spelled out to nine, numerals from 10. */
-export const countWord = (n: number): string => COUNT_WORDS[n] ?? String(n)
+/* A count as prose, spelled out to nine: defined in core so the bench's
+ * documents and the pages spell a count the same way. */
+export { countWord, ptCountWord }
 
 /** The same word at the start of a sentence. */
 export const capitalize = (s: string): string => s.charAt(0).toUpperCase() + s.slice(1)
 
-const PT_COUNT_WORDS = ['nenhum', 'um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove']
-
-/** A count as Portuguese prose, masculine: spelled out to nine, numerals from 10. */
-export const ptCountWord = (n: number): string => PT_COUNT_WORDS[n] ?? String(n)
 
 /** The field chart's words in Portuguese, for the Brazil layer. See D130. */
 export const PT_FIELD_WORDS: FlagFieldWords = {

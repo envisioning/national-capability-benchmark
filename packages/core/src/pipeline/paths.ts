@@ -20,6 +20,7 @@ export const SUBNATIONAL_OUT_DIR = resolve(OUT_DIR, 'subnational')
 export const AGENDA_OUT_DIR = resolve(OUT_DIR, 'agenda')
 export const INSTITUTION_OUT_DIR = resolve(OUT_DIR, 'institutions')
 export const SCHEMA_OUT_DIR = resolve(OUT_DIR, 'schema')
+export const BRIEF_OUT_DIR = resolve(OUT_DIR, 'brief')
 
 export const FILES = {
   worldBank: resolve(OBSERVATIONS_DIR, 'worldbank.json'),
@@ -94,4 +95,9 @@ export function institutionExplorerFile(iso3: string, lang: string): string {
 /** One rendered agenda per country per lexicon. See D35. */
 export function agendaDoc(iso3: string, lang: string): string {
   return resolve(AGENDA_OUT_DIR, `${iso3.toUpperCase()}.${lang}.md`)
+}
+
+/** The two-page brief in one language. See D163. */
+export function briefDoc(lang: string): string {
+  return resolve(BRIEF_OUT_DIR, `brief.${lang}.md`)
 }

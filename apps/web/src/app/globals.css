@@ -288,3 +288,20 @@ html {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* The brief prints as the document alone: no header, tab strip or footer, on
+ * A4 with a plain margin. Only a page holding `brief-print` changes. See D163. */
+@media print {
+  @page {
+    size: A4;
+    margin: 16mm;
+  }
+  body:has(.brief-print) header,
+  body:has(.brief-print) footer {
+    display: none;
+  }
+  .brief-print {
+    max-width: none;
+    font-size: 10.5pt;
+  }
+}

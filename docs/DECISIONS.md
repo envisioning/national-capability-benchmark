@@ -8950,3 +8950,37 @@ The copy was reviewed by Claude, not by a native speaker of each variety.
 country's usage in a way an override cannot fix, which would call for a
 per-country override; or a Spanish layer that its country's readers do not
 use, which would argue for withdrawing the computed layers.
+
+## D163 — A two-page brief is computed from the release files, in English and Portuguese
+
+*Recorded 2026-10-16. Issue #88. Follows D137 and D138, whose readings it
+prints, and D130, whose rule it keeps.*
+
+**Decision.** `pnpm bench brief` writes `data/out/brief/brief.en.md` and
+`brief.pt-BR.md` from the files a reader can download: `index.json`,
+`diagnostics.json` and `factor-history.json`. It never runs a fresh score.
+`/brief` renders the English one and `/brasil/resumo` the Portuguese one, and
+both print to two A4 pages without the site chrome. `bench all` writes the
+brief after the agenda. It holds six parts: the claim, the test and its
+verdict, what the instrument is, what it is good for and what it is not,
+what it needs, and links.
+
+Every number comes through the same readings the thesis and Brazil's verdict
+section use (`readFactorTest`, `readResidualStructure`, `readWealthTracking`,
+`readVerdictPtBr`). Those readings moved from the viewer into
+`packages/core/src/pipeline/*-reading.ts` so the bench and the pages print
+the same templates, and the viewer's `lib` files re-export them. A test
+holds every number in the brief to the release files. The prose around the
+numbers restates WHY.md and the decisions, and names no institution.
+
+**Why.** A reader who meets the benchmark in a meeting needs the claim and
+its current verdict on paper, and a hand-written brief goes stale with the
+first release that moves a number. Computing it means each release
+restates it.
+
+**Cost.** One more generated file per language to keep in step with the
+readings, and a print stylesheet scoped to the brief's pages.
+
+**Overturned by.** A reader of the brief taking a number from it that the
+release does not support, which would show the template wrong; or the
+readings changing so that two pages no longer hold them.

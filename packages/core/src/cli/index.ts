@@ -30,6 +30,7 @@ import {
   SCHEMA_OUT_DIR,
   agendaDoc,
   agendaFile,
+  briefDoc,
   countryFile,
   indicatorFile,
 } from '../pipeline/paths.js'
@@ -45,6 +46,9 @@ import { logGdpByCountry, runDiagnostics } from '../pipeline/diagnostics.js'
 import { buildFactorHistory, readReleaseSnapshots } from '../pipeline/factor-history.js'
 import { residualReleaseStability, withReleaseStability } from '../pipeline/residual-structure.js'
 import { buildReport } from '../pipeline/report.js'
+import { BRIEF_LANGS, buildBrief, renderBriefMarkdown } from '../pipeline/brief.js'
+import type { Diagnostics } from '../pipeline/diagnostics.js'
+import { FactorHistoryFile, IndexFile } from '../model/index.js'
 import { writeVelocity } from '../pipeline/velocity.js'
 import { writeLeverage } from '../pipeline/leverage.js'
 import { writeResidual } from '../pipeline/residual.js'
@@ -790,6 +794,30 @@ async function agenda(args: Args, countries: CountryResult[]): Promise<void> {
   )
 }
 
+/**
+ * Write the two-page brief, one markdown per language, from the release files
+ * as published: index.json, diagnostics.json and factor-history.json. It
+ * reads what a reader would read, never a fresh scoring run. See D163.
+ */
+async function brief(): Promise<void> {
+  const index = IndexFile.parse(JSON.parse(await readFile(FILES.index, 'utf8')))
+  const diagnostics = JSON.parse(await readFile(FILES.diagnostics, 'utf8')) as Diagnostics
+  let history: FactorHistoryFile | null = null
+  try {
+    history = FactorHistoryFile.parse(JSON.parse(await readFile(FILES.factorHistory, 'utf8')))
+  } catch {
+    history = null
+  }
+  const written: string[] = []
+  for (const lang of BRIEF_LANGS) {
+    const built = buildBrief({ index, diagnostics, history }, lang)
+    if (!built) throw new Error(`The release carries no factor or residual test, so no ${lang} brief can be computed.`)
+    await writeOut(briefDoc(lang), renderBriefMarkdown(built))
+    written.push(lang)
+  }
+  console.log(`brief       -> ${written.length} documents (${written.join(', ')}) -> data/out/brief`)
+}
+
 async function main() {
   const args = parseArgs(process.argv.slice(2))
   const command = args._[0] ?? 'help'
@@ -918,6 +946,10 @@ async function main() {
       await agenda(args, countries)
       break
     }
+
+    case 'brief':
+      await brief()
+      break
 
     case 'report': {
       const { countries, diag, delphi } = await diagnose(args)
@@ -1382,6 +1414,7 @@ Start with file 1.
       await writeOut(FILES.report, buildReport(countries, diag, delphi))
       console.log(`report      -> ${FILES.report}`)
       await agenda(args, countries)
+      await brief()
       break
     }
 
@@ -1425,7 +1458,8 @@ Start with file 1.
   pnpm bench report                       write the findings report
   pnpm bench agenda    [BRA IND ...] [--lang pt-BR]
                                           write the capability agenda, JSON plus one markdown per lexicon
-  pnpm bench all                          ingest, score, diagnose, report, agenda
+  pnpm bench brief                        write the two-page brief from the release files, one markdown per language
+  pnpm bench all                          ingest, score, diagnose, report, agenda, brief
 `)
   }
 }

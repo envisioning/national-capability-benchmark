@@ -5,6 +5,7 @@ import {
   EVIDENCE_STATUS_LABELS,
   ISSUES_URL,
   MAP_DIMENSIONS,
+  SITE_ORIGIN,
   docHref,
 } from '@ncb/core'
 import type { ContactTopic, ContributionWay, Dimension, EvidenceStatus, Lang } from '@ncb/core'
@@ -84,6 +85,7 @@ export function layerSectionHref(layer: CountryLayer, section: LayerSection): st
      * capabilities, which hold every country on each one. */
     map: capabilitiesHref,
     support: supportHref,
+    brief: briefHref,
   }
   return ground[section.id]
 }
@@ -214,6 +216,9 @@ export function readLaneArrangement(
 
 /** The public statement of what the benchmark is for. */
 export const thesisHref = '/thesis'
+
+/** The two-page brief, computed from the release files and set to print. See D163. */
+export const briefHref = '/brief'
 
 /** Full DOM id for a score cell, useful when several country cells are present. */
 export const scoreAnchorId = (iso3: string, dimension: Dimension): string =>
@@ -392,7 +397,7 @@ export const robotsHref = '/robots.txt'
 /** One dated country-of-the-week digest. */
 export const digestHref = (date: string): string => `/digest/${date}.html`
 
-const DEFAULT_SITE_ORIGIN = 'https://ncb.envisioning.com'
+const DEFAULT_SITE_ORIGIN = SITE_ORIGIN
 
 /** The canonical origin used in machine-readable links. */
 export const siteOrigin = (): string =>

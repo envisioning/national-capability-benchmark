@@ -29,7 +29,7 @@ import type { Dimension, Lang } from '@ncb/core'
 export type MapSectionId = 'map'
 
 /** The kinds of section a layer can hold. */
-export type LayerSectionId = 'agenda' | 'institutions' | 'local' | 'support' | MapSectionId
+export type LayerSectionId = 'agenda' | 'institutions' | 'local' | 'support' | 'brief' | MapSectionId
 
 export type LayerSection = {
   id: LayerSectionId
@@ -107,6 +107,8 @@ export const COUNTRY_LAYERS: readonly CountryLayer[] = [
       /* Labelled Participe since D158, when the page stopped asking for
        * funding; the address keeps its slug. */
       { id: 'support', label: 'Participe', slug: 'apoie' },
+      /* The two-page brief in Portuguese, computed by the bench. See D163. */
+      { id: 'brief', label: 'Resumo', slug: 'resumo' },
     ],
   },
   ...SPANISH_LAYERS.map(

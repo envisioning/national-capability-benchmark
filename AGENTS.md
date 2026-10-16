@@ -20,12 +20,13 @@ pnpm bench delphi      run the LLM panel (add --mock to run offline)
 pnpm bench diagnose    correlations, redundancy, GDP-sensitivity test
 pnpm bench report      write data/out/report.md
 pnpm bench agenda      write the capability agenda: JSON per country plus one markdown per lexicon
+pnpm bench brief       write the two-page brief from the release files: data/out/brief/brief.{en,pt-BR}.md
 pnpm bench cost        measure the panel prompts and price a run before making it
 pnpm bench residual    write the provisional wealth-residual fixture, one number per dimension
 pnpm bench institutions project the institution map into the explorer feed: one JSON per lexicon
 pnpm bench probe       test candidate World Bank series before wiring them: --series a,b[@db]
 pnpm bench validate    schema-check data/delphi and data/evidence; add --fetch to live-check evidence source URLs
-pnpm bench all         ingest, score, diagnose, report, agenda
+pnpm bench all         ingest, score, diagnose, report, agenda, brief
 pnpm build             tsc for packages/core, then next build for apps/web
 pnpm typecheck         both packages
 pnpm dev               the viewer at https://ncb.localhost (port 3888 behind it)
