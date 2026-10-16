@@ -9,6 +9,14 @@ The entries before App 1.0.0 are retrospective, high-level summaries
 reconstructed from the repository history. They document explicit version bumps
 and may skip versions that were never committed.
 
+## App 1.30.0 — 2026-10-16
+
+- **The viewer runs on Next 16 and TypeScript 7, and the model on zod 4 and
+  ai 7.** No score changes. The published JSON Schemas now list as required
+  the fields that every file already carries with a null default, such as
+  `staleExcluded`. Social cards are set in Inter and Octa, and the country
+  card's radar no longer rides over the card's title.
+
 ## App 1.29.1 — 2026-10-16
 
 - **Every country now has a documented case under large project delivery.**

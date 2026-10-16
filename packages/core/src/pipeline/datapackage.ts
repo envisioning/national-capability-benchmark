@@ -31,7 +31,7 @@ import {
  * body. Its `int()` is a safe integer and the generator states those bounds on
  * every integer; they are dropped because they say nothing a reader needs.
  */
-function namedJsonSchema(schema: z.ZodType, name: string): object {
+export function namedJsonSchema(schema: z.ZodType, name: string): object {
   const { $schema, ...body } = z.toJSONSchema(schema, {
     target: 'draft-7',
     override: ({ jsonSchema }) => {

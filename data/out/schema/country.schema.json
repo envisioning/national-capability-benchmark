@@ -286,6 +286,7 @@
                           ]
                         },
                         "staleExcluded": {
+                          "default": null,
                           "anyOf": [
                             {
                               "type": "object",
@@ -306,8 +307,7 @@
                             {
                               "type": "null"
                             }
-                          ],
-                          "default": null
+                          ]
                         }
                       },
                       "required": [
@@ -323,7 +323,8 @@
                         "winsorized",
                         "outOfFrame",
                         "series",
-                        "status"
+                        "status",
+                        "staleExcluded"
                       ],
                       "additionalProperties": false
                     }
@@ -389,8 +390,8 @@
                           ]
                         },
                         "stale": {
-                          "type": "boolean",
-                          "default": false
+                          "default": false,
+                          "type": "boolean"
                         },
                         "note": {
                           "type": "string"
@@ -406,6 +407,7 @@
                         "year",
                         "source",
                         "sourceTier",
+                        "stale",
                         "note"
                       ],
                       "additionalProperties": false
@@ -478,8 +480,8 @@
                           "type": "integer"
                         },
                         "stale": {
-                          "type": "boolean",
-                          "default": false
+                          "default": false,
+                          "type": "boolean"
                         },
                         "note": {
                           "type": "string"
@@ -497,6 +499,7 @@
                         "sourceTier",
                         "rank",
                         "n",
+                        "stale",
                         "note"
                       ],
                       "additionalProperties": false

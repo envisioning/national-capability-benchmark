@@ -1,10 +1,10 @@
 import { existsSync } from 'node:fs'
 import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
-import { zodToJsonSchema } from 'zod-to-json-schema'
 import { DIMENSIONS, DIMENSION_LABELS } from '../model/index.js'
 import type { Dimension, Provenance } from '../model/index.js'
 import type { Panelist } from './panel.js'
+import { namedJsonSchema } from '../pipeline/datapackage.js'
 import { SYSTEM_RULES } from './prompts.js'
 import { CellScoreOutput, JudgementOutput } from './provider.js'
 import type { PanelProvider } from './provider.js'
@@ -43,11 +43,11 @@ export class InSessionProvider implements PanelProvider {
     await writeFile(resolve(out, 'system.txt'), `${SYSTEM_RULES}\n`)
     await writeFile(
       resolve(out, 'cell.schema.json'),
-      `${JSON.stringify(zodToJsonSchema(CellScoreOutput, 'CellScoreOutput'), null, 2)}\n`,
+      `${JSON.stringify(namedJsonSchema(CellScoreOutput, 'CellScoreOutput'), null, 2)}\n`,
     )
     await writeFile(
       resolve(out, 'audit.schema.json'),
-      `${JSON.stringify(zodToJsonSchema(JudgementOutput, 'JudgementOutput'), null, 2)}\n`,
+      `${JSON.stringify(namedJsonSchema(JudgementOutput, 'JudgementOutput'), null, 2)}\n`,
     )
   }
 
